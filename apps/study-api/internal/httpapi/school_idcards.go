@@ -34,18 +34,19 @@ func (s *Server) handleSchoolIDCards(w http.ResponseWriter, r *http.Request) {
 // store is idempotent per student per session, so tapping the button
 // twice never mints a second serial.
 func (s *Server) handleSchoolIssueCard(w http.ResponseWriter, r *http.Request) {
-	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
-	if !ok {
-		return
-	}
-	if !s.requireManagement(w, m) {
-		return
-	}
 	var req struct {
 		StudentID string `json:"studentId"`
 		Session   string `json:"session"`
 	}
-	if !decodeJSON(w, r, &req) {
+	schoolID, ok := decodeSchoolScope(w, r, &req)
+	if !ok {
+		return
+	}
+	m, _, ok := s.memberAndSchool(w, r, schoolID)
+	if !ok {
+		return
+	}
+	if !s.requireManagement(w, m) {
 		return
 	}
 	req.StudentID = strings.TrimSpace(req.StudentID)
@@ -67,18 +68,19 @@ func (s *Server) handleSchoolIssueCard(w http.ResponseWriter, r *http.Request) {
 // in scope who lacks a card for the session gets one. Existing cards
 // stay; the count says how many gaps were filled.
 func (s *Server) handleSchoolIssueCardsBatch(w http.ResponseWriter, r *http.Request) {
-	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
-	if !ok {
-		return
-	}
-	if !s.requireManagement(w, m) {
-		return
-	}
 	var req struct {
 		ClassID string `json:"classId"`
 		Session string `json:"session"`
 	}
-	if !decodeJSON(w, r, &req) {
+	schoolID, ok := decodeSchoolScope(w, r, &req)
+	if !ok {
+		return
+	}
+	m, _, ok := s.memberAndSchool(w, r, schoolID)
+	if !ok {
+		return
+	}
+	if !s.requireManagement(w, m) {
 		return
 	}
 	req.Session = strings.TrimSpace(req.Session)
@@ -98,18 +100,19 @@ func (s *Server) handleSchoolIssueCardsBatch(w http.ResponseWriter, r *http.Requ
 // PUT /school/id-card?schoolId - management flips a card's status
 // (issued / revoked) when a card is lost or found again.
 func (s *Server) handleSchoolCardStatus(w http.ResponseWriter, r *http.Request) {
-	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
-	if !ok {
-		return
-	}
-	if !s.requireManagement(w, m) {
-		return
-	}
 	var req struct {
 		CardID string `json:"cardId"`
 		Status string `json:"status"`
 	}
-	if !decodeJSON(w, r, &req) {
+	schoolID, ok := decodeSchoolScope(w, r, &req)
+	if !ok {
+		return
+	}
+	m, _, ok := s.memberAndSchool(w, r, schoolID)
+	if !ok {
+		return
+	}
+	if !s.requireManagement(w, m) {
 		return
 	}
 	status := strings.ToLower(strings.TrimSpace(req.Status))

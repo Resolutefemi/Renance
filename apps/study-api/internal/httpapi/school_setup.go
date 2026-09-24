@@ -28,20 +28,21 @@ func (s *Server) handleSchoolGetProfile(w http.ResponseWriter, r *http.Request) 
 // PUT /school/profile - management edits the school identity: name,
 // address and logo (a data URL stamped on report cards + the portal).
 func (s *Server) handleSchoolProfile(w http.ResponseWriter, r *http.Request) {
-	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
-	if !ok {
-		return
-	}
-	if !s.requireManagement(w, m) {
-		return
-	}
 	var req struct {
 		Name      string `json:"name"`
 		Address   string `json:"address"`
 		LogoURL   string `json:"logoUrl"`
 		ClearLogo bool   `json:"clearLogo"`
 	}
-	if !decodeJSON(w, r, &req) {
+	schoolID, ok := decodeSchoolScope(w, r, &req)
+	if !ok {
+		return
+	}
+	m, _, ok := s.memberAndSchool(w, r, schoolID)
+	if !ok {
+		return
+	}
+	if !s.requireManagement(w, m) {
 		return
 	}
 	req.Name = strings.TrimSpace(req.Name)
@@ -90,13 +91,6 @@ func validLogo(u string) bool {
 // POST /school/subject - management adds a school subject (NERDC name
 // or custom), optionally tagged with its senior department.
 func (s *Server) handleSchoolCreateSubject(w http.ResponseWriter, r *http.Request) {
-	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
-	if !ok {
-		return
-	}
-	if !s.requireManagement(w, m) {
-		return
-	}
 	var req struct {
 		Name       string `json:"name"`
 		Code       string `json:"code"`
@@ -104,7 +98,15 @@ func (s *Server) handleSchoolCreateSubject(w http.ResponseWriter, r *http.Reques
 		Department string `json:"department"`
 		IsCore     bool   `json:"isCore"`
 	}
-	if !decodeJSON(w, r, &req) {
+	schoolID, ok := decodeSchoolScope(w, r, &req)
+	if !ok {
+		return
+	}
+	m, _, ok := s.memberAndSchool(w, r, schoolID)
+	if !ok {
+		return
+	}
+	if !s.requireManagement(w, m) {
 		return
 	}
 	req.Name = strings.TrimSpace(req.Name)
@@ -135,13 +137,6 @@ func (s *Server) handleSchoolCreateSubject(w http.ResponseWriter, r *http.Reques
 // PUT /school/subject - management edits a subject (department, core
 // flag, name or code).
 func (s *Server) handleSchoolUpdateSubject(w http.ResponseWriter, r *http.Request) {
-	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
-	if !ok {
-		return
-	}
-	if !s.requireManagement(w, m) {
-		return
-	}
 	var req struct {
 		ID         string `json:"id"`
 		Name       string `json:"name"`
@@ -149,7 +144,15 @@ func (s *Server) handleSchoolUpdateSubject(w http.ResponseWriter, r *http.Reques
 		Department string `json:"department"`
 		IsCore     *bool  `json:"isCore"`
 	}
-	if !decodeJSON(w, r, &req) {
+	schoolID, ok := decodeSchoolScope(w, r, &req)
+	if !ok {
+		return
+	}
+	m, _, ok := s.memberAndSchool(w, r, schoolID)
+	if !ok {
+		return
+	}
+	if !s.requireManagement(w, m) {
 		return
 	}
 	req.Name = strings.TrimSpace(req.Name)
@@ -173,19 +176,20 @@ func (s *Server) handleSchoolUpdateSubject(w http.ResponseWriter, r *http.Reques
 // POST /school/class-subject - management wires or unwires a subject
 // into a class. SSS classes usually take core + their chosen tracks.
 func (s *Server) handleSchoolClassSubject(w http.ResponseWriter, r *http.Request) {
-	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
-	if !ok {
-		return
-	}
-	if !s.requireManagement(w, m) {
-		return
-	}
 	var req struct {
 		ClassID   string `json:"classId"`
 		SubjectID string `json:"subjectId"`
 		Remove    bool   `json:"remove"`
 	}
-	if !decodeJSON(w, r, &req) {
+	schoolID, ok := decodeSchoolScope(w, r, &req)
+	if !ok {
+		return
+	}
+	m, _, ok := s.memberAndSchool(w, r, schoolID)
+	if !ok {
+		return
+	}
+	if !s.requireManagement(w, m) {
 		return
 	}
 	if req.ClassID == "" || req.SubjectID == "" {
@@ -236,15 +240,16 @@ func (s *Server) handleSchoolStudentDetail(w http.ResponseWriter, r *http.Reques
 
 // PUT /school/student - management edits the enrollment record.
 func (s *Server) handleSchoolUpdateStudent(w http.ResponseWriter, r *http.Request) {
-	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
+	var req store.StudentDetail
+	schoolID, ok := decodeSchoolScope(w, r, &req)
+	if !ok {
+		return
+	}
+	m, _, ok := s.memberAndSchool(w, r, schoolID)
 	if !ok {
 		return
 	}
 	if !s.requireManagement(w, m) {
-		return
-	}
-	var req store.StudentDetail
-	if !decodeJSON(w, r, &req) {
 		return
 	}
 	req.FullName = strings.TrimSpace(req.FullName)
@@ -291,18 +296,19 @@ func (s *Server) handleSchoolStudentSubjects(w http.ResponseWriter, r *http.Requ
 // PUT /school/student-subjects - management sets the offering. An empty
 // list clears back to "everything the class does".
 func (s *Server) handleSchoolSetStudentSubjects(w http.ResponseWriter, r *http.Request) {
-	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
-	if !ok {
-		return
-	}
-	if !s.requireManagement(w, m) {
-		return
-	}
 	var req struct {
 		StudentID  string   `json:"studentId"`
 		SubjectIDs []string `json:"subjectIds"`
 	}
-	if !decodeJSON(w, r, &req) {
+	schoolID, ok := decodeSchoolScope(w, r, &req)
+	if !ok {
+		return
+	}
+	m, _, ok := s.memberAndSchool(w, r, schoolID)
+	if !ok {
+		return
+	}
+	if !s.requireManagement(w, m) {
 		return
 	}
 	if req.StudentID == "" {
@@ -342,16 +348,17 @@ func (s *Server) handleSchoolAttendanceDay(w http.ResponseWriter, r *http.Reques
 // POST /school/attendance - management, or a teacher assigned to the
 // class, saves a day's marks (the roster) or a single kiosk tap.
 func (s *Server) handleSchoolAttendanceSave(w http.ResponseWriter, r *http.Request) {
-	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
-	if !ok {
-		return
-	}
 	var req struct {
 		ClassID string                  `json:"classId"`
 		Day     string                  `json:"day"`
 		Entries []store.AttendanceEntry `json:"entries"`
 	}
-	if !decodeJSON(w, r, &req) {
+	schoolID, ok := decodeSchoolScope(w, r, &req)
+	if !ok {
+		return
+	}
+	m, _, ok := s.memberAndSchool(w, r, schoolID)
+	if !ok {
 		return
 	}
 	req.Day = strings.TrimSpace(req.Day)
@@ -426,13 +433,6 @@ func validDay(day string) bool {
 // =false only fills topics whose content is still empty, so re-pouring a
 // growing corpus never clobbers teacher edits.
 func (s *Server) handleSchoolBulkNotes(w http.ResponseWriter, r *http.Request) {
-	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
-	if !ok {
-		return
-	}
-	if !s.requireManagement(w, m) {
-		return
-	}
 	var req struct {
 		ClassID   string            `json:"classId"`
 		SubjectID string            `json:"subjectId"`
@@ -441,7 +441,15 @@ func (s *Server) handleSchoolBulkNotes(w http.ResponseWriter, r *http.Request) {
 		Overwrite bool              `json:"overwrite"`
 		Topics    []store.BulkTopic `json:"topics"`
 	}
-	if !decodeJSON(w, r, &req) {
+	schoolID, ok := decodeSchoolScope(w, r, &req)
+	if !ok {
+		return
+	}
+	m, _, ok := s.memberAndSchool(w, r, schoolID)
+	if !ok {
+		return
+	}
+	if !s.requireManagement(w, m) {
 		return
 	}
 	req.Session = strings.TrimSpace(req.Session)

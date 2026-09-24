@@ -34,18 +34,19 @@ func (s *Server) handleSchoolTimetable(w http.ResponseWriter, r *http.Request) {
 // POST /school/timetable?schoolId= - replace one class's week with the
 // posted grid. The store does the delete + insert in one transaction.
 func (s *Server) handleSchoolSaveTimetable(w http.ResponseWriter, r *http.Request) {
-	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
-	if !ok {
-		return
-	}
-	if !s.requireManagement(w, m) {
-		return
-	}
 	var req struct {
 		ClassID string                `json:"classId"`
 		Slots   []store.TimetableSlot `json:"slots"`
 	}
-	if !decodeJSON(w, r, &req) {
+	schoolID, ok := decodeSchoolScope(w, r, &req)
+	if !ok {
+		return
+	}
+	m, _, ok := s.memberAndSchool(w, r, schoolID)
+	if !ok {
+		return
+	}
+	if !s.requireManagement(w, m) {
 		return
 	}
 	req.ClassID = strings.TrimSpace(req.ClassID)

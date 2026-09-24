@@ -51,10 +51,6 @@ func (s *Server) handleSchoolExamQuestions(w http.ResponseWriter, r *http.Reques
 
 // POST /school/exam-question?schoolId= adds one question to the pool.
 func (s *Server) handleSchoolAddExamQuestion(w http.ResponseWriter, r *http.Request) {
-	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
-	if !ok {
-		return
-	}
 	var req struct {
 		SubjectID   string   `json:"subjectId"`
 		Band        string   `json:"band"`
@@ -66,7 +62,12 @@ func (s *Server) handleSchoolAddExamQuestion(w http.ResponseWriter, r *http.Requ
 		Explanation string   `json:"explanation"`
 		Marks       int      `json:"marks"`
 	}
-	if !decodeJSON(w, r, &req) {
+	schoolID, ok := decodeSchoolScope(w, r, &req)
+	if !ok {
+		return
+	}
+	m, _, ok := s.memberAndSchool(w, r, schoolID)
+	if !ok {
 		return
 	}
 	req.SubjectID = strings.TrimSpace(req.SubjectID)
@@ -204,13 +205,6 @@ func (s *Server) handleSchoolExams(w http.ResponseWriter, r *http.Request) {
 
 // POST /school/exam?schoolId= publishes a paper for a class.
 func (s *Server) handleSchoolPublishExam(w http.ResponseWriter, r *http.Request) {
-	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
-	if !ok {
-		return
-	}
-	if !s.requireManagement(w, m) {
-		return
-	}
 	var req struct {
 		ClassID         string `json:"classId"`
 		SubjectID       string `json:"subjectId"`
@@ -220,7 +214,15 @@ func (s *Server) handleSchoolPublishExam(w http.ResponseWriter, r *http.Request)
 		DurationMinutes int    `json:"durationMinutes"`
 		QuestionCount   int    `json:"questionCount"`
 	}
-	if !decodeJSON(w, r, &req) {
+	schoolID, ok := decodeSchoolScope(w, r, &req)
+	if !ok {
+		return
+	}
+	m, _, ok := s.memberAndSchool(w, r, schoolID)
+	if !ok {
+		return
+	}
+	if !s.requireManagement(w, m) {
 		return
 	}
 	req.ClassID = strings.TrimSpace(req.ClassID)

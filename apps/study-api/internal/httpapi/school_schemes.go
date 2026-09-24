@@ -11,17 +11,18 @@ import (
 
 // POST /school/seed-schemes?schoolId= - management pours the drafts.
 func (s *Server) handleSchoolSeedSchemes(w http.ResponseWriter, r *http.Request) {
-	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
+	var req struct {
+		Session string `json:"session"`
+	}
+	schoolID, ok := decodeSchoolScope(w, r, &req)
+	if !ok {
+		return
+	}
+	m, _, ok := s.memberAndSchool(w, r, schoolID)
 	if !ok {
 		return
 	}
 	if !s.requireManagement(w, m) {
-		return
-	}
-	var req struct {
-		Session string `json:"session"`
-	}
-	if !decodeJSON(w, r, &req) {
 		return
 	}
 	req.Session = strings.TrimSpace(req.Session)

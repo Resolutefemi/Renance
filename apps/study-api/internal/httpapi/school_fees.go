@@ -73,13 +73,6 @@ func (s *Server) handleSchoolFees(w http.ResponseWriter, r *http.Request) {
 // PUT /school/fee?schoolId - management prices (or re-prices) one
 // charge. classId empty means the charge lands on every class.
 func (s *Server) handleSchoolSaveFee(w http.ResponseWriter, r *http.Request) {
-	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
-	if !ok {
-		return
-	}
-	if !s.requireManagement(w, m) {
-		return
-	}
 	var req struct {
 		ClassID     string `json:"classId"`
 		Title       string `json:"title"`
@@ -89,7 +82,15 @@ func (s *Server) handleSchoolSaveFee(w http.ResponseWriter, r *http.Request) {
 		Session     string `json:"session"`
 		Seq         int    `json:"seq"`
 	}
-	if !decodeJSON(w, r, &req) {
+	schoolID, ok := decodeSchoolScope(w, r, &req)
+	if !ok {
+		return
+	}
+	m, _, ok := s.memberAndSchool(w, r, schoolID)
+	if !ok {
+		return
+	}
+	if !s.requireManagement(w, m) {
 		return
 	}
 	req.Title = strings.TrimSpace(req.Title)
@@ -162,13 +163,6 @@ func (s *Server) handleSchoolDeleteFee(w http.ResponseWriter, r *http.Request) {
 
 // POST /school/fee-payment?schoolId - management records one receipt.
 func (s *Server) handleSchoolRecordPayment(w http.ResponseWriter, r *http.Request) {
-	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
-	if !ok {
-		return
-	}
-	if !s.requireManagement(w, m) {
-		return
-	}
 	var req struct {
 		FeeID       string `json:"feeId"`
 		StudentID   string `json:"studentId"`
@@ -177,7 +171,15 @@ func (s *Server) handleSchoolRecordPayment(w http.ResponseWriter, r *http.Reques
 		Reference   string `json:"reference"`
 		PaidOn      string `json:"paidOn"`
 	}
-	if !decodeJSON(w, r, &req) {
+	schoolID, ok := decodeSchoolScope(w, r, &req)
+	if !ok {
+		return
+	}
+	m, _, ok := s.memberAndSchool(w, r, schoolID)
+	if !ok {
+		return
+	}
+	if !s.requireManagement(w, m) {
 		return
 	}
 	req.FeeID = strings.TrimSpace(req.FeeID)
