@@ -32,14 +32,14 @@ Each document in a level file carries:
 - `outline` - best-effort THEME/TOPIC outline parsed from the PDF
 - `text` - the full extracted text of the curriculum document
 
-## Why Nursery is not here
+## Where the missing levels live
 
-The user brief asked for Nursery 1 to SSS 3. The NERDC LMIS portal does not
-publish a nursery track: the new curriculum framework starts at Primary 1,
-and early-childhood education stays under the state-level ECE guidelines.
-The scrape therefore covers Primary 1 through SSS 2, which is the complete
-set the official portal exposes (pry_3, pry_6, jss_3 and sss_3 are not on
-the portal yet either; re-run the scraper as NERDC uploads them).
+The NERDC LMIS portal never published a nursery track, and pry_3, pry_6,
+jss_3 and sss_3 are not on the portal yet either. The pourable corpus at
+`../nerdc-2025/` now closes those gaps, including the full pre-primary
+block (Nursery 1 to 3) and the four missing classes, week by week for
+every subject across the three terms. Pour those files when a school
+needs a level this scraped library cannot cover yet.
 
 ## Refreshing the data
 
