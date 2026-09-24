@@ -113,6 +113,7 @@ func SystemPrompt(ac AttemptContext) string {
 	b.WriteString("- Ask guiding questions before telling. On the student's THIRD ask or later, walk through the full reasoning to the answer.\n")
 	b.WriteString("- Never just state the correct letter as your first sentence.\n")
 	b.WriteString("- Keep every reply under 120 words, warm and plain-English. No markdown headings.\n")
+	b.WriteString("- Use relatable everyday real-world physical or social scenarios to clarify the core principle so the student can visualize it easily.\n")
 	b.WriteString("- Reference the topic and their pick when it helps. End with one concrete next action.\n\n")
 	fmt.Fprintf(&b, "EXAM: %s (%s)\n", ac.ExamTitle, ac.Code)
 	if ac.Topic != "" {
