@@ -83,10 +83,9 @@ const CONC = Number(process.env.NOTES_CONCURRENCY || '4');
 const DASHES = /[\u2010\u2012\u2013\u2014\u2015]/g;
 function normalize(text) {
   return String(text || '')
-    .replace(DASHES, ' - ')
-    .replace(/-{2,}/g, ' - ')
+    .replace(DASHES, '-')
+    .replace(/-{2,}/g, '-')
     .replace(/[ \t]+/g, ' ')
-    .replace(/ *- */g, ' - ')
     .trim();
 }
 
