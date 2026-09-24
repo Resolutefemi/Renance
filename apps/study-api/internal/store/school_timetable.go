@@ -84,15 +84,17 @@ func (s *Store) timetableSubjects(ctx context.Context, schoolID, classID string)
 	rows, err := s.Pool.Query(ctx, `
                 SELECT su.id::text, su.name, su.code
                 FROM school.class_subjects cs
+                JOIN school.classes cl ON cl.id = cs.class_id
                 JOIN school.subjects su ON su.id = cs.subject_id
-                WHERE cs.school_id = $1 AND cs.class_id = $2
+                WHERE cl.school_id = $1 AND cs.class_id = $2
                 UNION ALL
                 SELECT su.id::text, su.name, su.code
                 FROM school.subjects su
                 WHERE su.school_id = $1
                   AND NOT EXISTS (
                         SELECT 1 FROM school.class_subjects cs2
-                        WHERE cs2.school_id = $1 AND cs2.class_id = $2
+                        JOIN school.classes cl2 ON cl2.id = cs2.class_id
+                        WHERE cl2.school_id = $1 AND cs2.class_id = $2
                   )
                   AND su.level IN (
                         SELECT CASE WHEN c.name LIKE 'Primary%' THEN 'primary'
