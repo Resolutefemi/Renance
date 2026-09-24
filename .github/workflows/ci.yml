@@ -81,6 +81,8 @@ jobs:
         run: pnpm --filter @renance/web typecheck
       - name: Content rule (no long hyphens)
         run: python3 scripts/no_long_hyphen.py --check
+      - name: Icon coverage (every ligature ships in the subset font)
+        run: python3 scripts/check_icon_coverage.py
       - name: Build (Pages-like static export)
         working-directory: apps/web
         env:
