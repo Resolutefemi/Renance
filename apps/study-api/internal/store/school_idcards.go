@@ -30,7 +30,7 @@ type SchoolIDCard struct {
 // IDCardRow is the printable join: card plus the student and school
 // fields the card face carries.
 type IDCardRow struct {
-	Card          SchoolIDCard
+	Card          SchoolIDCard `json:"card"`
 	StudentName   string `json:"studentName"`
 	AdmissionNo   string `json:"admissionNo"`
 	ClassName     string `json:"className"`
