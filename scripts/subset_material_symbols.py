@@ -19,8 +19,11 @@ CURRENT = OUT  # read the old subset's inventory before replacing it
 # New icons introduced by the school portal work (safe to re-run: icons
 # already present are simply kept).
 NEW_ICONS = [
-    "co_present", "smartphone", "groups", "table_view",
+    "co_present", "groups", "table_view",
     "account_balance", "school", "touch_app", "picture_as_pdf",
+    # Arena duel mark: was missing from the shipped subset (rendered as
+    # raw text and burst out of its chip).
+    "swords",
 ]
 
 
