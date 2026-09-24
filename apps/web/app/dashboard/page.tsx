@@ -404,7 +404,7 @@ export default function DashboardPage() {
               aria-label={`Notifications${unread ? ` (${unread} unread)` : ''}`}
               className="relative ml-0.5 flex h-9 w-9 items-center justify-center rounded-full text-on-surface transition hover:bg-surface-container-high md:hidden"
             >
-              <span className="material-symbols-outlined text-[22px]">notifications_none</span>
+              <span className="material-symbols-outlined text-[22px]">notifications</span>
               {unread > 0 && (
                 <span className="absolute right-1 top-1 flex h-4 min-w-4 items-center justify-center rounded-full border border-surface bg-error px-1 font-mono text-[9px] font-bold text-on-error">
                   {unread > 9 ? '9+' : unread}
