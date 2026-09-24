@@ -104,7 +104,7 @@ The `web-deploy` workflow then publishes the static export on the next
 push (or re-run it from the Actions tab).
 
 **Android app (APK):** download the latest build directly -
-https://github.com/Resolutefemi/Renance/releases/latest/download/app-release.apk -
+https://github.com/Resolutefemi/Renance/releases/download/latest/app-release.apk -
 then sideload it on the phone (allow installs from that source). Prefer
 GitHub's UI? Open the repo's **Releases** page → **Latest Android build**
 → download `app-release.apk`. The Actions tab also publishes the APK as
