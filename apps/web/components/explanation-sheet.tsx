@@ -28,6 +28,7 @@ import { api, ApiError } from '@/lib/api';
 import { aiChat, aiConfigured } from '@/lib/ai';
 import { QText, apiImg } from '@/lib/qtext';
 import { isSaved, toggleSave } from '@/lib/saved-questions';
+import { findEverydayScenario } from '@/lib/scenarios';
 
 export interface ExplanationData {
   questionId: string;
@@ -248,6 +249,32 @@ export default function ExplanationSheet({
               </p>
             </div>
           )}
+
+          {/* Everyday Relatable Scenario Card */}
+          {graded && (() => {
+            const scenario = findEverydayScenario(question.topic, question.stem, question.title);
+            if (!scenario) return null;
+            return (
+              <div className="mt-3.5 rounded-xl border border-accent-amber/35 bg-accent-amber/5 p-3.5">
+                <div className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-[18px] text-accent-amber">lightbulb</span>
+                  <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-accent-amber">
+                    Everyday Real-Life Scenario
+                  </span>
+                </div>
+                <h4 className="mt-1.5 text-[14.5px] font-semibold text-on-surface">
+                  {scenario.scenarioTitle}
+                </h4>
+                <p className="mt-1.5 text-[13.5px] leading-relaxed text-on-surface-variant">
+                  {scenario.scenario}
+                </p>
+                <div className="mt-2.5 rounded-lg bg-surface-container-lowest/80 px-2.5 py-1.5 text-[12px] font-medium text-on-surface-variant">
+                  <span className="font-semibold text-on-surface">Core Concept: </span>
+                  {scenario.takeaway}
+                </div>
+              </div>
+            );
+          })()}
         </div>
 
         {/* ---- AI pill + footer --------------------------------------- */}
@@ -375,7 +402,8 @@ function AiExplanationSheet({
       `Explain this past question step by step: "${stripHtml(question.stem)}". Options: ${optionLines}. ` +
       (question.correct
         ? `End with the correct option (${question.correct}) and why the others are wrong.`
-        : 'End with the correct option and why the others are wrong.');
+        : 'End with the correct option and why the others are wrong.') +
+      ' Include an everyday, real-life practical scenario (in clear, standard English) that helps ground the core concept.';
     if (attemptId) {
       try {
         const res = await api<{ reply: string }>(`/attempts/${attemptId}/tutor`, {
@@ -407,7 +435,7 @@ function AiExplanationSheet({
             role: 'system',
             content:
               'You are Rence, an exam coach for Nigerian students (JAMB, WAEC, NECO, university modules). ' +
-              'Explain the solution step by step, simply and honestly. Keep replies under 250 words.',
+              'Explain the solution step by step, simply and honestly. Always include a short, relatable real-world physical or social scenario to illustrate the concept. Keep replies under 250 words.',
           },
           { role: 'user', content: ask },
         ],

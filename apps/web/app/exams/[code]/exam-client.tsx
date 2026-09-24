@@ -25,6 +25,9 @@ import { FatigueNudgeOverlay } from '@/components/fatigue-nudge';
 import CalculatorSheet from '@/components/calculator';
 import { LogoActivityIndicator } from '@/components/renance-logo';
 import { apiImg, QText } from '@/lib/qtext';
+import { assessLivePacing, computePacingForensics, type QuestionTimeRecord } from '@/lib/pacing';
+import PacingGauge from '@/components/pacing-gauge';
+import PacingForensicsCard from '@/components/pacing-forensics';
 
 interface ExamMetaLite {
   code: string;
@@ -151,6 +154,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
   // No PII beyond timing leaves the browser.
   const latenciesRef = useRef<number[]>([]);
   const shownAtRef = useRef<number>(0);
+  const questionMsMapRef = useRef<Record<string, number>>({});
   const pausedMsRef = useRef(0);
   const breakLeftRef = useRef(0);
   const nudgeDismissedRef = useRef(false);
@@ -356,6 +360,13 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
   const submit = useCallback(async () => {
     if (!attempt || submittedRef.current) return;
     submittedRef.current = true;
+    if (bundle && bundle.questions[current]) {
+      const qid = bundle.questions[current].id;
+      const spent = Date.now() - shownAtRef.current;
+      if (spent > 0) {
+        questionMsMapRef.current[qid] = (questionMsMapRef.current[qid] || 0) + spent;
+      }
+    }
     const localAttempt = attempt.attemptId.startsWith('local-');
     // Fire-and-forget telemetry (ROADMAP #6): the server re-computes the
     // same pure signal from the raw latencies and logs the sitting.
@@ -588,8 +599,15 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
     setAnswers((a) => (a[questionId] ? a : { ...a, [questionId]: '' }));
   };
 
-  /** Question navigation resets the per-question latency clock. */
+  /** Question navigation resets the per-question latency clock and records dwell time. */
   const goTo = (i: number) => {
+    if (bundle && bundle.questions[current]) {
+      const qid = bundle.questions[current].id;
+      const spent = Date.now() - shownAtRef.current;
+      if (spent > 0) {
+        questionMsMapRef.current[qid] = (questionMsMapRef.current[qid] || 0) + spent;
+      }
+    }
     setCurrent(i);
     setVisited((v) => {
       const q = bundle?.questions[i];
@@ -1084,6 +1102,21 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
     }
     const xpEarned = result.score * 10; // XPPerCorrect = 10 (server rule)
 
+    const timeRecords: QuestionTimeRecord[] = (bundle?.questions ?? []).map((q, idx) => ({
+      questionId: q.id,
+      index: idx,
+      stem: q.stem,
+      topic: q.topic,
+      durationMs: questionMsMapRef.current[q.id] || 0,
+      selected: answers[q.id],
+      correct: q.answer ? answers[q.id] === q.answer : false,
+    }));
+    const pacingReport = computePacingForensics(
+      timeRecords,
+      timerOverride != null ? timerOverride : bundle?.durationMinutes ?? 30,
+      bundle?.questionCount ?? 40,
+    );
+
     // results_recovery_light: the low-score variant of the score report.
     if (pct < 50) {
       const weak = [...result.breakdown]
@@ -1144,6 +1177,9 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
               );
             })}
           </div>
+
+          {/* Pacing & Panic Forensics Card */}
+          <PacingForensicsCard report={pacingReport} attemptId={attempt?.attemptId} />
 
           <div className="mt-8 flex flex-col gap-2">
             {attempt && (
@@ -1239,6 +1275,9 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             <p className="text-[13px] text-on-surface-variant">Correct Answers</p>
           </div>
         </section>
+
+        {/* Pacing & Panic Forensics Card */}
+        <PacingForensicsCard report={pacingReport} attemptId={attempt?.attemptId} />
 
         <h2 className="mt-6 text-lg font-semibold tracking-tight text-on-surface">Topic Breakdown</h2>
         <div className="mt-3 space-y-3">
@@ -1519,11 +1558,22 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         {/* question card */}
         <div className="renance-rise rounded-[14px] border border-outline-variant/50 bg-card p-[18px] shadow-[0_2px_12px_0_rgba(20,28,45,0.10)] sm:p-6">
           <div className="flex items-center justify-between gap-3">
-            {/* "Question N" pill - the school app's badge */}
-            <span className="shrink-0 rounded-full border border-outline-variant bg-card px-3.5 py-[7px] text-[14.5px] font-medium text-on-surface shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
-              Question {current + 1}
-              <span className="ml-1.5 font-mono text-[11px] text-outline">/ {bundle.questionCount}</span>
-            </span>
+            {/* "Question N" pill + Live Pacing Gauge */}
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="shrink-0 rounded-full border border-outline-variant bg-card px-3.5 py-[7px] text-[14.5px] font-medium text-on-surface shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+                Question {current + 1}
+                <span className="ml-1.5 font-mono text-[11px] text-outline">/ {bundle.questionCount}</span>
+              </span>
+              {!untimed && (
+                <PacingGauge
+                  pacing={assessLivePacing(
+                    (questionMsMapRef.current[question.id] || 0) + (Date.now() - shownAtRef.current),
+                    timerOverride != null ? timerOverride : bundle.durationMinutes ?? 30,
+                    bundle.questionCount,
+                  )}
+                />
+              )}
+            </div>
             <div className="flex min-w-0 items-center gap-2">
             {question.topic && (
               <span className="hidden min-w-0 truncate rounded-full bg-surface-container-low px-2.5 py-1 text-[11px] text-on-surface-variant sm:block">
