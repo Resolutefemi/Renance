@@ -234,6 +234,7 @@ class Bundle {
     this.durationMinutes,
     this.category = '',
     this.body = '',
+    this.sections = const <BundleSection>[],
   });
 
   final String code;
@@ -246,6 +247,10 @@ class Bundle {
   final String body;
   final List<BundleQuestion> questions;
 
+  /// Composite UTME mock papers only: per-subject grouping for the
+  /// subject strip and the official score slip.
+  final List<BundleSection> sections;
+
   factory Bundle.fromJson(Map<String, dynamic> j) => Bundle(
     code: (j['code'] ?? '') as String,
     title: (j['title'] ?? '') as String,
@@ -257,6 +262,9 @@ class Bundle {
     body: (j['body'] ?? '') as String,
     questions: ((j['questions'] as List<dynamic>?) ?? const [])
         .map((q) => BundleQuestion.fromJson((q as Map).cast<String, dynamic>()))
+        .toList(),
+    sections: ((j['sections'] as List<dynamic>?) ?? const [])
+        .map((s) => BundleSection.fromJson((s as Map).cast<String, dynamic>()))
         .toList(),
   );
 
@@ -365,10 +373,16 @@ class ExamResult {
     required this.score,
     required this.total,
     required this.breakdown,
+    this.subjects = const <UtmeSubjectRow>[],
   });
   final int score;
   final int total;
   final List<TopicRow> breakdown;
+
+  /// Official UTME per-subject ledger for composite JAMB mock papers:
+  /// attempted, section size, marks, score out of 100 and time used per
+  /// subject. Empty for every other pack.
+  final List<UtmeSubjectRow> subjects;
 
   /// Topics the last paper exposed (accuracy < 60%), the score report's
   /// weak-topic chips that deep-link into the syllabus map (ROADMAP #4).
@@ -391,6 +405,50 @@ class ExamResult {
     breakdown: ((j['breakdown'] as List<dynamic>?) ?? const [])
         .map((r) => TopicRow.fromJson((r as Map).cast<String, dynamic>()))
         .toList(),
+    subjects: ((j['subjects'] as List<dynamic>?) ?? const [])
+        .map((s) => UtmeSubjectRow.fromJson((s as Map).cast<String, dynamic>()))
+        .toList(),
+  );
+}
+
+/// One subject group on a composite UTME mock paper.
+class BundleSection {
+  const BundleSection({required this.subject, required this.questionIds});
+  final String subject;
+  final List<String> questionIds;
+
+  factory BundleSection.fromJson(Map<String, dynamic> j) => BundleSection(
+    subject: (j['subject'] ?? '') as String,
+    questionIds: ((j['questionIds'] as List<dynamic>?) ?? const [])
+        .map((e) => e as String)
+        .toList(),
+  );
+}
+
+/// One subject's official UTME ledger row: what the score slip prints.
+class UtmeSubjectRow {
+  const UtmeSubjectRow({
+    required this.subject,
+    required this.attempted,
+    required this.total,
+    required this.correct,
+    required this.score,
+    required this.timeMs,
+  });
+  final String subject;
+  final int attempted;
+  final int total;
+  final int correct;
+  final double score;
+  final int timeMs;
+
+  factory UtmeSubjectRow.fromJson(Map<String, dynamic> j) => UtmeSubjectRow(
+    subject: (j['subject'] ?? '') as String,
+    attempted: (j['attempted'] ?? 0) as int,
+    total: (j['total'] ?? 0) as int,
+    correct: (j['correct'] ?? 0) as int,
+    score: ((j['score'] ?? 0) as num).toDouble(),
+    timeMs: ((j['timeMs'] ?? 0) as num).toInt(),
   );
 }
 

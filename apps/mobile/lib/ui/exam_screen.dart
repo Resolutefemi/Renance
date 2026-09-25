@@ -2046,12 +2046,17 @@ class _RecoveryView extends StatelessWidget {
     required this.result,
     required this.pct,
     required this.xpEarned,
+    this.showUtmeSlip = false,
   });
 
   final ExamController controller;
   final ExamResult result;
   final int pct;
   final int xpEarned;
+
+  /// Composite JAMB mock papers print the official UTME slip above the
+  /// review list, even on the recovery variant of the report.
+  final bool showUtmeSlip;
 
   @override
   Widget build(BuildContext context) {
@@ -2070,6 +2075,8 @@ class _RecoveryView extends StatelessWidget {
               // Pacing forensics (contributor feature, PR #1 ported):
               // the clock story behind this score.
               PacingForensicsSection(controller: controller),
+              // The official UTME slip (composite JAMB mock papers).
+              if (showUtmeSlip) _UtmeSlip(result: result),
               // rose hero -------------------------------------------------
               Container(
                 padding: const EdgeInsets.fromLTRB(24, 28, 24, 28),
@@ -2428,6 +2435,7 @@ class _ResultState extends State<_Result> {
         result: result,
         pct: pct,
         xpEarned: xpEarned,
+        showUtmeSlip: result.subjects.isNotEmpty,
       );
     }
 
@@ -2446,6 +2454,9 @@ class _ResultState extends State<_Result> {
                     // Pacing forensics (contributor feature, PR #1 ported):
                     // where the clock went and what it cost.
                     PacingForensicsSection(controller: widget.controller),
+                    // The official UTME slip (composite JAMB mock papers):
+                    // the aggregate out of 400, subject by subject.
+                    _UtmeSlip(result: result),
                     // XP / streak card ---------------------------------
                     Container(
                       padding: const EdgeInsets.all(16),
@@ -3365,6 +3376,382 @@ class _CalcKey extends StatelessWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+// ------------------------------------------------- official UTME score slip
+
+/// The official JAMB UTME score slip for composite mock papers. Printed
+/// like the real thing in strict ink on paper: one row per subject with
+/// questions attempted, total questions, marks (correct over total), the
+/// subject score out of 100 and the time spent on that subject, then the
+/// four subject marks summed into the aggregate out of 400.
+///
+/// Official scoring: Use of English divides its correct count by 60,
+/// every other subject by 40 (2.5 marks per question); the four subject
+/// scores (each out of 100) add to the final score out of 400.
+class _UtmeSlip extends StatelessWidget {
+  const _UtmeSlip({required this.result});
+
+  final ExamResult result;
+
+  String _fmtScore(double n) =>
+      n == n.roundToDouble() ? n.toInt().toString() : n.toStringAsFixed(1);
+
+  String _fmtTime(int ms) {
+    if (ms <= 0) return '-';
+    final int total = ms ~/ 1000;
+    final int m = total ~/ 60;
+    final int s = total % 60;
+    return '${m.toString().padLeft(2, '0')}:${s.toString().padLeft(2, '0')}';
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final List<UtmeSubjectRow> rows = result.subjects;
+    if (rows.isEmpty) return const SizedBox.shrink();
+    final double aggregate =
+        rows.fold<double>(0, (double sum, UtmeSubjectRow r) => sum + r.score);
+    final int totalQ = rows.fold<int>(0, (int sum, UtmeSubjectRow r) => sum + r.total);
+    final int totalCorrect =
+        rows.fold<int>(0, (int sum, UtmeSubjectRow r) => sum + r.correct);
+    final int totalAttempted =
+        rows.fold<int>(0, (int sum, UtmeSubjectRow r) => sum + r.attempted);
+    final int totalTime =
+        rows.fold<int>(0, (int sum, UtmeSubjectRow r) => sum + r.timeMs);
+
+    return Container(
+      margin: const EdgeInsets.only(top: 16),
+      clipBehavior: Clip.antiAlias,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: context.ink, width: 1.6),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          // Slip head: the aggregate, printed like the hall's slip.
+          Container(
+            padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
+            color: context.ink,
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        'UNIFIED TERTIARY MATRICULATION EXAMINATION',
+                        style: RenanceText.caption.copyWith(
+                          fontSize: 8.5,
+                          letterSpacing: 1.6,
+                          color: Colors.white.withValues(alpha: 0.72),
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        'JAMB UTME Mock · Official Score',
+                        style: RenanceText.bodyMedium.copyWith(
+                          color: Colors.white,
+                          fontSize: 16.5,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: <Widget>[
+                    Text.rich(
+                      TextSpan(
+                        children: <InlineSpan>[
+                          TextSpan(
+                            text: aggregate == aggregate.roundToDouble()
+                                ? aggregate.toInt().toString()
+                                : aggregate.toStringAsFixed(1),
+                            style: RenanceText.statNumber.copyWith(
+                              fontSize: 30,
+                              color: Colors.white,
+                            ),
+                          ),
+                          TextSpan(
+                            text: '/400',
+                            style: RenanceText.bodyMedium.copyWith(
+                              fontSize: 14,
+                              color: Colors.white.withValues(alpha: 0.6),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Text(
+                      'aggregate',
+                      style: RenanceText.caption.copyWith(
+                        fontSize: 9.5,
+                        letterSpacing: 1.4,
+                        color: Colors.white.withValues(alpha: 0.7),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          // Scoring rules strip.
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 9),
+            color: context.ink.withValues(alpha: 0.045),
+            child: Text(
+              'Use of English: 60 questions, score divided by 60 and '
+              'multiplied by 100. Other subjects: 40 questions each, 2.5 '
+              'marks per question (100 marks per subject), correct answers '
+              'divided by 40 and multiplied by 100. Total: the four subject '
+              'scores added together, out of 400.',
+              style: RenanceText.caption.copyWith(
+                fontSize: 10,
+                height: 1.45,
+                color: context.ink.withValues(alpha: 0.72),
+              ),
+            ),
+          ),
+          // Column headers.
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 10, 16, 6),
+            child: Row(
+              children: <Widget>[
+                const Expanded(
+                  flex: 5,
+                  child: Text('SUBJECT',
+                      style: RenanceText.overline),
+                ),
+                const Expanded(
+                  flex: 3,
+                  child: Text('ATT.',
+                    textAlign: TextAlign.center,
+                    style: RenanceText.overline),
+                ),
+                const Expanded(
+                  flex: 3,
+                  child: Text('QNS',
+                    textAlign: TextAlign.center,
+                    style: RenanceText.overline),
+                ),
+                const Expanded(
+                  flex: 4,
+                  child: Text('MARKS',
+                    textAlign: TextAlign.center,
+                    style: RenanceText.overline),
+                ),
+                const Expanded(
+                  flex: 3,
+                  child: Text('SCORE',
+                    textAlign: TextAlign.center,
+                    style: RenanceText.overline),
+                ),
+                Expanded(
+                  flex: 4,
+                  child: Text('TIME',
+                    textAlign: TextAlign.end,
+                    style: RenanceText.overline),
+                ),
+              ],
+            ),
+          ),
+          // One row per subject.
+          ...List<Widget>.generate(rows.length, (int i) {
+            final UtmeSubjectRow r = rows[i];
+            return Container(
+              color: i.isOdd
+                  ? context.ink.withValues(alpha: 0.03)
+                  : Colors.transparent,
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 9),
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    flex: 5,
+                    child: Text(r.subject,
+                        style: RenanceText.caption.copyWith(
+                          fontWeight: FontWeight.w600,
+                        )),
+                  ),
+                  Expanded(
+                    flex: 3,
+                    child: Text('${r.attempted}',
+                        textAlign: TextAlign.center,
+                        style: RenanceText.caption),
+                  ),
+                  Expanded(
+                    flex: 3,
+                    child: Text('${r.total}',
+                        textAlign: TextAlign.center,
+                        style: RenanceText.caption),
+                  ),
+                  Expanded(
+                    flex: 4,
+                    child: Text('${r.correct}/${r.total}',
+                        textAlign: TextAlign.center,
+                        style: RenanceText.caption),
+                  ),
+                  Expanded(
+                    flex: 3,
+                    child: Text(
+                      _fmtScore(r.score),
+                      textAlign: TextAlign.center,
+                      style: RenanceText.caption.copyWith(
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 4,
+                    child: Text(_fmtTime(r.timeMs),
+                        textAlign: TextAlign.end,
+                        style: RenanceText.caption),
+                  ),
+                ],
+              ),
+            );
+          }),
+          // Total row.
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+            color: context.ink,
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                  flex: 5,
+                  child: Text('TOTAL',
+                      style: RenanceText.overline.copyWith(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                      )),
+                ),
+                Expanded(
+                  flex: 3,
+                  child: Text('$totalAttempted',
+                      textAlign: TextAlign.center,
+                      style: RenanceText.caption.copyWith(
+                        color: Colors.white,
+                      )),
+                ),
+                Expanded(
+                  flex: 3,
+                  child: Text('$totalQ',
+                      textAlign: TextAlign.center,
+                      style: RenanceText.caption.copyWith(
+                        color: Colors.white,
+                      )),
+                ),
+                Expanded(
+                  flex: 4,
+                  child: Text('$totalCorrect/$totalQ',
+                      textAlign: TextAlign.center,
+                      style: RenanceText.caption.copyWith(
+                        color: Colors.white,
+                      )),
+                ),
+                Expanded(
+                  flex: 3,
+                  child: Text(
+                    '${aggregate == aggregate.roundToDouble() ? aggregate.toInt() : aggregate.toStringAsFixed(1)}',
+                    textAlign: TextAlign.center,
+                    style: RenanceText.caption.copyWith(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 4,
+                  child: Text(_fmtTime(totalTime),
+                      textAlign: TextAlign.end,
+                      style: RenanceText.caption.copyWith(
+                        color: Colors.white,
+                      )),
+                ),
+              ],
+            ),
+          ),
+          // Per-subject marks out of 100.
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 12, 16, 14),
+            child: Column(
+              children: <Widget>[
+                ...List<Widget>.generate(rows.length, (int i) {
+                  final UtmeSubjectRow r = rows[i];
+                  final double pctFill = r.score.clamp(0, 100).toDouble();
+                  return Padding(
+                    padding: EdgeInsets.only(bottom: i == rows.length - 1 ? 0 : 10),
+                    child: Column(
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Expanded(
+                              child: Text(r.subject,
+                                  style: RenanceText.caption.copyWith(
+                                    fontWeight: FontWeight.w600,
+                                  )),
+                            ),
+                            Text('${_fmtScore(r.score)}/100',
+                                style: RenanceText.caption.copyWith(
+                                  color: context.textSecondary,
+                                )),
+                          ],
+                        ),
+                        const SizedBox(height: 5),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(999),
+                          child: SizedBox(
+                            height: 7,
+                            child: Stack(
+                              children: <Widget>[
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(999),
+                                    border: Border.all(
+                                      color: context.ink.withValues(alpha: 0.16),
+                                    ),
+                                  ),
+                                ),
+                                FractionallySizedBox(
+                                  widthFactor: pctFill / 100,
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: context.ink,
+                                      borderRadius: BorderRadius.circular(999),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                }),
+                const SizedBox(height: 8),
+                Text(
+                  "Each subject's mark is its correct answers over the "
+                  "section's own question count, multiplied by 100. The "
+                  'four subject marks add up to your aggregate out of 400.',
+                  style: RenanceText.caption.copyWith(
+                    fontSize: 10,
+                    height: 1.45,
+                    color: context.textSecondary,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

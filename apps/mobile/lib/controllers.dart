@@ -517,7 +517,12 @@ class ExamController extends ChangeNotifier {
     }
 
     try {
-      await _api.submit(_attemptId!, Map.of(answers), durationMs);
+      await _api.submit(
+        _attemptId!,
+        Map.of(answers),
+        durationMs,
+        questionMs: Map.of(questionMs),
+      );
       await _poll();
     } on NetworkException {
       await _queueOffline(durationMs);

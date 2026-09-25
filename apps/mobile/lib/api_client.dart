@@ -245,11 +245,14 @@ class ApiClient {
   }
 
   /// Submits answers for grading. The engine grades asynchronously (202).
+  /// questionMs is the per-question dwell map (pacing telemetry) that
+  /// grading folds into the official UTME slip's time-used column.
   Future<void> submit(
     String attemptId,
     Map<String, String> answers,
-    int durationMs,
-  ) async {
+    int durationMs, {
+    Map<String, int> questionMs = const <String, int>{},
+  }) async {
     await _send(
       'POST',
       '/attempts/$attemptId/submit',
@@ -260,6 +263,8 @@ class ApiClient {
             )
             .toList(),
         'durationMs': durationMs,
+        if (questionMs.isNotEmpty)
+          'questionMs': questionMs.map((k, v) => MapEntry(k, v.toDouble())),
       },
     );
   }
