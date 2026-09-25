@@ -205,6 +205,7 @@ func (s *Server) Handler() http.Handler {
         mux.HandleFunc("GET /school/check-result", s.handleSchoolCheckResult)
         mux.HandleFunc("GET /school/curriculum", s.handleSchoolCurriculum)
         mux.HandleFunc("GET /school/me", s.auth(s.handleSchoolMe))
+        mux.HandleFunc("GET /school/plan", s.auth(s.handleSchoolPlan))
         mux.HandleFunc("GET /school/pack/{schoolId}", s.auth(s.handleSchoolPack))
         mux.HandleFunc("GET /school/classes", s.auth(s.handleSchoolClasses))
         mux.HandleFunc("GET /school/subjects", s.auth(s.handleSchoolSubjects))
