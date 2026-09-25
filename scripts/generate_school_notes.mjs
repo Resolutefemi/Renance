@@ -35,15 +35,22 @@ const SCHEMES = join(ROOT, 'data', 'school-schemes', 'nerdc-2025');
 const NOTES = join(ROOT, 'data', 'school-notes', 'nerdc-2025');
 const CHECKPOINT = join(ROOT, 'scripts', '.notes-checkpoint.json');
 
-const LEVELS = ['nursery', 'primary-3', 'primary-6', 'jss-3', 'sss-3'];
+const LEVELS = [
+  'jss-3', 'sss-3',
+  'nursery-1', 'nursery-2', 'nursery-3',
+  'primary-1', 'primary-2', 'primary-3', 'primary-4', 'primary-5', 'primary-6',
+  'jss-1', 'jss-2', 'sss-1', 'sss-2',
+];
+
+const NURSERY_BAND = {
+  learner: 'pupils',
+  tone: 'play way. Very short sentences. Songs, pointing games, real objects and movement. The teacher reads the note aloud and leads the activity.',
+  min: 320, max: 750,
+  perCall: 2,
+};
 
 const BAND = {
-  nursery: {
-    learner: 'pupils',
-    tone: 'play way. Very short sentences. Songs, pointing games, real objects and movement. The teacher reads the note aloud and leads the activity.',
-    min: 320, max: 750,
-    perCall: 2,
-  },
+  nursery: NURSERY_BAND,
   'primary-3': {
     learner: 'pupils',
     tone: 'simple primary classroom English. Short sentences, everyday Nigerian examples like the market, kerosene stove, danfo, naira and compound games.',
@@ -63,6 +70,57 @@ const BAND = {
     perCall: 1,
   },
   'sss-3': {
+    learner: 'students',
+    tone: 'senior secondary classroom English. Exam aware to WAEC and NECO standard. Define, explain with structure, work examples, then evaluate.',
+    min: 700, max: 1500,
+    perCall: 1,
+  },
+  'nursery-1': NURSERY_BAND,
+  'nursery-2': NURSERY_BAND,
+  'nursery-3': NURSERY_BAND,
+  'primary-1': {
+    learner: 'pupils',
+    tone: 'very simple primary one classroom English. Very short sentences, songs, real objects, counting and pointing games. The teacher reads the note aloud.',
+    min: 350, max: 800,
+    perCall: 2,
+  },
+  'primary-2': {
+    learner: 'pupils',
+    tone: 'very simple primary two classroom English. Short sentences, everyday Nigerian examples like the market, kerosene stove, danfo and naira.',
+    min: 400, max: 900,
+    perCall: 2,
+  },
+  'primary-4': {
+    learner: 'pupils',
+    tone: 'clear middle primary English. Practical Nigerian examples, simple explanations with one step of reasoning.',
+    min: 500, max: 1100,
+    perCall: 2,
+  },
+  'primary-5': {
+    learner: 'pupils',
+    tone: 'clear upper primary English. Practical Nigerian examples, simple explanations with one or two steps of reasoning.',
+    min: 550, max: 1200,
+    perCall: 2,
+  },
+  'jss-1': {
+    learner: 'students',
+    tone: 'junior secondary classroom English. Define terms, explain step by step, give Nigerian examples, then check understanding.',
+    min: 650, max: 1300,
+    perCall: 1,
+  },
+  'jss-2': {
+    learner: 'students',
+    tone: 'junior secondary classroom English. Define terms, explain step by step, give Nigerian examples, then check understanding.',
+    min: 650, max: 1300,
+    perCall: 1,
+  },
+  'sss-1': {
+    learner: 'students',
+    tone: 'senior secondary classroom English. Exam aware to WAEC and NECO standard. Define, explain with structure, work examples, then evaluate.',
+    min: 700, max: 1500,
+    perCall: 1,
+  },
+  'sss-2': {
     learner: 'students',
     tone: 'senior secondary classroom English. Exam aware to WAEC and NECO standard. Define, explain with structure, work examples, then evaluate.',
     min: 700, max: 1500,
