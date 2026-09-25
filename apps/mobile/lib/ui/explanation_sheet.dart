@@ -18,6 +18,7 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import '../api_client.dart';
+import '../scenarios.dart';
 import '../models.dart';
 import '../qtext.dart';
 import 'theme.dart';
@@ -391,6 +392,66 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                   ],
                 ),
               ),
+              // ---- Everyday scenario ----------------------------------
+              Builder(builder: (BuildContext context) {
+                final EverydayScenario? scenario = findEverydayScenario(
+                  topic: widget.topic,
+                  stem: widget.stem,
+                );
+                if (scenario == null) return const SizedBox.shrink();
+                return Container(
+                  margin: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+                  padding: const EdgeInsets.all(14),
+                  decoration: BoxDecoration(
+                    color: context.cardLow.withValues(alpha: 0.55),
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(
+                      color: context.outlineVariant.withValues(alpha: 0.5),
+                    ),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          Icon(Icons.lightbulb_outline,
+                              size: 16, color: context.textSecondary),
+                          const SizedBox(width: 6),
+                          Expanded(
+                            child: Text(
+                              'Everyday scenario: ${scenario.scenarioTitle}',
+                              style: RenanceText.caption.copyWith(
+                                color: context.ink,
+                                fontWeight: FontWeight.w700,
+                                fontSize: 12.5,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 6),
+                      Text(
+                        scenario.scenario,
+                        style: RenanceText.caption.copyWith(
+                          color: context.textSecondary,
+                          height: 1.5,
+                          fontSize: 12.5,
+                        ),
+                      ),
+                      const SizedBox(height: 6),
+                      Text(
+                        'Takeaway: ${scenario.takeaway}',
+                        style: RenanceText.caption.copyWith(
+                          color: context.ink,
+                          height: 1.5,
+                          fontSize: 12.5,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              }),
               // ---- AI pill + footer ----------------------------------
               SafeArea(
                 top: false,
