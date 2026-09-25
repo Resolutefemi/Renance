@@ -245,7 +245,7 @@ export default function SchoolSetupPage() {
                 <span className="text-sm font-medium text-on-surface">Address</span>
                 <input className={inputCls} value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Street, city, state" />
               </label>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3">
                 <button className={btnPrimary} disabled={savingProfile || !name.trim()} onClick={saveProfile}>
                   {savingProfile ? 'Saving…' : 'Save profile'}
                 </button>
@@ -338,8 +338,8 @@ export default function SchoolSetupPage() {
           <CardTitle hint="The NERDC catalog is pre-installed. Add anything your school teaches that is missing.">
             Subject catalog
           </CardTitle>
-          <div className="grid gap-2 lg:grid-cols-6">
-            <input className={inputCls + ' lg:col-span-2'} placeholder="Subject name (e.g. Marketing)" value={subName} onChange={(e) => setSubName(e.target.value)} />
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-6">
+            <input className={inputCls + ' sm:col-span-2 lg:col-span-2'} placeholder="Subject name (e.g. Marketing)" value={subName} onChange={(e) => setSubName(e.target.value)} />
             <input className={inputCls} placeholder="Code (MKT)" value={subCode} onChange={(e) => setSubCode(e.target.value)} />
             <select className={selectCls} value={subLevel} onChange={(e) => setSubLevel(e.target.value)}>
               <option value="primary">Primary</option>
@@ -354,7 +354,7 @@ export default function SchoolSetupPage() {
                 </option>
               ))}
             </select>
-            <button className={btnPrimary} disabled={subBusy || !subName.trim()} onClick={addSubject}>
+            <button className={btnPrimary + ' sm:col-span-2 lg:col-span-1'} disabled={subBusy || !subName.trim()} onClick={addSubject}>
               {subBusy ? 'Adding…' : 'Add subject'}
             </button>
           </div>
