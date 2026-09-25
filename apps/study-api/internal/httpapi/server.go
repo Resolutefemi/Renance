@@ -177,6 +177,7 @@ func (s *Server) Handler() http.Handler {
         mux.HandleFunc("GET /daily/{body}/leaderboard", s.auth(s.handleDailyLeaderboard))
         mux.HandleFunc("GET /tutor/status", s.auth(s.handleTutorStatus))
         mux.HandleFunc("POST /ai/generate", s.auth(s.handleAIGenerate))
+        mux.HandleFunc("POST /ai/chat", s.auth(s.userLimit("ai", s.handleAIChat)))
         mux.HandleFunc("GET /internal/review/tick", s.handleReviewTick)
         mux.HandleFunc("PUT /me/profile", s.auth(s.handleUpdateProfile))
         mux.HandleFunc("PUT /me/daily-subjects", s.auth(s.handleSetDailySubjects))
