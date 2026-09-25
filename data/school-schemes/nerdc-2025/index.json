@@ -2,12 +2,6 @@
   "source": "NERDC national curriculum, 2025 scheme of work compilations",
   "levels": [
     {
-      "class": "JSS 3",
-      "folder": "jss-3",
-      "subjects": 12,
-      "files": 36
-    },
-    {
       "class": "Nursery 1",
       "folder": "nursery-1",
       "subjects": 9,
@@ -26,16 +20,70 @@
       "files": 27
     },
     {
+      "class": "Primary 1",
+      "folder": "primary-1",
+      "subjects": 9,
+      "files": 27
+    },
+    {
+      "class": "Primary 2",
+      "folder": "primary-2",
+      "subjects": 9,
+      "files": 27
+    },
+    {
       "class": "Primary 3",
       "folder": "primary-3",
       "subjects": 9,
       "files": 27
     },
     {
+      "class": "Primary 4",
+      "folder": "primary-4",
+      "subjects": 10,
+      "files": 30
+    },
+    {
+      "class": "Primary 5",
+      "folder": "primary-5",
+      "subjects": 10,
+      "files": 30
+    },
+    {
       "class": "Primary 6",
       "folder": "primary-6",
       "subjects": 10,
       "files": 30
+    },
+    {
+      "class": "JSS 1",
+      "folder": "jss-1",
+      "subjects": 12,
+      "files": 36
+    },
+    {
+      "class": "JSS 2",
+      "folder": "jss-2",
+      "subjects": 12,
+      "files": 36
+    },
+    {
+      "class": "JSS 3",
+      "folder": "jss-3",
+      "subjects": 12,
+      "files": 36
+    },
+    {
+      "class": "SSS 1",
+      "folder": "sss-1",
+      "subjects": 14,
+      "files": 42
+    },
+    {
+      "class": "SSS 2",
+      "folder": "sss-2",
+      "subjects": 14,
+      "files": 42
     },
     {
       "class": "SSS 3",
