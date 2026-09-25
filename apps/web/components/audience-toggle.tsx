@@ -50,14 +50,18 @@ export function AudienceToggle({
         </button>
       </div>
       {audience === 'schools' && (
-        <p className="text-center text-xs text-on-surface-variant">
+        <p className="break-words text-center text-xs text-on-surface-variant">
           {mode === 'register'
             ? 'Create your school workspace with management + teacher accounts, syllabuses, notes and results.'
             : 'Management and teachers: sign in with your school email to open the school workspace.'}
-          {' '}
-          <Link href={mode === 'register' ? '/register' : '/school/check'} className="font-medium text-primary underline-offset-4 hover:underline">
-            {mode === 'register' ? '' : 'Check a result'}
-          </Link>
+          {mode === 'login' && (
+            <>
+              {' '}
+              <Link href="/school/check" className="font-medium text-primary underline-offset-4 hover:underline">
+                Check a result
+              </Link>
+            </>
+          )}
         </p>
       )}
     </div>
