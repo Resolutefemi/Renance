@@ -9,6 +9,7 @@ package grading
 import (
         "context"
         "log/slog"
+        "math"
         "sort"
         "sync"
 
@@ -31,6 +32,10 @@ type Job struct {
         // rides along so the daily seat can show the honest sitting time.
         DailyDay   string
         DurationMs *int
+        // QuestionMs is the per-question dwell map the client banked during
+        // the sitting (pacing telemetry). Grading folds it into the official
+        // UTME subject ledger so the result slip can print time per subject.
+        QuestionMs map[string]int64
 }
 
 type Engine struct {
@@ -108,7 +113,7 @@ func (e *Engine) grade(ctx context.Context, job Job, worker int) {
                 _ = e.store.SetAttemptStatus(ctx, job.AttemptID, "error")
                 return
         }
-        result := Score(bundle, key, answers)
+        result := Score(bundle, key, answers, job.QuestionMs)
         if err := e.store.WriteResult(ctx, job.AttemptID, result); err != nil {
                 e.log.Error("grading: write result", "err", err, "attempt", job.AttemptID)
                 _ = e.store.SetAttemptStatus(ctx, job.AttemptID, "error")
@@ -161,7 +166,16 @@ type TopicRow = store.TopicRow
 // (the submit handler rejects them, this stays forgiving for forensics).
 // Theory (essay) questions are self-assessed: they never count toward
 // score or total - the model answer unlocks in review instead.
-func Score(bundle *cbtdata.Bundle, key map[string]store.KeyEntry, answers []store.Picked) *store.Result {
+//
+// Composite papers (jamb-mock-*) additionally get the official UTME
+// subject ledger: every section becomes a SubjectRow whose score is the
+// subject's mark out of 100. Use of English divides its correct count by
+// its 60-question section, every other subject by its 40-question
+// section (2.5 marks per question) - the four subject marks then add to
+// the final score out of 400. questionMs (the client's per-question
+// dwell map) feeds each subject's time-used column; a nil map simply
+// leaves the column at zero.
+func Score(bundle *cbtdata.Bundle, key map[string]store.KeyEntry, answers []store.Picked, questionMs map[string]int64) *store.Result {
         picked := make(map[string]string, len(answers))
         for _, a := range answers {
                 picked[a.QuestionID] = a.Selected
@@ -169,6 +183,19 @@ func Score(bundle *cbtdata.Bundle, key map[string]store.KeyEntry, answers []stor
         score := 0
         total := 0
         perTopic := map[string]*[2]int{} // topic -> [correct, total]
+        // Official per-subject ledgers: subject -> row. Only filled when the
+        // bundle carries sections (composite papers).
+        perSubject := map[string]*store.SubjectRow{}
+        subjectOf := map[string]string{}
+        if len(bundle.Sections) > 0 {
+                for _, sec := range bundle.Sections {
+                        row := &store.SubjectRow{Subject: sec.Subject}
+                        perSubject[sec.Subject] = row
+                        for _, id := range sec.QuestionIDs {
+                                subjectOf[id] = sec.Subject
+                        }
+                }
+        }
         for _, q := range bundle.Questions {
                 if q.Type == "theory" {
                         continue
@@ -184,6 +211,16 @@ func Score(bundle *cbtdata.Bundle, key map[string]store.KeyEntry, answers []stor
                         perTopic[topic] = bucket
                 }
                 bucket[1]++
+                row, onPaper := perSubject[subjectOf[q.ID]]
+                if onPaper {
+                        row.Total++
+                        if picked[q.ID] != "" {
+                                row.Attempted++
+                        }
+                        if ms := questionMs[q.ID]; ms > 0 {
+                                row.TimeMs += ms
+                        }
+                }
                 k, ok := key[q.ID]
                 if !ok {
                         continue
@@ -191,14 +228,34 @@ func Score(bundle *cbtdata.Bundle, key map[string]store.KeyEntry, answers []stor
                 if picked[q.ID] == k.Letter {
                         score++
                         bucket[0]++
+                        if onPaper {
+                                row.Correct++
+                        }
                 }
         }
+        // Subject marks out of 100: correct answers over the section's own
+        // question count, times 100 (the standard UTME sections compose at
+        // 60 English + 40 per other subject, so this lands on the official
+        // divide-by-60 / divide-by-40 rule and stays fair when a bank runs
+        // short and the section is smaller).
+        subjects := make([]store.SubjectRow, 0, len(perSubject))
+        for _, row := range perSubject {
+                if row.Total > 0 {
+                        row.Score = math.Round((float64(row.Correct)/float64(row.Total))*100*100) / 100
+                }
+                subjects = append(subjects, *row)
+        }
+        sort.Slice(subjects, func(i, j int) bool { return subjects[i].Subject < subjects[j].Subject })
         breakdown := make([]TopicRow, 0, len(perTopic))
         for topic, b := range perTopic {
                 breakdown = append(breakdown, TopicRow{Topic: topic, Correct: b[0], Total: b[1]})
         }
         sort.Slice(breakdown, func(i, j int) bool { return breakdown[i].Topic < breakdown[j].Topic })
-        return &store.Result{Score: score, Total: total, Breakdown: breakdown}
+        res := &store.Result{Score: score, Total: total, Breakdown: breakdown}
+        if len(subjects) > 0 {
+                res.Subjects = subjects
+        }
+        return res
 }
 
 // StaticKeyCache is the boot-time snapshot of the sealed answer keys,
