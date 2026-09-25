@@ -267,6 +267,18 @@ class ExamController extends ChangeNotifier {
   /// clock discipline. Keyed by question id.
   final Map<String, int> questionMs = <String, int>{};
 
+  /// Free-tier cap from the attempt creation response (null = full
+  /// paper), plus the one-shot subscribe prompt state the player reads.
+  int? serverCap;
+  bool capPromptShown = false;
+  bool capPromptVisible = false;
+
+  /// Closes the subscribe prompt (dismiss, not paid).
+  void dismissCapPrompt() {
+    capPromptVisible = false;
+    notifyListeners();
+  }
+
   String get _currentQuestionId =>
       bundle != null && bundle!.questions.isNotEmpty
           ? bundle!.questions[index].id
@@ -381,6 +393,10 @@ class ExamController extends ChangeNotifier {
         adaptive: adaptive,
       );
       _attemptId = started.attemptId;
+      // Free-tier cap: the server says this paper answers at most N
+      // questions before the subscribe prompt (premium and the one free
+      // testing CBT carry no cap).
+      serverCap = started.cap;
       // The server walked the pack weak-topic-first (ROADMAP #5):
       // re-sequence the in-memory copy so the player, the navigator and
       // the paper history all follow exactly that order. The cached pack
@@ -446,6 +462,15 @@ class ExamController extends ChangeNotifier {
       _assessFatigue();
     }
     answers[questionId] = letter;
+    // Free-tier gate: when a capped paper lands on its 20th answer, ask
+    // for the subscription. Progress stays saved either way.
+    if (serverCap != null &&
+        !capPromptShown &&
+        phase == ExamPhase.playing &&
+        answers.length == serverCap) {
+      capPromptShown = true;
+      capPromptVisible = true;
+    }
     notifyListeners();
   }
 
@@ -524,12 +549,23 @@ class ExamController extends ChangeNotifier {
         questionMs: Map.of(questionMs),
       );
       await _poll();
-    } on NetworkException {
-      await _queueOffline(durationMs);
     } on ApiException catch (e) {
+      // Free-tier cap: the server saved the answers and kept the attempt
+      // open. Return to the paper with the subscribe prompt up; after
+      // paying, the student continues exactly where they stopped.
+      if (e.statusCode == 402 || e.code == 'free_cap') {
+        capPromptShown = true;
+        capPromptVisible = true;
+        phase = ExamPhase.playing;
+        _timer = Timer.periodic(const Duration(seconds: 1), (_) => tick());
+        notifyListeners();
+        return;
+      }
       error = e.message;
       phase = ExamPhase.error;
       notifyListeners();
+    } on NetworkException {
+      await _queueOffline(durationMs);
     }
   }
 

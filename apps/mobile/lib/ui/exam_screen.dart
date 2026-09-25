@@ -25,6 +25,7 @@ import 'renance_logo.dart';
 import 'syllabus_screen.dart';
 import 'theme.dart';
 import 'pacing_ui.dart';
+import 'premium_screen.dart';
 
 class ExamScreen extends StatefulWidget {
   const ExamScreen({
@@ -132,18 +133,21 @@ class _ExamScreenState extends State<ExamScreen> {
         // clear of the status bar instead.
         ExamPhase.intro =>
           SafeArea(child: _Intro(controller: c, studyMode: widget.studyMode, daily: widget.daily)),
-        ExamPhase.playing => FatigueNudgeOverlay(
-            visible: c.nudgeVisible,
-            reasons: c.signal.reasons,
-            onTakeBreak: c.takeBreak,
-            onKeepGoing: c.keepGoing,
-            child: SafeArea(
-              bottom: false,
-              child: _Player(
-                controller: c,
-                mmss: _mmss,
-                hhmmss: _hhmmss,
-                daily: widget.daily,
+        ExamPhase.playing => _CapPromptGate(
+            controller: c,
+            child: FatigueNudgeOverlay(
+              visible: c.nudgeVisible,
+              reasons: c.signal.reasons,
+              onTakeBreak: c.takeBreak,
+              onKeepGoing: c.keepGoing,
+              child: SafeArea(
+                bottom: false,
+                child: _Player(
+                  controller: c,
+                  mmss: _mmss,
+                  hhmmss: _hhmmss,
+                  daily: widget.daily,
+                ),
               ),
             ),
           ),
@@ -3754,5 +3758,39 @@ class _UtmeSlip extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+/// The free-tier cap gate: when the controller raises the subscribe
+/// prompt (the 20th answer on a capped paper, or a 402 from a capped
+/// submit), the premium sheet opens once. Progress stays saved; after
+/// subscribing the student continues the same paper.
+class _CapPromptGate extends StatefulWidget {
+  const _CapPromptGate({required this.controller, required this.child});
+
+  final ExamController controller;
+  final Widget child;
+
+  @override
+  State<_CapPromptGate> createState() => _CapPromptGateState();
+}
+
+class _CapPromptGateState extends State<_CapPromptGate> {
+  @override
+  Widget build(BuildContext context) {
+    if (widget.controller.capPromptVisible) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!mounted) return;
+        widget.controller.dismissCapPrompt();
+        // Full-screen push (not a sheet): the paywall owns the focus, and
+        // back returns to the paper with every answer still in place.
+        Navigator.of(context).push(
+          MaterialPageRoute<void>(
+            builder: (_) => const PremiumScreen(capNotice: true),
+          ),
+        );
+      });
+    }
+    return widget.child;
   }
 }

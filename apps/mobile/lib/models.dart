@@ -461,6 +461,7 @@ class AttemptStarted {
     this.questionCount,
     this.adaptive = false,
     this.order,
+    this.cap,
   });
 
   final String attemptId;
@@ -476,6 +477,10 @@ class AttemptStarted {
   /// order (pre-adaptive attempts and non-adaptive papers).
   final List<String>? order;
 
+  /// Free-tier cap: when set, the subscribe prompt fires after this many
+  /// answers (null = full paper: premium or the one free testing CBT).
+  final int? cap;
+
   factory AttemptStarted.fromJson(Map<String, dynamic> j) => AttemptStarted(
     attemptId: (j['attemptId'] ?? '') as String,
     code: (j['code'] ?? '') as String,
@@ -484,6 +489,7 @@ class AttemptStarted {
     questionCount: j['questionCount'] as int?,
     adaptive: (j['adaptive'] ?? false) as bool,
     order: (j['order'] as List<dynamic>?)?.map((e) => e.toString()).toList(),
+    cap: j['cap'] as int?,
   );
 }
 
@@ -1610,6 +1616,7 @@ class BoardEntry {
     this.matches = 0,
     this.points = 0,
     this.correct = 0,
+    this.premium = false,
   });
 
   final int rank;
@@ -1622,6 +1629,7 @@ class BoardEntry {
   final int matches;
   final int points;
   final int correct;
+  final bool premium;
 
   factory BoardEntry.fromJson(Map<String, dynamic> j) => BoardEntry(
     rank: (j['rank'] ?? 0) as int,
@@ -1634,6 +1642,7 @@ class BoardEntry {
     matches: (j['matches'] ?? 0) as int,
     points: (j['points'] ?? 0) as int,
     correct: (j['correct'] ?? 0) as int,
+    premium: (j['premium'] ?? false) as bool,
   );
 }
 

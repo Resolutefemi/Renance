@@ -110,10 +110,30 @@ class ApiClient {
   // ------------------------------------------------------------------ auth
 
   Future<AuthTokens> register(String username, String password) async {
+    return registerFull(username, password: password);
+  }
+
+  /// Manual signup with the full payload: the app's device id (one
+  /// device, one account) and where the confirmation mail should send
+  /// the student back ("app").
+  Future<AuthTokens> registerFull(
+    String username, {
+    required String password,
+    String? email,
+    String? deviceId,
+    String? referral,
+  }) async {
     final data = await _send(
       'POST',
       '/auth/register',
-      body: <String, String>{'username': username, 'password': password},
+      body: <String, dynamic>{
+        'username': username,
+        'password': password,
+        if (email != null && email.isNotEmpty) 'email': email,
+        'verifyReturn': 'app',
+        if (deviceId != null && deviceId.isNotEmpty) 'deviceId': deviceId,
+        if (referral != null && referral.isNotEmpty) 'referral': referral,
+      },
       auth: false,
     ) as Map<dynamic, dynamic>;
     return AuthTokens(
@@ -123,10 +143,24 @@ class ApiClient {
   }
 
   Future<AuthTokens> login(String username, String password) async {
+    return loginFull(username, password: password);
+  }
+
+  /// Login with the app's device id: a device bound to another account
+  /// is refused server-side (one device, one account).
+  Future<AuthTokens> loginFull(
+    String username, {
+    required String password,
+    String? deviceId,
+  }) async {
     final data = await _send(
       'POST',
       '/auth/login',
-      body: <String, String>{'username': username, 'password': password},
+      body: <String, dynamic>{
+        'username': username,
+        'password': password,
+        if (deviceId != null && deviceId.isNotEmpty) 'deviceId': deviceId,
+      },
       auth: false,
     ) as Map<dynamic, dynamic>;
     return AuthTokens(
@@ -729,4 +763,181 @@ class ApiClient {
             (e as Map).cast<String, dynamic>()))
         .toList();
   }
+
+  // ------------------------------------------------------------ renance ai
+
+  /// One Renance AI exchange: the whole visible history (up to 12 turns)
+  /// plus optional school-corpus grounding (class + subject slugs).
+  Future<AiChatReply> aiChat(
+    List<Map<String, String>> messages, {
+    String? classSlug,
+    String? subjectSlug,
+  }) async {
+    final data = await _send(
+      'POST',
+      '/ai/chat',
+      body: <String, dynamic>{
+        'messages': messages,
+        if (classSlug != null && classSlug.isNotEmpty) 'class': classSlug,
+        if (subjectSlug != null && subjectSlug.isNotEmpty) 'subject': subjectSlug,
+      },
+    ) as Map<dynamic, dynamic>;
+    return AiChatReply(
+      text: (data['reply'] ?? '') as String,
+      mode: (data['mode'] ?? 'ai') as String,
+    );
+  }
+
+  // --------------------------------------------------------------- billing
+
+  /// The plan catalog: premium tiers, REN redemption rates, whether
+  /// Paystack is connected and the founder's WhatsApp line.
+  Future<PlanCatalog> billingPlans() async {
+    final data = await _send('GET', '/billing/plans', auth: false)
+        as Map<dynamic, dynamic>;
+    return PlanCatalog.fromJson(data.cast<String, dynamic>());
+  }
+
+  /// The signed-in student's entitlement (premium, coins, verification).
+  Future<Entitlement> entitlement() async {
+    final data = await _send('GET', '/me') as Map<dynamic, dynamic>;
+    return Entitlement.fromJson(
+        ((data['entitlement'] ?? const <String, dynamic>{}) as Map)
+            .cast<String, dynamic>());
+  }
+
+  /// Starts a Paystack charge; returns the hosted checkout URL. 503
+  /// (paystack_unavailable) surfaces as an ApiException the paywall
+  /// renders with the WhatsApp fallback.
+  Future<String> initializePaystack(String plan) async {
+    final data = await _send(
+      'POST',
+      '/billing/paystack/initialize',
+      body: <String, String>{'plan': plan},
+    ) as Map<dynamic, dynamic>;
+    return (data['authorizationUrl'] ?? '') as String;
+  }
+
+  /// Exchanges REN coins for premium days; the refreshed entitlement
+  /// rides back.
+  Future<Entitlement> redeemCoins(String code) async {
+    final data = await _send(
+      'POST',
+      '/billing/redeem',
+      body: <String, String>{'code': code},
+    ) as Map<dynamic, dynamic>;
+    return Entitlement.fromJson(
+        ((data['entitlement'] ?? const <String, dynamic>{}) as Map)
+            .cast<String, dynamic>());
+  }
+}
+
+/// One Renance AI exchange's answer.
+class AiChatReply {
+  const AiChatReply({required this.text, required this.mode});
+  final String text;
+  final String mode; // ai | guide
+}
+
+/// The billing catalog (public): plans, redemption table, WhatsApp.
+class PlanCatalog {
+  const PlanCatalog({
+    required this.plans,
+    required this.redemptions,
+    required this.paystackEnabled,
+    required this.whatsapp,
+  });
+
+  final List<PremiumPlan> plans;
+  final List<RenRedemption> redemptions;
+  final bool paystackEnabled;
+  final String whatsapp;
+
+  factory PlanCatalog.fromJson(Map<String, dynamic> j) => PlanCatalog(
+        plans: ((j['plans'] ?? const <dynamic>[]) as List<dynamic>)
+            .map((dynamic e) => PremiumPlan.fromJson((e as Map).cast<String, dynamic>()))
+            .toList(),
+        redemptions: ((j['redemptions'] ?? const <dynamic>[]) as List<dynamic>)
+            .map((dynamic e) => RenRedemption.fromJson((e as Map).cast<String, dynamic>()))
+            .toList(),
+        paystackEnabled: (j['paystackEnabled'] ?? false) as bool,
+        whatsapp: (j['whatsapp'] ?? '') as String,
+      );
+}
+
+/// One purchasable premium tier.
+class PremiumPlan {
+  const PremiumPlan({
+    required this.code,
+    required this.label,
+    required this.amountNaira,
+    required this.durationDays,
+    required this.perks,
+  });
+
+  final String code;
+  final String label;
+  final int amountNaira;
+  final int durationDays;
+  final String perks;
+
+  factory PremiumPlan.fromJson(Map<String, dynamic> j) => PremiumPlan(
+        code: (j['code'] ?? '') as String,
+        label: (j['label'] ?? '') as String,
+        amountNaira: ((j['amountNaira'] ?? 0) as num).toInt(),
+        durationDays: ((j['durationDays'] ?? 0) as num).toInt(),
+        perks: (j['perks'] ?? '') as String,
+      );
+}
+
+/// One REN coin exchange rate.
+class RenRedemption {
+  const RenRedemption({
+    required this.code,
+    required this.label,
+    required this.coins,
+  });
+
+  final String code;
+  final String label;
+  final int coins;
+
+  factory RenRedemption.fromJson(Map<String, dynamic> j) => RenRedemption(
+        code: (j['code'] ?? '') as String,
+        label: (j['label'] ?? '') as String,
+        coins: ((j['coins'] ?? 0) as num).toInt(),
+      );
+}
+
+/// One user's entitlement row: premium flag + type + expiry, the REN
+/// wallet, and email verification. The Neon console shape.
+class Entitlement {
+  const Entitlement({
+    required this.premiumRole,
+    required this.premiumType,
+    required this.premiumExpiresAt,
+    required this.renCoins,
+    required this.emailVerified,
+  });
+
+  final bool premiumRole;
+  final String premiumType;
+  final DateTime? premiumExpiresAt;
+  final int renCoins;
+  final bool emailVerified;
+
+  /// Premium is live: role on, and the expiry (when stamped) still ahead.
+  bool get premiumActive =>
+      premiumRole &&
+      (premiumExpiresAt == null || premiumExpiresAt!.isAfter(DateTime.now()));
+
+  factory Entitlement.fromJson(Map<String, dynamic> j) => Entitlement(
+        premiumRole: (j['premiumRole'] ?? false) as bool,
+        premiumType: (j['premiumType'] ?? '') as String,
+        premiumExpiresAt: j['premiumExpiresAt'] == null
+            ? null
+            : DateTime.tryParse(j['premiumExpiresAt'].toString()),
+        renCoins: ((j['renCoins'] ?? 0) as num).toInt(),
+        emailVerified: (j['emailVerified'] ?? false) as bool,
+      );
 }

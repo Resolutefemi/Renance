@@ -15,6 +15,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../api_client.dart';
 import '../config.dart';
+import '../device_id.dart';
 import '../models.dart';
 import '../controllers.dart';
 import '../storage.dart';
@@ -242,8 +243,11 @@ class _LoginScreenState extends State<LoginScreen> {
     final SessionStore session = context.read<SessionStore>();
     final SyncController sync = context.read<SyncController>();
     try {
-      final AuthTokens res =
-          await api.login(_username.text.trim(), _password.text);
+      final AuthTokens res = await api.loginFull(
+        _username.text.trim(),
+        password: _password.text,
+        deviceId: await DeviceId.get(),
+      );
       await session.save(res.token, res.user);
 
       if (_audience == AuthAudience.schools) {
@@ -460,12 +464,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
         await Navigator.of(context).pushReplacementNamed('/school');
         return;
       }
-      final AuthTokens res =
-          await api.register(_username.text.trim(), _password.text);
+      final AuthTokens res = await api.registerFull(
+        _username.text.trim(),
+        password: _password.text,
+        deviceId: await DeviceId.get(),
+      );
       await session.save(res.token, res.user);
       final SharedPreferences prefs = session.prefs;
       await SchoolController.forgetSchoolSession(prefs);
       if (!mounted) return;
+      // Manual signups confirm their email: the mailed link returns to
+      // the app (verifyReturn: app). The notice shows before the home
+      // shell; the student can keep exploring in the meantime.
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text(
+            'Account created. Check your inbox for the confirmation link to fully unlock your account.',
+          ),
+          duration: Duration(seconds: 6),
+        ),
+      );
       await Navigator.of(context).pushReplacementNamed('/home');
     } on ApiException catch (e) {
       setState(() {

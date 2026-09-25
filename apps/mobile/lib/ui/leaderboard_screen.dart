@@ -15,6 +15,7 @@ import 'package:provider/provider.dart';
 import '../api_client.dart';
 import '../models.dart';
 import 'theme.dart';
+import 'blue_tick.dart';
 
 class LeaderboardScreen extends StatefulWidget {
   const LeaderboardScreen({super.key});
@@ -403,11 +404,22 @@ class _RankCard extends StatelessWidget {
               ),
               const SizedBox(width: 10),
               Expanded(
-                child: Text(
-                  you ? 'You' : entry.username,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: RenanceText.bodyMedium.copyWith(fontSize: 16),
+                child: Row(
+                  children: <Widget>[
+                    Flexible(
+                      child: Text(
+                        you ? 'You' : entry.username,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: RenanceText.bodyMedium.copyWith(fontSize: 16),
+                      ),
+                    ),
+                    // The premium verified tick, the one blue on the app.
+                    if (entry.premium) ...<Widget>[
+                      const SizedBox(width: 5),
+                      const BlueTickIcon(size: 15),
+                    ],
+                  ],
                 ),
               ),
               Column(
