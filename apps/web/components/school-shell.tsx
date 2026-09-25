@@ -26,6 +26,7 @@ const NAV_GROUPS: { label: string; items: NavItem[] }[] = [
     label: 'Academics',
     items: [
       { href: '/school/syllabus', label: 'Syllabus & Notes', icon: 'auto_stories' },
+      { href: '/curriculum', label: 'Curriculum Bank', icon: 'account_balance' },
       { href: '/school/attendance', label: 'Attendance', icon: 'fact_check' },
       { href: '/school/timetable', label: 'Timetable', icon: 'calendar_month' },
       { href: '/school/exams', label: 'Exam Bank', icon: 'quiz' },

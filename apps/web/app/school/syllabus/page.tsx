@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
 import { SchoolHeading, SchoolShell, btnGhost, btnPrimary, inputCls, selectCls } from '@/components/school-shell';
 import {
   fetchAssignments,
@@ -159,6 +160,19 @@ export default function SchoolSyllabusPage() {
         title="Syllabus, scheme of work & notes"
         sub="Pick a class and subject. Each term holds the weekly scheme, topics and the note under every topic - download any topic's note as a clean black & white PDF."
       />
+
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-outline-variant bg-surface-container-lowest px-4 py-3">
+        <p className="min-w-0 text-sm text-on-surface-variant">
+          Need a head start? The national curriculum bank carries a NERDC-aligned scheme of work and
+          ready lesson notes for every class from Nursery 1 to SSS 3.
+        </p>
+        <Link
+          href="/curriculum"
+          className="shrink-0 rounded-full border border-outline px-4 py-2 text-sm font-medium text-on-surface hover:bg-surface-container"
+        >
+          Open the curriculum bank
+        </Link>
+      </div>
 
       <div className="mb-4 flex flex-wrap items-center gap-2">
         <input
