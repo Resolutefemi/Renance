@@ -94,8 +94,10 @@ the founder content rule.
 The writer covers every class level from Nursery 1 to SSS 3 and
 checkpoints its progress, so it resumes after an interruption:
 
-    node scripts/generate_school_notes.mjs          # everything missing
-    node scripts/generate_school_notes.mjs --level jss-3
+```bash
+node scripts/generate_school_notes.mjs          # everything missing
+node scripts/generate_school_notes.mjs --level jss-3
+```
 
 It needs the z-ai-web-dev-sdk package (already in package.json) and a
 working API quota; when the provider answers 429, stop and rerun later,
