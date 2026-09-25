@@ -466,7 +466,19 @@ export interface LocalResult {
   score: number;
   total: number;
   breakdown: LocalTopicRow[];
+  /** Official per-subject ledger (composite UTME mock papers only). */
+  subjects?: UtmeSubjectRow[];
   local: true;
+}
+
+/** One subject's official UTME ledger row (mirrors the server shape). */
+export interface UtmeSubjectRow {
+  subject: string;
+  attempted: number;
+  total: number;
+  correct: number;
+  score: number;
+  timeMs: number;
 }
 
 /**
@@ -480,28 +492,67 @@ export interface LocalResult {
 export function gradeLocally(
   bundle: Bundle,
   answers: Record<string, string>,
+  questionMs?: Record<string, number>,
 ): LocalResult {
   const byTopic = new Map<string, { correct: number; total: number }>();
   let score = 0;
   let total = 0;
+  // Official per-subject ledger for composite papers with sections:
+  // mirrors the server's grading so offline and stale-session runs print
+  // the same slip. English divides by its own section size (60), the
+  // other subjects by theirs (40) - correct over section total * 100.
+  const perSubject = new Map<string, UtmeSubjectRow>();
+  const subjectOf = new Map<string, string>();
+  for (const sec of bundle.sections ?? []) {
+    perSubject.set(sec.subject, {
+      subject: sec.subject,
+      attempted: 0,
+      total: 0,
+      correct: 0,
+      score: 0,
+      timeMs: 0,
+    });
+    for (const id of sec.questionIds) subjectOf.set(id, sec.subject);
+  }
   for (const q of bundle.questions) {
     const topic = q.topic || 'General';
     const row = byTopic.get(topic) ?? { correct: 0, total: 0 };
     row.total += 1;
     total += 1;
     const picked = answers[q.id];
+    const sRow = perSubject.get(subjectOf.get(q.id) ?? '');
+    if (sRow) {
+      sRow.total += 1;
+      if (picked) sRow.attempted += 1;
+      const ms = questionMs?.[q.id] ?? 0;
+      if (ms > 0) sRow.timeMs += ms;
+    }
     if (q.answer && picked && picked.toUpperCase() === q.answer.toUpperCase()) {
       score += 1;
       row.correct += 1;
+      if (sRow) sRow.correct += 1;
     }
     byTopic.set(topic, row);
   }
+  const subjects =
+    perSubject.size > 0
+      ? [...perSubject.values()]
+          .map((s) => ({
+            ...s,
+            score:
+              s.total > 0
+                ? Math.round((s.correct / s.total) * 100 * 100) / 100
+                : 0,
+          }))
+          .sort((a, b) => a.subject.localeCompare(b.subject))
+      : undefined;
   return {
     score,
     total,
     breakdown: [...byTopic.entries()]
       .map(([topic, r]) => ({ topic, correct: r.correct, total: r.total }))
       .sort((a, b) => a.topic.localeCompare(b.topic)),
+    subjects,
     local: true,
   };
 }

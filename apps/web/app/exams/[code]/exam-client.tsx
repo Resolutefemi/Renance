@@ -27,6 +27,8 @@ import { LogoActivityIndicator } from '@/components/renance-logo';
 import { apiImg, QText } from '@/lib/qtext';
 import { computePacingForensics, type QuestionTimeRecord } from '@/lib/pacing';
 import PacingForensicsCard from '@/components/pacing-forensics';
+import UtmeResultSlip from '@/components/utme-result';
+import type { UtmeSubjectRow } from '@/lib/exams';
 
 interface ExamMetaLite {
   code: string;
@@ -55,6 +57,8 @@ interface ResultPayload {
   score: number;
   total: number;
   breakdown: TopicRow[];
+  /** Official UTME subject ledger (composite JAMB mock papers). */
+  subjects?: UtmeSubjectRow[];
   /** true when graded on-device (offline / signed-out fallback). */
   local?: boolean;
 }
@@ -388,7 +392,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
       // The paper set is identical to the server's composition (same
       // deterministic walk), so the score matches the hall's arithmetic.
       await new Promise((r) => setTimeout(r, 350)); // let the grading state land
-      setResult(gradeLocally(bundle!, answers));
+      setResult(gradeLocally(bundle!, answers, questionMsMapRef.current));
       clearActiveExam();
       setPhase('graded');
       return;
@@ -400,6 +404,9 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
           selected,
         })),
         durationMs: Math.round((Date.now() - startedAtRef.current) / 1),
+        // Per-question dwell map (pacing telemetry): grading folds it into
+        // the official UTME subject ledger's time-used column.
+        questionMs: questionMsMapRef.current,
       };
       await api<{ attemptId: string; status: string }>(`/attempts/${attempt.attemptId}/submit`, {
         method: 'POST',
@@ -435,7 +442,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
       // Network died between picking and submitting - grade on-device
       // rather than throwing the sitting away. Same paper, same answers.
       if (bundle && bundle.questions.some((q) => q.answer)) {
-        setResult(gradeLocally(bundle, answers));
+        setResult(gradeLocally(bundle, answers, questionMsMapRef.current));
         clearActiveExam();
         setPhase('graded');
         return;
@@ -1116,6 +1123,18 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
       bundle?.questionCount ?? 40,
     );
 
+    const isUtmeMock = Boolean(
+      bundle?.body === 'JAMB' &&
+        bundle?.code?.startsWith('jamb-mock-') &&
+        (result.subjects?.length ?? 0) > 0,
+    );
+    const utmeSlip = isUtmeMock ? (
+      <UtmeResultSlip
+        subjects={result.subjects!}
+        questions="Each subject's mark is its correct answers over the section's own question count, multiplied by 100. The four subject marks add up to your aggregate out of 400."
+      />
+    ) : null;
+
     // results_recovery_light: the low-score variant of the score report.
     if (pct < 50) {
       const weak = [...result.breakdown]
@@ -1150,6 +1169,8 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
               <span className="text-sm text-on-surface-variant">XP Earned</span>
             </div>
           </section>
+
+          {utmeSlip}
 
           <h2 className="mt-7 text-lg font-semibold tracking-tight text-on-surface">Topics to Review</h2>
           <div className="mt-3 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
@@ -1234,6 +1255,9 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             </div>
           )}
         </section>
+
+        {/* Official UTME score slip (composite JAMB mock papers) */}
+        {utmeSlip}
 
         {/* XP / streak card */}
         <section className="mt-4 flex items-center justify-between rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
