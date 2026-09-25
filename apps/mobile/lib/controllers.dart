@@ -262,6 +262,35 @@ class ExamController extends ChangeNotifier {
   /// Skipped vs Unseen split).
   final Set<String> visited = <String>{};
 
+  /// Per-question dwell time in milliseconds, banked on every question
+  /// transition (and at submit/break) so the pacing engine can score
+  /// clock discipline. Keyed by question id.
+  final Map<String, int> questionMs = <String, int>{};
+
+  String get _currentQuestionId =>
+      bundle != null && bundle!.questions.isNotEmpty
+          ? bundle!.questions[index].id
+          : '';
+
+  /// Banks the live stretch of the current question into questionMs.
+  void _bankDwell() {
+    final String qid = _currentQuestionId;
+    if (qid.isEmpty || phase != ExamPhase.playing) return;
+    final int ms = _clock().difference(_shownAt).inMilliseconds;
+    if (ms <= 0) return;
+    questionMs[qid] = (questionMs[qid] ?? 0) + ms;
+  }
+
+  /// Milliseconds spent on the question currently on screen: everything
+  /// banked so far plus the live stretch since the last transition.
+  int dwellMsOnCurrent() {
+    final String qid = _currentQuestionId;
+    final int banked = questionMs[qid] ?? 0;
+    if (qid.isEmpty || phase != ExamPhase.playing) return banked;
+    final int live = _clock().difference(_shownAt).inMilliseconds;
+    return banked + (live > 0 ? live : 0);
+  }
+
   String? _attemptId;
 
   int? _durationMs;
@@ -331,6 +360,7 @@ class ExamController extends ChangeNotifier {
     flags.clear();
     visited.clear();
     latenciesMs.clear();
+    questionMs.clear();
     signal = FatigueSignal.none;
     nudgeVisible = false;
     nudgeDismissed = false;
@@ -432,6 +462,7 @@ class ExamController extends ChangeNotifier {
 
   /// The nudge's "Take 5": pause the exam clock for five minutes.
   void takeBreak() {
+    _bankDwell(); // stop the dwell clock before the break eats time
     breakSecondsLeft = 300;
     nudgeVisible = false;
     nudgeDismissed = true;
@@ -455,6 +486,7 @@ class ExamController extends ChangeNotifier {
 
   void goTo(int i) {
     if (bundle == null) return;
+    _bankDwell();
     index = i.clamp(0, bundle!.questions.length - 1);
     visited.add(bundle!.questions[index].id);
     _shownAt = _clock();
@@ -468,6 +500,7 @@ class ExamController extends ChangeNotifier {
     if (phase != ExamPhase.playing || bundle == null || _attemptId == null) {
       return;
     }
+    _bankDwell();
     _timer?.cancel();
     final durationMs = _clock().difference(_startedAt).inMilliseconds;
     _durationMs = durationMs;
