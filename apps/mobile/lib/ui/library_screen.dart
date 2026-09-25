@@ -11,6 +11,7 @@ import 'package:provider/provider.dart';
 import '../controllers.dart';
 import '../models.dart';
 import 'exam_mode_setup_screen.dart';
+import 'corpus_screens.dart';
 import 'pack_detail_screen.dart';
 import 'renance_logo.dart';
 import 'theme.dart';
@@ -158,6 +159,15 @@ class _LibraryScreenState extends State<LibraryScreen> {
               ),
             ),
           ],
+          // Scheme of work + lesson notes (national corpus) ---------------
+          const SizedBox(height: 12),
+          _CorpusEntryCard(
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(
+                builder: (_) => const CorpusBrowserScreen(),
+              ),
+            ),
+          ),
           // Packs grid -----------------------------------------------------
           const SizedBox(height: 16),
           Row(
@@ -561,6 +571,64 @@ class _PackCard extends StatelessWidget {
                   style: RenanceText.labelMono.copyWith(
                       fontSize: 10, color: RenanceColors.emerald)),
             ],
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// The national corpus entry card: scheme of work + lesson notes for
+/// every class, straight from the codebase corpus. Sits above the packs
+/// grid so the curriculum is the first thing a student meets.
+class _CorpusEntryCard extends StatelessWidget {
+  const _CorpusEntryCard({required this.onTap});
+
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(14),
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: context.ink,
+          borderRadius: BorderRadius.circular(14),
+        ),
+        child: Row(
+          children: <Widget>[
+            Container(
+              width: 42,
+              height: 42,
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: const Icon(Icons.account_balance, size: 22, color: Colors.white),
+            ),
+            const SizedBox(width: 14),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    'Scheme of Work & Lesson Notes',
+                    style: RenanceText.bodyMedium.copyWith(color: Colors.white),
+                  ),
+                  const SizedBox(height: 3),
+                  Text(
+                    'The Nigerian curriculum, nursery to SSS 3: weekly topics and the full notes.',
+                    style: RenanceText.caption.copyWith(
+                      fontSize: 12,
+                      color: Colors.white.withValues(alpha: 0.72),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Icon(Icons.chevron_right, size: 20, color: Colors.white),
           ],
         ),
       ),
