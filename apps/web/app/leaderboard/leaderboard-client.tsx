@@ -12,6 +12,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import BlueTick from '@/components/blue-tick';
 import { api } from '@/lib/api';
 
 interface ArenaEntry {
@@ -21,6 +22,7 @@ interface ArenaEntry {
   matches: number;
   points: number;
   correct: number;
+  premium?: boolean;
 }
 
 interface StudyEntry {
@@ -30,6 +32,7 @@ interface StudyEntry {
   bestStreak: number;
   currentStreak: number;
   attempts: number;
+  premium?: boolean;
 }
 
 interface DailyEntry {
@@ -221,8 +224,9 @@ export default function LeaderboardClient() {
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-ink/10 text-[13px] font-bold text-accent-ink">
                     {initial(entry.username)}
                   </span>
-                  <p className="min-w-0 flex-1 truncate text-[15px] font-medium text-on-surface">
-                    {entry.username}
+                  <p className="flex min-w-0 flex-1 items-center gap-1.5 text-[15px] font-medium text-on-surface">
+                    <span className="min-w-0 truncate">{entry.username}</span>
+                    {'premium' in entry && entry.premium && <BlueTick size={15} />}
                   </p>
                   {'points' in entry && (
                     <div className="text-right font-mono text-[12px] leading-4 text-on-surface-variant">
