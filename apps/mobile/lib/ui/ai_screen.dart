@@ -9,6 +9,13 @@ import 'theme.dart';
 /// study API's /ai/chat. Strictly black and white: the student talks,
 /// the AI answers in a paper-white card, and an honest mode chip shows
 /// when the corpus-guide fallback is answering instead of full AI.
+const List<String> _aiSuggestions = <String>[
+  'Explain photosynthesis like I am in JSS 2, with a village example',
+  'Quiz me: five JAMB Use of English questions, mark me after',
+  'What topics come up in SSS 1 Physics first term?',
+  'Teach me surds step by step with three worked examples',
+];
+
 class AiScreen extends StatefulWidget {
   const AiScreen({super.key});
 
@@ -22,12 +29,7 @@ class _AiScreenState extends State<AiScreen> {
   final List<_AiTurn> _turns = <_AiTurn>[];
   bool _busy = false;
 
-  static const List<String> _suggestions = <String>[
-    'Explain photosynthesis like I am in JSS 2, with a village example',
-    'Quiz me: five JAMB Use of English questions, mark me after',
-    'What topics come up in SSS 1 Physics first term?',
-    'Teach me surds step by step with three worked examples',
-  ];
+
 
   @override
   void dispose() {
@@ -96,7 +98,7 @@ class _AiScreenState extends State<AiScreen> {
     return Scaffold(
       backgroundColor: context.pageBg,
       appBar: AppBar(
-        title: Text('Renance AI', style: RenanceText.titleSmall.copyWith(fontSize: 17)),
+        title: Text('Renance AI', style: RenanceText.sectionTitle.copyWith(fontSize: 17)),
         actions: <Widget>[
           if (_turns.isNotEmpty)
             TextButton(
@@ -340,7 +342,7 @@ class _Welcome extends StatelessWidget {
             children: <Widget>[
               Text(
                 'Meet Renance AI',
-                style: RenanceText.titleSmall.copyWith(color: context.pageBg, fontSize: 19),
+                style: RenanceText.sectionTitle.copyWith(color: context.pageBg, fontSize: 19),
               ),
               const SizedBox(height: 8),
               Text(
@@ -357,10 +359,10 @@ class _Welcome extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 14),
-        ...List<Widget>.generate(_suggestions.length, (int i) {
+        ...List<Widget>.generate(_aiSuggestions.length, (int i) {
           final String s = _suggestions[i];
           return Padding(
-            padding: EdgeInsets.only(bottom: i == _suggestions.length - 1 ? 0 : 8),
+            padding: EdgeInsets.only(bottom: i == _aiSuggestions.length - 1 ? 0 : 8),
             child: InkWell(
               onTap: () => onSuggest(s),
               borderRadius: BorderRadius.circular(12),

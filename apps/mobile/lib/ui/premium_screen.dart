@@ -110,7 +110,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
     final PlanCatalog? catalog = _catalog;
     return Scaffold(
       backgroundColor: context.pageBg,
-      appBar: AppBar(title: Text('Renance Premium', style: RenanceText.titleSmall.copyWith(fontSize: 17))),
+      appBar: AppBar(title: Text('Renance Premium', style: RenanceText.sectionTitle.copyWith(fontSize: 17))),
       body: catalog == null && _error == null
           ? const Center(child: LogoActivityIndicator(label: 'Loading plans…'))
           : _error != null
