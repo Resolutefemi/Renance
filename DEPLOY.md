@@ -53,12 +53,14 @@ vercel.json ships sane defaults:
 | `NEXT_PUBLIC_GOOGLE_CLIENT_ID` | `850087098854-pni8gohld0isi8v8nhhnlcl5fuvi77q4...` | The web OAuth client. Baked at build time so the Google button renders on `/login` and `/register`. One manual step lives in Google Cloud Console: the deployment origin (`https://renance-edtech.vercel.app`) must be listed under the client's **Authorized JavaScript origins**, or Google shows its own `Error 401: invalid_client`. |
 | `NEXT_PUBLIC_SITE_URL` | `https://renance-edtech.vercel.app` | Used for canonical/OG/sitemap URLs. Change it once a custom domain exists. |
 
-These ride the **`build.env`** key, not `env`: `env` only reaches serverless
-functions at runtime, and a static export has no functions. The first Vercel
-deploy proved it — the client bundle kept the literal fallback
-`http://localhost:3990`, so every visitor's browser tried their own machine
-for the API and sign-in died. `build.env` bakes the values into the client
-bundle at compile time.
+These ride a small build wrapper, `scripts/vercel-build.sh`: it exports the
+four variables (with these exact defaults) before running the same build CI
+runs, so the values are baked into the client bundle at compile time.
+vercel.json itself stays schema clean: its top level forbids unknown keys,
+and the deprecated `build.env` block is rejected as an unknown top-level
+key, which is exactly how the second deploy died in config validation.
+Anything set in the Vercel dashboard overrides the wrapper defaults, so the
+dashboard remains the place for future overrides.
 
 ### Optional (recommended before sharing publicly)
 
