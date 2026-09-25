@@ -18,6 +18,7 @@ import 'gpa_screen.dart';
 import 'home_screen.dart' show AvatarCircle;
 import 'performance_screen.dart';
 import 'saved_questions.dart';
+import 'premium_screen.dart';
 import 'settings_screen.dart';
 import 'theme.dart';
 import 'university_screens.dart';
@@ -189,6 +190,19 @@ class ProfileScreen extends StatelessWidget {
         // My school: the ONLY place the picked school changes (founder
         // rule). Saving stores the pick AND the profile institution.
         _SchoolCard(onChanged: onFocusChanged),
+        const SizedBox(height: 16),
+        // Premium: the plans desk, the REN wallet and the blue tick.
+        _MenuGroup(items: <_MenuItem>[
+          _MenuItem(
+            icon: Icons.verified,
+            tint: const Color(0xFF1D9BF0),
+            label: 'Renance Premium',
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute<void>(
+                  builder: (_) => const PremiumScreen()));
+            },
+          ),
+        ]),
         const SizedBox(height: 16),
         // Menu group: content - 1:1 with the up-to-date web profile
         // (My Packs, GPA Calculator; Downloads stays as the mobile
