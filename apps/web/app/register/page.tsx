@@ -18,8 +18,13 @@ export default function RegisterPage() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [referral, setReferral] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  // Post-signup verification notice: manual signups confirm their email
+  // through the mailed link before the full experience unlocks.
+  const [verifySent, setVerifySent] = useState(false);
+  const [signedEmail, setSignedEmail] = useState('');
 
   // school-only fields
   const [schoolName, setSchoolName] = useState('');
@@ -33,11 +38,15 @@ export default function RegisterPage() {
   }, []);
 
   // Deep link: /register/?audience=school opens the For Schools form
-  // (the landing page "Register your school" button lands here).
+  // (the landing page "Register your school" button lands here);
+  // /register/?ref=CODE pre-fills the referral field.
   useEffect(() => {
     try {
-      const q = new URLSearchParams(window.location.search).get('audience');
-      if (q === 'school' || q === 'schools') setAudience('schools');
+      const q = new URLSearchParams(window.location.search);
+      const a = q.get('audience');
+      if (a === 'school' || a === 'schools') setAudience('schools');
+      const ref = q.get('ref');
+      if (ref) setReferral(ref.toUpperCase());
     } catch {
       /* private mode: default to students */
     }
@@ -96,11 +105,27 @@ export default function RegisterPage() {
         router.replace('/school');
         return;
       }
-      const res = await api<{ token: string; user: { id: string; username: string; profileCompleted: boolean } }>(
-        '/auth/register',
-        { method: 'POST', body: { email, password }, auth: false },
-      );
+      const res = await api<{
+        token: string;
+        user: { id: string; username: string; profileCompleted: boolean };
+        emailVerification?: { required?: boolean; sent?: boolean };
+      }>('/auth/register', {
+        method: 'POST',
+        body: {
+          email,
+          password,
+          verifyReturn: 'web',
+          ...(referral.trim() ? { referral: referral.trim().toUpperCase() } : {}),
+        },
+        auth: false,
+      });
       setSession(res.token, res.user);
+      if (res.emailVerification?.required) {
+        setSignedEmail(email.trim());
+        setVerifySent(true);
+        setBusy(false);
+        return;
+      }
       router.replace('/dashboard');
     } catch (err) {
       setError(err instanceof ApiError ? err.message : 'Network error, is the study API running?');
@@ -109,6 +134,45 @@ export default function RegisterPage() {
   }
 
   const field = 'h-12 w-full rounded-lg bg-surface-container pl-11 pr-3 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary';
+
+  if (verifySent) {
+    return (
+      <main className="flex min-h-dvh w-full flex-col items-center bg-surface-container px-4 py-10">
+        <div className="renance-rise my-auto flex w-full max-w-sm flex-col rounded-xl bg-surface-container-lowest p-8 text-center shadow-md">
+          <div className="mb-5 flex justify-center">
+            <RenanceMark size={56} />
+          </div>
+          <h1 className="text-xl font-semibold tracking-tight text-on-surface">
+            Check your inbox
+          </h1>
+          <p className="mt-3 text-sm leading-relaxed text-on-surface-variant">
+            We sent a confirmation link to{' '}
+            <span className="font-semibold text-on-surface">{signedEmail}</span>. Confirm
+            your email to unlock your account fully. The link returns you
+            right back here to the web.
+          </p>
+          <p className="mt-3 text-[12.5px] text-on-surface-variant">
+            Didn&apos;t get it? Check spam, or resend from the dashboard
+            banner after signing in.
+          </p>
+          <div className="mt-6 flex flex-col gap-2">
+            <button
+              onClick={() => router.replace('/dashboard')}
+              className="flex h-12 items-center justify-center rounded-full bg-primary text-sm font-semibold text-on-primary transition hover:opacity-90"
+            >
+              Continue to dashboard
+            </button>
+            <Link
+              href="/login"
+              className="flex h-12 items-center justify-center rounded-full text-sm font-semibold text-on-surface shadow-[inset_0_0_0_1px_#C6C6CD]"
+            >
+              Go to sign in
+            </Link>
+          </div>
+        </div>
+      </main>
+    );
+  }
 
   return (
     // my-auto (not justify-center) keeps the card visually centred while
@@ -260,6 +324,27 @@ export default function RegisterPage() {
             </div>
             {mismatch && <p className="text-xs text-error">Passwords do not match.</p>}
           </div>
+
+          {/* Referral (students): a friend's REN code earns them 3 REN. */}
+          {audience === 'students' && (
+            <div className="flex flex-col gap-1.5">
+              <label htmlFor="referral" className="text-sm text-on-surface">
+                Referral code <span className="text-on-surface-variant">(optional)</span>
+              </label>
+              <input
+                id="referral"
+                type="text"
+                value={referral}
+                onChange={(e) => setReferral(e.target.value)}
+                maxLength={16}
+                placeholder="REN..."
+                className={`${field} pl-4 uppercase`}
+              />
+              <p className="text-xs text-on-surface-variant">
+                Your friend earns 3 REN coins when you join.
+              </p>
+            </div>
+          )}
 
           {error && (
             <p className="rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">
