@@ -7,18 +7,15 @@
   "trailingSlash": true,
   "rewrites": [
     {
-      "source": "/api/:path*",
-      "destination": "https://renance-api.onrender.com/:path*"
-    },
-    {
       "source": "/pdfs/:path*",
       "destination": "https://resolutefemi.github.io/Renance/pdfs/:path*"
     }
   ],
-  "env": {
+  "build.env": {
     "NEXT_PUBLIC_BASE_PATH": "",
-    "NEXT_PUBLIC_API_BASE": "/api",
-    "NEXT_PUBLIC_SITE_URL": "https://renance.vercel.app"
+    "NEXT_PUBLIC_API_BASE": "https://renance-api.onrender.com",
+    "NEXT_PUBLIC_GOOGLE_CLIENT_ID": "850087098854-pni8gohld0isi8v8nhhnlcl5fuvi77q4.apps.googleusercontent.com",
+    "NEXT_PUBLIC_SITE_URL": "https://renance-edtech.vercel.app"
   },
   "headers": [
     {
@@ -27,15 +24,6 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=300, stale-while-revalidate=86400"
-        }
-      ]
-    },
-    {
-      "source": "/api/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-store"
         }
       ]
     }
