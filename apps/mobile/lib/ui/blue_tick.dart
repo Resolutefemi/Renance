@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 
 /// BlueTickIcon: the premium verified badge, X-style. The ONE splash of
@@ -23,17 +25,17 @@ class _BlueTickPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final double s = size.width;
     final Paint blue = Paint()..color = const Color(0xFF1D9BF0);
-    // The seal: a 12-point burst approximated with a rotated star path.
-    final Path seal = Path();
+    // The seal: an 8-point burst.
     const int points = 8;
     final double cx = s / 2, cy = s / 2;
     final double outer = s / 2;
     final double inner = s * 0.40;
+    final Path seal = Path();
     for (int i = 0; i < points * 2; i++) {
-      final double angle = (i * 3.14159265) / points;
+      final double angle = (i * math.pi) / points;
       final double r = i.isEven ? outer : inner;
-      final double x = cx + r * _cos(angle);
-      final double y = cy + r * _sin(angle);
+      final double x = cx + r * math.cos(angle);
+      final double y = cy + r * math.sin(angle);
       if (i == 0) {
         seal.moveTo(x, y);
       } else {
@@ -45,7 +47,7 @@ class _BlueTickPainter extends CustomPainter {
 
     // The white check.
     final Paint check = Paint()
-      ..color = Color(0xFFFFFFFF)
+      ..color = const Color(0xFFFFFFFF)
       ..strokeWidth = s * 0.14
       ..strokeCap = StrokeCap.round
       ..strokeJoin = StrokeJoin.round
@@ -59,16 +61,4 @@ class _BlueTickPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
-}
-
-double _cos(double x) => _sin(x + 3.1415926535 / 2);
-double _sin(double x) {
-  // Taylor is enough for 8 anchor points at this size.
-  x = x % (2 * 3.14159265);
-  double term = x, sum = x;
-  for (int i = 1; i < 5; i++) {
-    term *= -x * x / ((2 * i) * (2 * i + 1));
-    sum += term;
-  }
-  return sum;
 }
