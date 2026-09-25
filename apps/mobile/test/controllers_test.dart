@@ -66,7 +66,8 @@ class FakeApi extends ApiClient {
 
   @override
   Future<void> submit(
-      String attemptId, Map<String, String> answers, int durationMs) async {
+      String attemptId, Map<String, String> answers, int durationMs,
+      {Map<String, int> questionMs = const <String, int>{}}) async {
     submitCalls += 1;
     submitPayloads.add(Map<String, String>.of(answers));
     final Exception? err = submitError;
