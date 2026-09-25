@@ -23,7 +23,17 @@ jobs:
     steps:
       - name: Ping health endpoint
         run: |
-          code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 90 \
-            "${{ vars.PUBLIC_API_BASE || 'https://renance-api.onrender.com' }}/healthz")
-          echo "healthz -> $code"
-          test "$code" = "200"
+          base="${{ vars.PUBLIC_API_BASE || 'https://renance-api.onrender.com' }}"
+          # A cold start can eat the whole first window, and one lost
+          # packet on the runner used to paint the whole run red. Try a
+          # few times with fresh sockets before giving up: the ping is
+          # a courtesy, not a production check.
+          for attempt in 1 2 3 4; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 120 \
+              "$base/healthz")
+            echo "attempt $attempt: healthz -> $code"
+            test "$code" = "200" && exit 0
+            sleep 20
+          done
+          echo "health endpoint never answered 200 after 4 attempts"
+          exit 1
