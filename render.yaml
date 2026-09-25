@@ -13,6 +13,10 @@
 #
 # Free plan note: the service sleeps after ~15 min idle; the first request
 # wakes it in ~30-50s. Upgrade any time for always-on.
+#
+# WEB_ORIGIN is the CORS allowlist for the browser clients: the Vercel
+# deployment (renance-edtech.vercel.app), the GitHub Pages site and local
+# dev. The Flutter apps need no CORS and are unaffected by it.
 
 services:
   - type: web
@@ -32,4 +36,4 @@ services:
       - key: GOOGLE_CLIENT_ID
         value: 850087098854-pni8gohld0isi8v8nhhnlcl5fuvi77q4.apps.googleusercontent.com,850087098854-5rj3vig6fpm4k2jie4najsoq6tpcdm6f.apps.googleusercontent.com
       - key: WEB_ORIGIN
-        value: https://resolutefemi.github.io,http://localhost:3000,http://127.0.0.1:3000
+        value: https://renance-edtech.vercel.app,https://resolutefemi.github.io,http://localhost:3000,http://127.0.0.1:3000
