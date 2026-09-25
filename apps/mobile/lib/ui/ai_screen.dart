@@ -360,7 +360,7 @@ class _Welcome extends StatelessWidget {
         ),
         const SizedBox(height: 14),
         ...List<Widget>.generate(_aiSuggestions.length, (int i) {
-          final String s = _suggestions[i];
+          final String s = _aiSuggestions[i];
           return Padding(
             padding: EdgeInsets.only(bottom: i == _aiSuggestions.length - 1 ? 0 : 8),
             child: InkWell(
