@@ -35,6 +35,11 @@ type Config struct {
         AIModel     string
         AIMaxTokens int
 
+        // Billing (Paystack). An empty key keeps the paywall on its
+        // fallback surfaces (REN coins + the WhatsApp line) and the
+        // webhook route disabled; the key can only arrive via the env.
+        PaystackSecretKey string
+
         // Abuse walls (security hardening).
         AuthPerMin       int
         AuthGlobalPerMin int
@@ -65,6 +70,8 @@ func Load() (*Config, error) {
                 AIBaseURL:   envStr("AI_BASE_URL", "https://generativelanguage.googleapis.com/v1beta/openai"),
                 AIModel:     envStr("AI_MODEL", "gemini-3.6-flash"),
                 AIMaxTokens: envInt("AI_MAX_TOKENS", 320),
+
+                PaystackSecretKey: strings.TrimSpace(os.Getenv("PAYSTACK_SECRET_KEY")),
 
                 AuthPerMin:       envInt("AUTH_PER_MIN", 20),
                 AuthGlobalPerMin: envInt("AUTH_GLOBAL_PER_MIN", 300),

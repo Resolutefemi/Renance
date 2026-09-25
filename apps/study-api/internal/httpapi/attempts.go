@@ -8,6 +8,7 @@ import (
         "renance.dev/study-api/internal/cbtdata"
         "renance.dev/study-api/internal/daily"
         "renance.dev/study-api/internal/grading"
+        "renance.dev/study-api/internal/plans"
         "renance.dev/study-api/internal/store"
 )
 
@@ -260,6 +261,48 @@ func (s *Server) handleSubmitAttempt(w http.ResponseWriter, r *http.Request) {
                                 ms = cap
                         }
                         questionMs[id] = ms
+                }
+        }
+
+        // Free-tier gate (founder policy): premium runs full papers; a free
+        // account runs its FIRST regular CBT in full (one testing paper) and
+        // every later paper answers at most FreePreviewQuestions before the
+        // subscribe prompt. Daily challenges are exempt - the free tier
+        // keeps them, and ten questions fit the preview anyway. The capped
+        // sitting's answers are saved and the attempt stays in_progress, so
+        // after subscribing the student continues exactly where they stopped.
+        if attempt.DailyDay == nil {
+                if ent, entErr := s.store.EnsureEntitlement(r.Context(), uid); entErr != nil {
+                        s.log.Error("entitlement gate load failed, allowing submit", "err", entErr)
+                } else if !ent.PremiumActive(time.Now().UTC()) {
+                        answered := 0
+                        for _, p := range picks {
+                                if p.Selected != "" {
+                                        answered++
+                                }
+                        }
+                        if answered > plans.FreePreviewQuestions {
+                                firstFull, ffErr := s.store.MarkFirstFreeCbt(r.Context(), uid)
+                                if ffErr != nil {
+                                        s.log.Error("first free cbt mark failed", "err", ffErr)
+                                }
+                                if !firstFull {
+                                        if saveErr := s.store.SaveAnswers(r.Context(), attemptID, uid, picks); saveErr != nil {
+                                                s.log.Error("capped sitting save failed", "err", saveErr)
+                                        }
+                                        writeJSON(w, http.StatusPaymentRequired, map[string]any{
+                                                "code":     "free_cap",
+                                                "limit":    plans.FreePreviewQuestions,
+                                                "answered": answered,
+                                                "saved":    true,
+                                                "attemptId": attemptID,
+                                                "message":  "You have answered the free limit of 20 questions. Subscribe to premium to continue this paper, your progress is saved.",
+                                                "whatsapp": billingWhatsApp,
+                                        })
+                                        return
+                                }
+                                // firstFull: this submission consumed the one free full CBT.
+                        }
                 }
         }
 
