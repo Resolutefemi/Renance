@@ -242,6 +242,22 @@ function extractJson(text) {
   throw new Error(`unparsable json: ${lastErr.message}`);
 }
 
+function validateTopic(t, byWeek, band) {
+  const wk = Number(t.week);
+  if (!byWeek.has(wk)) throw new Error(`unknown week ${wk}`);
+  const content = normalize(t.content);
+  if (content.length < band.min) throw new Error(`week ${wk} too short (${content.length})`);
+  if (content.length > band.max + 400) throw new Error(`week ${wk} too long (${content.length})`);
+  for (const label of ['Behavioural objectives:', 'Content:', 'Evaluation questions:']) {
+    if (!content.includes(label)) throw new Error(`week ${wk} missing "${label}"`);
+  }
+  if (DASHES.test(content) || /-{2,}/.test(content)) throw new Error(`week ${wk} long hyphen`);
+  if (!t.title || !String(t.title).trim()) throw new Error(`week ${wk} no title`);
+  // keep the scheme wording for the title, only normalized
+  t.title = normalize(byWeek.get(wk).topic || t.title);
+  t.content = content;
+}
+
 function validate(note, scheme, level) {
   const band = BAND[level];
   const byWeek = new Map(scheme.weeks.map((w) => [Number(w.week), w]));
@@ -249,21 +265,9 @@ function validate(note, scheme, level) {
   const seen = new Set();
   for (const t of note.topics) {
     const wk = Number(t.week);
-    if (!byWeek.has(wk)) throw new Error(`unknown week ${wk}`);
     if (seen.has(wk)) throw new Error(`duplicate week ${wk}`);
     seen.add(wk);
-    const src = byWeek.get(wk);
-    const content = normalize(t.content);
-    if (content.length < band.min) throw new Error(`week ${wk} too short (${content.length})`);
-    if (content.length > band.max + 400) throw new Error(`week ${wk} too long (${content.length})`);
-    for (const label of ['Behavioural objectives:', 'Content:', 'Evaluation questions:']) {
-      if (!content.includes(label)) throw new Error(`week ${wk} missing "${label}"`);
-    }
-    if (DASHES.test(content) || /-{2,}/.test(content)) throw new Error(`week ${wk} long hyphen`);
-    if (!t.title || !String(t.title).trim()) throw new Error(`week ${wk} no title`);
-    // keep the scheme wording for the title, only normalized
-    t.title = normalize(src.topic || t.title);
-    t.content = content;
+    validateTopic(t, byWeek, band);
   }
   if (seen.size < byWeek.size) {
     const missing = [...byWeek.keys()].filter((w) => !seen.has(w));
@@ -294,12 +298,16 @@ async function generateGroup(zai, group, level) {
 }
 
 async function generateGroupOnce(zai, group, level) {
+  // maxTokens must be explicit: with the provider default (~1k output
+  // tokens) a ten week reply truncates mid JSON or collapses to week one,
+  // which is exactly the "missing weeks 2,3,..." failure wall.
   const reply = await zai.chat.completions.create({
     messages: [
       { role: 'assistant', content: systemPrompt(BAND[level]) },
       { role: 'user', content: userPayload(group) },
     ],
     thinking: { type: 'disabled' },
+    maxTokens: 8192,
   });
   const text = reply.choices?.[0]?.message?.content || '';
   const parsed = extractJson(text);
@@ -321,7 +329,21 @@ async function generateGroupOnce(zai, group, level) {
       validate(got, f.scheme, level);
       return { file: f, ok: true, note: got };
     } catch (e) {
-      return { file: f, ok: false, error: e.message };
+      // salvage every topic that is individually sound so the per week
+      // rescue below only has to produce the genuinely missing ones
+      const band = BAND[level];
+      const byWeek = new Map(f.scheme.weeks.map((w) => [Number(w.week), w]));
+      const partial = [];
+      const seenWk = new Set();
+      for (const t of Array.isArray(got.topics) ? got.topics : []) {
+        try {
+          if (seenWk.has(Number(t.week))) continue;
+          validateTopic(t, byWeek, band);
+          seenWk.add(Number(t.week));
+          partial.push(t);
+        } catch {}
+      }
+      return { file: f, ok: false, error: e.message, partial };
     }
   });
 }
@@ -369,10 +391,41 @@ async function main() {
           try {
             retry.push(...(await generateGroup(zai, [f.file], g.level)));
           } catch (e) {
-            retry.push({ file: f.file, ok: false, error: e.message });
+            retry.push({ file: f.file, ok: false, error: e.message, partial: f.partial });
           }
         }
         results = results.filter((r) => r.ok).concat(retry);
+      }
+      // per week rescue: whatever still fails gets its missing weeks
+      // generated one call each and merged with the salvaged topics
+      const still = results.filter((r) => !r.ok);
+      for (const r of still) {
+        const have = Array.isArray(r.partial) ? [...r.partial] : [];
+        const missing = r.file.scheme.weeks.filter(
+          (w) => !have.some((t) => Number(t.week) === Number(w.week)),
+        );
+        if (!missing.length) continue;
+        let dead = false;
+        for (const w of missing) {
+          const solo = { ...r.file, scheme: { ...r.file.scheme, weeks: [w] } };
+          let got = null;
+          for (let attempt = 0; attempt < 3 && !got; attempt++) {
+            try {
+              const rs = await generateGroup(zai, [solo], g.level);
+              if (rs[0]?.ok) got = rs[0].note.topics;
+            } catch {}
+            if (!got) await sleep(15000 + Math.floor(Math.random() * 8000));
+          }
+          if (!got) { dead = true; break; }
+          have.push(...got);
+        }
+        if (dead) continue;
+        const merged = { topics: have };
+        try {
+          validate(merged, r.file.scheme, g.level);
+          results = results.filter((x) => x !== r).concat({ file: r.file, ok: true, note: merged });
+          console.log(`RESCUE ${r.file.rel} (week fill for ${missing.length} weeks)`);
+        } catch {}
       }
       for (const r of results) {
         if (!r.ok) {
