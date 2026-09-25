@@ -24,6 +24,7 @@ import 'review_screen.dart' show ReviewDetailScreen;
 import 'renance_logo.dart';
 import 'syllabus_screen.dart';
 import 'theme.dart';
+import 'pacing_ui.dart';
 
 class ExamScreen extends StatefulWidget {
   const ExamScreen({
@@ -1167,6 +1168,9 @@ class _Player extends StatelessWidget {
           daily: daily,
         ),
         _SubjectStrip(controller: controller),
+        // The live pacing coach (contributor feature, PR #1 ported):
+        // quiet when on track, firm before a question eats the paper.
+        PacingGaugeCard(enabled: !controller.untimed),
         // Scrollable question area ---------------------------------------
         Expanded(
           child: ListView(
@@ -2063,6 +2067,9 @@ class _RecoveryView extends StatelessWidget {
           child: ListView(
             padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
             children: <Widget>[
+              // Pacing forensics (contributor feature, PR #1 ported):
+              // the clock story behind this score.
+              PacingForensicsSection(controller: controller),
               // rose hero -------------------------------------------------
               Container(
                 padding: const EdgeInsets.fromLTRB(24, 28, 24, 28),
@@ -2436,6 +2443,9 @@ class _ResultState extends State<_Result> {
                 padding: const EdgeInsets.all(16),
                 child: Column(
                   children: <Widget>[
+                    // Pacing forensics (contributor feature, PR #1 ported):
+                    // where the clock went and what it cost.
+                    PacingForensicsSection(controller: widget.controller),
                     // XP / streak card ---------------------------------
                     Container(
                       padding: const EdgeInsets.all(16),
