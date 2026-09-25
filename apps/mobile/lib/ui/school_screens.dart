@@ -11,6 +11,7 @@ import 'package:provider/provider.dart';
 
 import '../controllers.dart';
 import '../models.dart';
+import 'corpus_screens.dart';
 import 'renance_logo.dart' show LogoActivityIndicator;
 import 'theme.dart';
 
@@ -225,6 +226,11 @@ class _SchoolPackViewerScreenState extends State<SchoolPackViewerScreen> {
                 // offline library. Attendance marks any class a teacher
                 // covers; the enrollment desk is management's to fill.
                 _StaffDeskCard(schoolId: widget.pack.school.id),
+                const SizedBox(height: 12),
+                // The national curriculum bank: scheme of work + lesson
+                // notes for every class, fetched straight from the
+                // codebase corpus (never stored in Neon).
+                _CorpusBankCard(),
                 const SizedBox(height: 12),
                 // Compact stats strip: what the pack carries, so staff
                 // see the size of their offline library at a glance.
@@ -1316,6 +1322,39 @@ class _StaffDeskCard extends StatelessWidget {
               ],
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+/// One-tap entry into the national curriculum bank: scheme of work and
+/// lesson notes for every class level, read live from the codebase
+/// corpus through the API (nothing here is stored in Neon).
+class _CorpusBankCard extends StatelessWidget {
+  const _CorpusBankCard();
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+        leading: CircleAvatar(
+          backgroundColor: context.ink.withValues(alpha: 0.06),
+          foregroundColor: context.ink,
+          child: const Icon(Icons.account_balance_outlined, size: 22),
+        ),
+        title: Text(
+          'Curriculum bank',
+          style: RenanceText.bodyBase.copyWith(color: context.ink, fontWeight: FontWeight.w600),
+        ),
+        subtitle: Text(
+          'National scheme of work and lesson notes, Nursery to SSS 3',
+          style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, fontSize: 12.5),
+        ),
+        trailing: const Icon(Icons.chevron_right),
+        onTap: () => Navigator.of(context).push(
+          MaterialPageRoute<void>(builder: (BuildContext context) => const CorpusBrowserScreen()),
         ),
       ),
     );
