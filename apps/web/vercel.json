@@ -1,5 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
   "installCommand": "pnpm install --frozen-lockfile",
   "buildCommand": "python3 scripts/web_bundles.py && pnpm --filter @renance/web exec next build && rm -rf out/pdfs",
   "outputDirectory": "out",
