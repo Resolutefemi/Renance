@@ -1306,6 +1306,74 @@ class SchoolController extends ChangeNotifier {
     }
   }
 
+  // ------------------------------------------------------------- corpus
+
+  /// The national curriculum corpus cache. Fetched directly from the
+  /// codebase files the API ships with; nothing here touches Neon.
+  List<CorpusClassModel>? corpusClasses;
+  final Map<String, List<CorpusSchemeTermModel>> _corpusSchemes =
+      <String, List<CorpusSchemeTermModel>>{};
+  final Map<String, List<CorpusNotesTermModel>> _corpusNotes =
+      <String, List<CorpusNotesTermModel>>{};
+
+  /// Loads (and caches) the corpus class list. Returns an empty list
+  /// on failure with the error surfaced in lastError.
+  Future<List<CorpusClassModel>> loadCorpusClasses() async {
+    if (corpusClasses != null) return corpusClasses!;
+    lastError = null;
+    try {
+      corpusClasses = await _api.corpusClasses();
+    } on ApiException catch (e) {
+      lastError = e.message;
+      corpusClasses = const <CorpusClassModel>[];
+    } on NetworkException catch (e) {
+      lastError = e.message;
+      corpusClasses = const <CorpusClassModel>[];
+    }
+    notifyListeners();
+    return corpusClasses!;
+  }
+
+  /// Loads (and caches) every term scheme for one corpus subject.
+  Future<List<CorpusSchemeTermModel>> loadCorpusSchemes(
+    String classId,
+    String subject,
+  ) async {
+    final String key = '$classId/$subject';
+    final List<CorpusSchemeTermModel>? cached = _corpusSchemes[key];
+    if (cached != null) return cached;
+    try {
+      final List<CorpusSchemeTermModel> terms = await _api.corpusSchemes(classId, subject);
+      _corpusSchemes[key] = terms;
+      return terms;
+    } on ApiException catch (e) {
+      lastError = e.message;
+    } on NetworkException catch (e) {
+      lastError = e.message;
+    }
+    return const <CorpusSchemeTermModel>[];
+  }
+
+  /// Loads (and caches) every term note set for one corpus subject.
+  Future<List<CorpusNotesTermModel>> loadCorpusNotes(
+    String classId,
+    String subject,
+  ) async {
+    final String key = '$classId/$subject';
+    final List<CorpusNotesTermModel>? cached = _corpusNotes[key];
+    if (cached != null) return cached;
+    try {
+      final List<CorpusNotesTermModel> terms = await _api.corpusNotes(classId, subject);
+      _corpusNotes[key] = terms;
+      return terms;
+    } on ApiException catch (e) {
+      lastError = e.message;
+    } on NetworkException catch (e) {
+      lastError = e.message;
+    }
+    return const <CorpusNotesTermModel>[];
+  }
+
   /// Downloads (or refreshes) one school's offline pack. Returns true on
   /// success. Network-safe: failures surface in lastError, never throw.
   Future<bool> download(String schoolId) async {
