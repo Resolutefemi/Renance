@@ -145,6 +145,8 @@ def main() -> int:
         encoding="utf-8",
     )
 
+    bake_routes_manifest()
+
     print(f"baked {written}/{len(manifest['exams'])} bundles -> {OUT}")
     print(f"stripped {stripped_keys} answer-material keys")
     print(f"bundle bytes: {total_in / 1e6:.1f} MB pretty -> {total_out / 1e6:.1f} MB minified")
@@ -152,6 +154,41 @@ def main() -> int:
         print("MISSING source files for:", ", ".join(missing), file=sys.stderr)
         return 1
     return 0
+
+
+def bake_routes_manifest() -> None:
+    """Drop a minimal routes manifest into public/ so the static export
+    carries it in out/.
+
+    Why: Vercel's Next.js preset finishes every build by reading
+    <outputDirectory>/routes-manifest.json. A static export never writes
+    that file into out/, so a correctly-built site still failed the deploy
+    with the now-next-routes-manifest error. Files placed in public/ are
+    copied verbatim into the export, so baking one here makes the manifest
+    exist exactly where the platform looks for it. Harmless on GitHub
+    Pages (it is just a small JSON file in the CDN).
+    """
+    manifest = {
+        "version": 3,
+        "pages404": True,
+        "caseSensitive": False,
+        "trailingSlash": True,
+        "basePath": "",
+        "i18n": None,
+        "overrides": {},
+        "dynamicRoutes": [],
+        "staticRoutes": [],
+        "dataRoutes": [],
+        "redirects": [],
+        "rewrites": {"beforeFiles": [], "afterFiles": [], "fallback": []},
+        "hasRewrites": False,
+        "headers": [],
+    }
+    dest = REPO / "apps" / "web" / "public" / "routes-manifest.json"
+    dest.write_text(
+        json.dumps(manifest, ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8",
+    )
 
 
 if __name__ == "__main__":
