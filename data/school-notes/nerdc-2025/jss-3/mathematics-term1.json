@@ -1,0 +1,63 @@
+{
+ "class": "JSS 3",
+ "subject": "Mathematics",
+ "term": 1,
+ "session": "",
+ "overwrite": false,
+ "provenance": {
+  "source": "renance-ai-teacher",
+  "method": "lesson notes written from the NERDC 2025 scheme of work outline; every week keeps its scheme topic and bullets as the teaching spine"
+ },
+ "topics": [
+  {
+   "week": 1,
+   "title": "Revision of jss two work",
+   "content": "Behavioural objectives:\nThe students should be able to recall basic number operations and solve simple algebraic expressions.\nIntroduction:\nLast term we worked on fractions and basic equations. Today we will refresh our memory and practice.\nContent:\nNumber and algebra warm up: Review addition, subtraction, multiplication and division of whole numbers and fractions. For example, if you have 500 naira and buy 3 exercise books for 150 naira each, how much will you have left? Quick quiz: Give students 5 simple problems to solve in 10 minutes.\nClass activity:\nStudents work in pairs to solve 10 mixed problems involving basic operations and simple equations.\nEvaluation questions:\n1. What is 3/4 of 200 naira? 2. Solve 2x + 5 = 15. 3. If 5 oranges cost 200 naira, what is the cost of one orange?\nSummary:\nToday we reviewed basic number operations and simple equations which are important for more complex topics later."
+  },
+  {
+   "week": 2,
+   "title": "Simultaneous equations",
+   "content": "Behavioural objectives:\nThe students should be able to solve simultaneous equations using elimination and substitution methods.\nIntroduction:\nWe have solved equations with one variable. Now we will learn how to solve equations with two variables at the same time.\nContent:\nElimination method: Add or subtract equations to eliminate one variable. For example, if x + y = 10 and x - y = 2, adding them gives 2x = 12, so x = 6. Substitution method: Solve one equation for one variable and substitute in the other. Word problems: Translate real situations into equations. Like when buying beans and rice, if beans cost 200 naira per kg and rice 300 naira per kg, and total cost is 1400 naira for 5kg, how much of each?\nClass activity:\nStudents work in groups to solve 3 simultaneous equations using both elimination and substitution methods.\nEvaluation questions:\n1. Solve 2x + y = 10 and x - y = 2 by elimination. 2. If x + y = 7 and x = 2y + 1, find x and y. 3. A danfo carries 30 passengers with adults paying 50 naira and children 20 naira. Total fare is 1200 naira. How many adults and children?\nSummary:\nSimultaneous equations help us solve problems with two unknowns using elimination and substitution methods."
+  },
+  {
+   "week": 3,
+   "title": "Quadratic expressions",
+   "content": "Behavioural objectives:\nThe students should be able to expand and factorise quadratic expressions and identify difference of two squares.\nIntroduction:\nWe have worked with linear expressions. Now we will learn about quadratic expressions which have x² terms.\nContent:\nExpand: Multiply two binomials. Like (x + 3)(x + 2) = x² + 5x + 6. Factorise: Find two numbers that multiply to the constant and add to the coefficient of x. For x² + 5x + 6, the numbers are 2 and 3. Difference of two squares: When you have a² - b², it factors to (a + b)(a - b). Like 9x² - 16 = (3x + 4)(3x - 4).\nClass activity:\nStudents practice expanding and factorising 10 quadratic expressions, including 3 difference of two squares.\nEvaluation questions:\n1. Expand (x + 4)(x - 3). 2. Factorise x² + 7x + 12. 3. What is the difference of two squares for 25a² - 9?\nSummary:\nQuadratic expressions can be expanded and factorised, and difference of two squares is a special case."
+  },
+  {
+   "week": 4,
+   "title": "Word problems with equations",
+   "content": "Behavioural objectives:\nThe students should be able to set up equations from word problems and solve them.\nIntroduction:\nWe have solved equations. Now we will learn how to turn real-life problems into equations to solve them.\nContent:\nSet up the equation: Identify the unknown, define variables, and translate words into mathematical symbols. Solve and check: Use appropriate methods to solve the equation and verify the answer makes sense. Example: If you buy 5 yams for 1500 naira and 3 cassavas for 900 naira, and each yam costs 50 naira more than a cassava, find the cost of one yam.\nClass activity:\nStudents work in pairs to solve 5 word problems that require setting up and solving equations.\nEvaluation questions:\n1. A man is 3 times as old as his son. In 10 years, he will be twice as old. How old are they now? 2. A farmer has 100 birds. Chickens cost 500 naira each and ducks 300 naira each. Total cost is 42,000 naira. How many of each? 3. A trader bought goods for 20,000 naira and sold for 28,000 naira. What is the percentage profit?\nSummary:\nWord problems help us apply equations to real-life situations by setting up the equation correctly."
+  },
+  {
+   "week": 5,
+   "title": "Geometry: similar and congruent triangles",
+   "content": "Behavioural objectives:\nThe students should be able to identify similar and congruent triangles and state the conditions for congruence.\nIntroduction:\nWe have learned about different types of triangles. Today we will learn when triangles are identical in shape or size.\nContent:\nConditions for congruence: SSS (three sides equal), SAS (two sides and included angle equal), ASA (two angles and included side equal), RHS (right angle, hypotenuse and one side equal). Similar triangles: Same shape but different size, with corresponding angles equal and sides in proportion. Proof basics: Use properties to show triangles are congruent or similar. Example: Two triangles with sides 3cm, 4cm, 5cm and 6cm, 8cm, 10cm are similar.\nClass activity:\nStudents measure sides and angles of different triangles to identify congruent and similar pairs.\nEvaluation questions:\n1. State the conditions for congruent triangles. 2. Are two triangles with angles 60°, 60°, 60° and 60°, 60°, 60° similar? Why? 3. If triangle ABC has sides 5cm, 6cm, 7cm and triangle DEF has sides 10cm, 12cm, 14cm, are they similar?\nSummary:\nCongruent triangles are identical in shape and size, while similar triangles have the same shape but different sizes."
+  },
+  {
+   "week": 6,
+   "title": "Trigonometry",
+   "content": "Behavioural objectives:\nThe students should be able to use sine, cosine and tangent ratios to solve height problems.\nIntroduction:\nWe have learned about triangles. Today we will learn how to find heights and distances using ratios.\nContent:\nSine, cosine, tangent ratios: SOH CAH TOA - Sin = opposite/hypotenuse, Cos = adjacent/hypotenuse, Tan = opposite/adjacent. Height problems: Use trigonometric ratios to find heights of objects. Example: If a pole casts a 5m shadow and the sun's angle is 30°, the height = 5 × tan(30°) = 5 × 0.577 = 2.89m. Real-life applications: Finding height of buildings, trees, or mountains.\nClass activity:\nStudents measure the length of shadows and use trigonometric ratios to find heights of objects in the school compound.\nEvaluation questions:\n1. What is SOH CAH TOA? 2. If a tree casts a 10m shadow and the sun's angle is 45°, find the height of the tree. 3. A ladder leans against a wall with the base 3m from the wall and angle 60°. How high is the wall?\nSummary:\nTrigonometric ratios help us find heights and distances that are difficult to measure directly."
+  },
+  {
+   "week": 7,
+   "title": "Statistics: grouped data",
+   "content": "Behavioural objectives:\nThe students should be able to calculate mean, median and mode for grouped data using class intervals.\nIntroduction:\nWe have worked with ungrouped data. Today we will learn how to handle data that is grouped into intervals.\nContent:\nMean, median, mode tables: Use frequency tables to organize grouped data. Class intervals: Groups of values like 0-9, 10-19, etc. Mean: Sum of (midpoint × frequency) divided by total frequency. Median: Find the class containing the median and interpolate. Mode: Identify the class with highest frequency. Example: Test scores grouped as 40-49, 50-59, etc. with frequencies.\nClass activity:\nStudents collect data on student ages, group it into intervals, and calculate mean, median and mode.\nEvaluation questions:\n1. What is a class interval? 2. How do you find the mean of grouped data? 3. In a class of 40 students, ages grouped as 10-14 (5 students), 15-19 (25 students), 20-24 (10 students). Find mean and modal class.\nSummary:\nGrouped data helps us handle large amounts of information by organizing it into intervals."
+  },
+  {
+   "week": 8,
+   "title": "Measurement: cylinders",
+   "content": "Behavioural objectives:\nThe students should be able to calculate volume and surface area of cylinders and apply to real objects.\nIntroduction:\nWe have learned about 2D shapes. Today we will learn about 3D shapes like cylinders found in everyday life.\nContent:\nVolume and surface area: Volume = πr²h, surface area = 2πr² + 2πrh. Real objects: Calculate for objects like pipes, cans, and water tanks. Example: A paint can with radius 7cm and height 20cm has volume = π × 7² × 20 = 3080cm³. Surface area = 2π × 7² + 2π × 7 × 20 = 1193.2cm².\nClass activity:\nStudents measure dimensions of cylindrical objects in the classroom and calculate their volume and surface area.\nEvaluation questions:\n1. What is the formula for volume of a cylinder? 2. A water tank has radius 1.5m and height 3m. Find its volume in litres. 3. A pipe has external radius 10cm and internal radius 8cm. If length is 2m, find volume of material used.\nSummary:\nCylinders are common objects whose volume and surface area we can calculate using specific formulas."
+  },
+  {
+   "week": 9,
+   "title": "Bearings",
+   "content": "Behavioural objectives:\nThe students should be able to use directions and bearings to solve navigation problems.\nIntroduction:\nWe have learned about angles. Today we will learn how bearings help us navigate from one place to another.\nContent:\nDirections and bearings: Bearings are measured clockwise from north. Written as three-digit numbers like 045°, 120°. Navigation problems: Use bearings to find positions and distances. Example: If you travel 5km on bearing 030°, then 3km on bearing 120°, your final position can be found using trigonometry. Real-life applications: Maps, compasses, and GPS navigation.\nClass activity:\nStudents create a treasure hunt map using bearings and distances to navigate around the school compound.\nEvaluation questions:\n1. What is the bearing of west? 2. If I travel 4km on bearing 000° and then 3km on bearing 090°, how far am I from start? 3. A plane flies 200km on bearing 150°, then 300km on bearing 030°. Find its bearing and distance from start.\nSummary:\nBearings help us navigate by giving directions measured clockwise from north."
+  },
+  {
+   "week": 10,
+   "title": "Revision and BECE practice",
+   "content": "Behavioural objectives:\nThe students should be able to solve past BECE questions and identify common mistakes.\nIntroduction:\nWe have covered many topics this term. Today we will practice with past BECE questions to prepare for the exam.\nContent:\nPast questions: Review questions from previous BECE exams covering topics from this term. Mark and correct: Discuss answers and identify common errors. Example questions: Simultaneous equations, quadratic expressions, trigonometry, bearings, and statistics. Focus on time management and exam techniques.\nClass activity:\nStudents work in groups to solve 10 past BECE questions, then present solutions to the class.\nEvaluation questions:\n1. Solve 2x + y = 8 and x - y = 1. 2. Factorise x² - 9. 3. Find the height of a tree if it casts a 12m shadow when the sun's angle is 30°. 4. What is the bearing of southwest? 5. Calculate mean of 20, 25, 30, 35, 40.\nSummary:\nPracticing past questions helps us prepare for the BECE exam by familiarizing us with the question format."
+  }
+ ]
+}
