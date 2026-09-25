@@ -15,15 +15,33 @@ Zero-dashboard setup: everything the deploy needs already lives in
 
 1. Go to [vercel.com/new](https://vercel.com/new) and sign in with GitHub.
 2. **Import** the `Resolutefemi/Renance` repository.
-3. Vercel reads `vercel.json` automatically. Configure exactly this:
-   - **Framework Preset:** `Other` (it will preselect it once vercel.json is
-     detected — if it says Next.js, switch it to `Other` so the custom
-     build command and `apps/web/out` output directory win).
-   - **Root Directory:** leave **empty** (repo root — the build command
-     needs `scripts/web_bundles.py`).
+3. Vercel reads `vercel.json` automatically. Both dashboard shapes now work:
+   - **Framework Preset:** `Other` is declared in `vercel.json`
+     (`"framework": null`), so the static export is uploaded as plain
+     files and the Next.js builder never runs. If the dashboard still
+     shows `Next.js` explicitly set, switch it to `Other` once.
+   - **Root Directory:** either leave it **empty** (repo root, the
+     root `vercel.json` applies) or set it to `apps/web` (its own
+     `vercel.json` applies). Both carry the same settings; the only
+     difference is the paths inside the build command.
    - Everything else (install / build / output) is already in vercel.json.
 4. Press **Deploy**. First build takes ~4–6 minutes (it bakes the whole
    question bank into the export).
+
+#### Why the build used to fail on Vercel (fixed)
+
+The site is a static export (`output: 'export'`), so `next build` writes
+plain files into `apps/web/out/`. Vercel's Next.js preset ends every
+build by reading `<outputDirectory>/routes-manifest.json`, a file a
+static export never produces, so the deploy died with
+`The file ".../out/routes-manifest.json" couldn't be found` even though
+the build itself was green. Two fixes landed together:
+
+- `vercel.json` declares `"framework": null`: the export is deployed as
+  static files, no Next.js builder involved.
+- `scripts/web_bundles.py` bakes a minimal `public/routes-manifest.json`
+  which the export copies into `out/`, so even a project still pinned to
+  the Next.js preset finds the manifest and deploys fine.
 
 That's it — no environment variables required in the dashboard, because
 vercel.json ships sane defaults:
