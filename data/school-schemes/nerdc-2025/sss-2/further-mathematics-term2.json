@@ -1,0 +1,57 @@
+{
+ "class": "SSS 2",
+ "subject": "Further Mathematics",
+ "term": 2,
+ "weeks": [
+  {
+   "week": 1,
+   "topic": "Application of integration",
+   "content": "Areas between curves\nVolumes of revolution"
+  },
+  {
+   "week": 2,
+   "topic": "Matrices: 3x3",
+   "content": "Determinants and inverses\nSolve systems"
+  },
+  {
+   "week": 3,
+   "topic": "Linear transformations: 2D",
+   "content": "Matrices and geometry\nFind invariant points"
+  },
+  {
+   "week": 4,
+   "topic": "Vectors: 3D",
+   "content": "Direction cosines\nDot and cross products"
+  },
+  {
+   "week": 5,
+   "topic": "Statics: friction",
+   "content": "Laws of friction\nAngle of friction"
+  },
+  {
+   "week": 6,
+   "topic": "Dynamics: projectiles",
+   "content": "Range and height\nSolve problems"
+  },
+  {
+   "week": 7,
+   "topic": "Dynamics: connected particles",
+   "content": "Pulleys and planes\nSolve systems"
+  },
+  {
+   "week": 8,
+   "topic": "Probability: distributions",
+   "content": "Binomial distribution\nMean and variance"
+  },
+  {
+   "week": 9,
+   "topic": "Statistics: correlation",
+   "content": "Scatter diagrams\nRegression intro"
+  },
+  {
+   "week": 10,
+   "topic": "Revision and assessment",
+   "content": "Term work review\nClass quiz"
+  }
+ ]
+}

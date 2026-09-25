@@ -1,0 +1,57 @@
+{
+ "class": "SSS 2",
+ "subject": "Mathematics",
+ "term": 2,
+ "weeks": [
+  {
+   "week": 1,
+   "topic": "Differentiation: first principles",
+   "content": "Derive derivatives\nGradient functions"
+  },
+  {
+   "week": 2,
+   "topic": "Differentiation: rules",
+   "content": "Products and chains\nApply the rules"
+  },
+  {
+   "week": 3,
+   "topic": "Integration: techniques",
+   "content": "Substitution basics\nStandard forms"
+  },
+  {
+   "week": 4,
+   "topic": "Integration: applications",
+   "content": "Areas and volumes\nSolve problems"
+  },
+  {
+   "week": 5,
+   "topic": "Kinematics: calculus approach",
+   "content": "Velocity and acceleration\nSolve motion problems"
+  },
+  {
+   "week": 6,
+   "topic": "Probability: advanced",
+   "content": "Binomial talk\nCombined events mastery"
+  },
+  {
+   "week": 7,
+   "topic": "Vectors: 2D",
+   "content": "Components and resultants\nSolve geometry with vectors"
+  },
+  {
+   "week": 8,
+   "topic": "Static forces: moments",
+   "content": "Equilibrium conditions\nSolve force problems"
+  },
+  {
+   "week": 9,
+   "topic": "Mensuration: advanced solids",
+   "content": "Cones and spheres\nComposite solids"
+  },
+  {
+   "week": 10,
+   "topic": "Revision and assessment",
+   "content": "Term work review\nClass quiz"
+  }
+ ]
+}
