@@ -52,7 +52,10 @@ const NAV_GROUPS: { label: string; items: NavItem[] }[] = [
   },
   {
     label: 'Administration',
-    items: [{ href: '/school/setup', label: 'School Setup', icon: 'settings', managementOnly: true }],
+    items: [
+      { href: '/school/setup', label: 'School Setup', icon: 'settings', managementOnly: true },
+      { href: '/school/subscription', label: 'Subscription', icon: 'workspace_premium', managementOnly: true },
+    ],
   },
 ];
 
