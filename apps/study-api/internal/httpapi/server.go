@@ -53,6 +53,7 @@ import (
         "renance.dev/study-api/internal/googleid"
         "renance.dev/study-api/internal/grading"
         "renance.dev/study-api/internal/jwtx"
+        "renance.dev/study-api/internal/schoolcorpus"
         "renance.dev/study-api/internal/store"
         "renance.dev/study-api/internal/tutor"
 )
@@ -82,6 +83,11 @@ type Server struct {
         limiter    *rateLimiter
         authIP     *rateLimiter
         authGlobal *rateLimiter
+
+        // National curriculum corpus (schemes + notes) read straight
+        // from the data folder; nil keeps the routes returning clean
+        // empty lists (unit tests without a data dir).
+        corpus *schoolcorpus.Corpus
 }
 
 // syncerKicker is the narrow interface the handlers need from the syncer.
@@ -112,6 +118,9 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
         s.limiter = newRateLimiter(cfg.TutorPerMin, cfg.TutorPerMin)
         s.authIP = newRateLimiter(cfg.AuthPerMin, cfg.AuthPerMin*2)
         s.authGlobal = newRateLimiter(cfg.AuthGlobalPerMin, cfg.AuthGlobalPerMin)
+        if cfg.DataDir != "" {
+                s.corpus = schoolcorpus.Load(cfg.DataDir)
+        }
         // The arena boots whenever an answer-key source exists; without one
         // no pack can be scored and every route stays a clean 503.
         if keys != nil {
@@ -173,6 +182,9 @@ func (s *Server) Handler() http.Handler {
         mux.HandleFunc("PUT /me/daily-subjects", s.auth(s.handleSetDailySubjects))
         mux.HandleFunc("GET /manifest", s.auth(s.handleManifest))
         mux.HandleFunc("GET /bundles/{code}", s.auth(s.handleBundle))
+        mux.HandleFunc("GET /school/corpus/classes", s.auth(s.handleCorpusClasses))
+        mux.HandleFunc("GET /school/corpus/schemes/{class}/{subject}", s.auth(s.handleCorpusSchemes))
+        mux.HandleFunc("GET /school/corpus/notes/{class}/{subject}", s.auth(s.handleCorpusNotes))
         mux.HandleFunc("GET /qimages/{name}", s.handleQImage)
 
         mux.HandleFunc("POST /attempts", s.auth(s.handleCreateAttempt))
@@ -352,39 +364,39 @@ func decodeJSON(w http.ResponseWriter, r *http.Request, dst any) bool {
 // of the payload before the strict pass so handlers that do not model it in
 // their request struct still decode cleanly.
 func decodeSchoolScope(w http.ResponseWriter, r *http.Request, dst any) (string, bool) {
-	body, err := io.ReadAll(http.MaxBytesReader(w, r.Body, 1<<20))
-	if err != nil {
-		fail(w, http.StatusBadRequest, "invalid_body", truncateErr(err))
-		return "", false
-	}
-	var probe map[string]json.RawMessage
-	if json.Unmarshal(body, &probe) != nil {
-		// not a JSON object: nothing to lift, decode the body as-is
-		return r.URL.Query().Get("schoolId"), decodeFrom(w, body, dst)
-	}
-	scope := r.URL.Query().Get("schoolId")
-	if raw, ok := probe["schoolId"]; ok {
-		if v := strings.TrimSpace(string(raw)); v != "" && v != `""` && v != "null" {
-			_ = json.Unmarshal(raw, &scope)
-		}
-		delete(probe, "schoolId")
-		if body, err = json.Marshal(probe); err != nil {
-			fail(w, http.StatusBadRequest, "invalid_body", truncateErr(err))
-			return "", false
-		}
-	}
-	return scope, decodeFrom(w, body, dst)
+        body, err := io.ReadAll(http.MaxBytesReader(w, r.Body, 1<<20))
+        if err != nil {
+                fail(w, http.StatusBadRequest, "invalid_body", truncateErr(err))
+                return "", false
+        }
+        var probe map[string]json.RawMessage
+        if json.Unmarshal(body, &probe) != nil {
+                // not a JSON object: nothing to lift, decode the body as-is
+                return r.URL.Query().Get("schoolId"), decodeFrom(w, body, dst)
+        }
+        scope := r.URL.Query().Get("schoolId")
+        if raw, ok := probe["schoolId"]; ok {
+                if v := strings.TrimSpace(string(raw)); v != "" && v != `""` && v != "null" {
+                        _ = json.Unmarshal(raw, &scope)
+                }
+                delete(probe, "schoolId")
+                if body, err = json.Marshal(probe); err != nil {
+                        fail(w, http.StatusBadRequest, "invalid_body", truncateErr(err))
+                        return "", false
+                }
+        }
+        return scope, decodeFrom(w, body, dst)
 }
 
 // decodeFrom is decodeJSON over an in-memory body (unknown fields rejected).
 func decodeFrom(w http.ResponseWriter, body []byte, dst any) bool {
-	dec := json.NewDecoder(bytes.NewReader(body))
-	dec.DisallowUnknownFields()
-	if err := dec.Decode(dst); err != nil {
-		fail(w, http.StatusBadRequest, "invalid_body", truncateErr(err))
-		return false
-	}
-	return true
+        dec := json.NewDecoder(bytes.NewReader(body))
+        dec.DisallowUnknownFields()
+        if err := dec.Decode(dst); err != nil {
+                fail(w, http.StatusBadRequest, "invalid_body", truncateErr(err))
+                return false
+        }
+        return true
 }
 
 func truncateErr(err error) string {
