@@ -1,0 +1,57 @@
+{
+ "class": "SSS 1",
+ "subject": "Further Mathematics",
+ "term": 3,
+ "weeks": [
+  {
+   "week": 1,
+   "topic": "Matrices",
+   "content": "Operations on matrices\nDeterminants 2x2 3x3"
+  },
+  {
+   "week": 2,
+   "topic": "Inverse matrices",
+   "content": "Find inverses\nSolve systems"
+  },
+  {
+   "week": 3,
+   "topic": "Linear transformations",
+   "content": "Matrices as transforms\nFind images"
+  },
+  {
+   "week": 4,
+   "topic": "Kinematics",
+   "content": "Motion equations advanced\nDisplacement and velocity"
+  },
+  {
+   "week": 5,
+   "topic": "Newton's laws advanced",
+   "content": "Connected particles\nSolve dynamics problems"
+  },
+  {
+   "week": 6,
+   "topic": "Work, energy and power advanced",
+   "content": "Work energy theorem\nPower problems"
+  },
+  {
+   "week": 7,
+   "topic": "Static forces",
+   "content": "Equilibrium of forces\nMoments and couples"
+  },
+  {
+   "week": 8,
+   "topic": "Projectiles",
+   "content": "Trajectory equations\nRange and height"
+  },
+  {
+   "week": 9,
+   "topic": "Project: mathematical modelling",
+   "content": "Model a real problem\nPresent solutions"
+  },
+  {
+   "week": 10,
+   "topic": "Revision and assessment",
+   "content": "Year work review\nEnd of year quiz"
+  }
+ ]
+}

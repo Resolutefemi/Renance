@@ -1,0 +1,57 @@
+{
+ "class": "SSS 1",
+ "subject": "Physics",
+ "term": 3,
+ "weeks": [
+  {
+   "week": 1,
+   "topic": "Electricity: current",
+   "content": "Ohm's law\nCircuit calculations"
+  },
+  {
+   "week": 2,
+   "topic": "Electricity: resistance",
+   "content": "Series and parallel\nCombine resistors"
+  },
+  {
+   "week": 3,
+   "topic": "Electricity: power and energy",
+   "content": "Electrical power\nCost of energy"
+  },
+  {
+   "week": 4,
+   "topic": "Magnetism",
+   "content": "Magnetic fields\nField patterns"
+  },
+  {
+   "week": 5,
+   "topic": "Electromagnetism",
+   "content": "Electromagnets\nMotor principle talk"
+  },
+  {
+   "week": 6,
+   "topic": "Electromagnetic induction",
+   "content": "Induced currents\nGenerators talk"
+  },
+  {
+   "week": 7,
+   "topic": "Radioactivity basics",
+   "content": "Radiations and decay\nSafety and uses"
+  },
+  {
+   "week": 8,
+   "topic": "Simple circuits: devices",
+   "content": "Diodes and transistors\nRectification talk"
+  },
+  {
+   "week": 9,
+   "topic": "Physics project",
+   "content": "Build and test\nPresent findings"
+  },
+  {
+   "week": 10,
+   "topic": "Revision and assessment",
+   "content": "Year work review\nEnd of year quiz"
+  }
+ ]
+}

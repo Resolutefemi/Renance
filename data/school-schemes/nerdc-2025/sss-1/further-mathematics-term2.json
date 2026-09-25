@@ -1,0 +1,57 @@
+{
+ "class": "SSS 1",
+ "subject": "Further Mathematics",
+ "term": 2,
+ "weeks": [
+  {
+   "week": 1,
+   "topic": "Functions and relations",
+   "content": "Injective and surjective\nComposite functions"
+  },
+  {
+   "week": 2,
+   "topic": "Calculus: differentiation basics",
+   "content": "First principles\nStandard derivatives"
+  },
+  {
+   "week": 3,
+   "topic": "Calculus: rules of differentiation",
+   "content": "Product and quotient\nChain rule"
+  },
+  {
+   "week": 4,
+   "topic": "Calculus: applications",
+   "content": "Maxima and minima\nRates of change"
+  },
+  {
+   "week": 5,
+   "topic": "Integration basics",
+   "content": "Indefinite integrals\nStandard integrals"
+  },
+  {
+   "week": 6,
+   "topic": "Integration: definite",
+   "content": "Areas under curves\nCompute areas"
+  },
+  {
+   "week": 7,
+   "topic": "Statistics advanced",
+   "content": "Measures of dispersion\nSkewness intro"
+  },
+  {
+   "week": 8,
+   "topic": "Probability advanced",
+   "content": "Conditional probability\nBayes intro"
+  },
+  {
+   "week": 9,
+   "topic": "Vectors: basics",
+   "content": "Vector algebra\nResultants"
+  },
+  {
+   "week": 10,
+   "topic": "Revision and assessment",
+   "content": "Term work review\nClass quiz"
+  }
+ ]
+}

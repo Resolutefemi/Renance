@@ -1,0 +1,57 @@
+{
+ "class": "SSS 1",
+ "subject": "Physics",
+ "term": 1,
+ "weeks": [
+  {
+   "week": 1,
+   "topic": "Introduction to physics",
+   "content": "Branches and measurement\nFundamental units"
+  },
+  {
+   "week": 2,
+   "topic": "Measurement: instruments",
+   "content": "Vernier and micrometer\nTake readings"
+  },
+  {
+   "week": 3,
+   "topic": "Motion: types",
+   "content": "Distance and displacement\nSpeed and velocity"
+  },
+  {
+   "week": 4,
+   "topic": "Motion: acceleration",
+   "content": "Equations of motion\nSolve problems"
+  },
+  {
+   "week": 5,
+   "topic": "Forces",
+   "content": "Types of forces\nEffects of forces"
+  },
+  {
+   "week": 6,
+   "topic": "Friction",
+   "content": "Laws of friction\nReduce friction"
+  },
+  {
+   "week": 7,
+   "topic": "Work, energy and power",
+   "content": "Calculations\nEnergy conversions"
+  },
+  {
+   "week": 8,
+   "topic": "Simple machines",
+   "content": "Levers and pulleys\nEfficiency calculations"
+  },
+  {
+   "week": 9,
+   "topic": "Heat: temperature scales",
+   "content": "Thermometers\nConvert scales"
+  },
+  {
+   "week": 10,
+   "topic": "Revision and assessment",
+   "content": "Term work review\nClass quiz"
+  }
+ ]
+}
