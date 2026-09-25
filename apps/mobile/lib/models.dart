@@ -2168,3 +2168,113 @@ class AttendanceSummaryRowModel {
         rate: (j['rate'] ?? 0) as num,
       );
 }
+
+// ------------------------------------------------------------ corpus
+
+/// The national curriculum corpus (founder directive: kept in the
+/// codebase, fetched directly - never stored in Neon).
+
+/// One subject of a corpus class with its term availability.
+class CorpusSubjectModel {
+  const CorpusSubjectModel({
+    required this.id,
+    required this.name,
+    required this.schemeTerms,
+    required this.noteTerms,
+  });
+
+  final String id;
+  final String name;
+  final List<int> schemeTerms;
+  final List<int> noteTerms;
+
+  /// Terms that carry either a scheme or notes.
+  List<int> get availableTerms => <int>{
+    ...schemeTerms,
+    ...noteTerms,
+  }.toList()
+    ..sort();
+
+  factory CorpusSubjectModel.fromJson(Map<String, dynamic> j) =>
+      CorpusSubjectModel(
+        id: (j['id'] ?? '') as String,
+        name: (j['name'] ?? '') as String,
+        schemeTerms: <int>[
+          for (final dynamic t in (j['schemeTerms'] ?? const <dynamic>[]) as List<dynamic>)
+            ((t ?? 0) as num).toInt(),
+        ],
+        noteTerms: <int>[
+          for (final dynamic t in (j['noteTerms'] ?? const <dynamic>[]) as List<dynamic>)
+            ((t ?? 0) as num).toInt(),
+        ],
+      );
+}
+
+/// One class level (Nursery 1 through SSS 3) of the corpus.
+class CorpusClassModel {
+  const CorpusClassModel({
+    required this.id,
+    required this.name,
+    required this.stage,
+    required this.stageLabel,
+    required this.subjects,
+  });
+
+  final String id;
+  final String name;
+  final String stage;
+  final String stageLabel;
+  final List<CorpusSubjectModel> subjects;
+
+  factory CorpusClassModel.fromJson(Map<String, dynamic> j) =>
+      CorpusClassModel(
+        id: (j['id'] ?? '') as String,
+        name: (j['name'] ?? '') as String,
+        stage: (j['stage'] ?? '') as String,
+        stageLabel: (j['stageLabel'] ?? '') as String,
+        subjects: <CorpusSubjectModel>[
+          for (final dynamic s in (j['subjects'] ?? const <dynamic>[]) as List<dynamic>)
+            CorpusSubjectModel.fromJson((s as Map).cast<String, dynamic>()),
+        ],
+      );
+}
+
+/// One term's scheme of work from the corpus.
+class CorpusSchemeTermModel {
+  const CorpusSchemeTermModel({
+    required this.term,
+    required this.weeks,
+  });
+
+  final int term;
+  final List<SchemeWeek> weeks;
+
+  factory CorpusSchemeTermModel.fromJson(Map<String, dynamic> j) =>
+      CorpusSchemeTermModel(
+        term: ((j['term'] ?? 0) as num).toInt(),
+        weeks: <SchemeWeek>[
+          for (final dynamic w in (j['weeks'] ?? const <dynamic>[]) as List<dynamic>)
+            SchemeWeek.fromJson(w),
+        ],
+      );
+}
+
+/// One term's lesson notes from the corpus.
+class CorpusNotesTermModel {
+  const CorpusNotesTermModel({
+    required this.term,
+    required this.topics,
+  });
+
+  final int term;
+  final List<SchoolTopicInfo> topics;
+
+  factory CorpusNotesTermModel.fromJson(Map<String, dynamic> j) =>
+      CorpusNotesTermModel(
+        term: ((j['term'] ?? 0) as num).toInt(),
+        topics: <SchoolTopicInfo>[
+          for (final dynamic t in (j['topics'] ?? const <dynamic>[]) as List<dynamic>)
+            SchoolTopicInfo.fromJson((t as Map).cast<String, dynamic>()),
+        ],
+      );
+}
