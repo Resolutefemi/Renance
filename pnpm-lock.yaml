@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      z-ai-web-dev-sdk:
+        specifier: ^0.0.18
+        version: 0.0.18
     devDependencies:
       prettier:
         specifier: ^3.4.2
@@ -681,6 +685,11 @@ packages:
   utrie@1.0.2:
     resolution: {integrity: sha512-1MLa5ouZiOmQzUbjbu9VmjLzn1QLXBhwpUa7kdLUQK+KQ5KA9I1vk5U4YHe/X2Ch7PYnJfWuWT+VbuxbGwljhw==}
 
+  z-ai-web-dev-sdk@0.0.18:
+    resolution: {integrity: sha512-xVoZIEME2F+/Z06orHCgUKzOMuFPhoHuzN4ZFZqcD71g11nzbzq2jKSP53igi3lJFE8ZbMB4WKb4gp6lCGrMXQ==}
+    engines: {bun: '>=1.3.0', node: '>=20.0.0'}
+    hasBin: true
+
 snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
@@ -1213,3 +1222,5 @@ snapshots:
     dependencies:
       base64-arraybuffer: 1.0.2
     optional: true
+
+  z-ai-web-dev-sdk@0.0.18: {}
