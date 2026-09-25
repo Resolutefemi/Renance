@@ -532,6 +532,8 @@ export default function DashboardPage() {
             <h3 className="text-sm text-on-surface-variant">Learn</h3>
             <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
               <LauncherTile icon="auto_stories" label="Notes" href="/notes" />
+              <LauncherTile icon="account_balance" label="Scheme & Notes" href="/curriculum" />
+              <LauncherTile icon="smart_toy" label="Renance AI" href="/ai" />
               <LauncherTile icon="style" label="Flashcards" href="/flashcards" />
               <LauncherTile icon="download" label="Downloads" href="/downloads" />
               <LauncherTile icon="category" label="Subjects" href="/subjects" />
