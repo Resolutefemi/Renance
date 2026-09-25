@@ -2,8 +2,16 @@
 
 import { clearSession, getToken } from './session';
 
+// The API base must be baked at build time (NEXT_PUBLIC_API_BASE). When a
+// production build ships without it, fall back to the live Render service
+// instead of localhost: a static export that asks the visitor's own machine
+// for the API is exactly how sign-in silently died on the first Vercel
+// deploy. Local dev keeps the local study API.
 export const API_BASE =
-  process.env.NEXT_PUBLIC_API_BASE ?? 'http://localhost:3990';
+  process.env.NEXT_PUBLIC_API_BASE ??
+  (process.env.NODE_ENV === 'production'
+    ? 'https://renance-api.onrender.com'
+    : 'http://localhost:3990');
 
 // GitHub Pages serves the app under /<repo>/, raw redirects must respect it.
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
