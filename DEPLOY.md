@@ -49,8 +49,16 @@ vercel.json ships sane defaults:
 | Variable | Default | Meaning |
 |---|---|---|
 | `NEXT_PUBLIC_BASE_PATH` | *(empty)* | Vercel serves at the root, unlike GitHub Pages' `/Renance/` |
-| `NEXT_PUBLIC_API_BASE` | `/api` | **API proxy.** Vercel rewrites `/api/*` to the Render study API (`renance-api.onrender.com`) server-side — same-origin calls, **zero CORS configuration, no Render `WEB_ORIGIN` edit needed** |
-| `NEXT_PUBLIC_SITE_URL` | `https://renance.vercel.app` | Used for canonical/OG/sitemap URLs. **Change this** in Vercel → Project → Settings → Environment Variables after you know the final domain (the `*.vercel.app` name Vercel assigns, or your custom domain). Dashboard values override the vercel.json defaults. |
+| `NEXT_PUBLIC_API_BASE` | `https://renance-api.onrender.com` | The web app talks to the Render study API **directly**. The Render `WEB_ORIGIN` allowlist carries `https://renance-edtech.vercel.app`, so CORS answers every call. The old same-origin `/api` rewrite is gone on purpose: with `trailingSlash: true` every extension-less path gets redirected to its trailing-slash form, the rewrite never fired, and the Go router 404s trailing slashes anyway. |
+| `NEXT_PUBLIC_GOOGLE_CLIENT_ID` | `850087098854-pni8gohld0isi8v8nhhnlcl5fuvi77q4...` | The web OAuth client. Baked at build time so the Google button renders on `/login` and `/register`. One manual step lives in Google Cloud Console: the deployment origin (`https://renance-edtech.vercel.app`) must be listed under the client's **Authorized JavaScript origins**, or Google shows its own `Error 401: invalid_client`. |
+| `NEXT_PUBLIC_SITE_URL` | `https://renance-edtech.vercel.app` | Used for canonical/OG/sitemap URLs. Change it once a custom domain exists. |
+
+These ride the **`build.env`** key, not `env`: `env` only reaches serverless
+functions at runtime, and a static export has no functions. The first Vercel
+deploy proved it — the client bundle kept the literal fallback
+`http://localhost:3990`, so every visitor's browser tried their own machine
+for the API and sign-in died. `build.env` bakes the values into the client
+bundle at compile time.
 
 ### Optional (recommended before sharing publicly)
 
@@ -73,7 +81,8 @@ then set `NEXT_PUBLIC_SITE_URL` to `https://<your-domain>` and redeploy once.
 - The build is the **exact same command CI runs** (`web_bundles.py` +
   `next build`); if GitHub Pages builds green, Vercel builds green.
 - Static export means no server runtime, no Node process, no cold starts
-  for the site itself — only the `/api` proxy talks to Render.
+  for the site itself — the browser calls the Render API directly and the
+  Render `WEB_ORIGIN` allowlist answers the CORS handshake.
 - Every GitHub Pages push stays untouched; both deploys can run in
   parallel from the same `main` branch.
 
