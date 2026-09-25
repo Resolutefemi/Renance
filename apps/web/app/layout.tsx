@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import './globals.css';
 
 import { SITE_URL } from '@/lib/site-url';
+import ContentGuard from '@/components/content-guard';
 
 const FOUNDER = {
   '@type': 'Person',
@@ -160,7 +161,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(renanceJsonLd) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {/* Founder content lock: no selecting, copying or dragging site
+            content (notes, schemes, questions); forms keep working. */}
+        <ContentGuard />
+        {children}
+      </body>
     </html>
   );
 }
