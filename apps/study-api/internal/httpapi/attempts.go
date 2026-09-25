@@ -84,6 +84,10 @@ func (s *Server) handleCreateAttempt(w http.ResponseWriter, r *http.Request) {
                 fail(w, http.StatusInternalServerError, "internal", "could not start attempt")
                 return
         }
+        // Free-tier cap preview: tell the client where the subscribe
+        // prompt fires. Premium and the still-unused one free full CBT
+        // carry no cap (null = run the whole paper); a free account past
+        // its first paper answers at most FreePreviewQuestions.
         resp := map[string]any{
                 "attemptId":       attempt.ID,
                 "code":            attempt.Code,
@@ -93,6 +97,13 @@ func (s *Server) handleCreateAttempt(w http.ResponseWriter, r *http.Request) {
                 "questionCount":   bundle.QuestionCount,
                 "adaptive":        req.Adaptive,
                 "order":           order,
+        }
+        if !req.Daily {
+                if ent, entErr := s.store.EnsureEntitlement(r.Context(), uid); entErr != nil {
+                        s.log.Error("cap lookup failed", "err", entErr)
+                } else if !ent.PremiumActive(time.Now().UTC()) && ent.FirstFreeCbt {
+                        resp["cap"] = plans.FreePreviewQuestions
+                }
         }
         if req.Daily {
                 resp["daily"] = true

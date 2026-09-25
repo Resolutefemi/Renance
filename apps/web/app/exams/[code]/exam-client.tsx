@@ -29,6 +29,8 @@ import { computePacingForensics, type QuestionTimeRecord } from '@/lib/pacing';
 import PacingForensicsCard from '@/components/pacing-forensics';
 import UtmeResultSlip from '@/components/utme-result';
 import type { UtmeSubjectRow } from '@/lib/exams';
+import PaywallModal from '@/components/paywall';
+import { fetchEntitlement, type Entitlement } from '@/lib/billing';
 
 interface ExamMetaLite {
   code: string;
@@ -45,6 +47,9 @@ interface AttemptResponse {
   questionCount?: number;
   adaptive?: boolean;
   order?: string[] | null;
+  /** Free-tier cap: when set, the subscribe prompt fires after this many
+   *  answers (null/absent = full paper: premium or the one free CBT). */
+  cap?: number | null;
 }
 
 interface TopicRow {
@@ -142,6 +147,11 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
   const [current, setCurrent] = useState(0);
   const [remaining, setRemaining] = useState<number | null>(null);
   const [result, setResult] = useState<ResultPayload | null>(null);
+  // Free-tier paywall: fires when the capped attempt reaches its 20th
+  // answer, or when the server 402s a capped submit. Progress stays
+  // saved either way - subscribing resumes the same paper.
+  const [paywallOpen, setPaywallOpen] = useState(false);
+  const [entitlement, setEntitlement] = useState<Entitlement | null>(null);
   const [gam, setGam] = useState<{ state: { currentStreak: number; totalXp: number } } | null>(null);
   const [allAttempts, setAllAttempts] = useState<AttemptSummary[] | null>(null);
   // Smart order (ROADMAP #5): begin weak-topic-first by default; the
@@ -439,6 +449,13 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         setPhase('error');
         return;
       }
+      // Free-tier cap: the server saved the answers and kept the attempt
+      // open. Open the subscribe dialog; after payment the student
+      // resumes this exact paper from this exact question.
+      if (err instanceof ApiError && err.code === 'free_cap') {
+        setPaywallOpen(true);
+        return;
+      }
       // Network died between picking and submitting - grade on-device
       // rather than throwing the sitting away. Same paper, same answers.
       if (bundle && bundle.questions.some((q) => q.answer)) {
@@ -567,6 +584,21 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
 
   const question = bundle?.questions[current];
   const answeredCount = useMemo(() => Object.keys(answers).length, [answers]);
+
+  // The paywall fires exactly when a capped attempt lands on its 20th
+  // answer (premium and the one free CBT carry no cap at all).
+  useEffect(() => {
+    if (phase !== 'playing' || !attempt?.cap) return;
+    if (answeredCount === attempt.cap) setPaywallOpen(true);
+  }, [answeredCount, attempt?.cap, phase]);
+
+  // One entitlement read per sitting: the REN wallet feeds redemption.
+  useEffect(() => {
+    if (phase !== 'playing' || entitlement) return;
+    fetchEntitlement()
+      .then(setEntitlement)
+      .catch(() => {});
+  }, [phase, entitlement]);
   const mmss = (s: number) => {
     const h = Math.floor(s / 3600);
     const m = Math.floor((s % 3600) / 60);
@@ -1805,6 +1837,17 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
 
       {/* JAMB-hall calculator */}
       <CalculatorSheet open={calcOpen} onClose={() => setCalcOpen(false)} />
+      {/* Free-tier subscribe dialog: the 20-question cap's answer. */}
+      <PaywallModal
+        open={paywallOpen}
+        onClose={() => setPaywallOpen(false)}
+        context="You have reached the free limit of 20 questions. Subscribe to continue, your progress is saved."
+        entitlement={entitlement}
+        onRedeemed={(e) => {
+          setEntitlement(e);
+          setAttempt((a) => (a ? { ...a, cap: null } : a));
+        }}
+      />
 
       {/* question_navigator_light sheet */}
       {navOpen && (

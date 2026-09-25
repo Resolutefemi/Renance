@@ -31,11 +31,15 @@ export function withBase(path: string): string {
 export class ApiError extends Error {
   status: number;
   code: string;
+  /** The raw error envelope's extra fields (e.g. the free-cap 402's
+   *  limit/answered/saved) so specific failures can drive specific UI. */
+  data: Record<string, unknown> | null;
 
-  constructor(status: number, code: string, message: string) {
+  constructor(status: number, code: string, message: string, data: Record<string, unknown> | null = null) {
     super(message);
     this.status = status;
     this.code = code;
+    this.data = data;
   }
 }
 
@@ -102,7 +106,10 @@ export async function api<T>(path: string, opts: Options = {}): Promise<T> {
   }
   if (!res.ok) {
     const err = (payload as { error?: { code?: string; message?: string } } | null)?.error;
-    throw new ApiError(res.status, err?.code ?? 'error', err?.message ?? `Request failed (${res.status})`);
+    const data = payload && typeof payload === 'object' && !('error' in (payload as object))
+      ? (payload as Record<string, unknown>)
+      : null;
+    throw new ApiError(res.status, err?.code ?? 'error', err?.message ?? `Request failed (${res.status})`, data);
   }
   return payload as T;
 }
