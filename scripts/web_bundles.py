@@ -24,6 +24,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from bake_school_corpus import main as bake_school_corpus  # noqa: E402
+
 REPO = Path(__file__).resolve().parents[1]
 DATA = REPO / "data"
 OUT = REPO / "apps" / "web" / "public" / "bundles"
@@ -146,6 +149,7 @@ def main() -> int:
     )
 
     bake_routes_manifest()
+    bake_school_corpus()
 
     print(f"baked {written}/{len(manifest['exams'])} bundles -> {OUT}")
     print(f"stripped {stripped_keys} answer-material keys")
@@ -158,7 +162,7 @@ def main() -> int:
 
 def bake_routes_manifest() -> None:
     """Drop a minimal routes manifest into public/ so the static export
-    carries it in out/.
+    carries it in out().
 
     Why: Vercel's Next.js preset finishes every build by reading
     <outputDirectory>/routes-manifest.json. A static export never writes

@@ -59,6 +59,7 @@ arena-e2e
 # Generated at build time by scripts/web_bundles.py (never commit)
 apps/web/public/bundles/
 apps/web/public/routes-manifest.json
+apps/web/public/school-corpus/
 
 # school-notes scraper cache (never commit raw crawl output)
 data/school-notes/cache/
