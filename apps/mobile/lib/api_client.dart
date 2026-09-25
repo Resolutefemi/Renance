@@ -544,6 +544,53 @@ class ApiClient {
     return SchoolPack.fromJson(data.cast<String, dynamic>());
   }
 
+  // ------------------------------------------------------------- corpus
+
+  /// The national curriculum corpus class list (Nursery 1 to SSS 3),
+  /// read straight from the codebase files the API ships with. No
+  /// Neon involvement: the corpus never lives in the database.
+  Future<List<CorpusClassModel>> corpusClasses() async {
+    final data = await _send('GET', '/school/corpus/classes') as Map<dynamic, dynamic>;
+    return <CorpusClassModel>[
+      for (final dynamic c in (data['classes'] ?? const <dynamic>[]) as List<dynamic>)
+        CorpusClassModel.fromJson((c as Map).cast<String, dynamic>()),
+    ];
+  }
+
+  /// Every term's scheme of work for one corpus class + subject.
+  Future<List<CorpusSchemeTermModel>> corpusSchemes(
+    String classId,
+    String subject,
+  ) async {
+    final data = await _send(
+      'GET',
+      '/school/corpus/schemes/${Uri.encodeComponent(classId)}/${Uri.encodeComponent(subject)}',
+      timeout: const Duration(seconds: 60),
+    ) as Map<dynamic, dynamic>;
+    return <CorpusSchemeTermModel>[
+      for (final dynamic t in (data['terms'] ?? const <dynamic>[]) as List<dynamic>)
+        CorpusSchemeTermModel.fromJson(((t as Map)['data'] as Map? ?? const <String, dynamic>{})
+            .cast<String, dynamic>()),
+    ]..sort((CorpusSchemeTermModel a, CorpusSchemeTermModel b) => a.term.compareTo(b.term));
+  }
+
+  /// Every term's lesson notes for one corpus class + subject.
+  Future<List<CorpusNotesTermModel>> corpusNotes(
+    String classId,
+    String subject,
+  ) async {
+    final data = await _send(
+      'GET',
+      '/school/corpus/notes/${Uri.encodeComponent(classId)}/${Uri.encodeComponent(subject)}',
+      timeout: const Duration(seconds: 60),
+    ) as Map<dynamic, dynamic>;
+    return <CorpusNotesTermModel>[
+      for (final dynamic t in (data['terms'] ?? const <dynamic>[]) as List<dynamic>)
+        CorpusNotesTermModel.fromJson(((t as Map)['data'] as Map? ?? const <String, dynamic>{})
+            .cast<String, dynamic>()),
+    ]..sort((CorpusNotesTermModel a, CorpusNotesTermModel b) => a.term.compareTo(b.term));
+  }
+
   /// The school's classes (with enrolled counts) for the roster pickers.
   Future<List<SchoolClassInfo>> schoolClasses(String schoolId) async {
     final data = await _send(
