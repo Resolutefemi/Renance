@@ -1168,9 +1168,9 @@ class _Player extends StatelessWidget {
           daily: daily,
         ),
         _SubjectStrip(controller: controller),
-        // The live pacing coach (contributor feature, PR #1 ported):
-        // quiet when on track, firm before a question eats the paper.
-        PacingGaugeCard(enabled: !controller.untimed),
+        // Pacing runs in the background only: the per-question clock keeps
+        // recording silently while the paper plays, and the forensics
+        // report is the single place the student meets it (after submit).
         // Scrollable question area ---------------------------------------
         Expanded(
           child: ListView(

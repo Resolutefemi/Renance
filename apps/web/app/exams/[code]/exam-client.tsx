@@ -25,8 +25,7 @@ import { FatigueNudgeOverlay } from '@/components/fatigue-nudge';
 import CalculatorSheet from '@/components/calculator';
 import { LogoActivityIndicator } from '@/components/renance-logo';
 import { apiImg, QText } from '@/lib/qtext';
-import { assessLivePacing, computePacingForensics, type QuestionTimeRecord } from '@/lib/pacing';
-import PacingGauge from '@/components/pacing-gauge';
+import { computePacingForensics, type QuestionTimeRecord } from '@/lib/pacing';
 import PacingForensicsCard from '@/components/pacing-forensics';
 
 interface ExamMetaLite {
@@ -1558,22 +1557,13 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         {/* question card */}
         <div className="renance-rise rounded-[14px] border border-outline-variant/50 bg-card p-[18px] shadow-[0_2px_12px_0_rgba(20,28,45,0.10)] sm:p-6">
           <div className="flex items-center justify-between gap-3">
-            {/* "Question N" pill + Live Pacing Gauge */}
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="shrink-0 rounded-full border border-outline-variant bg-card px-3.5 py-[7px] text-[14.5px] font-medium text-on-surface shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
-                Question {current + 1}
-                <span className="ml-1.5 font-mono text-[11px] text-outline">/ {bundle.questionCount}</span>
-              </span>
-              {!untimed && (
-                <PacingGauge
-                  pacing={assessLivePacing(
-                    (questionMsMapRef.current[question.id] || 0) + (Date.now() - shownAtRef.current),
-                    timerOverride != null ? timerOverride : bundle.durationMinutes ?? 30,
-                    bundle.questionCount,
-                  )}
-                />
-              )}
-            </div>
+            {/* "Question N" pill - the school app's badge. Pacing stays a
+                background signal: the per-question clock keeps running
+                silently and the forensics report surfaces after submit. */}
+            <span className="shrink-0 rounded-full border border-outline-variant bg-card px-3.5 py-[7px] text-[14.5px] font-medium text-on-surface shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+              Question {current + 1}
+              <span className="ml-1.5 font-mono text-[11px] text-outline">/ {bundle.questionCount}</span>
+            </span>
             <div className="flex min-w-0 items-center gap-2">
             {question.topic && (
               <span className="hidden min-w-0 truncate rounded-full bg-surface-container-low px-2.5 py-1 text-[11px] text-on-surface-variant sm:block">
