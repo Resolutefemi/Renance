@@ -40,14 +40,18 @@ services:
       - key: SITE_URL
         value: https://renance-edtech.vercel.app
       # Renance AI: the provider key lives here, on the server, never in
-      # any client bundle. Paste a Gemini key (or any OpenAI-compatible
-      # provider) and the AI companion answers in full AI mode.
+      # any client bundle. AI_PROVIDER=zai selects Z.ai's OpenAI-compatible
+      # platform and its FREE GLM-4.5-Flash model; paste the Z.ai key and
+      # the AI companion answers in full AI mode. Alternatives: unset
+      # AI_PROVIDER (Gemini free tier), or "groq" / "openrouter".
+      - key: AI_PROVIDER
+        value: zai
       - key: AI_API_KEY
         sync: false
       - key: AI_BASE_URL
-        value: https://generativelanguage.googleapis.com/v1beta/openai
+        value: https://api.z.ai/api/paas/v4
       - key: AI_MODEL
-        value: gemini-3.6-flash
+        value: glm-4.5-flash
       # Email verification: fill these and the confirmation mail leaves
       # the server. Until then the link is written to the service log.
       - key: SMTP_HOST

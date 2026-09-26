@@ -1,6 +1,9 @@
 // Tutor endpoints (ROADMAP #9).
 //
-// GET  /tutor/status         , {aiEnabled} so clients badge the mode
+// GET  /tutor/status         , {aiEnabled, provider} so clients badge
+//
+//	the mode and deploys show which brain is live
+//
 // POST /attempts/{id}/tutor  , Socratic chat anchored to one graded
 //
 //	attempt + question (AI mode when a
@@ -30,7 +33,10 @@ type tutorRequest struct {
 }
 
 func (s *Server) handleTutorStatus(w http.ResponseWriter, r *http.Request) {
-	writeJSON(w, http.StatusOK, map[string]any{"aiEnabled": s.tutor != nil && s.tutor.Provider != nil})
+	writeJSON(w, http.StatusOK, map[string]any{
+		"aiEnabled": s.tutor != nil && s.tutor.Provider != nil,
+		"provider":  s.cfg.AIProvider, // "", zai, gemini, groq, openrouter
+	})
 }
 
 func (s *Server) handleAttemptTutor(w http.ResponseWriter, r *http.Request) {

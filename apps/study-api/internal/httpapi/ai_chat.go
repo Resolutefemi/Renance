@@ -1,8 +1,9 @@
 // Renance AI: the dedicated chat brain. NOT just the review-page
 // tutor: a full study companion grounded with Renance's own data, the
 // scheme-of-work corpus, the lesson notes and the exam banks, through a
-// provider-agnostic OpenAI-compatible chat endpoint (Gemini's free tier
-// by default: AI_API_KEY / AI_BASE_URL / AI_MODEL env, no paid plan
+// provider-agnostic OpenAI-compatible chat endpoint (AI_PROVIDER=zai
+// puts Z.ai's free GLM-4.5-Flash behind it; Gemini's free tier is the
+// unset default: AI_API_KEY / AI_BASE_URL / AI_MODEL env, no paid plan
 // required). Without a key the endpoint answers in an honest "study
 // guide" mode built straight from the corpus so the page never dies.
 package httpapi
@@ -193,6 +194,6 @@ func renanceAIStudyGuide(r *http.Request, req *aiChatRequest) string {
 	if strings.TrimSpace(q) != "" {
 		b.WriteString("About your question: break it into the key terms, check the syllabus topics for this subject, and run ten practice questions on that topic; the review explanations teach the reasoning behind every option. ")
 	}
-	b.WriteString("Tip: add an AI_API_KEY (the free Gemini tier works) to the study API environment and this page switches to full AI answers.")
+	b.WriteString("Tip: full AI answers switch on the moment the platform connects its provider key (Z.ai's free GLM-4.5-Flash or Gemini's free tier both work); until then this study-guide mode keeps every answer grounded in Renance's own corpus.")
 	return b.String()
 }
