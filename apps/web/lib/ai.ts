@@ -1,28 +1,20 @@
 'use client';
 
 /**
- * Rence AI client (Gemini via its OpenAI-compatible surface, the same
- * provider the study API's tutor uses).
- *
- * The site ships as a static GitHub Pages export with no server of its
- * own beyond the study API, so the provider key is baked into the
- * client bundle at build time (NEXT_PUBLIC_AI_API_KEY in
- * web-deploy.yml). That is an accepted trade-off for this deployment
- * shape: every AI surface degrades gracefully when the key is absent
- * or the provider rejects the request, and the server route stays the
- * primary path wherever one exists.
+ * Renance AI client. Every AI surface rides the study API's /ai/chat
+ * route: the provider key lives on the server (Render env), never in
+ * the browser bundle, and students never bring their own key. When the
+ * server has no provider configured, it answers from the corpus in
+ * study-guide mode, so the companion is never dead.
  */
 
-export const AI_BASE_URL =
-  process.env.NEXT_PUBLIC_AI_BASE_URL ??
-  'https://generativelanguage.googleapis.com/v1beta/openai';
-export const AI_MODEL = process.env.NEXT_PUBLIC_AI_MODEL ?? 'gemini-3.6-flash';
+import { api } from '@/lib/api';
 
-const AI_KEY = (process.env.NEXT_PUBLIC_AI_API_KEY ?? '').trim();
+export const AI_MODEL = 'renance-ai';
 
-/** True when this deployment ships a provider key. */
+/** True: the server route is always the path; it degrades gracefully. */
 export function aiConfigured(): boolean {
-  return AI_KEY.length > 0;
+  return true;
 }
 
 export interface AiMessage {
@@ -30,40 +22,24 @@ export interface AiMessage {
   content: string;
 }
 
-interface ChatChoice {
-  message?: { content?: unknown };
-}
-
-/** One chat completion through the OpenAI-compatible /chat/completions route. */
+/** One chat completion through the study API's grounded /ai/chat route. */
 export async function aiChat(
   messages: AiMessage[],
-  opts?: { temperature?: number; maxTokens?: number },
+  _opts?: { temperature?: number; maxTokens?: number },
 ): Promise<string> {
-  if (!AI_KEY) throw new Error('AI is not configured on this deployment.');
-  const res = await fetch(`${AI_BASE_URL}/chat/completions`, {
+  // The server owns the system prompt and the corpus grounding, so only
+  // the conversation rides north; unknown fields would be rejected.
+  const rest = messages.filter((m) => m.role !== 'system');
+  const res = await api<{ reply: string; mode: string }>('/ai/chat', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${AI_KEY}`,
+    body: {
+      messages: rest.length ? rest : [{ role: 'user', content: 'Hello' }],
     },
-    body: JSON.stringify({
-      model: AI_MODEL,
-      messages,
-      temperature: opts?.temperature ?? 0.6,
-      max_tokens: opts?.maxTokens ?? 1024,
-      stream: false,
-    }),
   });
-  if (!res.ok) {
-    const detail = await res.text().catch(() => '');
-    throw new Error(`AI request failed (${res.status}). ${detail.slice(0, 140)}`);
-  }
-  const data = (await res.json()) as { choices?: ChatChoice[] };
-  const content = data.choices?.[0]?.message?.content;
-  if (typeof content !== 'string' || !content.trim()) {
+  if (!res.reply || !res.reply.trim()) {
     throw new Error('AI returned an empty reply.');
   }
-  return content.trim();
+  return res.reply.trim();
 }
 
 /**
