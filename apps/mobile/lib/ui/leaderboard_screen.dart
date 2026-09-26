@@ -6,6 +6,14 @@
 /// for the podium, white cards below, the caller's own row ringed in
 /// ink when it rides along. The XP board is retired - these ladders
 /// rank what students actually chase.
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../api_client.dart';
+import '../models.dart';
+import 'theme.dart';
+import 'blue_tick.dart';
+
 class LeaderboardScreen extends StatefulWidget {
   const LeaderboardScreen({super.key});
 

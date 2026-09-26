@@ -11,7 +11,7 @@ import 'package:provider/provider.dart';
 import '../api_client.dart';
 import '../controllers.dart';
 import '../storage.dart';
-import '../theme.dart';
+import 'theme.dart';
 
 class VerifyScreen extends StatefulWidget {
   const VerifyScreen({super.key});

@@ -93,18 +93,18 @@ const focusBoardSelect = `
                 WITH scored AS (
                         SELECT r.attempt_id,
                                a.user_id,
-                               CASE WHEN $1 = 'jamb-mock-' AND r.subjects IS NOT NULL THEN
+                               CASE WHEN $1::text = 'jamb-mock-' AND r.subjects IS NOT NULL THEN
                                         (SELECT COALESCE(SUM((s->>'score')::numeric), 0)
                                          FROM jsonb_array_elements(r.subjects) s)
                                     ELSE ROUND(100.0 * r.score / GREATEST(r.total, 1), 1)
                                END AS best_score,
-                               CASE WHEN $1 = 'jamb-mock-' AND r.subjects IS NOT NULL THEN 400.0
+                               CASE WHEN $1::text = 'jamb-mock-' AND r.subjects IS NOT NULL THEN 400.0
                                     ELSE 100.0 END AS score_out_of
                         FROM study.results r
                         JOIN study.attempts a ON a.id = r.attempt_id
                         WHERE a.status = 'graded'
                           AND r.total > 0
-                          AND a.code LIKE $1 || '%'
+                          AND a.code LIKE $1::text || '%'
                 ),
                 agg AS (
                         SELECT s.user_id::text AS user_id,
