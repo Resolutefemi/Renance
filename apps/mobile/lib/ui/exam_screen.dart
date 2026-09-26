@@ -2082,6 +2082,8 @@ class _RecoveryView extends StatelessWidget {
               // The official UTME slip (composite JAMB mock papers).
               if (showUtmeSlip) _UtmeSlip(result: result),
               // rose hero -------------------------------------------------
+              // On a mock the slip already led, so the percentage ring
+              // steps aside and the copy carries the message.
               Container(
                 padding: const EdgeInsets.fromLTRB(24, 28, 24, 28),
                 decoration: BoxDecoration(
@@ -2090,30 +2092,32 @@ class _RecoveryView extends StatelessWidget {
                 ),
                 child: Column(
                   children: <Widget>[
-                    SizedBox(
-                      width: 128,
-                      height: 128,
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: <Widget>[
-                          CustomPaint(
-                            size: const Size(128, 128),
-                            painter: _RecoveryRing(
-                              pct: pct,
-                              trackColor: context.surfaceContainer,
-                              valueColor: context.error),
-                          ),
-                          Text(
-                            '$pct%',
-                            style: RenanceText.statNumber.copyWith(
-                              fontSize: 26,
-                              color: context.error,
+                    if (!showUtmeSlip) ...<Widget>[
+                      SizedBox(
+                        width: 128,
+                        height: 128,
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: <Widget>[
+                            CustomPaint(
+                              size: const Size(128, 128),
+                              painter: _RecoveryRing(
+                                pct: pct,
+                                trackColor: context.surfaceContainer,
+                                valueColor: context.error),
                             ),
-                          ),
-                        ],
+                            Text(
+                              '$pct%',
+                              style: RenanceText.statNumber.copyWith(
+                                fontSize: 26,
+                                color: context.error,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                    const SizedBox(height: 20),
+                      const SizedBox(height: 20),
+                    ],
                     Text(
                       'The review list below is where the points are.',
                       textAlign: TextAlign.center,
@@ -2449,8 +2453,9 @@ class _ResultState extends State<_Result> {
           child: ListView(
             padding: const EdgeInsets.only(bottom: 120),
             children: <Widget>[
-              // Dark hero ------------------------------------------------
-              _ScoreHero(pct: pct, delta: delta),
+              // The official UTME slip IS the hero of a mock result; the
+              // dark percentage hero only prints for the other papers.
+              if (result.subjects.isEmpty) _ScoreHero(pct: pct, delta: delta),
               Padding(
                 padding: const EdgeInsets.all(16),
                 child: Column(
@@ -3437,90 +3442,57 @@ class _UtmeSlip extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          // Slip head: the aggregate, printed like the hall's slip.
+          // Slip head: the aggregate IS the headline - the biggest thing
+          // on the screen, printed like the hall's slip.
           Container(
-            padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
+            width: double.infinity,
+            padding: const EdgeInsets.fromLTRB(16, 20, 16, 24),
             color: context.ink,
-            child: Row(
+            child: Column(
               children: <Widget>[
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        'UNIFIED TERTIARY MATRICULATION EXAMINATION',
-                        style: RenanceText.caption.copyWith(
-                          fontSize: 8.5,
-                          letterSpacing: 1.6,
-                          color: Colors.white.withValues(alpha: 0.72),
+                Text(
+                  'UNIFIED TERTIARY MATRICULATION EXAMINATION · OFFICIAL SCORE',
+                  textAlign: TextAlign.center,
+                  style: RenanceText.caption.copyWith(
+                    fontSize: 8.5,
+                    letterSpacing: 1.6,
+                    color: Colors.white.withValues(alpha: 0.66),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Text.rich(
+                  TextSpan(
+                    children: <InlineSpan>[
+                      TextSpan(
+                        text: aggregate == aggregate.roundToDouble()
+                            ? aggregate.toInt().toString()
+                            : aggregate.toStringAsFixed(1),
+                        style: RenanceText.statNumber.copyWith(
+                          fontSize: 56,
+                          height: 1.0,
+                          color: Colors.white,
                         ),
                       ),
-                      const SizedBox(height: 4),
-                      Text(
-                        'JAMB UTME Mock · Official Score',
+                      TextSpan(
+                        text: '/400',
                         style: RenanceText.bodyMedium.copyWith(
-                          color: Colors.white,
-                          fontSize: 16.5,
+                          fontSize: 20,
+                          color: Colors.white.withValues(alpha: 0.5),
                         ),
                       ),
                     ],
                   ),
                 ),
-                const SizedBox(width: 12),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: <Widget>[
-                    Text.rich(
-                      TextSpan(
-                        children: <InlineSpan>[
-                          TextSpan(
-                            text: aggregate == aggregate.roundToDouble()
-                                ? aggregate.toInt().toString()
-                                : aggregate.toStringAsFixed(1),
-                            style: RenanceText.statNumber.copyWith(
-                              fontSize: 30,
-                              color: Colors.white,
-                            ),
-                          ),
-                          TextSpan(
-                            text: '/400',
-                            style: RenanceText.bodyMedium.copyWith(
-                              fontSize: 14,
-                              color: Colors.white.withValues(alpha: 0.6),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Text(
-                      'aggregate',
-                      style: RenanceText.caption.copyWith(
-                        fontSize: 9.5,
-                        letterSpacing: 1.4,
-                        color: Colors.white.withValues(alpha: 0.7),
-                      ),
-                    ),
-                  ],
+                const SizedBox(height: 8),
+                Text(
+                  '$totalCorrect of $totalQ correct',
+                  style: RenanceText.caption.copyWith(
+                    fontSize: 11,
+                    letterSpacing: 1.1,
+                    color: Colors.white.withValues(alpha: 0.45),
+                  ),
                 ),
               ],
-            ),
-          ),
-          // Scoring rules strip.
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 9),
-            color: context.ink.withValues(alpha: 0.045),
-            child: Text(
-              'Use of English: 60 questions, score divided by 60 and '
-              'multiplied by 100. Other subjects: 40 questions each, 2.5 '
-              'marks per question (100 marks per subject), correct answers '
-              'divided by 40 and multiplied by 100. Total: the four subject '
-              'scores added together, out of 400.',
-              style: RenanceText.caption.copyWith(
-                fontSize: 10,
-                height: 1.45,
-                color: context.ink.withValues(alpha: 0.72),
-              ),
             ),
           ),
           // Column headers.
