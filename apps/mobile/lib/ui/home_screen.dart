@@ -28,7 +28,6 @@ import 'study_setup_screen.dart';
 import 'study_plan_screen.dart';
 import 'flashcards_screen.dart';
 import 'lessons_screen.dart';
-import 'corpus_screens.dart';
 import 'ai_screen.dart';
 import 'notifications_screen.dart';
 import 'search_screen.dart';
@@ -1197,24 +1196,6 @@ class _LauncherTab extends StatelessWidget {
                   icon: Icons.category,
                   label: 'Subjects',
                   onTap: () => onGoTab(1),
-                ),
-              ),
-            ],
-          ),
-          // Learn, second row: the national curriculum corpus and the
-          // Renance AI companion.
-          const SizedBox(height: 12),
-          Row(
-            children: <Widget>[
-              Expanded(
-                child: LauncherTile(
-                  icon: Icons.account_balance,
-                  label: 'Scheme & Notes',
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (_) => const CorpusBrowserScreen(),
-                    ),
-                  ),
                 ),
               ),
               Expanded(
