@@ -190,6 +190,12 @@ class ApiClient {
     return MeResult.fromJson(data.cast<String, dynamic>());
   }
 
+  /// Re-issues the email confirmation mail for the signed-in account.
+  /// The server keeps a one-minute cooldown between sends.
+  Future<void> resendVerification() async {
+    await _send('POST', '/auth/resend-verification', body: <String, dynamic>{});
+  }
+
   Future<Profile> updateProfile({
     required String fullName,
     required String institution,

@@ -17,6 +17,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
+import '../api_client.dart';
 import '../controllers.dart';
 import '../storage.dart';
 
@@ -114,6 +115,20 @@ class _SplashScreenState extends State<SplashScreen>
       }
     } catch (_) {
       // fall through to the student home
+    }
+    if (!mounted) return;
+    // Strict email check on session restore: an unverified manual
+    // account lands on the confirm-inbox screen, never the desk.
+    try {
+      final api = context.read<ApiClient>();
+      final me = await api.me();
+      if (me.entitlement != null && !me.entitlement!.emailVerified) {
+        if (!mounted) return;
+        Navigator.of(context).pushReplacementNamed('/verify');
+        return;
+      }
+    } catch (_) {
+      // offline or API asleep: open the desk, the next online pass re-checks
     }
     if (!mounted) return;
     Navigator.of(context).pushReplacementNamed('/home');

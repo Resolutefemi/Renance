@@ -9,6 +9,7 @@ import 'controllers.dart';
 import 'models.dart';
 import 'storage.dart';
 import 'ui/auth_screens.dart';
+import 'ui/verify_screen.dart';
 import 'ui/exam_screen.dart' show ExamScreen;
 import 'ui/home_screen.dart';
 import 'ui/school_screens.dart' show SchoolHomeScreen;
@@ -113,6 +114,7 @@ class RenanceApp extends StatelessWidget {
               '/login': (_) => const LoginScreen(),
               '/register': (_) => const RegisterScreen(),
               '/home': (_) => const HomeScreen(),
+              '/verify': (_) => const VerifyScreen(),
               '/school': (_) => const SchoolHomeScreen(),
             },
             onGenerateRoute: (RouteSettings settings) {

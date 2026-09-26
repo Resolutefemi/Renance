@@ -65,16 +65,53 @@ class Profile {
   );
 }
 
+
+/// The entitlement row that rides /me: premium state, the REN wallet,
+/// the device lock and email verification.
+class Entitlement {
+  const Entitlement({
+    required this.userId,
+    required this.premiumRole,
+    required this.premiumType,
+    required this.renCoins,
+    required this.emailVerified,
+    required this.firstFreeCbt,
+    this.referralCode = '',
+  });
+
+  final String userId;
+  final bool premiumRole;
+  final String premiumType;
+  final int renCoins;
+  final bool emailVerified;
+  final bool firstFreeCbt;
+  final String referralCode;
+
+  factory Entitlement.fromJson(Map<String, dynamic> j) => Entitlement(
+    userId: (j['userId'] ?? '') as String,
+    premiumRole: (j['premiumRole'] ?? false) as bool,
+    premiumType: (j['premiumType'] ?? '') as String,
+    renCoins: (j['renCoins'] ?? 0) as int,
+    emailVerified: (j['emailVerified'] ?? false) as bool,
+    firstFreeCbt: (j['firstFreeCbt'] ?? false) as bool,
+    referralCode: (j['referralCode'] ?? '') as String,
+  );
+}
+
 class MeResult {
-  const MeResult({required this.user, this.profile});
+  const MeResult({required this.user, this.profile, this.entitlement});
   final AppUser user;
   final Profile? profile;
+  final Entitlement? entitlement;
 
   factory MeResult.fromJson(Map<String, dynamic> j) => MeResult(
     user: AppUser.fromJson((j['user'] as Map).cast<String, dynamic>()),
     profile: j['profile'] == null
         ? null
         : Profile.fromJson((j['profile'] as Map).cast<String, dynamic>()),
+    entitlement: j['entitlement'] == null
+        ? null
+        : Entitlement.fromJson((j['entitlement'] as Map).cast<String, dynamic>()),
   );
 }
 
