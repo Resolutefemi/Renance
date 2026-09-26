@@ -281,17 +281,17 @@ function validate(note, scheme, level) {
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function generateGroup(zai, group, level) {
-  // the generation endpoint rate limits; back off and retry a few times
-  // before giving the caller a real failure
+  // the generation endpoint rate limits hard; back off long and keep
+  // trying: a 429 should never become a permanent failure
   let lastErr;
-  for (let attempt = 0; attempt < 5; attempt++) {
+  for (let attempt = 0; attempt < 10; attempt++) {
     try {
       return await generateGroupOnce(zai, group, level);
     } catch (e) {
       lastErr = e;
-      const hit = /429|rate/i.test(e.message || '');
-      if (!hit && attempt >= 1) throw e;
-      await sleep(30000 * (attempt + 1) + Math.floor(Math.random() * 10000));
+      const hit = /429|rate|too many/i.test(e.message || '');
+      if (!hit) throw e;
+      await sleep(45000 * (attempt + 1) + Math.floor(Math.random() * 15000));
     }
   }
   throw lastErr;
@@ -376,6 +376,17 @@ async function main() {
       const my = idx++;
       if (my >= groups.length) return;
       const g = groups[my];
+      try {
+        await processGroup(zai, g);
+      } catch (e) {
+        // one unexpected crash must never take down the whole pool
+        console.log(`CRASH ${g.files.map((f) => f.rel).join(', ')}: ${e.message}`);
+        for (const f of g.files) if (!cp.done[f.rel]) { failCount++; failures.push({ rel: f.rel, error: e.message }); }
+      }
+    }
+  }
+
+  async function processGroup(zai, g) {
       let results = [];
       try {
         results = await generateGroup(zai, g.files, g.level);
@@ -453,8 +464,8 @@ async function main() {
         okCount++;
         console.log(`OK   ${r.file.rel} (${r.note.topics.length} topics)`);
       }
-      if (my % 5 === 0 || my === groups.length - 1) saveCheckpoint(cp);
-    }
+      // checkpoint every group: a crash or kill must lose nothing
+      saveCheckpoint(cp);
   }
 
   await Promise.all(Array.from({ length: CONC }, () => worker()));
