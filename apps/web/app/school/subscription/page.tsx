@@ -107,6 +107,13 @@ const PLANS: Array<{
   { code: 'premium', name: 'Premium', monthly: 20000, yearly: 60000, pitch: 'Everything, unlimited, with PDF downloads and premium for 10 of your students.', featured: true },
 ];
 
+// The WhatsApp deep link a tier button opens, with the plan name
+// prefilled so the founder knows exactly what the school wants.
+const planWaLink = (name: string) =>
+  `https://wa.me/234${WHATSAPP.replace(/^0/, '')}?text=${encodeURIComponent(
+    `Hello Renance, we want the ${name} plan for our school.`,
+  )}`;
+
 function GrantCell({ g }: { g: Grant }) {
   if (g === true) {
     return (
@@ -164,43 +171,69 @@ export default function SchoolSubscriptionPage() {
         )}
       </Card>
 
-      {/* the tiers */}
-      <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
-        {PLANS.map((p) => (
-          <div
-            key={p.code}
-            className={`flex flex-col rounded-[14px] border p-5 ${
-              p.featured
-                ? 'border-2 border-[#0a0a0a] bg-white shadow-[5px_5px_0_0_#0a0a0a]'
-                : 'border-[#e3e3e3] bg-white'
-            }`}
-          >
-            <div className="flex items-center justify-between">
-              <h3 className="text-[15px] font-bold tracking-tight text-[#0a0a0a]">{p.name}</h3>
-              {p.featured && (
-                <span className="rounded-full bg-[#0a0a0a] px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-white">
-                  everything
+      {/* the tiers: all five on one row on wide screens, the current
+          plan ringed, each with its own WhatsApp CTA */}
+      <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        {PLANS.map((p) => {
+          const current =
+            (plan?.plan ?? '').toLowerCase().replace(' trial', '') === p.code ||
+            (p.code === 'trial' && plan?.trialDaysLeft != null && plan.trialDaysLeft > 0);
+          return (
+            <div
+              key={p.code}
+              className={`relative flex flex-col rounded-[14px] border p-5 ${
+                p.featured
+                  ? 'border-2 border-[#0a0a0a] bg-white shadow-[5px_5px_0_0_#0a0a0a]'
+                  : 'border-[#e3e3e3] bg-white'
+              } ${current ? 'ring-2 ring-[#0a0a0a] ring-offset-2' : ''}`}
+            >
+              {current && (
+                <span className="absolute -top-2.5 right-4 rounded-full bg-[#0a0a0a] px-2.5 py-0.5 font-mono text-[9px] uppercase tracking-wider text-white">
+                  current
                 </span>
               )}
-            </div>
-            <p className="mt-1 min-h-[40px] text-[12px] leading-snug text-[#5c5c5c]">{p.pitch}</p>
-            <div className="mt-3">
-              {p.code === 'trial' || p.code === 'free' ? (
-                <p className="text-xl font-bold tracking-tight text-[#0a0a0a]">Free</p>
-              ) : (
-                <>
-                  <p className="text-2xl font-bold tracking-tight text-[#0a0a0a]">
-                    ₦{p.monthly!.toLocaleString('en-NG')}
-                    <span className="text-[12px] font-medium text-[#5c5c5c]"> / month</span>
-                  </p>
-                  <p className="mt-0.5 font-mono text-[11.5px] text-[#5c5c5c]">
-                    or ₦{p.yearly!.toLocaleString('en-NG')} a year
-                  </p>
-                </>
+              <div className="flex items-center justify-between">
+                <h3 className="text-[15px] font-bold tracking-tight text-[#0a0a0a]">{p.name}</h3>
+                {p.featured && !current && (
+                  <span className="rounded-full bg-[#0a0a0a] px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-white">
+                    everything
+                  </span>
+                )}
+              </div>
+              <p className="mt-1 min-h-[40px] text-[12px] leading-snug text-[#5c5c5c]">{p.pitch}</p>
+              <div className="mt-3 flex-1">
+                {p.code === 'trial' || p.code === 'free' ? (
+                  <p className="text-xl font-bold tracking-tight text-[#0a0a0a]">Free</p>
+                ) : (
+                  <>
+                    <p className="text-2xl font-bold tracking-tight text-[#0a0a0a]">
+                      ₦{p.monthly!.toLocaleString('en-NG')}
+                      <span className="text-[12px] font-medium text-[#5c5c5c]"> / month</span>
+                    </p>
+                    <p className="mt-0.5 font-mono text-[11.5px] text-[#5c5c5c]">
+                      or ₦{p.yearly!.toLocaleString('en-NG')} a year
+                    </p>
+                  </>
+                )}
+              </div>
+              {p.code !== 'trial' && p.code !== 'free' && (
+                <a
+                  href={planWaLink(p.name)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`mt-4 flex h-10 items-center justify-center gap-1.5 rounded-lg text-[13px] font-semibold transition ${
+                    p.featured
+                      ? 'bg-[#0a0a0a] text-white hover:opacity-90'
+                      : 'border border-[#0a0a0a] text-[#0a0a0a] hover:bg-[#f5f5f4]'
+                  }`}
+                >
+                  <span className="material-symbols-outlined text-[15px]">chat</span>
+                  Take {p.name}
+                </a>
               )}
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* the matrix */}
@@ -244,6 +277,42 @@ export default function SchoolSubscriptionPage() {
           </div>
         </Card>
       ))}
+
+      {/* the students' own premium: what the school's plan grants them */}
+      <Card className="mt-4">
+        <CardTitle hint="Student premium unlocks the full JAMB, WAEC, NECO and Post-UTME papers, the official 400-scale score slip and the blue tick on the leaderboards.">
+          Your students&apos; JAMB premium
+        </CardTitle>
+        <div className="mt-2 space-y-3 text-[13px] leading-relaxed text-[#0a0a0a]">
+          <p>
+            A school subscription covers the staff portal. The students
+            study on their own Renance accounts, and a{' '}
+            <span className="font-semibold">Premium</span> school plan
+            carries their premium too:{' '}
+            <span className="font-semibold">10 students ride free</span>, a
+            full year of JAMB premium when the school pays yearly, one
+            month when it pays monthly. Pick the students, send the list,
+            we switch the entitlements on from here.
+          </p>
+          <p className="rounded-lg bg-[#f5f5f4] px-4 py-2.5 text-[12.5px]">
+            One device keeps one account, and a free student still gets a
+            full first CBT, 20 answers on every later paper, the arena,
+            the daily challenge and every leaderboard. Premium removes the
+            cap and grades on the official UTME scale.
+          </p>
+        </div>
+        <a
+          href={`https://wa.me/234${WHATSAPP.replace(/^0/, '')}?text=${encodeURIComponent(
+            'Hello Renance, we want to activate the student JAMB premium seats that come with our school plan. Here is our student list.',
+          )}`}
+          target="_blank"
+          rel="noreferrer"
+          className={`${btnPrimary} mt-4 inline-flex`}
+        >
+          <span className="material-symbols-outlined text-[18px]">verified</span>
+          Activate student seats on WhatsApp
+        </a>
+      </Card>
 
       {/* trial + bulk */}
       <Card className="mt-4">
