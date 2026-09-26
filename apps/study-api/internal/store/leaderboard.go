@@ -257,7 +257,7 @@ func (s *Store) FocusLeaderboard(ctx context.Context, body string, limit int) ([
                 SELECT user_id, username, best_score, score_out_of, papers, premium
                 FROM agg
                 ORDER BY best_score DESC, papers ASC, username ASC
-                LIMIT $1
+                LIMIT $2
         `, body, limit)
         if err != nil {
                 return nil, err
