@@ -1160,10 +1160,12 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         bundle?.code?.startsWith('jamb-mock-') &&
         (result.subjects?.length ?? 0) > 0,
     );
+    // The official slip is the hero of a UTME mock result: the aggregate
+    // out of 400 leads, the percentage only earns a small caption.
     const utmeSlip = isUtmeMock ? (
       <UtmeResultSlip
         subjects={result.subjects!}
-        questions="Each subject's mark is its correct answers over the section's own question count, multiplied by 100. The four subject marks add up to your aggregate out of 400."
+        caption={`${result.score} of ${result.total} correct · ${pct}%`}
       />
     ) : null;
 
@@ -1173,6 +1175,73 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         .filter((r) => r.total > 0 && r.correct / r.total < 0.8)
         .sort((a, b) => a.correct / a.total - b.correct / b.total);
       const C = 2 * Math.PI * 52;
+      // UTME mocks: the official slip is the hero, no percentage circle.
+      if (isUtmeMock) {
+        return (
+          <main className="mx-auto w-full max-w-2xl px-4 pb-16 sm:px-6">
+            {utmeSlip}
+            <section className="renance-rise mt-4 rounded-xl bg-[#FDF3F2] px-6 py-6 text-center">
+              <h1 className="mx-auto max-w-sm text-xl font-semibold leading-snug tracking-tight text-on-surface">
+                The review list below is where the points are.
+              </h1>
+              <p className="mt-2 text-[15px] text-on-surface-variant">
+                Don&apos;t sweat it. Focus on the gaps.
+              </p>
+            </section>
+            <h2 className="mt-7 text-lg font-semibold tracking-tight text-on-surface">Topics to Review</h2>
+            <div className="mt-3 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
+              {weak.length === 0 && (
+                <p className="text-[13px] text-on-surface-variant">
+                  Nothing critical here, the review list has every question from this paper.
+                </p>
+              )}
+              {weak.map((row) => {
+                const frac = row.total > 0 ? row.correct / row.total : 0;
+                const bar = frac < 0.5 ? 'bg-error' : 'bg-accent-amber';
+                return (
+                  <div key={row.topic} className="py-1">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[15px] font-semibold text-on-surface">{row.topic}</span>
+                      <span className={`text-sm font-semibold ${bar.replace('bg-', 'text-')}`}>
+                        {row.correct}/{row.total} pts
+                      </span>
+                    </div>
+                    <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-surface-container">
+                      <div className={`h-full rounded-full ${bar}`} style={{ width: `${frac * 100}%` }} />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            {/* Pacing & Panic Forensics Card */}
+            <PacingForensicsCard report={pacingReport} attemptId={attempt?.attemptId} />
+            <div className="mt-8 flex flex-col gap-2">
+              {attempt && (
+                <Link
+                  href={`/review?attemptId=${attempt.attemptId}`}
+                  className="flex h-[52px] w-full items-center justify-center gap-2 rounded-[10px] bg-primary text-sm font-semibold text-on-primary transition-all hover:shadow-md active:scale-[0.98]"
+                >
+                  Review answers
+                  <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </Link>
+              )}
+              <button
+                onClick={() => {
+                  setAdaptive(true);
+                  setPhase('intro');
+                  setAttempt(null);
+                }}
+                className="flex h-[52px] w-full items-center justify-center rounded-[10px] bg-transparent text-sm font-semibold text-on-surface shadow-[inset_0_0_0_1px_#C6C6CD] transition-all active:scale-[0.98]"
+              >
+                Retry weak topics
+              </button>
+              <Link href="/dashboard" className="py-2 text-center text-sm text-on-surface-variant hover:text-on-surface">
+                Back to dashboard
+              </Link>
+            </div>
+          </main>
+        );
+      }
       return (
         <main className="mx-auto w-full max-w-2xl px-4 pb-16 sm:px-6">
           <section className="renance-rise rounded-xl bg-[#FDF3F2] px-6 py-8 text-center">
@@ -1263,30 +1332,33 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
 
     return (
       <main className="mx-auto w-full max-w-2xl px-4 pb-16 sm:px-6">
-        {/* dark DIAGNOSTIC COMPLETE hero */}
-        <section className="renance-rise relative overflow-hidden rounded-xl bg-dark-surface px-6 py-8 text-center">
-          <p className="font-mono text-xs uppercase tracking-[0.24em] text-dark-text-secondary">
-            Diagnostic Complete
-          </p>
-          <p className="mt-2 text-6xl font-bold tracking-tight text-dark-text-primary">
-            {pct}
-            <span className="text-2xl text-dark-text-secondary">%</span>
-          </p>
-          {delta != null && (
-            <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1">
-              <span
-                className={`material-symbols-outlined text-sm ${delta >= 0 ? 'text-accent-emerald' : 'text-error'}`}
-              >
-                {delta >= 0 ? 'trending_up' : 'trending_down'}
-              </span>
-              <span
-                className={`font-mono text-xs ${delta >= 0 ? 'text-accent-emerald' : 'text-error'}`}
-              >
-                {delta >= 0 ? `+${delta}` : delta} vs last attempt
-              </span>
-            </div>
-          )}
-        </section>
+        {/* The official UTME slip leads a mock result; the dark
+            diagnostic hero only prints for the other papers. */}
+        {!isUtmeMock && (
+          <section className="renance-rise relative overflow-hidden rounded-xl bg-dark-surface px-6 py-8 text-center">
+            <p className="font-mono text-xs uppercase tracking-[0.24em] text-dark-text-secondary">
+              Diagnostic Complete
+            </p>
+            <p className="mt-2 text-6xl font-bold tracking-tight text-dark-text-primary">
+              {pct}
+              <span className="text-2xl text-dark-text-secondary">%</span>
+            </p>
+            {delta != null && (
+              <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1">
+                <span
+                  className={`material-symbols-outlined text-sm ${delta >= 0 ? 'text-accent-emerald' : 'text-error'}`}
+                >
+                  {delta >= 0 ? 'trending_up' : 'trending_down'}
+                </span>
+                <span
+                  className={`font-mono text-xs ${delta >= 0 ? 'text-accent-emerald' : 'text-error'}`}
+                >
+                  {delta >= 0 ? `+${delta}` : delta} vs last attempt
+                </span>
+              </div>
+            )}
+          </section>
+        )}
 
         {/* Official UTME score slip (composite JAMB mock papers) */}
         {utmeSlip}
