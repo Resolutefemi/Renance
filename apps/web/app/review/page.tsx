@@ -333,7 +333,7 @@ function ReviewInner() {
 // prettyPaper turns a raw pack code into the label a student reads:
 // jamb-biology-bank -> "JAMB · Biology", jamb-mock-english-... ->
 // "JAMB UTME Mock", waec-custom-... -> "WAEC Practice".
-export function prettyPaper(code: string): string {
+function prettyPaper(code: string): string {
   const parts = (code || '').split('-');
   const body = (parts[0] || '').replace(/_/g, ' ').toUpperCase();
   if (code.startsWith('jamb-mock-')) return 'JAMB UTME Mock';

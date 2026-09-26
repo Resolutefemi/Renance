@@ -391,15 +391,29 @@ step "GET /leaderboard/arena without token -> 401"
 CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/leaderboard/arena")
 [ "$CODE" = "401" ]
 
-step "GET /leaderboard/xp -> caller ranked after their graded papers"
-XB=$(curl -fsS "$BASE/leaderboard/xp" -H "Authorization: Bearer $TOKEN")
+step "GET /leaderboard/streak -> caller ranked after their graded papers"
+XB=$(curl -fsS "$BASE/leaderboard/streak" -H "Authorization: Bearer $TOKEN")
 printf '%s' "$XB" | jsonget "d['me']['rank']" | grep -qE "^[0-9]+$"
 [ "$(printf '%s' "$XB" | jsonget "d['me']['attempts']")" -ge 1 ]
 [ "$(printf '%s' "$XB" | jsonget "len(d['entries'])")" -ge 1 ]
 
-step "GET /leaderboard/xp without token -> 401"
-CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/leaderboard/xp")
+step "GET /leaderboard/streak without token -> 401"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/leaderboard/streak")
 [ "$CODE" = "401" ]
+
+step "GET /leaderboard/focus?focus=jamb -> board answers (mock ledger sums to /400)"
+JB=$(curl -fsS "$BASE/leaderboard/focus?focus=jamb" -H "Authorization: Bearer $TOKEN")
+printf '%s' "$JB" | jsonget "d['board']" | grep -q "focus"
+printf '%s' "$JB" | jsonget "d['entries']" >/dev/null
+
+step "GET /leaderboard/focus bad focus -> 400"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/leaderboard/focus?focus=utme" -H "Authorization: Bearer $TOKEN")
+[ "$CODE" = "400" ]
+
+step "GET /leaderboard/schools -> the schools ladder answers"
+SB=$(curl -fsS "$BASE/leaderboard/schools" -H "Authorization: Bearer $TOKEN")
+printf '%s' "$SB" | jsonget "d['board']" | grep -q "schools"
+printf '%s' "$SB" | jsonget "d['entries']" >/dev/null
 
 # --- ROADMAP #20: deterministic daily challenge ---
 step "GET /daily/JAMB -> today's deterministic challenge"
