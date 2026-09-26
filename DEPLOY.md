@@ -64,19 +64,25 @@ dashboard remains the place for future overrides.
 
 ### Optional (recommended before sharing publicly)
 
-Renance AI (chat, tutor, generator) needs ONE provider key on the study
-API, on Render - never in Vercel env vars and never in any client
-bundle. Render dashboard → api service → Environment:
+Renance AI (chat, tutor, generator) needs its keys on the study API, on
+Render - never in Vercel env vars and never in any client bundle.
+Render dashboard → api service → Environment (render.yaml already
+carries the rest):
 
-- `AI_PROVIDER=zai` + `AI_API_KEY=<Z.ai key>` — Z.ai's GLM-4.5-Flash,
-  free, the recommended default (see render.yaml).
-- Alternatives: `AI_PROVIDER=gemini` with a Google AI Studio key (also
-  free tier), or `groq` / `openrouter`.
+- `AI_API_KEY` — the **Z.ai** key, the primary brain (free
+  GLM-4.5-Flash). `AI_PROVIDER=zai`, the base URL and the model are
+  already baked into render.yaml.
+- `GROQ_API_KEY` — the **Groq** backup (free Llama 3.3 70B). With both
+  set, a Z.ai outage falls over to Groq automatically instead of
+  blanking the AI; `AI_PROVIDER=groq` flips who answers first.
+- `AI_THINKING` — `disabled` (default) makes GLM-4.5 answer directly;
+  `enabled` restores deep reasoning at the cost of speed.
 
-Until the key is set every AI surface degrades gracefully to study-guide
-/ hint mode; the core CBT/Study/Review app does not depend on it. Do NOT
-add `NEXT_PUBLIC_AI_*` variables anywhere: the web is a static export,
-so anything `NEXT_PUBLIC_` ships to every visitor's browser.
+Until a key is set every AI surface degrades gracefully to study-guide
+/ hint mode; the core CBT/Study/Review app does not depend on it. Do
+NOT add `NEXT_PUBLIC_AI_*` variables anywhere: the web is a static
+export, so anything `NEXT_PUBLIC_` ships to every visitor's browser.
+Gemini is removed from the codebase entirely - do not re-add it.
 
 ### Custom domain
 

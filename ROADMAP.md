@@ -65,7 +65,7 @@ need no external services — they ship fastest.
 
 | # | Feature | Plan sketch | Status |
 | --- | --- | --- | --- |
-| 9 | **Socratic AI tutor** | "Why is this wrong?" chat anchored to the graded attempt. API proxies the provider; prompt embeds the question + picked answer + key. | **NEEDS DEP** — AI API key (OpenAI / Gemini / OpenRouter). Cheapest first slice: hint-only mode with capped tokens. |
+| 9 | **Socratic AI tutor** | "Why is this wrong?" chat anchored to the graded attempt. API proxies the provider; prompt embeds the question + picked answer + key. | **NEEDS DEP** — AI keys: Z.ai primary + Groq backup (founder directive, Gemini removed). Cheapest first slice: hint-only mode with capped tokens. |
 | 10 | **Analogy engine** | Local-context analogies for hard concepts (generated per topic, cached in `study.analogies` so we pay once, not per student). | NEEDS DEP — same key |
 | 11 | **Audio summaries** | Topic summaries → TTS. On-device slice LIVE: deterministic spoken-summary composer built from the lesson bundle itself (title, syllabus line, read time, summary, heading walk, key-point callouts — mirrored Dart `audio_summary.dart` + TS `audio-summary.ts`, capped at 2,400 chars for engine long-text safety), narrated by the app reader's Listen pill (`LessonNarrator`, stops on screen exit) and the web reader's speechSynthesis button — offline, no provider. AI narration of full lessons later needs provider TTS. | **LIVE** (2026-09-06, on-device slice) |
 | 12 | **OCR grading** ("scan & mark") | Photo of handwritten working → marks. Vision model required; start with printed MCQ bubble sheets (deterministic CV) before handwriting. | NEEDS DEP — vision API; biggest build of the AI class |
