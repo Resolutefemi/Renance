@@ -24,33 +24,23 @@ type Config struct {
         GradeQueue     int
 
         // ROADMAP #9 Socratic tutor + AI generator: the provider is ANY
-        // OpenAI-compatible chat endpoint. Founder directive: Z.ai and
-        // Groq ONLY - Gemini is gone. AI_API_KEY is the Z.ai key (the
-        // default brain, free GLM-4.5-Flash) and GROQ_API_KEY is the
-        // backup (free Llama 3.3 70B): with both set the tutor tries Z
-        // first and falls back to Groq on any error, so a provider
-        // outage never blanks the AI. AI_PROVIDER only flips the order
-        // ("groq" makes Groq primary). No key at all keeps hint-only
-        // mode for the tutor and the honest "AI is off" state for the
-        // generator. GitHub push protection (rightly) refuses keys
-        // inside this repo, so they can only ever arrive through the
-        // environment - the keys live on the server, never in a client
-        // bundle.
+        // OpenAI-compatible chat endpoint. Founder directive: Z.ai ONLY
+        // (Groq's key was revoked and Groq is removed; Gemini is gone).
+        // AI_API_KEY is the Z.ai key and powers the free GLM-4.5-Flash
+        // brain. No key at all keeps hint-only mode for the tutor and
+        // the honest "AI is off" state for the generator. The key lives
+        // on the server (render.yaml / Render env) and never reaches a
+        // client bundle.
         AIAPIKey    string
         AIBaseURL   string
         AIModel     string
-        AIProvider  string // "zai" (default) or "groq"; shown by /tutor/status
+        AIProvider  string // "zai"; shown by /tutor/status
         AIMaxTokens int
         // AI_THINKING: "disabled" (default) makes Z.ai's GLM-4.5 answer
         // directly instead of reasoning first - verified far faster and
         // the reply always fits the token budget. "enabled" restores
         // deep reasoning at the cost of speed.
         AIThinking string
-
-        // The Groq backup brain, resolved from GROQ_API_KEY.
-        GroqAPIKey  string
-        GroqBaseURL string
-        GroqModel   string
 
         // Billing (Paystack). An empty key keeps the paywall on its
         // fallback surfaces (REN coins + the WhatsApp line) and the
@@ -111,12 +101,14 @@ func Load() (*Config, error) {
         if len(c.JWTSecret) < 16 {
                 return nil, fmt.Errorf("config: JWT_SECRET must be at least 16 characters")
         }
-        // Founder directive: Z.ai and Groq ONLY. The Z.ai key is the
-        // primary brain; the Groq key is the backup. No Gemini alias,
-        // no other providers. Unknown AI_PROVIDER values fall back to
+        // Founder directive: Z.ai ONLY. Groq's key was revoked (live
+        // probes answered 403 Forbidden twice) and the provider is
+        // removed - no Gemini alias, no other providers. Retired or
+        // unknown AI_PROVIDER values ("groq" included) fall back to
         // Z.ai, and explicit AI_BASE_URL / AI_MODEL always win.
         c.AIProvider = strings.ToLower(strings.TrimSpace(os.Getenv("AI_PROVIDER")))
-        if c.AIProvider == "" || c.AIProvider == "z" || c.AIProvider == "z-ai" {
+        switch c.AIProvider {
+        case "", "z", "z-ai", "groq": // "" + aliases, plus the retired Groq
                 c.AIProvider = "zai"
         }
         base, model := aiPreset(c.AIProvider)
@@ -126,19 +118,15 @@ func Load() (*Config, error) {
         if c.AIModel == "" {
                 c.AIModel = model
         }
-        c.GroqAPIKey = strings.TrimSpace(os.Getenv("GROQ_API_KEY"))
-        c.GroqBaseURL, c.GroqModel = aiPreset("groq")
         return c, nil
 }
 
 // aiPreset maps a provider name to its OpenAI-compatible base URL and
 // a sensible default model. Unknown names fall back to Z.ai, the
-// founder's default brain.
+// founder's one and only brain.
 func aiPreset(provider string) (base, model string) {
         switch provider {
-        case "groq":
-                return "https://api.groq.com/openai/v1", "llama-3.3-70b-versatile"
-        default: // "", "zai", anything unknown
+        default: // "zai", anything unknown ("groq" is retired)
                 return "https://api.z.ai/api/paas/v4", "glm-4.5-flash" // free model
         }
 }

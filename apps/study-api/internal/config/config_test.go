@@ -1,8 +1,7 @@
-// Config tests: the AI provider wiring. Founder directive: Z.ai and
-// Groq ONLY - Gemini is gone. The default brain is Z.ai's free
-// GLM-4.5-Flash, GROQ_API_KEY resolves the backup brain, explicit
-// AI_BASE_URL / AI_MODEL still win over the preset, and AI_PROVIDER
-// only flips who answers first.
+// Config tests: the AI provider wiring. Founder directive: Z.ai ONLY -
+// Groq (key revoked) and Gemini are gone. The one brain is Z.ai's free
+// GLM-4.5-Flash, explicit AI_BASE_URL / AI_MODEL still win over the
+// preset, and retired provider names fall back to Z.ai.
 package config
 
 import (
@@ -49,13 +48,13 @@ func TestAIPresetZAlias(t *testing.T) {
         }
 }
 
-func TestAIPresetGroq(t *testing.T) {
-        c := loadFor(t, map[string]string{"AI_PROVIDER": "groq"})
-        if c.AIBaseURL != "https://api.groq.com/openai/v1" {
-                t.Errorf("groq base = %q", c.AIBaseURL)
-        }
-        if c.AIModel != "llama-3.3-70b-versatile" {
-                t.Errorf("groq model = %q", c.AIModel)
+func TestGroqIsGone(t *testing.T) {
+        // Groq's key was revoked and the provider removed: AI_PROVIDER=groq
+        // must now resolve to the Z.ai preset, and a stale GROQ_API_KEY in
+        // the environment must configure nothing.
+        c := loadFor(t, map[string]string{"AI_PROVIDER": "groq", "GROQ_API_KEY": "gsk_stale"})
+        if c.AIProvider != "zai" || c.AIBaseURL != "https://api.z.ai/api/paas/v4" || c.AIModel != "glm-4.5-flash" {
+                t.Errorf("retired groq must fall back to zai, got %q / %q / %q", c.AIProvider, c.AIBaseURL, c.AIModel)
         }
 }
 
@@ -66,19 +65,6 @@ func TestAIPresetExplicitWin(t *testing.T) {
         })
         if c.AIBaseURL != "https://my-proxy.example.com/v1" || c.AIModel != "my-model" {
                 t.Errorf("explicit env must beat preset, got %q / %q", c.AIBaseURL, c.AIModel)
-        }
-}
-
-func TestGroqBackupResolved(t *testing.T) {
-        c := loadFor(t, map[string]string{"GROQ_API_KEY": "gsk_test"})
-        if c.GroqAPIKey != "gsk_test" {
-                t.Errorf("groq key = %q", c.GroqAPIKey)
-        }
-        if c.GroqBaseURL != "https://api.groq.com/openai/v1" {
-                t.Errorf("groq base = %q", c.GroqBaseURL)
-        }
-        if c.GroqModel != "llama-3.3-70b-versatile" {
-                t.Errorf("groq model = %q", c.GroqModel)
         }
 }
 

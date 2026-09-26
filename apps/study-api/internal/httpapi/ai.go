@@ -1,5 +1,5 @@
 // AI question generation (founder directive, 2026-09): the Z.ai
-// provider configured for the tutor (Groq backup) also powers
+// provider configured for the tutor also powers
 // /ai/generate, the backend of the AI Generator page.
 //
 // POST /ai/generate  {topics: string[], difficulty: string, count: int}

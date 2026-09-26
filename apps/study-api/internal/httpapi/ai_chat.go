@@ -2,9 +2,9 @@
 // tutor: a full study companion grounded with Renance's own data, the
 // scheme-of-work corpus, the lesson notes and the exam banks, through a
 // provider-agnostic OpenAI-compatible chat endpoint (founder directive:
-// Z.ai's free GLM-4.5-Flash is the default brain via AI_PROVIDER=zai /
-// AI_API_KEY, Groq's free Llama 3.3 70B is the automatic backup via
-// GROQ_API_KEY; Gemini is gone). Without any key the endpoint answers
+// Z.ai's free GLM-4.5-Flash is the one brain via AI_PROVIDER=zai /
+// AI_API_KEY; Groq's key was revoked and is removed, Gemini is gone).
+// Without any key the endpoint answers
 // in an honest "study guide" mode built straight from the corpus so
 // the page never dies.
 package httpapi
@@ -195,6 +195,6 @@ func renanceAIStudyGuide(r *http.Request, req *aiChatRequest) string {
         if strings.TrimSpace(q) != "" {
                 b.WriteString("About your question: break it into the key terms, check the syllabus topics for this subject, and run ten practice questions on that topic; the review explanations teach the reasoning behind every option. ")
         }
-        b.WriteString("Tip: full AI answers switch on the moment the platform connects its provider key (Renance runs on Z.ai's free GLM-4.5-Flash with Groq as the backup); until then this study-guide mode keeps every answer grounded in Renance's own corpus.")
+        b.WriteString("Tip: full AI answers switch on the moment the platform connects its provider key (Renance runs on Z.ai's free GLM-4.5-Flash); until then this study-guide mode keeps every answer grounded in Renance's own corpus.")
         return b.String()
 }

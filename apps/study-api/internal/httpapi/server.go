@@ -111,26 +111,11 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
         }
         // The tutor ALWAYS exists; with no key configured at all its
         // provider stays nil, which switches Reply() into deterministic
-        // hint mode. Founder setup: Z.ai primary (AI_API_KEY), Groq
-        // backup (GROQ_API_KEY) - the chain degrades instead of dying,
-        // and AI_PROVIDER=groq flips who answers first.
+        // hint mode. Founder setup: Z.ai ONLY (AI_API_KEY) - Groq's key
+        // was revoked and the provider removed, Gemini is gone.
         s.tutor = &tutor.Tutor{MaxTokens: cfg.AIMaxTokens, Log: log}
-        var zai, groq tutor.Provider
         if cfg.AIAPIKey != "" {
-                zai = &tutor.OpenAICompat{BaseURL: cfg.AIBaseURL, APIKey: cfg.AIAPIKey, Model: cfg.AIModel, Thinking: cfg.AIThinking}
-        }
-        if cfg.GroqAPIKey != "" {
-                groq = &tutor.OpenAICompat{BaseURL: cfg.GroqBaseURL, APIKey: cfg.GroqAPIKey, Model: cfg.GroqModel}
-        }
-        switch {
-        case zai != nil && groq != nil && cfg.AIProvider == "groq":
-                s.tutor.Provider = &tutor.Fallback{Primary: groq, Secondary: zai, Log: log}
-        case zai != nil && groq != nil:
-                s.tutor.Provider = &tutor.Fallback{Primary: zai, Secondary: groq, Log: log}
-        case zai != nil:
-                s.tutor.Provider = zai
-        case groq != nil:
-                s.tutor.Provider = groq
+                s.tutor.Provider = &tutor.OpenAICompat{BaseURL: cfg.AIBaseURL, APIKey: cfg.AIAPIKey, Model: cfg.AIModel, Thinking: cfg.AIThinking}
         }
         s.limiter = newRateLimiter(cfg.TutorPerMin, cfg.TutorPerMin)
         s.authIP = newRateLimiter(cfg.AuthPerMin, cfg.AuthPerMin*2)

@@ -4,10 +4,9 @@
 // Two modes, one interface:
 //
 //   - AI mode: an OpenAI-compatible chat-completions endpoint (Z.ai,
-//     Groq, OpenAI, self-hosted vLLM...) configured via AI_API_KEY /
-//     AI_BASE_URL / AI_MODEL, with GROQ_API_KEY as the automatic
-//     backup. Prompt embeds the question, the student's pick and the
-//     key, with Socratic coaching rules.
+//     OpenAI, self-hosted vLLM...) configured via AI_API_KEY /
+//     AI_BASE_URL / AI_MODEL. Prompt embeds the question, the
+//     student's pick and the key, with Socratic coaching rules.
 //   - Hint mode: a deterministic, zero-dependency fallback that cycles
 //     exam-technique nudges (read-like-an-examiner, eliminate, qualifier
 //     check, definition match) WITHOUT revealing the correct letter.
@@ -172,40 +171,6 @@ func subjectOf(ac AttemptContext) string {
         return "the syllabus"
 }
 
-// Fallback chains two brains: the primary answers first, and any
-// error or empty reply retries once with the secondary. Founder setup:
-// Z.ai primary, Groq backup - a provider outage degrades instead of
-// blanking the AI mid-lesson. With only one provider configured it
-// behaves exactly like that provider alone.
-type Fallback struct {
-        Primary   Provider
-        Secondary Provider
-        Log       *slog.Logger
-}
-
-func (f *Fallback) Complete(ctx context.Context, system string, msgs []Message, maxTokens int) (string, error) {
-        if f.Primary != nil {
-                out, err := f.Primary.Complete(ctx, system, msgs, maxTokens)
-                if err == nil && strings.TrimSpace(out) != "" {
-                        return out, nil
-                }
-                if f.Log != nil {
-                        f.Log.Warn("primary AI provider failed, trying the backup", "err", err)
-                }
-        }
-        if f.Secondary != nil {
-                out, err := f.Secondary.Complete(ctx, system, msgs, maxTokens)
-                if err == nil && strings.TrimSpace(out) != "" {
-                        return out, nil
-                }
-                if f.Log != nil {
-                        f.Log.Error("backup AI provider also failed", "err", err)
-                }
-                return "", err
-        }
-        return "", fmt.Errorf("tutor: no provider configured")
-}
-
 // OpenAICompat speaks the OpenAI chat-completions dialect against any
 // compatible base URL.
 type OpenAICompat struct {
@@ -214,7 +179,8 @@ type OpenAICompat struct {
         Model   string
         // Thinking: "disabled" sends Z.ai's thinking switch off so the
         // reply lands fast inside the token budget; "" omits the field
-        // entirely (providers like Groq reject unknown extras).
+        // entirely (some OpenAI-compatible providers reject unknown
+        // extras).
         Thinking string
         HTTP     *http.Client // nil => 30s timeout default
 }

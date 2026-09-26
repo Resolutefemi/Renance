@@ -137,44 +137,42 @@ this can self-diagnose.
 
 The Socratic tutor (`/review`), Renance AI (`/ai`) and the AI Generator
 (`/ai-generator`) all run through ONE OpenAI-compatible endpoint that the
-study API owns. Founder directive: **Z.ai + Groq ONLY, Gemini is gone**.
-`AI_API_KEY` is the Z.ai key (primary, free GLM-4.5-Flash);
-`GROQ_API_KEY` is the Groq backup (free Llama 3.3 70B) - with both set,
-a primary outage falls over automatically. GitHub push protection blocks
-keys inside this repo - they live in the deployment environment only:
+study API owns. Founder directive: **Z.ai ONLY** - Groq's key was
+revoked (live probes answered 403 Forbidden) and the provider is
+removed; Gemini is gone. `AI_API_KEY` is the Z.ai key, now baked
+directly into `render.yaml` per founder instruction, so a Blueprint
+deploy boots into AI mode with no manual env step. The key is read only
+by the study API server and never reaches a client bundle:
 
 ```bash
-AI_PROVIDER=zai   # default; "groq" flips who answers first
-AI_API_KEY=…      # the Z.ai key (primary brain, free glm-4.5-flash)
-GROQ_API_KEY=…    # the Groq key (backup brain, free llama-3.3-70b-versatile)
+AI_PROVIDER=zai   # the one provider; retired names fall back to zai
+AI_API_KEY=…      # the Z.ai key (glm-4.5-flash, free) - already in render.yaml
 AI_THINKING=disabled  # default; GLM-4.5 answers directly, no reasoning delay
 ```
 
-Resolved endpoints (base URL + model come along automatically;
+Resolved endpoint (base URL + model come along automatically;
 explicit `AI_BASE_URL` / `AI_MODEL` still win over the preset):
 
-| Role | Base URL | Model |
+| Provider | Base URL | Model |
 | --- | --- | --- |
-| Primary (Z.ai) | `https://api.z.ai/api/paas/v4` | `glm-4.5-flash` (free) |
-| Backup (Groq) | `https://api.groq.com/openai/v1` | `llama-3.3-70b-versatile` (free) |
+| Z.ai (the only one) | `https://api.z.ai/api/paas/v4` | `glm-4.5-flash` (free) |
 
 Notes:
-- **The keys never ride a client bundle.** The web is a static export:
+- **The key never rides a client bundle.** The web is a static export:
   any `NEXT_PUBLIC_` variable is shipped to every visitor, so no
   `NEXT_PUBLIC_AI_*` variable may exist anywhere (the deploy workflow
   deliberately passes none).
 - **Thinking switch**: GLM-4.5 is a reasoning model; with
   `AI_THINKING=disabled` (default) it answers directly, which keeps the
   tutor's short replies fast and inside the token budget.
-- When a provider fails the chain retries the other one; if BOTH are
-  unreachable the tutor degrades to deterministic hint mode
+- When the provider fails the tutor degrades to deterministic hint mode
   (`mode:"hint"`, never a crash), Renance AI answers in study-guide
   mode and the generator returns a 502 with an honest error.
   `GET /tutor/status` → `{aiEnabled, provider}` badges the client.
-- Render dashboard → the api service → Environment → add `AI_API_KEY`
-  and `GROQ_API_KEY` (render.yaml already carries `AI_PROVIDER=zai`,
-  both base URLs and models); the service restarts with the tutor in
-  AI mode.
+- Existing service from before the key-in-blueprint change? Render
+  dashboard → Blueprint → Apply re-syncs `AI_API_KEY` from render.yaml
+  (or paste it once into Environment); the service restarts with the
+  tutor in AI mode.
 
 ## 5. Content layout (answers live inside the banks)
 

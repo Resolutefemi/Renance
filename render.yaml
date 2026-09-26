@@ -39,21 +39,18 @@ services:
         value: https://renance-edtech.vercel.app,https://resolutefemi.github.io,http://localhost:3000,http://127.0.0.1:3000
       - key: SITE_URL
         value: https://renance-edtech.vercel.app
-      # Renance AI (founder directive: Z.ai + Groq ONLY, Gemini is gone):
-      # the keys live here, on the server, never in any client bundle.
-      # AI_API_KEY = the Z.ai key (primary, free GLM-4.5-Flash);
-      # GROQ_API_KEY = the backup (free Llama 3.3 70B). With both set a
-      # provider outage falls over instead of blanking the AI.
+      # Renance AI (founder directive: Z.ai ONLY - Groq's key was revoked
+      # and is removed, Gemini is gone). The key is the Z.ai production
+      # key baked here per founder instruction; it is read only by the
+      # study API server and never reaches any client bundle.
       - key: AI_PROVIDER
         value: zai
       - key: AI_API_KEY
-        sync: false
+        value: 897f47393b1b4f598902823edc36d44f.jW3eE0ZrCCYVt7m0
       - key: AI_BASE_URL
         value: https://api.z.ai/api/paas/v4
       - key: AI_MODEL
         value: glm-4.5-flash
-      - key: GROQ_API_KEY
-        sync: false
       # Email verification: fill these and the confirmation mail leaves
       # the server. Until then the link is written to the service log.
       - key: SMTP_HOST

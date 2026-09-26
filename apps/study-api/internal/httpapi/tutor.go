@@ -35,7 +35,7 @@ type tutorRequest struct {
 func (s *Server) handleTutorStatus(w http.ResponseWriter, r *http.Request) {
         writeJSON(w, http.StatusOK, map[string]any{
                 "aiEnabled": s.tutor != nil && s.tutor.Provider != nil,
-                "provider":  s.cfg.AIProvider, // "zai" (default) or "groq"
+                "provider":  s.cfg.AIProvider, // "zai"
         })
 }
 
