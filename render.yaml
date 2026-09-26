@@ -37,3 +37,29 @@ services:
         value: 850087098854-pni8gohld0isi8v8nhhnlcl5fuvi77q4.apps.googleusercontent.com,850087098854-5rj3vig6fpm4k2jie4najsoq6tpcdm6f.apps.googleusercontent.com
       - key: WEB_ORIGIN
         value: https://renance-edtech.vercel.app,https://resolutefemi.github.io,http://localhost:3000,http://127.0.0.1:3000
+      - key: SITE_URL
+        value: https://renance-edtech.vercel.app
+      # Renance AI: the provider key lives here, on the server, never in
+      # any client bundle. Paste a Gemini key (or any OpenAI-compatible
+      # provider) and the AI companion answers in full AI mode.
+      - key: AI_API_KEY
+        sync: false
+      - key: AI_BASE_URL
+        value: https://generativelanguage.googleapis.com/v1beta/openai
+      - key: AI_MODEL
+        value: gemini-3.6-flash
+      # Email verification: fill these and the confirmation mail leaves
+      # the server. Until then the link is written to the service log.
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: SMTP_FROM
+        value: no-reply@renance.com
+      # Paystack: paste the secret key and card payments switch on.
+      - key: PAYSTACK_SECRET_KEY
+        sync: false

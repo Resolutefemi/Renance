@@ -9,6 +9,7 @@ import { focusFromExams, setFocus } from '@/lib/focus';
 import { examHref, fetchManifest, migrateBundleCache, prefetchAll, type ExamMeta } from '@/lib/exams';
 import { type ReviewSummary } from '@/lib/review';
 import { RenanceMark } from '@/components/renance-logo';
+import VerifyGate from '@/components/verify-gate';
 import { loadActiveExam, type ActiveExam } from '@/lib/active-exam';
 import { refreshNotifications, subscribeNotifications, unreadCount } from '@/lib/notifications';
 import {
@@ -361,6 +362,7 @@ export default function DashboardPage() {
   }
 
   return (
+    <VerifyGate>
     <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
       {needsProfile && (
         <ProfileModal
@@ -621,6 +623,7 @@ export default function DashboardPage() {
         }}
       />
     </main>
+    </VerifyGate>
   );
 }
 
