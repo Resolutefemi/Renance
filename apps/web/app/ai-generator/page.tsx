@@ -2,10 +2,11 @@
 
 /**
  * AI question generator, the Stitch ai_question_generator_light screen,
- * now wired to its real backend: POST /ai/generate runs the founder's
- * Gemini key through the study-api (same provider as the Socratic
- * tutor). Topic chips + free-text topic, Easy / Medium / Hard segmented
- * control, count stepper, and the Review Generated list, every
+ * now wired to its real backend: POST /ai/generate runs the platform's
+ * provider key through the study-api (same brain as the Socratic tutor,
+ * configured with AI_PROVIDER=zai / AI_API_KEY on the server). Topic
+ * chips + free-text topic, Easy / Medium / Hard segmented control,
+ * count stepper, and the Review Generated list, every
  * generated question ships with its options, correct answer and worked
  * explanation. Failures are honest: the API's error lands in a banner,
  * no mock questions are invented locally.
@@ -64,9 +65,10 @@ export default function AiGeneratorPage() {
         setError('The AI returned no usable questions, try again or pick another topic.');
       }
     } catch (err) {
-      // The study API may not carry the provider key yet (or may be
-      // asleep on the free tier). The Gemini key baked into this static
-      // deploy keeps generation working from the browser.
+      // The study API may be asleep on the free tier (or restarting
+      // after a deploy). One retry through the grounded /ai/chat route
+      // before surfacing the error keeps generation working across
+      // blips without ever touching a provider key in the browser.
       if (aiConfigured()) {
         try {
           const fresh: Generated[] = [];

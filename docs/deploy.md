@@ -135,32 +135,44 @@ this can self-diagnose.
 
 ## 4. AI (tutor + question generator)
 
-The Socratic tutor (`/review`) and the AI Generator (`/ai-generator`) run on
-**Gemini** through its OpenAI-compatible surface (base URL
-`https://generativelanguage.googleapis.com/v1beta/openai`, model
-`gemini-3.6-flash` by default). GitHub push protection blocks the API key
-inside this repo - it lives in the deployment environment only:
+The Socratic tutor (`/review`), Renance AI (`/ai`) and the AI Generator
+(`/ai-generator`) all run through ONE OpenAI-compatible endpoint that the
+study API owns. `AI_PROVIDER` picks a preset brain with a single env var;
+explicit `AI_BASE_URL` / `AI_MODEL` always win over the preset. GitHub
+push protection blocks the API key inside this repo - it lives in the
+deployment environment only:
 
 ```bash
-AI_API_KEY=AQ.…   # the founder's Gemini API key (GEMINI_API_KEY works too)
+AI_PROVIDER=zai   # Z.ai's platform; its GLM-4.5-Flash model is FREE
+AI_API_KEY=…      # the Z.ai API key (GEMINI_API_KEY works too, founder habit)
 ```
 
-```bash
-AI_API_KEY=…      # or GEMINI_API_KEY - always wins over the baked key
-AI_BASE_URL=…     # any OpenAI-compatible /chat/completions provider
-AI_MODEL=…        # any model the provider serves
-```
+Presets (base URL + default model come along automatically):
+
+| AI_PROVIDER  | Base URL                                              | Default model                |
+| ------------ | ----------------------------------------------------- | ---------------------------- |
+| `zai` / `z`  | `https://api.z.ai/api/paas/v4`                        | `glm-4.5-flash` (free)       |
+| `zhipu`      | `https://open.bigmodel.cn/api/paas/v4`                | `glm-4.5-flash` (free)       |
+| `gemini` / _unset_ | `https://generativelanguage.googleapis.com/v1beta/openai` | `gemini-3.6-flash` |
+| `groq`       | `https://api.groq.com/openai/v1`                      | `llama-3.3-70b-versatile`    |
+| `openrouter` | `https://openrouter.ai/api/v1`                        | `deepseek/deepseek-chat-v3.1:free` |
 
 Notes:
+- **The key never rides a client bundle.** The web is a static export:
+  any `NEXT_PUBLIC_` variable is shipped to every visitor, so no
+  `NEXT_PUBLIC_AI_*` variable may exist anywhere (the deploy workflow
+  deliberately passes none).
 - **Region**: Gemini rejects requests from unsupported regions with
-  `User location is not supported` - host the API in a supported region
-  (US/EU) or set `AI_BASE_URL` to a proxy that is.
+  `User location is not supported` - Z.ai and Groq are the usual
+  workarounds, or point `AI_BASE_URL` at a supported proxy.
 - When the provider is unreachable the tutor degrades to deterministic
-  hint mode (`mode:"hint"`, never a crash) and the generator returns a
-  502 with an honest error. `GET /tutor/status` → `{aiEnabled}` badges
-  the client (false until `AI_API_KEY` is set).
-- Render dashboard → the api service → Environment → add `AI_API_KEY`;
-  the service restarts with the tutor in AI mode.
+  hint mode (`mode:"hint"`, never a crash), Renance AI answers in
+  study-guide mode and the generator returns a 502 with an honest error.
+  `GET /tutor/status` → `{aiEnabled, provider}` badges the client (false
+  until `AI_API_KEY` is set).
+- Render dashboard → the api service → Environment → add `AI_API_KEY`
+  (render.yaml already carries `AI_PROVIDER=zai` + the Z.ai base URL and
+  model); the service restarts with the tutor in AI mode.
 
 ## 5. Content layout (answers live inside the banks)
 

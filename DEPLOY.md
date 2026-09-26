@@ -64,14 +64,19 @@ dashboard remains the place for future overrides.
 
 ### Optional (recommended before sharing publicly)
 
-Add these in Vercel → Settings → Environment Variables so AI features
-(Explanations, AI Generator, Tutor) work from the browser:
+Renance AI (chat, tutor, generator) needs ONE provider key on the study
+API, on Render - never in Vercel env vars and never in any client
+bundle. Render dashboard → api service → Environment:
 
-- `NEXT_PUBLIC_AI_API_KEY` — the Gemini provider key (same one the study
-  API uses). Without it every AI surface degrades gracefully; the core
-  CBT/Study/Review app does not depend on it.
-- `NEXT_PUBLIC_AI_BASE_URL` / `NEXT_PUBLIC_AI_MODEL` — only if you rotated
-  providers; defaults already match the study API.
+- `AI_PROVIDER=zai` + `AI_API_KEY=<Z.ai key>` — Z.ai's GLM-4.5-Flash,
+  free, the recommended default (see render.yaml).
+- Alternatives: `AI_PROVIDER=gemini` with a Google AI Studio key (also
+  free tier), or `groq` / `openrouter`.
+
+Until the key is set every AI surface degrades gracefully to study-guide
+/ hint mode; the core CBT/Study/Review app does not depend on it. Do NOT
+add `NEXT_PUBLIC_AI_*` variables anywhere: the web is a static export,
+so anything `NEXT_PUBLIC_` ships to every visitor's browser.
 
 ### Custom domain
 
@@ -95,8 +100,8 @@ then set `NEXT_PUBLIC_SITE_URL` to `https://<your-domain>` and redeploy once.
 Already automated: `.github/workflows/web-deploy.yml` builds and publishes
 on every push to `main` that touches `apps/web/**`. Source must be
 "GitHub Actions" in repo Settings → Pages. Repo variables:
-`PUBLIC_API_BASE` (the https study API), optional `NEXT_PUBLIC_GOOGLE_CLIENT_ID`,
-`AI_API_KEY`.
+`PUBLIC_API_BASE` (the https study API), optional `NEXT_PUBLIC_GOOGLE_CLIENT_ID`.
+No AI secret belongs here: the provider key lives only on the Render API.
 
 ---
 

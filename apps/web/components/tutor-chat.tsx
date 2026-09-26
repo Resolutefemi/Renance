@@ -79,9 +79,9 @@ export default function TutorChat({
       );
       setTurns([...next, { role: 'assistant', content: res.reply }]);
     } catch (err) {
-      // Server unreachable (or its provider key is not configured):
-      // fall back to the Gemini key baked into this deployment so the
-      // coach keeps coaching instead of dead-ending.
+      // Server unreachable (or its provider hiccuped): retry through
+      // the grounded /ai/chat route so the coach keeps coaching
+      // instead of dead-ending. Keys stay on the server, always.
       if (aiConfigured()) {
         try {
           const optionLines = active.options
