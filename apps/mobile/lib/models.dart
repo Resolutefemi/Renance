@@ -1616,6 +1616,14 @@ class BoardEntry {
     this.matches = 0,
     this.points = 0,
     this.correct = 0,
+    this.bestScore = 0,
+    this.scoreOutOf = 0,
+    this.papers = 0,
+    this.school = '',
+    this.avgScore = 0,
+    this.students = 0,
+    this.score = 0,
+    this.total = 0,
     this.premium = false,
   });
 
@@ -1629,6 +1637,19 @@ class BoardEntry {
   final int matches;
   final int points;
   final int correct;
+  // Focus boards (JAMB / WAEC / NECO): the body's own currency - the
+  // official UTME aggregate out of 400 for JAMB mocks, best paper
+  // percentage for the rest - plus how many papers back it.
+  final double bestScore;
+  final double scoreOutOf;
+  final int papers;
+  // Schools board: the school row itself.
+  final String school;
+  final double avgScore;
+  final int students;
+  // Daily challenge board: the sprint score over the paper total.
+  final int score;
+  final int total;
   final bool premium;
 
   factory BoardEntry.fromJson(Map<String, dynamic> j) => BoardEntry(
@@ -1642,6 +1663,14 @@ class BoardEntry {
     matches: (j['matches'] ?? 0) as int,
     points: (j['points'] ?? 0) as int,
     correct: (j['correct'] ?? 0) as int,
+    bestScore: ((j['bestScore'] ?? 0) as num).toDouble(),
+    scoreOutOf: ((j['scoreOutOf'] ?? 0) as num).toDouble(),
+    papers: (j['papers'] ?? 0) as int,
+    school: (j['school'] ?? '') as String,
+    avgScore: ((j['avgScore'] ?? 0) as num).toDouble(),
+    students: (j['students'] ?? 0) as int,
+    score: (j['score'] ?? 0) as int,
+    total: (j['total'] ?? 0) as int,
     premium: (j['premium'] ?? false) as bool,
   );
 }

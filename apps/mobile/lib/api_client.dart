@@ -514,11 +514,41 @@ class ApiClient {
 
   // -------------------------------------------------------------- leaderboard
 
-  /// The all-time XP board (GET /leaderboard/xp). The caller's own row
+  /// A focus ladder (GET /leaderboard/focus?focus=...). [focus] is
+  /// "jamb" (ranked on the official UTME aggregate out of 400), "waec"
+  /// or "neco" (ranked on best paper percentage). The caller's own row
   /// rides along as "me" even outside the top 25.
-  Future<LeaderboardData> leaderboardXp() async {
+  Future<LeaderboardData> leaderboardFocus({required String focus}) async {
+    final data = await _send(
+      'GET',
+      '/leaderboard/focus?focus=$focus',
+    ) as Map<dynamic, dynamic>;
+    return LeaderboardData.fromJson(data.cast<String, dynamic>());
+  }
+
+  /// The streak ladder (GET /leaderboard/streak): the students still
+  /// showing up day after day, ranked by their current streak.
+  Future<LeaderboardData> leaderboardStreak() async {
     final data =
-        await _send('GET', '/leaderboard/xp') as Map<dynamic, dynamic>;
+        await _send('GET', '/leaderboard/streak') as Map<dynamic, dynamic>;
+    return LeaderboardData.fromJson(data.cast<String, dynamic>());
+  }
+
+  /// The schools ladder (GET /leaderboard/schools): every school ranked
+  /// by the average its students hold on finalized term results.
+  Future<LeaderboardData> leaderboardSchools() async {
+    final data =
+        await _send('GET', '/leaderboard/schools') as Map<dynamic, dynamic>;
+    return LeaderboardData.fromJson(data.cast<String, dynamic>());
+  }
+
+  /// The daily challenge board (GET /daily/{body}/leaderboard): today's
+  /// one sprint, everyone worldwide, first-write-wins.
+  Future<LeaderboardData> dailyLeaderboard({String body = 'jamb'}) async {
+    final data = await _send(
+      'GET',
+      '/daily/${Uri.encodeComponent(body)}/leaderboard',
+    ) as Map<dynamic, dynamic>;
     return LeaderboardData.fromJson(data.cast<String, dynamic>());
   }
 

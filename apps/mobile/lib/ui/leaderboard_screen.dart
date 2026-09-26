@@ -1,22 +1,11 @@
-/// Leaderboard - the Myschool ranking cut the founder asked to copy.
+/// Leaderboard - the focus standings: Arena, JAMB (official aggregate
+/// out of 400), WAEC, NECO, Schools, Streak and the daily sprint.
 ///
-/// Sticky back bar with the centred title, the board tabs as a white
-/// pill riding a track (Myschool's Challenge/JAMB/WAEC/NECO/CBT row -
-/// Renance's real boards are XP and Arena), and the ranking as cards:
-/// #1 rides a gold gradient, #2 silver, #3 bronze, the rest plain white
-/// cards. Each card: medal, avatar, username, the big score at the
-/// right and the honest stat chips (streaks, correct, papers) beneath -
-/// Renance's answer to "Myschool Point 76.67 from 1 CBT".
-library;
-
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
-import '../api_client.dart';
-import '../models.dart';
-import 'theme.dart';
-import 'blue_tick.dart';
-
+/// Sticky back bar with the centred title, the board tabs as pills on a
+/// scrollable track, and the ranking as cards: gold / silver / bronze
+/// for the podium, white cards below, the caller's own row ringed in
+/// ink when it rides along. The XP board is retired - these ladders
+/// rank what students actually chase.
 class LeaderboardScreen extends StatefulWidget {
   const LeaderboardScreen({super.key});
 
@@ -25,11 +14,10 @@ class LeaderboardScreen extends StatefulWidget {
 }
 
 class _LeaderboardScreenState extends State<LeaderboardScreen> {
-  bool _arena = false;
+  _Board _tab = _Board.arena;
   bool _loading = true;
   String? _error;
-  LeaderboardData? _xp;
-  LeaderboardData? _arenaBoard;
+  final Map<_Board, LeaderboardData?> _boards = <_Board, LeaderboardData?>{};
 
   @override
   void initState() {
@@ -45,8 +33,24 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
       _error = null;
     });
     try {
-      _xp ??= await api.leaderboardXp();
-      _arenaBoard ??= await api.leaderboardArena();
+      if (_boards[_tab] == null) {
+        switch (_tab) {
+          case _Board.arena:
+            _boards[_tab] = await api.leaderboardArena();
+          case _Board.jamb:
+            _boards[_tab] = await api.leaderboardFocus(focus: 'jamb');
+          case _Board.waec:
+            _boards[_tab] = await api.leaderboardFocus(focus: 'waec');
+          case _Board.neco:
+            _boards[_tab] = await api.leaderboardFocus(focus: 'neco');
+          case _Board.schools:
+            _boards[_tab] = await api.leaderboardSchools();
+          case _Board.streak:
+            _boards[_tab] = await api.leaderboardStreak();
+          case _Board.daily:
+            _boards[_tab] = await api.dailyLeaderboard();
+        }
+      }
       if (!mounted) return;
       setState(() => _loading = false);
     } on ApiException catch (e) {
@@ -64,18 +68,8 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
     }
   }
 
-  String _fmt(int n) {
-    if (n >= 1000) {
-      final String s = n.toString();
-      return '${s.substring(0, s.length - 3)},${s.substring(s.length - 3)}';
-    }
-    return '$n';
-  }
-
   @override
   Widget build(BuildContext context) {
-    final LeaderboardData? board = _arena ? _arenaBoard : _xp;
-
     return Scaffold(
       backgroundColor: context.pageBg,
       body: SafeArea(
@@ -126,50 +120,52 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                 ),
               ),
             ),
-            // Board tabs: white pill on a track, Myschool's segmented row.
+            // Board tabs: pills on a scrollable track, one per ladder.
             Padding(
-              padding: const EdgeInsets.fromLTRB(16, 14, 16, 0),
-              child: Container(
-                padding: const EdgeInsets.all(4),
-                decoration: BoxDecoration(
-                  color: context.cardLow,
-                  borderRadius: BorderRadius.circular(999),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
+              padding: const EdgeInsets.fromLTRB(16, 14, 0, 0),
+              child: SizedBox(
+                height: 46,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  shrinkWrap: true,
                   children: <Widget>[
-                    for (final (int i, String label) in const <(int, String)>[
-                      (0, 'XP'),
-                      (1, 'Arena'),
-                    ])
-                      GestureDetector(
-                        onTap: () => setState(() => _arena = i == 1),
-                        child: AnimatedContainer(
-                          duration: const Duration(milliseconds: 180),
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 22, vertical: 9),
-                          decoration: BoxDecoration(
-                            color: _arena == (i == 1)
-                                ? context.cardLowest
-                                : Colors.transparent,
-                            borderRadius: BorderRadius.circular(999),
-                            boxShadow: _arena == (i == 1)
-                                ? const <BoxShadow>[
-                                    BoxShadow(
-                                      color: Color(0x14141C2D),
-                                      blurRadius: 4,
-                                      offset: Offset(0, 1),
-                                    ),
-                                  ]
-                                : null,
-                          ),
-                          child: Text(
-                            label,
-                            style: RenanceText.bodyMedium.copyWith(
-                              fontSize: 14,
-                              color: _arena == (i == 1)
+                    for (final _Board b in _Board.values)
+                      Padding(
+                        padding: const EdgeInsets.only(right: 8),
+                        child: GestureDetector(
+                          onTap: () {
+                            if (_tab == b) return;
+                            setState(() => _tab = b);
+                            _load();
+                          },
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 180),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 18, vertical: 9),
+                            decoration: BoxDecoration(
+                              color: _tab == b
                                   ? context.ink
-                                  : context.textSecondary,
+                                  : context.cardLow,
+                              borderRadius: BorderRadius.circular(999),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                Icon(b.icon, size: 15,
+                                    color: _tab == b
+                                        ? context.onInverseChip
+                                        : context.textSecondary),
+                                const SizedBox(width: 6),
+                                Text(
+                                  b.label,
+                                  style: RenanceText.bodyMedium.copyWith(
+                                    fontSize: 13.5,
+                                    color: _tab == b
+                                        ? context.onInverseChip
+                                        : context.textSecondary,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -210,9 +206,8 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                           ],
                         )
                       : _BoardList(
-                          board: board,
-                          arena: _arena,
-                          fmt: _fmt,
+                          board: _boards[_tab],
+                          tab: _tab,
                         ),
             ),
           ],
@@ -222,18 +217,51 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
   }
 }
 
+/// The ladders the ranking page serves, each with its pill label and
+/// the one-line explanation under the tabs.
+enum _Board {
+  arena('Arena', Icons.sports_esports,
+      'Head-to-head duels, weekly and all time. A win is a point.'),
+  jamb('JAMB', Icons.school,
+      'Your best official UTME aggregate out of 400. The sealed subject ledger decides.'),
+  waec('WAEC', Icons.menu_book,
+      'Your best WAEC paper, graded on the server against the sealed keys.'),
+  neco('NECO', Icons.history_edu,
+      'Your best NECO paper, graded on the server against the sealed keys.'),
+  schools('Schools', Icons.account_balance,
+      'Every school ranked by the average its students hold on finalized results.'),
+  streak('Streak', Icons.local_fire_department,
+      'The students still showing up, day after day. Miss a day and it resets.'),
+  daily('Daily', Icons.event_repeat,
+      "Today's challenge, one sprint, everyone worldwide.");
+
+  const _Board(this.label, this.icon, this.hint);
+  final String label;
+  final IconData icon;
+  final String hint;
+}
+
 /// The ranking cards: gold / silver / bronze for the podium, white
 /// cards below, the caller's own row ringed in ink when it rides along.
 class _BoardList extends StatelessWidget {
   const _BoardList({
     required this.board,
-    required this.arena,
-    required this.fmt,
+    required this.tab,
   });
 
   final LeaderboardData? board;
-  final bool arena;
-  final String Function(int) fmt;
+  final _Board tab;
+
+  String _fmtNum(double n) {
+    if (n == n.roundToDouble()) {
+      if (n >= 1000) {
+        final String s = n.round().toString();
+        return '${s.substring(0, s.length - 3)},${s.substring(s.length - 3)}';
+      }
+      return n.round().toString();
+    }
+    return n.toStringAsFixed(1);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -241,7 +269,9 @@ class _BoardList extends StatelessWidget {
     if (data == null) return const SizedBox.shrink();
     final List<BoardEntry> rows = <BoardEntry>[...data.entries];
     final BoardEntry? me = data.me;
-    if (me != null && !rows.any((BoardEntry e) => e.username == me.username)) {
+    if (me != null &&
+        tab != _Board.schools &&
+        !rows.any((BoardEntry e) => e.username == me.username)) {
       rows.add(me);
     }
     final int? meRank = me?.rank;
@@ -251,7 +281,11 @@ class _BoardList extends StatelessWidget {
         padding: const EdgeInsets.all(32),
         children: <Widget>[
           Text(
-            'No scores yet, be the first on the board.',
+            tab == _Board.jamb
+                ? 'No official UTME mock graded yet. Take one and claim the first seat.'
+                : tab == _Board.schools
+                    ? 'No school results finalized yet.'
+                    : 'No scores yet, be the first on the board.',
             textAlign: TextAlign.center,
             style: RenanceText.bodySecondary
                 .copyWith(color: context.textSecondary),
@@ -261,11 +295,14 @@ class _BoardList extends StatelessWidget {
     }
 
     return ListView(
-      padding: const EdgeInsets.fromLTRB(16, 18, 16, 32),
+      padding: const EdgeInsets.fromLTRB(16, 14, 16, 32),
       children: <Widget>[
         Text(
-          arena ? 'Arena Ranking' : 'XP Ranking',
-          style: RenanceText.displayMd.copyWith(fontSize: 21),
+          tab.hint,
+          style: RenanceText.bodySecondary.copyWith(
+            fontSize: 12.5,
+            color: context.textSecondary,
+          ),
         ),
         const SizedBox(height: 14),
         for (var i = 0; i < rows.length; i++)
@@ -273,8 +310,8 @@ class _BoardList extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 12),
             child: _RankCard(
               entry: rows[i],
-              value: arena ? fmt(rows[i].points) : fmt(rows[i].xp),
-              arena: arena,
+              tab: tab,
+              fmt: _fmtNum,
               you: meRank != null && rows[i].rank == meRank,
             ),
           ),
@@ -286,14 +323,14 @@ class _BoardList extends StatelessWidget {
 class _RankCard extends StatelessWidget {
   const _RankCard({
     required this.entry,
-    required this.value,
-    required this.arena,
+    required this.tab,
+    required this.fmt,
     required this.you,
   });
 
   final BoardEntry entry;
-  final String value;
-  final bool arena;
+  final _Board tab;
+  final String Function(double) fmt;
   final bool you;
 
   static const Color _gold = Color(0xFFF7CE55);
@@ -317,6 +354,94 @@ class _RankCard extends StatelessWidget {
             : rank == 3
                 ? const Color(0xFF7A5230)
                 : context.ink;
+
+    // The headline value each ladder ranks on.
+    String headline = '';
+    String headlineUnit = '';
+    String headlineLabel = 'Renance Points';
+    switch (tab) {
+      case _Board.arena:
+        headline = '${entry.points}';
+        headlineLabel = 'Renance Points';
+      case _Board.jamb:
+        headline = fmt(entry.bestScore);
+        headlineUnit = '/${fmt(entry.scoreOutOf)}';
+        headlineLabel = 'Best UTME';
+      case _Board.waec:
+      case _Board.neco:
+        headline = fmt(entry.bestScore);
+        headlineUnit = '/${fmt(entry.scoreOutOf)}';
+        headlineLabel = 'Best Paper';
+      case _Board.schools:
+        headline = fmt(entry.avgScore);
+        headlineUnit = '%';
+        headlineLabel = 'Average';
+      case _Board.streak:
+        headline = '${entry.currentStreak}';
+        headlineUnit = ' days';
+        headlineLabel = 'Current Streak';
+      case _Board.daily:
+        headline = '${entry.score}';
+        headlineUnit = '/${entry.total}';
+        headlineLabel = 'Score';
+    }
+
+    final List<Widget> chips = <Widget>[];
+    switch (tab) {
+      case _Board.arena:
+        chips.addAll(<Widget>[
+          _StatChip(
+            icon: Icons.emoji_events_outlined,
+            label: 'Wins',
+            value: '${entry.wins}',
+          ),
+          _StatChip(
+            icon: Icons.history_edu,
+            label: 'Matches',
+            value: '${entry.matches}',
+          ),
+          _StatChip(
+            icon: Icons.check_circle_outline,
+            label: 'Correct',
+            value: '${entry.correct}',
+          ),
+        ]);
+      case _Board.jamb:
+      case _Board.waec:
+      case _Board.neco:
+        chips.add(_StatChip(
+          icon: Icons.history_edu,
+          label: 'Papers',
+          value: '${entry.papers}',
+        ));
+      case _Board.schools:
+        chips.addAll(<Widget>[
+          _StatChip(
+            icon: Icons.group_outlined,
+            label: 'Students',
+            value: '${entry.students}',
+          ),
+        ]);
+      case _Board.streak:
+        chips.addAll(<Widget>[
+          _StatChip(
+            icon: Icons.military_tech,
+            label: 'Best',
+            value: '${entry.bestStreak}d',
+          ),
+          _StatChip(
+            icon: Icons.history_edu,
+            label: 'Papers',
+            value: '${entry.attempts}',
+          ),
+        ]);
+      case _Board.daily:
+        chips.add(_StatChip(
+          icon: Icons.check_circle_outline,
+          label: 'Score',
+          value: '${entry.score}/${entry.total}',
+        ));
+    }
 
     return Container(
       padding: const EdgeInsets.all(14),
@@ -373,7 +498,7 @@ class _RankCard extends StatelessWidget {
                       ),
               ),
               const SizedBox(width: 10),
-              // Avatar initial.
+              // Avatar initial (the school crest chip on the schools board).
               Container(
                 width: 40,
                 height: 40,
@@ -382,7 +507,7 @@ class _RankCard extends StatelessWidget {
                   shape: BoxShape.circle,
                   color: you ? context.inverseChip : context.cardLow,
                 ),
-                child: you
+                child: you && tab != _Board.schools
                     ? Text(
                         'R',
                         style: TextStyle(
@@ -391,16 +516,24 @@ class _RankCard extends StatelessWidget {
                           color: context.onInverseChip,
                         ),
                       )
-                    : Text(
-                        (entry.username.isEmpty
-                                ? 'R'
-                                : entry.username[0])
-                            .toUpperCase(),
-                        style: RenanceText.bodyMedium.copyWith(
-                          fontSize: 15,
-                          color: context.ink,
-                        ),
-                      ),
+                    : tab == _Board.schools
+                        ? Icon(Icons.account_balance,
+                            size: 19, color: context.ink)
+                        : Text(
+                            ((tab == _Board.schools
+                                            ? entry.school
+                                            : entry.username)
+                                        .isEmpty
+                                    ? 'R'
+                                    : (tab == _Board.schools
+                                            ? entry.school
+                                            : entry.username)[0])
+                                .toUpperCase(),
+                            style: RenanceText.bodyMedium.copyWith(
+                              fontSize: 15,
+                              color: context.ink,
+                            ),
+                          ),
               ),
               const SizedBox(width: 10),
               Expanded(
@@ -408,14 +541,19 @@ class _RankCard extends StatelessWidget {
                   children: <Widget>[
                     Flexible(
                       child: Text(
-                        you ? 'You' : entry.username,
+                        you && tab != _Board.schools
+                            ? 'You'
+                            : tab == _Board.schools
+                                ? entry.school
+                                : entry.username,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: RenanceText.bodyMedium.copyWith(fontSize: 16),
                       ),
                     ),
                     // The premium verified tick, the one blue on the app.
-                    if (entry.premium) ...<Widget>[
+                    if (entry.premium &&
+                        tab != _Board.schools) ...<Widget>[
                       const SizedBox(width: 5),
                       const BlueTickIcon(size: 15),
                     ],
@@ -426,14 +564,14 @@ class _RankCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
                   Text(
-                    'Renance ${arena ? 'Points' : 'XP'}',
+                    headlineLabel,
                     style: RenanceText.caption.copyWith(
                       fontSize: 12,
                       color: context.textSecondary,
                     ),
                   ),
                   Text(
-                    value,
+                    tab == _Board.streak ? '🔥 $headline' : '$headline$headlineUnit',
                     style: RenanceText.statNumber.copyWith(
                       fontSize: 22,
                       color: valueColor,
@@ -444,27 +582,11 @@ class _RankCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
-          // The honest stat chips, Myschool's "Best Score / Time Adv" row.
+          // The honest stat chips under each row.
           Wrap(
             spacing: 6,
             runSpacing: 6,
-            children: <Widget>[
-              _StatChip(
-                icon: Icons.local_fire_department,
-                label: 'Best Streak',
-                value: '${entry.bestStreak}',
-              ),
-              _StatChip(
-                icon: Icons.check_circle_outline,
-                label: 'Correct',
-                value: '${entry.correct}',
-              ),
-              _StatChip(
-                icon: Icons.history_edu,
-                label: arena ? 'Matches' : 'Papers',
-                value: '${arena ? entry.matches : entry.attempts}',
-              ),
-            ],
+            children: chips,
           ),
         ],
       ),
