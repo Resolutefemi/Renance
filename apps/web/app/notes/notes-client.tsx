@@ -89,24 +89,6 @@ export function NotesClient({ lessons }: { lessons: LessonCard[] }) {
             : 'Exam-focused notes for your subjects: the definitions, lists and key points that score marks.'}
         </p>
 
-        {/* National curriculum bank: schemes + lesson notes for every class */}
-        <Link
-          href="/curriculum/"
-          className="mt-5 flex items-center gap-3 rounded-xl border border-outline-variant bg-card p-4 no-underline transition hover:border-outline"
-        >
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-surface-container text-on-surface">
-            <span className="material-symbols-outlined text-[20px]">account_balance</span>
-          </div>
-          <div className="min-w-0 flex-1">
-            <p className="text-sm font-semibold text-on-surface">Curriculum bank</p>
-            <p className="text-xs text-on-surface-variant">
-              Scheme of work and lesson notes for every class from Nursery 1 to SSS 3, read straight
-              from the Renance corpus.
-            </p>
-          </div>
-          <span className="material-symbols-outlined shrink-0 text-[20px] text-on-surface-variant">chevron_right</span>
-        </Link>
-
         {/* University shelf: the school's own course PDFs ------------------ */}
         {isUniversity && (
           <section className="mt-6">
