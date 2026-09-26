@@ -62,8 +62,25 @@ async function fetchStatic<T>(path: string): Promise<T> {
   return (await res.json()) as T;
 }
 
+/** Normalize one class's subjects to the array the UI maps over. The
+ * first production bake shipped subjects as a dict keyed by slug, which
+ * crashed every subjects.find/map call and blanked the Curriculum Bank;
+ * accept both shapes forever so stale deploys and caches heal. */
+function normalizeSubjects(raw: unknown): CorpusSubject[] {
+  if (Array.isArray(raw)) return raw as CorpusSubject[];
+  if (raw && typeof raw === 'object') {
+    return Object.entries(raw as Record<string, Omit<CorpusSubject, 'id'>>).map(([id, s]) => ({
+      id,
+      ...s,
+    }));
+  }
+  return [];
+}
+
 export async function fetchCorpusIndex(): Promise<CorpusIndex> {
-  return fetchStatic<CorpusIndex>('/school-corpus/index.json');
+  const idx = await fetchStatic<CorpusIndex>('/school-corpus/index.json');
+  idx.classes = (idx.classes ?? []).map((c) => ({ ...c, subjects: normalizeSubjects(c.subjects) }));
+  return idx;
 }
 
 /** Every term's scheme of work for one class + subject. */

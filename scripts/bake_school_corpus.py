@@ -111,13 +111,16 @@ def build_index(schemes: dict, notes: dict) -> dict:
     classes = []
     for stage, class_slugs in STAGES:
         for cls in class_slugs:
-            subjects: dict[str, dict] = {}
+            subjects = []
             for subject_slug in sorted(set(schemes.get(cls, {})) | set(notes.get(cls, {}))):
-                subjects[subject_slug] = {
-                    "name": title_case_subject(subject_slug),
-                    "schemeTerms": schemes.get(cls, {}).get(subject_slug, []),
-                    "noteTerms": notes.get(cls, {}).get(subject_slug, []),
-                }
+                subjects.append(
+                    {
+                        "id": subject_slug,
+                        "name": title_case_subject(subject_slug),
+                        "schemeTerms": schemes.get(cls, {}).get(subject_slug, []),
+                        "noteTerms": notes.get(cls, {}).get(subject_slug, []),
+                    }
+                )
             if not subjects:
                 continue
             classes.append(
@@ -126,6 +129,11 @@ def build_index(schemes: dict, notes: dict) -> dict:
                     "name": CLASS_NAMES[cls],
                     "stage": stage,
                     "stageLabel": STAGE_LABEL[stage],
+                    # Array shape, NOT a dict: every client (web corpus.ts,
+                    # Go schoolcorpus, mobile models) does subjects.find /
+                    # subjects.map / jsonList on it. The dict shape here is
+                    # exactly what blanked the school portal's Curriculum
+                    # Bank in production (subjects.find is not a function).
                     "subjects": subjects,
                 }
             )
@@ -149,8 +157,8 @@ def main() -> int:
 
     scheme_files = sum(len(terms) for subs in schemes.values() for terms in subs.values())
     note_files = sum(len(terms) for subs in notes.values() for terms in subs.values())
-    classes_with_schemes = sum(1 for c in index["classes"] if any(s["schemeTerms"] for s in c["subjects"].values()))
-    classes_with_notes = sum(1 for c in index["classes"] if any(s["noteTerms"] for s in c["subjects"].values()))
+    classes_with_schemes = sum(1 for c in index["classes"] if any(s["schemeTerms"] for s in c["subjects"]))
+    classes_with_notes = sum(1 for c in index["classes"] if any(s["noteTerms"] for s in c["subjects"]))
     print(
         f"school corpus baked: {scheme_files} scheme files across {classes_with_schemes} classes, "
         f"{note_files} note files across {classes_with_notes} classes -> {OUT}"
