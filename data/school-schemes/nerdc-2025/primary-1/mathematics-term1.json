@@ -1,57 +1,72 @@
 {
- "class": "Primary 1",
- "subject": "Mathematics",
- "term": 1,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Sorting and matching",
-   "content": "Group objects by colour\nMatch one to one"
-  },
-  {
-   "week": 2,
-   "topic": "Numbers 1 and 2",
-   "content": "Count and write 1 and 2\nCount real objects"
-  },
-  {
-   "week": 3,
-   "topic": "Numbers 3 and 4",
-   "content": "Count and write 3 and 4\nCount real objects"
-  },
-  {
-   "week": 4,
-   "topic": "Number 5",
-   "content": "Count and write 5\nCount five fingers"
-  },
-  {
-   "week": 5,
-   "topic": "Numbers 6 and 7",
-   "content": "Count and write 6 and 7\nFill the gaps"
-  },
-  {
-   "week": 6,
-   "topic": "Numbers 8 and 9",
-   "content": "Count and write 8 and 9\nFill the gaps"
-  },
-  {
-   "week": 7,
-   "topic": "Number 10",
-   "content": "Count and write 10\nCount ten bottle tops"
-  },
-  {
-   "week": 8,
-   "topic": "Shapes: circle and triangle",
-   "content": "Name and draw shapes\nFind shapes at home"
-  },
-  {
-   "week": 9,
-   "topic": "Simple patterns",
-   "content": "Copy and continue patterns\nBeads and colours"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Term work review\nClass quiz"
-  }
- ]
+  "class": "Primary 1",
+  "subject": "Mathematics",
+  "term": 1,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Whole Numbers 1-5",
+      "content": "Counting objects from 1 to 5\nRecognition and identification of numbers 1-\nWriting numbers 1-5 correctly\nMatching numbers to quantities (1-5)\nOrdering numbers 1-5 from smallest to\nlargest"
+    },
+    {
+      "week": 2,
+      "topic": "Whole Number 0 (Zero)",
+      "content": "Introduction to the concept of zero\n(nothing/empty)\nRecognition and identification of the number\nWriting the number 0 correctly\nUnderstanding zero as an empty set\nCounting from 0 to 5"
+    },
+    {
+      "week": 3,
+      "topic": "Whole Numbers 6-9",
+      "content": "Counting objects from 6 to 9\nRecognition and identification of numbers 6-\nWriting numbers 6-9 correctly\nMatching numbers to quantities (6-9)\nOrdering numbers 1-9 from smallest to\nlargest"
+    },
+    {
+      "week": 4,
+      "topic": "Whole Number 10",
+      "content": "Introduction to number 10\nCounting objects from 1 to 10\nRecognition, identification and writing of\nnumber 10\nUnderstanding 10 as a complete set\nOrdering numbers 0-10"
+    },
+    {
+      "week": 5,
+      "topic": "MID-TERM EXAMINATION",
+      "content": "Assessment of Weeks 1-4"
+    },
+    {
+      "week": 6,
+      "topic": "MID-TERM BREAK",
+      "content": "Holiday/Rest"
+    },
+    {
+      "week": 7,
+      "topic": "Addition (Introduction)",
+      "content": "Understanding addition as \"putting together\"\nor \"adding more\"\nUsing objects to demonstrate addition (1+1,\n2+1, etc.)\nIntroduction to the plus sign (+) and equals\nsign (=)\nSimple addition within 5 (vertical and\nhorizontal format)\nWord problems on addition within 5"
+    },
+    {
+      "week": 8,
+      "topic": "Addition (Continued)",
+      "content": "Addition within 10 using objects and pictures\nAdding zero to any number\nAddition facts for numbers 1-10\nWord problems on addition within 10\nPractical activities: adding toys, fruits,\npencils, etc."
+    },
+    {
+      "week": 9,
+      "topic": "Subtraction (Introduction)",
+      "content": "Understanding subtraction as \"taking away\"\nor \"removing\"\nUsing objects to demonstrate subtraction\nIntroduction to the minus sign (-)\nSimple subtraction within 5 (vertical and\nhorizontal format)\nWord problems on subtraction within 5"
+    },
+    {
+      "week": 10,
+      "topic": "Subtraction (Continued)",
+      "content": "Subtraction within 10 using objects and\npictures\nSubtracting zero from any number\nSubtraction facts for numbers 1-10\nWord problems on subtraction within 10\nPractical activities with real objects"
+    },
+    {
+      "week": 11,
+      "topic": "REVISION",
+      "content": "Review of all topics: Numbers 0-10,\nAddition and Subtraction"
+    },
+    {
+      "week": 12,
+      "topic": "EXAMINATION",
+      "content": "End of Term Assessment"
+    },
+    {
+      "week": 13,
+      "topic": "CLOSING/VACATION PRIMARY 1 MATHEMATICS SCHEME OF WORK",
+      "content": "Term ends"
+    }
+  ]
 }

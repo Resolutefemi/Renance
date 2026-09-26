@@ -1,57 +1,72 @@
 {
- "class": "Primary 2",
- "subject": "Mathematics",
- "term": 1,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Revision of numbers 1 to 50",
-   "content": "Count and order numbers\nFill the gaps"
-  },
-  {
-   "week": 2,
-   "topic": "Numbers 51 to 60",
-   "content": "Count and write\nTens and ones"
-  },
-  {
-   "week": 3,
-   "topic": "Numbers 61 to 70",
-   "content": "Count and write\nTens and ones"
-  },
-  {
-   "week": 4,
-   "topic": "Numbers 71 to 80",
-   "content": "Count and write\nFill the gaps"
-  },
-  {
-   "week": 5,
-   "topic": "Numbers 81 to 90",
-   "content": "Count and write\nTens and ones"
-  },
-  {
-   "week": 6,
-   "topic": "Numbers 91 to 100",
-   "content": "Count to 100\nHundred chart work"
-  },
-  {
-   "week": 7,
-   "topic": "Addition to 20 with carrying",
-   "content": "Carry the ten\nVertical sums"
-  },
-  {
-   "week": 8,
-   "topic": "Subtraction from 20",
-   "content": "Take away with borrowing talk\nVertical sums"
-  },
-  {
-   "week": 9,
-   "topic": "Shapes: rectangle, square, circle",
-   "content": "Name and draw shapes\nCount sides"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Term work review\nClass quiz"
-  }
- ]
+  "class": "Primary 2",
+  "subject": "Mathematics",
+  "term": 1,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Whole Numbers (1-100)",
+      "content": "Revision of Primary 1 work\nCounting numbers 1-100\nReading and writing numbers 1-100 in\nfigures and words\nComparing numbers using place values (tens\nand units)\nOrdering numbers from smallest to largest\nand vice versa\nSkip counting in 2s, 3s, 5s, and 10s\nIdentifying odd and even numbers"
+    },
+    {
+      "week": 2,
+      "topic": "Whole Numbers (101-200)",
+      "content": "Counting, reading, and writing numbers 101-\nIdentifying place values (hundreds, tens, and\nunits)\nWriting expanded forms of numbers\nComparing numbers using <, >, = symbols\nSkip counting in 2s, 3s, and 5s up to 200"
+    },
+    {
+      "week": 3,
+      "topic": "Fractions (Part 1)",
+      "content": "Meaning of fractions\nIdentifying ½ and ¼ as parts of a whole\nDividing objects into two and four equal\nparts\nWriting simple fractions (½, ¼)\nRepresenting fractions with objects and\npictures"
+    },
+    {
+      "week": 4,
+      "topic": "Fractions (Part 2)",
+      "content": "Identifying ¾ of given objects\nPractical activities on sharing items into four\nequal parts\nRelating fractions to real-life situations (food,\ntoys, etc.)\nComparing simple fractions (½ and ¼)\nWord problems involving halves and quarters"
+    },
+    {
+      "week": 5,
+      "topic": "MID-TERM EXAMINATION",
+      "content": "Assessment of Weeks 1-4"
+    },
+    {
+      "week": 6,
+      "topic": "MID-TERM BREAK",
+      "content": "Holiday / Rest"
+    },
+    {
+      "week": 7,
+      "topic": "Addition (Part 1)",
+      "content": "Meaning of addition\nIdentifying the addition sign (+)\nAdding single-digit numbers (without\ncarrying)\nAddition using number lines and real objects\nWord problems on addition\nReal-life applications: total number of items"
+    },
+    {
+      "week": 8,
+      "topic": "Addition (Part 2) Addition of three or more numbers Mental addition of small numbers Word problems on addition Checking addition using subtraction",
+      "content": "Addition of 2-digit numbers (with and\nwithout carrying)"
+    },
+    {
+      "week": 9,
+      "topic": "Subtraction (Part 1) Identifying subtraction sign (−) Subtraction as \"take away\" and \"difference Subtracting single-digit and 2-digit numbers Real-life subtraction problems (items",
+      "content": "Meaning of subtraction\nbetween\"\nwithout borrowing\nremaining)"
+    },
+    {
+      "week": 10,
+      "topic": "Subtraction (Part 2) Checking subtraction using addition Word problems on subtraction Real-life activities involving subtraction",
+      "content": "Subtracting 2-digit numbers with borrowing\n(money, distance, items)"
+    },
+    {
+      "week": 11,
+      "topic": "REVISION",
+      "content": "Review of: Whole numbers, fractions,\naddition, and subtraction"
+    },
+    {
+      "week": 12,
+      "topic": "EXAMINATION",
+      "content": "End of Term Assessment"
+    },
+    {
+      "week": 13,
+      "topic": "CLOSING/VACATION PRIMARY 2 MATHEMATICS SCHEME OF WORK",
+      "content": "Term ends"
+    }
+  ]
 }

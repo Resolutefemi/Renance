@@ -146,9 +146,13 @@ export default function SchoolSyllabusPage() {
     setNotice('');
     try {
       const res = await seedSchemes(a.schoolId, session);
-      setNotice(`Drafted ${res.filled} scheme${res.filled === 1 ? '' : 's'} for ${session}.`);
+      setNotice(
+        `Installed the national scheme of work + lesson notes into ${res.filled} term slot${
+          res.filled === 1 ? '' : 's'
+        } for ${session}. Empty slots only - nothing you already wrote was touched.`,
+      );
     } catch {
-      setNotice('Could not draft the schemes.');
+      setNotice('The install failed - check the session field and try again.');
     } finally {
       setSeeding(false);
     }
@@ -183,7 +187,7 @@ export default function SchoolSyllabusPage() {
           aria-label="Session"
         />
         <button onClick={draftSchemes} disabled={seeding || !active || active.role !== 'management'} className={btnPrimary}>
-          {seeding ? 'Drafting…' : 'Draft empty schemes'}
+          {seeding ? 'Installing…' : 'Install the national curriculum'}
         </button>
       </div>
 
@@ -214,8 +218,11 @@ export default function SchoolSyllabusPage() {
 
       {!loading && terms.length === 0 && (
         <div className="rounded-xl border border-outline-variant bg-surface-container-lowest p-6 text-sm text-on-surface-variant">
-          No syllabus terms for this class + subject yet. Open it once from the app or ask management
-          to install the curriculum from the Overview page - the three terms are created automatically.
+          No syllabus terms for this class + subject yet. Management: click{' '}
+          <span className="font-medium text-on-surface">Install the national curriculum</span> above - it
+          creates the three terms and pours the NERDC scheme of work and lesson notes into every class
+          and subject this school runs. You can also pull one subject at a time from the{' '}
+          <Link href="/school/curriculum" className="underline">Curriculum Bank</Link>.
         </div>
       )}
 

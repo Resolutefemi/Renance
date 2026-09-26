@@ -1,57 +1,57 @@
 {
- "class": "SSS 1",
- "subject": "Further Mathematics",
- "term": 3,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Matrices",
-   "content": "Operations on matrices\nDeterminants 2x2 3x3"
-  },
-  {
-   "week": 2,
-   "topic": "Inverse matrices",
-   "content": "Find inverses\nSolve systems"
-  },
-  {
-   "week": 3,
-   "topic": "Linear transformations",
-   "content": "Matrices as transforms\nFind images"
-  },
-  {
-   "week": 4,
-   "topic": "Kinematics",
-   "content": "Motion equations advanced\nDisplacement and velocity"
-  },
-  {
-   "week": 5,
-   "topic": "Newton's laws advanced",
-   "content": "Connected particles\nSolve dynamics problems"
-  },
-  {
-   "week": 6,
-   "topic": "Work, energy and power advanced",
-   "content": "Work energy theorem\nPower problems"
-  },
-  {
-   "week": 7,
-   "topic": "Static forces",
-   "content": "Equilibrium of forces\nMoments and couples"
-  },
-  {
-   "week": 8,
-   "topic": "Projectiles",
-   "content": "Trajectory equations\nRange and height"
-  },
-  {
-   "week": 9,
-   "topic": "Project: mathematical modelling",
-   "content": "Model a real problem\nPresent solutions"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Year work review\nEnd of year quiz"
-  }
- ]
+  "class": "SSS 1",
+  "subject": "Further Mathematics",
+  "term": 3,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Location",
+      "content": "Measures of central tendency: mean, mode, median, deciles,\npercentiles, quartiles."
+    },
+    {
+      "week": 3,
+      "topic": "Measures of Dispersion",
+      "content": "Range, interquartile range, mean deviation, standard deviation."
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Examination",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Measures of Location",
+      "content": "Coefficient of variation and its applications."
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "History and Nature of Operations Research research (linear programming, transportation models,",
+      "content": "Meaning and scope of operations research; models of operations\nassignment models)."
+    },
+    {
+      "week": 9,
+      "topic": "Models",
+      "content": "Practical application of linear programming, transportation (least\ncost, northwest corner), and assignment models."
+    },
+    {
+      "week": 10,
+      "topic": "Application of Models",
+      "content": "Further applications of OR models in real-life problem-solving."
+    },
+    {
+      "week": 11,
+      "topic": "Revision",
+      "content": ""
+    },
+    {
+      "week": 12,
+      "topic": "Examination",
+      "content": ""
+    }
+  ]
 }

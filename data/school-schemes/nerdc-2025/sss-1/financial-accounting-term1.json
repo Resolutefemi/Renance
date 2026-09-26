@@ -1,57 +1,72 @@
 {
- "class": "SSS 1",
- "subject": "Financial Accounting",
- "term": 1,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Accounting: meaning and users",
-   "content": "Users of accounts\nImportance of accounting"
-  },
-  {
-   "week": 2,
-   "topic": "Accounting equation",
-   "content": "Assets and liabilities\nDouble entry idea"
-  },
-  {
-   "week": 3,
-   "topic": "The ledger",
-   "content": "Rules of debit and credit\nOpen accounts"
-  },
-  {
-   "week": 4,
-   "topic": "Recording transactions",
-   "content": "Journalise entries\nPost to ledger"
-  },
-  {
-   "week": 5,
-   "topic": "Trial balance",
-   "content": "Prepare and check\nLocate errors"
-  },
-  {
-   "week": 6,
-   "topic": "Cash book: two column",
-   "content": "Record cash and bank\nBalance the cash book"
-  },
-  {
-   "week": 7,
-   "topic": "Cash book: three column",
-   "content": "Discount columns\nRecord with discounts"
-  },
-  {
-   "week": 8,
-   "topic": "Petty cash book",
-   "content": "Imprest system\nRecord small expenses"
-  },
-  {
-   "week": 9,
-   "topic": "Classification of accounts",
-   "content": "Real, personal, nominal\nClassify correctly"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Term work review\nClass quiz"
-  }
- ]
+  "class": "SSS 1",
+  "subject": "Financial Accounting",
+  "term": 1,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Book-Keeping and Accounting accounting; Importance of accounting",
+      "content": "Meaning of book-keeping; Difference between book-keeping and"
+    },
+    {
+      "week": 2,
+      "topic": "Ethics of Accounting",
+      "content": "Accounting ethics; Professional conduct; Confidentiality,\ntransparency, integrity"
+    },
+    {
+      "week": 3,
+      "topic": "Principles of Double Entry (Part 1)",
+      "content": "Meaning of double entry; Debit and credit principles"
+    },
+    {
+      "week": 4,
+      "topic": "Principles of Double Entry (Part 2)",
+      "content": "Application of double entry in accounts"
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Examination",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Accounting Concepts (Part 1) materiality",
+      "content": "Meaning of accounting concepts; Going concern, accrual,"
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "Accounting Concepts (Part 2)",
+      "content": "Consistency, dual aspect, prudence"
+    },
+    {
+      "week": 9,
+      "topic": "General Journal",
+      "content": "Meaning, features, and uses; Simple journal entries"
+    },
+    {
+      "week": 10,
+      "topic": "Analytical Cash Book",
+      "content": "Meaning, format, and preparation of analytical cash book"
+    },
+    {
+      "week": 11,
+      "topic": "Revision",
+      "content": ""
+    },
+    {
+      "week": 12,
+      "topic": "Examination",
+      "content": ""
+    },
+    {
+      "week": 13,
+      "topic": "Closing",
+      "content": ""
+    }
+  ]
 }

@@ -1,57 +1,72 @@
 {
- "class": "SSS 1",
- "subject": "Physics",
- "term": 3,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Electricity: current",
-   "content": "Ohm's law\nCircuit calculations"
-  },
-  {
-   "week": 2,
-   "topic": "Electricity: resistance",
-   "content": "Series and parallel\nCombine resistors"
-  },
-  {
-   "week": 3,
-   "topic": "Electricity: power and energy",
-   "content": "Electrical power\nCost of energy"
-  },
-  {
-   "week": 4,
-   "topic": "Magnetism",
-   "content": "Magnetic fields\nField patterns"
-  },
-  {
-   "week": 5,
-   "topic": "Electromagnetism",
-   "content": "Electromagnets\nMotor principle talk"
-  },
-  {
-   "week": 6,
-   "topic": "Electromagnetic induction",
-   "content": "Induced currents\nGenerators talk"
-  },
-  {
-   "week": 7,
-   "topic": "Radioactivity basics",
-   "content": "Radiations and decay\nSafety and uses"
-  },
-  {
-   "week": 8,
-   "topic": "Simple circuits: devices",
-   "content": "Diodes and transistors\nRectification talk"
-  },
-  {
-   "week": 9,
-   "topic": "Physics project",
-   "content": "Build and test\nPresent findings"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Year work review\nEnd of year quiz"
-  }
- ]
+  "class": "SSS 1",
+  "subject": "Physics",
+  "term": 3,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Fluids at Rest and in Motion Bernoulli's principle",
+      "content": "Pressure in fluids, Pascal's principle, Archimedes' principle,"
+    },
+    {
+      "week": 2,
+      "topic": "Gas Laws",
+      "content": "Boyle's law, Charles' law, pressure law, ideal gas equation"
+    },
+    {
+      "week": 3,
+      "topic": "Simple Harmonic Motion",
+      "content": "Concept, examples, characteristics, equations"
+    },
+    {
+      "week": 4,
+      "topic": "Projectile",
+      "content": "Concept, equations of projectile motion, range, maximum\nheight"
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Examination",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Types of Waves",
+      "content": "Classification of waves: mechanical, electromagnetic,\ntransverse, longitudinal"
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "Properties of Waves",
+      "content": "Reflection, refraction, diffraction, interference, applications"
+    },
+    {
+      "week": 9,
+      "topic": "Properties of Waves (Continued)",
+      "content": "Superposition of waves, resonance"
+    },
+    {
+      "week": 10,
+      "topic": "Properties of Waves (Continued)",
+      "content": "Real-life applications of wave properties"
+    },
+    {
+      "week": 11,
+      "topic": "Revision",
+      "content": ""
+    },
+    {
+      "week": 12,
+      "topic": "Examination",
+      "content": ""
+    },
+    {
+      "week": 13,
+      "topic": "Closing",
+      "content": ""
+    }
+  ]
 }

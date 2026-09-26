@@ -1,0 +1,62 @@
+{
+  "class": "SSS 2",
+  "subject": "Digital Technologies",
+  "term": 2,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Computer Programming I",
+      "content": "Introduction to algorithms, flowcharts"
+    },
+    {
+      "week": 2,
+      "topic": "Computer Programming II",
+      "content": "Introduction to Python/JavaScript"
+    },
+    {
+      "week": 3,
+      "topic": "Programming Basics",
+      "content": "Variables, data types, operators"
+    },
+    {
+      "week": 4,
+      "topic": "Control Structures",
+      "content": "If-else, loops, functions"
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Test",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Data Science Basics",
+      "content": "Data collection, storage, cleaning"
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "Big Data & Analytics",
+      "content": "Meaning, applications, tools"
+    },
+    {
+      "week": 9,
+      "topic": "Artificial Intelligence",
+      "content": "Applications in education, health, business"
+    },
+    {
+      "week": 10,
+      "topic": "Machine Learning Basics",
+      "content": "Concept, simple applications"
+    },
+    {
+      "week": 11,
+      "topic": "Revision & Exams",
+      "content": ""
+    }
+  ]
+}

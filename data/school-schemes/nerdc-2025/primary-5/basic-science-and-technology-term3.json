@@ -1,57 +1,72 @@
 {
- "class": "Primary 5",
- "subject": "Basic Science and Technology",
- "term": 3,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Electricity: series circuits",
-   "content": "Two bulbs in a row\nCompare brightness"
-  },
-  {
-   "week": 2,
-   "topic": "Electricity: parallel circuits",
-   "content": "Independent bulbs\nHouse wiring talk"
-  },
-  {
-   "week": 3,
-   "topic": "Electromagnets",
-   "content": "Coil and nail\nMake and test"
-  },
-  {
-   "week": 4,
-   "topic": "Electronics basics",
-   "content": "Diodes and LEDs\nSimple components"
-  },
-  {
-   "week": 5,
-   "topic": "Space and the solar system",
-   "content": "Planets in order\nModel the system"
-  },
-  {
-   "week": 6,
-   "topic": "The earth and its movement",
-   "content": "Day and night\nSeasons talk"
-  },
-  {
-   "week": 7,
-   "topic": "The moon and eclipses",
-   "content": "Phases of the moon\nEclipse safety"
-  },
-  {
-   "week": 8,
-   "topic": "Satellites and communication",
-   "content": "How TV signals travel\nUses of satellites"
-  },
-  {
-   "week": 9,
-   "topic": "Design project: model bridge",
-   "content": "Plan and build\nTest the strength"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Year work review\nEnd of year quiz"
-  }
- ]
+  "class": "Primary 5",
+  "subject": "Basic Science and Technology",
+  "term": 3,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Machines in Our Lives",
+      "content": "Complex machines; Mechanical advantage; Efficiency;\nApplications of machines in industry and agriculture"
+    },
+    {
+      "week": 2,
+      "topic": "Technology and Innovation basics; Internet and communication; Coding fundamentals",
+      "content": "History of technology; Modern inventions; Computer"
+    },
+    {
+      "week": 3,
+      "topic": "Biotechnology and Agriculture control; Organic farming; Food security",
+      "content": "Modern farming methods; Crop improvement; Pest"
+    },
+    {
+      "week": 4,
+      "topic": "Space Exploration",
+      "content": "Planets and their characteristics; Space technology;\nSatellites and their uses; Famous space missions;\nAstronomy"
+    },
+    {
+      "week": 5,
+      "topic": "MIDTERM EXAMINATION",
+      "content": "Assessment of topics covered in weeks 1-4"
+    },
+    {
+      "week": 6,
+      "topic": "MIDTERM BREAK",
+      "content": "Rest and relaxation period"
+    },
+    {
+      "week": 7,
+      "topic": "Health and Disease",
+      "content": "Microorganisms - bacteria, viruses, fungi; Infectious\ndiseases; Disease prevention; Vaccination; Antibiotics"
+    },
+    {
+      "week": 8,
+      "topic": "Nutrition and Fitness",
+      "content": "Detailed study of nutrients; Deficiency diseases; Balanced\nmeal planning; Exercise and fitness; Healthy lifestyle"
+    },
+    {
+      "week": 9,
+      "topic": "Reproduction in Living Things system; Growth and development; Puberty changes;",
+      "content": "Asexual and sexual reproduction; Human reproduction\nFamily life education"
+    },
+    {
+      "week": 10,
+      "topic": "Environmental Conservation Conservation methods; National parks; Individual",
+      "content": "Ecosystems and biodiversity; Endangered species;\nresponsibility"
+    },
+    {
+      "week": 11,
+      "topic": "REVISION",
+      "content": "Review of all topics covered; Practice exercises; Question\nand answer sessions"
+    },
+    {
+      "week": 12,
+      "topic": "EXAMINATION",
+      "content": "End of term assessment"
+    },
+    {
+      "week": 13,
+      "topic": "CLOSING",
+      "content": "Report card distribution; Vacation assignment"
+    }
+  ]
 }

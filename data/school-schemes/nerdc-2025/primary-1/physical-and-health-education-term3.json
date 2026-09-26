@@ -1,57 +1,72 @@
 {
- "class": "Primary 1",
- "subject": "Physical and Health Education",
- "term": 3,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Athletics: sprinting",
-   "content": "Short distance races\nRun fast safely"
-  },
-  {
-   "week": 2,
-   "topic": "Long jump basics",
-   "content": "Jump from a line\nLand with two feet"
-  },
-  {
-   "week": 3,
-   "topic": "Ball games: kicking",
-   "content": "Kick the ball\nSimple football play"
-  },
-  {
-   "week": 4,
-   "topic": "Safety in games",
-   "content": "Rules keep us safe\nPlay by the rules"
-  },
-  {
-   "week": 5,
-   "topic": "Posture: standing and sitting",
-   "content": "Stand tall, sit well\nGood posture habits"
-  },
-  {
-   "week": 6,
-   "topic": "Teeth care",
-   "content": "Brush twice daily\nClean teeth talk"
-  },
-  {
-   "week": 7,
-   "topic": "First aid: simple cuts",
-   "content": "Tell an adult\nWash and cover"
-  },
-  {
-   "week": 8,
-   "topic": "Clean water and exercise",
-   "content": "Drink clean water\nExercise daily"
-  },
-  {
-   "week": 9,
-   "topic": "Simple gymnastics",
-   "content": "Stretch and bend\nSafe simple moves"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Year work review\nDisplay of skills"
-  }
- ]
+  "class": "Primary 1",
+  "subject": "Physical and Health Education",
+  "term": 3,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Safety and Emergency Preparedness: Road Signs and (to keep us safe, guide us) Symbols 1 Types of road signs: warning signs,",
+      "content": "Understanding why we need road signs\nregulatory signs, information signs\nTraffic light colours: red (stop),\nyellow/amber (get ready), green (go)\nZebra crossing/pedestrian crossing: what\nit is, how to use it\nImportance of obeying road signs"
+    },
+    {
+      "week": 2,
+      "topic": "Safety and Emergency Preparedness: Road Signs and \"Stop\", \"Go\", \"Pedestrian Crossing\" Symbols 2 Warning signs: \"School Zone\",",
+      "content": "Common road signs for pedestrians:\n\"Children Crossing\", \"Speed Bump\"\nDirection signs: arrows, \"One Way\",\n\"No Entry\"\nDrawing and colouring road signs\nRoad sign matching games and activities"
+    },
+    {
+      "week": 3,
+      "topic": "Safety and Emergency Preparedness: Road Safety Using pedestrian crossings and Rules footbridges",
+      "content": "Looking left and right before crossing\nWalking on the pavement/sidewalk, not\non the road\nHolding adult's hand when crossing\nroads\nNot playing on or near roads\nBeing visible: wearing bright colours,\nreflectors at night"
+    },
+    {
+      "week": 4,
+      "topic": "Safety and Emergency Preparedness: Road Safety sitting properly, not distracting driver Continued Getting in and out of vehicles safely",
+      "content": "Safety in vehicles: wearing seatbelts,\nSchool bus safety: waiting for bus to\nstop, orderly boarding\nRecognizing road safety officials: FRSC\nofficers, traffic wardens\nWhat to do if lost: stay calm, ask\npolice/security for help, know parent's\nphone number"
+    },
+    {
+      "week": 5,
+      "topic": "MID-TERM EXAMINATION knowledge and demonstrations)",
+      "content": "Assessment of Weeks 1-4 (Road safety"
+    },
+    {
+      "week": 6,
+      "topic": "MID-TERM BREAK",
+      "content": "Holiday/Rest"
+    },
+    {
+      "week": 7,
+      "topic": "Aquatics: Swimming (Introduction to Water) sport Benefits of swimming: exercise, fun, Water safety rules: never swim alone, Swimming facilities: pools, beaches, Swimming gear: swimsuit, goggles,",
+      "content": "Understanding swimming as a water\nwater safety skill\nadult supervision, no running near pool\nrivers (dangers of open water)\ntowel, floatation devices"
+    },
+    {
+      "week": 8,
+      "topic": "Aquatics: Water Familiarization splashing face, wetting body gradually Overcoming fear of water through games Blowing bubbles in water Submerging face in water briefly (with Walking in shallow water Water games: catching, throwing ball in",
+      "content": "Getting comfortable with water:\nsupport)\nwater"
+    },
+    {
+      "week": 9,
+      "topic": "Aquatics: Floating on Water Floating position: lying on back, arms Floating with support: holding pool Relaxing in water: breathing calmly, Front float and back float (with Practice sessions with safety equipment",
+      "content": "Understanding floating: body stays on\nwater surface\nand legs spread out\nedge, teacher support, floatation devices\ntrusting the water\nassistance)\nand supervision"
+    },
+    {
+      "week": 10,
+      "topic": "Aquatics: Basic Swimming Movements & Water Safety floatation device Arm movements in water (simple Putting face in water and breathing out Moving through water with support Water exit: climbing out of pool safely Emergency response: calling for help, Review of all water safety rules",
+      "content": "Kicking legs while holding pool edge or\nstrokes)\n(bubbles)\nthrowing floatation device"
+    },
+    {
+      "week": 11,
+      "topic": "REVISION",
+      "content": "Review of all topics: Road safety, signs\nand symbols, swimming basics"
+    },
+    {
+      "week": 12,
+      "topic": "EXAMINATION",
+      "content": "Written (road signs identification) and\npractical (swimming demonstration\nwhere possible)"
+    },
+    {
+      "week": 13,
+      "topic": "CLOSING/VACATION Term",
+      "content": "ends"
+    }
+  ]
 }

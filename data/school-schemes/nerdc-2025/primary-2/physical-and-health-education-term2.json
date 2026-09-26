@@ -1,57 +1,72 @@
 {
- "class": "Primary 2",
- "subject": "Physical and Health Education",
- "term": 2,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Athletics: high jump basics",
-   "content": "Approach and take off\nScissors jump"
-  },
-  {
-   "week": 2,
-   "topic": "Athletics: relay races",
-   "content": "Pass the baton well\nTeam practice"
-  },
-  {
-   "week": 3,
-   "topic": "Football: shooting",
-   "content": "Aim and shoot\nGoal keeping basics"
-  },
-  {
-   "week": 4,
-   "topic": "Volleyball: passing",
-   "content": "Under arm pass\nTwo hand pass"
-  },
-  {
-   "week": 5,
-   "topic": "Handball basics",
-   "content": "Dribble and throw\nSimple rules"
-  },
-  {
-   "week": 6,
-   "topic": "Safety in sports",
-   "content": "Warm up first\nPlay without pushing"
-  },
-  {
-   "week": 7,
-   "topic": "Food and exercise",
-   "content": "Eat then play\nEnergy for games"
-  },
-  {
-   "week": 8,
-   "topic": "Care of the skin",
-   "content": "Clean skin habits\nAvoid skin infections"
-  },
-  {
-   "week": 9,
-   "topic": "Rest and relaxation",
-   "content": "Sleep well hours\nRest after school"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Term work review\nSkills display"
-  }
- ]
+  "class": "Primary 2",
+  "subject": "Physical and Health Education",
+  "term": 2,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Swimming: Water Safety and U Introduction (Part 1) water",
+      "content": "nderstanding swimming: moving through\nImportance of swimming: exercise, water safety\nskill, fun\nWater safety rules:\n- Never swim alone, always with adult\n- Only swim in safe places: pools, shallow areas\n- Don't run near water\n- Listen to lifeguard/adult instructions\nDangers of deep water\nWhat to do if someone is drowning: call for\nhelp, don't jump in\nActivity: Water safety posters, discussing safety\nrules"
+    },
+    {
+      "week": 2,
+      "topic": "Swimming: Water G Familiarization (Part 2) available):",
+      "content": "etting comfortable with water (if pool\n- Splashing face with water\n- Wetting hair and body gradually\n- Walking in shallow water\n- Sitting in shallow water\nIf no pool: Simulating movements on land\nOvercoming fear of water: gradual exposure,\ngames\nWater games: splashing gently, catching objects\nin shallow water\nFloating aids: arm bands, kickboards, life jackets\nActivity: Water play activities (supervised),\nland-based swimming movements"
+    },
+    {
+      "week": 3,
+      "topic": "Swimming: Basic Water Skills (Part 3) mouth",
+      "content": "Blowing bubbles: in water, making bubbles with\nHolding breath: taking deep breath, underwater\nfor few seconds (if pool available)\nFloating practice: lying on back with support,\nrelaxing in water\nKicking movements: sitting on edge, kicking\nlegs in water\nArm movements: paddling, scooping water\nIf no pool available: Practicing movements on\nbenches/mats\nActivity: Water confidence activities, movement\npractice"
+    },
+    {
+      "week": 4,
+      "topic": "Swimming: Swimming Safety Review and Fun (Part Swimming pool rules: no pushing, no running, 4) shower before entering",
+      "content": "Review of all water safety rules\nRecognizing dangerous situations near water\nEmergency procedures: calling for help,\nthrowing floatation device\nSwimming as exercise: good for whole body\nFun water activities and games (supervised)\nActivity: Water safety quiz, safe swimming\npractices demonstration"
+    },
+    {
+      "week": 5,
+      "topic": "MID-TERM EXAMINATION practical if pool available)",
+      "content": "Assessment of Weeks 1-4 (Written water safety,"
+    },
+    {
+      "week": 6,
+      "topic": "MID-TERM BREAK",
+      "content": "Holiday/Rest"
+    },
+    {
+      "week": 7,
+      "topic": "Health and Hygiene (Part 1): Personal Cleanliness and healthy",
+      "content": "Understanding hygiene: keeping our body clean\nDaily hygiene practices:\n- Bathing daily: morning and/or evening\n-Washing hands: before eating, after toilet, after\nplaying\n- Brushing teeth: morning and night, after meals\n- Washing face: morning and evening\n- Cutting nails: keeping them short and clean\nProper handwashing steps: wet, soap, scrub (20\nseconds), rinse, dry\nActivity: Handwashing practice, demonstrating\nhygiene routines"
+    },
+    {
+      "week": 8,
+      "topic": "Health and Hygiene (Part 2): Body Care tidy",
+      "content": "Hair care: washing regularly, combing, keeping\nEar care: cleaning outer ear gently, not putting\nobjects inside\nNose care: blowing nose with tissue, keeping\nclean\nClothing hygiene: wearing clean clothes daily,\nchanging underwear\nFoot care: washing feet, wearing clean socks,\nproper shoes\nWhy hygiene is important: staying healthy,\nsmelling good, preventing diseases\nDiseases from poor hygiene: stomach ache, skin\ninfections, lice\nActivity: Hygiene checklist, role-playing daily\nhygiene routines"
+    },
+    {
+      "week": 9,
+      "topic": "Health and Hygiene (Part 3): Food and Environmental - Washing hands before eating Hygiene - Eating clean, well-cooked food",
+      "content": "Food hygiene:\n- Washing fruits and vegetables\n- Not eating food that has fallen on ground\n- Covering food from flies and insects\nDrinking clean water: boiled or filtered water\nEnvironmental hygiene:\n- Keeping surroundings clean\n- Using dustbins for rubbish\n- Not littering\nActivity: Clean-up exercise in classroom/school\ncompound"
+    },
+    {
+      "week": 10,
+      "topic": "Health and Hygiene (Part 4): Toilet Hygiene and Healthy cleaning Habits Handwashing after using toilet (review and",
+      "content": "Proper use of toilet: sitting properly, flushing,\nemphasis)\nKeeping toilet clean: not throwing paper\neverywhere, telling adult if problems\nHealthy habits:\n- Getting enough sleep: 9-10 hours for children\n-Eating healthy food: fruits, vegetables, balanced\nmeals\n- Drinking enough water\n- Exercising/playing daily\nActivity: Creating \"Healthy Habits\" poster, daily\nroutine planning"
+    },
+    {
+      "week": 11,
+      "topic": "REVISION",
+      "content": "Review: Swimming safety, hygiene practices,\nhealthy habits"
+    },
+    {
+      "week": 12,
+      "topic": "EXAMINATION",
+      "content": "Written and oral assessment on health and\nhygiene"
+    },
+    {
+      "week": 13,
+      "topic": "CLOSING/VACATION PRIMARY 2 PHYSICAL AND HEALTH EDUCATION SCHEME OF WORK",
+      "content": "Term ends"
+    }
+  ]
 }

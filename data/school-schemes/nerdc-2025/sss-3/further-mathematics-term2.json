@@ -1,1 +1,42 @@
-{"class":"SSS 3","subject":"Further Mathematics","term":2,"weeks":[{"week":1,"topic":"Differentiation","content":"Rules and applications\nExam questions"},{"week":2,"topic":"Integration","content":"Techniques and areas\nExam questions"},{"week":3,"topic":"Kinematics","content":"Motion calculus\nExam questions"},{"week":4,"topic":"Statics","content":"Forces in equilibrium\nExam questions"},{"week":5,"topic":"Dynamics","content":"Newton laws advanced\nExam questions"},{"week":6,"topic":"Vectors","content":"Lines and planes\nExam questions"},{"week":7,"topic":"Probability distributions","content":"Binomial and normal\nExam questions"},{"week":8,"topic":"Data statistics","content":"Dispersion measures\nExam questions"},{"week":9,"topic":"Mock paper one","content":"Full paper\nMark and review"},{"week":10,"topic":"Revision and exam practice","content":"Past paper two\nMark and correct"}]}
+{
+  "class": "SSS 3",
+  "subject": "Further Mathematics",
+  "term": 2,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Integration",
+      "content": "Integration as the reverse process of differentiation; Integration of algebraic\npolynomials including logarithmic functions; Definite integrals and\napplication to kinematics (v-t and s-t graphs); Area under a curve;\nTrapezoidal rule; Volume of solids of revolution."
+    },
+    {
+      "week": 3,
+      "topic": "Conic Sections coordinates; Parametric equations of conic sections.",
+      "content": "Equations of parabola, ellipse and hyperbola in rectangular Cartesian"
+    },
+    {
+      "week": 5,
+      "topic": "Statics",
+      "content": "Forces in equilibrium; Resultant parallel forces (same and opposite\ndirections) acting on a rigid body; Moment of a force; Two and three forces\nacting at a point; Polygon of forces; Resolution of forces; Friction."
+    },
+    {
+      "week": 7,
+      "topic": "Modelling",
+      "content": "Introduction to mathematical modelling; Dependent and independent\nvariables; Construction of mathematical models; Applications to physical,\nbiological, social and behavioural sciences."
+    },
+    {
+      "week": 8,
+      "topic": "Game Theory sum games using pure and mixed strategies; Matrix games.",
+      "content": "Introduction to game theory; Types of games; Solution of two-person zero"
+    },
+    {
+      "week": 9,
+      "topic": "Revision",
+      "content": "General revision of second term topics."
+    },
+    {
+      "week": 10,
+      "topic": "Examination",
+      "content": "End of term examination."
+    }
+  ]
+}

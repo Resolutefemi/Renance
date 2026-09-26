@@ -1,57 +1,67 @@
 {
- "class": "SSS 2",
- "subject": "Agricultural Science",
- "term": 1,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Revision of SSS one work",
-   "content": "Crops and soils recap\nDiagnostic practical"
-  },
-  {
-   "week": 2,
-   "topic": "Crop improvement",
-   "content": "Methods of improvement\nSelect and breed talk"
-  },
-  {
-   "week": 3,
-   "topic": "Crop physiology: growth",
-   "content": "Growth curves\nMeasure growth"
-  },
-  {
-   "week": 4,
-   "topic": "Plant hormones talk",
-   "content": "Auxins and others\nApplications"
-  },
-  {
-   "week": 5,
-   "topic": "Crop production: beverages",
-   "content": "Cocoa production\nField practice"
-  },
-  {
-   "week": 6,
-   "topic": "Crop production: fibres",
-   "content": "Cotton production\nField practice"
-  },
-  {
-   "week": 7,
-   "topic": "Crop production: oil crops",
-   "content": "Oil palm production\nField practice"
-  },
-  {
-   "week": 8,
-   "topic": "Weed management: chemical",
-   "content": "Herbicide use\nApply safely"
-  },
-  {
-   "week": 9,
-   "topic": "Integrated pest management",
-   "content": "Combine methods\nProtect crops"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Term work review\nPractical quiz"
-  }
- ]
+  "class": "SSS 2",
+  "subject": "Agricultural Science",
+  "term": 1,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Farm Surveying and Planning",
+      "content": "Meaning of farm surveying; importance; instruments\nused; methods of land measurement; uses of surveying\ndata in agriculture."
+    },
+    {
+      "week": 2,
+      "topic": "Farm Planning",
+      "content": "Definition of farm planning; objectives; factors\ninfluencing farm planning; steps in farm planning;\nimportance to agricultural production."
+    },
+    {
+      "week": 3,
+      "topic": "Principles of Farmstead Planning and Location of (topography, soil type, water supply, nearness to market, Buildings/Structures accessibility); layout of farm structures (barn, silo, poultry",
+      "content": "Meaning of farmstead planning; factors affecting location\nhouse, fish pond, etc.)."
+    },
+    {
+      "week": 4,
+      "topic": "Forest Management",
+      "content": "Meaning; importance of forest to agriculture and\neconomy; methods of forest management (afforestation,\ncontrolled exploitation, taungya system, forest\nreservation)."
+    },
+    {
+      "week": 5,
+      "topic": "Agro-Forestry Practices in Nigeria shelter belts, windbreaks); benefits to soil fertility, erosion",
+      "content": "Definition of agroforestry; examples (alley cropping,\ncontrol, and biodiversity."
+    },
+    {
+      "week": 6,
+      "topic": "Importance of Ornamental Plants importance of ornamental plants.",
+      "content": "Economic, aesthetic, medicinal, and environmental"
+    },
+    {
+      "week": 7,
+      "topic": "Common Types of Ornamental Plants trees, climbers; examples of each.",
+      "content": "Flowering plants, foliage plants, shrubs, lawn grasses,"
+    },
+    {
+      "week": 8,
+      "topic": "Settings and Locations for Planting Each Type of to consider when locating ornamental plants. Ornamental Plant",
+      "content": "Home gardens, parks, schools, offices, roadsides; factors"
+    },
+    {
+      "week": 9,
+      "topic": "Methods of Cultivating Ornamental Plants use of cuttings; care and management.",
+      "content": "Direct seeding, transplanting, grafting, layering, budding,"
+    },
+    {
+      "week": 10,
+      "topic": "Revision",
+      "content": "Review of first term's work."
+    },
+    {
+      "week": 11,
+      "topic": "Examination",
+      "content": ""
+    },
+    {
+      "week": 12,
+      "topic": "Closing",
+      "content": ""
+    }
+  ]
 }

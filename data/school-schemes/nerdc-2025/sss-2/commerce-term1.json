@@ -1,57 +1,72 @@
 {
- "class": "SSS 2",
- "subject": "Commerce",
- "term": 1,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Revision of SSS one work",
-   "content": "Trade and aids recap\nDiagnostic test"
-  },
-  {
-   "week": 2,
-   "topic": "Business units: comparison",
-   "content": "Sole trade to company\nChoose a form"
-  },
-  {
-   "week": 3,
-   "topic": "Formation of companies",
-   "content": "Registration process\nDocuments required"
-  },
-  {
-   "week": 4,
-   "topic": "Shares and debentures",
-   "content": "Types of shares\nDebenture features"
-  },
-  {
-   "week": 5,
-   "topic": "Company meetings",
-   "content": "AGM basics\nResolutions talk"
-  },
-  {
-   "week": 6,
-   "topic": "Dissolution of businesses",
-   "content": "Reasons for closure\nWind up procedures"
-  },
-  {
-   "week": 7,
-   "topic": "Stock exchange: operations",
-   "content": "Trading process\nBrokers and jobbers"
-  },
-  {
-   "week": 8,
-   "topic": "Stock exchange: securities",
-   "content": "Shares and bonds\nRead market quotes"
-  },
-  {
-   "week": 9,
-   "topic": "Business mergers",
-   "content": "Reasons for mergers\nTypes explained"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Term work review\nClass quiz"
-  }
- ]
+  "class": "SSS 2",
+  "subject": "Commerce",
+  "term": 1,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Advertising I",
+      "content": "Meaning and importance of advertising; types of advertising\n(informative, persuasive, competitive)."
+    },
+    {
+      "week": 2,
+      "topic": "Advertising II",
+      "content": "Media of advertising (print, electronic, outdoor); advantages and\ndisadvantages of each medium."
+    },
+    {
+      "week": 3,
+      "topic": "Tourism in Nigeria tourism in economic development.",
+      "content": "Meaning and importance of tourism; tourist centers in Nigeria; role of"
+    },
+    {
+      "week": 4,
+      "topic": "Insurance",
+      "content": "Meaning and principles of insurance; types of insurance (life, marine,\nfire, accident); importance to business and individuals."
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Examination",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Banking I",
+      "content": "Meaning and types of banks; roles of commercial banks in business\ntransactions."
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "Banking II",
+      "content": "Central Bank of Nigeria: roles, functions, and control of commercial\nbanks."
+    },
+    {
+      "week": 9,
+      "topic": "Banking III",
+      "content": "Development banks, merchant banks, microfinance banks; their\ncontributions to economic growth."
+    },
+    {
+      "week": 10,
+      "topic": "Warehousing",
+      "content": "Meaning and importance of warehousing; types of warehouses;\nfunctions in commerce."
+    },
+    {
+      "week": 11,
+      "topic": "Revision",
+      "content": "Review of first term's work."
+    },
+    {
+      "week": 12,
+      "topic": "Examination",
+      "content": ""
+    },
+    {
+      "week": 13,
+      "topic": "Closing",
+      "content": ""
+    }
+  ]
 }

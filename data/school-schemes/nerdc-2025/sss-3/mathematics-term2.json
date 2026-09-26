@@ -1,1 +1,72 @@
-{"class":"SSS 3","subject":"Mathematics","term":2,"weeks":[{"week":1,"topic":"Statistics: measures","content":"Mean, median, mode, range\nGrouped data"},{"week":2,"topic":"Probability","content":"Combined events\nExam questions"},{"week":3,"topic":"Percentages and finance","content":"Interest, discount, tax\nExam questions"},{"week":4,"topic":"Mensuration","content":"Area and volume revision\nSector and segment"},{"week":5,"topic":"Transformation geometry","content":"Reflection, rotation, enlargement\nExam questions"},{"week":6,"topic":"Variation","content":"Direct, inverse, joint\nExam questions"},{"week":7,"topic":"Inequalities","content":"Linear inequalities\nGraph solutions"},{"week":8,"topic":"Word problems marathon","content":"Mixed applications\nTimed practice"},{"week":9,"topic":"Mock paper one","content":"Full paper\nMark and review"},{"week":10,"topic":"Revision and WAEC practice","content":"Past paper two\nMark and correct"}]}
+{
+  "class": "SSS 3",
+  "subject": "Mathematics",
+  "term": 2,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Review of First Term Work & Financial income tax, and value-added tax; solving problems on Mathematics interest, rates, and taxation using logarithm tables.",
+      "content": "Review test; introduction to bonds, debentures, shares,"
+    },
+    {
+      "week": 2,
+      "topic": "Coordinate Geometry of a Straight Line points; mid-point of a line; gradient and intercepts;",
+      "content": "Cartesian plane; plotting linear graphs; distance between\napplication of coordinate geometry in everyday life."
+    },
+    {
+      "week": 3,
+      "topic": "Construction I",
+      "content": "Locus of moving points equidistant from lines/points;\ncircumscribed, inscribed, and escribed circles; practical\nconstruction problems."
+    },
+    {
+      "week": 4,
+      "topic": "Differentiation of Algebraic Functions I functions; interpretation of derivatives of standard functions.",
+      "content": "Concept of limit; first principle of differentiation; derived"
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Examination",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Differentiation of Algebraic Functions II maxima, minima, and rates of change; application in business",
+      "content": "Application of differentiation to solve related problems;\nand capital markets."
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "Integration of Algebraic Functions parts, partial fractions); application of integration to real-life",
+      "content": "Standard integrals; methods of integration (substitution, by\nand capital market problems."
+    },
+    {
+      "week": 9,
+      "topic": "Functions and Mapping",
+      "content": "Concept of function; mapping; domain, co-domain, and\nrange; inverse functions; solving problems involving functions\nand their graphs."
+    },
+    {
+      "week": 10,
+      "topic": "General Review of Calculus applications of calculus in physics, engineering, and",
+      "content": "Mixed practice on differentiation and integration; real-life\neconomics."
+    },
+    {
+      "week": 11,
+      "topic": "Revision",
+      "content": "General revision of all term's topics with WAEC/NECO past\nquestions."
+    },
+    {
+      "week": 12,
+      "topic": "Examination",
+      "content": ""
+    },
+    {
+      "week": 13,
+      "topic": "Closing",
+      "content": ""
+    }
+  ]
+}

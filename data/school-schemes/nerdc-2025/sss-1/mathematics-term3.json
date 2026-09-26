@@ -1,57 +1,72 @@
 {
- "class": "SSS 1",
- "subject": "Mathematics",
- "term": 3,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Logarithms: applications",
-   "content": "Solve exponential equations\nGrowth problems"
-  },
-  {
-   "week": 2,
-   "topic": "Sequences: arithmetic",
-   "content": "nth term and sum\nReal life problems"
-  },
-  {
-   "week": 3,
-   "topic": "Sequences: geometric",
-   "content": "nth term and sum\nApplications"
-  },
-  {
-   "week": 4,
-   "topic": "Straight line graphs",
-   "content": "Gradient and intercept\nEquation of lines"
-  },
-  {
-   "week": 5,
-   "topic": "Trigonometry: sine and cosine rules",
-   "content": "Solve triangles\nBearings problems"
-  },
-  {
-   "week": 6,
-   "topic": "Circle geometry: tangents",
-   "content": "Tangent theorems\nSolve circle problems"
-  },
-  {
-   "week": 7,
-   "topic": "Statistics: dispersion",
-   "content": "Range and deviations\nCompare data"
-  },
-  {
-   "week": 8,
-   "topic": "Probability: combined events",
-   "content": "Tree diagrams\nMutually exclusive events"
-  },
-  {
-   "week": 9,
-   "topic": "Everyday mathematics",
-   "content": "Taxes and tariffs\nFinancial maths"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Year work review\nEnd of year quiz"
-  }
- ]
+  "class": "SSS 1",
+  "subject": "Mathematics",
+  "term": 3,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Mensuration I",
+      "content": "Length of arcs of circles - Sectors and segments of a circle"
+    },
+    {
+      "week": 2,
+      "topic": "Mensuration II",
+      "content": "Area of sectors and segments - Relationship between sector of\ncircle and surface area of a cone"
+    },
+    {
+      "week": 3,
+      "topic": "Surface Area of Solids",
+      "content": "Cube and cuboid - Cylinder, cone - Prism and pyramid - Using\nstandard formulas"
+    },
+    {
+      "week": 4,
+      "topic": "Volume of Solids",
+      "content": "Cube and cuboid - Cylinder, cone - Prism and pyramid - Using\nformulas correctly"
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Examination",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Area and Volume of Frustum area and volume of compound shapes",
+      "content": "Surface area and volume of frustum of cone and pyramid - Surface"
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "Statistics I",
+      "content": "Collection of meaningful data - Tabulation and presentation"
+    },
+    {
+      "week": 9,
+      "topic": "Statistics II",
+      "content": "Frequency distribution - Graphs: linear, bar charts, histograms"
+    },
+    {
+      "week": 10,
+      "topic": "Statistics III",
+      "content": "Pie charts - Frequency polygons"
+    },
+    {
+      "week": 11,
+      "topic": "Revision",
+      "content": ""
+    },
+    {
+      "week": 12,
+      "topic": "Examination",
+      "content": ""
+    },
+    {
+      "week": 13,
+      "topic": "Closing",
+      "content": ""
+    }
+  ]
 }

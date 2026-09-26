@@ -1,57 +1,57 @@
 {
- "class": "JSS 1",
- "subject": "Mathematics",
- "term": 3,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Statistics: measures of average",
-   "content": "Mean, median, mode\nFind all three"
-  },
-  {
-   "week": 2,
-   "topic": "Statistics: range and applications",
-   "content": "Spread of data\nReal data project"
-  },
-  {
-   "week": 3,
-   "topic": "Simple equations and inequalities",
-   "content": "Solve and graph\nNumber line work"
-  },
-  {
-   "week": 4,
-   "topic": "Graphs: Cartesian plane",
-   "content": "Plot coordinates\nLinear graphs"
-  },
-  {
-   "week": 5,
-   "topic": "Graphs: reading information",
-   "content": "Interpret graphs\nJourney graphs"
-  },
-  {
-   "week": 6,
-   "topic": "Scale drawing",
-   "content": "Map scales\nDraw to scale"
-  },
-  {
-   "week": 7,
-   "topic": "Mensuration: perimeter and area",
-   "content": "Rectangles and triangles\nComposite shapes"
-  },
-  {
-   "week": 8,
-   "topic": "Mensuration: volume and capacity",
-   "content": "Cuboids and cylinders\nWord problems"
-  },
-  {
-   "week": 9,
-   "topic": "Everyday arithmetic",
-   "content": "Taxes and bills\nSimple interest"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Year work review\nEnd of year quiz"
-  }
- ]
+  "class": "JSS 1",
+  "subject": "Mathematics",
+  "term": 3,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Simple Equations",
+      "content": "Solving one-variable linear equations."
+    },
+    {
+      "week": 2,
+      "topic": "Plane Shapes",
+      "content": "Properties of triangles, quadrilaterals, and circles."
+    },
+    {
+      "week": 3,
+      "topic": "Three-Dimensional Figures",
+      "content": "Cubes, cuboids, cylinders, spheres, and cones."
+    },
+    {
+      "week": 4,
+      "topic": "Constructions",
+      "content": "Basic geometric constructions using ruler and compass."
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Exams",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Angles",
+      "content": "Types of angles, angle sum properties of triangles &\nquadrilaterals."
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "Everyday Statistics I",
+      "content": "Need for statistics, importance in daily life."
+    },
+    {
+      "week": 9,
+      "topic": "Everyday Statistics II",
+      "content": "Methods of data collection."
+    },
+    {
+      "week": 10,
+      "topic": "Everyday Statistics III 11-13 Revision & Exams -",
+      "content": "Data presentation: tables, bar charts, pie charts."
+    }
+  ]
 }

@@ -1,57 +1,72 @@
 {
- "class": "SSS 1",
- "subject": "Literature in English",
- "term": 2,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Figures of speech: advanced",
-   "content": "Irony and symbolism\nApply in analysis"
-  },
-  {
-   "week": 2,
-   "topic": "Poetry: themes",
-   "content": "Find the themes\nCompare poems"
-  },
-  {
-   "week": 3,
-   "topic": "Poetry: form and structure",
-   "content": "Sonnet and ode\nStudy the forms"
-  },
-  {
-   "week": 4,
-   "topic": "Drama: plot development",
-   "content": "Rising action to climax\nMap the plot"
-  },
-  {
-   "week": 5,
-   "topic": "Drama: characters",
-   "content": "Round and flat\nCharacterise roles"
-  },
-  {
-   "week": 6,
-   "topic": "Drama: themes",
-   "content": "Extract themes\nSupport with text"
-  },
-  {
-   "week": 7,
-   "topic": "Prose: point of view",
-   "content": "First and third person\nIdentify the voice"
-  },
-  {
-   "week": 8,
-   "topic": "Prose: themes",
-   "content": "Extract and discuss\nTextual evidence"
-  },
-  {
-   "week": 9,
-   "topic": "Literary terms mastery",
-   "content": "Glossary building\nQuiz practice"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Term work review\nClass quiz"
-  }
- ]
+  "class": "SSS 1",
+  "subject": "Literature in English",
+  "term": 2,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Introduction to African Drama",
+      "content": "Features of African Drama - Oral tradition and\ncultural elements in African plays"
+    },
+    {
+      "week": 2,
+      "topic": "African Drama: Bosede Ademilua- Afolayan's Once Upon an Elephant I text - Setting and summary of Act One",
+      "content": "Background of the playwright - Background of the"
+    },
+    {
+      "week": 3,
+      "topic": "African Drama: Once Upon an Elephant II characterization",
+      "content": "Plot summary (Act Two) - Themes and"
+    },
+    {
+      "week": 4,
+      "topic": "African Drama: Efua Sutherland's The Marriage of Anansewa I text - Plot summary and analysis of Act One",
+      "content": "Background of the playwright - Background of the"
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Examination",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "African Drama: The Marriage of Anansewa II values and moral lessons",
+      "content": "Themes, style, and characterization - Cultural"
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "Non-African Drama: J. D. Priestley's An Inspector Calls I - Setting and summary (Acts I-II)",
+      "content": "Background of the playwright - Historical context"
+    },
+    {
+      "week": 9,
+      "topic": "Non-African Drama: An Inspector Calls II commentary and moral implications",
+      "content": "Themes, style, and characterization - Social"
+    },
+    {
+      "week": 10,
+      "topic": "Non-African Drama: Robert Bolt's A - Man for All Seasons integrity, conscience, and power",
+      "content": "Background of the playwright - Themes of"
+    },
+    {
+      "week": 11,
+      "topic": "Revision",
+      "content": "Review of all topics and plays (Weeks 1-10)"
+    },
+    {
+      "week": 12,
+      "topic": "Examination",
+      "content": ""
+    },
+    {
+      "week": 13,
+      "topic": "Closing",
+      "content": ""
+    }
+  ]
 }

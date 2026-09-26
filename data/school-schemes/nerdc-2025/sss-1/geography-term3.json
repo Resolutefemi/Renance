@@ -1,57 +1,72 @@
 {
- "class": "SSS 1",
- "subject": "Geography",
- "term": 3,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Population of Nigeria",
-   "content": "Distribution and structure\nPopulation problems"
-  },
-  {
-   "week": 2,
-   "topic": "Settlement: types",
-   "content": "Rural and urban\nSettlement patterns"
-  },
-  {
-   "week": 3,
-   "topic": "Urbanisation",
-   "content": "Growth of cities\nProblems and solutions"
-  },
-  {
-   "week": 4,
-   "topic": "Resources of Nigeria",
-   "content": "Minerals and power\nResource management"
-  },
-  {
-   "week": 5,
-   "topic": "ECOWAS",
-   "content": "Member countries\nBenefits of integration"
-  },
-  {
-   "week": 6,
-   "topic": "Africa: physical features",
-   "content": "Relief and drainage\nKey features studied"
-  },
-  {
-   "week": 7,
-   "topic": "Africa: climate and vegetation",
-   "content": "Zones explained\nInterdependence"
-  },
-  {
-   "week": 8,
-   "topic": "World: selected regions",
-   "content": "Case studies\nCompare regions"
-  },
-  {
-   "week": 9,
-   "topic": "Field work project",
-   "content": "Plan and execute\nReport the findings"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Year work review\nEnd of year quiz"
-  }
- ]
+  "class": "SSS 1",
+  "subject": "Geography",
+  "term": 3,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Population of Nigeria",
+      "content": "Size, distribution, density, factors influencing\npopulation"
+    },
+    {
+      "week": 2,
+      "topic": "Resources of Nigeria",
+      "content": "Types: human and natural; distribution and\nimportance"
+    },
+    {
+      "week": 3,
+      "topic": "Basic Concepts in Map Reading",
+      "content": "Scale, direction, symbols, conventional signs"
+    },
+    {
+      "week": 4,
+      "topic": "Map Distances",
+      "content": "Methods of measuring distances on maps"
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Examination",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Map Reduction and Enlargement",
+      "content": "Techniques, practical exercises"
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "Interpretation of Physical and Cultural Features",
+      "content": "Relief, drainage, settlement, transport features"
+    },
+    {
+      "week": 9,
+      "topic": "Transportation",
+      "content": "Modes: road, rail, water, air; importance and\nproblems"
+    },
+    {
+      "week": 10,
+      "topic": "-",
+      "content": ""
+    },
+    {
+      "week": 11,
+      "topic": "Revision",
+      "content": ""
+    },
+    {
+      "week": 12,
+      "topic": "Examination",
+      "content": ""
+    },
+    {
+      "week": 13,
+      "topic": "Closing",
+      "content": ""
+    }
+  ]
 }

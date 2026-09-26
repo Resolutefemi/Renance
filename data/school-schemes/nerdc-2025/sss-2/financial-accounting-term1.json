@@ -1,57 +1,67 @@
 {
- "class": "SSS 2",
- "subject": "Financial Accounting",
- "term": 1,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Revision of SSS one work",
-   "content": "Final accounts recap\nDiagnostic exercise"
-  },
-  {
-   "week": 2,
-   "topic": "Capital and revenue expenditure",
-   "content": "Distinguish correctly\nClassify items"
-  },
-  {
-   "week": 3,
-   "topic": "Depreciation: methods",
-   "content": "Straight line and reducing balance\nCompute depreciation"
-  },
-  {
-   "week": 4,
-   "topic": "Asset disposal",
-   "content": "Disposal accounts\nCompute profit or loss"
-  },
-  {
-   "week": 5,
-   "topic": "Accruals and prepayments: advanced",
-   "content": "Adjust entries\nPrepare adjusted accounts"
-  },
-  {
-   "week": 6,
-   "topic": "Bad debts and provisions",
-   "content": "Provision for doubtful debts\nAdjust the accounts"
-  },
-  {
-   "week": 7,
-   "topic": "Final accounts: adjustments",
-   "content": "Incorporate adjustments\nPrepare statements"
-  },
-  {
-   "week": 8,
-   "topic": "Manufacturing accounts basics",
-   "content": "Prime cost talk\nPrepare the account"
-  },
-  {
-   "week": 9,
-   "topic": "Control accounts: advanced",
-   "content": "Reconcile ledgers\nLocate errors"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Term work review\nClass quiz"
-  }
- ]
+  "class": "SSS 2",
+  "subject": "Financial Accounting",
+  "term": 1,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Profit and Loss Appropriation Account account and profit and loss appropriation account; items",
+      "content": "Meaning and purpose; differences between profit and loss\nappearing in the account (interest on drawings, interest on\ncapital, partners' salary, partners' commission, share of\nprofit/loss)."
+    },
+    {
+      "week": 2,
+      "topic": "Partnership Capital Account fixed and fluctuating capital accounts; format and preparation.",
+      "content": "Definition; features of capital accounts; distinction between"
+    },
+    {
+      "week": 3,
+      "topic": "Partnership Current Account current account (drawings, interest on drawings, partners'",
+      "content": "Meaning; purpose; format of current account; items affecting\nsalary, interest on capital, share of profit/loss)."
+    },
+    {
+      "week": 4,
+      "topic": "Current Account in Partnership Accounting of current accounts under fixed capital method; worked",
+      "content": "Relationship between capital and current accounts; preparation\nexamples."
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Examination",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Admission of a New Partner and Goodwill of valuation; treatment of goodwill on admission of a new Account partner; revaluation of assets and liabilities.",
+      "content": "Meaning of goodwill; types (purchased and inherent); methods"
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "Receipts and Payments Account / Income and account and income and expenditure account; preparation of Expenditure Account accounts.",
+      "content": "Meaning; features; differences between receipts and payments"
+    },
+    {
+      "week": 9,
+      "topic": "Single Entry (Incomplete Records) entry; statement of affairs method; preparation of final accounts",
+      "content": "Meaning; limitations; conversion of single entry to double\nfrom incomplete records."
+    },
+    {
+      "week": 10,
+      "topic": "Revision",
+      "content": "Review of first term's work."
+    },
+    {
+      "week": 11,
+      "topic": "Examination",
+      "content": ""
+    },
+    {
+      "week": 12,
+      "topic": "Closing",
+      "content": ""
+    }
+  ]
 }

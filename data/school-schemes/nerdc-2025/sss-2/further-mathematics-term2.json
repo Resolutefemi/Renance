@@ -1,57 +1,72 @@
 {
- "class": "SSS 2",
- "subject": "Further Mathematics",
- "term": 2,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Application of integration",
-   "content": "Areas between curves\nVolumes of revolution"
-  },
-  {
-   "week": 2,
-   "topic": "Matrices: 3x3",
-   "content": "Determinants and inverses\nSolve systems"
-  },
-  {
-   "week": 3,
-   "topic": "Linear transformations: 2D",
-   "content": "Matrices and geometry\nFind invariant points"
-  },
-  {
-   "week": 4,
-   "topic": "Vectors: 3D",
-   "content": "Direction cosines\nDot and cross products"
-  },
-  {
-   "week": 5,
-   "topic": "Statics: friction",
-   "content": "Laws of friction\nAngle of friction"
-  },
-  {
-   "week": 6,
-   "topic": "Dynamics: projectiles",
-   "content": "Range and height\nSolve problems"
-  },
-  {
-   "week": 7,
-   "topic": "Dynamics: connected particles",
-   "content": "Pulleys and planes\nSolve systems"
-  },
-  {
-   "week": 8,
-   "topic": "Probability: distributions",
-   "content": "Binomial distribution\nMean and variance"
-  },
-  {
-   "week": 9,
-   "topic": "Statistics: correlation",
-   "content": "Scatter diagrams\nRegression intro"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Term work review\nClass quiz"
-  }
- ]
+  "class": "SSS 2",
+  "subject": "Further Mathematics",
+  "term": 2,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Limits of Functions and Differentiation from First Principle using first principle.",
+      "content": "Concept of limits; evaluation; differentiation"
+    },
+    {
+      "week": 2,
+      "topic": "Rules of Differentiation I",
+      "content": "Differentiation of algebraic functions using power\nrule, constant rule, and sum/difference rule."
+    },
+    {
+      "week": 3,
+      "topic": "Rules of Differentiation II",
+      "content": "Product rule, quotient rule, chain rule."
+    },
+    {
+      "week": 4,
+      "topic": "Differentiation of Trigonometric, Logarithmic, and Exponential Functions",
+      "content": "Standard derivatives; application to problems."
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Examination",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Application of Differentiation",
+      "content": "Rate of change; velocity and acceleration;\nequation of motion."
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "Maximum and Minimum Points and Values applications.",
+      "content": "Turning points of curves; second derivative test;"
+    },
+    {
+      "week": 9,
+      "topic": "The Circle",
+      "content": "Definition; general equation of a circle; equation\nof tangent; length of tangent."
+    },
+    {
+      "week": 10,
+      "topic": "Conic Sections I",
+      "content": "Parabola, ellipse, hyperbola: definitions and\nequations."
+    },
+    {
+      "week": 11,
+      "topic": "Conic Sections II",
+      "content": "Properties and graphs of conic sections;\napplications."
+    },
+    {
+      "week": 12,
+      "topic": "Conic Sections III",
+      "content": "Continuation of parabola, ellipse, and hyperbola."
+    },
+    {
+      "week": 13,
+      "topic": "Sample Space and Events",
+      "content": "Event space; independent and dependent events;\nprobability."
+    }
+  ]
 }

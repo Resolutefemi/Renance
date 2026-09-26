@@ -1,57 +1,72 @@
 {
- "class": "Primary 5",
- "subject": "Cultural and Creative Arts",
- "term": 3,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Sculpture: paper and clay",
-   "content": "Armature basics\nMake a figure"
-  },
-  {
-   "week": 2,
-   "topic": "Textile: applique",
-   "content": "Cut and stitch layers\nMake a wall hanging"
-  },
-  {
-   "week": 3,
-   "topic": "Batik basics",
-   "content": "Wax and dye\nMake patterns"
-  },
-  {
-   "week": 4,
-   "topic": "Music: harmony singing",
-   "content": "Two and three parts\nPerform in choir"
-  },
-  {
-   "week": 5,
-   "topic": "Concert production",
-   "content": "Programme and rehearsal\nClass concert"
-  },
-  {
-   "week": 6,
-   "topic": "Dance drama: full production",
-   "content": "Story, music, dance\nPerform for school"
-  },
-  {
-   "week": 7,
-   "topic": "Film and video basics",
-   "content": "Storyboard a short\nShoot with a tablet"
-  },
-  {
-   "week": 8,
-   "topic": "Art and technology",
-   "content": "Digital drawing apps\nCreate digital art"
-  },
-  {
-   "week": 9,
-   "topic": "Portfolio building",
-   "content": "Select my best works\nPresent my portfolio"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Year work review\nEnd of year exhibition"
-  }
- ]
+  "class": "Primary 5",
+  "subject": "Cultural and Creative Arts",
+  "term": 3,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Creating Music with Solfa Notation I solfa syllables - doh, ray, me, fah, soh, lah, te,",
+      "content": "Introduction to solfa notation (Tonic Sol-fa); The\ndoh'; Hand signs for solfa; Singing simple\nmelodies using solfa; Relationship between solfa\nand staff notation"
+    },
+    {
+      "week": 2,
+      "topic": "Creating Music with Solfa Notation II melodies in solfa notation; Singing in parts;",
+      "content": "Creating simple melodies using solfa; Writing\nHarmony basics; Composing short songs;\nPerforming solfa compositions"
+    },
+    {
+      "week": 3,
+      "topic": "Dance Motifs",
+      "content": "Meaning of dance motifs; Basic movement motifs\nin Nigerian dances; Creating simple dance motifs;\nRepetition and variation; Combining motifs into\nsequences; Cultural significance of movement\npatterns"
+    },
+    {
+      "week": 4,
+      "topic": "Components of Dance",
+      "content": "Body awareness - shapes, levels, directions; Space\n- personal and general space, pathways; Time -\nfast, slow, rhythm, tempo; Energy - strong, light,\nsmooth, sharp; Relationships - solo, partner,\ngroup"
+    },
+    {
+      "week": 5,
+      "topic": "MIDTERM EXAMINATION",
+      "content": "Assessment of topics covered in weeks 1-4"
+    },
+    {
+      "week": 6,
+      "topic": "MIDTERM BREAK",
+      "content": "Rest and relaxation period"
+    },
+    {
+      "week": 7,
+      "topic": "Techniques in Dance",
+      "content": "Warm-up and stretching exercises; Balance and\ncoordination; Turns and jumps; Floor work;\nPartnering techniques; Cultural dance techniques\nfrom Nigerian ethnic groups; Choreography\nbasics"
+    },
+    {
+      "week": 8,
+      "topic": "Creating a Play - Honesty/Integrity/Right attitude to work; Story development; Plot Attitude to Work I structure - beginning, middle, end; Character",
+      "content": "Understanding themes - honesty, integrity, right\ncreation; Setting and conflict; Writing dialogue;\nScript format"
+    },
+    {
+      "week": 9,
+      "topic": "Creating a Play - Honesty/Integrity/Right Stage directions; Costume and props planning; Attitude to Work II Teamwork in production; Performing the play;",
+      "content": "Completing the script; Rehearsal techniques;\nReflection and critique"
+    },
+    {
+      "week": 10,
+      "topic": "Acting, Impersonation, and Role Play I role play; Voice control and projection; Facial",
+      "content": "Difference between acting, impersonation, and\nexpressions and body language; Character\ndevelopment; Emotions and motivations;\nImprovisation exercises"
+    },
+    {
+      "week": 11,
+      "topic": "Acting, Impersonation, and Role Play II & Developing Physicality of characters; Character relationships; Character Sustaining character throughout performance;",
+      "content": "Deep character analysis; Backstory creation;\nTransforming into different characters;\nPerformance practice"
+    },
+    {
+      "week": 12,
+      "topic": "EXAMINATION En",
+      "content": "d of term assessment - theory and practical\nperformance"
+    },
+    {
+      "week": 13,
+      "topic": "CLOSING Re",
+      "content": "port card distribution; Vacation assignment;\nFinal performance showcase"
+    }
+  ]
 }

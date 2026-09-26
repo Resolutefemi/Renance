@@ -1,57 +1,72 @@
 {
- "class": "SSS 1",
- "subject": "Physics",
- "term": 2,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Heat: expansion",
-   "content": "Solids, liquids, gases\nApplications of expansion"
-  },
-  {
-   "week": 2,
-   "topic": "Heat transfer",
-   "content": "Conduction, convection, radiation\nExperiments"
-  },
-  {
-   "week": 3,
-   "topic": "Waves: basics",
-   "content": "Types of waves\nWave properties"
-  },
-  {
-   "week": 4,
-   "topic": "Light: reflection",
-   "content": "Plane mirrors\nLaws of reflection"
-  },
-  {
-   "week": 5,
-   "topic": "Light: refraction",
-   "content": "Snell's law\nRefraction experiments"
-  },
-  {
-   "week": 6,
-   "topic": "Light: lenses",
-   "content": "Convex and concave\nImage formation"
-  },
-  {
-   "week": 7,
-   "topic": "Sound: production and propagation",
-   "content": "Vibrations\nSpeed of sound"
-  },
-  {
-   "week": 8,
-   "topic": "Sound: characteristics",
-   "content": "Pitch and loudness\nResonance talk"
-  },
-  {
-   "week": 9,
-   "topic": "Electricity: electrostatics",
-   "content": "Charges and fields\nElectroscope"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Term work review\nClass quiz"
-  }
- ]
+  "class": "SSS 1",
+  "subject": "Physics",
+  "term": 2,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Linear Momentum: Newton's Laws of Motion of momentum",
+      "content": "Newton's laws, momentum, impulse, conservation"
+    },
+    {
+      "week": 2,
+      "topic": "Work, Energy and Power",
+      "content": "Definitions, equations, work done in different\ncontexts"
+    },
+    {
+      "week": 3,
+      "topic": "Mechanical Energy: Machines",
+      "content": "Simple machines, efficiency, mechanical\nadvantage, velocity ratio"
+    },
+    {
+      "week": 4,
+      "topic": "Heat Energy I: Temperature and Its Measurement",
+      "content": "Concept of heat, temperature scales, thermometers"
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Examination",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Heat Energy II: Heat Measurement",
+      "content": "Specific heat capacity, latent heat, calorimetry"
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "Particulate Nature of Matter",
+      "content": "Molecular theory, evidence of particle nature,\nBrownian motion"
+    },
+    {
+      "week": 9,
+      "topic": "Particulate Nature of Matter (Continued)",
+      "content": "Diffusion, pressure in gases, applications"
+    },
+    {
+      "week": 10,
+      "topic": "Particulate Nature of Matter (Continued)",
+      "content": "Real-life applications of particle theory"
+    },
+    {
+      "week": 11,
+      "topic": "Revision",
+      "content": ""
+    },
+    {
+      "week": 12,
+      "topic": "Examination",
+      "content": ""
+    },
+    {
+      "week": 13,
+      "topic": "Closing",
+      "content": ""
+    }
+  ]
 }

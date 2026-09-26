@@ -1,0 +1,57 @@
+{
+  "class": "SSS 1",
+  "subject": "Solar Photovoltaic Installation and Maintenance",
+  "term": 2,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Basic Electrical Concepts",
+      "content": "Current, voltage, resistance, power (Ohm's law)"
+    },
+    {
+      "week": 2,
+      "topic": "Tools & Instruments in PV Installation",
+      "content": "Multimeter, clamp meter, solar tester, hand tools"
+    },
+    {
+      "week": 3,
+      "topic": "Solar Panel Connections I",
+      "content": "Series connection, voltage effects"
+    },
+    {
+      "week": 4,
+      "topic": "Solar Panel Connections II",
+      "content": "Parallel connection, current effects"
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Test",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Solar Panel Mounting Structures",
+      "content": "Types, orientations, tilt angle, site assessment"
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "Wiring & Cabling",
+      "content": "DC & AC cabling, cable sizing, safety"
+    },
+    {
+      "week": 9,
+      "topic": "Earthing & Protection",
+      "content": "Surge protectors, grounding systems, circuit\nbreakers"
+    },
+    {
+      "week": 10,
+      "topic": "Practical: Small Solar Setup 11-13 Revision & Exams",
+      "content": "Assembling a 12V DC lighting system"
+    }
+  ]
+}

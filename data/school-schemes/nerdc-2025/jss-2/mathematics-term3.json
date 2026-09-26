@@ -1,57 +1,72 @@
 {
- "class": "JSS 2",
- "subject": "Mathematics",
- "term": 3,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Numbers: rational and irrational",
-   "content": "Classify numbers\nOperations review"
-  },
-  {
-   "week": 2,
-   "topic": "Algebra: simultaneous equations",
-   "content": "Elimination and substitution\nSolve problems"
-  },
-  {
-   "week": 3,
-   "topic": "Algebra: quadratic equations",
-   "content": "Solve by factorisation\nApply to problems"
-  },
-  {
-   "week": 4,
-   "topic": "Geometry: polygons",
-   "content": "Interior and exterior angles\nRegular polygons"
-  },
-  {
-   "week": 5,
-   "topic": "Geometry: transformations",
-   "content": "Reflection and rotation\nTransform shapes"
-  },
-  {
-   "week": 6,
-   "topic": "Statistics: median and quartiles",
-   "content": "Find medians\nCumulative frequency basics"
-  },
-  {
-   "week": 7,
-   "topic": "Probability: applications",
-   "content": "Dice and coin problems\nReal life probability"
-  },
-  {
-   "week": 8,
-   "topic": "Mensuration: cylinders and cones",
-   "content": "Volume and surface area\nSolve applications"
-  },
-  {
-   "week": 9,
-   "topic": "Everyday mathematics",
-   "content": "Taxes, bills, budgets\nProject work"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Year work review\nEnd of year quiz"
-  }
- ]
+  "class": "JSS 2",
+  "subject": "Mathematics",
+  "term": 3,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Revision of Second Term's Examination",
+      "content": "Representation of real-life situations on a graph and reasons."
+    },
+    {
+      "week": 2,
+      "topic": "Angles and Polygons",
+      "content": "Definition of angles; construction of more angles (75°, 105°, 120°, 135°\netc.); definition of polygon with examples; sum of interior angles of a\nregular polygon as (2n − 4) right angles; solving problems on interior\nangles of convex polygons."
+    },
+    {
+      "week": 3,
+      "topic": "Angles of Elevation and Depression problems by measuring angles of elevation; definition of angle of",
+      "content": "Definition of angle of elevation with practical illustrations; solving\ndepression with practical examples; calculating distances and heights\nusing scale drawings; solving quantitative aptitude problems on angles."
+    },
+    {
+      "week": 4,
+      "topic": "Bearings and Distances I distances and bearings using scale drawing.",
+      "content": "Identifying the cardinal points; locating positions of objects; finding"
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Examination",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Bearings and Distances II side, 3 sides); bisecting given angles.",
+      "content": "Constructing triangles (2 sides & included angle, 2 angles & included"
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "Statistics I - Data Presentation data in ordered forms and frequency tables.",
+      "content": "Collecting data from home, school, church, and market; presenting"
+    },
+    {
+      "week": 9,
+      "topic": "Statistics II - Graphical Representation everyday life.",
+      "content": "Plotting pie charts; interpreting data and stating their usefulness in"
+    },
+    {
+      "week": 10,
+      "topic": "Probability",
+      "content": "Definition of probability as chances/events; importance and usefulness\nin daily activities; examples of chances/events; generating events using\nludo and tossing of coins; solving simple problems; calculating\nprobability of events from experiments."
+    },
+    {
+      "week": 11,
+      "topic": "Revision",
+      "content": "General revision of all topics taught during the term."
+    },
+    {
+      "week": 12,
+      "topic": "Examination",
+      "content": "Third Term Examination."
+    },
+    {
+      "week": 13,
+      "topic": "Vacation",
+      "content": "End of session activities."
+    }
+  ]
 }

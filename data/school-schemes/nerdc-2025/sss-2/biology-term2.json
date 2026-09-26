@@ -1,57 +1,72 @@
 {
- "class": "SSS 2",
- "subject": "Biology",
- "term": 2,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Hormonal coordination",
-   "content": "Pituitary and adrenal\nHormone disorders talk"
-  },
-  {
-   "week": 2,
-   "topic": "Sense organs: eye",
-   "content": "Structure and function\nImage formation"
-  },
-  {
-   "week": 3,
-   "topic": "Sense organs: ear",
-   "content": "Hearing and balance\nCare of the ear"
-  },
-  {
-   "week": 4,
-   "topic": "Reproduction: gametogenesis",
-   "content": "Sperm and ova\nHormonal control talk"
-  },
-  {
-   "week": 5,
-   "topic": "Development: pregnancy",
-   "content": "Implantation to birth\nAnte natal care"
-  },
-  {
-   "week": 6,
-   "topic": "Genetics: chromosomes",
-   "content": "Genes and DNA talk\nChromosome numbers"
-  },
-  {
-   "week": 7,
-   "topic": "Genetics: dihybrid crosses",
-   "content": "Mendel extended\nSolve crosses"
-  },
-  {
-   "week": 8,
-   "topic": "Genetics: sex determination",
-   "content": "XX and XY\nSex linked traits"
-  },
-  {
-   "week": 9,
-   "topic": "Evolution: mechanisms",
-   "content": "Natural selection\nSpeciation talk"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Term work review\nClass quiz"
-  }
- ]
+  "class": "SSS 2",
+  "subject": "Biology",
+  "term": 2,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Ecological Management",
+      "content": "Meaning of ecology; concepts of association, tolerance and\nadaptation; examples in plants and animals."
+    },
+    {
+      "week": 2,
+      "topic": "Pollution",
+      "content": "Meaning and types (air, water, soil, noise); causes, effects and\ncontrol of pollution."
+    },
+    {
+      "week": 3,
+      "topic": "Conservation of Natural Resources soil, water, forests and wildlife.",
+      "content": "Meaning of conservation; methods; importance of conserving"
+    },
+    {
+      "week": 4,
+      "topic": "Pests and Diseases of Crops preventive and control measures.",
+      "content": "Types of crop pests and diseases; effects on crop production;"
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Examination",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Reproductive Systems in Vertebrates amphibians, reptiles, birds and mammals.",
+      "content": "Structures and functions of reproductive systems in fish,"
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "Reproductive Systems in Plants monocot and dicot flowers.",
+      "content": "Floral parts and their functions; types of flowers; comparison of"
+    },
+    {
+      "week": 9,
+      "topic": "Pollination in Plants",
+      "content": "Self- and cross-pollination; agents of pollination; advantages and\ndisadvantages."
+    },
+    {
+      "week": 10,
+      "topic": "Regulation of Internal Environment salt balance; role of the skin, kidney and hormones.",
+      "content": "Homeostasis in humans; regulation of temperature, water and"
+    },
+    {
+      "week": 11,
+      "topic": "Revision",
+      "content": "Review of second term's work."
+    },
+    {
+      "week": 12,
+      "topic": "Examination",
+      "content": ""
+    },
+    {
+      "week": 13,
+      "topic": "Closing",
+      "content": ""
+    }
+  ]
 }

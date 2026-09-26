@@ -1,57 +1,72 @@
 {
- "class": "SSS 2",
- "subject": "Biology",
- "term": 1,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Revision of SSS one work",
-   "content": "Cell and systems recap\nDiagnostic test"
-  },
-  {
-   "week": 2,
-   "topic": "Photosynthesis: deep dive",
-   "content": "Light and dark reactions\nChromatography talk"
-  },
-  {
-   "week": 3,
-   "topic": "Chemosynthesis talk",
-   "content": "Bacteria nutrition\nCompare with photosynthesis"
-  },
-  {
-   "week": 4,
-   "topic": "Respiration: glycolysis",
-   "content": "Breakdown of glucose\nEnergy yield talk"
-  },
-  {
-   "week": 5,
-   "topic": "Respiration: aerobic pathways",
-   "content": "Krebs overview\nMitochondria role"
-  },
-  {
-   "week": 6,
-   "topic": "Anaerobic respiration",
-   "content": "Fermentation\nApplications in industry"
-  },
-  {
-   "week": 7,
-   "topic": "Excretion: kidney function",
-   "content": "Nephron structure\nDialysis talk"
-  },
-  {
-   "week": 8,
-   "topic": "Homeostasis",
-   "content": "Temperature and sugar control\nFeedback mechanisms"
-  },
-  {
-   "week": 9,
-   "topic": "Nervous coordination: synapse",
-   "content": "Impulse transmission\nReflex action study"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Term work review\nClass quiz"
-  }
- ]
+  "class": "SSS 2",
+  "subject": "Biology",
+  "term": 1,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Digestive System I",
+      "content": "Organs of the alimentary canal; associated glands; mechanical and\nchemical digestion."
+    },
+    {
+      "week": 2,
+      "topic": "Digestive System II",
+      "content": "Enzymes of digestion; absorption of digested food; assimilation and\negestion."
+    },
+    {
+      "week": 3,
+      "topic": "Transportation System I between diffusion, osmosis and active transport.",
+      "content": "Transport in unicellular and multicellular organisms; differences"
+    },
+    {
+      "week": 4,
+      "topic": "Transportation System II blood vessels and blood components.",
+      "content": "Circulatory system in mammals; structure and functions of the heart,"
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Examination",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Respiratory System I",
+      "content": "Meaning of respiration; structure of the respiratory system in man;\nbreathing mechanism."
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "Respiratory System II importance and energy yield.",
+      "content": "Types of respiration (aerobic and anaerobic); comparison;"
+    },
+    {
+      "week": 9,
+      "topic": "Excretory System",
+      "content": "Excretory organs in man; structure and functions of the kidney;\nexcretory products; disorders of the excretory system."
+    },
+    {
+      "week": 10,
+      "topic": "Nutrient Cycling in Nature to living organisms.",
+      "content": "Cycles of carbon, nitrogen and water; importance of nutrient cycling"
+    },
+    {
+      "week": 11,
+      "topic": "Revision",
+      "content": "Review of first term's work."
+    },
+    {
+      "week": 12,
+      "topic": "Examination",
+      "content": ""
+    },
+    {
+      "week": 13,
+      "topic": "Closing",
+      "content": ""
+    }
+  ]
 }

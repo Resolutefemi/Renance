@@ -1,57 +1,72 @@
 {
- "class": "SSS 2",
- "subject": "Further Mathematics",
- "term": 1,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Revision of SSS one further maths",
-   "content": "Core topics recap\nDiagnostic test"
-  },
-  {
-   "week": 2,
-   "topic": "Polynomials: roots",
-   "content": "Symmetric functions\nForm new equations"
-  },
-  {
-   "week": 3,
-   "topic": "Rational functions",
-   "content": "Partial fractions\nDecompose expressions"
-  },
-  {
-   "week": 4,
-   "topic": "Binomial theorem",
-   "content": "Expand expressions\nFind specific terms"
-  },
-  {
-   "week": 5,
-   "topic": "Trigonometry: identities advanced",
-   "content": "Factor formulas\nSolve equations"
-  },
-  {
-   "week": 6,
-   "topic": "Trigonometry: inverse functions",
-   "content": "Evaluate inverses\nSolve equations"
-  },
-  {
-   "week": 7,
-   "topic": "Calculus: limits",
-   "content": "Evaluate limits\nContinuity talk"
-  },
-  {
-   "week": 8,
-   "topic": "Differentiation: implicit",
-   "content": "Differentiate implicitly\nFind tangents"
-  },
-  {
-   "week": 9,
-   "topic": "Integration: advanced techniques",
-   "content": "By parts intro\nSubstitutions advanced"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Term work review\nClass quiz"
-  }
- ]
+  "class": "SSS 2",
+  "subject": "Further Mathematics",
+  "term": 1,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Solution to Quadratic Equation",
+      "content": "Methods of solving quadratic equations:\nfactorization, completing the square, quadratic\nformula; word problems."
+    },
+    {
+      "week": 2,
+      "topic": "Tangent and Normal to Curve",
+      "content": "Meaning; derivation of tangent and normal\nequations; applications in coordinate geometry."
+    },
+    {
+      "week": 3,
+      "topic": "Polynomials I",
+      "content": "Definition; degree of polynomials; addition,\nsubtraction, multiplication; long division."
+    },
+    {
+      "week": 4,
+      "topic": "Polynomials II",
+      "content": "Factor and remainder theorem; applications in\nsimplifying algebraic expressions."
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Examination",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Polynomials II (Cont.)",
+      "content": "Application of factor and remainder theorem;\nsolving higher order equations."
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "Cubic Equations and their Factorization",
+      "content": "Factorization of cubic expressions; methods of\nsolution."
+    },
+    {
+      "week": 9,
+      "topic": "Logical Reasoning I",
+      "content": "Statements; truth table; negation, conjunction,\ndisjunction."
+    },
+    {
+      "week": 10,
+      "topic": "Logical Reasoning II",
+      "content": "Conditional and biconditional statements;\ntautology and contradiction."
+    },
+    {
+      "week": 11,
+      "topic": "Trigonometric Function",
+      "content": "Definition; values of trigonometric ratios; angle of\nelevation and depression."
+    },
+    {
+      "week": 12,
+      "topic": "Graphs of Trigonometric Function",
+      "content": "Sine, cosine, and tangent graphs; properties and\ntransformations."
+    },
+    {
+      "week": 13,
+      "topic": "Trigonometric Identity & Graphs of Inverse Trigonometric Ratios; applications of Pythagoras theorem. Pythagoras Theorem",
+      "content": "Basic identities; inverse trigonometric graphs;"
+    }
+  ]
 }

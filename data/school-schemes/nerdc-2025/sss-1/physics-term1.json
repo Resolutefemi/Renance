@@ -1,57 +1,72 @@
 {
- "class": "SSS 1",
- "subject": "Physics",
- "term": 1,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Introduction to physics",
-   "content": "Branches and measurement\nFundamental units"
-  },
-  {
-   "week": 2,
-   "topic": "Measurement: instruments",
-   "content": "Vernier and micrometer\nTake readings"
-  },
-  {
-   "week": 3,
-   "topic": "Motion: types",
-   "content": "Distance and displacement\nSpeed and velocity"
-  },
-  {
-   "week": 4,
-   "topic": "Motion: acceleration",
-   "content": "Equations of motion\nSolve problems"
-  },
-  {
-   "week": 5,
-   "topic": "Forces",
-   "content": "Types of forces\nEffects of forces"
-  },
-  {
-   "week": 6,
-   "topic": "Friction",
-   "content": "Laws of friction\nReduce friction"
-  },
-  {
-   "week": 7,
-   "topic": "Work, energy and power",
-   "content": "Calculations\nEnergy conversions"
-  },
-  {
-   "week": 8,
-   "topic": "Simple machines",
-   "content": "Levers and pulleys\nEfficiency calculations"
-  },
-  {
-   "week": 9,
-   "topic": "Heat: temperature scales",
-   "content": "Thermometers\nConvert scales"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Term work review\nClass quiz"
-  }
- ]
+  "class": "SSS 1",
+  "subject": "Physics",
+  "term": 1,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Fundamentals and Derived Quantities and Units derived units, SI units",
+      "content": "Meaning of physical quantities, fundamental units,"
+    },
+    {
+      "week": 2,
+      "topic": "Measurements of Mass, Weight, Length and Time measurement",
+      "content": "Definition, instruments used, accuracy and errors in"
+    },
+    {
+      "week": 3,
+      "topic": "Position, Distance and Displacement displacement, applications",
+      "content": "Concept of position, difference between distance and"
+    },
+    {
+      "week": 4,
+      "topic": "Scalars and Vectors",
+      "content": "Definitions, differences, addition and resolution of\nvectors"
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Examination",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Speed, Velocity and Acceleration",
+      "content": "Definitions, equations, graphical representation"
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "Motion",
+      "content": "Concept of motion, types of motion, equations of\nuniformly accelerated motion"
+    },
+    {
+      "week": 9,
+      "topic": "Motion (Continued)",
+      "content": "Applications of equations of motion in real life"
+    },
+    {
+      "week": 10,
+      "topic": "Motion (Continued)",
+      "content": "Graphical analysis of motion, problem solving"
+    },
+    {
+      "week": 11,
+      "topic": "Revision",
+      "content": ""
+    },
+    {
+      "week": 12,
+      "topic": "Examination",
+      "content": ""
+    },
+    {
+      "week": 13,
+      "topic": "Closing",
+      "content": ""
+    }
+  ]
 }

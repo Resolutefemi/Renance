@@ -1,57 +1,72 @@
 {
- "class": "Primary 5",
- "subject": "Basic Science and Technology",
- "term": 2,
- "weeks": [
-  {
-   "week": 1,
-   "topic": "Matter: changes of state",
-   "content": "Melting and freezing\nHeating and cooling"
-  },
-  {
-   "week": 2,
-   "topic": "Physical and chemical changes",
-   "content": "Rusting and burning\nSort the changes"
-  },
-  {
-   "week": 3,
-   "topic": "Energy conversion",
-   "content": "Electric to light\nTrace the conversions"
-  },
-  {
-   "week": 4,
-   "topic": "Heat transfer",
-   "content": "Conduction in metals\nEveryday examples"
-  },
-  {
-   "week": 5,
-   "topic": "Light: refraction basics",
-   "content": "Bending of light\nStraw in water demo"
-  },
-  {
-   "week": 6,
-   "topic": "Sound: pitch and volume",
-   "content": "Frequency basics\nBottle orchestra"
-  },
-  {
-   "week": 7,
-   "topic": "Friction: advantages and reduction",
-   "content": "Lubricants and wheels\nDesign a test"
-  },
-  {
-   "week": 8,
-   "topic": "Simple machines: gears and wheels",
-   "content": "Bicycle gears\nMechanical advantage talk"
-  },
-  {
-   "week": 9,
-   "topic": "Technology: levers in the body",
-   "content": "Arm as a lever\nMuscles and joints"
-  },
-  {
-   "week": 10,
-   "topic": "Revision and assessment",
-   "content": "Term work review\nClass quiz"
-  }
- ]
+  "class": "Primary 5",
+  "subject": "Basic Science and Technology",
+  "term": 2,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Energy and Its Forms",
+      "content": "Forms of energy; Energy transformation; Conservation of\nenergy; Renewable and non-renewable energy sources"
+    },
+    {
+      "week": 2,
+      "topic": "Electricity and Magnetism Magnetic materials; Uses of magnets; Electromagnets",
+      "content": "Electric circuits - series and parallel; Electrical symbols;"
+    },
+    {
+      "week": 3,
+      "topic": "Force and Motion",
+      "content": "Types of forces; Effects of force; Friction; Speed and\nvelocity; Measuring motion"
+    },
+    {
+      "week": 4,
+      "topic": "Work, Energy and Power Simple calculations; Efficiency of machines",
+      "content": "Concept of work; Relationship between work and energy;"
+    },
+    {
+      "week": 5,
+      "topic": "MIDTERM EXAMINATION",
+      "content": "Assessment of topics covered in weeks 1-4"
+    },
+    {
+      "week": 6,
+      "topic": "MIDTERM BREAK",
+      "content": "Rest and relaxation period"
+    },
+    {
+      "week": 7,
+      "topic": "The Earth and Its Resources mining; Conservation of resources; Sustainable use",
+      "content": "Structure of the earth; Natural resources; Minerals and"
+    },
+    {
+      "week": 8,
+      "topic": "Water Cycle and Conservation treatment; Water pollution; Conservation methods",
+      "content": "The water cycle process; Importance of water; Water"
+    },
+    {
+      "week": 9,
+      "topic": "Air Composition and Quality causes and effects; Improving air quality",
+      "content": "Gases in the air; Importance of each gas; Air pollution"
+    },
+    {
+      "week": 10,
+      "topic": "Weather and Climate Change Climate change causes; Effects of climate change; What",
+      "content": "Weather recording and instruments; Climate zones;\nwe can do"
+    },
+    {
+      "week": 11,
+      "topic": "REVISION",
+      "content": "Review of all topics covered; Practice exercises; Question\nand answer sessions"
+    },
+    {
+      "week": 12,
+      "topic": "EXAMINATION",
+      "content": "End of term assessment"
+    },
+    {
+      "week": 13,
+      "topic": "CLOSING PRIMARY 5 BASIC SCIENCE & TECHNOLOGY SCHEME OF WORK",
+      "content": "Report card distribution; Vacation assignment"
+    }
+  ]
 }

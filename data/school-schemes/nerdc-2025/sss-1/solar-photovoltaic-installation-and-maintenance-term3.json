@@ -1,0 +1,57 @@
+{
+  "class": "SSS 1",
+  "subject": "Solar Photovoltaic Installation and Maintenance",
+  "term": 3,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "PV System Design Principles",
+      "content": "Load assessment, energy demand calculation"
+    },
+    {
+      "week": 2,
+      "topic": "Sizing Solar Panels",
+      "content": "Calculating energy requirement vs solar panel output"
+    },
+    {
+      "week": 3,
+      "topic": "Sizing Batteries",
+      "content": "Daily load, depth of discharge, battery autonomy"
+    },
+    {
+      "week": 4,
+      "topic": "Sizing Charge Controllers & Inverters R",
+      "content": "atings, efficiency considerations"
+    },
+    {
+      "week": 5,
+      "topic": "Midterm Test",
+      "content": ""
+    },
+    {
+      "week": 6,
+      "topic": "Practical PV System Design",
+      "content": "Case study: household system"
+    },
+    {
+      "week": 7,
+      "topic": "Midterm Break",
+      "content": ""
+    },
+    {
+      "week": 8,
+      "topic": "PV System Installation Steps I",
+      "content": "Mounting panels, installing balance of system"
+    },
+    {
+      "week": 9,
+      "topic": "PV System Installation Steps II",
+      "content": "Electrical wiring, inverter & battery connection"
+    },
+    {
+      "week": 10,
+      "topic": "System Testing & Commissioning 11-13 Revision & Exams",
+      "content": "Voltage/current tests, performance checks"
+    }
+  ]
+}
