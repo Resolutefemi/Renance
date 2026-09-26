@@ -323,9 +323,12 @@ export const btnGhost =
 export const btnSmall =
   'flex h-9 items-center justify-center gap-1.5 rounded-lg border border-outline-variant px-3 text-xs font-medium text-on-surface transition-colors hover:bg-surface-container';
 
-// Card: the standard white panel every section sits in.
+// Card: the standard white panel every section sits in. min-w-0 keeps
+// the grid item shrinkable on phones, so a wide table (min-w-[560px])
+// scrolls inside its overflow-x wrapper instead of stretching the whole
+// card past the viewport (the mobile setup-page overflow bug).
 export function Card({ children, className = '' }: { children: ReactNode; className?: string }) {
-  return <section className={`school-shell-card p-5 sm:p-6 ${className}`}>{children}</section>;
+  return <section className={`school-shell-card min-w-0 p-5 sm:p-6 ${className}`}>{children}</section>;
 }
 
 export function CardTitle({ children, hint }: { children: ReactNode; hint?: string }) {
