@@ -50,7 +50,7 @@ vercel.json ships sane defaults:
 |---|---|---|
 | `NEXT_PUBLIC_BASE_PATH` | *(empty)* | Vercel serves at the root, unlike GitHub Pages' `/Renance/` |
 | `NEXT_PUBLIC_API_BASE` | `https://renance-api.onrender.com` | The web app talks to the Render study API **directly**. The Render `WEB_ORIGIN` allowlist carries `https://renance-edtech.vercel.app`, so CORS answers every call. The old same-origin `/api` rewrite is gone on purpose: with `trailingSlash: true` every extension-less path gets redirected to its trailing-slash form, the rewrite never fired, and the Go router 404s trailing slashes anyway. |
-| `NEXT_PUBLIC_GOOGLE_CLIENT_ID` | `850087098854-pni8gohld0isi8v8nhhnlcl5fuvi77q4...` | The web OAuth client. Baked at build time so the Google button renders on `/login` and `/register`. One manual step lives in Google Cloud Console: the deployment origin (`https://renance-edtech.vercel.app`) must be listed under the client's **Authorized JavaScript origins**, or Google shows its own `Error 401: invalid_client`. |
+| `NEXT_PUBLIC_GOOGLE_CLIENT_ID` | `850087098854-pni8gohld0isi8v8nhhnlcl5fuvi77q4...` | The web OAuth client. Baked at build time so the Google button renders on `/login` and `/register`. One manual step lives in Google Cloud Console: EVERY deployment origin (`https://renance.app` and `https://renance-edtech.vercel.app`) must be listed under the client's **Authorized JavaScript origins** - redirect URIs are never used by this flow - or Google shows its own `Error 401: invalid_client`. |
 | `NEXT_PUBLIC_SITE_URL` | `https://renance-edtech.vercel.app` | Used for canonical/OG/sitemap URLs. Change it once a custom domain exists. |
 
 These ride a small build wrapper, `scripts/vercel-build.sh`: it exports the

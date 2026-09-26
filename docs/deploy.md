@@ -90,8 +90,18 @@ mobile app passes as `serverClientId` (so ID tokens carry a predictable
 
 The **web** client must have these Authorized JavaScript origins:
 
-- `https://resolutefemi.github.io`
+- `https://renance.app` (production, the domain students actually use)
+- `https://renance-edtech.vercel.app` (Vercel default domain, kept for fallback)
+- `https://resolutefemi.github.io` (legacy Pages deploy)
 - `http://localhost:3000` (local dev)
+
+⚠️ **Origins, not redirect URIs.** The web flow is Google Identity
+Services: the browser gets the ID token in-page and POSTs it to the API.
+There is **no redirect step**, so `Authorized redirect URIs` is never
+consulted. Buying a custom domain and only updating the redirect URIs
+(and/or setting them to `https://renance.app/**`) changes nothing - the
+sign-in keeps failing until the origin itself is added to **Authorized
+JavaScript origins**. Redirect URIs on the web client can stay empty.
 
 For the **Android** app, google_sign_in needs its own OAuth client
 (_type: Android_) with:
@@ -117,9 +127,12 @@ fix lives entirely in Google Cloud Console → APIs & Services:
 
 1. **Credentials → the Web application client → Authorized JavaScript
    origins** must contain the EXACT origin (scheme + host, no path):
+   `https://renance.app`, `https://renance-edtech.vercel.app`,
    `https://resolutefemi.github.io` and `http://localhost:3000`. A missing
    or typo'd origin is the #1 cause. Save, then wait ~5 minutes for the
-   change to propagate.
+   change to propagate. (Adding the domain under *Authorized redirect
+   URIs* instead does NOT help - see the origins-vs-redirect-URIs note
+   above.)
 2. **OAuth consent screen** (Google Auth Platform → Audience): Brand
    (app name, support email) configured and Publishing status set to
    **In production** - a brand-less or testing-only project rejects
