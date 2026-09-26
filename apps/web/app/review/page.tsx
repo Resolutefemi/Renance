@@ -330,11 +330,31 @@ function ReviewInner() {
   );
 }
 
+// prettyPaper turns a raw pack code into the label a student reads:
+// jamb-biology-bank -> "JAMB · Biology", jamb-mock-english-... ->
+// "JAMB UTME Mock", waec-custom-... -> "WAEC Practice".
+export function prettyPaper(code: string): string {
+  const parts = (code || '').split('-');
+  const body = (parts[0] || '').replace(/_/g, ' ').toUpperCase();
+  if (code.startsWith('jamb-mock-')) return 'JAMB UTME Mock';
+  if (parts[1] === 'custom' || parts[1] === 'pick') {
+    return `${body.charAt(0) + body.slice(1).toLowerCase()} Practice`;
+  }
+  const subject = parts
+    .slice(1)
+    .filter((p) => p !== 'bank' && p !== 'enrich' && p !== 'theory' && p !== 'quizbank')
+    .map((p) => p.charAt(0).toUpperCase() + p.slice(1))
+    .join(' ');
+  const prettyBody = body.charAt(0) + body.slice(1).toLowerCase();
+  return subject ? `${prettyBody} · ${subject}` : prettyBody || code;
+}
+
 // ------------------------------------------------------------ review queue
 
 function ReviewQueue() {
   const [sum, setSum] = useState<ReviewSummary | null>(null);
   const [attempts, setAttempts] = useState<AttemptRow[] | null>(null);
+  const [showAllPapers, setShowAllPapers] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -382,7 +402,9 @@ function ReviewQueue() {
   const hasWork = due > 0;
   const overdue = sum.due.filter((it) => reviewStatus(it) === 'overdue');
   const rows = queuePreview(sum);
-  const latestGraded = attempts.find((a) => a.status === 'graded');
+  const gradedAttempts = attempts.filter((a) => a.status === 'graded' && a.score != null);
+  const openAttempts = attempts.filter((a) => a.status !== 'graded' && a.status !== 'error');
+  const latestGraded = gradedAttempts[0];
 
   return (
     <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
@@ -395,28 +417,37 @@ function ReviewQueue() {
         </Link>
       </div>
 
-      {/* amber hero (review_queue_light) */}
-      <section className="mt-6 rounded-xl bg-accent-amber/10 p-6 text-center shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
-        <span className="material-symbols-outlined text-4xl text-accent-amber">local_fire_department</span>
-        <p className="mt-2 text-4xl font-bold tracking-tight text-on-surface">
-          <span className={hasWork ? 'text-accent-amber' : 'text-accent-emerald'}>{due}</span>{' '}
-          <span className="text-lg font-medium text-on-surface-variant">
-            {hasWork ? (overdue.length ? `topics due · ${overdue.length} overdue` : 'topics due today') : 'all caught up'}
+      {/* black hero: what the plan wants today */}
+      <section className="renance-rise mt-6 overflow-hidden rounded-xl bg-dark-surface px-6 py-7 text-center">
+        <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-dark-text-secondary">
+          {hasWork ? 'Spaced repetition plan' : 'Review desk'}
+        </p>
+        <p className="mt-3 flex items-baseline justify-center gap-2">
+          <span
+            className={`text-6xl font-bold leading-none tracking-tight ${
+              hasWork ? 'text-white' : 'text-accent-emerald'
+            }`}
+          >
+            {due}
+          </span>
+          <span className="text-base font-medium text-dark-text-secondary">
+            {hasWork ? 'topics due' : 'all caught up'}
           </span>
         </p>
-        <p className="mt-1 text-sm text-on-surface-variant">
+        <p className="mt-2 font-mono text-[11.5px] text-dark-text-secondary">
           {hasWork
-            ? `Estimated time: ~${due * 2} minutes`
+            ? `${overdue.length} overdue · about ${due * 2} minutes today`
             : latestGraded
-              ? 'Nothing scheduled, grade a paper and its topics join the plan.'
+              ? 'Nothing scheduled. Grade a paper and its topics join the plan.'
               : 'Grade your first paper and its topics join the plan.'}
         </p>
         {latestGraded && (
           <Link
             href={`/review?attemptId=${latestGraded.attemptId}`}
-            className="mt-5 inline-flex h-12 items-center justify-center gap-2 rounded-[10px] bg-primary px-8 text-sm font-semibold text-on-primary transition hover:opacity-90"
+            className="mt-5 inline-flex h-12 items-center justify-center gap-2 rounded-[10px] bg-white px-8 text-sm font-semibold text-[#101418] transition hover:bg-white/90"
           >
-            {hasWork ? 'Start Review' : 'Revise latest paper'} →
+            {hasWork ? 'Start reviewing' : 'Revise your latest paper'}
+            <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
           </Link>
         )}
       </section>
@@ -439,33 +470,79 @@ function ReviewQueue() {
         </section>
       )}
 
-      {/* Recent papers */}
-      {attempts.length > 0 && (
+      {/* Exam history: every paper, the score bar telling the story */}
+      {(gradedAttempts.length > 0 || openAttempts.length > 0) && (
         <section className="mt-8">
-          <h2 className="text-lg font-semibold text-on-surface">Recent papers</h2>
-          <div className="mt-4 space-y-3">
-            {attempts.slice(0, 8).map((a) => {
-              const pct = a.score != null && a.total ? Math.round((a.score * 100) / a.total) : null;
-              return (
-                <Link
-                  key={a.attemptId}
-                  href={a.status === 'graded' ? `/review?attemptId=${a.attemptId}` : '/review'}
-                  className={`flex items-center justify-between rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] ${
-                    a.status === 'graded' ? 'hover:shadow-md transition' : 'opacity-80'
-                  }`}
-                >
-                  <span>
-                    <span className="block text-sm font-medium text-on-surface">{a.code}</span>
-                    <span className="block text-xs text-on-surface-variant">
-                      {a.status === 'graded' && a.score != null && a.total
-                        ? `${a.status} · ${a.score}/${a.total} correct`
-                        : a.status}
-                    </span>
-                  </span>
-                  <span className="font-mono text-sm text-on-surface-variant">{pct == null ? '-' : `${pct}%`}</span>
-                </Link>
-              );
-            })}
+          <div className="flex items-baseline justify-between">
+            <h2 className="text-lg font-semibold tracking-tight text-on-surface">Exam history</h2>
+            <span className="text-sm text-on-surface-variant">
+              {gradedAttempts.length} graded
+            </span>
+          </div>
+          <div className="mt-4 space-y-2.5">
+            {[...openAttempts, ...gradedAttempts]
+              .slice(0, showAllPapers ? undefined : 6)
+              .map((a) => {
+                const pct =
+                  a.score != null && a.total ? Math.round((a.score * 100) / a.total) : null;
+                const graded = a.status === 'graded' && pct != null;
+                const date = a.submittedAt
+                  ? new Date(a.submittedAt).toLocaleDateString('en-NG', {
+                      day: 'numeric', month: 'short',
+                    })
+                  : '';
+                return (
+                  <Link
+                    key={a.attemptId}
+                    href={a.status === 'graded' ? `/review?attemptId=${a.attemptId}` : '/review'}
+                    className="block rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] transition hover:shadow-md"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="min-w-0">
+                        <p className="truncate text-[14.5px] font-semibold text-on-surface">
+                          {prettyPaper(a.code)}
+                        </p>
+                        <p className="mt-0.5 font-mono text-[11px] text-on-surface-variant">
+                          {date || 'in progress'}
+                          {graded ? ` · ${a.score}/${a.total} correct` : ` · ${a.status}`}
+                        </p>
+                      </div>
+                      {graded ? (
+                        <p
+                          className={`shrink-0 font-mono text-base font-bold ${
+                            (pct ?? 0) >= 50 ? 'text-on-surface' : 'text-error'
+                          }`}
+                        >
+                          {pct}%
+                        </p>
+                      ) : (
+                        <span className="shrink-0 rounded-full bg-surface-container px-3 py-1 text-[11px] font-medium text-on-surface-variant">
+                          resume
+                        </span>
+                      )}
+                    </div>
+                    {graded && (
+                      <div className="mt-2.5 h-1.5 overflow-hidden rounded-full bg-surface-container">
+                        <div
+                          className={`h-full rounded-full ${(pct ?? 0) >= 50 ? 'bg-on-surface' : 'bg-error'}`}
+                          style={{ width: `${pct}%` }}
+                        />
+                      </div>
+                    )}
+                  </Link>
+                );
+              })}
+            {gradedAttempts.length + openAttempts.length > 6 && (
+              <button
+                type="button"
+                onClick={() => setShowAllPapers((v) => !v)}
+                className="mx-auto block rounded-full border border-outline px-4 py-1.5 text-[12.5px] font-medium text-on-surface transition hover:bg-surface-container"
+              >
+                {showAllPapers
+                  ? 'Show fewer'
+                  : `Show all ${gradedAttempts.length + openAttempts.length} papers`}
+              </button>
+            )}
           </div>
         </section>
       )}
