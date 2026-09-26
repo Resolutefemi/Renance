@@ -469,34 +469,74 @@ class _PaperCard extends StatelessWidget {
             ),
           ],
         ),
-        child: Row(
+        child: Column(
           children: <Widget>[
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    title,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: RenanceText.bodyMedium,
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        title,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: RenanceText.bodyMedium,
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        attempt.isGraded
+                            ? '$when · ${attempt.score}/${attempt.total} correct'
+                            : '${attempt.isGraded ? when : 'in progress'} · ${attempt.status}',
+                        style: RenanceText.caption.copyWith(color: context.textSecondary),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 2),
-                  Text(
-                    attempt.isGraded
-                        ? '$when · ${attempt.score}/${attempt.total} correct'
-                        : '$when · ${attempt.status}',
-                    style: RenanceText.caption.copyWith(color: context.textSecondary),
+                ),
+                Text(
+                  pct == null ? '-' : '$pct%',
+                  style: RenanceText.statNumber.copyWith(color: pctColor),
+                ),
+                const SizedBox(width: 4),
+                Icon(Icons.chevron_right, color: context.outlineDark),
+              ],
+            ),
+            // The score bar: the paper's story in one glance.
+            if (attempt.isGraded && pct != null) ...<Widget>[
+              const SizedBox(height: 10),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(999),
+                child: LinearProgressIndicator(
+                  value: pct / 100,
+                  minHeight: 5,
+                  backgroundColor: context.surfaceContainer,
+                  valueColor: AlwaysStoppedAnimation<Color>(
+                    pct >= 50 ? context.ink : context.error,
                   ),
-                ],
+                ),
               ),
-            ),
-            Text(
-              pct == null ? '-' : '$pct%',
-              style: RenanceText.statNumber.copyWith(color: pctColor),
-            ),
-            const SizedBox(width: 4),
-            Icon(Icons.chevron_right, color: context.outlineDark),
+            ],
+            // In-progress papers say they can be resumed.
+            if (!attempt.isGraded) ...<Widget>[
+              const SizedBox(height: 8),
+              Align(
+                alignment: Alignment.centerRight,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
+                  decoration: BoxDecoration(
+                    color: context.surfaceContainer,
+                    borderRadius: BorderRadius.circular(999),
+                  ),
+                  child: Text(
+                    'tap to resume',
+                    style: RenanceText.caption.copyWith(
+                      fontSize: 10.5,
+                      color: context.textSecondary,
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ],
         ),
       ),
