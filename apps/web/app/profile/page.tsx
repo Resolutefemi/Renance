@@ -36,6 +36,12 @@ interface Profile {
 interface MeResponse {
   user: { id: string; username: string; profileCompleted: boolean };
   profile: Profile | null;
+  entitlement?: {
+    renCoins: number;
+    referralCode?: string;
+    premiumRole: boolean;
+    premiumType?: string;
+  };
 }
 
 interface GameState {
@@ -201,6 +207,7 @@ export default function ProfilePage() {
 
   const name = profile?.fullName || me.user.username || 'Renance scholar';
   const level = state?.level ?? 1;
+  const [copied, setCopied] = useState(false);
 
   return (
     <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
@@ -256,6 +263,62 @@ export default function ProfilePage() {
                 <span className="text-2xl font-bold tracking-tight text-accent-emerald">{accuracy}%</span>
               </div>
             </div>
+          </section>
+
+          {/* REN wallet: the coins, the referral code, the exchange */}
+          <section className="rounded-xl bg-dark-surface p-5 text-dark-text-primary shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
+            <div className="flex items-center justify-between gap-3">
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-dark-text-secondary">
+                  REN wallet
+                </p>
+                <p className="mt-1 text-3xl font-bold tracking-tight">
+                  {me.entitlement?.renCoins ?? 0}
+                  <span className="text-base font-medium text-dark-text-secondary"> REN</span>
+                </p>
+              </div>
+              <Link
+                href="/pricing"
+                className="inline-flex h-10 shrink-0 items-center gap-1.5 rounded-lg bg-white px-4 text-[13px] font-semibold text-[#101418] transition hover:bg-white/90"
+              >
+                Redeem for premium
+                <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </Link>
+            </div>
+            <div className="mt-4 grid grid-cols-2 gap-2 text-[12.5px]">
+              <div className="rounded-lg bg-white/5 px-3 py-2">
+                <p className="font-semibold text-white">+1 REN</p>
+                <p className="text-dark-text-secondary">every arena duel you win</p>
+              </div>
+              <div className="rounded-lg bg-white/5 px-3 py-2">
+                <p className="font-semibold text-white">+3 REN</p>
+                <p className="text-dark-text-secondary">every friend who signs up with your code</p>
+              </div>
+            </div>
+            {me.entitlement?.referralCode && (
+              <div className="mt-3 flex items-center justify-between gap-3 rounded-lg border border-white/10 px-3 py-2.5">
+                <div className="min-w-0">
+                  <p className="font-mono text-[10px] uppercase tracking-widest text-dark-text-secondary">
+                    Your referral code
+                  </p>
+                  <p className="truncate font-mono text-sm font-bold tracking-wider text-white">
+                    {me.entitlement.referralCode}
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    const link = `${window.location.origin}/register/?ref=${me.entitlement!.referralCode}`;
+                    void navigator.clipboard?.writeText(link);
+                    setCopied(true);
+                    window.setTimeout(() => setCopied(false), 1800);
+                  }}
+                  className="shrink-0 rounded-full border border-white/25 px-3.5 py-1.5 text-[12px] font-semibold text-white transition hover:bg-white/10"
+                >
+                  {copied ? 'Link copied' : 'Copy invite link'}
+                </button>
+              </div>
+            )}
           </section>
 
           {/* Learning focus switcher (founder directive) ---------------------- */}

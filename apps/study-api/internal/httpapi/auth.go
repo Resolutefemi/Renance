@@ -275,12 +275,20 @@ func (s *Server) handleMe(w http.ResponseWriter, r *http.Request) {
         // Entitlements: premium role/type/expiry, the REN wallet, the
         // device lock state and email verification ride every /me so the
         // paywall, the blue tick and the verification banner never need a
-        // second round-trip.
+        // second round-trip. The referral code is minted lazily here so
+        // older accounts still get one to share.
         ent, err := s.store.EnsureEntitlement(r.Context(), uid)
         if err != nil {
                 s.log.Error("entitlement load failed", "err", err)
                 fail(w, http.StatusInternalServerError, "internal", "could not load entitlements")
                 return
+        }
+        if ent.ReferralCode == "" {
+                if code, cerr := newReferralCode(); cerr == nil {
+                        if _, uerr := s.store.EnsureReferralCode(r.Context(), uid, code); uerr == nil {
+                                ent.ReferralCode = code
+                        }
+                }
         }
         resp := map[string]any{
                 "user":        userPayload{ID: u.ID, Username: u.Username, ProfileCompleted: profile != nil && profile.Completed},
