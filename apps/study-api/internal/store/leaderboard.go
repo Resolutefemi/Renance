@@ -387,7 +387,7 @@ func (s *Store) SchoolsLeaderboard(ctx context.Context, limit int) ([]SchoolBoar
                         SELECT sch.id::text AS school_id, sch.name AS school,
                                COUNT(DISTINCT pr.student_id)::int AS students,
                                COUNT(*)::int AS results,
-                               ROUND(AVG(pr.obtained * 100.0 / pr.marks_obtainable), 1) AS avg_score
+                               ROUND((AVG(pr.obtained * 100.0 / pr.marks_obtainable))::numeric, 1) AS avg_score
                         FROM per_result pr
                         JOIN school.schools sch ON sch.id = pr.school_id
                         GROUP BY sch.id, sch.name
