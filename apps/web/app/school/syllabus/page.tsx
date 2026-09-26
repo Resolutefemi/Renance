@@ -167,7 +167,7 @@ export default function SchoolSyllabusPage() {
           ready lesson notes for every class from Nursery 1 to SSS 3.
         </p>
         <Link
-          href="/curriculum"
+          href="/school/curriculum"
           className="shrink-0 rounded-full border border-outline px-4 py-2 text-sm font-medium text-on-surface hover:bg-surface-container"
         >
           Open the curriculum bank
