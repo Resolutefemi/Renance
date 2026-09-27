@@ -103,20 +103,50 @@ consulted. Buying a custom domain and only updating the redirect URIs
 sign-in keeps failing until the origin itself is added to **Authorized
 JavaScript origins**. Redirect URIs on the web client can stay empty.
 
-For the **Android** app, google_sign_in needs its own OAuth client
-(_type: Android_) with:
+### Getting the Android client right, step by step
 
-- Package name: `dev.renance.renance`
-- SHA-1: `6E:A1:3C:4A:0C:70:4E:28:1A:77:00:3A:4B:F4:9A:7A:25:5B:F0:95`
+The **Android** app fails Google sign-in with `ApiException: 10`
+(DEVELOPER_ERROR) when no OAuth client of type _Android_ in the SAME
+Google Cloud project matches the installed app's package name AND
+signing certificate. Creating one takes two minutes:
 
-(The APK is signed with the committed `renance.keystore`, so this SHA-1 is
-stable across all CI builds. Verify any time with:
-`keytool -list -v -keystore apps/mobile/android/app/renance.keystore -alias renance -storepass renance-keystore`)
+1. **Google Cloud Console** → open the project that owns
+   `850087098854-...` (the same project as the web client - a client in a
+   different project will not work) → **APIs & Services → Credentials**.
+2. **+ Create credentials → OAuth client ID → Application type:
+   Android.**
+3. **Package name**: `dev.renance.renance` (the `applicationId` in
+   `apps/mobile/android/app/build.gradle.kts`).
+4. **SHA-1 certificate fingerprint** - paste the fingerprint of the key
+   that actually signed the APK you installed:
+   - Release/shipped builds are signed with the committed
+     `renance.keystore`, whose SHA-1 is
+     `6E:A1:3C:4A:0C:70:4E:28:1A:77:00:3A:4B:F4:9A:7A:25:5B:F0:95`.
+     Re-verify any time with:
+     `keytool -list -v -keystore apps/mobile/android/app/renance.keystore -alias renance -storepass renance-keystore`
+   - `flutter run` debug builds are signed with your machine's debug
+     keystore, which has a DIFFERENT SHA-1. Get it with:
+     `keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android`
+     Google allows one SHA-1 per Android client, so create a SECOND
+     Android client (same package name) for the debug fingerprint.
+   - If the app ships through Google Play, Play re-signs every build. Add
+     a THIRD Android client whose SHA-1 comes from Play Console →
+     Release → Setup → App signing → SHA-1 (the App signing key).
+5. **Create**, then wait about 5 minutes for the change to propagate.
+6. Reinstall/restart the app (a stale Google Play Services cache keeps
+   failing for minutes) and tap the Google button again.
 
-The Android client does **not** need the API to know its client ID -
-google_sign_in takes `serverClientId` (the **web** client ID) and returns
-an ID token whose `aud` matches what the API verifies. The API's secret is
-never used anywhere; the whole flow is public-client.
+No code change and no API change is needed on the app side:
+google_sign_in is called with `serverClientId` = the **web** client ID
+(`GOOGLE_WEB_CLIENT_ID` dart-define) and returns an ID token whose `aud`
+is the web client, which the API already verifies
+(`GOOGLE_CLIENT_ID` on Render lists both clients, comma-separated). The
+Android client's own ID value never needs to be embedded anywhere - its
+existence (package + SHA-1 match) is all Google checks.
+
+If `flutter run` builds keep failing while the shipped APK works, it is
+almost always the missing debug-SHA-1 client from step 4, not the web
+client.
 
 ### Troubleshooting: `Error 401: invalid_client` (flowName=GeneralOAuthFlow)
 
