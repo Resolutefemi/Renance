@@ -395,21 +395,51 @@ async function main() {
     }
   }
 
-  async function processGroup(zai, g) {
+  // Chunked attempt for long files: the model tends to answer a 13-week
+// file with week 1 and stop (an output wall no maxTokens setting moves),
+// so dense secondary subjects never fit one call. Splitting the file's
+// weeks into two half-calls and merging the topics clears that wall;
+// each half keeps the same validation spine.
+async function chunkedFileAttempt(zai, f, level) {
+  const weeks = f.scheme.weeks;
+  const mid = Math.ceil(weeks.length / 2);
+  const topics = [];
+  for (const part of [weeks.slice(0, mid), weeks.slice(mid)]) {
+    const half = { ...f, scheme: { ...f.scheme, weeks: part } };
+    const rs = await generateGroup(zai, [half], level);
+    const good = rs.find((r) => r.ok);
+    if (!good) return rs; // hand the failure back, the caller logs it
+    topics.push(...good.note.topics);
+  }
+  const merged = { topics };
+  try {
+    validate(merged, f.scheme, level);
+  } catch (e) {
+    return [{ file: f, ok: false, error: e.message, partial: topics }];
+  }
+  return [{ file: f, ok: true, note: merged }];
+}
+
+async function processGroup(zai, g) {
       let results = [];
       try {
         results = await generateGroup(zai, g.files, g.level);
       } catch (e) {
         results = g.files.map((f) => ({ file: f, ok: false, error: e.message }));
       }
-      // single-file retry for anything that failed
+      // single-file retry for anything that failed; files longer than 8
+      // weeks retry CHUNKED because one call demonstrably cannot hold them
       for (let attempt = 0; attempt < 2; attempt++) {
         const failed = results.filter((r) => !r.ok);
         if (!failed.length) break;
         const retry = [];
         for (const f of failed) {
           try {
-            retry.push(...(await generateGroup(zai, [f.file], g.level)));
+            if (f.file.scheme.weeks.length > 8) {
+              retry.push(...(await chunkedFileAttempt(zai, f.file, g.level)));
+            } else {
+              retry.push(...(await generateGroup(zai, [f.file], g.level)));
+            }
           } catch (e) {
             retry.push({ file: f.file, ok: false, error: e.message, partial: f.partial });
           }
