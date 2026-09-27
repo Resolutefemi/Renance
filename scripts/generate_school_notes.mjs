@@ -382,7 +382,11 @@ function validateTopic(t, byWeek, band) {
   // wasting quota on retries for nothing.
   const minOk = band.min - Math.round(band.min * 0.2);
   if (content.length < minOk) throw new Error(`week ${wk} too short (${content.length})`);
-  if (content.length > band.max + 1800) throw new Error(`week ${wk} too long (${content.length})`);
+  // Ceiling tolerance is generous (+2600): the founder brief is VERY LONG
+  // notes, so a 5.5k-char sss week with all frame labels present is a win,
+  // not a defect worth burning quota on. Runaway repetition is still caught
+  // by the structural gates below.
+  if (content.length > band.max + 2600) throw new Error(`week ${wk} too long (${content.length})`);
   for (const label of ['Behavioural objectives:', 'Content:', 'Evaluation questions:']) {
     if (!content.includes(label)) throw new Error(`week ${wk} missing "${label}"`);
   }
