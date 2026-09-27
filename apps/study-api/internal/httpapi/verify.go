@@ -9,6 +9,7 @@ package httpapi
 
 import (
         "crypto/rand"
+        "crypto/tls"
         "encoding/hex"
         "fmt"
         "net/http"
@@ -58,15 +59,18 @@ If you did not create this account you can ignore this mail.
         _ = userID // logs stay free of account ids beyond the address
         if host := strings.TrimSpace(os.Getenv("SMTP_HOST")); host != "" {
                 if err := smtpSend(host, email, subject, body); err != nil {
-                        s.log.Error("verification mail send failed", "err", err)
+                        s.log.Error("verification mail send failed (check SMTP_USER/SMTP_PASS and that SMTP_FROM is a sender verified with the provider)", "err", err)
                 }
         } else {
-                s.log.Info("SMTP not configured, verification link in logs", "to", email, "url", link)
+                s.log.Warn("SMTP not configured on this service: the confirmation mail is NOT going out. Set SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SMTP_FROM in the Render dashboard (render.yaml already reserves them); until then the verification link only appears in this log", "to", email, "url", link)
         }
         return link
 }
 
 // smtpSend is a plain SMTP handoff (no TLS pooling tricks, no HTML).
+// Port 587 (STARTTLS) rides smtp.SendMail's opportunistic TLS. Port 465
+// (implicit TLS, e.g. some Brevo/Zoho/Gmail configs) needs a TLS-first
+// dial because net/smtp has no built-in wrapper for it.
 func smtpSend(host, to, subject, body string) error {
         port := strings.TrimSpace(os.Getenv("SMTP_PORT"))
         if port == "" {
@@ -79,10 +83,44 @@ func smtpSend(host, to, subject, body string) error {
         user := strings.TrimSpace(os.Getenv("SMTP_USER"))
         pass := strings.TrimSpace(os.Getenv("SMTP_PASS"))
         addr := fmt.Sprintf("%s:%s", host, port)
-        msg := fmt.Sprintf("From: Renance <%s>\r\nTo: %s\r\nSubject: %s\r\n\r\n%s", from, to, subject, body)
+        msg := fmt.Sprintf("From: Renance <%s>\r\nTo: %s\r\nSubject: %s\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\n%s", from, to, subject, body)
         var auth smtp.Auth
         if user != "" {
                 auth = smtp.PlainAuth("", user, pass, host)
+        }
+        if port == "465" {
+                conn, err := tls.Dial("tcp", addr, &tls.Config{ServerName: host})
+                if err != nil {
+                        return err
+                }
+                defer conn.Close()
+                c, err := smtp.NewClient(conn, host)
+                if err != nil {
+                        return err
+                }
+                defer c.Close()
+                if auth != nil {
+                        if err := c.Auth(auth); err != nil {
+                                return err
+                        }
+                }
+                if err := c.Mail(from); err != nil {
+                        return err
+                }
+                if err := c.Rcpt(to); err != nil {
+                        return err
+                }
+                wc, err := c.Data()
+                if err != nil {
+                        return err
+                }
+                if _, err := wc.Write([]byte(msg)); err != nil {
+                        return err
+                }
+                if err := wc.Close(); err != nil {
+                        return err
+                }
+                return c.Quit()
         }
         return smtp.SendMail(addr, auth, from, []string{to}, []byte(msg))
 }
@@ -159,9 +197,9 @@ func (s *Server) handleResendVerification(w http.ResponseWriter, r *http.Request
 // newReferralCode mints a candidate referral code (REN + 5 hex); the
 // store re-derives on the rare collision.
 func newReferralCode() (string, error) {
-	buf := make([]byte, 3)
-	if _, err := rand.Read(buf); err != nil {
-		return "", err
-	}
-	return "REN" + strings.ToUpper(hex.EncodeToString(buf)), nil
+        buf := make([]byte, 3)
+        if _, err := rand.Read(buf); err != nil {
+                return "", err
+        }
+        return "REN" + strings.ToUpper(hex.EncodeToString(buf)), nil
 }
