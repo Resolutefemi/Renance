@@ -292,7 +292,33 @@ function extractJson(text) {
       if (ch === '\\' && inStr) { out += ch + (s[i + 1] ?? ''); i++; continue; }
       if (ch !== '"') { out += ch; continue; }
       if (!inStr) { inStr = true; out += ch; continue; }
-      if (/^\s*[,}\]:]/.test(s.slice(i + 1))) { inStr = false; out += ch; continue; }
+      const rest = s.slice(i + 1);
+      if (/^\s*[,}\]:]/.test(rest)) {
+        if (/^\s*}/.test(rest) || /^\s*]/.test(rest)) {
+          // unambiguous close: } or ]
+          inStr = false; out += ch; continue;
+        }
+        // colon: real only if a JSON value follows (", digit, {, [, t, f, n)
+        if (/^\s*:/.test(rest)) {
+          const m = rest.match(/^\s*:\s*/);
+          const after = rest.slice(m ? m[0].length : 0);
+          if (after === '' || /^["{\[\dtfn\-]/.test(after)) {
+            inStr = false; out += ch; continue;
+          }
+          out += '\\"';
+          continue;
+        }
+        // comma: real only if the next token looks structural (a key
+        // quote, digit, object/array or end of input). `, then left.`
+        // inside prose means the quote was an inner one.
+        const m = rest.match(/^\s*,\s*/);
+        const after = rest.slice(m ? m[0].length : 0);
+        if (after === '' || /^["{[\d\-\]}]/.test(after)) {
+          inStr = false; out += ch; continue;
+        }
+        out += '\\"';
+        continue;
+      }
       out += '\\"';
     }
     return out;
