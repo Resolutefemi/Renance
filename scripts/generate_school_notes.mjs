@@ -297,6 +297,28 @@ function extractJson(text) {
     }
     return out;
   }
+  // Missing-final-closers repair: walk the text string-aware, remember the
+  // open containers, and append their closers in reverse (pop) order.
+  function balanceClosers(s) {
+    const stack = [];
+    let inStr = false;
+    let esc = false;
+    for (let i = 0; i < s.length; i++) {
+      const ch = s[i];
+      if (esc) { esc = false; continue; }
+      if (inStr) {
+        if (ch === '\\') esc = true;
+        else if (ch === '"') inStr = false;
+        continue;
+      }
+      if (ch === '"') inStr = true;
+      else if (ch === '{' || ch === '[') stack.push(ch);
+      else if (ch === '}' && stack[stack.length - 1] === '{') stack.pop();
+      else if (ch === ']' && stack[stack.length - 1] === '[') stack.pop();
+    }
+    if (!stack.length) return s;
+    return s + [...stack].reverse().map((c) => (c === '{' ? '}' : ']')).join('');
+  }
   const attempts = [
     () => JSON.parse(raw),
     // invalid backslash escapes: keep only the JSON-legal ones
@@ -305,8 +327,11 @@ function extractJson(text) {
     () => JSON.parse(raw.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, ' ').replace(/\\(?!["\\/bfnrtu])/g, '\\\\')),
     // unescaped inner double quotes
     () => JSON.parse(escapeInnerQuotes(raw)),
-    // both problems at once
-    () => JSON.parse(escapeInnerQuotes(raw.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, ' '))),
+    // missing final closers: the model often stops before writing the
+    // closing ]} of a long reply; append the open containers in order
+    () => JSON.parse(balanceClosers(raw)),
+    // everything at once
+    () => JSON.parse(balanceClosers(escapeInnerQuotes(raw.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, ' ')))),
   ];
   let lastErr;
   for (const attempt of attempts) {
