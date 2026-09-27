@@ -281,12 +281,32 @@ function extractJson(text) {
   const end = t.lastIndexOf('}');
   if (start < 0 || end <= start) throw new Error('no json object in reply');
   const raw = t.slice(start, end + 1);
+  // Repair pass for unescaped inner double quotes ("the "flashing" method"):
+  // walk the text, track string state, and escape every '"' that is not a
+  // structural boundary (a close must be followed by , } ] or :).
+  function escapeInnerQuotes(s) {
+    let out = '';
+    let inStr = false;
+    for (let i = 0; i < s.length; i++) {
+      const ch = s[i];
+      if (ch === '\\' && inStr) { out += ch + (s[i + 1] ?? ''); i++; continue; }
+      if (ch !== '"') { out += ch; continue; }
+      if (!inStr) { inStr = true; out += ch; continue; }
+      if (/^\s*[,}\]:]/.test(s.slice(i + 1))) { inStr = false; out += ch; continue; }
+      out += '\\"';
+    }
+    return out;
+  }
   const attempts = [
     () => JSON.parse(raw),
     // invalid backslash escapes: keep only the JSON-legal ones
     () => JSON.parse(raw.replace(/\\(?!["\\/bfnrtu])/g, '\\\\')),
     // raw control characters inside strings (model printed real newlines)
     () => JSON.parse(raw.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, ' ').replace(/\\(?!["\\/bfnrtu])/g, '\\\\')),
+    // unescaped inner double quotes
+    () => JSON.parse(escapeInnerQuotes(raw)),
+    // both problems at once
+    () => JSON.parse(escapeInnerQuotes(raw.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, ' '))),
   ];
   let lastErr;
   for (const attempt of attempts) {
