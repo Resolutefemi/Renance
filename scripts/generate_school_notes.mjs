@@ -54,25 +54,25 @@ const BAND = {
   'primary-3': {
     learner: 'pupils',
     tone: 'simple primary classroom English. Short sentences, everyday Nigerian examples like the market, kerosene stove, danfo, naira and compound games.',
-    min: 500, max: 1100,
+    min: 900, max: 1800,
     perCall: 2,
   },
   'primary-6': {
     learner: 'pupils',
     tone: 'clear upper primary English. Practical Nigerian examples, simple explanations with one or two steps of reasoning.',
-    min: 550, max: 1200,
+    min: 1000, max: 2000,
     perCall: 2,
   },
   'jss-3': {
     learner: 'students',
     tone: 'junior secondary classroom English. Define terms, explain step by step, give Nigerian examples, then check understanding.',
-    min: 650, max: 1300,
+    min: 1300, max: 2600,
     perCall: 1,
   },
   'sss-3': {
     learner: 'students',
     tone: 'senior secondary classroom English. Exam aware to WAEC and NECO standard. Define, explain with structure, work examples, then evaluate.',
-    min: 700, max: 1500,
+    min: 1600, max: 3200,
     perCall: 1,
   },
   'nursery-1': NURSERY_BAND,
@@ -81,49 +81,49 @@ const BAND = {
   'primary-1': {
     learner: 'pupils',
     tone: 'very simple primary one classroom English. Very short sentences, songs, real objects, counting and pointing games. The teacher reads the note aloud.',
-    min: 350, max: 800,
+    min: 700, max: 1500,
     perCall: 2,
   },
   'primary-2': {
     learner: 'pupils',
     tone: 'very simple primary two classroom English. Short sentences, everyday Nigerian examples like the market, kerosene stove, danfo and naira.',
-    min: 400, max: 900,
+    min: 800, max: 1600,
     perCall: 2,
   },
   'primary-4': {
     learner: 'pupils',
     tone: 'clear middle primary English. Practical Nigerian examples, simple explanations with one step of reasoning.',
-    min: 500, max: 1100,
+    min: 900, max: 1800,
     perCall: 2,
   },
   'primary-5': {
     learner: 'pupils',
     tone: 'clear upper primary English. Practical Nigerian examples, simple explanations with one or two steps of reasoning.',
-    min: 550, max: 1200,
+    min: 950, max: 1900,
     perCall: 2,
   },
   'jss-1': {
     learner: 'students',
     tone: 'junior secondary classroom English. Define terms, explain step by step, give Nigerian examples, then check understanding.',
-    min: 650, max: 1300,
+    min: 1300, max: 2600,
     perCall: 1,
   },
   'jss-2': {
     learner: 'students',
     tone: 'junior secondary classroom English. Define terms, explain step by step, give Nigerian examples, then check understanding.',
-    min: 650, max: 1300,
+    min: 1300, max: 2600,
     perCall: 1,
   },
   'sss-1': {
     learner: 'students',
     tone: 'senior secondary classroom English. Exam aware to WAEC and NECO standard. Define, explain with structure, work examples, then evaluate.',
-    min: 700, max: 1500,
+    min: 1600, max: 3200,
     perCall: 1,
   },
   'sss-2': {
     learner: 'students',
     tone: 'senior secondary classroom English. Exam aware to WAEC and NECO standard. Define, explain with structure, work examples, then evaluate.',
-    min: 700, max: 1500,
+    min: 1600, max: 3200,
     perCall: 1,
   },
 };
@@ -201,7 +201,9 @@ Rules:
 - Class activity: one practical activity for the week.
 - Evaluation questions: 3 to 5 short questions mixing recall and one thinking question.
 - Summary: 1 to 2 sentences.
-- Length: between ${band.min} and ${band.max} characters for the whole block.
+- Length: between ${band.min} and ${band.max} characters for the whole block. Aim for the upper half of the range: a fuller, deeper teaching note beats a thin one. Expand the Content section with definitions, explanations, worked examples, short lists and step by step reasoning wherever the subject allows.
+- Cover EVERY week in the input. Never stop after the first weeks and never merge weeks together.
+- webNotes (when present) carries short snippets found online for some of this file's topics. Let them sharpen the matching topic with correct facts, definitions and Nigerian context, but write every note in your own teacher voice and drop anything that does not fit the topic or the level.
 - Language level: ${band.tone}
 - Never use an em dash, en dash or double hyphen anywhere. Use a single plain hyphen only inside compound words.
 - Never mention that the note was generated or mention this instruction.
@@ -211,15 +213,66 @@ Answer with STRICT JSON only, no markdown fence, no extra fields, shaped exactly
 Do not echo the input weeks or any other field. Keep every content string on one JSON line with \\n escapes where a line break is needed.`;
 }
 
-function userPayload(files) {
+function userPayload(files, webByFile) {
   const body = files.map((f) => ({
     key: f.key,
     class: f.scheme.class,
     subject: f.scheme.subject,
     term: f.scheme.term,
     weeks: f.scheme.weeks.map((w) => ({ week: w.week, topic: w.topic, content: w.content })),
+    ...(webByFile && webByFile[f.key] ? { webNotes: webByFile[f.key] } : {}),
   }));
   return JSON.stringify({ files: body }, null, 1);
+}
+
+// Web grounding: the founder asked the writer to check online for topic
+// explanations. Two searches per file (first week topic and the middle
+// week topic), results cached by query. A search failure must never
+// block a file: the note is still written from the scheme alone.
+const searchCache = new Map();
+// The search endpoint rate limits just as hard as the chat endpoint, so
+// searches run through one global queue with a minimum gap, and a 429
+// retries with backoff instead of dropping the grounding silently.
+const SEARCH_GAP_MS = 3000;
+let searchChain = Promise.resolve([]);
+function searchQueued(zai, q) {
+  const run = searchChain.then(async () => {
+    await sleep(SEARCH_GAP_MS + Math.floor(Math.random() * 1500));
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try {
+        return await zai.functions.invoke('web_search', { query: q, num: 3 });
+      } catch (e) {
+        if (attempt === 2) return [];
+        await sleep(20000 * (attempt + 1) + Math.floor(Math.random() * 5000));
+      }
+    }
+    return [];
+  });
+  searchChain = run.then(() => [], () => []);
+  return run;
+}
+async function webNotesFor(zai, f) {
+  const weeks = f.scheme.weeks;
+  if (!weeks.length) return '';
+  const picks = [weeks[0], weeks[Math.floor(weeks.length / 2)]];
+  const seen = new Set();
+  const queries = [];
+  for (const w of picks) {
+    const q = `${f.scheme.subject} ${w.topic} explanation Nigerian students`.replace(/\s+/g, ' ').trim().slice(0, 180);
+    if (!seen.has(q)) { seen.add(q); queries.push(q); }
+  }
+  const parts = await Promise.all(queries.map(async (q) => {
+    if (searchCache.has(q)) return searchCache.get(q);
+    const rs = await searchQueued(zai, q);
+    const lines = (Array.isArray(rs) ? rs : [])
+      .slice(0, 3)
+      .map((r) => `- ${String(r.name || '').slice(0, 120)}: ${String(r.snippet || '').slice(0, 280)}`)
+      .filter((l) => l.replace(/[^a-zA-Z]/g, '').length > 15);
+    const out = lines.join('\n');
+    searchCache.set(q, out);
+    return out;
+  }));
+  return parts.filter(Boolean).join('\n');
 }
 
 function extractJson(text) {
@@ -253,7 +306,7 @@ function validateTopic(t, byWeek, band) {
   // wasting quota on retries for nothing.
   const minOk = band.min - Math.round(band.min * 0.2);
   if (content.length < minOk) throw new Error(`week ${wk} too short (${content.length})`);
-  if (content.length > band.max + 900) throw new Error(`week ${wk} too long (${content.length})`);
+  if (content.length > band.max + 1800) throw new Error(`week ${wk} too long (${content.length})`);
   for (const label of ['Behavioural objectives:', 'Content:', 'Evaluation questions:']) {
     if (!content.includes(label)) throw new Error(`week ${wk} missing "${label}"`);
   }
@@ -286,13 +339,13 @@ function validate(note, scheme, level) {
 // ---------------------------------------------------------------- driver
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-async function generateGroup(zai, group, level) {
+async function generateGroup(zai, group, level, webByFile) {
   // the generation endpoint rate limits hard; back off long and keep
   // trying: a 429 should never become a permanent failure
   let lastErr;
   for (let attempt = 0; attempt < 10; attempt++) {
     try {
-      return await generateGroupOnce(zai, group, level);
+      return await generateGroupOnce(zai, group, level, webByFile);
     } catch (e) {
       lastErr = e;
       const hit = /429|rate|too many/i.test(e.message || '');
@@ -303,7 +356,7 @@ async function generateGroup(zai, group, level) {
   throw lastErr;
 }
 
-async function generateGroupOnce(zai, group, level) {
+async function generateGroupOnce(zai, group, level, webByFile) {
   // maxTokens must be explicit: with the provider default (~1k output
   // tokens) a ten week reply truncates mid JSON or collapses to week one,
   // which is exactly the "missing weeks 2,3,..." failure wall. 8192 still
@@ -313,7 +366,7 @@ async function generateGroupOnce(zai, group, level) {
   const reply = await zai.chat.completions.create({
     messages: [
       { role: 'assistant', content: systemPrompt(BAND[level]) },
-      { role: 'user', content: userPayload(group) },
+      { role: 'user', content: userPayload(group, webByFile) },
     ],
     thinking: { type: 'disabled' },
     maxTokens: 32768,
@@ -400,13 +453,13 @@ async function main() {
 // so dense secondary subjects never fit one call. Splitting the file's
 // weeks into two half-calls and merging the topics clears that wall;
 // each half keeps the same validation spine.
-async function chunkedFileAttempt(zai, f, level) {
+async function chunkedFileAttempt(zai, f, level, webByFile) {
   const weeks = f.scheme.weeks;
   const mid = Math.ceil(weeks.length / 2);
   const topics = [];
   for (const part of [weeks.slice(0, mid), weeks.slice(mid)]) {
     const half = { ...f, scheme: { ...f.scheme, weeks: part } };
-    const rs = await generateGroup(zai, [half], level);
+    const rs = await generateGroup(zai, [half], level, webByFile);
     const good = rs.find((r) => r.ok);
     if (!good) return rs; // hand the failure back, the caller logs it
     topics.push(...good.note.topics);
@@ -421,9 +474,15 @@ async function chunkedFileAttempt(zai, f, level) {
 }
 
 async function processGroup(zai, g) {
+      // founder ask: check online for some of the topic explanations
+      // before writing, so tricky topics land on correct facts
+      const webByFile = {};
+      for (const f of g.files) {
+        webByFile[f.key] = await webNotesFor(zai, f);
+      }
       let results = [];
       try {
-        results = await generateGroup(zai, g.files, g.level);
+        results = await generateGroup(zai, g.files, g.level, webByFile);
       } catch (e) {
         results = g.files.map((f) => ({ file: f, ok: false, error: e.message }));
       }
@@ -436,9 +495,9 @@ async function processGroup(zai, g) {
         for (const f of failed) {
           try {
             if (f.file.scheme.weeks.length > 8) {
-              retry.push(...(await chunkedFileAttempt(zai, f.file, g.level)));
+              retry.push(...(await chunkedFileAttempt(zai, f.file, g.level, webByFile)));
             } else {
-              retry.push(...(await generateGroup(zai, [f.file], g.level)));
+              retry.push(...(await generateGroup(zai, [f.file], g.level, webByFile)));
             }
           } catch (e) {
             retry.push({ file: f.file, ok: false, error: e.message, partial: f.partial });
@@ -461,7 +520,7 @@ async function processGroup(zai, g) {
           let got = null;
           for (let attempt = 0; attempt < 3 && !got; attempt++) {
             try {
-              const rs = await generateGroup(zai, [solo], g.level);
+              const rs = await generateGroup(zai, [solo], g.level, webByFile);
               if (rs[0]?.ok) got = rs[0].note.topics;
             } catch {}
             if (!got) await sleep(15000 + Math.floor(Math.random() * 8000));
