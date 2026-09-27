@@ -2,10 +2,10 @@
 
 /**
  * The school portal's Curriculum Bank: the national scheme of work and
- * lesson notes for every class from Nursery 1 to SSS 3, browsable and
- * installable. Management reads any class's weekly scheme, opens the
- * note under every topic, and pours the notes straight into the
- * school's own Syllabus & Notes page so teachers teach from them.
+ * lesson notes for every class from Nursery 1 to SSS 3, fetched from the
+ * baked corpus and displayed straight on the page. Management reads any
+ * class's weekly scheme and opens the note under every topic; nothing is
+ * copied into the school account, the bank itself is the content.
  */
 
 import { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
@@ -13,9 +13,6 @@ import {
   SchoolHeading,
   SchoolShell,
   Card,
-  CardTitle,
-  btnPrimary,
-  selectCls,
 } from '@/components/school-shell';
 import { downloadTopicPdf, type NotePdfMeta } from '@/lib/note-pdf';
 import {
@@ -27,14 +24,6 @@ import {
   type CorpusNoteTerm,
   type CorpusSchemeTerm,
 } from '@/lib/corpus';
-import {
-  bulkNotes,
-  fetchClasses,
-  fetchSubjects,
-  getActiveSchool,
-  type SchoolClass,
-  type SchoolSubject,
-} from '@/lib/school';
 
 const TERM_LABEL: Record<number, string> = { 1: 'First term', 2: 'Second term', 3: 'Third term' };
 
@@ -132,7 +121,7 @@ function CurriculumInner() {
     <>
       <SchoolHeading
         title="Curriculum Bank"
-        sub="The national bank: NERDC-aligned scheme of work and ready lesson notes for every class from Nursery 1 to SSS 3. Read any week here, download its note as a PDF, or pour the notes into this school so teachers teach from them."
+        sub="The national bank: NERDC-aligned scheme of work and ready lesson notes for every class from Nursery 1 to SSS 3, fetched and displayed straight from the Renance curriculum library. Read any week here and download its note as a PDF."
       />
 
       {error && !index && (
@@ -227,20 +216,6 @@ function CurriculumInner() {
                   }}
                   scheme={scheme}
                   note={note}
-                />
-              )}
-
-              {activeClass && activeSubject && note && note.topics.length > 0 && (
-                <InstallIntoSchool
-                  corpusClass={activeClass.name}
-                  corpusSubject={activeSubject.name}
-                  term={term}
-                  topics={note.topics.map((t) => ({
-                    title: t.title,
-                    week: t.week,
-                    content: t.content,
-                    source: 'renance-corpus',
-                  }))}
                 />
               )}
             </section>
@@ -403,126 +378,5 @@ function SchemePanel({
         })}
       </ol>
     </div>
-  );
-}
-
-/* ------------------------------------------------------- install action */
-
-function InstallIntoSchool({
-  corpusClass,
-  corpusSubject,
-  term,
-  topics,
-}: {
-  corpusClass: string;
-  corpusSubject: string;
-  term: number;
-  topics: { title: string; week: number; content: string; source: string }[];
-}) {
-  const [classes, setClasses] = useState<SchoolClass[]>([]);
-  const [subjects, setSubjects] = useState<SchoolSubject[]>([]);
-  const [classId, setClassId] = useState('');
-  const [subjectId, setSubjectId] = useState('');
-  const [session, setSession] = useState('2025/2026');
-  const [busy, setBusy] = useState(false);
-  const [msg, setMsg] = useState('');
-
-  useEffect(() => {
-    const school = getActiveSchool();
-    if (!school?.schoolId) return;
-    fetchClasses(school.schoolId).then((r) => {
-      setClasses(r.classes ?? []);
-    }).catch(() => {});
-    fetchSubjects(school.schoolId).then((r) => {
-      setSubjects(r.subjects ?? []);
-    }).catch(() => {});
-  }, []);
-
-  // Prefill by name match: the corpus class and subject usually carry
-  // the same name the school gave its own.
-  useEffect(() => {
-    if (!classes.length || classId) return;
-    const slug = (s: string) => s.toLowerCase().replace(/\s+/g, '-');
-    const match = classes.find((c) => slug(c.name) === slug(corpusClass));
-    if (match) setClassId(match.id);
-  }, [classes, corpusClass, classId]);
-
-  useEffect(() => {
-    if (!subjects.length || subjectId) return;
-    const match = subjects.find((s) => s.name.toLowerCase() === corpusSubject.toLowerCase());
-    if (match) setSubjectId(match.id);
-  }, [subjects, corpusSubject, subjectId]);
-
-  const install = useCallback(async () => {
-    const school = getActiveSchool();
-    if (!school?.schoolId || !classId || !subjectId) return;
-    setBusy(true);
-    setMsg('');
-    try {
-      const r = await bulkNotes(school.schoolId, {
-        classId,
-        subjectId,
-        term,
-        session,
-        overwrite: true,
-        topics,
-      });
-      setMsg(`Installed ${r.written ?? topics.length} topic notes into this school's ${TERM_LABEL[term] ?? `term ${term}`}.`);
-    } catch (e) {
-      setMsg(e instanceof Error ? e.message : 'The install failed, try again.');
-    } finally {
-      setBusy(false);
-    }
-  }, [classId, subjectId, term, session, topics]);
-
-  return (
-    <Card className="mt-4">
-      <CardTitle hint="Match the bank to this school's own class and subject, then pour every topic note in. Teachers see them on the Syllabus &amp; Notes page.">
-        Install into this school
-      </CardTitle>
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <label className="grid gap-1.5">
-          <span className="text-sm font-medium text-on-surface">School class</span>
-          <select className={selectCls} value={classId} onChange={(e) => setClassId(e.target.value)}>
-            <option value="">Pick the class…</option>
-            {classes.map((c) => (
-              <option key={c.id} value={c.id}>
-                {c.name}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className="grid gap-1.5">
-          <span className="text-sm font-medium text-on-surface">School subject</span>
-          <select className={selectCls} value={subjectId} onChange={(e) => setSubjectId(e.target.value)}>
-            <option value="">Pick the subject…</option>
-            {subjects.map((s) => (
-              <option key={s.id} value={s.id}>
-                {s.name}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className="grid gap-1.5">
-          <span className="text-sm font-medium text-on-surface">Session</span>
-          <input className={selectCls} value={session} onChange={(e) => setSession(e.target.value)} />
-        </label>
-        <div className="grid items-end gap-1.5">
-          <button
-            type="button"
-            className={btnPrimary}
-            disabled={busy || !classId || !subjectId}
-            onClick={install}
-          >
-            {busy ? 'Installing…' : `Install ${topics.length} notes`}
-          </button>
-        </div>
-      </div>
-      {msg && <p className="mt-3 text-sm text-on-surface">{msg}</p>}
-      <p className="mt-2 text-xs text-on-surface-variant">
-        From the national bank: {corpusClass} &middot; {corpusSubject} &middot;{' '}
-        {TERM_LABEL[term] ?? `Term ${term}`}
-      </p>
-    </Card>
   );
 }

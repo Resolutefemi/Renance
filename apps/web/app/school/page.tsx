@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { SchoolHeading, SchoolShell, Card, CardTitle, btnGhost, btnPrimary } from '@/components/school-shell';
+import { SchoolHeading, SchoolShell, Card, CardTitle, btnGhost } from '@/components/school-shell';
 import {
   fetchAssignments,
   fetchClasses,
@@ -10,7 +10,6 @@ import {
   fetchStudents,
   fetchSubjects,
   getActiveSchool,
-  seedCurriculum,
   type ActiveSchool,
   type AssignmentDetail,
   type SchoolClass,
@@ -27,7 +26,6 @@ export default function SchoolOverviewPage() {
   const [assignments, setAssignments] = useState<AssignmentDetail[]>([]);
   const [classes, setClasses] = useState<SchoolClass[]>([]);
   const [subjects, setSubjects] = useState<SchoolSubject[]>([]);
-  const [seeding, setSeeding] = useState(false);
 
   useEffect(() => {
     const a = getActiveSchool();
@@ -57,7 +55,7 @@ export default function SchoolOverviewPage() {
   const checklist = isManagement
     ? [
         { done: true, label: 'School registered', href: '/school/setup' },
-        { done: stats.classes > 0, label: 'Install the Nigerian curriculum', href: '/school/setup' },
+        { done: true, label: 'Open the national curriculum bank', href: '/school/curriculum' },
         { done: stats.pairs > 0, label: 'Choose the subjects each class offers', href: '/school/setup' },
         { done: stats.students > 0, label: 'Enroll students with full details', href: '/school/students' },
         { done: false, label: 'Create teacher accounts and assign subjects', href: '/school/teachers' },
@@ -153,32 +151,13 @@ export default function SchoolOverviewPage() {
                 </li>
               ))}
             </ul>
-            {stats.classes === 0 && (
-              <button
-                className={btnPrimary + ' mt-4'}
-                disabled={seeding}
-                onClick={async () => {
-                  const a = getActiveSchool();
-                  if (!a) return;
-                  setSeeding(true);
-                  try {
-                    await seedCurriculum(a.schoolId);
-                    window.location.reload();
-                  } finally {
-                    setSeeding(false);
-                  }
-                }}
-              >
-                {seeding ? 'Installing…' : 'Install the Nigerian curriculum'}
-              </button>
-            )}
           </Card>
 
           {/* at a glance */}
           <Card>
             <CardTitle>At a glance</CardTitle>
             <div className="space-y-3">
-              <MiniRow label="Latest class" value={classes.length ? classes[classes.length - 1]?.name : 'Install the curriculum'} />
+              <MiniRow label="Latest class" value={classes.length ? classes[classes.length - 1]?.name : 'Add classes in setup'} />
               <MiniRow
                 label="Class + subject pairs wired"
                 value={stats.pairs > 0 ? `${stats.pairs} pairs` : 'Not set up yet'}

@@ -15,9 +15,15 @@ import {
   type SchoolSyllabus,
   type SchoolTopic,
   type SchemeRow,
-  seedSchemes,
 } from '@/lib/school';
-import { downloadTopicPdf } from '@/lib/note-pdf';
+import {
+  fetchCorpusIndex,
+  loadCorpusNotes,
+  loadCorpusSchemes,
+  type CorpusNoteTerm,
+  type CorpusSchemeTerm,
+} from '@/lib/corpus';
+import { downloadTopicPdf, type NotePdfMeta } from '@/lib/note-pdf';
 
 export default function SchoolSyllabusPage() {
   const [active, setActive] = useState<ActiveSchool | null>(null);
@@ -28,8 +34,19 @@ export default function SchoolSyllabusPage() {
   const [openTerm, setOpenTerm] = useState(1);
   const [loading, setLoading] = useState(false);
   const [notice, setNotice] = useState('');
-  const [session, setSession] = useState('2025/2026');
-  const [seeding, setSeeding] = useState(false);
+
+  // National bank fallback: when this school has no terms of its own for
+  // the picked class + subject, fetch the NERDC corpus straight from the
+  // curriculum library and display it right here (founder directive: no
+  // install step anywhere, just fetch and display).
+  const [national, setNational] = useState<{
+    className: string;
+    subjectName: string;
+    terms: number[];
+    schemes: CorpusSchemeTerm[];
+    notes: CorpusNoteTerm[];
+  } | null>(null);
+  const [nationalTerm, setNationalTerm] = useState(1);
 
   useEffect(() => {
     const a = getActiveSchool();
@@ -80,6 +97,48 @@ export default function SchoolSyllabusPage() {
   useEffect(() => {
     loadTerms();
   }, [loadTerms]);
+
+  useEffect(() => {
+    let alive = true;
+    setNational(null);
+    if (loading || terms.length > 0 || !classId || !subjectId) return () => { alive = false; };
+    const pair = pairs.find((p) => p.classId === classId && p.subjectId === subjectId);
+    if (!pair) return () => { alive = false; };
+    (async () => {
+      try {
+        const idx = await fetchCorpusIndex();
+        const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+        const cls = idx.classes.find(
+          (c) => slug(c.id) === slug(pair.className) || slug(c.name) === slug(pair.className),
+        );
+        if (!cls) return;
+        const subj = cls.subjects.find(
+          (s) => slug(s.id) === slug(pair.subjectName) || slug(s.name) === slug(pair.subjectName),
+        );
+        if (!subj) return;
+        const available = [...new Set([...subj.schemeTerms, ...subj.noteTerms])].sort((a, b) => a - b);
+        if (!available.length) return;
+        const [sc, nt] = await Promise.all([
+          loadCorpusSchemes(cls.id, subj.id),
+          loadCorpusNotes(cls.id, subj.id),
+        ]);
+        if (!alive) return;
+        setNational({
+          className: cls.name,
+          subjectName: subj.name,
+          terms: available,
+          schemes: sc,
+          notes: nt,
+        });
+        setNationalTerm(available[0]);
+      } catch {
+        /* the bank is optional here; the empty state still explains */
+      }
+    })();
+    return () => {
+      alive = false;
+    };
+  }, [loading, terms.length, classId, subjectId, pairs]);
 
   // The class picker shows only classes that appear in the allowed pairs.
   const classes = useMemo(() => {
@@ -139,24 +198,8 @@ export default function SchoolSyllabusPage() {
         }
       : null;
 
-  async function draftSchemes() {
-    const a = getActiveSchool();
-    if (!a) return;
-    setSeeding(true);
-    setNotice('');
-    try {
-      const res = await seedSchemes(a.schoolId, session);
-      setNotice(
-        `Installed the national scheme of work + lesson notes into ${res.filled} term slot${
-          res.filled === 1 ? '' : 's'
-        } for ${session}. Empty slots only - nothing you already wrote was touched.`,
-      );
-    } catch {
-      setNotice('The install failed - check the session field and try again.');
-    } finally {
-      setSeeding(false);
-    }
-  }
+  const nationalScheme = national?.schemes.find((s) => s.term === nationalTerm) ?? null;
+  const nationalNote = national?.notes.find((n) => n.term === nationalTerm) ?? null;
 
   return (
     <SchoolShell title="Syllabus & Notes">
@@ -176,19 +219,6 @@ export default function SchoolSyllabusPage() {
         >
           Open the curriculum bank
         </Link>
-      </div>
-
-      <div className="mb-4 flex flex-wrap items-center gap-2">
-        <input
-          value={session}
-          onChange={(e) => setSession(e.target.value)}
-          placeholder="Session (2025/2026)"
-          className={`${inputCls} h-11 w-auto min-w-40`}
-          aria-label="Session"
-        />
-        <button onClick={draftSchemes} disabled={seeding || !active || active.role !== 'management'} className={btnPrimary}>
-          {seeding ? 'Installing…' : 'Install the national curriculum'}
-        </button>
       </div>
 
       <div className="mb-6 grid gap-3 md:grid-cols-2">
@@ -218,12 +248,23 @@ export default function SchoolSyllabusPage() {
 
       {!loading && terms.length === 0 && (
         <div className="rounded-xl border border-outline-variant bg-surface-container-lowest p-6 text-sm text-on-surface-variant">
-          No syllabus terms for this class + subject yet. Management: click{' '}
-          <span className="font-medium text-on-surface">Install the national curriculum</span> above - it
-          creates the three terms and pours the NERDC scheme of work and lesson notes into every class
-          and subject this school runs. You can also pull one subject at a time from the{' '}
-          <Link href="/school/curriculum" className="underline">Curriculum Bank</Link>.
+          No syllabus terms for this class + subject yet. Below is the national NERDC scheme of work
+          with ready lesson notes, fetched straight from the{' '}
+          <Link href="/school/curriculum" className="underline">Curriculum Bank</Link> - read it here
+          or hand it to teachers. Anything your school writes itself will appear above it.
         </div>
+      )}
+
+      {!loading && terms.length === 0 && national && (
+        <NationalBank
+          className={national.className}
+          subjectName={national.subjectName}
+          terms={national.terms}
+          term={nationalTerm}
+          onTerm={setNationalTerm}
+          scheme={nationalScheme}
+          note={nationalNote}
+        />
       )}
 
       <div className="flex flex-col gap-4">
@@ -379,5 +420,143 @@ function TopicCard({
         </div>
       )}
     </article>
+  );
+}
+
+/* ------------------------------------------------------- national bank */
+
+const TERM_LABEL: Record<number, string> = { 1: 'First term', 2: 'Second term', 3: 'Third term' };
+
+/**
+ * The national NERDC scheme + notes for a class + subject this school has
+ * not written its own terms for yet. Same read-only display as the
+ * Curriculum Bank: every week opens its note inline, each note prints to
+ * a clean black & white PDF. Nothing is stored against the school.
+ */
+function NationalBank({
+  className,
+  subjectName,
+  terms,
+  term,
+  onTerm,
+  scheme,
+  note,
+}: {
+  className: string;
+  subjectName: string;
+  terms: number[];
+  term: number;
+  onTerm: (t: number) => void;
+  scheme: CorpusSchemeTerm | null;
+  note: CorpusNoteTerm | null;
+}) {
+  const [openWeek, setOpenWeek] = useState<number | null>(null);
+  const noteByWeek = useMemo(() => {
+    const map = new Map<number, NonNullable<CorpusNoteTerm['topics']>[number]>();
+    for (const t of note?.topics ?? []) map.set(t.week, t);
+    return map;
+  }, [note]);
+
+  if (!scheme && !note) return null;
+
+  return (
+    <section className="mt-2">
+      <div className="mb-3 flex flex-wrap items-center gap-2">
+        <h2 className="mr-2 text-lg font-semibold text-on-surface">
+          National curriculum · {className} · {subjectName}
+        </h2>
+        {terms.map((t) => (
+          <button
+            key={t}
+            onClick={() => onTerm(t)}
+            className={`rounded-full px-4 py-1.5 text-xs font-medium transition ${
+              t === term
+                ? 'bg-primary text-on-primary'
+                : 'border border-outline text-on-surface hover:bg-surface-container'
+            }`}
+          >
+            {TERM_LABEL[t] ?? `Term ${t}`}
+          </button>
+        ))}
+      </div>
+
+      {scheme && (
+        <div className="min-w-0 overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest">
+          <div className="border-b border-outline-variant bg-surface-container px-5 py-3">
+            <p className="text-sm font-semibold text-on-surface">Scheme of work</p>
+            <p className="text-xs text-on-surface-variant">
+              {scheme.weeks.length} teaching weeks. The note under every topic opens inline.
+            </p>
+          </div>
+          <ol className="divide-y divide-outline-variant">
+            {scheme.weeks.map((w) => {
+              const noteTopic = noteByWeek.get(w.week);
+              const open = openWeek === w.week;
+              return (
+                <li key={w.week} className="px-5 py-4">
+                  <div className="flex flex-wrap items-start gap-3">
+                    <span className="mt-0.5 shrink-0 rounded-full border border-outline-variant px-2.5 py-1 text-xs font-medium text-on-surface">
+                      Week {w.week}
+                    </span>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm font-semibold text-on-surface">{w.topic}</p>
+                      {w.content && (
+                        <p className="mt-1 whitespace-pre-line text-sm leading-6 text-on-surface-variant">{w.content}</p>
+                      )}
+                    </div>
+                    {noteTopic && (
+                      <button
+                        onClick={() => setOpenWeek(open ? null : w.week)}
+                        className="shrink-0 rounded-full border border-outline px-3 py-1.5 text-xs font-medium text-on-surface hover:bg-surface-container"
+                      >
+                        {open ? 'Hide note' : 'Read note'}
+                      </button>
+                    )}
+                  </div>
+
+                  {open && noteTopic && (
+                    <div className="mt-4 rounded-lg border border-outline-variant bg-surface-container p-4">
+                      <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+                        <p className="text-sm font-semibold text-on-surface">{noteTopic.title}</p>
+                        <button
+                          onClick={() =>
+                            downloadTopicPdf(
+                              {
+                                schoolName: 'Renance National Curriculum',
+                                className,
+                                subject: subjectName,
+                                term,
+                              } satisfies NotePdfMeta,
+                              {
+                                id: `corpus-${className}-${subjectName}-${term}-${noteTopic.week}`,
+                                title: noteTopic.title,
+                                content: noteTopic.content,
+                                week: noteTopic.week,
+                                seq: noteTopic.week,
+                                source: 'renance-corpus',
+                              },
+                            )
+                          }
+                          className="rounded-full border border-outline px-3 py-1.5 text-xs text-on-surface hover:bg-surface-container-lowest"
+                        >
+                          Download PDF
+                        </button>
+                      </div>
+                      <p className="whitespace-pre-line text-sm leading-6 text-on-surface-variant">{noteTopic.content}</p>
+                    </div>
+                  )}
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+      )}
+
+      {!scheme && note && (
+        <div className="rounded-xl border border-outline-variant bg-surface-container-lowest p-6 text-sm text-on-surface-variant">
+          Lesson notes for this subject are in the bank; the term scheme file is still landing.
+        </div>
+      )}
+    </section>
   );
 }
