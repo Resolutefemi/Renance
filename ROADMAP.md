@@ -30,7 +30,7 @@ external service/key/infra decision) · each row lists what unblocks it.
 | --- | --- | --- |
 | Render deploy | Blueprint applied → `https://renance-api.onrender.com`. Neon pooled URI set on the service; `/healthz` answers `{"db":"ok"}` and the full `scripts/api-e2e.sh` E2E ran green against production (2026-09-07). `render.yaml` now ships both Google client IDs so a re-apply never prompts for them. | **LIVE** |
 | `PUBLIC_API_BASE` variable | Set to the Render URL (2026-09-02); web-deploy + mobile-apk bakes it, so the Pages site and the APK point students at the real backend. | **LIVE** |
-| Android OAuth client | Google Console → OAuth client (type **Android**). | Values fixed and documented — package `dev.renance.renance`, SHA-1 `6E:A1:3C:4A:0C:70:4E:28:1A:77:00:3A:4B:F4:9A:7A:25:5B:F0:95` (committed release keystore). Create the client, no code change needed. |
+| Android OAuth client | Google Console → OAuth client (type **Android**). | Values fixed and documented — package `dev.renance.renance`; release SHA-1 `6E:A1:3C:4A:0C:70:4E:28:1A:77:00:3A:4B:F4:9A:7A:25:5B:F0:95` (committed `renance.keystore`) and debug SHA-1 `C3:B9:E5:1E:C9:1B:79:7D:B1:F7:07:6B:26:13:7E:B6:0B:11:86:5F` (committed `debug.keystore`, used by `flutter run` on every machine). Create both clients, no code change needed. |
 
 ### Keystore note (Android Google sign-in — RESOLVED)
 
@@ -42,6 +42,16 @@ release keystore is committed to the repo with a documented password
 `build.gradle.kts` signs every release APK with it. The SHA-1 is therefore
 permanent — register it once in Google Console and every future APK keeps
 Google sign-in working.
+
+The same problem hit **debug** builds from the opposite side: `flutter run`
+signs with `~/.android/debug.keystore`, which is machine-local, so the
+debug fingerprint differed on every laptop and sign-in broke in dev runs
+(`ApiException: 10`). **Fixed:** a shared debug keystore is committed
+(`apps/mobile/android/app/debug.keystore`, alias `androiddebugkey`,
+password `android`) and `signingConfigs.debug` pins it, so every machine
+that pulls the repo signs debug builds with the SAME key. Register its
+SHA-1 `C3:B9:E5:1E:C9:1B:79:7D:B1:F7:07:6B:26:13:7E:B6:0B:11:86:5F` as the
+second Android OAuth client (docs/deploy.md has the full walk-through).
 
 ## G4+ feature board (the 19-item list)
 

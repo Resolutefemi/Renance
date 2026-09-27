@@ -28,6 +28,18 @@ android {
             keyAlias = "renance"
             keyPassword = "renance-keystore"
         }
+        // Shared DEBUG key, also committed with the repo. AGP's default debug
+        // signingConfig points at ~/.android/debug.keystore, whose fingerprint
+        // differs per machine — so `flutter run` Google sign-in broke on every
+        // fresh machine. Overriding it pins ONE debug SHA-1 (see docs/deploy.md):
+        // register it once as the second Android OAuth client and debug builds
+        // authenticate from any machine that pulled this repo.
+        getByName("debug") {
+            storeFile = file("debug.keystore")
+            storePassword = "android"
+            keyAlias = "androiddebugkey"
+            keyPassword = "android"
+        }
     }
 
     defaultConfig {
@@ -46,9 +58,15 @@ android {
     }
 
     buildTypes {
+        debug {
+            // Explicit: never fall back to ~/.android/debug.keystore.
+            signingConfig = signingConfigs.getByName("debug")
+        }
         release {
             signingConfig = signingConfigs.getByName("release")
         }
+        // The Flutter Gradle plugin creates the "profile" build type with
+        // initWith(debug), so profile builds inherit the shared debug key too.
     }
 }
 

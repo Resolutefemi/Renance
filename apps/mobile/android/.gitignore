@@ -18,3 +18,8 @@ key.properties
 # "Android client" is registered against. Password is documented (and must
 # be rotated) before Play Store distribution. See ROADMAP.md keystore note.
 !app/renance.keystore
+# Exception 2: the shared DEBUG key is also committed ON PURPOSE. `flutter run`
+# signs with it on EVERY machine (see signingConfigs.debug in app/build.gradle.kts),
+# so its SHA-1 can be registered once as the second Android OAuth client instead
+# of each developer extracting their own ~/.android/debug.keystore fingerprint.
+!app/debug.keystore

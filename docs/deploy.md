@@ -124,11 +124,19 @@ signing certificate. Creating one takes two minutes:
      `6E:A1:3C:4A:0C:70:4E:28:1A:77:00:3A:4B:F4:9A:7A:25:5B:F0:95`.
      Re-verify any time with:
      `keytool -list -v -keystore apps/mobile/android/app/renance.keystore -alias renance -storepass renance-keystore`
-   - `flutter run` debug builds are signed with your machine's debug
-     keystore, which has a DIFFERENT SHA-1. Get it with:
-     `keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android`
+   - `flutter run` debug builds are signed with the COMMITTED shared debug
+     key `apps/mobile/android/app/debug.keystore` (gradle pins
+     `signingConfigs.debug` to it, overriding `~/.android/debug.keystore`),
+     so the fingerprint is the SAME on every machine:
+     `C3:B9:E5:1E:C9:1B:79:7D:B1:F7:07:6B:26:13:7E:B6:0B:11:86:5F`
+     Re-verify any time with:
+     `keytool -list -v -keystore apps/mobile/android/app/debug.keystore -alias androiddebugkey -storepass android`
      Google allows one SHA-1 per Android client, so create a SECOND
-     Android client (same package name) for the debug fingerprint.
+     Android client (same package name) for this debug fingerprint.
+     (On machines that have NOT pulled the commit adding the shared key,
+     `flutter run` still signs with `~/.android/debug.keystore`; its
+     fingerprint, if ever needed, comes from:
+     `keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android`.)
    - If the app ships through Google Play, Play re-signs every build. Add
      a THIRD Android client whose SHA-1 comes from Play Console →
      Release → Setup → App signing → SHA-1 (the App signing key).
