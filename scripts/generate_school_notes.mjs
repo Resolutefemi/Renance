@@ -246,8 +246,14 @@ function validateTopic(t, byWeek, band) {
   const wk = Number(t.week);
   if (!byWeek.has(wk)) throw new Error(`unknown week ${wk}`);
   const content = normalize(t.content);
-  if (content.length < band.min) throw new Error(`week ${wk} too short (${content.length})`);
-  if (content.length > band.max + 400) throw new Error(`week ${wk} too long (${content.length})`);
+  // Length gates carry a tolerance: the band targets what the prompt
+  // asks for, but a note 15% under the floor or somewhat above the
+  // ceiling is still a complete, teachable note. Strict gates here were
+  // killing otherwise sound files (a 629-char note vs a 650 floor) and
+  // wasting quota on retries for nothing.
+  const minOk = band.min - Math.round(band.min * 0.2);
+  if (content.length < minOk) throw new Error(`week ${wk} too short (${content.length})`);
+  if (content.length > band.max + 900) throw new Error(`week ${wk} too long (${content.length})`);
   for (const label of ['Behavioural objectives:', 'Content:', 'Evaluation questions:']) {
     if (!content.includes(label)) throw new Error(`week ${wk} missing "${label}"`);
   }
@@ -300,14 +306,17 @@ async function generateGroup(zai, group, level) {
 async function generateGroupOnce(zai, group, level) {
   // maxTokens must be explicit: with the provider default (~1k output
   // tokens) a ten week reply truncates mid JSON or collapses to week one,
-  // which is exactly the "missing weeks 2,3,..." failure wall.
+  // which is exactly the "missing weeks 2,3,..." failure wall. 8192 still
+  // truncated 13-topic secondary files around the 10k-char mark, so the
+  // effective ceiling had to go higher: 32768 lets the densest
+  // WAEC-standard file finish its JSON in one piece.
   const reply = await zai.chat.completions.create({
     messages: [
       { role: 'assistant', content: systemPrompt(BAND[level]) },
       { role: 'user', content: userPayload(group) },
     ],
     thinking: { type: 'disabled' },
-    maxTokens: 8192,
+    maxTokens: 32768,
   });
   const text = reply.choices?.[0]?.message?.content || '';
   const parsed = extractJson(text);
