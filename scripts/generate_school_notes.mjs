@@ -312,6 +312,11 @@ function extractJson(text) {
   for (const attempt of attempts) {
     try { return attempt(); } catch (e) { lastErr = e; }
   }
+  // persist the raw reply so a stubborn file can be diagnosed and the
+  // repair list extended instead of failing forever
+  try {
+    writeFileSync(join(ROOT, 'scripts', '.notes-raw-reply.txt'), `--- ${new Date().toISOString()} ---\n${text}\n`);
+  } catch {}
   throw new Error(`unparsable json: ${lastErr.message}`);
 }
 
