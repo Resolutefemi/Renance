@@ -312,8 +312,13 @@ class ApiClient {
             )
             .toList(),
         'durationMs': durationMs,
+        // INTEGER milliseconds, verbatim: the old `v.toDouble()` made
+        // Dart emit "1956.0" style floats and the server's int64 map
+        // 400'd every submission (founder screenshot bug, 2026-09-28).
+        // Dart ints encode as JSON ints; the server also rounds any
+        // legacy float a stale build sends (attempts.go float64 map).
         if (questionMs.isNotEmpty)
-          'questionMs': questionMs.map((k, v) => MapEntry(k, v.toDouble())),
+          'questionMs': Map<String, int>.from(questionMs),
       },
     );
   }

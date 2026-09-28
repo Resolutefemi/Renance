@@ -1,10 +1,14 @@
-name: mobile-apk (Android)
+name: mobile (Android APK + AAB)
 
-# Builds the Renance APK on every push that touches the Flutter app.
-# Get the APK three ways:
-#   1. Run page artifact (renance-android-apk) — downloads as a zip
-#   2. Rolling "latest" release below — raw .apk, no zip
-#   3. Tag a version (v*) — attached to a proper GitHub Release
+# Builds BOTH Renance Android artifacts on every push that touches the
+# Flutter app:
+#   APK  - direct install / founder distribution
+#   AAB  - the Play Store release bundle (founder: "make sure the aab
+#          and apk is on GitHub action too")
+# Get them three ways:
+#   1. Run page artifacts (renance-android-apk / renance-android-aab)
+#   2. Rolling "latest" release below - raw .apk, no zip
+#   3. Tag a version (v*) - attached to a proper GitHub Release
 
 on:
   push:
@@ -47,17 +51,24 @@ jobs:
         working-directory: apps/mobile
         run: flutter test
 
+      # Point the app at the deployed study API via the PUBLIC_API_BASE repo
+      # variable (Settings -> Secrets and variables -> Actions -> Variables).
+      # Unset, the fallback is the PRODUCTION API - the app config's own
+      # default - so a release build always syncs and downloads. (The old
+      # loopback fallback shipped dead downloads in every release.)
+      # GOOGLE_WEB_CLIENT_ID (repo variable) is the `serverClientId` Google
+      # sign-in uses so ID tokens carry the API's expected audience.
       - name: Build release APK
         working-directory: apps/mobile
-        # Point the app at the deployed study API via the PUBLIC_API_BASE repo
-        # variable (Settings -> Secrets and variables -> Actions -> Variables).
-        # Unset, the fallback is the PRODUCTION API — the app config's own
-        # default — so a release APK always syncs and downloads. (The old
-        # loopback fallback shipped dead downloads in every release.)
-        # GOOGLE_WEB_CLIENT_ID (repo variable) is the `serverClientId` Google
-        # sign-in uses so ID tokens carry the API's expected audience.
         run: |
           flutter build apk --release \
+            --dart-define=RENANCE_API_BASE=${{ vars.PUBLIC_API_BASE || 'https://renance-api.onrender.com' }} \
+            --dart-define=GOOGLE_WEB_CLIENT_ID=${{ vars.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '' }}
+
+      - name: Build release AAB (Play Store bundle)
+        working-directory: apps/mobile
+        run: |
+          flutter build appbundle --release \
             --dart-define=RENANCE_API_BASE=${{ vars.PUBLIC_API_BASE || 'https://renance-api.onrender.com' }} \
             --dart-define=GOOGLE_WEB_CLIENT_ID=${{ vars.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '' }}
 
@@ -66,6 +77,12 @@ jobs:
         with:
           name: renance-android-apk
           path: apps/mobile/build/app/outputs/flutter-apk/app-release.apk
+
+      - name: Upload AAB artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: renance-android-aab
+          path: apps/mobile/build/app/outputs/bundle/release/app-release.aab
 
       - name: Publish rolling latest release (raw APK, no zip)
         if: github.ref == 'refs/heads/main'
@@ -76,10 +93,14 @@ jobs:
           # A full (non-prerelease) release keeps the canonical
           # /releases/latest/download/app-release.apk URL working.
           prerelease: false
-          files: apps/mobile/build/app/outputs/flutter-apk/app-release.apk
+          files: |
+            apps/mobile/build/app/outputs/flutter-apk/app-release.apk
+            apps/mobile/build/app/outputs/bundle/release/app-release.aab
 
       - name: Attach to GitHub Release (tag builds only)
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         with:
-          files: apps/mobile/build/app/outputs/flutter-apk/app-release.apk
+          files: |
+            apps/mobile/build/app/outputs/flutter-apk/app-release.apk
+            apps/mobile/build/app/outputs/bundle/release/app-release.aab

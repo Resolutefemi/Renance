@@ -255,6 +255,8 @@ class BundleQuestion {
     this.group = '',
     this.image = '',
     this.passage = '',
+    this.answer = '',
+    this.explanation = '',
   });
 
   final String id;
@@ -272,6 +274,13 @@ class BundleQuestion {
   final String image;
   /// Shared comprehension text the question belongs to.
   final String passage;
+  /// Correct option letter ('' when the bank ships no key) - the study
+  /// reader and explanation sheet read this straight from the pack, so
+  /// the correct option shows fully offline.
+  final String answer;
+  /// Worked solution shipped with the bank ('' when none - the AI
+  /// explanation pill covers the gap).
+  final String explanation;
 
   factory BundleQuestion.fromJson(Map<String, dynamic> j) => BundleQuestion(
     id: (j['id'] ?? '') as String,
@@ -287,6 +296,8 @@ class BundleQuestion {
     group: (j['group'] ?? '') as String,
     image: (j['image'] ?? '') as String,
     passage: (j['passage'] ?? '') as String,
+    answer: (j['answer'] ?? '') as String,
+    explanation: (j['explanation'] ?? '') as String,
   );
 }
 

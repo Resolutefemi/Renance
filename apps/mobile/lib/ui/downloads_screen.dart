@@ -20,6 +20,8 @@ import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
 import 'school_screens.dart' show SchoolPackViewerScreen;
+import 'university_screens.dart'
+    show UniCourse, kUniversitySchools, universityCourses;
 import 'theme.dart';
 
 const String _wifiOnlyPref = 'renance.downloads.wifi_only';
@@ -44,6 +46,12 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
   List<SchoolContextModel> _schools = <SchoolContextModel>[];
   final Set<String> _selectedDesks = <String>{};
   final Set<String> _selectedSchools = <String>{};
+  /// School Desk (university) schools the student MARKED for download.
+  /// Founder rule: university banks never ride "Download everything" -
+  /// a student marks the particular school(s) they want first, then
+  /// downloads exactly those packs.
+  final Set<String> _selectedUniSchools = <String>{};
+  bool _uniSchoolsExpanded = false;
   bool _schoolsExpanded = false;
   bool _wifiOnly = false;
   ConnectivityResult _connection = ConnectivityResult.none;
@@ -52,7 +60,10 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) => _load());
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _load();
+      _loadSchools();
+    });
     _listen();
   }
 
@@ -114,6 +125,40 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
     await school.loadContexts();
     if (!mounted) return;
     setState(() => _schools = school.contexts);
+  }
+
+  /// The manifest's School Desk (university) banks grouped by school.
+  Map<String, List<UniCourse>> get _uniSchools =>
+      universityCourses(_exams);
+
+  int _uniSchoolDownloaded(String slug) {
+    final Set<String> downloaded =
+        context.read<StudentController>().downloaded;
+    return (_uniSchools[slug] ?? const <UniCourse>[])
+        .where((UniCourse c) => downloaded.contains(c.exam.code))
+        .length;
+  }
+
+  /// Downloads every bank of the MARKED schools, one pipe at a time
+  /// (downloadExam already retries its own network noise). Returns
+  /// (downloaded, failed) counts for the honest summary snackbar.
+  /// Controllers are captured up-front: no Provider lookup crosses an
+  /// await inside the loop.
+  Future<(int, int)> _downloadMarkedSchools() async {
+    final SyncController sync = context.read<SyncController>();
+    final StudentController student = context.read<StudentController>();
+    final Map<String, List<UniCourse>> schools = _uniSchools;
+    int ok = 0;
+    int failed = 0;
+    for (final String slug in _selectedUniSchools) {
+      for (final UniCourse c in schools[slug] ?? const <UniCourse>[]) {
+        if (student.downloaded.contains(c.exam.code)) continue;
+        final bool success = await sync.downloadExam(c.exam);
+        success ? ok++ : failed++;
+      }
+    }
+    await student.refreshDownloaded();
+    return (ok, failed);
   }
 
   // ------------------------------------------------------------- helpers
@@ -211,12 +256,16 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
 
     await _ensurePermissions();
 
-    // Nothing picked means EVERYTHING (founder: "I want the download to
-    // download all student question pack", 2026-09-28). One bootstrap with
-    // no desk filter pulls the whole student library - JAMB + WAEC + NECO
-    // + Post-UTME + GCSE + NEET (133 packs today; university banks stay
-    // opt-in per tile so nobody's storage gets blasted).
-    if (_selectedDesks.isEmpty && _selectedSchools.isEmpty) {
+    // Nothing picked means every STUDENT desk (founder: "I want the
+    // download to download all student question pack", 2026-09-28) -
+    // JAMB + WAEC + NECO + Post-UTME + GCSE + NEET (133 packs today).
+    // School Desk banks stay OUT (founder, round 3: "the offline
+    // download should not include school desks for students - student
+    // have to mark the particular school they want to download");
+    // marked schools, if any, download first.
+    if (_selectedDesks.isEmpty &&
+        _selectedSchools.isEmpty &&
+        _selectedUniSchools.isEmpty) {
       await sync.bootstrap(profileExams: const <String>[]);
       await student.refreshDownloaded();
       await _load();
@@ -231,6 +280,28 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
         ),
       );
       return;
+    }
+
+    // Marked School Desk schools go first (founder rule: mark first,
+    // then download).
+    if (_selectedUniSchools.isNotEmpty) {
+      final (int ok, int failed) = await _downloadMarkedSchools();
+      if (!mounted) return;
+      if (_selectedDesks.isEmpty && _selectedSchools.isEmpty) {
+        await _load();
+        messenger.showSnackBar(
+          SnackBar(
+            content: Text(
+              failed == 0
+                  ? 'School Desk ready offline - $ok packs downloaded.'
+                  : 'School Desk: $ok downloaded, $failed failed - check your connection and retry.',
+            ),
+          ),
+        );
+        _selectedUniSchools.clear();
+        setState(() {});
+        return;
+      }
     }
 
     final List<String> bodies = _selectedDesks.toList();
@@ -259,6 +330,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
 
     _selectedDesks.clear();
     _selectedSchools.clear();
+    _selectedUniSchools.clear();
     await _load();
     if (!mounted) return;
     final String? err = school.lastError;
@@ -339,7 +411,11 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
               onChanged: (bool v) => setState(() =>
                   v ? _selectedDesks.add(desk) : _selectedDesks.remove(desk)),
             ),
-          _buildSchoolsTile(school),
+          _buildUniSchoolsSection(),
+          // The staff Schools tile (syllabus/scheme/notes packs) only
+          // exists for school accounts - students never see a staff
+          // desk here (founder: school desks are not for students).
+          if (_schools.isNotEmpty) _buildSchoolsTile(school),
           if (busy) ...<Widget>[
             const SizedBox(height: 12),
             LinearProgressIndicator(
@@ -361,16 +437,26 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
           const SizedBox(height: 14),
           FilledButton.icon(
             // Never disabled for an empty selection: tapping with nothing
-            // picked downloads EVERY desk (the old disabled button read as
-            // "the download is broken").
+            // picked downloads EVERY student desk (the old disabled button
+            // read as "the download is broken"). Marked School Desk
+            // schools ride along first.
             onPressed: busy ? null : _downloadSelected,
             icon: const Icon(Icons.download_rounded, size: 20),
             label: Text(
-              _selectedDesks.isEmpty && _selectedSchools.isEmpty
+              _selectedDesks.isEmpty &&
+                      _selectedSchools.isEmpty &&
+                      _selectedUniSchools.isEmpty
                   ? 'Download everything'
-                  : 'Download ${_selectedDesks.length + _selectedSchools.length} selection(s)',
+                  : 'Download ${_selectedDesks.length + _selectedSchools.length + _selectedUniSchools.length} selection(s)',
             ),
           ),
+          if (_selectedUniSchools.isNotEmpty) ...<Widget>[
+            const SizedBox(height: 8),
+            Text(
+              'School Desk marked - only the schools you ticked will download.',
+              style: RenanceText.caption.copyWith(color: context.textSecondary),
+            ),
+          ],
           if (school.lastError != null) ...<Widget>[
             const SizedBox(height: 10),
             Text(
@@ -724,6 +810,93 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
             p.setBool(_wifiOnlyPref, v);
           });
         },
+      ),
+    );
+  }
+
+  /// The School Desk section: the manifest's university banks grouped
+  /// by school. Students MARK the particular school(s) they want here;
+  /// nothing downloads until they do (founder rule, round 3). The
+  /// section stays collapsed until a manifest actually carries School
+  /// Desk banks.
+  Widget _buildUniSchoolsSection() {
+    final Map<String, List<UniCourse>> schools = _uniSchools;
+    if (schools.isEmpty) return const SizedBox.shrink();
+    final int totalPacks =
+        schools.values.fold<int>(0, (int a, List<UniCourse> l) => a + l.length);
+    final int donePacks = schools.keys
+        .fold<int>(0, (int a, String s) => a + _uniSchoolDownloaded(s));
+    final List<String> slugs = schools.keys.toList()..sort();
+    return Card(
+      margin: const EdgeInsets.only(top: 10),
+      child: Column(
+        children: <Widget>[
+          _DeskTile(
+            title: 'School Desk (University)',
+            subtitle:
+                'Mark the school(s) you want, then download their packs',
+            icon: Icons.account_balance_outlined,
+            packCount: totalPacks,
+            downloadedCount: donePacks,
+            selected: _selectedUniSchools.isNotEmpty,
+            onChanged: (bool v) {
+              setState(() {
+                _uniSchoolsExpanded = v;
+                _selectedUniSchools.clear();
+              });
+            },
+          ),
+          if (_uniSchoolsExpanded) ...<Widget>[
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 6),
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Text(
+                      'Tick only the particular school(s) you want to download.',
+                      style: RenanceText.caption
+                          .copyWith(color: context.textSecondary),
+                    ),
+                  ),
+                  if (_selectedUniSchools.isNotEmpty)
+                    TextButton(
+                      onPressed: () =>
+                          setState(() => _selectedUniSchools.clear()),
+                      child: const Text('Clear'),
+                    ),
+                ],
+              ),
+            ),
+            for (final String slug in slugs)
+              CheckboxListTile(
+                dense: true,
+                controlAffinity: ListTileControlAffinity.leading,
+                contentPadding: const EdgeInsets.symmetric(horizontal: 8),
+                title: Text(
+                  kUniversitySchools[slug]?.$1 ?? slug.toUpperCase(),
+                  style: RenanceText.bodyBase
+                      .copyWith(color: context.ink, fontSize: 14),
+                ),
+                subtitle: Text(
+                  '${(schools[slug] ?? const <UniCourse>[]).length} packs · '
+                  '${_uniSchoolDownloaded(slug)} on device'
+                  '${kUniversitySchools.containsKey(slug) ? ' · ${kUniversitySchools[slug]!.$2}' : ''}',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: RenanceText.caption
+                      .copyWith(color: context.textSecondary),
+                ),
+                value: _selectedUniSchools.contains(slug),
+                onChanged: (bool? v) => setState(() {
+                  if (v ?? false) {
+                    _selectedUniSchools.add(slug);
+                  } else {
+                    _selectedUniSchools.remove(slug);
+                  }
+                }),
+              ),
+          ],
+        ],
       ),
     );
   }

@@ -1,4 +1,5 @@
-/// Study Past Questions - the school app's study page, Renance edition.
+/// Study Past Questions - the school app's study page, Renance edition,
+/// 1:1 with the website's /study-past-questions setup.
 ///
 /// The tinted header band ("Get all exam questions from 1978 till
 /// date"), the green "Update Questions" banner that opens the Select &
@@ -6,9 +7,10 @@
 /// Examination Year, Question type, Question Topic - with the big
 /// "Start Study" button.
 ///
-/// Start Study composes a real custom paper (subject + year + size via
-/// lib/papers.dart) and opens it in study mode: untimed, browsable,
-/// submit-and-reveal.
+/// Start Study opens the reader (study_reader_screen.dart): untimed,
+/// browsable question cards over the whole bank with year/type/topic
+/// filters and explanations - the website's reader experience. No
+/// compose machinery, no submit ceremony.
 library;
 
 import 'package:flutter/material.dart';
@@ -16,10 +18,10 @@ import 'package:provider/provider.dart';
 
 import '../controllers.dart';
 import '../models.dart';
-import '../papers.dart';
+import '../papers.dart' show subjectName;
 import '../storage.dart';
 import 'exam_mode_setup_screen.dart';
-import 'exam_screen.dart';
+import 'study_reader_screen.dart';
 import 'university_screens.dart';
 import 'update_questions_screen.dart';
 import 'theme.dart';
@@ -44,7 +46,25 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
   String _subject = '';
   String _year = 'All'; // All | 2023 | 2022 | ...
   String _qType = 'All'; // All | Objective | Theory
+  String _topic = ''; // '' = All topics; options come from the bank
+  List<String> _topics = const <String>[];
+  bool _topicsLoading = false;
   bool _starting = false;
+
+  /// The backing bank pack of the picked subject ("jamb-biology-bank",
+  /// a uni course pack, a post-utme bank) - the reader reads it
+  /// directly, exactly like the website's reader does.
+  String get _bankCode {
+    if (_body == 'university' || _body == 'post-utme') return _subject;
+    return '$_body-$_subject-bank';
+  }
+
+  ExamMeta? get _bankMeta {
+    for (final ExamMeta e in _exams) {
+      if (e.code == _bankCode) return e;
+    }
+    return null;
+  }
 
   @override
   void initState() {
@@ -64,13 +84,11 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
         final List<String> slugs = _slugs;
         _subject = slugs.isNotEmpty ? slugs.first : '';
       });
+      _loadTopics();
     });
   }
 
   List<ExamMeta> get _exams => context.read<SyncController>().exams;
-
-  List<ExamMeta> get _bodyExams =>
-      _exams.where((ExamMeta e) => e.body == _bodyLabel).toList();
 
   String get _bodyLabel => switch (_body) {
         'waec' => 'WAEC',
@@ -128,55 +146,84 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
     return subjectName(slug);
   }
 
+  /// Years of the SELECTED subject's bank (the manifest's per-pack
+  /// year list) - the web's Year dropdown semantics. The old pool
+  /// merged every body bank's years, offering years the picked bank
+  /// never carried (a year pick then filtered everything out server-
+  /// side or matched nothing - the founder's "year select does not
+  /// work" report).
   List<String> get _years {
-    final Set<int> years = <int>{};
-    for (final ExamMeta e in _bodyExams) {
-      years.addAll(e.years);
-    }
+    final List<int> years = _bankMeta?.years ?? const <int>[];
     final List<int> sorted = years.toList()..sort((int a, int b) => b.compareTo(a));
-    return <String>['All', ...sorted.take(12).map((int y) => '$y')];
+    return <String>['All', ...sorted.map((int y) => '$y')];
   }
 
-  Future<void> _start() async {
+  /// Topic options for the picked subject, read from the bank pack
+  /// itself (local first, fetch-and-cache as fallback) - the web's
+  /// Topic dropdown. Fails soft: "All topics" only.
+  Future<void> _loadTopics() async {
+    if (_subject.isEmpty) {
+      setState(() => _topics = const <String>[]);
+      return;
+    }
+    setState(() => _topicsLoading = true);
+    try {
+      final Bundle? bundle = await context
+          .read<SyncController>()
+          .loadBank(_bankCode, _bankMeta?.bundleSha256 ?? '');
+      if (!mounted) return;
+      final Set<String> set = <String>{};
+      for (final BundleQuestion q in bundle?.questions ?? const <BundleQuestion>[]) {
+        if (q.topic.isNotEmpty) set.add(q.topic);
+      }
+      final List<String> list = set.toList()..sort();
+      setState(() {
+        _topics = list.take(400).toList();
+        _topicsLoading = false;
+        _topic = '';
+      });
+    } catch (_) {
+      if (!mounted) return;
+      setState(() {
+        _topics = const <String>[];
+        _topicsLoading = false;
+        _topic = '';
+      });
+    }
+  }
+
+  /// Start Study opens the READER (founder: make the app's study look
+  /// like the website's) - untimed browsable cards over the whole bank
+  /// with year/type/topic filters and explanations, never a submitted
+  /// quiz. The year pin rides along and the reader filters the bank's
+  /// own question data client-side, so "2023" shows exactly 2023's
+  /// questions - the old composed-paper path ignored the pin.
+  void _start() {
     if (_subject.isEmpty || _starting) return;
     setState(() => _starting = true);
-    try {
-      final int? year = _year == 'All' ? null : int.tryParse(_year);
-      final String code;
-      final String title;
-      if (_body == 'university' || _body == 'post-utme') {
-        // Tertiary + Post UTME: carve a study slice from the chosen pack.
-        // The pick grammar takes count only for these banks - years stay
-        // a secondary-body feature.
-        code = buildPickCode(_subject, count: 60);
-        title = '${_subjectLabel(_subject)} · Study';
-      } else {
-        code = buildCustomCode(
-          <String>[_subject],
-          body: _body,
-          count: 60,
-          year: year,
-        );
-        title = '${subjectName(_subject)} · Study';
-      }
-      final ExamMeta meta = composedExamMeta(
-        code: code,
-        title: title,
-        body: _bodyLabel,
-        questionCount: 60,
-        durationMinutes: null,
-      );
-      if (!mounted) return;
-      // Study mode: untimed paper that lands in the Past Questions
-      // reader once graded - the school app's study semantics.
-      Navigator.of(context).push(
-        MaterialPageRoute<void>(
-          builder: (_) => ExamScreen(exam: meta, studyMode: true),
-        ),
-      );
-    } finally {
+    final int? year = _year == 'All' ? null : int.tryParse(_year);
+    final String topic = _topic;
+    final String title = '${_subjectLabel(_subject)} · Study';
+    Navigator.of(context)
+        .push(
+          MaterialPageRoute<void>(
+            builder: (_) => StudyReaderScreen(
+              bank: _bankCode,
+              sha: _bankMeta?.bundleSha256 ?? '',
+              title: title,
+              initialYear: year,
+              initialTopic: topic,
+              initialQt: switch (_qType) {
+                'Objective' => 'objective',
+                'Theory' => 'theory',
+                _ => 'all',
+              },
+            ),
+          ),
+        )
+        .whenComplete(() {
       if (mounted) setState(() => _starting = false);
-    }
+    });
   }
 
   @override
@@ -340,6 +387,7 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
                         for (final String s in slugs) {
                           if (_subjectLabel(s) == name) _subject = s;
                         }
+                        _year = 'All';
                       }),
                     ),
                     // Focus IS the exam type (founder rule): the study
@@ -360,13 +408,16 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
                       onChanged: (String v) => setState(() => _qType = v),
                     ),
                     _FieldLabel('Question Topic'),
-                    // Topic pinning arrives with the syllabus map bridge;
-                    // All stays the honest default.
+                    // Topic options come straight from the picked bank
+                    // (the web's Topic dropdown); fails soft to All.
                     _PickerField(
-                      value: 'All',
-                      items: const <String>['All'],
-                      enabled: false,
-                      onChanged: (_) {},
+                      value: _topicsLoading
+                          ? 'Loading topics…'
+                          : _topic.isEmpty ? 'All topics' : _topic,
+                      items: _topics,
+                      enabled: _topics.isNotEmpty && !_topicsLoading,
+                      onChanged: (String v) =>
+                          setState(() => _topic = v),
                     ),
                     const SizedBox(height: 24),
                     // ---- Start Study ----------------------------------

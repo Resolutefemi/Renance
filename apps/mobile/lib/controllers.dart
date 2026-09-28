@@ -220,6 +220,28 @@ class SyncController extends ChangeNotifier {
     }
   }
 
+  /// The study reader's data source: the bank pack, LOCAL FIRST (the
+  /// reader must open offline for every downloaded bank), network as
+  /// the fill-in path that also seeds the cache for next time. Returns
+  /// null only when the bank is neither on the device nor reachable -
+  /// the reader then shows its retry card.
+  Future<Bundle?> loadBank(String code, String sha) async {
+    final Bundle? local = await _store.loadPackByCode(code);
+    if (local != null) return local;
+    try {
+      final Bundle bundle = await _api.bundle(code);
+      await _store.savePack(bundle, sha);
+      notifyListeners();
+      return bundle;
+    } on ApiException {
+      return null;
+    } on NetworkException {
+      return null;
+    } catch (_) {
+      return null;
+    }
+  }
+
   /// Flush the offline submission queue. Network failures keep entries;
   /// permanent server decisions (e.g. already submitted) clear them.
   Future<void> retryPending() async {
