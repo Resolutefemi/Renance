@@ -168,16 +168,24 @@ class SyncController extends ChangeNotifier {
   }
 
   /// Need-based filter (founder rule: the app downloads what the student
-  /// is studying for). Falls back to everything when nothing matches,
-  /// an empty library helps nobody.
+  /// is studying for). Falls back to every STUDENT pack when nothing
+  /// matches, an empty library helps nobody.
   ///
   /// University Modules is the one exception: 500+ course banks would
   /// blast a fresh install with hundreds of megabytes, so nothing
   /// auto-downloads - the school desk fetches each course on demand
   /// (founder directive: per-school folders stay server-side until a
   /// student actually opens them).
+  ///
+  /// "All student question packs" (founder directive, 2026-09-28) =
+  /// every secondary-school pack: JAMB + WAEC + NECO + Post-UTME +
+  /// GCSE + NEET - the whole 133-pack library, university banks still
+  /// opt-in per tile.
   List<ExamMeta> _neededFor(List<String> profileExams) {
-    if (profileExams.isEmpty) return exams;
+    final List<ExamMeta> studentPacks = exams
+        .where((e) => e.body != 'University Modules')
+        .toList(growable: false);
+    if (profileExams.isEmpty) return studentPacks;
     final wanted = exams
         .where(
           (e) =>
@@ -185,7 +193,7 @@ class SyncController extends ChangeNotifier {
               profileExams.contains(e.category),
         )
         .toList(growable: false);
-    if (wanted.isEmpty) return exams;
+    if (wanted.isEmpty) return studentPacks;
     // University-only profiles sync nothing up front; every university
     // pack downloads from its desk tile instead.
     if (profileExams.length == 1 && profileExams.first == 'University Modules') {
@@ -700,11 +708,19 @@ class ExamController extends ChangeNotifier {
 /// launcher hero card, the streak pill, the review backlog, the due badge
 /// and the profile stat strip.
 class StudentController extends ChangeNotifier {
-  StudentController({required ApiClient api, required PackStore store})
-    : _api = api,
-      _store = store;
+  StudentController({
+    required ApiClient api,
+    required PackStore store,
+    SharedPreferences? prefs,
+  }) : _api = api,
+       _store = store,
+       _prefs = prefs;
 
   final ApiClient _api;
+
+  /// Optional persistence for the offline /me cache (null in tests that
+  /// construct the controller bare).
+  final SharedPreferences? _prefs;
 
   /// Public read for screens that need one-off API calls outside the
   /// controller's cached state (e.g. the syllabus map).
@@ -723,6 +739,13 @@ class StudentController extends ChangeNotifier {
   Set<String> downloaded = <String>{};
   bool loading = false;
   String? error;
+
+  /// TRUE only when the failure was the SERVER's own auth decision
+  /// (401/403) - the one shape that may log the student out. A network
+  /// hiccup is TRANSIENT: the shell keeps the session and rides the local
+  /// cache (founder rule: closing the app offline must never log out,
+  /// 2026-09-28).
+  bool authError = false;
 
   bool get hasProfile => me?.profile?.completed ?? false;
 
@@ -850,6 +873,7 @@ class StudentController extends ChangeNotifier {
   Future<void> refresh() async {
     loading = true;
     error = null;
+    authError = false;
     notifyListeners();
     try {
       final results = await Future.wait<dynamic>([
@@ -866,13 +890,50 @@ class StudentController extends ChangeNotifier {
       downloaded = results[3] as Set<String>;
       review = results[4] as ReviewSummary;
       fatigue = results[5] as FatigueState;
+      cacheMe(results[0] as MeResult);
     } on ApiException catch (e) {
       error = e.message;
+      // The server ANSWERED. Only a 401/403 is a genuine "this session is
+      // no longer valid" - every other status is a server-side decision
+      // about the request, not the session.
+      if (e.statusCode == 401 || e.statusCode == 403) authError = true;
+      _fallbackToCachedMe();
     } on NetworkException catch (e) {
       error = e.message;
+      authError = false;
+      _fallbackToCachedMe();
     }
     loading = false;
     notifyListeners();
+  }
+
+  // ------------------------------------------------- offline profile cache
+
+  /// The last good /me payload, persisted so a no-data launch still shows
+  /// the student's name, target exam and profile state (founder rule:
+  /// "once a student signup or login on the app it should always remain
+  /// logged in" - and usable - until they log out themselves).
+  void cacheMe(MeResult result) {
+    try {
+      _prefs?.setString(kMeCacheKey, jsonEncode(result.toJson()));
+    } catch (_) {
+      // A full disk must never break a good refresh.
+    }
+  }
+
+  void _fallbackToCachedMe() {
+    if (me != null) return;
+    final raw = _prefs?.getString(kMeCacheKey);
+    if (raw == null || raw.isEmpty) return;
+    try {
+      me = MeResult.fromJson(
+        (jsonDecode(raw) as Map).cast<String, dynamic>(),
+      );
+      // Gamification/attempts/review stay from the last session in memory
+      // (they are transient lists); the profile is what offline needs.
+    } on FormatException {
+      // Corrupt cache - ignore, screens show their offline states.
+    }
   }
 
   Future<void> refreshDownloaded() async {

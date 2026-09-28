@@ -8,6 +8,7 @@ import { setSession } from '@/lib/session';
 import { chooseSchool, schoolMe } from '@/lib/school';
 import { RenanceMark } from '@/components/renance-logo';
 import { GoogleSignIn } from '@/components/google-signin';
+import AppearanceModal, { needsAppearanceIntro } from '@/components/appearance-modal';
 import { AudienceToggle, type Audience } from '@/components/audience-toggle';
 import { MailIcon, LockIcon, ArrowIcon, EyeIcon } from '@/components/icons';
 
@@ -20,6 +21,19 @@ export default function LoginPage() {
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
+  // First-time Google students ARE first-time signups (the server upserts
+  // the account) - the founder's appearance popup fires once for them
+  // here too, gated by the same localStorage flag as the register flow.
+  const [showAppearance, setShowAppearance] = useState(false);
+  const [afterAppearance, setAfterAppearance] = useState<(() => void) | null>(null);
+
+  const closeAppearance = () => {
+    setShowAppearance(false);
+    const next = afterAppearance;
+    setAfterAppearance(null);
+    next?.();
+  };
+
   // Stable identity for the GIS callback, never re-initialize mid-session.
   const onGoogleCredential = useCallback(
     async (credential: string) => {
@@ -28,12 +42,19 @@ export default function LoginPage() {
       try {
         const res = await authWithGoogle(credential);
         setSession(res.token, res.user);
+        if (needsAppearanceIntro()) {
+          setAfterAppearance(() => () => router.replace('/dashboard'));
+          setShowAppearance(true);
+          setBusy(false);
+          return;
+        }
         router.replace('/dashboard');
       } catch (err) {
         setError(err instanceof ApiError ? err.message : 'Google sign-in failed, check the connection.');
         setBusy(false);
       }
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [router],
   );
 
@@ -79,6 +100,7 @@ export default function LoginPage() {
     // letting the page grow: on small phones the For Schools form is taller
     // than the viewport, and justify-center would clip the unreachable top.
     <main className="flex min-h-dvh w-full flex-col items-center bg-surface-container px-4">
+      <AppearanceModal open={showAppearance} onClose={closeAppearance} />
       <div className="my-auto flex w-full max-w-sm min-w-0 flex-col items-center">
         {/* Logo block, mockup: logo, h1, subtitle, centered */}
         <div className="mb-8 flex min-w-0 flex-col items-center">

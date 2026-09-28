@@ -63,7 +63,7 @@ class RenanceApp extends StatelessWidget {
         Provider<PackStore>.value(value: store),
         ChangeNotifierProvider<ThemeController>.value(value: theme),
         ChangeNotifierProvider<StudentController>(
-          create: (_) => StudentController(api: api, store: store),
+          create: (_) => StudentController(api: api, store: store, prefs: prefs),
         ),
         ChangeNotifierProvider<SyncController>(
           create: (_) => SyncController(api: api, store: store),

@@ -19,6 +19,7 @@ import '../device_id.dart';
 import '../models.dart';
 import '../controllers.dart';
 import '../storage.dart';
+import 'appearance_sheet.dart';
 import 'google_logo.dart';
 import 'renance_logo.dart';
 import 'theme.dart';
@@ -207,6 +208,11 @@ Future<bool> _runGoogleSignIn(
   }
   final AuthTokens res = await api.authWithGoogle(idToken);
   await session.save(res.token, res.user);
+  // First-time Google students ARE first-time signups (the upsert
+  // creates the account) - the founder's appearance popup fires here
+  // too, gated by the same one-time flag as the manual flow.
+  if (!context.mounted) return true;
+  await maybeShowFirstAppearanceSheet(context);
   if (!context.mounted) return true;
   await Navigator.of(context).pushReplacementNamed('/home');
   return true;
@@ -484,6 +490,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
       await session.save(res.token, res.user);
       final SharedPreferences prefs = session.prefs;
       await SchoolController.forgetSchoolSession(prefs);
+      if (!mounted) return;
+      // Founder directive (2026-09-28): the brand-new student sees the
+      // appearance popup ONCE, right after signup, before the verify
+      // sheet - picking a seed re-tints everything before they meet it.
+      await maybeShowFirstAppearanceSheet(context);
       if (!mounted) return;
       // Signup-only confirmation: the mailed link carries verifyReturn
       // "app" and the verify screen offers resend, the wrong-email

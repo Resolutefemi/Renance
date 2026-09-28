@@ -24,6 +24,11 @@ import 'theme.dart';
 
 const String _wifiOnlyPref = 'renance.downloads.wifi_only';
 
+/// The four core desks, in the order the screen has always shown them.
+/// Extra bodies (GCSE, NEET, ...) join from the manifest at build time
+/// of the widget - see the desk list in build().
+const List<String> kCoreDesks = <String>['JAMB', 'POST-UTME', 'WAEC', 'NECO'];
+
 class DownloadsScreen extends StatefulWidget {
   const DownloadsScreen({super.key});
 
@@ -187,11 +192,16 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
   }
 
   Future<void> _downloadSelected() async {
+    // Every Provider lookup happens BEFORE the first await: after an
+    // async gap the lint (rightly) refuses `context.*`, and the late
+    // lookups crashed silent paths during the founder's download bugs.
     final SyncController sync = context.read<SyncController>();
     final SchoolController school = context.read<SchoolController>();
+    final StudentController student = context.read<StudentController>();
+    final ScaffoldMessengerState messenger = ScaffoldMessenger.of(context);
 
     if (_wifiOnly && _connection != ConnectivityResult.wifi) {
-      ScaffoldMessenger.of(context).showSnackBar(
+      messenger.showSnackBar(
         const SnackBar(
           content: Text('Wi-Fi only is on - connect to Wi-Fi or allow mobile data below.'),
         ),
@@ -201,10 +211,26 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
 
     await _ensurePermissions();
 
-    // Nothing picked means EVERYTHING: the silent no-op read as
-    // "download is not working at all" (founder bug 2026-09-28).
+    // Nothing picked means EVERYTHING (founder: "I want the download to
+    // download all student question pack", 2026-09-28). One bootstrap with
+    // no desk filter pulls the whole student library - JAMB + WAEC + NECO
+    // + Post-UTME + GCSE + NEET (133 packs today; university banks stay
+    // opt-in per tile so nobody's storage gets blasted).
     if (_selectedDesks.isEmpty && _selectedSchools.isEmpty) {
-      setState(() => _selectedDesks.addAll(<String>['JAMB', 'POST-UTME', 'WAEC', 'NECO']));
+      await sync.bootstrap(profileExams: const <String>[]);
+      await student.refreshDownloaded();
+      await _load();
+      if (!mounted) return;
+      messenger.showSnackBar(
+        SnackBar(
+          content: Text(
+            sync.phase == SyncPhase.error
+                ? sync.message
+                : 'Download complete - every student question pack is ready offline.',
+          ),
+        ),
+      );
+      return;
     }
 
     final List<String> bodies = _selectedDesks.toList();
@@ -224,7 +250,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
         syncFailed = true;
         syncMessage = '$body desk: ${sync.message}';
       }
-      await context.read<StudentController>().refreshDownloaded();
+      await student.refreshDownloaded();
     }
 
     for (final String schoolId in _selectedSchools) {
@@ -236,7 +262,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
     await _load();
     if (!mounted) return;
     final String? err = school.lastError;
-    ScaffoldMessenger.of(context).showSnackBar(
+    messenger.showSnackBar(
       SnackBar(
         content: Text(
           err ??
@@ -262,7 +288,21 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
     final SchoolController school = context.watch<SchoolController>();
     final Set<String> downloaded = student.downloaded;
 
-    final List<String> desks = <String>['JAMB', 'POST-UTME', 'WAEC', 'NECO'];
+    // Desks are MANIFEST-DRIVEN: the four core exam bodies first (stable
+    // order), then every other secondary body the server ships (GCSE,
+    // NEET, ...). The old hardcoded four hid the GCSE/NEET packs behind
+    // an unreachable shelf - the founder's "download the WHOLE question
+    // pack" report (2026-09-28).
+    final List<String> desks = <String>[
+      ...kCoreDesks,
+      ..._exams
+          .map((ExamMeta e) => e.body)
+          .where((String b) =>
+              b.isNotEmpty &&
+              b != 'University Modules' &&
+              !kCoreDesks.contains(b))
+          .toSet(),
+    ];
     final bool busy =
         sync.phase == SyncPhase.syncing || school.isDownloading;
 
@@ -429,8 +469,12 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
         return 'WAEC offline';
       case 'NECO':
         return 'NECO offline';
+      case 'GCSE':
+        return 'GCSE offline';
+      case 'NEET':
+        return 'NEET offline';
       default:
-        return 'JAMB offline';
+        return '$desk offline';
     }
   }
 
@@ -442,8 +486,12 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
         return 'WASSCE past questions, all subjects';
       case 'NECO':
         return 'NECO past questions, all subjects';
+      case 'GCSE':
+        return 'GCSE exam-style banks, all subjects';
+      case 'NEET':
+        return 'NEET exam-style banks';
       default:
-        return 'UTME past questions + mock papers';
+        return 'Past questions, all subjects';
     }
   }
 
@@ -455,6 +503,10 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
         return Icons.school;
       case 'NECO':
         return Icons.history_edu;
+      case 'GCSE':
+        return Icons.public;
+      case 'NEET':
+        return Icons.medical_services_outlined;
       default:
         return Icons.verified;
     }
@@ -566,34 +618,55 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                         padding: const EdgeInsets.only(bottom: 6),
                         child: Row(
                           children: <Widget>[
+                            // Green = the capability is usable right now.
+                            // Amber = the OS still holds the grant behind a
+                            // dialog. The old card showed an ERROR icon for
+                            // "Android 13+ needs no legacy storage grant",
+                            // which read as "allow access to storage is not
+                            // working" (founder, 2026-09-28) - it is not an
+                            // error, the packs just never needed it.
                             Icon(
-                              p.usable
+                              p.ready
                                   ? Icons.check_circle
                                   : Icons.error_outline,
                               size: 18,
-                              color: p.usable ? const Color(0xFF10B981) : RenanceColors.amber,
+                              color: p.ready
+                                  ? const Color(0xFF10B981)
+                                  : RenanceColors.amber,
                             ),
                             const SizedBox(width: 8),
                             Expanded(
                               child: Text(
-                                p.usable
+                                p.ready
                                     ? p.label
                                     // Android 13+ retires the legacy storage
                                     // grant: the OS reports permanently denied
                                     // even though app-private packs need
-                                    // nothing. Say so instead of showing an
+                                    // nothing. Say so plainly instead of an
                                     // Allow button that can never succeed.
-                                    : '${p.label} - handled by Android on this device',
-                                style: RenanceText.bodyBase.copyWith(color: context.ink, fontSize: 13),
+                                    : p.retired
+                                        ? '${p.label} - not needed on this Android version; packs save in the app\'s own storage'
+                                        : '${p.label} - tap Allow to grant',
+                                style: RenanceText.bodyBase.copyWith(
+                                    color: context.ink, fontSize: 13),
                               ),
                             ),
-                            if (!p.usable && p.canAsk)
+                            if (!p.ready && p.canAsk)
                               TextButton(
                                 onPressed: () async {
                                   await p.permission.request();
                                   if (context.mounted) setState(() {});
                                 },
                                 child: const Text('Allow'),
+                              )
+                            else if (p.retired)
+                              const Text(
+                                'Ready',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w600,
+                                  color: Color(0xFF10B981),
+                                ),
                               ),
                           ],
                         ),
@@ -743,13 +816,16 @@ class _PermState {
   final Permission permission;
   final PermissionStatus status;
 
-  /// The app can actually use the capability right now: granted, the
-  /// iOS-only limited slice, or permanently denied on Android 13+ where
-  /// the legacy grant is retired and app-private storage needs nothing.
-  bool get usable =>
+  /// The app can actually use the capability right now: granted, or the
+  /// iOS-only limited slice.
+  bool get ready =>
       status == PermissionStatus.granted ||
-      status == PermissionStatus.limited ||
-      status == PermissionStatus.permanentlyDenied;
+      status == PermissionStatus.limited;
+
+  /// The OS retired this grant (Android 13+ legacy storage): there is
+  /// nothing to ask for and nothing is missing - the packs live in the
+  /// app's private directory which needs no permission on those builds.
+  bool get retired => status == PermissionStatus.permanentlyDenied;
 
   /// Only offer Allow while the OS can still show the dialog.
   bool get canAsk => status == PermissionStatus.denied;

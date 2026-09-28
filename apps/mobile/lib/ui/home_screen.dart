@@ -72,16 +72,28 @@ class _HomeScreenState extends State<HomeScreen> {
     final SessionStore session = context.read<SessionStore>();
     await student.refresh();
     if (!mounted) return;
+    // ONLY the server's own auth decision (401/403) ends the session -
+    // and it must be checked BEFORE the cached-profile fallback, because
+    // the fallback fills `me` from the local cache (a network failure is
+    // TRANSIENT: the student stays signed in and rides the local packs).
+    // The old code cleared the session on ANY error, so every offline
+    // launch threw the student back to login (founder bug, 2026-09-28:
+    // "anytime you close the app and open it back without data the app
+    // logs out itself").
+    if (student.authError) {
+      await session.clear();
+      if (!mounted) return;
+      await Navigator.of(context).pushReplacementNamed('/login');
+      return;
+    }
     final MeResult? me = student.me;
     if (me == null) {
-      // 401 handled inside refresh() via error; on network error stay and
-      // let the user pull-to-refresh.
-      if (student.error != null) {
-        await session.clear();
-        if (!mounted) return;
-        await Navigator.of(context).pushReplacementNamed('/login');
-        return;
-      }
+      // Offline (or a transient server hiccup) with no cache at all:
+      // stay on the desk, mark bootstrap done so the shell renders, and
+      // try the local-first sync below (it no-ops with no network).
+      setState(() => _bootstrapped = true);
+      await _startSync(student, sync);
+      return;
     }
     if (!student.hasProfile) {
       _showOnboarding();

@@ -63,6 +63,17 @@ class Profile {
     targetYear: j['targetYear'] as int?,
     completed: (j['completed'] ?? false) as bool,
   );
+
+  /// For the offline /me cache (StudentController.cacheMe).
+  Map<String, dynamic> toJson() => <String, dynamic>{
+    'fullName': fullName,
+    'institution': institution,
+    'gradeLevel': gradeLevel,
+    'exams': exams,
+    'subjects': subjects,
+    if (targetYear != null) 'targetYear': targetYear,
+    'completed': completed,
+  };
 }
 
 
@@ -96,6 +107,17 @@ class Entitlement {
     firstFreeCbt: (j['firstFreeCbt'] ?? false) as bool,
     referralCode: (j['referralCode'] ?? '') as String,
   );
+
+  /// For the offline /me cache (StudentController.cacheMe).
+  Map<String, dynamic> toJson() => <String, dynamic>{
+    'userId': userId,
+    'premiumRole': premiumRole,
+    'premiumType': premiumType,
+    'renCoins': renCoins,
+    'emailVerified': emailVerified,
+    'firstFreeCbt': firstFreeCbt,
+    'referralCode': referralCode,
+  };
 }
 
 class MeResult {
@@ -113,6 +135,14 @@ class MeResult {
         ? null
         : Entitlement.fromJson((j['entitlement'] as Map).cast<String, dynamic>()),
   );
+
+  /// For the offline /me cache (StudentController.cacheMe) so a
+  /// no-data launch still renders the desk.
+  Map<String, dynamic> toJson() => <String, dynamic>{
+    'user': user.toJson(),
+    if (profile != null) 'profile': profile!.toJson(),
+    if (entitlement != null) 'entitlement': entitlement!.toJson(),
+  };
 }
 
 class AuthTokens {

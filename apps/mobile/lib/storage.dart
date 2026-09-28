@@ -17,6 +17,12 @@ import 'models.dart';
 
 // ---------------------------------------------------------------- session
 
+/// SharedPreferences key of the offline /me cache (written by
+/// StudentController.cacheMe, cleared by SessionStore.clear). Defined
+/// here so the session teardown can reach it without importing
+/// controllers.dart.
+const String kMeCacheKey = 'renance.me.cache';
+
 class SessionStore {
   SessionStore(this._prefs);
 
@@ -49,6 +55,12 @@ class SessionStore {
   Future<void> clear() async {
     await _prefs.remove(_kToken);
     await _prefs.remove(_kUser);
+    // The offline /me cache must die with the session: otherwise a
+    // different account signing in on this device reads the previous
+    // student's cached profile (privacy leak). See StudentController
+    // for the writer side; the key is duplicated here deliberately -
+    // storage.dart cannot import controllers.dart.
+    await _prefs.remove(kMeCacheKey);
   }
 
   /// Whether the cinematic splash has played on a previous launch.

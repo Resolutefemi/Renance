@@ -17,8 +17,14 @@ const String apiBaseUrl = String.fromEnvironment(
 
 /// Web OAuth client ID passed as Google sign-in's `serverClientId`, so the
 /// returned ID token carries the audience the study API verifies
-/// (GOOGLE_CLIENT_ID on the server). Empty => the Google button hides.
+/// (GOOGLE_CLIENT_ID on the server). The DEFAULT is the Renance web
+/// client registered in Google Cloud Console (the same audience the web
+/// app bakes) - the old empty default hid the "Continue with Google"
+/// button from every release build (founder: "I can't find the Google
+/// signup/login on the login/sign up page", 2026-09-28). A debug build
+/// can still override it with --dart-define.
 const String googleWebClientId = String.fromEnvironment(
   'GOOGLE_WEB_CLIENT_ID',
-  defaultValue: '',
+  defaultValue:
+      '850087098854-pni8gohld0isi8v8nhhnlcl5fuvi77q4.apps.googleusercontent.com',
 );

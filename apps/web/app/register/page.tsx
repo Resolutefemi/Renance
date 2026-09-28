@@ -8,6 +8,7 @@ import { setSession } from '@/lib/session';
 import { schoolRegister, setActiveSchool } from '@/lib/school';
 import { RenanceMark } from '@/components/renance-logo';
 import { GoogleSignIn } from '@/components/google-signin';
+import AppearanceModal, { needsAppearanceIntro } from '@/components/appearance-modal';
 import { AudienceToggle, type Audience } from '@/components/audience-toggle';
 import { MailIcon, LockIcon, EyeIcon } from '@/components/icons';
 
@@ -35,6 +36,29 @@ export default function RegisterPage() {
   const [changing, setChanging] = useState(false);
   const [newEmail, setNewEmail] = useState('');
   const [changedTo, setChangedTo] = useState('');
+
+  // Founder directive (2026-09-28): the appearance popup fires right
+  // after a first signup, before whatever comes next (verify notice or
+  // dashboard). afterAppearance holds the pending continuation so the
+  // flow resumes the moment the student closes the dialog.
+  const [showAppearance, setShowAppearance] = useState(false);
+  const [afterAppearance, setAfterAppearance] = useState<(() => void) | null>(null);
+
+  const finishStudentSignup = (next: () => void) => {
+    if (needsAppearanceIntro()) {
+      setAfterAppearance(() => next);
+      setShowAppearance(true);
+      return;
+    }
+    next();
+  };
+
+  const closeAppearance = () => {
+    setShowAppearance(false);
+    const next = afterAppearance;
+    setAfterAppearance(null);
+    next?.();
+  };
 
   // school-only fields
   const [schoolName, setSchoolName] = useState('');
@@ -70,12 +94,15 @@ export default function RegisterPage() {
       try {
         const res = await authWithGoogle(credential);
         setSession(res.token, res.user);
-        router.replace('/dashboard');
+        // A brand-new Google account IS a first signup: the appearance
+        // popup fires once, then the desk opens.
+        finishStudentSignup(() => router.replace('/dashboard'));
       } catch (err) {
         setError(err instanceof ApiError ? err.message : 'Google sign-in failed, check the connection.');
         setBusy(false);
       }
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [router],
   );
 
@@ -131,13 +158,15 @@ export default function RegisterPage() {
       });
       setSession(res.token, res.user);
       if (res.emailVerification?.required) {
-        setSignedEmail(email.trim());
-        setMailFailed(res.emailVerification?.sent === false);
-        setVerifySent(true);
-        setBusy(false);
+        finishStudentSignup(() => {
+          setSignedEmail(email.trim());
+          setMailFailed(res.emailVerification?.sent === false);
+          setVerifySent(true);
+          setBusy(false);
+        });
         return;
       }
-      router.replace('/dashboard');
+      finishStudentSignup(() => router.replace('/dashboard'));
     } catch (err) {
       setError(err instanceof ApiError ? err.message : 'Network error, is the study API running?');
       setBusy(false);
@@ -185,6 +214,7 @@ export default function RegisterPage() {
   if (verifySent) {
     return (
       <main className="flex min-h-dvh w-full flex-col items-center bg-surface-container px-4 py-10">
+        <AppearanceModal open={showAppearance} onClose={closeAppearance} />
         <div className="renance-rise my-auto flex w-full max-w-sm flex-col rounded-xl bg-surface-container-lowest p-8 text-center shadow-md">
           <div className="mb-5 flex justify-center">
             <RenanceMark size={56} />
@@ -282,6 +312,7 @@ export default function RegisterPage() {
     // of the card. Everything wraps: break-words guards the headings even
     // when Android font scaling inflates the text past the card edge.
     <main className="flex min-h-dvh w-full flex-col items-center bg-surface-container px-4 py-10">
+      <AppearanceModal open={showAppearance} onClose={closeAppearance} />
       <div className="renance-rise my-auto flex w-full max-w-sm min-w-0 flex-col rounded-xl bg-surface-container-lowest p-6 shadow-md">
         {/* Logo block, mockup: logo, headline, sub */}
         <div className="mb-5 flex min-w-0 flex-col items-center gap-3 text-center">

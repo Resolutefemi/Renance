@@ -52,13 +52,15 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('register captures STRICTLY username + password (doctrine)',
+  testWidgets('register captures username + email + password (doctrine)',
       (WidgetTester tester) async {
     await _pumpAuth(tester, const RegisterScreen());
     expect(find.text('Username'), findsOneWidget);
     expect(find.text('Password'), findsOneWidget);
-    // The mockups' email field is retired by design:
-    expect(find.text('Email'), findsNothing);
+    // The email field returned when signup-only email confirmation
+    // shipped (registerFull mails the verify link to this address);
+    // the old STRICTLY-doctrine test predates that flip.
+    expect(find.text('Email'), findsOneWidget);
     expect(find.text('Create your account'), findsOneWidget);
   });
 
