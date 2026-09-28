@@ -50,7 +50,11 @@ func (s *Server) handleAttemptTutor(w http.ResponseWriter, r *http.Request) {
                 fail(w, http.StatusTooManyRequests, "rate_limited", "tutor cooling down, retry in a few seconds")
                 return
         }
-        if !requireStandard(w, s.tierRank(r, uid)) {
+        // Tier gate rides the LLM path only: without an AI key the
+        // Socratic hint ladder is deterministic (no per-call cost) and
+        // stays free for every student; with a provider configured the
+        // coached answers are a Standard-tier feature.
+        if s.tutor != nil && s.tutor.Provider != nil && !requireStandard(w, s.tierRank(r, uid)) {
                 return
         }
 

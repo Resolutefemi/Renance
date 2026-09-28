@@ -166,20 +166,20 @@ export default function PricingClient() {
             </p>
             <ul className="mt-3 space-y-2.5">
               <li className="text-[13px] leading-snug text-on-surface">
-                <b>JAMB (₦5,000 a year)</b> — every JAMB UTME paper in full
+                <b>JAMB (₦5,000 a year)</b> - every JAMB UTME paper in full
                 for twelve months. WAEC, NECO and Post-UTME papers answer
                 their free 20-question preview.
               </li>
               <li className="text-[13px] leading-snug text-on-surface">
-                <b>Basic (₦3,000 a month)</b> — JAMB, WAEC, NECO and
+                <b>Basic (₦3,000 a month)</b> - JAMB, WAEC, NECO and
                 Post-UTME all in full, notes and flashcards included.
               </li>
               <li className="text-[13px] leading-snug text-on-surface">
-                <b>Standard (₦6,000 a month)</b> — Basic plus the AI tutor,
+                <b>Standard (₦6,000 a month)</b> - Basic plus the AI tutor,
                 the AI generator and the tuned study plan.
               </li>
               <li className="text-[13px] leading-snug text-on-surface">
-                <b>Premium (₦20,000 a month)</b> — everything, with the
+                <b>Premium (₦20,000 a month)</b> - everything, with the
                 founder&apos;s concierge: priority WhatsApp, early access,
                 the premium frame.
               </li>
