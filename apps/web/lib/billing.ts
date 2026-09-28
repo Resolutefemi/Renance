@@ -16,6 +16,12 @@ export interface PremiumPlan {
   amountKobo: number;
   durationDays: number;
   perks: string;
+  /** Body scope: "jamb" bounds the annual plan to JAMB; "all" opens every body. */
+  scope: string;
+  /** Ladder rank: 1 jamb < 2 basic < 3 standard < 4 premium. */
+  tier: number;
+  /** The per-tier bullet list the catalog owns - UIs never hardcode it. */
+  features: string[];
 }
 
 export interface Redemption {

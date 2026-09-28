@@ -449,10 +449,11 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         setPhase('error');
         return;
       }
-      // Free-tier cap: the server saved the answers and kept the attempt
-      // open. Open the subscribe dialog; after payment the student
-      // resumes this exact paper from this exact question.
-      if (err instanceof ApiError && err.code === 'free_cap') {
+      // Free-tier cap (or a JAMB-plan student on another body): the
+      // server saved the answers and kept the attempt open. Open the
+      // subscribe dialog; after payment the student resumes this exact
+      // paper from this exact question.
+      if (err instanceof ApiError && (err.code === 'free_cap' || err.code === 'body_not_in_plan')) {
         setPaywallOpen(true);
         return;
       }

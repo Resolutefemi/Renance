@@ -7,12 +7,12 @@ import 'renance_logo.dart';
 import 'theme.dart';
 
 /// PremiumScreen: the paywall and the plans desk. Founder pricing on
-/// paper white: the four Paystack tiers (week, month, quarter, year),
-/// the REN coin redemption table (arena wins pay 1, referrals pay 3),
-/// and the WhatsApp line for bulk and school negotiation. One premium
-/// covers JAMB, WAEC, NECO and Post-UTME. Paystack may still be
-/// unconnected; the screen says so honestly and keeps the coins and the
-/// WhatsApp line working.
+/// paper white: the four tiers (JAMB annual, Basic, Standard, Premium
+/// monthly) rendered straight from the catalog, the REN coin redemption
+/// table (arena wins pay 1, referrals pay 3), and the WhatsApp line for
+/// bulk and school negotiation. Paystack may still be unconnected; the
+/// screen says so honestly and keeps the coins and the WhatsApp line
+/// working.
 class PremiumScreen extends StatefulWidget {
   const PremiumScreen({super.key, this.capNotice = false});
 
@@ -143,7 +143,12 @@ class _PremiumScreenState extends State<PremiumScreen> {
                     // Tiers ------------------------------------------------
                     ...List<Widget>.generate(catalog!.plans.length, (int i) {
                       final PremiumPlan p = catalog.plans[i];
-                      final bool best = p.code == 'year';
+                      final bool best = p.code == 'jamb';
+                      final String period = p.durationDays >= 360
+                          ? '/ year'
+                          : p.durationDays >= 28
+                              ? '/ month'
+                              : '/ ${p.durationDays} days';
                       return Container(
                         margin: EdgeInsets.only(bottom: i == catalog.plans.length - 1 ? 0 : 10),
                         padding: const EdgeInsets.all(16),
@@ -189,7 +194,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
                                   style: RenanceText.statNumber.copyWith(fontSize: 24),
                                 ),
                                 const SizedBox(width: 4),
-                                Text('${p.durationDays} days',
+                                Text(period,
                                     style: RenanceText.caption.copyWith(color: context.textSecondary)),
                               ],
                             ),
@@ -200,6 +205,29 @@ class _PremiumScreenState extends State<PremiumScreen> {
                                 fontSize: 12, height: 1.4, color: context.textSecondary,
                               ),
                             ),
+                            if (p.features.isNotEmpty) ...<Widget>[
+                              const SizedBox(height: 10),
+                              for (final String f in p.features)
+                                Padding(
+                                  padding: const EdgeInsets.only(bottom: 5),
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Icon(Icons.check_circle_outline,
+                                          size: 14, color: context.textSecondary),
+                                      const SizedBox(width: 7),
+                                      Expanded(
+                                        child: Text(
+                                          f,
+                                          style: RenanceText.caption.copyWith(
+                                            fontSize: 12, height: 1.35,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                            ],
                             const SizedBox(height: 12),
                             SizedBox(
                               height: 42,

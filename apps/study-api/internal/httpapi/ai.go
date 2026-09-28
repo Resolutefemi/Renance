@@ -61,6 +61,9 @@ func (s *Server) handleAIGenerate(w http.ResponseWriter, r *http.Request) {
                 fail(w, http.StatusTooManyRequests, "rate_limited", "AI cooling down, retry in a few seconds")
                 return
         }
+        if !requireStandard(w, s.tierRank(r, uid)) {
+                return
+        }
         if s.tutor == nil || s.tutor.Provider == nil {
                 fail(w, http.StatusServiceUnavailable, "ai_disabled",
                         "AI generation is not configured on this deployment")

@@ -36,6 +36,9 @@ func (s *Server) handleAIChat(w http.ResponseWriter, r *http.Request) {
                 return
         }
         _ = uid
+        if !requireStandard(w, s.tierRank(r, uid)) {
+                return
+        }
         var req aiChatRequest
         if !decodeJSON(w, r, &req) {
                 return

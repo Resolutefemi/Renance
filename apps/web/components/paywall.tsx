@@ -96,8 +96,8 @@ export default function PaywallModal({ open, onClose, context, entitlement, onRe
                 {context ?? 'Unlock the full paper'}
               </h2>
               <p className="mt-1 text-[13px] leading-relaxed text-[#52525B]">
-                One subscription covers every body: JAMB, WAEC, NECO and
-                Post-UTME. Your progress stays saved.
+                JAMB for ₦5,000 a year, or Basic from ₦3,000 a month for
+                every body. Your progress stays saved.
               </p>
             </div>
             <button
@@ -127,7 +127,7 @@ export default function PaywallModal({ open, onClose, context, entitlement, onRe
               {/* tiers */}
               <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                 {catalog.plans.map((p) => {
-                  const best = p.code === 'year';
+                  const best = p.code === 'jamb';
                   return (
                     <button
                       key={p.code}
@@ -153,6 +153,21 @@ export default function PaywallModal({ open, onClose, context, entitlement, onRe
                         {naira(p.amountNaira)}
                       </span>
                       <span className="mt-1 text-[12px] leading-snug text-[#52525B]">{p.perks}</span>
+                      {(p.features?.length ?? 0) > 0 && (
+                        <ul className="mt-2 space-y-1">
+                          {p.features.slice(0, 4).map((f) => (
+                            <li key={f} className="flex items-start gap-1.5 text-[11.5px] leading-snug text-[#52525B]">
+                              <span className="material-symbols-outlined mt-0.5 text-[13px] text-[#101418]">check</span>
+                              {f}
+                            </li>
+                          ))}
+                          {p.features.length > 4 && (
+                            <li className="font-mono text-[10.5px] text-[#71717A]">
+                              +{p.features.length - 4} more on the plans page
+                            </li>
+                          )}
+                        </ul>
+                      )}
                       <span className="mt-3 flex h-9 items-center justify-center rounded-full bg-[#101418] text-[12.5px] font-semibold text-white transition group-hover:opacity-90">
                         {catalog.paystackEnabled
                           ? busyPlan === p.code

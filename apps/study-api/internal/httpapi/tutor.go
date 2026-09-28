@@ -50,6 +50,9 @@ func (s *Server) handleAttemptTutor(w http.ResponseWriter, r *http.Request) {
                 fail(w, http.StatusTooManyRequests, "rate_limited", "tutor cooling down, retry in a few seconds")
                 return
         }
+        if !requireStandard(w, s.tierRank(r, uid)) {
+                return
+        }
 
         var req tutorRequest
         if !decodeJSON(w, r, &req) {

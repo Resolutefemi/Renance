@@ -103,6 +103,13 @@ func (s *Server) handleCreateAttempt(w http.ResponseWriter, r *http.Request) {
                         s.log.Error("cap lookup failed", "err", entErr)
                 } else if !ent.PremiumActive(time.Now().UTC()) && ent.FirstFreeCbt {
                         resp["cap"] = plans.FreePreviewQuestions
+                } else if ent.PremiumActive(time.Now().UTC()) &&
+                        plans.ScopeFor(ent.PremiumType) == plans.ScopeJamb &&
+                        bundle.Body != "" && bundle.Body != "JAMB" {
+                        // The JAMB annual plan runs JAMB papers in full;
+                        // every other body answers the free preview and
+                        // asks for Basic.
+                        resp["cap"] = plans.FreePreviewQuestions
                 }
         }
         if req.Daily {
@@ -302,17 +309,44 @@ func (s *Server) handleSubmitAttempt(w http.ResponseWriter, r *http.Request) {
                                                 s.log.Error("capped sitting save failed", "err", saveErr)
                                         }
                                         writeJSON(w, http.StatusPaymentRequired, map[string]any{
-                                                "code":     "free_cap",
-                                                "limit":    plans.FreePreviewQuestions,
-                                                "answered": answered,
-                                                "saved":    true,
+                                                "code":      "free_cap",
+                                                "limit":     plans.FreePreviewQuestions,
+                                                "answered":  answered,
+                                                "saved":     true,
                                                 "attemptId": attemptID,
-                                                "message":  "You have answered the free limit of 20 questions. Subscribe to premium to continue this paper, your progress is saved.",
-                                                "whatsapp": billingWhatsApp,
+                                                "message":   "You have answered the free limit of 20 questions. Subscribe to premium to continue this paper, your progress is saved.",
+                                                "whatsapp":  billingWhatsApp,
                                         })
                                         return
                                 }
                                 // firstFull: this submission consumed the one free full CBT.
+                        }
+                } else if ent.PremiumActive(time.Now().UTC()) &&
+                        plans.ScopeFor(ent.PremiumType) == plans.ScopeJamb &&
+                        bundle.Body != "" && bundle.Body != "JAMB" {
+                        // JAMB-plan subscriber on an out-of-scope paper:
+                        // the free preview applies, past it Basic opens
+                        // WAEC, NECO and Post-UTME. Progress stays saved.
+                        answered := 0
+                        for _, p := range picks {
+                                if p.Selected != "" {
+                                        answered++
+                                }
+                        }
+                        if answered > plans.FreePreviewQuestions {
+                                if saveErr := s.store.SaveAnswers(r.Context(), attemptID, uid, picks); saveErr != nil {
+                                        s.log.Error("capped sitting save failed", "err", saveErr)
+                                }
+                                writeJSON(w, http.StatusPaymentRequired, map[string]any{
+                                        "code":      "body_not_in_plan",
+                                        "limit":     plans.FreePreviewQuestions,
+                                        "answered":  answered,
+                                        "saved":     true,
+                                        "attemptId": attemptID,
+                                        "message":   "The JAMB plan covers JAMB papers in full. Basic (₦3,000/month) opens WAEC, NECO and Post-UTME - your answers here are saved.",
+                                        "whatsapp":  billingWhatsApp,
+                                })
+                                return
                         }
                 }
         }

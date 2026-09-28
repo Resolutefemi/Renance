@@ -918,6 +918,9 @@ class PremiumPlan {
     required this.amountNaira,
     required this.durationDays,
     required this.perks,
+    this.scope = 'all',
+    this.tier = 0,
+    this.features = const <String>[],
   });
 
   final String code;
@@ -925,6 +928,12 @@ class PremiumPlan {
   final int amountNaira;
   final int durationDays;
   final String perks;
+  /// "jamb" bounds the annual plan to JAMB papers; "all" opens every body.
+  final String scope;
+  /// Ladder rank: 1 jamb < 2 basic < 3 standard < 4 premium.
+  final int tier;
+  /// The per-tier bullet list the catalog owns.
+  final List<String> features;
 
   factory PremiumPlan.fromJson(Map<String, dynamic> j) => PremiumPlan(
         code: (j['code'] ?? '') as String,
@@ -932,6 +941,11 @@ class PremiumPlan {
         amountNaira: ((j['amountNaira'] ?? 0) as num).toInt(),
         durationDays: ((j['durationDays'] ?? 0) as num).toInt(),
         perks: (j['perks'] ?? '') as String,
+        scope: (j['scope'] ?? 'all') as String,
+        tier: ((j['tier'] ?? 0) as num).toInt(),
+        features: ((j['features'] ?? const <dynamic>[]) as List<dynamic>)
+            .map((dynamic e) => e.toString())
+            .toList(),
       );
 }
 
