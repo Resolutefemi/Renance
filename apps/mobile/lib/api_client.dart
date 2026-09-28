@@ -196,6 +196,15 @@ class ApiClient {
     await _send('POST', '/auth/resend-verification', body: <String, dynamic>{});
   }
 
+  /// Wrong-email rescue: swaps the signup address for [email]. The old
+  /// address is removed from the database and the fresh confirmation
+  /// link mails to the new inbox only; verification resets until the
+  /// new link is consumed.
+  Future<void> changeEmail(String email) async {
+    await _send('POST', '/me/change-email',
+        body: <String, dynamic>{'email': email, 'return': 'app'});
+  }
+
   Future<Profile> updateProfile({
     required String fullName,
     required String institution,

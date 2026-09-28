@@ -270,10 +270,18 @@ class _LoginScreenState extends State<LoginScreen> {
       }
       final SharedPreferences prefs = session.prefs;
       await SchoolController.forgetSchoolSession(prefs);
-      // Email confirmation hidden per founder directive (2026-09): SMTP is
-      // not configured yet, so the strict check that routed unverified
-      // manual accounts to /verify would lock them out. Restore the check
-      // (see git history) once confirmation mails actually leave the server.
+      // Strict email check: a manual signup confirms the inbox before
+      // the desk opens. Google accounts arrive pre-verified.
+      try {
+        final MeResult me = await api.me();
+        if (me.entitlement != null && !me.entitlement!.emailVerified) {
+          if (!mounted) return;
+          await Navigator.of(context).pushReplacementNamed('/verify');
+          return;
+        }
+      } on NetworkException catch (_) {
+        // offline: let the desk open, the next sync re-checks.
+      }
       if (!mounted) return;
       await Navigator.of(context).pushReplacementNamed('/home');
     } on ApiException catch (e) {

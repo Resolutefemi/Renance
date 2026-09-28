@@ -226,36 +226,38 @@ Notes:
   (or paste it once into Environment); the service restarts with the
   tutor in AI mode.
 
-## 4b. Confirmation emails (SMTP) - why links "do nothing" today
+## 4b. Confirmation emails (SMTP) - Brevo, LIVE
 
-The feature is fully coded (signup and the resend endpoint both call
-`sendVerificationMail`), but it is a **switch, not a default**:
-`render.yaml` reserves `SMTP_HOST`, `SMTP_USER`, `SMTP_PASS` as
-`sync: false` placeholders and until real values are pasted on the
-Render service, `verify.go` takes the log-only branch - every signup
-writes the verification link into **Render Logs** instead of mailing it.
-That is exactly what "the confirmation email is not working" looks like
-in production.
+The feature is fully coded (signup, resend, and the wrong-email rescue
+all call `sendVerificationMail`) and the Brevo relay is wired in
+`render.yaml`: `SMTP_HOST` smtp-relay.brevo.com, `SMTP_PORT` 587,
+`SMTP_USER` bb66f8001@smtp-brevo.com, `SMTP_FROM`
+ariyooluwafemi487@gmail.com (the account owner, pre-verified as a Brevo
+sender). The SMTP key itself is NOT committed - GitHub push protection
+(correctly) blocks the Sendinblue key pattern - so paste it once on the
+Render service as `SMTP_PASS` (the `xsmtpsib-...` key from the founder's
+Brevo dashboard, Brevo -> SMTP & API). That single paste + redeploy
+switches the service to real mail delivery.
 
-Switch it on (Render dashboard -> renance-api -> Environment):
+Two operational notes:
 
-| Key | Value | Notes |
-| --- | --- | --- |
-| `SMTP_HOST` | e.g. `smtp-relay.brevo.com` or `smtp.gmail.com` | any SMTP provider works |
-| `SMTP_PORT` | `587` (STARTTLS) or `465` (implicit TLS) | both are supported; 465 uses a TLS-first dial |
-| `SMTP_USER` | provider login | Brevo: the account email; Gmail: the address |
-| `SMTP_PASS` | provider SMTP key | Gmail needs an **App password** (account with 2FA), never the login password |
-| `SMTP_FROM` | e.g. `no-reply@renance.com` | MUST be a sender identity verified in the provider dashboard (Brevo: Senders & IP), or the provider rejects/spam-folders the mail |
+1. **Sender address.** The FROM is the founder's own address because
+   Brevo pre-verifies the account owner as a sender. Students will see
+   that address until `no-reply@renance.com` (or any address on the
+   renance.com domain) is added and verified under Brevo -> Senders &
+   IP; then switch `SMTP_FROM`.
+2. **`525 5.7.1 Unauthorized IP address`.** The credentials authenticate
+   cleanly, but Brevo also filters the CONNECTING IP. If the Render
+   service logs this error, allow the service's static outbound IPs
+   (https://render.com/docs/outbound-ips, Frankfurt region) under
+   Brevo -> Profile -> SMTP & API security, or disable the IP filter
+   there. The same error from a laptop means that machine's IP is not
+   allowlisted - not that the credentials are wrong.
 
-Save -> the service redeploys -> register a fresh account or hit the
-resend confirmation endpoint; the mail should arrive within a minute and
-the link inside lands on the web `/verify` page.
-
-If it still fails after filling the values: Render Logs, search for
-`verification mail send failed` - the provider's SMTP reply is in that
-line. If you instead see `SMTP not configured on this service`, one of
-the env keys is missing or typo'd on the service itself. Free tiers
-(Brevo 300 mails/day) comfortably cover MVP signup volume.
+Success looks like: register a fresh manual account -> the confirmation
+mail arrives within a minute (check spam on first send) -> the link
+lands on `/verify` and unlocks the desk. Failures surface in Render
+Logs as `verification mail send failed` with the provider's reply.
 
 ## 5. Content layout (answers live inside the banks)
 

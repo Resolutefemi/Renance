@@ -53,18 +53,22 @@ services:
         value: https://api.z.ai/api/paas/v4
       - key: AI_MODEL
         value: glm-4.5-flash
-      # Email verification: fill these and the confirmation mail leaves
-      # the server. Until then the link is written to the service log.
+      # Email verification: LIVE via Brevo (founder-provided credentials).
+      # Host/user/from are baked; the SMTP key is NOT committed because
+      # GitHub push protection (correctly) blocks the Sendinblue key
+      # pattern - paste it once into Render env as SMTP_PASS (docs 4b).
+      # Brevo's IP allowlist must also accept the sending host: it answers
+      # 525 5.7.1 Unauthorized IP otherwise (see docs/deploy.md 4b).
       - key: SMTP_HOST
-        sync: false
+        value: smtp-relay.brevo.com
       - key: SMTP_PORT
         value: "587"
       - key: SMTP_USER
-        sync: false
+        value: bb66f8001@smtp-brevo.com
       - key: SMTP_PASS
         sync: false
       - key: SMTP_FROM
-        value: no-reply@renance.com
+        value: ariyooluwafemi487@gmail.com
       # Paystack: paste the secret key and card payments switch on.
       - key: PAYSTACK_SECRET_KEY
         sync: false

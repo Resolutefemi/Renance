@@ -117,10 +117,19 @@ class _SplashScreenState extends State<SplashScreen>
       // fall through to the student home
     }
     if (!mounted) return;
-    // Email confirmation hidden per founder directive (2026-09): SMTP is
-    // not configured yet, so the strict check that routed unverified
-    // manual accounts to /verify would lock them out. Restore the check
-    // (see git history) once confirmation mails actually leave the server.
+    // Strict email check on session restore: an unverified manual
+    // account lands on the confirm-inbox screen, never the desk.
+    try {
+      final api = context.read<ApiClient>();
+      final me = await api.me();
+      if (me.entitlement != null && !me.entitlement!.emailVerified) {
+        if (!mounted) return;
+        Navigator.of(context).pushReplacementNamed('/verify');
+        return;
+      }
+    } catch (_) {
+      // offline or API asleep: open the desk, the next online pass re-checks
+    }
     if (!mounted) return;
     Navigator.of(context).pushReplacementNamed('/home');
   }

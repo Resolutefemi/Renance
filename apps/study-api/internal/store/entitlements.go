@@ -211,6 +211,45 @@ func (s *Store) SetEmailVerification(ctx context.Context, userID, token string) 
         return nil
 }
 
+// ChangeUserEmail is the wrong-email rescue: the signup address is
+// OVERWRITTEN, so the mistaken address leaves the database entirely and
+// the same account continues with the corrected one. Verification resets
+// atomically - email_verified flips back to false and the fresh token is
+// stamped so the next confirmation mail targets the new inbox only.
+// ErrUniqueEmail propagates when the new address already belongs to an
+// account (the partial unique index users_email_lower_idx fires).
+func (s *Store) ChangeUserEmail(ctx context.Context, userID, newEmail, token string) error {
+        normalized := strings.ToLower(strings.TrimSpace(newEmail))
+        tx, err := s.Pool.Begin(ctx)
+        if err != nil {
+                return fmt.Errorf("store: change email begin: %w", err)
+        }
+        defer tx.Rollback(ctx)
+        if _, err := tx.Exec(ctx, `
+                UPDATE study.users
+                SET email = $2
+                WHERE id = $1`, userID, normalized); err != nil {
+                var pgErr *pgconn.PgError
+                if errors.As(err, &pgErr) && pgErr.Code == uniqueViolation && pgErr.ConstraintName == "users_email_lower_idx" {
+                        return ErrUniqueEmail
+                }
+                return fmt.Errorf("store: change email user: %w", err)
+        }
+        if _, err := tx.Exec(ctx, `
+                UPDATE study.entitlements
+                SET email_verified = false,
+                    verify_token = $2,
+                    verify_sent_at = NULL,
+                    updated_at = now()
+                WHERE user_id = $1`, userID, token); err != nil {
+                return fmt.Errorf("store: change email entitlement: %w", err)
+        }
+        if err := tx.Commit(ctx); err != nil {
+                return fmt.Errorf("store: change email commit: %w", err)
+        }
+        return nil
+}
+
 // VerifyEmail consumes a verification token, marks the address verified
 // and returns the owning user id; ok=false for unknown/stale tokens.
 func (s *Store) VerifyEmail(ctx context.Context, token string) (string, bool, error) {
@@ -364,33 +403,33 @@ func (s *Store) SetReferredBy(ctx context.Context, userID, referrerID string) er
 // the student continues exactly where they stopped after subscribing.
 // The full submit later re-upserts the same rows (idempotent keys).
 func (s *Store) SaveAnswers(ctx context.Context, attemptID, userID string, answers []Picked) error {
-	var status string
-	err := s.Pool.QueryRow(ctx, `
-		SELECT status FROM study.attempts WHERE id = $1 AND user_id = $2`,
-		attemptID, userID).Scan(&status)
-	if errors.Is(err, pgx.ErrNoRows) {
-		return fmt.Errorf("store: save answers: no attempt %s", attemptID)
-	}
-	if err != nil {
-		return fmt.Errorf("store: save answers lookup: %w", err)
-	}
-	if status != "in_progress" {
-		return nil
-	}
-	b := &pgx.Batch{}
-	for _, a := range answers {
-		b.Queue(`
-			INSERT INTO study.attempt_answers (attempt_id, question_id, selected)
-			VALUES ($1, $2, $3)
-			ON CONFLICT (attempt_id, question_id) DO UPDATE SET selected = EXCLUDED.selected`,
-			attemptID, a.QuestionID, a.Selected)
-	}
-	br := s.Pool.SendBatch(ctx, b)
-	defer br.Close()
-	for range answers {
-		if _, err := br.Exec(); err != nil {
-			return fmt.Errorf("store: save answer: %w", err)
-		}
-	}
-	return nil
+        var status string
+        err := s.Pool.QueryRow(ctx, `
+                SELECT status FROM study.attempts WHERE id = $1 AND user_id = $2`,
+                attemptID, userID).Scan(&status)
+        if errors.Is(err, pgx.ErrNoRows) {
+                return fmt.Errorf("store: save answers: no attempt %s", attemptID)
+        }
+        if err != nil {
+                return fmt.Errorf("store: save answers lookup: %w", err)
+        }
+        if status != "in_progress" {
+                return nil
+        }
+        b := &pgx.Batch{}
+        for _, a := range answers {
+                b.Queue(`
+                        INSERT INTO study.attempt_answers (attempt_id, question_id, selected)
+                        VALUES ($1, $2, $3)
+                        ON CONFLICT (attempt_id, question_id) DO UPDATE SET selected = EXCLUDED.selected`,
+                        attemptID, a.QuestionID, a.Selected)
+        }
+        br := s.Pool.SendBatch(ctx, b)
+        defer br.Close()
+        for range answers {
+                if _, err := br.Exec(); err != nil {
+                        return fmt.Errorf("store: save answer: %w", err)
+                }
+        }
+        return nil
 }

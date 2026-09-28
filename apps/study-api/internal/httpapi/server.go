@@ -193,6 +193,7 @@ func (s *Server) Handler() http.Handler {
         mux.HandleFunc("POST /billing/redeem", s.auth(s.handleBillingRedeem))
         mux.HandleFunc("POST /auth/verify-email", s.handleVerifyEmail)
         mux.HandleFunc("POST /auth/resend-verification", s.auth(s.handleResendVerification))
+        mux.HandleFunc("POST /me/change-email", s.auth(s.handleChangeEmail))
         mux.HandleFunc("GET /school/corpus/classes", s.auth(s.handleCorpusClasses))
         mux.HandleFunc("GET /school/corpus/schemes/{class}/{subject}", s.auth(s.handleCorpusSchemes))
         mux.HandleFunc("GET /school/corpus/notes/{class}/{subject}", s.auth(s.handleCorpusNotes))

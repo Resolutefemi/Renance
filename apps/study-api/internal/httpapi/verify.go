@@ -11,12 +11,15 @@ import (
         "crypto/rand"
         "crypto/tls"
         "encoding/hex"
+        "errors"
         "fmt"
         "net/http"
         "net/smtp"
         "os"
         "strings"
         "time"
+
+        "renance.dev/study-api/internal/store"
 )
 
 // verifyToken mints 24 hex chars of crypto randomness.
@@ -192,6 +195,60 @@ func (s *Server) handleResendVerification(w http.ResponseWriter, r *http.Request
         }
         link := s.sendVerificationMail(uid, strings.TrimSpace(*u.Email), token, "web")
         writeJSON(w, http.StatusOK, map[string]any{"sent": true, "_devLink": link})
+}
+
+// handleChangeEmail rescues a wrong-email signup: the signed-in account
+// swaps its address, the mistaken one leaves the database, and the fresh
+// confirmation link goes to the new inbox only. Verification resets - the
+// account stays unverified until the new link is consumed. The web verify
+// gate and the app verify screen both call this; `return` steers where
+// the confirmation link lands the student afterwards (web desk or app).
+func (s *Server) handleChangeEmail(w http.ResponseWriter, r *http.Request) {
+        uid, err := userIDFrom(r)
+        if err != nil {
+                fail(w, http.StatusUnauthorized, "unauthorized", "missing identity")
+                return
+        }
+        if _, err := s.store.EnsureEntitlement(r.Context(), uid); err != nil {
+                s.log.Error("entitlement load failed", "err", err)
+                fail(w, http.StatusInternalServerError, "internal", "could not change the email")
+                return
+        }
+        var req changeEmailRequest
+        if !decodeJSON(w, r, &req) {
+                return
+        }
+        email := strings.ToLower(strings.TrimSpace(req.Email))
+        if len(email) > 254 || !emailRE.MatchString(email) {
+                fail(w, http.StatusBadRequest, "invalid_email", "enter a valid email address")
+                return
+        }
+        back := req.Return
+        if back != "app" {
+                back = "web"
+        }
+        token, err := newVerifyToken()
+        if err != nil {
+                fail(w, http.StatusInternalServerError, "internal", "could not change the email")
+                return
+        }
+        if err := s.store.ChangeUserEmail(r.Context(), uid, email, token); err != nil {
+                if errors.Is(err, store.ErrUniqueEmail) {
+                        fail(w, http.StatusConflict, "email_taken", "an account with that email already exists")
+                        return
+                }
+                s.log.Error("change email failed", "err", err)
+                fail(w, http.StatusInternalServerError, "internal", "could not change the email")
+                return
+        }
+        link := s.sendVerificationMail(uid, email, token, back)
+        s.log.Info("signup email changed, confirmation re-issued", "at", time.Now().UTC().Format(time.RFC3339))
+        writeJSON(w, http.StatusOK, map[string]any{"sent": true, "email": email, "_devLink": link})
+}
+
+type changeEmailRequest struct {
+        Email  string `json:"email"`
+        Return string `json:"return"`
 }
 
 // newReferralCode mints a candidate referral code (REN + 5 hex); the

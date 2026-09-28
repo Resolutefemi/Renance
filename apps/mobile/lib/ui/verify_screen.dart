@@ -24,6 +24,17 @@ class _VerifyScreenState extends State<VerifyScreen> {
   bool _busy = false;
   bool _sent = false;
   String? _error;
+  // Wrong-email rescue: swap the mistaken signup address for the correct
+  // one. The API removes the old address and re-mails the confirmation.
+  bool _changing = false;
+  bool _changed = false;
+  final TextEditingController _emailCtrl = TextEditingController();
+
+  @override
+  void dispose() {
+    _emailCtrl.dispose();
+    super.dispose();
+  }
 
   Future<void> _resend() async {
     if (_busy) return;
@@ -36,6 +47,37 @@ class _VerifyScreenState extends State<VerifyScreen> {
       await api.resendVerification();
       if (!mounted) return;
       setState(() => _sent = true);
+    } on ApiException catch (e) {
+      if (!mounted) return;
+      setState(() => _error = e.message);
+    } on NetworkException catch (e) {
+      if (!mounted) return;
+      setState(() => _error = e.message);
+    } finally {
+      if (mounted) setState(() => _busy = false);
+    }
+  }
+
+  Future<void> _changeEmail() async {
+    if (_busy) return;
+    final String email = _emailCtrl.text.trim();
+    if (email.isEmpty || !email.contains('@')) {
+      setState(() => _error = 'Enter the correct email address');
+      return;
+    }
+    final ApiClient api = context.read<ApiClient>();
+    setState(() {
+      _busy = true;
+      _error = null;
+    });
+    try {
+      await api.changeEmail(email);
+      if (!mounted) return;
+      setState(() {
+        _changed = true;
+        _changing = false;
+        _sent = false;
+      });
     } on ApiException catch (e) {
       if (!mounted) return;
       setState(() => _error = e.message);
@@ -140,6 +182,69 @@ class _VerifyScreenState extends State<VerifyScreen> {
                     ),
                   ),
                 ),
+                const SizedBox(height: 10),
+                if (_changed)
+                  Text(
+                    'Signup email changed - the old address was removed and '
+                    'the confirmation link now goes to the new one.',
+                    textAlign: TextAlign.center,
+                    style: RenanceText.caption.copyWith(
+                      color: context.textSecondary,
+                    ),
+                  )
+                else ...<Widget>[
+                  if (_changing) ...<Widget>[
+                    TextField(
+                      controller: _emailCtrl,
+                      keyboardType: TextInputType.emailAddress,
+                      autofillHints: const <String>[AutofillHints.email],
+                      decoration: InputDecoration(
+                        hintText: 'The correct email address',
+                        filled: true,
+                        fillColor: context.surfaceContainer,
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide.none,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    SizedBox(
+                      width: double.infinity,
+                      height: 52,
+                      child: FilledButton(
+                        style: FilledButton.styleFrom(
+                          backgroundColor: context.ink,
+                          foregroundColor: context.onInverseChip,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                        onPressed: _busy ? null : _changeEmail,
+                        child: Text(
+                          'Save and send the link there',
+                          style: RenanceText.bodyMedium.copyWith(
+                            color: context.onInverseChip,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                  ],
+                  TextButton(
+                    onPressed: _busy
+                        ? null
+                        : () => setState(() => _changing = !_changing),
+                    child: Text(
+                      _changing
+                          ? 'Keep the current email'
+                          : 'Typed a wrong email at signup? Change it',
+                      style: RenanceText.caption.copyWith(
+                        color: context.textSecondary,
+                      ),
+                    ),
+                  ),
+                ],
                 if (_error != null) ...<Widget>[
                   const SizedBox(height: 12),
                   Text(
@@ -150,7 +255,11 @@ class _VerifyScreenState extends State<VerifyScreen> {
                 ],
                 const SizedBox(height: 18),
                 Text(
-                  'Wrong address? Sign up again from the login screen.',
+                  _changed
+                      ? 'Check the new inbox to unlock your desk.'
+                      : 'Wrong address? Change it above, or sign up again '
+                          'from the login screen.',
+                  textAlign: TextAlign.center,
                   style: RenanceText.caption.copyWith(
                     color: context.textSecondary,
                   ),
