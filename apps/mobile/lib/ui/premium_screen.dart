@@ -275,9 +275,6 @@ class _PremiumScreenState extends State<PremiumScreen> {
                           ),
                       ],
                     ),
-                        ],
-                      ),
-                    ),
                   ],
                 ),
     );
