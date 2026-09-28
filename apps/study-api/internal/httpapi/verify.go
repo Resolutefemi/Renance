@@ -3,12 +3,11 @@
 // student back to where the signup happened. SIGNUP-ONLY by doctrine:
 // logging in never asks about confirmation - the desk opens straight
 // away. Google signups are pre-verified by Google. Transport: the Brevo
-// SMTP relay first (SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS,
-// SMTP_FROM); when the relay refuses the connecting host (Brevo answers
-// "525 5.7.1 Unauthorized IP" when the IP is not allowlisted) the Brevo
-// HTTPS API takes over via BREVO_API_KEY - the API is not subject to
-// the relay's IP filter. With neither configured the link is written to
-// the server log so nothing is lost.
+// HTTPS API first (BREVO_API_KEY) - it is not subject to the relay's IP
+// filter and delivered a live test in seconds; the Brevo SMTP relay
+// (SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SMTP_FROM) rides as the
+// fallback when no API key is set or the API call fails. With neither
+// configured the link is written to the server log so nothing is lost.
 package httpapi
 
 import (
@@ -20,6 +19,7 @@ import (
         "errors"
         "fmt"
         "io"
+        "net"
         "net/http"
         "net/smtp"
         "os"
@@ -83,17 +83,20 @@ If you did not create this account you can ignore this mail.
 `, link)
         _ = userID // logs stay free of account ids beyond the address
         sent := false
-        if host := strings.TrimSpace(os.Getenv("SMTP_HOST")); host != "" {
-                if err := smtpSend(host, email, subject, body); err != nil {
-                        s.log.Error("confirmation mail via SMTP relay failed (check SMTP_USER/SMTP_PASS, the Brevo authorized-IP list, and that SMTP_FROM is a verified sender)", "err", err)
+        // HTTPS API first: no IP filter to trip over, proven to deliver
+        // in seconds. The relay stays as fallback (and remains the only
+        // transport when no API key is configured).
+        if key := strings.TrimSpace(os.Getenv("BREVO_API_KEY")); key != "" {
+                if err := brevoAPISend(key, email, subject, body); err != nil {
+                        s.log.Error("confirmation mail via Brevo HTTPS API failed (falling back to the SMTP relay)", "err", err)
                 } else {
                         sent = true
                 }
         }
         if !sent {
-                if key := strings.TrimSpace(os.Getenv("BREVO_API_KEY")); key != "" {
-                        if err := brevoAPISend(key, email, subject, body); err != nil {
-                                s.log.Error("confirmation mail via Brevo HTTPS API failed", "err", err)
+                if host := strings.TrimSpace(os.Getenv("SMTP_HOST")); host != "" {
+                        if err := smtpSend(host, email, subject, body); err != nil {
+                                s.log.Error("confirmation mail via SMTP relay failed (check SMTP_USER/SMTP_PASS, the Brevo authorized-IP list, and that SMTP_FROM is a verified sender)", "err", err)
                         } else {
                                 sent = true
                         }
@@ -145,9 +148,9 @@ func brevoAPISend(key, to, subject, body string) error {
 }
 
 // smtpSend is a plain SMTP handoff (no TLS pooling tricks, no HTML).
-// Port 587 (STARTTLS) rides smtp.SendMail's opportunistic TLS. Port 465
-// (implicit TLS, e.g. some Brevo/Zoho/Gmail configs) needs a TLS-first
-// dial because net/smtp has no built-in wrapper for it.
+// Port 587 (STARTTLS) upgrades in band; port 465 (implicit TLS) dials
+// TLS first. Both paths dial with a hard 15s timeout and a 60s command
+// deadline so a hung relay can never stall a signup response.
 func smtpSend(host, to, subject, body string) error {
         port := strings.TrimSpace(os.Getenv("SMTP_PORT"))
         if port == "" {
@@ -162,41 +165,53 @@ func smtpSend(host, to, subject, body string) error {
         if user != "" {
                 auth = smtp.PlainAuth("", user, pass, host)
         }
+        dialer := &net.Dialer{Timeout: 15 * time.Second}
+        var conn net.Conn
+        var derr error
         if port == "465" {
-                conn, err := tls.Dial("tcp", addr, &tls.Config{ServerName: host})
-                if err != nil {
-                        return err
-                }
-                defer conn.Close()
-                c, err := smtp.NewClient(conn, host)
-                if err != nil {
-                        return err
-                }
-                defer c.Close()
-                if auth != nil {
-                        if err := c.Auth(auth); err != nil {
+                conn, derr = tls.DialWithDialer(dialer, "tcp", addr, &tls.Config{ServerName: host})
+        } else {
+                conn, derr = dialer.Dial("tcp", addr)
+        }
+        if derr != nil {
+                return derr
+        }
+        defer conn.Close()
+        _ = conn.SetDeadline(time.Now().Add(60 * time.Second))
+        c, err := smtp.NewClient(conn, host)
+        if err != nil {
+                return err
+        }
+        defer c.Close()
+        if port != "465" {
+                if ok, _ := c.Extension("STARTTLS"); ok {
+                        if err := c.StartTLS(&tls.Config{ServerName: host}); err != nil {
                                 return err
                         }
                 }
-                if err := c.Mail(from); err != nil {
-                        return err
-                }
-                if err := c.Rcpt(to); err != nil {
-                        return err
-                }
-                wc, err := c.Data()
-                if err != nil {
-                        return err
-                }
-                if _, err := wc.Write([]byte(msg)); err != nil {
-                        return err
-                }
-                if err := wc.Close(); err != nil {
-                        return err
-                }
-                return c.Quit()
         }
-        return smtp.SendMail(addr, auth, from, []string{to}, []byte(msg))
+        if auth != nil {
+                if err := c.Auth(auth); err != nil {
+                        return err
+                }
+        }
+        if err := c.Mail(from); err != nil {
+                return err
+        }
+        if err := c.Rcpt(to); err != nil {
+                return err
+        }
+        wc, err := c.Data()
+        if err != nil {
+                return err
+        }
+        if _, err := wc.Write([]byte(msg)); err != nil {
+                return err
+        }
+        if err := wc.Close(); err != nil {
+                return err
+        }
+        return c.Quit()
 }
 
 type verifyEmailRequest struct {

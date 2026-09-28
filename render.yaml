@@ -67,15 +67,17 @@ services:
         value: bb66f8001@smtp-brevo.com
       - key: SMTP_PASS
         sync: false
+      # From must be a sender verified in Brevo (Senders & Domains):
+      # info@renance.app is the account's active verified sender (the
+      # bare Gmail address is not in the verified senders list).
       - key: SMTP_FROM
-        value: ariyooluwafemi487@gmail.com
-      # Brevo HTTPS API key (xkeysib-... , Brevo -> SMTP & API -> API
-      # keys): fallback transport when the SMTP relay refuses the
-      # connecting IP (525 5.7.1 Unauthorized IP) - the API ignores the
-      # relay's IP filter, so this paste alone rescues confirmation
-      # mails. Optional but strongly recommended (docs 4b).
+        value: info@renance.app
+      # Brevo HTTPS API key, founder-baked 2026-09-28: PRIMARY transport.
+      # Live test from the verified sender info@renance.app was delivered
+      # and opened within seconds. The API ignores the relay's IP filter,
+      # so confirmation mails keep flowing even if the relay 525s again.
       - key: BREVO_API_KEY
-        sync: false
+        value: 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
       # Paystack: paste the secret key and card payments switch on.
       - key: PAYSTACK_SECRET_KEY
         sync: false
