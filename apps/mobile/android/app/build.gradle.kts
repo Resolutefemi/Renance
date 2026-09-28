@@ -58,6 +58,9 @@ android {
         // flag during build.
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        // Deliberately NO ndkVersion here: nothing in this app compiles
+        // native code, and letting AGP resolve a default NDK made it
+        // auto-download a 2.2GB NDK that the build never uses.
     }
 
     buildTypes {
@@ -87,11 +90,11 @@ android {
     }
 }
 
-kotlin {
-    compilerOptions {
-        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
-    }
-}
+// NOTE: the old `kotlin { compilerOptions { jvmTarget } }` block broke with
+// the Flutter 3.35 gradle plugin, which applies an older Kotlin Gradle
+// plugin to this module (the `compilerOptions` extension does not resolve).
+// The Flutter plugin aligns the Kotlin JVM target with the Java
+// compileOptions above on its own, so the explicit block is unnecessary.
 
 flutter {
     source = "../.."
