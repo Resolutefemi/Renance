@@ -226,38 +226,55 @@ Notes:
   (or paste it once into Environment); the service restarts with the
   tutor in AI mode.
 
-## 4b. Confirmation emails (SMTP) - Brevo, LIVE
+## 4b. Confirmation emails (Brevo) - signup-only, LIVE
 
-The feature is fully coded (signup, resend, and the wrong-email rescue
-all call `sendVerificationMail`) and the Brevo relay is wired in
-`render.yaml`: `SMTP_HOST` smtp-relay.brevo.com, `SMTP_PORT` 587,
-`SMTP_USER` bb66f8001@smtp-brevo.com, `SMTP_FROM`
-ariyooluwafemi487@gmail.com (the account owner, pre-verified as a Brevo
-sender). The SMTP key itself is NOT committed - GitHub push protection
-(correctly) blocks the Sendinblue key pattern - so paste it once on the
-Render service as `SMTP_PASS` (the `xsmtpsib-...` key from the founder's
-Brevo dashboard, Brevo -> SMTP & API). That single paste + redeploy
-switches the service to real mail delivery.
+Doctrine (since the founder's ruling): **confirmation is a signup step,
+never a login step.** The mail goes out once at registration; signing in
+NEVER asks about it - web (`VerifyGate` was removed from the dashboard)
+and app (splash + login checks were removed) open the desk straight
+away. The register screens keep resend + the wrong-email rescue, and the
+app's verify screen gained a skip button.
+
+Transport, in order:
+
+1. **Brevo SMTP relay** - wired in `render.yaml`: `SMTP_HOST`
+   smtp-relay.brevo.com, `SMTP_PORT` 587, `SMTP_USER`
+   bb66f8001@smtp-brevo.com, `SMTP_FROM` ariyooluwafemi487@gmail.com
+   (the account owner, pre-verified as a Brevo sender). The SMTP key is
+   NOT committed - GitHub push protection (correctly) blocks the
+   Sendinblue key pattern - so paste it once on the Render service as
+   `SMTP_PASS` (the `xsmtpsib-...` key from Brevo -> SMTP & API).
+2. **Brevo HTTPS API fallback** - when the relay refuses the connecting
+   host the code retries via `POST https://api.brevo.com/v3/smtp/email`
+   using `BREVO_API_KEY` (the `xkeysib-...` API key from the same Brevo
+   page). **The API is not subject to the relay's IP filter**, so this
+   one paste rescues delivery from any host, Render included.
+3. Neither configured -> the confirmation link is written to the server
+   log so nothing is lost.
 
 Two operational notes:
 
-1. **Sender address.** The FROM is the founder's own address because
-   Brevo pre-verifies the account owner as a sender. Students will see
-   that address until `no-reply@renance.com` (or any address on the
-   renance.com domain) is added and verified under Brevo -> Senders &
-   IP; then switch `SMTP_FROM`.
-2. **`525 5.7.1 Unauthorized IP address`.** The credentials authenticate
-   cleanly, but Brevo also filters the CONNECTING IP. If the Render
-   service logs this error, allow the service's static outbound IPs
-   (https://render.com/docs/outbound-ips, Frankfurt region) under
-   Brevo -> Profile -> SMTP & API security, or disable the IP filter
-   there. The same error from a laptop means that machine's IP is not
-   allowlisted - not that the credentials are wrong.
+1. **`525 5.7.1 Unauthorized IP address`** (verified live on 2026-09-28
+   from both a laptop and Render): the credentials authenticate cleanly
+   but Brevo also filters the CONNECTING IP on the relay. Either clear
+   the restriction under Brevo -> Profile -> SMTP & API security, or
+   skip the relay entirely by pasting `BREVO_API_KEY`. The same error
+   from a laptop means that machine's IP is not allowlisted - not that
+   the credentials are wrong.
+2. **Sender address.** The FROM defaults in code to `SMTP_FROM`, then
+   `SMTP_USER`, then no-reply@renance.com. Students will see the
+   founder's address until a `no-reply@renance.com` sender is added and
+   verified under Brevo -> Senders; then switch `SMTP_FROM`.
+
+The register response now reports `emailVerification.sent` honestly
+(true only when a transport accepted the mail) and the web register
+screen shows a gentle warning when it is false; the resend endpoint
+answers 502 `mail_send_failed` when both transports refuse.
 
 Success looks like: register a fresh manual account -> the confirmation
 mail arrives within a minute (check spam on first send) -> the link
-lands on `/verify` and unlocks the desk. Failures surface in Render
-Logs as `verification mail send failed` with the provider's reply.
+lands on `/verify` and marks the address confirmed. Failures surface in
+Render Logs as `confirmation mail ... failed` with the provider's reply.
 
 ## 5. Content layout (answers live inside the banks)
 

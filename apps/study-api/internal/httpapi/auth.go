@@ -200,15 +200,17 @@ func (s *Server) finishSignup(w http.ResponseWriter, r *http.Request, u *store.U
                         s.log.Error("referral code mint failed", "err", cerr)
                 }
         }
-        // Email verification: manual signups only (Google addresses are
+        // Email confirmation: manual signups only (Google addresses are
         // verified by Google themselves). The link returns the student
-        // to where the signup happened (web or app).
+        // to where the signup happened (web or app). Logging in never
+        // asks about this - signup-only by doctrine.
         var verifyURL string
+        sentMail := false
         if strings.TrimSpace(req.Email) != "" {
                 token, err := newVerifyToken()
                 if err == nil {
                         if err := s.store.SetEmailVerification(r.Context(), u.ID, token); err == nil {
-                                verifyURL = s.sendVerificationMail(u.ID, strings.TrimSpace(req.Email), token, req.VerifyReturn)
+                                verifyURL, sentMail = s.sendVerificationMail(u.ID, strings.TrimSpace(req.Email), token, req.VerifyReturn)
                         }
                 } else {
                         s.log.Error("verify token mint failed", "err", err)
@@ -225,7 +227,7 @@ func (s *Server) finishSignup(w http.ResponseWriter, r *http.Request, u *store.U
                 "user":  userPayload{ID: u.ID, Username: u.Username, ProfileCompleted: profileCompleted},
                 "emailVerification": map[string]any{
                         "required": verifyURL != "" || strings.TrimSpace(req.Email) != "",
-                        "sent":     verifyURL != "",
+                        "sent":     sentMail,
                 },
         })
 }

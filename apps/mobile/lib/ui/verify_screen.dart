@@ -1,8 +1,8 @@
-/// The strict email check: a manual (non-Google) signup cannot reach
-/// the home desk until the address is confirmed. The screen explains,
-/// resends the confirmation mail (the server keeps a one-minute
-/// cooldown), and signs the student back out. Google accounts arrive
-/// pre-verified and never see this screen.
+/// The signup-only confirmation stop: right after a manual signup the
+/// app shows this screen once so the student can resend the mail or
+/// rescue a typo'd address - and SKIPPING is always fine, the desk
+/// never blocks on confirmation and neither does signing in. Google
+/// signups are pre-verified and never see this screen.
 library;
 
 import 'package:flutter/material.dart';
@@ -24,11 +24,21 @@ class _VerifyScreenState extends State<VerifyScreen> {
   bool _busy = false;
   bool _sent = false;
   String? _error;
+  // The signup address the confirmation mail went to (passed as the
+  // route argument from the register screen; null for older sessions).
+  String? _signupEmail;
   // Wrong-email rescue: swap the mistaken signup address for the correct
   // one. The API removes the old address and re-mails the confirmation.
   bool _changing = false;
   bool _changed = false;
   final TextEditingController _emailCtrl = TextEditingController();
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final args = ModalRoute.of(context)?.settings.arguments;
+    if (args is String && args.contains('@')) _signupEmail = args;
+  }
 
   @override
   void dispose() {
@@ -98,6 +108,11 @@ class _VerifyScreenState extends State<VerifyScreen> {
     await Navigator.of(context).pushReplacementNamed('/login');
   }
 
+  Future<void> _skip() async {
+    if (!mounted) return;
+    await Navigator.of(context).pushReplacementNamed('/home');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -120,15 +135,19 @@ class _VerifyScreenState extends State<VerifyScreen> {
                 ),
                 const SizedBox(height: 20),
                 Text(
-                  'Confirm your email to continue',
+                  'Check your inbox',
                   textAlign: TextAlign.center,
                   style: RenanceText.sectionTitle.copyWith(fontSize: 20),
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  'We sent a confirmation link to your inbox. Open it and '
-                  'your desk unlocks. Students who sign up with Google skip '
-                  'this step because Google already vouched for them.',
+                  _signupEmail == null
+                      ? 'We sent a confirmation link to your inbox. Confirm '
+                          'whenever you like - you can start studying right '
+                          'away.'
+                      : 'We sent a confirmation link to $_signupEmail. '
+                          'Confirm whenever you like - you can start '
+                          'studying right away.',
                   textAlign: TextAlign.center,
                   style: RenanceText.bodySecondary.copyWith(
                     height: 1.5,
@@ -175,14 +194,24 @@ class _VerifyScreenState extends State<VerifyScreen> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
-                    onPressed: _signOut,
+                    onPressed: _busy ? null : _skip,
                     child: Text(
-                      'Sign out',
+                      'Skip for now - start studying',
                       style: RenanceText.bodyMedium.copyWith(color: context.ink),
                     ),
                   ),
                 ),
                 const SizedBox(height: 10),
+                TextButton(
+                  onPressed: _busy ? null : _signOut,
+                  child: Text(
+                    'Sign out',
+                    style: RenanceText.caption.copyWith(
+                      color: context.textSecondary,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 6),
                 if (_changed)
                   Text(
                     'Signup email changed - the old address was removed and '
@@ -256,7 +285,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
                 const SizedBox(height: 18),
                 Text(
                   _changed
-                      ? 'Check the new inbox to unlock your desk.'
+                      ? 'Check the new inbox for the fresh link.'
                       : 'Wrong address? Change it above, or sign up again '
                           'from the login screen.',
                   textAlign: TextAlign.center,

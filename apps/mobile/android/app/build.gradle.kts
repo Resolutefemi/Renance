@@ -10,7 +10,10 @@ android {
     // requires compiling against Android API 36; Flutter 3.47's default
     // is 34. compileSdk is compile-time only, runtime targets stay put.
     compileSdk = 36
-    ndkVersion = flutter.ndkVersion
+    // NDK not needed: every plugin in this app is pure Kotlin/Java, and
+    // pinning ndkVersion made AGP eagerly fetch a 2.2GB NDK the build
+    // never uses. Re-add only if a plugin gains real native (C/C++) code.
+    // ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17

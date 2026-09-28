@@ -270,18 +270,8 @@ class _LoginScreenState extends State<LoginScreen> {
       }
       final SharedPreferences prefs = session.prefs;
       await SchoolController.forgetSchoolSession(prefs);
-      // Strict email check: a manual signup confirms the inbox before
-      // the desk opens. Google accounts arrive pre-verified.
-      try {
-        final MeResult me = await api.me();
-        if (me.entitlement != null && !me.entitlement!.emailVerified) {
-          if (!mounted) return;
-          await Navigator.of(context).pushReplacementNamed('/verify');
-          return;
-        }
-      } on NetworkException catch (_) {
-        // offline: let the desk open, the next sync re-checks.
-      }
+      // Confirmation is signup-only by doctrine: signing in opens the
+      // desk straight away - no confirm-inbox check ever blocks login.
       if (!mounted) return;
       await Navigator.of(context).pushReplacementNamed('/home');
     } on ApiException catch (e) {
@@ -476,27 +466,30 @@ class _RegisterScreenState extends State<RegisterScreen> {
         await Navigator.of(context).pushReplacementNamed('/school');
         return;
       }
+      final String email = _email.text.trim();
+      if (email.isEmpty || !email.contains('@')) {
+        setState(() {
+          _error =
+              'Enter your email address - the confirmation link goes there.';
+          _busy = false;
+        });
+        return;
+      }
       final AuthTokens res = await api.registerFull(
         _username.text.trim(),
         password: _password.text,
+        email: email,
         deviceId: await DeviceId.get(),
       );
       await session.save(res.token, res.user);
       final SharedPreferences prefs = session.prefs;
       await SchoolController.forgetSchoolSession(prefs);
       if (!mounted) return;
-      // Manual signups confirm their email: the mailed link returns to
-      // the app (verifyReturn: app). The notice shows before the home
-      // shell; the student can keep exploring in the meantime.
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text(
-            'Account created. Check your inbox for the confirmation link to fully unlock your account.',
-          ),
-          duration: Duration(seconds: 6),
-        ),
-      );
-      await Navigator.of(context).pushReplacementNamed('/home');
+      // Signup-only confirmation: the mailed link carries verifyReturn
+      // "app" and the verify screen offers resend, the wrong-email
+      // rescue and a skip - the desk itself never blocks on it.
+      await Navigator.of(context).pushReplacementNamed('/verify',
+          arguments: email);
     } on ApiException catch (e) {
       setState(() {
         _error = e.message;
@@ -605,6 +598,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
             ),
             SizedBox(height: 16),
+            _FieldLabel('Email'),
+            TextField(
+              controller: _email,
+              keyboardType: TextInputType.emailAddress,
+              autocorrect: false,
+              autofillHints: const <String>[AutofillHints.email],
+              textInputAction: TextInputAction.next,
+              decoration: const InputDecoration(
+                prefixIcon: Icon(Icons.alternate_email, size: 20),
+                hintText: 'you@example.com',
+              ),
+            ),
+            SizedBox(height: 16),
           ],
           _FieldLabel('Password'),
           _PasswordField(controller: _password, onSubmitted: _submit),
@@ -641,7 +647,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           Text(
             isSchool
                 ? 'The full Nigerian curriculum - classes, subjects, term syllabuses with notes - is installed for you automatically.'
-                : "We'll ask about your school and exams right after, in one quick modal.",
+                : "We'll send a confirmation link to your email, then ask about your school and exams right after.",
             textAlign: TextAlign.center,
             style: TextStyle(color: context.outline, fontSize: 12),
           ),

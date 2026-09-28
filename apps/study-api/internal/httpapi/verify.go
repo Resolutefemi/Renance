@@ -1,18 +1,25 @@
-// Email verification: manual signups confirm their address through a
-// mailed link that lands on the web /verify page and then hands the
-// student back to where the signup happened (the site, or the app when
-// the request came from it). Google signups are pre-verified by Google.
-// SMTP credentials arrive via the environment (SMTP_HOST, SMTP_PORT,
-// SMTP_USER, SMTP_PASS, SMTP_FROM); without them the message with the
-// verification link is written to the server log so nothing is lost.
+// Email confirmation: manual signups get a mailed link that lands on
+// the web /verify page (or the app's verify screen) and hands the
+// student back to where the signup happened. SIGNUP-ONLY by doctrine:
+// logging in never asks about confirmation - the desk opens straight
+// away. Google signups are pre-verified by Google. Transport: the Brevo
+// SMTP relay first (SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS,
+// SMTP_FROM); when the relay refuses the connecting host (Brevo answers
+// "525 5.7.1 Unauthorized IP" when the IP is not allowlisted) the Brevo
+// HTTPS API takes over via BREVO_API_KEY - the API is not subject to
+// the relay's IP filter. With neither configured the link is written to
+// the server log so nothing is lost.
 package httpapi
 
 import (
+        "bytes"
         "crypto/rand"
         "crypto/tls"
         "encoding/hex"
+        "encoding/json"
         "errors"
         "fmt"
+        "io"
         "net/http"
         "net/smtp"
         "os"
@@ -39,10 +46,24 @@ func (s *Server) siteURL() string {
         return "https://renance-edtech.vercel.app"
 }
 
+// mailFrom picks the envelope sender: SMTP_FROM first, then the SMTP
+// login (Brevo pre-verifies the account owner's identity), then a last
+// resort that still reads sensibly in a mail client.
+func mailFrom() string {
+        if f := strings.TrimSpace(os.Getenv("SMTP_FROM")); f != "" {
+                return f
+        }
+        if f := strings.TrimSpace(os.Getenv("SMTP_USER")); f != "" {
+                return f
+        }
+        return "no-reply@renance.com"
+}
+
 // sendVerificationMail builds and (best-effort) sends the confirmation
-// mail. Returns the verification URL so the response can carry it to
-// dev surfaces; production students only ever get the mail.
-func (s *Server) sendVerificationMail(userID, email, token, verifyReturn string) string {
+// mail. Returns the verification URL (so dev surfaces can carry it) and
+// whether the mail actually left the building - the response to the
+// client reports that honestly instead of pretending.
+func (s *Server) sendVerificationMail(userID, email, token, verifyReturn string) (string, bool) {
         back := verifyReturn
         if back != "app" {
                 back = "web"
@@ -51,23 +72,76 @@ func (s *Server) sendVerificationMail(userID, email, token, verifyReturn string)
         subject := "Confirm your email - Renance"
         body := fmt.Sprintf(`Welcome to Renance.
 
-Confirm your email address to unlock your account:
+Confirm your email address:
 
 %s
 
-This link works once and never expires, but use it soon.
+This link works once and never expires, but use it soon. You can
+keep studying right away - confirming just completes the signup.
 
 If you did not create this account you can ignore this mail.
 `, link)
         _ = userID // logs stay free of account ids beyond the address
+        sent := false
         if host := strings.TrimSpace(os.Getenv("SMTP_HOST")); host != "" {
                 if err := smtpSend(host, email, subject, body); err != nil {
-                        s.log.Error("verification mail send failed (check SMTP_USER/SMTP_PASS and that SMTP_FROM is a sender verified with the provider)", "err", err)
+                        s.log.Error("confirmation mail via SMTP relay failed (check SMTP_USER/SMTP_PASS, the Brevo authorized-IP list, and that SMTP_FROM is a verified sender)", "err", err)
+                } else {
+                        sent = true
                 }
-        } else {
-                s.log.Warn("SMTP not configured on this service: the confirmation mail is NOT going out. Set SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SMTP_FROM in the Render dashboard (render.yaml already reserves them); until then the verification link only appears in this log", "to", email, "url", link)
         }
-        return link
+        if !sent {
+                if key := strings.TrimSpace(os.Getenv("BREVO_API_KEY")); key != "" {
+                        if err := brevoAPISend(key, email, subject, body); err != nil {
+                                s.log.Error("confirmation mail via Brevo HTTPS API failed", "err", err)
+                        } else {
+                                sent = true
+                        }
+                }
+        }
+        if !sent {
+                if host := strings.TrimSpace(os.Getenv("SMTP_HOST")); host == "" && strings.TrimSpace(os.Getenv("BREVO_API_KEY")) == "" {
+                        s.log.Warn("no mail transport configured: set SMTP_HOST/SMTP_PASS (relay) or BREVO_API_KEY (Brevo dashboard -> SMTP & API -> API keys) on the Render service; the confirmation link is only in this log", "to", email, "url", link)
+                } else {
+                        s.log.Warn("confirmation mail did NOT go out: the relay refused the connecting IP (Brevo answers 525 5.7.1 Unauthorized IP) and no BREVO_API_KEY fallback is set. Paste the Brevo API key (xkeysib-...) as BREVO_API_KEY on Render - the HTTPS API ignores the relay's IP filter - or clear the IP restriction under Brevo -> Profile -> SMTP & API security", "to", email, "url", link)
+                }
+        }
+        return link, sent
+}
+
+// brevoAPISend hands the mail to Brevo's HTTPS API instead of the SMTP
+// relay. The relay filters connecting IPs (525 5.7.1) - the API does
+// not - so a single BREVO_API_KEY paste rescues delivery from any
+// host, Render included.
+func brevoAPISend(key, to, subject, body string) error {
+        payload := map[string]any{
+                "sender":      map[string]string{"name": "Renance", "email": mailFrom()},
+                "to":          []map[string]string{{"email": to}},
+                "subject":     subject,
+                "textContent": body,
+        }
+        buf, err := json.Marshal(payload)
+        if err != nil {
+                return err
+        }
+        req, err := http.NewRequest(http.MethodPost, "https://api.brevo.com/v3/smtp/email", bytes.NewReader(buf))
+        if err != nil {
+                return err
+        }
+        req.Header.Set("api-key", key)
+        req.Header.Set("content-type", "application/json")
+        req.Header.Set("accept", "application/json")
+        client := &http.Client{Timeout: 30 * time.Second}
+        res, err := client.Do(req)
+        if err != nil {
+                return err
+        }
+        defer res.Body.Close()
+        data, _ := io.ReadAll(io.LimitReader(res.Body, 4096))
+        if res.StatusCode >= 300 {
+                return fmt.Errorf("brevo api status %d: %s", res.StatusCode, strings.TrimSpace(string(data)))
+        }
+        return nil
 }
 
 // smtpSend is a plain SMTP handoff (no TLS pooling tricks, no HTML).
@@ -79,10 +153,7 @@ func smtpSend(host, to, subject, body string) error {
         if port == "" {
                 port = "587"
         }
-        from := strings.TrimSpace(os.Getenv("SMTP_FROM"))
-        if from == "" {
-                from = "no-reply@renance.com"
-        }
+        from := mailFrom()
         user := strings.TrimSpace(os.Getenv("SMTP_USER"))
         pass := strings.TrimSpace(os.Getenv("SMTP_PASS"))
         addr := fmt.Sprintf("%s:%s", host, port)
@@ -193,7 +264,12 @@ func (s *Server) handleResendVerification(w http.ResponseWriter, r *http.Request
                 fail(w, http.StatusInternalServerError, "internal", "could not resend")
                 return
         }
-        link := s.sendVerificationMail(uid, strings.TrimSpace(*u.Email), token, "web")
+        link, sent := s.sendVerificationMail(uid, strings.TrimSpace(*u.Email), token, "web")
+        if !sent {
+                fail(w, http.StatusBadGateway, "mail_send_failed",
+                        "the mail service refused the send just now - wait a minute and tap resend again.")
+                return
+        }
         writeJSON(w, http.StatusOK, map[string]any{"sent": true, "_devLink": link})
 }
 
@@ -241,9 +317,9 @@ func (s *Server) handleChangeEmail(w http.ResponseWriter, r *http.Request) {
                 fail(w, http.StatusInternalServerError, "internal", "could not change the email")
                 return
         }
-        link := s.sendVerificationMail(uid, email, token, back)
+        link, sent := s.sendVerificationMail(uid, email, token, back)
         s.log.Info("signup email changed, confirmation re-issued", "at", time.Now().UTC().Format(time.RFC3339))
-        writeJSON(w, http.StatusOK, map[string]any{"sent": true, "email": email, "_devLink": link})
+        writeJSON(w, http.StatusOK, map[string]any{"sent": sent, "email": email, "_devLink": link})
 }
 
 type changeEmailRequest struct {

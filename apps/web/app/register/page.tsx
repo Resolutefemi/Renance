@@ -21,10 +21,20 @@ export default function RegisterPage() {
   const [referral, setReferral] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
-  // Post-signup verification notice: manual signups confirm their email
-  // through the mailed link before the full experience unlocks.
+  // Post-signup confirmation notice: manual signups confirm their email
+  // through the mailed link. SIGNUP-ONLY - the desk never blocks on it;
+  // this screen just offers resend and the wrong-email rescue.
   const [verifySent, setVerifySent] = useState(false);
   const [signedEmail, setSignedEmail] = useState('');
+  const [mailFailed, setMailFailed] = useState(false);
+  const [resendState, setResendState] = useState<'idle' | 'busy' | 'sent'>('idle');
+  const [resendError, setResendError] = useState('');
+  // Wrong-email rescue: students who typo'd their signup address swap it
+  // here. The API overwrites the old address in the database (it is
+  // gone, not deactivated) and re-mails the confirmation to the new one.
+  const [changing, setChanging] = useState(false);
+  const [newEmail, setNewEmail] = useState('');
+  const [changedTo, setChangedTo] = useState('');
 
   // school-only fields
   const [schoolName, setSchoolName] = useState('');
@@ -122,6 +132,7 @@ export default function RegisterPage() {
       setSession(res.token, res.user);
       if (res.emailVerification?.required) {
         setSignedEmail(email.trim());
+        setMailFailed(res.emailVerification?.sent === false);
         setVerifySent(true);
         setBusy(false);
         return;
@@ -132,6 +143,42 @@ export default function RegisterPage() {
       setBusy(false);
     }
   }
+
+  const resend = async () => {
+    setResendState('busy');
+    setResendError('');
+    try {
+      await api('/auth/resend-verification', { method: 'POST' });
+      setResendState('sent');
+    } catch (e) {
+      setResendState('idle');
+      setResendError(
+        e instanceof ApiError ? e.message : 'The mail could not be sent, try again in a minute.',
+      );
+    }
+  };
+
+  const changeEmail = async () => {
+    setResendState('idle');
+    setResendError('');
+    setBusy(true);
+    try {
+      await api('/me/change-email', {
+        method: 'POST',
+        body: { email: newEmail.trim(), return: 'web' },
+      });
+      setChangedTo(newEmail.trim());
+      setSignedEmail(newEmail.trim());
+      setChanging(false);
+      setMailFailed(false);
+    } catch (e) {
+      setResendError(
+        e instanceof ApiError ? e.message : 'The email could not be changed, try again.',
+      );
+    } finally {
+      setBusy(false);
+    }
+  };
 
   const field = 'h-12 w-full rounded-lg bg-surface-container pl-11 pr-3 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary';
 
@@ -148,19 +195,38 @@ export default function RegisterPage() {
           <p className="mt-3 text-sm leading-relaxed text-on-surface-variant">
             We sent a confirmation link to{' '}
             <span className="font-semibold text-on-surface">{signedEmail}</span>. Confirm
-            your email to unlock your account fully. The link returns you
-            right back here to the web.
+            whenever you like - you can keep studying right away.
           </p>
-          <p className="mt-3 text-[12.5px] text-on-surface-variant">
-            Didn&apos;t get it? Check spam, or resend from the dashboard
-            banner after signing in.
-          </p>
+          {mailFailed && (
+            <p className="mt-3 rounded-lg bg-error-container px-3 py-2 text-[12.5px] text-on-error-container">
+              The mail service is slow right now - if nothing arrives, tap
+              resend below in a minute or change the address.
+            </p>
+          )}
+          {changedTo && (
+            <p className="mt-3 rounded-lg bg-surface-container px-3 py-2 text-[12.5px] text-on-surface-variant">
+              The signup email is now <b className="text-on-surface">{changedTo}</b> - the
+              old address was removed and a fresh link is on its way there.
+            </p>
+          )}
           <div className="mt-6 flex flex-col gap-2">
             <button
               onClick={() => router.replace('/dashboard')}
               className="flex h-12 items-center justify-center rounded-full bg-primary text-sm font-semibold text-on-primary transition hover:opacity-90"
             >
               Continue to dashboard
+            </button>
+            <button
+              type="button"
+              onClick={resend}
+              disabled={resendState === 'busy'}
+              className="flex h-12 items-center justify-center rounded-full border border-outline text-sm font-semibold text-on-surface transition hover:bg-surface-container disabled:opacity-50"
+            >
+              {resendState === 'busy'
+                ? 'Sending…'
+                : resendState === 'sent'
+                  ? 'Confirmation sent, check the inbox'
+                  : 'Resend the confirmation mail'}
             </button>
             <Link
               href="/login"
@@ -169,6 +235,41 @@ export default function RegisterPage() {
               Go to sign in
             </Link>
           </div>
+          {changing ? (
+            <div className="mt-4 flex flex-col gap-2 text-left">
+              <label htmlFor="register-new-email" className="text-[12px] font-medium text-on-surface-variant">
+                The correct email address (replaces the mistaken one)
+              </label>
+              <input
+                id="register-new-email"
+                type="email"
+                value={newEmail}
+                onChange={(e) => setNewEmail(e.target.value)}
+                placeholder="you@example.com"
+                autoComplete="email"
+                className="h-11 w-full rounded-[10px] border border-outline bg-surface-container-lowest px-3 text-sm text-on-surface outline-none focus:ring-2 focus:ring-primary"
+              />
+              <button
+                type="button"
+                onClick={changeEmail}
+                disabled={busy || !newEmail.trim()}
+                className="flex h-11 w-full items-center justify-center rounded-[10px] bg-primary text-sm font-semibold text-on-primary transition hover:opacity-90 disabled:opacity-50"
+              >
+                {busy ? 'Saving…' : 'Save and send the link there'}
+              </button>
+            </div>
+          ) : (
+            !changedTo && (
+              <button
+                type="button"
+                onClick={() => setChanging(true)}
+                className="mt-3 text-[12.5px] text-on-surface-variant underline underline-offset-2 hover:text-on-surface"
+              >
+                Typed a wrong email? Change it
+              </button>
+            )
+          )}
+          {resendError && <p className="mt-3 text-[12.5px] text-error">{resendError}</p>}
         </div>
       </main>
     );

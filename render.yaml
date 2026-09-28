@@ -69,6 +69,13 @@ services:
         sync: false
       - key: SMTP_FROM
         value: ariyooluwafemi487@gmail.com
+      # Brevo HTTPS API key (xkeysib-... , Brevo -> SMTP & API -> API
+      # keys): fallback transport when the SMTP relay refuses the
+      # connecting IP (525 5.7.1 Unauthorized IP) - the API ignores the
+      # relay's IP filter, so this paste alone rescues confirmation
+      # mails. Optional but strongly recommended (docs 4b).
+      - key: BREVO_API_KEY
+        sync: false
       # Paystack: paste the secret key and card payments switch on.
       - key: PAYSTACK_SECRET_KEY
         sync: false
