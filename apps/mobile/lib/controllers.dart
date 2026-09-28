@@ -60,6 +60,12 @@ class SyncController extends ChangeNotifier {
   /// retry with a short backoff; one flaky pack never abandons the rest
   /// of the sync - the failure list only surfaces when packs actually
   /// failed, and a later bootstrap silently fills the holes.
+  ///
+  /// Every failure shape ends HERE, inside the controller: storage
+  /// hiccups, decode errors, anything unexpected becomes phase=error
+  /// with a message, never an escaped exception (an escaped one killed
+  /// the download button dead with zero feedback - founder bug
+  /// "download is not working at all", 2026-09-28).
   Future<void> bootstrap({List<String> profileExams = const <String>[]}) async {
     phase = SyncPhase.syncing;
     message = 'Contacting Renance servers…';
@@ -106,6 +112,11 @@ class SyncController extends ChangeNotifier {
               break;
             } on NetworkException {
               // Transient: fall through to the retry pass.
+            } catch (_) {
+              // A storage or decode hiccup must not kill the whole
+              // sync - count this pack failed and keep pulling the
+              // rest of the desk.
+              break;
             }
           }
           if (saved) {
@@ -117,10 +128,14 @@ class SyncController extends ChangeNotifier {
         }
       }
       await Future.wait(<Future<void>>[worker(), worker(), worker()]);
-      await refreshPendingCount();
-      // Downloads just reconnected the desk - push any exam sittings and
-      // flashcard grades the student completed offline while we are here.
-      await retryPending();
+      try {
+        await refreshPendingCount();
+        // Downloads just reconnected the desk - push any exam sittings and
+        // flashcard grades the student completed offline while we are here.
+        await retryPending();
+      } catch (_) {
+        // A queue flush hiccup must never read as a failed download.
+      }
       if (failed > 0 && done == 0) {
         phase = SyncPhase.error;
         message =
@@ -140,6 +155,14 @@ class SyncController extends ChangeNotifier {
     } on NetworkException catch (e) {
       phase = SyncPhase.error;
       message = e.message;
+    } catch (e) {
+      // Anything unexpected (storage full, decode quirk) still lands
+      // here as a visible error instead of an unhandled crash the
+      // student reads as "the button does nothing".
+      phase = SyncPhase.error;
+      message =
+          'Download hit a problem on this device ($e). Free some space '
+          'and retry - the rest of the app works offline.';
     }
     notifyListeners();
   }

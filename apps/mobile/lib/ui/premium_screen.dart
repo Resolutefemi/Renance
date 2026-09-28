@@ -7,12 +7,14 @@ import 'renance_logo.dart';
 import 'theme.dart';
 
 /// PremiumScreen: the paywall and the plans desk. Founder pricing on
-/// paper white: the four tiers (JAMB annual, Basic, Standard, Premium
-/// monthly) rendered straight from the catalog, the REN coin redemption
+/// paper white: the tiers (JAMB annual, 1 week, 1 month, 3 months)
+/// rendered straight from the catalog, the REN coin redemption
 /// table (arena wins pay 1, referrals pay 3), and the WhatsApp line for
-/// bulk and school negotiation. Paystack may still be unconnected; the
-/// screen says so honestly and keeps the coins and the WhatsApp line
-/// working.
+/// bulk and school negotiation. While the server says subscriptions are
+/// paused the screen becomes an "everything is unlocked" notice - the
+/// plans still render, buy buttons and coin spending step aside.
+/// Paystack may still be unconnected; the screen says so honestly and
+/// keeps the coins and the WhatsApp line working.
 class PremiumScreen extends StatefulWidget {
   const PremiumScreen({super.key, this.capNotice = false});
 
@@ -124,7 +126,48 @@ class _PremiumScreenState extends State<PremiumScreen> {
               : ListView(
                   padding: const EdgeInsets.fromLTRB(16, 12, 16, 32),
                   children: <Widget>[
-                    if (widget.capNotice)
+                    if (!catalog!.studentBillingEnabled) ...<Widget>[
+                      // Founder directive, 2026-09-28: subscriptions are
+                      // PAUSED - every student rides premium for free.
+                      // The screen becomes an all-unlocked notice; the
+                      // catalog still shows where pricing will land.
+                      Container(
+                        margin: const EdgeInsets.only(bottom: 12),
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: context.ink,
+                          borderRadius: BorderRadius.circular(14),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              children: <Widget>[
+                                Icon(Icons.verified_rounded,
+                                    size: 20, color: context.pageBg),
+                                const SizedBox(width: 8),
+                                Text('Everything is unlocked',
+                                    style: RenanceText.bodyMedium.copyWith(
+                                        color: context.pageBg,
+                                        fontWeight: FontWeight.w700)),
+                              ],
+                            ),
+                            const SizedBox(height: 6),
+                            Text(
+                              'Subscriptions are paused for now - every '
+                              'paper, the AI tutor and every premium perk '
+                              'are open to every student, free. No card, '
+                              'no cap, no nagging.',
+                              style: RenanceText.bodyMedium.copyWith(
+                                color: context.pageBg,
+                                fontSize: 13, height: 1.45,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                    if (widget.capNotice && catalog.studentBillingEnabled)
                       Container(
                         margin: const EdgeInsets.only(bottom: 12),
                         padding: const EdgeInsets.all(14),
@@ -141,7 +184,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
                         ),
                       ),
                     // Tiers ------------------------------------------------
-                    ...List<Widget>.generate(catalog!.plans.length, (int i) {
+                    ...List<Widget>.generate(catalog.plans.length, (int i) {
                       final PremiumPlan p = catalog.plans[i];
                       final bool best = p.code == 'jamb';
                       final String period = p.durationDays >= 360
@@ -231,13 +274,16 @@ class _PremiumScreenState extends State<PremiumScreen> {
                             const SizedBox(height: 12),
                             SizedBox(
                               height: 42,
-                              child: _payButton(p, catalog),
+                              child: catalog.studentBillingEnabled
+                                  ? _payButton(p, catalog)
+                                  : _includedChip(),
                             ),
                           ],
                         ),
                       );
                     }),
                     // REN redemption ---------------------------------------
+                    if (catalog.studentBillingEnabled) ...<Widget>[
                     const SizedBox(height: 18),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -275,8 +321,34 @@ class _PremiumScreenState extends State<PremiumScreen> {
                           ),
                       ],
                     ),
+                    ],
+                    if (!catalog.studentBillingEnabled) ...<Widget>[
+                      const SizedBox(height: 18),
+                      Text(
+                        'Your REN coins are safe and keep stacking - arena wins '
+                        '(+1) and referrals (+3). The day billing returns you '
+                        'can spend them on premium days.',
+                        style: RenanceText.caption.copyWith(
+                          fontSize: 12, height: 1.4, color: context.textSecondary,
+                        ),
+                      ),
+                    ],
                   ],
                 ),
+    );
+  }
+
+  /// The paused-billing stand-in for a plan's pay button.
+  Widget _includedChip() {
+    return OutlinedButton(
+      onPressed: null,
+      style: OutlinedButton.styleFrom(
+        side: BorderSide(color: context.outlineVariant),
+      ),
+      child: Text('Included free right now',
+          style: RenanceText.bodySecondary.copyWith(
+            fontSize: 12.5, color: context.textSecondary,
+          )),
     );
   }
 

@@ -2,7 +2,10 @@
 // per user, readable from the Neon console: the owner grants premium by
 // flipping premium_role to true and setting premium_type + premium_type's
 // expiry. Everything the paywall, the blue tick, the REN wallet and the
-// device lock read flows through here.
+// device lock read flows through here. While student billing is paused
+// the API stamps every row premium (GrantEveryonePremium at boot,
+// GrantPremiumYear for any row that slips through) so the database
+// itself says premium, not just the gate.
 package store
 
 import (
@@ -14,6 +17,8 @@ import (
 
         "github.com/jackc/pgx/v5"
         "github.com/jackc/pgx/v5/pgconn"
+
+        "renance.dev/study-api/internal/plans"
 )
 
 // Entitlement is one user's subscription + wallet + device lock state.
@@ -70,7 +75,11 @@ func scanEntitlement(row pgx.Row) (*Entitlement, error) {
 }
 
 // EnsureEntitlement lazily creates the row (every new user gets one on
-// first touch) and returns the current state.
+// first touch) and returns the current state. While student billing is
+// paused (plans.StudentBillingEnabled=false) a freshly created or
+// still-free row is stamped premium on the spot, so any account the
+// backfill missed (signed up mid-deploy, restored backup) still rides
+// premium in the database itself.
 func (s *Store) EnsureEntitlement(ctx context.Context, userID string) (*Entitlement, error) {
         _, err := s.Pool.Exec(ctx, `
                 INSERT INTO study.entitlements (user_id) VALUES ($1)
@@ -83,7 +92,54 @@ func (s *Store) EnsureEntitlement(ctx context.Context, userID string) (*Entitlem
         if err != nil {
                 return nil, fmt.Errorf("store: entitlement: %w", err)
         }
+        if !plans.StudentBillingEnabled && !e.PremiumActive(time.Now().UTC()) {
+                if gerr := s.GrantPremiumYear(ctx, userID); gerr != nil {
+                        return nil, fmt.Errorf("store: entitlement open-door grant: %w", gerr)
+                }
+                e, err = scanEntitlement(s.Pool.QueryRow(ctx, `
+                        SELECT `+entitlementCols+` FROM study.entitlements WHERE user_id = $1`, userID))
+                if err != nil {
+                        return nil, fmt.Errorf("store: entitlement reload: %w", err)
+                }
+        }
         return e, nil
+}
+
+// GrantPremiumYear stamps one user's row premium for a year, keeping
+// any expiry that is already further out (a paying subscriber's date
+// is never pulled back).
+func (s *Store) GrantPremiumYear(ctx context.Context, userID string) error {
+        _, err := s.Pool.Exec(ctx, `
+                UPDATE study.entitlements
+                SET premium_role = true,
+                    premium_type = 'premium',
+                    premium_expires_at = GREATEST(COALESCE(premium_expires_at, 'epoch'::timestamptz), now() + interval '365 days'),
+                    updated_at = now()
+                WHERE user_id = $1`, userID)
+        if err != nil {
+                return fmt.Errorf("store: grant premium year: %w", err)
+        }
+        return nil
+}
+
+// GrantEveryonePremium is the billing-paused backfill: every row that
+// is not premium-active right now (free, or expired) is stamped
+// premium for a year. Lifetime grants (premium_role with no expiry)
+// are left untouched - they already outrank a dated grant. Returns the
+// number of rows upgraded so the boot log can say what it did.
+func (s *Store) GrantEveryonePremium(ctx context.Context) (int64, error) {
+        tag, err := s.Pool.Exec(ctx, `
+                UPDATE study.entitlements
+                SET premium_role = true,
+                    premium_type = 'premium',
+                    premium_expires_at = now() + interval '365 days',
+                    updated_at = now()
+                WHERE premium_role = false
+                   OR (premium_expires_at IS NOT NULL AND premium_expires_at < now())`)
+        if err != nil {
+                return 0, fmt.Errorf("store: grant everyone premium: %w", err)
+        }
+        return tag.RowsAffected(), nil
 }
 
 // SetPremium stamps the subscription. duration 0 (or negative) keeps the

@@ -891,12 +891,16 @@ class PlanCatalog {
     required this.redemptions,
     required this.paystackEnabled,
     required this.whatsapp,
+    this.studentBillingEnabled = true,
   });
 
   final List<PremiumPlan> plans;
   final List<RenRedemption> redemptions;
   final bool paystackEnabled;
   final String whatsapp;
+  /// False while the founder's "everyone rides premium for now" window
+  /// is on: paywalls show the all-unlocked banner instead of buy buttons.
+  final bool studentBillingEnabled;
 
   factory PlanCatalog.fromJson(Map<String, dynamic> j) => PlanCatalog(
         plans: ((j['plans'] ?? const <dynamic>[]) as List<dynamic>)
@@ -907,6 +911,7 @@ class PlanCatalog {
             .toList(),
         paystackEnabled: (j['paystackEnabled'] ?? false) as bool,
         whatsapp: (j['whatsapp'] ?? '') as String,
+        studentBillingEnabled: (j['studentBillingEnabled'] ?? true) as bool,
       );
 }
 

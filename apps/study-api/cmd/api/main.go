@@ -19,6 +19,7 @@ import (
         "renance.dev/study-api/internal/config"
         "renance.dev/study-api/internal/grading"
         "renance.dev/study-api/internal/httpapi"
+        "renance.dev/study-api/internal/plans"
         "renance.dev/study-api/internal/store"
         "renance.dev/study-api/internal/syncer"
 )
@@ -61,6 +62,22 @@ func main() {
                 os.Exit(1)
         }
         log.Info("database ready (study schema current)")
+
+        // Founder directive, 2026-09-28: student subscriptions are PAUSED -
+        // everyone rides premium for free. Every boot, any entitlement row
+        // that is not premium-active (new signups since last boot, expired
+        // grants) is stamped premium for a year so the DATABASE itself
+        // says premium - the blue tick, the wallet and the console all
+        // agree with the gate. Lifetime grants are never pulled back.
+        if !plans.StudentBillingEnabled {
+                upgraded, err := st.GrantEveryonePremium(ctx)
+                if err != nil {
+                        log.Error("open-door premium backfill", "err", err)
+                } else {
+                        log.Info("student billing paused: everyone rides premium",
+                                "rowsUpgraded", upgraded)
+                }
+        }
 
         // The content library is the single source of truth for sealed keys
         // (founder directive, 2026-09). Keys live in memory only - the

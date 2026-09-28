@@ -25,12 +25,16 @@ import (
 
 // handleBillingPlans prints the purchasable tiers and the REN exchange
 // table. Public: the paywall renders before any account exists.
+// studentBillingEnabled rides along so the clients can drop every
+// upgrade nag while subscriptions are paused (founder directive:
+// everything free for now).
 func (s *Server) handleBillingPlans(w http.ResponseWriter, r *http.Request) {
         writeJSON(w, http.StatusOK, map[string]any{
                 "plans":       plans.PremiumList(),
                 "redemptions": plans.RedemptionList(),
                 "freePreviewQuestions": plans.FreePreviewQuestions,
                 "paystackEnabled":      s.cfg.PaystackSecretKey != "",
+                "studentBillingEnabled": plans.StudentBillingEnabled,
                 "whatsapp":             billingWhatsApp,
         })
 }
@@ -65,6 +69,11 @@ func (s *Server) handleBillingInitialize(w http.ResponseWriter, r *http.Request)
         uid, err := userIDFrom(r)
         if err != nil {
                 fail(w, http.StatusUnauthorized, "unauthorized", "missing identity")
+                return
+        }
+        if !plans.StudentBillingEnabled {
+                fail(w, http.StatusPaymentRequired, "billing_paused",
+                        "Subscriptions are paused - every feature is open to every student right now, there is nothing to pay for. Your coins stay safe too.")
                 return
         }
         if s.cfg.PaystackSecretKey == "" {
@@ -214,6 +223,13 @@ func (s *Server) handleBillingRedeem(w http.ResponseWriter, r *http.Request) {
         uid, err := userIDFrom(r)
         if err != nil {
                 fail(w, http.StatusUnauthorized, "unauthorized", "missing identity")
+                return
+        }
+        if !plans.StudentBillingEnabled {
+                // Paused billing means premium already rides every account:
+                // spending coins for premium days now would only burn them.
+                fail(w, http.StatusPaymentRequired, "billing_paused",
+                        "Subscriptions are paused - every feature is already open to you, so hold on to your coins. You can spend them the day billing returns.")
                 return
         }
         var req redeemRequest

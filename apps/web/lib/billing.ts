@@ -36,6 +36,8 @@ export interface PlanCatalog {
   redemptions: Redemption[];
   freePreviewQuestions: number;
   paystackEnabled: boolean;
+  /** False while the founder's "everyone rides premium for now" window is on. */
+  studentBillingEnabled?: boolean;
   whatsapp: string;
 }
 

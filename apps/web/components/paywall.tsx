@@ -2,11 +2,12 @@
 
 /**
  * PaywallModal - the subscribe dialog the 20-question cap opens. Strictly
- * black and white, Paystack-grade clean: the four premium tiers, the REN
+ * black and white, Paystack-grade clean: the premium tiers, the REN
  * redemption row for students who earned coins in the arena, and the
- * founder's WhatsApp line for bulk and school negotiation. Progress in
- * the capped paper is saved server-side; a student who subscribes
- * continues exactly where they stopped.
+ * founder's WhatsApp line. Progress in the capped paper is saved
+ * server-side; a student who subscribes continues exactly where they
+ * stopped. While the server says subscriptions are paused the modal
+ * leads with the all-unlocked notice - no buy buttons, no nagging.
  */
 
 import { useEffect, useState } from 'react';
@@ -96,8 +97,9 @@ export default function PaywallModal({ open, onClose, context, entitlement, onRe
                 {context ?? 'Unlock the full paper'}
               </h2>
               <p className="mt-1 text-[13px] leading-relaxed text-[#52525B]">
-                JAMB for ₦5,000 a year, or Basic from ₦3,000 a month for
-                every body. Your progress stays saved.
+                JAMB for ₦5,000 a year (WAEC, NECO and Post-UTME included),
+                or premium bursts from ₦500 a week. Your progress stays
+                saved.
               </p>
             </div>
             <button
@@ -122,6 +124,28 @@ export default function PaywallModal({ open, onClose, context, entitlement, onRe
             <div className="flex items-center justify-center py-10">
               <RenanceMark size={28} state="busy" />
             </div>
+          ) : catalog.studentBillingEnabled === false ? (
+            <>
+              {/* paused billing: everything is open, nothing to buy */}
+              <div className="rounded-xl bg-[#101418] px-5 py-6 text-white">
+                <p className="flex items-center gap-2 text-[15px] font-bold">
+                  <span className="material-symbols-outlined text-[18px]">verified</span>
+                  Everything is unlocked right now
+                </p>
+                <p className="mt-2 text-[13px] leading-relaxed text-white/80">
+                  Subscriptions are paused - every paper, the AI tutor and
+                  every premium perk are open to every student, free. Your
+                  coins are safe and keep stacking; spend them the day
+                  billing returns.
+                </p>
+              </div>
+              <button
+                onClick={onClose}
+                className="mt-4 flex h-10 w-full items-center justify-center rounded-full bg-[#101418] text-[13px] font-semibold text-white transition hover:opacity-90"
+              >
+                Back to my paper - it&apos;s all open
+              </button>
+            </>
           ) : (
             <>
               {/* tiers */}
@@ -211,24 +235,6 @@ export default function PaywallModal({ open, onClose, context, entitlement, onRe
                 <p className="mt-2.5 font-mono text-[10.5px] leading-relaxed text-[#71717A]">
                   Earn coins: win an arena duel (+1 REN), refer a friend (+3 REN each).
                 </p>
-              </div>
-
-              {/* bulk / school line */}
-              <div className="mt-5 flex flex-col items-start gap-2 rounded-xl bg-[#101418] px-4 py-3.5 text-white sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <p className="text-[13px] font-semibold">School or bulk subscription?</p>
-                  <p className="text-[11.5px] text-white/70">
-                    Message the founder directly on WhatsApp: {catalog.whatsapp}
-                  </p>
-                </div>
-                <a
-                  href={`https://wa.me/234${catalog.whatsapp.replace(/^0/, '')}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-full bg-white px-4 py-1.5 text-[12px] font-semibold text-[#101418] transition hover:opacity-90"
-                >
-                  Chat on WhatsApp
-                </a>
               </div>
             </>
           )}

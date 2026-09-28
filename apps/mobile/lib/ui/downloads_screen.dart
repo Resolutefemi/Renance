@@ -211,15 +211,13 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
     bool syncFailed = false;
     String syncMessage = '';
     for (final String body in bodies) {
-      // Pull the desk's packs not yet on the device, via the existing
-      // battle-tested sync pipeline.
-      final List<String> missing = _deskPacks(body)
-          .where((ExamMeta e) =>
-              !context.read<StudentController>().downloaded.contains(e.code))
-          .map((ExamMeta e) => e.code)
-          .toList();
-      if (missing.isEmpty) continue;
-      // bootstrap downloads + saves; profile filter scopes it to this desk.
+      // Always hand the desk to the sync controller: bootstrap fetches
+      // the manifest itself, so this works even when the screen opened
+      // before any manifest had loaded (the old code computed "missing"
+      // from a possibly-empty manifest list and silently did NOTHING -
+      // founder bug "download is not working at all", 2026-09-28).
+      // bootstrap skips packs already on the device, so re-tapping the
+      // desk is cheap.
       await sync.bootstrap(profileExams: <String>[body]);
       if (!mounted) return;
       if (sync.phase == SyncPhase.error) {
@@ -311,22 +309,25 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
             ),
             const SizedBox(height: 6),
             Text(
-              sync.total > 0
-                  ? 'Downloading ${sync.done} of ${sync.total}…'
-                  : 'Downloading…',
+              // The controller's own message carries the pack title
+              // ("Downloading JAMB Chemistry… (3/46)") - show it so the
+              // student SEES the download moving.
+              sync.message,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: RenanceText.caption.copyWith(color: context.textSecondary),
             ),
           ],
           const SizedBox(height: 14),
           FilledButton.icon(
-            onPressed: busy ||
-                    (_selectedDesks.isEmpty && _selectedSchools.isEmpty)
-                ? null
-                : _downloadSelected,
+            // Never disabled for an empty selection: tapping with nothing
+            // picked downloads EVERY desk (the old disabled button read as
+            // "the download is broken").
+            onPressed: busy ? null : _downloadSelected,
             icon: const Icon(Icons.download_rounded, size: 20),
             label: Text(
               _selectedDesks.isEmpty && _selectedSchools.isEmpty
-                  ? 'Download selected'
+                  ? 'Download everything'
                   : 'Download ${_selectedDesks.length + _selectedSchools.length} selection(s)',
             ),
           ),
@@ -566,20 +567,27 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                         child: Row(
                           children: <Widget>[
                             Icon(
-                              p.granted
+                              p.usable
                                   ? Icons.check_circle
                                   : Icons.error_outline,
                               size: 18,
-                              color: p.granted ? const Color(0xFF10B981) : RenanceColors.amber,
+                              color: p.usable ? const Color(0xFF10B981) : RenanceColors.amber,
                             ),
                             const SizedBox(width: 8),
                             Expanded(
                               child: Text(
-                                p.label,
+                                p.usable
+                                    ? p.label
+                                    // Android 13+ retires the legacy storage
+                                    // grant: the OS reports permanently denied
+                                    // even though app-private packs need
+                                    // nothing. Say so instead of showing an
+                                    // Allow button that can never succeed.
+                                    : '${p.label} - handled by Android on this device',
                                 style: RenanceText.bodyBase.copyWith(color: context.ink, fontSize: 13),
                               ),
                             ),
-                            if (!p.granted)
+                            if (!p.usable && p.canAsk)
                               TextButton(
                                 onPressed: () async {
                                   await p.permission.request();
@@ -601,16 +609,18 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
   }
 
   Future<List<_PermState>> _permStates() async {
+    final PermissionStatus storage = await Permission.storage.status;
+    final PermissionStatus notifications = await Permission.notification.status;
     return <_PermState>[
       _PermState(
         label: 'Storage access (offline packs & sharing)',
         permission: Permission.storage,
-        granted: await Permission.storage.isGranted,
+        status: storage,
       ),
       _PermState(
         label: 'Notifications (download progress)',
         permission: Permission.notification,
-        granted: await Permission.notification.isGranted,
+        status: notifications,
       ),
     ];
   }
@@ -726,12 +736,23 @@ class _PermState {
   const _PermState({
     required this.label,
     required this.permission,
-    required this.granted,
+    required this.status,
   });
 
   final String label;
   final Permission permission;
-  final bool granted;
+  final PermissionStatus status;
+
+  /// The app can actually use the capability right now: granted, the
+  /// iOS-only limited slice, or permanently denied on Android 13+ where
+  /// the legacy grant is retired and app-private storage needs nothing.
+  bool get usable =>
+      status == PermissionStatus.granted ||
+      status == PermissionStatus.limited ||
+      status == PermissionStatus.permanentlyDenied;
+
+  /// Only offer Allow while the OS can still show the dialog.
+  bool get canAsk => status == PermissionStatus.denied;
 }
 
 /// One selectable download desk row.
