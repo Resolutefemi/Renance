@@ -159,7 +159,9 @@ func smtpSend(host, to, subject, body string) error {
         from := mailFrom()
         user := strings.TrimSpace(os.Getenv("SMTP_USER"))
         pass := strings.TrimSpace(os.Getenv("SMTP_PASS"))
-        addr := fmt.Sprintf("%s:%s", host, port)
+        // JoinHostPort keeps literal-IPv6 hosts legal ("[::1]:587");
+        // a bare Sprintf("%s:%s") broke go vet (CI, Go 1.24+ vet).
+        addr := net.JoinHostPort(host, port)
         msg := fmt.Sprintf("From: Renance <%s>\r\nTo: %s\r\nSubject: %s\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\n%s", from, to, subject, body)
         var auth smtp.Auth
         if user != "" {
