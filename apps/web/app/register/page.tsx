@@ -23,8 +23,10 @@ export default function RegisterPage() {
   const [busy, setBusy] = useState(false);
   // Post-signup verification notice: manual signups confirm their email
   // through the mailed link before the full experience unlocks.
-  const [verifySent, setVerifySent] = useState(false);
-  const [signedEmail, setSignedEmail] = useState('');
+  // Email confirmation hidden per founder directive (2026-09): no state for
+  // the check-your-inbox interstitial anymore. SMTP isn't configured yet,
+  // so manual signups go straight to the desk. Restore via git history
+  // (verifySent/signedEmail state + the interstitial screen) when mails go live.
 
   // school-only fields
   const [schoolName, setSchoolName] = useState('');
@@ -120,12 +122,8 @@ export default function RegisterPage() {
         auth: false,
       });
       setSession(res.token, res.user);
-      if (res.emailVerification?.required) {
-        setSignedEmail(email.trim());
-        setVerifySent(true);
-        setBusy(false);
-        return;
-      }
+      // The API still reports emailVerification.required but the mail cannot
+      // leave the server yet, so the old interstitial branch is removed.
       router.replace('/dashboard');
     } catch (err) {
       setError(err instanceof ApiError ? err.message : 'Network error, is the study API running?');
@@ -134,45 +132,6 @@ export default function RegisterPage() {
   }
 
   const field = 'h-12 w-full rounded-lg bg-surface-container pl-11 pr-3 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary';
-
-  if (verifySent) {
-    return (
-      <main className="flex min-h-dvh w-full flex-col items-center bg-surface-container px-4 py-10">
-        <div className="renance-rise my-auto flex w-full max-w-sm flex-col rounded-xl bg-surface-container-lowest p-8 text-center shadow-md">
-          <div className="mb-5 flex justify-center">
-            <RenanceMark size={56} />
-          </div>
-          <h1 className="text-xl font-semibold tracking-tight text-on-surface">
-            Check your inbox
-          </h1>
-          <p className="mt-3 text-sm leading-relaxed text-on-surface-variant">
-            We sent a confirmation link to{' '}
-            <span className="font-semibold text-on-surface">{signedEmail}</span>. Confirm
-            your email to unlock your account fully. The link returns you
-            right back here to the web.
-          </p>
-          <p className="mt-3 text-[12.5px] text-on-surface-variant">
-            Didn&apos;t get it? Check spam, or resend from the dashboard
-            banner after signing in.
-          </p>
-          <div className="mt-6 flex flex-col gap-2">
-            <button
-              onClick={() => router.replace('/dashboard')}
-              className="flex h-12 items-center justify-center rounded-full bg-primary text-sm font-semibold text-on-primary transition hover:opacity-90"
-            >
-              Continue to dashboard
-            </button>
-            <Link
-              href="/login"
-              className="flex h-12 items-center justify-center rounded-full text-sm font-semibold text-on-surface shadow-[inset_0_0_0_1px_#C6C6CD]"
-            >
-              Go to sign in
-            </Link>
-          </div>
-        </div>
-      </main>
-    );
-  }
 
   return (
     // my-auto (not justify-center) keeps the card visually centred while

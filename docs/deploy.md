@@ -46,7 +46,7 @@ Android APK ────────┘        (this guide)
    - `DATABASE_URL` - paste the **Neon pooled URI** from step 0.
    - `GOOGLE_CLIENT_ID` - BOTH OAuth clients, comma-separated (the API
      accepts ID tokens minted for either):
-     `850087098854-pni8gohld0isi8v8nhhnlcl5fuvi77q4.apps.googleusercontent.com,850087098854-5rj3vig6fpm4k2jie4najsoq6tpcdm6f.apps.googleusercontent.com`
+     `850087098854-pni8gohld0isi8v8nhhnlcl5fuvi77q4.apps.googleusercontent.com,850087098854-5rj3vig6fpm4k2jie4najsoq6tpcdm6f.apps.googleusercontent.com,850087098854-ees3f4uu8ihsqtfjjleq2ghdkv5qgn5n.apps.googleusercontent.com`
    - `JWT_SECRET` is auto-generated; leave it.
 4. **Apply** → wait for the first build (~3-5 min). The deploy only goes
    live when `/healthz` returns `200 {"db":"ok"}` - a bad Neon password
@@ -82,6 +82,7 @@ Console → APIs & Services → Credentials:
 | --- | --- |
 | Web application | `850087098854-pni8gohld0isi8v8nhhnlcl5fuvi77q4.apps.googleusercontent.com` |
 | Android | `850087098854-5rj3vig6fpm4k2jie4najsoq6tpcdm6f.apps.googleusercontent.com` |
+| Android (debug) | `850087098854-ees3f4uu8ihsqtfjjleq2ghdkv5qgn5n.apps.googleusercontent.com` |
 
 The **web** client ID is what the Pages site renders with and what the
 mobile app passes as `serverClientId` (so ID tokens carry a predictable

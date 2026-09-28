@@ -36,7 +36,7 @@ services:
       - key: JWT_SECRET
         generateValue: true
       - key: GOOGLE_CLIENT_ID
-        value: 850087098854-pni8gohld0isi8v8nhhnlcl5fuvi77q4.apps.googleusercontent.com,850087098854-5rj3vig6fpm4k2jie4najsoq6tpcdm6f.apps.googleusercontent.com
+        value: 850087098854-pni8gohld0isi8v8nhhnlcl5fuvi77q4.apps.googleusercontent.com,850087098854-5rj3vig6fpm4k2jie4najsoq6tpcdm6f.apps.googleusercontent.com,850087098854-ees3f4uu8ihsqtfjjleq2ghdkv5qgn5n.apps.googleusercontent.com
       - key: WEB_ORIGIN
         value: https://renance.app,https://www.renance.app,https://renance-edtech.vercel.app,https://resolutefemi.github.io,http://localhost:3000,http://127.0.0.1:3000
       - key: SITE_URL
