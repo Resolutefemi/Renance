@@ -2,6 +2,7 @@ package httpapi
 
 import (
         "context"
+        "math"
         "net/http"
         "time"
 
@@ -158,7 +159,10 @@ type submitRequest struct {
         // QuestionMs is the client's per-question dwell map (pacing
         // telemetry). It feeds the official UTME subject ledger's
         // time-used column; absent or oversized maps are simply ignored.
-        QuestionMs map[string]int64 `json:"questionMs,omitempty"`
+        // FLOATS WELCOME: Dart/JS clients emit "1956.0" style numbers,
+        // so the map decodes as float64 and rounds on ingest - a strict
+        // int64 here 400'd every app submission (founder bug 2026-09-28).
+        QuestionMs map[string]float64 `json:"questionMs,omitempty"`
 }
 
 // handleSubmitAttempt flips the attempt to grading, persists picks and
@@ -264,7 +268,8 @@ func (s *Server) handleSubmitAttempt(w http.ResponseWriter, r *http.Request) {
         // client can never print a subject that took longer than the exam.
         questionMs := map[string]int64{}
         if len(req.QuestionMs) > 0 && len(req.QuestionMs) <= 1000 {
-                for id, ms := range req.QuestionMs {
+                for id, raw := range req.QuestionMs {
+                        ms := int64(math.Round(raw))
                         if ms <= 0 {
                                 continue
                         }

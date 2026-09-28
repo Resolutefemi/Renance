@@ -227,25 +227,7 @@ export default function PricingClient() {
           </p>
         </section>
 
-        {/* WhatsApp */}
-        <section className="mt-4 flex flex-col items-start gap-2 rounded-xl bg-[#101418] px-5 py-4 text-white sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <p className="text-[13.5px] font-semibold">Bulk or school subscription?</p>
-            <p className="text-[12px] text-white/70">
-              Prices are negotiated directly with the founder on WhatsApp:{' '}
-              {catalog?.whatsapp ?? '07046203544'}
-            </p>
-          </div>
-          <a
-            href={`https://wa.me/234${(catalog?.whatsapp ?? '07046203544').replace(/^0/, '')}`}
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-full bg-white px-4 py-1.5 text-[12px] font-semibold text-[#101418] transition hover:opacity-90"
-          >
-            Message the founder
-          </a>
-        </section>
-
+        
         <p className="mt-6 text-center font-mono text-[10.5px] leading-relaxed text-on-surface-variant">
           Payments are processed by Paystack. Subscriptions activate the
           moment the webhook confirms your charge.

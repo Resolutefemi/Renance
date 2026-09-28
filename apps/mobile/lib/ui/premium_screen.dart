@@ -275,53 +275,6 @@ class _PremiumScreenState extends State<PremiumScreen> {
                           ),
                       ],
                     ),
-                    // WhatsApp ---------------------------------------------
-                    const SizedBox(height: 18),
-                    Container(
-                      padding: const EdgeInsets.all(14),
-                      decoration: BoxDecoration(
-                        color: context.ink,
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text(
-                            'School or bulk subscription?',
-                            style: RenanceText.bodyMedium.copyWith(color: context.pageBg),
-                          ),
-                          const SizedBox(height: 4),
-                          Text(
-                            'Prices are negotiated directly with the founder on '
-                            'WhatsApp: ${catalog.whatsapp}',
-                            style: RenanceText.caption.copyWith(
-                              fontSize: 12.5,
-                              color: context.pageBg.withValues(alpha: 0.75),
-                            ),
-                          ),
-                          const SizedBox(height: 10),
-                          SizedBox(
-                            height: 40,
-                            child: OutlinedButton.icon(
-                              onPressed: () {
-                                final String num =
-                                    '234${catalog.whatsapp.replaceFirst(RegExp(r'^0'), '')}';
-                                launchUrl(
-                                  Uri.parse('https://wa.me/$num'),
-                                  mode: LaunchMode.externalApplication,
-                                );
-                              },
-                              style: OutlinedButton.styleFrom(
-                                foregroundColor: context.pageBg,
-                                side: BorderSide(color: context.pageBg.withValues(alpha: 0.5)),
-                              ),
-                              icon: const Icon(Icons.chat, size: 16),
-                              label: Text('Chat on WhatsApp',
-                                  style: RenanceText.bodySecondary.copyWith(
-                                    fontSize: 12.5, color: context.pageBg,
-                                  )),
-                            ),
-                          ),
                         ],
                       ),
                     ),

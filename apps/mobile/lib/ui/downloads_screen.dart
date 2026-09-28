@@ -201,7 +201,15 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
 
     await _ensurePermissions();
 
+    // Nothing picked means EVERYTHING: the silent no-op read as
+    // "download is not working at all" (founder bug 2026-09-28).
+    if (_selectedDesks.isEmpty && _selectedSchools.isEmpty) {
+      setState(() => _selectedDesks.addAll(<String>['JAMB', 'POST-UTME', 'WAEC', 'NECO']));
+    }
+
     final List<String> bodies = _selectedDesks.toList();
+    bool syncFailed = false;
+    String syncMessage = '';
     for (final String body in bodies) {
       // Pull the desk's packs not yet on the device, via the existing
       // battle-tested sync pipeline.
@@ -214,6 +222,10 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
       // bootstrap downloads + saves; profile filter scopes it to this desk.
       await sync.bootstrap(profileExams: <String>[body]);
       if (!mounted) return;
+      if (sync.phase == SyncPhase.error) {
+        syncFailed = true;
+        syncMessage = '$body desk: ${sync.message}';
+      }
       await context.read<StudentController>().refreshDownloaded();
     }
 
@@ -229,7 +241,10 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
-          err ?? 'Downloads complete - everything is ready offline.',
+          err ??
+              (syncFailed
+                  ? syncMessage
+                  : 'Downloads complete - everything is ready offline.'),
         ),
       ),
     );

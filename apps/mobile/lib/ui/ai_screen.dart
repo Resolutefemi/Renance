@@ -65,7 +65,11 @@ class _AiScreenState extends State<AiScreen> {
           role: 'assistant',
           content: e.code == 'rate_limited'
               ? 'Renance AI is cooling down for a few seconds; try again shortly.'
-              : 'Renance AI hit an error: ${e.message}',
+              : e.code == 'tier_required'
+                  ? 'Renance AI opens on the Standard plan (₦6,000/month) - '
+                      'JAMB and Basic already carry every paper in full. '
+                      'Upgrade on the Premium screen when you are ready.'
+                  : 'Renance AI hit an error: ${e.message}',
         ));
         _busy = false;
       });

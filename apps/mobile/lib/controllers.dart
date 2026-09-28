@@ -75,38 +75,52 @@ class SyncController extends ChangeNotifier {
           .toList(growable: false);
       total = missing.length;
       int failed = 0;
-      for (final exam in missing) {
-        message = 'Downloading ${exam.title}… ($done/$total)';
-        notifyListeners();
-        bool saved = false;
-        // Two passes per pack: an instant retry catches the common
-        // mobile-network stall that kills the first attempt.
-        for (var attempt = 0; attempt < 2 && !saved; attempt++) {
-          if (attempt > 0) {
-            await Future<void>.delayed(const Duration(seconds: 2));
-            message = 'Retrying ${exam.title}…';
-            notifyListeners();
+      // Three parallel downloads: Nigerian mobile latency is per-request,
+      // so three pipes cut the wall-clock to about a third without
+      // starving the radio (sequential downloads read as a frozen screen).
+      int cursor = 0;
+      Future<void> worker() async {
+        while (true) {
+          final int i = cursor;
+          if (i >= missing.length) return;
+          cursor += 1;
+          final ExamMeta exam = missing[i];
+          message = 'Downloading ${exam.title}… ($done/$total)';
+          notifyListeners();
+          bool saved = false;
+          // Two passes per pack: an instant retry catches the common
+          // mobile-network stall that kills the first attempt.
+          for (var attempt = 0; attempt < 2 && !saved; attempt++) {
+            if (attempt > 0) {
+              await Future<void>.delayed(const Duration(seconds: 2));
+              message = 'Retrying ${exam.title}…';
+              notifyListeners();
+            }
+            try {
+              final bundle = await _api.bundle(exam.code);
+              await _store.savePack(bundle, exam.bundleSha256);
+              saved = true;
+            } on ApiException {
+              // Permanent server decisions (404/409) will not heal -
+              // retrying only burns the student's data.
+              break;
+            } on NetworkException {
+              // Transient: fall through to the retry pass.
+            }
           }
-          try {
-            final bundle = await _api.bundle(exam.code);
-            await _store.savePack(bundle, exam.bundleSha256);
-            saved = true;
-          } on ApiException {
-            // Permanent server decisions (404/409) will not heal -
-            // retrying only burns the student's data.
-            break;
-          } on NetworkException {
-            // Transient: fall through to the retry pass.
+          if (saved) {
+            done += 1;
+          } else {
+            failed += 1;
           }
+          notifyListeners();
         }
-        if (saved) {
-          done += 1;
-        } else {
-          failed += 1;
-        }
-        notifyListeners();
       }
+      await Future.wait(<Future<void>>[worker(), worker(), worker()]);
       await refreshPendingCount();
+      // Downloads just reconnected the desk - push any exam sittings and
+      // flashcard grades the student completed offline while we are here.
+      await retryPending();
       if (failed > 0 && done == 0) {
         phase = SyncPhase.error;
         message =
