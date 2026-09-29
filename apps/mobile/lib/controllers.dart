@@ -5,6 +5,7 @@ library;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:io' show SocketException;
 import 'dart:math' show Random;
 
 import 'package:flutter/foundation.dart';
@@ -155,13 +156,22 @@ class SyncController extends ChangeNotifier {
     } on NetworkException catch (e) {
       phase = SyncPhase.error;
       message = e.message;
+    } on SocketException {
+      // Friendly copy only: raw socket errors carry the API host
+      // ("Failed host lookup: 'renance-api.onrender.com'") which must
+      // stay out of student-facing offline messages.
+      phase = SyncPhase.error;
+      message =
+          'No connection to Renance servers. Check your internet and '
+          'retry - the rest of the app works offline.';
     } catch (e) {
       // Anything unexpected (storage full, decode quirk) still lands
       // here as a visible error instead of an unhandled crash the
-      // student reads as "the button does nothing".
+      // student reads as "the button does nothing". The raw error is
+      // deliberately NOT interpolated: it can embed the API host.
       phase = SyncPhase.error;
       message =
-          'Download hit a problem on this device ($e). Free some space '
+          'Download hit a problem on this device. Free some space '
           'and retry - the rest of the app works offline.';
     }
     notifyListeners();
@@ -709,6 +719,9 @@ class ExamController extends ChangeNotifier {
 
   /// Wall-clock duration of the sitting (results screen "Time Used").
   int? get durationMsUsed => _durationMs;
+
+  /// When this sitting began - the report's Start Time line.
+  DateTime get startedAt => _startedAt;
 
   void backToIntro() {
     _timer?.cancel();
