@@ -31,7 +31,7 @@ import type { UtmeSubjectRow } from '@/lib/exams';
 import PaywallModal from '@/components/paywall';
 import { fetchEntitlement, type Entitlement } from '@/lib/billing';
 
-/** Amber shard cluster for the report masthead — the reference art. */
+/** Amber shard cluster for the report masthead - the reference art. */
 function ReportShards() {
   return (
     <svg
@@ -1254,7 +1254,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
 
     return (
       <main className="mx-auto w-full max-w-2xl pb-16">
-        {/* Cream masthead with the amber shards — the reference design.
+        {/* Cream masthead with the amber shards - the reference design.
             The reference's red buttons are black here (Renance rule). */}
         <section className="relative overflow-hidden bg-[#FFF8E1] px-6 pb-6 pt-5 sm:px-8">
           <ReportShards />
@@ -1325,11 +1325,11 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
           <section className="renance-rise mt-4 rounded-[14px] bg-[#E1F5FE] px-5 py-4">
             <div className="flex items-center justify-between text-base text-black">
               <span className="font-semibold">Start Time:</span>
-              <span>{startTime ? clock12(startTime) : '—'}</span>
+              <span>{startTime ? clock12(startTime) : '-'}</span>
             </div>
             <div className="mt-3 flex items-center justify-between text-base text-black">
               <span className="font-semibold">End Time:</span>
-              <span>{endTime ? clock12(endTime) : '—'}</span>
+              <span>{endTime ? clock12(endTime) : '-'}</span>
             </div>
           </section>
 
@@ -1412,7 +1412,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
           {/* Pacing & Panic Forensics Card */}
           <PacingForensicsCard report={pacingReport} attemptId={attempt?.attemptId} />
 
-          {/* Actions — black, per the founder's red-to-black rule. */}
+          {/* Actions - black, per the founder's red-to-black rule. */}
           <div className="mt-8 flex flex-col gap-2">
             {daily && (
               <Link

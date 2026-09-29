@@ -1,9 +1,9 @@
-/// Exam History — rebuilt from the founder's reference screenshot
+/// Exam History - rebuilt from the founder's reference screenshot
 /// (uploads/Screenshot_20260929-213704.png): the bold "Exam History"
 /// title with the "Clear all Exam History" outlined chip on the right,
-/// then the numbered rows — subjects (comma-separated), the
+/// then the numbered rows - subjects (comma-separated), the
 /// "CBT · Sep 05, 2026" meta line, the bold "Score 48%" on the right
-/// (JAMB rows add their raw ledger line) — separated by hairlines.
+/// (JAMB rows add their raw ledger line) - separated by hairlines.
 ///
 /// Tapping a row replays the full Examination Performance report for
 /// that sitting. "Clear all" hides every paper currently on the list on
@@ -183,7 +183,7 @@ class _ExamHistoryScreenState extends State<ExamHistoryScreen> {
                               const SizedBox(height: 14),
                               Text(
                                 _clearedAt == 0
-                                    ? 'No exam history yet — every paper you '
+                                    ? 'No exam history yet - every paper you '
                                         'finish lands here with its score.'
                                     : 'History cleared. New papers you take '
                                         'will appear here.',
@@ -328,7 +328,7 @@ class _HistoryRow extends StatelessWidget {
     );
   }
 
-  /// "Sep 05, 2026" — the reference's date format.
+  /// "Sep 05, 2026" - the reference's date format.
   static String _shortDate(DateTime t) {
     const List<String> months = <String>[
       'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',

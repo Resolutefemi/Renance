@@ -376,7 +376,7 @@ function examTypeOf(code: string): string {
   return 'CBT';
 }
 
-/** "Sep 05, 2026" — the reference history row's date format. */
+/** "Sep 05, 2026" - the reference history row's date format. */
 function shortDate(iso?: string): string {
   if (!iso) return '';
   const d = new Date(iso);
@@ -524,7 +524,7 @@ function ReviewQueue() {
         </section>
       )}
 
-      {/* Exam history — the reference design: numbered hairline rows,
+      {/* Exam history - the reference design: numbered hairline rows,
           subjects, "JAMB · Sep 05, 2026", Score % on the right. */}
       {(gradedAttempts.length > 0 || openAttempts.length > 0) && (
         <section className="mt-8">

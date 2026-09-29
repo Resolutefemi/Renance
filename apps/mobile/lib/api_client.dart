@@ -75,7 +75,7 @@ class ApiClient {
       res = await http.Response.fromStream(streamed);
     } on SocketException {
       // Raw OS errors read "Failed host lookup: 'renance-api.onrender.com'"
-      // — the API host must never leak into student-facing offline copy
+      // - the API host must never leak into student-facing offline copy
       // (founder rule), so the raw message is dropped entirely.
       throw NetworkException(
         'No connection to Renance servers. Check your internet and try again.',

@@ -1,4 +1,4 @@
-/// Examination Performance — the score report, rebuilt 1:1 from the
+/// Examination Performance - the score report, rebuilt 1:1 from the
 /// founder's reference screenshots
 /// (uploads/Screenshot_20260925-17434*.png for the full JAMB simulation
 /// report, uploads/Screenshot_20260929-2131*.png for the other
@@ -17,7 +17,7 @@
 ///   * actions: **View Corrections** (filled), **Send to Online
 ///     Ranking** (outline), **Go Back** (text).
 ///
-/// The reference's red action buttons are ink-black here — Renance's
+/// The reference's red action buttons are ink-black here - Renance's
 /// black & white language (founder rule: "those red buttons in the
 /// picture change it to black for renance"). One report serves every
 /// score band; weak topics surface as chips instead of a separate
