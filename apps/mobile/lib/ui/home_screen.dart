@@ -33,6 +33,7 @@ import 'notifications_screen.dart';
 import 'search_screen.dart';
 import 'tutor_screen.dart';
 import 'exam_screen.dart';
+import 'exam_history_screen.dart';
 import 'exam_mode_setup_screen.dart';
 import 'library_screen.dart';
 import 'gamification_hub_screen.dart';
@@ -1255,6 +1256,17 @@ class _LauncherTab extends StatelessWidget {
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
                       builder: (_) => const TutorEntryScreen(),
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.history_edu,
+                  label: 'Exam History',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const ExamHistoryScreen(),
                     ),
                   ),
                 ),
