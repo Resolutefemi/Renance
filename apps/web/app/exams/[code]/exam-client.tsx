@@ -27,10 +27,34 @@ import { LogoActivityIndicator } from '@/components/renance-logo';
 import { apiImg, QText } from '@/lib/qtext';
 import { computePacingForensics, type QuestionTimeRecord } from '@/lib/pacing';
 import PacingForensicsCard from '@/components/pacing-forensics';
-import UtmeResultSlip from '@/components/utme-result';
 import type { UtmeSubjectRow } from '@/lib/exams';
 import PaywallModal from '@/components/paywall';
 import { fetchEntitlement, type Entitlement } from '@/lib/billing';
+
+/** Amber shard cluster for the report masthead — the reference art. */
+function ReportShards() {
+  return (
+    <svg
+      viewBox="0 0 200 90"
+      preserveAspectRatio="xMaxYMid slice"
+      aria-hidden
+      className="pointer-events-none absolute inset-0 h-full w-full"
+    >
+      <polygon points="155,0 200,0 200,83" fill="#FFCC80" />
+      <polygon points="176,0 200,31 160,0" fill="#FFE0B2" />
+      <polygon points="184,90 200,56 200,90" fill="#FFB74D" />
+    </svg>
+  );
+}
+
+/** "english" → "English" for the breakdown's subject rows. */
+function humanizeSubject(slug: string): string {
+  return slug
+    .split(/[\s_-]+/)
+    .filter(Boolean)
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+    .join(' ');
+}
 
 interface ExamMetaLite {
   code: string;
@@ -1129,7 +1153,9 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
 
   if (phase === 'graded' && result) {
     const pct = result.total > 0 ? Math.round((result.score / result.total) * 100) : 0;
-    const elapsedMs = startedAtRef.current ? Date.now() - startedAtRef.current : 0;
+    const elapsedMs = startedAtRef.current
+      ? Date.now() - startedAtRef.current - pausedMsRef.current
+      : 0;
     // delta vs the previous graded attempt on the same pack (real history)
     const samePack = (allAttempts ?? []).filter(
       (a) => a.status === 'graded' && a.code === bundle?.code && a.score != null,
@@ -1156,351 +1182,291 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
       bundle?.questionCount ?? 40,
     );
 
+    // The full JAMB simulation score report (reference screenshots):
+    // "Your JAMB score" + the /400 aggregate leads; every other paper
+    // leads with the percentage.
     const isUtmeMock = Boolean(
       bundle?.body === 'JAMB' &&
         bundle?.code?.startsWith('jamb-mock-') &&
         (result.subjects?.length ?? 0) > 0,
     );
-    // The official slip is the hero of a UTME mock result: the aggregate
-    // out of 400 leads, the percentage only earns a small caption.
-    const utmeSlip = isUtmeMock ? (
-      <UtmeResultSlip
-        subjects={result.subjects!}
-        caption={`${result.score} of ${result.total} correct · ${pct}%`}
-      />
-    ) : null;
+    const subjects = result.subjects ?? [];
+    const aggregate = subjects.reduce((s, r) => s + (r.score ?? 0), 0);
+    const totalQ = subjects.reduce((s, r) => s + (r.total ?? 0), 0);
+    const aggregateLabel =
+      Math.abs(aggregate - Math.round(aggregate)) < 0.05
+        ? `${Math.round(aggregate)}`
+        : aggregate.toFixed(1);
 
-    // results_recovery_light: the low-score variant of the score report.
-    if (pct < 50) {
-      const weak = [...result.breakdown]
-        .filter((r) => r.total > 0 && r.correct / r.total < 0.8)
-        .sort((a, b) => a.correct / a.total - b.correct / b.total);
-      const C = 2 * Math.PI * 52;
-      // UTME mocks: the official slip is the hero, no percentage circle.
-      if (isUtmeMock) {
-        return (
-          <main className="mx-auto w-full max-w-2xl px-4 pb-16 sm:px-6">
-            {utmeSlip}
-            <section className="renance-rise mt-4 rounded-xl bg-[#FDF3F2] px-6 py-6 text-center">
-              <h1 className="mx-auto max-w-sm text-xl font-semibold leading-snug tracking-tight text-on-surface">
-                The review list below is where the points are.
-              </h1>
-              <p className="mt-2 text-[15px] text-on-surface-variant">
-                Don&apos;t sweat it. Focus on the gaps.
+    const clock12 = (d: Date) => {
+      let h = d.getHours() % 12;
+      if (h === 0) h = 12;
+      const mm = String(d.getMinutes()).padStart(2, '0');
+      return `${h}:${mm}${d.getHours() < 12 ? 'am' : 'pm'}`;
+    };
+    const startTime = startedAtRef.current ? new Date(startedAtRef.current) : null;
+    const endTime = elapsedMs > 0 && startTime ? new Date(startTime.getTime() + elapsedMs) : null;
+    const totalMinutes = Math.floor(elapsedMs / 60000);
+    const hours = Math.floor(totalMinutes / 60);
+    const mins = totalMinutes % 60;
+
+    type BreakdownRow = { name: string; attempted: string; score: string; trailing?: string };
+    const rows: BreakdownRow[] = isUtmeMock
+      ? subjects.map((r) => ({
+          name: humanizeSubject(r.subject),
+          attempted: `${r.attempted} of ${r.total}`,
+          score:
+            Math.abs(r.score - Math.round(r.score)) < 0.05
+              ? `${Math.round(r.score)}`
+              : r.score.toFixed(1),
+          trailing: 'of 100',
+        }))
+      : result.breakdown.length
+        ? result.breakdown.map((r) => ({
+            name: r.topic,
+            attempted: `${r.correct} of ${r.total}`,
+            score: `${r.correct}`,
+            trailing: `${r.total > 0 ? Math.round((r.correct / r.total) * 100) : 0}%`,
+          }))
+        : [
+            {
+              name: 'This paper',
+              attempted: `${result.score} of ${result.total}`,
+              score: `${result.score}`,
+            },
+          ];
+
+    const weak = result.breakdown
+      .filter((r) => r.total > 0 && r.correct / r.total < 0.6)
+      .sort((a, b) => a.correct / a.total - b.correct / b.total)
+      .slice(0, 4);
+    const weakSlug = bodySlug(bundle?.body ?? '') || 'jamb';
+
+    const rankTab =
+      bundle?.body === 'JAMB'
+        ? 'jamb'
+        : bundle?.body === 'WAEC'
+          ? 'waec'
+          : bundle?.body === 'NECO'
+            ? 'neco'
+            : 'arena';
+    const correctionsHref = attempt ? `/review?attemptId=${attempt.attemptId}` : null;
+
+    return (
+      <main className="mx-auto w-full max-w-2xl pb-16">
+        {/* Cream masthead with the amber shards — the reference design.
+            The reference's red buttons are black here (Renance rule). */}
+        <section className="relative overflow-hidden bg-[#FFF8E1] px-6 pb-6 pt-5 sm:px-8">
+          <ReportShards />
+          <h1 className="relative text-2xl font-bold tracking-tight text-[#1A1A1A]">
+            Examination Performance
+          </h1>
+        </section>
+
+        <div className="px-4 sm:px-6">
+          {isUtmeMock && (
+            <section className="renance-rise mt-7">
+              <p className="text-base text-on-surface-variant">Your JAMB score</p>
+              <p className="mt-1 text-[68px] font-extrabold leading-none tracking-tight text-on-surface">
+                {aggregateLabel}
               </p>
             </section>
-            <h2 className="mt-7 text-lg font-semibold tracking-tight text-on-surface">Topics to Review</h2>
-            <div className="mt-3 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
-              {weak.length === 0 && (
-                <p className="text-[13px] text-on-surface-variant">
-                  Nothing critical here, the review list has every question from this paper.
-                </p>
-              )}
-              {weak.map((row) => {
-                const frac = row.total > 0 ? row.correct / row.total : 0;
-                const bar = frac < 0.5 ? 'bg-error' : 'bg-accent-amber';
-                return (
-                  <div key={row.topic} className="py-1">
-                    <div className="flex items-center justify-between">
-                      <span className="text-[15px] font-semibold text-on-surface">{row.topic}</span>
-                      <span className={`text-sm font-semibold ${bar.replace('bg-', 'text-')}`}>
-                        {row.correct}/{row.total} pts
-                      </span>
-                    </div>
-                    <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-surface-container">
-                      <div className={`h-full rounded-full ${bar}`} style={{ width: `${frac * 100}%` }} />
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-            {/* Pacing & Panic Forensics Card */}
-            <PacingForensicsCard report={pacingReport} attemptId={attempt?.attemptId} />
-            <div className="mt-8 flex flex-col gap-2">
-              {attempt && (
-                <Link
-                  href={`/review?attemptId=${attempt.attemptId}`}
-                  className="flex h-[52px] w-full items-center justify-center gap-2 rounded-[10px] bg-primary text-sm font-semibold text-on-primary transition-all hover:shadow-md active:scale-[0.98]"
-                >
-                  Review answers
-                  <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                </Link>
-              )}
-              <button
-                onClick={() => {
-                  setAdaptive(true);
-                  setPhase('intro');
-                  setAttempt(null);
-                }}
-                className="flex h-[52px] w-full items-center justify-center rounded-[10px] bg-transparent text-sm font-semibold text-on-surface shadow-[inset_0_0_0_1px_#C6C6CD] transition-all active:scale-[0.98]"
-              >
-                Retry weak topics
-              </button>
-              <Link href="/dashboard" className="py-2 text-center text-sm text-on-surface-variant hover:text-on-surface">
-                Back to dashboard
-              </Link>
-            </div>
-          </main>
-        );
-      }
-      return (
-        <main className="mx-auto w-full max-w-2xl px-4 pb-16 sm:px-6">
-          <section className="renance-rise rounded-xl bg-[#FDF3F2] px-6 py-8 text-center">
-            <div className="relative mx-auto h-32 w-32">
-              <svg viewBox="0 0 120 120" className="h-full w-full -rotate-90" aria-hidden>
-                <circle cx="60" cy="60" r="52" fill="none" stroke="#E7EEFF" strokeWidth="10" />
-                <circle
-                  cx="60" cy="60" r="52" fill="none" stroke="#BA1A1A" strokeWidth="10"
-                  strokeLinecap="round"
-                  strokeDasharray={`${(pct / 100) * C} ${C}`}
-                />
-              </svg>
-              <p className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-error">
-                {pct}%
-              </p>
-            </div>
-            <h1 className="mx-auto mt-5 max-w-sm text-xl font-semibold leading-snug tracking-tight text-on-surface">
-              The review list below is where the points are.
-            </h1>
-            <p className="mt-2 text-[15px] text-on-surface-variant">
-              Don&apos;t sweat it. Focus on the gaps.
+          )}
+          <p className="renance-rise mt-1 text-[15px] text-[#424242]">
+            You passed {result.score} of {isUtmeMock && totalQ ? totalQ : result.total} questions
+          </p>
+          <div className="renance-rise mt-2 flex items-end gap-3">
+            <p
+              className={`font-extrabold leading-none tracking-tight text-on-surface ${
+                isUtmeMock ? 'text-[52px]' : 'text-[68px]'
+              }`}
+            >
+              {pct}
+              <span className="ml-1 align-top text-[0.42em] font-bold text-on-surface-variant">%</span>
             </p>
-            <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-surface-container px-4 py-2">
-              <span className="material-symbols-outlined fill-current text-[18px] text-accent-ink">stars</span>
-              <span className="text-sm font-semibold text-on-surface">+{xpEarned}</span>
-              <span className="text-sm text-on-surface-variant">XP Earned</span>
+            {delta != null && (
+              <span
+                className={`mb-2 inline-flex items-center gap-1 rounded-full px-2.5 py-1 font-mono text-xs font-medium ${
+                  delta >= 0
+                    ? 'bg-accent-emerald/10 text-accent-emerald'
+                    : 'bg-error/10 text-error'
+                }`}
+              >
+                <span className="material-symbols-outlined text-sm">
+                  {delta >= 0 ? 'trending_up' : 'trending_down'}
+                </span>
+                {delta >= 0 ? `+${delta}` : delta} vs last attempt
+              </span>
+            )}
+          </div>
+
+          {/* You spent */}
+          <div className="renance-rise mt-7 flex items-center gap-4">
+            <span className="rounded-full bg-[#E0F7FA] px-3.5 py-1.5 text-base font-semibold text-[#00695C]">
+              You spent
+            </span>
+            {elapsedMs > 0 ? (
+              <div className="flex items-baseline gap-5">
+                <p className="text-4xl font-bold leading-none text-on-surface">
+                  {hours}
+                  <span className="ml-1.5 text-[13px] font-normal text-on-surface-variant">Hour</span>
+                </p>
+                <p className="text-4xl font-bold leading-none text-on-surface">
+                  {mins}
+                  <span className="ml-1.5 text-[13px] font-normal text-on-surface-variant">Min</span>
+                </p>
+              </div>
+            ) : (
+              <span className="text-3xl font-bold text-on-surface">&mdash;</span>
+            )}
+          </div>
+
+          {/* Start / End time card */}
+          <section className="renance-rise mt-4 rounded-[14px] bg-[#E1F5FE] px-5 py-4">
+            <div className="flex items-center justify-between text-base text-black">
+              <span className="font-semibold">Start Time:</span>
+              <span>{startTime ? clock12(startTime) : '—'}</span>
+            </div>
+            <div className="mt-3 flex items-center justify-between text-base text-black">
+              <span className="font-semibold">End Time:</span>
+              <span>{endTime ? clock12(endTime) : '—'}</span>
             </div>
           </section>
 
-          {utmeSlip}
-
-          <h2 className="mt-7 text-lg font-semibold tracking-tight text-on-surface">Topics to Review</h2>
-          <div className="mt-3 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
-            {weak.length === 0 && (
-              <p className="text-[13px] text-on-surface-variant">
-                Nothing critical here, the review list has every question from this paper.
-              </p>
-            )}
-            {weak.map((row) => {
-              const frac = row.total > 0 ? row.correct / row.total : 0;
-              const bar = frac < 0.5 ? 'bg-error' : 'bg-accent-amber';
-              return (
-                <div key={row.topic} className="py-1">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[15px] font-semibold text-on-surface">{row.topic}</span>
-                    <span className={`text-sm font-semibold ${bar.replace('bg-', 'text-')}`}>
-                      {row.correct}/{row.total} pts
-                    </span>
+          {/* Score breakdown */}
+          <section className="renance-rise mt-6 rounded-[18px] bg-[#F3E5F5] p-5">
+            <div className="flex items-center gap-2">
+              <span className="material-symbols-outlined text-[21px] text-[#673AB7]">grid_view</span>
+              <h2 className="text-[19px] font-bold tracking-tight text-[#212121]">
+                Score breakdown
+              </h2>
+            </div>
+            <p className="mt-2 text-[14.5px] leading-relaxed text-[#616161]">
+              {isUtmeMock
+                ? 'Below is a breakdown of your scores per subject with the number of questions attempted'
+                : 'Below is a breakdown of your scores per topic with the number of questions attempted'}
+            </p>
+            <div className="mt-1">
+              {rows.map((row, i) => (
+                <div key={`${row.name}-${i}`}>
+                  <div className="flex items-center justify-between py-3">
+                    <div className="min-w-0 pr-3">
+                      <p className="truncate text-[17px] font-semibold text-[#212121]">
+                        {row.name}
+                      </p>
+                      <p className="mt-0.5 text-[13.5px] text-[#9E9E9E]">{row.attempted} Attempted</p>
+                    </div>
+                    <p className="shrink-0 text-[19px] font-bold text-[#212121]">
+                      {row.score}
+                      {row.trailing && (
+                        <span className="ml-1 text-[12.5px] font-normal text-[#9E9E9E]">
+                          {row.trailing}
+                        </span>
+                      )}
+                    </p>
                   </div>
-                  <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-surface-container">
-                    <div className={`h-full rounded-full ${bar}`} style={{ width: `${frac * 100}%` }} />
-                  </div>
+                  {i < rows.length - 1 && <div className="h-px bg-[#E0E0E0]" />}
                 </div>
-              );
-            })}
-          </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Focus next: weak-topic chips deep-link the syllabus map. */}
+          {weak.length > 0 && (
+            <div className="renance-rise pt-5">
+              <h3 className="text-sm text-on-surface-variant">Focus next</h3>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {weak.map((row) => (
+                  <Link
+                    key={row.topic}
+                    href={`/syllabus?body=${encodeURIComponent(weakSlug)}&topic=${encodeURIComponent(row.topic)}`}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-accent-amber/40 bg-accent-amber/10 px-3 py-1.5 font-mono text-xs text-on-surface transition hover:shadow-sm"
+                  >
+                    <span className="material-symbols-outlined text-[14px] text-accent-amber">
+                      local_fire_department
+                    </span>
+                    {row.topic} · {row.correct}/{row.total}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* XP + streak pill */}
+          {xpEarned > 0 && (
+            <div className="renance-rise mt-4 inline-flex items-center gap-2 rounded-full border border-outline-variant/50 bg-card px-3.5 py-2">
+              <span className="material-symbols-outlined fill-current text-[15px] text-accent-amber">
+                stars
+              </span>
+              <span className="text-[13.5px] font-semibold text-on-surface">+{xpEarned} XP</span>
+              <span className="mx-1 h-1 w-1 rounded-full bg-outline-variant" />
+              <span className="material-symbols-outlined fill-current text-[15px] text-accent-amber">
+                local_fire_department
+              </span>
+              <span className="font-mono text-xs text-on-surface-variant">
+                Streak Day {gam?.state.currentStreak ?? 0}
+              </span>
+            </div>
+          )}
 
           {/* Pacing & Panic Forensics Card */}
           <PacingForensicsCard report={pacingReport} attemptId={attempt?.attemptId} />
 
+          {/* Actions — black, per the founder's red-to-black rule. */}
           <div className="mt-8 flex flex-col gap-2">
-            {attempt && (
+            {daily && (
               <Link
-                href={`/review?attemptId=${attempt.attemptId}`}
-                className="flex h-[52px] w-full items-center justify-center gap-2 rounded-[10px] bg-primary text-sm font-semibold text-on-primary transition-all hover:shadow-md active:scale-[0.98]"
+                href="/leaderboard?tab=daily"
+                className="flex h-[52px] w-full items-center justify-center gap-2 rounded-[10px] bg-accent-ink text-sm font-semibold text-white shadow-md transition-all hover:opacity-90 active:scale-[0.98]"
               >
-                Review answers
-                <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                <span className="material-symbols-outlined text-[18px]">leaderboard</span>
+                See today's challenge board
               </Link>
             )}
-            <button
-              onClick={() => {
-                setAdaptive(true);
-                setPhase('intro');
-                setAttempt(null);
-              }}
-              className="flex h-[52px] w-full items-center justify-center rounded-[10px] bg-transparent text-sm font-semibold text-on-surface shadow-[inset_0_0_0_1px_#C6C6CD] transition-all active:scale-[0.98]"
-            >
-              Retry weak topics
-            </button>
-            <Link href="/dashboard" className="py-2 text-center text-sm text-on-surface-variant hover:text-on-surface">
-              Back to dashboard
-            </Link>
-          </div>
-        </main>
-      );
-    }
-
-    return (
-      <main className="mx-auto w-full max-w-2xl px-4 pb-16 sm:px-6">
-        {/* The official UTME slip leads a mock result; the dark
-            diagnostic hero only prints for the other papers. */}
-        {!isUtmeMock && (
-          <section className="renance-rise relative overflow-hidden rounded-xl bg-dark-surface px-6 py-8 text-center">
-            <p className="font-mono text-xs uppercase tracking-[0.24em] text-dark-text-secondary">
-              Diagnostic Complete
-            </p>
-            <p className="mt-2 text-6xl font-bold tracking-tight text-dark-text-primary">
-              {pct}
-              <span className="text-2xl text-dark-text-secondary">%</span>
-            </p>
-            {delta != null && (
-              <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1">
-                <span
-                  className={`material-symbols-outlined text-sm ${delta >= 0 ? 'text-accent-emerald' : 'text-error'}`}
-                >
-                  {delta >= 0 ? 'trending_up' : 'trending_down'}
-                </span>
-                <span
-                  className={`font-mono text-xs ${delta >= 0 ? 'text-accent-emerald' : 'text-error'}`}
-                >
-                  {delta >= 0 ? `+${delta}` : delta} vs last attempt
-                </span>
+            {correctionsHref ? (
+              <Link
+                href={correctionsHref}
+                className="flex h-[52px] w-full items-center justify-center rounded-[12px] bg-primary text-[15.5px] font-semibold text-on-primary transition-all hover:shadow-md active:scale-[0.98]"
+              >
+                View Corrections
+              </Link>
+            ) : (
+              <div
+                aria-disabled
+                className="flex h-[52px] w-full items-center justify-center rounded-[12px] bg-primary/50 text-[15.5px] font-semibold text-on-primary"
+              >
+                View Corrections
               </div>
             )}
-          </section>
-        )}
-
-        {/* Official UTME score slip (composite JAMB mock papers) */}
-        {utmeSlip}
-
-        {/* XP / streak card */}
-        <section className="mt-4 flex items-center justify-between rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
-          <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-amber/10">
-              <span className="material-symbols-outlined fill-current text-accent-amber">stars</span>
-            </div>
-            <div>
-              <p className="text-sm font-semibold text-on-surface">Experience Gained</p>
-              <p className="text-[13px] text-on-surface-variant">Keep the momentum going</p>
-            </div>
-          </div>
-          <div className="text-right">
-            <p className="text-lg font-bold text-accent-amber">+{xpEarned} XP</p>
-            <p className="flex items-center justify-end gap-1 font-mono text-[11px] text-on-surface-variant">
-              <span className="material-symbols-outlined fill-current text-[14px] text-accent-amber">
-                local_fire_department
-              </span>
-              Streak Day {gam?.state.currentStreak ?? 0}
-            </p>
-          </div>
-        </section>
-
-        {/* stats grid */}
-        <section className="mt-3 grid grid-cols-2 gap-3">
-          <div className="rounded-xl bg-card p-4 text-center shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
-            <span className="material-symbols-outlined text-secondary">timer</span>
-            <p className="mt-1 text-xl font-bold text-on-surface">
-              {elapsedMs ? mmss(Math.round(elapsedMs / 1000)) : mmss(0)}
-            </p>
-            <p className="text-[13px] text-on-surface-variant">Time Used</p>
-          </div>
-          <div className="rounded-xl bg-card p-4 text-center shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
-            <span className="material-symbols-outlined text-secondary">track_changes</span>
-            <p className="mt-1 text-xl font-bold text-on-surface">
-              {result.score}/{result.total}
-            </p>
-            <p className="text-[13px] text-on-surface-variant">Correct Answers</p>
-          </div>
-        </section>
-
-        {/* Pacing & Panic Forensics Card */}
-        <PacingForensicsCard report={pacingReport} attemptId={attempt?.attemptId} />
-
-        <h2 className="mt-6 text-lg font-semibold tracking-tight text-on-surface">Topic Breakdown</h2>
-        <div className="mt-3 space-y-3">
-          {result.breakdown.length === 0 && (
-            <p className="rounded-xl bg-card p-4 text-sm text-on-surface-variant shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
-              No topic data on this paper, every question counted toward the overall score.
-            </p>
-          )}
-          {result.breakdown.map((row) => {
-            const rowPct = row.total > 0 ? Math.round((row.correct / row.total) * 100) : 0;
-            const bar = rowPct >= 80 ? 'bg-accent-emerald' : rowPct >= 50 ? 'bg-accent-amber' : 'bg-error';
-            return (
-              <div
-                key={row.topic}
-                className="rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]"
+            <Link
+              href={`/leaderboard?tab=${rankTab}`}
+              className="flex h-[52px] w-full items-center justify-center gap-2 rounded-[12px] bg-transparent text-[15.5px] font-semibold text-on-surface shadow-[inset_0_0_0_1.3px_#111C2D] transition-all active:scale-[0.98]"
+            >
+              <span className="material-symbols-outlined text-[19px]">leaderboard</span>
+              Send to Online Ranking
+            </Link>
+            <div className="flex items-center justify-center gap-2 pt-1 text-sm font-semibold">
+              <Link href="/dashboard" className="py-2 text-on-surface-variant transition hover:text-on-surface">
+                Go Back
+              </Link>
+              <span className="text-outline-variant">·</span>
+              <button
+                onClick={() => {
+                  setAdaptive(true); // Retry Weak Topics = a smart-order paper
+                  setPhase('intro');
+                  setAttempt(null);
+                }}
+                className="py-2 text-on-surface-variant transition hover:text-on-surface"
               >
-                <div className="mb-2 flex items-baseline justify-between text-sm">
-                  <span className="font-semibold text-on-surface">{row.topic}</span>
-                  <span className="font-mono text-xs text-on-surface-variant">
-                    {rowPct}% · {row.correct}/{row.total}
-                  </span>
-                </div>
-                <div className="h-2 overflow-hidden rounded-full bg-surface-container">
-                  <div className={`h-full rounded-full ${bar}`} style={{ width: `${rowPct}%` }} />
-                </div>
-              </div>
-            );
-          })}
-          {/* Weak-topic recap (ROADMAP #4): under 60% becomes a chip that
-              deep-links the syllabus map on this body. */}
-          {(() => {
-            const weak = result.breakdown
-              .filter((r) => r.total > 0 && r.correct / r.total < 0.6)
-              .sort((a, b) => a.correct / a.total - b.correct / b.total)
-              .slice(0, 4);
-            if (!weak.length) return null;
-            const slug = bodySlug(bundle?.body ?? '') || 'jamb';
-            return (
-              <div className="pt-2">
-                <h3 className="text-sm text-on-surface-variant">Focus next</h3>
-                <div className="mt-2 flex flex-wrap gap-2">
-                  {weak.map((row) => (
-                    <Link
-                      key={row.topic}
-                      href={`/syllabus?body=${encodeURIComponent(slug)}&topic=${encodeURIComponent(row.topic)}`}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-accent-amber/40 bg-accent-amber/10 px-3 py-1.5 font-mono text-xs text-on-surface transition hover:shadow-sm"
-                    >
-                      <span className="material-symbols-outlined text-[14px] text-accent-amber">
-                        local_fire_department
-                      </span>
-                      {row.topic} · {row.correct}/{row.total}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            );
-          })()}
-        </div>
-
-        <div className="mt-8 flex flex-col gap-2">
-          {daily && (
-            <Link
-              href="/leaderboard?tab=daily"
-              className="flex h-[52px] w-full items-center justify-center gap-2 rounded-[10px] bg-accent-ink text-sm font-semibold text-white shadow-md transition-all hover:opacity-90 active:scale-[0.98]"
-            >
-              <span className="material-symbols-outlined text-[18px]">leaderboard</span>
-              See today's challenge board
-            </Link>
-          )}
-          {attempt && (
-            <Link
-              href={`/review?attemptId=${attempt.attemptId}`}
-              className="flex h-[52px] w-full items-center justify-center rounded-[10px] bg-primary text-sm font-semibold text-on-primary transition-all hover:shadow-md active:scale-[0.98]"
-            >
-              Review Answers
-            </Link>
-          )}
-          <button
-            onClick={() => {
-              setAdaptive(true); // Retry Weak Topics = a smart-order paper
-              setPhase('intro');
-              setAttempt(null);
-            }}
-            className="flex h-[52px] w-full items-center justify-center gap-2 rounded-[10px] bg-transparent text-sm font-semibold text-on-surface shadow-[inset_0_0_0_1px_#C6C6CD] transition-all active:scale-[0.98]"
-          >
-            Retry Weak Topics
-            <span className="material-symbols-outlined text-sm">arrow_forward</span>
-          </button>
-          <Link href="/dashboard" className="py-2 text-center text-sm text-on-surface-variant hover:text-on-surface">
-            Back to dashboard
-          </Link>
+                Retry Weak Topics
+              </button>
+            </div>
+          </div>
         </div>
       </main>
     );
   }
+
 
   if (!bundle || !question) return null;
 
