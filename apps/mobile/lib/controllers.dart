@@ -27,8 +27,8 @@ enum SyncPhase { idle, syncing, ready, error }
 /// sha256 decides WHETHER a local copy is current, and nothing blocks the UI.
 class SyncController extends ChangeNotifier {
   SyncController({required ApiClient api, required PackStore store})
-    : _api = api,
-      _store = store;
+      : _api = api,
+        _store = store;
 
   final ApiClient _api;
   final PackStore _store;
@@ -45,8 +45,10 @@ class SyncController extends ChangeNotifier {
   /// The exam bodies present in the synced manifest (JAMB | WAEC | NECO
   /// | University Modules), insertion-stable - the library shelf chips'
   /// data.
-  Set<String> get shelfBodies =>
-      exams.map((ExamMeta e) => e.body).where((String b) => b.isNotEmpty).toSet();
+  Set<String> get shelfBodies => exams
+      .map((ExamMeta e) => e.body)
+      .where((String b) => b.isNotEmpty)
+      .toSet();
 
   /// Let UI surfaces (e.g. /me failures) route errors through the
   /// controller instead of poking notifyListeners from outside.
@@ -77,9 +79,8 @@ class SyncController extends ChangeNotifier {
       exams = manifest.exams;
       final needed = _neededFor(profileExams);
       final have = await _store.downloadedCodes();
-      final missing = needed
-          .where((e) => !have.contains(e.code))
-          .toList(growable: false);
+      final missing =
+          needed.where((e) => !have.contains(e.code)).toList(growable: false);
       total = missing.length;
       int failed = 0;
       // Three parallel downloads: Nigerian mobile latency is per-request,
@@ -128,6 +129,7 @@ class SyncController extends ChangeNotifier {
           notifyListeners();
         }
       }
+
       await Future.wait(<Future<void>>[worker(), worker(), worker()]);
       try {
         await refreshPendingCount();
@@ -139,8 +141,7 @@ class SyncController extends ChangeNotifier {
       }
       if (failed > 0 && done == 0) {
         phase = SyncPhase.error;
-        message =
-            '$failed packs could not download, check your connection and '
+        message = '$failed packs could not download, check your connection and '
             'retry - the rest of the app works offline.';
       } else {
         phase = SyncPhase.ready;
@@ -161,8 +162,7 @@ class SyncController extends ChangeNotifier {
       // ("Failed host lookup: 'renance-api.onrender.com'") which must
       // stay out of student-facing offline messages.
       phase = SyncPhase.error;
-      message =
-          'No connection to Renance servers. Check your internet and '
+      message = 'No connection to Renance servers. Check your internet and '
           'retry - the rest of the app works offline.';
     } catch (e) {
       // Anything unexpected (storage full, decode quirk) still lands
@@ -170,8 +170,7 @@ class SyncController extends ChangeNotifier {
       // student reads as "the button does nothing". The raw error is
       // deliberately NOT interpolated: it can embed the API host.
       phase = SyncPhase.error;
-      message =
-          'Download hit a problem on this device. Free some space '
+      message = 'Download hit a problem on this device. Free some space '
           'and retry - the rest of the app works offline.';
     }
     notifyListeners();
@@ -206,7 +205,8 @@ class SyncController extends ChangeNotifier {
     if (wanted.isEmpty) return studentPacks;
     // University-only profiles sync nothing up front; every university
     // pack downloads from its desk tile instead.
-    if (profileExams.length == 1 && profileExams.first == 'University Modules') {
+    if (profileExams.length == 1 &&
+        profileExams.first == 'University Modules') {
       return <ExamMeta>[];
     }
     return wanted.where((e) => e.body != 'University Modules').toList();
@@ -237,19 +237,35 @@ class SyncController extends ChangeNotifier {
   /// the reader then shows its retry card.
   Future<Bundle?> loadBank(String code, String sha) async {
     final Bundle? local = await _store.loadPackByCode(code);
-    if (local != null) return local;
+    if (local != null && _packCarriesAnswers(local)) return local;
+    // A pre-2026-09 sanitized download (answers stripped server-side):
+    // re-fetch so the reader un-locks - the bundle endpoint now ships
+    // the per-question answer material, same as the web statics. When
+    // the fetch fails (offline / old API) the stale pack keeps reading -
+    /// better locked than nothing.
     try {
       final Bundle bundle = await _api.bundle(code);
       await _store.savePack(bundle, sha);
       notifyListeners();
       return bundle;
     } on ApiException {
-      return null;
+      return local;
     } on NetworkException {
-      return null;
+      return local;
     } catch (_) {
-      return null;
+      return local;
     }
+  }
+
+  /// True when a pack already carries its per-question answer material
+  /// (founder directive 2026-09: answers + explanations ship to
+  /// students). A pack whose MCQs all lack answers is a sanitized
+  /// pre-directive download; theory-only packs legitimately carry no
+  /// option letters, so they never count as stale.
+  static bool _packCarriesAnswers(Bundle b) {
+    final Iterable<BundleQuestion> mcqs =
+        b.questions.where((BundleQuestion q) => q.options.isNotEmpty);
+    return mcqs.isEmpty || mcqs.any((BundleQuestion q) => q.answer.isNotEmpty);
   }
 
   /// Flush the offline submission queue. Network failures keep entries;
@@ -287,9 +303,9 @@ class ExamController extends ChangeNotifier {
     required ApiClient api,
     required PackStore store,
     DateTime Function()? clock,
-  }) : _api = api,
-       _store = store,
-       _clock = clock ?? DateTime.now;
+  })  : _api = api,
+        _store = store,
+        _clock = clock ?? DateTime.now;
 
   final ApiClient _api;
   final PackStore _store;
@@ -393,8 +409,8 @@ class ExamController extends ChangeNotifier {
 
   BundleQuestion? get current =>
       bundle == null || index >= bundle!.questions.length
-      ? null
-      : bundle!.questions[index];
+          ? null
+          : bundle!.questions[index];
 
   int get answeredCount => answers.length;
 
@@ -413,7 +429,8 @@ class ExamController extends ChangeNotifier {
     result = null;
     notifyListeners();
     final bool composed = isComposedPaperCode(examMeta.code);
-    Bundle? cached = await _store.loadPack(examMeta.code, examMeta.bundleSha256);
+    Bundle? cached =
+        await _store.loadPack(examMeta.code, examMeta.bundleSha256);
     // Composed papers (mock/custom/pick) cache by CODE alone - their
     // bundleSha256 is empty, so the code-keyed lookup is the offline
     // resume path for every paper the student has already started.
@@ -747,9 +764,9 @@ class StudentController extends ChangeNotifier {
     required ApiClient api,
     required PackStore store,
     SharedPreferences? prefs,
-  }) : _api = api,
-       _store = store,
-       _prefs = prefs;
+  })  : _api = api,
+        _store = store,
+        _prefs = prefs;
 
   final ApiClient _api;
 
@@ -837,10 +854,8 @@ class StudentController extends ChangeNotifier {
   int get coveragePct {
     final p = me?.profile;
     if (p == null) return 0;
-    final gradedCodes = attempts
-        .where((a) => a.isGraded)
-        .map((a) => a.code)
-        .toSet();
+    final gradedCodes =
+        attempts.where((a) => a.isGraded).map((a) => a.code).toSet();
     final relevant = attempts.isEmpty
         ? <String>{for (final e in downloaded) e}
         : gradedCodes;
@@ -857,9 +872,9 @@ class StudentController extends ChangeNotifier {
 
   /// Due + overdue + upcoming rows, in server order (oldest due first).
   List<ReviewItem> get queuePreview => <ReviewItem>[
-    ...review?.due ?? const <ReviewItem>[],
-    ...review?.upcoming ?? const <ReviewItem>[],
-  ];
+        ...review?.due ?? const <ReviewItem>[],
+        ...review?.upcoming ?? const <ReviewItem>[],
+      ];
 
   /// Questions answered today (daily quest progress, all packs).
   int get todayQuestions {
@@ -986,7 +1001,7 @@ class StudentController extends ChangeNotifier {
 /// so tests run with a fake and zero platform channels.
 class LessonNarrator extends ChangeNotifier {
   LessonNarrator({SpeechEngine? speech})
-    : speech = speech ?? FlutterTtsEngine();
+      : speech = speech ?? FlutterTtsEngine();
 
   final SpeechEngine speech;
 
@@ -1048,10 +1063,10 @@ class FlashcardsController extends ChangeNotifier {
     required PackStore store,
     SpeechEngine? speech,
     DateTime Function()? clock,
-  }) : _api = api,
-       _store = store,
-       speech = speech ?? FlutterTtsEngine(),
-       _clock = clock ?? DateTime.now;
+  })  : _api = api,
+        _store = store,
+        speech = speech ?? FlutterTtsEngine(),
+        _clock = clock ?? DateTime.now;
 
   final ApiClient _api;
   final PackStore _store;
@@ -1330,8 +1345,8 @@ enum LessonsPhase { idle, loading, ready, error }
 /// cache fallback so saved lessons stay readable with zero connectivity.
 class LessonsController extends ChangeNotifier {
   LessonsController({required ApiClient api, required PackStore store})
-    : _api = api,
-      _store = store;
+      : _api = api,
+        _store = store;
 
   final ApiClient _api;
   final PackStore _store;
@@ -1360,7 +1375,8 @@ class LessonsController extends ChangeNotifier {
       lessons = await _store.cachedLessonMetas();
       if (lessons.isEmpty) {
         phase = LessonsPhase.error;
-        error = 'No connection and no saved lessons yet. Reconnect once to download the library.';
+        error =
+            'No connection and no saved lessons yet. Reconnect once to download the library.';
       } else {
         phase = LessonsPhase.ready;
         error = 'Offline, showing your saved lessons.';
@@ -1550,7 +1566,8 @@ class SchoolController extends ChangeNotifier {
     final List<CorpusSchemeTermModel>? cached = _corpusSchemes[key];
     if (cached != null) return cached;
     try {
-      final List<CorpusSchemeTermModel> terms = await _api.corpusSchemes(classId, subject);
+      final List<CorpusSchemeTermModel> terms =
+          await _api.corpusSchemes(classId, subject);
       _corpusSchemes[key] = terms;
       return terms;
     } on ApiException catch (e) {
@@ -1570,7 +1587,8 @@ class SchoolController extends ChangeNotifier {
     final List<CorpusNotesTermModel>? cached = _corpusNotes[key];
     if (cached != null) return cached;
     try {
-      final List<CorpusNotesTermModel> terms = await _api.corpusNotes(classId, subject);
+      final List<CorpusNotesTermModel> terms =
+          await _api.corpusNotes(classId, subject);
       _corpusNotes[key] = terms;
       return terms;
     } on ApiException catch (e) {
@@ -1619,10 +1637,12 @@ class SchoolController extends ChangeNotifier {
   List<SchoolStudentModel> roster = <SchoolStudentModel>[];
 
   /// Today's marks keyed by student id for the register screen.
-  final Map<String, AttendanceEntryModel> marks = <String, AttendanceEntryModel>{};
+  final Map<String, AttendanceEntryModel> marks =
+      <String, AttendanceEntryModel>{};
 
   /// Per-student attendance rates over the loaded window.
-  List<AttendanceSummaryRowModel> attendanceRows = <AttendanceSummaryRowModel>[];
+  List<AttendanceSummaryRowModel> attendanceRows =
+      <AttendanceSummaryRowModel>[];
 
   bool rosterLoading = false;
   String? rosterError;
@@ -1671,7 +1691,8 @@ class SchoolController extends ChangeNotifier {
               address: student.address,
             )
           : await _api.schoolUpdateStudent(schoolId, student);
-      final int i = roster.indexWhere((SchoolStudentModel s) => s.id == saved.id);
+      final int i =
+          roster.indexWhere((SchoolStudentModel s) => s.id == saved.id);
       if (i >= 0) {
         roster[i] = saved;
       } else {
@@ -1689,13 +1710,15 @@ class SchoolController extends ChangeNotifier {
   }
 
   /// Pulls one day's register and seeds [marks] with it.
-  Future<void> loadAttendanceDay(String schoolId, String classId, String day) async {
+  Future<void> loadAttendanceDay(
+      String schoolId, String classId, String day) async {
     rosterLoading = true;
     rosterError = null;
     notifyListeners();
     try {
       marks.clear();
-      for (final AttendanceEntryModel e in await _api.attendanceDay(schoolId, classId, day)) {
+      for (final AttendanceEntryModel e
+          in await _api.attendanceDay(schoolId, classId, day)) {
         marks[e.studentId] = e;
       }
       if (roster.isEmpty || roster.first.classId != classId) {
@@ -1713,7 +1736,8 @@ class SchoolController extends ChangeNotifier {
 
   /// Marks one student locally; [saveAttendanceDay] pushes the sheet.
   void mark(String studentId, String status, {String note = ''}) {
-    marks[studentId] = AttendanceEntryModel(studentId: studentId, status: status, note: note);
+    marks[studentId] =
+        AttendanceEntryModel(studentId: studentId, status: status, note: note);
     notifyListeners();
   }
 
@@ -1730,13 +1754,15 @@ class SchoolController extends ChangeNotifier {
   }
 
   /// Pushes the whole day's marks. Returns the saved count or null.
-  Future<int?> saveAttendanceDay(String schoolId, String classId, String day) async {
+  Future<int?> saveAttendanceDay(
+      String schoolId, String classId, String day) async {
     lastError = null;
     final List<AttendanceEntryModel> entries =
         marks.values.toList(growable: false);
     if (entries.isEmpty) return 0;
     try {
-      final int saved = await _api.saveAttendance(schoolId, classId, day, entries);
+      final int saved =
+          await _api.saveAttendance(schoolId, classId, day, entries);
       return saved;
     } on ApiException catch (e) {
       lastError = e.message;
@@ -1755,7 +1781,8 @@ class SchoolController extends ChangeNotifier {
     String to,
   ) async {
     try {
-      attendanceRows = await _api.attendanceSummary(schoolId, classId, from, to);
+      attendanceRows =
+          await _api.attendanceSummary(schoolId, classId, from, to);
     } on ApiException catch (e) {
       rosterError = e.message;
     } on NetworkException catch (e) {
@@ -1795,8 +1822,7 @@ class SchoolController extends ChangeNotifier {
     final String? raw = prefs.getString(_sessionPrefKey);
     if (raw == null) return null;
     try {
-      final Map<String, dynamic> j =
-          jsonDecode(raw) as Map<String, dynamic>;
+      final Map<String, dynamic> j = jsonDecode(raw) as Map<String, dynamic>;
       return j.map<String, String>(
         (String k, dynamic v) => MapEntry(k, (v ?? '').toString()),
       );

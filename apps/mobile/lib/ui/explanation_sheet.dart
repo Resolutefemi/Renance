@@ -211,7 +211,8 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                           color: context.cardLow.withValues(alpha: 0.6),
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(
-                            color: context.outlineVariant.withValues(alpha: 0.4),
+                            color:
+                                context.outlineVariant.withValues(alpha: 0.4),
                           ),
                         ),
                         constraints: const BoxConstraints(maxHeight: 180),
@@ -254,11 +255,10 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                       (MapEntry<String, String> opt) {
                         final bool isCorrect =
                             graded && opt.key == widget.correct;
-                        final bool isWrongPick =
-                            graded &&
-                                widget.selected.isNotEmpty &&
-                                opt.key == widget.selected &&
-                                opt.key != widget.correct;
+                        final bool isWrongPick = graded &&
+                            widget.selected.isNotEmpty &&
+                            opt.key == widget.selected &&
+                            opt.key != widget.correct;
                         return Padding(
                           padding: const EdgeInsets.only(bottom: 8),
                           child: _ReviewOption(
@@ -271,123 +271,98 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                       },
                     ),
                     // ---- Explanation section ----------------------------
-                    if (graded) ...<Widget>[
-                      const SizedBox(height: 10),
-                      Container(
-                        padding: const EdgeInsets.all(14),
-                        decoration: BoxDecoration(
-                          color: context.cardLow.withValues(alpha: 0.55),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Row(
-                              children: <Widget>[
-                                ShaderMask(
-                                  shaderCallback: (Rect bounds) =>
-                                      const LinearGradient(
-                                    colors: <Color>[
-                                      Color(0xFF2563EB),
-                                      Color(0xFF7C3AED),
+                    // Never locked (founder directive): the correct option
+                    // and the explanation always show, exactly like the
+                    // website's reader - banks now ship their answer
+                    // material, and the AI pill below covers any gap.
+                    const SizedBox(height: 10),
+                    Container(
+                      padding: const EdgeInsets.all(14),
+                      decoration: BoxDecoration(
+                        color: context.cardLow.withValues(alpha: 0.55),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              ShaderMask(
+                                shaderCallback: (Rect bounds) =>
+                                    const LinearGradient(
+                                  colors: <Color>[
+                                    Color(0xFF2563EB),
+                                    Color(0xFF7C3AED),
+                                  ],
+                                ).createShader(bounds),
+                                blendMode: BlendMode.srcIn,
+                                child: const Text(
+                                  'Explanation',
+                                  style: TextStyle(
+                                    fontFamily: 'Inter',
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w800,
+                                  ),
+                                ),
+                              ),
+                              const Spacer(),
+                              if (widget.correct.isNotEmpty)
+                                Container(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 10, vertical: 5),
+                                  decoration: BoxDecoration(
+                                    color: context.cardLowest,
+                                    borderRadius: BorderRadius.circular(999),
+                                    boxShadow: const <BoxShadow>[
+                                      BoxShadow(
+                                        color: Color(0x14141C2D),
+                                        blurRadius: 3,
+                                        offset: Offset(0, 1),
+                                      ),
                                     ],
-                                  ).createShader(bounds),
-                                  blendMode: BlendMode.srcIn,
-                                  child: const Text(
-                                    'Explanation',
-                                    style: TextStyle(
-                                      fontFamily: 'Inter',
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w800,
-                                    ),
+                                  ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: <Widget>[
+                                      Icon(Icons.auto_awesome,
+                                          size: 13,
+                                          color: context.textSecondary),
+                                      const SizedBox(width: 5),
+                                      Text(
+                                        'Correct Option ${widget.correct}',
+                                        style: RenanceText.caption.copyWith(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w600,
+                                          color: context.textSecondary,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
-                                const Spacer(),
-                                if (widget.correct.isNotEmpty)
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 10, vertical: 5),
-                                    decoration: BoxDecoration(
-                                      color: context.cardLowest,
-                                      borderRadius: BorderRadius.circular(999),
-                                      boxShadow: const <BoxShadow>[
-                                        BoxShadow(
-                                          color: Color(0x14141C2D),
-                                          blurRadius: 3,
-                                          offset: Offset(0, 1),
-                                        ),
-                                      ],
-                                    ),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: <Widget>[
-                                        Icon(Icons.auto_awesome,
-                                            size: 13,
-                                            color: context.textSecondary),
-                                        const SizedBox(width: 5),
-                                        Text(
-                                          'Correct Option ${widget.correct}',
-                                          style:
-                                              RenanceText.caption.copyWith(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w600,
-                                            color: context.textSecondary,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                              ],
-                            ),
-                            const SizedBox(height: 10),
-                            if (widget.explanation.trim().isEmpty)
-                              Text(
-                                'No written explanation ships with this '
-                                'question yet - try the AI explanation below.',
-                                style: RenanceText.bodySecondary.copyWith(
-                                  fontSize: 13.5,
-                                  color: context.textSecondary,
-                                  height: 1.55,
-                                ),
-                              )
-                            else
-                              QuestionText(
-                                widget.explanation,
-                                style: RenanceText.bodySecondary.copyWith(
-                                  fontSize: 14,
-                                  height: 1.6,
-                                ),
+                            ],
+                          ),
+                          const SizedBox(height: 10),
+                          if (widget.explanation.trim().isEmpty)
+                            Text(
+                              'No written explanation ships with this '
+                              'question yet - try the AI explanation below.',
+                              style: RenanceText.bodySecondary.copyWith(
+                                fontSize: 13.5,
+                                color: context.textSecondary,
+                                height: 1.55,
                               ),
-                          ],
-                        ),
-                      ),
-                    ] else ...<Widget>[
-                      const SizedBox(height: 6),
-                      Container(
-                        padding: const EdgeInsets.all(12),
-                        decoration: BoxDecoration(
-                          color: context.cardLow.withValues(alpha: 0.55),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Row(
-                          children: <Widget>[
-                            Icon(Icons.lock_outline,
-                                size: 17, color: context.textSecondary),
-                            const SizedBox(width: 8),
-                            Expanded(
-                              child: Text(
-                                'Submit the paper to unlock the correct '
-                                'option and its explanation.',
-                                style: RenanceText.caption.copyWith(
-                                  color: context.textSecondary,
-                                  height: 1.4,
-                                ),
+                            )
+                          else
+                            QuestionText(
+                              widget.explanation,
+                              style: RenanceText.bodySecondary.copyWith(
+                                fontSize: 14,
+                                height: 1.6,
                               ),
                             ),
-                          ],
-                        ),
+                        ],
                       ),
-                    ],
+                    ),
                     const SizedBox(height: 12),
                   ],
                 ),
@@ -460,8 +435,12 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     // The AI pill - the same floating position Myschool
-                    // puts "Get Myschool's AI Explanation".
-                    if (widget.attemptId.isNotEmpty && graded)
+                    // puts "Get Myschool's AI Explanation". Shown for
+                    // every question that carries its correct option
+                    // (web parity: the server /ai/chat route needs no
+                    // graded attempt, the tutor endpoint is tried first
+                    // whenever one exists).
+                    if (graded)
                       Align(
                         alignment: Alignment.center,
                         child: Material(
@@ -513,8 +492,7 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                           ),
                         ),
                       ),
-                    if (widget.attemptId.isNotEmpty && graded)
-                      const SizedBox(height: 12),
+                    if (graded) const SizedBox(height: 12),
                     // Report + Previous/Next - the school app's footer.
                     Row(
                       children: <Widget>[
@@ -557,8 +535,7 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                             ),
                             child: const Text('Previous',
                                 style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600)),
+                                    fontSize: 14, fontWeight: FontWeight.w600)),
                           ),
                         const SizedBox(width: 10),
                         if (widget.onNext != null)
@@ -572,8 +549,7 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                             ),
                             child: const Text('Next',
                                 style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600)),
+                                    fontSize: 14, fontWeight: FontWeight.w600)),
                           ),
                       ],
                     ),
@@ -619,7 +595,8 @@ class _ReviewOption extends StatelessWidget {
                 ? context.error.withValues(alpha: 0.05)
                 : context.card,
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: ring, width: isCorrect || isWrongPick ? 1.4 : 1),
+        border:
+            Border.all(color: ring, width: isCorrect || isWrongPick ? 1.4 : 1),
       ),
       child: Row(
         children: <Widget>[
@@ -644,16 +621,17 @@ class _ReviewOption extends StatelessWidget {
               text,
               style: RenanceText.bodyBase.copyWith(
                 fontSize: 14.5,
-                fontWeight:
-                    isCorrect || isWrongPick ? FontWeight.w600 : FontWeight.w400,
+                fontWeight: isCorrect || isWrongPick
+                    ? FontWeight.w600
+                    : FontWeight.w400,
                 height: 1.4,
               ),
             ),
           ),
           if (isCorrect)
-            const Icon(Icons.check_circle, size: 19, color: RenanceColors.emerald),
-          if (isWrongPick)
-            Icon(Icons.cancel, size: 19, color: context.error),
+            const Icon(Icons.check_circle,
+                size: 19, color: RenanceColors.emerald),
+          if (isWrongPick) Icon(Icons.cancel, size: 19, color: context.error),
         ],
       ),
     );
@@ -698,23 +676,34 @@ class _AiExplanationSheetState extends State<AiExplanationSheet> {
 
   Future<void> _ask() async {
     final ApiClient api = context.read<ApiClient>();
+    final String ask =
+        'Explain this past question step by step: "${widget.stem}" Options: '
+        '${widget.options.entries.map((MapEntry<String, String> e) => "${e.key}) ${e.value}").join("; ")}. '
+        '${widget.correct.isNotEmpty ? 'End with the correct option (${widget.correct}) and why the others are wrong.' : 'End with the correct option and why the others are wrong.'} '
+        'Include an everyday, real-life practical scenario (in clear, standard English) that helps ground the core concept.';
     try {
-      final TutorReply reply = await api.tutorChat(
-        attemptId: widget.attemptId,
-        questionId: widget.questionId,
-        messages: <TutorTurn>[
-          TutorTurn(
-            role: 'user',
-            content: 'Explain this past question step by step: '
-                '"${widget.stem}" Options: '
-                '${widget.options.entries.map((MapEntry<String, String> e) => "${e.key}) ${e.value}").join("; ")}. '
-                'End with the correct option (${widget.correct}) and why the '
-                'others are wrong.',
-          ),
-        ],
-      );
-      if (!mounted) return;
-      setState(() => _text = reply.text);
+      // Graded attempt: the server-anchored tutor endpoint (it knows the
+      // sitting). Reader/saved context: the study API's /ai/chat route -
+      // exactly the website's fallback, no attempt needed.
+      if (widget.attemptId.isNotEmpty) {
+        final TutorReply reply = await api.tutorChat(
+          attemptId: widget.attemptId,
+          questionId: widget.questionId,
+          messages: <TutorTurn>[
+            TutorTurn(role: 'user', content: ask),
+          ],
+        );
+        if (!mounted) return;
+        setState(() => _text = reply.text);
+      } else {
+        final AiChatReply reply = await api.aiChat(
+          <Map<String, String>>[
+            <String, String>{'role': 'user', 'content': ask},
+          ],
+        );
+        if (!mounted) return;
+        setState(() => _text = reply.text);
+      }
     } on ApiException catch (e) {
       if (!mounted) return;
       setState(() => _error = e.message);
@@ -765,8 +754,8 @@ class _AiExplanationSheetState extends State<AiExplanationSheet> {
                           shape: BoxShape.circle,
                           border: Border.all(color: context.error),
                         ),
-                        child: Icon(Icons.close,
-                            size: 19, color: context.error),
+                        child:
+                            Icon(Icons.close, size: 19, color: context.error),
                       ),
                     ),
                     const SizedBox(width: 12),
