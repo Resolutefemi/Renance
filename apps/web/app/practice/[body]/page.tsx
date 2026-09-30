@@ -8,7 +8,7 @@ import type { ExamBodySlug } from '@/lib/seo-types';
 /**
  * /practice/[body]
  *
- * Exam-body index page — lists all subjects available for JAMB, WAEC, NECO, etc.
+ * Exam-body index page - lists all subjects available for JAMB, WAEC, NECO, etc.
  * One page per exam body. Baked at build time.
  *
  * Structured data:
@@ -28,7 +28,7 @@ const BODY_META: Record<
     emoji: '🎓',
     description:
       'Free JAMB past questions across all subjects with full explanations and CBT mode. ' +
-      'UTME prep that actually works — Nigeria\'s largest JAMB practice bank.',
+      'UTME prep that actually works - Nigeria\'s largest JAMB practice bank.',
   },
   waec: {
     title: 'WAEC',
@@ -71,7 +71,7 @@ export async function generateMetadata({
   const meta = BODY_META[body as ExamBodySlug];
   if (!meta) return { title: 'Past Questions | Renance' };
 
-  const title = `${meta.title} Past Questions — All Subjects | Renance`;
+  const title = `${meta.title} Past Questions - All Subjects | Renance`;
   return {
     title,
     description: meta.description,

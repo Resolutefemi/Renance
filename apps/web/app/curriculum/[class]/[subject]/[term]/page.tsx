@@ -43,7 +43,7 @@ export async function generateMetadata({
 
   if (!scheme) return { title: 'Scheme of Work | Renance' };
 
-  const title = `${scheme.subjectTitle} Scheme of Work — ${scheme.classTitle} (${scheme.termTitle}) | Renance`;
+  const title = `${scheme.subjectTitle} Scheme of Work - ${scheme.classTitle} (${scheme.termTitle}) | Renance`;
   const description =
     `Official NERDC approved ${scheme.subjectTitle} scheme of work for ${scheme.classTitle}, ${scheme.termTitle}. ` +
     `Covers ${scheme.weeks.length} weeks of lesson plans, topics, and subtopics. Free on Renance.`;

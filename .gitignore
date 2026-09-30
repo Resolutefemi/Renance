@@ -17,6 +17,8 @@ coverage/
 pnpm-debug.log*
 .DS_Store
 .agents/
+__pycache__/
+*.pyc
 
 # flutter / dart
 .dart_tool/

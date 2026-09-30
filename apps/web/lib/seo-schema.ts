@@ -1,9 +1,9 @@
 /**
  * @file apps/web/lib/seo-schema.ts
  *
- * Phase 1 — Automated JSON-LD Schema Generator for Renance Programmatic SEO.
+ * Phase 1 - Automated JSON-LD Schema Generator for Renance Programmatic SEO.
  *
- * Pure TypeScript — no `fs` calls, no Node APIs. Safe to import from both
+ * Pure TypeScript - no `fs` calls, no Node APIs. Safe to import from both
  * Server Components and Server Actions. Do NOT add 'use client' here.
  *
  * Exports:
@@ -44,7 +44,7 @@ export function buildQuizSchema(paper: SEOExamPaperSummary): SchemaOrgQuiz {
     '@type': 'Quiz',
     name: `${paper.bodyTitle} ${paper.subjectTitle} ${paper.year} Past Questions`,
     description: `Practice ${paper.totalQuestions} real ${paper.bodyTitle} ${paper.subjectTitle} past questions from ${paper.year}. ` +
-      `Full explanations included. Free on Renance — Nigeria's largest exam prep platform.`,
+      `Full explanations included. Free on Renance - Nigeria's largest exam prep platform.`,
     educationalLevel: educationalLevelFor(paper.body),
     about: {
       '@type': 'Thing',
@@ -159,7 +159,7 @@ export function buildCourseSchema(scheme: SEOCurriculumScheme): Record<string, u
   return {
     '@context': 'https://schema.org',
     '@type': 'Course',
-    name: `${scheme.subjectTitle} — ${scheme.classTitle} ${scheme.termTitle} Scheme of Work`,
+    name: `${scheme.subjectTitle} - ${scheme.classTitle} ${scheme.termTitle} Scheme of Work`,
     description:
       `NERDC-approved ${scheme.subjectTitle} scheme of work for ${scheme.classTitle}, ` +
       `${scheme.termTitle}. Covers ${scheme.weeks.length} weeks of topics and learning objectives.`,
@@ -247,7 +247,7 @@ export function buildExamFAQSchema(paper: SEOExamPaperSummary): Record<string, u
       q: `Is ${paper.bodyTitle} ${paper.subjectTitle} ${paper.year} hard?`,
       a: `Every student's experience varies, but practising past questions is the most reliable way to prepare. ` +
         `Renance gives you instant access to all ${paper.year} ${paper.bodyTitle} ${paper.subjectTitle} questions with ` +
-        `step-by-step explanations — completely free.`,
+        `step-by-step explanations - completely free.`,
     },
   ];
 

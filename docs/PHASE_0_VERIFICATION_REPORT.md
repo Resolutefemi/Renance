@@ -50,7 +50,7 @@ All inspected past questions conform to the standard CBT question schema:
 
 - `apps/mobile/` (Flutter Android App): **FROZEN / UNTOUCHED**
 - `apps/study-api/` (Go Backend API): **FROZEN / UNTOUCHED**
-- `apps/web/` (Next.js 15 Web Application): **TARGET SCOPE FOR PHASES 1–5**
+- `apps/web/` (Next.js 15 Web Application): **TARGET SCOPE FOR PHASES 1-5**
 
 ---
 

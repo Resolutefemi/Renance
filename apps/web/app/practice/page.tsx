@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { buildBreadcrumbSchema, serializeJsonLd } from '@/lib/seo-schema';
 
 /**
- * /practice  — SEO practice hub root
+ * /practice  - SEO practice hub root
  *
  * Entry page for the entire programmatic SEO tree.
  * Links out to each exam body index page.
@@ -12,10 +12,10 @@ import { buildBreadcrumbSchema, serializeJsonLd } from '@/lib/seo-schema';
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: 'Practice Past Questions — JAMB, WAEC, NECO | Renance',
+  title: 'Practice Past Questions - JAMB, WAEC, NECO | Renance',
   description:
     'Free JAMB, WAEC, NECO and Post UTME past questions with full explanations and CBT mode. ' +
-    'Nigeria\'s largest exam practice bank — 221,000+ questions, 100% free.',
+    'Nigeria\'s largest exam practice bank - 221,000+ questions, 100% free.',
   keywords: [
     'JAMB past questions',
     'WAEC past questions',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://renance.app/practice/' },
   openGraph: {
     type: 'website',
-    title: 'Practice Past Questions — JAMB, WAEC, NECO | Renance',
+    title: 'Practice Past Questions - JAMB, WAEC, NECO | Renance',
     description:
       'Free JAMB, WAEC, NECO and Post UTME past questions with full explanations. Nigeria\'s largest exam practice bank.',
     url: 'https://renance.app/practice/',
@@ -92,7 +92,7 @@ export default function PracticeRootPage() {
             </h1>
             <p className="mt-3 text-sm text-on-surface-variant max-w-lg mx-auto leading-relaxed">
               221,000+ free past questions across JAMB, WAEC, NECO and Post UTME.
-              Full explanations, CBT timer, instant grading — built for Nigerian students.
+              Full explanations, CBT timer, instant grading - built for Nigerian students.
             </p>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-xs text-on-surface-variant">
               <span className="flex items-center gap-1">

@@ -6,7 +6,7 @@ import { SITE_URL } from '@/lib/site-url';
 export const dynamic = 'force-static';
 
 /**
- * Phase 4 — Search Engine & AI Crawler Policy (Robots.txt)
+ * Phase 4 - Search Engine & AI Crawler Policy (Robots.txt)
  *
  * Configures crawl directives for Googlebot, Bingbot, and Generative AI engines
  * (GPTBot, PerplexityBot, ClaudeBot, Google-Extended) to optimize crawl budget

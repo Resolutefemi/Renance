@@ -1,5 +1,5 @@
 /**
- * Phase 5 — Store Links & Growth Telemetry Configuration
+ * Phase 5 - Store Links & Growth Telemetry Configuration
  *
  * Single source of truth for the Google Play Store app listing URL,
  * UTM campaign tracking, and fallback web practice links.

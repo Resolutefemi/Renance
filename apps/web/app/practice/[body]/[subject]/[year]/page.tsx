@@ -17,7 +17,7 @@ import InteractiveQuiz from './interactive-quiz';
 /**
  * /practice/[body]/[subject]/[year]
  *
- * Static exam-paper page — one page per (exam body × subject × year) triple.
+ * Static exam-paper page - one page per (exam body × subject × year) triple.
  * Baked entirely at build time via generateStaticParams() from the data vault.
  *
  * Structured data injected:

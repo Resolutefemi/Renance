@@ -13,7 +13,7 @@ import { buildBreadcrumbSchema, serializeJsonLd } from '@/lib/seo-schema';
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: 'NERDC Curriculum & Schemes of Work — Primary to Senior Secondary | Renance',
+  title: 'NERDC Curriculum & Schemes of Work - Primary to Senior Secondary | Renance',
   description:
     'Free official Nigerian NERDC curriculum and approved schemes of work for Primary, JSS, and SSS classes. ' +
     'Week-by-week lesson topics, learning objectives, and curriculum breakdown on Renance.',

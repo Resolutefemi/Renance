@@ -27,7 +27,7 @@ function PlayStoreIcon({ className = 'h-4 w-4 shrink-0' }: { className?: string 
 /**
  * /practice/[body]/[subject]
  *
- * Subject pillar page — one per (exam body × subject).
+ * Subject pillar page - one per (exam body × subject).
  * Lists every available year as a link to its exam-paper page.
  *
  * Structured data:
@@ -57,10 +57,10 @@ export async function generateMetadata({
 
   const yearRangeText =
     pillar.availableYears.length > 0
-      ? `(${pillar.availableYears.at(-1)}–${pillar.availableYears[0]})`
+      ? `(${pillar.availableYears.at(-1)}-${pillar.availableYears[0]})`
       : '';
 
-  const title = `${pillar.bodyTitle} ${pillar.subjectTitle} Past Questions — All Years`;
+  const title = `${pillar.bodyTitle} ${pillar.subjectTitle} Past Questions - All Years`;
   const description =
     `${pillar.totalBankedQuestions.toLocaleString()} ${pillar.bodyTitle} ${pillar.subjectTitle} past questions ` +
     `across ${pillar.availableYears.length} years ${yearRangeText}. ` +
@@ -124,7 +124,7 @@ export default async function SubjectPillarPage({
   const faqSchema = buildFAQSchema([
     {
       q: `How many ${pillar.bodyTitle} ${pillar.subjectTitle} past questions are on Renance?`,
-      a: `Renance has ${pillar.totalBankedQuestions.toLocaleString()} ${pillar.bodyTitle} ${pillar.subjectTitle} past questions spanning ${pillar.availableYears.length} years — all free with full explanations.`,
+      a: `Renance has ${pillar.totalBankedQuestions.toLocaleString()} ${pillar.bodyTitle} ${pillar.subjectTitle} past questions spanning ${pillar.availableYears.length} years - all free with full explanations.`,
     },
     {
       q: `What years of ${pillar.bodyTitle} ${pillar.subjectTitle} past questions are available?`,
@@ -132,7 +132,7 @@ export default async function SubjectPillarPage({
     },
     {
       q: `Is ${pillar.bodyTitle} ${pillar.subjectTitle} hard?`,
-      a: `Consistent practice with past questions is the most reliable way to prepare. Renance gives you all ${pillar.totalBankedQuestions.toLocaleString()} questions in an interactive CBT environment with instant feedback — completely free.`,
+      a: `Consistent practice with past questions is the most reliable way to prepare. Renance gives you all ${pillar.totalBankedQuestions.toLocaleString()} questions in an interactive CBT environment with instant feedback - completely free.`,
     },
   ]);
 
@@ -175,7 +175,7 @@ export default async function SubjectPillarPage({
               {pillar.totalBankedQuestions.toLocaleString()} questions ·{' '}
               {pillar.availableYears.length} years
               {pillar.availableYears.length > 0
-                ? ` · ${pillar.availableYears.at(-1)}–${pillar.availableYears[0]}`
+                ? ` · ${pillar.availableYears.at(-1)}-${pillar.availableYears[0]}`
                 : ''}
             </p>
           </header>

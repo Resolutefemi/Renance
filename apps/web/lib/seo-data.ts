@@ -1,7 +1,7 @@
 /**
  * @file apps/web/lib/seo-data.ts
  *
- * Phase 1 — Data Harvester for Renance Programmatic SEO Engine.
+ * Phase 1 - Data Harvester for Renance Programmatic SEO Engine.
  *
  * SERVER-ONLY: uses Node `fs` APIs. Never import this from a Client Component.
  * Uses the same dataDir() walk-up pattern as site-data.ts so it resolves
@@ -227,7 +227,7 @@ export function loadSEOExamPaper(
     subjectTitle: slugToTitle(subjectSlug),
     year,
     totalQuestions: forYear.length,
-    // JAMB is 2 hrs; WAEC/NECO are typically 3 hrs — sensible defaults
+    // JAMB is 2 hrs; WAEC/NECO are typically 3 hrs - sensible defaults
     durationMinutes: body === 'jamb' ? 120 : 180,
     sampleQuestions: sample,
     canonicalUrl: `${SITE_URL}/practice/${body}/${subjectSlug}/${year}/`,
@@ -274,7 +274,7 @@ export function loadSEOSubjectPillar(
  * Returns every (body, subject, year) triple that has at least one question.
  * Used in `generateStaticParams()` for the dynamic SEO exam-paper pages.
  *
- * ⚠️  This scans *all* question bundles — run only at build time.
+ * ⚠️  This scans *all* question bundles - run only at build time.
  */
 export function getAvailableSEOExamParams(): Array<{
   body: ExamBodySlug;
@@ -305,7 +305,7 @@ export function getAvailableSEOExamParams(): Array<{
           results.push({ body: bodySlug, subject: subjectSlug, year: String(year) });
         }
       } catch {
-        // skip malformed bundles silently — build must never crash
+        // skip malformed bundles silently - build must never crash
       }
     }
   }
