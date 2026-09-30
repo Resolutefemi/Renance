@@ -11,6 +11,12 @@ export const dynamic = 'force-static';
  */
 import { loadLessons } from '@/lib/site-data';
 import { loadSchools, loadCatalog } from '@/lib/university-data';
+import {
+  getAllSEOCurriculumParams,
+  getAvailableCurriculumClassParams,
+  getAvailableSEOExamParams,
+  getAvailableSEOSubjectParams,
+} from '@/lib/seo-data';
 
 import { SITE_URL } from '@/lib/site-url';
 
@@ -64,5 +70,79 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ...courseEntries,
       ];
     });
-  return [...statics, ...lessonEntries, ...schoolEntries];
+  // ── Phase 2: /practice/* SEO routes ──────────────────────────────────────
+  // Root hub
+  const practiceRoot = [
+    {
+      url: `${SITE_URL}/practice/`,
+      lastModified,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+  ];
+
+  // One entry per exam body (/practice/jamb/, /practice/waec/, etc.)
+  const bodyEntries = Array.from(
+    new Set(getAvailableSEOSubjectParams().map((p) => p.body)),
+  ).map((body) => ({
+    url: `${SITE_URL}/practice/${body}/`,
+    lastModified,
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }));
+
+  // One entry per subject pillar (/practice/jamb/physics/, etc.)
+  const subjectEntries = getAvailableSEOSubjectParams().map(({ body, subject }) => ({
+    url: `${SITE_URL}/practice/${body}/${subject}/`,
+    lastModified,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }));
+
+  // One entry per exam-paper year (/practice/jamb/physics/2023/, etc.)
+  const paperEntries = getAvailableSEOExamParams().map(({ body, subject, year }) => ({
+    url: `${SITE_URL}/practice/${body}/${subject}/${year}/`,
+    lastModified,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  // ── Phase 3: /curriculum/* NERDC routes ──────────────────────────────────
+  const curriculumRoot = [
+    {
+      url: `${SITE_URL}/curriculum/`,
+      lastModified,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+  ];
+
+  const curriculumClassEntries = getAvailableCurriculumClassParams().map(({ classLevel }) => ({
+    url: `${SITE_URL}/curriculum/${classLevel}/`,
+    lastModified,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }));
+
+  const curriculumTermEntries = getAllSEOCurriculumParams().map(
+    ({ classLevel, subject, term }) => ({
+      url: `${SITE_URL}/curriculum/${classLevel}/${subject}/${term}/`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    }),
+  );
+
+  return [
+    ...statics,
+    ...lessonEntries,
+    ...schoolEntries,
+    ...practiceRoot,
+    ...bodyEntries,
+    ...subjectEntries,
+    ...paperEntries,
+    ...curriculumRoot,
+    ...curriculumClassEntries,
+    ...curriculumTermEntries,
+  ];
 }
