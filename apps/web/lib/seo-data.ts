@@ -18,6 +18,7 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 
+import { SITE_URL } from './site-url';
 import type {
   ExamBodySlug,
   SEOCurriculumScheme,
@@ -29,20 +30,18 @@ import type {
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
-const SITE_URL = 'https://renance.app';
-
 /** Maximum sample questions to embed in a single paper summary. */
 const MAX_SAMPLE_QUESTIONS = 5;
 
 /**
- * Maps the URL-safe body slug → directory name inside data/questions/.
+ * Maps the URL-safe body slug -> directory name inside data/questions/.
  * Extend when new exam bodies are added to the data vault.
  */
 const BODY_DIR_MAP: Record<ExamBodySlug, string> = {
   jamb: 'JAMB',
   waec: 'WAEC',
   neco: 'NECO',
-  'post-utme': 'POST-UTME',
+  'post-utme': 'POST_UTME',
 };
 
 /** Human-readable titles for each exam body. */
