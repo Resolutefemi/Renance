@@ -349,6 +349,43 @@ function prettyPaper(code: string): string {
   return subject ? `${prettyBody} · ${subject}` : prettyBody || code;
 }
 
+/** Subject slugs embedded in a composed paper code, humanized:
+ *  "jamb-mock-english-physics-biology~n=100" -> English, Physics, Biology. */
+function subjectsFromCode(code: string): string[] {
+  const prefixes = ['jamb-mock-', 'jamb-custom-', 'waec-custom-', 'neco-custom-'];
+  for (const p of prefixes) {
+    if (code.startsWith(p) && code.length > p.length) {
+      let body = code.slice(p.length);
+      const tilde = body.indexOf('~');
+      if (tilde >= 0) body = body.slice(0, tilde);
+      return body
+        .split('-')
+        .filter(Boolean)
+        .map((s) => s.charAt(0).toUpperCase() + s.slice(1));
+    }
+  }
+  return [];
+}
+
+/** The history row's exam-type tag: JAMB / WAEC / NECO / Challenge / CBT. */
+function examTypeOf(code: string): string {
+  if (code.startsWith('jamb-')) return 'JAMB';
+  if (code.startsWith('waec-')) return 'WAEC';
+  if (code.startsWith('neco-')) return 'NECO';
+  if (code.startsWith('daily-')) return 'Challenge';
+  return 'CBT';
+}
+
+/** "Sep 05, 2026" - the reference history row's date format. */
+function shortDate(iso?: string): string {
+  if (!iso) return '';
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return '';
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return `${months[d.getMonth()]} ${String(d.getDate()).padStart(2, '0')}, ${d.getFullYear()}`;
+}
+
 // ------------------------------------------------------------ review queue
 
 function ReviewQueue() {
@@ -356,6 +393,20 @@ function ReviewQueue() {
   const [attempts, setAttempts] = useState<AttemptRow[] | null>(null);
   const [showAllPapers, setShowAllPapers] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // Clear-all watermark (localStorage): hides the papers on the list at
+  // tap time on this device; new papers still appear, server records and
+  // leaderboard entries are untouched.
+  const [clearedAt, setClearedAt] = useState(0);
+  const [confirmClear, setConfirmClear] = useState(false);
+  useEffect(() => {
+    setClearedAt(Number(localStorage.getItem('renance.examHistory.clearedAt') || 0));
+  }, []);
+  const clearAllHistory = () => {
+    const now = Date.now();
+    localStorage.setItem('renance.examHistory.clearedAt', String(now));
+    setClearedAt(now);
+    setConfirmClear(false);
+  };
 
   useEffect(() => {
     let alive = true;
@@ -404,6 +455,9 @@ function ReviewQueue() {
   const rows = queuePreview(sum);
   const gradedAttempts = attempts.filter((a) => a.status === 'graded' && a.score != null);
   const openAttempts = attempts.filter((a) => a.status !== 'graded' && a.status !== 'error');
+  const visibleGraded = gradedAttempts.filter(
+    (a) => !a.submittedAt || !clearedAt || new Date(a.submittedAt).getTime() > clearedAt,
+  );
   const latestGraded = gradedAttempts[0];
 
   return (
@@ -470,64 +524,73 @@ function ReviewQueue() {
         </section>
       )}
 
-      {/* Exam history: every paper, the score bar telling the story */}
+      {/* Exam history - the reference design: numbered hairline rows,
+          subjects, "JAMB · Sep 05, 2026", Score % on the right. */}
       {(gradedAttempts.length > 0 || openAttempts.length > 0) && (
         <section className="mt-8">
-          <div className="flex items-baseline justify-between">
-            <h2 className="text-lg font-semibold tracking-tight text-on-surface">Exam history</h2>
-            <span className="text-sm text-on-surface-variant">
-              {gradedAttempts.length} graded
-            </span>
+          <div className="flex items-center justify-between gap-3">
+            <h2 className="text-xl font-bold tracking-tight text-on-surface">
+              Exam History
+            </h2>
+            {visibleGraded.length > 0 && (
+              <button
+                type="button"
+                onClick={() =>
+                  confirmClear ? clearAllHistory() : setConfirmClear(true)
+                }
+                onBlur={() => setConfirmClear(false)}
+                className="rounded-[10px] border border-outline-variant px-3 py-1.5 text-[13px] font-semibold text-on-surface transition hover:bg-surface-container"
+              >
+                {confirmClear ? 'Tap again to clear' : 'Clear all Exam History'}
+              </button>
+            )}
           </div>
-          <div className="mt-4 space-y-2.5">
-            {[...openAttempts, ...gradedAttempts]
+          <div className="mt-3 divide-y divide-outline-variant/40">
+            {[...openAttempts, ...visibleGraded]
               .slice(0, showAllPapers ? undefined : 6)
-              .map((a) => {
+              .map((a, idx) => {
                 const pct =
                   a.score != null && a.total ? Math.round((a.score * 100) / a.total) : null;
                 const graded = a.status === 'graded' && pct != null;
-                const date = a.submittedAt
-                  ? new Date(a.submittedAt).toLocaleDateString('en-NG', {
-                      day: 'numeric', month: 'short',
-                    })
-                  : '';
+                const type = examTypeOf(a.code);
+                const subjects = subjectsFromCode(a.code);
+                const nameLine =
+                  subjects.length > 0
+                    ? subjects.join(', ')
+                    : prettyPaper(a.code);
+                const date = shortDate(a.submittedAt);
                 return (
                   <Link
                     key={a.attemptId}
                     href={a.status === 'graded' ? `/review?attemptId=${a.attemptId}` : '/review'}
-                    className="block rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] transition hover:shadow-md"
+                    className="flex items-center gap-2 px-1 py-4 transition hover:bg-surface-container/40"
                   >
-                    <div className="flex items-center justify-between gap-3">
-                      <div className="min-w-0">
-                        <p className="truncate text-[14.5px] font-semibold text-on-surface">
-                          {prettyPaper(a.code)}
-                        </p>
-                        <p className="mt-0.5 font-mono text-[11px] text-on-surface-variant">
-                          {date || 'in progress'}
-                          {graded ? ` · ${a.score}/${a.total} correct` : ` · ${a.status}`}
-                        </p>
-                      </div>
-                      {graded ? (
-                        <p
-                          className={`shrink-0 font-mono text-base font-bold ${
-                            (pct ?? 0) >= 50 ? 'text-on-surface' : 'text-error'
-                          }`}
-                        >
-                          {pct}%
-                        </p>
-                      ) : (
-                        <span className="shrink-0 rounded-full bg-surface-container px-3 py-1 text-[11px] font-medium text-on-surface-variant">
-                          resume
+                    <span className="w-8 shrink-0 text-xl font-bold text-on-surface">
+                      {idx + 1}
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className="block truncate text-[17px] font-semibold leading-snug text-on-surface">
+                        {nameLine}
+                      </span>
+                      <span className="mt-1 block text-[14.5px] text-on-surface-variant">
+                        {graded || date ? `${type} · ${date}` : `${type} · in progress`}
+                      </span>
+                    </span>
+                    {graded ? (
+                      <span className="shrink-0 text-right">
+                        <span className="block text-[21px] font-bold leading-tight text-on-surface">
+                          Score {pct}%
                         </span>
-                      )}
-                    </div>
-                    {graded && (
-                      <div className="mt-2.5 h-1.5 overflow-hidden rounded-full bg-surface-container">
-                        <div
-                          className={`h-full rounded-full ${(pct ?? 0) >= 50 ? 'bg-on-surface' : 'bg-error'}`}
-                          style={{ width: `${pct}%` }}
-                        />
-                      </div>
+                        {type === 'JAMB' && (
+                          <span className="mt-0.5 block text-[13px] text-on-surface-variant">
+                            JAMB ({a.score}/{a.total})
+                          </span>
+                        )}
+                      </span>
+                    ) : (
+                      <span className="shrink-0 rounded-full bg-surface-container px-3 py-1 text-[11px] font-medium text-on-surface-variant">
+                        resume
+                      </span>
                     )}
                   </Link>
                 );
@@ -536,7 +599,7 @@ function ReviewQueue() {
               <button
                 type="button"
                 onClick={() => setShowAllPapers((v) => !v)}
-                className="mx-auto block rounded-full border border-outline px-4 py-1.5 text-[12.5px] font-medium text-on-surface transition hover:bg-surface-container"
+                className="mx-auto mt-4 block rounded-full border border-outline px-4 py-1.5 text-[12.5px] font-medium text-on-surface transition hover:bg-surface-container"
               >
                 {showAllPapers
                   ? 'Show fewer'

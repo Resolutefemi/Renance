@@ -73,10 +73,17 @@ class ApiClient {
           )
           .timeout(timeout);
       res = await http.Response.fromStream(streamed);
-    } on SocketException catch (e) {
-      throw NetworkException('No connection to Renance servers (${e.message})');
-    } on http.ClientException catch (e) {
-      throw NetworkException('Renance servers unreachable (${e.message})');
+    } on SocketException {
+      // Raw OS errors read "Failed host lookup: 'renance-api.onrender.com'"
+      // - the API host must never leak into student-facing offline copy
+      // (founder rule), so the raw message is dropped entirely.
+      throw NetworkException(
+        'No connection to Renance servers. Check your internet and try again.',
+      );
+    } on http.ClientException {
+      throw NetworkException(
+        'Renance servers are unreachable. Check your connection and try again.',
+      );
     } on TimeoutException {
       throw NetworkException('Renance servers timed out, try again');
     }

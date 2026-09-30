@@ -75,7 +75,6 @@ class _StudyReaderScreenState extends State<StudyReaderScreen> {
   late String _topicFilter = widget.initialTopic;
   String _search = '';
   int _limit = _pageSize;
-  int? _sheetIdx;
   final ScrollController _scroll = ScrollController();
   final Map<int, GlobalKey> _cardKeys = <int, GlobalKey>{};
 
@@ -112,8 +111,7 @@ class _StudyReaderScreenState extends State<StudyReaderScreen> {
     });
   }
 
-  bool isSaved(String questionId) =>
-      _saved?.isSaved(questionId) ?? false;
+  bool isSaved(String questionId) => _saved?.isSaved(questionId) ?? false;
 
   Future<void> _toggleSave(BundleQuestion q) async {
     final SavedStore? store = _saved;
@@ -190,7 +188,6 @@ class _StudyReaderScreenState extends State<StudyReaderScreen> {
   void _jumpTo(int index, int filteredCount) {
     setState(() {
       if (_limit < index + 1) _limit = index + 1;
-      _sheetIdx = null;
     });
     WidgetsBinding.instance.addPostFrameCallback((_) {
       final BuildContext? ctx = _cardKeys[index]?.currentContext;
@@ -203,6 +200,25 @@ class _StudyReaderScreenState extends State<StudyReaderScreen> {
         );
       }
     });
+  }
+
+  /// Opens the explanation as a REAL modal bottom sheet (the review
+  /// screen's pattern): the DraggableScrollableSheet anchors to the
+  /// bottom with a scrim behind it, its inner ListView scrolls the
+  /// question + options + explanation, and the footer buttons stay
+  /// pinned - the old inline Stack overlay used to hang from the top
+  /// and drags resized the panel instead of scrolling it.
+  Future<void> _openExplanation(int index, List<BundleQuestion> filtered) {
+    return showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (BuildContext sheetContext) => _ExplanationPager(
+        state: this,
+        questions: filtered,
+        initialIndex: index,
+      ),
+    );
   }
 
   // -------------------------------------------------------------- build
@@ -292,7 +308,7 @@ class _StudyReaderScreenState extends State<StudyReaderScreen> {
                                 q: visible[i],
                                 n: i + 1,
                                 saved: isSaved(visible[i].id),
-                                onExplain: () => setState(() => _sheetIdx = i),
+                                onExplain: () => _openExplanation(i, filtered),
                                 onToggleSave: () => _toggleSave(visible[i]),
                               ),
                             );
@@ -305,13 +321,6 @@ class _StudyReaderScreenState extends State<StudyReaderScreen> {
                       right: 0,
                       bottom: 0,
                       child: _buildBottomStrip(filtered),
-                    ),
-                  // ---- the explanation sheet --------------------------
-                  if (_sheetIdx != null && _sheetIdx! < filtered.length)
-                    _ExplanationPager(
-                      state: this,
-                      questions: filtered,
-                      initialIndex: _sheetIdx!,
                     ),
                 ],
               ),
@@ -347,8 +356,7 @@ class _StudyReaderScreenState extends State<StudyReaderScreen> {
                   customBorder: const CircleBorder(),
                   child: Padding(
                     padding: const EdgeInsets.all(8),
-                    child:
-                        Icon(Icons.arrow_back, size: 22, color: context.ink),
+                    child: Icon(Icons.arrow_back, size: 22, color: context.ink),
                   ),
                 ),
                 const SizedBox(width: 6),
@@ -413,7 +421,8 @@ class _StudyReaderScreenState extends State<StudyReaderScreen> {
                     value: _yearFilter,
                     hint: 'All years',
                     items: <MapEntry<int?, String>>[
-                      for (final int y in years) MapEntry<int?, String>(y, '$y'),
+                      for (final int y in years)
+                        MapEntry<int?, String>(y, '$y'),
                     ],
                     onChanged: (int? v) => setState(() {
                       _yearFilter = v;
@@ -450,11 +459,11 @@ class _StudyReaderScreenState extends State<StudyReaderScreen> {
               style: RenanceText.bodyBase.copyWith(color: context.ink),
               decoration: InputDecoration(
                 isDense: true,
-                prefixIcon: Icon(Icons.search,
-                    size: 20, color: context.textSecondary),
+                prefixIcon:
+                    Icon(Icons.search, size: 20, color: context.textSecondary),
                 hintText: 'Search the questions…',
-                hintStyle: RenanceText.bodyBase
-                    .copyWith(color: context.textSecondary),
+                hintStyle:
+                    RenanceText.bodyBase.copyWith(color: context.textSecondary),
                 contentPadding:
                     const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
                 filled: true,
@@ -607,8 +616,7 @@ class _StudyReaderScreenState extends State<StudyReaderScreen> {
           isDense: true,
           borderRadius: BorderRadius.circular(12),
           dropdownColor: context.cardLowest,
-          icon:
-              Icon(Icons.expand_more, size: 18, color: context.textSecondary),
+          icon: Icon(Icons.expand_more, size: 18, color: context.textSecondary),
           hint: Text(hint,
               style: RenanceText.labelMono
                   .copyWith(fontSize: 12, color: context.textSecondary)),
@@ -616,8 +624,7 @@ class _StudyReaderScreenState extends State<StudyReaderScreen> {
             DropdownMenuItem<T>(
               value: null,
               child: Text(hint,
-                  style:
-                      RenanceText.labelMono.copyWith(fontSize: 12)),
+                  style: RenanceText.labelMono.copyWith(fontSize: 12)),
             ),
             for (final MapEntry<T?, String> it in items)
               DropdownMenuItem<T>(
@@ -691,8 +698,7 @@ class _ExplanationPagerState extends State<_ExplanationPager> {
       onReport: () {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text(
-                'Report noted on question ${q.id}. Thanks for the '
+            content: Text('Report noted on question ${q.id}. Thanks for the '
                 'flag, it goes straight to the question team.'),
           ),
         );
@@ -745,8 +751,8 @@ class _ReaderCard extends StatelessWidget {
                 ),
                 child: Text(
                   'Q$n',
-                  style: RenanceText.labelMono.copyWith(
-                      fontSize: 12.5, fontWeight: FontWeight.w600),
+                  style: RenanceText.labelMono
+                      .copyWith(fontSize: 12.5, fontWeight: FontWeight.w600),
                 ),
               ),
               if (q.topic.isNotEmpty) ...<Widget>[
@@ -777,8 +783,7 @@ class _ReaderCard extends StatelessWidget {
                 onPressed: () => Clipboard.setData(ClipboardData(
                   text: <String>[
                     q.stem,
-                    for (final MapEntry<String, String> e
-                        in q.options.entries)
+                    for (final MapEntry<String, String> e in q.options.entries)
                       '${e.key}) ${e.value}',
                   ].join('\n'),
                 )),
@@ -795,8 +800,8 @@ class _ReaderCard extends StatelessWidget {
           const SizedBox(height: 8),
           QuestionText(
             q.stem,
-            style: RenanceText.bodyBase.copyWith(
-                fontSize: 15.5, height: 1.45, color: context.ink),
+            style: RenanceText.bodyBase
+                .copyWith(fontSize: 15.5, height: 1.45, color: context.ink),
           ),
           if (q.image.isNotEmpty) ...<Widget>[
             const SizedBox(height: 10),
@@ -834,8 +839,8 @@ class _ReaderCard extends StatelessWidget {
                     Expanded(
                       child: QuestionText(
                         e.value,
-                        style: RenanceText.bodyBase.copyWith(
-                            fontSize: 13.5, color: context.ink),
+                        style: RenanceText.bodyBase
+                            .copyWith(fontSize: 13.5, color: context.ink),
                       ),
                     ),
                   ],
@@ -887,9 +892,7 @@ class _PassageDrawer extends StatelessWidget {
         title: Text(
           'COMPREHENSION PASSAGE',
           style: RenanceText.labelMono.copyWith(
-              fontSize: 10,
-              letterSpacing: 1.1,
-              color: context.textSecondary),
+              fontSize: 10, letterSpacing: 1.1, color: context.textSecondary),
         ),
         children: <Widget>[
           ConstrainedBox(

@@ -13,6 +13,7 @@ import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
 import 'downloads_screen.dart';
+import 'exam_history_screen.dart';
 import 'focus_sheet.dart';
 import 'gpa_screen.dart';
 import 'home_screen.dart' show AvatarCircle;
@@ -208,6 +209,15 @@ class ProfileScreen extends StatelessWidget {
         // (My Packs, GPA Calculator; Downloads stays as the mobile
         // affordance for the on-device pack library) ----------------------
         _MenuGroup(items: <_MenuItem>[
+          _MenuItem(
+            icon: Icons.history_edu,
+            tint: context.ink,
+            label: 'Exam History',
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute<void>(
+                  builder: (_) => const ExamHistoryScreen()));
+            },
+          ),
           _MenuItem(
             icon: Icons.insights,
             tint: context.ink,

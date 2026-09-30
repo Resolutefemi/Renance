@@ -78,6 +78,16 @@ BUN=$(curl -fsS "$BASE/bundles/$PACK" -H "Authorization: Bearer $TOKEN")
 Q1=$(printf '%s' "$BUN" | jsonget "[q['id'] for q in d['questions'] if q.get('topic')][0]")
 Q2=$(printf '%s' "$BUN" | jsonget "[q['id'] for q in d['questions'] if q.get('topic')][1]")
 
+step "GET /bundles/$PACK → per-question answers ship (founder directive 2026-09, web statics parity)"
+printf '%s' "$BUN" | python3 -c "
+import json,sys
+b=json.load(sys.stdin)
+mcq=[q for q in b['questions'] if q.get('options')]
+assert mcq, 'bank carries no MCQs to check'
+withans=[q for q in mcq if q.get('answer')]
+assert withans, 'static bank must ship per-question answer material (study reader grades/explains offline)'
+"
+
 step "POST /attempts → attemptId"
 ATT=$(curl -fsS -X POST "$BASE/attempts" \
   -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
