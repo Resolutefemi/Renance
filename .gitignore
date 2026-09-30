@@ -16,6 +16,7 @@ coverage/
 *.log
 pnpm-debug.log*
 .DS_Store
+.agents/
 
 # flutter / dart
 .dart_tool/
