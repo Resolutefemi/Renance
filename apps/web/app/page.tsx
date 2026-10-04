@@ -3,6 +3,7 @@ import { OG_IMAGES } from '@/lib/og';
 import Link from 'next/link';
 import { loadLessons, loadManifest } from '@/lib/site-data';
 import OpenAppButton from '@/components/open-app-button';
+import LandingDefaultTheme from '@/components/landing-default-theme';
 import { RenanceMark } from '@/components/renance-logo';
 import {
   MotionPrefs,
@@ -187,6 +188,12 @@ export default function Landing() {
 
   return (
     <div className="landing bg-background">
+      {/* The landing keeps the DEFAULT Renance palette - a student's
+          Appearance seed repaints every other surface, never this one
+          (founder directive 2026-10-05). Renders nothing; the effect
+          strips the seed keys from <html> on arrival and restores them
+          on the way out. */}
+      <LandingDefaultTheme />
       <MotionPrefs>
         <LandingNav />
       </MotionPrefs>
@@ -343,7 +350,10 @@ export default function Landing() {
       {/* ============================================================ */}
       {/* COVERAGE - the archive, by body                              */}
       {/* ============================================================ */}
-      <section className="mx-auto w-full max-w-6xl px-4 pt-20 sm:px-6">
+      {/* pb-20 pairs with the for-schools section's own pb-20: the two
+          dark panels below are full-bleed neighbours and used to touch
+          edge to edge (founder screenshot 2026-10-04). */}
+      <section className="mx-auto w-full max-w-6xl px-4 pb-20 pt-20 sm:px-6">
         <Reveal>
           <div className="cbt-panel p-6 sm:p-10">
             <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
