@@ -38,6 +38,7 @@ const PUBLIC_ROUTES: Array<{ path: string; priority: number; freq: 'daily' | 'we
   { path: '/for-schools/', priority: 0.9, freq: 'weekly' },
   { path: '/educational-app-in-nigeria/', priority: 0.9, freq: 'weekly' },
   { path: '/faq/', priority: 0.7, freq: 'monthly' },
+  { path: '/privacy/', priority: 0.5, freq: 'monthly' },
   { path: '/login/', priority: 0.4, freq: 'monthly' },
   { path: '/register/', priority: 0.6, freq: 'monthly' },
 ];
