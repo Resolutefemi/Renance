@@ -3,32 +3,51 @@
 /// app or website display change appearance pop up that will change the
 /// seed colour".
 ///
-/// One sheet, shown exactly once per device (the flag lives in
-/// SharedPreferences next to the theme keys): the Chrome-style Mode
-/// switch (Light / Mixed / Dark) and the ten Seed Color presets - the
-/// same palette the Settings screen drives, so a seed picked here
-/// re-tints EVERY screen immediately (seed_palette.dart maths).
+/// One sheet, shown once per ACCOUNT (the flag stores the account id it
+/// already greeted, next to the theme keys in SharedPreferences - the
+/// per-device bool it used to be suppressed fresh signups forever on
+/// any device that had already met the picker, manual or Google): the
+/// Chrome-style Mode switch (Light / Mixed / Dark) and the ten Seed
+/// Color presets - the same palette the Settings screen drives, so a
+/// seed picked here re-tints EVERY screen immediately (seed_palette.dart
+/// maths).
 ///
-/// Fired from the register flow, the first Google sign-in, and the
-/// first login on a device that has never asked - so students who
-/// signed up while the popup was retired (2.6.4-2.6.7) still meet the
-/// picker once.
+/// Fired from the verified-email unlock, the first Google sign-in, and
+/// the first login on a device that has never greeted that account - so
+/// students who signed up while the popup was retired (2.6.4-2.6.7)
+/// still meet the picker once.
 library;
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../storage.dart' show SessionStore;
 import 'theme.dart';
 
 const String kAppearanceAskedKey = 'renance.appearanceAsked';
 
 /// Shows the appearance sheet the first time [context]'s student signs
-/// up or logs in on this device, then never again. Call right after
-/// session.save, BEFORE routing on.
+/// up or logs in on this device, then never again for THAT account.
+/// Call right after session.save, BEFORE routing on.
 Future<void> maybeShowFirstAppearanceSheet(BuildContext context) async {
   final SharedPreferences prefs = context.read<ThemeController>().prefs;
-  if (prefs.getBool(kAppearanceAskedKey) ?? false) return;
+  // Per-ACCOUNT flag (founder bug 2026-10-05: "the appearance settings
+  // pop up didn't show after i verify my email" + "make sure the
+  // appearance pop up too even when a user sign up with google"): the
+  // key used to hold a bare device bool, so any device that had met the
+  // picker once (earlier builds popped it at register time) suppressed
+  // it for EVERY later signup - manual or Google - and a fresh student
+  // verified their email to silence instead of the picker. The picker
+  // is a per-student moment: the key now stores the account id it
+  // already greeted, so a NEW account (the 6-digit-code signup or a
+  // first-time Google upsert) gets its own popup, while the same
+  // account never sees it twice on this device. The legacy bool value
+  // is deliberately ignored - it suppressed fresh signups for good.
+  final String uid = context.read<SessionStore>().user?.id ?? '';
+  final Object? askedRaw = prefs.get(kAppearanceAskedKey);
+  final String? askedFor = askedRaw is String ? askedRaw : null;
+  if (uid.isNotEmpty && askedFor == uid) return;
   if (!context.mounted) return;
   await showModalBottomSheet<void>(
     context: context,
@@ -43,7 +62,9 @@ Future<void> maybeShowFirstAppearanceSheet(BuildContext context) async {
   // users"): if the app is killed while the sheet is open, the picker
   // fires again on the next launch - a new user can never silently miss
   // it because the flag was set too early.
-  await prefs.setBool(kAppearanceAskedKey, true);
+  if (uid.isNotEmpty) {
+    await prefs.setString(kAppearanceAskedKey, uid);
+  }
 }
 
 class AppearanceSheet extends StatefulWidget {
