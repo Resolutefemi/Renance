@@ -133,10 +133,21 @@ class _AppearanceSheetState extends State<AppearanceSheet> {
               const SizedBox(height: 16),
 
               // Seed presets ---------------------------------------------
+              // The DEFAULT swatch leads the list (founder directive
+              // 2026-10-05: "among the colour appearance pop up, add the
+              // default colour to the colour list") - the classic ink &
+              // paper look, tapping it clears the seed entirely.
               Wrap(
                 spacing: 12,
                 runSpacing: 12,
                 children: <Widget>[
+                  _DefaultSeedDot(
+                    selected: _seed == null,
+                    onTap: () {
+                      setState(() => _seed = null);
+                      theme.setSeed(null);
+                    },
+                  ),
                   for (final ({String hex, String name}) p in kSeedPresets)
                     _SeedDot(
                       hex: p.hex,
@@ -150,22 +161,7 @@ class _AppearanceSheetState extends State<AppearanceSheet> {
                     ),
                 ],
               ),
-              const SizedBox(height: 8),
-
-              // Default (no seed) option ---------------------------------
-              TextButton.icon(
-                onPressed: () {
-                  setState(() => _seed = null);
-                  theme.setSeed(null);
-                },
-                icon: Icon(
-                  _seed == null ? Icons.check : Icons.radio_button_unchecked,
-                  size: 16,
-                  color: palette.primary,
-                ),
-                label: const Text('Keep the classic ink & paper look'),
-              ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 16),
 
               FilledButton.icon(
                 onPressed: () => Navigator.of(context).pop(),
@@ -177,6 +173,52 @@ class _AppearanceSheetState extends State<AppearanceSheet> {
                 ),
               ),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// The classic ink-and-paper swatch that leads the colour list (the
+/// same cut the Settings picker drives): half black, half white, ringed
+/// when it is the live choice. Tapping it clears the seed entirely.
+class _DefaultSeedDot extends StatelessWidget {
+  const _DefaultSeedDot({required this.selected, required this.onTap});
+
+  final bool selected;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Tooltip(
+      message: 'Renance default (ink and paper)',
+      child: InkWell(
+        onTap: onTap,
+        customBorder: const CircleBorder(),
+        child: Container(
+          width: 40,
+          height: 40,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            border: Border.all(
+              color: selected ? context.ink : Colors.transparent,
+              width: 2,
+            ),
+          ),
+          child: const ClipOval(
+            child: SizedBox.expand(
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                    colors: <Color>[Colors.black, Colors.white],
+                    stops: <double>[0.5, 0.5],
+                  ),
+                ),
+              ),
+            ),
           ),
         ),
       ),

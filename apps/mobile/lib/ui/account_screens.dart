@@ -17,6 +17,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../controllers.dart';
+import '../api_client.dart';
 import '../models.dart';
 import '../storage.dart';
 import 'downloads_screen.dart';
@@ -27,6 +28,53 @@ import 'saved_questions.dart';
 import 'settings_screen.dart';
 import 'theme.dart';
 import 'update_questions_screen.dart';
+
+/// Asks twice, then really deletes (founder directive 2026-10-05):
+/// DELETE /me removes the account and every row tied to it on the
+/// server - profile, exam attempts, results, streaks, saved work,
+/// activity, everything - then the local session is cleared and the
+/// phone lands back on the sign-in screen. The dialog spells out that
+/// this is final, unlike Logout which keeps the account.
+Future<void> _confirmDeleteAccount(BuildContext context) async {
+  final bool? confirmed = await showDialog<bool>(
+    context: context,
+    builder: (BuildContext dialogContext) => AlertDialog(
+      icon: const Icon(Icons.delete_forever_outlined, size: 32),
+      title: const Text('Delete your account?'),
+      content: const Text(
+        'Everything on this account goes with it: your results, exam '
+        'history, streaks, saved questions and all your activity. This '
+        'cannot be undone.',
+        style: TextStyle(height: 1.4),
+      ),
+      actions: <Widget>[
+        TextButton(
+          onPressed: () => Navigator.of(dialogContext).pop(false),
+          child: const Text('Keep my account'),
+        ),
+        FilledButton(
+          style: FilledButton.styleFrom(
+            backgroundColor: dialogContext.error,
+          ),
+          onPressed: () => Navigator.of(dialogContext).pop(true),
+          child: const Text('Delete everything'),
+        ),
+      ],
+    ),
+  );
+  if (confirmed != true || !context.mounted) return;
+  final ApiClient api = context.read<ApiClient>();
+  final SessionStore session = context.read<SessionStore>();
+  try {
+    await api.deleteAccount();
+  } catch (_) {
+    // The server answers 401 once the row is already gone - treat any
+    // failure the same: clear locally and let the next sign-in decide.
+  }
+  await session.clear();
+  if (!context.mounted) return;
+  await Navigator.of(context).pushReplacementNamed('/login');
+}
 
 /// Opens the account bottom sheet from the home header avatar.
 Future<void> showAccountSheet(
@@ -188,6 +236,15 @@ class AccountSheet extends StatelessWidget {
                 if (!context.mounted) return;
                 await Navigator.of(context)
                     .pushReplacementNamed('/login');
+              },
+            ),
+            _SheetItem(
+              icon: Icons.delete_outline,
+              label: 'Delete account',
+              destructive: true,
+              onTap: () {
+                Navigator.of(context).pop();
+                _confirmDeleteAccount(context);
               },
             ),
             const SizedBox(height: 8),
@@ -375,6 +432,12 @@ class MyAccountScreen extends StatelessWidget {
                         await Navigator.of(context)
                             .pushReplacementNamed('/login');
                       },
+                    ),
+                    _AccountRow(
+                      icon: Icons.delete_outline,
+                      label: 'Delete account',
+                      destructive: true,
+                      onTap: () => _confirmDeleteAccount(context),
                     ),
                   ]),
                 ],

@@ -263,7 +263,10 @@ func (s *Server) blockUnverifiedLogin(w http.ResponseWriter, r *http.Request, u 
                 } else if err := s.store.SetEmailVerification(r.Context(), u.ID, token); err != nil {
                         s.log.Error("verify token stamp failed", "err", err)
                 } else {
-                        _, sent = s.sendVerificationMail(u.ID, email, token, "web")
+                        // Async (founder bugfix 2026-10-05): the transports
+                        // must never hold a sign-in response open past the
+                        // phone's patience.
+                        s.sendVerificationMailAsync(u.ID, email, token, "web")
                 }
         }
         token, err := jwtx.IssueUnverified(u.ID, u.Username, s.cfg.JWTSecret)
@@ -322,14 +325,22 @@ func (s *Server) finishSignup(w http.ResponseWriter, r *http.Request, u *store.U
         }
         // Email confirmation: manual signups only (Google addresses are
         // verified by Google themselves). The link returns the student
-        // to where the signup happened (web or app).
-        var verifyURL string
-        sentMail := false
+        // to where the signup happened (web or app). The send is ASYNC
+        // (founder bugfix 2026-10-05, "Renance server timed out then
+        // email already existed"): the mail used to block this response
+        // for up to a minute of provider retries while the app's client
+        // gave up at 20s - the student saw "timed out", tapped signup
+        // again, and the account the first request had already created
+        // answered "email already exists". The response now returns the
+        // moment the row is stamped; "sent" reports the queue, honestly
+        // labelled queued on the wire.
+        queued := false
         if strings.TrimSpace(req.Email) != "" {
                 token, err := newVerifyToken()
                 if err == nil {
                         if err := s.store.SetEmailVerification(r.Context(), u.ID, token); err == nil {
-                                verifyURL, sentMail = s.sendVerificationMail(u.ID, strings.TrimSpace(req.Email), token, req.VerifyReturn)
+                                s.sendVerificationMailAsync(u.ID, strings.TrimSpace(req.Email), token, req.VerifyReturn)
+                                queued = true
                         }
                 } else {
                         s.log.Error("verify token mint failed", "err", err)
@@ -356,8 +367,8 @@ func (s *Server) finishSignup(w http.ResponseWriter, r *http.Request, u *store.U
                 "token": token,
                 "user":  userPayload{ID: u.ID, Username: u.Username, ProfileCompleted: profileCompleted},
                 "emailVerification": map[string]any{
-                        "required": verifyURL != "" || strings.TrimSpace(req.Email) != "",
-                        "sent":     sentMail,
+                        "required": strings.TrimSpace(req.Email) != "",
+                        "sent":     queued,
                 },
         })
 }

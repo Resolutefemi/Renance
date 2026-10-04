@@ -176,6 +176,10 @@ func (s *Server) Handler() http.Handler {
         mux.HandleFunc("POST /auth/reset-password", s.authLimit(s.handleResetPassword))
 
         mux.HandleFunc("GET /me", s.auth(s.handleMe))
+        // Account self-deletion (founder directive 2026-10-05): DELETE
+        // /me purges the account and every row tied to it, activities
+        // included - study.purge_user() in one transaction.
+        mux.HandleFunc("DELETE /me", s.auth(s.handleDeleteAccount))
         mux.HandleFunc("GET /me/attempts", s.auth(s.handleListAttempts))
         mux.HandleFunc("GET /me/gamification", s.auth(s.handleGamification))
         mux.HandleFunc("GET /me/review", s.auth(s.handleReviewQueue))
@@ -449,7 +453,7 @@ func (s *Server) cors(next http.Handler) http.Handler {
                         }
                 }
                 w.Header().Set("Vary", "Origin")
-                w.Header().Set("Access-Control-Allow-Methods", "GET, POST, PUT, OPTIONS")
+                w.Header().Set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
                 w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
                 w.Header().Set("Access-Control-Max-Age", "86400")
                 if r.Method == http.MethodOptions {

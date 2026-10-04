@@ -7,8 +7,8 @@
  * this sheet up: the avatar row (initials circle, full name, @username,
  * the X), then the menu - Dashboard, Performance Analysis, Exam
  * History, Saved Questions, App Settings, and the red
- * Logout row - the way Myschool displays the account at the top-RHS of
- * home, rebuilt in Renance's white & black.
+ * Logout + Delete account rows - the way Myschool displays the account
+ * at the top-RHS of home, rebuilt in Renance's white & black.
  */
 
 import { useEffect, useState } from 'react';
@@ -75,6 +75,28 @@ export default function AccountSheet({ open, onClose }: { open: boolean; onClose
     router.replace('/login');
   }
 
+  // Delete account (founder directive 2026-10-05): asks twice, then
+  // DELETE /me removes the account and EVERY row tied to it on the
+  // server - profile, exam attempts, results, streaks, saved work,
+  // activity, everything - then the local session is cleared. The
+  // dialog spells out that this is final, unlike Logout.
+  function deleteAccount() {
+    onClose();
+    const accepted = window.confirm(
+      'Delete your account? Everything on it goes with it: your results, exam history, streaks, saved questions and all your activity. This cannot be undone.',
+    );
+    if (!accepted) return;
+    void (async () => {
+      try {
+        await api('/me', { method: 'DELETE', noRedirect: true });
+      } catch {
+        /* the row may already be gone - clear locally regardless */
+      }
+      clearSession();
+      router.replace('/login');
+    })();
+  }
+
   return (
     <div className="fixed inset-0 z-[60] flex items-end justify-center">
       <button aria-label="Close account menu" onClick={onClose} className="absolute inset-0 bg-accent-ink/45 backdrop-blur-[2px]" />
@@ -123,6 +145,13 @@ export default function AccountSheet({ open, onClose }: { open: boolean; onClose
           >
             <span className="material-symbols-outlined text-[21px] text-error">logout</span>
             <span className="flex-1 text-[15.5px] text-error">Logout</span>
+          </button>
+          <button
+            onClick={deleteAccount}
+            className="flex w-full items-center gap-4 px-5 py-[15px] text-left transition hover:bg-error-container/30"
+          >
+            <span className="material-symbols-outlined text-[21px] text-error">delete_forever</span>
+            <span className="flex-1 text-[15.5px] text-error">Delete account</span>
           </button>
         </nav>
       </div>

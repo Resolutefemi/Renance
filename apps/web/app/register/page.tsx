@@ -217,7 +217,7 @@ export default function RegisterPage() {
                   onChange={(e) => setSchoolName(e.target.value)}
                   required
                   maxLength={120}
-                  placeholder="e.g. God Generals Standard Academy"
+                  placeholder="e.g. Living Grace Academy"
                   className={`${field} pl-4`}
                 />
               </div>
@@ -247,7 +247,7 @@ export default function RegisterPage() {
                   onChange={(e) => setFullName(e.target.value)}
                   required
                   maxLength={120}
-                  placeholder="e.g. Mrs. Ariyo O."
+                  placeholder="e.g. Mr Kelvin O."
                   className={`${field} pl-4`}
                 />
               </div>
@@ -379,10 +379,18 @@ export default function RegisterPage() {
         <p className="mt-6 text-center text-sm text-on-surface-variant">
           Already have an account?{' '}
           {/* Event-time href so a ?next= return path survives the hop
-              without a hydration mismatch on the prerendered page. */}
+              without a hydration mismatch on the prerendered page. The
+              FOR SCHOOLS tab travels along (founder bugfix 2026-10-05):
+              a school sign-up's Log In opens the school sign-in. */}
           <button
             type="button"
-            onClick={() => router.push(`/login/?next=${encodeURIComponent(nextPath('/dashboard'))}`)}
+            onClick={() =>
+              router.push(
+                `/login/?next=${encodeURIComponent(nextPath('/dashboard'))}${
+                  audience === 'schools' ? '&audience=school' : ''
+                }`,
+              )
+            }
             className="font-medium text-primary underline-offset-4 hover:underline"
           >
             Log In

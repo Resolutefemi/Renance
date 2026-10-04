@@ -2,12 +2,18 @@ name: api-keepalive (Render free tier)
 
 # The study API runs on Render's free plan, which spins the service down
 # after ~15 minutes idle; the next student then eats a 30-60s cold start
-# before a single question renders. A light ping every 10 minutes keeps
+# before a single question renders. A light ping every 5 minutes keeps
 # the service warm (and stays inside the free instance-hours allowance).
+# 5-minute spacing (founder bugfix 2026-10-05): GitHub's shared queue
+# delays scheduled runs by wide margins on free repos - the old */10
+# schedule actually landed only 3-6 times a DAY, far too few to matter.
+# Denser cron = more chances to land a warm-up between real students.
+# Each ping also touches Postgres (/healthz pings the DB), which keeps
+# the Neon compute from suspending between lessons.
 
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 permissions:
