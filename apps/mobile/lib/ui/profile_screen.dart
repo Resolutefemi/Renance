@@ -1,0 +1,756 @@
+/// Profile tab, the Stitch profile_light screen, 1:1.
+///
+/// Header card: 80px avatar with the ink Lvl badge, display-md name,
+/// @username + target chip, and the XP / Streak / Accuracy stat strip.
+/// Then the content and system menu groups and the red sign-out card.
+library;
+
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../api_client.dart';
+import '../controllers.dart';
+import '../models.dart';
+import '../storage.dart';
+import 'downloads_screen.dart';
+import 'exam_history_screen.dart';
+import 'focus_sheet.dart';
+import 'gpa_screen.dart';
+import 'home_screen.dart' show AvatarCircle;
+import 'performance_screen.dart';
+import 'saved_questions.dart';
+import 'premium_screen.dart';
+import 'settings_screen.dart';
+import 'theme.dart';
+import 'university_screens.dart';
+
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({
+    super.key,
+    required this.onGoTab,
+    this.onFocusChanged,
+  });
+
+  final ValueChanged<int> onGoTab;
+
+  /// Fired after the scholar switches their learning focus so the shell
+  /// can re-sync packs for the new target exam.
+  final VoidCallback? onFocusChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    final StudentController student = context.watch<StudentController>();
+    final MeResult? me = student.me;
+    final GamificationSummary? gam = student.gamification;
+
+    final String name = me?.profile?.fullName.isNotEmpty == true
+        ? me!.profile!.fullName
+        : (me?.user.username ?? 'Scholar');
+    final String username = me?.user.username ?? 'renance';
+    final int level = gam?.state.level ?? 1;
+    final int xp = gam?.state.totalXp ?? 0;
+
+    return ListView(
+      padding: EdgeInsets.fromLTRB(
+          16, MediaQuery.paddingOf(context).top + 64 + 8, 16, 24),
+      children: <Widget>[
+        // Header card -----------------------------------------------------
+        Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: context.card,
+            borderRadius: BorderRadius.circular(12),
+            boxShadow: const <BoxShadow>[
+              BoxShadow(
+                  color: Color(0x14141C2D), blurRadius: 3, offset: Offset(0, 1)),
+            ],
+          ),
+          child: Column(
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  Stack(
+                    clipBehavior: Clip.none,
+                    children: <Widget>[
+                      AvatarCircle(name: name, size: 80),
+                      Positioned(
+                        bottom: -4,
+                        right: -4,
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 8, vertical: 2),
+                          decoration: BoxDecoration(
+                            color: context.inverseChip,
+                            borderRadius: BorderRadius.circular(999),
+                            border: Border.all(
+                                color: context.card, width: 2),
+                          ),
+                          child: Text(
+                            'Lvl $level',
+                            style: RenanceText.labelMono.copyWith(
+                              fontSize: 11,
+                              color: context.onInverseChip,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(name,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: RenanceText.displayMd.copyWith(fontSize: 22)),
+                        const SizedBox(height: 4),
+                        Row(
+                          children: <Widget>[
+                            Flexible(
+                              child: Text('@$username',
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
+                            ),
+                            const SizedBox(width: 8),
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 8, vertical: 2),
+                              decoration: BoxDecoration(
+                                color: context.selectionBlue,
+                                borderRadius: BorderRadius.circular(999),
+                              ),
+                              child: Text(
+                                student.targetChip,
+                                style: RenanceText.labelMono.copyWith(
+                                    fontSize: 12),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 16),
+              // Stat strip -------------------------------------------------
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: context.surfaceContainer,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: _Stat(
+                          label: 'XP',
+                          value: xp >= 1000
+                              ? '${(xp / 1000).toStringAsFixed(1)}k'
+                              : '$xp',
+                          color: context.ink),
+                    ),
+                    const _Divider(),
+                    Expanded(
+                      child: _Stat(
+                        label: 'Streak',
+                        value: '${gam?.state.currentStreak ?? 0}',
+                        color: context.ink,
+                        flame: true,
+                      ),
+                    ),
+                    const _Divider(),
+                    Expanded(
+                      child: _Stat(
+                          label: 'Accuracy',
+                          value: '${student.accuracyPct}%',
+                          color: RenanceColors.emerald),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 16),
+        // Learning focus: switch between JAMB / WAEC / NECO / tertiary.
+        _FocusCard(
+          chip: student.targetChip,
+          onSwitch: () async {
+            final StudentController fresh = context.read<StudentController>();
+            final bool changed = await FocusSheet.show(context);
+            if (!changed) return;
+            await fresh.refresh();
+            onFocusChanged?.call();
+          },
+        ),
+        const SizedBox(height: 16),
+        // My school: the ONLY place the picked school changes (founder
+        // rule). Saving stores the pick AND the profile institution.
+        _SchoolCard(onChanged: onFocusChanged),
+        const SizedBox(height: 16),
+        // Premium: the plans desk, the REN wallet and the blue tick.
+        _MenuGroup(items: <_MenuItem>[
+          _MenuItem(
+            icon: Icons.verified,
+            tint: const Color(0xFF1D9BF0),
+            label: 'Renance Premium',
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute<void>(
+                  builder: (_) => const PremiumScreen()));
+            },
+          ),
+        ]),
+        const SizedBox(height: 16),
+        // Menu group: content - 1:1 with the up-to-date web profile
+        // (My Packs, GPA Calculator; Downloads stays as the mobile
+        // affordance for the on-device pack library) ----------------------
+        _MenuGroup(items: <_MenuItem>[
+          _MenuItem(
+            icon: Icons.history_edu,
+            tint: context.ink,
+            label: 'Exam History',
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute<void>(
+                  builder: (_) => const ExamHistoryScreen()));
+            },
+          ),
+          _MenuItem(
+            icon: Icons.insights,
+            tint: context.ink,
+            label: 'Performance Analysis',
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute<void>(
+                  builder: (_) => const PerformanceScreen()));
+            },
+          ),
+          _MenuItem(
+            icon: Icons.bookmark_border,
+            tint: context.ink,
+            label: 'Saved Questions',
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute<void>(
+                  builder: (_) => const SavedQuestionsScreen()));
+            },
+          ),
+          _MenuItem(
+            icon: Icons.auto_stories,
+            tint: context.ink,
+            label: 'My Packs',
+            onTap: () => onGoTab(1),
+          ),
+          _MenuItem(
+            icon: Icons.download,
+            tint: context.ink,
+            label: 'Downloads',
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute<void>(
+                  builder: (_) => const DownloadsScreen()));
+            },
+          ),
+          _MenuItem(
+            icon: Icons.calculate,
+            tint: context.ink,
+            label: 'GPA Calculator',
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute<void>(
+                  builder: (_) => const GpaScreen()));
+            },
+          ),
+        ]),
+        const SizedBox(height: 16),
+        // Menu group: system ---------------------------------------------
+        _MenuGroup(items: <_MenuItem>[
+          _MenuItem(
+            icon: Icons.settings,
+            tint: context.textSecondary,
+            label: 'Settings',
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute<void>(
+                  builder: (_) => const SettingsScreen()));
+            },
+          ),
+          _MenuItem(
+            icon: Icons.history_edu,
+            tint: context.textSecondary,
+            label: 'My papers',
+            onTap: () => onGoTab(2),
+          ),
+          _MenuItem(
+            icon: Icons.help,
+            tint: context.textSecondary,
+            label: 'Help & Support',
+            onTap: () {
+              showLicensePage(
+                context: context,
+                applicationName: 'Renance',
+                applicationLegalese: 'Learn. Practice. Rise.',
+              );
+            },
+          ),
+        ]),
+        const SizedBox(height: 16),
+        // Sign out --------------------------------------------------------
+        Container(
+          decoration: BoxDecoration(
+            color: context.card,
+            borderRadius: BorderRadius.circular(12),
+            boxShadow: const <BoxShadow>[
+              BoxShadow(
+                  color: Color(0x14141C2D), blurRadius: 3, offset: Offset(0, 1)),
+            ],
+          ),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(12),
+            onTap: () async {
+              await context.read<SessionStore>().clear();
+              if (!context.mounted) return;
+              await Navigator.of(context).pushReplacementNamed('/login');
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Row(
+                children: <Widget>[
+                  Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: context.errorContainer,
+                    ),
+                    child:
+                        Icon(Icons.logout, color: context.error),
+                  ),
+                  const SizedBox(width: 16),
+                  Text('Sign Out',
+                      style: TextStyle(
+                          color: context.error,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600)),
+                ],
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(height: 24),
+      ],
+    );
+  }
+}
+
+/// Learning-focus card: shows the current target chip and opens the
+/// focus sheet (exam_target_light) on tap.
+class _FocusCard extends StatelessWidget {
+  const _FocusCard({required this.chip, required this.onSwitch});
+
+  final String chip;
+  final VoidCallback onSwitch;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: context.card,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: const <BoxShadow>[
+          BoxShadow(
+              color: Color(0x14141C2D), blurRadius: 3, offset: Offset(0, 1)),
+        ],
+      ),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        onTap: onSwitch,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            children: <Widget>[
+              Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: context.selectionBlue,
+                ),
+                child: Icon(Icons.track_changes,
+                    size: 22, color: context.ink),
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text('Learning focus', style: RenanceText.bodyMedium),
+                    const SizedBox(height: 2),
+                    Text(
+                      'Preparing for $chip. Tap to switch.',
+                      style: RenanceText.caption.copyWith(color: context.textSecondary),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                decoration: BoxDecoration(
+                  color: context.selectionBlue,
+                  borderRadius: BorderRadius.circular(999),
+                ),
+                child: Text(chip,
+                    style:
+                        RenanceText.labelMono.copyWith(fontSize: 12)),
+              ),
+              const SizedBox(width: 8),
+              Icon(Icons.swap_horiz,
+                  color: context.outlineLight),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// One stat of the strip (XP ink / flame streak / accuracy emerald).
+class _Stat extends StatelessWidget {
+  const _Stat({
+    required this.label,
+    required this.value,
+    required this.color,
+    this.flame = false,
+  });
+
+  final String label;
+  final String value;
+  final Color color;
+  final bool flame;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        Text(label, style: RenanceText.caption.copyWith(color: context.textSecondary)),
+        const SizedBox(height: 2),
+        flame
+            ? Row(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  const Icon(Icons.local_fire_department,
+                      size: 18, color: RenanceColors.amber),
+                  const SizedBox(width: 2),
+                  Text(value, style: RenanceText.statNumber.copyWith(color: color)),
+                ],
+              )
+            : Text(value, style: RenanceText.statNumber.copyWith(color: color)),
+      ],
+    );
+  }
+}
+
+class _Divider extends StatelessWidget {
+  const _Divider();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 1,
+      height: 32,
+      color: context.outlineLight.withValues(alpha: 0.3),
+    );
+  }
+}
+
+class _MenuItem {
+  const _MenuItem({
+    required this.icon,
+    required this.tint,
+    required this.label,
+    required this.onTap,
+  });
+
+  final IconData icon;
+  final Color tint;
+  final String label;
+  final VoidCallback onTap;
+}
+
+class _MenuGroup extends StatelessWidget {
+  const _MenuGroup({required this.items});
+
+  final List<_MenuItem> items;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: context.card,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: const <BoxShadow>[
+          BoxShadow(
+              color: Color(0x14141C2D), blurRadius: 3, offset: Offset(0, 1)),
+        ],
+      ),
+      child: Column(
+        children: <Widget>[
+          for (var i = 0; i < items.length; i++) ...<Widget>[
+            if (i > 0)
+              Container(height: 1, color: context.cardHigh),
+            InkWell(
+              onTap: items[i].onTap,
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Row(
+                  children: <Widget>[
+                    Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: context.surfaceContainer,
+                      ),
+                      child: Icon(items[i].icon, size: 22, color: items[i].tint),
+                    ),
+                    const SizedBox(width: 16),
+                    Expanded(
+                      child: Text(items[i].label, style: RenanceText.bodyMedium),
+                    ),
+                    Icon(Icons.chevron_right,
+                        color: context.outlineLight),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+}
+
+/// My school card: shows the picked school (stored pick first, then the
+/// profile institution). ONLY the founder account can change it (founder
+/// directive 2026-10-04): for everyone else the card is read-only - the
+/// school is picked once on the School Desk and stays. The founder's
+/// address is matched case-insensitively on the /me email.
+class _SchoolCard extends StatelessWidget {
+  const _SchoolCard({this.onChanged});
+
+  final VoidCallback? onChanged;
+
+  /// The only account allowed to switch schools from the profile page.
+  static const String _founderEmail = 'ariyooluwafemi487@gmail.com';
+
+  Future<void> _pick(BuildContext context) async {
+    final SyncController sync = context.read<SyncController>();
+    final StudentController student = context.read<StudentController>();
+    final ApiClient api = context.read<ApiClient>();
+    final SessionStore session = context.read<SessionStore>();
+
+    final Map<String, List<UniCourse>> schools =
+        universityCourses(sync.exams);
+    // Available = schools with real semester course banks.
+    final List<String> available = schools.keys
+        .where((String s) => schools[s]!.any((UniCourse c) => !c.isPostUtme))
+        .toList()
+      ..sort();
+
+    final String? pickedSlug = await showModalBottomSheet<String>(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: context.pageBg,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
+      ),
+      builder: (BuildContext sheetContext) => SafeArea(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            maxHeight: MediaQuery.of(sheetContext).size.height * 0.75,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              const SizedBox(height: 8),
+              Container(
+                width: 48,
+                height: 6,
+                decoration: BoxDecoration(
+                  color: sheetContext.outlineVariant,
+                  borderRadius: BorderRadius.circular(999),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(24, 16, 24, 4),
+                child: Text('Which school are you in?',
+                    style: RenanceText.displayMd),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(24, 0, 24, 12),
+                child: Text(
+                  '${available.length} schools ship course banks. '
+                  'This pick drives the School Desk.',
+                  style: RenanceText.bodySecondary.copyWith(
+                      color: sheetContext.textSecondary),
+                ),
+              ),
+              Expanded(
+                child: ListView.builder(
+                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
+                  itemCount: available.length,
+                  itemBuilder: (BuildContext context, int i) {
+                    final String slug = available[i];
+                    final (String short, String full) =
+                        kUniversitySchools[slug] ??
+                            (slug.toUpperCase(), slug);
+                    return Card(
+                      margin: const EdgeInsets.only(bottom: 8),
+                      elevation: 0,
+                      color: sheetContext.card,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
+                      child: ListTile(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        leading: Container(
+                          width: 44,
+                          height: 44,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: sheetContext.selectionBlue
+                                .withValues(alpha: 0.15),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Text(
+                            short.length <= 5 ? short : short.substring(0, 4),
+                            style: RenanceText.labelMono.copyWith(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w700,
+                                color: sheetContext.ink),
+                          ),
+                        ),
+                        title: Text(short,
+                            style: RenanceText.bodyMedium
+                                .copyWith(fontWeight: FontWeight.w600)),
+                        subtitle: Text(full,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: RenanceText.caption.copyWith(
+                                color: sheetContext.textSecondary)),
+                        trailing: Icon(Icons.chevron_right,
+                            color: sheetContext.outlineLight),
+                        onTap: () =>
+                            Navigator.of(sheetContext).pop(slug),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+    if (pickedSlug == null) return;
+
+    // Persist: the pick key (same one the website reads) AND the profile
+    // institution, so the server record stays in step.
+    final String fullName = kUniversitySchools[pickedSlug]?.$2 ?? pickedSlug;
+    try {
+      await session.prefs.setString(kSchoolPickKey, pickedSlug);
+      final Profile? p = student.me?.profile;
+      await api.updateProfile(
+        fullName: p?.fullName ?? '',
+        institution: fullName,
+        gradeLevel: p?.gradeLevel ?? 'SS3',
+        exams: p?.exams ?? const <String>['JAMB'],
+        targetYear: p?.targetYear,
+      );
+      await student.refresh();
+      onChanged?.call();
+    } on ApiException {
+      // Network/handler failure: the pick key already stored, the desk
+      // still resolves; the profile record catches up on the next save.
+    } on NetworkException {
+      // Same soft handling: never strand the scholar on a dialog.
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final StudentController student = context.watch<StudentController>();
+    final SyncController sync = context.watch<SyncController>();
+    final Set<String> banked = universityCourses(sync.exams).keys.toSet();
+    final String? stored =
+        context.read<SessionStore>().prefs.getString(kSchoolPickKey);
+    final String current = (stored != null && banked.contains(stored)
+            ? kUniversitySchools[stored]?.$2
+            : null) ??
+        (student.me?.profile?.institution.trim().isNotEmpty == true
+            ? student.me!.profile!.institution
+            : null) ??
+        'Not set yet, tap to pick';
+    // Founder-only school switching (2026-10-04): everyone else gets a
+    // read-only card once a school is set - but the FIRST pick stays open
+    // for everyone (a student with no school yet can still choose one).
+    final bool founder =
+        (student.me?.email ?? '').trim().toLowerCase() == _founderEmail;
+    final bool hasSchool = stored != null && banked.contains(stored) ||
+        (student.me?.profile?.institution.trim().isNotEmpty == true);
+    final bool editable = founder || !hasSchool;
+
+    return Container(
+      decoration: BoxDecoration(
+        color: context.card,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: const <BoxShadow>[
+          BoxShadow(
+              color: Color(0x14141C2D), blurRadius: 3, offset: Offset(0, 1)),
+        ],
+      ),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        onTap: editable ? () => _pick(context) : null,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            children: <Widget>[
+              Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: context.selectionBlue,
+                ),
+                child: Icon(Icons.account_balance_outlined,
+                    size: 22, color: context.ink),
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text('My school', style: RenanceText.bodyMedium),
+                    const SizedBox(height: 2),
+                    Text(current,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: RenanceText.caption
+                            .copyWith(color: context.textSecondary)),
+                  ],
+                ),
+              ),
+              if (editable)
+                Icon(Icons.edit, size: 20, color: context.outlineLight)
+              else
+                Icon(Icons.lock_outline,
+                    size: 18, color: context.outlineLight),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

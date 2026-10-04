@@ -1,0 +1,1411 @@
+{
+ "code": "jamb-literature-enrich-bank",
+ "title": "JAMB Literature | Enrichment Bank",
+ "version": 1,
+ "questionCount": 100,
+ "totalMarks": 100,
+ "questions": [
+  {
+   "id": "jamb-literature-enrich-0000",
+   "type": "mcq",
+   "stem": "A literary work written primarily for stage performance is a",
+   "options": {
+    "A": "drama",
+    "B": "biography",
+    "C": "essay",
+    "D": "novel"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is drama."
+  },
+  {
+   "id": "jamb-literature-enrich-0001",
+   "type": "mcq",
+   "stem": "A long narrative poem about heroic deeds is an",
+   "options": {
+    "A": "epic",
+    "B": "ode",
+    "C": "elegy",
+    "D": "sonnet"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is epic."
+  },
+  {
+   "id": "jamb-literature-enrich-0002",
+   "type": "mcq",
+   "stem": "A brief fictional prose narrative is a",
+   "options": {
+    "A": "short story",
+    "B": "epic",
+    "C": "ode",
+    "D": "tragedy"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is short story."
+  },
+  {
+   "id": "jamb-literature-enrich-0003",
+   "type": "mcq",
+   "stem": "A person’s life story written by another person is a",
+   "options": {
+    "A": "biography",
+    "B": "autobiography",
+    "C": "satire",
+    "D": "ballad"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is biography."
+  },
+  {
+   "id": "jamb-literature-enrich-0004",
+   "type": "mcq",
+   "stem": "A poem expressing sorrow for the dead is an",
+   "options": {
+    "A": "elegy",
+    "B": "ode",
+    "C": "epigram",
+    "D": "sonnet"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is elegy."
+  },
+  {
+   "id": "jamb-literature-enrich-0005",
+   "type": "mcq",
+   "stem": "A comparison using “like” or “as” is a",
+   "options": {
+    "A": "simile",
+    "B": "metaphor",
+    "C": "pun",
+    "D": "irony"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is simile."
+  },
+  {
+   "id": "jamb-literature-enrich-0006",
+   "type": "mcq",
+   "stem": "A direct comparison without “like” or “as” is a",
+   "options": {
+    "A": "metaphor",
+    "B": "simile",
+    "C": "allusion",
+    "D": "rhyme"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is metaphor."
+  },
+  {
+   "id": "jamb-literature-enrich-0007",
+   "type": "mcq",
+   "stem": "Giving human qualities to non-human things is",
+   "options": {
+    "A": "personification",
+    "B": "hyperbole",
+    "C": "paradox",
+    "D": "pun"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is personification."
+  },
+  {
+   "id": "jamb-literature-enrich-0008",
+   "type": "mcq",
+   "stem": "Deliberate exaggeration for emphasis is",
+   "options": {
+    "A": "hyperbole",
+    "B": "metonymy",
+    "C": "euphemism",
+    "D": "allusion"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is hyperbole."
+  },
+  {
+   "id": "jamb-literature-enrich-0009",
+   "type": "mcq",
+   "stem": "A contrast between expectation and reality may create",
+   "options": {
+    "A": "irony",
+    "B": "simile",
+    "C": "alliteration",
+    "D": "rhyme"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is irony."
+  },
+  {
+   "id": "jamb-literature-enrich-0010",
+   "type": "mcq",
+   "stem": "A fourteen-line poem is traditionally a",
+   "options": {
+    "A": "sonnet",
+    "B": "ballad",
+    "C": "limerick",
+    "D": "epic"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is sonnet."
+  },
+  {
+   "id": "jamb-literature-enrich-0011",
+   "type": "mcq",
+   "stem": "A poem praising a person, thing or event is an",
+   "options": {
+    "A": "ode",
+    "B": "elegy",
+    "C": "dirge",
+    "D": "epigram"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is ode."
+  },
+  {
+   "id": "jamb-literature-enrich-0012",
+   "type": "mcq",
+   "stem": "Repetition of initial consonant sounds is",
+   "options": {
+    "A": "alliteration",
+    "B": "assonance",
+    "C": "caesura",
+    "D": "enjambment"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is alliteration."
+  },
+  {
+   "id": "jamb-literature-enrich-0013",
+   "type": "mcq",
+   "stem": "A pause within a line of poetry is a",
+   "options": {
+    "A": "caesura",
+    "B": "stanza",
+    "C": "couplet",
+    "D": "refrain"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is caesura."
+  },
+  {
+   "id": "jamb-literature-enrich-0014",
+   "type": "mcq",
+   "stem": "A group of lines in a poem is a",
+   "options": {
+    "A": "stanza",
+    "B": "scene",
+    "C": "act",
+    "D": "chapter"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is stanza."
+  },
+  {
+   "id": "jamb-literature-enrich-0015",
+   "type": "mcq",
+   "stem": "The spoken words of characters in a play are",
+   "options": {
+    "A": "dialogue",
+    "B": "stage directions",
+    "C": "setting",
+    "D": "plot"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is dialogue."
+  },
+  {
+   "id": "jamb-literature-enrich-0016",
+   "type": "mcq",
+   "stem": "Instructions about actors’ movements are",
+   "options": {
+    "A": "stage directions",
+    "B": "dialogue",
+    "C": "theme",
+    "D": "conflict"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is stage directions."
+  },
+  {
+   "id": "jamb-literature-enrich-0017",
+   "type": "mcq",
+   "stem": "A serious play ending in the downfall of a protagonist is a",
+   "options": {
+    "A": "tragedy",
+    "B": "comedy",
+    "C": "farce",
+    "D": "satire"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is tragedy."
+  },
+  {
+   "id": "jamb-literature-enrich-0018",
+   "type": "mcq",
+   "stem": "A play intended mainly to amuse is a",
+   "options": {
+    "A": "comedy",
+    "B": "tragedy",
+    "C": "epic",
+    "D": "elegy"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is comedy."
+  },
+  {
+   "id": "jamb-literature-enrich-0019",
+   "type": "mcq",
+   "stem": "The central character in a drama is the",
+   "options": {
+    "A": "protagonist",
+    "B": "antagonist",
+    "C": "chorus",
+    "D": "narrator"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is protagonist."
+  },
+  {
+   "id": "jamb-literature-enrich-0020",
+   "type": "mcq",
+   "stem": "The sequence of events in a story is its",
+   "options": {
+    "A": "plot",
+    "B": "setting",
+    "C": "tone",
+    "D": "diction"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is plot."
+  },
+  {
+   "id": "jamb-literature-enrich-0021",
+   "type": "mcq",
+   "stem": "The time and place of a story form its",
+   "options": {
+    "A": "setting",
+    "B": "theme",
+    "C": "conflict",
+    "D": "point of view"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is setting."
+  },
+  {
+   "id": "jamb-literature-enrich-0022",
+   "type": "mcq",
+   "stem": "The central idea of a literary work is its",
+   "options": {
+    "A": "theme",
+    "B": "plot",
+    "C": "climax",
+    "D": "dialogue"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is theme."
+  },
+  {
+   "id": "jamb-literature-enrich-0023",
+   "type": "mcq",
+   "stem": "The person who tells a story is the",
+   "options": {
+    "A": "narrator",
+    "B": "protagonist",
+    "C": "antagonist",
+    "D": "editor"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is narrator."
+  },
+  {
+   "id": "jamb-literature-enrich-0024",
+   "type": "mcq",
+   "stem": "A struggle between opposing forces is",
+   "options": {
+    "A": "conflict",
+    "B": "setting",
+    "C": "imagery",
+    "D": "diction"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is conflict."
+  },
+  {
+   "id": "jamb-literature-enrich-0025",
+   "type": "mcq",
+   "stem": "The process of revealing a character’s qualities is",
+   "options": {
+    "A": "characterization",
+    "B": "plotting",
+    "C": "setting",
+    "D": "rhyme"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is characterization."
+  },
+  {
+   "id": "jamb-literature-enrich-0026",
+   "type": "mcq",
+   "stem": "A character who changes significantly is",
+   "options": {
+    "A": "dynamic",
+    "B": "static",
+    "C": "flat",
+    "D": "minor"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is dynamic."
+  },
+  {
+   "id": "jamb-literature-enrich-0027",
+   "type": "mcq",
+   "stem": "A character who remains largely unchanged is",
+   "options": {
+    "A": "static",
+    "B": "dynamic",
+    "C": "round",
+    "D": "foil"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is static."
+  },
+  {
+   "id": "jamb-literature-enrich-0028",
+   "type": "mcq",
+   "stem": "The character who opposes the protagonist is the",
+   "options": {
+    "A": "antagonist",
+    "B": "narrator",
+    "C": "speaker",
+    "D": "chorus"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is antagonist."
+  },
+  {
+   "id": "jamb-literature-enrich-0029",
+   "type": "mcq",
+   "stem": "A character used to contrast with another is a",
+   "options": {
+    "A": "foil",
+    "B": "narrator",
+    "C": "protagonist",
+    "D": "speaker"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is foil."
+  },
+  {
+   "id": "jamb-literature-enrich-0030",
+   "type": "mcq",
+   "stem": "A story told using “I” is generally in",
+   "options": {
+    "A": "first person",
+    "B": "second person",
+    "C": "third person",
+    "D": "objective voice"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is first person."
+  },
+  {
+   "id": "jamb-literature-enrich-0031",
+   "type": "mcq",
+   "stem": "A narrator who knows the thoughts of many characters is",
+   "options": {
+    "A": "omniscient",
+    "B": "silent",
+    "C": "limited first-person",
+    "D": "objective only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is omniscient."
+  },
+  {
+   "id": "jamb-literature-enrich-0032",
+   "type": "mcq",
+   "stem": "A return to an earlier event is a",
+   "options": {
+    "A": "flashback",
+    "B": "foreshadowing",
+    "C": "climax",
+    "D": "resolution"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is flashback."
+  },
+  {
+   "id": "jamb-literature-enrich-0033",
+   "type": "mcq",
+   "stem": "A hint about a future event is",
+   "options": {
+    "A": "foreshadowing",
+    "B": "flashback",
+    "C": "denouement",
+    "D": "exposition"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is foreshadowing."
+  },
+  {
+   "id": "jamb-literature-enrich-0034",
+   "type": "mcq",
+   "stem": "The point of highest tension is the",
+   "options": {
+    "A": "climax",
+    "B": "exposition",
+    "C": "resolution",
+    "D": "setting"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is climax."
+  },
+  {
+   "id": "jamb-literature-enrich-0035",
+   "type": "mcq",
+   "stem": "A writer’s choice of words is called",
+   "options": {
+    "A": "diction",
+    "B": "plot",
+    "C": "setting",
+    "D": "genre"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is diction."
+  },
+  {
+   "id": "jamb-literature-enrich-0036",
+   "type": "mcq",
+   "stem": "The writer’s attitude toward a subject is the",
+   "options": {
+    "A": "tone",
+    "B": "plot",
+    "C": "setting",
+    "D": "rhyme"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is tone."
+  },
+  {
+   "id": "jamb-literature-enrich-0037",
+   "type": "mcq",
+   "stem": "The emotional atmosphere of a work is its",
+   "options": {
+    "A": "mood",
+    "B": "diction",
+    "C": "plot",
+    "D": "syntax"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is mood."
+  },
+  {
+   "id": "jamb-literature-enrich-0038",
+   "type": "mcq",
+   "stem": "A writer’s distinctive manner of expression is",
+   "options": {
+    "A": "style",
+    "B": "setting",
+    "C": "conflict",
+    "D": "genre"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is style."
+  },
+  {
+   "id": "jamb-literature-enrich-0039",
+   "type": "mcq",
+   "stem": "Language appealing to the senses creates",
+   "options": {
+    "A": "imagery",
+    "B": "plot",
+    "C": "dialogue",
+    "D": "irony"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is imagery."
+  },
+  {
+   "id": "jamb-literature-enrich-0040",
+   "type": "mcq",
+   "stem": "A recurring central idea in a work is a",
+   "options": {
+    "A": "theme",
+    "B": "scene",
+    "C": "stanza",
+    "D": "setting"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is theme."
+  },
+  {
+   "id": "jamb-literature-enrich-0041",
+   "type": "mcq",
+   "stem": "Good versus evil is an example of a literary",
+   "options": {
+    "A": "theme",
+    "B": "metre",
+    "C": "rhyme",
+    "D": "pun"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is theme."
+  },
+  {
+   "id": "jamb-literature-enrich-0042",
+   "type": "mcq",
+   "stem": "Misuse of power may develop the theme of",
+   "options": {
+    "A": "corruption",
+    "B": "alliteration",
+    "C": "rhyme",
+    "D": "setting"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is corruption."
+  },
+  {
+   "id": "jamb-literature-enrich-0043",
+   "type": "mcq",
+   "stem": "A character’s search for identity may develop",
+   "options": {
+    "A": "self-discovery",
+    "B": "metre",
+    "C": "dialogue",
+    "D": "stage direction"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is self-discovery."
+  },
+  {
+   "id": "jamb-literature-enrich-0044",
+   "type": "mcq",
+   "stem": "Themes are best identified by examining",
+   "options": {
+    "A": "patterns throughout the work",
+    "B": "the title alone",
+    "C": "one word only",
+    "D": "the cover"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is patterns throughout the work."
+  },
+  {
+   "id": "jamb-literature-enrich-0045",
+   "type": "mcq",
+   "stem": "African literature often explores the effects of",
+   "options": {
+    "A": "colonialism",
+    "B": "mathematics",
+    "C": "weather",
+    "D": "chemistry"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is colonialism."
+  },
+  {
+   "id": "jamb-literature-enrich-0046",
+   "type": "mcq",
+   "stem": "Postcolonial literature often examines",
+   "options": {
+    "A": "identity and cultural conflict",
+    "B": "only romance",
+    "C": "only science",
+    "D": "only sports"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is identity and cultural conflict."
+  },
+  {
+   "id": "jamb-literature-enrich-0047",
+   "type": "mcq",
+   "stem": "Oral tradition helps preserve",
+   "options": {
+    "A": "history and values",
+    "B": "tax records",
+    "C": "bank statements",
+    "D": "formulas"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is history and values."
+  },
+  {
+   "id": "jamb-literature-enrich-0048",
+   "type": "mcq",
+   "stem": "A griot traditionally serves as a",
+   "options": {
+    "A": "keeper of oral history",
+    "B": "banker",
+    "C": "judge",
+    "D": "soldier only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is keeper of oral history."
+  },
+  {
+   "id": "jamb-literature-enrich-0049",
+   "type": "mcq",
+   "stem": "African writers may combine indigenous traditions with",
+   "options": {
+    "A": "modern experiences",
+    "B": "only foreign history",
+    "C": "only science",
+    "D": "only sports"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is modern experiences."
+  },
+  {
+   "id": "jamb-literature-enrich-0050",
+   "type": "mcq",
+   "stem": "West African literature commonly reflects",
+   "options": {
+    "A": "social and cultural realities",
+    "B": "only foreign settings",
+    "C": "only fantasy",
+    "D": "only science"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is social and cultural realities."
+  },
+  {
+   "id": "jamb-literature-enrich-0051",
+   "type": "mcq",
+   "stem": "A common concern in West African novels is",
+   "options": {
+    "A": "tradition versus modernity",
+    "B": "space travel",
+    "C": "engineering",
+    "D": "weather"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is tradition versus modernity."
+  },
+  {
+   "id": "jamb-literature-enrich-0052",
+   "type": "mcq",
+   "stem": "Colonial education may be portrayed as",
+   "options": {
+    "A": "both empowering and disruptive",
+    "B": "always useless",
+    "C": "only entertaining",
+    "D": "unrelated to society"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is both empowering and disruptive."
+  },
+  {
+   "id": "jamb-literature-enrich-0053",
+   "type": "mcq",
+   "stem": "Communal values versus individual ambition is a",
+   "options": {
+    "A": "common conflict",
+    "B": "type of rhyme",
+    "C": "stage direction",
+    "D": "metre"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is common conflict."
+  },
+  {
+   "id": "jamb-literature-enrich-0054",
+   "type": "mcq",
+   "stem": "Proverbs may be used to",
+   "options": {
+    "A": "express cultural wisdom",
+    "B": "replace characters",
+    "C": "measure rhythm",
+    "D": "create stage directions"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is express cultural wisdom."
+  },
+  {
+   "id": "jamb-literature-enrich-0055",
+   "type": "mcq",
+   "stem": "Examining how a literary work creates meaning is",
+   "options": {
+    "A": "literary appreciation",
+    "B": "copying",
+    "C": "translation",
+    "D": "memorization"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is literary appreciation."
+  },
+  {
+   "id": "jamb-literature-enrich-0056",
+   "type": "mcq",
+   "stem": "A sound literary interpretation should be supported by",
+   "options": {
+    "A": "textual evidence",
+    "B": "guesses only",
+    "C": "the title only",
+    "D": "unrelated facts"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is textual evidence."
+  },
+  {
+   "id": "jamb-literature-enrich-0057",
+   "type": "mcq",
+   "stem": "Central conflict often develops the",
+   "options": {
+    "A": "plot and themes",
+    "B": "page numbers",
+    "C": "publisher",
+    "D": "spelling"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is plot and themes."
+  },
+  {
+   "id": "jamb-literature-enrich-0058",
+   "type": "mcq",
+   "stem": "Setting can influence a story by",
+   "options": {
+    "A": "shaping characters and events",
+    "B": "changing the alphabet",
+    "C": "removing conflict",
+    "D": "determining page size"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is shaping characters and events."
+  },
+  {
+   "id": "jamb-literature-enrich-0059",
+   "type": "mcq",
+   "stem": "A theme differs from a",
+   "options": {
+    "A": "topic",
+    "B": "character",
+    "C": "chapter",
+    "D": "publisher"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is topic."
+  },
+  {
+   "id": "jamb-literature-enrich-0060",
+   "type": "mcq",
+   "stem": "Satire uses humour or ridicule to",
+   "options": {
+    "A": "criticize faults",
+    "B": "avoid social issues",
+    "C": "praise everyone",
+    "D": "describe weather"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is criticize faults."
+  },
+  {
+   "id": "jamb-literature-enrich-0061",
+   "type": "mcq",
+   "stem": "Farce is characterized by",
+   "options": {
+    "A": "exaggerated comic situations",
+    "B": "solemn mourning",
+    "C": "heroic warfare",
+    "D": "historical accuracy"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is exaggerated comic situations."
+  },
+  {
+   "id": "jamb-literature-enrich-0062",
+   "type": "mcq",
+   "stem": "A comic character may both entertain and",
+   "options": {
+    "A": "expose human weaknesses",
+    "B": "remove the plot",
+    "C": "end all conflict",
+    "D": "replace the setting"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is expose human weaknesses."
+  },
+  {
+   "id": "jamb-literature-enrich-0063",
+   "type": "mcq",
+   "stem": "Comic relief provides",
+   "options": {
+    "A": "a lighter moment in serious action",
+    "B": "tax revenue",
+    "C": "a new narrator",
+    "D": "stage directions"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is a lighter moment in serious action."
+  },
+  {
+   "id": "jamb-literature-enrich-0064",
+   "type": "mcq",
+   "stem": "Irony can create comedy through",
+   "options": {
+    "A": "unexpected contrast",
+    "B": "lack of meaning",
+    "C": "page length",
+    "D": "scenery only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is unexpected contrast."
+  },
+  {
+   "id": "jamb-literature-enrich-0065",
+   "type": "mcq",
+   "stem": "A tragic hero is usually the",
+   "options": {
+    "A": "central character whose flaw contributes to downfall",
+    "B": "comic character",
+    "C": "publisher",
+    "D": "narrator only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is central character whose flaw contributes to downfall."
+  },
+  {
+   "id": "jamb-literature-enrich-0066",
+   "type": "mcq",
+   "stem": "Hamartia refers to a tragic",
+   "options": {
+    "A": "error or flaw",
+    "B": "setting",
+    "C": "song",
+    "D": "costume"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is error or flaw."
+  },
+  {
+   "id": "jamb-literature-enrich-0067",
+   "type": "mcq",
+   "stem": "Catharsis refers to",
+   "options": {
+    "A": "emotional release",
+    "B": "comic dialogue",
+    "C": "setting",
+    "D": "rhyme"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is emotional release."
+  },
+  {
+   "id": "jamb-literature-enrich-0068",
+   "type": "mcq",
+   "stem": "A tragic downfall may result from",
+   "options": {
+    "A": "character and circumstances",
+    "B": "weather alone",
+    "C": "the title",
+    "D": "the publisher"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is character and circumstances."
+  },
+  {
+   "id": "jamb-literature-enrich-0069",
+   "type": "mcq",
+   "stem": "Classical tragedy aims to arouse",
+   "options": {
+    "A": "pity and fear",
+    "B": "only laughter",
+    "C": "indifference",
+    "D": "confusion only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is pity and fear."
+  },
+  {
+   "id": "jamb-literature-enrich-0070",
+   "type": "mcq",
+   "stem": "A reference to another work or event is an",
+   "options": {
+    "A": "allusion",
+    "B": "alliteration",
+    "C": "assonance",
+    "D": "anaphora"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is allusion."
+  },
+  {
+   "id": "jamb-literature-enrich-0071",
+   "type": "mcq",
+   "stem": "Repetition of vowel sounds is",
+   "options": {
+    "A": "assonance",
+    "B": "alliteration",
+    "C": "metonymy",
+    "D": "hyperbole"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is assonance."
+  },
+  {
+   "id": "jamb-literature-enrich-0072",
+   "type": "mcq",
+   "stem": "Repetition at the beginnings of successive lines is",
+   "options": {
+    "A": "anaphora",
+    "B": "epiphora",
+    "C": "pun",
+    "D": "metaphor"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is anaphora."
+  },
+  {
+   "id": "jamb-literature-enrich-0073",
+   "type": "mcq",
+   "stem": "Contradictory terms placed together form an",
+   "options": {
+    "A": "oxymoron",
+    "B": "simile",
+    "C": "allusion",
+    "D": "euphemism"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is oxymoron."
+  },
+  {
+   "id": "jamb-literature-enrich-0074",
+   "type": "mcq",
+   "stem": "A play on words based on sound or multiple meaning is a",
+   "options": {
+    "A": "pun",
+    "B": "metaphor",
+    "C": "elegy",
+    "D": "epic"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is pun."
+  },
+  {
+   "id": "jamb-literature-enrich-0075",
+   "type": "mcq",
+   "stem": "A major division of a play is an",
+   "options": {
+    "A": "act",
+    "B": "stanza",
+    "C": "paragraph",
+    "D": "foot"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is act."
+  },
+  {
+   "id": "jamb-literature-enrich-0076",
+   "type": "mcq",
+   "stem": "A pair of rhyming lines is a",
+   "options": {
+    "A": "couplet",
+    "B": "quatrain",
+    "C": "octave",
+    "D": "tercet"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is couplet."
+  },
+  {
+   "id": "jamb-literature-enrich-0077",
+   "type": "mcq",
+   "stem": "A four-line stanza is a",
+   "options": {
+    "A": "quatrain",
+    "B": "couplet",
+    "C": "octave",
+    "D": "tercet"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is quatrain."
+  },
+  {
+   "id": "jamb-literature-enrich-0078",
+   "type": "mcq",
+   "stem": "The conclusion of a narrative is its",
+   "options": {
+    "A": "resolution",
+    "B": "exposition",
+    "C": "climax",
+    "D": "conflict"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is resolution."
+  },
+  {
+   "id": "jamb-literature-enrich-0079",
+   "type": "mcq",
+   "stem": "The opening section introducing characters and situation is",
+   "options": {
+    "A": "exposition",
+    "B": "climax",
+    "C": "resolution",
+    "D": "denouement"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is exposition."
+  },
+  {
+   "id": "jamb-literature-enrich-0080",
+   "type": "mcq",
+   "stem": "The literal dictionary meaning of a word is its",
+   "options": {
+    "A": "denotation",
+    "B": "connotation",
+    "C": "tone",
+    "D": "mood"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is denotation."
+  },
+  {
+   "id": "jamb-literature-enrich-0081",
+   "type": "mcq",
+   "stem": "The suggested or associated meaning of a word is its",
+   "options": {
+    "A": "connotation",
+    "B": "denotation",
+    "C": "syntax",
+    "D": "metre"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is connotation."
+  },
+  {
+   "id": "jamb-literature-enrich-0082",
+   "type": "mcq",
+   "stem": "A mild expression replacing a harsh one is a",
+   "options": {
+    "A": "euphemism",
+    "B": "hyperbole",
+    "C": "pun",
+    "D": "paradox"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is euphemism."
+  },
+  {
+   "id": "jamb-literature-enrich-0083",
+   "type": "mcq",
+   "stem": "An apparent contradiction that may reveal truth is a",
+   "options": {
+    "A": "paradox",
+    "B": "simile",
+    "C": "alliteration",
+    "D": "rhyme"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is paradox."
+  },
+  {
+   "id": "jamb-literature-enrich-0084",
+   "type": "mcq",
+   "stem": "A word imitating a sound is",
+   "options": {
+    "A": "onomatopoeia",
+    "B": "metonymy",
+    "C": "allusion",
+    "D": "irony"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is onomatopoeia."
+  },
+  {
+   "id": "jamb-literature-enrich-0085",
+   "type": "mcq",
+   "stem": "The historical period surrounding a work is part of its",
+   "options": {
+    "A": "context",
+    "B": "rhyme",
+    "C": "metre",
+    "D": "plot"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is context."
+  },
+  {
+   "id": "jamb-literature-enrich-0086",
+   "type": "mcq",
+   "stem": "A writer’s background can provide",
+   "options": {
+    "A": "biographical context",
+    "B": "rhyme scheme",
+    "C": "stage directions",
+    "D": "metre"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is biographical context."
+  },
+  {
+   "id": "jamb-literature-enrich-0087",
+   "type": "mcq",
+   "stem": "A critical interpretation should be",
+   "options": {
+    "A": "reasoned and evidence-based",
+    "B": "guesswork only",
+    "C": "unrelated to the text",
+    "D": "based on the cover"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is reasoned and evidence-based."
+  },
+  {
+   "id": "jamb-literature-enrich-0088",
+   "type": "mcq",
+   "stem": "Comparing two literary works can reveal",
+   "options": {
+    "A": "similarities and differences",
+    "B": "only page counts",
+    "C": "only publishers",
+    "D": "nothing useful"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is similarities and differences."
+  },
+  {
+   "id": "jamb-literature-enrich-0089",
+   "type": "mcq",
+   "stem": "Close reading focuses on",
+   "options": {
+    "A": "specific textual details and language",
+    "B": "book price",
+    "C": "publisher address",
+    "D": "author income"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is specific textual details and language."
+  },
+  {
+   "id": "jamb-literature-enrich-0090",
+   "type": "mcq",
+   "stem": "Comparative literary study examines",
+   "options": {
+    "A": "similarities and differences between works",
+    "B": "only one character",
+    "C": "only page numbers",
+    "D": "only publication prices"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is similarities and differences between works."
+  },
+  {
+   "id": "jamb-literature-enrich-0091",
+   "type": "mcq",
+   "stem": "A shared theme in two works can be identified through",
+   "options": {
+    "A": "textual comparison",
+    "B": "their covers only",
+    "C": "publisher names",
+    "D": "page sizes"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is textual comparison."
+  },
+  {
+   "id": "jamb-literature-enrich-0092",
+   "type": "mcq",
+   "stem": "Comparing characters can reveal differences in",
+   "options": {
+    "A": "motivation and development",
+    "B": "printing quality",
+    "C": "book price",
+    "D": "publisher"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is motivation and development."
+  },
+  {
+   "id": "jamb-literature-enrich-0093",
+   "type": "mcq",
+   "stem": "Comparing settings can show how",
+   "options": {
+    "A": "place and time shape events",
+    "B": "fonts affect plot",
+    "C": "prices affect themes",
+    "D": "covers create characters"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is place and time shape events."
+  },
+  {
+   "id": "jamb-literature-enrich-0094",
+   "type": "mcq",
+   "stem": "A useful comparative essay should organize",
+   "options": {
+    "A": "similarities and differences clearly",
+    "B": "random quotations only",
+    "C": "unrelated facts",
+    "D": "publisher information"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is similarities and differences clearly."
+  },
+  {
+   "id": "jamb-literature-enrich-0095",
+   "type": "mcq",
+   "stem": "Oral literature is primarily transmitted through",
+   "options": {
+    "A": "spoken performance",
+    "B": "printing only",
+    "C": "digital databases only",
+    "D": "newspapers only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is spoken performance."
+  },
+  {
+   "id": "jamb-literature-enrich-0096",
+   "type": "mcq",
+   "stem": "A traditional story explaining origins may be a",
+   "options": {
+    "A": "myth",
+    "B": "business report",
+    "C": "newspaper",
+    "D": "memo"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is myth."
+  },
+  {
+   "id": "jamb-literature-enrich-0097",
+   "type": "mcq",
+   "stem": "A moral story featuring animals as characters is a",
+   "options": {
+    "A": "fable",
+    "B": "sonnet",
+    "C": "tragedy",
+    "D": "ode"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is fable."
+  },
+  {
+   "id": "jamb-literature-enrich-0098",
+   "type": "mcq",
+   "stem": "A traditional narrative passed from generation to generation is a",
+   "options": {
+    "A": "folktale",
+    "B": "invoice",
+    "C": "editorial",
+    "D": "biography"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is folktale."
+  },
+  {
+   "id": "jamb-literature-enrich-0099",
+   "type": "mcq",
+   "stem": "Songs, proverbs and riddles are examples of",
+   "options": {
+    "A": "oral forms",
+    "B": "stage directions",
+    "C": "novel chapters",
+    "D": "scientific reports"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct answer is oral forms."
+  }
+ ],
+ "category": "secondary",
+ "body": "JAMB"
+}

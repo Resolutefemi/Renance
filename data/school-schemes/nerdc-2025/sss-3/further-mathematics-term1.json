@@ -1,0 +1,47 @@
+{
+  "class": "SSS 3",
+  "subject": "Further Mathematics",
+  "term": 1,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Inequalities",
+      "content": "Quadratic inequalities; Inequalities in two dimensions."
+    },
+    {
+      "week": 2,
+      "topic": "Matrices and Determinants matrices; Matrices as linear transformations; Determinants; Solution of",
+      "content": "Meaning of matrices; Addition, subtraction and multiplication of\nsimultaneous equations using 2×2 and 3×3 matrices."
+    },
+    {
+      "week": 4,
+      "topic": "Partial Fractions",
+      "content": "Basic definition of partial fraction; Proper rational functions with\ndenominators as linear factors (distinct, repeated, and others)."
+    },
+    {
+      "week": 5,
+      "topic": "Probability Distributions Binomial approximation by Poisson distribution.",
+      "content": "Binomial distribution; Poisson distribution; Normal distribution;"
+    },
+    {
+      "week": 7,
+      "topic": "Variance",
+      "content": "Mean, variance, and coefficient of variation of binomial, Poisson and\nnormal distributions."
+    },
+    {
+      "week": 9,
+      "topic": "Correlation",
+      "content": "Concept of correlation as a measure of relationship; Scatter diagrams;\nRank correlation; Tied ranks."
+    },
+    {
+      "week": 11,
+      "topic": "Revision",
+      "content": "General revision of all first term topics."
+    },
+    {
+      "week": 12,
+      "topic": "Examination",
+      "content": "End of term examination."
+    }
+  ]
+}

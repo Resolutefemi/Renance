@@ -1,0 +1,2965 @@
+{
+ "code": "uni-tasued-edu201-bank",
+ "title": "TASUED EDU201 | Course Question Bank",
+ "version": 1,
+ "questionCount": 211,
+ "totalMarks": 211,
+ "body": "University Modules",
+ "category": "university",
+ "questions": [
+  {
+   "id": "uni-tasued-edu201-bank-0001",
+   "type": "mcq",
+   "stem": "Learning contracts are:",
+   "options": {
+    "A": "Agreements outlining goals and activities.",
+    "B": "Quizzes.",
+    "C": "Simulations.",
+    "D": "Debates."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines learning contracts as agreements outlining goals and activities."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0002",
+   "type": "mcq",
+   "stem": "What is the definition of curriculum according to the study guide?",
+   "options": {
+    "A": "The overall plan or design for learning experiences that students encounter in an educational setting.",
+    "B": "Only the subject matter and topics taught in class.",
+    "C": "The physical layout of the classroom.",
+    "D": "Assessments used to evaluate students."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines curriculum as the overall plan or design for learning experiences."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0003",
+   "type": "mcq",
+   "stem": "Hidden curriculum refers to:",
+   "options": {
+    "A": "Unwritten and unintended lessons like social norms, values, and beliefs.",
+    "B": "Official standards.",
+    "C": "Career readiness.",
+    "D": "Technology integration."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines hidden curriculum as unwritten and unintended lessons."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0004",
+   "type": "mcq",
+   "stem": "Hidden curriculum can teach:",
+   "options": {
+    "A": "Social norms unintentionally.",
+    "B": "Explicit standards.",
+    "C": "Digital literacy.",
+    "D": "Formative feedback."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that hidden curriculum can teach social norms unintentionally."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0005",
+   "type": "mcq",
+   "stem": "Backward design starts with:",
+   "options": {
+    "A": "Desired learning outcomes, then works backward to content, instruction, and assessment.",
+    "B": "Content selection first.",
+    "C": "Assessment methods.",
+    "D": "Resources."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that backward design starts with desired learning outcomes."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0006",
+   "type": "mcq",
+   "stem": "Backward design is opposite to:",
+   "options": {
+    "A": "Starting with content and moving forward.",
+    "B": "Inquiry-based.",
+    "C": "Thematic.",
+    "D": "Integrated."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Backward design is opposite to starting with content and moving forward."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0007",
+   "type": "mcq",
+   "stem": "Which acronym describes objectives in curriculum components?",
+   "options": {
+    "A": "SMART (Specific, Measurable, Achievable, Relevant, Time-bound).",
+    "B": "BASIC (Broad, Achievable, Simple, Inclusive, Clear).",
+    "C": "FAST (Flexible, Accurate, Specific, Timely).",
+    "D": "CLEAR (Concise, Logical, Effective, Accurate, Relevant)."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide identifies SMART as the acronym describing objectives in curriculum components."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0008",
+   "type": "mcq",
+   "stem": "What does 'content' in curriculum components refer to?",
+   "options": {
+    "A": "The subject matter, topics, and information included, such as facts, concepts, principles, and skills.",
+    "B": "Methods used to evaluate learning.",
+    "C": "Materials like textbooks and equipment.",
+    "D": "The emotional context of learning."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide specifies that 'content' refers to the subject matter and information included in the curriculum."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0009",
+   "type": "mcq",
+   "stem": "Instructional strategies in curriculum include which of the following?",
+   "options": {
+    "A": "Lectures, discussions, group work, projects, and technology integration.",
+    "B": "Only tests and quizzes.",
+    "C": "Classroom layout and school culture.",
+    "D": "Statements defining what students should know."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide lists lectures, discussions, group work, projects, and technology integration as examples of instructional strategies."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0010",
+   "type": "mcq",
+   "stem": "What is assessment in the context of curriculum components?",
+   "options": {
+    "A": "Methods to evaluate student learning and progress, including tests, quizzes, projects, presentations, and portfolios.",
+    "B": "The breadth and depth of content.",
+    "C": "The order of content presentation.",
+    "D": "Unwritten lessons learned in school."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines assessment as methods to evaluate student learning and progress."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0011",
+   "type": "mcq",
+   "stem": "Resources in curriculum components are:",
+   "options": {
+    "A": "Materials and tools like textbooks, online resources, manipulatives, and equipment.",
+    "B": "Specific learning outcomes.",
+    "C": "Social norms and values.",
+    "D": "Integration of subjects."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide identifies resources as materials and tools like textbooks, online resources, manipulatives, and equipment."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0012",
+   "type": "mcq",
+   "stem": "The learning environment includes:",
+   "options": {
+    "A": "Physical, social, and emotional context like classroom layout, climate, and school culture.",
+    "B": "Only digital tools.",
+    "C": "Evaluation methods.",
+    "D": "Career preparation activities."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that the learning environment includes physical, social, and emotional context."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0013",
+   "type": "mcq",
+   "stem": "Standards in curriculum are:",
+   "options": {
+    "A": "Statements that define what students should know and be able to do at each grade level or subject area.",
+    "B": "The hidden lessons in school.",
+    "C": "Group discussions.",
+    "D": "Technology integration."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines standards as statements that define what students should know and be able to do."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0014",
+   "type": "mcq",
+   "stem": "What is scope in curriculum frameworks?",
+   "options": {
+    "A": "The breadth and depth of the content covered.",
+    "B": "The order of content presentation.",
+    "C": "Connection between grade levels.",
+    "D": "Student-led investigation."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines scope as the breadth and depth of the content covered."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0015",
+   "type": "mcq",
+   "stem": "Sequence refers to:",
+   "options": {
+    "A": "The order in which content is presented in the curriculum.",
+    "B": "Alignment across subjects.",
+    "C": "Real-world connections.",
+    "D": "Cultural backgrounds."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that sequence refers to the order in which content is presented."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0016",
+   "type": "mcq",
+   "stem": "Choice boards provide:",
+   "options": {
+    "A": "Menu of options for assignments.",
+    "B": "Uniform tasks.",
+    "C": "Hidden lessons.",
+    "D": "Coding projects."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that choice boards provide a menu of options for assignments."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0017",
+   "type": "mcq",
+   "stem": "A curriculum framework is:",
+   "options": {
+    "A": "A structured document outlining goals, objectives, content, strategies, and assessment for a subject or grade.",
+    "B": "Unintended lessons.",
+    "C": "Peer teaching.",
+    "D": "Digital storytelling."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines a curriculum framework as a structured document outlining these key components."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0018",
+   "type": "mcq",
+   "stem": "Alignment in curriculum means:",
+   "options": {
+    "A": "Consistency between objectives, content, instruction, assessment, and standards.",
+    "B": "Starting with outcomes and working backward.",
+    "C": "Organizing around a theme.",
+    "D": "Community projects."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines alignment as consistency between objectives, content, instruction, assessment, and standards."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0019",
+   "type": "mcq",
+   "stem": "Vertical alignment ensures:",
+   "options": {
+    "A": "Connection between curriculum at different grade levels, building on prior knowledge.",
+    "B": "Coordination across subjects at the same level.",
+    "C": "Student engagement.",
+    "D": "Technology use."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that vertical alignment ensures connection between curriculum at different grade levels."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0020",
+   "type": "mcq",
+   "stem": "Horizontal alignment promotes:",
+   "options": {
+    "A": "Coordination across subjects at the same grade level, interdisciplinary learning.",
+    "B": "Prior knowledge building.",
+    "C": "Social justice.",
+    "D": "Formative feedback."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that horizontal alignment promotes coordination across subjects at the same grade level."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0021",
+   "type": "mcq",
+   "stem": "A standards-based curriculum is designed to:",
+   "options": {
+    "A": "Meet specific learning standards.",
+    "B": "Emphasize discovery.",
+    "C": "Integrate themes.",
+    "D": "Address equity."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that a standards-based curriculum is designed to meet specific learning standards."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0022",
+   "type": "mcq",
+   "stem": "Thematic curriculum is organized around:",
+   "options": {
+    "A": "A central theme or topic, integrating content from different subjects.",
+    "B": "Real-world problems.",
+    "C": "Hidden values.",
+    "D": "Digital tools."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that thematic curriculum is organized around a central theme or topic."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0023",
+   "type": "mcq",
+   "stem": "Integrated curriculum combines:",
+   "options": {
+    "A": "Content from different subjects into a cohesive whole.",
+    "B": "Only facts and skills.",
+    "C": "Emotional contexts.",
+    "D": "Assessment rubrics."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines integrated curriculum as combining content from different subjects."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0024",
+   "type": "mcq",
+   "stem": "Contextualization adapts curriculum to:",
+   "options": {
+    "A": "Specific needs and interests of students and community.",
+    "B": "Standardized tests.",
+    "C": "Teacher lectures.",
+    "D": "Hidden lessons."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that contextualization adapts curriculum to specific needs and interests."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0025",
+   "type": "mcq",
+   "stem": "Interdisciplinary connections integrate:",
+   "options": {
+    "A": "Content from different subjects to show how knowledge is connected.",
+    "B": "Self-assessment.",
+    "C": "Assistive tools.",
+    "D": "Pre-tests."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that interdisciplinary connections integrate content from different subjects."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0026",
+   "type": "mcq",
+   "stem": "Which is NOT a component of curriculum?",
+   "options": {
+    "A": "Peer assessment.",
+    "B": "Objectives.",
+    "C": "Content.",
+    "D": "Instructional strategies."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide lists objectives, content, and instructional strategies as components, but not peer assessment."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0027",
+   "type": "mcq",
+   "stem": "Vertical vs. horizontal alignment differs in:",
+   "options": {
+    "A": "Grade levels vs. subjects at same level.",
+    "B": "Content vs. assessment.",
+    "C": "Teacher vs. student focus.",
+    "D": "Real-world vs. theoretical."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide explains that vertical alignment connects grade levels, while horizontal coordinates subjects at the same level."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0028",
+   "type": "mcq",
+   "stem": "Cultural relevance reflects:",
+   "options": {
+    "A": "Cultural backgrounds, experiences, and perspectives of students.",
+    "B": "Sequence of content.",
+    "C": "Summative exams.",
+    "D": "Virtual reality."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that cultural relevance reflects cultural backgrounds, experiences, and perspectives of students."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0029",
+   "type": "mcq",
+   "stem": "Community involvement engages students in:",
+   "options": {
+    "A": "Community-based projects addressing local needs.",
+    "B": "Lectures only.",
+    "C": "Standardized scoring.",
+    "D": "Virtual environments."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that community involvement engages students in community-based projects."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0030",
+   "type": "mcq",
+   "stem": "Social justice in curriculum addresses:",
+   "options": {
+    "A": "Issues of equity, diversity, and inclusion, promoting critical consciousness.",
+    "B": "Content order.",
+    "C": "Teacher demonstrations.",
+    "D": "Coding tutorials."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that social justice in curriculum addresses issues of equity, diversity, and inclusion."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0031",
+   "type": "mcq",
+   "stem": "Inquiry-based learning emphasizes:",
+   "options": {
+    "A": "Student-led investigation and discovery, promoting critical thinking.",
+    "B": "Teacher-centered lectures.",
+    "C": "Group work only.",
+    "D": "Standardized tests."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that inquiry-based learning emphasizes student-led investigation and discovery."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0032",
+   "type": "mcq",
+   "stem": "Authentic learning provides:",
+   "options": {
+    "A": "Real-world tasks and projects with relevance beyond the classroom.",
+    "B": "Only theoretical knowledge.",
+    "C": "Digital feedback.",
+    "D": "Group discussions."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines authentic learning as providing real-world tasks and projects."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0033",
+   "type": "mcq",
+   "stem": "Real-world connections link curriculum to:",
+   "options": {
+    "A": "Current events, social issues, and career opportunities.",
+    "B": "Only past knowledge.",
+    "C": "Emotional climate.",
+    "D": "Rubrics."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that real-world connections link curriculum to current events, social issues, and career opportunities."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0034",
+   "type": "mcq",
+   "stem": "Inquiry-based learning promotes:",
+   "options": {
+    "A": "Critical thinking and problem-solving.",
+    "B": "Passive listening.",
+    "C": "Standardized testing.",
+    "D": "Hidden lessons."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that inquiry-based learning promotes critical thinking and problem-solving."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0035",
+   "type": "mcq",
+   "stem": "Direct instruction is:",
+   "options": {
+    "A": "Teacher-centered with lectures, demonstrations, and guided practice.",
+    "B": "Student-led exploration.",
+    "C": "Group projects.",
+    "D": "Online integration."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines direct instruction as teacher-centered with lectures, demonstrations, and guided practice."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0036",
+   "type": "mcq",
+   "stem": "Inquiry-based learning involves:",
+   "options": {
+    "A": "Students exploring through investigation, teacher as facilitator.",
+    "B": "Explicit teaching.",
+    "C": "Peer evaluation.",
+    "D": "Rubrics."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that inquiry-based learning involves students exploring through investigation with the teacher as facilitator."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0037",
+   "type": "mcq",
+   "stem": "Collaborative learning promotes:",
+   "options": {
+    "A": "Teamwork and peer learning in groups.",
+    "B": "Individual tasks.",
+    "C": "Standardized tests.",
+    "D": "Hidden curriculum."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that collaborative learning promotes teamwork and peer learning in groups."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0038",
+   "type": "mcq",
+   "stem": "Problem-based learning focuses on:",
+   "options": {
+    "A": "Solving complex real-world problems for critical thinking.",
+    "B": "Lectures.",
+    "C": "Digital storytelling.",
+    "D": "Self-assessment."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that problem-based learning focuses on solving complex real-world problems."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0039",
+   "type": "mcq",
+   "stem": "Project-based learning culminates in:",
+   "options": {
+    "A": "A tangible product or presentation integrating skills.",
+    "B": "Quizzes.",
+    "C": "Community involvement.",
+    "D": "Virtual reality."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that project-based learning culminates in a tangible product or presentation."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0040",
+   "type": "mcq",
+   "stem": "Differentiated instruction tailors to:",
+   "options": {
+    "A": "Diverse needs through modifications to content, process, product, or environment.",
+    "B": "Uniform standards.",
+    "C": "Teacher preferences.",
+    "D": "Hidden values."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines differentiated instruction as tailoring to diverse needs through modifications."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0041",
+   "type": "mcq",
+   "stem": "Experiential learning is through:",
+   "options": {
+    "A": "Direct experience like simulations, field trips, hands-on activities.",
+    "B": "Lectures only.",
+    "C": "Peer teaching.",
+    "D": "Coding."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that experiential learning is through direct experience."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0042",
+   "type": "mcq",
+   "stem": "Blended learning integrates:",
+   "options": {
+    "A": "Online and face-to-face instruction for flexibility.",
+    "B": "Only online.",
+    "C": "Group discussions.",
+    "D": "Rubrics."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines blended learning as integrating online and face-to-face instruction."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0043",
+   "type": "mcq",
+   "stem": "Universal Design for Learning (UDL) creates:",
+   "options": {
+    "A": "Flexible environments accommodating differences.",
+    "B": "Rigid structures.",
+    "C": "Standardized tests.",
+    "D": "Hidden lessons."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that UDL creates flexible environments accommodating differences."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0044",
+   "type": "mcq",
+   "stem": "Content differentiation modifies:",
+   "options": {
+    "A": "Material to match readiness, interests, profiles.",
+    "B": "Classroom environment.",
+    "C": "Product only.",
+    "D": "Sequence."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that content differentiation modifies material to match readiness, interests, and profiles."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0045",
+   "type": "mcq",
+   "stem": "Process differentiation adjusts:",
+   "options": {
+    "A": "Activities and strategies, like support levels.",
+    "B": "Content depth.",
+    "C": "Assessment rubrics.",
+    "D": "Technology."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that process differentiation adjusts activities and strategies."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0046",
+   "type": "mcq",
+   "stem": "Product differentiation allows:",
+   "options": {
+    "A": "Various demonstration means like reports, presentations.",
+    "B": "Uniform products.",
+    "C": "Hidden curriculum.",
+    "D": "Virtual tools."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that product differentiation allows various demonstration means."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0047",
+   "type": "mcq",
+   "stem": "Environment differentiation modifies:",
+   "options": {
+    "A": "Classroom to support needs, like quiet spaces or flexible seating.",
+    "B": "Content.",
+    "C": "Process.",
+    "D": "Product."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that environment differentiation modifies the classroom to support needs."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0048",
+   "type": "mcq",
+   "stem": "Tiered assignments vary in:",
+   "options": {
+    "A": "Difficulty and complexity.",
+    "B": "Group size.",
+    "C": "Digital use.",
+    "D": "Self-reflection."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that tiered assignments vary in difficulty and complexity."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0049",
+   "type": "mcq",
+   "stem": "Flexible grouping is based on:",
+   "options": {
+    "A": "Readiness, interests, or learning styles.",
+    "B": "Fixed groups.",
+    "C": "Teacher only.",
+    "D": "Standards."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that flexible grouping is based on readiness, interests, or learning styles."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0050",
+   "type": "mcq",
+   "stem": "Compacting allows advanced students to:",
+   "options": {
+    "A": "Move to more challenging content.",
+    "B": "Repeat material.",
+    "C": "Use VR.",
+    "D": "Peer assess."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that compacting allows advanced students to move to more challenging content."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0051",
+   "type": "mcq",
+   "stem": "Learning stations set up:",
+   "options": {
+    "A": "Different activities related to content.",
+    "B": "Lectures.",
+    "C": "Final exams.",
+    "D": "Community projects."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that learning stations set up different activities related to content."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0052",
+   "type": "mcq",
+   "stem": "Think-Pair-Share involves:",
+   "options": {
+    "A": "Individual think, pair discuss, class share.",
+    "B": "Expert sharing only.",
+    "C": "Role-playing.",
+    "D": "Games."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines Think-Pair-Share as involving individual think, pair discuss, and class share."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0053",
+   "type": "mcq",
+   "stem": "Jigsaw makes students:",
+   "options": {
+    "A": "Experts on a topic, then share with peers.",
+    "B": "Argue positions.",
+    "C": "Analyze scenarios.",
+    "D": "Create maps."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that Jigsaw makes students experts on a topic, then share with peers."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0054",
+   "type": "mcq",
+   "stem": "Case studies help develop:",
+   "options": {
+    "A": "Problem-solving by analyzing real scenarios.",
+    "B": "Lectures.",
+    "C": "Digital literacy.",
+    "D": "Rubrics."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that case studies help develop problem-solving by analyzing real scenarios."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0055",
+   "type": "mcq",
+   "stem": "Debates develop:",
+   "options": {
+    "A": "Critical thinking and communication.",
+    "B": "Individual work.",
+    "C": "Hidden values.",
+    "D": "Pre-tests."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that debates develop critical thinking and communication."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0056",
+   "type": "mcq",
+   "stem": "Simulations mimic:",
+   "options": {
+    "A": "Real-world situations.",
+    "B": "Theoretical concepts.",
+    "C": "Group discussions.",
+    "D": "Self-assessment."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that simulations mimic real-world situations."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0057",
+   "type": "mcq",
+   "stem": "Role-playing explores:",
+   "options": {
+    "A": "Different perspectives and empathy.",
+    "B": "Content depth.",
+    "C": "Technology.",
+    "D": "Standards."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that role-playing explores different perspectives and empathy."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0058",
+   "type": "mcq",
+   "stem": "Games reinforce:",
+   "options": {
+    "A": "Concepts and promote engagement.",
+    "B": "Strict discipline.",
+    "C": "Summative evaluation.",
+    "D": "Vertical alignment."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that games reinforce concepts and promote engagement."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0059",
+   "type": "mcq",
+   "stem": "Group discussions promote:",
+   "options": {
+    "A": "Collaboration and critical thinking.",
+    "B": "Passive learning.",
+    "C": "Coding skills.",
+    "D": "Hidden curriculum."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that group discussions promote collaboration and critical thinking."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0060",
+   "type": "mcq",
+   "stem": "Peer teaching reinforces:",
+   "options": {
+    "A": "Understanding and teaching skills.",
+    "B": "Teacher-centered.",
+    "C": "VR experiences.",
+    "D": "Rubrics."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that peer teaching reinforces understanding and teaching skills."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0061",
+   "type": "mcq",
+   "stem": "Concept mapping creates:",
+   "options": {
+    "A": "Visual representations of concepts and relationships.",
+    "B": "Final projects.",
+    "C": "Community involvement.",
+    "D": "Diagnostic surveys."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines concept mapping as creating visual representations of concepts and relationships."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0062",
+   "type": "mcq",
+   "stem": "Which is teacher-centered?",
+   "options": {
+    "A": "Direct instruction.",
+    "B": "Collaborative learning.",
+    "C": "Project-based.",
+    "D": "Inquiry-based."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide identifies direct instruction as teacher-centered."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0063",
+   "type": "mcq",
+   "stem": "UDL accommodates:",
+   "options": {
+    "A": "Individual differences.",
+    "B": "Uniform needs.",
+    "C": "Hidden lessons.",
+    "D": "Standardized tests."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that UDL accommodates individual differences."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0064",
+   "type": "mcq",
+   "stem": "Tiered assignments are for:",
+   "options": {
+    "A": "Varying difficulty.",
+    "B": "Fixed complexity.",
+    "C": "Peer only.",
+    "D": "Digital only."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that tiered assignments are for varying difficulty."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0065",
+   "type": "mcq",
+   "stem": "Jigsaw is an active strategy for:",
+   "options": {
+    "A": "Sharing expertise.",
+    "B": "Individual think.",
+    "C": "Debates.",
+    "D": "Simulations."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that Jigsaw is an active strategy for sharing expertise."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0066",
+   "type": "mcq",
+   "stem": "Experiential learning includes:",
+   "options": {
+    "A": "Field trips.",
+    "B": "Lectures.",
+    "C": "Rubrics.",
+    "D": "Standards."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide lists field trips as an example of experiential learning."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0067",
+   "type": "mcq",
+   "stem": "Authentic learning focuses on:",
+   "options": {
+    "A": "Exams",
+    "B": "Theory",
+    "C": "Real-world tasks",
+    "D": "Memorization"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Authentic learning emphasizes meaningful real-world tasks and experiences that help students apply knowledge in practical situations."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0068",
+   "type": "mcq",
+   "stem": "Student engagement is the level of:",
+   "options": {
+    "A": "Interest, motivation, and involvement in the curriculum.",
+    "B": "Content depth.",
+    "C": "Assessment criteria.",
+    "D": "Technology use."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines student engagement as the level of interest, motivation, and involvement."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0069",
+   "type": "mcq",
+   "stem": "Interactive whiteboards allow:",
+   "options": {
+    "A": "Dynamic content, annotation, and engagement.",
+    "B": "Static lectures.",
+    "C": "Self-assessment.",
+    "D": "Peer review."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that interactive whiteboards allow dynamic content, annotation, and engagement."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0070",
+   "type": "mcq",
+   "stem": "Learning Management Systems (LMS) like Moodle provide:",
+   "options": {
+    "A": "Centralized hub for materials, assignments, communication, assessment.",
+    "B": "Only videos.",
+    "C": "Hidden lessons.",
+    "D": "Pre-tests."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that LMS provide a centralized hub for various educational functions."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0071",
+   "type": "mcq",
+   "stem": "Multimedia resources cater to:",
+   "options": {
+    "A": "Different learning styles with videos, podcasts, simulations.",
+    "B": "Teacher only.",
+    "C": "Hidden values.",
+    "D": "Compacting."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that multimedia resources cater to different learning styles."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0072",
+   "type": "mcq",
+   "stem": "Assistive technology supports:",
+   "options": {
+    "A": "Students with disabilities, like text-to-speech.",
+    "B": "All students uniformly.",
+    "C": "Concept mapping.",
+    "D": "Debates."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that assistive technology supports students with disabilities."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0073",
+   "type": "mcq",
+   "stem": "Which LMS is mentioned?",
+   "options": {
+    "A": "Moodle, Canvas, Blackboard.",
+    "B": "Scratch only.",
+    "C": "Google Docs.",
+    "D": "Storybird."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide mentions Moodle, Canvas, and Blackboard as examples of LMS."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0074",
+   "type": "mcq",
+   "stem": "Assistive technology includes:",
+   "options": {
+    "A": "Speech-to-text.",
+    "B": "Games.",
+    "C": "Debates.",
+    "D": "Jigsaw."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide lists speech-to-text as an example of assistive technology."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0075",
+   "type": "mcq",
+   "stem": "Technology integration uses tools to:",
+   "options": {
+    "A": "Enhance learning and achieve outcomes.",
+    "B": "Replace teachers.",
+    "C": "Hide curriculum.",
+    "D": "Standardize only."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that technology integration uses tools to enhance learning and achieve outcomes."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0076",
+   "type": "mcq",
+   "stem": "Educational apps offer:",
+   "options": {
+    "A": "Interactive simulations, gamified experiences, personalized feedback.",
+    "B": "Uniform content.",
+    "C": "Role-playing.",
+    "D": "Rubrics."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that educational apps offer interactive simulations, gamified experiences, and personalized feedback."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0077",
+   "type": "mcq",
+   "stem": "Online collaboration tools like Google Docs facilitate:",
+   "options": {
+    "A": "Working on projects, sharing ideas, peer feedback.",
+    "B": "Individual tasks.",
+    "C": "Diagnostic assessment.",
+    "D": "Vertical alignment."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that online collaboration tools facilitate working on projects, sharing ideas, and peer feedback."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0078",
+   "type": "mcq",
+   "stem": "VR and AR create:",
+   "options": {
+    "A": "Immersive experiences for virtual exploration.",
+    "B": "Basic lectures.",
+    "C": "Group discussions.",
+    "D": "Self-regulation."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that VR and AR create immersive experiences for virtual exploration."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0079",
+   "type": "mcq",
+   "stem": "Coding platforms like Scratch foster:",
+   "options": {
+    "A": "Computational thinking skills.",
+    "B": "Passive learning.",
+    "C": "Hidden curriculum.",
+    "D": "Summative exams."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that coding platforms foster computational thinking skills."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0080",
+   "type": "mcq",
+   "stem": "Digital storytelling tools promote:",
+   "options": {
+    "A": "Creativity, communication, digital literacy.",
+    "B": "Strict guidelines.",
+    "C": "Pre-knowledge.",
+    "D": "Horizontal alignment."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that digital storytelling tools promote creativity, communication, and digital literacy."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0081",
+   "type": "mcq",
+   "stem": "AR/VR allows:",
+   "options": {
+    "A": "Interaction with augmented objects.",
+    "B": "Basic apps.",
+    "C": "Rubrics.",
+    "D": "Pre-tests."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that AR/VR allows interaction with augmented objects."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0082",
+   "type": "mcq",
+   "stem": "Coding platforms foster:",
+   "options": {
+    "A": "Computational thinking.",
+    "B": "Passive recall.",
+    "C": "Hidden values.",
+    "D": "Vertical alignment."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that coding platforms foster computational thinking."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0083",
+   "type": "mcq",
+   "stem": "Assessing learning outcomes involves:",
+   "options": {
+    "A": "Gathering, analyzing evidence to check objectives achieved.",
+    "B": "Ignoring progress.",
+    "C": "Technology only.",
+    "D": "Hidden lessons."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that assessing learning outcomes involves gathering and analyzing evidence."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0084",
+   "type": "mcq",
+   "stem": "Formative assessment is:",
+   "options": {
+    "A": "Ongoing to monitor learning and adjust instruction.",
+    "B": "End-of-unit evaluation.",
+    "C": "Pre-knowledge check.",
+    "D": "Performance tasks."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines formative assessment as ongoing to monitor learning and adjust instruction."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0085",
+   "type": "mcq",
+   "stem": "Authentic assessment applies to:",
+   "options": {
+    "A": "Real-world contexts, like simulations, case studies.",
+    "B": "Abstract theory.",
+    "C": "Teacher lectures.",
+    "D": "Digital only."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that authentic assessment applies to real-world contexts."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0086",
+   "type": "mcq",
+   "stem": "Self-assessment promotes:",
+   "options": {
+    "A": "Metacognition and self-regulation.",
+    "B": "Peer evaluation.",
+    "C": "Technology integration.",
+    "D": "Hidden curriculum."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that self-assessment promotes metacognition and self-regulation."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0087",
+   "type": "mcq",
+   "stem": "Digital assessment tools provide:",
+   "options": {
+    "A": "Immediate feedback, track progress.",
+    "B": "Long-term projects.",
+    "C": "Cultural relevance.",
+    "D": "Inquiry."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that digital assessment tools provide immediate feedback and track progress."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0088",
+   "type": "mcq",
+   "stem": "Formative assessment examples include:",
+   "options": {
+    "A": "Quizzes, discussions, exit tickets for feedback.",
+    "B": "Final exams.",
+    "C": "Portfolios.",
+    "D": "Surveys."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide lists quizzes, discussions, and exit tickets as examples of formative assessment."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0089",
+   "type": "mcq",
+   "stem": "Summative assessment is at:",
+   "options": {
+    "A": "End of unit/course, like exams, projects.",
+    "B": "Ongoing.",
+    "C": "Pre-start.",
+    "D": "Peer-based."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that summative assessment is at the end of a unit or course."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0090",
+   "type": "mcq",
+   "stem": "Diagnostic assessment identifies:",
+   "options": {
+    "A": "Prior knowledge, skills, needs, like pre-tests.",
+    "B": "Final outcomes.",
+    "C": "Real-world application.",
+    "D": "VR use."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that diagnostic assessment identifies prior knowledge, skills, and needs."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0091",
+   "type": "mcq",
+   "stem": "Performance-based assessment requires:",
+   "options": {
+    "A": "Demonstrating skills via tasks/projects, like presentations.",
+    "B": "Multiple-choice only.",
+    "C": "Hidden values.",
+    "D": "Coding."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that performance-based assessment requires demonstrating skills via tasks or projects."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0092",
+   "type": "mcq",
+   "stem": "Rubrics are:",
+   "options": {
+    "A": "Scoring guides defining criteria for evaluation.",
+    "B": "Standardized tests.",
+    "C": "Self-reflection.",
+    "D": "Group work."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines rubrics as scoring guides defining criteria for evaluation."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0093",
+   "type": "mcq",
+   "stem": "Standardized tests are:",
+   "options": {
+    "A": "Commercially developed, consistent scoring for comparisons.",
+    "B": "Informal quizzes.",
+    "C": "Community projects.",
+    "D": "Inquiry-based."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines standardized tests as commercially developed with consistent scoring for comparisons."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0094",
+   "type": "mcq",
+   "stem": "Peer assessment involves:",
+   "options": {
+    "A": "Students evaluating peers' work, promoting collaboration.",
+    "B": "Teacher only.",
+    "C": "Final grading.",
+    "D": "VR."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that peer assessment involves students evaluating peers' work."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0095",
+   "type": "mcq",
+   "stem": "Digital assessment is for:",
+   "options": {
+    "A": "Quizzes, surveys, immediate feedback.",
+    "B": "Long essays.",
+    "C": "Hidden lessons.",
+    "D": "Lectures."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that digital assessment is for quizzes, surveys, and immediate feedback."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0096",
+   "type": "mcq",
+   "stem": "Summative vs. formative differs in:",
+   "options": {
+    "A": "End evaluation vs. ongoing feedback.",
+    "B": "Prior vs. final.",
+    "C": "Peer vs. self.",
+    "D": "Digital vs. manual."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide differentiates summative and formative assessment as end evaluation versus ongoing feedback."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0097",
+   "type": "mcq",
+   "stem": "Rubrics provide:",
+   "options": {
+    "A": "Clear expectations and consistent grading.",
+    "B": "Random scoring.",
+    "C": "Inquiry questions.",
+    "D": "Community links."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that rubrics provide clear expectations and consistent grading."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0098",
+   "type": "mcq",
+   "stem": "Peer assessment promotes:",
+   "options": {
+    "A": "Critical thinking and communication.",
+    "B": "Individual isolation.",
+    "C": "Technology avoidance.",
+    "D": "Summative only."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that peer assessment promotes critical thinking and communication."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0099",
+   "type": "mcq",
+   "stem": "Relevance in curriculum evaluation is:",
+   "options": {
+    "A": "The degree to which curriculum is meaningful and useful, connecting to students' lives and goals.",
+    "B": "Physical environment.",
+    "C": "Peer assessment.",
+    "D": "Coding platforms."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide defines relevance as the degree to which curriculum is meaningful and useful."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0100",
+   "type": "mcq",
+   "stem": "Authentic assessment examples:",
+   "options": {
+    "A": "Simulations, community projects.",
+    "B": "Multiple-choice.",
+    "C": "Lectures.",
+    "D": "Standards."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide lists simulations and community projects as examples of authentic assessment."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0101",
+   "type": "mcq",
+   "stem": "Career readiness prepares students with:",
+   "options": {
+    "A": "Knowledge, skills, and experiences for future careers.",
+    "B": "Hidden values.",
+    "C": "Inquiry questions.",
+    "D": "Multimedia."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study guide states that career readiness prepares students with knowledge, skills, and experiences for future careers."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0102",
+   "type": "mcq",
+   "stem": "The focus of subject-centered curriculum is:",
+   "options": {
+    "A": "Compartmentalization of knowledge.",
+    "B": "De compartmentalization of knowledge.",
+    "C": "Integration of knowledge.",
+    "D": "Centralization of knowledge."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Subject-centered curriculum organizes learning into separate, distinct subject compartments rather than integrating them."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0103",
+   "type": "mcq",
+   "stem": "Broadfield curriculum is also referred to as:",
+   "options": {
+    "A": "Integrated curriculum.",
+    "B": "Subject-centered curriculum.",
+    "C": "Hidden curriculum.",
+    "D": "Core curriculum."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Broadfield curriculum merges related subjects into broader fields of study, making it a form of integrated curriculum."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0104",
+   "type": "mcq",
+   "stem": "The focus of broadfield curriculum is:",
+   "options": {
+    "A": "De compartmentalization of knowledge.",
+    "B": "Compartmentalization of knowledge.",
+    "C": "Centralization of knowledge.",
+    "D": "Standardization of knowledge."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Broadfield curriculum breaks down rigid subject boundaries, decompartmentalizing knowledge by merging related disciplines."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0105",
+   "type": "mcq",
+   "stem": "Who is the proponent of the seven-step linear elements of curriculum?",
+   "options": {
+    "A": "Hilda Taba.",
+    "B": "John Kerr.",
+    "C": "Wheeler.",
+    "D": "Tyler."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Hilda Taba is associated with a linear, step-by-step model for curriculum development."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0106",
+   "type": "mcq",
+   "stem": "A framework or plan of action for designing the constituent parts of educational activities is defined as:",
+   "options": {
+    "A": "Curriculum design.",
+    "B": "Curriculum model.",
+    "C": "Curriculum plan.",
+    "D": "Curriculum evaluation."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Curriculum design refers to the framework used to organize and structure the components of educational activities."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0107",
+   "type": "mcq",
+   "stem": "Wheeler's curriculum model is arranged in a:",
+   "options": {
+    "A": "Cyclic pattern.",
+    "B": "Linear pattern.",
+    "C": "Round pattern.",
+    "D": "Random pattern."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Unlike Tyler's linear model, Wheeler's model is cyclic, allowing continuous revision of curriculum elements."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0108",
+   "type": "mcq",
+   "stem": "The specified duration for a lesson period in secondary school is:",
+   "options": {
+    "A": "40 minutes.",
+    "B": "45 minutes.",
+    "C": "60 minutes.",
+    "D": "30 minutes."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Secondary school lesson periods are typically scheduled for 40 minutes."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0109",
+   "type": "mcq",
+   "stem": "The specified duration for a lesson period in primary school is:",
+   "options": {
+    "A": "35 minutes.",
+    "B": "40 minutes.",
+    "C": "30 minutes.",
+    "D": "45 minutes."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Primary school lesson periods are typically scheduled for 35 minutes."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0110",
+   "type": "mcq",
+   "stem": "The tense format used in writing the procedures section of a lesson note is:",
+   "options": {
+    "A": "Present tense.",
+    "B": "Past tense.",
+    "C": "Future tense.",
+    "D": "Conditional tense."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Lesson note procedures are conventionally written in the present tense to describe ongoing teaching actions."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0111",
+   "type": "mcq",
+   "stem": "Learner-centered curriculum activities focus on:",
+   "options": {
+    "A": "Learners' activities.",
+    "B": "Games and sports only.",
+    "C": "Learners' subjects only.",
+    "D": "Teacher's activities."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Learner-centered curriculum places emphasis on activities designed around the learners themselves."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0112",
+   "type": "mcq",
+   "stem": "Guidance and counselling services include:",
+   "options": {
+    "A": "Career counselling and diagnostic counselling.",
+    "B": "Career counselling and teacher counselling.",
+    "C": "Diagnostic counselling and academic counselling only.",
+    "D": "Teacher counselling and parental counselling."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Guidance and counselling services in schools include career counselling and diagnostic counselling among other types."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0113",
+   "type": "mcq",
+   "stem": "Which type of curriculum offers compulsory education?",
+   "options": {
+    "A": "Core curriculum.",
+    "B": "Learner curriculum.",
+    "C": "Hidden curriculum.",
+    "D": "Electronic curriculum."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Core curriculum consists of compulsory subjects that all learners are required to study."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0114",
+   "type": "mcq",
+   "stem": "A unit plan is typically designed to cover a duration of:",
+   "options": {
+    "A": "3 to 5 weeks.",
+    "B": "3 to 7 weeks.",
+    "C": "3 to 6 weeks.",
+    "D": "1 to 2 weeks."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "A unit plan is generally designed to span a duration of about 3 to 5 weeks."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0115",
+   "type": "mcq",
+   "stem": "The programme of studies entails the cultural heritage and past human experience.",
+   "options": {
+    "A": "Programme of studies.",
+    "B": "Programme of activities.",
+    "C": "Programme of value.",
+    "D": "Programme of guidance."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The programme of studies covers cultural heritage and accumulated human experience as subject matter."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0116",
+   "type": "mcq",
+   "stem": "Which programme entails excursions, religious activities, farming, and games?",
+   "options": {
+    "A": "Programme of activities.",
+    "B": "Programme of studies.",
+    "C": "Programme of leisure.",
+    "D": "Programme of evaluation."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The programme of activities covers co-curricular engagements such as excursions, religious activities, farming, and games."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0117",
+   "type": "mcq",
+   "stem": "Who defined curriculum as the whole of the educative process, a total environment in which education takes place?",
+   "options": {
+    "A": "Fafunwa (1962).",
+    "B": "Wheeler.",
+    "C": "John Kerr.",
+    "D": "Tyler."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Fafunwa (1962) defined curriculum broadly as the total environment in which education occurs."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0118",
+   "type": "mcq",
+   "stem": "The starting procedure used when teaching a learner is to:",
+   "options": {
+    "A": "Review the previous topic.",
+    "B": "Explain the content immediately.",
+    "C": "Introduce the new topic immediately.",
+    "D": "Give a test first."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Lessons typically begin with a review of the previous topic to link prior knowledge to new content."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0119",
+   "type": "mcq",
+   "stem": "The hierarchical structure of curriculum, from broadest to most specific, is:",
+   "options": {
+    "A": "Curriculum - Syllabus - Scheme of work - Unit plan - Lesson plan.",
+    "B": "Curriculum - Scheme of work - Syllabus - Unit plan.",
+    "C": "Curriculum - Syllabus - Scheme of work - Unit plan.",
+    "D": "Syllabus - Curriculum - Scheme of work - Lesson plan."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Curriculum breaks down hierarchically into syllabus, scheme of work, unit plan, and finally lesson plan."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0120",
+   "type": "mcq",
+   "stem": "Another term for lesson plan is:",
+   "options": {
+    "A": "Lesson note.",
+    "B": "Unit plan.",
+    "C": "Scheme of work.",
+    "D": "Syllabus."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "A lesson plan is also commonly referred to as a lesson note."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0121",
+   "type": "mcq",
+   "stem": "The first National Policy on Education in Nigeria was established in:",
+   "options": {
+    "A": "1977.",
+    "B": "1978.",
+    "C": "1987.",
+    "D": "1960."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Nigeria's first National Policy on Education was established in 1977."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0122",
+   "type": "mcq",
+   "stem": "Western education was introduced to Nigeria by British missionaries in:",
+   "options": {
+    "A": "1842.",
+    "B": "1843.",
+    "C": "1859.",
+    "D": "1960."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "British missionaries introduced Western education to Nigeria in 1842."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0123",
+   "type": "mcq",
+   "stem": "The main objectives of the Christian missionaries in Nigeria were to:",
+   "options": {
+    "A": "Evangelize and trade.",
+    "B": "Evangelize only.",
+    "C": "Establish universities.",
+    "D": "Promote farming."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The Christian missionaries' main objectives combined religious evangelism with trade interests."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0124",
+   "type": "mcq",
+   "stem": "According to John Kerr, curriculum has how many elements?",
+   "options": {
+    "A": "Four.",
+    "B": "Three.",
+    "C": "Five.",
+    "D": "Six."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "John Kerr identified four key elements of curriculum."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0125",
+   "type": "mcq",
+   "stem": "The first university that focuses entirely on curriculum education for teachers is:",
+   "options": {
+    "A": "TASUED.",
+    "B": "University of Ibadan (UI).",
+    "C": "Obafemi Awolowo University (OAU).",
+    "D": "University of Lagos."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "TASUED (Tai Solarin University of Education) is recognized as the first university dedicated entirely to curriculum education for teachers."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0126",
+   "type": "mcq",
+   "stem": "Who defined curriculum as 'all the learning which is planned and guided by the school, whether carried out in groups or individually, inside or outside the school'?",
+   "options": {
+    "A": "Kerr (1968).",
+    "B": "Wheeler (1967).",
+    "C": "Tyler (1949).",
+    "D": "Fafunwa (1962)."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "This widely cited definition of curriculum as planned and guided learning is attributed to Kerr (1968)."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0127",
+   "type": "mcq",
+   "stem": "In whose curriculum model is the first component 'situation'?",
+   "options": {
+    "A": "Skilbeck.",
+    "B": "Tyler.",
+    "C": "Hilda Taba.",
+    "D": "Wheeler."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Skilbeck's situational model of curriculum begins with an analysis of the 'situation'."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0128",
+   "type": "mcq",
+   "stem": "Which curriculum element gives direction to both the curriculum plan and its implementation?",
+   "options": {
+    "A": "Content.",
+    "B": "Evaluation.",
+    "C": "Learning activity.",
+    "D": "Resources."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Content provides the substantive direction guiding both the planning and implementation of curriculum."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0129",
+   "type": "mcq",
+   "stem": "The word 'curriculum' is derived from the Latin word:",
+   "options": {
+    "A": "Curere.",
+    "B": "Cururu.",
+    "C": "Curicu.",
+    "D": "Currum."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The term 'curriculum' originates from the Latin word 'curere', meaning to run a course."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0130",
+   "type": "mcq",
+   "stem": "The pursuit of curriculum development in Nigeria culminated in the convening of:",
+   "options": {
+    "A": "The 1969 curriculum conference.",
+    "B": "The 1968 curriculum conference.",
+    "C": "The 1989 curriculum conference.",
+    "D": "The 1977 curriculum conference."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The 1969 curriculum conference was a landmark event in Nigeria's curriculum development history."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0131",
+   "type": "mcq",
+   "stem": "Objective, content, learning activities, and evaluation are referred to as the ____ of curriculum.",
+   "options": {
+    "A": "Elements.",
+    "B": "Core.",
+    "C": "Patterns.",
+    "D": "Models."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Objective, content, learning activities, and evaluation are classified as elements of curriculum."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0132",
+   "type": "mcq",
+   "stem": "Which of the following is a product of Nigeria's educational policy?",
+   "options": {
+    "A": "6-3-3-4 system.",
+    "B": "6-2-3-4 system.",
+    "C": "6-4-3-4 system.",
+    "D": "9-3-4 system."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The 6-3-3-4 system of education is a key product of Nigeria's National Policy on Education."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0133",
+   "type": "mcq",
+   "stem": "The third sub-set in the curriculum hierarchy is:",
+   "options": {
+    "A": "Scheme of work.",
+    "B": "Unit plan.",
+    "C": "Lesson plan.",
+    "D": "Syllabus."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Within the curriculum hierarchy (curriculum, syllabus, scheme of work...), scheme of work is the third sub-set."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0134",
+   "type": "mcq",
+   "stem": "The last stage in Tyler's model of curriculum is:",
+   "options": {
+    "A": "Evaluation.",
+    "B": "Goal formation.",
+    "C": "Learning activities.",
+    "D": "Content selection."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Tyler's model concludes with the evaluation stage, assessing whether objectives were achieved."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0135",
+   "type": "mcq",
+   "stem": "Curriculum can be described as a ___ plan.",
+   "options": {
+    "A": "Course.",
+    "B": "Teaching.",
+    "C": "Lesson.",
+    "D": "Daily."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Curriculum is broadly described as a course plan guiding overall learning."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0136",
+   "type": "mcq",
+   "stem": "Who dictates the tune of a curriculum?",
+   "options": {
+    "A": "School.",
+    "B": "Learner.",
+    "C": "Teacher.",
+    "D": "Parents."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The school, as an institution, dictates the direction and tune of the curriculum."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0137",
+   "type": "mcq",
+   "stem": "A guide that entails the content aspect to be achieved in each subject discipline is:",
+   "options": {
+    "A": "Syllabus.",
+    "B": "Scheme of work.",
+    "C": "Lesson plan.",
+    "D": "Unit plan."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The syllabus outlines the content to be covered in each subject discipline."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0138",
+   "type": "mcq",
+   "stem": "'Currus' is a word of which origin?",
+   "options": {
+    "A": "Latin.",
+    "B": "French.",
+    "C": "Greek.",
+    "D": "German."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "'Currus' is a Latin word related to the origin of the term curriculum."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0139",
+   "type": "mcq",
+   "stem": "The heartbeat of education is:",
+   "options": {
+    "A": "Curriculum.",
+    "B": "Teaching.",
+    "C": "Innovation.",
+    "D": "Assessment."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Curriculum is often described as the heartbeat of education, central to all teaching and learning."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0140",
+   "type": "mcq",
+   "stem": "'Curriculum by whom?' refers to:",
+   "options": {
+    "A": "Government.",
+    "B": "Learner.",
+    "C": "Teacher.",
+    "D": "Parents."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "'Curriculum by whom?' addresses the authority responsible for curriculum, typically the government."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0141",
+   "type": "mcq",
+   "stem": "The 'How?' of curriculum refers to:",
+   "options": {
+    "A": "Methodology.",
+    "B": "Goals.",
+    "C": "Reasons.",
+    "D": "Resources."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The 'How?' question in curriculum relates to the methodology used in instruction."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0142",
+   "type": "mcq",
+   "stem": "'To whom?' in curriculum refers to:",
+   "options": {
+    "A": "The learner.",
+    "B": "The teacher.",
+    "C": "The parents.",
+    "D": "The government."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "'To whom?' in curriculum addresses the target recipient of instruction, which is the learner."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0143",
+   "type": "mcq",
+   "stem": "How many steps are there in Wheeler's model?",
+   "options": {
+    "A": "5.",
+    "B": "3.",
+    "C": "6.",
+    "D": "4."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Wheeler's curriculum model consists of five cyclic steps."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0144",
+   "type": "mcq",
+   "stem": "Another name for formal curriculum is:",
+   "options": {
+    "A": "Explicit, overt, or written curriculum.",
+    "B": "Hidden curriculum.",
+    "C": "Electronic curriculum.",
+    "D": "Core curriculum."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Formal curriculum is also known as explicit, overt, or written curriculum since it is officially documented."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0145",
+   "type": "mcq",
+   "stem": "The first grammar school in Nigeria, the CMS Grammar School, was founded in Lagos in:",
+   "options": {
+    "A": "1859.",
+    "B": "1842.",
+    "C": "1952.",
+    "D": "1959."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The Church Missionary Society (CMS) Grammar School, Nigeria's first grammar school, was founded in Lagos in 1859."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0146",
+   "type": "mcq",
+   "stem": "The Ashby Commission was established in:",
+   "options": {
+    "A": "1959.",
+    "B": "1952.",
+    "C": "1962.",
+    "D": "1977."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The Ashby Commission, which reviewed Nigeria's higher education needs, was established in 1959."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0147",
+   "type": "mcq",
+   "stem": "The Universal Basic Education (UBE) programme was established in 1999 by:",
+   "options": {
+    "A": "Gen. Olusegun Obasanjo.",
+    "B": "Gen. Ibrahim Babangida.",
+    "C": "Gen. Sani Abacha.",
+    "D": "Gen. Yakubu Gowon."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The UBE programme was launched in 1999 under the administration of Gen. Olusegun Obasanjo."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0148",
+   "type": "mcq",
+   "stem": "The National Universities Commission (NUC) was established in:",
+   "options": {
+    "A": "1962.",
+    "B": "1952.",
+    "C": "1977.",
+    "D": "1999."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The NUC, responsible for regulating Nigerian universities, was established in 1962."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0149",
+   "type": "mcq",
+   "stem": "The Universal Primary Education (UPE) scheme was launched in:",
+   "options": {
+    "A": "1976.",
+    "B": "1959.",
+    "C": "1999.",
+    "D": "1962."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "UPE was launched in 1976, focusing solely on primary education before being replaced by UBE."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0150",
+   "type": "mcq",
+   "stem": "The West African Examinations Council (WAEC) was established in:",
+   "options": {
+    "A": "1952.",
+    "B": "1959.",
+    "C": "1962.",
+    "D": "1977."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "WAEC, the regional examination body, was established in 1952."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0151",
+   "type": "mcq",
+   "stem": "The Universal Basic Education Commission (UBEC), responsible for coordinating the UBE programme, was established in:",
+   "options": {
+    "A": "2004.",
+    "B": "1999.",
+    "C": "1976.",
+    "D": "1962."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "UBEC was established in 2004 to coordinate and oversee implementation of the UBE programme nationwide."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0152",
+   "type": "mcq",
+   "stem": "The 9-year Basic Education Programme is structured as:",
+   "options": {
+    "A": "6 years of primary education and 3 years of junior secondary education.",
+    "B": "6 years of primary education and 3 years of senior secondary education.",
+    "C": "3 years of primary education and 6 years of secondary education.",
+    "D": "9 years of primary education only."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The 9-year BEP covers Primary 1 to 6, followed by JSS 1 to 3."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0153",
+   "type": "mcq",
+   "stem": "NERDC, the body responsible for regulating secondary school curriculum in Nigeria, stands for:",
+   "options": {
+    "A": "Nigerian Educational Research and Development Council.",
+    "B": "National Education Reform and Development Council.",
+    "C": "Nigerian Examination Research and Development Council.",
+    "D": "National Educational Resource and Design Council."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "NERDC stands for the Nigerian Educational Research and Development Council, regulating secondary curriculum."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0154",
+   "type": "mcq",
+   "stem": "Electronic curriculum refers to:",
+   "options": {
+    "A": "Computer-based learning.",
+    "B": "Curriculum hidden from students.",
+    "C": "Curriculum taught only through textbooks.",
+    "D": "Curriculum focused on career guidance."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Electronic curriculum specifically refers to learning delivered through computer-based means."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0155",
+   "type": "mcq",
+   "stem": "In a teacher-centered curriculum, the primary focus is upon:",
+   "options": {
+    "A": "The teacher's teaching skills.",
+    "B": "The learner's activities.",
+    "C": "Community involvement.",
+    "D": "Digital technology."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Teacher-centered curriculum places primary emphasis on the teacher and their teaching skills, unlike learner-centered curriculum."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0156",
+   "type": "mcq",
+   "stem": "Precolonial education in Nigeria primarily promoted:",
+   "options": {
+    "A": "Moral inculcation.",
+    "B": "Standardized testing.",
+    "C": "Digital literacy.",
+    "D": "Formal certification."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Precolonial Nigerian education emphasized instilling moral values in learners."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0157",
+   "type": "mcq",
+   "stem": "The end product of traditional African education was:",
+   "options": {
+    "A": "Holistic growth.",
+    "B": "Specialized academic skill only.",
+    "C": "Digital competence.",
+    "D": "Standardized examination success."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Traditional African education aimed at the holistic development of the individual, covering moral, social, and practical growth."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0158",
+   "type": "mcq",
+   "stem": "Which curriculum component states what learners should achieve?",
+   "options": {
+    "A": "Content",
+    "B": "Resources",
+    "C": "Objectives",
+    "D": "Assessment"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Objectives are the curriculum component that states the expected outcomes or achievements for learners."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0159",
+   "type": "mcq",
+   "stem": "Which of the following is an instructional strategy?",
+   "options": {
+    "A": "Test",
+    "B": "Textbook",
+    "C": "Objective",
+    "D": "Group discussion"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Group discussion is a method used to deliver instruction, making it an instructional strategy, unlike a test (assessment), textbook (resource), or objective (learning target)."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0160",
+   "type": "mcq",
+   "stem": "UDL stands for:",
+   "options": {
+    "A": "Universal Design Lesson",
+    "B": "Universal Design for Learning",
+    "C": "Unified Digital Learning",
+    "D": "User Directed Learning"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "UDL is an acronym for Universal Design for Learning, a framework for creating flexible learning environments that accommodate individual differences."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0161",
+   "type": "mcq",
+   "stem": "Education is described as a process of transmitting culture in terms of:",
+   "options": {
+    "A": "Continuity and growth.",
+    "B": "Testing and evaluation.",
+    "C": "Digital integration.",
+    "D": "Standardized scoring."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note states that education transmits culture in terms of continuity and growth."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0162",
+   "type": "mcq",
+   "stem": "Ralph Linton classified culture into how many categories?",
+   "options": {
+    "A": "Three.",
+    "B": "Four.",
+    "C": "Two.",
+    "D": "Five."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note states that Ralph Linton classified culture into three categories: Universals, Specialities, and Alternatives of culture."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0163",
+   "type": "mcq",
+   "stem": "According to Bab. Fafunwa, education serves to:",
+   "options": {
+    "A": "Disseminate social control or guarantee rational direction of society.",
+    "B": "Provide digital literacy only.",
+    "C": "Standardize assessment across schools.",
+    "D": "Train teachers in pedagogy."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note attributes to Bab. Fafunwa the view that education disseminates social control or guarantees rational direction of society."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0164",
+   "type": "mcq",
+   "stem": "The Latin origin of education includes two words. 'Educere' means:",
+   "options": {
+    "A": "To lead out.",
+    "B": "To train or nurture.",
+    "C": "To run a course.",
+    "D": "To evaluate."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note states that 'Educere' means 'to lead out', one of the two Latin roots of education."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0165",
+   "type": "mcq",
+   "stem": "The Latin word 'Educare' means:",
+   "options": {
+    "A": "To train or nurture.",
+    "B": "To lead out.",
+    "C": "To run a course.",
+    "D": "To guide."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note specifies that 'Educare' means 'to train or nurture', distinguishing it from 'Educere'."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0166",
+   "type": "mcq",
+   "stem": "Which of the following is NOT listed as a process of education in the study note?",
+   "options": {
+    "A": "Evaluation.",
+    "B": "Training.",
+    "C": "Indoctrination.",
+    "D": "Instruction."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note lists Training, Indoctrination, Instruction, and Teaching as processes of education. Evaluation is not among them."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0167",
+   "type": "mcq",
+   "stem": "How many processes of education are identified in the study note?",
+   "options": {
+    "A": "Four.",
+    "B": "Three.",
+    "C": "Five.",
+    "D": "Six."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note lists four processes of education: Training, Indoctrination, Instruction, and Teaching."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0168",
+   "type": "mcq",
+   "stem": "The Latin word 'currus' relates to curriculum and means:",
+   "options": {
+    "A": "To run or a course/chariot.",
+    "B": "To lead out.",
+    "C": "To train.",
+    "D": "To evaluate."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note notes that 'currus' is a Latin word related to the origin of 'curriculum', referring to running or a course."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0169",
+   "type": "mcq",
+   "stem": "How many basic tools of curriculum are identified in the study note?",
+   "options": {
+    "A": "Four.",
+    "B": "Three.",
+    "C": "Five.",
+    "D": "Two."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note identifies four basic tools of curriculum: syllabus, scheme of work, unit plan, and lesson plan."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0170",
+   "type": "mcq",
+   "stem": "Tyler (1971) identified four values which education in democratic society emphasised. Which of these is one of them?",
+   "options": {
+    "A": "Recognition of the importance of an individual.",
+    "B": "Standardization of content.",
+    "C": "Compartmentalization of knowledge.",
+    "D": "Digital competence."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Tyler (1971) identified the recognition of the importance of the individual as one of the four values emphasized in democratic education."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0171",
+   "type": "mcq",
+   "stem": "According to Tyler (1971), one of the four values education in democratic society emphasised is opportunity for:",
+   "options": {
+    "A": "Participation in phases of society.",
+    "B": "Standardized testing.",
+    "C": "Digital learning only.",
+    "D": "Compartmentalization of subjects."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Tyler (1971) listed opportunity for participation in phases of society as one of the four democratic educational values."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0172",
+   "type": "mcq",
+   "stem": "Tyler (1971) identified 'encouragement of variability' as one of four values education emphasises in democratic society. This refers to:",
+   "options": {
+    "A": "Accepting and promoting individual differences.",
+    "B": "Standardizing all learners.",
+    "C": "Reducing curriculum scope.",
+    "D": "Promoting hidden curriculum."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Encouragement of variability, as noted by Tyler, refers to valuing and promoting individual differences within democratic education."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0173",
+   "type": "mcq",
+   "stem": "The fourth value Tyler (1971) identified as emphasised in democratic education is:",
+   "options": {
+    "A": "Faith in intelligence.",
+    "B": "Rigid discipline.",
+    "C": "Compartmentalization.",
+    "D": "Moral inculcation only."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note lists 'Faith intelligence' (faith in intelligence) as the fourth democratic value Tyler associated with education."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0174",
+   "type": "mcq",
+   "stem": "Evaluation in the context of curriculum is defined as:",
+   "options": {
+    "A": "A process of generating or determining whether a programme has succeeded or not.",
+    "B": "A method of selecting content only.",
+    "C": "A strategy for classroom management.",
+    "D": "A tool for designing lesson notes."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note defines evaluation as the process of generating or determining whether a programme has succeeded or not."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0175",
+   "type": "mcq",
+   "stem": "The two types of evaluation mentioned in the study note are:",
+   "options": {
+    "A": "Formative evaluation and summative evaluation.",
+    "B": "Diagnostic evaluation and peer evaluation.",
+    "C": "Self-evaluation and teacher evaluation.",
+    "D": "Digital evaluation and manual evaluation."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note identifies formative evaluation and summative evaluation as the two types of evaluation."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0176",
+   "type": "mcq",
+   "stem": "Which of the following is NOT listed as a criterion for effective curriculum evaluation in the study note?",
+   "options": {
+    "A": "Flexibility.",
+    "B": "Validity.",
+    "C": "Objectivity.",
+    "D": "Comprehensiveness."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note lists Validity, Objectivity, and Comprehensiveness as criteria for effective curriculum evaluation. Flexibility is not mentioned."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0177",
+   "type": "mcq",
+   "stem": "How many criteria for effective curriculum evaluation are identified in the study note?",
+   "options": {
+    "A": "Three.",
+    "B": "Four.",
+    "C": "Five.",
+    "D": "Two."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note identifies three criteria: Validity, Objectivity, and Comprehensiveness."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0178",
+   "type": "mcq",
+   "stem": "Before 1969, the Nigerian educational system was structured to be:",
+   "options": {
+    "A": "6-5-2-3.",
+    "B": "6-3-3-4.",
+    "C": "9-3-4.",
+    "D": "6-4-2-3."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note states that the educational system was structured to be 6-5-2-3 before the 1969 curriculum conference."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0179",
+   "type": "mcq",
+   "stem": "The 1969 national curriculum conference came up mainly because of:",
+   "options": {
+    "A": "Criticisms levied against the colonial type of education.",
+    "B": "The introduction of digital learning.",
+    "C": "Demand for private school expansion.",
+    "D": "The failure of the UPE scheme."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note states that the 1969 curriculum conference arose due to criticisms levied against the colonial type of education."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0180",
+   "type": "mcq",
+   "stem": "Ralph Tyler (1949) is referred to as the pioneer of:",
+   "options": {
+    "A": "The objectives model of curriculum development.",
+    "B": "The situational model of curriculum.",
+    "C": "The cyclic model of curriculum.",
+    "D": "The seven-step linear model."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note states that Ralph Tyler (1949) is the pioneer of the objectives model of curriculum development."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0181",
+   "type": "mcq",
+   "stem": "Tyler's curriculum model is based on how many central questions?",
+   "options": {
+    "A": "Four.",
+    "B": "Three.",
+    "C": "Five.",
+    "D": "Seven."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note states that Tyler's model is based on four central questions."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0182",
+   "type": "mcq",
+   "stem": "Wheeler's curriculum model is described as 'enclosed' because:",
+   "options": {
+    "A": "It is cyclic in arrangement and operation.",
+    "B": "It is based on hidden curriculum.",
+    "C": "It starts with content selection.",
+    "D": "It ends with goal formation."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note describes Wheeler's model as cyclic in arrangement and operation, making it an enclosed model."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0183",
+   "type": "mcq",
+   "stem": "One advantage of Wheeler's curriculum model mentioned in the study note is:",
+   "options": {
+    "A": "The presence of feedback.",
+    "B": "Its rigid linear structure.",
+    "C": "Its focus on standardized testing.",
+    "D": "Its elimination of evaluation."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note explicitly notes that one advantage of Wheeler's model is the presence of feedback."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0184",
+   "type": "mcq",
+   "stem": "Kerr asserted that the curriculum developmental process is:",
+   "options": {
+    "A": "Dynamic, continuously evolving, and not static.",
+    "B": "Fixed and unchanging.",
+    "C": "Linear and one-directional.",
+    "D": "Based only on teacher input."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note records Kerr's assertion that the curriculum developmental process is dynamic, continuously evolving, and not static."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0185",
+   "type": "mcq",
+   "stem": "How many basic elements does Kerr's curriculum model have?",
+   "options": {
+    "A": "Four.",
+    "B": "Five.",
+    "C": "Three.",
+    "D": "Seven."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note states that Kerr's curriculum model has four basic elements."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0186",
+   "type": "mcq",
+   "stem": "In Kerr's curriculum model, the elements needed to establish curriculum knowledge are:",
+   "options": {
+    "A": "Unity, repetition, and objectives.",
+    "B": "Content, evaluation, and assessment.",
+    "C": "Goals, resources, and standards.",
+    "D": "Sequence, scope, and alignment."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note states that in Kerr's curriculum model, the elements needed to establish curriculum knowledge are unity, repetition, and objectives."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0187",
+   "type": "mcq",
+   "stem": "Skilbeck's curriculum model identifies how many steps of curriculum development?",
+   "options": {
+    "A": "Five.",
+    "B": "Four.",
+    "C": "Seven.",
+    "D": "Three."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note states that Skilbeck identified five steps of curriculum development."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0188",
+   "type": "mcq",
+   "stem": "The second step in Skilbeck's curriculum model is:",
+   "options": {
+    "A": "Goal formation.",
+    "B": "Situation analysis.",
+    "C": "Programme building.",
+    "D": "Monitoring and feedback."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "In Skilbeck's model, situation analysis comes first, followed by goal formation as the second step."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0189",
+   "type": "mcq",
+   "stem": "The third step in Skilbeck's curriculum model is:",
+   "options": {
+    "A": "Programme building.",
+    "B": "Goal formation.",
+    "C": "Interpretation and implementation.",
+    "D": "Situation analysis."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Skilbeck's model proceeds from Situation Analysis → Goal Formation → Programme Building → Interpretation and Implementation → Monitoring, Feedback, Assessment and Recommendation."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0190",
+   "type": "mcq",
+   "stem": "The fifth and final step in Skilbeck's curriculum model is:",
+   "options": {
+    "A": "Monitoring, feedback, assessment, and recommendation.",
+    "B": "Goal formation.",
+    "C": "Programme building.",
+    "D": "Situation analysis."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note shows that Skilbeck's final step is monitoring, feedback, assessment, and recommendation."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0191",
+   "type": "mcq",
+   "stem": "The Furst curriculum model has how many steps?",
+   "options": {
+    "A": "Three.",
+    "B": "Four.",
+    "C": "Five.",
+    "D": "Seven."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note states that the curriculum model by Furst has a three-step model."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0192",
+   "type": "mcq",
+   "stem": "Hilda Taba's curriculum model postulates how many elements?",
+   "options": {
+    "A": "Seven.",
+    "B": "Four.",
+    "C": "Five.",
+    "D": "Three."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note states that Hilda Taba's model postulates seven elements, listed in a linear sequence."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0193",
+   "type": "mcq",
+   "stem": "The first step in Hilda Taba's curriculum model is:",
+   "options": {
+    "A": "Diagnosis of needs.",
+    "B": "Formation of objectives.",
+    "C": "Selection of content.",
+    "D": "Organisation of content."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Taba's model begins with diagnosis of needs, followed by formation of objectives."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0194",
+   "type": "mcq",
+   "stem": "The seventh and final step in Hilda Taba's curriculum model is:",
+   "options": {
+    "A": "Determination of what to evaluate and the ways and means of doing it.",
+    "B": "Selection of learning experiences.",
+    "C": "Organisation of learning experiences.",
+    "D": "Formation of objectives."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note shows that Taba's final step is determining what to evaluate and how to do it."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0195",
+   "type": "mcq",
+   "stem": "In Hilda Taba's model, the step that follows 'organisation of content' is:",
+   "options": {
+    "A": "Selection of learning experiences.",
+    "B": "Diagnosis of needs.",
+    "C": "Formation of objectives.",
+    "D": "Determination of evaluation."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Taba's sequence goes: diagnosis of needs → formation of objectives → selection of content → organisation of content → selection of learning experiences → organisation of learning experiences → determination of evaluation."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0196",
+   "type": "mcq",
+   "stem": "Which of the following is NOT one of Ralph Linton's classifications of culture?",
+   "options": {
+    "A": "Subcultures.",
+    "B": "Universals of culture.",
+    "C": "Specialities of culture.",
+    "D": "Alternatives of culture."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Linton classified culture into Universals, Specialities, and Alternatives. Subcultures is not one of his categories."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0197",
+   "type": "mcq",
+   "stem": "The four basic or core elements of curriculum are:",
+   "options": {
+    "A": "Objectives, content, learning activities, and evaluation.",
+    "B": "Scope, sequence, alignment, and resources.",
+    "C": "Standards, assessment, technology, and environment.",
+    "D": "Goals, instruction, feedback, and reflection."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note lists objectives, content, learning activities, and evaluation as the four basic elements (components) of curriculum."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0198",
+   "type": "mcq",
+   "stem": "Curriculum cannot be effective unless developers have in mind:",
+   "options": {
+    "A": "A set of values which societies cherish for their members.",
+    "B": "A set of standardized tests.",
+    "C": "A digital learning platform.",
+    "D": "A fixed timetable."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note states that curriculum cannot be effective unless developers have in mind a set of values which societies cherish for their members."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0199",
+   "type": "mcq",
+   "stem": "The hierarchical relationship between aims, goals, and objectives in curriculum places objectives as:",
+   "options": {
+    "A": "The most specific level, below aims and goals.",
+    "B": "The broadest and most general level.",
+    "C": "Equivalent to aims.",
+    "D": "Above goals in specificity."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note shows a hierarchy where aims are broadest, followed by goals, and then objectives as the most specific."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0200",
+   "type": "mcq",
+   "stem": "The criteria for the selection of curriculum objectives include which of the following?",
+   "options": {
+    "A": "Deficiency-directed, necessity-directed, and value-directed.",
+    "B": "Content-driven, assessment-driven, and technology-driven.",
+    "C": "Vertical, horizontal, and diagonal alignment.",
+    "D": "Scope, sequence, and continuity."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note identifies deficiency-directed, necessity-directed, and value-directed as the three criteria for selecting curriculum objectives."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0201",
+   "type": "mcq",
+   "stem": "Which of the following is a feature for the selection of curriculum content?",
+   "options": {
+    "A": "Validity.",
+    "B": "Deficiency-directed.",
+    "C": "Cyclic arrangement.",
+    "D": "Unity."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note lists Validity, Significance, Utility, and Learnability as features for the selection of curriculum content."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0202",
+   "type": "mcq",
+   "stem": "How many features for the selection of curriculum content are identified in the study note?",
+   "options": {
+    "A": "Four.",
+    "B": "Three.",
+    "C": "Five.",
+    "D": "Two."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note lists four features: Validity, Significance, Utility, and Learnability."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0203",
+   "type": "mcq",
+   "stem": "Which of the following is a criterion for the selection of learning activities according to the study note?",
+   "options": {
+    "A": "The nature of the learners.",
+    "B": "Validity of content.",
+    "C": "Cyclic arrangement.",
+    "D": "Diagnostic evaluation."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note identifies the nature of the learners as one of four criteria for selecting learning activities."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0204",
+   "type": "mcq",
+   "stem": "How many criteria for the selection of learning activities are given in the study note?",
+   "options": {
+    "A": "Four.",
+    "B": "Three.",
+    "C": "Five.",
+    "D": "Two."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note lists four criteria: the nature of the learning activities, the nature of learners, the nature of available materials, and the nature and capabilities of teachers."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0205",
+   "type": "mcq",
+   "stem": "The nature and capabilities of teachers is listed as a criterion for:",
+   "options": {
+    "A": "The selection of learning activities.",
+    "B": "The selection of curriculum content.",
+    "C": "The formation of curriculum objectives.",
+    "D": "The evaluation of curriculum."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note includes 'the nature and capabilities of teachers' as the fourth criterion for selecting learning activities."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0206",
+   "type": "mcq",
+   "stem": "All efforts in making the curriculum relevant and meaningful to its recipients and communities is called:",
+   "options": {
+    "A": "Curriculum development.",
+    "B": "Curriculum design.",
+    "C": "Curriculum evaluation.",
+    "D": "Curriculum implementation."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note states that all effort in making the curriculum relevant and meaningful to its recipients and communities is called curriculum development."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0207",
+   "type": "mcq",
+   "stem": "Birch Freeman and William came to Badagry in 1842 primarily to:",
+   "options": {
+    "A": "Develop curriculum to help convert people.",
+    "B": "Establish a national university.",
+    "C": "Introduce standardized testing.",
+    "D": "Promote vocational education."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note states that Birch Freeman and William came to Badagry in 1842 and developed curriculum to help them in converting people."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0208",
+   "type": "mcq",
+   "stem": "The 'Programme of guidance' in curriculum refers to:",
+   "options": {
+    "A": "Guidance and counselling services offered to learners.",
+    "B": "Excursions and farming activities.",
+    "C": "Cultural heritage and past human experience.",
+    "D": "Assessment and evaluation strategies."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The programme of guidance covers the counselling and guidance component of the curriculum offered to learners."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0209",
+   "type": "mcq",
+   "stem": "The methods of learning for implementing curriculum in early Nigerian education were primarily:",
+   "options": {
+    "A": "Recitation and rote memorization.",
+    "B": "Inquiry and problem-solving.",
+    "C": "Digital and blended learning.",
+    "D": "Project-based and collaborative learning."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note states that the methods of learning for implementing their curriculum were recitation and rote memorization."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0210",
+   "type": "mcq",
+   "stem": "The 'Programme of guidance' was introduced to curriculum by:",
+   "options": {
+    "A": "Kerr.",
+    "B": "Tyler.",
+    "C": "Taba.",
+    "D": "Wheeler."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note states that the programme of guidance was introduced by Kerr."
+  },
+  {
+   "id": "uni-tasued-edu201-bank-0211",
+   "type": "mcq",
+   "stem": "A renowned proponent of the activity curriculum is:",
+   "options": {
+    "A": "Dewey.",
+    "B": "Tyler.",
+    "C": "Wheeler.",
+    "D": "Kerr."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The study note identifies Dewey as a renowned proponent of the activity curriculum."
+  }
+ ]
+}

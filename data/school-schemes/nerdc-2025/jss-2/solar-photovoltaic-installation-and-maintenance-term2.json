@@ -1,0 +1,72 @@
+{
+  "class": "JSS 2",
+  "subject": "Solar Photovoltaic Installation and Maintenance",
+  "term": 2,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Review of First Term Work",
+      "content": "Recap of solar PV components and\nconfigurations\nReview of electrical wiring concepts\nDiscussion of charge controller and battery\nconnections\nAssessment of students' understanding through\nclass discussions"
+    },
+    {
+      "week": 2,
+      "topic": "Solar Batteries",
+      "content": "Meaning and importance of solar batteries\nTypes of batteries: Lead-acid, lithium-ion, gel\nbatteries\nFunctions and characteristics of each type\nBattery charging and discharging cycles\nPractical: Identifying and testing batteries"
+    },
+    {
+      "week": 3,
+      "topic": "Inverters and Converters",
+      "content": "Meaning and functions of inverters and\nconverters\nTypes of inverters: pure sine wave, modified\nsine wave\nImportance of voltage conversion (DC to AC)\nPractical: Connecting an inverter to a solar\nbattery"
+    },
+    {
+      "week": 4,
+      "topic": "Load Estimation and Energy Demand",
+      "content": "Meaning of electrical load\nSteps in calculating total load requirement\nDaily energy consumption estimation\nImportance of proper load management\nPractical: Calculating the load of classroom\nequipment"
+    },
+    {
+      "week": 5,
+      "topic": "MID-TERM EXAMINATION",
+      "content": "Assessment of Weeks 1-4 Topics"
+    },
+    {
+      "week": 6,
+      "topic": "System Sizing and Design",
+      "content": "Meaning of system sizing\nFactors to consider in sizing (load, autonomy,\nlocation)\nPanel, battery, and inverter sizing\nDesign of a small off-grid solar system\nPractical: Solar system design demonstration"
+    },
+    {
+      "week": 7,
+      "topic": "MID-TERM BREAK",
+      "content": "Rest / Practical Exercises"
+    },
+    {
+      "week": 8,
+      "topic": "Installation Procedures",
+      "content": "Pre-installation site inspection\nSteps in solar PV installation\nWiring connection and testing\nCommon installation errors and\ntroubleshooting\nDemonstration: Installing a small solar lighting\nsystem"
+    },
+    {
+      "week": 9,
+      "topic": "Safety Practices in Installation",
+      "content": "Importance of safety in solar installation\nPersonal protective equipment (PPE)\nSafe handling of tools and materials\nElectrical hazard prevention\nFirst aid and emergency response"
+    },
+    {
+      "week": 10,
+      "topic": "Solar PV Maintenance and Troubleshooting",
+      "content": "Meaning of maintenance\nTypes: Preventive and corrective maintenance\nCommon solar PV faults and causes\nSteps in troubleshooting a solar system\nPractical: Maintenance check on a sample setup"
+    },
+    {
+      "week": 11,
+      "topic": "REVISION",
+      "content": "Review of all topics covered during the term"
+    },
+    {
+      "week": 12,
+      "topic": "EXAMINATION",
+      "content": "End of Term Practical and Written\nAssessment"
+    },
+    {
+      "week": 13,
+      "topic": "CLOSING",
+      "content": "Term evaluation and holiday"
+    }
+  ]
+}

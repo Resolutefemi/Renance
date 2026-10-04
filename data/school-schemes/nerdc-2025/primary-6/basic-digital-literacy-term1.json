@@ -1,0 +1,72 @@
+{
+  "class": "Primary 6",
+  "subject": "Basic Digital Literacy",
+  "term": 1,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Advanced Computer Systems basics: how computers use 0s and 1s. Bits and bytes:",
+      "content": "Computer architecture overview. Binary system\nmeasuring data. Processing cycle: input, processing,\noutput, storage. Computer performance factors: CPU\nspeed, RAM, storage type."
+    },
+    {
+      "week": 2,
+      "topic": "Computer Networks",
+      "content": "Understanding networks: connected computers\nsharing resources. Types: LAN, WAN, Internet.\nNetwork components: router, modem, switch, cables,\nWiFi. IP addresses basics. Benefits of networking:\nresource sharing, communication, collaboration."
+    },
+    {
+      "week": 3,
+      "topic": "Internet and Web",
+      "content": "Internet vs World Wide Web difference. How\ninternet works: packets, servers, browsers. URL\nstructure: protocol, domain, path. Web browsers:\nChrome, Firefox, Edge, Safari. Search engines:\neffective searching techniques. Web vs mobile apps."
+    },
+    {
+      "week": 4,
+      "topic": "Cloud Computing",
+      "content": "Understanding cloud computing: using internet-\nbased services. Cloud storage: Google Drive,\nDropbox, OneDrive, iCloud. Benefits: access\nanywhere, backup, collaboration. Cloud applications:\nGoogle Docs, Office 365. Security considerations.\nManaging cloud storage."
+    },
+    {
+      "week": 5,
+      "topic": "MIDTERM EXAMINATION",
+      "content": "Assessment covering Weeks 1-4"
+    },
+    {
+      "week": 6,
+      "topic": "MIDTERM BREAK",
+      "content": "Holiday"
+    },
+    {
+      "week": 7,
+      "topic": "Advanced Word Processing formatting: styles, themes, columns. Mail merge",
+      "content": "Professional document creation. Advanced\nbasics. Comments and track changes. Inserting\ncitations and footnotes. Table of contents\nautomation. Creating forms."
+    },
+    {
+      "week": 8,
+      "topic": "Advanced Presentations",
+      "content": "Professional presentation skills. Master slides and\ntemplates. Multimedia integration: video, audio.\nAdvanced animations and transitions. Hyperlinks\nwithin presentations. Presenter notes and timing.\nRecording presentations."
+    },
+    {
+      "week": 9,
+      "topic": "Advanced Spreadsheets",
+      "content": "Complex formulas: IF statements, COUNT, MAX,\nMIN. Cell referencing: absolute vs relative. Creating\ncharts and graphs. Data sorting and filtering.\nConditional formatting. Using spreadsheets for\nbudgets and planning."
+    },
+    {
+      "week": 10,
+      "topic": "Database Basics Creating simple databases. Sorting and filtering data. Queries basics. Databases vs spreadsheets. Practical applications.",
+      "content": "Introduction to databases: organized information\ncollection. Database structure: tables, records, fields."
+    },
+    {
+      "week": 11,
+      "topic": "REVISION Revie using multiple applications.",
+      "content": "w of all topics. Complete integrated projects"
+    },
+    {
+      "week": 12,
+      "topic": "EXAMINATION End o Practical)",
+      "content": "f First Term Examination (Theory and"
+    },
+    {
+      "week": 13,
+      "topic": "CLOSING Repor PRIMARY 6 BASIC DIGITAL LITERACY SCHEME OF WORK",
+      "content": "t distribution and vacation"
+    }
+  ]
+}

@@ -1,0 +1,569 @@
+{
+ "code": "gcse-geography-bank",
+ "title": "GCSE Geography | Exam-Style Questions Bank (BBC Bitesize)",
+ "version": 1,
+ "questionCount": 40,
+ "totalMarks": 40,
+ "questions": [
+  {
+   "stem": "A 3 N weight is suspended from a spring, causing the spring to extend by 4 cm. Calculate the spring constant of the spring.",
+   "options": {
+    "A": "0.75 N/m",
+    "B": "75 N/m",
+    "C": "1.33 N/m",
+    "D": "133 N/m"
+   },
+   "id": "gcse-geography-bank-0001",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The spring constant can be calculated by rearranging the equation to make k (spring constant) the subject, and then substituting the correct values of force and extension. Note that the extension of 4 cm must be first converted to metres (to do this divide the value by 100, giving an extension of 0.04 m) before substituting the values into the formula. k = F ÷ ek = 3 ÷ 0.04k = 75 N/m Option 1 is incorrect because the extension has not been converted from centimetres to metres, before substituting the values into the formula. Option 3 is incorrect because the extension has been divided by the f"
+  },
+  {
+   "stem": "The spring in the diagram is loaded with increasing amounts of weight, stretching the spring. When the weights are removed, the spring returns to its original length. Which statement is correct?",
+   "options": {
+    "A": "The spring deformed elastically",
+    "B": "The spring deformed inelastically",
+    "C": "The spring deformed plastically",
+    "D": "The spring did not deform"
+   },
+   "id": "gcse-geography-bank-0002",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Because it returned to its original length when the weights were removed, it has deformed elastically. If the spring had not returned to its original length, then it would have undergone inelastic deformation - also known as plastic deformation - meaning it would have permanently changed length/shape. Option 2 is incorrect because the spring returned to its original shape, meaning the deformation was elastic, not inelastic. Option 3 is incorrect because the spring returned to its original shape, meaning the deformation was elastic, not plastic (plastic deformation is another term for inelastic"
+  },
+  {
+   "stem": "The box in the diagram has fallen from an aeroplane. It has two forces acting on it - weight and air resistance - which are equal in size, but act in opposite directions. Choose the correct statement.",
+   "options": {
+    "A": "The box will fall at a constant speed, because the forces of weight and air resistance are unbalanced",
+    "B": "The box will accelerate because the forces of weight and air resistance are balanced",
+    "C": "The box will fall at a constant speed, because the forces of weight and air resistance are balanced",
+    "D": "The box will accelerate, because the forces of weight and air resistance are unbalanced"
+   },
+   "id": "gcse-geography-bank-0003",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The forces of weight and air resistance are balanced (the same size, but in opposite directions), so there is no resultant force overall. Because there is no resultant force, the box will not accelerate or decelerate - it will move at a constant speed, known as its terminal speed. Option 1 is incorrect because the forces on the box are balanced, not unbalanced. Option 2 is incorrect because the box will not accelerate. Option 4 is incorrect because the forces on the box are balanced, and the box will not accelerate."
+  },
+  {
+   "stem": "The motor in the diagram lifts a 2.5 N weight 2 m. Calculate the work done on the weight.",
+   "options": {
+    "A": "0.8 J",
+    "B": "1.25 J",
+    "C": "5 W",
+    "D": "5 J"
+   },
+   "id": "gcse-geography-bank-0004",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The work done on the weight can be calculated by substituting the values for force and distance into the equation for work done. W = F × dW = 2.5 × 2W = 5 J Option 1 is incorrect because the distance has been divided by the force, instead of multiplied by the force. Option 2 is incorrect because the force has been divided by the distance, instead of multiplied by the distance. Option 3 is incorrect because the units of measurement of work done and of energy are joules (J), not watts (W)."
+  },
+  {
+   "stem": "A student collected some data to see how the acceleration of a trolley varied as the force applied to it changed. The graph shows the student's data. What type of relationship is this?",
+   "options": {
+    "A": "The acceleration increases as the force increases, at an increasing rate",
+    "B": "The acceleration increases as the force increases, at a decreasing rate",
+    "C": "The acceleration is inversely proportional to the force",
+    "D": "The acceleration is directly proportional to the force"
+   },
+   "id": "gcse-geography-bank-0005",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The trendline in the data shows that the acceleration increases at a steady rate as the force increases, and the straight line passes through the origin (0,0) - showing that the acceleration is directly proportional to the force. If the trendline curved upwards, this would show that the acceleration increases at an increasing rate. If the trendline curved downwards, this would show that the acceleration increases at a decreasing rate. Option 1 is incorrect because the trendline is straight, instead of curving upwards with an increasing gradient. Option 2 is incorrect because the trendline is s"
+  },
+  {
+   "stem": "The diagram shows the motion of a car over a period of 6 seconds. Calculate the speed of the car during the last two seconds of its journey.",
+   "options": {
+    "A": "24 m/s",
+    "B": "6 m/s",
+    "C": "3.3 m/s",
+    "D": "0.17 m/s"
+   },
+   "id": "gcse-geography-bank-0006",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The gradient of a distance time graph is the speed. Gradient (m) can be calculated using the formula below: m = change in y-value (Δy) ÷ change in x-value (Δx) In this case, calculating the gradient of the second sloped section of the line gives the speed during the last two seconds: m = Δy ÷ Δxm = 12 ÷ 2m = 6 m/s Option 1 is incorrect because the change in y (distance) has been multiplied by the change in x (time), instead of being divided by the change in x. Option 3 is incorrect because the total distance has been divided by the total journey time, instead of dividing the change in y (dista"
+  },
+  {
+   "stem": "A student is trying to find the density of the block of wood in the below. In order to find the density, she must first calculate the volume of the block in m³",
+   "options": {
+    "A": "0.072 m³",
+    "B": "72000 m³",
+    "C": "720 m³",
+    "D": "72 m³"
+   },
+   "id": "gcse-geography-bank-0007",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Before calculating the volume, all three measurements must be converted from centimetres to metres. This is done by dividing the value in centimetres by the conversion factor of 100: length = 120cm ÷ 100 = 1.2 m width = 30cm ÷ 100 = 0.3 m height = 20cm ÷ 100 = 0.2 m The volume is calculated by multiplying the length, width and height: Volume = length × width × height Volume = 1.2 x 0.3 × 0.2 Volume = 0.072 m³ Option 2 is incorrect because the length, width and height have not been converted from centimetres to metres, before substituting the values into the formula. Option 3 is incorrect. Inst"
+  },
+  {
+   "stem": "A saucepan containing 4.5 kg of water is heated from 20 °C to 100 °C. Given that the specific heat capacity of water is 4200 J/kg°C, calculate the energy transferred to the water.",
+   "options": {
+    "A": "378,000 J",
+    "B": "1,512,000,000 J",
+    "C": "1,512,000 J",
+    "D": "1,890,000 J"
+   },
+   "id": "gcse-geography-bank-0008",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The work done on the weight can be calculated by substituting the values for mass, specific heat capacity and change in temperature into the equation. ΔE = m × c × ΔθΔE = 4.5 × 4200 × (100 - 20) ΔE = 4.5 × 4200 × 80 ΔE = 1,512,000 J Note that the temperature difference is 80 °C, which is calculated by subtracting the initial temperature (20 °C) from the final temperature (100 °C). Option 1 is incorrect because the starting temperature of 20 °C has been used, instead of the change of temperature (80 °C). Option 2 is incorrect because the mass has been converted from kilograms to grams. Kilogram"
+  },
+  {
+   "stem": "The metal cube in the diagram above has a mass of 540 kg and a volume of 0.2 m³ Calculate its density.",
+   "options": {
+    "A": "0.0004 kg/m³",
+    "B": "108 kg/m³",
+    "C": "2700 kg/m³",
+    "D": "540.2 kg/m³"
+   },
+   "id": "gcse-geography-bank-0009",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The density of the cube can be calculated by substituting the values for mass and volume into the equation for density. ρ = m ÷ V ρ = 540 ÷ 0.2 ρ = 2700 kg/m³ Note that the S.I. unit for mass is kilograms, so there is no need to convert the value for mass to another unit. Option 1 is incorrect because the volume has been divided by the mass, instead of dividing the mass by the volume. Option 2 is incorrect because the mass has been multiplied by the volume, instead of being divided by the volume.Option 4 is incorrect because the mass has been added to the volume, instead of being divided by th"
+  },
+  {
+   "stem": "The diagram shows a p-wave (a type of seismic wave cause by earthquakes) travelling through Earth. The p-wave has a frequency of 0.05 Hz and travels at a speed of 8 km/s",
+   "options": {
+    "A": "0.4 m",
+    "B": "160 m",
+    "C": "4000 m",
+    "D": "160,000 m"
+   },
+   "id": "gcse-geography-bank-0010",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Before calculating the wavelength, the wave speed must be converted from km/s to m/s. This is done by multiplying the value in km/s by the conversion factor of 1000: Speed = 8 km/s × 1000 = 8000 m/s The wavelength can be calculated by rearranging the equation to make λ (wavelength) the subject, and then substituting the correct values of speed and frequency into the formula: λ = v ÷ f λ = 8000 ÷ 0.05 λ = 160,000 m Option 1 is incorrect because the wave speed has been multiplied by the frequency, instead of being divided by the frequency, and the wave speed has not been converted from km/s to m"
+  },
+  {
+   "stem": "The mass of a piece of swede was measured and found to be 52 g. It was then placed in sugar solution for one hour, at the end of which its mass was found to be 56 g. Select which of these methods is the way to calculate the percentage gain in mass.",
+   "options": {
+    "A": "(original mass - new mass) ÷ new mass x 100",
+    "B": "(new mass - original mass) ÷ new mass x 100",
+    "C": "(original mass - new mass) ÷ original mass x 100",
+    "D": "(new mass - original mass) ÷ original mass x 100"
+   },
+   "id": "gcse-geography-bank-0011",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The original mass is 52 g and you are asked to find out by what percentage of that the mass has increased. Therefore you need to: 1. Calculate the change in mass by subtracting the original mass from the new mass 2. Divide this answer by the original mass 3. Multiply your answer by 100 to turn it into a percentage"
+  },
+  {
+   "stem": "Choose the correct chemical formula for glucose.",
+   "options": {
+    "A": "C₆H₁₂O₆",
+    "B": "H₂O",
+    "C": "CO₂",
+    "D": "CH₄"
+   },
+   "id": "gcse-geography-bank-0012",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The correct formula is C6H12O6 showing that each molecule of glucose has six carbon atoms, twelve hydrogen atoms and six oxygen atoms. H2O is the chemical formula for water, CO2 is the chemical formula for carbon dioxide and CH4 is methane"
+  },
+  {
+   "stem": "Some people have a condition in which their pancreas fails to produce enough insulin. Which of these conditions is this a description of?",
+   "options": {
+    "A": "Type 1 diabetes",
+    "B": "Type 2 diabetes",
+    "C": "Both type 1 and type 2 diabetes",
+    "D": "It is not a description of either type of diabetes"
+   },
+   "id": "gcse-geography-bank-0013",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "It is a description of type 1 diabetes. This is a condition when the glucose level in the blood can reach high levels and is commonly controlled by insulin injections. Type 2 diabetes occurs when the body doesn't respond to the insulin that it produces."
+  },
+  {
+   "stem": "Hydrogen gas and oxygen gas are produced through the electrolysis of pure water. Which ions are present in the water?",
+   "options": {
+    "A": "Hydrogen ions and hydroxide atoms",
+    "B": "Hydrogen ions and oxygen atoms",
+    "C": "Hydrogen ions and hydroxide ions",
+    "D": "Hydrogen ions and oxygen ions"
+   },
+   "id": "gcse-geography-bank-0014",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "stem": "Which one of these changes will increase the rate of a chemical reaction?",
+   "options": {
+    "A": "Decreasing the temperature of the reactants",
+    "B": "Decreasing the surface area of the reactants",
+    "C": "Increasing the concentration of the reactants",
+    "D": "Increasing the dilution of the solutions used"
+   },
+   "id": "gcse-geography-bank-0015",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Reactions occur when molecules of the reactants collide together. Therefore, increasing the concentration of the reactants will increase the rate of a chemical reaction as there are more reactant molecules per unit volume. More dilute solutions will slow the reaction down. The reaction will slow down if the reactants are cooler as the molecules have less kinetic energy; this reduces the chances of a successful collision. Reducing the surface area will also slow the rate of reaction down, as fewer reactant molecules come in to contact with each other."
+  },
+  {
+   "stem": "Methane has a formula of CH4 and ethane has a formula of C2H6",
+   "options": {
+    "A": "C₃H₆",
+    "B": "C₃H₈",
+    "C": "C₃H₁₀",
+    "D": "C₃H₁₂"
+   },
+   "id": "gcse-geography-bank-0016",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The homologous series for alkanes follows the formula CnH2n+2 Propane is the third alkane in the series so n = 3; there will three carbon atoms. 2n + 2 is (2 x 3) + 2 = 8, so there will be eight hydrogen atoms. This can also be worked out by looking at the arrangement of atoms in the molecule - each additional carbon atom means another two hydrogen atoms."
+  },
+  {
+   "stem": "Calculate the kinetic energy of a 0.2 kg cricket ball travelling at 10 m/sUse the following formula:Ek = ½ mv2",
+   "options": {
+    "A": "1 J",
+    "B": "2 J",
+    "C": "10 J",
+    "D": "20 J"
+   },
+   "id": "gcse-geography-bank-0017",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Ek = ½ mv2Ek = ½ × 0.2 × 102 Ek = ½ × 0.2 × 100Ek = 10 J"
+  },
+  {
+   "stem": "Which circuit component is this the symbol for?",
+   "options": {
+    "A": "Resistor",
+    "B": "Fuse",
+    "C": "Variable resistor",
+    "D": "Parallel circuit"
+   },
+   "id": "gcse-geography-bank-0018",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "stem": "Which of these nuclear emissions is an electron travelling at high speed?",
+   "options": {
+    "A": "Alpha particle",
+    "B": "Beta particle",
+    "C": "Gamma ray",
+    "D": "Neutron"
+   },
+   "id": "gcse-geography-bank-0019",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A beta particle is an electron travelling at a very high speed. An alpha particle is a helium nucleus (made up of 2 protons and 2 neutrons). A gamma ray is an electromagnetic wave - it is not made out of particles. A neutron is a different type of subatomic particle."
+  },
+  {
+   "stem": "If a sound wave is travelling at a speed of 300 m/s and has a frequency of 3 kHz, calculate the length of one wave.Use the following formula:Wave speed = frequency x wavelength",
+   "options": {
+    "A": "0.01 m",
+    "B": "0.1 m",
+    "C": "1 m",
+    "D": "10 m"
+   },
+   "id": "gcse-geography-bank-0020",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "stem": "Which of the following statements describes the distribution of volcanoes?",
+   "options": {
+    "A": "Most volcanoes are found in the centre of plates",
+    "B": "Most volcanoes are found on conservative plate boundaries",
+    "C": "Volcanoes can be found along any type of plate boundary",
+    "D": "Most volcanoes are found at constructive and destructive plate boundaries"
+   },
+   "id": "gcse-geography-bank-0021",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Most volcanoes are found at constructive boundaries (where plates move apart) and destructive plate boundaries (where plates move together, and one sinks beneath the other). Some occur away from plate boundaries, where hotspots are located. Volcanoes are not found at conservative boundaries (where plates slide past one another) or collision plate boundaries (where plates move together, but neither sinks)."
+  },
+  {
+   "stem": "Figure 1 shows the features of a volcano.",
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D",
+    "E": "E"
+   },
+   "id": "gcse-geography-bank-0022",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "E",
+   "explanation": "E is the magma chamber. This is where molten rock is stored beneath the ground."
+  },
+  {
+   "stem": "Study Figure 3, which shows the path of Hurricane Sandy in the Caribbean.",
+   "options": {
+    "A": "The storm was at its strongest over Cuba",
+    "B": "The storm became stronger as it made landfall in the USA",
+    "C": "The storm travelled towards the south east",
+    "D": "The storm began in the Bahamas"
+   },
+   "id": "gcse-geography-bank-0023",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Hurricane Sandy was at its strongest over Cuba, where wind speeds reached 180 km/h. It began over the Atlantic Ocean and travelled north. The storm weakened and died out when it made landfall in the USA."
+  },
+  {
+   "stem": "Study Figure 4, a photograph of the damage caused by Typhoon Haiyan in the Philippines.",
+   "options": {
+    "A": "Diseases spread from dirty water",
+    "B": "Houses were damaged",
+    "C": "People were unable to access medical supplies",
+    "D": "More than 7,000 people were killed"
+   },
+   "id": "gcse-geography-bank-0024",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Figure 4 shows damaged houses. Other impacts of the storm included: spread of disease, difficulty in accessing medical supplies, and fatalities. However, these impacts are not visible in the image."
+  },
+  {
+   "stem": "Study Figure 5, which shows how increased pollution leads to global warming.",
+   "options": {
+    "A": "Deforestation",
+    "B": "Volcanic activity",
+    "C": "Changes to the Earth's orbit",
+    "D": "Increased solar output"
+   },
+   "id": "gcse-geography-bank-0025",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Deforestation is a human cause of global warming. Trees take in carbon dioxide and so fewer trees means there is more carbon dioxide in the atmosphere. The burning of trees also releases carbon. Volcanic activity, changes to the Earth's orbit and increased solar output can all lead to global warming. However, these are natural and not caused by people."
+  },
+  {
+   "stem": "Study Figure 6, which shows UK rainfall during February 2020 compared to the average rainfall for February for the years 1981 through to 2010.",
+   "options": {
+    "A": "Scotland",
+    "B": "The north of England",
+    "C": "Northern Ireland",
+    "D": "The south west of England"
+   },
+   "id": "gcse-geography-bank-0026",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The north of England received between 250 and 400 percent of its usual rainfall during February of 2020. This is shown by the dark blue and purple colours on the map. The areas shaded in paler colours still had more rainfall than usual, but not quite as much as the north of England."
+  },
+  {
+   "stem": "Study Figure 7, which shows the global distribution of tropical rainforests.",
+   "options": {
+    "A": "Tropical rainforests are only found along coastlines",
+    "B": "Tropical rainforests are mainly located between 25 degrees north and 25 degrees south of the Equator",
+    "C": "Tropical rainforests are located at higher latitudes",
+    "D": "Tropical rainforests are never located along coastlines"
+   },
+   "id": "gcse-geography-bank-0027",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Tropical rainforests are found along the Equator, usually between 25 degrees north and 25 degrees south. They can be located inland or along coastlines, but never at higher latitudes, where temperatures are much cooler."
+  },
+  {
+   "stem": "Which of the following describes vegetation found in a desert biome?",
+   "options": {
+    "A": "Succulents store water to survive dry periods",
+    "B": "Trees grow tall towards the overhead sun",
+    "C": "Plants have adapted to tolerate low light levels",
+    "D": "Shrubs flower all year round"
+   },
+   "id": "gcse-geography-bank-0028",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Cacti are examples of succulent plants as they store water in their stem. Tall trees are common in rainforests, where there is plenty of water. Deserts have high light levels, so plants that grow well in full sun thrive there. Shrubs do flower in the desert, but not usually all year round."
+  },
+  {
+   "stem": "Study Figure 8, which shows a climate graph of a tropical rainforest.",
+   "options": {
+    "A": "January",
+    "B": "March",
+    "C": "August",
+    "D": "October"
+   },
+   "id": "gcse-geography-bank-0029",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "August has the lowest rainfall. Just over 50 mm of rain falls during this month. Climate graphs show rainfall using bars. They also have two x axes, one that shows temperature values and one that shows rainfall values."
+  },
+  {
+   "stem": "Study Figure 1, which shows the hydrological cycle.",
+   "options": {
+    "A": "Evaporation",
+    "B": "Condensation",
+    "C": "Precipitation",
+    "D": "Percolation"
+   },
+   "id": "gcse-geography-bank-0030",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Evaporation takes place when water changes from a liquid to a gas (water vapour in the air). The water then condenses into clouds and some falls back to the ground as precipitation. Once the water hits the ground, it percolates into the surface and may eventually be returned to the sea."
+  },
+  {
+   "stem": "Study Figure 2, which shows the processes of transportation in a river.",
+   "options": {
+    "A": "Suspension",
+    "B": "Traction",
+    "C": "Solution",
+    "D": "Saltation"
+   },
+   "id": "gcse-geography-bank-0031",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Saltation takes place when small pebbles and stones are bounced along the riverbed. Traction is when larger rocks are rolled along the riverbed. Suspension and solution take place when finer material is carried along in the water."
+  },
+  {
+   "stem": "Figure 3 shows the upper course of a river.",
+   "options": {
+    "A": "Meander bend",
+    "B": "Oxbow lake",
+    "C": "Delta",
+    "D": "Rapids"
+   },
+   "id": "gcse-geography-bank-0032",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Rapids are usually found in the upper course of a river. They form where the river erodes vertically (downwards) at higher altitudes. Meanders, oxbow lakes, and deltas are all formed at much lower altitudes, where the river erodes laterally (sideways) or where deposition takes place."
+  },
+  {
+   "stem": "Figure 4 shows a section of the River Tees at Barnard Castle.",
+   "options": {
+    "A": "Meander",
+    "B": "Delta",
+    "C": "Waterfall",
+    "D": "Interlocking spurs"
+   },
+   "id": "gcse-geography-bank-0033",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "One feature of the River Tees at Barnard Castle is a meander. These are wide bends in the river, with flat land either side."
+  },
+  {
+   "stem": "Figure 6 shows a flood hydrograph.",
+   "options": {
+    "A": "Rising limb",
+    "B": "Falling limb",
+    "C": "Lag time",
+    "D": "Base flow"
+   },
+   "id": "gcse-geography-bank-0034",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The lag time is the time between peak rainfall and peak discharge. Shorter lag times are more likely to lead to river flooding. This is because rainfall enters rivers more quickly and so they are more likely to overflow."
+  },
+  {
+   "stem": "Study Figure 7, showing diagrams of constructive and destructive waves.",
+   "options": {
+    "A": "Strong swash, weak backwash",
+    "B": "Weak swash, strong backwash",
+    "C": "High wave height",
+    "D": "Tall breaker"
+   },
+   "id": "gcse-geography-bank-0035",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Constructive waves have a strong swash and a weak backwash. Destructive waves have a weak swash and a strong backwash. This is because destructive waves are high with tall breakers, which scour the beach."
+  },
+  {
+   "stem": "Figure 8 shows Spurn Head on the Holderness coastline.",
+   "options": {
+    "A": "Cliff",
+    "B": "Wave-cut platform",
+    "C": "Spit",
+    "D": "Arch"
+   },
+   "id": "gcse-geography-bank-0036",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Spurn Head is a coastal spit. These are depositional features that jut out into the sea from the land. Spits can form when there is a change in the shape of the coastline or there is a river mouth."
+  },
+  {
+   "stem": "Figure 9 shows a cliff that is being eroded by the sea.",
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "id": "gcse-geography-bank-0037",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "D is the wave-cut platform. This is the flat area left behind as the cliff retreats. The wave-cut platform doesn't erode as it sits on or below the level of the most powerful waves."
+  },
+  {
+   "stem": "Study Figure 10, which shows sea defences along a coastline.",
+   "options": {
+    "A": "Gabions",
+    "B": "Sea wall",
+    "C": "Groynes",
+    "D": "Rock armour"
+   },
+   "id": "gcse-geography-bank-0038",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Figure 10 shows groynes. These are rock or wooden structures that are built at right angles to the sea. They stop the movement of sediment along the coastline, which builds up a beach."
+  },
+  {
+   "stem": "Which of the following is an economic measure of development?",
+   "options": {
+    "A": "Life expectancy",
+    "B": "Death rates",
+    "C": "GNI per capita",
+    "D": "Literacy rate"
+   },
+   "id": "gcse-geography-bank-0039",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "GNI per capita is an economic measure of development. GNI stands for Gross National Income. Per capita means per person- the value of the country's income is divided by the number of people in that country."
+  },
+  {
+   "stem": "Study Figure 1, which shows the Human Development Index (HDI). Countries that are closer to 1 have higher levels of development and those that are closer to zero have lower levels of development.",
+   "options": {
+    "A": "Very hot or very arid climates",
+    "B": "Natural disasters, such as tectonic hazards or extreme flooding",
+    "C": "A lack of raw materials",
+    "D": "Colonialism"
+   },
+   "id": "gcse-geography-bank-0040",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Colonialism is a historical factor that can lead to uneven development. Colonialism happened when one country forcibly took control over another. Colonial powers often gained wealth using the resources of their colonies."
+  }
+ ],
+ "body": "GCSE",
+ "category": "secondary"
+}

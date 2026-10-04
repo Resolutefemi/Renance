@@ -1,0 +1,98 @@
+{
+ "exam": "EJU",
+ "region": "Japan",
+ "slug": "EJU",
+ "question_banks": 0,
+ "github_sources": [
+  {
+   "repo": "wooley/EJUVault",
+   "url": "https://github.com/wooley/EJUVault",
+   "stars": 2,
+   "desc": "EJUMathVault is a structured question and answer bank system for **EJU Mathematics** (Examination for Japanese University Admission for International Students)."
+  },
+  {
+   "repo": "tech234a/annotation-urls",
+   "url": "https://github.com/tech234a/annotation-urls/blob/5c0300471b87c6a5f3dd8883484f8155b5ff33d7/oe_urls.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "greenheartgames/gdt-translations",
+   "url": "https://github.com/greenheartgames/gdt-translations/blob/df9d50c1233ce17c2ba14ebfc854c0d159cb2631/hu.po",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "dooshu/shu",
+   "url": "https://github.com/dooshu/shu/blob/27c53a52e3fff7b1c9dfcef5bd8b7629b358494d/en/62.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "ivanfioravanti/llm_context_benchmarks",
+   "url": "https://github.com/ivanfioravanti/llm_context_benchmarks/blob/5574d0b118daae85b342cf2137972faabb869568/32k.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "arstgit/high-frequency-vocabulary",
+   "url": "https://github.com/arstgit/high-frequency-vocabulary/blob/8ede1bdc1ced22b049758ebdcae7b7b8da1fb2af/20k.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "poteto/hiring-without-whiteboards",
+   "url": "https://github.com/poteto/hiring-without-whiteboards/blob/b96912cd94e264837bb60cec82309b2b899f489e/README.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "thunlp/RCPapers",
+   "url": "https://github.com/thunlp/RCPapers/blob/180fbb5755d39a18233527d5747e8fc982041cb5/README.md",
+   "stars": 0,
+   "desc": ""
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "AP Japanese Language and Culture Exam Questions",
+   "url": "https://apcentral.collegeboard.org",
+   "class": "official"
+  },
+  {
+   "title": "Entrance exam past questions | National Institute of",
+   "url": "https://www.kosen-k.go.jp",
+   "class": "site+pdf"
+  },
+  {
+   "title": "EJU practice test | Blog | Japanese Language Study in Japan",
+   "url": "https://yiea.com",
+   "class": "site"
+  },
+  {
+   "title": "2021 1st session (Japanese and Japan And The World are",
+   "url": "https://www.jasso.go.jp",
+   "class": "site"
+  },
+  {
+   "title": "EJU GUIDE",
+   "url": "https://www.studyinjapan.go.jp",
+   "class": "site"
+  },
+  {
+   "title": "Past exam questions",
+   "url": "https://www.jasso.go.jp",
+   "class": "site"
+  },
+  {
+   "title": "Japanese Government (MEXT) Scholarship Applicant",
+   "url": "https://www.studyinjapan.go.jp",
+   "class": "site"
+  },
+  {
+   "title": "Archives of Past Entrance Exams | Admissions",
+   "url": "https://www.i.u-tokyo.ac.jp",
+   "class": "site"
+  }
+ ]
+}

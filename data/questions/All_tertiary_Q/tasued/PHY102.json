@@ -1,0 +1,1593 @@
+{
+  "code": "uni-tasued-phy102-bank",
+  "title": "TASUED PHY102 | Course Question Bank",
+  "version": 1,
+  "questionCount": 113,
+  "totalMarks": 113,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-tasued-phy102-bank-0001",
+      "type": "mcq",
+      "stem": "The potential difference between the terminals of a cell when the cell is not delivering current to a circuit is referred to as ______.",
+      "options": {
+        "A": "hydrolysis",
+        "B": "electromotive force",
+        "C": "electrolysis",
+        "D": "polarisation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The e.m.f. is defined as the terminal p.d. of a cell measured when no current is being drawn from it."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0002",
+      "type": "mcq",
+      "stem": "Find the r.m.s. value of an a.c. whose peak value is $5\\ A$.",
+      "options": {
+        "A": "$3.54\\ A$",
+        "B": "$4.53\\ A$",
+        "C": "$3.84\\ A$",
+        "D": "$5.43\\ A$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The r.m.s. value equals $\\frac{I_{peak}}{\\sqrt{2}} = \\frac{5}{\\sqrt{2}} = 3.54\\ A$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0003",
+      "type": "mcq",
+      "stem": "Calculate the effective e.m.f. if three cells each of e.m.f. $3.54\\ V$ are connected in series.",
+      "options": {
+        "A": "$9.08\\ V$",
+        "B": "$10.62\\ V$",
+        "C": "$11.31\\ V$",
+        "D": "$8.45\\ V$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In series, the e.m.f.s add: $3 \\times 3.54\\ V = 10.62\\ V$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0004",
+      "type": "mcq",
+      "stem": "At what frequency will a $20\\ \\mu F$ capacitor have a reactance of $500\\ \\Omega$?",
+      "options": {
+        "A": "$\\frac{350}{\\pi}\\ Hz$",
+        "B": "$\\frac{50}{\\pi}\\ Hz$",
+        "C": "$50\\pi\\ Hz$",
+        "D": "$40\\pi\\ Hz$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Using $X_c = \\frac{1}{2\\pi f C}$, solving for $f$ gives $f = \\frac{1}{2\\pi X_c C} = \\frac{50}{\\pi}\\ Hz$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0005",
+      "type": "mcq",
+      "stem": "The ends of a magnet where its attracting power is greatest are called",
+      "options": {
+        "A": "lodestones",
+        "B": "bars",
+        "C": "poles",
+        "D": "magnetite"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Magnetic poles are the points on a magnet where the magnetic force is strongest."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0006",
+      "type": "mcq",
+      "stem": "If current of $8\\ Amps$ is flowing through a conductor which has a resistance of $4\\Omega$, what is the potential difference across the terminals of the conductors?",
+      "options": {
+        "A": "$28\\ V$",
+        "B": "$44\\ V$",
+        "C": "$32\\ V$",
+        "D": "$12\\ V$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "By Ohm's law, $V = IR = 8 \\times 4 = 32\\ V$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0007",
+      "type": "mcq",
+      "stem": "A capacitor contains a charge of $2.5 \\times 10^{-3}$ coulomb when a potential difference $320\\ V$ is applied across it. Calculate the capacitance of the capacitor.",
+      "options": {
+        "A": "$7.8\\ \\mu F$",
+        "B": "$6.4\\ \\mu F$",
+        "C": "$9.2\\ \\mu F$",
+        "D": "$8.1\\ \\mu F$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Capacitance is $C = \\frac{Q}{V} = \\frac{2.5 \\times 10^{-3}}{320} = 7.8\\ \\mu F$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0008",
+      "type": "mcq",
+      "stem": "If an a.c. voltage is represented by the relation; $V = 4 \\sin(900\\pi t)$. What is the angular velocity of the voltage?",
+      "options": {
+        "A": "$2\\pi\\ rad\\,s^{-1}$",
+        "B": "$20\\pi\\ rad\\,s^{-1}$",
+        "C": "$45\\pi\\ rad\\,s^{-1}$",
+        "D": "$900\\pi\\ rad\\,s^{-1}$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "In $V = V_0 \\sin(\\omega t)$, the coefficient of $t$ is the angular velocity, here $900\\pi$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0009",
+      "type": "mcq",
+      "stem": "The process by which a magnet loses its magnetism is known as ______.",
+      "options": {
+        "A": "demagnetization",
+        "B": "magnetism",
+        "C": "magnetic flux",
+        "D": "induction"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Demagnetization is the specific term for the loss of magnetic properties in a material."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0010",
+      "type": "mcq",
+      "stem": "The resistance of a wire of length $55\\ cm$ and diameter $0.07\\ cm$ is $10\\Omega$. Calculate the resistivity of the material.",
+      "options": {
+        "A": "$4.0 \\times 10^{-6}\\ \\Omega m$",
+        "B": "$5.0 \\times 10^{-6}\\ \\Omega m$",
+        "C": "$6.0 \\times 10^{-6}\\ \\Omega m$",
+        "D": "$7.0 \\times 10^{-6}\\ \\Omega m$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Using $\\rho = \\frac{RA}{L}$ with $A = \\pi r^2$ and the given values yields approximately $7.0 \\times 10^{-6}\\ \\Omega m$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0011",
+      "type": "mcq",
+      "stem": "An electric cooker operates on a $220\\ V$. If a current of $2.5\\ A$ flows through it for $400$ seconds, what is the total energy consumed by the cooker?",
+      "options": {
+        "A": "$185\\ kJ$",
+        "B": "$305\\ kJ$",
+        "C": "$410\\ kJ$",
+        "D": "$220\\ kJ$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Energy is $E = VIt = 220 \\times 2.5 \\times 400 = 220{,}000\\ J = 220\\ kJ$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0012",
+      "type": "mcq",
+      "stem": "A variable resistor which is used to adjust the current flowing in a circuit is called ______.",
+      "options": {
+        "A": "voltmeter",
+        "B": "ammeter",
+        "C": "galvanometer",
+        "D": "rheostat"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "A rheostat is a variable resistor specifically used to control current in a circuit."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0013",
+      "type": "mcq",
+      "stem": "______ is the process of magnetizing an object made of magnetic material simply by bringing a magnetic near.",
+      "options": {
+        "A": "Electromagnets",
+        "B": "Inducing magnetism",
+        "C": "Demagnetization",
+        "D": "Magnetic flux"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Bringing a magnet near a magnetic material induces magnetism in it without direct contact."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0014",
+      "type": "mcq",
+      "stem": "A series LC circuit has capacitance $50\\ \\mu F$ and inductance of $500\\ \\mu H$. Calculate the frequency at which the circuit will resonate. ($\\pi = 3.142$)",
+      "options": {
+        "A": "$1006\\ Hz$",
+        "B": "$1060\\ Hz$",
+        "C": "$1056\\ Hz$",
+        "D": "$1600\\ Hz$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Resonant frequency is $f = \\frac{1}{2\\pi\\sqrt{LC}}$, which evaluates to approximately $1006\\ Hz$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0015",
+      "type": "mcq",
+      "stem": "Four resistors of resistances $1\\Omega$, $5\\Omega$, $3\\Omega$ and $4\\Omega$ are connected in parallel. Calculate the value of the net resistance.",
+      "options": {
+        "A": "$0.56\\ \\Omega$",
+        "B": "$0.65\\ \\Omega$",
+        "C": "$0.75\\ \\Omega$",
+        "D": "$0.57\\ \\Omega$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Using $\\frac{1}{R} = \\frac{1}{1}+\\frac{1}{5}+\\frac{1}{3}+\\frac{1}{4}$ gives $R \\approx 0.56\\ \\Omega$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0016",
+      "type": "mcq",
+      "stem": "In a circuit, resistors of resistance $2\\Omega$, $5\\Omega$ and $10\\Omega$ are connected in parallel. Calculate the resistance in the circuit.",
+      "options": {
+        "A": "$0.59\\Omega$",
+        "B": "$0.48\\Omega$",
+        "C": "$1.25\\Omega$",
+        "D": "$0.27\\Omega$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "$\\frac{1}{R} = \\frac{1}{2}+\\frac{1}{5}+\\frac{1}{10} = 0.8$, so $R = 1.25\\Omega$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0017",
+      "type": "mcq",
+      "stem": "A $60\\ W$ filament lamp has a resistance of $735\\Omega$. What is the main voltage for which the lamp is best suited?",
+      "options": {
+        "A": "$210\\ V$",
+        "B": "$340\\ V$",
+        "C": "$120\\ V$",
+        "D": "$220\\ V$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Using $P = \\frac{V^2}{R}$, $V = \\sqrt{PR} = \\sqrt{60 \\times 735} \\approx 210\\ V$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0018",
+      "type": "mcq",
+      "stem": "Charge per unit area of a surface is known as",
+      "options": {
+        "A": "current density",
+        "B": "electric density",
+        "C": "charge density",
+        "D": "Area density"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Charge density is precisely defined as charge per unit area (or volume)."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0019",
+      "type": "mcq",
+      "stem": "The device for changing the voltage of an A.C. supply is",
+      "options": {
+        "A": "Inductor",
+        "B": "Conductor",
+        "C": "Resistor",
+        "D": "Transformer"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "A transformer steps voltage up or down in an a.c. supply using electromagnetic induction."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0020",
+      "type": "mcq",
+      "stem": "Which of the following devices is used to generate and transfer static charge by electrostatic induction?",
+      "options": {
+        "A": "Gold leaf electroscope",
+        "B": "Proof planes",
+        "C": "Generator",
+        "D": "Electrophorus"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "An electrophorus consists of a charged base plate and a metal disc; each time the disc is lifted and touched, it transfers a fresh induced charge, making it a device for generating and transferring static charge."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0021",
+      "type": "mcq",
+      "stem": "A circuit contains a capacitor of capacitance $5\\mu F$. What will be its reactance at a frequency of $\\frac{500}{\\pi}\\ Hz$ (Take $\\pi$ as $\\frac{22}{7}$).",
+      "options": {
+        "A": "$800\\ \\Omega$",
+        "B": "$200\\ \\Omega$",
+        "C": "$900\\ \\Omega$",
+        "D": "$1100\\ \\Omega$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$\\omega = 2\\pi f = 1000\\ rad\\,s^{-1}$, so $X_c = \\frac{1}{\\omega C} = \\frac{1}{1000 \\times 5\\times10^{-6}} = 200\\ \\Omega$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0022",
+      "type": "mcq",
+      "stem": "The S.I. unit of electrical workdone is ______.",
+      "options": {
+        "A": "Newton",
+        "B": "Volts",
+        "C": "Joules",
+        "D": "Coulombs"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Work done (energy) is measured in Joules in the S.I. system."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0023",
+      "type": "mcq",
+      "stem": "Which of the following is the instrument used in measuring the potential difference in a circuit?",
+      "options": {
+        "A": "Galvanometer",
+        "B": "Rheostat",
+        "C": "Voltmeter",
+        "D": "Ammeter"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A voltmeter is specifically designed to measure potential difference across circuit elements."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0024",
+      "type": "mcq",
+      "stem": "The capacitance of a capacitor is given by",
+      "options": {
+        "A": "$C = \\frac{q}{v}$",
+        "B": "$C = \\frac{m}{v}$",
+        "C": "$C = \\frac{v}{q}$",
+        "D": "$C = \\frac{v}{m}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "By definition, capacitance is charge stored per unit potential difference."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0025",
+      "type": "mcq",
+      "stem": "A point P is at a potential difference of $240\\ V$ and another point Q is at a potential difference of $120\\ V$. Find the work done in moving a charge of $10$ Coulomb from P to Q.",
+      "options": {
+        "A": "$1.5\\ kJ$",
+        "B": "$1.2\\ kJ$",
+        "C": "$1.4\\ kJ$",
+        "D": "$1.3\\ kJ$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Work done is $W = q(V_P - V_Q) = 10 \\times (240-120) = 1200\\ J = 1.2\\ kJ$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0026",
+      "type": "mcq",
+      "stem": "Which of the following substance is not a magnetic material?",
+      "options": {
+        "A": "Steel",
+        "B": "Copper",
+        "C": "Nickel",
+        "D": "Cobalt"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Copper is not ferromagnetic, unlike steel, nickel, and cobalt."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0027",
+      "type": "mcq",
+      "stem": "Calculate the length of a constant wire of cross-sectional area $4\\pi \\times 10^{-8}\\ m^2$ and resistivity $1.1 \\times 10^{-6}\\ \\Omega m$ required to construct a standard resistor of resistance $21\\Omega$ (Take $\\pi$ as $3.143$).",
+      "options": {
+        "A": "$6.3\\ m$",
+        "B": "$3.4\\ m$",
+        "C": "$5.1\\ m$",
+        "D": "$2.4\\ m$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "From $R = \\frac{\\rho L}{A}$, $L = \\frac{RA}{\\rho} = \\frac{21 \\times 4\\pi \\times 10^{-8}}{1.1 \\times 10^{-6}} \\approx 2.4\\ m$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0028",
+      "type": "mcq",
+      "stem": "Ohm's law is mathematically stated as ______.",
+      "options": {
+        "A": "$V = \\frac{I}{R}$",
+        "B": "$I = \\frac{R}{V}$",
+        "C": "$R = \\frac{I}{V}$",
+        "D": "$I = \\frac{V}{R}$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Ohm's law states that current equals voltage divided by resistance at constant temperature."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0029",
+      "type": "mcq",
+      "stem": "Which of the following instruments is used for measuring the exact amount of current in a circuit?",
+      "options": {
+        "A": "Ammeter",
+        "B": "Potentiometer",
+        "C": "Resistor",
+        "D": "Voltmeter"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "An ammeter is specifically designed to measure electric current in a circuit."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0030",
+      "type": "mcq",
+      "stem": "Calculate the energy stored in a $20\\ \\mu F$ capacitor if the potential difference between the plates in $40\\ V$.",
+      "options": {
+        "A": "$2.3 \\times 10^{-2}\\ J$",
+        "B": "$1.6 \\times 10^{-2}\\ J$",
+        "C": "$2.5 \\times 10^{-2}\\ J$",
+        "D": "$1.4 \\times 10^{-2}\\ J$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$E = \\frac{1}{2}CV^2 = \\frac{1}{2}\\times20\\times10^{-6}\\times40^2 = 1.6 \\times 10^{-2}\\ J$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0031",
+      "type": "mcq",
+      "stem": "Which of the following is the instrument used in measuring the current in a circuit?",
+      "options": {
+        "A": "Galvanometer",
+        "B": "Rheostat",
+        "C": "Voltmeter",
+        "D": "Ammeter"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The ammeter is the standard instrument for directly measuring current."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0032",
+      "type": "mcq",
+      "stem": "Five resistances of values $0.1\\Omega$, $1.7\\Omega$, $2.0\\Omega$, $1.0\\Omega$, and $0.9\\Omega$ are connected in series. Calculate the value of the combined resistances.",
+      "options": {
+        "A": "$7.5\\Omega$",
+        "B": "$5.7\\Omega$",
+        "C": "$6.5\\Omega$",
+        "D": "$5.4\\Omega$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In series, resistances simply add: $0.1+1.7+2.0+1.0+0.9 = 5.7\\Omega$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0033",
+      "type": "mcq",
+      "stem": "A small positive charge q of $+2 \\times 10^{-8}\\ C$ is at O, find the potential at B if the distance from O to B is $20\\ cm$. Assume $\\frac{1}{4\\pi\\varepsilon_0} = 9 \\times 10^{9}\\ Nm^2C^{-2}$.",
+      "options": {
+        "A": "$700\\ V$",
+        "B": "$900\\ V$",
+        "C": "$570\\ V$",
+        "D": "$600\\ V$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Using $V = \\frac{kq}{r}$ with the given values yields $900\\ V$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0034",
+      "type": "mcq",
+      "stem": "A point charge $q_1 = 3.2\\ nC$ experiences a force $F = 8.0 \\times 10^{-6}\\ N$. What is the external electric field strength?",
+      "options": {
+        "A": "$2.5 \\times 10^{3}\\ NC^{-1}$",
+        "B": "$3.5 \\times 10^{3}\\ NC^{-1}$",
+        "C": "$1.5 \\times 10^{3}\\ NC^{-1}$",
+        "D": "$4.5 \\times 10^{3}\\ NC^{-1}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Electric field strength is $E = \\frac{F}{q} = \\frac{8.0 \\times 10^{-6}}{3.2 \\times 10^{-9}} = 2.5 \\times 10^{3}\\ NC^{-1}$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0035",
+      "type": "mcq",
+      "stem": "What is the force acting on an electron carrying a charge of $1.6 \\times 10^{-19}\\ C$ in an electric field of intensity $5 \\times 10^{8}\\ Vm^{-1}$?",
+      "options": {
+        "A": "$8.1 \\times 10^{-11}\\ N$",
+        "B": "$6.0 \\times 10^{-11}\\ N$",
+        "C": "$8.0 \\times 10^{-11}\\ N$",
+        "D": "$7.0 \\times 10^{-11}\\ N$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Force is $F = qE = 1.6 \\times 10^{-19} \\times 5 \\times 10^{8} = 8.0 \\times 10^{-11}\\ N$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0036",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor of capacitance $600\\ \\mu F$ has a potential difference of $200\\ V$ between its plates. Calculate the charge on either plate of the capacitor.",
+      "options": {
+        "A": "$1.2\\times10^{-1}\\ C$",
+        "B": "$1.3\\ C$",
+        "C": "$2.1\\ C$",
+        "D": "$3.1\\ C$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$Q = CV = 600\\times10^{-6}\\times200 = 0.12\\ C = 1.2\\times10^{-1}\\ C$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0037",
+      "type": "mcq",
+      "stem": "A capacitor of charge, $5 \\times 10^{-8}\\ C$ has a potential of $100\\ V$. What is the capacitance of the capacitor?",
+      "options": {
+        "A": "$5 \\times 10^{-8}\\ \\mu F$",
+        "B": "$5 \\times 10^{-7}\\ \\mu F$",
+        "C": "$5 \\times 10^{-6}\\ \\mu F$",
+        "D": "$5 \\times 10^{-4}\\ \\mu F$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "$C = \\frac{Q}{V} = \\frac{5\\times10^{-8}}{100} = 5\\times10^{-10}\\ F = 5\\times10^{-4}\\ \\mu F$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0038",
+      "type": "mcq",
+      "stem": "Three capacitors each of capacitance $1.5\\ \\mu F$ are connected in parallel. The total capacitance in the circuit is ______.",
+      "options": {
+        "A": "$5.4\\ \\mu F$",
+        "B": "$4.5\\ \\mu F$",
+        "C": "$1.5\\ \\mu F$",
+        "D": "$3.5\\ \\mu F$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Capacitances in parallel add directly: $3 \\times 1.5\\ \\mu F = 4.5\\ \\mu F$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0039",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor of plate area $20\\ cm^2$ in vacuum has a capacitance of $0.02\\ \\mu F$. If $\\varepsilon_0 = 9 \\times 10^{-12}\\ Fm^{-1}$, what is the distance between the plates?",
+      "options": {
+        "A": "$9 \\times 10^{-7}\\ m$",
+        "B": "$9 \\times 10^{-8}\\ m$",
+        "C": "$9 \\times 10^{-6}\\ m$",
+        "D": "$9 \\times 10^{-9}\\ m$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "From $C = \\frac{\\varepsilon_0 A}{d}$, solving for $d$ using the given values yields $9 \\times 10^{-7}\\ m$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0040",
+      "type": "mcq",
+      "stem": "Which of the following is not a consequence of a force field?",
+      "options": {
+        "A": "Weight",
+        "B": "Surface tension",
+        "C": "Electric force",
+        "D": "Magnetic force"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Surface tension arises from intermolecular cohesive forces, not from a long-range force field like gravity, electric, or magnetic forces."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0041",
+      "type": "mcq",
+      "stem": "When an ebonite rod is robbed with fur, the rod acquires a ______.",
+      "options": {
+        "A": "Positive charge",
+        "B": "Negative charge",
+        "C": "Neutral charge",
+        "D": "Positive and negative charges"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Rubbing ebonite with fur transfers electrons onto the rod, giving it a negative charge."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0042",
+      "type": "mcq",
+      "stem": "The resistance of a wire of length $100\\ cm$ and diameter $0.3\\ mm$ is found to be $3.0\\Omega$. Calculate the resistivity of the wire.",
+      "options": {
+        "A": "$1.21 \\times 10^{-7}\\ \\Omega m$",
+        "B": "$1.12 \\times 10^{-7}\\ \\Omega m$",
+        "C": "$2.12 \\times 10^{-7}\\ \\Omega m$",
+        "D": "$2.21 \\times 10^{-7}\\ \\Omega m$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Using $\\rho = \\frac{RA}{L}$ with $A = \\pi r^2$ and the given values gives approximately $2.12 \\times 10^{-7}\\ \\Omega m$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0043",
+      "type": "mcq",
+      "stem": "Find the r.m.s value of an a.c. whose peak value is $5$ amperes.",
+      "options": {
+        "A": "$3.54\\ A$",
+        "B": "$5.34\\ A$",
+        "C": "$4.35\\ A$",
+        "D": "$2.54\\ A$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The r.m.s. value equals $\\frac{I_{peak}}{\\sqrt{2}} = \\frac{5}{\\sqrt{2}} = 3.54\\ A$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0044",
+      "type": "mcq",
+      "stem": "If the mass of the earth, M of radius $6.4 \\times 10^{6}\\ m$ is $6.0 \\times 10^{24}\\ kg$. Calculate the force per unit mass on the earth's surface. ($G = 6.7 \\times 10^{-11}\\ m^2kg^{-1}s^{-2}$)",
+      "options": {
+        "A": "$9.81\\ ms^{-2}$",
+        "B": "$8.91\\ ms^{-2}$",
+        "C": "$9.18\\ ms^{-2}$",
+        "D": "$1.89\\ ms^{-2}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Gravitational field strength is $g = \\frac{GM}{r^2}$, which evaluates to $9.81\\ ms^{-2}$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0045",
+      "type": "mcq",
+      "stem": "The SI unit of current is",
+      "options": {
+        "A": "Joule",
+        "B": "Volt",
+        "C": "Ohm",
+        "D": "Ampere"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The ampere is the base S.I. unit for electric current."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0046",
+      "type": "mcq",
+      "stem": "An electric charge can be transmitted through",
+      "options": {
+        "A": "rubber, wood and stone",
+        "B": "clay, paper and plastic",
+        "C": "the human body, water and metals",
+        "D": "acid, cloth and glass"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "These are all conductive materials that allow charge to flow through them."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0047",
+      "type": "mcq",
+      "stem": "Which of the following substances is not an insulator?",
+      "options": {
+        "A": "Silver",
+        "B": "Glass",
+        "C": "Plastic",
+        "D": "Clay"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Silver is a metal and an excellent conductor, unlike the other listed insulating materials."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0048",
+      "type": "mcq",
+      "stem": "Which of the following is a good conductor of heat?",
+      "options": {
+        "A": "Human body",
+        "B": "Glass",
+        "C": "Metals",
+        "D": "Earth"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Metals have free electrons that allow efficient heat conduction."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0049",
+      "type": "mcq",
+      "stem": "A dry plastic comb used in combing hair was found to attract pieces of paper and dust. The most probable explanation for this phenomenon is that the comb has been given",
+      "options": {
+        "A": "magnetization by induction",
+        "B": "electric charges by conduction",
+        "C": "Electric charges by induction",
+        "D": "electric charges by friction"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Rubbing the comb against hair generates static charge through friction, which then attracts light objects."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0050",
+      "type": "mcq",
+      "stem": "A charge of $1.0 \\times 10^{-3}$ coulombs experiences a force of $40\\ N$ at a certain point in space. What is the electric field intensity?",
+      "options": {
+        "A": "$4 \\times 10^{4}\\ NC^{-1}$",
+        "B": "$2 \\times 10^{4}\\ NC^{-1}$",
+        "C": "$3 \\times 10^{4}\\ NC^{-1}$",
+        "D": "$5 \\times 10^{4}\\ NC^{-1}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$E = \\frac{F}{q} = \\frac{40}{1.0\\times10^{-3}} = 4\\times10^{4}\\ NC^{-1}$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0051",
+      "type": "mcq",
+      "stem": "If $\\frac{1}{4\\pi\\varepsilon_0} = 9.0 \\times 10^{9}\\ Nm^2C^{-2}$, calculate the electric potential at a distance of $10\\ cm$ from a point charge of $15\\ mC$.",
+      "options": {
+        "A": "$1.45 \\times 10^{9}\\ V$",
+        "B": "$1.55 \\times 10^{9}\\ V$",
+        "C": "$1.35 \\times 10^{9}\\ V$",
+        "D": "$1.65 \\times 10^{9}\\ V$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Using $V = \\frac{kq}{r} = \\frac{9 \\times 10^9 \\times 15 \\times 10^{-3}}{0.1} = 1.35 \\times 10^{9}\\ V$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0052",
+      "type": "mcq",
+      "stem": "The current flowing through a metallic conductor is directly proportional to the potential difference across its ends provided that temperature and other physical conditions remain constant is known as",
+      "options": {
+        "A": "Law of electrostatics",
+        "B": "Ohm's law",
+        "C": "Newton's law",
+        "D": "Thermal law of heat"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "This is precisely the statement of Ohm's law."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0053",
+      "type": "mcq",
+      "stem": "The following are the factors affecting the resistance of a conductor except",
+      "options": {
+        "A": "length of the conductor",
+        "B": "area of the conductor",
+        "C": "energy of the conductor",
+        "D": "temperature of the material"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Resistance depends on length, cross-sectional area, resistivity, and temperature - not on the conductor's energy."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0054",
+      "type": "mcq",
+      "stem": "The time rate of flow of electric charge along a conductor is called",
+      "options": {
+        "A": "electric current",
+        "B": "electric charges",
+        "C": "potential difference",
+        "D": "electromotive force"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Electric current is defined as the rate of flow of charge."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0055",
+      "type": "mcq",
+      "stem": "A positively charged glass rod is placed near the cap of a positively charged electroscope. The divergence of the leaf is observed to ______.",
+      "options": {
+        "A": "Decrease",
+        "B": "Remain the same",
+        "C": "Increase",
+        "D": "Increase and collapse immediately"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Like charges repel, so bringing a positive rod near an already positively charged electroscope increases the leaf divergence."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0056",
+      "type": "mcq",
+      "stem": "Which of the following items can be used to compare the relative magnitudes of electric charges on two bodies?",
+      "options": {
+        "A": "Ebonite rod",
+        "B": "Proof planes",
+        "C": "Gold leaf electroscope",
+        "D": "The electrophorus"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The gold leaf electroscope shows relative charge magnitude through the degree of leaf divergence."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0057",
+      "type": "mcq",
+      "stem": "Which of the following substances is or are insulators? (i) Aluminum (ii) Ebonite (iii) Glass (iv) The earth.",
+      "options": {
+        "A": "i",
+        "B": "ii and iii",
+        "C": "ii",
+        "D": "iii"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ebonite and glass do not allow free flow of charge, making them insulators, while aluminum and earth are conductors."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0058",
+      "type": "mcq",
+      "stem": "Which of the following substances are conductors of electric charges? (i) Metals (ii) The earth (iii) The human body (iv) Paper (v) Sulphur.",
+      "options": {
+        "A": "i",
+        "B": "i, ii and iii",
+        "C": "iv and v",
+        "D": "v"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Metals, the earth, and the human body all allow charge to flow through them, unlike paper and sulphur which are insulators."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0059",
+      "type": "mcq",
+      "stem": "The opposition to the flow of current is called",
+      "options": {
+        "A": "Capacitor",
+        "B": "Current",
+        "C": "potential difference",
+        "D": "Resistance"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Resistance is defined as the opposition offered to the flow of electric current."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0060",
+      "type": "mcq",
+      "stem": "______ is the instrument used for measuring the current flow in an electric circuit.",
+      "options": {
+        "A": "Voltmeter",
+        "B": "Ammeter",
+        "C": "Key",
+        "D": "Rheostat"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The ammeter is the standard instrument for directly measuring current."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0061",
+      "type": "mcq",
+      "stem": "Which of the following is NOT an example of force field?",
+      "options": {
+        "A": "Magnetic force",
+        "B": "Electric force",
+        "C": "Frictional force",
+        "D": "Gravitational force"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Friction is a contact force, unlike magnetic, electric, and gravitational forces which act at a distance through fields."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0062",
+      "type": "mcq",
+      "stem": "______ is a device for storing electric charges.",
+      "options": {
+        "A": "Transformer",
+        "B": "Ammeter",
+        "C": "Capacitor",
+        "D": "Resistor"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A capacitor is specifically designed to store electric charge on its plates."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0063",
+      "type": "mcq",
+      "stem": "An electrical device for changing the size of an a.c. is called",
+      "options": {
+        "A": "transformer",
+        "B": "ammeter",
+        "C": "capacitor",
+        "D": "generator"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A transformer changes (steps up or down) the voltage magnitude of an alternating current supply."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0064",
+      "type": "mcq",
+      "stem": "Find the turns ratio in a transformer which delivers a voltage of $120$ volts in the secondary coil from a primary voltage of $60$ volts.",
+      "options": {
+        "A": "$3$",
+        "B": "$2$",
+        "C": "$4$",
+        "D": "$1$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Turns ratio equals $\\frac{V_s}{V_p} = \\frac{120}{60} = 2$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0065",
+      "type": "mcq",
+      "stem": "Which of the following statements about a generator is not correct?",
+      "options": {
+        "A": "It can produce direct current",
+        "B": "It can produce alternating current",
+        "C": "It requires an external supply of energy to rotate the coil",
+        "D": "It requires an external supply of current to the coil"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "A generator requires mechanical energy to rotate the coil, not an external electric current supply."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0066",
+      "type": "mcq",
+      "stem": "To convert an alternating current dynamo into a direct current dynamo, the",
+      "options": {
+        "A": "number of turns in the coil is increased",
+        "B": "strength of the field magnet is increased",
+        "C": "slip rings are replaced with split ring commutator",
+        "D": "coil is wound on a soft iron armature"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A split ring commutator reverses the connections each half cycle, converting the output to direct current."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0067",
+      "type": "mcq",
+      "stem": "The magnetic force on a charge moving in a magnetic field is given by",
+      "options": {
+        "A": "$F = Vq \\times B$",
+        "B": "$F = qV \\times B$",
+        "C": "$F = BV \\times q$",
+        "D": "$F = B \\times qV$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The magnetic force on a moving charge is given by the vector expression $F = qV \\times B$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0068",
+      "type": "mcq",
+      "stem": "At what frequency will a $20\\ \\mu F$ capacitor have a reactance of $500$ ohms?",
+      "options": {
+        "A": "$\\frac{100}{\\pi}$",
+        "B": "$\\frac{50}{\\pi}$",
+        "C": "$50$",
+        "D": "$100\\pi$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Using $X_c = \\frac{1}{2\\pi f C}$, solving for $f$ gives $\\frac{50}{\\pi}\\ Hz$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0069",
+      "type": "mcq",
+      "stem": "Average power dissipated in RLC circuit is given by",
+      "options": {
+        "A": "$XI^2$",
+        "B": "$X_cI^2$",
+        "C": "$RI^2$",
+        "D": "$VI^2$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Power is only dissipated in the resistive component, so average power is $RI^2$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0070",
+      "type": "mcq",
+      "stem": "In an RLC series circuit power is dissipated in",
+      "options": {
+        "A": "resistance only",
+        "B": "reactance only",
+        "C": "resistance and reactance",
+        "D": "none of the above"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Reactive elements (inductors and capacitors) store and release energy without net dissipation; only resistance dissipates power."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0071",
+      "type": "mcq",
+      "stem": "Which of the following operations will not lead to an increase in the induced e.m.f. in a coil of wire rotating between the poles of a magnet? Increasing the",
+      "options": {
+        "A": "area",
+        "B": "strength of the magnet",
+        "C": "gap between the poles of the magnet",
+        "D": "number of turns in the coil"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Increasing the pole gap weakens the magnetic field at the coil, reducing rather than increasing induced e.m.f."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0072",
+      "type": "mcq",
+      "stem": "What is the peak value of the voltage supply when the r.m.s. voltage of a source of electricity supply is given as $240\\ V$?",
+      "options": {
+        "A": "$320\\ V$",
+        "B": "$230\\ V$",
+        "C": "$430\\ V$",
+        "D": "$340\\ V$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Peak voltage is $V_{peak} = V_{rms}\\times\\sqrt{2} = 240 \\times \\sqrt{2} \\approx 340\\ V$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0073",
+      "type": "mcq",
+      "stem": "The current output form of an a.c. source is given as $I = 10\\sin(\\omega t)$. The d.c. equivalent of the current is",
+      "options": {
+        "A": "$7.70\\ A$",
+        "B": "$7.07\\ A$",
+        "C": "$0.77\\ A$",
+        "D": "$70.7\\ A$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The d.c. equivalent (r.m.s.) value is $\\frac{I_{peak}}{\\sqrt{2}} = \\frac{10}{\\sqrt{2}} = 7.07\\ A$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0074",
+      "type": "mcq",
+      "stem": "At resonance, the phase angle in an a.c. circuit is",
+      "options": {
+        "A": "$30^\\circ$",
+        "B": "$60^\\circ$",
+        "C": "$0^\\circ$",
+        "D": "$90^\\circ$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "At resonance, inductive and capacitive reactances cancel, leaving voltage and current in phase, so the phase angle is zero."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0075",
+      "type": "mcq",
+      "stem": "The p.d. between the terminals of a cell when it is delivering current to an external circuit is called",
+      "options": {
+        "A": "internal resistance",
+        "B": "electromotive force",
+        "C": "terminal p.d.",
+        "D": "external p.d."
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "This is the definition of terminal potential difference, distinct from e.m.f. which is measured with no current flowing."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0076",
+      "type": "mcq",
+      "stem": "A measure of the extent to which a material will allow current to flow easily through it when a p.d. is applied at a specified temperature is known as",
+      "options": {
+        "A": "resistivity",
+        "B": "conductivity",
+        "C": "electricity",
+        "D": "capacitance"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Conductivity measures how easily a material allows current to flow, the inverse of resistivity."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0077",
+      "type": "mcq",
+      "stem": "Materials which do not obey Ohm's law are called",
+      "options": {
+        "A": "conductors",
+        "B": "insulators",
+        "C": "ohmic conductors",
+        "D": "non-ohmic conductors"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Non-ohmic conductors do not have a constant resistance and thus do not obey Ohm's law."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0078",
+      "type": "mcq",
+      "stem": "Insulators are said to possess",
+      "options": {
+        "A": "low electrical resistance",
+        "B": "high electrical resistance",
+        "C": "intermediate electrical resistance",
+        "D": "medium electrical resistance"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Insulators strongly oppose current flow, meaning they possess high electrical resistance."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0079",
+      "type": "mcq",
+      "stem": "When two or more resistors connected in a circuit such that they are connected end to end and the same current passes through each of them, then they are said to be in",
+      "options": {
+        "A": "series connection",
+        "B": "parallel connection",
+        "C": "side by side connection",
+        "D": "intermediate connection"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "This end-to-end connection with the same current through each resistor defines a series connection."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0080",
+      "type": "mcq",
+      "stem": "Two capacitors each of capacitance $2\\ \\mu F$ are connected in parallel. If the p.d. across them is $120\\ V$, calculate the charge on each capacitor.",
+      "options": {
+        "A": "$4.2 \\times 10^{-4}\\ C$",
+        "B": "$2.4 \\times 10^{-4}\\ C$",
+        "C": "$3.4 \\times 10^{-4}\\ C$",
+        "D": "$1.4 \\times 10^{-4}\\ C$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Charge on each capacitor is $Q = CV = 2 \\times 10^{-6} \\times 120 = 2.4 \\times 10^{-4}\\ C$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0081",
+      "type": "mcq",
+      "stem": "Calculate the energy stored in a $20\\ \\mu F$ capacitor if the p.d. between the plates is $40\\ V$.",
+      "options": {
+        "A": "$3.6 \\times 10^{-2}\\ J$",
+        "B": "$2.6 \\times 10^{-2}\\ J$",
+        "C": "$4.6 \\times 10^{-2}\\ J$",
+        "D": "$1.6 \\times 10^{-2}\\ J$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Using $E = \\frac{1}{2}CV^2 = \\frac{1}{2}\\times 20\\times10^{-6}\\times 40^2 = 1.6 \\times 10^{-2}\\ J$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0082",
+      "type": "mcq",
+      "stem": "If the charge on an object is measured as $4.0 \\times 10^{-18}\\ C$, how many excess electrons does the object possess, given that the charge of an electron is $1.6 \\times 10^{-19}\\ C$?",
+      "options": {
+        "A": "$25$",
+        "B": "$20$",
+        "C": "$35$",
+        "D": "$15$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Number of electrons is $n = \\frac{Q}{e} = \\frac{4.0 \\times 10^{-18}}{1.6 \\times 10^{-19}} = 25$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0083",
+      "type": "mcq",
+      "stem": "The energy stored in a capacitor of capacitance $5\\ \\mu F$ is $40\\ J$. What is the voltage applied across its terminals?",
+      "options": {
+        "A": "$20 \\times 10^{3}\\ V$",
+        "B": "$16 \\times 10^{3}\\ V$",
+        "C": "$4 \\times 10^{3}\\ V$",
+        "D": "$2 \\times 10^{3}\\ V$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "From $E = \\frac{1}{2}CV^2$, solving for $V$ gives $V = \\sqrt{\\frac{2E}{C}} = 4 \\times 10^{3}\\ V$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0084",
+      "type": "mcq",
+      "stem": "The maximum potential gradient an insulator can withstand without breaking down is called",
+      "options": {
+        "A": "insulator strength",
+        "B": "electromotive force",
+        "C": "p.d. gradient",
+        "D": "dielectric strength"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Dielectric strength is defined as the maximum electric field an insulating material can endure without electrical breakdown."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0085",
+      "type": "mcq",
+      "stem": "The following are the factors affecting the capacitance of a capacitor except",
+      "options": {
+        "A": "temperature",
+        "B": "shape of plates",
+        "C": "area between plates",
+        "D": "dielectric substance"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Capacitance depends on plate area, separation, and dielectric material, not directly on temperature."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0086",
+      "type": "mcq",
+      "stem": "The plates of a parallel plate capacitor are $4\\ mm$ apart in vacuum and $0.2\\ m^2$ in area. If a p.d. of $200\\ V$ is applied across the capacitor, calculate the capacitance of the capacitor.",
+      "options": {
+        "A": "$3.43 \\times 10^{-10}\\ F$",
+        "B": "$2.43 \\times 10^{-10}\\ F$",
+        "C": "$4.43 \\times 10^{-10}\\ F$",
+        "D": "$1.43 \\times 10^{-10}\\ F$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Using $C = \\frac{\\varepsilon_0 A}{d}$ with the given plate area and separation gives approximately $4.43 \\times 10^{-10}\\ F$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0087",
+      "type": "mcq",
+      "stem": "The combined opposition to an a.c. by both reactive and resistive components is called",
+      "options": {
+        "A": "inductive reactance",
+        "B": "impedance",
+        "C": "reactive reactance",
+        "D": "capacitive reactance"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Impedance is the total opposition to a.c. flow, combining both resistance and reactance."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0088",
+      "type": "mcq",
+      "stem": "The current which reverses its direction continuously in a wire is known as",
+      "options": {
+        "A": "d.c.",
+        "B": "a.c.",
+        "C": "a.d.",
+        "D": "p.d."
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Alternating current periodically reverses direction, unlike direct current which flows one way."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0089",
+      "type": "mcq",
+      "stem": "Calculate the current down a $0.1\\ mm^2$ wire where the drift speed is $2\\ mm\\,s^{-1}$ and the carrier density is $6.4 \\times 10^{28}\\ m^{-3}$. ($1.6 \\times 10^{-19}\\ C$).",
+      "options": {
+        "A": "$2.05\\ A$",
+        "B": "$1.05\\ A$",
+        "C": "$3.08\\ A$",
+        "D": "$4.05\\ A$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Using $I = nAvq$ with the given values yields approximately $2.05\\ A$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0090",
+      "type": "mcq",
+      "stem": "A step-down transformer has a power output of $50\\ W$ and efficiency of $80\\%$. If the mains supply voltage is $200\\ V$. Calculate the primary current of the transformer.",
+      "options": {
+        "A": "$3.01\\ A$",
+        "B": "$1.30\\ A$",
+        "C": "$0.31\\ A$",
+        "D": "$3.10\\ A$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Input power is $\\frac{50}{0.8} = 62.5\\ W$, so primary current is $\\frac{62.5}{200} \\approx 0.31\\ A$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0091",
+      "type": "mcq",
+      "stem": "An object of mass $40\\ kg$ will experience a gravitational force of $68\\ N$ on a planet on which the intensity of the gravitational field is",
+      "options": {
+        "A": "$7.1\\ Nkg^{-1}$",
+        "B": "$2.1\\ Nkg^{-1}$",
+        "C": "$4.7\\ Nkg^{-1}$",
+        "D": "$1.7\\ Nkg^{-1}$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Gravitational field strength is $g = \\frac{F}{m} = \\frac{68}{40} = 1.7\\ Nkg^{-1}$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0092",
+      "type": "mcq",
+      "stem": "The force of attraction between two point masses is $10^{-4}\\ N$ when the distance between them is $0.18\\ m$. If the distance is reduced to $0.06$, calculate the force.",
+      "options": {
+        "A": "$6 \\times 10^{-4}\\ N$",
+        "B": "$9 \\times 10^{-4}\\ N$",
+        "C": "$7 \\times 10^{-4}\\ N$",
+        "D": "$8 \\times 10^{-4}\\ N$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Since gravitational force follows an inverse square law, $F_2 = F_1\\left(\\frac{r_1}{r_2}\\right)^2 = 10^{-4}\\times\\left(\\frac{0.18}{0.06}\\right)^2 = 9 \\times 10^{-4}\\ N$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0093",
+      "type": "mcq",
+      "stem": "The force of attraction exerted by a body on all other bodies in the universe is known as",
+      "options": {
+        "A": "gravitation",
+        "B": "electric force",
+        "C": "magnetism",
+        "D": "electromotive force"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Gravitation is the universal attractive force between all masses."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0094",
+      "type": "mcq",
+      "stem": "Which of the following is the unit of resistivity?",
+      "options": {
+        "A": "Farad-metre",
+        "B": "ohm-metre",
+        "C": "Newton-metre",
+        "D": "Volt-metre"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Resistivity is measured in ohm-metres, derived from $\\rho = \\frac{RA}{L}$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0095",
+      "type": "mcq",
+      "stem": "The opposition to the flow of current through an inductor or a capacitor or both is called",
+      "options": {
+        "A": "transformer",
+        "B": "reactance",
+        "C": "capacitance",
+        "D": "magnetance"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Reactance describes the opposition to a.c. flow offered specifically by inductors and/or capacitors."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0096",
+      "type": "mcq",
+      "stem": "The instantaneous current flowing in an a.c. circuit when the phase angle is $45^\\circ$ is",
+      "options": {
+        "A": "root mean square values of current and voltage",
+        "B": "root mean square value of voltage",
+        "C": "root mean square value of current",
+        "D": "instantaneous current"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "At a $45^\\circ$ phase point in the cycle, the instantaneous values correspond to the r.m.s. values of both current and voltage."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0097",
+      "type": "mcq",
+      "stem": "The opposition to the flow of a.c. through an inductor is called",
+      "options": {
+        "A": "inductive reactance",
+        "B": "effective resistance",
+        "C": "capacitive reactance",
+        "D": "capacitive and inductive reactance"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Inductive reactance is specifically the opposition an inductor offers to alternating current."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0098",
+      "type": "mcq",
+      "stem": "The opposition to the flow of a.c. through a capacitor is called",
+      "options": {
+        "A": "inductive reactance",
+        "B": "effective resistance",
+        "C": "capacitive reactance",
+        "D": "capacitive and inductive reactance"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Capacitive reactance is specifically the opposition a capacitor offers to alternating current."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0099",
+      "type": "mcq",
+      "stem": "$X_c$ causes current to lead voltage by",
+      "options": {
+        "A": "$45^\\circ$",
+        "B": "$180^\\circ$",
+        "C": "$360^\\circ$",
+        "D": "$90^\\circ$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "In a purely capacitive circuit, current leads voltage by a phase angle of $90^\\circ$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0100",
+      "type": "mcq",
+      "stem": "$X_L$ causes current to lag behind voltage by",
+      "options": {
+        "A": "$\\frac{\\pi}{2}$",
+        "B": "$\\frac{\\pi}{4}$",
+        "C": "$\\frac{\\pi}{3}$",
+        "D": "$\\pi$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "In a purely inductive circuit, current lags voltage by $\\frac{\\pi}{2}$ radians ($90^\\circ$)."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0101",
+      "type": "mcq",
+      "stem": "Inductance is measured in",
+      "options": {
+        "A": "$F$",
+        "B": "$N$",
+        "C": "$H$",
+        "D": "$A$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The henry ($H$) is the S.I. unit of inductance."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0102",
+      "type": "mcq",
+      "stem": "Capacitance is measured in",
+      "options": {
+        "A": "$F$",
+        "B": "$N$",
+        "C": "$H$",
+        "D": "$A$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The farad ($F$) is the S.I. unit of capacitance."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0103",
+      "type": "mcq",
+      "stem": "Which of the following equations is incorrect?",
+      "options": {
+        "A": "$X_c = \\omega C$",
+        "B": "$X_L = \\omega L$",
+        "C": "$V = IZ$",
+        "D": "$P = IV$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The correct expression is $X_c = \\frac{1}{\\omega C}$, not $X_c = \\omega C$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0104",
+      "type": "mcq",
+      "stem": "In a transformer, the use of soft iron or alloy core can be used to reduce",
+      "options": {
+        "A": "Eddy current",
+        "B": "hysteresis loss",
+        "C": "heat loss",
+        "D": "magnetic flux leakage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Soft iron/alloy cores have low retentivity (a narrow hysteresis loop), which minimizes hysteresis loss."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0105",
+      "type": "mcq",
+      "stem": "The use of a high resistivity alloy core in a transformer can be used to minimize",
+      "options": {
+        "A": "Eddy current",
+        "B": "hysteresis loss",
+        "C": "heat loss",
+        "D": "magnetic flux leakage"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A high-resistivity core material restricts the circulating eddy currents induced within the core, reducing eddy current loss."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0106",
+      "type": "mcq",
+      "stem": "The power factor of a pure capacitor is",
+      "options": {
+        "A": "$3$",
+        "B": "$2$",
+        "C": "$1$",
+        "D": "$0$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "In a pure capacitor, current and voltage are $90^\\circ$ out of phase, giving $\\cos\\theta = 0$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0107",
+      "type": "mcq",
+      "stem": "The power factor of a pure resistor is",
+      "options": {
+        "A": "$3$",
+        "B": "$1$",
+        "C": "$4$",
+        "D": "$2$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In a pure resistor, voltage and current are in phase, giving $\\cos\\theta = 1$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0108",
+      "type": "mcq",
+      "stem": "The power factor of a pure inductor is",
+      "options": {
+        "A": "$1$",
+        "B": "$2$",
+        "C": "$0$",
+        "D": "$3$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In a pure inductor, current lags voltage by $90^\\circ$, giving $\\cos\\theta = 0$."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0109",
+      "type": "mcq",
+      "stem": "The combined opposition to a.c. by both reactive and resistive components is known as",
+      "options": {
+        "A": "transformer",
+        "B": "reactance",
+        "C": "impedance",
+        "D": "resonance"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Impedance is the total opposition to a.c. flow, combining both resistance and reactance."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0110",
+      "type": "mcq",
+      "stem": "The state of vibration of a periodically varying system at a particular time is called",
+      "options": {
+        "A": "phase constant",
+        "B": "phase",
+        "C": "power factor",
+        "D": "phase difference"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Phase describes the state of a periodically varying quantity at a given instant."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0111",
+      "type": "mcq",
+      "stem": "Which of the following units is for impedance?",
+      "options": {
+        "A": "Farad",
+        "B": "Newton",
+        "C": "Henry",
+        "D": "Ohm"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Impedance, like resistance, is measured in ohms."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0112",
+      "type": "mcq",
+      "stem": "The use of low resistance (thick) copper windings in a transformer can be used to minimize",
+      "options": {
+        "A": "Eddy current",
+        "B": "hysteresis loss",
+        "C": "heat loss",
+        "D": "magnetic flux leakage"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Windings made of thick, low-resistance copper wire reduce $I^2R$ (copper) losses, which appear as heat."
+    },
+    {
+      "id": "uni-tasued-phy102-bank-0113",
+      "type": "mcq",
+      "stem": "Which of the following devices is used for storing charges?",
+      "options": {
+        "A": "Gold leaf electroscope",
+        "B": "Proof planes",
+        "C": "Capacitor",
+        "D": "Electrophorus"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A capacitor consists of two conducting plates separated by a dielectric, specifically designed to store electric charge and energy."
+    }
+  ]
+}

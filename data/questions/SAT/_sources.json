@@ -1,0 +1,98 @@
+{
+ "exam": "SAT",
+ "region": "USA / International",
+ "slug": "SAT",
+ "question_banks": 2,
+ "github_sources": [
+  {
+   "repo": "mdn522/sat-question-bank",
+   "url": "https://github.com/mdn522/sat-question-bank",
+   "stars": 23,
+   "desc": ""
+  },
+  {
+   "repo": "dayladavid/questionbank",
+   "url": "https://github.com/dayladavid/questionbank",
+   "stars": 1,
+   "desc": "SAT Question Bank Generator"
+  },
+  {
+   "repo": "mghuber9/sat-question-bank",
+   "url": "https://github.com/mghuber9/sat-question-bank",
+   "stars": 1,
+   "desc": ""
+  },
+  {
+   "repo": "YashasSingh/Sat-question-bank-to-csv",
+   "url": "https://github.com/YashasSingh/Sat-question-bank-to-csv",
+   "stars": 1,
+   "desc": ""
+  },
+  {
+   "repo": "CharizardSuperFan/CLISS-infinite-question-bank",
+   "url": "https://github.com/CharizardSuperFan/CLISS-infinite-question-bank",
+   "stars": 0,
+   "desc": "SAT questions - a LOT of them."
+  },
+  {
+   "repo": "scriptworkstudio/Yr6-sats-question-bank",
+   "url": "https://github.com/scriptworkstudio/Yr6-sats-question-bank",
+   "stars": 0,
+   "desc": "Year 6 SATs Mathematics Question Bank (2000-2025)"
+  },
+  {
+   "repo": "khamidov17/SAT-Questions",
+   "url": "https://github.com/khamidov17/SAT-Questions",
+   "stars": 0,
+   "desc": "College Board SAT and PSAT question-bank PDF exports for classroom preparation"
+  },
+  {
+   "repo": "Suvir0/sat-question-bank",
+   "url": "https://github.com/Suvir0/sat-question-bank",
+   "stars": 0,
+   "desc": "Searchable front end and Bluebook-style test mode for the SAT Suite Educator Question Bank. Question content is the College Board's and is not in this repo."
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "Full-Length SAT Suite Practice Tests - College Board",
+   "url": "https://satsuite.collegeboard.org",
+   "class": "official"
+  },
+  {
+   "title": "SAT-Practice-Test-1-with-Answer-Key-and-Scoring-Info.pdf",
+   "url": "https://www.mometrix.com",
+   "class": "site+pdf"
+  },
+  {
+   "title": "Practice and Preparation - SAT Suite - College Board",
+   "url": "https://satsuite.collegeboard.org",
+   "class": "official"
+  },
+  {
+   "title": "Printable SAT Practice Test PDFs: 25 FREE Official Tests",
+   "url": "https://blog.prepscholar.com",
+   "class": "site"
+  },
+  {
+   "title": "Free SAT Practice Questions with detailed Explanations",
+   "url": "https://www.manhattanreview.com",
+   "class": "site"
+  },
+  {
+   "title": "76 Real SAT PDFs and List of 107 Real ACTs (Free)",
+   "url": "https://www.mcelroytutoring.com",
+   "class": "site"
+  },
+  {
+   "title": "Free SAT Practice Test & Questions",
+   "url": "https://www.kaptest.com",
+   "class": "site"
+  },
+  {
+   "title": "SAT Practice Questions",
+   "url": "https://www.princetonreview.com",
+   "class": "site"
+  }
+ ]
+}

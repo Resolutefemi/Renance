@@ -1,0 +1,557 @@
+{
+  "code": "uni-delsu-gst101-bank",
+  "title": "DELSU GST101 | Course Question Bank",
+  "version": 1,
+  "questionCount": 42,
+  "totalMarks": 42,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-delsu-gst101-bank-0001",
+      "type": "mcq",
+      "stem": "According to Huddleston (1988), which two sub-components of grammar do Lexis and Structure bridge?",
+      "options": {
+        "A": "Phonology and Semantics",
+        "B": "Morphology and Syntax",
+        "C": "Pragmatics and Diction",
+        "D": "Orthography and Phonetics"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0002",
+      "type": "mcq",
+      "stem": "In the grammatical rank scale, which is the correct order from lowest to highest?",
+      "options": {
+        "A": "Word, Morpheme, Clause, Group, Sentence",
+        "B": "Morpheme, Word, Group, Clause, Sentence",
+        "C": "Sentence, Clause, Group, Word, Morpheme",
+        "D": "Morpheme, Group, Word, Clause, Sentence"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0003",
+      "type": "mcq",
+      "stem": "Identify the \"Head\" of the nominal group in the sentence: The tall girl in the front row is crying",
+      "options": {
+        "A": "Tall",
+        "B": "Row",
+        "C": "Girl",
+        "D": "Crying"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0004",
+      "type": "mcq",
+      "stem": "Which of these is a \"Homograph\"?",
+      "options": {
+        "A": "Meat / Meet",
+        "B": "Bank (river side) / Bank (financial institution)",
+        "C": "Lead (to guide) / Lead (a metal)",
+        "D": "See / Sea"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0005",
+      "type": "mcq",
+      "stem": "A sentence that contains one independent clause and at least one dependent clause linked by a \"binder\" is a",
+      "options": {
+        "A": "Simple Sentence",
+        "B": "Compound Sentence",
+        "C": "Complex Sentence",
+        "D": "Compound-Complex Sentence"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0006",
+      "type": "mcq",
+      "stem": "Identify the \"Binder\" in this sentence: Although it was raining, the students attended the GST lecture",
+      "options": {
+        "A": "Although",
+        "B": "Raining",
+        "C": "The",
+        "D": "Attended"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0007",
+      "type": "mcq",
+      "stem": "If a student writes \"The boys is here,\" which grammatical rule have they violated?",
+      "options": {
+        "A": "Morphology of the noun",
+        "B": "Concord (Subject-Verb Agreement)",
+        "C": "Phonetic transcription",
+        "D": "Orthographic spelling"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0008",
+      "type": "mcq",
+      "stem": "\"How beautiful the Abraka campus is!\" is an example of what clause type?",
+      "options": {
+        "A": "Declarative",
+        "B": "Imperative",
+        "C": "Exclamation",
+        "D": "Interrogative"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0009",
+      "type": "mcq",
+      "stem": "Which of the following consists of two or more independent clauses joined by a coordinator like 'but' or 'or'?",
+      "options": {
+        "A": "Simple Sentence",
+        "B": "Complex Sentence",
+        "C": "Compound Sentence",
+        "D": "Morpheme Answer: ANSWER: C The word \"Chalkboard\" is composed of how many morphemes?"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0010",
+      "type": "mcq",
+      "stem": "SECTION B: ESSAY WRITING, PARAGRAPHS & PUNCTUATION (CHAPTER 2) 9. An essay is defined as a piece of writing on related ideas that overlap to form a",
+      "options": {
+        "A": "Segmented list",
+        "B": "Unified whole",
+        "C": "Topic sentence",
+        "D": "Lexical group"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0011",
+      "type": "mcq",
+      "stem": "The \"Topic Sentence\" of a paragraph is best described as",
+      "options": {
+        "A": "The last sentence of every essay",
+        "B": "The sentence expressing the main idea of the paragraph",
+        "C": "A sentence that uses a lot of punctuation",
+        "D": "The title of the entire document"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0012",
+      "type": "mcq",
+      "stem": "Which paragraph style starts the first line at the margin but shifts subsequent lines to the right?",
+      "options": {
+        "A": "Blocked",
+        "B": "Indented",
+        "C": "Hanging",
+        "D": "Headed"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0013",
+      "type": "mcq",
+      "stem": "In the \"Blocked\" paragraph style",
+      "options": {
+        "A": "Every line is indented",
+        "B": "Every line starts at the left margin",
+        "C": "Only the first line is indented",
+        "D": "The text is centered"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0014",
+      "type": "mcq",
+      "stem": "Which punctuation mark is used to mark a sudden change of thought or introduce a comment clause?",
+      "options": {
+        "A": "Semi-colon",
+        "B": "Colon",
+        "C": "Dash",
+        "D": "Ellipsis"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0015",
+      "type": "mcq",
+      "stem": "Brackets (Parentheses) are primarily used to",
+      "options": {
+        "A": "Show extreme emotion",
+        "B": "Mark off words or phrases in the flow of writing",
+        "C": "End a declarative sentence",
+        "D": "Replace a comma"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0016",
+      "type": "mcq",
+      "stem": "You are writing a formal letter to the DELSU Vice-Chancellor. Which paragraph style is most modern and commonly used in formal business letters?",
+      "options": {
+        "A": "Indented",
+        "B": "Blocked",
+        "C": "Hanging",
+        "D": "Irregular"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0017",
+      "type": "mcq",
+      "stem": "\"Punctuation marks are timed-pauses.\" This means their primary function is",
+      "options": {
+        "A": "To make the page look busy",
+        "B": "To make meanings clear and unambiguous",
+        "C": "To count the number of words",
+        "D": "To separate nouns from verbs"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0018",
+      "type": "mcq",
+      "stem": "Phonetics is the science that studies the characteristics of",
+      "options": {
+        "A": "Grammar",
+        "B": "Human sound-making",
+        "C": "Silent reading",
+        "D": "Ancient scripts"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0019",
+      "type": "mcq",
+      "stem": "Which organ is the \"take-off point\" for human sound production?",
+      "options": {
+        "A": "Larynx",
+        "B": "Pharynx",
+        "C": "Lungs",
+        "D": "Velum"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0020",
+      "type": "mcq",
+      "stem": "The \"Voice Box\" is the technical name for the",
+      "options": {
+        "A": "Alveolar Ridge",
+        "B": "Larynx",
+        "C": "Hard Palate",
+        "D": "Trachea"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0021",
+      "type": "mcq",
+      "stem": "What is the name of the tube in the throat linking the mouth to the larynx?",
+      "options": {
+        "A": "Pharynx",
+        "B": "Uvula",
+        "C": "Bronchi",
+        "D": "Esophagus"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0022",
+      "type": "mcq",
+      "stem": "The \"Velum\" is also known as the",
+      "options": {
+        "A": "Hard Palate",
+        "B": "Soft Palate",
+        "C": "Tip of the tongue",
+        "D": "Nasal cavity"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0023",
+      "type": "mcq",
+      "stem": "Which intonation tune is used for \"Yes/No\" (Polar) questions?",
+      "options": {
+        "A": "Falling Tune",
+        "B": "Rising Tune",
+        "C": "Rise-Fall Tune",
+        "D": "Fall-Rise Tune"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0024",
+      "type": "mcq",
+      "stem": "The relative greater energy or force used in the pronunciation of a syllable is called",
+      "options": {
+        "A": "Pitch",
+        "B": "Stress",
+        "C": "Rhythm",
+        "D": "Volume"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0025",
+      "type": "mcq",
+      "stem": "Which tune is used for the command \"Sit down!\"?",
+      "options": {
+        "A": "Rising Tune",
+        "B": "Falling Tune",
+        "C": "High-Rise",
+        "D": "Low-Rise"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0026",
+      "type": "mcq",
+      "stem": "When pronouncing the word \"disgrace\" /dis’greis/, the small vertical line before 'greis' indicates",
+      "options": {
+        "A": "A secondary vowel",
+        "B": "Primary stress",
+        "C": "A silent letter",
+        "D": "A rising pitch"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0027",
+      "type": "mcq",
+      "stem": "Sentences beginning with an adverbial phrase (e.g., \"Slowly, she walked\") typically take a",
+      "options": {
+        "A": "Falling Tune",
+        "B": "Rise-Fall Tune",
+        "C": "Fall-Rise Tune",
+        "D": "Flat Tune"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0028",
+      "type": "mcq",
+      "stem": "According to the Merriam-Webster Dictionary, oratory is associated with the use of",
+      "options": {
+        "A": "Technical jargon only",
+        "B": "Stock phrases and emotional appeal",
+        "C": "Silence and gestures",
+        "D": "Mathematical formulas"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0029",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a \"Stock Phrase\" used in Nigerian oratory?",
+      "options": {
+        "A": "\"In a nutshell\"",
+        "B": "\"Great Nigerian Students!\"",
+        "C": "\"To err is human, to forgive is divine\"",
+        "D": "All of the above"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0030",
+      "type": "mcq",
+      "stem": "In public speaking, the \"Highpoint\" where the speaker finally encounters the audience is called",
+      "options": {
+        "A": "Preparation",
+        "B": "Research",
+        "C": "Delivery/Presentation",
+        "D": "Rehearsal"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0031",
+      "type": "mcq",
+      "stem": "Who among these is a notable Nigerian orator mentioned in your GST materials?",
+      "options": {
+        "A": "Winston Churchill",
+        "B": "Kingsley Mbadiwe",
+        "C": "Socrates",
+        "D": "Barack Obama"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0032",
+      "type": "mcq",
+      "stem": "If a speaker uses PowerPoint slides, charts, and recorded clips, they are utilizing",
+      "options": {
+        "A": "Rhetorical devices",
+        "B": "Audio-Visual aids",
+        "C": "Anecdotes",
+        "D": "Allusions"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0033",
+      "type": "mcq",
+      "stem": "Sensitivity to audience in public speaking includes being conscious of",
+      "options": {
+        "A": "Cultural diversity",
+        "B": "The price of the microphone",
+        "C": "The height of the podium",
+        "D": "The length of the hallway"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0034",
+      "type": "mcq",
+      "stem": "Correct Spelling",
+      "options": {
+        "A": "Occurred",
+        "B": "Ocured",
+        "C": "Occured",
+        "D": "Ocurred"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0035",
+      "type": "mcq",
+      "stem": "SECTION F: COMPREHENSIVE QUESTIONS 38. Identify the sentence type: \"John failed the examination because he was sick.\"",
+      "options": {
+        "A": "Simple",
+        "B": "Compound",
+        "C": "Complex",
+        "D": "Declarative Simple"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0036",
+      "type": "mcq",
+      "stem": "In the word \"Unfortunately,\" how many morphemes can be identified?",
+      "options": {
+        "A": "2 (Un-fortunate)",
+        "B": "3 (Un-fortunate-ly)",
+        "C": "4 (Un-fortune-ate-ly)",
+        "D": "1"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0037",
+      "type": "mcq",
+      "stem": "If a student is asked to provide the \"orthographic version\" of a word, they should",
+      "options": {
+        "A": "Pronounce it correctly",
+        "B": "Provide the correct spelling",
+        "C": "Give the dictionary definition",
+        "D": "Transcribe it phonetically"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0038",
+      "type": "mcq",
+      "stem": "Which tune is used for \"Where is the money?\"",
+      "options": {
+        "A": "Rising Tune",
+        "B": "Falling Tune",
+        "C": "Rise-Fall Tune",
+        "D": "Fall-Rise Tune"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0039",
+      "type": "mcq",
+      "stem": "\"The rich also cries.\" The italicized part functions as a",
+      "options": {
+        "A": "Verbal group",
+        "B": "Nominal group",
+        "C": "Adjectival group",
+        "D": "Prepositional group"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0040",
+      "type": "mcq",
+      "stem": "You are writing an essay and want to list three items. Which punctuation mark is best suited to introduce that list?",
+      "options": {
+        "A": "Semicolon",
+        "B": "Colon",
+        "C": "Dash",
+        "D": "Comma"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0041",
+      "type": "mcq",
+      "stem": "\"Lexis\" is a Greek term meaning",
+      "options": {
+        "A": "Sentence",
+        "B": "Grammar",
+        "C": "Word",
+        "D": "Language"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-delsu-gst101-bank-0042",
+      "type": "mcq",
+      "stem": "In the word \"disgrace,\" the stress is on which syllable?",
+      "options": {
+        "A": "First (dis-)",
+        "B": "Second (-grace)",
+        "C": "Both",
+        "D": "Neither"
+      },
+      "marks": 1,
+      "answer": "B"
+    }
+  ]
+}

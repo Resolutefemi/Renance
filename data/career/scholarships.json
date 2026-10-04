@@ -1,0 +1,103 @@
+{
+  "scholarships": [
+    {
+      "id": "nnpc-chevron-university",
+      "name": "NNPC/Chevron JV National University Scholarship",
+      "provider": "NNPC/Chevron Joint Venture",
+      "level": "undergraduate",
+      "coverage": "Full tuition + annual allowance",
+      "window": "Typically opens mid-year",
+      "tags": ["STEM", "Engineering"],
+      "url": "https://www.nnpcgroup.com",
+      "eligibility": "Full-time 200-level undergraduates in Nigerian federal universities, STEM courses, strong academic record."
+    },
+    {
+      "id": "mtn-science-tech",
+      "name": "MTN Foundation Science & Technology Scholarship",
+      "provider": "MTN Foundation",
+      "level": "undergraduate",
+      "coverage": "Tuition + stipend",
+      "window": "Typically opens in the second half of the year",
+      "tags": ["STEM", "Tech"],
+      "url": "https://www.mtnfoundation.com.ng",
+      "eligibility": "Science and technology undergraduates in public Nigerian institutions with a strong CGPA."
+    },
+    {
+      "id": "shell-university",
+      "name": "Shell Nigeria University Scholarship (SPDC JV)",
+      "provider": "SPDC Joint Venture",
+      "level": "undergraduate",
+      "coverage": "Annual grant through graduation",
+      "window": "Typically opens in the third quarter",
+      "tags": ["STEM", "Engineering"],
+      "url": "https://www.shell.com.ng",
+      "eligibility": "Nigerian undergraduates in approved courses; priority for host-community candidates."
+    },
+    {
+      "id": "totalenergies-scholarship",
+      "name": "TotalEnergies National Scholarship",
+      "provider": "TotalEnergies Nigeria",
+      "level": "both",
+      "coverage": "Tuition + living allowance",
+      "window": "Typically opens mid-year",
+      "tags": ["STEM", "Engineering"],
+      "url": "https://totalenergies.com",
+      "eligibility": "Undergraduate and postgraduate students in STEM disciplines at Nigerian institutions."
+    },
+    {
+      "id": "ptdf-scholarship",
+      "name": "PTDF Overseas & Local Scholarship",
+      "provider": "Petroleum Technology Development Fund",
+      "level": "both",
+      "coverage": "Full tuition + upkeep (local & overseas)",
+      "window": "Typically opens early in the year",
+      "tags": ["Engineering", "Research"],
+      "url": "https://ptdf.gov.ng",
+      "eligibility": "Undergraduates, masters and PhD candidates in engineering, geosciences and energy-related fields."
+    },
+    {
+      "id": "nddc-postgraduate",
+      "name": "NDDC Foreign & Local Postgraduate Scholarship",
+      "provider": "Niger Delta Development Commission",
+      "level": "postgraduate",
+      "coverage": "Full tuition + overseas upkeep",
+      "window": "Announced periodically",
+      "tags": ["Research", "Any field"],
+      "url": "https://nddc.gov.ng",
+      "eligibility": "Graduates from Niger Delta states with a good first degree, for masters and PhD study."
+    },
+    {
+      "id": "nlng-undergraduate",
+      "name": "Nigeria LNG Undergraduate Scholarship",
+      "provider": "Nigeria LNG Limited",
+      "level": "undergraduate",
+      "coverage": "Annual grant through graduation",
+      "window": "Typically opens mid-year",
+      "tags": ["Any field"],
+      "url": "https://www.nlng.com",
+      "eligibility": "100-level undergraduates in Nigerian universities with outstanding UTME results."
+    },
+    {
+      "id": "seplat-undergraduate",
+      "name": "Seplat Energy JV National Undergraduate Scholarship",
+      "provider": "Seplat Energy Joint Venture",
+      "level": "undergraduate",
+      "coverage": "Annual grant",
+      "window": "Typically opens in the second quarter",
+      "tags": ["STEM", "Engineering"],
+      "url": "https://seplatenergy.com",
+      "eligibility": "200-level undergraduates in federal and state universities, strong academic standing."
+    },
+    {
+      "id": "bea-scholarship",
+      "name": "BEA Bilateral Education Agreement Scholarship",
+      "provider": "Federal Scholarship Board, Federal Ministry of Education",
+      "level": "both",
+      "coverage": "Study abroad: tuition + accommodation",
+      "window": "Announced early in the year",
+      "tags": ["Any field", "Research"],
+      "url": "https://education.gov.ng",
+      "eligibility": "Undergraduate and postgraduate study in partner countries under Nigeria's bilateral agreements."
+    }
+  ]
+}

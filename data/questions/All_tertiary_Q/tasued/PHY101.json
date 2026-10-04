@@ -1,0 +1,2041 @@
+{
+  "code": "uni-tasued-phy101-bank",
+  "title": "TASUED PHY101 | Course Question Bank",
+  "version": 1,
+  "questionCount": 145,
+  "totalMarks": 145,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-tasued-phy101-bank-0001",
+      "type": "mcq",
+      "stem": "The maximum range of a projectile occurs at an angle of ……",
+      "options": {
+        "A": "$30^{\\circ}$",
+        "B": "$45^{\\circ}$",
+        "C": "$60^{\\circ}$",
+        "D": "$90^{\\circ}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "For projectile motion on level ground, the range $R = \\frac{u^{2}\\sin2\\theta}{g}$. The range is maximum when $\\sin2\\theta = 1$, which occurs at $2\\theta = 90^{\\circ}$, hence $\\theta = 45^{\\circ}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0002",
+      "type": "mcq",
+      "stem": "A car travelling with a uniform velocity of $30\\text{ ms}^{-1}$ along a horizontal road overcomes a constant frictional force of $600\\text{ N}$. Calculate the power of the engine of the car.",
+      "options": {
+        "A": "$12000\\text{W}$",
+        "B": "$15000\\text{W}$",
+        "C": "$18000\\text{W}$",
+        "D": "$20000\\text{W}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Power $P = Fv$. Substituting $F = 600\\text{ N}$ and $v = 30\\text{ ms}^{-1}$, $P = 600 \\times 30 = 18000\\text{ W}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0003",
+      "type": "mcq",
+      "stem": "Name the device that converts heat energy to electrical energy.",
+      "options": {
+        "A": "Generator",
+        "B": "Transformer",
+        "C": "Thermocouple",
+        "D": "Electric motor"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A thermocouple converts heat energy directly into electrical energy using the Seebeck effect."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0004",
+      "type": "mcq",
+      "stem": "The point where the line of best fit cuts the vertical axis is called ………………………..",
+      "options": {
+        "A": "Gradient",
+        "B": "Intercept",
+        "C": "Slope",
+        "D": "Origin"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The point where a graph cuts the vertical axis is known as the $y$-intercept."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0005",
+      "type": "mcq",
+      "stem": "Given $T^{2} = 4\\pi^{2}\\frac{l}{g}$, what is the correct equation for the value of $g$ if a graph of $T^{2}$ is plotted against $L$?",
+      "options": {
+        "A": "$g = \\frac{4\\pi^{2}}{S}$",
+        "B": "$g = 4\\pi^{2}S$",
+        "C": "$g = \\frac{S}{4\\pi^{2}}$",
+        "D": "$g = \\frac{L}{4\\pi^{2}S}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "From $T^{2} = \\frac{4\\pi^{2}}{g}L$, the slope $S = \\frac{4\\pi^{2}}{g}$. Rearranging gives $g = \\frac{4\\pi^{2}}{S}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0006",
+      "type": "mcq",
+      "stem": "A body moving at a constant speed accelerates when it is in",
+      "options": {
+        "A": "Linear motion",
+        "B": "Circular motion",
+        "C": "Random motion",
+        "D": "Oscillatory motion"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In circular motion, the speed may be constant but the direction of velocity changes continuously, producing centripetal acceleration."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0007",
+      "type": "mcq",
+      "stem": "A body accelerates uniformly from rest at $2\\text{ ms}^{-2}$. Calculate the magnitude of its velocity after travelling $4\\text{ m}$.",
+      "options": {
+        "A": "$2\\text{ ms}^{-1}$",
+        "B": "$4\\text{ ms}^{-1}$",
+        "C": "$6\\text{ ms}^{-1}$",
+        "D": "$8\\text{ ms}^{-1}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Using $v^{2} = u^{2} + 2as$, with $u = 0, a = 2\\text{ ms}^{-2}, s = 4\\text{ m}$: $v^{2} = 2 \\times 2 \\times 4 = 16$, so $v = 4\\text{ ms}^{-1}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0008",
+      "type": "mcq",
+      "stem": "An external force of magnitude $100\\text{ N}$ acts on a particle of mass $0.15\\text{ kg}$ for $0.03\\text{ s}$. Calculate the change in the speed of the particle.",
+      "options": {
+        "A": "$10\\text{ ms}^{-1}$",
+        "B": "$15\\text{ ms}^{-1}$",
+        "C": "$20\\text{ ms}^{-1}$",
+        "D": "$25\\text{ ms}^{-1}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Impulse equals change in momentum: $Ft = m\\Delta v$. Hence $\\Delta v = \\frac{Ft}{m} = \\frac{100 \\times 0.03}{0.15} = 20\\text{ ms}^{-1}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0009",
+      "type": "mcq",
+      "stem": "An object is said to undergo oscillatory motion when it moves.",
+      "options": {
+        "A": "In a straight line",
+        "B": "To and fro about a fixed point",
+        "C": "In a circle",
+        "D": "With constant velocity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Oscillatory motion is characterized by repeated to-and-fro motion about a mean or equilibrium position."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0010",
+      "type": "mcq",
+      "stem": "A body is rotating in a horizontal circle of radius $2.5\\text{ m}$ with an angular speed of $5\\text{ rad s}^{-1}$. Calculate the magnitude of the radial acceleration of the body.",
+      "options": {
+        "A": "$31.25\\text{ ms}^{-2}$",
+        "B": "$62.5\\text{ ms}^{-2}$",
+        "C": "$75\\text{ ms}^{-2}$",
+        "D": "$125\\text{ ms}^{-2}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Radial acceleration $a = r\\omega^{2}$. Substituting $r = 2.5\\text{ m}$ and $\\omega = 5\\text{ rad s}^{-1}$, $a = 2.5 \\times 25 = 62.5\\text{ ms}^{-2}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0011",
+      "type": "mcq",
+      "stem": "If two vectors are represented thus: $\\vec{A} = 5i + 2j + k$ and $\\vec{B} = 2i + 4j - 3k$. Find $\\vec{A} \\times \\vec{B}$.",
+      "options": {
+        "A": "$-10i + 17j + 16k$",
+        "B": "$10i - 17j + 16k$",
+        "C": "$-10i - 17j + 16k$",
+        "D": "$10i + 17j - 16k$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Cross product $\\vec{A} \\times \\vec{B} = \\det\\begin{pmatrix} i & j & k \\\\ 5 & 2 & 1 \\\\ 2 & 4 & -3 \\end{pmatrix} = i(-6-4) - j(-15-2) + k(20-4) = -10i + 17j + 16k$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0012",
+      "type": "mcq",
+      "stem": "The potential energy in an elastic string of force constant $K$ which has been extended by $x$ metres is expressed as?",
+      "options": {
+        "A": "$\\frac{1}{2} K x^2$",
+        "B": "$K x$",
+        "C": "$K x^2$",
+        "D": "$\\frac{1}{2} K x$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Elastic potential energy stored in a stretched spring or string: $PE = \\frac{1}{2} K x^2$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0013",
+      "type": "mcq",
+      "stem": "Time is a measure of?",
+      "options": {
+        "A": "Different physical events",
+        "B": "Variation between physical events",
+        "C": "Rate of change of physical events",
+        "D": "Interval between physical events"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Time defines the duration or interval between the start and end of events."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0014",
+      "type": "mcq",
+      "stem": "The motion of a simple pendulum is represented thus; $a = -100 x$. What is the period of oscillation?",
+      "options": {
+        "A": "$\\pi/5\\text{ s}$",
+        "B": "$\\pi/10\\text{ s}$",
+        "C": "$\\pi/\\sqrt{10}\\text{ s}$",
+        "D": "$2\\pi/10\\text{ s}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "For SHM: $a = -\\omega^2 x$. Here $\\omega^2 = 100$, so $\\omega = 10\\text{ rad/s}$. Period $T = \\frac{2\\pi}{\\omega} = \\frac{2\\pi}{10} = \\frac{\\pi}{5}\\text{ s}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0015",
+      "type": "mcq",
+      "stem": "Which of the following is not a unit of energy?",
+      "options": {
+        "A": "Watt",
+        "B": "Kilowatt-hour",
+        "C": "Calorie",
+        "D": "Joule"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Energy is measured in Joules, calories, or kilowatt-hours. Watt is a unit of power."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0016",
+      "type": "mcq",
+      "stem": "The displacement of a particle along the $X$-axis is given as $X = 5t^2 + 2$, where $X$ is in metres and $t$ in seconds. Calculate its instantaneous velocity at $t = 2\\text{ s}$.",
+      "options": {
+        "A": "$10\\text{ ms}^{-1}$",
+        "B": "$15\\text{ ms}^{-1}$",
+        "C": "$20\\text{ ms}^{-1}$",
+        "D": "$25\\text{ ms}^{-1}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Velocity $v = \\frac{dX}{dt} = \\frac{d(5t^2+2)}{dt} = 10t$. At $t=2\\text{ s}$, $v = 10(2) = 20\\text{ ms}^{-1}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0017",
+      "type": "mcq",
+      "stem": "The unit cycle per second is also called?",
+      "options": {
+        "A": "Hertz",
+        "B": "Newton",
+        "C": "Joule",
+        "D": "Candela"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The SI unit of frequency, cycles per second, is called Hertz (Hz)."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0018",
+      "type": "mcq",
+      "stem": "The trajectory path of a projectile is?",
+      "options": {
+        "A": "Linear",
+        "B": "Parabolic",
+        "C": "Circular",
+        "D": "Elliptical"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under uniform gravity and neglecting air resistance, a projectile follows a parabolic path."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0019",
+      "type": "mcq",
+      "stem": "Which of the following is a fundamental unit?",
+      "options": {
+        "A": "$\\text{ms}^{-1}$",
+        "B": "candela",
+        "C": "newton",
+        "D": "$\\text{ms}^{-2}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Fundamental SI units include meter, kilogram, second, ampere, kelvin, mole, and candela. Others are derived."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0020",
+      "type": "mcq",
+      "stem": "The period of oscillation of a simple pendulum is related to its length $L$ and acceleration $g$ by $T = K L^x g^y$. Calculate the value of $x$ and $y$.",
+      "options": {
+        "A": "$x = 1/2, y = -1/2$",
+        "B": "$x = 1, y = -1$",
+        "C": "$x = 1/2, y = -1$",
+        "D": "$x = 1, y = -1/2$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Dimensional analysis: $[T] = [L]^x [LT^{-2}]^y$. This gives $x+y=0$ and $-2y=1$. Solving gives $y = -1/2$ and $x = 1/2$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0021",
+      "type": "mcq",
+      "stem": "The position of an object on a velocity-time graph is given as $(20, 5)$ and $(10, 3)$. Calculate the acceleration of the object.",
+      "options": {
+        "A": "$0.2\\text{ ms}^{-2}$",
+        "B": "$0.3\\text{ ms}^{-2}$",
+        "C": "$0.1\\text{ ms}^{-2}$",
+        "D": "$0.5\\text{ ms}^{-2}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Acceleration $a = \\frac{\\Delta v}{\\Delta t} = \\frac{5-3}{20-10} = \\frac{2}{10} = 0.2\\text{ ms}^{-2}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0022",
+      "type": "mcq",
+      "stem": "A force $\\vec{F} = 2i + 4j$ acts on a body and moves it through a displacement $\\vec{S} = i + 5j$. Find the work done.",
+      "options": {
+        "A": "$22\\text{ J}$",
+        "B": "$24\\text{ J}$",
+        "C": "$26\\text{ J}$",
+        "D": "$28\\text{ J}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Work done $W = \\vec{F} \\cdot \\vec{S} = (2 \\times 1 + 4 \\times 5) = 2 + 20 = 22\\text{ J}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0023",
+      "type": "mcq",
+      "stem": "Which of the following units is derived?",
+      "options": {
+        "A": "kg",
+        "B": "m",
+        "C": "K",
+        "D": "N"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Newton (N) is a derived unit ($ ext{kg}\\cdot ext{m/s}^2$), others are fundamental."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0024",
+      "type": "mcq",
+      "stem": "The slope of a straight line displacement-time graph represents?",
+      "options": {
+        "A": "Velocity",
+        "B": "Acceleration",
+        "C": "Distance",
+        "D": "Force"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The slope ($ rac{Delta s}{Delta t}$) of a displacement-time graph gives the velocity of the object."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0025",
+      "type": "mcq",
+      "stem": "An object of mass $50\\text{ kg}$ is projected with a velocity of $20\\text{ ms}^{-1}$ at an angle of $60^{\\circ}$ to the vertical. Calculate the time of flight.",
+      "options": {
+        "A": "$2\\text{s}$",
+        "B": "$4\\text{s}$",
+        "C": "$5\\text{s}$",
+        "D": "$6\\text{s}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "If $\\theta = 60^{\\circ}$ to the vertical, then $\\alpha = 30^{\\circ}$ to the horizontal. $T = \\frac{2u \\sin\\alpha}{g} = \\frac{2(20)\\sin30^{\\circ}}{10} = \\frac{40(0.5)}{10} = 2\\text{ s}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0026",
+      "type": "mcq",
+      "stem": "Which of the following set of quantities is fundamental?",
+      "options": {
+        "A": "Length, mass and time",
+        "B": "Speed, length and time",
+        "C": "Speed, mass and distance",
+        "D": "Distance, speed and time"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Fundamental quantities are those that cannot be derived from other quantities. Length, mass, and time are fundamental in mechanics."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0027",
+      "type": "mcq",
+      "stem": "Given that the period of oscillation of a pendulum is given by $T = k l^x m^y g^z$ where $k$ is a constant. Find the value of $x$, $y$ and $z$.",
+      "options": {
+        "A": "$x = 1/2, y = 0, z = -1/2$",
+        "B": "$x = 1, y = 0, z = -1$",
+        "C": "$x = 1/2, y = 1, z = -1/2$",
+        "D": "$x = 1, y = 1, z = -1$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Using dimensional analysis: $[T] = [L]^x [M]^y [LT^{-2}]^z$. This results in $y=0$, $x+z=0$, and $-2z=1 \\Rightarrow z=-1/2, x=1/2$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0028",
+      "type": "mcq",
+      "stem": "A constant force $20\\text{ N}$ moves a body of mass $32\\text{ kg}$ with constant speed of $0.2\\text{ ms}^{-1}$. Calculate the power expended.",
+      "options": {
+        "A": "$2\\text{W}$",
+        "B": "$4\\text{W}$",
+        "C": "$6\\text{W}$",
+        "D": "$8\\text{W}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Power $P = F \\cdot v$. Substituting $F = 20\\text{ N}$ and $v = 0.2\\text{ ms}^{-1}$, $P = 20 \\times 0.2 = 4\\text{ W}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0029",
+      "type": "mcq",
+      "stem": "If no net force acts on an object, the object maintains a state of rest or constant speed in a straight line. The above is a statement of which law?",
+      "options": {
+        "A": "Newton's 1st Law",
+        "B": "Newton's 2nd Law",
+        "C": "Newton's 3rd Law",
+        "D": "Law of Gravitation"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Newton's first law (Law of Inertia) states that an object remains at rest or in uniform motion unless acted upon by a net external force."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0030",
+      "type": "mcq",
+      "stem": "A bullet fired vertically upwards reached a height of $500\\text{ m}$. Neglecting air resistance, calculate the magnitude of the initial velocity of the bullet. ($g = 10\\text{ ms}^{-2}$)",
+      "options": {
+        "A": "$50\\text{ ms}^{-1}$",
+        "B": "$70\\text{ ms}^{-1}$",
+        "C": "$100\\text{ ms}^{-1}$",
+        "D": "$200\\text{ ms}^{-1}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Using $v^2 = u^2 - 2gh$ with final velocity $v = 0$: $u = \\sqrt{2gh} = \\sqrt{2 \\times 10 \\times 500} = \\sqrt{10000} = 100\\text{ ms}^{-1}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0031",
+      "type": "mcq",
+      "stem": "A constant force of $5\\text{ N}$ acts for $5\\text{ s}$ on a mass of $5\\text{ kg}$ initially at rest. Calculate the final momentum.",
+      "options": {
+        "A": "$20\\text{ kg\\cdot ms}^{-1}$",
+        "B": "$25\\text{ kg\\cdot ms}^{-1}$",
+        "C": "$30\\text{ kg\\cdot ms}^{-1}$",
+        "D": "$35\\text{ kg\\cdot ms}^{-1}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Impulse = Change in momentum: $\\Delta p = F \\cdot t = 5\\text{ N} \\times 5\\text{ s} = 25\\text{ kg\\cdot ms}^{-1}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0032",
+      "type": "mcq",
+      "stem": "The graph showing the variation in the angle of deviation of light through prism with the angle of incidence is?",
+      "options": {
+        "A": "A straight line",
+        "B": "A curve",
+        "C": "A parabola",
+        "D": "A hyperbola"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The $i-\\delta$ graph for a prism is a parabolic curve with a minimum deviation point."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0033",
+      "type": "mcq",
+      "stem": "The acceleration of a moving object is equal to?",
+      "options": {
+        "A": "Gradient of a displacement-time graph",
+        "B": "Gradient of a velocity-time graph",
+        "C": "Area below a speed-time graph",
+        "D": "Area below a displacement-time graph"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Acceleration is the derivative of velocity with respect to time, which is the slope (gradient) of a velocity-time graph."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0034",
+      "type": "mcq",
+      "stem": "A chemical balance is used for measuring ……..",
+      "options": {
+        "A": "Mass",
+        "B": "Volume",
+        "C": "Density",
+        "D": "Force"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A chemical balance measures the mass of substances by comparing it with known masses."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0035",
+      "type": "mcq",
+      "stem": "A car travelling at $30\\text{ ms}^{-1}$ overcomes a frictional force of $100\\text{ N}$ while moving. Calculate the power developed by the engine.",
+      "options": {
+        "A": "$3\\text{ kW}$",
+        "B": "$3.5\\text{ kW}$",
+        "C": "$4\\text{ kW}$",
+        "D": "$4.5\\text{ kW}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Power $P = F \\cdot v = 100\\text{ N} \\times 30\\text{ ms}^{-1} = 3000\\text{ W} = 3\\text{ kW}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0036",
+      "type": "mcq",
+      "stem": "Which of the following is the unit of moment of inertia?",
+      "options": {
+        "A": "$kg/m^2$",
+        "B": "$kg\\cdot m^2$",
+        "C": "$kg/m^3$",
+        "D": "$kg/cm^2$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Moment of inertia $I = \\sum mr^2$, so the units are mass $\\times$ distance squared ($ ext{kg}\\cdot ext{m}^2$)."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0037",
+      "type": "mcq",
+      "stem": "When an elastic material is stretched by a force, the energy stored in it is?",
+      "options": {
+        "A": "Kinetic energy",
+        "B": "Potential energy",
+        "C": "Thermal energy",
+        "D": "Mechanical energy"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Elastic potential energy is the energy stored as a result of applying a force to deform an elastic object."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0038",
+      "type": "mcq",
+      "stem": "A body is projected with an initial velocity $u$ at an angle $\\theta$ to the horizontal. The time taken by it to reach its maximum height is given by?",
+      "options": {
+        "A": "$u \\sin\\theta / g$",
+        "B": "$u \\cos\\theta / g$",
+        "C": "$2u \\sin\\theta / g$",
+        "D": "$2u \\cos\\theta / g$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "At max height, $v_y = 0$. Using $v_y = u\\sin\\theta - gt \\Rightarrow t = u\\sin\\theta / g$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0039",
+      "type": "mcq",
+      "stem": "Acceleration $a$ is calculated thus?",
+      "options": {
+        "A": "$(v-u)/t \\text{ ms}^{-2}$",
+        "B": "$(u-v)/t \\text{ ms}^{-2}$",
+        "C": "$(2v-u)/t \\text{ ms}^{-2}$",
+        "D": "$(v+u)/t \\text{ ms}^{-2}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Acceleration is the rate of change of velocity: $a = \\frac{v - u}{t}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0040",
+      "type": "mcq",
+      "stem": "A body of mass $1000\\text{ kg}$ is released from a height of $10\\text{ m}$ above the ground. Determine its kinetic energy just before it strikes the ground. ($g = 10\\text{ ms}^{-2}$)",
+      "options": {
+        "A": "$50\\text{ kJ}$",
+        "B": "$100\\text{ kJ}$",
+        "C": "$150\\text{ kJ}$",
+        "D": "$200\\text{ kJ}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "By conservation of energy, $KE_{\\text{final}} = PE_{\\text{initial}} = mgh = 1000 \\times 10 \\times 10 = 100,000\\text{ J} = 100\\text{ kJ}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0041",
+      "type": "mcq",
+      "stem": "The mass of the Earth is $6.0 \\times 10^{24}\\text{ kg}$ and that of the Moon is $7.0 \\times 10^{22}\\text{ kg}$. If the distance between them is $4.0 \\times 10^{8}\\text{ m}$, calculate the force of attraction between them. ($G = 6.7 \\times 10^{-11}\\text{ Nm}^2/\\text{kg}^2$)",
+      "options": {
+        "A": "$1.75 \\times 10^{20}\\text{ N}$",
+        "B": "$2.8 \\times 10^{20}\\text{ N}$",
+        "C": "$3.5 \\times 10^{20}\\text{ N}$",
+        "D": "$4.2 \\times 10^{20}\\text{ N}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Gravitational force $F = G \\frac{m_1 m_2}{r^2} = 6.7 \\times 10^{-11} \\frac{6 \\times 10^{24} \\times 7 \\times 10^{22}}{(4 \\times 10^8)^2} \\approx 1.75 \\times 10^{20}\\text{ N}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0042",
+      "type": "mcq",
+      "stem": "The product $PV$, where $P$ is pressure and $V$ is the volume, has the same dimension as?",
+      "options": {
+        "A": "Force",
+        "B": "Energy",
+        "C": "Power",
+        "D": "Momentum"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Pressure $\\times$ Volume = $(\\text{Force}/\\text{Area}) \\times \\text{Volume} = (\\text{F}/L^2) \\times L^3 = F \\cdot L$, which is the dimension of Work/Energy."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0043",
+      "type": "mcq",
+      "stem": "A student measures the volume of a liquid using a measuring cylinder. What else needs to be measured in order to determine the density of the liquid?",
+      "options": {
+        "A": "Mass of liquid",
+        "B": "Temperature of liquid",
+        "C": "Viscosity of liquid",
+        "D": "Weight of cylinder"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Density $\\rho = \\frac{m}{V}$. If volume $V$ is known, mass $m$ must be determined."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0044",
+      "type": "mcq",
+      "stem": "When a body is thrown vertically upwards, its velocity at the maximum height is?",
+      "options": {
+        "A": "Zero",
+        "B": "$u$",
+        "C": "$2u$",
+        "D": "$g$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "At the peak of its trajectory, the body momentarily stops before changing direction, so its velocity is zero."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0045",
+      "type": "mcq",
+      "stem": "Material that can be stretched and still return to the original form when the stresses are removed are said to be …",
+      "options": {
+        "A": "Elastic",
+        "B": "Plastic",
+        "C": "Brittle",
+        "D": "Ductile"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Elasticity is the property of a material to return to its original shape after deformation."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0046",
+      "type": "mcq",
+      "stem": "When the linear momentum of a body is constant, the net force acting on it is?",
+      "options": {
+        "A": "Zero",
+        "B": "Constant",
+        "C": "Increasing",
+        "D": "Decreasing"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "By Newton's 2nd Law, $F = \\frac{dp}{dt}$. If $p$ is constant, $\\frac{dp}{dt} = 0$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0047",
+      "type": "mcq",
+      "stem": "Which of the following pairs of physical quantities is made up of vectors?",
+      "options": {
+        "A": "Speed and displacement",
+        "B": "Mass and force",
+        "C": "Displacement and acceleration",
+        "D": "Momentum and length"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Displacement and acceleration both have magnitude and specific direction."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0048",
+      "type": "mcq",
+      "stem": "The S.I. unit of power is…..",
+      "options": {
+        "A": "Watt",
+        "B": "Joule",
+        "C": "Newton",
+        "D": "Pascal"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The SI unit of power is the Watt (W), which is 1 Joule per second."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0049",
+      "type": "mcq",
+      "stem": "A simple pendulum makes 50 oscillations in one minute. Determine its period of oscillation.",
+      "options": {
+        "A": "$1.2\\text{ s}$",
+        "B": "$1.0\\text{ s}$",
+        "C": "$0.8\\text{ s}$",
+        "D": "$0.6\\text{ s}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Period $T = \\frac{\\text{Total Time}}{\\text{Number of oscillations}} = \\frac{60\\text{ s}}{50} = 1.2\\text{ s}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0050",
+      "type": "mcq",
+      "stem": "A car starts from rest and covers a distance of $40\\text{ m}$ in $10\\text{ s}$. Calculate the magnitude of its acceleration.",
+      "options": {
+        "A": "$0.5\\text{ ms}^{-2}$",
+        "B": "$0.8\\text{ ms}^{-2}$",
+        "C": "$1.0\\text{ ms}^{-2}$",
+        "D": "$2.0\\text{ ms}^{-2}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Using $s = ut + \\frac{1}{2}at^2$: $40 = 0(10) + \\frac{1}{2}a(10)^2 \\Rightarrow 40 = 50a \\Rightarrow a = 0.8\\text{ ms}^{-2}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0051",
+      "type": "mcq",
+      "stem": "Which of the following unit is equivalent to Watt?",
+      "options": {
+        "A": "$\\text{kg}\\cdot\\text{ms}^{-2}$",
+        "B": "$\\text{kg}\\cdot\\text{m}^2\\cdot\\text{s}^{-3}$",
+        "C": "$\\text{kg}\\cdot\\text{m}^2\\cdot\\text{s}^{-2}$",
+        "D": "$\\text{kg}\\cdot\\text{m}^2\\cdot\\text{s}^{-1}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$1\\text{ W} = 1\\text{ J/s} = (1\\text{ kg}\\cdot\\text{m}^2\\cdot\\text{s}^{-2})/\\text{s} = \\text{kg}\\cdot\\text{m}^2\\cdot\\text{s}^{-3}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0052",
+      "type": "mcq",
+      "stem": "The acceleration of a moving particle is given as $a(t) = (-3 + t^2)\\text{ ms}^{-2}$. Find its velocity at time $t = 3\\text{ s}$, given that the velocity at $t = 0$ is zero.",
+      "options": {
+        "A": "$15\\text{ ms}^{-1}$",
+        "B": "$-3\\text{ ms}^{-1}$",
+        "C": "$9\\text{ ms}^{-1}$",
+        "D": "$0\\text{ ms}^{-1}$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "$v(t) = \\int a(t)dt = \\int (-3 + t^2)dt = -3t + \\frac{t^3}{3}$. At $t=3$: $v(3) = -3(3) + \\frac{27}{3} = -9 + 9 = 0\\text{ ms}^{-1}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0053",
+      "type": "mcq",
+      "stem": "Which of the following devices is used to determine the relative density of an acid?",
+      "options": {
+        "A": "Manometer",
+        "B": "Hydrometer",
+        "C": "Hypsometer",
+        "D": "Hygrometer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A hydrometer is used to measure the specific gravity (relative density) of liquids."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0054",
+      "type": "mcq",
+      "stem": "The electricity meters in houses measure energy units consumed in……",
+      "options": {
+        "A": "kWh",
+        "B": "Joule",
+        "C": "Watt",
+        "D": "Volt"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Domestic electricity is billed based on energy, typically measured in kilowatt-hours (kWh)."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0055",
+      "type": "mcq",
+      "stem": "The tendency of a stationary body to continue to remain at rest when a force is applied to it is known as?",
+      "options": {
+        "A": "Inertia",
+        "B": "Friction",
+        "C": "Momentum",
+        "D": "Acceleration"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Inertia is the inherent resistance of any physical object to any change in its state of motion."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0056",
+      "type": "mcq",
+      "stem": "The total area under a force-velocity graph represents?",
+      "options": {
+        "A": "Work done",
+        "B": "Energy",
+        "C": "Momentum",
+        "D": "Power"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Power is defined as $F \\cdot v$. The integral of power over time is energy, but the instantaneous product is power."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0057",
+      "type": "mcq",
+      "stem": "The sound heard by a person after the reflection of the sound generated by him is called?",
+      "options": {
+        "A": "Echo",
+        "B": "Resonance",
+        "C": "Reverberation",
+        "D": "Noise"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "An echo is a reflection of sound that arrives at the listener with a delay after the direct sound."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0058",
+      "type": "mcq",
+      "stem": "Which of the following dimensions represents impulse?",
+      "options": {
+        "A": "$MLT^{-2}$",
+        "B": "$MLT^{-1}$",
+        "C": "$ML^{-1}T$",
+        "D": "$ML^{-2}T$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Impulse = Force $\\times$ Time = $(MLT^{-2}) \\times T = MLT^{-1}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0059",
+      "type": "mcq",
+      "stem": "Which of the following is not an example of kinetic energy?",
+      "options": {
+        "A": "A student running a race",
+        "B": "Electrical charges in motion",
+        "C": "Wind in motion",
+        "D": "None of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "All the options involve motion, and therefore all are examples of kinetic energy."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0060",
+      "type": "mcq",
+      "stem": "Identify the correct dimensions of density and pressure from the following:",
+      "options": {
+        "A": "$ML^{-3}, ML^{-1}T^{-2}$",
+        "B": "$ML^{-1}T, ML^{-3}$",
+        "C": "$ML^{-2}, ML^{-1}T^2$",
+        "D": "$ML^3, ML^{-1}T^2$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Density = Mass/Volume = $M/L^3 = ML^{-3}$. Pressure = Force/Area = $(MLT^{-2})/L^2 = ML^{-1}T^{-2}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0061",
+      "type": "mcq",
+      "stem": "The energy stored in a spring of stiffness constant $k = 2000\\text{ Nm}^{-1}$ when extended by $4\\text{ cm}$ is …",
+      "options": {
+        "A": "$1.6\\text{ J}$",
+        "B": "$2.0\\text{ J}$",
+        "C": "$4.0\\text{ J}$",
+        "D": "$8.0\\text{ J}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$E = \\frac{1}{2}kx^2 = 0.5 \\times 2000 \\times (0.04)^2 = 1000 \\times 0.0016 = 1.6\\text{ J}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0062",
+      "type": "mcq",
+      "stem": "A bullet of mass $0.2\\text{ kg}$ is fired with a velocity of $800\\text{ ms}^{-1}$ into a soft wood of mass $2\\text{ kg}$, lying on a smooth surface. What is the final velocity if the collision is completely inelastic?",
+      "options": {
+        "A": "$80\\text{ ms}^{-1}$",
+        "B": "$100\\text{ ms}^{-1}$",
+        "C": "$120\\text{ ms}^{-1}$",
+        "D": "$72.7\\text{ ms}^{-1}$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Conservation of momentum: $m_1 u_1 = (m_1 + m_2)v \\Rightarrow 0.2 \\times 800 = (2.2)v \\Rightarrow 160 = 2.2v \\Rightarrow v \\approx 72.7\\text{ ms}^{-1}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0063",
+      "type": "mcq",
+      "stem": "Range of a projected particle can be expressed as?",
+      "options": {
+        "A": "$u \\sin\\theta \\cdot H$",
+        "B": "$u \\cos\\theta \\cdot T$",
+        "C": "$u \\tan\\theta \\cdot T$",
+        "D": "$u \\sin\\theta \\cdot T$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Range is horizontal distance: $R = v_x \\times T_{\\text{total}} = (u \\cos\\theta) \\times T$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0064",
+      "type": "mcq",
+      "stem": "A boy of mass $60\\text{ kg}$ runs up a set of steps of total height $3\\text{ m}$. Work done in joules is ___ (take $g = 10\\text{ ms}^{-2}$)",
+      "options": {
+        "A": "$1800\\text{ J}$",
+        "B": "$1200\\text{ J}$",
+        "C": "$2000\\text{ J}$",
+        "D": "$1600\\text{ J}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Work done against gravity $W = mgh = 60 \\times 10 \\times 3 = 1800\\text{ J}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0065",
+      "type": "mcq",
+      "stem": "The maximum force that must be overcome before a body starts to move is called?",
+      "options": {
+        "A": "Static friction",
+        "B": "Kinetic friction",
+        "C": "Tension",
+        "D": "Normal force"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Static friction is the friction that exists between a stationary object and the surface on which it's resting."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0066",
+      "type": "mcq",
+      "stem": "The density of a block is $150\\text{ g}\\cdot\\text{cm}^{-3}$ and has a mass of $80\\text{ g}$. Calculate the volume of the block.",
+      "options": {
+        "A": "$0.4\\text{ cm}^3$",
+        "B": "$0.5\\text{ cm}^3$",
+        "C": "$0.53\\text{ cm}^3$",
+        "D": "$0.55\\text{ cm}^3$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "$V = \\frac{m}{\\rho} = \\frac{80}{150} \\approx 0.533\\text{ cm}^3$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0067",
+      "type": "mcq",
+      "stem": "Which of the following readings cannot be determined with a micrometer screw gauge?",
+      "options": {
+        "A": "$20.15\\text{ mm}$",
+        "B": "$5.02\\text{ mm}$",
+        "C": "$21.130\\text{ cm}$",
+        "D": "$2.54\\text{ mm}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A standard micrometer has a range of about $2.5\\text{ cm}$ ($25\\text{ mm}$); $21\\text{ cm}$ is way outside its physical capacity."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0068",
+      "type": "mcq",
+      "stem": "A man of mass $50\\text{ kg}$ ascends a flight of stairs $5\\text{ m}$ high in $5\\text{ seconds}$. If acceleration due to gravity is $10\\text{ ms}^{-2}$, the power expended is……",
+      "options": {
+        "A": "$500\\text{ W}$",
+        "B": "$1000\\text{ W}$",
+        "C": "$200\\text{ W}$",
+        "D": "$50\\text{ W}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Power $P = \\frac{mgh}{t} = \\frac{50 \\times 10 \\times 5}{5} = 500\\text{ W}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0069",
+      "type": "mcq",
+      "stem": "Under which of the following conditions is work done?",
+      "options": {
+        "A": "A man supports a heavy load above his head with his hands",
+        "B": "A boy climbs onto a table",
+        "C": "A woman holds a pot",
+        "D": "A bag of cocoa stands on a platform"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Work is done only when a force results in displacement. Climbing involves vertical displacement."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0070",
+      "type": "mcq",
+      "stem": "A loaded test-tube which floats upright in water is carefully and slightly depressed and then released. Which of the following best describes the subsequent motion of the test tube?",
+      "options": {
+        "A": "Random",
+        "B": "Circular",
+        "C": "Linear",
+        "D": "Oscillatory"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The restoring force (upthrust) causes the tube to move back and forth through its equilibrium position."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0071",
+      "type": "mcq",
+      "stem": "Which of the following is correct?",
+      "options": {
+        "A": "$V = a/t$",
+        "B": "$v = u - at$",
+        "C": "$v = at - u$",
+        "D": "$v = u + at$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "This is the first equation of linear motion for constant acceleration."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0072",
+      "type": "mcq",
+      "stem": "Physics is a pure science that deals with?",
+      "options": {
+        "A": "Matter",
+        "B": "Energy",
+        "C": "Relationship between different forms of energy",
+        "D": "Relationship between matter and energy"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The fundamental definition of Physics is the study of matter, energy, and the interactions between them."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0073",
+      "type": "mcq",
+      "stem": "A car travelling at a uniform speed of $120\\text{ km/h}$ passes two stations in $4\\text{ minutes}$. Calculate the distance between the two stations.",
+      "options": {
+        "A": "$8\\text{ km}$",
+        "B": "$6\\text{ km}$",
+        "C": "$7\\text{ km}$",
+        "D": "$5\\text{ km}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Distance $d = v \\times t = 120\\text{ km/h} \\times (4/60)\\text{ h} = 120 \\times \\frac{1}{15} = 8\\text{ km}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0074",
+      "type": "mcq",
+      "stem": "The branch of physics that deals with sound and waves is?",
+      "options": {
+        "A": "Acoustics",
+        "B": "Geophysics",
+        "C": "Biophysics",
+        "D": "Mechanics"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Acoustics is the interdisciplinary science that deals with the study of mechanical waves in gases, liquids, and solids."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0075",
+      "type": "mcq",
+      "stem": "Which of the units of the following physical quantities is not a derived unit?",
+      "options": {
+        "A": "Area",
+        "B": "Thrust",
+        "C": "Pressure",
+        "D": "Mass"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Mass is a base (fundamental) quantity in the SI system."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0076",
+      "type": "mcq",
+      "stem": "Which of the following is incorrect?",
+      "options": {
+        "A": "Distance is a scalar",
+        "B": "Displacement is a vector",
+        "C": "Speed is a vector",
+        "D": "Velocity is a vector"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Speed is a scalar quantity because it does not have a specified direction."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0077",
+      "type": "mcq",
+      "stem": "Which of these motions could be uniform?",
+      "options": {
+        "A": "Molecular motion",
+        "B": "Circular motion",
+        "C": "Vibrating pendulum",
+        "D": "Vibrational motion"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Uniform circular motion describes motion in a circle at a constant speed."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0078",
+      "type": "mcq",
+      "stem": "What is the engine power of a car with retarding force $500\\text{ N}$ moving at constant speed $20\\text{ ms}^{-1}$?",
+      "options": {
+        "A": "$5\\text{ kW}$",
+        "B": "$10\\text{ kW}$",
+        "C": "$15\\text{ kW}$",
+        "D": "$20\\text{ kW}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$P = F \\times v = 500 \\times 20 = 10,000\\text{ W} = 10\\text{ kW}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0079",
+      "type": "mcq",
+      "stem": "The speed of a bullet of mass $20\\text{ g}$ is $216\\text{ km/h}$. What is its kinetic energy in joules?",
+      "options": {
+        "A": "$0.2\\text{ J}$",
+        "B": "$0.36\\text{ J}$",
+        "C": "$36\\text{ J}$",
+        "D": "$1\\text{ J}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "$v = 216 / 3.6 = 60\\text{ ms}^{-1}, m = 0.02\\text{ kg}$. $KE = 0.5 \\times 0.02 \\times 60^2 = 0.01 \\times 3600 = 36\\text{ J}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0080",
+      "type": "mcq",
+      "stem": "The main cause of motion is?",
+      "options": {
+        "A": "Force",
+        "B": "Energy",
+        "C": "Momentum",
+        "D": "Inertia"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "According to Newton's laws, a force is required to change the state of motion of an object."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0081",
+      "type": "mcq",
+      "stem": "A ball of mass $0.5\\text{ kg}$ moving at $10\\text{ ms}^{-1}$ collides with another ball of equal mass at rest. If the two balls move together after impact, calculate their common velocity.",
+      "options": {
+        "A": "$5\\text{ ms}^{-1}$",
+        "B": "$10\\text{ ms}^{-1}$",
+        "C": "$2.5\\text{ ms}^{-1}$",
+        "D": "$7.5\\text{ ms}^{-1}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$m_1 u_1 = (m_1 + m_2)v \\Rightarrow 0.5(10) = (1.0)v \\Rightarrow v = 5\\text{ ms}^{-1}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0082",
+      "type": "mcq",
+      "stem": "Which of the following correctly gives the relationship between linear speed $v$ and angular speed $\\omega$ of a body moving uniformly in a circle of radius $r$?",
+      "options": {
+        "A": "$v = \\omega r$",
+        "B": "$v = \\omega^2 r$",
+        "C": "$v = \\omega r^2$",
+        "D": "$v = \\omega / r$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Linear velocity is the product of the angular velocity and the radius of the circular path."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0083",
+      "type": "mcq",
+      "stem": "The motion of a body is simple harmonic if the?",
+      "options": {
+        "A": "Acceleration is always directed towards a fixed point",
+        "B": "Path of motion is a straight line",
+        "C": "Acceleration is directed towards a fixed point and proportional to its distance from the point",
+        "D": "Acceleration is constant and directed towards a fixed point"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "This is the defining condition for SHM: $a \\propto -x$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0084",
+      "type": "mcq",
+      "stem": "What is the angular speed of a body vibrating at $50\\text{ cycles per second}$?",
+      "options": {
+        "A": "$50\\text{ rad/s}$",
+        "B": "$100\\text{ rad/s}$",
+        "C": "$314\\text{ rad/s}$",
+        "D": "$200\\text{ rad/s}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "$\\omega = 2\\pi f = 2 \\times 3.142 \\times 50 \\approx 314.2\\text{ rad/s}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0085",
+      "type": "mcq",
+      "stem": "When a mass attached to a spiral spring is set into vertical oscillations, its acceleration will have a?",
+      "options": {
+        "A": "Varying magnitude but a constant direction",
+        "B": "Constant magnitude and a constant direction",
+        "C": "Constant magnitude but a varying direction",
+        "D": "Varying magnitude and a varying direction"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "In SHM, acceleration changes magnitude based on displacement and changes direction as it passes the equilibrium point."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0086",
+      "type": "mcq",
+      "stem": "For a simple pendulum of length $l$, the period is given by?",
+      "options": {
+        "A": "$2\\pi\\sqrt{l/g}$",
+        "B": "$2\\pi\\sqrt{g/l}$",
+        "C": "$2l\\sqrt{g/\\pi}$",
+        "D": "$2g\\sqrt{l/2\\pi}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The standard formula for the period of a simple pendulum for small angles."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0087",
+      "type": "mcq",
+      "stem": "Which is the incorrect formula for a body accelerating uniformly?",
+      "options": {
+        "A": "$a = (v^2 - u^2)/2s$",
+        "B": "$v^2 = u^2 + 2as$",
+        "C": "$s = \\frac{1}{2} u t + a t^2$",
+        "D": "$v = u + at$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The correct formula is $s = ut + \\frac{1}{2}at^2$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0088",
+      "type": "mcq",
+      "stem": "A catapult is used to project a stone. Which of the following energy conversions takes place as the stone is released?",
+      "options": {
+        "A": "Kinetic energy is converted into potential energy",
+        "B": "Gravitational potential energy is converted into kinetic energy",
+        "C": "Elastic potential energy is converted into kinetic energy",
+        "D": "Gravitational potential energy is converted into elastic potential energy"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The stretched rubber band stores elastic potential energy, which transfers to the stone as kinetic energy."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0089",
+      "type": "mcq",
+      "stem": "For a freely falling body:",
+      "options": {
+        "A": "The ratio of kinetic energy to potential energy is constant",
+        "B": "The sum of kinetic and potential energies is constant",
+        "C": "The total energy is entirely kinetic",
+        "D": "The total energy is entirely potential"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "According to the law of conservation of mechanical energy, $TME = KE + PE$ stays constant."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0090",
+      "type": "mcq",
+      "stem": "A stationary ball is hit by an average force of $50\\text{ N}$ for a time of $0.03\\text{ s}$. What is the impulse experienced by the body in $\\text{N}\\cdot\\text{s}$?",
+      "options": {
+        "A": "$1.5$",
+        "B": "$0.5$",
+        "C": "$2.0$",
+        "D": "$1.0$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Impulse $I = F \\times t = 50 \\times 0.03 = 1.5\\text{ N}\\cdot\\text{s}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0091",
+      "type": "mcq",
+      "stem": "Which of the following is not an example of force?",
+      "options": {
+        "A": "Tension",
+        "B": "Weight",
+        "C": "Mass",
+        "D": "Friction"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Mass is a scalar quantity representing the amount of matter; the others are types of forces (vectors)."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0092",
+      "type": "mcq",
+      "stem": "Which of the following is not a conductor of electricity?",
+      "options": {
+        "A": "Human body",
+        "B": "Silver",
+        "C": "Glass",
+        "D": "Copper"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Glass is an insulator because it does not have free electrons to carry charge."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0093",
+      "type": "mcq",
+      "stem": "Power is defined as the?",
+      "options": {
+        "A": "Work done per unit time",
+        "B": "Energy per unit distance",
+        "C": "Force per unit time",
+        "D": "Energy per unit mass"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Power is the rate at which work is performed or energy is converted."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0094",
+      "type": "mcq",
+      "stem": "Which of the following types of motion does a body undergo when moving in a haphazard manner?",
+      "options": {
+        "A": "Random motion",
+        "B": "Translational motion",
+        "C": "Vibrational motion",
+        "D": "Circular motion"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Random motion (like Brownian motion) lacks a predictable path."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0095",
+      "type": "mcq",
+      "stem": "Which of the following quantities has the same unit as energy?",
+      "options": {
+        "A": "Power",
+        "B": "Work",
+        "C": "Force",
+        "D": "Impulse"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Both Work and Energy are measured in Joules (J)."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0096",
+      "type": "mcq",
+      "stem": "Which of the following is a scalar quantity?",
+      "options": {
+        "A": "Tension",
+        "B": "Impulse",
+        "C": "Distance",
+        "D": "Force"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Distance has only magnitude, whereas tension, impulse, and force have both magnitude and direction."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0097",
+      "type": "mcq",
+      "stem": "Two bodies each carrying a charge of $2.00 \\times 10^{-10}\\text{ C}$ are $5\\text{ cm}$ apart. Calculate the magnitude of the force on the charges. ($1/4\\pi\\epsilon_0 = 9 \\times 10^9\\text{ Nm}^2\\text{C}^{-2}$)",
+      "options": {
+        "A": "$1.44 \\times 10^{-7}\\text{ N}$",
+        "B": "$7.2 \\times 10^{-9}\\text{ N}$",
+        "C": "$7.20 \\times 10^{-11}\\text{ N}$",
+        "D": "$1.44 \\times 10^{-11}\\text{ N}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$F = k \\frac{q_1 q_2}{r^2} = 9 \\times 10^9 \\frac{(2 \\times 10^{-10})^2}{(0.05)^2} = \\frac{36 \\times 10^{-11}}{0.0025} = 1.44 \\times 10^{-7}\\text{ N}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0098",
+      "type": "mcq",
+      "stem": "Which of the following sources of energy is renewable?",
+      "options": {
+        "A": "Petroleum",
+        "B": "Charcoal",
+        "C": "Hydro",
+        "D": "Nuclear"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Hydro energy relies on the water cycle, which is naturally replenished."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0099",
+      "type": "mcq",
+      "stem": "If an object of mass $50\\text{ kg}$ moves at $5\\text{ ms}^{-1}$ round a circular path of radius $10\\text{ m}$, calculate the centripetal force needed to keep it in its orbit.",
+      "options": {
+        "A": "$125\\text{ N}$",
+        "B": "$100\\text{ N}$",
+        "C": "$150\\text{ N}$",
+        "D": "$50\\text{ N}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$F_c = \\frac{mv^2}{r} = \\frac{50 \\times 5^2}{10} = \\frac{50 \\times 25}{10} = 125\\text{ N}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0100",
+      "type": "mcq",
+      "stem": "A boy of mass $20\\text{ kg}$ moves at $5\\text{ ms}^{-1}$ round a circular path of radius $10\\text{ m}$, calculate the centripetal acceleration.",
+      "options": {
+        "A": "$2.5\\text{ ms}^{-2}$",
+        "B": "$5\\text{ ms}^{-2}$",
+        "C": "$10\\text{ ms}^{-2}$",
+        "D": "$1\\text{ ms}^{-2}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$a_c = \\frac{v^2}{r} = \\frac{5^2}{10} = \\frac{25}{10} = 2.5\\text{ ms}^{-2}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0101",
+      "type": "mcq",
+      "stem": "The type of collision in which the two objects join together after an impact and move with the same velocity is termed?",
+      "options": {
+        "A": "Elastic",
+        "B": "Perfectly inelastic",
+        "C": "Partially inelastic",
+        "D": "Superelastic"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In a perfectly inelastic collision, the maximum amount of kinetic energy is lost and the bodies stick together."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0102",
+      "type": "mcq",
+      "stem": "Given $T^2 = 4\\pi^2 \\cdot L/g$, which of the following is the correct equation for $g$ if a graph of $T^2$ is plotted against $L$?",
+      "options": {
+        "A": "$4\\pi^2 L$",
+        "B": "$S / 4\\pi^2$",
+        "C": "$4\\pi^2 S$",
+        "D": "$4\\pi^2 / S$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Slope $S = T^2 / L = 4\\pi^2 / g \\Rightarrow g = 4\\pi^2 / S$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0103",
+      "type": "mcq",
+      "stem": "The period of oscillation of a simple pendulum is related to its length $L$ and acceleration $g$ by $T = K L^x g^y$. Determine $x$ and $y$ where $K$ is a constant.",
+      "options": {
+        "A": "$1/2, -1/2$",
+        "B": "$-1/2, 1/2$",
+        "C": "$0, 1/2$",
+        "D": "$1/2, 0$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$T = 2\\pi \\sqrt{L/g} = 2\\pi L^{1/2} g^{-1/2}$, so $x = 1/2$ and $y = -1/2$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0104",
+      "type": "mcq",
+      "stem": "Given that the period of oscillation of a pendulum is $T = k L^x g^y m^z$, find the values of $x$, $y$, and $z$ where $k$ is a constant.",
+      "options": {
+        "A": "$1/2, -1/2, 0$",
+        "B": "$0, -1/2, 1/2$",
+        "C": "$0, 1/2, -1/2$",
+        "D": "$0, 1, 1/2$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The period is independent of mass, so $z=0$. $x=1/2$ and $y=-1/2$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0105",
+      "type": "mcq",
+      "stem": "A chemical balance is used for measuring?",
+      "options": {
+        "A": "Mass",
+        "B": "Force",
+        "C": "Weight",
+        "D": "Density"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A chemical balance measures mass, unlike a spring balance which measures weight."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0106",
+      "type": "mcq",
+      "stem": "Material that can be stretched and still return to the original forms when the stresses are removed are said to be?",
+      "options": {
+        "A": "Plastic",
+        "B": "Elastic",
+        "C": "Brittle",
+        "D": "Viscous"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Definition of elasticity."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0107",
+      "type": "mcq",
+      "stem": "A simple pendulum makes $X$ oscillations in one minute. Determine $X$ if its period of oscillation is $1.20\\text{ s}$.",
+      "options": {
+        "A": "$50$",
+        "B": "$60$",
+        "C": "$40$",
+        "D": "$30$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$X = \\frac{60\\text{ s}}{1.20\\text{ s}} = 50$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0108",
+      "type": "mcq",
+      "stem": "Which of the following is the unit of force?",
+      "options": {
+        "A": "W",
+        "B": "J",
+        "C": "N",
+        "D": "Ns"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Newton (N) is the SI unit of force."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0109",
+      "type": "mcq",
+      "stem": "Which of the following graphs will give us more information?",
+      "options": {
+        "A": "Linear graph",
+        "B": "Non-linear graph",
+        "C": "Assotopic graph",
+        "D": "Quadratic graph"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Non-linear graphs can describe complex physical relationships that straight lines cannot."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0110",
+      "type": "mcq",
+      "stem": "What type of relationship exists between $A$ and $B$ if the increase in value of $A$ brings a decrease in value of $B$?",
+      "options": {
+        "A": "Direct",
+        "B": "Inverse",
+        "C": "Quadratic",
+        "D": "Geometric"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In an inverse relationship, variables move in opposite directions."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0111",
+      "type": "mcq",
+      "stem": "The dependent variable in the equation $F = ke$ is?",
+      "options": {
+        "A": "$F$",
+        "B": "$k$",
+        "C": "$e$",
+        "D": "None"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Usually, $F$ is measured as a response to changes in $e$ (extension)."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0112",
+      "type": "mcq",
+      "stem": "The point where the line of best fit touches the vertical axis is called?",
+      "options": {
+        "A": "Slope",
+        "B": "Intercept",
+        "C": "Gradient",
+        "D": "Origin"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The vertical intercept (y-intercept)."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0113",
+      "type": "mcq",
+      "stem": "Which of the following is not an essential component of a graph?",
+      "options": {
+        "A": "Title",
+        "B": "Coordinate axes",
+        "C": "Scales",
+        "D": "None of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "All listed are essential for a complete scientific graph."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0114",
+      "type": "mcq",
+      "stem": "The slope of the graph obtained in a simple pendulum experiment when a graph of $l$ is plotted against $T^2$ is $0.25\\text{ m s}^{-2}$. Determine the value of $g$.",
+      "options": {
+        "A": "$9.8\\text{ ms}^{-2}$",
+        "B": "$10\\text{ ms}^{-2}$",
+        "C": "$8\\text{ ms}^{-2}$",
+        "D": "$12\\text{ ms}^{-2}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$S = l/T^2 = g/(4\\pi^2) \\Rightarrow g = S \\cdot 4\\pi^2 = 0.25 \\times 4 \\times 9.87 \\approx 9.87\\text{ ms}^{-2}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0115",
+      "type": "mcq",
+      "stem": "In a simple pendulum experiment, the value of $T$ _________ as the value of $l$ increases.",
+      "options": {
+        "A": "decreases",
+        "B": "increases",
+        "C": "remains constant",
+        "D": "increases and later decreases"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$T \\propto \\sqrt{l}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0116",
+      "type": "mcq",
+      "stem": "The period of oscillation of a simple pendulum is $2\\text{ s}$ when the length of the string is $64\\text{ cm}$. Calculate the period if the string’s length is shortened to $49\\text{ cm}$.",
+      "options": {
+        "A": "$1.75\\text{ s}$",
+        "B": "$1.5\\text{ s}$",
+        "C": "$1.6\\text{ s}$",
+        "D": "$1.8\\text{ s}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$T_2 = T_1 \\sqrt{l_2 / l_1} = 2 \\sqrt{49/64} = 2(7/8) = 1.75\\text{ s}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0117",
+      "type": "mcq",
+      "stem": "A force of $10\\text{ N}$ produced an extension of $2.50\\text{ cm}$. Determine the spring constant.",
+      "options": {
+        "A": "$400\\text{ N/m}$",
+        "B": "$250\\text{ N/m}$",
+        "C": "$500\\text{ N/m}$",
+        "D": "$350\\text{ N/m}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$k = F/e = 10 / 0.025 = 400\\text{ N/m}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0118",
+      "type": "mcq",
+      "stem": "In Hooke’s law experiment, a graph of the extension $e$ was plotted against Force $F$. If the slope of the graph is $0.4\\text{ mN}^{-1}$, what is the value of $k$?",
+      "options": {
+        "A": "$2.5\\text{ N/m}$",
+        "B": "$400\\text{ N/m}$",
+        "C": "$1000\\text{ N/m}$",
+        "D": "$500\\text{ N/m}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$S = e/F = 1/k \\Rightarrow k = 1/S = 1/0.4 = 2.5\\text{ N/m}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0119",
+      "type": "mcq",
+      "stem": "The energy stored in a spring of stiffness constant $k = 2000\\text{ N/m}$ when extended by $4\\text{ cm}$ is?",
+      "options": {
+        "A": "$1.6\\text{ J}$",
+        "B": "$2\\text{ J}$",
+        "C": "$1.2\\text{ J}$",
+        "D": "$0.8\\text{ J}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$E = 0.5 \\times 2000 \\times (0.04)^2 = 1.6\\text{ J}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0120",
+      "type": "mcq",
+      "stem": "Which of the following affect the period of a simple pendulum?",
+      "options": {
+        "A": "length of string",
+        "B": "mass of the bob",
+        "C": "acceleration due to gravity",
+        "D": "length and gravity"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Period depends only on $l$ and $g$ for small amplitudes."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0121",
+      "type": "mcq",
+      "stem": "The frequency of a certain pendulum A is $10\\text{ cycles per second}$, and the frequency of another pendulum B is $5\\text{ cycles per second}$. Which pendulum is longer in length?",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "both equal",
+        "D": "A is slightly longer than B"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$f = \\frac{1}{2\\pi}\\sqrt{g/l}$, so frequency is inversely proportional to square root of length. Lower frequency means longer length."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0122",
+      "type": "mcq",
+      "stem": "The period of Oscillation can be defined as?",
+      "options": {
+        "A": "Time for one complete oscillation",
+        "B": "Time for half oscillation",
+        "C": "Time for two oscillations",
+        "D": "Time to reach maximum displacement"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Definition of period."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0123",
+      "type": "mcq",
+      "stem": "The main reading of a Vernier calliper is $6.2\\text{ cm}$. If the main scale and the vernier scale coincides at the $7^{th}$ position, what is the total reading of the instrument?",
+      "options": {
+        "A": "$6.27\\text{ cm}$",
+        "B": "$6.20\\text{ cm}$",
+        "C": "$6.07\\text{ cm}$",
+        "D": "$6.17\\text{ cm}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Reading = $6.2 + (7 \\times 0.01) = 6.27\\text{ cm}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0124",
+      "type": "mcq",
+      "stem": "The diameter of a piece of wire can be measured most accurately with a?",
+      "options": {
+        "A": "Vernier calliper",
+        "B": "Micrometer screw gauge",
+        "C": "Meter rule",
+        "D": "Ruler"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Micrometers have higher precision (usually 0.01 mm) compared to calipers (0.1 mm)."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0125",
+      "type": "mcq",
+      "stem": "Which of the following represent the correct precision if the length of a piece of wire is measured with a metre rule?",
+      "options": {
+        "A": "$35\\text{ mm}$",
+        "B": "$35.0\\text{ mm}$",
+        "C": "$35.00\\text{ mm}$",
+        "D": "$35.01\\text{ mm}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A meter rule has a least count of 1 mm (0.1 cm), so the reading should reflect that precision."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0126",
+      "type": "mcq",
+      "stem": "The smallest scale division of a Vernier caliper is?",
+      "options": {
+        "A": "$0.1\\text{ mm}$",
+        "B": "$0.01\\text{ mm}$",
+        "C": "$1\\text{ mm}$",
+        "D": "$0.5\\text{ mm}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The least count of a standard Vernier caliper."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0127",
+      "type": "mcq",
+      "stem": "Which of the following is not a part of the micrometer screw gauge?",
+      "options": {
+        "A": "Anvil",
+        "B": "Spindle",
+        "C": "None",
+        "D": "Thimble"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Anvil, spindle, and thimble are all essential parts of a micrometer."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0128",
+      "type": "mcq",
+      "stem": "The clenched jaws of the anvil and the spindle are brought into contact through?",
+      "options": {
+        "A": "Sleeve",
+        "B": "Ratchet",
+        "C": "Anvil",
+        "D": "Spindle"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The ratchet stop prevents over-tightening and ensures uniform pressure."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0129",
+      "type": "mcq",
+      "stem": "A simple pendulum $0.64\\text{ m}$ long has a period of $1.2\\text{ s}$. Calculate the period of a similar pendulum $0.36\\text{ m}$ long in the same location.",
+      "options": {
+        "A": "$0.9\\text{ s}$",
+        "B": "$1.0\\text{ s}$",
+        "C": "$0.8\\text{ s}$",
+        "D": "$1.1\\text{ s}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$T_2 = 1.2 \\sqrt{0.36/0.64} = 1.2 \\times 0.6 / 0.8 = 0.9\\text{ s}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0130",
+      "type": "mcq",
+      "stem": "An error due to inherent defects in the method or apparatus used is called?",
+      "options": {
+        "A": "Systematic error",
+        "B": "Random error",
+        "C": "Personal error",
+        "D": "Gross error"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Systematic errors are predictable and typically constant or proportional to the true value."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0131",
+      "type": "mcq",
+      "stem": "Errors due to personal peculiarities of an observer where human reaction or estimation affects the results are called?",
+      "options": {
+        "A": "Systematic error",
+        "B": "Random error",
+        "C": "Personal error",
+        "D": "Instrumental error"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Errors caused by human limitations, such as parallax or slow reaction time."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0132",
+      "type": "mcq",
+      "stem": "The only way to eliminate systematic errors is to…",
+      "options": {
+        "A": "Repeat the experiment",
+        "B": "Calibrate the instrument",
+        "C": "Use a different observer",
+        "D": "Increase sample size"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Since they are built-in, only correction or calibration of the device can remove them."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0133",
+      "type": "mcq",
+      "stem": "The only remedy to random errors is to…",
+      "options": {
+        "A": "Repeat the experiment and average",
+        "B": "Calibrate the instrument",
+        "C": "Use a precise instrument",
+        "D": "Change the method"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Averaging multiple readings tends to cancel out positive and negative random fluctuations."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0134",
+      "type": "mcq",
+      "stem": "Errors due to the accuracy of the division of graduated scales on the instrument is called?",
+      "options": {
+        "A": "Systematic error",
+        "B": "Instrumental error",
+        "C": "Random error",
+        "D": "Personal error"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A specific type of systematic error caused by poor manufacturing of the instrument."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0135",
+      "type": "mcq",
+      "stem": "Errors due to unknown causes or chance are known as?",
+      "options": {
+        "A": "Systematic error",
+        "B": "Random error",
+        "C": "Personal error",
+        "D": "Gross error"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Definition of random errors."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0136",
+      "type": "mcq",
+      "stem": "Experimental errors are usually divided into two main types which are?",
+      "options": {
+        "A": "Systematic and Random",
+        "B": "Personal and Gross",
+        "C": "Random and Instrumental",
+        "D": "Gross and Calibration"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The two broadest categories in error analysis."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0137",
+      "type": "mcq",
+      "stem": "At a glance, _____ gives a comprehensive picture of the experiment than the data themselves.",
+      "options": {
+        "A": "a device",
+        "B": "a curve",
+        "C": "a line",
+        "D": "a graph"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Graphs provide a visual representation of trends and relationships."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0138",
+      "type": "mcq",
+      "stem": "The general form of the equation which yields a straight line is?",
+      "options": {
+        "A": "$y = mx^2 + c$",
+        "B": "$xy = mc$",
+        "C": "$y = mx + c$",
+        "D": "$xy = m^2 + c$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The standard linear equation."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0139",
+      "type": "mcq",
+      "stem": "The S.I. unit of spring constant is?",
+      "options": {
+        "A": "N",
+        "B": "Nm",
+        "C": "N/m",
+        "D": "J"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "$k = F/x$, so Newtons per meter."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0140",
+      "type": "mcq",
+      "stem": "To get the elongation $e$ in Hooke’s experiment of elasticity, where $L_1$ is the initial length and $L_2$ is the new length, the equation is?",
+      "options": {
+        "A": "$e = L_1 + L_2$",
+        "B": "$e = L_2 - L_1$",
+        "C": "$e = L_1 - L_2$",
+        "D": "$e = L_2/L_1$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Extension is the change in length."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0141",
+      "type": "mcq",
+      "stem": "The change in velocity of a body at a particular time is known as?",
+      "options": {
+        "A": "Instantaneous velocity",
+        "B": "Instantaneous speed",
+        "C": "Instantaneous acceleration",
+        "D": "Free-fall motion"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The derivative of velocity with respect to time."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0142",
+      "type": "mcq",
+      "stem": "If two vectors are represented thus: $\\vec{A} = 5i + 2j + k$ and $\\vec{B} = 2i + 4j - 3k$. Find $\\vec{A} \\cdot \\vec{B}$.",
+      "options": {
+        "A": "$13$",
+        "B": "$15$",
+        "C": "$17$",
+        "D": "$-13$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$\\vec{A} \\cdot \\vec{B} = (5 \\times 2) + (2 \\times 4) + (1 \\times -3) = 10 + 8 - 3 = 15$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0143",
+      "type": "mcq",
+      "stem": "An object of mass $50\\text{ kg}$ is projected with a velocity of $20\\text{ ms}^{-1}$ at an angle of $60^{\\circ}$ to the horizontal. Calculate the time of flight.",
+      "options": {
+        "A": "$3.46\\text{ s}$",
+        "B": "$2.0\\text{ s}$",
+        "C": "$1.73\\text{ s}$",
+        "D": "$1.0\\text{ s}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$T = \\frac{2u \\sin\\theta}{g} = \\frac{2(20)\\sin60^{\\circ}}{10} = \\frac{40(0.866)}{10} = 3.464\\text{ s}$."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0144",
+      "type": "mcq",
+      "stem": "_____ is defined as the process used to check the validity of a specific equation in mechanics.",
+      "options": {
+        "A": "Uncertainty",
+        "B": "Dimensional analysis",
+        "C": "Motion analysis",
+        "D": "Newton’s equations of motion"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Dimensional analysis ensures both sides of an equation have identical units."
+    },
+    {
+      "id": "uni-tasued-phy101-bank-0145",
+      "type": "mcq",
+      "stem": "The independent variable in the equation $F = ke$ is ….",
+      "options": {
+        "A": "$F$",
+        "B": "$k$",
+        "C": "$e$",
+        "D": "None"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The extension is controlled/changed by the experimenter to see the response in force."
+    }
+  ]
+}

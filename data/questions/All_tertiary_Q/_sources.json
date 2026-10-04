@@ -1,0 +1,33 @@
+{
+ "exam": "University Modules",
+ "region": "Nigeria (Institutional)",
+ "slug": "All_tertiary_Q",
+ "question_banks": 183,
+ "harvest_2026_10": {
+  "quizbolt": {
+   "source": "https://www.quizbolt.site (public Supabase library)",
+   "schools": ["tasued", "bouesti", "lasu"],
+   "questions": 12566,
+   "note": "objective MCQs with answers + explanations; FIB/theory items skipped for player compatibility"
+  },
+  "nife_test_driller": {
+   "source": "https://nife-test-driller.vercel.app (embedded window.COURSES data)",
+   "schools": ["unilag"],
+   "courses": ["GST 112", "MTH 102", "MTH 103", "PHY 102", "PHY 104", "STA 121", "CHM 102"],
+   "note": "UNILAG CBT drills merged into the existing course banks (dedup by stem)"
+  },
+  "scribd": {
+   "source": "https://www.scribd.com past-question documents",
+   "banks": ["uni-delsu-gst101-bank", "uni-unilorin-gns111-bank", "uni-eksu-gst111-bank (merge)"],
+   "note": "only documents with school attribution AND extractable answer keys were banked; unattributed GST/GNS compilations and answer-less papers were skipped"
+  }
+ },
+ "github_sources": [
+  {
+   "repo": "Seunope/aloc-endpoints",
+   "url": "https://github.com/Seunope/aloc-endpoints",
+   "stars": 222,
+   "desc": "20,000 past questions API end points for POST-UTME, UTME, WASSCE, NECO questions"
+  }
+ ]
+}

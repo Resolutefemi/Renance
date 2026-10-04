@@ -1,0 +1,98 @@
+{
+ "exam": "ENEM",
+ "region": "Brazil",
+ "slug": "ENEM",
+ "question_banks": 3,
+ "github_sources": [
+  {
+   "repo": "lisbinskironaldo-beep/study-os",
+   "url": "https://github.com/lisbinskironaldo-beep/study-os/blob/b7e8be64b4569a3ff8a94f5fc64220a114002ae3/docs/questions_module_base.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "LuanMartini/gabarita_app",
+   "url": "https://github.com/LuanMartini/gabarita_app/blob/a75e4d2c54fde86eec029ab7dd84c466eb2360ef/lib/data/models/enem_question_remote_model.dart",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "lucas-gitirana/analise-microdados-enem-pin-3",
+   "url": "https://github.com/lucas-gitirana/analise-microdados-enem-pin-3/blob/7889e77cce77e87223cf025645550f2a7458debc/pages/4_Questions_Performance.py",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "FernandoAlmeidaPinto/back_typescript",
+   "url": "https://github.com/FernandoAlmeidaPinto/back_typescript/blob/2d257d821cdf50fdb0b1fc9f652a449ddfc3010f/database/migrations/1611979427632_questions.ts",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "gabriel-antonelli/extract-enem-data",
+   "url": "https://github.com/gabriel-antonelli/extract-enem-data/blob/2f9bbe61e7274a9cf6ba0e2baa63083506b324d3/questions_data/find_questions_links.py",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "etgcrog/enemspeedrun-llm",
+   "url": "https://github.com/etgcrog/enemspeedrun-llm/blob/fd4c81d1c4bc8663f79b5f60a48028d9acd8c582/migrations/m240217_031802_add_2022_questions.php",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "SAUL-ALVES/ocr_enem_project",
+   "url": "https://github.com/SAUL-ALVES/ocr_enem_project/blob/d27175f636db859d12521dcdc5c8205edb93c618/backend/enem_question_analyzer.py",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "otaviosbampato/aprovaia",
+   "url": "https://github.com/otaviosbampato/aprovaia/blob/ae57ac1cbf9c7b0c2c56b4ffdc879e665781cfe8/frontend/src/pages/Questoes.tsx",
+   "stars": 0,
+   "desc": ""
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "Questões ENEM 2022 2.8.0 Free Download",
+   "url": "https://questoes-enem-2022.soft112.com",
+   "class": "site"
+  },
+  {
+   "title": "ENEM practice test with 50 questions + answer key that I used and",
+   "url": "https://www.reddit.com/r/enem/comments/1m6kqoy/simulado_do_enem_com_50_quest%C3%B5es_gabarito_que_eu/?tl=en",
+   "class": "site"
+  },
+  {
+   "title": "ENEM 2025 - Online Preparation: Mock Tests, Questions, and",
+   "url": "https://www.brainbird.com.br",
+   "class": "site"
+  },
+  {
+   "title": "Free ACT Practice Tests and Prep",
+   "url": "https://www.act.org",
+   "class": "site"
+  },
+  {
+   "title": "AP English Language and Composition Exam Questions",
+   "url": "https://apcentral.collegeboard.org",
+   "class": "official"
+  },
+  {
+   "title": "Free Practice Tests",
+   "url": "https://www.tests.com",
+   "class": "site"
+  },
+  {
+   "title": "Free ACT Practice Questions with Explanations",
+   "url": "https://www.kaptest.com",
+   "class": "site"
+  },
+  {
+   "title": "Questões Enem Inglês | PDF - Scribd",
+   "url": "https://www.scribd.com/document/999448762/Questoes-Enem-Ingles",
+   "class": "site"
+  }
+ ]
+}

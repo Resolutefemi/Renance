@@ -1,0 +1,1215 @@
+{
+  "code": "uni-tasued-bed112-bank",
+  "title": "TASUED BED112 | Course Question Bank",
+  "version": 1,
+  "questionCount": 86,
+  "totalMarks": 86,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-tasued-bed112-bank-0001",
+      "type": "mcq",
+      "stem": "What is the base of the binary number system?",
+      "options": {
+        "A": "2",
+        "B": "8",
+        "C": "10",
+        "D": "16"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The binary system uses only two digits: 0 and 1."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0002",
+      "type": "mcq",
+      "stem": "The word 'computer' is derived from which word?",
+      "options": {
+        "A": "To Compute",
+        "B": "To Calculate",
+        "C": "Data Processor",
+        "D": "Information System"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The word 'computer' comes from the word 'TO COMPUTE' which means to calculate."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0003",
+      "type": "mcq",
+      "stem": "Which of the following best defines a computer?",
+      "options": {
+        "A": "A device that processes data and produces information",
+        "B": "A human performing calculations",
+        "C": "A device for storage only",
+        "D": "An automatic typewriter"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A computer is defined as a device that operates upon data, stores, processes, and retrieves it to produce information."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0004",
+      "type": "mcq",
+      "stem": "Which of these is NOT a main task performed by a computer?",
+      "options": {
+        "A": "Input",
+        "B": "Process",
+        "C": "Output",
+        "D": "Decision making"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Computers perform input, processing, and output tasks, but they do not have intelligence to make decisions on their own."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0005",
+      "type": "mcq",
+      "stem": "Which characteristic describes the computer's ability to work without human intervention once started?",
+      "options": {
+        "A": "Accuracy",
+        "B": "Automatic",
+        "C": "Diligence",
+        "D": "Versatility"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Computers are automatic machines that can work by themselves following instructions stored in programs."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0006",
+      "type": "mcq",
+      "stem": "What does the 'Diligence' characteristic of computers imply?",
+      "options": {
+        "A": "Computers can continuously work without tiredness or loss of accuracy",
+        "B": "Computers can make independent decisions",
+        "C": "Computers require rest between calculations",
+        "D": "Computers can self-correct errors automatically"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Diligence means a computer can perform repetitive tasks without monotony, fatigue, or loss of accuracy."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0007",
+      "type": "mcq",
+      "stem": "Which type of computer can store and recall any amount of data accurately over several years?",
+      "options": {
+        "A": "Analog Computer",
+        "B": "Digital Computer",
+        "C": "Hybrid Computer",
+        "D": "All Computers"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "All computers have memory capabilities; they can store and recall data as long as desired and accurately."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0008",
+      "type": "mcq",
+      "stem": "In the Data Processing Cycle, which of these is the correct sequence?",
+      "options": {
+        "A": "Input → Process → Output → Storage",
+        "B": "Output → Input → Process → Storage",
+        "C": "Process → Storage → Input → Output",
+        "D": "Input → Output → Process → Storage"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Data Processing Cycle involves inputting data, processing it, producing output, and storing it for future use."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0009",
+      "type": "mcq",
+      "stem": "Which of these is true about Analog Computers?",
+      "options": {
+        "A": "Data is represented as continuously varying voltage",
+        "B": "Data is represented in discrete digital form",
+        "C": "They cannot handle irrational numbers",
+        "D": "Results are always exactly repeatable"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Analog computers measure data as continuously varying voltage; results are estimated and not always exactly repeatable."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0010",
+      "type": "mcq",
+      "stem": "Digital computers represent data in:",
+      "options": {
+        "A": "Continuous voltage",
+        "B": "Discrete electrical pulses",
+        "C": "Analog signals",
+        "D": "Graphs only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Digital computers represent data as discrete units of electrical pulses, corresponding to 'on' or 'off' states, providing accurate results."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0011",
+      "type": "mcq",
+      "stem": "Which type of computer combines features of both analog and digital computers?",
+      "options": {
+        "A": "Microcomputer",
+        "B": "Hybrid Computer",
+        "C": "Mainframe",
+        "D": "Supercomputer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hybrid computers combine the speed of analog computers with the accuracy of digital computers, processing data digitally."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0012",
+      "type": "mcq",
+      "stem": "Which of these is NOT a type of computer based on data processing?",
+      "options": {
+        "A": "Microcomputer",
+        "B": "Minicomputer",
+        "C": "Supercomputer",
+        "D": "Analog computer"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Micro, mini, mainframe, and supercomputers are classified based on processing scale; analog computers are classified based on data type, not processing scale."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0013",
+      "type": "mcq",
+      "stem": "The ALU in a computer is responsible for:",
+      "options": {
+        "A": "Storing data",
+        "B": "Processing arithmetic and logical operations",
+        "C": "Controlling input/output devices",
+        "D": "Managing network connections"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Arithmetic & Logic Unit (ALU) performs all arithmetic and logical calculations in the CPU."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0014",
+      "type": "mcq",
+      "stem": "Standard ASCII character set uses how many bits?",
+      "options": {
+        "A": "7 bits",
+        "B": "8 bits",
+        "C": "16 bits",
+        "D": "4 bits"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "7-bit ASCII represents 128 characters; an optional 8th parity bit may be added."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0015",
+      "type": "mcq",
+      "stem": "Which input device allows direct drawing on the screen using a light-sensitive pen?",
+      "options": {
+        "A": "Mouse",
+        "B": "Trackball",
+        "C": "Light Pen",
+        "D": "Joystick"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A light pen is a pointing input device used with CRT displays for direct drawing by sensing light."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0016",
+      "type": "mcq",
+      "stem": "The main function of the control unit (CU) is:",
+      "options": {
+        "A": "Perform arithmetic operations",
+        "B": "Control the movement of data and instructions inside the CPU",
+        "C": "Store data permanently",
+        "D": "Display output on screen"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The CU manages all internal CPU operations and coordinates data and instruction flow between components."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0017",
+      "type": "mcq",
+      "stem": "Which generation of computers used the microprocessor chip based on LSI and VLSI technology?",
+      "options": {
+        "A": "Third Generation",
+        "B": "Fourth Generation",
+        "C": "Fifth Generation",
+        "D": "Second Generation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Fourth generation computers (1975-1989) used microprocessor chips based on LSI and VLSI technology, making them smaller and faster."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0018",
+      "type": "mcq",
+      "stem": "What is a digitizer primarily used for?",
+      "options": {
+        "A": "Capturing audio signals",
+        "B": "Converting pictures, maps, and drawings into digital form",
+        "C": "Printing documents",
+        "D": "Recognizing magnetic ink characters"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A digitizer is an input device that allows hand-drawn images or graphics to be converted into digital form, commonly used in CAD and GIS applications."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0019",
+      "type": "mcq",
+      "stem": "Which component in a microphone vibrates when struck by sound waves?",
+      "options": {
+        "A": "Stylus",
+        "B": "Diaphragm",
+        "C": "Photoconductive drum",
+        "D": "Nozzle"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The diaphragm is a thin material in a microphone that vibrates in response to sound waves, converting the vibrations into an electrical signal."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0020",
+      "type": "mcq",
+      "stem": "How does a web camera send images to a computer?",
+      "options": {
+        "A": "Via ink spraying on paper",
+        "B": "Using laser scanning",
+        "C": "Through USB or Wi-Fi connection",
+        "D": "Via magnetic ink recognition"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A web camera is an input device that captures images or video and sends them to a computer or network via USB or Wi-Fi, often compressing the data in JPEG format."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0021",
+      "type": "mcq",
+      "stem": "What is the main advantage of using a scanner?",
+      "options": {
+        "A": "It prints images on paper",
+        "B": "It directly enters graphical data into a computer without manual keying",
+        "C": "It converts sound into digital signals",
+        "D": "It reads barcodes automatically"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Scanners are input devices that allow faster and more accurate input of text or graphics into a computer, avoiding manual entry."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0022",
+      "type": "mcq",
+      "stem": "Which optical scanning device is used to detect marks on an answer sheet?",
+      "options": {
+        "A": "OCR",
+        "B": "MICR",
+        "C": "OMR",
+        "D": "BCR"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "An Optical Mark Reader (OMR) detects pre-specified marks on paper, commonly used in answer sheets and questionnaires, by analyzing reflected light intensity."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0023",
+      "type": "mcq",
+      "stem": "Which scanning device converts printed characters into ASCII code?",
+      "options": {
+        "A": "OCR",
+        "B": "OMR",
+        "C": "MICR",
+        "D": "BCR"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Optical Character Recognition (OCR) converts printed characters from a document into ASCII code so that the computer can interpret letters, symbols, or numbers."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0024",
+      "type": "mcq",
+      "stem": "Which input device is commonly used by banks to read cheques?",
+      "options": {
+        "A": "OMR",
+        "B": "MICR",
+        "C": "OCR",
+        "D": "BCR"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Magnetic Ink Character Recognition (MICR) reads special magnetizable ink characters printed on cheques, allowing fast and accurate banking operations."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0025",
+      "type": "mcq",
+      "stem": "How does a Bar Code Reader (BCR) work?",
+      "options": {
+        "A": "Converts sound to electrical signals",
+        "B": "Reads inked characters using a stylus",
+        "C": "Scans barcodes using laser technology and converts to alphanumeric data",
+        "D": "Detects marks on an answer sheet"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A BCR uses a laser beam to scan the barcode pattern and converts the reflected light into electrical pulses, which are interpreted as alphanumeric data."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0026",
+      "type": "mcq",
+      "stem": "Which device outputs sound generated by the computer's sound card?",
+      "options": {
+        "A": "Microphone",
+        "B": "Speaker",
+        "C": "Headphones",
+        "D": "Printer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The speaker is an output device connected to the computer's sound card that converts audio data into sound."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0027",
+      "type": "mcq",
+      "stem": "What does a dual-core processor contain?",
+      "options": {
+        "A": "One execution core",
+        "B": "Two complete execution cores",
+        "C": "Four execution cores",
+        "D": "Multiple processors on separate chips"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Dual-core processors include two execution cores on a single integrated circuit, allowing multitasking."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0028",
+      "type": "mcq",
+      "stem": "Intel's Core 2 Duo processor is:",
+      "options": {
+        "A": "A single-core processor",
+        "B": "A subset of dual-core processors",
+        "C": "A quad-core processor",
+        "D": "Same as Core Duo"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Core 2 Duo is a more recent family of dual-core processors with improved performance and energy efficiency."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0029",
+      "type": "mcq",
+      "stem": "Which memory is volatile and can be read/written directly by the CPU?",
+      "options": {
+        "A": "ROM",
+        "B": "RAM",
+        "C": "EPROM",
+        "D": "EEPROM"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RAM (Random Access Memory) is volatile and allows both read and write operations directly by the CPU."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0030",
+      "type": "mcq",
+      "stem": "What is the difference between DRAM and SRAM?",
+      "options": {
+        "A": "DRAM is non-volatile, SRAM is volatile",
+        "B": "DRAM needs refreshing, SRAM does not",
+        "C": "SRAM is slower than DRAM",
+        "D": "Both are non-volatile"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "DRAM stores data as charges requiring refresh; SRAM maintains data without refreshing but is more expensive."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0031",
+      "type": "mcq",
+      "stem": "Which memory can be electrically erased and reprogrammed?",
+      "options": {
+        "A": "ROM",
+        "B": "PROM",
+        "C": "EPROM & EEPROM",
+        "D": "RAM"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "EPROM and EEPROM chips can be erased and reprogrammed electrically, unlike ROM or PROM."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0032",
+      "type": "mcq",
+      "stem": "Which port is slower and uses only two data lines?",
+      "options": {
+        "A": "Serial port",
+        "B": "Parallel port",
+        "C": "USB port",
+        "D": "PS/2 port"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Serial ports send and receive data using two lines, making data transfer slower than parallel ports."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0033",
+      "type": "mcq",
+      "stem": "Which port can transfer 8 bits at a time and is used for printers?",
+      "options": {
+        "A": "Serial port",
+        "B": "Parallel port",
+        "C": "USB port",
+        "D": "PS/2 port"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Parallel ports carry 8 bits simultaneously, making them faster and suitable for printers."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0034",
+      "type": "mcq",
+      "stem": "EBCDIC uses how many bits per character?",
+      "options": {
+        "A": "7 bits",
+        "B": "8 bits",
+        "C": "16 bits",
+        "D": "4 bits"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "EBCDIC uses 8 bits, allowing 256 distinct characters."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0035",
+      "type": "mcq",
+      "stem": "USB ports have which main advantage?",
+      "options": {
+        "A": "Require manual driver installation",
+        "B": "Automatically load appropriate drivers",
+        "C": "Support only mouse and keyboard",
+        "D": "Cannot hot-swap devices"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "USB ports auto-detect connected devices and load necessary drivers automatically."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0036",
+      "type": "mcq",
+      "stem": "What is the function of a graphics card?",
+      "options": {
+        "A": "Stores CPU instructions",
+        "B": "Generates text and image signals for the monitor",
+        "C": "Controls USB devices",
+        "D": "Manages sound output"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Graphics cards translate binary data from the CPU into pixels and images displayed on the monitor."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0037",
+      "type": "mcq",
+      "stem": "Which storage device is sequential access and popular for large data storage?",
+      "options": {
+        "A": "Magnetic tape",
+        "B": "Floppy disk",
+        "C": "Hard disk",
+        "D": "CD-ROM"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Magnetic tapes store data sequentially and are used for large volume backups."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0038",
+      "type": "mcq",
+      "stem": "Which device is a circular plate coated with magnetic material allowing direct access?",
+      "options": {
+        "A": "Magnetic tape",
+        "B": "Magnetic disk",
+        "C": "Zip disk",
+        "D": "DVD"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Magnetic disks (hard or floppy) are circular and allow direct data access through tracks and sectors."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0039",
+      "type": "mcq",
+      "stem": "What is a key advantage of floppy disks?",
+      "options": {
+        "A": "High storage capacity",
+        "B": "Cheap and convenient for small offline storage",
+        "C": "Fast data transfer",
+        "D": "Durable for large data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Floppy disks are low-cost and portable for small amounts of data."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0040",
+      "type": "mcq",
+      "stem": "What is the main characteristic of a hard disk?",
+      "options": {
+        "A": "Sequential access only",
+        "B": "Multiple magnetic plates with direct access",
+        "C": "Non-magnetic plates",
+        "D": "Small capacity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hard disks have multiple magnetic platters and support direct access for faster data retrieval."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0041",
+      "type": "mcq",
+      "stem": "CD-ROM uses which technology to write data?",
+      "options": {
+        "A": "Magnetic spots",
+        "B": "Laser beam (WORM)",
+        "C": "Electromagnetic signals",
+        "D": "Inkjet"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CD-ROMs use Write Once Read Many (WORM) technology, storing data by a laser beam on the disk surface."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0042",
+      "type": "mcq",
+      "stem": "DVD storage capacity is approximately:",
+      "options": {
+        "A": "650 MB",
+        "B": "8.5 GB",
+        "C": "50 GB",
+        "D": "250 MB"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "DVDs store data in multiple layers, giving a capacity of around 8.5 GB."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0043",
+      "type": "mcq",
+      "stem": "Zip disks are:",
+      "options": {
+        "A": "Sequential storage like tapes",
+        "B": "High capacity removable magnetic disks",
+        "C": "Optical disks similar to CD-ROM",
+        "D": "Volatile memory devices"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Zip disks are removable magnetic storage with higher capacity and speed than floppy disks."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0044",
+      "type": "mcq",
+      "stem": "Which component is portable, uses USB, and stores data on NAND flash memory?",
+      "options": {
+        "A": "Floppy disk",
+        "B": "Hard disk",
+        "C": "Pen drive",
+        "D": "CD-ROM"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Pen drives are USB-based, portable storage devices using NAND flash memory chips."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0045",
+      "type": "mcq",
+      "stem": "Blu-ray disks have a storage capacity of:",
+      "options": {
+        "A": "650 MB",
+        "B": "8.5 GB",
+        "C": "50 GB",
+        "D": "100 MB"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Blu-ray disks use violet laser technology to store high-definition video and data up to 50 GB."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0046",
+      "type": "mcq",
+      "stem": "What is a bit in computing?",
+      "options": {
+        "A": "A character",
+        "B": "A binary digit",
+        "C": "A byte",
+        "D": "A kilobyte"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A bit is the smallest unit of information in a computer, represented as 0 or 1."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0047",
+      "type": "mcq",
+      "stem": "How many bits make a byte?",
+      "options": {
+        "A": "4 bits",
+        "B": "8 bits",
+        "C": "16 bits",
+        "D": "32 bits"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "8 bits are combined to form a byte, which can represent one character."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0048",
+      "type": "mcq",
+      "stem": "How many bytes are there in 1 KB?",
+      "options": {
+        "A": "1000 Bytes",
+        "B": "1024 Bytes",
+        "C": "512 Bytes",
+        "D": "2048 Bytes"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In digital storage, 1 KB is defined as 1024 bytes."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0049",
+      "type": "mcq",
+      "stem": "Which of these is a positional number system?",
+      "options": {
+        "A": "Roman Numerals",
+        "B": "Decimal system",
+        "C": "Egyptian Numerals",
+        "D": "Greek Numerals"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In a positional number system, the value of a digit depends on its position and the base."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0050",
+      "type": "mcq",
+      "stem": "In decimal number 7762, the digit 6 represents:",
+      "options": {
+        "A": "Hundreds",
+        "B": "Tens",
+        "C": "Thousands",
+        "D": "Units"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In 7762, 6 is in the tens position, contributing 6 x 10 = 60 to the total."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0051",
+      "type": "mcq",
+      "stem": "Binary of decimal number 65 is:",
+      "options": {
+        "A": "100001",
+        "B": "1010001",
+        "C": "110001",
+        "D": "1000001"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Repeated division by 2 gives remainders which read in reverse give 1000001."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0052",
+      "type": "mcq",
+      "stem": "Octal number system has base of:",
+      "options": {
+        "A": "2",
+        "B": "8",
+        "C": "10",
+        "D": "16"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Octal numbers use digits 0 to 7 and base 8."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0053",
+      "type": "mcq",
+      "stem": "Decimal number 224 in octal is:",
+      "options": {
+        "A": "340",
+        "B": "324",
+        "C": "330",
+        "D": "244"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Dividing by 8 repeatedly gives remainders 3, 4, 0; so octal is 340."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0054",
+      "type": "mcq",
+      "stem": "Hexadecimal number system uses base:",
+      "options": {
+        "A": "8",
+        "B": "10",
+        "C": "12",
+        "D": "16"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Hexadecimal uses digits 0-9 and letters A-F."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0055",
+      "type": "mcq",
+      "stem": "Decimal 370 in hexadecimal is:",
+      "options": {
+        "A": "16A",
+        "B": "172",
+        "C": "1A2",
+        "D": "17C"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Dividing by 16 repeatedly yields remainders 2, 7, 1; hexadecimal 172."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0056",
+      "type": "mcq",
+      "stem": "Binary addition: 11011 + 111 = ?",
+      "options": {
+        "A": "100010",
+        "B": "101010",
+        "C": "1000101",
+        "D": "101001"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Binary addition follows 0+0=0, 1+0=1, 1+1=0 carry 1, summing gives 100010."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0057",
+      "type": "mcq",
+      "stem": "Method used for efficient binary subtraction in computers is:",
+      "options": {
+        "A": "Direct subtraction",
+        "B": "Complementary subtraction",
+        "C": "Decimal subtraction",
+        "D": "Modulo subtraction"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Computers use complement method: invert bits of subtrahend, add to minuend, adjust carry."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0058",
+      "type": "mcq",
+      "stem": "0x2A in binary is:",
+      "options": {
+        "A": "101010",
+        "B": "110010",
+        "C": "100101",
+        "D": "111000"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Each hexadecimal digit converts into 4-bit binary; 2->0010, A->1010, so 00101010."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0059",
+      "type": "mcq",
+      "stem": "BCD code represents each decimal digit using how many bits?",
+      "options": {
+        "A": "2 bits",
+        "B": "4 bits",
+        "C": "8 bits",
+        "D": "16 bits"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Each decimal digit is independently converted to 4-bit binary in BCD."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0060",
+      "type": "mcq",
+      "stem": "Unicode standard uses how many bits to represent characters?",
+      "options": {
+        "A": "8 bits",
+        "B": "16 bits",
+        "C": "32 bits",
+        "D": "64 bits"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unicode uses 16 bits, allowing 65536 symbols, sufficient for most world languages."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0061",
+      "type": "mcq",
+      "stem": "In an even parity system, the parity bit is set such that:",
+      "options": {
+        "A": "Total number of 1s is odd",
+        "B": "Total number of 1s is even",
+        "C": "Total number of 0s is even",
+        "D": "All bits are zero"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Even parity ensures the sum of 1s including parity bit is even."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0062",
+      "type": "mcq",
+      "stem": "What is the primary function of a compiler?",
+      "options": {
+        "A": "Execute high-level language programs directly",
+        "B": "Translate high-level language program into machine language",
+        "C": "Detect logical errors only",
+        "D": "Translate machine language to high-level language"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A compiler translates an entire high-level program into machine language without executing it."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0063",
+      "type": "mcq",
+      "stem": "Which of the following is a key difference between a compiler and an interpreter?",
+      "options": {
+        "A": "Compiler executes code line by line, interpreter translates whole code",
+        "B": "Compiler translates the whole code before execution, interpreter translates and executes line by line",
+        "C": "Compiler detects logical errors, interpreter does not",
+        "D": "Interpreter is faster than compiler in running finished programs"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Compilers translate the entire source program at once, whereas interpreters translate and execute one statement at a time."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0064",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a primary objective of an operating system?",
+      "options": {
+        "A": "Making a computer system convenient to use",
+        "B": "Managing computer resources",
+        "C": "Translating high-level languages",
+        "D": "Providing an interface between user and hardware"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "OS manages resources and provides user interface; language translation is the function of a compiler/interpreter."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0065",
+      "type": "mcq",
+      "stem": "Which OS function is responsible for allocating memory to programs?",
+      "options": {
+        "A": "Process management",
+        "B": "Memory management",
+        "C": "File management",
+        "D": "Security"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Memory management handles allocation and deallocation of memory for programs."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0066",
+      "type": "mcq",
+      "stem": "In batch operating systems, when is the processing of collected data performed?",
+      "options": {
+        "A": "Immediately after input",
+        "B": "After data is collected and input is completed",
+        "C": "During data collection",
+        "D": "Randomly whenever CPU is idle"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Batch processing defers execution until all data is collected."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0067",
+      "type": "mcq",
+      "stem": "Which type of operating system provides quick feedback and immediate response to data input?",
+      "options": {
+        "A": "Batch operating system",
+        "B": "Real-time operating system",
+        "C": "Multiprogramming OS",
+        "D": "Time-sharing OS"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Real-time OS processes data immediately to control ongoing processes."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0068",
+      "type": "mcq",
+      "stem": "What is the main advantage of a time-sharing operating system?",
+      "options": {
+        "A": "Allows many users to simultaneously share a computer",
+        "B": "Executes one program at a time efficiently",
+        "C": "Requires fewer CPUs",
+        "D": "Has the longest turnaround time"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Time-sharing OS allocates CPU time slices to multiple users for concurrent usage."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0069",
+      "type": "mcq",
+      "stem": "Which OS allows multiple programs to reside in memory and execute concurrently?",
+      "options": {
+        "A": "Time-sharing OS",
+        "B": "Multiprogramming OS",
+        "C": "Batch OS",
+        "D": "Real-time OS"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Multiprogramming OS improves CPU utilization by executing multiple programs concurrently."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0070",
+      "type": "mcq",
+      "stem": "Which type of operating system uses more than one CPU to execute multiple programs simultaneously?",
+      "options": {
+        "A": "Multiprogramming OS",
+        "B": "Multiprocessing OS",
+        "C": "Time-sharing OS",
+        "D": "Batch OS"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Multiprocessing OS uses multiple CPUs to improve performance and reliability."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0071",
+      "type": "mcq",
+      "stem": "Which software package is used for creating, editing, formatting, storing, and printing documents?",
+      "options": {
+        "A": "Database software",
+        "B": "Graphics software",
+        "C": "Word processing software",
+        "D": "Spreadsheet software"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Word processing software provides tools for handling textual documents."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0072",
+      "type": "mcq",
+      "stem": "What is the main purpose of a Geographic Information System (GIS)?",
+      "options": {
+        "A": "To navigate using satellites",
+        "B": "To manage, analyze, and display geographically referenced information",
+        "C": "To connect multiple devices wirelessly",
+        "D": "To detect computer viruses"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "GIS integrates hardware, software, and data for geographic data analysis and visualization."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0073",
+      "type": "mcq",
+      "stem": "What does GPS stand for and what is its primary function?",
+      "options": {
+        "A": "Global Processing System; manages data on Earth",
+        "B": "Global Positioning System; provides accurate location, speed, and time information",
+        "C": "Geographic Positioning System; analyzes maps",
+        "D": "Global Positioning Software; calculates satellite distances"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "GPS uses satellites to provide precise positioning and timing information anywhere on Earth."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0074",
+      "type": "mcq",
+      "stem": "Which technology allows multiple users to occupy the same frequency at the same time using unique codes?",
+      "options": {
+        "A": "GSM",
+        "B": "CDMA",
+        "C": "Wi-Fi",
+        "D": "Bluetooth"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CDMA assigns unique codes to users, allowing simultaneous use of the same frequency spectrum."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0075",
+      "type": "mcq",
+      "stem": "Which mobile communication standard is the most widely used worldwide?",
+      "options": {
+        "A": "CDMA",
+        "B": "GSM",
+        "C": "Wi-Fi",
+        "D": "Infrared"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "GSM is the most popular standard, used in over 212 countries and by 3 billion people."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0076",
+      "type": "mcq",
+      "stem": "Which communication device converts digital signals to analog and vice versa?",
+      "options": {
+        "A": "Modem",
+        "B": "Bluetooth",
+        "C": "Infrared",
+        "D": "Wi-Fi"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A modem performs modulation (digital to analog) and demodulation (analog to digital) for communication over phone lines."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0077",
+      "type": "mcq",
+      "stem": "Which virus infects both boot records and program files, making it difficult to remove?",
+      "options": {
+        "A": "Macro virus",
+        "B": "Boot sector virus",
+        "C": "Multi-partite virus",
+        "D": "Stealth virus"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Multi-partite viruses infect both boot records and programs, requiring removal from both to be fully cleaned."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0078",
+      "type": "mcq",
+      "stem": "Which characteristic refers to a computer's inability to make judgments based on experience or emotions?",
+      "options": {
+        "A": "No I.Q.",
+        "B": "No Feelings",
+        "C": "Diligence",
+        "D": "Versatility"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A computer has no feelings and follows instructions exactly without making personal judgments based on experience or knowledge."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0079",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a first-generation computer?",
+      "options": {
+        "A": "IBM PC",
+        "B": "PARAM",
+        "C": "ENIAC",
+        "D": "IBM AS400"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "ENIAC, EDVAC, and EDSAC are prominent examples of first-generation computers."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0080",
+      "type": "mcq",
+      "stem": "A ULSI microprocessor chip in fifth-generation computers contains approximately how many electronic components?",
+      "options": {
+        "A": "1 million",
+        "B": "10 million",
+        "C": "100 million",
+        "D": "1 billion"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Fifth-generation technology is based on ULSI chips containing 100 million electronic components."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0081",
+      "type": "mcq",
+      "stem": "Which output device is specifically ideal for architects and engineers to produce wide-format hardcopy graphics?",
+      "options": {
+        "A": "Laser Printer",
+        "B": "Plotter",
+        "C": "Dot Matrix Printer",
+        "D": "Monitor"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Plotters are used by architects and engineers to generate wide-format hardcopy output for varying sizes."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0082",
+      "type": "mcq",
+      "stem": "In a plotter, which type involves placing the design over a rotating cylinder where both the paper and pen move?",
+      "options": {
+        "A": "Flatbed Plotter",
+        "B": "Drum Plotter",
+        "C": "Inkjet Plotter",
+        "D": "Daisy Wheel"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In a drum plotter, the paper is placed over a drum, and both the paper and the pen move to create the drawing."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0083",
+      "type": "mcq",
+      "stem": "Which component of a touch screen system translates touch event data so it can be passed to the PC's processor?",
+      "options": {
+        "A": "Touch sensor",
+        "B": "Software driver",
+        "C": "Touch screen controller",
+        "D": "Graphics card"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The controller processes signals from the sensor and translates touch event data for the processor."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0084",
+      "type": "mcq",
+      "stem": "What is the translation ratio (correspondence) between assembly language and machine language instructions in an Assembler?",
+      "options": {
+        "A": "One to many",
+        "B": "Many to one",
+        "C": "One to one",
+        "D": "None of the above"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "There is a one-to-one correspondence between assembly language instructions and their equivalent machine language instructions."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0085",
+      "type": "mcq",
+      "stem": "What is the worldwide emergency telephone number included in the GSM standard?",
+      "options": {
+        "A": "911",
+        "B": "999",
+        "C": "112",
+        "D": "100"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The GSM standard includes 112 as a worldwide emergency telephone number for international travelers."
+    },
+    {
+      "id": "uni-tasued-bed112-bank-0086",
+      "type": "mcq",
+      "stem": "Which of the following is NOT one of the five cell sizes in a GSM network?",
+      "options": {
+        "A": "Macro",
+        "B": "Pico",
+        "C": "Femto",
+        "D": "Mega"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The five GSM cell sizes are macro, micro, pico, femto, and umbrella cells."
+    }
+  ]
+}

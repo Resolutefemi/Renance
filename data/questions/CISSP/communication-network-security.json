@@ -1,0 +1,1077 @@
+{
+ "code": "cissp-communication-network-security-bank",
+ "title": "CISSP -  Communication Network Security",
+ "version": 1,
+ "questionCount": 82,
+ "totalMarks": 82,
+ "questions": [
+  {
+   "id": "cissp-communication-network-security-bank-0001",
+   "type": "mcq",
+   "stem": "Gary wants to distribute a large file and prefers a peer-to-peer content delivery network (CDN). Which of the following is the MOST common example of this type of technology?",
+   "marks": 1,
+   "options": {
+    "A": "CloudFlare",
+    "B": "BitTorrent",
+    "C": "Amazon CloudFront",
+    "D": "Akamai Edge"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0002",
+   "type": "mcq",
+   "stem": "What is the purpose of a virtual domain (VDOM)?",
+   "marks": 1,
+   "options": {
+    "A": "They combine multiple virtual instances into a single domain",
+    "B": "They divide a firewall device or appliance into two or more virtual firewalls",
+    "C": "They create a virtual domain controller",
+    "D": "They allow the hosting of multiple domain names for a single host"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0003",
+   "type": "mcq",
+   "stem": "Ben has connected his laptop to his tablet PC using an 802.11ac connection. What wireless network mode has he used to connect these devices?",
+   "marks": 1,
+   "options": {
+    "A": "Infrastructure mode",
+    "B": "Wired extension mode",
+    "C": "Ad hoc mode",
+    "D": "Stand-alone mode"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0004",
+   "type": "mcq",
+   "stem": "Selah's and Nick's PCs simultaneously send traffic by transmitting at the same time. What network term describes the range of systems on a network that could be affected by this same issue?",
+   "marks": 1,
+   "options": {
+    "A": "The subnet",
+    "B": "The supernet",
+    "C": "A collision domain",
+    "D": "A broadcast domain"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0005",
+   "type": "mcq",
+   "stem": "Sarah is manually reviewing a packet capture of TCP traffic and finds that a system is setting the RST flag in the TCP packets it sends repeatedly during a short period of time. What does this flag mean in the TCP packet header?",
+   "marks": 1,
+   "options": {
+    "A": "RST flags mean “Rest.” The server needs traffic to briefly pause",
+    "B": "RST flags mean “Relay-set.” The packets will be forwarded to the address set in the packet",
+    "C": "RST flags mean “Resume Standard.” Communications will resume in their normal format",
+    "D": "RST means “Reset.” The TCP session will be disconnected"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0006",
+   "type": "mcq",
+   "stem": "Gary is deploying a wireless network and wants to deploy the FASTEST possible wireless technology. Which one of the following wireless networking standards should he use?",
+   "marks": 1,
+   "options": {
+    "A": "802.11ac",
+    "B": "802.11g",
+    "C": "802.11n",
+    "D": "802.11ax"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0007",
+   "type": "mcq",
+   "stem": "Michele wants to replace FTP traffic with a secure replacement. What secure protocol should she select instead?",
+   "marks": 1,
+   "options": {
+    "A": "TFTP",
+    "B": "HFTPS",
+    "C": "SecFTP",
+    "D": "SFTP"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0008",
+   "type": "mcq",
+   "stem": "Jake has been told that there is a layer 3 problem with his network. Which of the following is associated with layer 3 in the OSI model?",
+   "marks": 1,
+   "options": {
+    "A": "IP addresses",
+    "B": "TCP and UDP protocols",
+    "C": "MAC addresses",
+    "D": "Sending and receiving bits via hardware"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0009",
+   "type": "mcq",
+   "stem": "Frank is responsible for ensuring that his organization has reliable, supported network hardware. Which of the following is NOT a common concern for network administrators as they work to ensure their network continues to be operational?",
+   "marks": 1,
+   "options": {
+    "A": "If the devices have vendor support",
+    "B": "If the devices are under warranty",
+    "C": "If major devices support redundant power supplies",
+    "D": "If all devices support redundant power supplies"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0010",
+   "type": "mcq",
+   "stem": "Brian is analyzing his network traffic and is focused on the variance of the delay between packets of data that are sent between two of his sites. What is he analyzing?",
+   "marks": 1,
+   "options": {
+    "A": "Latency",
+    "B": "Jitter",
+    "C": "Throughput",
+    "D": "Signal-to-noise ratio"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0011",
+   "type": "mcq",
+   "stem": "Which ONE of the following protocols is commonly used to provide back-end authentication services for a VPN?",
+   "marks": 1,
+   "options": {
+    "A": "HTTPS",
+    "B": "RADIUS",
+    "C": "ESP",
+    "D": "AH"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0012",
+   "type": "mcq",
+   "stem": "Isaac wants to ensure that his VoIP session initialization is secure. What protocol should he ensure is enabled and required?",
+   "marks": 1,
+   "options": {
+    "A": "SVOIP",
+    "B": "PBSX",
+    "C": "SIPS",
+    "D": "SRTP"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0013",
+   "type": "mcq",
+   "stem": "[Scenario: Chris is designing layered network security for his organization. Diagram: Internet → Firewall → Web Server zone + (Router → VPN Concentrator zone → Switch → Workstations).] What type of firewall design is shown in the diagram?",
+   "marks": 1,
+   "options": {
+    "A": "A single-tier firewall",
+    "B": "A two-tier firewall",
+    "C": "A three-tier firewall",
+    "D": "A four-tier firewall"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0014",
+   "type": "mcq",
+   "stem": "[Scenario: Chris is designing layered network security for his organization.] Chris wants to implement security controls in his data center at the level of individual services and workloads. He plans to use firewall rules and other controls as well as on-demand access to services as part of his security design. What design concept is he implementing?",
+   "marks": 1,
+   "options": {
+    "A": "Converged protocols",
+    "B": "Physical segmentation",
+    "C": "Edge network-based design",
+    "D": "Micro-segmentation"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0015",
+   "type": "mcq",
+   "stem": "[Scenario: Chris is designing layered network security for his organization.] As part of his segmentation approach, Chris also wants to segment network routes. What type of solution should he select?",
+   "marks": 1,
+   "options": {
+    "A": "VPCs",
+    "B": "VRF",
+    "C": "VLANs",
+    "D": "A CDN"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0016",
+   "type": "mcq",
+   "stem": "Ben has configured his network to not broadcast an SSID. Why might Ben disable SSID broadcast, and how could his SSID be discovered?",
+   "marks": 1,
+   "options": {
+    "A": "Disabling SSID broadcast prevents attackers from discovering the encryption key. The SSID can be recovered from decrypted packets",
+    "B": "Disabling SSID broadcast hides networks from unauthorized personnel. The SSID can be discovered using a wireless sniffer",
+    "C": "Disabling SSID broadcast prevents issues with beacon frames. The SSID can be recovered by reconstructing the BSSID",
+    "D": "Disabling SSID broadcast helps avoid SSID conflicts. The SSID can be discovered by attempting to connect to the network"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0017",
+   "type": "mcq",
+   "stem": "Chuck is in charge of a commercial data center that handles many customers who host their servers there. He wants to be able to configure his data center network to adjust to traffic pattern changes and to manage bandwidth and other options. What technology should he implement to allow central, programmatic control of his network?",
+   "marks": 1,
+   "options": {
+    "A": "SDN",
+    "B": "SD-WAN",
+    "C": "Proxy routing",
+    "D": "Agile networking"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0018",
+   "type": "mcq",
+   "stem": "Susan wants to access her company's SAN via Ethernet and knows that she can access it as a block-level storage device. What converged protocol is she MOST likely to use?",
+   "marks": 1,
+   "options": {
+    "A": "CXL",
+    "B": "SDWAN",
+    "C": "iSCSI",
+    "D": "Zigbee"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0019",
+   "type": "mcq",
+   "stem": "Melissa wants to leverage a cloud service provider's edge services. What will peering allow her to do in this scenario?",
+   "marks": 1,
+   "options": {
+    "A": "Ensure that a copy of any data stored in the cloud is also replicated in her local data center",
+    "B": "Provide a direct path from her on-premises network to the cloud provider's services",
+    "C": "Control traffic flows via software-defined routes",
+    "D": "Host copies of her sites at multiple locations hosted by her cloud computing service provider"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0020",
+   "type": "mcq",
+   "stem": "Jake wants to describe traffic sent between servers in his data center. What common terminology should he use to describe this?",
+   "marks": 1,
+   "options": {
+    "A": "North/South",
+    "B": "Privilege/Unprivileged",
+    "C": "East/West",
+    "D": "Store/Forward"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0021",
+   "type": "mcq",
+   "stem": "During a security assessment, Jim discovers that the organization he is working with uses a multilayer protocol to handle SCADA systems and recently connected the SCADA network to the rest of the organization's production network. What concern should he raise about serial data transfers carried via TCP/IP?",
+   "marks": 1,
+   "options": {
+    "A": "SCADA devices that are now connected to the network can be attacked over the network",
+    "B": "Serial data over TCP/IP cannot be encrypted",
+    "C": "Serial data cannot be carried in TCP packets",
+    "D": "TCP/IP's throughput can allow for easy denial-of-service attacks against serial devices"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0022",
+   "type": "mcq",
+   "stem": "Ben provides networking and security services for a small chain of coffee shops. The coffee shop chain wants to provide secure, free wireless for customers. Which of the following is the BEST option available to Ben to allow customers to connect securely to his wireless network without needing a user account if Ben does not need to worry about protocol support issues?",
+   "marks": 1,
+   "options": {
+    "A": "Use WPA2 in PSK mode",
+    "B": "Use WPA3 in SAE mode",
+    "C": "Use WPA2 in Enterprise mode",
+    "D": "Use a captive portal"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0023",
+   "type": "mcq",
+   "stem": "Alicia's company has implemented multifactor authentication using SMS messages to provide a numeric code. What is the PRIMARY security concern that Alicia may want to express about this design?",
+   "marks": 1,
+   "options": {
+    "A": "SMS messages are not encrypted",
+    "B": "SMS messages can be spoofed by senders",
+    "C": "SMS messages may be received by more than one phone",
+    "D": "SMS messages may be stored on the receiving phone"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0024",
+   "type": "mcq",
+   "stem": "What speed and frequency range are used by 802.11ac?",
+   "marks": 1,
+   "options": {
+    "A": "5 GHz only",
+    "B": "900 MHz and 2.4 GHz",
+    "C": "2.4 GHz and 5 GHz",
+    "D": "2.4 GHz only"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0025",
+   "type": "mcq",
+   "stem": "The Address Resolution Protocol (ARP) and the Reverse Address Resolution Protocol (RARP) operate at what layer of the OSI model?",
+   "marks": 1,
+   "options": {
+    "A": "Layer 1",
+    "B": "Layer 2",
+    "C": "Layer 3",
+    "D": "Layer 4"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0026",
+   "type": "mcq",
+   "stem": "Which of the following is a converged protocol that allows storage mounts over TCP, and which is frequently used as a lower-cost alternative to Fibre Channel?",
+   "marks": 1,
+   "options": {
+    "A": "MPLS",
+    "B": "SDN",
+    "C": "VoIP",
+    "D": "iSCSI"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0027",
+   "type": "mcq",
+   "stem": "Chris is building an Ethernet network and knows that he needs to span a distance of more than 150 meters with his 1000BaseT network. What network technology should he use to help with this?",
+   "marks": 1,
+   "options": {
+    "A": "Install a repeater, a switch, or a concentrator before 100 meters",
+    "B": "Use Category 7 cable, which has better shielding for higher speeds",
+    "C": "Install a gateway to handle the distance",
+    "D": "Use STP cable to handle the longer distance at high speeds"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0028",
+   "type": "mcq",
+   "stem": "[Scenario: Selah's organization has used a popular messaging service for a number of years. Diagram: System A (internal) → Switch → Router → Firewall → Internet → System B (external); System C (internal) can see traffic.] What protocol is the messaging traffic MOST likely to use based on the diagram?",
+   "marks": 1,
+   "options": {
+    "A": "SLACK",
+    "B": "HTTP",
+    "C": "SMTP",
+    "D": "HTTPS"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0029",
+   "type": "mcq",
+   "stem": "[Scenario: Selah's organization has used a popular messaging service for a number of years.] How could Selah's company BEST address a desire for secure messaging for users of internal systems A and C?",
+   "marks": 1,
+   "options": {
+    "A": "Use a third-party messaging service",
+    "B": "Implement and use a locally hosted service",
+    "C": "Use HTTPS",
+    "D": "Discontinue use of messaging and instead use email, which is more secure"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0030",
+   "type": "mcq",
+   "stem": "Which of the following drawbacks is a concern when multilayer protocols are allowed?",
+   "marks": 1,
+   "options": {
+    "A": "A range of protocols may be used at higher layers",
+    "B": "Covert channels are allowed",
+    "C": "Filters cannot be bypassed",
+    "D": "Encryption can't be incorporated at multiple layers"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0031",
+   "type": "mcq",
+   "stem": "Which of the following is NOT an example of a converged protocol?",
+   "marks": 1,
+   "options": {
+    "A": "MIME",
+    "B": "FCoE",
+    "C": "iSCSI",
+    "D": "VoIP"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0032",
+   "type": "mcq",
+   "stem": "Chris uses a cellular hot spot to provide Internet access when he is traveling. If he leaves the hot spot connected to his PC while his PC is on his organization's corporate network, what security issue might he cause?",
+   "marks": 1,
+   "options": {
+    "A": "Traffic may not be routed properly, exposing sensitive data",
+    "B": "His system may act as a bridge from the Internet to the local network",
+    "C": "His system may be a portal for a reflected DDoS attack",
+    "D": "Security administrators may not be able to determine his IP address if a security issue occurs"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0033",
+   "type": "mcq",
+   "stem": "Sarah has been asked to improve the observability of her network. Which of the following is NOT a common step to improve observability?",
+   "marks": 1,
+   "options": {
+    "A": "Aggregate and centralize data",
+    "B": "Enable alerts for critical errors",
+    "C": "Implement logging using a standardized format",
+    "D": "Avoid feedback loops"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0034",
+   "type": "mcq",
+   "stem": "What features can IPsec provide for secure communication?",
+   "marks": 1,
+   "options": {
+    "A": "Encryption, access control, nonrepudiation, and message authentication",
+    "B": "Protocol convergence, content distribution, micro-segmentation, and network virtualization",
+    "C": "Encryption, authorization, nonrepudiation, and message integrity checking",
+    "D": "Micro-segmentation, network virtualization, encryption, and message authentication"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0035",
+   "type": "mcq",
+   "stem": "Casey has been asked to determine if Zigbee network traffic can be secured in transit. What security mechanism does Zigbee use to protect data traffic?",
+   "marks": 1,
+   "options": {
+    "A": "3DES encryption",
+    "B": "AES encryption",
+    "C": "ROT13 encryption",
+    "D": "Blowfish encryption"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0036",
+   "type": "mcq",
+   "stem": "Sue modifies her MAC address to one that is allowed on a network that uses MAC filtering to provide security. What is the technique Sue used, and what nonsecurity issue could her actions cause?",
+   "marks": 1,
+   "options": {
+    "A": "Broadcast domain exploit, address conflict",
+    "B": "Spoofing, token loss",
+    "C": "Spoofing, address conflict",
+    "D": "Sham EUI creation, token loss"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0037",
+   "type": "mcq",
+   "stem": "Joanna wants to deploy 4G LTE as an out-of-band management solution for devices at remote sites. Which of the following security capabilities is NOT commonly available from 4G service providers?",
+   "marks": 1,
+   "options": {
+    "A": "Encryption capabilities",
+    "B": "Device-based authentication",
+    "C": "Dedicated towers and antennas for secure service subscribers",
+    "D": "SIM-based authentication"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0038",
+   "type": "mcq",
+   "stem": "SMTP, HTTP, and SNMP all occur at what layer of the OSI model?",
+   "marks": 1,
+   "options": {
+    "A": "Layer 4",
+    "B": "Layer 5",
+    "C": "Layer 6",
+    "D": "Layer 7"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0039",
+   "type": "mcq",
+   "stem": "Mark's organization hosts their infrastructure in a cloud IaaS environment. They operate in a private, isolated, and secure cloud that they configure. What term BEST describes this?",
+   "marks": 1,
+   "options": {
+    "A": "VLAN",
+    "B": "VPC",
+    "C": "SDN",
+    "D": "CXL"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0040",
+   "type": "mcq",
+   "stem": "Selah wants to provide port-based authentication on her network to ensure that clients must authenticate before using the network. What technology is an appropriate solution for this requirement?",
+   "marks": 1,
+   "options": {
+    "A": "802.11a",
+    "B": "802.3",
+    "C": "802.15.1",
+    "D": "802.1x"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0041",
+   "type": "mcq",
+   "stem": "Ben has deployed a 1000BaseT gigabit network and needs to run a cable across a large building. If Ben is running his link directly from a switch to another switch in that building, what is the maximum distance Ben can cover according to the 1000BaseT specification?",
+   "marks": 1,
+   "options": {
+    "A": "2 kilometers",
+    "B": "500 meters",
+    "C": "185 meters",
+    "D": "100 meters"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0042",
+   "type": "mcq",
+   "stem": "What security control does MAC cloning attempt to bypass for wired networks?",
+   "marks": 1,
+   "options": {
+    "A": "Port security",
+    "B": "VLAN hopping",
+    "C": "802.1q trunking",
+    "D": "Etherkiller prevention"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0043",
+   "type": "mcq",
+   "stem": "The company that Kathleen works for has moved to remote work for most employees and wants to ensure that the multimedia collaboration platform that they use for voice, video, and text-based collaboration is secure. Which of the following security options will provide the BEST user experience while providing appropriate security for communications?",
+   "marks": 1,
+   "options": {
+    "A": "Require software-based VPN to the corporate network for all use of the collaboration platform",
+    "B": "Require the use of SIPS and SRTP for all communications",
+    "C": "Use TLS for all traffic for the collaboration platform",
+    "D": "Deploy secure VPN endpoints to each remote location and use a point-to-point VPN for communications"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0044",
+   "type": "mcq",
+   "stem": "Chris wants to use a low-power, personal area network (PAN) wireless protocol for a device he is designing. Which of the following wireless protocols is BEST suited to creating small, low-power devices that can connect to each other at relatively short distances across buildings or rooms?",
+   "marks": 1,
+   "options": {
+    "A": "Wi-Fi",
+    "B": "Zigbee",
+    "C": "NFC",
+    "D": "Infrared"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0045",
+   "type": "mcq",
+   "stem": "Olga wants to provide out-of-band management for her SCADA devices, which are deployed across her organization's large physical infrastructure in multiple distinct production facilities. Which of the following is an appropriate solution to meet her needs?",
+   "marks": 1,
+   "options": {
+    "A": "Administrative access via a web client installed on each system that requires Windows-based domain authentication",
+    "B": "Administrative access via nonstandard ports using a secure protocol like SSH",
+    "C": "Administrative access via a second, physically separate Ethernet network with access controlled via VPN and multifactor authentication",
+    "D": "Administrative access via physical access to the devices when needed"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0046",
+   "type": "mcq",
+   "stem": "Cameron is worried about distributed denial-of-service attacks against his company's primary web application. Which of the following options will provide the MOST resilience against large-scale DDoS attacks?",
+   "marks": 1,
+   "options": {
+    "A": "A CDN",
+    "B": "Increasing the number of servers in the web application server cluster",
+    "C": "Contract for DDoS mitigation services via the company's ISP",
+    "D": "Increasing the amount of bandwidth available from one or more ISPs"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0047",
+   "type": "mcq",
+   "stem": "There are four common VPN protocols. Which group listed contains ALL of the common VPN protocols?",
+   "marks": 1,
+   "options": {
+    "A": "PPTP, LTP, L2TP, IPsec",
+    "B": "PPP, L2TP, IPsec, VNC",
+    "C": "PPTP, L2F, L2TP, IPsec",
+    "D": "PPTP, L2TP, IPsec, SPAP"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0048",
+   "type": "mcq",
+   "stem": "Wayne wants to deploy a secure voice communication network. Which of the following techniques should he consider? (Reframed: Which ONE of the following is NOT a recommended technique?)",
+   "marks": 1,
+   "options": {
+    "A": "Use a dedicated VLAN for VoIP phones and devices",
+    "B": "Require the use of SIPS and SRTP",
+    "C": "Require the use of VPN for all remote VoIP devices",
+    "D": "Implement a VoIP IPS"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0049",
+   "type": "mcq",
+   "stem": "Which OSI layer includes electrical specifications, protocols, and interface standards?",
+   "marks": 1,
+   "options": {
+    "A": "The Transport layer",
+    "B": "The Device layer",
+    "C": "The Physical layer",
+    "D": "The Data Link layer"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0050",
+   "type": "mcq",
+   "stem": "Ben is designing a Wi-Fi network and has been asked to choose the MOST secure option for the network. Which wireless security standard should he choose?",
+   "marks": 1,
+   "options": {
+    "A": "WPA2",
+    "B": "WPA",
+    "C": "WEP",
+    "D": "WPA3"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0051",
+   "type": "mcq",
+   "stem": "What mode of switching is BEST suited to low-latency, high-throughput data transfer?",
+   "marks": 1,
+   "options": {
+    "A": "Store-and-forward switching",
+    "B": "Blind switching",
+    "C": "Forward switching",
+    "D": "Cut-through switching"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0052",
+   "type": "mcq",
+   "stem": "Segmentation, sequencing, and error checking all occur at what layer of the OSI model that is associated with SSL, TLS, and UDP?",
+   "marks": 1,
+   "options": {
+    "A": "The Transport layer",
+    "B": "The Network layer",
+    "C": "The Session layer",
+    "D": "The Presentation layer"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0053",
+   "type": "mcq",
+   "stem": "The Windows ipconfig command displays the following information: BC-5F-F4-7B-4B-7D. What term describes this, and what information can usually be gathered from it?",
+   "marks": 1,
+   "options": {
+    "A": "The IP address, the network location of the system",
+    "B": "The MAC address, the network interface card's manufacturer",
+    "C": "The MAC address, the media type in use",
+    "D": "The IPv6 client ID, the network interface card's manufacturer"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0054",
+   "type": "mcq",
+   "stem": "Chris wants to ensure that traffic sent via his backhaul networks provided by third-party telecom providers is secure. Which of the following options is BEST suited to ensuring that all traffic sent through the connection is secure?",
+   "marks": 1,
+   "options": {
+    "A": "Use TLS for all web services",
+    "B": "Use an on-demand, client-based VPN",
+    "C": "Use a point-to-point VPN",
+    "D": "Tunnel traffic via SSH"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0055",
+   "type": "mcq",
+   "stem": "Ben is troubleshooting a network and discovers that the NAT router he is connected to has the 192.168.x.x subnet as its internal network and that its external IP is 192.168.1.40. What problem is he encountering?",
+   "marks": 1,
+   "options": {
+    "A": "192.168.x.x is a nonroutable network and will not be carried to the Internet",
+    "B": "192.168.1.40 is not a valid address because it is reserved by RFC 1918",
+    "C": "Double NATing is not possible using the same IP range",
+    "D": "The upstream system is unable to de-encapsulate his packets, and he needs to use PAT instead"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0056",
+   "type": "mcq",
+   "stem": "What is the default subnet mask for a Class B network?",
+   "marks": 1,
+   "options": {
+    "A": "255.0.0.0",
+    "B": "255.255.0.0",
+    "C": "255.254.0.0",
+    "D": "255.255.255.0"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0057",
+   "type": "mcq",
+   "stem": "Kim wants to protect her Zoom meetings from Zoom bombing. What security option should she enable?",
+   "marks": 1,
+   "options": {
+    "A": "Require HTTPS connections",
+    "B": "Turn on the waiting room",
+    "C": "Randomize meeting links",
+    "D": "Require a meeting passcode"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0058",
+   "type": "mcq",
+   "stem": "Olivia wants to use a network fault management tool that can provide real-time fault detection. What capabilities are MOST commonly associated with this type of monitoring?",
+   "marks": 1,
+   "options": {
+    "A": "SNMP and ICMP-based monitoring and diagnostic data retrieval",
+    "B": "Netflow and syslog-based monitoring",
+    "C": "SNMP and Netflow-based monitoring",
+    "D": "ICMP and syslog-based monitoring"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0059",
+   "type": "mcq",
+   "stem": "Selah's organization has deployed VoIP phones on the same switches that the desktop PCs are on. What security issue could this create, and what solution would help?",
+   "marks": 1,
+   "options": {
+    "A": "VLAN hopping; use physically separate switches",
+    "B": "VLAN hopping; use encryption",
+    "C": "Caller ID spoofing; MAC filtering",
+    "D": "Denial-of-service attacks; use a firewall between networks"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0060",
+   "type": "mcq",
+   "stem": "[Scenario: Susan is designing her organization's new network infrastructure for a branch office.] Susan wants to use a set of nonroutable IP addresses for the location's internal network addresses. Using your knowledge of secure network design principles and IP networking, which of the following IP ranges are usable for that purpose? (Reframed: Which ONE is NOT usable?)",
+   "marks": 1,
+   "options": {
+    "A": "172.16.0.0/12",
+    "B": "192.168.0.0/16",
+    "C": "128.192.0.0/24",
+    "D": "10.0.0.0/8"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0061",
+   "type": "mcq",
+   "stem": "[Scenario: Susan is designing her organization's new network infrastructure for a branch office.] Susan knows that she will need to implement a Wi-Fi network for her customers and wants to gather information about the customers, such as their email address, without having to provide them with a wireless network password or key. What type of solution would provide this combination of features?",
+   "marks": 1,
+   "options": {
+    "A": "NAC",
+    "B": "A captive portal",
+    "C": "Pre-shared keys",
+    "D": "WPA3's SAE mode"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0062",
+   "type": "mcq",
+   "stem": "[Scenario: Susan is designing her organization's new network infrastructure for a branch office.] With her wireless network set up, Susan moves on to ensuring that her network will remain operational even if disruptions occur. What is the SIMPLEST way she can ensure that her network devices, including her router, access points, and network switches, stay on if a brownout or other temporary power issue occurs?",
+   "marks": 1,
+   "options": {
+    "A": "Purchase and install a generator with an automatic start",
+    "B": "Deploy dual power supplies for all network devices",
+    "C": "Install UPS systems to cover all network devices that must remain online",
+    "D": "Contract with multiple different power companies for redundant power"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0063",
+   "type": "mcq",
+   "stem": "[Scenario: Susan is designing her organization's new network infrastructure for a branch office.] Derek wants to deploy redundant core routers, as shown in the diagram. What model of high availability clustering will provide him with the GREATEST throughput?",
+   "marks": 1,
+   "options": {
+    "A": "Active/active",
+    "B": "Line interactive",
+    "C": "Active/passive",
+    "D": "Nearline"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0064",
+   "type": "mcq",
+   "stem": "Angela needs access to manage IoT devices at multiple sites that her organization manages. What solution should she suggest to ensure access and security for the devices?",
+   "marks": 1,
+   "options": {
+    "A": "VPNs to protected VLANs",
+    "B": "An IDS located at the network edge protecting a network using only private IP addresses",
+    "C": "A DLP system configured to prevent attacks against IoT devices",
+    "D": "An iSCSI-based security solution accessed using a VPN and jump boxes"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0065",
+   "type": "mcq",
+   "stem": "What is a frequent concern for systems that require high-performing Internet connectivity when satellite Internet is the ONLY available option?",
+   "marks": 1,
+   "options": {
+    "A": "Security",
+    "B": "Compatibility with protocols like LiFi",
+    "C": "Compatibility with protocols like Zigbee",
+    "D": "Latency"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0066",
+   "type": "mcq",
+   "stem": "What layer of an SDN implementation uses programs to communicate needs for resources via APIs?",
+   "marks": 1,
+   "options": {
+    "A": "The data plane",
+    "B": "The control plane",
+    "C": "The application plane",
+    "D": "The monitoring plane"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0067",
+   "type": "mcq",
+   "stem": "Which of the following is NOT a drawback of multilayer protocols?",
+   "marks": 1,
+   "options": {
+    "A": "They can allow filters and rules to be bypassed",
+    "B": "They can operate at higher OSI levels",
+    "C": "They can allow covert channels",
+    "D": "They can allow network segment boundaries to be bypassed"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0068",
+   "type": "mcq",
+   "stem": "Place the following layers of the TCP/IP model in order, starting with the Application layer and moving down the stack.",
+   "marks": 1,
+   "options": {
+    "A": "1, 2, 3, 4",
+    "B": "1, 4, 2, 3",
+    "C": "1, 4, 3, 2",
+    "D": "4, 1, 3, 2"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0069",
+   "type": "mcq",
+   "stem": "Aadita's company wants to ensure that their website is highly available and resistant to potential denial-of-service attacks. What type of solution would be BEST suited to this if the company operates an e-commerce site that serves multiple countries and regions with a very large number of customers?",
+   "marks": 1,
+   "options": {
+    "A": "A load-balanced web server cluster",
+    "B": "A CDN",
+    "C": "Micro-segmentation of virtual servers",
+    "D": "A VPC"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0070",
+   "type": "mcq",
+   "stem": "What are two primary advantages that 5G networks have over 4G networks? (Reframed: Which ONE is NOT a primary advantage?)",
+   "marks": 1,
+   "options": {
+    "A": "Anti-jamming features",
+    "B": "Enhanced subscriber identity protection",
+    "C": "Mutual authentication capabilities",
+    "D": "Multifactor authentication"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0071",
+   "type": "mcq",
+   "stem": "What function does VXLAN perform in a data center environment? (Reframed: Which ONE is NOT accurate?)",
+   "marks": 1,
+   "options": {
+    "A": "It removes limitations due to maximum distance for Ethernet cables",
+    "B": "It allows multiple subnets to exist in the same IP space with hosts using the same IP addresses",
+    "C": "It tunnels layer 2 connections over a layer 3 network, stretching them across the underlying layer 3 network",
+    "D": "All of the above"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0072",
+   "type": "mcq",
+   "stem": "Chris is setting up a hotel network and needs to ensure that systems in each room or suite can connect to each other, but systems in other suites or rooms cannot. At the same time, he needs to ensure that all systems in the hotel can reach the Internet. What solution should he recommend as the MOST effective business solution?",
+   "marks": 1,
+   "options": {
+    "A": "Per-room VPNs",
+    "B": "VLANs",
+    "C": "Port security",
+    "D": "Firewalls"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0073",
+   "type": "mcq",
+   "stem": "During a forensic investigation, Charles is able to determine the Media Access Control (MAC) address of a system that was connected to a compromised network. Charles knows that MAC addresses are tied back to a manufacturer or vendor and are part of the fingerprint of the system. To which OSI layer does a MAC address belong?",
+   "marks": 1,
+   "options": {
+    "A": "The Application layer",
+    "B": "The Session layer",
+    "C": "The Physical layer",
+    "D": "The Data Link layer"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0074",
+   "type": "mcq",
+   "stem": "Mikayla is reviewing her organization's VoIP environment configuration and finds a diagram that shows the following design. What concern should she express? (Diagram: VoIP phone → SIP + SRTP → VoIP PBX)",
+   "marks": 1,
+   "options": {
+    "A": "The voice connection is unencrypted and could be listened to",
+    "B": "There are no security issues in this diagram",
+    "C": "The session initialization connection is unencrypted and could be viewed",
+    "D": "Both the session initialization and voice data connection are unencrypted and could be captured and analyzed"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0075",
+   "type": "mcq",
+   "stem": "Jake's company keeps their certificate signing server disconnected from the network to prevent it from being compromised by network attacks. What is this type of solution called?",
+   "marks": 1,
+   "options": {
+    "A": "Store-and-forward",
+    "B": "Out-of-band",
+    "C": "In-band",
+    "D": "Air-gapping"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0076",
+   "type": "mcq",
+   "stem": "What converged protocol is designed to allow high-speed communication to devices like CPUs, GPUs, and accelerators?",
+   "marks": 1,
+   "options": {
+    "A": "CXL",
+    "B": "VoIP",
+    "C": "CDN",
+    "D": "iSCSI"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0077",
+   "type": "mcq",
+   "stem": "Mark is concerned about the physical security of his network cables. What type of network connection would be the HARDEST to tap without specialized equipment?",
+   "marks": 1,
+   "options": {
+    "A": "Wi-Fi",
+    "B": "Bluetooth",
+    "C": "Cat5/Cat6 twisted pair",
+    "D": "Fiber optic"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0078",
+   "type": "mcq",
+   "stem": "Rich wants to connect his network to a building a half-mile away from his current location. There are trees and terrain features along the way, but a road passes between the trees to the other location. What type of transmission media is BEST suited to this type of deployment?",
+   "marks": 1,
+   "options": {
+    "A": "Ethernet cable with repeaters every 200 to 300 yards",
+    "B": "A Wi-Fi directional antenna",
+    "C": "Fiber-optic cable",
+    "D": "A LiFi system"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0079",
+   "type": "mcq",
+   "stem": "What challenge is MOST common for endpoint security system deployments?",
+   "marks": 1,
+   "options": {
+    "A": "Compromises",
+    "B": "The volume of data",
+    "C": "Monitoring encrypted traffic on the network",
+    "D": "Handling non-TCP protocols"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0080",
+   "type": "mcq",
+   "stem": "What type of address is 127.0.0.1?",
+   "marks": 1,
+   "options": {
+    "A": "A public IP address",
+    "B": "An RFC 1918 address",
+    "C": "An APIPA address",
+    "D": "A loopback address"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0081",
+   "type": "mcq",
+   "stem": "Susan is writing a best practices statement for her organizational users who need to use Bluetooth. She knows that there are many potential security issues with Bluetooth and wants to provide the best advice she can. Which of the following sets of guidance should Susan include? (Reframed: Which ONE is NOT accurate advice?)",
+   "marks": 1,
+   "options": {
+    "A": "Use Bluetooth's built-in strong encryption, change the default PIN on your device, turn off discovery mode, and turn off Bluetooth when it's not in active use",
+    "B": "Use Bluetooth only for those activities that are not confidential, change the default PIN on your device, turn off discovery mode, and turn off Bluetooth when it's not in active use",
+    "C": "Use Bluetooth's built-in strong encryption, use extended (eight digits or longer) Bluetooth PINs, turn off discovery mode, and turn off Bluetooth when it's not in active use",
+    "D": "Use Bluetooth only for those activities that are not confidential, use extended (eight digits or longer) Bluetooth PINs, turn off discovery mode, and turn off Bluetooth when it's not in active use"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-communication-network-security-bank-0082",
+   "type": "mcq",
+   "stem": "What type of networking device is MOST commonly used to assign endpoint systems to VLANs?",
+   "marks": 1,
+   "options": {
+    "A": "Firewall",
+    "B": "Router",
+    "C": "Switch",
+    "D": "Hub"
+   },
+   "answer": "C"
+  }
+ ],
+ "category": "CISSP",
+ "body": " Communication Network Security"
+}

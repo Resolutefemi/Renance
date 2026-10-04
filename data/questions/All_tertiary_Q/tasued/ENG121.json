@@ -1,0 +1,2111 @@
+{
+  "code": "uni-tasued-eng121-bank",
+  "title": "TASUED ENG121 | Course Question Bank",
+  "version": 1,
+  "questionCount": 150,
+  "totalMarks": 150,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-tasued-eng121-bank-0001",
+      "type": "mcq",
+      "stem": "Deliberate exaggeration used for emphasis or effect is called:",
+      "options": {
+        "A": "Hyperbole",
+        "B": "Metaphor",
+        "C": "Alliteration",
+        "D": "Simile"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Hyperbole is deliberate exaggeration used for emphasis, e.g. 'I'm so hungry I could eat a horse'."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0002",
+      "type": "mcq",
+      "stem": "Identifying words correctly while reading is referred to as:",
+      "options": {
+        "A": "Comprehension",
+        "B": "Interpretation",
+        "C": "Word recognition",
+        "D": "Vocabulary knowledge"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Word recognition is the component of reading that involves identifying words correctly."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0003",
+      "type": "mcq",
+      "stem": "Which of the following best defines language?",
+      "options": {
+        "A": "A set of grammar rules taught in school",
+        "B": "A system of communication through which people express ideas using words, sounds, and symbols",
+        "C": "A skill only used in formal writing",
+        "D": "A collection of vocabulary words"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Language is defined as a system of communication that allows people to express ideas, thoughts, feelings, and information using words, sounds, and symbols."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0004",
+      "type": "mcq",
+      "stem": "Which of the following is NOT something language enables human beings to do?",
+      "options": {
+        "A": "Communicate effectively",
+        "B": "Share knowledge",
+        "C": "Build relationships",
+        "D": "Eliminate the need for non-verbal cues"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Language enables people to communicate effectively, share knowledge, build relationships, and preserve culture; it does not eliminate non-verbal communication, which often complements verbal language."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0005",
+      "type": "mcq",
+      "stem": "In ENG121, the term 'basic skills' refers to which of the following?",
+      "options": {
+        "A": "Advanced research methods",
+        "B": "Foundational abilities a learner must acquire before advancing to complex studies",
+        "C": "Skills used only by professional writers",
+        "D": "Skills required only for examinations"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Basic skills are the foundational abilities or competencies that a learner must acquire before advancing to more complex studies, including listening, speaking, reading, writing, and literary appreciation/analysis."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0006",
+      "type": "mcq",
+      "stem": "Which of the following is NOT listed among the basic skills in this course?",
+      "options": {
+        "A": "Listening",
+        "B": "Speaking",
+        "C": "Literary appreciation",
+        "D": "Computer programming"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The basic skills in this course are listening, speaking, reading, writing, literary appreciation, and literary analysis; computer programming is not part of this list."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0007",
+      "type": "mcq",
+      "stem": "Which punctuation mark is used to indicate a pause shorter than a full stop, often separating items in a list?",
+      "options": {
+        "A": "Comma",
+        "B": "Colon",
+        "C": "Semicolon",
+        "D": "Apostrophe"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A comma indicates a short pause and is commonly used to separate items in a list or clauses within a sentence."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0008",
+      "type": "mcq",
+      "stem": "Verbal language is best described as:",
+      "options": {
+        "A": "Communication using gestures only",
+        "B": "Communication that uses words",
+        "C": "Communication created for computers",
+        "D": "Communication that develops naturally"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Verbal language is communication that uses words, and it is divided into spoken and written language."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0009",
+      "type": "mcq",
+      "stem": "Which of the following is an example of spoken language?",
+      "options": {
+        "A": "Newspapers",
+        "B": "Lectures",
+        "C": "Letters",
+        "D": "Essays"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Spoken language is language expressed through speech, and examples include conversations, speeches, lectures, and interviews."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0010",
+      "type": "mcq",
+      "stem": "Which of the following is an example of written language?",
+      "options": {
+        "A": "Interviews",
+        "B": "Conversations",
+        "C": "Books",
+        "D": "Speeches"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Written language is language expressed through writing, with examples including letters, essays, newspapers, and books."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0011",
+      "type": "mcq",
+      "stem": "Non-verbal language refers to:",
+      "options": {
+        "A": "Communication using only written symbols",
+        "B": "Communication without words",
+        "C": "Language created artificially",
+        "D": "A language used only in formal settings"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Non-verbal language refers to communication without words, such as facial expressions, gestures, eye contact, body posture, and signs and symbols."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0012",
+      "type": "mcq",
+      "stem": "Which of the following is NOT an example of non-verbal language?",
+      "options": {
+        "A": "Facial expressions",
+        "B": "Eye contact",
+        "C": "Body posture",
+        "D": "Newspapers"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Newspapers are a form of written (verbal) language, while non-verbal language includes facial expressions, eye contact, body posture, gestures, and signs/symbols."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0013",
+      "type": "mcq",
+      "stem": "Natural language is best described as a language that:",
+      "options": {
+        "A": "Is deliberately created for a specific purpose",
+        "B": "Develops naturally among a group of people over time",
+        "C": "Is used only for computers",
+        "D": "Has no grammar rules"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Natural language develops naturally among a group of people over time, with examples such as English, French, Igbo, Yoruba, and Hausa."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0014",
+      "type": "mcq",
+      "stem": "Which of the following is an example of an artificial language?",
+      "options": {
+        "A": "Yoruba",
+        "B": "English",
+        "C": "Esperanto",
+        "D": "Hausa"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Artificial language is deliberately created for a specific purpose; examples include Esperanto and computer programming languages, unlike natural languages such as Yoruba, English, and Hausa."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0015",
+      "type": "mcq",
+      "stem": "Computer programming languages are classified as:",
+      "options": {
+        "A": "Natural language",
+        "B": "Artificial language",
+        "C": "Non-verbal language",
+        "D": "Aesthetic language"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Computer programming languages are deliberately created for a specific purpose, making them examples of artificial language."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0016",
+      "type": "mcq",
+      "stem": "Language used to provide information is called:",
+      "options": {
+        "A": "Expressive language",
+        "B": "Informative language",
+        "C": "Persuasive language",
+        "D": "Social language"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Informative language is used to provide information, as part of the classification of language according to function."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0017",
+      "type": "mcq",
+      "stem": "Which function of language is used to express feelings and emotions?",
+      "options": {
+        "A": "Persuasive language",
+        "B": "Expressive language",
+        "C": "Aesthetic language",
+        "D": "Informative language"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Expressive language is used to express feelings and emotions, distinguishing it from informative, persuasive, aesthetic, and social language."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0018",
+      "type": "mcq",
+      "stem": "Persuasive language is primarily used to:",
+      "options": {
+        "A": "Maintain social relationships",
+        "B": "Influence opinions or actions",
+        "C": "Describe artistic works",
+        "D": "Provide factual data only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Persuasive language is used to influence opinions or actions, as outlined in the classification of language according to function."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0019",
+      "type": "mcq",
+      "stem": "Language used for artistic and literary purposes is known as:",
+      "options": {
+        "A": "Social language",
+        "B": "Aesthetic language",
+        "C": "Informative language",
+        "D": "Verbal language"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Aesthetic language is used for artistic and literary purposes, distinguishing it from the other functional classifications of language."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0020",
+      "type": "mcq",
+      "stem": "Social language is mainly used to:",
+      "options": {
+        "A": "Influence opinions",
+        "B": "Maintain social relationships",
+        "C": "Provide scientific facts",
+        "D": "Create artistic works"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Social language is used to maintain social relationships, as part of the functional classification of language."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0021",
+      "type": "mcq",
+      "stem": "Literature can best be defined as:",
+      "options": {
+        "A": "Any written document",
+        "B": "Imaginative and artistic works expressed through language",
+        "C": "A collection of grammar rules",
+        "D": "Scientific reports"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Literature refers to imaginative and artistic works expressed through language, including poetry, drama, and prose fiction."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0022",
+      "type": "mcq",
+      "stem": "Which of the following is NOT one of the major works literature includes?",
+      "options": {
+        "A": "Poetry",
+        "B": "Drama",
+        "C": "Prose fiction",
+        "D": "Technical manuals"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Literature includes works such as poetry, drama, and prose fiction; technical manuals are not considered literary works."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0023",
+      "type": "mcq",
+      "stem": "The literature aspect of ENG121 introduces students to all of the following EXCEPT:",
+      "options": {
+        "A": "Literary genres",
+        "B": "Literary devices",
+        "C": "Critical analysis of texts",
+        "D": "Computer programming languages"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The literature component introduces students to literary genres, literary devices, literary appreciation, and critical analysis of texts, not computer programming."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0024",
+      "type": "mcq",
+      "stem": "Which of the following is one of the stated objectives of ENG121?",
+      "options": {
+        "A": "Train students to become professional programmers",
+        "B": "Help students communicate effectively in spoken and written English",
+        "C": "Teach students advanced statistics",
+        "D": "Focus only on literature with no language component"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "One of the objectives of the course is to help students communicate effectively in spoken and written English, alongside other goals like identifying literary genres and analyzing texts."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0025",
+      "type": "mcq",
+      "stem": "Why is the course 'Basic Skills of Language and Literature' considered a foundation course?",
+      "options": {
+        "A": "It replaces all further English courses",
+        "B": "It serves as the basis for further studies in English and literary studies by developing language competence and literary appreciation",
+        "C": "It focuses only on examinations",
+        "D": "It is only relevant to science students"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The course serves as a foundation for all further studies in English and literary studies, developing students' competence in language use while introducing literary appreciation and analysis."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0026",
+      "type": "mcq",
+      "stem": "Communication can be best defined as:",
+      "options": {
+        "A": "Speaking loudly to be heard",
+        "B": "The exchange of information, thoughts, ideas, and emotions between individuals or groups",
+        "C": "Writing official letters only",
+        "D": "The use of body language alone"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Communication is defined as the exchange of information, thoughts, ideas, emotions, and messages between individuals or groups through speaking, writing, signs, or symbols."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0027",
+      "type": "mcq",
+      "stem": "The word 'communication' originates from which Latin word, meaning 'to share'?",
+      "options": {
+        "A": "Communicare",
+        "B": "Communis",
+        "C": "Communicatio",
+        "D": "Communitas"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The word 'communication' comes from the Latin word communicare, meaning 'to share'."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0028",
+      "type": "mcq",
+      "stem": "In the communication process, the person who initiates or sends the message is called the:",
+      "options": {
+        "A": "Receiver",
+        "B": "Sender",
+        "C": "Encoder",
+        "D": "Channel"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The sender is the person who initiates or sends the message, such as a lecturer teaching students."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0029",
+      "type": "mcq",
+      "stem": "Encoding in communication refers to:",
+      "options": {
+        "A": "Receiving and interpreting a message",
+        "B": "Arranging ideas into understandable symbols, words, or signs",
+        "C": "Giving feedback to the sender",
+        "D": "Anything that disturbs communication"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Encoding is the process of arranging ideas into understandable symbols, words, or signs, such as a speaker choosing English words to explain a topic."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0030",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a communication channel/medium?",
+      "options": {
+        "A": "Feedback",
+        "B": "Decoding",
+        "C": "WhatsApp",
+        "D": "Noise"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The channel/medium is the means through which a message is sent, with examples including speech, telephone, WhatsApp, letter, and television."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0031",
+      "type": "mcq",
+      "stem": "Decoding in the communication process refers to:",
+      "options": {
+        "A": "Sending the original message",
+        "B": "The interpretation or understanding of the message by the receiver",
+        "C": "The channel through which a message travels",
+        "D": "Disturbances that affect communication"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Decoding is the interpretation or understanding of the message by the receiver, occurring after the message has been received."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0032",
+      "type": "mcq",
+      "stem": "Feedback in communication refers to:",
+      "options": {
+        "A": "The original message sent",
+        "B": "Anything that disturbs communication",
+        "C": "The response given by the receiver",
+        "D": "The medium used to send a message"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Feedback is the response given by the receiver, such as answering questions or nodding in agreement."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0033",
+      "type": "mcq",
+      "stem": "Which of the following is an example of 'noise' in communication?",
+      "options": {
+        "A": "Clear pronunciation",
+        "B": "Poor network",
+        "C": "Active listening",
+        "D": "Accurate feedback"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Noise is anything that disturbs communication, with examples including poor network, loud environment, bad handwriting, and language barriers."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0034",
+      "type": "mcq",
+      "stem": "Verbal communication is divided into which two categories?",
+      "options": {
+        "A": "Visual and non-verbal communication",
+        "B": "Oral and written communication",
+        "C": "Formal and informal communication",
+        "D": "Active and passive communication"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Verbal communication, which is communication through words, is divided into oral communication (spoken) and written communication."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0035",
+      "type": "mcq",
+      "stem": "Which of the following is an example of visual communication?",
+      "options": {
+        "A": "Letters",
+        "B": "Telephone calls",
+        "C": "Charts and graphs",
+        "D": "Lectures"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Visual communication is communication through visual materials, with examples including charts, signs, symbols, pictures, and graphs."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0036",
+      "type": "mcq",
+      "stem": "Dressing as a form of communication is classified under:",
+      "options": {
+        "A": "Written communication",
+        "B": "Non-verbal communication",
+        "C": "Oral communication",
+        "D": "Visual communication"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Non-verbal communication is communication without words, and examples include facial expressions, gestures, eye contact, body movement, and dressing."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0037",
+      "type": "mcq",
+      "stem": "Which of the following is NOT listed as an importance of communication?",
+      "options": {
+        "A": "Promotes understanding",
+        "B": "Builds relationships",
+        "C": "Resolves conflicts",
+        "D": "Eliminates the need for feedback"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Communication is important because it promotes understanding, builds relationships, resolves conflicts, and more, but it does not eliminate the need for feedback, which is a key element of the process."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0038",
+      "type": "mcq",
+      "stem": "Which characteristic of effective communication means avoiding unnecessary words?",
+      "options": {
+        "A": "Clear",
+        "B": "Concise",
+        "C": "Courteous",
+        "D": "Concrete"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Conciseness in effective communication means avoiding unnecessary words while still conveying the full message."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0039",
+      "type": "mcq",
+      "stem": "Showing politeness and respect in communication relates to which characteristic?",
+      "options": {
+        "A": "Correct",
+        "B": "Courteous",
+        "C": "Complete",
+        "D": "Concrete"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Courteous communication shows politeness and respect, one of the six characteristics of effective communication."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0040",
+      "type": "mcq",
+      "stem": "Fear, anger, and anxiety during communication are examples of which barrier?",
+      "options": {
+        "A": "Physical barrier",
+        "B": "Psychological barrier",
+        "C": "Cultural barrier",
+        "D": "Semantic barrier"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Psychological barriers to communication include emotional states such as fear, anger, and anxiety that interfere with effective communication."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0041",
+      "type": "mcq",
+      "stem": "Misunderstanding of words or meanings is classified as which type of barrier?",
+      "options": {
+        "A": "Physical barrier",
+        "B": "Language barrier",
+        "C": "Semantic barrier",
+        "D": "Cultural barrier"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A semantic barrier involves misunderstanding of words or meanings, distinguishing it from a general language barrier which involves different languages or poor grammar."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0042",
+      "type": "mcq",
+      "stem": "Differences in beliefs and traditions between communicators are an example of:",
+      "options": {
+        "A": "Physical barrier",
+        "B": "Cultural barrier",
+        "C": "Psychological barrier",
+        "D": "Semantic barrier"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A cultural barrier arises from differences in beliefs and traditions between people communicating with each other."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0043",
+      "type": "mcq",
+      "stem": "Convincing people through communication serves which function?",
+      "options": {
+        "A": "Informative function",
+        "B": "Persuasive function",
+        "C": "Entertainment function",
+        "D": "Social function"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The persuasive function of communication involves convincing people, one of the five major functions of communication listed in the notes."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0044",
+      "type": "mcq",
+      "stem": "Writing skill can be defined as:",
+      "options": {
+        "A": "The ability to speak fluently in public",
+        "B": "The ability to communicate ideas effectively in written form using correct grammar, vocabulary, organization, and style",
+        "C": "The ability to listen attentively",
+        "D": "The ability to read quickly"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Writing skill is defined as the ability to communicate ideas effectively in written form using correct grammar, vocabulary, organization, and style."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0045",
+      "type": "mcq",
+      "stem": "Which of the following is an example of how writing aids record keeping?",
+      "options": {
+        "A": "Casual conversations",
+        "B": "Minutes of meetings",
+        "C": "Background noise",
+        "D": "Body gestures"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Writing aids record keeping by preserving information for future reference, with examples including minutes of meetings, official documents, and academic records."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0046",
+      "type": "mcq",
+      "stem": "Writing that tells a story or event, often involving characters, plot, and setting, is called:",
+      "options": {
+        "A": "Descriptive writing",
+        "B": "Expository writing",
+        "C": "Narrative writing",
+        "D": "Argumentative writing"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Narrative writing is writing that tells a story or event, featuring characters, plot, setting, and conflict, as seen in novels and short stories."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0047",
+      "type": "mcq",
+      "stem": "Which type of writing uses sensory details and imagery to portray a person, place, or event vividly?",
+      "options": {
+        "A": "Narrative writing",
+        "B": "Descriptive writing",
+        "C": "Expository writing",
+        "D": "Persuasive writing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Descriptive writing describes a person, place, object, or event vividly, using features such as sensory details, imagery, and adjectives."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0048",
+      "type": "mcq",
+      "stem": "Textbooks, articles, and reports are typical examples of which type of writing?",
+      "options": {
+        "A": "Narrative writing",
+        "B": "Descriptive writing",
+        "C": "Expository writing",
+        "D": "Argumentative writing"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Expository writing explains or informs, with examples including textbooks, articles, and reports, and features facts, explanations, and logical arrangement."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0049",
+      "type": "mcq",
+      "stem": "Editorials and opinion articles aimed at convincing readers are examples of which type of writing?",
+      "options": {
+        "A": "Narrative writing",
+        "B": "Descriptive writing",
+        "C": "Expository writing",
+        "D": "Argumentative/Persuasive writing"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Argumentative/persuasive writing aims to convince the reader, using evidence, logical arguments, and persuasive language, as seen in debates, opinion articles, and editorials."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0050",
+      "type": "mcq",
+      "stem": "Which quality of good writing is demonstrated by changing 'The issue was somehow somehow difficult' to 'The issue was difficult to understand'?",
+      "options": {
+        "A": "Coherence",
+        "B": "Clarity",
+        "C": "Unity",
+        "D": "Completeness"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Clarity means that ideas should be easy to understand, and the example shows how removing confusing repetition improves clarity."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0051",
+      "type": "mcq",
+      "stem": "Changing 'Due to the fact that he was late...' to 'Because he was late...' demonstrates which quality of good writing?",
+      "options": {
+        "A": "Coherence",
+        "B": "Conciseness",
+        "C": "Unity",
+        "D": "Correctness"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Conciseness means avoiding unnecessary words, as shown by replacing the wordy phrase with a shorter, more direct one."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0052",
+      "type": "mcq",
+      "stem": "Which quality of good writing requires that every paragraph focus on one central idea?",
+      "options": {
+        "A": "Coherence",
+        "B": "Unity",
+        "C": "Completeness",
+        "D": "Correctness"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unity in writing requires that every paragraph focus on one central idea, ensuring the writing remains organized and focused."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0053",
+      "type": "mcq",
+      "stem": "Which stage of the writing process involves brainstorming, research, and outlining?",
+      "options": {
+        "A": "Drafting",
+        "B": "Revising",
+        "C": "Editing",
+        "D": "Prewriting"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Prewriting is the planning stage before writing, involving activities such as brainstorming, research, note-making, and outlining."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0054",
+      "type": "mcq",
+      "stem": "During the drafting stage of the writing process, the writer's main focus should be on:",
+      "options": {
+        "A": "Achieving perfect grammar immediately",
+        "B": "Getting ideas down rather than perfection",
+        "C": "Producing the final copy for readers",
+        "D": "Correcting punctuation errors"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "During drafting, the focus is on getting ideas down rather than achieving perfection, which comes later during revising and editing."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0055",
+      "type": "mcq",
+      "stem": "Which stage of the writing process focuses on correcting grammar, spelling, and punctuation?",
+      "options": {
+        "A": "Prewriting",
+        "B": "Drafting",
+        "C": "Editing",
+        "D": "Publishing"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Editing is the stage of the writing process focused on correcting language errors such as grammar, spelling, and punctuation."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0056",
+      "type": "mcq",
+      "stem": "Which is the final stage of the writing process where the final copy is produced for readers?",
+      "options": {
+        "A": "Revising",
+        "B": "Editing",
+        "C": "Publishing",
+        "D": "Prewriting"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Publishing is the final stage of the writing process, where the final copy of the work is produced for readers."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0057",
+      "type": "mcq",
+      "stem": "Tenses, concord, and sentence structure are areas under which component of good writing?",
+      "options": {
+        "A": "Vocabulary",
+        "B": "Grammar",
+        "C": "Punctuation",
+        "D": "Paragraphing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Grammar, which involves the correct arrangement of words and sentences, covers areas such as tenses, concord, sentence structure, and parts of speech."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0058",
+      "type": "mcq",
+      "stem": "What are the three parts of the structure of a paragraph as outlined in the notes?",
+      "options": {
+        "A": "Introduction, body, conclusion",
+        "B": "Topic sentence, supporting details, concluding sentence",
+        "C": "Sender, message, receiver",
+        "D": "Prewriting, drafting, editing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A paragraph's structure consists of a topic sentence, supporting details, and a concluding sentence."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0059",
+      "type": "mcq",
+      "stem": "The sentence 'She go to school' illustrates which common problem in writing?",
+      "options": {
+        "A": "Wordiness",
+        "B": "Grammatical error",
+        "C": "Wrong punctuation",
+        "D": "Poor organization"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The sentence 'She go to school' is a grammatical error; the correct form is 'She goes to school'."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0060",
+      "type": "mcq",
+      "stem": "The difference between 'Let's eat, Grandma.' and 'Let's eat Grandma.' best illustrates which common writing problem?",
+      "options": {
+        "A": "Wordiness",
+        "B": "Poor organization",
+        "C": "Wrong punctuation",
+        "D": "Lack of clarity"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "This example shows how incorrect punctuation (a missing comma) can completely change the meaning of a sentence."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0061",
+      "type": "mcq",
+      "stem": "Which part of an essay contains the thesis statement?",
+      "options": {
+        "A": "Introduction",
+        "B": "Body",
+        "C": "Conclusion",
+        "D": "Title"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The introduction of an essay introduces the topic and contains the thesis statement."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0062",
+      "type": "mcq",
+      "stem": "Which type of essay presents arguments and evidence to convince the reader?",
+      "options": {
+        "A": "Narrative essay",
+        "B": "Descriptive essay",
+        "C": "Expository essay",
+        "D": "Argumentative essay"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "An argumentative essay presents arguments and evidence, aiming to convince the reader of a particular viewpoint."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0063",
+      "type": "mcq",
+      "stem": "The conclusion of an essay is primarily responsible for:",
+      "options": {
+        "A": "Introducing the topic",
+        "B": "Presenting the main discussion",
+        "C": "Summarizing main points and restating the central idea",
+        "D": "Listing references"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The conclusion of an essay summarizes the main points discussed and restates the central idea of the essay."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0064",
+      "type": "mcq",
+      "stem": "Which of the following techniques is recommended for improving writing skills?",
+      "options": {
+        "A": "Avoid reading other people's work",
+        "B": "Write only when inspired",
+        "C": "Practice writing daily",
+        "D": "Avoid seeking feedback"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Frequent writing practice improves fluency and confidence, making it one of the key techniques for improving writing skills."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0065",
+      "type": "mcq",
+      "stem": "Which of the following is a characteristic of spoken communication, as opposed to written communication?",
+      "options": {
+        "A": "Delayed feedback",
+        "B": "Usually formal",
+        "C": "Immediate feedback",
+        "D": "Permanent record"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Spoken communication typically provides immediate feedback, whereas written communication often has delayed feedback."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0066",
+      "type": "mcq",
+      "stem": "Speaking skill can be defined as:",
+      "options": {
+        "A": "The ability to write essays clearly",
+        "B": "The ability to express oneself clearly, accurately, and appropriately through oral language",
+        "C": "The ability to listen attentively to others",
+        "D": "The ability to read printed text quickly"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Speaking skill is defined as the ability to express oneself clearly, accurately, and appropriately through oral language, involving both producing words and conveying meaning."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0067",
+      "type": "mcq",
+      "stem": "The correct production of speech sounds in speaking refers to:",
+      "options": {
+        "A": "Fluency",
+        "B": "Pronunciation",
+        "C": "Tone of voice",
+        "D": "Vocabulary"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Pronunciation is the correct production of speech sounds, and correct pronunciation helps avoid misunderstanding."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0068",
+      "type": "mcq",
+      "stem": "The ability to speak smoothly without unnecessary pauses is referred to as:",
+      "options": {
+        "A": "Clarity",
+        "B": "Fluency",
+        "C": "Grammar",
+        "D": "Tone of voice"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Fluency is the ability to speak smoothly without unnecessary pauses, one of the key components of effective speaking."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0069",
+      "type": "mcq",
+      "stem": "Speeches, presentations, debates, and interviews are examples of which type of speaking?",
+      "options": {
+        "A": "Informal speaking",
+        "B": "Formal speaking",
+        "C": "Passive speaking",
+        "D": "Critical speaking"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Formal speaking is used in official and academic settings, with examples including speeches, presentations, debates, and interviews."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0070",
+      "type": "mcq",
+      "stem": "A formal argument for and against a motion is best described as a:",
+      "options": {
+        "A": "Conversation",
+        "B": "Discussion",
+        "C": "Interview",
+        "D": "Debate"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "A debate is a formal argument for and against a motion, distinguishing it from conversation, discussion, and interview."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0071",
+      "type": "mcq",
+      "stem": "Which of the following is a quality of a good speaker?",
+      "options": {
+        "A": "Speaking without considering the audience",
+        "B": "Being organized and presenting ideas logically",
+        "C": "Avoiding feedback from listeners",
+        "D": "Using overly complex vocabulary at all times"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A good speaker should be organized and present ideas logically, in addition to being confident, clear, respectful, and attentive."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0072",
+      "type": "mcq",
+      "stem": "Stage fright affecting a speaker's performance is an example of which barrier to effective speaking?",
+      "options": {
+        "A": "Poor pronunciation",
+        "B": "Fear and nervousness",
+        "C": "Limited vocabulary",
+        "D": "Environmental noise"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Fear and nervousness, such as stage fright, can negatively affect a speaker's performance and is listed as a barrier to effective speaking."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0073",
+      "type": "mcq",
+      "stem": "Which of the following is recommended when speaking before an audience?",
+      "options": {
+        "A": "Avoid eye contact to reduce nervousness",
+        "B": "Use excessive fillers such as 'um' and 'ah'",
+        "C": "Maintain eye contact and speak audibly",
+        "D": "Speak as fast as possible to finish quickly"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Public speaking tips recommend maintaining eye contact, speaking audibly, organizing points clearly, and avoiding excessive fillers."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0074",
+      "type": "mcq",
+      "stem": "According to the notes, effective communication between a speaker and listener occurs when:",
+      "options": {
+        "A": "The speaker talks as much as possible",
+        "B": "The speaker delivers a clear message and the listener understands and responds appropriately",
+        "C": "The listener interrupts frequently",
+        "D": "The speaker avoids feedback from the listener"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Effective communication occurs when the speaker delivers a clear message and the listener understands and responds appropriately; without good listening, effective speaking cannot achieve its purpose."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0075",
+      "type": "mcq",
+      "stem": "Listening can be defined as:",
+      "options": {
+        "A": "The physical process of perceiving sound",
+        "B": "The process of receiving, understanding, interpreting, and responding to spoken messages",
+        "C": "The ability to write clearly",
+        "D": "The ability to read quickly"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Listening is defined as the process of receiving, understanding, interpreting, and responding to spoken messages, distinguishing it from hearing, which is merely physical."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0076",
+      "type": "mcq",
+      "stem": "Which statement correctly differentiates hearing from listening?",
+      "options": {
+        "A": "Hearing requires concentration, while listening happens naturally",
+        "B": "Hearing is a physical process, while listening is a mental and active process requiring concentration",
+        "C": "Hearing and listening mean exactly the same thing",
+        "D": "Listening only occurs without sound"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hearing is a physical process that happens naturally, while listening is an active mental process that requires concentration and understanding."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0077",
+      "type": "mcq",
+      "stem": "Which stage of the listening process involves judging the accuracy and relevance of a message?",
+      "options": {
+        "A": "Receiving",
+        "B": "Understanding",
+        "C": "Evaluating",
+        "D": "Responding"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Evaluating is the stage of the listening process that involves judging the accuracy and relevance of the message received."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0078",
+      "type": "mcq",
+      "stem": "Listening to background music while studying, without actively engaging with it, is an example of:",
+      "options": {
+        "A": "Active listening",
+        "B": "Passive listening",
+        "C": "Critical listening",
+        "D": "Empathetic listening"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Passive listening occurs when the listener hears the message but does not actively engage with it, such as listening to background music while studying."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0079",
+      "type": "mcq",
+      "stem": "A judge listening carefully to evidence in court is an example of which type of listening?",
+      "options": {
+        "A": "Appreciative listening",
+        "B": "Empathetic listening",
+        "C": "Critical listening",
+        "D": "Passive listening"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Critical listening involves listening to evaluate and analyze information carefully, as exemplified by a judge listening to evidence in court."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0080",
+      "type": "mcq",
+      "stem": "Listening to understand another person's feelings and emotions is known as:",
+      "options": {
+        "A": "Critical listening",
+        "B": "Appreciative listening",
+        "C": "Empathetic listening",
+        "D": "Passive listening"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Empathetic listening is listening to understand another person's feelings and emotions, such as listening to a friend discuss a personal problem."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0081",
+      "type": "mcq",
+      "stem": "Forming opinions before hearing the entire message is an example of which barrier to listening?",
+      "options": {
+        "A": "Noise",
+        "B": "Lack of concentration",
+        "C": "Prejudice or bias",
+        "D": "Emotional disturbance"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Prejudice or bias as a barrier to listening involves forming opinions before hearing the entire message, preventing effective listening."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0082",
+      "type": "mcq",
+      "stem": "Which of the following techniques helps confirm understanding during listening?",
+      "options": {
+        "A": "Interrupting the speaker",
+        "B": "Summarizing the message",
+        "C": "Avoiding eye contact",
+        "D": "Daydreaming"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Summarizing the message by restating key points helps confirm understanding, one of the techniques for improving listening skills."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0083",
+      "type": "mcq",
+      "stem": "Poor listening skills among students often lead to:",
+      "options": {
+        "A": "Improved academic performance",
+        "B": "Misunderstanding of course content and lower academic performance",
+        "C": "Better note-taking ability",
+        "D": "Increased class participation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Poor listening often leads to misunderstanding of course content and lower academic performance, highlighting the academic importance of listening skills."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0084",
+      "type": "mcq",
+      "stem": "Reading can be defined as:",
+      "options": {
+        "A": "Simply looking at printed words",
+        "B": "The process of recognizing, understanding, interpreting, and deriving meaning from written or printed symbols",
+        "C": "Listening to spoken words",
+        "D": "Writing notes from a lecture"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Reading is defined as the process of recognizing, understanding, interpreting, and deriving meaning from written or printed symbols, not merely looking at words."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0085",
+      "type": "mcq",
+      "stem": "Studying a textbook carefully for an examination, paying close attention to detail, is an example of:",
+      "options": {
+        "A": "Extensive reading",
+        "B": "Skimming",
+        "C": "Scanning",
+        "D": "Intensive reading"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Intensive reading involves careful and detailed reading for complete understanding, such as studying a textbook for an examination."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0086",
+      "type": "mcq",
+      "stem": "Reading novels, magazines, and newspapers for general understanding and pleasure is called:",
+      "options": {
+        "A": "Intensive reading",
+        "B": "Extensive reading",
+        "C": "Scanning",
+        "D": "Previewing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Extensive reading involves reading large amounts of material for general understanding and pleasure, such as novels, magazines, and newspapers."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0087",
+      "type": "mcq",
+      "stem": "Quickly going through a newspaper article to understand its main point is an example of:",
+      "options": {
+        "A": "Scanning",
+        "B": "Skimming",
+        "C": "Intensive reading",
+        "D": "Extensive reading"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Skimming is reading quickly to obtain the main idea of a text without reading every word, such as quickly going through a newspaper article."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0088",
+      "type": "mcq",
+      "stem": "Searching a document quickly for a specific date or telephone number is an example of:",
+      "options": {
+        "A": "Skimming",
+        "B": "Scanning",
+        "C": "Intensive reading",
+        "D": "Extensive reading"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Scanning is reading quickly to locate specific information, such as a date, name, or telephone number."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0089",
+      "type": "mcq",
+      "stem": "Which of the following is NOT something a good reader should be able to do, according to the notes on reading comprehension?",
+      "options": {
+        "A": "Identify the main idea",
+        "B": "Infer meanings",
+        "C": "Draw conclusions",
+        "D": "Memorize the text word-for-word"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "A good reader should be able to identify the main idea, understand supporting details, infer meanings, draw conclusions, and evaluate information - not necessarily memorize the text word-for-word."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0090",
+      "type": "mcq",
+      "stem": "Having prior knowledge of a topic before reading about it is referred to as:",
+      "options": {
+        "A": "Vocabulary knowledge",
+        "B": "Background knowledge",
+        "C": "Reading purpose",
+        "D": "Reading environment"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Background knowledge refers to previous knowledge of a topic, which improves reading comprehension."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0091",
+      "type": "mcq",
+      "stem": "Examining headings, subheadings, and illustrations before reading a text is known as:",
+      "options": {
+        "A": "Predicting",
+        "B": "Previewing",
+        "C": "Questioning",
+        "D": "Summarizing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Previewing is the reading technique of examining headings, subheadings, and illustrations before actually reading the text."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0092",
+      "type": "mcq",
+      "stem": "Restating the main ideas of a text in one's own words is referred to as:",
+      "options": {
+        "A": "Previewing",
+        "B": "Predicting",
+        "C": "Questioning",
+        "D": "Summarizing"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Summarizing is the reading technique of restating the main ideas of a text in one's own words."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0093",
+      "type": "mcq",
+      "stem": "Tiredness reducing a reader's efficiency is an example of which barrier to effective reading?",
+      "options": {
+        "A": "Poor vocabulary",
+        "B": "Lack of concentration",
+        "C": "Fatigue",
+        "D": "Lack of interest"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Fatigue, or tiredness, is listed as a barrier to effective reading because it reduces reading efficiency."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0094",
+      "type": "mcq",
+      "stem": "Which of the following is recommended to improve reading skills?",
+      "options": {
+        "A": "Avoid using a dictionary",
+        "B": "Read only one type of material",
+        "C": "Practice skimming and scanning",
+        "D": "Read in a noisy environment"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Practicing skimming and scanning is one of the recommended techniques for improving reading skills, alongside reading regularly and building vocabulary."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0095",
+      "type": "mcq",
+      "stem": "Reading is essential for students academically because it helps them to do all of the following EXCEPT:",
+      "options": {
+        "A": "Understand course materials",
+        "B": "Conduct research",
+        "C": "Prepare for examinations",
+        "D": "Avoid all forms of writing"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Reading helps students understand course materials, conduct research, prepare for examinations, and improve vocabulary and writing - it does not help them avoid writing altogether; in fact, reading enhances writing skills."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0096",
+      "type": "mcq",
+      "stem": "Which of the four basic communication skills (listening, speaking, reading, writing) involves the ability to express oneself clearly and confidently?",
+      "options": {
+        "A": "Listening skill",
+        "B": "Speaking skill",
+        "C": "Reading skill",
+        "D": "Writing skill"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Speaking skill is the ability to express ideas clearly and confidently, one of the four basic communication skills discussed in the notes."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0097",
+      "type": "mcq",
+      "stem": "Active listening, passive listening, and critical listening are types associated with which basic communication skill?",
+      "options": {
+        "A": "Writing skill",
+        "B": "Speaking skill",
+        "C": "Listening skill",
+        "D": "Reading skill"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Active listening, passive listening, and critical listening are types of listening, which is one of the basic communication skills discussed in the notes."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0098",
+      "type": "mcq",
+      "stem": "Which of the following is an importance of communication?",
+      "options": {
+        "A": "Encourages isolation",
+        "B": "Enhances learning",
+        "C": "Eliminates relationships",
+        "D": "Prevents cooperation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Communication enhances learning through the sharing of knowledge and ideas."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0099",
+      "type": "mcq",
+      "stem": "A communication message that provides all necessary information is said to be:",
+      "options": {
+        "A": "Concrete",
+        "B": "Clear",
+        "C": "Complete",
+        "D": "Concise"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Effective communication should provide all information needed for understanding."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0100",
+      "type": "mcq",
+      "stem": "Which characteristic of effective communication requires the use of accurate grammar and facts?",
+      "options": {
+        "A": "Correct",
+        "B": "Concrete",
+        "C": "Clear",
+        "D": "Courteous"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Correct communication uses accurate grammar and factual information."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0101",
+      "type": "mcq",
+      "stem": "Which function of communication focuses on teaching and learning?",
+      "options": {
+        "A": "Social",
+        "B": "Educational",
+        "C": "Entertainment",
+        "D": "Persuasive"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The educational function of communication supports teaching and learning."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0102",
+      "type": "mcq",
+      "stem": "Which stage of listening comes immediately after receiving a message?",
+      "options": {
+        "A": "Responding",
+        "B": "Evaluating",
+        "C": "Understanding",
+        "D": "Interpreting"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The listening process follows the sequence: receiving, understanding, interpreting, evaluating, and responding."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0103",
+      "type": "mcq",
+      "stem": "Listening to music for enjoyment is an example of:",
+      "options": {
+        "A": "Critical listening",
+        "B": "Appreciative listening",
+        "C": "Empathetic listening",
+        "D": "Passive listening"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Appreciative listening is listening for pleasure or enjoyment."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0104",
+      "type": "mcq",
+      "stem": "Which of the following is a characteristic of a good listener?",
+      "options": {
+        "A": "Interrupting frequently",
+        "B": "Being open-minded",
+        "C": "Ignoring feedback",
+        "D": "Jumping to conclusions"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A good listener remains open-minded and avoids premature judgment."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0105",
+      "type": "mcq",
+      "stem": "Which technique helps improve listening during lectures?",
+      "options": {
+        "A": "Avoiding note-taking",
+        "B": "Interrupting speakers",
+        "C": "Taking notes",
+        "D": "Daydreaming"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Taking notes improves concentration and retention of information."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0106",
+      "type": "mcq",
+      "stem": "Listening skills are important academically because they help students:",
+      "options": {
+        "A": "Ignore instructions",
+        "B": "Understand lectures",
+        "C": "Avoid participation",
+        "D": "Reduce concentration"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Listening is essential for understanding lectures and succeeding academically."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0107",
+      "type": "mcq",
+      "stem": "Reading can best be defined as:",
+      "options": {
+        "A": "Looking at words only",
+        "B": "The process of recognizing, understanding, interpreting and deriving meaning from written symbols",
+        "C": "Speaking written words aloud",
+        "D": "Memorizing textbooks"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Reading involves understanding and deriving meaning from written symbols."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0108",
+      "type": "mcq",
+      "stem": "Studying a textbook carefully for an examination is an example of:",
+      "options": {
+        "A": "Extensive reading",
+        "B": "Intensive reading",
+        "C": "Skimming",
+        "D": "Scanning"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Intensive reading involves detailed reading for complete understanding."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0109",
+      "type": "mcq",
+      "stem": "Reading novels and newspapers for general understanding and pleasure is known as:",
+      "options": {
+        "A": "Intensive reading",
+        "B": "Scanning",
+        "C": "Extensive reading",
+        "D": "Critical reading"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Extensive reading involves reading large amounts of material for enjoyment and general understanding."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0110",
+      "type": "mcq",
+      "stem": "The attitude or emotion conveyed through speech is known as:",
+      "options": {
+        "A": "Grammar",
+        "B": "Fluency",
+        "C": "Tone of voice",
+        "D": "Vocabulary"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Tone of voice communicates the speaker's attitude or emotion."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0111",
+      "type": "mcq",
+      "stem": "Concord, as a grammar rule, mainly governs agreement between:",
+      "options": {
+        "A": "Adjective and noun",
+        "B": "Subject and verb",
+        "C": "Preposition and object",
+        "D": "Adverb and verb"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Concord (subject-verb agreement) requires the verb to agree in number with its subject, e.g. 'She goes' not 'She go'."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0112",
+      "type": "mcq",
+      "stem": "A sentence containing one independent clause and no dependent clause is called a:",
+      "options": {
+        "A": "Compound sentence",
+        "B": "Complex sentence",
+        "C": "Simple sentence",
+        "D": "Compound-complex sentence"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A simple sentence has only one independent clause, expressing a single complete thought."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0113",
+      "type": "mcq",
+      "stem": "Two independent clauses joined by a conjunction such as 'and' or 'but' form a:",
+      "options": {
+        "A": "Simple sentence",
+        "B": "Compound sentence",
+        "C": "Complex sentence",
+        "D": "Fragment"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A compound sentence joins two independent clauses, usually with a coordinating conjunction like 'and', 'but', or 'or'."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0114",
+      "type": "mcq",
+      "stem": "A sentence with an independent clause and at least one dependent clause is called a:",
+      "options": {
+        "A": "Simple sentence",
+        "B": "Compound sentence",
+        "C": "Complex sentence",
+        "D": "Run-on sentence"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A complex sentence contains one independent clause and one or more dependent (subordinate) clauses, often joined by words like 'because' or 'although'."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0115",
+      "type": "mcq",
+      "stem": "Tense in grammar primarily indicates:",
+      "options": {
+        "A": "The mood of the speaker",
+        "B": "The time at which an action occurs",
+        "C": "The number of nouns in a sentence",
+        "D": "The tone of a sentence"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Tense shows whether an action takes place in the past, present, or future."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0116",
+      "type": "mcq",
+      "stem": "A word that names a person, place, thing, or idea is a:",
+      "options": {
+        "A": "Verb",
+        "B": "Noun",
+        "C": "Adverb",
+        "D": "Conjunction"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A noun is the part of speech used to name people, places, things, or ideas."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0117",
+      "type": "mcq",
+      "stem": "Which part of speech expresses an action or state of being?",
+      "options": {
+        "A": "Noun",
+        "B": "Pronoun",
+        "C": "Verb",
+        "D": "Preposition"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A verb expresses an action (run, write) or a state of being (is, seem)."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0118",
+      "type": "mcq",
+      "stem": "A word that describes or modifies a noun is called a/an:",
+      "options": {
+        "A": "Adverb",
+        "B": "Adjective",
+        "C": "Preposition",
+        "D": "Interjection"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An adjective describes or qualifies a noun, e.g. 'a tall building'."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0119",
+      "type": "mcq",
+      "stem": "A word that modifies a verb, adjective, or another adverb is a/an:",
+      "options": {
+        "A": "Noun",
+        "B": "Adverb",
+        "C": "Conjunction",
+        "D": "Pronoun"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An adverb modifies a verb, adjective, or another adverb, often answering how, when, where, or to what extent (e.g. 'quickly')."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0120",
+      "type": "mcq",
+      "stem": "Which part of speech is used to replace a noun?",
+      "options": {
+        "A": "Pronoun",
+        "B": "Preposition",
+        "C": "Conjunction",
+        "D": "Interjection"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A pronoun (he, she, it, they) takes the place of a noun to avoid repetition."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0121",
+      "type": "mcq",
+      "stem": "A word that shows the relationship between a noun and other words in a sentence, such as 'under' or 'beside', is a:",
+      "options": {
+        "A": "Conjunction",
+        "B": "Preposition",
+        "C": "Adverb",
+        "D": "Interjection"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A preposition shows the relationship between a noun/pronoun and other parts of the sentence, often indicating position or time (e.g. 'under the table')."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0122",
+      "type": "mcq",
+      "stem": "Words such as 'and', 'but', and 'or' that join words or clauses are called:",
+      "options": {
+        "A": "Prepositions",
+        "B": "Conjunctions",
+        "C": "Pronouns",
+        "D": "Interjections"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A conjunction joins words, phrases, or clauses, such as 'and', 'but', and 'or'."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0123",
+      "type": "mcq",
+      "stem": "A word expressing sudden emotion, such as 'Wow!' or 'Ouch!', is called a/an:",
+      "options": {
+        "A": "Adverb",
+        "B": "Pronoun",
+        "C": "Interjection",
+        "D": "Conjunction"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "An interjection is a word or phrase that expresses sudden emotion, such as surprise or pain (e.g. 'Wow!', 'Ouch!')."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0124",
+      "type": "mcq",
+      "stem": "Which of the following is the most effective way to develop vocabulary?",
+      "options": {
+        "A": "Avoiding unfamiliar words",
+        "B": "Reading widely and looking up unfamiliar words",
+        "C": "Memorizing a dictionary from A to Z",
+        "D": "Speaking only in one's native language"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Wide reading exposes a learner to new words in context, and looking them up reinforces meaning and retention."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0125",
+      "type": "mcq",
+      "stem": "Words that have similar meanings to each other are called:",
+      "options": {
+        "A": "Antonyms",
+        "B": "Synonyms",
+        "C": "Homonyms",
+        "D": "Collocations"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Synonyms are words with similar or nearly identical meanings, e.g. 'happy' and 'glad'."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0126",
+      "type": "mcq",
+      "stem": "Words that have opposite meanings to each other are called:",
+      "options": {
+        "A": "Synonyms",
+        "B": "Antonyms",
+        "C": "Homophones",
+        "D": "Idioms"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Antonyms are words with opposite meanings, e.g. 'hot' and 'cold'."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0127",
+      "type": "mcq",
+      "stem": "Which punctuation mark is used to show possession or the omission of letters in a contraction?",
+      "options": {
+        "A": "Colon",
+        "B": "Apostrophe",
+        "C": "Semicolon",
+        "D": "Hyphen"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An apostrophe shows possession (e.g. 'Mary's book') or marks omitted letters in contractions (e.g. 'don't')."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0128",
+      "type": "mcq",
+      "stem": "Which of the following best illustrates correct spelling practice?",
+      "options": {
+        "A": "Relying only on guesswork for unfamiliar words",
+        "B": "Using a dictionary to confirm correct spelling",
+        "C": "Ignoring spelling once meaning is clear",
+        "D": "Writing words exactly as they sound in casual speech"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Consulting a dictionary helps writers confirm correct spelling rather than relying on guesswork or phonetic approximation."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0129",
+      "type": "mcq",
+      "stem": "The sentence that introduces the main idea of a paragraph is the:",
+      "options": {
+        "A": "Concluding sentence",
+        "B": "Topic sentence",
+        "C": "Supporting sentence",
+        "D": "Transition sentence"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The topic sentence states the main idea of a paragraph, usually appearing at or near the beginning."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0130",
+      "type": "mcq",
+      "stem": "Words and phrases like 'however', 'in addition', and 'as a result' are mainly used in paragraph writing to:",
+      "options": {
+        "A": "Introduce a new unrelated topic",
+        "B": "Show transitions and link ideas logically",
+        "C": "Replace the topic sentence",
+        "D": "End the paragraph abruptly"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Transitional words and phrases link ideas within and between paragraphs, supporting coherence."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0131",
+      "type": "mcq",
+      "stem": "A good summary of a passage should:",
+      "options": {
+        "A": "Include the writer's personal opinion throughout",
+        "B": "Reproduce the passage word for word",
+        "C": "Condense the main points in the writer's own words",
+        "D": "Be longer than the original passage"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Summary writing involves condensing the essential ideas of a passage into a shorter version using one's own words, without adding personal opinion."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0132",
+      "type": "mcq",
+      "stem": "When summarizing a passage, a writer should generally avoid including:",
+      "options": {
+        "A": "The main ideas",
+        "B": "Examples, illustrations, and minor details",
+        "C": "A logical sequence of points",
+        "D": "Accurate representation of the author's ideas"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A summary focuses on main ideas and key points, leaving out minor details, examples, and illustrations from the original text."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0133",
+      "type": "mcq",
+      "stem": "A letter written to a friend or family member in a personal, casual style is called a/an:",
+      "options": {
+        "A": "Formal letter",
+        "B": "Informal letter",
+        "C": "Memo",
+        "D": "Report"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An informal letter is written to people one knows personally, such as friends or family, using a casual and friendly tone."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0134",
+      "type": "mcq",
+      "stem": "A letter written to an organization, official, or unfamiliar recipient, using a polite and structured tone, is called a:",
+      "options": {
+        "A": "Informal letter",
+        "B": "Formal letter",
+        "C": "Diary entry",
+        "D": "Narrative"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A formal letter is written for official purposes, such as to an employer or institution, and follows a structured, polite, and professional tone."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0135",
+      "type": "mcq",
+      "stem": "Which of the following is typically found in a formal letter but not usually in an informal one?",
+      "options": {
+        "A": "A casual greeting like 'Hi'",
+        "B": "The sender's and recipient's addresses with a formal salutation",
+        "C": "Slang expressions",
+        "D": "Personal jokes"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Formal letters include structured elements such as addresses and a formal salutation (e.g. 'Dear Sir/Madam'), unlike the casual style of informal letters."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0136",
+      "type": "mcq",
+      "stem": "A literary genre written in verse form, often using rhythm and imagery to express emotion, is:",
+      "options": {
+        "A": "Drama",
+        "B": "Poetry",
+        "C": "Prose fiction",
+        "D": "Essay"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Poetry is a literary genre composed in verse, characterized by rhythm, imagery, and condensed emotional expression."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0137",
+      "type": "mcq",
+      "stem": "A literary work written to be performed on stage by actors is classified as:",
+      "options": {
+        "A": "Poetry",
+        "B": "Drama",
+        "C": "Prose fiction",
+        "D": "Biography"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Drama is literature written primarily for performance, conveyed through dialogue and action by actors on a stage."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0138",
+      "type": "mcq",
+      "stem": "Novels and short stories are examples of which literary genre?",
+      "options": {
+        "A": "Poetry",
+        "B": "Drama",
+        "C": "Prose fiction",
+        "D": "Non-fiction"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Prose fiction includes imaginative narrative writing such as novels and short stories, written in ordinary sentence and paragraph form rather than verse or dialogue-only format."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0139",
+      "type": "mcq",
+      "stem": "Which of the following best describes a function of literature?",
+      "options": {
+        "A": "It only entertains and has no other value",
+        "B": "It reflects society, educates, and entertains its audience",
+        "C": "It exists solely to test grammar rules",
+        "D": "It cannot express human emotions"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Literature functions to reflect human experiences and societal issues, educate readers, and entertain, among other roles."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0140",
+      "type": "mcq",
+      "stem": "When literature exposes social problems such as corruption or injustice to provoke reflection, it is performing which function?",
+      "options": {
+        "A": "Aesthetic function",
+        "B": "Social/critical function",
+        "C": "Entertainment function",
+        "D": "Linguistic function"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Literature's social or critical function involves examining and critiquing societal issues such as corruption and injustice."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0141",
+      "type": "mcq",
+      "stem": "The sequence of events in a literary work is referred to as the:",
+      "options": {
+        "A": "Setting",
+        "B": "Plot",
+        "C": "Theme",
+        "D": "Tone"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Plot refers to the sequence of events that make up a story, including its beginning, conflict, climax, and resolution."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0142",
+      "type": "mcq",
+      "stem": "The time and place in which a literary work occurs is called its:",
+      "options": {
+        "A": "Plot",
+        "B": "Setting",
+        "C": "Character",
+        "D": "Theme"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Setting refers to the time and place in which the events of a literary work occur."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0143",
+      "type": "mcq",
+      "stem": "The central message or underlying idea of a literary work is its:",
+      "options": {
+        "A": "Plot",
+        "B": "Setting",
+        "C": "Theme",
+        "D": "Character"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Theme is the central message, idea, or insight about life that a literary work conveys."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0144",
+      "type": "mcq",
+      "stem": "The struggle between opposing forces in a story, which drives the plot, is called:",
+      "options": {
+        "A": "Conflict",
+        "B": "Irony",
+        "C": "Setting",
+        "D": "Symbolism"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Conflict is the struggle between opposing forces (e.g. character vs. character, or character vs. society) that drives the action of a story."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0145",
+      "type": "mcq",
+      "stem": "When a writer uses an object or action to represent a deeper meaning beyond its literal sense, this device is called:",
+      "options": {
+        "A": "Symbolism",
+        "B": "Alliteration",
+        "C": "Rhyme",
+        "D": "Plot"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Symbolism is the use of objects, characters, or actions to represent ideas or qualities beyond their literal meaning."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0146",
+      "type": "mcq",
+      "stem": "A contrast between what is expected and what actually happens in a literary work is called:",
+      "options": {
+        "A": "Irony",
+        "B": "Theme",
+        "C": "Setting",
+        "D": "Narration"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Irony occurs when there is a contrast between expectation and reality, often producing surprise or humor."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0147",
+      "type": "mcq",
+      "stem": "A figure of speech that directly compares two unlike things using 'like' or 'as' is called a:",
+      "options": {
+        "A": "Metaphor",
+        "B": "Simile",
+        "C": "Personification",
+        "D": "Hyperbole"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A simile compares two unlike things directly using 'like' or 'as', e.g. 'as brave as a lion'."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0148",
+      "type": "mcq",
+      "stem": "A figure of speech that compares two unlike things without using 'like' or 'as' is called a:",
+      "options": {
+        "A": "Simile",
+        "B": "Metaphor",
+        "C": "Onomatopoeia",
+        "D": "Alliteration"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A metaphor compares two unlike things by stating one is the other, without using 'like' or 'as', e.g. 'Time is money'."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0149",
+      "type": "mcq",
+      "stem": "Giving human qualities to non-human things or objects is called:",
+      "options": {
+        "A": "Hyperbole",
+        "B": "Simile",
+        "C": "Personification",
+        "D": "Irony"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Personification gives human characteristics to non-human things, e.g. 'The wind whispered through the trees'."
+    },
+    {
+      "id": "uni-tasued-eng121-bank-0150",
+      "type": "mcq",
+      "stem": "The repetition of the same initial consonant sound in a series of nearby words is called:",
+      "options": {
+        "A": "Alliteration",
+        "B": "Rhyme",
+        "C": "Onomatopoeia",
+        "D": "Hyperbole"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Alliteration is the repetition of the same initial consonant sound in successive or nearby words, e.g. 'Peter Piper picked'."
+    }
+  ]
+}

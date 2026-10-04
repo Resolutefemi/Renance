@@ -1,0 +1,1411 @@
+{
+  "code": "uni-bouesti-csc115-bank",
+  "title": "BOUESTI CSC115 | Course Question Bank",
+  "version": 1,
+  "questionCount": 100,
+  "totalMarks": 100,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-bouesti-csc115-bank-0001",
+      "type": "mcq",
+      "stem": "How is a computer described in its basic form?",
+      "options": {
+        "A": "A mechanical calculator",
+        "B": "An electronic device that receives, processes, and produces data",
+        "C": "A purely manual data entry tool",
+        "D": "A device that only stores information"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document defines a computer as an electronic device that can receive data, process it, and produce the result as an outcome."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0002",
+      "type": "mcq",
+      "stem": "In the computer data flow process, what is the result of processing known as?",
+      "options": {
+        "A": "Input",
+        "B": "Data",
+        "C": "Output or information",
+        "D": "Memory"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text states that the result of the processing is known as output or information."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0003",
+      "type": "mcq",
+      "stem": "Which major part of the computer is described as the 'spirit or soul'?",
+      "options": {
+        "A": "Hardware",
+        "B": "Software",
+        "C": "Motherboard",
+        "D": "CPU"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document uses the analogy that hardware is the body while software is the spirit or soul."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0004",
+      "type": "mcq",
+      "stem": "What is the basis of machine language used by computers?",
+      "options": {
+        "A": "Hexadecimal format",
+        "B": "Human-readable text",
+        "C": "Binary digital format (0's and 1's)",
+        "D": "Decimal digits"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Computers process numerical data in binary digital format, which is the basis of machine language."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0005",
+      "type": "mcq",
+      "stem": "Which of the following is NOT listed as a subsystem of a full-fledged computer system?",
+      "options": {
+        "A": "Users",
+        "B": "Operating system",
+        "C": "Physical Environment",
+        "D": "Hardware"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A computer system comprises users, application software, systems software, operating system, and hardware."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0006",
+      "type": "mcq",
+      "stem": "The users' subsystem includes which of the following groups?",
+      "options": {
+        "A": "Hardware technicians only",
+        "B": "Expert users, programmers/developers, and end-users",
+        "C": "Only people who buy the computer",
+        "D": "System administrators only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text explicitly defines the users' subsystem as comprising expert users, programmers/developers, and end-users."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0007",
+      "type": "mcq",
+      "stem": "Which characteristic refers to a computer's ability to perform different types of tasks?",
+      "options": {
+        "A": "Speed",
+        "B": "Versatility",
+        "C": "Diligence",
+        "D": "Memory"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Versatility is listed as a characteristic of a computer, referring to its multi-tasking capabilities."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0008",
+      "type": "mcq",
+      "stem": "What defines computer hardware according to the document?",
+      "options": {
+        "A": "Any intangible program",
+        "B": "Any physical parts or components that contribute to a computer system",
+        "C": "Only the CPU and RAM",
+        "D": "The code that runs the computer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document defines hardware as any physical parts or components contributing to the system."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0009",
+      "type": "mcq",
+      "stem": "Which of these is an example of computer software?",
+      "options": {
+        "A": "Motherboard",
+        "B": "Graphics processing unit (GPU)",
+        "C": "Google Chrome",
+        "D": "Hard drive"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Google Chrome is listed as a computer software component in the comparison table."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0010",
+      "type": "mcq",
+      "stem": "How are Personal Computers (PCs) characterized in terms of user capacity?",
+      "options": {
+        "A": "Multi-user systems",
+        "B": "Single-user computers",
+        "C": "Server-only systems",
+        "D": "Network-only nodes"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text defines personal computers as single-user computers based on microprocessors."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0011",
+      "type": "mcq",
+      "stem": "Which computer type is specifically described as being 'relatively more powerful than PCs' but still 'single-user-based'?",
+      "options": {
+        "A": "Mainframe",
+        "B": "Supercomputer",
+        "C": "Workstation",
+        "D": "Minicomputer"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Workstations are described as more powerful than PCs while remaining single-user-based."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0012",
+      "type": "mcq",
+      "stem": "Which organizations are likely to own minicomputers according to the document?",
+      "options": {
+        "A": "Small retail shops",
+        "B": "Individual students",
+        "C": "Large organizations like NASA or CBN",
+        "D": "Home offices"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Minicomputers belong to large organizations such as NASRDA, NIMC, CBN, and NASA."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0013",
+      "type": "mcq",
+      "stem": "Mainframe computers can support approximately how many users simultaneously?",
+      "options": {
+        "A": "Only one",
+        "B": "Dozens",
+        "C": "Thousands",
+        "D": "Exactly ten"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Mainframes are multi-user systems that support thousands of users simultaneously."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0014",
+      "type": "mcq",
+      "stem": "What was the world's fastest supercomputer known on Top500 until early 2021?",
+      "options": {
+        "A": "Aurora",
+        "B": "Fugaku",
+        "C": "IBM System z9",
+        "D": "Cray-1"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Until early 2021, the Chinese exascale system Fugaku was known as the world's fastest supercomputer."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0015",
+      "type": "mcq",
+      "stem": "Who is credited with inventing the first runner of digital programmable computers in 1833?",
+      "options": {
+        "A": "John W. Mauchly",
+        "B": "J. Presper Eckert",
+        "C": "Charles Babbage",
+        "D": "John von Neumann"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Charles Babbage invented the first runner of digital programmable and general-purpose computers in 1833."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0016",
+      "type": "mcq",
+      "stem": "Which technology was the hallmark of First Generation computers (1940-1956)?",
+      "options": {
+        "A": "Transistors",
+        "B": "Integrated Circuits",
+        "C": "Vacuum tubes",
+        "D": "Microprocessors"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The first generation showcased the use of vacuum tubes for logic circuitry."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0017",
+      "type": "mcq",
+      "stem": "What was a major drawback of first-generation computer systems?",
+      "options": {
+        "A": "They were too small",
+        "B": "Excessive heat and high cost",
+        "C": "They used too little power",
+        "D": "They were too fast for users"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Drawbacks of first-generation systems included slower speed, excessive heat, and high cost."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0018",
+      "type": "mcq",
+      "stem": "Second-generation computers (1957-1963) replaced vacuum tubes with which component?",
+      "options": {
+        "A": "Microchips",
+        "B": "Transistors",
+        "C": "Magnetic drums",
+        "D": "Silicon wafers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In the second generation, transistors were used as the significant switching devices."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0019",
+      "type": "mcq",
+      "stem": "What technology defined the third generation of computers (1964-1971)?",
+      "options": {
+        "A": "Vacuum tubes",
+        "B": "Transistors",
+        "C": "Integrated circuits (IC)",
+        "D": "Artificial Intelligence"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Integrated circuits were developed and used as switching devices during the third generation."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0020",
+      "type": "mcq",
+      "stem": "Fourth-generation computers are based on the invention of which component?",
+      "options": {
+        "A": "Vacuum tubes",
+        "B": "Microprocessors",
+        "C": "Magnetic drums",
+        "D": "Superconductors"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Fourth-generation computers were based on the development of microprocessors as the CPU."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0021",
+      "type": "mcq",
+      "stem": "Which company was the first to design and develop microprocessors?",
+      "options": {
+        "A": "IBM",
+        "B": "Microsoft",
+        "C": "Intel",
+        "D": "Apple"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document states that Intel was the first company to design and develop microprocessors."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0022",
+      "type": "mcq",
+      "stem": "The fifth generation of computers (1990 to date) incorporates which concept?",
+      "options": {
+        "A": "Vacuum tubes",
+        "B": "Machine language only",
+        "C": "Artificial Intelligence",
+        "D": "Mechanical gears"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Fifth-generation computers incorporate multi-core technologies and artificial intelligence concepts."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0023",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a robot from the fifth generation?",
+      "options": {
+        "A": "ENIAC",
+        "B": "PDP-11",
+        "C": "Sophia",
+        "D": "IBM-360"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Sophia is explicitly listed as an example of a robot in the fifth-generation section."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0024",
+      "type": "mcq",
+      "stem": "What is described as the interface between system hardware, application software, and users?",
+      "options": {
+        "A": "Utility software",
+        "B": "Operating system",
+        "C": "Firmware",
+        "D": "Word processor"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The operating system is software that interfaces between hardware, application software, and users."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0025",
+      "type": "mcq",
+      "stem": "Which type of software is designed to perform specific tasks like word processing or accounting?",
+      "options": {
+        "A": "Operating system",
+        "B": "System software",
+        "C": "Application software",
+        "D": "Firmware"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document lists word processing and accounting as tasks carried out by software (later categorized under application software)."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0026",
+      "type": "mcq",
+      "stem": "What happens to data in RAM when the computer power is turned off?",
+      "options": {
+        "A": "It is saved permanently",
+        "B": "It is moved to the cloud",
+        "C": "It is erased automatically",
+        "D": "It remains unchanged"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "RAM is non-persistent; if power is turned off, data and programs are erased automatically."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0027",
+      "type": "mcq",
+      "stem": "How much is 1 nanosecond in relation to a second?",
+      "options": {
+        "A": "1 millionth",
+        "B": "1 thousandth",
+        "C": "1 billionth",
+        "D": "1 trillionth"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document defines 1 nanosecond as 1 billionth of a second."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0028",
+      "type": "mcq",
+      "stem": "Which type of compact disc cannot be deleted or overwritten after being recorded once?",
+      "options": {
+        "A": "CD-RW",
+        "B": "DVD-RAM",
+        "C": "CD-R",
+        "D": "Hard Disk"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "For CD-R (Recordable), contents can be stored once and read several times but cannot be deleted or overwritten."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0029",
+      "type": "mcq",
+      "stem": "What is the storage capacity of a double-sided double-layer DVD?",
+      "options": {
+        "A": "4.7 GB",
+        "B": "8.5 GB",
+        "C": "9.4 GB",
+        "D": "17 GB"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The document states a double-sided double-layer DVD has a capacity of 17 GB."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0030",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a pointing input device?",
+      "options": {
+        "A": "Keyboard",
+        "B": "Microphone",
+        "C": "Touchpad",
+        "D": "Printer"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text identifies the mouse, trackball, and touchpad as examples of pointing input devices."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0031",
+      "type": "mcq",
+      "stem": "What is the primary function of an output device?",
+      "options": {
+        "A": "To enter data into the computer",
+        "B": "To convert human-readable data to machine code",
+        "C": "To display or physically reproduce results of processed data",
+        "D": "To store data permanently"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "An output device displays, projects, or physically reproduces the results of data processed by a computer."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0032",
+      "type": "mcq",
+      "stem": "Which printer type uses a photoelectric drum and powdered ink?",
+      "options": {
+        "A": "Inkjet printer",
+        "B": "Dot matrix printer",
+        "C": "Laser printer",
+        "D": "Plotter"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Laser printers use a photoelectric drum, powdered ink, and laser light to produce dots for printing."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0033",
+      "type": "mcq",
+      "stem": "What device is typically used for architectural blueprints and large high-quality engineering drawings?",
+      "options": {
+        "A": "Laser printer",
+        "B": "Graph plotter",
+        "C": "Inkjet printer",
+        "D": "Scanner"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A plotter is used to generate hardcopy large drawings and architectural blueprints."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0034",
+      "type": "mcq",
+      "stem": "What is the main function of the motherboard's CMOS battery?",
+      "options": {
+        "A": "To power the cooling fan",
+        "B": "To provide backup for the system clock and BIOS setup",
+        "C": "To charge the laptop battery",
+        "D": "To increase CPU speed"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The CMOS battery provides memory power backup for the system clock and system setup parameters in the BIOS chip."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0035",
+      "type": "mcq",
+      "stem": "Which component on the motherboard replaced a larger number of individual chips to control data flow?",
+      "options": {
+        "A": "CPU",
+        "B": "Chipset",
+        "C": "RAM",
+        "D": "VGA port"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A chipset is a smaller set of chips that replaced a larger amount of chips to control data flow between components."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0036",
+      "type": "mcq",
+      "stem": "What is the unit for modern computer clock speeds mentioned in the text?",
+      "options": {
+        "A": "MHz",
+        "B": "KHz",
+        "C": "GHz",
+        "D": "THz"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text mentions that nowadays, PCs have clock speeds greater than 3.2 billion pulses per second (3.2 GHz)."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0037",
+      "type": "mcq",
+      "stem": "Which port transmits 8 bits of data simultaneously?",
+      "options": {
+        "A": "Serial port",
+        "B": "Parallel port",
+        "C": "USB port",
+        "D": "Modem port"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "While serial ports transmit one bit at a time, parallel ports transmit 8 bits of data simultaneously."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0038",
+      "type": "mcq",
+      "stem": "What is another name for microchips?",
+      "options": {
+        "A": "Software modules",
+        "B": "Integrated circuits (IC)",
+        "C": "Hard drives",
+        "D": "Power units"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Microchips are also known as chips or integrated circuits (IC)."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0039",
+      "type": "mcq",
+      "stem": "Which of the following is a 'Don't' in computer maintenance best practices?",
+      "options": {
+        "A": "Perform regular backups",
+        "B": "Install updates promptly",
+        "C": "Ignore warning signs of hardware failure",
+        "D": "Maintain a clean environment"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Ignoring warning signs of hardware failure is listed under the 'Don'ts' for maintenance."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0040",
+      "type": "mcq",
+      "stem": "How often should coolant be replaced in liquid-cooled computers?",
+      "options": {
+        "A": "Every week",
+        "B": "Every month",
+        "C": "Every 6-12 months",
+        "D": "Every 5 years"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document advises replacing coolant every 6-12 months for liquid-cooled systems."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0041",
+      "type": "mcq",
+      "stem": "What are computers on a network commonly called?",
+      "options": {
+        "A": "Clients only",
+        "B": "Nodes or hosts",
+        "C": "Terminals only",
+        "D": "Servers only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Computers on a network are called nodes or hosts."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0042",
+      "type": "mcq",
+      "stem": "Which networking device is used to send information over a network cable?",
+      "options": {
+        "A": "Modem",
+        "B": "Network card",
+        "C": "VGA card",
+        "D": "Sound card"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "While a modem sends information over a communication line, a network card sends it over a network cable."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0043",
+      "type": "mcq",
+      "stem": "What term describes the physical arrangement and layout of computing resources in a network?",
+      "options": {
+        "A": "Network security",
+        "B": "Network protocol",
+        "C": "Network topology",
+        "D": "Network throughput"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Network Topology is the physical arrangement and layout of the computing shared resources."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0044",
+      "type": "mcq",
+      "stem": "Which of these is NOT a common example of network topology?",
+      "options": {
+        "A": "Bus",
+        "B": "Star",
+        "C": "Square",
+        "D": "Ring"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Common examples listed are Bus, Star, Mesh, Ring, and Daisy chain."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0045",
+      "type": "mcq",
+      "stem": "Network performance is a function of which of the following?",
+      "options": {
+        "A": "Color of the cables",
+        "B": "Throughput",
+        "C": "Size of the monitor",
+        "D": "The brand of the mouse"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Performance is a function of the throughput, which involves transit and response times."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0046",
+      "type": "mcq",
+      "stem": "What is multi-core technology?",
+      "options": {
+        "A": "One CPU with multiple monitors",
+        "B": "Two or more logical CPUs on the same processor chip",
+        "C": "Multiple computers in one room",
+        "D": "A CPU with more RAM"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Multi-core technology describes the operation of two or more logical CPUs on the same processor chip."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0047",
+      "type": "mcq",
+      "stem": "A 'dual-quad core' processor refers to how many total core processors?",
+      "options": {
+        "A": "Two",
+        "B": "Four",
+        "C": "Six",
+        "D": "Eight"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Dual quad cores refer to two sockets having four CPUs each, making a total of eight core processors."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0048",
+      "type": "mcq",
+      "stem": "What is an embedded system?",
+      "options": {
+        "A": "A computer that can be taken apart easily",
+        "B": "A computer system with a dedicated function within a larger mechanical or electrical system",
+        "C": "A system that only uses software",
+        "D": "A standard desktop PC"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Embedded systems have dedicated functions within larger mechanical or electrical systems."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0049",
+      "type": "mcq",
+      "stem": "What is an example of an embedded system mentioned in the text?",
+      "options": {
+        "A": "Supercomputer",
+        "B": "Elevator controller",
+        "C": "Mainframe",
+        "D": "Web browser"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An elevator controller is explicitly mentioned as an example of an embedded system."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0050",
+      "type": "mcq",
+      "stem": "What is specialized software used to operate in-built computers called?",
+      "options": {
+        "A": "System software",
+        "B": "Embedded software",
+        "C": "Application software",
+        "D": "Generic software"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Embedded software is a specialized kind of portable software used to operate in-built computers."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0051",
+      "type": "mcq",
+      "stem": "Where are 'on-board computers' specifically configured and installed?",
+      "options": {
+        "A": "In stationary offices",
+        "B": "In mobile objects or vehicles like submarines and aircraft",
+        "C": "Only in mobile phones",
+        "D": "Only in wristwatches"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "On-board computers are configured and installed in mobile objects or vehicles such as submarines, ships, and aircraft."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0052",
+      "type": "mcq",
+      "stem": "In a digital system, a binary digit (bit) has a value of either:",
+      "options": {
+        "A": "0 to 9",
+        "B": "1 or 2",
+        "C": "0 or 1",
+        "D": "A or B"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A binary digit (bit) has a value of either 0 or 1."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0053",
+      "type": "mcq",
+      "stem": "How many bits make up 1 byte?",
+      "options": {
+        "A": "4 bits",
+        "B": "8 bits",
+        "C": "16 bits",
+        "D": "32 bits"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document states that 1 byte comprises 8 bits."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0054",
+      "type": "mcq",
+      "stem": "Which organization is mentioned as ensuring reliable computer networks for CBT exams?",
+      "options": {
+        "A": "NASA",
+        "B": "JAMB",
+        "C": "CBN",
+        "D": "NIMC"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text notes that JAMB ensures CBT centres have reliable computer networks."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0055",
+      "type": "mcq",
+      "stem": "Which of the following is a common maintenance tool for Windows?",
+      "options": {
+        "A": "DaisyDisk",
+        "B": "BleachBit",
+        "C": "Disk Cleanup",
+        "D": "MSI Afterburner"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Disk Cleanup is listed as a utility tool for Windows maintenance."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0056",
+      "type": "mcq",
+      "stem": "Which company is a manufacturer of computer motherboards?",
+      "options": {
+        "A": "Microsoft",
+        "B": "ASUS",
+        "C": "Adobe",
+        "D": "Google"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "ASUS is listed as one of the popular motherboard manufacturers."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0057",
+      "type": "mcq",
+      "stem": "Which device is used to scan bar code items in supermarkets?",
+      "options": {
+        "A": "Optical Character Recognition",
+        "B": "Bar code reader",
+        "C": "Touchpad",
+        "D": "Joystick"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Bar code readers are used to scan items in supermarkets and industrial products."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0058",
+      "type": "mcq",
+      "stem": "What type of memory is compared to a 'scratchpad' or 'whiteboard'?",
+      "options": {
+        "A": "ROM",
+        "B": "Hard Disk",
+        "C": "RAM",
+        "D": "CD-ROM"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "RAM behaves like a scratchpad memory or whiteboard for temporary storage."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0059",
+      "type": "mcq",
+      "stem": "Which generation introduced high-level programming languages?",
+      "options": {
+        "A": "First Generation",
+        "B": "Second Generation",
+        "C": "Third Generation",
+        "D": "Fourth Generation"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "High-level programming languages were introduced during the third generation (1964-1971)."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0060",
+      "type": "mcq",
+      "stem": "Which robot is associated with the Mars mission in the text?",
+      "options": {
+        "A": "Sophia",
+        "B": "Robocop",
+        "C": "Mars rover",
+        "D": "Satellites"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Mars rover is listed as an example of a fifth-generation robot."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0061",
+      "type": "mcq",
+      "stem": "What does the abbreviation ENIAC stand for?",
+      "options": {
+        "A": "Electronic Network Integrated and Computer",
+        "B": "Electronic Numerical Integrator and Computer",
+        "C": "Electronic Number Input and Calculation",
+        "D": "Every Network Is Always Connected"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "ENIAC stands for Electronic Numerical Integrator and Computer."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0062",
+      "type": "mcq",
+      "stem": "What was used for data transfer and storage in the First Generation of computers?",
+      "options": {
+        "A": "Magnetic drums",
+        "B": "Hard drives",
+        "C": "Flash drives",
+        "D": "Cloud storage"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Magnetic drums were used for data transfer and storage during the first generation."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0063",
+      "type": "mcq",
+      "stem": "Which of the following is an example of third-generation computers?",
+      "options": {
+        "A": "ENIAC",
+        "B": "IBM-168/360/370 series",
+        "C": "Apple II",
+        "D": "Laptop"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The IBM-168/360/370 series are listed as prominent computers in the third generation."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0064",
+      "type": "mcq",
+      "stem": "What technology is implemented to design microprocessors in the fourth generation?",
+      "options": {
+        "A": "Vacuum tubes",
+        "B": "Small Scale Integration",
+        "C": "Very Large Scale Integrated (VLSI) circuits",
+        "D": "Superconductors"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "VLSI technology was implemented to design microprocessors in the fourth generation."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0065",
+      "type": "mcq",
+      "stem": "Which company sponsored the Aurora supercomputer project?",
+      "options": {
+        "A": "NASA",
+        "B": "United States Department of Energy",
+        "C": "International Business Machine",
+        "D": "Intel"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Aurora project is under the sponsorship of the United States Department of Energy."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0066",
+      "type": "mcq",
+      "stem": "What differentiates an input device from an output device?",
+      "options": {
+        "A": "Input devices are optional",
+        "B": "Input devices transfer data to the computer, output devices receive data from it",
+        "C": "Output devices are mandatory",
+        "D": "There is no difference"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text states that input devices transfer data to the computer, while output data (devices) receive data from it."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0067",
+      "type": "mcq",
+      "stem": "Which of these is NOT an example of scanning input devices?",
+      "options": {
+        "A": "Optical Mark Recognition (OMR)",
+        "B": "Barcode readers",
+        "C": "Joysticks",
+        "D": "Optical Character Recognition (OCR)"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Joysticks are listed as input devices but not under the scanning category, which includes OMR, OCR, and barcode readers."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0068",
+      "type": "mcq",
+      "stem": "What is the primary and commonly used data entry device?",
+      "options": {
+        "A": "Mouse",
+        "B": "Keyboard",
+        "C": "Scanner",
+        "D": "Microphone"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The keyboard is described as the primary and commonly used data entry device."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0069",
+      "type": "mcq",
+      "stem": "What type of printer generates output by spraying ink droplets onto paper?",
+      "options": {
+        "A": "Laser printer",
+        "B": "Inkjet printer",
+        "C": "Dot matrix printer",
+        "D": "Plotter"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Inkjet printers generate output by spraying ink droplets onto the paper through a small nozzle."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0070",
+      "type": "mcq",
+      "stem": "What is the motherboard's shape described as?",
+      "options": {
+        "A": "Circular",
+        "B": "Square",
+        "C": "Rectangular",
+        "D": "Triangular"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The motherboard is described as being rectangular in shape."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0071",
+      "type": "mcq",
+      "stem": "Which component prevents excessive heat radiation inside the system unit?",
+      "options": {
+        "A": "CMOS battery",
+        "B": "Cooling fans and heat sink",
+        "C": "Chipset",
+        "D": "USB ports"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cooling fans and heat sinks prevent excessive heat and maintain operating conditions."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0072",
+      "type": "mcq",
+      "stem": "What is the typical model number for a CMOS battery?",
+      "options": {
+        "A": "AA",
+        "B": "AAA",
+        "C": "CR2032",
+        "D": "9V"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document states that the CMOS battery is mostly CR2032."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0073",
+      "type": "mcq",
+      "stem": "What device is used to connect two electronic devices for data, power, or media transmission?",
+      "options": {
+        "A": "Computer port",
+        "B": "CPU",
+        "C": "RAM",
+        "D": "Cooling fan"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Computer ports connect interface points or sockets between two electronic devices."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0074",
+      "type": "mcq",
+      "stem": "Which port technology is described as 'newer and much faster' than serial or parallel ports?",
+      "options": {
+        "A": "VGA port",
+        "B": "PS/2 port",
+        "C": "Universal Serial Bus (USB)",
+        "D": "Modem port"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document mentions that USB technology is newer and much faster than serial or parallel ports."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0075",
+      "type": "mcq",
+      "stem": "What material is a microchip's slab made of?",
+      "options": {
+        "A": "Copper",
+        "B": "Silicon",
+        "C": "Plastic",
+        "D": "Gold"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Microchips are mounted on a small flat piece of silicon slab."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0076",
+      "type": "mcq",
+      "stem": "Which of the following is an antivirus software mentioned in the text?",
+      "options": {
+        "A": "CCleaner",
+        "B": "Kaspersky",
+        "C": "BleachBit",
+        "D": "MSI Afterburner"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Kaspersky is listed as an example of antivirus software for computer maintenance."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0077",
+      "type": "mcq",
+      "stem": "What does 'real-time computing' mean in the context of embedded systems?",
+      "options": {
+        "A": "Computing that happens on the weekends",
+        "B": "Working within pre-defined time constraints",
+        "C": "Computing that only uses internet time",
+        "D": "Computing that is very slow"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Embedded systems often work within pre-defined time, known as real-time computing."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0078",
+      "type": "mcq",
+      "stem": "What is the function of a 'decoder' in a satellite television set-top box?",
+      "options": {
+        "A": "To power the TV",
+        "B": "To read a signal from the dish and send input to the TV",
+        "C": "To record shows",
+        "D": "To connect to the internet"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document states a decoder reads signals from the dish to operate the TV."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0079",
+      "type": "mcq",
+      "stem": "Which of these allows users to send data across public networks as if they were directly connected to a private network?",
+      "options": {
+        "A": "LAN",
+        "B": "VPN",
+        "C": "P2P",
+        "D": "VGA"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A Virtual Private Network (VPN) extends a private network across a public network for secure data transmission."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0080",
+      "type": "mcq",
+      "stem": "What law is rendered 'ineffective' by the increasing number of transistors in multi-core technology?",
+      "options": {
+        "A": "Newton's Law",
+        "B": "Moore’s law",
+        "C": "Ohm's Law",
+        "D": "Faraday's Law"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Multi-core technology utilization renders Moore's law ineffective with the growing number of transistors."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0081",
+      "type": "mcq",
+      "stem": "Which company is NOT mentioned as a multi-core processor manufacturer?",
+      "options": {
+        "A": "Intel",
+        "B": "AMD",
+        "C": "ARM",
+        "D": "Google"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "AMD, ARM, Broadcom, Intel, and VIA are listed as companies implementing multi-core utilization."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0082",
+      "type": "mcq",
+      "stem": "What is the characteristic of computer maintenance known as 'Software maintenance'?",
+      "options": {
+        "A": "Cleaning the dust out of the case",
+        "B": "Updating programs and removing unnecessary files",
+        "C": "Replacing the CPU",
+        "D": "Wiping the monitor screen"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Software maintenance involves updating programs, removing unnecessary files, and managing resources."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0083",
+      "type": "mcq",
+      "stem": "In the context of networking, what does 'ISP' stand for?",
+      "options": {
+        "A": "Internet System Process",
+        "B": "Internal Service Provider",
+        "C": "Internet Service Provider",
+        "D": "International Software Protocol"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document mentions 'Internet Service Provider (ISP)' in the section on network cards."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0084",
+      "type": "mcq",
+      "stem": "Which device is a gateway device in a computer network?",
+      "options": {
+        "A": "Keyboard",
+        "B": "Mouse",
+        "C": "Router",
+        "D": "Speaker"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Routers are listed as examples of gateway devices in a network."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0085",
+      "type": "mcq",
+      "stem": "What is 'throughput' in a computer network?",
+      "options": {
+        "A": "The number of cables",
+        "B": "The time elapsing between a resource request and its availability",
+        "C": "The size of the server",
+        "D": "The weight of the hardware"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Performance is a function of throughput, which is the time elapsed between the request for a resource and its availability."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0086",
+      "type": "mcq",
+      "stem": "Which component is MOST responsible for directing the execution of instructions within the CPU?",
+      "options": {
+        "A": "ALU",
+        "B": "Control Unit",
+        "C": "RAM",
+        "D": "Cache"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Control Unit directs and coordinates the execution of instructions, while the ALU performs calculations."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0087",
+      "type": "mcq",
+      "stem": "A user saves a file, but loses unsaved changes after a sudden power outage. Which component caused this data loss?",
+      "options": {
+        "A": "Hard Disk",
+        "B": "ROM",
+        "C": "RAM",
+        "D": "Cache"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "RAM is volatile memory and loses its content when power is turned off."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0088",
+      "type": "mcq",
+      "stem": "Which of the following operations would NOT typically be handled directly by the ALU?",
+      "options": {
+        "A": "Addition",
+        "B": "Logical comparison",
+        "C": "File storage",
+        "D": "Subtraction"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The ALU handles arithmetic and logical operations, not storage tasks."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0089",
+      "type": "mcq",
+      "stem": "Which storage device would retain data even after the system is powered off?",
+      "options": {
+        "A": "RAM",
+        "B": "Cache",
+        "C": "Register",
+        "D": "SSD"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "SSD is non-volatile storage, unlike RAM, cache, and registers."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0090",
+      "type": "mcq",
+      "stem": "Which scenario BEST demonstrates the concept of versatility in computers?",
+      "options": {
+        "A": "A computer performing calculations very fast",
+        "B": "A computer running multiple different types of applications",
+        "C": "A computer storing large amounts of data",
+        "D": "A computer operating continuously without rest"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Versatility refers to the ability to perform different kinds of tasks."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0091",
+      "type": "mcq",
+      "stem": "Which component would MOST directly affect how many bits a CPU can process at once?",
+      "options": {
+        "A": "Clock speed",
+        "B": "Word size",
+        "C": "Cache size",
+        "D": "Bus speed"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Word size determines how many bits a CPU can process in a single operation."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0092",
+      "type": "mcq",
+      "stem": "A system is designed to respond instantly to sensor input within strict time limits. What type of computing is this?",
+      "options": {
+        "A": "Batch processing",
+        "B": "Real-time computing",
+        "C": "Cloud computing",
+        "D": "Parallel computing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Real-time computing operates within strict timing constraints."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0093",
+      "type": "mcq",
+      "stem": "Which of the following BEST explains why transistors replaced vacuum tubes?",
+      "options": {
+        "A": "They were larger and easier to repair",
+        "B": "They consumed more power",
+        "C": "They were smaller, faster, and more efficient",
+        "D": "They required more cooling systems"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Transistors improved size, efficiency, and reliability compared to vacuum tubes."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0094",
+      "type": "mcq",
+      "stem": "Which of the following would MOST likely require a workstation instead of a standard PC?",
+      "options": {
+        "A": "Browsing the internet",
+        "B": "Typing documents",
+        "C": "Running complex 3D simulations",
+        "D": "Watching videos"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Workstations are designed for high-performance tasks like simulations and engineering work."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0095",
+      "type": "mcq",
+      "stem": "Which component acts as a temporary high-speed buffer between the CPU and main memory?",
+      "options": {
+        "A": "RAM",
+        "B": "Cache",
+        "C": "Hard drive",
+        "D": "ROM"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cache memory stores frequently used data for faster access by the CPU."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0096",
+      "type": "mcq",
+      "stem": "Which of the following BEST describes the role of an operating system?",
+      "options": {
+        "A": "It performs arithmetic operations",
+        "B": "It acts as an interface between hardware, software, and users",
+        "C": "It stores permanent files",
+        "D": "It controls the power supply"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The OS manages communication between hardware, software, and users."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0097",
+      "type": "mcq",
+      "stem": "Which of the following is an example of an embedded system?",
+      "options": {
+        "A": "Desktop computer",
+        "B": "Web browser",
+        "C": "Elevator control system",
+        "D": "Mainframe computer"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Embedded systems perform dedicated functions within larger systems."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0098",
+      "type": "mcq",
+      "stem": "If a computer can handle multiple tasks simultaneously by splitting them across cores, what is this process called?",
+      "options": {
+        "A": "Multithreading",
+        "B": "Overclocking",
+        "C": "Caching",
+        "D": "Virtualization"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Multithreading splits tasks into smaller parts to run concurrently on multiple cores."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0099",
+      "type": "mcq",
+      "stem": "Which of the following would MOST improve system performance when running many applications at once?",
+      "options": {
+        "A": "Increasing monitor size",
+        "B": "Adding more RAM",
+        "C": "Changing keyboard",
+        "D": "Installing speakers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "More RAM allows more applications to run simultaneously without slowing down."
+    },
+    {
+      "id": "uni-bouesti-csc115-bank-0100",
+      "type": "mcq",
+      "stem": "Which network component is responsible for directing data packets between different networks?",
+      "options": {
+        "A": "Switch",
+        "B": "Router",
+        "C": "Hub",
+        "D": "Repeater"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Routers forward data packets between different networks."
+    }
+  ]
+}

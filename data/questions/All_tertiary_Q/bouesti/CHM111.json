@@ -1,0 +1,4225 @@
+{
+  "code": "uni-bouesti-chm111-bank",
+  "title": "BOUESTI CHM111 | Course Question Bank",
+  "version": 1,
+  "questionCount": 301,
+  "totalMarks": 301,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-bouesti-chm111-bank-0001",
+      "type": "mcq",
+      "stem": "According to modern atomic theory, electrons exist as:",
+      "options": {
+        "A": "Particles fixed in orbit",
+        "B": "Waves only",
+        "C": "Probability clouds",
+        "D": "Solid spheres"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Modern atomic theory describes electrons as existing in regions of high probability known as orbitals or clouds."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0002",
+      "type": "mcq",
+      "stem": "The scientist who proposed the nuclear model of the atom is:",
+      "options": {
+        "A": "Dalton",
+        "B": "Rutherford",
+        "C": "Bohr",
+        "D": "Thomson"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ernest Rutherford proposed the nuclear model of the atom based on his gold foil experiment."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0003",
+      "type": "mcq",
+      "stem": "Bohr’s atomic model describes electrons as moving in:",
+      "options": {
+        "A": "Random clouds",
+        "B": "Circular orbits",
+        "C": "Elliptical paths",
+        "D": "Straight lines"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Niels Bohr's model proposed that electrons travel in discrete circular orbits around the nucleus."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0004",
+      "type": "mcq",
+      "stem": "The maximum number of electrons in a shell is given by:",
+      "options": {
+        "A": "n²",
+        "B": "2n",
+        "C": "2n²",
+        "D": "n³"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The maximum electron capacity of an energy level 'n' is determined by the formula 2n²."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0005",
+      "type": "mcq",
+      "stem": "Which atomic model explains hydrogen spectral lines successfully?",
+      "options": {
+        "A": "Dalton model",
+        "B": "Thomson model",
+        "C": "Bohr model",
+        "D": "Quantum model"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Bohr model was specifically developed to account for the discrete line spectrum of hydrogen."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0006",
+      "type": "mcq",
+      "stem": "Which principle states that electrons fill lowest energy orbitals first?",
+      "options": {
+        "A": "Hund rule",
+        "B": "Pauli principle",
+        "C": "Aufbau principle",
+        "D": "Heisenberg principle"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Aufbau principle dictates that lower-energy orbitals must be filled before higher-energy ones."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0007",
+      "type": "mcq",
+      "stem": "Pauli exclusion principle states that:",
+      "options": {
+        "A": "Electrons fill singly first",
+        "B": "Electrons occupy lowest orbit",
+        "C": "No two electrons have identical quantum numbers",
+        "D": "Orbitals have equal energy"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Pauli exclusion principle states that no two electrons in an atom can have the same four quantum numbers."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0008",
+      "type": "mcq",
+      "stem": "Hund’s rule states that electrons:",
+      "options": {
+        "A": "Pair first in orbitals",
+        "B": "Occupy degenerate orbitals singly first",
+        "C": "Occupy highest energy first",
+        "D": "Move randomly"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hund's rule requires that electrons fill degenerate orbitals (same energy) singly with parallel spins before pairing."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0009",
+      "type": "mcq",
+      "stem": "Which orbital is spherical in shape?",
+      "options": {
+        "A": "p",
+        "B": "d",
+        "C": "s",
+        "D": "f"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The s-orbital is defined as having a spherical symmetric shape."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0010",
+      "type": "mcq",
+      "stem": "The p orbital has a:",
+      "options": {
+        "A": "Circular shape",
+        "B": "Dumbbell shape",
+        "C": "Square shape",
+        "D": "Triangular shape"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The p-orbitals are dumbbell-shaped and oriented along the x, y, and z axes."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0011",
+      "type": "mcq",
+      "stem": "The number of p orbitals in a subshell is:",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "5",
+        "D": "7"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Every p-subshell contains exactly three p-orbitals."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0012",
+      "type": "mcq",
+      "stem": "The maximum number of electrons in a p subshell is:",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "10"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Since there are three p-orbitals and each can hold two electrons, the maximum is six."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0013",
+      "type": "mcq",
+      "stem": "The number of d orbitals in a subshell is:",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "7",
+        "D": "9"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A d-subshell consists of five distinct d-orbitals."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0014",
+      "type": "mcq",
+      "stem": "The maximum electrons in a d subshell is:",
+      "options": {
+        "A": "6",
+        "B": "8",
+        "C": "10",
+        "D": "14"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "With five d-orbitals holding two electrons each, the total capacity is ten."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0015",
+      "type": "mcq",
+      "stem": "The spin quantum number values are:",
+      "options": {
+        "A": "0 and 1",
+        "B": "+½ and -½",
+        "C": "1 and -1",
+        "D": "+1 and -1"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Electrons have two possible spin states, represented as +1/2 and -1/2."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0016",
+      "type": "mcq",
+      "stem": "The principal quantum number is represented by:",
+      "options": {
+        "A": "l",
+        "B": "n",
+        "C": "m",
+        "D": "s"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The letter 'n' is used to represent the principal quantum number in atomic physics."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0017",
+      "type": "mcq",
+      "stem": "The principal quantum number determines:",
+      "options": {
+        "A": "Spin of electron",
+        "B": "Energy level",
+        "C": "Orbital orientation",
+        "D": "Shape of orbital"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The principal quantum number (n) dictates the size and primary energy level of an orbital."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0018",
+      "type": "mcq",
+      "stem": "The azimuthal quantum number determines:",
+      "options": {
+        "A": "Energy",
+        "B": "Spin",
+        "C": "Shape of orbital",
+        "D": "Orientation"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The azimuthal (or angular momentum) quantum number (l) defines the shape of the orbital."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0019",
+      "type": "mcq",
+      "stem": "Magnetic quantum number determines:",
+      "options": {
+        "A": "Orbital orientation",
+        "B": "Energy level",
+        "C": "Spin direction",
+        "D": "Mass"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The magnetic quantum number (ml) specifies the orientation of an orbital in space."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0020",
+      "type": "mcq",
+      "stem": "Which quantum number describes electron spin?",
+      "options": {
+        "A": "n",
+        "B": "l",
+        "C": "ml",
+        "D": "ms"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The spin quantum number is denoted as ms."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0021",
+      "type": "mcq",
+      "stem": "Electron configuration of sodium is:",
+      "options": {
+        "A": "1s²2s²2p⁶3s¹",
+        "B": "1s²2s²2p⁵3s²",
+        "C": "1s²2s²3s¹",
+        "D": "1s²2p⁶3s¹"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Sodium (Z=11) has 11 electrons distributed as 1s² 2s² 2p⁶ 3s¹."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0022",
+      "type": "mcq",
+      "stem": "Electron configuration of oxygen is:",
+      "options": {
+        "A": "1s²2s²2p²",
+        "B": "1s²2s²2p⁴",
+        "C": "1s²2p⁴",
+        "D": "1s²2s²3p⁴"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Oxygen (Z=8) has 8 electrons distributed as 1s² 2s² 2p⁴."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0023",
+      "type": "mcq",
+      "stem": "Electron configuration of hydrogen is:",
+      "options": {
+        "A": "1s¹",
+        "B": "2s¹",
+        "C": "2p¹",
+        "D": "1p¹"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Hydrogen (Z=1) has its single electron in the 1s orbital."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0024",
+      "type": "mcq",
+      "stem": "Atomic radius generally decreases across a period because:",
+      "options": {
+        "A": "Atomic mass increases",
+        "B": "Nuclear charge increases",
+        "C": "Electrons decrease",
+        "D": "Energy levels decrease"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "As protons are added, the increased nuclear charge pulls electrons closer, reducing the radius."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0025",
+      "type": "mcq",
+      "stem": "Atomic radius increases down a group due to:",
+      "options": {
+        "A": "Increased nuclear charge",
+        "B": "Additional electron shells",
+        "C": "Reduced mass",
+        "D": "Reduced electrons"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Moving down a group adds new energy levels, which increases the distance from the nucleus."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0026",
+      "type": "mcq",
+      "stem": "Ionization energy is defined as:",
+      "options": {
+        "A": "Energy to add electron",
+        "B": "Energy to remove electron",
+        "C": "Energy to split atom",
+        "D": "Energy to excite electron"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ionization energy is the amount of energy required to remove an electron from a gaseous atom."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0027",
+      "type": "mcq",
+      "stem": "Ionization energy generally increases:",
+      "options": {
+        "A": "Down group",
+        "B": "Across period",
+        "C": "Randomly",
+        "D": "In metals"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "As nuclear charge increases across a period, it becomes harder to remove an electron."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0028",
+      "type": "mcq",
+      "stem": "The most electronegative element is:",
+      "options": {
+        "A": "Oxygen",
+        "B": "Chlorine",
+        "C": "Fluorine",
+        "D": "Nitrogen"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Fluorine has the highest value on the Pauling electronegativity scale."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0029",
+      "type": "mcq",
+      "stem": "Electronegativity decreases down a group because:",
+      "options": {
+        "A": "Atomic radius increases",
+        "B": "Nuclear charge decreases",
+        "C": "Electron shells decrease",
+        "D": "Energy increases"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Increased distance from the nucleus weakens the attraction for shared electrons."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0030",
+      "type": "mcq",
+      "stem": "Electron affinity refers to:",
+      "options": {
+        "A": "Energy required to remove electron",
+        "B": "Energy released when electron added",
+        "C": "Energy of electron",
+        "D": "Energy lost by atom"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Electron affinity is the energy change occurring when an electron is added to a neutral atom."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0031",
+      "type": "mcq",
+      "stem": "Halogens have high electron affinity because:",
+      "options": {
+        "A": "They lose electrons",
+        "B": "They gain electrons easily",
+        "C": "They have low energy",
+        "D": "They have large atoms"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Halogens are one electron short of a full octet and strongly attract electrons."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0032",
+      "type": "mcq",
+      "stem": "The periodic law states that properties of elements vary with:",
+      "options": {
+        "A": "Atomic mass",
+        "B": "Atomic number",
+        "C": "Density",
+        "D": "Volume"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Moseley's periodic law states that chemical properties are a periodic function of atomic number."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0033",
+      "type": "mcq",
+      "stem": "Vertical columns in periodic table are called:",
+      "options": {
+        "A": "Periods",
+        "B": "Groups",
+        "C": "Series",
+        "D": "Blocks"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Columns in the periodic table are known as groups or families."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0034",
+      "type": "mcq",
+      "stem": "Horizontal rows in periodic table are called:",
+      "options": {
+        "A": "Groups",
+        "B": "Periods",
+        "C": "Blocks",
+        "D": "Families"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Rows in the periodic table are termed periods."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0035",
+      "type": "mcq",
+      "stem": "Group 1 elements are called:",
+      "options": {
+        "A": "Halogens",
+        "B": "Alkali metals",
+        "C": "Noble gases",
+        "D": "Transition metals"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The elements in Group 1 (except hydrogen) are the alkali metals."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0036",
+      "type": "mcq",
+      "stem": "Group 17 elements are called:",
+      "options": {
+        "A": "Noble gases",
+        "B": "Halogens",
+        "C": "Alkali metals",
+        "D": "Metalloids"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Group 17 contains the salt-forming elements known as halogens."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0037",
+      "type": "mcq",
+      "stem": "The periodic table is arranged according to increasing:",
+      "options": {
+        "A": "Atomic mass",
+        "B": "Atomic number",
+        "C": "Density",
+        "D": "Volume"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The modern periodic table is ordered by increasing number of protons."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0038",
+      "type": "mcq",
+      "stem": "Ionic bonds form due to:",
+      "options": {
+        "A": "Electron sharing",
+        "B": "Electron transfer",
+        "C": "Proton transfer",
+        "D": "Neutron exchange"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ionic bonding involves the complete transfer of one or more electrons from one atom to another."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0039",
+      "type": "mcq",
+      "stem": "Covalent bonds form due to:",
+      "options": {
+        "A": "Electron transfer",
+        "B": "Electron sharing",
+        "C": "Proton exchange",
+        "D": "Ion formation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Covalent bonds result from atoms sharing pairs of electrons to achieve stability."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0040",
+      "type": "mcq",
+      "stem": "Metallic bonding involves:",
+      "options": {
+        "A": "Electron sharing",
+        "B": "Free moving electrons",
+        "C": "Ion transfer",
+        "D": "Proton movement"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Metallic bonding is characterized by a 'sea' of delocalized, free-moving electrons."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0041",
+      "type": "mcq",
+      "stem": "In NaCl, sodium forms:",
+      "options": {
+        "A": "Na²⁺",
+        "B": "Na⁺",
+        "C": "Na⁻",
+        "D": "Na³⁺"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Sodium loses its one valence electron to form a single positive cation."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0042",
+      "type": "mcq",
+      "stem": "In NaCl, chlorine forms:",
+      "options": {
+        "A": "Cl⁺",
+        "B": "Cl⁻",
+        "C": "Cl²⁺",
+        "D": "Cl³⁻"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Chlorine gains one electron to form a single negative anion."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0043",
+      "type": "mcq",
+      "stem": "Covalent compounds usually have:",
+      "options": {
+        "A": "High melting points",
+        "B": "Low melting points",
+        "C": "High conductivity",
+        "D": "Ionic lattice"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Molecular covalent compounds generally have weak intermolecular forces, resulting in low melting points."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0044",
+      "type": "mcq",
+      "stem": "Metals conduct electricity because:",
+      "options": {
+        "A": "Free electrons move",
+        "B": "Atoms move",
+        "C": "Ions move",
+        "D": "Molecules move"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The movement of delocalized electrons allows metals to carry electric current."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0045",
+      "type": "mcq",
+      "stem": "Crystalline solids have:",
+      "options": {
+        "A": "Random structure",
+        "B": "Regular structure",
+        "C": "Liquid structure",
+        "D": "Gas structure"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Crystalline solids are defined by a highly ordered repeating geometric arrangement of particles."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0046",
+      "type": "mcq",
+      "stem": "Amorphous solids have:",
+      "options": {
+        "A": "Regular structure",
+        "B": "No definite structure",
+        "C": "Metallic structure",
+        "D": "Crystal lattice"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Amorphous solids lack the long-range order of a crystal lattice."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0047",
+      "type": "mcq",
+      "stem": "An example of crystalline solid is:",
+      "options": {
+        "A": "Glass",
+        "B": "Sugar",
+        "C": "Plastic",
+        "D": "Rubber"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Sugar (sucrose) forms defined crystals, unlike amorphous glass or plastic."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0048",
+      "type": "mcq",
+      "stem": "Polymeric solids contain:",
+      "options": {
+        "A": "Single atoms",
+        "B": "Long molecular chains",
+        "C": "Ions",
+        "D": "Metals"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Polymers are composed of very large molecules made of repeating structural units."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0049",
+      "type": "mcq",
+      "stem": "A chemical equation represents:",
+      "options": {
+        "A": "Physical change",
+        "B": "Chemical reaction",
+        "C": "Atomic structure",
+        "D": "Electron movement"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A chemical equation is a shorthand representation of a chemical transformation."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0050",
+      "type": "mcq",
+      "stem": "In a chemical equation, reactants appear on the:",
+      "options": {
+        "A": "Right side",
+        "B": "Left side",
+        "C": "Middle",
+        "D": "Top"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Standard notation places starting materials on the left of the reaction arrow."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0051",
+      "type": "mcq",
+      "stem": "Which of the following orbitals can hold a maximum of 6 electrons ?",
+      "options": {
+        "A": "s",
+        "B": "p",
+        "C": "d",
+        "D": "f"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The p-subshell consists of 3 orbitals, accommodating a total of 6 electrons."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0052",
+      "type": "mcq",
+      "stem": "The maximum number of electrons in an f subshell is:",
+      "options": {
+        "A": "6",
+        "B": "10",
+        "C": "14",
+        "D": "18"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The f-subshell has 7 orbitals, so it can hold 14 electrons."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0053",
+      "type": "mcq",
+      "stem": "How many orbitals are present in the d subshell ?",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "7",
+        "D": "9"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The d-subshell is made up of 5 degenerate orbitals."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0054",
+      "type": "mcq",
+      "stem": "The number of orbitals in a shell with n = 3 is:",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "9",
+        "D": "16"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The total number of orbitals in a shell is n²; for n=3, 3² = 9."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0055",
+      "type": "mcq",
+      "stem": "For n = 2 , the number of orbitals is:",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "6"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Following n², for n=2, 2² = 4 (one 2s and three 2p orbitals)."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0056",
+      "type": "mcq",
+      "stem": "Which orbital appears first in the Aufbau filling order?",
+      "options": {
+        "A": "2s",
+        "B": "1s",
+        "C": "2p",
+        "D": "3s"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "1s is the lowest energy orbital and is always filled first."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0057",
+      "type": "mcq",
+      "stem": "Which subshell is filled before 3d ?",
+      "options": {
+        "A": "3p",
+        "B": "4s",
+        "C": "4p",
+        "D": "2d"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "According to the n+l rule, 4s (4+0=4) is filled before 3d (3+2=5)."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0058",
+      "type": "mcq",
+      "stem": "The electron configuration of chlorine is:",
+      "options": {
+        "A": "1s²2s²2p⁶3s²3p⁵",
+        "B": "1s²2s²2p⁶3s²3p³",
+        "C": "1s²2s²2p⁴3s²3p⁵",
+        "D": "1s²2s²3p⁵"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Chlorine (Z=17) has 17 electrons in the order 1s² 2s² 2p⁶ 3s² 3p⁵."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0059",
+      "type": "mcq",
+      "stem": "The abbreviated electron configuration of calcium is:",
+      "options": {
+        "A": "[Ne]3s²",
+        "B": "[Ar]4s²",
+        "C": "[Ar]3d²",
+        "D": "[Ne]3p²"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Calcium (Z=20) follows argon (Z=18) with two additional electrons in 4s."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0060",
+      "type": "mcq",
+      "stem": "Which of the following represents a noble gas configuration ?",
+      "options": {
+        "A": "ns²np⁶",
+        "B": "ns¹np⁵",
+        "C": "ns²np³",
+        "D": "ns²np⁴"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A full valence shell (octet) for noble gases is represented as ns²np⁶."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0061",
+      "type": "mcq",
+      "stem": "The noble gas preceding sodium is:",
+      "options": {
+        "A": "Helium",
+        "B": "Neon",
+        "C": "Argon",
+        "D": "Krypton"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Neon (Z=10) is the noble gas immediately before sodium (Z=11)."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0062",
+      "type": "mcq",
+      "stem": "The electron configuration of potassium is:",
+      "options": {
+        "A": "[Ar]4s¹",
+        "B": "[Ar]3d¹",
+        "C": "[Ne]3s¹",
+        "D": "[Ar]3p¹"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Potassium (Z=19) follows argon with one electron in the 4s orbital."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0063",
+      "type": "mcq",
+      "stem": "An orbital can accommodate a maximum of:",
+      "options": {
+        "A": "1 electron",
+        "B": "2 electrons",
+        "C": "4 electrons",
+        "D": "6 electrons"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Per the Pauli exclusion principle, an individual orbital can hold at most two electrons."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0064",
+      "type": "mcq",
+      "stem": "The possible values of l when n = 3 are:",
+      "options": {
+        "A": "0,1",
+        "B": "0,1,2",
+        "C": "1,2,3",
+        "D": "0,1,2,3"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The values for l range from 0 to n-1; for n=3, l=0, 1, 2."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0065",
+      "type": "mcq",
+      "stem": "If l = 2 , the orbital type is:",
+      "options": {
+        "A": "s",
+        "B": "p",
+        "C": "d",
+        "D": "f"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The azimuthal quantum number l=2 corresponds to the d subshell."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0066",
+      "type": "mcq",
+      "stem": "If l = 3 , the orbital type is:",
+      "options": {
+        "A": "s",
+        "B": "p",
+        "C": "d",
+        "D": "f"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The azimuthal quantum number l=3 corresponds to the f subshell."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0067",
+      "type": "mcq",
+      "stem": "The allowed values of ml depend on:",
+      "options": {
+        "A": "n",
+        "B": "l",
+        "C": "s",
+        "D": "p"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The magnetic quantum number ml ranges from -l to +l."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0068",
+      "type": "mcq",
+      "stem": "If l = 1 , the possible ml values are:",
+      "options": {
+        "A": "-1, 0, +1",
+        "B": "0, +1",
+        "C": "-2, -1, 0",
+        "D": "-3, -2, -1"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "For l=1, ml values are -1, 0, +1."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0069",
+      "type": "mcq",
+      "stem": "The number of orbitals in a p subshell is:",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "5",
+        "D": "7"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Every p subshell contains three orbitals (px, py, pz)."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0070",
+      "type": "mcq",
+      "stem": "The maximum number of electrons in n = 3 shell is:",
+      "options": {
+        "A": "8",
+        "B": "10",
+        "C": "18",
+        "D": "32"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Using 2n², for n=3, 2(3)² = 18."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0071",
+      "type": "mcq",
+      "stem": "Which of the following violates Pauli exclusion principle?",
+      "options": {
+        "A": "1s²",
+        "B": "2s²",
+        "C": "2s³",
+        "D": "2p⁶"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "An 's' subshell can only hold 2 electrons; 3 electrons violates the principle."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0072",
+      "type": "mcq",
+      "stem": "Which of the following violates Hund’s rule?",
+      "options": {
+        "A": "Pairing electrons before all orbitals are singly occupied",
+        "B": "Electrons filling lowest orbitals first",
+        "C": "Two electrons in an orbital",
+        "D": "Opposite spins in orbital"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Hund's rule requires single occupancy before pairing starts."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0073",
+      "type": "mcq",
+      "stem": "Ionization energy decreases down a group because:",
+      "options": {
+        "A": "Atomic mass increases",
+        "B": "Atomic radius increases",
+        "C": "Electrons decrease",
+        "D": "Nuclear charge decreases"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Larger atoms have valence electrons further from the nucleus, making them easier to remove."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0074",
+      "type": "mcq",
+      "stem": "Across a period electronegativity generally:",
+      "options": {
+        "A": "Decreases",
+        "B": "Increases",
+        "C": "Remains constant",
+        "D": "Fluctuates randomly"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Increased nuclear charge improves the atom's ability to attract electrons."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0075",
+      "type": "mcq",
+      "stem": "Which element has the highest electronegativity ?",
+      "options": {
+        "A": "Oxygen",
+        "B": "Nitrogen",
+        "C": "Fluorine",
+        "D": "Chlorine"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Fluorine is the most electronegative element in the periodic table."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0076",
+      "type": "mcq",
+      "stem": "Cations are formed when atoms:",
+      "options": {
+        "A": "Gain electrons",
+        "B": "Lose electrons",
+        "C": "Share electrons",
+        "D": "Absorb neutrons"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Loss of negative electrons leaves an atom with a net positive charge."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0077",
+      "type": "mcq",
+      "stem": "Anions are formed when atoms:",
+      "options": {
+        "A": "Lose electrons",
+        "B": "Gain electrons",
+        "C": "Share electrons",
+        "D": "Lose neutrons"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Gaining extra electrons results in a net negative charge."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0078",
+      "type": "mcq",
+      "stem": "A cation compared with its atom is:",
+      "options": {
+        "A": "Larger",
+        "B": "Smaller",
+        "C": "Same size",
+        "D": "Unchanged"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Loss of valence electrons and reduced repulsion causes the cation to shrink."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0079",
+      "type": "mcq",
+      "stem": "An anion compared with its atom is:",
+      "options": {
+        "A": "Smaller",
+        "B": "Larger",
+        "C": "Same size",
+        "D": "Equal"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Added electrons increase inter-electron repulsion, causing the electron cloud to expand."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0080",
+      "type": "mcq",
+      "stem": "Atomic radius decreases across a period because:",
+      "options": {
+        "A": "Atomic number increases",
+        "B": "Electron shells increase",
+        "C": "Energy levels increase",
+        "D": "Electron shielding increases"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "More protons increase nuclear pull on the same shell, shrinking the radius."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0081",
+      "type": "mcq",
+      "stem": "Which scientist proposed the law of octaves ?",
+      "options": {
+        "A": "Dalton",
+        "B": "Newlands",
+        "C": "Mendeleev",
+        "D": "Meyer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "John Newlands noted that properties repeated every eighth element when ordered by mass."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0082",
+      "type": "mcq",
+      "stem": "Who developed the first widely accepted periodic table?",
+      "options": {
+        "A": "Dalton",
+        "B": "Rutherford",
+        "C": "Mendeleev",
+        "D": "Thomson"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Dmitri Mendeleev is credited with the first successful periodic table."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0083",
+      "type": "mcq",
+      "stem": "The modern periodic law states that properties depend on:",
+      "options": {
+        "A": "Atomic mass",
+        "B": "Atomic number",
+        "C": "Atomic volume",
+        "D": "Atomic density"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Modern classification is based on proton count rather than weight."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0084",
+      "type": "mcq",
+      "stem": "The periodic table is divided into blocks based on:",
+      "options": {
+        "A": "Mass number",
+        "B": "Electron configuration",
+        "C": "Density",
+        "D": "Volume"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Blocks (s, p, d, f) represent the subshell being filled in the atom."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0085",
+      "type": "mcq",
+      "stem": "Elements in the s-block include:",
+      "options": {
+        "A": "Alkali metals",
+        "B": "Halogens",
+        "C": "Transition metals",
+        "D": "Noble gases"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Groups 1 and 2 (including alkali metals) are the s-block elements."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0086",
+      "type": "mcq",
+      "stem": "Elements in d-block are known as:",
+      "options": {
+        "A": "Alkali metals",
+        "B": "Transition metals",
+        "C": "Noble gases",
+        "D": "Halogens"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The d-block contains the transition metal elements."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0087",
+      "type": "mcq",
+      "stem": "Lanthanides belong to which block?",
+      "options": {
+        "A": "s-block",
+        "B": "p-block",
+        "C": "d-block",
+        "D": "f-block"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The lanthanides and actinides make up the f-block."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0088",
+      "type": "mcq",
+      "stem": "Ionic solids are held together by:",
+      "options": {
+        "A": "Covalent bonds",
+        "B": "Metallic bonds",
+        "C": "Electrostatic forces",
+        "D": "Hydrogen bonds"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Ionic bonds are strong attractions between oppositely charged ions."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0089",
+      "type": "mcq",
+      "stem": "Covalent bonding involves:",
+      "options": {
+        "A": "Transfer of electrons",
+        "B": "Sharing of electrons",
+        "C": "Loss of electrons",
+        "D": "Gain of electrons"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Atoms share valence electrons to achieve stable noble gas configurations."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0090",
+      "type": "mcq",
+      "stem": "Metallic bonding involves attraction between:",
+      "options": {
+        "A": "Positive ions and electrons",
+        "B": "Negative ions and protons",
+        "C": "Neutral atoms",
+        "D": "Covalent molecules"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Metals are arrays of positive ions surrounded by delocalized valence electrons."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0091",
+      "type": "mcq",
+      "stem": "Which type of solid has regular geometric arrangement ?",
+      "options": {
+        "A": "Amorphous solid",
+        "B": "Crystalline solid",
+        "C": "Polymeric solid",
+        "D": "Liquid"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Crystalline solids have a long-range, repeating geometric structure."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0092",
+      "type": "mcq",
+      "stem": "A crystalline solid has:",
+      "options": {
+        "A": "Sharp melting point",
+        "B": "No melting point",
+        "C": "Gradual melting",
+        "D": "Low density"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Because all bonds are equivalent, they break at the same temperature."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0093",
+      "type": "mcq",
+      "stem": "Amorphous solids soften:",
+      "options": {
+        "A": "At fixed temperature",
+        "B": "Gradually",
+        "C": "At 0°C",
+        "D": "Instantly"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Variations in bond strengths lead to softening over a range of temperatures."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0094",
+      "type": "mcq",
+      "stem": "Stoichiometry deals with:",
+      "options": {
+        "A": "Atomic structure",
+        "B": "Reaction quantities",
+        "C": "Periodic table",
+        "D": "Chemical bonding"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Stoichiometry is the quantitative study of reactants and products in reactions."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0095",
+      "type": "mcq",
+      "stem": "A balanced chemical equation follows the law of:",
+      "options": {
+        "A": "Conservation of energy",
+        "B": "Conservation of mass",
+        "C": "Conservation of charge",
+        "D": "Conservation of atoms"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Mass must be conserved; total mass of reactants equals total mass of products."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0096",
+      "type": "mcq",
+      "stem": "In the equation N₂ + 3H₂ → 2NH₃ , the coefficient of hydrogen is:",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The balanced equation requires three molecules of hydrogen."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0097",
+      "type": "mcq",
+      "stem": "A limiting reactant is the reactant that:",
+      "options": {
+        "A": "Remains after reaction",
+        "B": "Is completely consumed",
+        "C": "Has highest mass",
+        "D": "Has lowest density"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The limiting reactant runs out first and determines the amount of product formed."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0098",
+      "type": "mcq",
+      "stem": "Stoichiometric calculations involve:",
+      "options": {
+        "A": "Mass relationships",
+        "B": "Mole relationships",
+        "C": "Volume relationships",
+        "D": "All of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Calculations can be performed using mass, moles, or volumes of gases."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0099",
+      "type": "mcq",
+      "stem": "In chemical equations, the symbol (aq) means:",
+      "options": {
+        "A": "Solid",
+        "B": "Liquid",
+        "C": "Gas",
+        "D": "Aqueous solution"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "'aq' denotes that the substance is dissolved in water."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0100",
+      "type": "mcq",
+      "stem": "The modern electronic theory describes electrons as existing in:",
+      "options": {
+        "A": "Fixed circular paths",
+        "B": "Probability clouds",
+        "C": "Solid spheres",
+        "D": "Straight lines"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Modern atomic theory describes electrons as existing in regions of high probability known as orbitals or probability clouds rather than fixed paths."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0101",
+      "type": "mcq",
+      "stem": "The scientist who introduced the concept of wave-particle duality is:",
+      "options": {
+        "A": "Einstein",
+        "B": "de Broglie",
+        "C": "Rutherford",
+        "D": "Dalton"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Louis de Broglie proposed that all matter, including electrons, exhibits both wave-like and particle-like properties."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0102",
+      "type": "mcq",
+      "stem": "Heisenberg’s uncertainty principle states that:",
+      "options": {
+        "A": "Position and momentum can both be measured accurately",
+        "B": "Electrons move in circular paths",
+        "C": "Position and momentum cannot both be known exactly",
+        "D": "Energy of electrons is constant"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The uncertainty principle states it is fundamentally impossible to determine both the exact position and velocity of a particle simultaneously."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0103",
+      "type": "mcq",
+      "stem": "Which atomic model introduced quantized energy levels?",
+      "options": {
+        "A": "Dalton model",
+        "B": "Rutherford model",
+        "C": "Bohr model",
+        "D": "Thomson model"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Niels Bohr's model was the first to propose that electrons exist in specific, quantized energy levels around the nucleus."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0104",
+      "type": "mcq",
+      "stem": "The energy of a photon emitted during an electron transition is given by:",
+      "options": {
+        "A": "hv",
+        "B": "mc²",
+        "C": "mgh",
+        "D": "Fd"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The energy of a photon is directly proportional to its frequency (v) multiplied by Planck's constant (h)."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0105",
+      "type": "mcq",
+      "stem": "The symbol h in Planck’s equation represents:",
+      "options": {
+        "A": "Electron mass",
+        "B": "Planck’s constant",
+        "C": "Frequency",
+        "D": "Velocity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In quantum mechanics, 'h' is the standard symbol for Planck's constant."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0106",
+      "type": "mcq",
+      "stem": "The Bohr model explains spectra of:",
+      "options": {
+        "A": "Hydrogen atom",
+        "B": "Helium atom",
+        "C": "Lithium atom",
+        "D": "All atoms"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A major limitation of the Bohr model is that it successfully explains only the spectral lines of the single-electron hydrogen atom."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0107",
+      "type": "mcq",
+      "stem": "Which of the following is a limitation of Bohr’s model?",
+      "options": {
+        "A": "Cannot explain hydrogen spectra",
+        "B": "Cannot explain multi-electron atoms",
+        "C": "Cannot explain electron orbit",
+        "D": "Cannot explain nuclear charge"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Bohr's model fails to accurately predict the behavior and spectra of atoms with more than one electron."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0108",
+      "type": "mcq",
+      "stem": "Which effect cannot be explained by Bohr’s model?",
+      "options": {
+        "A": "Photoelectric effect",
+        "B": "Zeeman effect",
+        "C": "Chemical bonding",
+        "D": "Radioactivity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Zeeman effect, which describes the splitting of spectral lines in a magnetic field, cannot be explained by the Bohr model."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0109",
+      "type": "mcq",
+      "stem": "Orbitals represent:",
+      "options": {
+        "A": "Fixed paths of electrons",
+        "B": "Regions of probability",
+        "C": "Energy of nucleus",
+        "D": "Neutron location"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An orbital is defined as a three-dimensional region in space where there is a high probability of finding an electron."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0110",
+      "type": "mcq",
+      "stem": "The total number of orbitals in n = 4 shell is:",
+      "options": {
+        "A": "4",
+        "B": "8",
+        "C": "16",
+        "D": "32"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The number of orbitals in a shell is given by n², so for n=4, 4² = 16."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0111",
+      "type": "mcq",
+      "stem": "The maximum electrons in n = 4 shell is:",
+      "options": {
+        "A": "16",
+        "B": "24",
+        "C": "32",
+        "D": "64"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The maximum number of electrons in a shell is 2n², so for n=4, 2(4)² = 32."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0112",
+      "type": "mcq",
+      "stem": "Which subshell has 5 orbitals?",
+      "options": {
+        "A": "p",
+        "B": "s",
+        "C": "d",
+        "D": "f"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The d subshell always contains five orbitals."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0113",
+      "type": "mcq",
+      "stem": "Which subshell has 7 orbitals?",
+      "options": {
+        "A": "p",
+        "B": "d",
+        "C": "f",
+        "D": "s"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The f subshell contains seven individual orbitals."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0114",
+      "type": "mcq",
+      "stem": "The maximum electrons in an orbital is:",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "4",
+        "D": "6"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "According to the Pauli Exclusion Principle, a single orbital can hold a maximum of two electrons."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0115",
+      "type": "mcq",
+      "stem": "Which principle explains electron pairing with opposite spins?",
+      "options": {
+        "A": "Hund’s rule",
+        "B": "Pauli exclusion principle",
+        "C": "Aufbau principle",
+        "D": "Quantum principle"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Pauli exclusion principle states that two electrons in the same orbital must have opposite spins."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0116",
+      "type": "mcq",
+      "stem": "Which principle explains single electron occupation first?",
+      "options": {
+        "A": "Hund’s rule",
+        "B": "Pauli principle",
+        "C": "Aufbau principle",
+        "D": "Dalton law"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Hund's rule states that electrons will occupy degenerate orbitals singly before pairing up."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0117",
+      "type": "mcq",
+      "stem": "The filling order 1s 2s 2p 3s 3p 4s follows:",
+      "options": {
+        "A": "Hund rule",
+        "B": "Aufbau principle",
+        "C": "Dalton rule",
+        "D": "Bohr rule"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Aufbau principle dictates that electrons fill the lowest energy subshells first."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0118",
+      "type": "mcq",
+      "stem": "Which element has configuration [Ne]3s²3p¹?",
+      "options": {
+        "A": "Aluminium",
+        "B": "Magnesium",
+        "C": "Sodium",
+        "D": "Silicon"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Aluminium has 13 electrons, with 10 represented by Neon and 3 in the valence shell."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0119",
+      "type": "mcq",
+      "stem": "Which element has configuration [Ne]3s²3p²?",
+      "options": {
+        "A": "Silicon",
+        "B": "Aluminium",
+        "C": "Sulfur",
+        "D": "Chlorine"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Silicon has 14 electrons, which corresponds to the [Ne]3s²3p² configuration."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0120",
+      "type": "mcq",
+      "stem": "Which of the following is a halogen?",
+      "options": {
+        "A": "Sodium",
+        "B": "Chlorine",
+        "C": "Calcium",
+        "D": "Magnesium"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Chlorine is a member of Group 17, known as the halogens."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0121",
+      "type": "mcq",
+      "stem": "Which of the following is an alkali metal?",
+      "options": {
+        "A": "Sodium",
+        "B": "Chlorine",
+        "C": "Oxygen",
+        "D": "Nitrogen"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Sodium belongs to Group 1, which consists of the alkali metals."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0122",
+      "type": "mcq",
+      "stem": "Noble gases are located in:",
+      "options": {
+        "A": "Group 17",
+        "B": "Group 18",
+        "C": "Group 1",
+        "D": "Group 2"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The noble gases make up Group 18 of the periodic table."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0123",
+      "type": "mcq",
+      "stem": "Transition metals belong to:",
+      "options": {
+        "A": "s-block",
+        "B": "p-block",
+        "C": "d-block",
+        "D": "f-block"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The transition metals are found in the d-block of the periodic table."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0124",
+      "type": "mcq",
+      "stem": "Lanthanides belong to:",
+      "options": {
+        "A": "p-block",
+        "B": "s-block",
+        "C": "d-block",
+        "D": "f-block"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Lanthanides (and actinides) are located in the f-block at the bottom of the table."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0125",
+      "type": "mcq",
+      "stem": "Which scientist discovered the relationship between atomic number and periodicity?",
+      "options": {
+        "A": "Moseley",
+        "B": "Dalton",
+        "C": "Rutherford",
+        "D": "Bohr"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Henry Moseley established that atomic number, not mass, is the correct basis for periodic arrangement."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0126",
+      "type": "mcq",
+      "stem": "Dobereiner classified elements into:",
+      "options": {
+        "A": "Octaves",
+        "B": "Triads",
+        "C": "Groups",
+        "D": "Periods"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Johann Dobereiner grouped elements with similar properties into sets of three called triads."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0127",
+      "type": "mcq",
+      "stem": "Newlands proposed:",
+      "options": {
+        "A": "Periodic law",
+        "B": "Law of octaves",
+        "C": "Atomic theory",
+        "D": "Nuclear model"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "John Newlands observed that properties repeated every eighth element, which he called the Law of Octaves."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0128",
+      "type": "mcq",
+      "stem": "The periodic table was improved by arranging elements by:",
+      "options": {
+        "A": "Atomic mass",
+        "B": "Atomic number",
+        "C": "Density",
+        "D": "Volume"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Modern periodicity is based on increasing atomic number."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0129",
+      "type": "mcq",
+      "stem": "Which element is most electronegative?",
+      "options": {
+        "A": "Oxygen",
+        "B": "Nitrogen",
+        "C": "Fluorine",
+        "D": "Chlorine"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Fluorine is the most electronegative element on the Pauling scale."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0130",
+      "type": "mcq",
+      "stem": "Electronegativity generally decreases down a group because:",
+      "options": {
+        "A": "Nuclear charge decreases",
+        "B": "Atomic radius increases",
+        "C": "Electrons decrease",
+        "D": "Energy increases"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "As radius increases down a group, the nucleus has a weaker pull on shared electrons."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0131",
+      "type": "mcq",
+      "stem": "Metals generally have:",
+      "options": {
+        "A": "High electronegativity",
+        "B": "Low electronegativity",
+        "C": "High ionization energy",
+        "D": "High electron affinity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Metals tend to lose electrons and therefore have low electronegativity and low ionization energy."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0132",
+      "type": "mcq",
+      "stem": "Non-metals usually:",
+      "options": {
+        "A": "Lose electrons",
+        "B": "Gain electrons",
+        "C": "Share protons",
+        "D": "Lose neutrons"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Non-metals tend to attract and gain electrons to achieve a stable configuration."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0133",
+      "type": "mcq",
+      "stem": "Metals form:",
+      "options": {
+        "A": "Anions",
+        "B": "Cations",
+        "C": "Molecules",
+        "D": "Radicals"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Metals typically lose electrons to form positively charged ions called cations."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0134",
+      "type": "mcq",
+      "stem": "Non-metals usually form:",
+      "options": {
+        "A": "Cations",
+        "B": "Anions",
+        "C": "Metals",
+        "D": "Alloys"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Non-metals typically gain electrons to form negatively charged ions called anions."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0135",
+      "type": "mcq",
+      "stem": "Ionic compounds usually have:",
+      "options": {
+        "A": "Low melting points",
+        "B": "High melting points",
+        "C": "Low density",
+        "D": "Poor structure"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The strong electrostatic forces in ionic lattices result in high melting and boiling points."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0136",
+      "type": "mcq",
+      "stem": "Covalent compounds usually:",
+      "options": {
+        "A": "Conduct electricity",
+        "B": "Have low melting points",
+        "C": "Form ions",
+        "D": "Have metallic structure"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Covalent compounds are typically held by weaker intermolecular forces, leading to lower melting points."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0137",
+      "type": "mcq",
+      "stem": "Which bond involves electron transfer?",
+      "options": {
+        "A": "Ionic bond",
+        "B": "Covalent bond",
+        "C": "Metallic bond",
+        "D": "Hydrogen bond"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Ionic bonding occurs when electrons are transferred from a metal to a non-metal."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0138",
+      "type": "mcq",
+      "stem": "Which bond involves electron sharing?",
+      "options": {
+        "A": "Ionic",
+        "B": "Covalent",
+        "C": "Metallic",
+        "D": "Hydrogen"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Covalent bonds are formed by the sharing of electron pairs between atoms."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0139",
+      "type": "mcq",
+      "stem": "Polar covalent bonds occur when:",
+      "options": {
+        "A": "Electrons shared equally",
+        "B": "Electrons shared unequally",
+        "C": "Electrons transferred",
+        "D": "No electrons shared"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A polar bond results when there is a difference in electronegativity between the sharing atoms."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0140",
+      "type": "mcq",
+      "stem": "Nonpolar covalent bonds occur when:",
+      "options": {
+        "A": "Electrons shared equally",
+        "B": "Electrons transferred",
+        "C": "Ions formed",
+        "D": "Charges separated"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Nonpolar bonds occur between identical atoms or atoms with very similar electronegativity."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0141",
+      "type": "mcq",
+      "stem": "Which molecule has a nonpolar covalent bond?",
+      "options": {
+        "A": "H₂",
+        "B": "HCl",
+        "C": "NH₃",
+        "D": "H₂O"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "H₂ consists of identical atoms sharing electrons equally, making it nonpolar."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0142",
+      "type": "mcq",
+      "stem": "Which molecule has polar covalent bond?",
+      "options": {
+        "A": "H₂",
+        "B": "O₂",
+        "C": "HCl",
+        "D": "N₂"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The difference in electronegativity between H and Cl results in an unequal sharing of electrons."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0143",
+      "type": "mcq",
+      "stem": "Which property is typical of metals?",
+      "options": {
+        "A": "Brittle",
+        "B": "Poor conductivity",
+        "C": "Good conductivity",
+        "D": "Low melting point"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Metals are excellent conductors of heat and electricity due to their delocalized electrons."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0144",
+      "type": "mcq",
+      "stem": "Metals are:",
+      "options": {
+        "A": "Ductile",
+        "B": "Brittle",
+        "C": "Non-conductive",
+        "D": "Soft"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Ductility is the property that allows metals to be drawn into thin wires."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0145",
+      "type": "mcq",
+      "stem": "The property allowing metals to be beaten into sheets is:",
+      "options": {
+        "A": "Ductility",
+        "B": "Malleability",
+        "C": "Conductivity",
+        "D": "Elasticity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Malleability is the physical property that allows a metal to be hammered into thin sheets."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0146",
+      "type": "mcq",
+      "stem": "Glass is an example of:",
+      "options": {
+        "A": "Crystalline solid",
+        "B": "Amorphous solid",
+        "C": "Ionic solid",
+        "D": "Metallic solid"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Glass lacks a long-range ordered structure and is considered an amorphous solid."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0147",
+      "type": "mcq",
+      "stem": "Amorphous solids melt:",
+      "options": {
+        "A": "Sharply",
+        "B": "Gradually",
+        "C": "Instantly",
+        "D": "Never"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Amorphous solids soften over a range of temperatures rather than having a fixed melting point."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0148",
+      "type": "mcq",
+      "stem": "A polymer consists of:",
+      "options": {
+        "A": "Single atoms",
+        "B": "Long chains of molecules",
+        "C": "Ions only",
+        "D": "Metals only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Polymers are large molecules composed of long repeating chains of smaller units."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0149",
+      "type": "mcq",
+      "stem": "Rubber is an example of:",
+      "options": {
+        "A": "Crystalline solid",
+        "B": "Polymeric solid",
+        "C": "Ionic solid",
+        "D": "Metallic solid"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Rubber is a natural polymer made of long-chain molecules."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0150",
+      "type": "mcq",
+      "stem": "Chemical bonding involves:",
+      "options": {
+        "A": "Neutrons",
+        "B": "Valence electrons",
+        "C": "Protons",
+        "D": "Nucleus"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Bonding primarily involves the loss, gain, or sharing of electrons in the outermost (valence) shell."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0151",
+      "type": "mcq",
+      "stem": "Valence electrons are found in:",
+      "options": {
+        "A": "Inner shell",
+        "B": "Outer shell",
+        "C": "Nucleus",
+        "D": "Core"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Valence electrons are the electrons located in the atom's highest occupied energy level."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0152",
+      "type": "mcq",
+      "stem": "The octet rule states atoms tend to have:",
+      "options": {
+        "A": "6 electrons",
+        "B": "8 electrons",
+        "C": "10 electrons",
+        "D": "12 electrons"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The octet rule suggests atoms are most stable when they have eight electrons in their valence shell."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0153",
+      "type": "mcq",
+      "stem": "A chemical equation shows:",
+      "options": {
+        "A": "Physical changes",
+        "B": "Chemical reactions",
+        "C": "Atomic number",
+        "D": "Electron spin"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Chemical equations provide a symbolic representation of the changes occurring during a chemical reaction."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0154",
+      "type": "mcq",
+      "stem": "Reactants are found on:",
+      "options": {
+        "A": "Right side",
+        "B": "Left side",
+        "C": "Top",
+        "D": "Bottom"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "By convention, starting materials (reactants) are written on the left side of a chemical equation."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0155",
+      "type": "mcq",
+      "stem": "Products appear on:",
+      "options": {
+        "A": "Left side",
+        "B": "Right side",
+        "C": "Top",
+        "D": "Bottom"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The substances produced in a reaction are written on the right side of the equation."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0156",
+      "type": "mcq",
+      "stem": "The symbol (g) represents:",
+      "options": {
+        "A": "Solid",
+        "B": "Liquid",
+        "C": "Gas",
+        "D": "Aqueous"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The state symbol (g) denotes that a substance is in the gaseous state."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0157",
+      "type": "mcq",
+      "stem": "The symbol (s) represents:",
+      "options": {
+        "A": "Solid",
+        "B": "Liquid",
+        "C": "Gas",
+        "D": "Aqueous"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The state symbol (s) indicates the substance is a solid."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0158",
+      "type": "mcq",
+      "stem": "The symbol (l) represents:",
+      "options": {
+        "A": "Liquid",
+        "B": "Solid",
+        "C": "Gas",
+        "D": "Ion"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The state symbol (l) stands for a pure liquid."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0159",
+      "type": "mcq",
+      "stem": "Balancing chemical equations follows the law of:",
+      "options": {
+        "A": "Conservation of mass",
+        "B": "Conservation of charge",
+        "C": "Conservation of energy",
+        "D": "Conservation of atoms"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Equations must be balanced because mass cannot be created or destroyed in a chemical reaction."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0160",
+      "type": "mcq",
+      "stem": "The limiting reactant determines:",
+      "options": {
+        "A": "Reaction speed",
+        "B": "Amount of product formed",
+        "C": "Color of product",
+        "D": "Density"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The limiting reactant is the substance that is used up first, stopping the reaction and limiting the yield."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0161",
+      "type": "mcq",
+      "stem": "The reactant remaining after reaction is called:",
+      "options": {
+        "A": "Limiting reactant",
+        "B": "Excess reactant",
+        "C": "Catalyst",
+        "D": "Product"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The excess reactant is the material that is not completely consumed when the reaction finishes."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0162",
+      "type": "mcq",
+      "stem": "Stoichiometry involves relationships between:",
+      "options": {
+        "A": "Mass and moles",
+        "B": "Volume only",
+        "C": "Temperature only",
+        "D": "Pressure only"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Stoichiometry deals with the quantitative relationships between reactants and products."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0163",
+      "type": "mcq",
+      "stem": "One mole contains:",
+      "options": {
+        "A": "6.02 × 10²³ particles",
+        "B": "6.02 × 10²² particles",
+        "C": "3.02 × 10²³ particles",
+        "D": "9.02 × 10²³ particles"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A mole is defined as the amount of substance containing exactly 6.02214076 × 10²³ particles."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0164",
+      "type": "mcq",
+      "stem": "Avogadro’s number equals:",
+      "options": {
+        "A": "6.02 × 10²³",
+        "B": "6.02 × 10²²",
+        "C": "3.02 × 10²³",
+        "D": "9.02 × 10²³"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Avogadro's number is the constant used to relate macroscopic mass to the number of atoms/molecules."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0165",
+      "type": "mcq",
+      "stem": "Mole concept relates:",
+      "options": {
+        "A": "Mass and number of particles",
+        "B": "Density and mass",
+        "C": "Volume and density",
+        "D": "Temperature and pressure"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The mole bridge allows chemists to count particles by weighing them."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0166",
+      "type": "mcq",
+      "stem": "Stoichiometric calculations are based on:",
+      "options": {
+        "A": "Balanced equations",
+        "B": "Atomic radius",
+        "C": "Electronegativity",
+        "D": "Ionization energy"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Correct calculations require the mole ratios found only in a balanced chemical equation."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0167",
+      "type": "mcq",
+      "stem": "The molar mass of NaOH is:",
+      "options": {
+        "A": "20 g/mol",
+        "B": "30 g/mol",
+        "C": "40 g/mol",
+        "D": "50 g/mol"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "NaOH molar mass: Na(23) + O(16) + H(1) = 40 g/mol."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0168",
+      "type": "mcq",
+      "stem": "The molar mass of H₂O is:",
+      "options": {
+        "A": "16 g/mol",
+        "B": "18 g/mol",
+        "C": "20 g/mol",
+        "D": "22 g/mol"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "H₂O molar mass: 2*H(1) + O(16) = 18 g/mol."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0169",
+      "type": "mcq",
+      "stem": "The molar mass of CO₂ is:",
+      "options": {
+        "A": "42 g/mol",
+        "B": "44 g/mol",
+        "C": "48 g/mol",
+        "D": "40 g/mol"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CO₂ molar mass: C(12) + 2*O(16) = 44 g/mol."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0170",
+      "type": "mcq",
+      "stem": "In the reaction 2H₂ + O₂ → 2H₂O , the mole ratio of H₂ to O₂ is:",
+      "options": {
+        "A": "1:1",
+        "B": "2:1",
+        "C": "1:2",
+        "D": "3:1"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The coefficients in the balanced equation show 2 moles of hydrogen react with 1 mole of oxygen."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0171",
+      "type": "mcq",
+      "stem": "In the same reaction, mole ratio of H₂O to O₂ is:",
+      "options": {
+        "A": "1:1",
+        "B": "2:1",
+        "C": "1:2",
+        "D": "3:1"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The equation shows that for every 1 mole of oxygen consumed, 2 moles of water are produced."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0172",
+      "type": "mcq",
+      "stem": "Stoichiometry calculations often use:",
+      "options": {
+        "A": "Mole ratios",
+        "B": "Density ratios",
+        "C": "Volume ratios",
+        "D": "Temperature ratios"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Mole ratios act as conversion factors between different substances in a reaction."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0173",
+      "type": "mcq",
+      "stem": "Which law states atoms are neither created nor destroyed?",
+      "options": {
+        "A": "Dalton law",
+        "B": "Conservation of mass",
+        "C": "Periodic law",
+        "D": "Boyle’s law"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Law of Conservation of Mass dictates that matter cannot be created or destroyed in chemical processes."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0174",
+      "type": "mcq",
+      "stem": "The balanced equation for ammonia synthesis is:",
+      "options": {
+        "A": "N₂ + H₂ → NH₃",
+        "B": "N₂ + 2H₂ → 2NH₃",
+        "C": "N₂ + 3H₂ → 2NH₃",
+        "D": "2N₂ + H₂ → NH₃"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "This equation correctly balances the nitrogen and hydrogen atoms on both sides."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0175",
+      "type": "mcq",
+      "stem": "The process of adjusting coefficients is called:",
+      "options": {
+        "A": "Stoichiometry",
+        "B": "Balancing equation",
+        "C": "Chemical bonding",
+        "D": "Ionization"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Balancing involves adding coefficients so that the number of atoms of each element is the same on both sides."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0176",
+      "type": "mcq",
+      "stem": "Subscripts in chemical formulas represent:",
+      "options": {
+        "A": "Number of atoms",
+        "B": "Number of molecules",
+        "C": "Number of reactions",
+        "D": "Number of ions"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Subscripts indicate the specific number of atoms of an element within a single molecule or formula unit."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0177",
+      "type": "mcq",
+      "stem": "Coefficients in chemical equations represent:",
+      "options": {
+        "A": "Number of atoms",
+        "B": "Number of molecules",
+        "C": "Number of electrons",
+        "D": "Atomic number"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Coefficients indicate the relative number of molecules or moles of a substance in a reaction."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0178",
+      "type": "mcq",
+      "stem": "The SI unit used to measure amount of substance is:",
+      "options": {
+        "A": "Gram",
+        "B": "Mole",
+        "C": "Kilogram",
+        "D": "Liter"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The mole is the standard International System (SI) unit for the amount of substance."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0179",
+      "type": "mcq",
+      "stem": "The mass of one mole of a substance is called:",
+      "options": {
+        "A": "Molecular weight",
+        "B": "Atomic weight",
+        "C": "Molar mass",
+        "D": "Relative mass"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Molar mass is the mass in grams of one mole of any pure substance."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0180",
+      "type": "mcq",
+      "stem": "How many molecules are present in 1 mole of any substance?",
+      "options": {
+        "A": "6.02 × 10²²",
+        "B": "3.02 × 10²³",
+        "C": "6.02 × 10²³",
+        "D": "9.02 × 10²³"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Exactly one mole of any substance contains Avogadro's number of particles."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0181",
+      "type": "mcq",
+      "stem": "The number 6.02 × 10²³ is called:",
+      "options": {
+        "A": "Dalton number",
+        "B": "Avogadro's number",
+        "C": "Mendeleev number",
+        "D": "Planck number"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "This constant is named in honor of the Italian scientist Amedeo Avogadro."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0182",
+      "type": "mcq",
+      "stem": "The molar mass of O₂ is:",
+      "options": {
+        "A": "16 g/mol",
+        "B": "32 g/mol",
+        "C": "18 g/mol",
+        "D": "30 g/mol"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Since O has an atomic mass of ~16, the diatomic molecule O₂ is 32 g/mol."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0183",
+      "type": "mcq",
+      "stem": "The molar mass of NH₃ is:",
+      "options": {
+        "A": "14 g/mol",
+        "B": "15 g/mol",
+        "C": "17 g/mol",
+        "D": "18 g/mol"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Molar mass of NH₃: N(14) + 3*H(1) = 17 g/mol."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0184",
+      "type": "mcq",
+      "stem": "Which of the following contains the largest number of molecules?",
+      "options": {
+        "A": "1 mole of CO₂",
+        "B": "1 mole of H₂O",
+        "C": "1 mole of O₂",
+        "D": "All contain equal number"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "By definition, one mole of any substance contains the same number of molecules (6.02 x 10²³)."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0185",
+      "type": "mcq",
+      "stem": "In stoichiometric calculations, the most useful quantity is:",
+      "options": {
+        "A": "Mass",
+        "B": "Volume",
+        "C": "Mole",
+        "D": "Density"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The mole is the central unit that connects mass, volume, and number of particles in chemistry."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0186",
+      "type": "mcq",
+      "stem": "A balanced chemical equation represents:",
+      "options": {
+        "A": "Equal number of atoms",
+        "B": "Equal number of molecules",
+        "C": "Equal number of ions",
+        "D": "Equal number of electrons"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A balanced equation ensures there is an equal number of atoms of each element on both sides."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0187",
+      "type": "mcq",
+      "stem": "Which law states that mass is neither created nor destroyed in a reaction?",
+      "options": {
+        "A": "Boyle's law",
+        "B": "Law of conservation of mass",
+        "C": "Dalton's law",
+        "D": "Charles' law"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "This fundamental law of chemistry states that the total mass of reactants equals the total mass of products."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0188",
+      "type": "mcq",
+      "stem": "In the reaction 2H₂ + O₂ → 2H₂O , the mole ratio of H₂ to H₂O is:",
+      "options": {
+        "A": "1 : 1",
+        "B": "2 : 1",
+        "C": "1 : 2",
+        "D": "3 : 1"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The ratio is 2:2, which simplifies to a 1:1 ratio."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0189",
+      "type": "mcq",
+      "stem": "In the same reaction, the mole ratio of O₂ to H₂O is:",
+      "options": {
+        "A": "1 : 1",
+        "B": "1 : 2",
+        "C": "2 : 1",
+        "D": "3 : 2"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "For every 1 mole of oxygen reacted, 2 moles of water are produced."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0190",
+      "type": "mcq",
+      "stem": "A reactant that limits the amount of product formed is called:",
+      "options": {
+        "A": "Catalyst",
+        "B": "Limiting reactant",
+        "C": "Excess reactant",
+        "D": "Solvent"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The limiting reactant dictates the theoretical yield of the product."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0191",
+      "type": "mcq",
+      "stem": "The reactant present in greater amount than required is called:",
+      "options": {
+        "A": "Limiting reactant",
+        "B": "Excess reactant",
+        "C": "Catalyst",
+        "D": "Product"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The excess reactant is not completely used up during the reaction."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0192",
+      "type": "mcq",
+      "stem": "If 2 moles of H₂ react with 1 mole of O₂ , the product formed is:",
+      "options": {
+        "A": "1 mole H₂O",
+        "B": "2 moles H₂O",
+        "C": "3 moles H₂O",
+        "D": "4 moles H₂O"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "According to the balanced equation 2H₂ + O₂ → 2H₂O, these amounts react perfectly to form 2 moles of water."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0193",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a chemical reaction?",
+      "options": {
+        "A": "Melting of ice",
+        "B": "Burning of wood",
+        "C": "Dissolving sugar in water",
+        "D": "Breaking glass"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Burning (combustion) is a chemical change that creates new substances, unlike physical changes like melting or breaking."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0194",
+      "type": "mcq",
+      "stem": "The process of combining substances to form new substances is called:",
+      "options": {
+        "A": "Physical change",
+        "B": "Chemical reaction",
+        "C": "Phase change",
+        "D": "Mechanical change"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A chemical reaction involves a rearrangement of atoms to form entirely new chemical substances."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0195",
+      "type": "mcq",
+      "stem": "A catalyst is a substance that:",
+      "options": {
+        "A": "Stops a reaction",
+        "B": "Increases reaction rate without being consumed",
+        "C": "Reduces product formation",
+        "D": "Changes equilibrium"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Catalysts speed up reactions by providing an alternative pathway with lower activation energy."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0196",
+      "type": "mcq",
+      "stem": "The substance formed after a chemical reaction is called:",
+      "options": {
+        "A": "Reactant",
+        "B": "Product",
+        "C": "Catalyst",
+        "D": "Solvent"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Products are the final materials resulting from a chemical process."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0197",
+      "type": "mcq",
+      "stem": "The substance that participates in a chemical reaction is called:",
+      "options": {
+        "A": "Product",
+        "B": "Reactant",
+        "C": "Catalyst",
+        "D": "Compound"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Reactants are the starting materials that undergo change during a reaction."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0198",
+      "type": "mcq",
+      "stem": "How many orbitals are present in the d subshell?",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "7",
+        "D": "9"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Every d subshell consists of five distinct orbitals."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0199",
+      "type": "mcq",
+      "stem": "Which transition in the hydrogen atom emits the shortest wavelength?",
+      "options": {
+        "A": "n=3 to n=2",
+        "B": "n=4 to n=2",
+        "C": "n=5 to n=2",
+        "D": "n=2 to n=1"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Transitions to the n=1 level (Lyman series) involve larger energy gaps than transitions to n=2 (Balmer series), resulting in shorter wavelengths."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0200",
+      "type": "mcq",
+      "stem": "Energy of a photon is inversely proportional to its:",
+      "options": {
+        "A": "Frequency",
+        "B": "Wavelength",
+        "C": "Velocity",
+        "D": "Amplitude"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "According to the equation E = hc/λ, energy and wavelength are inversely related."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0201",
+      "type": "mcq",
+      "stem": "Which of the following has the highest frequency?",
+      "options": {
+        "A": "Radio waves",
+        "B": "Infrared",
+        "C": "Ultraviolet",
+        "D": "Gamma rays"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Gamma rays are at the high-energy, high-frequency end of the electromagnetic spectrum."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0202",
+      "type": "mcq",
+      "stem": "Visible light ranges from approximately:",
+      "options": {
+        "A": "100-400 nm",
+        "B": "400-700 nm",
+        "C": "700-1000 nm",
+        "D": "10-100 nm"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The visible spectrum corresponds to wavelengths between roughly 400 nm (violet) and 700 nm (red)."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0203",
+      "type": "mcq",
+      "stem": "The photoelectric effect was explained by:",
+      "options": {
+        "A": "Newton",
+        "B": "Einstein",
+        "C": "Dalton",
+        "D": "Bohr"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Albert Einstein proposed that light consists of discrete packets of energy called photons to explain this effect."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0204",
+      "type": "mcq",
+      "stem": "The energy required to remove an electron from a metal surface is:",
+      "options": {
+        "A": "Ionization energy",
+        "B": "Work function",
+        "C": "Electron affinity",
+        "D": "Activation energy"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In the context of the photoelectric effect, the work function is the minimum energy needed to eject an electron."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0205",
+      "type": "mcq",
+      "stem": "Which particle has the longest wavelength for the same velocity?",
+      "options": {
+        "A": "Electron",
+        "B": "Proton",
+        "C": "Neutron",
+        "D": "Alpha particle"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "According to de Broglie’s equation (λ = h/mv), wavelength is inversely proportional to mass; since the electron is the lightest, it has the longest wavelength."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0206",
+      "type": "mcq",
+      "stem": "The quantum number that defines the shape of an orbital is:",
+      "options": {
+        "A": "Principal",
+        "B": "Azimuthal",
+        "C": "Magnetic",
+        "D": "Spin"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The azimuthal (or angular momentum) quantum number 'l' determines the orbital shape (s, p, d, f)."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0207",
+      "type": "mcq",
+      "stem": "For a principal quantum number n=4, the maximum value of l is:",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The value of l ranges from 0 to n-1."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0208",
+      "type": "mcq",
+      "stem": "Which of the following orbitals can hold a maximum of 6 electrons?",
+      "options": {
+        "A": "s",
+        "B": "p",
+        "C": "d",
+        "D": "f"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A p subshell has three orbitals, accommodating 6 electrons total."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0209",
+      "type": "mcq",
+      "stem": "Which subshell is filled before 3d?",
+      "options": {
+        "A": "3p",
+        "B": "4s",
+        "C": "4p",
+        "D": "2d"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The 4s subshell is slightly lower in energy than the 3d."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0210",
+      "type": "mcq",
+      "stem": "Which of the following represents a noble gas configuration?",
+      "options": {
+        "A": "ns²np⁶",
+        "B": "ns¹np⁵",
+        "C": "ns²np³",
+        "D": "ns²np⁴"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A full p subshell (except for Helium) defines a noble gas configuration."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0211",
+      "type": "mcq",
+      "stem": "The number of subshells in the n=2 shell is:",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The number of subshells in any shell is equal to its principal quantum number n (here, 2s and 2p)."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0212",
+      "type": "mcq",
+      "stem": "Which orbital has l=0?",
+      "options": {
+        "A": "p",
+        "B": "d",
+        "C": "s",
+        "D": "f"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The azimuthal quantum number l=0 corresponds to the s subshell."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0213",
+      "type": "mcq",
+      "stem": "The maximum number of electrons in a subshell is given by:",
+      "options": {
+        "A": "2l+1",
+        "B": "2(2l+1)",
+        "C": "n²",
+        "D": "2n²"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "There are (2l+1) orbitals in a subshell, and each can hold 2 electrons."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0214",
+      "type": "mcq",
+      "stem": "Which of the following is not a possible value for magnetic quantum number if l=1?",
+      "options": {
+        "A": "-1",
+        "B": "0",
+        "C": "1",
+        "D": "2"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The magnetic quantum number ml ranges from -l to +l."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0215",
+      "type": "mcq",
+      "stem": "The electron configuration of Cr (Z=24) is:",
+      "options": {
+        "A": "[Ar]4s²3d⁴",
+        "B": "[Ar]4s¹3d⁵",
+        "C": "[Ar]4s⁰3d⁶",
+        "D": "[Ar]3d⁴4s²"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Chromium is an exception to the Aufbau principle, adopting a half-filled d-subshell for extra stability."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0216",
+      "type": "mcq",
+      "stem": "The electron configuration of Cu (Z=29) is:",
+      "options": {
+        "A": "[Ar]4s²3d⁹",
+        "B": "[Ar]4s¹3d¹⁰",
+        "C": "[Ar]3d¹¹",
+        "D": "[Ar]4s²3d¹⁰"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Copper is an exception, filling the d-subshell completely for stability."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0217",
+      "type": "mcq",
+      "stem": "Paramagnetism is due to the presence of:",
+      "options": {
+        "A": "Paired electrons",
+        "B": "Unpaired electrons",
+        "C": "Protons",
+        "D": "Neutrons"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Atoms or ions with one or more unpaired electrons are attracted to magnetic fields."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0218",
+      "type": "mcq",
+      "stem": "Which of the following is diamagnetic?",
+      "options": {
+        "A": "O",
+        "B": "N",
+        "C": "Zn²⁺",
+        "D": "Fe³⁺"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Zn²⁺ has a [Ar]3d¹⁰ configuration with all electrons paired, making it diamagnetic."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0219",
+      "type": "mcq",
+      "stem": "The effective nuclear charge felt by valence electrons is less than actual nuclear charge due to:",
+      "options": {
+        "A": "Ionization",
+        "B": "Shielding effect",
+        "C": "Electronegativity",
+        "D": "Atomic radius"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Inner-shell electrons block or 'shield' the outer electrons from the full pull of the nucleus."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0220",
+      "type": "mcq",
+      "stem": "Across a period, shielding effect remains approximately constant while nuclear charge:",
+      "options": {
+        "A": "Decreases",
+        "B": "Increases",
+        "C": "Remains same",
+        "D": "Vanishes"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "As you move across a period, protons are added to the nucleus while electrons are added to the same main shell."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0221",
+      "type": "mcq",
+      "stem": "Which of the following has the smallest atomic radius?",
+      "options": {
+        "A": "Li",
+        "B": "Be",
+        "C": "B",
+        "D": "C"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Atomic radius decreases across a period from left to right."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0222",
+      "type": "mcq",
+      "stem": "Which ion is larger?",
+      "options": {
+        "A": "Na⁺",
+        "B": "Mg²⁺",
+        "C": "F⁻",
+        "D": "O²⁻"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "In an isoelectronic series, the ion with the lowest nuclear charge (fewest protons) has the largest radius."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0223",
+      "type": "mcq",
+      "stem": "The second ionization energy is always:",
+      "options": {
+        "A": "Less than first",
+        "B": "Greater than first",
+        "C": "Equal to first",
+        "D": "Zero"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It is harder to remove an electron from a positively charged ion than from a neutral atom."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0224",
+      "type": "mcq",
+      "stem": "Noble gases have high ionization energy because of:",
+      "options": {
+        "A": "Large radius",
+        "B": "Stable octet configuration",
+        "C": "High mass",
+        "D": "Low density"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Their full valence shells are extremely stable and resistant to electron removal."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0225",
+      "type": "mcq",
+      "stem": "Which group has the highest electron affinity?",
+      "options": {
+        "A": "Group 1",
+        "B": "Group 2",
+        "C": "Group 17",
+        "D": "Group 18"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Halogens gain one electron to achieve a noble gas configuration, releasing significant energy."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0226",
+      "type": "mcq",
+      "stem": "The scale used to measure electronegativity is:",
+      "options": {
+        "A": "Celsius scale",
+        "B": "Pauling scale",
+        "C": "Kelvin scale",
+        "D": "Richter scale"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Linus Pauling developed the most common scale for electronegativity values."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0227",
+      "type": "mcq",
+      "stem": "Metallic character increases:",
+      "options": {
+        "A": "Across a period",
+        "B": "Down a group",
+        "C": "Left to right",
+        "D": "Up a group"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "As atoms get larger down a group, they lose valence electrons more easily."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0228",
+      "type": "mcq",
+      "stem": "Non-metallic character increases:",
+      "options": {
+        "A": "Down a group",
+        "B": "Across a period",
+        "C": "Right to left",
+        "D": "Bottom to top"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The tendency to gain electrons increases as you move toward the right of the periodic table."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0229",
+      "type": "mcq",
+      "stem": "Which of the following is a metalloid?",
+      "options": {
+        "A": "Na",
+        "B": "Al",
+        "C": "Si",
+        "D": "S"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Silicon has properties intermediate between those of metals and non-metals."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0230",
+      "type": "mcq",
+      "stem": "Elements in the same group have similar properties because they have same number of:",
+      "options": {
+        "A": "Protons",
+        "B": "Neutrons",
+        "C": "Valence electrons",
+        "D": "Total electrons"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Chemical behavior is primarily determined by the number of electrons in the outermost shell."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0231",
+      "type": "mcq",
+      "stem": "Transition metals are characterized by filling of:",
+      "options": {
+        "A": "s subshell",
+        "B": "p subshell",
+        "C": "d subshell",
+        "D": "f subshell"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The d-block elements involve the sequential filling of (n-1)d orbitals."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0232",
+      "type": "mcq",
+      "stem": "Inner transition elements belong to:",
+      "options": {
+        "A": "s-block",
+        "B": "p-block",
+        "C": "d-block",
+        "D": "f-block"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Lanthanides and actinides involve the filling of f-orbitals."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0233",
+      "type": "mcq",
+      "stem": "The most metallic element in Group 1 is:",
+      "options": {
+        "A": "Li",
+        "B": "Na",
+        "C": "K",
+        "D": "Cs"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Metallic character increases down the group."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0234",
+      "type": "mcq",
+      "stem": "Ionic compounds are generally soluble in:",
+      "options": {
+        "A": "Benzene",
+        "B": "Water",
+        "C": "Ether",
+        "D": "Carbon tetrachloride"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Water is a polar solvent capable of solvating the ions in a crystal lattice."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0235",
+      "type": "mcq",
+      "stem": "The energy released when an ionic crystal is formed from gaseous ions is:",
+      "options": {
+        "A": "Ionization energy",
+        "B": "Lattice energy",
+        "C": "Hydration energy",
+        "D": "Bond energy"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Lattice energy measures the strength of the bonds in an ionic compound."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0236",
+      "type": "mcq",
+      "stem": "A coordinate covalent bond is formed when:",
+      "options": {
+        "A": "Both atoms share electrons equally",
+        "B": "One atom provides both electrons for sharing",
+        "C": "Electrons are transferred",
+        "D": "Protons are shared"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Also known as a dative bond, one species acts as a Lewis base donating an electron pair."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0237",
+      "type": "mcq",
+      "stem": "Which of the following contains a coordinate covalent bond?",
+      "options": {
+        "A": "H₂",
+        "B": "NH₄⁺",
+        "C": "NaCl",
+        "D": "CH₄"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In the ammonium ion, the nitrogen atom shares its lone pair with a hydrogen ion."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0238",
+      "type": "mcq",
+      "stem": "VSEPR theory is used to predict:",
+      "options": {
+        "A": "Bond strength",
+        "B": "Molecular geometry",
+        "C": "Atomic radius",
+        "D": "Electron affinity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Valence Shell Electron Pair Repulsion theory assumes electron pairs arrange to minimize repulsion."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0239",
+      "type": "mcq",
+      "stem": "The shape of a methane (CH₄) molecule is:",
+      "options": {
+        "A": "Linear",
+        "B": "Trigonal planar",
+        "C": "Tetrahedral",
+        "D": "Octahedral"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Methane has four bonding pairs and no lone pairs, leading to a tetrahedral arrangement."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0240",
+      "type": "mcq",
+      "stem": "The bond angle in a tetrahedral molecule is:",
+      "options": {
+        "A": "90°",
+        "B": "109.5°",
+        "C": "120°",
+        "D": "180°"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "This is the ideal angle for minimizing repulsion between four electron pairs."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0241",
+      "type": "mcq",
+      "stem": "The shape of ammonia (NH₃) molecule is:",
+      "options": {
+        "A": "Tetrahedral",
+        "B": "Trigonal pyramidal",
+        "C": "Bent",
+        "D": "Linear"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The presence of one lone pair reduces the molecular symmetry from tetrahedral to pyramidal."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0242",
+      "type": "mcq",
+      "stem": "Water (H₂O) has a bent shape due to:",
+      "options": {
+        "A": "One lone pair",
+        "B": "Two lone pairs",
+        "C": "No lone pairs",
+        "D": "Three lone pairs"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The two lone pairs on oxygen exert more repulsion than the bonding pairs."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0243",
+      "type": "mcq",
+      "stem": "Hybridization in carbon in ethene (C₂H₄) is:",
+      "options": {
+        "A": "sp",
+        "B": "sp²",
+        "C": "sp³",
+        "D": "dsp²"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Carbon atoms in a double bond involve sp² hybridization to form one pi and three sigma bonds."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0244",
+      "type": "mcq",
+      "stem": "The hybridization in ethyne (C₂H₂) is:",
+      "options": {
+        "A": "sp",
+        "B": "sp²",
+        "C": "sp³",
+        "D": "d²sp³"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Triple-bonded carbons use sp hybridization for a linear geometry."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0245",
+      "type": "mcq",
+      "stem": "A sigma (σ) bond is formed by:",
+      "options": {
+        "A": "Side-to-side overlap",
+        "B": "Head-on overlap",
+        "C": "Electron transfer",
+        "D": "No overlap"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Sigma bonds are formed by the axial overlap of atomic orbitals."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0246",
+      "type": "mcq",
+      "stem": "A pi (π) bond is formed by:",
+      "options": {
+        "A": "Axial overlap",
+        "B": "Sideways overlap",
+        "C": "Proton sharing",
+        "D": "Ionic attraction"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Pi bonds occur from the lateral overlap of p-orbitals."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0247",
+      "type": "mcq",
+      "stem": "Which of the following has a triple bond?",
+      "options": {
+        "A": "O₂",
+        "B": "N₂",
+        "C": "Cl₂",
+        "D": "F₂"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Nitrogen atoms share three pairs of electrons to fulfill the octet rule."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0248",
+      "type": "mcq",
+      "stem": "Hydrogen bonding occurs between hydrogen and:",
+      "options": {
+        "A": "C, S, P",
+        "B": "N, O, F",
+        "C": "Na, Mg, Al",
+        "D": "Cl, Br, I"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hydrogen bonds form when H is bonded to highly electronegative atoms."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0249",
+      "type": "mcq",
+      "stem": "Which substance has the highest boiling point due to hydrogen bonding?",
+      "options": {
+        "A": "CH₄",
+        "B": "NH₃",
+        "C": "H₂O",
+        "D": "H₂S"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Water can form more extensive hydrogen bonding networks than ammonia or hydrogen sulfide."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0250",
+      "type": "mcq",
+      "stem": "Van der Waals forces are strongest in:",
+      "options": {
+        "A": "Gases",
+        "B": "Liquids",
+        "C": "Large molecules",
+        "D": "Small molecules"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Larger molecules have more electrons and greater surface area for dispersion forces."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0251",
+      "type": "mcq",
+      "stem": "The bond in HF is:",
+      "options": {
+        "A": "Nonpolar covalent",
+        "B": "Polar covalent",
+        "C": "Ionic",
+        "D": "Metallic"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The large electronegativity difference between H and F causes unequal electron sharing."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0252",
+      "type": "mcq",
+      "stem": "Which of the following is an exothermic process?",
+      "options": {
+        "A": "Melting",
+        "B": "Boiling",
+        "C": "Condensation",
+        "D": "Sublimation"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Condensation releases heat as a gas turns into a liquid."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0253",
+      "type": "mcq",
+      "stem": "Enthalpy change (ΔH) for an endothermic reaction is:",
+      "options": {
+        "A": "Positive",
+        "B": "Negative",
+        "C": "Zero",
+        "D": "Infinite"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Endothermic reactions absorb heat from the surroundings."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0254",
+      "type": "mcq",
+      "stem": "Standard enthalpy of formation of an element in its standard state is:",
+      "options": {
+        "A": "100 kJ/mol",
+        "B": "0 kJ/mol",
+        "C": "Depends on element",
+        "D": "-100 kJ/mol"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "By convention, the enthalpy of formation of pure elements in their most stable state is zero."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0255",
+      "type": "mcq",
+      "stem": "Hess’s law states that enthalpy change is independent of:",
+      "options": {
+        "A": "Initial state",
+        "B": "Final state",
+        "C": "Path taken",
+        "D": "Temperature"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Enthalpy is a state function; only the start and end points matter."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0256",
+      "type": "mcq",
+      "stem": "Entropy is a measure of:",
+      "options": {
+        "A": "Heat",
+        "B": "Disorder",
+        "C": "Energy",
+        "D": "Mass"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Entropy (S) quantifies the randomness or disorder in a system."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0257",
+      "type": "mcq",
+      "stem": "Which state has the highest entropy?",
+      "options": {
+        "A": "Solid",
+        "B": "Liquid",
+        "C": "Gas",
+        "D": "Crystal"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Gas molecules move randomly and have more possible microstates than solids or liquids."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0258",
+      "type": "mcq",
+      "stem": "Gibbs free energy (ΔG) for a spontaneous reaction is:",
+      "options": {
+        "A": "Positive",
+        "B": "Negative",
+        "C": "Zero",
+        "D": "Greater than 1"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A spontaneous process must result in a decrease in free energy."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0259",
+      "type": "mcq",
+      "stem": "At equilibrium, ΔG is equal to:",
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "-1",
+        "D": "Infinity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "When a system is at equilibrium, there is no net change in free energy."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0260",
+      "type": "mcq",
+      "stem": "The first law of thermodynamics is the law of:",
+      "options": {
+        "A": "Conservation of energy",
+        "B": "Entropy",
+        "C": "Equilibrium",
+        "D": "Mass action"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Energy cannot be created or destroyed, only transformed."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0261",
+      "type": "mcq",
+      "stem": "Specific heat capacity is the heat required to raise the temperature of:",
+      "options": {
+        "A": "1 mole by 1°C",
+        "B": "1 gram by 1°C",
+        "C": "Entire substance by 1°C",
+        "D": "1 liter by 1°C"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It is an intensive property defined per unit mass."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0262",
+      "type": "mcq",
+      "stem": "An isolated system can exchange:",
+      "options": {
+        "A": "Energy only",
+        "B": "Matter only",
+        "C": "Both energy and matter",
+        "D": "Neither energy nor matter"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Isolated systems are completely cut off from their surroundings."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0263",
+      "type": "mcq",
+      "stem": "Bomb calorimeter is used to measure:",
+      "options": {
+        "A": "Enthalpy of neutralization",
+        "B": "Internal energy of combustion",
+        "C": "Specific heat",
+        "D": "Boiling point"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Combustion reactions are typically carried out at constant volume in a bomb calorimeter."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0264",
+      "type": "mcq",
+      "stem": "Which of the following is a state function?",
+      "options": {
+        "A": "Heat",
+        "B": "Work",
+        "C": "Enthalpy",
+        "D": "Distance"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "State functions depend only on the current state of the system, not how it arrived there."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0265",
+      "type": "mcq",
+      "stem": "Molar heat capacity is measured in:",
+      "options": {
+        "A": "J/g°C",
+        "B": "J/mol°C",
+        "C": "kJ/kg",
+        "D": "Cal/g"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It is defined as the heat needed to raise one mole of substance by one degree."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0266",
+      "type": "mcq",
+      "stem": "The heat of neutralization of a strong acid and strong base is approximately:",
+      "options": {
+        "A": "-57.3 kJ/mol",
+        "B": "-100 kJ/mol",
+        "C": "-13.7 kJ/mol",
+        "D": "0 kJ/mol"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "This value is constant because the net reaction is always H⁺ + OH⁻ → H₂O."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0267",
+      "type": "mcq",
+      "stem": "Boyles’s Law relates:",
+      "options": {
+        "A": "Volume and Temperature",
+        "B": "Volume and Pressure",
+        "C": "Pressure and Temperature",
+        "D": "Moles and Volume"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "At constant temperature, pressure and volume are inversely proportional."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0268",
+      "type": "mcq",
+      "stem": "Charles’s Law states that volume is directly proportional to:",
+      "options": {
+        "A": "Pressure",
+        "B": "Absolute temperature",
+        "C": "Density",
+        "D": "Mass"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Volume increases linearly with Kelvin temperature at constant pressure."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0269",
+      "type": "mcq",
+      "stem": "The Ideal Gas Equation is:",
+      "options": {
+        "A": "PV = nRT",
+        "B": "P = VRT",
+        "C": "V = nPT",
+        "D": "PV = RT"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "This equation combines Boyle's, Charles's, and Avogadro's laws."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0270",
+      "type": "mcq",
+      "stem": "The value of R (gas constant) in SI units is:",
+      "options": {
+        "A": "0.0821 L·atm/mol·K",
+        "B": "8.314 J/mol·K",
+        "C": "1.987 cal/mol·K",
+        "D": "62.36 L·mmHg/mol·K"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "This is the universal gas constant expressed in Joules."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0271",
+      "type": "mcq",
+      "stem": "Dalton’s law of partial pressures applies to:",
+      "options": {
+        "A": "Reacting gases",
+        "B": "Non-reacting gas mixtures",
+        "C": "Liquids",
+        "D": "Solids"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The total pressure is the sum of the pressures each gas would exert alone."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0272",
+      "type": "mcq",
+      "stem": "Graham’s law relates the rate of diffusion to:",
+      "options": {
+        "A": "Pressure",
+        "B": "Square root of molar mass",
+        "C": "Temperature",
+        "D": "Volume"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Rate is inversely proportional to the square root of density or molar mass."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0273",
+      "type": "mcq",
+      "stem": "Real gases deviate from ideal behavior at:",
+      "options": {
+        "A": "High temperature and low pressure",
+        "B": "Low temperature and high pressure",
+        "C": "Standard conditions",
+        "D": "All conditions"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under these conditions, molecular volume and intermolecular forces become significant."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0274",
+      "type": "mcq",
+      "stem": "Van der Waals equation corrects for:",
+      "options": {
+        "A": "Volume and Pressure",
+        "B": "Mass and Temperature",
+        "C": "Density",
+        "D": "Moles"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "It accounts for the finite size of molecules and their attractions."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0275",
+      "type": "mcq",
+      "stem": "The kinetic molecular theory assumes gas particles have:",
+      "options": {
+        "A": "Large volume",
+        "B": "Strong attraction",
+        "C": "Negligible volume",
+        "D": "Fixed positions"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Ideal gas particles are assumed to be points with no significant volume."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0276",
+      "type": "mcq",
+      "stem": "Average kinetic energy of gas molecules depends only on:",
+      "options": {
+        "A": "Pressure",
+        "B": "Volume",
+        "C": "Absolute temperature",
+        "D": "Nature of gas"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Temperature is a direct measure of average molecular kinetic energy."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0277",
+      "type": "mcq",
+      "stem": "STP conditions are:",
+      "options": {
+        "A": "0°C and 1 atm",
+        "B": "25°C and 1 atm",
+        "C": "100°C and 1 atm",
+        "D": "0 K and 1 atm"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Standard Temperature and Pressure is defined as 273.15 K and 101.325 kPa."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0278",
+      "type": "mcq",
+      "stem": "The molar volume of an ideal gas at STP is:",
+      "options": {
+        "A": "22.4 L",
+        "B": "24.0 L",
+        "C": "1.0 L",
+        "D": "10.0 L"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "One mole of any ideal gas occupies 22.4 liters at STP."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0279",
+      "type": "mcq",
+      "stem": "Viscosity of a liquid:",
+      "options": {
+        "A": "Increases with temperature",
+        "B": "Decreases with temperature",
+        "C": "Remains constant",
+        "D": "Is zero"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Higher temperature provides enough energy to overcome intermolecular attractions."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0280",
+      "type": "mcq",
+      "stem": "Surface tension is due to:",
+      "options": {
+        "A": "Gravity",
+        "B": "Unbalanced intermolecular forces",
+        "C": "Atmospheric pressure",
+        "D": "Viscosity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Molecules at the surface experience a net inward pull."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0281",
+      "type": "mcq",
+      "stem": "Vapor pressure increases with:",
+      "options": {
+        "A": "Increasing temperature",
+        "B": "Decreasing temperature",
+        "C": "Increasing volume",
+        "D": "Increasing pressure"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "More molecules gain enough kinetic energy to escape into the vapor phase."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0282",
+      "type": "mcq",
+      "stem": "Boiling point is the temperature where vapor pressure equals:",
+      "options": {
+        "A": "Zero",
+        "B": "Atmospheric pressure",
+        "C": "1 atm always",
+        "D": "Surface tension"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "At this point, bubbles of vapor can form within the bulk of the liquid."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0283",
+      "type": "mcq",
+      "stem": "A solution with maximum amount of solute is:",
+      "options": {
+        "A": "Unsaturated",
+        "B": "Saturated",
+        "C": "Supersaturated",
+        "D": "Dilute"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "No more solute can dissolve at that specific temperature."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0284",
+      "type": "mcq",
+      "stem": "Molarity is defined as:",
+      "options": {
+        "A": "Moles per kg solvent",
+        "B": "Moles per liter solution",
+        "C": "Grams per liter",
+        "D": "Moles per mole solvent"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It is the most common unit of concentration in chemistry."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0285",
+      "type": "mcq",
+      "stem": "Molality is defined as:",
+      "options": {
+        "A": "Moles per liter",
+        "B": "Moles per kg solvent",
+        "C": "Grams per kg",
+        "D": "Volume percent"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unlike molarity, molality is independent of temperature changes."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0286",
+      "type": "mcq",
+      "stem": "Colligative properties depend on:",
+      "options": {
+        "A": "Nature of solute",
+        "B": "Number of solute particles",
+        "C": "Color of solution",
+        "D": "Density"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "These properties include boiling point elevation and freezing point depression."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0287",
+      "type": "mcq",
+      "stem": "Which of the following is a colligative property?",
+      "options": {
+        "A": "Viscosity",
+        "B": "Osmotic pressure",
+        "C": "Surface tension",
+        "D": "Refractive index"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Osmotic pressure varies with the concentration of solute particles."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0288",
+      "type": "mcq",
+      "stem": "Adding a non-volatile solute to a solvent:",
+      "options": {
+        "A": "Lowers boiling point",
+        "B": "Lowers freezing point",
+        "C": "Increases vapor pressure",
+        "D": "Decreases osmotic pressure"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The presence of solute particles interferes with the formation of the solid lattice."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0289",
+      "type": "mcq",
+      "stem": "Raoult’s Law relates vapor pressure to:",
+      "options": {
+        "A": "Mole fraction of solvent",
+        "B": "Mass of solute",
+        "C": "Temperature",
+        "D": "Volume"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The partial pressure of a solvent is proportional to its mole fraction in the solution."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0290",
+      "type": "mcq",
+      "stem": "Reaction rate is defined as change in:",
+      "options": {
+        "A": "Mass with time",
+        "B": "Concentration with time",
+        "C": "Temperature with time",
+        "D": "Volume with time"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It measures how quickly reactants disappear or products appear."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0291",
+      "type": "mcq",
+      "stem": "Reaction rate generally increases with:",
+      "options": {
+        "A": "Decreasing temperature",
+        "B": "Increasing temperature",
+        "C": "Adding reactants",
+        "D": "Decreasing concentration"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Higher temperature increases collision frequency and energy."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0292",
+      "type": "mcq",
+      "stem": "Increasing concentration of reactants usually:",
+      "options": {
+        "A": "Decreases reaction rate",
+        "B": "Increases reaction rate",
+        "C": "Stops reaction",
+        "D": "Has no effect"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "More particles in a given volume lead to more frequent collisions."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0293",
+      "type": "mcq",
+      "stem": "A catalyst works by:",
+      "options": {
+        "A": "Increasing activation energy",
+        "B": "Decreasing activation energy",
+        "C": "Stopping reaction",
+        "D": "Consuming reactants"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It provides an alternative pathway with a lower energy barrier."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0294",
+      "type": "mcq",
+      "stem": "Activation energy is:",
+      "options": {
+        "A": "Minimum energy required for reaction",
+        "B": "Maximum energy in reaction",
+        "C": "Energy of catalyst",
+        "D": "Energy of solvent"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Reactants must overcome this barrier to form products."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0295",
+      "type": "mcq",
+      "stem": "Which factor affects reaction rate?",
+      "options": {
+        "A": "Temperature",
+        "B": "Concentration",
+        "C": "Surface area",
+        "D": "All of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Rate depends on temperature, concentration, surface area, and catalysts."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0296",
+      "type": "mcq",
+      "stem": "Increasing surface area of solid reactant:",
+      "options": {
+        "A": "Decreases reaction rate",
+        "B": "Increases reaction rate",
+        "C": "Stops reaction",
+        "D": "Has no effect"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A greater area is exposed for collisions with other reactants."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0297",
+      "type": "mcq",
+      "stem": "Chemical equilibrium occurs when:",
+      "options": {
+        "A": "Reaction stops",
+        "B": "Forward and backward reactions occur at equal rate",
+        "C": "Reactants disappear",
+        "D": "Products disappear"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Equilibrium is a dynamic state where net concentrations remain constant."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0298",
+      "type": "mcq",
+      "stem": "At equilibrium the concentration of reactants and products:",
+      "options": {
+        "A": "Remains constant",
+        "B": "Becomes zero",
+        "C": "Increases continuously",
+        "D": "Decreases continuously"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Since the forward and reverse rates are equal, no net change in amount occurs."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0299",
+      "type": "mcq",
+      "stem": "Le Chatelier’s principle explains the effect of:",
+      "options": {
+        "A": "Pressure",
+        "B": "Temperature",
+        "C": "Concentration",
+        "D": "All of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The principle describes how a system at equilibrium shifts to counteract stress."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0300",
+      "type": "mcq",
+      "stem": "Increasing pressure favors reaction with:",
+      "options": {
+        "A": "More gas molecules",
+        "B": "Fewer gas molecules",
+        "C": "Equal gas molecules",
+        "D": "No gas molecules"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The system shifts to reduce the pressure by moving toward the side with less volume."
+    },
+    {
+      "id": "uni-bouesti-chm111-bank-0301",
+      "type": "mcq",
+      "stem": "Chemical equilibrium is:",
+      "options": {
+        "A": "Static",
+        "B": "Dynamic",
+        "C": "Permanent",
+        "D": "Irreversible"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Reactions continue to occur in both directions, just at the same speed."
+    }
+  ]
+}

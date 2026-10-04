@@ -1,0 +1,138 @@
+name: mobile (Android APK + AAB)
+
+# Builds BOTH Renance Android artifacts on every push that touches the
+# Flutter app:
+#   APKs - direct install / founder distribution:
+#     app-release.apk    universal (arm64 + arm32 + x86_64) - opens on
+#                        ANY phone; ~60MB because the Flutter engine is
+#                        shipped three times, once per CPU architecture
+#     renance-arm64.apk  arm64-v8a only (~21MB) - every phone from
+#                        roughly 2017 onwards, but NOT 32-bit-only ones
+#     renance-arm32.apk  armeabi-v7a only (~18MB) - older/entry-level
+#                        32-bit phones. (arm64 phones can also run this,
+#                        but 64-bit-only devices - Pixel 7 and newer,
+#                        many 2023+ flagships - cannot.)
+#   AAB  - the Play Store release bundle (founder: "make sure the aab
+#          and apk is on GitHub action too")
+# Get them three ways:
+#   1. Run page artifacts (renance-android-apk / renance-android-aab)
+#   2. Rolling "latest" release below - raw .apk, no zip
+#   3. Tag a version (v*) - attached to a proper GitHub Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'apps/mobile/**'
+      - '.github/workflows/mobile-apk.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.47.2
+          cache: true
+
+      - name: Resolve packages
+        working-directory: apps/mobile
+        run: flutter pub get
+
+      - name: Analyze
+        working-directory: apps/mobile
+        run: flutter analyze
+
+      - name: Test
+        working-directory: apps/mobile
+        run: flutter test
+
+      # Point the app at the deployed study API via the PUBLIC_API_BASE repo
+      # variable (Settings -> Secrets and variables -> Actions -> Variables).
+      # Unset, the fallback is the PRODUCTION API - the app config's own
+      # default - so a release build always syncs and downloads. (The old
+      # loopback fallback shipped dead downloads in every release.)
+      # GOOGLE_WEB_CLIENT_ID (repo variable) is the `serverClientId` Google
+      # sign-in uses so ID tokens carry the API's expected audience.
+      - name: Build release APK (universal)
+        working-directory: apps/mobile
+        run: |
+          flutter build apk --release \
+            --dart-define=RENANCE_API_BASE=${{ vars.PUBLIC_API_BASE || 'https://renance-api.onrender.com' }} \
+            --dart-define=GOOGLE_WEB_CLIENT_ID=${{ vars.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '' }}
+          # Stage immediately: the split build below writes its own files
+          # into the same flutter-apk/ output directory.
+          mkdir -p dist
+          cp build/app/outputs/flutter-apk/app-release.apk dist/app-release.apk
+
+      - name: Build per-ABI release APKs (arm64 + arm32)
+        working-directory: apps/mobile
+        run: |
+          # --split-per-abi normally bumps versionCode by 1000*abiCode
+          # (arm64=2004, arm32=1004 vs universal 4). That locks sideload
+          # upgrades across flavors (1004 -> 5 = INSTALL_FAILED_VERSION_
+          # DOWNGRADE). The flag keeps ALL APKs at the pubspec versionCode
+          # so every flavor upgrades/interchanges cleanly.
+          flutter build apk --release --split-per-abi \
+            -Pforce-version-code-ignoring-abi=true \
+            --dart-define=RENANCE_API_BASE=${{ vars.PUBLIC_API_BASE || 'https://renance-api.onrender.com' }} \
+            --dart-define=GOOGLE_WEB_CLIENT_ID=${{ vars.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '' }}
+          cp build/app/outputs/flutter-apk/app-arm64-v8a-release.apk dist/renance-arm64.apk
+          cp build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk dist/renance-arm32.apk
+
+      - name: Build release AAB (Play Store bundle)
+        working-directory: apps/mobile
+        run: |
+          flutter build appbundle --release \
+            --dart-define=RENANCE_API_BASE=${{ vars.PUBLIC_API_BASE || 'https://renance-api.onrender.com' }} \
+            --dart-define=GOOGLE_WEB_CLIENT_ID=${{ vars.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '' }}
+
+      - name: Upload APK artifacts (universal + arm64 + arm32)
+        uses: actions/upload-artifact@v4
+        with:
+          name: renance-android-apk
+          path: apps/mobile/dist/*.apk
+
+      - name: Upload AAB artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: renance-android-aab
+          path: apps/mobile/build/app/outputs/bundle/release/app-release.aab
+
+      - name: Publish rolling latest release (raw APK, no zip)
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest Android build
+          # A full (non-prerelease) release keeps the canonical
+          # /releases/latest/download/app-release.apk URL working.
+          prerelease: false
+          files: |
+            apps/mobile/dist/app-release.apk
+            apps/mobile/dist/renance-arm64.apk
+            apps/mobile/dist/renance-arm32.apk
+            apps/mobile/build/app/outputs/bundle/release/app-release.aab
+
+      - name: Attach to GitHub Release (tag builds only)
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            apps/mobile/dist/app-release.apk
+            apps/mobile/dist/renance-arm64.apk
+            apps/mobile/dist/renance-arm32.apk
+            apps/mobile/build/app/outputs/bundle/release/app-release.aab

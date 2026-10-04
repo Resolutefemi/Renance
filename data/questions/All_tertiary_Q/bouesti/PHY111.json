@@ -1,0 +1,2783 @@
+{
+  "code": "uni-bouesti-phy111-bank",
+  "title": "BOUESTI PHY111 | Course Question Bank",
+  "version": 1,
+  "questionCount": 198,
+  "totalMarks": 198,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-bouesti-phy111-bank-0001",
+      "type": "mcq",
+      "stem": "What is the primary definition of mechanics in physics?",
+      "options": {
+        "A": "The study of heat and temperature",
+        "B": "The branch of physics that deals with the motion of objects",
+        "C": "The study of light and optics",
+        "D": "The branch of physics focusing on chemical reactions"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Mechanics is defined as the area of science concerned with the behavior of physical bodies when subjected to forces or displacements."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0002",
+      "type": "mcq",
+      "stem": "Which of the following describes a physical quantity that has both magnitude and direction?",
+      "options": {
+        "A": "Scalar quantity",
+        "B": "Vector quantity",
+        "C": "Tensor quantity",
+        "D": "Constant quantity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A vector quantity is defined by having both a numerical value and a specific direction in space."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0003",
+      "type": "mcq",
+      "stem": "Which of these is a base unit in the $SI$ system?",
+      "options": {
+        "A": "$Newton$",
+        "B": "$Joule$",
+        "C": "$Kilogram$",
+        "D": "$Watt$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The $kilogram$ is one of the seven fundamental base units used to measure mass in the $SI$ system."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0004",
+      "type": "mcq",
+      "stem": "What is the dimension of velocity?",
+      "options": {
+        "A": "$[L][T]$",
+        "B": "$[L][T]^{-1}$",
+        "C": "$[L][T]^{-2}$",
+        "D": "$[M][L][T]^{-1}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Velocity is the rate of change of displacement over time, resulting in the dimension of length divided by time."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0005",
+      "type": "mcq",
+      "stem": "A car travels $60\\ km$ in $2\\ hours$. What is its average speed in $km/h$?",
+      "options": {
+        "A": "$120\\ km/h$",
+        "B": "$30\\ km/h$",
+        "C": "$60\\ km/h$",
+        "D": "$20\\ km/h$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Average speed is calculated by dividing the total distance of $60\\ km$ by the total time of $2\\ hours$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0006",
+      "type": "mcq",
+      "stem": "In kinematics, what does the slope of a displacement-time graph represent?",
+      "options": {
+        "A": "Acceleration",
+        "B": "Velocity",
+        "C": "Force",
+        "D": "Momentum"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The slope of a displacement-versus-time graph at any point gives the instantaneous velocity of the object."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0007",
+      "type": "mcq",
+      "stem": "Which equation represents the final velocity $v$ in terms of initial velocity $u$, acceleration $a$, and time $t$?",
+      "options": {
+        "A": "$v = u + at^2$",
+        "B": "$v = u + at$",
+        "C": "$v^2 = u^2 + 2as$",
+        "D": "$s = ut + \\frac{1}{2}at^2$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The first equation of motion states that final velocity equals initial velocity plus the product of acceleration and time."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0008",
+      "type": "mcq",
+      "stem": "An object is dropped from a height. What is its initial velocity $u$?",
+      "options": {
+        "A": "$9.8\\ m/s$",
+        "B": "$1\\ m/s$",
+        "C": "$0\\ m/s$",
+        "D": "$undefined$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "When an object is dropped from rest, its starting or initial velocity is defined as zero."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0009",
+      "type": "mcq",
+      "stem": "What is the standard value of acceleration due to gravity $g$ on Earth?",
+      "options": {
+        "A": "$8.9\\ m/s^2$",
+        "B": "$10.5\\ m/s^2$",
+        "C": "$9.8\\ m/s^2$",
+        "D": "$12.0\\ m/s^2$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The average acceleration experienced by an object in free fall near Earth's surface is approximately $9.8\\ m/s^2$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0010",
+      "type": "mcq",
+      "stem": "Which of the following is a scalar quantity?",
+      "options": {
+        "A": "Displacement",
+        "B": "Velocity",
+        "C": "Temperature",
+        "D": "Acceleration"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Temperature is a scalar because it is described solely by magnitude without a required direction."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0011",
+      "type": "mcq",
+      "stem": "What is the resultant of two vectors $\\vec{A}$ and $\\vec{B}$ acting in the same direction?",
+      "options": {
+        "A": "$A - B$",
+        "B": "$A + B$",
+        "C": "$\\sqrt{A^2 + B^2}$",
+        "D": "$0$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Vectors acting in the same parallel direction are added together to find the total resultant magnitude."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0012",
+      "type": "mcq",
+      "stem": "Newton's First Law of Motion is also known as the Law of:",
+      "options": {
+        "A": "Force",
+        "B": "Momentum",
+        "C": "Inertia",
+        "D": "Gravity"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Inertia describes the tendency of an object to resist changes to its state of motion or rest."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0013",
+      "type": "mcq",
+      "stem": "According to Newton's Second Law, what is the relationship between force $F$, mass $m$, and acceleration $a$?",
+      "options": {
+        "A": "$F = m/a$",
+        "B": "$F = ma$",
+        "C": "$F = m + a$",
+        "D": "$F = m^2 a$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The law states that the force acting on an object is equal to the mass of that object times its acceleration."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0014",
+      "type": "mcq",
+      "stem": "Which law states that for every action, there is an equal and opposite reaction?",
+      "options": {
+        "A": "Newton's First Law",
+        "B": "Newton's Second Law",
+        "C": "Newton's Third Law",
+        "D": "Law of Universal Gravitation"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Newton's Third Law describes the symmetry of forces between two interacting objects."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0015",
+      "type": "mcq",
+      "stem": "What is the $SI$ unit of force?",
+      "options": {
+        "A": "$Joule$",
+        "B": "$Watt$",
+        "C": "$Newton$",
+        "D": "$Pascal$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The $Newton$ is the derived unit of force, defined as the force needed to accelerate $1\\ kg$ at $1\\ m/s^2$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0016",
+      "type": "mcq",
+      "stem": "Which force acts perpendicular to a surface and supports the weight of an object?",
+      "options": {
+        "A": "Frictional force",
+        "B": "Tension force",
+        "C": "Normal force",
+        "D": "Gravitational force"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The normal force is the support force exerted upon an object that is in contact with another stable object."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0017",
+      "type": "mcq",
+      "stem": "Static friction is generally ________ than kinetic friction for the same surfaces.",
+      "options": {
+        "A": "Greater",
+        "B": "Smaller",
+        "C": "Equal",
+        "D": "Half"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "It typically requires more force to start an object moving from rest than to keep it in motion."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0018",
+      "type": "mcq",
+      "stem": "What is the formula for the work done $W$ by a constant force $F$ over a displacement $d$ at an angle $\\theta$?",
+      "options": {
+        "A": "$W = F d \\sin \\theta$",
+        "B": "$W = F d \\cos \\theta$",
+        "C": "$W = F d \\tan \\theta$",
+        "D": "$W = m g d$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Work is the dot product of force and displacement, which involves the cosine of the angle between them."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0019",
+      "type": "mcq",
+      "stem": "What is the $SI$ unit of work and energy?",
+      "options": {
+        "A": "$Newton$",
+        "B": "$Watt$",
+        "C": "$Joule$",
+        "D": "$Kilogram$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Both work and energy are measured in $Joules$, representing the capacity to perform mechanical tasks."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0020",
+      "type": "mcq",
+      "stem": "Kinetic energy $K$ is defined by which formula?",
+      "options": {
+        "A": "$K = mgh$",
+        "B": "$K = \\frac{1}{2}mv^2$",
+        "C": "$K = mv$",
+        "D": "$K = Fd$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Kinetic energy is the energy of motion, proportional to the mass and the square of the velocity."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0021",
+      "type": "mcq",
+      "stem": "What is the gravitational potential energy $U$ of an object at height $h$?",
+      "options": {
+        "A": "$U = \\frac{1}{2}mv^2$",
+        "B": "$U = mgh$",
+        "C": "$U = Fs$",
+        "D": "$U = P t$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Potential energy in a gravitational field depends on the object's mass, gravity, and height above a reference point."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0022",
+      "type": "mcq",
+      "stem": "The Principle of Conservation of Energy states that energy cannot be:",
+      "options": {
+        "A": "Transformed",
+        "B": "Transferred",
+        "C": "Created or destroyed",
+        "D": "Stored"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "This fundamental law asserts that the total energy in an isolated system remains constant over time."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0023",
+      "type": "mcq",
+      "stem": "How is power $P$ defined in mechanics?",
+      "options": {
+        "A": "$P = W t$",
+        "B": "$P = W / t$",
+        "C": "$P = F d$",
+        "D": "$P = m v$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Power is the rate at which work is performed or energy is converted per unit of time."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0024",
+      "type": "mcq",
+      "stem": "What is the $SI$ unit of power?",
+      "options": {
+        "A": "$Joule$",
+        "B": "$Newton$",
+        "C": "$Watt$",
+        "D": "$Ampere$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "One $Watt$ is defined as the consumption or production of one $Joule$ of energy per second."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0025",
+      "type": "mcq",
+      "stem": "Linear momentum $p$ is calculated as the product of:",
+      "options": {
+        "A": "Mass and acceleration",
+        "B": "Mass and velocity",
+        "C": "Force and time",
+        "D": "Force and distance"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Momentum is a vector quantity defined as the product of an object's mass and its linear velocity."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0026",
+      "type": "mcq",
+      "stem": "Impulse $I$ is equal to the change in:",
+      "options": {
+        "A": "Kinetic energy",
+        "B": "Velocity",
+        "C": "Momentum",
+        "D": "Force"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The impulse-momentum theorem states that the impulse applied to an object equals its change in linear momentum."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0027",
+      "type": "mcq",
+      "stem": "In an elastic collision, which of the following are conserved?",
+      "options": {
+        "A": "Only momentum",
+        "B": "Only kinetic energy",
+        "C": "Both momentum and kinetic energy",
+        "D": "Neither momentum nor kinetic energy"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Elastic collisions are defined by the conservation of both total linear momentum and total kinetic energy."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0028",
+      "type": "mcq",
+      "stem": "In a perfectly inelastic collision, the objects:",
+      "options": {
+        "A": "Bounce off each other",
+        "B": "Stick together",
+        "C": "Explode",
+        "D": "Stop moving"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Perfectly inelastic collisions occur when the maximum amount of kinetic energy is lost and objects move as one mass."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0029",
+      "type": "mcq",
+      "stem": "What is the angular displacement $\\theta$ for one complete revolution?",
+      "options": {
+        "A": "$\\pi\\ rad$",
+        "B": "$2\\pi\\ rad$",
+        "C": "$90^{\\circ}$",
+        "D": "$1\\ rad$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A full circle corresponds to an angle of $360^{\\circ}$, which is equivalent to $2\\pi$ radians."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0030",
+      "type": "mcq",
+      "stem": "What is the relationship between linear velocity $v$ and angular velocity $\\omega$?",
+      "options": {
+        "A": "$v = \\omega / r$",
+        "B": "$v = r \\omega$",
+        "C": "$v = r^2 \\omega$",
+        "D": "$\\omega = v r$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Linear velocity is the product of the radius of the circular path and the angular velocity in radians per second."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0031",
+      "type": "mcq",
+      "stem": "Centripetal acceleration $a_c$ for an object in circular motion is given by:",
+      "options": {
+        "A": "$v^2 / r$",
+        "B": "$v r$",
+        "C": "$v^2 r$",
+        "D": "$v / r^2$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Centripetal acceleration is directed toward the center of the circle and is calculated as velocity squared divided by radius."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0032",
+      "type": "mcq",
+      "stem": "What force keeps a satellite in orbit around a planet?",
+      "options": {
+        "A": "Frictional force",
+        "B": "Centrifugal force",
+        "C": "Gravitational force",
+        "D": "Tension force"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Gravity provides the necessary centripetal force required to keep a satellite in its orbital path."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0033",
+      "type": "mcq",
+      "stem": "Newton's Law of Universal Gravitation states that the force $F$ is proportional to:",
+      "options": {
+        "A": "The sum of masses",
+        "B": "The product of masses",
+        "C": "The square of masses",
+        "D": "The distance between masses"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The gravitational force magnitude is directly proportional to the product of the two interacting masses."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0034",
+      "type": "mcq",
+      "stem": "What is the value of the Universal Gravitational Constant $G$?",
+      "options": {
+        "A": "$6.67 \\times 10^{-11}\\ N\\cdot m^2/kg^2$",
+        "B": "$9.81\\ m/s^2$",
+        "C": "$3.0 \\times 10^8\\ m/s$",
+        "D": "$1.6 \\times 10^{-19}\\ C$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "This constant represents the empirical proportionality factor in Newton's law of universal gravitation."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0035",
+      "type": "mcq",
+      "stem": "Which of the following describes torque $\\tau$?",
+      "options": {
+        "A": "Linear force",
+        "B": "The tendency of a force to rotate an object",
+        "C": "Energy of rotation",
+        "D": "Angular momentum"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Torque is the rotational equivalent of linear force, causing an object to undergo angular acceleration."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0036",
+      "type": "mcq",
+      "stem": "What is the formula for torque $\\tau$ with force $F$ and lever arm $r$ at right angles?",
+      "options": {
+        "A": "$\\tau = F / r$",
+        "B": "$\\tau = r F$",
+        "C": "$\\tau = m a$",
+        "D": "$\\tau = r^2 F$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Torque is calculated as the product of the force and the perpendicular distance from the axis of rotation."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0037",
+      "type": "mcq",
+      "stem": "An object is in static equilibrium if:",
+      "options": {
+        "A": "Only net force is zero",
+        "B": "Only net torque is zero",
+        "C": "Both net force and net torque are zero",
+        "D": "The object is moving at constant velocity"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Equilibrium requires no net translation (zero force) and no net rotation (zero torque)."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0038",
+      "type": "mcq",
+      "stem": "What is the moment of inertia $I$ of a point mass $m$ at distance $r$ from the axis?",
+      "options": {
+        "A": "$m r$",
+        "B": "$m r^2$",
+        "C": "$\\frac{1}{2} m r^2$",
+        "D": "$m / r^2$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The moment of inertia for a single point mass is defined as the mass times the square of its distance from the pivot."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0039",
+      "type": "mcq",
+      "stem": "Which quantity is the rotational analog of mass?",
+      "options": {
+        "A": "Angular velocity",
+        "B": "Torque",
+        "C": "Moment of inertia",
+        "D": "Angular momentum"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Moment of inertia measures an object's resistance to changes in its rotational motion, similar to mass in linear motion."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0040",
+      "type": "mcq",
+      "stem": "How is angular momentum $L$ defined for a rigid body?",
+      "options": {
+        "A": "$L = m v$",
+        "B": "$L = I \\omega$",
+        "C": "$L = \\tau t$",
+        "D": "$L = r F$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Angular momentum is the product of the moment of inertia and the angular velocity of the rotating body."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0041",
+      "type": "mcq",
+      "stem": "When no external torque acts on a system, the total angular momentum:",
+      "options": {
+        "A": "Decreases",
+        "B": "Increases",
+        "C": "Remains constant",
+        "D": "Becomes zero"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The principle of conservation of angular momentum states that it remains unchanged unless acted upon by an external torque."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0042",
+      "type": "mcq",
+      "stem": "What is the dimension of the universal gravitational constant $G$?",
+      "options": {
+        "A": "$[M]^{-1}[L]^3[T]^{-2}$",
+        "B": "$[M][L][T]^{-2}$",
+        "C": "$[L]^2[T]^{-2}$",
+        "D": "$[M][L]^2$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "By rearranging the gravitation formula $F = G m_1 m_2 / r^2$, the units derive to the dimension $[M]^{-1}[L]^3[T]^{-2}$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0043",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a projectile motion?",
+      "options": {
+        "A": "A car driving on a straight road",
+        "B": "A ball thrown into the air at an angle",
+        "C": "A book resting on a table",
+        "D": "An elevator moving up"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Projectile motion involves an object moving through the air subject only to gravity after an initial launch."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0044",
+      "type": "mcq",
+      "stem": "In projectile motion (ignoring air resistance), the horizontal velocity is:",
+      "options": {
+        "A": "Increasing",
+        "B": "Decreasing",
+        "C": "Constant",
+        "D": "Zero"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Since there is no horizontal force acting on the projectile, its horizontal velocity component does not change."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0045",
+      "type": "mcq",
+      "stem": "At the maximum height of a projectile's path, the vertical velocity is:",
+      "options": {
+        "A": "Maximum",
+        "B": "Constant",
+        "C": "$0\\ m/s$",
+        "D": "$9.8\\ m/s$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "At the peak of the trajectory, the vertical motion momentarily stops before the object begins to descend."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0046",
+      "type": "mcq",
+      "stem": "What is the angle of projection for maximum range on level ground?",
+      "options": {
+        "A": "$30^{\\circ}$",
+        "B": "$45^{\\circ}$",
+        "C": "$60^{\\circ}$",
+        "D": "$90^{\\circ}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Mathematically, the range formula $\\frac{u^2 \\sin 2\\theta}{g}$ yields the highest value when $2\\theta = 90^{\\circ}$, or $\\theta = 45^{\\circ}$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0047",
+      "type": "mcq",
+      "stem": "Pressure is defined as force per unit:",
+      "options": {
+        "A": "Volume",
+        "B": "Mass",
+        "C": "Area",
+        "D": "Length"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Pressure is the measure of force distributed over a specific surface area."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0048",
+      "type": "mcq",
+      "stem": "What is the $SI$ unit of pressure?",
+      "options": {
+        "A": "$Pascal$",
+        "B": "$Newton$",
+        "C": "$Joule$",
+        "D": "$Watt$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "One $Pascal$ is equivalent to one $Newton$ of force applied per square meter."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0049",
+      "type": "mcq",
+      "stem": "Density is the ratio of:",
+      "options": {
+        "A": "Weight to volume",
+        "B": "Mass to volume",
+        "C": "Mass to area",
+        "D": "Force to volume"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Density is a fundamental property of matter representing how much mass is contained in a given volume."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0050",
+      "type": "mcq",
+      "stem": "Archimedes' Principle states that the buoyant force on an object is equal to:",
+      "options": {
+        "A": "The weight of the object",
+        "B": "The weight of the fluid displaced",
+        "C": "The density of the fluid",
+        "D": "The volume of the object"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "This principle explains why objects float or sink based on the weight of the water they push aside."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0051",
+      "type": "mcq",
+      "stem": "Which law states that the pressure applied to an enclosed fluid is transmitted undiminished to every portion of the fluid?",
+      "options": {
+        "A": "Boyle's Law",
+        "B": "Pascal's Law",
+        "C": "Newton's Law",
+        "D": "Hooke's Law"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Pascal's principle is the basis for hydraulic systems where pressure is distributed equally through a liquid."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0052",
+      "type": "mcq",
+      "stem": "What is the formula for pressure $P$ at a depth $h$ in a fluid of density $\\rho$?",
+      "options": {
+        "A": "$P = \\rho g h$",
+        "B": "$P = m g h$",
+        "C": "$P = F / h$",
+        "D": "$P = \\rho / h$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Fluid pressure increases linearly with depth due to the weight of the overhead fluid column."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0053",
+      "type": "mcq",
+      "stem": "Hooke's Law relates force $F$ and extension $x$ for a spring as:",
+      "options": {
+        "A": "$F = k x^2$",
+        "B": "$F = k / x$",
+        "C": "$F = k x$",
+        "D": "$F = m g x$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Hooke's Law states that the force needed to extend or compress a spring is proportional to that distance."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0054",
+      "type": "mcq",
+      "stem": "The constant $k$ in Hooke's Law is known as the:",
+      "options": {
+        "A": "Elastic limit",
+        "B": "Spring constant",
+        "C": "Young's modulus",
+        "D": "Stress constant"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The spring constant $k$ measures the stiffness of the spring, or the force required per unit extension."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0055",
+      "type": "mcq",
+      "stem": "Stress is defined as:",
+      "options": {
+        "A": "$\\frac{Force}{Area}$",
+        "B": "$\\frac{Extension}{Original Length}$",
+        "C": "$Force \\times distance$",
+        "D": "$\\frac{Mass}{Volume}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Tensile or compressive stress is the internal restorative force per unit cross-sectional area."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0056",
+      "type": "mcq",
+      "stem": "Strain is defined as:",
+      "options": {
+        "A": "$Force / Area$",
+        "B": "$Extension / Original Length$",
+        "C": "$Mass / Volume$",
+        "D": "$Work / Time$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Strain is a dimensionless measure of deformation representing the change in length relative to the initial length."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0057",
+      "type": "mcq",
+      "stem": "Young's Modulus $E$ is the ratio of:",
+      "options": {
+        "A": "Stress to Strain",
+        "B": "Strain to Stress",
+        "C": "Force to Extension",
+        "D": "Area to Force"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Young's Modulus measures the mechanical property of linear elasticity of a solid material."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0058",
+      "type": "mcq",
+      "stem": "What happens to a material beyond its elastic limit?",
+      "options": {
+        "A": "It returns to its original shape",
+        "B": "It breaks immediately",
+        "C": "It undergoes permanent deformation",
+        "D": "It becomes stronger"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The elastic limit is the maximum stress a material can withstand before failing to return to its original form."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0059",
+      "type": "mcq",
+      "stem": "Which of the following is a unit for Young's Modulus?",
+      "options": {
+        "A": "$Newton$",
+        "B": "$N/m$",
+        "C": "$N/m^2$",
+        "D": "$dimensionless$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Since strain is dimensionless, Young's Modulus has the same units as stress, which is force per area."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0060",
+      "type": "mcq",
+      "stem": "Surface tension is caused by:",
+      "options": {
+        "A": "Gravitational forces",
+        "B": "Cohesive forces between molecules",
+        "C": "Adhesive forces with air",
+        "D": "External pressure"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Surface tension arises because molecules at the surface of a liquid are pulled inward by neighboring molecules."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0061",
+      "type": "mcq",
+      "stem": "What is the unit of surface tension?",
+      "options": {
+        "A": "$N\\cdot m$",
+        "B": "$N/m$",
+        "C": "$N/m^2$",
+        "D": "$Joule$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Surface tension is defined as the force per unit length acting along the surface of a liquid."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0062",
+      "type": "mcq",
+      "stem": "Viscosity is a measure of a fluid's:",
+      "options": {
+        "A": "Density",
+        "B": "Resistance to flow",
+        "C": "Surface area",
+        "D": "Buoyancy"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Viscosity describes the internal friction of a moving fluid, determining how easily it pours or flows."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0063",
+      "type": "mcq",
+      "stem": "Terminal velocity is reached when:",
+      "options": {
+        "A": "Gravity is zero",
+        "B": "Drag force equals weight",
+        "C": "Velocity is zero",
+        "D": "Acceleration is $9.8\\ m/s^2$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Terminal velocity occurs when the upward resistive force exactly balances the downward force of gravity, resulting in zero net acceleration."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0064",
+      "type": "mcq",
+      "stem": "Stokes' Law gives the viscous force $F$ on a sphere as:",
+      "options": {
+        "A": "$6\\pi\\eta rv$",
+        "B": "$mg$",
+        "C": "$\\rho g V$",
+        "D": "$P A$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Stokes' Law relates the drag force to the fluid viscosity, the radius of the sphere, and its velocity."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0065",
+      "type": "mcq",
+      "stem": "Bernoulli's Principle states that in a fluid flow, an increase in speed occurs with a decrease in:",
+      "options": {
+        "A": "Density",
+        "B": "Pressure",
+        "C": "Mass",
+        "D": "Temperature"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Bernoulli's Principle describes the conservation of energy in fluid dynamics, linking higher velocity to lower pressure."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0066",
+      "type": "mcq",
+      "stem": "Simple Harmonic Motion ($SHM$) is defined by an acceleration proportional to:",
+      "options": {
+        "A": "Velocity",
+        "B": "Displacement",
+        "C": "Time",
+        "D": "Mass"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In $SHM$, the restoring force and thus acceleration are directly proportional to the distance from the equilibrium position."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0067",
+      "type": "mcq",
+      "stem": "The period $T$ of a simple pendulum depends on:",
+      "options": {
+        "A": "Mass of the bob",
+        "B": "Amplitude of swing",
+        "C": "Length of the string",
+        "D": "The material of the bob"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The time period of a small-angle pendulum is determined by its length and the local acceleration due to gravity."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0068",
+      "type": "mcq",
+      "stem": "What is the relationship between frequency $f$ and period $T$?",
+      "options": {
+        "A": "$f = T$",
+        "B": "$f = 1/T$",
+        "C": "$f = T^2$",
+        "D": "$f = 2\\pi T$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Frequency is the inverse of the period, representing the number of cycles completed per unit time."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0069",
+      "type": "mcq",
+      "stem": "What is the unit of frequency?",
+      "options": {
+        "A": "$Seconds$",
+        "B": "$Hertz$",
+        "C": "$Radians$",
+        "D": "$Meters$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "One $Hertz$ is defined as one cycle or vibration occurring per second."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0070",
+      "type": "mcq",
+      "stem": "The maximum displacement from the equilibrium position in $SHM$ is called:",
+      "options": {
+        "A": "Frequency",
+        "B": "Period",
+        "C": "Amplitude",
+        "D": "Wavelength"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Amplitude represents the peak magnitude of change from the center point in an oscillating system."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0071",
+      "type": "mcq",
+      "stem": "In the equation $x = A \\cos(\\omega t)$, what does $\\omega$ represent?",
+      "options": {
+        "A": "Frequency",
+        "B": "Angular frequency",
+        "C": "Wave speed",
+        "D": "Phase angle"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Angular frequency measures the rate of rotation or oscillation in radians per second."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0072",
+      "type": "mcq",
+      "stem": "The period of a mass-spring system is given by:",
+      "options": {
+        "A": "$2\\pi \\sqrt{L/g}$",
+        "B": "$2\\pi \\sqrt{m/k}$",
+        "C": "$1/f$",
+        "D": "$2\\pi \\omega$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The oscillation period of a spring depends on the mass attached and the stiffness of the spring constant."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0073",
+      "type": "mcq",
+      "stem": "What is a 'rigid body' in mechanics?",
+      "options": {
+        "A": "A body that can be easily compressed",
+        "B": "A body with a definite shape that does not change under force",
+        "C": "A liquid at low temperature",
+        "D": "A body that always stays at rest"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A rigid body is an idealized solid where the distance between any two points remains constant regardless of external forces."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0074",
+      "type": "mcq",
+      "stem": "The center of mass of a uniform symmetric object is located at:",
+      "options": {
+        "A": "The bottom edge",
+        "B": "The geometric center",
+        "C": "The top surface",
+        "D": "Outside the object"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "For objects with uniform density and symmetry, the balance point or center of mass coincides with the centroid."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0075",
+      "type": "mcq",
+      "stem": "Kepler's First Law states that planets move in:",
+      "options": {
+        "A": "Circular orbits",
+        "B": "Elliptical orbits",
+        "C": "Square orbits",
+        "D": "Hyperbolic orbits"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Kepler's First Law specifies that every planet orbits the Sun in an ellipse with the Sun at one of the two foci."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0076",
+      "type": "mcq",
+      "stem": "Kepler's Second Law implies that a planet moves fastest when it is:",
+      "options": {
+        "A": "Farthest from the Sun",
+        "B": "Closest to the Sun",
+        "C": "At the average distance",
+        "D": "Its speed never changes"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "To sweep out equal areas in equal times, the planet must travel faster when it is near the gravitational center."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0077",
+      "type": "mcq",
+      "stem": "Kepler's Third Law relates the orbital period $T$ and the semi-major axis $r$ as:",
+      "options": {
+        "A": "$T \\propto r$",
+        "B": "$T^2 \\propto r^3$",
+        "C": "$T^3 \\propto r^2$",
+        "D": "$T \\propto r^2$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The square of the orbital period of a planet is directly proportional to the cube of the semi-major axis of its orbit."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0078",
+      "type": "mcq",
+      "stem": "What is the escape velocity $v_e$ from a planet of mass $M$ and radius $R$?",
+      "options": {
+        "A": "$\\sqrt{GM/R}$",
+        "B": "$\\sqrt{2GM/R}$",
+        "C": "$GM/R^2$",
+        "D": "$2GM/R$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Escape velocity is the minimum speed needed for an object to break free from the gravitational attraction of a massive body."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0079",
+      "type": "mcq",
+      "stem": "Which of the following describes 'work done' against gravity?",
+      "options": {
+        "A": "$W = \\frac{1}{2}mv^2$",
+        "B": "$W = mgh$",
+        "C": "$W = F a$",
+        "D": "$W = P/t$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Work done lifting an object is the force of gravity ($mg$) multiplied by the vertical displacement ($h$)."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0080",
+      "type": "mcq",
+      "stem": "What is the dimension of power?",
+      "options": {
+        "A": "$[M][L][T]^{-3}$",
+        "B": "$[M][L]^2[T]^{-3}$",
+        "C": "$[M][L]^2[T]^{-2}$",
+        "D": "$[M][L][T]^{-2}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Power is work ($[M][L]^2[T]^{-2}$) divided by time ($[T]$), resulting in the dimension $[M][L]^2[T]^{-3}$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0081",
+      "type": "mcq",
+      "stem": "A scalar product (dot product) of two vectors results in a:",
+      "options": {
+        "A": "Vector",
+        "B": "Scalar",
+        "C": "Matrix",
+        "D": "Zero"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The dot product by definition calculates a single numerical value from two input vectors."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0082",
+      "type": "mcq",
+      "stem": "A vector product (cross product) of two vectors results in a:",
+      "options": {
+        "A": "Vector",
+        "B": "Scalar",
+        "C": "Number",
+        "D": "Tensor"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The cross product generates a third vector that is perpendicular to the plane containing the original two vectors."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0083",
+      "type": "mcq",
+      "stem": "What is the magnitude of the cross product $\\vec{A} \\times \\vec{B}$?",
+      "options": {
+        "A": "$AB \\cos \\theta$",
+        "B": "$AB \\sin \\theta$",
+        "C": "$A + B$",
+        "D": "$A / B$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The magnitude of the cross product depends on the sine of the angle between the two vectors."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0084",
+      "type": "mcq",
+      "stem": "What is the unit of the moment of inertia?",
+      "options": {
+        "A": "$kg\\cdot m$",
+        "B": "$kg\\cdot m^2$",
+        "C": "$kg/m^2$",
+        "D": "$N\\cdot m$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Moment of inertia is mass multiplied by the square of a distance, giving units of $kilogram$-$meters$ squared."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0085",
+      "type": "mcq",
+      "stem": "Density of water is approximately:",
+      "options": {
+        "A": "$100\\ kg/m^3$",
+        "B": "$1000\\ kg/m^3$",
+        "C": "$10,000\\ kg/m^3$",
+        "D": "$1\\ kg/m^3$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Standard fresh water has a mass density of $1000\\ kilograms$ per cubic meter at room temperature."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0086",
+      "type": "mcq",
+      "stem": "Specific gravity is defined as the ratio of the density of a substance to the density of:",
+      "options": {
+        "A": "Air",
+        "B": "Water",
+        "C": "Mercury",
+        "D": "The substance itself"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Specific gravity is a relative density measurement using water as the standard reference substance."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0087",
+      "type": "mcq",
+      "stem": "What device is used to measure atmospheric pressure?",
+      "options": {
+        "A": "Thermometer",
+        "B": "Barometer",
+        "C": "Hygrometer",
+        "D": "Anemometer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A barometer is the standard scientific instrument designed to measure air pressure in the atmosphere."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0088",
+      "type": "mcq",
+      "stem": "In the equation of continuity for fluids ($A_1v_1 = A_2v_2$), what does $A$ represent?",
+      "options": {
+        "A": "Acceleration",
+        "B": "Cross-sectional area",
+        "C": "Amplitude",
+        "D": "Atmospheric pressure"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The continuity equation states that the volume flow rate remains constant through changing pipe cross-sections."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0089",
+      "type": "mcq",
+      "stem": "A $2\\ kg$ object moves at $5\\ m/s$. What is its momentum in $kg\\cdot m/s$?",
+      "options": {
+        "A": "$2.5$",
+        "B": "$7$",
+        "C": "$10$",
+        "D": "$20$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Momentum is mass ($2\\ kg$) multiplied by velocity ($5\\ m/s$), resulting in $10\\ kg\\cdot m/s$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0090",
+      "type": "mcq",
+      "stem": "The area under a force-time graph represents:",
+      "options": {
+        "A": "Work",
+        "B": "Power",
+        "C": "Impulse",
+        "D": "Acceleration"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The integral of force over a time interval defines the impulse delivered to an object."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0091",
+      "type": "mcq",
+      "stem": "The coefficient of friction $\\mu$ is the ratio of frictional force to:",
+      "options": {
+        "A": "Weight",
+        "B": "Normal force",
+        "C": "Applied force",
+        "D": "Mass"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Friction is defined as the product of the coefficient of friction and the perpendicular normal contact force."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0092",
+      "type": "mcq",
+      "stem": "Which of the following is true for an object in projectile motion at its peak?",
+      "options": {
+        "A": "Acceleration is zero",
+        "B": "Velocity is zero",
+        "C": "Acceleration is $g$ downwards",
+        "D": "Horizontal velocity is zero"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Gravity acts continuously on a projectile throughout its flight, including at the maximum height."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0093",
+      "type": "mcq",
+      "stem": "What is the dimension of angular velocity?",
+      "options": {
+        "A": "$[T]$",
+        "B": "$[T]^{-1}$",
+        "C": "$[L][T]^{-1}$",
+        "D": "$[L]^2[T]^{-1}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Angular velocity is the change in angle (dimensionless) per unit time ($[T]$)."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0094",
+      "type": "mcq",
+      "stem": "A radian is an angle subtended at the center of a circle by an arc whose length is equal to the:",
+      "options": {
+        "A": "Diameter",
+        "B": "Radius",
+        "C": "Circumference",
+        "D": "Chord"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "One radian is the angle formed when the arc length of a circle segment equals the length of its radius."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0095",
+      "type": "mcq",
+      "stem": "Mechanical advantage is the ratio of:",
+      "options": {
+        "A": "Effort to Load",
+        "B": "Load to Effort",
+        "C": "Work to Energy",
+        "D": "Distance to Time"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Mechanical advantage quantifies the force amplification achieved by using a mechanical tool or machine."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0096",
+      "type": "mcq",
+      "stem": "Efficiency of a machine is defined as the ratio of:",
+      "options": {
+        "A": "Work input to work output",
+        "B": "Work output to work input",
+        "C": "Force to area",
+        "D": "Mass to volume"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Efficiency measures the percentage of energy or work successfully transferred through a system."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0097",
+      "type": "mcq",
+      "stem": "What is the work done by a centripetal force on an object in circular motion?",
+      "options": {
+        "A": "$F d$",
+        "B": "$\\frac{1}{2}mv^2$",
+        "C": "$0\\ Joules$",
+        "D": "$m g h$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Since centripetal force is always perpendicular to the direction of motion, it performs no mechanical work."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0098",
+      "type": "mcq",
+      "stem": "What is the $SI$ unit of momentum?",
+      "options": {
+        "A": "$Newton$",
+        "B": "$kg\\cdot m/s$",
+        "C": "$Joule\\cdot s$",
+        "D": "$Watt/m$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Momentum is the product of mass in $kilograms$ and velocity in $meters$ per $second$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0099",
+      "type": "mcq",
+      "stem": "Which of these quantities is conserved in all collisions?",
+      "options": {
+        "A": "Kinetic energy",
+        "B": "Linear momentum",
+        "C": "Velocity",
+        "D": "Force"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Total linear momentum is always conserved in an isolated system during any type of collision interaction."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0100",
+      "type": "mcq",
+      "stem": "What is the definition of a unit in physics according to the document?",
+      "options": {
+        "A": "A physical quantity that cannot be expressed in terms of others",
+        "B": "A value, quantity, or magnitude in terms of which others are expressed",
+        "C": "A measure of the effects of external forces on bodies at rest",
+        "D": "The latest version of the international system of measurements"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document explicitly defines a unit as a value or magnitude used to express other values and quantities."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0101",
+      "type": "mcq",
+      "stem": "Which of the following is considered a fundamental quantity in mechanics?",
+      "options": {
+        "A": "Velocity",
+        "B": "Force",
+        "C": "Mass",
+        "D": "Pressure"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In mechanics, length, mass, and time are chosen as the fundamental quantities."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0102",
+      "type": "mcq",
+      "stem": "What does the abbreviation C.G.S stand for in the French system of units?",
+      "options": {
+        "A": "Centimeter, Gramme, Second",
+        "B": "Coulomb, Gravity, Speed",
+        "C": "Centigrade, Gram, Standard",
+        "D": "Constant, Galaxy, Space"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The C.G.S system refers to the Centimeter, Gramme, and Second units."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0103",
+      "type": "mcq",
+      "stem": "How many base or fundamental units comprise the International System of Units ($S.I.$)?",
+      "options": {
+        "A": "$3$",
+        "B": "$5$",
+        "C": "$7$",
+        "D": "$9$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The $S.I.$ consists of seven base units from which other science quantities are derived."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0104",
+      "type": "mcq",
+      "stem": "Which $S.I.$ unit is used to measure Luminous Intensity?",
+      "options": {
+        "A": "Mole",
+        "B": "Kelvin",
+        "C": "Candela",
+        "D": "Ampere"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document lists Candela as the fundamental unit for Luminous Intensity."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0105",
+      "type": "mcq",
+      "stem": "What is the unit symbol for 'Amount of Substance' in the $S.I.$ system?",
+      "options": {
+        "A": "$M$",
+        "B": "$mol$",
+        "C": "$Cd$",
+        "D": "$A$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The fundamental unit for amount of substance is the mole, symbolized as $mol$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0106",
+      "type": "mcq",
+      "stem": "In the concept of dimension, what does the dimension of a physical quantity indicate?",
+      "options": {
+        "A": "The exact magnitude of the quantity",
+        "B": "The physical quantities appearing in that quantity",
+        "C": "The direction of the vector quantity",
+        "D": "The error margin of the measurement"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Dimensions indicate which base quantities appear in a physical quantity regardless of magnitude."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0107",
+      "type": "mcq",
+      "stem": "What is the dimensional formula for velocity?",
+      "options": {
+        "A": "$[MLT^{-1}]$",
+        "B": "$[M^0LT^{-2}]$",
+        "C": "$[M^0LT^{-1}]$",
+        "D": "$[ML^2T^{-2}]$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Velocity is length divided by time, resulting in the dimension $[LT^{-1}]$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0108",
+      "type": "mcq",
+      "stem": "Deduce the dimensional formula for Pressure based on its definition as $Force/Area$.",
+      "options": {
+        "A": "$[MLT^{-2}]$",
+        "B": "$[ML^{-1}T^{-2}]$",
+        "C": "$[ML^2T^{-2}]$",
+        "D": "$[LT^{-2}]$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Pressure is force ($[MLT^{-2}]$) divided by area ($[L^2]$), yielding $[ML^{-1}T^{-2}]$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0109",
+      "type": "mcq",
+      "stem": "Which of the following is a use of dimensional equations?",
+      "options": {
+        "A": "To determine the vector direction of a quantity",
+        "B": "To calculate the exact numerical constant of a formula",
+        "C": "To check the homogeneity of a derived physical equation",
+        "D": "To measure the temperature of a system"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Dimensional equations are used to verify if a physical equation is dimensionally correct."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0110",
+      "type": "mcq",
+      "stem": "What is the dimensional formula for the coefficient of viscosity ($eta$)?",
+      "options": {
+        "A": "$[ML^{-1}T^{-1}]$",
+        "B": "$[MLT^{-2}]$",
+        "C": "$[ML^{-2}T^{-1}]$",
+        "D": "$[L^2T^{-1}]$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The derivation provided in the document shows the dimension of viscosity is $[ML^{-1}T^{-1}]$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0111",
+      "type": "mcq",
+      "stem": "Which limitation applies to dimensional analysis?",
+      "options": {
+        "A": "It cannot handle vector quantities",
+        "B": "It provides no information about dimensionless constants",
+        "C": "It only works for lengths",
+        "D": "It cannot be used for fundamental quantities"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "One limitation is that dimensional analysis cannot determine the magnitude of dimensionless variables or constants."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0112",
+      "type": "mcq",
+      "stem": "Dimensional analysis is not applicable if the relationship involves which functions?",
+      "options": {
+        "A": "Addition",
+        "B": "Multiplication",
+        "C": "Trigonometric",
+        "D": "Square roots"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document states the method is not applicable to relationships involving trigonometric, exponential, or logarithmic functions."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0113",
+      "type": "mcq",
+      "stem": "A unit vector is defined as a vector that has a magnitude of exactly:",
+      "options": {
+        "A": "$0$",
+        "B": "$1$",
+        "C": "$10$",
+        "D": "Infinity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A unit vector has a magnitude of 1 and specifies a particular direction."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0114",
+      "type": "mcq",
+      "stem": "In three dimensions, what is the magnitude of a vector $\\vec{A} = A_x\\hat{i} + A_y\\hat{j} + A_z\\hat{k}$?",
+      "options": {
+        "A": "$A_x + A_y + A_z$",
+        "B": "$\\sqrt{A_x + A_y + A_z}$",
+        "C": "$\\sqrt{A_x^2 + A_y^2 + A_z^2}$",
+        "D": "$A_x^2 + A_y^2 + A_z^2$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The magnitude in three dimensions is the square root of the sum of the squares of the components."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0115",
+      "type": "mcq",
+      "stem": "Given $\\vec{A} = 2\\hat{i} + 3\\hat{j} + 4\\hat{k}$ and $\\vec{B} = \\hat{i} + 4\\hat{j} + 5\\hat{k}$, what is $\\vec{A} - \\vec{B}$?",
+      "options": {
+        "A": "$3\\hat{i} + 7\\hat{j} + 9\\hat{k}$",
+        "B": "$\\hat{i} - \\hat{j} - \\hat{k}$",
+        "C": "$\\hat{i} + \\hat{j} + \\hat{k}$",
+        "D": "$2\\hat{i} + 12\\hat{j} + 20\\hat{k}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Subtraction is performed component-wise: $(2-1)\\hat{i} + (3-4)\\hat{j} + (4-5)\\hat{k}$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0116",
+      "type": "mcq",
+      "stem": "The scalar product (dot product) of two vectors is proportional to which trigonometric function of the angle between them?",
+      "options": {
+        "A": "Sine",
+        "B": "Cosine",
+        "C": "Tangent",
+        "D": "Secant"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The dot product is defined as $AB\\cos\\theta$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0117",
+      "type": "mcq",
+      "stem": "If the dot product of two non-zero vectors is zero, the angle between them is:",
+      "options": {
+        "A": "$0^o$",
+        "B": "$45^o$",
+        "C": "$90^o$",
+        "D": "$180^o$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A dot product of zero indicates the vectors are perpendicular, meaning the angle is $90$ degrees."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0118",
+      "type": "mcq",
+      "stem": "The direction of the cross product $\\vec{A} \\times \\vec{B}$ is:",
+      "options": {
+        "A": "Parallel to $\\vec{A}$",
+        "B": "Parallel to $\\vec{B}$",
+        "C": "Perpendicular to the plane containing $\\vec{A}$ and $\\vec{B}$",
+        "D": "In the same direction as the sum $\\vec{A} + \\vec{B}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The vector product results in a vector perpendicular to the plane of the two input vectors."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0119",
+      "type": "mcq",
+      "stem": "What branch of mechanics deals with the study of motion without referring to its causes?",
+      "options": {
+        "A": "Dynamics",
+        "B": "Statics",
+        "C": "Kinematics",
+        "D": "Thermodynamics"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Kinematics is the study of motion without considering the forces causing it."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0120",
+      "type": "mcq",
+      "stem": "Displacement is defined as the:",
+      "options": {
+        "A": "Total distance traveled",
+        "B": "Change from one position to another",
+        "C": "Ratio of distance to time",
+        "D": "Rate of change of velocity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Displacement refers specifically to the change in position coordinates."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0121",
+      "type": "mcq",
+      "stem": "Average velocity is a _____ quantity.",
+      "options": {
+        "A": "Scalar",
+        "B": "Vector",
+        "C": "Fundamental",
+        "D": "Dimensionless"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Average velocity is the ratio of displacement (a vector) to time, making it a vector."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0122",
+      "type": "mcq",
+      "stem": "How is instantaneous velocity mathematically expressed?",
+      "options": {
+        "A": "$\\frac{\\Delta x}{\\Delta t}$",
+        "B": "$\\frac{dx}{dt}$",
+        "C": "$\\frac{d^2x}{dt^2}$",
+        "D": "$v^2 = u^2 + 2as$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Instantaneous velocity is the first derivative of position with respect to time."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0123",
+      "type": "mcq",
+      "stem": "If a particle's velocity is $v(t) = 3 - 12t$, what is its velocity at $t = 1s$?",
+      "options": {
+        "A": "$3 m/s$",
+        "B": "$-9 m/s$",
+        "C": "$15 m/s$",
+        "D": "$0 m/s$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Plugging $t=1$ into the formula: $3 - 12(1) = -9$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0124",
+      "type": "mcq",
+      "stem": "Acceleration is the derivative of _____ with respect to time.",
+      "options": {
+        "A": "Position",
+        "B": "Displacement",
+        "C": "Velocity",
+        "D": "Speed"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Acceleration is defined as the rate of change of velocity over time."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0125",
+      "type": "mcq",
+      "stem": "The second derivative of position with respect to time is equal to:",
+      "options": {
+        "A": "Average velocity",
+        "B": "Instantaneous speed",
+        "C": "Acceleration",
+        "D": "Displacement"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Mathematically, $a = \\frac{d^2x}{dt^2}$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0126",
+      "type": "mcq",
+      "stem": "In unit vector notation, a position vector $\\vec{r}$ in three dimensions is written as:",
+      "options": {
+        "A": "$x\\hat{i} + y\\hat{j} + z\\hat{k}$",
+        "B": "$x + y + z$",
+        "C": "$v_x\\hat{i} + v_y\\hat{j}$",
+        "D": "$\\sqrt{x^2+y^2+z^2}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The position vector uses scalar components $x$, $y$, and $z$ with their respective unit vectors."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0127",
+      "type": "mcq",
+      "stem": "Displacement $\\Delta \\vec{r}$ is calculated as:",
+      "options": {
+        "A": "$\\vec{r}_1 + \\vec{r}_2$",
+        "B": "$\\vec{r}_2 - \\vec{r}_1$",
+        "C": "$\\vec{r}_1 \\times \\vec{r}_2$",
+        "D": "$\\frac{\\vec{r}_2}{\\vec{r}_1}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Displacement is the final position vector minus the initial position vector."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0128",
+      "type": "mcq",
+      "stem": "Which equation is valid ONLY if acceleration is constant?",
+      "options": {
+        "A": "$v = \\frac{dx}{dt}$",
+        "B": "$a = \\frac{dv}{dt}$",
+        "C": "$v^2 = v_0^2 + 2a(x - x_0)$",
+        "D": "$W = \\int F dx$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The kinematic equations of motion listed in the document only apply when acceleration is constant."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0129",
+      "type": "mcq",
+      "stem": "What defines projectile motion?",
+      "options": {
+        "A": "A particle moving in a horizontal circle",
+        "B": "A particle moving in a vertical plane with downward acceleration $g$",
+        "C": "A particle moving with constant velocity in all directions",
+        "D": "A particle moving under the influence of friction only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A projectile moves in a vertical plane with constant free-fall acceleration downward."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0130",
+      "type": "mcq",
+      "stem": "In projectile motion, the horizontal component of velocity is:",
+      "options": {
+        "A": "Always zero",
+        "B": "Continuously increasing",
+        "C": "Constant",
+        "D": "Zero at the highest point"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "There is no horizontal acceleration in projectile motion, so the horizontal velocity remains unchanged."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0131",
+      "type": "mcq",
+      "stem": "What is the vertical component of velocity of a projectile at its highest point?",
+      "options": {
+        "A": "Maximum",
+        "B": "Initial velocity $v_0$",
+        "C": "Zero",
+        "D": "Equal to horizontal component"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "At the peak of the trajectory, the vertical motion momentarily stops before reversing direction."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0132",
+      "type": "mcq",
+      "stem": "At what angle to the horizontal is the maximum range of a projectile achieved?",
+      "options": {
+        "A": "$30^o$",
+        "B": "$45^o$",
+        "C": "$60^o$",
+        "D": "$90^o$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The range formula $\\frac{v_0^2 \\sin 2\\theta}{g}$ is maximized when $\\sin 2\\theta = 1$, which occurs at $45$ degrees."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0133",
+      "type": "mcq",
+      "stem": "Dynamics is the branch of mechanics dealing with:",
+      "options": {
+        "A": "The geometry of motion",
+        "B": "Forces that give rise to motion",
+        "C": "Fluid flow",
+        "D": "Nuclear reactions"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Dynamics specifically studies the relationship between motion and the forces affecting it."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0134",
+      "type": "mcq",
+      "stem": "According to Newton's First Law, if the net force on a body is zero, the body's _____ cannot change.",
+      "options": {
+        "A": "Mass",
+        "B": "Velocity",
+        "C": "Temperature",
+        "D": "Shape"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Newton's first law states that without a net force, a body cannot accelerate, meaning velocity is constant."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0135",
+      "type": "mcq",
+      "stem": "What is the mathematical expression for Newton's Second Law?",
+      "options": {
+        "A": "$\\vec{F}_{net} = 0$",
+        "B": "$\\vec{F}_{net} = m\\vec{a}$",
+        "C": "$\\vec{F}_{AB} = -\\vec{F}_{BA}$",
+        "D": "$W = Fd$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The second law relates the net force to the product of mass and acceleration."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0136",
+      "type": "mcq",
+      "stem": "Newton's Third Law states that forces between two interacting objects are:",
+      "options": {
+        "A": "Unequal and in the same direction",
+        "B": "Equal in magnitude and opposite in direction",
+        "C": "Proportional to their distance",
+        "D": "Independent of each other"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "For every action, there is an equal and opposite reaction."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0137",
+      "type": "mcq",
+      "stem": "Which force acts perpendicular to a surface supporting an object?",
+      "options": {
+        "A": "Tension",
+        "B": "Frictional Force",
+        "C": "Normal Force",
+        "D": "Weight"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The normal force is defined as the force acting perpendicular to the supporting surface."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0138",
+      "type": "mcq",
+      "stem": "The weight of an object is equal to the:",
+      "options": {
+        "A": "Mass of the object",
+        "B": "Gravitational force on the body",
+        "C": "Net force acting on the body",
+        "D": "Normal force always"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Weight is the force with which gravity pulls downward on an object ($W = mg$)."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0139",
+      "type": "mcq",
+      "stem": "Frictional force always acts _____ to the surface and opposes motion.",
+      "options": {
+        "A": "Perpendicular",
+        "B": "Parallel",
+        "C": "At a $45$ degree angle",
+        "D": "Randomly"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Friction is a surface force that acts parallel to the interface to oppose relative motion."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0140",
+      "type": "mcq",
+      "stem": "Kinetic energy is energy associated with the state of _____ of a particle.",
+      "options": {
+        "A": "Rest",
+        "B": "Motion",
+        "C": "Charge",
+        "D": "Compression"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Kinetic energy is defined based on the mass and speed of a moving particle."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0141",
+      "type": "mcq",
+      "stem": "What is the $S.I.$ unit of work and energy?",
+      "options": {
+        "A": "Watt",
+        "B": "Newton",
+        "C": "Joule",
+        "D": "Pascal"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Both work and energy are measured in Joules ($J$) in the $S.I.$ system."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0142",
+      "type": "mcq",
+      "stem": "Work is considered positive when:",
+      "options": {
+        "A": "Energy is transferred from the object",
+        "B": "Energy is transferred to the object",
+        "C": "The force is perpendicular to displacement",
+        "D": "The object is at rest"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Positive work increases the energy of the system or object."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0143",
+      "type": "mcq",
+      "stem": "The Work-Kinetic Energy Theorem states that work done by a resultant force equals the:",
+      "options": {
+        "A": "Total potential energy",
+        "B": "Change in kinetic energy",
+        "C": "Force times acceleration",
+        "D": "Power divided by time"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The theorem establishes that $W = \\Delta K$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0144",
+      "type": "mcq",
+      "stem": "Power is defined as the:",
+      "options": {
+        "A": "Amount of energy stored",
+        "B": "Rate of doing work",
+        "C": "Product of force and velocity",
+        "D": "Total work done over a distance"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Power measures how fast work is being performed over a time interval."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0145",
+      "type": "mcq",
+      "stem": "What is the $S.I.$ unit of Power?",
+      "options": {
+        "A": "Joule",
+        "B": "Newton-meter",
+        "C": "Watt",
+        "D": "Horsepower"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The unit of power is the Watt ($W$), which is equivalent to Joules per second."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0146",
+      "type": "mcq",
+      "stem": "The instantaneous power $P$ can be calculated as the dot product of:",
+      "options": {
+        "A": "Force and Displacement",
+        "B": "Mass and Acceleration",
+        "C": "Force and Velocity",
+        "D": "Work and Time"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Power is given by the formula $P = \\vec{F} \\cdot \\vec{v}$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0147",
+      "type": "mcq",
+      "stem": "Potential energy is associated with the _____ of a system.",
+      "options": {
+        "A": "Velocity",
+        "B": "Configuration",
+        "C": "Temperature",
+        "D": "Density"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Potential energy depends on the arrangement or position of objects in a system."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0148",
+      "type": "mcq",
+      "stem": "When a ball is thrown upward, the gravitational force does _____ work on it.",
+      "options": {
+        "A": "Positive",
+        "B": "Negative",
+        "C": "Zero",
+        "D": "Infinite"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Gravity acts downward while the ball moves upward, resulting in negative work and a decrease in kinetic energy."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0149",
+      "type": "mcq",
+      "stem": "What is the formula for Gravitational Potential Energy near the Earth's surface?",
+      "options": {
+        "A": "$\\frac{1}{2}mv^2$",
+        "B": "$mgh$",
+        "C": "$\\vec{F} \\cdot \\vec{d}$",
+        "D": "$P/t$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Gravitational potential energy is calculated as mass times gravity times height."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0150",
+      "type": "mcq",
+      "stem": "Which physical quantity has the unit $kg \\cdot m^2/s^2$?",
+      "options": {
+        "A": "Force",
+        "B": "Power",
+        "C": "Work",
+        "D": "Acceleration"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A Joule is $1 kg \\cdot m^2/s^2$, which is the unit for work and energy."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0151",
+      "type": "mcq",
+      "stem": "If a force of $10 N$ acts at $60^o$ to a displacement of $5 m$, what is the work done? (Note: $\\cos 60^o = 0.5$)",
+      "options": {
+        "A": "$50 J$",
+        "B": "$25 J$",
+        "C": "$43.3 J$",
+        "D": "$0 J$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$W = Fd\\cos\\theta = 10 \\times 5 \\times 0.5 = 25 J$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0152",
+      "type": "mcq",
+      "stem": "In the dimensional formula $[M^a L^b T^c]$ for Force, what are the values of $a$, $b$, and $c$?",
+      "options": {
+        "A": "$a=1, b=1, c=-1$",
+        "B": "$a=1, b=1, c=-2$",
+        "C": "$a=1, b=2, c=-2$",
+        "D": "$a=0, b=1, c=-2$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The dimension of force is $[MLT^{-2}]$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0153",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a base quantity in the $S.I.$ system?",
+      "options": {
+        "A": "Electric Current",
+        "B": "Temperature",
+        "C": "Velocity",
+        "D": "Mass"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Velocity is a derived quantity, not one of the seven base quantities."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0154",
+      "type": "mcq",
+      "stem": "The modulus of elasticity ($Y$) has the same dimensions as:",
+      "options": {
+        "A": "Force",
+        "B": "Pressure",
+        "C": "Work",
+        "D": "Acceleration"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Both modulus of elasticity ($Stress/Strain$) and pressure ($Force/Area$) have dimensions $[ML^{-1}T^{-2}]$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0155",
+      "type": "mcq",
+      "stem": "The area under a Velocity-Time graph represents:",
+      "options": {
+        "A": "Acceleration",
+        "B": "Displacement",
+        "C": "Force",
+        "D": "Power"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Integrating velocity over time yields the change in position (displacement)."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0156",
+      "type": "mcq",
+      "stem": "A particle moves with position $x(t) = 4t^2$. What is its acceleration?",
+      "options": {
+        "A": "$4 m/s^2$",
+        "B": "$8t m/s^2$",
+        "C": "$8 m/s^2$",
+        "D": "$0 m/s^2$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Velocity is $v = 8t$ and acceleration is the derivative $a = 8$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0157",
+      "type": "mcq",
+      "stem": "If $\\vec{A} = 3\\hat{i} + 4\\hat{j}$, what is its magnitude?",
+      "options": {
+        "A": "$7$",
+        "B": "$1$",
+        "C": "$5$",
+        "D": "$25$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Magnitude is $\\sqrt{3^2 + 4^2} = \\sqrt{25} = 5$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0158",
+      "type": "mcq",
+      "stem": "Which system uses 'Foot, Pound, Second' as its units?",
+      "options": {
+        "A": "C.G.S",
+        "B": "M.K.S",
+        "C": "F.P.S",
+        "D": "S.I."
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The British or F.P.S system stands for Foot, Pound, Second."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0159",
+      "type": "mcq",
+      "stem": "Is 'Speed' a vector or a scalar?",
+      "options": {
+        "A": "Vector",
+        "B": "Scalar",
+        "C": "Both",
+        "D": "Neither"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Speed is the magnitude of velocity and does not include direction."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0160",
+      "type": "mcq",
+      "stem": "What happens to the vertical component of velocity as a projectile rises?",
+      "options": {
+        "A": "Increases",
+        "B": "Decreases",
+        "C": "Stays constant",
+        "D": "Becomes negative immediately"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Gravity acts against the upward motion, slowing the vertical velocity until it hits zero at the peak."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0161",
+      "type": "mcq",
+      "stem": "If an object is projected vertically upward, its acceleration at the peak is:",
+      "options": {
+        "A": "$0 m/s^2$",
+        "B": "$9.8 m/s^2$ downward",
+        "C": "$9.8 m/s^2$ upward",
+        "D": "Infinite"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Gravity acts on the object constantly throughout its flight, regardless of its instantaneous velocity."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0162",
+      "type": "mcq",
+      "stem": "A net force $\\vec{F}$ causes a mass $m$ to accelerate. If the mass is doubled and the force remains the same, the acceleration becomes:",
+      "options": {
+        "A": "Double",
+        "B": "Half",
+        "C": "Four times",
+        "D": "Zero"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "From $a = F/m$, acceleration is inversely proportional to mass."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0163",
+      "type": "mcq",
+      "stem": "The dot product $\\hat{i} \\cdot \\hat{j}$ equals:",
+      "options": {
+        "A": "$1$",
+        "B": "$0$",
+        "C": "$\\hat{k}$",
+        "D": "$-1$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unit vectors along orthogonal axes have a dot product of zero."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0164",
+      "type": "mcq",
+      "stem": "The cross product $\\hat{i} \\times \\hat{j}$ equals:",
+      "options": {
+        "A": "$1$",
+        "B": "$0$",
+        "C": "$\\hat{k}$",
+        "D": "$-1$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The cross product of unit vectors $\\hat{i}$ and $\\hat{j}$ results in $\\hat{k}$ by the right-hand rule."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0165",
+      "type": "mcq",
+      "stem": "Dimension of 'Area' is:",
+      "options": {
+        "A": "$[L]$",
+        "B": "$[L^2]$",
+        "C": "$[L^3]$",
+        "D": "$[M^0L^2T^0]$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Area is length squared, represented dimensionally as $[L^2]$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0166",
+      "type": "mcq",
+      "stem": "What is the unit of Electric Current in $S.I.$?",
+      "options": {
+        "A": "Volt",
+        "B": "Ohm",
+        "C": "Ampere",
+        "D": "Watt"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Ampere is the fundamental $S.I.$ unit for electric current."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0167",
+      "type": "mcq",
+      "stem": "If a particle moves from $x = -2m$ to $x = 5m$, what is its displacement?",
+      "options": {
+        "A": "$3m$",
+        "B": "$7m$",
+        "C": "$-7m$",
+        "D": "$5m$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Displacement is $x_f - x_i = 5 - (-2) = 7m$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0168",
+      "type": "mcq",
+      "stem": "Total time of flight $T$ for a projectile on level ground is given by:",
+      "options": {
+        "A": "$\\frac{v_0 \\sin\\theta}{g}$",
+        "B": "$\\frac{2v_0 \\sin\\theta}{g}$",
+        "C": "$\\frac{v_0^2 \\sin 2\\theta}{g}$",
+        "D": "$\\frac{v_0^2 \\sin^2\\theta}{2g}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The total time is twice the time taken to reach the maximum height."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0169",
+      "type": "mcq",
+      "stem": "The magnitude of a vector is always _____.",
+      "options": {
+        "A": "Negative",
+        "B": "Zero or positive",
+        "C": "Imaginary",
+        "D": "Directional"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Magnitudes represent 'how much' or length and cannot be negative."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0170",
+      "type": "mcq",
+      "stem": "Dimensional homogeneity means:",
+      "options": {
+        "A": "All terms in an equation have different dimensions",
+        "B": "All terms in an equation must have the same dimensions",
+        "C": "The equation is only valid for mass",
+        "D": "The equation has no units"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "For an equation to be physically valid, the dimensions on both sides must be identical."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0171",
+      "type": "mcq",
+      "stem": "The dimension of 'Work' is the same as the dimension of:",
+      "options": {
+        "A": "Power",
+        "B": "Force",
+        "C": "Energy",
+        "D": "Impulse"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Work and all forms of energy share the same dimensions $[ML^2T^{-2}]$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0172",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a contact force?",
+      "options": {
+        "A": "Gravity",
+        "B": "Magnetic force",
+        "C": "Tension",
+        "D": "Electric force"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Tension requires a physical connection (contact) via a string or chain."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0173",
+      "type": "mcq",
+      "stem": "In the equation $f = k \\frac{1}{l} \\sqrt{\\frac{T}{\\lambda}}$, what does $\\lambda$ represent?",
+      "options": {
+        "A": "Wavelength",
+        "B": "Mass per unit length",
+        "C": "Linear expansion",
+        "D": "Density"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In the derivation for a stretched string, $\\lambda$ represents mass per unit length."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0174",
+      "type": "mcq",
+      "stem": "A scalar quantity possesses:",
+      "options": {
+        "A": "Both magnitude and direction",
+        "B": "Only direction",
+        "C": "Only magnitude",
+        "D": "Neither magnitude nor direction"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Scalars are defined by magnitude alone, unlike vectors which include direction."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0175",
+      "type": "mcq",
+      "stem": "The derivative of acceleration with respect to time is not discussed, but the derivative of velocity is:",
+      "options": {
+        "A": "Position",
+        "B": "Displacement",
+        "C": "Acceleration",
+        "D": "Jerk"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The rate of change of velocity is acceleration."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0176",
+      "type": "mcq",
+      "stem": "In the formula $W = \\vec{F} \\cdot \\vec{d}$, the result is a _____.",
+      "options": {
+        "A": "Vector",
+        "B": "Scalar",
+        "C": "Unit vector",
+        "D": "Tensor"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The dot product of two vectors always results in a scalar quantity."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0177",
+      "type": "mcq",
+      "stem": "What is the dimension of time?",
+      "options": {
+        "A": "$[M]$",
+        "B": "$[L]$",
+        "C": "$[T]$",
+        "D": "$[S]$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Time is one of the base dimensions represented by the letter $[T]$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0178",
+      "type": "mcq",
+      "stem": "If a body is at rest, its kinetic energy is:",
+      "options": {
+        "A": "Maximum",
+        "B": "Infinite",
+        "C": "Zero",
+        "D": "Equal to its potential energy"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Kinetic energy depends on speed; if speed is zero, $K = \\frac{1}{2}m(0)^2 = 0$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0179",
+      "type": "mcq",
+      "stem": "Average speed is calculated as:",
+      "options": {
+        "A": "Displacement / Time",
+        "B": "Total distance / Time",
+        "C": "Velocity / Time",
+        "D": "Acceleration $\\times$ Time"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unlike average velocity, average speed uses total distance covered."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0180",
+      "type": "mcq",
+      "stem": "The prefix 'M.K.S' stands for:",
+      "options": {
+        "A": "Mile, Kiloton, Second",
+        "B": "Metre, Kilogram, Second",
+        "C": "Mass, Kelvin, Standard",
+        "D": "Mole, Kilogram, Speed"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The M.K.S system is based on the Metre, Kilogram, and Second."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0181",
+      "type": "mcq",
+      "stem": "Which of these is NOT a limitation of dimensional analysis?",
+      "options": {
+        "A": "Cannot find magnitude of dimensionless constants",
+        "B": "Cannot be used if quantity depends on more than 3 base dimensions",
+        "C": "Cannot handle logarithmic functions",
+        "D": "Cannot be used to check equation correctness"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Checking correctness is actually a primary use of dimensional analysis, not a limitation."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0182",
+      "type": "mcq",
+      "stem": "The coordinate $x$ of a particle is $x(t) = -5t + 2t^3$. What is the velocity function $v(t)$?",
+      "options": {
+        "A": "$-5 + 6t^2$",
+        "B": "$-5 + 2t^2$",
+        "C": "$5 - 6t^2$",
+        "D": "$6t^2$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Differentiating $-5t + 2t^3$ with respect to $t$ gives $-5 + 6t^2$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0183",
+      "type": "mcq",
+      "stem": "What is the value of $\\sin 90^o$ which is relevant for maximum vertical displacement calculations?",
+      "options": {
+        "A": "$0$",
+        "B": "$0.5$",
+        "C": "$1$",
+        "D": "$-1$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The sine of $90$ degrees is $1$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0184",
+      "type": "mcq",
+      "stem": "Change in potential energy $\\Delta U$ is defined as:",
+      "options": {
+        "A": "$W$",
+        "B": "$-W$",
+        "C": "$W + K$",
+        "D": "$K - W$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Potential energy change is defined as the negative of the work done by the conservative force."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0185",
+      "type": "mcq",
+      "stem": "Power is also the rate of _____ transfer.",
+      "options": {
+        "A": "Mass",
+        "B": "Force",
+        "C": "Energy",
+        "D": "Velocity"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Since work is a transfer of energy, power is the rate of energy transfer."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0186",
+      "type": "mcq",
+      "stem": "The unit of Luminous Intensity is:",
+      "options": {
+        "A": "Candle",
+        "B": "Lumen",
+        "C": "Candela",
+        "D": "Lux"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Candela ($Cd$) is the $S.I.$ base unit for luminous intensity."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0187",
+      "type": "mcq",
+      "stem": "Acceleration due to gravity $g$ has dimensions of:",
+      "options": {
+        "A": "$[LT^{-1}]$",
+        "B": "$[LT^{-2}]$",
+        "C": "$[MLT^{-2}]$",
+        "D": "$[L^2T^{-1}]$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Gravity is a form of acceleration, thus sharing its dimensions."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0188",
+      "type": "mcq",
+      "stem": "A vector $\\vec{A}$ makes an angle $\\theta$ with the $x$-axis. Its $x$-component $A_x$ is:",
+      "options": {
+        "A": "$A \\sin\\theta$",
+        "B": "$A \\cos\\theta$",
+        "C": "$A \\tan\\theta$",
+        "D": "$A$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Using trigonometry, the adjacent component ($x$) is the magnitude times the cosine of the angle."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0189",
+      "type": "mcq",
+      "stem": "Work done by a force is zero if the angle between force and displacement is:",
+      "options": {
+        "A": "$0^o$",
+        "B": "$45^o$",
+        "C": "$90^o$",
+        "D": "$180^o$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "$\\\\cos 90^o = 0$, so no work is done when force is perpendicular to displacement."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0190",
+      "type": "mcq",
+      "stem": "The unit $kg \\cdot m/s^2$ is also known as a:",
+      "options": {
+        "A": "Joule",
+        "B": "Watt",
+        "C": "Newton",
+        "D": "Pascal"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A Newton is the unit of force, defined as mass times acceleration ($kg \\cdot m/s^2$)."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0191",
+      "type": "mcq",
+      "stem": "Which quantity is defined as the product of the magnitudes of two vectors and the sine of the angle between them (multiplied by a unit vector)?",
+      "options": {
+        "A": "Dot product",
+        "B": "Cross product",
+        "C": "Scalar product",
+        "D": "Summation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "This describes the definition of the vector or cross product."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0192",
+      "type": "mcq",
+      "stem": "If work is done *by* the system, its energy:",
+      "options": {
+        "A": "Increases",
+        "B": "Decreases",
+        "C": "Stays the same",
+        "D": "Becomes negative"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Doing work involves transferring energy away from the system, reducing its internal store."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0193",
+      "type": "mcq",
+      "stem": "Dimensions of 'Mass' are represented as:",
+      "options": {
+        "A": "$[kg]$",
+        "B": "$[M]$",
+        "C": "$[m]$",
+        "D": "$[MLT]$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The letter $[M]$ is used to denote the dimension of mass in mechanics."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0194",
+      "type": "mcq",
+      "stem": "One Joule is equal to:",
+      "options": {
+        "A": "$1 N \\cdot m$",
+        "B": "$1 N/m$",
+        "C": "$1 W/s$",
+        "D": "$1 kg \\cdot m/s$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Work is force times distance, so $1 Joule = 1 Newton \\times 1 meter$."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0195",
+      "type": "mcq",
+      "stem": "The 'range' of a projectile is its:",
+      "options": {
+        "A": "Maximum height",
+        "B": "Total path length",
+        "C": "Horizontal displacement",
+        "D": "Vertical displacement"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Range refers to the total horizontal distance covered by the projectile."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0196",
+      "type": "mcq",
+      "stem": "In the context of the document, what is the 'origin'?",
+      "options": {
+        "A": "The start of the universe",
+        "B": "The zero point for reference",
+        "C": "The maximum height",
+        "D": "The final position"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document defines position relative to a reference point, often the origin."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0197",
+      "type": "mcq",
+      "stem": "A particle's speed is the _____ of its instantaneous velocity.",
+      "options": {
+        "A": "Square",
+        "B": "Derivative",
+        "C": "Magnitude",
+        "D": "Direction"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Speed is velocity without direction, which is the magnitude of the velocity vector."
+    },
+    {
+      "id": "uni-bouesti-phy111-bank-0198",
+      "type": "mcq",
+      "stem": "Newton's Laws of Motion are the foundation of which branch of mechanics?",
+      "options": {
+        "A": "Kinematics",
+        "B": "Dynamics",
+        "C": "Statics",
+        "D": "Quantum Mechanics"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Dynamics describes motion and the forces responsible for it using Newton's laws."
+    }
+  ]
+}

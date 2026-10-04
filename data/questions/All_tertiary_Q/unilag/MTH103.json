@@ -1,0 +1,1740 @@
+{
+  "code": "uni-unilag-mth103-bank",
+  "title": "UNILAG MTH103 | Course Question Bank",
+  "version": 1,
+  "questionCount": 133,
+  "totalMarks": 133,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-unilag-mth103-bank-0001",
+      "type": "mcq",
+      "stem": "Find the equation of a circle, if the ends of a diameter of a circle have coordinates A(3, -4) and B(-2, 7)?",
+      "options": {
+        "A": "x² + y² - x - 3y + 34 = 0",
+        "B": "x² - y² - x - 3y - 34 = 0",
+        "C": "x² + y² + x - 3y - 34 = 0",
+        "D": "x² + y² - x - 3y - 34 = 0"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0002",
+      "type": "mcq",
+      "stem": "A car moves in a straight line such that for a short time its velocity is defined by v = (3t² + 2t) ft/s. Determine its acceleration when t = 3s.",
+      "options": {
+        "A": "25 ft/s²",
+        "B": "12 ft/s²",
+        "C": "20 ft/s²",
+        "D": "33 ft/s²"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0003",
+      "type": "mcq",
+      "stem": "A particle is projected with initial velocity U = 3ki + 2kj ms⁻¹. Given that its initial speed is 3√13 ms⁻¹. Find the value of k.",
+      "options": {
+        "A": "±1",
+        "B": "±2",
+        "C": "±3",
+        "D": "±4"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0004",
+      "type": "mcq",
+      "stem": "Which of the following are scalar quantities: I. Potential difference II. Current III. Temperature IV. Energy V. Gravitational field intensity",
+      "options": {
+        "A": "I & II",
+        "B": "I, II, III & IV",
+        "C": "III & IV",
+        "D": "V only"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0005",
+      "type": "mcq",
+      "stem": "The acceleration of a certain object at a particular time is given by a(t) = 4t - 3. Determine its velocity in the first 2 sec (starting from rest).",
+      "options": {
+        "A": "5m/s",
+        "B": "2m/s",
+        "C": "7m/s",
+        "D": "1.5m/s"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0006",
+      "type": "mcq",
+      "stem": "Find the equation of the tangent and the normal to the hyperbola x²/4 - y²/9 = 1 at the point (3, 4).",
+      "options": {
+        "A": "16x + 27y = 38 and 27x + 16y = 158",
+        "B": "27x - 16y = 36 and 16x + 27y = 156",
+        "C": "27x + 16y = 36 and 27x - 16y = 158",
+        "D": "16x - 27y = 38 and 16x + 27y = 156"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0007",
+      "type": "mcq",
+      "stem": "Tangents are drawn from the point P(3, 4) to the ellipse x²/9 + y²/4 = 1, touching the ellipse at points A and B. What are the coordinates of A and B?",
+      "options": {
+        "A": "(3, 0) and (-9/5, 8/5)",
+        "B": "(3, 0) and (0, 2)",
+        "C": "(-8/5, 2√26/15) and (-9/5, 8/5)",
+        "D": "(-8/5, 2√26/15) and (0, 2)"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0008",
+      "type": "mcq",
+      "stem": "If the points A(3, -2), B(k, 2) and C(8, 8) are collinear, then the value of k is:",
+      "options": {
+        "A": "-2",
+        "B": "5",
+        "C": "x² - 2",
+        "D": "x² + 2"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0009",
+      "type": "mcq",
+      "stem": "Find the equation of the normal to the parabola y² = 36x at the point (2, -4).",
+      "options": {
+        "A": "9y + 40x - 2 = 0",
+        "B": "9y - 2x + 40 = 0",
+        "C": "40y + 2x - 9 = 0",
+        "D": "2x - 9y - 40 = 0"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0010",
+      "type": "mcq",
+      "stem": "A car moves in a straight line such that for a short time its velocity is defined by v = (3t² + 2t) ft/s. Determine its position when t = 3s (starting from the origin).",
+      "options": {
+        "A": "33ft",
+        "B": "36ft",
+        "C": "27ft",
+        "D": "54ft"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0011",
+      "type": "mcq",
+      "stem": "Find the equation of the tangent to the circle 7x² + 7y² - 56x + 42y = 98 at the point (-5, 3).",
+      "options": {
+        "A": "9x + 6y + 15 = 0",
+        "B": "3x - 2y - 5 = 0",
+        "C": "-9x + 6y - 15 = 0",
+        "D": "3x + 2y - 5 = 0"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0012",
+      "type": "mcq",
+      "stem": "Find the centre and radius of the circle 4x² + 4y² - 12x - 20y + 9 = 0.",
+      "options": {
+        "A": "(-3/2, 5/2), 5/2",
+        "B": "(3/2, -3/2), 3/2",
+        "C": "(3/2, 5/2), 5/2",
+        "D": "(-3/2, -5/2), 3/2"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0013",
+      "type": "mcq",
+      "stem": "A line through (-5, 2) and (1, -4) is perpendicular to the line through (x, -7) and (8, 7). Find x.",
+      "options": {
+        "A": "-4",
+        "B": "-5",
+        "C": "-6",
+        "D": "-3"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0014",
+      "type": "mcq",
+      "stem": "A particle starts from rest and moves with uniform acceleration 1.2 m/s². What is its velocity after 20s?",
+      "options": {
+        "A": "20m/s",
+        "B": "25m/s",
+        "C": "22m/s",
+        "D": "24m/s"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0015",
+      "type": "mcq",
+      "stem": "A particle is projected from a point on a horizontal plane with an initial velocity of 40 m/s at an angle α° above the horizontal level, where tan α = 3/4. Find the horizontal and vertical vector components of the initial velocity in m/s.",
+      "options": {
+        "A": "32i + 24j",
+        "B": "12i - 24j",
+        "C": "5i + 4j",
+        "D": "8i + 9j"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0016",
+      "type": "mcq",
+      "stem": "The speed of a particle increases uniformly from 12 m/s to 16 m/s over a distance of 96 m. Find the acceleration of the particle.",
+      "options": {
+        "A": "0.58m/s²",
+        "B": "0.28m/s²",
+        "C": "0.29m/s²",
+        "D": "0.45m/s²"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0017",
+      "type": "mcq",
+      "stem": "If the distance between points (3, y) and (8, 7) is 13, then y is:",
+      "options": {
+        "A": "5",
+        "B": "19",
+        "C": "16",
+        "D": "4"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0018",
+      "type": "mcq",
+      "stem": "A block of mass 10 kg slides down a smooth slope which is inclined at angle 15° to the horizontal. Calculate the magnitude of the normal reaction of the slope on the block and the acceleration of the block. (g = 9.8 m/s²)",
+      "options": {
+        "A": "85N, 4.5ms⁻²",
+        "B": "85N, 3.5ms⁻²",
+        "C": "98N, 5.5ms⁻²",
+        "D": "95N, 2.5ms⁻²"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0019",
+      "type": "mcq",
+      "stem": "A small projectile is fired vertically downward into a fluid medium with an initial velocity of 60 m/s. Due to the drag resistance of the fluid, the projectile experiences a deceleration of a = (-0.4v³) m/s². Determine the projectile's velocity after 4s.",
+      "options": {
+        "A": "0.559m/s",
+        "B": "0.229m/s",
+        "C": "0.009m/s",
+        "D": "0.33m/s"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0020",
+      "type": "mcq",
+      "stem": "Given the vectors A = i - 3j + 2k, B = 2i + 4j - 3k, and C = 3i + 2j - k, what is the unit vector parallel to 2A + 3B - 4C?",
+      "options": {
+        "A": "(2A + 3B - 4C)/√18",
+        "B": "(2A + 3B - 4C)/√21",
+        "C": "(2A + 3B - 4C)/√85",
+        "D": "√85"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0021",
+      "type": "mcq",
+      "stem": "The displacement of a moving object with respect to time t is given by S(t) = 5t⁴ - 10t + 3. Determine its velocity after the first 2 sec.",
+      "options": {
+        "A": "20m/s",
+        "B": "150m/s",
+        "C": "100m/s",
+        "D": "15m/s"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0022",
+      "type": "mcq",
+      "stem": "Evaluate the angle between the vectors A = 4i + 2j - 6k and B = -2i + 2j - k.",
+      "options": {
+        "A": "10.2°",
+        "B": "84.89°",
+        "C": "12.55°",
+        "D": "65°"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0023",
+      "type": "mcq",
+      "stem": "The angular frequency of small-amplitude oscillations of a simple pendulum is given by:",
+      "options": {
+        "A": "ω = (lg)^½",
+        "B": "ω = (l/g)^½",
+        "C": "ω = (g/l)^½",
+        "D": "ω = l(g/l)^½"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0024",
+      "type": "mcq",
+      "stem": "Calculate the restoring force F that a spring would exert on a mass, given that the magnitude of the extension is 1000 (in the spring's units) and the spring constant is 0.25.",
+      "options": {
+        "A": "-4000",
+        "B": "-250",
+        "C": "±2.5×10⁻⁴",
+        "D": "(17)^½"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0025",
+      "type": "mcq",
+      "stem": "A book falls off the top shelf of a bookcase. The shelf is 1.4 m above a wooden floor. Find the time the book takes to reach the floor and the speed with which the book strikes the floor. (g = 9.8 m/s²)",
+      "options": {
+        "A": "0.58sec, 3.7m/s",
+        "B": "0.63sec, 5.2m/s",
+        "C": "0.93sec, 7.2m/s",
+        "D": "0.53sec, 5.2m/s"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0026",
+      "type": "mcq",
+      "stem": "Find the area in square units of the parallelogram whose adjacent sides are determined by the vectors a = i + 2j + 3k and b = 3i - 2j + k.",
+      "options": {
+        "A": "4√3",
+        "B": "8√2",
+        "C": "8√3",
+        "D": "3√6"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0027",
+      "type": "mcq",
+      "stem": "A particle of mass 0.5 kg is held at rest on a smooth slope that is inclined at an angle α to the horizontal. The particle is released. Given that tan α = 3/4, calculate the acceleration of the particle.",
+      "options": {
+        "A": "5.88ms⁻²",
+        "B": "4.95m/s²",
+        "C": "6.86m/s²",
+        "D": "7.64m/s²"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0028",
+      "type": "mcq",
+      "stem": "A particle is projected from a point on the ground with an initial velocity of 60 m/s. If the vertical distance moved by the particle after 2s is 90m, determine the angle to the horizontal at which the particle was projected.",
+      "options": {
+        "A": "15.5°",
+        "B": "21.4°",
+        "C": "24.4°",
+        "D": "65.9°"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0029",
+      "type": "mcq",
+      "stem": "Find a × b if a = -3i + 2j - k and b = 2i + j + 3k.",
+      "options": {
+        "A": "3i - 10j + 7k",
+        "B": "2i - 7j + 7k",
+        "C": "2i + 11j - 7k",
+        "D": "7i + 7j - 7k"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0030",
+      "type": "mcq",
+      "stem": "The path of a projectile is known as a/an:",
+      "options": {
+        "A": "Circle",
+        "B": "Parabola",
+        "C": "Ellipse",
+        "D": "Curve"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0031",
+      "type": "mcq",
+      "stem": "Determine the value of x such that a = 2i - j + xk, b = i + 2xj - 3k and c = 3i + j + 5k are coplanar.",
+      "options": {
+        "A": "-2/3",
+        "B": "2/3",
+        "C": "1/2",
+        "D": "-3/2"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0032",
+      "type": "mcq",
+      "stem": "A particle will cover a maximum range if it is projected at an angle:",
+      "options": {
+        "A": "30°",
+        "B": "45°",
+        "C": "60°",
+        "D": "90°"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0033",
+      "type": "mcq",
+      "stem": "A particle is projected with an initial velocity of 42 m/s at an angle of 50° to the horizontal. After 2s, find the magnitude of the velocity.",
+      "options": {
+        "A": "122.7m/s",
+        "B": "78.7m/s",
+        "C": "26.5m/s",
+        "D": "29.8m/s"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0034",
+      "type": "mcq",
+      "stem": "Which of the following is correct about a projectile?",
+      "options": {
+        "A": "It is a motion under gravity in one dimension",
+        "B": "It is a motion under gravity in two dimensions",
+        "C": "It is a motion on a straight line",
+        "D": "It is a circular motion under gravity"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0035",
+      "type": "mcq",
+      "stem": "Given two vectors A = -4i + aj + 7k and B = 4i - 2j + 4k, which are known to be perpendicular to each other, find the value of a.",
+      "options": {
+        "A": "13",
+        "B": "6",
+        "C": "3",
+        "D": "10"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0036",
+      "type": "mcq",
+      "stem": "A particle is projected at an angle α to the horizontal with an initial velocity of u. If the maximum horizontal distance travelled is 20m and the greatest height reached is 10m, find u and α.",
+      "options": {
+        "A": "17.5m/s and 63.4°",
+        "B": "21.4m/s and 38.5°",
+        "C": "22.6m/s and 48.5°",
+        "D": "33.5m/s and 58.3°"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0037",
+      "type": "mcq",
+      "stem": "A car travelling at 27 km/hr is accelerated at the rate of 0.5 m/s². Find the distance covered by the car in 20s.",
+      "options": {
+        "A": "100m",
+        "B": "220m",
+        "C": "250m",
+        "D": "320m"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0038",
+      "type": "mcq",
+      "stem": "Find the projection of the vector a = 3i + 2j - 2k on the vector b = 3i - j - 2k.",
+      "options": {
+        "A": "11/4",
+        "B": "11√14/4",
+        "C": "11√14/14",
+        "D": "√14/11"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0039",
+      "type": "mcq",
+      "stem": "Given the two straight lines x + 2y + 1 = 0 and 2x + 3y + 5 = 0 which intersect at the point P(x, y), find the coordinates of P.",
+      "options": {
+        "A": "(-1, -4)",
+        "B": "(-7, 3)",
+        "C": "(1, -6)",
+        "D": "(-1, 6)"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0040",
+      "type": "mcq",
+      "stem": "Given that r(t) = 3t²i + t³j + 5tk, what is |dr/dt| at t = 0?",
+      "options": {
+        "A": "5",
+        "B": "√5",
+        "C": "-5",
+        "D": "-√5"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0041",
+      "type": "mcq",
+      "stem": "The equilibrium state of a simple pendulum corresponds to the situation in which the mass is stationary and hanging vertically down. Find the angle θ (from the vertical) at this position.",
+      "options": {
+        "A": "π",
+        "B": "2π",
+        "C": "½π",
+        "D": "0"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0042",
+      "type": "mcq",
+      "stem": "The restoring force in simple harmonic motion must obey:",
+      "options": {
+        "A": "Young's law",
+        "B": "Hooke's law",
+        "C": "Boyle's law",
+        "D": "None of the above"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0043",
+      "type": "mcq",
+      "stem": "Find the latus rectum of the parabola y² + 8x - 2y - 23 = 0.",
+      "options": {
+        "A": "8",
+        "B": "5",
+        "C": "2",
+        "D": "4"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0044",
+      "type": "mcq",
+      "stem": "A particle is projected horizontally with a speed of U ms⁻¹ from a point 122.5 m above a horizontal plane. The particle hits the plane at a point which is at a horizontal distance of 90 m away from the starting point. Find the initial speed of the particle.",
+      "options": {
+        "A": "15ms⁻¹",
+        "B": "16m/s",
+        "C": "17m/s",
+        "D": "18m/s"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0045",
+      "type": "mcq",
+      "stem": "Which of the following lines is parallel to the line 3x - 2y + 6 = 0?",
+      "options": {
+        "A": "3x + 2y - 12 = 0",
+        "B": "4x - 9y = 6",
+        "C": "12x + 18y = 15",
+        "D": "15x - 10y - 9 = 0"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0046",
+      "type": "mcq",
+      "stem": "A man fired a bullet from the top of a tree which is 66m tall. The bullet is fired with a velocity of 70m/s at an angle of 35° to the horizontal from the man's eye level. If, in a sitting position, the man is 2.1m tall, find the maximum height reached from the ground.",
+      "options": {
+        "A": "150.35m",
+        "B": "147.1m",
+        "C": "135.1m",
+        "D": "120.2m"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0047",
+      "type": "mcq",
+      "stem": "If the points (-2, 3), (x, y) and (-3, 5) lie on a straight line, then the equation of the line is:",
+      "options": {
+        "A": "x - 2y - 1 = 0",
+        "B": "2x + y - 1 = 0",
+        "C": "x + 2y - 1 = 0",
+        "D": "2x + y + 1 = 0"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0048",
+      "type": "mcq",
+      "stem": "The equation of line k is y = ⅓x - 2. The equation of line m is -2x + 6y = 18. The lines are:",
+      "options": {
+        "A": "Parallel",
+        "B": "Perpendicular",
+        "C": "The same",
+        "D": "Neither"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0049",
+      "type": "mcq",
+      "stem": "What is the magnitude of the vector a = -i + 2j - 2k?",
+      "options": {
+        "A": "1",
+        "B": "3",
+        "C": "5",
+        "D": "9"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0050",
+      "type": "mcq",
+      "stem": "If F1 = 6i + 8j + 4k and F2 = 5i - 3j + 2k, what is the dot product of the two vectors?",
+      "options": {
+        "A": "10",
+        "B": "12",
+        "C": "14",
+        "D": "24"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0051",
+      "type": "mcq",
+      "stem": "What is the unit vector in the direction of a = -i + 2j - 2k?",
+      "options": {
+        "A": "-1/3 i + 2/3 j - 2/3 k",
+        "B": "-i + 2j - 2k",
+        "C": "1/3 i - 2/3 j + 2/3 k",
+        "D": "-1/9 i + 2/9 j - 2/9 k"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0052",
+      "type": "mcq",
+      "stem": "Given that p = -i + 3j - 2k and q = i + j - 6k, what is the dot product p · q?",
+      "options": {
+        "A": "10",
+        "B": "12",
+        "C": "14",
+        "D": "16"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0053",
+      "type": "mcq",
+      "stem": "The position vectors of points P, Q and R relative to an origin O are (-2, -5), (8, 4), and (-2, 3) respectively. What is the x-component of the vector OP - 3OQ + 2OR?",
+      "options": {
+        "A": "-30",
+        "B": "10",
+        "C": "-20",
+        "D": "15"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0054",
+      "type": "mcq",
+      "stem": "Find the cross product of a = 3i - 2j + k and b = 2i + 2j - 4k.",
+      "options": {
+        "A": "6i + 14j + 10k",
+        "B": "6i - 14j + 10k",
+        "C": "-6i + 14j - 10k",
+        "D": "10i + 6j + 14k"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0055",
+      "type": "mcq",
+      "stem": "What is the volume of a parallelepiped with sides a = 3i + j, b = i + 5j + 4k, and c = j + k?",
+      "options": {
+        "A": "12 cubic units",
+        "B": "2 cubic units",
+        "C": "16 cubic units",
+        "D": "18 cubic units"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0056",
+      "type": "mcq",
+      "stem": "Find the perpendicular distance between the parallel planes x + 2y + z = 6 and x + 2y + z = 10.",
+      "options": {
+        "A": "4/3",
+        "B": "3/4",
+        "C": "4/√6",
+        "D": "2"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0057",
+      "type": "mcq",
+      "stem": "What is the area of the triangle whose vertices are (2, 2, 2), (1, 1, 2) and (1, -1, 6)?",
+      "options": {
+        "A": "2 square units",
+        "B": "3 square units",
+        "C": "4 square units",
+        "D": "6 square units"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0058",
+      "type": "mcq",
+      "stem": "The equation of the plane normal to the vector 4i + 3j and 5 units from the origin is:",
+      "options": {
+        "A": "r · (4i + 3j) = 5",
+        "B": "r · (4i + 3j) = 25",
+        "C": "r · (3i + 4j) = 20",
+        "D": "r · (4i + 3j) = 15"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0059",
+      "type": "mcq",
+      "stem": "Which of the following is the direction cosine of the vector i + j + k?",
+      "options": {
+        "A": "1/3, 1/3, 1/3",
+        "B": "1/√3, 1/√3, 1/√3",
+        "C": "1/√2, 1/√2, 1/√2",
+        "D": "1, 1, 1"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0060",
+      "type": "mcq",
+      "stem": "If u = -i + 2j - 2k and v = 3i + 4j - 12k, what is the angle between the two vectors?",
+      "options": {
+        "A": "cos⁻¹ (15/39)",
+        "B": "cos⁻¹ (29/39)",
+        "C": "cos⁻¹ (12/13)",
+        "D": "cos⁻¹ (25/39)"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0061",
+      "type": "mcq",
+      "stem": "What is the modulus of the vector 6i - 2j - 3k?",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0062",
+      "type": "mcq",
+      "stem": "Given a = i + j - 2k, b = i + k, and c = 2i - j + 3k, what is the result of a + b - 3c?",
+      "options": {
+        "A": "-4i + 4j - 10k",
+        "B": "4i - 4j + 10k",
+        "C": "-2i + 2j - 5k",
+        "D": "2i + 4j - 8k"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0063",
+      "type": "mcq",
+      "stem": "Find the unit vector perpendicular to both a = 6i + j + 3k and b = 5i + k.",
+      "options": {
+        "A": "(i - 9j + 5k) / √107",
+        "B": "(i + 9j - 5k) / √107",
+        "C": "(-i + 9j + 5k) / √107",
+        "D": "(i + 9j + 5k) / √107"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0064",
+      "type": "mcq",
+      "stem": "Two forces F1 = 42N (at 60°) and F2 = 55N (at 135°) act at a point O. What is the sum of their horizontal components?",
+      "options": {
+        "A": "36.37 N",
+        "B": "-17.89 N",
+        "C": "5.99 N",
+        "D": "-5.99 N"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0065",
+      "type": "mcq",
+      "stem": "From the previous question, what is the magnitude of the resultant force R (of F1 = 42N at 60° and F2 = 55N at 135°)?",
+      "options": {
+        "A": "6.46 N",
+        "B": "8.46 N",
+        "C": "10.46 N",
+        "D": "77.3 N"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0066",
+      "type": "mcq",
+      "stem": "A body of mass 8kg rests on a horizontal surface. If the coefficient of friction is 0.65, what is the maximum horizontal force enough to just move the body? (Take g = 10 m/s²)",
+      "options": {
+        "A": "36 N",
+        "B": "42 N",
+        "C": "52 N",
+        "D": "65 N"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0067",
+      "type": "mcq",
+      "stem": "A force F of magnitude 50N makes an angle of 35° with the horizontal. What is its horizontal component?",
+      "options": {
+        "A": "28.7 N",
+        "B": "35.0 N",
+        "C": "40.95 N",
+        "D": "50.0 N"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0068",
+      "type": "mcq",
+      "stem": "Three coplanar forces of magnitudes 15N, 25N, and 40N act outwardly from the origin at angles 30°, 120°, and 210° respectively. What is the magnitude of the resultant force?",
+      "options": {
+        "A": "25 N",
+        "B": "35 N",
+        "C": "45 N",
+        "D": "55 N"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0069",
+      "type": "mcq",
+      "stem": "A car that has broken down is pushed by three men with forces 230N (at 045°), 325N (at 090°), and 250N (at 135°). What is the magnitude of the resultant force?",
+      "options": {
+        "A": "545.2 N",
+        "B": "664.6 N",
+        "C": "720.5 N",
+        "D": "805.0 N"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0070",
+      "type": "mcq",
+      "stem": "A force F of magnitude 85N is inclined at an angle of 60° to the horizontal. What is its vertical component?",
+      "options": {
+        "A": "42.5 N",
+        "B": "60.0 N",
+        "C": "73.6 N",
+        "D": "85.0 N"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0071",
+      "type": "mcq",
+      "stem": "Three forces (6N at 030°), (8.5N at 180°), and (9N at 330°) act on a body of mass 6kg initially at rest. What is the resultant force on the body?",
+      "options": {
+        "A": "2.5 N",
+        "B": "4.7 N",
+        "C": "6.5 N",
+        "D": "8.2 N"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0072",
+      "type": "mcq",
+      "stem": "Based on the previous question (three forces (6N at 030°), (8.5N at 180°), (9N at 330°) on a 6kg body), what is the acceleration with which the body begins to move?",
+      "options": {
+        "A": "0.55 m/s²",
+        "B": "0.789 m/s²",
+        "C": "1.25 m/s²",
+        "D": "2.45 m/s²"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0073",
+      "type": "mcq",
+      "stem": "A box of mass 3kg lies on a rough plane inclined at 40° to the horizontal. The coefficient of friction is 0.3. If the box is in limiting equilibrium and about to move up the plane, what is the normal reaction?",
+      "options": {
+        "A": "18.5 N",
+        "B": "22.5 N",
+        "C": "25.4 N",
+        "D": "28.0 N"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0074",
+      "type": "mcq",
+      "stem": "A particle of weight 20N rests in equilibrium on a smooth inclined plane. It is maintained by a horizontal force of 5N and a force P acting at 75° to the horizontal. What is the value of P?",
+      "options": {
+        "A": "15.2 N",
+        "B": "20.4 N",
+        "C": "25.6 N",
+        "D": "30.0 N"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0075",
+      "type": "mcq",
+      "stem": "If the resultant moment of a system of forces about a point is zero, the system is said to be:",
+      "options": {
+        "A": "Accelerating",
+        "B": "In rotational equilibrium",
+        "C": "Moving with constant velocity",
+        "D": "Experiencing maximum torque"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0076",
+      "type": "mcq",
+      "stem": "A 100N force acts at an angle of 50° to a 1m rod. The moment of the force about the pivot O at the other end is:",
+      "options": {
+        "A": "100 sin(50°) N.m",
+        "B": "100 cos(50°) N.m",
+        "C": "50 sin(100°) N.m",
+        "D": "100 tan(50°) N.m"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0077",
+      "type": "mcq",
+      "stem": "The unit of the moment of a force in the SI system is:",
+      "options": {
+        "A": "Newton per meter (N/m)",
+        "B": "Newton meter (N.m)",
+        "C": "Joules per second (J/s)",
+        "D": "Watts (W)"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0078",
+      "type": "mcq",
+      "stem": "In resolving forces, the component of a force F adjacent to the angle θ with the x-axis is given by:",
+      "options": {
+        "A": "F sin(θ)",
+        "B": "F cos(θ)",
+        "C": "F tan(θ)",
+        "D": "F sec(θ)"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0079",
+      "type": "mcq",
+      "stem": "A car starts from rest and accelerates uniformly to a speed of 72 km/h over a distance of 500m. What is the acceleration of the car?",
+      "options": {
+        "A": "0.2 m/s²",
+        "B": "0.4 m/s²",
+        "C": "0.6 m/s²",
+        "D": "0.8 m/s²"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0080",
+      "type": "mcq",
+      "stem": "A body starts with a velocity of 3 m/s and moves in a straight line with constant acceleration. If its velocity after 5 seconds is 5.5 m/s, what is the uniform acceleration?",
+      "options": {
+        "A": "0.2 m/s²",
+        "B": "0.5 m/s²",
+        "C": "0.8 m/s²",
+        "D": "1.0 m/s²"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0081",
+      "type": "mcq",
+      "stem": "A scooter starts from rest and moves with a constant acceleration of 1.2 m/s². What is its velocity after it has travelled 60 meters?",
+      "options": {
+        "A": "10 m/s",
+        "B": "12 m/s",
+        "C": "14.4 m/s",
+        "D": "16 m/s"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0082",
+      "type": "mcq",
+      "stem": "A projectile is launched at ground level with an initial speed of 50.0 m/s at an angle of 30.0° above the horizontal. It strikes a target 3.00 seconds later. What is the x-distance to the target?",
+      "options": {
+        "A": "75.0 m",
+        "B": "105.5 m",
+        "C": "130.0 m",
+        "D": "150.0 m"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0083",
+      "type": "mcq",
+      "stem": "From the previous question (projectile at 50.0 m/s, 30.0°, striking a target 3.00s later), what is the y-distance (height) of the target from the ground? (Use g = 9.8 m/s²)",
+      "options": {
+        "A": "25.5 m",
+        "B": "30.9 m",
+        "C": "35.0 m",
+        "D": "40.2 m"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0084",
+      "type": "mcq",
+      "stem": "A ball is thrown horizontally from the top of a 60.0m building and lands 100.0m from the base. Ignoring air resistance, how long is the ball in the air? (Use g = 9.8 m/s²)",
+      "options": {
+        "A": "2.50 s",
+        "B": "3.50 s",
+        "C": "4.50 s",
+        "D": "5.50 s"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0085",
+      "type": "mcq",
+      "stem": "For the ball in the previous question (thrown horizontally from a 60.0m building, lands 100.0m away), what must have been the initial horizontal component of the velocity?",
+      "options": {
+        "A": "20.5 m/s",
+        "B": "25.0 m/s",
+        "C": "28.6 m/s",
+        "D": "32.4 m/s"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0086",
+      "type": "mcq",
+      "stem": "What is the vertical component of the velocity of the ball (from a 60.0m building) just before it hits the ground? (Use g = 9.8 m/s²)",
+      "options": {
+        "A": "28.6 m/s",
+        "B": "34.3 m/s",
+        "C": "40.0 m/s",
+        "D": "45.2 m/s"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0087",
+      "type": "mcq",
+      "stem": "The distance S in meters covered by a particle in t seconds is S = (3/2)t² - 3t. What is its acceleration?",
+      "options": {
+        "A": "1.5 m/s²",
+        "B": "2.0 m/s²",
+        "C": "3.0 m/s²",
+        "D": "4.5 m/s²"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0088",
+      "type": "mcq",
+      "stem": "Two particles have velocities v1 = i + 3j + 6k and v2 = i - 2k respectively. What is the velocity of the second particle relative to the first?",
+      "options": {
+        "A": "3j + 8k",
+        "B": "-3j - 8k",
+        "C": "2i + 3j + 4k",
+        "D": "-2i - 3j - 4k"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0089",
+      "type": "mcq",
+      "stem": "A motor is rotating at 300 rpm. What is the corresponding frequency in Hz?",
+      "options": {
+        "A": "0.5 Hz",
+        "B": "5.0 Hz",
+        "C": "50 Hz",
+        "D": "500 Hz"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0090",
+      "type": "mcq",
+      "stem": "What is the angular velocity of the hour hand of a wall clock?",
+      "options": {
+        "A": "π/6 rad/hr",
+        "B": "π/12 rad/hr",
+        "C": "2π rad/hr",
+        "D": "π rad/hr"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0091",
+      "type": "mcq",
+      "stem": "A ball of mass 0.2 kg is attached to the end of a 7m long string. The string breaks if the tension exceeds 30N. What is the maximum angular velocity?",
+      "options": {
+        "A": "3.5 rad/s",
+        "B": "4.6 rad/s",
+        "C": "5.2 rad/s",
+        "D": "6.0 rad/s"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0092",
+      "type": "mcq",
+      "stem": "A particle moves along a space curve defined by x = e⁻ᵗcos(t), y = e⁻ᵗsin(t), z = e⁻ᵗ. What is the magnitude of its velocity?",
+      "options": {
+        "A": "e⁻ᵗ",
+        "B": "√2 e⁻ᵗ",
+        "C": "√3 e⁻ᵗ",
+        "D": "2e⁻ᵗ"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0093",
+      "type": "mcq",
+      "stem": "If the position vector is r = cos(t)i + sin(t)j + tk, what is the magnitude of the second derivative (acceleration)?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "√2",
+        "D": "2"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0094",
+      "type": "mcq",
+      "stem": "A particle travels so that its acceleration is a = 2e⁻ᵗi + 5cos(t)j - 3sin(t)k. If it starts with velocity v = 4i - 3j + 2k at t = 0, what is the i-component of its velocity at any time t?",
+      "options": {
+        "A": "-2e⁻ᵗ + 6",
+        "B": "2e⁻ᵗ + 2",
+        "C": "-e⁻ᵗ + 5",
+        "D": "e⁻ᵗ + 3"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0095",
+      "type": "mcq",
+      "stem": "Given a space curve C with position vector r = 3cos(2t)i + 3sin(2t)j + (8t - 4)k, what is the magnitude of the tangent vector dr/dt?",
+      "options": {
+        "A": "6",
+        "B": "8",
+        "C": "10",
+        "D": "12"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0096",
+      "type": "mcq",
+      "stem": "For the same space curve r = 3cos(2t)i + 3sin(2t)j + (8t - 4)k, what is the radius of curvature?",
+      "options": {
+        "A": "10/3",
+        "B": "25/3",
+        "C": "50/3",
+        "D": "100/3"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0097",
+      "type": "mcq",
+      "stem": "A particle moves so that its position vector is r = cos(ωt)i + sin(ωt)j. The velocity of the particle is:",
+      "options": {
+        "A": "Parallel to r",
+        "B": "Perpendicular to r",
+        "C": "At 45° to r",
+        "D": "Zero"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0098",
+      "type": "mcq",
+      "stem": "If r = 3e⁻²ᵗi + 4sin(3t)j + 5cos(3t)k, what is the magnitude of the velocity at t = 0?",
+      "options": {
+        "A": "12",
+        "B": "13.4",
+        "C": "15",
+        "D": "18.2"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0099",
+      "type": "mcq",
+      "stem": "Physical quantities are classified into ______ (types).",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0100",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a vector quantity?",
+      "options": {
+        "A": "Force",
+        "B": "Velocity",
+        "C": "Volume",
+        "D": "Momentum"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0101",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a scalar quantity?",
+      "options": {
+        "A": "Length",
+        "B": "Mass",
+        "C": "Volume",
+        "D": "Force"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0102",
+      "type": "mcq",
+      "stem": "For a position vector AB to be defined, which point has to be fixed as the origin/reference?",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "O",
+        "D": "1"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0103",
+      "type": "mcq",
+      "stem": "A 5kg object accelerates at 3m/s². What is the net force acting on it?",
+      "options": {
+        "A": "15N",
+        "B": "1.67N",
+        "C": "40N",
+        "D": "30N"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0104",
+      "type": "mcq",
+      "stem": "If ā = 3i + 5j - 2k and b̄ = 5i - 7j - k, then ā + b̄ is:",
+      "options": {
+        "A": "8i - 2j - 3k",
+        "B": "8i + 2j + 3k",
+        "C": "8i - 2j + 3k",
+        "D": "8i + 2j - 3k"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0105",
+      "type": "mcq",
+      "stem": "Suppose c̄ = 2i - 4j, d̄ = 2i + 6j and ē = 3i - j, then c̄ + d̄ - ē is:",
+      "options": {
+        "A": "i + 3j",
+        "B": "i + j",
+        "C": "i - j",
+        "D": "i - 3j"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0106",
+      "type": "mcq",
+      "stem": "Given that PQ = 5i - 2j - 4k, then |PQ| is:",
+      "options": {
+        "A": "√40",
+        "B": "√42",
+        "C": "45",
+        "D": "√45"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0107",
+      "type": "mcq",
+      "stem": "Direction ______ is the angle between the vector and the three coordinate axes.",
+      "options": {
+        "A": "Cosines",
+        "B": "Sines",
+        "C": "Tangents",
+        "D": "Magnitude"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0108",
+      "type": "mcq",
+      "stem": "If ā = 2i + 3j - k, then the direction cosines are ______",
+      "options": {
+        "A": "(2/14, 3/14, -1/14)",
+        "B": "(1/√6, -1/√6, -2/√6)",
+        "C": "(-2/√14, 3/√14, +2/√14)",
+        "D": "(2/√14, 3/√14, -1/√14)"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0109",
+      "type": "mcq",
+      "stem": "The scalar product of the vectors ā and b̄ is defined as ______",
+      "options": {
+        "A": "āb̄ sin θ",
+        "B": "-āb̄ sin θ",
+        "C": "āb̄ cos θ",
+        "D": "ā sin θ"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0110",
+      "type": "mcq",
+      "stem": "The ______ of a vector a is given by |a|.",
+      "options": {
+        "A": "Scalar",
+        "B": "Magnitude",
+        "C": "Angle",
+        "D": "Cosine"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0111",
+      "type": "mcq",
+      "stem": "The scalar product ā · b̄ is also called the ______ product.",
+      "options": {
+        "A": "Cross",
+        "B": "Dot",
+        "C": "Unit",
+        "D": "Cosine"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0112",
+      "type": "mcq",
+      "stem": "The dot product of two vectors at right angles to each other is equal to ______",
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "-1",
+        "D": "2"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0113",
+      "type": "mcq",
+      "stem": "If m̄ = 2i - j + 2k and n̄ = 3i + 2j + 3k, then m̄ · n̄ is ______",
+      "options": {
+        "A": "10",
+        "B": "15",
+        "C": "-10",
+        "D": "-15"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0114",
+      "type": "mcq",
+      "stem": "The area of a triangle with adjacent sides ā and b̄ is:",
+      "options": {
+        "A": "|ā × b̄|",
+        "B": "ā × b̄",
+        "C": "½|ā × b̄|",
+        "D": "|ā × ā|"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0115",
+      "type": "mcq",
+      "stem": "Given that ā = i + 4j - 2k and b̄ = 2i - 3j - k, then (ā + b̄) × (ā - b̄) is:",
+      "options": {
+        "A": "20i + 6j + 22k",
+        "B": "20i - 6j - 22k",
+        "C": "20i - 6j + 22k",
+        "D": "20i + 6j - 22k"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0116",
+      "type": "mcq",
+      "stem": "Suppose ā = 2i + 4j + 3k and b̄ = i + 5j - 2k, then the vector product ā × b̄ is:",
+      "options": {
+        "A": "23i + 7j + 6k",
+        "B": "23i - 7j + 6k",
+        "C": "-23i + 7j - 6k",
+        "D": "-23i + 7j + 6k"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0117",
+      "type": "mcq",
+      "stem": "The unit vector perpendicular to both ā = i - 2j + 3k and b̄ = i + 2j - k is:",
+      "options": {
+        "A": "1/√48 (-4i + 4j + 4k)",
+        "B": "1/√48 (-4i - 4j + 4k)",
+        "C": "1/√48 (-4i + 4j - 4k)",
+        "D": "1/√48 (4i + 4j + 4k)"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0118",
+      "type": "mcq",
+      "stem": "Given that ā = -5i + 2j - k and b̄ = 2i - j + 3k, then |ā - b̄| is:",
+      "options": {
+        "A": "-5√5",
+        "B": "5√5",
+        "C": "√74",
+        "D": "74"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0119",
+      "type": "mcq",
+      "stem": "A 2kg cart moving at 6m/s collides with a 4kg cart at rest and they stick together after collision. What is their final speed?",
+      "options": {
+        "A": "2m/s",
+        "B": "3m/s",
+        "C": "4m/s",
+        "D": "6m/s"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0120",
+      "type": "mcq",
+      "stem": "A 4kg object falls with air resistance F = 0.8v. What is its terminal velocity?",
+      "options": {
+        "A": "9.8 m/s",
+        "B": "39.2 m/s",
+        "C": "49 m/s",
+        "D": "12.25 m/s"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0121",
+      "type": "mcq",
+      "stem": "A ball is launched at 30 m/s at 60° to the horizontal. What is its time of flight?",
+      "options": {
+        "A": "3.0s",
+        "B": "5.2s",
+        "C": "6.1s",
+        "D": "10.6s"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0122",
+      "type": "mcq",
+      "stem": "A 10N weight stretches an elastic string of modulus 50N and natural length 2m. What is the extension?",
+      "options": {
+        "A": "0.2m",
+        "B": "0.4m",
+        "C": "0.5m",
+        "D": "1.0m"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0123",
+      "type": "mcq",
+      "stem": "The value of y for which the vectors p̄ = 3i + 2j + 9k and q̄ = i + yj + 3k are perpendicular is:",
+      "options": {
+        "A": "10",
+        "B": "-10",
+        "C": "15",
+        "D": "-15"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0124",
+      "type": "mcq",
+      "stem": "The distance between the points P₁(2, 1, 5) and P₂(-2, 3, 0) is:",
+      "options": {
+        "A": "3√5",
+        "B": "4√5",
+        "C": "5√5",
+        "D": "√5"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0125",
+      "type": "mcq",
+      "stem": "If ḡ = 2i + 2j - k and h̄ = 6i - 3j + 2k, the angle between ḡ and h̄ is:",
+      "options": {
+        "A": "82.09°",
+        "B": "89.02°",
+        "C": "79.02°",
+        "D": "71.09°"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0126",
+      "type": "mcq",
+      "stem": "Given that ā = 2i + j + k, b̄ = -4i + 3j + k and c̄ = 5i + 7j - 4k, then (ā × b̄) · c̄ is:",
+      "options": {
+        "A": "72",
+        "B": "-72",
+        "C": "-92",
+        "D": "92"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0127",
+      "type": "mcq",
+      "stem": "The derivative of r̄ = (3t³ + t)i + 5ln(t)j - (5t² + 3t - 5)k is:",
+      "options": {
+        "A": "(9t² + 1)i + 5/t j - (10t + 3)k",
+        "B": "(9t² + 1)i + 5j - (10t + 3)k",
+        "C": "(9t² + 1)i + 1/t j - (10t + 3)k",
+        "D": "(9t² + 1)i + 5/t j + (10t + 3)k"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0128",
+      "type": "mcq",
+      "stem": "The acceleration of a particle with position vector r̄ = 3t²i + cos(2t)j at t = 0 is:",
+      "options": {
+        "A": "6i - 4j",
+        "B": "6i - 2j",
+        "C": "6i + 4j",
+        "D": "6i + 2j"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0129",
+      "type": "mcq",
+      "stem": "Given that p[3, 1] + q[2, 4] = [8, 6] where p and q are constants, find the value of (p + q).",
+      "options": {
+        "A": "-3",
+        "B": "-4",
+        "C": "4",
+        "D": "3"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0130",
+      "type": "mcq",
+      "stem": "A spring with natural length 1m and modulus 40N stretches to 1.3m. What is the tension?",
+      "options": {
+        "A": "8N",
+        "B": "12N",
+        "C": "16N",
+        "D": "20N"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0131",
+      "type": "mcq",
+      "stem": "Suppose ā = ti - 3j + 2tk, b̄ = i - 2j + 2k, then ∫₁²(ā × b̄) dt is:",
+      "options": {
+        "A": "4t - 2k",
+        "B": "0",
+        "C": "6k",
+        "D": "-4i - 2k"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0132",
+      "type": "mcq",
+      "stem": "A vector having its modulus equal to unity is called:",
+      "options": {
+        "A": "Vector",
+        "B": "Unit vector",
+        "C": "Scalar",
+        "D": "Collinear vector"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-unilag-mth103-bank-0133",
+      "type": "mcq",
+      "stem": "The acceleration of a particle at any time t is given by a = dv/dt = 12cos(2t)i - 8sin(2t)j. Find the velocity of the particle at t = 0.",
+      "options": {
+        "A": "6",
+        "B": "-6",
+        "C": "4",
+        "D": "-4"
+      },
+      "marks": 1,
+      "answer": "A"
+    }
+  ]
+}

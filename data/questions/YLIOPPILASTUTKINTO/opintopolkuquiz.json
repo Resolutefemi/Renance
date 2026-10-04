@@ -1,0 +1,131 @@
+{
+ "code": "ylioppilastutkinto-opintopolkuquiz-bank",
+ "title": "Ylioppilastutkinto - Opintopolkuquiz",
+ "version": 1,
+ "questionCount": 10,
+ "totalMarks": 10,
+ "questions": [
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0001",
+   "type": "mcq",
+   "stem": "Kuinka selkeä käsitys sinulla on tulevasta alasta tai ammatista?",
+   "marks": 1,
+   "options": {
+    "A": "En vielä tiedä lainkaan.",
+    "B": "Minulla on muutama vaihtoehto mielessä.",
+    "C": "Suunta on melko selkeä.",
+    "D": "Tiedän tarkasti mihin ammattiin tähtään."
+   }
+  },
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0002",
+   "type": "mcq",
+   "stem": "Millainen oppiminen tuntuu luontevimmalta?",
+   "marks": 1,
+   "options": {
+    "A": "Tekemällä ja kokeilemalla käytännössä.",
+    "B": "Lukeminen, kirjoittaminen ja teoria.",
+    "C": "Sekä teoriaa että käytäntöä, tarvitsen vielä kokeilua.",
+    "D": "Ryhmä- ja projektityö."
+   }
+  },
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0003",
+   "type": "mcq",
+   "stem": "Miten suhtaudut kokeisiin ja tenteihin?",
+   "marks": 1,
+   "options": {
+    "A": "Ne sopivat minulle hyvin.",
+    "B": "Mieluummin näytöt ja käytännön tehtävät.",
+    "C": "Tarvitsen lisää harjoittelua ja tukea.",
+    "D": "Sekoitus on minulle ok."
+   }
+  },
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0004",
+   "type": "mcq",
+   "stem": "Mikä tavoite tuntuu tärkeimmältä seuraavien 2-3 vuoden aikana?",
+   "marks": 1,
+   "options": {
+    "A": "Ylioppilastutkinto.",
+    "B": "Ammatti ja työelämään siirtyminen.",
+    "C": "Aikaa ja tukea suunnan löytämiseen.",
+    "D": "Haluan pitää vaihtoehdot auki."
+   }
+  },
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0005",
+   "type": "mcq",
+   "stem": "Millainen koulupäivä motivoi sinua eniten?",
+   "marks": 1,
+   "options": {
+    "A": "Pitkät teoriatunnit ja itsenäinen työ.",
+    "B": "Työpajat, harjoittelu ja konkreettiset tehtävät.",
+    "C": "Lyhyet ja vaihtelevat jaksot.",
+    "D": "Projektit ja ryhmätyö."
+   }
+  },
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0006",
+   "type": "mcq",
+   "stem": "Kuinka tärkeää on päästä nopeasti työelämään?",
+   "marks": 1,
+   "options": {
+    "A": "Erittäin tärkeää.",
+    "B": "Melko tärkeää.",
+    "C": "Ei ole kiire.",
+    "D": "En osaa sanoa."
+   }
+  },
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0007",
+   "type": "mcq",
+   "stem": "Miten koet opiskelun tuen tarpeen?",
+   "marks": 1,
+   "options": {
+    "A": "Tarvitsen ohjausta ja tukea säännöllisesti.",
+    "B": "Pärjään hyvin itsenäisesti.",
+    "C": "Pärjään parhaiten, kun saan tehdä käytännössä.",
+    "D": "Tarvitsen tukea välillä, mutta en aina."
+   }
+  },
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0008",
+   "type": "mcq",
+   "stem": "Missä ympäristössä viihdyt parhaiten?",
+   "marks": 1,
+   "options": {
+    "A": "Luokassa ja luennoilla.",
+    "B": "Työpaikalla tai harjoittelussa.",
+    "C": "Haluan kokeilla erilaisia ympäristöjä.",
+    "D": "Projektitiimeissä."
+   }
+  },
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0009",
+   "type": "mcq",
+   "stem": "Mikä kuulostaa sinulle tällä hetkellä tärkeimmältä?",
+   "marks": 1,
+   "options": {
+    "A": "Laaja yleissivistys.",
+    "B": "Kädentaidot ja käytännön osaaminen.",
+    "C": "Opiskelutaidot ja suunnan selkiytyminen.",
+    "D": "Verkostot ja työelämäkontaktit."
+   }
+  },
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0010",
+   "type": "mcq",
+   "stem": "Miten koet matematiikan ja kielten opiskelun?",
+   "marks": 1,
+   "options": {
+    "A": "Pidän niistä ja ne sujuvat hyvin.",
+    "B": "Ne ovat ok, mutta eivät pääasia.",
+    "C": "Ne ovat haastavia ja kaipaan tukea.",
+    "D": "En osaa sanoa."
+   }
+  }
+ ],
+ "category": "Ylioppilastutkinto",
+ "body": "Opintopolkuquiz"
+}
