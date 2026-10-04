@@ -361,13 +361,15 @@ func (s *Store) MarkEmailVerified(ctx context.Context, userID string) error {
 // ChangeUserEmail is the wrong-email rescue: the signup address is
 // OVERWRITTEN, so the mistaken address leaves the database entirely and
 // the same account continues with the corrected one. Verification resets
-// atomically - email_verified flips back to false and the fresh token
-// REPLACES the active list (not appends: every link mailed to the old
+// atomically - email_verified flips back to false and the fresh code
+// REPLACES the active list (not appends: every code mailed to the old
 // address must die, it must never verify the new one) so the next
-// confirmation mail targets the new inbox only.
+// confirmation mail targets the new inbox only. The replacement code is
+// stamped with the same 24-hour expiry format VerifyEmail matches
+// (code:expiry-epoch) - a bare code would never verify.
 // ErrUniqueEmail propagates when the new address already belongs to an
 // account (the partial unique index users_email_lower_idx fires).
-func (s *Store) ChangeUserEmail(ctx context.Context, userID, newEmail, token string) error {
+func (s *Store) ChangeUserEmail(ctx context.Context, userID, newEmail, code string) error {
 	normalized := strings.ToLower(strings.TrimSpace(newEmail))
 	tx, err := s.Pool.Begin(ctx)
 	if err != nil {
@@ -387,10 +389,10 @@ func (s *Store) ChangeUserEmail(ctx context.Context, userID, newEmail, token str
 	if _, err := tx.Exec(ctx, `
                 UPDATE study.entitlements
                 SET email_verified = false,
-                    verify_token = $2,
+                    verify_token = $2 || ':' || extract(epoch from now() + interval '24 hours')::bigint,
                     verify_sent_at = NULL,
                     updated_at = now()
-                WHERE user_id = $1`, userID, token); err != nil {
+                WHERE user_id = $1`, userID, code); err != nil {
 		return fmt.Errorf("store: change email entitlement: %w", err)
 	}
 	if err := tx.Commit(ctx); err != nil {
