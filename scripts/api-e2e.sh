@@ -456,25 +456,26 @@ ECODE=$(printf '%s' "$ELOGIN" | tail -1)
 printf '%s' "$ELOGIN" | head -1 | jsonget "d['error']['code']" | grep -q "email_unverified"
 printf '%s' "$ELOGIN" | head -1 | jsonget "d['token']" >/dev/null
 
-step "verify-email with a bogus token -> 400 invalid_token"
+step "verify-email with a bogus code -> 400 invalid_token"
 CODE=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$BASE/auth/verify-email" \
-  -H 'Content-Type: application/json' -d '{"token":"deadbeefdeadbeefdeadbeef"}')
+  -H 'Content-Type: application/json' -d '{"code":"000000"}')
 [ "$CODE" = "400" ]
 
-# --- Dead-link regression (founder directive 2026-10-03): re-sends
-# (blocked login, resend button) used to OVERWRITE verify_token, so the
-# confirmation link already sitting in the student's inbox answered
-# "not valid any more" and the account could never be confirmed. The
-# token column now holds a list of the recent tokens: any unclicked
-# link verifies. A change-email still resets the list (a link mailed to
-# the OLD address must never verify the NEW one). ---
-step "change-email rescue -> 200, _devLink carries the fresh token"
+# --- Dead-code regression guard (founder directive 2026-10-03, code
+# era 2026-10-05): re-sends (blocked login, resend button) used to
+# OVERWRITE verify_token, so the confirmation code already sitting in
+# the student's inbox answered "not valid any more" and the account
+# could never be confirmed. The column now holds a list of the recent
+# expiry-stamped codes: any unexpired one verifies. A change-email
+# still resets the list (a code mailed to the OLD address must never
+# verify the NEW one). ---
+step "change-email rescue -> 200, _devCode carries the fresh 6-digit code"
 ENEWEMAIL="e2e-changed$RANDOM$RANDOM@example.com"
 ECHANGE=$(curl -fsS -X POST "$BASE/me/change-email" \
   -H "Authorization: Bearer $ETOKEN" -H 'Content-Type: application/json' \
   -d "{\"email\":\"$ENEWEMAIL\",\"return\":\"web\"}")
-CTOKEN=$(printf '%s' "$ECHANGE" | jsonget "d['_devLink'].split('token=')[1].split('&')[0]")
-[ -n "$CTOKEN" ]
+CCODE=$(printf '%s' "$ECHANGE" | jsonget "d['_devCode']")
+[ -n "$CCODE" ]
 printf '%s' "$ECHANGE" | jsonget "d['email']" | grep -q "$ENEWEMAIL"
 
 step "blocked login with the new address re-sends a second mail (must NOT kill the first link)"
@@ -483,14 +484,14 @@ ELOGIN2=$(curl -s -w '\n%{http_code}' -X POST "$BASE/auth/login" \
   -d "{\"email\":\"$ENEWEMAIL\",\"password\":\"$PASSWORD\"}")
 [ "$(printf '%s' "$ELOGIN2" | tail -1)" = "403" ]
 
-step "the change-email link STILL verifies after the re-send -> verified:true"
+step "the change-email code STILL verifies after the re-send -> verified:true"
 EVERIFY=$(curl -fsS -X POST "$BASE/auth/verify-email" \
-  -H 'Content-Type: application/json' -d "{\"token\":\"$CTOKEN\"}")
+  -H 'Content-Type: application/json' -d "{\"code\":\"$CCODE\"}")
 printf '%s' "$EVERIFY" | jsonget "d['verified']" | grep -q "True"
 
-step "the link works once - a replay answers 400 invalid_token"
+step "the code works once - a replay answers 400 invalid_token"
 CODE=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$BASE/auth/verify-email" \
-  -H 'Content-Type: application/json' -d "{\"token\":\"$CTOKEN\"}")
+  -H 'Content-Type: application/json' -d "{\"code\":\"$CCODE\"}")
 [ "$CODE" = "400" ]
 
 step "login with the new address after confirming -> 200 seated session"

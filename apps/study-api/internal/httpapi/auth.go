@@ -47,8 +47,9 @@ type credentials struct {
         // Referral is the referrer's RNC code, minting the new account's
         // referrer 3 REN coins on a manual (non-Google) signup.
         Referral string `json:"referral,omitempty"`
-        // VerifyReturn is where the confirmation link hands the student
-        // back: "web" (default) or "app".
+        // VerifyReturn is a legacy signup field (the mailed-link era): the
+        // 6-digit code replaced the link, so nothing steers by it any more.
+        // Kept parsing so old clients posting it stay valid.
         VerifyReturn string `json:"verifyReturn,omitempty"`
         // Audience (login only): "students" or "schools" - the tab the
         // sign-in happened under. Founder directive (2026-10-02): school
@@ -257,16 +258,16 @@ func (s *Server) blockUnverifiedLogin(w http.ResponseWriter, r *http.Request, u 
         // button stays on its explicit one-minute cooldown, so a student
         // who genuinely lost the mail still gets it quickly.
         if ent.VerifySentAt == nil || time.Since(*ent.VerifySentAt) >= 15*time.Minute {
-                token, err := newVerifyToken()
+                code, err := newVerifyCode()
                 if err != nil {
-                        s.log.Error("verify token mint failed", "err", err)
-                } else if err := s.store.SetEmailVerification(r.Context(), u.ID, token); err != nil {
-                        s.log.Error("verify token stamp failed", "err", err)
+                        s.log.Error("verify code mint failed", "err", err)
+                } else if err := s.store.SetEmailVerification(r.Context(), u.ID, code); err != nil {
+                        s.log.Error("verify code stamp failed", "err", err)
                 } else {
                         // Async (founder bugfix 2026-10-05): the transports
                         // must never hold a sign-in response open past the
                         // phone's patience.
-                        s.sendVerificationMailAsync(u.ID, email, token, "web")
+                        s.sendVerificationMailAsync(u.ID, email, code)
                 }
         }
         token, err := jwtx.IssueUnverified(u.ID, u.Username, s.cfg.JWTSecret)
@@ -280,7 +281,7 @@ func (s *Server) blockUnverifiedLogin(w http.ResponseWriter, r *http.Request, u 
         _ = json.NewEncoder(w).Encode(map[string]any{
                 "error": map[string]any{
                         "code":    "email_unverified",
-                        "message": "confirm your email - we sent a confirmation link to " + email,
+                        "message": "confirm your email - we sent a 6-digit confirmation code to " + email,
                 },
                 "token":             token,
                 "user":              userPayload{ID: u.ID, Username: u.Username},
@@ -324,26 +325,27 @@ func (s *Server) finishSignup(w http.ResponseWriter, r *http.Request, u *store.U
                 }
         }
         // Email confirmation: manual signups only (Google addresses are
-        // verified by Google themselves). The link returns the student
-        // to where the signup happened (web or app). The send is ASYNC
-        // (founder bugfix 2026-10-05, "Renance server timed out then
-        // email already existed"): the mail used to block this response
-        // for up to a minute of provider retries while the app's client
-        // gave up at 20s - the student saw "timed out", tapped signup
-        // again, and the account the first request had already created
-        // answered "email already exists". The response now returns the
-        // moment the row is stamped; "sent" reports the queue, honestly
-        // labelled queued on the wire.
+        // verified by Google themselves). The mail now carries the
+        // 6-digit code the student types into the app or the website
+        // (founder directive 2026-10-05, no more links). The send is
+        // ASYNC (founder bugfix 2026-10-05, "Renance server timed out
+        // then email already existed"): the mail used to block this
+        // response for up to a minute of provider retries while the
+        // app's client gave up at 20s - the student saw "timed out",
+        // tapped signup again, and the account the first request had
+        // already created answered "email already exists". The response
+        // now returns the moment the row is stamped; "sent" reports the
+        // queue, honestly labelled queued on the wire.
         queued := false
         if strings.TrimSpace(req.Email) != "" {
-                token, err := newVerifyToken()
+                code, err := newVerifyCode()
                 if err == nil {
-                        if err := s.store.SetEmailVerification(r.Context(), u.ID, token); err == nil {
-                                s.sendVerificationMailAsync(u.ID, strings.TrimSpace(req.Email), token, req.VerifyReturn)
+                        if err := s.store.SetEmailVerification(r.Context(), u.ID, code); err == nil {
+                                s.sendVerificationMailAsync(u.ID, strings.TrimSpace(req.Email), code)
                                 queued = true
                         }
                 } else {
-                        s.log.Error("verify token mint failed", "err", err)
+                        s.log.Error("verify code mint failed", "err", err)
                 }
         }
         // Founder directive (2026-09-30): the signup itself no longer seats an
@@ -490,7 +492,7 @@ func (s *Server) handleMe(w http.ResponseWriter, r *http.Request) {
                 },
         }
         // The signup address rides /me so the confirm screen (web and app)
-        // can show exactly which inbox the confirmation link went to.
+        // can show exactly which inbox the confirmation code went to.
         if u.Email != nil {
                 if e := strings.TrimSpace(*u.Email); e != "" {
                         resp["email"] = e

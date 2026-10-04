@@ -447,12 +447,9 @@ class _LoginScreenState extends State<LoginScreen> {
             ? ((verify['email'] ?? '') as String)
             : '';
         if (!mounted) return;
-        // A student whose signup happened on the web (or during the
-        // popup-less releases) meets the appearance picker here, on
-        // their first app login - flag-gated, so nobody sees it twice
-        // (founder directive 2026-10-03).
-        await maybeShowFirstAppearanceSheet(context);
-        if (!mounted) return;
+        // The appearance picker stays gated to AFTER verification (founder
+        // directive 2026-10-05): this student is still unconfirmed, the
+        // verify screen fires the popup once the code lands.
         await Navigator.of(context)
             .pushReplacementNamed('/verify', arguments: email);
         return;
@@ -733,7 +730,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       if (email.isEmpty || !email.contains('@')) {
         setState(() {
           _error =
-              'Enter your email address - the confirmation link goes there.';
+              'Enter your email address - the confirmation code goes there.';
           _busy = false;
         });
         return;
@@ -748,18 +745,17 @@ class _RegisterScreenState extends State<RegisterScreen> {
       final SharedPreferences prefs = session.prefs;
       await SchoolController.forgetSchoolSession(prefs);
       if (!mounted) return;
-      // Founder directive (2026-10-02, restored): the brand-new student
-      // sees the appearance popup ONCE, right after signup, before the
-      // verify sheet - picking a seed re-tints everything before they
-      // meet it.
-      await maybeShowFirstAppearanceSheet(context);
-      if (!mounted) return;
+      // Founder directive (2026-10-02, restored) - amended 2026-10-05:
+      // the appearance popup now waits until the 6-digit email code is
+      // VERIFIED (it fires from the verify screen's unlock, before the
+      // desk opens), so a brand-new student never meets the picker
+      // before their account is unlocked.
       // Founder directive (2026-09-30): the signup does NOT enter the
-      // desk until the emailed link is consumed - the session the API
-      // returned is restricted to the confirmation surface. The mailed
-      // link carries verifyReturn "app"; the verify screen offers
-      // resend and the wrong-email rescue, polls /me on resume and
-      // unlocks the moment the link lands.
+      // desk until the emailed 6-digit code is consumed - the session
+      // the API returned is restricted to the confirmation surface. The
+      // verify screen offers resend and the wrong-email rescue, takes
+      // the code entry, polls /me on resume and unlocks the moment the
+      // right code lands (appearance popup included, post-verification).
       await Navigator.of(context).pushReplacementNamed('/verify',
           arguments: email);
     } on ApiException catch (e) {
@@ -943,7 +939,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           Text(
             isSchool
                 ? 'The full Nigerian curriculum - classes, subjects, term syllabuses with notes - is installed for you automatically.'
-                : "We'll send a confirmation link to your email, then ask about your school and exams right after.",
+                : "We'll send a 6-digit confirmation code to your email, then ask about your school and exams right after.",
             textAlign: TextAlign.center,
             style: TextStyle(color: context.outline, fontSize: 12),
           ),

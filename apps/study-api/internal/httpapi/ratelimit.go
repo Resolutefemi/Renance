@@ -154,6 +154,22 @@ func (s *Server) authLimit(next http.HandlerFunc) http.HandlerFunc {
 	}
 }
 
+// verifyLimit gates the 6-digit code entry behind a tight per-IP
+// bucket (founder directive 2026-10-05, the code replaced the link):
+// a normal student types a code once or twice, and a guessing attack
+// needs far more tries than the bucket can ever refill.
+func (s *Server) verifyLimit(next http.HandlerFunc) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		if !s.verifyIP.allow("verify:ip:" + clientIP(r)) {
+			w.Header().Set("Retry-After", "15")
+			fail(w, http.StatusTooManyRequests, "rate_limited",
+				"too many code attempts - wait a minute and try again")
+			return
+		}
+		next(w, r)
+	}
+}
+
 // securityHeaders applies the API's baseline response headers to every
 // reply. The API serves JSON only, so the CSP locks everything down.
 func (s *Server) securityHeaders(next http.Handler) http.Handler {

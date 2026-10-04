@@ -137,7 +137,7 @@ class MeResult {
   final Entitlement? entitlement;
 
   /// The account's email address when it carries one ("" otherwise):
-  /// the verify screen shows which inbox the confirmation link went to.
+  /// the verify screen shows which inbox the confirmation code went to.
   final String email;
 
   factory MeResult.fromJson(Map<String, dynamic> j) => MeResult(
