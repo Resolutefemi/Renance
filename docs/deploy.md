@@ -266,7 +266,7 @@ Brevo support and has been replaced; Resend, proven delivering since
    the Brevo API hop reads). Credentials AUTH-tested live
    2026-10-05. The relay sends plain text only, which is fine for a
    last-resort hop.
-4. None configured -> the confirmation link is written to the server
+4. None configured -> the confirmation code is written to the server
    log so nothing is lost.
 
 Two operational notes:

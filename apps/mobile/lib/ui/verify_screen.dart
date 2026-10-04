@@ -1,22 +1,31 @@
 /// The confirmation stop: right after a manual signup, or when a login
 /// is blocked because the signup email was never confirmed (founder
-/// directive 2026-09-30 - the account is locked until the emailed link
-/// is consumed; closing the app or reloading never loses the state, it
-/// lives in the database). The screen offers the resend and the
-/// wrong-email rescue, and polls /me whenever the app returns to the
-/// foreground (the mailed link's renance://verified hop brings the app
-/// back): the moment the link lands the session is refreshed and the
-/// desk opens. Google signups are pre-verified and never see this
-/// screen.
+/// directive 2026-09-30 - the account is locked until the emailed code
+/// is entered; closing the app or reloading never loses the state, it
+/// lives in the database). FOUNDER DIRECTIVE 2026-10-05: confirmation is
+/// a 6-DIGIT CODE typed into this screen - no mailed link, no deep-link
+/// hop, the app unlocks itself the moment the right code lands. The
+/// screen offers the resend and the wrong-email rescue, still polls /me
+/// on resume (a code typed on the website unlocks the app too), and
+/// after verification the one-time appearance popup fires BEFORE the
+/// desk opens (founder directive 2026-10-05: "the appearance settings
+/// should only pop up after a user is done verifying his email").
+/// Google signups are pre-verified and never see this screen.
 library;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart'
+    show
+        FilteringTextInputFormatter,
+        LengthLimitingTextInputFormatter,
+        TextInputFormatter;
 import 'package:provider/provider.dart';
 
 import '../api_client.dart';
 import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
+import 'appearance_sheet.dart' show maybeShowFirstAppearanceSheet;
 import 'theme.dart';
 
 class VerifyScreen extends StatefulWidget {
@@ -31,12 +40,14 @@ class _VerifyScreenState extends State<VerifyScreen>
   bool _busy = false;
   bool _sent = false;
   String? _error;
-  // The signup address the confirmation mail went to (passed as the
+  // The signup address the confirmation code went to (passed as the
   // route argument from the register/login screens; may be empty for
   // older sessions, then /me fills it in).
   String? _signupEmail;
+  // The 6-digit code the student types in.
+  final TextEditingController _codeCtrl = TextEditingController();
   // Wrong-email rescue: swap the mistaken signup address for the correct
-  // one. The API removes the old address and re-mails the confirmation.
+  // one. The API removes the old address and re-mails the code.
   bool _changing = false;
   bool _changed = false;
   final TextEditingController _emailCtrl = TextEditingController();
@@ -66,15 +77,14 @@ class _VerifyScreenState extends State<VerifyScreen>
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
     _emailCtrl.dispose();
+    _codeCtrl.dispose();
     super.dispose();
   }
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
-    // The mailed link opens in the browser; consuming it fires the
-    // renance://verified hop (or the student just switches back).
-    // Either way the app resumes -> re-check the confirmation state and
-    // unlock the moment the link has landed.
+    // The code can also be typed on the website; if the student verified
+    // there and switches back, the app unlocks itself on resume.
     if (state == AppLifecycleState.resumed) {
       _checkConfirmed();
     }
@@ -116,8 +126,9 @@ class _VerifyScreenState extends State<VerifyScreen>
     }
   }
 
-  /// The link landed: swap the restricted session for a seated one and
-  /// open the desk.
+  /// The code landed (or was consumed on the web): swap the restricted
+  /// session for a seated one, fire the one-time appearance popup (the
+  /// founder gates it to AFTER verification) and open the desk.
   Future<void> _unlock() async {
     if (_unlocking || !mounted) return;
     _unlocking = true;
@@ -127,6 +138,10 @@ class _VerifyScreenState extends State<VerifyScreen>
       final SessionStore session = context.read<SessionStore>();
       final AuthTokens fresh = await api.refreshSession();
       await session.save(fresh.token, fresh.user);
+      if (!mounted) return;
+      // Founder directive 2026-10-05: the appearance settings pop up
+      // only after the email is verified - this is that moment.
+      await maybeShowFirstAppearanceSheet(context);
       if (!mounted) return;
       await Navigator.of(context).pushReplacementNamed('/home');
       return;
@@ -147,6 +162,39 @@ class _VerifyScreenState extends State<VerifyScreen>
         _error = e.message;
       });
       _unlocking = false;
+    }
+  }
+
+  /// Types the mailed 6-digit code in and consumes it. Wrong or expired
+  /// codes surface the server's message; success unlocks the desk.
+  Future<void> _verify() async {
+    final String code = _codeCtrl.text.trim();
+    if (RegExp(r'^\d{6}$').hasMatch(code) == false) {
+      setState(() => _error = 'Enter the 6-digit code from your mail.');
+      return;
+    }
+    if (_busy) return;
+    final ApiClient api = context.read<ApiClient>();
+    setState(() {
+      _busy = true;
+      _error = null;
+    });
+    try {
+      await api.verifyEmail(code);
+      if (!mounted) return;
+      await _unlock();
+    } on ApiException catch (e) {
+      if (!mounted) return;
+      setState(() {
+        _busy = false;
+        _error = e.message;
+      });
+    } on NetworkException catch (e) {
+      if (!mounted) return;
+      setState(() {
+        _busy = false;
+        _error = e.message;
+      });
     }
   }
 
@@ -242,15 +290,73 @@ class _VerifyScreenState extends State<VerifyScreen>
                 const SizedBox(height: 10),
                 Text(
                   _signupEmail == null
-                      ? 'We sent a confirmation link to your inbox. Your '
-                          'account stays locked until you open the link.'
-                      : 'We sent a confirmation link to $_signupEmail. Your '
-                          'account stays locked until you open the link - it '
-                          'unlocks itself the moment you come back.',
+                      ? 'We sent a 6-digit confirmation code to your '
+                          'inbox. Your account stays locked until you '
+                          'type it in below.'
+                      : 'We sent a 6-digit confirmation code to '
+                          '$_signupEmail. Type it below to unlock your '
+                          'account - it works once and expires in 24 '
+                          'hours.',
                   textAlign: TextAlign.center,
                   style: RenanceText.bodySecondary.copyWith(
                     height: 1.5,
                     color: context.textSecondary,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                // The code entry: one numeric field, digits spaced so it
+                // reads like the mail's big code block. Enter submits.
+                TextField(
+                  controller: _codeCtrl,
+                  keyboardType: TextInputType.number,
+                  inputFormatters: <TextInputFormatter>[
+                    FilteringTextInputFormatter.digitsOnly,
+                    LengthLimitingTextInputFormatter(6),
+                  ],
+                  textAlign: TextAlign.center,
+                  autofocus: true,
+                  style: const TextStyle(
+                    fontSize: 26,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: 12,
+                  ),
+                  decoration: InputDecoration(
+                    hintText: '000000',
+                    counterText: '',
+                    filled: true,
+                    fillColor: context.surfaceContainer,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: BorderSide.none,
+                    ),
+                  ),
+                  onSubmitted: (_) => _verify(),
+                ),
+                const SizedBox(height: 14),
+                SizedBox(
+                  width: double.infinity,
+                  height: 52,
+                  child: FilledButton(
+                    style: FilledButton.styleFrom(
+                      backgroundColor: context.ink,
+                      foregroundColor: context.onInverseChip,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    onPressed: _busy ? null : _verify,
+                    child: _busy
+                        ? const SizedBox(
+                            width: 20,
+                            height: 20,
+                            child: CircularProgressIndicator(strokeWidth: 2),
+                          )
+                        : Text(
+                            'Confirm my email',
+                            style: RenanceText.bodyMedium.copyWith(
+                              color: context.onInverseChip,
+                            ),
+                          ),
                   ),
                 ),
                 const SizedBox(height: 12),
@@ -299,8 +405,8 @@ class _VerifyScreenState extends State<VerifyScreen>
                           )
                         : Text(
                             _sent
-                                ? 'Confirmation sent, check the inbox'
-                                : 'Resend the confirmation mail',
+                                ? 'Code sent, check the inbox'
+                                : 'Resend the code',
                             style: RenanceText.bodyMedium.copyWith(
                               color: context.onInverseChip,
                             ),
@@ -321,7 +427,7 @@ class _VerifyScreenState extends State<VerifyScreen>
                 if (_changed)
                   Text(
                     'Signup email changed - the old address was removed and '
-                    'the confirmation link now goes to the new one.',
+                    'the confirmation code now goes to the new one.',
                     textAlign: TextAlign.center,
                     style: RenanceText.caption.copyWith(
                       color: context.textSecondary,
@@ -357,7 +463,7 @@ class _VerifyScreenState extends State<VerifyScreen>
                         ),
                         onPressed: _busy ? null : _changeEmail,
                         child: Text(
-                          'Save and send the link there',
+                          'Save and send the code there',
                           style: RenanceText.bodyMedium.copyWith(
                             color: context.onInverseChip,
                           ),
@@ -388,15 +494,6 @@ class _VerifyScreenState extends State<VerifyScreen>
                     style: RenanceText.caption.copyWith(color: context.error),
                   ),
                 ],
-                const SizedBox(height: 18),
-                Text(
-                  'Open the link on this phone and the app unlocks by '
-                  'itself.',
-                  textAlign: TextAlign.center,
-                  style: RenanceText.caption.copyWith(
-                    color: context.textSecondary,
-                  ),
-                ),
               ],
             ),
           ),

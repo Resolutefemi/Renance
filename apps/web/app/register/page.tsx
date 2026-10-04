@@ -154,12 +154,13 @@ export default function RegisterPage() {
       });
       setSession(res.token, res.user);
       if (res.emailVerification?.required) {
-        finishStudentSignup(() => {
-          setSignedEmail(email.trim());
-          setMailFailed(res.emailVerification?.sent === false);
-          setVerifySent(true);
-          setBusy(false);
-        });
+        // Founder directive 2026-10-05: the appearance popup waits until
+        // the 6-digit code is verified - the confirm card calls onVerified
+        // and the flow (appearance intro, then the desk) resumes there.
+        setSignedEmail(email.trim());
+        setMailFailed(res.emailVerification?.sent === false);
+        setVerifySent(true);
+        setBusy(false);
         return;
       }
       finishStudentSignup(() => router.replace(nextPath()));
@@ -172,7 +173,16 @@ export default function RegisterPage() {
   const field = 'h-12 w-full rounded-lg bg-surface-container pl-11 pr-3 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary';
 
   if (verifySent) {
-    return <ConfirmEmailCard email={signedEmail} mailFailed={mailFailed} />;
+    return (
+      <>
+        <AppearanceModal open={showAppearance} onClose={closeAppearance} />
+        <ConfirmEmailCard
+          email={signedEmail}
+          mailFailed={mailFailed}
+          onVerified={() => finishStudentSignup(() => router.replace(nextPath()))}
+        />
+      </>
+    );
   }
 
   return (

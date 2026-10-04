@@ -150,18 +150,25 @@ export default function LoginPage() {
   }
 
   // The blocked-login confirm card replaces the form: the account is
-  // real but locked until the emailed link is consumed.
+  // real but locked until the emailed 6-digit code is typed in (founder
+  // directive 2026-10-05). Verification seats the session and the
+  // normal post-login flow (appearance intro on first login, then the
+  // desk) resumes from there.
   if (confirmEmail) {
     return (
-      <ConfirmEmailCard
-        email={confirmEmail}
-        mailFailed={confirmMailFailed}
-        onSignOut={() => {
-          clearSession();
-          setConfirmEmail(null);
-          setPassword('');
-        }}
-      />
+      <>
+        <AppearanceModal open={showAppearance} onClose={closeAppearance} />
+        <ConfirmEmailCard
+          email={confirmEmail}
+          mailFailed={confirmMailFailed}
+          onVerified={() => finishLogin(() => router.replace(nextPath()))}
+          onSignOut={() => {
+            clearSession();
+            setConfirmEmail(null);
+            setPassword('');
+          }}
+        />
+      </>
     );
   }
 

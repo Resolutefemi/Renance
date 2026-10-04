@@ -339,6 +339,18 @@ class ApiClient {
     await _send('POST', '/auth/resend-verification', body: <String, dynamic>{});
   }
 
+  /// Consumes the 6-digit email confirmation code (founder directive
+  /// 2026-10-05, the mailed-link era is over): the student types the
+  /// code from the mail into the verify screen and this posts it to
+  /// /auth/verify-email. A wrong or expired code raises ApiException.
+  Future<void> verifyEmail(String code) async {
+    await _send(
+      'POST',
+      '/auth/verify-email',
+      body: <String, dynamic>{'code': code},
+    );
+  }
+
   /// Account self-deletion (founder directive 2026-10-05): DELETE /me
   /// wipes the account and EVERY row tied to it server-side - profile,
   /// exam attempts and answers, results, sessions, streaks, awards,
@@ -367,9 +379,9 @@ class ApiClient {
   }
 
   /// Wrong-email rescue: swaps the signup address for [email]. The old
-  /// address is removed from the database and the fresh confirmation
-  /// link mails to the new inbox only; verification resets until the
-  /// new link is consumed.
+  /// address is removed from the database and a fresh 6-digit
+  /// confirmation code mails to the new inbox only; verification resets
+  /// until the new code is consumed.
   Future<void> changeEmail(String email) async {
     await _send('POST', '/me/change-email',
         body: <String, dynamic>{'email': email, 'return': 'app'});
