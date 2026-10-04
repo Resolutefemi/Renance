@@ -84,11 +84,7 @@ func resendFrom() string {
 // Gmail layouts) still get a big tappable Confirm button, and the
 // query ampersand is encoded exactly once - no &amp; surprises.
 func (s *Server) sendVerificationMail(userID, email, token, verifyReturn string) (string, bool) {
-        back := verifyReturn
-        if back != "app" {
-                back = "web"
-        }
-        link := fmt.Sprintf("%s/verify/?token=%s&return=%s", s.siteURL(), token, back)
+        link := s.verificationLink(token, verifyReturn)
         subject := "Confirm your email - Renance"
         textBody := fmt.Sprintf(`Welcome to Renance.
 
@@ -170,6 +166,17 @@ If you did not create this account you can ignore this mail.
                 }
         }
         return link, sent
+}
+
+// verificationLink builds the confirmation URL for a token - the same
+// link the transports embed, computed BEFORE the async send so callers
+// (and the E2E harness, via _devLink) still get it synchronously.
+func (s *Server) verificationLink(token, verifyReturn string) string {
+        back := verifyReturn
+        if back != "app" {
+                back = "web"
+        }
+        return fmt.Sprintf("%s/verify/?token=%s&return=%s", s.siteURL(), token, back)
 }
 
 // sendVerificationMailAsync ships the confirmation mail OFF the request
@@ -410,9 +417,12 @@ func (s *Server) handleResendVerification(w http.ResponseWriter, r *http.Request
         // transports (up to a minute of Brevo/Resend/SMTP retries) must
         // never hold this response open long enough for a phone client to
         // give up. "sent: true" from here means the mail is queued with
-        // the transports; a total refusal lands in the service log.
+        // the transports; a total refusal lands in the service log. The
+        // link itself is returned (as before) for dev surfaces and the
+        // E2E harness - it is known before the transports run.
+        link := s.verificationLink(token, "web")
         s.sendVerificationMailAsync(uid, strings.TrimSpace(*u.Email), token, "web")
-        writeJSON(w, http.StatusOK, map[string]any{"sent": true})
+        writeJSON(w, http.StatusOK, map[string]any{"sent": true, "_devLink": link})
 }
 
 // handleRefreshSession swaps a restricted (unverified) session for a
@@ -508,9 +518,10 @@ func (s *Server) handleChangeEmail(w http.ResponseWriter, r *http.Request) {
                 fail(w, http.StatusInternalServerError, "internal", "could not change the email")
                 return
         }
+        link := s.verificationLink(token, back)
         s.sendVerificationMailAsync(uid, email, token, back)
         s.log.Info("signup email changed, confirmation re-issued", "at", time.Now().UTC().Format(time.RFC3339))
-        writeJSON(w, http.StatusOK, map[string]any{"sent": true, "email": email})
+        writeJSON(w, http.StatusOK, map[string]any{"sent": true, "email": email, "_devLink": link})
 }
 
 type changeEmailRequest struct {
