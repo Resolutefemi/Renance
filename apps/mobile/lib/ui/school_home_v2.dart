@@ -30,16 +30,18 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../controllers.dart';
 import '../models.dart';
+import '../nerdc_schemes.dart';
 import '../school_offline.dart' show AttendanceAutoSync;
 import '../storage.dart' show SessionStore;
 import 'corpus_screens.dart' show CorpusBrowserScreen;
 import 'renance_logo.dart' show LogoActivityIndicator;
+import 'school_chrome.dart' show SchoolShellScope, schoolWorkspaceAppBar;
 import 'school_screens.dart'
     show
         SchoolAttendanceScreen,
         SchoolNoteReaderScreen,
-        SchoolPackViewerScreen,
-        SchoolStudentDetailsScreen;
+        SchoolStudentDetailsScreen,
+        SchoolTermCard;
 import 'theme.dart';
 
 // --------------------------------------------------------------- GGSA chrome
@@ -218,11 +220,11 @@ class _SchoolWorkspaceScreenState extends State<SchoolWorkspaceScreen> {
       return;
     }
     final String schoolId = ctx.school.id;
-    await school.refreshPacks();
-    // Ensure the offline pack exists (the syllabus tab reads it).
-    if (!school.packs.containsKey(schoolId)) {
-      await school.download(schoolId);
-    }
+    // The syllabus tab reads the school's syllabus straight from online
+    // (founder directive 2026-10-05: no download-pack gate) and the
+    // national scheme ships inside the app - so the workspace boots
+    // without pulling megabytes of pack data first.
+
     // The pickers' shared data: classes, subjects and (for teachers)
     // the assignment map that gates every class picker.
     await school.loadRoster(schoolId);
@@ -281,7 +283,9 @@ class _SchoolWorkspaceScreenState extends State<SchoolWorkspaceScreen> {
       _SchoolDest(
           'Syllabus & Notes',
           Icons.auto_stories_outlined,
-          (BuildContext c) => _SyllabusTab(schoolId: schoolId)),
+          (BuildContext c) => _SyllabusTab(
+              schoolId: schoolId,
+              onOpenTab: (int i) => setState(() => _index = i))),
       _SchoolDest('Curriculum Bank', Icons.account_balance_outlined,
           (BuildContext c) => const CorpusBrowserScreen()),
       _SchoolDest(
@@ -379,15 +383,21 @@ class _SchoolWorkspaceScreenState extends State<SchoolWorkspaceScreen> {
         final bool wide = width >= 760;
         final bool extended = width >= 1080;
 
-        final Widget body = IndexedStack(
-          index: index,
-          children: <Widget>[
-            for (int i = 0; i < dests.length; i++)
-              _LazyTab(
-                active: i == index,
-                builder: dests[i].builder,
-              ),
-          ],
+        final Widget body = SchoolShellScope(
+          openDrawer: _openDrawer,
+          // The phone layout carries the menu at the right of the top
+          // navbar; the tablet rail carries every destination itself.
+          showMenu: !wide,
+          child: IndexedStack(
+            index: index,
+            children: <Widget>[
+              for (int i = 0; i < dests.length; i++)
+                _LazyTab(
+                  active: i == index,
+                  builder: dests[i].builder,
+                ),
+            ],
+          ),
         );
 
         if (wide) {
@@ -452,8 +462,8 @@ class _SchoolWorkspaceScreenState extends State<SchoolWorkspaceScreen> {
           );
         }
 
-        // Phone: bottom bar with the four most-used pages + Menu, and a
-        // drawer carrying the full web-route list.
+        // Phone: bottom bar with the four most-used pages; the full
+        // page list (Menu) lives at the right of the top navbar.
         final List<int> barDests = isManager
             ? <int>[0, 1, 2, 3] // Dashboard, Classes, Students, Results
             : <int>[0, 1, 4, 3]; // Dashboard, My Classes, Attendance, Results
@@ -471,28 +481,14 @@ class _SchoolWorkspaceScreenState extends State<SchoolWorkspaceScreen> {
           body: body,
           bottomNavigationBar: NavigationBar(
             selectedIndex: _bottomSelected(barDests),
-            onDestinationSelected: (int i) {
-              if (i == barDests.length) {
-                _openDrawer();
-                return;
-              }
-              setState(() => _index = barDests[i]);
-            },
+            onDestinationSelected: (int i) =>
+                setState(() => _index = barDests[i]),
             destinations: <Widget>[
               for (final int d in barDests)
                 NavigationDestination(
                   icon: Icon(dests[d].icon),
                   label: dests[d].label,
                 ),
-              NavigationDestination(
-                icon: school.pendingAttendance > 0
-                    ? Badge(
-                        label: Text('${school.pendingAttendance}'),
-                        child: const Icon(Icons.menu),
-                      )
-                    : const Icon(Icons.menu),
-                label: 'Menu',
-              ),
             ],
           ),
         );
@@ -725,9 +721,9 @@ class _SchoolDashboardTabState extends State<_SchoolDashboardTab> {
 
     return Scaffold(
       backgroundColor: context.pageBg,
-      appBar: AppBar(
-        title: Text(ctx.school.name,
-            maxLines: 1, overflow: TextOverflow.ellipsis),
+      appBar: schoolWorkspaceAppBar(
+        context,
+        pageTitle: 'Dashboard',
         actions: <Widget>[
           if (school.pendingAttendance > 0)
             Padding(
@@ -918,7 +914,7 @@ class _SchoolDashboardTabState extends State<_SchoolDashboardTab> {
               final List<({IconData icon, String title, String body, int tab})>
                   actions = isManager
                       ? <({IconData icon, String title, String body, int tab})>[
-                          (icon: Icons.auto_stories_outlined, title: 'Syllabus & Notes', body: 'Term syllabuses, topics and the offline note library.', tab: 5),
+                          (icon: Icons.auto_stories_outlined, title: 'Syllabus & Notes', body: 'Term syllabuses, topics and the national scheme, live from online.', tab: 5),
                           (icon: Icons.fact_check_outlined, title: 'Attendance', body: 'Mark the daily register - works offline.', tab: 4),
                           (icon: Icons.groups_outlined, title: 'Students', body: 'Enroll pupils with full details.', tab: 2),
                           (icon: Icons.workspace_premium_outlined, title: 'Results', body: 'The broadsheet, score entry and report sheets.', tab: 3),
@@ -1005,7 +1001,7 @@ class _SchoolDashboardTabState extends State<_SchoolDashboardTab> {
           ],
 
           Text(
-            'Everything academic here also works offline: the syllabus, scheme of work and notes download once, and attendance marks cache on this phone until the network returns.',
+            'The syllabus and scheme of work open straight from online, the national NERDC scheme ships inside the app itself, and attendance marks cache on this phone until the network returns.',
             style: RenanceText.caption.copyWith(
                 color: context.textSecondary, fontSize: 12, height: 1.6),
           ),
@@ -1131,53 +1127,339 @@ void _openSubscription(BuildContext context) {
 
 // ------------------------------------------------------------- syllabus tab
 
-/// The offline syllabus + notes library (the old workspace home, now one
-/// tab): pack download / refresh + the read-only browser.
-class _SyllabusTab extends StatelessWidget {
-  const _SyllabusTab({required this.schoolId});
+/// The syllabus + scheme of work tab, ONLINE-FIRST (founder directive
+/// 2026-10-05): the school's own terms read straight from the API -
+/// the same fetch the web portal makes, no download-pack button
+/// anywhere - and, when the school has not written a class + subject
+/// yet, the NERDC national scheme of work carried inside the app
+/// itself (assets/nerdc_schemes.json, zero network).
+class _SyllabusTab extends StatefulWidget {
+  const _SyllabusTab({required this.schoolId, required this.onOpenTab});
 
   final String schoolId;
+  final ValueChanged<int> onOpenTab;
+
+  @override
+  State<_SyllabusTab> createState() => _SyllabusTabState();
+}
+
+class _SyllabusTabState extends State<_SyllabusTab> {
+  List<SchoolClassSubjectPair> _pairs = const <SchoolClassSubjectPair>[];
+  String? _classId;
+  String? _subjectId;
+  int _term = 1;
+  int _nationalTerm = 1;
+  bool _booted = false;
+  bool _loadingTerms = false;
+  List<SchoolSyllabusTerm> _terms = const <SchoolSyllabusTerm>[];
+  NerdcSchemes? _national;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _boot());
+  }
+
+  Future<void> _boot() async {
+    final SchoolController school = context.read<SchoolController>();
+    final SchoolContextModel? ctx = school.activeContext;
+    List<SchoolClassSubjectPair> pairs = const <SchoolClassSubjectPair>[];
+    if (ctx != null && !ctx.member.isManagement) {
+      // Teachers see exactly their assigned class+subject pairs - the
+      // web portal's rule.
+      if (school.assignments.isEmpty) {
+        await school.loadAssignments(widget.schoolId, ctx.member.id);
+      }
+      pairs = <SchoolClassSubjectPair>[
+        for (final SchoolAssignmentModel a in school.assignments)
+          SchoolClassSubjectPair(
+            classId: a.classId,
+            className: a.className,
+            subjectId: a.subjectId,
+            subjectName: a.subjectName,
+          ),
+      ];
+    } else {
+      pairs = await school.loadClassSubjects(widget.schoolId);
+    }
+    NerdcSchemes? national;
+    try {
+      national = await NerdcSchemes.load();
+    } catch (_) {
+      national = null; // the asset ships with the app; this never fires
+    }
+    if (!mounted) return;
+    setState(() {
+      _pairs = pairs;
+      _national = national;
+      _booted = true;
+      if (pairs.isNotEmpty) {
+        _classId = pairs.first.classId;
+        _subjectId = pairs.first.subjectId;
+      }
+    });
+    _loadTerms();
+  }
+
+  Future<void> _loadTerms() async {
+    final String? classId = _classId;
+    final String? subjectId = _subjectId;
+    if (classId == null || subjectId == null) return;
+    setState(() {
+      _loadingTerms = true;
+      _terms = const <SchoolSyllabusTerm>[];
+    });
+    final List<SchoolSyllabusTerm> terms = await context
+        .read<SchoolController>()
+        .loadSchoolSyllabus(widget.schoolId, classId, subjectId);
+    if (!mounted) return;
+    setState(() {
+      _terms = terms;
+      _loadingTerms = false;
+      _term = terms.any((SchoolSyllabusTerm t) => t.term == 1) || terms.isEmpty
+          ? 1
+          : terms.first.term;
+    });
+  }
+
+  String _termName(int t) => switch (t) {
+        1 => 'First Term',
+        2 => 'Second Term',
+        _ => 'Third Term',
+      };
 
   @override
   Widget build(BuildContext context) {
-    final SchoolController school = context.watch<SchoolController>();
-    final SchoolPack? pack = school.packs[schoolId];
-    if (pack == null) {
-      return Scaffold(
-        backgroundColor: context.pageBg,
-        appBar: AppBar(title: const Text('Syllabus & Notes')),
-        body: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(32),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
+    final Map<String, String> classes = <String, String>{
+      for (final SchoolClassSubjectPair p in _pairs) p.classId: p.className,
+    };
+    final Map<String, String> subjects = <String, String>{
+      for (final SchoolClassSubjectPair p in _pairs)
+        if (p.classId == _classId) p.subjectId: p.subjectName,
+    };
+    final String className = classes[_classId] ?? '';
+    final String subjectName = subjects[_subjectId] ?? '';
+
+    // The national fallback, matched by name like the web portal does.
+    final NerdcClass? nationalClass =
+        _national?.classForSchoolName(className);
+    final NerdcSubject? nationalSubject =
+        nationalClass == null || subjectName.isEmpty
+            ? null
+            : _national!.subjectForSchoolName(nationalClass, subjectName);
+    final NerdcTermScheme? nationalScheme =
+        nationalSubject?.term(_nationalTerm);
+    final SchoolSyllabusTerm? term =
+        _terms.where((SchoolSyllabusTerm t) => t.term == _term).firstOrNull;
+
+    return Scaffold(
+      backgroundColor: context.pageBg,
+      appBar: schoolWorkspaceAppBar(context, pageTitle: 'Syllabus & Notes'),
+      body: !_booted
+          ? Center(
+              child: const LogoActivityIndicator(label: 'Opening the syllabus…'))
+          : ListView(
+              padding: const EdgeInsets.all(16),
               children: <Widget>[
-                const Icon(Icons.download_outlined, size: 48),
+                // The head-start banner (the web portal's): the bank
+                // carries a ready scheme for every class.
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                  decoration: BoxDecoration(
+                    color: context.cardLow,
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: context.outlineVariant),
+                  ),
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: Text(
+                          'The national curriculum bank carries a NERDC-aligned scheme of work for every class.',
+                          style: RenanceText.bodySecondary.copyWith(
+                              color: context.textSecondary, fontSize: 12.5),
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      TextButton(
+                        onPressed: () => widget.onOpenTab(6),
+                        child: const Text('Curriculum bank'),
+                      ),
+                    ],
+                  ),
+                ),
                 const SizedBox(height: 12),
-                Text(
-                  'Download your school pack to browse the syllabus, scheme of work, notes and exam bank offline.',
-                  textAlign: TextAlign.center,
-                  style:
-                      RenanceText.bodyBase.copyWith(color: context.textSecondary),
+                _picker(
+                  value: _classId,
+                  items: classes,
+                  label: 'Class',
+                  onChanged: (String? v) => setState(() {
+                    _classId = v;
+                    _subjectId = _pairs
+                        .where((SchoolClassSubjectPair p) => p.classId == v)
+                        .map((SchoolClassSubjectPair p) => p.subjectId)
+                        .firstOrNull;
+                  }),
+                ),
+                const SizedBox(height: 10),
+                _picker(
+                  value: _subjectId,
+                  items: subjects,
+                  label: 'Subject',
+                  onChanged: (String? v) => setState(() => _subjectId = v),
                 ),
                 const SizedBox(height: 16),
-                FilledButton(
-                  onPressed: school.isDownloadingSchool(schoolId)
-                      ? null
-                      : () async {
-                          await school.download(schoolId);
-                        },
-                  child: Text(school.isDownloadingSchool(schoolId)
-                      ? 'Downloading…'
-                      : 'Download school pack'),
-                ),
+                if (_loadingTerms)
+                  const Center(
+                      child: LogoActivityIndicator(label: 'Loading the term…'))
+                else if (_terms.isNotEmpty) ...<Widget>[
+                  if (_terms.length > 1) ...<Widget>[
+                    SegmentedButton<int>(
+                      segments: <ButtonSegment<int>>[
+                        for (final SchoolSyllabusTerm t in _terms)
+                          ButtonSegment<int>(
+                              value: t.term, label: Text(_termName(t.term))),
+                      ],
+                      selected: <int>{_term},
+                      onSelectionChanged: (Set<int> s) =>
+                          setState(() => _term = s.first),
+                    ),
+                    const SizedBox(height: 16),
+                  ],
+                  if (term != null)
+                    SchoolTermCard(
+                      term: term,
+                      className: className,
+                      subject: subjectName,
+                    ),
+                ] else if (nationalSubject != null &&
+                    nationalSubject.terms.isNotEmpty) ...<Widget>[
+                  // The national scheme of work, read off the app itself.
+                  Text(
+                    'National curriculum · $className · $subjectName',
+                    style: RenanceText.sectionTitle.copyWith(color: context.ink),
+                  ),
+                  const SizedBox(height: 8),
+                  if (nationalSubject.terms.length > 1) ...<Widget>[
+                    SegmentedButton<int>(
+                      segments: <ButtonSegment<int>>[
+                        for (final NerdcTermScheme t in nationalSubject.terms)
+                          ButtonSegment<int>(
+                              value: t.term, label: Text(_termName(t.term))),
+                      ],
+                      selected: <int>{_nationalTerm},
+                      onSelectionChanged: (Set<int> s) =>
+                          setState(() => _nationalTerm = s.first),
+                    ),
+                    const SizedBox(height: 16),
+                  ],
+                  if (nationalScheme == null ||
+                      nationalScheme.weeks.isEmpty)
+                    Text(
+                      'No scheme of work for ${_termName(_nationalTerm)} yet.',
+                      style: RenanceText.bodySecondary
+                          .copyWith(color: context.textSecondary),
+                    )
+                  else
+                    Card(
+                      child: Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              '${_termName(_nationalTerm)} scheme of work',
+                              style: RenanceText.sectionTitle
+                                  .copyWith(color: context.ink),
+                            ),
+                            const SizedBox(height: 10),
+                            for (final NerdcWeek w in nationalScheme.weeks)
+                              ListTile(
+                                contentPadding: EdgeInsets.zero,
+                                dense: true,
+                                leading: Container(
+                                  width: 34,
+                                  height: 34,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    color: context.schoolAccentContainer,
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                  child: Text(
+                                    '${w.week}',
+                                    style: RenanceText.caption.copyWith(
+                                        color: context.schoolAccent,
+                                        fontWeight: FontWeight.w700),
+                                  ),
+                                ),
+                                title: Text(
+                                  w.topic,
+                                  style: RenanceText.bodyBase.copyWith(
+                                      color: context.ink,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                trailing: const Icon(Icons.chevron_right,
+                                    size: 18),
+                                onTap: () => _openNationalWeek(
+                                    className, subjectName, w),
+                              ),
+                          ],
+                        ),
+                      ),
+                    ),
+                ] else
+                  Text(
+                    'No syllabus for this class + subject yet. Management can build it on the web portal - anything the school writes appears here.',
+                    style: RenanceText.bodySecondary
+                        .copyWith(color: context.textSecondary),
+                  ),
+                const SizedBox(height: 24),
               ],
             ),
-          ),
+    );
+  }
+
+  void _openNationalWeek(String className, String subjectName, NerdcWeek w) {
+    Navigator.of(context).push(MaterialPageRoute<void>(
+      builder: (_) => SchoolNoteReaderScreen(
+        topic: SchoolTopicInfo(
+          id: 'national-$className-$subjectName-w${w.week}',
+          title: w.topic,
+          seq: w.week,
+          week: w.week,
+          content: w.content,
+          source: 'renance-corpus',
         ),
-      );
-    }
-    return SchoolPackViewerScreen(pack: pack);
+        schoolName: 'Renance national curriculum',
+        className: className,
+        subject: subjectName,
+        termName: _termName(_nationalTerm),
+      ),
+    ));
+  }
+
+  Widget _picker({
+    required String? value,
+    required Map<String, String> items,
+    required String label,
+    required ValueChanged<String?> onChanged,
+  }) {
+    return DropdownButtonFormField<String>(
+      initialValue: value,
+      isExpanded: true,
+      decoration: InputDecoration(
+        labelText: label,
+        border: const OutlineInputBorder(),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        fillColor: context.card,
+      ),
+      items: <DropdownMenuItem<String>>[
+        for (final MapEntry<String, String> e in items.entries)
+          DropdownMenuItem<String>(value: e.key, child: Text(e.value)),
+      ],
+      onChanged: onChanged,
+    );
   }
 }
 
@@ -1228,9 +1510,8 @@ class _SchoolClassesScreenState extends State<SchoolClassesScreen> {
 
     return Scaffold(
       backgroundColor: context.pageBg,
-      appBar: AppBar(
-        title: Text(widget.isManager ? 'Classes' : 'My Classes'),
-      ),
+      appBar: schoolWorkspaceAppBar(
+          context, pageTitle: widget.isManager ? 'Classes' : 'My Classes'),
       body: school.rosterLoading && school.classes.isEmpty
           ? const Center(child: CircularProgressIndicator(strokeWidth: 2))
           : classes.isEmpty
@@ -1416,7 +1697,8 @@ class _SchoolClassDetailScreenState extends State<_SchoolClassDetailScreen> {
 
     return Scaffold(
       backgroundColor: context.pageBg,
-      appBar: AppBar(title: Text(widget.cls.name)),
+      appBar:
+          schoolWorkspaceAppBar(context, pageTitle: widget.cls.name),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: <Widget>[
@@ -1886,7 +2168,7 @@ class _SchoolResultsScreenState extends State<SchoolResultsScreen> {
 
     return Scaffold(
       backgroundColor: context.pageBg,
-      appBar: AppBar(title: const Text('Results')),
+      appBar: schoolWorkspaceAppBar(context, pageTitle: 'Results'),
       // First boot: the roster + subjects land, then the desk fills.
       body: !_booted && school.classes.isEmpty
           ? const Center(
@@ -2552,7 +2834,8 @@ class _ScoreEntryScreenState extends State<_ScoreEntryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: context.pageBg,
-      appBar: AppBar(title: Text('${widget.subject.name} scores')),
+      appBar: schoolWorkspaceAppBar(
+          context, pageTitle: '${widget.subject.name} scores'),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: <Widget>[
@@ -2640,8 +2923,9 @@ class _ResultSheetScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: context.pageBg,
-      appBar: AppBar(
-        title: const Text('Report sheet'),
+      appBar: schoolWorkspaceAppBar(
+        context,
+        pageTitle: 'Report sheet',
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.ios_share, size: 22),
@@ -3325,7 +3609,8 @@ class _SchoolTeachersScreenState extends State<SchoolTeachersScreen> {
 
     return Scaffold(
       backgroundColor: context.pageBg,
-      appBar: AppBar(title: const Text('Teachers & Classes')),
+      appBar:
+          schoolWorkspaceAppBar(context, pageTitle: 'Teachers & Classes'),
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: context.schoolAccentDeep,
         foregroundColor: Colors.white,
@@ -3832,7 +4117,7 @@ class _SchoolIdCardsScreenState extends State<SchoolIdCardsScreen> {
 
     return Scaffold(
       backgroundColor: context.pageBg,
-      appBar: AppBar(title: const Text('ID Cards')),
+      appBar: schoolWorkspaceAppBar(context, pageTitle: 'ID Cards'),
       floatingActionButton: widget.isManager && _classId != null
           ? FloatingActionButton.extended(
               backgroundColor: context.schoolAccentDeep,
@@ -4240,7 +4525,7 @@ class _SchoolBillingScreenState extends State<SchoolBillingScreen> {
 
     return Scaffold(
       backgroundColor: context.pageBg,
-      appBar: AppBar(title: const Text('Billing')),
+      appBar: schoolWorkspaceAppBar(context, pageTitle: 'Billing'),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: <Widget>[
@@ -4339,7 +4624,7 @@ class _SchoolProfileTab extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: context.pageBg,
-      appBar: AppBar(title: const Text('Profile')),
+      appBar: schoolWorkspaceAppBar(context, pageTitle: 'Profile'),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: <Widget>[

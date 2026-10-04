@@ -876,6 +876,43 @@ class ApiClient {
     ]..sort((CorpusNotesTermModel a, CorpusNotesTermModel b) => a.term.compareTo(b.term));
   }
 
+  /// The class+subject pairs taught in the school (GET
+  /// /school/class-subjects) - the same pair list the web portal's
+  /// syllabus pickers are built from.
+  Future<List<SchoolClassSubjectPair>> schoolClassSubjects(String schoolId) async {
+    final data = await _send(
+      'GET',
+      '/school/class-subjects?schoolId=${Uri.encodeComponent(schoolId)}',
+    ) as Map<dynamic, dynamic>;
+    return ((data['pairs'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) =>
+            SchoolClassSubjectPair.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  /// One class + subject's live syllabus from the database
+  /// (GET /school/syllabus): every term with its scheme of work and
+  /// topics. The mobile twin of the web portal's syllabus fetch - the
+  /// syllabus tab reads the school's own work straight from online.
+  Future<List<SchoolSyllabusTerm>> schoolSyllabus(
+    String schoolId,
+    String classId,
+    String subjectId,
+  ) async {
+    final data = await _send(
+      'GET',
+      '/school/syllabus?schoolId=${Uri.encodeComponent(schoolId)}'
+      '&classId=${Uri.encodeComponent(classId)}'
+      '&subjectId=${Uri.encodeComponent(subjectId)}',
+      timeout: const Duration(seconds: 60),
+    ) as Map<dynamic, dynamic>;
+    final List<SchoolSyllabusTerm> terms = <SchoolSyllabusTerm>[
+      for (final dynamic t in (data['terms'] ?? const <dynamic>[]) as List<dynamic>)
+        SchoolSyllabusTerm.fromJson((t as Map).cast<String, dynamic>()),
+    ]..sort((SchoolSyllabusTerm a, SchoolSyllabusTerm b) => a.term.compareTo(b.term));
+    return terms;
+  }
+
   /// The school's classes (with enrolled counts) for the roster pickers.
   Future<List<SchoolClassInfo>> schoolClasses(String schoolId) async {
     final data = await _send(

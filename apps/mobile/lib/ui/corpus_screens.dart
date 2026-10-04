@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../controllers.dart';
 import '../models.dart';
 import 'renance_logo.dart' show LogoActivityIndicator;
+import 'school_chrome.dart' show schoolWorkspaceAppBar;
 import 'theme.dart';
 
 /// The national curriculum bank (scheme of work + lesson notes) served
@@ -94,7 +95,7 @@ class _CorpusBrowserScreenState extends State<CorpusBrowserScreen> {
     final List<CorpusClassModel> classes = _classes ?? const <CorpusClassModel>[];
     return Scaffold(
       backgroundColor: context.pageBg,
-      appBar: AppBar(title: const Text('Curriculum bank')),
+      appBar: schoolWorkspaceAppBar(context, pageTitle: 'Curriculum bank'),
       body: _classes == null
           ? Center(child: const LogoActivityIndicator(label: 'Opening the bank…'))
           : classes.isEmpty

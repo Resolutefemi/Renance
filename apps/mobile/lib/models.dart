@@ -2022,6 +2022,31 @@ class SchoolSubjectInfo {
       );
 }
 
+/// One class+subject pair taught in the school (GET
+/// /school/class-subjects) - the pickers' shared list on the syllabus
+/// tab, mirroring the web portal's pair dropdowns.
+class SchoolClassSubjectPair {
+  const SchoolClassSubjectPair({
+    required this.classId,
+    required this.className,
+    required this.subjectId,
+    required this.subjectName,
+  });
+
+  final String classId;
+  final String className;
+  final String subjectId;
+  final String subjectName;
+
+  factory SchoolClassSubjectPair.fromJson(Map<String, dynamic> j) =>
+      SchoolClassSubjectPair(
+        classId: (j['classId'] ?? '') as String,
+        className: (j['className'] ?? '') as String,
+        subjectId: (j['subjectId'] ?? '') as String,
+        subjectName: (j['subjectName'] ?? '') as String,
+      );
+}
+
 /// One class+subject branch of the offline school pack.
 class SchoolPackSyllabus {
   const SchoolPackSyllabus({
