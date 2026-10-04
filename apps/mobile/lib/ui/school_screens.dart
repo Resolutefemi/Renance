@@ -13,6 +13,7 @@ import '../controllers.dart';
 import '../models.dart';
 import 'corpus_screens.dart';
 import 'renance_logo.dart' show LogoActivityIndicator;
+import 'school_chrome.dart' show schoolWorkspaceAppBar;
 import 'theme.dart';
 
 /// Home for signed-in school staff (management or teacher). Loads the
@@ -335,7 +336,7 @@ class _SchoolPackViewerScreenState extends State<SchoolPackViewerScreen> {
       ..sort((SchoolSyllabusTerm a, SchoolSyllabusTerm b) => a.term.compareTo(b.term));
     return <Widget>[
       for (final SchoolSyllabusTerm t in terms) ...<Widget>[
-        _TermCard(
+        SchoolTermCard(
           term: t,
           className: branch.className,
           subject: branch.subject,
@@ -370,9 +371,10 @@ class _SchoolPackViewerScreenState extends State<SchoolPackViewerScreen> {
 }
 
 /// One term: the scheme of work strip + the topic list opening the
-/// black & white note reader.
-class _TermCard extends StatelessWidget {
-  const _TermCard({required this.term, required this.className, required this.subject});
+/// black & white note reader. Shared by the offline pack browser and
+/// the online syllabus tab.
+class SchoolTermCard extends StatelessWidget {
+  const SchoolTermCard({super.key, required this.term, required this.className, required this.subject});
 
   final SchoolSyllabusTerm term;
   final String className;
@@ -752,7 +754,7 @@ class _SchoolAttendanceScreenState extends State<SchoolAttendanceScreen> {
 
     return Scaffold(
       backgroundColor: context.pageBg,
-      appBar: AppBar(title: const Text('Daily register')),
+      appBar: schoolWorkspaceAppBar(context, pageTitle: 'Daily register'),
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: context.ink,
         foregroundColor: context.pageBg,
@@ -1003,7 +1005,7 @@ class _SchoolStudentDetailsScreenState
 
     return Scaffold(
       backgroundColor: context.pageBg,
-      appBar: AppBar(title: const Text('Student details')),
+      appBar: schoolWorkspaceAppBar(context, pageTitle: 'Student details'),
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: context.ink,
         foregroundColor: context.pageBg,

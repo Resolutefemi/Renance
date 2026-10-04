@@ -1959,6 +1959,61 @@ class SchoolController extends ChangeNotifier {
     return subjects;
   }
 
+  // ---- live syllabus (the online syllabus tab) -------------------------
+
+  /// The class+subject pairs taught in the school (cached per school
+  /// for the session) - the syllabus pickers' shared list.
+  final Map<String, List<SchoolClassSubjectPair>> _pairCache =
+      <String, List<SchoolClassSubjectPair>>{};
+
+  Future<List<SchoolClassSubjectPair>> loadClassSubjects(String schoolId) async {
+    final List<SchoolClassSubjectPair>? cached = _pairCache[schoolId];
+    if (cached != null) return cached;
+    lastError = null;
+    try {
+      final List<SchoolClassSubjectPair> pairs =
+          await _api.schoolClassSubjects(schoolId);
+      _pairCache[schoolId] = pairs;
+      notifyListeners();
+      return pairs;
+    } on ApiException catch (e) {
+      lastError = e.message;
+    } on NetworkException catch (e) {
+      lastError = e.message;
+    }
+    return const <SchoolClassSubjectPair>[];
+  }
+
+  /// One class + subject's syllabus terms, read straight from online
+  /// (GET /school/syllabus) - the same fetch the web portal makes.
+  /// Cached per class+subject for the session so tab switches never
+  /// re-fetch.
+  final Map<String, List<SchoolSyllabusTerm>> _syllabusCache =
+      <String, List<SchoolSyllabusTerm>>{};
+
+  Future<List<SchoolSyllabusTerm>> loadSchoolSyllabus(
+    String schoolId,
+    String classId,
+    String subjectId,
+  ) async {
+    final String key = '$schoolId/$classId/$subjectId';
+    final List<SchoolSyllabusTerm>? cached = _syllabusCache[key];
+    if (cached != null) return cached;
+    lastError = null;
+    try {
+      final List<SchoolSyllabusTerm> terms =
+          await _api.schoolSyllabus(schoolId, classId, subjectId);
+      _syllabusCache[key] = terms;
+      notifyListeners();
+      return terms;
+    } on ApiException catch (e) {
+      lastError = e.message;
+    } on NetworkException catch (e) {
+      lastError = e.message;
+    }
+    return const <SchoolSyllabusTerm>[];
+  }
+
   /// Every staff member (management only) - the Teachers screen list.
   List<SchoolMemberSummaryModel> members = <SchoolMemberSummaryModel>[];
   bool membersLoading = false;
