@@ -441,7 +441,8 @@ export default function AboutPage() {
               <Link href="/practice/">Past questions</Link>·
               <Link href="/curriculum/">Curriculum</Link>·
               <Link href="/for-schools/">For Schools</Link>·
-              <Link href="/educational-app-in-nigeria/">Educational app</Link>
+              <Link href="/educational-app-in-nigeria/">Educational app</Link>·
+              <Link href="/privacy/">Privacy</Link>
             </div>
             <div style={{ marginTop: 8 }}>
               Renance · Your Guide to Academic Success · Built by Resolute Femi
