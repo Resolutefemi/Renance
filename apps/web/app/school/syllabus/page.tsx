@@ -246,15 +246,6 @@ export default function SchoolSyllabusPage() {
 
       {loading && <p className="text-sm text-on-surface-variant">Loading syllabus…</p>}
 
-      {!loading && terms.length === 0 && (
-        <div className="rounded-xl border border-outline-variant bg-surface-container-lowest p-6 text-sm text-on-surface-variant">
-          No syllabus terms for this class + subject yet. Below is the national NERDC scheme of work
-          with ready lesson notes, fetched straight from the{' '}
-          <Link href="/school/curriculum" className="underline">Curriculum Bank</Link> - read it here
-          or hand it to teachers. Anything your school writes itself will appear above it.
-        </div>
-      )}
-
       {!loading && terms.length === 0 && national && (
         <NationalBank
           className={national.className}
