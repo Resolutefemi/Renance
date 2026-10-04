@@ -337,12 +337,30 @@ func (s *Server) finishSignup(w http.ResponseWriter, r *http.Request, u *store.U
         // now returns the moment the row is stamped; "sent" reports the
         // queue, honestly labelled queued on the wire.
         queued := false
+        var devCode string
         if strings.TrimSpace(req.Email) != "" {
                 code, err := newVerifyCode()
                 if err == nil {
+                        // Founder bug 2026-10-05 ("the first code doesn't
+                        // work, the second one does"): with DEVICE_LOCK off
+                        // bindDevice above returns before EnsureEntitlement,
+                        // so the entitlements row did not exist yet and the
+                        // stamp dropped the signup's OWN code (SetEmailVeri-
+                        // fication is an upsert now; the ensure here also
+                        // seats the premium stamp the same way every other
+                        // path does).
+                        if _, eerr := s.store.EnsureEntitlement(r.Context(), u.ID); eerr != nil {
+                                s.log.Error("entitlement ensure failed at signup", "err", eerr)
+                        }
                         if err := s.store.SetEmailVerification(r.Context(), u.ID, code); err == nil {
                                 s.sendVerificationMailAsync(u.ID, strings.TrimSpace(req.Email), code)
                                 queued = true
+                                // Parity with the resend + change-email
+                                // responses: the code is known before the
+                                // transports run, so dev surfaces and the
+                                // E2E harness can verify the signup's own
+                                // FIRST code without a resend.
+                                devCode = code
                         }
                 } else {
                         s.log.Error("verify code mint failed", "err", err)
@@ -365,14 +383,20 @@ func (s *Server) finishSignup(w http.ResponseWriter, r *http.Request, u *store.U
                 fail(w, http.StatusInternalServerError, "internal", "could not register")
                 return
         }
-        writeJSON(w, http.StatusCreated, map[string]any{
+        resp := map[string]any{
                 "token": token,
                 "user":  userPayload{ID: u.ID, Username: u.Username, ProfileCompleted: profileCompleted},
                 "emailVerification": map[string]any{
                         "required": strings.TrimSpace(req.Email) != "",
                         "sent":     queued,
                 },
-        })
+        }
+        if devCode != "" {
+                // The signup's own first 6-digit code (same dev-surface
+                // contract as the resend + change-email _devCode).
+                resp["_devCode"] = devCode
+        }
+        writeJSON(w, http.StatusCreated, resp)
 }
 
 // allowLoginAudience enforces the student/school split at sign-in.

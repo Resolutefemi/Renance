@@ -500,6 +500,39 @@ ELOGIN3=$(curl -fsS -X POST "$BASE/auth/login" \
   -d "{\"email\":\"$ENEWEMAIL\",\"password\":\"$PASSWORD\"}")
 printf '%s' "$ELOGIN3" | jsonget "d['token']" >/dev/null
 
+# --- First-code regression (founder bug 2026-10-05: "the first code
+# doesn't work, the second one does"): the signup's OWN 6-digit code
+# verified nothing - with DEVICE_LOCK off, bindDevice never ran
+# EnsureEntitlement, so the entitlements row did not exist at stamp time,
+# the bare UPDATE hit zero rows and the code was silently dropped; only
+# a resent code (whose handler Ensures the row first) worked. The stamp
+# is now an upsert, and the signup response carries _devCode (parity
+# with resend + change-email) so this flow is pinned. ---
+step "register a second email -> 201 + the signup's own _devCode"
+EEMAIL2="e2e-first$RANDOM$RANDOM@example.com"
+EREG2=$(curl -fsS -X POST "$BASE/auth/register" \
+  -H 'Content-Type: application/json' \
+  -d "{\"email\":\"$EEMAIL2\",\"password\":\"$PASSWORD\"}")
+ETOKEN2=$(printf '%s' "$EREG2" | jsonget "d['token']")
+[ -n "$ETOKEN2" ]
+FIRSTCODE=$(printf '%s' "$EREG2" | jsonget "d['_devCode']")
+[ -n "$FIRSTCODE" ]
+
+step "the FIRST signup code verifies with no resend -> verified:true"
+FVERIFY=$(curl -fsS -X POST "$BASE/auth/verify-email" \
+  -H 'Content-Type: application/json' -d "{\"code\":\"$FIRSTCODE\"}")
+printf '%s' "$FVERIFY" | jsonget "d['verified']" | grep -q "True"
+
+step "first code works once - replay answers 400 invalid_token"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$BASE/auth/verify-email" \
+  -H 'Content-Type: application/json' -d "{\"code\":\"$FIRSTCODE\"}")
+[ "$CODE" = "400" ]
+
+step "login after the first-code verify -> 200 seated session"
+curl -fsS -X POST "$BASE/auth/login" \
+  -H 'Content-Type: application/json' \
+  -d "{\"email\":\"$EEMAIL2\",\"password\":\"$PASSWORD\"}" | jsonget "d['token']" >/dev/null
+
 # --- ROADMAP #20: deterministic daily challenge ---
 step "GET /daily/JAMB -> today's deterministic challenge"
 D1=$(curl -fsS "$BASE/daily/JAMB" -H "Authorization: Bearer $TOKEN")

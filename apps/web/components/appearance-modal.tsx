@@ -9,12 +9,14 @@
  * A compact dialog that mirrors the Settings Appearance panel: Mode
  * (Light / Mixed / Dark) + the ten Seed Color presets. Every tap applies
  * LIVE through lib/theme.ts (setThemeMode + setSeedColor), so the whole
- * product re-tints behind the dialog, Chrome-style. One-time per device:
- * the flag lives in localStorage next to the theme keys, and
- * needsAppearanceIntro() / markAppearanceIntroDone() gate the flows.
+ * product re-tints behind the dialog, Chrome-style. One-time per
+ * ACCOUNT: the flag stores the account id it already greeted in
+ * localStorage next to the theme keys, and needsAppearanceIntro() /
+ * markAppearanceIntroDone() gate the flows.
  */
 
 import { useEffect, useState } from 'react';
+import { getStoredUser } from '@/lib/session';
 import {
   SEED_PRESETS,
   readSeedColor,
@@ -28,7 +30,21 @@ export const APPEARANCE_ASKED_KEY = 'renance.appearanceAsked';
 
 export function needsAppearanceIntro(): boolean {
   try {
-    return !window.localStorage.getItem(APPEARANCE_ASKED_KEY);
+    // Per-ACCOUNT flag (founder bug 2026-10-05: "the appearance settings
+    // pop up didn't show after i verify my email" + "make sure the
+    // appearance pop up too even when a user sign up with google"): the
+    // key used to hold a bare '1', so any browser that had met the
+    // picker once (earlier builds popped it at register time) suppressed
+    // it for EVERY later signup - manual or Google - and a fresh
+    // student verified their email to silence instead of the picker.
+    // The picker is a per-student moment: the key now stores the
+    // account id it already greeted, so a NEW account (the 6-digit-code
+    // signup or a first-time Google upsert) gets its own popup, while
+    // the same account never sees it twice in this browser. The legacy
+    // '1' value matches no account id, so it suppresses nothing.
+    const uid = getStoredUser()?.id ?? '';
+    if (!uid) return false;
+    return window.localStorage.getItem(APPEARANCE_ASKED_KEY) !== uid;
   } catch {
     return false;
   }
@@ -36,7 +52,8 @@ export function needsAppearanceIntro(): boolean {
 
 export function markAppearanceIntroDone(): void {
   try {
-    window.localStorage.setItem(APPEARANCE_ASKED_KEY, '1');
+    const uid = getStoredUser()?.id ?? '';
+    window.localStorage.setItem(APPEARANCE_ASKED_KEY, uid || '1');
   } catch {
     /* private mode: it will simply ask again next signup */
   }
