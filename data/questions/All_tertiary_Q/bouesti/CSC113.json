@@ -1,0 +1,5457 @@
+{
+  "code": "uni-bouesti-csc113-bank",
+  "title": "BOUESTI CSC113 | Course Question Bank",
+  "version": 1,
+  "questionCount": 389,
+  "totalMarks": 389,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-bouesti-csc113-bank-0001",
+      "type": "mcq",
+      "stem": "A computer is best described as a machine that:",
+      "options": {
+        "A": "Types documents only",
+        "B": "Stores files only",
+        "C": "Accepts data, processes it, and produces information",
+        "D": "Connects to the internet"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The core function of a computer is to take input (data), process it according to instructions, and provide useful output (information)."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0002",
+      "type": "mcq",
+      "stem": "The raw facts entered into a computer are called:",
+      "options": {
+        "A": "Information",
+        "B": "Data",
+        "C": "Output",
+        "D": "Memory"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Data represents the raw, unorganized facts that are entered into a system for processing."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0003",
+      "type": "mcq",
+      "stem": "Processed data is known as:",
+      "options": {
+        "A": "Input",
+        "B": "Output",
+        "C": "Information",
+        "D": "Storage"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Once data is processed and organized into a meaningful context, it becomes information."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0004",
+      "type": "mcq",
+      "stem": "The brain of the computer is the:",
+      "options": {
+        "A": "RAM",
+        "B": "CPU",
+        "C": "Monitor",
+        "D": "Keyboard"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Central Processing Unit (CPU) is responsible for executing instructions and managing the computer's operations."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0005",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a characteristic of a computer?",
+      "options": {
+        "A": "Speed",
+        "B": "Accuracy",
+        "C": "Intelligence",
+        "D": "Storage"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "While computers are fast and accurate, they lack innate human intelligence and only follow programmed instructions."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0006",
+      "type": "mcq",
+      "stem": "Computers perform operations based on:",
+      "options": {
+        "A": "Emotions",
+        "B": "Instructions",
+        "C": "Guesswork",
+        "D": "Feelings"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Computers are logic-driven machines that execute specific commands or sets of instructions provided by software."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0007",
+      "type": "mcq",
+      "stem": "The term ICT stands for:",
+      "options": {
+        "A": "Information Computer Technology",
+        "B": "Information Communication Technology",
+        "C": "Integrated Computer Tools",
+        "D": "Internal Communication Tech"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "ICT refers to the technologies that provide access to information through telecommunications."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0008",
+      "type": "mcq",
+      "stem": "The first step in computing is:",
+      "options": {
+        "A": "Processing",
+        "B": "Output",
+        "C": "Input",
+        "D": "Storage"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In the computing cycle, data must first be entered (Input) before it can be processed or stored."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0009",
+      "type": "mcq",
+      "stem": "Which cycle represents how a computer works?",
+      "options": {
+        "A": "IPO cycle",
+        "B": "RAM cycle",
+        "C": "CPU cycle",
+        "D": "Data cycle"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The IPO cycle stands for Input-Process-Output, the fundamental sequence of computer operation."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0010",
+      "type": "mcq",
+      "stem": "IPO stands for:",
+      "options": {
+        "A": "Input Process Output",
+        "B": "Internal Program Operation",
+        "C": "Input Program Output",
+        "D": "Integrated Processing Operation"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "This acronym describes the flow of data through a computer system."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0011",
+      "type": "mcq",
+      "stem": "Hardware refers to:",
+      "options": {
+        "A": "Programs",
+        "B": "Physical components",
+        "C": "Data",
+        "D": "Instructions"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hardware consists of the tangible, physical parts of the computer system like the monitor and keyboard."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0012",
+      "type": "mcq",
+      "stem": "Software refers to:",
+      "options": {
+        "A": "Physical devices",
+        "B": "Programs and instructions",
+        "C": "Cables",
+        "D": "Screens"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Software is the collection of non-tangible data and instructions that tell the hardware how to work."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0013",
+      "type": "mcq",
+      "stem": "Which of the following is an input device?",
+      "options": {
+        "A": "Printer",
+        "B": "Monitor",
+        "C": "Keyboard",
+        "D": "Speaker"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A keyboard is used to enter text and commands into the computer, making it an input device."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0014",
+      "type": "mcq",
+      "stem": "Which is an output device?",
+      "options": {
+        "A": "Mouse",
+        "B": "Keyboard",
+        "C": "Monitor",
+        "D": "Scanner"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The monitor displays processed information visually to the user."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0015",
+      "type": "mcq",
+      "stem": "RAM stands for:",
+      "options": {
+        "A": "Read Access Memory",
+        "B": "Random Access Memory",
+        "C": "Run Access Memory",
+        "D": "Real Access Memory"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RAM is the short-term memory where data is stored for quick access by the CPU."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0016",
+      "type": "mcq",
+      "stem": "ROM is:",
+      "options": {
+        "A": "Temporary memory",
+        "B": "Permanent memory",
+        "C": "Input device",
+        "D": "Software"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Read-Only Memory (ROM) is non-volatile, meaning it retains its data even when the power is turned off."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0017",
+      "type": "mcq",
+      "stem": "Which memory is volatile?",
+      "options": {
+        "A": "ROM",
+        "B": "RAM",
+        "C": "Hard disk",
+        "D": "CD"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RAM is volatile memory, meaning its contents are lost when the computer loses power."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0018",
+      "type": "mcq",
+      "stem": "The CPU consists of:",
+      "options": {
+        "A": "ALU and Control Unit",
+        "B": "RAM and ROM",
+        "C": "Monitor and Keyboard",
+        "D": "Software and Hardware"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Central Processing Unit is primarily composed of the Arithmetic Logic Unit (ALU) and the Control Unit (CU)."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0019",
+      "type": "mcq",
+      "stem": "ALU performs:",
+      "options": {
+        "A": "Storage",
+        "B": "Arithmetic and logical operations",
+        "C": "Input",
+        "D": "Output"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The ALU handles all mathematical calculations and logical comparisons within the processor."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0020",
+      "type": "mcq",
+      "stem": "Control Unit:",
+      "options": {
+        "A": "Displays output",
+        "B": "Coordinates all activities",
+        "C": "Stores files",
+        "D": "Prints documents"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Control Unit (CU) acts as the manager of the CPU, directing the flow of data and instructions."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0021",
+      "type": "mcq",
+      "stem": "The internet is:",
+      "options": {
+        "A": "A single computer",
+        "B": "A global network of computers",
+        "C": "A software",
+        "D": "A hardware device"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The internet is a vast interconnection of computer networks worldwide."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0022",
+      "type": "mcq",
+      "stem": "WWW stands for:",
+      "options": {
+        "A": "World Wide Web",
+        "B": "World Web Wide",
+        "C": "Wide World Web",
+        "D": "Web World Wide"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The World Wide Web is a system of interconnected documents accessed via the internet."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0023",
+      "type": "mcq",
+      "stem": "A web browser is used to:",
+      "options": {
+        "A": "Write code",
+        "B": "Access websites",
+        "C": "Store files",
+        "D": "Print documents"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Browsers like Chrome or Firefox are application software used to navigate and view web content."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0024",
+      "type": "mcq",
+      "stem": "Example of a browser:",
+      "options": {
+        "A": "Windows",
+        "B": "Chrome",
+        "C": "CPU",
+        "D": "Excel"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Google Chrome is one of the most widely used web browsers in the world."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0025",
+      "type": "mcq",
+      "stem": "Email is used for:",
+      "options": {
+        "A": "Printing",
+        "B": "Communication",
+        "C": "Programming",
+        "D": "Storage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Electronic mail is a method of exchanging messages between people using electronic devices."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0026",
+      "type": "mcq",
+      "stem": "A program is:",
+      "options": {
+        "A": "Hardware",
+        "B": "Set of instructions",
+        "C": "Output",
+        "D": "Input"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A computer program is a collection of instructions that performs a specific task when executed by a computer."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0027",
+      "type": "mcq",
+      "stem": "BASIC stands for:",
+      "options": {
+        "A": "Beginner’s All-purpose Symbolic Instruction Code",
+        "B": "Basic Automatic System",
+        "C": "Binary System Code",
+        "D": "Built-in Application Code"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "BASIC is a family of general-purpose, high-level programming languages designed for ease of use."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0028",
+      "type": "mcq",
+      "stem": "BASIC is a:",
+      "options": {
+        "A": "Low-level language",
+        "B": "High-level language",
+        "C": "Machine language",
+        "D": "Assembly language"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "High-level languages are designed to be easy for humans to read and write compared to machine code."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0029",
+      "type": "mcq",
+      "stem": "A compiler:",
+      "options": {
+        "A": "Translates program",
+        "B": "Prints output",
+        "C": "Stores data",
+        "D": "Deletes files"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A compiler converts high-level source code into machine-readable code all at once."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0030",
+      "type": "mcq",
+      "stem": "Interpreter translates:",
+      "options": {
+        "A": "Entire program at once",
+        "B": "Line by line",
+        "C": "Only output",
+        "D": "Only input"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unlike a compiler, an interpreter translates and executes a program one line at a time."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0031",
+      "type": "mcq",
+      "stem": "Machine language is:",
+      "options": {
+        "A": "Human readable",
+        "B": "Binary language",
+        "C": "English language",
+        "D": "Graphical"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Machine language is composed of binary digits (0s and 1s) that the CPU can execute directly."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0032",
+      "type": "mcq",
+      "stem": "Example of high-level language:",
+      "options": {
+        "A": "Machine code",
+        "B": "BASIC",
+        "C": "Binary",
+        "D": "Assembly"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "BASIC is a prominent example of an early high-level programming language."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0033",
+      "type": "mcq",
+      "stem": "A programmer is:",
+      "options": {
+        "A": "Hardware",
+        "B": "Person who writes programs",
+        "C": "Output device",
+        "D": "Data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A programmer is the human creator who writes the source code for computer software."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0034",
+      "type": "mcq",
+      "stem": "Which translator is used in BASIC?",
+      "options": {
+        "A": "Interpreter",
+        "B": "Assembler",
+        "C": "Compiler only",
+        "D": "None"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Most traditional versions of BASIC use an interpreter to execute commands sequentially."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0035",
+      "type": "mcq",
+      "stem": "Source code is:",
+      "options": {
+        "A": "Translated program",
+        "B": "Original program",
+        "C": "Output",
+        "D": "Hardware"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Source code is the original, human-readable version of a program written by a programmer."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0036",
+      "type": "mcq",
+      "stem": "Computers are used in:",
+      "options": {
+        "A": "Banking",
+        "B": "Education",
+        "C": "Health",
+        "D": "All of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Computers have applications across nearly every sector of modern society, including finance, school, and medicine."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0037",
+      "type": "mcq",
+      "stem": "Word processing is used for:",
+      "options": {
+        "A": "Calculations",
+        "B": "Typing documents",
+        "C": "Programming",
+        "D": "Drawing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Word processors like MS Word are designed for creating, editing, and formatting text documents."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0038",
+      "type": "mcq",
+      "stem": "Spreadsheet is used for:",
+      "options": {
+        "A": "Typing",
+        "B": "Calculations",
+        "C": "Browsing",
+        "D": "Printing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Spreadsheets are primarily used for organizing data in tables and performing complex calculations."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0039",
+      "type": "mcq",
+      "stem": "Example of spreadsheet software:",
+      "options": {
+        "A": "Word",
+        "B": "Excel",
+        "C": "Paint",
+        "D": "Chrome"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Microsoft Excel is the industry standard for spreadsheet applications."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0040",
+      "type": "mcq",
+      "stem": "Database is used for:",
+      "options": {
+        "A": "Image editing",
+        "B": "Data storage",
+        "C": "Gaming",
+        "D": "Printing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A database is an organized collection of structured data, typically stored electronically."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0041",
+      "type": "mcq",
+      "stem": "Information processing involves:",
+      "options": {
+        "A": "Input only",
+        "B": "Processing only",
+        "C": "Input, processing, output",
+        "D": "Storage only"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The complete cycle of information processing includes getting the data, changing it, and showing the results."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0042",
+      "type": "mcq",
+      "stem": "Computer ethics refers to:",
+      "options": {
+        "A": "Hardware rules",
+        "B": "Moral use of computers",
+        "C": "Software design",
+        "D": "Coding"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Computer ethics deals with the moral principles that govern the use of computers and digital technology."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0043",
+      "type": "mcq",
+      "stem": "Cybercrime includes:",
+      "options": {
+        "A": "Typing",
+        "B": "Hacking",
+        "C": "Printing",
+        "D": "Saving"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hacking is a primary example of illegal activities conducted via computers or the internet."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0044",
+      "type": "mcq",
+      "stem": "Privacy means:",
+      "options": {
+        "A": "Sharing data",
+        "B": "Protecting personal data",
+        "C": "Printing files",
+        "D": "Browsing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Privacy in computing involves the right to control how your personal information is collected and used."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0045",
+      "type": "mcq",
+      "stem": "Digital divide refers to:",
+      "options": {
+        "A": "Computer damage",
+        "B": "Gap in access to technology",
+        "C": "Internet speed",
+        "D": "Software error"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The digital divide is the economic and social inequality between those who have access to technology and those who do not."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0046",
+      "type": "mcq",
+      "stem": "Computer science focuses on:",
+      "options": {
+        "A": "Cooking",
+        "B": "Programming and systems",
+        "C": "Farming",
+        "D": "Trading"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Computer science is the study of computation, information, and the design of computer systems."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0047",
+      "type": "mcq",
+      "stem": "Information technology deals with:",
+      "options": {
+        "A": "Hardware only",
+        "B": "Use of computers for information",
+        "C": "Only software",
+        "D": "Only data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "IT is the use of computers, storage, networking and other physical devices to create, process, store, and exchange all forms of electronic data."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0048",
+      "type": "mcq",
+      "stem": "Software engineering involves:",
+      "options": {
+        "A": "Building houses",
+        "B": "Developing software",
+        "C": "Networking",
+        "D": "Printing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Software engineering is a systematic engineering approach to software development."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0049",
+      "type": "mcq",
+      "stem": "Cybersecurity deals with:",
+      "options": {
+        "A": "Graphics",
+        "B": "Security of systems",
+        "C": "Printing",
+        "D": "Typing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0050",
+      "type": "mcq",
+      "stem": "Data science involves:",
+      "options": {
+        "A": "Cooking",
+        "B": "Data analysis",
+        "C": "Farming",
+        "D": "Driving"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Data science uses scientific methods and algorithms to extract knowledge and insights from structured and unstructured data."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0051",
+      "type": "mcq",
+      "stem": "Saving a file means:",
+      "options": {
+        "A": "Deleting",
+        "B": "Storing",
+        "C": "Printing",
+        "D": "Closing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Saving is the act of writing data to a storage medium like a hard drive so it can be retrieved later."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0052",
+      "type": "mcq",
+      "stem": "Shortcut for copy:",
+      "options": {
+        "A": "Ctrl + X",
+        "B": "Ctrl + C",
+        "C": "Ctrl + V",
+        "D": "Ctrl + S"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The universal keyboard shortcut for copying selected content is Ctrl + C."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0053",
+      "type": "mcq",
+      "stem": "Shortcut for paste:",
+      "options": {
+        "A": "Ctrl + V",
+        "B": "Ctrl + C",
+        "C": "Ctrl + X",
+        "D": "Ctrl + P"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The universal keyboard shortcut for pasting copied or cut content is Ctrl + V."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0054",
+      "type": "mcq",
+      "stem": "Shortcut for save:",
+      "options": {
+        "A": "Ctrl + P",
+        "B": "Ctrl + S",
+        "C": "Ctrl + X",
+        "D": "Ctrl + V"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The universal keyboard shortcut for saving a document is Ctrl + S."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0055",
+      "type": "mcq",
+      "stem": "Deleting a file sends it to:",
+      "options": {
+        "A": "CPU",
+        "B": "Recycle Bin",
+        "C": "RAM",
+        "D": "Browser"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In most operating systems, deleted files are moved to the Recycle Bin before being permanently erased."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0056",
+      "type": "mcq",
+      "stem": "Ctrl + P is used to:",
+      "options": {
+        "A": "Paste",
+        "B": "Print",
+        "C": "Copy",
+        "D": "Save"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The universal keyboard shortcut to open the print dialog is Ctrl + P."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0057",
+      "type": "mcq",
+      "stem": "Ctrl + A is used to:",
+      "options": {
+        "A": "Copy",
+        "B": "Select all",
+        "C": "Save",
+        "D": "Paste"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The universal keyboard shortcut for selecting all content in a window is Ctrl + A."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0058",
+      "type": "mcq",
+      "stem": "Which key is used to delete text to the left of cursor?",
+      "options": {
+        "A": "Delete",
+        "B": "Backspace",
+        "C": "Enter",
+        "D": "Shift"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Backspace key erases characters behind the cursor, while the Delete key erases characters in front of it."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0059",
+      "type": "mcq",
+      "stem": "Which key is used to move to next line?",
+      "options": {
+        "A": "Shift",
+        "B": "Ctrl",
+        "C": "Enter",
+        "D": "Tab"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In word processing, pressing the Enter key starts a new paragraph or moves the cursor to the next line."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0060",
+      "type": "mcq",
+      "stem": "The desktop is:",
+      "options": {
+        "A": "Hardware",
+        "B": "Main screen interface",
+        "C": "Software",
+        "D": "CPU"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The desktop is the primary visual area on the screen after logging into an operating system."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0061",
+      "type": "mcq",
+      "stem": "Which is an example of input device?",
+      "options": {
+        "A": "Speaker",
+        "B": "Printer",
+        "C": "Scanner",
+        "D": "Monitor"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A scanner takes physical images or documents and converts them into digital data for the computer."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0062",
+      "type": "mcq",
+      "stem": "Which device produces hard copy?",
+      "options": {
+        "A": "Monitor",
+        "B": "Printer",
+        "C": "Speaker",
+        "D": "Keyboard"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A hard copy is a physical, printed version of digital information."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0063",
+      "type": "mcq",
+      "stem": "A plotter is used for:",
+      "options": {
+        "A": "Sound output",
+        "B": "Large drawings",
+        "C": "Text editing",
+        "D": "Input"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Plotters are specialized output devices used to print large-scale vector graphics like architectural blueprints."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0064",
+      "type": "mcq",
+      "stem": "Which of the following is NOT hardware?",
+      "options": {
+        "A": "Mouse",
+        "B": "CPU",
+        "C": "Windows",
+        "D": "Keyboard"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Windows is an operating system, which is a type of software, not a physical hardware component."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0065",
+      "type": "mcq",
+      "stem": "System software controls:",
+      "options": {
+        "A": "Users",
+        "B": "Hardware",
+        "C": "Data only",
+        "D": "Internet"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "System software like the OS is designed to provide a platform for other software and manage the computer's hardware."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0066",
+      "type": "mcq",
+      "stem": "Application software is used for:",
+      "options": {
+        "A": "Running system",
+        "B": "Performing tasks",
+        "C": "Booting",
+        "D": "Controlling CPU"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Application software (like Word or Excel) allows users to perform specific end-user tasks."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0067",
+      "type": "mcq",
+      "stem": "Booting refers to:",
+      "options": {
+        "A": "Shutting down",
+        "B": "Starting computer",
+        "C": "Deleting files",
+        "D": "Printing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Booting is the process of powering on a computer and loading the operating system into memory."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0068",
+      "type": "mcq",
+      "stem": "Which is NOT an example of storage device?",
+      "options": {
+        "A": "Hard disk",
+        "B": "Flash drive",
+        "C": "Keyboard",
+        "D": "CD"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A keyboard is an input device, not a storage device used to keep data for later use."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0069",
+      "type": "mcq",
+      "stem": "The speed of CPU is measured in:",
+      "options": {
+        "A": "Bytes",
+        "B": "Hertz",
+        "C": "Meters",
+        "D": "Seconds"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CPU clock speed is measured in Hertz (usually Megahertz or Gigahertz), representing cycles per second."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0070",
+      "type": "mcq",
+      "stem": "Which is the fastest memory?",
+      "options": {
+        "A": "RAM",
+        "B": "ROM",
+        "C": "Cache",
+        "D": "Hard disk"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Cache memory is a small, high-speed buffer located very close to the CPU, making it much faster than RAM."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0071",
+      "type": "mcq",
+      "stem": "Which of the following is NOT an internet service?",
+      "options": {
+        "A": "Email",
+        "B": "WWW",
+        "C": "FTP",
+        "D": "CPU"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The CPU is a hardware component, whereas Email, WWW, and FTP are services provided over the internet."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0072",
+      "type": "mcq",
+      "stem": "FTP is used for:",
+      "options": {
+        "A": "Browsing",
+        "B": "File transfer",
+        "C": "Email",
+        "D": "Printing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "File Transfer Protocol (FTP) is specifically designed for moving files between computers on a network."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0073",
+      "type": "mcq",
+      "stem": "Social media is used for:",
+      "options": {
+        "A": "Programming",
+        "B": "Communication",
+        "C": "Storage",
+        "D": "Printing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Social media platforms are designed to facilitate communication and interaction between users."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0074",
+      "type": "mcq",
+      "stem": "Example of social media platform:",
+      "options": {
+        "A": "Excel",
+        "B": "Facebook",
+        "C": "Word",
+        "D": "CPU"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Facebook is a prominent example of a social networking site."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0075",
+      "type": "mcq",
+      "stem": "A website address is called:",
+      "options": {
+        "A": "IP",
+        "B": "URL",
+        "C": "DNS",
+        "D": "HTML"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "URL stands for Uniform Resource Locator, which acts as the address for a specific resource on the web."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0076",
+      "type": "mcq",
+      "stem": "A variable is:",
+      "options": {
+        "A": "Fixed value",
+        "B": "Changing value",
+        "C": "Hardware",
+        "D": "Output"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In programming, a variable is a storage location that can hold data that changes during program execution."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0077",
+      "type": "mcq",
+      "stem": "A constant is:",
+      "options": {
+        "A": "Changing value",
+        "B": "Fixed value",
+        "C": "Input",
+        "D": "Output"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A constant is a value that remains the same and cannot be changed by the program once defined."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0078",
+      "type": "mcq",
+      "stem": "Which is a valid variable name?",
+      "options": {
+        "A": "2A",
+        "B": "A2",
+        "C": "A+B",
+        "D": "#A"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Variable names usually must start with a letter and cannot contain special arithmetic operators or symbols."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0079",
+      "type": "mcq",
+      "stem": "PRINT statement is used for:",
+      "options": {
+        "A": "Input",
+        "B": "Output",
+        "C": "Processing",
+        "D": "Storage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The PRINT command tells the computer to display information on the screen or printer."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0080",
+      "type": "mcq",
+      "stem": "INPUT statement is used for:",
+      "options": {
+        "A": "Output",
+        "B": "Input",
+        "C": "Storage",
+        "D": "Processing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The INPUT command allows a user to enter data into the program while it is running."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0081",
+      "type": "mcq",
+      "stem": "Computers in hospitals are used for:",
+      "options": {
+        "A": "Gaming",
+        "B": "Patient records",
+        "C": "Music only",
+        "D": "Printing only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hospitals use computers to manage digital health records, track treatments, and store medical history."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0082",
+      "type": "mcq",
+      "stem": "Computers in banks are used for:",
+      "options": {
+        "A": "Cooking",
+        "B": "Transactions",
+        "C": "Farming",
+        "D": "Drawing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Banking computers process financial transactions, manage accounts, and facilitate electronic transfers."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0083",
+      "type": "mcq",
+      "stem": "E-learning means:",
+      "options": {
+        "A": "Physical learning",
+        "B": "Electronic learning",
+        "C": "Manual learning",
+        "D": "Offline learning"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "E-learning refers to learning conducted via electronic media, typically on the internet."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0084",
+      "type": "mcq",
+      "stem": "ATM is used for:",
+      "options": {
+        "A": "Teaching",
+        "B": "Banking transactions",
+        "C": "Programming",
+        "D": "Printing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Automated Teller Machines allow bank customers to perform transactions like withdrawals without a human teller."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0085",
+      "type": "mcq",
+      "stem": "POS stands for:",
+      "options": {
+        "A": "Point of Sale",
+        "B": "Place of Storage",
+        "C": "Process of System",
+        "D": "Power of System"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "POS refers to the place and time where a retail transaction is completed."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0086",
+      "type": "mcq",
+      "stem": "Software piracy is:",
+      "options": {
+        "A": "Legal copying",
+        "B": "Illegal copying",
+        "C": "Storage",
+        "D": "Programming"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Piracy is the unauthorized use or reproduction of copyrighted software."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0087",
+      "type": "mcq",
+      "stem": "Virus is:",
+      "options": {
+        "A": "Hardware",
+        "B": "Malicious software",
+        "C": "Input device",
+        "D": "Output"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A computer virus is a piece of code designed to damage or infect a computer system."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0088",
+      "type": "mcq",
+      "stem": "Antivirus is used to:",
+      "options": {
+        "A": "Create virus",
+        "B": "Remove virus",
+        "C": "Store data",
+        "D": "Print"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Antivirus software is designed to detect, prevent, and remove malicious software."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0089",
+      "type": "mcq",
+      "stem": "Spam refers to:",
+      "options": {
+        "A": "Important email",
+        "B": "Junk email",
+        "C": "Programming",
+        "D": "Hardware"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Spam is unsolicited, often unwanted, mass-sent electronic messages."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0090",
+      "type": "mcq",
+      "stem": "Cyberbullying occurs:",
+      "options": {
+        "A": "Offline",
+        "B": "Online",
+        "C": "In class",
+        "D": "On paper"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cyberbullying is bullying that takes place over digital devices like cell phones, computers, and tablets."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0091",
+      "type": "mcq",
+      "stem": "Networking involves:",
+      "options": {
+        "A": "Cooking",
+        "B": "Connecting computers",
+        "C": "Printing",
+        "D": "Drawing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Computer networking refers to interconnected computing devices that can exchange data and share resources."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0092",
+      "type": "mcq",
+      "stem": "Artificial Intelligence deals with:",
+      "options": {
+        "A": "Machines behaving like humans",
+        "B": "Hardware",
+        "C": "Printing",
+        "D": "Typing"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "AI is the simulation of human intelligence processes by machines, especially computer systems."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0093",
+      "type": "mcq",
+      "stem": "Database management involves:",
+      "options": {
+        "A": "Data organization",
+        "B": "Gaming",
+        "C": "Printing",
+        "D": "Drawing"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Database management is the process of storing, retrieving, and managing data in a database."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0094",
+      "type": "mcq",
+      "stem": "Web development involves:",
+      "options": {
+        "A": "Designing websites",
+        "B": "Hardware repair",
+        "C": "Networking only",
+        "D": "Typing"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Web development refers to the tasks associated with creating and maintaining websites."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0095",
+      "type": "mcq",
+      "stem": "Programming involves:",
+      "options": {
+        "A": "Writing instructions",
+        "B": "Printing",
+        "C": "Browsing",
+        "D": "Deleting"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Programming is the process of creating a set of instructions that tells a computer how to perform a task."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0096",
+      "type": "mcq",
+      "stem": "Which is NOT a function of CPU?",
+      "options": {
+        "A": "Processing",
+        "B": "Control",
+        "C": "Storage",
+        "D": "Display"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The CPU processes and controls data, but displaying information is the function of the monitor/graphics card."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0097",
+      "type": "mcq",
+      "stem": "Which memory is temporary?",
+      "options": {
+        "A": "ROM",
+        "B": "Hard disk",
+        "C": "RAM",
+        "D": "CD"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "RAM is temporary workspace that is cleared when the computer is turned off."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0098",
+      "type": "mcq",
+      "stem": "Which of the following is volatile?",
+      "options": {
+        "A": "ROM",
+        "B": "RAM",
+        "C": "Hard disk",
+        "D": "Flash"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Volatility refers to memory that needs power to maintain stored information."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0099",
+      "type": "mcq",
+      "stem": "A computer program must be in ______ to run.",
+      "options": {
+        "A": "English",
+        "B": "Machine language",
+        "C": "BASIC",
+        "D": "Java"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hardware can only execute instructions that are in binary machine language."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0100",
+      "type": "mcq",
+      "stem": "The control unit directs:",
+      "options": {
+        "A": "Only memory",
+        "B": "All operations of the computer",
+        "C": "Only input",
+        "D": "Only output"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The CU coordinates the communication and flow between the ALU, memory, and input/output devices."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0101",
+      "type": "mcq",
+      "stem": "Which of the following best distinguishes data from information?",
+      "options": {
+        "A": "Data is processed while information is raw",
+        "B": "Data is raw while information is processed",
+        "C": "Both are the same",
+        "D": "Information is input"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Data consists of raw facts, while information is the meaningful result obtained after processing those facts."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0102",
+      "type": "mcq",
+      "stem": "A computer is said to be versatile because it:",
+      "options": {
+        "A": "Is fast",
+        "B": "Can perform different types of tasks",
+        "C": "Is accurate",
+        "D": "Has memory"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Versatility refers to the ability of a computer to execute a wide variety of jobs, from simple calculations to complex simulations."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0103",
+      "type": "mcq",
+      "stem": "Which operation is NOT part of the IPO cycle?",
+      "options": {
+        "A": "Input",
+        "B": "Processing",
+        "C": "Output",
+        "D": "Compilation"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The IPO cycle consists specifically of Input, Processing, and Output. Compilation is a specific programming translation process."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0104",
+      "type": "mcq",
+      "stem": "The term 'automation' in computing refers to:",
+      "options": {
+        "A": "Manual processing",
+        "B": "Human intervention",
+        "C": "Self-operating systems",
+        "D": "Slow processing"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Automation is the use of technology to perform tasks with minimal human assistance."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0105",
+      "type": "mcq",
+      "stem": "Which generation of computers introduced integrated circuits?",
+      "options": {
+        "A": "First",
+        "B": "Second",
+        "C": "Third",
+        "D": "Fourth"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The third generation of computers (approx. 1964-1971) replaced transistors with Integrated Circuits (ICs)."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0106",
+      "type": "mcq",
+      "stem": "The main advantage of computers over humans is:",
+      "options": {
+        "A": "Intelligence",
+        "B": "Accuracy and speed",
+        "C": "Creativity",
+        "D": "Decision making"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "While humans have intelligence and creativity, computers excel in performing millions of calculations per second with 100% accuracy."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0107",
+      "type": "mcq",
+      "stem": "A computer without a program is:",
+      "options": {
+        "A": "Useful",
+        "B": "Intelligent",
+        "C": "Useless",
+        "D": "Fast"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A computer is a machine that follows instructions; without a program to provide those instructions, it cannot perform any task."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0108",
+      "type": "mcq",
+      "stem": "Which best defines a system?",
+      "options": {
+        "A": "Independent units",
+        "B": "Interrelated components working together",
+        "C": "Single component",
+        "D": "Hardware only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A system is a set of interacting or interdependent component parts forming a complex/intricate whole."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0109",
+      "type": "mcq",
+      "stem": "The smallest unit of data is:",
+      "options": {
+        "A": "Byte",
+        "B": "Bit",
+        "C": "Word",
+        "D": "KB"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A bit (binary digit) is the most basic unit of information in computing and digital communications."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0110",
+      "type": "mcq",
+      "stem": "1 Byte equals:",
+      "options": {
+        "A": "4 bits",
+        "B": "8 bits",
+        "C": "16 bits",
+        "D": "2 bits"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Standard computing architecture defines a byte as a sequence of 8 bits."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0111",
+      "type": "mcq",
+      "stem": "Which device performs BOTH input and output?",
+      "options": {
+        "A": "Keyboard",
+        "B": "Monitor",
+        "C": "Touchscreen",
+        "D": "Printer"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A touchscreen accepts input via touch and displays output visually, serving both functions."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0112",
+      "type": "mcq",
+      "stem": "Firmware is:",
+      "options": {
+        "A": "Software stored in ROM",
+        "B": "Hardware device",
+        "C": "Application software",
+        "D": "Temporary data"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Firmware is a specific class of computer software that provides the low-level control for a device's specific hardware."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0113",
+      "type": "mcq",
+      "stem": "Which memory retains data without power?",
+      "options": {
+        "A": "RAM",
+        "B": "Cache",
+        "C": "ROM",
+        "D": "Register"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "ROM (Read-Only Memory) is non-volatile, meaning it keeps its data even when the computer is turned off."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0114",
+      "type": "mcq",
+      "stem": "Cache memory is used to:",
+      "options": {
+        "A": "Store permanent data",
+        "B": "Increase processing speed",
+        "C": "Display output",
+        "D": "Input data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cache memory stores frequently used instructions so the CPU can access them faster than retrieving them from RAM."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0115",
+      "type": "mcq",
+      "stem": "Which is NOT part of CPU?",
+      "options": {
+        "A": "ALU",
+        "B": "Control Unit",
+        "C": "Registers",
+        "D": "Monitor"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The CPU consists of the ALU, Control Unit, and Registers. The monitor is an external output device."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0116",
+      "type": "mcq",
+      "stem": "Secondary storage is:",
+      "options": {
+        "A": "Temporary",
+        "B": "Volatile",
+        "C": "Permanent",
+        "D": "Fastest"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Secondary storage (like hard drives) is designed to store data permanently until it is explicitly deleted."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0117",
+      "type": "mcq",
+      "stem": "Which device converts digital signals to analog?",
+      "options": {
+        "A": "Router",
+        "B": "Modem",
+        "C": "Switch",
+        "D": "Hub"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A modem (Modulator-Demodulator) converts digital data from a computer into analog signals for transmission and vice versa."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0118",
+      "type": "mcq",
+      "stem": "Which of the following is an example of system software?",
+      "options": {
+        "A": "MS Word",
+        "B": "Windows OS",
+        "C": "Excel",
+        "D": "Chrome"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "System software manages the computer's hardware and provides a platform for applications; an Operating System is the primary example."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0119",
+      "type": "mcq",
+      "stem": "Multitasking means:",
+      "options": {
+        "A": "Multiple users",
+        "B": "Running many programs at once",
+        "C": "Fast processing",
+        "D": "Large memory"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Multitasking allows a user to perform more than one computer task at the same time."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0120",
+      "type": "mcq",
+      "stem": "Which is NOT an operating system?",
+      "options": {
+        "A": "Linux",
+        "B": "Windows",
+        "C": "Android",
+        "D": "Microsoft Word"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Microsoft Word is an application software (word processor), whereas the others are platforms that manage hardware."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0121",
+      "type": "mcq",
+      "stem": "IP address is used to:",
+      "options": {
+        "A": "Identify a device on a network",
+        "B": "Store data",
+        "C": "Process data",
+        "D": "Print data"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "An Internet Protocol (IP) address is a unique numerical label assigned to each device connected to a computer network."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0122",
+      "type": "mcq",
+      "stem": "Which protocol is used for web browsing?",
+      "options": {
+        "A": "FTP",
+        "B": "HTTP",
+        "C": "SMTP",
+        "D": "POP"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "HTTP (Hypertext Transfer Protocol) is the foundation of any data exchange on the World Wide Web."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0123",
+      "type": "mcq",
+      "stem": "URL stands for:",
+      "options": {
+        "A": "Uniform Resource Locator",
+        "B": "Universal Resource Link",
+        "C": "Uniform Retrieval Link",
+        "D": "Unique Resource Locator"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A URL is the address of a unique resource on the internet."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0124",
+      "type": "mcq",
+      "stem": "Which is NOT a search engine?",
+      "options": {
+        "A": "Google",
+        "B": "Bing",
+        "C": "Yahoo",
+        "D": "Windows"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Windows is an operating system, not a web-based tool for finding information on the internet."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0125",
+      "type": "mcq",
+      "stem": "Phishing is:",
+      "options": {
+        "A": "Programming",
+        "B": "Online fraud",
+        "C": "Networking",
+        "D": "Storage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Phishing is a fraudulent attempt to obtain sensitive information by disguising as a trustworthy entity in electronic communication."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0126",
+      "type": "mcq",
+      "stem": "Bandwidth refers to:",
+      "options": {
+        "A": "Storage size",
+        "B": "Data transfer rate",
+        "C": "CPU speed",
+        "D": "Memory size"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Bandwidth is the maximum rate of data transfer across a given path."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0127",
+      "type": "mcq",
+      "stem": "A LAN covers:",
+      "options": {
+        "A": "Whole world",
+        "B": "Small area",
+        "C": "Country",
+        "D": "Continent"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A Local Area Network (LAN) connects computers within a limited area such as a residence, school, or office building."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0128",
+      "type": "mcq",
+      "stem": "VPN is used for:",
+      "options": {
+        "A": "Gaming",
+        "B": "Secure connection",
+        "C": "Printing",
+        "D": "Storage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A Virtual Private Network (VPN) establishes a secure and encrypted connection over a less secure network like the internet."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0129",
+      "type": "mcq",
+      "stem": "Cloud computing allows:",
+      "options": {
+        "A": "Local storage",
+        "B": "Remote storage & access",
+        "C": "No storage",
+        "D": "Hardware upgrade"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cloud computing provides on-demand delivery of IT resources over the internet with pay-as-you-go pricing."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0130",
+      "type": "mcq",
+      "stem": "HTML is used for:",
+      "options": {
+        "A": "Programming logic",
+        "B": "Structuring web pages",
+        "C": "Database",
+        "D": "Networking"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "HTML (Hypertext Markup Language) is the standard markup language for documents designed to be displayed in a web browser."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0131",
+      "type": "mcq",
+      "stem": "A syntax error occurs when:",
+      "options": {
+        "A": "Logic is wrong",
+        "B": "Grammar rules are violated",
+        "C": "Hardware fails",
+        "D": "Output is wrong"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Syntax errors occur when the programmer does not follow the specific rules or 'grammar' of the programming language."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0132",
+      "type": "mcq",
+      "stem": "Logical error results in:",
+      "options": {
+        "A": "Program crash",
+        "B": "Wrong output",
+        "C": "Syntax warning",
+        "D": "Compilation failure"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A logical error is a mistake in the program's design that causes it to behave incorrectly or produce incorrect results without crashing."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0133",
+      "type": "mcq",
+      "stem": "In BASIC, LET statement is used to:",
+      "options": {
+        "A": "Print",
+        "B": "Assign value",
+        "C": "Input data",
+        "D": "Stop program"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The LET statement is used to assign a value to a variable (e.g., LET X = 10)."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0134",
+      "type": "mcq",
+      "stem": "Which operator has highest precedence?",
+      "options": {
+        "A": "+",
+        "B": "*",
+        "C": "↑",
+        "D": "-"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In mathematical and programming precedence (BODMAS/PEMDAS), exponentiation (↑) is performed before multiplication or addition."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0135",
+      "type": "mcq",
+      "stem": "IF statement is used for:",
+      "options": {
+        "A": "Looping",
+        "B": "Decision making",
+        "C": "Input",
+        "D": "Output"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The IF statement allows a program to choose different paths of execution based on whether a condition is true or false."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0136",
+      "type": "mcq",
+      "stem": "GOTO statement causes:",
+      "options": {
+        "A": "Stop",
+        "B": "Jump in execution",
+        "C": "Print",
+        "D": "Input"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "GOTO is used to transfer program control to a specified line number or label, creating a 'jump'."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0137",
+      "type": "mcq",
+      "stem": "Logout is:",
+      "options": {
+        "A": "Enter system",
+        "B": "Exit system",
+        "C": "Save",
+        "D": "Input"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Logging out ends the user session but leaves the computer powered on for others."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0138",
+      "type": "mcq",
+      "stem": "A bug is:",
+      "options": {
+        "A": "Virus",
+        "B": "Error in program",
+        "C": "Hardware",
+        "D": "Output"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In computing, a bug is an error, flaw, or fault in a computer program or system that causes it to produce an incorrect result."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0139",
+      "type": "mcq",
+      "stem": "Debugging means:",
+      "options": {
+        "A": "Writing program",
+        "B": "Removing errors",
+        "C": "Running program",
+        "D": "Printing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Debugging is the process of finding and resolving bugs (defects or problems) within computer programs."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0140",
+      "type": "mcq",
+      "stem": "Login is:",
+      "options": {
+        "A": "Access system",
+        "B": "Exit system",
+        "C": "Delete",
+        "D": "Save"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Logging in identifies a user and gives them access to their account."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0141",
+      "type": "mcq",
+      "stem": "Which software is used for presentations?",
+      "options": {
+        "A": "Excel",
+        "B": "PowerPoint",
+        "C": "Word",
+        "D": "Access"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Microsoft PowerPoint is specifically designed for creating visual slide-based presentations."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0142",
+      "type": "mcq",
+      "stem": "Which is NOT an application of computers?",
+      "options": {
+        "A": "Banking",
+        "B": "Education",
+        "C": "Farming without tech",
+        "D": "Healthcare"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Farming that explicitly avoids technology would not involve computer applications."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0143",
+      "type": "mcq",
+      "stem": "Spreadsheet cells are identified by:",
+      "options": {
+        "A": "Numbers",
+        "B": "Letters",
+        "C": "Row & Column",
+        "D": "Colors"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A cell address is formed by combining the column letter and the row number (e.g., A1)."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0144",
+      "type": "mcq",
+      "stem": "Database stores:",
+      "options": {
+        "A": "Images",
+        "B": "Organized data",
+        "C": "Programs",
+        "D": "Hardware"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A database is an organized collection of structured information, or data, typically stored electronically."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0145",
+      "type": "mcq",
+      "stem": "CAD is used for:",
+      "options": {
+        "A": "Drawing design",
+        "B": "Typing",
+        "C": "Browsing",
+        "D": "Gaming"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Computer-Aided Design (CAD) is software used by architects and engineers to create precision drawings and technical illustrations."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0146",
+      "type": "mcq",
+      "stem": "Cybersecurity protects:",
+      "options": {
+        "A": "Hardware only",
+        "B": "Data and systems",
+        "C": "Monitor",
+        "D": "Keyboard"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0147",
+      "type": "mcq",
+      "stem": "Hacking without permission is:",
+      "options": {
+        "A": "Legal",
+        "B": "Ethical",
+        "C": "Illegal",
+        "D": "Required"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Accessing a computer system without authorization is a criminal offense in most jurisdictions."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0148",
+      "type": "mcq",
+      "stem": "Data privacy ensures:",
+      "options": {
+        "A": "Data sharing",
+        "B": "Data protection",
+        "C": "Data deletion",
+        "D": "Data loss"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Data privacy deals with the proper handling of data - consent, notice, and regulatory obligations."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0149",
+      "type": "mcq",
+      "stem": "Computer ethics includes:",
+      "options": {
+        "A": "Piracy",
+        "B": "Respecting data rights",
+        "C": "Hacking",
+        "D": "Spamming"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ethics involves following moral principles; respecting the rights and privacy of others is a key component."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0150",
+      "type": "mcq",
+      "stem": "Digital literacy means:",
+      "options": {
+        "A": "Reading books",
+        "B": "Using digital tools effectively",
+        "C": "Programming only",
+        "D": "Typing only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Digital literacy is the ability to find, evaluate, and communicate information through various digital platforms."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0151",
+      "type": "mcq",
+      "stem": "Ctrl + Z is used to:",
+      "options": {
+        "A": "Copy",
+        "B": "Undo",
+        "C": "Paste",
+        "D": "Save"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ctrl + Z is a standard keyboard shortcut to reverse the last action performed."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0152",
+      "type": "mcq",
+      "stem": "Ctrl + X is:",
+      "options": {
+        "A": "Copy",
+        "B": "Cut",
+        "C": "Paste",
+        "D": "Save"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ctrl + X removes the selected item and places it on the clipboard for later pasting."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0153",
+      "type": "mcq",
+      "stem": "File extension .docx is for:",
+      "options": {
+        "A": "Excel",
+        "B": "Word",
+        "C": "Video",
+        "D": "Audio"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": ".docx is the default file format for Microsoft Word documents."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0154",
+      "type": "mcq",
+      "stem": "File extension .xlsx is for:",
+      "options": {
+        "A": "Word",
+        "B": "Excel",
+        "C": "Image",
+        "D": "Video"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": ".xlsx is the default file format for Microsoft Excel spreadsheets."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0155",
+      "type": "mcq",
+      "stem": "Recycle Bin is used to:",
+      "options": {
+        "A": "Save files",
+        "B": "Temporarily store deleted files",
+        "C": "Run programs",
+        "D": "Print"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Recycle Bin acts as a safety net where files are held before being permanently erased from the storage drive."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0156",
+      "type": "mcq",
+      "stem": "Ctrl + Shift + Esc opens:",
+      "options": {
+        "A": "File Explorer",
+        "B": "Task Manager",
+        "C": "Settings",
+        "D": "Control Panel"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "This specific shortcut combination directly launches the Windows Task Manager."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0157",
+      "type": "mcq",
+      "stem": "Which shortcut closes a window?",
+      "options": {
+        "A": "Ctrl + W",
+        "B": "Alt + F4",
+        "C": "Ctrl + Q",
+        "D": "Shift + Esc"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Alt + F4 is the standard shortcut to close the active application window."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0158",
+      "type": "mcq",
+      "stem": "A file path shows:",
+      "options": {
+        "A": "File size",
+        "B": "File location",
+        "C": "File type",
+        "D": "File content"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A file path (e.g., C:\\Users\\Name\\Desktop\\file.txt) describes the address of a file in the folder hierarchy."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0159",
+      "type": "mcq",
+      "stem": "The default extension for a text file is:",
+      "options": {
+        "A": ".docx",
+        "B": ".txt",
+        "C": ".xlsx",
+        "D": ".ppt"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": ".txt indicates a plain text file with no special formatting."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0160",
+      "type": "mcq",
+      "stem": "Renaming a file does NOT change:",
+      "options": {
+        "A": "Name",
+        "B": "Content",
+        "C": "Location",
+        "D": "Size"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Changing the label (name) of a file has no effect on the data stored inside the file."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0161",
+      "type": "mcq",
+      "stem": "Which component connects all hardware parts?",
+      "options": {
+        "A": "CPU",
+        "B": "Motherboard",
+        "C": "RAM",
+        "D": "ROM"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The motherboard is the main printed circuit board (PCB) that serves as the backbone connecting all computer components."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0162",
+      "type": "mcq",
+      "stem": "BIOS is stored in:",
+      "options": {
+        "A": "RAM",
+        "B": "ROM",
+        "C": "Cache",
+        "D": "Hard disk"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Basic Input/Output System (BIOS) is firmware stored on a non-volatile ROM chip so it is available as soon as the computer is turned on."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0163",
+      "type": "mcq",
+      "stem": "Which device is used for pointing?",
+      "options": {
+        "A": "Keyboard",
+        "B": "Mouse",
+        "C": "Printer",
+        "D": "Scanner"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A mouse is the primary pointing device used to interact with a graphical user interface."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0164",
+      "type": "mcq",
+      "stem": "Which port is used for internet cable?",
+      "options": {
+        "A": "USB",
+        "B": "HDMI",
+        "C": "Ethernet",
+        "D": "VGA"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "An Ethernet port (RJ-45) is used for wired networking and internet connections."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0165",
+      "type": "mcq",
+      "stem": "GPU is mainly used for:",
+      "options": {
+        "A": "Sound",
+        "B": "Graphics processing",
+        "C": "Input",
+        "D": "Storage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Graphics Processing Unit (GPU) is specialized for rendering images, video, and 3D graphics."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0166",
+      "type": "mcq",
+      "stem": "Open-source software means:",
+      "options": {
+        "A": "Paid software",
+        "B": "Source code available",
+        "C": "Only online software",
+        "D": "Virus-free software"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Open-source software is software with source code that anyone can inspect, modify, and enhance."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0167",
+      "type": "mcq",
+      "stem": "Which is NOT system software?",
+      "options": {
+        "A": "OS",
+        "B": "Utility",
+        "C": "Compiler",
+        "D": "MS Word"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "MS Word is an application used for a specific task (typing), not for managing the computer system itself."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0168",
+      "type": "mcq",
+      "stem": "Utility software is used for:",
+      "options": {
+        "A": "Gaming",
+        "B": "Maintenance tasks",
+        "C": "Programming",
+        "D": "Printing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Utility software performs house-keeping tasks like disk defragmentation, file compression, and antivirus scanning."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0169",
+      "type": "mcq",
+      "stem": "Malware includes:",
+      "options": {
+        "A": "Antivirus",
+        "B": "Virus",
+        "C": "OS",
+        "D": "Browser"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Malware (Malicious Software) is a broad term that includes viruses, worms, and trojans."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0170",
+      "type": "mcq",
+      "stem": "Device driver is used to:",
+      "options": {
+        "A": "Run applications",
+        "B": "Control hardware devices",
+        "C": "Store data",
+        "D": "Browse internet"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A driver is a small piece of software that tells the operating system how to communicate with a specific piece of hardware."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0171",
+      "type": "mcq",
+      "stem": "DNS converts:",
+      "options": {
+        "A": "IP to name",
+        "B": "Name to IP",
+        "C": "Data to info",
+        "D": "Binary to decimal"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Domain Name System (DNS) translates human-friendly web addresses (like google.com) into computer-friendly IP addresses."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0172",
+      "type": "mcq",
+      "stem": "Which protocol is used for email sending?",
+      "options": {
+        "A": "HTTP",
+        "B": "SMTP",
+        "C": "FTP",
+        "D": "TCP"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "SMTP (Simple Mail Transfer Protocol) is used specifically for sending or 'pushing' emails across networks."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0173",
+      "type": "mcq",
+      "stem": "Which protocol is used to receive email?",
+      "options": {
+        "A": "SMTP",
+        "B": "POP3",
+        "C": "HTTP",
+        "D": "FTP"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "POP3 (Post Office Protocol version 3) is a standard mail protocol used to retrieve emails from a remote server to a local client."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0174",
+      "type": "mcq",
+      "stem": "HTTPS is more secure because of:",
+      "options": {
+        "A": "Speed",
+        "B": "Encryption",
+        "C": "Storage",
+        "D": "RAM"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "HTTPS (Hypertext Transfer Protocol Secure) uses SSL/TLS to encrypt the communication between the browser and the server."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0175",
+      "type": "mcq",
+      "stem": "Cookies are used to:",
+      "options": {
+        "A": "Store user data",
+        "B": "Delete files",
+        "C": "Run programs",
+        "D": "Print"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Web cookies are small pieces of data sent from a website and stored on the user's computer to remember state or activity."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0176",
+      "type": "mcq",
+      "stem": "Which is NOT a type of error?",
+      "options": {
+        "A": "Syntax",
+        "B": "Logical",
+        "C": "Runtime",
+        "D": "Hardware"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "While hardware can fail, it is categorized as a failure, not a type of software programming 'error'."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0177",
+      "type": "mcq",
+      "stem": "A missing bracket causes:",
+      "options": {
+        "A": "Logical error",
+        "B": "Syntax error",
+        "C": "Runtime error",
+        "D": "System error"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Brackets are part of the 'grammar' rules of code; failing to include them violates syntax."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0178",
+      "type": "mcq",
+      "stem": "Division by zero causes:",
+      "options": {
+        "A": "Syntax error",
+        "B": "Logical error",
+        "C": "Runtime error",
+        "D": "Typographical error"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The code is written correctly (syntax is fine), but when it tries to perform an impossible operation during execution, it crashes."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0179",
+      "type": "mcq",
+      "stem": "In BASIC, exponent is written as:",
+      "options": {
+        "A": "^ or **",
+        "B": "//",
+        "C": "%%",
+        "D": "&&"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "BASIC and many other languages use the caret (^) or double asterisk (**) to denote 'to the power of'."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0180",
+      "type": "mcq",
+      "stem": "Which executes repeatedly?",
+      "options": {
+        "A": "IF",
+        "B": "LOOP",
+        "C": "GOTO",
+        "D": "PRINT"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "While 'LOOP' is the modern term, 'GOTO' can be used to jump back to a previous line, causing instructions to repeat (though the question is a trick - GOTO causes jumps, LOOP/FOR are standard for repetition)."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0181",
+      "type": "mcq",
+      "stem": "CAD is mainly used in:",
+      "options": {
+        "A": "Engineering design",
+        "B": "Banking",
+        "C": "Teaching",
+        "D": "Gaming"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "CAD allows engineers to create complex blueprints and 3D models of components and structures."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0182",
+      "type": "mcq",
+      "stem": "MIS stands for:",
+      "options": {
+        "A": "Management Information System",
+        "B": "Machine Input System",
+        "C": "Memory Info System",
+        "D": "Manual Info System"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "An MIS is a computer system that consists of hardware and software that serves as the backbone of an organization's operations."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0183",
+      "type": "mcq",
+      "stem": "ERP is used in:",
+      "options": {
+        "A": "Gaming",
+        "B": "Business management",
+        "C": "Typing",
+        "D": "Printing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Enterprise Resource Planning (ERP) software helps organizations manage core business processes like accounting and HR."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0184",
+      "type": "mcq",
+      "stem": "E-commerce involves:",
+      "options": {
+        "A": "Buying and selling online",
+        "B": "Programming",
+        "C": "Networking",
+        "D": "Storage"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Electronic commerce is the trading or facilitation of trading in products or services using computer networks."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0185",
+      "type": "mcq",
+      "stem": "Telemedicine is:",
+      "options": {
+        "A": "Online medical service",
+        "B": "Programming",
+        "C": "Networking",
+        "D": "Banking"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Telemedicine allows health care professionals to evaluate, diagnose and treat patients at a distance using telecommunications technology."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0186",
+      "type": "mcq",
+      "stem": "Identity theft involves:",
+      "options": {
+        "A": "Stealing hardware",
+        "B": "Stealing personal data",
+        "C": "Breaking computer",
+        "D": "Deleting files"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Identity theft is the deliberate use of someone else's identity, usually to gain a financial advantage or obtain credit."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0187",
+      "type": "mcq",
+      "stem": "Encryption is used for:",
+      "options": {
+        "A": "Speed",
+        "B": "Security",
+        "C": "Storage",
+        "D": "Input"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Encryption transforms data into a secret code that hides the information's true meaning from unauthorized users."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0188",
+      "type": "mcq",
+      "stem": "Digital footprint is:",
+      "options": {
+        "A": "Hardware",
+        "B": "Online activity record",
+        "C": "Virus",
+        "D": "Software"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A digital footprint is the trail of data you leave when using the internet."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0189",
+      "type": "mcq",
+      "stem": "Ethical hacking is:",
+      "options": {
+        "A": "Illegal",
+        "B": "Legal security testing",
+        "C": "Virus creation",
+        "D": "Piracy"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ethical hacking involves authorized attempts to gain unauthorized access to a computer system to identify vulnerabilities."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0190",
+      "type": "mcq",
+      "stem": "Firewall is used to:",
+      "options": {
+        "A": "Print",
+        "B": "Protect network",
+        "C": "Store data",
+        "D": "Input"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A firewall monitors and filters incoming and outgoing network traffic based on an organization's security policies."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0191",
+      "type": "mcq",
+      "stem": "AI uses:",
+      "options": {
+        "A": "Algorithms",
+        "B": "Hardware",
+        "C": "Printer",
+        "D": "Monitor"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Artificial Intelligence relies on complex algorithms to process data and make decisions or predictions."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0192",
+      "type": "mcq",
+      "stem": "Data mining is:",
+      "options": {
+        "A": "Data storage",
+        "B": "Extracting patterns",
+        "C": "Printing",
+        "D": "Programming"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Data mining is the process of discovering patterns in large data sets."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0193",
+      "type": "mcq",
+      "stem": "Networking topology refers to:",
+      "options": {
+        "A": "Data type",
+        "B": "Network structure",
+        "C": "Software",
+        "D": "Hardware"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Topology describes the arrangement of nodes and links in a network (e.g., Star, Ring, Bus)."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0194",
+      "type": "mcq",
+      "stem": "Cloud storage examples include:",
+      "options": {
+        "A": "Google Drive",
+        "B": "CPU",
+        "C": "RAM",
+        "D": "ROM"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Google Drive stores files on Google's servers, making them accessible via the internet."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0195",
+      "type": "mcq",
+      "stem": "Cybersecurity focuses on:",
+      "options": {
+        "A": "Speed",
+        "B": "Protection",
+        "C": "Storage",
+        "D": "Input"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The core mission of cybersecurity is to protect digital assets from theft or damage."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0196",
+      "type": "mcq",
+      "stem": "Which is NOT volatile memory?",
+      "options": {
+        "A": "RAM",
+        "B": "Cache",
+        "C": "ROM",
+        "D": "Register"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Volatile memory loses its content when power is cut. ROM is non-volatile; it keeps its data."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0197",
+      "type": "mcq",
+      "stem": "Which is closest to CPU?",
+      "options": {
+        "A": "Hard disk",
+        "B": "RAM",
+        "C": "Cache",
+        "D": "CD"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Cache is built into or placed very near the CPU to provide high-speed access to data."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0198",
+      "type": "mcq",
+      "stem": "Which performs logical comparison?",
+      "options": {
+        "A": "CU",
+        "B": "ALU",
+        "C": "RAM",
+        "D": "Monitor"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Arithmetic Logic Unit (ALU) performs all math and logical (comparison) operations."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0199",
+      "type": "mcq",
+      "stem": "Which device stores OS permanently?",
+      "options": {
+        "A": "RAM",
+        "B": "Hard disk",
+        "C": "Cache",
+        "D": "Register"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Operating System is installed on the hard disk or SSD so it is available every time you boot."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0200",
+      "type": "mcq",
+      "stem": "Which is fastest among these?",
+      "options": {
+        "A": "Hard disk",
+        "B": "RAM",
+        "C": "Cache",
+        "D": "ROM"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Cache memory operates at speeds much closer to the CPU's processing speed compared to RAM or storage."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0201",
+      "type": "mcq",
+      "stem": "GUI stands for:",
+      "options": {
+        "A": "Graphical User Interface",
+        "B": "General User Input",
+        "C": "Global User Interface",
+        "D": "Graphic Utility Interface"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "GUI is a type of user interface that allows users to interact with electronic devices through graphical icons."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0202",
+      "type": "mcq",
+      "stem": "CLI means:",
+      "options": {
+        "A": "Command Line Interface",
+        "B": "Control Line Interface",
+        "C": "Computer Link Interface",
+        "D": "Central Line Input"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "CLI is a text-based interface where users type commands to interact with the system."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0203",
+      "type": "mcq",
+      "stem": "Which is NOT an OS function?",
+      "options": {
+        "A": "Memory management",
+        "B": "File management",
+        "C": "Cooking",
+        "D": "Device management"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Operating systems manage computer resources; they do not perform physical household tasks."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0204",
+      "type": "mcq",
+      "stem": "Multithreading allows:",
+      "options": {
+        "A": "One process",
+        "B": "Multiple processes",
+        "C": "Faster hardware",
+        "D": "Less memory"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Multithreading allows a single process to split into multiple threads that can run simultaneously."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0205",
+      "type": "mcq",
+      "stem": "Which is NOT storage?",
+      "options": {
+        "A": "SSD",
+        "B": "HDD",
+        "C": "RAM",
+        "D": "Keyboard"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "A keyboard is an input device, not a medium for storing data."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0206",
+      "type": "mcq",
+      "stem": "SSD is faster than HDD because:",
+      "options": {
+        "A": "Mechanical parts",
+        "B": "No moving parts",
+        "C": "Bigger size",
+        "D": "Lower cost"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Solid State Drives (SSDs) use flash memory and have no mechanical arms or spinning platters, making them much faster."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0207",
+      "type": "mcq",
+      "stem": "File system manages:",
+      "options": {
+        "A": "CPU",
+        "B": "Files",
+        "C": "Input",
+        "D": "Output"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A file system is the method and data structure that an operating system uses to control how data is stored and retrieved."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0208",
+      "type": "mcq",
+      "stem": "Bit stands for:",
+      "options": {
+        "A": "Binary digit",
+        "B": "Byte digit",
+        "C": "Basic input",
+        "D": "Binary input"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The term 'bit' is a portmanteau of 'binary digit'."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0209",
+      "type": "mcq",
+      "stem": "1024 bytes =",
+      "options": {
+        "A": "1 KB",
+        "B": "1 MB",
+        "C": "1 GB",
+        "D": "1 TB"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "In binary-based measurement, 2 to the power of 10 equals 1024, which is designated as one Kilobyte."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0210",
+      "type": "mcq",
+      "stem": "Which is largest?",
+      "options": {
+        "A": "KB",
+        "B": "MB",
+        "C": "GB",
+        "D": "TB"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "In the standard hierarchy, Terabyte (TB) > Gigabyte (GB) > Megabyte (MB) > Kilobyte (KB)."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0211",
+      "type": "mcq",
+      "stem": "A computer virus is commonly spread through:",
+      "options": {
+        "A": "Electricity",
+        "B": "Infected files and removable media",
+        "C": "Monitor display",
+        "D": "CPU heat"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Viruses attach themselves to legitimate files or programs and spread when those files are transferred or executed."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0212",
+      "type": "mcq",
+      "stem": "A Trojan horse is best described as:",
+      "options": {
+        "A": "A hardware failure",
+        "B": "A malicious program disguised as legitimate software",
+        "C": "An antivirus",
+        "D": "A programming language"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Like the Greek myth, a Trojan horse malware appears helpful but contains hidden malicious code."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0213",
+      "type": "mcq",
+      "stem": "The main purpose of backing up data is to:",
+      "options": {
+        "A": "Increase speed",
+        "B": "Prevent data loss",
+        "C": "Improve graphics",
+        "D": "Save power"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Backups ensure that if the original data is destroyed or lost, a copy can be restored."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0214",
+      "type": "mcq",
+      "stem": "An operating system is responsible for:",
+      "options": {
+        "A": "Only running applications",
+        "B": "Managing computer resources",
+        "C": "Only printing documents",
+        "D": "Only internet access"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The OS manages hardware, software resources, and provides common services for computer programs."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0215",
+      "type": "mcq",
+      "stem": "Restart means:",
+      "options": {
+        "A": "Turn off only",
+        "B": "Start again",
+        "C": "Save",
+        "D": "Print"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Restarting (rebooting) closes the system and immediately starts it back up."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0216",
+      "type": "mcq",
+      "stem": "Which of the following is an output device?",
+      "options": {
+        "A": "Keyboard",
+        "B": "Printer",
+        "C": "Mouse",
+        "D": "Scanner"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A printer takes digital information and produces a physical 'hard copy' of it."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0217",
+      "type": "mcq",
+      "stem": "A compiler translates:",
+      "options": {
+        "A": "One line at a time",
+        "B": "Entire program at once",
+        "C": "Only output",
+        "D": "Only input"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unlike an interpreter, a compiler processes the whole source code before creating an executable file."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0218",
+      "type": "mcq",
+      "stem": "An interpreter translates:",
+      "options": {
+        "A": "Entire program",
+        "B": "Line by line",
+        "C": "Machine code only",
+        "D": "Binary only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An interpreter reads and executes one line of code at a time."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0219",
+      "type": "mcq",
+      "stem": "An algorithm is:",
+      "options": {
+        "A": "A programming language",
+        "B": "A step-by-step solution to a problem",
+        "C": "A hardware component",
+        "D": "An output device"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An algorithm is a finite set of clear instructions used to solve a specific problem or perform a task."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0220",
+      "type": "mcq",
+      "stem": "A flowchart is:",
+      "options": {
+        "A": "A program",
+        "B": "A diagram representing steps in solving a problem",
+        "C": "A hardware device",
+        "D": "A type of memory"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A flowchart is a visual representation of an algorithm or process."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0221",
+      "type": "mcq",
+      "stem": "The decision symbol in a flowchart is:",
+      "options": {
+        "A": "Rectangle",
+        "B": "Diamond",
+        "C": "Oval",
+        "D": "Circle"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The diamond shape represents a choice or decision point in a process flow."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0222",
+      "type": "mcq",
+      "stem": "The process symbol in a flowchart is:",
+      "options": {
+        "A": "Diamond",
+        "B": "Rectangle",
+        "C": "Oval",
+        "D": "Parallelogram"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The rectangle is used to show a general action or process step."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0223",
+      "type": "mcq",
+      "stem": "The input/output symbol in a flowchart is:",
+      "options": {
+        "A": "Rectangle",
+        "B": "Diamond",
+        "C": "Parallelogram",
+        "D": "Circle"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A parallelogram is specifically used to represent data entry (input) or data display (output)."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0224",
+      "type": "mcq",
+      "stem": "The start/end symbol in a flowchart is:",
+      "options": {
+        "A": "Rectangle",
+        "B": "Diamond",
+        "C": "Oval",
+        "D": "Triangle"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Ovals or rounded rectangles signify the terminal points of a process."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0225",
+      "type": "mcq",
+      "stem": "Looping in programming refers to:",
+      "options": {
+        "A": "Stopping execution",
+        "B": "Repeating a set of instructions",
+        "C": "Printing output",
+        "D": "Inputting data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A loop allows a program to execute a block of code multiple times as long as a condition is met."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0226",
+      "type": "mcq",
+      "stem": "A high-level language is:",
+      "options": {
+        "A": "Machine dependent",
+        "B": "Difficult to understand",
+        "C": "Machine independent",
+        "D": "Binary only"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "High-level languages are designed to be human-readable and can run on different types of computer architectures."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0227",
+      "type": "mcq",
+      "stem": "Assembly language is classified as:",
+      "options": {
+        "A": "High-level language",
+        "B": "Low-level language",
+        "C": "Machine language",
+        "D": "Application software"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Assembly language is just one level above machine code and is specific to the hardware it was written for."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0228",
+      "type": "mcq",
+      "stem": "A translator in computing is used to:",
+      "options": {
+        "A": "Store data",
+        "B": "Convert one language to another",
+        "C": "Print output",
+        "D": "Delete files"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Translators (compilers, interpreters, assemblers) turn source code into machine-executable form."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0229",
+      "type": "mcq",
+      "stem": "Debugging refers to:",
+      "options": {
+        "A": "Writing a program",
+        "B": "Removing errors from a program",
+        "C": "Running a program",
+        "D": "Saving a program"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Debugging is the systematic process of finding and fixing errors in code."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0230",
+      "type": "mcq",
+      "stem": "Syntax in programming refers to:",
+      "options": {
+        "A": "Logic of program",
+        "B": "Grammar rules of language",
+        "C": "Output",
+        "D": "Hardware"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Syntax is the specific set of rules that defines the combinations of symbols that are considered to be a correctly structured program in that language."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0231",
+      "type": "mcq",
+      "stem": "A computer network is:",
+      "options": {
+        "A": "A single computer",
+        "B": "A group of connected computers",
+        "C": "A software",
+        "D": "A CPU"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A network is two or more computers linked together to share resources or exchange data."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0232",
+      "type": "mcq",
+      "stem": "A router is used to:",
+      "options": {
+        "A": "Store data",
+        "B": "Direct data packets between networks",
+        "C": "Print files",
+        "D": "Input data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Routers act as traffic controllers on the internet, sending packets of data to their intended destination."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0233",
+      "type": "mcq",
+      "stem": "A switch is used to:",
+      "options": {
+        "A": "Broadcast data to all devices",
+        "B": "Connect devices in a network",
+        "C": "Store files",
+        "D": "Display output"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A switch connects devices within a single network (like a LAN) and efficiently routes data between them."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0234",
+      "type": "mcq",
+      "stem": "A hub works by:",
+      "options": {
+        "A": "Sending data to one device",
+        "B": "Broadcasting data to all connected devices",
+        "C": "Storing data",
+        "D": "Processing data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unlike a switch, a hub sends every packet of data it receives to every port on the device."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0235",
+      "type": "mcq",
+      "stem": "Shutdown means:",
+      "options": {
+        "A": "Restart",
+        "B": "Turn off",
+        "C": "Input",
+        "D": "Output"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Shutdown properly closes programs and cuts power to the hardware."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0236",
+      "type": "mcq",
+      "stem": "A WAN covers:",
+      "options": {
+        "A": "A small room",
+        "B": "A building",
+        "C": "A small office",
+        "D": "A large geographical area"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "A Wide Area Network (WAN) spans across cities, countries, or even continents."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0237",
+      "type": "mcq",
+      "stem": "The internet is best described as:",
+      "options": {
+        "A": "A local network",
+        "B": "A personal computer",
+        "C": "A global network of networks",
+        "D": "A software"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The internet is a massive worldwide connection of millions of individual computer networks."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0238",
+      "type": "mcq",
+      "stem": "ISP stands for:",
+      "options": {
+        "A": "Internet Service Provider",
+        "B": "Internal Service Processor",
+        "C": "Internet Storage Provider",
+        "D": "Input Service Protocol"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "An ISP is a company that provides individuals and other companies access to the internet."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0239",
+      "type": "mcq",
+      "stem": "Downloading means:",
+      "options": {
+        "A": "Sending data from your computer",
+        "B": "Receiving data to your computer",
+        "C": "Deleting data",
+        "D": "Printing data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Downloading is the process of transferring files from a server or remote location to your own device."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0240",
+      "type": "mcq",
+      "stem": "Uploading means:",
+      "options": {
+        "A": "Receiving data",
+        "B": "Sending data from your computer",
+        "C": "Printing",
+        "D": "Saving"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Uploading is sending data from a local system to a remote system (like a website or server)."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0241",
+      "type": "mcq",
+      "stem": "Cybercrime refers to:",
+      "options": {
+        "A": "Legal computer use",
+        "B": "Illegal activities using computers",
+        "C": "Hardware failure",
+        "D": "Software update"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cybercrime is any criminal activity that involves a computer, networked device, or network."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0242",
+      "type": "mcq",
+      "stem": "Encryption is used to:",
+      "options": {
+        "A": "Speed up processing",
+        "B": "Protect data",
+        "C": "Store files",
+        "D": "Delete data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Encryption ensures that even if data is intercepted, it cannot be read without the decryption key."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0243",
+      "type": "mcq",
+      "stem": "A password is used for:",
+      "options": {
+        "A": "Printing",
+        "B": "Authentication",
+        "C": "Storage",
+        "D": "Input"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Passwords verify that the person attempting to access a system is who they claim to be."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0244",
+      "type": "mcq",
+      "stem": "A firewall helps to:",
+      "options": {
+        "A": "Increase speed",
+        "B": "Protect a network",
+        "C": "Store data",
+        "D": "Input data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Firewalls prevent unauthorized access to or from a private network."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0245",
+      "type": "mcq",
+      "stem": "Antivirus software is used to:",
+      "options": {
+        "A": "Create viruses",
+        "B": "Detect and remove malware",
+        "C": "Print documents",
+        "D": "Store data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Antivirus programs scan computer files for known malicious signatures and suspicious behavior."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0246",
+      "type": "mcq",
+      "stem": "Artificial Intelligence refers to:",
+      "options": {
+        "A": "Human thinking",
+        "B": "Machine intelligence",
+        "C": "Hardware",
+        "D": "Software only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "AI is the simulation of human intelligence processes by machines, especially computer systems."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0247",
+      "type": "mcq",
+      "stem": "Robotics involves:",
+      "options": {
+        "A": "Programming only",
+        "B": "Designing and building robots",
+        "C": "Networking",
+        "D": "Printing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Robotics is an interdisciplinary branch of engineering and science that includes mechanical, electrical, and computer engineering."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0248",
+      "type": "mcq",
+      "stem": "Data science focuses on:",
+      "options": {
+        "A": "Hardware repair",
+        "B": "Data analysis and insights",
+        "C": "Printing",
+        "D": "Gaming"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Data science uses scientific methods, processes, and algorithms to extract knowledge and insights from structured and unstructured data."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0249",
+      "type": "mcq",
+      "stem": "Booting is:",
+      "options": {
+        "A": "Shutting down",
+        "B": "Starting system",
+        "C": "Printing",
+        "D": "Saving"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Booting is the process of loading the OS and initializing hardware."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0250",
+      "type": "mcq",
+      "stem": "Information Technology (IT) refers to:",
+      "options": {
+        "A": "Use of computers to manage information",
+        "B": "Hardware only",
+        "C": "Software only",
+        "D": "Networking only"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "IT encompasses the use of any computers, storage, networking and other physical devices, infrastructure and processes to create, process, store, secure and exchange all forms of electronic data."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0251",
+      "type": "mcq",
+      "stem": "A search engine is used to:",
+      "options": {
+        "A": "Write code",
+        "B": "Find information on the web",
+        "C": "Store files",
+        "D": "Print"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Search engines like Google index the web to help users locate specific information based on keywords."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0252",
+      "type": "mcq",
+      "stem": "The 'S' in HTTPS stands for:",
+      "options": {
+        "A": "System",
+        "B": "Secure",
+        "C": "Storage",
+        "D": "Software"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "HTTPS indicates that the communication between the browser and the website is encrypted using SSL/TLS."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0253",
+      "type": "mcq",
+      "stem": "A hyperlink is used to:",
+      "options": {
+        "A": "Delete files",
+        "B": "Link to another web page",
+        "C": "Increase speed",
+        "D": "Print"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hyperlinks are the primary navigation tool of the web, allowing users to jump between different documents or sites."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0254",
+      "type": "mcq",
+      "stem": "A web server:",
+      "options": {
+        "A": "Accesses websites",
+        "B": "Hosts and delivers websites",
+        "C": "Is a hardware mouse",
+        "D": "Prints documents"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A web server stores website files and sends them to users' browsers when requested."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0255",
+      "type": "mcq",
+      "stem": "Which of the following is an example of an ISP?",
+      "options": {
+        "A": "Google",
+        "B": "MTN",
+        "C": "Windows",
+        "D": "Excel"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "MTN provides telecommunications and internet access services, acting as an Internet Service Provider."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0256",
+      "type": "mcq",
+      "stem": "Social media marketing involves:",
+      "options": {
+        "A": "Printing",
+        "B": "Promoting products on social platforms",
+        "C": "Writing code",
+        "D": "Hardware repair"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It uses social networks to reach customers, build brands, and increase sales."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0257",
+      "type": "mcq",
+      "stem": "A domain name is:",
+      "options": {
+        "A": "Hardware",
+        "B": "A website's human-readable address",
+        "C": "A programming language",
+        "D": "A virus"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Domain names (like 'google.com') replace numerical IP addresses to make them easier for people to remember."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0258",
+      "type": "mcq",
+      "stem": "Which of these is a top-level domain (TLD)?",
+      "options": {
+        "A": ".com",
+        "B": "www",
+        "C": "http",
+        "D": "index"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": ".com is one of the most common suffixes found at the end of a web address."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0259",
+      "type": "mcq",
+      "stem": "E-mail attachments are:",
+      "options": {
+        "A": "Deleted files",
+        "B": "Files sent along with an email",
+        "C": "Programming codes",
+        "D": "Hardware tools"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Attachments allow users to share documents, images, and other files via electronic mail."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0260",
+      "type": "mcq",
+      "stem": "Wi-Fi uses _____ to provide network access.",
+      "options": {
+        "A": "Cables",
+        "B": "Radio waves",
+        "C": "Sound",
+        "D": "Light"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Wi-Fi is a wireless networking technology that uses radio frequency signals to transmit data."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0261",
+      "type": "mcq",
+      "stem": "Primary memory includes:",
+      "options": {
+        "A": "Hard disk",
+        "B": "RAM and ROM",
+        "C": "Flash drive",
+        "D": "CD-ROM"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Primary memory is memory that is directly accessible by the CPU."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0262",
+      "type": "mcq",
+      "stem": "Which memory is used to store the BIOS?",
+      "options": {
+        "A": "RAM",
+        "B": "ROM",
+        "C": "Cache",
+        "D": "Register"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The BIOS must be available during startup, so it is stored in non-volatile ROM."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0263",
+      "type": "mcq",
+      "stem": "Secondary storage is also known as:",
+      "options": {
+        "A": "Auxiliary storage",
+        "B": "Main memory",
+        "C": "Cache",
+        "D": "Primary memory"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Secondary storage provides long-term, non-volatile data storage outside of the primary memory."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0264",
+      "type": "mcq",
+      "stem": "A bit can be:",
+      "options": {
+        "A": "1 or 2",
+        "B": "0 or 1",
+        "C": "A or B",
+        "D": "High or Low"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A bit is a binary digit representing the two states of electricity: on (1) or off (0)."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0265",
+      "type": "mcq",
+      "stem": "The process of starting a computer is:",
+      "options": {
+        "A": "Loading",
+        "B": "Booting",
+        "C": "Processing",
+        "D": "Saving"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Booting is the sequence of events that occurs from the time power is applied until the OS is ready."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0266",
+      "type": "mcq",
+      "stem": "Which of the following is a magnetic storage device?",
+      "options": {
+        "A": "Flash drive",
+        "B": "Hard Disk Drive",
+        "C": "CD",
+        "D": "DVD"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "HDDs use magnetized platters to store data, unlike flash drives which use electronic chips."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0267",
+      "type": "mcq",
+      "stem": "Optical storage uses _____ to read/write data.",
+      "options": {
+        "A": "Magnets",
+        "B": "Lasers",
+        "C": "Electricity",
+        "D": "Sound"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Devices like CDs and DVDs use laser beams to interpret the pits and lands on the disc surface."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0268",
+      "type": "mcq",
+      "stem": "A flash drive uses _____ memory.",
+      "options": {
+        "A": "Magnetic",
+        "B": "Optical",
+        "C": "Solid-state",
+        "D": "Analog"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Flash drives use 'flash' or solid-state memory, which has no moving parts."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0269",
+      "type": "mcq",
+      "stem": "The capacity of a CD is typically around:",
+      "options": {
+        "A": "700 MB",
+        "B": "4.7 GB",
+        "C": "1 TB",
+        "D": "256 KB"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Standard Compact Discs (CDs) usually have a storage capacity of roughly 700 megabytes."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0270",
+      "type": "mcq",
+      "stem": "The capacity of a standard DVD is around:",
+      "options": {
+        "A": "700 MB",
+        "B": "4.7 GB",
+        "C": "100 GB",
+        "D": "1 TB"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A standard single-layer DVD can hold significantly more data than a CD, typically 4.7 gigabytes."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0271",
+      "type": "mcq",
+      "stem": "Operating systems provide a(n) _____ between user and hardware.",
+      "options": {
+        "A": "Barrier",
+        "B": "Interface",
+        "C": "Code",
+        "D": "Error"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The OS acts as a bridge, allowing users to interact with complex hardware without knowing technical details."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0272",
+      "type": "mcq",
+      "stem": "An example of a mobile operating system is:",
+      "options": {
+        "A": "Windows 10",
+        "B": "Android",
+        "C": "Linux",
+        "D": "Unix"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Android is a mobile OS developed by Google, designed specifically for touchscreens like smartphones."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0273",
+      "type": "mcq",
+      "stem": "Which software manages file organization?",
+      "options": {
+        "A": "Browser",
+        "B": "Operating System",
+        "C": "Word Processor",
+        "D": "Game"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The OS includes a file system that manages how data is named, stored, and organized on drives."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0274",
+      "type": "mcq",
+      "stem": "OS is:",
+      "options": {
+        "A": "Hardware",
+        "B": "System software",
+        "C": "Application",
+        "D": "Output"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Operating System is the primary system software that manages computer operations."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0275",
+      "type": "mcq",
+      "stem": "A Command Line Interface (CLI) requires:",
+      "options": {
+        "A": "A mouse",
+        "B": "Typing commands",
+        "C": "A touch screen",
+        "D": "Voice control"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In a CLI, the user interacts with the system by typing text-based instructions."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0276",
+      "type": "mcq",
+      "stem": "A task manager is used to:",
+      "options": {
+        "A": "Type documents",
+        "B": "Monitor running programs",
+        "C": "Browse the web",
+        "D": "Draw"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Task managers show system performance and allow users to end unresponsive applications."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0277",
+      "type": "mcq",
+      "stem": "Device drivers are types of:",
+      "options": {
+        "A": "Application software",
+        "B": "System software",
+        "C": "Hardware",
+        "D": "Data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Drivers are system-level programs that allow the OS to communicate with specific hardware devices."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0278",
+      "type": "mcq",
+      "stem": "Formatting a disk:",
+      "options": {
+        "A": "Saves all data",
+        "B": "Prepares it for data storage",
+        "C": "Repairs the screen",
+        "D": "Prints it"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Formatting sets up the file system on a drive, which usually erases existing data."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0279",
+      "type": "mcq",
+      "stem": "Multitasking refers to:",
+      "options": {
+        "A": "One person using two computers",
+        "B": "Running multiple apps simultaneously",
+        "C": "Deleting many files",
+        "D": "Fast typing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The OS manages CPU time to give the appearance of multiple programs running at once."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0280",
+      "type": "mcq",
+      "stem": "Windows, macOS, and Linux are all:",
+      "options": {
+        "A": "Browsers",
+        "B": "Operating Systems",
+        "C": "Hardware",
+        "D": "Programming languages"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "These are the main platforms used to manage computer hardware and software resources."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0281",
+      "type": "mcq",
+      "stem": "The base of the binary number system is:",
+      "options": {
+        "A": "10",
+        "B": "2",
+        "C": "8",
+        "D": "16"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The binary system uses only two digits: 0 and 1."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0282",
+      "type": "mcq",
+      "stem": "The base of the decimal number system is:",
+      "options": {
+        "A": "2",
+        "B": "10",
+        "C": "16",
+        "D": "8"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Decimal is the base-10 system used in everyday life, featuring digits 0 through 9."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0283",
+      "type": "mcq",
+      "stem": "The hexadecimal system has a base of:",
+      "options": {
+        "A": "10",
+        "B": "16",
+        "C": "2",
+        "D": "8"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hexadecimal uses 16 symbols: 0-9 and A-F."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0284",
+      "type": "mcq",
+      "stem": "In hex, the letter 'A' represents:",
+      "options": {
+        "A": "1",
+        "B": "10",
+        "C": "11",
+        "D": "15"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hexadecimal counting goes 0-9, then uses A to represent 10."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0285",
+      "type": "mcq",
+      "stem": "The binary number 10 in decimal is:",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "10"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In binary, 10 is (1 * 2^1) + (0 * 2^0) = 2."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0286",
+      "type": "mcq",
+      "stem": "The binary number 11 in decimal is:",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "11"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In binary, 11 is (1 * 2^1) + (1 * 2^0) = 3."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0287",
+      "type": "mcq",
+      "stem": "Conversion of 4 (decimal) to binary is:",
+      "options": {
+        "A": "10",
+        "B": "11",
+        "C": "100",
+        "D": "111"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "4 in binary is (1 * 2^2) + (0 * 2^1) + (0 * 2^0) = 100."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0288",
+      "type": "mcq",
+      "stem": "Which digit is NOT used in binary?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "None"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Binary systems only recognize two states: 0 and 1."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0289",
+      "type": "mcq",
+      "stem": "Logic gates are used in:",
+      "options": {
+        "A": "Digital circuits",
+        "B": "Manual typing",
+        "C": "Printers",
+        "D": "Monitors"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Logic gates (AND, OR, NOT) are the building blocks of digital electronic hardware."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0290",
+      "type": "mcq",
+      "stem": "The 'AND' gate output is 1 only if:",
+      "options": {
+        "A": "One input is 1",
+        "B": "Both inputs are 1",
+        "C": "No input is 1",
+        "D": "Inputs are different"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An AND gate requires all of its inputs to be true (1) to produce a true output."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0291",
+      "type": "mcq",
+      "stem": "Algorithm efficiency is measured by:",
+      "options": {
+        "A": "Color",
+        "B": "Time and Space complexity",
+        "C": "Font size",
+        "D": "Price"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Efficiency depends on how much time a program takes to run and how much memory it uses."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0292",
+      "type": "mcq",
+      "stem": "Pseudo-code is:",
+      "options": {
+        "A": "Real code",
+        "B": "Informal description of an algorithm",
+        "C": "A virus",
+        "D": "Hardware"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Pseudo-code uses plain language to outline logic without strictly following programming syntax."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0293",
+      "type": "mcq",
+      "stem": "A sequence of instructions is called a:",
+      "options": {
+        "A": "Variable",
+        "B": "Program",
+        "C": "Constant",
+        "D": "Data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A computer program is a collection of instructions that performs a specific task."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0294",
+      "type": "mcq",
+      "stem": "Top-down design involves:",
+      "options": {
+        "A": "Starting with details",
+        "B": "Breaking a large problem into smaller parts",
+        "C": "Ignoring the problem",
+        "D": "Only writing code"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It is a strategy of solving complex problems by dividing them into manageable sub-tasks."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0295",
+      "type": "mcq",
+      "stem": "A flowline in a flowchart shows:",
+      "options": {
+        "A": "Process",
+        "B": "Direction of flow",
+        "C": "Input",
+        "D": "Start"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Arrows or lines indicate the sequence in which the steps are executed."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0296",
+      "type": "mcq",
+      "stem": "Annotation in a flowchart is for:",
+      "options": {
+        "A": "Math",
+        "B": "Adding comments/remarks",
+        "C": "Output",
+        "D": "Decision"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Annotations provide extra information or explanation for a particular step."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0297",
+      "type": "mcq",
+      "stem": "A connector in a flowchart:",
+      "options": {
+        "A": "Deletes steps",
+        "B": "Joins different parts of a flowchart",
+        "C": "Is hardware",
+        "D": "Is a virus"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Connectors allow a flowchart to continue on a different page or section of the diagram."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0298",
+      "type": "mcq",
+      "stem": "Selection in programming is done using:",
+      "options": {
+        "A": "Loops",
+        "B": "IF-THEN statements",
+        "C": "Constants",
+        "D": "Variables"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Selection structures allow the program to choose a path based on conditions."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0299",
+      "type": "mcq",
+      "stem": "Iteration is another word for:",
+      "options": {
+        "A": "Input",
+        "B": "Looping",
+        "C": "Output",
+        "D": "Selection"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Iteration refers to the repetition of a process in a computer program."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0300",
+      "type": "mcq",
+      "stem": "Dry running a program means:",
+      "options": {
+        "A": "Washing the computer",
+        "B": "Testing logic on paper",
+        "C": "Deleting code",
+        "D": "Printing code"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Dry running is manually tracing the execution of code to find logic errors before running it on a computer."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0301",
+      "type": "mcq",
+      "stem": "BASIC was developed for:",
+      "options": {
+        "A": "Experts only",
+        "B": "Education and beginners",
+        "C": "Hardware design",
+        "D": "Gaming"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "BASIC (Beginner's All-purpose Symbolic Instruction Code) was designed to be easy for non-science students to use."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0302",
+      "type": "mcq",
+      "stem": "A line number in BASIC is:",
+      "options": {
+        "A": "Optional",
+        "B": "Required (in traditional BASIC)",
+        "C": "A variable",
+        "D": "A constant"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Traditional BASIC used line numbers to determine the order of instruction execution."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0303",
+      "type": "mcq",
+      "stem": "The REM statement is for:",
+      "options": {
+        "A": "Removing code",
+        "B": "Remarks/Comments",
+        "C": "Running code",
+        "D": "Reading data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "REM (Remark) statements are ignored by the computer and are used to explain the code to humans."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0304",
+      "type": "mcq",
+      "stem": "Which command starts a BASIC program?",
+      "options": {
+        "A": "START",
+        "B": "RUN",
+        "C": "BEGIN",
+        "D": "EXECUTE"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The RUN command tells the BASIC interpreter to begin executing the instructions."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0305",
+      "type": "mcq",
+      "stem": "The LIST command is used to:",
+      "options": {
+        "A": "Delete programs",
+        "B": "Show the program code",
+        "C": "Save a file",
+        "D": "Print output"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "LIST displays the current program's lines on the screen."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0306",
+      "type": "mcq",
+      "stem": "The END statement:",
+      "options": {
+        "A": "Starts the program",
+        "B": "Terminates program execution",
+        "C": "Is a loop",
+        "D": "Inputs data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "END tells the computer that the program has reached its conclusion."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0307",
+      "type": "mcq",
+      "stem": "A string variable name in BASIC usually ends with:",
+      "options": {
+        "A": "#",
+        "B": "$",
+        "C": "%",
+        "D": "&"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The dollar sign ($) identifies a variable that holds text (a string) rather than a number."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0308",
+      "type": "mcq",
+      "stem": "Which of these is a numeric variable?",
+      "options": {
+        "A": "NAME$",
+        "B": "AGE",
+        "C": "CITY$",
+        "D": "DATA$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Numeric variables do not have special suffixes like '$'."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0309",
+      "type": "mcq",
+      "stem": "The symbol for multiplication in BASIC is:",
+      "options": {
+        "A": "x",
+        "B": "*",
+        "C": ".",
+        "D": "×"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In nearly all programming languages, the asterisk (*) represents multiplication."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0310",
+      "type": "mcq",
+      "stem": "The symbol for division in BASIC is:",
+      "options": {
+        "A": "÷",
+        "B": "\\",
+        "C": "/",
+        "D": ":"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The forward slash (/) is the standard operator for division in programming."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0311",
+      "type": "mcq",
+      "stem": "Microsoft Word is a:",
+      "options": {
+        "A": "Spreadsheet",
+        "B": "Word processor",
+        "C": "Database",
+        "D": "Browser"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It is designed for the creation, editing, and formatting of text-based documents."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0312",
+      "type": "mcq",
+      "stem": "To make text darker, use:",
+      "options": {
+        "A": "Italic",
+        "B": "Bold",
+        "C": "Underline",
+        "D": "Strikethrough"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Bold formatting increases the thickness of characters to make them stand out."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0313",
+      "type": "mcq",
+      "stem": "The 'Save As' option is used to:",
+      "options": {
+        "A": "Delete a file",
+        "B": "Save a file with a new name",
+        "C": "Print a file",
+        "D": "Close a file"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Save As allows you to create a copy of a document or change its format/location."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0314",
+      "type": "mcq",
+      "stem": "Margins refer to:",
+      "options": {
+        "A": "The center of the page",
+        "B": "The white space around the edges",
+        "C": "The text size",
+        "D": "The page number"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Margins define the boundary between the text and the edge of the paper."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0315",
+      "type": "mcq",
+      "stem": "Portrait and Landscape are types of:",
+      "options": {
+        "A": "Paper size",
+        "B": "Page orientation",
+        "C": "Margins",
+        "D": "Indentation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Orientation determines whether the page is vertical (Portrait) or horizontal (Landscape)."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0316",
+      "type": "mcq",
+      "stem": "Header appears at the:",
+      "options": {
+        "A": "Bottom",
+        "B": "Top",
+        "C": "Left",
+        "D": "Right"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A header is information that appears at the top margin of every page."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0317",
+      "type": "mcq",
+      "stem": "Footer appears at the:",
+      "options": {
+        "A": "Top",
+        "B": "Bottom",
+        "C": "Center",
+        "D": "Edge"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A footer is information that appears at the bottom margin of every page."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0318",
+      "type": "mcq",
+      "stem": "Alignment 'Center' means:",
+      "options": {
+        "A": "Text is at left",
+        "B": "Text is at right",
+        "C": "Text is in the middle",
+        "D": "Text is justified"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Center alignment places text equal distance from the left and right margins."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0319",
+      "type": "mcq",
+      "stem": "Spell check identifies:",
+      "options": {
+        "A": "Color errors",
+        "B": "Spelling and grammar errors",
+        "C": "Hardware errors",
+        "D": "Save errors"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Word processors use built-in dictionaries to flag words that might be misspelled."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0320",
+      "type": "mcq",
+      "stem": "Bullet points are used for:",
+      "options": {
+        "A": "Paragraphs",
+        "B": "Unordered lists",
+        "C": "Equations",
+        "D": "Page numbers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Bullets help organize information into easy-to-read lists without a specific numerical sequence."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0321",
+      "type": "mcq",
+      "stem": "Microsoft Excel is used for:",
+      "options": {
+        "A": "Typing letters",
+        "B": "Spreadsheets and calculations",
+        "C": "Graphics",
+        "D": "Videos"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Excel is designed for organizing data in grids and performing mathematical analysis."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0322",
+      "type": "mcq",
+      "stem": "A workbook in Excel is:",
+      "options": {
+        "A": "A single cell",
+        "B": "A collection of worksheets",
+        "C": "A chart",
+        "D": "A formula"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A workbook is the entire file that can contain multiple individual sheets."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0323",
+      "type": "mcq",
+      "stem": "Excel formulas must start with:",
+      "options": {
+        "A": "+",
+        "B": "=",
+        "C": "-",
+        "D": "*"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The equals sign tells Excel that the following characters are a formula to be calculated."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0324",
+      "type": "mcq",
+      "stem": "Sum() function is used to:",
+      "options": {
+        "A": "Subtract",
+        "B": "Add a range of numbers",
+        "C": "Multiply",
+        "D": "Divide"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "SUM is the basic function for calculating the total of selected numeric cells."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0325",
+      "type": "mcq",
+      "stem": "Average() function is for:",
+      "options": {
+        "A": "Finding the highest",
+        "B": "Finding the mean",
+        "C": "Finding the lowest",
+        "D": "Counting"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The AVERAGE function adds the values and divides by the count of items."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0326",
+      "type": "mcq",
+      "stem": "Max() function finds the:",
+      "options": {
+        "A": "Smallest value",
+        "B": "Largest value",
+        "C": "Middle value",
+        "D": "Total"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "MAX stands for Maximum, returning the highest number in a group."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0327",
+      "type": "mcq",
+      "stem": "Min() function finds the:",
+      "options": {
+        "A": "Largest",
+        "B": "Smallest",
+        "C": "Average",
+        "D": "Sum"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "MIN stands for Minimum, returning the lowest number in a group."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0328",
+      "type": "mcq",
+      "stem": "Charts are used for:",
+      "options": {
+        "A": "Typing",
+        "B": "Visual data representation",
+        "C": "Storage",
+        "D": "Input"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Charts like pie or bar graphs help identify trends and patterns in data visually."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0329",
+      "type": "mcq",
+      "stem": "Sorting data means:",
+      "options": {
+        "A": "Deleting data",
+        "B": "Arranging data in order",
+        "C": "Changing colors",
+        "D": "Printing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Sorting can be done alphabetically (A-Z) or numerically."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0330",
+      "type": "mcq",
+      "stem": "Filtering data helps to:",
+      "options": {
+        "A": "Add more data",
+        "B": "Show only specific data",
+        "C": "Delete all data",
+        "D": "Print all data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Filtering hides rows that do not meet the user's specific criteria."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0331",
+      "type": "mcq",
+      "stem": "Microsoft PowerPoint is for:",
+      "options": {
+        "A": "Databases",
+        "B": "Presentations",
+        "C": "Calculations",
+        "D": "Coding"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It allows users to create visual slideshows to accompany a talk or speech."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0332",
+      "type": "mcq",
+      "stem": "A slide is:",
+      "options": {
+        "A": "A single page of a presentation",
+        "B": "A whole file",
+        "C": "A chart",
+        "D": "A formula"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Presentations are composed of multiple slides shown in sequence."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0333",
+      "type": "mcq",
+      "stem": "Transitions are effects between:",
+      "options": {
+        "A": "Words",
+        "B": "Slides",
+        "C": "Images",
+        "D": "Files"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Transitions control how the screen changes as you move from one slide to the next."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0334",
+      "type": "mcq",
+      "stem": "Animation refers to effects on:",
+      "options": {
+        "A": "Slides",
+        "B": "Objects within a slide",
+        "C": "Files",
+        "D": "Storage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Animations are visual effects applied to individual items like text, images, or shapes on a single slide."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0335",
+      "type": "mcq",
+      "stem": "To start a slideshow, press:",
+      "options": {
+        "A": "F1",
+        "B": "F5",
+        "C": "F10",
+        "D": "Esc"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "F5 is the standard keyboard shortcut to begin a PowerPoint presentation from the first slide."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0336",
+      "type": "mcq",
+      "stem": "Microsoft Access is a:",
+      "options": {
+        "A": "Spreadsheet",
+        "B": "Database management system",
+        "C": "Word processor",
+        "D": "Browser"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Access is used to create and manage structured relational databases."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0337",
+      "type": "mcq",
+      "stem": "A primary key is:",
+      "options": {
+        "A": "A regular key",
+        "B": "A unique identifier for a record",
+        "C": "A password",
+        "D": "A virus"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The primary key ensures that every entry in a database table is unique and can be easily found."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0338",
+      "type": "mcq",
+      "stem": "A table in Access contains:",
+      "options": {
+        "A": "Only images",
+        "B": "Records and fields",
+        "C": "Only text",
+        "D": "Hardware"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Tables are the foundation of a database, organized into rows (records) and columns (fields)."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0339",
+      "type": "mcq",
+      "stem": "A query is used to:",
+      "options": {
+        "A": "Delete data",
+        "B": "Search and retrieve specific data",
+        "C": "Draw",
+        "D": "Type"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Queries are questions asked of the database to pull out only the information needed."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0340",
+      "type": "mcq",
+      "stem": "A form in Access is used for:",
+      "options": {
+        "A": "Calculations",
+        "B": "Easy data entry",
+        "C": "Printing only",
+        "D": "Coding"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Forms provide a user-friendly interface for adding or viewing records in a database."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0341",
+      "type": "mcq",
+      "stem": "Computer networking allows:",
+      "options": {
+        "A": "Resource sharing",
+        "B": "Deleting files",
+        "C": "Hardware failure",
+        "D": "Only gaming"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Networking allows devices to share hardware (like printers) and software/data files."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0342",
+      "type": "mcq",
+      "stem": "The 'server' in a network:",
+      "options": {
+        "A": "Requests data",
+        "B": "Provides resources to other computers",
+        "C": "Is a monitor",
+        "D": "Is a keyboard"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Servers are powerful computers that manage access to a centralized resource or service in a network."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0343",
+      "type": "mcq",
+      "stem": "The 'client' in a network:",
+      "options": {
+        "A": "Provides data",
+        "B": "Requests services from a server",
+        "C": "Is a printer",
+        "D": "Is a cable"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Clients are the workstations or devices that users use to access the network."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0344",
+      "type": "mcq",
+      "stem": "Star topology uses a:",
+      "options": {
+        "A": "Circle",
+        "B": "Central hub/switch",
+        "C": "Single cable",
+        "D": "No cables"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In a star network, all nodes are connected individually to a central point."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0345",
+      "type": "mcq",
+      "stem": "Bus topology uses a:",
+      "options": {
+        "A": "Central hub",
+        "B": "Single backbone cable",
+        "C": "Ring",
+        "D": "Wireless only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "All devices in a bus network share a single communication line."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0346",
+      "type": "mcq",
+      "stem": "A MAN covers a:",
+      "options": {
+        "A": "Room",
+        "B": "City",
+        "C": "Country",
+        "D": "World"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Metropolitan Area Network (MAN) connects LANs across a city-wide geographical area."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0347",
+      "type": "mcq",
+      "stem": "Bluetooth is used for:",
+      "options": {
+        "A": "Long distance",
+        "B": "Short-range wireless communication",
+        "C": "Printing books",
+        "D": "Storage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Bluetooth is designed for connecting devices (like phones and headphones) over very short distances."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0348",
+      "type": "mcq",
+      "stem": "A firewall is like a:",
+      "options": {
+        "A": "Door",
+        "B": "Security guard",
+        "C": "Window",
+        "D": "Key"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It sits between networks to permit or block traffic based on security rules."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0349",
+      "type": "mcq",
+      "stem": "E-mail stands for:",
+      "options": {
+        "A": "Easy mail",
+        "B": "Electronic mail",
+        "C": "Electric mail",
+        "D": "Efficient mail"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Email is the digital equivalent of sending a letter through the postal service."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0350",
+      "type": "mcq",
+      "stem": "Spam is:",
+      "options": {
+        "A": "Important",
+        "B": "Unsolicited junk email",
+        "C": "A virus",
+        "D": "Hardware"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Spam is often sent in bulk to millions of users for advertising or malicious purposes."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0351",
+      "type": "mcq",
+      "stem": "Cybersecurity prevents:",
+      "options": {
+        "A": "Fast speed",
+        "B": "Unauthorized access",
+        "C": "Storage",
+        "D": "Printing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Security measures protect data from being viewed or stolen by hackers."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0352",
+      "type": "mcq",
+      "stem": "Two-factor authentication (2FA) adds:",
+      "options": {
+        "A": "More speed",
+        "B": "An extra layer of security",
+        "C": "More storage",
+        "D": "Complexity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "2FA requires both a password and a second code (like one sent to a phone) to log in."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0353",
+      "type": "mcq",
+      "stem": "Malware stands for:",
+      "options": {
+        "A": "Main software",
+        "B": "Malicious software",
+        "C": "Multi software",
+        "D": "Manual software"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It is an umbrella term for any software intentionally designed to cause damage to a computer or network."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0354",
+      "type": "mcq",
+      "stem": "A worm is a type of malware that:",
+      "options": {
+        "A": "Needs a host file",
+        "B": "Self-replicates without a host",
+        "C": "Is a hardware",
+        "D": "Is an antivirus"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unlike a virus, a worm can spread itself through a network without needing to be attached to an existing program."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0355",
+      "type": "mcq",
+      "stem": "Ransomware:",
+      "options": {
+        "A": "Speeds up computer",
+        "B": "Locks files and demands payment",
+        "C": "Cleans computer",
+        "D": "Is free"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ransomware encrypts a victim's files and asks for money to provide the decryption key."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0356",
+      "type": "mcq",
+      "stem": "Ethics in computing means:",
+      "options": {
+        "A": "Hacking",
+        "B": "Using computers responsibly",
+        "C": "Piracy",
+        "D": "Spamming"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It involves following moral guidelines in the use of technology and information."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0357",
+      "type": "mcq",
+      "stem": "Social engineering involves:",
+      "options": {
+        "A": "Writing code",
+        "B": "Manipulating people to give up info",
+        "C": "Hardware design",
+        "D": "Networking"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It uses psychological manipulation rather than technical hacking to gain access to systems."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0358",
+      "type": "mcq",
+      "stem": "Data integrity means:",
+      "options": {
+        "A": "Data is deleted",
+        "B": "Data is accurate and consistent",
+        "C": "Data is shared",
+        "D": "Data is fast"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Integrity ensures that data has not been altered or corrupted during storage or transmission."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0359",
+      "type": "mcq",
+      "stem": "A digital signature is for:",
+      "options": {
+        "A": "Drawing",
+        "B": "Authenticity and non-repudiation",
+        "C": "Input",
+        "D": "Storage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Digital signatures verify that a message or document was created by a known sender and was not altered."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0360",
+      "type": "mcq",
+      "stem": "Plagiarism is:",
+      "options": {
+        "A": "Sharing code",
+        "B": "Using someone's work without credit",
+        "C": "Legal copying",
+        "D": "Hard work"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In the digital world, this often refers to copying text, images, or code and claiming it as your own."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0361",
+      "type": "mcq",
+      "stem": "Cloud computing provides services over the:",
+      "options": {
+        "A": "Internal disk",
+        "B": "Internet",
+        "C": "Printer",
+        "D": "Monitor"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cloud services allow users to access software and storage via the web instead of locally."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0362",
+      "type": "mcq",
+      "stem": "SaaS stands for:",
+      "options": {
+        "A": "Software as a Service",
+        "B": "Storage as a System",
+        "C": "System as a Software",
+        "D": "Simple as a Service"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "SaaS is a software distribution model where applications are hosted by a provider and made available over the internet."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0363",
+      "type": "mcq",
+      "stem": "PaaS stands for:",
+      "options": {
+        "A": "Platform as a Service",
+        "B": "Power as a System",
+        "C": "Program as a Service",
+        "D": "Price as a Service"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "PaaS provides a framework for developers that they can build upon and use to create customized applications."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0364",
+      "type": "mcq",
+      "stem": "IaaS stands for:",
+      "options": {
+        "A": "Infrastructure as a Service",
+        "B": "Input as a System",
+        "C": "Info as a Service",
+        "D": "Internal as a System"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "IaaS provides fundamental computing resources like virtual servers and storage over the internet."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0365",
+      "type": "mcq",
+      "stem": "Example of cloud storage:",
+      "options": {
+        "A": "Hard disk",
+        "B": "Dropbox",
+        "C": "RAM",
+        "D": "ROM"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Dropbox allows users to store files on their servers and access them from any device."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0366",
+      "type": "mcq",
+      "stem": "Virtualization allows:",
+      "options": {
+        "A": "Bigger hardware",
+        "B": "Running multiple OS on one physical machine",
+        "C": "Less storage",
+        "D": "Printing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Virtualization creates software-based representations of physical resources."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0367",
+      "type": "mcq",
+      "stem": "Big Data refers to:",
+      "options": {
+        "A": "Large fonts",
+        "B": "Extremely large and complex datasets",
+        "C": "Big computers",
+        "D": "Many monitors"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Big Data describes data that is too large or complex to be dealt with by traditional data-processing software."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0368",
+      "type": "mcq",
+      "stem": "IoT stands for:",
+      "options": {
+        "A": "Internet of Things",
+        "B": "Input of Tech",
+        "C": "Internet of Tasks",
+        "D": "Info of Things"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "IoT refers to the network of physical objects embedded with sensors and software to connect and exchange data."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0369",
+      "type": "mcq",
+      "stem": "A 'smart' home uses:",
+      "options": {
+        "A": "Traditional tools",
+        "B": "IoT devices",
+        "C": "No tech",
+        "D": "Paper"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Smart homes connect appliances like lights and thermostats to the internet for remote control."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0370",
+      "type": "mcq",
+      "stem": "Machine learning is a subset of:",
+      "options": {
+        "A": "Hardware",
+        "B": "Artificial Intelligence",
+        "C": "Networking",
+        "D": "Storage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Machine learning uses algorithms that allow computers to learn from and make predictions based on data."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0371",
+      "type": "mcq",
+      "stem": "Algorithm is a:",
+      "options": {
+        "A": "Computer",
+        "B": "Step-by-step process",
+        "C": "Software",
+        "D": "Hardware"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It is a finite set of instructions to solve a particular problem."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0372",
+      "type": "mcq",
+      "stem": "The flowline in a flowchart is a/an:",
+      "options": {
+        "A": "Rectangle",
+        "B": "Arrow",
+        "C": "Diamond",
+        "D": "Oval"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Arrows show the direction of logical flow in the diagram."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0373",
+      "type": "mcq",
+      "stem": "Decision box is usually a:",
+      "options": {
+        "A": "Circle",
+        "B": "Diamond",
+        "C": "Square",
+        "D": "Oval"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The diamond shape represents a choice, such as Yes/No or True/False."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0374",
+      "type": "mcq",
+      "stem": "Process box is a:",
+      "options": {
+        "A": "Diamond",
+        "B": "Rectangle",
+        "C": "Oval",
+        "D": "Parallelogram"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Rectangles are used for actions or processing steps."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0375",
+      "type": "mcq",
+      "stem": "Input/Output box is a:",
+      "options": {
+        "A": "Diamond",
+        "B": "Rectangle",
+        "C": "Oval",
+        "D": "Parallelogram"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Parallelograms indicate when the user is expected to provide data or when the system produces a result."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0376",
+      "type": "mcq",
+      "stem": "Traditional BASIC uses:",
+      "options": {
+        "A": "No numbers",
+        "B": "Line numbers",
+        "C": "Only letters",
+        "D": "Images"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Line numbers helped order the execution of instructions before modern structured programming."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0377",
+      "type": "mcq",
+      "stem": "PRINT is used for:",
+      "options": {
+        "A": "Input",
+        "B": "Displaying output",
+        "C": "Saving",
+        "D": "Deleting"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The PRINT command shows text or calculation results on the screen."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0378",
+      "type": "mcq",
+      "stem": "INPUT is used for:",
+      "options": {
+        "A": "Output",
+        "B": "Getting user data",
+        "C": "Saving",
+        "D": "Printing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The INPUT statement pauses the program and waits for the user to type something."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0379",
+      "type": "mcq",
+      "stem": "LET is used for:",
+      "options": {
+        "A": "Loops",
+        "B": "Assignment",
+        "C": "Input",
+        "D": "Output"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "LET assigns a value to a variable name."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0380",
+      "type": "mcq",
+      "stem": "GOTO is used for:",
+      "options": {
+        "A": "Input",
+        "B": "Unconditional jump",
+        "C": "Output",
+        "D": "Storage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "GOTO moves the execution to a specified line number without checking any conditions."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0381",
+      "type": "mcq",
+      "stem": "Database is a collection of:",
+      "options": {
+        "A": "Hardware",
+        "B": "Related data",
+        "C": "Printers",
+        "D": "Monitors"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A database organizes information so it can be easily accessed and managed."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0382",
+      "type": "mcq",
+      "stem": "Table contains:",
+      "options": {
+        "A": "Rows and columns",
+        "B": "Files",
+        "C": "Programs",
+        "D": "Hardware"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Data in a relational database is stored in structured grids called tables."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0383",
+      "type": "mcq",
+      "stem": "Record is a:",
+      "options": {
+        "A": "Row",
+        "B": "Column",
+        "C": "File",
+        "D": "Table"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A record (or row) contains all the information for one specific item in the table."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0384",
+      "type": "mcq",
+      "stem": "Field is a:",
+      "options": {
+        "A": "Row",
+        "B": "Column",
+        "C": "Table",
+        "D": "File"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A field (or column) contains a specific piece of information (like a name or date) for every record."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0385",
+      "type": "mcq",
+      "stem": "Query is used to:",
+      "options": {
+        "A": "Store",
+        "B": "Retrieve data",
+        "C": "Delete",
+        "D": "Print"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Queries search the database and pull out records that match certain criteria."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0386",
+      "type": "mcq",
+      "stem": "File is a:",
+      "options": {
+        "A": "Collection of data",
+        "B": "Hardware",
+        "C": "Output",
+        "D": "Input"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A file is a resource for recording data in a computer storage device."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0387",
+      "type": "mcq",
+      "stem": "Folder is used to:",
+      "options": {
+        "A": "Store files",
+        "B": "Print",
+        "C": "Input",
+        "D": "Process"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Folders (directories) help organize files into groups on a drive."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0388",
+      "type": "mcq",
+      "stem": "File path shows:",
+      "options": {
+        "A": "Size",
+        "B": "Location",
+        "C": "Type",
+        "D": "Name"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The path shows the route through the folders to reach a specific file."
+    },
+    {
+      "id": "uni-bouesti-csc113-bank-0389",
+      "type": "mcq",
+      "stem": "Extension shows:",
+      "options": {
+        "A": "Size",
+        "B": "File type",
+        "C": "Location",
+        "D": "Name"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The suffix (like .jpg or .txt) tells the OS what kind of data the file contains."
+    }
+  ]
+}

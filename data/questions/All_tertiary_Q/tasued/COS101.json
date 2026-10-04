@@ -1,0 +1,3735 @@
+{
+  "code": "uni-tasued-cos101-bank",
+  "title": "TASUED COS101 | Course Question Bank",
+  "version": 1,
+  "questionCount": 266,
+  "totalMarks": 266,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-tasued-cos101-bank-0001",
+      "type": "mcq",
+      "stem": "ROM is used to:",
+      "options": {
+        "A": "Permanently store data",
+        "B": "Play games",
+        "C": "Print documents",
+        "D": "Connect internet"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Read-Only Memory is non-volatile and keeps its data when the power is off."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0002",
+      "type": "mcq",
+      "stem": "Which of the following is NOT an input device?",
+      "options": {
+        "A": "Keyboard",
+        "B": "Mouse",
+        "C": "Monitor",
+        "D": "Scanner"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A monitor is an output device because it displays information from the computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0003",
+      "type": "mcq",
+      "stem": "Which of the following is a type of malware?",
+      "options": {
+        "A": "Trojan",
+        "B": "Printer",
+        "C": "Monitor",
+        "D": "Keyboard"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A Trojan horse is a type of malicious software that misleads users of its true intent."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0004",
+      "type": "mcq",
+      "stem": "A device driver is used to:",
+      "options": {
+        "A": "Store files",
+        "B": "Establish communication between hardware and OS",
+        "C": "Increase RAM",
+        "D": "Print documents"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Drivers act as translators between hardware devices and the operating system."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0005",
+      "type": "mcq",
+      "stem": "A database is:",
+      "options": {
+        "A": "A game",
+        "B": "An organized collection of data",
+        "C": "A printer",
+        "D": "A browser"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Databases allow for the efficient storage, retrieval, and management of data."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0006",
+      "type": "mcq",
+      "stem": "Which device is used for audio output?",
+      "options": {
+        "A": "Keyboard",
+        "B": "Mouse",
+        "C": "Speaker",
+        "D": "Scanner"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Speakers convert electronic signals into audible sound."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0007",
+      "type": "mcq",
+      "stem": "Which of the following is a type of software license?",
+      "options": {
+        "A": "Freeware",
+        "B": "Monitor",
+        "C": "CPU",
+        "D": "Printer"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Freeware is software distributed at no cost to the user."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0008",
+      "type": "mcq",
+      "stem": "The function of an Ethernet card is to:",
+      "options": {
+        "A": "Print documents",
+        "B": "Connect to a network",
+        "C": "Play music",
+        "D": "Store data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ethernet cards (NICs) allow computers to connect to wired local area networks."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0009",
+      "type": "mcq",
+      "stem": "A computer virus is:",
+      "options": {
+        "A": "A hardware device",
+        "B": "A malicious program",
+        "C": "A browser",
+        "D": "A keyboard"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Viruses are code designed to damage or gain unauthorized access to computer systems."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0010",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a desktop operating system?",
+      "options": {
+        "A": "Windows",
+        "B": "Linux",
+        "C": "Android",
+        "D": "macOS"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Android is primarily a mobile operating system, whereas the others are for desktops/laptops."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0011",
+      "type": "mcq",
+      "stem": "The purpose of a power supply unit is to:",
+      "options": {
+        "A": "Store files",
+        "B": "Provide power to computer components",
+        "C": "Connect internet",
+        "D": "Print documents"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The PSU converts outlet power to the specific voltages needed by internal components."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0012",
+      "type": "mcq",
+      "stem": "Which device is used to control games?",
+      "options": {
+        "A": "Joystick",
+        "B": "Printer",
+        "C": "Monitor",
+        "D": "Scanner"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Joysticks and gamepads are common input devices for gaming."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0013",
+      "type": "mcq",
+      "stem": "The Abacus is derived from which word?",
+      "options": {
+        "A": "Abad",
+        "B": "Abax",
+        "C": "Abacus",
+        "D": "Abon"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The term Abacus originates from the word 'Abax'."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0014",
+      "type": "mcq",
+      "stem": "Around what year was the Abacus invented?",
+      "options": {
+        "A": "3000 BC",
+        "B": "1500 BC",
+        "C": "2500 BC",
+        "D": "1000 BC"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Abacus was invented around 2500 BC."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0015",
+      "type": "mcq",
+      "stem": "Which civilization invented the Abacus?",
+      "options": {
+        "A": "Romans",
+        "B": "Greeks",
+        "C": "Babylonians",
+        "D": "Egyptians"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Abacus was invented by the Babylonians."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0016",
+      "type": "mcq",
+      "stem": "Which country contributed significantly to the historical development of the Abacus?",
+      "options": {
+        "A": "India",
+        "B": "China",
+        "C": "France",
+        "D": "Scotland"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "China played a major role in the historical development of the Abacus."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0017",
+      "type": "mcq",
+      "stem": "What components does the Abacus use for calculations?",
+      "options": {
+        "A": "Buttons and keys",
+        "B": "Beads on rods",
+        "C": "Wheels and gears",
+        "D": "Electronic chips"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Abacus performs calculations using beads arranged on rods."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0018",
+      "type": "mcq",
+      "stem": "Which operations can be performed using the Abacus?",
+      "options": {
+        "A": "Addition only",
+        "B": "Addition and subtraction",
+        "C": "Addition, subtraction, multiplication, and division",
+        "D": "Multiplication only"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Abacus supports addition, subtraction, multiplication, and division."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0019",
+      "type": "mcq",
+      "stem": "Who created Napier’s Bones?",
+      "options": {
+        "A": "Blaise Pascal",
+        "B": "William Oughtred",
+        "C": "John Napier",
+        "D": "Charles Babbage"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Napier’s Bones were created by John Napier."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0020",
+      "type": "mcq",
+      "stem": "In which year were Napier’s Bones created?",
+      "options": {
+        "A": "1600",
+        "B": "1617",
+        "C": "1642",
+        "D": "1700"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Napier’s Bones were created in 1617."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0021",
+      "type": "mcq",
+      "stem": "Napier’s Bones were created in which country?",
+      "options": {
+        "A": "England",
+        "B": "France",
+        "C": "Scotland",
+        "D": "China"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "John Napier created Napier’s Bones in Scotland."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0022",
+      "type": "mcq",
+      "stem": "What was the main function of Napier’s Bones?",
+      "options": {
+        "A": "Storing data",
+        "B": "Programming computers",
+        "C": "Simplifying calculations",
+        "D": "Counting objects"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Napier’s Bones simplified calculations using numbered rods."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0023",
+      "type": "mcq",
+      "stem": "Napier’s Bones made use of which calculation aid?",
+      "options": {
+        "A": "Vacuum tubes",
+        "B": "Integrated circuits",
+        "C": "Numbered rods",
+        "D": "Microprocessors"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Napier’s Bones used numbered rods to perform calculations."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0024",
+      "type": "mcq",
+      "stem": "Who invented the Slide Rule?",
+      "options": {
+        "A": "John Napier",
+        "B": "Blaise Pascal",
+        "C": "William Oughtred",
+        "D": "Alan Turing"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Slide Rule was invented by William Oughtred."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0025",
+      "type": "mcq",
+      "stem": "The Slide Rule is based on which mathematical principle?",
+      "options": {
+        "A": "Algebra",
+        "B": "Statistics",
+        "C": "Logarithms",
+        "D": "Geometry"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Slide Rule operates using the principles of logarithms."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0026",
+      "type": "mcq",
+      "stem": "Who invented the Pascaline?",
+      "options": {
+        "A": "John Napier",
+        "B": "William Oughtred",
+        "C": "Blaise Pascal",
+        "D": "Charles Babbage"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Pascaline was invented by Blaise Pascal."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0027",
+      "type": "mcq",
+      "stem": "How many generations of computers exist?",
+      "options": {
+        "A": "Three",
+        "B": "Four",
+        "C": "Five",
+        "D": "Six"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Computers are classified into five generations."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0028",
+      "type": "mcq",
+      "stem": "Which technology was used in the First Generation of computers?",
+      "options": {
+        "A": "Transistors",
+        "B": "Vacuum Tubes",
+        "C": "Integrated Circuits",
+        "D": "Microprocessors"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "First Generation computers used vacuum tubes."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0029",
+      "type": "mcq",
+      "stem": "A major characteristic of First Generation computers was that they were:",
+      "options": {
+        "A": "Portable",
+        "B": "Energy efficient",
+        "C": "Large and power-consuming",
+        "D": "Wireless"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "First Generation computers were large and consumed a lot of electricity."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0030",
+      "type": "mcq",
+      "stem": "Which problem was common with First Generation computers?",
+      "options": {
+        "A": "Low speed",
+        "B": "High heat production",
+        "C": "Small memory",
+        "D": "Poor graphics"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "First Generation computers produced a lot of heat."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0031",
+      "type": "mcq",
+      "stem": "Which technology replaced vacuum tubes in the Second Generation?",
+      "options": {
+        "A": "Integrated Circuits",
+        "B": "Microprocessors",
+        "C": "Transistors",
+        "D": "AI chips"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Second Generation computers used transistors instead of vacuum tubes."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0032",
+      "type": "mcq",
+      "stem": "Which programming language was used in the Second Generation of computers?",
+      "options": {
+        "A": "Python",
+        "B": "BASIC",
+        "C": "Assembly language",
+        "D": "Prolog"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Second Generation computers used assembly language."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0033",
+      "type": "mcq",
+      "stem": "Which computer is an example of the Second Generation?",
+      "options": {
+        "A": "IBM 360",
+        "B": "UNIVAC 1108",
+        "C": "Apple II",
+        "D": "IBM PC"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "UNIVAC 1108 belongs to the Second Generation of computers."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0034",
+      "type": "mcq",
+      "stem": "What technology defined the Third Generation of computers?",
+      "options": {
+        "A": "Vacuum Tubes",
+        "B": "Transistors",
+        "C": "Integrated Circuits",
+        "D": "Microprocessors"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Third Generation computers utilized Integrated Circuits."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0035",
+      "type": "mcq",
+      "stem": "Which computer is an example of the Third Generation?",
+      "options": {
+        "A": "UNIVAC 1108",
+        "B": "IBM 360",
+        "C": "Apple II",
+        "D": "Modern PC"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "IBM 360 is a Third Generation computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0036",
+      "type": "mcq",
+      "stem": "Fourth Generation computers were built using:",
+      "options": {
+        "A": "Vacuum Tubes",
+        "B": "Integrated Circuits",
+        "C": "Microprocessors",
+        "D": "Transistors"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Fourth Generation computers were built using microprocessors."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0037",
+      "type": "mcq",
+      "stem": "Which programming language was used in the Fourth Generation?",
+      "options": {
+        "A": "Assembly",
+        "B": "Machine language",
+        "C": "BASIC",
+        "D": "Prolog"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Fourth Generation computers used BASIC and other high-level languages."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0038",
+      "type": "mcq",
+      "stem": "Which of the following is a Fourth Generation computer?",
+      "options": {
+        "A": "IBM 360",
+        "B": "UNIVAC 1108",
+        "C": "Apple II",
+        "D": "Robotics system"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Apple II belongs to the Fourth Generation of computers."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0039",
+      "type": "mcq",
+      "stem": "The Fifth Generation of computers focuses on:",
+      "options": {
+        "A": "Speed",
+        "B": "Storage",
+        "C": "Artificial Intelligence",
+        "D": "Hardware size"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Fifth Generation computers focus on Artificial Intelligence."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0040",
+      "type": "mcq",
+      "stem": "Which feature is associated with Fifth Generation computers?",
+      "options": {
+        "A": "Vacuum tube processing",
+        "B": "Parallel processing",
+        "C": "Manual operation",
+        "D": "Low-level programming only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Parallel processing is a key feature of Fifth Generation computers."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0041",
+      "type": "mcq",
+      "stem": "Which programming languages are associated with the Fifth Generation?",
+      "options": {
+        "A": "Assembly and BASIC",
+        "B": "Python and Prolog",
+        "C": "C and C++",
+        "D": "Machine language"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Fifth Generation computers use advanced programming languages such as Python and Prolog."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0042",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a Fifth Generation computer?",
+      "options": {
+        "A": "IBM PC",
+        "B": "Apple II",
+        "C": "Modern PC",
+        "D": "IBM 360"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Modern PCs and AI systems are examples of Fifth Generation computers."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0043",
+      "type": "mcq",
+      "stem": "What is a computer?",
+      "options": {
+        "A": "A mechanical calculation tool",
+        "B": "An electronic machine that operates under stored instructions",
+        "C": "A device used only for storing data",
+        "D": "A manual information processor"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A computer is an electronic machine that operates under the control of instructions stored in its memory."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0044",
+      "type": "mcq",
+      "stem": "Which primary function of a computer involves accepting data?",
+      "options": {
+        "A": "Processing",
+        "B": "Input",
+        "C": "Output",
+        "D": "Storage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Input refers to the acceptance of data by a computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0045",
+      "type": "mcq",
+      "stem": "Which computer function stores data for later use?",
+      "options": {
+        "A": "Input",
+        "B": "Processing",
+        "C": "Storage",
+        "D": "Output"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Storage involves keeping data for processing."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0046",
+      "type": "mcq",
+      "stem": "Processing in a computer results in:",
+      "options": {
+        "A": "Raw data",
+        "B": "Stored instructions",
+        "C": "Meaningful information",
+        "D": "Sequential input"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Processing converts data into meaningful information."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0047",
+      "type": "mcq",
+      "stem": "Which computer function produces sequential information?",
+      "options": {
+        "A": "Input",
+        "B": "Processing",
+        "C": "Storage",
+        "D": "Output"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Output produces sequential information."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0048",
+      "type": "mcq",
+      "stem": "Which component refers to the physical parts of a computer?",
+      "options": {
+        "A": "Software",
+        "B": "Hardware",
+        "C": "Peopleware",
+        "D": "Data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hardware consists of the physical components of a computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0049",
+      "type": "mcq",
+      "stem": "Which component enables the hardware to process data?",
+      "options": {
+        "A": "Hardware",
+        "B": "Peopleware",
+        "C": "Software",
+        "D": "System unit"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Software consists of programs that enable hardware to process data."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0050",
+      "type": "mcq",
+      "stem": "Who are classified as Peopleware?",
+      "options": {
+        "A": "Computer manufacturers",
+        "B": "System analysts",
+        "C": "Users who operate the computer",
+        "D": "Hardware engineers"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Peopleware refers to the users who operate the computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0051",
+      "type": "mcq",
+      "stem": "What is the main circuit board of a computer called?",
+      "options": {
+        "A": "CPU",
+        "B": "Hard Drive",
+        "C": "Motherboard",
+        "D": "Expansion slot"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The motherboard is the main circuit board of the computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0052",
+      "type": "mcq",
+      "stem": "Which component allows additional hardware capabilities to be added?",
+      "options": {
+        "A": "Optical Drive",
+        "B": "Expansion Slots",
+        "C": "SSD",
+        "D": "Cache"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Expansion slots allow additional hardware to be added to the system."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0053",
+      "type": "mcq",
+      "stem": "Which hardware component is used for reading discs?",
+      "options": {
+        "A": "Hard Drive",
+        "B": "SSD",
+        "C": "Optical Drive",
+        "D": "Register"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "An optical drive is used for reading discs."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0054",
+      "type": "mcq",
+      "stem": "Which storage device serves as primary storage?",
+      "options": {
+        "A": "SSD",
+        "B": "Cache",
+        "C": "Hard Drive (HDD)",
+        "D": "Register"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The hard drive is identified as primary storage."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0055",
+      "type": "mcq",
+      "stem": "Which storage device provides high-speed storage?",
+      "options": {
+        "A": "HDD",
+        "B": "Optical Drive",
+        "C": "SSD",
+        "D": "RAM"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The solid-state drive provides high-speed storage."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0056",
+      "type": "mcq",
+      "stem": "Who is historically recognized as the Father of the Computer?",
+      "options": {
+        "A": "Alan Turing",
+        "B": "John Napier",
+        "C": "Charles Babbage",
+        "D": "Blaise Pascal"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Charles Babbage is recognized as the Father of the Computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0057",
+      "type": "mcq",
+      "stem": "What is the primary role of the CPU?",
+      "options": {
+        "A": "Storing data permanently",
+        "B": "Managing all computer operations and processing data",
+        "C": "Providing power to the system",
+        "D": "Displaying output"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The CPU processes data and manages all operations performed by the computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0058",
+      "type": "mcq",
+      "stem": "Which CPU component acts as the manager of the processor?",
+      "options": {
+        "A": "ALU",
+        "B": "Register",
+        "C": "Control Unit",
+        "D": "Cache"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Control Unit manages and controls processor operations."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0059",
+      "type": "mcq",
+      "stem": "Which component of the Control Unit decodes instructions?",
+      "options": {
+        "A": "Clock",
+        "B": "Decoders",
+        "C": "Registers",
+        "D": "Bus"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Decoders interpret and decode program instructions."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0060",
+      "type": "mcq",
+      "stem": "Which Control Unit component ensures synchronization of tasks?",
+      "options": {
+        "A": "ALU",
+        "B": "Clock/Timer",
+        "C": "Control logic circuits",
+        "D": "Registers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The clock ensures synchronization of all CPU activities."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0061",
+      "type": "mcq",
+      "stem": "What is the function of control logic circuits?",
+      "options": {
+        "A": "Perform arithmetic operations",
+        "B": "Store instructions",
+        "C": "Create and distribute control signals",
+        "D": "Decode program data"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Control logic circuits generate and distribute control signals."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0062",
+      "type": "mcq",
+      "stem": "What does EDSAC stand for?",
+      "options": {
+        "A": "Electronic Delay Storage Automatic Calculator",
+        "B": "Electronic Data Storage and Control",
+        "C": "Electrical Digital System Analyzer Computer",
+        "D": "Electronic Distributed Storage Access Computer"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "EDSAC means Electronic Delay Storage Automatic Calculator."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0063",
+      "type": "mcq",
+      "stem": "What does ENIAC stand for?",
+      "options": {
+        "A": "Electronic Numerical Integrator and Computer",
+        "B": "Electronic National Information Analyzer Computer",
+        "C": "Electrical Network Integrated Automatic Computer",
+        "D": "Electronic Neural Integrated Computer"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "ENIAC stands for Electronic Numerical Integrator and Computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0064",
+      "type": "mcq",
+      "stem": "What does UNIVAC stand for?",
+      "options": {
+        "A": "Universal Automatic Computer",
+        "B": "Unified Network Integrated Computer",
+        "C": "Universal Numerical Analyzer Computer",
+        "D": "United Variable Automatic Computer"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "UNIVAC stands for Universal Automatic Computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0065",
+      "type": "mcq",
+      "stem": "Which unit performs arithmetic and logical operations?",
+      "options": {
+        "A": "CU",
+        "B": "ALU",
+        "C": "Register",
+        "D": "Cache"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The ALU performs arithmetic and logical operations."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0066",
+      "type": "mcq",
+      "stem": "Which logic gates are used by the ALU?",
+      "options": {
+        "A": "AND, OR, NOT, NAND",
+        "B": "XOR only",
+        "C": "Flip-flops only",
+        "D": "Transistors only"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The ALU uses AND, OR, NOT, and NAND logic gates."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0067",
+      "type": "mcq",
+      "stem": "What are registers?",
+      "options": {
+        "A": "Permanent storage devices",
+        "B": "High-speed temporary storage inside the CPU",
+        "C": "External storage devices",
+        "D": "Input devices"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Registers are high-speed temporary storage located inside the CPU."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0068",
+      "type": "mcq",
+      "stem": "Which are the two major types of registers?",
+      "options": {
+        "A": "Primary and secondary",
+        "B": "Input and output",
+        "C": "General purpose and special purpose",
+        "D": "Internal and external"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Registers are classified into general purpose and special purpose registers."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0069",
+      "type": "mcq",
+      "stem": "Which of the following is a type of special register?",
+      "options": {
+        "A": "Accumulator",
+        "B": "SSD",
+        "C": "Expansion slot",
+        "D": "Optical drive"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The accumulator is a type of register."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0070",
+      "type": "mcq",
+      "stem": "What does MAR stand for?",
+      "options": {
+        "A": "Memory Address Register",
+        "B": "Main Access Register",
+        "C": "Machine Address Register",
+        "D": "Memory Allocation Register"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "MAR stands for Memory Address Register."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0071",
+      "type": "mcq",
+      "stem": "Which bus carries data between system components?",
+      "options": {
+        "A": "Control Bus",
+        "B": "Address Bus",
+        "C": "Data Bus",
+        "D": "Cache Bus"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The data bus transfers data between components."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0072",
+      "type": "mcq",
+      "stem": "Which bus carries memory addresses?",
+      "options": {
+        "A": "Control Bus",
+        "B": "Data Bus",
+        "C": "Address Bus",
+        "D": "System Clock"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The address bus transfers memory addresses."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0073",
+      "type": "mcq",
+      "stem": "Which bus controls operations and timing?",
+      "options": {
+        "A": "Data Bus",
+        "B": "Address Bus",
+        "C": "Control Bus",
+        "D": "Register Bus"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The control bus manages control signals and timing."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0074",
+      "type": "mcq",
+      "stem": "What is CPU cache?",
+      "options": {
+        "A": "Permanent storage device",
+        "B": "High-speed volatile memory storing recent data",
+        "C": "External backup memory",
+        "D": "Optical storage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CPU cache stores the most recently accessed data and is volatile."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0075",
+      "type": "mcq",
+      "stem": "What is the function of the CPU clock?",
+      "options": {
+        "A": "Stores data",
+        "B": "Controls input devices",
+        "C": "Synchronizes data flow and operations",
+        "D": "Performs calculations"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The CPU clock keeps the flow of data synchronized."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0076",
+      "type": "mcq",
+      "stem": "The Pascaline is classified under which type of calculating device?",
+      "options": {
+        "A": "Electronic",
+        "B": "Mechanical",
+        "C": "Electromechanical",
+        "D": "Digital"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Pascaline is a mechanical calculating device invented by Blaise Pascal."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0077",
+      "type": "mcq",
+      "stem": "What is a memory unit?",
+      "options": {
+        "A": "A device used only for input",
+        "B": "A storage location where data and information are kept",
+        "C": "A processor component for calculations",
+        "D": "An output device"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A memory unit stores data and information either temporarily or permanently."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0078",
+      "type": "mcq",
+      "stem": "Which type of memory is directly accessed by the processor?",
+      "options": {
+        "A": "Secondary storage",
+        "B": "External storage",
+        "C": "Internal storage",
+        "D": "Optical storage"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Internal storage is the only memory directly accessed by the processor."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0079",
+      "type": "mcq",
+      "stem": "Which of the following is NOT an internal storage device?",
+      "options": {
+        "A": "RAM",
+        "B": "ROM",
+        "C": "Cache memory",
+        "D": "Hard disk"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Hard disks belong to secondary storage, not internal storage."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0080",
+      "type": "mcq",
+      "stem": "What happens to data stored in RAM when the computer is turned off?",
+      "options": {
+        "A": "It is saved permanently",
+        "B": "It becomes encrypted",
+        "C": "It is lost",
+        "D": "It is transferred to ROM"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "RAM is volatile, meaning its data is lost when power is turned off."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0081",
+      "type": "mcq",
+      "stem": "Which term best describes RAM?",
+      "options": {
+        "A": "Permanent memory",
+        "B": "Volatile memory",
+        "C": "Read-only memory",
+        "D": "Secondary memory"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RAM loses its contents when power supply is removed."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0082",
+      "type": "mcq",
+      "stem": "Which memory can only be read and not written to by the processor?",
+      "options": {
+        "A": "RAM",
+        "B": "Cache",
+        "C": "ROM",
+        "D": "Register"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "ROM stores data permanently and cannot be written to during normal operation."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0083",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a type of ROM?",
+      "options": {
+        "A": "PROM",
+        "B": "EPROM",
+        "C": "EEPROM",
+        "D": "RAM"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "RAM is volatile memory, while PROM, EPROM, and EEPROM are types of ROM."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0084",
+      "type": "mcq",
+      "stem": "What does EPROM stand for?",
+      "options": {
+        "A": "Electrically Programmable ROM",
+        "B": "Erasable Programmable ROM",
+        "C": "Enhanced Programmable ROM",
+        "D": "External Programmable ROM"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "EPROM can be erased and reprogrammed."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0085",
+      "type": "mcq",
+      "stem": "Which memory is used to speed up processing by storing frequently used data?",
+      "options": {
+        "A": "ROM",
+        "B": "RAM",
+        "C": "Cache memory",
+        "D": "Secondary storage"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Cache memory provides high-speed access to frequently used data."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0086",
+      "type": "mcq",
+      "stem": "Which memory is the smallest and fastest in a computer system?",
+      "options": {
+        "A": "RAM",
+        "B": "Cache",
+        "C": "Registers",
+        "D": "ROM"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Registers are located inside the CPU and operate at very high speed."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0087",
+      "type": "mcq",
+      "stem": "CMOS is mainly used to store:",
+      "options": {
+        "A": "User files",
+        "B": "Application software",
+        "C": "System configuration settings",
+        "D": "Temporary program data"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "CMOS stores BIOS and system settings using battery power."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0088",
+      "type": "mcq",
+      "stem": "Which statement about CMOS is correct?",
+      "options": {
+        "A": "It is volatile and large",
+        "B": "It stores data permanently without power",
+        "C": "It uses battery power to retain data",
+        "D": "It replaces RAM"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "CMOS retains data using a small battery."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0089",
+      "type": "mcq",
+      "stem": "Secondary storage is best described as:",
+      "options": {
+        "A": "Temporary and volatile",
+        "B": "Permanent and non-volatile",
+        "C": "Located inside the CPU",
+        "D": "Used only during processing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Secondary storage retains data permanently."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0090",
+      "type": "mcq",
+      "stem": "Which of the following is a magnetic storage device?",
+      "options": {
+        "A": "DVD",
+        "B": "Hard Disk Drive",
+        "C": "USB flash drive",
+        "D": "CD-ROM"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hard disk drives use magnetic technology for storage."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0091",
+      "type": "mcq",
+      "stem": "Which secondary storage uses light to read and write data?",
+      "options": {
+        "A": "Magnetic tape",
+        "B": "Flash memory",
+        "C": "Optical storage",
+        "D": "Smart card"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Optical storage devices use laser light."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0092",
+      "type": "mcq",
+      "stem": "Which of the following is an example of flash memory?",
+      "options": {
+        "A": "DVD",
+        "B": "Hard disk",
+        "C": "USB flash drive",
+        "D": "Magnetic tape"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "USB flash drives use flash memory technology."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0093",
+      "type": "mcq",
+      "stem": "Which of the following is an input device?",
+      "options": {
+        "A": "Monitor",
+        "B": "Printer",
+        "C": "Keyboard",
+        "D": "Speaker"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A keyboard is used to enter data into the computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0094",
+      "type": "mcq",
+      "stem": "The keyboard is mainly used to:",
+      "options": {
+        "A": "Display information",
+        "B": "Enter textual data",
+        "C": "Store data",
+        "D": "Process data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The keyboard is the primary device for text entry."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0095",
+      "type": "mcq",
+      "stem": "Keyboards can be categorized based on:",
+      "options": {
+        "A": "Color and size",
+        "B": "Speed and accuracy",
+        "C": "Connector and functionality",
+        "D": "Brand and cost"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Keyboards are classified based on connector type and functionality."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0096",
+      "type": "mcq",
+      "stem": "Which of the following is a wireless keyboard?",
+      "options": {
+        "A": "Serial keyboard",
+        "B": "USB keyboard",
+        "C": "Bluetooth keyboard",
+        "D": "Parallel keyboard"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Wireless keyboards connect without physical cables."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0097",
+      "type": "mcq",
+      "stem": "Which keyboard type has function keys from F1 to F12?",
+      "options": {
+        "A": "Standard keyboard",
+        "B": "Serial keyboard",
+        "C": "Enhanced keyboard",
+        "D": "Wireless keyboard"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Enhanced keyboards include function keys F1 to F12."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0098",
+      "type": "mcq",
+      "stem": "Which keyboard is considered an older model?",
+      "options": {
+        "A": "Enhanced keyboard",
+        "B": "Wireless keyboard",
+        "C": "Standard keyboard",
+        "D": "Virtual keyboard"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Standard keyboards typically have function keys from F1 to F10."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0099",
+      "type": "mcq",
+      "stem": "Which of the following keys is used for typing letters?",
+      "options": {
+        "A": "Numeric keys",
+        "B": "Alphabetic keys",
+        "C": "Function keys",
+        "D": "Control keys"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Alphabetic keys are used to enter letters."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0100",
+      "type": "mcq",
+      "stem": "Which keyboard keys are used to move the cursor?",
+      "options": {
+        "A": "Alphabetic keys",
+        "B": "Numeric keys",
+        "C": "Cursor control keys",
+        "D": "Function keys"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Cursor control keys move the pointer on the screen."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0101",
+      "type": "mcq",
+      "stem": "What is software?",
+      "options": {
+        "A": "Physical components of a computer",
+        "B": "Coded instructions used to perform specific tasks",
+        "C": "The CPU of a computer",
+        "D": "The monitor of a computer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Software is a set of coded instructions that tells the computer what to do."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0102",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a type of software?",
+      "options": {
+        "A": "System software",
+        "B": "Application software",
+        "C": "Hardware",
+        "D": "Utility software"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Hardware is physical components, not software."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0103",
+      "type": "mcq",
+      "stem": "What is the main purpose of system software?",
+      "options": {
+        "A": "To perform user-specific tasks",
+        "B": "To make the computer operate",
+        "C": "To run games",
+        "D": "To manage printers only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "System software allows the computer to function and operate correctly."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0104",
+      "type": "mcq",
+      "stem": "Which of these is an example of system software?",
+      "options": {
+        "A": "Microsoft Word",
+        "B": "Adobe Photoshop",
+        "C": "Windows OS",
+        "D": "Google Chrome"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Windows OS is a system software that manages computer resources."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0105",
+      "type": "mcq",
+      "stem": "System software is typically developed by:",
+      "options": {
+        "A": "End users",
+        "B": "Computer manufacturers",
+        "C": "Students",
+        "D": "Application developers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "System software is designed by the manufacturer to make the computer work."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0106",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a category of system software?",
+      "options": {
+        "A": "Operating System",
+        "B": "Device drivers",
+        "C": "Translators",
+        "D": "Spreadsheet software"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Spreadsheet software is an application, not a system software category."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0107",
+      "type": "mcq",
+      "stem": "What is the main function of an operating system?",
+      "options": {
+        "A": "To create graphics",
+        "B": "To manage and coordinate activities of the computer",
+        "C": "To store user documents only",
+        "D": "To translate languages"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The OS manages resources, coordinates hardware and software operations."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0108",
+      "type": "mcq",
+      "stem": "Which of the following is an example of an operating system?",
+      "options": {
+        "A": "Java",
+        "B": "DOS",
+        "C": "C++",
+        "D": "Python"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "DOS is an operating system; Java, C++, Python are programming languages."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0109",
+      "type": "mcq",
+      "stem": "Single-user operating systems are designed for:",
+      "options": {
+        "A": "Multiple users simultaneously",
+        "B": "One user at a time",
+        "C": "Network management",
+        "D": "Server operations only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Single-user OS supports only one user at a time, e.g., MS-DOS."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0110",
+      "type": "mcq",
+      "stem": "Which operating system type allows multiple users to work at the same time?",
+      "options": {
+        "A": "Single-user OS",
+        "B": "Multi-user OS",
+        "C": "Embedded OS",
+        "D": "Network OS"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Multi-user OS supports multiple users, multitasking, and time-sharing."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0111",
+      "type": "mcq",
+      "stem": "Which of these is NOT a function of an operating system?",
+      "options": {
+        "A": "File management",
+        "B": "Memory allocation",
+        "C": "Creating programming languages",
+        "D": "Job scheduling"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "OS manages resources; it does not create programming languages."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0112",
+      "type": "mcq",
+      "stem": "Which OS function handles communication with printers and other devices?",
+      "options": {
+        "A": "File management",
+        "B": "Peripheral communication",
+        "C": "Job scheduling",
+        "D": "Memory allocation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The OS communicates with input/output devices using device drivers."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0113",
+      "type": "mcq",
+      "stem": "Which device is used to point and select?",
+      "options": {
+        "A": "Mouse",
+        "B": "Monitor",
+        "C": "Printer",
+        "D": "Speaker"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The mouse is a pointing device that allows users to interact with a GUI."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0114",
+      "type": "mcq",
+      "stem": "What is a translator in system software?",
+      "options": {
+        "A": "A device that prints documents",
+        "B": "A software that converts programs into machine language",
+        "C": "A type of operating system",
+        "D": "A memory storage unit"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Translators convert programs from high-level or low-level languages into executable code."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0115",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a compiler?",
+      "options": {
+        "A": "C++",
+        "B": "MS-DOS",
+        "C": "Python OS",
+        "D": "Adobe Reader"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "C++ programs are compiled using a compiler into machine code."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0116",
+      "type": "mcq",
+      "stem": "Which system software converts programs one instruction at a time?",
+      "options": {
+        "A": "Assembler",
+        "B": "Interpreter",
+        "C": "Compiler",
+        "D": "Operating system"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Interpreters convert and execute programs instruction by instruction."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0117",
+      "type": "mcq",
+      "stem": "Which system software converts assembly language into machine code?",
+      "options": {
+        "A": "Interpreter",
+        "B": "Compiler",
+        "C": "Assembler",
+        "D": "Operating System"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Assemblers translate assembly language into machine code."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0118",
+      "type": "mcq",
+      "stem": "What does RAM stand for?",
+      "options": {
+        "A": "Read Access Memory",
+        "B": "Random Access Memory",
+        "C": "Run All Memory",
+        "D": "Read And Modify"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RAM means Random Access Memory."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0119",
+      "type": "mcq",
+      "stem": "What is the full meaning of CPU?",
+      "options": {
+        "A": "Central Processing Unit",
+        "B": "Computer Processing Unit",
+        "C": "Central Program Unit",
+        "D": "Control Processing Unit"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "CPU stands for Central Processing Unit."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0120",
+      "type": "mcq",
+      "stem": "What is the smallest unit of data in a computer?",
+      "options": {
+        "A": "Byte",
+        "B": "Bit",
+        "C": "Kilobyte",
+        "D": "Megabyte"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A bit is the smallest unit of data."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0121",
+      "type": "mcq",
+      "stem": "What is a pixel?",
+      "options": {
+        "A": "A unit of sound",
+        "B": "The smallest unit of an image on a screen",
+        "C": "A type of memory",
+        "D": "A network device"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Pixels are the smallest display elements."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0122",
+      "type": "mcq",
+      "stem": "Which device provides uninterrupted power supply?",
+      "options": {
+        "A": "Stabilizer",
+        "B": "Generator",
+        "C": "UPS",
+        "D": "Battery"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "UPS provides temporary power during outages."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0123",
+      "type": "mcq",
+      "stem": "What is the main purpose of BIOS?",
+      "options": {
+        "A": "Manage files",
+        "B": "Boot the computer and initialize hardware",
+        "C": "Run applications",
+        "D": "Connect to the internet"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "BIOS initializes hardware during startup."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0124",
+      "type": "mcq",
+      "stem": "Which software category does Microsoft PowerPoint belong to?",
+      "options": {
+        "A": "System software",
+        "B": "Application software",
+        "C": "Utility software",
+        "D": "Firmware"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "PowerPoint is application software."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0125",
+      "type": "mcq",
+      "stem": "What does URL stand for?",
+      "options": {
+        "A": "Uniform Resource Locator",
+        "B": "Universal Resource Link",
+        "C": "Unified Routing Language",
+        "D": "User Reference Link"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "URL means Uniform Resource Locator."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0126",
+      "type": "mcq",
+      "stem": "Which of the following is an example of malware?",
+      "options": {
+        "A": "Antivirus",
+        "B": "Firewall",
+        "C": "Virus",
+        "D": "Browser"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A virus is a type of malware."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0127",
+      "type": "mcq",
+      "stem": "What is a firewall used for?",
+      "options": {
+        "A": "Cooling the CPU",
+        "B": "Protecting a network from unauthorized access",
+        "C": "Storing data",
+        "D": "Speeding up the processor"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Firewalls provide network security."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0128",
+      "type": "mcq",
+      "stem": "What is Cloud Computing?",
+      "options": {
+        "A": "Storing data on local disks",
+        "B": "Using internet-based resources and services",
+        "C": "Programming computers",
+        "D": "Hardware manufacturing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cloud computing uses remote servers over the internet."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0129",
+      "type": "mcq",
+      "stem": "Which OSI layer is responsible for IP addressing?",
+      "options": {
+        "A": "Transport layer",
+        "B": "Network layer",
+        "C": "Data Link layer",
+        "D": "Application layer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "IP addressing belongs to the Network layer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0130",
+      "type": "mcq",
+      "stem": "What is an algorithm?",
+      "options": {
+        "A": "A programming language",
+        "B": "A step-by-step solution to a problem",
+        "C": "A hardware component",
+        "D": "A memory device"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Algorithms define problem-solving steps."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0131",
+      "type": "mcq",
+      "stem": "What is firmware?",
+      "options": {
+        "A": "Application software",
+        "B": "Software permanently stored in hardware",
+        "C": "Temporary memory",
+        "D": "Internet software"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Firmware is embedded software."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0132",
+      "type": "mcq",
+      "stem": "What is the function of a heat sink?",
+      "options": {
+        "A": "Store data",
+        "B": "Cool the processor",
+        "C": "Supply power",
+        "D": "Process instructions"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Heat sinks dissipate heat from the CPU."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0133",
+      "type": "mcq",
+      "stem": "What is the main function of a sound card?",
+      "options": {
+        "A": "Network communication",
+        "B": "Video display",
+        "C": "Audio input and output",
+        "D": "Data storage"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Sound cards handle audio processing."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0134",
+      "type": "mcq",
+      "stem": "The basic operations performed by a computer are?",
+      "options": {
+        "A": "Input, Process, Output, Storage",
+        "B": "Print, Type, Save",
+        "C": "Draw, Paint, Scan",
+        "D": "None"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "These four stages represent the standard information processing cycle."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0135",
+      "type": "mcq",
+      "stem": "Which of these is a secondary memory?",
+      "options": {
+        "A": "RAM",
+        "B": "Hard Disk",
+        "C": "CPU",
+        "D": "ROM"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A Hard Disk is used for long-term data storage, which is classified as secondary memory."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0136",
+      "type": "mcq",
+      "stem": "Which is not a valid file extension?",
+      "options": {
+        "A": ".exe",
+        "B": ".doc",
+        "C": ".cpu",
+        "D": ".txt"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "'.cpu' is not a standard file extension; CPU refers to a hardware component."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0137",
+      "type": "mcq",
+      "stem": "The full form of CPU is?",
+      "options": {
+        "A": "Central Processing Unit",
+        "B": "Computer Processing Unit",
+        "C": "Central Print Unit",
+        "D": "Control Processing Unit"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "CPU stands for Central Processing Unit, often called the 'brain' of the computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0138",
+      "type": "mcq",
+      "stem": "Which of these is an OS System?",
+      "options": {
+        "A": "MS Word",
+        "B": "Chrome",
+        "C": "Games",
+        "D": "Operating System"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "An Operating System (OS) is the software that manages computer hardware."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0139",
+      "type": "mcq",
+      "stem": "The smallest unit in a computer is?",
+      "options": {
+        "A": "Byte",
+        "B": "Kilo",
+        "C": "Bit",
+        "D": "Mega"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A bit (binary digit) is the most basic and smallest unit of data in computing."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0140",
+      "type": "mcq",
+      "stem": "Which device is used to convert digital signals to information?",
+      "options": {
+        "A": "Monitor",
+        "B": "Keyboard",
+        "C": "Mouse",
+        "D": "Scanner"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The monitor displays processed digital data as visual information for the user."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0141",
+      "type": "mcq",
+      "stem": "What is the primary use of an OS?",
+      "options": {
+        "A": "Manage hardware and software resources",
+        "B": "Play music",
+        "C": "Print documents",
+        "D": "Browse internet"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The OS acts as an intermediary between the user and the computer hardware."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0142",
+      "type": "mcq",
+      "stem": "Which of these is volatile?",
+      "options": {
+        "A": "Hard Disk",
+        "B": "ROM",
+        "C": "RAM",
+        "D": "Hard Drive"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "RAM is volatile memory, meaning its contents are lost when power is turned off."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0143",
+      "type": "mcq",
+      "stem": "The work of the ALU is?",
+      "options": {
+        "A": "Perform arithmetic and logical operations",
+        "B": "Print documents",
+        "C": "Store data",
+        "D": "Scan images"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Arithmetic Logic Unit (ALU) handles all mathematical calculations and logic comparisons."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0144",
+      "type": "mcq",
+      "stem": "Which generation of computer uses vacuum tubes?",
+      "options": {
+        "A": "First Generation",
+        "B": "Second Generation",
+        "C": "Third Generation",
+        "D": "Fourth Generation"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "First-generation computers relied on vacuum tubes for circuitry."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0145",
+      "type": "mcq",
+      "stem": "What type of software is Microsoft PowerPoint?",
+      "options": {
+        "A": "System software",
+        "B": "Application software",
+        "C": "Utility software",
+        "D": "Programming software"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "PowerPoint is an application designed to help users perform specific tasks, like creating presentations."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0146",
+      "type": "mcq",
+      "stem": "Which port is used to connect a printer?",
+      "options": {
+        "A": "USB Port",
+        "B": "HDMI",
+        "C": "VGA",
+        "D": "PS/2"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Modern printers are most commonly connected via a USB (Universal Serial Bus) port."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0147",
+      "type": "mcq",
+      "stem": "Which is not a web browser?",
+      "options": {
+        "A": "Chrome",
+        "B": "Firefox",
+        "C": "Photoshop",
+        "D": "Edge"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Photoshop is an image editing software, not a tool for browsing the web."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0148",
+      "type": "mcq",
+      "stem": "Which is malware?",
+      "options": {
+        "A": "Virus",
+        "B": "Firewall",
+        "C": "Firefox",
+        "D": "Antivirus"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A virus is a type of malicious software (malware) designed to harm a computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0149",
+      "type": "mcq",
+      "stem": "What is a firewall?",
+      "options": {
+        "A": "Security system that protects a network",
+        "B": "Virus",
+        "C": "Printer",
+        "D": "Browser"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A firewall monitors and controls incoming and outgoing network traffic based on security rules."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0150",
+      "type": "mcq",
+      "stem": "Device for uninterrupted power supply?",
+      "options": {
+        "A": "UPS",
+        "B": "CPU",
+        "C": "Monitor",
+        "D": "RAM"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A UPS (Uninterruptible Power Supply) provides emergency power when the main source fails."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0151",
+      "type": "mcq",
+      "stem": "High-level programming language?",
+      "options": {
+        "A": "Python",
+        "B": "Windows",
+        "C": "Java",
+        "D": "Both A and C"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Python and Java are both examples of high-level programming languages."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0152",
+      "type": "mcq",
+      "stem": "HTTP means?",
+      "options": {
+        "A": "HyperText Transfer Protocol",
+        "B": "High Transfer Text Protocol",
+        "C": "Hyper Tool Transfer Program",
+        "D": "None"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "HTTP is the foundation of data communication for the World Wide Web."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0153",
+      "type": "mcq",
+      "stem": "CPU speed is measured in?",
+      "options": {
+        "A": "Hertz (Hz)",
+        "B": "Meter",
+        "C": "Volt",
+        "D": "Byte"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "CPU clock speed, which determines how many cycles it performs per second, is measured in Hertz."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0154",
+      "type": "mcq",
+      "stem": "What is a computer application?",
+      "options": {
+        "A": "Program designed to perform specific tasks",
+        "B": "Hardware",
+        "C": "Cable",
+        "D": "CPU"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Applications are end-user programs like word processors or spreadsheets."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0155",
+      "type": "mcq",
+      "stem": "Which is not a printer?",
+      "options": {
+        "A": "Laserjet",
+        "B": "Plotter",
+        "C": "Monitor",
+        "D": "Inkjet"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A monitor is an output display device, while the others are types of printers."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0156",
+      "type": "mcq",
+      "stem": "Purpose of monitor?",
+      "options": {
+        "A": "Display output",
+        "B": "Input data",
+        "C": "Store data",
+        "D": "Process data"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The monitor's primary role is to provide a visual interface of the computer's output."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0157",
+      "type": "mcq",
+      "stem": "Device for input graphics?",
+      "options": {
+        "A": "Scanner",
+        "B": "Printer",
+        "C": "Mouse",
+        "D": "Speaker"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A scanner converts physical images or documents into digital graphic data."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0158",
+      "type": "mcq",
+      "stem": "PDF means?",
+      "options": {
+        "A": "Portable Document Format",
+        "B": "Print Document File",
+        "C": "Personal Data File",
+        "D": "Public Document Format"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "PDF is a file format developed by Adobe to present documents independently of software."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0159",
+      "type": "mcq",
+      "stem": "Which is a computer network?",
+      "options": {
+        "A": "TCP",
+        "B": "LAN",
+        "C": "USB",
+        "D": "CPU"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A LAN (Local Area Network) is a collection of devices connected in one physical location."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0160",
+      "type": "mcq",
+      "stem": "What is the purpose of BIOS?",
+      "options": {
+        "A": "Boot the computer and initialize hardware",
+        "B": "Play music",
+        "C": "Store files",
+        "D": "Print documents"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "BIOS (Basic Input/Output System) is the firmware used to perform hardware initialization during booting."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0161",
+      "type": "mcq",
+      "stem": "What is the function of the motherboard?",
+      "options": {
+        "A": "Connect and hold all computer components",
+        "B": "Print documents",
+        "C": "Store files only",
+        "D": "Display output"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The motherboard is the main printed circuit board that allows communication between components."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0162",
+      "type": "mcq",
+      "stem": "Which is a search engine?",
+      "options": {
+        "A": "Google",
+        "B": "AOL",
+        "C": "Microsoft",
+        "D": "Windows"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Google is a specialized web tool designed to search for information on the World Wide Web."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0163",
+      "type": "mcq",
+      "stem": "The purpose of a server is?",
+      "options": {
+        "A": "Provide services/resources to other computers",
+        "B": "Play games",
+        "C": "Type documents",
+        "D": "Print only"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Servers are computers that provide data or services to other 'client' computers on a network."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0164",
+      "type": "mcq",
+      "stem": "A device that enables online chat is a?",
+      "options": {
+        "A": "Modem",
+        "B": "Microphone",
+        "C": "Monitor",
+        "D": "Printer"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A modem enables internet connectivity, which is required for online chatting."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0165",
+      "type": "mcq",
+      "stem": "The function of an IP address is?",
+      "options": {
+        "A": "Identify devices on a network",
+        "B": "Store files",
+        "C": "Print documents",
+        "D": "Scan images"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "An IP address serves as a unique identifier for a device on a network."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0166",
+      "type": "mcq",
+      "stem": "The purpose of a compiler is?",
+      "options": {
+        "A": "Translate high-level language to machine code",
+        "B": "Store data",
+        "C": "Display output",
+        "D": "Connect network"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Compilers convert human-readable source code into a format the processor can execute."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0167",
+      "type": "mcq",
+      "stem": "The function of ROM is?",
+      "options": {
+        "A": "Store permanent instructions",
+        "B": "Temporary storage",
+        "C": "Input data",
+        "D": "Print files"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "ROM (Read-Only Memory) contains non-volatile, permanent data like start-up instructions."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0168",
+      "type": "mcq",
+      "stem": "Which generation uses integrated circuits?",
+      "options": {
+        "A": "First",
+        "B": "Second",
+        "C": "Third",
+        "D": "Fourth"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The third generation of computers replaced transistors with integrated circuits (ICs)."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0169",
+      "type": "mcq",
+      "stem": "Purpose of device driver?",
+      "options": {
+        "A": "Allow OS communicate with hardware",
+        "B": "Store files",
+        "C": "Print documents",
+        "D": "Scan virus"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A driver is a software component that lets the OS and a device communicate with each other."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0170",
+      "type": "mcq",
+      "stem": "Which is not a type of computer?",
+      "options": {
+        "A": "Supercomputer",
+        "B": "Mainframe",
+        "C": "Hybrid",
+        "D": "Keyboard"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "A keyboard is a peripheral device, not a classification of a computer system."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0171",
+      "type": "mcq",
+      "stem": "What is a database?",
+      "options": {
+        "A": "Organized collection of data",
+        "B": "Printer",
+        "C": "Cable",
+        "D": "Monitor"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A database is a structured set of data held in a computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0172",
+      "type": "mcq",
+      "stem": "Which is not a memory type?",
+      "options": {
+        "A": "RAM",
+        "B": "ROM",
+        "C": "Monitor",
+        "D": "Cache"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A monitor is an output device, whereas the others are forms of data storage."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0173",
+      "type": "mcq",
+      "stem": "Function of Ethernet card?",
+      "options": {
+        "A": "Connect computer to network",
+        "B": "Store data",
+        "C": "Print files",
+        "D": "Play music"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Ethernet cards (NICs) provide the hardware interface for network connections."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0174",
+      "type": "mcq",
+      "stem": "Purpose of power supply unit?",
+      "options": {
+        "A": "Supply electrical power to computer",
+        "B": "Store files",
+        "C": "Print",
+        "D": "Scan"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The PSU converts mains AC to low-voltage regulated DC power for internal components."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0175",
+      "type": "mcq",
+      "stem": "Device used to control games?",
+      "options": {
+        "A": "Joystick",
+        "B": "Printer",
+        "C": "Monitor",
+        "D": "Scanner"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A joystick is a common input device used for controlling video games."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0176",
+      "type": "mcq",
+      "stem": "Network switch is used to?",
+      "options": {
+        "A": "Connect devices in a network",
+        "B": "Print files",
+        "C": "Store data",
+        "D": "Scan virus"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A switch connects various devices together on a single computer network."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0177",
+      "type": "mcq",
+      "stem": "Purpose of virtual memory?",
+      "options": {
+        "A": "Extend RAM using hard disk",
+        "B": "Print files",
+        "C": "Store virus",
+        "D": "Connect internet"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Virtual memory uses hardware and software to allow a computer to compensate for physical memory shortages."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0178",
+      "type": "mcq",
+      "stem": "Device for internet connection?",
+      "options": {
+        "A": "Modem",
+        "B": "Printer",
+        "C": "Monitor",
+        "D": "CPU"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A modem modulates and demodulates signals to allow internet access over phone or cable lines."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0179",
+      "type": "mcq",
+      "stem": "Sound card is used to?",
+      "options": {
+        "A": "Process audio signals",
+        "B": "Print",
+        "C": "Store data",
+        "D": "Display image"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The sound card facilitates the input and output of audio signals to and from a computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0180",
+      "type": "mcq",
+      "stem": "Which is not a monitor type?",
+      "options": {
+        "A": "LED",
+        "B": "CRT",
+        "C": "UPS",
+        "D": "LCD"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A UPS is a power backup device, not a type of display screen."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0181",
+      "type": "mcq",
+      "stem": "Use of backup is to?",
+      "options": {
+        "A": "Prevent data loss",
+        "B": "Delete files",
+        "C": "Install OS",
+        "D": "Print"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Backups involve copying data so that the copies may be used to restore the original after a data loss event."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0182",
+      "type": "mcq",
+      "stem": "Which is a file system?",
+      "options": {
+        "A": "NTFS",
+        "B": "CPU",
+        "C": "RAM",
+        "D": "USB"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "NTFS is a proprietary file system developed by Microsoft for Windows."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0183",
+      "type": "mcq",
+      "stem": "Purpose of taskbar?",
+      "options": {
+        "A": "Manage open programs",
+        "B": "Print",
+        "C": "Scan",
+        "D": "Store data"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The taskbar allows users to locate and launch programs and monitor those currently running."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0184",
+      "type": "mcq",
+      "stem": "Purpose of heat sink?",
+      "options": {
+        "A": "Cool the CPU",
+        "B": "Print",
+        "C": "Store data",
+        "D": "Display output"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A heat sink dissipates heat from the processor to prevent overheating."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0185",
+      "type": "mcq",
+      "stem": "Which is not user interface?",
+      "options": {
+        "A": "GUI",
+        "B": "CLI",
+        "C": "Apps",
+        "D": "Menu"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Applications are programs, whereas GUI, CLI, and Menus are methods of interacting with those programs."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0186",
+      "type": "mcq",
+      "stem": "Purpose of registry?",
+      "options": {
+        "A": "Store system settings",
+        "B": "Print",
+        "C": "Play music",
+        "D": "Scan"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Windows Registry is a database that stores low-level settings for the OS and apps."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0187",
+      "type": "mcq",
+      "stem": "Short-range wireless connection?",
+      "options": {
+        "A": "Bluetooth",
+        "B": "LAN",
+        "C": "WAN",
+        "D": "USB"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Bluetooth is a wireless technology standard for exchanging data over short distances."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0188",
+      "type": "mcq",
+      "stem": "Function of CPU fan?",
+      "options": {
+        "A": "Cool the processor",
+        "B": "Print",
+        "C": "Store files",
+        "D": "Connect network"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The fan draws heat away from the CPU's heat sink to maintain safe temperatures."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0189",
+      "type": "mcq",
+      "stem": "Which is not a case type?",
+      "options": {
+        "A": "Tower",
+        "B": "Laptop",
+        "C": "Server",
+        "D": "Desktop"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A laptop is a complete computer category, whereas tower and desktop refer to chassis styles."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0190",
+      "type": "mcq",
+      "stem": "Which is not input/output device?",
+      "options": {
+        "A": "Mouse",
+        "B": "Monitor",
+        "C": "CPU",
+        "D": "Keyboard"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The CPU is a processing unit; the others are peripheral I/O devices."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0191",
+      "type": "mcq",
+      "stem": "Type of computer battery?",
+      "options": {
+        "A": "CMOS",
+        "B": "RAM",
+        "C": "ROM",
+        "D": "Monitor"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The CMOS battery powers the BIOS firmware and maintains the system clock."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0192",
+      "type": "mcq",
+      "stem": "Device for network protection?",
+      "options": {
+        "A": "Firewall",
+        "B": "Printer",
+        "C": "Monitor",
+        "D": "Mouse"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A firewall acts as a barrier between a trusted and untrusted network."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0193",
+      "type": "mcq",
+      "stem": "Function of RAID system?",
+      "options": {
+        "A": "Data redundancy and performance improvement",
+        "B": "Print",
+        "C": "Scan",
+        "D": "Store virus"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "RAID combines multiple disk drives into one unit for reliability or speed."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0194",
+      "type": "mcq",
+      "stem": "Which is not display RAM?",
+      "options": {
+        "A": "VRAM",
+        "B": "DRAM",
+        "C": "SRAM",
+        "D": "CPU"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "CPU is a processor, not a type of memory used for video display."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0195",
+      "type": "mcq",
+      "stem": "Purpose of system restore?",
+      "options": {
+        "A": "Return system to previous state",
+        "B": "Delete files",
+        "C": "Print",
+        "D": "Scan"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "System Restore rolls back system files and settings to an earlier point in time."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0196",
+      "type": "mcq",
+      "stem": "Which is not keyboard type?",
+      "options": {
+        "A": "Mechanical",
+        "B": "Membrane",
+        "C": "Digital",
+        "D": "Wireless"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "While 'virtual' keyboards exist, 'digital' is not a standard physical keyboard classification."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0197",
+      "type": "mcq",
+      "stem": "Purpose of disk defragmentation?",
+      "options": {
+        "A": "Improve disk performance",
+        "B": "Delete virus",
+        "C": "Print",
+        "D": "Scan"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Defragmentation reorganizes data on a drive so that files are stored in contiguous blocks."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0198",
+      "type": "mcq",
+      "stem": "What is a computer program?",
+      "options": {
+        "A": "Set of instructions for computer",
+        "B": "Hardware",
+        "C": "Cable",
+        "D": "Printer"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A program is a collection of instructions that can be executed by a computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0199",
+      "type": "mcq",
+      "stem": "Program used for software development?",
+      "options": {
+        "A": "IDE",
+        "B": "Printer",
+        "C": "Monitor",
+        "D": "Scanner"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "An Integrated Development Environment (IDE) provides comprehensive facilities to programmers."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0200",
+      "type": "mcq",
+      "stem": "Example of interpreted language?",
+      "options": {
+        "A": "Python",
+        "B": "C",
+        "C": "Assembly",
+        "D": "HTML"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Python is primarily an interpreted language, where code is executed line-by-line."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0201",
+      "type": "mcq",
+      "stem": "Purpose of algorithm?",
+      "options": {
+        "A": "Solve problem step-by-step",
+        "B": "Print",
+        "C": "Scan",
+        "D": "Store data"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "An algorithm is a finite sequence of well-defined instructions to solve a problem."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0202",
+      "type": "mcq",
+      "stem": "Example of cloud storage?",
+      "options": {
+        "A": "Google Drive",
+        "B": "CPU",
+        "C": "RAM",
+        "D": "Printer"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Google Drive is a popular service for storing files on remote internet servers."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0203",
+      "type": "mcq",
+      "stem": "Dust in cooling fan causes?",
+      "options": {
+        "A": "Overheating",
+        "B": "Printing error",
+        "C": "Virus",
+        "D": "Network issue"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Dust restricts airflow, preventing the fan from cooling components effectively."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0204",
+      "type": "mcq",
+      "stem": "HTML means?",
+      "options": {
+        "A": "HyperText Markup Language",
+        "B": "HighText Machine Language",
+        "C": "Hyper Tool Mark Language",
+        "D": "None"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "HTML is the standard markup language for documents designed to be displayed in a browser."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0205",
+      "type": "mcq",
+      "stem": "Difference between compiler and interpreter?",
+      "options": {
+        "A": "Compiler translates whole program; Interpreter translates line-by-line",
+        "B": "Same thing",
+        "C": "Both print files",
+        "D": "None"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Compilers generate an executable file, while interpreters execute source code directly."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0206",
+      "type": "mcq",
+      "stem": "Main function of ALU?",
+      "options": {
+        "A": "Arithmetic and logical operations",
+        "B": "Print",
+        "C": "Store data",
+        "D": "Connect internet"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The ALU is responsible for all calculation-based tasks within the processor."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0207",
+      "type": "mcq",
+      "stem": "What is a bus?",
+      "options": {
+        "A": "Communication pathway in computer",
+        "B": "Printer",
+        "C": "Monitor",
+        "D": "Scanner"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A bus is a system that transfers data between components inside a computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0208",
+      "type": "mcq",
+      "stem": "OSI layer for logical addressing?",
+      "options": {
+        "A": "Network Layer",
+        "B": "Physical",
+        "C": "Data Link",
+        "D": "Session"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Network Layer (Layer 3) handles routing and logical addressing, such as IP."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0209",
+      "type": "mcq",
+      "stem": "Purpose of caching?",
+      "options": {
+        "A": "Speed up data access",
+        "B": "Print",
+        "C": "Scan",
+        "D": "Delete files"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Caching stores frequently used data in a faster memory area to improve performance."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0210",
+      "type": "mcq",
+      "stem": "Data encapsulation in networking?",
+      "options": {
+        "A": "Wrapping data with protocol information",
+        "B": "Printing",
+        "C": "Deleting",
+        "D": "Storing only"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Encapsulation adds headers and trailers to data as it moves down the network stack."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0211",
+      "type": "mcq",
+      "stem": "Difference between Open Source & Proprietary software?",
+      "options": {
+        "A": "Open source allows modification; Proprietary does not",
+        "B": "Same thing",
+        "C": "Both free",
+        "D": "None"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Open-source software provides access to its source code for users to study or change."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0212",
+      "type": "mcq",
+      "stem": "The basic operations performed by a computer are:",
+      "options": {
+        "A": "Input, Processing, Output",
+        "B": "Save, Print, Delete",
+        "C": "Type, Scan, Print",
+        "D": "Open, Close, Shut down"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The core cycle of any computer involves taking input, processing it, and providing output."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0213",
+      "type": "mcq",
+      "stem": "Which unit is known as the brain of the computer?",
+      "options": {
+        "A": "RAM",
+        "B": "Monitor",
+        "C": "CPU",
+        "D": "Hard Disk"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Central Processing Unit (CPU) is responsible for executing instructions and managing other hardware."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0214",
+      "type": "mcq",
+      "stem": "RAM stands for:",
+      "options": {
+        "A": "Random Access Memory",
+        "B": "Read Access Memory",
+        "C": "Run Access Memory",
+        "D": "Ready Active Memory"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "RAM is the acronym for Random Access Memory, the computer's short-term memory."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0215",
+      "type": "mcq",
+      "stem": "Which of the following is a secondary storage device?",
+      "options": {
+        "A": "Keyboard",
+        "B": "Hard Drive",
+        "C": "Mouse",
+        "D": "Monitor"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The hard drive provides long-term, non-volatile storage for data."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0216",
+      "type": "mcq",
+      "stem": "The full meaning of CPU is:",
+      "options": {
+        "A": "Central Process Unit",
+        "B": "Central Processing Unit",
+        "C": "Computer Processing Unit",
+        "D": "Control Processing Unit"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CPU stands for Central Processing Unit."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0217",
+      "type": "mcq",
+      "stem": "Which of the following is system software?",
+      "options": {
+        "A": "Microsoft Word",
+        "B": "Operating System",
+        "C": "Excel",
+        "D": "Photoshop"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The operating system is the primary system software that manages computer hardware."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0218",
+      "type": "mcq",
+      "stem": "The smallest unit in a computer system is:",
+      "options": {
+        "A": "Byte",
+        "B": "Bit",
+        "C": "Kilobyte",
+        "D": "Megabyte"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A bit (binary digit) is the most basic unit of information in computing."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0219",
+      "type": "mcq",
+      "stem": "Which device is used to convert digital signals to analog signals?",
+      "options": {
+        "A": "Router",
+        "B": "Switch",
+        "C": "Modem",
+        "D": "Printer"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A modem modulates/demodulates signals to convert between digital and analog formats."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0220",
+      "type": "mcq",
+      "stem": "The primary purpose of an operating system is to:",
+      "options": {
+        "A": "Play music",
+        "B": "Manage hardware and software components",
+        "C": "Print documents",
+        "D": "Store files"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Operating systems act as an intermediary to manage all resources of the computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0221",
+      "type": "mcq",
+      "stem": "Which of the following is a volatile memory?",
+      "options": {
+        "A": "ROM",
+        "B": "Hard Drive",
+        "C": "RAM",
+        "D": "Flash Drive"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "RAM is volatile, meaning it loses its data when power is turned off."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0222",
+      "type": "mcq",
+      "stem": "What is the function of ALU?",
+      "options": {
+        "A": "To store data",
+        "B": "To perform logical and arithmetic calculations",
+        "C": "To display output",
+        "D": "To print documents"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Arithmetic Logic Unit (ALU) performs all calculations and logic comparisons within the CPU."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0223",
+      "type": "mcq",
+      "stem": "Which generation of computers used vacuum tubes?",
+      "options": {
+        "A": "First Generation",
+        "B": "Second Generation",
+        "C": "Third Generation",
+        "D": "Fourth Generation"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "First-generation computers relied on vacuum tubes for circuitry."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0224",
+      "type": "mcq",
+      "stem": "Microsoft Excel is an example of:",
+      "options": {
+        "A": "System Software",
+        "B": "Application Software",
+        "C": "Programming Software",
+        "D": "Utility Software"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Excel is an end-user program designed to perform specific tasks."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0225",
+      "type": "mcq",
+      "stem": "The process of starting or restarting a computer is called:",
+      "options": {
+        "A": "Logging",
+        "B": "Formatting",
+        "C": "Booting",
+        "D": "Installing"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Booting is the initial set of operations that a computer system performs when it is switched on."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0226",
+      "type": "mcq",
+      "stem": "Which port is commonly used to connect a printer to a computer?",
+      "options": {
+        "A": "HDMI",
+        "B": "VGA",
+        "C": "USB",
+        "D": "Ethernet"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Universal Serial Bus (USB) is the standard modern connection for printers."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0227",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a web browser?",
+      "options": {
+        "A": "Chrome",
+        "B": "Firefox",
+        "C": "Photoshop",
+        "D": "Edge"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Photoshop is image editing software, not a web browser."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0228",
+      "type": "mcq",
+      "stem": "Which device is used for uninterrupted power supply?",
+      "options": {
+        "A": "Generator",
+        "B": "UPS",
+        "C": "Battery",
+        "D": "Adapter"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "UPS stands for Uninterruptible Power Supply."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0229",
+      "type": "mcq",
+      "stem": "What is cache memory?",
+      "options": {
+        "A": "Permanent storage",
+        "B": "High-speed memory between CPU and RAM",
+        "C": "External storage",
+        "D": "Input memory"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cache memory provides high-speed data access to the CPU to improve processing speed."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0230",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a programming language?",
+      "options": {
+        "A": "Python",
+        "B": "Java",
+        "C": "Windows",
+        "D": "C++"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Windows is an operating system, not a programming language."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0231",
+      "type": "mcq",
+      "stem": "What is the full meaning of HTTP?",
+      "options": {
+        "A": "HyperText Transfer Protocol",
+        "B": "High Transfer Text Protocol",
+        "C": "Hyper Transfer Text Program",
+        "D": "Hyper Tool Transfer Protocol"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "HTTP is the protocol used for transmitting web pages over the internet."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0232",
+      "type": "mcq",
+      "stem": "Processor speed is measured in:",
+      "options": {
+        "A": "Bytes",
+        "B": "Hertz",
+        "C": "Watts",
+        "D": "Volts"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CPU clock speed is measured in Hertz (usually GHz today)."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0233",
+      "type": "mcq",
+      "stem": "A computer network is:",
+      "options": {
+        "A": "A single computer",
+        "B": "Interconnected computers sharing resources",
+        "C": "A type of printer",
+        "D": "A storage device"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Networks consist of two or more computers linked to share data and peripherals."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0234",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a type of printer?",
+      "options": {
+        "A": "Inkjet",
+        "B": "Laser",
+        "C": "Dot Matrix",
+        "D": "Bluetooth"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Bluetooth is a wireless communication technology, not a printer type."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0235",
+      "type": "mcq",
+      "stem": "What is the purpose of antivirus software?",
+      "options": {
+        "A": "To increase speed",
+        "B": "To protect against malware",
+        "C": "To design graphics",
+        "D": "To connect internet"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Antivirus is designed to detect and remove malicious software."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0236",
+      "type": "mcq",
+      "stem": "Which device is used to input graphical data?",
+      "options": {
+        "A": "Monitor",
+        "B": "Printer",
+        "C": "Scanner",
+        "D": "Speaker"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Scanners convert physical images and documents into digital graphical data."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0237",
+      "type": "mcq",
+      "stem": "PDF stands for:",
+      "options": {
+        "A": "Portable Document Format",
+        "B": "Personal Data File",
+        "C": "Print Data Format",
+        "D": "Public Document File"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "PDF is a file format used to present documents independent of software or hardware."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0238",
+      "type": "mcq",
+      "stem": "BIOS stands for:",
+      "options": {
+        "A": "Basic Input and Output System",
+        "B": "Binary Input Output Setup",
+        "C": "Basic Internal Operating System",
+        "D": "Backup Input Output System"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "BIOS initializes hardware during the booting process."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0239",
+      "type": "mcq",
+      "stem": "Which device is used to point and select items on screen?",
+      "options": {
+        "A": "Keyboard",
+        "B": "Mouse",
+        "C": "Monitor",
+        "D": "Printer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The mouse is the primary pointing device for graphical user interfaces."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0240",
+      "type": "mcq",
+      "stem": "A folder is used to:",
+      "options": {
+        "A": "Delete files",
+        "B": "Organize data",
+        "C": "Print documents",
+        "D": "Scan images"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Folders are used to group and organize related files on a storage device."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0241",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a valid file extension?",
+      "options": {
+        "A": ".doc",
+        "B": ".jpg",
+        "C": ".cpu",
+        "D": ".pdf"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": ".cpu refers to hardware, while the others are standard file formats."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0242",
+      "type": "mcq",
+      "stem": "The function of a motherboard is to:",
+      "options": {
+        "A": "Store data",
+        "B": "Connect all computer components",
+        "C": "Print documents",
+        "D": "Display output"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The motherboard is the main printed circuit board that allows communication between components."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0243",
+      "type": "mcq",
+      "stem": "Which of the following is a search engine?",
+      "options": {
+        "A": "Google",
+        "B": "Word",
+        "C": "Excel",
+        "D": "Windows"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Google is a service designed to search for information on the World Wide Web."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0244",
+      "type": "mcq",
+      "stem": "The purpose of a server is to:",
+      "options": {
+        "A": "Play games",
+        "B": "Provide services to other computers",
+        "C": "Type documents",
+        "D": "Scan files"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Servers are computers that provide data or services to 'client' computers."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0245",
+      "type": "mcq",
+      "stem": "Which device is used for video conferencing?",
+      "options": {
+        "A": "Scanner",
+        "B": "Webcam",
+        "C": "Printer",
+        "D": "Speaker"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Webcams capture live video for transmission over a network."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0246",
+      "type": "mcq",
+      "stem": "The function of an IP address is to:",
+      "options": {
+        "A": "Print documents",
+        "B": "Identify a device on a network",
+        "C": "Store data",
+        "D": "Increase speed"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Internet Protocol addresses act as unique identifiers for hardware on a network."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0247",
+      "type": "mcq",
+      "stem": "A compiler is used to:",
+      "options": {
+        "A": "Play music",
+        "B": "Translate program to machine language",
+        "C": "Scan virus",
+        "D": "Design graphics"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Compilers convert high-level source code into low-level machine code for the CPU."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0248",
+      "type": "mcq",
+      "stem": "Which generation of computer used transistors?",
+      "options": {
+        "A": "First",
+        "B": "Second",
+        "C": "Third",
+        "D": "Fourth"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The second generation of computers replaced vacuum tubes with transistors."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0249",
+      "type": "mcq",
+      "stem": "The function of a network switch is to:",
+      "options": {
+        "A": "Print documents",
+        "B": "Connect network devices",
+        "C": "Store data",
+        "D": "Scan files"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Switches connect multiple devices on a single computer network."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0250",
+      "type": "mcq",
+      "stem": "Virtual memory is used to:",
+      "options": {
+        "A": "Increase internet speed",
+        "B": "Extend RAM using hard disk space",
+        "C": "Print documents",
+        "D": "Scan files"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Virtual memory allows the OS to use disk space to simulate additional RAM when physical RAM is full."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0251",
+      "type": "mcq",
+      "stem": "Which device is used for internet connection?",
+      "options": {
+        "A": "Modem",
+        "B": "Printer",
+        "C": "Monitor",
+        "D": "Keyboard"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A modem is necessary to connect a computer to an Internet Service Provider (ISP)."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0252",
+      "type": "mcq",
+      "stem": "The function of a sound card is to:",
+      "options": {
+        "A": "Print documents",
+        "B": "Process audio data",
+        "C": "Store files",
+        "D": "Scan images"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Sound cards facilitate the input and output of audio signals to and from a computer."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0253",
+      "type": "mcq",
+      "stem": "Backup is used to:",
+      "options": {
+        "A": "Delete files",
+        "B": "Save copies of data",
+        "C": "Format disk",
+        "D": "Increase speed"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Backups protect against data loss by creating duplicates of important files."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0254",
+      "type": "mcq",
+      "stem": "NTFS is a type of:",
+      "options": {
+        "A": "Web browser",
+        "B": "File system",
+        "C": "Printer",
+        "D": "CPU"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "New Technology File System (NTFS) is the standard file system for the Windows NT family."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0255",
+      "type": "mcq",
+      "stem": "The purpose of a taskbar is to:",
+      "options": {
+        "A": "Show running programs",
+        "B": "Delete files",
+        "C": "Scan virus",
+        "D": "Format disk"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The taskbar allows users to locate and launch programs and see which ones are currently open."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0256",
+      "type": "mcq",
+      "stem": "The function of a heatsink is to:",
+      "options": {
+        "A": "Store data",
+        "B": "Cool computer components",
+        "C": "Print documents",
+        "D": "Connect network"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Heatsinks dissipate heat from processors to prevent overheating."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0257",
+      "type": "mcq",
+      "stem": "Bluetooth is used for:",
+      "options": {
+        "A": "Long-distance wired connection",
+        "B": "Short-range wireless connection",
+        "C": "Printing documents",
+        "D": "Scanning images"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Bluetooth is a wireless technology standard for exchanging data over short distances."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0258",
+      "type": "mcq",
+      "stem": "Overclocking means:",
+      "options": {
+        "A": "Slowing down CPU",
+        "B": "Running computer components faster than rated speed",
+        "C": "Deleting files",
+        "D": "Formatting disk"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Overclocking is the practice of increasing the clock rate of a component to exceed the manufacturer's specification."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0259",
+      "type": "mcq",
+      "stem": "CMOS battery is used to:",
+      "options": {
+        "A": "Power the monitor",
+        "B": "Store BIOS settings",
+        "C": "Connect internet",
+        "D": "Print documents"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The CMOS battery maintains the time, date, and BIOS configuration settings when the computer is off."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0260",
+      "type": "mcq",
+      "stem": "RAID is used to:",
+      "options": {
+        "A": "Manage data storage",
+        "B": "Print documents",
+        "C": "Play music",
+        "D": "Scan virus"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Redundant Array of Independent Disks (RAID) is used for data redundancy or performance improvement."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0261",
+      "type": "mcq",
+      "stem": "System Restore is used to:",
+      "options": {
+        "A": "Install new hardware",
+        "B": "Return system to previous settings",
+        "C": "Delete virus",
+        "D": "Format disk"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "System Restore allows users to revert their computer's state to a previous point in time."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0262",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a type of keyboard?",
+      "options": {
+        "A": "Mechanical",
+        "B": "Wireless",
+        "C": "Digital",
+        "D": "Ergonomic"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Mechanical, Wireless, and Ergonomic are real keyboard categories; 'Digital' is not a standard type."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0263",
+      "type": "mcq",
+      "stem": "An algorithm is:",
+      "options": {
+        "A": "A hardware device",
+        "B": "Step-by-step solution to a problem",
+        "C": "A printer",
+        "D": "A monitor"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An algorithm is a finite sequence of well-defined instructions to solve a class of problems."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0264",
+      "type": "mcq",
+      "stem": "Which translator translates the entire program at once?",
+      "options": {
+        "A": "Interpreter",
+        "B": "Compiler",
+        "C": "Assembler",
+        "D": "Loader"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Compilers translate the whole source code into object code before execution."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0265",
+      "type": "mcq",
+      "stem": "A primary cause of computer overheating is:",
+      "options": {
+        "A": "Clean system",
+        "B": "Dust accumulation in cooling system",
+        "C": "Strong internet",
+        "D": "Large RAM"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Dust blocks airflow, causing heat to build up inside the computer case."
+    },
+    {
+      "id": "uni-tasued-cos101-bank-0266",
+      "type": "mcq",
+      "stem": "Troubleshooting means:",
+      "options": {
+        "A": "Installing software",
+        "B": "Identifying and solving problems",
+        "C": "Printing documents",
+        "D": "Deleting files"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Troubleshooting is a systematic approach to finding the cause of a fault and correcting it."
+    }
+  ]
+}

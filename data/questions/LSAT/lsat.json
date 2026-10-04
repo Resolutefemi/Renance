@@ -1,0 +1,701 @@
+{
+ "code": "lsat-lsat-bank",
+ "title": "LSAT - Lsat",
+ "version": 1,
+ "questionCount": 46,
+ "totalMarks": 46,
+ "questions": [
+  {
+   "id": "lsat-lsat-bank-0007",
+   "type": "mcq",
+   "stem": "Which one of the following conclusions follows logically from the nutritionist's statements?",
+   "marks": 1,
+   "options": {
+    "A": "The box of crackers is labeled 'organic.'",
+    "B": "The box of crackers is not labeled 'organic.'",
+    "C": "Any food produced without synthetic pesticides is labeled 'organic.'",
+    "D": "If a food is not labeled 'organic,' then it was produced with synthetic pesticides.",
+    "E": "The box of crackers is unsafe to eat."
+   },
+   "answer": "B",
+   "explanation": "The rule is: Organic-labeled → No synthetic pesticides. The crackers were produced WITH a synthetic pesticide, i.e., 'No synthetic pesticides' is false. By the contrapositive (Synthetic pesticides used → Not organic-labeled), the crackers cannot be labeled 'organic.' Choice B follows necessarily."
+  },
+  {
+   "id": "lsat-lsat-bank-0008",
+   "type": "mcq",
+   "stem": "Which one of the following must be true on the basis of the statements above?",
+   "marks": 1,
+   "options": {
+    "A": "Renata is eligible to vote in the annual election.",
+    "B": "If Renata is eligible to vote in the annual election, then she has attended at least three meetings.",
+    "C": "If Renata has attended at least three meetings, then she is eligible to vote in the annual election.",
+    "D": "If Renata has not attended at least three meetings, then she has not paid her dues.",
+    "E": "Renata is not eligible to vote in the annual election."
+   },
+   "answer": "B",
+   "explanation": "'Eligible only if X and Y' makes both paying dues AND attending three meetings necessary conditions for eligibility: Eligible → (Dues AND Three meetings). From this conditional, if Renata is eligible, then both necessary conditions hold, including attending at least three meetings. Choice B isolates one necessary condition that eligibility guarantees, and it is a valid inference."
+  },
+  {
+   "id": "lsat-lsat-bank-0009",
+   "type": "mcq",
+   "stem": "Which one of the following can be properly inferred?",
+   "marks": 1,
+   "options": {
+    "A": "User K-12 enabled two-factor authentication.",
+    "B": "User K-12 did not enable two-factor authentication.",
+    "C": "Any user granted extended session length has enabled two-factor authentication.",
+    "D": "If a user does not enable two-factor authentication, the system does not grant extended session length.",
+    "E": "User K-12's account is less secure than other accounts."
+   },
+   "answer": "B",
+   "explanation": "The rule is: Two-factor enabled → Extended session granted. K-12 was NOT granted extended session length, so the necessary condition fails. By the contrapositive (Not extended session → Not two-factor enabled), K-12 did not enable two-factor authentication. Choice B follows necessarily."
+  },
+  {
+   "id": "lsat-lsat-bank-0010",
+   "type": "mcq",
+   "stem": "Which one of the following can be properly inferred about the observed animal?",
+   "marks": 1,
+   "options": {
+    "A": "It is not a mammal native to the island.",
+    "B": "It is a mammal native to the island.",
+    "C": "It is nocturnal.",
+    "D": "If it is nocturnal, then it is a mammal native to the island.",
+    "E": "It is the only animal that forages near the lakeshore."
+   },
+   "answer": "A",
+   "explanation": "Two rules chain: (1) Native mammal → Nocturnal; (2) Nocturnal → Not foraging near lakeshore. Chaining gives Native mammal → Not foraging near lakeshore. The observed animal IS foraging near the lakeshore, so by the contrapositive of the chain (Foraging near lakeshore → Not a native mammal), it is not a mammal native to the island. Choice A follows necessarily."
+  },
+  {
+   "id": "lsat-lsat-bank-0011",
+   "type": "mcq",
+   "stem": "Which one of the following can be properly inferred from the statement above?",
+   "marks": 1,
+   "options": {
+    "A": "If a film was produced entirely within the city limits, then it qualifies for the Heritage Production Grant.",
+    "B": "If a film was not produced entirely within the city limits, then it does not qualify for the Heritage Production Grant.",
+    "C": "If a film does not qualify for the Heritage Production Grant, then it was not produced entirely within the city limits.",
+    "D": "Every film produced entirely within the city limits is eligible for some municipal grant.",
+    "E": "Most films that qualify for the Heritage Production Grant were produced by city residents."
+   },
+   "answer": "B",
+   "explanation": "The stimulus states 'qualifies for grant -> produced within city limits' (A -> B). The only valid inference is the contrapositive: negate and flip, yielding 'not produced within city limits -> does not qualify' (not-B -> not-A). Choice B states exactly this."
+  },
+  {
+   "id": "lsat-lsat-bank-0012",
+   "type": "mcq",
+   "stem": "Which one of the following follows logically from the analyst's conclusion?",
+   "marks": 1,
+   "options": {
+    "A": "If a senator received funding from the Riverside Coalition, then that senator voted for the transit bill.",
+    "B": "If a senator did not vote for the transit bill, then that senator did not receive funding from the Riverside Coalition.",
+    "C": "If a senator did not receive funding from the Riverside Coalition, then that senator did not vote for the transit bill.",
+    "D": "No senator who opposed the transit bill received funding from any coalition.",
+    "E": "The Riverside Coalition funded more senators than any other group that year."
+   },
+   "answer": "C",
+   "explanation": "The claim is 'voted for bill -> received Coalition funding' (A -> B). The contrapositive negates and flips: 'did not receive Coalition funding -> did not vote for the bill' (not-B -> not-A). Choice C matches exactly."
+  },
+  {
+   "id": "lsat-lsat-bank-0013",
+   "type": "mcq",
+   "stem": "If the agronomist's statement is true, which one of the following must also be true?",
+   "marks": 1,
+   "options": {
+    "A": "If a plot's orchard yields a full apple crop, then that plot's soil is fertile.",
+    "B": "If a plot's soil is not fertile, then that plot's orchard does not yield a full apple crop.",
+    "C": "If a plot's orchard does not yield a full apple crop, then that plot's soil is not fertile.",
+    "D": "A plot's orchard yields a full apple crop only if the plot receives adequate rainfall.",
+    "E": "Fertile soil is the single most important factor in producing a full apple crop."
+   },
+   "answer": "C",
+   "explanation": "The statement is 'fertile soil -> full crop' (A -> B). The valid contrapositive negates and flips: 'no full crop -> soil not fertile' (not-B -> not-A). Choice C states exactly this."
+  },
+  {
+   "id": "lsat-lsat-bank-0014",
+   "type": "mcq",
+   "stem": "Which one of the following can be properly inferred from the streaming service's terms?",
+   "marks": 1,
+   "options": {
+    "A": "Any subscriber who retains premium access for the entire year renewed before March.",
+    "B": "Any subscriber who did not renew before March does not retain premium access for the entire year.",
+    "C": "Any subscriber who does not retain premium access for the entire year did not renew before March.",
+    "D": "Subscribers who renewed before March pay a lower annual rate than other subscribers.",
+    "E": "Most subscribers who retain premium access renewed at some point during the year."
+   },
+   "answer": "C",
+   "explanation": "The term is 'renewed before March -> retains premium access' (A -> B). The contrapositive negates and flips: 'does not retain premium access -> did not renew before March' (not-B -> not-A). Choice C matches."
+  },
+  {
+   "id": "lsat-lsat-bank-0015",
+   "type": "mcq",
+   "stem": "Which one of the following must be true if the manual's statement is correct?",
+   "marks": 1,
+   "options": {
+    "A": "If a compound turns the blue litmus paper red, then the compound is acidic.",
+    "B": "If a compound is not acidic, then it does not turn the blue litmus paper red.",
+    "C": "If a compound does not turn the blue litmus paper red, then the compound is not acidic.",
+    "D": "A compound turns the blue litmus paper red only because of its concentration.",
+    "E": "Acidic compounds are more common in the lab than non-acidic ones."
+   },
+   "answer": "C",
+   "explanation": "The statement is 'acidic -> turns litmus red' (A -> B). The contrapositive negates and flips: 'does not turn litmus red -> not acidic' (not-B -> not-A). Choice C states exactly this."
+  },
+  {
+   "id": "lsat-lsat-bank-0016",
+   "type": "mcq",
+   "stem": "Which one of the following follows logically from the installer's explanation?",
+   "marks": 1,
+   "options": {
+    "A": "Whenever the front door is locked, the alarm is armed.",
+    "B": "Whenever the alarm is not armed, the front door is not locked.",
+    "C": "Whenever the front door is not locked, the alarm is not armed.",
+    "D": "The front door cannot be locked unless the homeowner is present.",
+    "E": "Arming the alarm is the most effective way to keep the front door secure."
+   },
+   "answer": "C",
+   "explanation": "The statement is 'alarm armed -> front door locked' (A -> B). The contrapositive negates and flips: 'front door not locked -> alarm not armed' (not-B -> not-A). Choice C states this exactly."
+  },
+  {
+   "id": "lsat-lsat-bank-0029",
+   "type": "mcq",
+   "stem": "Which one of the following most accurately states the main conclusion of the columnist's argument?",
+   "marks": 1,
+   "options": {
+    "A": "Late-night eaters in the studies consumed substantially more total calories than early eaters did.",
+    "B": "The popular claim that late-night eating itself causes weight gain is based on a misinterpretation of the evidence.",
+    "C": "The timing of one's meals has no measurable effect on body weight.",
+    "D": "Studies have shown that late-night eaters gained more weight than early eaters.",
+    "E": "People who wish to lose weight should focus on total calorie intake rather than meal timing."
+   },
+   "answer": "B",
+   "explanation": "The argument's purpose is to debunk a popular claim. The findings about equal weight after controlling for calories, and the calorie difference between groups, are evidence. The columnist's verdict on the fad is the final sentence: the claim 'rests on a misreading of the evidence.' Choice (B) restates exactly that evaluative conclusion about the popular claim."
+  },
+  {
+   "id": "lsat-lsat-bank-0046",
+   "type": "mcq",
+   "stem": "Which one of the following, if true, most strengthens the administrator's argument?",
+   "marks": 1,
+   "options": {
+    "A": "The alcohol-based foam is somewhat more expensive per application than the antibacterial soap it replaced.",
+    "B": "During the same six-month period, the hospital made no other changes to its surgical procedures, equipment, or sterilization practices.",
+    "C": "Some surgeons at the hospital reported that the new foam dried their hands less than the old soap did.",
+    "D": "At a different hospital, switching to the same alcohol-based foam did not reduce post-surgical infection rates.",
+    "E": "The antibacterial soap had been used at the hospital for more than fifteen years before the switch."
+   },
+   "answer": "B",
+   "explanation": "The argument infers that the foam caused the drop in infections. The central vulnerability is that some OTHER change during the six months could explain the decline. By establishing that no other changes were made to procedures, equipment, or sterilization, choice B rules out the most prominent alternative causes and ties the infection drop more tightly to the one variable that did change (the foam). This narrows the gap between the premise (infections fell after the switch) and the conclusion (the foam is more effective)."
+  },
+  {
+   "id": "lsat-lsat-bank-0047",
+   "type": "mcq",
+   "stem": "Which one of the following, if true, most strengthens the columnist's argument?",
+   "marks": 1,
+   "options": {
+    "A": "Birch Road and Elm Avenue carry roughly the same volume of nighttime traffic.",
+    "B": "The number of daytime accidents on Birch Road remained constant over the same period.",
+    "C": "Traffic volume on Birch Road did not increase in the year after the streetlights were installed.",
+    "D": "Some drivers report feeling safer on well-lit roads than on poorly lit ones.",
+    "E": "The streetlights installed on Birch Road were among the brightest available models."
+   },
+   "answer": "C",
+   "explanation": "The columnist's evidence is the Birch Road case: lights went up, yet accidents rose. The obvious objection is that something else (such as a surge in how many cars used the road) caused the rise in accidents, leaving the lighting's true effect masked. Choice C closes that gap by ruling out increased traffic volume as the explanation for the accident increase, making it more plausible that the lights themselves failed to help. This supports the inference from the single example to the general claim."
+  },
+  {
+   "id": "lsat-lsat-bank-0048",
+   "type": "mcq",
+   "stem": "Which one of the following, if true, most strengthens the nutritionist's argument?",
+   "marks": 1,
+   "options": {
+    "A": "Large breakfasts are typically higher in protein than other meals eaten during the day.",
+    "B": "People who skip breakfast often report feeling unusually hungry by late morning.",
+    "C": "When habitual breakfast-skippers were assigned to begin eating a large breakfast, their total daily calorie intake decreased.",
+    "D": "Many people who eat a large breakfast also exercise regularly.",
+    "E": "People who eat a large breakfast tend to weigh less than people who skip breakfast."
+   },
+   "answer": "C",
+   "explanation": "The argument leaps from a correlation (big-breakfast eaters consume fewer total calories) to a causal recommendation (eating a big breakfast will MAKE you eat less). The gap is the classic correlation-causation gap: perhaps people who naturally eat less just happen to eat big breakfasts. Choice C provides experimental evidence: when skippers were made to eat a large breakfast, their intake actually fell. This directly supports that the breakfast causes the reduction, closing the gap."
+  },
+  {
+   "id": "lsat-lsat-bank-0049",
+   "type": "mcq",
+   "stem": "Which one of the following, if true, most strengthens the archaeologist's argument?",
+   "marks": 1,
+   "options": {
+    "A": "The decorative patterns at both sites are far more elaborate than those found at any other known site in the region.",
+    "B": "Chemical analysis shows that the clay in the Tola shards came from a deposit located near the Keman site.",
+    "C": "The rugged terrain between the two sites can be crossed on foot in about two weeks.",
+    "D": "Pottery from the Keman site has been dated to roughly the same period as the pottery from the Tola site.",
+    "E": "Neither community is known to have had contact with any third community that produced similar patterns."
+   },
+   "answer": "B",
+   "explanation": "The conclusion is that the matching patterns resulted from direct trade between the two communities. A leading alternative is that the two communities independently developed similar patterns, or that the resemblance is coincidental. Choice B provides physical evidence of actual movement of goods: the clay in Tola's pottery originated near Keman, meaning the pots themselves (or their material) traveled between the sites. That is direct support for trade, sharply narrowing the gap."
+  },
+  {
+   "id": "lsat-lsat-bank-0050",
+   "type": "mcq",
+   "stem": "Which one of the following, if true, most strengthens the editorial's argument?",
+   "marks": 1,
+   "options": {
+    "A": "The standardized math tests are designed to measure a broad range of mathematical reasoning skills.",
+    "B": "Students who participate in the music program also tend to enjoy attending school more than non-participants do.",
+    "C": "Among students with similar prior math achievement, those who later joined the music program went on to outscore those who did not.",
+    "D": "Music programs in other cities have proven popular with both students and parents.",
+    "E": "The after-school music program is less expensive to run than most other after-school enrichment programs."
+   },
+   "answer": "C",
+   "explanation": "The argument concludes that music training causes higher math scores. The obvious confound is self-selection: students who join music programs may already be stronger at math (or come from more advantaged backgrounds), so the score gap could predate any music training. Choice C controls for prior math achievement by comparing students who started out equally and showing the music participants pulled ahead afterward. This isolates the program as the likely cause, directly narrowing the premise-to-conclusion gap."
+  },
+  {
+   "id": "lsat-lsat-bank-0057",
+   "type": "mcq",
+   "stem": "The reasoning in the department's report is most vulnerable to criticism on the grounds that it",
+   "marks": 1,
+   "options": {
+    "A": "treats the absence of evidence that morale is good as positive evidence that morale is poor",
+    "B": "generalizes about all employees from a group of respondents who selected themselves into the survey and so may not be representative of the workforce",
+    "C": "overlooks the possibility that morale, even if poor now, could improve in the near future",
+    "D": "assumes that because most respondents share an opinion, that opinion must be correct",
+    "E": "fails to consider whether senior management's morale differs from that of ordinary employees"
+   },
+   "answer": "A",
+   "explanation": "The survey was voluntary and self-selected: only employees who chose to respond did so, and just 300 of 4,000 participated. People with strong grievances are disproportionately motivated to answer a morale survey, so the 78 percent figure cannot be safely projected onto the whole workforce. This is the textbook unrepresentative-sample (self-selection) flaw, which (B) states precisely."
+  },
+  {
+   "id": "lsat-lsat-bank-0067",
+   "type": "mcq",
+   "stem": "The conclusion of the columnist's argument follows logically if which one of the following is assumed?",
+   "marks": 1,
+   "options": {
+    "A": "Sorting waste into the correct bins requires more effort than discarding everything together.",
+    "B": "If residents sort their waste correctly, the recycling program will succeed.",
+    "C": "The recycling program will succeed only if it requires no more effort from residents than the previous waste system did.",
+    "D": "Some residents are unwilling to expend any extra effort on waste disposal.",
+    "E": "No municipal program succeeds unless it requires minimal effort from residents."
+   },
+   "answer": "A",
+   "explanation": "Diagram the argument. Premise 1: Succeed -> Sort correctly. Premise 2: Sort correctly -> No more effort than discarding together. Conclusion: Not succeed. To reach 'not succeed,' we need to deny the necessary condition for success. Chaining the premises: Succeed -> Sort correctly -> No more effort. So if sorting actually DOES require more effort than discarding together (i.e., the 'no more effort' condition fails), then by contraposition residents won't sort correctly, and therefore the program won't succeed. Choice A asserts exactly that sorting requires more effort than discarding everything together. This denies the necessary condition at the end of the chain, forcing 'not sort correctly,' which forces 'not succeed.' That guarantees the conclusion."
+  },
+  {
+   "id": "lsat-lsat-bank-0068",
+   "type": "mcq",
+   "stem": "The conclusion of the economist's argument follows logically if which one of the following is assumed?",
+   "marks": 1,
+   "options": {
+    "A": "Lurensia's share of global exports declined last year.",
+    "B": "Whenever a country's share of global exports declines, its manufacturers lay off workers.",
+    "C": "A country's manufacturers lay off workers only if its share of global exports declines.",
+    "D": "If Lurensia's productivity had grown faster, its export prices would not have risen.",
+    "E": "Countries that raise their minimum wages typically experience declining export shares."
+   },
+   "answer": "B",
+   "explanation": "Chain the premises. Premise 1: Raise wage faster than productivity -> export prices rise relative to partners. Premise 2: Export prices rise relative to partners -> export share declines. Given fact: Lurensia raised wage faster than productivity. So we can derive: Lurensia's export share will decline. The conclusion is about something new: manufacturers will LAY OFF workers. Nothing in the premises connects declining export share to layoffs. Choice B provides the needed bridge: whenever export share declines, manufacturers lay off workers (decline -> layoffs). Applying B to the derived 'Lurensia's share declines' yields 'Lurensia's manufacturers lay off workers,' guaranteeing the conclusion."
+  },
+  {
+   "id": "lsat-lsat-bank-0069",
+   "type": "mcq",
+   "stem": "The neurologist's conclusion follows logically if which one of the following is assumed?",
+   "marks": 1,
+   "options": {
+    "A": "Any patient who begins physical therapy within 48 hours of this type of stroke and whose therapy is supervised by a licensed specialist will recover full mobility.",
+    "B": "Mr. Okafor's physical therapy is supervised by a licensed specialist.",
+    "C": "Every patient whose therapy is supervised by a licensed specialist recovers full mobility.",
+    "D": "Patients who do not begin physical therapy within 48 hours of this type of stroke do not recover full mobility.",
+    "E": "Mr. Okafor began physical therapy soon enough to have a chance at full recovery."
+   },
+   "answer": "A",
+   "explanation": "The premise gives a NECESSARY condition for full recovery: recover full mobility -> began therapy within 48 hours. The argument tries to use 'began within 48 hours' (true of Mr. Okafor, at 30 hours) plus the proviso 'therapy supervised by a licensed specialist' to conclude he WILL recover. To guarantee a positive prediction, we need a SUFFICIENT condition for full recovery. Choice A supplies it: began within 48 hours AND supervised by a specialist -> recover full mobility. Mr. Okafor began within 48 hours (30 hours), and the conclusion is conditioned on the specialist proviso, so A's antecedent is satisfied and the recovery conclusion is guaranteed."
+  },
+  {
+   "id": "lsat-lsat-bank-0070",
+   "type": "mcq",
+   "stem": "The conclusion of the editorial follows logically if which one of the following is assumed?",
+   "marks": 1,
+   "options": {
+    "A": "Long-term residents who run successful businesses and pay taxes are contributing members of society.",
+    "B": "Any policy that excludes contributing members of society is unjustified.",
+    "C": "A language requirement is justified only if it includes all long-term residents.",
+    "D": "Some long-term residents who would be denied citizenship are not contributing members of society.",
+    "E": "If a requirement does not exclude contributing members of society, then it is justified."
+   },
+   "answer": "A",
+   "explanation": "Premise: Justified -> does not exclude contributing members (equivalently, if it excludes a contributing member, it is not justified). Premise: the requirement would deny citizenship to long-term residents who run successful businesses and pay taxes. Conclusion: not justified. To trigger the necessary condition's contrapositive, we must establish that the requirement DOES exclude a contributing member of society. The argument describes the excluded people as business-running taxpayers but never labels them 'contributing members of society.' Choice A makes that identification: these long-term residents ARE contributing members. Then the requirement excludes a contributing member, so by the premise it is not justified. A guarantees the conclusion."
+  },
+  {
+   "id": "lsat-lsat-bank-0071",
+   "type": "mcq",
+   "stem": "The conclusion of the software lead's argument follows logically if which one of the following is assumed?",
+   "marks": 1,
+   "options": {
+    "A": "If the release will not be on time, then the team should announce a delay to customers now.",
+    "B": "If the external auditor returns her report by Wednesday, the release will be on time.",
+    "C": "The release will be on time only if the external auditor returns her report by Wednesday.",
+    "D": "The team should announce a delay to customers now only if the release will not be on time.",
+    "E": "The authentication module will not pass all security audits before Friday."
+   },
+   "answer": "A",
+   "explanation": "Diagram. Premise 1: On time -> audits passed before Friday. Premise 2: Audits passed before Friday -> auditor returns report by Wednesday. Fact: auditor will NOT return report by Wednesday (she returns it Monday, next week). By Premise 2's contrapositive: not-by-Wednesday -> audits not passed before Friday. By Premise 1's contrapositive: audits not passed before Friday -> not on time. So we validly derive 'the release will NOT be on time.' The conclusion, however, is the action recommendation 'announce a delay now.' Nothing yet links 'not on time' to 'should announce a delay.' Choice A supplies that bridge: not on time -> should announce a delay now. Combined with the derived 'not on time,' A guarantees the recommendation."
+  },
+  {
+   "id": "lsat-lsat-bank-0076",
+   "type": "mcq",
+   "stem": "Which one of the following principles, if valid, most helps to justify Maria's decision?",
+   "marks": 1,
+   "options": {
+    "A": "When an unforeseeable event prevents a transaction from being completed, the losses that result should be divided between the parties in proportion to the costs each has already irrevocably incurred.",
+    "B": "A business owner should never refund money for goods that have already been produced according to a customer's specifications.",
+    "C": "When neither party to an agreement is at fault for its disruption, and one party has already incurred unrecoverable costs in reliance on it, neither party should be made to bear the entire resulting loss alone.",
+    "D": "A customer who cancels an order for reasons beyond her control is entitled to a full refund of any money paid.",
+    "E": "A seller who acts in good faith is entitled to keep the full amount a customer has paid, regardless of whether the transaction is completed."
+   },
+   "answer": "C",
+   "explanation": "Maria's two stated reasons are (i) the customer should not bear the entire loss of an unforeseeable event, and (ii) Maria should not absorb costs she incurred in good faith. A justifying principle must support splitting the loss so that NEITHER party bears all of it, precisely when no one is at fault and one side has sunk unrecoverable costs. Choice C captures exactly this structure: no fault + reliance costs already incurred => neither party bears the whole loss. That licenses the partial (half) refund, which is what Maria did."
+  },
+  {
+   "id": "lsat-lsat-bank-0077",
+   "type": "mcq",
+   "stem": "The columnist's reasoning most closely conforms to which one of the following principles?",
+   "marks": 1,
+   "options": {
+    "A": "A public policy should be retained only if it produces no significant drawbacks of any kind.",
+    "B": "A practice that has both benefits and drawbacks should be evaluated by weighing the magnitude of its benefits against the magnitude of its drawbacks, rather than by the mere existence of drawbacks.",
+    "C": "Aesthetic considerations should never be allowed to override the financial interests of low-income citizens.",
+    "D": "A city council should reject any proposal that would reduce funding for programs serving low-income residents.",
+    "E": "Public transportation should be funded primarily through advertising rather than through fares."
+   },
+   "answer": "B",
+   "explanation": "The columnist explicitly reframes the issue: not whether ads have drawbacks, but whether benefits outweigh harms. He then concludes the benefit (low-income fare subsidies) outweighs the drawbacks (aesthetics, distraction). This is a straightforward cost-benefit weighing principle. Choice B states exactly that: judge a practice with mixed effects by comparing the MAGNITUDE of benefits and drawbacks, not by the mere existence of drawbacks. That is the general rule the columnist applies."
+  },
+  {
+   "id": "lsat-lsat-bank-0078",
+   "type": "mcq",
+   "stem": "Which one of the following principles, if accepted, most justifies the editor's decision to uphold the retraction?",
+   "marks": 1,
+   "options": {
+    "A": "A scientific paper should be retracted only when its central conclusion is shown to be false.",
+    "B": "Researchers should present their data using whatever visual techniques make the underlying trends easiest for readers to understand.",
+    "C": "The integrity of a scientific publication depends on the accuracy of how its evidence is presented, independent of whether its conclusions happen to be correct.",
+    "D": "A paper whose figures have been altered should be corrected rather than retracted if the alterations were not intended to deceive.",
+    "E": "Any researcher found to have altered a figure should be permanently barred from publishing in the journal."
+   },
+   "answer": "C",
+   "explanation": "The editor says the author's defense (that the conclusion is still supported) 'missed the point entirely.' The point being missed must be that retraction turns on the integrity of how evidence is PRESENTED, not on whether the conclusion is correct. Choice C states exactly this: publication integrity depends on accurate presentation of evidence, independent of whether the conclusions are correct. That explains why the author's appeal to a still-valid conclusion is beside the point and why retraction stands."
+  },
+  {
+   "id": "lsat-lsat-bank-0079",
+   "type": "mcq",
+   "stem": "Which one of the following principles, if valid, most strongly supports the analyst's evaluation of the two towns?",
+   "marks": 1,
+   "options": {
+    "A": "A scarce medical resource should be distributed so as to give every person an equal opportunity to receive it.",
+    "B": "When a limited resource can be used to avert serious harm, it should be allocated to those for whom it will avert the greatest harm.",
+    "C": "Public health authorities should always prioritize the elderly over younger residents in distributing medical care.",
+    "D": "A distribution method is fair only if it treats all members of a community identically.",
+    "E": "Towns facing a shortage of a medical resource should coordinate their distribution policies with neighboring towns."
+   },
+   "answer": "B",
+   "explanation": "The analyst praises the allocation that targets those most likely to die (greatest harm averted) and criticizes the equal-chance lottery, citing the goal of preventing 'as much serious harm as possible.' The supporting principle must make harm-minimization the criterion. Choice B does exactly that: allocate a scarce resource to those for whom it averts the GREATEST harm. This both endorses Oakdale and condemns Riverton's equal-chance method."
+  },
+  {
+   "id": "lsat-lsat-bank-0080",
+   "type": "mcq",
+   "stem": "The editorial's argument most closely conforms to which one of the following principles?",
+   "marks": 1,
+   "options": {
+    "A": "A university requirement is justified whenever a majority of students do not object to it.",
+    "B": "An institutional requirement is justified if it advances the central purpose of the institution, even at the cost of some inconvenience to those it affects.",
+    "C": "Students should not be required to take courses that delay their progress toward a degree.",
+    "D": "The inconvenience a requirement imposes on students is irrelevant to whether the requirement should be adopted.",
+    "E": "A university should design its curriculum to maximize students' career prospects."
+   },
+   "answer": "B",
+   "explanation": "The editorial defines the university's purpose (producing broadly capable graduates), notes the requirement serves that purpose, and concludes the requirement is justified despite some inconvenience. The general principle being applied is: a requirement is justified if it advances the institution's central/defining purpose, even at the cost of some inconvenience. Choice B states precisely this conditional and matches the argument's structure and its explicit 'even if it imposes some inconvenience' concession."
+  },
+  {
+   "id": "lsat-lsat-bank-0081",
+   "type": "mcq",
+   "stem": "Which one of the following principles is most clearly illustrated by the game designer's reasoning?",
+   "marks": 1,
+   "options": {
+    "A": "A product should be redesigned whenever a significant number of its users complain about a feature.",
+    "B": "When a feature that causes user frustration is also the source of a product's value, the remedy should preserve that feature while reducing the frustration's unfairness, rather than eliminating the feature.",
+    "C": "A game's difficulty should be reduced whenever players find it too punishing.",
+    "D": "The most important goal in designing a game is to minimize the frustration players experience.",
+    "E": "Players should be allowed to reverse any decision that leads to an outcome they did not anticipate."
+   },
+   "answer": "B",
+   "explanation": "The designer identifies that the frustrating feature (irreversible decisions) is also the source of the game's value (its rewarding tension). He rejects eliminating it (the undo proposal) and instead proposes keeping the feature while making losses feel earned rather than arbitrary, i.e., reducing the unfairness/frustration without removing the stakes. Choice B generalizes this exactly: when a frustration-causing feature is also the source of value, preserve it but reduce the frustration's unfairness rather than eliminate it."
+  },
+  {
+   "id": "lsat-lsat-bank-0087",
+   "type": "mcq",
+   "stem": "Dalton and Priya disagree over whether",
+   "marks": 1,
+   "options": {
+    "A": "the city's diesel buses emit pollutants",
+    "B": "downtown air quality has declined over the past decade",
+    "C": "replacing the diesel buses with electric buses would meaningfully improve downtown air quality",
+    "D": "the industrial zone to the west is the largest single source of downtown pollution",
+    "E": "the city should reduce pollution from the industrial zone"
+   },
+   "answer": "C",
+   "explanation": "A point at issue must be something one speaker affirms and the other denies. Dalton's whole argument is that replacing diesel buses with electric ones is worth doing because the buses pollute and air quality has declined - he is asserting the switch would help. Priya explicitly says 'switching to electric buses won't help our downtown air,' directly denying that the switch would meaningfully improve air quality. That is exactly choice C: Dalton affirms it, Priya denies it."
+  },
+  {
+   "id": "lsat-lsat-bank-0088",
+   "type": "mcq",
+   "stem": "The two reviewers are committed to disagreeing about which one of the following?",
+   "marks": 1,
+   "options": {
+    "A": "whether the novel is engrossing",
+    "B": "whether the novel's prose is vivid and cinematic",
+    "C": "whether the unreliable narrator is what makes the novel engrossing",
+    "D": "whether unreliable narrators are generally a gimmick in fiction",
+    "E": "whether the reader must reconstruct the real story while reading the novel"
+   },
+   "answer": "C",
+   "explanation": "Reviewer 1 asserts that the unreliable narrator 'is the source of its power' - i.e., the thing that makes the book engrossing. Reviewer 2 directly denies this: the unreliable narrator 'adds nothing,' and the prose is 'what truly grips the reader,' adding that a reliable narrator would have been 'just as engrossing.' So Reviewer 1 affirms and Reviewer 2 denies that the unreliable narrator is what makes the novel engrossing. That is choice C."
+  },
+  {
+   "id": "lsat-lsat-bank-0089",
+   "type": "mcq",
+   "stem": "Marcus and Lena disagree about whether",
+   "marks": 1,
+   "options": {
+    "A": "the company's employees would be happier under a four-day workweek",
+    "B": "the existing studies provide good reason to expect that our company's output would stay the same under a four-day workweek",
+    "C": "a four-day workweek has ever succeeded at any firm",
+    "D": "the company is currently well managed",
+    "E": "employee happiness is a legitimate goal for the company to pursue"
+   },
+   "answer": "B",
+   "explanation": "Marcus relies on the studies as evidence that 'we would lose nothing in output' - i.e., the studies give us good reason to expect our output would hold. Lena's reply targets exactly this inference: the studies are 'misleading' because the trial firms were unrepresentative, so 'we can't assume our output would hold steady.' Marcus affirms the studies support the prediction for our firm; Lena denies it. That is choice B."
+  },
+  {
+   "id": "lsat-lsat-bank-0090",
+   "type": "mcq",
+   "stem": "The dialogue most strongly supports the claim that the health official and the traffic researcher disagree about whether",
+   "marks": 1,
+   "options": {
+    "A": "most drivers already know that texting while driving is dangerous",
+    "B": "texting while driving is in fact dangerous",
+    "C": "a public awareness campaign could reduce texting while driving",
+    "D": "people sometimes engage in behavior they know to be risky",
+    "E": "reducing texting while driving is a worthwhile public goal"
+   },
+   "answer": "C",
+   "explanation": "The official argues a campaign 'would change no behavior' because everyone already knows the risk - so a campaign cannot reduce the behavior. The researcher counters that 'a well-designed campaign ... could reduce texting while driving even among those who already know the risks.' The official denies a campaign could reduce the behavior; the researcher affirms it could. That is choice C."
+  },
+  {
+   "id": "lsat-lsat-bank-0091",
+   "type": "mcq",
+   "stem": "The architect and the planner disagree over whether",
+   "marks": 1,
+   "options": {
+    "A": "adding a protected bike lane increases the number of cyclists on a street",
+    "B": "cities should try to reduce car traffic",
+    "C": "the increase in cyclists after a bike lane is added consists mainly of former drivers",
+    "D": "the increase in cyclists that follows adding a bike lane reflects a reduction in car trips",
+    "E": "some new cyclists are people who previously took the bus"
+   },
+   "answer": "D",
+   "explanation": "The architect infers from the rise in cyclists that 'fewer of those trips are being made by car' - the increase reflects replaced car trips. The planner denies exactly this inference: 'The rise in cyclists doesn't show that car trips are being replaced,' and 'it doesn't follow that it takes cars off the road.' The architect affirms and the planner denies that the cyclist increase reflects a reduction in car trips. That is choice D."
+  },
+  {
+   "id": "lsat-lsat-bank-0092",
+   "type": "mcq",
+   "stem": "The point at issue between the curator and the historian is whether",
+   "marks": 1,
+   "options": {
+    "A": "the painting was created during Vermeer's lifetime",
+    "B": "the evidence cited establishes that Vermeer painted the work",
+    "C": "the pigments in the painting were available in the Netherlands during Vermeer's lifetime",
+    "D": "any of Vermeer's contemporaries was as skilled as Vermeer",
+    "E": "the painting is a valuable work of art"
+   },
+   "answer": "B",
+   "explanation": "The curator argues the evidence - matching light technique plus period-appropriate pigments - warrants attributing the painting to Vermeer. The historian denies that this evidence does that work: the analysis 'proves only that the painting could date from Vermeer's era, not that he painted it,' and the evidence 'is consistent with the painting being by another Dutch artist.' The curator affirms the cited evidence establishes Vermeer's authorship; the historian denies it. That is choice B."
+  },
+  {
+   "id": "lsat-lsat-bank-0093",
+   "type": "mcq",
+   "stem": "The flawed reasoning in the argument above is most similar to that in which one of the following?",
+   "marks": 1,
+   "options": {
+    "A": "All of the apples in the crate that were bruised were thrown out. This apple was thrown out. Therefore, this apple was bruised.",
+    "B": "Each book that the library digitized is available online. This book is available online. Therefore, the library must have digitized many books.",
+    "C": "Everyone who attended the seminar received a certificate. Paulo did not receive a certificate. Therefore, Paulo did not attend the seminar.",
+    "D": "All the runners who finished the marathon qualified for the regional meet. Lena qualified for the regional meet, so Lena finished the marathon and trained hard.",
+    "E": "Most of the volunteers who signed up early were assigned to the front desk. Devi signed up early, so Devi was probably assigned to the front desk."
+   },
+   "answer": "A",
+   "explanation": "The stimulus has the form: All who have property P have property Q (studied -> passed). X has Q (Mara passed). Therefore X has P (Mara studied). This affirms the consequent / illicitly converts the conditional. Choice A reproduces this exactly: All bruised apples were thrown out (bruised -> thrown out); this apple was thrown out (has Q); therefore it was bruised (has P). Same affirming-the-consequent flaw, same number of terms, same scope (universal 'all'), same single conclusion about one individual."
+  },
+  {
+   "id": "lsat-lsat-bank-0094",
+   "type": "mcq",
+   "stem": "Which one of the following arguments is most similar in its reasoning to the argument above?",
+   "marks": 1,
+   "options": {
+    "A": "If the orchard is pruned, the trees will yield more fruit. If the trees yield more fruit, the cooperative's profits will grow. The cooperative's profits did grow. Therefore, the orchard was pruned.",
+    "B": "If the bakery lowers its prices, foot traffic will increase. If foot traffic increases, the bakery will need more staff. The bakery has lowered its prices. So the bakery will need more staff.",
+    "C": "If the museum extends its hours, attendance will rise. If attendance rises, donations will increase. The museum did not extend its hours. Therefore, donations will not increase.",
+    "D": "If the team practices daily, its passing will improve. The team's passing improved. Therefore, the team practiced daily and its defense improved as well.",
+    "E": "Either the company expands overseas or it merges with a rival. If it expands overseas, revenue will climb. The company did not merge with a rival. Therefore, revenue will climb."
+   },
+   "answer": "B",
+   "explanation": "The stimulus chains two conditionals and then applies the antecedent of the first to reach the consequent of the second: A->B, B->C, A is true, therefore C. This is valid hypothetical syllogism plus modus ponens. Choice B has exactly this form: lowers prices -> foot traffic increases, foot traffic increases -> needs more staff, bakery lowered prices, therefore needs more staff. Same chained conditionals, same affirmation of the first antecedent, same valid conclusion."
+  },
+  {
+   "id": "lsat-lsat-bank-0095",
+   "type": "mcq",
+   "stem": "The reasoning in which one of the following is most closely parallel to that in the argument above?",
+   "marks": 1,
+   "options": {
+    "A": "Either the painting was damaged in transit or it was damaged in storage. If it had been damaged in transit, the crate would show dents. The crate shows no dents. Therefore, the painting was damaged in storage.",
+    "B": "Either the alarm failed or the battery died. If the battery had died, the indicator light would be off. The indicator light is off. Therefore, the battery died.",
+    "C": "If the manuscript was edited in-house, it contains the house style marks. It does contain those marks. So it was edited in-house, not by a freelancer.",
+    "D": "Either the shipment is late or the tracking system is wrong. The shipment is not late. If the tracking system were wrong, customers would have complained, and many have. Therefore, the tracking system is wrong.",
+    "E": "Either Dana or Ravi closed the store. If Dana closed the store, the lights would be off. The lights are off, so Dana closed the store and set the alarm."
+   },
+   "answer": "A",
+   "explanation": "The stimulus form: Either P or Q. If Q, then R. Not R (R is false). Therefore P. It uses a disjunction, then eliminates one disjunct by modus tollens on a conditional tied to that disjunct, concluding the other disjunct. Choice A matches exactly: Either transit or storage; if transit, then dents; no dents (modus tollens eliminates transit); therefore storage. Same disjunctive syllogism completed by ruling out one option through denied consequent."
+  },
+  {
+   "id": "lsat-lsat-bank-0096",
+   "type": "mcq",
+   "stem": "Which one of the following arguments exhibits a flawed pattern of reasoning most similar to that in the argument above?",
+   "marks": 1,
+   "options": {
+    "A": "A film is worth watching only if it has a coherent plot. This documentary has a coherent plot. Therefore, this documentary is worth watching.",
+    "B": "A bridge is safe only if it passes inspection. This bridge did not pass inspection. Therefore, this bridge is not safe.",
+    "C": "A candidate will be hired only if she interviews well. This candidate interviewed well and has strong references. Therefore, she will be hired.",
+    "D": "A restaurant succeeds only if it has good food. This restaurant has good food and a prime location. Therefore, it will surely succeed.",
+    "E": "A plant thrives only if it gets sunlight. This plant is thriving. Therefore, it must be getting sunlight."
+   },
+   "answer": "A",
+   "explanation": "The stimulus mistakes a NECESSARY condition for a SUFFICIENT one. 'Worth prescribing only if benefits outweigh side effects' means worth-prescribing -> benefits-outweigh (the outweighing is necessary, not sufficient). The argument then asserts the necessary condition is met and concludes the medication is worth prescribing, treating a necessary condition as sufficient. Choice A commits the identical error: 'worth watching only if coherent plot' (necessary), the plot is coherent, therefore worth watching. Same single necessary condition affirmed and wrongly treated as sufficient, with one clean conclusion."
+  },
+  {
+   "id": "lsat-lsat-bank-0103",
+   "type": "mcq",
+   "stem": "Which one of the following most accurately expresses the main point of the passage?",
+   "marks": 1,
+   "options": {
+    "A": "Protected wilderness areas have generally failed to preserve the species they were designed to protect.",
+    "B": "Indigenous practices such as controlled burning and selective harvesting were the sole cause of high species richness in certain landscapes.",
+    "C": "The conservation ideal of untouched nature may be flawed because some prized ecosystems were in fact sustained by long-standing human activity.",
+    "D": "Conservation biologists should abandon the practice of establishing protected reserves in favor of restoring indigenous land-management techniques.",
+    "E": "Species richness in long-protected reserves has declined because the reserves were too small to support viable populations."
+   },
+   "answer": "C",
+   "explanation": "The passage builds toward its final sentence, which states that the ideal of untouched nature 'may rest on a misreading' of how prized ecosystems arose. Choice C captures exactly this thesis: the cherished ideal is questionable because some valued ecosystems were actually maintained by human activity. It has the correct scope (a qualified challenge to an assumption) and the correct hedge ('may'), mirroring the author's 'may suggest' framing."
+  },
+  {
+   "id": "lsat-lsat-bank-0104",
+   "type": "mcq",
+   "stem": "Which one of the following most accurately states the main point of the passage?",
+   "marks": 1,
+   "options": {
+    "A": "Music notation is unnecessary for the performance of complex polyphonic music.",
+    "B": "Oral musical traditions have produced polyphony at least as sophisticated as that of notated traditions.",
+    "C": "Contrary to the conventional view, musical complexity tended to drive the development of notation rather than the reverse.",
+    "D": "Medieval European notation systems developed only after their corresponding musical practices were established.",
+    "E": "Music historians have systematically misunderstood the role of oral traditions in the history of polyphony."
+   },
+   "answer": "C",
+   "explanation": "The passage explicitly states in its final sentence that 'the familiar claim thus inverts the actual relationship,' and that complexity created the demand for notation rather than notation enabling complexity. Choice C states precisely this reversal of the conventional causal claim, with correct scope and the appropriate 'tended to' hedge matching the passage's 'more frequently functioned.'"
+  },
+  {
+   "id": "lsat-lsat-bank-0111",
+   "type": "mcq",
+   "stem": "The reference to taverns, workshops, and town squares functions primarily to",
+   "marks": 1,
+   "options": {
+    "A": "illustrate the kinds of social settings through which communal reading extended a printed text's reach beyond those who could read",
+    "B": "establish that literacy rates in sixteenth-century Europe rose more slowly than historians had previously believed",
+    "C": "identify the specific locations where the earliest European printing presses were installed",
+    "D": "suggest that printed pamphlets were more influential in urban areas than in rural ones",
+    "E": "argue that communal reading has been unfairly neglected by historians of literacy"
+   },
+   "answer": "A",
+   "explanation": "The passage's thesis is that the pamphlet's influence depended on social settings of performance rather than on the number of literate readers. The list of venues is a concrete illustration of those settings, showing how one copy reached many non-readers. That illustrative, thesis-supporting role is exactly what choice A names."
+  },
+  {
+   "id": "lsat-lsat-bank-0112",
+   "type": "mcq",
+   "stem": "The sentence noting that aluminum's weight savings may matter more to a racing cyclist functions primarily to",
+   "marks": 1,
+   "options": {
+    "A": "concede that steel frames are heavier than aluminum frames and therefore unsuitable for competition",
+    "B": "qualify the discussion of fatigue by showing that the trade-off favors aluminum under certain conditions of use",
+    "C": "prove that aluminum is the superior material for all high-performance bicycle frames",
+    "D": "introduce a new objection that the rest of the passage goes on to refute",
+    "E": "demonstrate that strength-to-weight ratio is an unreliable measure of any material's value"
+   },
+   "answer": "B",
+   "explanation": "The passage argues that material choice depends on use, not on a single figure. After emphasizing aluminum's fatigue weakness, the author inserts the racing-cyclist sentence to prevent the reader from concluding steel is simply better. It qualifies the fatigue point by identifying a use-context where aluminum wins, which directly serves the thesis. Choice B captures this concessive, qualifying role."
+  },
+  {
+   "id": "lsat-lsat-bank-0113",
+   "type": "mcq",
+   "stem": "The detail that the openings appear in the drafts as insertions squeezed into margins functions primarily to",
+   "marks": 1,
+   "options": {
+    "A": "support the claim that Vance's descriptive passages were composed after, rather than before, the rest of each chapter",
+    "B": "suggest that Vance was a careless writer who paid little attention to revision",
+    "C": "explain why critics in Vance's lifetime admired her descriptive openings",
+    "D": "establish that the surviving manuscripts are incomplete and therefore unreliable",
+    "E": "prove that Vance's descriptions are less artistically valuable than her dialogue"
+   },
+   "answer": "A",
+   "explanation": "The passage's central claim is that Vance wrote her openings last, contrary to the assumption that they were generative starting points. The physical evidence of marginal insertions is offered as proof of that compositional sequence. The detail supplies textual evidence for the timing claim, which is what choice A states."
+  },
+  {
+   "id": "lsat-lsat-bank-0114",
+   "type": "mcq",
+   "stem": "The discussion of the metropolitan corridor expanded from eight to twelve lanes serves primarily to",
+   "marks": 1,
+   "options": {
+    "A": "provide a concrete instance of the induced-demand phenomenon described in the preceding sentences",
+    "B": "establish that congestion pricing is more cost-effective than highway expansion",
+    "C": "demonstrate that no highway expansion has ever reduced congestion anywhere",
+    "D": "explain the engineering reasons why adding lanes increases a highway's capacity",
+    "E": "introduce the concept of induced demand for the first time in the passage"
+   },
+   "answer": "A",
+   "explanation": "The passage explains induced demand in general terms, then offers the eight-to-twelve-lane corridor as a specific case in which speeds returned to pre-expansion levels. The example illustrates and corroborates the general mechanism just described. Choice A names this exemplifying function."
+  },
+  {
+   "id": "lsat-lsat-bank-0115",
+   "type": "mcq",
+   "stem": "The discussion of folklore functions primarily to",
+   "marks": 1,
+   "options": {
+    "A": "offer an example supporting the critics' claim that a shared domain can stimulate creative output",
+    "B": "prove that copyright protection should be abolished entirely",
+    "C": "concede that authors deserve no return on their creative work",
+    "D": "describe the historical origins of modern copyright law",
+    "E": "establish that traditional tales are artistically superior to copyrighted works"
+   },
+   "answer": "A",
+   "explanation": "The critics claim long copyright terms can stifle creation because art builds on existing material. Folklore is introduced as an 'instructive comparison' showing a domain with no ownership that nonetheless generated abundant new work. It functions as supporting evidence for the critics' position, which choice A states."
+  },
+  {
+   "id": "lsat-lsat-bank-0116",
+   "type": "mcq",
+   "stem": "The statement that 'One might expect such plants to be at a disadvantage' functions primarily to",
+   "marks": 1,
+   "options": {
+    "A": "articulate the expectation that the passage's subsequent evidence overturns",
+    "B": "present the author's considered conclusion about caffeinated nectar",
+    "C": "summarize the experimental findings regarding bee memory",
+    "D": "concede a flaw in the experimental methods used to study pollinators",
+    "E": "explain why caffeine is toxic to bees at high concentrations"
+   },
+   "answer": "A",
+   "explanation": "The passage sets up an apparent paradox, states the naive expectation that toxin-producing plants should suffer, and then uses experimental evidence to show the opposite. The quoted sentence voices the expectation that the rest of the paragraph reverses, framing the surprise. Choice A captures this setup-to-be-overturned function."
+  }
+ ],
+ "category": "LSAT",
+ "body": "Lsat"
+}

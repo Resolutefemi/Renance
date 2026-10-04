@@ -1,0 +1,1171 @@
+{
+  "code": "uni-tasued-ams101-bank",
+  "title": "TASUED AMS101 | Course Question Bank",
+  "version": 1,
+  "questionCount": 85,
+  "totalMarks": 85,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-tasued-ams101-bank-0001",
+      "type": "mcq",
+      "stem": "A system that interacts with its environment is known as:",
+      "options": {
+        "A": "Closed system",
+        "B": "Open system",
+        "C": "Rigid system",
+        "D": "Static system"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0002",
+      "type": "mcq",
+      "stem": "The process of assigning tasks and granting authority to subordinates is called:",
+      "options": {
+        "A": "Coordination",
+        "B": "Delegation",
+        "C": "Supervision",
+        "D": "Centralization"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0003",
+      "type": "mcq",
+      "stem": "How did Mary Parker Follett famously define management?",
+      "options": {
+        "A": "The process of planning, organizing, leading, and controlling resources",
+        "B": "The art of getting things done through other people’s efforts",
+        "C": "The systematic arrangement of scarce human and material resources",
+        "D": "The organization and mobilization of all human resources in a system"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Mary Parker Follett is renowned for defining management as the 'art of getting things done through other people’s efforts,' emphasizing the human element in achieving organizational goals."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0004",
+      "type": "mcq",
+      "stem": "Why is Mary Parker Follett’s definition of management often considered too restrictive from a broader perspective?",
+      "options": {
+        "A": "It ignores the role of the gate-man and lower-level staff",
+        "B": "It focuses only on material resources like land and equipment",
+        "C": "It connotes that management requires only personal inherent attributes or skills",
+        "D": "It fails to acknowledge that management is a separate field of activity"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Her definition is seen as restrictive because labeling management strictly as an 'art' suggests it relies solely on inherent personal attributes or skills, rather than being a systematic process."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0005",
+      "type": "mcq",
+      "stem": "According to the lecture notes, what is the definition of a 'process' in the context of management?",
+      "options": {
+        "A": "A set of activities designed to promote work",
+        "B": "A formal relationship within an organization",
+        "C": "A systematic way of doing things",
+        "D": "The coordination of individual and group efforts"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text defines a process simply as 'A systematic way of doing things'."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0006",
+      "type": "mcq",
+      "stem": "Management is described as a 'process' because its fundamental functions (planning, organizing, directing, and controlling) are:",
+      "options": {
+        "A": "Performed sequentially one after the other",
+        "B": "Performed simultaneously and are continuous",
+        "C": "Independent activities with clear start and end points",
+        "D": "Limited only to top-level executive officers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Management is a process because interrelated functions are performed simultaneously and are continuous; at no point has one function ended while another just begins."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0007",
+      "type": "mcq",
+      "stem": "How did Adesina (1986) define management?",
+      "options": {
+        "A": "The process of coordinating work activities efficiently and effectively",
+        "B": "The organization and mobilization of all human and material resources in a particular system",
+        "C": "The capacity to coordinate conflicting social energies in a single organization",
+        "D": "The process of gaining the commitment of employees through motivation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Adesina defined management as the organization and mobilization of all human and material resources in a particular system for the achievement of identified objectives."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0008",
+      "type": "mcq",
+      "stem": "In management, material resources are typically classified into which two categories?",
+      "options": {
+        "A": "Human and non-human",
+        "B": "Monetary and non-monetary",
+        "C": "Assets and liabilities",
+        "D": "Skilled and unskilled"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Material resources within a system are classified as 'monetary' and 'non-monetary,' including assets such as land and equipment."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0009",
+      "type": "mcq",
+      "stem": "Which level of management is primarily responsible for translating organizational goals into specific departmental plans?",
+      "options": {
+        "A": "Top management",
+        "B": "Middle management",
+        "C": "Lower management",
+        "D": "External consultants"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0010",
+      "type": "mcq",
+      "stem": "According to Nwankwo (1987), administration is:",
+      "options": {
+        "A": "The art of directing and inspiring people",
+        "B": "A means by which formal goals are achieved through cooperation",
+        "C": "The careful and systematic arrangement and use of resources for specific objectives",
+        "D": "The process of planning and formulating policies"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Nwankwo defined administration as the careful and systematic arrangement and use of resources, situations, and opportunities for the achievement of specific objectives."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0011",
+      "type": "mcq",
+      "stem": "Who is responsible for the implementation of educational policies and programmes in an institution?",
+      "options": {
+        "A": "Educational Manager",
+        "B": "Educational Administrator",
+        "C": "Minister of Education",
+        "D": "Dean of Schools"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text distinguishes that an educational manager formulates policies, while an educational administrator is the person who implements those policies and programmes."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0012",
+      "type": "mcq",
+      "stem": "On the basis of 'Functions', which of the following is true regarding Management versus Administration?",
+      "options": {
+        "A": "Management is a decision-making function; Administration is an executing function",
+        "B": "Management decides what is to be done; Administration decides who should do it",
+        "C": "Management is a 'doing' function; Administration is a 'thinking' function",
+        "D": "Management requires conceptual skills; Administration requires technical skills"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Functionally, management is a 'doing' function because managers supervise work, while administration is a 'thinking' function where plans and policies are determined."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0013",
+      "type": "mcq",
+      "stem": "In terms of usage and applicability, management is primarily associated with:",
+      "options": {
+        "A": "Government policies and religious organizations",
+        "B": "Non-business concerns like clubs and hospitals",
+        "C": "Profit-making business concerns",
+        "D": "Public opinions and customs"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Management is applicable to business concerns (profit-making), while administration is applicable to non-business concerns like schools and hospitals."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0014",
+      "type": "mcq",
+      "stem": "What distinguishes the 'Status' of management from administration in an organization?",
+      "options": {
+        "A": "Management represents the owners; Administration represents the employees",
+        "B": "Management constitutes employees paid in salaries; Administration represents owners earning dividends",
+        "C": "Management decisions are influenced by public opinion; Administration is influenced by manager beliefs",
+        "D": "Management operates at the top level; Administration operates at the lower level"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Management constitutes the employees who receive remuneration (salaries/wages), whereas Administration represents the owners who earn returns on capital and profits."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0015",
+      "type": "mcq",
+      "stem": "Which managerial function involves setting goals and developing 'work-maps' to accomplish them?",
+      "options": {
+        "A": "Organizing",
+        "B": "Leading",
+        "C": "Controlling",
+        "D": "Planning"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Planning involves setting goals and objectives and developing 'work-maps' that show how they are to be achieved."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0016",
+      "type": "mcq",
+      "stem": "The process of recruiting, selecting, and orienting people in a productive working environment is known as:",
+      "options": {
+        "A": "Organizing",
+        "B": "Staffing",
+        "C": "Leading",
+        "D": "Coordinating"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Staffing is defined as the process of recruiting, selecting, employing, training, and orientating people in a favorable environment."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0017",
+      "type": "mcq",
+      "stem": "Which function ensures that organizational activities are executed in consonance with a plan and involves taking corrective actions?",
+      "options": {
+        "A": "Decision Making",
+        "B": "Coordinating",
+        "C": "Controlling",
+        "D": "Delegation"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Controlling is the process of ensuring desired results are achieved by measuring/monitoring work and taking corrective actions if output deviates from expectations."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0018",
+      "type": "mcq",
+      "stem": "According to the styling 'Manage-men-t-', why must men be managed tactfully?",
+      "options": {
+        "A": "Because resources like money and machinery are scarce",
+        "B": "To satisfy the needs of the government and society",
+        "C": "Because human nature is highly unpredictable and uncertain",
+        "D": "To ensure that management is treated as a science"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Managing 'men tactfully' is necessary because human nature is highly unpredictable and uncertain, making management a complicated and challenging activity."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0019",
+      "type": "mcq",
+      "stem": "How do sociologists typically view management?",
+      "options": {
+        "A": "As a factor of production",
+        "B": "As a class or group of persons",
+        "C": "As a process comprising different activities",
+        "D": "As a technique for increasing productivity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Different contributors view management differently; specifically, sociologists have treated management as a class or group of persons."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0020",
+      "type": "mcq",
+      "stem": "When management is referred to as a 'Discipline', what does it imply?",
+      "options": {
+        "A": "A group of people responsible for managerial functions",
+        "B": "A field of study with well-defined concepts and principles",
+        "C": "A systematic method of handling activities",
+        "D": "A way to punish employees for poor performance"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "As a discipline, management refers to a field of study having well-defined concepts and principles that aid in managing."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0021",
+      "type": "mcq",
+      "stem": "In the 'Management as a Process' approach, what is the primary limitation of defining management as 'what managers do'?",
+      "options": {
+        "A": "It is too complex for students to understand",
+        "B": "It focuses only on the top level of the organization",
+        "C": "There is no uniformity in titles (e.g., President, Supervisor) to identify who is a manager",
+        "D": "It assumes all managers use the same scientific methods"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A limitation is the difficulty in identifying managers because titles like president, executive, or supervisor vary across organizations, making it hard to distinguish managerial from non-managerial personnel."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0022",
+      "type": "mcq",
+      "stem": "Operational activities are distinguished from managerial activities because operational activities:",
+      "options": {
+        "A": "Involve instructing others on how to sell a product",
+        "B": "Are those through which actual work is accomplished, like handling a machine",
+        "C": "Focus on the long-term goals of the organization",
+        "D": "Require conceptual rather than technical skills"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Operational activities are those of an operative nature where actual work is accomplished (e.g., handling a machine), while managerial activities involve getting things done through others."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0023",
+      "type": "mcq",
+      "stem": "Which management expert defined management as 'the art of knowing what you want to do... in the cheapest way'?",
+      "options": {
+        "A": "Henry Fayol",
+        "B": "F.W. Taylor",
+        "C": "George R. Terry",
+        "D": "Harold Koontz"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "F.W. Taylor, associated with the productivity concept, defined management as the art of knowing what you want to do in the cheapest way."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0024",
+      "type": "mcq",
+      "stem": "According to the lecture notes, which concept of management is considered the 'most appropriate'?",
+      "options": {
+        "A": "Management as a functional process",
+        "B": "Management as a technique of leadership",
+        "C": "Management as the coordinator of human and material resources",
+        "D": "Management as a social process of regulation"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text states that 'Management as the coordinator of human and material resources is the most appropriate concept of management' because optimum utilization is impossible without integration."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0025",
+      "type": "mcq",
+      "stem": "Management is described as 'multidisciplinary.' This means it:",
+      "options": {
+        "A": "Is only applicable to large industrial sectors",
+        "B": "Draws knowledge and concepts from various disciplines like psychology and economics",
+        "C": "Strictly follows the laws of physical sciences like physics",
+        "D": "Is a static field that does not change over time"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Management is multidisciplinary because it draws ideas and concepts from disciplines such as psychology, sociology, economics, and statistics."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0026",
+      "type": "mcq",
+      "stem": "Why are management principles described as 'Relative, not Absolute'?",
+      "options": {
+        "A": "They are fixed laws that never change regardless of the situation",
+        "B": "They must be applied according to the specific needs and conditions of the organization",
+        "C": "They only apply to managers who have a professional degree",
+        "D": "They are based on mathematical formulas that have only one answer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Principles are relative because they should be applied based on the needs of the organization, considering differences in time, place, and socio-cultural factors."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0027",
+      "type": "mcq",
+      "stem": "In the controversy of 'Science vs. Art,' management is currently regarded as:",
+      "options": {
+        "A": "A pure science similar to Physics",
+        "B": "Only an art based on intuition",
+        "C": "Both a science and an art",
+        "D": "Neither a science nor an art"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text concludes that management possesses features of both and is therefore regarded as both a science and an art."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0028",
+      "type": "mcq",
+      "stem": "Which of the following is a characteristic that management LACKS, which prevents it from being a 'true' profession like law or medicine?",
+      "options": {
+        "A": "A systematized body of knowledge",
+        "B": "An entry requirement limited strictly to management graduates through formal training",
+        "C": "The existence of professional associations",
+        "D": "The formulation of ethical codes"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Management cannot be regarded as a true profession because entry is not limited to management graduates; people without formal management degrees can still enter managerial roles."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0029",
+      "type": "mcq",
+      "stem": "Which characteristic of bureaucracy involves interpersonal relations being based on positions rather than personalities?",
+      "options": {
+        "A": "Hierarchy of authority",
+        "B": "Standardization of methods",
+        "C": "Impersonality",
+        "D": "Division of work"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Bureaucracy involves a 'rule by law' which leads to impersonality, where relations are based on positions and not on personalities."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0030",
+      "type": "mcq",
+      "stem": "Henri Fayol is often referred to as the:",
+      "options": {
+        "A": "Father of Scientific Management",
+        "B": "Father of Modern Management Theory",
+        "C": "Father of Bureaucracy",
+        "D": "Father of Human Relations"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Henri Fayol is recognized as the Father of Modern Management Theory and gave a new perception to management concepts."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0031",
+      "type": "mcq",
+      "stem": "Fayol's principle of 'Unity of Command' states that:",
+      "options": {
+        "A": "All activities should be shared into routine tasks",
+        "B": "An employee should receive orders from one superior only",
+        "C": "There should be one head and one plan for a group of activities",
+        "D": "Authority should be equal to responsibility"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unity of Command implies that an individual should receive orders from only one superior to avoid confusion."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0032",
+      "type": "mcq",
+      "stem": "Which principle of Scientific Management (Taylor) condemns the 'rule of thumb'?",
+      "options": {
+        "A": "Time Study Principle",
+        "B": "Managerial Control and Functional Principle",
+        "C": "Piece Rate Principle",
+        "D": "Scientific Selection of Workmen"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Taylor's Managerial Control and Functional Principle suggested management should take over the role of planning and instruction rather than leaving methods to the 'rule of thumb' (the initiative of workers)."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0033",
+      "type": "mcq",
+      "stem": "According to Chris Argyris, what is the consequence of classical managers controlling workers too closely?",
+      "options": {
+        "A": "Workers become highly efficient and productive",
+        "B": "Workers become incapable of acting independently and lose personal initiative",
+        "C": "The organization achieves perfect harmony of objectives",
+        "D": "Staff appraisal becomes unnecessary"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Argyris argued that close control by classical managers makes workers incapable of acting independently and causes them to lose interest in personal initiative."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0034",
+      "type": "mcq",
+      "stem": "What did Herbert Simon call the characteristic where a decision-maker chooses the first acceptable alternative rather than the best one?",
+      "options": {
+        "A": "Optimizing",
+        "B": "Maximizing",
+        "C": "Cognitive limits on rationality (Satisficing)",
+        "D": "Scientific selection"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Simon noted that due to human limitations, decision-makers 'satisfice' (choose the first acceptable alternative) rather than maximize; he called this 'cognitive limits on rationality'."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0035",
+      "type": "mcq",
+      "stem": "Which quantitative management tool is specifically described as being 'event-oriented'?",
+      "options": {
+        "A": "Critical Path Method (CPM)",
+        "B": "Gantt Chart",
+        "C": "Programme Evaluation and Review Technique (PERT)",
+        "D": "Linear Programming"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text distinguishes that while CPM is activity-oriented, PERT is event-oriented."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0036",
+      "type": "mcq",
+      "stem": "In McGregor's Theory X, how are managers typically characterized?",
+      "options": {
+        "A": "Participative and team-building oriented",
+        "B": "Believing work is as natural as play",
+        "C": "Result-driven, intolerant, and frequently issuing threats",
+        "D": "Focused on employee self-actualization"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Theory X managers are characterized as result-driven, intolerant, aloof, and they often use threats or instructions to make people work."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0037",
+      "type": "mcq",
+      "stem": "Which control technique involves the comparison of ratios, percentages, and trends to find deviations?",
+      "options": {
+        "A": "Budgetary Control",
+        "B": "Break-Even Analysis",
+        "C": "Statistical Data Analysis",
+        "D": "Management Information System"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Statistical Data Analysis is a control technique where ratios, percentages, and averages of different periods are compared to find deviations."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0038",
+      "type": "mcq",
+      "stem": "According to the document, today's managers must understand that the 21st-century world is strongly influenced by which three issues?",
+      "options": {
+        "A": "Planning, Organizing, and Staffing",
+        "B": "Management of change, Customer service emphasis, and Higher business ethics",
+        "C": "Hierarchy, Authority, and Bureaucracy",
+        "D": "Science, Art, and Profession"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text states that today's managers are influenced by three issues: management of change, increasing emphasis on customer service, and the need for higher business ethics."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0039",
+      "type": "mcq",
+      "stem": "Management at the top level of an organization is primarily responsible for:",
+      "options": {
+        "A": "Supervising routine daily tasks",
+        "B": "Formulating policies and long-term objectives",
+        "C": "Handling machine operations",
+        "D": "Recording financial transactions"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0040",
+      "type": "mcq",
+      "stem": "Which of the following correctly represents the levels of management?",
+      "options": {
+        "A": "Strategic, Tactical, Operational",
+        "B": "Top, Middle, Lower",
+        "C": "Administrative, Technical, Clerical",
+        "D": "Planning, Organizing, Controlling"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0041",
+      "type": "mcq",
+      "stem": "POSDCORB stands for:",
+      "options": {
+        "A": "Planning, Organizing, Staffing, Directing, Coordinating, Reporting, Budgeting",
+        "B": "Planning, Operating, Supervising, Delegating, Controlling, Ordering, Reviewing, Budgeting",
+        "C": "Policy, Organization, Structure, Discipline, Coordination, Reporting, Budgeting",
+        "D": "Planning, Organizing, Staffing, Decision-making, Coordination, Regulation, Budgeting"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0042",
+      "type": "mcq",
+      "stem": "The principle that authority should be equal to responsibility was proposed by:",
+      "options": {
+        "A": "F.W. Taylor",
+        "B": "Henri Fayol",
+        "C": "Max Weber",
+        "D": "Elton Mayo"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0043",
+      "type": "mcq",
+      "stem": "The principle of 'Division of Work' emphasizes:",
+      "options": {
+        "A": "Equal pay for all employees",
+        "B": "Specialization to increase efficiency",
+        "C": "Strict hierarchy in communication",
+        "D": "Delegation of authority"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0044",
+      "type": "mcq",
+      "stem": "Span of control refers to:",
+      "options": {
+        "A": "The number of departments in an organization",
+        "B": "The number of subordinates a manager can effectively supervise",
+        "C": "The authority given to employees",
+        "D": "The communication chain in an organization"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0045",
+      "type": "mcq",
+      "stem": "Centralization means:",
+      "options": {
+        "A": "Decision-making authority is concentrated at the top level",
+        "B": "Authority is shared equally at all levels",
+        "C": "Employees make independent decisions",
+        "D": "Departments operate without supervision"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0046",
+      "type": "mcq",
+      "stem": "The Scalar Chain refers to:",
+      "options": {
+        "A": "The wage structure of employees",
+        "B": "The chain of command from top to bottom",
+        "C": "The communication style in informal groups",
+        "D": "The budgeting process"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0047",
+      "type": "mcq",
+      "stem": "Elton Mayo is associated with:",
+      "options": {
+        "A": "Scientific Management",
+        "B": "Bureaucratic Theory",
+        "C": "Human Relations Movement",
+        "D": "Quantitative Management"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0048",
+      "type": "mcq",
+      "stem": "The Hawthorne Studies mainly emphasized the importance of:",
+      "options": {
+        "A": "Strict supervision",
+        "B": "Financial incentives only",
+        "C": "Social and psychological factors in productivity",
+        "D": "Time and motion studies"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0049",
+      "type": "mcq",
+      "stem": "Maslow’s theory of motivation is based on:",
+      "options": {
+        "A": "Financial rewards",
+        "B": "Hierarchy of needs",
+        "C": "Punishment and control",
+        "D": "Scientific selection"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0050",
+      "type": "mcq",
+      "stem": "Management by Objectives (MBO) emphasizes:",
+      "options": {
+        "A": "Strict control from supervisors",
+        "B": "Setting specific goals jointly by managers and subordinates",
+        "C": "Eliminating employee participation",
+        "D": "Centralized planning"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0051",
+      "type": "mcq",
+      "stem": "Decision-making generally begins with:",
+      "options": {
+        "A": "Selecting alternatives",
+        "B": "Implementing solutions",
+        "C": "Identifying the problem",
+        "D": "Evaluating results"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0052",
+      "type": "mcq",
+      "stem": "A strategic plan is primarily concerned with:",
+      "options": {
+        "A": "Daily operations",
+        "B": "Short-term activities",
+        "C": "Long-term direction of the organization",
+        "D": "Staff appraisal"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0053",
+      "type": "mcq",
+      "stem": "An informal organization arises from:",
+      "options": {
+        "A": "Official structure of authority",
+        "B": "Personal and social relationships among workers",
+        "C": "Government policies",
+        "D": "Written company rules"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0054",
+      "type": "mcq",
+      "stem": "Effective communication requires:",
+      "options": {
+        "A": "Only a sender",
+        "B": "Only a receiver",
+        "C": "Sender, message, channel, receiver, and feedback",
+        "D": "Strict hierarchy"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0055",
+      "type": "mcq",
+      "stem": "The Contingency Theory of management suggests that:",
+      "options": {
+        "A": "There is one best way to manage",
+        "B": "Management principles are fixed and universal",
+        "C": "Management practices depend on the situation",
+        "D": "Rules must never change"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0056",
+      "type": "mcq",
+      "stem": "Zero-based budgeting requires:",
+      "options": {
+        "A": "Using last year’s budget as base",
+        "B": "Starting from scratch and justifying every expense",
+        "C": "Ignoring operational costs",
+        "D": "Fixed annual increments"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0057",
+      "type": "mcq",
+      "stem": "Coordination in management ensures:",
+      "options": {
+        "A": "Departmental competition",
+        "B": "Unity of action toward organizational goals",
+        "C": "Independent operation of units",
+        "D": "Elimination of planning"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0058",
+      "type": "mcq",
+      "stem": "A plan that covers a long period of time and sets overall direction for an organization is known as:",
+      "options": {
+        "A": "Operational plan",
+        "B": "Strategic plan",
+        "C": "Standing plan",
+        "D": "Tactical schedule"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0059",
+      "type": "mcq",
+      "stem": "Unity of command means that:",
+      "options": {
+        "A": "An employee receives orders from one superior only",
+        "B": "All managers share equal authority",
+        "C": "Employees make independent decisions",
+        "D": "Departments operate without supervision"
+      },
+      "marks": 1,
+      "answer": "A"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0060",
+      "type": "mcq",
+      "stem": "A manager’s ability to influence others because of their position in the organization is called:",
+      "options": {
+        "A": "Expert power",
+        "B": "Referent power",
+        "C": "Legitimate power",
+        "D": "Reward power"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0061",
+      "type": "mcq",
+      "stem": "The communication that flows from subordinates to superiors is known as:",
+      "options": {
+        "A": "Downward communication",
+        "B": "Upward communication",
+        "C": "Horizontal communication",
+        "D": "External communication"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0062",
+      "type": "mcq",
+      "stem": "An organizational structure where authority is concentrated at the top is referred to as:",
+      "options": {
+        "A": "Decentralized structure",
+        "B": "Flat structure",
+        "C": "Centralized structure",
+        "D": "Matrix structure"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0063",
+      "type": "mcq",
+      "stem": "Motivation can best be defined as:",
+      "options": {
+        "A": "The process of supervising employees",
+        "B": "The act of rewarding employees only",
+        "C": "The internal drive that directs behavior toward goals",
+        "D": "The punishment of underperforming staff"
+      },
+      "marks": 1,
+      "answer": "C"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0064",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a function of management?",
+      "options": {
+        "A": "Planning",
+        "B": "Organizing",
+        "C": "Controlling",
+        "D": "Procrastinating"
+      },
+      "marks": 1,
+      "answer": "D"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0065",
+      "type": "mcq",
+      "stem": "A plan that is used repeatedly to handle routine situations is known as:",
+      "options": {
+        "A": "Single-use plan",
+        "B": "Standing plan",
+        "C": "Emergency plan",
+        "D": "Strategic blueprint"
+      },
+      "marks": 1,
+      "answer": "B"
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0066",
+      "type": "mcq",
+      "stem": "According to the lecture notes, why is management considered an 'inexact science' or 'pseudo-science' rather than a pure science?",
+      "options": {
+        "A": "Because it doesn't involve mathematical calculations",
+        "B": "Because concepts lack universal definition and principles lack empirical confirmation",
+        "C": "Because it only deals with human behavior which cannot be studied",
+        "D": "Because it doesn't require any systematic knowledge"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Management is considered inexact because terms are not used consistently, observations are difficult to control, and many principles lack universal application and empirical evidence."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0067",
+      "type": "mcq",
+      "stem": "The prudential principle of management mandates managers to:",
+      "options": {
+        "A": "Always follow their emotions in decision-making",
+        "B": "Be objective, reason without sentiments, and observe strict economy",
+        "C": "Prioritize personal relationships over organizational goals",
+        "D": "Avoid delegation of authority"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The prudential principle requires managers to be objective, avoid emotional handling of matters, observe strict economy, and display loyalty."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0068",
+      "type": "mcq",
+      "stem": "The humanitarian principle of management, derived from Hawthorne studies, is based on three essential ingredients:",
+      "options": {
+        "A": "Planning, organizing, and controlling",
+        "B": "Democracy, justice, and human relations",
+        "C": "Authority, responsibility, and communication",
+        "D": "Economy, loyalty, and employment"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The humanitarian principle contends that workers must be seen first as human beings, with democracy, justice, and human relations as its essential ingredients."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0069",
+      "type": "mcq",
+      "stem": "According to the principle of change in management, which three factors facilitate change in an organization?",
+      "options": {
+        "A": "Planning, organizing, and controlling",
+        "B": "Stability, flexibility, and adaptability",
+        "C": "Recruitment, selection, and training",
+        "D": "Budgeting, reporting, and coordinating"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The principle of change involves stability to weather storms, flexibility to accommodate innovation, and adaptability to align with available resources."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0070",
+      "type": "mcq",
+      "stem": "According to Chester Barnard, what are the two classes of incentives available to employees?",
+      "options": {
+        "A": "Monetary and non-monetary incentives",
+        "B": "Specific inducements and general inducements",
+        "C": "Primary and secondary reinforcements",
+        "D": "Internal and external rewards"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Barnard divided incentives into specific inducements (material benefits, personal opportunities) and general inducements (associational attractiveness, social integration)."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0071",
+      "type": "mcq",
+      "stem": "When a manager shows disapproval by raising an eyebrow or approval by smiling at a worker, this is an example of which type of reinforcement?",
+      "options": {
+        "A": "Automatic reinforcement",
+        "B": "Casual reinforcement",
+        "C": "Deliberate reinforcement",
+        "D": "Negative reinforcement"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Casual reinforcement occurs when a manager shows approval or disapproval through non-verbal cues like facial expressions."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0072",
+      "type": "mcq",
+      "stem": "In reinforcement theory, what is the difference between primary and secondary reinforcement?",
+      "options": {
+        "A": "Primary is positive; secondary is negative",
+        "B": "Primary satisfies physical needs (food, water); secondary uses praise words like 'good' or 'excellent'",
+        "C": "Primary is for managers; secondary is for workers",
+        "D": "Primary is automatic; secondary is deliberate"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Primary reinforcement satisfies physical needs, while secondary reinforcement is acquired through praise and positive feedback."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0073",
+      "type": "mcq",
+      "stem": "According to Taylor and Perry, management audit is defined as:",
+      "options": {
+        "A": "A financial audit of company accounts",
+        "B": "A comprehensive examination to appraise organizational structure, policies, and procedures",
+        "C": "A review of employee attendance records",
+        "D": "An assessment of production quality only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Management audit comprehensively examines an enterprise to determine if sound management exists at all levels and ensures effective relationships."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0074",
+      "type": "mcq",
+      "stem": "Which of the following is NOT an assumption of break-even analysis?",
+      "options": {
+        "A": "All costs can be segregated into fixed and variable components",
+        "B": "Fixed cost remains constant at all volumes of output",
+        "C": "Variable cost fluctuates unpredictably regardless of output",
+        "D": "Volume of production is the only factor that influences costs"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Break-even analysis assumes variable cost remains constant per unit and fluctuates proportionally with output volume."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0075",
+      "type": "mcq",
+      "stem": "According to Henry Gantt, which of the following concepts is TRUE about motivating workers?",
+      "options": {
+        "A": "Money is the only effective motivator",
+        "B": "Man is goal-oriented, and setting a task is the most effective method of stimulating interest",
+        "C": "Workers should never receive bonuses",
+        "D": "Supervisors should never be rewarded for worker performance"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Gantt believed that setting a task or objective is the most effective way to stimulate interest in people."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0076",
+      "type": "mcq",
+      "stem": "Frank Gilbreth identified seventeen basic elements of on-the-job motion which he called:",
+      "options": {
+        "A": "Gantt charts",
+        "B": "Therbligs",
+        "C": "Time studies",
+        "D": "Motion metrics"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Frank Gilbreth identified seventeen basic motion elements, which he called 'Therbligs' (Gilbreth spelled backwards)."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0077",
+      "type": "mcq",
+      "stem": "Which of the following is classified as a STATUTORY school record that must be kept by law in Nigerian schools?",
+      "options": {
+        "A": "PTA Minutes Book",
+        "B": "Cooperative Society Record",
+        "C": "Corporal Punishment Book",
+        "D": "Staff Union Minutes"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Statutory records include Corporal Punishment Book, Admission Register, Log Book, among others. Non-statutory records include PTA minutes and cooperative records."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0078",
+      "type": "mcq",
+      "stem": "For school records to be useful, they must fulfill certain conditions including:",
+      "options": {
+        "A": "Complexity, ambiguity, and discretion",
+        "B": "Completeness, availability, truthfulness, and usability",
+        "C": "Confidentiality, exclusivity, and permanence",
+        "D": "Flexibility, subjectivity, and informality"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Records must be complete (updated regularly), available (accessible), truthful (unbiased), and usable (actionable)."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0079",
+      "type": "mcq",
+      "stem": "According to Ouchi's Theory Z, which of the following is one of its four basic postulates?",
+      "options": {
+        "A": "Strict formal organizational structure",
+        "B": "Strong bond between organization and employees",
+        "C": "Limited employee participation",
+        "D": "Avoidance of human resource development"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Theory Z is based on four postulates: strong bond between organization and employees, employee participation, no formal structure, and human resource development."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0080",
+      "type": "mcq",
+      "stem": "According to Equity Theory, what happens when an employee experiences under-reward (inputs exceed outputs)?",
+      "options": {
+        "A": "They tend to produce more and work harder",
+        "B": "They tend to produce less or produce inferior quality products",
+        "C": "They immediately quit the organization",
+        "D": "They show no change in behavior"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Equity theory proposes that under-rewarded employees tend to produce less or produce inferior quality compared to equitably rewarded employees."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0081",
+      "type": "mcq",
+      "stem": "Harrington Emerson attributed waste and inefficiency in industrial systems primarily to:",
+      "options": {
+        "A": "Lack of worker motivation",
+        "B": "Lack of organization",
+        "C": "Insufficient financial resources",
+        "D": "Poor technology"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Emerson saw waste and inefficiency as problems plaguing the industrial system and attributed these to lack of organization."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0082",
+      "type": "mcq",
+      "stem": "John Adair's situational approach to leadership emphasizes that:",
+      "options": {
+        "A": "Leaders are born, not made",
+        "B": "There is no such thing as a born leader; the situation determines who emerges as leader",
+        "C": "Democratic leadership is always best",
+        "D": "Autocratic leadership should always be avoided"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Adair declared that there is no such thing as a born leader; the situation determines who emerges as leader and what style to adopt."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0083",
+      "type": "mcq",
+      "stem": "Arrange the following steps of the control process in the correct order:",
+      "options": {
+        "A": "Measurement of performance → Comparison with standards → Establishing standards → Corrective action",
+        "B": "Establishing standards → Measurement of performance → Comparison with standards → Corrective action",
+        "C": "Corrective action → Establishing standards → Measurement → Comparison",
+        "D": "Comparison → Measurement → Standards → Corrective action"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The control process begins with establishing standards, then measuring actual performance, comparing with standards, and finally taking corrective action."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0084",
+      "type": "mcq",
+      "stem": "A control chart that monitors production in real-time and checks for problems as they occur is an example of:",
+      "options": {
+        "A": "Feedback control",
+        "B": "Concurrent control",
+        "C": "Feedforward control",
+        "D": "Predictive control"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Concurrent control (real-time control) checks problems and examines them to take action before loss is incurred, such as using control charts."
+    },
+    {
+      "id": "uni-tasued-ams101-bank-0085",
+      "type": "mcq",
+      "stem": "According to Robert Owen, workers should be seen as 'vital machines' because:",
+      "options": {
+        "A": "They are replaceable like machines",
+        "B": "If cared for properly like machines, they will pay off through increased productivity",
+        "C": "They require no maintenance",
+        "D": "They work better under threat of punishment"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Owen compared workers to machines, pointing out that if workers are looked after as machines are kept in good repair, the effort would be paid off by increased productivity."
+    }
+  ]
+}

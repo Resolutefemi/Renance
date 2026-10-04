@@ -1,0 +1,567 @@
+{
+  "school": "tasued",
+  "name": "Tai Solarin University of Education",
+  "short": "TASUED",
+  "courses": [
+    {
+      "slug": "acc111",
+      "code": "ACC 111",
+      "title": null,
+      "semester": null,
+      "icon": "calculate",
+      "bank": "uni-tasued-acc111-bank",
+      "questionCount": 99,
+      "pdf": null
+    },
+    {
+      "slug": "age101",
+      "code": "AGE 101",
+      "title": null,
+      "semester": null,
+      "icon": "agriculture",
+      "bank": "uni-tasued-age101-bank",
+      "questionCount": 76,
+      "pdf": null
+    },
+    {
+      "slug": "ams101",
+      "code": "AMS 101",
+      "title": null,
+      "semester": null,
+      "icon": "functions",
+      "bank": "uni-tasued-ams101-bank",
+      "questionCount": 85,
+      "pdf": null
+    },
+    {
+      "slug": "ams102",
+      "code": "AMS 102",
+      "title": null,
+      "semester": null,
+      "icon": "functions",
+      "bank": "uni-tasued-ams102-bank",
+      "questionCount": 160,
+      "pdf": null
+    },
+    {
+      "slug": "ams104",
+      "code": "AMS 104",
+      "title": null,
+      "semester": null,
+      "icon": "functions",
+      "bank": "uni-tasued-ams104-bank",
+      "questionCount": 452,
+      "pdf": null
+    },
+    {
+      "slug": "bed112",
+      "code": "BED 112",
+      "title": null,
+      "semester": null,
+      "icon": "school",
+      "bank": "uni-tasued-bed112-bank",
+      "questionCount": 86,
+      "pdf": null
+    },
+    {
+      "slug": "bed114",
+      "code": "BED 114",
+      "title": null,
+      "semester": null,
+      "icon": "school",
+      "bank": "uni-tasued-bed114-bank",
+      "questionCount": 44,
+      "pdf": null
+    },
+    {
+      "slug": "bed122",
+      "code": "BED 122",
+      "title": null,
+      "semester": null,
+      "icon": "school",
+      "bank": "uni-tasued-bed122-bank",
+      "questionCount": 158,
+      "pdf": null
+    },
+    {
+      "slug": "chm102",
+      "code": "CHM 102",
+      "title": null,
+      "semester": null,
+      "icon": "science",
+      "bank": "uni-tasued-chm102-bank",
+      "questionCount": 175,
+      "pdf": null
+    },
+    {
+      "slug": "chm108",
+      "code": "CHM 108",
+      "title": null,
+      "semester": null,
+      "icon": "science",
+      "bank": "uni-tasued-chm108-bank",
+      "questionCount": 55,
+      "pdf": null
+    },
+    {
+      "slug": "cos101",
+      "code": "COS 101",
+      "title": null,
+      "semester": null,
+      "icon": "computer",
+      "bank": "uni-tasued-cos101-bank",
+      "questionCount": 266,
+      "pdf": null
+    },
+    {
+      "slug": "cos102",
+      "code": "COS 102",
+      "title": null,
+      "semester": null,
+      "icon": "computer",
+      "bank": "uni-tasued-cos102-bank",
+      "questionCount": 304,
+      "pdf": null
+    },
+    {
+      "slug": "crs202",
+      "code": "CRS 202",
+      "title": null,
+      "semester": null,
+      "icon": "church",
+      "bank": "uni-tasued-crs202-bank",
+      "questionCount": 120,
+      "pdf": null
+    },
+    {
+      "slug": "csc111",
+      "code": "CSC 111",
+      "title": null,
+      "semester": null,
+      "icon": "computer",
+      "bank": "uni-tasued-csc111-bank",
+      "questionCount": 160,
+      "pdf": null
+    },
+    {
+      "slug": "csc113",
+      "code": "CSC 113",
+      "title": null,
+      "semester": null,
+      "icon": "computer",
+      "bank": "uni-tasued-csc113-bank",
+      "questionCount": 78,
+      "pdf": null
+    },
+    {
+      "slug": "csc115",
+      "code": "CSC 115",
+      "title": null,
+      "semester": null,
+      "icon": "computer",
+      "bank": "uni-tasued-csc115-bank",
+      "questionCount": 146,
+      "pdf": null
+    },
+    {
+      "slug": "csc122",
+      "code": "CSC 122",
+      "title": null,
+      "semester": null,
+      "icon": "computer",
+      "bank": "uni-tasued-csc122-bank",
+      "questionCount": 281,
+      "pdf": null
+    },
+    {
+      "slug": "csc124",
+      "code": "CSC 124",
+      "title": null,
+      "semester": null,
+      "icon": "computer",
+      "bank": "uni-tasued-csc124-bank",
+      "questionCount": 166,
+      "pdf": null
+    },
+    {
+      "slug": "csm111",
+      "code": "CSM 111",
+      "title": null,
+      "semester": null,
+      "icon": "security",
+      "bank": "uni-tasued-csm111-bank",
+      "questionCount": 93,
+      "pdf": null
+    },
+    {
+      "slug": "eco104",
+      "code": "ECO 104",
+      "title": null,
+      "semester": null,
+      "icon": "trending_up",
+      "bank": "uni-tasued-eco104-bank",
+      "questionCount": 100,
+      "pdf": null
+    },
+    {
+      "slug": "edu101",
+      "code": "EDU 101",
+      "title": null,
+      "semester": null,
+      "icon": "school",
+      "bank": "uni-tasued-edu101-bank",
+      "questionCount": 332,
+      "pdf": null
+    },
+    {
+      "slug": "edu121",
+      "code": "EDU 121",
+      "title": null,
+      "semester": null,
+      "icon": "school",
+      "bank": "uni-tasued-edu121-bank",
+      "questionCount": 453,
+      "pdf": null
+    },
+    {
+      "slug": "edu201",
+      "code": "EDU 201",
+      "title": null,
+      "semester": null,
+      "icon": "school",
+      "bank": "uni-tasued-edu201-bank",
+      "questionCount": 211,
+      "pdf": null
+    },
+    {
+      "slug": "edu221",
+      "code": "EDU 221",
+      "title": null,
+      "semester": null,
+      "icon": "school",
+      "bank": "uni-tasued-edu221-bank",
+      "questionCount": 147,
+      "pdf": null
+    },
+    {
+      "slug": "edu302",
+      "code": "EDU 302",
+      "title": null,
+      "semester": null,
+      "icon": "school",
+      "bank": "uni-tasued-edu302-bank",
+      "questionCount": 110,
+      "pdf": null
+    },
+    {
+      "slug": "eec101",
+      "code": "EEC 101",
+      "title": null,
+      "semester": null,
+      "icon": "bolt",
+      "bank": "uni-tasued-eec101-bank",
+      "questionCount": 95,
+      "pdf": null
+    },
+    {
+      "slug": "eng102",
+      "code": "ENG 102",
+      "title": null,
+      "semester": null,
+      "icon": "translate",
+      "bank": "uni-tasued-eng102-bank",
+      "questionCount": 190,
+      "pdf": null
+    },
+    {
+      "slug": "eng121",
+      "code": "ENG 121",
+      "title": null,
+      "semester": null,
+      "icon": "translate",
+      "bank": "uni-tasued-eng121-bank",
+      "questionCount": 150,
+      "pdf": null
+    },
+    {
+      "slug": "eng122",
+      "code": "ENG 122",
+      "title": null,
+      "semester": null,
+      "icon": "translate",
+      "bank": "uni-tasued-eng122-bank",
+      "questionCount": 109,
+      "pdf": null
+    },
+    {
+      "slug": "ent312",
+      "code": "ENT 312",
+      "title": null,
+      "semester": null,
+      "icon": "lightbulb",
+      "bank": "uni-tasued-ent312-bank",
+      "questionCount": 140,
+      "pdf": null
+    },
+    {
+      "slug": "ess102",
+      "code": "ESS 102",
+      "title": null,
+      "semester": null,
+      "icon": "menu_book",
+      "bank": "uni-tasued-ess102-bank",
+      "questionCount": 150,
+      "pdf": null
+    },
+    {
+      "slug": "ess112",
+      "code": "ESS 112",
+      "title": null,
+      "semester": null,
+      "icon": "menu_book",
+      "bank": "uni-tasued-ess112-bank",
+      "questionCount": 77,
+      "pdf": null
+    },
+    {
+      "slug": "fre122",
+      "code": "FRE 122",
+      "title": null,
+      "semester": null,
+      "icon": "translate",
+      "bank": "uni-tasued-fre122-bank",
+      "questionCount": 257,
+      "pdf": null
+    },
+    {
+      "slug": "gcp113",
+      "code": "GCP 113",
+      "title": null,
+      "semester": null,
+      "icon": "menu_book",
+      "bank": "uni-tasued-gcp113-bank",
+      "questionCount": 57,
+      "pdf": null
+    },
+    {
+      "slug": "gns113",
+      "code": "GNS 113",
+      "title": null,
+      "semester": null,
+      "icon": "local_library",
+      "bank": "uni-tasued-gns113-bank",
+      "questionCount": 243,
+      "pdf": null
+    },
+    {
+      "slug": "gns222",
+      "code": "GNS 222",
+      "title": null,
+      "semester": null,
+      "icon": "local_library",
+      "bank": "uni-tasued-gns222-bank",
+      "questionCount": 192,
+      "pdf": null
+    },
+    {
+      "slug": "gst111",
+      "code": "GST 111",
+      "title": null,
+      "semester": null,
+      "icon": "menu_book",
+      "bank": "uni-tasued-gst111-bank",
+      "questionCount": 390,
+      "pdf": null
+    },
+    {
+      "slug": "gst112",
+      "code": "GST 112",
+      "title": null,
+      "semester": null,
+      "icon": "menu_book",
+      "bank": "uni-tasued-gst112-bank",
+      "questionCount": 773,
+      "pdf": null
+    },
+    {
+      "slug": "gst212",
+      "code": "GST 212",
+      "title": null,
+      "semester": null,
+      "icon": "menu_book",
+      "bank": "uni-tasued-gst212-bank",
+      "questionCount": 326,
+      "pdf": null
+    },
+    {
+      "slug": "gst312",
+      "code": "GST 312",
+      "title": null,
+      "semester": null,
+      "icon": "menu_book",
+      "bank": "uni-tasued-gst312-bank",
+      "questionCount": 81,
+      "pdf": null
+    },
+    {
+      "slug": "ift212",
+      "code": "IFT 212",
+      "title": null,
+      "semester": null,
+      "icon": "menu_book",
+      "bank": "uni-tasued-ift212-bank",
+      "questionCount": 70,
+      "pdf": null
+    },
+    {
+      "slug": "lit104",
+      "code": "LIT 104",
+      "title": null,
+      "semester": null,
+      "icon": "auto_stories",
+      "bank": "uni-tasued-lit104-bank",
+      "questionCount": 155,
+      "pdf": null
+    },
+    {
+      "slug": "lit106",
+      "code": "LIT 106",
+      "title": null,
+      "semester": null,
+      "icon": "auto_stories",
+      "bank": "uni-tasued-lit106-bank",
+      "questionCount": 111,
+      "pdf": null
+    },
+    {
+      "slug": "mat121",
+      "code": "MAT 121",
+      "title": null,
+      "semester": null,
+      "icon": "functions",
+      "bank": "uni-tasued-mat121-bank",
+      "questionCount": 70,
+      "pdf": null
+    },
+    {
+      "slug": "mth101",
+      "code": "MTH 101",
+      "title": null,
+      "semester": null,
+      "icon": "functions",
+      "bank": "uni-tasued-mth101-bank",
+      "questionCount": 69,
+      "pdf": null
+    },
+    {
+      "slug": "mth102",
+      "code": "MTH 102",
+      "title": null,
+      "semester": null,
+      "icon": "functions",
+      "bank": "uni-tasued-mth102-bank",
+      "questionCount": 62,
+      "pdf": null
+    },
+    {
+      "slug": "phy101",
+      "code": "PHY 101",
+      "title": null,
+      "semester": null,
+      "icon": "rocket_launch",
+      "bank": "uni-tasued-phy101-bank",
+      "questionCount": 145,
+      "pdf": null
+    },
+    {
+      "slug": "phy102",
+      "code": "PHY 102",
+      "title": null,
+      "semester": null,
+      "icon": "rocket_launch",
+      "bank": "uni-tasued-phy102-bank",
+      "questionCount": 113,
+      "pdf": null
+    },
+    {
+      "slug": "phy104",
+      "code": "PHY 104",
+      "title": null,
+      "semester": null,
+      "icon": "rocket_launch",
+      "bank": "uni-tasued-phy104-bank",
+      "questionCount": 99,
+      "pdf": null
+    },
+    {
+      "slug": "phy125",
+      "code": "PHY 125",
+      "title": null,
+      "semester": null,
+      "icon": "rocket_launch",
+      "bank": "uni-tasued-phy125-bank",
+      "questionCount": 50,
+      "pdf": null
+    },
+    {
+      "slug": "vos101",
+      "code": "VOS 101",
+      "title": null,
+      "semester": null,
+      "icon": "translate",
+      "bank": "uni-tasued-vos101-bank",
+      "questionCount": 65,
+      "pdf": null
+    },
+    {
+      "slug": "vos112",
+      "code": "VOS 112",
+      "title": null,
+      "semester": null,
+      "icon": "translate",
+      "bank": "uni-tasued-vos112-bank",
+      "questionCount": 49,
+      "pdf": null
+    },
+    {
+      "slug": "vos114",
+      "code": "VOS 114",
+      "title": null,
+      "semester": null,
+      "icon": "translate",
+      "bank": "uni-tasued-vos114-bank",
+      "questionCount": 50,
+      "pdf": null
+    },
+    {
+      "slug": "vos116",
+      "code": "VOS 116",
+      "title": null,
+      "semester": null,
+      "icon": "translate",
+      "bank": "uni-tasued-vos116-bank",
+      "questionCount": 96,
+      "pdf": null
+    },
+    {
+      "slug": "vos117",
+      "code": "VOS 117",
+      "title": null,
+      "semester": null,
+      "icon": "translate",
+      "bank": "uni-tasued-vos117-bank",
+      "questionCount": 83,
+      "pdf": null
+    },
+    {
+      "slug": "vos118",
+      "code": "VOS 118",
+      "title": null,
+      "semester": null,
+      "icon": "translate",
+      "bank": "uni-tasued-vos118-bank",
+      "questionCount": 75,
+      "pdf": null
+    }
+  ]
+}

@@ -1,0 +1,1379 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/* Self-hosted fonts, icons and type ship from /public/fonts so the   */
+/* app never depends on fonts.googleapis.com being reachable (when     */
+/* that CDN is blocked/slow, Material Symbols ligatures render as      */
+/* raw text like "brightness_medium" all over the UI).                 */
+/* Relative paths on purpose: Next bundles the files into              */
+/* /_next/static/media/ with the deploy basePath applied, so the same  */
+/* build works on GitHub Pages (/Renance) and Vercel (/).              */
+/* Material Symbols is a SUBSET (only the glyphs Renance ligates);     */
+/* add icons freely, then re-run scripts/subset_material_symbols.py    */
+/* to refresh the font, it shape-verifies every used icon.            */
+/* ------------------------------------------------------------------ */
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: block;
+  src: url('../public/fonts/material-symbols-outlined.subset.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../public/fonts/inter-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../public/fonts/inter-latin-500-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../public/fonts/inter-latin-600-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../public/fonts/inter-latin-700-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../public/fonts/jetbrains-mono-latin-500-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../public/fonts/cinzel-latin-700-normal.woff2') format('woff2');
+}
+
+/* ------------------------------------------------------------------ */
+/* Renance design system, lifted 1:1 from the founder's auth mockups  */
+/* (upload/test.html + upload/test3.html): blue-tinted Material-3      */
+/* surfaces, ink #111c2d, black primary buttons, Inter type.           */
+/* Token names intentionally match the mockup's Tailwind config so     */
+/* markup reads the same on web and in the Flutter app theme.          */
+/* ------------------------------------------------------------------ */
+
+@theme {
+  /* surfaces */
+  --color-background: #f9f9ff;
+  --color-surface: #f9f9ff;
+  --color-surface-bright: #f9f9ff;
+  --color-surface-dim: #cfdaf2;
+  --color-surface-container-lowest: #ffffff;
+  --color-card: #ffffff; /* card surface used app-wide (was silently transparent) */
+  --color-surface-container-low: #f0f3ff;
+  --color-surface-container: #e7eeff;
+  --color-surface-container-high: #dee8ff;
+  --color-surface-container-highest: #d8e3fb;
+  --color-surface-variant: #d8e3fb;
+
+  /* on-colors / ink */
+  --color-on-background: #111c2d;
+  --color-on-surface: #111c2d;
+  --color-on-surface-variant: #45464d;
+  --color-on-primary: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-on-primary-container: #7c839b;
+
+  /* primaries & secondaries */
+  --color-primary: #000000;
+  --color-primary-container: #131b2e;
+  --color-secondary: #505f76;
+  --color-secondary-container: #d0e1fb;
+  --color-on-secondary-container: #54647a;
+  --color-inverse-primary: #bec6e0;
+
+  /* outlines */
+  --color-outline: #76777d;
+  --color-outline-variant: #c6c6cd;
+  --color-outline-light: #c6c6cd;
+
+  /* errors */
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  /* type, mockups load Inter + JetBrains Mono from Google Fonts */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  /* Hero scope (the dashboard progress band). These MUST live inside
+     @theme: Tailwind 4 only emits utilities for variables declared here,
+     so bg-hero / bg-hero-cta / text-on-hero-cta silently no-op from a
+     plain :root block. Light tier = white band, black CTA (as before). */
+  --color-hero: #ffffff;
+  --color-on-hero: #111c2d;
+  --color-hero-muted: #45464d;
+  --color-hero-track: #d8e3fb;
+  --color-hero-cta: #000000;
+  --color-on-hero-cta: #ffffff;
+}
+
+/* ------------------------------------------------------------------ */
+/* GGSA brand ramp (God Generals Standard Academy result portal),      */
+/* ported 1:1 for the school workspace. Declared in @theme because     */
+/* Tailwind 4 only emits utilities for variables declared here —       */
+/* nothing outside the school pages uses the brand or ggsa classes,    */
+/* so the student-facing site is untouched.                            */
+/* ------------------------------------------------------------------ */
+@theme {
+  --color-brand-50: #faf5ff;
+  --color-brand-100: #f3e8ff;
+  --color-brand-200: #e9d5ff;
+  --color-brand-300: #d8b4fe;
+  --color-brand-400: #c084fc;
+  --color-brand-500: #a855f7;
+  --color-brand-600: #7e22ce;
+  --color-brand-700: #6b21a8;
+  --color-brand-800: #581c87;
+  --color-brand-900: #3b0764;
+  --color-brand-950: #240046;
+
+  /* GGSA accent tokens: deep portal purple, gold, cream */
+  --color-ggsa-purple: #4c1d95;
+  --color-ggsa-gold: #d97706;
+  --color-ggsa-cream: #fffbeb;
+}
+
+:root {
+  color-scheme: light;
+}
+
+/* ------------------------------------------------------------------ */
+/* Appearance tiers (founder ADR): Light / Mixed / Full dark.          */
+/* Every screen reads tokens, so these overrides re-skin the whole     */
+/* site: Mixed keeps the light body and flips the hero chrome dark;    */
+/* Dark flips everything to the full-dark Stitch tier.                 */
+/* ------------------------------------------------------------------ */
+[data-theme='dark'] {
+  color-scheme: dark;
+  --color-background: #111c2d;
+  --color-surface: #111c2d;
+  --color-surface-bright: #111c2d;
+  --color-surface-dim: #0d1522;
+  --color-surface-container-lowest: #1c2638;
+  --color-card: #1c2638;
+  --color-surface-container-low: #131b2e;
+  --color-surface-container: #1c2638;
+  --color-surface-container-high: #17223b;
+  --color-surface-container-highest: #17223b;
+  --color-surface-variant: #17223b;
+  --color-on-background: #f0f3ff;
+  --color-on-surface: #f0f3ff;
+  --color-on-surface-variant: #a2aab8;
+  --color-primary: #ffffff;
+  --color-on-primary: #111c2d;
+  --color-primary-container: #17223b;
+  --color-on-primary-container: #f0f3ff;
+  --color-secondary: #a2aab8;
+  --color-secondary-container: #131b2e;
+  --color-on-secondary-container: #f0f3ff;
+  --color-outline: #a2aab8;
+  --color-outline-variant: #3a4661;
+  --color-outline-light: #3a4661;
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  --color-selection-blue: #17223b;
+  --color-amber-tint: #3a2f14;
+  --color-emerald-tint: #12301f;
+  --color-ink-tint: #17223b;
+  --color-hero: #1c2638;
+  --color-on-hero: #f0f3ff;
+  --color-hero-muted: #a2aab8;
+  --color-hero-track: #17223b;
+  --color-hero-cta: #ffffff;
+  --color-on-hero-cta: #111c2d;
+}
+
+/* Mixed: light body, dark hero chrome (the exam-player treatment). */
+[data-theme='mixed'] {
+  color-scheme: light;
+  --color-hero: #111c2d;
+  --color-on-hero: #f0f3ff;
+  --color-hero-muted: #b9c2d4;
+  --color-hero-track: #17223b;
+  --color-hero-cta: #ffffff;
+  --color-on-hero-cta: #111c2d;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-sans);
+  overscroll-behavior: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Renance logomark animation (ADR: no generic spinners, ever).        */
+/* The mark breathes while orbiting arc segments shift opacities,     */
+/* idle / busy / grading states.                                       */
+/* ------------------------------------------------------------------ */
+
+@keyframes renance-breathe {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(0.94); opacity: 0.72; }
+}
+
+@keyframes renance-orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes renance-arc-1 {
+  0%, 100% { opacity: 1; }
+  33% { opacity: 0.15; }
+  66% { opacity: 0.45; }
+}
+
+@keyframes renance-arc-2 {
+  0%, 100% { opacity: 0.45; }
+  33% { opacity: 1; }
+  66% { opacity: 0.15; }
+}
+
+@keyframes renance-arc-3 {
+  0%, 100% { opacity: 0.15; }
+  33% { opacity: 0.45; }
+  66% { opacity: 1; }
+}
+
+@keyframes renance-rise {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Flashcard voice pill waveform (ROADMAP #7, voice_flashcards_light). */
+@keyframes renance-wave {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
+/* Badge detail progress rail shine (badge_detail_light). */
+@keyframes renance-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.renance-breathe { animation: renance-breathe 1.8s ease-in-out infinite; }
+.renance-breathe-fast { animation: renance-breathe 0.9s ease-in-out infinite; }
+.renance-orbit { animation: renance-orbit 2.4s linear infinite; transform-origin: center; }
+.renance-arc-1 { animation: renance-arc-1 1.5s ease-in-out infinite; }
+.renance-arc-2 { animation: renance-arc-2 1.5s ease-in-out infinite; }
+.renance-arc-3 { animation: renance-arc-3 1.5s ease-in-out infinite; }
+.renance-rise { animation: renance-rise 0.45s ease-out both; }
+
+/* ------------------------------------------------------------------ */
+/* Gamification hub accents (gamification hub accent tokens)      */
+/* ------------------------------------------------------------------ */
+@theme {
+  --color-accent-amber: #f59e0b;
+  --color-accent-emerald: #10b981;
+  --color-accent-ink: #111c2d;
+  --color-ink-deep: #131b2e;
+  --color-dark-surface: #131b2e;
+  --color-dark-surface-low: #17223b;
+  --color-dark-text-primary: #f0f3ff;
+  --color-dark-text-secondary: #a2aab8;
+  --color-selection-blue: #d0e1fb;
+  --color-inverse-surface: #263143;
+  --color-inverse-on-surface: #ecf1ff;
+  --color-amber-tint: #fff3d6;
+  --color-emerald-tint: #e8f5e9;
+  --color-ink-tint: #e7eeff;
+}
+
+/* Material Symbols ligatures, same icon system as the Stitch designs. */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+.material-symbols-outlined.fill-current {
+  font-variation-settings: 'FILL' 1;
+}
+
+/* Chip rails scroll horizontally without a visible scrollbar. */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Desktop side rail: the SideNav hamburger collapses the menu list to an
+   icon strip; every page offsets its content with --rail-w so the reflow
+   is one variable away. 15rem = w-60 (open), 4rem = w-16 (collapsed). */
+:root {
+  --rail-w: 15rem;
+}
+html[data-rail='collapsed'] {
+  --rail-w: 4rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* PC canvas (founder: "the website is not PC responsive, the white    */
+/* space is too much"). The shells cap at 64/80rem for phones; on real */
+/* monitors the page must USE the canvas. These rules lift every       */
+/* mx-auto max-w-5xl shell (and the exam player's 3xl header/foot)     */
+/* one step per breakpoint, one edit here, every page obeys.          */
+/* ------------------------------------------------------------------ */
+@media (min-width: 1280px) {
+  .mx-auto.max-w-5xl { max-width: 84rem; }   /* 1344px */
+  .mx-auto.max-w-3xl { max-width: 56rem; }   /* exam player chrome */
+}
+@media (min-width: 1536px) {
+  .mx-auto.max-w-5xl { max-width: 92rem; }   /* 1472px */
+  .mx-auto.max-w-3xl { max-width: 62rem; }
+}
+
+/* Launcher tiles scale up on the desktop canvas so the home grid reads
+   like a dashboard, not a shrunk phone screen. */
+@media (min-width: 768px) {
+  .launcher-grid { gap: 1.75rem; }
+}
+
+/* KaTeX maths hosts: keep display blocks centred with breathing room and
+   scrollable when a wide array meets a narrow phone. */
+.katex-host { line-height: 1.4; }
+.katex-host .katex-display { margin: 0.45em 0; }
+.katex-host .katex { font-size: 1.04em; }
+
+/* ================================================================== */
+/* LANDING 2026, "Your Guide to Academic Success"                    */
+/* Apple-grade glassmorphism: frosted layers, aurora gradient field,  */
+/* float physics, scroll reveals. All tokens inherit the theme system */
+/* so light / mixed / dark tiers keep working.                        */
+/* ================================================================== */
+
+.landing {
+  --glass-bg: rgba(255, 255, 255, 0.62);
+  --glass-bg-strong: rgba(255, 255, 255, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.65);
+  --glass-ring: rgba(17, 28, 45, 0.08);
+  --glass-shadow: 0 20px 60px -20px rgba(17, 28, 45, 0.25), 0 2px 8px rgba(17, 28, 45, 0.06);
+  --ink: #111c2d;
+  --muted: #45464d;
+  --pop-blue: #3b82f6;
+  --pop-indigo: #6366f1;
+  --pop-teal: #14b8a6;
+  --pop-emerald: #10b981;
+  --pop-amber: #f59e0b;
+  --pop-violet: #8b5cf6;
+}
+
+[data-theme='dark'] .landing {
+  --glass-bg: rgba(23, 34, 59, 0.55);
+  --glass-bg-strong: rgba(23, 34, 59, 0.75);
+  --glass-border: rgba(240, 243, 255, 0.14);
+  --glass-ring: rgba(240, 243, 255, 0.08);
+  --glass-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.55), 0 2px 8px rgba(0, 0, 0, 0.25);
+  --ink: #f0f3ff;
+  --muted: #a2aab8;
+}
+
+/* ---------------- aurora gradient field ---------------- */
+
+.aurora-field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.aurora {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  opacity: 0.55;
+  will-change: transform;
+  transform: translate3d(calc(var(--tilt-x, 0) * var(--drift-x, 20px)), calc(var(--tilt-y, 0) * var(--drift-y, 20px)), 0);
+}
+
+.aurora-a {
+  width: 46rem; height: 46rem;
+  left: -14rem; top: -16rem;
+  background: radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.5), rgba(99, 102, 241, 0.22) 55%, transparent 72%);
+  animation: aurora-drift-a 22s ease-in-out infinite alternate;
+  --drift-x: 34px; --drift-y: 26px;
+}
+
+.aurora-b {
+  width: 40rem; height: 40rem;
+  right: -12rem; top: -6rem;
+  background: radial-gradient(circle at 60% 40%, rgba(20, 184, 166, 0.42), rgba(16, 185, 129, 0.18) 55%, transparent 72%);
+  animation: aurora-drift-b 26s ease-in-out infinite alternate;
+  --drift-x: -30px; --drift-y: 20px;
+}
+
+.aurora-c {
+  width: 52rem; height: 52rem;
+  left: 24%; top: 30%;
+  background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.30), rgba(59, 130, 246, 0.14) 55%, transparent 72%);
+  animation: aurora-drift-c 30s ease-in-out infinite alternate;
+  --drift-x: 22px; --drift-y: -24px;
+}
+
+[data-theme='dark'] .aurora { opacity: 0.34; }
+
+@keyframes aurora-drift-a {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(4rem, 2.4rem, 0) scale(1.12); }
+  100% { transform: translate3d(-2rem, 4rem, 0) scale(0.96); }
+}
+@keyframes aurora-drift-b {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-3.6rem, 3rem, 0) scale(0.94); }
+  100% { transform: translate3d(2.4rem, -2.2rem, 0) scale(1.1); }
+}
+@keyframes aurora-drift-c {
+  0% { transform: translate3d(0, 0, 0) scale(0.98) rotate(0deg); }
+  100% { transform: translate3d(-3rem, -3.4rem, 0) scale(1.14) rotate(10deg); }
+}
+
+.aurora-grain {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(17, 28, 45, 0.055) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 20%, black 30%, transparent 75%);
+}
+
+[data-theme='dark'] .aurora-grain {
+  background-image: radial-gradient(rgba(240, 243, 255, 0.05) 1px, transparent 1px);
+}
+
+/* ---------------- glass primitives ---------------- */
+
+.glass {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(22px) saturate(1.7);
+  backdrop-filter: blur(22px) saturate(1.7);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+[data-theme='dark'] .glass {
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(240, 243, 255, 0.08);
+}
+
+.glass-hover {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1), background 0.4s ease;
+}
+.glass-hover:hover {
+  transform: translateY(-6px);
+  background: var(--glass-bg-strong);
+  box-shadow: 0 30px 70px -24px rgba(17, 28, 45, 0.32), 0 4px 14px rgba(17, 28, 45, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* ---------------- navbar ---------------- */
+
+.landing-nav {
+  position: fixed;
+  top: 0.9rem;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+  /* Stable navbar: always visible, no hide-on-scroll transform. */
+}
+
+.landing-nav-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 62rem;
+  padding: 0.55rem 0.7rem 0.55rem 1rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  backdrop-filter: blur(24px) saturate(1.8);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 12px 40px -14px rgba(17, 28, 45, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.landing-nav.is-scrolled .landing-nav-pill {
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 16px 48px -16px rgba(17, 28, 45, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+[data-theme='dark'] .landing-nav-pill { background: rgba(19, 27, 46, 0.55); border-color: rgba(240, 243, 255, 0.12); }
+[data-theme='dark'] .landing-nav.is-scrolled .landing-nav-pill { background: rgba(19, 27, 46, 0.78); }
+
+.landing-nav-brand {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  text-decoration: none; color: var(--ink); margin-right: auto;
+}
+.landing-nav-word { font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em; }
+
+.landing-nav-links { display: none; align-items: center; gap: 0.15rem; }
+.landing-nav-link {
+  padding: 0.45rem 0.8rem; border-radius: 9999px;
+  font-size: 0.86rem; font-weight: 500; color: var(--muted);
+  text-decoration: none;
+  transition: color 0.25s ease, background 0.25s ease;
+}
+.landing-nav-link:hover { color: var(--ink); background: rgba(17, 28, 45, 0.06); }
+[data-theme='dark'] .landing-nav-link:hover { background: rgba(240, 243, 255, 0.09); }
+
+.landing-nav-cta { display: none; align-items: center; gap: 0.5rem; }
+.landing-nav-login {
+  padding: 0.45rem 0.9rem; border-radius: 9999px;
+  font-size: 0.86rem; font-weight: 600; color: var(--ink); text-decoration: none;
+  transition: background 0.25s ease;
+}
+.landing-nav-login:hover { background: rgba(17, 28, 45, 0.06); }
+[data-theme='dark'] .landing-nav-login:hover { background: rgba(240, 243, 255, 0.09); }
+.landing-nav-start {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.55rem 1.15rem; border-radius: 9999px;
+  font-size: 0.86rem; font-weight: 600; text-decoration: none;
+  background: var(--ink); color: var(--color-background);
+  box-shadow: 0 8px 20px -8px rgba(17, 28, 45, 0.5);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+.landing-nav-start:hover { transform: translateY(-1px) scale(1.02); box-shadow: 0 12px 26px -8px rgba(17, 28, 45, 0.55); }
+
+/* burger (mobile) */
+.landing-nav-burger {
+  position: relative;
+  width: 2.5rem; height: 2.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  display: grid; place-items: center;
+}
+[data-theme='dark'] .landing-nav-burger { background: rgba(240, 243, 255, 0.08); }
+.landing-nav-burger span {
+  position: absolute; left: 32%; right: 32%; height: 2px; border-radius: 2px;
+  background: var(--ink);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), top 0.35s ease;
+}
+.landing-nav-burger span:nth-child(1) { top: 40%; }
+.landing-nav-burger span:nth-child(2) { top: 58%; }
+.landing-nav-burger.is-open span:nth-child(1) { top: 49%; transform: rotate(45deg); }
+.landing-nav-burger.is-open span:nth-child(2) { top: 49%; transform: rotate(-45deg); }
+
+.landing-nav-sheet {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 1rem; right: 1rem;
+  border-radius: 1.4rem;
+  padding: 1rem;
+  display: grid; gap: 0.15rem;
+  background: var(--glass-bg-strong);
+  -webkit-backdrop-filter: blur(28px) saturate(1.8);
+  backdrop-filter: blur(28px) saturate(1.8);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  opacity: 0; transform: translateY(-12px) scale(0.98); pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.landing-nav-sheet.is-open { opacity: 1; transform: none; pointer-events: auto; }
+.landing-sheet-link {
+  padding: 0.75rem 0.9rem; border-radius: 0.9rem; text-decoration: none;
+  color: var(--ink); font-weight: 500; font-size: 0.95rem;
+  transition: background 0.25s ease;
+}
+.landing-sheet-link:hover { background: rgba(17, 28, 45, 0.06); }
+[data-theme='dark'] .landing-sheet-link:hover { background: rgba(240, 243, 255, 0.08); }
+.landing-sheet-actions {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.6rem;
+}
+.landing-sheet-login, .landing-sheet-start {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.75rem; border-radius: 0.9rem; font-weight: 600; font-size: 0.9rem;
+  text-decoration: none;
+}
+.landing-sheet-login { color: var(--ink); border: 1px solid var(--glass-ring); }
+.landing-sheet-start { background: var(--ink); color: var(--color-background); }
+
+@media (min-width: 1024px) {
+  .landing-nav-links, .landing-nav-cta { display: flex; }
+  .landing-nav-burger, .landing-nav-sheet { display: none; }
+}
+
+/* ---------------- hero ---------------- */
+
+.hero-headline {
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.04;
+  font-size: clamp(2.6rem, 7.5vw, 5.2rem);
+}
+
+.hero-gradient-text {
+  background: linear-gradient(100deg, #3b82f6 0%, #6366f1 28%, #14b8a6 55%, #10b981 78%, #3b82f6 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-pan 7s linear infinite;
+}
+
+@keyframes gradient-pan {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 220% 50%; }
+}
+
+/* The explanation sheet's gradient section label (blue → violet), the
+   web cut of the app's ShaderMask text. */
+.explanation-gradient-label {
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Material Symbols' FILL axis: solid glyph on demand (Tailwind's
+   fill-current only touches SVG, not the variable font). */
+.icon-fill {
+  font-variation-settings: 'FILL' 1;
+}
+
+.hero-cta-primary {
+  position: relative;
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding: 1rem 2.1rem; border-radius: 9999px;
+  font-weight: 700; font-size: 0.95rem;
+  color: var(--color-on-hero-cta); text-decoration: none;
+  /* the founder's rule: the black CTA becomes the colour the student
+     selected - hero-cta is #000000 stock light, the seed colour with a
+     live seed, white on the dark tier. Subtle lift so a flat seed still
+     reads like a button, never a slab. */
+  background: linear-gradient(135deg,
+    var(--color-hero-cta) 0%,
+    color-mix(in srgb, var(--color-hero-cta) 82%, #ffffff) 100%);
+  box-shadow: 0 18px 40px -14px color-mix(in srgb, var(--color-hero-cta) 55%, transparent);
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+.hero-cta-primary::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.18) 50%, transparent 70%);
+  transform: translateX(-120%);
+  animation: cta-shine 4.5s ease-in-out infinite;
+}
+@keyframes cta-shine {
+  0%, 55% { transform: translateX(-120%); }
+  85%, 100% { transform: translateX(120%); }
+}
+.hero-cta-primary:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 24px 50px -14px color-mix(in srgb, var(--color-hero-cta) 60%, transparent); }
+/* hero-cta flips itself per tier (white on dark), so no override needed. */
+
+.hero-cta-secondary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding: 1rem 2rem; border-radius: 9999px;
+  font-weight: 600; font-size: 0.95rem; text-decoration: none;
+  color: var(--ink);
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(18px) saturate(1.7);
+  backdrop-filter: blur(18px) saturate(1.7);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s ease;
+}
+.hero-cta-secondary:hover { transform: translateY(-2px); background: var(--glass-bg-strong); }
+
+/* floating glass cards around the hero */
+.glass-float {
+  display: flex; align-items: flex-start; gap: 0.7rem;
+  padding: 0.85rem 1rem;
+  border-radius: 1.15rem;
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(20px) saturate(1.8);
+  backdrop-filter: blur(20px) saturate(1.8);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  animation: float-drift 7s ease-in-out infinite;
+  will-change: transform;
+  max-width: 15.5rem;
+}
+[data-theme='dark'] .glass-float { box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(240, 243, 255, 0.1); }
+
+@keyframes float-drift {
+  0%, 100% { transform: translateY(0) rotate(var(--tilt, 0deg)); }
+  50% { transform: translateY(-12px) rotate(var(--tilt, 0deg)); }
+}
+
+.float-blue { --tilt: -3deg; animation-duration: 7s; }
+.float-emerald { --tilt: 2.5deg; animation-duration: 8.5s; animation-delay: -2.5s; }
+.float-amber { --tilt: -2deg; animation-duration: 7.8s; animation-delay: -4s; }
+
+.glass-float-icon {
+  display: grid; place-items: center;
+  width: 2.1rem; height: 2.1rem; border-radius: 0.7rem;
+  color: #fff; flex-shrink: 0;
+  box-shadow: 0 6px 14px -6px rgba(17, 28, 45, 0.4);
+}
+.glass-float-icon .material-symbols-outlined { font-size: 1.15rem; }
+.tone-blue .glass-float-icon { background: linear-gradient(135deg, #3b82f6, #6366f1); }
+.tone-emerald .glass-float-icon { background: linear-gradient(135deg, #10b981, #14b8a6); }
+.tone-amber .glass-float-icon { background: linear-gradient(135deg, #f59e0b, #f97316); }
+.glass-float-title { font-size: 0.82rem; font-weight: 700; color: var(--ink); line-height: 1.25; }
+.glass-float-body { font-size: 0.72rem; color: var(--muted); line-height: 1.35; margin-top: 0.15rem; }
+
+/* ---------------- marquee ---------------- */
+
+.marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  position: relative;
+  z-index: 1;
+}
+.marquee-track {
+  display: flex; gap: 0.65rem;
+  width: max-content;
+  animation: marquee-scroll 42s linear infinite;
+}
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-chip {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.8rem; font-weight: 500;
+  color: var(--ink);
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(14px) saturate(1.6);
+  backdrop-filter: blur(14px) saturate(1.6);
+  border: 1px solid var(--glass-border);
+}
+.marquee-chip::before {
+  content: ''; width: 0.4rem; height: 0.4rem; border-radius: 9999px;
+  background: linear-gradient(135deg, var(--pop-blue), var(--pop-teal));
+}
+
+/* ---------------- section headings ---------------- */
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--pop-indigo);
+  padding: 0.4rem 0.95rem;
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--pop-indigo) 9%, transparent);
+  border: 1px solid color-mix(in srgb, var(--pop-indigo) 18%, transparent);
+}
+
+/* ---------------- stats band ---------------- */
+
+.stat-glass {
+  position: relative;
+  border-radius: 1.4rem;
+  padding: 1.4rem 1.2rem;
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(20px) saturate(1.7);
+  backdrop-filter: blur(20px) saturate(1.7);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  overflow: hidden;
+}
+.stat-glass::before {
+  content: ''; position: absolute; inset: 0 0 auto 0; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--pop-blue), var(--pop-teal), transparent);
+  opacity: 0; transition: opacity 0.5s ease;
+}
+.stat-glass:hover::before { opacity: 1; }
+.stat-value {
+  font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+  font-weight: 800; letter-spacing: -0.03em; color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.stat-label {
+  margin-top: 0.3rem;
+  font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------------- feature cards ---------------- */
+
+.feature-card {
+  position: relative;
+  border-radius: 1.5rem;
+  padding: 1.6rem 1.5rem;
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(20px) saturate(1.7);
+  backdrop-filter: blur(20px) saturate(1.7);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease, background 0.4s ease;
+  overflow: hidden;
+}
+.feature-card::after {
+  content: ''; position: absolute;
+  width: 12rem; height: 12rem; border-radius: 9999px;
+  right: -4rem; top: -4rem;
+  background: radial-gradient(circle, var(--glow, rgba(59, 130, 246, 0.18)), transparent 70%);
+  opacity: 0; transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.feature-card:hover { transform: translateY(-7px); background: var(--glass-bg-strong); }
+.feature-card:hover::after { opacity: 1; }
+/* The tile span carries BOTH classes; the Google CDN sheet ships
+   .material-symbols-outlined { display:inline-block } unlayered and loads
+   after this bundle, so a plain .feature-icon rule (same 0,1,0 specificity)
+   lost the cascade and glyphs parked top-left. The compound selector below
+   wins at any stylesheet order. The old descendant font-size rule never
+   matched at all (no .feature-icon ANCESTOR exists), also compound now. */
+.feature-icon,
+.feature-icon.material-symbols-outlined {
+  display: grid; place-items: center;
+  width: 2.9rem; height: 2.9rem;
+  border-radius: 0.95rem;
+  color: #fff;
+  box-shadow: 0 10px 22px -8px rgba(17, 28, 45, 0.35);
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.feature-card:hover .feature-icon { transform: scale(1.12) rotate(-6deg); }
+/* Chip tiles that carry BOTH classes: the unlayered ligature rule above
+   sets display:inline-block, which out-ranks any layered Tailwind utility
+   (flex/grid + items/justify-center) and parks the glyph top-left inside
+   its tile. Centering therefore lives here, in a compound rule the
+   utility layer can never out-rank. */
+.chip-icon,
+.chip-icon.material-symbols-outlined {
+  display: grid; place-items: center;
+}
+.feature-icon.material-symbols-outlined {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* ---------------- steps ---------------- */
+
+.step-card { position: relative; border-radius: 1.5rem; }
+.step-num {
+  font-size: 4.2rem; font-weight: 800; letter-spacing: -0.04em;
+  line-height: 1;
+  background: linear-gradient(180deg, var(--pop-blue), transparent 130%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  opacity: 0.5;
+}
+
+/* ---------------- exam-day band ---------------- */
+
+.cbt-panel {
+  border-radius: 1.6rem;
+  /* dark ink ground that rides the selected colour: 20-26% of the
+     primary (black stock, the student's colour when a seed is live,
+     white on dark) poured over the navy - the landing's black panels
+     follow the Appearance colour without going day-glo. */
+  background: linear-gradient(160deg,
+    color-mix(in srgb, var(--color-primary) 24%, #101a2e) 0%,
+    color-mix(in srgb, var(--color-primary) 30%, #1c2a47) 60%,
+    color-mix(in srgb, var(--color-primary) 26%, #16213a) 100%);
+  color: #f0f3ff;
+  border: 1px solid rgba(240, 243, 255, 0.1);
+  box-shadow: 0 30px 80px -30px rgba(17, 28, 45, 0.65);
+  position: relative;
+  overflow: hidden;
+}
+.cbt-panel::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(42rem 18rem at 85% -10%, rgba(59, 130, 246, 0.22), transparent 60%),
+              radial-gradient(30rem 16rem at 5% 110%, rgba(16, 185, 129, 0.16), transparent 60%);
+  pointer-events: none;
+}
+.cbt-check { display: flex; align-items: center; gap: 0.55rem; font-size: 0.84rem; color: rgba(240, 243, 255, 0.82); }
+
+/* mock exam ticker inside the cbt panel */
+.cbt-score-pill {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  padding: 0.45rem 0.85rem; border-radius: 9999px;
+  background: rgba(240, 243, 255, 0.08);
+  border: 1px solid rgba(240, 243, 255, 0.14);
+  font-size: 0.75rem; font-weight: 600;
+}
+
+/* ---------------- closing CTA ---------------- */
+
+.final-cta {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.25rem, 4vw, 3rem);
+  /* same seed-riding ink ground as .cbt-panel (see above). */
+  background: linear-gradient(140deg,
+    color-mix(in srgb, var(--color-primary) 24%, #131b2e) 0%,
+    color-mix(in srgb, var(--color-primary) 32%, #22335a) 55%,
+    color-mix(in srgb, var(--color-primary) 28%, #14304f) 100%);
+  color: #f0f3ff;
+  text-align: center;
+  border: 1px solid rgba(240, 243, 255, 0.12);
+  box-shadow: 0 40px 90px -35px rgba(17, 28, 45, 0.7);
+}
+.final-cta::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(36rem 16rem at 50% 120%, rgba(59, 130, 246, 0.28), transparent 65%),
+              radial-gradient(24rem 12rem at 90% -10%, rgba(139, 92, 246, 0.2), transparent 60%);
+  pointer-events: none;
+}
+.final-cta-glow {
+  position: absolute; left: 50%; bottom: -40%;
+  width: 34rem; height: 34rem;
+  transform: translateX(-50%);
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.35), transparent 60%);
+  filter: blur(40px);
+  animation: cta-glow 6s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+@keyframes cta-glow {
+  from { opacity: 0.55; transform: translateX(-50%) scale(0.92); }
+  to { opacity: 1; transform: translateX(-50%) scale(1.08); }
+}
+
+/* ---------------- footer ---------------- */
+
+.landing-footer { border-top: 1px solid var(--glass-border); background: transparent; }
+
+/* ---------------- entrance keyframes (hero elements) ---------------- */
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(26px); }
+  to { opacity: 1; transform: none; }
+}
+.hero-enter { animation: rise-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.hero-enter-1 { animation-delay: 0.05s; }
+.hero-enter-2 { animation-delay: 0.18s; }
+.hero-enter-3 { animation-delay: 0.32s; }
+.hero-enter-4 { animation-delay: 0.46s; }
+.hero-enter-5 { animation-delay: 0.6s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter, .glass-float, .aurora, .hero-gradient-text, .marquee-track, .final-cta-glow, .hero-cta-primary::after { animation: none !important; }
+}
+
+/* ------------------------------------------------------------------ */
+/* School portal scope, strict black & white, always.                 */
+/* The founder rule: the accent / tier switching on the student pages  */
+/* must never leak into school pages. .school-bw pins its own tokens   */
+/* (white paper, black ink, black primary) on top of any data-theme.   */
+/* ------------------------------------------------------------------ */
+.school-bw {
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-bright: #ffffff;
+  --color-surface-dim: #ededed;
+  --color-surface-container-lowest: #ffffff;
+  --color-card: #ffffff;
+  --color-surface-container-low: #f7f7f7;
+  --color-surface-container: #f2f2f2;
+  --color-surface-container-high: #ececec;
+  --color-surface-container-highest: #e6e6e6;
+  --color-surface-variant: #ededed;
+
+  --color-on-background: #0a0a0a;
+  --color-on-surface: #0a0a0a;
+  --color-on-surface-variant: #5c5c5c;
+  --color-on-primary: #ffffff;
+
+  --color-primary: #000000;
+  --color-primary-container: #0a0a0a;
+  --color-secondary: #444444;
+  --color-secondary-container: #ededed;
+  --color-on-secondary-container: #333333;
+
+  --color-outline: #1f1f1f;
+  --color-outline-variant: #dcdcdc;
+  --color-outline-light: #dcdcdc;
+
+  --color-hero: #ffffff;
+  --color-on-hero: #0a0a0a;
+  --color-hero-muted: #5c5c5c;
+  --color-hero-track: #ededed;
+  --color-hero-cta: #000000;
+  --color-on-hero-cta: #ffffff;
+
+  background: #ffffff;
+  color: #0a0a0a;
+}
+
+/* ------------------------------------------------------------------ */
+/* School portal scope, GGSA edition (founder directive 2026-10-04):   */
+/* the results-management workspace wears the exact God Generals       */
+/* Standard Academy look — deep purple primary, gold CTA accents,      */
+/* cream paper, slate ink. Same token contract as .school-bw, so       */
+/* every school page re-skins by swapping the wrapper class.           */
+/* .school-bw (strict black & white) stays for pure-B&W surfaces.      */
+/* ------------------------------------------------------------------ */
+.school-ggsa {
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-bright: #ffffff;
+  --color-surface-dim: #e9d5ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-card: #ffffff;
+  --color-surface-container-low: #faf5ff;   /* brand-50 */
+  --color-surface-container: #fffbeb;       /* ggsa cream */
+  --color-surface-container-high: #f3e8ff;  /* brand-100 */
+  --color-surface-container-highest: #e9d5ff; /* brand-200 */
+  --color-surface-variant: #e9d5ff;
+
+  --color-on-background: #0f172a;           /* slate-900, GGSA ink */
+  --color-on-surface: #0f172a;
+  --color-on-surface-variant: #475569;      /* slate-600 */
+  --color-on-primary: #ffffff;
+
+  --color-primary: #4c1d95;                 /* ggsa purple */
+  --color-primary-container: #4c1d95;
+  --color-secondary: #6b21a8;               /* brand-700 */
+  --color-secondary-container: #f3e8ff;     /* brand-100 */
+  --color-on-secondary-container: #581c87;  /* brand-800 */
+
+  --color-outline: #7e22ce;                 /* brand-600 */
+  --color-outline-variant: #cbd5e1;         /* GGSA table border */
+  --color-outline-light: #e9d5ff;           /* brand-200 */
+
+  --color-hero: #4c1d95;
+  --color-on-hero: #ffffff;
+  --color-hero-muted: #d8b4fe;
+  --color-hero-track: #e9d5ff;
+  --color-hero-cta: #fbbf24;                /* amber-400 on purple */
+  --color-on-hero-cta: #4c1d95;
+
+  /* No `background` pin here (unlike .school-bw): .school-ggsa always
+     pairs with an explicit bg-* utility on the same element, and an
+     unlayered background would out-cascade the layered utility. */
+  color: #0f172a;
+  color-scheme: light;
+}
+
+/* Dark tier does not touch the GGSA school portal either. */
+[data-theme='dark'] .school-ggsa {
+  color-scheme: light;
+}
+
+/* Dark tier does not touch the school portal either. */
+[data-theme='dark'] .school-bw {
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-bright: #ffffff;
+  --color-surface-dim: #ededed;
+  --color-surface-container-lowest: #ffffff;
+  --color-card: #ffffff;
+  --color-surface-container-low: #f7f7f7;
+  --color-surface-container: #f2f2f2;
+  --color-surface-container-high: #ececec;
+  --color-surface-container-highest: #e6e6e6;
+  --color-surface-variant: #ededed;
+  --color-on-background: #0a0a0a;
+  --color-on-surface: #0a0a0a;
+  --color-on-surface-variant: #5c5c5c;
+  --color-on-primary: #ffffff;
+  --color-primary: #000000;
+  --color-primary-container: #0a0a0a;
+  --color-secondary: #444444;
+  --color-secondary-container: #ededed;
+  --color-on-secondary-container: #333333;
+  --color-outline: #1f1f1f;
+  --color-outline-variant: #dcdcdc;
+  --color-outline-light: #dcdcdc;
+  color-scheme: light;
+}
+
+/* Sidebar chrome */
+.school-rail-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5c5c5c;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.school-rail-link:hover { background: #f2f2f2; color: #0a0a0a; }
+.school-rail-link[data-active='true'] {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+.school-rail-link .material-symbols-outlined { font-size: 20px; }
+
+.school-rail-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9a9a9a;
+  padding: 0 14px;
+  margin: 18px 0 6px;
+}
+
+/* GGSA rail chrome (scoped to .school-ggsa): links on the deep-purple
+   rail read brand-300, the active stop carries the gold spine. */
+.school-ggsa .school-rail-link {
+  color: #d8b4fe;
+}
+.school-ggsa .school-rail-link:hover {
+  background: #581c87;
+  color: #ffffff;
+}
+.school-ggsa .school-rail-link[data-active='true'] {
+  background: #240046;
+  color: #fbbf24;
+  box-shadow: inset 3px 0 0 0 #d97706;
+}
+.school-ggsa .school-rail-label {
+  color: #c084fc;
+}
+
+.school-shell-card {
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 14px;
+}
+
+/* GGSA card face: white paper, purple-200 hairline. */
+.school-ggsa .school-shell-card {
+  border-color: #e9d5ff;
+}
+
+.school-stat-value { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: #0a0a0a; }
+.school-stat-label { font-size: 13px; color: #5c5c5c; margin-top: 2px; }
+
+.school-ggsa .school-stat-value { color: #3b0764; }
+.school-ggsa .school-stat-label { color: #64748b; }
+
+/* ------------------------------------------------------------------ */
+/* GGSA "Stitch" result sheet (components/result-sheet-view.tsx).       */
+/* Cinzel 700 serif for the school title, Inter for the body — the     */
+/* exact result-card typography of the GGSA portal.                    */
+/* ------------------------------------------------------------------ */
+.school-title {
+  font-family: 'Cinzel', Georgia, 'Times New Roman', serif;
+}
+.result-sheet {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Report table — subtle zebra + fine borders (screen) */
+.table-report th,
+.table-report td {
+  border: 1px solid #cbd5e1;
+}
+.table-report tbody tr:nth-child(even) {
+  background-color: #fcfaff;
+}
+.table-report tbody tr:hover {
+  background-color: #f3e8ff30;
+}
+
+/* The ID card face prints exactly as drawn: black on white, no browser
+   colour stripping, page margins tight enough for three cards across. */
+.ren-card-face {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+@media print {
+  .school-no-print { display: none !important; }
+  .ren-card-face { break-inside: avoid; page-break-inside: avoid; }
+  @page { margin: 12mm; }
+}
+
+/* =====================================================================
+   PRINT — GGSA "Stitch" result sheet on a single A4 page
+   (size: A4 portrait · colours preserved · compact typography).
+   Ported from the GGSA portal globals.css; the sheet prints through a
+   named page so the 12mm ID-card default above stays untouched.
+   ===================================================================== */
+@media print {
+  @page result-sheet {
+    size: A4 portrait;
+    margin: 9mm;
+  }
+  .result-sheet {
+    page: result-sheet;
+  }
+
+  .school-ggsa {
+    background: #ffffff !important;
+  }
+
+  .result-sheet {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    width: 186mm !important;
+    max-width: 186mm !important;
+    font-size: 10px !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Compress the vertical rhythm between sections */
+  .result-sheet > * + * {
+    margin-top: 10px !important;
+  }
+
+  /* ---- Header ---- */
+  .result-sheet .rs-header {
+    padding-bottom: 8px !important;
+  }
+  .result-sheet .rs-logo {
+    width: 74px !important;
+    height: 74px !important;
+  }
+  .result-sheet .school-title {
+    font-size: 19px !important;
+  }
+  .result-sheet .rs-addr {
+    font-size: 9.5px !important;
+    margin-top: 3px !important;
+  }
+  .result-sheet .rs-contact {
+    font-size: 9px !important;
+  }
+  .result-sheet .rs-motto {
+    padding: 4px 8px !important;
+    font-size: 8.5px !important;
+  }
+  .result-sheet .rs-motto span {
+    font-size: 8.5px !important;
+  }
+  .result-sheet .rs-pill {
+    font-size: 10px !important;
+    padding: 3px 14px !important;
+  }
+
+  /* ---- Student bio grid ---- */
+  .result-sheet .rs-bio {
+    padding: 9px 10px !important;
+    font-size: 10px !important;
+  }
+  .result-sheet .rs-bio span {
+    font-size: 10px !important;
+  }
+  .result-sheet .rs-bio .rs-bio-label {
+    font-size: 8px !important;
+  }
+
+  /* ---- Academic table ---- */
+  .result-sheet .rs-table-wrap {
+    overflow: visible !important;
+    overflow-x: visible !important;
+  }
+  .result-sheet .table-report {
+    min-width: 0 !important;
+    width: 100% !important;
+    font-size: 10px !important;
+  }
+  .result-sheet .table-report th {
+    font-size: 8.5px !important;
+    padding: 4.5px 2px !important;
+    letter-spacing: 0.02em !important;
+  }
+  .result-sheet .table-report td {
+    padding: 7px 2px !important;
+    font-size: 10px !important;
+    line-height: 1.3 !important;
+    word-wrap: break-word;
+    overflow: hidden;
+  }
+
+  /* ---- Skills / Behaviour cards ---- */
+  .result-sheet .rs-card .rs-card-head {
+    padding: 4px 10px !important;
+    font-size: 9px !important;
+  }
+  .result-sheet .rs-card > div:last-child {
+    padding: 8px 10px !important;
+  }
+  .result-sheet .rs-card span {
+    font-size: 9.5px !important;
+  }
+
+  /* ---- Reports ---- */
+  .result-sheet .rs-report {
+    padding: 9px 10px !important;
+  }
+  .result-sheet .rs-report p {
+    font-size: 10px !important;
+    margin-top: 3px !important;
+  }
+  .result-sheet .rs-report span {
+    font-size: 9.5px !important;
+  }
+  .result-sheet .rs-report .mt-3 {
+    margin-top: 5px !important;
+  }
+  .result-sheet .rs-report .mt-4 {
+    margin-top: 5px !important;
+  }
+
+  /* ---- Rating keys / next term ---- */
+  .result-sheet .rs-keys {
+    padding: 8px 10px !important;
+  }
+  .result-sheet .rs-keys h4 {
+    font-size: 9.5px !important;
+    margin-bottom: 3px !important;
+  }
+  .result-sheet .rs-keys div {
+    font-size: 9px !important;
+  }
+  .result-sheet .rs-next {
+    padding: 8px 8px !important;
+  }
+  .result-sheet .rs-next span {
+    font-size: 9px !important;
+  }
+  .result-sheet .rs-next div {
+    font-size: 10.5px !important;
+    margin-top: 2px !important;
+  }
+
+  /* ---- Footer ---- */
+  .result-sheet .rs-footer {
+    padding-top: 6px !important;
+  }
+  .result-sheet .rs-footer div {
+    font-size: 8.5px !important;
+  }
+}

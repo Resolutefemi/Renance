@@ -1,0 +1,98 @@
+{
+ "exam": "DELF / DALF",
+ "region": "International (France)",
+ "slug": "DELF_DALF",
+ "question_banks": 2,
+ "github_sources": [
+  {
+   "repo": "rawsonj/triviabot",
+   "url": "https://github.com/rawsonj/triviabot/blob/3bab027e3fd27f9038da2f5be19ca194516ade12/questions/questions_30",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "CamiloCortesM/ai-language-tutor",
+   "url": "https://github.com/CamiloCortesM/ai-language-tutor/blob/510fc6daf0d1220ae796af31a65a07a262a753f9/activities/exam-simulator.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "TonytonyFLE/Systeme-pedago-html",
+   "url": "https://github.com/TonytonyFLE/Systeme-pedago-html/blob/7bf453beab44d3db239cd4c5261f69c1d22f1c60/delf_b1_exam.html",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "julienjavaloyes/testmarion",
+   "url": "https://github.com/julienjavaloyes/testmarion/blob/18749d780d5118c2953ba88a5a4d49ebf9726190/french_exam.html",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "jamespares/the-dalf-c1-dojo",
+   "url": "https://github.com/jamespares/the-dalf-c1-dojo/blob/2222cc9f50716524b9a722b67a0c01374bb944e1/dalfc1-information-bank.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "niallconnellan/afc-web-dev",
+   "url": "https://github.com/niallconnellan/afc-web-dev/blob/2a21b4c3ba748eb0d9c9f27e55ff72eacf08b491/content/delf-and-dalf.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "MRG-Hazmatz/florine",
+   "url": "https://github.com/MRG-Hazmatz/florine/blob/d99f8696e037b7f3390f3d21934af42ee94e8397/src/components/exam/ListeningDoc.tsx",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "readandlearn-app/readandlearn",
+   "url": "https://github.com/readandlearn-app/readandlearn/blob/4204ccde97a85ba5b512bb72076323e9e2a36120/translation-backend/init.sql",
+   "stars": 0,
+   "desc": ""
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "Mock French Exam Practice (Free PDF + Online)",
+   "url": "https://www.french-exam.com/mock-french-exam",
+   "class": "site"
+  },
+  {
+   "title": "DELF past papers : r/French - Reddit",
+   "url": "https://www.reddit.com/r/French/comments/1drbjuq/delf_past_papers",
+   "class": "site+pdf"
+  },
+  {
+   "title": "Download DELF A1 Sample Paper & DELF A2 Sample Paper (A1 to",
+   "url": "https://iifls.com/download-delf-a1-sample-paper-delf-a2-sample-paper-a1-to-c2",
+   "class": "site"
+  },
+  {
+   "title": "Free DELF Practice Tests & Sample Papers [2026] - SavoirX",
+   "url": "https://savoirx.ai/articles/free-delf-practice-tests-online",
+   "class": "site"
+  },
+  {
+   "title": "Free DELF Practice Tests & Sample Papers [2026]",
+   "url": "https://savoirx.ai",
+   "class": "site"
+  },
+  {
+   "title": "DELF Exam Preparation Online",
+   "url": "https://www.frenchinnormandy.com",
+   "class": "site"
+  },
+  {
+   "title": "DELF: free test online with GlobalExam",
+   "url": "https://global-exam.com",
+   "class": "site"
+  },
+  {
+   "title": "DELF Preparation (French) Mock Tests & Practice Questions",
+   "url": "https://knowbotic.app",
+   "class": "site"
+  }
+ ]
+}

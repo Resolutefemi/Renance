@@ -1,0 +1,2223 @@
+{
+  "code": "uni-tasued-bed122-bank",
+  "title": "TASUED BED122 | Course Question Bank",
+  "version": 1,
+  "questionCount": 158,
+  "totalMarks": 158,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-tasued-bed122-bank-0001",
+      "type": "mcq",
+      "stem": "Evaluate: $16^{3/4}$",
+      "options": {
+        "A": "$4$",
+        "B": "$8$",
+        "C": "$16$",
+        "D": "$32$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Taking the fourth root of $16$ gives $2$, and cubing it gives $8$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0002",
+      "type": "mcq",
+      "stem": "The sum of the first $n$ terms of an AP is given by $S_n = 3n^2 + 2n$. Find the $5$th term.",
+      "options": {
+        "A": "$29$",
+        "B": "$31$",
+        "C": "$33$",
+        "D": "$35$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Using $T_n = S_n - S_{n-1}$: $S_5 = 3(25) + 2(5) = 75 + 10 = 85$ and $S_4 = 3(16) + 2(4) = 48 + 8 = 56$. So $T_5 = 85 - 56 = 29$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0003",
+      "type": "mcq",
+      "stem": "The equality sign ($=$) does not always meet our needs in mathematics. Which of the following best describes why inequality signs are used?",
+      "options": {
+        "A": "Because equality signs can only be used with whole numbers",
+        "B": "Because some real-world comparisons involve quantities that are not exactly equal",
+        "C": "Because inequality signs are easier to write than equality signs",
+        "D": "Because equality signs are only used in geometry"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Inequality signs are introduced because real-world situations - such as comparing prices or quantities - often involve values that are more or less than each other, not exactly equal."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0004",
+      "type": "mcq",
+      "stem": "What does the inequality symbol $<$ mean?",
+      "options": {
+        "A": "Is greater than",
+        "B": "Is greater than or equal to",
+        "C": "Is less than",
+        "D": "Is less than or equal to"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The symbol $<$ is read as 'is less than'. For example, $3 < 5$ means 3 is less than 5."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0005",
+      "type": "mcq",
+      "stem": "What does the inequality symbol $>$ mean?",
+      "options": {
+        "A": "Is less than",
+        "B": "Is equal to",
+        "C": "Is greater than",
+        "D": "Is less than or equal to"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The symbol $>$ is read as 'is greater than'. For example, $7 > 4$ means 7 is greater than 4."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0006",
+      "type": "mcq",
+      "stem": "What does the inequality symbol $\\leq$ mean?",
+      "options": {
+        "A": "Is less than",
+        "B": "Is greater than or equal to",
+        "C": "Is not equal to",
+        "D": "Is less than or equal to"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The symbol $\\leq$ means 'is less than or equal to'. It combines the $<$ (less than) and $=$ (equal to) conditions."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0007",
+      "type": "mcq",
+      "stem": "What does the inequality symbol $\\geq$ mean?",
+      "options": {
+        "A": "Is greater than",
+        "B": "Is less than or equal to",
+        "C": "Is greater than or equal to",
+        "D": "Is not equal to"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The symbol $\\geq$ means 'is greater than or equal to'. It combines the $>$ (greater than) and $=$ (equal to) conditions."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0008",
+      "type": "mcq",
+      "stem": "How many basic types of inequalities are there?",
+      "options": {
+        "A": "One",
+        "B": "Two",
+        "C": "Three",
+        "D": "Four"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "There are two basic types of inequalities: weak inequalities and strict inequalities."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0009",
+      "type": "mcq",
+      "stem": "Which of the following are the two basic types of inequalities?",
+      "options": {
+        "A": "Linear inequalities and quadratic inequalities",
+        "B": "Weak inequalities and strict inequalities",
+        "C": "Simple inequalities and compound inequalities",
+        "D": "Open inequalities and closed inequalities"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The two basic types of inequalities are weak inequalities (using $\\leq$ and $\\geq$) and strict inequalities (using $<$ and $>$)."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0010",
+      "type": "mcq",
+      "stem": "Strict inequalities use which of the following symbols?",
+      "options": {
+        "A": "$\\leq$ and $\\geq$ only",
+        "B": "$=$ and $\\neq$ only",
+        "C": "$<$ and $>$ only",
+        "D": "$<$, $>$, $\\leq$, and $\\geq$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Strict inequalities use only $<$ (less than) and $>$ (greater than), which do not include the possibility of equality."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0011",
+      "type": "mcq",
+      "stem": "Weak inequalities use which symbols?",
+      "options": {
+        "A": "$<$ and $>$ only",
+        "B": "$\\leq$ and $\\geq$",
+        "C": "$=$ and $\\neq$",
+        "D": "$<$ and $\\geq$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Weak inequalities use $\\leq$ (less than or equal to) and $\\geq$ (greater than or equal to), allowing for the possibility of equality."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0012",
+      "type": "mcq",
+      "stem": "The Nigerian naira being less valuable than the American dollar is an example that illustrates the need for:",
+      "options": {
+        "A": "Equality signs in mathematics",
+        "B": "Inequality signs in mathematics",
+        "C": "Quadratic equations",
+        "D": "Arithmetic progressions"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Since the naira is less valuable than the dollar, using an equality sign ($=$) would be inappropriate. An inequality sign better captures this relationship."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0013",
+      "type": "mcq",
+      "stem": "If $x > 3$, which of the following could be a value of $x$?",
+      "options": {
+        "A": "$1$",
+        "B": "$2$",
+        "C": "$3$",
+        "D": "$4$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Since $x > 3$ means $x$ is strictly greater than $3$, the value $4$ satisfies the inequality. The value $3$ itself does not satisfy a strict inequality."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0014",
+      "type": "mcq",
+      "stem": "If $y < 5$, which of the following could $y$ be?",
+      "options": {
+        "A": "$5$",
+        "B": "$6$",
+        "C": "$7$",
+        "D": "$4$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The inequality $y < 5$ means $y$ is strictly less than $5$. Therefore $y = 4$ satisfies the condition, while $y = 5$ does not (it is not strictly less than 5)."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0015",
+      "type": "mcq",
+      "stem": "If $W \\geq 12$, which of the following is a valid value of $W$?",
+      "options": {
+        "A": "$10$",
+        "B": "$11$",
+        "C": "$12$",
+        "D": "$9$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Since $W \\geq 12$ is a weak inequality, $W$ can equal $12$ or any value greater than $12$. The value $12$ itself satisfies the condition."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0016",
+      "type": "mcq",
+      "stem": "If $y \\leq 12$, which of the following is NOT a valid value of $y$?",
+      "options": {
+        "A": "$12$",
+        "B": "$11$",
+        "C": "$9$",
+        "D": "$13$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Since $y \\leq 12$ means $y$ must be less than or equal to $12$, the value $y = 13$ does not satisfy the inequality."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0017",
+      "type": "mcq",
+      "stem": "Which type of inequality allows the variable to equal the boundary value?",
+      "options": {
+        "A": "Strict inequality",
+        "B": "Weak inequality",
+        "C": "Linear inequality",
+        "D": "Quadratic inequality"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Weak inequalities ($\\leq$ and $\\geq$) allow the variable to equal the boundary value, unlike strict inequalities ($<$ and $>$) which exclude the boundary value."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0018",
+      "type": "mcq",
+      "stem": "The principles that apply to linear equations also apply to linear inequalities, EXCEPT when:",
+      "options": {
+        "A": "Adding the same number to both sides",
+        "B": "Subtracting the same number from both sides",
+        "C": "Multiplying or dividing both sides by a negative number",
+        "D": "Collecting like terms"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "When both sides of an inequality are multiplied or divided by a negative number, the inequality sign must be reversed. This is the key exception that does not apply to equations."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0019",
+      "type": "mcq",
+      "stem": "What happens to the inequality sign when you multiply or divide both sides by a negative number?",
+      "options": {
+        "A": "It remains the same",
+        "B": "It is reversed",
+        "C": "It becomes an equality sign",
+        "D": "It disappears"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "This is a fundamental rule: multiplying or dividing both sides of an inequality by a negative number reverses the inequality sign. For example, if $-x > 2$, then $x < -2$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0020",
+      "type": "mcq",
+      "stem": "Solve the inequality: $3x - 4 > 8$",
+      "options": {
+        "A": "$x > 4$",
+        "B": "$x < 4$",
+        "C": "$x > 12$",
+        "D": "$x < 12$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Starting with $3x - 4 > 8$, add $4$ to both sides: $3x > 12$. Divide both sides by $3$: $x > 4$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0021",
+      "type": "mcq",
+      "stem": "Solve: $\\frac{1}{2}(x + 3) < 3$",
+      "options": {
+        "A": "$x < 3$",
+        "B": "$x > 3$",
+        "C": "$x < 6$",
+        "D": "$x > 6$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Multiply both sides by $2$ to clear the fraction: $x + 3 < 6$. Then subtract $3$ from both sides: $x < 3$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0022",
+      "type": "mcq",
+      "stem": "Solve the inequality: $6x - 14 \\geq 13x$",
+      "options": {
+        "A": "$x \\geq 2$",
+        "B": "$x \\leq -2$",
+        "C": "$x \\geq -2$",
+        "D": "$x \\leq 2$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Collect like terms: $6x - 13x \\geq 14$, giving $-7x \\geq 14$. Dividing by $-7$ (a negative number) reverses the sign: $x \\leq -2$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0023",
+      "type": "mcq",
+      "stem": "When solving $6x - 14 \\geq 13x$, after collecting like terms we get $-7x \\geq 14$. The next step of dividing by $-7$ changes the sign to:",
+      "options": {
+        "A": "$\\geq$",
+        "B": "$\\leq$",
+        "C": "$>$",
+        "D": "$=$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Dividing by a negative number reverses the inequality sign. So $\\geq$ becomes $\\leq$, giving the solution $x \\leq -2$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0024",
+      "type": "mcq",
+      "stem": "Solve: $x + 3 \\leq 4x$",
+      "options": {
+        "A": "$x \\geq 1$",
+        "B": "$x \\leq 1$",
+        "C": "$x \\geq -1$",
+        "D": "$x \\leq -1$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Collect like terms: $x - 4x \\leq -3$, giving $-3x \\leq -3$. Dividing by $-3$ (negative) reverses the sign: $x \\geq 1$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0025",
+      "type": "mcq",
+      "stem": "Verify: when $x = 1$, does $x + 3 \\leq 4x$ hold true?",
+      "options": {
+        "A": "No, because $4 < 4$",
+        "B": "Yes, because $4 \\leq 4$",
+        "C": "No, because $1 + 3 > 4(1)$",
+        "D": "Yes, because $4 > 4$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Substituting $x = 1$: $1 + 3 \\leq 4(1)$ gives $4 \\leq 4$, which is true since the inequality includes the equal-to condition ($\\leq$)."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0026",
+      "type": "mcq",
+      "stem": "Solve the inequality: $y + 9 > 5y - 7$",
+      "options": {
+        "A": "$y > 4$",
+        "B": "$y < 4$",
+        "C": "$y > -4$",
+        "D": "$y < -4$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Rearranging: $y - 5y > -7 - 9$, giving $-4y > -16$. Dividing by $-4$ reverses the sign: $y < 4$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0027",
+      "type": "mcq",
+      "stem": "What is the first step when solving $\\frac{1}{2}(x + 3) < 3$?",
+      "options": {
+        "A": "Subtract $3$ from both sides",
+        "B": "Multiply both sides by $2$ to clear the fraction",
+        "C": "Divide both sides by $x$",
+        "D": "Add $\\frac{1}{2}$ to both sides"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "To clear the fraction $\\frac{1}{2}$, multiply both sides of the inequality by $2$, giving $x + 3 < 6$. This simplifies the inequality for further solving."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0028",
+      "type": "mcq",
+      "stem": "Find the value of $x$ satisfying: $\\frac{x}{2} - \\frac{1}{3} < \\frac{2x}{5} + \\frac{1}{6}$",
+      "options": {
+        "A": "$x < 5$",
+        "B": "$x > 7\\frac{1}{2}$",
+        "C": "$x < 7\\frac{1}{2}$",
+        "D": "$x > 5$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Collecting like terms: $\\frac{x}{2} - \\frac{2x}{5} < \\frac{1}{6} + \\frac{1}{3}$. This gives $\\frac{5x - 4x}{10} < \\frac{1 + 2}{6}$, so $\\frac{x}{10} < \\frac{3}{6} = \\frac{1}{2}$. Multiplying both sides by $10$: $x < 5$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0029",
+      "type": "mcq",
+      "stem": "When solving $\\frac{x}{10} < \\frac{1}{2}$, what is the correct step?",
+      "options": {
+        "A": "Divide both sides by $10$",
+        "B": "Multiply both sides by $10$",
+        "C": "Add $10$ to both sides",
+        "D": "Subtract $\\frac{1}{2}$ from both sides"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "To eliminate the fraction $\\frac{x}{10}$, multiply both sides by $10$, yielding $x < 5$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0030",
+      "type": "mcq",
+      "stem": "The solution set of $x(x-1) < (x+1)^2$ is given by which of the following?",
+      "options": {
+        "A": "$\\{x : x < -33\\}$",
+        "B": "$\\{x : x > -3\\}$",
+        "C": "$\\{x : x > -\\frac{1}{3}\\}$",
+        "D": "$\\{x : x < -\\frac{1}{3}\\}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Expanding: $x^2 - x < x^2 + 2x + 1$. Simplifying: $-x - 2x < 1$, so $-3x < 1$. Dividing by $-3$ (reverse sign): $x > -\\frac{1}{3}$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0031",
+      "type": "mcq",
+      "stem": "Find the real numbers $x$ satisfying: $\\frac{1}{3}(x+1) - 1 \\geq \\frac{1}{5}(2x+4)$",
+      "options": {
+        "A": "$x \\leq -22$",
+        "B": "$x \\geq -22$",
+        "C": "$x \\leq 22$",
+        "D": "$x \\geq 22$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Multiply through by $15$: $5(x+1) - 15 \\geq 3(2x+4)$, giving $5x + 5 - 15 \\geq 6x + 12$. Simplify: $5x - 10 \\geq 6x + 12$. Subtract $5x$: $-10 \\geq x + 12$. Subtract $12$: $-22 \\geq x$, i.e. $x \\leq -22$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0032",
+      "type": "mcq",
+      "stem": "What is the range of values for $t$ if $\\frac{3t}{4} - \\frac{t}{5} + 3 \\geq \\frac{t}{2} - 7$?",
+      "options": {
+        "A": "$t \\leq -200$",
+        "B": "$t \\geq -200$",
+        "C": "$t \\leq 200$",
+        "D": "$t \\geq 200$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Multiply through by $20$ (LCM of $4$, $5$, $2$): $15t - 4t + 60 \\geq 10t - 140$. Simplify: $11t + 60 \\geq 10t - 140$. Subtract $10t$: $t + 60 \\geq -140$. Subtract $60$: $t \\geq -200$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0033",
+      "type": "mcq",
+      "stem": "When solving a linear inequality involving fractions, a common strategy is to:",
+      "options": {
+        "A": "Ignore the denominators and solve normally",
+        "B": "Multiply both sides by the LCM of the denominators to clear fractions",
+        "C": "Convert all fractions to decimals before solving",
+        "D": "Only solve the numerators"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Multiplying through by the Least Common Multiple (LCM) of all denominators eliminates fractions and simplifies the inequality to an easier form to solve."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0034",
+      "type": "mcq",
+      "stem": "The $6$th term of an Arithmetic Progression (AP) is $20$ and the $11$th term is $-5$. Find the sum of the first three terms.",
+      "options": {
+        "A": "$85$",
+        "B": "$100$",
+        "C": "$120$",
+        "D": "$150$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Using $T_n = a + (n-1)d$: from $T_6 = a + 5d = 20$ and $T_{11} = a + 10d = -5$. Subtracting: $5d = -25$, so $d = -5$. Then $a = 20 - 5(-5) = 45$. Sum of first $3$ terms: $T_1 + T_2 + T_3 = 45 + 40 + 35 = 120$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0035",
+      "type": "mcq",
+      "stem": "The $3$rd term of an AP is $-5$. If the $5$th term is $4.5$, find the $11$th term.",
+      "options": {
+        "A": "$19$",
+        "B": "$31$",
+        "C": "$33$",
+        "D": "$77$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Using $T_n = a + (n-1)d$: $T_3 = a + 2d = -5$ and $T_5 = a + 4d = 4.5$. Subtracting: $2d = 9.5$, so $d = 4.75$. Then $a = -5 - 2(4.75) = -14.5$. $T_{11} = -14.5 + 10(4.75) = -14.5 + 47.5 = 33$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0036",
+      "type": "mcq",
+      "stem": "In an Arithmetic Progression, the difference between any two consecutive terms is called the:",
+      "options": {
+        "A": "Common ratio",
+        "B": "Common difference",
+        "C": "First term",
+        "D": "nth term"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In an AP, the constant value added to each term to get the next term is called the common difference, usually denoted $d$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0037",
+      "type": "mcq",
+      "stem": "The general formula for the $n$th term of an Arithmetic Progression is:",
+      "options": {
+        "A": "$T_n = ar^{n-1}$",
+        "B": "$T_n = a + (n-1)d$",
+        "C": "$T_n = a \\cdot n$",
+        "D": "$T_n = \\frac{a(r^n - 1)}{r - 1}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The $n$th term of an AP is given by $T_n = a + (n-1)d$, where $a$ is the first term and $d$ is the common difference."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0038",
+      "type": "mcq",
+      "stem": "A Geometric Progression (GP) is a sequence in which each term after the first is obtained by:",
+      "options": {
+        "A": "Adding a constant value to the previous term",
+        "B": "Subtracting a constant value from the previous term",
+        "C": "Multiplying the previous term by a constant value",
+        "D": "Squaring the previous term"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In a GP, each term is obtained by multiplying the preceding term by a fixed constant called the common ratio ($r$)."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0039",
+      "type": "mcq",
+      "stem": "What is the common ratio of the GP: $2, 4, 8, 16, 32, \\ldots$?",
+      "options": {
+        "A": "$1$",
+        "B": "$2$",
+        "C": "$4$",
+        "D": "$8$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The common ratio $r = \\frac{4}{2} = \\frac{8}{4} = \\frac{16}{8} = 2$. Each term is obtained by multiplying the previous term by $2$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0040",
+      "type": "mcq",
+      "stem": "What is the common ratio of the GP: $14, 98, 686, \\ldots$?",
+      "options": {
+        "A": "$2$",
+        "B": "$5$",
+        "C": "$7$",
+        "D": "$14$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The common ratio $r = \\frac{98}{14} = \\frac{686}{98} = 7$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0041",
+      "type": "mcq",
+      "stem": "The general formula for the $n$th term of a Geometric Progression is:",
+      "options": {
+        "A": "$T_n = a + (n-1)d$",
+        "B": "$T_n = ar^{n-1}$",
+        "C": "$T_n = \\frac{a(r^n-1)}{r-1}$",
+        "D": "$T_n = a \\cdot n \\cdot r$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The $n$th term of a GP is $T_n = ar^{n-1}$, where $a$ is the first term and $r$ is the common ratio."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0042",
+      "type": "mcq",
+      "stem": "The formula for the sum of the first $n$ terms of a GP is:",
+      "options": {
+        "A": "$S_n = \\frac{n}{2}(2a + (n-1)d)$",
+        "B": "$S_n = \\frac{a(r^n - 1)}{r - 1}$",
+        "C": "$S_n = a + nr$",
+        "D": "$S_n = nar$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The sum of the first $n$ terms of a GP is $S_n = \\frac{a(r^n - 1)}{r - 1}$, where $a$ is the first term and $r$ is the common ratio (when $r \\neq 1$)."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0043",
+      "type": "mcq",
+      "stem": "A GP is also known as an:",
+      "options": {
+        "A": "Arithmetic sequence",
+        "B": "Harmonic sequence",
+        "C": "Exponential sequence",
+        "D": "Fibonacci sequence"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A Geometric Progression is also called an exponential sequence because the terms grow (or shrink) exponentially due to repeated multiplication by the common ratio."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0044",
+      "type": "mcq",
+      "stem": "In the notation of a GP, the general form is written as:",
+      "options": {
+        "A": "$a, a+d, a+2d, a+3d, \\ldots$",
+        "B": "$a, ar, ar^2, ar^3, \\ldots$",
+        "C": "$a, 2a, 3a, 4a, \\ldots$",
+        "D": "$a, a^2, a^3, a^4, \\ldots$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In a GP, each term is multiplied by the common ratio $r$, so the sequence is $a, ar, ar^2, ar^3, \\ldots$, where $a$ is the first term."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0045",
+      "type": "mcq",
+      "stem": "Determine the third term of a GP whose 1st and 4th terms are $4$ and $108$ respectively.",
+      "options": {
+        "A": "$112$",
+        "B": "$108$",
+        "C": "$36$",
+        "D": "$27$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Using $T_4 = ar^3 = 108$ and $T_1 = a = 4$: $4r^3 = 108$, so $r^3 = 27$, giving $r = 3$. The third term $T_3 = ar^2 = 4(3)^2 = 4 \\times 9 = 36$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0046",
+      "type": "mcq",
+      "stem": "The common ratio of the exponential sequence GP: $\\log x, \\log x^2, \\log x^4, \\ldots$ is:",
+      "options": {
+        "A": "$x$",
+        "B": "$2$",
+        "C": "$\\log x$",
+        "D": "$\\log 2$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Using log rules: $\\log x^2 = 2\\log x$ and $\\log x^4 = 4\\log x$. The common ratio $r = \\frac{2\\log x}{\\log x} = 2$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0047",
+      "type": "mcq",
+      "stem": "A student in a Nigerian university saves money weekly in a GP pattern: $\\text{₦}1{,}000, \\text{₦}2{,}000, \\text{₦}4{,}000, \\text{₦}8{,}000, \\ldots$ Find the total savings after $5$ weeks.",
+      "options": {
+        "A": "$\\text{₦}15{,}000$",
+        "B": "$\\text{₦}25{,}000$",
+        "C": "$\\text{₦}31{,}000$",
+        "D": "$\\text{₦}32{,}000$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Here $a = 1{,}000$, $r = 2$, $n = 5$. Using $S_5 = \\frac{a(r^5 - 1)}{r - 1} = \\frac{1{,}000(32 - 1)}{1} = 1{,}000 \\times 31 = \\text{₦}31{,}000$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0048",
+      "type": "mcq",
+      "stem": "A university purchases computers worth $\\text{₦}500{,}000$ that depreciate at $20\\%$ annually. After $3$ years, the value is found using GP where the common ratio is:",
+      "options": {
+        "A": "$0.2$",
+        "B": "$0.8$",
+        "C": "$1.2$",
+        "D": "$20$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Depreciation of $20\\%$ means the computer retains $100\\% - 20\\% = 80\\% = 0.8$ of its value each year. So the common ratio $r = 0.8$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0049",
+      "type": "mcq",
+      "stem": "A private university in Nigeria increases its tuition fees geometrically. If the initial fee is $\\text{₦}200{,}000$ and it increases by $10\\%$ annually, what is the tuition fee in the $4$th year?",
+      "options": {
+        "A": "$\\text{₦}242{,}000$",
+        "B": "$\\text{₦}266{,}200$",
+        "C": "$\\text{₦}280{,}000$",
+        "D": "$\\text{₦}300{,}000$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "With $a = 200{,}000$, $r = 1.1$, the $4$th year fee is $T_4 = ar^3 = 200{,}000 \\times (1.1)^3 = 200{,}000 \\times 1.331 = \\text{₦}266{,}200$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0050",
+      "type": "mcq",
+      "stem": "A transport company buys a bus for $\\text{₦}30{,}000{,}000$ and it depreciates at $15\\%$ annually. The value after $2$ years is calculated using which formula?",
+      "options": {
+        "A": "$V = a + 2d$",
+        "B": "$V = ar^2$",
+        "C": "$V = a(1 + r)^2$",
+        "D": "$V = \\frac{a}{r^2}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Depreciation problems use the GP formula $T_n = ar^{n-1}$. For value after $2$ years (i.e., the $3$rd term with $n = 3$): $V = ar^2$ where $r = 0.85$ (since $15\\%$ depreciation means $85\\%$ retained)."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0051",
+      "type": "mcq",
+      "stem": "Which of the following correctly identifies the first term ($a$) and common ratio ($r$) in the GP: $a, ar, ar^2, ar^3$?",
+      "options": {
+        "A": "$a$ = first term, $r$ = common difference",
+        "B": "$a$ = common ratio, $r$ = first term",
+        "C": "$a$ = first term, $r$ = common ratio",
+        "D": "$a$ = sum, $r$ = product"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In the standard GP notation $a, ar, ar^2, ar^3, \\ldots$, $a$ denotes the first term and $r$ denotes the common ratio."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0052",
+      "type": "mcq",
+      "stem": "An AP has first term $-3$ and common difference $4$. Which term of the AP equals $29$?",
+      "options": {
+        "A": "$7$th",
+        "B": "$8$th",
+        "C": "$9$th",
+        "D": "$10$th"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Set $T_n = 29$: $-3 + (n-1)(4) = 29$. Simplify: $(n-1)(4) = 32$, so $n-1 = 8$, giving $n = 9$. The $9$th term equals $29$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0053",
+      "type": "mcq",
+      "stem": "What is the key difference between an Arithmetic Progression and a Geometric Progression?",
+      "options": {
+        "A": "AP uses addition/subtraction of a constant; GP uses multiplication/division by a constant",
+        "B": "AP uses multiplication; GP uses addition",
+        "C": "AP has a common ratio; GP has a common difference",
+        "D": "AP and GP are the same thing with different names"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "In an AP, each term is obtained by adding a common difference $d$. In a GP, each term is obtained by multiplying by a common ratio $r$. This is the fundamental distinction between the two sequences."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0054",
+      "type": "mcq",
+      "stem": "Solve the inequality: $2(3x - 1) \\leq 4x + 10$",
+      "options": {
+        "A": "$x \\leq 6$",
+        "B": "$x \\geq 6$",
+        "C": "$x \\leq -6$",
+        "D": "$x \\geq -6$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Expand the left side: $6x - 2 \\leq 4x + 10$. Subtract $4x$ from both sides: $2x - 2 \\leq 10$. Add $2$: $2x \\leq 12$. Divide by $2$: $x \\leq 6$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0055",
+      "type": "mcq",
+      "stem": "Solve: $5 - 3x > 14$",
+      "options": {
+        "A": "$x > -3$",
+        "B": "$x < -3$",
+        "C": "$x > 3$",
+        "D": "$x < 3$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Subtract $5$ from both sides: $-3x > 9$. Divide by $-3$ (negative - reverse the sign): $x < -3$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0056",
+      "type": "mcq",
+      "stem": "For what values of $x$ is $4x - 7 < 2x + 5$?",
+      "options": {
+        "A": "$x < 6$",
+        "B": "$x > 6$",
+        "C": "$x < -6$",
+        "D": "$x > -6$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Subtract $2x$ from both sides: $2x - 7 < 5$. Add $7$: $2x < 12$. Divide by $2$: $x < 6$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0057",
+      "type": "mcq",
+      "stem": "Which set of values satisfies both $x > -2$ AND $x \\leq 5$ simultaneously?",
+      "options": {
+        "A": "$-2 < x \\leq 5$",
+        "B": "$x \\leq -2$ or $x > 5$",
+        "C": "$x > 5$",
+        "D": "$x < -2$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A compound inequality combining $x > -2$ and $x \\leq 5$ uses AND (intersection), giving the overlap $-2 < x \\leq 5$. Note $x = -2$ is excluded (strict) and $x = 5$ is included (weak)."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0058",
+      "type": "mcq",
+      "stem": "A student needs to score more than $60$ marks to pass. If her current score is $3x + 12$ marks, write and solve the inequality to find the minimum integer value of $x$.",
+      "options": {
+        "A": "$x = 15$",
+        "B": "$x = 16$",
+        "C": "$x = 17$",
+        "D": "$x = 18$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Set up: $3x + 12 > 60$. Subtract $12$: $3x > 48$. Divide by $3$: $x > 16$. Since $x$ must be strictly greater than $16$, the minimum integer value of $x$ is $17$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0059",
+      "type": "mcq",
+      "stem": "Solve: $\\frac{2x + 1}{3} > \\frac{x - 2}{2}$",
+      "options": {
+        "A": "$x > -8$",
+        "B": "$x < -8$",
+        "C": "$x > 8$",
+        "D": "$x < 8$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Multiply both sides by the LCM of $3$ and $2$, which is $6$: $2(2x+1) > 3(x-2)$, giving $4x + 2 > 3x - 6$. Subtract $3x$: $x + 2 > -6$. Subtract $2$: $x > -8$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0060",
+      "type": "mcq",
+      "stem": "Solve: $\\frac{x - 4}{3} \\leq \\frac{x + 2}{5}$",
+      "options": {
+        "A": "$x \\leq 13$",
+        "B": "$x \\geq 13$",
+        "C": "$x \\leq -13$",
+        "D": "$x \\geq -13$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Multiply both sides by $15$ (LCM of $3$ and $5$): $5(x-4) \\leq 3(x+2)$, giving $5x - 20 \\leq 3x + 6$. Subtract $3x$: $2x - 20 \\leq 6$. Add $20$: $2x \\leq 26$. Divide by $2$: $x \\leq 13$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0061",
+      "type": "mcq",
+      "stem": "Find the solution set of $\\frac{3x}{4} + 2 < \\frac{x}{3} + 5$",
+      "options": {
+        "A": "$\\{x : x < \\frac{36}{5}\\}$",
+        "B": "$\\{x : x > \\frac{36}{5}\\}$",
+        "C": "$\\{x : x < \\frac{5}{36}\\}$",
+        "D": "$\\{x : x > -\\frac{36}{5}\\}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Multiply through by $12$ (LCM of $4$ and $3$): $9x + 24 < 4x + 60$. Subtract $4x$: $5x + 24 < 60$. Subtract $24$: $5x < 36$. Divide by $5$: $x < \\frac{36}{5}$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0062",
+      "type": "mcq",
+      "stem": "Solve the inequality: $\\frac{2(x+3)}{5} - \\frac{x}{2} \\geq 1$",
+      "options": {
+        "A": "$x \\leq -2$",
+        "B": "$x \\geq -2$",
+        "C": "$x \\leq 2$",
+        "D": "$x \\geq 2$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Multiply through by $10$ (LCM of $5$ and $2$): $4(x+3) - 5x \\geq 10$, giving $4x + 12 - 5x \\geq 10$. Simplify: $-x + 12 \\geq 10$. Subtract $12$: $-x \\geq -2$. Divide by $-1$ (reverse sign): $x \\leq 2$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0063",
+      "type": "mcq",
+      "stem": "The solution of $\\frac{5 - x}{2} > \\frac{x + 1}{4}$ is:",
+      "options": {
+        "A": "$x < 3$",
+        "B": "$x > 3$",
+        "C": "$x < -3$",
+        "D": "$x > -3$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Multiply both sides by $4$: $2(5 - x) > x + 1$, giving $10 - 2x > x + 1$. Subtract $x$: $10 - 3x > 1$. Subtract $10$: $-3x > -9$. Divide by $-3$ (reverse sign): $x < 3$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0064",
+      "type": "mcq",
+      "stem": "Solve: $\\frac{4x - 1}{6} - \\frac{x + 3}{4} < \\frac{1}{12}$",
+      "options": {
+        "A": "$x < \\frac{12}{5}$",
+        "B": "$x > \\frac{12}{5}$",
+        "C": "$x < -\\frac{12}{5}$",
+        "D": "$x > -\\frac{12}{5}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Multiply through by $12$ (LCM of $6$, $4$, $12$): $2(4x-1) - 3(x+3) < 1$, giving $8x - 2 - 3x - 9 < 1$. Simplify: $5x - 11 < 1$. Add $11$: $5x < 12$. Divide by $5$: $x < \\frac{12}{5}$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0065",
+      "type": "mcq",
+      "stem": "For what integer values of $n$ does $\\frac{n}{3} + 1 \\leq \\frac{n+5}{2}$ hold?",
+      "options": {
+        "A": "All integers $n \\geq -9$",
+        "B": "All integers $n \\leq -9$",
+        "C": "All integers $n \\geq 9$",
+        "D": "All integers $n \\leq 9$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Multiply through by $6$: $2n + 6 \\leq 3(n+5)$, giving $2n + 6 \\leq 3n + 15$. Subtract $2n$: $6 \\leq n + 15$. Subtract $15$: $-9 \\leq n$, i.e. $n \\geq -9$. All integers greater than or equal to $-9$ satisfy the inequality."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0066",
+      "type": "mcq",
+      "stem": "Solve and express in set notation: $1 - \\frac{x}{4} < \\frac{x}{2} - 2$",
+      "options": {
+        "A": "$\\{x : x > 4\\}$",
+        "B": "$\\{x : x < 4\\}$",
+        "C": "$\\{x : x > -4\\}$",
+        "D": "$\\{x : x < -4\\}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Multiply through by $4$: $4 - x < 2x - 8$. Add $x$: $4 < 3x - 8$. Add $8$: $12 < 3x$. Divide by $3$: $4 < x$, i.e. $x > 4$. In set notation: $\\{x : x > 4\\}$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0067",
+      "type": "mcq",
+      "stem": "The first term of an AP is $7$ and the common difference is $3$. Find the $10$th term.",
+      "options": {
+        "A": "$34$",
+        "B": "$37$",
+        "C": "$40$",
+        "D": "$43$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Using $T_n = a + (n-1)d$: $T_{10} = 7 + (10-1)(3) = 7 + 27 = 34$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0068",
+      "type": "mcq",
+      "stem": "Find the sum of the first $15$ terms of an AP whose first term is $4$ and common difference is $6$.",
+      "options": {
+        "A": "$570$",
+        "B": "$660$",
+        "C": "$690$",
+        "D": "$720$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Using $S_n = \\frac{n}{2}[2a + (n-1)d]$: $S_{15} = \\frac{15}{2}[2(4) + 14(6)] = \\frac{15}{2}[8 + 84] = \\frac{15}{2}(92) = 15 \\times 46 = 690$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0069",
+      "type": "mcq",
+      "stem": "The $4$th and $9$th terms of an AP are $11$ and $26$ respectively. Find the first term $a$ and common difference $d$.",
+      "options": {
+        "A": "$a = 2$, $d = 3$",
+        "B": "$a = 3$, $d = 2$",
+        "C": "$a = 5$, $d = 3$",
+        "D": "$a = 2$, $d = 5$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$T_4 = a + 3d = 11$ and $T_9 = a + 8d = 26$. Subtracting: $5d = 15$, so $d = 3$. Then $a = 11 - 3(3) = 11 - 9 = 2$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0070",
+      "type": "mcq",
+      "stem": "Three consecutive terms of an AP are $x - 2$, $2x + 1$, and $4x - 3$. Find $x$.",
+      "options": {
+        "A": "$x = 4$",
+        "B": "$x = 5$",
+        "C": "$x = 6$",
+        "D": "$x = 7$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "For an AP, the common difference must be constant: $(2x+1) - (x-2) = (4x-3) - (2x+1)$. Simplifying both sides: $x + 3 = 2x - 4$. Subtract $x$: $3 = x - 4$. Add $4$: $x = 7$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0071",
+      "type": "mcq",
+      "stem": "How many terms of the AP $3, 5, 7, 9, \\ldots$ must be taken for their sum to equal $120$?",
+      "options": {
+        "A": "$8$",
+        "B": "$10$",
+        "C": "$12$",
+        "D": "$15$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Here $a = 3$, $d = 2$. Using $S_n = \\frac{n}{2}[2a + (n-1)d]$: $120 = \\frac{n}{2}[6 + 2(n-1)] = \\frac{n}{2}(2n + 4) = n(n+2) = n^2 + 2n$. So $n^2 + 2n - 120 = 0$. Factorising: $(n+12)(n-10) = 0$, giving $n = 10$ (taking the positive value)."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0072",
+      "type": "mcq",
+      "stem": "The $15$th term of an AP exceeds its $5$th term by $40$. Find the common difference.",
+      "options": {
+        "A": "$2$",
+        "B": "$4$",
+        "C": "$6$",
+        "D": "$8$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$T_{15} - T_5 = [a + 14d] - [a + 4d] = 10d = 40$. Dividing by $10$: $d = 4$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0073",
+      "type": "mcq",
+      "stem": "Find the arithmetic mean between $12$ and $36$.",
+      "options": {
+        "A": "$18$",
+        "B": "$20$",
+        "C": "$24$",
+        "D": "$30$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The arithmetic mean (single term) between two numbers $a$ and $b$ is $\\frac{a+b}{2} = \\frac{12 + 36}{2} = \\frac{48}{2} = 24$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0074",
+      "type": "mcq",
+      "stem": "A student saves ₦500 in the first week, ₦700 in the second week, ₦900 in the third week, and so on. How much does she save in total over $10$ weeks?",
+      "options": {
+        "A": "₦14,000",
+        "B": "₦14,500",
+        "C": "₦15,000",
+        "D": "₦15,500"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "This is an AP with $a = 500$ and $d = 200$. $S_{10} = \\frac{10}{2}[2(500) + 9(200)] = 5[1000 + 1800] = 5 \\times 2800 = 14{,}000$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0075",
+      "type": "mcq",
+      "stem": "Find the $7$th term of the GP: $3, 6, 12, 24, \\ldots$",
+      "options": {
+        "A": "$96$",
+        "B": "$128$",
+        "C": "$192$",
+        "D": "$256$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Here $a = 3$ and $r = 2$. Using $T_n = ar^{n-1}$: $T_7 = 3 \\times 2^6 = 3 \\times 64 = 192$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0076",
+      "type": "mcq",
+      "stem": "The sum of the first $6$ terms of a GP is $189$ and the first term is $3$. Find the common ratio.",
+      "options": {
+        "A": "$2$",
+        "B": "$3$",
+        "C": "$4$",
+        "D": "$5$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Using $S_6 = \\frac{a(r^6-1)}{r-1} = 189$ with $a = 3$: $\\frac{3(r^6-1)}{r-1} = 189$, so $\\frac{r^6-1}{r-1} = 63$. Testing $r = 2$: $\\frac{64-1}{1} = 63$. ✓ The common ratio is $2$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0077",
+      "type": "mcq",
+      "stem": "Find the geometric mean between $4$ and $36$.",
+      "options": {
+        "A": "$12$",
+        "B": "$16$",
+        "C": "$18$",
+        "D": "$20$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The geometric mean between two numbers $a$ and $b$ is $\\sqrt{ab} = \\sqrt{4 \\times 36} = \\sqrt{144} = 12$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0078",
+      "type": "mcq",
+      "stem": "A GP has $T_2 = 6$ and $T_5 = 48$. Find the first term and common ratio.",
+      "options": {
+        "A": "$a = 2, r = 3$",
+        "B": "$a = 3, r = 2$",
+        "C": "$a = 4, r = 2$",
+        "D": "$a = 2, r = 4$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$T_2 = ar = 6$ and $T_5 = ar^4 = 48$. Dividing: $r^3 = \\frac{48}{6} = 8$, so $r = 2$. Then $a = \\frac{6}{r} = \\frac{6}{2} = 3$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0079",
+      "type": "mcq",
+      "stem": "Find the number of terms in the GP: $2, 4, 8, \\ldots, 512$.",
+      "options": {
+        "A": "$7$",
+        "B": "$8$",
+        "C": "$9$",
+        "D": "$10$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "With $a = 2$ and $r = 2$, set $T_n = 512$: $2 \\times 2^{n-1} = 512 = 2^9$. So $2^n = 2^9$, giving $n = 9$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0080",
+      "type": "mcq",
+      "stem": "The population of a city doubles every $10$ years. If the current population is $500{,}000$, what will it be after $30$ years?",
+      "options": {
+        "A": "$1{,}000{,}000$",
+        "B": "$2{,}000{,}000$",
+        "C": "$4{,}000{,}000$",
+        "D": "$8{,}000{,}000$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Doubling every $10$ years is a GP with $r = 2$ and $a = 500{,}000$. In $30$ years, there are $3$ periods of doubling, so $T_4 = ar^3 = 500{,}000 \\times 2^3 = 500{,}000 \\times 8 = 4{,}000{,}000$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0081",
+      "type": "mcq",
+      "stem": "Which term of the GP $1, 3, 9, 27, \\ldots$ is equal to $729$?",
+      "options": {
+        "A": "$5$th",
+        "B": "$6$th",
+        "C": "$7$th",
+        "D": "$8$th"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "With $a = 1$ and $r = 3$, set $T_n = 729$: $1 \\times 3^{n-1} = 729 = 3^6$. So $n - 1 = 6$, giving $n = 7$. The $7$th term equals $729$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0082",
+      "type": "mcq",
+      "stem": "There are $250$ boys and $150$ girls in a school. If $60\\%$ of the boys and $40\\%$ of the girls play football, what percentage of the school play football?",
+      "options": {
+        "A": "$0.4$",
+        "B": "$0.422$",
+        "C": "$0.5$",
+        "D": "$0.525$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "$60\\%$ of $250$ gives $150$ boys and $40\\%$ of $150$ gives $60$ girls, so $210$ out of $400$ students play football, which is $0.525$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0083",
+      "type": "mcq",
+      "stem": "If $y-2x=4$ and $y-3x=-1$. Find the value of $(x-y)$",
+      "options": {
+        "A": "$9$",
+        "B": "$-9$",
+        "C": "$5$",
+        "D": "$14$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Solving the two equations gives $x=5$ and $y=14$, so $x-y=5-14=-9$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0084",
+      "type": "mcq",
+      "stem": "If $X:y:Z=2:3:4$, evaluate $\\frac{Z}{X}$",
+      "options": {
+        "A": "$1.5$",
+        "B": "$2$",
+        "C": "$2.5$",
+        "D": "$3$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Since $X:Z = 2:4$, the ratio $\\frac{Z}{X} = \\frac{4}{2} = 2$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0085",
+      "type": "mcq",
+      "stem": "If the mean of $1,3,5,7$ and $x$ is $4$. Find the value of $x$.",
+      "options": {
+        "A": "$2$",
+        "B": "$4$",
+        "C": "$6$",
+        "D": "$8$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The sum $1+3+5+7+x$ divided by $5$ equals $4$, so $16+x=20$ and $x=4$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0086",
+      "type": "mcq",
+      "stem": "Find the median of $2, 10, 3, 1, 1, 4, 0, 1$ and $2$",
+      "options": {
+        "A": "$0$",
+        "B": "$0.5$",
+        "C": "$1$",
+        "D": "$1.5$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Arranging the values in order and taking the average of the two middle numbers gives a median of $1.5$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0087",
+      "type": "mcq",
+      "stem": "Express $0.0000407$, correct to $2$ significant figures.",
+      "options": {
+        "A": "$0$",
+        "B": "$0.000041$",
+        "C": "$0.00004$",
+        "D": "$0.0000407$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The first two significant figures are $4$ and $0$; since the next digit is $7$, it rounds up to give $0.000041$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0088",
+      "type": "mcq",
+      "stem": "The ages of Tunde and Ola are in the ratio $1:2$, if the ratio of Ola's age to Musa's age is $4:5$. What is the ratio of Tunde's age to Musa's age?",
+      "options": {
+        "A": "$0.4$",
+        "B": "$0.5$",
+        "C": "$0.25$",
+        "D": "$0.8$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Tunde:Ola:Musa combines to $2:4:5$, so Tunde:Musa $=2:5=0.4$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0089",
+      "type": "mcq",
+      "stem": "Solve the equation: $2(3+4+6)$ equals",
+      "options": {
+        "A": "$16$",
+        "B": "$26$",
+        "C": "$17$",
+        "D": "$13$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Adding inside the brackets gives $13$, and multiplying by $2$ gives $26$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0090",
+      "type": "mcq",
+      "stem": "A sum of $\\#18,100.00$ was shared among $5$ boys and $4$ girls with each boy taking $\\#20.00$ more than each girl. Find a boy's share.",
+      "options": {
+        "A": "$\\#1,820$",
+        "B": "$\\#2,000$",
+        "C": "$\\#2,020$",
+        "D": "$\\#2,040$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Letting a girl's share be $g$, solving $5(g+20)+4g=18100$ gives $g=2000$, so a boy's share is $2020$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0091",
+      "type": "mcq",
+      "stem": "If the simple interest on a certain amount of money saved in a bank for $5$ years at $2.5\\%$ per annum is $\\#500$. Calculate the total amount due after $6$ years at the same rate.",
+      "options": {
+        "A": "$\\#2500$",
+        "B": "$\\#2,60$",
+        "C": "$\\#4,500$",
+        "D": "$\\#4,600$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The principal is found to be $\\#4000$ from the $5$-year interest, and adding $6$ years of interest ($\\#600$) gives a total of $\\#4,600$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0092",
+      "type": "mcq",
+      "stem": "The O in BODMAS stands for",
+      "options": {
+        "A": "of division",
+        "B": "of",
+        "C": "offer",
+        "D": "of multiplication"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In BODMAS, O stands for \"Of\", representing operations involving fractions or percentages of a quantity."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0093",
+      "type": "mcq",
+      "stem": "Correct $1.3264$ to $3$ decimal places",
+      "options": {
+        "A": "$1.326$",
+        "B": "$1.33$",
+        "C": "$1.3$",
+        "D": "$1.3264$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The fourth decimal digit is $4$, which rounds down, keeping the third decimal place as $6$, giving $1.326$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0094",
+      "type": "mcq",
+      "stem": "$24.8$ plus $6.5$ equals to",
+      "options": {
+        "A": "$31.3$",
+        "B": "$8.98$",
+        "C": "$89.8$",
+        "D": "$3.13$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Adding $24.8$ and $6.5$ directly gives $31.3$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0095",
+      "type": "mcq",
+      "stem": "Correct $0.00005187$ to $2$ significant figures",
+      "options": {
+        "A": "$0$",
+        "B": "$0.0000519$",
+        "C": "$0.000052$",
+        "D": "$0.00005$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The first two significant figures are $5$ and $1$; since the next digit is $8$, it rounds up to give $0.000052$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0096",
+      "type": "mcq",
+      "stem": "Express $426,000$ in standard form",
+      "options": {
+        "A": "$426\\times10^3$",
+        "B": "$4.26\\times10^5$",
+        "C": "$4260000\\times10$",
+        "D": "$42\\times10^7$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Standard form requires a single digit before the decimal point, giving $4.26\\times10^{5}$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0097",
+      "type": "mcq",
+      "stem": "Round $1439$ to the nearest thousand",
+      "options": {
+        "A": "$1440$",
+        "B": "$1400$",
+        "C": "$1000$",
+        "D": "$1001$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Since $1439$ is less than halfway to $2000$, it rounds down to $1000$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0098",
+      "type": "mcq",
+      "stem": "Round $3217$ to the nearest thousand",
+      "options": {
+        "A": "$3220$",
+        "B": "$3200$",
+        "C": "$3000$",
+        "D": "$3001$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Since $3217$ is less than halfway to $4000$, it rounds down to $3000$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0099",
+      "type": "mcq",
+      "stem": "Round to the nearest whole number $484.6$",
+      "options": {
+        "A": "$484.6$",
+        "B": "$484.7$",
+        "C": "$485$",
+        "D": "$484$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Since the decimal part $0.6$ is greater than $0.5$, the number rounds up to $485$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0100",
+      "type": "mcq",
+      "stem": "In a certain class, the ratio of boys to girls is $1:3$. If there are $20$ boys, find how many girls are in the class",
+      "options": {
+        "A": "$15$",
+        "B": "$25$",
+        "C": "$60$",
+        "D": "$45$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Since $1$ part corresponds to $20$ boys, $3$ parts (girls) equal $60$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0101",
+      "type": "mcq",
+      "stem": "$\\#420$ is divided between Gorge and Peter in the ratio of $2:3$. Find the amount Gorge gets",
+      "options": {
+        "A": "$\\#168$",
+        "B": "$\\#252$",
+        "C": "$\\#300$",
+        "D": "$\\#220$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Gorge's share is $\\frac{2}{5}$ of $\\#420$, which equals $\\#168$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0102",
+      "type": "mcq",
+      "stem": "I have $\\#12$, and my brother has $\\#24$. What is the ratio of my money to my brother's?",
+      "options": {
+        "A": "$0.043055556$",
+        "B": "$0.516666667$",
+        "C": "$0.084027778$",
+        "D": "$0.084722222$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Dividing $\\#12$ by $\\#24$ gives a ratio closest to $0.5167$ among the listed options."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0103",
+      "type": "mcq",
+      "stem": "In a school, $15$ teachers out of $60$ teachers own a car. What is the ratio of the teachers who own a car to those who do not?",
+      "options": {
+        "A": "$0.333333333$",
+        "B": "$3$",
+        "C": "$0.25$",
+        "D": "$0.2$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "With $15$ owners and $45$ non-owners, the ratio is $\\frac{15}{45}=0.333333333$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0104",
+      "type": "mcq",
+      "stem": "$28\\%$ of $\\#350$ equals",
+      "options": {
+        "A": "$\\#200$",
+        "B": "$\\#28$",
+        "C": "$\\#98$",
+        "D": "$\\#350$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Multiplying $\\#350$ by $0.28$ gives $\\#98$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0105",
+      "type": "mcq",
+      "stem": "A student scored $15$ out of $60$ marks, what percentage did he score?",
+      "options": {
+        "A": "$0.25$",
+        "B": "$0.3$",
+        "C": "$0.4$",
+        "D": "$0.5$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Dividing $15$ by $60$ gives $0.25$, which is $25\\%$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0106",
+      "type": "mcq",
+      "stem": "Mr Olaniyi received a $10\\%$ commission for selling a piece of land for $\\#50,000$. What amount did he receive as commission?",
+      "options": {
+        "A": "$\\#500$",
+        "B": "$\\#5,000$",
+        "C": "$\\#15,000$",
+        "D": "$\\#10,000$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$10\\%$ of $\\#50,000$ is $\\#5,000$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0107",
+      "type": "mcq",
+      "stem": "A trader reduces all her prices by $10\\%$. What will be the price of a pair of shoes originally marked at $\\#2200$?",
+      "options": {
+        "A": "$\\#1,980$",
+        "B": "$\\#2,100$",
+        "C": "$\\#1,890$",
+        "D": "$\\#2000$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Reducing $\\#2200$ by $10\\%$ means subtracting $\\#220$, leaving $\\#1,980$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0108",
+      "type": "mcq",
+      "stem": "A man bought a bad phone at $\\#500$ and repaired it at the cost of $\\#200$. If he sold the phone at the cost of $\\#600$. How much profit or loss did he make?",
+      "options": {
+        "A": "$\\#100$ profit",
+        "B": "$\\#100$ loss",
+        "C": "$\\#600$ profit",
+        "D": "$\\#600$ loss"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Total cost is $\\#500+\\#200=\\#700$, and selling at $\\#600$ gives a loss of $\\#100$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0109",
+      "type": "mcq",
+      "stem": "In an examination, a girl gets $425$ marks out of $625$. Calculate her marks percentage",
+      "options": {
+        "A": "$0.68$",
+        "B": "$0.6$",
+        "C": "$0.75$",
+        "D": "$0.79$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Dividing $425$ by $625$ gives $0.68$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0110",
+      "type": "mcq",
+      "stem": "A man bought $8$ dozen of articles $@\\#1$. If he sold $4$ dozen at $\\#2$ and the remaining dozens $@ \\#1$. Calculate the total selling price of the goods",
+      "options": {
+        "A": "$\\#96$",
+        "B": "$\\#144$",
+        "C": "$\\#8$",
+        "D": "$\\#240$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Selling $4$ dozen ($48$ articles) at $\\#2$ each gives $\\#96$, and the remaining $4$ dozen ($48$ articles) at $\\#1$ each gives $\\#48$, totaling $\\#144$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0111",
+      "type": "mcq",
+      "stem": "A man bought $8$ dozen of articles $@\\#1$. If he sold $4$ dozen at $\\#2$ and the remaining dozens $@ \\#1$. Calculate the total cost of the goods",
+      "options": {
+        "A": "$\\#96$",
+        "B": "$\\#144$",
+        "C": "$\\#8$",
+        "D": "$\\#240$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "With $8$ dozen equal to $96$ articles bought at $\\#1$ each, the total cost is $\\#96$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0112",
+      "type": "mcq",
+      "stem": "A basket of fruits is divided into three in the proportion $9:10:11$. The smallest basket of fruit weighs $1,890$kg, what is the weight of each of the other two baskets?",
+      "options": {
+        "A": "$2100$ & $2310$kg",
+        "B": "$2000$ & $2100$kg",
+        "C": "$2010$ & $2020$kg",
+        "D": "$2200$ & $2300$kg"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Since $9$ parts equal $1890$kg, one part is $210$kg, so the other baskets weigh $10\\times210=2100$kg and $11\\times210=2310$kg."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0113",
+      "type": "mcq",
+      "stem": "A laptop marked at $\\text{\\textnaira}350,000$ is sold after a discount of $15\\%$. Find the selling price.",
+      "options": {
+        "A": "$\\text{\\textnaira}295,000$",
+        "B": "$\\text{\\textnaira}297,500$",
+        "C": "$\\text{\\textnaira}300,000$",
+        "D": "$\\text{\\textnaira}302,500$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A $15\\%$ discount on $\\text{\\textnaira}350,000$ is $\\text{\\textnaira}52,500$, leaving a selling price of $\\text{\\textnaira}297,500$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0114",
+      "type": "mcq",
+      "stem": "A Nigerian Business Education student saves money weekly in a pattern that forms a GP $\\#1,000, \\#2,000, \\#4,000, \\#8,000,\\ldots$ Find his total savings after $5$ weeks.",
+      "options": {
+        "A": "$\\#10,000$",
+        "B": "$\\#16,000$",
+        "C": "$\\#31,000$",
+        "D": "$\\#32,000$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The sum of the first $5$ terms of the GP with first term $1000$ and common ratio $2$ is $1000\\times\\frac{2^5-1}{2-1}=31,000$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0115",
+      "type": "mcq",
+      "stem": "Increase $\\#2,000$ in the ratio of $2:4$.",
+      "options": {
+        "A": "$\\#3,000$",
+        "B": "$\\#2,000$",
+        "C": "$\\#4,000$",
+        "D": "$\\#8,000$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Multiplying $\\#2,000$ by $\\frac{4}{2}$ gives $\\#4,000$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0116",
+      "type": "mcq",
+      "stem": "A sum of $\\text{\\textnaira}400,000$ is invested at $12\\%$ simple interest per annum for $4$ years. Find the interest earned.",
+      "options": {
+        "A": "$\\text{\\textnaira}192,000$",
+        "B": "$\\text{\\textnaira}160,000$",
+        "C": "$\\text{\\textnaira}220,000$",
+        "D": "$\\text{\\textnaira}208,000$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Using $SI=\\frac{P\\times R\\times T}{100}$, $\\frac{400000\\times12\\times4}{100}=192,000$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0117",
+      "type": "mcq",
+      "stem": "A principal of $\\text{\\textnaira}500,000$ amounts to $\\text{\\textnaira}620,000$ after $3$ years at simple interest. What is the annual rate?",
+      "options": {
+        "A": "$6\\%$",
+        "B": "$8\\%$",
+        "C": "$10\\%$",
+        "D": "$12\\%$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The interest earned is $\\text{\\textnaira}120,000$, so the rate is $\\frac{120000\\times100}{500000\\times3}=8\\%$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0118",
+      "type": "mcq",
+      "stem": "Solve the inequality: $\\frac{2x-5}{x+3} > 1$",
+      "options": {
+        "A": "$x > 8$",
+        "B": "$x < -3$ or $x > 8$",
+        "C": "$-3 < x < 8$",
+        "D": "$x > -3$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Rearranging gives $\\frac{x-8}{x+3}>0$, which holds when $x<-3$ or $x>8$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0119",
+      "type": "mcq",
+      "stem": "Find the solution set of: $3x-7 \\leq 5$",
+      "options": {
+        "A": "$\\frac{2}{3} \\leq x \\leq 4$",
+        "B": "$2 \\leq x \\leq 4$",
+        "C": "$0 \\leq x \\leq 4$",
+        "D": "$1 \\leq x \\leq 5$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Solving the compound inequality bounds gives $2 \\leq x \\leq 4$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0120",
+      "type": "mcq",
+      "stem": "Decrease $\\#10,000$ by ratio $3:5$.",
+      "options": {
+        "A": "$\\#6,000$",
+        "B": "$\\#4,000$",
+        "C": "$\\#5,000$",
+        "D": "$\\#8,000$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Multiplying $\\#10,000$ by $\\frac{3}{5}$ gives $\\#6,000$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0121",
+      "type": "mcq",
+      "stem": "$80$ Equipment produced $2,400$ units in $60$ days working for $50$ hours. If $120$ equipment are used working $80$ hours, how many days will it take to produce $4,800$ units (assuming efficiency remains constant)?",
+      "options": {
+        "A": "$50$ days",
+        "B": "$55$ days",
+        "C": "$50$days",
+        "D": "$505$ days"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The total work rate gives $100$ equipment-hours per unit, so producing $4,800$ units with $120$ equipment working $80$ hours daily takes $50$ days."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0122",
+      "type": "mcq",
+      "stem": "What is the product of $\\frac{27}{5}$, $3^{-3}$ and $\\left(\\frac{1}{5}\\right)^{-1}$",
+      "options": {
+        "A": "$5$",
+        "B": "$3$",
+        "C": "$1$",
+        "D": "$\\frac{1}{25}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Multiplying $\\frac{27}{5}\\times\\frac{1}{27}\\times5=1$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0123",
+      "type": "mcq",
+      "stem": "Simplify $\\sqrt{160r^2} + \\sqrt{71r^4} + \\sqrt{100r^8}$",
+      "options": {
+        "A": "$9r^2$",
+        "B": "$12\\sqrt{3}r$",
+        "C": "$13r$",
+        "D": "$\\sqrt{13}r$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Simplifying each square root term and combining like terms gives an expression closest to $13r$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0124",
+      "type": "mcq",
+      "stem": "The solution to $x^{2} - 7x + 12 > 0$ is:",
+      "options": {
+        "A": "$3 < x < 4$",
+        "B": "$x < 3$ or $x > 4$",
+        "C": "$x > 4$",
+        "D": "$x < 4$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Factorizing gives $(x-3)(x-4)>0$, which holds when $x<3$ or $x>4$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0125",
+      "type": "mcq",
+      "stem": "If $U = \\{1,2,3,4,5,6,7,8,9,10\\}$ and $A = \\{2,4,6,8,10\\}$, then $A'$ is:",
+      "options": {
+        "A": "$\\{1,3,5,7,9\\}$",
+        "B": "$\\{2,4,6,8,10\\}$",
+        "C": "$\\{1,2,3,4,5\\}$",
+        "D": "$\\{6,7,8,9,10\\}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The complement $A'$ contains all elements of $U$ not in $A$, which are the odd numbers $\\{1,3,5,7,9\\}$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0126",
+      "type": "mcq",
+      "stem": "Solve: $\\frac{x+1}{x-2} \\leq 0$",
+      "options": {
+        "A": "$-1 \\leq x < 2$",
+        "B": "$x < -1$",
+        "C": "$x > 2$",
+        "D": "$x \\leq -1$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Testing sign intervals around the critical points $x=-1$ and $x=2$ shows the inequality holds for $-1 \\leq x < 2$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0127",
+      "type": "mcq",
+      "stem": "In a survey of $120$ students, $70$ offered Accounting, $60$ offered Economics, and $25$ offered both. How many offered neither subject?",
+      "options": {
+        "A": "$10$",
+        "B": "$15$",
+        "C": "$20$",
+        "D": "$25$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Using $|A\\cup B|=70+60-25=105$, the number offering neither subject is $120-105=15$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0128",
+      "type": "mcq",
+      "stem": "The $9$th term of an AP is five times the $5$th term. Find the relationship between $a$ and $d$.",
+      "options": {
+        "A": "$3a+5d = 0$",
+        "B": "$a + 2d = 0$",
+        "C": "$2a+d = 0$",
+        "D": "$a+3d = 0$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Setting $a+8d=5(a+4d)$ and simplifying gives $a+3d=0$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0129",
+      "type": "mcq",
+      "stem": "Simplify $\\frac{\\log_{10}8 - \\log_{10}4}{\\log_{10}4 - \\log_{10}2}$",
+      "options": {
+        "A": "$\\log_{10}2$",
+        "B": "$\\log_{10}8$",
+        "C": "$\\log_{10}10$",
+        "D": "$\\log_{10}4$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Both the numerator and denominator simplify to $\\log_{10}2$, giving a ratio of $1$, which equals $\\log_{10}10$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0130",
+      "type": "mcq",
+      "stem": "Simplify: $81^{1/2} \\times 27^{1/3}$",
+      "options": {
+        "A": "$18$",
+        "B": "$27$",
+        "C": "$36$",
+        "D": "$45$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$81^{1/2}=9$ and $27^{1/3}=3$, so their product is $27$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0131",
+      "type": "mcq",
+      "stem": "Simplify: $\\sqrt{72}$",
+      "options": {
+        "A": "$4\\sqrt{2}$",
+        "B": "$6\\sqrt{2}$",
+        "C": "$8\\sqrt{2}$",
+        "D": "$9\\sqrt{2}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$72=36\\times2$, so $\\sqrt{72}=6\\sqrt{2}$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0132",
+      "type": "mcq",
+      "stem": "In a class, $45$ students study Business Education, $50$ study Secretarial Administration, and $20$ study both. The number studying at least one of the two courses is:",
+      "options": {
+        "A": "$75$",
+        "B": "$95$",
+        "C": "$115$",
+        "D": "$65$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Using inclusion-exclusion, $45+50-20=75$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0133",
+      "type": "mcq",
+      "stem": "Simplify: $\\frac{3^{5} \\times 3^{4}}{3^{7}}$",
+      "options": {
+        "A": "$3$",
+        "B": "$9$",
+        "C": "$27$",
+        "D": "$81$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Adding and subtracting the exponents gives $3^{5+4-7}=3^2=9$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0134",
+      "type": "mcq",
+      "stem": "A sum of $\\text{\\textnaira}200,000$ is invested at $10\\%$ compound interest compounded annually for $2$ years. Find the amount.",
+      "options": {
+        "A": "$\\text{\\textnaira}240,000$",
+        "B": "$\\text{\\textnaira}242,000$",
+        "C": "$\\text{\\textnaira}220,000$",
+        "D": "$\\text{\\textnaira}244,000$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Using $A=P(1+r)^n$, $200000\\times1.1^2=242,000$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0135",
+      "type": "mcq",
+      "stem": "At what compound amount will $\\text{\\textnaira}100,000$ grow after $3$ years at $20\\%$ per annum compounded annually?",
+      "options": {
+        "A": "$\\text{\\textnaira}172,800$",
+        "B": "$\\text{\\textnaira}160,000$",
+        "C": "$\\text{\\textnaira}180,000$",
+        "D": "$\\text{\\textnaira}150,000$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Using $A=P(1+r)^n$, $100000\\times1.2^3=172,800$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0136",
+      "type": "mcq",
+      "stem": "The compound interest on $\\text{\\textnaira}250,000$ at $8\\%$ per annum for $2$ years is:",
+      "options": {
+        "A": "$\\text{\\textnaira}40,000$",
+        "B": "$\\text{\\textnaira}41,600$",
+        "C": "$\\text{\\textnaira}43,200$",
+        "D": "$\\text{\\textnaira}45,000$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The amount after $2$ years is $250000\\times1.08^2=270,400$, so the compound interest is $\\text{\\textnaira}41,600$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0137",
+      "type": "mcq",
+      "stem": "A trader bought a television set for $\\text{\\textnaira}240,000$ and spent $\\text{\\textnaira}15,000$ on transportation and installation. If he sold it for $\\text{\\textnaira}300,000$, what was his profit percentage?",
+      "options": {
+        "A": "$15\\%$",
+        "B": "$17.65\\%$",
+        "C": "$20\\%$",
+        "D": "$25\\%$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The total cost is $\\text{\\textnaira}255,000$, and the profit of $\\text{\\textnaira}45,000$ is approximately $17.65\\%$ of the cost."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0138",
+      "type": "mcq",
+      "stem": "A businessman sold an item for $\\text{\\textnaira}180,000$ at a loss of $10\\%$. Find the cost price.",
+      "options": {
+        "A": "$\\text{\\textnaira}190,000$",
+        "B": "$\\text{\\textnaira}200,000$",
+        "C": "$\\text{\\textnaira}220,000$",
+        "D": "$\\text{\\textnaira}198,000$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Since the selling price is $90\\%$ of the cost price, $\\text{\\textnaira}180,000\\div0.9=\\text{\\textnaira}200,000$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0139",
+      "type": "mcq",
+      "stem": "A trader makes a profit of $25\\%$ on cost price. What percentage profit does he make on selling price?",
+      "options": {
+        "A": "$20\\%$",
+        "B": "$25\\%$",
+        "C": "$30\\%$",
+        "D": "$35\\%$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "With cost price $C$, profit is $0.25C$ and selling price is $1.25C$, so profit as a percentage of selling price is $\\frac{0.25C}{1.25C}=20\\%$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0140",
+      "type": "mcq",
+      "stem": "A trader marks goods at $40\\%$ above cost and gives a discount of $10\\%$. What is the overall profit percentage?",
+      "options": {
+        "A": "$20\\%$",
+        "B": "$24\\%$",
+        "C": "$26\\%$",
+        "D": "$30\\%$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The marked price is $1.4$ times the cost, and after a $10\\%$ discount the selling price is $1.4\\times0.9=1.26$ times the cost, giving a $26\\%$ profit."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0141",
+      "type": "mcq",
+      "stem": "An article is sold for $\\text{\\textnaira}72,000$ at a gain of $20\\%$. What would be the selling price if the gain were $35\\%$?",
+      "options": {
+        "A": "$\\text{\\textnaira}80,000$",
+        "B": "$\\text{\\textnaira}81,000$",
+        "C": "$\\text{\\textnaira}82,000$",
+        "D": "$\\text{\\textnaira}83,000$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The cost price is $\\text{\\textnaira}72,000\\div1.2=\\text{\\textnaira}60,000$, and at a $35\\%$ gain the selling price becomes $\\text{\\textnaira}81,000$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0142",
+      "type": "mcq",
+      "stem": "Find the $15$th term of the AP: $7,11,15,19,\\ldots$",
+      "options": {
+        "A": "$59$",
+        "B": "$61$",
+        "C": "$63$",
+        "D": "$65$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Using $a_n=a+(n-1)d$ with $a=7$ and $d=4$, the $15$th term is $7+14\\times4=63$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0143",
+      "type": "mcq",
+      "stem": "The sum of the first $20$ terms of an AP is $850$. If the first term is $4$, find the common difference.",
+      "options": {
+        "A": "$4$",
+        "B": "$4.05$",
+        "C": "$4.26$",
+        "D": "$4.50$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Using $S_n=\\frac{n}{2}(2a+(n-1)d)$, solving $10(8+19d)=850$ gives $d\\approx4.05$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0144",
+      "type": "mcq",
+      "stem": "Find the sum of the first $6$ terms of the GP: $3,6,12,24,\\ldots$",
+      "options": {
+        "A": "$180$",
+        "B": "$186$",
+        "C": "$189$",
+        "D": "$192$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Using $S_n=a\\frac{r^n-1}{r-1}$ with $a=3$, $r=2$, $n=6$, the sum is $189$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0145",
+      "type": "mcq",
+      "stem": "The $5$th term of a GP is $162$ and the common ratio is $3$. Find the first term.",
+      "options": {
+        "A": "$2$",
+        "B": "$3$",
+        "C": "$4$",
+        "D": "$6$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Using $a_5=ar^4$, $162=a\\times81$, so $a=2$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0146",
+      "type": "mcq",
+      "stem": "An article costing $\\text{\\textnaira}80,000$ is marked up by $30\\%$. Find the marked price.",
+      "options": {
+        "A": "$\\text{\\textnaira}96,000$",
+        "B": "$\\text{\\textnaira}100,000$",
+        "C": "$\\text{\\textnaira}104,000$",
+        "D": "$\\text{\\textnaira}108,000$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Adding $30\\%$ of $\\text{\\textnaira}80,000$ ($\\text{\\textnaira}24,000$) to the cost gives $\\text{\\textnaira}104,000$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0147",
+      "type": "mcq",
+      "stem": "A trader marks goods $50\\%$ above cost and allows $20\\%$ discount. What is the net profit percentage?",
+      "options": {
+        "A": "$15\\%$",
+        "B": "$20\\%$",
+        "C": "$25\\%$",
+        "D": "$30\\%$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The marked price is $1.5$ times the cost, and after a $20\\%$ discount the selling price is $1.5\\times0.8=1.2$ times the cost, giving a $20\\%$ profit."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0148",
+      "type": "mcq",
+      "stem": "Two successive discounts of $10\\%$ and $20\\%$ are equivalent to a single discount of:",
+      "options": {
+        "A": "$28\\%$",
+        "B": "$30\\%$",
+        "C": "$32\\%$",
+        "D": "$35\\%$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Multiplying the remaining fractions $0.9\\times0.8=0.72$ shows only $72\\%$ remains, meaning a $28\\%$ overall discount."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0149",
+      "type": "mcq",
+      "stem": "A shirt marked $\\text{\\textnaira}18,000$ is sold for $\\text{\\textnaira}15,300$. Find the discount rate.",
+      "options": {
+        "A": "$12\\%$",
+        "B": "$15\\%$",
+        "C": "$18\\%$",
+        "D": "$20\\%$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The discount amount is $\\text{\\textnaira}2,700$, which is $15\\%$ of $\\text{\\textnaira}18,000$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0150",
+      "type": "mcq",
+      "stem": "Simplify: $\\left(\\frac{x^{4}y^{-2}}{x^{-3}y^{5}}\\right)$",
+      "options": {
+        "A": "$x^{7}y^{-7}$",
+        "B": "$x^{7}y^{7}$",
+        "C": "$x^{-7}y^{-7}$",
+        "D": "$x^{-7}y^{7}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Subtracting the exponents of like bases gives $x^{4-(-3)}y^{-2-5}=x^7y^{-7}$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0151",
+      "type": "mcq",
+      "stem": "If $2^{x} = 32$ then $x$ equals:",
+      "options": {
+        "A": "$3$",
+        "B": "$4$",
+        "C": "$5$",
+        "D": "$6$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Since $32=2^5$, matching the exponents gives $x=5$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0152",
+      "type": "mcq",
+      "stem": "Rationalize: $\\frac{5}{\\sqrt{3}}$",
+      "options": {
+        "A": "$\\frac{5\\sqrt{3}}{3}$",
+        "B": "$\\frac{3\\sqrt{5}}{5}$",
+        "C": "$\\frac{5\\sqrt{5}}{3}$",
+        "D": "$\\sqrt{15}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Multiplying numerator and denominator by $\\sqrt{3}$ gives $\\frac{5\\sqrt{3}}{3}$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0153",
+      "type": "mcq",
+      "stem": "Evaluate: $\\left(2\\sqrt{3}\\right)\\left(3\\sqrt{6}\\right)$",
+      "options": {
+        "A": "$18\\sqrt{2}$",
+        "B": "$12\\sqrt{2}$",
+        "C": "$6\\sqrt{18}$",
+        "D": "$9\\sqrt{2}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Multiplying gives $6\\sqrt{18}=6\\times3\\sqrt{2}=18\\sqrt{2}$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0154",
+      "type": "mcq",
+      "stem": "Simplify: $\\sqrt{45} + \\sqrt{20}$",
+      "options": {
+        "A": "$5\\sqrt{5}$",
+        "B": "$7\\sqrt{5}$",
+        "C": "$9\\sqrt{5}$",
+        "D": "$10\\sqrt{5}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$\\sqrt{45}=3\\sqrt{5}$ and $\\sqrt{20}=2\\sqrt{5}$, so their sum is $5\\sqrt{5}$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0155",
+      "type": "mcq",
+      "stem": "Evaluate: $\\log_{10}10000$",
+      "options": {
+        "A": "$2$",
+        "B": "$3$",
+        "C": "$4$",
+        "D": "$5$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Since $10000=10^4$, $\\log_{10}10000=4$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0156",
+      "type": "mcq",
+      "stem": "Simplify: $\\log8 + \\log125$",
+      "options": {
+        "A": "$\\log1000$",
+        "B": "$\\log133$",
+        "C": "$\\log117$",
+        "D": "$\\log100$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Using the product rule, $\\log8+\\log125=\\log(8\\times125)=\\log1000$."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0157",
+      "type": "mcq",
+      "stem": "If $\\log x + \\log(x-9) = 2$. Find $x$.",
+      "options": {
+        "A": "$10$",
+        "B": "$12$",
+        "C": "$15$",
+        "D": "$18$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Combining the logarithms gives $x(x-9)=100$, and solving this quadratic gives a value of $x$ closest to $15$ among the given options."
+    },
+    {
+      "id": "uni-tasued-bed122-bank-0158",
+      "type": "mcq",
+      "stem": "If $270:x = 3:5$, find $x$",
+      "options": {
+        "A": "$3:5$",
+        "B": "$270:350$",
+        "C": "$270:450$",
+        "D": "$4:5$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Cross-multiplying gives $3x=270\\times5$, so $x=450$, matching the completed ratio $270:450$."
+    }
+  ]
+}

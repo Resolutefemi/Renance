@@ -1,0 +1,1397 @@
+{
+  "code": "uni-tasued-phy104-bank",
+  "title": "TASUED PHY104 | Course Question Bank",
+  "version": 1,
+  "questionCount": 99,
+  "totalMarks": 99,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-tasued-phy104-bank-0001",
+      "type": "mcq",
+      "stem": "A concave lens always produces an image that is",
+      "options": {
+        "A": "virtual, erect, and diminished",
+        "B": "real, inverted, and magnified",
+        "C": "virtual, inverted, and diminished",
+        "D": "real, erect, and enlarged"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A concave (diverging) lens always produces a virtual, erect, and diminished image regardless of object position."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0002",
+      "type": "mcq",
+      "stem": "Interference occurs when two waves",
+      "options": {
+        "A": "travel in opposite directions and cancel completely",
+        "B": "meet and their displacements combine according to the principle of superposition",
+        "C": "reflect off the same surface simultaneously",
+        "D": "travel through different media at the same time"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Interference is the result of two waves meeting and superposing, producing regions of constructive and destructive combination."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0003",
+      "type": "mcq",
+      "stem": "When a light ray reflects off a mirror, the angle of incidence is",
+      "options": {
+        "A": "always $90°$",
+        "B": "equal to the angle of refraction",
+        "C": "equal to the angle of reflection",
+        "D": "twice the angle of reflection"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The law of reflection states that the angle of incidence equals the angle of reflection, both measured from the normal."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0004",
+      "type": "mcq",
+      "stem": "The power of a lens is measured in",
+      "options": {
+        "A": "metres ($m$)",
+        "B": "dioptres ($D$)",
+        "C": "watts ($W$)",
+        "D": "candela ($cd$)"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Lens power $P = \\frac{1}{f}$ where $f$ is the focal length in metres, giving the unit dioptres ($D$)."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0005",
+      "type": "mcq",
+      "stem": "A wave is best defined as",
+      "options": {
+        "A": "a permanent displacement of particles in a medium",
+        "B": "a disturbance that transfers energy without permanently displacing the medium",
+        "C": "the movement of matter from one point to another",
+        "D": "a vibration that requires no medium to propagate"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A wave transfers energy from one point to another through a medium without causing any permanent displacement of the medium itself."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0006",
+      "type": "mcq",
+      "stem": "The basic difference between a transverse wave and a longitudinal wave is that",
+      "options": {
+        "A": "transverse waves require a medium while longitudinal waves do not",
+        "B": "in transverse waves the displacement is perpendicular to propagation, while in longitudinal waves it is parallel",
+        "C": "longitudinal waves have higher frequency than transverse waves",
+        "D": "transverse waves transfer energy but longitudinal waves do not"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The defining distinction is the direction of particle displacement relative to the direction of wave propagation."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0007",
+      "type": "mcq",
+      "stem": "Polarization proves that light is",
+      "options": {
+        "A": "a longitudinal wave",
+        "B": "a transverse wave",
+        "C": "a mechanical wave",
+        "D": "a standing wave"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Only transverse waves can be polarized, and since light can be polarized, it must be a transverse wave."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0008",
+      "type": "mcq",
+      "stem": "When a source of sound approaches an observer, the observed frequency",
+      "options": {
+        "A": "decreases because the wavelength increases",
+        "B": "remains unchanged",
+        "C": "increases because successive wavefronts are compressed",
+        "D": "decreases because the speed of sound increases"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "As the source approaches, wavefronts are bunched together, decreasing wavelength and increasing the observed frequency - the Doppler effect."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0009",
+      "type": "mcq",
+      "stem": "The time taken for one complete wave cycle is called the",
+      "options": {
+        "A": "frequency",
+        "B": "wavelength",
+        "C": "period",
+        "D": "amplitude"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The period $T$ is defined as the time for one complete oscillation or wave cycle, related to frequency by $T = \\frac{1}{f}$."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0010",
+      "type": "mcq",
+      "stem": "The principle of superposition is applicable to only",
+      "options": {
+        "A": "mechanical waves",
+        "B": "electromagnetic waves",
+        "C": "linear waves",
+        "D": "standing waves"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The principle of superposition applies strictly to linear waves, where the net displacement is the algebraic sum of individual displacements."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0011",
+      "type": "mcq",
+      "stem": "When light travels from one medium to another, which characteristic of the wave changes?",
+      "options": {
+        "A": "Frequency",
+        "B": "Speed and wavelength",
+        "C": "Period",
+        "D": "Amplitude only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "When light enters a new medium, its speed and wavelength change, but its frequency remains constant."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0012",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a longitudinal wave?",
+      "options": {
+        "A": "Light wave",
+        "B": "Water surface wave",
+        "C": "Sound wave",
+        "D": "Radio wave"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Sound is a longitudinal wave because particle displacement occurs parallel to the direction of propagation through compressions and rarefactions."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0013",
+      "type": "mcq",
+      "stem": "Which type of wave cannot travel through a vacuum?",
+      "options": {
+        "A": "Electromagnetic waves",
+        "B": "Light waves",
+        "C": "Mechanical waves",
+        "D": "Radio waves"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Mechanical waves require a material medium to propagate and therefore cannot travel through a vacuum."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0014",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a mechanical wave?",
+      "options": {
+        "A": "X-rays",
+        "B": "Sound waves in air",
+        "C": "Gamma rays",
+        "D": "Visible light"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Sound waves are mechanical waves because they require a medium (such as air) to transfer energy through particle vibrations."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0015",
+      "type": "mcq",
+      "stem": "The phenomenon where waves change direction as they pass from one medium to another is called",
+      "options": {
+        "A": "reflection",
+        "B": "diffraction",
+        "C": "refraction",
+        "D": "polarization"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Refraction is the bending of a wave as it crosses the boundary between two media due to a change in wave speed."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0016",
+      "type": "mcq",
+      "stem": "The angle between the refracted ray and the normal to the surface is known as the angle of",
+      "options": {
+        "A": "incidence",
+        "B": "reflection",
+        "C": "refraction",
+        "D": "deviation"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The angle of refraction is defined as the angle between the refracted ray and the normal at the point of incidence."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0017",
+      "type": "mcq",
+      "stem": "Which condition would increase the spread of a diffraction pattern?",
+      "options": {
+        "A": "Increasing the slit width",
+        "B": "Increasing the wavelength or decreasing the slit width",
+        "C": "Decreasing the wavelength",
+        "D": "Moving the screen closer to the slit"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Diffraction spread increases when wavelength $\\lambda$ is larger or when the aperture width $a$ is smaller, as given by $\\theta \\approx \\frac{\\lambda}{a}$."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0018",
+      "type": "mcq",
+      "stem": "A boy sits between two parallel mirrors in a barber's shop. The number of images he observes will be",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "finite but large",
+        "D": "infinite"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Two parallel plane mirrors facing each other produce an infinite number of images as each image acts as an object for the other mirror repeatedly."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0019",
+      "type": "mcq",
+      "stem": "The ratio of image size to object size is called",
+      "options": {
+        "A": "refractive index",
+        "B": "magnification",
+        "C": "power",
+        "D": "resolution"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Magnification $m = \\frac{\\text{image size}}{\\text{object size}}$ describes how much larger or smaller an image is compared to the object."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0020",
+      "type": "mcq",
+      "stem": "A light ray enters from air ($n = 1$) into water ($n \\approx 1.33$). What happens to the ray?",
+      "options": {
+        "A": "It speeds up and bends away from the normal",
+        "B": "It slows down and bends toward the normal",
+        "C": "It continues in a straight line",
+        "D": "It is totally internally reflected"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "When light enters a denser medium (higher $n$), its speed decreases and by Snell's law $n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$ it bends toward the normal."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0021",
+      "type": "mcq",
+      "stem": "The relationship between wave speed $v$, frequency $f$, and wavelength $\\lambda$ is",
+      "options": {
+        "A": "$v = \\frac{f}{\\lambda}$",
+        "B": "$v = f\\lambda$",
+        "C": "$v = \\frac{\\lambda}{f}$",
+        "D": "$v = f + \\lambda$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The wave equation $v = f\\lambda$ relates the speed of a wave to its frequency and wavelength."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0022",
+      "type": "mcq",
+      "stem": "Which of the following correctly states Snell's law?",
+      "options": {
+        "A": "$n_1 \\cos\\theta_1 = n_2 \\cos\\theta_2$",
+        "B": "$n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$",
+        "C": "$\\frac{n_1}{\\sin\\theta_1} = \\frac{n_2}{\\sin\\theta_2}$",
+        "D": "$n_1 \\theta_1 = n_2 \\theta_2$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Snell's law states that $n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$, relating the angles of incidence and refraction to the refractive indices of the two media."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0023",
+      "type": "mcq",
+      "stem": "The refractive index of a medium is defined as",
+      "options": {
+        "A": "$n = \\frac{\\text{speed of light in medium}}{\\text{speed of light in vacuum}}$",
+        "B": "$n = \\frac{\\text{speed of light in vacuum}}{\\text{speed of light in medium}}$",
+        "C": "$n = \\text{speed of light in medium} \\times \\text{wavelength}$",
+        "D": "$n = \\frac{\\text{frequency}}{\\text{speed of light in vacuum}}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The refractive index $n = \\frac{c}{v}$ is the ratio of the speed of light in vacuum to its speed in the medium."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0024",
+      "type": "mcq",
+      "stem": "Total internal reflection occurs when",
+      "options": {
+        "A": "light travels from a less dense to a more dense medium at any angle",
+        "B": "the angle of incidence exceeds the critical angle in a denser medium",
+        "C": "the angle of refraction equals $45°$",
+        "D": "light travels parallel to the boundary between two media"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Total internal reflection occurs when light in a denser medium strikes the boundary at an angle greater than the critical angle, so no refracted ray escapes."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0025",
+      "type": "mcq",
+      "stem": "The critical angle $\\theta_c$ for a medium with refractive index $n$ relative to air is given by",
+      "options": {
+        "A": "$\\sin\\theta_c = n$",
+        "B": "$\\theta_c = \\frac{1}{n}$",
+        "C": "$\\sin\\theta_c = \\frac{1}{n}$",
+        "D": "$\\cos\\theta_c = n$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "At the critical angle, the refracted ray travels along the boundary ($\\theta_r = 90°$), so Snell's law gives $n\\sin\\theta_c = 1$, hence $\\sin\\theta_c = \\frac{1}{n}$."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0026",
+      "type": "mcq",
+      "stem": "Constructive interference occurs when two waves meet",
+      "options": {
+        "A": "with a phase difference of $180°$",
+        "B": "with a path difference of half a wavelength",
+        "C": "in phase, with a path difference of $n\\lambda$ where $n$ is an integer",
+        "D": "at right angles to each other"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Constructive interference produces maximum amplitude when waves are in phase, corresponding to a path difference of $n\\lambda$ ($n = 0, 1, 2, ...$)."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0027",
+      "type": "mcq",
+      "stem": "Destructive interference occurs when two waves have a path difference of",
+      "options": {
+        "A": "$n\\lambda$",
+        "B": "$(n + \\frac{1}{2})\\lambda$",
+        "C": "$2n\\lambda$",
+        "D": "$\\frac{\\lambda}{4}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Destructive interference occurs when waves are exactly out of phase, corresponding to a path difference of $(n + \\frac{1}{2})\\lambda$."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0028",
+      "type": "mcq",
+      "stem": "The bending of waves around the edges of an obstacle or through a narrow opening is called",
+      "options": {
+        "A": "refraction",
+        "B": "reflection",
+        "C": "diffraction",
+        "D": "dispersion"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Diffraction is the spreading of waves around obstacles or through openings, most noticeable when the aperture size is comparable to the wavelength."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0029",
+      "type": "mcq",
+      "stem": "Which of the following correctly describes the Doppler effect?",
+      "options": {
+        "A": "The change in wave amplitude due to motion of the source",
+        "B": "The change in observed frequency due to relative motion between source and observer",
+        "C": "The bending of waves at a boundary",
+        "D": "The splitting of light into its component colours"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Doppler effect is the apparent change in frequency of a wave caused by relative motion between the wave source and the observer."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0030",
+      "type": "mcq",
+      "stem": "The focal length of a convex lens is positive and it is called a",
+      "options": {
+        "A": "diverging lens",
+        "B": "converging lens",
+        "C": "concave lens",
+        "D": "plane lens"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A convex lens has a positive focal length because it converges parallel rays of light to a real focal point on the other side."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0031",
+      "type": "mcq",
+      "stem": "A plane mirror always forms an image that is",
+      "options": {
+        "A": "real, inverted, same size as object",
+        "B": "virtual, erect, laterally inverted, same size as object",
+        "C": "virtual, inverted, diminished",
+        "D": "real, erect, magnified"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A plane mirror produces a virtual, erect, laterally inverted image that is the same size as the object and located the same distance behind the mirror."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0032",
+      "type": "mcq",
+      "stem": "Which of the following electromagnetic waves has the shortest wavelength?",
+      "options": {
+        "A": "Radio waves",
+        "B": "Infrared waves",
+        "C": "Visible light",
+        "D": "Gamma rays"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Gamma rays have the shortest wavelength and highest frequency of all electromagnetic waves in the spectrum."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0033",
+      "type": "mcq",
+      "stem": "The speed of light in a vacuum is approximately",
+      "options": {
+        "A": "$3 \\times 10^6 \\ m/s$",
+        "B": "$3 \\times 10^8 \\ m/s$",
+        "C": "$3 \\times 10^{10} \\ m/s$",
+        "D": "$3 \\times 10^{12} \\ m/s$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The speed of light in a vacuum is $c \\approx 3 \\times 10^8 \\ m/s$, a fundamental constant in physics."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0034",
+      "type": "mcq",
+      "stem": "The amplitude of a wave is defined as",
+      "options": {
+        "A": "the distance between two consecutive crests",
+        "B": "the number of complete cycles per second",
+        "C": "the maximum displacement of a particle from its equilibrium position",
+        "D": "the time for one complete cycle"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Amplitude is the maximum displacement from the rest (equilibrium) position and determines the energy carried by the wave."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0035",
+      "type": "mcq",
+      "stem": "The wavelength of a wave is defined as",
+      "options": {
+        "A": "the time for one complete oscillation",
+        "B": "the distance between two consecutive points in phase, such as crest to crest",
+        "C": "the height of the wave above equilibrium",
+        "D": "the number of waves passing a point per second"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Wavelength $\\lambda$ is the spatial period of the wave - the distance over which the wave shape repeats."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0036",
+      "type": "mcq",
+      "stem": "When white light passes through a prism, it is separated into its component colours. This phenomenon is called",
+      "options": {
+        "A": "diffraction",
+        "B": "interference",
+        "C": "dispersion",
+        "D": "polarization"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Dispersion occurs because different wavelengths of light refract by different amounts in a medium, separating white light into its spectrum."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0037",
+      "type": "mcq",
+      "stem": "Which colour of visible light has the highest frequency?",
+      "options": {
+        "A": "Red",
+        "B": "Yellow",
+        "C": "Green",
+        "D": "Violet"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Violet light has the shortest wavelength and therefore the highest frequency among visible colours."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0038",
+      "type": "mcq",
+      "stem": "A converging mirror is also known as a",
+      "options": {
+        "A": "plane mirror",
+        "B": "convex mirror",
+        "C": "concave mirror",
+        "D": "diverging mirror"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A concave mirror converges parallel rays of light to a focal point in front of the mirror, so it is a converging mirror."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0039",
+      "type": "mcq",
+      "stem": "The mirror formula is given by",
+      "options": {
+        "A": "$\\frac{1}{f} = \\frac{1}{u} + \\frac{1}{v}$",
+        "B": "$f = u + v$",
+        "C": "$\\frac{1}{f} = uv$",
+        "D": "$f = \\frac{u + v}{uv}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The mirror formula $\\frac{1}{f} = \\frac{1}{u} + \\frac{1}{v}$ relates the focal length to the object distance $u$ and image distance $v$."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0040",
+      "type": "mcq",
+      "stem": "A convex mirror always produces an image that is",
+      "options": {
+        "A": "real, inverted, and magnified",
+        "B": "virtual, erect, and diminished",
+        "C": "real, erect, and same size",
+        "D": "virtual, inverted, and enlarged"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A convex (diverging) mirror always produces a virtual, erect, and diminished image, which is why it is used for wide-angle viewing."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0041",
+      "type": "mcq",
+      "stem": "The energy of a photon is related to its frequency by",
+      "options": {
+        "A": "$E = \\frac{h}{f}$",
+        "B": "$E = hf$",
+        "C": "$E = \\frac{f}{h}$",
+        "D": "$E = h + f$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Planck's equation $E = hf$ gives the energy of a photon, where $h = 6.626 \\times 10^{-34} \\ J\\cdot s$ is Planck's constant and $f$ is frequency."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0042",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a property of electromagnetic waves?",
+      "options": {
+        "A": "They can travel through a vacuum",
+        "B": "They are transverse waves",
+        "C": "They require a material medium to propagate",
+        "D": "They travel at speed $c = 3 \\times 10^8 \\ m/s$ in vacuum"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Electromagnetic waves are self-propagating oscillations of electric and magnetic fields and do not require any medium to travel."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0043",
+      "type": "mcq",
+      "stem": "Standing waves are formed when",
+      "options": {
+        "A": "two waves of different frequencies travel in the same direction",
+        "B": "two identical waves travelling in opposite directions superpose",
+        "C": "a wave reflects off a surface at $90°$",
+        "D": "a wave enters a medium of higher density"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Standing waves result from the superposition of two waves with the same frequency and amplitude travelling in opposite directions."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0044",
+      "type": "mcq",
+      "stem": "Points on a standing wave that remain permanently at rest are called",
+      "options": {
+        "A": "antinodes",
+        "B": "crests",
+        "C": "nodes",
+        "D": "troughs"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Nodes are fixed points of zero displacement in a standing wave, formed where destructive interference is permanent."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0045",
+      "type": "mcq",
+      "stem": "Points on a standing wave with maximum amplitude are called",
+      "options": {
+        "A": "nodes",
+        "B": "antinodes",
+        "C": "wavelengths",
+        "D": "equilibrium points"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Antinodes are the points of maximum displacement in a standing wave, formed midway between nodes where constructive interference is permanent."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0046",
+      "type": "mcq",
+      "stem": "The phenomenon in which the plane of oscillation of a transverse wave is restricted to a single plane is called",
+      "options": {
+        "A": "refraction",
+        "B": "diffraction",
+        "C": "polarization",
+        "D": "dispersion"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Polarization restricts the vibrations of a transverse wave to a single plane, and is only possible with transverse waves like light."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0047",
+      "type": "mcq",
+      "stem": "If the focal length of a lens is $0.25 \\ m$, its power is",
+      "options": {
+        "A": "$0.25 \\ D$",
+        "B": "$2.5 \\ D$",
+        "C": "$4 \\ D$",
+        "D": "$25 \\ D$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Lens power $P = \\frac{1}{f} = \\frac{1}{0.25} = 4 \\ D$."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0048",
+      "type": "mcq",
+      "stem": "Which of the following waves is an example of a transverse wave?",
+      "options": {
+        "A": "Sound waves in air",
+        "B": "Seismic P-waves",
+        "C": "Light waves",
+        "D": "Ultrasonic waves in steel"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Light waves are electromagnetic transverse waves because their electric and magnetic field oscillations are perpendicular to the direction of propagation."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0049",
+      "type": "mcq",
+      "stem": "The frequency of a wave with period $T = 0.02 \\ s$ is",
+      "options": {
+        "A": "$0.02 \\ Hz$",
+        "B": "$2 \\ Hz$",
+        "C": "$50 \\ Hz$",
+        "D": "$200 \\ Hz$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Frequency $f = \\frac{1}{T} = \\frac{1}{0.02} = 50 \\ Hz$."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0050",
+      "type": "mcq",
+      "stem": "Which of the following describes a beam of light in which the rays come from a point and spread out?",
+      "options": {
+        "A": "Parallel beam",
+        "B": "Convergent beam",
+        "C": "Divergent beam",
+        "D": "Diffused beam"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A divergent beam consists of light rays that originate from a single point source and spread out in different directions."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0051",
+      "type": "mcq",
+      "stem": "According to the text, which of the following objects is classified as natural luminous?",
+      "options": {
+        "A": "The moon",
+        "B": "The sun",
+        "C": "A candle",
+        "D": "An electric torch"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The sun is a natural source of light that generates and emits its own luminous energy."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0052",
+      "type": "mcq",
+      "stem": "Objects that do not allow any light to pass through them are classified as which type of body?",
+      "options": {
+        "A": "Transparent",
+        "B": "Translucent",
+        "C": "Opaque",
+        "D": "Luminous"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Opaque objects entirely obstruct light rays and prevent any light from transmitting through them."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0053",
+      "type": "mcq",
+      "stem": "The phenomenon where light travels in straight lines is known by which term?",
+      "options": {
+        "A": "Rectilinear propagation of light",
+        "B": "Total internal reflection",
+        "C": "Diffused reflection",
+        "D": "Dispersion of light"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Rectilinear propagation refers specifically to the characteristic behavior of light traveling along straight line paths."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0054",
+      "type": "mcq",
+      "stem": "Which device is explicitly mentioned as being used to produce controlled light rays in a laboratory setting?",
+      "options": {
+        "A": "Pinhole camera",
+        "B": "Ray box",
+        "C": "Kaleidoscope",
+        "D": "Sextant"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A ray box is a laboratory device consisting of an enclosed light source and a hole to emit narrow paths of light."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0055",
+      "type": "mcq",
+      "stem": "When a large or extended light source is obstructed by an opaque object, what is the name given to the completely dark region of the shadow?",
+      "options": {
+        "A": "Penumbra",
+        "B": "Umbra",
+        "C": "Annulus",
+        "D": "Aperture"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The umbra is the central, fully shaded region of a shadow where light from an extended source is completely cut off."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0056",
+      "type": "mcq",
+      "stem": "During a solar eclipse, which heavenly body is positioned directly between the other two?",
+      "options": {
+        "A": "The earth",
+        "B": "The sun",
+        "C": "The moon",
+        "D": "The stars"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A solar eclipse occurs when the moon passes directly between the sun and the earth, casting its shadow on the earth."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0057",
+      "type": "mcq",
+      "stem": "What type of solar eclipse occurs when the moon covers only the sun's center, leaving a bright outer ring visible?",
+      "options": {
+        "A": "Total eclipse",
+        "B": "Partial eclipse",
+        "C": "Lunar eclipse",
+        "D": "Annular eclipse"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "An annular eclipse happens when the moon leaves the outer edge of the sun uncovered, forming a bright ring called an annulus."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0058",
+      "type": "mcq",
+      "stem": "A boy of height $1.5\\text{ m}$ stands at a distance of $2.0\\text{ m}$ in front of a pinhole camera of length $20.0\\text{ cm}$. What is the calculated height of his image?",
+      "options": {
+        "A": "$10.0\\text{ cm}$",
+        "B": "$15.0\\text{ cm}$",
+        "C": "$20.0\\text{ cm}$",
+        "D": "$30.0\\text{ cm}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Using the magnification formula, the image height is calculated as $\\frac{20.0\\text{ cm} \\times 1.5\\text{ m}}{2.0\\text{ m}} = 15.0\\text{ cm}$."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0059",
+      "type": "mcq",
+      "stem": "If a pinhole camera's pinhole size is increased to be large, how does it affect the properties of the formed image?",
+      "options": {
+        "A": "It becomes sharp and bright",
+        "B": "It becomes sharp and less bright",
+        "C": "It becomes blurred and bright",
+        "D": "It becomes blurred and less bright"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A large pinhole lets in more light making the image bright, but allows multiple overlapping images to form, which causes blurring."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0060",
+      "type": "mcq",
+      "stem": "Which of the following fields defines the angle of deviation, $d$, for light reflecting off a plane mirror surface?",
+      "options": {
+        "A": "The angle between the incident ray and the mirror surface",
+        "B": "The angle between the reflected ray and the normal",
+        "C": "The angle through which the incident ray turns away from its original path",
+        "D": "The angle between the incident ray and the reflected ray"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The angle of deviation measures how much the path of a light ray is changed from its original straight line direction by reflection."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0061",
+      "type": "mcq",
+      "stem": "What formula relates the angle of deviation, $d$, to the angle of incidence, $i$, on a flat plane mirror?",
+      "options": {
+        "A": "$d = 180 - i$",
+        "B": "$d = 180 - 2i$",
+        "C": "$d = 90 - i$",
+        "D": "$d = 180 - \\frac{i}{2}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The angle of deviation is derived from the geometry of a straight line and the law of reflection, resulting in $d = 180 - 2i$."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0062",
+      "type": "mcq",
+      "stem": "A ray of light strikes a plane mirror at a glancing angle of $55^{\\circ}$. Calculate the total angle between the incident ray and the reflected ray.",
+      "options": {
+        "A": "$35^{\\circ}$",
+        "B": "$55^{\\circ}$",
+        "C": "$70^{\\circ}$",
+        "D": "$110^{\\circ}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The angle of incidence is $90^{\\circ} - 55^{\\circ} = 35^{\\circ}$, so the total angle between the incident and reflected rays is $35^{\\circ} + 35^{\\circ} = 70^{\\circ}$."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0063",
+      "type": "mcq",
+      "stem": "The optical principle stating that the trajectory of a light ray can be traced backward along the exact same path is known as what?",
+      "options": {
+        "A": "Principle of Reversibility of light",
+        "B": "Snell's law of refraction",
+        "C": "Principle of Least Time",
+        "D": "Principle of Rectilinear propagation"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The principle of reversibility states that the path of a light ray is completely reversible through any sequence of reflections or refractions."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0064",
+      "type": "mcq",
+      "stem": "An object is initially placed $8\\text{ cm}$ in front of a plane mirror. If the object moves at a constant speed of $6\\text{ cm/s}$ directly away from the mirror, what is the distance separating the object and its virtual image after a time of $2\\text{ s}$?",
+      "options": {
+        "A": "$12\\text{ cm}$",
+        "B": "$20\\text{ cm}$",
+        "C": "$28\\text{ cm}$",
+        "D": "$40\\text{ cm}$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "After $2\\text{ s}$, the object is at a distance of $8 + (6 \\times 2) = 20\\text{ cm}$, making the distance to the image $20 + 20 = 40\\text{ cm}$."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0065",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a characteristic feature of an image formed by a standard flat plane mirror?",
+      "options": {
+        "A": "It is virtual",
+        "B": "It is upright",
+        "C": "It is laterally inverted",
+        "D": "It is magnified"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Images formed by a plane mirror are always exactly the same linear size as the object and are never magnified or diminished."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0066",
+      "type": "mcq",
+      "stem": "Two plane mirrors are arranged such that they are inclined at a fixed angle of $20^{\\circ}$ to one another. How many distinct images will form of an object positioned between them?",
+      "options": {
+        "A": "$17$",
+        "B": "$18$",
+        "C": "$19$",
+        "D": "$20$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The number of images is calculated using the formula $n = (\\frac{360}{\\theta}) - 1$, which gives $n = (\\frac{360}{20}) - 1 = 17$."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0067",
+      "type": "mcq",
+      "stem": "A simple periscope consists of two fixed plane mirrors arranged parallel to each other. At what angle are these mirrors inclined relative to the walls of the periscope tube?",
+      "options": {
+        "A": "$30^{\\circ}$",
+        "B": "$45^{\\circ}$",
+        "C": "$60^{\\circ}$",
+        "D": "$90^{\\circ}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The mirrors in a periscope are set at an angle of $45^{\\circ}$ to turn horizontal light rays vertically downward and then horizontally back out."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0068",
+      "type": "mcq",
+      "stem": "If the direction of an incident light ray remains constant and a plane mirror is rotated through an angle $\\theta$, through what angle does the corresponding reflected ray rotate?",
+      "options": {
+        "A": "$\\theta$",
+        "B": "$\\frac{\\theta}{2}$",
+        "C": "$2\\theta$",
+        "D": "$4\\theta$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Rotating a mirror by an angle $\\theta$ shifts the normal by $\\theta$, which increases the total change in the angle of reflection to $2\\theta$."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0069",
+      "type": "mcq",
+      "stem": "Which navigational instrument, used to measure the angle of elevation of the sun, operates on the principle of the rotation of a plane mirror?",
+      "options": {
+        "A": "Altimeter",
+        "B": "Kaleidoscope",
+        "C": "Sextant",
+        "D": "Periscope"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A sextant relies directly on the principle of mirror rotation to measure angles of elevation for celestial navigation."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0070",
+      "type": "mcq",
+      "stem": "The point on the principal axis of a spherical mirror where parallel incident rays close to the axis converge or appear to diverge from after reflection is called what?",
+      "options": {
+        "A": "Pole",
+        "B": "Centre of curvature",
+        "C": "Principal focus",
+        "D": "Aperture"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The principal focus is the specific axial point where parallel incoming light rays meet or appear to originate after reflection."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0071",
+      "type": "mcq",
+      "stem": "What is the relationship between the focal length, $f$, and the radius of curvature, $r$, for a spherical curved mirror?",
+      "options": {
+        "A": "$f = 2r$",
+        "B": "$f = \\frac{r}{2}$",
+        "C": "$f = r$",
+        "D": "$f = \\frac{r}{4}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The focal length of a spherical mirror is exactly equal to half of its geometric radius of curvature."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0072",
+      "type": "mcq",
+      "stem": "When an object is placed between the center of curvature, $C$, and the principal focus, $F$, of a concave mirror, what are the characteristics of the image?",
+      "options": {
+        "A": "Inverted, diminished, and real",
+        "B": "Inverted, enlarged, and real",
+        "C": "Upright, magnified, and virtual",
+        "D": "Upright, diminished, and virtual"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An object located between $C$ and $F$ produces a real, inverted image that is projected beyond the center of curvature and magnified."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0073",
+      "type": "mcq",
+      "stem": "Why are concave mirrors chosen for use as shaving mirrors?",
+      "options": {
+        "A": "They always produce an upright, diminished virtual image",
+        "B": "They produce an upright, magnified virtual image when the face is close",
+        "C": "They have a wider field of view than convex mirrors",
+        "D": "They produce real, inverted images at infinity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "When an object is placed within the focal length of a concave mirror, it forms an upright, magnified virtual image suitable for shaving."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0074",
+      "type": "mcq",
+      "stem": "What type of image is formed by a convex mirror for any real position of an object in front of it?",
+      "options": {
+        "A": "Real, inverted, and diminished",
+        "B": "Virtual, upright, and magnified",
+        "C": "Virtual, upright, and diminished",
+        "D": "Real, upright, and magnified"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Convex mirrors can only form virtual, upright, and smaller images behind the mirror regardless of where the object is placed."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0075",
+      "type": "mcq",
+      "stem": "Which mirror is primarily utilized as a driving mirror in cars due to its wide field of view?",
+      "options": {
+        "A": "Concave mirror",
+        "B": "Plane mirror",
+        "C": "Convex mirror",
+        "D": "Parabolic mirror"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Convex mirrors diverge light rays, allowing a broader area to be captured and viewed by a driver."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0076",
+      "type": "mcq",
+      "stem": "What is the sign convention value assigned to the focal length of a convex mirror when using the mirror equation?",
+      "options": {
+        "A": "Always positive",
+        "B": "Always negative",
+        "C": "Variable depending on object height",
+        "D": "Zero"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under standard sign conventions, a convex mirror has a virtual focus located behind the mirror, giving it a negative focal length."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0077",
+      "type": "mcq",
+      "stem": "The optical phenomenon defined as the bending of a light ray when it passes from one medium into another of different density is called what?",
+      "options": {
+        "A": "Reflection",
+        "B": "Refraction",
+        "C": "Diffraction",
+        "D": "Dispersion"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Refraction is the characteristic bending of light paths caused by a change in wave speed when crossing a boundary between different media."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0078",
+      "type": "mcq",
+      "stem": "State Snell's Law mathematically as it relates the angle of incidence, $i$, and the angle of refraction, $r$, to a constant index, $n$.",
+      "options": {
+        "A": "$\\frac{\\sin i}{\\sin r} = n$",
+        "B": "$\\frac{\\cos i}{\\cos r} = n$",
+        "C": "$\\sin i \\times \\sin r = n$",
+        "D": "$\\frac{\\tan i}{\\tan r} = n$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Snell's Law states that the ratio of the sine of the angle of incidence to the sine of the angle of refraction is a constant for a given pair of media."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0079",
+      "type": "mcq",
+      "stem": "How is the refractive index, $n$, related to the velocity of light in a vacuum, $c$, and the velocity of light in a medium, $v$?",
+      "options": {
+        "A": "$n = v \\times c$",
+        "B": "$n = \\frac{v}{c}$",
+        "C": "$n = \\frac{c}{v}$",
+        "D": "$n = c + v$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Refractive index is defined as the ratio of the speed of light in a vacuum or air to its slower speed within the denser medium."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0080",
+      "type": "mcq",
+      "stem": "A swimming pool appears shallower than its actual depth due to refraction. What formula connects real depth, apparent depth, and the refractive index, $n$?",
+      "options": {
+        "A": "$n = \\frac{\\text{Apparent depth}}{\\text{Real depth}}$",
+        "B": "$n = \\text{Real depth} \\times \\text{Apparent depth}$",
+        "C": "$n = \\frac{\\text{Real depth}}{\\text{Apparent depth}}$",
+        "D": "$n = \\text{Real depth} + \\text{Apparent depth}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The refractive index of a liquid is equal to the ratio of its actual real depth to its perceived shallower apparent depth."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0081",
+      "type": "mcq",
+      "stem": "What is the definition of the critical angle, $c$, during light transmission from a optically dense medium to a less dense medium?",
+      "options": {
+        "A": "The angle of incidence for which the angle of refraction is $0^{\\circ}$",
+        "B": "The angle of incidence for which the angle of refraction is $90^{\\circ}$",
+        "C": "The angle of refraction when the incident angle is $45^{\\circ}$",
+        "D": "The angle of deviation when light reflects completely"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The critical angle is the specific incident angle that results in refracted light grazing along the interface boundary at $90^{\\circ}$ to the normal."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0082",
+      "type": "mcq",
+      "stem": "Which equation represents the exact relationship between the critical angle, $c$, and the refractive index, $n$, of a medium passing light into air?",
+      "options": {
+        "A": "$n = \\sin c$",
+        "B": "$\\sin c = \\frac{1}{n}$",
+        "C": "$\\sin c = n^2$",
+        "D": "$\\tan c = \\frac{1}{n}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "By substituting an angle of refraction of $90^{\\circ}$ into Snell's Law, the relation simplifies directly to $\\sin c = \\frac{1}{n}$."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0083",
+      "type": "mcq",
+      "stem": "Under what conditions does total internal reflection occur?",
+      "options": {
+        "A": "Light travels from a less dense to a more dense medium, and the angle of incidence is smaller than the critical angle",
+        "B": "Light travels from a denser to a less dense medium, and the angle of incidence is greater than the critical angle",
+        "C": "Light strikes a highly polished metal surface at any angle",
+        "D": "Light passes normally through a transparent rectangular glass block"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Total internal reflection happens only when light traveling in a slower medium hits a faster medium boundary at an angle exceeding the critical angle."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0084",
+      "type": "mcq",
+      "stem": "Which technological application relies on total internal reflection to transmit light along flexible glass strands?",
+      "options": {
+        "A": "Pinhole camera",
+        "B": "Optical fibers",
+        "C": "Mirages",
+        "D": "Kaleidoscope"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Optical fibers utilize continuous total internal reflection inside a high index core wire to guide light signals over long distances."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0085",
+      "type": "mcq",
+      "stem": "The separation of white light into its component colors when passing through a triangular glass prism is known as what?",
+      "options": {
+        "A": "Refraction",
+        "B": "Diffraction",
+        "C": "Dispersion",
+        "D": "Interference"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Dispersion is the separation of composite white light into a spectrum due to different wavelengths refracting by slightly different amounts."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0086",
+      "type": "mcq",
+      "stem": "What is the correct order of colors produced in a spectrum of white light, starting from the least deviated to the most deviated color?",
+      "options": {
+        "A": "Violet, Indigo, Blue, Green, Yellow, Orange, Red",
+        "B": "Red, Orange, Yellow, Green, Blue, Indigo, Violet",
+        "C": "Violet, Blue, Green, Yellow, Orange, Red, Indigo",
+        "D": "Red, Yellow, Orange, Green, Blue, Violet, Indigo"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Red light has the longest wavelength and is bent the least, while violet light has the shortest wavelength and is bent the most by a prism."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0087",
+      "type": "mcq",
+      "stem": "Light of a single frequency or a single wavelength that cannot be further split into other colors is described by which term?",
+      "options": {
+        "A": "Polychromatic light",
+        "B": "Coherent light",
+        "C": "Monochromatic light",
+        "D": "White light"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Monochromatic light consists of waves of only one specific color or wavelength wavelength."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0088",
+      "type": "mcq",
+      "stem": "What are the three primary colors of light?",
+      "options": {
+        "A": "Red, Yellow, Blue",
+        "B": "Red, Green, Blue",
+        "C": "Cyan, Magenta, Yellow",
+        "D": "Red, Orange, Green"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Red, green, and blue are the three primary colors of light that can be combined to produce white light."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0089",
+      "type": "mcq",
+      "stem": "What secondary color is produced by mixing red light and blue light together?",
+      "options": {
+        "A": "Cyan",
+        "B": "Magenta",
+        "C": "Yellow",
+        "D": "White"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Combining the primary light colors red and blue produces the secondary color magenta."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0090",
+      "type": "mcq",
+      "stem": "Two colors of light that combine together to form white light are known as what type of colors?",
+      "options": {
+        "A": "Primary colors",
+        "B": "Secondary colors",
+        "C": "Complementary colors",
+        "D": "Monochromatic colors"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Complementary colors are pairs of light colors, like a primary and a secondary, that produce white light when mixed."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0091",
+      "type": "mcq",
+      "stem": "A converging lens is also known by which name?",
+      "options": {
+        "A": "Biconcave lens",
+        "B": "Diverging lens",
+        "C": "Biconvex lens",
+        "D": "Divergent meniscus"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A biconvex lens is thicker in the middle than at the edges, causing parallel light rays to converge to a single point."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0092",
+      "type": "mcq",
+      "stem": "An object is placed at a distance of $2F$ in front of a thin converging lens. What are the characteristics of the resulting image?",
+      "options": {
+        "A": "Real, inverted, magnified, and located beyond $2F$",
+        "B": "Virtual, upright, same size, and located at $F$",
+        "C": "Real, inverted, same size as the object, and located at $2F$",
+        "D": "Real, upright, diminished, and located between $F$ and $2F$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Placing an object exactly at twice the focal distance of a convex lens produces a real, inverted image of identical size at $2F$ on the opposite side."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0093",
+      "type": "mcq",
+      "stem": "What is the formula for the linear magnification, $M$, produced by an optical lens system in terms of image distance, $v$, and object distance, $u$?",
+      "options": {
+        "A": "$M = u \\times v$",
+        "B": "$M = \\frac{u}{v}$",
+        "C": "$M = \\frac{v}{u}$",
+        "D": "$M = v - u$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Linear magnification is mathematically defined as the ratio of the image distance from the lens to the object distance from the lens."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0094",
+      "type": "mcq",
+      "stem": "A magnifying glass forms what type of image when an object is viewed within its principal focus?",
+      "options": {
+        "A": "Real, inverted, and magnified",
+        "B": "Virtual, upright, and magnified",
+        "C": "Virtual, upright, and diminished",
+        "D": "Real, upright, and magnified"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "When an object is placed inside the focal length of a magnifying lens, it creates an upright, larger virtual image on the same side as the object."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0095",
+      "type": "mcq",
+      "stem": "Which internal structure of a standard photographic camera performs the same functional task as the retina in a human eye?",
+      "options": {
+        "A": "The lens",
+        "B": "The aperture",
+        "C": "The shutter",
+        "D": "The light-sensitive film"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Both the film in a camera and the retina in an eye act as the surface where images are captured and recorded."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0096",
+      "type": "mcq",
+      "stem": "Which component of the human eye controls the total amount of light entering by adjusting the size of the pupil?",
+      "options": {
+        "A": "The cornea",
+        "B": "The iris",
+        "C": "The retina",
+        "D": "The crystalline lens"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The iris is a muscular diaphragm that automatically expands or contracts to adjust pupil size and regulate light intake."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0097",
+      "type": "mcq",
+      "stem": "What is the alternative medical term used to describe the vision defect known as long-sightedness?",
+      "options": {
+        "A": "Myopia",
+        "B": "Hypermetropia",
+        "C": "Presbyopia",
+        "D": "Astigmatism"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hypermetropia is the clinical name for long-sightedness, where close objects cannot be focused clearly on the retina."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0098",
+      "type": "mcq",
+      "stem": "Which type of lens is required to correct the vision defect of short-sightedness?",
+      "options": {
+        "A": "Converging lens",
+        "B": "Biconvex lens",
+        "C": "Diverging lens",
+        "D": "Cylindrical lens"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Short-sightedness requires a diverging concave lens to spread out incoming light rays so they focus further back, directly onto the retina."
+    },
+    {
+      "id": "uni-tasued-phy104-bank-0099",
+      "type": "mcq",
+      "stem": "The ability of the human eye lens to adjust its focal length automatically to see objects clearly at various distances is known as what process?",
+      "options": {
+        "A": "Magnification",
+        "B": "Refraction",
+        "C": "Accommodation",
+        "D": "Binocular vision"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Accommodation is the specific physiological process by which ciliary muscles alter lens curvature to maintain focus on near or far objects."
+    }
+  ]
+}

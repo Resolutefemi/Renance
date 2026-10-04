@@ -1,0 +1,1285 @@
+{
+ "code": "waec-crs-sun-bank",
+ "title": "WAEC Server | SSCE Bank",
+ "version": 1,
+ "questionCount": 91,
+ "totalMarks": 91,
+ "questions": [
+  {
+   "id": "waec-server-scripts-crs-sun-0000",
+   "type": "mcq",
+   "stem": "Who was the first man created by God according to the Bible?",
+   "options": {
+    "A": "Abraham",
+    "B": "Adam",
+    "C": "Noah",
+    "D": "Moses"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "According to Genesis 2:7, Adam was the first man created by God from the dust of the ground."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0001",
+   "type": "mcq",
+   "stem": "What was the name of the garden where Adam and Eve lived?",
+   "options": {
+    "A": "Gethsemane",
+    "B": "Eden",
+    "C": "Zion",
+    "D": "Bethel"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Genesis 2:8 states that God placed Adam and Eve in the Garden of Eden."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0002",
+   "type": "mcq",
+   "stem": "Who built an ark to save his family and animals from the flood?",
+   "options": {
+    "A": "Abraham",
+    "B": "Noah",
+    "C": "Isaac",
+    "D": "Jacob"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Genesis 6:14-22 describes Noah building an ark as per God’s instructions to survive the flood."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0003",
+   "type": "mcq",
+   "stem": "What was the sign of God’s covenant with Noah after the flood?",
+   "options": {
+    "A": "A dove",
+    "B": "A rainbow",
+    "C": "A lamb",
+    "D": "A star"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Genesis 9:13 states that God set a rainbow in the sky as a sign of His covenant with Noah."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0004",
+   "type": "mcq",
+   "stem": "Who was called by God to leave his homeland and go to a promised land?",
+   "options": {
+    "A": "Moses",
+    "B": "Abraham",
+    "C": "Joseph",
+    "D": "David"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Genesis 12:1 records God calling Abraham to leave his homeland for a land He would show him."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0005",
+   "type": "mcq",
+   "stem": "What was the name of Abraham’s son of promise?",
+   "options": {
+    "A": "Ishmael",
+    "B": "Isaac",
+    "C": "Jacob",
+    "D": "Esau"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Genesis 21:3 states that Isaac was the son of promise born to Abraham and Sarah."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0006",
+   "type": "mcq",
+   "stem": "Who led the Israelites out of Egypt?",
+   "options": {
+    "A": "Joshua",
+    "B": "Moses",
+    "C": "Aaron",
+    "D": "Samuel"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Exodus 3:10 shows God choosing Moses to lead the Israelites out of Egypt."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0007",
+   "type": "mcq",
+   "stem": "What did God give to Moses on Mount Sinai?",
+   "options": {
+    "A": "The Ark of the Covenant",
+    "B": "The Ten Commandments",
+    "C": "A staff",
+    "D": "A golden calf"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Exodus 20:1-17 records God giving the Ten Commandments to Moses on Mount Sinai."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0008",
+   "type": "mcq",
+   "stem": "Who was the first king of Israel?",
+   "options": {
+    "A": "David",
+    "B": "Saul",
+    "C": "Solomon",
+    "D": "Samuel"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "1 Samuel 10:1 describes Saul as the first king anointed by Samuel for Israel."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0009",
+   "type": "mcq",
+   "stem": "Who killed Goliath with a sling and a stone?",
+   "options": {
+    "A": "Samuel",
+    "B": "David",
+    "C": "Saul",
+    "D": "Jonathan"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "1 Samuel 17:50 states that David killed Goliath using a sling and a stone."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0010",
+   "type": "mcq",
+   "stem": "What was the name of the temple built by King Solomon?",
+   "options": {
+    "A": "Tabernacle",
+    "B": "Jerusalem Temple",
+    "C": "Shiloh Temple",
+    "D": "Bethel Temple"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "1 Kings 6:1-14 describes Solomon building the Jerusalem Temple for God."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0011",
+   "type": "mcq",
+   "stem": "Who was sold into slavery by his brothers?",
+   "options": {
+    "A": "Jacob",
+    "B": "Joseph",
+    "C": "Benjamin",
+    "D": "Reuben"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Genesis 37:28 recounts Joseph being sold into slavery by his brothers."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0012",
+   "type": "mcq",
+   "stem": "Which prophet was taken to heaven in a chariot of fire?",
+   "options": {
+    "A": "Elijah",
+    "B": "Elisha",
+    "C": "Isaiah",
+    "D": "Jeremiah"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "2 Kings 2:11 describes Elijah being taken to heaven in a chariot of fire."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0013",
+   "type": "mcq",
+   "stem": "Who was thrown into a lions’ den for praying to God?",
+   "options": {
+    "A": "David",
+    "B": "Daniel",
+    "C": "Jonah",
+    "D": "Esther"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Daniel 6:16 records Daniel being thrown into the lions’ den for his faith."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0014",
+   "type": "mcq",
+   "stem": "What was the name of the queen who saved her people from destruction?",
+   "options": {
+    "A": "Ruth",
+    "B": "Esther",
+    "C": "Deborah",
+    "D": "Hannah"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Esther 7:3-6 shows Esther saving the Jews from Haman’s plot."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0015",
+   "type": "mcq",
+   "stem": "Who was the mother of Samuel the prophet?",
+   "options": {
+    "A": "Sarah",
+    "B": "Hannah",
+    "C": "Ruth",
+    "D": "Rebekah"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "1 Samuel 1:20 states that Hannah was the mother of Samuel."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0016",
+   "type": "mcq",
+   "stem": "Which prophet foretold the birth of Jesus in Bethlehem?",
+   "options": {
+    "A": "Isaiah",
+    "B": "Micah",
+    "C": "Jeremiah",
+    "D": "Ezekiel"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Micah 5:2 prophesies the birth of the Messiah in Bethlehem."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0017",
+   "type": "mcq",
+   "stem": "Who was the mother of Jesus?",
+   "options": {
+    "A": "Elizabeth",
+    "B": "Mary",
+    "C": "Martha",
+    "D": "Joanna"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Luke 1:31 identifies Mary as the mother of Jesus."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0018",
+   "type": "mcq",
+   "stem": "Who baptized Jesus in the River Jordan?",
+   "options": {
+    "A": "Peter",
+    "B": "John the Baptist",
+    "C": "Paul",
+    "D": "James"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew 3:13-17 records John the Baptist baptizing Jesus in the River Jordan."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0019",
+   "type": "mcq",
+   "stem": "What was the first miracle performed by Jesus?",
+   "options": {
+    "A": "Healing a blind man",
+    "B": "Turning water into wine",
+    "C": "Feeding the 5,000",
+    "D": "Walking on water"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "John 2:11 describes Jesus turning water into wine at Cana as His first miracle."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0020",
+   "type": "mcq",
+   "stem": "Which disciple betrayed Jesus?",
+   "options": {
+    "A": "Peter",
+    "B": "Judas Iscariot",
+    "C": "John",
+    "D": "Thomas"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew 26:14-16 states that Judas Iscariot betrayed Jesus for thirty pieces of silver."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0021",
+   "type": "mcq",
+   "stem": "On what day did Jesus rise from the dead?",
+   "options": {
+    "A": "Friday",
+    "B": "Sunday",
+    "C": "Saturday",
+    "D": "Monday"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew 28:1-6 records Jesus rising from the dead on the first day of the week, Sunday."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0022",
+   "type": "mcq",
+   "stem": "What is the term for the event when Jesus ascended into heaven?",
+   "options": {
+    "A": "Resurrection",
+    "B": "Ascension",
+    "C": "Crucifixion",
+    "D": "Transfiguration"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Acts 1:9-11 describes the Ascension, when Jesus was taken up into heaven."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0023",
+   "type": "mcq",
+   "stem": "Who received the Holy Spirit on the day of Pentecost?",
+   "options": {
+    "A": "The Pharisees",
+    "B": "The disciples",
+    "C": "The Sadducees",
+    "D": "The Gentiles"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Acts 2:1-4 states that the disciples received the Holy Spirit on Pentecost."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0024",
+   "type": "mcq",
+   "stem": "Who was the first Christian martyr?",
+   "options": {
+    "A": "Paul",
+    "B": "Stephen",
+    "C": "Peter",
+    "D": "James"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Acts 7:59-60 records Stephen as the first Christian martyr, stoned for his faith."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0025",
+   "type": "mcq",
+   "stem": "Who was converted on the road to Damascus?",
+   "options": {
+    "A": "Peter",
+    "B": "Paul",
+    "C": "John",
+    "D": "Barnabas"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Acts 9:3-6 describes Paul’s conversion on the road to Damascus."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0026",
+   "type": "mcq",
+   "stem": "What is the term for the act of turning away from sin?",
+   "options": {
+    "A": "Faith",
+    "B": "Repentance",
+    "C": "Grace",
+    "D": "Salvation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Repentance is the act of turning away from sin and seeking forgiveness, as taught in Acts 3:19."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0027",
+   "type": "mcq",
+   "stem": "Which parable teaches about helping a neighbor in need?",
+   "options": {
+    "A": "The Prodigal Son",
+    "B": "The Good Samaritan",
+    "C": "The Sower",
+    "D": "The Lost Sheep"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Luke 10:25-37 tells the parable of the Good Samaritan, emphasizing helping others."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0028",
+   "type": "mcq",
+   "stem": "Who denied Jesus three times before the rooster crowed?",
+   "options": {
+    "A": "Judas",
+    "B": "Peter",
+    "C": "Thomas",
+    "D": "John"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Luke 22:60-61 records Peter denying Jesus three times before the rooster crowed."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0029",
+   "type": "mcq",
+   "stem": "What is the term for God’s unmerited favor toward humanity?",
+   "options": {
+    "A": "Faith",
+    "B": "Grace",
+    "C": "Repentance",
+    "D": "Salvation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Grace is God’s unmerited favor, as explained in Ephesians 2:8."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0030",
+   "type": "mcq",
+   "stem": "Which book of the Bible contains the Sermon on the Mount?",
+   "options": {
+    "A": "Mark",
+    "B": "Matthew",
+    "C": "Luke",
+    "D": "John"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew 5-7 records the Sermon on the Mount delivered by Jesus."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0031",
+   "type": "mcq",
+   "stem": "Who was the father of John the Baptist?",
+   "options": {
+    "A": "Joseph",
+    "B": "Zechariah",
+    "C": "Simeon",
+    "D": "Eli"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Luke 1:13 identifies Zechariah as the father of John the Baptist."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0032",
+   "type": "mcq",
+   "stem": "What was the name of the sea where Jesus calmed the storm?",
+   "options": {
+    "A": "Red Sea",
+    "B": "Sea of Galilee",
+    "C": "Dead Sea",
+    "D": "Mediterranean Sea"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Mark 4:39 describes Jesus calming the storm on the Sea of Galilee."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0033",
+   "type": "mcq",
+   "stem": "Which apostle was known as the 'doubting' disciple?",
+   "options": {
+    "A": "Peter",
+    "B": "Thomas",
+    "C": "John",
+    "D": "Andrew"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "John 20:24-27 describes Thomas doubting Jesus’ resurrection until he saw Him."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0034",
+   "type": "mcq",
+   "stem": "What is the term for the second coming of Jesus Christ?",
+   "options": {
+    "A": "Ascension",
+    "B": "Parousia",
+    "C": "Resurrection",
+    "D": "Pentecost"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Parousia refers to the second coming of Jesus, as mentioned in Matthew 24:27."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0035",
+   "type": "mcq",
+   "stem": "Who was the king who tried to kill baby Jesus?",
+   "options": {
+    "A": "Pilate",
+    "B": "Herod",
+    "C": "Caesar",
+    "D": "Nebuchadnezzar"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew 2:16 records Herod ordering the killing of male infants to eliminate Jesus."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0036",
+   "type": "mcq",
+   "stem": "Which parable teaches about forgiveness and God’s mercy?",
+   "options": {
+    "A": "The Good Samaritan",
+    "B": "The Prodigal Son",
+    "C": "The Sower",
+    "D": "The Talents"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Luke 15:11-32 tells the parable of the Prodigal Son, highlighting God’s forgiveness."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0037",
+   "type": "mcq",
+   "stem": "Who was the first person to see Jesus after His resurrection?",
+   "options": {
+    "A": "Peter",
+    "B": "Mary Magdalene",
+    "C": "John",
+    "D": "Thomas"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "John 20:11-18 states that Mary Magdalene was the first to see the risen Jesus."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0038",
+   "type": "mcq",
+   "stem": "What is the term for the belief in one God?",
+   "options": {
+    "A": "Polytheism",
+    "B": "Monotheism",
+    "C": "Atheism",
+    "D": "Agnosticism"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Monotheism is the belief in one God, central to Christianity (Deuteronomy 6:4)."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0039",
+   "type": "mcq",
+   "stem": "Which book of the Bible contains the Lord’s Prayer?",
+   "options": {
+    "A": "Mark",
+    "B": "Matthew",
+    "C": "Luke",
+    "D": "John"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew 6:9-13 records the Lord’s Prayer taught by Jesus."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0040",
+   "type": "mcq",
+   "stem": "Who was the prophet that confronted Ahab about Naboth’s vineyard?",
+   "options": {
+    "A": "Elisha",
+    "B": "Elijah",
+    "C": "Isaiah",
+    "D": "Jeremiah"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "1 Kings 21:17-19 describes Elijah confronting Ahab over Naboth’s vineyard."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0041",
+   "type": "mcq",
+   "stem": "What was the name of the place where Jesus was crucified?",
+   "options": {
+    "A": "Bethlehem",
+    "B": "Golgotha",
+    "C": "Jerusalem",
+    "D": "Nazareth"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew 27:33 identifies Golgotha as the place where Jesus was crucified."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0042",
+   "type": "mcq",
+   "stem": "Who was the judge who led Israel against the Canaanites?",
+   "options": {
+    "A": "Gideon",
+    "B": "Deborah",
+    "C": "Samson",
+    "D": "Samuel"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Judges 4:4-5 describes Deborah as a judge who led Israel against the Canaanites."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0043",
+   "type": "mcq",
+   "stem": "Which disciple was a tax collector before following Jesus?",
+   "options": {
+    "A": "Peter",
+    "B": "Matthew",
+    "C": "John",
+    "D": "Andrew"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew 9:9 states that Matthew was a tax collector before Jesus called him."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0044",
+   "type": "mcq",
+   "stem": "What is the term for the act of being saved from sin?",
+   "options": {
+    "A": "Repentance",
+    "B": "Salvation",
+    "C": "Grace",
+    "D": "Faith"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Salvation is the act of being saved from sin through faith in Jesus (John 3:16)."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0045",
+   "type": "mcq",
+   "stem": "Who was the woman who anointed Jesus’ feet with perfume?",
+   "options": {
+    "A": "Mary Magdalene",
+    "B": "Mary of Bethany",
+    "C": "Martha",
+    "D": "Joanna"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "John 12:3 describes Mary of Bethany anointing Jesus’ feet with perfume."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0046",
+   "type": "mcq",
+   "stem": "Which parable teaches about the use of talents or abilities?",
+   "options": {
+    "A": "The Good Samaritan",
+    "B": "The Talents",
+    "C": "The Sower",
+    "D": "The Prodigal Son"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew 25:14-30 tells the parable of the Talents, teaching stewardship of abilities."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0047",
+   "type": "mcq",
+   "stem": "Who was the father of Isaac?",
+   "options": {
+    "A": "Jacob",
+    "B": "Abraham",
+    "C": "Joseph",
+    "D": "Moses"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Genesis 21:3 identifies Abraham as the father of Isaac."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0048",
+   "type": "mcq",
+   "stem": "What was the name of the mountain where Abraham was to sacrifice Isaac?",
+   "options": {
+    "A": "Sinai",
+    "B": "Moriah",
+    "C": "Zion",
+    "D": "Horeb"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Genesis 22:2 states that God told Abraham to sacrifice Isaac on Mount Moriah."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0049",
+   "type": "mcq",
+   "stem": "Who was the prophet swallowed by a great fish?",
+   "options": {
+    "A": "Elijah",
+    "B": "Jonah",
+    "C": "Isaiah",
+    "D": "Daniel"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Jonah 1:17 describes Jonah being swallowed by a great fish."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0050",
+   "type": "mcq",
+   "stem": "Which commandment forbids lying?",
+   "options": {
+    "A": "Sixth",
+    "B": "Ninth",
+    "C": "Seventh",
+    "D": "Eighth"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The ninth commandment, 'You shall not bear false witness,' forbids lying (Exodus 20:16)."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0051",
+   "type": "mcq",
+   "stem": "Who was the first high priest of Israel?",
+   "options": {
+    "A": "Moses",
+    "B": "Aaron",
+    "C": "Samuel",
+    "D": "Eli"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Exodus 28:1 appoints Aaron as the first high priest of Israel."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0052",
+   "type": "mcq",
+   "stem": "Which parable teaches about God’s kingdom growing like a seed?",
+   "options": {
+    "A": "The Prodigal Son",
+    "B": "The Mustard Seed",
+    "C": "The Good Samaritan",
+    "D": "The Talents"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew 13:31-32 describes the parable of the Mustard Seed, illustrating the kingdom’s growth."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0053",
+   "type": "mcq",
+   "stem": "Who was the Roman governor who sentenced Jesus to death?",
+   "options": {
+    "A": "Herod",
+    "B": "Pontius Pilate",
+    "C": "Caesar",
+    "D": "Felix"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew 27:26 states that Pontius Pilate sentenced Jesus to crucifixion."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0054",
+   "type": "mcq",
+   "stem": "What is the term for the belief in the resurrection of the dead?",
+   "options": {
+    "A": "Faith",
+    "B": "Eschatology",
+    "C": "Grace",
+    "D": "Salvation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Eschatology includes the belief in the resurrection of the dead (1 Corinthians 15:22)."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0055",
+   "type": "mcq",
+   "stem": "Who was the prophet who anointed David as king?",
+   "options": {
+    "A": "Elijah",
+    "B": "Samuel",
+    "C": "Isaiah",
+    "D": "Nathan"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "1 Samuel 16:13 records Samuel anointing David as king of Israel."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0056",
+   "type": "mcq",
+   "stem": "Which book of the Bible contains the Beatitudes?",
+   "options": {
+    "A": "Mark",
+    "B": "Matthew",
+    "C": "Luke",
+    "D": "John"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew 5:3-12 contains the Beatitudes, part of the Sermon on the Mount."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0057",
+   "type": "mcq",
+   "stem": "Who was the wife of Isaac?",
+   "options": {
+    "A": "Sarah",
+    "B": "Rebekah",
+    "C": "Rachel",
+    "D": "Leah"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Genesis 24:67 identifies Rebekah as the wife of Isaac."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0058",
+   "type": "mcq",
+   "stem": "Which disciple was chosen to replace Judas Iscariot?",
+   "options": {
+    "A": "Barnabas",
+    "B": "Matthias",
+    "C": "Silas",
+    "D": "Timothy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Acts 1:26 states that Matthias was chosen to replace Judas Iscariot."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0059",
+   "type": "mcq",
+   "stem": "What was the name of the city where Jonah was sent to preach?",
+   "options": {
+    "A": "Jerusalem",
+    "B": "Nineveh",
+    "C": "Bethel",
+    "D": "Babylon"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Jonah 1:2 records God sending Jonah to preach to the city of Nineveh."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0060",
+   "type": "mcq",
+   "stem": "Which commandment forbids stealing?",
+   "options": {
+    "A": "Sixth",
+    "B": "Seventh",
+    "C": "Eighth",
+    "D": "Ninth"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The eighth commandment, 'You shall not steal,' forbids stealing (Exodus 20:15)."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0061",
+   "type": "mcq",
+   "stem": "Who was the king who built the first temple in Jerusalem?",
+   "options": {
+    "A": "David",
+    "B": "Solomon",
+    "C": "Saul",
+    "D": "Hezekiah"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "1 Kings 6:1-14 describes Solomon building the first temple in Jerusalem."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0062",
+   "type": "mcq",
+   "stem": "Which parable teaches about persistence in prayer?",
+   "options": {
+    "A": "The Good Samaritan",
+    "B": "The Persistent Widow",
+    "C": "The Prodigal Son",
+    "D": "The Talents"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Luke 18:1-8 tells the parable of the Persistent Widow, teaching persistence in prayer."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0063",
+   "type": "mcq",
+   "stem": "Who was the cousin of Jesus, according to the Bible?",
+   "options": {
+    "A": "Peter",
+    "B": "John the Baptist",
+    "C": "James",
+    "D": "Andrew"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Luke 1:36 indicates that John the Baptist was Jesus’ cousin through Mary and Elizabeth."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0064",
+   "type": "mcq",
+   "stem": "What is the term for the act of trusting in God?",
+   "options": {
+    "A": "Repentance",
+    "B": "Faith",
+    "C": "Grace",
+    "D": "Salvation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Faith is the act of trusting in God, as emphasized in Hebrews 11:1."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0065",
+   "type": "mcq",
+   "stem": "Which book of the Bible contains the story of the Good Shepherd?",
+   "options": {
+    "A": "Matthew",
+    "B": "John",
+    "C": "Luke",
+    "D": "Mark"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "John 10:11-14 contains Jesus’ teaching about being the Good Shepherd."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0066",
+   "type": "mcq",
+   "stem": "Who was the prophet who rebuilt the walls of Jerusalem?",
+   "options": {
+    "A": "Ezra",
+    "B": "Nehemiah",
+    "C": "Isaiah",
+    "D": "Jeremiah"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Nehemiah 2:17-18 describes Nehemiah leading the rebuilding of Jerusalem’s walls."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0067",
+   "type": "mcq",
+   "stem": "Which disciple was a fisherman before following Jesus?",
+   "options": {
+    "A": "Matthew",
+    "B": "Peter",
+    "C": "Thomas",
+    "D": "Judas"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Luke 5:10 identifies Peter as a fisherman before Jesus called him."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0068",
+   "type": "mcq",
+   "stem": "What was the name of the river where the Israelites crossed into Canaan?",
+   "options": {
+    "A": "Nile",
+    "B": "Jordan",
+    "C": "Euphrates",
+    "D": "Tigris"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Joshua 3:14-17 describes the Israelites crossing the Jordan River into Canaan."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0069",
+   "type": "mcq",
+   "stem": "Which commandment emphasizes honoring parents?",
+   "options": {
+    "A": "Fourth",
+    "B": "Fifth",
+    "C": "Sixth",
+    "D": "Seventh"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The fifth commandment, 'Honor your father and mother,' emphasizes respect for parents (Exodus 20:12)."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0070",
+   "type": "mcq",
+   "stem": "Who was the father of Jacob and Esau?",
+   "options": {
+    "A": "Abraham",
+    "B": "Isaac",
+    "C": "Joseph",
+    "D": "Moses"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Genesis 25:26 identifies Isaac as the father of Jacob and Esau."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0071",
+   "type": "mcq",
+   "stem": "Which parable teaches about the kingdom of God being like a treasure?",
+   "options": {
+    "A": "The Good Samaritan",
+    "B": "The Hidden Treasure",
+    "C": "The Prodigal Son",
+    "D": "The Sower"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew 13:44 describes the parable of the Hidden Treasure, likening the kingdom to a treasure."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0072",
+   "type": "mcq",
+   "stem": "Who was the king who repented after Jonah’s preaching?",
+   "options": {
+    "A": "Saul",
+    "B": "King of Nineveh",
+    "C": "David",
+    "D": "Ahab"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Jonah 3:6-10 records the King of Nineveh repenting after Jonah’s preaching."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0073",
+   "type": "mcq",
+   "stem": "What is the term for the act of giving to the poor or needy?",
+   "options": {
+    "A": "Faith",
+    "B": "Charity",
+    "C": "Grace",
+    "D": "Salvation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Charity is the act of giving to the poor or needy, as encouraged in 1 Corinthians 13:3."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0074",
+   "type": "mcq",
+   "stem": "Which book of the Bible contains the story of Lazarus and the rich man?",
+   "options": {
+    "A": "Matthew",
+    "B": "Luke",
+    "C": "Mark",
+    "D": "John"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Luke 16:19-31 tells the parable of Lazarus and the rich man."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0075",
+   "type": "mcq",
+   "stem": "Who was the prophet who foretold a virgin would give birth to a son?",
+   "options": {
+    "A": "Jeremiah",
+    "B": "Isaiah",
+    "C": "Ezekiel",
+    "D": "Daniel"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Isaiah 7:14 prophesies a virgin giving birth to a son, fulfilled in Jesus’ birth."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0076",
+   "type": "mcq",
+   "stem": "Which disciple walked on water toward Jesus?",
+   "options": {
+    "A": "John",
+    "B": "Peter",
+    "C": "James",
+    "D": "Andrew"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew 14:29 describes Peter walking on water toward Jesus."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0077",
+   "type": "mcq",
+   "stem": "What was the name of the city where Jesus was born?",
+   "options": {
+    "A": "Jerusalem",
+    "B": "Bethlehem",
+    "C": "Nazareth",
+    "D": "Capernaum"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Luke 2:4-7 states that Jesus was born in Bethlehem."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0078",
+   "type": "mcq",
+   "stem": "Which commandment forbids coveting?",
+   "options": {
+    "A": "Seventh",
+    "B": "Eighth",
+    "C": "Ninth",
+    "D": "Tenth"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The tenth commandment, 'You shall not covet,' forbids desiring others’ possessions (Exodus 20:17)."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0079",
+   "type": "mcq",
+   "stem": "Who was the mother of Ishmael?",
+   "options": {
+    "A": "Sarah",
+    "B": "Hagar",
+    "C": "Rebekah",
+    "D": "Rachel"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Genesis 16:15 identifies Hagar as the mother of Ishmael."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0080",
+   "type": "mcq",
+   "stem": "Which parable teaches about the separation of the righteous and the wicked?",
+   "options": {
+    "A": "The Good Samaritan",
+    "B": "The Sheep and the Goats",
+    "C": "The Prodigal Son",
+    "D": "The Sower"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew 25:31-46 tells the parable of the Sheep and the Goats, depicting judgment."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0081",
+   "type": "mcq",
+   "stem": "Who was the prophet who performed miracles at Mount Carmel?",
+   "options": {
+    "A": "Elisha",
+    "B": "Elijah",
+    "C": "Isaiah",
+    "D": "Jeremiah"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "1 Kings 18:36-39 describes Elijah’s miracles at Mount Carmel."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0082",
+   "type": "mcq",
+   "stem": "What is the term for the act of worshipping God?",
+   "options": {
+    "A": "Faith",
+    "B": "Adoration",
+    "C": "Grace",
+    "D": "Salvation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Adoration is the act of worshipping or giving reverence to God (Psalm 95:6)."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0083",
+   "type": "mcq",
+   "stem": "Which book of the Bible contains the story of the vine and the branches?",
+   "options": {
+    "A": "Matthew",
+    "B": "John",
+    "C": "Luke",
+    "D": "Mark"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "John 15:1-5 contains Jesus’ teaching about the vine and the branches."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0084",
+   "type": "mcq",
+   "stem": "Who was the king who committed adultery with Bathsheba?",
+   "options": {
+    "A": "Saul",
+    "B": "David",
+    "C": "Solomon",
+    "D": "Hezekiah"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "2 Samuel 11:2-4 describes David’s adultery with Bathsheba."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0085",
+   "type": "mcq",
+   "stem": "Which disciple was known as the 'beloved disciple'?",
+   "options": {
+    "A": "Peter",
+    "B": "John",
+    "C": "James",
+    "D": "Andrew"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "John 13:23 refers to John as the disciple whom Jesus loved."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0086",
+   "type": "mcq",
+   "stem": "What was the name of the mountain where Jesus was transfigured?",
+   "options": {
+    "A": "Sinai",
+    "B": "Tabor",
+    "C": "Zion",
+    "D": "Horeb"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew 17:1-2 traditionally identifies Mount Tabor as the site of Jesus’ transfiguration."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0087",
+   "type": "mcq",
+   "stem": "Which commandment forbids murder?",
+   "options": {
+    "A": "Fifth",
+    "B": "Sixth",
+    "C": "Seventh",
+    "D": "Eighth"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The sixth commandment, 'You shall not murder,' forbids killing (Exodus 20:13)."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0088",
+   "type": "mcq",
+   "stem": "Who was the father of Joseph, the husband of Mary?",
+   "options": {
+    "A": "Zechariah",
+    "B": "Jacob",
+    "C": "Eli",
+    "D": "Simeon"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew 1:16 identifies Jacob as the father of Joseph, Mary’s husband."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0089",
+   "type": "mcq",
+   "stem": "Which parable teaches about the value of small beginnings?",
+   "options": {
+    "A": "The Good Samaritan",
+    "B": "The Mustard Seed",
+    "C": "The Prodigal Son",
+    "D": "The Talents"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew 13:31-32 tells the parable of the Mustard Seed, emphasizing small beginnings."
+  },
+  {
+   "id": "waec-server-scripts-crs-sun-0090",
+   "type": "mcq",
+   "stem": "Who was the prophet who was fed by ravens?",
+   "options": {
+    "A": "Elisha",
+    "B": "Elijah",
+    "C": "Isaiah",
+    "D": "Jeremiah"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "1 Kings 17:4-6 describes God sending ravens to feed Elijah."
+  }
+ ],
+ "category": "secondary",
+ "body": "WAEC"
+}

@@ -1,0 +1,57 @@
+{
+ "school": "aau",
+ "name": "Ambrose Alli University, Ekpoma",
+ "short": "AAU",
+ "courses": [
+  {
+   "slug": "gst111",
+   "code": "GST 111",
+   "title": null,
+   "semester": null,
+   "icon": "menu_book",
+   "bank": "uni-aau-gst111-bank",
+   "questionCount": 12,
+   "pdf": null
+  },
+  {
+   "slug": "ent201",
+   "code": "ENT 201",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-aau-ent201-bank",
+   "questionCount": 173,
+   "pdf": null
+  },
+  {
+   "slug": "ent211",
+   "code": "ENT 211",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-aau-ent211-bank",
+   "questionCount": 46,
+   "pdf": null
+  },
+  {
+   "slug": "gst101",
+   "code": "GST 101",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-aau-gst101-bank",
+   "questionCount": 49,
+   "pdf": null
+  },
+  {
+   "slug": "gst102",
+   "code": "GST 102",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-aau-gst102-bank",
+   "questionCount": 235,
+   "pdf": null
+  }
+ ]
+}

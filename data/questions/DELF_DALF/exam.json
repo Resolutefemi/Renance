@@ -1,0 +1,71 @@
+{
+ "code": "delf_dalf-exam-bank",
+ "title": "DELF / DALF - Exam",
+ "version": 1,
+ "questionCount": 5,
+ "totalMarks": 5,
+ "questions": [
+  {
+   "id": "delf_dalf-exam-bank-0001",
+   "type": "mcq",
+   "stem": "Qu'est-ce que notre époque semble avoir perdu, selon l'orateur ?",
+   "marks": 1,
+   "options": {
+    "A": "La foi en l'avenir",
+    "B": "Le goût du passé",
+    "C": "La mémoire de l'histoire"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "delf_dalf-exam-bank-0002",
+   "type": "mcq",
+   "stem": "Quelle promesse beaucoup n'entendent-ils plus ?",
+   "marks": 1,
+   "options": {
+    "A": "Que demain sera meilleur qu'aujourd'hui",
+    "B": "Que le travail paie toujours",
+    "C": "Que la science a réponse à tout"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "delf_dalf-exam-bank-0003",
+   "type": "mcq",
+   "stem": "Pourquoi l'orateur refuse-t-il le pessimisme ?",
+   "marks": 1,
+   "options": {
+    "A": "Parce que le pessimisme est une prophétie qui se réalise",
+    "B": "Parce qu'il est interdit d'en parler",
+    "C": "Parce qu'il est devenu trop rare"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "delf_dalf-exam-bank-0004",
+   "type": "mcq",
+   "stem": "Quelle est, selon lui, l'utilité de l'utopie ?",
+   "marks": 1,
+   "options": {
+    "A": "Elle est une boussole qui indique une direction",
+    "B": "Elle est un plan à appliquer tel quel",
+    "C": "Elle est une simple distraction"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "delf_dalf-exam-bank-0005",
+   "type": "mcq",
+   "stem": "Selon lui, espérer, c'est…",
+   "marks": 1,
+   "options": {
+    "A": "la condition de toute action",
+    "B": "une forme de naïveté",
+    "C": "une perte de temps"
+   },
+   "answer": "A"
+  }
+ ],
+ "category": "DELF / DALF",
+ "body": "Exam"
+}

@@ -1,0 +1,72 @@
+{
+  "class": "Primary 5",
+  "subject": "Basic Digital Literacy",
+  "term": 3,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Sequence in Programming Sequential thinking exercises. Creating multi-step programs.",
+      "content": "Deep dive into sequencing. Order importance in code.\nPlanning sequences before coding. Documenting steps."
+    },
+    {
+      "week": 2,
+      "topic": "Loops and Repetition Scratch: repeat, forever, repeat until. When to use loops.",
+      "content": "Understanding loops: repeating actions. Types of loops in\nEfficiency: using loops vs repeating code. Nested loops\nintroduction."
+    },
+    {
+      "week": 3,
+      "topic": "Conditionals (If- Then) blocks in Scratch. If-then-else blocks. Comparison operators:",
+      "content": "Understanding conditions: making decisions in code. If-then\nequal, greater, less than. Creating responsive programs."
+    },
+    {
+      "week": 4,
+      "topic": "Basics of Robotics",
+      "content": "Introduction to robotics. What are robots: machines that can\nbe programmed to do tasks. Types of robots: industrial,\nservice, entertainment, educational. Robot components:\nsensors, actuators, processors. Robots in daily life: vacuum\ncleaners, assembly lines, drones."
+    },
+    {
+      "week": 5,
+      "topic": "MIDTERM EXAMINATION",
+      "content": "Assessment covering Weeks 1-4"
+    },
+    {
+      "week": 6,
+      "topic": "MIDTERM BREAK",
+      "content": "Holiday"
+    },
+    {
+      "week": 7,
+      "topic": "Robotics Applications exploration, agriculture, education. How robots help",
+      "content": "Robots in different fields: manufacturing, healthcare, space\nhumans: dangerous tasks, repetitive work, precision tasks.\nEducational robots: examples like Lego Mindstorms, simple\nrobot kits. Robot programming basics."
+    },
+    {
+      "week": 8,
+      "topic": "Game Development with Pictoblox features. Setting up Pictoblox environment. Creating sprites",
+      "content": "Introduction to Pictoblox: Scratch-based platform with AI\nand backdrops. Basic game mechanics: player control,\nobstacles, scoring. Adding sounds and effects."
+    },
+    {
+      "week": 9,
+      "topic": "Introduction to Artificial vs human intelligence. AI in daily life: voice assistants (Siri, Intelligence Alexa), recommendations (YouTube, Netflix), face",
+      "content": "What is AI: machines that can learn and make decisions. AI\nrecognition. Machine learning basics: computers learning\nfrom examples."
+    },
+    {
+      "week": 10,
+      "topic": "AI Applications and Ethics medical diagnosis, games. Benefits of AI: efficiency,",
+      "content": "AI applications: self-driving cars, language translation,\naccuracy, solving complex problems. Concerns: privacy, job\ndisplacement, bias. Responsible AI use. Future of AI and\nrobotics."
+    },
+    {
+      "week": 11,
+      "topic": "REVISION",
+      "content": "Comprehensive review of all topics. Complete final projects\ncombining programming, robotics concepts, and creativity."
+    },
+    {
+      "week": 12,
+      "topic": "EXAMINATION",
+      "content": "End of Third Term/Annual Examination (Theory and\nPractical)"
+    },
+    {
+      "week": 13,
+      "topic": "CLOSING Repor",
+      "content": "t distribution and vacation"
+    }
+  ]
+}

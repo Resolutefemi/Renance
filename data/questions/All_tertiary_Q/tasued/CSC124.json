@@ -1,0 +1,2335 @@
+{
+  "code": "uni-tasued-csc124-bank",
+  "title": "TASUED CSC124 | Course Question Bank",
+  "version": 1,
+  "questionCount": 166,
+  "totalMarks": 166,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-tasued-csc124-bank-0001",
+      "type": "mcq",
+      "stem": "What is the primary purpose of a protocol in data communication?",
+      "options": {
+        "A": "To encrypt data before transmission",
+        "B": "To define rules for communication between devices",
+        "C": "To assign IP addresses to devices on a network",
+        "D": "To increase the speed of data transfer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A protocol is a set of rules that governs how data is transmitted and received between devices on a network, ensuring consistent and reliable communication."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0002",
+      "type": "mcq",
+      "stem": "Protocol is to rule as communication is to ______.",
+      "options": {
+        "A": "Instruction",
+        "B": "Agreement/Standard",
+        "C": "Command",
+        "D": "Signal"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Just as a protocol defines a rule, communication relies on an agreed-upon standard or agreement between parties to ensure mutual understanding."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0003",
+      "type": "mcq",
+      "stem": "In what year was ARPANET, the predecessor of the Internet, established?",
+      "options": {
+        "A": "1965",
+        "B": "1969",
+        "C": "1972",
+        "D": "1975"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "ARPANET was established in 1969 by DARPA (Defense Advanced Research Projects Agency) and became the foundational network that evolved into the modern Internet."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0004",
+      "type": "mcq",
+      "stem": "Which technology was invented by Robert Metcalfe?",
+      "options": {
+        "A": "Wi-Fi",
+        "B": "Bluetooth",
+        "C": "Ethernet",
+        "D": "Token Ring"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Robert Metcalfe co-invented Ethernet in 1973 at Xerox PARC, which later became the dominant LAN technology worldwide."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0005",
+      "type": "mcq",
+      "stem": "Which of the following is a Nigerian Internet Service Provider?",
+      "options": {
+        "A": "Airtel India",
+        "B": "MTN Nigeria",
+        "C": "AT&T",
+        "D": "Comcast"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "MTN Nigeria is one of the leading telecommunications and internet service providers in Nigeria, offering mobile broadband and data services."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0006",
+      "type": "mcq",
+      "stem": "Who proposed the World Wide Web, in which year, and at which institution?",
+      "options": {
+        "A": "Vint Cerf in 1983 at DARPA",
+        "B": "Tim Berners-Lee in 1989 at CERN",
+        "C": "Bill Gates in 1991 at MIT",
+        "D": "Tim Berners-Lee in 1995 at Oxford"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Tim Berners-Lee proposed the World Wide Web in 1989 while working at CERN, the European Organization for Nuclear Research, as a way to share information among scientists."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0007",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a Metropolitan Area Network (MAN)?",
+      "options": {
+        "A": "A home Wi-Fi network",
+        "B": "The Lagos City WiFi Initiative",
+        "C": "A university campus network",
+        "D": "A personal Bluetooth connection"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A MAN spans a city or large urban area. The Lagos City WiFi Initiative, covering a metropolitan area, is a classic real-world example of a MAN."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0008",
+      "type": "mcq",
+      "stem": "A network that connects all faculty offices, buildings, and resources within a university is an example of what type of network?",
+      "options": {
+        "A": "WAN (Wide Area Network)",
+        "B": "LAN (Local Area Network)",
+        "C": "CAN (Campus Area Network)",
+        "D": "MAN (Metropolitan Area Network)"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A Campus Area Network (CAN) connects multiple LANs within a limited geographical area such as a university campus, linking buildings and resources across the institution."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0009",
+      "type": "mcq",
+      "stem": "A network with 'five nines' (99.999%) availability allows approximately how much downtime per year?",
+      "options": {
+        "A": "About 30 minutes",
+        "B": "About 5 minutes",
+        "C": "About 1 hour",
+        "D": "About 52 minutes"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "99.999% uptime leaves only 0.001% downtime per year, which equates to approximately 5.26 minutes of allowable downtime annually - the gold standard for critical systems."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0010",
+      "type": "mcq",
+      "stem": "The modern design of the OSI (Open Systems Interconnection) model was finalized and published in which year?",
+      "options": {
+        "A": "1974",
+        "B": "1980",
+        "C": "1984",
+        "D": "1990"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The OSI reference model was officially published by ISO in 1984 as ISO 7498, providing a standardized framework for how different network systems communicate."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0011",
+      "type": "mcq",
+      "stem": "How many layers does the OSI model have?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The OSI model has 7 layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application - each responsible for a specific aspect of network communication."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0012",
+      "type": "mcq",
+      "stem": "In networking, a protocol defines the rules for transmitting ______ between devices.",
+      "options": {
+        "A": "Power",
+        "B": "Data",
+        "C": "Hardware signals only",
+        "D": "Encryption keys"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Protocols govern how data is formatted, transmitted, and received between networked devices, enabling interoperability regardless of the underlying hardware."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0013",
+      "type": "mcq",
+      "stem": "The PDU (Protocol Data Unit) for TCP at the Transport layer is called what?",
+      "options": {
+        "A": "Packet",
+        "B": "Frame",
+        "C": "Segment",
+        "D": "Datagram"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "At the Transport layer, TCP breaks data into Segments. Each segment contains a header with source/destination port numbers, sequence numbers, and control flags."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0014",
+      "type": "mcq",
+      "stem": "The mnemonic 'All People Seem To Need Data Processing' is used to remember the layers of the OSI model from which direction?",
+      "options": {
+        "A": "Bottom to top (Layer 1 to Layer 7)",
+        "B": "Top to bottom (Layer 7 to Layer 1)",
+        "C": "Middle outward",
+        "D": "Physical to Network only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The mnemonic maps as: Application, Presentation, Session, Transport, Network, Data Link, Physical - reading from Layer 7 (Application) down to Layer 1 (Physical)."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0015",
+      "type": "mcq",
+      "stem": "Bandwidth is best described as ______.",
+      "options": {
+        "A": "The physical size of a network cable",
+        "B": "The data capacity of a data channel",
+        "C": "The number of users on a network",
+        "D": "The latency between two endpoints"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Bandwidth refers to the maximum rate of data transfer across a network channel, typically measured in bits per second (bps), Mbps, or Gbps."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0016",
+      "type": "mcq",
+      "stem": "How many layers does the TCP/IP model have?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "7"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The TCP/IP model has 4 layers: Network Access (Link), Internet, Transport, and Application - a simplified model compared to the 7-layer OSI model."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0017",
+      "type": "mcq",
+      "stem": "The PDU for the Application layer of the OSI model is called what?",
+      "options": {
+        "A": "Segment",
+        "B": "Packet",
+        "C": "Frame",
+        "D": "Data"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "At the Application, Presentation, and Session layers of the OSI model, the PDU is simply called 'Data' - it has not yet been broken down or encapsulated by lower layers."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0018",
+      "type": "mcq",
+      "stem": "What is the PDU for the Network layer called?",
+      "options": {
+        "A": "Segment",
+        "B": "Packet",
+        "C": "Frame",
+        "D": "Bits"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "At the Network layer (Layer 3), data is encapsulated into Packets. Packets contain the source and destination IP addresses used for routing across networks."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0019",
+      "type": "mcq",
+      "stem": "What are the respective PDUs for the Data Link layer and the Physical layer?",
+      "options": {
+        "A": "Packet and Bits",
+        "B": "Segment and Frame",
+        "C": "Frame and Bits",
+        "D": "Bits and Frame"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Data Link layer (Layer 2) encapsulates data into Frames, which include MAC addresses. The Physical layer (Layer 1) then transmits raw Bits over the physical medium."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0020",
+      "type": "mcq",
+      "stem": "Encapsulation in networking refers to the process of ______.",
+      "options": {
+        "A": "Compressing data to reduce file size",
+        "B": "Adding headers and trailers to data as it moves down the network layers",
+        "C": "Removing headers as data moves up the layers",
+        "D": "Encrypting data before storage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Encapsulation is the process where each OSI layer wraps the data from the layer above it with its own header (and sometimes trailer), adding control information needed at that layer."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0021",
+      "type": "mcq",
+      "stem": "De-capsulation occurs at the ______ as data travels up the layers.",
+      "options": {
+        "A": "Sender",
+        "B": "Router",
+        "C": "Receiver",
+        "D": "Switch"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "De-capsulation (or decapsulation) is the reverse of encapsulation and happens at the receiving device, where each layer strips off its corresponding header as the data moves up the stack."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0022",
+      "type": "mcq",
+      "stem": "CRC (Cyclic Redundancy Check) operates at which OSI layer?",
+      "options": {
+        "A": "Layer 3 - Network",
+        "B": "Layer 4 - Transport",
+        "C": "Layer 2 - Data Link",
+        "D": "Layer 1 - Physical"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "CRC is an error-detection code appended to frames at the Data Link layer. The receiver recalculates the CRC to verify data integrity during transmission."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0023",
+      "type": "mcq",
+      "stem": "What is the correct order of TCP's three-way handshake?",
+      "options": {
+        "A": "ACK, SYN, SYN-ACK",
+        "B": "SYN, ACK, SYN-ACK",
+        "C": "SYN, SYN-ACK, ACK",
+        "D": "SYN-ACK, SYN, ACK"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "TCP establishes a connection via a three-way handshake: the client sends SYN, the server responds with SYN-ACK, and the client completes the handshake with ACK."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0024",
+      "type": "mcq",
+      "stem": "HTTP (Hypertext Transfer Protocol) uses which port number?",
+      "options": {
+        "A": "443",
+        "B": "21",
+        "C": "80",
+        "D": "25"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "HTTP uses Port 80 by default for unencrypted web traffic. When a browser requests a web page without HTTPS, it communicates over TCP port 80."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0025",
+      "type": "mcq",
+      "stem": "HTTPS (Secure Web Browsing) uses which port number?",
+      "options": {
+        "A": "80",
+        "B": "8080",
+        "C": "443",
+        "D": "8443"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "HTTPS uses Port 443, encrypting web traffic using TLS (Transport Layer Security) to protect data in transit between the client and the web server."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0026",
+      "type": "mcq",
+      "stem": "UDP is generally preferred over TCP for which type of applications?",
+      "options": {
+        "A": "File downloads and email",
+        "B": "Video streaming and Voice over IP (VoIP)",
+        "C": "Online banking and e-commerce",
+        "D": "SSH and remote desktop"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "UDP is connectionless and faster than TCP because it skips handshaking and error recovery. Real-time applications like video streaming and VoIP tolerate occasional packet loss better than they tolerate delay."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0027",
+      "type": "mcq",
+      "stem": "The TCP/IP Application layer corresponds to which layers of the OSI model?",
+      "options": {
+        "A": "Only the Application layer",
+        "B": "Application, Presentation, and Session layers",
+        "C": "Transport and Session layers",
+        "D": "Physical and Data Link layers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The TCP/IP model condenses the OSI model's top three layers (Application, Presentation, and Session) into a single Application layer, simplifying the protocol stack."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0028",
+      "type": "mcq",
+      "stem": "An IPv4 address is how many bits long?",
+      "options": {
+        "A": "16 bits",
+        "B": "32 bits",
+        "C": "64 bits",
+        "D": "128 bits"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An IPv4 address is 32 bits long, written as four octets in dotted-decimal notation (e.g., 192.168.1.1), supporting approximately 4.3 billion unique addresses."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0029",
+      "type": "mcq",
+      "stem": "An IPv6 address is how many bits long?",
+      "options": {
+        "A": "32 bits",
+        "B": "64 bits",
+        "C": "128 bits",
+        "D": "256 bits"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "IPv6 uses 128-bit addresses written in hexadecimal notation, providing an astronomically large address space of approximately 3.4 × 10³⁸ unique addresses."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0030",
+      "type": "mcq",
+      "stem": "What is the default subnet mask for a Class C network?",
+      "options": {
+        "A": "255.0.0.0",
+        "B": "255.255.0.0",
+        "C": "255.255.255.0",
+        "D": "255.255.255.128"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Class C networks use the default subnet mask 255.255.255.0 (/24), meaning the first 24 bits identify the network and the remaining 8 bits identify host addresses."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0031",
+      "type": "mcq",
+      "stem": "Which of the following is the private IP address range commonly used in home networks?",
+      "options": {
+        "A": "10.0.0.0 to 10.255.255.255",
+        "B": "172.16.0.0 to 172.31.255.255",
+        "C": "192.168.0.0 to 192.168.255.255",
+        "D": "169.254.0.0 to 169.254.255.255"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The 192.168.0.0/16 range is a private address space reserved by RFC 1918 and is most commonly used by home routers and small office networks."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0032",
+      "type": "mcq",
+      "stem": "The IP address 127.0.0.1 is classified as a ______.",
+      "options": {
+        "A": "Private IP address",
+        "B": "Broadcast address",
+        "C": "Loopback address",
+        "D": "Multicast address"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "127.0.0.1 is the loopback address (also called 'localhost'). Traffic sent to this address is routed back to the local machine itself and is used for self-testing network software."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0033",
+      "type": "mcq",
+      "stem": "A /26 CIDR subnet provides how many usable host addresses?",
+      "options": {
+        "A": "30",
+        "B": "62",
+        "C": "126",
+        "D": "254"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A /26 subnet has 6 host bits (2⁶ = 64 addresses). Subtracting the network address and broadcast address leaves 62 usable host addresses."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0034",
+      "type": "mcq",
+      "stem": "ARP (Address Resolution Protocol) is used to resolve ______.",
+      "options": {
+        "A": "A domain name to an IP address",
+        "B": "An IP address to a MAC address",
+        "C": "A MAC address to an IP address",
+        "D": "A hostname to a port number"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "ARP maps a known IP address to its corresponding MAC (Media Access Control) address, which is necessary for devices to communicate within the same local network segment."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0035",
+      "type": "mcq",
+      "stem": "The DHCP process acronym DORA stands for ______.",
+      "options": {
+        "A": "Discover, Offer, Request, Acknowledge",
+        "B": "Define, Obtain, Route, Assign",
+        "C": "Deliver, Open, Relay, Accept",
+        "D": "Discover, Open, Request, Authorize"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "DORA describes the four steps of DHCP: client broadcasts a Discover, server responds with an Offer, client sends a Request for the offered address, and server sends an Acknowledgment."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0036",
+      "type": "mcq",
+      "stem": "Network Address Translation (NAT) is used to translate ______.",
+      "options": {
+        "A": "MAC addresses to IP addresses",
+        "B": "IPv6 addresses to IPv4 addresses",
+        "C": "Private IP addresses to Public IP addresses",
+        "D": "Domain names to IP addresses"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "NAT allows multiple devices using private IP addresses (e.g., 192.168.x.x) to share a single public IP address when accessing the Internet, conserving the IPv4 address space."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0037",
+      "type": "mcq",
+      "stem": "Compared to IPv4, IPv6 offers a larger address space and mandatory ______.",
+      "options": {
+        "A": "NAT support",
+        "B": "DHCP server",
+        "C": "IPsec (IP Security)",
+        "D": "DNS lookup"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "IPv6 was designed with security in mind and mandates IPsec support, providing authentication and encryption at the network layer - something that was only optional in IPv4."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0038",
+      "type": "mcq",
+      "stem": "A MAC address operates primarily at which layer of the OSI model?",
+      "options": {
+        "A": "Layer 1 - Physical",
+        "B": "Layer 2 - Data Link",
+        "C": "Layer 3 - Network",
+        "D": "Layer 4 - Transport"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "MAC addresses are hardware addresses burned into NICs and used at the Data Link layer (Layer 2) for device-to-device communication within the same local network segment."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0039",
+      "type": "mcq",
+      "stem": "In a routing table, the entry 0.0.0.0 with a subnet mask of 0.0.0.0 represents ______.",
+      "options": {
+        "A": "The loopback route",
+        "B": "The broadcast route",
+        "C": "The default route",
+        "D": "A discard route"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The 0.0.0.0/0 entry is the default route (gateway of last resort). When no more specific route matches, a router forwards packets to the next hop specified by this entry."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0040",
+      "type": "mcq",
+      "stem": "Which of the following is an example of analog data?",
+      "options": {
+        "A": "Binary code stored on a hard drive",
+        "B": "Human speech",
+        "C": "An email message",
+        "D": "A JPEG image file"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Human speech is a continuous analog signal that varies in amplitude and frequency over time, unlike digital data which is represented as discrete binary values."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0041",
+      "type": "mcq",
+      "stem": "A digital signal typically uses discrete ______ for transmission.",
+      "options": {
+        "A": "Sound waves",
+        "B": "Light pulses only",
+        "C": "Voltages",
+        "D": "Frequency changes"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Digital signals represent data as discrete voltage levels - typically high (1) and low (0) - allowing computers and network equipment to reliably distinguish between binary states."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0042",
+      "type": "mcq",
+      "stem": "Frequency is measured in ______.",
+      "options": {
+        "A": "Watts (W)",
+        "B": "Hertz (Hz)",
+        "C": "Decibels (dB)",
+        "D": "Joules (J)"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Frequency measures the number of signal cycles per second and is expressed in Hertz (Hz). 1 Hz = one complete cycle per second."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0043",
+      "type": "mcq",
+      "stem": "The relationship between period (T) and frequency (f) of a signal is expressed as ______.",
+      "options": {
+        "A": "f = T × 2",
+        "B": "f = 1/T",
+        "C": "f = T²",
+        "D": "f = T + 1"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Frequency and period are mathematical inverses: f = 1/T and T = 1/f. If a signal completes a cycle in 0.01 seconds, its frequency is 100 Hz."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0044",
+      "type": "mcq",
+      "stem": "In line coding, the average bit rate formula V = N × R represents what?",
+      "options": {
+        "A": "V = Voltage, N = Noise, R = Range",
+        "B": "V = Signal elements, N = Data rate, R = Signal elements per data element",
+        "C": "V = Velocity, N = Nodes, R = Routing hops",
+        "D": "V = Volume, N = Null bits, R = Redundancy"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In line coding, the baud rate V (signal elements/sec) equals the bit rate N multiplied by the number of signal elements R used to represent each data element."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0045",
+      "type": "mcq",
+      "stem": "The Nyquist theorem defines the maximum bit rate for a ______ channel.",
+      "options": {
+        "A": "Noisy channel",
+        "B": "Wireless channel",
+        "C": "Noiseless channel",
+        "D": "Fiber optic channel"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Nyquist theorem applies to an ideal noiseless channel and states that the maximum bit rate = 2 × Bandwidth × log₂(V), where V is the number of discrete signal levels."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0046",
+      "type": "mcq",
+      "stem": "Shannon's channel capacity formula is expressed as ______.",
+      "options": {
+        "A": "C = B × log₂(V)",
+        "B": "C = B × log₂(1 + SNR)",
+        "C": "C = SNR / B",
+        "D": "C = 2 × B × SNR"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Shannon's theorem gives the theoretical maximum capacity C (bits/s) of a noisy channel: C = B × log₂(1 + SNR), where B is bandwidth and SNR is the signal-to-noise ratio."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0047",
+      "type": "mcq",
+      "stem": "Digital-to-analog conversion techniques include ASK, FSK, and ______.",
+      "options": {
+        "A": "PCM",
+        "B": "NRZ",
+        "C": "PSK",
+        "D": "RLL"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The three main digital-to-analog modulation techniques are ASK (Amplitude Shift Keying), FSK (Frequency Shift Keying), and PSK (Phase Shift Keying), each varying a different property of the carrier wave."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0048",
+      "type": "mcq",
+      "stem": "QAM stands for ______.",
+      "options": {
+        "A": "Quantized Amplitude Modulation",
+        "B": "Quadrature Amplitude Modulation",
+        "C": "Qualified Access Management",
+        "D": "Quaternary Analog Mapping"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "QAM (Quadrature Amplitude Modulation) is a modulation technique that simultaneously varies both the amplitude and phase of a carrier wave to encode multiple bits per symbol."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0049",
+      "type": "mcq",
+      "stem": "In multiplexing, what do the acronyms FDM, TDM, and WDM stand for respectively?",
+      "options": {
+        "A": "Frequency Data Mode, Time Data Mode, Width Data Mode",
+        "B": "Frequency Division Multiplexing, Time Division Multiplexing, Wavelength Division Multiplexing",
+        "C": "Full Duplex Mode, Token Division Mode, Wired Data Mode",
+        "D": "Frame Division Multiplexing, Trunk Division Mode, Wireless Data Mode"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "FDM assigns different frequency bands to each channel; TDM assigns time slots to each channel; WDM assigns different wavelengths (colors) of light to each channel on a fiber optic cable."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0050",
+      "type": "mcq",
+      "stem": "Which modulation technique combines both amplitude and phase variations to encode data?",
+      "options": {
+        "A": "ASK",
+        "B": "FSK",
+        "C": "PSK",
+        "D": "QAM"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "QAM (Quadrature Amplitude Modulation) modifies both the amplitude and the phase of the carrier signal simultaneously, allowing a much higher number of bits per symbol compared to ASK or PSK alone."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0051",
+      "type": "mcq",
+      "stem": "Which type of multiplexing best describes splitting different colors of light along a single fiber optic cable?",
+      "options": {
+        "A": "FDM (Frequency Division Multiplexing)",
+        "B": "TDM (Time Division Multiplexing)",
+        "C": "WDM (Wavelength Division Multiplexing)",
+        "D": "CDM (Code Division Multiplexing)"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "WDM transmits multiple data streams simultaneously over a single optical fiber by using different wavelengths (colors) of laser light for each channel - analogous to using different frequencies in FDM."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0052",
+      "type": "mcq",
+      "stem": "What is the common name for a 32-bit error detection code used in networking?",
+      "options": {
+        "A": "CRC-16",
+        "B": "CRC-32",
+        "C": "MD5",
+        "D": "SHA-1"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CRC-32 is a 32-bit Cyclic Redundancy Check commonly used in Ethernet frames (IEEE 802.3) and other protocols to detect accidental errors in transmitted data."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0053",
+      "type": "mcq",
+      "stem": "A modern network switch typically operates in ______ mode.",
+      "options": {
+        "A": "Simplex mode",
+        "B": "Half-Duplex mode",
+        "C": "Full-Duplex mode",
+        "D": "Token-passing mode"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Modern Ethernet switches support Full-Duplex operation, meaning connected devices can send and receive data simultaneously on the same link, effectively doubling throughput compared to half-duplex."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0054",
+      "type": "mcq",
+      "stem": "In full-duplex mode, ______.",
+      "options": {
+        "A": "Data can only be transmitted in one direction at a time",
+        "B": "Data can be transmitted and received simultaneously",
+        "C": "Only one device on the network may transmit at a time",
+        "D": "Transmission alternates between send and receive"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Full-duplex allows bidirectional simultaneous communication, like a telephone call. This is in contrast to half-duplex (walkie-talkie style) where only one side can transmit at a time."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0055",
+      "type": "mcq",
+      "stem": "In a Star topology, all devices connect to a ______.",
+      "options": {
+        "A": "Single shared bus cable",
+        "B": "Ring of connected nodes",
+        "C": "Central Switch or Hub",
+        "D": "Mesh of peer connections"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In a Star topology, every device has a dedicated connection to a central device (hub or switch). This makes it easy to add devices and isolate faults, as one failed cable only affects one device."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0056",
+      "type": "mcq",
+      "stem": "A major deficiency of a Bus topology is that ______.",
+      "options": {
+        "A": "It requires a central switch that is expensive",
+        "B": "A break anywhere along the main cable disrupts the entire network",
+        "C": "Devices must take turns transmitting using tokens",
+        "D": "It can only support a maximum of 10 devices"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In a Bus topology, all devices share a single communication line. Any fault or break in the main cable (backbone) causes the entire network to fail, making it a single point of failure."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0057",
+      "type": "mcq",
+      "stem": "In a Token Ring topology, access to the transmission medium is controlled by a special frame called a ______.",
+      "options": {
+        "A": "Frame Check",
+        "B": "Beacon",
+        "C": "Token",
+        "D": "Slot"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In Token Ring (IEEE 802.5), a special control frame called a 'token' circulates around the ring. Only the device holding the token is permitted to transmit data, preventing collisions."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0058",
+      "type": "mcq",
+      "stem": "The number of links required for a physical full-mesh topology with N devices is given by the formula ______.",
+      "options": {
+        "A": "N × 2",
+        "B": "N × (N + 1)",
+        "C": "N(N - 1) / 2",
+        "D": "N² - 1"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A full-mesh topology connects every device to every other device. The formula N(N-1)/2 counts all unique pairs. For example, 5 devices require 5×4/2 = 10 links."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0059",
+      "type": "mcq",
+      "stem": "A Tree topology is essentially a combination of ______.",
+      "options": {
+        "A": "Ring and Mesh topologies",
+        "B": "Star and Bus topologies",
+        "C": "Bus and Ring topologies",
+        "D": "Star and Ring topologies"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A Tree (hierarchical) topology combines Star and Bus topologies - groups of star-configured networks are interconnected via a common backbone bus, commonly used in large office buildings."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0060",
+      "type": "mcq",
+      "stem": "A network protocol defines which three main characteristics?",
+      "options": {
+        "A": "Speed, Security, and Size",
+        "B": "Syntax, Semantics, and Timing",
+        "C": "Format, Routing, and Error Control",
+        "D": "Encoding, Framing, and Addressing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Protocols are defined by three elements: Syntax (structure/format of the data), Semantics (meaning of each section), and Timing (when to send and how fast)."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0061",
+      "type": "mcq",
+      "stem": "The IEEE standard body for Ethernet is known as standard number ______.",
+      "options": {
+        "A": "IEEE 802.11",
+        "B": "IEEE 802.3",
+        "C": "IEEE 802.15",
+        "D": "IEEE 802.1Q"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "IEEE 802.3 is the standard that defines the Ethernet protocol, specifying wiring, signaling for the physical layer, and the media access control (MAC) at the Data Link layer."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0062",
+      "type": "mcq",
+      "stem": "The IETF (Internet Engineering Task Force) maintains internet standards and publishes them as ______.",
+      "options": {
+        "A": "ISO Standards",
+        "B": "IEEE Standards",
+        "C": "RFC (Request for Comments)",
+        "D": "ANSI Specifications"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The IETF publishes internet standards as RFCs (Request for Comments). Famous examples include RFC 791 (IPv4) and RFC 2616 (HTTP/1.1)."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0063",
+      "type": "mcq",
+      "stem": "Circuit switching uses a dedicated path for the entire session duration, whereas the Internet operates using ______.",
+      "options": {
+        "A": "Message Switching",
+        "B": "Cell Switching",
+        "C": "Packet Switching",
+        "D": "Virtual Circuit Switching"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Internet uses packet switching, where data is broken into packets that are independently routed across the network. This makes more efficient use of bandwidth than dedicated circuit switching."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0064",
+      "type": "mcq",
+      "stem": "In Nigeria, the NCC is responsible for ______.",
+      "options": {
+        "A": "Building national highways",
+        "B": "Regulating the telecommunications sector",
+        "C": "Managing the national power grid",
+        "D": "Operating government satellite systems"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The NCC (Nigerian Communications Commission) is the independent regulatory authority for the telecommunications industry in Nigeria, overseeing licensing, spectrum management, and consumer protection."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0065",
+      "type": "mcq",
+      "stem": "What is the maximum recommended segment length for Thinnet (RG-58 Coaxial) Ethernet cable?",
+      "options": {
+        "A": "100 meters",
+        "B": "185 meters",
+        "C": "500 meters",
+        "D": "1000 meters"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Thinnet (10Base2) using RG-58 coaxial cable has a maximum segment length of 185 meters. Thicknet (10Base5) using RG-8 can reach up to 500 meters."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0066",
+      "type": "mcq",
+      "stem": "Broadband Internet commonly uses Fiber optics or ______ cable for transmission.",
+      "options": {
+        "A": "Cat5e twisted pair",
+        "B": "Coaxial",
+        "C": "Ribbon cable",
+        "D": "STP cable"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Broadband services such as cable Internet (DOCSIS) are delivered over coaxial cables, while fiber-to-the-home (FTTH) uses fiber optic cables - both are common broadband media."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0067",
+      "type": "mcq",
+      "stem": "Single-mode fiber optic cable can transmit data without significant degradation over distances exceeding ______.",
+      "options": {
+        "A": "100 meters",
+        "B": "1 kilometer",
+        "C": "10 kilometers",
+        "D": "100 kilometers"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Single-mode fiber uses a very narrow core and a single light path, significantly reducing signal dispersion. This allows transmission over distances exceeding 10 km without amplification, unlike multi-mode fiber."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0068",
+      "type": "mcq",
+      "stem": "A network Repeater operates at which layer of the OSI model?",
+      "options": {
+        "A": "Layer 2 - Data Link",
+        "B": "Layer 3 - Network",
+        "C": "Layer 1 - Physical",
+        "D": "Layer 4 - Transport"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A repeater operates at the Physical layer (Layer 1) and simply regenerates/amplifies signals to extend network distance, with no understanding of MAC addresses or IP addresses."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0069",
+      "type": "mcq",
+      "stem": "A Hub operates at Layer 1 (Physical), whereas a Switch operates at Layer ______.",
+      "options": {
+        "A": "Layer 1",
+        "B": "Layer 2",
+        "C": "Layer 3",
+        "D": "Layer 4"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A Switch operates at Layer 2 (Data Link) and uses MAC address tables to intelligently forward frames only to the intended destination port, unlike a hub which broadcasts to all ports."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0070",
+      "type": "mcq",
+      "stem": "A Router operates at which layer of the OSI model?",
+      "options": {
+        "A": "Layer 1",
+        "B": "Layer 2",
+        "C": "Layer 3",
+        "D": "Layer 4"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A Router operates at Layer 3 (Network) and makes forwarding decisions based on IP addresses in the packet header, enabling communication between different network segments."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0071",
+      "type": "mcq",
+      "stem": "In a bus topology, all devices share a common ______.",
+      "options": {
+        "A": "Router",
+        "B": "Backbone cable",
+        "C": "Switch",
+        "D": "Server"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In a bus topology, every device connects to a single shared backbone cable, through which all data transmissions travel."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0072",
+      "type": "mcq",
+      "stem": "Firewall software typically operates at OSI layers ______.",
+      "options": {
+        "A": "Layer 1 to Layer 3",
+        "B": "Layer 2 to Layer 4",
+        "C": "Layer 3 to Layer 7",
+        "D": "Only Layer 4"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Modern firewalls operate from Layer 3 (IP filtering) up to Layer 7 (application-aware inspection), inspecting packet headers, connection states, and even application-level content."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0073",
+      "type": "mcq",
+      "stem": "A Router forwards packets based on entries stored in its ______.",
+      "options": {
+        "A": "ARP cache",
+        "B": "MAC address table",
+        "C": "Routing table",
+        "D": "DHCP lease database"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A routing table contains entries for known networks, their associated next-hop addresses, and outgoing interfaces. The router performs a longest-prefix match to determine where to forward each packet."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0074",
+      "type": "mcq",
+      "stem": "A Stateful Firewall differs from a Stateless Firewall because it ______.",
+      "options": {
+        "A": "Uses hardware acceleration for faster packet filtering",
+        "B": "Tracks the state of active network connections",
+        "C": "Only filters traffic based on IP address ranges",
+        "D": "Operates exclusively at the Application layer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A stateful firewall maintains a state table of active connections and can make filtering decisions based on context (e.g., allowing return traffic for established connections), unlike stateless firewalls that evaluate each packet independently."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0075",
+      "type": "mcq",
+      "stem": "A Network Interface Card (NIC) operates at which OSI layers?",
+      "options": {
+        "A": "Layer 3 and Layer 4",
+        "B": "Layer 1 only",
+        "C": "Layer 1 and Layer 2",
+        "D": "Layer 2 and Layer 3"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A NIC operates at both the Physical layer (Layer 1 - encoding bits onto the medium) and the Data Link layer (Layer 2 - handling MAC addressing and frame construction/reading)."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0076",
+      "type": "mcq",
+      "stem": "An IPv4 address with the first 24 bits as the network portion and the last 8 bits as the host portion belongs to which class?",
+      "options": {
+        "A": "Class A (/8)",
+        "B": "Class B (/16)",
+        "C": "Class C (/24)",
+        "D": "Class D (/32)"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Class C networks have a default subnet mask of /24 (255.255.255.0), allocating 24 bits for the network ID and 8 bits for host addresses, supporting up to 254 usable hosts."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0077",
+      "type": "mcq",
+      "stem": "The limited broadcast IPv4 address is ______.",
+      "options": {
+        "A": "0.0.0.0",
+        "B": "127.0.0.1",
+        "C": "192.168.255.255",
+        "D": "255.255.255.255"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "255.255.255.255 is the limited (local) broadcast address. Packets sent to this address are delivered to all hosts on the local network segment but are not forwarded by routers."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0078",
+      "type": "mcq",
+      "stem": "Edge Computing improves performance by processing data ______.",
+      "options": {
+        "A": "In a central cloud data center",
+        "B": "On dedicated mainframe servers",
+        "C": "Closer to the source of data generation, reducing latency",
+        "D": "Through multiple redundant global servers"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Edge computing moves computation and data storage closer to where data is generated (e.g., IoT devices, local servers) rather than relying on a distant central cloud, significantly reducing latency."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0079",
+      "type": "mcq",
+      "stem": "SDN (Software-Defined Networking) centralizes network control by separating the data plane and ______.",
+      "options": {
+        "A": "Physical plane",
+        "B": "Management plane",
+        "C": "Control plane",
+        "D": "Application plane"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "SDN decouples the control plane (which makes routing/forwarding decisions) from the data plane (which actually forwards packets), allowing network-wide control from a centralized software controller."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0080",
+      "type": "mcq",
+      "stem": "Submarine cables that land in Lagos significantly improve ______.",
+      "options": {
+        "A": "Domestic mobile call quality",
+        "B": "International Internet connectivity in Nigeria",
+        "C": "Satellite TV signal strength",
+        "D": "Local FM radio broadcasting"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Submarine fiber optic cables (such as WACS, ACE, and MainOne) landing in Lagos provide Nigeria and West Africa with high-capacity, low-latency links to global Internet infrastructure."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0081",
+      "type": "mcq",
+      "stem": "DOCSIS is the standard used for providing broadband over ______ cable TV infrastructure.",
+      "options": {
+        "A": "Fiber optic",
+        "B": "Coaxial",
+        "C": "Twisted pair",
+        "D": "Microwave"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "DOCSIS (Data Over Cable Service Interface Specification) enables high-speed data transmission over the existing coaxial cable TV infrastructure used by cable Internet service providers."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0082",
+      "type": "mcq",
+      "stem": "Fiber optic cables are preferred over copper cables primarily because they offer ______.",
+      "options": {
+        "A": "Lower installation cost and easier termination",
+        "B": "Much higher bandwidth, lower attenuation, and immunity to electromagnetic interference",
+        "C": "Better performance over short distances only",
+        "D": "Simpler connector types and more flexibility"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Fiber optic cables transmit data as light pulses, giving them much higher bandwidth capacity, negligible signal loss over long distances, and complete immunity to EMI compared to copper cables."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0083",
+      "type": "mcq",
+      "stem": "ADSL is called 'asymmetric' because ______.",
+      "options": {
+        "A": "It uses different cables for upstream and downstream",
+        "B": "Download speed is faster than upload speed",
+        "C": "Upload speed is faster than download speed",
+        "D": "It supports both analog and digital simultaneously"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "ADSL (Asymmetric Digital Subscriber Line) is asymmetric because it allocates more bandwidth for downloading than uploading, matching typical consumer usage patterns where users download more than they upload."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0084",
+      "type": "mcq",
+      "stem": "Smart electricity meters (e.g., by Ikeja Electric) are an IoT example. Amazon provides IoT cloud services under ______.",
+      "options": {
+        "A": "Amazon IoT Hub",
+        "B": "AWS IoT Services",
+        "C": "Amazon Device Manager",
+        "D": "AWS Elastic IoT"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Amazon Web Services offers AWS IoT Services, a managed cloud platform that allows IoT devices to securely connect, interact, and send data to the cloud for processing and analysis."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0085",
+      "type": "mcq",
+      "stem": "Gmail and Google Workspace are examples of SaaS. WhatsApp Voice Call is an example of ______.",
+      "options": {
+        "A": "PaaS (Platform as a Service)",
+        "B": "IaaS (Infrastructure as a Service)",
+        "C": "VoIP (Voice over IP)",
+        "D": "SaaS (Software as a Service)"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "WhatsApp Voice Calls use VoIP technology, which transmits voice as digital packets over the Internet rather than over traditional circuit-switched telephone networks."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0086",
+      "type": "mcq",
+      "stem": "SIP is used to set up and manage VoIP sessions. Which protocol carries the actual voice packets during a VoIP call?",
+      "options": {
+        "A": "H.323",
+        "B": "SDP (Session Description Protocol)",
+        "C": "RTP (Real-time Transport Protocol)",
+        "D": "RTSP (Real-Time Streaming Protocol)"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "SIP (Session Initiation Protocol) handles call signaling - setting up, modifying, and terminating sessions. RTP (Real-time Transport Protocol) carries the actual encoded audio/video data during the call."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0087",
+      "type": "mcq",
+      "stem": "The RJ-45 connector has how many pins?",
+      "options": {
+        "A": "4 pins",
+        "B": "6 pins",
+        "C": "8 pins",
+        "D": "12 pins"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The RJ-45 connector has 8 pins (4 pairs of wires) and is the standard connector used for Ethernet networking with twisted-pair cables (Cat5e, Cat6, etc.)."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0088",
+      "type": "mcq",
+      "stem": "A crossover cable is traditionally used to directly connect ______.",
+      "options": {
+        "A": "A PC to a Switch",
+        "B": "A Switch to a Router",
+        "C": "PC to PC or Switch to Switch",
+        "D": "A Router to a Modem"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A crossover cable reverses the transmit and receive pairs, allowing direct connection between like devices (PC to PC, Switch to Switch) without a hub or switch in between. Modern devices with Auto-MDI/X detect cable type automatically."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0089",
+      "type": "mcq",
+      "stem": "The main purpose of a VLAN (Virtual LAN) is to ______.",
+      "options": {
+        "A": "Extend network range beyond building limits",
+        "B": "Increase wireless signal strength",
+        "C": "Isolate broadcast domains and segment networks logically",
+        "D": "Provide automatic IP address assignment"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "VLANs allow network administrators to logically segment a physical network into separate broadcast domains without requiring additional hardware, improving security, performance, and manageability."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0090",
+      "type": "mcq",
+      "stem": "A strong Wi-Fi password should be at least ______.",
+      "options": {
+        "A": "4 characters of numbers only",
+        "B": "6 characters of letters only",
+        "C": "8 characters combining letters, numbers, and symbols",
+        "D": "12 characters of lowercase letters"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A strong Wi-Fi password should be at least 8 characters long and use a mix of uppercase, lowercase letters, numbers, and symbols to resist brute-force and dictionary attacks."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0091",
+      "type": "mcq",
+      "stem": "The hidden node problem in a wireless network is commonly addressed using ______.",
+      "options": {
+        "A": "CSMA/CD (Carrier Sense Multiple Access with Collision Detection)",
+        "B": "FDMA (Frequency Division Multiple Access)",
+        "C": "RTS/CTS (Request to Send / Clear to Send)",
+        "D": "TDMA (Time Division Multiple Access)"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The hidden node problem occurs when two stations can both communicate with an access point but cannot sense each other. RTS/CTS solves this by reserving the medium before transmission, preventing collisions."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0092",
+      "type": "mcq",
+      "stem": "WEP is considered insecure. WPA2 improves wireless security by using ______.",
+      "options": {
+        "A": "DES (Data Encryption Standard)",
+        "B": "RC4 stream cipher",
+        "C": "AES (Advanced Encryption Standard)",
+        "D": "MD5 hashing"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "WPA2 uses AES (Advanced Encryption Standard) with CCMP (Counter Mode CBC-MAC Protocol), providing significantly stronger encryption than WEP's RC4 cipher, which is known to be completely broken."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0093",
+      "type": "mcq",
+      "stem": "MIMO improves Wi-Fi performance by using multiple antennas for ______.",
+      "options": {
+        "A": "Boosting a single signal path",
+        "B": "Simultaneous data streams (Spatial Multiplexing)",
+        "C": "Extending range by relaying signals",
+        "D": "Reducing interference from neighboring networks"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "MIMO (Multiple Input Multiple Output) uses multiple transmit and receive antennas to send and receive multiple data streams simultaneously via spatial multiplexing, significantly increasing wireless throughput and reliability."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0094",
+      "type": "mcq",
+      "stem": "A Personal Area Network (PAN) typically covers a range of ______.",
+      "options": {
+        "A": "10 meters",
+        "B": "100 meters",
+        "C": "1 kilometer",
+        "D": "10 kilometers"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A PAN (Personal Area Network) is the smallest network type, typically covering about 10 meters - enough to connect personal devices like phones, laptops, and Bluetooth peripherals around a single user."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0095",
+      "type": "mcq",
+      "stem": "In a Peer-to-Peer (P2P) network architecture, every device must have ______.",
+      "options": {
+        "A": "A dedicated server role only",
+        "B": "Both client and server capabilities",
+        "C": "A static IP address assigned by an administrator",
+        "D": "A direct connection to the Internet"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In a peer-to-peer architecture, there is no dedicated server. Every device can act as both a client (requesting resources) and a server (sharing resources), unlike a client-server model where roles are fixed."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0096",
+      "type": "mcq",
+      "stem": "The formula for calculating the wavelength (λ) of a signal is ______.",
+      "options": {
+        "A": "λ = v × f",
+        "B": "λ = v / f",
+        "C": "λ = f / v",
+        "D": "λ = v + f"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Wavelength (λ) equals the propagation velocity (v) divided by frequency (f): λ = v/f. For example, a radio wave at 300 MHz travelling at the speed of light has a wavelength of 1 meter."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0097",
+      "type": "mcq",
+      "stem": "A standard telephone voice channel has an approximate bandwidth of ______.",
+      "options": {
+        "A": "300 Hz",
+        "B": "1000 Hz",
+        "C": "3000 Hz",
+        "D": "8000 Hz"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The public switched telephone network (PSTN) allocates approximately 3000 Hz (300-3400 Hz) of bandwidth per voice channel - sufficient to carry intelligible human speech."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0098",
+      "type": "mcq",
+      "stem": "The reduction in signal strength as it travels along a transmission medium is called ______.",
+      "options": {
+        "A": "Jitter",
+        "B": "Dispersion",
+        "C": "Attenuation",
+        "D": "Crosstalk"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Attenuation is the gradual loss of signal power over distance due to resistance, scattering, or absorption in the medium. It is measured in decibels (dB) and requires repeaters or amplifiers to counteract over long distances."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0099",
+      "type": "mcq",
+      "stem": "In networking, 'Jitter' refers to ______.",
+      "options": {
+        "A": "The total delay from sender to receiver",
+        "B": "Signal strength loss over distance",
+        "C": "Variation in packet arrival time",
+        "D": "Corruption of data bits during transmission"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Jitter is the inconsistency in the timing of packet arrivals. It is especially problematic for real-time applications like VoIP and video conferencing, where uneven packet delivery degrades audio/video quality."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0100",
+      "type": "mcq",
+      "stem": "Signal distortion caused by different frequency components of a signal travelling at different speeds through a medium is known as ______.",
+      "options": {
+        "A": "Attenuation",
+        "B": "Jitter",
+        "C": "Crosstalk",
+        "D": "Dispersion"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Dispersion occurs when different frequency components of a signal travel at slightly different speeds, causing the signal to spread and distort over distance. It is a key limiting factor in fiber optic and high-frequency copper transmission."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0101",
+      "type": "mcq",
+      "stem": "Manchester Encoding is primarily used in which Ethernet standard?",
+      "options": {
+        "A": "100BASE-TX",
+        "B": "10BASE-T",
+        "C": "1000BASE-T",
+        "D": "10GBASE-SR"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Manchester Encoding is used in 10BASE-T (10 Mbps Ethernet). It encodes each bit as a transition - a high-to-low transition for '0' and low-to-high for '1' - which also carries a clock signal within the data."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0102",
+      "type": "mcq",
+      "stem": "Between AM (Amplitude Modulation) and FM (Frequency Modulation), which is more resistant to noise?",
+      "options": {
+        "A": "AM, because it uses stronger signals",
+        "B": "FM, because noise primarily affects amplitude",
+        "C": "Both are equally resistant",
+        "D": "AM, because frequency changes are harder to detect"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "FM is more resilient to noise because most electrical noise affects the amplitude of a signal. Since FM encodes information in frequency changes rather than amplitude, it is largely unaffected by amplitude-based noise interference."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0103",
+      "type": "mcq",
+      "stem": "The standard bit rate of a single digitized telephone voice channel is ______.",
+      "options": {
+        "A": "8 kbps",
+        "B": "32 kbps",
+        "C": "64 kbps",
+        "D": "128 kbps"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A single digital telephone channel is sampled 8,000 times per second, with each sample encoded as 8 bits. This gives a bit rate of 8,000 × 8 = 64,000 bps (64 kbps), the basis of the G.711 codec and DS0 channel."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0104",
+      "type": "mcq",
+      "stem": "The three steps of Pulse Code Modulation (PCM) are ______.",
+      "options": {
+        "A": "Filtering, Amplifying, and Transmitting",
+        "B": "Sampling, Quantization, and Encoding",
+        "C": "Modulating, Multiplexing, and Routing",
+        "D": "Digitizing, Compressing, and Encrypting"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "PCM converts analog signals to digital in three stages: Sampling (measuring the analog signal at regular intervals), Quantization (mapping each sample to the nearest discrete amplitude level), and Encoding (representing each quantized value as a binary number)."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0105",
+      "type": "mcq",
+      "stem": "At a data rate of 100 Mbps, how many bits are transmitted in 1 microsecond?",
+      "options": {
+        "A": "10 bits",
+        "B": "100 bits",
+        "C": "1,000 bits",
+        "D": "10,000 bits"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "100 Mbps = 100,000,000 bits per second. In 1 microsecond (1 × 10⁻⁶ seconds): 100,000,000 × 0.000001 = 100 bits are transmitted. This calculation is important for understanding propagation delay and buffer sizing."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0106",
+      "type": "mcq",
+      "stem": "In a CSMA/CD network, when a collision is detected, the transmitting device must ______.",
+      "options": {
+        "A": "Immediately retransmit the lost frame",
+        "B": "Send a jam signal and then abort transmission",
+        "C": "Switch to half-duplex mode permanently",
+        "D": "Request a token before retransmitting"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "When a collision is detected in CSMA/CD, the device sends a jam signal to notify all nodes of the collision, then aborts transmission. Each device waits a random back-off time before attempting to retransmit."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0107",
+      "type": "mcq",
+      "stem": "CSMA/CD is used to manage access on shared coaxial (bus) networks, whereas Wi-Fi networks use ______.",
+      "options": {
+        "A": "CSMA/CD",
+        "B": "TDMA",
+        "C": "CSMA/CA",
+        "D": "FDMA"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Wi-Fi (IEEE 802.11) uses CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) instead of CSMA/CD because collisions cannot be reliably detected on wireless media. CA attempts to avoid collisions before they occur."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0108",
+      "type": "mcq",
+      "stem": "Compared to UTP (Unshielded Twisted Pair), STP (Shielded Twisted Pair) cable provides ______.",
+      "options": {
+        "A": "Lower cost and easier installation",
+        "B": "Better protection against electromagnetic noise",
+        "C": "Higher maximum transmission distance",
+        "D": "Faster data rates at all distances"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "STP cable surrounds each pair of wires (or all pairs) with metallic shielding, significantly reducing electromagnetic interference (EMI) and crosstalk compared to unshielded UTP, making it suitable for electrically noisy environments."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0109",
+      "type": "mcq",
+      "stem": "A Cat 6 (Category 6) cable can support data speeds of up to ______.",
+      "options": {
+        "A": "100 Mbps over 100 meters",
+        "B": "1 Gbps over 100 meters and 10 Gbps over short distances",
+        "C": "10 Gbps over 100 meters",
+        "D": "40 Gbps over short distances"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cat 6 cable supports Gigabit Ethernet (1 Gbps) over the standard 100-meter segment length, and can achieve 10 Gbps over shorter distances (up to ~55 meters), making it a common choice for modern LAN installations."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0110",
+      "type": "mcq",
+      "stem": "The maximum recommended segment length for Ethernet over UTP (Twisted Pair) cable is ______.",
+      "options": {
+        "A": "50 meters",
+        "B": "100 meters",
+        "C": "185 meters",
+        "D": "500 meters"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The IEEE 802.3 standard specifies a maximum segment length of 100 meters for Ethernet over UTP (Cat5e, Cat6, etc.). Beyond this, signal attenuation causes errors, requiring a switch or repeater to extend the network."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0111",
+      "type": "mcq",
+      "stem": "RG6 coaxial cable is most commonly used for ______.",
+      "options": {
+        "A": "Backbone connections between data center switches",
+        "B": "Cable TV and broadband internet connections",
+        "C": "Connecting workstations to network switches",
+        "D": "Telephone subscriber line connections"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RG6 is the standard coaxial cable used for cable television (CATV) distribution and broadband internet (DOCSIS) services. Its 75-ohm impedance and low signal loss characteristics suit the higher frequencies used in these applications."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0112",
+      "type": "mcq",
+      "stem": "The first 24 bits of a MAC address, known as the OUI, identify the ______.",
+      "options": {
+        "A": "Device's unique serial number",
+        "B": "Network the device is connected to",
+        "C": "Manufacturer of the network interface",
+        "D": "Operating system installed on the device"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The OUI (Organizationally Unique Identifier) is the first 24 bits (3 bytes) of a MAC address and is assigned by the IEEE to identify the manufacturer of the NIC. The remaining 24 bits are a unique device identifier assigned by that manufacturer."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0113",
+      "type": "mcq",
+      "stem": "The Ethernet broadcast MAC address is ______.",
+      "options": {
+        "A": "00:00:00:00:00:00",
+        "B": "FF:FF:FF:FF:FF:FF",
+        "C": "127.0.0.1",
+        "D": "255.255.255.255"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "FF:FF:FF:FF:FF:FF is the Layer 2 broadcast MAC address. A frame sent to this address is delivered to all devices on the local network segment, used by protocols such as ARP to discover MAC addresses."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0114",
+      "type": "mcq",
+      "stem": "A Load Balancer typically operates at which OSI layers?",
+      "options": {
+        "A": "Layer 1 and Layer 2",
+        "B": "Layer 2 and Layer 3",
+        "C": "Layer 4 and Layer 7",
+        "D": "Layer 3 and Layer 4"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Load balancers distribute incoming network traffic across multiple servers. Layer 4 load balancers operate on TCP/UDP port information, while Layer 7 load balancers make decisions based on application-level content (e.g., HTTP headers, URL paths)."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0115",
+      "type": "mcq",
+      "stem": "An ONT (Optical Network Terminal) is used to ______.",
+      "options": {
+        "A": "Convert microwave signals to Ethernet",
+        "B": "Terminate fiber optic connections at a home or business",
+        "C": "Manage wireless access point configurations",
+        "D": "Route packets between different IP subnets"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An ONT (Optical Network Terminal) is the device installed at a customer's premises to convert optical fiber signals into electrical signals (Ethernet, phone, TV) for use by home equipment in fiber-to-the-home (FTTH) deployments."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0116",
+      "type": "mcq",
+      "stem": "The term 'MODEM' is derived from ______.",
+      "options": {
+        "A": "Modular-Demodular",
+        "B": "Modulator-Demodulator",
+        "C": "Mobile-Demobile",
+        "D": "Monitor-Decoder"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "MODEM is a portmanteau of Modulator-Demodulator. It modulates digital data into analog signals for transmission over analog lines (e.g., telephone or cable) and demodulates incoming analog signals back into digital data."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0117",
+      "type": "mcq",
+      "stem": "The G.711 voice codec produces a standard bit rate of ______.",
+      "options": {
+        "A": "8 kbps",
+        "B": "32 kbps",
+        "C": "64 kbps",
+        "D": "128 kbps"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "G.711 is the ITU-T standard codec for digitizing telephone-quality audio. It samples voice at 8,000 Hz with 8-bit resolution, producing an uncompressed bit rate of 64 kbps - the same as a standard DS0 channel."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0118",
+      "type": "mcq",
+      "stem": "A cable tester is a networking tool used to ______.",
+      "options": {
+        "A": "Measure the signal strength of a Wi-Fi access point",
+        "B": "Verify wire continuity and correct pin-out sequence in a cable",
+        "C": "Monitor bandwidth utilization across a network switch",
+        "D": "Detect IP address conflicts on a local network"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A cable tester sends signals through each wire in a cable and confirms that all conductors are intact, properly connected, and correctly sequenced according to the wiring standard (e.g., T568A or T568B for RJ-45). It helps identify faults like opens, shorts, and miswires."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0119",
+      "type": "mcq",
+      "stem": "A computer network is best defined as ______.",
+      "options": {
+        "A": "A single computer system",
+        "B": "Two or more interconnected computers that share resources",
+        "C": "A software package",
+        "D": "A database system"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A computer network consists of two or more interconnected computing devices that can communicate with one another and share resources such as files, printers, and internet access."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0120",
+      "type": "mcq",
+      "stem": "Which of the following is NOT an advantage of networking?",
+      "options": {
+        "A": "Resource sharing",
+        "B": "Communication efficiency",
+        "C": "Increased isolation of computers",
+        "D": "Centralized data management"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Networking connects computers together so they can share resources and communicate efficiently; it reduces isolation rather than increasing it, making 'increased isolation' the opposite of a networking benefit."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0121",
+      "type": "mcq",
+      "stem": "The sharing of printers, files, and internet access among connected computers is known as ______.",
+      "options": {
+        "A": "Multiplexing",
+        "B": "Networking",
+        "C": "Routing",
+        "D": "Encryption"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Networking is the practice of connecting computers so they can share hardware resources (like printers), files, and internet access among multiple users."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0122",
+      "type": "mcq",
+      "stem": "What does LAN stand for?",
+      "options": {
+        "A": "Large Area Network",
+        "B": "Local Area Network",
+        "C": "Long Access Network",
+        "D": "Linked Area Network"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "LAN stands for Local Area Network, a network confined to a small geographic area such as a single building, office, or home."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0123",
+      "type": "mcq",
+      "stem": "What does WAN stand for?",
+      "options": {
+        "A": "Wireless Area Network",
+        "B": "Wide Area Network",
+        "C": "Web Access Network",
+        "D": "World Area Network"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "WAN stands for Wide Area Network, a network that spans large geographic areas, often connecting multiple cities or countries, with the Internet being the largest example."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0124",
+      "type": "mcq",
+      "stem": "Which network type covers the largest geographical area?",
+      "options": {
+        "A": "PAN",
+        "B": "LAN",
+        "C": "MAN",
+        "D": "WAN"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "A WAN (Wide Area Network) covers the broadest geographic area among network types, often spanning cities, countries, or continents, unlike the more localized PAN, LAN, and MAN."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0125",
+      "type": "mcq",
+      "stem": "What does MAN stand for?",
+      "options": {
+        "A": "Metropolitan Area Network",
+        "B": "Multiple Area Network",
+        "C": "Main Area Network",
+        "D": "Mobile Area Network"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "MAN stands for Metropolitan Area Network, a network that spans a city or large urban area, larger than a LAN but smaller than a WAN."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0126",
+      "type": "mcq",
+      "stem": "A network topology refers to the ______.",
+      "options": {
+        "A": "Physical or logical arrangement of network devices",
+        "B": "Speed of a network",
+        "C": "Network protocol",
+        "D": "Transmission medium"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Topology describes how devices and connections are physically laid out or logically arranged within a network, such as in star, bus, ring, or mesh configurations."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0127",
+      "type": "mcq",
+      "stem": "Which topology is considered most fault tolerant because every node has multiple paths to other nodes?",
+      "options": {
+        "A": "Bus",
+        "B": "Ring",
+        "C": "Mesh",
+        "D": "Star"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In a mesh topology, each node connects to multiple other nodes, providing redundant paths. If one link fails, data can still be routed through an alternative path, making it highly fault tolerant."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0128",
+      "type": "mcq",
+      "stem": "Which topology passes data in a circular manner?",
+      "options": {
+        "A": "Star",
+        "B": "Ring",
+        "C": "Tree",
+        "D": "Mesh"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In a ring topology, each device connects to exactly two neighboring devices, forming a closed loop, and data travels around the ring in a circular path from one device to the next."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0129",
+      "type": "mcq",
+      "stem": "A router is primarily used to ______.",
+      "options": {
+        "A": "Amplify signals",
+        "B": "Connect different networks",
+        "C": "Store files",
+        "D": "Print documents"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A router's primary function is to connect separate networks together and forward data packets between them based on IP addressing, enabling communication across different networks such as a LAN and the Internet."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0130",
+      "type": "mcq",
+      "stem": "Which device forwards frames based on MAC addresses?",
+      "options": {
+        "A": "Hub",
+        "B": "Repeater",
+        "C": "Switch",
+        "D": "Modem"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A switch examines the MAC address in each incoming frame and uses its MAC address table to forward the frame only to the port connected to the intended destination device."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0131",
+      "type": "mcq",
+      "stem": "A repeater is used to ______.",
+      "options": {
+        "A": "Regenerate weak signals",
+        "B": "Assign IP addresses",
+        "C": "Encrypt data",
+        "D": "Route packets"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A repeater amplifies and regenerates weak or degraded signals, allowing them to travel farther along a network without loss of data integrity caused by attenuation."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0132",
+      "type": "mcq",
+      "stem": "A modem converts ______.",
+      "options": {
+        "A": "Analog and digital signals",
+        "B": "Images to text",
+        "C": "Data to information",
+        "D": "IP to MAC"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A modem (modulator-demodulator) converts digital signals from a computer into analog signals for transmission over analog lines, and converts incoming analog signals back into digital data."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0133",
+      "type": "mcq",
+      "stem": "Which device broadcasts data to all connected ports?",
+      "options": {
+        "A": "Router",
+        "B": "Hub",
+        "C": "Gateway",
+        "D": "Firewall"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A hub operates at the Physical layer and simply repeats incoming data out to all of its connected ports, regardless of the intended destination, unlike a switch which forwards selectively."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0134",
+      "type": "mcq",
+      "stem": "What does OSI stand for?",
+      "options": {
+        "A": "Open Systems Interconnection",
+        "B": "Online System Interface",
+        "C": "Open Service Integration",
+        "D": "Operating System Interface"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "OSI stands for Open Systems Interconnection, a conceptual framework that standardizes how different network systems communicate through seven distinct layers."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0135",
+      "type": "mcq",
+      "stem": "Which OSI layer handles routing?",
+      "options": {
+        "A": "Network Layer",
+        "B": "Session Layer",
+        "C": "Transport Layer",
+        "D": "Physical Layer"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Network layer (Layer 3) is responsible for logical addressing and routing, determining the best path for packets to travel from source to destination across interconnected networks."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0136",
+      "type": "mcq",
+      "stem": "Which OSI layer is responsible for framing and MAC addressing?",
+      "options": {
+        "A": "Application Layer",
+        "B": "Data Link Layer",
+        "C": "Session Layer",
+        "D": "Presentation Layer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Data Link layer (Layer 2) packages data into frames and handles MAC addressing, enabling reliable node-to-node delivery across a physical network segment."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0137",
+      "type": "mcq",
+      "stem": "Which OSI layer is responsible for encryption and compression?",
+      "options": {
+        "A": "Presentation Layer",
+        "B": "Physical Layer",
+        "C": "Network Layer",
+        "D": "Data Link Layer"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Presentation layer (Layer 6) translates, encrypts, and compresses data, ensuring it is presented in a format that the Application layer of the receiving system can understand."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0138",
+      "type": "mcq",
+      "stem": "Which OSI layer provides services directly to the user?",
+      "options": {
+        "A": "Application Layer",
+        "B": "Session Layer",
+        "C": "Transport Layer",
+        "D": "Network Layer"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Application layer (Layer 7) is the topmost OSI layer and is the one that directly interfaces with end-user applications such as web browsers and email clients."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0139",
+      "type": "mcq",
+      "stem": "What does TCP/IP stand for?",
+      "options": {
+        "A": "Transmission Control Protocol/Internet Protocol",
+        "B": "Transfer Communication Process/Internet Program",
+        "C": "Technical Communication Protocol/Internet Procedure",
+        "D": "Transfer Control Program/Internet Process"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "TCP/IP stands for Transmission Control Protocol/Internet Protocol, the foundational suite of communication protocols used to interconnect network devices on the Internet."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0140",
+      "type": "mcq",
+      "stem": "Which protocol provides reliable data delivery?",
+      "options": {
+        "A": "UDP",
+        "B": "TCP",
+        "C": "DNS",
+        "D": "FTP"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "TCP (Transmission Control Protocol) provides reliable, ordered, and error-checked delivery of data through connection establishment, acknowledgments, and retransmission of lost segments."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0141",
+      "type": "mcq",
+      "stem": "What does IP stand for?",
+      "options": {
+        "A": "Internet Protocol",
+        "B": "Internal Process",
+        "C": "Internet Program",
+        "D": "Internal Protocol"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "IP stands for Internet Protocol, the principal set of rules for addressing and routing data packets so they can travel across networks and reach the correct destination."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0142",
+      "type": "mcq",
+      "stem": "Which protocol is connectionless?",
+      "options": {
+        "A": "TCP",
+        "B": "UDP",
+        "C": "FTP",
+        "D": "HTTP"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "UDP (User Datagram Protocol) is connectionless, meaning it sends data without establishing a prior connection or guaranteeing delivery, which makes it faster but less reliable than TCP."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0143",
+      "type": "mcq",
+      "stem": "Which IP address class is primarily designed for very large networks?",
+      "options": {
+        "A": "Class A",
+        "B": "Class B",
+        "C": "Class C",
+        "D": "Class D"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Class A addresses reserve only the first 8 bits for the network portion, leaving 24 bits for host addresses, allowing for an extremely large number of hosts - making it suited for very large networks."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0144",
+      "type": "mcq",
+      "stem": "Which address uniquely identifies a network interface card (NIC)?",
+      "options": {
+        "A": "IP Address",
+        "B": "MAC Address",
+        "C": "URL",
+        "D": "Domain Name"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A MAC (Media Access Control) address is a unique hardware identifier burned into a network interface card by its manufacturer, distinguishing it from every other NIC."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0145",
+      "type": "mcq",
+      "stem": "What does MAC stand for?",
+      "options": {
+        "A": "Media Access Control",
+        "B": "Multiple Access Communication",
+        "C": "Main Area Connection",
+        "D": "Media Application Control"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "MAC stands for Media Access Control, referring to the unique hardware address assigned to network interfaces for identification at the Data Link layer."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0146",
+      "type": "mcq",
+      "stem": "Which of the following is a logical address?",
+      "options": {
+        "A": "MAC Address",
+        "B": "Physical Address",
+        "C": "IP Address",
+        "D": "NIC Address"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "An IP address is a logical address that can be reassigned or changed depending on network configuration, unlike a MAC address, which is a fixed physical address tied to the hardware."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0147",
+      "type": "mcq",
+      "stem": "Which transmission medium uses light for communication?",
+      "options": {
+        "A": "Twisted Pair Cable",
+        "B": "Coaxial Cable",
+        "C": "Fiber Optic Cable",
+        "D": "Telephone Cable"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Fiber optic cable transmits data as pulses of light through a glass or plastic core, rather than using electrical signals as copper-based cables do."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0148",
+      "type": "mcq",
+      "stem": "Radio waves, microwaves, and infrared are examples of ______.",
+      "options": {
+        "A": "Guided Media",
+        "B": "Unguided Media",
+        "C": "Wired Media",
+        "D": "Optical Media"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Radio waves, microwaves, and infrared travel through free space without a physical conductor, classifying them as unguided (wireless) transmission media, as opposed to guided media like copper or fiber cables."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0149",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a component of data communication?",
+      "options": {
+        "A": "Sender",
+        "B": "Receiver",
+        "C": "Protocol",
+        "D": "Compiler"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The essential components of data communication are the sender, receiver, message, transmission medium, and protocol. A compiler is a programming tool unrelated to the transmission of data over a network."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0150",
+      "type": "mcq",
+      "stem": "Communication in only one direction is known as ______.",
+      "options": {
+        "A": "Full Duplex",
+        "B": "Half Duplex",
+        "C": "Simplex",
+        "D": "Multiplex"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Simplex communication allows data to flow in only one direction, with one device acting solely as a sender and the other solely as a receiver, such as in a traditional radio or TV broadcast."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0151",
+      "type": "mcq",
+      "stem": "Walkie-talkies are an example of which mode of communication?",
+      "options": {
+        "A": "Simplex Communication",
+        "B": "Half-Duplex Communication",
+        "C": "Full-Duplex Communication",
+        "D": "Broadcast Communication"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Walkie-talkies allow communication in both directions, but not simultaneously - only one party can transmit at a time while the other listens, which is the defining characteristic of half-duplex communication."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0152",
+      "type": "mcq",
+      "stem": "Telephone conversations operate in which mode?",
+      "options": {
+        "A": "Simplex",
+        "B": "Half Duplex",
+        "C": "Full Duplex",
+        "D": "Packet Duplex"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A telephone call allows both parties to speak and listen at the same time, which is the defining feature of full-duplex communication."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0153",
+      "type": "mcq",
+      "stem": "What does HTTP stand for?",
+      "options": {
+        "A": "HyperText Transfer Protocol",
+        "B": "Hyper Transfer Text Process",
+        "C": "High Text Transfer Protocol",
+        "D": "Hyper Technical Transfer Protocol"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "HTTP stands for HyperText Transfer Protocol, the application-layer protocol used for transmitting hypertext (web pages) between web servers and browsers."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0154",
+      "type": "mcq",
+      "stem": "What does DNS stand for?",
+      "options": {
+        "A": "Data Naming System",
+        "B": "Domain Name System",
+        "C": "Digital Network Service",
+        "D": "Domain Network Structure"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "DNS stands for Domain Name System, the service responsible for translating human-readable domain names (like example.com) into numeric IP addresses that computers use to identify each other."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0155",
+      "type": "mcq",
+      "stem": "Which protocol automatically assigns IP addresses to devices on a network?",
+      "options": {
+        "A": "FTP",
+        "B": "SMTP",
+        "C": "DHCP",
+        "D": "DNS"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "DHCP (Dynamic Host Configuration Protocol) automatically assigns IP addresses and other network configuration details to devices when they join a network, eliminating the need for manual configuration."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0156",
+      "type": "mcq",
+      "stem": "What does SMTP stand for?",
+      "options": {
+        "A": "Secure Mail Transfer Protocol",
+        "B": "Simple Mail Transfer Protocol",
+        "C": "Standard Mail Transfer Process",
+        "D": "System Mail Transfer Protocol"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "SMTP stands for Simple Mail Transfer Protocol, the standard protocol used for sending email messages between mail servers across a network."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0157",
+      "type": "mcq",
+      "stem": "ETL stands for ______.",
+      "options": {
+        "A": "Extract, Transform, Load",
+        "B": "Extract, Transfer, Load",
+        "C": "Enter, Transform, Load",
+        "D": "Execute, Transfer, Link"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "ETL stands for Extract, Transform, Load - a data integration process used to collect data from various sources, convert it into a usable format, and store it in a target system such as a data warehouse."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0158",
+      "type": "mcq",
+      "stem": "Which ETL stage involves collecting data from various sources?",
+      "options": {
+        "A": "Extract",
+        "B": "Transform",
+        "C": "Load",
+        "D": "Store"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Extract stage of ETL involves retrieving raw data from one or more source systems, such as databases, files, or APIs, before any processing takes place."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0159",
+      "type": "mcq",
+      "stem": "Which ETL stage involves cleaning and formatting data?",
+      "options": {
+        "A": "Extract",
+        "B": "Transform",
+        "C": "Load",
+        "D": "Retrieve"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Transform stage of ETL cleans, validates, and reformats extracted data so that it conforms to the structure and quality standards required by the destination system."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0160",
+      "type": "mcq",
+      "stem": "Which ETL stage places processed data into a database or data warehouse?",
+      "options": {
+        "A": "Extract",
+        "B": "Transform",
+        "C": "Load",
+        "D": "Encrypt"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Load stage of ETL is the final step, where the cleaned and transformed data is written into the target database or data warehouse for storage and analysis."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0161",
+      "type": "mcq",
+      "stem": "What does VPN stand for?",
+      "options": {
+        "A": "Virtual Public Network",
+        "B": "Visual Private Network",
+        "C": "Virtual Private Network",
+        "D": "Verified Private Network"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "VPN stands for Virtual Private Network, a technology that creates a secure, encrypted connection over a public network, allowing users to access resources privately as though on a local network."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0162",
+      "type": "mcq",
+      "stem": "A firewall is primarily used for ______.",
+      "options": {
+        "A": "Data Entry",
+        "B": "Signal Conversion",
+        "C": "Network Security",
+        "D": "Data Storage"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A firewall is a security device or software that monitors and filters incoming and outgoing network traffic based on predetermined security rules, protecting a network from unauthorized access and threats."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0163",
+      "type": "mcq",
+      "stem": "Which malicious software can replicate itself without attaching to another program?",
+      "options": {
+        "A": "Virus",
+        "B": "Worm",
+        "C": "Firewall",
+        "D": "Router"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A worm is a standalone type of malware that can self-replicate and spread across networks independently, without needing to attach itself to a host program, unlike a virus."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0164",
+      "type": "mcq",
+      "stem": "Which wireless technology is commonly used for short-range communication between devices?",
+      "options": {
+        "A": "Bluetooth",
+        "B": "Fiber Optic",
+        "C": "Coaxial Cable",
+        "D": "Ethernet"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Bluetooth is a wireless technology designed for short-range communication, typically within about 10 meters, commonly used to connect peripherals like headphones, keyboards, and mobile devices."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0165",
+      "type": "mcq",
+      "stem": "Wi-Fi is mainly used for ______.",
+      "options": {
+        "A": "Wired Communication",
+        "B": "Wireless Network Access",
+        "C": "Data Encryption",
+        "D": "Signal Amplification"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Wi-Fi is a wireless networking technology that allows devices to connect to a local network and the Internet without the need for physical cables."
+    },
+    {
+      "id": "uni-tasued-csc124-bank-0166",
+      "type": "mcq",
+      "stem": "Which of the following protocols is mainly used for transferring files over a network?",
+      "options": {
+        "A": "FTP",
+        "B": "DNS",
+        "C": "DHCP",
+        "D": "SMTP"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "FTP (File Transfer Protocol) is specifically designed for uploading and downloading files between a client and a server over a network."
+    }
+  ]
+}

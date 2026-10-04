@@ -1,0 +1,1005 @@
+{
+ "code": "uni-uniosun-mth101-bank",
+ "title": "UNIOSUN MTH 101 | Course Question Bank",
+ "version": 1,
+ "questionCount": 71,
+ "totalMarks": 71,
+ "questions": [
+  {
+   "id": "uni-uniosun-mth101-bank-0001",
+   "type": "mcq",
+   "stem": "If A is a subset of a universal set U, the compliment of set A is given as:",
+   "options": {
+    "A": "U",
+    "B": "U - A",
+    "C": "U + B",
+    "D": "U - B"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0002",
+   "type": "mcq",
+   "stem": "The set statement (A ∪ B) ∩ C = A ∪ (B ∩)C is relevant to",
+   "options": {
+    "A": "Associative Law",
+    "B": "Cummulative lowa",
+    "C": "Distributibe Law",
+    "D": "Closure"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0003",
+   "type": "mcq",
+   "stem": "If U = (Integers < 20); D = {multiples of 4}; E = {multiples of 3}, the element of D/ ∩ E are",
+   "options": {
+    "A": "{1,2}",
+    "B": "{3,6,9,15,18}",
+    "C": "{4,8,16,20}",
+    "D": "{3,6,9,.12,15,18}"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0004",
+   "type": "mcq",
+   "stem": "The notation A - B is equivalent to",
+   "options": {
+    "A": "A ∪ Bc",
+    "B": "A ∪ B",
+    "C": "A ∩ B",
+    "D": "A ∩ Bc"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0005",
+   "type": "mcq",
+   "stem": "The number of distinct elements found in a given set is called",
+   "options": {
+    "A": "Power set of a set",
+    "B": "Order of a set",
+    "C": "Power of a cardinality",
+    "D": "Cardinality of a power set"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0006",
+   "type": "mcq",
+   "stem": "If two sets A and B are subsets of a universal set, then the notation n(A ∪ B) is equal to",
+   "options": {
+    "A": "n(A) + n(B)",
+    "B": "n(A) + n( + n(A ∪ B) - n(A ∩ B)",
+    "C": "- n(A ∪ B) n(A) + n(",
+    "D": "n(A) + n("
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0007",
+   "type": "mcq",
+   "stem": "How many study only zoology?",
+   "options": {
+    "A": "12",
+    "B": "10",
+    "C": "0",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0008",
+   "type": "mcq",
+   "stem": "How many study non of the three courses?",
+   "options": {
+    "A": "12",
+    "B": "10",
+    "C": "0",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0009",
+   "type": "mcq",
+   "stem": "How many study the Zoology and Botany?",
+   "options": {
+    "A": "12",
+    "B": "10",
+    "C": "0",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0010",
+   "type": "mcq",
+   "stem": "How many students swim only?",
+   "options": {
+    "A": "6",
+    "B": "2",
+    "C": "9",
+    "D": "20"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0011",
+   "type": "mcq",
+   "stem": "How many students play lawn tennis only?",
+   "options": {
+    "A": "6",
+    "B": "2",
+    "C": "9",
+    "D": "20"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0012",
+   "type": "mcq",
+   "stem": "How many students are in the group?",
+   "options": {
+    "A": "6",
+    "B": "2",
+    "C": "9",
+    "D": "20"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0013",
+   "type": "mcq",
+   "stem": "In a group of 40students, 22 study Maths, 18 study physics, 14 study statistics, 9 study both Maths and Physics, 7 study both Maths and Statistics, 5 study both Physics and Statistics and 2 study all the subjects. How many study none of the subjects?",
+   "options": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0014",
+   "type": "mcq",
+   "stem": "Find the square root of",
+   "options": {
+    "A": "0.8424",
+    "B": "1.8424",
+    "C": "1.8244",
+    "D": "0.8244"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0015",
+   "type": "mcq",
+   "stem": "Find the roots of the equation: x3 + 5x2 - 2x - 24",
+   "options": {
+    "A": "-4,3,2",
+    "B": "-4,-3,-2",
+    "C": "-4,-3,2",
+    "D": "4,3,-2"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0016",
+   "type": "mcq",
+   "stem": "The value of k in",
+   "options": {
+    "A": "9",
+    "B": "10",
+    "C": "11",
+    "D": "12"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0017",
+   "type": "mcq",
+   "stem": "Solve for x in the equation 163x = 1 (32)x-1 4",
+   "options": {
+    "A": "1",
+    "B": "2",
+    "C": "-2",
+    "D": "-1"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0018",
+   "type": "mcq",
+   "stem": "Simplify (216)-1⁄3 × (0.16)-1⁄2",
+   "options": {
+    "A": "12/17",
+    "B": "5/13",
+    "C": "12/15",
+    "D": "5/12"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0019",
+   "type": "mcq",
+   "stem": "OBJECTIVE CBT QUESTIONS ON SET THEORY (MTH 101) BY OPRALD TUTORIAL CENTRE 08132588623 In a survey of 60 students, 60 study botany, 50 zoology and 48 biology. If 38 students study botany, zoology and biology, Use the information above to answer questions 8 & 9 In a particular group of students during a school’s sports competition, 15 play lawn tennis, 11 swim, 9 play lawn tennis and swim and 3 none of the sport activities is 27. Given that y = 3x, and 3x-y =",
+   "options": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0020",
+   "type": "mcq",
+   "stem": "If P = {prime factors of 84} and Q = {prime factors of 315}, the elements of P U Q & P ∩ Q are respectively",
+   "options": {
+    "A": "{3,4,5,7,9 & {3,7}",
+    "B": "{3,4,5,7} & {5,7}",
+    "C": "{2,3,5,7} & {3,7}",
+    "D": "{2,3,5,7} & {2,7}"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0021",
+   "type": "mcq",
+   "stem": "In a class of 100 students, 40 students study botany, 32 study microbiology while 44 study zoology. The number of students that study botany and microbiology is 24, botany and zoology is 24, while 20 study microbiology and zoology. If 20 students study all the three subjects, how many study none of the three courses",
+   "options": {
+    "A": "32",
+    "B": "42",
+    "C": "68",
+    "D": "24"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0022",
+   "type": "mcq",
+   "stem": "The word “Infinity” is",
+   "options": {
+    "A": "a real number",
+    "B": "a complex number",
+    "C": "an integer number",
+    "D": "constant"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0023",
+   "type": "mcq",
+   "stem": "The universal set U contains only elements of the sets A, B, C where A = {3,q,r}, B = {a,2,c} and C = {1,3,4,b}. what are the elements in [(A - B) ∩ {C - (A ∩ C)’}]",
+   "options": {
+    "A": "{3,q,r}",
+    "B": "{q,r}",
+    "C": "{3}",
+    "D": "{3,1}"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0024",
+   "type": "mcq",
+   "stem": "In a certain class, 22 pupils take one or more of Chemistry, Economics and Government. 12 take Economics €, 8 take Government (G) and 7 take Chemistry (C). Nobody takes Economics and Chemistry and 4 pupils take Economics and Government. How many pupils take both Chemistry and Government?",
+   "options": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0025",
+   "type": "mcq",
+   "stem": "The universal set U has subsets M and N such that M ⊆ N. The set of M ∩ (M ∩ N)/ is",
+   "options": {
+    "A": "M",
+    "B": "∅",
+    "C": "N",
+    "D": "U"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0026",
+   "type": "mcq",
+   "stem": "Evaluate",
+   "options": {
+    "A": "2 x 101",
+    "B": "2 x 102",
+    "C": "1 x 102",
+    "D": "1 x 101"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0027",
+   "type": "mcq",
+   "stem": "In resolving x 1 1 x 2 1 into partial fraction, what are the values of the constants A, B & C? 1",
+   "options": {
+    "A": "-2, /2, /2,",
+    "B": "-1, 1/2, ½",
+    "C": "-1, 1/2, -11/2",
+    "D": ""
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0028",
+   "type": "mcq",
+   "stem": "Find the range of the validity of x in the equation 2xx 1",
+   "options": {
+    "A": "x <1 or x > 0",
+    "B": "x < 0 or x < 1",
+    "C": "x < 0 or x < 1 1 A.",
+    "D": "x > 0 or x > 1"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0029",
+   "type": "mcq",
+   "stem": "What is the remainder when x3 + 3x2 - 13x - 10 is divided by (x - 3)?",
+   "options": {
+    "A": "4",
+    "B": "41/4",
+    "C": "6",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0030",
+   "type": "mcq",
+   "stem": "Given that -2 = A(x - 1)2 + B(x - 1) (x - 2) + C(x - 2), find the value of C",
+   "options": {
+    "A": "2",
+    "B": "-2",
+    "C": "1",
+    "D": "-1"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0031",
+   "type": "mcq",
+   "stem": "Determine the range of values of x for which x2 2 x 2",
+   "options": {
+    "A": "x > -4 or x > 2",
+    "B": "x < -4 or x < 2",
+    "C": "x < 4 or x > 2",
+    "D": "x < -4 or x > 2"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0032",
+   "type": "mcq",
+   "stem": "Determine the values of p & q if (x - 1) & (x + 2) are factors of 2x3 + px2 - x + q",
+   "options": {
+    "A": "p = -5, q = -6",
+    "B": "p = 5, q = 6",
+    "C": "p = 5, q = -6",
+    "D": "p = -6, q = -5"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0033",
+   "type": "mcq",
+   "stem": "Find the value of the constant k if 4x3 + kx2 + 7x - 23 has a remainder 7 when divided by 2x - 5",
+   "options": {
+    "A": "8",
+    "B": "-16",
+    "C": "-8",
+    "D": "16"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0034",
+   "type": "mcq",
+   "stem": "Expresses 3x2 x 21 in partial fractions and find the value of A + B - C x x 1",
+   "options": {
+    "A": "-3",
+    "B": "2",
+    "C": "6",
+    "D": "7"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0035",
+   "type": "mcq",
+   "stem": "The sum of the square of three positive numbers in arithmetic progression is 165. If the sum of the number is 21, find the sum of cubes of each of the numbers?",
+   "options": {
+    "A": "4",
+    "B": "1400",
+    "C": "1407",
+    "D": "104"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0036",
+   "type": "mcq",
+   "stem": "Find the 8th term and the sum of the first 8 terms of the GP sequence: , -1, 2, -4, … . . ?",
+   "options": {
+    "A": "-64, -42.5",
+    "B": "-64, 42.5",
+    "C": "64, 42.5",
+    "D": "-64, 45.4"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0037",
+   "type": "mcq",
+   "stem": "The sum of the first eight terms of the AP: ln x , lnx2, ln x3 … .. is",
+   "options": {
+    "A": "ln x8",
+    "B": "ln x9",
+    "C": "ln x36",
+    "D": "ln x72"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0038",
+   "type": "mcq",
+   "stem": "A man places a sum of money on a savings account in the bank. On each succeeding birthday, he deposits two times more than on the previous birthday. His total sum of the first eleven deposits is N20,480. How much was his first deposit?",
+   "options": {
+    "A": "N20",
+    "B": "N25",
+    "C": "N10",
+    "D": "N12.50"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0039",
+   "type": "mcq",
+   "stem": "The second term of an AP is four times the first term, the last term is 13 times the first term and the sum of the series is 70. Find the first three terms of the progression",
+   "options": {
+    "A": "2,4,6",
+    "B": "2,8,14",
+    "C": "2,4,8",
+    "D": "8,12,14"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0040",
+   "type": "mcq",
+   "stem": "A polygon has 25sides, the length of which starting from the smallest side are in AP. If the perimeter of the polygon is 1100cm, and the length of the largest side is ten times that of the smallest, find the length of the smallest side",
+   "options": {
+    "A": "5cm",
+    "B": "6cm",
+    "C": "7cm",
+    "D": "8cm"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0041",
+   "type": "mcq",
+   "stem": "The value of k in is",
+   "options": {
+    "A": "9",
+    "B": "10",
+    "C": "11",
+    "D": "12"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0042",
+   "type": "mcq",
+   "stem": "If 5g4 + 9g3 - 12g2 - 9g + 5 = 0, find the value of R where R is a positive integer and R = g - 1 g",
+   "options": {
+    "A": "2",
+    "B": "1",
+    "C": "1/5",
+    "D": "-2"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0043",
+   "type": "mcq",
+   "stem": "Given that y = 3x, and 3x-y = 1 , find x 81",
+   "options": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0044",
+   "type": "mcq",
+   "stem": "Solve for x in 32x+1 - 18(3x) - 81 = 0",
+   "options": {
+    "A": "-1",
+    "B": "3",
+    "C": "-3",
+    "D": "2"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0045",
+   "type": "mcq",
+   "stem": "Given that log264 = k, find 4klog1632",
+   "options": {
+    "A": "60",
+    "B": "50",
+    "C": "40",
+    "D": "30"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0046",
+   "type": "mcq",
+   "stem": "What is the positive value of y in 3log8y = log4(y + 4)?",
+   "options": {
+    "A": "-2,3",
+    "B": "-2,-3",
+    "C": "2,-3",
+    "D": "2,3"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0047",
+   "type": "mcq",
+   "stem": "If 25x+1 = 64 (5)6 , find x 2",
+   "options": {
+    "A": "-1",
+    "B": "1",
+    "C": "-2",
+    "D": "2"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0048",
+   "type": "mcq",
+   "stem": "Simplify ( 8 )1/3 - (4)1/2 27 9",
+   "options": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0049",
+   "type": "mcq",
+   "stem": "Simplify 18 6n2+n1+ 2× × 2 n 9-n1 × × 4 122n2-n1+1",
+   "options": {
+    "A": "6",
+    "B": "12",
+    "C": "1/6",
+    "D": "1/12"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0050",
+   "type": "mcq",
+   "stem": "If |x| < p, tℎen",
+   "options": {
+    "A": "p < x < -p",
+    "B": "-p < x < p",
+    "C": "- p > x < p",
+    "D": "- p < x > p"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0051",
+   "type": "mcq",
+   "stem": "The value of x in 5x-1 - 1-2x < 8 + x 3 5",
+   "options": {
+    "A": "x<8",
+    "B": "x < -8",
+    "C": "x>8",
+    "D": "x > -8"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0052",
+   "type": "mcq",
+   "stem": "Find the range of x for which 12 + x - x2 < 0",
+   "options": {
+    "A": "x < 3 or x < -4",
+    "B": "x < -3 or x < 4",
+    "C": "-3 < x < 4",
+    "D": "3 < x < -4"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0053",
+   "type": "mcq",
+   "stem": "If ( x-1)x2(x+3) = 16(xP-1) + 4(xG-1)2 + 16(Hx+3) , the value of P + G + H is",
+   "options": {
+    "A": "3",
+    "B": "1",
+    "C": "7",
+    "D": "10"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0054",
+   "type": "mcq",
+   "stem": "The first 3 terms of the sequence given by Tn = 3 nn++12 respectively are",
+   "options": {
+    "A": "3/8, 4/11, 5/14",
+    "B": "4/11, 5/14, 6/17",
+    "C": "2/5, 3/8, 4/11",
+    "D": "3/8, 4/11, 6/17"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0055",
+   "type": "mcq",
+   "stem": "Given the nth term of a sequence log16(n + 3), what is the difference between the 13th and first terms?",
+   "options": {
+    "A": "½",
+    "B": "2",
+    "C": "1",
+    "D": "-1"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0056",
+   "type": "mcq",
+   "stem": "The sum of the terms of a sequence is known as",
+   "options": {
+    "A": "Series",
+    "B": "Arithmetic sequence",
+    "C": "Geometric sequence",
+    "D": "Sequence"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0057",
+   "type": "mcq",
+   "stem": "The type of sequence in which the next term differs from the preceding term by a difference is termed",
+   "options": {
+    "A": "Arithmetic Sequence",
+    "B": "Geometric sequence",
+    "C": "Geometric Infinity",
+    "D": "Infinite series"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0058",
+   "type": "mcq",
+   "stem": "The correct expression for the common difference in an A.P. is",
+   "options": {
+    "A": "T - Tn",
+    "B": "Tn - Tn+1",
+    "C": "Tn - Tn-1",
+    "D": "Tn - Tn+2"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0059",
+   "type": "mcq",
+   "stem": "The common difference in the series K, K + 3, K + 6, … .. is",
+   "options": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "-4"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0060",
+   "type": "mcq",
+   "stem": "If the first 3 terms of an A.P. are y, 3y + 1, 7y - 4, find the 10th term of the sequence",
+   "options": {
+    "A": "66",
+    "B": "55",
+    "C": "44",
+    "D": "33"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0061",
+   "type": "mcq",
+   "stem": "The 6th and 13th term of an A.P. are 0 and 14 respectively, find the 20 th term",
+   "options": {
+    "A": "18",
+    "B": "-18",
+    "C": "28",
+    "D": "-28"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0062",
+   "type": "mcq",
+   "stem": "The union of the set A and B denoted by A U B denoted by A U B, is the set of elements which belong to",
+   "options": {
+    "A": "either A nor B nor both",
+    "B": "either A or B or both",
+    "C": "neither A nor B or both",
+    "D": "neither A or B nor both"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0063",
+   "type": "mcq",
+   "stem": "Simplify 3√(729y-6)1⁄2",
+   "options": {
+    "A": "1 3y",
+    "B": "3y",
+    "C": "y 3",
+    "D": "3 y"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0064",
+   "type": "mcq",
+   "stem": "Evaluate , leaving your answer in standard form",
+   "options": {
+    "A": "2 x 101",
+    "B": "2 x 102",
+    "C": "1 x 102",
+    "D": "1 x 101"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0065",
+   "type": "mcq",
+   "stem": "If a & b are positive numbers, evaluate 4 a b a 2 b 2 b 2 a4",
+   "options": {
+    "A": "32",
+    "B": "32√ab",
+    "C": "16",
+    "D": "16√ab"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0066",
+   "type": "mcq",
+   "stem": "Determine the square of the remainder when 3x4 - 2x3 - 10x - 5 is divided by x - 4",
+   "options": {
+    "A": "595",
+    "B": "475",
+    "C": "354025",
+    "D": "225625"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0067",
+   "type": "mcq",
+   "stem": "In resolving x x 2 1 into partial fraction, what are the values of the constants A, B & C? 1 1",
+   "options": {
+    "A": "-2, /2, /2,",
+    "B": "-1, 1/2, ½",
+    "C": "-1, 1/2, -11/2",
+    "D": ""
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0068",
+   "type": "mcq",
+   "stem": "Find the range of the validity of x in the equation 2xx 1 1",
+   "options": {
+    "A": "x <1 or x > 0",
+    "B": "x < 0 or x < 1",
+    "C": "x < 0 or x < 1",
+    "D": "x > 0 or x > 1"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0069",
+   "type": "mcq",
+   "stem": "Resolve into partial fraction x3 x2 5x 152 & give the values of A, B, C respectively x 1 x 2",
+   "options": {
+    "A": "2,3,4",
+    "B": "2,3,0",
+    "C": "2,0,3",
+    "D": "2, -2, 3"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0070",
+   "type": "mcq",
+   "stem": "Determine the range of values of x for which x2 2 x 2 x 4",
+   "options": {
+    "A": "x > -4 or x > 2",
+    "B": "x < -4 or x < 2",
+    "C": "x < 4 or x > 2",
+    "D": "x < -4 or x > 2"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0071",
+   "type": "mcq",
+   "stem": "Solve the inequality yy 4 4 1",
+   "options": {
+    "A": "-4 < y < 0",
+    "B": "4<y<0",
+    "C": "0 > y > -4",
+    "D": "0 < y < 4"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  }
+ ],
+ "category": "university",
+ "body": "University Modules"
+}

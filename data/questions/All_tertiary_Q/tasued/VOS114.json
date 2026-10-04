@@ -1,0 +1,711 @@
+{
+  "code": "uni-tasued-vos114-bank",
+  "title": "TASUED VOS114 | Course Question Bank",
+  "version": 1,
+  "questionCount": 50,
+  "totalMarks": 50,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-tasued-vos114-bank-0001",
+      "type": "mcq",
+      "stem": "Which device is primarily used for multimedia work?",
+      "options": {
+        "A": "Speaker",
+        "B": "Mouse",
+        "C": "Hard Disk",
+        "D": "Cmos Battery"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Speaker is used for Audio & Visual system (Multimedia work)."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0002",
+      "type": "mcq",
+      "stem": "Which processor connection type is described as being 'like a card that is placed'?",
+      "options": {
+        "A": "Mounted Type",
+        "B": "Pin Type",
+        "C": "Slot Type",
+        "D": "Pinless Type"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Slot type processor is described as being like a card that is placed."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0003",
+      "type": "mcq",
+      "stem": "Which casing type places the C.P.U. in the upper position?",
+      "options": {
+        "A": "Tower casing",
+        "B": "Desktop casing",
+        "C": "Mounted casing",
+        "D": "Slot casing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Desktop casing places the C.P.U. at the upper position."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0004",
+      "type": "mcq",
+      "stem": "Which printer prints only in Black & Red color?",
+      "options": {
+        "A": "Laserjet Printer",
+        "B": "Deskjet Printer",
+        "C": "Line Printer",
+        "D": "Dot Matrix Printer"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Line Printer prints in Black & Red only."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0005",
+      "type": "mcq",
+      "stem": "Which of the following describes the hierarchy of a Processor from smallest to largest component?",
+      "options": {
+        "A": "Chips -> IC -> Processor",
+        "B": "IC -> Chips -> Processor",
+        "C": "Processor -> Chips -> IC",
+        "D": "IC -> Processor -> Chips"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "According to the notes, Integrated Circuits (ICs) make up Chips (3-4 ICs), and Chips make up the Processor (4-5 Chips)."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0006",
+      "type": "mcq",
+      "stem": "What is the primary risk of using a 'Mounted Type' processor connection?",
+      "options": {
+        "A": "It is more expensive to maintain.",
+        "B": "It cannot be repaired or replaced if it becomes faulty.",
+        "C": "It requires more cooling paste than socket types.",
+        "D": "It only works with Tower casings."
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Mounted processors are connected directly to the motherboard, meaning they are permanent and cannot be swapped out like socket or slot types."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0007",
+      "type": "mcq",
+      "stem": "If a computer's Date and Time keep resetting, which component is likely failing?",
+      "options": {
+        "A": "Hard Disk",
+        "B": "Power Pack",
+        "C": "Cmos Battery",
+        "D": "BIOS Chip"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The CMOS (Complementary Metal-Oxide Semiconductor) battery is specifically responsible for maintaining the system's Date & Time."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0008",
+      "type": "mcq",
+      "stem": "Which printer type is best suited for high-volume, black and white office printing using toner?",
+      "options": {
+        "A": "Deskjet Printer",
+        "B": "Line Printer",
+        "C": "Laserjet Printer",
+        "D": "Dot Matrix Printer"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Laserjet printers use toner, print more copies, and are specifically noted for printing in Black/White."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0009",
+      "type": "mcq",
+      "stem": "A user notices their mouse cursor is 'hanging' or freezing frequently. Based on the notes, what hardware issue should be checked?",
+      "options": {
+        "A": "The Hard Disk partition",
+        "B": "The Cooling Fan",
+        "C": "The CMOS voltage",
+        "D": "The Monitor's line transformer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The notes state that if the cooling fan is bad, it can cause the system or the mouse to hang."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0010",
+      "type": "mcq",
+      "stem": "What is the technical difference between a Module and a Moduless laptop screen?",
+      "options": {
+        "A": "Module uses ink; Moduless uses ribbon.",
+        "B": "Module is a normal screen; Moduless is a paper/thin screen.",
+        "C": "Module uses high voltage; Moduless uses 3 volts.",
+        "D": "Module is for desktops; Moduless is for laptops."
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A Module refers to a normal screen (backlight), while Moduless refers to a 'Paper Screen' with a thinning interphase."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0011",
+      "type": "mcq",
+      "stem": "Which device is restricted to functioning only within a 'window environment'?",
+      "options": {
+        "A": "Keyboard",
+        "B": "Light Pen",
+        "C": "Mouse",
+        "D": "Joystick"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The definition provided states the mouse is used to manipulate data on a window environment only."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0012",
+      "type": "mcq",
+      "stem": "Which port types are shared by both the Keyboard and the Mouse?",
+      "options": {
+        "A": "USB, PS2, Wireless, Serial",
+        "B": "USB, VGA, PS2, Parallel",
+        "C": "Serial, Parallel, USB, HDMI",
+        "D": "Wireless, Bluetooth, PS2, VGA"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The connection port table lists these four specific types for both the keyboard and the mouse."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0013",
+      "type": "mcq",
+      "stem": "What is the physical consistency of Thermal Paste?",
+      "options": {
+        "A": "Liquid like water",
+        "B": "Solid like a chip",
+        "C": "Semi-solid like toothpaste",
+        "D": "Gas like a cooling spray"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The notes explicitly describe the paste as 'not liquid,' 'like a toothpaste,' and 'semi-solid.'"
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0014",
+      "type": "mcq",
+      "stem": "Which output device uses a 'line transformer' and high voltage, making it difficult to transport?",
+      "options": {
+        "A": "LCD Monitor",
+        "B": "CRT Monitor",
+        "C": "Laserjet Printer",
+        "D": "Speaker"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cathode Ray Tube (CRT) monitors are noted for using high voltage, line transformers, and being 'not transportable.'"
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0015",
+      "type": "mcq",
+      "stem": "What are the two primary functions of a Hard Disk mentioned in the text?",
+      "options": {
+        "A": "Typing and Scrolling",
+        "B": "Multitasking and Cooling",
+        "C": "Formatting and Partition",
+        "D": "Visual and Audio display"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Under the Hard Disc detailed section, its functions are listed as Formatting and Partition."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0016",
+      "type": "mcq",
+      "stem": "Which of the following is NOT classified as a C.P.U. component?",
+      "options": {
+        "A": "Cooling Fan",
+        "B": "Motherboard",
+        "C": "Scanner",
+        "D": "Power Pack"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Scanner is an input device, not part of the C.P.U. components."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0017",
+      "type": "mcq",
+      "stem": "Which statement correctly describes the Power Pack?",
+      "options": {
+        "A": "Stores permanent data",
+        "B": "Supplies voltage to system components",
+        "C": "Controls date and time",
+        "D": "Displays visual output"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Power Pack is described as the place where all voltage batteries are supplied."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0018",
+      "type": "mcq",
+      "stem": "What happens if the CMOS battery is removed completely?",
+      "options": {
+        "A": "The monitor will stop displaying",
+        "B": "Date and Time will reset",
+        "C": "The mouse will not move",
+        "D": "The printer will stop printing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The CMOS battery maintains Date and Time settings."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0019",
+      "type": "mcq",
+      "stem": "Which device would MOST likely require high voltage to operate?",
+      "options": {
+        "A": "LCD Monitor",
+        "B": "Deskjet Printer",
+        "C": "CRT Monitor",
+        "D": "CMOS Battery"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "CRT monitors use high voltage and a line transformer."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0020",
+      "type": "mcq",
+      "stem": "Which statement about Deskjet printers is TRUE?",
+      "options": {
+        "A": "Uses toner and prints more copies",
+        "B": "Uses ink and prints less copies",
+        "C": "Uses ribbon and prints Black & Red only",
+        "D": "Uses high voltage and is not transportable"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Deskjet printers use ink, less voltage, and print fewer copies."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0021",
+      "type": "mcq",
+      "stem": "Which C.P.U. component works directly with Thermal Paste?",
+      "options": {
+        "A": "Hard Disk",
+        "B": "Cooling Fan",
+        "C": "CMOS Battery",
+        "D": "Power Pack"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Thermal paste works together with the cooling fan."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0022",
+      "type": "mcq",
+      "stem": "What does BIOS stand for?",
+      "options": {
+        "A": "Binary Input Output System",
+        "B": "Basic Internal Operating Setup",
+        "C": "Binary Integrated Operating System",
+        "D": "Basic Input Output Storage"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "BIOS stands for Binary Input and Output System."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0023",
+      "type": "mcq",
+      "stem": "Which of the following is an example of an input device used for scanning documents?",
+      "options": {
+        "A": "Scanner",
+        "B": "Printer",
+        "C": "Monitor",
+        "D": "Speaker"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Scanner is classified under input devices."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0024",
+      "type": "mcq",
+      "stem": "Which monitor type is portable and uses less voltage?",
+      "options": {
+        "A": "CRT",
+        "B": "LCD",
+        "C": "VDU",
+        "D": "Line Display"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "LCD monitors are portable and use less voltage."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0025",
+      "type": "mcq",
+      "stem": "A technician needs to replace a faulty processor. Upon opening the computer, they see the processor is a 'card' standing upright in a slot on the motherboard. What type of processor connection is this?",
+      "options": {
+        "A": "Mounted Type",
+        "B": "Pin Type",
+        "C": "Pinless Type",
+        "D": "Slot Type"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The notes describe a Slot Type processor as being 'like a card that is being placed,' which matches the description of a card standing upright in a slot."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0026",
+      "type": "mcq",
+      "stem": "What is the primary function of an Integrated Circuit (IC) in the processor hierarchy?",
+      "options": {
+        "A": "To act as the brain of the processor",
+        "B": "To compress, position, and divide data",
+        "C": "To connect the processor to the motherboard",
+        "D": "To provide 3 volts of power"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The notes specify that the IC's functions are to 'Compress, Position, Divided' as part of the processor's hierarchy."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0027",
+      "type": "mcq",
+      "stem": "If a user wants to print multi-part forms (like carbon copies) using impact pressure, which type of printer, according to the notes, would be required?",
+      "options": {
+        "A": "Laserjet Printer",
+        "B": "Deskjet Printer",
+        "C": "Line Printer",
+        "D": "CRT Printer"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Line printers are the only type listed that use a 'Ribbon,' which is characteristic of impact printers capable of printing on multi-part forms."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0028",
+      "type": "mcq",
+      "stem": "Which of the following best describes the physical relationship between a Cooling Fan and Thermal Paste?",
+      "options": {
+        "A": "The fan cools the paste to keep it semi-solid.",
+        "B": "The paste is a semi-solid that works together with the fan to cool the processor.",
+        "C": "The fan is mounted using the paste as an adhesive.",
+        "D": "The paste provides power to the fan."
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The notes state that Thermal Paste 'Works together with the cooling fan,' implying they are a combined solution for heat management."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0029",
+      "type": "mcq",
+      "stem": "In the context of computer casing, what is the key difference in how the C.P.U. is positioned between a Tower and a Desktop case?",
+      "options": {
+        "A": "Tower is horizontal, Desktop is vertical.",
+        "B": "Tower places the C.P.U. lower, Desktop places it upper.",
+        "C": "Tower uses a slot processor, Desktop uses a mounted processor.",
+        "D": "Tower is for servers, Desktop is for personal use."
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The notes directly state: 'We have the Tower casing (Lower the C.P.U.) and Desktop casing (Upper the C.P.U.).'"
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0030",
+      "type": "mcq",
+      "stem": "A user reports that their computer takes a long time to start and files seem to be getting corrupted. A technician suspects the Hard Disk is failing. Which two functions of the Hard Disk being compromised could cause these symptoms?",
+      "options": {
+        "A": "Pointing and Clicking",
+        "B": "Audio and Visual output",
+        "C": "Formatting and Partition",
+        "D": "Voltage supply and cooling"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Hard Disk's functions are Formatting (organizing the file system) and Partition (dividing the drive). Corruption in these areas leads to boot issues and file corruption."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0031",
+      "type": "mcq",
+      "stem": "Which device's connection port types are NOT shared with any other device listed in the notes?",
+      "options": {
+        "A": "Keyboard",
+        "B": "Mouse",
+        "C": "Speaker",
+        "D": "Printer"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The notes only list connection ports for Keyboard and Mouse. Speaker is an output device, but its connection types (likely audio jacks, HDMI, etc.) are not listed, making it the odd one out based on the provided table."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0032",
+      "type": "mcq",
+      "stem": "You are explaining computer components to a friend. You tell them the brain of the computer performs multitasking and is made up of several Chips. What component are you describing?",
+      "options": {
+        "A": "The Motherboard",
+        "B": "The Processor",
+        "C": "The Hard Disk",
+        "D": "The Power Pack"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The notes explicitly state: 'The Processor: It works like the brain of the computer. It performs multitasking work. ... Processor: 4 - 5 Chips.'"
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0033",
+      "type": "mcq",
+      "stem": "Based on the description of a 'Moduless' laptop screen, what is the most significant difference a user would notice compared to a 'Module' screen?",
+      "options": {
+        "A": "The Moduless screen would be much thicker.",
+        "B": "The Moduless screen would use more power.",
+        "C": "The Moduless screen might have a different appearance or thinness, described as a 'Paper Screen'.",
+        "D": "The Moduless screen would require an external backlight."
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A Moduless screen is defined as a 'Normal Screen or Paper Screen (Thinning Interphase or Normal Interphase),' suggesting a physical difference in construction and appearance."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0034",
+      "type": "mcq",
+      "stem": "What are the two main responsibilities of the CMOS battery, as listed in the notes?",
+      "options": {
+        "A": "Powering the fan and cooling the processor",
+        "B": "Storing the operating system and user files",
+        "C": "Maintaining Date & Time and clearing the BIOS",
+        "D": "Converting voltage for the monitor and printer"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Under the CMOS battery functions, the notes state: 'It is responsible for Date & Time. It is used to clear BIOS.'"
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0035",
+      "type": "mcq",
+      "stem": "If you are building a computer for a graphic designer who needs accurate and consistent colors, which printer type would be the LEAST suitable based on the notes?",
+      "options": {
+        "A": "Laserjet Printer",
+        "B": "Deskjet Printer",
+        "C": "Line Printer",
+        "D": "Inkjet Printer (Deskjet)"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Line Printer is noted to print in 'Black & Red only,' making it completely unsuitable for color-accurate graphic design work."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0036",
+      "type": "mcq",
+      "stem": "The acronyms BIOS and CMOS are often used interchangeably, but they refer to different things. Based on the notes, what is CMOS?",
+      "options": {
+        "A": "A type of processor connection",
+        "B": "The software that manages input and output",
+        "C": "A 3-volt battery, a small tiny thing",
+        "D": "The main circuit board of the computer"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The notes define CMOS as 'a small tiny thing and it's a 3 volt battery.' BIOS is defined separately as the 'Binary Input and Output System.'"
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0037",
+      "type": "mcq",
+      "stem": "Which two components are most directly involved in the process of reading data from a CD or DVD?",
+      "options": {
+        "A": "Hard Disk and Power Pack",
+        "B": "CD/DVD Rom Drive and Motherboard",
+        "C": "Mouse and Keyboard",
+        "D": "Cooling Fan and Paste"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The CD/DVD Rom Drive is the device that reads the disc, and it connects to the Motherboard to transfer that data to the rest of the system."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0038",
+      "type": "mcq",
+      "stem": "According to the notes, which of the following is NOT a stated 'use' of a mouse?",
+      "options": {
+        "A": "To Point",
+        "B": "To Drag",
+        "C": "To Type",
+        "D": "To Double Click"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The listed uses of a mouse are: To Point, To Click, To Right Click, To Double Click, To Drag. Typing is a function of the keyboard."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0039",
+      "type": "mcq",
+      "stem": "A user wants to buy a printer for their home office. They print a mix of documents and photos, but volume is low. Which printer characteristic would make a Deskjet printer a good choice for them?",
+      "options": {
+        "A": "It uses toner and prints many copies.",
+        "B": "It uses ink and prints in Black/color, suiting both documents and photos for low volume.",
+        "C": "It uses a ribbon and high voltage.",
+        "D": "It prints only in Black & Red."
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The notes state Deskjet printers 'use ink' and print in 'Black/color,' making them versatile for home use, while also noting they print 'less copies,' which fits low-volume needs."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0040",
+      "type": "mcq",
+      "stem": "A technician is troubleshooting a computer that randomly shuts down or hangs, especially under heavy load. Besides the cooling fan, what other component's failure could directly contribute to this?",
+      "options": {
+        "A": "The CMOS Battery",
+        "B": "The Power Pack",
+        "C": "The Scanner",
+        "D": "The Light Pen"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Power Pack 'supplies voltage to all components.' If it is failing or supplying inconsistent voltage, it can cause random shutdowns and hangs, especially when components draw more power."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0041",
+      "type": "mcq",
+      "stem": "What is the primary function of the 'Paste' (Thermal Paste) mentioned in the C.P.U. components?",
+      "options": {
+        "A": "To act as an adhesive to glue the fan to the processor",
+        "B": "To clean the surface of the processor",
+        "C": "To improve heat transfer between the processor and the cooling fan's heatsink",
+        "D": "To provide electrical insulation"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Thermal paste fills microscopic imperfections on the surfaces of the processor and heatsink. Its 'semi-solid' state allows for better heat conduction than air, 'working together with the cooling fan' to dissipate heat."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0042",
+      "type": "mcq",
+      "stem": "Which of the following input devices would be most suitable for playing a flight simulator game?",
+      "options": {
+        "A": "Scanner",
+        "B": "Light Pen",
+        "C": "Joystick",
+        "D": "Keyboard"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The notes list 'Joystick' as an input device, and it is commonly associated with flight simulators and gaming, which is a more specific application than the general-purpose keyboard and mouse."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0043",
+      "type": "mcq",
+      "stem": "You are looking at a motherboard and see two types of sockets for a processor. One has many small holes, and the other has many small pins. What are these types called?",
+      "options": {
+        "A": "Mounted and Slot",
+        "B": "Pin Type and Pinless Type",
+        "C": "Module and Moduless",
+        "D": "CRT and LCD"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The notes describe these as subdivisions of Socket Type: 'Pin Type: It will have holes when pinned together. Pinless Type: It will have little holes when pinned together.'"
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0044",
+      "type": "mcq",
+      "stem": "Which statement accurately compares the voltage usage of CRT monitors, LCD monitors, and Laserjet printers?",
+      "options": {
+        "A": "All three use high voltage.",
+        "B": "CRT uses high voltage, LCD uses less voltage, and Laserjet can use high or less voltage.",
+        "C": "LCD uses high voltage, CRT uses less voltage, and Laserjet uses less voltage.",
+        "D": "Only Laserjet printers use high voltage."
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The notes state: CRT 'uses high voltage,' LCD 'uses less voltage,' and Laserjet printer 'uses high voltage / less voltage.'"
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0045",
+      "type": "mcq",
+      "stem": "If the BIOS on a computer becomes corrupted, which component might a technician need to interact with or 'clear' to help reset the system to factory defaults?",
+      "options": {
+        "A": "The Hard Disk",
+        "B": "The Cooling Fan",
+        "C": "The Cmos Battery",
+        "D": "The Processor"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "One of the CMOS battery's listed functions is that 'It is used to clear BIOS.' This is often done by removing the battery or using a jumper."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0046",
+      "type": "mcq",
+      "stem": "A user wants to buy a new monitor. Portability is their main concern. Based on the notes, which type should they avoid?",
+      "options": {
+        "A": "Module Laptop Screen",
+        "B": "LCD Monitor",
+        "C": "CRT Monitor",
+        "D": "Moduless Laptop Screen"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The notes explicitly state that CRT monitors are 'Not transportable,' whereas LCD monitors and laptop screens (Module/Moduless) are described as 'portable' or for laptops."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0047",
+      "type": "mcq",
+      "stem": "Besides the keyboard and mouse, which other component is essential for a complete multimedia (audio and visual) experience?",
+      "options": {
+        "A": "Line Printer",
+        "B": "Speaker",
+        "C": "Joystick",
+        "D": "Scanner"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The notes define the Speaker as being 'Used for Audio & Visual system (Multimedia work).'"
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0048",
+      "type": "mcq",
+      "stem": "How many Integrated Circuits (ICs) are typically needed to make a Processor, based on the hierarchy?",
+      "options": {
+        "A": "3 to 4",
+        "B": "4 to 5",
+        "C": "12 to 20",
+        "D": "1"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The hierarchy is: IC -> Chips (3-4 ICs) -> Processor (4-5 Chips). Therefore, a processor is made of 4-5 Chips, each made of 3-4 ICs. The total is 4 × 3=12 up to 5 × 4=20 ICs."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0049",
+      "type": "mcq",
+      "stem": "A technician is choosing between a 'Mounted Type' and a 'Socket Type' processor for a new design. What is the main long-term maintenance trade-off?",
+      "options": {
+        "A": "Mounted is cheaper to buy but expensive to maintain; Socket is expensive to buy but cheaper to maintain.",
+        "B": "Mounted is expensive to buy but cheaper to maintain; Socket is cheaper to buy but expensive to maintain.",
+        "C": "Mounted and Socket have the same purchase and maintenance costs.",
+        "D": "Mounted cannot be repaired, Socket can only be repaired with special equipment."
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The notes for Mounted Type state: 'It is more expensive to buy but cheaper to maintain.' The implication is that Socket types would be the opposite, as they can be replaced individually."
+    },
+    {
+      "id": "uni-tasued-vos114-bank-0050",
+      "type": "mcq",
+      "stem": "Which device is described as having a symbol of an arrow and is used to manipulate data specifically within a graphical user interface?",
+      "options": {
+        "A": "Light Pen",
+        "B": "Joystick",
+        "C": "Mouse",
+        "D": "Scanner"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The notes state the Mouse's 'Symbol: Arrow' and its definition: 'Is used to manipulate data on a window environment only,' which is another term for a graphical user interface."
+    }
+  ]
+}

@@ -1,0 +1,1103 @@
+{
+  "code": "uni-tasued-csc113-bank",
+  "title": "TASUED CSC113 | Course Question Bank",
+  "version": 1,
+  "questionCount": 78,
+  "totalMarks": 78,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-tasued-csc113-bank-0001",
+      "type": "mcq",
+      "stem": "If the universal set U={1,2,3,4,5} and A={1,3}, find A′",
+      "options": {
+        "A": "{1,3}",
+        "B": "{2,4,5}",
+        "C": "{1,2,3}",
+        "D": "{4,5}"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The complement A' consists of elements in U that are not in A."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0002",
+      "type": "mcq",
+      "stem": "How many different arrangements can be made from the letters of the word DOG?",
+      "options": {
+        "A": "3",
+        "B": "6",
+        "C": "9",
+        "D": "12"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The word DOG has 3 unique letters. The number of arrangements is $3! = 3 \\times 2 \\times 1 = 6$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0003",
+      "type": "mcq",
+      "stem": "In how many ways can 2 students be selected from 6 students?",
+      "options": {
+        "A": "6",
+        "B": "12",
+        "C": "15",
+        "D": "30"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "This is a combination problem: $^6C_2 = \\frac{6!}{2!(6-2)!} = \\frac{6 \\times 5}{2 \\times 1} = 15$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0004",
+      "type": "mcq",
+      "stem": "How many 3-digit numbers can be formed from the digits 1, 2, 3, 4 without repetition?",
+      "options": {
+        "A": "12",
+        "B": "18",
+        "C": "24",
+        "D": "64"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "This is a permutation of 4 items taken 3 at a time: $^4P_3 = 4 \\times 3 \\times 2 = 24$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0005",
+      "type": "mcq",
+      "stem": "In how many ways can 5 people be arranged in a straight line?",
+      "options": {
+        "A": "25",
+        "B": "60",
+        "C": "120",
+        "D": "720"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The number of ways to arrange $n$ objects in a line is $n!$. For 5 people, it is $5! = 5 \\times 4 \\times 3 \\times 2 \\times 1 = 120$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0006",
+      "type": "mcq",
+      "stem": "How many ways can a committee of 3 people be chosen from 8 people?",
+      "options": {
+        "A": "24",
+        "B": "56",
+        "C": "120",
+        "D": "336"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Using combinations: $^8C_3 = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0007",
+      "type": "mcq",
+      "stem": "How many different arrangements can be made from the letters of the word NOON?",
+      "options": {
+        "A": "6",
+        "B": "12",
+        "C": "24",
+        "D": "4"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The word NOON has 4 letters with N repeating twice and O repeating twice. Arrangements $= \\frac{4!}{2!2!} = \\frac{24}{4} = 6$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0008",
+      "type": "mcq",
+      "stem": "In how many ways can 6 people sit around a round table?",
+      "options": {
+        "A": "120",
+        "B": "720",
+        "C": "60",
+        "D": "24"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Circular permutation formula is $(n-1)!$. For 6 people, it is $(6-1)! = 5! = 120$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0009",
+      "type": "mcq",
+      "stem": "How many ways can 3 books be selected from 7 different books?",
+      "options": {
+        "A": "21",
+        "B": "35",
+        "C": "210",
+        "D": "343"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Using combinations: $^7C_3 = \\frac{7 \\times 6 \\times 5}{3 \\times 2 \\times 1} = 35$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0010",
+      "type": "mcq",
+      "stem": "How many permutations of the letters of the word MATH are possible?",
+      "options": {
+        "A": "12",
+        "B": "24",
+        "C": "48",
+        "D": "120"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "MATH has 4 unique letters. $4! = 4 \\times 3 \\times 2 \\times 1 = 24$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0011",
+      "type": "mcq",
+      "stem": "How many 4-digit numbers can be formed using the digits 1, 2, 3, 4 without repetition?",
+      "options": {
+        "A": "12",
+        "B": "16",
+        "C": "24",
+        "D": "256"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "This is $4!$ for the 4 available digits, which equals 24."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0012",
+      "type": "mcq",
+      "stem": "In how many ways can 4 boys and 2 girls be arranged in a row if the girls sit together?",
+      "options": {
+        "A": "48",
+        "B": "96",
+        "C": "120",
+        "D": "240"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Treat the 2 girls as one unit. We now arrange 5 units (4 boys + 1 block of girls) in $5!$ ways. The girls can also swap places in $2!$ ways. Total $= 120 \\times 2 = 240$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0013",
+      "type": "mcq",
+      "stem": "From 5 men and 4 women, how many committees of 3 men and 1 woman can be formed?",
+      "options": {
+        "A": "40",
+        "B": "60",
+        "C": "80",
+        "D": "120"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Select 3 men from 5 ($^5C_3 = 10$) and 1 woman from 4 ($^4C_1 = 4$). $10 \\times 4 = 40$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0014",
+      "type": "mcq",
+      "stem": "How many arrangements can be made from the letters of the word SUCCESS?",
+      "options": {
+        "A": "420",
+        "B": "840",
+        "C": "1260",
+        "D": "5040"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Total 7 letters. S repeats 3 times, C repeats 2 times. $\\frac{7!}{3!2!} = \\frac{5040}{6 \\times 2} = \\frac{5040}{12} = 420$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0015",
+      "type": "mcq",
+      "stem": "How many different signals can be made using 5 flags, if all flags are used at once?",
+      "options": {
+        "A": "24",
+        "B": "60",
+        "C": "120",
+        "D": "240"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The arrangement of 5 distinct items is $5! = 120$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0016",
+      "type": "mcq",
+      "stem": "How many ways can 7 people be arranged in a circle?",
+      "options": {
+        "A": "720",
+        "B": "120",
+        "C": "60",
+        "D": "24"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Circular permutation: $(7-1)! = 6! = 720$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0017",
+      "type": "mcq",
+      "stem": "How many ways can 8 people be arranged in a row if two particular persons must sit together?",
+      "options": {
+        "A": "720",
+        "B": "5040",
+        "C": "10080",
+        "D": "40320"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Treat the 2 specific people as one unit. We arrange 7 units in $7!$ ways (5040). The 2 people can swap places in $2!$ ways. $5040 \\times 2 = 10080$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0018",
+      "type": "mcq",
+      "stem": "How many different arrangements are possible from the letters of the word BANANA?",
+      "options": {
+        "A": "20",
+        "B": "60",
+        "C": "120",
+        "D": "720"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Total 6 letters. A repeats 3 times, N repeats 2 times. $\\frac{6!}{3!2!} = \\frac{720}{6 \\times 2} = 60$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0019",
+      "type": "mcq",
+      "stem": "In how many ways can a team of 4 players be chosen from 10 players?",
+      "options": {
+        "A": "40",
+        "B": "120",
+        "C": "210",
+        "D": "5040"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Combination: $^{10}C_4 = \\frac{10 \\times 9 \\times 8 \\times 7}{4 \\times 3 \\times 2 \\times 1} = 210$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0020",
+      "type": "mcq",
+      "stem": "How many subsets can be formed from a set containing 4 elements?",
+      "options": {
+        "A": "8",
+        "B": "12",
+        "C": "16",
+        "D": "24"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The number of subsets for a set with $n$ elements is $2^n$. $2^4 = 16$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0021",
+      "type": "mcq",
+      "stem": "From 6 boys and 5 girls, how many committees of 2 boys and 2 girls can be formed?",
+      "options": {
+        "A": "150",
+        "B": "200",
+        "C": "225",
+        "D": "300"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Select 2 boys from 6 ($^6C_2 = 15$) and 2 girls from 5 ($^5C_2 = 10$). $15 \\times 10 = 150$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0022",
+      "type": "mcq",
+      "stem": "Which of the following is a set?",
+      "options": {
+        "A": "A collection of good students",
+        "B": "A collection of tall boys",
+        "C": "A collection of all even numbers",
+        "D": "A collection of beautiful girls"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A set must be well-defined. 'Good', 'tall', and 'beautiful' are subjective, but 'even numbers' is a clearly defined mathematical property."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0023",
+      "type": "mcq",
+      "stem": "If A={1,3,5,7}, which of the following is not an element of A?",
+      "options": {
+        "A": "1",
+        "B": "3",
+        "C": "6",
+        "D": "7"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The number 6 does not appear in the defined set A."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0024",
+      "type": "mcq",
+      "stem": "Which of the following is the empty (null) set?",
+      "options": {
+        "A": "{0}",
+        "B": "{}",
+        "C": "{x:x>0}",
+        "D": "{1}"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The empty set contains no elements, denoted by {} or $\\emptyset$. {0} contains the element zero."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0025",
+      "type": "mcq",
+      "stem": "If A={a,b,c}, how many subsets does A have?",
+      "options": {
+        "A": "3",
+        "B": "6",
+        "C": "8",
+        "D": "9"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A has 3 elements. Subsets $= 2^3 = 8$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0026",
+      "type": "mcq",
+      "stem": "Which of the following is a finite set?",
+      "options": {
+        "A": "Set of real numbers",
+        "B": "Set of integers",
+        "C": "Set of prime numbers",
+        "D": "Set of days in a week"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "There are exactly 7 days in a week, making it countable and finite. The other options are infinite."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0027",
+      "type": "mcq",
+      "stem": "If A={1,2,3} and B={3,4,5}, find A∩B.",
+      "options": {
+        "A": "{1,2}",
+        "B": "{3}",
+        "C": "{4,5}",
+        "D": "{1,2,3,4,5}"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Intersection (∩) finds elements common to both sets. Only '3' is in both."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0028",
+      "type": "mcq",
+      "stem": "If A={2,4,6,8} and B={1,2,3,4}, find A ∪ B.",
+      "options": {
+        "A": "{2,4}",
+        "B": "{1,2,3,4,6,8}",
+        "C": "{6,8}",
+        "D": "{1,3}"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Union (∪) combines all elements from both sets, removing duplicates."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0029",
+      "type": "mcq",
+      "stem": "If A={1,2,3} and B={3,4,5}, find A∩B",
+      "options": {
+        "A": "{1,2}",
+        "B": "{3}",
+        "C": "{4,5}",
+        "D": "{1,2,3,4,5}"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Intersection (∩) is the set of elements common to A and B."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0030",
+      "type": "mcq",
+      "stem": "Which of the following statements is true?",
+      "options": {
+        "A": "3 ⊂ {3}",
+        "B": "{3} ⊂ 3",
+        "C": "3 ∈ {3}",
+        "D": "{3} ∈ 3"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The element 3 belongs to (is a member of) the set {3}."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0031",
+      "type": "mcq",
+      "stem": "Two sets are equal if:",
+      "options": {
+        "A": "They have the same number of elements",
+        "B": "They have exactly the same elements",
+        "C": "They are subsets of each other",
+        "D": "They have common elements"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Equality in sets requires identical members, regardless of order."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0032",
+      "type": "mcq",
+      "stem": "Which of the following is a subset of A = {1, 2, 3}?",
+      "options": {
+        "A": "{4}",
+        "B": "{1, 4}",
+        "C": "{1, 2}",
+        "D": "{5, 6}"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A subset contains only elements that are already present in the parent set."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0033",
+      "type": "mcq",
+      "stem": "The universal set is the set that:",
+      "options": {
+        "A": "Contains all subsets",
+        "B": "Contains no element",
+        "C": "Contains all elements under consideration",
+        "D": "Is always infinite"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "By definition, the universal set U contains every element relevant to the specific problem or context."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0034",
+      "type": "mcq",
+      "stem": "If A = {2, 4, 6} and B = {1, 3, 5}, then A ∩ B =",
+      "options": {
+        "A": "{1, 2}",
+        "B": "{ }",
+        "C": "{2, 4}",
+        "D": "{6}"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Since there are no common elements between even numbers {2, 4, 6} and odd numbers {1, 3, 5}, the intersection is the empty set."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0035",
+      "type": "mcq",
+      "stem": "Which of the following is a singleton set?",
+      "options": {
+        "A": "{1, 2}",
+        "B": "{a, b, c}",
+        "C": "{5}",
+        "D": "{ }"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A singleton set is a set containing exactly one element."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0036",
+      "type": "mcq",
+      "stem": "If A ⊆ B, then:",
+      "options": {
+        "A": "B ⊆ A",
+        "B": "Every element of A is in B",
+        "C": "A and B are equal",
+        "D": "A is empty"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The notation A ⊆ B means that A is a subset of B, implying all members of A must exist in B."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0037",
+      "type": "mcq",
+      "stem": "The complement of a set A is denoted by:",
+      "options": {
+        "A": "A⁻¹",
+        "B": "A′",
+        "C": "A⁺",
+        "D": "A*"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Standard notation for the complement of set A includes A' or $A^c$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0038",
+      "type": "mcq",
+      "stem": "Which operation gives elements common to two sets?",
+      "options": {
+        "A": "Union",
+        "B": "Difference",
+        "C": "Intersection",
+        "D": "Complement"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Intersection identifies the overlapping members of two or more sets."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0039",
+      "type": "mcq",
+      "stem": "Probability of an event always lies between:",
+      "options": {
+        "A": "-1 and 1",
+        "B": "0 and 1",
+        "C": "1 and 2",
+        "D": "-∞ and ∞"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Probabilities are expressed as values from 0 (impossible) to 1 (certain)."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0040",
+      "type": "mcq",
+      "stem": "If an event is impossible, its probability is:",
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "-1",
+        "D": "½"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An event that cannot occur has a mathematical probability of zero."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0041",
+      "type": "mcq",
+      "stem": "If an event is certain, its probability is:",
+      "options": {
+        "A": "0",
+        "B": "½",
+        "C": "1",
+        "D": "-1"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "An event that is guaranteed to happen has a probability of 1."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0042",
+      "type": "mcq",
+      "stem": "A card is drawn at random from a standard deck of 52 cards. What is the probability of drawing a heart?",
+      "options": {
+        "A": "1/52",
+        "B": "1/26",
+        "C": "1/13",
+        "D": "1/4"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "There are 13 hearts in a deck of 52. Probability = 13/52 = 1/4."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0043",
+      "type": "mcq",
+      "stem": "A die is thrown once. What is the probability of getting an even number?",
+      "options": {
+        "A": "1/6",
+        "B": "1/3",
+        "C": "1/2",
+        "D": "2/3"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The even outcomes are {2, 4, 6}. Probability = 3/6 = 1/2."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0044",
+      "type": "mcq",
+      "stem": "If P(A) = 0.35, find P(A′).",
+      "options": {
+        "A": "0.35",
+        "B": "0.65",
+        "C": "1.35",
+        "D": "-0.35"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "P(A') = 1 - P(A) = 1 - 0.35 = 0.65."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0045",
+      "type": "mcq",
+      "stem": "Two coins are tossed. What is the probability of getting two heads?",
+      "options": {
+        "A": "1/2",
+        "B": "1/3",
+        "C": "1/4",
+        "D": "3/4"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The sample space is {HH, HT, TH, TT}. Only one outcome (HH) is 'two heads' out of four total."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0046",
+      "type": "mcq",
+      "stem": "A bag contains 3 red balls and 5 blue balls. One ball is picked at random. What is the probability that it is red?",
+      "options": {
+        "A": "3/5",
+        "B": "5/8",
+        "C": "3/8",
+        "D": "1/8"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Total balls = 3 + 5 = 8. Red balls = 3. Probability = 3/8."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0047",
+      "type": "mcq",
+      "stem": "The sum of probabilities of all possible outcomes of a random experiment is:",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "½"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The total probability of the entire sample space is always 1."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0048",
+      "type": "mcq",
+      "stem": "If events A and B are mutually exclusive, then:",
+      "options": {
+        "A": "P(A ∩ B) = 1",
+        "B": "P(A ∪ B) = P(A) × P(B)",
+        "C": "P(A ∩ B) = 0",
+        "D": "P(A) = P(B)"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Mutually exclusive events cannot happen at the same time, so their intersection is zero."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0049",
+      "type": "mcq",
+      "stem": "A number is selected at random from {1, 2, 3, 4, 5}. What is the probability that the number is prime?",
+      "options": {
+        "A": "1/5",
+        "B": "2/5",
+        "C": "3/5",
+        "D": "4/5"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Prime numbers in the set are {2, 3, 5}. Probability = 3/5."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0050",
+      "type": "mcq",
+      "stem": "When a die is thrown, what is the probability of getting a number greater than 4?",
+      "options": {
+        "A": "1/6",
+        "B": "1/3",
+        "C": "1/2",
+        "D": "2/3"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The numbers greater than 4 are {5, 6}. Probability = 2/6 = 1/3."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0051",
+      "type": "mcq",
+      "stem": "If P(A) = 0.7 and P(B) = 0.4, and A and B are independent, find P(A ∩ B).",
+      "options": {
+        "A": "0.11",
+        "B": "0.28",
+        "C": "1.1",
+        "D": "0.3"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "For independent events, P(A ∩ B) = P(A) × P(B) = 0.7 × 0.4 = 0.28."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0052",
+      "type": "mcq",
+      "stem": "A letter is chosen at random from the word “PROBABILITY”. What is the probability that the letter chosen is a vowel?",
+      "options": {
+        "A": "3/11",
+        "B": "4/11",
+        "C": "5/11",
+        "D": "6/11"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Total letters = 11. Vowels are {O, A, I, I} = 4. Probability = 4/11."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0053",
+      "type": "mcq",
+      "stem": "A box contains 6 white balls and 4 black balls. One ball is drawn at random. What is the probability that it is black?",
+      "options": {
+        "A": "2/5",
+        "B": "3/5",
+        "C": "1/5",
+        "D": "4/5"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Total balls = 10. Black balls = 4. Probability = 4/10 = 2/5."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0054",
+      "type": "mcq",
+      "stem": "If two events cannot occur at the same time, they are called:",
+      "options": {
+        "A": "Independent events",
+        "B": "Dependent events",
+        "C": "Mutually exclusive events",
+        "D": "Exhaustive events"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "By definition, mutually exclusive events have no shared outcomes."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0055",
+      "type": "mcq",
+      "stem": "The probability of selecting a non-prime number from {1, 2, 3, 4, 5, 6} is:",
+      "options": {
+        "A": "1/6",
+        "B": "1/3",
+        "C": "1/2",
+        "D": "2/3"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Prime numbers are {2, 3, 5}. Non-primes (including 1) are {1, 4, 6}. Probability = 3/6 = 1/2."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0056",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a probability value?",
+      "options": {
+        "A": "0",
+        "B": "0.75",
+        "C": "1",
+        "D": "1.25"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Probability values must be within the range [0, 1]. 1.25 is invalid."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0057",
+      "type": "mcq",
+      "stem": "A coin is tossed once. What is the probability of getting a tail?",
+      "options": {
+        "A": "0",
+        "B": "1/4",
+        "C": "1/2",
+        "D": "1"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A fair coin has two outcomes (H, T). Probability of T is 1/2."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0058",
+      "type": "mcq",
+      "stem": "If P(A ∪ B) = 1, then events A and B are:",
+      "options": {
+        "A": "Independent",
+        "B": "Complementary",
+        "C": "Mutually exclusive",
+        "D": "Exhaustive"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Exhaustive events cover the entire sample space, so the probability of their union is 1."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0059",
+      "type": "mcq",
+      "stem": "A matrix is defined as:",
+      "options": {
+        "A": "A set of numbers",
+        "B": "A rectangular array of numbers arranged in rows and columns",
+        "C": "A square table of values",
+        "D": "A single row of numbers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "This is the formal definition of a matrix in linear algebra."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0060",
+      "type": "mcq",
+      "stem": "The order of a matrix with 3 rows and 4 columns is:",
+      "options": {
+        "A": "3 × 4",
+        "B": "4 × 3",
+        "C": "7 × 1",
+        "D": "12 × 1"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Order is always expressed as (number of rows) × (number of columns)."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0061",
+      "type": "mcq",
+      "stem": "How many elements are in a matrix of order 2 × 3?",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "8",
+        "D": "9"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The number of elements is found by multiplying the rows and columns: $2 \\times 3 = 6$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0062",
+      "type": "mcq",
+      "stem": "Which of the following is a square matrix?",
+      "options": {
+        "A": "2 × 3",
+        "B": "3 × 2",
+        "C": "1 × 3",
+        "D": "3 × 3"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "A square matrix has an equal number of rows and columns."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0063",
+      "type": "mcq",
+      "stem": "If A is a matrix of order 2 × 3 and B is of order 3 × 2, then the order of AB is:",
+      "options": {
+        "A": "2 × 2",
+        "B": "3 × 3",
+        "C": "3 × 2",
+        "D": "2 × 3"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "When multiplying an $(m imes n)$ matrix by an $(n imes p)$ matrix, the result is $(m imes p)$. Here $(2 imes 3) \\times (3 \\times 2) = 2 \\times 2$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0064",
+      "type": "mcq",
+      "stem": "Matrix multiplication is possible only when:",
+      "options": {
+        "A": "The matrices are square",
+        "B": "The number of rows are equal",
+        "C": "The number of columns of the first equals the number of rows of the second",
+        "D": "Both matrices have the same order"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "This is the fundamental condition for matrix conformability."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0065",
+      "type": "mcq",
+      "stem": "Which of the following is a zero (null) matrix?",
+      "options": {
+        "A": "A matrix with ones on the diagonal",
+        "B": "A matrix with all elements equal to zero",
+        "C": "A matrix with unequal rows and columns",
+        "D": "A matrix with equal rows"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A zero matrix is one where every single entry is 0."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0066",
+      "type": "mcq",
+      "stem": "The identity matrix is a square matrix with:",
+      "options": {
+        "A": "All elements equal to 1",
+        "B": "All diagonal elements equal to 0",
+        "C": "All diagonal elements equal to 1 and others 0",
+        "D": "All elements equal"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The identity matrix (I) must have 1s on the main diagonal and 0s elsewhere."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0067",
+      "type": "mcq",
+      "stem": "If A = [2 3; 4 5] then Aᵀ is:",
+      "options": {
+        "A": "[2 3; 4 5]",
+        "B": "[2 4; 3 5]",
+        "C": "[3 2; 5 4]",
+        "D": "[5 4; 3 2]"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Transpose is found by switching rows into columns. Row 1 (2, 3) becomes Column 1."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0068",
+      "type": "mcq",
+      "stem": "The transpose of a matrix is obtained by:",
+      "options": {
+        "A": "Multiplying rows by columns",
+        "B": "Changing signs of elements",
+        "C": "Interchanging rows and columns",
+        "D": "Finding the inverse"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "To get $A^T$, the element at $a_{ij}$ is moved to $a_{ji}$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0069",
+      "type": "mcq",
+      "stem": "Two matrices are equal if:",
+      "options": {
+        "A": "They have the same number of elements",
+        "B": "They have the same order and equal corresponding elements",
+        "C": "They are both square",
+        "D": "Their determinants are equal"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Equality requires both identical dimensions and identical values in every position."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0070",
+      "type": "mcq",
+      "stem": "If A + B = B + A for matrices A and B, this property is called:",
+      "options": {
+        "A": "Associative",
+        "B": "Distributive",
+        "C": "Commutative",
+        "D": "Identity"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The property where order does not matter in addition is the commutative property."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0071",
+      "type": "mcq",
+      "stem": "Which of the following is NOT possible for matrices?",
+      "options": {
+        "A": "A + B = B + A",
+        "B": "(A + B) + C = A + (B + C)",
+        "C": "A(B + C) = AB + AC",
+        "D": "AB = BA always"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Matrix multiplication is generally non-commutative; $AB$ is rarely equal to $BA$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0072",
+      "type": "mcq",
+      "stem": "The determinant of a 2 × 2 matrix [a b; c d] is:",
+      "options": {
+        "A": "ad + bc",
+        "B": "ab - cd",
+        "C": "ad - bc",
+        "D": "ac - bd"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The standard formula for the determinant of a $2 \\times 2$ matrix is the product of the main diagonal minus the product of the off-diagonal."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0073",
+      "type": "mcq",
+      "stem": "A matrix whose transpose is equal to itself is called:",
+      "options": {
+        "A": "Identity matrix",
+        "B": "Symmetric matrix",
+        "C": "Skew matrix",
+        "D": "Zero matrix"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A symmetric matrix satisfies the condition $A = A^T$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0074",
+      "type": "mcq",
+      "stem": "A matrix whose transpose is the negative of itself is called:",
+      "options": {
+        "A": "Symmetric",
+        "B": "Identity",
+        "C": "Skew-symmetric",
+        "D": "Singular"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A skew-symmetric matrix satisfies the condition $A^T = -A$."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0075",
+      "type": "mcq",
+      "stem": "If A is a matrix and I is the identity matrix of the same order, then AI =",
+      "options": {
+        "A": "I",
+        "B": "A",
+        "C": "0",
+        "D": "A²"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The identity matrix acts as the number 1 in matrix multiplication."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0076",
+      "type": "mcq",
+      "stem": "A matrix that has only one row is called:",
+      "options": {
+        "A": "Column matrix",
+        "B": "Square matrix",
+        "C": "Row matrix",
+        "D": "Diagonal matrix"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A matrix with dimensions $1 \\times n$ is a row matrix."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0077",
+      "type": "mcq",
+      "stem": "A matrix that has only one column is called:",
+      "options": {
+        "A": "Row matrix",
+        "B": "Column matrix",
+        "C": "Identity matrix",
+        "D": "Scalar matrix"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A matrix with dimensions $n \\times 1$ is a column matrix."
+    },
+    {
+      "id": "uni-tasued-csc113-bank-0078",
+      "type": "mcq",
+      "stem": "If the determinant of a matrix is zero, the matrix is called:",
+      "options": {
+        "A": "Non-singular",
+        "B": "Identity",
+        "C": "Symmetric",
+        "D": "Singular"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "A matrix with $|A| = 0$ is singular and has no inverse."
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+ "exam": "Suneung (CSAT)",
+ "region": "South Korea",
+ "slug": "SUNEUNG",
+ "question_banks": 1,
+ "github_sources": [
+  {
+   "repo": "Marker-Inc-Korea/Korean-SAT-LLM-Leaderboard",
+   "url": "https://github.com/Marker-Inc-Korea/Korean-SAT-LLM-Leaderboard/blob/a4162c80f6d73bfa1ec6ce8d1cde97639111ad4a/questions_en.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "thewell-academy/thewell_gpt_admin",
+   "url": "https://github.com/thewell-academy/thewell_gpt_admin/blob/62d234795bfaa153d62cd462d90052f2b6e62328/lib/page/questions/create/suneung_question_creator.dart",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "seungyeon980808-pixel/exam_pool",
+   "url": "https://github.com/seungyeon980808-pixel/exam_pool/blob/be1893fdacaf69c64e4b5ff26e63c0aa0950798f/app/routes_question.py",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "lovelyjina91-jpg/EngFit",
+   "url": "https://github.com/lovelyjina91-jpg/EngFit/blob/9cbe60680b1c5da89c896ef7a468677e16123f18/unit03_punishment_indirect_questions.html",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "hoonee-math/GENIE-vue-python",
+   "url": "https://github.com/hoonee-math/GENIE-vue-python/blob/b614d58c9e423c3754c34015e192f33b7092961f/src/composables/useGenerateExam.js",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "zyeworld/suneng",
+   "url": "https://github.com/zyeworld/suneng/blob/5122c304e78e47a9d85be37fe8be5877500e4d7d/README.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "shpark1104/Korean-SAT-quiz",
+   "url": "https://github.com/shpark1104/Korean-SAT-quiz/blob/a457c6bcafa0504301cd9d38eb9d70609add8c29/app/credits/page.tsx",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "woogi123/Streamlit_EnglishTestPage",
+   "url": "https://github.com/woogi123/Streamlit_EnglishTestPage/blob/50dc25d365c4b5757eb0e1f48fa7ff9a1e4c45e4/streamlit_vs/sidebar.py",
+   "stars": 0,
+   "desc": ""
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "수능 모의고사 / CSAT Suneung Practice Tests - EduRev",
+   "url": "https://edurev.in/courses/158060_Suneung-CSAT-Mock-Test-Series",
+   "class": "site"
+  },
+  {
+   "title": "Practice Questions for Korea CSAT (Suneung)",
+   "url": "https://open-exam-prep.com",
+   "class": "site"
+  },
+  {
+   "title": "Sample English Questions from This Year's Suneung : r/korea - Reddit",
+   "url": "https://www.reddit.com/r/korea/comments/1pe9m03/sample_english_questions_from_this_years_suneung",
+   "class": "site"
+  },
+  {
+   "title": "Csat en - Suneung Exam Math Part Translated in English PDF - Scribd",
+   "url": "https://www.scribd.com/document/776408962/CSAT-EN-SUNEUNG-EXAM-MATH-PART-TRANSLATED-IN-ENGLISH-PDF",
+   "class": "site"
+  },
+  {
+   "title": "Archive of Previous Suneung Tests",
+   "url": "https://suneung.wordpress.com/archive-of-previous-suneung-tests",
+   "class": "site"
+  },
+  {
+   "title": "SUNEUNG FINAL EXAM MATH QUESTIONS TRANSLATED TO",
+   "url": "https://www.studocu.com/ko/document/university-of-seoul/ece/csat-en-suneung-exam-math-part-translated-in-english-pdf/67120849",
+   "class": "site"
+  },
+  {
+   "title": "2019 Suneung 수능 questions (end-of-year 2018) - 10원 Tips",
+   "url": "https://10wontips.blogspot.com/2018/11/2019-suneung-questions-end-of-year-2018.html",
+   "class": "site"
+  },
+  {
+   "title": "Korean CSAT (Suneung) Exam Math - YouTube",
+   "url": "https://www.youtube.com/playlist?list=PL3lzThfSCzqWIu_nBzbpTtYJCZmNhCCGA",
+   "class": "site"
+  }
+ ]
+}

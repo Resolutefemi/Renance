@@ -1,0 +1,169 @@
+# Renance - Nigeria's EdTech Platform (Exam Prep + School Management)
+
+**Renance is an edtech platform in Nigeria** - the educational app for JAMB, WAEC, NECO and
+Post-UTME exam preparation: 207,000+ past questions with worked solutions, free
+server-graded CBT mock exams, the complete NERDC curriculum with schemes of work and
+lesson notes, and the Renance AI study companion. It also includes **Renance for
+Schools**, a school management suite (curriculum, attendance, results, school fees and
+student ID cards). The only official website is **https://renance.app**. Built by
+[Resolute Femi](https://github.com/Resolutefemi).
+
+> Renance is a coined brand name. It is not the word "renaissance" or "resonance", and
+> it is not affiliated with renance.org, renance.io or any other similarly named
+> organization. Renance is an edtech platform only.
+
+One repository, one product. Students register with **username + password
+only**, tell us who they're studying for in a 30-second profile modal, and
+Renance silently syncs past questions, notes and syllabi to their device,
+then grades their mock exams server-side on a goroutine engine.
+
+| Piece | Where | Status |
+|---|---|---|
+| Go study API (`apps/study-api`) | auth · profiles · pack manifest · goroutine CBT grading · background sync worker | **ACTIVE** |
+| Web app (`apps/web`) | onboarding · dashboard · CBT player · Renance logomark animation | **ACTIVE** |
+| Flutter shell (`apps/mobile`) | offline-first mobile client (packs into local SQLite) | G3 - APK built in CI |
+| Legacy NestJS monolith (`legacy/nestjs-monolith/`) | ERA-1 code, frozen, pending extraction to vertical repos | read-only |
+
+Stack: Go 1.27 · pgx/v5 · Neon Postgres (`study` schema) · Next.js 15 ·
+Tailwind 4 · Flutter 3.47/Dart 3.13 · Python content pipeline ·
+GitHub Actions (APK builds + CI).
+
+**Standing law - ADR-0003 content split:** question bundles never contain
+answer material; answer keys are server-only (`study.answer_keys` +
+gitignored `data/answer-keys/`); `data/manifest.json` carries sha256
+fingerprints verified at boot; explanations surface only after grading.
+
+## Quickstart
+
+Prereqs: Go 1.27+, Node 22+, pnpm 10, Python 3 (content rebuilds only).
+
+```bash
+# 1) web deps
+pnpm install
+
+# 2) database - paste your Neon connection string (or any Postgres)
+export DATABASE_URL="postgresql://…/renance?sslmode=require"
+
+# 3) Go API on :3990 (migrates the study schema on first boot)
+pnpm api:dev
+
+# 4) web on :3000
+pnpm web:dev
+```
+
+Register → complete the profile modal → watch the sync strip fill →
+open a pack and sit the mock. That's the whole loop.
+
+## School platform (For Schools)
+
+Sign-up and login screens open with a **For Students / For Schools**
+switch (students stay the default). Registering a school asks for the
+school name + type (primary, secondary or both), creates the management
+account, and auto-installs the **full Nigerian curriculum** - Primary 1-6,
+JSS 1-3, SSS 1-3 with the NERDC subject list.
+
+- **Management portal (web)**: seed/edit classes + subjects, build term
+  syllabuses with a weekly scheme of work, write the note under every
+  topic (or import legally obtained notes from NERDC/classnotes-style
+  sources), create **teacher accounts**, assign teachers to class+subject
+  pairs, enroll students, and manage results - CA1/CA2 (20 each) + exam
+  (60), positions and class averages on finalize, a 6-digit result-check
+  PIN per student, and a public
+  [result checker](/school/check) (`/school/check`).
+- **Teachers** sign in through For Schools → For Teachers (or the web
+  portal) and get exactly their assigned class+subject: the syllabus,
+  scheme of work and notes, plus the result-filling cells for their
+  subjects. Everything else stays management-only, web-only.
+- **Notes PDF**: every topic downloads as its own print-ready PDF -
+  **black & white only**, one topic per file, never the whole batch.
+- **Timetable**: a weekly grid editor per class - subjects per period
+  plus assembly/break blocks, saved as one clean write, readable by
+  every teacher.
+- **Exam question bank**: original NERDC-aligned questions per subject
+  per term (a starter bank pours in one tap), and published papers that
+  draw from the pool ready to print.
+- **Fees**: term charges per class or school-wide, cash/transfer/POS
+  receipts per student, and a live debtors list with outstanding
+  balances in kobo-safe integer math.
+- **ID cards**: serial-numbered student cards (REN-<year>-NNNNNN) with
+  photo and school identity, one tap issues a whole session, and a
+  print-ready black & white card sheet; lost cards are revoked, never
+  deleted.
+- **Mobile app (management + teachers)**: the school workspace carries
+  syllabus, scheme of work, notes **and the exam bank** - and the
+  **Downloads screen** has five desks: **JAMB offline, Post-UTME, WAEC,
+  NECO and Schools** (with a school picker). Any combination downloads
+  in one tap, the storage meter reads real bytes and updates live, and
+  the app asks for storage/notification permissions and honours a
+  Wi-Fi-only download preference.
+
+Database: the school tables live in the `school` schema (migrations
+`0013` through `0019` cover the platform, setup layer, fees, ID cards,
+timetable and the exam bank) and apply automatically at boot, so
+`DATABASE_URL` stays exactly where it is. Desk-by-desk walkthroughs
+live in [`docs/guides/`](docs/guides/) and the endpoint reference in
+[`docs/school-api.md`](docs/school-api.md).
+
+## View it - no local setup
+
+Both clients ship through GitHub Actions on every push to `main`.
+
+**Website (GitHub Pages):** https://resolutefemi.github.io/Renance/
+
+One-time enablement if Pages has never been used on the repo:
+`Settings → Pages → Build and deployment → Source: GitHub Actions`.
+The `web-deploy` workflow then publishes the static export on the next
+push (or re-run it from the Actions tab).
+
+**Android app (APK):** download the latest build directly -
+https://github.com/Resolutefemi/Renance/releases/download/latest/app-release.apk -
+then sideload it on the phone (allow installs from that source). Prefer
+GitHub's UI? Open the repo's **Releases** page → **Latest Android build**
+→ download `app-release.apk`. The Actions tab also publishes the APK as
+the **renance-android-apk** artifact on every run, and pushing a tag like
+`v0.1.0` additionally attaches the APK to a tagged GitHub Release.
+
+**Pointing both clients at a live API:** the website and APK read the API
+address from the repo variable `PUBLIC_API_BASE`
+(`Settings → Secrets and variables → Actions → Variables → New repository
+variable`). Set it to your deployed Go study API URL - it must be
+**https** for the Pages site (browsers block http from an https origin).
+Until then the site renders and the app defaults to the Android-emulator
+loopback (`http://10.0.2.2:3990`), which reaches a locally running
+`pnpm api:dev`.
+
+## Content pipeline
+
+```bash
+python3 tools/cbt-build/build.py   # data/src/<gen>/*.json → bundles + keys + manifest
+go -C apps/study-api test ./...
+```
+
+`data/questions/` is the single home of every question JSON (JAMB / WAEC /
+NECO banks + theory packs - nothing duplicates it elsewhere). Sealed
+answer keys live server-only in `data/answer-keys/mock/`, and
+`data/manifest.json` sha256-fingerprints every bundle so the API refuses
+tampered content at boot. Harvested source banks (with answers) drop into
+`data/src/real/` when they arrive - provenance copies kept on disk only,
+never committed (gitignored) - and the same command repacks everything;
+adapters cover every shape found in the wild. The retired `data/src/mock/`
+practice packs were removed; the app's UTME mock papers are composed at
+runtime from the real banks instead.
+
+## Docs
+
+`docs/ACTIVE_PHASE.md` is the single source of progress. Decisions live in
+`docs/decisions/` (ADR-0003 content doctrine, ADR-0004 Go pivot). ERA-1
+history: `docs/ACTIVE_PHASE.md` header + `legacy/nestjs-monolith/`.
+
+## Built by
+
+**Renance** is designed and engineered by **Resolute Femi** - full name
+**Ariyo Oluwafemi Stephen** - a Nigerian software engineer and the founder
+of the Renance suite (Renance Study OS, Renance CBT for FUTA students,
+Renance JAMB CBT, Renance DevTools, Renance Playground, Naija Locator).
+
+- GitHub: <https://github.com/Resolutefemi>
+- Email: <ariyooluwafemi487@gmail.com>
+- Renance CBT (FUTA practice): <https://renancecbt2.vercel.app>
+- Renance Studio portfolio: <https://renance.vercel.app>

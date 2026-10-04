@@ -1,0 +1,37 @@
+{
+  "name": "renance",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.12.1",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "sync": "bash scripts/git-sync.sh",
+    "api:dev": "bash scripts/study-api-dev.sh",
+    "api:test": "go -C apps/study-api test ./...",
+    "content:build": "python3 tools/cbt-build/build.py",
+    "web:dev": "pnpm --filter @renance/web dev",
+    "web:build": "pnpm --filter @renance/web build"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "@tailwindcss/oxide",
+      "@swc/core",
+      "sharp"
+    ]
+  },
+  "dependencies": {
+    "z-ai-web-dev-sdk": "^0.0.18"
+  }
+}

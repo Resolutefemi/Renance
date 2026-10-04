@@ -1,0 +1,4267 @@
+{
+  "code": "uni-tasued-cos102-bank",
+  "title": "TASUED COS102 | Course Question Bank",
+  "version": 1,
+  "questionCount": 304,
+  "totalMarks": 304,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-tasued-cos102-bank-0001",
+      "type": "mcq",
+      "stem": "How is problem solving defined in the lecture notes?",
+      "options": {
+        "A": "The act of writing code to fix a computer error",
+        "B": "The process of identifying a problem, determining the root cause, and implementing a course of action",
+        "C": "A mental shortcut used to save time during decision making",
+        "D": "The systematic testing of hypotheses to prove a theory"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Problem solving is defined as identifying an existing problem, determining root causes, deciding on action, and implementing it."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0002",
+      "type": "mcq",
+      "stem": "What is a problem-solving strategy?",
+      "options": {
+        "A": "A specific line of computer code",
+        "B": "A plan used to find a solution or overcome a challenge",
+        "C": "The final output produced by a software program",
+        "D": "A document containing instructions for hardware repair"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A strategy is specifically defined as a plan used to find a solution or overcome a challenge."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0003",
+      "type": "mcq",
+      "stem": "Which type of problem lacks clear goals, solution paths, or expected solutions?",
+      "options": {
+        "A": "Well-defined problems",
+        "B": "Computational problems",
+        "C": "Ill-defined problems",
+        "D": "Algorithmic problems"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Ill-defined problems are issues that do not have clear goals, solution paths, or expected solutions."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0004",
+      "type": "mcq",
+      "stem": "Which method of studying problem solving involves examining one's own mental processes?",
+      "options": {
+        "A": "Simulation",
+        "B": "Experimentation",
+        "C": "Introspection",
+        "D": "Computer modelling"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Introspection is defined as the method of examining one's own mental processes."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0005",
+      "type": "mcq",
+      "stem": "What does the trial-and-error approach involve?",
+      "options": {
+        "A": "Following a detailed recipe to ensure the same result every time",
+        "B": "Trying different solutions and ruling out those that do not work",
+        "C": "Breaking a large task into smaller steps",
+        "D": "Starting from the desired end result and working backward"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Trial and error involves trying a number of solutions and ruling out those that fail."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0006",
+      "type": "mcq",
+      "stem": "When is a trial-and-error approach most useful?",
+      "options": {
+        "A": "When there is a limited number of options available",
+        "B": "When the problem is extremely complex and large-scale",
+        "C": "When an exact mathematical formula is required",
+        "D": "When time is the most critical resource"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The text states this approach is useful when you have a limited number of options available."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0007",
+      "type": "mcq",
+      "stem": "How is an algorithm defined in the context of problem solving?",
+      "options": {
+        "A": "A general mental shortcut",
+        "B": "A rule of thumb that saves time",
+        "C": "A problem-solving formula providing step-by-step instructions",
+        "D": "A visual diagram representing a process"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "An algorithm is a formula that provides step-by-step instructions used to achieve a desired outcome."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0008",
+      "type": "mcq",
+      "stem": "Which of the following is an example of an algorithm used in everyday life?",
+      "options": {
+        "A": "A search engine ranking results",
+        "B": "Taking a walk to clear one's head",
+        "C": "Asking a peer for help with a task",
+        "D": "A rule of thumb for grocery shopping"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Search engines like Google use algorithms to rank search results according to the text."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0009",
+      "type": "mcq",
+      "stem": "What is a heuristic?",
+      "options": {
+        "A": "A precise set of instructions that guarantees a result",
+        "B": "A general problem-solving framework or mental shortcut",
+        "C": "A diagrammatic representation of an algorithm",
+        "D": "A method of testing hypotheses empirically"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A heuristic is defined as a general problem-solving framework or mental shortcut."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0010",
+      "type": "mcq",
+      "stem": "Under which condition is a heuristic typically used?",
+      "options": {
+        "A": "When instructions must be followed exactly",
+        "B": "When there is a limited number of options",
+        "C": "When the time to make a decision is limited",
+        "D": "When the problem has a well-defined goal"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Heuristics are used when the time to make a decision is limited to save energy and time."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0011",
+      "type": "mcq",
+      "stem": "Which heuristic involves starting from the end goal and moving toward the present?",
+      "options": {
+        "A": "Breaking a large task into smaller steps",
+        "B": "Trial and error",
+        "C": "Working backwards",
+        "D": "Means-Ends analysis"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Working backwards starts from the desired end result and works backward to the present situation."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0012",
+      "type": "mcq",
+      "stem": "What puzzle is cited as a classic example of Means-Ends Analysis?",
+      "options": {
+        "A": "Sudoku",
+        "B": "Tower of Hanoi",
+        "C": "Rubik's Cube",
+        "D": "Crossword puzzles"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Tower of Hanoi is described as a classic example of Means-Ends Analysis."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0013",
+      "type": "mcq",
+      "stem": "What is the formula for the minimum moves required to solve the Tower of Hanoi with n disks?",
+      "options": {
+        "A": "n^2 - 1",
+        "B": "2n + 1",
+        "C": "2^n - 1",
+        "D": "n!"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The formula provided for the minimum number of moves is 2 to the power of n minus 1."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0014",
+      "type": "mcq",
+      "stem": "Which Tower of Hanoi solution involves moving the smallest pieces over one position at a time?",
+      "options": {
+        "A": "Recursive solution",
+        "B": "Iterative solution",
+        "C": "Binary solution",
+        "D": "Graphical representation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An iterative solution involves moving the smallest pieces over one position at a time."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0015",
+      "type": "mcq",
+      "stem": "What is a 'decision matrix' used for?",
+      "options": {
+        "A": "Testing a program for syntax errors",
+        "B": "Ranking potential solutions based on weighted factors",
+        "C": "Visualizing code through standard shapes",
+        "D": "Representing real-world objects in a simpler form"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A decision matrix ranks potential solutions based on factors like risk, expense, and effectiveness."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0016",
+      "type": "mcq",
+      "stem": "Which roadblock involves viewing problems only in their customary manner?",
+      "options": {
+        "A": "Mental set",
+        "B": "Unfounded assumptions",
+        "C": "Functional fixedness",
+        "D": "Irrelevant information"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Functional fixedness is the tendency to view problems only in their customary manner."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0017",
+      "type": "mcq",
+      "stem": "What is a 'mental set'?",
+      "options": {
+        "A": "The tendency to use only solutions that have worked in the past",
+        "B": "Focusing on misleading data in a complex problem",
+        "C": "Making assumptions about constraints that do not exist",
+        "D": "A mental shortcut used to make fast decisions"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A mental set is the tendency to use only solutions that have worked in the past rather than looking for new ideas."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0018",
+      "type": "mcq",
+      "stem": "In the input/process/output model, what constitutes 'input' for a computer?",
+      "options": {
+        "A": "Images and text shown on the screen",
+        "B": "Data from keyboards, mice, or files",
+        "C": "The conversion of code to machine instructions",
+        "D": "A sequence of logical steps"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A computer receives input from sources such as keyboards, mice, files, or network devices."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0019",
+      "type": "mcq",
+      "stem": "What is the first step in the step-by-step problem-solving process?",
+      "options": {
+        "A": "Formulate a Model",
+        "B": "Develop an Algorithm",
+        "C": "Understand the Problem",
+        "D": "Write the Program"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Step 1 in the problem-solving process is to understand the problem fully before attempting to solve it."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0020",
+      "type": "mcq",
+      "stem": "In the grading example, what is needed during 'Step 2: Formulate a Model'?",
+      "options": {
+        "A": "A flowchart diagram",
+        "B": "A formula for computation",
+        "C": "A set of high-level code instructions",
+        "D": "A list of syntax rules"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Formulating a model requires a formula or model for computation based on available data."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0021",
+      "type": "mcq",
+      "stem": "Which of the following is a characteristic of an algorithm according to Step 3 of the process?",
+      "options": {
+        "A": "It has an infinite number of steps",
+        "B": "It is written in a specific machine language",
+        "C": "It has a definite beginning and end",
+        "D": "It is a visual representation of hardware"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "An algorithm is defined as having a definite beginning, a definite end, and a finite number of steps."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0022",
+      "type": "mcq",
+      "stem": "What is pseudocode?",
+      "options": {
+        "A": "Code that can be compiled and executed",
+        "B": "A simple sequence of English-like instructions",
+        "C": "A diagram using circles and squares",
+        "D": "Machine-readable instructions"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Pseudocode is a simple and concise sequence of English-like instructions used to represent an algorithm."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0023",
+      "type": "mcq",
+      "stem": "Why is pseudocode often preferred over flowcharts?",
+      "options": {
+        "A": "It is more visual and colorful",
+        "B": "It is easier to write and can be written close to actual code",
+        "C": "It uses standardized geometric shapes",
+        "D": "It can be directly understood by computer hardware"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Pseudocode is often preferred because it is easier to write and is close to actual code."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0024",
+      "type": "mcq",
+      "stem": "What does 'compiling' a program mean?",
+      "options": {
+        "A": "Fixing logical errors in the source code",
+        "B": "Converting high-level language into machine-readable instructions",
+        "C": "Running a program with sample data to check for bugs",
+        "D": "Dividing a problem into smaller sub-problems"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Compiling is the process of converting a program in high-level language into machine-readable instructions."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0025",
+      "type": "mcq",
+      "stem": "What are 'bugs' in computer programming?",
+      "options": {
+        "A": "Standardized symbols in flowcharts",
+        "B": "Errors that cause a program to produce incorrect results",
+        "C": "Specific hardware components that receive input",
+        "D": "Calculations used in the modeling phase"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Bugs are errors within a program that cause it to stop working or produce incorrect results."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0026",
+      "type": "mcq",
+      "stem": "Which step in the process involves reconsidering the original problem to ensure the solution is properly formatted?",
+      "options": {
+        "A": "Test the Program",
+        "B": "Write the Program",
+        "C": "Evaluate the Solution",
+        "D": "Formulate a Model"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Evaluating the solution involves reconsidering the original problem to ensure the solution addresses it fully."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0027",
+      "type": "mcq",
+      "stem": "For a problem to be solved computationally, it must be 'computable,' meaning:",
+      "options": {
+        "A": "It must be written in Python or Java",
+        "B": "Calculations must be feasible within a reasonable time and capacity",
+        "C": "It must use a graphical user interface",
+        "D": "It must be solvable by a human without a calculator"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Computable problems are those where calculations are feasible within reasonable time and processing capacity."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0028",
+      "type": "mcq",
+      "stem": "What characterizes the brute-force approach?",
+      "options": {
+        "A": "High level of sophistication and optimization",
+        "B": "A lack of sophistication, taking the most direct or obvious route",
+        "C": "Breaking the problem into recursive sub-problems",
+        "D": "Storing and reusing results from smaller problems"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The brute-force approach is characterized by a lack of sophistication, taking the most direct or obvious route."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0029",
+      "type": "mcq",
+      "stem": "In a worst-case scenario, how many attempts would a brute-force approach take to crack a 4-digit padlock (0-9)?",
+      "options": {
+        "A": "1,000",
+        "B": "5,000",
+        "C": "10,000",
+        "D": "100,000"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A 4-digit padlock has 10,000 possible combinations, and brute force would try every one in the worst case."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0030",
+      "type": "mcq",
+      "stem": "What are the three steps applied in the Divide and Conquer approach?",
+      "options": {
+        "A": "Input, Process, Output",
+        "B": "Divide, Conquer, Combine",
+        "C": "Algorithm, Flowchart, Pseudocode",
+        "D": "Selection, Iteration, Recursion"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Divide and Conquer recursively applies the steps: Divide, Conquer, and Combine."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0031",
+      "type": "mcq",
+      "stem": "Which sorting algorithm is a classic example of Divide and Conquer?",
+      "options": {
+        "A": "Bubble Sort",
+        "B": "Merge Sort",
+        "C": "Insertion Sort",
+        "D": "Selection Sort"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Merge Sort is provided as an example of the Divide and Conquer strategy."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0032",
+      "type": "mcq",
+      "stem": "What is an advantage of the Divide and Conquer approach?",
+      "options": {
+        "A": "It is always faster than iteration for small inputs",
+        "B": "It effectively uses memory caches",
+        "C": "It does not require recursion",
+        "D": "It is the simplest to implement"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "One advantage listed is that Divide and Conquer effectively uses memory caches."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0033",
+      "type": "mcq",
+      "stem": "What is the crucial difference between Dynamic Programming and Divide and Conquer?",
+      "options": {
+        "A": "Dynamic programming does not use recursion",
+        "B": "Dynamic programming stores and reuses results of sub-problems",
+        "C": "Dynamic programming is top-down while Divide and Conquer is bottom-up",
+        "D": "Divide and Conquer is only for small datasets"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Dynamic programming differs by storing and reusing results (memorization) of smaller sub-problems."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0034",
+      "type": "mcq",
+      "stem": "When is Dynamic Programming justified?",
+      "options": {
+        "A": "Only when sub-problems overlap",
+        "B": "When the problem is very simple",
+        "C": "When the brute-force approach is too fast",
+        "D": "When no recursion is needed"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Dynamic programming is only justified when sub-problems overlap."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0035",
+      "type": "mcq",
+      "stem": "Which approach chooses the option with the smallest immediate local cost at each decision point?",
+      "options": {
+        "A": "Randomized Approach",
+        "B": "Greedy Algorithm",
+        "C": "Dynamic Programming",
+        "D": "Divide and Conquer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In a greedy algorithm, the choice with the smallest immediate (local) cost is selected at each decision point."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0036",
+      "type": "mcq",
+      "stem": "Greedy algorithms do not always guarantee:",
+      "options": {
+        "A": "A local optimum",
+        "B": "A result within a time frame",
+        "C": "A globally optimal solution",
+        "D": "A simple implementation"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Greedy algorithms look for local optima and do not guarantee a globally optimal result."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0037",
+      "type": "mcq",
+      "stem": "Which step in algorithm development ensures that all instructions are clear and unambiguous?",
+      "options": {
+        "A": "Processing finiteness",
+        "B": "Processing effectiveness",
+        "C": "Processing definiteness",
+        "D": "Identification of input"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Processing definiteness ensures all instructions are clear and unambiguous."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0038",
+      "type": "mcq",
+      "stem": "What is a characteristic of the Randomized Approach?",
+      "options": {
+        "A": "It ensures that particular inputs always cause worst-case behavior",
+        "B": "It uses values provided by a random number generator",
+        "C": "It is primarily used for sorting large datasets",
+        "D": "It avoids the use of game-theoretic situations"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A randomized approach depends on the input data and values from a random number generator."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0039",
+      "type": "mcq",
+      "stem": "Which of the following are the four cornerstones of computational thinking?",
+      "options": {
+        "A": "Input, Process, Output, Storage",
+        "B": "Decomposition, Pattern Recognition, Abstraction, Algorithms",
+        "C": "Syntax, Logic, Runtime, Interface",
+        "D": "Recursion, Selection, Iteration, Modularization"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The four cornerstones are decomposition, pattern recognition, abstraction, and algorithms."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0040",
+      "type": "mcq",
+      "stem": "In computational thinking, what is 'Decomposition'?",
+      "options": {
+        "A": "Focusing on important information only",
+        "B": "Looking for similarities within problems",
+        "C": "Breaking down a complex problem into smaller parts",
+        "D": "Developing a step-by-step solution"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Decomposition is defined as breaking down a complex problem into smaller, manageable parts."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0041",
+      "type": "mcq",
+      "stem": "How is 'Abstraction' defined as a problem-solving tool?",
+      "options": {
+        "A": "The process of ignoring relevant details",
+        "B": "Identifying general characteristics while filtering out unnecessary information",
+        "C": "Dividing a program into modules with single responsibilities",
+        "D": "Exhaustively searching for all possible solutions"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Abstraction identifies general characteristics needed while filtering out unnecessary information."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0042",
+      "type": "mcq",
+      "stem": "What is a real-world example of abstraction provided in the text?",
+      "options": {
+        "A": "Using a search engine to find a recipe",
+        "B": "Learning to drive a car without knowing its internal mechanics",
+        "C": "Organizing a library by book titles",
+        "D": "Building a computer model of a weather system"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Learning to drive is an example where internal mechanics are abstracted away from the driver."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0043",
+      "type": "mcq",
+      "stem": "What might happen without proper abstraction?",
+      "options": {
+        "A": "The program will run too fast",
+        "B": "Systems become easier to understand",
+        "C": "We may fail to see general patterns behind specific instances",
+        "D": "The computer will automatically fix all logic errors"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Without abstraction, we may fail to see general patterns and arrive at wrong solutions."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0044",
+      "type": "mcq",
+      "stem": "In the rectangle area example, what is 'abstracted away' during the design phase?",
+      "options": {
+        "A": "The formula Area = Width x Height",
+        "B": "The concept of Width and Height",
+        "C": "The actual numbers or specific values",
+        "D": "The requirement to calculate area"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Specific numbers are irrelevant during design and are abstracted away until runtime."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0045",
+      "type": "mcq",
+      "stem": "Which type of abstraction removes unnecessary details from a real-world object to focus on a task, such as a transit map?",
+      "options": {
+        "A": "Procedural Abstraction",
+        "B": "Representational Abstraction",
+        "C": "Data Abstraction",
+        "D": "Functional Abstraction"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Representational abstraction removes unnecessary details to create a simpler representation of objects."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0046",
+      "type": "mcq",
+      "stem": "Grouping things by common characteristics (e.g., a dog is a 'kind of' mammal) is known as:",
+      "options": {
+        "A": "Abstraction by Generalization",
+        "B": "Functional Abstraction",
+        "C": "Data Abstraction",
+        "D": "Modularization"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Abstraction by generalization involves grouping things by common characteristics."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0047",
+      "type": "mcq",
+      "stem": "What is 'Procedural Abstraction'?",
+      "options": {
+        "A": "Representing a computational method in a generalized way, independent of specific inputs",
+        "B": "Hiding the implementation details of a computational method",
+        "C": "Separating how data is used from how it is constructed",
+        "D": "Breaking a problem into multiple independent modules"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Procedural abstraction represents a computational method in a way that is independent of specific inputs."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0048",
+      "type": "mcq",
+      "stem": "Which abstraction type treats functions as 'black boxes' by hiding implementation details?",
+      "options": {
+        "A": "Data Abstraction",
+        "B": "Functional Abstraction",
+        "C": "Procedural Abstraction",
+        "D": "Representational Abstraction"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Functional abstraction hides implementation details, making functions act as 'black boxes.'"
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0049",
+      "type": "mcq",
+      "stem": "What does 'Data Abstraction' separate?",
+      "options": {
+        "A": "The user from the computer",
+        "B": "The code from the documentation",
+        "C": "How a data object is used from how it is constructed",
+        "D": "The input from the output"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Data abstraction separates how a data object is used from the details of its construction."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0050",
+      "type": "mcq",
+      "stem": "A stack is given as an example of an Abstract Data Type (ADT) that supports which operations?",
+      "options": {
+        "A": "Input, Process, Output",
+        "B": "Read, Write, Compute",
+        "C": "Push, Pop, Peek",
+        "D": "If, Else, Switch"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A stack is an ADT that supports push, pop, and peek regardless of implementation."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0051",
+      "type": "mcq",
+      "stem": "Which of the following is true about algorithms and computer programs?",
+      "options": {
+        "A": "Algorithms are only for hardware design",
+        "B": "Algorithms are the building blocks of computer programs",
+        "C": "Every problem can only be solved by one specific algorithm",
+        "D": "Algorithms cannot be understood by humans"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text states that algorithms are the building blocks of computer programs."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0052",
+      "type": "mcq",
+      "stem": "What is the purpose of an algorithm?",
+      "options": {
+        "A": "To slow down the computer for safety",
+        "B": "To increase reliability, accuracy, and efficiency of solutions",
+        "C": "To provide a visual diagram for stakeholders",
+        "D": "To replace the need for programming languages"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The purpose of an algorithm is to increase the reliability, accuracy, and efficiency of obtaining solutions."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0053",
+      "type": "mcq",
+      "stem": "What does 'Processing finiteness' mean in algorithm development?",
+      "options": {
+        "A": "The algorithm must be basic and executable",
+        "B": "The algorithm must terminate after a finite number of steps",
+        "C": "The algorithm must have unique results for each step",
+        "D": "The algorithm must receive at least one input"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Processing finiteness ensures the algorithm terminates after a finite number of steps for all cases."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0054",
+      "type": "mcq",
+      "stem": "Which characteristic of a good algorithm ensures results of each step are uniquely defined?",
+      "options": {
+        "A": "Precision",
+        "B": "Uniqueness",
+        "C": "Finiteness",
+        "D": "Effectiveness"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Uniqueness means the results of each step are uniquely defined and depend only on input and previous steps."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0055",
+      "type": "mcq",
+      "stem": "In the algorithm to find the largest of three numbers (X, Y, Z), if X > Y, what is the initial value of 'big'?",
+      "options": {
+        "A": "Y",
+        "B": "X",
+        "C": "Z",
+        "D": "0"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The algorithm states: If (X > Y) then big = X, else big = Y."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0056",
+      "type": "mcq",
+      "stem": "Algorithm Efficiency relates to the consumption of which two resources?",
+      "options": {
+        "A": "Input and Output",
+        "B": "Time and Space",
+        "C": "Hardware and Software",
+        "D": "Power and Data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Algorithm efficiency describes properties relating to the consumption of time and space."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0057",
+      "type": "mcq",
+      "stem": "What is 'Runtime complexity'?",
+      "options": {
+        "A": "The amount of storage space required",
+        "B": "The difficulty of writing the code",
+        "C": "The amount of time an algorithm takes to complete",
+        "D": "The number of lines in the algorithm"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Runtime complexity (execution time) is the amount of time an algorithm takes to complete once started."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0058",
+      "type": "mcq",
+      "stem": "Which Big O notation represents an algorithm with 'Constant' efficiency?",
+      "options": {
+        "A": "O(n)",
+        "B": "O(1)",
+        "C": "O(log n)",
+        "D": "O(n^2)"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Constant efficiency is represented by O(1) notation."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0059",
+      "type": "mcq",
+      "stem": "Which of these is considered the least efficient for large datasets?",
+      "options": {
+        "A": "O(n log n)",
+        "B": "O(n)",
+        "C": "O(n^n)",
+        "D": "O(n^2)"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Exponential notation O(n^n) is practically unusable except for very small n."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0060",
+      "type": "mcq",
+      "stem": "What notation is used for 'Logarithmic' efficiency?",
+      "options": {
+        "A": "O(n^3)",
+        "B": "O(log n)",
+        "C": "O(n)",
+        "D": "O(1)"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Logarithmic efficiency is represented by O(log n)."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0061",
+      "type": "mcq",
+      "stem": "What is an advantage of algorithms mentioned in the notes?",
+      "options": {
+        "A": "They are always very short",
+        "B": "They are language independent",
+        "C": "They are easy to develop for complex problems",
+        "D": "They require no logical thinking"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Algorithms are language independent and can be implemented in any high-level programming language."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0062",
+      "type": "mcq",
+      "stem": "How is a flowchart defined?",
+      "options": {
+        "A": "A list of English-like code instructions",
+        "B": "A type of diagram representing an algorithm or workflow",
+        "C": "A formal model of a computer CPU",
+        "D": "A table ranking potential solutions"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A flowchart is a diagram that represents an algorithm, workflow, or process."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0063",
+      "type": "mcq",
+      "stem": "In flowchart symbols, what does an Oval or Rounded Rectangle represent?",
+      "options": {
+        "A": "A process or action",
+        "B": "Input/Output data",
+        "C": "A decision point",
+        "D": "Start / End (Terminator)"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The Oval or Rounded Rectangle indicates where the flow starts and ends."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0064",
+      "type": "mcq",
+      "stem": "Which flowchart symbol is used for a branching point (yes/no question)?",
+      "options": {
+        "A": "Rectangle",
+        "B": "Diamond",
+        "C": "Parallelogram",
+        "D": "Arrow"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A Diamond represents a branching point or decision in a flowchart."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0065",
+      "type": "mcq",
+      "stem": "What is the purpose of the Parallelogram symbol in flowcharts?",
+      "options": {
+        "A": "To show program flow order",
+        "B": "To represent a single process step",
+        "C": "To input data from users or output results",
+        "D": "To mark the beginning of the chart"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Parallelogram is used to input data from users or output results."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0066",
+      "type": "mcq",
+      "stem": "Which flowchart type is best for documenting processes interacting with different departments?",
+      "options": {
+        "A": "Data Flowchart",
+        "B": "Process Flowchart",
+        "C": "Swim lane Flowchart",
+        "D": "Workflow Diagram"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Swim lane flowcharts are ideal for documenting processes that interact with different departments."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0067",
+      "type": "mcq",
+      "stem": "A 'Workflow Chart' is particularly useful for:",
+      "options": {
+        "A": "Tracing data through a CPU",
+        "B": "Training new employees and discovering problem areas",
+        "C": "Ranking solutions based on weight",
+        "D": "Hiding implementation details"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Workflow charts are useful for training new employees and discovering problem areas."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0068",
+      "type": "mcq",
+      "stem": "For natural readability, in which direction should flowcharts flow?",
+      "options": {
+        "A": "Right-to-left or bottom-to-top",
+        "B": "Left-to-right or top-to-bottom",
+        "C": "Clockwise only",
+        "D": "Randomly as space allows"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Charts should flow left-to-right or top-to-bottom for natural readability."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0069",
+      "type": "mcq",
+      "stem": "What is a recommended limit for the number of colors in a flowchart?",
+      "options": {
+        "A": "One color only",
+        "B": "No more than three colors",
+        "C": "Exactly five colors",
+        "D": "No limit"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The notes suggest using no more than three colors to keep charts readable."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0070",
+      "type": "mcq",
+      "stem": "What is a primary difference between an algorithm and a flowchart?",
+      "options": {
+        "A": "Algorithms use diagrams, flowcharts use text",
+        "B": "Algorithms are visual, flowcharts are logical",
+        "C": "Algorithms use text descriptions, flowcharts use diagrammatic boxes and arrows",
+        "D": "There is no difference"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Algorithms are logical procedures using text, while flowcharts are diagrammatic representations."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0071",
+      "type": "mcq",
+      "stem": "Flowcharts are considered more adequate than algorithms for:",
+      "options": {
+        "A": "Small problems",
+        "B": "Very simple math",
+        "C": "Complex programs",
+        "D": "Non-computable issues"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Flowcharts are stated to be more adequate for detailed representation of complex programs."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0072",
+      "type": "mcq",
+      "stem": "What is pseudocode often called because it looks like code but cannot be compiled?",
+      "options": {
+        "A": "Hard code",
+        "B": "Soft code",
+        "C": "False code",
+        "D": "Real code"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Pseudocode is referred to as 'false code' because it cannot be compiled or interpreted."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0073",
+      "type": "mcq",
+      "stem": "Which pseudocode construct represents linear tasks performed one after the other?",
+      "options": {
+        "A": "WHILE",
+        "B": "SEQUENCE",
+        "C": "REPEAT-UNTIL",
+        "D": "CASE"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The SEQUENCE construct represents linear tasks performed one after the other."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0074",
+      "type": "mcq",
+      "stem": "In which pseudocode loop is the condition tested at the bottom, ensuring it executes at least once?",
+      "options": {
+        "A": "WHILE",
+        "B": "FOR",
+        "C": "REPEAT-UNTIL",
+        "D": "IF-THEN-ELSE"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The REPEAT-UNTIL loop tests the condition at the bottom, so statements execute at least once."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0075",
+      "type": "mcq",
+      "stem": "The 'CASE' construct in pseudocode is a generalized form of:",
+      "options": {
+        "A": "SEQUENCE",
+        "B": "WHILE",
+        "C": "IF-THEN-ELSE",
+        "D": "FOR"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "CASE is the generalized form of IF-THEN-ELSE for multi-way branching."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0076",
+      "type": "mcq",
+      "stem": "According to the rules for writing pseudocode, which keywords should be capitalized?",
+      "options": {
+        "A": "Only the first word of the file",
+        "B": "Initial keywords (e.g., WHILE, IF)",
+        "C": "Every single word",
+        "D": "Only variable names"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Rules state to always capitalise the initial keyword like SEQUENCE, WHILE, and IF."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0077",
+      "type": "mcq",
+      "stem": "What should be used to end multi-line sections in pseudocode?",
+      "options": {
+        "A": "A semicolon",
+        "B": "A period",
+        "C": "END keywords (e.g., ENDIF)",
+        "D": "A closing bracket"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Always end multi-line sections using END keywords such as ENDIF or ENDWHILE."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0078",
+      "type": "mcq",
+      "stem": "Which strategy involves decomposing a problem into manageable chunks or modules?",
+      "options": {
+        "A": "Selection strategies",
+        "B": "Implementation strategies",
+        "C": "Search strategies",
+        "D": "Randomization strategies"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Implementation strategies involve decomposing problems into manageable modules and sub-tasks."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0079",
+      "type": "mcq",
+      "stem": "What is recursion?",
+      "options": {
+        "A": "A loop that never ends",
+        "B": "A technique where a function calls itself",
+        "C": "A method of sorting data using a single pass",
+        "D": "A way to convert code into machine language"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Recursion is a programming technique where a procedure, subroutine, or function calls itself."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0080",
+      "type": "mcq",
+      "stem": "What two cases must every recursive function have?",
+      "options": {
+        "A": "Start case and End case",
+        "B": "Input case and Output case",
+        "C": "Base case and Recursive case",
+        "D": "Local case and Global case"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Every recursive function must have at least a base case and a recursive case."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0081",
+      "type": "mcq",
+      "stem": "What happens in the 'Base case' of a recursive function?",
+      "options": {
+        "A": "The function calls itself with new arguments",
+        "B": "The recursion ends",
+        "C": "The program crashes",
+        "D": "The problem is broken into smaller parts"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The base case is a small problem that we know how to solve and causes recursion to end."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0082",
+      "type": "mcq",
+      "stem": "In the factorial example (n!), what is the base case?",
+      "options": {
+        "A": "n!",
+        "B": "n * (n-1)!",
+        "C": "1 when n == 0 or n == 1",
+        "D": "n * n"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The base case for factorial is defined as 1 when n is 0 or 1."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0083",
+      "type": "mcq",
+      "stem": "What is the 'Call Stack' in recursion?",
+      "options": {
+        "A": "A list of all variables in a program",
+        "B": "A Last In, First Out (LIFO) data structure tracking function frames",
+        "C": "A diagram showing how data flows through a system",
+        "D": "A collection of error messages"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The call stack is a LIFO structure that tracks multiple frames for function calls."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0084",
+      "type": "mcq",
+      "stem": "What is 'Circularity' in recursion?",
+      "options": {
+        "A": "A perfectly optimized recursive call",
+        "B": "A situation where recursion continues forever and crashes the program",
+        "C": "A method of sorting data in a circle",
+        "D": "A way to reuse memory frames"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Circularity occurs when a base case is never reached, causing infinite recursion and a crash."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0085",
+      "type": "mcq",
+      "stem": "Which term describes a program crash caused by infinite recursion?",
+      "options": {
+        "A": "Memory leak",
+        "B": "Syntax error",
+        "C": "Stack overflow",
+        "D": "Logic failure"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Infinite recursion continues forever, causing the program to crash via a stack overflow."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0086",
+      "type": "mcq",
+      "stem": "Why can recursion sometimes be slower than iteration?",
+      "options": {
+        "A": "Because it uses less memory",
+        "B": "Because of the overhead of managing thousands of stack frames",
+        "C": "Because it does not use a CPU",
+        "D": "Because it is written in English"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Deeply nested recursion has significant overhead for managing many stack frames."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0087",
+      "type": "mcq",
+      "stem": "Which type of recursion makes exactly two recursive calls?",
+      "options": {
+        "A": "Linear recursion",
+        "B": "Tail recursion",
+        "C": "Binary recursion",
+        "D": "Exponential recursion"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Binary recursion makes exactly two recursive calls."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0088",
+      "type": "mcq",
+      "stem": "What is 'Tail recursion'?",
+      "options": {
+        "A": "Recursion that occurs only at the beginning of a function",
+        "B": "A form where the recursive call is the very last operation",
+        "C": "Recursion that calls three other functions",
+        "D": "Recursion that never terminates"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Tail recursion is a form of linear recursion where the recursive call is the last operation."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0089",
+      "type": "mcq",
+      "stem": "What type of recursion occurs when two or more functions call each other?",
+      "options": {
+        "A": "Mutual recursion",
+        "B": "Nested recursion",
+        "C": "Exponential recursion",
+        "D": "Binary recursion"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Mutual recursion involves two or more functions that call each other."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0090",
+      "type": "mcq",
+      "stem": "What are the two basic types of control structures?",
+      "options": {
+        "A": "Input and Output",
+        "B": "Selection and Iteration",
+        "C": "Recursion and Modularization",
+        "D": "Logic and Syntax"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Selection (conditionals) and iteration (loops) are the two basic control structures."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0091",
+      "type": "mcq",
+      "stem": "What does an 'IF statement' do?",
+      "options": {
+        "A": "Repeats a block of code until a condition is false",
+        "B": "Executes statements if a condition is true",
+        "C": "Branches to multiple paths based on a selector",
+        "D": "Terminates the program immediately"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An IF statement executes statements when a condition is TRUE."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0092",
+      "type": "mcq",
+      "stem": "Which statement is used for multi-way branching with more than two conditions?",
+      "options": {
+        "A": "IF-ELSE",
+        "B": "FOR loop",
+        "C": "SELECT CASE",
+        "D": "WHILE loop"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The SELECT CASE statement is used for multi-way branching when there are more than two conditions."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0093",
+      "type": "mcq",
+      "stem": "In a 'FOR loop,' when is the condition evaluated?",
+      "options": {
+        "A": "At the end of every iteration",
+        "B": "Only when the loop is initiated",
+        "C": "Randomly during execution",
+        "D": "Never"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In a FOR loop, the condition is evaluated only when the loop is initiated."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0094",
+      "type": "mcq",
+      "stem": "What happens in a 'WHILE loop' if the condition is FALSE initially?",
+      "options": {
+        "A": "The loop executes once",
+        "B": "The loop never executes",
+        "C": "The program crashes",
+        "D": "The loop repeats until it becomes TRUE"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "If a WHILE loop's condition is FALSE initially, the loop never executes."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0095",
+      "type": "mcq",
+      "stem": "Failure to change conditions within a WHILE loop results in:",
+      "options": {
+        "A": "A syntax error",
+        "B": "An infinite loop",
+        "C": "Faster execution",
+        "D": "A stack overflow"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Failing to change conditions within the loop results in an infinite loop."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0096",
+      "type": "mcq",
+      "stem": "What keyword is used to exit a 'REPEAT-UNTIL' loop when a condition is met?",
+      "options": {
+        "A": "END",
+        "B": "STOP",
+        "C": "BREAK",
+        "D": "FINISH"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A BREAK statement is used to exit a REPEAT loop when the condition becomes TRUE."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0097",
+      "type": "mcq",
+      "stem": "How are complex solutions built using control structures?",
+      "options": {
+        "A": "By using only one structure at a time",
+        "B": "By combining and nesting loops and conditionals",
+        "C": "By avoiding selection structures entirely",
+        "D": "By writing everything in a single line of code"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Complex solutions are built by combining basic building blocks like nested loops and conditionals."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0098",
+      "type": "mcq",
+      "stem": "What is 'Decomposition' in the context of implementation strategies?",
+      "options": {
+        "A": "Merging multiple programs into one",
+        "B": "Breaking a problem down into smaller parts to make it easier to tackle",
+        "C": "Hiding the source code from users",
+        "D": "Converting high-level language into machine code"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Decomposition is the process of breaking a problem down into smaller parts to make it easier to tackle."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0099",
+      "type": "mcq",
+      "stem": "A module should ideally have how many responsibilities?",
+      "options": {
+        "A": "A single responsibility",
+        "B": "At least five responsibilities",
+        "C": "As many as possible to save space",
+        "D": "None"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Each module should have only a single responsibility for better decomposition."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0100",
+      "type": "mcq",
+      "stem": "Which metric measures the degree of interdependence between modules?",
+      "options": {
+        "A": "Cohesion",
+        "B": "Coupling",
+        "C": "Decomposability",
+        "D": "Reliability"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Coupling measures the degree of interdependence between modules."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0101",
+      "type": "mcq",
+      "stem": "What does 'Cohesion' measure?",
+      "options": {
+        "A": "How many functions are in a program",
+        "B": "How functionally related the elements within a module are",
+        "C": "The speed of the algorithm",
+        "D": "The amount of memory used by the stack"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cohesion measures how functionally related the elements within a module are."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0102",
+      "type": "mcq",
+      "stem": "Good software design aims for:",
+      "options": {
+        "A": "High coupling and high cohesion",
+        "B": "Low coupling and low cohesion",
+        "C": "Low coupling and high cohesion",
+        "D": "High coupling and low cohesion"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Good software is characterized by low coupling (independence) and high cohesion (internal focus)."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0103",
+      "type": "mcq",
+      "stem": "What are 'Specific Task Functions' in modularization?",
+      "options": {
+        "A": "Functions unique to one program that do not share data",
+        "B": "Functions designed to be usable across multiple programs",
+        "C": "Functions that only manage program flow",
+        "D": "Functions that cannot be debugged"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Specific Task Functions are designed to be reusable across multiple programs."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0104",
+      "type": "mcq",
+      "stem": "How do 'Specific Task Functions' communicate data?",
+      "options": {
+        "A": "Through global variables only",
+        "B": "They do not communicate data",
+        "C": "Through parameters (parameter passing)",
+        "D": "By writing to the screen"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "These functions communicate data specifically through parameter passing."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0105",
+      "type": "mcq",
+      "stem": "What is a benefit of modular code readability?",
+      "options": {
+        "A": "It makes the code harder to find",
+        "B": "It groups code by task, making it easy to locate and understand",
+        "C": "It removes the need for documentation",
+        "D": "It forces all developers to use the same language"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Modular code is organized and grouped by task, which improves readability and maintainability."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0106",
+      "type": "mcq",
+      "stem": "Which property of modularity allows system changes to affect only individual modules?",
+      "options": {
+        "A": "Modular Decomposability",
+        "B": "Modular Continuity",
+        "C": "Modular Protection",
+        "D": "Modular Composability"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Modular continuity ensures changes to requirements affect individual modules without affecting the overall system."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0107",
+      "type": "mcq",
+      "stem": "What is 'Modular Protection'?",
+      "options": {
+        "A": "Encrypting the source code",
+        "B": "Ensuring errors in one module do not propagate to others",
+        "C": "Preventing users from accessing the program",
+        "D": "Limiting the number of functions in a module"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Modular protection ensures errors or failures are contained within a module and do not propagate."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0108",
+      "type": "mcq",
+      "stem": "Program Testing is a process to check if a system is:",
+      "options": {
+        "A": "Working as it is supposed to",
+        "B": "Written in the correct font",
+        "C": "Fast enough for a specific user",
+        "D": "Under 1000 lines of code"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Program testing checks whether a system is working as intended or not working as it is not supposed to."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0109",
+      "type": "mcq",
+      "stem": "Which type of test is low-level and focuses on an isolated part of the system?",
+      "options": {
+        "A": "Integration Test",
+        "B": "Unit Test",
+        "C": "End-to-End Test",
+        "D": "Smoke Test"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unit tests are low-level tests focusing on testing a specific, isolated part of the system."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0110",
+      "type": "mcq",
+      "stem": "What do 'Integration Tests' focus on?",
+      "options": {
+        "A": "Isolated logic blocks",
+        "B": "Service boundaries like databases and external APIs",
+        "C": "The entire user journey",
+        "D": "A single line of code"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Integration tests focus on service boundaries like databases, file systems, and external APIs."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0111",
+      "type": "mcq",
+      "stem": "Which tests are 'black box' and trace a path through the system as a user would?",
+      "options": {
+        "A": "Unit Tests",
+        "B": "Integration Tests",
+        "C": "End-to-End Tests",
+        "D": "Syntax Tests"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "End-to-End tests are black box tests that trace a user's path through the system."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0112",
+      "type": "mcq",
+      "stem": "What is a 'Smoke Test'?",
+      "options": {
+        "A": "A test that produces physical smoke",
+        "B": "A quick, basic test checking core functionality after a new build",
+        "C": "An exhaustive search of all possible inputs",
+        "D": "A test conducted by external hackers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Smoke tests are quick, basic tests run after a build to confirm major features work."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0113",
+      "type": "mcq",
+      "stem": "Why is it desirable for tests to be 'Deterministic'?",
+      "options": {
+        "A": "So they always run faster",
+        "B": "So the same input always produces the same output",
+        "C": "So they can be written in English",
+        "D": "So they can find syntax errors"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Determinism ensures the same input produces the same output, making tests reliable."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0114",
+      "type": "mcq",
+      "stem": "Identifying bugs early is beneficial because it is:",
+      "options": {
+        "A": "More difficult",
+        "B": "Less expensive in time and money",
+        "C": "Only possible with automated tools",
+        "D": "Required by the compiler"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Detecting and fixing errors early is far less expensive than catching them late."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0115",
+      "type": "mcq",
+      "stem": "How is 'Debugging' defined?",
+      "options": {
+        "A": "The process of writing new features",
+        "B": "Finding and resolving errors ('bugs') in software",
+        "C": "Converting code to machine language",
+        "D": "Creating flowcharts for documentation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Debugging is the computer programming process for finding and resolving errors in software."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0116",
+      "type": "mcq",
+      "stem": "Which type of error is a grammatical interruption like a missing semicolon?",
+      "options": {
+        "A": "Logic Error",
+        "B": "Syntax Error",
+        "C": "Run-time Error",
+        "D": "Interface Error"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Syntax errors are grammatical interruptions in code, such as missing semicolons."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0117",
+      "type": "mcq",
+      "stem": "What causes a 'Logic Error'?",
+      "options": {
+        "A": "A missing bracket",
+        "B": "An OS formatting issue",
+        "C": "Issues in code algorithms that cause unexpected output",
+        "D": "A disconnect in an API"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Logic errors are algorithm issues that lead to unexpected output or program failure."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0118",
+      "type": "mcq",
+      "stem": "A 'Run-time Error' occurs:",
+      "options": {
+        "A": "Before the program is compiled",
+        "B": "During program execution",
+        "C": "Only when writing the algorithm",
+        "D": "When a user inputs the wrong data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Run-time errors are errors that specifically occur during program execution."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0119",
+      "type": "mcq",
+      "stem": "What is an 'Interface Error'?",
+      "options": {
+        "A": "An error in the user's monitor",
+        "B": "A disconnect in an API where coding languages cause a problem",
+        "C": "An error in the algorithm's logic",
+        "D": "A misspelled variable name"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Interface errors involve a disconnect in an API where coding languages cause a problem."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0120",
+      "type": "mcq",
+      "stem": "The 'Scientific Method' of debugging involves:",
+      "options": {
+        "A": "Guessing where the bug is",
+        "B": "Forming a hypothesis and conducting a test",
+        "C": "Deleting the code and starting over",
+        "D": "Asking a peer to fix the error"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The scientific method in debugging involves forming a hypothesis and testing it to confirm or refute it."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0121",
+      "type": "mcq",
+      "stem": "What does the 'Backtracking method' of debugging involve?",
+      "options": {
+        "A": "Running the code on two computers",
+        "B": "Analyzing from the start to the point where the bug appears",
+        "C": "Searching for the bug in alphabetical order",
+        "D": "Using a random number generator to find errors"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Backtracking involves analyzing from the beginning to the point where an unexpected result first appears."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0122",
+      "type": "mcq",
+      "stem": "What is a key difference between Testing and Debugging regarding automation?",
+      "options": {
+        "A": "Debugging can be automated, testing cannot",
+        "B": "Most test cases can be automated, but debugging cannot",
+        "C": "Both can be fully automated",
+        "D": "Neither can be automated"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text notes that most test cases can be automated while automation of debugging is not possible."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0123",
+      "type": "mcq",
+      "stem": "Can Debugging be outsourced to external teams?",
+      "options": {
+        "A": "Yes, it is often more efficient",
+        "B": "No, it must be done by the development team",
+        "C": "Only for syntax errors",
+        "D": "Only for web development"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unlike testing, debugging cannot be outsourced; it must be done by the development team."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0124",
+      "type": "mcq",
+      "stem": "Which process finds the root cause of a code failure?",
+      "options": {
+        "A": "Testing",
+        "B": "Debugging",
+        "C": "Modularization",
+        "D": "Abstraction"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Debugging finds the root cause of the code failure, whereas testing just identifies the failure."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0125",
+      "type": "mcq",
+      "stem": "A well-defined problem has clear goals and a clear:",
+      "options": {
+        "A": "Mental shortcut",
+        "B": "Expected solution",
+        "C": "Roadblock",
+        "D": "Facilitator"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Well-defined problems have specific goals, defined solutions, and clear expected solutions."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0126",
+      "type": "mcq",
+      "stem": "Which studying method involves modeling the problem computationally?",
+      "options": {
+        "A": "Introspection",
+        "B": "Simulation",
+        "C": "Experimentation",
+        "D": "Heuristics"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Simulation is defined as modeling the problem computationally."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0127",
+      "type": "mcq",
+      "stem": "Why is 'Trial and Error' not typically time-efficient?",
+      "options": {
+        "A": "It requires advanced math",
+        "B": "It involves trying many solutions until one works",
+        "C": "It requires a facilitator",
+        "D": "It only works for printers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Trial and error involves trying many different solutions, making it less time-efficient than other strategies."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0128",
+      "type": "mcq",
+      "stem": "Social media platforms use algorithms to determine:",
+      "options": {
+        "A": "How many followers you have",
+        "B": "What content appears on your feed",
+        "C": "How to fix a jammed printer",
+        "D": "The root cause of a hardware failure"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Social media platforms use algorithms specifically to determine the content that appears on a user's feed."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0129",
+      "type": "mcq",
+      "stem": "Which condition justifies using a heuristic?",
+      "options": {
+        "A": "When instructions must be followed exactly",
+        "B": "When the decision to be made is unimportant",
+        "C": "When you have infinite time",
+        "D": "When the goal is ill-defined"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Heuristics are used when the decision to be made is unimportant to save mental energy."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0130",
+      "type": "mcq",
+      "stem": "Breaking a large research project into smaller steps is an example of:",
+      "options": {
+        "A": "A heuristic",
+        "B": "Trial and error",
+        "C": "Functional fixedness",
+        "D": "Compiling"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Breaking a large task into smaller steps is listed as a common heuristic."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0131",
+      "type": "mcq",
+      "stem": "In the Tower of Hanoi, no larger disk may be placed:",
+      "options": {
+        "A": "On an empty rod",
+        "B": "On top of a smaller disk",
+        "C": "On the same rod twice",
+        "D": "Next to a smaller disk"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A specific rule of the Tower of Hanoi is that no larger disk may be placed on top of a smaller disk."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0132",
+      "type": "mcq",
+      "stem": "The Tower of Hanoi formula for 3 disks results in how many moves?",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "7",
+        "D": "9"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Using the formula 2^3 - 1, the result for 3 disks is 7 moves."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0133",
+      "type": "mcq",
+      "stem": "What can a facilitator do for complex group problems?",
+      "options": {
+        "A": "Write all the code",
+        "B": "Mediate collaboration and help the group stay on task",
+        "C": "Test the program for syntax errors",
+        "D": "Increase the expense of the project"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A facilitator helps the group stay on task, document the process, and mediate collaboration."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0134",
+      "type": "mcq",
+      "stem": "In a decision matrix, what values are typically assigned to factors?",
+      "options": {
+        "A": "Weighted values (0-10)",
+        "B": "Random values",
+        "C": "Binary values (0-1)",
+        "D": "Infinite values"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The process involves assigning weighted values (0-10) to each factor for every solution."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0135",
+      "type": "mcq",
+      "stem": "Asking peers for help can contribute to a solution because they offer:",
+      "options": {
+        "A": "Lower costs",
+        "B": "Different experiences and skills",
+        "C": "Standardized shapes",
+        "D": "Faster compilers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Peers may offer different experiences and skills that contribute to finding a solution."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0136",
+      "type": "mcq",
+      "stem": "Which roadblock involves making assumptions about constraints that do not exist?",
+      "options": {
+        "A": "Functional fixedness",
+        "B": "Unfounded assumptions",
+        "C": "Irrelevant information",
+        "D": "Mental set"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unfounded assumptions involve making assumptions about constraints and obstacles that prevent certain solutions."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0137",
+      "type": "mcq",
+      "stem": "The computer will only do what it is told, therefore who must interpret the results?",
+      "options": {
+        "A": "The CPU",
+        "B": "The facilitator",
+        "C": "The human",
+        "D": "The peer"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The computer only follows instructions; the human must interpret the results meaningfully."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0138",
+      "type": "mcq",
+      "stem": "Computational problem solving requires that data requirements be examined for:",
+      "options": {
+        "A": "Color and font",
+        "B": "Types and storage capacity",
+        "C": "Language and syntax",
+        "D": "Length and width"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Data requirements include examining types of data and the required storage capacity."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0139",
+      "type": "mcq",
+      "stem": "A 4-digit padlock brute-force attempt takes up to 10,000 attempts in the:",
+      "options": {
+        "A": "Best case",
+        "B": "Worst case",
+        "C": "Average case",
+        "D": "Initial case"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Brute force takes up to 10,000 attempts in the worst case for a 4-digit padlock."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0140",
+      "type": "mcq",
+      "stem": "In Divide and Conquer, when is a sub-problem solved directly?",
+      "options": {
+        "A": "When it is the largest",
+        "B": "When it is indivisible (base case)",
+        "C": "When it has no input",
+        "D": "When it is part of a flowchart"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In the conquer step, sub-problems are solved directly when they are indivisible."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0141",
+      "type": "mcq",
+      "stem": "Dynamic programming is only justified under which condition?",
+      "options": {
+        "A": "When the problem is linear",
+        "B": "When sub-problems overlap",
+        "C": "When there is no recursion",
+        "D": "When the dataset is small"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Dynamic programming is only justified when sub-problems overlap."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0142",
+      "type": "mcq",
+      "stem": "Greedy algorithms are motivated by the desire to achieve:",
+      "options": {
+        "A": "The globally optimal solution",
+        "B": "The most feasible solution immediately",
+        "C": "A recursive combination of all solutions",
+        "D": "A lack of local cost"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "One motivation for greedy algorithms is to achieve the most feasible solution immediately."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0143",
+      "type": "mcq",
+      "stem": "What is 'Pattern Recognition' in computational thinking?",
+      "options": {
+        "A": "Hiding unnecessary details",
+        "B": "Looking for similarities among and within problems",
+        "C": "Breaking down a problem into parts",
+        "D": "Testing code for bugs"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Pattern recognition is the cornerstone of looking for similarities among and within problems."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0144",
+      "type": "mcq",
+      "stem": "Abstraction simplifies a process by providing what you need and hiding:",
+      "options": {
+        "A": "The input data",
+        "B": "The output results",
+        "C": "Useless details",
+        "D": "The facilitator"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Abstraction simplifies a process by providing what is needed while hiding useless details."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0145",
+      "type": "mcq",
+      "stem": "A metropolitan transit map is an example of which abstraction?",
+      "options": {
+        "A": "Data Abstraction",
+        "B": "Representational Abstraction",
+        "C": "Procedural Abstraction",
+        "D": "Functional Abstraction"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A transit map removes geographic accuracy to focus on connections, a form of representational abstraction."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0146",
+      "type": "mcq",
+      "stem": "In algorithm development, identifying the output means identifying at least:",
+      "options": {
+        "A": "One quantity the algorithm must produce",
+        "B": "Ten quantities the algorithm must produce",
+        "C": "A specific hardware device",
+        "D": "The programming language"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Identification of output involves identifying at least one quantity that must be produced."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0147",
+      "type": "mcq",
+      "stem": "Which of the following is a disadvantage of algorithms?",
+      "options": {
+        "A": "They are language independent",
+        "B": "They act as blueprints",
+        "C": "Developing them for complex problems is time-consuming",
+        "D": "They make finding logical errors simpler"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Developing algorithms for complex problems is cited as a time-consuming and difficult disadvantage."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0148",
+      "type": "mcq",
+      "stem": "The Arrow in a flowchart shows the order of:",
+      "options": {
+        "A": "Variable names",
+        "B": "Program flow/control",
+        "C": "Standardized shapes",
+        "D": "Input/Output data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The arrow or flow line shows the order of program flow and control."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0149",
+      "type": "mcq",
+      "stem": "Pseudocode 'smooths the transition' between which two stages?",
+      "options": {
+        "A": "Input and Output",
+        "B": "Flowchart and Code",
+        "C": "Selection and Iteration",
+        "D": "Syntax and Logic"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Pseudocode acts as a middle point that smooths the transition between design (flowchart) and implementation (code)."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0150",
+      "type": "mcq",
+      "stem": "What is 'Modular Composability'?",
+      "options": {
+        "A": "Breaking a problem down systematically",
+        "B": "The ability to combine modules to form a new system",
+        "C": "The ease of understanding a single module",
+        "D": "Containment of errors within a module"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Modular composability is the ability to combine modules or assemble components into a new system."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0151",
+      "type": "mcq",
+      "stem": "Which Tower of Hanoi solution encodes disk positions using binary notation?",
+      "options": {
+        "A": "Recursive solution",
+        "B": "Iterative solution",
+        "C": "Binary and Gray code solution",
+        "D": "Graphical representation"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The binary and Gray code solution encodes disk positions in binary notation to determine the move pattern."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0152",
+      "type": "mcq",
+      "stem": "Which Tower of Hanoi approach visualizes puzzle states as nodes and moves as edges in a graph?",
+      "options": {
+        "A": "Iterative solution",
+        "B": "Recursive solution",
+        "C": "Non-recursive solution",
+        "D": "Graphical representation"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The graphical representation approach visualizes all conditions as a graph with nodes representing states and edges representing moves."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0153",
+      "type": "mcq",
+      "stem": "Which Tower of Hanoi solution uses mathematical regularities in the move pattern rather than recursion?",
+      "options": {
+        "A": "Iterative solution",
+        "B": "Non-recursive solution",
+        "C": "Binary solution",
+        "D": "Graphical representation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The non-recursive solution exploits mathematical regularities in the move pattern to determine each step directly."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0154",
+      "type": "mcq",
+      "stem": "Using lessons from a previous marketing campaign to inform a new product launch is an example of which problem-solving strategy?",
+      "options": {
+        "A": "Trial and Error",
+        "B": "Heuristic",
+        "C": "Past Experience",
+        "D": "Decision Matrix"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The past-experience strategy involves drawing connections between current problems and similar past situations, adapting solutions from previous experiences."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0155",
+      "type": "mcq",
+      "stem": "When a problem does not require an immediate solution, which strategy recommends temporarily setting it aside?",
+      "options": {
+        "A": "Bring in a Facilitator",
+        "B": "Step Away from the Problem",
+        "C": "Ask Peers for Help",
+        "D": "Develop a Decision Matrix"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The 'step away' strategy proposes that temporarily disengaging-taking a walk or setting it aside-can lead to better ideas when you return feeling energised."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0156",
+      "type": "mcq",
+      "stem": "In a decision matrix, which solution is selected after assigning weighted scores?",
+      "options": {
+        "A": "The one with the lowest total score",
+        "B": "The one with the highest total score",
+        "C": "The one with the fewest factors evaluated",
+        "D": "The one that scored highest on risk alone"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "After assigning weighted values (0-10) to each factor, the solution with the highest total score is chosen because it best meets the most important criteria."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0157",
+      "type": "mcq",
+      "stem": "Which of the following is NOT listed as a factor evaluated in a decision matrix?",
+      "options": {
+        "A": "Timeliness",
+        "B": "Risk",
+        "C": "Expense",
+        "D": "Compiler efficiency"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The decision matrix factors listed are timeliness, risk, manageability, expense, practicality, and effectiveness - compiler efficiency is not mentioned."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0158",
+      "type": "mcq",
+      "stem": "What distinguishes the randomized approach's behavior even for the same input across different runs?",
+      "options": {
+        "A": "It always produces identical output",
+        "B": "Its behavior varies because it depends on random number generator values",
+        "C": "It is deterministic but appears random",
+        "D": "The output depends entirely on processing speed"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The randomized approach depends on values provided by a random number generator, so its behavior varies even for the same input across different runs."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0159",
+      "type": "mcq",
+      "stem": "According to the lecture notes, how is 'Problem Solving' formally defined in a computational context?",
+      "options": {
+        "A": "The act of writing clean, commented source code",
+        "B": "The sequential process of analyzing information related to a situation and generating appropriate response options",
+        "C": "A mental shortcut used to save energy when making quick decisions",
+        "D": "The step-by-step conversion of pseudocode into machine language"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The lecture notes define problem solving as the sequential process of analyzing information related to a given situation and generating appropriate response options."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0160",
+      "type": "mcq",
+      "stem": "For large and complex problems, the input/process/output model must be:",
+      "options": {
+        "A": "Simplified to a single pass",
+        "B": "Replaced entirely with pseudocode",
+        "C": "Iterated multiple times in sequence, producing intermediate results",
+        "D": "Executed backwards from output to input"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "For larger and more complex problems, the stages must be iterated multiple times in sequence, producing intermediate results along the way."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0161",
+      "type": "mcq",
+      "stem": "In the grading model example, when grades are letters (A-F), what must be done before computing an average?",
+      "options": {
+        "A": "Ignore letter grades and use only numerical ones",
+        "B": "Convert letter grades to numerical equivalents using a lookup table",
+        "C": "Sort the grades alphabetically first",
+        "D": "Round all grades to the nearest integer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "For letter grades, the model assigns numerical equivalents (A+ = 12, A = 11, … F = 0) and then maps the computed average back to a letter grade."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0162",
+      "type": "mcq",
+      "stem": "Before moving to the coding phase, what should be done with every algorithm?",
+      "options": {
+        "A": "Compile it immediately to check for syntax errors",
+        "B": "Test it mentally with sample data (test cases)",
+        "C": "Convert it to a flowchart first",
+        "D": "Submit it to a peer for independent review"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Every algorithm should be tested mentally with sample data (test cases) before moving to the coding phase to verify it produces the correct outputs."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0163",
+      "type": "mcq",
+      "stem": "Why is it beneficial to have people other than the original programmer test a program?",
+      "options": {
+        "A": "It reduces the programmer's workload",
+        "B": "External testers may think of input scenarios the programmer never considered",
+        "C": "Compilers require multiple users to validate code",
+        "D": "It guarantees there will be no logic errors"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It is good practice to have other people test your program as they may think of input scenarios you never considered, catching bugs that the original programmer overlooked."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0164",
+      "type": "mcq",
+      "stem": "What is an advantage of the brute-force approach?",
+      "options": {
+        "A": "It is the most time-efficient for large datasets",
+        "B": "It requires advanced mathematical knowledge",
+        "C": "It is simple to implement and always finds a solution",
+        "D": "It uses memory caches effectively"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The brute-force approach is simple to implement and always finds a solution (given enough time), even though it is highly inefficient for large datasets."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0165",
+      "type": "mcq",
+      "stem": "Which is a stated disadvantage of the Divide and Conquer approach?",
+      "options": {
+        "A": "It cannot handle large inputs",
+        "B": "It does not support parallelism",
+        "C": "Recursion can be slow and may outweigh advantages for some problems",
+        "D": "Sub-problems must be solved in a specific serial order"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A disadvantage listed is that recursion can be slow and may outweigh the advantages for some problems; also, it can be more complicated than a simple iterative approach for large inputs."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0166",
+      "type": "mcq",
+      "stem": "Why is the Divide and Conquer approach particularly suited for parallel execution?",
+      "options": {
+        "A": "It stores results for reuse, reducing total computation",
+        "B": "Sub-problems are independent of each other",
+        "C": "It always chooses the locally optimal solution first",
+        "D": "It eliminates the need for a base case"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Because the sub-problems in Divide and Conquer are independent, they can be solved simultaneously on multiple processors, making the approach well-suited for parallel execution."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0167",
+      "type": "mcq",
+      "stem": "In the Fibonacci dynamic programming example, what is the value of F(4)?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "5",
+        "D": "8"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "F(4) = F(3) + F(2) = 2 + 1 = 3, as shown in the lecture's Fibonacci example: F(0)=0, F(1)=1, F(2)=1, F(3)=2, F(4)=3."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0168",
+      "type": "mcq",
+      "stem": "For which type of problems is dynamic programming most commonly applied?",
+      "options": {
+        "A": "Sorting problems where data is always pre-ordered",
+        "B": "Optimisation problems seeking the solution with the smallest cost",
+        "C": "Simulation problems that model random events",
+        "D": "Problems requiring a graphical user interface"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Dynamic programming is often applied to optimisation problems where the goal is to find the solution with the smallest cost among many possible solutions."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0169",
+      "type": "mcq",
+      "stem": "A greedy algorithm can be motivated by the desire to divide a problem recursively based on a condition without:",
+      "options": {
+        "A": "Using any comparisons",
+        "B": "Needing to combine all solutions",
+        "C": "Storing intermediate results",
+        "D": "Executing more than one step"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A second motivation for greedy algorithms is to divide a problem recursively based on a condition without needing to combine all solutions afterward."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0170",
+      "type": "mcq",
+      "stem": "In what domain are randomized algorithms described as widely used due to requirements for fairness?",
+      "options": {
+        "A": "Database management and file systems",
+        "B": "Game-theoretic situations, computer security, and game development",
+        "C": "Hardware diagnostics and firmware updates",
+        "D": "Academic grading systems"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Randomized approaches are best suited for game-theoretic situations requiring fairness and are widely used in computer security and game development."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0171",
+      "type": "mcq",
+      "stem": "In computer science, what primary role does abstraction serve in managing software?",
+      "options": {
+        "A": "It speeds up the compiler by removing comments",
+        "B": "It manages the complexity of what is designed and created",
+        "C": "It converts pseudocode directly into machine language",
+        "D": "It automatically detects and fixes logic errors"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In computer science, abstraction manages the complexity of what is designed and created, allowing programmers to work at a higher level without being overwhelmed by low-level details."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0172",
+      "type": "mcq",
+      "stem": "The concept that 'a cocker spaniel is a kind of dog; a dog is a kind of mammal' illustrates which abstraction technique used in OOP?",
+      "options": {
+        "A": "Procedural Abstraction",
+        "B": "Functional Abstraction",
+        "C": "Abstraction by Generalization",
+        "D": "Data Abstraction"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "This is a classic example of abstraction by generalization in object-oriented programming, where shared characteristics allow code and behavior to be inherited across related types."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0173",
+      "type": "mcq",
+      "stem": "Why is a subroutine named 'calculate_area(side1_length, side2_length)' preferred over 'calculate_chopping_board_area()'?",
+      "options": {
+        "A": "It executes faster due to shorter naming",
+        "B": "It can be reused for any rectangular shape, not just chopping boards",
+        "C": "It uses less memory when compiled",
+        "D": "It avoids the need for parameters"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The generalized name makes the procedure independent of specific use-cases, demonstrating procedural abstraction - it can compute the area of any rectangle."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0174",
+      "type": "mcq",
+      "stem": "Python's built-in 'print()' function is given as an example of which type of abstraction?",
+      "options": {
+        "A": "Representational Abstraction",
+        "B": "Data Abstraction",
+        "C": "Procedural Abstraction",
+        "D": "Functional Abstraction"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Python's print() function is a functional abstraction - it hides all the complexity of writing output to a display device, acting as a 'black box' that receives input and produces output."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0175",
+      "type": "mcq",
+      "stem": "What happens once a model is formed through abstraction, according to the lecture notes?",
+      "options": {
+        "A": "The program is compiled immediately",
+        "B": "An algorithm can be designed to solve it",
+        "C": "Testing begins without further planning",
+        "D": "The problem is reclassified as ill-defined"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Abstraction allows us to form a model of the problem. Once we have a model, we can design an algorithm to solve it."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0176",
+      "type": "mcq",
+      "stem": "In algorithm design, smaller named components of an algorithm are called:",
+      "options": {
+        "A": "Subroutines, modules, or functions",
+        "B": "Loops, branches, or conditions",
+        "C": "Flowcharts, pseudocode, or diagrams",
+        "D": "Compilers, interpreters, or assemblers"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Sub-algorithms that form part of a larger algorithm are called modules, functions, or procedures, and are given meaningful names."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0177",
+      "type": "mcq",
+      "stem": "Which of the following is NOT listed as an application domain of algorithms in the lecture notes?",
+      "options": {
+        "A": "Ride-hailing applications",
+        "B": "Online banking",
+        "C": "Word processors",
+        "D": "Physical circuit design"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The lecture lists search engines, messaging apps, word processors, ride-hailing apps, online banking, and computer games as algorithm application domains - physical circuit design is not mentioned."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0178",
+      "type": "mcq",
+      "stem": "In the Simple Interest algorithm, what formula is used to compute the result?",
+      "options": {
+        "A": "SI = P + N + R / 100",
+        "B": "SI = P * N * R / 100",
+        "C": "SI = (P + R) * N",
+        "D": "SI = P / (N * R)"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Simple Interest formula given in the lecture is SI = P * N * R / 100, where P is Principal, N is Years, and R is Rate."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0179",
+      "type": "mcq",
+      "stem": "What does 'Processing effectiveness' mean in algorithm development?",
+      "options": {
+        "A": "Ensuring the algorithm terminates after a finite number of steps",
+        "B": "Ensuring all instructions are clear and unambiguous",
+        "C": "Ensuring all instructions are sufficiently basic and practically executable",
+        "D": "Ensuring results of each step are uniquely defined"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Processing effectiveness ensures that all instructions in the algorithm are sufficiently basic and practically executable - they can actually be carried out."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0180",
+      "type": "mcq",
+      "stem": "What does 'Space complexity' measure in algorithm analysis?",
+      "options": {
+        "A": "The number of lines in the source code",
+        "B": "The amount of storage space an algorithm requires while running",
+        "C": "The physical size of the hardware required",
+        "D": "The number of sub-algorithms needed"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Space complexity describes how much storage space an algorithm requires while it is running, alongside runtime complexity as the two primary efficiency metrics."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0181",
+      "type": "mcq",
+      "stem": "An algorithm that 'grows as the square of the input size' has which Big O notation?",
+      "options": {
+        "A": "O(n)",
+        "B": "O(n log n)",
+        "C": "O(n²)",
+        "D": "O(n³)"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "O(n²) is described as 'quadratic' efficiency - the time grows as the square of the input size and should be avoided for large inputs."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0182",
+      "type": "mcq",
+      "stem": "Which Big O notation represents 'Linear' efficiency?",
+      "options": {
+        "A": "O(1)",
+        "B": "O(log n)",
+        "C": "O(n)",
+        "D": "O(n²)"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Linear efficiency O(n) means the algorithm's time grows in direct proportion to (equally with) the input size."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0183",
+      "type": "mcq",
+      "stem": "Which Big O notation represents 'Cubic' efficiency, described as very slow for large inputs?",
+      "options": {
+        "A": "O(n²)",
+        "B": "O(n³)",
+        "C": "O(n^n)",
+        "D": "O(log n)"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cubic efficiency is represented by O(n³) and is described as very slow for large inputs in the lecture notes."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0184",
+      "type": "mcq",
+      "stem": "Which Big O category is described as 'preferred for large data' because it grows very slowly?",
+      "options": {
+        "A": "O(1)",
+        "B": "O(log n)",
+        "C": "O(n)",
+        "D": "O(n²)"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Logarithmic O(log n) is described as growing very slowly and being preferred for large data sets."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0185",
+      "type": "mcq",
+      "stem": "Smoke tests are run specifically right after:",
+      "options": {
+        "A": "A recursive function is written",
+        "B": "A new build or deployment",
+        "C": "The decision matrix is completed",
+        "D": "The pseudocode is converted to a flowchart"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Smoke tests are quick, basic tests run right after a new build or deployment to confirm the major features work as expected before running more expensive tests."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0186",
+      "type": "mcq",
+      "stem": "What is a stated disadvantage of algorithms regarding complex logic?",
+      "options": {
+        "A": "They cannot be written in plain English",
+        "B": "Understanding complex logic through algorithms can be very difficult",
+        "C": "They always require a graphical user interface",
+        "D": "They cannot be tested before coding"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A disadvantage stated in the notes is that while algorithms are useful, understanding complex logic expressed through them can be very difficult."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0187",
+      "type": "mcq",
+      "stem": "Which flowchart advantage relates to breaking a problem into parts that connect into a master chart?",
+      "options": {
+        "A": "It acts as an effective communication tool",
+        "B": "It serves as a permanent record",
+        "C": "It allows the problem to be broken into connectable parts",
+        "D": "It displays logic pictorially"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "One advantage of flowcharts is that they allow the problem solver to break a problem into parts that can be connected into a master chart, supporting modular design."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0188",
+      "type": "mcq",
+      "stem": "Which advantage of flowcharts refers to consulting it at a later time for reference?",
+      "options": {
+        "A": "Communication tool",
+        "B": "Permanent record",
+        "C": "Logic visualizer",
+        "D": "Parallel execution enabler"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Flowcharts serve as a permanent record of the solution that can be consulted at a later time, preserving the logic for future reference."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0189",
+      "type": "mcq",
+      "stem": "What type of flowchart specifically shows the way data is processed through a system and is often used in software design?",
+      "options": {
+        "A": "Process Flowchart",
+        "B": "Workflow Chart",
+        "C": "Swim lane Flowchart",
+        "D": "Data Flowchart"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "A data flowchart shows the way data is processed through a system and is often used for software design and development to analyze how information moves through a process."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0190",
+      "type": "mcq",
+      "stem": "The process flowchart is described as the most versatile type and can be used to:",
+      "options": {
+        "A": "Show only hardware connections",
+        "B": "Map roles/responsibilities and describe manufacturing processes",
+        "C": "Document cross-department swimlane interactions only",
+        "D": "Encode disk positions in binary notation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The process flowchart is the most versatile type and can be applied to virtually anything, including mapping roles/responsibilities and describing manufacturing processes."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0191",
+      "type": "mcq",
+      "stem": "According to flowchart design guidelines, how many fonts should a flowchart use?",
+      "options": {
+        "A": "As many as needed for emphasis",
+        "B": "At least three different fonts",
+        "C": "Stick to one font that is easy to read",
+        "D": "Only monospace fonts"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The design guidance states to stick to one font: make it easy to read and large enough, to ensure consistency and readability."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0192",
+      "type": "mcq",
+      "stem": "Why must a flowchart designer 'know their audience' according to the lecture notes?",
+      "options": {
+        "A": "To choose the correct flowchart software",
+        "B": "To calibrate the appropriate level of technical detail",
+        "C": "To decide how many colors to use",
+        "D": "To determine the number of decision diamonds needed"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Knowing your audience allows you to calibrate technical detail appropriately - a flowchart for executives needs less technical depth than one for developers."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0193",
+      "type": "mcq",
+      "stem": "What is the purpose of including a 'chart key' in a flowchart?",
+      "options": {
+        "A": "To list all variables used in the algorithm",
+        "B": "To clarify the meaning of symbols used",
+        "C": "To provide the programmer's contact details",
+        "D": "To show the Big O complexity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A chart key is included to clarify symbol meanings, especially when non-standard symbols are used or the audience may not be familiar with the conventions."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0194",
+      "type": "mcq",
+      "stem": "How can pseudocode serve as a starting point for documentation?",
+      "options": {
+        "A": "It can be directly compiled to generate API documentation",
+        "B": "It can form the basis of docstrings and technical documentation",
+        "C": "It replaces the need for comments in source code",
+        "D": "It generates UML diagrams automatically"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The lecture notes state that pseudocode can serve as a starting point for documentation, forming the basis of docstrings and technical documentation."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0195",
+      "type": "mcq",
+      "stem": "Why does pseudocode make bug detection easier compared to actual code?",
+      "options": {
+        "A": "It runs faster through a debugger",
+        "B": "It is human-readable, so bugs can be identified and fixed before writing actual code",
+        "C": "It automatically flags syntax violations",
+        "D": "It compiles to machine code that highlights errors"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Because pseudocode is human-readable, bugs can be identified and fixed before writing actual code - catching them earlier is far less costly."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0196",
+      "type": "mcq",
+      "stem": "The SEQUENCE construct in pseudocode uses which specific keywords for its operations?",
+      "options": {
+        "A": "PUSH, POP, PEEK",
+        "B": "READ, WRITE, COMPUTE, SET, INCREMENT, DECREMENT",
+        "C": "IF, ELSE, ENDIF",
+        "D": "WHILE, REPEAT, FOR"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The SEQUENCE construct uses keywords like READ, WRITE, COMPUTE, SET, INCREMENT, and DECREMENT to represent linear sequential steps."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0197",
+      "type": "mcq",
+      "stem": "The FOR construct in pseudocode is described as executing for:",
+      "options": {
+        "A": "An indefinite number of iterations until a condition is met",
+        "B": "A prescribed number of iterations",
+        "C": "Exactly two iterations in all cases",
+        "D": "Iterations determined by a random number generator"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The FOR construct is described as another looping construct that executes for a prescribed number of iterations - the count is defined upfront."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0198",
+      "type": "mcq",
+      "stem": "According to pseudocode writing rules, why should statements use the 'naming domain of the problem'?",
+      "options": {
+        "A": "To ensure faster compilation",
+        "B": "To keep the language closer to implementation syntax",
+        "C": "To use the problem's own vocabulary rather than programming-language-specific terms",
+        "D": "To satisfy the compiler's variable naming requirements"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The rule states to use the naming domain of the problem, not the implementation (e.g., 'Append the last name to the first name' not 'name = first + last'), keeping pseudocode language-independent."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0199",
+      "type": "mcq",
+      "stem": "What is the purpose of indentation in pseudocode?",
+      "options": {
+        "A": "To satisfy compiler requirements",
+        "B": "To show hierarchy, improve readability, and indicate nested constructs",
+        "C": "To separate input from output sections",
+        "D": "To mark the start and end of each algorithm"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Pseudocode rules specify indenting to show hierarchy, improve readability, and show nested constructs - making the logical structure immediately visible."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0200",
+      "type": "mcq",
+      "stem": "In the pseudocode example 'Print multiples of 5 between 1 and 100,' what is the initial value of x?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "5",
+        "D": "100"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The pseudocode sets x TO 1 as its initial value before entering the WHILE loop that runs while x <= 20."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0201",
+      "type": "mcq",
+      "stem": "In the pseudocode 'Print multiples of 5 between 1 and 100,' what is the loop condition?",
+      "options": {
+        "A": "x <= 100",
+        "B": "x <= 5",
+        "C": "x <= 20",
+        "D": "x >= 1"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The WHILE loop condition is x <= 20, since x starts at 1 and multiplying by 5 gives multiples up to 20 × 5 = 100."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0202",
+      "type": "mcq",
+      "stem": "For which type of data structure is recursion described as particularly useful in the lecture notes?",
+      "options": {
+        "A": "Linear arrays and stacks",
+        "B": "Hash tables and relational databases",
+        "C": "Graph structures (hierarchies and networks of interconnected things)",
+        "D": "Flat file systems"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Recursion is particularly useful for navigating graph structures - networks of things connected in various ways - such as organizational hierarchies."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0203",
+      "type": "mcq",
+      "stem": "Why is having a clear 'mission statement' critical when writing a recursive algorithm?",
+      "options": {
+        "A": "It speeds up the compilation process",
+        "B": "It prevents the compiler from generating warnings",
+        "C": "It ensures recursive calls behave as expected and avoids double counting",
+        "D": "It defines the Big O complexity automatically"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A clear mission statement (precise definition of what the function does) is critical so that recursive calls behave as expected - a vague one can lead to double counting or incorrect results."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0204",
+      "type": "mcq",
+      "stem": "In the call stack, when a new function is called, its frame is:",
+      "options": {
+        "A": "Deleted from the stack",
+        "B": "Pushed onto the top of the stack",
+        "C": "Inserted at the bottom of the stack",
+        "D": "Merged with the existing top frame"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "When a new function is called, its frame is pushed onto the top of the call stack (LIFO). When the function finishes, its frame is popped, returning control to the function below."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0205",
+      "type": "mcq",
+      "stem": "What mathematical fact is stated about recursion and iteration in the lecture notes?",
+      "options": {
+        "A": "Recursion is always faster than iteration",
+        "B": "Iteration can only solve problems that recursion cannot",
+        "C": "Any problem solvable with recursion can also be solved with iteration, and vice versa",
+        "D": "Recursion requires less memory than iteration in all cases"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "It has been mathematically proven that any problem solvable with recursion can also be solved with iteration, and vice versa."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0206",
+      "type": "mcq",
+      "stem": "According to the lecture, when should recursion be preferred over iteration?",
+      "options": {
+        "A": "Always, because it is faster",
+        "B": "When the recursive solution is significantly clearer, cleaner, and more readable",
+        "C": "When the problem has no base case",
+        "D": "When memory usage must be minimized"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Recursion is preferred when the recursive solution is significantly clearer, cleaner, and more readable, or when an iterative solution is impractical (e.g., Tower of Hanoi)."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0207",
+      "type": "mcq",
+      "stem": "Which type of recursion makes an exponential number of recursive calls relative to the dataset size?",
+      "options": {
+        "A": "Linear recursion",
+        "B": "Binary recursion",
+        "C": "Exponential recursion",
+        "D": "Tail recursion"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Exponential recursion generates an exponential number of recursive calls relative to the dataset size - generating all permutations of a set is a classic example."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0208",
+      "type": "mcq",
+      "stem": "Which type of recursion occurs when one of the arguments to the recursive function is itself a recursive call?",
+      "options": {
+        "A": "Mutual recursion",
+        "B": "Tail recursion",
+        "C": "Nested recursion",
+        "D": "Binary recursion"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Nested recursion occurs when one of the arguments to the recursive function is itself a recursive call - Ackermann's function is the classic example."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0209",
+      "type": "mcq",
+      "stem": "The lecture notes cite which function as the classic example of nested recursion?",
+      "options": {
+        "A": "Fibonacci function",
+        "B": "Factorial function",
+        "C": "Ackermann's function",
+        "D": "Merge Sort function"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Ackermann's function is given as the classic example of nested recursion, where a recursive call appears inside the argument of another recursive call."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0210",
+      "type": "mcq",
+      "stem": "What is the classic example given for mutual recursion in the lecture notes?",
+      "options": {
+        "A": "Computing factorials using two functions",
+        "B": "Functions that determine if an integer is even or odd",
+        "C": "Merge Sort splitting and merging arrays",
+        "D": "Fibonacci computed using two recursive calls"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The lecture gives determining whether an integer is even or odd as the classic example of mutual recursion - the isEven function calls isOdd and vice versa."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0211",
+      "type": "mcq",
+      "stem": "What happens to memory usage as the depth of recursion increases?",
+      "options": {
+        "A": "Memory usage remains constant",
+        "B": "Memory usage decreases as frames are reused",
+        "C": "Memory usage grows very quickly",
+        "D": "Memory usage depends only on the size of the input, not recursion depth"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The lecture notes state that memory usage of recursive algorithms grows very quickly because each recursive call consumes its own stack frame."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0212",
+      "type": "mcq",
+      "stem": "The Fibonacci sequence computed using Divide and Conquer is an example of which type of recursion?",
+      "options": {
+        "A": "Linear recursion",
+        "B": "Tail recursion",
+        "C": "Binary recursion",
+        "D": "Mutual recursion"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Computing Fibonacci using Divide and Conquer makes exactly two recursive calls (F(n-1) and F(n-2)), which is binary recursion."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0213",
+      "type": "mcq",
+      "stem": "What does an IF-ELSE statement allow a program to do that a plain IF statement does not?",
+      "options": {
+        "A": "Repeat a block of code multiple times",
+        "B": "Follow alternative execution paths whether a condition is met or not",
+        "C": "Evaluate more than two conditions simultaneously",
+        "D": "Call functions recursively"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The IF-ELSE statement allows a program to follow alternative paths of execution - one path if the condition is true, another if it is false."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0214",
+      "type": "mcq",
+      "stem": "In a SELECT CASE statement, what executes when no case label matches the selector?",
+      "options": {
+        "A": "The program crashes with a runtime error",
+        "B": "The first case executes by default",
+        "C": "The DEFAULT case statements execute if a DEFAULT is present",
+        "D": "The selector is automatically set to zero"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "If no label matches and a DEFAULT is present in the SELECT CASE statement, the default statements execute as a fallback."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0215",
+      "type": "mcq",
+      "stem": "What happens in a FOR loop if the sequence condition is FALSE from the very start?",
+      "options": {
+        "A": "The loop executes once then stops",
+        "B": "The loop never executes",
+        "C": "The program generates a compile-time error",
+        "D": "The loop runs indefinitely"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In a FOR loop, the condition is evaluated only when the loop is initiated; if FALSE from the start, the loop never executes at all."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0216",
+      "type": "mcq",
+      "stem": "What key structural difference distinguishes a WHILE loop from a REPEAT-UNTIL loop?",
+      "options": {
+        "A": "WHILE uses a counter; REPEAT uses a boolean flag",
+        "B": "WHILE tests the condition at the start; REPEAT tests it at the end",
+        "C": "WHILE executes at least once; REPEAT may never execute",
+        "D": "WHILE is used for iteration; REPEAT is used for selection"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The key structural difference is that WHILE tests the condition before each iteration (so it may never execute), while REPEAT-UNTIL tests the condition at the bottom (so it always executes at least once)."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0217",
+      "type": "mcq",
+      "stem": "The Fibonacci sequence computation is cited as an example of which control structure approach?",
+      "options": {
+        "A": "A FOR loop with a fixed counter",
+        "B": "A WHILE loop with appropriate variable reassignment at each iteration",
+        "C": "A SELECT CASE statement for each Fibonacci term",
+        "D": "A REPEAT-UNTIL loop with a BREAK condition"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The lecture notes state that the Fibonacci sequence can be elegantly computed using a WHILE loop with appropriate variable reassignment at each iteration."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0218",
+      "type": "mcq",
+      "stem": "Why are large problems described as disproportionately harder than small ones in the context of decomposition?",
+      "options": {
+        "A": "They always require more programming languages",
+        "B": "Finding mistakes in a single large block of code takes very long",
+        "C": "They cannot be modeled mathematically",
+        "D": "They exceed the processor's memory limits"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Decomposition is essential partly because finding mistakes in a single large block of code takes very long - breaking into modules makes debugging far faster."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0219",
+      "type": "mcq",
+      "stem": "How does decomposition into modules enable parallel development?",
+      "options": {
+        "A": "It allows the same module to run on multiple CPUs simultaneously",
+        "B": "It enables different teams to develop different modules at the same time",
+        "C": "It removes the need for version control",
+        "D": "It guarantees all modules finish at the same time"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Breaking a problem into modules enables parallel development - different teams can work on different modules simultaneously, reducing overall development time."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0220",
+      "type": "mcq",
+      "stem": "What is a key characteristic of 'Program Control Functions' in modularization?",
+      "options": {
+        "A": "They are designed to be reusable across multiple programs",
+        "B": "They communicate data through parameters",
+        "C": "They are unique to the program being written and do not communicate data directly with each other",
+        "D": "They are always written in pseudocode"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Program control functions are unique to the specific program being written and are used to sub-divide and control the program; they do not communicate data directly with each other."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0221",
+      "type": "mcq",
+      "stem": "What does 'Modular Understandability' mean?",
+      "options": {
+        "A": "Each module is easy for developers to understand individually",
+        "B": "The entire program can be understood in one reading",
+        "C": "All modules must be written in plain English",
+        "D": "Modules must have fewer than 100 lines of code"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Modular understandability means each module is easy for developers to understand individually, simplifying development and maintenance."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0222",
+      "type": "mcq",
+      "stem": "Which modular property is described as 'breaking a problem down into sub-problems systematically to reduce complexity'?",
+      "options": {
+        "A": "Modular Composability",
+        "B": "Modular Continuity",
+        "C": "Modular Decomposability",
+        "D": "Modular Protection"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Modular Decomposability is defined as breaking a problem down into sub-problems systematically to reduce complexity."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0223",
+      "type": "mcq",
+      "stem": "Which advantage of modularization involves large projects being divided among teams, with each team responsible for specific modules?",
+      "options": {
+        "A": "Ease of Debugging",
+        "B": "Reusable Code",
+        "C": "Promotes Team Programming",
+        "D": "Improved Quality"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Modularization promotes team programming by allowing large projects to be divided among teams, with each team responsible for specific modules whose results are then integrated."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0224",
+      "type": "mcq",
+      "stem": "How does modularization improve software quality according to the lecture notes?",
+      "options": {
+        "A": "It removes the need for testing",
+        "B": "When each programmer focuses only on a specific section, fewer overall errors result",
+        "C": "It eliminates all logic errors automatically",
+        "D": "It forces programmers to use the same coding style"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "When each programmer focuses only on a specific section, the quality of each individual piece improves, resulting in fewer overall errors in the complete system."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0225",
+      "type": "mcq",
+      "stem": "Which benefit of testing refers to ensuring that a new change did not break previously working functionality?",
+      "options": {
+        "A": "Identify bugs early",
+        "B": "Comply with legal requirements",
+        "C": "Modify code with confidence",
+        "D": "Improve system design"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "One benefit of testing is the ability to modify code with confidence - tests confirm that changes did not break existing functionality."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0226",
+      "type": "mcq",
+      "stem": "Which benefit of testing is described as improving system design by compelling developers to think deeply about the problem?",
+      "options": {
+        "A": "Identify bugs early",
+        "B": "Reduce flaws in the component",
+        "C": "Improve system design",
+        "D": "Comply with legal requirements"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Writing tests compels developers to think deeply about the problem and the interface, resulting in better-designed systems - this is listed as a benefit of testing."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0227",
+      "type": "mcq",
+      "stem": "Testing can be done to comply with which non-technical reason stated in the lecture notes?",
+      "options": {
+        "A": "Improve flowchart accuracy",
+        "B": "Legal requirements or industry-specific standards",
+        "C": "Reduce the number of pseudocode lines",
+        "D": "Satisfy the decision matrix"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "One stated reason for testing is to comply with legal requirements or industry-specific standards - certain domains (finance, healthcare) mandate testing."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0228",
+      "type": "mcq",
+      "stem": "Which debugging strategy involves separating sections of code to narrow down where the bug originates?",
+      "options": {
+        "A": "Scientific method",
+        "B": "Binary search method",
+        "C": "Backtracking method",
+        "D": "Remote debugging"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The binary search method involves separating sections of code to progressively narrow down where the bug originates, similar to binary search in data."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0229",
+      "type": "mcq",
+      "stem": "Which debugging strategy groups similar errors together and addresses one from each group?",
+      "options": {
+        "A": "Static code analysis",
+        "B": "Classify bug types",
+        "C": "Remote debugging",
+        "D": "Binary search method"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The 'classify bug types' strategy involves grouping similar errors and addressing one from each group - fixing one representative bug may resolve the entire group."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0230",
+      "type": "mcq",
+      "stem": "What is 'Static code analysis' as a debugging strategy?",
+      "options": {
+        "A": "Running the program with test data to observe its behavior",
+        "B": "Using a specific set of coding rules to evaluate code and identify errors without executing it",
+        "C": "Running a program on a separate computer system",
+        "D": "Using a random number generator to introduce test conditions"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Static code analysis uses a specific set of coding rules to evaluate code and identify errors - it is performed without running the program."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0231",
+      "type": "mcq",
+      "stem": "What does 'Remote debugging' involve?",
+      "options": {
+        "A": "Debugging without any tools by reading the code manually",
+        "B": "Running a program on separate computer software, synchronized through linked servers",
+        "C": "Asking a remote team to debug on your behalf",
+        "D": "Using binary search across a network of machines"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Remote debugging involves running a program on separate computer software and synchronizing systems through linked servers to investigate bugs in a different environment."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0232",
+      "type": "mcq",
+      "stem": "How does debugging complement testing according to the lecture notes?",
+      "options": {
+        "A": "Debugging replaces testing once bugs are found",
+        "B": "Debugging learns how an error affects the program overall",
+        "C": "Debugging runs automatically after every test case",
+        "D": "Debugging prevents all future syntax errors"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Debugging complements testing by learning how an error affects the program overall, providing deeper understanding beyond just confirming a test failed."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0233",
+      "type": "mcq",
+      "stem": "Integration tests are described as larger in scope than unit tests. What environment should they be run in?",
+      "options": {
+        "A": "A developer's local machine only",
+        "B": "A production-like environment",
+        "C": "The pseudocode design environment",
+        "D": "Any environment - environment does not matter"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Integration tests should be run in production-like environments because they test real service boundaries like databases and external APIs."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0234",
+      "type": "mcq",
+      "stem": "Why is it important that automated tests be 'Fast'?",
+      "options": {
+        "A": "Faster tests consume less electricity",
+        "B": "Slow tests lead to less frequent testing and more undiscovered bugs",
+        "C": "Speed determines the Big O complexity of the test suite",
+        "D": "Fast tests can run without a CPU"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Tests must run quickly to provide immediate feedback - slow tests lead to less frequent testing, which means more undiscovered bugs survive longer."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0235",
+      "type": "mcq",
+      "stem": "End-to-End tests are 'black box' tests. What does this mean for diagnosing failures?",
+      "options": {
+        "A": "They display all internal variable states when they fail",
+        "B": "Test failures provide no indication of what went wrong internally; logs must be used for diagnosis",
+        "C": "They automatically fix the bug they detect",
+        "D": "Black box tests cannot fail - they only pass or skip"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Because End-to-End tests are black box (no knowledge of implementation), test failures provide no indication of what went wrong internally - logs must be consulted to diagnose the cause."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0236",
+      "type": "mcq",
+      "stem": "A programmer writes a function that always produces the correct answer but takes 10 minutes to run on a 1,000-item dataset. Which algorithm efficiency concern does this highlight?",
+      "options": {
+        "A": "Space complexity",
+        "B": "Runtime complexity",
+        "C": "Modular understandability",
+        "D": "Processing definiteness"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The issue is execution time - the algorithm works correctly but is too slow, directly illustrating a runtime complexity problem."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0237",
+      "type": "mcq",
+      "stem": "A development team notices that fixing a bug in Module A unexpectedly breaks Module B. This indicates:",
+      "options": {
+        "A": "High cohesion and low coupling",
+        "B": "Low cohesion and high coupling",
+        "C": "Good modular protection",
+        "D": "Effective modular composability"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "When changing one module breaks another, the modules are tightly interdependent (high coupling). This also suggests the elements within each module are not functionally focused (low cohesion) - the opposite of good software design."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0238",
+      "type": "mcq",
+      "stem": "A student is asked to solve a maze. She starts at the exit and works her way back to the entrance. Which problem-solving strategy is she using?",
+      "options": {
+        "A": "Trial and Error",
+        "B": "Means-Ends Analysis",
+        "C": "Working Backwards",
+        "D": "Brute-Force"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Working backwards starts from the desired end result and works backward to the present situation - starting at the exit of a maze and tracing back to the entrance is a direct application."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0239",
+      "type": "mcq",
+      "stem": "A function 'findMax(list)' is used by three different programs without any of them knowing how it is implemented internally. This is an example of:",
+      "options": {
+        "A": "Data Abstraction",
+        "B": "Representational Abstraction",
+        "C": "Functional Abstraction",
+        "D": "Abstraction by Generalization"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The function acts as a 'black box' - callers provide input and receive output without knowing the implementation. This is functional abstraction."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0240",
+      "type": "mcq",
+      "stem": "Which scenario correctly describes Dynamic Programming being preferable over a plain Divide and Conquer approach?",
+      "options": {
+        "A": "Sorting a list where all sub-arrays are unique",
+        "B": "Computing Fibonacci numbers where F(5) appears in many different sub-computations",
+        "C": "Searching for a key in a binary search tree",
+        "D": "Printing all permutations of a unique set of characters"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "When sub-problems overlap (the same sub-computation appears repeatedly), dynamic programming's memoization eliminates redundant work - Fibonacci is the canonical example."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0241",
+      "type": "mcq",
+      "stem": "A cashier always gives the fewest coins possible by first using the largest denomination available. This is an example of:",
+      "options": {
+        "A": "Dynamic Programming",
+        "B": "Divide and Conquer",
+        "C": "Greedy Algorithm",
+        "D": "Brute-Force Approach"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Choosing the largest denomination first (the locally optimal choice at each step) is the classic coin-change greedy approach - taking the best immediate option without global planning."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0242",
+      "type": "mcq",
+      "stem": "Which combination of properties must ALL good algorithms satisfy? (Select the best answer.)",
+      "options": {
+        "A": "Precision, Uniqueness, Finiteness, Input, Output",
+        "B": "Speed, Simplicity, Readability, Modularity",
+        "C": "Parallelism, Recursion, Iteration, Abstraction",
+        "D": "Low coupling, High cohesion, Determinism, Automation"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The five characteristics of a good algorithm given in the lecture are: Precision, Uniqueness, Finiteness, Input, and Output."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0243",
+      "type": "mcq",
+      "stem": "During which step of the problem-solving process might you discover that additional data needs to be collected?",
+      "options": {
+        "A": "Step 1: Understand the Problem",
+        "B": "Step 3: Develop an Algorithm",
+        "C": "Step 6: Evaluate the Solution",
+        "D": "Step 4: Write the Program"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "During Step 6 (Evaluate the Solution), you may discover that the results reveal missing information, requiring you to collect additional data and potentially re-do earlier steps."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0244",
+      "type": "mcq",
+      "stem": "What type of error would be introduced if a programmer wrote 'x + y' when the intention was 'x * y' in a calculation?",
+      "options": {
+        "A": "Syntax Error",
+        "B": "Run-time Error",
+        "C": "Logic Error",
+        "D": "Interface Error"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Using addition instead of multiplication is an algorithmic mistake that produces unexpected output - this is a logic error, not a grammatical or execution error."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0245",
+      "type": "mcq",
+      "stem": "A program crashes because one module tries to divide by zero due to a value passed from another module. Which type of error is this most likely?",
+      "options": {
+        "A": "Syntax Error",
+        "B": "Run-time Error",
+        "C": "Interface Error",
+        "D": "Logic Error"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Division by zero occurs during program execution - not during compilation - making this a run-time error."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0246",
+      "type": "mcq",
+      "stem": "What is the minimum number of moves required to solve the Tower of Hanoi puzzle with 4 disks?",
+      "options": {
+        "A": "7",
+        "B": "10",
+        "C": "15",
+        "D": "16"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Using the formula 2^n - 1: for n=4, that is 2^4 - 1 = 16 - 1 = 15 moves."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0247",
+      "type": "mcq",
+      "stem": "A programmer is uncertain whether a recently added function caused a bug. The best targeted debugging approach is:",
+      "options": {
+        "A": "Restart the project from scratch",
+        "B": "Debug after adding new code - the bug is likely in the last section added",
+        "C": "Use remote debugging on a different machine",
+        "D": "Switch to pseudocode representation of the whole program"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The lecture notes advise testing each section in increments before adding new code - the bug is most likely in the last section added."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0248",
+      "type": "mcq",
+      "stem": "Which of the following best illustrates 'Representational Abstraction'?",
+      "options": {
+        "A": "A function that hides how it sorts a list",
+        "B": "A transit map that omits street-level detail but shows station connections",
+        "C": "A class hierarchy where dogs are a kind of mammal",
+        "D": "A stack that supports push, pop, and peek regardless of implementation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A transit map removes unnecessary geographic details while retaining the essential connections needed to plan a journey - this is representational abstraction."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0249",
+      "type": "mcq",
+      "stem": "Which statement best captures the relationship between testing and debugging?",
+      "options": {
+        "A": "Testing and debugging are interchangeable terms for the same activity",
+        "B": "Testing identifies that a failure occurred; debugging finds the root cause",
+        "C": "Debugging must be completed before testing can begin",
+        "D": "Testing is automated; debugging is performed by compilers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Testing demonstrates error presence (or apparent correctness); debugging is the deductive process of finding the root cause of the code failure."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0250",
+      "type": "mcq",
+      "stem": "In the context of the lecture, which best describes 'Computational Thinking'?",
+      "options": {
+        "A": "The ability to write code in multiple programming languages",
+        "B": "Taking a complex problem, understanding it, and developing solutions a computer or human can understand",
+        "C": "The process of converting pseudocode into machine instructions",
+        "D": "A method of testing programs using automated scripts"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Computational thinking is defined as the ability to take a complex problem, understand it, and develop possible solutions that a computer, a human, or both can understand."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0251",
+      "type": "mcq",
+      "stem": "Which problem type has no clear goals or expected solution?",
+      "options": {
+        "A": "Well-defined problem",
+        "B": "Ill-defined problem",
+        "C": "Computational problem",
+        "D": "Algorithmic problem"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ill-defined problems lack clear goals, solution paths, or expected solutions."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0252",
+      "type": "mcq",
+      "stem": "What does O(1) represent in Big O notation?",
+      "options": {
+        "A": "Linear",
+        "B": "Logarithmic",
+        "C": "Constant",
+        "D": "Quadratic"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "O(1) means the algorithm takes the same time regardless of input size."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0253",
+      "type": "mcq",
+      "stem": "What symbol represents Start/End in a flowchart?",
+      "options": {
+        "A": "Rectangle",
+        "B": "Diamond",
+        "C": "Parallelogram",
+        "D": "Oval"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The Oval (or rounded rectangle) marks the terminator - start or end of a flowchart."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0254",
+      "type": "mcq",
+      "stem": "Merge Sort is an example of which computational approach?",
+      "options": {
+        "A": "Greedy Algorithm",
+        "B": "Brute Force",
+        "C": "Divide and Conquer",
+        "D": "Dynamic Programming"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Merge Sort splits the array, sorts each half, then merges - the classic Divide and Conquer pattern."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0255",
+      "type": "mcq",
+      "stem": "Which loop always executes its body at least once?",
+      "options": {
+        "A": "FOR loop",
+        "B": "WHILE loop",
+        "C": "REPEAT-UNTIL loop",
+        "D": "IF statement"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "REPEAT-UNTIL tests its condition at the bottom, so the body always runs at least once."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0256",
+      "type": "mcq",
+      "stem": "What is the result of infinite recursion?",
+      "options": {
+        "A": "Faster execution",
+        "B": "Stack overflow",
+        "C": "Syntax error",
+        "D": "Correct output"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Without reaching a base case, the call stack fills up and crashes the program."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0257",
+      "type": "mcq",
+      "stem": "Good software design aims for which combination?",
+      "options": {
+        "A": "High coupling, high cohesion",
+        "B": "Low coupling, low cohesion",
+        "C": "Low coupling, high cohesion",
+        "D": "High coupling, low cohesion"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Modules should be independent of each other (low coupling) and internally focused (high cohesion)."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0258",
+      "type": "mcq",
+      "stem": "Which test type checks an isolated unit of code?",
+      "options": {
+        "A": "Integration Test",
+        "B": "End-to-End Test",
+        "C": "Smoke Test",
+        "D": "Unit Test"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Unit tests focus on the smallest isolated piece of a system."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0259",
+      "type": "mcq",
+      "stem": "The four cornerstones of computational thinking are:",
+      "options": {
+        "A": "Input, Process, Output, Storage",
+        "B": "Decomposition, Pattern Recognition, Abstraction, Algorithms",
+        "C": "Selection, Iteration, Recursion, Modularization",
+        "D": "Syntax, Logic, Runtime, Interface"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "These four elements form the foundation of computational thinking."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0260",
+      "type": "mcq",
+      "stem": "Which approach stores and reuses results of overlapping sub-problems?",
+      "options": {
+        "A": "Greedy Algorithm",
+        "B": "Brute Force",
+        "C": "Divide and Conquer",
+        "D": "Dynamic Programming"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Dynamic programming uses memoization to avoid recomputing the same sub-problem."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0261",
+      "type": "mcq",
+      "stem": "Which of the following best describes a computer?",
+      "options": {
+        "A": "A machine that only performs calculations",
+        "B": "An electronic device that accepts data, processes it, and produces information",
+        "C": "A machine used only for internet browsing",
+        "D": "A storage device"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A computer is an electronic device that accepts data as input, processes it, and produces information as output."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0262",
+      "type": "mcq",
+      "stem": "Raw facts that have not been processed are known as:",
+      "options": {
+        "A": "Information",
+        "B": "Knowledge",
+        "C": "Data",
+        "D": "Output"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Data refers to raw, unprocessed facts, while information is data that has been processed into a meaningful form."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0263",
+      "type": "mcq",
+      "stem": "Which of the following is an output device?",
+      "options": {
+        "A": "Keyboard",
+        "B": "Mouse",
+        "C": "Scanner",
+        "D": "Monitor"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "A monitor displays processed information to the user, making it an output device, unlike the keyboard, mouse, and scanner which are input devices."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0264",
+      "type": "mcq",
+      "stem": "The physical components of a computer system are called:",
+      "options": {
+        "A": "Software",
+        "B": "Hardware",
+        "C": "Data",
+        "D": "Information"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hardware refers to the tangible, physical parts of a computer system, as opposed to software which is intangible instructions."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0265",
+      "type": "mcq",
+      "stem": "Which of the following is system software?",
+      "options": {
+        "A": "Microsoft Word",
+        "B": "PowerPoint",
+        "C": "Windows Operating System",
+        "D": "Calculator"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "An operating system like Windows is system software that manages hardware and provides a platform for application software to run."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0266",
+      "type": "mcq",
+      "stem": "Which of the following is an example of an ill-defined problem?",
+      "options": {
+        "A": "Finding the average of five numbers",
+        "B": "Solving a quadratic equation",
+        "C": "Designing a new social media app",
+        "D": "Calculating simple interest"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Designing a new app lacks a single clear goal or expected solution path, making it an ill-defined problem, unlike the other options which have definite, calculable answers."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0267",
+      "type": "mcq",
+      "stem": "Which characteristic is NOT associated with a good algorithm?",
+      "options": {
+        "A": "Finiteness",
+        "B": "Definiteness",
+        "C": "Ambiguity",
+        "D": "Effectiveness"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A good algorithm must be unambiguous (definite); ambiguity is the opposite of a desirable characteristic and is therefore not associated with good algorithms."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0268",
+      "type": "mcq",
+      "stem": "The Top-Down approach to problem solving involves:",
+      "options": {
+        "A": "Starting from small components",
+        "B": "Breaking a large problem into smaller parts",
+        "C": "Ignoring details",
+        "D": "Writing code immediately"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Top-Down approach starts with the overall problem and progressively breaks it down into smaller, more manageable sub-problems."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0269",
+      "type": "mcq",
+      "stem": "The Bottom-Up approach starts by:",
+      "options": {
+        "A": "Solving smaller components first",
+        "B": "Writing documentation",
+        "C": "Testing programs",
+        "D": "Drawing flowcharts"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Bottom-Up approach begins by solving the smallest, simplest components first and combines them to build the complete solution."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0270",
+      "type": "mcq",
+      "stem": "Which of the following is a high-level programming language?",
+      "options": {
+        "A": "Machine Language",
+        "B": "Assembly Language",
+        "C": "Python",
+        "D": "Binary Code"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Python is a high-level language with English-like syntax, unlike machine and assembly language which are low-level and closer to hardware instructions."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0271",
+      "type": "mcq",
+      "stem": "Machine language consists of:",
+      "options": {
+        "A": "English statements",
+        "B": "Binary digits",
+        "C": "Flowchart symbols",
+        "D": "SQL commands"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Machine language is composed of binary digits (0s and 1s) that the computer's processor can execute directly."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0272",
+      "type": "mcq",
+      "stem": "Which language requires a translator before execution?",
+      "options": {
+        "A": "High-level language",
+        "B": "Machine language",
+        "C": "Binary language",
+        "D": "Firmware"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "High-level languages must be translated by a compiler or interpreter into machine code before the computer can execute them."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0273",
+      "type": "mcq",
+      "stem": "Python is best described as:",
+      "options": {
+        "A": "An operating system",
+        "B": "A programming language",
+        "C": "A browser",
+        "D": "A database"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Python is a high-level programming language used to write instructions for computers to execute."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0274",
+      "type": "mcq",
+      "stem": "Artificial Intelligence refers to:",
+      "options": {
+        "A": "Human intelligence",
+        "B": "Machines performing tasks that require intelligence",
+        "C": "Internet connectivity",
+        "D": "Computer hardware"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Artificial Intelligence is the field concerned with enabling machines to perform tasks that would normally require human intelligence."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0275",
+      "type": "mcq",
+      "stem": "Which of the following is an example of AI?",
+      "options": {
+        "A": "Voice Assistant",
+        "B": "Keyboard",
+        "C": "USB Drive",
+        "D": "Printer"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A voice assistant uses AI techniques such as natural language processing to understand and respond to human speech."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0276",
+      "type": "mcq",
+      "stem": "A neural network is inspired by:",
+      "options": {
+        "A": "Computer chips",
+        "B": "Human brain structure",
+        "C": "Internet cables",
+        "D": "Database tables"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Neural networks are computational models inspired by the structure and function of neurons in the human brain."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0277",
+      "type": "mcq",
+      "stem": "Natural Language Processing enables computers to:",
+      "options": {
+        "A": "Store files",
+        "B": "Understand human language",
+        "C": "Print documents",
+        "D": "Repair hardware"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Natural Language Processing (NLP) is an AI subfield focused on enabling computers to understand and process human language."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0278",
+      "type": "mcq",
+      "stem": "Chatbots are applications of:",
+      "options": {
+        "A": "Hardware Engineering",
+        "B": "Cybersecurity",
+        "C": "Artificial Intelligence",
+        "D": "Database Systems"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Chatbots use AI techniques, particularly natural language processing, to simulate conversation with human users."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0279",
+      "type": "mcq",
+      "stem": "Which of the following is an example of supervised learning?",
+      "options": {
+        "A": "Learning from labeled data",
+        "B": "Random guessing",
+        "C": "Hardware maintenance",
+        "D": "Data deletion"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Supervised learning is a machine learning approach where a model learns from labeled training data to make predictions."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0280",
+      "type": "mcq",
+      "stem": "SQL stands for:",
+      "options": {
+        "A": "Standard Query Language",
+        "B": "Structured Query Language",
+        "C": "System Query Language",
+        "D": "Software Query Language"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "SQL (Structured Query Language) is the standard language used to manage and query relational databases."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0281",
+      "type": "mcq",
+      "stem": "A database is:",
+      "options": {
+        "A": "A collection of organized data",
+        "B": "A computer monitor",
+        "C": "A network cable",
+        "D": "A compiler"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A database is an organized collection of data that can be easily accessed, managed, and updated."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0282",
+      "type": "mcq",
+      "stem": "A database management system (DBMS) is used to:",
+      "options": {
+        "A": "Manage databases",
+        "B": "Create viruses",
+        "C": "Design hardware",
+        "D": "Browse the internet"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A DBMS is software designed specifically to create, manage, and manipulate databases."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0283",
+      "type": "mcq",
+      "stem": "Which SQL command is used to retrieve data?",
+      "options": {
+        "A": "INSERT",
+        "B": "UPDATE",
+        "C": "SELECT",
+        "D": "DELETE"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The SELECT command is used in SQL specifically to retrieve data from a database."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0284",
+      "type": "mcq",
+      "stem": "The operating system acts as:",
+      "options": {
+        "A": "A bridge between users and hardware",
+        "B": "A virus scanner",
+        "C": "A printer",
+        "D": "A programming language"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "An operating system manages hardware resources and provides an interface between the user/applications and the computer's hardware."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0285",
+      "type": "mcq",
+      "stem": "Which of the following is NOT an operating system?",
+      "options": {
+        "A": "Linux",
+        "B": "macOS",
+        "C": "Windows",
+        "D": "Microsoft Excel"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Microsoft Excel is an application program for spreadsheets, not an operating system like Linux, macOS, or Windows."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0286",
+      "type": "mcq",
+      "stem": "The Internet is an example of:",
+      "options": {
+        "A": "Database",
+        "B": "Operating System",
+        "C": "Computer Network",
+        "D": "Compiler"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Internet is a vast global computer network connecting millions of devices worldwide."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0287",
+      "type": "mcq",
+      "stem": "A computer network allows computers to:",
+      "options": {
+        "A": "Share resources and information",
+        "B": "Increase monitor size",
+        "C": "Improve battery life",
+        "D": "Replace software"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Computer networks connect devices so they can share resources, data, and information with one another."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0288",
+      "type": "mcq",
+      "stem": "Which device connects multiple computers within a network?",
+      "options": {
+        "A": "Scanner",
+        "B": "Switch",
+        "C": "Plotter",
+        "D": "Speaker"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A network switch connects multiple computers or devices within a local network, allowing them to communicate."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0289",
+      "type": "mcq",
+      "stem": "Cybersecurity is concerned with:",
+      "options": {
+        "A": "Designing websites",
+        "B": "Protecting systems from threats",
+        "C": "Installing printers",
+        "D": "Creating databases"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cybersecurity focuses on protecting computer systems, networks, and data from unauthorized access and digital threats."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0290",
+      "type": "mcq",
+      "stem": "Unauthorized access to a computer system is a:",
+      "options": {
+        "A": "Security threat",
+        "B": "Software update",
+        "C": "Network topology",
+        "D": "Programming language"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Gaining access to a system without permission is classified as a security threat, since it can compromise data and system integrity."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0291",
+      "type": "mcq",
+      "stem": "Which of the following is a cyber security measure?",
+      "options": {
+        "A": "Firewall",
+        "B": "Printer",
+        "C": "Monitor",
+        "D": "Plotter"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A firewall is a security tool that monitors and controls incoming and outgoing network traffic to protect a system from threats."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0292",
+      "type": "mcq",
+      "stem": "Human-Computer Interaction (HCI) focuses on:",
+      "options": {
+        "A": "Network cables",
+        "B": "Hardware repairs",
+        "C": "Improving interaction between humans and computers",
+        "D": "Binary numbers"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "HCI is a field of study concerned with the design and use of computer technology to improve interaction and usability for users."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0293",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a characteristic of a computer?",
+      "options": {
+        "A": "Accuracy",
+        "B": "Diligence",
+        "C": "Intelligence",
+        "D": "Speed"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Computers are accurate, diligent, and fast, but they lack genuine intelligence - they only follow instructions given to them."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0294",
+      "type": "mcq",
+      "stem": "Information is:",
+      "options": {
+        "A": "Raw facts",
+        "B": "Processed data",
+        "C": "Unorganized facts",
+        "D": "Input data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Information is data that has been organized and processed into a meaningful and useful form."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0295",
+      "type": "mcq",
+      "stem": "Which of the following is a storage device?",
+      "options": {
+        "A": "Monitor",
+        "B": "Keyboard",
+        "C": "Hard Disk",
+        "D": "Scanner"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A hard disk is used to permanently store data, unlike the monitor (output), keyboard (input), and scanner (input)."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0296",
+      "type": "mcq",
+      "stem": "A solution that can be implemented by a computer must be:",
+      "options": {
+        "A": "Ambiguous",
+        "B": "Logical",
+        "C": "Emotional",
+        "D": "Random"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "For a computer to implement a solution, the steps must be logical and unambiguous, since computers cannot interpret vague or emotional instructions."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0297",
+      "type": "mcq",
+      "stem": "Which of the following is most suitable for repetitive computations?",
+      "options": {
+        "A": "Computer",
+        "B": "Human memory",
+        "C": "Manual processing",
+        "D": "Guesswork"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Computers excel at performing repetitive computations quickly and accurately, far surpassing manual or human-memory-based processing."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0298",
+      "type": "mcq",
+      "stem": "An interpreter differs from a compiler because it:",
+      "options": {
+        "A": "Translates the whole program at once",
+        "B": "Translates line by line",
+        "C": "Creates databases",
+        "D": "Designs flowcharts"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unlike a compiler, which translates an entire program at once, an interpreter translates and executes a program line by line."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0299",
+      "type": "mcq",
+      "stem": "The output of an algorithm should be:",
+      "options": {
+        "A": "Undefined",
+        "B": "Meaningless",
+        "C": "Expected result",
+        "D": "Random value"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A well-designed algorithm should always produce the expected, correct result for a given problem."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0300",
+      "type": "mcq",
+      "stem": "In a flowchart, the rectangle symbol represents:",
+      "options": {
+        "A": "Decision",
+        "B": "Input/Output",
+        "C": "Process",
+        "D": "Start/Stop"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The rectangle symbol in a flowchart represents a process or an action step, distinct from the diamond (decision) or oval (start/stop)."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0301",
+      "type": "mcq",
+      "stem": "A decision table is mainly used to:",
+      "options": {
+        "A": "Store files",
+        "B": "Represent complex decision logic",
+        "C": "Write source code",
+        "D": "Draw networks"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A decision table organizes multiple conditions and their corresponding actions, making it useful for representing complex decision logic."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0302",
+      "type": "mcq",
+      "stem": "A decision tree is useful for:",
+      "options": {
+        "A": "Making logical decisions",
+        "B": "Database creation",
+        "C": "Virus detection",
+        "D": "Hardware installation"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A decision tree visually maps out possible decision paths and outcomes, aiding in making logical, structured decisions."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0303",
+      "type": "mcq",
+      "stem": "The Software Development Life Cycle (SDLC) includes:",
+      "options": {
+        "A": "Planning, Design, Coding, Testing, Maintenance",
+        "B": "Input, Output, Storage, Printing",
+        "C": "CPU, RAM, ROM, Disk",
+        "D": "Browser, Search Engine, Website, Server"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The SDLC is a structured process for developing software, consisting of stages including planning, design, coding, testing, and maintenance."
+    },
+    {
+      "id": "uni-tasued-cos102-bank-0304",
+      "type": "mcq",
+      "stem": "Which of the following best describes Computer Science?",
+      "options": {
+        "A": "Study of only computer hardware",
+        "B": "Study of algorithms, computation, and problem solving using computers",
+        "C": "Study of internet browsing",
+        "D": "Study of typing and documentation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Computer Science is the study of algorithms, computation, and the use of computers to solve problems, not just hardware or browsing."
+    }
+  ]
+}

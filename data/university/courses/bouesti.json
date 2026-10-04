@@ -1,0 +1,67 @@
+{
+  "school": "bouesti",
+  "name": "Bamidele Olumilua University of Education, Science and Technology, Ikere-Ekiti",
+  "short": "BOUESTI",
+  "courses": [
+    {
+      "slug": "bio111",
+      "code": "BIO 111",
+      "title": null,
+      "semester": null,
+      "icon": "biotech",
+      "bank": "uni-bouesti-bio111-bank",
+      "questionCount": 508,
+      "pdf": null
+    },
+    {
+      "slug": "chm111",
+      "code": "CHM 111",
+      "title": null,
+      "semester": null,
+      "icon": "science",
+      "bank": "uni-bouesti-chm111-bank",
+      "questionCount": 301,
+      "pdf": null
+    },
+    {
+      "slug": "csc113",
+      "code": "CSC 113",
+      "title": null,
+      "semester": null,
+      "icon": "computer",
+      "bank": "uni-bouesti-csc113-bank",
+      "questionCount": 389,
+      "pdf": null
+    },
+    {
+      "slug": "csc115",
+      "code": "CSC 115",
+      "title": null,
+      "semester": null,
+      "icon": "computer",
+      "bank": "uni-bouesti-csc115-bank",
+      "questionCount": 100,
+      "pdf": null
+    },
+    {
+      "slug": "gst111",
+      "code": "GST 111",
+      "title": null,
+      "semester": null,
+      "icon": "menu_book",
+      "bank": "uni-bouesti-gst111-bank",
+      "questionCount": 372,
+      "pdf": null
+    },
+    {
+      "slug": "phy111",
+      "code": "PHY 111",
+      "title": null,
+      "semester": null,
+      "icon": "rocket_launch",
+      "bank": "uni-bouesti-phy111-bank",
+      "questionCount": 198,
+      "pdf": null
+    }
+  ]
+}

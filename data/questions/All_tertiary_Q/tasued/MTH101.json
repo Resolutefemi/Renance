@@ -1,0 +1,977 @@
+{
+  "code": "uni-tasued-mth101-bank",
+  "title": "TASUED MTH101 | Course Question Bank",
+  "version": 1,
+  "questionCount": 69,
+  "totalMarks": 69,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-tasued-mth101-bank-0001",
+      "type": "mcq",
+      "stem": "Simplify $8a^{-6} \\div 4a^{-4}$",
+      "options": {
+        "A": "$2a^{-2}$",
+        "B": "$\\frac{2}{a^{2}}$",
+        "C": "$2a^{2}$",
+        "D": "$\\frac{a^{2}}{2}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Divide the coefficients: $8 \\div 4 = 2$. Subtract the exponents: $-6 - (-4) = -6 + 4 = -2$. This gives $2a^{-2}$, which is $\\frac{2}{a^{2}}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0002",
+      "type": "mcq",
+      "stem": "Simplify $75a^{2}b^{-2} \\div 5a^{3}b^{-3}$",
+      "options": {
+        "A": "$15ab$",
+        "B": "$25a^{2}b$",
+        "C": "$15a^{-1}b$",
+        "D": "$15b/a$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "$75/5 = 15$. For the variables: $a^{2-3} = a^{-1}$ and $b^{-2-(-3)} = b^{1}$. Result is $15a^{-1}b$, or $15b/a$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0003",
+      "type": "mcq",
+      "stem": "Simplify $\\log_{3}{2} + \\log_{3}{10} - \\log_{3}{5}$",
+      "options": {
+        "A": "$\\log_{3}{4}$",
+        "B": "$3$",
+        "C": "$2$",
+        "D": "$\\log_{3}{7}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Using log laws: $\\log_{3}(\\frac{2 \\times 10}{5}) = \\log_{3}(\\frac{20}{5}) = \\log_{3}{4}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0004",
+      "type": "mcq",
+      "stem": "Simplify $5^{x} \\div 5^{x-1}$",
+      "options": {
+        "A": "$5^{2x-1}$",
+        "B": "$2$",
+        "C": "$5$",
+        "D": "$10$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Using the division law of indices: $5^{x - (x - 1)} = 5^{x - x + 1} = 5^{1} = 5$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0005",
+      "type": "mcq",
+      "stem": "Given that $\\log_{10}{2} = 0.3010$ and $\\log_{10}{3} = 0.4771$, evaluate $\\log_{10}{24}$",
+      "options": {
+        "A": "$1.3801$",
+        "B": "$1.1071$",
+        "C": "$1.2373$",
+        "D": "$0.8263$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$\\log{24} = \\log(2^{3} \\times 3) = 3\\log{2} + \\log{3} = 3(0.3010) + 0.4771 = 0.9030 + 0.4771 = 1.3801$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0006",
+      "type": "mcq",
+      "stem": "Simplify $(3 + 4i) + (-2i + 5)$",
+      "options": {
+        "A": "$8 + 2i$",
+        "B": "$6 + 2i$",
+        "C": "$8 + 5i$",
+        "D": "$1 + 9i$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Group real and imaginary parts: $(3 + 5) + (4i - 2i) = 8 + 2i$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0007",
+      "type": "mcq",
+      "stem": "Simplify $\\frac{1}{4}(2^{n} - 2^{n+2})$",
+      "options": {
+        "A": "$-3(2^{n-2})$",
+        "B": "$2^{n-2}$",
+        "C": "$2^{n+1}$",
+        "D": "$n-2$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$\\frac{1}{4}(2^{n} - 2^{n} \\cdot 2^{2}) = \\frac{1}{4}(2^{n}(1 - 4)) = \\frac{1}{4}(2^{n} \\cdot -3) = -3 \\cdot \\frac{2^{n}}{2^{2}} = -3(2^{n-2})$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0008",
+      "type": "mcq",
+      "stem": "Evaluate $\\frac{5}{\\sqrt{2}-1}$",
+      "options": {
+        "A": "$5(\\sqrt{2}+1)$",
+        "B": "$\\frac{5(\\sqrt{2}+1)}{3}$",
+        "C": "$5\\sqrt{2}-1$",
+        "D": "$\\sqrt{5}+1$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Rationalize the denominator by multiplying top and bottom by $(\\sqrt{2}+1)$. Result is $\\frac{5(\\sqrt{2}+1)}{2-1} = 5(\\sqrt{2}+1)$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0009",
+      "type": "mcq",
+      "stem": "Evaluate $\\log_{10}{2} + \\log_{10}{5}$",
+      "options": {
+        "A": "$10$",
+        "B": "$1$",
+        "C": "$0.1$",
+        "D": "$0$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$\\log_{10}(2 \\times 5) = \\log_{10}{10} = 1$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0010",
+      "type": "mcq",
+      "stem": "If $3^{2x} = 27$, find $x$",
+      "options": {
+        "A": "$3/2$",
+        "B": "$2/3$",
+        "C": "$9$",
+        "D": "$-3/2$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$3^{2x} = 3^{3}$. Therefore, $2x = 3$, so $x = 3/2$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0011",
+      "type": "mcq",
+      "stem": "If $P = \\{1, 2, 3, 9, 2\\frac{1}{2}\\}$, $Q = \\{1, 2\\frac{1}{2}, 3, 7\\}$, and $R = \\{5, 4, 2\\frac{1}{2}\\}$, find $P \\cup Q \\cup R$",
+      "options": {
+        "A": "$\\{1, 2, 3, 2\\frac{1}{2}, 4, 5, 9, 7\\}$",
+        "B": "$\\{1, 2, 3, 2\\frac{1}{2}\\}$",
+        "C": "$\\{5, 4, 2\\frac{1}{2}\\}$",
+        "D": "$\\{1, 2, 3\\}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The union is the set of all unique elements present in P, Q, or R."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0012",
+      "type": "mcq",
+      "stem": "Using the sets from Question 11, find $P \\cap Q \\cap R$",
+      "options": {
+        "A": "$\\{1, 2, 3\\}$",
+        "B": "$\\{5, 4, 2\\frac{1}{2}\\}$",
+        "C": "$\\{2\\frac{1}{2}\\}$",
+        "D": "$\\{1, 7, 9\\}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The intersection is the set of elements common to all three sets, which is $2\\frac{1}{2}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0013",
+      "type": "mcq",
+      "stem": "Simplify $16^{-3/4}$",
+      "options": {
+        "A": "$1/8$",
+        "B": "$1/4$",
+        "C": "$8$",
+        "D": "$1/16$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$(16^{1/4})^{-3} = (2)^{-3} = 1/2^{3} = 1/8$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0014",
+      "type": "mcq",
+      "stem": "Simplify $\\log_{3}{9}$",
+      "options": {
+        "A": "$4$",
+        "B": "$3$",
+        "C": "$2$",
+        "D": "$9$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Since $3^{2} = 9$, $\\log_{3}{9} = 2$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0015",
+      "type": "mcq",
+      "stem": "Solve $4^{x} = 0.5$",
+      "options": {
+        "A": "$-1/2$",
+        "B": "$1/2$",
+        "C": "$2$",
+        "D": "$-2$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$2^{2x} = 2^{-1}$. Thus $2x = -1$, and $x = -1/2$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0016",
+      "type": "mcq",
+      "stem": "Simplify $2\\sqrt{3} + \\sqrt{27} - 5\\sqrt{3}$",
+      "options": {
+        "A": "$0$",
+        "B": "$\\sqrt{3}$",
+        "C": "$3\\sqrt{3}$",
+        "D": "$2\\sqrt{3}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$2\\sqrt{3} + 3\\sqrt{3} - 5\\sqrt{3} = 5\\sqrt{3} - 5\\sqrt{3} = 0$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0017",
+      "type": "mcq",
+      "stem": "Simplify $(\\frac{16}{81})^{1/4} \\div (\\frac{9}{16})^{-1/2}$",
+      "options": {
+        "A": "$1/2$",
+        "B": "$3/2$",
+        "C": "$3/4$",
+        "D": "$2/3$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "First part is $2/3$. Second part is $(16/9)^{1/2} = 4/3$. So, $2/3 \\div 4/3 = 2/3 \\times 3/4 = 1/2$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0018",
+      "type": "mcq",
+      "stem": "Find the value of $\\log_{6}{\\frac{1}{36}}$",
+      "options": {
+        "A": "$-2$",
+        "B": "$2$",
+        "C": "$1/2$",
+        "D": "$-1/2$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$\\log_{6}{6^{-2}} = -2$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0019",
+      "type": "mcq",
+      "stem": "Given $\\log_{x}{9} = 2$, find $x$",
+      "options": {
+        "A": "$3$",
+        "B": "$81$",
+        "C": "$9$",
+        "D": "$\\sqrt{3}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$x^{2} = 9$, therefore $x = 3$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0020",
+      "type": "mcq",
+      "stem": "Express $\\frac{7\\pi}{6}$ radian in degree.",
+      "options": {
+        "A": "$150^{\\circ}$",
+        "B": "$180^{\\circ}$",
+        "C": "$210^{\\circ}$",
+        "D": "$240^{\\circ}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "To convert radians to degrees, multiply by $\\frac{180^{\\circ}}{\\pi}$. So, $\\frac{7\\pi}{6} \\times \\frac{180}{\\pi} = 7 \\times 30 = 210^{\\circ}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0021",
+      "type": "mcq",
+      "stem": "Find the $U_{r}$ in the terms of $r$ for the sequence $3, 5, 7, 9, \\dots$",
+      "options": {
+        "A": "$2r-1$",
+        "B": "$2r+1$",
+        "C": "$r+2$",
+        "D": "$3r-1$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "This is an arithmetic progression with $a=3$ and $d=2$. Using $U_{r} = a + (r-1)d$: $3 + (r-1)2 = 3 + 2r - 2 = 2r + 1$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0022",
+      "type": "mcq",
+      "stem": "Evaluate $\\sum_{r=1}^{3} r^{2}$",
+      "options": {
+        "A": "$6$",
+        "B": "$9$",
+        "C": "$14$",
+        "D": "$10$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The sum is $1^{2} + 2^{2} + 3^{2} = 1 + 4 + 9 = 14$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0023",
+      "type": "mcq",
+      "stem": "Express $\\frac{1}{1 - \\sin 45^{\\circ}}$ in surd form.",
+      "options": {
+        "A": "$\\frac{2}{2-\\sqrt{2}}$",
+        "B": "$\\frac{\\sqrt{2}}{1-\\sqrt{2}}$",
+        "C": "$1+\\sqrt{2}$",
+        "D": "$2+\\sqrt{2}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Since $\\sin 45^{\\circ} = \\frac{\\sqrt{2}}{2}$, the expression becomes $\\frac{1}{1 - \\frac{\\sqrt{2}}{2}} = \\frac{1}{\\frac{2-\\sqrt{2}}{2}} = \\frac{2}{2-\\sqrt{2}}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0024",
+      "type": "mcq",
+      "stem": "Find three numbers in an arithmetic progression whose sum is $21$ and whose product is $315$.",
+      "options": {
+        "A": "$3, 7, 11$",
+        "B": "$5, 7, 9$",
+        "C": "$4, 7, 10$",
+        "D": "$6, 7, 8$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Let the numbers be $a-d, a, a+d$. Sum $3a = 21 \\Rightarrow a = 7$. Product $(7-d)(7)(7+d) = 315 \\Rightarrow 49-d^2 = 45 \\Rightarrow d=2$. The numbers are $5, 7, 9$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0025",
+      "type": "mcq",
+      "stem": "What is the formula for the sum to infinity of a geometric series with $|r| < 1$?",
+      "options": {
+        "A": "$\\frac{a}{1-r}$",
+        "B": "$\\frac{a(1-r^n)}{1-r}$",
+        "C": "$ar^{n-1}$",
+        "D": "$\\frac{n}{2}(2a + (n-1)d)$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The sum to infinity of a geometric series is deduced using the formula $\\frac{a}{1-r}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0026",
+      "type": "mcq",
+      "stem": "To what sum does the series $1 - \\frac{1}{3} + \\frac{1}{9} - \\frac{1}{27} + \\dots$ converge?",
+      "options": {
+        "A": "$\\frac{1}{4}$",
+        "B": "$\\frac{3}{4}$",
+        "C": "$\\frac{2}{3}$",
+        "D": "$\\frac{4}{3}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Here $a=1$ and $r=-\\frac{1}{3}$. $S_{\\infty} = \\frac{1}{1 - (-\\frac{1}{3})} = \\frac{1}{\\frac{4}{3}} = \\frac{3}{4}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0027",
+      "type": "mcq",
+      "stem": "If $Z_{1} = 3 + 2i$ and $Z_{2} = 4 - 3i$, find $Z_{1} - Z_{2}$.",
+      "options": {
+        "A": "$7 - i$",
+        "B": "$-1 + 5i$",
+        "C": "$1 - 5i$",
+        "D": "$-1 - i$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$Z_{1} - Z_{2} = (3 - 4) + (2i - (-3i)) = -1 + 5i$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0028",
+      "type": "mcq",
+      "stem": "Given $Z_{1} = 2 - 3i$ and $Z_{2} = 1 + 4i$, find $Z_{1}Z_{2}$.",
+      "options": {
+        "A": "$14 + 5i$",
+        "B": "$2 - 12i$",
+        "C": "$-10 + 5i$",
+        "D": "$14 - 5i$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$Z_{1}Z_{2} = (2-3i)(1+4i) = 2 + 8i - 3i - 12i^2 = 2 + 5i + 12 = 14 + 5i$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0029",
+      "type": "mcq",
+      "stem": "In the complex plane $Z = x + iy$, what does $|z|$ represent?",
+      "options": {
+        "A": "The argument",
+        "B": "The real part",
+        "C": "The modulus",
+        "D": "The conjugate"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "For a complex number $Z = x + iy$, $|z|$ is called the modulus of $Z$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0030",
+      "type": "mcq",
+      "stem": "Find the modulus of $Z = 3 - 4i$.",
+      "options": {
+        "A": "$7$",
+        "B": "$1$",
+        "C": "$5$",
+        "D": "$\\sqrt{7}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Modulus $|z| = \\sqrt{3^2 + (-4)^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0031",
+      "type": "mcq",
+      "stem": "If $Z = 5 - 12i$, find the value of $|z|$.",
+      "options": {
+        "A": "$7$",
+        "B": "$13$",
+        "C": "$17$",
+        "D": "$11$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$|z| = \\sqrt{5^2 + (-12)^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0032",
+      "type": "mcq",
+      "stem": "Evaluate $(1+i)^{2}$.",
+      "options": {
+        "A": "$2$",
+        "B": "$2i$",
+        "C": "$1+2i$",
+        "D": "$0$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$(1+i)(1+i) = 1 + i + i + i^2 = 1 + 2i - 1 = 2i$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0033",
+      "type": "mcq",
+      "stem": "If $(x+3)$ is a factor of $x^3 + 3x^2 + nx - 12$, find the value of $n$.",
+      "options": {
+        "A": "$4$",
+        "B": "$-4$",
+        "C": "$3$",
+        "D": "$-3$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Using the factor theorem, $f(-3) = 0 \\Rightarrow (-3)^3 + 3(-3)^2 + n(-3) - 12 = 0 \\Rightarrow -27 + 27 - 3n - 12 = 0 \\Rightarrow -3n = 12 \\Rightarrow n = -4$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0034",
+      "type": "mcq",
+      "stem": "Given $\\sin \\theta = \\frac{\\sqrt{3}}{2}$ where $\\theta$ is acute, find $\\tan 2\\theta$ in surd form.",
+      "options": {
+        "A": "$\\sqrt{3}$",
+        "B": "$-\\sqrt{3}$",
+        "C": "$\\frac{1}{\\sqrt{3}}$",
+        "D": "$-\\frac{1}{\\sqrt{3}}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$\\theta = 60^{\\circ}$. $\\tan 2(60^{\\circ}) = \\tan 120^{\\circ} = -\\sqrt{3}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0035",
+      "type": "mcq",
+      "stem": "Find the next two terms of the sequence $1, 5, 14, 30, 55, \\dots$",
+      "options": {
+        "A": "$81, 121$",
+        "B": "$91, 140$",
+        "C": "$75, 110$",
+        "D": "$85, 130$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The sequence adds successive perfect squares: $55 + 6^2 = 91$ and $91 + 7^2 = 140$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0036",
+      "type": "mcq",
+      "stem": "Express $\\frac{2}{3 - \\sqrt{7}}$ in the form $a + \\sqrt{b}$ where $a, b$ are integers.",
+      "options": {
+        "A": "$3 + \\sqrt{7}$",
+        "B": "$3 - \\sqrt{7}$",
+        "C": "$2 + \\sqrt{7}$",
+        "D": "$1 + \\sqrt{7}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Rationalize: $\\frac{2(3+\\sqrt{7})}{(3-\\sqrt{7})(3+\\sqrt{7})} = \\frac{2(3+\\sqrt{7})}{9-7} = \\frac{2(3+\\sqrt{7})}{2} = 3 + \\sqrt{7}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0037",
+      "type": "mcq",
+      "stem": "What is the nature of the roots of a quadratic equation if $b^2 - 4ac < 0$?",
+      "options": {
+        "A": "Two real equal roots",
+        "B": "Two real distinct roots",
+        "C": "No real roots",
+        "D": "Rational roots"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "If the discriminant $b^2 - 4ac < 0$, the equation has no real roots."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0038",
+      "type": "mcq",
+      "stem": "The first term of a geometric series is $350$. If the sum to infinity is $250$, find the common ratio $r$.",
+      "options": {
+        "A": "$\\frac{2}{5}$",
+        "B": "$-\\frac{2}{5}$",
+        "C": "$\\frac{3}{5}$",
+        "D": "$-\\frac{3}{5}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Using $S_{\\infty} = \\frac{a}{1-r} \\Rightarrow 250 = \\frac{350}{1-r} \\Rightarrow 250 - 250r = 350 \\Rightarrow -250r = 100 \\Rightarrow r = -\\frac{100}{250} = -\\frac{2}{5}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0039",
+      "type": "mcq",
+      "stem": "If $\\alpha$ and $\\beta$ are the roots of $ax^2 + bx + c = 0$, what does $\\alpha + \\beta$ equal?",
+      "options": {
+        "A": "$\\frac{b}{a}$",
+        "B": "$-\\frac{b}{a}$",
+        "C": "$\\frac{c}{a}$",
+        "D": "$-\\frac{c}{a}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The sum of the roots of a quadratic equation is $-\\frac{b}{a}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0040",
+      "type": "mcq",
+      "stem": "If $\\alpha$ and $\\beta$ are the roots of $ax^2 + bx + c = 0$, what does $\\alpha\\beta$ represent?",
+      "options": {
+        "A": "$\\frac{b}{a}$",
+        "B": "$-\\frac{b}{a}$",
+        "C": "$\\frac{c}{a}$",
+        "D": "$-\\frac{c}{a}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The product of the roots of a quadratic equation is $\\frac{c}{a}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0041",
+      "type": "mcq",
+      "stem": "If $\\alpha$ and $\\beta$ are the roots of $3x^2 + 7x + 2 = 0$, find $\\alpha + \\beta$.",
+      "options": {
+        "A": "$\\frac{7}{3}$",
+        "B": "$-\\frac{7}{3}$",
+        "C": "$\\frac{2}{3}$",
+        "D": "$-\\frac{2}{3}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Sum of roots $= -\\frac{b}{a} = -\\frac{7}{3}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0042",
+      "type": "mcq",
+      "stem": "If $\\alpha$ and $\\beta$ are the roots of $3x^2 + 2x - 5 = 0$, find $\\alpha\\beta$.",
+      "options": {
+        "A": "$\\frac{2}{3}$",
+        "B": "$-\\frac{2}{3}$",
+        "C": "$\\frac{5}{3}$",
+        "D": "$-\\frac{5}{3}$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Product of roots $= \\frac{c}{a} = -\\frac{5}{3}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0043",
+      "type": "mcq",
+      "stem": "The roots of a quadratic equation are $-3$ and $1$. Find its equation.",
+      "options": {
+        "A": "$x^2 - 2x - 3 = 0$",
+        "B": "$x^2 + 2x - 3 = 0$",
+        "C": "$x^2 + 2x + 3 = 0$",
+        "D": "$x^2 - 2x + 3 = 0$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Equation is $x^2 - (sum)x + (product) = 0$. $Sum = -2$, $Product = -3$. So $x^2 - (-2)x + (-3) = x^2 + 2x - 3 = 0$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0044",
+      "type": "mcq",
+      "stem": "If $f(x)$ is divided by $(ax-b)$, the remainder is:",
+      "options": {
+        "A": "$f(\\frac{b}{a})$",
+        "B": "$f(-\\frac{b}{a})$",
+        "C": "$f(b)$",
+        "D": "$f(a)$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "If $ax-b=0$, $x=\\frac{b}{a}$. By the remainder theorem, the remainder is $f(\\frac{b}{a})$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0045",
+      "type": "mcq",
+      "stem": "Find the remainder when $x^5 - 2x^3 + x - 3$ is divided by $x - 2$.",
+      "options": {
+        "A": "$10$",
+        "B": "$15$",
+        "C": "$20$",
+        "D": "$5$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Substitute $x=2$: $2^5 - 2(2^3) + 2 - 3 = 32 - 16 + 2 - 3 = 15$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0046",
+      "type": "mcq",
+      "stem": "Evaluate the remainder when $2x^3 + x^2 - 4x - 1$ is divided by $3x + 1$.",
+      "options": {
+        "A": "$\\frac{5}{27}$",
+        "B": "$\\frac{10}{27}$",
+        "C": "$-\\frac{10}{27}$",
+        "D": "$1$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Substitute $x = -\\frac{1}{3}$ into the polynomial. Result is $\\frac{10}{27}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0047",
+      "type": "mcq",
+      "stem": "The third term of a G.P. is $10$ and the sixth term is $80$. Find the common ratio $r$.",
+      "options": {
+        "A": "$2$",
+        "B": "$4$",
+        "C": "$3$",
+        "D": "$5$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$\\frac{ar^5}{ar^2} = \\frac{80}{10} \\Rightarrow r^3 = 8 \\Rightarrow r = 2$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0048",
+      "type": "mcq",
+      "stem": "The union of two sets $A$ and $B$ is denoted by:",
+      "options": {
+        "A": "$A \\cap B$",
+        "B": "$A \\cup B$",
+        "C": "$A \\subset B$",
+        "D": "$A \\times B$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The union of $A$ and $B$ is denoted by $A \\cup B$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0049",
+      "type": "mcq",
+      "stem": "What pictorial representation uses circles inside a rectangle to represent sets?",
+      "options": {
+        "A": "Bar chart",
+        "B": "Venn diagram",
+        "C": "Histogram",
+        "D": "Pie chart"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A Venn diagram is a pictorial representation of sets inside a universal set rectangle."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0050",
+      "type": "mcq",
+      "stem": "Find the sum of the roots of the equation $2x^2 + 3x - 9 = 0$.",
+      "options": {
+        "A": "$\\frac{3}{2}$",
+        "B": "$-\\frac{3}{2}$",
+        "C": "$\\frac{9}{2}$",
+        "D": "$-\\frac{9}{2}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Sum of roots $= -\\frac{b}{a} = -\\frac{3}{2}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0051",
+      "type": "mcq",
+      "stem": "Given $\\xi = \\{1, 2, \\dots, 10\\}$, $P = \\{x:x \\text{ is prime}\\}$ and $Q = \\{y:y \\text{ is odd}\\}$, find $P' \\cap Q$.",
+      "options": {
+        "A": "$\\{1, 9\\}$",
+        "B": "$\\{2, 3, 5, 7\\}$",
+        "C": "$\\{1, 3, 5, 7, 9\\}$",
+        "D": "$\\{4, 6, 8, 10\\}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$P = \\{2, 3, 5, 7\\}$, $P' = \\{1, 4, 6, 8, 9, 10\\}$. $Q = \\{1, 3, 5, 7, 9\\}$. Intersection is $\\{1, 9\\}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0052",
+      "type": "mcq",
+      "stem": "A sequence is given by $2.5, 5, 7.5, \\dots$ If the $n$th term is $25$, find $n$.",
+      "options": {
+        "A": "$5$",
+        "B": "$8$",
+        "C": "$10$",
+        "D": "$12$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "$a = 2.5, d = 2.5$. $2.5 + (n-1)2.5 = 25 \\Rightarrow 2.5n = 25 \\Rightarrow n = 10$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0053",
+      "type": "mcq",
+      "stem": "The $n$th term of a sequence is $T_n = 5 + (n-1)^2$. Evaluate $T_4 - T_6$.",
+      "options": {
+        "A": "$16$",
+        "B": "$-16$",
+        "C": "$14$",
+        "D": "$-30$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$T_4 = 14, T_6 = 30$. $T_4 - T_6 = 14 - 30 = -16$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0054",
+      "type": "mcq",
+      "stem": "If $P = \\{\\text{prime factors of } 210\\}$ and $Q = \\{\\text{prime numbers } < 10\\}$, find $P \\cap Q$.",
+      "options": {
+        "A": "$\\{2, 3, 5, 7\\}$",
+        "B": "$\\{2, 3, 5\\}$",
+        "C": "$\\{7, 11\\}$",
+        "D": "$\\{1, 2, 3, 5, 7\\}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$P = \\{2, 3, 5, 7\\}$ and $Q = \\{2, 3, 5, 7\\}$. Their intersection is $\\{2, 3, 5, 7\\}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0055",
+      "type": "mcq",
+      "stem": "If $P = \\{y:2y \\ge 6\\}$ and $Q = \\{y:y-3 \\le 4\\}$ for integers $y$, find $P \\cap Q$.",
+      "options": {
+        "A": "$\\{3, 4, 5, 6, 7\\}$",
+        "B": "$\\{2, 3, 4, 5, 6\\}$",
+        "C": "$\\{3, 4, 5, 6\\}$",
+        "D": "$\\{y:3 \\le y \\le 7\\}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$P = \\{y:y \\ge 3\\}$ and $Q = \\{y:y \\le 7\\}$. The intersection for integers is $\\{3, 4, 5, 6, 7\\}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0056",
+      "type": "mcq",
+      "stem": "Find the values of $k$ in the equation $6k^2 = 5k + 6$.",
+      "options": {
+        "A": "$\\frac{3}{2}, -\\frac{2}{3}$",
+        "B": "$-\\frac{3}{2}, \\frac{2}{3}$",
+        "C": "$\\frac{1}{2}, 3$",
+        "D": "$2, -3$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$6k^2 - 5k - 6 = 0 \\Rightarrow (2k-3)(3k+2) = 0 \\Rightarrow k = \\frac{3}{2}, -\\frac{2}{3}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0057",
+      "type": "mcq",
+      "stem": "If $X = \\{0, 2, 4, 6\\}$, $Y = \\{1, 2, 3, 4\\}$, $Z = \\{1, 3\\}$, find $X \\cap (Y' \\cup Z)$ relative to $\\xi = \\{0, 1, 2, 3, 4, 5, 6\\}$.",
+      "options": {
+        "A": "$\\{0, 6\\}$",
+        "B": "$\\{2, 4\\}$",
+        "C": "$\\{0, 1, 3, 5, 6\\}$",
+        "D": "$\\{1, 3\\}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$Y' = \\{0, 5, 6\\}$. $Y' \\cup Z = \\{0, 1, 3, 5, 6\\}$. $X \\cap (Y' \\cup Z) = \\{0, 6\\}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0058",
+      "type": "mcq",
+      "stem": "Find the 7th term of the sequence $2, 5, 10, 17, 26, \\dots$",
+      "options": {
+        "A": "$37$",
+        "B": "$50$",
+        "C": "$49$",
+        "D": "$65$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The sequence is $n^2 + 1$. For $n=7$, $7^2 + 1 = 50$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0059",
+      "type": "mcq",
+      "stem": "Which of the following is an irrational number?",
+      "options": {
+        "A": "$0.333\\dots$",
+        "B": "$\\sqrt{9}$",
+        "C": "$\\sqrt{90}$",
+        "D": "$\\frac{10}{3}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "$\\sqrt{90} = 3\\sqrt{10}$, which cannot be expressed as a simple fraction."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0060",
+      "type": "mcq",
+      "stem": "A pole of length $L$ leans against a wall at $60^{\\circ}$ to the horizontal ground. If the top is $8m$ high, find $L$.",
+      "options": {
+        "A": "$\\frac{16\\sqrt{3}}{3}m$",
+        "B": "$8\\sqrt{3}m$",
+        "C": "$16m$",
+        "D": "$4\\sqrt{3}m$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$\\sin 60^{\\circ} = \\frac{8}{L} \\Rightarrow L = \\frac{8}{\\sin 60^{\\circ}} = \\frac{8}{\\sqrt{3}/2} = \\frac{16}{\\sqrt{3}} = \\frac{16\\sqrt{3}}{3}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0061",
+      "type": "mcq",
+      "stem": "Find the equation whose roots are $-8$ and $5$.",
+      "options": {
+        "A": "$x^2 - 3x - 40 = 0$",
+        "B": "$x^2 + 3x - 40 = 0$",
+        "C": "$x^2 + 3x + 40 = 0$",
+        "D": "$x^2 - 3x + 40 = 0$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Equation is $x^2 - (-8+5)x + (-8 \\times 5) = x^2 + 3x - 40 = 0$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0062",
+      "type": "mcq",
+      "stem": "The $n$th term of a sequence is $2^{2n-1}$. Which term is $2^9$?",
+      "options": {
+        "A": "$4$",
+        "B": "$5$",
+        "C": "$6$",
+        "D": "$10$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$2n - 1 = 9 \\Rightarrow 2n = 10 \\Rightarrow n = 5$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0063",
+      "type": "mcq",
+      "stem": "Factorize $6x^2 + 7x - 20$.",
+      "options": {
+        "A": "$(2x-5)(3x+4)$",
+        "B": "$(2x+5)(3x-4)$",
+        "C": "$(6x+5)(x-4)$",
+        "D": "$(3x+5)(2x-4)$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$6x^2 + 15x - 8x - 20 = 3x(2x+5) - 4(2x+5) = (2x+5)(3x-4)$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0064",
+      "type": "mcq",
+      "stem": "If $2x^2 + kx - 14 = (x+2)(2x-7)$, find $k$.",
+      "options": {
+        "A": "$3$",
+        "B": "$-3$",
+        "C": "$4$",
+        "D": "$-4$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Expanding $(x+2)(2x-7) = 2x^2 - 7x + 4x - 14 = 2x^2 - 3x - 14$. Thus $k = -3$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0065",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a quadratic expression?",
+      "options": {
+        "A": "$y = 2x^2 - 5x$",
+        "B": "$y = x(x-5)$",
+        "C": "$y = x^2 - 5$",
+        "D": "$y = 5(x-1)$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "$y = 5(x-1)$ is linear because the highest power of $x$ is one."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0066",
+      "type": "mcq",
+      "stem": "Given $\\sin p = \\frac{5}{13}$ where $p$ is acute, find $\\cos p - \\tan p$.",
+      "options": {
+        "A": "$\\frac{79}{156}$",
+        "B": "$\\frac{11}{13}$",
+        "C": "$\\frac{1}{12}$",
+        "D": "$\\frac{5}{156}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$\\cos p = \\frac{12}{13}$ and $\\tan p = \\frac{5}{12}$. $\\frac{12}{13} - \\frac{5}{12} = \\frac{144-65}{156} = \\frac{79}{156}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0067",
+      "type": "mcq",
+      "stem": "A ladder $6m$ long leans against a wall at $30^{\\circ}$ to the horizontal. How high does it reach?",
+      "options": {
+        "A": "$2m$",
+        "B": "$3m$",
+        "C": "$4m$",
+        "D": "$3\\sqrt{3}m$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$\\text{Height} = 6 \\times \\sin 30^{\\circ} = 6 \\times \\frac{1}{2} = 3m$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0068",
+      "type": "mcq",
+      "stem": "In $\\triangle XYZ$, $YZ=6cm$, $\\hat{X}=60^{\\circ}$ and $\\hat{Y}=90^{\\circ}$. Find $XZ$ in surd form.",
+      "options": {
+        "A": "$4\\sqrt{3}cm$",
+        "B": "$2\\sqrt{3}cm$",
+        "C": "$6\\sqrt{3}cm$",
+        "D": "$12cm$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$\\sin 60^{\\circ} = \\frac{6}{XZ} \\Rightarrow XZ = \\frac{6}{\\sqrt{3}/2} = \\frac{12}{\\sqrt{3}} = 4\\sqrt{3}$."
+    },
+    {
+      "id": "uni-tasued-mth101-bank-0069",
+      "type": "mcq",
+      "stem": "If $\\tan x = 1$, evaluate $\\sin x + \\cos x$ in surd form.",
+      "options": {
+        "A": "$1$",
+        "B": "$\\sqrt{2}$",
+        "C": "$\\frac{\\sqrt{2}}{2}$",
+        "D": "$2$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "If $\\tan x = 1$, $x=45^{\\circ}$. $\\sin 45^{\\circ} + \\cos 45^{\\circ} = \\frac{\\sqrt{2}}{2} + \\frac{\\sqrt{2}}{2} = \\sqrt{2}$."
+    }
+  ]
+}

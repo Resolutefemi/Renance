@@ -1,0 +1,134 @@
+{
+  "paths": [
+    {
+      "id": "medicine-surgery",
+      "course": "Medicine & Surgery",
+      "field": "Health",
+      "blurb": "The strictest cut-off in Nigeria; your Biology and Chemistry fluency decides it.",
+      "cutoff": "280+",
+      "subjects": ["English", "Biology", "Chemistry", "Physics"],
+      "universities": ["UNILAG", "UI", "OAU", "UNIBEN"],
+      "topics": ["Cell Biology", "Genetics", "Respiration", "Transport"]
+    },
+    {
+      "id": "nursing-science",
+      "course": "Nursing Science",
+      "field": "Health",
+      "blurb": "Clinical practice plus physiology; among the fastest-growing health careers.",
+      "cutoff": "250+",
+      "subjects": ["English", "Biology", "Chemistry", "Physics"],
+      "universities": ["UNILAG", "UI", "UNN", "OAU"],
+      "topics": ["Nutrition", "Respiration", "Transport", "Genetics"]
+    },
+    {
+      "id": "pharmacy",
+      "course": "Pharmacy",
+      "field": "Health",
+      "blurb": "Drug science sits on top of cell biology and digestion; precision pays.",
+      "cutoff": "270+",
+      "subjects": ["English", "Biology", "Chemistry", "Physics"],
+      "universities": ["UI", "UNIBEN", "UNN", "OAU"],
+      "topics": ["Cell Biology", "Digestion", "Genetics"]
+    },
+    {
+      "id": "biochemistry",
+      "course": "Biochemistry",
+      "field": "Research",
+      "blurb": "The lab science behind medicine, food and pharma research teams.",
+      "cutoff": "220+",
+      "subjects": ["English", "Biology", "Chemistry", "Physics"],
+      "universities": ["UI", "UNILAG", "UNN", "FUTA"],
+      "topics": ["Cell Biology", "Photosynthesis", "Genetics"]
+    },
+    {
+      "id": "microbiology",
+      "course": "Microbiology",
+      "field": "Research",
+      "blurb": "Pathogens, immunity and fermentation; research and industry both hire.",
+      "cutoff": "220+",
+      "subjects": ["English", "Biology", "Chemistry", "Physics"],
+      "universities": ["UNILAG", "UI", "UNN", "FUNAAB"],
+      "topics": ["Cell Biology", "Classification", "Genetics"]
+    },
+    {
+      "id": "ecology-environmental",
+      "course": "Ecology & Environmental Biology",
+      "field": "Ecology",
+      "blurb": "Conservation, climate impact studies and environmental consulting.",
+      "cutoff": "200+",
+      "subjects": ["English", "Biology", "Chemistry", "Physics"],
+      "universities": ["UNILAG", "UI", "UNIPORT", "FUNAAB"],
+      "topics": ["Ecology", "Classification", "Plant Biology"]
+    },
+    {
+      "id": "agronomy",
+      "course": "Agronomy (Agricultural Science)",
+      "field": "Ecology",
+      "blurb": "Crop science and food systems; Nigeria's biggest quiet opportunity.",
+      "cutoff": "180+",
+      "subjects": ["English", "Biology", "Chemistry", "Physics"],
+      "universities": ["FUNAAB", "UNIPORT", "UI", "UNN"],
+      "topics": ["Plant Biology", "Photosynthesis", "Ecology"]
+    },
+    {
+      "id": "electrical-engineering",
+      "course": "Electrical & Electronics Engineering",
+      "field": "Engineering",
+      "blurb": "Power, control systems and hardware; electricity mastery starts here.",
+      "cutoff": "250+",
+      "subjects": ["English", "Mathematics", "Physics", "Chemistry"],
+      "universities": ["UNILAG", "UI", "OAU", "UNIBEN"],
+      "topics": ["Electricity", "Energy", "Motion", "Algebra"]
+    },
+    {
+      "id": "mechanical-engineering",
+      "course": "Mechanical Engineering",
+      "field": "Engineering",
+      "blurb": "Machines, thermodynamics and manufacturing; motion and energy are your daily bread.",
+      "cutoff": "250+",
+      "subjects": ["English", "Mathematics", "Physics", "Chemistry"],
+      "universities": ["UI", "OAU", "UNILAG", "UNN"],
+      "topics": ["Motion", "Work", "Energy", "Mensuration"]
+    },
+    {
+      "id": "computer-science",
+      "course": "Computer Science",
+      "field": "Tech",
+      "blurb": "Algorithms, software and systems; the widest tech door from any campus.",
+      "cutoff": "230+",
+      "subjects": ["English", "Mathematics", "Physics", "Chemistry"],
+      "universities": ["UNILAG", "UI", "OAU", "FUTA"],
+      "topics": ["Algebra", "Statistics", "Probability", "Computer Fundamentals"]
+    },
+    {
+      "id": "statistics-data-science",
+      "course": "Statistics & Data Science",
+      "field": "Tech",
+      "blurb": "Turn numbers into decisions; banks, telcos and startups all compete for this.",
+      "cutoff": "200+",
+      "subjects": ["English", "Mathematics", "Economics", "Physics"],
+      "universities": ["UNILAG", "UI", "UNN", "OAU"],
+      "topics": ["Statistics", "Probability", "Percentages"]
+    },
+    {
+      "id": "accounting",
+      "course": "Accounting",
+      "field": "Business",
+      "blurb": "Audit, tax and finance; commercial arithmetic is the seed of the whole career.",
+      "cutoff": "220+",
+      "subjects": ["English", "Mathematics", "Economics", "Government"],
+      "universities": ["UNILAG", "OAU", "UNN", "Covenant"],
+      "topics": ["Percentages", "Commercial Arithmetic", "Statistics"]
+    },
+    {
+      "id": "economics",
+      "course": "Economics",
+      "field": "Business",
+      "blurb": "Policy, banking and analysis; statistics gives you the analyst edge.",
+      "cutoff": "220+",
+      "subjects": ["English", "Mathematics", "Economics", "Government"],
+      "universities": ["UI", "UNILAG", "OAU", "UNN"],
+      "topics": ["Percentages", "Statistics", "Probability"]
+    }
+  ]
+}
