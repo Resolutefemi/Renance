@@ -16,7 +16,7 @@ import 'arena_lobby_screen.dart';
 import 'flashcards_screen.dart';
 import 'gamification_hub_screen.dart';
 import 'gpa_screen.dart';
-import 'home_screen.dart' show LauncherTile, StudyHeatCard;
+import 'home_screen.dart' show LauncherTile;
 import 'syllabus_screen.dart';
 import 'theme.dart';
 import 'tutor_screen.dart';
@@ -178,9 +178,6 @@ class UniversityHomeTab extends StatelessWidget {
                   ),
           ),
           const SizedBox(height: 16),
-          // Study Heat (founder surprise 2026-10-04): the 12-week amber
-          // heatmap of questions answered.
-          StudyHeatCard(attempts: student.attempts),
           // Practice grid ---------------------------------------------------
           const SizedBox(height: 16),
           Text(

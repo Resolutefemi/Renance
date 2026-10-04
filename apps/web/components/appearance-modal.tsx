@@ -126,12 +126,36 @@ export default function AppearanceModal({
           </div>
         </div>
 
-        {/* Seed presets */}
+        {/* Seed presets - the Renance Default (ink and paper) leads the
+            list (founder directive 2026-10-05: "among the colour appearance
+            pop up, add the default colour to the colour list"); tapping
+            it clears the seed entirely */}
         <div className="mt-5">
           <span className="block text-[13px] font-semibold uppercase tracking-wide text-on-surface-variant">
             Seed color
           </span>
           <div className="mt-3 flex flex-wrap items-center gap-3">
+            <button
+              type="button"
+              title="Renance default (ink and paper)"
+              aria-label="Renance default (ink and paper)"
+              aria-pressed={seed === null}
+              onClick={() => pick(null)}
+              className={`flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border-2 transition ${
+                seed === null
+                  ? 'scale-110 border-on-surface'
+                  : 'border-transparent hover:scale-105'
+              }`}
+            >
+              <span
+                aria-hidden
+                className="block h-full w-full"
+                style={{
+                  background:
+                    'linear-gradient(to right, #111 0 50%, #fff 50% 100%)',
+                }}
+              />
+            </button>
             {SEED_PRESETS.map((p) => {
               const selected = seed?.toLowerCase() === p.hex.toLowerCase();
               return (
@@ -158,18 +182,6 @@ export default function AppearanceModal({
               );
             })}
           </div>
-          <button
-            type="button"
-            onClick={() => pick(null)}
-            className={`mt-3 inline-flex items-center gap-1.5 text-[13px] font-medium ${
-              seed === null ? 'text-on-surface' : 'text-on-surface-variant hover:text-on-surface'
-            }`}
-          >
-            <span className="material-symbols-outlined text-[16px]">
-              {seed === null ? 'check_box' : 'check_box_outline_blank'}
-            </span>
-            Keep the classic ink &amp; paper look
-          </button>
         </div>
 
         <button

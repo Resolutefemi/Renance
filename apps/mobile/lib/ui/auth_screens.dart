@@ -348,14 +348,21 @@ Future<bool> _runGoogleSignIn(
 }
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+  // initialAudience (founder bugfix 2026-10-05): the footer hop from the
+  // register screen, and every other route into this screen, now carries
+  // the FOR STUDENTS / FOR SCHOOLS tab across - a school manager tapping
+  // "Sign in" on the school sign-up page lands on the SCHOOL sign-in,
+  // never back on the student form.
+  const LoginScreen({super.key, this.initialAudience = AuthAudience.students});
+
+  final AuthAudience initialAudience;
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  AuthAudience _audience = AuthAudience.students;
+  late AuthAudience _audience = widget.initialAudience;
   final TextEditingController _username = TextEditingController();
   final TextEditingController _password = TextEditingController();
   bool _busy = false;
@@ -608,8 +615,13 @@ class _LoginScreenState extends State<LoginScreen> {
             style: TextStyle(color: context.textSecondary, fontSize: 14),
           ),
           GestureDetector(
-            onTap: () =>
-                Navigator.of(context).pushReplacementNamed('/register'),
+            onTap: () => Navigator.of(context).pushReplacementNamed(
+              '/register',
+              // Carry the tab across (founder bugfix 2026-10-05): a
+              // school sign-up started from the school sign-in stays on
+              // the For Schools side.
+              arguments: _audience,
+            ),
             child: Text(
               'Sign up',
               style: TextStyle(
@@ -626,14 +638,22 @@ class _LoginScreenState extends State<LoginScreen> {
 }
 
 class RegisterScreen extends StatefulWidget {
-  const RegisterScreen({super.key});
+  // initialAudience (founder bugfix 2026-10-05): the hop from the login
+  // screen carries the FOR STUDENTS / FOR SCHOOLS tab across - "Sign up
+  // for school" opens the SCHOOL sign-up form, not the student one.
+  const RegisterScreen({
+    super.key,
+    this.initialAudience = AuthAudience.students,
+  });
+
+  final AuthAudience initialAudience;
 
   @override
   State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
-  AuthAudience _audience = AuthAudience.students;
+  late AuthAudience _audience = widget.initialAudience;
   final TextEditingController _username = TextEditingController();
   final TextEditingController _password = TextEditingController();
   // Confirmation password (founder directive 2026-10-03): the password
@@ -809,7 +829,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               textCapitalization: TextCapitalization.words,
               decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.school_outlined, size: 20),
-                hintText: 'e.g. God Generals Standard Academy',
+                hintText: 'e.g. Living Grace Academy',
               ),
             ),
             SizedBox(height: 16),
@@ -833,7 +853,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               textCapitalization: TextCapitalization.words,
               decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.badge_outlined, size: 20),
-                hintText: 'e.g. Mrs. Ariyo O.',
+                hintText: 'e.g. Mr Kelvin O.',
               ),
             ),
             SizedBox(height: 16),
@@ -937,7 +957,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
             style: TextStyle(color: context.textSecondary, fontSize: 14),
           ),
           GestureDetector(
-            onTap: () => Navigator.of(context).pushReplacementNamed('/login'),
+            onTap: () => Navigator.of(context).pushReplacementNamed(
+              '/login',
+              // Carry the tab across (founder bugfix 2026-10-05): the
+              // school sign-up's "Sign in" opens the school sign-in.
+              arguments: _audience,
+            ),
             child: Text(
               'Sign in',
               style: TextStyle(

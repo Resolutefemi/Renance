@@ -119,14 +119,36 @@ class RenanceApp extends StatelessWidget {
             initialRoute: '/',
             routes: <String, WidgetBuilder>{
               '/': (_) => const _StartupGate(),
-              '/login': (_) => const LoginScreen(),
-              '/register': (_) => const RegisterScreen(),
               '/home': (_) => const HomeScreen(),
               '/verify': (_) => const VerifyScreen(),
               '/school': (_) => const SchoolWorkspaceScreen(),
               '/school-legacy': (_) => const SchoolHomeScreen(),
             },
             onGenerateRoute: (RouteSettings settings) {
+              // /login and /register (founder bugfix 2026-10-05): moved
+              // out of the static map so the FOR STUDENTS / FOR SCHOOLS
+              // tab can travel as the route argument - "sign up for
+              // school" opens the SCHOOL sign-up form and the school
+              // sign-up's "Sign in" opens the SCHOOL sign-in, instead of
+              // both dropping the caller back on the student side.
+              if (settings.name == '/login') {
+                final AuthAudience audience =
+                    settings.arguments is AuthAudience
+                        ? settings.arguments! as AuthAudience
+                        : AuthAudience.students;
+                return MaterialPageRoute<void>(
+                  builder: (_) => LoginScreen(initialAudience: audience),
+                );
+              }
+              if (settings.name == '/register') {
+                final AuthAudience audience =
+                    settings.arguments is AuthAudience
+                        ? settings.arguments! as AuthAudience
+                        : AuthAudience.students;
+                return MaterialPageRoute<void>(
+                  builder: (_) => RegisterScreen(initialAudience: audience),
+                );
+              }
               if (settings.name == '/exam') {
                 final ExamMeta exam = settings.arguments! as ExamMeta;
                 return MaterialPageRoute<void>(

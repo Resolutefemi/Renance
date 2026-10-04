@@ -339,3 +339,30 @@ CI runs the same script against a disposable Postgres 16 on every push.
   `DATABASE_URL` set) purges every one of them.
 - **Test-data hygiene:** `go run ./cmd/e2eclean -prefix e2e` (with
   `DATABASE_URL` set) deletes every throwaway user created by E2E runs.
+
+## 8. User data surface (founder directive 2026-10-05)
+
+- **`public.users` in Neon** - the Neon console's table editor opens on the
+  `public` schema, where the accounts were never visible. Migration 0026
+  creates `public.users` as an automatically-updatable view over
+  `study.users` (the API's real table): the same rows, readable AND
+  editable right there - deleting a row through the view fires the same
+  `ON DELETE CASCADE` chain as deleting it in `study.users`.
+- **Deleting an account deletes everything** - `study.purge_user(uuid)`
+  (migration 0027) removes the profile, exam attempts and answers,
+  results, sessions, streaks, awards, review queue, daily results, arena
+  seats, school memberships, entitlements, payments, AI chats/memories/
+  artifacts and password resets, then the users row - one transaction,
+  nothing left behind. The API exposes it as `DELETE /me` (the app's
+  account sheet and the web account sheet both call it), and every FK
+  already cascades for deletions done by hand in the Neon editor.
+- **Orphan sweep** - `study.purge_deleted_users()` (migration 0027, also
+  run once at boot) deletes rows whose owner was already deleted by hand
+  (from `study.users` or `public.users`) before the purge function
+  existed, so no deleted account leaves info in other tables.
+- **Confirmation mails ride the async path** - signup/login responses no
+  longer wait on the Brevo/Resend/SMTP transports (each capped at 12s in
+  the background); the "server timed out then email already existed"
+  race is closed from both ends (the app's HTTP floor is now 60s with a
+  single quiet GET retry, and the api-keepalive cron runs every 5
+  minutes).

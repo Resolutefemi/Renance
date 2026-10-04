@@ -18,7 +18,7 @@ import '../models.dart';
 import '../storage.dart';
 import 'exam_screen.dart';
 import 'flashcards_screen.dart';
-import 'home_screen.dart' show LauncherTile, StudyHeatCard;
+import 'home_screen.dart' show LauncherTile;
 import 'renance_logo.dart';
 import 'study_setup_screen.dart';
 import 'theme.dart';
@@ -167,8 +167,6 @@ class PostUtmeHomeTab extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-          // Study Heat (founder surprise 2026-10-04).
-          StudyHeatCard(attempts: student.attempts),
           // Practice grid ---------------------------------------------------
           const SizedBox(height: 16),
           Text(

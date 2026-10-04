@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, useCallback, useState } from 'react';
+import { FormEvent, useCallback, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { ApiError, api, authWithGoogle } from '@/lib/api';
@@ -28,6 +28,20 @@ export default function LoginPage() {
   // releases still get to meet it once, then it never shows again.
   const [showAppearance, setShowAppearance] = useState(false);
   const [afterAppearance, setAfterAppearance] = useState<(() => void) | null>(null);
+
+  // Deep link (founder bugfix 2026-10-05): /login/?audience=school opens
+  // the For Schools form - the register page's Log In hop carries the
+  // tab across, so a school manager never lands back on the student
+  // sign-in.
+  useEffect(() => {
+    try {
+      const q = new URLSearchParams(window.location.search);
+      const a = q.get('audience');
+      if (a === 'school' || a === 'schools') setAudience('schools');
+    } catch {
+      /* private mode: default to students */
+    }
+  }, []);
 
   const finishLogin = (next: () => void) => {
     if (needsAppearanceIntro()) {
@@ -271,10 +285,18 @@ export default function LoginPage() {
         <p className="mt-10 text-center text-sm text-on-surface-variant">
           Don&apos;t have an account?{' '}
           {/* Event-time href so a ?next= return path survives the hop
-              without a hydration mismatch on the prerendered page. */}
+              without a hydration mismatch on the prerendered page. The
+              FOR SCHOOLS tab travels along (founder bugfix 2026-10-05):
+              Sign up for school opens the school sign-up form. */}
           <button
             type="button"
-            onClick={() => router.push(`/register/?next=${encodeURIComponent(nextPath('/dashboard'))}`)}
+            onClick={() =>
+              router.push(
+                `/register/?next=${encodeURIComponent(nextPath('/dashboard'))}${
+                  audience === 'schools' ? '&audience=school' : ''
+                }`,
+              )
+            }
             className="ml-1 font-medium text-primary underline-offset-4 hover:underline"
           >
             Sign up

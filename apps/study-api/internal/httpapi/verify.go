@@ -172,6 +172,25 @@ If you did not create this account you can ignore this mail.
         return link, sent
 }
 
+// sendVerificationMailAsync ships the confirmation mail OFF the request
+// path (founder bugfix 2026-10-05, "Renance server timed out then email
+// already existed"): the transports used to run INSIDE the signup/login
+// response - Brevo up to 30s, Resend 30s more, the SMTP relay a minute
+// - while the app's HTTP client gave up long before, showed "servers
+// timed out", and the retry then hit "email already exists" because the
+// account had been created all along. The mail now goes out in the
+// background with its own deadline; the response returns the moment the
+// database row is stamped. Request contexts die with the handler, so
+// the goroutine runs on its own.
+func (s *Server) sendVerificationMailAsync(userID, email, token, verifyReturn string) {
+        go func() {
+                _, sent := s.sendVerificationMail(userID, email, token, verifyReturn)
+                if !sent {
+                        s.log.Warn("confirmation mail did not leave the building (async send)", "to", email)
+                }
+        }()
+}
+
 // brevoAPISend hands the mail to Brevo's HTTPS API - the PRIMARY
 // transport again since 2026-10-03 (founder directive: a fresh Brevo
 // account; sender Renance <verify@renance.app> is validated on it).
@@ -198,7 +217,10 @@ func brevoAPISend(key, to, subject, textBody, htmlBody string) error {
         req.Header.Set("api-key", key)
         req.Header.Set("content-type", "application/json")
         req.Header.Set("accept", "application/json")
-        client := &http.Client{Timeout: 30 * time.Second}
+        // 12s hard cap (was 30): the send now rides the async path, and a
+        // hung provider must never eat a whole transport window - the
+        // fallback chain gets its turn quickly.
+        client := &http.Client{Timeout: 12 * time.Second}
         res, err := client.Do(req)
         if err != nil {
                 return err
@@ -236,7 +258,8 @@ func resendAPISend(key, to, subject, textBody, htmlBody string) error {
         req.Header.Set("Authorization", "Bearer "+key)
         req.Header.Set("content-type", "application/json")
         req.Header.Set("accept", "application/json")
-        client := &http.Client{Timeout: 30 * time.Second}
+        // Same 12s hard cap as the Brevo transport (see above).
+        client := &http.Client{Timeout: 12 * time.Second}
         res, err := client.Do(req)
         if err != nil {
                 return err
@@ -383,13 +406,13 @@ func (s *Server) handleResendVerification(w http.ResponseWriter, r *http.Request
                 fail(w, http.StatusInternalServerError, "internal", "could not resend")
                 return
         }
-        link, sent := s.sendVerificationMail(uid, strings.TrimSpace(*u.Email), token, "web")
-        if !sent {
-                fail(w, http.StatusBadGateway, "mail_send_failed",
-                        "the mail service refused the send just now - wait a minute and tap resend again.")
-                return
-        }
-        writeJSON(w, http.StatusOK, map[string]any{"sent": true, "_devLink": link})
+        // Founder bugfix 2026-10-05: the send rides the async path - the
+        // transports (up to a minute of Brevo/Resend/SMTP retries) must
+        // never hold this response open long enough for a phone client to
+        // give up. "sent: true" from here means the mail is queued with
+        // the transports; a total refusal lands in the service log.
+        s.sendVerificationMailAsync(uid, strings.TrimSpace(*u.Email), token, "web")
+        writeJSON(w, http.StatusOK, map[string]any{"sent": true})
 }
 
 // handleRefreshSession swaps a restricted (unverified) session for a
@@ -485,9 +508,9 @@ func (s *Server) handleChangeEmail(w http.ResponseWriter, r *http.Request) {
                 fail(w, http.StatusInternalServerError, "internal", "could not change the email")
                 return
         }
-        link, sent := s.sendVerificationMail(uid, email, token, back)
+        s.sendVerificationMailAsync(uid, email, token, back)
         s.log.Info("signup email changed, confirmation re-issued", "at", time.Now().UTC().Format(time.RFC3339))
-        writeJSON(w, http.StatusOK, map[string]any{"sent": sent, "email": email, "_devLink": link})
+        writeJSON(w, http.StatusOK, map[string]any{"sent": true, "email": email})
 }
 
 type changeEmailRequest struct {

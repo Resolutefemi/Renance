@@ -66,32 +66,60 @@ class ApiClient {
     String path, {
     Object? body,
     bool auth = true,
-    Duration timeout = const Duration(seconds: 20),
+    // 60s floor (founder bugfix 2026-10-05, "Renance server timed out"):
+    // the free-tier host sleeps when idle and the first caller eats the
+    // wake-up - a 20s window kept timing out on perfectly good requests.
+    Duration timeout = const Duration(seconds: 60),
+    bool? retryOnTimeout,
   }) async {
     final uri = Uri.parse('$_base$path');
-    final http.Response res;
-    try {
-      final http.StreamedResponse streamed = await _client
-          .send(
-            http.Request(method, uri)
-              ..headers.addAll(_headers())
-              ..body = body == null ? '' : jsonEncode(body),
-          )
-          .timeout(timeout);
-      res = await http.Response.fromStream(streamed);
-    } on SocketException {
-      // Raw OS errors read "Failed host lookup: 'renance-api.onrender.com'"
-      // - the API host must never leak into student-facing offline copy
-      // (founder rule), so the raw message is dropped entirely.
+    // GETs are idempotent - on a wake-up timeout the host is almost
+    // certainly up seconds later, so one quiet retry is free goodwill.
+    // POSTs never auto-retry (a doubled submit can double-create); the
+    // auth callers handle their own recovery instead.
+    final bool shouldRetry = retryOnTimeout ?? method == 'GET';
+    final int maxAttempts = shouldRetry ? 2 : 1;
+    http.Response? res;
+    for (int attempt = 1; attempt <= maxAttempts; attempt++) {
+      try {
+        final http.StreamedResponse streamed = await _client
+            .send(
+              http.Request(method, uri)
+                ..headers.addAll(_headers())
+                ..body = body == null ? '' : jsonEncode(body),
+            )
+            .timeout(timeout);
+        res = await http.Response.fromStream(streamed);
+        break;
+      } on SocketException {
+        // Raw OS errors read "Failed host lookup: 'renance-api.onrender.com'"
+        // - the API host must never leak into student-facing offline copy
+        // (founder rule), so the raw message is dropped entirely.
+        throw NetworkException(
+          'No connection to Renance servers. Check your internet and try again.',
+        );
+      } on http.ClientException {
+        throw NetworkException(
+          'Renance servers are unreachable. Check your connection and try again.',
+        );
+      } on TimeoutException {
+        if (attempt >= maxAttempts) {
+          throw NetworkException(
+            'Renance servers took too long - they may be waking up. '
+            'Give it a few seconds and try again.',
+          );
+        }
+        // The wake-up ping happened; give the host a beat, then go again.
+        await Future<void>.delayed(const Duration(seconds: 2));
+      }
+    }
+    // Unreachable in practice: every path either assigns [res] and
+    // breaks, or throws. The guard keeps the null-safety checker happy.
+    if (res == null) {
       throw NetworkException(
-        'No connection to Renance servers. Check your internet and try again.',
+        'Renance servers took too long - they may be waking up. '
+        'Give it a few seconds and try again.',
       );
-    } on http.ClientException {
-      throw NetworkException(
-        'Renance servers are unreachable. Check your connection and try again.',
-      );
-    } on TimeoutException {
-      throw NetworkException('Renance servers timed out, try again');
     }
     final dynamic decoded;
     if (res.body.isEmpty) {
@@ -137,23 +165,81 @@ class ApiClient {
     String? deviceId,
     String? referral,
   }) async {
-    final data = await _send(
-      'POST',
-      '/auth/register',
-      body: <String, dynamic>{
-        'username': username,
-        'password': password,
-        if (email != null && email.isNotEmpty) 'email': email,
-        'verifyReturn': 'app',
-        if (deviceId != null && deviceId.isNotEmpty) 'deviceId': deviceId,
-        if (referral != null && referral.isNotEmpty) 'referral': referral,
-      },
-      auth: false,
-    ) as Map<dynamic, dynamic>;
+    final Map<dynamic, dynamic> data;
+    try {
+      data = await _send(
+        'POST',
+        '/auth/register',
+        body: <String, dynamic>{
+          'username': username,
+          'password': password,
+          if (email != null && email.isNotEmpty) 'email': email,
+          'verifyReturn': 'app',
+          if (deviceId != null && deviceId.isNotEmpty) 'deviceId': deviceId,
+          if (referral != null && referral.isNotEmpty) 'referral': referral,
+        },
+        auth: false,
+        timeout: const Duration(seconds: 90),
+      ) as Map<dynamic, dynamic>;
+    } on NetworkException {
+      // Founder bugfix 2026-10-05 ("Renance server timed out" then "email
+      // already existed"): the first request can cross the wire, create
+      // the account and mail the link, yet answer after the phone gave
+      // up. Before showing any error, quietly try to SIGN IN with the
+      // credentials just submitted - if the account landed, the signup
+      // continues exactly where it should, no dead end, no 409 wall.
+      final AuthTokens? recovered = await _recoverSignupSession(
+        identifier: username,
+        password: password,
+        audience: 'students',
+      );
+      if (recovered != null) return recovered;
+      rethrow;
+    }
     return AuthTokens(
       token: (data['token'] ?? '') as String,
       user: AppUser.fromJson((data['user'] as Map).cast<String, dynamic>()),
     );
+  }
+
+  /// Wake-up recovery for a signup whose response never came back
+  /// (founder bugfix 2026-10-05). Waits out the host wake-up, then
+  /// attempts a sign-in with the credentials the signup just used.
+  /// Returns the session when the account really landed (a restricted
+  /// email-unverified session counts - the caller routes to the confirm
+  /// screen), null when the account is NOT there (the caller shows the
+  /// original network error and the student can simply retry).
+  Future<AuthTokens?> _recoverSignupSession({
+    required String identifier,
+    required String password,
+    required String audience,
+  }) async {
+    await Future<void>.delayed(const Duration(seconds: 3));
+    try {
+      return await loginFull(
+        identifier,
+        password: password,
+        audience: audience,
+      );
+    } on ApiException catch (e) {
+      if (e.code == 'email_unverified' && e.body != null) {
+        final String? token = e.body!['token'] as String?;
+        final dynamic userRaw = e.body!['user'];
+        if (token != null && token.isNotEmpty && userRaw is Map) {
+          return AuthTokens(
+            token: token,
+            user: AppUser.fromJson(userRaw.cast<String, dynamic>()),
+          );
+        }
+      }
+      // invalid credentials / device lock / anything else: the signup
+      // truly did not land - let the original error speak.
+      return null;
+    } on NetworkException {
+      // The host is still not answering; the caller's original timeout
+      // message is the honest one.
+      return null;
+    }
   }
 
   Future<AuthTokens> login(String username, String password) async {
@@ -194,6 +280,10 @@ class ApiClient {
         if (audience != null && audience.isNotEmpty) 'audience': audience,
       },
       auth: false,
+      // A sign-in changes nothing server-side, so one quiet retry beats
+      // a "timed out" wall when the free-tier host is mid-wake-up.
+      retryOnTimeout: true,
+      timeout: const Duration(seconds: 90),
     ) as Map<dynamic, dynamic>;
     return AuthTokens(
       token: (data['token'] ?? '') as String,
@@ -247,6 +337,16 @@ class ApiClient {
   /// The server keeps a one-minute cooldown between sends.
   Future<void> resendVerification() async {
     await _send('POST', '/auth/resend-verification', body: <String, dynamic>{});
+  }
+
+  /// Account self-deletion (founder directive 2026-10-05): DELETE /me
+  /// wipes the account and EVERY row tied to it server-side - profile,
+  /// exam attempts and answers, results, sessions, streaks, awards,
+  /// daily results, arena seats, school memberships, entitlements,
+  /// payments, AI chats/memories/artifacts, password resets - inside
+  /// study.purge_user(), one transaction, nothing left behind.
+  Future<void> deleteAccount() async {
+    await _send('DELETE', '/me');
   }
 
   /// Swaps a restricted (unverified-signup) session for a fully seated
@@ -674,19 +774,34 @@ class ApiClient {
     required String password,
     String? deviceId,
   }) async {
-    final data = await _send(
-      'POST',
-      '/school/auth/register',
-      body: <String, dynamic>{
-        'schoolName': schoolName,
-        'schoolType': schoolType,
-        'fullName': fullName,
-        'email': email,
-        'password': password,
-        if (deviceId != null && deviceId.isNotEmpty) 'deviceId': deviceId,
-      },
-      auth: false,
-    ) as Map<dynamic, dynamic>;
+    final Map<dynamic, dynamic> data;
+    try {
+      data = await _send(
+        'POST',
+        '/school/auth/register',
+        body: <String, dynamic>{
+          'schoolName': schoolName,
+          'schoolType': schoolType,
+          'fullName': fullName,
+          'email': email,
+          'password': password,
+          if (deviceId != null && deviceId.isNotEmpty) 'deviceId': deviceId,
+        },
+        auth: false,
+        timeout: const Duration(seconds: 90),
+      ) as Map<dynamic, dynamic>;
+    } on NetworkException {
+      // Same wake-up recovery as the student signup (founder bugfix
+      // 2026-10-05): the school may exist on the server even though the
+      // response never made it back - try signing in before erroring.
+      final AuthTokens? recovered = await _recoverSignupSession(
+        identifier: email,
+        password: password,
+        audience: 'schools',
+      );
+      if (recovered != null) return recovered;
+      rethrow;
+    }
     return AuthTokens(
       token: (data['token'] ?? '') as String,
       user: AppUser.fromJson((data['user'] as Map).cast<String, dynamic>()),
