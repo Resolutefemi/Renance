@@ -235,7 +235,11 @@ function l0(hex: string): number {
 export const SEED_KEY = 'renance.seed';
 export const SEED_VARS_KEY = 'renance.seedVars';
 
-const THEME_KEYS = Object.keys(buildPalette('#13dc1b', 'dark'));
+/** Every CSS custom property one seed repaints. Exported so surfaces
+ *  that opt OUT of the seed (the landing page keeps the default
+ *  palette, founder directive 2026-10-05) can strip exactly these
+ *  keys from <html> and restore them on the way out. */
+export const THEME_KEYS = Object.keys(buildPalette('#13dc1b', 'dark'));
 
 /** Write a palette onto <html> (null clears back to the stylesheet). */
 export function applySeedVars(vars: PaletteVars | null): void {
