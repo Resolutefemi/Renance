@@ -387,6 +387,10 @@ class Bundle {
       category: category,
       body: body,
       questions: ordered,
+      // The subject grouping rides every re-sequencing: the intro's
+      // Subjects card reads it after the adaptive walk re-orders the
+      // in-memory copy (sections used to be dropped here).
+      sections: sections,
     );
   }
 
@@ -413,6 +417,8 @@ class Bundle {
       category: category,
       body: body,
       questions: shuffled,
+      // Shuffle keeps the subject grouping too (see withOrder).
+      sections: sections,
     );
   }
 
@@ -425,6 +431,15 @@ class Bundle {
     if (durationMinutes != null) 'durationMinutes': durationMinutes,
     if (category.isNotEmpty) 'category': category,
     if (body.isNotEmpty) 'body': body,
+    // Cached composed papers keep their subject grouping so the intro's
+    // Subjects card survives an offline resume.
+    if (sections.isNotEmpty)
+      'sections': sections
+          .map((s) => <String, dynamic>{
+                'subject': s.subject,
+                'questionIds': s.questionIds,
+              })
+          .toList(),
     'questions': questions
         .map(
           (q) => <String, dynamic>{

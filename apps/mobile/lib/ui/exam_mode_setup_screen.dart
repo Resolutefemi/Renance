@@ -550,7 +550,9 @@ class _Card extends StatelessWidget {
   }
 }
 
-/// Top LHS back bar (founder rule: every page gets a back button).
+/// Top LHS back bar (founder rule: every page gets a back button) -
+/// the Renance round back, the same Stitch top-bar control the subject
+/// picker, the CBT intro and the study page wear.
 class _BackBar extends StatelessWidget {
   const _BackBar({required this.onBack});
 
@@ -559,13 +561,21 @@ class _BackBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(8, 4, 16, 0),
+      padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
       child: Row(
         children: <Widget>[
-          IconButton(
-            onPressed: onBack,
-            icon: const Icon(Icons.arrow_back_ios_new, size: 20),
-            color: context.ink,
+          Material(
+            color: context.surfaceContainer,
+            shape: const CircleBorder(),
+            clipBehavior: Clip.antiAlias,
+            child: InkWell(
+              onTap: onBack,
+              child: SizedBox(
+                width: 40,
+                height: 40,
+                child: Icon(Icons.arrow_back, size: 20, color: context.ink),
+              ),
+            ),
           ),
         ],
       ),

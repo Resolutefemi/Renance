@@ -20,7 +20,6 @@ import 'package:provider/provider.dart';
 import '../config.dart';
 import '../controllers.dart';
 import '../storage.dart';
-import 'theme.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -126,18 +125,18 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   Widget build(BuildContext context) {
-    // Founder directive (2026-10-02): the splash's black follows the
-    // seed - black in the stock look, the student's colour when one is
-    // live - and every white element flips to the contrasting on-colour
-    // so the wordmark never disappears.
-    final Color ground = context.primary;
-    final Color onGround = context.onPrimary;
+    // Founder directive (2026-10-05, superseding 2026-10-02): the
+    // splash is ALWAYS black - white letters, rainbow stroke, skip
+    // pill - no matter what appearance seed the student picked. The
+    // seed re-tints every other surface; the initialization page keeps
+    // the brand's first colour, so it never greets anyone in rose or
+    // amber. (The old build read context.primary, which painted the
+    // ground in the live seed.)
+    const Color ground = Colors.black;
+    const Color onGround = Colors.white;
     return AnnotatedRegion<SystemUiOverlayStyle>(
-      // Status-bar icons follow the ground: white icons on dark grounds,
-      // dark icons on bright ones (a yellow seed must not hide them).
-      value: onGround == Colors.white
-          ? SystemUiOverlayStyle.light
-          : SystemUiOverlayStyle.dark,
+      // Status-bar icons stay light: the ground never stops being black.
+      value: SystemUiOverlayStyle.light,
       child: Scaffold(
         backgroundColor: ground,
         body: Stack(
@@ -267,8 +266,8 @@ class RainbowWordmark extends StatelessWidget {
 
   final double fontSize;
 
-  /// The letter-body colour - the splash ground's on-colour, so a live
-  /// seed keeps the wordmark readable on the tinted ground.
+  /// The letter-body colour - white on the splash's fixed black ground
+  /// (the splash never follows the appearance seed).
   final Color onColor;
 
   /// The sweep phase (0..1), driven by the splash's infinite controller.

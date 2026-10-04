@@ -91,14 +91,22 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(8, 4, 16, 0),
+                  padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
                   child: Row(
                     children: <Widget>[
-                      IconButton(
-                        onPressed: () => Navigator.of(context).pop(),
-                        icon:
-                            const Icon(Icons.arrow_back_ios_new, size: 20),
-                        color: context.ink,
+                      Material(
+                        color: context.surfaceContainer,
+                        shape: const CircleBorder(),
+                        clipBehavior: Clip.antiAlias,
+                        child: InkWell(
+                          onTap: () => Navigator.of(context).pop(),
+                          child: SizedBox(
+                            width: 40,
+                            height: 40,
+                            child: Icon(Icons.arrow_back,
+                                size: 20, color: context.ink),
+                          ),
+                        ),
                       ),
                     ],
                   ),
