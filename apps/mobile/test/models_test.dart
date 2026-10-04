@@ -57,6 +57,45 @@ void main() {
       expect(reparsed.body, original.body);
     });
 
+    test('sections survive toJson, the adaptive walk and the shuffle',
+        () {
+      // The intro's Subjects card reads bundle.sections as the
+      // canonical per-subject grouping (founder bug 2026-10-05: the
+      // old code split pick bases into fake subjects instead). Every
+      // in-memory copy path must keep it.
+      final Bundle original = Bundle.fromJson(<String, dynamic>{
+        'code': 'jamb-mock-english-mathematics',
+        'title': 'UTME Mock',
+        'questionCount': 2,
+        'totalMarks': 2,
+        'questions': <dynamic>[
+          <String, dynamic>{'id': 'q1', 'stem': 's1'},
+          <String, dynamic>{'id': 'q2', 'stem': 's2'},
+        ],
+        'sections': <dynamic>[
+          <String, dynamic>{
+            'subject': 'Use of English',
+            'questionIds': <dynamic>['q1'],
+          },
+          <String, dynamic>{
+            'subject': 'Mathematics',
+            'questionIds': <dynamic>['q2'],
+          },
+        ],
+      });
+      expect(original.sections.length, 2);
+      final Bundle reparsed = Bundle.fromJson(original.toJson());
+      expect(reparsed.sections.length, 2);
+      expect(reparsed.sections[0].subject, 'Use of English');
+      expect(reparsed.sections[0].questionIds, <String>['q1']);
+      final Bundle ordered =
+          original.withOrder(<String>['q2', 'q1']);
+      expect(ordered.sections.length, 2);
+      expect(ordered.sections[1].subject, 'Mathematics');
+      final Bundle shuffled = original.reordered(() => 0.5);
+      expect(shuffled.sections.length, 2);
+    });
+
     test('tolerates missing optional fields', () {
       final Bundle b = Bundle.fromJson(<String, dynamic>{
         'code': 'x',

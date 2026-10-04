@@ -198,48 +198,70 @@ class _Intro extends StatelessWidget {
   /// "Daily Quiz", never the composed paper's plumbing label.
   final bool daily;
 
-  /// Per-subject counts for the standard UTME mock - English 60 and 40
-  /// per elective, the canonical compose the server also uses. Custom
-  /// papers show the honest "≈ split across N subjects" instead.
+  /// Per-subject rows for the Summary's Subjects card. The server's
+  /// composition carries the CANONICAL grouping (bundle.sections:
+  /// subject display names + real per-subject counts) for every
+  /// composed paper except picks; picks and static packs answer with
+  /// the one honest row - the pack the student actually opened
+  /// (founder bug 2026-10-05: the old '-' split of a pick base like
+  /// uni-futa-cos101-bank printed four fake subjects - "Uni / Futa /
+  /// Cos101 / Bank - 10 Questions" each).
   List<(String, int)> _subjectRows(Bundle bundle) {
+    if (bundle.sections.isNotEmpty) {
+      return <(String, int)>[
+        for (final BundleSection s in bundle.sections)
+          (s.subject, s.questionIds.length),
+      ];
+    }
+    // Stale cached mock bundles (pre-sections): parse the canonical
+    // code - English 60, 40 per elective - with the multi-word-safe
+    // splitter ("agricultural-science" is one subject, never two).
     final String code = bundle.code;
     if (code.startsWith('jamb-mock-')) {
       final String body = code.substring('jamb-mock-'.length);
       final int tilde = body.indexOf('~');
       final String subjectPart =
           tilde > 0 ? body.substring(0, tilde) : body;
-      final List<String> slugs = subjectPart.split('-');
-      final int? enOverride = _intParam(code, 'enN');
+      final List<String> slugs = _splitSubjectChain(subjectPart);
       final int? totalOverride = _intParam(code, 'n');
-      if (totalOverride == null) {
+      if (slugs.isNotEmpty && totalOverride == null) {
+        final int? enOverride = _intParam(code, 'enN');
         return <(String, int)>[
-          (
-            slugs.first,
-            enOverride ?? 60,
-          ),
-          for (final String s in slugs.skip(1)) (s, 40),
+          (subjectName(slugs.first), enOverride ?? 60),
+          for (final String s in slugs.skip(1)) (subjectName(s), 40),
         ];
       }
     }
-    // Custom/pick: split the total evenly across the code's subjects.
-    final String prefix = code.startsWith('jamb-custom-')
-        ? 'jamb-custom-'
-        : code.startsWith('waec-custom-')
-            ? 'waec-custom-'
-            : code.startsWith('neco-custom-')
-                ? 'neco-custom-'
-                : code.startsWith('jamb-pick-')
-                    ? 'jamb-pick-'
-                    : '';
-    if (prefix.isEmpty) return <(String, int)>[];
-    final String body = code.substring(prefix.length);
-    final int tilde = body.indexOf('~');
-    final String subjectPart = tilde > 0 ? body.substring(0, tilde) : body;
-    final List<String> slugs = subjectPart.split('-');
-    final int? n = _intParam(code, 'n');
-    final int total = n ?? bundle.questionCount;
-    final int each = slugs.isEmpty ? total : total ~/ slugs.length;
-    return <(String, int)>[for (final String s in slugs) (s, each)];
+    return const <(String, int)>[];
+  }
+
+  /// Splits a hyphen-joined subject chain into known bank slugs,
+  /// longest match first ("agricultural-science-biology" ->
+  /// [agricultural-science, biology]). Returns [] when a fragment
+  /// matches nothing - the caller falls back to the pack title row
+  /// instead of printing a fake subject.
+  List<String> _splitSubjectChain(String chain) {
+    final List<String> known = <String>[
+      'english',
+      for (final (String s, String _) in kUtmeElectives) s,
+    ]..sort((String a, String b) => b.length.compareTo(a.length));
+    final List<String> out = <String>[];
+    String rest = chain;
+    while (rest.isNotEmpty) {
+      String match = '';
+      for (final String s in known) {
+        if (rest == s || rest.startsWith('$s-')) {
+          match = s;
+          break;
+        }
+      }
+      if (match.isEmpty) return const <String>[];
+      out.add(match);
+      rest = rest.length == match.length
+          ? ''
+          : rest.substring(match.length + 1);
+    }
+    return out;
   }
 
   int? _intParam(String code, String key) {
@@ -292,24 +314,34 @@ class _Intro extends StatelessWidget {
 
     return Column(
       children: <Widget>[
-        // Back bar - every page gets a back button (founder rule).
+        // Top bar: the Renance round back (Stitch top bar) + the quiz
+        // name - not the old outlined circle that read as a foreign
+        // element (founder rule: every page gets a back button).
         Padding(
-          padding: const EdgeInsets.fromLTRB(12, 8, 16, 0),
+          padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
           child: Row(
             children: <Widget>[
-              InkWell(
-                onTap: () => _confirmLeave(context),
-                customBorder: const CircleBorder(),
-                child: Container(
-                  width: 44,
-                  height: 44,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: context.outlineVariant),
-                    color: context.card,
+              Material(
+                color: context.surfaceContainer,
+                shape: const CircleBorder(),
+                clipBehavior: Clip.antiAlias,
+                child: InkWell(
+                  onTap: () => _confirmLeave(context),
+                  child: SizedBox(
+                    width: 40,
+                    height: 40,
+                    child: Icon(Icons.arrow_back,
+                        size: 20, color: context.ink),
                   ),
-                  child:
-                      Icon(Icons.arrow_back, size: 20, color: context.ink),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text(
+                  daily ? 'Daily Quiz' : bundle.title,
+                  style: RenanceText.sectionTitle.copyWith(fontSize: 18),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
             ],
@@ -332,9 +364,19 @@ class _Intro extends StatelessWidget {
                   children: <Widget>[
                     Expanded(
                       child: Text(
+                        // The simulator banner speaks the student's exam
+                        // body - a UNI paper never opens as "JAMB CBT
+                        // Simulator" (founder bug 2026-10-05).
                         studyMode
                             ? 'Past Questions Study'
-                            : 'JAMB CBT  Simulator',
+                            : switch (bundle.body) {
+                                'WAEC' => 'WASSCE CBT Simulator',
+                                'NECO' => 'NECO CBT Simulator',
+                                'University Modules' =>
+                                  'University CBT Simulator',
+                                'POST-UTME' => 'Post-UTME CBT Simulator',
+                                _ => 'JAMB CBT Simulator',
+                              },
                         style: RenanceText.sectionTitle.copyWith(
                           fontSize: 19,
                           color: context.onInverseChip,
@@ -411,14 +453,14 @@ class _Intro extends StatelessWidget {
                       'following subjects.',
                   child: Column(
                     children: <Widget>[
-                      for (final (String slug, int count) in subjectRows)
+                      for (final (String name, int count) in subjectRows)
                         Padding(
                           padding: const EdgeInsets.only(bottom: 8),
                           child: Row(
                             children: <Widget>[
                               Expanded(
                                 child: Text(
-                                  subjectName(slug),
+                                  name,
                                   style: RenanceText.bodyMedium
                                       .copyWith(fontSize: 15.5),
                                 ),
@@ -539,7 +581,8 @@ class _Intro extends StatelessWidget {
   }
 }
 
-/// One numbered-free instruction line, the school app's plain list.
+/// One instruction line: a quiet emerald check bubble + the text - the
+/// Renance list grammar, not the school app's bare paragraphs.
 class _Instruction extends StatelessWidget {
   const _Instruction(this.text);
   final String text;
@@ -548,12 +591,31 @@ class _Instruction extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
-      child: Text(
-        text,
-        style: RenanceText.bodyBase.copyWith(
-          fontSize: 15,
-          height: 1.5,
-        ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Container(
+            width: 22,
+            height: 22,
+            margin: const EdgeInsets.only(top: 1),
+            decoration: BoxDecoration(
+              color: RenanceColors.emerald.withValues(alpha: 0.14),
+              borderRadius: BorderRadius.circular(7),
+            ),
+            child: const Icon(Icons.check,
+                size: 13, color: RenanceColors.emerald),
+          ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(
+              text,
+              style: RenanceText.bodyBase.copyWith(
+                fontSize: 15,
+                height: 1.5,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

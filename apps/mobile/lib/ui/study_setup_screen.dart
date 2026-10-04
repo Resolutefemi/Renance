@@ -1,9 +1,9 @@
 /// Study Past Questions - the school app's study page, Renance edition,
 /// 1:1 with the website's /study-past-questions setup.
 ///
-/// The tinted header band ("Get all exam questions from 1978 till
-/// date"), the green "Update Questions" banner that opens the Select &
-/// Update page, and the five-pick form - Subject, Examination Type,
+/// The Renance top bar (round back + title over the flat page), the
+/// emerald "Update Questions" banner that opens the Select & Update
+/// page, and the five-pick form - Subject, Examination Type,
 /// Examination Year, Question type, Question Topic - with the big
 /// "Start Study" button.
 ///
@@ -239,60 +239,58 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            // ---- tinted header band --------------------------------
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.fromLTRB(16, 10, 16, 18),
-              color: context.isDarkTier
-                  ? context.cardLow
-                  : const Color(0xFFFDF1EE),
+            // ---- top bar: the Renance round back + title -----------
+            // The off-system cream band and the outlined circle back
+            // are gone (founder directive 2026-10-05: the study page
+            // reads Renance now - flat surfaces, token colours, the
+            // Stitch round back every other page wears).
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  InkWell(
-                    onTap: () => Navigator.of(context).pop(),
-                    customBorder: const CircleBorder(),
-                    child: Container(
-                      width: 44,
-                      height: 44,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(color: context.outlineVariant),
-                        color: context.card,
+                  Material(
+                    color: context.surfaceContainer,
+                    shape: const CircleBorder(),
+                    clipBehavior: Clip.antiAlias,
+                    child: InkWell(
+                      onTap: () => Navigator.of(context).pop(),
+                      child: SizedBox(
+                        width: 40,
+                        height: 40,
+                        child: Icon(Icons.arrow_back,
+                            size: 20, color: context.ink),
                       ),
-                      child:
-                          Icon(Icons.arrow_back, size: 20, color: context.ink),
                     ),
                   ),
-                  const SizedBox(width: 14),
+                  const SizedBox(width: 12),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        const SizedBox(height: 6),
                         Text('Study Past Questions',
-                            style: RenanceText.sectionTitle.copyWith(
-                                fontSize: 20, fontWeight: FontWeight.w700)),
-                        const SizedBox(height: 4),
+                            style: RenanceText.sectionTitle
+                                .copyWith(fontSize: 19)),
+                        const SizedBox(height: 2),
                         Text(
                           'Get all exam questions from 1978 till date',
-                          style: RenanceText.bodySecondary.copyWith(
-                            fontSize: 14,
+                          style: RenanceText.caption.copyWith(
+                            fontSize: 13,
                             color: context.textSecondary,
                           ),
                         ),
                       ],
                     ),
                   ),
+                  const SizedBox(width: 10),
                   Container(
-                    width: 46,
-                    height: 46,
+                    width: 42,
+                    height: 42,
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Color(0xFF10B981),
+                      color: RenanceColors.emerald,
                     ),
                     child: const Icon(Icons.menu_book,
-                        size: 22, color: Colors.white),
+                        size: 20, color: Colors.white),
                   ),
                 ],
               ),
@@ -311,11 +309,11 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
                       child: Container(
                         padding: const EdgeInsets.all(14),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF10B981)
+                          color: RenanceColors.emerald
                               .withValues(alpha: 0.10),
                           borderRadius: BorderRadius.circular(14),
                           border: Border.all(
-                            color: const Color(0xFF10B981)
+                            color: RenanceColors.emerald
                                 .withValues(alpha: 0.35),
                           ),
                         ),
@@ -369,7 +367,7 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
                         style: RenanceText.caption.copyWith(
                           fontSize: 13,
                           height: 1.5,
-                          color: const Color(0xFF0F766E),
+                          color: context.textSecondary,
                         ),
                       ),
                     ),

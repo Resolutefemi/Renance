@@ -12,6 +12,7 @@
 library;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -527,27 +528,75 @@ class _CourseTile extends StatelessWidget {
 }
 
 /// The practice sheet: Random Mode + contiguous Part pages, all served
-/// as real jamb-pick-… papers by the server.
-class _PracticeSheet extends StatelessWidget {
+/// as real jamb-pick-… papers by the server. A Time selector rides
+/// EVERY launch - Untimed (count-up clock), a preset, or any custom
+/// minute count the student types (founder directive 2026-10-05: "for
+/// uni quiz add time to the quiz and allow user to be able to manually
+/// set their time"). The Post UTME desk reuses the exact same sheet.
+class _PracticeSheet extends StatefulWidget {
   const _PracticeSheet({required this.course});
 
   final UniCourse course;
 
+  @override
+  State<_PracticeSheet> createState() => _PracticeSheetState();
+}
+
+class _PracticeSheetState extends State<_PracticeSheet> {
   static const List<int> _randomSizes = <int>[25, 50, 100];
   static const int _partSize = 50;
+  static const List<(String, int?)> _timePresets = <(String, int?)>[
+    ('Untimed', null),
+    ('15m', 15),
+    ('30m', 30),
+    ('60m', 60),
+  ];
+
+  /// null = Untimed (count-up clock). Default 30 - the quiz is a
+  /// timed paper from now on, not a silent inherit.
+  int? _chipMinutes = 30;
+  final TextEditingController _customCtrl = TextEditingController();
+
+  /// The launch timer: a filled custom field always wins over the
+  /// preset chips; anything unparseable falls back to the chips.
+  int? get _effectiveMinutes {
+    final int? custom = int.tryParse(_customCtrl.text.trim());
+    if (custom != null && custom > 0) return custom.clamp(1, 300);
+    return _chipMinutes;
+  }
+
+  bool _chipSelected(int? value) {
+    final int? custom = int.tryParse(_customCtrl.text.trim());
+    if (custom != null && custom > 0) return false;
+    return _chipMinutes == value;
+  }
+
+  @override
+  void dispose() {
+    _customCtrl.dispose();
+    super.dispose();
+  }
 
   void _start(BuildContext context, ExamMeta target) {
     // Close the sheet first, then open the player on the SAME root
     // navigator - re-looking-up from a popped sheet context is unsafe.
+    final int? minutes = _effectiveMinutes;
     final NavigatorState nav = Navigator.of(context);
     nav.pop();
     nav.push<void>(
-      MaterialPageRoute<void>(builder: (_) => ExamScreen(exam: target)),
+      MaterialPageRoute<void>(
+        builder: (_) => ExamScreen(
+          exam: target,
+          durationOverrideMinutes: minutes,
+          untimed: minutes == null,
+        ),
+      ),
     );
   }
 
   @override
   Widget build(BuildContext context) {
+    final UniCourse course = widget.course;
     final int total = course.exam.questionCount;
     final int parts = () {
       final int p = (total / _partSize).ceil();
@@ -557,84 +606,166 @@ class _PracticeSheet extends StatelessWidget {
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text(course.label, style: RenanceText.displayMd),
-            const SizedBox(height: 4),
-            Text('${course.exam.title} · $total questions',
-                style: RenanceText.caption
-                    .copyWith(color: context.textSecondary)),
-            const SizedBox(height: 16),
-            Text('Random Mode',
-                style: RenanceText.sectionTitle.copyWith(fontSize: 14)),
-            const SizedBox(height: 8),
-            Row(
-              children: <Widget>[
-                for (final int n in _randomSizes) ...<Widget>[
-                  Expanded(
-                    child: OutlinedButton(
-                      onPressed: () => _start(
-                        context,
-                        pickExamMeta(
-                          buildPickCode(course.exam.code, count: n),
-                          course.exam,
-                          count: n,
-                        ),
-                      ),
-                      style: OutlinedButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(vertical: 12),
-                      ),
-                      child: Text('$n Q'),
-                    ),
-                  ),
-                  if (n != _randomSizes.last) const SizedBox(width: 8),
-                ],
-              ],
-            ),
-            const SizedBox(height: 16),
-            Text('Part pages (original order)',
-                style: RenanceText.sectionTitle.copyWith(fontSize: 14)),
-            const SizedBox(height: 8),
-            SizedBox(
-              height: 150,
-              child: GridView.count(
-                crossAxisCount: 3,
-                mainAxisSpacing: 8,
-                crossAxisSpacing: 8,
-                childAspectRatio: 2.4,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(course.label, style: RenanceText.displayMd),
+              const SizedBox(height: 4),
+              Text('${course.exam.title} · $total questions',
+                  style: RenanceText.caption
+                      .copyWith(color: context.textSecondary)),
+              const SizedBox(height: 16),
+              // Time selector -------------------------------------
+              Text('Time',
+                  style: RenanceText.sectionTitle.copyWith(fontSize: 14)),
+              const SizedBox(height: 8),
+              Row(
                 children: <Widget>[
-                  for (int p = 0; p < parts; p++)
-                    OutlinedButton(
-                      onPressed: () {
-                        final int from = p * _partSize + 1;
-                        _start(
-                          context,
-                          pickExamMeta(
-                            buildPickCode(
-                              course.exam.code,
-                              count: _partSize,
-                              from: from,
-                            ),
-                            course.exam,
-                            count: _partSize,
-                          ),
-                        );
-                      },
-                      style: OutlinedButton.styleFrom(
-                        padding: EdgeInsets.zero,
-                      ),
-                      child: Text(
-                        'Q${p * _partSize + 1}-'
-                        '${(p + 1) * _partSize > total ? total : (p + 1) * _partSize}',
-                        style: RenanceText.labelMono.copyWith(fontSize: 11),
+                  for (int i = 0; i < _timePresets.length; i++) ...<Widget>[
+                    Expanded(
+                      child: _TimeChip(
+                        label: _timePresets[i].$1,
+                        selected: _chipSelected(_timePresets[i].$2),
+                        onTap: () => setState(() {
+                          _chipMinutes = _timePresets[i].$2;
+                          _customCtrl.clear();
+                        }),
                       ),
                     ),
+                    if (i != _timePresets.length - 1) const SizedBox(width: 8),
+                  ],
                 ],
               ),
-            ),
-          ],
+              const SizedBox(height: 8),
+              TextField(
+                controller: _customCtrl,
+                onChanged: (_) => setState(() {}),
+                keyboardType: TextInputType.number,
+                inputFormatters: <TextInputFormatter>[
+                  FilteringTextInputFormatter.digitsOnly,
+                ],
+                decoration: InputDecoration(
+                  hintText: 'Custom minutes - set your own time',
+                  isDense: true,
+                  suffixText:
+                      _customCtrl.text.trim().isEmpty ? null : 'min',
+                ),
+              ),
+              const SizedBox(height: 16),
+              Text('Random Mode',
+                  style: RenanceText.sectionTitle.copyWith(fontSize: 14)),
+              const SizedBox(height: 8),
+              Row(
+                children: <Widget>[
+                  for (final int n in _randomSizes) ...<Widget>[
+                    Expanded(
+                      child: OutlinedButton(
+                        onPressed: () => _start(
+                          context,
+                          pickExamMeta(
+                            buildPickCode(course.exam.code, count: n),
+                            course.exam,
+                            count: n,
+                          ),
+                        ),
+                        style: OutlinedButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(vertical: 12),
+                        ),
+                        child: Text('$n Q'),
+                      ),
+                    ),
+                    if (n != _randomSizes.last) const SizedBox(width: 8),
+                  ],
+                ],
+              ),
+              const SizedBox(height: 16),
+              Text('Part pages (original order)',
+                  style: RenanceText.sectionTitle.copyWith(fontSize: 14)),
+              const SizedBox(height: 8),
+              SizedBox(
+                height: 150,
+                child: GridView.count(
+                  crossAxisCount: 3,
+                  mainAxisSpacing: 8,
+                  crossAxisSpacing: 8,
+                  childAspectRatio: 2.4,
+                  children: <Widget>[
+                    for (int p = 0; p < parts; p++)
+                      OutlinedButton(
+                        onPressed: () {
+                          final int from = p * _partSize + 1;
+                          _start(
+                            context,
+                            pickExamMeta(
+                              buildPickCode(
+                                course.exam.code,
+                                count: _partSize,
+                                from: from,
+                              ),
+                              course.exam,
+                              count: _partSize,
+                            ),
+                          );
+                        },
+                        style: OutlinedButton.styleFrom(
+                          padding: EdgeInsets.zero,
+                        ),
+                        child: Text(
+                          'Q${p * _partSize + 1}-'
+                          '${(p + 1) * _partSize > total ? total : (p + 1) * _partSize}',
+                          style: RenanceText.labelMono.copyWith(fontSize: 11),
+                        ),
+                      ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// One pill of the practice sheet's Time row - the setup screen's
+/// selected = selection-blue tint + border, mono label.
+class _TimeChip extends StatelessWidget {
+  const _TimeChip({
+    required this.label,
+    required this.selected,
+    required this.onTap,
+  });
+
+  final String label;
+  final bool selected;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      borderRadius: BorderRadius.circular(8),
+      onTap: onTap,
+      child: Container(
+        height: 40,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: selected
+              ? context.selectionBlue.withValues(alpha: 0.25)
+              : context.cardLow,
+          borderRadius: BorderRadius.circular(8),
+          border: Border.all(
+            color: selected ? context.selectionBlue : Colors.transparent,
+          ),
+        ),
+        child: Text(
+          label,
+          style: RenanceText.labelMono.copyWith(
+            fontSize: 12,
+            fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
+            color: selected ? context.ink : context.textSecondary,
+          ),
         ),
       ),
     );
