@@ -664,6 +664,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
   String _schoolType = 'secondary';
   bool _busy = false;
   String? _error;
+  // Founder directive 2026-10-05: account creation is gated on the
+  // terms + privacy consent - students and school sign-ups alike. The
+  // box starts unchecked and the submit (and the Google hop) stay dead
+  // until it is ticked; _submit re-checks as belt and braces.
+  bool _acceptedTerms = false;
 
   @override
   void dispose() {
@@ -679,6 +684,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   Future<void> _submit() async {
     if (_busy) return;
+    // Consent gate (founder directive 2026-10-05): no tick, no account.
+    if (!_acceptedTerms) {
+      setState(() {
+        _error =
+            'Accept the Terms of Service and Privacy Policy to continue.';
+      });
+      return;
+    }
     // The pair must match before anything is sent (students and school
     // sign-ups share the two fields).
     if (_password.text != _confirmPassword.text) {
@@ -778,8 +791,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
     }
   }
 
+  void _openPrivacyPolicy() {
+    // The public policy page (same one the Play Store listing points
+    // at); runs in any browser via the phone's handler of choice.
+    launchUrl(
+      Uri.parse('https://renance.app/privacy/'),
+      mode: LaunchMode.externalApplication,
+    ).catchError((Object _) => false);
+  }
+
   Future<void> _signUpWithGoogle() async {
     if (_busy) return;
+    // Consent gate rides the Google hop too (founder directive
+    // 2026-10-05): no tick, no account, however the signup arrives.
+    if (!_acceptedTerms) {
+      setState(() {
+        _error =
+            'Accept the Terms of Service and Privacy Policy to continue.';
+      });
+      return;
+    }
     setState(() {
       _busy = true;
       _error = null;
@@ -906,6 +937,61 @@ class _RegisterScreenState extends State<RegisterScreen> {
             focusNode: _confirmFocus,
             onSubmitted: _submit,
           ),
+          SizedBox(height: 16),
+          // Consent row (founder directive 2026-10-05): rides BOTH
+          // signup forms, sits right above the submit so the disabled
+          // button explains itself. Tapping the words toggles the box;
+          // Privacy Policy opens the public policy page.
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              SizedBox(
+                height: 22,
+                width: 22,
+                child: Checkbox(
+                  value: _acceptedTerms,
+                  onChanged: (bool? v) =>
+                      setState(() => _acceptedTerms = v ?? false),
+                ),
+              ),
+              SizedBox(width: 10),
+              Expanded(
+                child: GestureDetector(
+                  onTap: () =>
+                      setState(() => _acceptedTerms = !_acceptedTerms),
+                  child: Text.rich(
+                    TextSpan(
+                      text:
+                          'I accept the Terms of Service and ',
+                      children: <InlineSpan>[
+                        WidgetSpan(
+                          alignment: PlaceholderAlignment.baseline,
+                          baseline: TextBaseline.alphabetic,
+                          child: GestureDetector(
+                            onTap: _openPrivacyPolicy,
+                            child: Text(
+                              'Privacy Policy',
+                              style: TextStyle(
+                                color: context.primary,
+                                fontWeight: FontWeight.w700,
+                                fontSize: 13,
+                                decoration: TextDecoration.underline,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const TextSpan(text: '.'),
+                      ],
+                    ),
+                    style: TextStyle(
+                      color: context.textSecondary,
+                      fontSize: 13,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
           if (_error != null) ...<Widget>[
             SizedBox(height: 14),
             Text(
@@ -915,7 +1001,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
           ],
           const SizedBox(height: 20),
           FilledButton.icon(
-            onPressed: _busy ? null : _submit,
+            // Dead until the consent box is ticked (founder directive
+            // 2026-10-05); _submit re-checks for belt and braces.
+            onPressed: (_busy || !_acceptedTerms) ? null : _submit,
             icon: _busy
                 ? RenanceMark(
                     size: 16,
