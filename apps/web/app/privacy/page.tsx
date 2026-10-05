@@ -8,7 +8,7 @@ export const dynamic = 'force-static';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'How Renance collects, uses, shares and protects your data: accounts, study activity, school records, payments, analytics and your rights, for the Renance app and renance.app.',
+    'How Renance collects, uses, shares and protects your data: accounts, study activity, school records, analytics and your rights, for the Renance app and renance.app.',
   alternates: { canonical: '/privacy/' },
   openGraph: {
     title: 'Renance Privacy Policy',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 };
 
 const CONTACT_EMAIL = 'info@renance.app';
-const LAST_UPDATED = '5 October 2026';
+const LAST_UPDATED = '6 October 2026';
 
 const APPLIES_TO =
   'This policy applies to the Renance mobile app for Android and iOS, the Renance website at renance.app, the Renance API that powers them, and Renance for Schools. It covers every student, teacher, school manager and patron who uses Renance, anywhere in the world, whether or not you create an account.';
@@ -54,11 +54,6 @@ const DATA_ROWS: Row[] = [
     term: 'School records',
     body:
       "In Renance for Schools, the school and its staff enter and manage student names, class assignments, attendance, continuous assessment and exam scores, fees records and student ID card details. The school that enters these records controls them; Renance processes them on the school's instructions to deliver the portal.",
-  },
-  {
-    term: 'Payment data',
-    body:
-      "Paid plans are processed by Paystack. When you subscribe, you pay on Paystack's own checkout and your card details go to Paystack, not to Renance. We receive only the payment status and a reference, which we store with your entitlement so your plan can be restored on any device.",
   },
   {
     term: 'Emails',
@@ -90,7 +85,6 @@ const USES: string[] = [
   'Deliver learning: serve past questions, grade your CBT papers on the server, build your spaced-repetition review queue, track streaks, XP and badges, and run the arena and leaderboards.',
   'Sync your progress so your attempts, results and saved questions follow you across web, Android and iOS.',
   'Send account emails: verification codes, password resets, email-change confirmations and service notices. These are transactional; we do not send marketing email blasts.',
-  'Process subscriptions through Paystack and restore your entitlements when you reinstall.',
   'Provide the AI study companion: when you ask the tutor or use the AI study tools, the question you are studying, your selected answer and related course material are processed to generate your explanations, quizzes and study plans. These conversations are kept with your account, shown only to you in your history, and deleted when you delete your account.',
   "Run Renance for Schools: deliver the school portal, the curriculum, attendance, results, fees records and ID cards on the school's instructions.",
   'Keep Renance safe: rate limiting, abuse and cheating detection, and enforcing our rules on shared accounts.',
@@ -135,10 +129,6 @@ const PARTIES: Row[] = [
     body: 'Deliver our transactional emails (verification codes, password resets, account notices) to your inbox. They process your email address for this purpose only.',
   },
   {
-    term: 'Paystack',
-    body: "Processes payments for paid plans. Card and bank details are entered on Paystack and governed by Paystack's own privacy policy; Renance never receives your full card details.",
-  },
-  {
     term: 'Google',
     body: "If you use Google Sign-In, Google authenticates you and shares your basic profile (name, email, account ID) with Renance. Google's own privacy policy covers its use of your Google account.",
   },
@@ -158,7 +148,7 @@ const PARTIES: Row[] = [
 
 const RETENTION: string[] = [
   'Your study data (attempts, answers, results, review queue, streaks, badges) is kept for as long as your account exists, because it is the product you signed up for.',
-  'You can delete your account at any time from the app: open the account sheet and choose Delete account, then confirm. This wipes, in one transaction: your profile, attempts, answers, results, sessions, streaks, awards, review queue, saved items, arena data, school memberships, entitlements, payment records tied to your account and your AI conversations. An automated sweep then clears any orphaned records from backups and storage.',
+  'You can delete your account at any time from the app: open the account sheet and choose Delete account, then confirm. This wipes, in one transaction: your profile, attempts, answers, results, sessions, streaks, awards, review queue, saved items, arena data, school memberships, entitlements and your AI conversations. An automated sweep then clears any orphaned records from backups and storage.',
   'You can also delete your account, or ask us to delete anything else, by emailing ' + CONTACT_EMAIL + ' from your registered address.',
   'Schools can remove students and their records from their portal at any time; the school controls those records.',
   'Server request logs are kept for a short window (up to 90 days) for security and then expire.',
@@ -184,7 +174,6 @@ const TRANSFERS =
 const SECURITY: string[] = [
   'All traffic between your device and Renance, and between our own services, travels over HTTPS/TLS.',
   'Passwords are stored only as salted hashes and can never be read by anyone at Renance.',
-  'Card payments never touch Renance servers: Paystack, a PCI-DSS compliant processor, handles them end to end.',
   'School workspace data is scoped: a teacher only reaches the classes and records their school assigns them, and student result checking is PIN-secured.',
   'Account deletion performs a real, verified purge, not a soft flag.',
   'No service is perfectly secure; if a breach ever affects your data, we will notify you and the regulator as the law requires.',
