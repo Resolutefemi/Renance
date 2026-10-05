@@ -350,6 +350,17 @@ export default function PrivacyPage() {
                 <li key={item.slice(0, 40)}>{item}</li>
               ))}
             </ul>
+            <p>
+              The step-by-step deletion guide, including exactly what is
+              deleted and what is kept, lives at{' '}
+              <Link
+                href="/delete-account/"
+                style={{ color: '#0a0a0a', fontWeight: 700 }}
+              >
+                renance.app/delete-account
+              </Link>
+              .
+            </p>
           </section>
 
           <section className="rpp-section">
@@ -429,7 +440,8 @@ export default function PrivacyPage() {
               <Link href="/">Renance</Link>·
               <Link href="/about/">About</Link>·
               <Link href="/faq/">FAQ</Link>·
-              <Link href="/privacy/">Privacy</Link>
+              <Link href="/privacy/">Privacy</Link>·
+              <Link href="/delete-account/">Delete account</Link>
             </div>
             <div style={{ marginTop: 8 }}>
               Renance · Your Guide to Academic Success · Built by Resolute Femi
