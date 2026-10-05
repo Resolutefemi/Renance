@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
 };
 
-const CONTACT_EMAIL = 'ariyooluwafemi487@gmail.com';
+const CONTACT_EMAIL = 'info@renance.app';
 const LAST_UPDATED = '5 October 2026';
 
 const APPLIES_TO =

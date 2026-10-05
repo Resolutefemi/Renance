@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, useCallback, useEffect, useState } from 'react';
+import { FormEvent, useCallback, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { ApiError, api, authWithGoogle } from '@/lib/api';
 import { nextPath, setSession } from '@/lib/session';
@@ -22,6 +22,15 @@ export default function RegisterPage() {
   const [referral, setReferral] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  // Founder directive 2026-10-05: account creation is gated on the
+  // terms + privacy consent. Unchecked by default, required for BOTH
+  // audiences and for the Google sign-up hop (its callback re-checks).
+  const [accepted, setAccepted] = useState(false);
+  // onGoogleCredential is memoized with [router] only, so it reads the
+  // consent through a ref: the check always sees the CURRENT box, not
+  // the one captured at memoization time.
+  const acceptedRef = useRef(accepted);
+  acceptedRef.current = accepted;
   // Post-signup confirmation stop (founder directive 2026-09-30): a
   // manual signup does NOT enter the desk until the mailed link is
   // consumed - the session the API returned is restricted to the
@@ -84,6 +93,11 @@ export default function RegisterPage() {
   // Stable identity for the GIS callback, never re-initialize mid-signup.
   const onGoogleCredential = useCallback(
     async (credential: string) => {
+      // Consent travels with the Google hop too: no checkbox, no account.
+      if (!acceptedRef.current) {
+        setError('Please accept the Terms of Service and Privacy Policy first.');
+        return;
+      }
       setError(null);
       setBusy(true);
       try {
@@ -105,6 +119,10 @@ export default function RegisterPage() {
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
     setError(null);
+    if (!accepted) {
+      setError('Please accept the Terms of Service and Privacy Policy.');
+      return;
+    }
     if (password !== confirmPassword) {
       setError('Passwords do not match.');
       return;
@@ -358,6 +376,33 @@ export default function RegisterPage() {
             </div>
           )}
 
+          {/* Founder directive 2026-10-05: the consent checkbox rides
+              under both signup forms (students and For Schools). The
+              submit stays dead until it is ticked, and the Privacy
+              Policy opens the public /privacy page in a new tab. */}
+          <label className="flex cursor-pointer items-start gap-2.5 select-none">
+            <input
+              type="checkbox"
+              checked={accepted}
+              onChange={(e) => setAccepted(e.target.checked)}
+              required
+              style={{ accentColor: 'var(--color-primary)', marginTop: 2 }}
+              className="h-4 w-4 shrink-0"
+            />
+            <span className="text-xs leading-relaxed text-on-surface-variant">
+              I accept the Terms of Service and{' '}
+              <a
+                href="/privacy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-primary underline underline-offset-2"
+              >
+                Privacy Policy
+              </a>
+              .
+            </span>
+          </label>
+
           {error && (
             <p className="rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">
               {error}
@@ -367,7 +412,7 @@ export default function RegisterPage() {
           {/* Mockup: black pill button, press scale */}
           <button
             type="submit"
-            disabled={busy || mismatch}
+            disabled={busy || mismatch || !accepted}
             className="mt-1 flex h-12 w-full items-center justify-center gap-2 rounded-full bg-primary text-on-primary transition-all hover:opacity-90 hover:shadow-md active:scale-[0.98] disabled:opacity-60"
           >
             {busy ? (
@@ -382,7 +427,10 @@ export default function RegisterPage() {
             )}
           </button>
 
-          {/* Google sign-up (students only), hidden unless the client ID is baked in */}
+          {/* Google sign-up (students only), hidden unless the client ID is
+              baked in. onGoogleCredential re-checks the consent through
+              the ref, so a Google hop can never create an unchecked
+              account. */}
           {audience === 'students' && <GoogleSignIn onCredential={onGoogleCredential} />}
         </form>
 

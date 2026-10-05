@@ -11,7 +11,7 @@ const FOUNDER = {
   '@id': `${SITE_URL}/#person`,
   name: 'Resolute Femi',
   alternateName: ['Ariyo Oluwafemi Stephen', 'Ariyo Oluwafemi', 'Resolutefemi'],
-  email: 'mailto:ariyooluwafemi487@gmail.com',
+  email: 'mailto:info@renance.app',
   jobTitle: 'Software Engineer & Founder of Renance',
   url: SITE_URL,
 };
@@ -56,7 +56,7 @@ const renanceJsonLd = {
       contactPoint: {
         '@type': 'ContactPoint',
         contactType: 'customer support',
-        email: 'ariyooluwafemi487@gmail.com',
+        email: 'info@renance.app',
         availableLanguage: 'en',
         areaServed: { '@type': 'Country', name: 'Nigeria' },
       },
