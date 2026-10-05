@@ -100,14 +100,23 @@ jobs:
             --dart-define=RENANCE_API_BASE=${{ vars.PUBLIC_API_BASE || 'https://renance-api.onrender.com' }} \
             --dart-define=GOOGLE_WEB_CLIENT_ID=${{ vars.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '' }}
 
+      # The per-run artifacts are convenience copies only - the real
+      # distribution channels are the rolling "latest" release below and
+      # the AAB hand-off to the Play Console, neither of which touches
+      # the Actions artifact storage quota. When the account quota is
+      # hit ("recalculated every 6-12 hours") the uploads used to fail
+      # the whole job and skip the release publish; now they degrade
+      # gracefully instead (founder hit this 2026-10-05).
       - name: Upload APK artifacts (universal + arm64 + arm32)
         uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: renance-android-apk
           path: apps/mobile/dist/*.apk
 
       - name: Upload AAB artifact
         uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: renance-android-aab
           path: apps/mobile/build/app/outputs/bundle/release/app-release.aab
