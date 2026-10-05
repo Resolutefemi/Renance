@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
 };
 
-const UPDATED = '5 October 2026';
+const UPDATED = '6 October 2026';
 
 const INTRO =
   'Renance is the educational app in Nigeria for JAMB, WAEC, NECO and Post-UTME preparation, built by Resolute Femi. This page is the official account deletion request link for the Renance app (Android and iOS) and renance.app. You never need to explain why: every Renance account can be deleted, for free, at any time, by the account owner alone.';
@@ -71,8 +71,8 @@ const DELETED: Row[] = [
     body: 'Your membership in any Renance for Schools workspace is removed.',
   },
   {
-    term: 'Payments and entitlements',
-    body: 'Your premium entitlements and the payment records Renance holds for the account.',
+    term: 'Entitlements',
+    body: 'Any premium entitlements on the account.',
   },
   {
     term: 'AI conversations',
@@ -92,10 +92,6 @@ const KEPT: Row[] = [
   {
     term: 'School-entered records',
     body: "If your school entered your records in Renance for Schools, those records belong to the school: deleting your student account does not erase the school's copies. Ask the school directly, or ask us and we will pass the request on.",
-  },
-  {
-    term: 'Paystack records',
-    body: "If you ever paid for a plan, Paystack keeps its own transaction records as financial law requires. That is Paystack's data, outside Renance, and Renance cannot delete it.",
   },
 ];
 
