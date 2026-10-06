@@ -249,8 +249,11 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                         backgroundColor: context.secondary,
                         child: Text(
                           _opponent == 'Renance Bot' ? 'B' : _opponent.isNotEmpty ? _opponent[0].toUpperCase() : 'R',
-                          style: const TextStyle(
-                              color: Colors.white,
+                          style: TextStyle(
+                              // context.onPrimary flips with the tier: white
+                              // on the slate avatar in light, ink on the light
+                              // gray avatar in dark (white-on-light before).
+                              color: context.onPrimary,
                               fontSize: 13,
                               fontWeight: FontWeight.w700),
                         ),

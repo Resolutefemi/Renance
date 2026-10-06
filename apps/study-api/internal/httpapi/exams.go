@@ -1,6 +1,11 @@
 package httpapi
 
-import "net/http"
+import (
+        "errors"
+        "net/http"
+
+        "renance.dev/study-api/internal/cbtdata"
+)
 
 // handleManifest serves the pack manifest: titles, counts, sha256
 // fingerprints. Clients cache bundles keyed by the fingerprint.
@@ -18,8 +23,17 @@ func (s *Server) handleBundle(w http.ResponseWriter, r *http.Request) {
         code := r.PathValue("code")
         // Mock papers compose on first fetch (deterministic from the code),
         // so a resumed or reviewed sitting always finds its bundle again.
-        bundle, ok := s.ensurePaperRequest(r, code)
-        if !ok {
+        bundle, err := s.ensurePaperRequest(r, code)
+        if err != nil {
+                // A year pin whose pool came back empty gets its own student-
+                // facing message (tester report 2026-10-06: every year pick on
+                // an untagged pack surfaced the raw "no study pack" 404). The
+                // client prints e.message verbatim, so say what to do next.
+                if errors.Is(err, cbtdata.ErrNoQuestionsForYear) {
+                        fail(w, http.StatusUnprocessableEntity, "no_year_questions",
+                                "This pack has no questions for that year yet - choose Random instead.")
+                        return
+                }
                 fail(w, http.StatusNotFound, "unknown_pack", "no study pack with code "+code)
                 return
         }

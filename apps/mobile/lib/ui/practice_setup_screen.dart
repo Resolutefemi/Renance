@@ -56,17 +56,22 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
   /// Random FIRST (founder directive 2026-10-02), then the pack's own
   /// exam years newest-first - every year the manifest carries, not just
   /// the newest three (the old newest-3 slice showed only 2023/2022/
-  /// 2021 on most packs). Falls back to the 1978-2025 span when the
-  /// manifest carries no year list.
+  /// 2021 on most packs).
+  ///
+  /// NO fallback span: the old 1978-2025 filler offered years a pack
+  /// with no year metadata cannot serve, so every pick errored server-
+  /// side ("has no objective questions for 2015") - the tester report
+  /// "U cant pick any year it returns an error" (2026-10-06). A pack
+  /// without manifest years now offers Random only, with the hint row
+  /// below telling the student why.
+  late final bool _hasYearList =
+      (widget.exam?.years ?? const <int>[]).isNotEmpty;
   late final List<int?> _yearChoices = <int?>[
     null, // Random
     ...(() {
       final List<int> ys = (widget.exam?.years ?? const <int>[]).toList()
         ..sort((int a, int b) => b.compareTo(a));
-      if (ys.isNotEmpty) return ys;
-      return <int>[
-        for (int y = 2025; y >= 1978; y--) y,
-      ];
+      return ys;
     })(),
   ];
 
@@ -162,6 +167,16 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                                 );
                               },
                             ),
+                            if (!_hasYearList) ...<Widget>[
+                              const SizedBox(height: 12),
+                              Text(
+                                'This pack plays Random for now - year '
+                                'practice unlocks when its past questions '
+                                'carry exam years.',
+                                style: RenanceText.caption
+                                    .copyWith(color: context.textSecondary),
+                              ),
+                            ],
                           ],
                         ),
                       ),

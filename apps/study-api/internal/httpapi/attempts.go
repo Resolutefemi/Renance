@@ -2,6 +2,7 @@ package httpapi
 
 import (
         "context"
+        "errors"
         "math"
         "net/http"
         "time"
@@ -29,8 +30,13 @@ func (s *Server) handleCreateAttempt(w http.ResponseWriter, r *http.Request) {
         if !decodeJSON(w, r, &req) {
                 return
         }
-        bundle, ok := s.ensurePaperRequest(r, req.Code)
-        if !ok {
+        bundle, errP := s.ensurePaperRequest(r, req.Code)
+        if errP != nil {
+                if errors.Is(errP, cbtdata.ErrNoQuestionsForYear) {
+                        fail(w, http.StatusUnprocessableEntity, "no_year_questions",
+                                "This pack has no questions for that year yet - choose Random instead.")
+                        return
+                }
                 fail(w, http.StatusNotFound, "unknown_pack", "no study pack with code "+req.Code)
                 return
         }
@@ -191,8 +197,8 @@ func (s *Server) handleSubmitAttempt(w http.ResponseWriter, r *http.Request) {
         }
         // A restart between start and submit would drop a composed mock
         // paper from memory; the deterministic compose brings it back.
-        bundle, ok := s.ensurePaperRequest(r, attempt.Code)
-        if !ok {
+        bundle, errP := s.ensurePaperRequest(r, attempt.Code)
+        if errP != nil {
                 fail(w, http.StatusInternalServerError, "internal", "pack vanished mid-attempt")
                 return
         }

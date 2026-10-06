@@ -95,9 +95,12 @@ class _DailySubjectsSheetState extends State<_DailySubjectsSheet> {
         constraints: BoxConstraints(
           maxHeight: MediaQuery.heightOf(context) * 0.82,
         ),
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+        decoration: BoxDecoration(
+          // Tier-aware sheet ground (dark-mode polish 2026-10-06): the
+          // hardcoded white sheet stayed white in full dark while the
+          // inner text resolved light ink - unreadable.
+          color: context.card,
+          borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
         ),
         padding: const EdgeInsets.fromLTRB(20, 16, 20, 20),
         child: Column(
