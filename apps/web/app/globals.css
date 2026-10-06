@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+/* Dark-variant plumbing: Tailwind's stock `dark:` follows the OS
+   (prefers-color-scheme), but Renance tiers live on <html data-theme>
+   (lib/theme.ts) - students pick Light/Mixed/Dark in-app regardless of
+   their device setting. This re-keys `dark:` onto the data-theme
+   attribute, so `dark:*` classes track the in-app tier (mixed keeps
+   the light body, so dark: correctly does NOT fire there). */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
 /* ------------------------------------------------------------------ */
 /* Self-hosted fonts, icons and type ship from /public/fonts so the   */
 /* app never depends on fonts.googleapis.com being reachable (when     */

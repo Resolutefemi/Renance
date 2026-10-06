@@ -227,7 +227,7 @@ export default function DeleteAccountPage() {
               shared with and every right you have over it lives in the{' '}
               <Link
                 href="/privacy/"
-                style={{ color: '#0a0a0a', fontWeight: 700 }}
+                className="font-bold text-primary"
               >
                 Renance Privacy Policy
               </Link>

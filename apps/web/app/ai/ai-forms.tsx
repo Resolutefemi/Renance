@@ -126,7 +126,7 @@ function Stepper({ value, min, max, onChange }: { value: number; min: number; ma
 
 function ErrorCard({ msg, onRetry }: { msg: string; onRetry: () => void }) {
   return (
-    <div className="rounded-xl border border-red-300 bg-red-50 px-4 py-3">
+    <div className="rounded-xl border border-red-300 bg-red-50 px-4 py-3 dark:border-error/40 dark:bg-error-container">
       <p className="text-[13px] leading-relaxed text-on-error-container">{msg}</p>
       <button type="button" onClick={onRetry} className="mt-2 font-mono text-[11px] font-semibold uppercase tracking-wider text-on-error-container underline">
         Try again
