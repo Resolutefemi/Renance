@@ -158,9 +158,9 @@ function SharedQuizClient() {
                     onClick={() => setPicks((p) => ({ ...p, [idx]: l }))}
                     className={`flex items-center gap-3 rounded-xl border px-3.5 py-3 text-left text-[14px] transition ${
                       isRight
-                        ? 'border-emerald-600 bg-emerald-50 text-accent-emerald'
+                        ? 'border-emerald-600 bg-emerald-50 text-accent-emerald dark:bg-emerald-tint'
                         : isWrong
-                          ? 'border-red-500 bg-red-50 text-on-error-container'
+                          ? 'border-red-500 bg-red-50 text-on-error-container dark:bg-error-container dark:border-error'
                           : isPick
                             ? 'border-primary bg-surface-container'
                             : 'border-outline-variant/60 bg-card hover:border-primary/40'

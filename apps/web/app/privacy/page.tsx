@@ -247,7 +247,7 @@ export default function PrivacyPage() {
               write to us at{' '}
               <a
                 href={'mailto:' + CONTACT_EMAIL}
-                style={{ color: '#0a0a0a', fontWeight: 700 }}
+                className="font-bold text-primary"
               >
                 {CONTACT_EMAIL}
               </a>
@@ -344,7 +344,7 @@ export default function PrivacyPage() {
               deleted and what is kept, lives at{' '}
               <Link
                 href="/delete-account/"
-                style={{ color: '#0a0a0a', fontWeight: 700 }}
+                className="font-bold text-primary"
               >
                 renance.app/delete-account
               </Link>
@@ -360,7 +360,7 @@ export default function PrivacyPage() {
               personal data. To use any of them, email{' '}
               <a
                 href={'mailto:' + CONTACT_EMAIL}
-                style={{ color: '#0a0a0a', fontWeight: 700 }}
+                className="font-bold text-primary"
               >
                 {CONTACT_EMAIL}
               </a>{' '}

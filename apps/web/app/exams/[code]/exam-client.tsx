@@ -1392,7 +1392,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
 
           {/* You spent */}
           <div className="renance-rise mt-7 flex items-center gap-4">
-            <span className="rounded-full bg-[#E0F7FA] px-3.5 py-1.5 text-base font-semibold text-[#00695C]">
+            <span className="rounded-full bg-[#E0F7FA] px-3.5 py-1.5 text-base font-semibold text-[#00695C] dark:bg-selection-blue dark:text-on-surface">
               You spent
             </span>
             {elapsedMs > 0 ? (
@@ -1412,7 +1412,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
           </div>
 
           {/* Start / End time card */}
-          <section className="renance-rise mt-4 rounded-[14px] bg-[#E1F5FE] px-5 py-4">
+          <section className="renance-rise mt-4 rounded-[14px] bg-[#E1F5FE] px-5 py-4 dark:bg-surface-container-high">
             <div className="flex items-center justify-between text-base text-on-surface">
               <span className="font-semibold">Start Time:</span>
               <span>{startTime ? clock12(startTime) : '-'}</span>
@@ -1424,9 +1424,9 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
           </section>
 
           {/* Score breakdown */}
-          <section className="renance-rise mt-6 rounded-[18px] bg-[#F3E5F5] p-5">
+          <section className="renance-rise mt-6 rounded-[18px] bg-[#F3E5F5] p-5 dark:bg-surface-container-high">
             <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-[21px] text-[#673AB7]">grid_view</span>
+              <span className="material-symbols-outlined text-[21px] text-[#673AB7] dark:text-on-primary-container">grid_view</span>
               <h2 className="text-[19px] font-bold tracking-tight text-on-surface">
                 Score breakdown
               </h2>
