@@ -16,6 +16,7 @@ package cbtdata
 import (
         "crypto/sha256"
         "encoding/binary"
+        "errors"
         "fmt"
         "strings"
 )
@@ -438,6 +439,13 @@ func ComposePaper(spec *PaperSpec, banks map[string]*Bundle) (*Bundle, error) {
         return paper, nil
 }
 
+// ErrNoQuestionsForYear marks a pick/custom year pin whose pool is
+// empty - the pack carries no objective questions tagged with that
+// exam year. httpapi maps it to a friendly 422 so the student reads
+// "try Random" instead of a raw compose error (tester report
+// 2026-10-06: "U cant pick any year it returns an error").
+var ErrNoQuestionsForYear = errors.New("cbtdata: no objective questions for the requested year")
+
 // ComposePickPaper carves a practice subset from one static pack.
 // Deterministic per code + pack data; theory items never enter.
 //
@@ -456,9 +464,11 @@ func ComposePickPaper(spec *PaperSpec, base *Bundle) (*Bundle, error) {
         pool := yearPool(mcqOnly(base.Questions), year)
         if len(pool) == 0 {
                 if year != 0 {
-                        return nil, fmt.Errorf("cbtdata: %s has no objective questions for %d", base.Code, year)
+                        return nil, fmt.Errorf("cbtdata: %s has no objective questions for %d: %w",
+                                base.Code, year, ErrNoQuestionsForYear)
                 }
-                return nil, fmt.Errorf("cbtdata: %s has no objective questions", base.Code)
+                return nil, fmt.Errorf("cbtdata: %s has no objective questions: %w",
+                        base.Code, ErrNoQuestionsForYear)
         }
         n := spec.N
         if n <= 0 {

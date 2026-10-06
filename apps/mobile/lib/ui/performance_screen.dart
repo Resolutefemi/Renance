@@ -187,18 +187,32 @@ class _PerformanceScreenState extends State<PerformanceScreen> {
       buckets.putIfAbsent(bodyOf(a), () => <AttemptRow>[]).add(a);
     }
 
-    const List<(String, String, Color, Color, IconData)> cards =
-        <(String, String, Color, Color, IconData)>[
-      ('jamb', 'JAMB Test', Color(0xFFE7F5EC), Color(0xFF1F7A4D), Icons.school),
-      ('cbt', 'University Test', Color(0xFFFDF0E7), Color(0xFFC2410C), Icons.computer),
-      ('waec', 'WAEC Test', Color(0xFFE5F0FB), Color(0xFF1D4ED8), Icons.workspace_premium),
-      ('neco', 'NECO Test', Color(0xFFF2F7E2), Color(0xFF4D7C0F), Icons.verified),
-      ('challenge', 'Challenge Test', Color(0xFFE0F5F1), Color(0xFF0F766E), Icons.bolt),
+    // Dark tier (dark-mode polish 2026-10-06): the fixed light pastels
+    // render as five bright blocks on the dark page, so each card carries
+    // a lifted dark accent and falls back to the dark card surfaces.
+    const List<(String, String, Color, Color, Color, IconData)> cards =
+        <(String, String, Color, Color, Color, IconData)>[
+      ('jamb', 'JAMB Test', Color(0xFFE7F5EC), Color(0xFF1F7A4D),
+          Color(0xFF6EE7A8), Icons.school),
+      ('cbt', 'University Test', Color(0xFFFDF0E7), Color(0xFFC2410C),
+          Color(0xFFFDBA74), Icons.computer),
+      ('waec', 'WAEC Test', Color(0xFFE5F0FB), Color(0xFF1D4ED8),
+          Color(0xFF93C5FD), Icons.workspace_premium),
+      ('neco', 'NECO Test', Color(0xFFF2F7E2), Color(0xFF4D7C0F),
+          Color(0xFFBEF264), Icons.verified),
+      ('challenge', 'Challenge Test', Color(0xFFE0F5F1), Color(0xFF0F766E),
+          Color(0xFF5EEAD4), Icons.bolt),
     ];
 
     final List<Widget> out = <Widget>[];
-    for (final (String key, String label, Color tint, Color accent, IconData icon)
-        in cards) {
+    for (final (
+      String key,
+      String label,
+      Color tint,
+      Color accent,
+      Color darkAccent,
+      IconData icon,
+    ) in cards) {
       final List<AttemptRow>? rows = buckets[key];
       if (rows == null || rows.isEmpty) continue;
       final double avg = rows.fold<double>(
@@ -211,6 +225,7 @@ class _PerformanceScreenState extends State<PerformanceScreen> {
             label: label,
             tint: tint,
             accent: accent,
+            darkAccent: darkAccent,
             icon: icon,
             avg: avg.round(),
             taken: rows.length,
@@ -286,6 +301,7 @@ class _BodyCard extends StatelessWidget {
     required this.label,
     required this.tint,
     required this.accent,
+    required this.darkAccent,
     required this.icon,
     required this.avg,
     required this.taken,
@@ -294,16 +310,24 @@ class _BodyCard extends StatelessWidget {
   final String label;
   final Color tint;
   final Color accent;
+
+  /// Lifted accent for the dark tier, where the light pastel tint and
+  /// mid-tone accent would both drop below contrast (2026-10-06 polish).
+  final Color darkAccent;
   final IconData icon;
   final int avg;
   final int taken;
 
   @override
   Widget build(BuildContext context) {
+    final bool dark = context.isDarkTier;
+    final Color cardBg = dark ? RenanceColors.darkCard : tint;
+    final Color wellBg = dark ? RenanceColors.darkSurfaceLow : Colors.white;
+    final Color tone = dark ? darkAccent : accent;
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: tint,
+        color: cardBg,
         borderRadius: BorderRadius.circular(14),
       ),
       child: Column(
@@ -314,11 +338,11 @@ class _BodyCard extends StatelessWidget {
               Container(
                 width: 44,
                 height: 44,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.white,
+                  color: wellBg,
                 ),
-                child: Icon(icon, size: 22, color: accent),
+                child: Icon(icon, size: 22, color: tone),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -329,7 +353,7 @@ class _BodyCard extends StatelessWidget {
                       'Ave. Performance',
                       style: RenanceText.bodyMedium.copyWith(
                         fontSize: 17,
-                        color: accent,
+                        color: tone,
                       ),
                     ),
                     const SizedBox(height: 2),
@@ -337,7 +361,7 @@ class _BodyCard extends StatelessWidget {
                       label,
                       style: RenanceText.bodySecondary.copyWith(
                         fontSize: 15,
-                        color: accent.withValues(alpha: 0.85),
+                        color: tone.withValues(alpha: 0.85),
                       ),
                     ),
                   ],
@@ -352,7 +376,7 @@ class _BodyCard extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: wellBg,
                   borderRadius: BorderRadius.circular(999),
                 ),
                 child: Text(
@@ -360,7 +384,7 @@ class _BodyCard extends StatelessWidget {
                   style: RenanceText.labelMono.copyWith(
                     fontSize: 12.5,
                     fontWeight: FontWeight.w600,
-                    color: context.ink,
+                    color: tone,
                   ),
                 ),
               ),

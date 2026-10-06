@@ -370,15 +370,30 @@ class _OptionTile extends StatelessWidget {
       border = context.ink;
       bg = context.surfaceContainer;
     }
+    // Tier-aware status pastels (dark-mode polish 2026-10-06): the fixed
+    // light-tier greens/reds read as glaring bright boxes on the dark
+    // page - dark gets deep tinted wells with lifted foregrounds.
     if (correct) {
-      border = const Color(0xFF16A34A);
-      bg = const Color(0xFFECFDF3);
-      fg = const Color(0xFF0D5C37);
+      border = context.isDarkTier
+          ? const Color(0xFF2E7D4F)
+          : const Color(0xFF16A34A);
+      bg = context.isDarkTier
+          ? const Color(0xFF12291D)
+          : const Color(0xFFECFDF3);
+      fg = context.isDarkTier
+          ? const Color(0xFF8CE0B0)
+          : const Color(0xFF0D5C37);
     }
     if (wrong) {
-      border = const Color(0xFFDC2626);
-      bg = const Color(0xFFFEF2F2);
-      fg = const Color(0xFF8F1D1D);
+      border = context.isDarkTier
+          ? const Color(0xFF8F4444)
+          : const Color(0xFFDC2626);
+      bg = context.isDarkTier
+          ? const Color(0xFF331719)
+          : const Color(0xFFFEF2F2);
+      fg = context.isDarkTier
+          ? const Color(0xFFF2A6A6)
+          : const Color(0xFF8F1D1D);
     }
     return InkWell(
       onTap: enabled ? onTap : null,
@@ -414,9 +429,17 @@ class _OptionTile extends StatelessWidget {
                   style: RenanceText.bodyBase.copyWith(fontSize: 13.5, color: fg)),
             ),
             if (correct)
-              const Icon(Icons.check_circle, size: 18, color: Color(0xFF16A34A)),
+              Icon(Icons.check_circle,
+                  size: 18,
+                  color: context.isDarkTier
+                      ? const Color(0xFF4ADE80)
+                      : const Color(0xFF16A34A)),
             if (wrong)
-              const Icon(Icons.cancel, size: 18, color: Color(0xFFDC2626)),
+              Icon(Icons.cancel,
+                  size: 18,
+                  color: context.isDarkTier
+                      ? const Color(0xFFF87171)
+                      : const Color(0xFFDC2626)),
           ],
         ),
       ),
