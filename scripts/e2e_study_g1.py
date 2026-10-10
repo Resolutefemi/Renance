@@ -33,6 +33,9 @@ def req(method, path, body=None, token=None, expect_status=None):
     url = BASE + path
     data = json.dumps(body).encode() if body is not None else None
     r = urllib.request.Request(url, data=data, method=method)
+    # The bundle shield (botshield.go) refuses tool user-agents on the
+    # API: the E2E probe identifies itself like a real app client.
+    r.add_header("User-Agent", "RenanceE2E/1.0 (study-api CI probe)")
     r.add_header("Content-Type", "application/json")
     if token:
         r.add_header("Authorization", f"Bearer {token}")

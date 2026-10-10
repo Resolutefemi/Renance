@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * bundle-crypto.ts — the client half of the static-bundle shield
+ * bundle-crypto.ts - the client half of the static-bundle shield
  * (founder directive 2026-10-11: "no agentic AI may scrape my
  * 200,000+ past questions").
  *
@@ -165,7 +165,7 @@ function isPow(x: unknown): x is PowEnvelope {
  * Solve the server's challenge: find a hex suffix so that
  * sha256(nonce || suffix) begins with difficulty/4 zero hex chars.
  * Uses a compact synchronous SHA-256 (~1M hashes/sec) so 18 bits
- * costs a real browser ~0.3s once per bank — and an agentic scraper
+ * costs a real browser ~0.3s once per bank - and an agentic scraper
  * the same, every single time, through the same rate limits.
  */
 async function solvePow(nonce: string, difficulty: number): Promise<{ suffix: string }> {
