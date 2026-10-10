@@ -16,7 +16,8 @@ import 'arena_lobby_screen.dart';
 import 'flashcards_screen.dart';
 import 'gamification_hub_screen.dart';
 import 'gpa_screen.dart';
-import 'home_screen.dart' show LauncherTile;
+import 'home_screen.dart' show LauncherTile, openDailyQuiz;
+import 'leaderboard_screen.dart';
 import 'syllabus_screen.dart';
 import 'theme.dart';
 import 'tutor_screen.dart';
@@ -273,17 +274,53 @@ class UniversityHomeTab extends StatelessWidget {
                   label: 'Tutor',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                        builder: (_) => const TutorEntryScreen()),
+                      builder: (_) => const TutorEntryScreen()),
                   ),
                 ),
               ),
+            ],
+          ),
+          // Compete grid ------------------------------------------------------
+          // Founder directive (2026-10-11): the Leaderboard tile ships on
+          // EVERY focus home - the school desk was the one surface it was
+          // missing from. Arena and Daily Quiz join it so the school
+          // focus gets the same compete row the JAMB launcher has.
+          const SizedBox(height: 16),
+          Text(
+            'Compete',
+            style: RenanceText.sectionTitle.copyWith(
+              color: context.textSecondary,
+              fontSize: 14,
+            ),
+          ),
+          const SizedBox(height: 12),
+          Row(
+            children: <Widget>[
               Expanded(
                 child: LauncherTile(
                   icon: Icons.sports_esports,
                   label: 'Arena',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                        builder: (_) => const ArenaLobbyScreen()),
+                      builder: (_) => const ArenaLobbyScreen()),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.event_repeat,
+                  iconColor: RenanceColors.amber,
+                  label: 'Daily Quiz',
+                  onTap: () => openDailyQuiz(context, sync),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.leaderboard,
+                  label: 'Leaderboard',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const LeaderboardScreen()),
                   ),
                 ),
               ),

@@ -299,16 +299,13 @@ class _AiScreenState extends State<AiScreen> {
         title: Row(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Container(
-              width: 26,
-              height: 26,
-              decoration: BoxDecoration(
-                color: context.primary,
-                borderRadius: BorderRadius.circular(7),
-              ),
-              child: const Center(child: AiSparkleIcon(size: 15)),
-            ),
-            const SizedBox(width: 8),
+            // Dark-mode fix (founder directive 2026-10-11): the sparkle
+            // used to sit in a primary-coloured box - white box + white
+            // glyph in the stock dark tier, one blank chip. The box is
+            // gone: the sparkle stands alone and follows the tier's ink
+            // so it blends with the page colour in light AND dark.
+            AiSparkleIcon(size: 21, color: context.ink),
+            const SizedBox(width: 9),
             Text('Renance AI Studio',
                 style: RenanceText.sectionTitle.copyWith(fontSize: 17)),
           ],

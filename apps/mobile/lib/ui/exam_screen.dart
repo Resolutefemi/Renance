@@ -1968,7 +1968,11 @@ class _NavTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color fill = Colors.white;
+    // Dark-mode fix (2026-10-11): the unseen tile used to hardcode
+    // Colors.white - in the dark tier the whole grid lit up as a
+    // wall of white cells. The paper-white only belongs to the light
+    // tier; dark resolves through cardLowest like every other surface.
+    Color fill = context.cardLowest;
     Color fg = context.textSecondary;
     Border border = Border.all(color: context.outlineVariant, width: 1);
     if (skipped) {
@@ -2049,7 +2053,7 @@ class _NavLegendItem extends StatelessWidget {
           children: <Widget>[
             Container(
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: context.cardLowest,
                 borderRadius: BorderRadius.circular(3),
                 border: Border.all(color: RenanceColors.amber, width: 1.5),
               ),
@@ -2066,7 +2070,7 @@ class _NavLegendItem extends StatelessWidget {
       case _NavLegendState.unseen:
         swatch = Container(
             decoration: BoxDecoration(
-          color: Colors.white,
+          color: context.cardLowest,
           borderRadius: BorderRadius.circular(3),
           border: Border.all(color: context.outlineVariant),
         ));

@@ -1,0 +1,46 @@
+{
+ "code": "uni-unical-sta113-bank",
+ "title": "UNICAL STA 113 | Course Question Bank",
+ "version": 1,
+ "questionCount": 5,
+ "totalMarks": 25,
+ "category": "university",
+ "body": "University Modules",
+ "questions": [
+  {
+   "id": "uni-unical-sta113-bank-0001",
+   "type": "theory",
+   "stem": "(a) What is Statistics?\n(b) List five characteristics of Normal curve.\n(c) State the types of variables and carefully explain them.",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta113-bank-0002",
+   "type": "theory",
+   "stem": "(a) State five types of measurements.\n(b) Briefly explain four levels of measurements.\n(c) Consider partially reproduced 200 observations with mean 1.46, find the missing frequencies\n\n| xi | 0 | 1 | 2 | 3 | 4 | 5 |\n|-|-|-|-|-|-|-|\n| fi | 46 | f1 | f2 | 25 | 10 | 5 |",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta113-bank-0003",
+   "type": "theory",
+   "stem": "(a) State three advantages and disadvantages of the mean.\n(b) If the population of Calabar increase during 181000 period and in 2022 it was 320,000. What was the average annual percentage increase during this period?\n(c) If the mean of two observations is 127.5 and their geometric mean 60, find the two observations and their harmonic mean.",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta113-bank-0004",
+   "type": "theory",
+   "stem": "(a) State five reasons we classify in the construction of frequency tables.\n(b) Consider the distribution below:\n34 38 30 31 37 43 38 37 32 40 41 34 37 36 32 38 41 35 37 38 35 37 35 37 42 40 39\n31 33 37 43 34 35 39 41 37 38 39 41 43 30 52 36 35 28 34 34 38 37 34 36\nUsing class size of 2, construct a group frequency distribution table of 7 class intervals and hence calculate the variance and standard deviation.",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta113-bank-0005",
+   "type": "theory",
+   "stem": "(a) Calculate the variance and standard deviation of the integers 1 to 50 (inclusive).\n(b) If STA 113 with class size of 150 was divided into groups A and B taught by two different Lecturers in the Second Semester. Determine which of the groups is more skewed if the same examination was given to the groups at the end of the Semester and following summary statistics were obtained:\n\n| Summary | Mean | Mode | Std Dev |\n|-|-|-|-|\n| A       | 51.75| 56.67| 19.73    |\n| B       | 56.83| 54.33| 19.25    |",
+   "marks": 5,
+   "explanation": ""
+  }
+ ]
+}

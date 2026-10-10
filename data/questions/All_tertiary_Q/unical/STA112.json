@@ -1,0 +1,116 @@
+{
+ "code": "uni-unical-sta112-bank",
+ "title": "UNICAL STA 112 | Course Question Bank",
+ "version": 1,
+ "questionCount": 15,
+ "totalMarks": 75,
+ "category": "university",
+ "body": "University Modules",
+ "questions": [
+  {
+   "id": "uni-unical-sta112-bank-0001",
+   "type": "theory",
+   "stem": "(a) Define the following method: Set C where (i) Proper subset of the year and (ii) In a community of 300 persons, 123 speak English, 187 speak Igbo and 95 speak both English and Igbo.\n(i) How many of these persons do not speak either language\n(ii) How many speak English only but not Igbo\n(b) We roll a pair of fair dice once and are given that the 2 numbers that appear are not the same.\nCompute the probability that the sum is 7",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta112-bank-0002",
+   "type": "theory",
+   "stem": "(a) Find n! / [2!(n-2)!] + 5n = P(2n, 2)\n(b) How many ways can the letters of the word COMMUNICATION be arranged?\n(c) Box A contains nine cards numbered 1 through 9, and Box B contains five cards numbered 1 through 5. A box is chosen at random and a card is drawn. If the number is even, find the probability that the card came from box A.",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta112-bank-0003",
+   "type": "theory",
+   "stem": "(a) State Bayes theorem\n(b) Using String's formula evaluate 5!\n(c) In a certain factory, three Machines A, B and C produced 60%, 30% and 10% of the total number of items produced respectively. The percentages of defective items produced are 3%, 3% and 4% respectively. An item is selected at random.\n(i) Find its probability that the item is defective\n(ii) If the item is defective, find the probability that the item was produced by Machine C\n(d) Define random variable",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta112-bank-0004",
+   "type": "theory",
+   "stem": "(a) Let X be the number of boys in a family of 3. Find (i) the distribution of X (ii) expectation of X (iii) cumulative distribution of X\n(b) Let X be a continuous random variables with distribution f(x) = kx, 0 < x < 5, where k is a constant. Find\n(i) K\n(ii) P(1 \u2264 X \u2264 3)\n(iii) C\u00b2\u2093\u207b\u00b9 + C\u00b2\u2093 = C\u00b3\u2093",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta112-bank-0005",
+   "type": "theory",
+   "stem": "(a) Write the mean and variance of 5 random variable X which follows a Bernoulli distribution.\n(b) A medical examination shows that the probability of surviving a Neurological surgery in a hospital is 0.72.\n(i) Only 3 out of six patients that registered for the surgery. Find the probability that:\n(ii) What is the expected number of patients that will survive the surgery?\n(c) The number of alpha particles emitted per minute by a radioactive substance is said to follow a Poisson distribution with parameter 2 equals 5 alpha particles per minute. Obtain the probability that exactly 4 alpha particles are emitted in a minute.\n(d) Let Z be a random variable with the standard normal distribution. Find P(-1.37 \u2264 Z \u2264 2.01)",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta112-bank-0006",
+   "type": "theory",
+   "stem": "(a) Define random variable\n(b) In the experiment of tossing a coin two times. Let X be a random variable giving the number of tails obtained and let Y be the sum of heads obtained. Find (i) the value of X (ii) the value of y\n(c) A fair die is tossed. Let X denotes 0 as even number occurs and 1 as an odd number occurs. Find X.",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta112-bank-0007",
+   "type": "theory",
+   "stem": "(a) Define Discrete distribution and mention four example or types of discrete distribution\n(b) The proportion of defective item in a manufacturing plant is 25%. In a random sample of 8 times, what is the probability:\n(i) More than 1 defective will be found\n(ii) Less than 2 defective items will be found\n(iii) Find the mean and variance of the binomial experiment\n(c) Calculate the mean and variance of hyper geometric random variable for the following parameters, the population size N = 700, the number of success in the population K = 35, and the number of draws n=20.",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta112-bank-0008",
+   "type": "theory",
+   "stem": "(a) Define a continuous random distribution\n(b) State the properties of a probability density function (p.d.f.) of a continuous random distribution.\n(c) Let X be a random variable with a p.d.f. fx(x) = 4x\u00b2 0 \u2264 x \u2264 1\n(i) Find the mean of the random variable\n(ii) Find the variance of the random variable",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta112-bank-0009",
+   "type": "theory",
+   "stem": "(a) Define the following (i) Set (ii) Power set (iii) Subset\n(b) Using the rule method define a set C, where C is a set of even numbers\n(c) In a community of 200 persons, 133 speak English, 117 speak Igbo and 95 speak both English and Igbo.\n(i) How many of these persons do not speak either language\n(ii) How many speak English only but not Igbo",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta112-bank-0010",
+   "type": "theory",
+   "stem": "(a) Using Stirlings formula, evaluate 70!\n(b) Consider a bag containing 3 cards numbered 1 to 3. Suppose an experiment consists of selecting two cards from the bag and with replacement too.\n(i) Find the total number of elements in the sample space for this experiment\n(ii) Give the sample space\n(c) Suppose that 10 boys go out for basketball at a particular school. How many different teams could be fielded from this school?",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta112-bank-0011",
+   "type": "theory",
+   "stem": "(a) Completely describe the random variable and the some type.\n(b) Expand the binomial function (2x - 3y)^3 and determine the coefficient of x^3.\n(c) If B = {2,7,8, n}",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta112-bank-0012",
+   "type": "theory",
+   "stem": "(a) If A, B and C are independent events defined in a sample space S, then prove that P(A\u2229B\u2229C) = P(A)+P(B)+P(C)-P(A\u2229B)-P(A\u2229C)-P(B\u2229C)+P(A\u2229B\u2229C).\n(b) Two events A and B with P(A)=0.5, P(B)=K, P(A\u222aB)=0.7. Find the value of K if\n(i) A and B are independent events\n(ii) A and B are mutually exclusive events\n(c) Using Stirling's formula, evaluate 55!",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta112-bank-0013",
+   "type": "theory",
+   "stem": "(a) Given that p(x) = k/x is a probability mass function of a random variable x = 0,1,2,3,4. find k\n(b) (i) Evaluate: (nC1 * n-1C2)/(n+1C3) and (ii) nCr/nCr-1\n(c) define the following terms with examples\n(i) Countable/Uncountable set\n(ii) Disjoint/Mutually exclusive\n(iii) Sample Space",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta112-bank-0014",
+   "type": "theory",
+   "stem": "(a) Show that \u2211(x=1 to n) Cx^k / Cx^(k-1) = Cn^(k+1)\n(b) The probability that Jane passes STA112 exam is 3/8. If she fails, the probability she passes next time is 7/8.\n(i) Represent this with a probability tree diagram, (ii) Find the probability that Jane passes on her 3rd attempt.\n(c) Show that 2 (k choose 3) + 2k (k choose 2) = (2n choose 3)",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta112-bank-0015",
+   "type": "theory",
+   "stem": "(a) In a certain factory, three machines A, B and C produced 60%, 30% and 10% of the total number of items produced respectively. An item is selected at random, 2%, 3%, 4% of items produced by machine A, B and C respectively are defective. If the item is defective, find the probability that the item was produced by machine C\n(b) A medical examination shows that the probability of surviving a neurological surgery in a hospital is 0.72. Out of six patients that registered for the surgery, find the probability that:\n(i) Only 2 will survive (ii) Less than 4 will survive (iii) What is the expected number of patients that will survive the surgery?\n(c) A continuous random variable X has a pdf define as f(x) = { 3x^2, 0<x<1; 0, elsewhere }\nFind the (i) mean (ii) variance",
+   "marks": 5,
+   "explanation": ""
+  }
+ ]
+}

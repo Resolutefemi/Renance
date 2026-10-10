@@ -61,11 +61,17 @@ class OfflineOfferSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Dark-mode fix (founder directive 2026-10-11): the sheet used to
+    // hardcode Colors.white, so the dark tier painted a white sheet
+    // with the dark theme's white "Later" button/text on top of it -
+    // invisible letters on an invisible button. Every surface here now
+    // resolves through the theme getters, so the sheet is ink-on-paper
+    // in light and dark-card-on-dark-page in dark.
     return SafeArea(
       child: Container(
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+        decoration: BoxDecoration(
+          color: context.card,
+          borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
         ),
         padding: const EdgeInsets.fromLTRB(22, 18, 22, 22),
         child: Column(
@@ -89,10 +95,11 @@ class OfflineOfferSheet extends StatelessWidget {
                   height: 46,
                   width: 46,
                   decoration: BoxDecoration(
-                    color: context.ink.withValues(alpha: 0.06),
+                    color: context.cardHigh,
                     borderRadius: BorderRadius.circular(14),
                   ),
-                  child: const Icon(Icons.offline_bolt_rounded, size: 26),
+                  child: Icon(Icons.offline_bolt_rounded,
+                      size: 26, color: context.ink),
                 ),
                 const SizedBox(width: 12),
                 Expanded(
@@ -130,6 +137,11 @@ class OfflineOfferSheet extends StatelessWidget {
                     onPressed: () => _decline(context),
                     style: OutlinedButton.styleFrom(
                       minimumSize: const Size.fromHeight(52),
+                      // Theme-aware (dark-mode fix 2026-10-11): the label
+                      // and the stroke follow the active tier so "Later"
+                      // stays readable on the dark card.
+                      foregroundColor: context.ink,
+                      side: BorderSide(color: context.outlineVariant),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),

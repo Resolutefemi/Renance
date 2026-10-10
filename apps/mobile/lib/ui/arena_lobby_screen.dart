@@ -191,7 +191,7 @@ class _ArenaLobbyScreenState extends State<ArenaLobbyScreen> {
     final bool? accepted = await showDialog<bool>(
       context: context,
       builder: (BuildContext ctx) => AlertDialog(
-        backgroundColor: Colors.white,
+        backgroundColor: context.card,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
         title: Text('$opponent challenges you'),
         content: const Text(
@@ -555,7 +555,7 @@ class _ArenaLobbyScreenState extends State<ArenaLobbyScreen> {
     final String? entered = await showDialog<String>(
       context: context,
       builder: (BuildContext ctx) => AlertDialog(
-        backgroundColor: Colors.white,
+        backgroundColor: context.card,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
         title: const Text('Join a duel'),
         content: TextField(
@@ -604,7 +604,7 @@ class _ArenaLobbyScreenState extends State<ArenaLobbyScreen> {
     await showDialog<void>(
       context: context,
       builder: (BuildContext ctx) => AlertDialog(
-        backgroundColor: Colors.white,
+        backgroundColor: context.card,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
         title: const Text('Invite'),
         content: SelectableText('Room code: $_roomCode\nJoin from the app or the web arena: $base/arena?join=$_roomCode'),

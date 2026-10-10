@@ -62,6 +62,9 @@ const Map<String, (String, String)> kUniversitySchools = <String, (String, Strin
   'tasued': ('TASUED', 'Tai Solarin University of Education'),
   'ui': ('UI', 'University of Ibadan'),
   'uniben': ('UNIBEN', 'University of Benin'),
+  // University of Calabar (founder directive 2026-10-11): the new
+  // school desk - GST/CHM/Law/STA/BIO/HIS/CSS course banks.
+  'unical': ('UNICAL', 'University of Calabar'),
   'unilag': ('UNILAG', 'University of Lagos'),
   'unilorin': ('UNILORIN', 'University of Ilorin'),
   'uniosun': ('UNIOSUN', 'Osun State University'),
@@ -372,6 +375,32 @@ class _UniversityDeskScreenState extends State<UniversityDeskScreen> {
   List<UniCourse> get _courses =>
       widget.courses.where((UniCourse c) => !c.isPostUtme).toList();
 
+  // Course search (founder directive 2026-10-11): the desk can hold a
+  // school's whole catalogue, so a search field sits above the list -
+  // type a code (GST 112, PHY 102) or a word and the rows filter live.
+  final TextEditingController _searchCtrl = TextEditingController();
+  String _query = '';
+
+  @override
+  void dispose() {
+    _searchCtrl.dispose();
+    super.dispose();
+  }
+
+  List<UniCourse> get _filtered {
+    final String q = _query.trim().toLowerCase();
+    if (q.isEmpty) return _courses;
+    // Course codes search without the space too ("gst112" finds
+    // "GST 112"), the way students actually type them.
+    final String squashed = q.replaceAll(RegExp(r'\s+'), '');
+    return _courses
+        .where((UniCourse c) =>
+            c.label.toLowerCase().contains(q) ||
+            c.label.toLowerCase().replaceAll(' ', '').contains(squashed) ||
+            c.exam.title.toLowerCase().contains(q))
+        .toList();
+  }
+
   (String, String) get _schoolNames =>
       kUniversitySchools[widget.schoolSlug] ??
       (widget.schoolSlug.toUpperCase(), widget.schoolSlug);
@@ -412,7 +441,33 @@ class _UniversityDeskScreenState extends State<UniversityDeskScreen> {
                       Text(full,
                           style: RenanceText.bodyBase
                               .copyWith(color: context.textSecondary)),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 16),
+                      // The course search bar ---------------------------------
+                      TextField(
+                        controller: _searchCtrl,
+                        onChanged: (String v) =>
+                            setState(() => _query = v),
+                        textInputAction: TextInputAction.search,
+                        decoration: InputDecoration(
+                          hintText: 'Search courses - try "GST 112"',
+                          prefixIcon: const Icon(Icons.search, size: 20),
+                          suffixIcon: _query.isEmpty
+                              ? null
+                              : IconButton(
+                                  tooltip: 'Clear',
+                                  icon: const Icon(Icons.close, size: 18),
+                                  onPressed: () {
+                                    _searchCtrl.clear();
+                                    setState(() => _query = '');
+                                  },
+                                ),
+                          isDense: true,
+                          contentPadding: const EdgeInsets.symmetric(
+                              horizontal: 4, vertical: 2),
+                        ),
+                        style: RenanceText.bodyBase,
+                      ),
+                      const SizedBox(height: 12),
                       if (_courses.isEmpty)
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 48),
@@ -423,8 +478,22 @@ class _UniversityDeskScreenState extends State<UniversityDeskScreen> {
                           ),
                         ),
                       if (_courses.isNotEmpty) ...<Widget>[
-                        _sectionHeader(context, 'Course Quizzes'),
-                        for (final UniCourse c in _courses)
+                        _sectionHeader(
+                            context,
+                            _query.trim().isEmpty
+                                ? 'Course Quizzes'
+                                : 'Course Quizzes · ${_filtered.length} match'
+                                    '${_filtered.length == 1 ? '' : 'es'}'),
+                        if (_filtered.isEmpty)
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 28),
+                            child: Center(
+                              child: Text(
+                                  'No course matches "${_query.trim()}".',
+                                  style: RenanceText.bodySecondary),
+                            ),
+                          ),
+                        for (final UniCourse c in _filtered)
                           _CourseTile(
                             course: c,
                             downloaded:

@@ -1,0 +1,32 @@
+{
+ "code": "uni-unical-sta114-bank",
+ "title": "UNICAL STA 114 | Course Question Bank",
+ "version": 1,
+ "questionCount": 3,
+ "totalMarks": 15,
+ "category": "university",
+ "body": "University Modules",
+ "questions": [
+  {
+   "id": "uni-unical-sta114-bank-0001",
+   "type": "theory",
+   "stem": "a. Defines a computer and explain its main functions.\nb. Explain the difference between RAM and ROM.\nc. Differentiate hardware and software with two examples each.\nd. Describe four ways computers are useful in the field of statistics. Give examples to support your points.\ne. Differentiate between input and output devices with examples.\nf. What is the role of the CPU in statistical computing?",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta114-bank-0002",
+   "type": "theory",
+   "stem": "The following scores were obtained by students in a test:\n5,7,8,5,9,6,7,8,10,6,5, 7,8,5,9,6, 7,8, 10,6,5,7,8,5,9,6,7,8,10,6\na. Find your calculator.\nb. Find the mean.\nc. Find the mode.\nd. Find the median.\ne. Find the variance.\nf. Find the standard deviation (to 2 decimal places).",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta114-bank-0003",
+   "type": "theory",
+   "stem": "A company tracks sales across 3 branches for 4 months as shown below:\nMonth Branch A Branch B Branch C\nJan 100 150 120\nFeb 130 160 140\nMar 110 145 135\nApr 115 155 125\n\na. Represent the sales data in Excel as a 4\u00d73 matrix\nb. Compute the transpose of the matrix.\nc. Compute the inverse of the matrix.\nd. Compute the determinant of the matrix\ne. Using matrix multiplication, compute the matrix product of the transpose and the original matrix.",
+   "marks": 5,
+   "explanation": ""
+  }
+ ]
+}

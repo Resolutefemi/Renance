@@ -1,0 +1,46 @@
+{
+ "code": "uni-unical-sta382-bank",
+ "title": "UNICAL STA 382 | Course Question Bank",
+ "version": 1,
+ "questionCount": 5,
+ "totalMarks": 25,
+ "category": "university",
+ "body": "University Modules",
+ "questions": [
+  {
+   "id": "uni-unical-sta382-bank-0001",
+   "type": "theory",
+   "stem": "(a) Define the following terms\ni. Sample\nii. The concept of stratification\niii. Census\niv. Sampling design\n(b) State and explain two ways in which information can be obtained\n(c) Give two advantages of sampling over census and explain any two\n(d) Give reasons for stratification",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta382-bank-0002",
+   "type": "theory",
+   "stem": "(a) Mention and explain five steps involved in planning and execution of a sample survey\n(b) Enumerate four practical problems one can encounter in a survey\n(c) Why should research objectives be developed?\n(d) Outline the steps involved in calculating a sample size",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta382-bank-0003",
+   "type": "theory",
+   "stem": "(a) Using the question \"Mode of study after the ASSU strike\", develop a question response which can enable you get students reactions to their academics after the striker respondent.\n(b) If your interest is to get response from your respondent by making them tick on the option there prefer, ask your question",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta382-bank-0004",
+   "type": "theory",
+   "stem": "(a) Define simple random sampling\n(b) List all possible samples of size 2 that can be drawn from the population of 16, 10,20,12 and 18 without replacement.\n(c) Calculate the means of the samples and construct the distribution of the sample mean\n(d) What is the true sampling variance of the estimated mean?",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta382-bank-0005",
+   "type": "theory",
+   "stem": "If an SRSWOR is selected from a population of N= 400 person. The age of each sampled unit is provided in the table below:\n| Person | A | B | C | D | E | F | G | H | I | J |\n|-|-|-|-|-|-|-|-|-|-|-|\n| age(Yi) | 10.85 | 10.35 | 18.60 | 12.2 | 21.80 | 22.00 | 10.90 | 11.50 | 11.75 | 21.75 |\nCalculate\n(a) the variance of the estimated mean age\n(b) the standard error of variance\n(c) margin of error and coefficient of variance\n(d) estimate 95% confidence interval",
+   "marks": 5,
+   "explanation": ""
+  }
+ ]
+}

@@ -16,9 +16,11 @@ import 'package:provider/provider.dart';
 import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
+import 'arena_lobby_screen.dart';
 import 'exam_screen.dart';
 import 'flashcards_screen.dart';
-import 'home_screen.dart' show LauncherTile;
+import 'home_screen.dart' show LauncherTile, openDailyQuiz;
+import 'leaderboard_screen.dart';
 import 'renance_logo.dart';
 import 'study_setup_screen.dart';
 import 'theme.dart';
@@ -213,6 +215,51 @@ class PostUtmeHomeTab extends StatelessWidget {
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
                         builder: (_) => const FlashcardsScreen()),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          // Compete grid ------------------------------------------------------
+          // Founder directive (2026-10-11): the Leaderboard tile ships on
+          // EVERY focus home - Post-UTME was missing it too. Arena and
+          // Daily Quiz join it so this desk gets the same compete row.
+          const SizedBox(height: 16),
+          Text(
+            'Compete',
+            style: RenanceText.sectionTitle.copyWith(
+              color: context.textSecondary,
+              fontSize: 14,
+            ),
+          ),
+          const SizedBox(height: 12),
+          Row(
+            children: <Widget>[
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.sports_esports,
+                  label: 'Arena',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const ArenaLobbyScreen()),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.event_repeat,
+                  iconColor: RenanceColors.amber,
+                  label: 'Daily Quiz',
+                  onTap: () => openDailyQuiz(context, sync),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.leaderboard,
+                  label: 'Leaderboard',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const LeaderboardScreen()),
                   ),
                 ),
               ),

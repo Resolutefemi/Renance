@@ -1,6 +1,11 @@
 /// Persistence for the offline-first mobile shell.
 ///
-/// Session: JWT + cached user in SharedPreferences.
+/// Session: JWT in the OS-grade encrypted store (Android
+/// EncryptedSharedPreferences / iOS Keychain - founder directive
+/// 2026-10-11: "Mobile applications save encrypted authentication
+/// tokens directly to the device's secure storage systems so your
+/// session survives even if you close the app or restart your phone")
+/// + cached user in SharedPreferences.
 /// Packs:   downloaded bundles + queued submissions in local SQLite
 ///          (the ERA-2 doctrine: phone stores only what you downloaded,
 ///          and nothing here ever contains answer material).
@@ -9,6 +14,7 @@ library;
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:path/path.dart' as p;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sqflite/sqflite.dart';
@@ -23,19 +29,105 @@ import 'models.dart';
 /// controllers.dart.
 const String kMeCacheKey = 'renance.me.cache';
 
+/// The encrypted token vault: one key in the platform's secure store.
+/// Every call fails SOFT (returns null / false) so a missing secure
+/// store on a test bench or an exotic device degrades to the prefs
+/// fallback instead of crashing the app.
+class SecureTokenVault {
+  const SecureTokenVault();
+
+  static const String _kKey = 'renance.session.jwt';
+
+  final FlutterSecureStorage _storage = const FlutterSecureStorage(
+    aOptions: AndroidOptions(encryptedSharedPreferences: true),
+    iOptions: IOSOptions(accessibility: KeychainAccessibility.first_unlock),
+  );
+
+  Future<String?> read() async {
+    try {
+      return await _storage.read(key: _kKey);
+    } on Exception {
+      return null;
+    } on Error {
+      return null;
+    }
+  }
+
+  Future<bool> write(String token) async {
+    try {
+      await _storage.write(key: _kKey, value: token);
+      return true;
+    } on Exception {
+      return false;
+    } on Error {
+      return false;
+    }
+  }
+
+  Future<bool> delete() async {
+    try {
+      await _storage.delete(key: _kKey);
+      return true;
+    } on Exception {
+      return false;
+    } on Error {
+      return false;
+    }
+  }
+}
+
 class SessionStore {
-  SessionStore(this._prefs);
+  SessionStore(this._prefs, {SecureTokenVault? vault})
+      : _vault = vault ?? const SecureTokenVault();
 
   final SharedPreferences _prefs;
+  final SecureTokenVault _vault;
   static const _kToken = 'renance.token';
   static const _kUser = 'renance.user';
   static const _kIntroSeen = 'renance.introSeen';
+
+  /// The in-memory copy of the decrypted token. Kept hot so the sync
+  /// getter (ApiClient reads it on every request) never awaits.
+  String? _memToken;
 
   /// Exposed so feature stores (saved questions, update stamps) can
   /// persist on the same SharedPreferences instance the shell owns.
   SharedPreferences get prefs => _prefs;
 
-  String? get token => _prefs.getString(_kToken);
+  /// Boots the store for the app shell: pulls the token out of the
+  /// encrypted vault into memory, and migrates any legacy plain-prefs
+  /// token into the vault (then scrubs it from prefs). A sign-in that
+  /// predates the vault upgrades itself on first launch.
+  static Future<SessionStore> load(SharedPreferences prefs) async {
+    final SessionStore store = SessionStore(prefs);
+    final String? secure = await store._vault.read();
+    final String? legacy = prefs.getString(_kToken);
+    if (secure != null && secure.isNotEmpty) {
+      store._memToken = secure;
+      // Scrub the legacy plaintext copy if one is still lying around.
+      if (legacy != null && legacy.isNotEmpty) {
+        await prefs.remove(_kToken);
+      }
+      return store;
+    }
+    if (legacy != null && legacy.isNotEmpty) {
+      // Migration: the old plaintext token moves into the vault.
+      store._memToken = legacy;
+      final bool ok = await store._vault.write(legacy);
+      if (ok) {
+        await prefs.remove(_kToken);
+      }
+      return store;
+    }
+    return store;
+  }
+
+  /// The signed-in session's bearer token (null = signed out). Reads
+  /// the hot memory copy first; the prefs token remains the fallback
+  /// for tests and for the brief window before load() migrated it.
+  String? get token => (_memToken != null && _memToken!.isNotEmpty)
+      ? _memToken
+      : _prefs.getString(_kToken);
 
   AppUser? get user {
     final raw = _prefs.getString(_kUser);
@@ -48,11 +140,23 @@ class SessionStore {
   }
 
   Future<void> save(String token, AppUser user) async {
-    await _prefs.setString(_kToken, token);
+    _memToken = token;
+    // Founder directive (2026-10-11): the token's home is the encrypted
+    // vault. The plaintext prefs copy is only written when the vault is
+    // unavailable (test bench / exotic device) so the session is never
+    // lost entirely.
+    final bool secured = await _vault.write(token);
+    if (secured) {
+      await _prefs.remove(_kToken);
+    } else {
+      await _prefs.setString(_kToken, token);
+    }
     await _prefs.setString(_kUser, jsonEncode(user.toJson()));
   }
 
   Future<void> clear() async {
+    _memToken = null;
+    await _vault.delete();
     await _prefs.remove(_kToken);
     await _prefs.remove(_kUser);
     // The offline /me cache must die with the session: otherwise a

@@ -946,104 +946,11 @@ class _LauncherTab extends StatelessWidget {
   final ValueChanged<int> onGoTab;
   final VoidCallback onOnboarding;
 
-  /// One entry per subject bank of [body] (slug + question count), read
-  /// from the synced manifest codes: jamb-english-bank -> english.
-  List<({String slug, int count})> _dailySubjects(
-    SyncController sync,
-    String body,
-  ) {
-    final RegExp hit = RegExp('^${body.toLowerCase()}-([a-z0-9-]+)-bank\$');
-    final Map<String, int> seen = <String, int>{};
-    for (final ExamMeta e in sync.exams) {
-      final RegExpMatch? m = hit.firstMatch(e.code);
-      if (m == null) continue;
-      final String slug = m.group(1)!;
-      if (slug.endsWith('-enrich')) continue; // enrichment forks ride the base bank
-      seen[slug] = (seen[slug] ?? 0) + e.questionCount;
-    }
-    final List<({String slug, int count})> rows = <({String slug, int count})>[
-      for (final MapEntry<String, int> e in seen.entries)
-        (slug: e.key, count: e.value),
-    ];
-    rows.sort((a, b) => a.slug.compareTo(b.slug));
-    return rows;
-  }
-
   /// The Compete desk's Daily Challenge: resolves today's rotating
   /// paper for the student's focus body (GET /daily/{body}) and opens
   /// it in the player - the same sprint the web dashboard deep-links.
-  Future<void> _openDaily(BuildContext context) async {
-    final ApiClient api = context.read<ApiClient>();
-    final StudentController student = context.read<StudentController>();
-    final String body = switch (student.me?.profile?.exams.firstOrNull) {
-      'WAEC' => 'WAEC',
-      'NECO' => 'NECO',
-      'University Modules' => 'University Modules',
-      _ => 'JAMB',
-    };
-    // Founder rule: the first daily tap asks for the subject combination
-    // (bodies with per-subject banks only). The combination is stored on
-    // the profile, and every daily sprint afterwards draws ONLY those
-    // subjects - the server composes the paper, the same one the web
-    // plays.
-    final Profile? dailyProfile = student.me?.profile;
-    if (kComboBodies.contains(body) &&
-        (dailyProfile == null || dailyProfile.subjects.isEmpty)) {
-      final SyncController sync = context.read<SyncController>();
-      final List<({String slug, int count})> rows = _dailySubjects(sync, body);
-      if (!context.mounted) return;
-      final List<String>? picked = await showDailySubjectsSheet(
-        context,
-        api: api,
-        body: body,
-        subjects: rows,
-      );
-      if (picked == null || picked.isEmpty) return; // dismissed, no sprint
-      // The combination now lives on the profile server-side; refresh so
-      // the local copy carries it and the gate never re-asks.
-      await student.refresh();
-    }
-    final DailyInfo daily;
-    try {
-      daily = await api.daily(body);
-    } on ApiException catch (e) {
-      if (!context.mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('No daily challenge: ${e.message}')),
-      );
-      return;
-    } on NetworkException catch (e) {
-      if (!context.mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(e.message)),
-      );
-      return;
-    }
-    // Prefer the manifest meta (sha + title) when the rotating code is
-    // registered; otherwise an empty sha fetches the bundle live.
-    ExamMeta meta = ExamMeta(
-      code: daily.code,
-      title: 'Daily Quiz',
-      questionCount: daily.questionCount,
-      totalMarks: daily.questionCount,
-      bundleSha256: '',
-      durationMinutes: 10,
-      body: daily.body,
-    );
-    for (final ExamMeta e in sync.exams) {
-      if (e.code == daily.code) {
-        meta = e;
-        break;
-      }
-    }
-    if (!context.mounted) return;
-    Navigator.of(context).push(
-      MaterialPageRoute<void>(
-        builder: (_) => ExamScreen(exam: meta, daily: true),
-      ),
-    );
-  }
-
+  Future<void> _openDaily(BuildContext context) async =>
+      openDailyQuiz(context, sync);
 
   @override
   Widget build(BuildContext context) {
@@ -2296,4 +2203,107 @@ class _MoreTile extends StatelessWidget {
       ),
     );
   }
+}
+
+// ---------------------------------------------------------------- daily
+
+/// One entry per subject bank of [body] (slug + question count), read
+/// from the synced manifest codes: jamb-english-bank -> english.
+/// Public so every focus home (launcher, university desk, post-UTME)
+/// resolves the same combination sheet.
+List<({String slug, int count})> dailySubjectsFor(
+  SyncController sync,
+  String body,
+) {
+  final RegExp hit = RegExp('^${body.toLowerCase()}-([a-z0-9-]+)-bank\$');
+  final Map<String, int> seen = <String, int>{};
+  for (final ExamMeta e in sync.exams) {
+    final RegExpMatch? m = hit.firstMatch(e.code);
+    if (m == null) continue;
+    final String slug = m.group(1)!;
+    if (slug.endsWith('-enrich')) continue; // enrichment forks ride the base bank
+    seen[slug] = (seen[slug] ?? 0) + e.questionCount;
+  }
+  final List<({String slug, int count})> rows = <({String slug, int count})>[
+    for (final MapEntry<String, int> e in seen.entries)
+      (slug: e.key, count: e.value),
+  ];
+  rows.sort((a, b) => a.slug.compareTo(b.slug));
+  return rows;
+}
+
+/// The Compete desk's Daily Challenge (public so every focus home can
+/// fire it): resolves today's rotating paper for the student's focus
+/// body (GET /daily/{body}) and opens it in the player - the same
+/// sprint the web dashboard deep-links.
+Future<void> openDailyQuiz(BuildContext context, SyncController sync) async {
+  final ApiClient api = context.read<ApiClient>();
+  final StudentController student = context.read<StudentController>();
+  final String body = switch (student.me?.profile?.exams.firstOrNull) {
+    'WAEC' => 'WAEC',
+    'NECO' => 'NECO',
+    'University Modules' => 'University Modules',
+    _ => 'JAMB',
+  };
+  // Founder rule: the first daily tap asks for the subject combination
+  // (bodies with per-subject banks only). The combination is stored on
+  // the profile, and every daily sprint afterwards draws ONLY those
+  // subjects - the server composes the paper, the same one the web
+  // plays.
+  final Profile? dailyProfile = student.me?.profile;
+  if (kComboBodies.contains(body) &&
+      (dailyProfile == null || dailyProfile.subjects.isEmpty)) {
+    final List<({String slug, int count})> rows =
+        dailySubjectsFor(sync, body);
+    if (!context.mounted) return;
+    final List<String>? picked = await showDailySubjectsSheet(
+      context,
+      api: api,
+      body: body,
+      subjects: rows,
+    );
+    if (picked == null || picked.isEmpty) return; // dismissed, no sprint
+    // The combination now lives on the profile server-side; refresh so
+    // the local copy carries it and the gate never re-asks.
+    await student.refresh();
+  }
+  final DailyInfo daily;
+  try {
+    daily = await api.daily(body);
+  } on ApiException catch (e) {
+    if (!context.mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('No daily challenge: ${e.message}')),
+    );
+    return;
+  } on NetworkException catch (e) {
+    if (!context.mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(e.message)),
+    );
+    return;
+  }
+  // Prefer the manifest meta (sha + title) when the rotating code is
+  // registered; otherwise an empty sha fetches the bundle live.
+  ExamMeta meta = ExamMeta(
+    code: daily.code,
+    title: 'Daily Quiz',
+    questionCount: daily.questionCount,
+    totalMarks: daily.questionCount,
+    bundleSha256: '',
+    durationMinutes: 10,
+    body: daily.body,
+  );
+  for (final ExamMeta e in sync.exams) {
+    if (e.code == daily.code) {
+      meta = e;
+      break;
+    }
+  }
+  if (!context.mounted) return;
+  Navigator.of(context).push(
+    MaterialPageRoute<void>(
+      builder: (_) => ExamScreen(exam: meta, daily: true),
+    ),
+  );
 }

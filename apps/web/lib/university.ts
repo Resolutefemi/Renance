@@ -53,6 +53,7 @@ import catrsu from '../../../data/university/courses/rsu.json';
 import cattasued from '../../../data/university/courses/tasued.json';
 import catui from '../../../data/university/courses/ui.json';
 import catuniben from '../../../data/university/courses/uniben.json';
+import catunical from '../../../data/university/courses/unical.json';
 import catunilag from '../../../data/university/courses/unilag.json';
 import catunilorin from '../../../data/university/courses/unilorin.json';
 import catuniosun from '../../../data/university/courses/uniosun.json';
@@ -91,6 +92,7 @@ const ONBOARDED_CATALOGS: Record<string, SchoolCatalog> = {
   tasued: cattasued as unknown as SchoolCatalog,
   ui: catui as unknown as SchoolCatalog,
   uniben: catuniben as unknown as SchoolCatalog,
+  unical: catunical as unknown as SchoolCatalog,
   unilag: catunilag as unknown as SchoolCatalog,
   unilorin: catunilorin as unknown as SchoolCatalog,
   uniosun: catuniosun as unknown as SchoolCatalog,
