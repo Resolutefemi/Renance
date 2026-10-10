@@ -1,4 +1,4 @@
-// Package httpapi — botshield.go
+// Package httpapi - botshield.go
 //
 // ULTIMATE anti-scraping armor (founder directive 2026-10-11: "someone
 // is trying to scrape all my hard work past questions from
@@ -7,35 +7,35 @@
 //
 // The threat model, layered:
 //
-//   Layer 1  UA shield      — every known AI-crawler / archiver / SEO
+//   Layer 1  UA shield      - every known AI-crawler / archiver / SEO
 //                             spider user-agent is refused before any
 //                             handler runs (GPTBot, ClaudeBot, CCBot,
 //                             Bytespider, PerplexityBot, ...). Empty or
 //                             tool-like UAs cannot touch question
 //                             routes at all.
-//   Layer 2  robots.txt     — disallow everything; X-Robots-Tag:
+//   Layer 2  robots.txt     - disallow everything; X-Robots-Tag:
 //                             noindex, nofollow, noarchive on every
 //                             response so indexing pipelines drop the
 //                             content even when they ignore robots.txt.
-//   Layer 3  static cipher  — the web's /bundles/*.json static shelf
+//   Layer 3  static cipher  - the web's /bundles/*.json static shelf
 //                             now ships AES-256-GCM ciphertext keyed
 //                             per bank code (web_bundles.py). The
 //                             master key never leaves the servers;
 //                             /bundles/key?code= derives and hands out
 //                             one bank's key, so pulling 1,000 keys
 //                             means 1,000 metered requests.
-//   Layer 4  key gate       — signed-in: per-account daily distinct
+//   Layer 4  key gate       - signed-in: per-account daily distinct
 //                             bank quota (default 40/day) + per-IP
 //                             minute rate. Anonymous: proof-of-work
 //                             challenge + hard per-IP hourly cap +
 //                             global anonymous budget. BUNDLE_ANON_KEY
 //                             =false removes the anonymous path
 //                             entirely.
-//   Layer 5  ledger         — every bundle/key fetch is counted per
+//   Layer 5  ledger         - every bundle/key fetch is counted per
 //                             account and per IP; sequential
 //                             enumeration bursts trip escalating
 //                             delays and are logged for forensics.
-//   Layer 6  honeypots      — decoy bank codes nobody legit would
+//   Layer 6  honeypots      - decoy bank codes nobody legit would
 //                             request (hidden in a fake sitemap).
 //                             Hitting one serves a POISONED bundle of
 //                             canary questions and strikes the
@@ -43,7 +43,7 @@
 //                             Any third party publishing the canary
 //                             text is provably serving scraped
 //                             Renance data.
-//   Layer 7  watermarking   — every question stem the API serves to a
+//   Layer 7  watermarking   - every question stem the API serves to a
 //                             signed-in user is invisibly watermarked
 //                             with an HMAC of (user, question) in
 //                             zero-width characters; a leaked corpus
@@ -51,7 +51,7 @@
 //                             it (see SECURITY.md for the decoder).
 //
 // All ledgers are in-memory (Render single instance, restarts reset
-// them — acceptable: the CDN cipher + quotas are the load-bearing
+// them - acceptable: the CDN cipher + quotas are the load-bearing
 // walls, the ledger adds detection and account-level throttling).
 package httpapi
 
@@ -133,7 +133,7 @@ func (s *Server) botShield(next http.Handler) http.Handler {
 }
 
 // handleRobotsTxt answers the crawlers' robots.txt with a full
-// disallow — the polite layer that keeps question URLs out of any
+// disallow - the polite layer that keeps question URLs out of any
 // index that honors it.
 func (s *Server) handleRobotsTxt(w http.ResponseWriter, _ *http.Request) {
 	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
@@ -380,7 +380,7 @@ func (s *Server) handleBundleKey(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// The code must be a real bank (manifest member). Unknown codes get
-	// no key — enumeration learns nothing.
+	// no key - enumeration learns nothing.
 	if code == "" {
 		fail(w, http.StatusBadRequest, "bad_request", "code query parameter is required")
 		return
@@ -408,7 +408,7 @@ func (s *Server) handleBundleKey(w http.ResponseWriter, r *http.Request) {
 		if n > s.cfg.BundleAccountDaily {
 			s.shieldLog(r, "quota", fmt.Sprintf("user=%s distinct=%d > %d", uid, n, s.cfg.BundleAccountDaily))
 			fail(w, http.StatusTooManyRequests, "bank_quota",
-				"daily bank limit reached — practice resets at midnight UTC")
+				"daily bank limit reached - practice resets at midnight UTC")
 			return
 		}
 	} else {
@@ -476,7 +476,7 @@ type powChallengeSpec struct {
 }
 
 // shieldBundle wraps handleBundle with the account/IP/honeypot walls
-// (Layers 4–6) and the per-user watermark (Layer 7).
+// (Layers 4-6) and the per-user watermark (Layer 7).
 func (s *Server) shieldBundle(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		code := r.PathValue("code")
@@ -515,7 +515,7 @@ func (s *Server) shieldBundle(next http.HandlerFunc) http.HandlerFunc {
 			if n > s.cfg.BundleAccountDaily {
 				s.shieldLog(r, "quota", fmt.Sprintf("user=%s distinct banks=%d > %d", uid, n, s.cfg.BundleAccountDaily))
 				fail(w, http.StatusTooManyRequests, "bank_quota",
-					"daily bank limit reached — practice resets at midnight UTC")
+					"daily bank limit reached - practice resets at midnight UTC")
 				return
 			}
 			// Layer 7: the served copy is watermarked inside handleBundle

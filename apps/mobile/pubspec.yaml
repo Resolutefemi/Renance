@@ -43,6 +43,13 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ">=5.0.0 <8.0.0"
 
+dependency_overrides:
+  # CI fix 2026-10-12: image 4.11.0 declares archive ^4.0.9 but calls
+  # ZLibDecoder.decodeLazy, which only exists in archive 4.1.0+ - every
+  # fresh pub-cache resolve broke the golden tests. image 4.11.1 pulls
+  # archive ^4.4.0 and compiles cleanly.
+  image: 4.11.1
+
 flutter:
   uses-material-design: true
   assets:

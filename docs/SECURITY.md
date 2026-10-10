@@ -1,4 +1,4 @@
-# Renance Security — the past-question vault shield
+# Renance Security - the past-question vault shield
 
 **Founder directive 2026-10-11:** *"Someone is trying to scrape all my
 hard work past questions from renance-api.onrender.com. Make sure no
@@ -21,9 +21,9 @@ the maximum (Cloudflare) tier.
 | 2 | **robots.txt + noindex** | both properties | `Disallow: /` on the API; robots.txt on renance.app disallows `/bundles/`, `/pdfs/`, `/school-corpus/`, `/api/` and names 25+ AI crawlers individually; every response carries `X-Robots-Tag: noindex, nofollow, noarchive`. |
 | 3 | **Static cipher** | renance.app build (`scripts/encrypt_bundles.mjs`) | Every `/bundles/<code>.json` on the CDN is **AES-256-GCM ciphertext keyed per bank code**. A scraper that mirrors the whole website gets 165 MB of useless ciphertext. (This closed the old hole where the site shipped 1,156 plain JSON files with answers.) |
 | 4 | **Key gate** | study API `GET /bundles/key?code=` | One key per bank. Signed-in: per-account daily distinct-bank quota (40/day). Anonymous: **proof-of-work** (18-bit SHA-256, ~0.3 s of real hashing per bank) + per-IP hourly cap + global anonymous budget. `BUNDLE_ANON_KEY=false` removes the anonymous path entirely. |
-| 5 | **Ledger** | study API | Every bundle/key fetch counted per account and per IP; bursts and enumeration are logged (`event=botshield`) — the forensic trail on Render logs. |
+| 5 | **Ledger** | study API | Every bundle/key fetch counted per account and per IP; bursts and enumeration are logged (`event=botshield`) - the forensic trail on Render logs. |
 | 6 | **Honeypots + canary** | study API | Ten decoy bank codes (listed in a planted `bundles/index.json` only an enumerator would read). Requesting one serves a **poisoned bundle of canary questions** (marker `RQ7C2ZP4`) and strikes the account; two strikes = 24-hour lockout. Any product that publishes the canary text is provably serving scraped Renance data. |
-| 7 | **Watermarks** | study API (`/bundles/{code}`) | Every question stem served to a signed-in user carries an **invisible 16-bit HMAC signature of (account, question)** in zero-width characters. A leaked corpus — even one question — decodes back to the account that pulled it. |
+| 7 | **Watermarks** | study API (`/bundles/{code}`) | Every question stem served to a signed-in user carries an **invisible 16-bit HMAC signature of (account, question)** in zero-width characters. A leaked corpus - even one question - decodes back to the account that pulled it. |
 
 Plus the pre-existing walls: JWT auth on every question route,
 bcrypt+rate-limited auth, CORS allowlist, CSP, HSTS at the edge.
@@ -118,8 +118,8 @@ The static site is now cipher-only, so the CDN layer is safe even
 unprotected. For the strongest possible posture, proxy renance.app
 through Cloudflare (free plan) and switch on:
 
-1. **DNS proxy** (orange cloud) — hides the origin, absorbs L7 floods.
-2. **Bot Fight Mode** (Security → Bots) — blocks headless/automated
+1. **DNS proxy** (orange cloud) - hides the origin, absorbs L7 floods.
+2. **Bot Fight Mode** (Security → Bots) - blocks headless/automated
    traffic before it reaches Vercel.
 3. **WAF custom rules**:
    - `(http.user_agent contains "GPTBot")` → Block
@@ -152,7 +152,7 @@ its own shield (same botshield design):
 Content that a browser displays can always be screenshotted by a
 determined, logged-in human. What this shield guarantees:
 
-- **No bulk static scraping** (the previous hole — closed with AES-256-GCM).
+- **No bulk static scraping** (the previous hole - closed with AES-256-GCM).
 - **No AI crawler** (all known agents + robots.txt + noindex).
 - **No anonymous enumeration** (PoW + IP caps + global budget).
 - **No silent bulk theft via accounts** (40 banks/day quota, honeypot
