@@ -1,0 +1,1049 @@
+{
+ "code": "uni-uniosun-phy102-bank",
+ "title": "UNIOSUN PHY 102 - General Physics II",
+ "version": 1,
+ "questionCount": 71,
+ "totalMarks": 71,
+ "category": "university",
+ "body": "University Modules",
+ "questions": [
+  {
+   "id": "uni-uniosun-phy102-bank-0001",
+   "type": "mcq",
+   "stem": "The sound wave of velocity 125 ms-1 at 20oC, find the value of its velocity at 27oC.",
+   "options": {
+    "A": "136.58m/s",
+    "B": "126.48m/s",
+    "C": "115.08m/s",
+    "D": "106.38m/s",
+    "E": "72.6 m/s"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "v ∝ √T (absolute temperature). T1 = 293 K, T2 = 300 K, so v2 = 125 × √(300/293) = 125 × 1.0119 = 126.48 m/s."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0002",
+   "type": "mcq",
+   "stem": "The wavelength of ultraviolet radiation is 400nm. If the speed of light in air is 3 x 10^8 ms-1, then the frequency of the ultraviolet radiation is?",
+   "options": {
+    "A": "7.5 x 10^14Hz",
+    "B": "6.5 x 10^13Hz",
+    "C": "7.5 x 10^13Hz",
+    "D": "6.5 x 10^14Hz",
+    "E": "1.25 x 10^12Hz"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "f = c/λ = (3×10^8)/(400×10^-9) = 7.5×10^14 Hz."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0003",
+   "type": "mcq",
+   "stem": "If the wavelength of a wave travelling with a velocity of 360ms-1 is 60cm, the period of the wave is?",
+   "options": {
+    "A": "1.6 x 10-2s",
+    "B": "1.0 x 10-3s",
+    "C": "1.6 x 10-3s",
+    "D": "2.6 x 10-2s",
+    "E": "2.6 x 10-3s"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "T = λ/v = 0.6/360 = 1.67×10^-3 s ≈ 1.6×10^-3 s."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0004",
+   "type": "mcq",
+   "stem": "The period of a wave is 0.02 second. Calculate its wavelength, if its speed is 330cms-1.",
+   "options": {
+    "A": "5.6 cm",
+    "B": "4.0 cm",
+    "C": "4.6 cm",
+    "D": "6.5 cm",
+    "E": "6.6 cm"
+   },
+   "marks": 1,
+   "answer": "E",
+   "explanation": "λ = vT = 330 cm/s × 0.02 s = 6.6 cm."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0005",
+   "type": "mcq",
+   "stem": "The equation of a wave travelling along the positive x-direction is given by y = 0.25 x 10-3(500t - 0.25x). Determine the angular frequency of the wave motion.",
+   "options": {
+    "A": "5.1 x 10^2 rads-1",
+    "B": "5.0 x 10^2 rads-1",
+    "C": "6.0 x 10^2 rads-1",
+    "D": "6.1 x 10^2 rads-1",
+    "E": "3.1 x 10^2 rads-1"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Comparing y = A(ωt - kx) with the given equation, ω = 500 rad s^-1 = 5.0×10^2 rad s^-1."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0006",
+   "type": "mcq",
+   "stem": "A pipe is 2.46 m long. Determine the frequencies of the first three harmonics if the pipe is open at both ends. Take 343 m/s as the speed of sound in air.",
+   "options": {
+    "A": "70 Hz, 139 Hz, 209 Hz",
+    "B": "70 Hz, 105 Hz, 210 Hz",
+    "C": "35 Hz, 105 Hz, 175 Hz",
+    "D": "45 Hz, 70 Hz, 105 Hz",
+    "E": "70 Hz, 135 Hz, 200 Hz"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Open pipe: f_n = nv/2L. f1 = 343/(2×2.46) = 69.7 ≈ 70 Hz, f2 = 139.4 ≈ 139 Hz, f3 = 209.1 ≈ 209 Hz."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0007",
+   "type": "mcq",
+   "stem": "How many harmonic frequencies of the pipe in question 6 (open at both ends, 2.46 m) lie in the audible range, from 20 Hz to 20 000 Hz?",
+   "options": {
+    "A": "200",
+    "B": "287",
+    "C": "239",
+    "D": "254",
+    "E": "293"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "f_n = n(69.7 Hz) ≤ 20 000 gives n ≤ 286.9, so 287 harmonics lie in the audible range."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0008",
+   "type": "mcq",
+   "stem": "What are the three lowest possible frequencies if the pipe in question 6 is closed at one end and open at the other?",
+   "options": {
+    "A": "70 Hz, 139 Hz, 209 Hz",
+    "B": "70 Hz, 105 Hz, 210 Hz",
+    "C": "35 Hz, 105 Hz, 175 Hz",
+    "D": "45 Hz, 70 Hz, 105 Hz",
+    "E": "70 Hz, 135 Hz, 200 Hz"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Closed pipe: only odd harmonics, f_n = nv/4L. f1 = 343/(4×2.46) = 34.8 ≈ 35 Hz, f3 = 105 Hz, f5 = 175 Hz."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0009",
+   "type": "mcq",
+   "stem": "A noisy machine in a factory produces sound with a level of 80 dB. How many identical machines could you add to the factory without exceeding the 90-dB limit?",
+   "options": {
+    "A": "20",
+    "B": "28",
+    "C": "15",
+    "D": "18",
+    "E": "10"
+   },
+   "marks": 1,
+   "answer": "E",
+   "explanation": "β_total = 10log(N×I0/I_ref) = 80 + 10log N ≤ 90 → 10log N ≤ 10 → N ≤ 10 machines."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0010",
+   "type": "mcq",
+   "stem": "When a vibrating system or external force drives another to oscillate, this phenomenon is called",
+   "options": {
+    "A": "Echo",
+    "B": "Resonance",
+    "C": "Sound waves",
+    "D": "Disturbance",
+    "E": "Displacement"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Resonance: driving a system at its natural frequency so it oscillates with maximum amplitude."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0011",
+   "type": "mcq",
+   "stem": "Two protons in an atomic nucleus are typically separated by a distance of 2 x 10^-15 m. What is the magnitude of the electrical force between two protons separated by 2 x 10^-15 m? (ke = 8.99 x 10^9 N.m2/C2, e = 1.602 x 10^-19 C)",
+   "options": {
+    "A": "27.5 N",
+    "B": "67.5 N",
+    "C": "57.5 N",
+    "D": "37.5 N",
+    "E": "47.5 N"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "F = ke²/r² = (8.99×10^9)(1.602×10^-19)²/(2×10^-15)² = 57.7 ≈ 57.5 N."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0012",
+   "type": "mcq",
+   "stem": "A 40-cm-diameter loop is rotated in a uniform electric field until the position of maximum electric flux is found. The flux in that position is measured to be 5.2 x 10^5 N.m2/C. Calculate the electric field strength in this region.",
+   "options": {
+    "A": "6.1 x 10^6 N/C",
+    "B": "4.1 x 10^6 N/C",
+    "C": "8.2 x 10^6 N/C",
+    "D": "6.6 x 10^6 N/C",
+    "E": "2.6 x 10^6 N/C"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Φmax = EA → E = Φ/(πr²) = 5.2×10^5/(π×0.20²) = 4.14×10^6 N/C."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0013",
+   "type": "mcq",
+   "stem": "Consider the Earth and a cloud layer 800 m above the planet to be the plates of a parallel-plate capacitor. (a) If the cloud layer has an area of 1.0 km2, what is the capacitance? (b) If an electric field strength greater than 3.0 x 10^6 N/C causes the air to break down and conduct charge (lightning), what is the maximum charge the cloud can hold?",
+   "options": {
+    "A": "2.2 x 10-8 F, 17 C",
+    "B": "2.2 x 10-8 F, 37 C",
+    "C": "1.1 x 10-8 F, 54 C",
+    "D": "1.1 x 10-8 F, 27 C",
+    "E": "2.2 x 10-8 F, 54 C"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "C = ε₀A/d = (8.85×10^-12)(10^6)/800 = 1.1×10^-8 F; Q = ε₀AE = (8.85×10^-12)(10^6)(3×10^6) = 26.6 ≈ 27 C."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0014",
+   "type": "mcq",
+   "stem": "A point object is placed 5 cm away from a plane mirror. The mirror is rotated through angle 20o about the point of incidence. Calculate the shortest distance between the old and the new position of the image.",
+   "options": {
+    "A": "3.42 cm",
+    "B": "11.70 cm",
+    "C": "1.90 cm",
+    "D": "34.2 cm",
+    "E": "342 cm"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Rotating a mirror by θ rotates the reflected ray by 2θ. The image shifts by 2d·sinθ = 2(5)sin20° = 3.42 cm."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0015",
+   "type": "mcq",
+   "stem": "An object is placed along the principal axis of a converging mirror of radius of curvature 30 cm such that the real image of the object which is three times its size is obtained on the screen. Where should the object be placed?",
+   "options": {
+    "A": "200.0 cm",
+    "B": "0.2 cm",
+    "C": "20.0 cm",
+    "D": "15 cm",
+    "E": "3.0 cm"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "f = 15 cm, m = -3 (real): v = 3u. 1/15 = 1/3u + 1/u = 4/3u → u = 20 cm."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0016",
+   "type": "mcq",
+   "stem": "Where should the object be placed (converging mirror, R = 30 cm) if a virtual image of similar magnification (three times) is required?",
+   "options": {
+    "A": "100.0 cm",
+    "B": "10 cm",
+    "C": "0.1 cm",
+    "D": "45.0 cm",
+    "E": "12.0 cm"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "m = +3 (virtual): v = -3u. 1/15 = -1/3u + 1/u = 2/3u → u = 10 cm."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0017",
+   "type": "mcq",
+   "stem": "A rectangular glass block (n = 1.52) is placed inside clean water. A layer of oil (n = 1.44) floats on the water surface. A ray of light from air strikes the oil surface at an angle of incidence of 38o; calculate the angle of refraction at the water-glass interface (refractive index of air = 1.00, water = 1.33).",
+   "options": {
+    "A": "29.3o",
+    "B": "32.9o",
+    "C": "92.3o",
+    "D": "23.9o",
+    "E": "39.2o"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Snell at each boundary: sin38° = 1.33 sinθ_w = 1.52 sinθ_g → sinθ_g = 0.6157/1.52 = 0.4051 → θ_g = 23.9°."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0018",
+   "type": "mcq",
+   "stem": "A lens is required to have a power of -2.5 dioptres in air. The convex front surface has a radius of curvature of 30.0 cm. Calculate the radius of curvature of the rear surface (n = 1.5).",
+   "options": {
+    "A": "-0.12 m",
+    "B": "-1.20 m",
+    "C": "-12.0 m",
+    "D": "12.0 m",
+    "E": "0.12 m"
+   },
+   "marks": 1,
+   "answer": "E",
+   "explanation": "1/f = (n-1)(1/R1 - 1/R2): -2.5 = 0.5(1/0.30 - 1/R2) → 1/R2 = 3.33 + 5 = 8.33 → R2 = 0.12 m (concave rear surface, centre 12 cm beyond the lens)."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0019",
+   "type": "mcq",
+   "stem": "A 12 V battery is connected to a 60 Ω resistor. How much charge will flow through the resistor in 20 s?",
+   "options": {
+    "A": "0.010 C",
+    "B": "0.20 C",
+    "C": "4.0 C",
+    "D": "48 C",
+    "E": "14 C"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Q = It = (V/R)t = (12/60)(20) = 4.0 C."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0020",
+   "type": "mcq",
+   "stem": "A cell whose emf is 1.5 V and internal resistance is 0.60 Ω is charged by supplying a 0.50 A current. What is the terminal voltage of the cell while being charged?",
+   "options": {
+    "A": "0.30 V",
+    "B": "1.2 V",
+    "C": "1.5 V",
+    "D": "1.8 V",
+    "E": "2.0 V"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "While charging, V = ε + Ir = 1.5 + (0.5)(0.6) = 1.8 V."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0021",
+   "type": "mcq",
+   "stem": "A 12 V battery supplies a 5.0 A current to two light bulbs. The power output of one of the bulbs is P1 = 24 W. What is the power output of the other bulb?",
+   "options": {
+    "A": "14 W",
+    "B": "24 W",
+    "C": "36 W",
+    "D": "60 W",
+    "E": "30 W"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Total power = IV = 5×12 = 60 W; other bulb = 60 - 24 = 36 W."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0022",
+   "type": "mcq",
+   "stem": "A battery whose emf is 6.0 V is connected to a 2.0 Ω resistor. The voltage drop across the 2.0 Ω resistor is 5.0 V. What is its internal resistance?",
+   "options": {
+    "A": "0.40 Ω",
+    "B": "1.7 Ω",
+    "C": "2.4 Ω",
+    "D": "2.5 Ω",
+    "E": "1.0 Ω"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "I = 5/2 = 2.5 A; lost volts = 6 - 5 = 1 V; r = 1/2.5 = 0.40 Ω."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0023",
+   "type": "mcq",
+   "stem": "........................ and ........................... are respectively the names given to the first magnets discovered by the Greeks and the least magnetic structure that can be enclosed by a Gaussian surface.",
+   "options": {
+    "A": "loadstones and monopole",
+    "B": "lodestones and dipole",
+    "C": "loudstone and mesopole",
+    "D": "magnetostone and north pole",
+    "E": "ironstone and conpole"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The Greeks discovered lodestones (magnetite), and since magnetic field lines are closed loops, an isolated magnetic monopole cannot be enclosed - flux through any Gaussian surface is zero."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0024",
+   "type": "mcq",
+   "stem": "A 2 m long wire carrying a current of 2 mA is placed in a field of 15 mT. The force on the wire if it is placed at right angles to the field is",
+   "options": {
+    "A": "0 N",
+    "B": "30 μN",
+    "C": "60 μN",
+    "D": "6 N",
+    "E": "3 N"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "F = BIL = (15×10^-3)(2×10^-3)(2) = 60×10^-6 = 60 μN."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0025",
+   "type": "mcq",
+   "stem": "A Gaussian surface in the shape of a right circular cylinder with end caps has a radius of 15 cm and a length of 75 cm. Through one end there is an inward magnetic flux of 25.0 μWb. At the other end, there is a uniform magnetic field of 0.2 mT, normal to the surface and directed outward. Determine the magnetic flux through the curved surface.",
+   "options": {
+    "A": "10.86 μWb",
+    "B": "14.14 μWb",
+    "C": "20 μWb",
+    "D": "-14.14 μWb",
+    "E": "10.24 μWb"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Φ_end2 = BA = (2×10^-4)(π×0.15²) = 14.14 μWb outward; Φ_end1 = -25.0 μWb (inward). Gauss's law for magnetism (Φtotal = 0): Φ_curved = 25.0 - 14.14 = 10.86 μWb."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0026",
+   "type": "mcq",
+   "stem": "A circuit consists of a capacitor of 5 μF and a resistor of 100 Ω. An alternating emf of 20 Vr.m.s. and 60 Hz is applied. The current, Ir.m.s flowing in the circuit and the phase angle, φ between applied emf and current are respectively",
+   "options": {
+    "A": "10 mA and 60.0o",
+    "B": "12 mA and 16.5o",
+    "C": "18 mA and 45.0o",
+    "D": "25 mA and 35.0o",
+    "E": "37 mA and 79.3o"
+   },
+   "marks": 1,
+   "answer": "E",
+   "explanation": "Xc = 1/(2πfC) = 530.5 Ω; Z = √(100² + 530.5²) = 539.8 Ω; Irms = 20/539.8 = 37 mA; φ = arctan(530.5/100) = 79.3° (current leads emf)."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0027",
+   "type": "mcq",
+   "stem": "A resistor of 80 Ω, a capacitor of 25 mF and an inductor of 36 mH are connected in series. An alternating emf of 25 Vr.m.s is connected across them. Resonance of frequency ................ occurs when ................",
+   "options": {
+    "A": "5.31 μHz when ZC = ZL",
+    "B": "5.31 MHz when ZC = 2ZL",
+    "C": "3.15 Hz when ZC = ½ZL",
+    "D": "5.31 Hz when ZC = ZL",
+    "E": "3.15 Hz when ZC = ZL"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "f0 = 1/(2π√LC) = 1/(2π√(36×10^-3 × 25×10^-3)) = 1/(2π×0.03) = 5.31 Hz, and at resonance Xc = XL."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0028",
+   "type": "mcq",
+   "stem": "Isotope A has a half-life of seconds, and isotope B has a half-life of millions of years. Which isotope is more radioactive?",
+   "options": {
+    "A": "Isotope A",
+    "B": "Isotope B",
+    "C": "It depends on size",
+    "D": "No difference",
+    "E": "It depends on temperature"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "A short half-life means rapid decay = high activity, so isotope A is more radioactive."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0029",
+   "type": "mcq",
+   "stem": "The mass of a nucleus is always ______ the sum of the masses of the individual particles of which it is made.",
+   "options": {
+    "A": "Less than",
+    "B": "greater than",
+    "C": "equal to",
+    "D": "Less or greater than",
+    "E": "None of the above"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The binding energy lowers the nucleus's mass: mass defect makes M_nucleus < sum of nucleon masses."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0030",
+   "type": "mcq",
+   "stem": "The ejection of an alpha particle from a nucleus results in",
+   "options": {
+    "A": "an increase in the atomic number by one",
+    "B": "an increase in the atomic mass by four",
+    "C": "a decrease in the atomic number by two",
+    "D": "All of the above",
+    "E": "None of the above"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Alpha decay: Z decreases by 2 and A decreases by 4; only 'decrease in atomic number by two' is correct."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0031",
+   "type": "mcq",
+   "stem": "If the threshold wavelength of a metal is 5.4 x 10-7 m, the binding energy of an electron to the metal surface is",
+   "options": {
+    "A": "2.3 eV",
+    "B": "2.5 eV",
+    "C": "4.0 eV",
+    "D": "3.0 eV",
+    "E": "4.5 eV"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "W0 = hc/λ0 = (6.63×10^-34)(3×10^8)/(5.4×10^-7) = 3.68×10^-19 J = 2.30 eV."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0032",
+   "type": "mcq",
+   "stem": "Calculate the output voltage of a transformer with primary voltage 100V, and the number of turns on the primary coil is 10. If the number of turns on the secondary coil is 20, determine if it is a step up or step down transformer.",
+   "options": {
+    "A": "200V, Step down transformer",
+    "B": "50V, Step down transformer",
+    "C": "50V, Step up transformer",
+    "D": "200V, Step up transformer"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Vs/Vp = Ns/Np = 20/10 = 2 → Vs = 200 V; more secondary turns = step-up."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0033",
+   "type": "mcq",
+   "stem": "Given R = 200Ω; ΔΦB/Δt = 0.25 Wbs-1, calculate the current that passes through the circular loop.",
+   "options": {
+    "A": "12.5mA",
+    "B": "1.25 mA",
+    "C": "125mA",
+    "D": "0.125 mA"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "emf = dΦ/dt = 0.25 V (single loop); I = 0.25/200 = 1.25×10^-3 A = 1.25 mA."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0034",
+   "type": "mcq",
+   "stem": "Calculate the motional emf induced along a 25 km conductor moving at an orbital speed of 4.2 km/s perpendicular to the earth's magnetic field of 2 x 10^-5 T.",
+   "options": {
+    "A": "21 KV",
+    "B": "2.1 KV",
+    "C": "0.21 KV",
+    "D": "2.1 x 10^-5 V"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "ε = BLv = (2×10^-5)(25×10^3)(4.2×10^3) = 2100 V = 2.1 kV."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0035",
+   "type": "mcq",
+   "stem": "Rutherford and Thompson used the following experiments respectively to explain atomic structure.",
+   "options": {
+    "A": "Cathode Ray Experiment / Alpha Scattering Experiment",
+    "B": "Muliken Oil drop Experiment / Alpha Scattering Experiment",
+    "C": "Quantum Theory Experiment / Cathode Ray Experiment",
+    "D": "Alpha Scattering Experiment / Cathode Ray Experiment"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Rutherford: alpha-particle scattering; Thomson: the cathode-ray (discharge-tube) experiment."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0036",
+   "type": "mcq",
+   "stem": "In the spectral emission lines of the hydrogen atom, emissions to the line n=2 is also known as?",
+   "options": {
+    "A": "Balmer Series",
+    "B": "Layman Series",
+    "C": "Paschen Series",
+    "D": "Hydrogen Series"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Transitions ending on n = 2 give the Balmer (visible) series."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0037",
+   "type": "mcq",
+   "stem": "The electronic configuration (subshells) in an atom is arranged in the following order",
+   "options": {
+    "A": "p, d, s, f",
+    "B": "s, p, d, f",
+    "C": "a, b, c, d",
+    "D": "d, f, p, s"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Orbitals fill in the order s, p, d, f."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0038",
+   "type": "mcq",
+   "stem": "A series circuit consists of a 100Ω resistor, a coil of 0.8H and a 20µF capacitor, connected across a 110V, 60 Hz power source; calculate the impedance.",
+   "options": {
+    "A": "196Ω",
+    "B": "16,859Ω",
+    "C": "318Ω",
+    "D": "484Ω"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "XL = 2πfL = 301.6 Ω, Xc = 1/(2πfC) = 132.6 Ω; Z = √(100² + (301.6-132.6)²) = 196 Ω."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0039",
+   "type": "mcq",
+   "stem": "Given that the power loss over a transmission line is 200W and the current that passes through it is 25A; calculate the resistance in the wires.",
+   "options": {
+    "A": "0.125Ω",
+    "B": "3.125Ω",
+    "C": "0.32Ω",
+    "D": "8Ω"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "P = I²R → R = 200/625 = 0.32 Ω."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0040",
+   "type": "mcq",
+   "stem": "The combined effect of R, XL, and XC in an AC circuit is called _____",
+   "options": {
+    "A": "Capacitive Reactance",
+    "B": "Capacitive Inductance",
+    "C": "Resistance of an AC Circuit",
+    "D": "Impedance"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The vector combination of R, XL and XC is the impedance, Z."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0041",
+   "type": "mcq",
+   "stem": "All of the following operate based on the principle of electromagnetic induction except _____",
+   "options": {
+    "A": "Generators",
+    "B": "Transformers",
+    "C": "Electric Stoves",
+    "D": "Metal Doors"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Electric stoves heat by Joule (I²R) heating, not electromagnetic induction."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0042",
+   "type": "mcq",
+   "stem": "Not only voltage is induced when a magnet is thrust in a coil of wire but _______ also is induced.",
+   "options": {
+    "A": "Power",
+    "B": "Energy",
+    "C": "Current",
+    "D": "All of the above"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The induced emf drives an induced current around the closed coil."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0043",
+   "type": "mcq",
+   "stem": "Which of the following statements is incorrect?",
+   "options": {
+    "A": "The magnetic flux through a surface is proportional to the number of field lines passing through the surface.",
+    "B": "Lenz law gives the direction of the induced current.",
+    "C": "In Flemings' right hand rule, the second finger shows the direction of the Motion.",
+    "D": "Motion is one of the major causes of Induction."
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "In Fleming's right-hand rule the THUMB gives motion; the second (middle) finger gives the induced current."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0044",
+   "type": "mcq",
+   "stem": "Which of the following is not an advantage of the AC generator over the DC generator?",
+   "options": {
+    "A": "AC generators can be easily stepped up or down using transformers.",
+    "B": "AC generators are smaller in size than the DC generators.",
+    "C": "Losses are lesser in the AC generator as compared to the DC generator.",
+    "D": "AC generators are safer to use than DC generators."
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "AC at high voltage is not inherently safer - safety is not an AC-generator advantage."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0045",
+   "type": "mcq",
+   "stem": "When an emf is induced in a coil as a result of changing magnetic flux produced in a second coil, the phenomenon is called ______",
+   "options": {
+    "A": "Mutual Inductance",
+    "B": "Self-Inductance",
+    "C": "Capacitive Inductance",
+    "D": "Electromagnetic Induction"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Flux change from a NEIGHBOURING coil = mutual inductance."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0046",
+   "type": "mcq",
+   "stem": "The first man to propose that matter is made up of atoms is ____",
+   "options": {
+    "A": "Rutherford",
+    "B": "Niels Bohr",
+    "C": "Thompson",
+    "D": "Democritus"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Democritus (Greek atomist) first proposed atoms; Dalton made it scientific."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0047",
+   "type": "mcq",
+   "stem": "Consider the atom ⁴₂X; the number 4 (A) represents?",
+   "options": {
+    "A": "Atomic Number",
+    "B": "Mass Number",
+    "C": "Proton Number",
+    "D": "Quantum Number"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The superscript A = mass number (protons + neutrons); Z = 2 is the atomic number."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0048",
+   "type": "mcq",
+   "stem": "The current I in a circuit is given by the equation I = 30 sin100πt. Calculate the frequency, peak value and the rms value of the current.",
+   "options": {
+    "A": "50Hz, 30 A and 15√2 A",
+    "B": "15√2 Hz, 50Hz and 30A",
+    "C": "30Hz, 15√2 A and 50A",
+    "D": "100Hz, 30A and 15√2 A"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "ω = 100π = 2πf → f = 50 Hz; I0 = 30 A; Irms = 30/√2 = 15√2 A."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0049",
+   "type": "mcq",
+   "stem": "At resonance in an AC, RLC series circuit, which of the following is incorrect?",
+   "options": {
+    "A": "f₀ = 1/(2π√LC)",
+    "B": "X_C = X_L",
+    "C": "ω₀ = 1/√LC",
+    "D": "X_C > X_L"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "At resonance Xc = XL exactly - Xc > XL is the false statement."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0050",
+   "type": "mcq",
+   "stem": "The following are parts of Bohr's postulates except",
+   "options": {
+    "A": "The electrons inside the atom are placed in discrete orbit",
+    "B": "Most of the charge and mass of the atom resides in the nucleus",
+    "C": "As long as an electron stays in its own stationary state, it does not radiate energy",
+    "D": "Electrons can jump to higher levels by absorbing energy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The nuclear model is Rutherford's; it is not one of Bohr's three postulates."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0051",
+   "type": "mcq",
+   "stem": "The resistance of an electrical conductor depends on the following except",
+   "options": {
+    "A": "Length",
+    "B": "Permeability",
+    "C": "Nature of the Material / Resistivity",
+    "D": "Temperature of the Material",
+    "E": "Cross-sectional Area"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "R = ρL/A with ρ varying with material and temperature; permeability is a magnetic property, irrelevant to resistance."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0052",
+   "type": "mcq",
+   "stem": "The resistance of a wire of length 100cm and diameter 0.3mm is found to be 3.0Ω. Calculate the conductivity of the wire.",
+   "options": {
+    "A": "4.71 × 10^-7 Ωm",
+    "B": "4.71 × 10^6 (Ωm)^-1",
+    "C": "2.12 × 10^-7 Ωm",
+    "D": "2.12 × 10^-7 (Ωm)^-1"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "ρ = RA/L = 3 × π(0.15×10^-3)²/1.0 = 2.12×10^-7 Ω·m; σ = 1/ρ = 4.71×10^6 (Ω·m)^-1."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0053",
+   "type": "mcq",
+   "stem": "A parallel plate capacitor is connected across a potential difference of 10.0V and stores 5.0C of charge. The capacitor has a plate separation of 1.00mm. Find the area of each plate.",
+   "options": {
+    "A": "1.05 × 10^7 m²",
+    "B": "2.15 × 10^7 m²",
+    "C": "3.05 × 10^7 m²",
+    "D": "5.65 × 10^7 m²",
+    "E": "7.25 × 10^7 m²"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "C = Q/V = 0.5 F; A = Cd/ε₀ = (0.5)(10^-3)/(8.85×10^-12) = 5.65×10^7 m²."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0054",
+   "type": "mcq",
+   "stem": "Work done in charging a capacitor is",
+   "options": {
+    "A": "QV",
+    "B": "½QV",
+    "C": "2QV",
+    "D": "QV²",
+    "E": "½QV²"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The average potential during charging is V/2, so W = ½QV."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0055",
+   "type": "mcq",
+   "stem": "The four factors determining inductance are the number of turns, coil length, core area and ?",
+   "options": {
+    "A": "Permeability",
+    "B": "Reluctance",
+    "C": "Counter EMF",
+    "D": "Coefficient of Coupling",
+    "E": "Permittivity"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "L depends on N², length, area, and the core's permeability (μ)."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0056",
+   "type": "mcq",
+   "stem": "Calculate the current in an inductor if the energy stored is 240J and the inductance is 24H.",
+   "options": {
+    "A": "1A",
+    "B": "24A",
+    "C": "34A",
+    "D": "4A",
+    "E": "4.5A"
+   },
+   "marks": 1,
+   "answer": "E",
+   "explanation": "E = ½LI² → I = √(2×240/24) = √20 = 4.47 ≈ 4.5 A."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0057",
+   "type": "mcq",
+   "stem": "Suppose that two point charges each with a charge of +1.00C are separated by a distance of 1.00m; determine the magnitude of the electrical force (F) of repulsion between them.",
+   "options": {
+    "A": "9.0 × 10^9 N",
+    "B": "9.0 × 10^9 Nm²C^-2",
+    "C": "9.0 × 10^9 C",
+    "D": "9.0 × 10^9 m²",
+    "E": "9.0 × 10^9 C²"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "F = ke²/d² = (9×10^9)(1)(1)/(1)² = 9.0×10^9 N."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0058",
+   "type": "mcq",
+   "stem": "An instrument used to measure smaller units of current is known as?",
+   "options": {
+    "A": "Micro-ammeter",
+    "B": "Galvanometer",
+    "C": "Ammeter",
+    "D": "None of the above"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Micro-currents are measured with a micro-ammeter."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0059",
+   "type": "mcq",
+   "stem": "A device used to measure the EMF of a cell or the potential difference across a resistor in a circuit is",
+   "options": {
+    "A": "Ammeter",
+    "B": "Voltammeter",
+    "C": "Galvanometer",
+    "D": "Millimeter",
+    "E": "Potentiometer"
+   },
+   "marks": 1,
+   "answer": "E",
+   "explanation": "The potentiometer measures EMF by the null (zero-current) method."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0060",
+   "type": "mcq",
+   "stem": "Determine the potential difference which must be applied to a 2kΩ resistor in order that a current of 10mA may flow.",
+   "options": {
+    "A": "2V",
+    "B": "20V",
+    "C": "200V",
+    "D": "2000V",
+    "E": "20000V"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "V = IR = (10×10^-3)(2000) = 20 V."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0061",
+   "type": "mcq",
+   "stem": "Calculate the power dissipated when a current of 4mA flows through a resistance of 5kΩ.",
+   "options": {
+    "A": "80W",
+    "B": "8W",
+    "C": "0.8W",
+    "D": "0.08W",
+    "E": "0.008W"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "P = I²R = (4×10^-3)²(5000) = 0.08 W."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0062",
+   "type": "mcq",
+   "stem": "Wound coils of wire that function as magnets when an electrical current is passed through them are called?",
+   "options": {
+    "A": "Temporary Magnets",
+    "B": "Permanent Magnets",
+    "C": "Electromagnets",
+    "D": "Diamagnet",
+    "E": "Paramagnet"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Current-carrying coil magnets = electromagnets."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0063",
+   "type": "mcq",
+   "stem": "The electrical energy supplied to a coil (inductor) is stored in the form of?",
+   "options": {
+    "A": "Electric Field",
+    "B": "Magnetic Field",
+    "C": "Force Field",
+    "D": "Electrostatic Field",
+    "E": "None of the above"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "An inductor stores energy in its magnetic field (E = ½LI²)."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0064",
+   "type": "mcq",
+   "stem": "The resistors R1 = 1Ω, R2 = 2Ω and R3 = 2Ω are connected in parallel. The equivalent resistance is",
+   "options": {
+    "A": "0.5Ω",
+    "B": "5Ω",
+    "C": "2Ω",
+    "D": "0.2Ω",
+    "E": "0.05Ω"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "1/R = 1/1 + 1/2 + 1/2 = 2 → R = 0.5 Ω."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0065",
+   "type": "mcq",
+   "stem": "Find the total capacitance for three capacitors connected in series, given their individual capacitances are 1.00, 5.00, and 8.00 μF.",
+   "options": {
+    "A": "14.00μF",
+    "B": "1.325μF",
+    "C": "14.0F",
+    "D": "1.325F",
+    "E": "0.755μF"
+   },
+   "marks": 1,
+   "answer": "E",
+   "explanation": "1/C = 1/1 + 1/5 + 1/8 = 1.325 → C = 0.755 μF."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0066",
+   "type": "mcq",
+   "stem": "A kilo-ampere per hour is a unit of:",
+   "options": {
+    "A": "Current",
+    "B": "Charge",
+    "C": "Charge per time",
+    "D": "Power"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Amperes × hours = coulombs = charge."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0067",
+   "type": "mcq",
+   "stem": "Determine the total capacitance across circuit AB below: capacitors of 20μF, 20μF, 10μF and 20μF connected in series.",
+   "options": {
+    "A": "4.0 μF",
+    "B": "5.0 μF",
+    "C": "20 μF",
+    "D": "70 μF"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "1/C = 1/20 + 1/20 + 1/10 + 1/20 = 0.25 → C = 4.0 μF."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0068",
+   "type": "mcq",
+   "stem": "Determine the resistance of 1200m of copper cable having a diameter of 12mm if the resistivity of copper is 1.7 × 10^-8 Ωm.",
+   "options": {
+    "A": "0.28Ω",
+    "B": "0.15Ω",
+    "C": "0.18Ω",
+    "D": "0.12Ω"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "R = ρL/A = (1.7×10^-8)(1200)/(π×(6×10^-3)²) = 0.18 Ω."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0069",
+   "type": "mcq",
+   "stem": "If the force between two charges is 80 N, and the distance between the charges is doubled, the force will be",
+   "options": {
+    "A": "40 N",
+    "B": "30 N",
+    "C": "20 N",
+    "D": "10 N"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "F ∝ 1/r²: doubling r divides F by 4 → 80/4 = 20 N."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0070",
+   "type": "mcq",
+   "stem": "Determine the distance between two point charges of magnitude 26.0μC and 47.0μC when the mutual force of attraction between them is 5.70 N.",
+   "options": {
+    "A": "1.29 m",
+    "B": "1.39 m",
+    "C": "2.35 m",
+    "D": "3.39 m"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "r = √(kq₁q₂/F) = √((9×10^9)(26×10^-6)(47×10^-6)/5.7) = √1.93 = 1.39 m."
+  },
+  {
+   "id": "uni-uniosun-phy102-bank-0071",
+   "type": "mcq",
+   "stem": "Two small spheres carry charges of -2 nC and 8 nC and they are 20 cm apart in air. Calculate the force between the same charges when the distance is doubled.",
+   "options": {
+    "A": "3.60 μN",
+    "B": "0.90 μN",
+    "C": "0.60 μN",
+    "D": "2.03 μN"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "F = kq₁q₂/r² = (9×10^9)(2×10^-9)(8×10^-9)/(0.2)² = 3.6 μN; doubling r gives 3.6/4 = 0.90 μN."
+  }
+ ]
+}

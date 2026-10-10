@@ -2,6 +2,7 @@
 
 import { api } from './api';
 import { idbGetBundle, idbSetBundle, migrateLocalStorageBundles } from './bundle-store';
+import { decryptBundleFile, isEncryptedBundleFile } from './bundle-crypto';
 import { composePaper, parsePaperCode, segmentSubjects } from './paper-compose';
 
 export interface ExamMeta {
@@ -92,6 +93,25 @@ async function fetchStatic<T>(path: string): Promise<T> {
 }
 
 /**
+ * Fetch one bundle off the static shelf. The shelf now ships AES-GCM
+ * ciphertext (bundle-crypto.ts): fetch raw, decrypt with the bank's
+ * key from the API, parse. A file that is still plain JSON (pre-shield
+ * deploy or local dev bake) passes straight through so rollout can
+ * never break practice.
+ */
+async function fetchStaticBundle(code: string): Promise<Bundle> {
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+  const res = await fetch(`${base}/bundles/${code}.json`);
+  if (!res.ok) throw new Error(`static bundle ${code}: ${res.status}`);
+  const raw: unknown = await res.json();
+  if (isEncryptedBundleFile(raw)) {
+    const text = await decryptBundleFile(raw, code);
+    return JSON.parse(text) as Bundle;
+  }
+  return raw as Bundle;
+}
+
+/**
  * Fetch a raw bank pack by its manifest code (`waec-biology-bank`,
  * `uni-futa-cos101`, …), static shelf first, API second. The Study
  * surfaces read banks directly - no compose machinery, no session -
@@ -102,7 +122,7 @@ export async function fetchBankBundle(code: string): Promise<Bundle> {
   const exam = manifest?.exams.find((e) => e.code === code);
   if (exam) return fetchBundle(exam);
   try {
-    return await fetchStatic<Bundle>(`/bundles/${code}.json`);
+    return await fetchStaticBundle(code);
   } catch {
     return api<Bundle>(`/bundles/${code}`, { noRedirect: true });
   }
@@ -129,7 +149,7 @@ export async function fetchBundle(exam: ExamMeta): Promise<Bundle> {
   // fetchBundleByCode keeps going straight to the API.
   let bundle: Bundle;
   try {
-    bundle = await fetchStatic<Bundle>(`/bundles/${exam.code}.json`);
+    bundle = await fetchStaticBundle(exam.code);
   } catch {
     bundle = await api<Bundle>(`/bundles/${exam.code}`);
   }

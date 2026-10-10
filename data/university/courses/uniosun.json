@@ -162,6 +162,36 @@
    "bank": "uni-uniosun-gns104-bank",
    "questionCount": 204,
    "pdf": null
+  },
+  {
+   "slug": "bio102",
+   "code": "BIO 102",
+   "title": "BIO 102: General Biology II (diversity of organisms)",
+   "semester": 2,
+   "icon": "biotech",
+   "bank": "uni-uniosun-bio102-bank",
+   "questionCount": 229,
+   "pdf": null
+  },
+  {
+   "slug": "phy102",
+   "code": "PHY 102",
+   "title": "PHY 102: General Physics II (waves, electricity, optics, modern physics)",
+   "semester": 2,
+   "icon": "science",
+   "bank": "uni-uniosun-phy102-bank",
+   "questionCount": 71,
+   "pdf": null
+  },
+  {
+   "slug": "mth106",
+   "code": "MTH 106",
+   "title": "MTH 106: Mathematics for Physical Sciences II",
+   "semester": 2,
+   "icon": "menu_book",
+   "bank": "uni-uniosun-mth106-bank",
+   "questionCount": 30,
+   "pdf": null
   }
  ]
 }

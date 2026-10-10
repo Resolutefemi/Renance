@@ -65,7 +65,10 @@ func arenaTestServer(t *testing.T) (*Server, string, string) {
 
 func dialArena(t *testing.T, url string) *websocket.Conn {
 	t.Helper()
-	conn, _, err := websocket.DefaultDialer.Dial(url, nil)
+	// The bot shield refuses tool UAs (Go-http-client) on every route
+	// except probes; the test dialer identifies as the app.
+	hdr := http.Header{"User-Agent": []string{"RenanceTest/1.0 (arena)"}}
+	conn, _, err := websocket.DefaultDialer.Dial(url, hdr)
 	if err != nil {
 		t.Fatalf("dial %s: %v", url, err)
 	}
@@ -155,6 +158,7 @@ func TestArenaStatusRoute(t *testing.T) {
 
 	req, _ := http.NewRequest("GET", srv.URL+"/arena/status", nil)
 	req.Header.Set("Authorization", "Bearer "+tok1)
+	req.Header.Set("User-Agent", "RenanceTest/1.0 (httptest)")
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
 		t.Fatal(err)

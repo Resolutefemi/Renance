@@ -477,7 +477,6 @@ class _MagicDustPainter extends CustomPainter {
     const int n = 42;
     for (int i = 0; i < n; i++) {
       final double rx = rng.nextDouble();
-      final double ry = rng.nextDouble();
       final double speed = 0.10 + rng.nextDouble() * 0.22; // loops/min
       final double drift = (rng.nextDouble() - 0.5) * 0.14;
       final double twinklePhase = rng.nextDouble() * 2 * math.pi;
