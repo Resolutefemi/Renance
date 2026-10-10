@@ -29,5 +29,9 @@ cd "$ROOT"
 : "${NEXT_PUBLIC_SITE_URL:=https://renance.app}"
 export NEXT_PUBLIC_BASE_PATH NEXT_PUBLIC_API_BASE NEXT_PUBLIC_GOOGLE_CLIENT_ID NEXT_PUBLIC_SITE_URL
 
+# 2026-10-11 SHIELD: bundles bake plain then get AES-256-GCM encrypted
+# in place with the per-bank key derived from BUNDLE_MASTER_KEY (same
+# secret as the Render API env). Fail-closed: no secret = no deploy.
 python3 scripts/web_bundles.py
+node scripts/encrypt_bundles.mjs
 pnpm --filter @renance/web exec next build

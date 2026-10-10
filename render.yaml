@@ -159,3 +159,43 @@ services:
       #   cap entirely.
       - key: RESET_MAIL_DAILY_CAP
         value: "300"
+      # ------------------------------------------------------------------
+      # BUNDLE SHIELD (founder directive 2026-10-11: "someone is trying
+      # to scrape all my hard work past questions from
+      # renance-api.onrender.com - make sure no agentic AI can scrape my
+      # questions, I need ultimate security for my 200,000+ past
+      # questions").
+      #
+      # BUNDLE_MASTER_KEY is the 32-byte hex (64 hex chars) master secret
+      # shared ONLY with the web build env (Vercel) - never committed.
+      # Generate once:  openssl rand -hex 32
+      # It powers:
+      #   GET /bundles/key?code=<bank>  - per-bank AES key delivery
+      #     (signed-in: per-account daily quota; anonymous: proof-of-work
+      #      + per-IP caps) for the ENCRYPTED static bundles on renance.app
+      #   per-account distinct-bank daily quotas on GET /bundles/{code}
+      #   honeypot decoy codes -> poisoned canary banks + account strikes
+      #   invisible per-account watermarks on served question stems
+      #   AI-crawler user-agent blocks + robots.txt sitewide
+      # Rotate any time: set a new key + new BUNDLE_KEY_ID here AND in
+      # the Vercel env, redeploy both (kid bump tells clients to refetch).
+      - key: BUNDLE_MASTER_KEY
+        sync: false
+      - key: BUNDLE_KEY_ID
+        value: "k1"
+      # Quotas: 40 distinct banks/account/day (a student prepping a few
+      # subjects never hits it; a scraper walking 1,000+ banks trips it
+      # day one), 12 anonymous key fetches/IP/hour (PoW path), 18-bit
+      # proof-of-work. All tunable without redeploying code semantics.
+      - key: BUNDLE_ACCOUNT_DAILY
+        value: "40"
+      - key: BUNDLE_IP_PER_HOUR
+        value: "12"
+      - key: BUNDLE_POW_BITS
+        value: "18"
+      # BUNDLE_ANON_KEY=false removes the anonymous key path entirely
+      # (practice requires sign-in). Default stays true so the
+      # signed-out practice UX keeps working while PoW + IP caps hold
+      # the line. Flip to "false" any time for maximum lockdown.
+      - key: BUNDLE_ANON_KEY
+        value: "true"

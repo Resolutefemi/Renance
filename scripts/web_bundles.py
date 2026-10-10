@@ -15,7 +15,7 @@ Raw key-side shapes (answers dumps, correct_letter maps, ...) are still
 stripped recursively; only the per-question `answer` / `explanation` /
 `video` / `answer_image` fields survive.
 
-Usage:  python3 scripts/web_bundles.py
+Usage:  python3 scripts/web_bundles.py   (then node scripts/encrypt_bundles.mjs)
 """
 from __future__ import annotations
 
@@ -112,6 +112,16 @@ def strip_answers(node):
     return node, 0
 
 
+# ---- shield note -------------------------------------------------------
+# 2026-10-11: this script still bakes PLAIN minified JSON to
+# apps/web/public/bundles/. The next build step,
+#   node scripts/encrypt_bundles.mjs   (reads BUNDLE_MASTER_KEY)
+# rewrites every bundle in place as AES-256-GCM ciphertext keyed per
+# bank code (see encrypt_bundles.mjs + lib/bundle-crypto.ts +
+# the study API's GET /bundles/key). Fail-closed: a build without the
+# secret stops BEFORE a plain bundle can ever deploy.
+# ------------------------------------------------------------------------
+
 def main() -> int:
     manifest_path = DATA / "manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
@@ -154,6 +164,7 @@ def main() -> int:
     print(f"baked {written}/{len(manifest['exams'])} bundles -> {OUT}")
     print(f"stripped {stripped_keys} answer-material keys")
     print(f"bundle bytes: {total_in / 1e6:.1f} MB pretty -> {total_out / 1e6:.1f} MB minified")
+    print("next step: node scripts/encrypt_bundles.mjs (BUNDLE_MASTER_KEY)")
     if missing:
         print("MISSING source files for:", ", ".join(missing), file=sys.stderr)
         return 1

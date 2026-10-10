@@ -90,6 +90,18 @@ type Server struct {
 	// founder's Brevo free-tier quota armor).
 	resetBudget *dailyMailBudget
 
+	// Bundle shield state (botshield.go, founder directive 2026-10-11:
+	// "ultimate security - no agentic AI may scrape the 200,000+ past
+	// questions"). ledger = per-account distinct-bank counts + honeypot
+	// strikes; pows = proof-of-work challenge nonces; bundleKeyIP =
+	// anonymous key-fetch cap per IP per hour; bundleBurstIP = bundle
+	// route burst rate; bundleAnonGlobal = global anonymous budget.
+	ledger           *userLedger
+	pows             *powLedger
+	bundleKeyIP      *rateLimiter
+	bundleBurstIP    *rateLimiter
+	bundleAnonGlobal *rateLimiter
+
 	// National curriculum corpus (schemes + notes) read straight
 	// from the data folder; nil keeps the routes returning clean
 	// empty lists (unit tests without a data dir).
@@ -140,6 +152,26 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
 	// churn, it is a floor.
 	s.verifyIP = newRateLimiter(6, 6)
 	s.resetBudget = newDailyMailBudget(cfg.ResetMailDailyCap)
+
+	// Bundle shield: in-memory ledgers + rate walls. The per-IP key cap
+	// is hourly (anonymous proof-of-work path only); the burst wall
+	// covers the bundle route for everyone; the anonymous global budget
+	// catches IP rotation. All three are env-tunable. Configs built
+	// directly (tests) get the Load() defaults for unset knobs.
+	if cfg.BundleAccountDaily <= 0 {
+		cfg.BundleAccountDaily = 40
+	}
+	if cfg.BundleIPPerHour <= 0 {
+		cfg.BundleIPPerHour = 12
+	}
+	if cfg.BundlePowBits <= 0 {
+		cfg.BundlePowBits = 18
+	}
+	s.ledger = &userLedger{}
+	s.pows = &powLedger{}
+	s.bundleKeyIP = newRateLimiter(cfg.BundleIPPerHour, cfg.BundleIPPerHour)
+	s.bundleBurstIP = newRateLimiter(30, 30)
+	s.bundleAnonGlobal = newRateLimiter(600, 600)
 	if cfg.DataDir != "" {
 		s.corpus = schoolcorpus.Load(cfg.DataDir)
 	}
@@ -245,8 +277,14 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("POST /internal/device/unbind", s.handleDeviceUnbind)
 	mux.HandleFunc("PUT /me/profile", s.auth(s.handleUpdateProfile))
 	mux.HandleFunc("PUT /me/daily-subjects", s.auth(s.handleSetDailySubjects))
+	mux.HandleFunc("GET /robots.txt", s.handleRobotsTxt)
 	mux.HandleFunc("GET /manifest", s.auth(s.handleManifest))
-	mux.HandleFunc("GET /bundles/{code}", s.auth(s.handleBundle))
+	// The shield wall (botshield.go): account quotas, IP burst rate,
+	// honeypot decoys, poisoned canary banks, per-user watermarks.
+	mux.HandleFunc("GET /bundles/{code}", s.auth(s.shieldBundle(s.handleBundle)))
+	// Per-bank AES key for the web's encrypted static shelf: signed-in
+	// (JWT + daily quota) or anonymous (proof-of-work + IP caps).
+	mux.HandleFunc("GET /bundles/key", s.authOptional(s.handleBundleKey))
 	mux.HandleFunc("GET /billing/plans", s.handleBillingPlans)
 	mux.HandleFunc("POST /billing/paystack/initialize", s.auth(s.handleBillingInitialize))
 	mux.HandleFunc("POST /billing/paystack/webhook", s.handlePaystackWebhook)
@@ -344,7 +382,7 @@ func (s *Server) Handler() http.Handler {
 	// moved UP into the workspace block above, where it stays on plain
 	// s.auth - students read the national corpus too.
 
-	return s.securityHeaders(s.cors(mux))
+	return s.botShield(s.securityHeaders(s.cors(mux)))
 }
 
 // ------------------------------------------------------------------ glue
@@ -386,6 +424,25 @@ func (s *Server) auth(next http.HandlerFunc) http.HandlerFunc {
 		ctx = contextWith(ctx, ctxUserID, claims.UserID)
 		ctx = contextWith(ctx, ctxUsername, claims.Username)
 		next(w, r.WithContext(ctx))
+	}
+}
+
+// authOptional verifies the bearer token when one is present and
+// enriches the context with the user, but lets anonymous callers
+// through untouched (the /bundles/key route: signed-in accounts ride
+// the quota path, anonymous ones the proof-of-work path). An invalid
+// or unverified token degrades to anonymous rather than failing.
+func (s *Server) authOptional(next http.HandlerFunc) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		header := r.Header.Get("Authorization")
+		if strings.HasPrefix(header, "Bearer ") {
+			if claims, err := jwtx.Verify(strings.TrimPrefix(header, "Bearer "), s.cfg.JWTSecret); err == nil && !claims.Unverified {
+				ctx := contextWith(r.Context(), ctxUserID, claims.UserID)
+				ctx = contextWith(ctx, ctxUsername, claims.Username)
+				r = r.WithContext(ctx)
+			}
+		}
+		next(w, r)
 	}
 }
 

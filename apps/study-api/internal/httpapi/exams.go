@@ -43,5 +43,11 @@ func (s *Server) handleBundle(w http.ResponseWriter, r *http.Request) {
         if keys, has := s.lib.KeysFor(code); has {
                 bundle = bundle.WithKeyMaterial(keys)
         }
+        // Layer 7 (botshield.go): every stem the API serves to a
+        // signed-in user carries an invisible per-account watermark;
+        // a scraped corpus decodes back to the account that pulled it.
+        if uid, err := userIDFrom(r); err == nil && uid != "" {
+                bundle = s.watermarkBundle(bundle, uid)
+        }
         writeJSON(w, http.StatusOK, bundle)
 }

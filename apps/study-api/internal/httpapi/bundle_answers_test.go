@@ -81,6 +81,9 @@ func TestBundleServesAnswerMaterialForStaticBanks(t *testing.T) {
         rec := httptest.NewRecorder()
         req := httptest.NewRequest(http.MethodGet, "/bundles/test-bank", nil)
         req.Header.Set("Authorization", "Bearer "+tok)
+        // The bundle shield (botshield.go) requires a browser-grade
+        // user-agent on question routes: no-UA requests are refused.
+        req.Header.Set("User-Agent", "RenanceTest/1.0 (httptest)")
         handler.ServeHTTP(rec, req)
         if rec.Code != http.StatusOK {
                 t.Fatalf("status = %d body = %s", rec.Code, rec.Body.String())

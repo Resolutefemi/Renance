@@ -1,0 +1,3218 @@
+{
+ "code": "uni-uniosun-bio102-bank",
+ "title": "UNIOSUN BIO 102 - General Biology II",
+ "version": 1,
+ "questionCount": 229,
+ "totalMarks": 229,
+ "category": "university",
+ "body": "University Modules",
+ "questions": [
+  {
+   "id": "uni-uniosun-bio102-bank-0001",
+   "type": "mcq",
+   "stem": "The following organisms do practice basking except",
+   "options": {
+    "A": "lizard.",
+    "B": "bats",
+    "C": "snakes",
+    "D": "crocodiles"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Bats are endothermic mammals; lizards, snakes and crocodiles are ectotherms that bask in the sun to warm up."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0002",
+   "type": "mcq",
+   "stem": "Kangaroo is an example of",
+   "options": {
+    "A": "Monotremes",
+    "B": "Eutheria",
+    "C": "Euthera",
+    "D": "Metatheria"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Kangaroos are marsupials (pouched mammals), classified under Metatheria."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0003",
+   "type": "mcq",
+   "stem": "The following are characteristics of chordates except",
+   "options": {
+    "A": "postanal tail",
+    "B": "notochord",
+    "C": "pinochord",
+    "D": "nerve cord"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Chordate characteristics are the postanal tail, notochord, dorsal nerve cord and pharyngeal slits; 'pinochord' is not a structure."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0004",
+   "type": "mcq",
+   "stem": "Wuchereria bancrofti is an example of phylum",
+   "options": {
+    "A": "Annelida",
+    "B": "Cestoda",
+    "C": "Nematoda",
+    "D": "Flatworm"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Wuchereria bancrofti, the filarial worm causing elephantiasis, belongs to the phylum Nematoda."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0005",
+   "type": "mcq",
+   "stem": "The following are flagellates except",
+   "options": {
+    "A": "Euglena",
+    "B": "Trypanosoma",
+    "C": "Leishmania",
+    "D": "Plasmodium"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Euglena, Trypanosoma and Leishmania are flagellates (class Mastigophora); Plasmodium is an apicomplexan (Sporozoa) and moves by gliding, not flagella."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0006",
+   "type": "mcq",
+   "stem": "Hydra belongs to the class",
+   "options": {
+    "A": "Hydrozoa",
+    "B": "Hyphorozoa",
+    "C": "Scyphozoa",
+    "D": "Hirudinea"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Hydra is a freshwater cnidarian of the class Hydrozoa."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0007",
+   "type": "mcq",
+   "stem": "Cephalization is first observed in the Phylum",
+   "options": {
+    "A": "Tapeworms",
+    "B": "Nematoda",
+    "C": "Platyhelminthes",
+    "D": "Arthropoda"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Cephalization (concentration of sense organs at the head end) first appears in the Platyhelminthes, the flatworms."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0008",
+   "type": "mcq",
+   "stem": "The fusion of head and thorax is called",
+   "options": {
+    "A": "Binary fussion",
+    "B": "Cephamulilothorax",
+    "C": "Cephalothorax",
+    "D": "Cephaothorax"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The fusion of head and thorax is the cephalothorax, seen in crustaceans and spiders."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0009",
+   "type": "mcq",
+   "stem": "Taenia solium infects",
+   "options": {
+    "A": "Suya",
+    "B": "Cattle",
+    "C": "Chicken",
+    "D": "Pork"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Taenia solium, the pork tapeworm, infects humans through undercooked pork."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0010",
+   "type": "mcq",
+   "stem": "Radula is found in the Phylum",
+   "options": {
+    "A": "Arthropoda",
+    "B": "Mollusca",
+    "C": "Porifera",
+    "D": "Nematoda"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The radula, a rasping tongue-like feeding structure, is characteristic of the phylum Mollusca."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0011",
+   "type": "mcq",
+   "stem": "Platypus is an example of",
+   "options": {
+    "A": "Jelly fish",
+    "B": "Monotremes",
+    "C": "Catfish",
+    "D": "None of the above"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The platypus is an egg-laying mammal, a monotreme."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0012",
+   "type": "mcq",
+   "stem": "Reptiles possess dry skin and scales to prevent",
+   "options": {
+    "A": "Evaporation",
+    "B": "presipation",
+    "C": "Humidity",
+    "D": "Temperature"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Dry scaly skin in reptiles reduces cutaneous water loss (evaporation) - an adaptation to terrestrial life."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0013",
+   "type": "mcq",
+   "stem": "Ecdysis is found in",
+   "options": {
+    "A": "Arthrilopods",
+    "B": "Millipods",
+    "C": "Annelids",
+    "D": "Mollusca"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Ecdysis (moulting of the exoskeleton) occurs in arthropods."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0014",
+   "type": "mcq",
+   "stem": "The exoskeleton found in Arthropods is called",
+   "options": {
+    "A": "ectoderm",
+    "B": "mesoderm",
+    "C": "cuticle",
+    "D": "exocuticle"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The arthropod exoskeleton is the cuticle, made of chitin."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0015",
+   "type": "mcq",
+   "stem": "Open circulatory system is found in the following organisms except",
+   "options": {
+    "A": "snails",
+    "B": "crustaceams",
+    "C": "insects",
+    "D": "reptiles"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Reptiles have a closed circulatory system; snails, crustaceans and insects have open systems."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0016",
+   "type": "mcq",
+   "stem": "Earthworm is an example of",
+   "options": {
+    "A": "Oligochaete",
+    "B": "Polychaete",
+    "C": "mesochaeta",
+    "D": "None of the above"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The earthworm is an oligochaete annelid (few bristles per segment)."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0017",
+   "type": "mcq",
+   "stem": "The repetition of cells and organs in various segments of an organism is called",
+   "options": {
+    "A": "homologous series",
+    "B": "metarization",
+    "C": "metamerism",
+    "D": "all of the above"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Metamerism is the repetition of body segments (serial homology)."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0018",
+   "type": "mcq",
+   "stem": "Scientists decide whether an organism is a plant or animal based on",
+   "options": {
+    "A": "whether it is multicellular or unicellular",
+    "B": "whether it is mobile or not",
+    "C": "how it reproduces",
+    "D": "how it obtains its food or energy"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Modern biology separates plants from animals mainly by mode of nutrition: plants are autotrophic, animals heterotrophic."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0019",
+   "type": "mcq",
+   "stem": "You are given an unstained slide of an unknown plant cell. Even with careful focus adjustments, you are able to make out only one large round structure within the cell. This is most likely to be the",
+   "options": {
+    "A": "mitochondria",
+    "B": "Golgi apparatus",
+    "C": "cell wall",
+    "D": "vacuole"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "In an unstained preparation, the cell wall is the structure most clearly visible with a light microscope."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0020",
+   "type": "mcq",
+   "stem": "Which one of the following sentences is false?",
+   "options": {
+    "A": "The cells of a whale are much larger than that of an ant",
+    "B": "The cells in our body continues to grow and divide to replace the old and damaged cells",
+    "C": "The nucleus controls most of the cellular activities within the cell.",
+    "D": "The cell wall gives plant cells a regular shape"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Cell size is roughly constant across species - whale cells are NOT much larger than ant cells, so statement A is false."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0021",
+   "type": "mcq",
+   "stem": "The father of modern taxonomy is _______",
+   "options": {
+    "A": "Robert Hooke",
+    "B": "Francesco Redi",
+    "C": "Carolos Linnaeus",
+    "D": "Edward Jenner"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Carolus Linnaeus is the father of modern taxonomy and binomial nomenclature."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0022",
+   "type": "mcq",
+   "stem": "_______ is a dynamic and flexible science in which the diversity of organisms and their relationships are studied.",
+   "options": {
+    "A": "Taxonomy",
+    "B": "Nomenclature",
+    "C": "Systematics",
+    "D": "all of the above."
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Systematics is the dynamic science of organism diversity and evolutionary relationships."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0023",
+   "type": "mcq",
+   "stem": "The reason for organisms classification includes",
+   "options": {
+    "A": "economic reason",
+    "B": "recording of the world's biodiversity",
+    "C": "discourage conservation of organisms",
+    "D": "none of the above."
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Classification records the world's biodiversity (and has economic value); it never aims to discourage conservation."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0024",
+   "type": "mcq",
+   "stem": "Example of natural classification schemes is ____________",
+   "options": {
+    "A": "Phenetic",
+    "B": "Family",
+    "C": "Order",
+    "D": "Taxon."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Phenetic (natural) classification groups organisms by overall observable similarity."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0025",
+   "type": "mcq",
+   "stem": "_________ is a classification which is based on evolutionary history or pattern of descent.",
+   "options": {
+    "A": "Phylogenetics",
+    "B": "Phenetic",
+    "C": "Genetics",
+    "D": "All of the above."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Phylogenetic classification is based on evolutionary history and pattern of descent."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0026",
+   "type": "mcq",
+   "stem": "The smallest taxonomic rank in the groups below is _______",
+   "options": {
+    "A": "Phylum",
+    "B": "Order",
+    "C": "Family",
+    "D": "Class"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Of phylum, order, family and class, family is the smallest (most exclusive) rank."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0027",
+   "type": "mcq",
+   "stem": "Oryza sativa belongs to division _______________",
+   "options": {
+    "A": "Magnoliophyta",
+    "B": "Pooles",
+    "C": "Poaceae",
+    "D": "None of the above."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Rice, Oryza sativa, is a flowering plant: division Magnoliophyta."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0028",
+   "type": "mcq",
+   "stem": "________________ have floral parts arranged in multiples of four or five.",
+   "options": {
+    "A": "Monocots",
+    "B": "Cycadophyta",
+    "C": "Dicots",
+    "D": "All of the above."
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Dicots have floral parts in multiples of four or five; monocots in multiples of three."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0029",
+   "type": "mcq",
+   "stem": "Some animals have subspecies, usually caused by geographical locotions and are called",
+   "options": {
+    "A": "Binomials",
+    "B": "Trinomials",
+    "C": "Eukarya",
+    "D": "Monera"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Names with a subspecies (three words) are trinomials."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0030",
+   "type": "mcq",
+   "stem": "Diagram illustrating hierarchy of clades is known as",
+   "options": {
+    "A": "phylogenetic tree",
+    "B": "cladogram",
+    "C": "ancestral tree",
+    "D": "all of the above"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A cladogram is the diagram illustrating the hierarchy of clades."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0031",
+   "type": "mcq",
+   "stem": "Analysis of amino acids in protein and nucleotides in nucleic acids is termed _____",
+   "options": {
+    "A": "competitive cytology",
+    "B": "comparative biochemistry",
+    "C": "cladogram",
+    "D": "phylogenetic information."
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Comparative biochemistry analyses amino acids in proteins and nucleotides in nucleic acids."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0032",
+   "type": "mcq",
+   "stem": "_____ is an example of animal with radial symmetry",
+   "options": {
+    "A": "Sponge",
+    "B": "Sea anemone",
+    "C": "Lizard",
+    "D": "Bats"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Sea anemones are radially symmetrical."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0033",
+   "type": "mcq",
+   "stem": "Animals with dual embryonic tissue layers are called",
+   "options": {
+    "A": "Diploblastic",
+    "B": "Endoderm",
+    "C": "Triploblastic",
+    "D": "All of the above."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Animals with two embryonic tissue layers (ectoderm and endoderm) are diploblastic."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0034",
+   "type": "mcq",
+   "stem": "Classification which examines shapes, sizes and development of organisms is termed",
+   "options": {
+    "A": "competitive cytology",
+    "B": "comparative morphology",
+    "C": "comparative biochemistry",
+    "D": "all of the above."
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Comparative morphology examines shapes, sizes and development."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0035",
+   "type": "mcq",
+   "stem": "Vertebrates have _______ form of symmetry",
+   "options": {
+    "A": "radial",
+    "B": "bilateral",
+    "C": "asymmetry",
+    "D": "none of the above."
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Vertebrates are bilaterally symmetrical."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0036",
+   "type": "mcq",
+   "stem": "Which of the following is the kingdom of eukaryotic, multicellular and photo-autotrophic organisms?",
+   "options": {
+    "A": "Fungi",
+    "B": "Animalia",
+    "C": "Protoctista",
+    "D": "Plantae"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Plantae is the kingdom of eukaryotic, multicellular, photosynthetic organisms."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0037",
+   "type": "mcq",
+   "stem": "Plants with soft and delicate stems, usually less than a metre tall are",
+   "options": {
+    "A": "herbs",
+    "B": "shrubs",
+    "C": "trees",
+    "D": "liana"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Herbs have soft, delicate stems under a metre tall."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0038",
+   "type": "mcq",
+   "stem": "Rice, groundnut and potato are",
+   "options": {
+    "A": "trees",
+    "B": "herbs",
+    "C": "annuals",
+    "D": "xerophytes"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Rice, groundnut and potato complete their life cycle within one growing season - annuals."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0039",
+   "type": "mcq",
+   "stem": "Gymnosperms and Angiosperms belong to",
+   "options": {
+    "A": "Filicinophyta",
+    "B": "Spermatophyta",
+    "C": "Bryophyta",
+    "D": "None of these"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Seed plants (gymnosperms and angiosperms) belong to the division Spermatophyta."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0040",
+   "type": "mcq",
+   "stem": "Which of the following is a monocotyledonous plant?",
+   "options": {
+    "A": "Rice",
+    "B": "Groundnut",
+    "C": "Potato",
+    "D": "Mango"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Rice is a monocot; groundnut, potato and mango are dicots."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0041",
+   "type": "mcq",
+   "stem": "Bryophyta have been placed among cryptogams because",
+   "options": {
+    "A": "they are heterotrophic",
+    "B": "they do not produce flowers",
+    "C": "they do not bear true roots and stems",
+    "D": "their flowers are hidden"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Cryptogams reproduce by hidden means (spores) - no flowers or seeds, which is why bryophytes are placed there."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0042",
+   "type": "mcq",
+   "stem": "Mosses occur in moist habitat primarily because",
+   "options": {
+    "A": "they need water for fertilization",
+    "B": "their rate of transpiration is usually very high",
+    "C": "they are free-floating hydrophyte",
+    "D": "None of these"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Mosses need a film of water for the flagellated male gametes to swim to the egg."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0043",
+   "type": "mcq",
+   "stem": "In the life cycle of plants showing two morphologically distinct phases, the spore represents",
+   "options": {
+    "A": "the first cell of the sporophytic phase",
+    "B": "the first cell of the gametophytic phase",
+    "C": "the last cell of the sporophytic phase",
+    "D": "the last cell of the gametophytic phase"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The spore is the first cell of the gametophytic phase - it germinates into the gametophyte."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0044",
+   "type": "mcq",
+   "stem": "Gametophytic phase is dominant in the life cycle of",
+   "options": {
+    "A": "Angiosperms",
+    "B": "Gymnosperms",
+    "C": "Bryophytes",
+    "D": "Pteridophytes"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "In bryophytes the gametophyte is the dominant, photosynthetic generation."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0045",
+   "type": "mcq",
+   "stem": "Pteridophytes are also called",
+   "options": {
+    "A": "Phanerogams",
+    "B": "Cryptogams",
+    "C": "Vascular cryptogams",
+    "D": "Thallophytes"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Pteridophytes are vascular cryptogams: seedless plants with xylem and phloem."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0046",
+   "type": "mcq",
+   "stem": "Which of the following display circinate vernation?",
+   "options": {
+    "A": "Bryophytes",
+    "B": "Pteridophytes",
+    "C": "Lower gymnosperms",
+    "D": "B and C"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Both pteridophytes (ferns) and lower gymnosperms (cycads) show circinate vernation - young leaves coiled like a crozier."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0047",
+   "type": "mcq",
+   "stem": "Red colour of Rhodophyta is due to",
+   "options": {
+    "A": "phycoerythrin",
+    "B": "phycocyanin",
+    "C": "fucoxanthin",
+    "D": "xanthophyll"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The red colour of red algae (Rhodophyta) comes from the pigment phycoerythrin."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0048",
+   "type": "mcq",
+   "stem": "When seeds of a plant are borne nakedly on megasporophylls and are not enclosed in a fruit wall, the plant belongs to",
+   "options": {
+    "A": "Dicotyledonae",
+    "B": "Monocotyledonae",
+    "C": "Gynospermae",
+    "D": "Angiospermae"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Naked seeds borne on megasporophylls without a fruit wall = gymnosperms."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0049",
+   "type": "mcq",
+   "stem": "Which of the following is a biennial plant?",
+   "options": {
+    "A": "Wheat",
+    "B": "Carrot",
+    "C": "Mango",
+    "D": "Sugarcane"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Carrot is a biennial - vegetative growth in year one, flowering and seed in year two."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0050",
+   "type": "mcq",
+   "stem": "Secondary growth takes place in most dicotyledonous plants because they possess",
+   "options": {
+    "A": "cambium",
+    "B": "sclereids",
+    "C": "fibres",
+    "D": "chitin"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Secondary (width) growth comes from the cambium, present in most dicots."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0051",
+   "type": "mcq",
+   "stem": "Garden egg belongs to which of the following angiospermic family?",
+   "options": {
+    "A": "Musaceae",
+    "B": "Gardenaceae",
+    "C": "Solanaceae",
+    "D": "Anarcadiaceae"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Garden egg (eggplant) belongs to the family Solanaceae (nightshades)."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0052",
+   "type": "mcq",
+   "stem": "A seed is a fertilised",
+   "options": {
+    "A": "fruit",
+    "B": "embryo",
+    "C": "endosperm",
+    "D": "ovule"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "A seed is a fertilised ovule."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0053",
+   "type": "mcq",
+   "stem": "Parallel veination is always present in the leaves of",
+   "options": {
+    "A": "dicots",
+    "B": "monocots",
+    "C": "bryophytes",
+    "D": "algae"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Parallel leaf venation characterises monocots."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0054",
+   "type": "mcq",
+   "stem": "Cocoa belongs to the family",
+   "options": {
+    "A": "Sterculiaceae",
+    "B": "Poaceae",
+    "C": "Malvaceae",
+    "D": "Cucurbitaceae"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Cocoa belongs to Sterculiaceae (sometimes merged into Malvaceae sensu lato)."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0055",
+   "type": "mcq",
+   "stem": "One of the following belongs to Musaceae",
+   "options": {
+    "A": "Okra",
+    "B": "Garden egg",
+    "C": "Plantains",
+    "D": "Water mellon"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Plantains and bananas belong to the family Musaceae."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0056",
+   "type": "mcq",
+   "stem": "Which is not a component of any taxonomy of living things?",
+   "options": {
+    "A": "The identification of organisms",
+    "B": "The organization of similar organisms into groups",
+    "C": "labeling organisms and groups with names",
+    "D": "All of the above are components of any such taxonomy"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Identification, organisation and naming are all components of taxonomy - so 'all of the above are components' is the answer to the 'not' question."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0057",
+   "type": "mcq",
+   "stem": "The groups of animals which exist in two body forms of polyp and medusa are called",
+   "options": {
+    "A": "Coelenterata",
+    "B": "Platyhelminthes",
+    "C": "Mollusc",
+    "D": "Annelids"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Coelenterates (cnidarians) alternate between the polyp and medusa body forms."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0058",
+   "type": "mcq",
+   "stem": "The following are classes of the phylum Cnidaria except",
+   "options": {
+    "A": "Hydrozoa",
+    "B": "Cubozoa",
+    "C": "Chyozoa",
+    "D": "Anthozoa"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Hydrozoa, Cubozoa, Scyphozoa and Anthozoa are the cnidarian classes; 'Chyozoa' does not exist."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0059",
+   "type": "mcq",
+   "stem": "__________ are group of animals which are triploblastic",
+   "options": {
+    "A": "Platyhelminthies",
+    "B": "Coelenterata",
+    "C": "Hexactimellida",
+    "D": "Demospongae"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Flatworms (Platyhelminthes) are triploblastic - three germ layers."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0060",
+   "type": "mcq",
+   "stem": "The following group of animals show cephalization except",
+   "options": {
+    "A": "Insecta",
+    "B": "Asteroidea",
+    "C": "Platyholminthes",
+    "D": "Vertebrata"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Echinoderms (Asteroidea) show no cephalization; their adults are secondarily radial."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0061",
+   "type": "mcq",
+   "stem": "An example of animals of the class Cestoda is",
+   "options": {
+    "A": "Tapeworm",
+    "B": "Earthworm",
+    "C": "Round worm",
+    "D": "Ring worm"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Tapeworms are cestodes."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0062",
+   "type": "mcq",
+   "stem": "An example of a tree-living form of Nematodes is",
+   "options": {
+    "A": "Aséprís lumbricoides",
+    "B": "Anquillula",
+    "C": "Arenicola",
+    "D": "Nerein"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Anguillula is a free-living (in some texts tree-living) nematode; the others are parasites or polychaetes."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0063",
+   "type": "mcq",
+   "stem": "Octopus belongs to which class of Molluscs?",
+   "options": {
+    "A": "Gastropoda",
+    "B": "Bivalvia",
+    "C": "Polypoda",
+    "D": "Cephalopoda"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Octopus is a cephalopod mollusc."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0064",
+   "type": "mcq",
+   "stem": "The mode of feeding of Arachnids is",
+   "options": {
+    "A": "Carnivorous",
+    "B": "Filter feeders C Herbivorous",
+    "C": "Deposit feeders"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Arachnids are carnivorous predators."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0065",
+   "type": "mcq",
+   "stem": "An example of the class Diplopoda is",
+   "options": {
+    "A": "Millipede",
+    "B": "Centipede",
+    "C": "Cockroach",
+    "D": "Mites"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Millipedes belong to the class Diplopoda."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0066",
+   "type": "mcq",
+   "stem": "Centipedes belongs to which class?",
+   "options": {
+    "A": "Diplopoda",
+    "B": "Chilopoda",
+    "C": "Hexapoda",
+    "D": "Metapoda"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Centipedes belong to the class Chilopoda."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0067",
+   "type": "mcq",
+   "stem": "Echinodermata has an endoskeleton which consist of",
+   "options": {
+    "A": "Calcium carbonate",
+    "B": "Sodium chloride",
+    "C": "Carbon Carbonate (d) Calcium Chloride"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The echinoderm endoskeleton is made of calcium carbonate ossicles."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0068",
+   "type": "mcq",
+   "stem": "Urochordates are also called",
+   "options": {
+    "A": "Truncates",
+    "B": "Tunicates",
+    "C": "Tunchord",
+    "D": "Trunmates"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Urochordates are the tunicates (sea squirts)."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0069",
+   "type": "mcq",
+   "stem": "The group of fishes without scales belongs to the Superclass",
+   "options": {
+    "A": "Agnatha",
+    "B": "Gnathostiomata",
+    "C": "Stomata",
+    "D": "Gnathans"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Agnatha (hagfish, lampreys) lack scales and paired fins."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0070",
+   "type": "mcq",
+   "stem": "The group of fishes with skeleton of bones are called",
+   "options": {
+    "A": "Chondrichthyes",
+    "B": "Osteichthyes",
+    "C": "Gymnophiona",
+    "D": "Caecilians"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Osteichthyes are the bony fishes."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0071",
+   "type": "mcq",
+   "stem": "__________ is an example of animals that exhibits thermoregulation",
+   "options": {
+    "A": "Turtle",
+    "B": "Frog",
+    "C": "Salamanda",
+    "D": "Birds"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Birds are endotherms - they thermoregulate internally."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0072",
+   "type": "mcq",
+   "stem": "The group of animals with mammary glands are",
+   "options": {
+    "A": "Aves",
+    "B": "Reptiles",
+    "C": "Amphibians",
+    "D": "Mammals"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Mammary glands define the mammals."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0073",
+   "type": "mcq",
+   "stem": "Annelids has an ___________ skeleton",
+   "options": {
+    "A": "Rigid",
+    "B": "Hydolytic",
+    "C": "Hydrostatic",
+    "D": "Endostatic"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Annelids rely on a hydrostatic skeleton (coelomic fluid under pressure)."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0074",
+   "type": "mcq",
+   "stem": "Circinate vernation of young leaves occurs in A. Fumaria B. Bryopteris C Pinus D. Selaginella",
+   "options": {
+    "A": "Fumaria",
+    "B": "Bryopteris",
+    "C": "Pinus",
+    "D": "Selaginella"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Circinate vernation occurs in ferns - Dryopteris."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0075",
+   "type": "mcq",
+   "stem": "The father of modern taxonomy is A. Carolus Lintel B. Carolus Livermore C Christian Linnaeus D. Carolus Linnaeus",
+   "options": {
+    "A": "Carolus Lintel",
+    "B": "Carolus Livermore",
+    "C": "Christian Linnaeus",
+    "D": "Carolus Linnaeus"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Carolus Linnaeus founded modern taxonomy."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0076",
+   "type": "mcq",
+   "stem": "Which of the taxonomic categories contains organisms with the largest number of features in common? A Kingdom B Family C Genus D Species",
+   "options": {
+    "A": "Kingdom",
+    "B": "Family",
+    "C": "Genus",
+    "D": "Species"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Species share the largest number of common features."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0077",
+   "type": "mcq",
+   "stem": "Which of the following sentences is not a problem with the use of common names in scientific publications? A A particular organism may be known by several different common names B The same name may be given to two quite different organisms C It enables scientists to communicate accurately with each other D None of the above",
+   "options": {
+    "A": "A particular organism may be known by several different common names",
+    "B": "The same name may be given to two quite different organisms",
+    "C": "It enables scientists to communicate accurately with each other",
+    "D": "None of the above"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Enabling scientific communication is an ADVANTAGE of scientific names, not a problem of common names."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0078",
+   "type": "mcq",
+   "stem": "The advantages of nomenclature in biological classification include all the following except A They are used globally B They are necessary whenever precise identification is required CA particular organism may be known by different vernacular names D Enable scientists to know exactly which organism is being referred to.",
+   "options": {
+    "A": "They are used globally",
+    "B": "They are necessary whenever precise identification is required",
+    "C": "A particular organism may be known by different vernacular names",
+    "D": "Enable scientists to know exactly which organism is being referred to."
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "'A particular organism may be known by different common names' is a PROBLEM of common names, not an advantage of nomenclature."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0079",
+   "type": "mcq",
+   "stem": "In classification, it follows that as one progresses down the hierarchy, the number of organisms in each taxon ------ and the similarities ----- A increases; decreases B increases: increases C decreases: decreases D decreases; increases",
+   "options": {
+    "A": "increases; decreases",
+    "B": "increases: increases",
+    "C": "decreases: decreases",
+    "D": "decreases; increases"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Descending the hierarchy, the number of organisms decreases while features shared in common increase."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0080",
+   "type": "mcq",
+   "stem": "Which of the following statements is FALSE? A Phenetic classification does not distinguish between homologous and analogous characters B Phylogenetic classification illustrates the hierarchy of ancestors and the degree of evolutionary changes C Family is a group of related organisms ranking above an order and below a genus comprising several species D Systematics is the process of organizing taxonomic information of organisms in logical framework",
+   "options": {
+    "A": "Phenetic classification does not distinguish between homologous and analogous characters",
+    "B": "Phylogenetic classification illustrates the hierarchy of ancestors and the degree of evolutionary changes",
+    "C": "Family is a group of related organisms ranking above an order and below a genus comprising several species",
+    "D": "Systematics is the process of organizing taxonomic information of organisms in logical framework"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Family ranks BELOW order and ABOVE genus - statement C reverses it, so C is false."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0081",
+   "type": "mcq",
+   "stem": "A system of classification based on all important morphological characters is termed A Artificial system B Natural system C Genetic system D Phenetic system",
+   "options": {
+    "A": "Artificial system",
+    "B": "Natural system",
+    "C": "Genetic system",
+    "D": "Phenetic system"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A natural system of classification uses all important morphological characters."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0082",
+   "type": "mcq",
+   "stem": "The group of similar organisms which breed freely among themselves to produce fertile offspring constitute a ---- A Family B Order C Species D Genus",
+   "options": {
+    "A": "Family",
+    "B": "Order",
+    "C": "Species",
+    "D": "Genus"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Species: similar organisms that interbreed freely to produce fertile offspring."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0083",
+   "type": "mcq",
+   "stem": "The five kingdom classifications of organisms was proposed by .... A John Ray B Carl Woese Robert Whittaker D Carolus Linnaeus",
+   "options": {
+    "A": "John Ray",
+    "B": "Carl Woese",
+    "C": "Robert Whittaker",
+    "D": "Carolus Linnaeus"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Robert Whittaker proposed the five-kingdom classification (1969)."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0084",
+   "type": "mcq",
+   "stem": "The correct binomial nomenclatures of causative agents of malaria and syphilis respectively are:- A Treponema Pallidum and Plasmodium Falciparum B Treponema pallidum and Plasmodium falciparum C Plasmodium Falciparum and Treponema Pallidum Plasmodium falciparum and Treponema pallidum",
+   "options": {
+    "A": "Treponema Pallidum and Plasmodium Falciparum",
+    "B": "Treponema pallidum and Plasmodium falciparum",
+    "C": "Plasmodium Falciparum and Treponema Pallidum",
+    "D": "Plasmodium falciparum and Treponema pallidum"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Malaria = Plasmodium falciparum; syphilis = Treponema pallidum (species epithets lower-case)."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0085",
+   "type": "mcq",
+   "stem": "What is the correct descending sequence of hierarchy: (1) Class (2) Kingdom (3) Phylum (4) Order (5) Genus (6) Family (7) Species A 6,2,4,1,5,7,3 B.7,1,3,4,5,6,1 C.2,3,1,4,6,5,7 D.1,2,3,4,5,6,7",
+   "options": {
+    "A": "6,2,4,1,5,7,3",
+    "B": "7,1,3,4,5,6,1",
+    "C": "2,3,1,4,6,5,7",
+    "D": "1,2,3,4,5,6,7"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Kingdom(2), Phylum(3), Class(1), Order(4), Family(6), Genus(5), Species(7) gives 2,3,1,4,6,5,7."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0086",
+   "type": "mcq",
+   "stem": "The acronym ICZN stands for ...... A International Congress of Zoological Nomenclature B Indian Code of Zoological Nomenclature International code of Zoological Nomenclature D Indian Congress of Zoological Nomenclature",
+   "options": {
+    "A": "International Congress of Zoological Nomenclature",
+    "B": "Indian Code of Zoological Nomenclature",
+    "C": "International code of Zoological Nomenclature",
+    "D": "Indian Congress of Zoological Nomenclature"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "ICZN = International Code of Zoological Nomenclature."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0087",
+   "type": "mcq",
+   "stem": "Which of the following statements is true about phenetic classification: It is based on the A observable characteristics of existing organisms B ancestral lineage of existing organisms C dendogram of DNA characteristics of existing organisms D sexual characteristics of existing organisms",
+   "options": {
+    "A": "observable characteristics of existing organisms",
+    "B": "ancestral lineage of existing organisms",
+    "C": "dendogram of DNA characteristics of existing organisms",
+    "D": "sexual characteristics of existing organisms"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Phenetic classification uses observable characteristics of existing organisms."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0088",
+   "type": "mcq",
+   "stem": "Circinate vernation of young leaves occurs in A. Funaria B. Dryopteris C. Pinus D. Selaginella",
+   "options": {
+    "A": "Funaria",
+    "B": "Dryopteris",
+    "C": "Pinus",
+    "D": "Selaginella",
+    "E": "None"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Circinate vernation: the fern Dryopteris."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0089",
+   "type": "mcq",
+   "stem": "Which of the following sentences is not a problem with the use of common names in scientific publications? A. A pamicular organism may be known by several different common names B. The same name may be given to two quite different organisms C. It enables scientists to communicate accurately with each other D. None of the above",
+   "options": {
+    "A": "A pamicular organism may be known by several different common names",
+    "B": "The same name may be given to two quite different organisms",
+    "C": "It enables scientists to communicate accurately with each other",
+    "D": "None of the above",
+    "E": "None"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "As in 76 - communication is the benefit of scientific naming."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0090",
+   "type": "mcq",
+   "stem": "The group of similar organisms which breed freely aming themselves to produce fertile offspring constitute a ....... A. Family B. Order C. Species D. Genus",
+   "options": {
+    "A": "Family",
+    "B": "Order",
+    "C": "Species",
+    "D": "Genus",
+    "E": "None"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Species - the interbreeding group."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0091",
+   "type": "mcq",
+   "stem": "What is the correct descending sequence of hiermchy: (1) Class (2) Kingdom (3) Phylum (4) Order (5) Genus (6) Family (7) Species A. 6, 2, 4, 1, 5, 7, 3 B. 7, 1, 3, 4, 5, 6, 1 C. 2, 3, 1, 4, 6, 5, 7 D. 1, 2, 3, 4, 5, 6, 7",
+   "options": {
+    "A": "6, 2, 4, 1, 5, 7, 3",
+    "B": "7, 1, 3, 4, 5, 6, 1",
+    "C": "2, 3, 1, 4, 6, 5, 7",
+    "D": "1, 2, 3, 4, 5, 6, 7",
+    "E": "None"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Same hierarchy sequence as 84."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0092",
+   "type": "mcq",
+   "stem": "In which kingdom would you classify cyanobacteria, nitrogen fixing and methanogenic bacteria A. Plantae B. Fungi C. Monera D. Protista",
+   "options": {
+    "A": "Plantae",
+    "B": "Fungi",
+    "C": "Monera",
+    "D": "Protista",
+    "E": "None"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Cyanobacteria, nitrogen-fixing bacteria and methanogens are prokaryotes - kingdom Monera."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0093",
+   "type": "mcq",
+   "stem": "Why is photosynthesis important for Plants? A. It collects sunlight which is to make food for plants B. It gets rid of plant waste products C. It changes plant sugar into stronger chemicals. D. It helps attract insects to plant flowers.",
+   "options": {
+    "A": "It collects sunlight which is to make food for plants",
+    "B": "It gets rid of plant waste products",
+    "C": "It changes plant sugar into stronger chemicals.",
+    "D": "It helps attract insects to plant flowers."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Photosynthesis converts sunlight into food (chemical energy) for the plant."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0094",
+   "type": "mcq",
+   "stem": "Which of these plants does not have special tissues to deliver food and water to its cells? A. Liverworth B. Maple C. Tomatoe D. Dogwood",
+   "options": {
+    "A": "Liverworth",
+    "B": "Maple",
+    "C": "Tomatoe",
+    "D": "Dogwood"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Liverworts are non-vascular - no specialised transport tissue."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0095",
+   "type": "mcq",
+   "stem": "Seeds can be dormant for many years until A. Sunlight causes photosynthesis B. Food web are complete C. Conditions are right for growth D. Conduction of food occurs",
+   "options": {
+    "A": "Sunlight causes photosynthesis",
+    "B": "Food web are complete",
+    "C": "Conditions are right for growth",
+    "D": "Conduction of food occurs"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Seeds stay dormant until conditions are right for germination and growth."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0096",
+   "type": "mcq",
+   "stem": "The part of a plant cell that gives the cell its green color is the A. Chloroplast B. Cytoplasm C. VacuolesD. Nucleus",
+   "options": {
+    "A": "Chloroplast",
+    "B": "Cytoplasm",
+    "C": "Vacuoles",
+    "D": "Nucleus"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Chloroplasts contain the green pigment chlorophyll."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0097",
+   "type": "mcq",
+   "stem": "One way that mosses and ferns are similar is they are both A. both dormant during the winter B. produce spores C grow in areas with little rainfall D. are flowering plants",
+   "options": {
+    "A": "both dormant during the winter",
+    "B": "produce spores",
+    "C": "grow in areas with little rainfall",
+    "D": "are flowering plants"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Mosses and ferns both reproduce by spores."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0098",
+   "type": "mcq",
+   "stem": "What do ferns have that apple trees do not have? A. Spores B. Flowers C. Roots D. Stems",
+   "options": {
+    "A": "Spores",
+    "B": "Flowers",
+    "C": "Roots",
+    "D": "Stems"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Ferns reproduce by spores; apple trees by seeds."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0099",
+   "type": "mcq",
+   "stem": "Pollens is produced in the A. Petal B. Stamen C. Ovary D. Pistil",
+   "options": {
+    "A": "Petal",
+    "B": "Stamen",
+    "C": "Ovary",
+    "D": "Pistil"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Pollen is produced in the stamen (anther)."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0100",
+   "type": "mcq",
+   "stem": "Trees, wildflowers and grasses are all considered to be A. Non-woody plants B. Non-vascular plants C. Woody plants D. Vascular plants",
+   "options": {
+    "A": "Non-woody plants",
+    "B": "Non-vascular plants",
+    "C": "Woody plants",
+    "D": "Vascular plants"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Trees, wildflowers and grasses all have vascular tissue - vascular plants."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0101",
+   "type": "mcq",
+   "stem": "Dog belongs to the Phylum A. Animalia B Chordata C. Arthropoda D. Porifera",
+   "options": {
+    "A": "Animalia",
+    "B": "Chordata",
+    "C": "Arthropoda",
+    "D": "Porifera"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The dog belongs to the phylum Chordata."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0102",
+   "type": "mcq",
+   "stem": "Butterfly is A. Pollen lover B. Omnivore C. Carnivore D. Herbivore",
+   "options": {
+    "A": "Pollen lover",
+    "B": "Omnivore",
+    "C": "Carnivore",
+    "D": "Herbivore"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Butterflies feed on plant nectar - herbivorous feeding."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0103",
+   "type": "mcq",
+   "stem": "Which of the following is a diploblastic organism A. Ctenophora B. Tapeworm C. Honeybee D. Man",
+   "options": {
+    "A": "Ctenophora",
+    "B": "Tapeworm",
+    "C": "Honeybee",
+    "D": "Man"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Ctenophores (comb jellies) are diploblastic."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0104",
+   "type": "mcq",
+   "stem": "Which of the organism is acoelomate A. Grasshopper B. Octopus C. Goat D. Liverfluke",
+   "options": {
+    "A": "Grasshopper",
+    "B": "Octopus",
+    "C": "Goat",
+    "D": "Liverfluke"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The liver fluke is an acoelomate flatworm."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0105",
+   "type": "mcq",
+   "stem": "Snake is classified as member of the Class A. Aves B. Reptilia C. Amphibia D. Mammalia",
+   "options": {
+    "A": "Aves",
+    "B": "Reptilia",
+    "C": "Amphibia",
+    "D": "Mammalia"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Snakes are reptiles."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0106",
+   "type": "mcq",
+   "stem": "Which of the organism is radially symmetrical? A Hydra B, Insect C. Man D. Tapeworm",
+   "options": {
+    "A": "Hydra",
+    "B": "Insect",
+    "C": "Man",
+    "D": "Tapeworm"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Hydra is radially symmetrical."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0107",
+   "type": "mcq",
+   "stem": "Cyclostomes are different from Chondrichthyes because of A. Lack of scales and paired fins on the body B. Absence of mouth C. Lack of nostrils D. They are omnivores",
+   "options": {
+    "A": "Lack of scales and paired fins on the body",
+    "B": "Absence of mouth",
+    "C": "Lack of nostrils",
+    "D": "They are omnivores"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Cyclostomes (Agnatha) lack scales and paired fins, unlike the cartilaginous fishes."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0108",
+   "type": "mcq",
+   "stem": "Algae considered to be the most complex due to high level of cell differentiation among its species belong to A. Phaeophyta B. Rhodophyta C. Chlorophyta D. Cyanophyta",
+   "options": {
+    "A": "Phaeophyta",
+    "B": "Rhodophyta",
+    "C": "Chlorophyta",
+    "D": "Cyanophyta"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Phaeophyta (brown algae) show the greatest cellular differentiation among algae."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0109",
+   "type": "mcq",
+   "stem": "The following are the classes of the phylum platyhelminthes except",
+   "options": {
+    "A": "Monogena",
+    "B": "Cestoda",
+    "C": "Trematoda",
+    "D": "Nematoda"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Nematoda is a separate phylum, not a class of Platyhelminthes."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0110",
+   "type": "mcq",
+   "stem": "An example of a free-living form of Nematodes is",
+   "options": {
+    "A": "Ascaris lumbricoides",
+    "B": "Anguillula",
+    "C": "Armicola",
+    "D": "Nereis"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Anguillula is a free-living nematode."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0111",
+   "type": "mcq",
+   "stem": "Earthworm belongs to the class",
+   "options": {
+    "A": "Polychaeta",
+    "B": "Oligochaeta",
+    "C": "Hirudinea"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Earthworms are class Oligochaeta."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0112",
+   "type": "mcq",
+   "stem": "Radula is present in which group of animals?",
+   "options": {
+    "A": "Annelids",
+    "B": "Cnidarian",
+    "C": "Echinodermata",
+    "D": "Mollusca"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The radula belongs to molluscs."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0113",
+   "type": "mcq",
+   "stem": "The made of feeding of Arachnids is",
+   "options": {
+    "A": "Carnivorous",
+    "B": "Filter feeders",
+    "C": "Herbivorous",
+    "D": "Deposit feeders"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Arachnids (spiders, scorpions) are carnivores."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0114",
+   "type": "mcq",
+   "stem": "Echinodermata has an endoskeleton which consists of",
+   "options": {
+    "A": "Calcium carbonate",
+    "B": "Sodium chloride",
+    "C": "Carbon Carbonate (d) Calcium Chloride"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Echinoderm ossicles are calcium carbonate."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0115",
+   "type": "mcq",
+   "stem": "Annelids has an __________ skeleton",
+   "options": {
+    "A": "Rigid",
+    "B": "Hydolytic",
+    "C": "Hydrostatic",
+    "D": "Endostatic"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Hydrostatic skeleton, as in annelids."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0116",
+   "type": "mcq",
+   "stem": "Why is photosynthesis important for Plants? A. It collects sunlight which is to make food for plants B. It get rid of plant waste products C. It changes plant sugar into stronger chemicals D. It help attract insects to plant flowers",
+   "options": {
+    "A": "It collects sunlight which is to make food for plants",
+    "B": "It get rid of plant waste products",
+    "C": "It changes plant sugar into stronger chemicals",
+    "D": "It help attract insects to plant flowers"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Photosynthesis makes plant food."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0117",
+   "type": "mcq",
+   "stem": "Seeds can lie dormant for many years until A. Sunlight causes photosynthesis B. Food web are complex C. Conditions are right for growth D: Conduction of food occurs",
+   "options": {
+    "A": "Sunlight causes photosynthesis",
+    "B": "Food web are complex",
+    "C": "Conditions are right for growth",
+    "D": "Conduction of food occurs"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Dormancy ends when growth conditions become right."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0118",
+   "type": "mcq",
+   "stem": "The part of a plant cell that gives the cell its green color is the A. Chloroplast B. Cytoplasm C. VacuoleD. Nucleus",
+   "options": {
+    "A": "Chloroplast",
+    "B": "Cytoplasm",
+    "C": "Vacuole",
+    "D": "Nucleus"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Chlorophyll in chloroplasts gives the green colour."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0119",
+   "type": "mcq",
+   "stem": "The way that mosses and ferns are similar is they are both A. both dormant during the winter B. produce spores C. grow in areas with little rainfall D. are flowering pl/nts",
+   "options": {
+    "A": "both dormant during the winter",
+    "B": "produce spores",
+    "C": "grow in areas with little rainfall",
+    "D": "are flowering pl/nts"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Mosses and ferns both produce spores."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0120",
+   "type": "mcq",
+   "stem": "_________________ are group of animals which are triploblastic",
+   "options": {
+    "A": "Platyhelminthes",
+    "B": "Coelenterata",
+    "C": "Hexactinellida",
+    "D": "Demospongae"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Flatworms are triploblastic."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0121",
+   "type": "mcq",
+   "stem": "_________________ is an example of animals that exhibits thermoregulation",
+   "options": {
+    "A": "Turtle",
+    "B": "Frog",
+    "C": "Salamanda",
+    "D": "Birds"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Birds thermoregulate."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0122",
+   "type": "mcq",
+   "stem": "Annelids has an ___________________ skeleton",
+   "options": {
+    "A": "Rigid",
+    "B": "Hydolytic",
+    "C": "Hydrostatic",
+    "D": "Endostatic"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Hydrostatic skeleton."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0123",
+   "type": "mcq",
+   "stem": "Circinate vernation of young leaves occurs in A. Fumaria B. Dryopteris C. Pinus D. Selaginella",
+   "options": {
+    "A": "Fumaria",
+    "B": "Dryopteris",
+    "C": "Pinus",
+    "D": "Selaginella"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Dryopteris, a fern."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0124",
+   "type": "mcq",
+   "stem": "The five kingdom classifications of organisms was proposed by ..... A. John Ray B. Carl Woese C. Robert Whittaker D. Carolus Linnaeus",
+   "options": {
+    "A": "John Ray",
+    "B": "Carl Woese",
+    "C": "Robert Whittaker",
+    "D": "Carolus Linnaeus"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Whittaker's five kingdoms."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0125",
+   "type": "mcq",
+   "stem": "What is the correct descending sequence of hierarchy: (1) Class (2) Kingdom (3) Phylum (4) Order (5)G (6) Family (7) Species A. 6, 2, 4, 1, 5, 7, 3 B. 7, 1, 3, 4, 5, 6, 1 C. 2, 3, 1, 4, 6, 5, 7 D. 1, 2, 3, 4, 5, 6, 7",
+   "options": {
+    "A": "6, 2, 4, 1, 5, 7, 3",
+    "B": "7, 1, 3, 4, 5, 6, 1",
+    "C": "2, 3, 1, 4, 6, 5, 7",
+    "D": "1, 2, 3, 4, 5, 6, 7"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "2,3,1,4,6,5,7."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0126",
+   "type": "mcq",
+   "stem": "The acronym ICZN stands for ...... A. International Congress of Zoological Nomenclature B. Indian Code of Zoological Nomenclature C. International code of Zoological Nomenclature D. Indian Congress of Zoological Nomenclature",
+   "options": {
+    "A": "International Congress of Zoological Nomenclature",
+    "B": "Indian Code of Zoological Nomenclature",
+    "C": "International code of Zoological Nomenclature",
+    "D": "Indian Congress of Zoological Nomenclature"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "International Code of Zoological Nomenclature."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0127",
+   "type": "mcq",
+   "stem": "The following are components of the cell except",
+   "options": {
+    "A": "Cytoplasm",
+    "B": "Nucleus",
+    "C": "Phagocytosis",
+    "D": "Ribosome"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Phagocytosis is a process, not a cell component."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0128",
+   "type": "mcq",
+   "stem": "Cell wall is made up of",
+   "options": {
+    "A": "Lipids",
+    "B": "Sugars",
+    "C": "Cellulose",
+    "D": "Vitamins"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Cell walls are cellulose."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0129",
+   "type": "mcq",
+   "stem": "Cell membrane does",
+   "options": {
+    "A": "Provide cell shape",
+    "B": "Supply protein",
+    "C": "Supply cellulose",
+    "D": "Maintain life body"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The cell membrane provides (cell) shape in animal cells."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0130",
+   "type": "mcq",
+   "stem": "Endocytosis and exocytosis are examples of",
+   "options": {
+    "A": "Light transport",
+    "B": "Bulk transport",
+    "C": "Transpiration",
+    "D": "Movements"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Endocytosis and exocytosis are bulk transport mechanisms."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0131",
+   "type": "mcq",
+   "stem": "The organelle that synthesises protein in the cell is called",
+   "options": {
+    "A": "Mitosis",
+    "B": "Diffusion",
+    "C": "Ribosome",
+    "D": "Nucleus"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Ribosomes synthesise protein."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0132",
+   "type": "mcq",
+   "stem": "The first scientist that discovered cell is",
+   "options": {
+    "A": "Robert Nock",
+    "B": "Van Lusiward",
+    "C": "M.J Robert",
+    "D": "Robert Hooke"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Robert Hooke discovered (named) cells in 1665."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0133",
+   "type": "mcq",
+   "stem": "One of the two scientists that proposed cell theories is",
+   "options": {
+    "A": "Theodore Schwan",
+    "B": "Robert Brown",
+    "C": "Duke Schwa",
+    "D": "Mongre Duke"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Theodor Schwann (with Matthias Schleiden) proposed the cell theory."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0134",
+   "type": "mcq",
+   "stem": "The following are biomolecules in the cell, except",
+   "options": {
+    "A": "Carbohydrates",
+    "B": "Amino acids",
+    "C": "Hydrogen",
+    "D": "Vitamins"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Hydrogen is an element, not a biomolecule."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0135",
+   "type": "mcq",
+   "stem": "The organisms that can interbreed together is called",
+   "options": {
+    "A": "Genus",
+    "B": "Species",
+    "C": "Family",
+    "D": "Kingdom"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Species interbreed."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0136",
+   "type": "mcq",
+   "stem": "The act of giving two names to an organism is termed",
+   "options": {
+    "A": "Binomial nomenclature",
+    "B": "Dinomial nomenclature",
+    "C": "Quadranlonial nomenclature",
+    "D": "Bimanual nomenclature"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Two-name naming = binomial nomenclature."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0137",
+   "type": "mcq",
+   "stem": "Caroleus Linneaus proposed the theory of",
+   "options": {
+    "A": "Taxonomy",
+    "B": "Nomenclature",
+    "C": "Species",
+    "D": "Binomial nomenclature"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Linnaeus formalised binomial nomenclature."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0138",
+   "type": "mcq",
+   "stem": "Bacteria belong to the Kingdom",
+   "options": {
+    "A": "Monera",
+    "B": "Porifera",
+    "C": "Taxonera",
+    "D": "Amoeba"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Bacteria belong to Monera."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0139",
+   "type": "mcq",
+   "stem": "Chloroplast is used by the plant for",
+   "options": {
+    "A": "Mitosis",
+    "B": "Meiosis",
+    "C": "Cytosis",
+    "D": "Photosynthesis"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Chloroplasts carry out photosynthesis."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0140",
+   "type": "mcq",
+   "stem": "Which of the following is correct?",
+   "options": {
+    "A": "Anopheles gambiae",
+    "B": "Anopheles Gambiae",
+    "C": "anopheles gambiae",
+    "D": "ANopheles gAmbiae"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Genus capitalised, species lower-case: Anopheles gambiae."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0141",
+   "type": "mcq",
+   "stem": "The mode of reproduction in prokaryotes in which one cell divides into two cells which are genetically identical to the original cell is known as",
+   "options": {
+    "A": "Binary fission",
+    "B": "Spore formation",
+    "C": "Budding",
+    "D": "Gametogony"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Prokaryotes divide by binary fission."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0142",
+   "type": "mcq",
+   "stem": "Eukaryotic organisms that have no roots, stems, or leaves but do have chlorophyll and other pigments for carrying out photosynthesis are",
+   "options": {
+    "A": "Bacteria",
+    "B": "Fungi",
+    "C": "Algae",
+    "D": "Protozoa"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Algae: eukaryotic, chlorophyll-bearing, no roots/stems/leaves."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0143",
+   "type": "mcq",
+   "stem": "Organisms that break down dead organic matter and recycle their nutrients are called",
+   "options": {
+    "A": "Autotrophs",
+    "B": "Saprophytes",
+    "C": "Holozoic",
+    "D": "Herbivores"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Saprophytes decompose dead organic matter."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0144",
+   "type": "mcq",
+   "stem": "A tangled mass of hyphae visible to the unaided eye is called",
+   "options": {
+    "A": "Conidia",
+    "B": "Spores",
+    "C": "Mycelium",
+    "D": "Septate"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "A visible tangled mass of hyphae is the mycelium."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0145",
+   "type": "mcq",
+   "stem": "Asexual spores of fungi that are free and unprotected at the tips of hyphae are called",
+   "options": {
+    "A": "Sporangiospores",
+    "B": "Chlamydospores",
+    "C": "Conidia",
+    "D": "Oospores"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Conidia are naked asexual spores at hyphal tips."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0146",
+   "type": "mcq",
+   "stem": "The morphologic vegetative form of protozoa that is free-living, actively feeding, growing and reproducing is called",
+   "options": {
+    "A": "Trophozoite",
+    "B": "Cysts",
+    "C": "Gametes",
+    "D": "Buds"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The actively feeding, growing vegetative form is the trophozoite."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0147",
+   "type": "mcq",
+   "stem": "The group of microorganisms that are all pathogenic are the",
+   "options": {
+    "A": "Protozoa",
+    "B": "Yeasts",
+    "C": "Viruses",
+    "D": "Archea"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Viruses are all obligate intracellular parasites."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0148",
+   "type": "mcq",
+   "stem": "The genome of the virus is surrounded by a protein coat known as",
+   "options": {
+    "A": "Genome",
+    "B": "Virion",
+    "C": "Capsid",
+    "D": "Cell wall"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The protein coat is the capsid."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0149",
+   "type": "mcq",
+   "stem": "Night blindness is a deficiency of",
+   "options": {
+    "A": "Vitamin K",
+    "B": "Vitamin B",
+    "C": "Calcium",
+    "D": "Vitamin A"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Night blindness (nyctalopia) = vitamin A deficiency."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0150",
+   "type": "mcq",
+   "stem": "Autotrophic organisms that rely on chemical activities as their source of energy to manufacture their food are said to be",
+   "options": {
+    "A": "Chemosynthetic",
+    "B": "Photosynthetic",
+    "C": "Heterotrophs",
+    "D": "Omnisynthetic"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Chemosynthesis: energy from chemical reactions, not light."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0151",
+   "type": "mcq",
+   "stem": "Which of the following is not a protozoan group?",
+   "options": {
+    "A": "Gametophora",
+    "B": "Sarcodina",
+    "C": "Mastigophora",
+    "D": "Ciliophora"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Sarcodina, Mastigophora and Ciliophora are protozoan groups; 'Gametophora' is not."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0152",
+   "type": "mcq",
+   "stem": "The initial input of energy required for chemical reactions is known as",
+   "options": {
+    "A": "Active energy",
+    "B": "Allosteric energy",
+    "C": "Activation energy",
+    "D": "Set point"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The initial energy input for a reaction is the activation energy."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0153",
+   "type": "mcq",
+   "stem": "The first enzyme was found by Anselme Payen in",
+   "options": {
+    "A": "1933",
+    "B": "1833",
+    "C": "1854",
+    "D": "1862"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Anselme Payen discovered the first enzyme (diastase) in 1833."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0154",
+   "type": "mcq",
+   "stem": "The additional non-protein molecules needed by some enzymes to help in their reactions are called",
+   "options": {
+    "A": "Growth factors",
+    "B": "Inhibitors",
+    "C": "Active factors",
+    "D": "Co-factors"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Co-factors assist enzyme reactions."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0155",
+   "type": "mcq",
+   "stem": "When an inhibitor binds to the enzyme at a location other than the active site, this is referred to as",
+   "options": {
+    "A": "Competitive inhibition",
+    "B": "Non-competitive inhibition",
+    "C": "Activation",
+    "D": "Denaturation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Binding away from the active site = non-competitive inhibition."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0156",
+   "type": "mcq",
+   "stem": "The goal of homeostasis is the maintenance of equilibrium around a specific value of some aspect of the body or its cells called",
+   "options": {
+    "A": "Set point",
+    "B": "Activation point",
+    "C": "Negative feedback",
+    "D": "Core"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The target value a regulated variable centres on is the set point."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0157",
+   "type": "mcq",
+   "stem": "Which of the following is not a mechanism to warm the body up in cold weather?",
+   "options": {
+    "A": "Vasodilation",
+    "B": "Vasoconstriction",
+    "C": "Piloerection",
+    "D": "Shivering"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Vasodilation increases blood flow to the skin and COOLS the body."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0158",
+   "type": "mcq",
+   "stem": "Which of the following statements is true?",
+   "options": {
+    "A": "If the glucose concentration falls, the alpha cells release glucagon.",
+    "B": "If the glucose concentration rises, alpha cells release insulin",
+    "C": "If the glucose concentration falls, the beta cells release glucagon",
+    "D": "If the glucose concentration rises, the beta cells release insulin."
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Rising glucose triggers the beta cells to release insulin."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0159",
+   "type": "mcq",
+   "stem": "The process of removal of excess water and salts from the body is called",
+   "options": {
+    "A": "Thermoregulation",
+    "B": "Osmoregulation",
+    "C": "Glucose regulation",
+    "D": "Metabolism"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Osmoregulation manages water and salt balance."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0160",
+   "type": "mcq",
+   "stem": "Which hormone increases the permeability of distal convoluted tubule (DCT) and collecting duct (CD) in osmoregulation?",
+   "options": {
+    "A": "Insulin",
+    "B": "Glucagon",
+    "C": "Ptyalin",
+    "D": "Antidiuretic hormone"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "ADH increases DCT/collecting duct permeability."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0161",
+   "type": "mcq",
+   "stem": "Which of the following organs secretes hormones?",
+   "options": {
+    "A": "Pancrease",
+    "B": "Ovaries",
+    "C": "Gastro-Intestinal Tract",
+    "D": "All the above"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Pancreas, ovaries and the gut all secrete hormones."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0162",
+   "type": "mcq",
+   "stem": "The pancreas secretes",
+   "options": {
+    "A": "Insulin",
+    "B": "Glucagon",
+    "C": "Adrenaline",
+    "D": "A and B only"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The pancreas secretes insulin and glucagon (from islet cells)."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0163",
+   "type": "mcq",
+   "stem": "Which of the following glands secretes melatonin?",
+   "options": {
+    "A": "Skin",
+    "B": "Pineal gland",
+    "C": "Liver",
+    "D": "Pituitary gland"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The pineal gland secretes melatonin."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0164",
+   "type": "mcq",
+   "stem": "Which of these glands secretes oestrogen?",
+   "options": {
+    "A": "Hypothalamus",
+    "B": "Anterior pituitary",
+    "C": "Ovary",
+    "D": "Parathyroid"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Oestrogen comes from the ovary."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0165",
+   "type": "mcq",
+   "stem": "Which of the following endocrine glands secretes oxytocin?",
+   "options": {
+    "A": "Hypothalamus",
+    "B": "Parathyroid",
+    "C": "Posterior pituitary",
+    "D": "Anterior pituitary"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Oxytocin is released by the posterior pituitary."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0166",
+   "type": "mcq",
+   "stem": "Which of these glands functions both as endocrine and exocrine glands?",
+   "options": {
+    "A": "Testis",
+    "B": "Pineal body",
+    "C": "Liver",
+    "D": "Pancreas"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The pancreas is both endocrine (islets) and exocrine (acinar)."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0167",
+   "type": "mcq",
+   "stem": "Which of the following is/are digestive gland(s)?",
+   "options": {
+    "A": "Liver",
+    "B": "Kidneys",
+    "C": "Pancreas",
+    "D": "A and C"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Liver and pancreas are the digestive glands."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0168",
+   "type": "mcq",
+   "stem": "Which among the following acts as a valve, allowing only little quantity of food at a time from the stomach into the duodenum?",
+   "options": {
+    "A": "Pyloric sphincter",
+    "B": "Cardiac sphincter",
+    "C": "Pharynx",
+    "D": "A and C."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The pyloric sphincter meters chyme from stomach to duodenum."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0169",
+   "type": "mcq",
+   "stem": "Bile is released by the gall bladder into",
+   "options": {
+    "A": "Ileum",
+    "B": "Colon",
+    "C": "Caecum",
+    "D": "Duodenum"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Bile enters the duodenum."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0170",
+   "type": "mcq",
+   "stem": "Which of these secretes saliva?",
+   "options": {
+    "A": "salivary glands",
+    "B": "Thyroid gland",
+    "C": "Pancreas",
+    "D": "Pituitary gland"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Saliva comes from the salivary glands."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0171",
+   "type": "mcq",
+   "stem": "Villi are present in",
+   "options": {
+    "A": "Heart",
+    "B": "Liver",
+    "C": "Pancreas",
+    "D": "Ileum"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Villi line the ileum (small intestine)."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0172",
+   "type": "mcq",
+   "stem": "Which of the following does not produce digestive enzyme?",
+   "options": {
+    "A": "Bile",
+    "B": "Pancreatic juice",
+    "C": "Gastric juice",
+    "D": "All the above"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Bile contains no enzyme - it emulsifies fat."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0173",
+   "type": "mcq",
+   "stem": "Where does the digestion of proteins begin?",
+   "options": {
+    "A": "Small intestine",
+    "B": "Stomach",
+    "C": "Mouth",
+    "D": "Colon"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Protein digestion begins in the stomach (pepsin)."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0174",
+   "type": "mcq",
+   "stem": "The layer of the transverse section of generalised gut that suspends and supports the alimentary canal in the abdominal cavity is the",
+   "options": {
+    "A": "Mucosa",
+    "B": "Submucosa",
+    "C": "Serosa",
+    "D": "Muscularis externa"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The serosa suspends and supports the gut."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0175",
+   "type": "mcq",
+   "stem": "Offsprings of asexual reproduction show",
+   "options": {
+    "A": "Marked variations",
+    "B": "Variations",
+    "C": "Minor variations",
+    "D": "Significant variations"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Asexual offspring are genetically identical - only minor (mutational) variation."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0176",
+   "type": "mcq",
+   "stem": "On which side of your abdomen does the stomach lie?",
+   "options": {
+    "A": "Right",
+    "B": "Left",
+    "C": "Above",
+    "D": "Below"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The stomach lies on the left side of the abdomen."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0177",
+   "type": "mcq",
+   "stem": "Which of the following is necessary for the release of energy present in food?",
+   "options": {
+    "A": "Nitrogen",
+    "B": "Oxygen",
+    "C": "Hydrogen",
+    "D": "Carbon dioxide"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Oxygen is needed to release food energy (aerobic respiration)."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0178",
+   "type": "mcq",
+   "stem": "Diffusion of oxygen from blood to tissues and diffusion of carbon dioxide from tissues to blood is known as",
+   "options": {
+    "A": "Tissue respiration",
+    "B": "Absorption",
+    "C": "Inspiration",
+    "D": "Expiration"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Gas exchange between blood and tissues is tissue (internal) respiration."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0179",
+   "type": "mcq",
+   "stem": "The fusion of the male reproductive nucleus and the female reproductive nucleus is termed",
+   "options": {
+    "A": "Fertilization",
+    "B": "Ejaculation",
+    "C": "Coition",
+    "D": "Gestation"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Fusion of male and female nuclei = fertilization."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0180",
+   "type": "mcq",
+   "stem": "What does mitosis aim at?",
+   "options": {
+    "A": "Chromosomes move away from one another to opposite poles of the spindle",
+    "B": "Assorts the replicated genetic materials to daughter cells equally",
+    "C": "Assorts the replicated genetic materials to daughter cells randomly",
+    "D": "None of the above."
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Mitosis assorts replicated genetic material EQUALLY into daughter cells."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0181",
+   "type": "mcq",
+   "stem": "Which of the following organelles is responsible for producing vesicles that contains cell plate materials?",
+   "options": {
+    "A": "Nucleus",
+    "B": "Mitochondria",
+    "C": "Golgi apparatus",
+    "D": "Cell membrane."
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The Golgi packages cell-plate material into vesicles."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0182",
+   "type": "mcq",
+   "stem": "An inheritance pattern in which the alleles are neither dominant nor recessive is referred to as",
+   "options": {
+    "A": "Codominance",
+    "B": "Codependant",
+    "C": "Cooperative",
+    "D": "Complete dominance."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Codominance: neither allele dominant (both expressed)."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0183",
+   "type": "mcq",
+   "stem": "The main characteristics of growth are: (I) Cellular growth (II) Cell division (III) Cell expansion (IV) Cellular differentiation. A. I and II only B. I, II and IV only C. All of the above D. None of the above.",
+   "options": {
+    "A": "I and II only",
+    "B": "I, II and IV only",
+    "C": "All of the above",
+    "D": "None of the above."
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Cellular growth, division, expansion and differentiation all characterize growth."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0184",
+   "type": "mcq",
+   "stem": "Growth characterised by initial slow growth, followed by a rapid increase in growth, followed by a phase where growth slows down and finally no growth is referred to as",
+   "options": {
+    "A": "Arithmetic growth",
+    "B": "Conventional growth",
+    "C": "Geometric growth",
+    "D": "Linear growth."
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Slow-rapid-slow (S-curve) = geometric growth."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0185",
+   "type": "mcq",
+   "stem": "Which of these process(es) is/are involved in cell division?",
+   "options": {
+    "A": "Interphase",
+    "B": "Cytokinesis",
+    "C": "Mitosis",
+    "D": "All of the above."
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Interphase, mitosis and cytokinesis are all part of the cell division cycle."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0186",
+   "type": "mcq",
+   "stem": "Genome in which chromosomes occur in pairs are said to be diploid, and the members of a pair are called",
+   "options": {
+    "A": "Homologues",
+    "B": "Heterologues",
+    "C": "Homozygotes",
+    "D": "Heterozygotes"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Paired chromosomes are homologues."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0187",
+   "type": "mcq",
+   "stem": "Gregor Mendel is often called",
+   "options": {
+    "A": "The father of heredity",
+    "B": "the king of peas",
+    "C": "The father of pea plants",
+    "D": "The father of genetics."
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Mendel is the father of genetics."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0188",
+   "type": "mcq",
+   "stem": "What are genes?",
+   "options": {
+    "A": "Something that you wear on your legs",
+    "B": "Segments of DNA that carry instructions for the traits of the offspring",
+    "C": "Both A and B",
+    "D": "None of the above."
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Genes are DNA segments carrying instructions."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0189",
+   "type": "mcq",
+   "stem": "The passing of traits from parents to offspring is called",
+   "options": {
+    "A": "Hand me downs",
+    "B": "Purebred",
+    "C": "Heredity",
+    "D": "Hybrid."
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Trait passage parent-to-offspring = heredity."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0190",
+   "type": "mcq",
+   "stem": "An organism with two different alleles for a trait is said to be",
+   "options": {
+    "A": "recessive",
+    "B": "hybrid",
+    "C": "dominant",
+    "D": "Purebred."
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Two different alleles = hybrid (heterozygote)."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0191",
+   "type": "mcq",
+   "stem": "What would be the results of a genetic cross between two parents that have a BB and a Bb?",
+   "options": {
+    "A": "BB, BB, Bb, Bb",
+    "B": "BB, BB, BB, BB",
+    "C": "BB, BB, BB, bb",
+    "D": "BB, Bb, Bb, bb."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "BB x Bb gives BB, BB, Bb, Bb."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0192",
+   "type": "mcq",
+   "stem": "If the results of a genetic cross were RR, RR, Rr, rr What would be the probability of getting a purebred smooth? Note that R is dominant (smooth) and r is recessive (wrinkled)",
+   "options": {
+    "A": "100%",
+    "B": "75%",
+    "C": "50%",
+    "D": "25%."
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Purebred (RR + rr) = 2 of 4 = 50%."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0193",
+   "type": "mcq",
+   "stem": "Which of the following genotypes is considered to be heterozygous?",
+   "options": {
+    "A": "TT",
+    "B": "Tt",
+    "C": "tt",
+    "D": "tttt."
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Tt is heterozygous."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0194",
+   "type": "mcq",
+   "stem": "Flaty is an example of",
+   "options": {
+    "A": "Jelly fish",
+    "B": "Monotremes",
+    "C": "Catfish",
+    "D": "None of the above"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The platypus is a monotreme."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0195",
+   "type": "mcq",
+   "stem": "Incurrent pores in sponges is called",
+   "options": {
+    "A": "Metapore",
+    "B": "Olipore",
+    "C": "Culipore",
+    "D": "Ostia"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Incurrent sponge pores are ostia."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0196",
+   "type": "mcq",
+   "stem": "Myxobolus pfeifferi belongs to",
+   "options": {
+    "A": "Cnidospora",
+    "B": "Sporozoa",
+    "C": "Metarzoa",
+    "D": "Annelida"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Myxobolus, a myxosporidan, belongs to Cnidospora."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0197",
+   "type": "mcq",
+   "stem": "Homo sapiens is an example of",
+   "options": {
+    "A": "Aves",
+    "B": "Reptiles",
+    "C": "Monotremes",
+    "D": "Eutheria"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Humans are placental mammals - Eutheria."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0198",
+   "type": "mcq",
+   "stem": "Growth in animals is _______ while growth in plants is _______",
+   "options": {
+    "A": "Diffused and continuous; apical and regenerative.",
+    "B": "Diffused and ceases at a stage; apical and continuous.",
+    "C": "Regenerative and intercalary; lateral and discontinuous.",
+    "D": "Localized and continuous; apical and ceases at a stage."
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Animal growth is diffused and ceases at maturity; plant growth is apical (localized) and continuous."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0199",
+   "type": "mcq",
+   "stem": "Study this reaction: Energy + Carbondioxide + water —>Carbohydrate + Oxygen. This chemical transformation is called _______",
+   "options": {
+    "A": "Photosynthesis",
+    "B": "Aerobic cellular respiration",
+    "C": "Anaerobic cellular respiration",
+    "D": "Hydrolysis"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "CO2 + water + energy -> carbohydrate + O2 is photosynthesis."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0200",
+   "type": "mcq",
+   "stem": "Which organelle is responsible for this chemical transformation: Carbohydrate + Oxygen —>Energy+ Carbondioxide + water?",
+   "options": {
+    "A": "Lysosome",
+    "B": "Nucleus",
+    "C": "Mitochondria",
+    "D": "Chloroplast"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Carbohydrate + O2 -> energy + CO2 happens in mitochondria."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0201",
+   "type": "mcq",
+   "stem": "What is the function of the centrosome?",
+   "options": {
+    "A": "To control the nucleus",
+    "B": "To regulate cell division",
+    "C": "To control the Golgi apparatus",
+    "D": "To control the movement of cilia"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The centrosome organises spindle microtubules - cell division."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0202",
+   "type": "mcq",
+   "stem": "Plants absorb mineral nutrients in the form of ____________ from the soil",
+   "options": {
+    "A": "weak solution",
+    "B": "solid food",
+    "C": "lignin",
+    "D": "Glucose"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Mineral nutrients are absorbed as a weak (dilute) solution of ions."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0203",
+   "type": "mcq",
+   "stem": "Animal cells do not synthesize their own food, therefore they are _____________",
+   "options": {
+    "A": "lithotrophic",
+    "B": "autotrophic",
+    "C": "heterotrophic",
+    "D": "organotrophic"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Animal cells are heterotrophic."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0204",
+   "type": "mcq",
+   "stem": "Which of the following structures do plants and animals have in common?",
+   "options": {
+    "A": "Mitochondria, endoplasmic reticulum, chloroplast and vacuoles.",
+    "B": "Mitochondria, endoplasmic reticulum, golgi bodies and nucleus",
+    "C": "Mitochondria, chloroplasts, endoplasmic reticulum and cell wall.",
+    "D": "Golgi bodies, nucleus, centrosomes and vacuoles"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Mitochondria, ER, Golgi and nucleus occur in both kingdoms."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0205",
+   "type": "mcq",
+   "stem": "Food is stored mainly as ___________ in plants while in animals, excess food is stored as ___________.",
+   "options": {
+    "A": "Glucose/ Lignin",
+    "B": "Starch/Glycogen",
+    "C": "Lignin/Starch",
+    "D": "Glycogen/Cellulose."
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Plants store starch; animals store glycogen."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0206",
+   "type": "mcq",
+   "stem": "_________ is a green pigment found within grana that makes chloroplasts and leaves green",
+   "options": {
+    "A": "Cellulose",
+    "B": "Ribosomal RNA",
+    "C": "Hemoglobin",
+    "D": "Chlorophyll"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Chlorophyll is the green pigment in the grana."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0207",
+   "type": "mcq",
+   "stem": "Most of the plants remain anchored to the soil and are ___________, while animals can move physically from one place to another and so are ___________",
+   "options": {
+    "A": "Sessile; motile",
+    "B": "Static; sessile",
+    "C": "Motile; Static",
+    "D": "Motile; sessile"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Plants are sessile; animals motile."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0208",
+   "type": "mcq",
+   "stem": "Which comparison between plant and animal cells is NOT correct?",
+   "options": {
+    "A": "Plants: cell wall; animals: no cell wall",
+    "B": "Plants: large, single vacuole; animals: many, small vacuoles",
+    "C": "Plants: centrosomes; animals: no centrosomes",
+    "D": "Plants: absorb mineral salts; animals: take solid food"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "It is ANIMALS that have centrosomes - C reverses it."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0209",
+   "type": "mcq",
+   "stem": "Which of the following statements is FALSE?",
+   "options": {
+    "A": "Cell walls are found in plants but not in animals.",
+    "B": "Cell walls are found inside the plasma membrane of a cell.",
+    "C": "The main constituent of a primary cell wall is cellulose molecules.",
+    "D": "Secondary cell walls contain lignin, a substance that makes them stronger than primary cell walls."
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The cell wall lies OUTSIDE the plasma membrane, not inside."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0210",
+   "type": "mcq",
+   "stem": "Scientists decide whether an organism is a plant or animal based on A.whether it is multicellular or unicellular B. whether it is mobile or not C. how it reproduces D.how it obtains its food or energy",
+   "options": {
+    "A": "whether it is multicellular or unicellular",
+    "B": "whether it is mobile or not",
+    "C": "how it reproduces",
+    "D": "how it obtains its food or energy"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Nutrition (how it obtains food/energy) separates plant from animal."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0211",
+   "type": "mcq",
+   "stem": "Which one of the following sentences is false? A. The cells of a whale are much larger than that of an ant B. The cells in our body continues to grow and divide to replace the old and damaged cells C. The nucleus controls most of the cellular activities within the cell. D. The cell wall gives plant cells a regular shape",
+   "options": {
+    "A": "The cells of a whale are much larger than that of an ant",
+    "B": "The cells in our body continues to grow and divide to replace the old and damaged cells",
+    "C": "The nucleus controls most of the cellular activities within the cell.",
+    "D": "The cell wall gives plant cells a regular shape"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Whale cells are not much larger than ant cells - A is false."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0212",
+   "type": "mcq",
+   "stem": "The father of modern taxonomy is ____________ A.Robert Hooke B. Francesco Redi C. Carlos Linnaeus D. Edward Jenner",
+   "options": {
+    "A": "Robert Hooke",
+    "B": "Francesco Redi",
+    "C": "Carlos Linnaeus",
+    "D": "Edward Jenner"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Carolus (Carlos) Linnaeus, father of taxonomy."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0213",
+   "type": "mcq",
+   "stem": "__________________ is a dynamic and flexible science in which the diversity of organisms and their relationships are studied. A.Taxonomy B. Nomenclature C. Systematics D. all of the above.",
+   "options": {
+    "A": "Taxonomy",
+    "B": "Nomenclature",
+    "C": "Systematics",
+    "D": "all of the above."
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Systematics studies diversity and relationships."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0214",
+   "type": "mcq",
+   "stem": "The reason for organisms classification includes A.economic reason B. recording the world's biodiversity C. discourage conservation of organisms D. none of the above.",
+   "options": {
+    "A": "economic reason",
+    "B": "recording the world's biodiversity",
+    "C": "discourage conservation of organisms",
+    "D": "none of the above."
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Classification records biodiversity."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0215",
+   "type": "mcq",
+   "stem": "Example of natural classification schemes is _____________ A.Phenetic B. Family C. Order D. Taxon.",
+   "options": {
+    "A": "Phenetic",
+    "B": "Family",
+    "C": "Order",
+    "D": "Taxon."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Phenetic classification is the natural scheme."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0216",
+   "type": "mcq",
+   "stem": "_____________ is a classification which is based on evolutionary history or pattern of descent. A.Phylogenetics B. Phenetic C. Genetics D. All of the above.",
+   "options": {
+    "A": "Phylogenetics",
+    "B": "Phenetic",
+    "C": "Genetics",
+    "D": "All of the above."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Phylogenetics follows evolutionary descent."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0217",
+   "type": "mcq",
+   "stem": "The smallest taxonomic rank in the groups below is ________ A.Phylum B. Order C. Family D. Class",
+   "options": {
+    "A": "Phylum",
+    "B": "Order",
+    "C": "Family",
+    "D": "Class"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Family is the smallest rank listed."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0218",
+   "type": "mcq",
+   "stem": "Oryza sativa belongs to division ___________ A.Magnoliophyta B. Pooles C. Poaceae D. None of the above.",
+   "options": {
+    "A": "Magnoliophyta",
+    "B": "Pooles",
+    "C": "Poaceae",
+    "D": "None of the above."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Oryza sativa: Magnoliophyta."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0219",
+   "type": "mcq",
+   "stem": "____________ have floral parts arranged in multiples of four or five. A.Monocots B. Cycadophyta C. Dicots D. All of the above.",
+   "options": {
+    "A": "Monocots",
+    "B": "Cycadophyta",
+    "C": "Dicots",
+    "D": "All of the above."
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Dicots: floral parts in 4s and 5s."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0220",
+   "type": "mcq",
+   "stem": "Some animals have subspecies, usually caused by geographical locations and are called A.Binomials B. Trinomials C. Eukarya D. Monera",
+   "options": {
+    "A": "Binomials",
+    "B": "Trinomials",
+    "C": "Eukarya",
+    "D": "Monera"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Trinomials name subspecies."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0221",
+   "type": "mcq",
+   "stem": "Diagram illustrating hierarchy of clades is known as A.phylogenetic tree B. cladogram C. ancestral tree D. all of the above",
+   "options": {
+    "A": "phylogenetic tree",
+    "B": "cladogram",
+    "C": "ancestral tree",
+    "D": "all of the above"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Cladogram: the clade hierarchy diagram."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0222",
+   "type": "mcq",
+   "stem": "Analysis of amino acids in protein and nucleotides in nucleic acids is termed ______ A.competitive cytology B. comparative biochemistry C. cladogram D. phylogenetic information.",
+   "options": {
+    "A": "competitive cytology",
+    "B": "comparative biochemistry",
+    "C": "cladogram",
+    "D": "phylogenetic information."
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Comparative biochemistry."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0223",
+   "type": "mcq",
+   "stem": "_______ is an example of animal with radial symmetry A.Sponge B. Sea anemone C. Lizard D. Bats",
+   "options": {
+    "A": "Sponge",
+    "B": "Sea anemone",
+    "C": "Lizard",
+    "D": "Bats"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Sea anemone: radial symmetry."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0224",
+   "type": "mcq",
+   "stem": "Animals with dual embryonic tissue layers are called A.Diploblastic B. Endoderm C. Triploblastic D. All of the above.",
+   "options": {
+    "A": "Diploblastic",
+    "B": "Endoderm",
+    "C": "Triploblastic",
+    "D": "All of the above."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Diploblastic."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0225",
+   "type": "mcq",
+   "stem": "Classification which examines shapes, sizes and development of organisms is termed A.competitive cytology. B. comparative morphology C. comparative biochemistry D. all of the above.",
+   "options": {
+    "A": "competitive cytology.",
+    "B": "comparative morphology",
+    "C": "comparative biochemistry",
+    "D": "all of the above."
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Comparative morphology."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0226",
+   "type": "mcq",
+   "stem": "Vertebrates have ________ form of symmetry. A.radial B. bilateral C. asymmetry D. none of the above.",
+   "options": {
+    "A": "radial",
+    "B": "bilateral",
+    "C": "asymmetry",
+    "D": "none of the above."
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Bilateral symmetry in vertebrates."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0227",
+   "type": "mcq",
+   "stem": "Which of the following is the kingdom of eukaryotic, multicellular and photo-autotrophic organisms? A.Fungi B. Animalia C. Protoctista D. Plantae",
+   "options": {
+    "A": "Fungi",
+    "B": "Animalia",
+    "C": "Protoctista",
+    "D": "Plantae"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Plantae."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0228",
+   "type": "mcq",
+   "stem": "Plants with soft and delicate stems, usually less than a metre tall are A. herbs B. shrubs C. trees D. liana",
+   "options": {
+    "A": "herbs",
+    "B": "shrubs",
+    "C": "trees",
+    "D": "liana"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Herbs."
+  },
+  {
+   "id": "uni-uniosun-bio102-bank-0229",
+   "type": "mcq",
+   "stem": "Bryophytes have been placed among cryptogams because",
+   "options": {
+    "A": "they are heterotrophic",
+    "B": "they do not produce flowers",
+    "C": "they do not bear true roots and stems",
+    "D": "their flowers are hidden"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Bryophytes are cryptogams because they produce no flowers - reproduction is hidden (spores)."
+  }
+ ]
+}

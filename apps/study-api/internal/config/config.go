@@ -5,6 +5,7 @@
 package config
 
 import (
+        "encoding/hex"
         "errors"
         "fmt"
         "os"
@@ -65,6 +66,28 @@ type Config struct {
         AuthGlobalPerMin int
         TutorPerMin      int
 
+        // Bundle shield (founder directive 2026-10-11: "ultimate
+        // security - no agentic AI may scrape the 200,000+ past
+        // questions"). BUNDLE_MASTER_KEY is 32 bytes hex shared by this
+        // API and the web bake (Vercel + GitHub Pages build secrets);
+        // "" disables /bundles/key so the encrypted static shelf falls
+        // back to API-only serving. BUNDLE_KEY_ID labels the rotation
+        // (kid). BUNDLE_ANON_KEY=false removes the anonymous
+        // proof-of-work path so bank keys require a signed-in account.
+        BundleMasterKey []byte
+        BundleKeyID     string
+        BundleAnonKey   bool
+        // Distinct banks per account per UTC day (static shelf + API
+        // + key route all share the ledger). Default 40: a real student
+        // prepping a handful of subjects never reaches it; a scraper
+        // walking 1,000+ banks trips it on day one.
+        BundleAccountDaily int
+        // Anonymous key fetches per IP per hour (proof-of-work path).
+        BundleIPPerHour int
+        // Proof-of-work difficulty in bits for the anonymous key path
+        // (18 ≈ 262k hashes, ~0.3s in a browser, per key request).
+        BundlePowBits int
+
         // Reset-mail quota armor (founder directive 2026-10-05, trimming
         // the 2026-10-04 armor: "remove the 100 email/day budget... put
         // the 300/day"). RESET_MAIL_DAILY_CAP is the total number of
@@ -108,6 +131,13 @@ func Load() (*Config, error) {
                 AuthPerMin:       envInt("AUTH_PER_MIN", 20),
                 AuthGlobalPerMin: envInt("AUTH_GLOBAL_PER_MIN", 300),
                 TutorPerMin:      envInt("TUTOR_PER_MIN", 12),
+
+                BundleMasterKey:     envHex("BUNDLE_MASTER_KEY"),
+                BundleKeyID:         envStr("BUNDLE_KEY_ID", "k1"),
+                BundleAnonKey:       envBool("BUNDLE_ANON_KEY", true),
+                BundleAccountDaily:  envInt("BUNDLE_ACCOUNT_DAILY", 40),
+                BundleIPPerHour:     envInt("BUNDLE_IP_PER_HOUR", 12),
+                BundlePowBits:       envInt("BUNDLE_POW_BITS", 18),
                 ResetMailDailyCap: envInt("RESET_MAIL_DAILY_CAP", 300),
 
                 ArenaQuestions:          envInt("ARENA_QUESTIONS", 15),            // founder rule: 15-question duels
@@ -154,6 +184,21 @@ func aiPreset(provider string) (base, model string) {
         default: // "zai", anything unknown ("groq" is retired)
                 return "https://api.z.ai/api/paas/v4", "glm-4.5-flash" // free model
         }
+}
+
+// envHex reads a hex-encoded secret (BUNDLE_MASTER_KEY) and returns
+// the decoded bytes; empty/invalid yields nil, which cleanly disables
+// the feature that depends on it.
+func envHex(key string) []byte {
+        v := strings.TrimSpace(os.Getenv(key))
+        if v == "" {
+                return nil
+        }
+        b, err := hex.DecodeString(v)
+        if err != nil || len(b) != 32 {
+                return nil
+        }
+        return b
 }
 
 func envStr(key, def string) string {
