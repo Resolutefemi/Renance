@@ -45,10 +45,11 @@ dev_dependencies:
 
 dependency_overrides:
   # CI fix 2026-10-12: image 4.11.0 declares archive ^4.0.9 but calls
-  # ZLibDecoder.decodeLazy, which only exists in archive 4.1.0+ - every
-  # fresh pub-cache resolve broke the golden tests. image 4.11.1 pulls
-  # archive ^4.4.0 and compiles cleanly.
-  image: 4.11.1
+  # ZLibDecoder.decodeLazy, which only exists in archive 4.1.0+ - a
+  # fresh pub-cache resolve breaks the golden tests. image 4.11.1
+  # conflicts with flutter_local_notifications, so pin the last
+  # archive-4.0.9-compatible image line instead.
+  image: 4.10.0
 
 flutter:
   uses-material-design: true
