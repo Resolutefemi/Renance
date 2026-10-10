@@ -1,12 +1,21 @@
-/// The new-student feature tour (founder directive, 2026-09-30): a
-/// one-time card stack that makes every Renance surface discoverable
-/// right after signup - with a Skip button always in reach. Persisted
-/// via SharedPreferences so it shows exactly once.
+/// The new-student feature tour (founder directive, 2026-09-30;
+/// expanded 2026-10-11): a one-time card stack that makes every
+/// Renance surface discoverable right after signup - with a Skip
+/// button always in reach. Persisted via SharedPreferences so it shows
+/// exactly once.
+///
+/// Founder directive (2026-10-11): the tour teaches WHERE TO CLICK for
+/// every feature (bottom tabs, the header search, the AI sparkle), and
+/// the Appearance step is INTERACTIVE - a "Try it now" button opens the
+/// real appearance sheet from inside the tour so new students meet the
+/// theme/seed controls before their first paper, and know it lives
+/// under Profile for later.
 library;
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'appearance_sheet.dart';
 import 'theme.dart';
 
 const String _kTourKey = 'renance.tour.v1';
@@ -16,10 +25,18 @@ class _TourStep {
     required this.icon,
     required this.title,
     required this.body,
+    this.whereToTap,
+    this.actionLabel,
   });
   final IconData icon;
   final String title;
   final String body;
+
+  /// The "where to click" hint - the concrete finger target.
+  final String? whereToTap;
+
+  /// Optional live action button (e.g. open the appearance sheet).
+  final String? actionLabel;
 }
 
 const List<_TourStep> _steps = <_TourStep>[
@@ -28,13 +45,33 @@ const List<_TourStep> _steps = <_TourStep>[
     title: 'Welcome to Renance',
     body: 'Your study OS for JAMB, WAEC, NECO, Post-UTME and university - '
         '235,110+ real past questions, spaced review, and an AI raised on all of it. '
-        'Here is the tour.',
+        'Here is the full tour.',
+  ),
+  _TourStep(
+    icon: Icons.apps,
+    title: 'The five tabs at the bottom',
+    body: 'Everything in Renance lives behind five tabs: HOME (your desk), '
+        'PRACTICE (question packs and papers), REVIEW (spaced repetition), '
+        'PROGRESS (reports and streaks) and PROFILE (account, focus, settings). '
+        'Tap a tab any time to jump there.',
+    whereToTap: 'Bottom bar - Home, Practice, Review, Progress, Profile',
   ),
   _TourStep(
     icon: Icons.edit_note,
     title: 'Practice with real past questions',
-    body: 'Pick your exam body and subject, then drill actual past papers year by year. '
-        'Every question carries a worked explanation on the review screen.',
+    body: 'Pick your exam body and subject, then drill actual past papers year by '
+        'year. Every question carries a worked explanation on the review screen. '
+        'University students: the Practice tab is also where your school\'s course '
+        'banks live.',
+    whereToTap: 'Practice tab, or the Exams tile on Home',
+  ),
+  _TourStep(
+    icon: Icons.search,
+    title: 'Search anything, instantly',
+    body: 'Looking for a topic, a course code or a past paper? The magnifier at '
+        'the top of Home searches the whole corpus - subjects, courses and '
+        'questions - in one field.',
+    whereToTap: 'Magnifier icon - top right of the Home header',
   ),
   _TourStep(
     icon: Icons.auto_awesome,
@@ -42,24 +79,48 @@ const List<_TourStep> _steps = <_TourStep>[
     body: 'Chat with an AI grounded on the full past-question corpus, generate playable '
         'quizzes, study notes, notebooks and lesson notes - all exportable as PDF, with '
         'folders, history and memories that follow your account.',
-  ),
-  _TourStep(
-    icon: Icons.auto_stories_outlined,
-    title: 'Notes that write themselves',
-    body: 'Every note, notebook and lesson note the AI generates is saved to your account, '
-        'ready to download as PDF or share with classmates.',
+    whereToTap: 'The sparkle button - bottom right of Home',
   ),
   _TourStep(
     icon: Icons.history_edu_outlined,
     title: 'Review that never forgets',
     body: 'Wrong answers come back on a spaced-repetition schedule, and every paper you sit '
-        'lands in your history with a full report - pace, accuracy, topics.',
+        'lands in your history with a full report - pace, accuracy, topics. When the badge '
+        'shows a number, that is how many topics are due right now.',
+    whereToTap: 'Review tab - watch for the green badge count',
   ),
   _TourStep(
     icon: Icons.emoji_events_outlined,
     title: 'Duel and climb',
     body: 'Challenge friends to live 1v1 arena duels, take the daily quiz, and climb the '
-        'leaderboards. Wins earn REN you can redeem for premium.',
+        'leaderboards - Arena, JAMB, WAEC, NECO, streaks and the daily board. '
+        'Wins earn REN you can redeem for premium.',
+    whereToTap: 'Compete row on Home - Arena, Daily Quiz, Leaderboard',
+  ),
+  _TourStep(
+    icon: Icons.offline_bolt,
+    title: 'Make Renance work offline',
+    body: 'Download your question packs once and Renance works with no data at all - '
+        'on a bus, in a hall, anywhere. Manage or delete packs any time from the '
+        'Downloads screen.',
+    whereToTap: 'The offline offer after signup, or the Downloads tile',
+  ),
+  _TourStep(
+    icon: Icons.school,
+    title: 'Your focus shapes the app',
+    body: 'Set your learning focus - JAMB, WAEC, NECO, Post-UTME or University - and the '
+        'whole app reshapes around it: the home desk, the packs, the leaderboards. '
+        'Change it whenever your target changes.',
+    whereToTap: 'Profile tab - Learning focus card',
+  ),
+  _TourStep(
+    icon: Icons.palette_outlined,
+    title: 'Make it yours - Appearance',
+    body: 'Light, dark or mixed mode, plus a seed colour that re-tints the whole app. '
+        'Open it right now and see every surface change - you can always find it '
+        'again under Profile.',
+    whereToTap: 'Profile tab - Appearance card',
+    actionLabel: 'Try appearance settings now',
   ),
   _TourStep(
     icon: Icons.rocket_launch_outlined,
@@ -91,6 +152,24 @@ class _FeatureTourDialog extends StatefulWidget {
 
 class _FeatureTourDialogState extends State<_FeatureTourDialog> {
   int _step = 0;
+
+  Future<void> _runAction() async {
+    // The interactive step (founder directive 2026-10-11): open the REAL
+    // appearance sheet from inside the tour so the new student touches
+    // the light/dark/seed controls before their first paper. The tour
+    // dialog stays mounted underneath; when the sheet closes the walk
+    // continues exactly where it left off.
+    final _TourStep s = _steps[_step];
+    if (s.actionLabel == null) return;
+    await showModalBottomSheet<void>(
+      context: context,
+      isDismissible: true,
+      enableDrag: true,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (_) => const AppearanceSheet(),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -155,6 +234,47 @@ class _FeatureTourDialogState extends State<_FeatureTourDialog> {
               style: RenanceText.bodyBase
                   .copyWith(fontSize: 13.5, height: 1.5, color: context.textSecondary),
             ),
+            // The "where to click" hint: the concrete finger target for
+            // this feature, styled as a pointer chip so it reads as a
+            // direction, not more copy.
+            if (s.whereToTap != null) ...<Widget>[
+              const SizedBox(height: 12),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                decoration: BoxDecoration(
+                  color: context.cardHigh,
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: context.outlineVariant),
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Icon(Icons.touch_app_outlined,
+                        size: 16, color: context.textSecondary),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        s.whereToTap!,
+                        style: RenanceText.caption.copyWith(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                          color: context.ink,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+            // The live action: opens the real appearance sheet.
+            if (s.actionLabel != null) ...<Widget>[
+              const SizedBox(height: 12),
+              OutlinedButton.icon(
+                onPressed: _runAction,
+                icon: const Icon(Icons.open_in_new_rounded, size: 16),
+                label: Text(s.actionLabel!),
+              ),
+            ],
             const SizedBox(height: 18),
             Row(
               children: <Widget>[

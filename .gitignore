@@ -83,3 +83,5 @@ data/src/abstechconnect/download_fails.json
 data/src/abstechconnect/bank_report.json
 data/src/gdrive/*.pdf
 data/renance_pdfs/
+# raw crawl of the founder 2026-10-11 Drive folder (bank sources only)
+data/src/gdrive_new/

@@ -1,7 +1,7 @@
 name: renance
 description: "Renance, the global student study OS. Offline-first mobile shell."
 publish_to: "none"
-version: 2.6.12+18
+version: 2.6.13+19
 
 environment:
   sdk: ">=3.5.0 <4.0.0"
@@ -30,6 +30,13 @@ dependencies:
   # Device notifications (founder directive 2026-10-04): review-due
   # nudges and download completions drop as real Android notifications.
   flutter_local_notifications: ^19.5.0
+  # Secure session storage (founder directive 2026-10-11): the auth
+  # token lives in the OS-grade encrypted store (Android
+  # EncryptedSharedPreferences / iOS Keychain) so the session survives
+  # app closes and device restarts without ever sitting in plain
+  # shared preferences. Falls back to prefs only if the secure store
+  # is unavailable (tests, exotic devices).
+  flutter_secure_storage: ^9.2.2
 
 dev_dependencies:
   flutter_test:

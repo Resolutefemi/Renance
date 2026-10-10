@@ -27,7 +27,13 @@ Future<void> main() async {
   // the first frame so download completions and review nudges can drop.
   await RenanceNotifications.init();
   final SharedPreferences prefs = await SharedPreferences.getInstance();
-  final SessionStore session = SessionStore(prefs);
+  // Secure local storage (founder directive 2026-10-11): the auth token
+  // boots from the OS-grade encrypted store (Android
+  // EncryptedSharedPreferences / iOS Keychain) before the first frame,
+  // so a saved session is live from the very first route and survives
+  // app closes and device restarts. Only an explicit Sign Out under the
+  // profile ever returns the student to the login page.
+  final SessionStore session = await SessionStore.load(prefs);
   final ApiClient api = ApiClient(
     baseUrl: apiBaseUrl,
     token: () => session.token,
