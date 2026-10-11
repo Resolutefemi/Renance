@@ -24,6 +24,7 @@ import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import AiSparkle from '@/components/ai-sparkle';
 import { getToken } from '@/lib/session';
+import { ApiError } from '@/lib/api';
 import {
   addMemory,
   bridgeStats,
@@ -166,14 +167,24 @@ export default function AiClient() {
         if (res.memorySaved) showToast('Memory saved');
         void refreshLedge();
       } catch (e) {
+        // Founder directive 2026-10-12 ("remove the fallback feature
+        // completely - the AI answers directly"): the server never saves
+        // a canned non-answer anymore; a double provider failure arrives
+        // as ai_unavailable and surfaces as a normal retryable error
+        // bubble, exactly like every real AI chat app.
+        const code = e instanceof ApiError ? e.code : '';
+        const text =
+          code === 'rate_limited'
+            ? 'Renance AI is cooling down for a few seconds; try again shortly.'
+            : code === 'ai_unavailable'
+              ? 'Renance AI could not answer just now. Send the message again.'
+              : 'Renance AI could not reach the server. Check the connection and try again.';
         setMessages((m) => [
           ...m,
           {
             id: -Date.now() - 1,
             role: 'assistant',
-            content: e instanceof Error && e.message.includes('rate')
-              ? 'Renance AI is cooling down for a few seconds; try again shortly.'
-              : 'Renance AI could not reach the server. Check the connection and try again.',
+            content: text,
             createdAt: new Date().toISOString(),
           },
         ]);

@@ -6,7 +6,8 @@
 //   - AI mode: an OpenAI-compatible chat-completions endpoint (Z.ai,
 //     OpenAI, self-hosted vLLM...) configured via AI_API_KEY /
 //     AI_BASE_URL / AI_MODEL. Prompt embeds the question, the
-//     student's pick and the key, with Socratic coaching rules.
+//     student's pick and the key, with answer-first coaching rules
+//     (the answer leads, the teaching follows).
 //   - Hint mode: a deterministic, zero-dependency fallback that cycles
 //     exam-technique nudges (read-like-an-examiner, eliminate, qualifier
 //     check, definition match) WITHOUT revealing the correct letter.
@@ -74,16 +75,24 @@ type Tutor struct {
         Log       *slog.Logger
 }
 
-// Reply answers the conversation. AI failures degrade to hint mode so a
-// provider outage can never break the study loop mid-session.
+// Reply answers the conversation. AI failures get ONE immediate retry
+// (founder directive 2026-10-12: a transient provider hiccup must not
+// bounce the student out of a real answer), and only a second failure
+// degrades to hint mode so the study loop is never broken.
 func (t *Tutor) Reply(ctx context.Context, ac AttemptContext, msgs []Message) Reply {
         turn := userTurn(msgs)
         if t.Provider != nil {
                 out, err := t.Provider.Complete(ctx, SystemPrompt(ac), msgs, t.MaxTokens)
+                if err != nil || strings.TrimSpace(out) == "" {
+                        if err != nil && t.Log != nil {
+                                t.Log.Error("tutor provider failed - retrying once", "err", err)
+                        }
+                        out, err = t.Provider.Complete(ctx, SystemPrompt(ac), msgs, t.MaxTokens)
+                }
                 if err == nil && strings.TrimSpace(out) != "" {
                         return Reply{Text: strings.TrimSpace(out), Mode: ModeAI}
                 }
-                if t.Log != nil {
+                if err != nil && t.Log != nil {
                         t.Log.Error("tutor provider failed - degrading to hint mode", "err", err)
                 }
         }
@@ -103,18 +112,22 @@ func userTurn(msgs []Message) int {
         return n
 }
 
-// SystemPrompt embeds the question, the pick, the key and the coaching
-// doctrine into one system string.
+// SystemPrompt embeds the question, the pick, the key and the
+// teaching doctrine into one system string. Founder directive
+// 2026-10-12 ("make sure the ai answers directly or do like normal AI
+// does"): the old Socratic withholding ("never state the letter
+// first, ask guiding questions for two turns") is GONE - the tutor
+// now gives the answer in its very first sentence and then teaches.
 func SystemPrompt(ac AttemptContext) string {
         var b strings.Builder
-        b.WriteString("You are Renance's Socratic exam tutor for Nigerian students (JAMB, WAEC, NECO and university courses). ")
-        b.WriteString("A student is reviewing a question they got wrong and asking why. Coach, don't lecture.\n\n")
+        b.WriteString("You are Renance's exam tutor for Nigerian students (JAMB, WAEC, NECO and university courses). ")
+        b.WriteString("A student is reviewing a question they got wrong and asking why. Teach, don't stall.\n\n")
         b.WriteString("RULES:\n")
-        b.WriteString("- Ask guiding questions before telling. On the student's THIRD ask or later, walk through the full reasoning to the answer.\n")
-        b.WriteString("- Never just state the correct letter as your first sentence.\n")
+        b.WriteString("- ANSWER FIRST: your very first sentence states the correct option letter and the answer itself, then explain why it is right in plain steps.\n")
+        b.WriteString("- Address why the student's pick was wrong in one sentence.\n")
         b.WriteString("- Keep every reply under 120 words, warm and plain-English. No markdown headings.\n")
         b.WriteString("- Use relatable everyday real-world physical or social scenarios to clarify the core principle so the student can visualize it easily.\n")
-        b.WriteString("- Reference the topic and their pick when it helps. End with one concrete next action.\n\n")
+        b.WriteString("- End with one concrete next action to lock the idea in.\n\n")
         fmt.Fprintf(&b, "EXAM: %s (%s)\n", ac.ExamTitle, ac.Code)
         if ac.Topic != "" {
                 fmt.Fprintf(&b, "TOPIC: %s\n", ac.Topic)

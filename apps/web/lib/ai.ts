@@ -3,16 +3,19 @@
 /**
  * Renance AI client. Every AI surface rides the study API's /ai/chat
  * route: the provider key lives on the server (Render env), never in
- * the browser bundle, and students never bring their own key. When the
- * server has no provider configured, it answers from the corpus in
- * study-guide mode, so the companion is never dead.
+ * the browser bundle, and students never bring their own key. The
+ * server retries the provider twice and fails honestly (503
+ * ai_unavailable) - the canned study-guide fallback was removed
+ * 2026-10-12 per founder directive, so errors surface here as normal
+ * retryable errors.
  */
 
 import { api } from '@/lib/api';
 
 export const AI_MODEL = 'renance-ai';
 
-/** True: the server route is always the path; it degrades gracefully. */
+/** True: the server route is always the path; it fails honestly with
+ *  a retryable error rather than a canned fallback. */
 export function aiConfigured(): boolean {
   return true;
 }

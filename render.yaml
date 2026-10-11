@@ -53,6 +53,17 @@ services:
         value: https://api.z.ai/api/paas/v4
       - key: AI_MODEL
         value: glm-4.5-flash
+      # AI chat doctrine (founder directive 2026-10-12: "remove the
+      # fallback feature completely - the AI answers directly like a
+      # normal AI"): the canned "I cannot give you a full answer this
+      # minute..." study-guide reply is deleted from the codebase. Each
+      # chat message now gets TWO provider attempts (grounded prompt,
+      # then lean), and a genuine double-failure returns an honest
+      # retryable error to the app/web clients - never a fake
+      # non-answer. TUTOR_PER_MIN is raised 12 -> 30 so an active study
+      # session never trips it.
+      - key: TUTOR_PER_MIN
+        value: "30"
       # Email chain (founder directive 2026-10-05, credentials verified
       # live against both providers on this date):
       #   1. Brevo HTTPS API   (BREVO_API_KEY below - primary; sender

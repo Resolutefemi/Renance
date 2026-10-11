@@ -4,9 +4,13 @@
 // provider-agnostic OpenAI-compatible chat endpoint (founder directive:
 // Z.ai's free GLM-4.5-Flash is the one brain via AI_PROVIDER=zai /
 // AI_API_KEY; Groq's key was revoked and is removed, Gemini is gone).
-// Without any key the endpoint answers
-// in an honest "study guide" mode built straight from the corpus so
-// the page never dies.
+// Founder directive 2026-10-12 ("remove the feature completely, make
+// sure the AI answers directly or do like normal AI does"): the old
+// canned study-guide fallback - "I cannot give you a full answer this
+// minute..." - is GONE. The provider now gets two attempts (grounded,
+// then lean), and if both genuinely fail the client receives an
+// honest retryable error exactly like a normal AI app, never a fake
+// non-answer.
 package httpapi
 
 import (
@@ -27,8 +31,9 @@ type aiChatRequest struct {
         Subject string `json:"subject,omitempty"`
 }
 
-// handleAIChat serves POST /ai/chat. Rate limited with the tutor's
-// budget (TutorPerMin); grounded with up to ~8KB of corpus context.
+// handleAIChat serves POST /ai/chat. Rate limited on the route
+// (userLimit "ai"); grounded with up to ~8KB of corpus context; two
+// provider attempts so a slow window still lands a real answer.
 func (s *Server) handleAIChat(w http.ResponseWriter, r *http.Request) {
         uid, err := userIDFrom(r)
         if err != nil {
@@ -51,8 +56,10 @@ func (s *Server) handleAIChat(w http.ResponseWriter, r *http.Request) {
         if req.Class != "" && req.Subject != "" {
                 system += "\n\n" + s.corpusGrounding(r, req.Class, req.Subject)
         }
-        if s.tutor.Provider != nil {
-                out, err := s.tutor.Provider.Complete(aiFastCtx(r), system, req.Messages, 1024)
+        if s.tutor != nil && s.tutor.Provider != nil {
+                first, retry, done := aiChatAttempts(r)
+                defer done()
+                out, err := s.tutor.Provider.Complete(first, system, req.Messages, 1024)
                 if err == nil && strings.TrimSpace(out) != "" {
                         writeJSON(w, http.StatusOK, map[string]any{
                                 "reply": strings.TrimSpace(out),
@@ -60,14 +67,28 @@ func (s *Server) handleAIChat(w http.ResponseWriter, r *http.Request) {
                         })
                         return
                 }
-                s.log.Error("renance ai provider failed", "err", err)
+                if err != nil {
+                        s.log.Error("renance ai provider attempt 1 failed", "err", err)
+                }
+                // Lean retry: doctrine only. A quarter of the input, so the
+                // provider can still land a REAL answer inside a slow window.
+                out, err = s.tutor.Provider.Complete(retry, renanceAISystemPrompt(), req.Messages, 1024)
+                if err == nil && strings.TrimSpace(out) != "" {
+                        writeJSON(w, http.StatusOK, map[string]any{
+                                "reply": strings.TrimSpace(out),
+                                "mode":  "ai",
+                        })
+                        return
+                }
+                if err != nil {
+                        s.log.Error("renance ai provider retry failed", "err", err)
+                }
         }
-        // No provider or a provider outage: answer from the corpus itself
-        // (or the honest fallback text) so the companion is never dead.
-        writeJSON(w, http.StatusOK, map[string]any{
-                "reply": renanceAIStudyGuide(r, &req),
-                "mode":  "guide",
-        })
+        // No canned fallback, ever (founder directive 2026-10-12): fail
+        // honestly and let the client offer a retry, the way a normal AI
+        // companion does.
+        fail(w, http.StatusServiceUnavailable, "ai_unavailable",
+                "Renance AI could not answer just now. Send the message again.")
 }
 
 // renanceAISystemPrompt is Renance AI's doctrine.
@@ -75,6 +96,7 @@ func renanceAISystemPrompt() string {
         var b strings.Builder
         b.WriteString("You are Renance AI, the study companion inside Renance, the Nigerian study OS for JAMB, WAEC, NECO, Post-UTME and university students, with a school portal for secondary and primary schools. ")
         b.WriteString("You are trained on Renance's own data: Nigerian curriculum scheme of work (NERDC), lesson notes for every topic, and exam question banks. ")
+        b.WriteString("You are a full AI assistant, not a page of links: answer every question the student asks - past questions, homework, explanations, study advice - completely and directly, the way a normal AI assistant would. ")
         b.WriteString("Explain like a patient Nigerian teacher: plain English, concrete local examples (naira, market, school farm, NEPA), short paragraphs. ")
         b.WriteString("When a student asks or pastes a question, ANSWER DIRECTLY: give the answer itself (and the option letter, when the question has options) in your very first sentence, then at most one short paragraph on why it is right. ")
         b.WriteString("Do not break the reply into steps, sections, bullet walkthroughs or headings unless the student explicitly asks for a breakdown. Never invent content that is not in the grounding when grounding is provided; say what you are unsure about. ")
@@ -179,29 +201,4 @@ func fmtAny(v any) string {
         default:
                 return fmt.Sprint(v)
         }
-}
-
-// renanceAIStudyGuide is the no-provider fallback: point the student at
-// the corpus surfaces that answer their question, never a dead end.
-// Founder directive (2026-09-30): never mention providers, models,
-// keys, modes or any internal plumbing - the companion sounds like a
-// companion taking a short break, not a status page.
-func renanceAIStudyGuide(r *http.Request, req *aiChatRequest) string {
-        q := ""
-        for i := len(req.Messages) - 1; i >= 0; i-- {
-                if req.Messages[i].Role == "user" {
-                        q = req.Messages[i].Content
-                        break
-                }
-        }
-        var b strings.Builder
-        b.WriteString("I cannot give you a full answer this minute - ask me again shortly. Meanwhile, here is how to keep moving:\n\n")
-        if req.Class != "" && req.Subject != "" {
-                b.WriteString("- For " + req.Class + " " + req.Subject + ", open the Scheme of Work and Lesson Notes for the topic you are on; every week carries its objectives and the full note.\n")
-        }
-        if strings.TrimSpace(q) != "" {
-                b.WriteString("- Break your question into its key terms, check the syllabus topics for this subject, and run ten practice questions on that topic; the review explanations teach the reasoning behind every option.\n")
-        }
-        b.WriteString("- Your chat is saved, so nothing is lost - come back and ask again in a few minutes.")
-        return b.String()
 }

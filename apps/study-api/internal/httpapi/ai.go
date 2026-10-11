@@ -156,6 +156,23 @@ func aiFastCtx(r *http.Request) context.Context {
         return ctx
 }
 
+// aiChatAttempts gives one chat reply TWO shots at a real answer
+// inside Render's ~30s proxy wall (founder directive 2026-10-12:
+// "make sure the AI answers directly - remove the fallback feature
+// completely"). The first attempt carries the full grounded prompt
+// on a 15s budget; the retry rides a leaner prompt on whatever is
+// left of the 27s envelope (~12s after a timeout, nearly all of it
+// after a fast failure). 15+12 = 27s keeps the whole exchange under
+// the proxy wall, so a provider latency spike degrades into a lean
+// REAL answer or our own clean error - never a naked 502, and never
+// a canned non-answer.
+func aiChatAttempts(r *http.Request) (first, retry context.Context, done func()) {
+        env, cancel := context.WithTimeout(r.Context(), 27*time.Second)
+        first, cancelFirst := context.WithTimeout(env, 15*time.Second)
+        context.AfterFunc(first, cancelFirst)
+        return first, env, cancel
+}
+
 func min(a, b int) int {
         if a < b {
                 return a
