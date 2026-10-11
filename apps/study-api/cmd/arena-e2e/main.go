@@ -42,7 +42,10 @@ func fatal(format string, args ...any) {
 
 func register(baseURL, username string) string {
 	body, _ := json.Marshal(map[string]string{"username": username, "password": "arena-e2e-password-1"})
-	resp, err := http.Post(baseURL+"/auth/register", "application/json", bytes.NewReader(body))
+	req, _ := http.NewRequest("POST", baseURL+"/auth/register", bytes.NewReader(body))
+	req.Header.Set("Content-Type", "application/json")
+	req.Header.Set("User-Agent", "RenanceArenaE2E/1.0 (CI probe)")
+	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
 		fatal("register %s: %v", username, err)
 	}
@@ -56,7 +59,10 @@ func register(baseURL, username string) string {
 		return out.Token
 	}
 	// 409: user exists from a previous run - log in instead.
-	resp2, err := http.Post(baseURL+"/auth/login", "application/json", bytes.NewReader(body))
+	req2, _ := http.NewRequest("POST", baseURL+"/auth/login", bytes.NewReader(body))
+	req2.Header.Set("Content-Type", "application/json")
+	req2.Header.Set("User-Agent", "RenanceArenaE2E/1.0 (CI probe)")
+	resp2, err := http.DefaultClient.Do(req2)
 	if err != nil {
 		fatal("login %s: %v", username, err)
 	}
@@ -270,6 +276,7 @@ func main() {
 	fmt.Println("▸ history for both students")
 	expectHistory := func(token, who, matchID string) {
 		req, _ := http.NewRequest("GET", baseURL+"/arena/history", nil)
+		req.Header.Set("User-Agent", "RenanceArenaE2E/1.0 (CI probe)")
 		req.Header.Set("Authorization", "Bearer "+token)
 		resp, err := http.DefaultClient.Do(req)
 		if err != nil {
