@@ -174,7 +174,12 @@ function BodyCustomSetup({ body }: { body: 'waec' | 'neco' }) {
         timerMinutes: typeof minutes === 'number' && minutes > 0 ? minutes : null,
         savedAt: Date.now(),
       });
-      router.push(examHref(res.code, { resume: '1' }));
+      // JAMB style: seat the paper, then land on the CBT instructions
+      // page - the candidate reads the sheet, then walks in with
+      // "Proceed to Test". The old ?resume=1 fast path (a) was glued
+      // onto the code by the examHref bug so it never worked, and (b)
+      // skipped the instructions page entirely (founder expects it).
+      router.push(examHref(res.code));
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not start the paper');
       setBusy(false);
@@ -516,7 +521,12 @@ function ExamSetupInner() {
       // examHref() routes composed codes (this one carries ~params) to
       // the static /exams/paper/?code=… page, a direct /exams/<code>
       // link 404s on the static export for any year-pinned paper.
-      router.push(examHref(res.code, { resume: '1' }));
+      // JAMB style: seat the paper, then land on the CBT instructions
+      // page - the candidate reads the sheet, then walks in with
+      // "Proceed to Test". The old ?resume=1 fast path (a) was glued
+      // onto the code by the examHref bug so it never fired, and (b)
+      // skipped the instructions page entirely (founder expects it).
+      router.push(examHref(res.code));
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not start the paper');
       setBusy(false);

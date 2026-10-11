@@ -15,9 +15,11 @@ import { api, API_BASE } from '@/lib/api';
 import { clearSession, getToken } from '@/lib/session';
 import { focusFromExams, setFocus } from '@/lib/focus';
 import {
-  SCHOOLS,
+  LIVE_SCHOOLS,
+  OTHERS_SCHOOL,
   findSchoolByName,
   storeSchoolSlug,
+  type School,
 } from '@/lib/university';
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
 import PageBar from '@/components/page-bar';
@@ -96,6 +98,7 @@ export default function ProfilePage() {
   // My school editor state (the ONLY place a picked school changes).
   const [schoolEditing, setSchoolEditing] = useState(false);
   const [schoolName, setSchoolName] = useState('');
+  const [schoolQuery, setSchoolQuery] = useState('');
   const [schoolBusy, setSchoolBusy] = useState(false);
   const [schoolError, setSchoolError] = useState<string | null>(null);
   // Referral link copy feedback. Lives up here with the other hooks: a
@@ -201,6 +204,25 @@ export default function ProfilePage() {
       setSchoolBusy(false);
     }
   }
+
+  // The school picker's browsable list (founder bug report 2026-10-11:
+  // the datalist never listed the schools and its dropdown did not
+  // work). Every live desk - the same listing as the School Desk gate -
+  // plus Other Schools pinned last; the search box only narrows, an
+  // empty query shows the full shelf so it is ALWAYS browsable.
+  const schoolPickResults = useMemo<School[]>(() => {
+    const q = schoolQuery.trim().toLowerCase();
+    const listed = LIVE_SCHOOLS.filter((s) => s.slug !== 'others');
+    const base = q
+      ? listed.filter(
+          (s) =>
+            s.name.toLowerCase().includes(q) ||
+            s.short.toLowerCase().includes(q) ||
+            s.state.toLowerCase().includes(q),
+        )
+      : listed;
+    return [...base, OTHERS_SCHOOL];
+  }, [schoolQuery]);
 
   if (!me) {
     return (
@@ -455,6 +477,7 @@ export default function ProfilePage() {
                   type="button"
                   onClick={() => {
                     setSchoolName(profile?.institution ?? '');
+                    setSchoolQuery(profile?.institution ?? '');
                     setSchoolError(null);
                     setSchoolEditing(true);
                   }}
@@ -497,23 +520,96 @@ export default function ProfilePage() {
                   Your school drives the School Desk content. This is the only place it can
                   be changed after the first pick.
                 </p>
-                <label className="block">
-                  <span className="mb-1.5 block text-sm text-on-surface-variant">School</span>
+
+                {/* Search box (founder bug report 2026-10-11: the old
+                    datalist never listed the schools until you typed the
+                    exact name, and its dropdown was unusable). The list
+                    below is always browsable and scrolls. */}
+                <div className="flex items-center gap-2 rounded-lg border border-outline-variant bg-surface-container px-3.5 py-2.5 transition-colors focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/40">
+                  <span className="material-symbols-outlined text-[18px] text-on-surface-variant">search</span>
                   <input
-                    value={schoolName}
-                    onChange={(e) => setSchoolName(e.target.value)}
-                    placeholder="e.g. Federal University of Technology, Akure"
-                    list="profile-schools"
-                    className="w-full rounded-lg bg-surface-container px-4 py-2.5 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary"
+                    value={schoolQuery}
+                    onChange={(e) => {
+                      setSchoolQuery(e.target.value);
+                      // free text stays a valid pick: whatever is typed
+                      // is what saves until a row below is picked.
+                      setSchoolName(e.target.value);
+                    }}
+                    placeholder="Search school, short code or state…"
+                    className="w-full bg-transparent text-sm text-on-surface placeholder:text-outline focus:outline-none"
                   />
-                  <datalist id="profile-schools">
-                    {SCHOOLS.filter((s) => s.live || s.type === 'university')
-                      .slice(0, 200)
-                      .map((s) => (
-                        <option key={s.slug} value={s.name} />
-                      ))}
-                  </datalist>
-                </label>
+                  {schoolQuery && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setSchoolQuery('');
+                        setSchoolName(profile?.institution ?? '');
+                      }}
+                      aria-label="Clear search"
+                      className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-on-surface-variant transition hover:bg-surface-container"
+                    >
+                      <span className="material-symbols-outlined text-[16px]">close</span>
+                    </button>
+                  )}
+                </div>
+
+                {/* The browsable, scrollable school list: every live
+                    desk (the same listing as the School Desk gate) plus
+                    Other Schools pinned last. */}
+                <ul className="mt-3 max-h-72 divide-y divide-outline-variant/40 overflow-y-auto overscroll-contain rounded-xl border border-outline-variant/60 bg-card">
+                  {schoolPickResults.map((s) => {
+                    const isOthers = s.slug === 'others';
+                    const selected = schoolName.trim().toLowerCase() === s.name.toLowerCase();
+                    return (
+                      <li key={s.slug}>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setSchoolName(s.name);
+                            setSchoolQuery(isOthers ? '' : s.name);
+                          }}
+                          className={`flex w-full items-center gap-3 px-3.5 py-3 text-left transition ${
+                            selected ? 'bg-selection-blue/25' : 'hover:bg-surface-container'
+                          }`}
+                        >
+                          <span
+                            className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full ${
+                              selected ? 'bg-primary text-on-primary' : 'bg-surface-container text-on-surface-variant'
+                            }`}
+                          >
+                            <span className="material-symbols-outlined text-[16px]">
+                              {isOthers ? 'diversity_3' : 'account_balance'}
+                            </span>
+                          </span>
+                          <span className="min-w-0 flex-1">
+                            <span className="block truncate text-[14px] font-semibold text-on-surface">{s.name}</span>
+                            <span className="block truncate text-[11.5px] text-on-surface-variant">
+                              {isOthers ? 'Merged general course banks for every unlisted school' : s.state}
+                            </span>
+                          </span>
+                          {selected && (
+                            <span className="material-symbols-outlined shrink-0 text-[18px] text-primary">check_circle</span>
+                          )}
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+
+                {/* The picked value - what Save will write. */}
+                <p className="mt-3 text-[12.5px] text-on-surface-variant">
+                  {schoolName.trim() ? (
+                    <>
+                      Saving school:{' '}
+                      <span className="font-semibold text-on-surface">{schoolName.trim()}</span>
+                      {!findSchoolByName(schoolName.trim()) && (
+                        <span className="text-accent-amber"> (not a listed desk yet - general desks still apply)</span>
+                      )}
+                    </>
+                  ) : (
+                    'Pick a school from the list above, or type a name not listed.'
+                  )}
+                </p>
 
                 {schoolError && (
                   <p className="mt-3 rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">
@@ -531,7 +627,7 @@ export default function ProfilePage() {
                   </button>
                   <button
                     type="submit"
-                    disabled={schoolBusy}
+                    disabled={schoolBusy || !schoolName.trim()}
                     className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-primary py-3 text-sm font-semibold text-on-primary transition-transform active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     {schoolBusy && <RenanceMark size={20} state="busy" />}
