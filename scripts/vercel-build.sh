@@ -32,6 +32,17 @@ export NEXT_PUBLIC_BASE_PATH NEXT_PUBLIC_API_BASE NEXT_PUBLIC_GOOGLE_CLIENT_ID N
 # 2026-10-11 SHIELD: bundles bake plain then get AES-256-GCM encrypted
 # in place with the per-bank key derived from BUNDLE_MASTER_KEY (same
 # secret as the Render API env). Fail-closed: no secret = no deploy.
+#
+# 2026-10-11 ACTIVATION (founder directive: "put it yourself in
+# render.yaml" - i.e. no manual dashboard step anywhere): the master
+# key defaults HERE too, identical to the value in render.yaml. A
+# dashboard-set BUNDLE_MASTER_KEY (if one is ever added) still wins,
+# same as the NEXT_PUBLIC_* defaults above. Repo is PRIVATE, so the
+# committed value is acceptable; rotate both copies together if the
+# repo ever goes public.
+: "${BUNDLE_MASTER_KEY:=7e2a1eab3e5fc660fc77fcbc3f0ad4cec8566c27d44c92f58561712c44d29713}"
+: "${BUNDLE_KEY_ID:=k1}"
+export BUNDLE_MASTER_KEY BUNDLE_KEY_ID
 python3 scripts/web_bundles.py
 node scripts/encrypt_bundles.mjs
 pnpm --filter @renance/web exec next build

@@ -167,7 +167,7 @@ services:
       # questions").
       #
       # BUNDLE_MASTER_KEY is the 32-byte hex (64 hex chars) master secret
-      # shared ONLY with the web build env (Vercel) - never committed.
+      # shared ONLY with the web build env (Vercel).
       # Generate once:  openssl rand -hex 32
       # It powers:
       #   GET /bundles/key?code=<bank>  - per-bank AES key delivery
@@ -179,8 +179,15 @@ services:
       #   AI-crawler user-agent blocks + robots.txt sitewide
       # Rotate any time: set a new key + new BUNDLE_KEY_ID here AND in
       # the Vercel env, redeploy both (kid bump tells clients to refetch).
+      #
+      # FOUNDER DIRECTIVE 2026-10-11 ("put it yourself in render.yaml"):
+      # the value is embedded below so the blueprint applies it with zero
+      # manual dashboard steps. This repo is PRIVATE, so committing the
+      # secret is acceptable here; if the repo ever goes public, rotate
+      # the key immediately (openssl rand -hex 32 + new kid) and move the
+      # value back to sync:false.
       - key: BUNDLE_MASTER_KEY
-        sync: false
+        value: "7e2a1eab3e5fc660fc77fcbc3f0ad4cec8566c27d44c92f58561712c44d29713"
       - key: BUNDLE_KEY_ID
         value: "k1"
       # Quotas: 40 distinct banks/account/day (a student prepping a few
