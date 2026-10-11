@@ -1329,10 +1329,12 @@ class _HeroCard extends StatelessWidget {
           ),
         ],
       ),
-      // Founder bugfix: the corner blobs - not the TEXT - get clipped.
-      // The old wrapper clipped the whole stack, so the ClipRRect arc
-      // sliced the tail of NEXT TARGET / COUNTDOWN. The blobs now live
-      // in their own clipped layer; the content is never touched.
+      // Founder directive 2026-10-11: the corner blobs are BACK and
+      // clearly visible (0.12, the old 0.05 was imperceptible) on
+      // every focus homepage hero - JAMB/WAEC/NECO here, University and
+      // Post-UTME on their own desks. The blobs - not the TEXT - get
+      // clipped: they live in their own clipped layer so the ClipRRect
+      // arc can never slice the tail of NEXT TARGET / COUNTDOWN.
       child: Stack(
         children: <Widget>[
           Positioned.fill(
@@ -1348,7 +1350,7 @@ class _HeroCard extends StatelessWidget {
                       height: 128,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: context.onHeroCard.withValues(alpha: 0.05),
+                        color: context.onHeroCard.withValues(alpha: 0.12),
                       ),
                     ),
                   ),
@@ -1360,7 +1362,7 @@ class _HeroCard extends StatelessWidget {
                       height: 96,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: context.onHeroCard.withValues(alpha: 0.05),
+                        color: context.onHeroCard.withValues(alpha: 0.12),
                       ),
                     ),
                   ),

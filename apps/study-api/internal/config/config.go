@@ -77,11 +77,6 @@ type Config struct {
         BundleMasterKey []byte
         BundleKeyID     string
         BundleAnonKey   bool
-        // Distinct banks per account per UTC day (static shelf + API
-        // + key route all share the ledger). Default 40: a real student
-        // prepping a handful of subjects never reaches it; a scraper
-        // walking 1,000+ banks trips it on day one.
-        BundleAccountDaily int
         // Anonymous key fetches per IP per hour (proof-of-work path).
         BundleIPPerHour int
         // Proof-of-work difficulty in bits for the anonymous key path
@@ -135,8 +130,7 @@ func Load() (*Config, error) {
                 BundleMasterKey:     envHex("BUNDLE_MASTER_KEY"),
                 BundleKeyID:         envStr("BUNDLE_KEY_ID", "k1"),
                 BundleAnonKey:       envBool("BUNDLE_ANON_KEY", true),
-                BundleAccountDaily:  envInt("BUNDLE_ACCOUNT_DAILY", 40),
-                BundleIPPerHour:     envInt("BUNDLE_IP_PER_HOUR", 12),
+                BundleIPPerHour:      envInt("BUNDLE_IP_PER_HOUR", 12),
                 BundlePowBits:       envInt("BUNDLE_POW_BITS", 18),
                 ResetMailDailyCap: envInt("RESET_MAIL_DAILY_CAP", 300),
 

@@ -360,7 +360,6 @@ class _SchoolHeroCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(top: 4),
-      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: context.heroCard,
         borderRadius: BorderRadius.circular(12),
@@ -372,7 +371,50 @@ class _SchoolHeroCard extends StatelessWidget {
           ),
         ],
       ),
-      child: Column(
+      // Founder directive 2026-10-11: the corner blobs return on the
+      // University focus hero - the same two semi-circles, the same
+      // geometry and strength as the JAMB desk, so every focus
+      // homepage reads as one product. The blobs live in their own
+      // clipped layer (padding stays on the content wrapper) so the
+      // ClipRRect arc can never slice the text.
+      child: Stack(
+        children: <Widget>[
+          Positioned.fill(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Stack(
+                children: <Widget>[
+                  Positioned(
+                    top: -64,
+                    right: -42,
+                    child: Container(
+                      width: 128,
+                      height: 128,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: context.onHeroCard.withValues(alpha: 0.12),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    bottom: -48,
+                    left: -32,
+                    child: Container(
+                      width: 96,
+                      height: 96,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: context.onHeroCard.withValues(alpha: 0.12),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Row(
@@ -468,6 +510,9 @@ class _SchoolHeroCard extends StatelessWidget {
                 picked ? 'Open your school desk' : 'Pick School',
                 style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
               ),
+            ),
+          ),
+        ],
             ),
           ),
         ],

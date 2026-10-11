@@ -446,10 +446,13 @@ export default function DashboardPage() {
         ) : (
         <>
         {/* Hero progress card. Uses the hero token scope so Mixed tier
-            flips it to the dark #111C2D band (home_dashboard_mixed_mode). */}
+            flips it to the dark #111C2D band (home_dashboard_mixed_mode).
+            Founder directive 2026-10-11: the corner blob ornaments are
+            back and visible (/12, the old /5 was imperceptible) on
+            every focus homepage hero. */}
         <section className="relative mt-4 flex flex-col gap-4 overflow-hidden rounded-xl bg-hero p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] sm:p-6">
-          <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-on-hero/5" />
-          <div className="absolute -bottom-14 -left-12 h-28 w-28 rounded-full bg-on-hero/5" />
+          <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-on-hero/12" />
+          <div className="absolute -bottom-14 -left-12 h-28 w-28 rounded-full bg-on-hero/12" />
           <div className="relative z-10 flex items-start justify-between gap-4">
             <div>
               <p className="font-mono text-[11px] uppercase tracking-wider text-hero-muted">Next Target</p>
@@ -671,8 +674,11 @@ function PostUtmeHome({ onMore }: { onMore: () => void }) {
   return (
     <>
       {/* Post UTME hero card ------------------------------------------ */}
+      {/* Founder directive 2026-10-11: corner blob ornaments back on
+          every focus hero - both corners, visible strength (/12). */}
       <section className="relative mt-4 flex flex-col gap-4 overflow-hidden rounded-xl bg-hero p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] sm:p-6">
-        <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-on-hero/10" />
+        <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-on-hero/12" />
+        <div className="absolute -bottom-14 -left-12 h-28 w-28 rounded-full bg-on-hero/12" />
         <div className="relative z-10 flex items-center justify-between gap-4">
           <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-hero-muted">
             Post UTME Desk
@@ -781,8 +787,11 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
   return (
     <>
       {/* School hero card ---------------------------------------------- */}
+      {/* Founder directive 2026-10-11: corner blob ornaments back on
+          every focus hero - both corners, visible strength (/12). */}
       <section className="relative mt-4 flex flex-col gap-4 overflow-hidden rounded-xl bg-hero p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] sm:p-6">
-        <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-on-hero/10" />
+        <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-on-hero/12" />
+        <div className="absolute -bottom-14 -left-12 h-28 w-28 rounded-full bg-on-hero/12" />
         <div className="relative z-10 flex items-center justify-between gap-4">
           <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-hero-muted">
             School Desk
