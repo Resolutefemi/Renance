@@ -125,7 +125,12 @@ func Load() (*Config, error) {
 
                 AuthPerMin:       envInt("AUTH_PER_MIN", 20),
                 AuthGlobalPerMin: envInt("AUTH_GLOBAL_PER_MIN", 300),
-                TutorPerMin:      envInt("TUTOR_PER_MIN", 12),
+                // 30/min (founder directive 2026-10-12, "the AI limit
+                // is annoying - answer like a normal AI"): a student in
+                // a study sprint never feels it, the free provider is
+                // still shielded from scripted floods. The old 12/min
+                // tripped mid-revision.
+                TutorPerMin: envInt("TUTOR_PER_MIN", 30),
 
                 BundleMasterKey:     envHex("BUNDLE_MASTER_KEY"),
                 BundleKeyID:         envStr("BUNDLE_KEY_ID", "k1"),

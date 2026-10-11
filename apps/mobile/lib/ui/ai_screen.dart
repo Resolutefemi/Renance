@@ -116,6 +116,11 @@ class _AiScreenState extends State<AiScreen> {
       _refresh();
     } on ApiException catch (e) {
       if (!mounted) return;
+      // Founder directive 2026-10-12 ("remove the fallback feature
+      // completely - the AI answers directly"): the server no longer
+      // saves a canned non-answer. A double provider failure surfaces
+      // here as ai_unavailable; show a normal, retryable error bubble
+      // the way every AI chat app does.
       setState(() {
         _messages = <AiStudioMessage>[
           ..._messages,
@@ -124,7 +129,9 @@ class _AiScreenState extends State<AiScreen> {
             role: 'assistant',
             content: e.code == 'rate_limited'
                 ? 'Renance AI is cooling down for a few seconds; try again shortly.'
-                : 'Renance AI hit an error: ${e.message}',
+                : e.code == 'ai_unavailable'
+                    ? 'Renance AI could not answer just now. Tap below and send the message again.'
+                    : 'Renance AI hit an error: ${e.message}',
           ),
         ];
         _busy = false;

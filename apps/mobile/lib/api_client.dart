@@ -1677,7 +1677,7 @@ class AiStudioChatTurn {
         assistantMessage: AiStudioMessage.fromJson(
             ((j['assistantMessage'] ?? const <String, dynamic>{}) as Map)
                 .cast<String, dynamic>()),
-        mode: (j['mode'] ?? 'guide') as String,
+        mode: (j['mode'] ?? 'ai') as String,
         bridged: (j['bridged'] ?? 0) as int,
         memorySaved: (j['memorySaved'] ?? false) as bool,
       );
@@ -1744,7 +1744,7 @@ class AiStudioArtifact {
 class AiChatReply {
   const AiChatReply({required this.text, required this.mode});
   final String text;
-  final String mode; // ai | guide
+  final String mode; // ai (the canned 'guide' mode was removed 2026-10-12)
 }
 
 /// The billing catalog (public): plans, redemption table, WhatsApp.

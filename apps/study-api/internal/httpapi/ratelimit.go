@@ -132,7 +132,7 @@ func (s *Server) userLimit(class string, next http.HandlerFunc) http.HandlerFunc
 		}
 		if !s.limiter.allow(class + ":user:" + uid) {
 			w.Header().Set("Retry-After", "15")
-			fail(w, http.StatusTooManyRequests, "rate_limited", "tutor cooling down, retry in a few seconds")
+			fail(w, http.StatusTooManyRequests, "rate_limited", "AI is cooling down, retry in a few seconds")
 			return
 		}
 		next(w, r)

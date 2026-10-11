@@ -4,19 +4,19 @@
 // phases - all server-side so a closed app or a reloaded tab loses
 // nothing.
 //
-//	GET    /ai/chats?folder=      list threads (newest first)
-//	POST   /ai/chats {title?,folder?}   open a thread
-//	GET    /ai/chats/{id}         thread + full message history
-//	POST   /ai/chats/{id}/messages {content, class?, subject?}
-//	       append the student's turn, generate the grounded reply
-//	       (memories + past-question bridge + thinking phases),
-//	       persist both, return them
-//	PATCH  /ai/chats/{id} {title?,folder?}   rename / move
-//	DELETE /ai/chats/{id}         delete thread + messages
-//	GET    /ai/folders            folders with thread counts
-//	GET    /ai/memories           the student's durable facts
-//	POST   /ai/memories {content} remember a fact
-//	DELETE /ai/memories/{id}      forget one
+//      GET    /ai/chats?folder=      list threads (newest first)
+//      POST   /ai/chats {title?,folder?}   open a thread
+//      GET    /ai/chats/{id}         thread + full message history
+//      POST   /ai/chats/{id}/messages {content, class?, subject?}
+//             append the student's turn, generate the grounded reply
+//             (memories + past-question bridge + thinking phases),
+//             persist both, return them
+//      PATCH  /ai/chats/{id} {title?,folder?}   rename / move
+//      DELETE /ai/chats/{id}         delete thread + messages
+//      GET    /ai/folders            folders with thread counts
+//      GET    /ai/memories           the student's durable facts
+//      POST   /ai/memories {content} remember a fact
+//      DELETE /ai/memories/{id}      forget one
 //
 // The first message of a thread names it (first words of the turn), the
 // way ChatGPT does. A message starting with "remember" stores a memory
@@ -278,8 +278,10 @@ func (s *Server) handlePostChatMessage(w http.ResponseWriter, r *http.Request) {
 	msgs = append(msgs, tutor.Message{Role: "user", Content: content})
 
 	// System prompt: doctrine + memories + optional class grounding +
-	// the past-question bridge.
-	system := renanceAISystemPrompt()
+	// the past-question bridge. `base` (doctrine + memories) is kept
+	// separate: it is the lean retry prompt when the grounded first
+	// attempt misses its budget.
+	base := renanceAISystemPrompt()
 	if mems, err := s.store.ListAIMemories(r.Context(), uid); err == nil && len(mems) > 0 {
 		var b strings.Builder
 		b.WriteString("\n\nKNOWN FACTS ABOUT THIS STUDENT (apply automatically, never ask again):\n")
@@ -289,8 +291,9 @@ func (s *Server) handlePostChatMessage(w http.ResponseWriter, r *http.Request) {
 			}
 			b.WriteString("- " + m.Content + "\n")
 		}
-		system += b.String()
+		base += b.String()
 	}
+	system := base
 	if req.Class != "" && req.Subject != "" {
 		system += "\n\n" + s.corpusGrounding(r, req.Class, req.Subject)
 	}
@@ -302,23 +305,39 @@ func (s *Server) handlePostChatMessage(w http.ResponseWriter, r *http.Request) {
 		system += "\n\n" + bridging
 	}
 
-	mode := "guide"
+	// Founder directive 2026-10-12 ("remove the feature completely,
+	// make sure the AI answers directly"): no canned study-guide
+	// fallback is EVER saved into a thread. The provider gets two
+	// attempts - the full grounded prompt first, then the lean
+	// doctrine+memories prompt - and if both genuinely fail the
+	// request fails honestly BEFORE an assistant bubble exists, so
+	// the client can show a normal retryable error like every
+	// real AI chat app.
 	reply := ""
 	if s.tutor != nil && s.tutor.Provider != nil {
-		out, err := s.tutor.Provider.Complete(aiFastCtx(r), system, msgs, 1024)
+		first, retry, done := aiChatAttempts(r)
+		out, err := s.tutor.Provider.Complete(first, system, msgs, 1024)
 		if err == nil && strings.TrimSpace(out) != "" {
-			reply, mode = strings.TrimSpace(out), "ai"
-		} else if err != nil {
-			s.log.Error("studio chat provider failed", "err", err)
+			reply = strings.TrimSpace(out)
+		} else {
+			if err != nil {
+				s.log.Error("studio chat provider attempt 1 failed", "err", err)
+			}
+			out, err = s.tutor.Provider.Complete(retry, base, msgs, 1024)
+			if err == nil && strings.TrimSpace(out) != "" {
+				reply = strings.TrimSpace(out)
+			} else if err != nil {
+				s.log.Error("studio chat provider retry failed", "err", err)
+			}
 		}
+		done()
 	}
 	if reply == "" {
-		reply = renanceAIStudyGuide(r, &aiChatRequest{
-			Messages: []tutor.Message{{Role: "user", Content: content}},
-			Class:    req.Class,
-			Subject:  req.Subject,
-		})
+		fail(w, http.StatusServiceUnavailable, "ai_unavailable",
+			"Renance AI could not answer just now. Send the message again.")
+		return
 	}
+	mode := "ai"
 	if memorySaved {
 		reply = "Saved to memory. I will bring it into every chat from now on.\n\n" + reply
 	}
