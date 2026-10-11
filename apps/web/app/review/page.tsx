@@ -40,6 +40,13 @@ interface ReviewQuestion {
   passage?: string;
   video?: string;
   type?: string;
+  /** Composite papers: the subject this question was served under. */
+  subject?: string;
+}
+
+interface ReviewSection {
+  subject: string;
+  questionIds: string[];
 }
 
 interface ReviewPayload {
@@ -49,6 +56,7 @@ interface ReviewPayload {
   score?: number;
   total?: number;
   questions: ReviewQuestion[];
+  sections?: ReviewSection[];
 }
 
 interface AttemptRow {
@@ -60,7 +68,47 @@ interface AttemptRow {
   submittedAt?: string;
 }
 
-type Filter = 'wrong' | 'skipped' | 'all';
+type Filter = 'wrong' | 'skipped' | 'answered' | 'all';
+
+/** One subject block of the paper: its questions (with their global
+ * indexes) plus the wrong/skipped/answered counts. */
+interface SubjectGroup {
+  subject: string;
+  items: { q: ReviewQuestion; idx: number }[];
+  wrong: number;
+  skipped: number;
+  answered: number;
+}
+
+function buildGroups(review: ReviewPayload): SubjectGroup[] {
+  const idxOf = new Map<string, number>();
+  review.questions.forEach((q, i) => idxOf.set(q.questionId, i));
+  const sections = review.sections ?? [];
+  if (sections.length > 1 || (sections.length === 1 && sections[0].subject)) {
+    return sections.map((s) => {
+      const items = s.questionIds
+        .map((id) => {
+          const idx = idxOf.get(id);
+          return idx == null ? null : { q: review.questions[idx], idx };
+        })
+        .filter((x): x is { q: ReviewQuestion; idx: number } => x != null);
+      return countsFor(s.subject, items);
+    });
+  }
+  // Single-subject paper: one group under the paper itself (no header).
+  const items = review.questions.map((q, idx) => ({ q, idx }));
+  return [countsFor('', items)];
+}
+
+function countsFor(subject: string, items: { q: ReviewQuestion; idx: number }[]): SubjectGroup {
+  return {
+    subject,
+    items,
+    wrong: items.filter((x) => !x.q.correctly && x.q.selected).length,
+    skipped: items.filter((x) => !x.q.selected).length,
+    answered: items.filter((x) => x.q.correctly && x.q.selected).length,
+  };
+}
 
 export default function ReviewPage() {
   return (
@@ -80,7 +128,6 @@ function ReviewInner() {
   const attemptId = useSearchParams().get('attemptId') ?? '';
   const [review, setReview] = useState<ReviewPayload | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [filter, setFilter] = useState<Filter>('wrong');
   // The Myschool explanation sheet rides on the visible list: the
   // pager keeps one sheet open across questions.
   const [sheetIdx, setSheetIdx] = useState<number | null>(null);
@@ -131,9 +178,7 @@ function ReviewInner() {
 
   const wrongCount = review.questions.filter((q) => !q.correctly && q.selected).length;
   const skippedCount = review.questions.filter((q) => !q.selected).length;
-  const visible = review.questions.filter((q) =>
-    filter === 'wrong' ? !q.correctly && q.selected : filter === 'skipped' ? !q.selected : true,
-  );
+  const groups = buildGroups(review);
 
   return (
     <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
@@ -154,142 +199,23 @@ function ReviewInner() {
         </Link>
       </div>
 
-      <div className="mt-6 flex flex-wrap gap-2">
-        {(
-          [
-            ['wrong', `Wrong (${wrongCount})`],
-            ['skipped', `Skipped (${skippedCount})`],
-            ['all', `All (${review.questions.length})`],
-          ] as [Filter, string][]
-        ).map(([key, label]) => (
-          <button
-            key={key}
-            onClick={() => setFilter(key)}
-            className={`rounded-full px-4 py-1.5 font-mono text-xs transition ${
-              filter === key
-                ? 'bg-selection-blue font-semibold text-on-surface'
-                : 'bg-surface-container-low text-on-surface-variant hover:text-on-surface'
-            }`}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
-
       {(wrongCount > 0 || skippedCount > 0) && (
         <TutorChat attemptId={review.attemptId} questions={review.questions} />
       )}
 
-      <div className="mt-5 space-y-4">
-        {visible.length === 0 && (
-          <p className="rounded-xl bg-card p-6 text-center text-sm text-on-surface-variant shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
-            {filter === 'wrong' ? 'Nothing wrong here, flawless paper.' : filter === 'skipped' ? 'No skipped questions.' : 'No questions.'}
-          </p>
-        )}
-        {visible.map((q) => {
-          const idx = review.questions.indexOf(q) + 1;
-          const pickedWrong = q.selected && !q.correctly;
-          return (
-            <article
-              key={q.questionId}
-              className="rounded-xl bg-card p-5 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]"
-            >
-              <div className="flex items-center gap-2">
-                <span className="font-mono text-[13px] text-on-surface">Q. {idx}</span>
-                {q.topic && (
-                  <span className="rounded-full bg-surface-container-low px-2 py-0.5 text-[11px] text-on-surface-variant">
-                    {q.topic}
-                    {q.year ? <span className="ml-1 font-mono text-[10px] text-outline">{q.year}</span> : null}
-                  </span>
-                )}
-              </div>
-              {q.passage && (
-                <details className="mt-3 rounded-lg border border-outline-variant/50 bg-surface-container-lowest/60">
-                  <summary className="cursor-pointer select-none px-3 py-2 font-mono text-[10px] uppercase tracking-wider text-outline">
-                    comprehension passage
-                  </summary>
-                  <div className="max-h-56 overflow-y-auto px-3 pb-3 text-[14px] leading-relaxed text-on-surface">
-                    <QText html={q.passage} />
-                  </div>
-                </details>
-              )}
-              <div className="mt-3 text-[15px] leading-relaxed text-on-surface">
-                <QText html={q.stem} />
-              </div>
-              {q.image && (
-                <div className="mt-3 flex justify-center">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={apiImg(q.image)}
-                    alt="question diagram"
-                    loading="lazy"
-                    className="max-h-72 max-w-full rounded-lg border border-outline-variant/40 bg-card object-contain"
-                  />
-                </div>
-              )}
-
-              {pickedWrong && (
-                <AnswerBlock
-                  letter={q.selected!}
-                  text={q.options?.[q.selected!] ?? ''}
-                  label="You Picked"
-                  tone="wrong"
-                />
-              )}
-              {!q.selected && (
-                <p className="mt-3 text-[13px] text-accent-amber">Skipped, you left this one blank.</p>
-              )}
-              <div className="mt-3">
-                <AnswerBlock
-                  letter={q.correct}
-                  text={q.options?.[q.correct] ?? ''}
-                  label="Correct Answer"
-                  tone="right"
-                />
-              </div>
-
-              {q.answerImage && (
-                <div className="mt-3">
-                  <p className="font-mono text-[10px] uppercase tracking-wider text-outline">worked solution</p>
-                  <div className="mt-1.5 flex justify-center">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={apiImg(q.answerImage)}
-                      alt="worked solution diagram"
-                      loading="lazy"
-                      className="max-h-80 max-w-full rounded-lg border border-outline-variant/40 bg-card object-contain"
-                    />
-                  </div>
-                </div>
-              )}
-              {q.explanation && (
-                <div className="mt-3 rounded-lg bg-surface-container-low p-3 text-[13px] leading-relaxed text-on-surface-variant">
-                  <QText html={q.explanation} />
-                </div>
-              )}
-              {q.video && (
-                <a
-                  href={q.video}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-surface-container-low px-3 py-1.5 text-[12px] font-medium text-on-surface transition hover:bg-surface-container"
-                >
-                  <span className="material-symbols-outlined text-[16px]">play_circle</span>
-                  Watch the worked video
-                </a>
-              )}
-              {/* View Explanation - the school app's card footer button;
-                  it opens the full explanation sheet at this card. */}
-              <button
-                onClick={() => setSheetIdx(review.questions.indexOf(q))}
-                className="mt-3.5 flex h-11 w-full items-center justify-center gap-2 rounded-[10px] bg-primary text-[13.5px] font-bold text-on-primary transition hover:opacity-90 active:scale-[0.99]"
-              >
-                <span className="material-symbols-outlined text-[17px]">auto_stories</span>
-                View Explanation
-              </button>
-            </article>
-          );
-        })}
+      <div className="mt-5 space-y-6">
+        {/* SUBJECT BY SUBJECT: every subject block heads with its counts,
+            then its own Wrong / Skipped / Answered buckets. A student
+            lands straight on a subject's mistakes - no scrolling a
+            180-question wall. */}
+        {groups.map((g) => (
+          <SubjectBlock
+            key={g.subject || 'paper'}
+            group={g}
+            grouped={groups.length > 1}
+            onOpenSheet={setSheetIdx}
+          />
+        ))}
       </div>
       </div>
 
@@ -642,6 +568,207 @@ function QueueRow({ item }: { item: ReviewItem }) {
           : 'new on the schedule'}
       </p>
     </div>
+  );
+}
+
+// ------------------------------------------------- subject-grouped reader
+
+/** One subject block: the subject head with its wrong/skipped/answered
+ *  badges, its own bucket chips (Wrong lands first - that is the whole
+ *  point of the grouping), then the bucket's question cards. */
+function SubjectBlock({
+  group,
+  grouped,
+  onOpenSheet,
+}: {
+  group: SubjectGroup;
+  /** false = single-subject paper: no subject header, just the chips. */
+  grouped: boolean;
+  onOpenSheet: (idx: number) => void;
+}) {
+  const [filter, setFilter] = useState<Filter>('wrong');
+  const visible = group.items.filter(({ q }) =>
+    filter === 'wrong'
+      ? !q.correctly && q.selected
+      : filter === 'skipped'
+        ? !q.selected
+        : filter === 'answered'
+          ? q.correctly && q.selected
+          : true,
+  );
+
+  return (
+    <section aria-label={grouped ? group.subject : 'Review questions'}>
+      {grouped && (
+        <div className="rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
+          <div className="flex flex-wrap items-center gap-2">
+            <h2 className="min-w-0 flex-1 truncate text-[17px] font-bold tracking-tight text-on-surface">
+              {group.subject}
+            </h2>
+            <CountBadge n={group.wrong} label="wrong" tone="wrong" />
+            <CountBadge n={group.skipped} label="skipped" tone="skipped" />
+            <CountBadge n={group.answered} label="correct" tone="right" />
+          </div>
+        </div>
+      )}
+      <div className="mt-3 flex flex-wrap gap-2">
+        {(
+          [
+            ['wrong', `Wrong (${group.wrong})`],
+            ['skipped', `Skipped (${group.skipped})`],
+            ['answered', `Answered (${group.answered})`],
+            ['all', `All (${group.items.length})`],
+          ] as [Filter, string][]
+        ).map(([key, label]) => (
+          <button
+            key={key}
+            onClick={() => setFilter(key)}
+            className={`rounded-full px-4 py-1.5 font-mono text-xs transition ${
+              filter === key
+                ? 'bg-selection-blue font-semibold text-on-surface'
+                : 'bg-surface-container-low text-on-surface-variant hover:text-on-surface'
+            }`}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+      <div className="mt-4 space-y-4">
+        {visible.length === 0 && (
+          <p className="rounded-xl bg-card p-6 text-center text-sm text-on-surface-variant shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
+            {filter === 'wrong'
+              ? 'Nothing wrong here, flawless subject.'
+              : filter === 'skipped'
+                ? 'No skipped questions.'
+                : filter === 'answered'
+                  ? 'None answered correctly in this bucket.'
+                  : 'No questions.'}
+          </p>
+        )}
+        {visible.map(({ q, idx }) => (
+          <QuestionArticle key={q.questionId} q={q} idx={idx} onOpenSheet={onOpenSheet} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function CountBadge({ n, label, tone }: { n: number; label: string; tone: 'wrong' | 'skipped' | 'right' }) {
+  const color =
+    tone === 'wrong' ? 'text-error bg-error/10' : tone === 'skipped' ? 'text-accent-amber bg-accent-amber/10' : 'text-accent-emerald bg-accent-emerald/10';
+  return (
+    <span className={`rounded-full px-2.5 py-0.5 font-mono text-[11px] font-medium ${color}`}>
+      {n} {label}
+    </span>
+  );
+}
+
+function QuestionArticle({
+  q,
+  idx,
+  onOpenSheet,
+}: {
+  q: ReviewQuestion;
+  idx: number;
+  onOpenSheet: (idx: number) => void;
+}) {
+  const pickedWrong = q.selected && !q.correctly;
+  return (
+    <article className="rounded-xl bg-card p-5 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
+      <div className="flex items-center gap-2">
+        <span className="font-mono text-[13px] text-on-surface">Q. {idx + 1}</span>
+        {q.topic && (
+          <span className="rounded-full bg-surface-container-low px-2 py-0.5 text-[11px] text-on-surface-variant">
+            {q.topic}
+            {q.year ? <span className="ml-1 font-mono text-[10px] text-outline">{q.year}</span> : null}
+          </span>
+        )}
+      </div>
+      {q.passage && (
+        <details className="mt-3 rounded-lg border border-outline-variant/50 bg-surface-container-lowest/60">
+          <summary className="cursor-pointer select-none px-3 py-2 font-mono text-[10px] uppercase tracking-wider text-outline">
+            comprehension passage
+          </summary>
+          <div className="max-h-56 overflow-y-auto px-3 pb-3 text-[14px] leading-relaxed text-on-surface">
+            <QText html={q.passage} />
+          </div>
+        </details>
+      )}
+      <div className="mt-3 text-[15px] leading-relaxed text-on-surface">
+        <QText html={q.stem} />
+      </div>
+      {q.image && (
+        <div className="mt-3 flex justify-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={apiImg(q.image)}
+            alt="question diagram"
+            loading="lazy"
+            className="max-h-72 max-w-full rounded-lg border border-outline-variant/40 bg-card object-contain"
+          />
+        </div>
+      )}
+
+      {pickedWrong && (
+        <AnswerBlock
+          letter={q.selected!}
+          text={q.options?.[q.selected!] ?? ''}
+          label="You Picked"
+          tone="wrong"
+        />
+      )}
+      {!q.selected && (
+        <p className="mt-3 text-[13px] text-accent-amber">Skipped, you left this one blank.</p>
+      )}
+      <div className="mt-3">
+        <AnswerBlock
+          letter={q.correct}
+          text={q.options?.[q.correct] ?? ''}
+          label="Correct Answer"
+          tone="right"
+        />
+      </div>
+
+      {q.answerImage && (
+        <div className="mt-3">
+          <p className="font-mono text-[10px] uppercase tracking-wider text-outline">worked solution</p>
+          <div className="mt-1.5 flex justify-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={apiImg(q.answerImage)}
+              alt="worked solution diagram"
+              loading="lazy"
+              className="max-h-80 max-w-full rounded-lg border border-outline-variant/40 bg-card object-contain"
+            />
+          </div>
+        </div>
+      )}
+      {q.explanation && (
+        <div className="mt-3 rounded-lg bg-surface-container-low p-3 text-[13px] leading-relaxed text-on-surface-variant">
+          <QText html={q.explanation} />
+        </div>
+      )}
+      {q.video && (
+        <a
+          href={q.video}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-surface-container-low px-3 py-1.5 text-[12px] font-medium text-on-surface transition hover:bg-surface-container"
+        >
+          <span className="material-symbols-outlined text-[16px]">play_circle</span>
+          Watch the worked video
+        </a>
+      )}
+      {/* View Explanation - the school app's card footer button;
+          it opens the full explanation sheet at this card. */}
+      <button
+        onClick={() => onOpenSheet(idx)}
+        className="mt-3.5 flex h-11 w-full items-center justify-center gap-2 rounded-[10px] bg-primary text-[13.5px] font-bold text-on-primary transition hover:opacity-90 active:scale-[0.99]"
+      >
+        <span className="material-symbols-outlined text-[17px]">auto_stories</span>
+        View Explanation
+      </button>
+    </article>
   );
 }
 

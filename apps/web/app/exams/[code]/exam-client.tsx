@@ -1396,90 +1396,100 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
     const correctionsHref = attempt ? `/review?attemptId=${attempt.attemptId}` : null;
 
     return (
-      <main className="mx-auto w-full max-w-2xl pb-16">
+      <main className="min-h-dvh bg-surface-container-lowest pb-16 md:pl-[var(--rail-w)]">
+        {/* Standard Renance chrome: the back affordance answers at the
+            top LHS (founder directive), the title names the paper. */}
+        <PageBar
+          title={`Result · ${bundle?.title || bundle?.code || 'Paper'}`}
+          right={
+            correctionsHref ? (
+              <Link
+                href={correctionsHref}
+                className="mr-1 rounded-full bg-primary px-3.5 py-1.5 text-xs font-semibold text-on-primary transition hover:opacity-90"
+              >
+                Corrections
+              </Link>
+            ) : undefined
+          }
+        />
+        <div className="mx-auto w-full max-w-2xl px-4 sm:px-6">
         {/* Cream masthead with the amber shards - the reference design.
             The reference's red buttons are black here (Renance rule). */}
-        <section className="relative overflow-hidden bg-amber-tint px-6 pb-6 pt-5 sm:px-8">
+        <section className="renance-rise relative mt-5 overflow-hidden rounded-2xl bg-amber-tint px-6 pb-6 pt-5 sm:px-8">
           <ReportShards />
-          <h1 className="relative text-2xl font-bold tracking-tight text-on-surface">
+          <p className="relative font-mono text-[10px] uppercase tracking-[0.18em] text-on-surface-variant">
             Examination Performance
+          </p>
+          <h1 className="relative mt-1 text-2xl font-bold tracking-tight text-on-surface">
+            Your score report
           </h1>
+          <p className="relative mt-1.5 text-sm text-on-surface-variant">
+            {bundle?.title || bundle?.code}
+          </p>
         </section>
 
-        <div className="px-4 sm:px-6">
+        {/* Score hero: the JAMB aggregate (or the percentage) leads,
+            delta + score/total ride alongside in a stat row. */}
+        <section className="renance-rise mt-5 rounded-2xl bg-card p-5 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
           {isUtmeMock && (
-            <section className="renance-rise mt-7">
-              <p className="text-base text-on-surface-variant">Your JAMB score</p>
-              <p className="mt-1 text-[68px] font-extrabold leading-none tracking-tight text-on-surface">
-                {aggregateLabel}
-              </p>
-            </section>
+            <div className="flex flex-wrap items-end justify-between gap-3">
+              <div>
+                <p className="text-sm text-on-surface-variant">Your JAMB score</p>
+                <p className="mt-0.5 text-[68px] font-extrabold leading-none tracking-tight text-on-surface">
+                  {aggregateLabel}
+                  <span className="ml-2 align-top text-[0.28em] font-bold text-on-surface-variant">of 400</span>
+                </p>
+              </div>
+            </div>
           )}
-          <p className="renance-rise mt-1 text-[15px] text-on-surface-variant">
-            You passed {result.score} of {isUtmeMock && totalQ ? totalQ : result.total} questions
-          </p>
-          <div className="renance-rise mt-2 flex items-end gap-3">
-            <p
-              className={`font-extrabold leading-none tracking-tight text-on-surface ${
-                isUtmeMock ? 'text-[52px]' : 'text-[68px]'
-              }`}
-            >
+          <div className="mt-1 flex flex-wrap items-end gap-x-6 gap-y-3">
+            <p className="font-extrabold leading-none tracking-tight text-on-surface text-[52px]">
               {pct}
               <span className="ml-1 align-top text-[0.42em] font-bold text-on-surface-variant">%</span>
             </p>
-            {delta != null && (
-              <span
-                className={`mb-2 inline-flex items-center gap-1 rounded-full px-2.5 py-1 font-mono text-xs font-medium ${
-                  delta >= 0
-                    ? 'bg-accent-emerald/10 text-accent-emerald'
-                    : 'bg-error/10 text-error'
-                }`}
-              >
-                <span className="material-symbols-outlined text-sm">
-                  {delta >= 0 ? 'trending_up' : 'trending_down'}
-                </span>
-                {delta >= 0 ? `+${delta}` : delta} vs last attempt
+            <div className="mb-1.5 flex flex-wrap items-center gap-2">
+              <span className="rounded-full bg-surface-container-low px-3 py-1 text-[13px] font-semibold text-on-surface">
+                {result.score}/{isUtmeMock && totalQ ? totalQ : result.total} passed
               </span>
-            )}
-          </div>
-
-          {/* You spent */}
-          <div className="renance-rise mt-7 flex items-center gap-4">
-            <span className="rounded-full bg-[#E0F7FA] px-3.5 py-1.5 text-base font-semibold text-[#00695C] dark:bg-selection-blue dark:text-on-surface">
-              You spent
-            </span>
-            {elapsedMs > 0 ? (
-              <div className="flex items-baseline gap-5">
-                <p className="text-4xl font-bold leading-none text-on-surface">
-                  {hours}
-                  <span className="ml-1.5 text-[13px] font-normal text-on-surface-variant">Hour</span>
-                </p>
-                <p className="text-4xl font-bold leading-none text-on-surface">
-                  {mins}
-                  <span className="ml-1.5 text-[13px] font-normal text-on-surface-variant">Min</span>
-                </p>
-              </div>
-            ) : (
-              <span className="text-3xl font-bold text-on-surface">&mdash;</span>
-            )}
-          </div>
-
-          {/* Start / End time card */}
-          <section className="renance-rise mt-4 rounded-[14px] bg-[#E1F5FE] px-5 py-4 dark:bg-surface-container-high">
-            <div className="flex items-center justify-between text-base text-on-surface">
-              <span className="font-semibold">Start Time:</span>
-              <span>{startTime ? clock12(startTime) : '-'}</span>
+              {delta != null && (
+                <span
+                  className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 font-mono text-xs font-medium ${
+                    delta >= 0
+                      ? 'bg-accent-emerald/10 text-accent-emerald'
+                      : 'bg-error/10 text-error'
+                  }`}
+                >
+                  <span className="material-symbols-outlined text-sm">
+                    {delta >= 0 ? 'trending_up' : 'trending_down'}
+                  </span>
+                  {delta >= 0 ? `+${delta}` : delta} vs last attempt
+                </span>
+              )}
             </div>
-            <div className="mt-3 flex items-center justify-between text-base text-on-surface">
-              <span className="font-semibold">End Time:</span>
-              <span>{endTime ? clock12(endTime) : '-'}</span>
+          </div>
+          {/* Stat row: time spent + start/end in one clean grid. */}
+          <div className="mt-4 grid grid-cols-3 gap-3 border-t border-outline-variant/30 pt-4">
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-wider text-outline">Time spent</p>
+              <p className="mt-0.5 text-lg font-bold text-on-surface">
+                {elapsedMs > 0 ? (hours > 0 ? `${hours}h ${mins}m` : `${mins}m`) : '-'}
+              </p>
             </div>
-          </section>
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-wider text-outline">Start</p>
+              <p className="mt-0.5 text-lg font-bold text-on-surface">{startTime ? clock12(startTime) : '-'}</p>
+            </div>
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-wider text-outline">End</p>
+              <p className="mt-0.5 text-lg font-bold text-on-surface">{endTime ? clock12(endTime) : '-'}</p>
+            </div>
+          </div>
+        </section>
 
           {/* Score breakdown */}
-          <section className="renance-rise mt-6 rounded-[18px] bg-[#F3E5F5] p-5 dark:bg-surface-container-high">
+          <section className="renance-rise mt-5 rounded-2xl bg-card p-5 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
             <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-[21px] text-[#673AB7] dark:text-on-primary-container">grid_view</span>
+              <span className="material-symbols-outlined text-[21px] text-on-surface-variant">grid_view</span>
               <h2 className="text-[19px] font-bold tracking-tight text-on-surface">
                 Score breakdown
               </h2>
@@ -1492,21 +1502,23 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             <div className="mt-1">
               {rows.map((row, i) => (
                 <div key={`${row.name}-${i}`}>
-                  <div className="flex items-center justify-between py-3">
-                    <div className="min-w-0 pr-3">
-                      <p className="truncate text-[17px] font-semibold text-on-surface">
-                        {row.name}
+                  <div className="py-3">
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="min-w-0 pr-3">
+                        <p className="truncate text-[17px] font-semibold text-on-surface">
+                          {row.name}
+                        </p>
+                        <p className="mt-0.5 text-[13.5px] text-on-surface-variant">{row.attempted} Attempted</p>
+                      </div>
+                      <p className="shrink-0 text-[19px] font-bold text-on-surface">
+                        {row.score}
+                        {row.trailing && (
+                          <span className="ml-1 text-[12.5px] font-normal text-on-surface-variant">
+                            {row.trailing}
+                          </span>
+                        )}
                       </p>
-                      <p className="mt-0.5 text-[13.5px] text-on-surface-variant">{row.attempted} Attempted</p>
                     </div>
-                    <p className="shrink-0 text-[19px] font-bold text-on-surface">
-                      {row.score}
-                      {row.trailing && (
-                        <span className="ml-1 text-[12.5px] font-normal text-on-surface-variant">
-                          {row.trailing}
-                        </span>
-                      )}
-                    </p>
                   </div>
                   {i < rows.length - 1 && <div className="h-px bg-surface-container" />}
                 </div>

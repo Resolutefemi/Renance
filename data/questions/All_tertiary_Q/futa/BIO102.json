@@ -2,8 +2,8 @@
  "code": "uni-futa-bio102-bank",
  "title": "FUTA BIO 102 | Course Question Bank",
  "version": 1,
- "questionCount": 309,
- "totalMarks": 309,
+ "questionCount": 317,
+ "totalMarks": 317,
  "body": "University Modules",
  "category": "university",
  "questions": [
@@ -4332,6 +4332,118 @@
    "marks": 1,
    "answer": "A",
    "explanation": "Answer to be verified."
+  },
+  {
+   "id": "uni-futa-bio102-bank-0310",
+   "type": "mcq",
+   "stem": "Free living platyhelminthes forms belong to the class Y",
+   "options": {
+    "A": "Cestoda",
+    "B": "Trematoda",
+    "C": "Turbellaria E",
+    "D": "Nematoda S"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-bio102-bank-0311",
+   "type": "mcq",
+   "stem": "Metamerically segmented, bilaterally symmetrical animals bearing jointed appendages. RThese are characteristic of",
+   "options": {
+    "A": "Helminthes",
+    "B": "Annelida",
+    "C": "Mollusca",
+    "D": "Arthropoda"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-bio102-bank-0312",
+   "type": "mcq",
+   "stem": "Metamerically segmented, bilaterally symmetrical animals bearing jointed appendages. These are characteristic of R",
+   "options": {
+    "A": "Helminthes",
+    "B": "Annelida",
+    "C": "Mollusca P",
+    "D": "Arthropoda"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-bio102-bank-0313",
+   "type": "mcq",
+   "stem": "A sponge can be distinguished from other animPals by the presence of",
+   "options": {
+    "A": "Hollow body",
+    "B": "coelenteron",
+    "C": "choanocytes",
+    "D": "dermal papillae Y"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-bio102-bank-0314",
+   "type": "mcq",
+   "stem": "The echinoderms are related to chordates by thPeir similarity in the development of",
+   "options": {
+    "A": "gut",
+    "B": "nervous system",
+    "C": "heart",
+    "D": "coelom Y"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-bio102-bank-0315",
+   "type": "mcq",
+   "stem": "Bath sponge belongs to the class",
+   "options": {
+    "A": "porifera",
+    "B": "Desmospongia",
+    "C": "Hexactinellida",
+    "D": "Calcarea"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-bio102-bank-0316",
+   "type": "mcq",
+   "stem": "Sausage shaped body form is a chacteristic of",
+   "options": {
+    "A": "Echinoidea",
+    "B": "Asteriodea",
+    "C": "Ophiuroidea",
+    "D": "Holothuroidea"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-bio102-bank-0317",
+   "type": "mcq",
+   "stem": "‘Pearl mother layer’is",
+   "options": {
+    "A": "prismatic layer",
+    "B": "Periostracum",
+    "C": "Nacre",
+    "D": "Mantle"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
   }
  ]
 }

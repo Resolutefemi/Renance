@@ -2,8 +2,8 @@
  "code": "uni-futa-phy102-bank",
  "title": "FUTA PHY 102 | Course Question Bank",
  "version": 1,
- "questionCount": 512,
- "totalMarks": 512,
+ "questionCount": 802,
+ "totalMarks": 802,
  "body": "University Modules",
  "category": "university",
  "questions": [
@@ -7173,6 +7173,4066 @@
    },
    "marks": 1,
    "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0513",
+   "type": "mcq",
+   "stem": "In the cathode ray oscilloscope, the electron beam can be deflected either by an electric field or by",
+   "options": {
+    "A": "iron flux",
+    "B": "current density",
+    "C": "charge particles",
+    "D": "magnetic field"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0514",
+   "type": "mcq",
+   "stem": "In the cathode ray oscilloscope, when fast moving electrons strike the glass screen coated with zinc and sulphide they cause",
+   "options": {
+    "A": "fluorescence",
+    "B": "incandesence",
+    "C": "losses FOR REVISION PURPOSE ONLY, IFEKITAN CARES NOT FOR SALE",
+    "D": "magnetic field"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0515",
+   "type": "mcq",
+   "stem": "The electrode by which the flow of the electrons leaves the electrolyte is called",
+   "options": {
+    "A": "cathode",
+    "B": "corridor",
+    "C": "anode",
+    "D": "None of these"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0516",
+   "type": "mcq",
+   "stem": "Which of the following is not an element of a cathode ray tube",
+   "options": {
+    "A": "bryer",
+    "B": "control grid",
+    "C": "electron gun",
+    "D": "heater"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0517",
+   "type": "mcq",
+   "stem": "The chemical equivalent of a substance is its - divided by its valency",
+   "options": {
+    "A": "molecular weight",
+    "B": "energy",
+    "C": "mass",
+    "D": "molecular weight"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0518",
+   "type": "mcq",
+   "stem": "When the direction of motion of the charged   particle    is   neither   parallel nor perpendicular to the direction of the magnetic field, it describes a",
+   "options": {
+    "A": "magnet",
+    "B": "circular trajectory",
+    "C": "helical trajectory",
+    "D": "scalar"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0519",
+   "type": "mcq",
+   "stem": "Which of the following is not magnetic",
+   "options": {
+    "A": "steel",
+    "B": "nickel",
+    "C": "iron",
+    "D": "copper"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0520",
+   "type": "mcq",
+   "stem": "A Charged particle moving in a uniform electric field follows a parabolic path because it is subjected to a",
+   "options": {
+    "A": "high velocity",
+    "B": "constant acceleration",
+    "C": "low voltage",
+    "D": "uniform speed"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0521",
+   "type": "mcq",
+   "stem": "The - of a substance is the number of times the average mass of one of the molecules is greater than the atomic mass unit",
+   "options": {
+    "A": "molecular weight",
+    "B": "atomic mass",
+    "C": "atomic weight",
+    "D": "molecular mass FOR REVISION PURPOSE ONLY, IFEKITAN CARES NOT FOR SALE"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0522",
+   "type": "mcq",
+   "stem": "The process of conducting electricity by an electric solution is known as",
+   "options": {
+    "A": "electrolysis",
+    "B": "conduction",
+    "C": "None of these",
+    "D": "electrification"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0523",
+   "type": "mcq",
+   "stem": "The number of grammes of a substance equal to its molecular weight is called",
+   "options": {
+    "A": "None of these",
+    "B": "A mole",
+    "C": "Atom",
+    "D": "node"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0524",
+   "type": "mcq",
+   "stem": "A Cell designed for the study of electrolysis is called a -",
+   "options": {
+    "A": "generator",
+    "B": "battery",
+    "C": "cathode",
+    "D": "voltameter"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0525",
+   "type": "mcq",
+   "stem": "The electrode by which the flow of the electrons enters the electrolyte is called",
+   "options": {
+    "A": "passage",
+    "B": "cathode",
+    "C": "Anode",
+    "D": "electrolysis"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0526",
+   "type": "mcq",
+   "stem": "The direction of magnetic force is perpendicular to",
+   "options": {
+    "A": "only the total velocity",
+    "B": "only magnetic field",
+    "C": "total velocity and magnetic field",
+    "D": "flux density"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0527",
+   "type": "mcq",
+   "stem": "When current flows in one direction only it is called",
+   "options": {
+    "A": "Eddy",
+    "B": "A.C",
+    "C": "None of these",
+    "D": "D.C"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0528",
+   "type": "mcq",
+   "stem": "The motion of a charged particle moving through a combination of the electric and magnetic fields, is described by the",
+   "options": {
+    "A": "faraday’s law",
+    "B": "charge force",
+    "C": "coulomb’s law",
+    "D": "Lorenz force"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0529",
+   "type": "mcq",
+   "stem": "______________________ forces, hold electrons to nuclei, atoms and molecules together to give rise to bulk matter",
+   "options": {
+    "A": "electrostatic",
+    "B": "electrolite",
+    "C": "electromotive",
+    "D": "electric"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0530",
+   "type": "mcq",
+   "stem": "A ______________________ is the amount of charge that flow through a cross-section of a wire in one second if there is a steady current of one ampere (I A) in the wire",
+   "options": {
+    "A": "coulomb",
+    "B": "potential",
+    "C": "Hooke’s",
+    "D": "electric charge"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0531",
+   "type": "mcq",
+   "stem": "There are _____________ types of elctric charges",
+   "options": {
+    "A": "four",
+    "B": "three",
+    "C": "two",
+    "D": "one"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0532",
+   "type": "mcq",
+   "stem": "Two ebonite rods rubbed with fur and suspended from a rigid support close to each other by threads will ____________________ each other",
+   "options": {
+    "A": "relax",
+    "B": "contract",
+    "C": "attract",
+    "D": "repel"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0533",
+   "type": "mcq",
+   "stem": "A voltmeter connected across a 60Hz ac source reads 240V. Write down the expression of the instanteneous voltage as a function of time.",
+   "options": {
+    "A": "240cos339.4t",
+    "B": "240sin339.4t",
+    "C": "339.4sin377t",
+    "D": "377cos339.4t"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0534",
+   "type": "mcq",
+   "stem": "The work function of a metal is 3.45eV. Calculate th maximum wavelength of a photon that can eject photelectrons from the metal",
+   "options": {
+    "A": "3.6×10-7m",
+    "B": "3.4×10-7m",
+    "C": "2.4×10-8m",
+    "D": "1.6×10-6m"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0535",
+   "type": "mcq",
+   "stem": "The half-life of a certain radioactive isotope is 32 hours. What fraction of the sample would remain after 16 huors?",
+   "options": {
+    "A": "0.25",
+    "B": "0.71",
+    "C": "0.62",
+    "D": "0.50 FOR REVISION PURPOSE ONLY, IFEKITAN CARES NOT FOR SALE"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0536",
+   "type": "mcq",
+   "stem": "A potentiometer wire of length 100cm has a resistance of 10Ω. It is connected in series to to a resistance R and a cell of emf 2V and negligible internal resistance. A source of emf of 10mV is balanced by a length of 40cm of the potentiometer wire. What is the value of the resistance R?",
+   "options": {
+    "A": "2000Ω",
+    "B": "950Ω",
+    "C": "200Ω",
+    "D": "790Ω"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0537",
+   "type": "mcq",
+   "stem": "A spectral line is emitted when an atom undergoes transition between two levels with a difference in energy of 2.4eV. What is the wavelength of the line?",
+   "options": {
+    "A": "287nm",
+    "B": "377angstrome units",
+    "C": "518nm",
+    "D": "507angstrome units"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0538",
+   "type": "mcq",
+   "stem": "The law of _____________________ of charge states that the total electric charge in an isolated system, that is, the algebraic sum of the positive and negative charge present at any time, does not change",
+   "options": {
+    "A": "moment",
+    "B": "energy",
+    "C": "conservation",
+    "D": "momentum FOR REVISION PURPOSE ONLY, IFEKITAN CARES NOT FOR SALE"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0539",
+   "type": "mcq",
+   "stem": "An RLC circiut contains an ac voltage source with rms value of 50V and has a frequency of 600Hz. Suppose that a resistance R = 20 Ω, capacitance C = 10.0 μF and an inductance L = 4.0mH are connected in series to the source. Find the current in the circuit and the voltmeter reading across the inductor.",
+   "options": {
+    "A": "0.13A and 12.1V",
+    "B": "4.0A and 23.1V",
+    "C": "2.17A and 32.8V",
+    "D": "1.6A and 24.2V"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0540",
+   "type": "mcq",
+   "stem": "The electric field due to a distribution of charges, according to the _________________________ principle, is the vector sum of the fields of the individual charges making up the distribution",
+   "options": {
+    "A": "permeability",
+    "B": "permittivity",
+    "C": "superposition",
+    "D": "distributive"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0541",
+   "type": "mcq",
+   "stem": "An air-cored transformer is assumed to be 100% efficient. The ratio of the secondary turns to the primary turns is 1:20. A 240V ac supply is connected to the primary coil and a 6Ω load is connected to the secondary coil. what is the current in the primary coil?",
+   "options": {
+    "A": "40.0A",
+    "B": "2.0A FOR REVISION PURPOSE ONLY, IFEKITAN CARES NOT FOR SALE",
+    "C": "0.14A",
+    "D": "0.10A"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0542",
+   "type": "mcq",
+   "stem": "When a copper surface is illuminated by radiation of wavelength 2537 angstrome units the value of the stopping potential is found to be 0.24volts. Calculate the work function of copper.",
+   "options": {
+    "A": "7.46eV",
+    "B": "3.26eV",
+    "C": "2.67eV",
+    "D": "4.48eV"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0543",
+   "type": "mcq",
+   "stem": "In the relation k=14πϵo, ϵo is the ___________________ of free space",
+   "options": {
+    "A": "permeability",
+    "B": "permittivity",
+    "C": "momentum",
+    "D": "Coulomb Answer to Question 16. B. permittivity FOR REVISION PURPOSE ONLY, IFEKITAN CARES NOT FOR SALE"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0544",
+   "type": "mcq",
+   "stem": "The force exerted by charged particles on each other when they are at rest in a frame of reference is called __________________ force",
+   "options": {
+    "A": "electromotive",
+    "B": "electrostatic",
+    "C": "electrolite",
+    "D": "electric"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0545",
+   "type": "mcq",
+   "stem": "An ac circuit consists of a voltage source v=200sin120πt and a 6μF capacitor in series. Calculate the current established in the circuit",
+   "options": {
+    "A": "0.32A",
+    "B": "0.64A",
+    "C": "2.13A",
+    "D": "1.24A"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0546",
+   "type": "mcq",
+   "stem": "Objects with net unlike charges ____________________ each other",
+   "options": {
+    "A": "attract",
+    "B": "repel",
+    "C": "contract",
+    "D": "relax"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0547",
+   "type": "mcq",
+   "stem": "If Q1 and Q2 are the magnitude of two charges and r the distance between them, ________________’s law states that the electric force exerted by one charge on the other F is F=kQ1Q2r2, where k is a constant",
+   "options": {
+    "A": "electric charge FOR REVISION PURPOSE ONLY, IFEKITAN CARES NOT FOR SALE",
+    "B": "Hooke’s",
+    "C": "potential",
+    "D": "Coulomb"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0548",
+   "type": "mcq",
+   "stem": "The surface integral of the electric field over a surface is called",
+   "options": {
+    "A": "electric field",
+    "B": "permitivity",
+    "C": "charge",
+    "D": "electric flux"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0549",
+   "type": "mcq",
+   "stem": "The potential difference between two points B and A is equal to the - in taking a unit positive charge from A to B",
+   "options": {
+    "A": "distance dependent",
+    "B": "force",
+    "C": "difference",
+    "D": "Workdone Answer to question 2 is . D.workdone"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0550",
+   "type": "mcq",
+   "stem": "For capacitors in parallel, the potential difference across each capacitor is",
+   "options": {
+    "A": "zero",
+    "B": "shared",
+    "C": "different",
+    "D": "the same"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0551",
+   "type": "mcq",
+   "stem": "The electrostatic force is FOR REVISION PURPOSE ONLY, IFEKITAN CARES NOT FOR SALE conservative because the workdone in taking a charge round a closed path is",
+   "options": {
+    "A": "one",
+    "B": "infinite",
+    "C": "large",
+    "D": "zero Answer to question 4is D. Zero"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0552",
+   "type": "mcq",
+   "stem": "When a dielectric material is subjected to a sufficiently strong electric field, it becomes a",
+   "options": {
+    "A": "capacitor",
+    "B": "conductor",
+    "C": "resistor",
+    "D": "transistor"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0553",
+   "type": "mcq",
+   "stem": "The work done per unit charge moving from infinity to the point is called",
+   "options": {
+    "A": "universal potential",
+    "B": "Electric potential",
+    "C": "zero potential",
+    "D": "magnetic potential"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0554",
+   "type": "mcq",
+   "stem": "The charges on capacitors connected in parallel are in the ratio of their",
+   "options": {
+    "A": "resistivity",
+    "B": "capacitance",
+    "C": "effective charge",
+    "D": "charge Answer to question 7is B. capacitance"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0555",
+   "type": "mcq",
+   "stem": "Electric potential is measured in",
+   "options": {
+    "A": "JV",
+    "B": "J/C",
+    "C": "JC FOR REVISION PURPOSE ONLY, IFEKITAN CARES NOT FOR SALE",
+    "D": "NC"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0556",
+   "type": "mcq",
+   "stem": "The work done in taking a unit positive charge from one point to another in electric field is - of the path chosen between the two points",
+   "options": {
+    "A": "independent",
+    "B": "parallel",
+    "C": "dependent",
+    "D": "perpendicular"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0557",
+   "type": "mcq",
+   "stem": "The electric field due to an infinite sheet of charge is - to the plane of the sheet",
+   "options": {
+    "A": "parallel",
+    "B": "circular",
+    "C": "opposite",
+    "D": "perpendicular"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0558",
+   "type": "mcq",
+   "stem": "When a dielectric material is inserted between the plates of a capacitor it increases its",
+   "options": {
+    "A": "permitivity",
+    "B": "resistance",
+    "C": "capacitance",
+    "D": "charge"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0559",
+   "type": "mcq",
+   "stem": "The SI Unit of potential difference is the",
+   "options": {
+    "A": "volt",
+    "B": "coulomb",
+    "C": "metre",
+    "D": "ohm READ ALSO GST102: Use Of English And Communication Skills Ii TMA3 Question and Answer FOR REVISION PURPOSE ONLY, IFEKITAN CARES NOT FOR SALE"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0560",
+   "type": "mcq",
+   "stem": "When a positive charge is repelled by another positively charged body its potential energy becomes",
+   "options": {
+    "A": "increased",
+    "B": "decreased",
+    "C": "transfered",
+    "D": "constant"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0561",
+   "type": "mcq",
+   "stem": "When the charge density at any point depends only on the distance of the point from a central point and not on the direction of the charge distribution is said to be",
+   "options": {
+    "A": "ellipsoidal",
+    "B": "distance dependent",
+    "C": "spherically symmetric",
+    "D": "directionless"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0562",
+   "type": "mcq",
+   "stem": "Which of the following is a device that can store electric charge",
+   "options": {
+    "A": "capacitor",
+    "B": "voltmeter",
+    "C": "resistor",
+    "D": "iron"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0563",
+   "type": "mcq",
+   "stem": "For capacitors connected in series each has the same",
+   "options": {
+    "A": "charge",
+    "B": "wire",
+    "C": "current",
+    "D": "potential difference"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0564",
+   "type": "mcq",
+   "stem": "The energy stored in a system of charges is known as FOR REVISION PURPOSE ONLY, IFEKITAN CARES NOT FOR SALE",
+   "options": {
+    "A": "total charge",
+    "B": "electrostatic potential energy",
+    "C": "potential energy",
+    "D": "electrokinetics"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0565",
+   "type": "mcq",
+   "stem": "The electric field outside a spherically symmetrical shell with radius r and total charge q is directed",
+   "options": {
+    "A": "centrally",
+    "B": "linearly",
+    "C": "radially",
+    "D": "diagonally"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0566",
+   "type": "mcq",
+   "stem": "A body when raised above the earth’s surface is said to acquire",
+   "options": {
+    "A": "weight",
+    "B": "kinetic energy",
+    "C": "energy",
+    "D": "potential energy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0567",
+   "type": "mcq",
+   "stem": "Which of the following is not an example of dielectric material",
+   "options": {
+    "A": "mica",
+    "B": "glass",
+    "C": "wood",
+    "D": "steel Answer to question is D. steel"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0568",
+   "type": "mcq",
+   "stem": "The SI Unit of electric charge is",
+   "options": {
+    "A": "hertz",
+    "B": "joule",
+    "C": "Newton",
+    "D": "coulomb"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0569",
+   "type": "mcq",
+   "stem": "Gauss’s law applies to any hypothetical closed surface called",
+   "options": {
+    "A": "lower point",
+    "B": "Gaussian surface",
+    "C": "Gaussor",
+    "D": "free surface"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0570",
+   "type": "mcq",
+   "stem": "The relation between an electric charge and electric field is express by",
+   "options": {
+    "A": "Ohm’s law",
+    "B": "Gausss law",
+    "C": "Newton’s law",
+    "D": "Coulomb’s law"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0571",
+   "type": "mcq",
+   "stem": "Coulomb’s law applies to",
+   "options": {
+    "A": "solids",
+    "B": "point charges",
+    "C": "point masses",
+    "D": "liquid bodies"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0572",
+   "type": "mcq",
+   "stem": "Electric field is which type of physical quantity?",
+   "options": {
+    "A": "vector",
+    "B": "None of these",
+    "C": "scalar",
+    "D": "charge"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0573",
+   "type": "mcq",
+   "stem": "what will happen to two glass rods after being rubbed with silk?",
+   "options": {
+    "A": "repel eachother",
+    "B": "attract eachother",
+    "C": "breaks",
+    "D": "displace eachother"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0574",
+   "type": "mcq",
+   "stem": "The direction of the electric field is opposite to that of the force if the charge is",
+   "options": {
+    "A": "negative",
+    "B": "positive",
+    "C": "neutral",
+    "D": "large"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0575",
+   "type": "mcq",
+   "stem": "Electric charge is quantized, occuring in only in",
+   "options": {
+    "A": "discrete amounts",
+    "B": "None of these",
+    "C": "continous amounts",
+    "D": "few amounts"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0576",
+   "type": "mcq",
+   "stem": "The electric field is measured in",
+   "options": {
+    "A": "Newton",
+    "B": "N/K",
+    "C": "Newton per coulomb",
+    "D": "coulomb"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0577",
+   "type": "mcq",
+   "stem": "In conservation of charge, the algebraic sum of the equal and opposite charges on the two bodies is",
+   "options": {
+    "A": "zero",
+    "B": "1C",
+    "C": "converted",
+    "D": "terminal"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0578",
+   "type": "mcq",
+   "stem": "The fact that electric forces add vectorially is known as the",
+   "options": {
+    "A": "charge addition",
+    "B": "principle of charge",
+    "C": "coulomb’s law",
+    "D": "superposition principle FOR REVISION PURPOSE ONLY, IFEKITAN CARES NOT FOR SALE"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0579",
+   "type": "mcq",
+   "stem": "The number of lines of force crossing any surface depends on the field strenght, the surface orientation of the",
+   "options": {
+    "A": "Charge",
+    "B": "electric flux",
+    "C": "voltage",
+    "D": "surface"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0580",
+   "type": "mcq",
+   "stem": "The process of charging two bodies by means of rubbing them together is called charging by",
+   "options": {
+    "A": "None of these",
+    "B": "friction",
+    "C": "electrons",
+    "D": "lightning"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0581",
+   "type": "mcq",
+   "stem": "The quantity of charge flowing per second through a conductor of 1A is known as",
+   "options": {
+    "A": "Total Amperes",
+    "B": "coulomb",
+    "C": "volt",
+    "D": "watts"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0582",
+   "type": "mcq",
+   "stem": "A region where an electric charge experiences a force is known as",
+   "options": {
+    "A": "magnetic field",
+    "B": "charge field",
+    "C": "force field",
+    "D": "electric field"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0583",
+   "type": "mcq",
+   "stem": "The unit of permitivity is",
+   "options": {
+    "A": "farad per metre",
+    "B": "farad per coulomb FOR REVISION PURPOSE ONLY, IFEKITAN CARES NOT FOR SALE",
+    "C": "farad",
+    "D": "farad per ampere"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0584",
+   "type": "mcq",
+   "stem": "which of the following is origin of the negative charge",
+   "options": {
+    "A": "nucleus",
+    "B": "electron",
+    "C": "proton",
+    "D": "neutron"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0585",
+   "type": "mcq",
+   "stem": "The smallest charge that is possible to obtain is that of",
+   "options": {
+    "A": "battery",
+    "B": "electricity",
+    "C": "neutron",
+    "D": "proton and electron"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0586",
+   "type": "mcq",
+   "stem": "The electric flux is a",
+   "options": {
+    "A": "vector and scalar",
+    "B": "scalar",
+    "C": "None of these",
+    "D": "vector"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0587",
+   "type": "mcq",
+   "stem": "The number of lines of force crossing any closed surface is proportional to the the",
+   "options": {
+    "A": "electric flux",
+    "B": "temperature",
+    "C": "net charge",
+    "D": "electric field answer to question 1isd electric field GRACE CARES✨ FOR REVISION PURPOSE ONLY, IFEKITAN CARES"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0588",
+   "type": "mcq",
+   "stem": "Flux is defined as the product of a certain field quantity and the:",
+   "options": {
+    "A": "volume perpendicular to the field",
+    "B": "area perpendicular to the field",
+    "C": "length parallel to the field",
+    "D": "mass of the medium"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0589",
+   "type": "mcq",
+   "stem": "The electric flux through a surface element dA making angle θ with the electric field E is:",
+   "options": {
+    "A": "E.dA.sinθ",
+    "B": "E.dA.tanθ",
+    "C": "E.dA.cosθ",
+    "D": "E.dA"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0590",
+   "type": "mcq",
+   "stem": "Gauss's Law states that the total electric flux through a closed surface is proportional to the:",
+   "options": {
+    "A": "total surface area",
+    "B": "net charge enclosed by the surface",
+    "C": "square of the electric field",
+    "D": "distance from the charge"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0591",
+   "type": "mcq",
+   "stem": "The hypothetical closed surface used in Gauss's Law is called a:",
+   "options": {
+    "A": "Faraday surface",
+    "B": "Maxwell surface",
+    "C": "Gaussian surface",
+    "D": "Amperian surface"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0592",
+   "type": "mcq",
+   "stem": "When the electric field E is parallel to the surface area A, the electric flux through that surface is:",
+   "options": {
+    "A": "EA",
+    "B": "EA/2",
+    "C": "2EA",
+    "D": "zero"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0593",
+   "type": "mcq",
+   "stem": "The unit of electric flux is:",
+   "options": {
+    "A": "N/C",
+    "B": "N.m2/C",
+    "C": "C/N",
+    "D": "V.m"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0594",
+   "type": "mcq",
+   "stem": "For an infinite line charge with linear charge density λ (or η), the electric field at distance R is:",
+   "options": {
+    "A": "λ/(4πε₀R2)",
+    "B": "λ/(2πε₀R)",
+    "C": "λ/(ε₀R)",
+    "D": "2λ/(ε₀R2)"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0595",
+   "type": "mcq",
+   "stem": "Outside a uniformly charged solid sphere (at r > R), the electric field behaves as if:",
+   "options": {
+    "A": "the charge is distributed on the surface only",
+    "B": "the entire charge is concentrated at the centre",
+    "C": "the field is zero",
+    "D": "the field is constant"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0596",
+   "type": "mcq",
+   "stem": "The electric field inside a conductor in electrostatic equilibrium is:",
+   "options": {
+    "A": "maximum at the centre",
+    "B": "equal to the surface field",
+    "C": "uniform throughout",
+    "D": "zero"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0597",
+   "type": "mcq",
+   "stem": "Any excess charge placed on a solid conductor resides:",
+   "options": {
+    "A": "uniformly distributed throughout",
+    "B": "only at the centre",
+    "C": "entirely on its outer surface",
+    "D": "at the inner cavities"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0598",
+   "type": "mcq",
+   "stem": "The electric field just outside a charged conductor must be:",
+   "options": {
+    "A": "parallel to the surface",
+    "B": "at 45° to the surface",
+    "C": "perpendicular to the surface",
+    "D": "zero"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0599",
+   "type": "mcq",
+   "stem": "The Gaussian surface can be of:",
+   "options": {
+    "A": "only spherical shape",
+    "B": "only cylindrical shape",
+    "C": "only planar shape",
+    "D": "any shape and size"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0600",
+   "type": "mcq",
+   "stem": "The electric flux through a closed Gaussian surface due to an external charge (outside the surface) is:",
+   "options": {
+    "A": "maximum",
+    "B": "Q/ε₀",
+    "C": "zero",
+    "D": "infinite"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0601",
+   "type": "mcq",
+   "stem": "Which symmetry is required for effective application of Gauss's Law?",
+   "options": {
+    "A": "Axial symmetry only",
+    "B": "Special symmetry (spherical, cylindrical, or planar)",
+    "C": "Random distribution",
+    "D": "Non-uniform distribution"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0602",
+   "type": "mcq",
+   "stem": "The unit of electric flux density D is:",
+   "options": {
+    "A": "N/C",
+    "B": "C/m2",
+    "C": "V/m",
+    "D": "N.m2"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0603",
+   "type": "mcq",
+   "stem": "In Gauss's Law, the flux counts as positive when the electric field points:",
+   "options": {
+    "A": "into the surface",
+    "B": "parallel to the surface",
+    "C": "outward through the surface",
+    "D": "at 45° to the normal"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0604",
+   "type": "mcq",
+   "stem": "The permittivity of free space ε₀ has the value:",
+   "options": {
+    "A": "8.85x10-1⁰ F/m",
+    "B": "8.85x10-12 F/m",
+    "C": "4πx10-⁷ H/m",
+    "D": "1.6x10-1⁹ C"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0605",
+   "type": "mcq",
+   "stem": "The Coulomb constant k in SI units equals:",
+   "options": {
+    "A": "9x10⁹ N.m2/C2",
+    "B": "9x10-⁹ N.m2/C2",
+    "C": "8.85x10-12 N.m2/C2",
+    "D": "4πx10-⁷ N/A2"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0606",
+   "type": "mcq",
+   "stem": "For a uniformly charged solid sphere, the electric field at the surface (r = R) is:",
+   "options": {
+    "A": "zero",
+    "B": "Q/(4πε₀R)",
+    "C": "Q/(4πε₀R2)",
+    "D": "Q/(2πε₀R2)"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0607",
+   "type": "mcq",
+   "stem": "The electric flux through a surface is maximum when the surface is:",
+   "options": {
+    "A": "parallel to the field",
+    "B": "at 45° to the field",
+    "C": "perpendicular to the field",
+    "D": "tilted at 30° to the field"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0608",
+   "type": "mcq",
+   "stem": "The statement 'the surface ∫of the normal component of electric displacement D over any closed surface equals the charge enclosed' describes:",
+   "options": {
+    "A": "Faraday's Law",
+    "B": "Lenz's Law",
+    "C": "Gauss's Law",
+    "D": "Ampere's Law"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0609",
+   "type": "mcq",
+   "stem": "Two infinite parallel plates carry equal and opposite surface charges ±σ. The electric field between them is:",
+   "options": {
+    "A": "σ/2ε₀",
+    "B": "σ/ε₀",
+    "C": "2σ/ε₀",
+    "D": "zero"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0610",
+   "type": "mcq",
+   "stem": "Gauss's Law for magnetism states that the total magnetic flux through any closed surface is: Page 8 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                 Nova Academic Resource Series",
+   "options": {
+    "A": "μ₀ times the enclosed current",
+    "B": "equal to BxA",
+    "C": "zero",
+    "D": "∝ the enclosed pole strength"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0611",
+   "type": "mcq",
+   "stem": "The relation between Gauss's Law and Coulomb's Law is that they are:",
+   "options": {
+    "A": "contradictory",
+    "B": "equivalent - each can be derived from the other",
+    "C": "independent laws",
+    "D": "applicable only in conductors"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0612",
+   "type": "mcq",
+   "stem": "The electric flux through each face of a cube with a charge Q at its centre is:",
+   "options": {
+    "A": "Q/ε₀",
+    "B": "6Q/ε₀",
+    "C": "Q/(3ε₀)",
+    "D": "Q/(6ε₀)"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0613",
+   "type": "mcq",
+   "stem": "The property of matter responsible for electrical interactions is:",
+   "options": {
+    "A": "mass",
+    "B": "charge",
+    "C": "potential",
+    "D": "capacitance"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0614",
+   "type": "mcq",
+   "stem": "An atom becomes a positive ion (cation) when it:",
+   "options": {
+    "A": "gains protons",
+    "B": "loses electrons",
+    "C": "gains neutrons",
+    "D": "loses protons"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0615",
+   "type": "mcq",
+   "stem": "When a glass rod is rubbed with silk, the glass rod becomes:",
+   "options": {
+    "A": "negatively charged",
+    "B": "neutral",
+    "C": "positively charged",
+    "D": "a conductor"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0616",
+   "type": "mcq",
+   "stem": "The SI unit of electric charge is the:",
+   "options": {
+    "A": "ampere",
+    "B": "coulomb",
+    "C": "joule",
+    "D": "farad"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0617",
+   "type": "mcq",
+   "stem": "The charge on one electron is approximately:",
+   "options": {
+    "A": "1.6x10-23 C",
+    "B": "1.6x10-1⁹ C",
+    "C": "9.11x10-31 C",
+    "D": "1.67x10-2⁷ C"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0618",
+   "type": "mcq",
+   "stem": "According to Coulomb's Law, the electrostatic force between two point charges varies:",
+   "options": {
+    "A": "directly as the product of charges and inversely as the square of distance",
+    "B": "directly as the sum of charges and inversely as the distance",
+    "C": "inversely as the square of the product of charges",
+    "D": "directly as the distance"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0619",
+   "type": "mcq",
+   "stem": "The electric field intensity at a point 4 m from a point charge is 200 N/C. If the distance is halved to 2 m, the field intensity becomes:",
+   "options": {
+    "A": "400 N/C",
+    "B": "600 N/C",
+    "C": "800 N/C",
+    "D": "1200 N/C"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0620",
+   "type": "mcq",
+   "stem": "The electric field E at a point P is defined as:",
+   "options": {
+    "A": "force per unit charge at that point",
+    "B": "charge per unit force",
+    "C": "potential per unit distance",
+    "D": "work done per unit charge"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0621",
+   "type": "mcq",
+   "stem": "The direction of the electric field due to a positive point charge is:",
+   "options": {
+    "A": "toward the charge",
+    "B": "away from the charge",
+    "C": "circular around the charge",
+    "D": "random"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0622",
+   "type": "mcq",
+   "stem": "Page 11 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                  Nova Academic Resource Series Electric field lines around a negative point charge are:",
+   "options": {
+    "A": "directed outward",
+    "B": "directed inward",
+    "C": "parallel and uniform",
+    "D": "circular"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0623",
+   "type": "mcq",
+   "stem": "In a uniform electric field, the field lines are:",
+   "options": {
+    "A": "curved and diverging",
+    "B": "straight, parallel, and uniformly spaced",
+    "C": "converging toward the centre",
+    "D": "randomly oriented"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0624",
+   "type": "mcq",
+   "stem": "The principle of superposition states that the total electric force on a charge is:",
+   "options": {
+    "A": "the product of all individual forces",
+    "B": "the vector sum of all individual forces",
+    "C": "the algebraic average of forces",
+    "D": "the largest individual force only"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0625",
+   "type": "mcq",
+   "stem": "An electric dipole consists of:",
+   "options": {
+    "A": "two equal positive charges",
+    "B": "two equal and opposite charges separated by distance d",
+    "C": "a single charge in a field",
+    "D": "two opposite charges at the same point"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0626",
+   "type": "mcq",
+   "stem": "The electric dipole moment P is directed:",
+   "options": {
+    "A": "from positive to negative charge",
+    "B": "from negative to positive charge",
+    "C": "perpendicular to the line joining charges Page 12 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                   Nova Academic Resource Series",
+    "D": "randomly"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0627",
+   "type": "mcq",
+   "stem": "Charging by induction occurs:",
+   "options": {
+    "A": "by direct contact with a charged body",
+    "B": "without contact with the charged body",
+    "C": "by heating the conductor",
+    "D": "by chemical means only"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0628",
+   "type": "mcq",
+   "stem": "The unit of electric field intensity is:",
+   "options": {
+    "A": "C/N",
+    "B": "N/C (or V/m)",
+    "C": "J/C",
+    "D": "V.m"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0629",
+   "type": "mcq",
+   "stem": "The electrostatic force between two charges of 1 C each placed 0.5 m apart is approximately:",
+   "options": {
+    "A": "3.6×10¹⁰ N",
+    "B": "3.6×10⁹ N",
+    "C": "9×10⁹ N",
+    "D": "1.8×10⁹ N"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0630",
+   "type": "mcq",
+   "stem": "Which of the following is not a vector quantity?",
+   "options": {
+    "A": "Electric field",
+    "B": "Linear momentum",
+    "C": "Angular momentum",
+    "D": "Electric potential"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0631",
+   "type": "mcq",
+   "stem": "The ability of charged bodies to exert force on one another is attributed to the existence of:",
+   "options": {
+    "A": "electrons",
+    "B": "protons",
+    "C": "neutrons",
+    "D": "electric field"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0632",
+   "type": "mcq",
+   "stem": "Two positive charges placed near each other will:",
+   "options": {
+    "A": "attract",
+    "B": "repel",
+    "C": "have no effect",
+    "D": "orbit each other"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0633",
+   "type": "mcq",
+   "stem": "The law of conservation of charge states that:",
+   "options": {
+    "A": "charge can be created from nothing",
+    "B": "the total charge in an isolated system remains constant",
+    "C": "charge and mass are interchangeable",
+    "D": "charge increases with temperature"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0634",
+   "type": "mcq",
+   "stem": "Which statement about conductors is correct?",
+   "options": {
+    "A": "They have no free electrons",
+    "B": "Free electrons are tightly bound",
+    "C": "They allow easy movement of electric charge",
+    "D": "They are always insulators"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0635",
+   "type": "mcq",
+   "stem": "Insulators differ from conductors in that insulators:",
+   "options": {
+    "A": "have more protons",
+    "B": "lack free electrons",
+    "C": "are always non-metallic",
+    "D": "conduct at high temperature only"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0636",
+   "type": "mcq",
+   "stem": "The electric field at the midpoint between two equal and opposite charges (dipole) along the perpendicular bisector:",
+   "options": {
+    "A": "is zero",
+    "B": "is directed along the line joining the charges Page 14 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                   Nova Academic Resource Series",
+    "C": "is directed opposite to the dipole moment",
+    "D": "is maximum"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0637",
+   "type": "mcq",
+   "stem": "In a non-uniform electric field, the net force on an electric dipole is:",
+   "options": {
+    "A": "always zero",
+    "B": "non-zero",
+    "C": "directed along the field",
+    "D": "directed against the field"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0638",
+   "type": "mcq",
+   "stem": "The electric field due to a sheet of charge with surface charge density σ is:",
+   "options": {
+    "A": "σ/2ε₀ (on each side)",
+    "B": "σ/ε₀",
+    "C": "2σ/ε₀",
+    "D": "σε₀"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0639",
+   "type": "mcq",
+   "stem": "Two identical metal spheres touch each other and are then separated. The charge distributes:",
+   "options": {
+    "A": "all on one sphere",
+    "B": "equally between them",
+    "C": "inversely as their radii",
+    "D": "proportionally to their areas"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0640",
+   "type": "mcq",
+   "stem": "An electric field line represents:",
+   "options": {
+    "A": "the path an electron would follow",
+    "B": "the direction of force on a positive test charge",
+    "C": "a line of constant potential",
+    "D": "the trajectory of any charged particle"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0641",
+   "type": "mcq",
+   "stem": "The surface charge density σ has units of:",
+   "options": {
+    "A": "C/m3",
+    "B": "C/m",
+    "C": "C/m2",
+    "D": "C/m⁴"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0642",
+   "type": "mcq",
+   "stem": "The phenomenon of an uncharged body getting charged by nearness of a charged body (without contact) is:",
+   "options": {
+    "A": "conduction",
+    "B": "induction",
+    "C": "radiation",
+    "D": "polarisation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0643",
+   "type": "mcq",
+   "stem": "The lines of force due to charged particles are generally:",
+   "options": {
+    "A": "always straight",
+    "B": "always curved",
+    "C": "sometimes straight for point charges",
+    "D": "always circular"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0644",
+   "type": "mcq",
+   "stem": "The volume charge density ρ has units of:",
+   "options": {
+    "A": "C/m",
+    "B": "C/m2",
+    "C": "C/m3",
+    "D": "C/m⁴"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0645",
+   "type": "mcq",
+   "stem": "Which of the following correctly states the superposition principle for electric fields? Page 17 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                   Nova Academic Resource Series",
+   "options": {
+    "A": "E = product of individual fields",
+    "B": "E = vector sum of all individual fields",
+    "C": "E = scalar sum of all individual fields",
+    "D": "E = average of all individual fields"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0646",
+   "type": "mcq",
+   "stem": "The direction of the electric force on a negative charge in an electric field E is:",
+   "options": {
+    "A": "in the direction of E",
+    "B": "opposite to E",
+    "C": "perpendicular to E",
+    "D": "at 45° to E"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0647",
+   "type": "mcq",
+   "stem": "Electric potential at a point is defined as the work done per unit positive charge brought from:",
+   "options": {
+    "A": "that point to ∞",
+    "B": "∞ to that point",
+    "C": "the nearest charge to that point",
+    "D": "any reference to that point"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0648",
+   "type": "mcq",
+   "stem": "The SI unit of electric potential is the:",
+   "options": {
+    "A": "joule",
+    "B": "ampere",
+    "C": "volt",
+    "D": "farad"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0649",
+   "type": "mcq",
+   "stem": "If the electric potential difference between two points is zero, the work done moving a charge between them is:",
+   "options": {
+    "A": "maximum",
+    "B": "infinite",
+    "C": "equal to the charge",
+    "D": "zero"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0650",
+   "type": "mcq",
+   "stem": "The electric potential due to a single point charge q at distance r is:",
+   "options": {
+    "A": "kq/r2",
+    "B": "kq/r",
+    "C": "kq2/r",
+    "D": "kqr"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0651",
+   "type": "mcq",
+   "stem": "For multiple point charges, the total potential at a point is found by:",
+   "options": {
+    "A": "vector addition",
+    "B": "scalar addition",
+    "C": "taking the largest value",
+    "D": "averaging the values Page 19 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                  Nova Academic Resource Series"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0652",
+   "type": "mcq",
+   "stem": "Equipotential surfaces are always:",
+   "options": {
+    "A": "parallel to electric field lines",
+    "B": "perpendicular to electric field lines",
+    "C": "at 45° to electric field lines",
+    "D": "the same as field lines"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0653",
+   "type": "mcq",
+   "stem": "The work done moving a charge along an equipotential surface is:",
+   "options": {
+    "A": "maximum",
+    "B": "minimum",
+    "C": "negative",
+    "D": "zero"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0654",
+   "type": "mcq",
+   "stem": "Page 20 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                 Nova Academic Resource Series The kinetic energy gained by an electron accelerated through a potential difference of 100 V is:",
+   "options": {
+    "A": "1.6x10-21 J",
+    "B": "1.6x10-1⁹ J",
+    "C": "1.6x10-1⁷ J",
+    "D": "1.6x10-1⁵ J"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0655",
+   "type": "mcq",
+   "stem": "The electron-volt (eV) is a unit of:",
+   "options": {
+    "A": "charge",
+    "B": "potential",
+    "C": "energy",
+    "D": "field strength"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0656",
+   "type": "mcq",
+   "stem": "The electric force on a charge is a:",
+   "options": {
+    "A": "non-conservative force",
+    "B": "conservative force",
+    "C": "frictional force",
+    "D": "magnetic force"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0657",
+   "type": "mcq",
+   "stem": "The potential at ∞ is taken as:",
+   "options": {
+    "A": "maximum",
+    "B": "unity",
+    "C": "zero",
+    "D": "negative"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0658",
+   "type": "mcq",
+   "stem": "The potential gradient in the direction of the electric field is:",
+   "options": {
+    "A": "positive",
+    "B": "negative",
+    "C": "zero",
+    "D": "infinite"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0659",
+   "type": "mcq",
+   "stem": "The potential at the centre of a ring of radius R carrying total charge Q is:",
+   "options": {
+    "A": "kQ/R2",
+    "B": "kQ/(2R)",
+    "C": "kQ/R",
+    "D": "zero"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0660",
+   "type": "mcq",
+   "stem": "Potential is a __________ quantity.",
+   "options": {
+    "A": "vector",
+    "B": "tensor",
+    "C": "scalar Page 22 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                  Nova Academic Resource Series",
+    "D": "complex"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0661",
+   "type": "mcq",
+   "stem": "If V is the potential at a point, the x-component of the electric field is:",
+   "options": {
+    "A": "dV/dx",
+    "B": "-dV/dx",
+    "C": "-d2V/dx2",
+    "D": "V/x"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0662",
+   "type": "mcq",
+   "stem": "Equipotential surfaces of a point charge are:",
+   "options": {
+    "A": "parallel planes",
+    "B": "cylinders",
+    "C": "spheres",
+    "D": "parabolas"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0663",
+   "type": "mcq",
+   "stem": "The electric field between two large parallel plates with charge density σ is:",
+   "options": {
+    "A": "σ/2ε₀",
+    "B": "σ/ε₀",
+    "C": "2σ/ε₀",
+    "D": "σε₀"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0664",
+   "type": "mcq",
+   "stem": "The potential at the surface of a uniformly charged sphere (total charge Q, radius R) is:",
+   "options": {
+    "A": "kQ/R2",
+    "B": "kQ/(2R)",
+    "C": "kQ/R",
+    "D": "zero"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0665",
+   "type": "mcq",
+   "stem": "The potential inside a uniformly charged spherical shell is:",
+   "options": {
+    "A": "zero",
+    "B": "kQ/r",
+    "C": "kQ/R (constant, same as surface value)",
+    "D": "kQr/R2"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0666",
+   "type": "mcq",
+   "stem": "The relation E = -dV/dr for a point charge means that as r increases, V:",
+   "options": {
+    "A": "increases",
+    "B": "decreases Page 24 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                 Nova Academic Resource Series",
+    "C": "remains constant",
+    "D": "oscillates"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0667",
+   "type": "mcq",
+   "stem": "Potential energy is defined with respect to a:",
+   "options": {
+    "A": "reference point",
+    "B": "the charge itself",
+    "C": "the electric field direction",
+    "D": "the test charge"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0668",
+   "type": "mcq",
+   "stem": "The SI unit of capacitance is the:",
+   "options": {
+    "A": "henry",
+    "B": "Ω",
+    "C": "farad",
+    "D": "coulomb"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0669",
+   "type": "mcq",
+   "stem": "The capacitance of a parallel-plate capacitor increases when:",
+   "options": {
+    "A": "plate area decreases",
+    "B": "plate separation increases",
+    "C": "a dielectric is inserted",
+    "D": "the voltage is reduced"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0670",
+   "type": "mcq",
+   "stem": "When a dielectric with constant κ is inserted between capacitor plates, the capacitance:",
+   "options": {
+    "A": "decreases by factor κ",
+    "B": "increases by factor κ",
+    "C": "remains unchanged",
+    "D": "becomes zero"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0671",
+   "type": "mcq",
+   "stem": "If a sheet of bakelite (a dielectric) is inserted between the plates of an air capacitor, the capacitance will:",
+   "options": {
+    "A": "decrease",
+    "B": "increase",
+    "C": "remain unchanged",
+    "D": "become zero"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0672",
+   "type": "mcq",
+   "stem": "Which material has the highest dielectric constant of those listed?",
+   "options": {
+    "A": "Air",
+    "B": "Paper",
+    "C": "Glass",
+    "D": "Ceramics (e.g. barium titanate)"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0673",
+   "type": "mcq",
+   "stem": "Dielectric strength of a material refers to:",
+   "options": {
+    "A": "the dielectric constant",
+    "B": "the maximum electric field it can withstand before breakdown",
+    "C": "the capacitance it provides",
+    "D": "its conductivity"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0674",
+   "type": "mcq",
+   "stem": "The capacitance of a capacitor is NOT affected by: Page 29 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                               Nova Academic Resource Series",
+   "options": {
+    "A": "plate area",
+    "B": "plate separation",
+    "C": "nature of dielectric",
+    "D": "thickness of the plates"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0675",
+   "type": "mcq",
+   "stem": "An electrolytic capacitor can be used for:",
+   "options": {
+    "A": "DC only",
+    "B": "AC only",
+    "C": "both AC and DC",
+    "D": "neither AC nor DC"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0676",
+   "type": "mcq",
+   "stem": "Which capacitor type should be connected with correct polarity?",
+   "options": {
+    "A": "Mica capacitor",
+    "B": "Air capacitor",
+    "C": "Electrolytic capacitor",
+    "D": "Paper capacitor"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0677",
+   "type": "mcq",
+   "stem": "For a capacitor charged from a constant voltage source, if the plates are separated further:",
+   "options": {
+    "A": "charge increases",
+    "B": "charge decreases (C decreases, V constant)",
+    "C": "voltage increases",
+    "D": "energy decreases"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0678",
+   "type": "mcq",
+   "stem": "The capacitance of a spherical capacitor of radius R is:",
+   "options": {
+    "A": "4πε₀R2",
+    "B": "4πε₀R",
+    "C": "4πε₀/R",
+    "D": "πε₀R"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0679",
+   "type": "mcq",
+   "stem": "Three capacitors each of capacitance C give a resultant of 2C/3 when connected:",
+   "options": {
+    "A": "all in series",
+    "B": "all in parallel",
+    "C": "two in parallel and the combination in series with the third",
+    "D": "two in series and the combination in parallel with the third Page 30 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                   Nova Academic Resource Series"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0680",
+   "type": "mcq",
+   "stem": "Capacitance C charged through resistance R has a time constant of:",
+   "options": {
+    "A": "C/R",
+    "B": "R/C",
+    "C": "RC",
+    "D": "1/RC"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0681",
+   "type": "mcq",
+   "stem": "During RC discharging, the current decays:",
+   "options": {
+    "A": "linearly",
+    "B": "exponentially",
+    "C": "sinusoidally",
+    "D": "as a step function"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0682",
+   "type": "mcq",
+   "stem": "The charge on each capacitor in a series combination:",
+   "options": {
+    "A": "differs between capacitors",
+    "B": "is equal for all capacitors",
+    "C": "is zero",
+    "D": "sums to the total charge"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0683",
+   "type": "mcq",
+   "stem": "Page 31 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                     Nova Academic Resource Series In a parallel combination of capacitors, the quantity that is the same across all capacitors is:",
+   "options": {
+    "A": "charge",
+    "B": "current",
+    "C": "voltage",
+    "D": "capacitance"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0684",
+   "type": "mcq",
+   "stem": "The bridge circuit used to measure capacitance is:",
+   "options": {
+    "A": "Wheatstone bridge",
+    "B": "Hay's bridge",
+    "C": "Schering bridge",
+    "D": "Wien's bridge"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0685",
+   "type": "mcq",
+   "stem": "The relative permittivity has:",
+   "options": {
+    "A": "units of F/m",
+    "B": "units of C/m",
+    "C": "units of Wb/m",
+    "D": "no units (dimensionless)"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0686",
+   "type": "mcq",
+   "stem": "The absolute permittivity of free space ε₀ in SI units is:",
+   "options": {
+    "A": "8.854x10-⁹ F/m",
+    "B": "8.854x10-1⁰ F/m",
+    "C": "8.854x10-12 F/m",
+    "D": "8.854x10-11 F/m"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0687",
+   "type": "mcq",
+   "stem": "If a dielectric is inserted between the plates of a capacitor connected to a battery (constant V):",
+   "options": {
+    "A": "charge decreases",
+    "B": "charge increases (C increases at constant V)",
+    "C": "voltage increases",
+    "D": "energy decreases"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0688",
+   "type": "mcq",
+   "stem": "When a dielectric slab is introduced into an isolated charged capacitor (disconnected from battery):",
+   "options": {
+    "A": "voltage increases",
+    "B": "charge increases",
+    "C": "voltage decreases (C increases, Q constant)",
+    "D": "charge decreases"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0689",
+   "type": "mcq",
+   "stem": "Mica capacitors are preferred for high-frequency circuits because they have:",
+   "options": {
+    "A": "high capacitance values",
+    "B": "low leakage resistance",
+    "C": "stable, accurate values with low losses",
+    "D": "large physical size"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0690",
+   "type": "mcq",
+   "stem": "The capacitor preferred for temperature compensation in circuits is:",
+   "options": {
+    "A": "electrolytic",
+    "B": "paper",
+    "C": "ceramic",
+    "D": "mica"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0691",
+   "type": "mcq",
+   "stem": "The sparking between electrical contacts can be reduced by connecting a capacitor:",
+   "options": {
+    "A": "in series with the contacts",
+    "B": "in parallel with the contacts",
+    "C": "in series with the supply",
+    "D": "in series with inductance only"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0692",
+   "type": "mcq",
+   "stem": "The smallest physical size for the same capacitance rating is offered by: Page 34 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                               Nova Academic Resource Series",
+   "options": {
+    "A": "aluminium foil capacitor",
+    "B": "mica capacitor",
+    "C": "ceramic capacitor",
+    "D": "paper capacitor"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0693",
+   "type": "mcq",
+   "stem": "Electric current is defined as:",
+   "options": {
+    "A": "the flow of protons",
+    "B": "the rate of flow of electric charge",
+    "C": "the potential difference per unit resistance",
+    "D": "the work done per unit charge"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0694",
+   "type": "mcq",
+   "stem": "The SI unit of electric current is the:",
+   "options": {
+    "A": "volt",
+    "B": "Ω",
+    "C": "ampere",
+    "D": "watt"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0695",
+   "type": "mcq",
+   "stem": "Resistivity ρ of a material depends on:",
+   "options": {
+    "A": "length of the conductor",
+    "B": "cross-sectional area",
+    "C": "temperature and composition only",
+    "D": "applied voltage"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0696",
+   "type": "mcq",
+   "stem": "The SI unit of resistance is the:",
+   "options": {
+    "A": "tesla",
+    "B": "joule",
+    "C": "Ω",
+    "D": "farad"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0697",
+   "type": "mcq",
+   "stem": "The SI unit of resistivity is:",
+   "options": {
+    "A": "Ω",
+    "B": "Ω/m",
+    "C": "Ω.m",
+    "D": "1/(Ω.m)"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0698",
+   "type": "mcq",
+   "stem": "The inverse of resistivity is called:",
+   "options": {
+    "A": "conductance",
+    "B": "conductivity",
+    "C": "permittivity",
+    "D": "susceptibility"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0699",
+   "type": "mcq",
+   "stem": "EMF (electromotive force) of a source is:",
+   "options": {
+    "A": "the current it drives",
+    "B": "the potential difference when current flows",
+    "C": "the work done per coulomb of charge in the entire circuit",
+    "D": "its internal resistance"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0700",
+   "type": "mcq",
+   "stem": "The commercial unit of electrical energy is:",
+   "options": {
+    "A": "watt",
+    "B": "joule",
+    "C": "kilowatt-hour",
+    "D": "ampere-hour"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0701",
+   "type": "mcq",
+   "stem": "Resistance increases with temperature for:",
+   "options": {
+    "A": "semiconductors",
+    "B": "superconductors",
+    "C": "metallic conductors",
+    "D": "electrolytes"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0702",
+   "type": "mcq",
+   "stem": "Resistance decreases with temperature for:",
+   "options": {
+    "A": "copper wire",
+    "B": "silver wire",
+    "C": "semiconductors and thermistors",
+    "D": "iron wire"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0703",
+   "type": "mcq",
+   "stem": "The theory of metallic conduction attributes resistivity to:",
+   "options": {
+    "A": "electron mass",
+    "B": "collisions of free electrons with vibrating atoms",
+    "C": "lack of free electrons",
+    "D": "high electron charge"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0704",
+   "type": "mcq",
+   "stem": "Ω's Law is NOT applicable to:",
+   "options": {
+    "A": "metallic conductors at constant temperature",
+    "B": "carbon resistors",
+    "C": "semiconductors, electrolytes, and thermistors Page 39 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                   Nova Academic Resource Series",
+    "D": "copper wires"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0705",
+   "type": "mcq",
+   "stem": "The potential difference is measured using a:",
+   "options": {
+    "A": "ammeter",
+    "B": "galvanometer",
+    "C": "voltmeter",
+    "D": "Ωmeter"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0706",
+   "type": "mcq",
+   "stem": "The unit of conductance is the:",
+   "options": {
+    "A": "Ω",
+    "B": "siemens (or mho)",
+    "C": "farad",
+    "D": "ampere"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0707",
+   "type": "mcq",
+   "stem": "Which material is a superconductor below its critical temperature?",
+   "options": {
+    "A": "Copper",
+    "B": "Silicon",
+    "C": "Mercury",
+    "D": "Iron"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0708",
+   "type": "mcq",
+   "stem": "The drift velocity of electrons in a conductor is typically:",
+   "options": {
+    "A": "equal to the speed of light",
+    "B": "in the range of mm/s to cm/s",
+    "C": "in the range of km/s",
+    "D": "zero"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0709",
+   "type": "mcq",
+   "stem": "If three equal resistors R are connected in parallel, the equivalent resistance is:",
+   "options": {
+    "A": "3R",
+    "B": "R/3",
+    "C": "R",
+    "D": "2R/3"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0710",
+   "type": "mcq",
+   "stem": "Kirchhoff's Current Law (KCL) is based on conservation of:",
+   "options": {
+    "A": "energy",
+    "B": "momentum",
+    "C": "charge",
+    "D": "mass"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0711",
+   "type": "mcq",
+   "stem": "Kirchhoff's Voltage Law (KVL) is based on conservation of:",
+   "options": {
+    "A": "charge",
+    "B": "momentum",
+    "C": "mass",
+    "D": "energy"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0712",
+   "type": "mcq",
+   "stem": "Superconductors exhibit zero resistance below:",
+   "options": {
+    "A": "Curie temperature",
+    "B": "Debye temperature",
+    "C": "critical temperature T_c Page 42 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                Nova Academic Resource Series",
+    "D": "absolute zero only"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0713",
+   "type": "mcq",
+   "stem": "The Meissner effect in superconductors refers to:",
+   "options": {
+    "A": "zero resistance",
+    "B": "expulsion of all magnetic flux from the interior",
+    "C": "increased heat capacity",
+    "D": "particle acceleration"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0714",
+   "type": "mcq",
+   "stem": "In a series circuit, the quantity that remains the same through all components is:",
+   "options": {
+    "A": "voltage",
+    "B": "resistance",
+    "C": "power",
+    "D": "current"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0715",
+   "type": "mcq",
+   "stem": "In a parallel circuit, the quantity that is the same across all branches is:",
+   "options": {
+    "A": "current",
+    "B": "resistance",
+    "C": "voltage",
+    "D": "power"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0716",
+   "type": "mcq",
+   "stem": "For two resistors R1 and R2 in parallel, the equivalent resistance is:",
+   "options": {
+    "A": "R1+R2",
+    "B": "(R1+R2)/2",
+    "C": "R1R2/(R1+R2)",
+    "D": "√(R1R2)"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0717",
+   "type": "mcq",
+   "stem": "Kirchhoff's Loop Rule (KVL) states:",
+   "options": {
+    "A": "the algebraic sum of currents at a junction is zero",
+    "B": "the algebraic sum of potential changes around any closed loop is zero",
+    "C": "total resistance in a loop equals zero",
+    "D": "EMF equals IR only in series circuits"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0718",
+   "type": "mcq",
+   "stem": "Traversing a resistor in the direction of current gives a voltage change of:",
+   "options": {
+    "A": "+IR",
+    "B": "-IR",
+    "C": "zero",
+    "D": "±IR"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0719",
+   "type": "mcq",
+   "stem": "The internal resistance of an ideal voltage source is:",
+   "options": {
+    "A": "infinite",
+    "B": "very large",
+    "C": "zero",
+    "D": "equal to external resistance"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0720",
+   "type": "mcq",
+   "stem": "The internal resistance of an ideal current source is:",
+   "options": {
+    "A": "zero",
+    "B": "very small",
+    "C": "infinite",
+    "D": "equal to load resistance"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0721",
+   "type": "mcq",
+   "stem": "Cells connected in series provide:",
+   "options": {
+    "A": "greater current capacity",
+    "B": "greater EMF",
+    "C": "lower internal resistance",
+    "D": "parallel paths"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0722",
+   "type": "mcq",
+   "stem": "Cells connected in parallel (identical cells) provide:",
+   "options": {
+    "A": "greater total EMF",
+    "B": "greater current capacity and lower internal resistance",
+    "C": "higher voltage",
+    "D": "none of the above"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0723",
+   "type": "mcq",
+   "stem": "The maximum power transfer theorem states that maximum power is transferred from source to load when:",
+   "options": {
+    "A": "load resistance is maximum",
+    "B": "load resistance equals source (internal) resistance",
+    "C": "load resistance is zero",
+    "D": "load resistance is twice the source resistance"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0724",
+   "type": "mcq",
+   "stem": "Star-delta (Y-Δ) transformation is used to:",
+   "options": {
+    "A": "convert AC to DC",
+    "B": "simplify complex resistor networks",
+    "C": "increase voltage",
+    "D": "measure capacitance"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0725",
+   "type": "mcq",
+   "stem": "The node voltage method and mesh current method are tools for:",
+   "options": {
+    "A": "measuring AC signals",
+    "B": "solving complex DC circuits",
+    "C": "designing capacitors",
+    "D": "calculating magnetic flux"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0726",
+   "type": "mcq",
+   "stem": "In a series RLC DC circuit at steady state, the capacitor acts as:",
+   "options": {
+    "A": "short circuit",
+    "B": "open circuit",
+    "C": "pure resistor",
+    "D": "inductor"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0727",
+   "type": "mcq",
+   "stem": "In a series RL DC circuit at steady state, the inductor acts as:",
+   "options": {
+    "A": "open circuit",
+    "B": "short circuit (zero resistance for DC)",
+    "C": "capacitor",
+    "D": "diode"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0728",
+   "type": "mcq",
+   "stem": "The steady-state current in an RL circuit connected to EMF e and resistance R is:",
+   "options": {
+    "A": "zero",
+    "B": "e/R",
+    "C": "e/L",
+    "D": "eR/L"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0729",
+   "type": "mcq",
+   "stem": "The superposition theorem states that in a linear circuit with multiple sources:",
+   "options": {
+    "A": "only the largest source determines voltage",
+    "B": "each source acts independently and results are summed",
+    "C": "sources must be identical",
+    "D": "it applies only to DC circuits"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0730",
+   "type": "mcq",
+   "stem": "Thevenin's theorem replaces any linear two-terminal network with:",
+   "options": {
+    "A": "a current source in parallel with resistance",
+    "B": "a voltage source (V_th) in series with resistance (R_th)",
+    "C": "a capacitor and resistor",
+    "D": "a battery and inductor"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0731",
+   "type": "mcq",
+   "stem": "Magnetic poles exist:",
+   "options": {
+    "A": "as isolated north poles",
+    "B": "as isolated south poles",
+    "C": "always in north-south pairs (dipoles)",
+    "D": "only in electromagnets"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0732",
+   "type": "mcq",
+   "stem": "The SI unit of magnetic flux density B is the:",
+   "options": {
+    "A": "weber",
+    "B": "henry",
+    "C": "tesla",
+    "D": "ampere/metre"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0733",
+   "type": "mcq",
+   "stem": "The SI unit of magnetic flux Phi_B is the:",
+   "options": {
+    "A": "tesla",
+    "B": "henry",
+    "C": "ampere",
+    "D": "weber (Wb)"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0734",
+   "type": "mcq",
+   "stem": "The magnetic force on a moving charge is zero when:",
+   "options": {
+    "A": "the charge is positive",
+    "B": "v is perpendicular to B",
+    "C": "v is parallel to B",
+    "D": "B is strong"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0735",
+   "type": "mcq",
+   "stem": "The magnetic force is maximum when the velocity of the charge is:",
+   "options": {
+    "A": "parallel to B",
+    "B": "antiparallel to B",
+    "C": "perpendicular to B",
+    "D": "at 45° to B"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0736",
+   "type": "mcq",
+   "stem": "The Hall effect occurs when a current-carrying conductor is placed in a magnetic field, producing:",
+   "options": {
+    "A": "a magnetic force along the current",
+    "B": "a potential difference perpendicular to both current and field",
+    "C": "an increase in resistance",
+    "D": "a decrease in current"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0737",
+   "type": "mcq",
+   "stem": "The Hall effect proves that charge carriers in metals are:",
+   "options": {
+    "A": "positive holes",
+    "B": "neutral particles",
+    "C": "negative electrons",
+    "D": "protons"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0738",
+   "type": "mcq",
+   "stem": "Two parallel wires carrying currents in the same direction:",
+   "options": {
+    "A": "repel each other",
+    "B": "attract each other",
+    "C": "have no force between them",
+    "D": "rotate about each other"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0739",
+   "type": "mcq",
+   "stem": "The Biot-Savart Law gives the magnetic field due to:",
+   "options": {
+    "A": "a moving point charge only",
+    "B": "a current element Idl",
+    "C": "a static charge",
+    "D": "a capacitor"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0740",
+   "type": "mcq",
+   "stem": "If the distance from a straight wire doubles, the magnetic field:",
+   "options": {
+    "A": "doubles",
+    "B": "quadruples",
+    "C": "halves",
+    "D": "remains the same"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0741",
+   "type": "mcq",
+   "stem": "The permeability of free space μ₀ equals:",
+   "options": {
+    "A": "8.85x10-12 H/m",
+    "B": "4πx10-⁷ H/m",
+    "C": "4πx10⁷ H/m",
+    "D": "1.6x10-1⁹ H/m"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0742",
+   "type": "mcq",
+   "stem": "α particles enter a velocity selector with E = 300 V/m and B = 0.2 T. The undeviated speed is:",
+   "options": {
+    "A": "1000 m/s",
+    "B": "1500 m/s",
+    "C": "2000 m/s",
+    "D": "3000 m/s"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0743",
+   "type": "mcq",
+   "stem": "The Biot-Savart Law is analogous in magnetism to __________ in electrostatics:",
+   "options": {
+    "A": "Ω's Law Page 55 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                   Nova Academic Resource Series",
+    "B": "Kirchhoff's Law",
+    "C": "Coulomb's Law",
+    "D": "Faraday's Law"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0744",
+   "type": "mcq",
+   "stem": "Which of the following is NOT a magnetic material?",
+   "options": {
+    "A": "Steel",
+    "B": "Nickel",
+    "C": "Iron",
+    "D": "Copper"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0745",
+   "type": "mcq",
+   "stem": "The cyclotron is used to accelerate charged particles to high:",
+   "options": {
+    "A": "temperatures",
+    "B": "velocities",
+    "C": "pressures",
+    "D": "frequencies"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0746",
+   "type": "mcq",
+   "stem": "The magnetic field inside a conductor carrying direct current:",
+   "options": {
+    "A": "is zero everywhere",
+    "B": "exists only on the surface",
+    "C": "exists both inside and outside",
+    "D": "is only outside"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0747",
+   "type": "mcq",
+   "stem": "The direction of magnetic force on a current-carrying conductor in a magnetic field is given by:",
+   "options": {
+    "A": "Lenz's Law",
+    "B": "Fleming's Right-Hand Rule",
+    "C": "Fleming's Left-Hand Rule",
+    "D": "Ampere's Rule"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0748",
+   "type": "mcq",
+   "stem": "Page 57 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                   Nova Academic Resource Series If B at distance r from a long wire is B₀, then B at distance r/2 from the same wire is:",
+   "options": {
+    "A": "B₀/2",
+    "B": "B₀/4",
+    "C": "2B₀",
+    "D": "4B₀"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0749",
+   "type": "mcq",
+   "stem": "The unit of magnetic field strength H is:",
+   "options": {
+    "A": "tesla",
+    "B": "weber",
+    "C": "ampere/metre",
+    "D": "henry"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0750",
+   "type": "mcq",
+   "stem": "Which property cannot be calculated from Biot-Savart's Law?",
+   "options": {
+    "A": "Magnetic field intensity",
+    "B": "Flux density",
+    "C": "Permeability",
+    "D": "Electric field intensity"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0751",
+   "type": "mcq",
+   "stem": "Electromagnetic induction was discovered by:",
+   "options": {
+    "A": "James Clerk Maxwell",
+    "B": "Heinrich Hertz",
+    "C": "Michael Faraday",
+    "D": "James Watt"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0752",
+   "type": "mcq",
+   "stem": "Lenz's Law states that the induced current flows in a direction to:",
+   "options": {
+    "A": "increase the change causing it",
+    "B": "oppose the change causing it",
+    "C": "remain constant",
+    "D": "flow in the direction of the magnetic field"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0753",
+   "type": "mcq",
+   "stem": "Lenz's Law is a consequence of:",
+   "options": {
+    "A": "Coulomb's Law",
+    "B": "conservation of charge",
+    "C": "conservation of energy",
+    "D": "Newton's third law only"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0754",
+   "type": "mcq",
+   "stem": "The direction of the induced current in a conductor moving through a magnetic field is given by:",
+   "options": {
+    "A": "Lenz's Law and Fleming's Right-Hand Rule",
+    "B": "Fleming's Left-Hand Rule",
+    "C": "Ampere's Rule",
+    "D": "Biot-Savart Law"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0755",
+   "type": "mcq",
+   "stem": "The induced EMF is greatest when the conductor moves:",
+   "options": {
+    "A": "parallel to the field",
+    "B": "perpendicular to both the field and the conductor's length",
+    "C": "at 45° to the field",
+    "D": "along the conductor's length"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0756",
+   "type": "mcq",
+   "stem": "The factors that increase the induced EMF in Faraday's experiment include:",
+   "options": {
+    "A": "speed of rotation only",
+    "B": "number of turns only",
+    "C": "both speed of rotation and number of turns, area, and B",
+    "D": "magnetic field strength only"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0757",
+   "type": "mcq",
+   "stem": "Eddy currents are induced currents that:",
+   "options": {
+    "A": "flow in single loops",
+    "B": "circulate throughout the volume of a conductor in a changing field",
+    "C": "flow only on the surface",
+    "D": "are beneficial only"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0758",
+   "type": "mcq",
+   "stem": "Eddy currents in transformer cores are minimised by:",
+   "options": {
+    "A": "using thicker iron cores",
+    "B": "using solid iron cores",
+    "C": "laminating the iron core with thin insulated sheets",
+    "D": "using copper cores"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0759",
+   "type": "mcq",
+   "stem": "Which of the following is a useful application of eddy currents?",
+   "options": {
+    "A": "electromagnetic braking",
+    "B": "electric heating of cores",
+    "C": "signal delay",
+    "D": "transformer lamination"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0760",
+   "type": "mcq",
+   "stem": "The principle of the electric generator is based on:",
+   "options": {
+    "A": "Coulomb's Law",
+    "B": "Faraday's Law of Electromagnetic Induction",
+    "C": "Ampere's Law",
+    "D": "Ω's Law"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0761",
+   "type": "mcq",
+   "stem": "Faraday's experiment showed that a current in the secondary coil is induced when the primary current is:",
+   "options": {
+    "A": "steady and large",
+    "B": "steady and small",
+    "C": "changing (increasing or decreasing)",
+    "D": "zero"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0762",
+   "type": "mcq",
+   "stem": "An increase in the area of a coil in a uniform magnetic field will:",
+   "options": {
+    "A": "decrease the flux",
+    "B": "increase the flux (Phi = BA)",
+    "C": "not affect the flux",
+    "D": "make the flux oscillate"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0763",
+   "type": "mcq",
+   "stem": "Which device converts electrical energy to mechanical energy using electromagnetic induction?",
+   "options": {
+    "A": "generator",
+    "B": "transformer",
+    "C": "electric motor",
+    "D": "capacitor"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0764",
+   "type": "mcq",
+   "stem": "The phenomenon of electromagnetic induction was simultaneously worked on by:",
+   "options": {
+    "A": "Faraday and Newton",
+    "B": "Faraday and Henry",
+    "C": "Maxwell and Hertz",
+    "D": "Ampere and Biot"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0765",
+   "type": "mcq",
+   "stem": "Fleming's Right-Hand Rule is used to find the direction of:",
+   "options": {
+    "A": "force on a current in a field",
+    "B": "induced current in a generator",
+    "C": "magnetic field of a solenoid",
+    "D": "electric field lines"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0766",
+   "type": "mcq",
+   "stem": "Fleming's Left-Hand Rule is used to find the direction of:",
+   "options": {
+    "A": "induced EMF",
+    "B": "force on a current-carrying conductor in a magnetic field",
+    "C": "electric field",
+    "D": "charge flow"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0767",
+   "type": "mcq",
+   "stem": "The direction of the induced magnetic field in a coil always tends to: Page 64 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                  Nova Academic Resource Series",
+   "options": {
+    "A": "aid the change in external flux",
+    "B": "cancel the change in external flux",
+    "C": "remain perpendicular to external flux",
+    "D": "align with the external flux"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0768",
+   "type": "mcq",
+   "stem": "An AC generator produces EMF that varies sinusoidally because:",
+   "options": {
+    "A": "the resistance changes",
+    "B": "the magnetic flux through the coil varies sinusoidally as it rotates",
+    "C": "the speed changes",
+    "D": "the field changes"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0769",
+   "type": "mcq",
+   "stem": "The rate of change of magnetic flux induces:",
+   "options": {
+    "A": "a mechanical force only",
+    "B": "an electric current only",
+    "C": "an EMF (and current if circuit is closed)",
+    "D": "a magnetic monopole"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0770",
+   "type": "mcq",
+   "stem": "The SI unit of self-inductance is the:",
+   "options": {
+    "A": "farad",
+    "B": "Ω",
+    "C": "henry",
+    "D": "weber"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0771",
+   "type": "mcq",
+   "stem": "In an LC circuit, energy oscillates between:",
+   "options": {
+    "A": "electric field of capacitor and kinetic energy of charge",
+    "B": "electric field of capacitor and magnetic field of inductor",
+    "C": "resistor and capacitor",
+    "D": "EMF source and capacitor"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0772",
+   "type": "mcq",
+   "stem": "An LC circuit is analogous to a mechanical:",
+   "options": {
+    "A": "damped pendulum",
+    "B": "mass-spring oscillator",
+    "C": "inclined plane",
+    "D": "projectile"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0773",
+   "type": "mcq",
+   "stem": "In an LC circuit, the current is maximum when:",
+   "options": {
+    "A": "the charge on the capacitor is maximum",
+    "B": "the charge on the capacitor is zero (energy fully in inductor)",
+    "C": "the frequency is zero",
+    "D": "the inductance equals capacitance"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0774",
+   "type": "mcq",
+   "stem": "The quality factor Q of an RLC circuit indicates:",
+   "options": {
+    "A": "the inductance value",
+    "B": "the ratio of resonant frequency to bandwidth (sharpness of resonance)",
+    "C": "the capacitance value",
+    "D": "the resistance value"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0775",
+   "type": "mcq",
+   "stem": "Mutual inductance M between two coils depends on:",
+   "options": {
+    "A": "their relative geometry and medium only",
+    "B": "the current in the primary",
+    "C": "the voltage applied",
+    "D": "the frequency of current only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0776",
+   "type": "mcq",
+   "stem": "The property of a circuit that opposes the change of current through it is called:",
+   "options": {
+    "A": "capacitance",
+    "B": "resistance",
+    "C": "inductance",
+    "D": "reactance"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0777",
+   "type": "mcq",
+   "stem": "Self-inductance of a coil increases when:",
+   "options": {
+    "A": "number of turns decreases",
+    "B": "core is replaced by air",
+    "C": "ferromagnetic core is inserted Page 70 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                  Nova Academic Resource Series",
+    "D": "frequency increases"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0778",
+   "type": "mcq",
+   "stem": "Switching off a large inductor abruptly (without protection) can cause:",
+   "options": {
+    "A": "zero voltage",
+    "B": "a large voltage sπke (potentially damaging)",
+    "C": "increased current",
+    "D": "normal operation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0779",
+   "type": "mcq",
+   "stem": "The time constant τ = L/R represents the time for current to decay to _______ of its initial value when the source is removed:",
+   "options": {
+    "A": "37% (e-1 ~ 0.37)",
+    "B": "63%",
+    "C": "50%",
+    "D": "zero"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0780",
+   "type": "mcq",
+   "stem": "An ideal inductor in a DC steady state circuit acts as:",
+   "options": {
+    "A": "an open circuit",
+    "B": "a short circuit",
+    "C": "a capacitor",
+    "D": "a resistor equal to L"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0781",
+   "type": "mcq",
+   "stem": "In an AC circuit containing only a resistor, the voltage and current are:",
+   "options": {
+    "A": "90° out of phase",
+    "B": "180° out of phase",
+    "C": "in phase (0° phase difference)",
+    "D": "45° out of phase"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0782",
+   "type": "mcq",
+   "stem": "In a pure inductor, the voltage __________ the current by 90°:",
+   "options": {
+    "A": "lags",
+    "B": "leads",
+    "C": "is in phase with",
+    "D": "is perpendicular to"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0783",
+   "type": "mcq",
+   "stem": "In a pure capacitor, the current __________ the voltage by 90°:",
+   "options": {
+    "A": "lags",
+    "B": "leads",
+    "C": "is in phase with",
+    "D": "is zero"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0784",
+   "type": "mcq",
+   "stem": "The power factor of an AC circuit is defined as:",
+   "options": {
+    "A": "sinphi",
+    "B": "tanphi",
+    "C": "cosphi",
+    "D": "1/cosphi"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0785",
+   "type": "mcq",
+   "stem": "Ideal inductors and capacitors in AC circuits:",
+   "options": {
+    "A": "dissipate power as heat",
+    "B": "store and release energy without net dissipation",
+    "C": "increase impedance only",
+    "D": "decrease frequency"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0786",
+   "type": "mcq",
+   "stem": "Transformers work on:",
+   "options": {
+    "A": "DC only",
+    "B": "AC only",
+    "C": "both AC and DC",
+    "D": "electromagnetic radiation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0787",
+   "type": "mcq",
+   "stem": "Reactive power (var) in an AC circuit is:",
+   "options": {
+    "A": "V_rms.I_rms.cosphi Page 75 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                Nova Academic Resource Series",
+    "B": "V_rms.I_rms",
+    "C": "V_rms.I_rms.sinphi",
+    "D": "I2R"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0788",
+   "type": "mcq",
+   "stem": "In a phasor diagram for an RLC series circuit, the voltage across the inductor:",
+   "options": {
+    "A": "is in phase with current",
+    "B": "lags current by 90°",
+    "C": "leads current by 90°",
+    "D": "leads current by 45°"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0789",
+   "type": "mcq",
+   "stem": "The voltage across the capacitor in a phasor diagram:",
+   "options": {
+    "A": "is in phase with current",
+    "B": "lags current by 90°",
+    "C": "leads current by 90°",
+    "D": "leads current by 45°"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0790",
+   "type": "mcq",
+   "stem": "Power dissipated in a series RLC circuit at resonance equals:",
+   "options": {
+    "A": "zero",
+    "B": "e2/R",
+    "C": "e2/(2R)",
+    "D": "e2R"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0791",
+   "type": "mcq",
+   "stem": "The 'skin effect' in AC conductors means:",
+   "options": {
+    "A": "current flows uniformly throughout the cross-section",
+    "B": "high-frequency current flows mainly on the outer surface",
+    "C": "DC has higher resistance than AC",
+    "D": "current increases with conductor diameter"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0792",
+   "type": "mcq",
+   "stem": "In an AC generator, a slip ring is used to:",
+   "options": {
+    "A": "convert AC to DC",
+    "B": "maintain contact with the rotating coil without twisting the leads",
+    "C": "increase magnetic field",
+    "D": "reduce eddy currents"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0793",
+   "type": "mcq",
+   "stem": "Maxwell's four equations summarise the laws of:",
+   "options": {
+    "A": "mechanics",
+    "B": "electromagnetism",
+    "C": "thermodynamics",
+    "D": "quantum mechanics"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0794",
+   "type": "mcq",
+   "stem": "The Ampere-Maxwell equation states that magnetic field is produced by:",
+   "options": {
+    "A": "static electric charges only",
+    "B": "electric current only",
+    "C": "electric current AND changing electric flux",
+    "D": "magnetic monopoles"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0795",
+   "type": "mcq",
+   "stem": "Electromagnetic waves travel in vacuum at speed:",
+   "options": {
+    "A": "3x10⁸ m/s",
+    "B": "3x10⁶ m/s",
+    "C": "1.5x10⁸ m/s",
+    "D": "6x10⁸ m/s"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0796",
+   "type": "mcq",
+   "stem": "In electromagnetic waves, E and B are:",
+   "options": {
+    "A": "parallel to each other and to propagation direction",
+    "B": "perpendicular to each other but parallel to propagation",
+    "C": "perpendicular to each other and to the direction of propagation",
+    "D": "equal in magnitude"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0797",
+   "type": "mcq",
+   "stem": "Planck's constant h has the approximate value:",
+   "options": {
+    "A": "6.626x10-3⁴ J.s",
+    "B": "6.626x10-2⁴ J.s",
+    "C": "9.11x10-31 J.s",
+    "D": "1.38x10-23 J.s"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0798",
+   "type": "mcq",
+   "stem": "The work function of a metal is the minimum energy needed to:",
+   "options": {
+    "A": "magnetise the metal",
+    "B": "eject an electron from the metal surface",
+    "C": "ionise the metal",
+    "D": "conduct electricity"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0799",
+   "type": "mcq",
+   "stem": "The half-life of a radioactive sample is 32 hours. The fraction remaining after 16 hours is approximately:",
+   "options": {
+    "A": "0.25",
+    "B": "0.71",
+    "C": "0.50",
+    "D": "0.62"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0800",
+   "type": "mcq",
+   "stem": "Superconductivity is characterised by:",
+   "options": {
+    "A": "very high resistance below T_c Page 80 | Students Resources Made Easy | © Nova Academic Resource Series PHY 102 | CBT Revision Bank                                                Nova Academic Resource Series",
+    "B": "zero resistance below the critical temperature T_c",
+    "C": "high magnetic permeability",
+    "D": "very high heat capacity"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0801",
+   "type": "mcq",
+   "stem": "The Meissner effect describes the expulsion of:",
+   "options": {
+    "A": "electric fields",
+    "B": "electric charges",
+    "C": "magnetic flux from inside a superconductor",
+    "D": "heat from a superconductor"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-phy102-bank-0802",
+   "type": "mcq",
+   "stem": "The electromagnetic spectrum, from lowest to highest frequency, starts with:",
+   "options": {
+    "A": "gamma rays, X-rays, UV",
+    "B": "radio waves, microwaves, infrared, visible, UV, X-rays, gamma rays",
+    "C": "visible light, infrared, radio waves",
+    "D": "X-rays, gamma rays, radio waves"
+   },
+   "marks": 1,
+   "answer": "B",
    "explanation": ""
   }
  ]

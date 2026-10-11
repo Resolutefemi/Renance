@@ -5,8 +5,11 @@
 /// GET /me/review, estimated time, Start Review) plus the Queue Preview
 /// (due/overdue/upcoming topic rows) and the recent papers list. Detail:
 /// the post-grade answer review, You Picked vs Correct Answer,
-/// per-question explanations from the sealed keys, Wrong / Skipped / All
-/// filters.
+/// per-question explanations from the sealed keys - grouped SUBJECT BY
+/// SUBJECT (founder directive: no scrolling a 180-question wall to find
+/// mistakes). Each subject block carries its own Wrong / Skipped /
+/// Answered buckets, so a student lands straight on a subject's wrong
+/// answers.
 library;
 
 import 'package:flutter/material.dart';
@@ -575,12 +578,11 @@ class ReviewDetailScreen extends StatefulWidget {
   State<ReviewDetailScreen> createState() => _ReviewDetailScreenState();
 }
 
-enum _ReviewFilter { wrong, skipped, all }
+enum _ReviewFilter { wrong, skipped, answered, all }
 
 class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
   AttemptReview? _review;
   String? _error;
-  _ReviewFilter _filter = _ReviewFilter.all;
   String _query = '';
   SavedStore? _saved;
   final Map<int, GlobalKey> _cardKeys = <int, GlobalKey>{};
@@ -718,22 +720,9 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
                   Expanded(
                     child: Builder(
                       builder: (BuildContext context) {
-                        final List<ReviewQuestion> questions = review.questions
-                            .where(
-                              (ReviewQuestion q) => switch (_filter) {
-                                _ReviewFilter.wrong =>
-                                  q.isWrong && q.selected.isNotEmpty,
-                                _ReviewFilter.skipped => q.selected.isEmpty,
-                                _ReviewFilter.all => true,
-                              },
-                            )
-                            .where((ReviewQuestion q) =>
-                                _query.isEmpty ||
-                                q.stem.toLowerCase().contains(_query))
-                            .toList(growable: false);
-                        final int wrongCount = review.wrongCount;
-                        final int skippedCount = review.skippedCount;
+                        final List<ReviewGroup> groups = review.groups;
                         _cardKeys.clear();
+                        int running = 0; // global card index for the jump strip
 
                         return RefreshIndicator(
                           onRefresh: _load,
@@ -769,36 +758,19 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
                                     tone: const Color(0xFFB45309),
                                     tint: const Color(0xFFFDF0E0),
                                   ),
-                                ],
-                              ),
-                              const SizedBox(height: 14),
-                              // The filter trio keeps its Renance edge.
-                              Row(
-                                children: <Widget>[
-                                  _FilterChip(
-                                    'Wrong ($wrongCount)',
-                                    _filter == _ReviewFilter.wrong,
-                                    () => setState(
-                                        () => _filter = _ReviewFilter.wrong),
-                                  ),
-                                  const SizedBox(width: 8),
-                                  _FilterChip(
-                                    'Skipped ($skippedCount)',
-                                    _filter == _ReviewFilter.skipped,
-                                    () => setState(() =>
-                                        _filter = _ReviewFilter.skipped),
-                                  ),
-                                  const SizedBox(width: 8),
-                                  _FilterChip(
-                                    'All (${review.questions.length})',
-                                    _filter == _ReviewFilter.all,
-                                    () => setState(
-                                        () => _filter = _ReviewFilter.all),
+                                  _TypeChip(
+                                    label: 'Score',
+                                    value: review.score != null && review.total != null
+                                        ? '${review.score}/${review.total}'
+                                        : '-',
+                                    tone: const Color(0xFF166534),
+                                    tint: const Color(0xFFDCFCE7),
                                   ),
                                 ],
                               ),
                               const SizedBox(height: 14),
-                              // Search Question - the school app's bar.
+                              // Search Question - the school app's bar. It
+                              // filters inside every subject block.
                               TextField(
                                 onChanged: (String v) =>
                                     setState(() => _query = v.trim().toLowerCase()),
@@ -820,44 +792,39 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
                                   ),
                                 ),
                               ),
-                              const SizedBox(height: 16),
-                              if (questions.isEmpty)
+                              const SizedBox(height: 18),
+                              // SUBJECT BY SUBJECT: every subject block
+                              // heads with its counts, then its own
+                              // Wrong / Skipped / Answered / All buckets.
+                              for (final ReviewGroup g in groups) ...<Widget>[
+                                _SubjectSection(
+                                  group: g,
+                                  query: _query,
+                                  numberOffset: running,
+                                  onNumbered: (int n) => running = n,
+                                  cardKeys: _cardKeys,
+                                  onView: _openExplanation,
+                                ),
+                                const SizedBox(height: 20),
+                              ],
+                              if (groups.every((ReviewGroup g) =>
+                                  g.questions
+                                      .where((ReviewQuestion q) =>
+                                          _query.isEmpty ||
+                                          q.stem.toLowerCase().contains(_query))
+                                      .isEmpty))
                                 Padding(
                                   padding: const EdgeInsets.symmetric(
                                       vertical: 40),
                                   child: Center(
                                     child: Text(
-                                      switch (_filter) {
-                                        _ReviewFilter.wrong =>
-                                          'Nothing wrong here, flawless paper.',
-                                        _ReviewFilter.skipped =>
-                                          'No skipped questions.',
-                                        _ReviewFilter.all => 'No questions.',
-                                      },
-                                      style: RenanceText.bodySecondary
-                                          .copyWith(
-                                              color:
-                                                  context.textSecondary),
+                                      _query.isEmpty
+                                          ? 'No questions to review.'
+                                          : 'No question matches "$_query".',
+                                      style: RenanceText.bodySecondary.copyWith(
+                                          color: context.textSecondary),
                                     ),
                                   ),
-                                )
-                              else
-                                ...questions.asMap().entries.map(
-                                  (MapEntry<int, ReviewQuestion> e) {
-                                    final GlobalKey key = GlobalKey();
-                                    _cardKeys[e.key] = key;
-                                    return Container(
-                                      key: key,
-                                      margin: const EdgeInsets.only(
-                                          bottom: 16),
-                                      child: _StudyQuestionCard(
-                                        index: e.key + 1,
-                                        question: e.value,
-                                        onView: () => _openExplanation(
-                                            questions, e.key),
-                                      ),
-                                    );
-                                  },
                                 ),
                             ],
                           ),
@@ -908,6 +875,216 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
         content: Text(
             'Report noted on question ${q.questionId}. Thanks for the '
             'flag, it goes straight to the question team.'),
+      ),
+    );
+  }
+}
+
+/// One subject block of the answer review: the subject name with its
+/// wrong / skipped / answered counts, its own bucket chips (Wrong by
+/// default - the whole point of the grouping is landing on the mistakes
+/// fast), then the bucket's question cards.
+class _SubjectSection extends StatefulWidget {
+  const _SubjectSection({
+    required this.group,
+    required this.query,
+    required this.numberOffset,
+    required this.onNumbered,
+    required this.cardKeys,
+    required this.onView,
+  });
+
+  final ReviewGroup group;
+
+  /// Live search text; filters inside this block.
+  final String query;
+
+  /// Index of this block's first card in the paper-wide numbering, so
+  /// the bottom jump strip addresses every card uniquely.
+  final int numberOffset;
+
+  /// Reports back the next free number after this block's cards.
+  final void Function(int) onNumbered;
+
+  /// Shared (index -> key) map with the reader's jump strip.
+  final Map<int, GlobalKey> cardKeys;
+
+  /// Opens the explanation pager on this block's filtered list.
+  final void Function(List<ReviewQuestion>, int) onView;
+
+  @override
+  State<_SubjectSection> createState() => _SubjectSectionState();
+}
+
+class _SubjectSectionState extends State<_SubjectSection> {
+  _ReviewFilter _filter = _ReviewFilter.wrong;
+
+  @override
+  Widget build(BuildContext context) {
+    final ReviewGroup g = widget.group;
+    final List<ReviewQuestion> matching = g.questions
+        .where((ReviewQuestion q) =>
+            widget.query.isEmpty ||
+            q.stem.toLowerCase().contains(widget.query))
+        .toList(growable: false);
+    final List<ReviewQuestion> shown = matching
+        .where((ReviewQuestion q) => switch (_filter) {
+              _ReviewFilter.wrong => q.isWrong && q.selected.isNotEmpty,
+              _ReviewFilter.skipped => q.selected.isEmpty,
+              _ReviewFilter.answered => q.correctly && q.selected.isNotEmpty,
+              _ReviewFilter.all => true,
+            })
+        .toList(growable: false);
+
+    // Paper-wide numbering handed to the jump strip.
+    int n = widget.numberOffset;
+    final List<int> numbers = <int>[];
+    for (int i = 0; i < shown.length; i++) {
+      numbers.add(n);
+      widget.cardKeys[n] = GlobalKey();
+      n++;
+    }
+    widget.onNumbered(n);
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        // Subject head: name + the three count badges.
+        Container(
+          padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
+          decoration: BoxDecoration(
+            color: context.card,
+            borderRadius: BorderRadius.circular(14),
+            border:
+                Border.all(color: context.outlineVariant.withValues(alpha: 0.5)),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Text(
+                      g.subject,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: RenanceText.displayMd.copyWith(fontSize: 17),
+                    ),
+                  ),
+                  _CountBadge(
+                    count: g.wrong,
+                    label: 'wrong',
+                    color: context.error,
+                  ),
+                  const SizedBox(width: 6),
+                  _CountBadge(
+                    count: g.skipped,
+                    label: 'skipped',
+                    color: RenanceColors.amber,
+                  ),
+                  const SizedBox(width: 6),
+                  _CountBadge(
+                    count: g.answered,
+                    label: 'correct',
+                    color: RenanceColors.emerald,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 10),
+              // Bucket chips - Wrong is the default landing bucket.
+              Wrap(
+                spacing: 8,
+                runSpacing: 8,
+                children: <Widget>[
+                  _FilterChip(
+                    'Wrong (${g.wrong})',
+                    _filter == _ReviewFilter.wrong,
+                    () => setState(() => _filter = _ReviewFilter.wrong),
+                  ),
+                  _FilterChip(
+                    'Skipped (${g.skipped})',
+                    _filter == _ReviewFilter.skipped,
+                    () => setState(() => _filter = _ReviewFilter.skipped),
+                  ),
+                  _FilterChip(
+                    'Answered (${g.answered})',
+                    _filter == _ReviewFilter.answered,
+                    () => setState(() => _filter = _ReviewFilter.answered),
+                  ),
+                  _FilterChip(
+                    'All (${g.questions.length})',
+                    _filter == _ReviewFilter.all,
+                    () => setState(() => _filter = _ReviewFilter.all),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 12),
+        if (shown.isEmpty)
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 18),
+            child: Center(
+              child: Text(
+                widget.query.isNotEmpty
+                    ? 'No match in this subject.'
+                    : switch (_filter) {
+                        _ReviewFilter.wrong =>
+                          'Nothing wrong here, flawless subject.',
+                        _ReviewFilter.skipped =>
+                          'No skipped questions.',
+                        _ReviewFilter.answered =>
+                          'None answered correctly yet.',
+                        _ReviewFilter.all => 'No questions.',
+                      },
+                style: RenanceText.bodySecondary
+                    .copyWith(color: context.textSecondary),
+              ),
+            ),
+          )
+        else
+          ...List<int>.generate(shown.length, (int i) => i).map(
+            (int i) {
+              return Container(
+                key: widget.cardKeys[numbers[i]],
+                margin: const EdgeInsets.only(bottom: 16),
+                child: _StudyQuestionCard(
+                  index: numbers[i] + 1,
+                  question: shown[i],
+                  onView: () => widget.onView(shown, i),
+                ),
+              );
+            },
+          ),
+      ],
+    );
+  }
+}
+
+/// The tiny "12 wrong" badge next to a subject name.
+class _CountBadge extends StatelessWidget {
+  const _CountBadge({
+    required this.count,
+    required this.label,
+    required this.color,
+  });
+
+  final int count;
+  final String label;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.12),
+        borderRadius: BorderRadius.circular(999),
+      ),
+      child: Text(
+        '$count $label',
+        style: RenanceText.labelMono.copyWith(fontSize: 10.5, color: color),
       ),
     );
   }

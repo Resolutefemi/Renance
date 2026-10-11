@@ -41,6 +41,7 @@ type reviewQuestion struct {
         Topic       string            `json:"topic,omitempty"`
         Year        int               `json:"year,omitempty"`
         Type        string            `json:"type,omitempty"`
+        Subject     string            `json:"subject,omitempty"`
         Options     map[string]string `json:"options,omitempty"`
         Selected    string            `json:"selected,omitempty"`
         Correct     string            `json:"correct"`
@@ -50,6 +51,16 @@ type reviewQuestion struct {
         AnswerImage string            `json:"answerImage,omitempty"`
         Passage     string            `json:"passage,omitempty"`
         Video       string            `json:"video,omitempty"`
+}
+
+// reviewSection mirrors the bundle's per-subject grouping so the
+// review readers (web + app) can bucket the paper subject by subject
+// instead of scrolling one long flat list. Single-subject papers keep
+// an empty list; the client falls back to the paper title as the one
+// group.
+type reviewSection struct {
+        Subject     string   `json:"subject"`
+        QuestionIDs []string `json:"questionIds"`
 }
 
 // handleAttemptReview serves GET /attempts/{id}/review, per-question
@@ -98,6 +109,16 @@ func (s *Server) handleAttemptReview(w http.ResponseWriter, r *http.Request) {
                 chosen[p.QuestionID] = p.Selected
         }
 
+        // subjectOf maps every question of a composite paper to its
+        // subject title (Use of English, Physics, ...). Empty for
+        // single-bank papers: no grouping needed there.
+        subjectOf := map[string]string{}
+        for _, sec := range bundle.Sections {
+                for _, id := range sec.QuestionIDs {
+                        subjectOf[id] = sec.Subject
+                }
+        }
+
         questions := make([]reviewQuestion, 0, len(bundle.Questions))
         for _, q := range bundle.Questions {
                 key, keyed := keys[q.ID]
@@ -110,6 +131,7 @@ func (s *Server) handleAttemptReview(w http.ResponseWriter, r *http.Request) {
                         Topic:       q.Topic,
                         Year:        q.Year,
                         Type:        q.Type,
+                        Subject:     subjectOf[q.ID],
                         Options:     q.Options,
                         Selected:    chosen[q.ID],
                         Correct:     key.Letter,
@@ -136,11 +158,20 @@ func (s *Server) handleAttemptReview(w http.ResponseWriter, r *http.Request) {
                 return
         }
 
+        sections := make([]reviewSection, 0, len(bundle.Sections))
+        for _, sec := range bundle.Sections {
+                sections = append(sections, reviewSection{
+                        Subject:     sec.Subject,
+                        QuestionIDs: sec.QuestionIDs,
+                })
+        }
+
         resp := map[string]any{
                 "attemptId": attempt.ID,
                 "code":      attempt.Code,
                 "title":     bundle.Title,
                 "questions": questions,
+                "sections":  sections,
         }
         if attempt.SubmittedAt != nil {
                 resp["submittedAt"] = attempt.SubmittedAt.UTC().Format(time.RFC3339Nano)

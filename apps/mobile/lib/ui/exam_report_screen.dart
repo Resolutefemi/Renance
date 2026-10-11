@@ -57,6 +57,7 @@ class ExamReportView extends StatelessWidget {
     this.streak = 0,
     this.onRetry,
     this.onGoBack,
+    this.onBack,
     this.extra,
   });
 
@@ -84,6 +85,12 @@ class ExamReportView extends StatelessWidget {
   final VoidCallback? onRetry;
   final VoidCallback? onGoBack;
 
+  /// The back circle at the banner's top LHS (founder directive: every
+  /// result page answers a back button at the top left). Null pops the
+  /// navigator - the embedded player and the history replay both sit on
+  /// a route that pops.
+  final VoidCallback? onBack;
+
   /// Extra section under the breakdown (the exam player mounts the
   /// pacing forensics card here).
   final Widget? extra;
@@ -107,7 +114,11 @@ class ExamReportView extends StatelessWidget {
           child: ListView(
             padding: const EdgeInsets.only(bottom: 24),
             children: <Widget>[
-              _ReportBanner(dark: context.isDarkTier),
+              _ReportBanner(
+                dark: context.isDarkTier,
+                title: title,
+                onBack: onBack ?? () => Navigator.of(context).maybePop(),
+              ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 28, 20, 0),
                 child: Column(
@@ -274,35 +285,9 @@ class _ExamReportScreenState extends State<ExamReportScreen> {
       backgroundColor: context.pageBg,
       body: SafeArea(
         bottom: false,
-        child: Column(
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.fromLTRB(8, 4, 16, 0),
-              child: SizedBox(
-                height: 56,
-                child: Row(
-                  children: <Widget>[
-                    InkWell(
-                      onTap: () => Navigator.of(context).pop(),
-                      customBorder: const CircleBorder(),
-                      child: Container(
-                        width: 42,
-                        height: 42,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(color: context.outlineVariant),
-                          color: context.card,
-                        ),
-                        child: Icon(Icons.arrow_back,
-                            size: 19, color: context.ink),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              child: _loading
+        // The banner's own back circle (top LHS) is the page's back
+        // affordance - no separate header row above the report anymore.
+        child: _loading
                   ? const Center(
                       child: CircularProgressIndicator(strokeWidth: 2),
                     )
@@ -322,10 +307,7 @@ class _ExamReportScreenState extends State<ExamReportScreen> {
                           durationMs: a.durationMs,
                           attemptId: a.attemptId,
                         ),
-            ),
-          ],
         ),
-      ),
     );
   }
 }
@@ -365,15 +347,21 @@ class _ErrorPane extends StatelessWidget {
 /// Cream hero banner with the amber shard cluster, the reference's
 /// "Examination Performance" masthead.
 class _ReportBanner extends StatelessWidget {
-  const _ReportBanner({required this.dark});
+  const _ReportBanner({
+    required this.dark,
+    required this.title,
+    required this.onBack,
+  });
 
   final bool dark;
+  final String title;
+  final VoidCallback onBack;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(20, 18, 20, 22),
+      padding: const EdgeInsets.fromLTRB(12, 12, 20, 22),
       color: dark ? RenanceColors.darkSurface : const Color(0xFFFFF8E1),
       child: Stack(
         children: <Widget>[
@@ -382,12 +370,35 @@ class _ReportBanner extends StatelessWidget {
               painter: _ShardsPainter(dark: dark),
             ),
           ),
-          Text(
-            'Examination Performance',
-            style: RenanceText.displayMd.copyWith(
-              fontSize: 24,
-              color: context.ink,
-            ),
+          Row(
+            children: <Widget>[
+              InkWell(
+                onTap: onBack,
+                customBorder: const CircleBorder(),
+                child: Container(
+                  width: 44,
+                  height: 44,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(color: context.outlineVariant),
+                    color: context.card,
+                  ),
+                  child: Icon(Icons.arrow_back, size: 20, color: context.ink),
+                ),
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  'Examination Performance',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: RenanceText.displayMd.copyWith(
+                    fontSize: 24,
+                    color: context.ink,
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),
