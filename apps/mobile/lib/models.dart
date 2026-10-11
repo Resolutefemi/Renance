@@ -687,6 +687,7 @@ class ReviewQuestion {
     required this.correctly,
     this.year = 0,
     this.type = '',
+    this.subject = '',
     this.image = '',
     this.answerImage = '',
     this.passage = '',
@@ -703,6 +704,9 @@ class ReviewQuestion {
   final bool correctly;
   final int year;
   final String type; // mcq | theory
+  /// Composite papers: the subject this question was served under
+  /// (Use of English, Physics, ...). Empty on single-subject papers.
+  final String subject;
   /// Question diagram, origin-less /qimages/ path.
   final String image;
   /// Worked-solution diagram unlocked with the key.
@@ -713,6 +717,7 @@ class ReviewQuestion {
   final String video;
 
   bool get isWrong => !correctly;
+  bool get isSkipped => selected.isEmpty;
 
   factory ReviewQuestion.fromJson(Map<String, dynamic> j) => ReviewQuestion(
     questionId: (j['questionId'] ?? '') as String,
@@ -727,6 +732,7 @@ class ReviewQuestion {
     correctly: (j['correctly'] ?? false) as bool,
     year: (j['year'] ?? 0) as int,
     type: (j['type'] ?? '') as String,
+    subject: (j['subject'] ?? '') as String,
     image: (j['image'] ?? '') as String,
     answerImage: (j['answerImage'] ?? '') as String,
     passage: (j['passage'] ?? '') as String,
@@ -741,6 +747,7 @@ class AttemptReview {
     required this.code,
     required this.title,
     required this.questions,
+    this.sections = const <ReviewSection>[],
     this.score,
     this.total,
   });
@@ -749,11 +756,42 @@ class AttemptReview {
   final String code;
   final String title;
   final List<ReviewQuestion> questions;
+  /// Composite papers: the per-subject grouping (subject -> question
+  /// ids) so the review can be read subject by subject. Single-subject
+  /// papers ship an empty list.
+  final List<ReviewSection> sections;
   final int? score;
   final int? total;
 
-  int get wrongCount => questions.where((q) => q.isWrong).length;
+  int get wrongCount => questions.where((q) => q.isWrong && q.selected.isNotEmpty).length;
   int get skippedCount => questions.where((q) => q.selected.isEmpty).length;
+
+  /// The review groups, in paper order: one entry per subject for
+  /// composite papers, one entry (the paper itself) otherwise. Students
+  /// read their mistakes subject by subject instead of scrolling a
+  /// 180-question wall.
+  List<ReviewGroup> get groups {
+    if (sections.isEmpty) {
+      return <ReviewGroup>[
+        ReviewGroup(subject: title.isEmpty ? 'This paper' : title, questions: questions),
+      ];
+    }
+    final Map<String, List<ReviewQuestion>> bySubject = <String, List<ReviewQuestion>>{};
+    for (final ReviewQuestion q in questions) {
+      bySubject.putIfAbsent(q.subject.isEmpty ? 'Questions' : q.subject,
+          () => <ReviewQuestion>[]).add(q);
+    }
+    // Keep the section order the paper was served in.
+    final List<ReviewGroup> out = <ReviewGroup>[];
+    for (final ReviewSection s in sections) {
+      final List<ReviewQuestion>? qs = bySubject.remove(s.subject);
+      if (qs != null && qs.isNotEmpty) out.add(ReviewGroup(subject: s.subject, questions: qs));
+    }
+    bySubject.forEach((String k, List<ReviewQuestion> v) {
+      if (v.isNotEmpty) out.add(ReviewGroup(subject: k, questions: v));
+    });
+    return out;
+  }
 
   factory AttemptReview.fromJson(Map<String, dynamic> j) => AttemptReview(
     attemptId: (j['attemptId'] ?? '') as String,
@@ -761,6 +799,10 @@ class AttemptReview {
     title: (j['title'] ?? '') as String,
     score: j['score'] as int?,
     total: j['total'] as int?,
+    sections: ((j['sections'] as List<dynamic>?) ?? const [])
+        .map((dynamic e) =>
+            ReviewSection.fromJson((e as Map).cast<String, dynamic>()))
+        .toList(),
     questions: ((j['questions'] as List<dynamic>?) ?? const [])
         .map(
           (dynamic e) =>
@@ -768,6 +810,36 @@ class AttemptReview {
         )
         .toList(),
   );
+}
+
+/// One subject slice of a graded composite paper.
+class ReviewSection {
+  const ReviewSection({required this.subject, required this.questionIds});
+
+  final String subject;
+  final List<String> questionIds;
+
+  factory ReviewSection.fromJson(Map<String, dynamic> j) => ReviewSection(
+    subject: (j['subject'] ?? '') as String,
+    questionIds: ((j['questionIds'] as List<dynamic>?) ?? const [])
+        .map((dynamic e) => e.toString())
+        .toList(),
+  );
+}
+
+/// A subject group with its wrong/skipped/answered buckets, ready for
+/// the review reader.
+class ReviewGroup {
+  const ReviewGroup({required this.subject, required this.questions});
+
+  final String subject;
+  final List<ReviewQuestion> questions;
+
+  int get wrong =>
+      questions.where((q) => q.isWrong && q.selected.isNotEmpty).length;
+  int get skipped => questions.where((q) => q.selected.isEmpty).length;
+  int get answered =>
+      questions.where((q) => q.correctly && q.selected.isNotEmpty).length;
 }
 
 // ---------------------------------------------------------------- gamification

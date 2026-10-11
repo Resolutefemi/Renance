@@ -100,6 +100,17 @@ jobs:
             --dart-define=RENANCE_API_BASE=${{ vars.PUBLIC_API_BASE || 'https://renance-api.onrender.com' }} \
             --dart-define=GOOGLE_WEB_CLIENT_ID=${{ vars.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '' }}
 
+      # Founder directive 2026-10-11: the rolling latest release also
+      # carries a version-stamped copy (Renance-20.aab, ...) beside the
+      # canonical app-release.aab, so the Play upload artifact is
+      # unambiguous about which build it is.
+      - name: Stamp the versioned AAB copy
+        working-directory: apps/mobile
+        run: |
+          VER=$(grep -m1 '^version:' pubspec.yaml | cut -d'+' -f2 | tr -d ' \r')
+          cp build/app/outputs/bundle/release/app-release.aab \
+            dist/Renance-${VER}.aab
+
       # The per-run artifacts are convenience copies only - the real
       # distribution channels are the rolling "latest" release below and
       # the AAB hand-off to the Play Console, neither of which touches
@@ -135,6 +146,7 @@ jobs:
             apps/mobile/dist/renance-arm64.apk
             apps/mobile/dist/renance-arm32.apk
             apps/mobile/build/app/outputs/bundle/release/app-release.aab
+            apps/mobile/dist/Renance-*.aab
 
       - name: Attach to GitHub Release (tag builds only)
         if: startsWith(github.ref, 'refs/tags/')
@@ -145,3 +157,4 @@ jobs:
             apps/mobile/dist/renance-arm64.apk
             apps/mobile/dist/renance-arm32.apk
             apps/mobile/build/app/outputs/bundle/release/app-release.aab
+            apps/mobile/dist/Renance-*.aab

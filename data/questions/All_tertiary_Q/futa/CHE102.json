@@ -2,8 +2,8 @@
  "code": "uni-futa-che102-bank",
  "title": "FUTA CHE 102 | Course Question Bank",
  "version": 1,
- "questionCount": 274,
- "totalMarks": 274,
+ "questionCount": 395,
+ "totalMarks": 395,
  "body": "University Modules",
  "category": "university",
  "questions": [
@@ -3839,6 +3839,1700 @@
    },
    "marks": 1,
    "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0275",
+   "type": "mcq",
+   "stem": "Alcohols have higher boiling points than do alkanes of similar molecular weight because",
+   "options": {
+    "A": "Oxygen is present in alcohols which is deficient in alkanes",
+    "B": "Strong ionic bonding is present in alcohols while covalent bonding is present in alkanes",
+    "C": "Interaction between oxygen of the hydroxyl group with other molecules of alcohols which is absent in alkanes",
+    "D": "Alkanes are largely hydrocarbons which mostly are in gaseous states"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0276",
+   "type": "mcq",
+   "stem": "In the reduction of ketone to a secondary alcohol by either NaBH or LAH, 4 why will you prefer not to add aqueous acid in the first step?",
+   "options": {
+    "A": "It will reduce a ketone to a primary alcohol instead",
+    "B": "There will be no reaction",
+    "C": "Acid will have reacted with the reagent before the carbonyl has any chance to undergo reduction",
+    "D": "It causes a serious explosion that can set the whole laboratory on fire"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0277",
+   "type": "mcq",
+   "stem": "Reaction involving the use of lithium aluminium hydride (LAH) must always be in inert solvents because",
+   "options": {
+    "A": "LAH is inactive in any other solvents",
+    "B": "The presence of reactive solvents will produce large amount of side reaction products",
+    "C": "LAH will react with solvents having acidic hydrogen atoms",
+    "D": "LAH is very reactive and catches fire easily"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0278",
+   "type": "mcq",
+   "stem": "Why will you prefer LAH to NaBH as reducing agent for carbonyl group? 4",
+   "options": {
+    "A": "LAH is cheaper than NaBH 4",
+    "B": "NaBH is too slow to reduce carbonyl group 4",
+    "C": "NaBH is not as selective as LAH 4",
+    "D": "LAH is more environment friendly than LAH"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0279",
+   "type": "mcq",
+   "stem": "What are the products of the reaction of CH CH C(O)OCH with LAH 3 2 3 followed by treatment with acid?",
+   "options": {
+    "A": "1-propanol and methanol",
+    "B": "Propanal and methanol",
+    "C": "Ethanol and ethanoic acid",
+    "D": "2-propanol and methanol"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0280",
+   "type": "mcq",
+   "stem": "What is the function of H O+ in the reaction of RMgX with carbonyl 3 compounds?",
+   "options": {
+    "A": "To produce magnesium salt of an alkoxide ion",
+    "B": "To convert the alkoxide ion to alcohol",
+    "C": "To neutralize the alkaline reaction medium",
+    "D": "To reduce the carbonyl group to alcohol"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0281",
+   "type": "mcq",
+   "stem": "Reactions involving RMgX must be carried out in inert solvents like ether because",
+   "options": {
+    "A": "Solvents having acidic protons will react with and destroy the reagent before it could react with the carbonyl compound",
+    "B": "Reactive solvents will interact with the reagent to form undesired products with the carbonyl compounds",
+    "C": "RMgX, being a form of salt, is very reactive toward solvents having acidic protons",
+    "D": "RMgX is a very sensitive reagent and becomes deactivated upon contact with reactive solvents."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0282",
+   "type": "mcq",
+   "stem": "What is(are) the product(s) of this reaction?",
+   "options": {
+    "A": "3methyl3pentanone",
+    "B": "3methyl3pentanone and methanol",
+    "C": "3methylpentan3ol and methanol",
+    "D": "3methylpentan3ol"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0283",
+   "type": "mcq",
+   "stem": "What is the product of the reaction of 1 equivalent of a Grignard reagent with an ester, acyl chloride or carboxylate salt?",
+   "options": {
+    "A": "Aldehyde",
+    "B": "Alkanone",
+    "C": "Alkanoic acid",
+    "D": "Alcohol"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0284",
+   "type": "mcq",
+   "stem": "What is the product you would obtain if you oxidize tertiary alcohol in either dichromate or permanganate?",
+   "options": {
+    "A": "Alkanone only",
+    "B": "No product",
+    "C": "Alkanone and Alkanal",
+    "D": "Alkanal only"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0285",
+   "type": "mcq",
+   "stem": "Identify X and Y as different classes of alcohols present in the structure drawn",
+   "options": {
+    "A": "X is 2o alcohol, Y is 3o alcohol",
+    "B": "X is 2o alcohol, Y is 1o alcohol",
+    "C": "X is 3o alcohol, Y is 2o alcohol",
+    "D": "X is 3o alcohol, Y is 1o alcohol"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0286",
+   "type": "mcq",
+   "stem": "CH CHO reacts first with ethyl lithium (CH CH Li) and then with dilute acid 3 3 2 to give",
+   "options": {
+    "A": "ethane",
+    "B": "butan-2-ol",
+    "C": "butane",
+    "D": "no reaction"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0287",
+   "type": "mcq",
+   "stem": "Formaldehyde (HCHO) reacts first with CH MgCl and then with dilute acid to 3 give a",
+   "options": {
+    "A": "primary alcohol",
+    "B": "secondary alcohol",
+    "C": "tertiary alcohol",
+    "D": "quaternary alcohol"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0288",
+   "type": "mcq",
+   "stem": "PBr reacts with ethanol to give 3",
+   "options": {
+    "A": "tribromoethane",
+    "B": "bromoethanol",
+    "C": "bromoethane",
+    "D": "no reaction"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0289",
+   "type": "mcq",
+   "stem": "The reaction of a Wittig reagent with ketones give",
+   "options": {
+    "A": "Alkenes",
+    "B": "ketones",
+    "C": "aldehydes",
+    "D": "alkanes"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0290",
+   "type": "mcq",
+   "stem": "A- - carbocation has the greatest stability.",
+   "options": {
+    "A": "methyl",
+    "B": "primary",
+    "C": "secondary",
+    "D": "tertiary"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0291",
+   "type": "mcq",
+   "stem": "Carbocations are stabilized by adjacent groups that- - the carbocation.",
+   "options": {
+    "A": "donate electrons to",
+    "B": "withdraw electrons from",
+    "C": "donate protons to",
+    "D": "withdraw protons from"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0292",
+   "type": "mcq",
+   "stem": "What is the name of this compound?",
+   "options": {
+    "A": "2,5-heptanedione",
+    "B": "2,5-heptadione",
+    "C": "3,6-heptadione",
+    "D": "3,6-heptanedione"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0293",
+   "type": "mcq",
+   "stem": "The correct name for this compound is",
+   "options": {
+    "A": "3-methyl-6-oxo heptanal",
+    "B": "3methyl16heptanedione",
+    "C": "2keto5methylheptanal",
+    "D": "5methyl27heptanedione"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0294",
+   "type": "mcq",
+   "stem": "The Markovnikov rule states that a hydrogen atom bonds to the carbon atom that already is bonded to- - - hydrogen atoms.",
+   "options": {
+    "A": "an equal number of",
+    "B": "the greatest number of",
+    "C": "the least number of",
+    "D": "no"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0295",
+   "type": "mcq",
+   "stem": "The solubility of some aldehydes and ketones in water is due to",
+   "options": {
+    "A": "Hydrogen bonding between the molecules of water and those of aldehydes or ketones",
+    "B": "Polar interaction and hydrogen bonding between the molecules of water and those of aldehydes or ketones",
+    "C": "The intermolecular forces between the molecules of water and those of aldehydes or ketones",
+    "D": "Dispersion and Van der Waal forces between the molecules of water and those of aldehydes or ketones"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0296",
+   "type": "mcq",
+   "stem": "Aldehydes are said to be more reactive than ketones because",
+   "options": {
+    "A": "The carbonyl carbon in the former is more polar than that of the latter",
+    "B": "The carbonyl carbon in the latter is more sterically hindered from nucleophilic attack than in the former",
+    "C": "The carbonyl carbon in the former is a terminal one hence better contact with nucleophiles unlike in the latter where the carbonyl carbon is not easily available for attack",
+    "D": "The tetrahedral structure of the former possesses higher potential energy than the latter"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0297",
+   "type": "mcq",
+   "stem": "The intermediate formed during the reaction of ozone with unsaturated compounds is called",
+   "options": {
+    "A": "Oxidizing agent",
+    "B": "Ozonide",
+    "C": "Trioxane",
+    "D": "Peroxide"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0298",
+   "type": "mcq",
+   "stem": "Ozonolysis is a very important reaction in chemistry because",
+   "options": {
+    "A": "It is not toxic",
+    "B": "It can be used to characterize complex molecules",
+    "C": "It takes place at room temperature",
+    "D": "It is a means of reducing complex molecules"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0299",
+   "type": "mcq",
+   "stem": "What is the product of this reaction?",
+   "options": {
+    "A": "Heptan-1,6-dioic acid",
+    "B": "cycloheptan16dioic acid",
+    "C": "Ethanoic acid and pentane",
+    "D": "Cycloheptanoic acid"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0300",
+   "type": "mcq",
+   "stem": "Cyanohydrins can be hydrolysed in the presence of acid to produce",
+   "options": {
+    "A": "Compounds with both hydroxyl and carboxylic groups",
+    "B": "Beta-Amino alcohols",
+    "C": "Aldehydes",
+    "D": "Ketones"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0301",
+   "type": "mcq",
+   "stem": "Which agent is used to make benzene react with acetyl chloride to give acetophe2. Benzene reacts with concentrated none? HNO3 in the presence of concentrated",
+   "options": {
+    "A": "Ultraviolet light H2 SO4 to give nitrobenzene. This is an example of Electrophilic addition",
+    "B": "AlCl3 catalyst Nucleophilic addition",
+    "C": "Platinum catalyst Electrophilic substitution",
+    "D": "Al2 O3 catalyst"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0302",
+   "type": "mcq",
+   "stem": "Ozonolysis of benzene gives",
+   "options": {
+    "A": "Benzyl chloride Formic acid",
+    "B": "Benzaldehyde Glyoxal",
+    "C": "Benzal chloride Formaldehyde",
+    "D": "Benzophenone Glycine"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0303",
+   "type": "mcq",
+   "stem": "Which of the following will undergo substitution in the ortho and para positions rather than in the meta position?",
+   "options": {
+    "A": "Nitrobenzene",
+    "B": "anisole Benzoic acid",
+    "C": "nitrobenzene Acetanilide",
+    "D": "benzonitrile"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0304",
+   "type": "mcq",
+   "stem": "Which of the following compounds directs m. Both point to C-2, giving 2chloro-4-nitrotoluene. undergoes nitration most readily?",
+   "options": {
+    "A": "Benzene",
+    "B": "Toluene",
+    "C": "Nitrobenzene",
+    "D": "Benzoic acid"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0305",
+   "type": "mcq",
+   "stem": "Hydrolysis of benzotrichloride gives",
+   "options": {
+    "A": "Benzophenone",
+    "B": "Benzoic acid",
+    "C": "Benzyl alcohol",
+    "D": "Chlorine in the presence of FeCl3 Phenol"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0306",
+   "type": "mcq",
+   "stem": "Which of the reactions proceeds by 1,4-dichlorobenzene to 1,4-dichloro-2an electrophilic substitution mechanism? nitrobenzene?",
+   "options": {
+    "A": "Benzene + Br2 /FeBr3 HNO3 + H2 SO4",
+    "B": "Propene + Br2 NaNO2 Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 6 CHM 102 - Organic Chemistry II Genius Point Academy",
+    "C": "NaNO2 -HCl at 5°C Zn/HCl",
+    "D": "NO2 NH2 NH2"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0307",
+   "type": "mcq",
+   "stem": "Which reagent can distinguish be[Structure: Cl-C6 H4 -CH(CCl3 )-C6 H4 -Cl] tween chlorobenzene and benzyl chloride?",
+   "options": {
+    "A": "Chloral alcoholic AgNO3",
+    "B": "DDT Br2 in CCl4",
+    "C": "Lindane KCN",
+    "D": "BHC Br2 in H2 O"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0308",
+   "type": "mcq",
+   "stem": "An organic compound (A) was H2 SO4 ) heated with NaOH solution. After cooling, acidifying with dilute HNO3 , and adding",
+   "options": {
+    "A": "Chloral AgNO3 , a white precipitate formed. Com(b) Chlorine pound (A) may be Chlorobenzene",
+    "B": "Benzyl chloride",
+    "C": "Chloroform",
+    "D": "Carbon tetrachloride"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0309",
+   "type": "mcq",
+   "stem": "Nitration of nitrobenzene with HNO3 /H2 SO4 gives:",
+   "options": {
+    "A": "m-dinitrobenzene",
+    "B": "o-dinitrobenzene",
+    "C": "p-dinitrobenzene",
+    "D": "m nitrobenzene sulfonic acid"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0310",
+   "type": "mcq",
+   "stem": "Nitrobenzene undergoes reduction with zinc and KOH to give",
+   "options": {
+    "A": "Aniline",
+    "B": "Hydrazobenzene",
+    "C": "Bromobenzene Azobenzene",
+    "D": "Toluene"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0311",
+   "type": "mcq",
+   "stem": "Which of the following statements is false about aniline?",
+   "options": {
+    "A": "It is a primary aromatic amine. can be prepared by reduction of benzonitrile with LiAlH4 .",
+    "B": "It is a weak base which forms salts with acids. Genius Point Academy cannot be prepared by reduction of benzamide with LiAlH4 .",
+    "C": "reacts with nitrous acid to give benzyl alcohol.",
+    "D": "reacts with KMnO4 to give benzoic acid."
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0312",
+   "type": "mcq",
+   "stem": "Phenol is acidic because of",
+   "options": {
+    "A": "Resonance",
+    "B": "Electromeric effect",
+    "C": "Inductive effect",
+    "D": "Peroxide effect Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 9 CHM 102 - Organic Chemistry II"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0313",
+   "type": "mcq",
+   "stem": "Which of the following compounds acidic proton? is least acidic?",
+   "options": {
+    "A": "Thiol Formic acid",
+    "B": "Alcohol Ethanol",
+    "C": "Phenol Acetic acid",
+    "D": "Ether Phenol"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0314",
+   "type": "mcq",
+   "stem": "Which one is most acidic?",
+   "options": {
+    "A": "Hexanol",
+    "B": "Phenol",
+    "C": "Water",
+    "D": "Diisopropyl ether"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0315",
+   "type": "mcq",
+   "stem": "Which of the following is an auxochrome?",
+   "options": {
+    "A": "-N=O",
+    "B": "-NO2",
+    "C": "-N=N-",
+    "D": "-OH"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0316",
+   "type": "mcq",
+   "stem": "Which of the following hydrocar64. Naphthalene undergoes oxidation bons has the shortest C-C bond length? with Na2 Cr2 O7 /H2 SO4 to form",
+   "options": {
+    "A": "CH2 =CH2 Phthalic acid",
+    "B": "Phenylacetic acid CH3 CH3",
+    "C": "Tetralin HC≡CH",
+    "D": "Benzoic acid (Option missing)"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0317",
+   "type": "mcq",
+   "stem": "The carbon-carbon bond length is rank of increasing bond length is: maximum in Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 12 CHM 102 - Organic Chemistry II",
+   "options": {
+    "A": "CH2 =CH2",
+    "B": "CH3 -CH3",
+    "C": "HC≡CH",
+    "D": "(Option missing)"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0318",
+   "type": "mcq",
+   "stem": "Which of the following compounds have planar molecules?",
+   "options": {
+    "A": "ethyl alcohol",
+    "B": "formaldehyde have cis and trans isomers",
+    "C": "diethyl ether exist as enantiomers",
+    "D": "1,3-butadiene Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 13 CHM 102 - Organic Chemistry II Answer: (b) and (d) Explanation: Formaldehyde (C=O, sp ) is trigonal planar. 1,3-Butadiene is fully sp2 hybridized and conjugated, making it planar. Alcohols and ethers have sp3 atoms (non-planar). 2 Genius Point Academy can be detected with a polarimeter"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0319",
+   "type": "mcq",
+   "stem": "A molecule is said to be chiral",
+   "options": {
+    "A": "if it contains plane of symmetry",
+    "B": "if it contains centre of symmetry",
+    "C": "if it cannot be superimposed on its mirror image",
+    "D": "if it can be superimposed on its mirror image"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0320",
+   "type": "mcq",
+   "stem": "Optical isomers that are not mirror images are called",
+   "options": {
+    "A": "Diastereomers",
+    "B": "Enantiomers",
+    "C": "Metamers",
+    "D": "Meso compounds"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0321",
+   "type": "mcq",
+   "stem": "A meso compound:",
+   "options": {
+    "A": "is an achiral molecule which contains chiral carbons",
+    "B": "contains a plane of symmetry or a centre of symmetry",
+    "C": "is optically inactive",
+    "D": "is characterized by all of the above Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 15 CHM 102 - Organic Chemistry II"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0322",
+   "type": "mcq",
+   "stem": "2-Butanol is optically active be- groups), making it chiral and optically accause it contains: tive.",
+   "options": {
+    "A": "an asymmetric carbon",
+    "B": "a plane of symmetry",
+    "C": "a centre of symmetry",
+    "D": "a centre of symmetry"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0323",
+   "type": "mcq",
+   "stem": "Lactic acid, CH3 -CH(OH)-COOH, is a molecule which shows",
+   "options": {
+    "A": "Geometrical isomerism",
+    "B": "Tautomerism",
+    "C": "Optical isomerism",
+    "D": "Metamerism"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0324",
+   "type": "mcq",
+   "stem": "Which of the following represents a racemic mixture?",
+   "options": {
+    "A": "CH3 -CH(OH)-COOH 75% (R)-2-butanol, 25% (S)-2( All chiral molecules possess a plane of",
+    "B": "CH3 -CH2 -CH2 -CH3 butanol Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 17 CHM 102 - Organic Chemistry II Genius Point Academy 25% (R)-2-butanol, butanol 75% (S)-2- symmetry. All achiral molecules are meso.",
+    "C": "50% (R)-2-butanol, butanol 50% (S)-2-",
+    "D": "none of the above"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0325",
+   "type": "mcq",
+   "stem": "Which of the following is capable of exhibiting cis-trans isomerism?",
+   "options": {
+    "A": "1-butene",
+    "B": "1-pentene",
+    "C": "ethene",
+    "D": "2-butene"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0326",
+   "type": "mcq",
+   "stem": "Which of the statements below correctly describes an achiral molecule?",
+   "options": {
+    "A": "The molecule has a nonsuperimposable mirror image.",
+    "B": "The molecule exhibits optical activity when it interacts with plane-polarized light.",
+    "C": "The molecule has an enantiomer.",
+    "D": "The molecule might be a meso form."
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0327",
+   "type": "mcq",
+   "stem": "Genius Point Academy",
+   "options": {
+    "A": "2,3-dibromobutane",
+    "B": "1,3-dibromobutane",
+    "C": "12 dichloro butane",
+    "D": "1,4-dibromobutane"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0328",
+   "type": "mcq",
+   "stem": "A and B are stereoisomers. They are nonsuperimposable and are mirror images of one another. Which of the following best describes the relationship between A and B?",
+   "options": {
+    "A": "structural isomers",
+    "B": "enantiomers",
+    "C": "cis-trans isomers",
+    "D": "diastereomers"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0329",
+   "type": "mcq",
+   "stem": "Which of the following is a correct name according to the IUPAC rules?",
+   "options": {
+    "A": "2 methyl cyclohexane",
+    "B": "2ethyl2 methyl pentane",
+    "C": "34 dimethyl pentane",
+    "D": "3ethyl2 methyl pentane"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0330",
+   "type": "mcq",
+   "stem": "A tertiary carbon is bonded directly to:",
+   "options": {
+    "A": "Insoluble in water 2 hydrogens",
+    "B": "composed of carbon and hydrogen 3 carbons Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 20 CHM 102 - Organic Chemistry II Genius Point Academy",
+    "C": "2 carbons C7 H16",
+    "D": "4 carbons C9 H18"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0331",
+   "type": "mcq",
+   "stem": "Which statement is false? hexane?",
+   "options": {
+    "A": "4 Many alkanes are soluble in water.",
+    "B": "5 All alkanes have a lower density than water.",
+    "C": "6 At room temperature some alkanes",
+    "D": "7 are liquids, some solids, some gases."
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0332",
+   "type": "mcq",
+   "stem": "Which of the following reactions",
+   "options": {
+    "A": "Wurtz reaction n-Hexane",
+    "B": "Wolf-Kishner reduction Diethyl ether",
+    "C": "n-Hexane can be used to prepare alkanes? Kolbe’s electrolysis 1-Butene",
+    "D": "Neopentane Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 23 CHM 102 - Organic Chemistry II Genius Point Academy All of these"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0333",
+   "type": "mcq",
+   "stem": "23dimethyl2butene undergoes catalytic hydrogenation to give",
+   "options": {
+    "A": "23 dimethyl butane",
+    "B": "2-Methylpentane",
+    "C": "C8 H18",
+    "D": "C4 H10"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0334",
+   "type": "mcq",
+   "stem": "Which of the following classes adds H2 across the double bond without of compounds is unreactive toward sulfuric skeletal rearrangement; the carbon skeleton acid? remains 2,3-dimethylbutane.",
+   "options": {
+    "A": "Alkanes",
+    "B": "Alcohols",
+    "C": "Alkenes",
+    "D": "Alkynes"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0335",
+   "type": "mcq",
+   "stem": "Chlorine free radicals react with methane by:",
+   "options": {
+    "A": "donating their free-radical electron to methane to form chloromethane.",
+    "B": "abstracting a hydrogen atom from methane, and producing HCl and a methyl radical.",
+    "C": "forming a carbanion intermediate that rapidly dissociates to produce chloromethane.",
+    "D": "forming a carbonium ion intermediate that rapidly dissociates to form chloromethane. Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 24 CHM 102 - Organic Chemistry II"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0336",
+   "type": "mcq",
+   "stem": "What type of bonding is most im(b) HCl + H2 O portant in CH3 CH2 CH2 CH2 CH2 CH3 ?",
+   "options": {
+    "A": "ionic",
+    "B": "hydrogen",
+    "C": "Pentyne covalent",
+    "D": "CO2 + H2 O"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0337",
+   "type": "mcq",
+   "stem": "What is the name given to a compound containing only carbons and hydrogens and having the maximum number of hydrogens in the molecule?",
+   "options": {
+    "A": "alkene",
+    "B": "unsaturated hydrocarbon",
+    "C": "Cracking saturated hydrocarbon",
+    "D": "Hydrogenation Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 26 CHM 102 - Organic Chemistry II alkyne"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0338",
+   "type": "mcq",
+   "stem": "Which of the following is the best description of propane, CH3 CH2 CH3 , at room temperature?",
+   "options": {
+    "A": "liquid, soluble in H2 O",
+    "B": "configuration gas, soluble in gasoline",
+    "C": "conformation",
+    "D": "constitution"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0339",
+   "type": "mcq",
+   "stem": "Octane number is related to",
+   "options": {
+    "A": "Gasoline",
+    "B": "Kerosene",
+    "C": "Diesel oil",
+    "D": "Lubricating oil"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0340",
+   "type": "mcq",
+   "stem": "Which of the following compounds is assigned the Octane Number of 100:",
+   "options": {
+    "A": "its antiknock properties n-Heptane",
+    "B": "its ignition properties 233 trimethyl pentane",
+    "C": "its percentage proportion of octane n-Octane",
+    "D": "its percentage content of isooctane"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0341",
+   "type": "mcq",
+   "stem": "Gasoline with an octane number conditions as the fuel being tested, is called: of 90 is equivalent in knocking characteris(a) Cracking",
+   "options": {
+    "A": "20% heptane + 80% isooctane",
+    "B": "Iodine number tics to a mixture of heptane and isooctane of the following composition: 90% heptane + 10% isooctane",
+    "C": "Aromatization 80% heptane + 20% isooctane",
+    "D": "Octane number"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0342",
+   "type": "mcq",
+   "stem": "Which hydrocarbon molecule with Explanation: All are valid strateeight carbons would produce the lowest oc- gies: branched alkanes, aromatics (benzene, tane number (i.e., the most knocking) when toluene have octane >100), and TEL all inused as a fuel in automobile? crease octane rating.",
+   "options": {
+    "A": "2methyl33 dimethyl pentane",
+    "B": "n-Octane",
+    "C": "2 isopropyl pentane",
+    "D": "2-Methylheptane"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0343",
+   "type": "mcq",
+   "stem": "Which of the following compounds (trigonal planar, 120°) and one unhybridized p orbital for the π bond. is used as an antiknock compound?",
+   "options": {
+    "A": "Ethyllithium",
+    "B": "Tetraethyllead",
+    "C": "Ethyl acetate",
+    "D": "Lead acetate"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0344",
+   "type": "mcq",
+   "stem": "Which of the following compounds will show geometrical isomerism?",
+   "options": {
+    "A": "Propene",
+    "B": "2-Butene",
+    "C": "Propyne",
+    "D": "2-Butyne"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0345",
+   "type": "mcq",
+   "stem": "Which of the following compounds is most stable?",
+   "options": {
+    "A": "I and III Ethylene",
+    "B": "II and IV 23dimethyl1butene",
+    "C": "I and IV Propylene",
+    "D": "II and III 2-Butene"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0346",
+   "type": "mcq",
+   "stem": "In which solvent are alkenes most soluble?",
+   "options": {
+    "A": "water",
+    "B": "ethyl alcohol",
+    "C": "ammonia",
+    "D": "carbon tetrachloride"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0347",
+   "type": "mcq",
+   "stem": "How do the melting points of trans isomers compare to the cis isomers for alkenes?",
+   "options": {
+    "A": "cis isomers have higher melting points",
+    "B": "trans isomers have higher melting points",
+    "C": "both have similar melting points",
+    "D": "no consistent trend is observed"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0348",
+   "type": "mcq",
+   "stem": "Why do trans isomers of alkenes 164. Which statements about alkenes have lower boiling points than cis isomers? and alkanes of corresponding chain lengths is true?",
+   "options": {
+    "A": "trans isomers have better symmetry (I) Alkenes have slightly lower melting points than alkanes (II) Alkenes have slightly higher melting points than alkanes",
+    "B": "cis isomers have better symmetry",
+    "C": "trans isomers are less polar",
+    "D": "cis isomers are less polar Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 30 CHM 102 - Organic Chemistry II"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0349",
+   "type": "mcq",
+   "stem": "Markovnikov’s addition of HBr is",
+   "options": {
+    "A": "Nucleophilic addition Propene",
+    "B": "Electrophilic addition not applicable to 1-butene",
+    "C": "Nucleophilic substitution 1-pentene",
+    "D": "Electrophilic substitution 2-butene Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 32 CHM 102 - Organic Chemistry II"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0350",
+   "type": "mcq",
+   "stem": "Which of the following reagents is known as will react with propene?",
+   "options": {
+    "A": "Markovnikov test Hot alkaline KMnO4 Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 33 CHM 102 - Organic Chemistry II Genius Point Academy 1-Bromobutane",
+    "B": "Sodium metal 2,3-Dibromobutane",
+    "C": "Cold dilute HNO3 2-Bromobutane",
+    "D": "LiAlH4"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0351",
+   "type": "mcq",
+   "stem": "Which of the following alkenes reacts with HBr in the presence of a peroxide",
+   "options": {
+    "A": "cis12dibromo ethylene to give anti markov niko vs product? 1-Butene",
+    "B": "11dibromo ethylene 23dimethyl2butene",
+    "C": "trans 12dibromo ethylene 2-Butene",
+    "D": "all of these"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0352",
+   "type": "mcq",
+   "stem": "Propene reacts with HBr in the to give presence of a peroxide to give",
+   "options": {
+    "A": "tert-Butyl bromide n-Propyl bromide",
+    "B": "Isobutane Allyl bromide",
+    "C": "n-Butyl bromide Isopropyl bromide",
+    "D": "None of these Vinyl bromide"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0353",
+   "type": "mcq",
+   "stem": "A compound reacts with steam in the presence of concentrated H2 SO4 to give isopropyl alcohol. The compound could be",
+   "options": {
+    "A": "Alkane",
+    "B": "Alkyne",
+    "C": "A tertiary alkyl bromide",
+    "D": "A vicinal dibromide"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0354",
+   "type": "mcq",
+   "stem": "Propene reacts with Cl2 in H2 O to give",
+   "options": {
+    "A": "1chloro2 propanol",
+    "B": "2chloro2 propanol",
+    "C": "1chloro1 propanol",
+    "D": "2chloro1 propanol"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0355",
+   "type": "mcq",
+   "stem": "1-Butene reacts with Cl2 in H2 O to give",
+   "options": {
+    "A": "1chloro2 butanol",
+    "B": "2chloro2 butanol",
+    "C": "1chloro1 butanol",
+    "D": "2chloro1 butanol"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0356",
+   "type": "mcq",
+   "stem": "Which of the following alkenes will give a mixture of acetone and formaldehyde",
+   "options": {
+    "A": "2-butene",
+    "B": "22 dimethyl butane on ozonolysis? 2methyl2butene",
+    "C": "2-Methylbutane",
+    "D": "23 dimethyl butane"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0357",
+   "type": "mcq",
+   "stem": "Which of the following alkenes will give a mixture of acetone and acetaldehyde",
+   "options": {
+    "A": "Ethylene on ozonolysis? 1-butene",
+    "B": "1-Butene 2-methyl-2-butene",
+    "C": "Propene 2-butene",
+    "D": "2-Butene"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0358",
+   "type": "mcq",
+   "stem": "A hydrocarbon, C6 H12 , on ozonolwill give only acetaldehyde on ozonolysis? ysis gives only one product which does not",
+   "options": {
+    "A": "1-Butene give silver mirror with Tollens’ reagent. The hydrocarbon is 23dimethyl2butene 1",
+    "B": "Acetylene 2-Hexene",
+    "C": "2-Butene 2methyl2pentene",
+    "D": "Ethylene Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 36 CHM 102 - Organic Chemistry II Genius Point Academy 3-Hexene"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0359",
+   "type": "mcq",
+   "stem": "Combustion of an alkene with sufficient oxygen will produce",
+   "options": {
+    "A": "carbon dioxide and water",
+    "B": "carbon monoxide and water",
+    "C": "only carbon dioxide",
+    "D": "only carbon monoxide"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0360",
+   "type": "mcq",
+   "stem": "Which of the following statements about ethene, C2 H4 , is incorrect?",
+   "options": {
+    "A": "The H-C-H bond angles are approximately 109.5°.",
+    "B": "There is a total of five sigma bonds.",
+    "C": "The carbon atoms are sp2 hybridized.",
+    "D": "The H-C-H bond angles are approximately 120°."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0361",
+   "type": "mcq",
+   "stem": "Which of the following statements about propene, CH3 CH=CH2 , is correct? 203. How many electrons are involved",
+   "options": {
+    "A": "(b)",
+    "B": "The compound has a cis and trans",
+    "C": "There is a total of eight sigma bonds.",
+    "D": "(a) & (c) Answer: (d) per source; chemically (a) & Allare ninecorrect atoms lie in the same plane. Explanation: Hydrocarbons are nonpolar → insoluble in water (a) and soluble in nonpolar solvents (b). They are less dense than water, so (c) is false. isomer. in a carbon-carbon double bond? All the carbon atoms are sp2 hybridized. Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 37 CHM 102 - Organic Chemistry II"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0362",
+   "type": "mcq",
+   "stem": "What is the major product from the acid catalyzed hydration of 2methyl2pentene",
+   "options": {
+    "A": "2-methylpentane",
+    "B": "2-methyl-1-pentanol Explanation: 2-Butene has -H and - CH3 on each double-bond carbon (different groups). 1-Butene, 1-pentene, and ethene all have =CH2 (two identical H’s), preventing cis/trans isomerism.",
+    "C": "2methyl2pentanol",
+    "D": "2methyl3pentanol"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0363",
+   "type": "mcq",
+   "stem": "1,2-Butadiene has",
+   "options": {
+    "A": "only sp hybridized carbon atoms",
+    "B": "only sp2 hybridized carbon atoms",
+    "C": "1-hexene",
+    "D": "(Z)-3-hexene"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0364",
+   "type": "mcq",
+   "stem": "1,3-Butadiene reacts with bromine to mainly give",
+   "options": {
+    "A": "34dibromo1butene",
+    "B": "a cumulated diene 4-Bromo-1-butene",
+    "C": "an isolated diene 14dibromo2butene",
+    "D": "a conjugated diene"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0365",
+   "type": "mcq",
+   "stem": "What descriptive term is applied to the type of diene represented by 2,4hexadiene?",
+   "options": {
+    "A": "conjugated diene",
+    "B": "cumulated diene",
+    "C": "isolated diene",
+    "D": "alkynyl diene Genius Point Academy"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0366",
+   "type": "mcq",
+   "stem": "Which of the following statements the hybrid orbitals of a carbon involved in correctly describes the general reactivity of a triple bond is alkynes?",
+   "options": {
+    "A": "180° An alkyne is an electron-rich molecule",
+    "B": "120° and therefore reacts as a nucleophile.",
+    "C": "109°",
+    "D": "45°"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0367",
+   "type": "mcq",
+   "stem": "What two atomic orbitals or hybrid atomic orbitals overlap to form the carbon-carbon sigma bond in ethyne?",
+   "options": {
+    "A": "sp2 -sp2",
+    "B": "sp3 -sp3",
+    "C": "s-s",
+    "D": "sp-sp"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0368",
+   "type": "mcq",
+   "stem": "Which of the following compounds is the major product when 1-hexyne is treated with excess HBr?",
+   "options": {
+    "A": "1,1-dibromohexane",
+    "B": "1,1-dibromohexene",
+    "C": "1,2-dibromohexane",
+    "D": "2,2-dibromohexane"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0369",
+   "type": "mcq",
+   "stem": "The reagent needed to convert 2butyne to cis-2-butene is:",
+   "options": {
+    "A": "H2 /Pt",
+    "B": "H2 /Lindlar’s catalyst",
+    "C": "Li/NH3",
+    "D": "Na/NH3 Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 42 CHM 102 - Organic Chemistry II"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0370",
+   "type": "mcq",
+   "stem": "Starting with 2-butene, which of the following is the best method for preparing 2-butyne?",
+   "options": {
+    "A": "HBr; H2 /Ni; Zn/H+",
+    "B": "HBr; Zn/H+ ; H2 /Ni",
+    "C": "water and ethane",
+    "D": "1-butyne and 2-butyne"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0371",
+   "type": "mcq",
+   "stem": "Explanation: Only terminal alkynes have acidic H (pKa ≈ 25). 1-Butyne has a terminal ≡C-H; 2-pentyne is an internal alkyne (no H on sp carbon). Genius Point Academy",
+   "options": {
+    "A": "Alkynes are reduced more readily than alkenes.",
+    "B": "Alkynes are reduced less readily than alkenes.",
+    "C": "Alkynes and alkenes are reduced with equal speed.",
+    "D": "Alkynes and alkenes cannot be reduced."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0372",
+   "type": "mcq",
+   "stem": "Lindlar’s catalyst is",
+   "options": {
+    "A": "LiAlH4",
+    "B": "Pd/BaSO4 in Quinoline",
+    "C": "NH2 NH2",
+    "D": "HCl/ZnCl2"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0373",
+   "type": "mcq",
+   "stem": "12 dichloroethane reacts with excess of NaNH2 to form",
+   "options": {
+    "A": "Vinyl chloride",
+    "B": "Ethylene",
+    "C": "Ethyl chloride",
+    "D": "Acetylene Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 44 CHM 102 - Organic Chemistry II Genius Point Academy CuCl2"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0374",
+   "type": "mcq",
+   "stem": "Propyne is formed by 247. Which one of the following compounds will (a) decolorize dilute cold",
+   "options": {
+    "A": "1-Hexene Polymerization of acetylene",
+    "B": "Reaction of acetylene with methane KMnO4 (b) decolorize bromine water; and 1-Hexyne",
+    "C": "give a white precipitate with ammonia( Reaction of acetylene with methyl cal AgNO3 solution? chloride 2-Hexene",
+    "D": "Reaction of sodium acetylide with methyl chloride"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0375",
+   "type": "mcq",
+   "stem": "Ethylene and acetylene can be distinguished by using",
+   "options": {
+    "A": "Bromine in CCl4",
+    "B": "Tollens’ reagent",
+    "C": "Baeyer’s reagent",
+    "D": "Phenylhydrazine"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0376",
+   "type": "mcq",
+   "stem": "2-Butyne undergoes catalytic hydrogenation in the presence of Lindlar’s catalyst to give",
+   "options": {
+    "A": "2-Butene",
+    "B": "Butane",
+    "C": "Tollens reagent",
+    "D": "chlorine in CCl4"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0377",
+   "type": "mcq",
+   "stem": "Acetylene reacts with water in the presence of sulfuric acid and mercuric sulfate to give",
+   "options": {
+    "A": "Acetone",
+    "B": "Acetic acid",
+    "C": "Formaldehyde",
+    "D": "Acetaldehyde"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0378",
+   "type": "mcq",
+   "stem": "Which of the following compounds reacts with ammoniacal cuprous chloride to give a precipitate?",
+   "options": {
+    "A": "1-Butene",
+    "B": "1-Butyne",
+    "C": "2-Butene",
+    "D": "2-Butyne"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0379",
+   "type": "mcq",
+   "stem": "Which of the following compounds Explanation: Ammoniacal Cu2 Cl2 will react with ammoniacal silver nitrate? is another terminal alkyne test. 1Butyne forms a red precipitate of copper(I)",
+   "options": {
+    "A": "1-Butene acetylide.",
+    "B": "1-Butyne",
+    "C": "2-Butene",
+    "D": "2-Butyne"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0380",
+   "type": "mcq",
+   "stem": "Ozonolysis of 2-butyne gives",
+   "options": {
+    "A": "Formic acid",
+    "B": "Propanoic acid",
+    "C": "Acetic acid",
+    "D": "Butanoic acid"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0381",
+   "type": "mcq",
+   "stem": "Which of the following compounds acetic acid molecules (CH3 COOH). does not react with ammoniacal AgNO3 so260. Which alkyne yields propanoic lution? acid as the only product upon treatment with ozone followed by hydrolysis?",
+   "options": {
+    "A": "Acetylene 1-Butyne",
+    "B": "1-Butyne 2-Hexyne",
+    "C": "Propyne 1-Pentyne",
+    "D": "2-Butyne 3-Hexyne Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 47 CHM 102 - Organic Chemistry II"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0382",
+   "type": "mcq",
+   "stem": "When propyne is passed through hot iron tube at 400°C it gives",
+   "options": {
+    "A": "Benzene",
+    "B": "Toluene",
+    "C": "m-Xylene",
+    "D": "Mesitylene"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0383",
+   "type": "mcq",
+   "stem": "A compound, C4 H6 , reacts with bromine and forms a white precipitate with ammoniacal silver nitrate solution. It reacts with dilute H2 SO4 in the presence of mercuric sulfate to form 2-butanone. The compound could be",
+   "options": {
+    "A": "1-Butyne",
+    "B": "1-Butene",
+    "C": "2-Butyne",
+    "D": "2-Butene"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0384",
+   "type": "mcq",
+   "stem": "Which of the following has two equatorial alkyl substituents in its most stable conformation?",
+   "options": {
+    "A": "11 dimethyl cyclohexane",
+    "B": "cis12 dimethyl cyclohexane",
+    "C": "cis13 diethyl cyclohexane",
+    "D": "cis14 diethyl cyclohexane"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0385",
+   "type": "mcq",
+   "stem": "Which of the following is not a possible reaction of a carbocation? 267. Which one of the following is not a",
+   "options": {
+    "A": "addition of a nucleophile Explanation: cis-1,3-disubstituted cyclohexane can place both substituents in equatorial positions (both up or both down), avoiding 1,3-diaxial interactions. Pd",
+    "B": "rearrangement to a more stable carbocation metal catalyst for the hydrogenation of an alkene? Pt",
+    "C": "Na addition of a proton to form an alkane",
+    "D": "loss of a β-hydrogen to form an alkene Ni"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0386",
+   "type": "mcq",
+   "stem": "The reaction of 1-butene with bromine, Br2 , in aqueous solution gives priExplanation: Rate depends on car- marily 1-bromo-2-butanol. Identify the nubocation stability in the rate-determining cleophilic species in the reaction. step. (d) forms a 3° carbocation (most sta(a) Br2 ble) → fastest reaction. Others form 2° or 1° carbocations. 272. The hydroboration-oxidation reaction can be characterized as the _____",
+   "options": {
+    "A": "anti-Markovnikov syn addition of water",
+    "B": "Br- to an alkene.",
+    "C": "H2 O",
+    "D": "HOBr"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0387",
+   "type": "mcq",
+   "stem": "Which of the following reagents cannot be used to prepare an alkyl chloride",
+   "options": {
+    "A": "Mustard gas from an alcohol? HCl + ZnCl2",
+    "B": "Carbon monoxide SOCl2",
+    "C": "Phosgene NaCl",
+    "D": "Chlorine"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0388",
+   "type": "mcq",
+   "stem": "Which of the following compounds will not give a white precipitate with alcoholic AgNO3 ?",
+   "options": {
+    "A": "Bromobenzene alcoholic KOH, methyl iodide, and",
+    "B": "1-Bromopropane sodium metal alcoholic KOH, methyl iodide, and primary amine",
+    "C": "alcoholic KOH, chloroform, and primary amine",
+    "D": "alcoholic KOH, methyl alcohol, and primary amine Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 53 CHM 102 - Organic Chemistry II"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0389",
+   "type": "mcq",
+   "stem": "When chloroform is heated with Explanation: All factors matter: subaqueous NaOH, it gives strate structure (1°/2°/3°), solvent polarity (protic vs. aprotic), reagent concentration,",
+   "options": {
+    "A": "Formic acid and nucleophile/base strength collectively determine the mechanism.",
+    "B": "Sodium formate",
+    "C": "Acetic acid",
+    "D": "Sodium acetate"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0390",
+   "type": "mcq",
+   "stem": "Which compound reacts most rapidly by an SN 1 mechanism?",
+   "options": {
+    "A": "Methyl chloride",
+    "B": "Isopropyl chloride",
+    "C": "Ethyl chloride",
+    "D": "tert-Butyl chloride"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0391",
+   "type": "mcq",
+   "stem": "Which of the following will have Explanation: Only one 3° bromide: 2-bromo-2-methylbutane, the lowest boiling point? (CH3 )2 CBrCH2 CH3 . The Br is on a car(a) CH3 Cl bon attached to three other carbons. 298. Which of the following statements is correct for a saturated alkyl halide?",
+   "options": {
+    "A": "the C-X bond results from overlap of the s orbital of carbon and the p orbital of the halogen (X)",
+    "B": "CH4",
+    "C": "CH2 Cl2",
+    "D": "CHCl3"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0392",
+   "type": "mcq",
+   "stem": "Which of the following statements concerning SN 2 reactions of alkyl halides is not correct?",
+   "options": {
+    "A": "The rate of reaction depends on the",
+    "B": "CH3 CH2 Br concentration of the nucleophile.",
+    "C": "CH3 CH2 I",
+    "D": "CH3 CH2 F"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0393",
+   "type": "mcq",
+   "stem": "(b) The rate of reaction depends on the concentration of the alkyl halide. Explanation: SN 2 rate depends on leaving group ability: I- > Br- > Cl- > (c) The rate of reaction of a particular - - F . I is the weakest base, most stable analkyl bromide depends on the steric ion, best leaving group → fastest SN 2. accessibility of the carbon of the C- Br bond. Explanation: Not universally true: a bulky 3° alkyl iodide is severely hindered and reacts slower via SN 2 than an unhindered 1° alkyl chloride. Steric effects can override leaving group ability. leaving group?",
+   "options": {
+    "A": "F-",
+    "B": "Cl-",
+    "C": "Br-",
+    "D": "I-"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0394",
+   "type": "mcq",
+   "stem": "Predict the two most likely mechanisms which occur when 2-bromobutane is treated with sodium ethoxide in ethanol.",
+   "options": {
+    "A": "SN 1 and E1",
+    "B": "SN 2 and E2 Explanation: (CH3 )3 CCH2 I is a neopentyl halide. The β-carbon is quaternary (no β-hydrogens), and the backside is extremely sterically hindered - virtually unreactive toward E2.",
+    "C": "SN 2 and E1",
+    "D": "E1 and SN 1"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-futa-che102-bank-0395",
+   "type": "mcq",
+   "stem": "Predict the two most likely mechanisms which occur when 2-iodohexane is heated in ethanol.",
+   "options": {
+    "A": "SN 2 and SN 1 Motto: Logic and Mechanisms Guide Our Pathways. Success is earned! 58 CHM 102 - Organic Chemistry II Genius Point Academy Ethane",
+    "B": "E1 and E2 3ethyl3pentanol",
+    "C": "SN 2 and E2 Propanoic acid",
+    "D": "E1 and SN 1"
+   },
+   "marks": 1,
+   "answer": "D",
    "explanation": ""
   }
  ]
