@@ -597,11 +597,18 @@ export function examHref(code: string, query?: Record<string, string | undefined
   for (const [k, v] of Object.entries(query ?? {})) {
     if (v != null && v !== '') qs.set(k, v);
   }
-  const tail = qs.toString() ? `?${qs.toString()}` : '';
+  // BUG FIX 2026-10-11 (founder report: "Begin Mock Exam" lands on the
+  // instructions page with a confusing paused card): the composed-paper
+  // branch already opens its query string with ?code=…, so any further
+  // params must ride an & separator. The old ? tail produced
+  // /exams/paper/?code=X?resume=1 - the resume/daily flag was never a
+  // real query param, so the auto-resume fast path and the daily flag
+  // silently died and every seated paper fell back to the intro page.
+  const tail = qs.toString() ? `&${qs.toString()}` : '';
   if (isComposedPaperCode(code)) {
     return `/exams/paper/?code=${encodeURIComponent(code)}${tail}`;
   }
-  return `/exams/${code}${tail}`;
+  return `/exams/${code}${tail.length ? `?${tail.slice(1)}` : ''}`;
 }
 
 /** Boot-time cache migration, safe to call from any client surface. */

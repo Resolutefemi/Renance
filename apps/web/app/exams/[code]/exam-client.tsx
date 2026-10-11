@@ -19,6 +19,9 @@ import {
   type Manifest,
 } from '@/lib/exams';
 import { clearActiveExam, loadActiveExam, saveActiveExam, type ActiveExam } from '@/lib/active-exam';
+import PageBar from '@/components/page-bar';
+import BottomNav from '@/components/bottom-nav';
+import SideNav from '@/components/side-nav';
 import { bodySlug } from '@/lib/syllabus';
 import { assessFatigue, FATIGUE_NONE, type FatigueSignal } from '@/lib/fatigue';
 import { FatigueNudgeOverlay } from '@/components/fatigue-nudge';
@@ -309,13 +312,21 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         setBundle(b);
         // Coming back for a paused paper (dashboard deep link) resumes
         // straight into the sitting; otherwise surface the resume card.
+        // A paper only counts as paused when it has PROGRESS (answers
+        // or questions visited): a just-seated "Begin Mock Exam" paper
+        // has an empty snapshot, and surfacing "Paused paper found /
+        // Start a fresh paper instead" for it was pure confusion
+        // (founder bug report 2026-10-11) - it reads like the mock
+        // crashed before it began.
         const snap = loadActiveExam();
         if (snap && snap.code === code) {
-          setPaused(snap);
-          if (searchParams.get('resume') === '1') {
+          const progressed =
+            Object.keys(snap.answers ?? {}).length > 0 || Object.keys(snap.visited ?? {}).length > 1 || (snap.current ?? 0) > 0;
+          if (searchParams.get('resume') === '1' && progressed) {
             resumeAttempt(snap, b);
             return;
           }
+          if (progressed) setPaused(snap);
         }
         setPhase('intro');
       } catch (err) {
@@ -823,10 +834,50 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
   // its composed label ("Custom Practice", "UTME Mock", …).
   const paperTitle = daily?.title ?? bundle?.title ?? meta?.title ?? 'Practice';
 
+  // The school app's confirm dialog (Quit / Submit / Leave). Defined
+  // ONCE, rendered in EVERY phase (founder bug report 2026-10-11: the
+  // dialog used to live only in the playing phase's JSX, so on the
+  // instructions page the back button's confirm never rendered - a
+  // dead button - and the stale state then "surprised" the student
+  // with an instant Leave popup the moment the paper started).
+  const confirmCard = confirm && (
+    <div className="fixed inset-0 z-[75] flex items-center justify-center px-5">
+      <button aria-label="Dismiss" onClick={() => setConfirm(null)} className="absolute inset-0 bg-accent-ink/45" />
+      <div className="relative w-full max-w-sm rounded-[18px] bg-surface-container-lowest p-6 shadow-2xl">
+        <h3 className="text-[18px] font-bold tracking-tight text-on-surface">{confirm.title}</h3>
+        <p className="mt-2 text-[14px] leading-relaxed text-on-surface-variant">{confirm.body}</p>
+        <div className="mt-5 flex justify-end gap-2">
+          <button
+            onClick={() => setConfirm(null)}
+            className="rounded-full px-4 py-2.5 text-[14px] font-semibold text-on-surface-variant transition hover:bg-surface-container-low"
+          >
+            Keep working
+          </button>
+          <button
+            onClick={() => {
+              const action = confirm.onConfirm;
+              setConfirm(null);
+              action();
+            }}
+            className={`rounded-full px-5 py-2.5 text-[14px] font-bold transition active:scale-[0.97] ${
+              confirm.danger ? 'bg-error text-white' : 'bg-primary text-on-primary'
+            }`}
+          >
+            {confirm.confirmLabel}
+          </button>
+        </div>
+        <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-outline">
+          Y confirm · Esc dismiss
+        </p>
+      </div>
+    </div>
+  );
+
   if (phase === 'loading') {
     return (
       <Centered>
         <LogoActivityIndicator state="busy" label={`Opening ${meta?.title ?? 'pack'}…`} />
+        {confirmCard}
       </Centered>
     );
   }
@@ -852,6 +903,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             ← back to dashboard
           </button>
         </div>
+        {confirmCard}
       </Centered>
     );
   }
@@ -909,26 +961,19 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
       specYearLabel(code) ?? (yearsOnPaper.length === 1 ? String(yearsOnPaper[0]) : yearsOnPaper.length > 1 ? 'Mixed years' : 'All years');
 
     return (
-      <main className="min-h-dvh bg-surface-container-lowest pb-16">
-        {/* back bar - every page gets a back button (founder rule) */}
-        <div className="mx-auto w-full max-w-2xl px-4 pt-3 sm:px-6">
-          <button
-            onClick={() =>
-              setConfirm({
-                title: 'Leave the paper?',
-                body: 'Leave now and nothing is submitted, you keep your seat in the paper list.',
-                confirmLabel: 'Leave',
-                onConfirm: () => router.push('/dashboard'),
-              })
-            }
-            aria-label="Back"
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-outline-variant bg-card text-on-surface transition hover:bg-surface-container-low"
-          >
-            <span className="material-symbols-outlined text-[20px]">arrow_back</span>
-          </button>
-        </div>
+      <>
+      <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
+        {/* The Renance page header every page wears (founder bug report
+            2026-10-11: the old floating back button opened a confirm
+            dialog that never rendered on this phase - a dead button -
+            and its stale state then popped a surprise Leave dialog the
+            moment the paper started. PageBar goes straight back like
+            every other page; the pause semantics live on the explicit
+            Leave button at the bottom, and the dialog now renders in
+            every phase anyway.) */}
+        <PageBar title={paperTitle} backHref="/dashboard" />
 
-        <div className="renance-rise mx-auto w-full max-w-2xl px-4 pt-2 sm:px-6">
+        <div className="renance-rise mx-auto w-full max-w-2xl px-4 pt-4 sm:px-6">
           {/* simulator banner - the school app's banner with the abstract
               corner shapes, Renance's ink ground */}
           <div className="relative overflow-hidden rounded-[14px] bg-primary px-5 py-[22px] text-on-primary">
@@ -1226,8 +1271,15 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             Edit Selections
           </button>
         </div>
+
+        {/* The confirm dialog renders in this phase too (founder bug
+            report 2026-10-11) - the Leave button below must answer. */}
+        {confirmCard}
       </main>
-    );
+      <SideNav />
+      <BottomNav />
+    </>
+  );
   }
 
   if (phase === 'grading') {
@@ -1237,6 +1289,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         <p className="mt-3 text-xs text-outline">
           the goroutine engine is comparing your picks against the sealed key
         </p>
+        {confirmCard}
       </Centered>
     );
   }
@@ -1553,6 +1606,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             </div>
           </div>
         </div>
+        {confirmCard}
       </main>
     );
   }
@@ -2226,39 +2280,9 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         </div>
       )}
 
-      {/* The school app's confirm dialog (Quit / Submit / Leave). */}
-      {confirm && (
-        <div className="fixed inset-0 z-[75] flex items-center justify-center px-5">
-          <button aria-label="Dismiss" onClick={() => setConfirm(null)} className="absolute inset-0 bg-accent-ink/45" />
-          <div className="relative w-full max-w-sm rounded-[18px] bg-surface-container-lowest p-6 shadow-2xl">
-            <h3 className="text-[18px] font-bold tracking-tight text-on-surface">{confirm.title}</h3>
-            <p className="mt-2 text-[14px] leading-relaxed text-on-surface-variant">{confirm.body}</p>
-            <div className="mt-5 flex justify-end gap-2">
-              <button
-                onClick={() => setConfirm(null)}
-                className="rounded-full px-4 py-2.5 text-[14px] font-semibold text-on-surface-variant transition hover:bg-surface-container-low"
-              >
-                Keep working
-              </button>
-              <button
-                onClick={() => {
-                  const action = confirm.onConfirm;
-                  setConfirm(null);
-                  action();
-                }}
-                className={`rounded-full px-5 py-2.5 text-[14px] font-bold transition active:scale-[0.97] ${
-                  confirm.danger ? 'bg-error text-white' : 'bg-primary text-on-primary'
-                }`}
-              >
-                {confirm.confirmLabel}
-              </button>
-            </div>
-            <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-outline">
-              Y confirm · Esc dismiss
-            </p>
-          </div>
-        </div>
-      )}
+      {/* The school app's confirm dialog (Quit / Submit / Leave) -
+          the shared confirmCard, rendered in every phase. */}
+      {confirmCard}
     </>
   );
 }
