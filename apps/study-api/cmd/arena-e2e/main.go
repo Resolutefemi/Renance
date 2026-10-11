@@ -243,7 +243,8 @@ func main() {
 	wsBase := "ws" + strings.TrimPrefix(baseURL, "http") + "/arena/ws"
 	dial := func(token string) *websocket.Conn {
 		u := wsBase + "?token=" + url.QueryEscape(token)
-		conn, _, err := websocket.DefaultDialer.Dial(u, nil)
+		dialHdr := http.Header{"User-Agent": []string{"RenanceArenaE2E/1.0 (CI probe)"}}
+		conn, _, err := websocket.DefaultDialer.Dial(u, dialHdr)
 		if err != nil {
 			fatal("dial: %v", err)
 		}
