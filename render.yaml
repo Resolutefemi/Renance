@@ -171,12 +171,14 @@ services:
       # Generate once:  openssl rand -hex 32
       # It powers:
       #   GET /bundles/key?code=<bank>  - per-bank AES key delivery
-      #     (signed-in: per-account daily quota; anonymous: proof-of-work
-      #      + per-IP caps) for the ENCRYPTED static bundles on renance.app
-      #   per-account distinct-bank daily quotas on GET /bundles/{code}
+      #     (anonymous: proof-of-work + per-IP caps) for the ENCRYPTED
+      #      static bundles on renance.app
       #   honeypot decoy codes -> poisoned canary banks + account strikes
       #   invisible per-account watermarks on served question stems
       #   AI-crawler user-agent blocks + robots.txt sitewide
+      #   (The per-account daily distinct-bank quota was REMOVED
+      #   2026-10-11, founder directive: "remove the daily bank limit
+      #   features completely" - signed-in students are never capped.)
       # Rotate any time: set a new key + new BUNDLE_KEY_ID here AND in
       # the Vercel env, redeploy both (kid bump tells clients to refetch).
       #
@@ -190,12 +192,10 @@ services:
         value: "7e2a1eab3e5fc660fc77fcbc3f0ad4cec8566c27d44c92f58561712c44d29713"
       - key: BUNDLE_KEY_ID
         value: "k1"
-      # Quotas: 40 distinct banks/account/day (a student prepping a few
-      # subjects never hits it; a scraper walking 1,000+ banks trips it
-      # day one), 12 anonymous key fetches/IP/hour (PoW path), 18-bit
+      # Quotas: 12 anonymous key fetches/IP/hour (PoW path), 18-bit
       # proof-of-work. All tunable without redeploying code semantics.
-      - key: BUNDLE_ACCOUNT_DAILY
-        value: "40"
+      # (BUNDLE_ACCOUNT_DAILY is GONE - founder directive 2026-10-11:
+      # signed-in students get unlimited bank access.)
       - key: BUNDLE_IP_PER_HOUR
         value: "12"
       - key: BUNDLE_POW_BITS
