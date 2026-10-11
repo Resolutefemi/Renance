@@ -853,7 +853,8 @@ def pour(overwrite):
         "overwrite": overwrite, "topics": topics,
     }).encode()
     req = urllib.request.Request(base + f"/school/bulk-notes?schoolId={school_id}", data=body, method="POST",
-                                 headers={"Content-Type": "application/json", "Authorization": "Bearer " + token})
+                                 headers={"Content-Type": "application/json", "Authorization": "Bearer " + token,
+                                          "User-Agent": "RenanceE2E/1.0 (CI probe)"})
     return json.loads(urllib.request.urlopen(req, timeout=30).read().decode())
 
 res = pour(False)
