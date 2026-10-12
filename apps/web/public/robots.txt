@@ -3,9 +3,9 @@
 # Marketing and informational pages are open to search engines (the SEO
 # strategy lives in docs/SEO-PLAYBOOK.md). The proprietary study vault
 # is NOT: bundles are AES-256-GCM ciphertext (scripts/encrypt_bundles.mjs),
-# practice pages render client-side only, and the PDF shelf is bulk
-# download bait. Founder directive 2026-10-11: no agentic AI may scrape
-# the 200,000+ past questions.
+# the past-question PDF shelf and school-corpus are RNP1 AES-256-GCM
+# ciphertext too (scripts/encrypt_pdfs.mjs, keys metered at
+# renance-api.onrender.com), practice pages render client-side only.
 
 User-agent: *
 Allow: /

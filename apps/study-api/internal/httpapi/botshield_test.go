@@ -9,6 +9,8 @@ import (
         "log/slog"
         "net/http"
         "net/http/httptest"
+        "os"
+        "path/filepath"
         "strings"
         "testing"
 
@@ -316,4 +318,181 @@ func mustHex(t *testing.T, s string) []byte {
                 t.Fatal(err)
         }
         return b
+}
+
+// ------------------------------------------------------------------
+// STATIC ASSET SHIELD (founder directive 2026-10-12: "I told someone
+// my past questions on the web have no rate limit and can be scraped -
+// is that true? work on it"). The /pdfs shelf + school-corpus are now
+// RNP1 ciphertext; their keys ride the same route. These tests pin the
+// static path: registry validation, the renance-static/v1 derivation,
+// tiered anonymous PoW, the signed-in SPEED cap (daily stays REMOVED),
+// and static honeypot strikes.
+
+func staticShieldServer(t *testing.T, keyPerMin int) (*Server, http.Handler, string, string) {
+        t.Helper()
+        lib := writeAnswerBank(t)
+        master, _ := hex.DecodeString("8a2f1c4e19b76d3f5e8a0c2b4d6f8a1c3e5b7d9f1a3c5e7b9d1f3a5c7e9b1d3f")
+        dir := t.TempDir()
+        reg := `{"v":1,"files":{
+                "pdfs/futa/cos101.pdf":{"sha256":"00","bytes":1},
+                "pdfs/noun/acc102.pdf":{"sha256":"00","bytes":1},
+                "school-corpus/schemes/jss-1/basic-science-term1.json":{"sha256":"00","bytes":1}
+        },"honeypots":["pdfs/noun/all-past-questions-complete.pdf"]}`
+        if err := os.WriteFile(filepath.Join(dir, "static_registry.json"), []byte(reg), 0o644); err != nil {
+                t.Fatal(err)
+        }
+        cfg := &config.Config{
+                JWTSecret: "shield-test-secret-0123456789", WebOrigin: "*",
+                BundleMasterKey: master, BundleKeyID: "t1", BundleAnonKey: true,
+                BundleIPPerHour: 60, BundlePowBits: 8, BundleCorpusPowBits: 6,
+                BundleKeyUserPerMin: keyPerMin, BundleCorpusIPPerHour: 60,
+                DataDir: dir,
+        }
+        log := slog.New(slog.NewTextHandler(io.Discard, nil))
+        s := NewServer(cfg, log, nil, lib, nil, nil, nil)
+        tok, err := jwtx.Issue("u1", "Student One", cfg.JWTSecret)
+        if err != nil {
+                t.Fatal(err)
+        }
+        return s, s.Handler(), tok, "u1"
+}
+
+func TestStaticKeyRoute(t *testing.T) {
+        _, h, tok, _ := staticShieldServer(t, 90)
+        // Unknown static path: 404, enumeration learns nothing.
+        rec := httptest.NewRecorder()
+        req := httptest.NewRequest(http.MethodGet, "/bundles/key?code=static:pdfs/futa/nope.pdf", nil)
+        req.Header.Set("User-Agent", "Mozilla/5.0")
+        h.ServeHTTP(rec, req)
+        if rec.Code != http.StatusNotFound {
+                t.Fatalf("unknown static: want 404, got %d %s", rec.Code, rec.Body.String())
+        }
+        // Unregistered prefix without a registry entry also 404s.
+        rec = httptest.NewRecorder()
+        req = httptest.NewRequest(http.MethodGet, "/bundles/key?code=static:", nil)
+        req.Header.Set("User-Agent", "Mozilla/5.0")
+        h.ServeHTTP(rec, req)
+        if rec.Code != http.StatusNotFound {
+                t.Fatalf("empty static path: want 404, got %d", rec.Code)
+        }
+        // Signed-in: the key is the canonical renance-static/v1 derivation
+        // (byte-identical to scripts/encrypt_pdfs.mjs + lib/asset-crypto.ts).
+        rec = httptest.NewRecorder()
+        req = mustReq(t, tok, "/bundles/key?code=static:pdfs/futa/cos101.pdf")
+        h.ServeHTTP(rec, req)
+        if rec.Code != http.StatusOK {
+                t.Fatalf("signed-in static key: %d %s", rec.Code, rec.Body.String())
+        }
+        var kr bundleKeyResponse
+        if err := json.Unmarshal(rec.Body.Bytes(), &kr); err != nil {
+                t.Fatal(err)
+        }
+        mac := hmac.New(sha256.New, mustHex(t, "8a2f1c4e19b76d3f5e8a0c2b4d6f8a1c3e5b7d9f1a3c5e7b9d1f3a5c7e9b1d3f"))
+        mac.Write([]byte("renance-static/v1|pdfs/futa/cos101.pdf"))
+        if want := hex.EncodeToString(mac.Sum(nil)); kr.Key != want {
+                t.Fatalf("static key mismatch: api=%s want=%s", kr.Key, want)
+        }
+        // Anonymous PDF path: PoW challenge at the VAULT difficulty.
+        rec = httptest.NewRecorder()
+        req = httptest.NewRequest(http.MethodGet, "/bundles/key?code=static:pdfs/futa/cos101.pdf", nil)
+        req.Header.Set("User-Agent", "Mozilla/5.0")
+        h.ServeHTTP(rec, req)
+        if rec.Code != http.StatusUnauthorized {
+                t.Fatalf("anon static: want 401 challenge, got %d", rec.Code)
+        }
+        var ch powChallenge
+        if err := json.Unmarshal(rec.Body.Bytes(), &ch); err != nil {
+                t.Fatal(err)
+        }
+        if ch.Challenge.Difficulty != 8 {
+                t.Fatalf("pdf pow difficulty: want 8, got %d", ch.Challenge.Difficulty)
+        }
+        suffix := solveForTest(ch.Challenge.Nonce, ch.Challenge.Difficulty)
+        rec = httptest.NewRecorder()
+        req = httptest.NewRequest(http.MethodGet, "/bundles/key?code=static:pdfs/futa/cos101.pdf&nonce="+ch.Challenge.Nonce+"&pow="+suffix, nil)
+        req.Header.Set("User-Agent", "Mozilla/5.0")
+        h.ServeHTTP(rec, req)
+        if rec.Code != http.StatusOK {
+                t.Fatalf("solved static pow: want 200, got %d %s", rec.Code, rec.Body.String())
+        }
+        // Anonymous CORPUS path: the gentler difficulty (14-bit-class
+        // tier, 6 in this fixture).
+        rec = httptest.NewRecorder()
+        req = httptest.NewRequest(http.MethodGet, "/bundles/key?code=static:school-corpus/schemes/jss-1/basic-science-term1.json", nil)
+        req.Header.Set("User-Agent", "Mozilla/5.0")
+        h.ServeHTTP(rec, req)
+        if rec.Code != http.StatusUnauthorized {
+                t.Fatalf("anon corpus: want 401, got %d", rec.Code)
+        }
+        if err := json.Unmarshal(rec.Body.Bytes(), &ch); err != nil {
+                t.Fatal(err)
+        }
+        if ch.Challenge.Difficulty != 6 {
+                t.Fatalf("corpus pow difficulty: want 6, got %d", ch.Challenge.Difficulty)
+        }
+}
+
+func TestStaticKeyUserSpeedLimit(t *testing.T) {
+        // Founder directives, both honored at once:
+        //   2026-10-11 "remove the daily bank limit completely" -> there
+        //     is NO daily total anywhere in this path.
+        //   2026-10-12 "no rate limit... work on it" -> there IS a
+        //     per-account speed cap: 3/min here, 90/min in production.
+        _, h, tok, _ := staticShieldServer(t, 3)
+        for i := 0; i < 3; i++ {
+                rec := httptest.NewRecorder()
+                req := mustReq(t, tok, "/bundles/key?code=static:pdfs/futa/cos101.pdf")
+                h.ServeHTTP(rec, req)
+                if rec.Code != http.StatusOK {
+                        t.Fatalf("signed-in fetch %d: want 200, got %d %s", i, rec.Code, rec.Body.String())
+                }
+        }
+        // 4th inside the window: 429 slow_down - the speed wall.
+        rec := httptest.NewRecorder()
+        req := mustReq(t, tok, "/bundles/key?code=static:pdfs/futa/cos101.pdf")
+        h.ServeHTTP(rec, req)
+        if rec.Code != http.StatusTooManyRequests {
+                t.Fatalf("speed cap: want 429, got %d %s", rec.Code, rec.Body.String())
+        }
+        if !strings.Contains(rec.Body.String(), "slow_down") {
+                t.Fatalf("speed cap body: %s", rec.Body.String())
+        }
+        // The same cap covers BANK keys too (one wall, all codes)...
+        rec = httptest.NewRecorder()
+        req = mustReq(t, tok, "/bundles/key?code=test-bank")
+        h.ServeHTTP(rec, req)
+        if rec.Code != http.StatusTooManyRequests {
+                t.Fatalf("bank key after static burst: want 429, got %d", rec.Code)
+        }
+        // ...and it is a SPEED cap, not a daily quota: no quota error
+        // code ever appears.
+        if strings.Contains(rec.Body.String(), "quota") {
+            t.Fatalf("daily quota leaked back in: %s", rec.Body.String())
+        }
+}
+
+func TestStaticHoneypotStrike(t *testing.T) {
+        s, h, tok, uid := staticShieldServer(t, 90)
+        // Two honeypot hits = 24h lockout for the account (the decoy
+        // names come from data/static_registry.json, planted by
+        // scripts/encrypt_pdfs.mjs).
+        for i := 0; i < 2; i++ {
+                rec := httptest.NewRecorder()
+                req := mustReq(t, tok, "/bundles/key?code=static:pdfs/noun/all-past-questions-complete.pdf")
+                h.ServeHTTP(rec, req)
+                if rec.Code != http.StatusOK {
+                        t.Fatalf("honeypot %d: the decoy must answer 200 (keep the scraper grinding), got %d", i, rec.Code)
+                }
+        }
+        if n := s.ledger.entry(uid).strikes; n < 2 {
+                t.Fatalf("strikes = %d, want 2", n)
+        }
+        // Locked out on the next key fetch, any code.
+        rec := httptest.NewRecorder()
+        req := mustReq(t, tok, "/bundles/key?code=static:pdfs/futa/cos101.pdf")
+        h.ServeHTTP(rec, req)
+        if rec.Code != http.StatusForbidden {
+                t.Fatalf("locked account: want 403, got %d %s", rec.Code, rec.Body.String())
+        }
 }

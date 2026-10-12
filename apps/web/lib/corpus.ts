@@ -6,7 +6,16 @@
  * /school-corpus/... (scripts/bake_school_corpus.py), so the browser
  * reads them same-origin with zero API cold start. The study API's
  * /school/corpus routes stay as the fallback for stale deploys.
+ *
+ * 2026-10-12 STATIC SHIELD (founder directive: "ultimate security, no
+ * openings"): the baked scheme/note files ship as AES-256-GCM
+ * ciphertext (scripts/encrypt_pdfs.mjs); every per-term load below
+ * decrypts through lib/asset-crypto.ts (the same metered key route as
+ * the question banks - anonymous PoW is lighter here, 14 bits). The
+ * index stays plain: it is a directory of paths, no content.
  */
+
+import { fetchStaticAssetText } from './asset-crypto';
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
@@ -62,6 +71,13 @@ async function fetchStatic<T>(path: string): Promise<T> {
   return (await res.json()) as T;
 }
 
+/** Shielded corpus file load: fetch -> /bundles/key (static:<path>) ->
+ * WebCrypto decrypt -> JSON. Pre-shield plain files pass through. */
+async function fetchShielded<T>(path: string): Promise<T> {
+  const text = await fetchStaticAssetText(path);
+  return JSON.parse(text) as T;
+}
+
 /** Normalize one class's subjects to the array the UI maps over. The
  * first production bake shipped subjects as a dict keyed by slug, which
  * crashed every subjects.find/map call and blanked the Curriculum Bank;
@@ -90,7 +106,7 @@ export async function loadCorpusSchemes(classId: string, subject: string): Promi
   const terms = await Promise.all(
     [1, 2, 3].map(async (term) => {
       try {
-        return await fetchStatic<CorpusSchemeTerm>(
+        return await fetchShielded<CorpusSchemeTerm>(
           `/school-corpus/schemes/${classId}/${subject}-term${term}.json`,
         );
       } catch {
@@ -106,7 +122,7 @@ export async function loadCorpusNotes(classId: string, subject: string): Promise
   const terms = await Promise.all(
     [1, 2, 3].map(async (term) => {
       try {
-        return await fetchStatic<CorpusNoteTerm>(
+        return await fetchShielded<CorpusNoteTerm>(
           `/school-corpus/notes/${classId}/${subject}-term${term}.json`,
         );
       } catch {

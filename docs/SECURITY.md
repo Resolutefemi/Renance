@@ -155,9 +155,9 @@ determined, logged-in human. What this shield guarantees:
 - **No bulk static scraping** (the previous hole - closed with AES-256-GCM).
 - **No AI crawler** (all known agents + robots.txt + noindex).
 - **No anonymous enumeration** (PoW + IP caps + global budget).
-- **No silent bulk theft via accounts** (40 banks/day quota, honeypot
-  strikes, 24 h lockouts, per-account watermarks that survive into
-  any re-published copy).
+- **No silent bulk theft via accounts** (90 keys/min speed cap,
+  honeypot strikes, 24 h lockouts, per-account watermarks that survive
+  into any re-published copy).
 - **Detection and attribution** for anything that does leak: logs,
   canary questions, per-account watermarks.
 
@@ -165,3 +165,82 @@ That is the strongest practical posture for a public education
 platform; a logged-in human transcribing questions one screen at a
 time is the residual risk, and the watermark makes even that
 traceable.
+
+---
+
+## Static asset shield, round 2 (2026-10-12)
+
+**Founder directive**: "I told someone my past questions on the web
+have no rate limit and can be scraped - is that true? If not work on
+it... I just need ultimate security, no vulnerability or openings."
+
+**Audit finding**: the question-bank JSON was already ciphertext, but
+the `/pdfs/**` shelf (2,026 past-question PDFs, 322 MB) and
+`/school-corpus/**` (1,127 NERDC scheme/note files) shipped PLAIN on
+the CDN. Static hosting has no rate limit: `wget -r` took the whole
+library in minutes. The claim was true for those two shelves.
+
+**The fix** (same architecture as the bundle shield, one more asset
+family):
+
+- `scripts/encrypt_pdfs.mjs` rewrites every PDF + corpus file in place
+  at build time as a binary envelope
+  `RNP1 | kidLen u8 | kid | nonce 12B | AES-256-GCM ct+tag`, keyed per
+  path: `HMAC-SHA256(master, "renance-static/v1|" + path)`. Fail-closed
+  without `BUNDLE_MASTER_KEY`.
+- Keys ride the SAME metered route:
+  `GET /bundles/key?code=static:pdfs/futa/cos101.pdf`.
+  - anonymous PDF key: 18-bit PoW + 12/IP/hour
+  - anonymous corpus key (public curriculum surface): 14-bit PoW +
+    120/IP/hour
+  - signed-in: **speed cap only** - 90 key fetches/min per account
+    (default, `BUNDLE_KEY_USER_PER_MIN`). The daily total cap stays
+    REMOVED per the 2026-10-11 founder directive; speed != quota.
+- `data/static_registry.json` (committed; the Docker image carries it
+  via `COPY data/`) lists every protected path + 9 honeypot decoys.
+  The Go API 404s unknown `static:` codes and strikes accounts that
+  ask for decoys (2 strikes = 24 h lockout, same ledger as banks).
+  The Vercel build FAILS (exit 3) if the walked file set drifts from
+  the committed registry, so no asset can ever ship whose key the API
+  would refuse. Regenerate after adding PDFs:
+  `node scripts/encrypt_pdfs.mjs --refresh` + commit the registry.
+- Web client: `lib/asset-crypto.ts` (WebCrypto decrypt, legacy plain
+  fallback), `components/pdf-link.tsx` (shielded PDF button), corpus
+  loads decrypt transparently. All three PDF surfaces converted
+  (course desk, course practice, notes shelf).
+- `vercel.json`: `X-Robots-Tag: noindex` on `/bundles/` and `/pdfs/`
+  (matching `/school-corpus/`); PDF cache window tightened.
+
+## Mobile anti-decompile hardening (2026-10-12)
+
+**Founder directive**: "make sure nobody can decompile my mobile app
+... mobile apps are easy to scrape than website."
+
+Posture (verified this audit):
+
+- **No question data ships in the binary.** The APK/AAB contains zero
+  question assets (verified: `assets/` = brand images, fonts, NERDC
+  schemes). Every question is served at runtime through the
+  authenticated, watermarked, rate-limited API - decompiling the app
+  yields no past questions at all.
+- **Dart symbol obfuscation ON** (was missing): every CI release build
+  (universal APK, per-ABI APKs, AAB) now passes
+  `--obfuscate --split-debug-info=build/symbols/...`. A decompiler now
+  sees mangled names with no class/method map; symbol maps stay in CI
+  only for crash de-obfuscation.
+- **R8 + resource shrinking ON** (already): `isMinifyEnabled` +
+  `isShrinkResources` with `proguard-android-optimize.txt`.
+- **Backup extraction closed**: `allowBackup=false` +
+  `fullBackupContent` + `dataExtractionRules` refuse adb backup,
+  cloud backup and device-to-device transfer of the app's data
+  directory (session vault, cached data).
+- **Cleartext off in release**: `usesCleartextTraffic=false` in the
+  main manifest (production API is HTTPS-only); the debug-only
+  manifest keeps localhost dev working.
+- **Tokens in hardware-backed storage**: `flutter_secure_storage`
+  (Android EncryptedSharedPreferences / iOS Keychain) - unchanged.
+
+Residual honesty: no app is 100% un-decompilable; the point is that
+decompiling now yields nothing (no content, no symbols, no secrets)
+while every runtime request is authenticated, watermarked and
+rate-limited server-side, where the scraper cannot reach.

@@ -101,6 +101,18 @@ type Server struct {
         bundleKeyIP      *rateLimiter
         bundleBurstIP    *rateLimiter
         bundleAnonGlobal *rateLimiter
+        // Static shield (founder directive 2026-10-12: the /pdfs shelf +
+        // school-corpus must never ship plain on the CDN again):
+        // staticFiles = paths the key route will serve keys for (from
+        // data/static_registry.json, written by scripts/encrypt_pdfs.mjs);
+        // staticHoneypots = registry decoys that strike the account;
+        // bundleKeyUser = per-account key SPEED cap (no daily cap - that
+        // was removed 2026-10-11 and stays removed); staticKeyIPCorpus =
+        // the gentler anonymous cap for school-corpus keys.
+        staticFiles       map[string]struct{}
+        staticHoneypots   map[string]struct{}
+        bundleKeyUser     *rateLimiter
+        staticKeyIPCorpus *rateLimiter
 
         // National curriculum corpus (schemes + notes) read straight
         // from the data folder; nil keeps the routes returning clean
@@ -171,6 +183,24 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
         s.bundleKeyIP = newRateLimiter(cfg.BundleIPPerHour, cfg.BundleIPPerHour)
         s.bundleBurstIP = newRateLimiter(30, 30)
         s.bundleAnonGlobal = newRateLimiter(600, 600)
+        // Static shield: the PDF vault rides the strict bundleKeyIP cap,
+        // the school-corpus rides a gentler one (public curriculum
+        // browsing), and every signed-in key fetch is speed-capped per
+        // account (90/min, burst 120 - 10x any real study burst, while an
+        // enumerator walking all 3,000+ static codes + 1,000 banks needs
+        // half an hour minimum, through the watermark ledger).
+        if cfg.BundleKeyUserPerMin <= 0 {
+                cfg.BundleKeyUserPerMin = 90
+        }
+        if cfg.BundleCorpusIPPerHour <= 0 {
+                cfg.BundleCorpusIPPerHour = 120
+        }
+        if cfg.BundleCorpusPowBits <= 0 {
+                cfg.BundleCorpusPowBits = 14
+        }
+        s.bundleKeyUser = newRateLimiter(cfg.BundleKeyUserPerMin, cfg.BundleKeyUserPerMin)
+        s.staticKeyIPCorpus = newRateLimiter(cfg.BundleCorpusIPPerHour, cfg.BundleCorpusIPPerHour)
+        s.loadStaticRegistry(cfg.DataDir)
         if cfg.DataDir != "" {
                 s.corpus = schoolcorpus.Load(cfg.DataDir)
         }

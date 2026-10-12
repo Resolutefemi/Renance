@@ -211,6 +211,36 @@ services:
         value: "12"
       - key: BUNDLE_POW_BITS
         value: "18"
+      # ------------------------------------------------------------------
+      # STATIC ASSET SHIELD (founder directive 2026-10-12: "I told
+      # someone my past questions on the web have no rate limit and can
+      # be scraped - is that true? If not work on it").
+      #
+      # The audit found the hole: /pdfs/** (2,026 past-question PDFs,
+      # 322MB) and /school-corpus/** shipped PLAIN on the CDN with no
+      # auth and no rate limit (static hosting = unlimited downloads).
+      # They are now AES-256-GCM ciphertext (scripts/encrypt_pdfs.mjs,
+      # binary envelope "RNP1", key domain renance-static/v1|<path>)
+      # and their keys ride THIS SAME /bundles/key route, so every
+      # static asset fetch pays the metered walls below.
+      #
+      # BUNDLE_KEY_USER_PER_MIN is the per-account SPEED cap on every
+      # key fetch (banks + statics). It is NOT a daily quota - the
+      # daily bank limit stays REMOVED per founder directive
+      # 2026-10-11 ("remove the daily bank limit features completely").
+      # 90/min is 10x any honest study burst; a scraper with one free
+      # account walking all 4,000+ codes needs 45+ minutes and eats
+      # per-account watermarks the whole way.
+      - key: BUNDLE_KEY_USER_PER_MIN
+        value: "90"
+      # The school-corpus (NERDC schemes + lesson notes) is a public
+      # curriculum surface: anonymous browsing gets a gentler cap and a
+      # lighter PoW than the PDF vault (which rides BUNDLE_IP_PER_HOUR
+      # 12/hr + 18-bit PoW above).
+      - key: BUNDLE_CORPUS_IP_PER_HOUR
+        value: "120"
+      - key: BUNDLE_CORPUS_POW_BITS
+        value: "14"
       # BUNDLE_ANON_KEY=false removes the anonymous key path entirely
       # (practice requires sign-in). Default stays true so the
       # signed-out practice UX keeps working while PoW + IP caps hold

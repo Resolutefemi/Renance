@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- backup_rules: the app participates in NO cloud backup or device
+     transfer (founder directive 2026-10-12: "make sure nobody can
+     decompile my mobile app... ultimate security, no openings").
+     allowBackup=false already refuses adb backup + cloud copy; this
+     file makes the refusal explicit for pre-Android-12 tooling. -->
+<full-backup-content>
+    <exclude domain="root" />
+    <exclude domain="file" />
+    <exclude domain="database" />
+    <exclude domain="sharedpref" />
+    <exclude domain="external" />
+</full-backup-content>
