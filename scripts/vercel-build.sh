@@ -45,4 +45,14 @@ export NEXT_PUBLIC_BASE_PATH NEXT_PUBLIC_API_BASE NEXT_PUBLIC_GOOGLE_CLIENT_ID N
 export BUNDLE_MASTER_KEY BUNDLE_KEY_ID
 python3 scripts/web_bundles.py
 node scripts/encrypt_bundles.mjs
+# 2026-10-12 STATIC ASSET SHIELD (founder directive: "I told someone my
+# past questions on the web have no rate limit - is that true? work on
+# it"): the /pdfs shelf (2,026 past-question PDFs, 322MB) and the
+# school-corpus schemes/notes ship as AES-256-GCM ciphertext too, keyed
+# per path, keys delivered through the SAME metered /bundles/key route.
+# Fails the build (exit 3) if the walked file set drifted from the
+# committed data/static_registry.json - no asset can ship whose key the
+# API would refuse. Regenerate with: node scripts/encrypt_pdfs.mjs
+# --refresh (then commit the registry).
+node scripts/encrypt_pdfs.mjs
 pnpm --filter @renance/web exec next build

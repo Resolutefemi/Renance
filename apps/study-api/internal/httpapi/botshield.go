@@ -62,8 +62,11 @@ import (
         "crypto/rand"
         "crypto/sha256"
         "encoding/hex"
+        "encoding/json"
         "fmt"
         "net/http"
+        "os"
+        "path/filepath"
         "regexp"
         "strings"
         "sync"
@@ -269,6 +272,64 @@ func bundleKeyFor(master []byte, code string) []byte {
         return mac.Sum(nil)
 }
 
+// bundleKeyForStatic derives the AES-256 key for an encrypted STATIC
+// asset (past-question PDFs, school-corpus schemes/notes) shipped on
+// the renance.app CDN. Byte-identical on all three sides:
+// scripts/encrypt_pdfs.mjs, this function, lib/asset-crypto.ts.
+// Founder directive 2026-10-12 ("I told someone my past questions on
+// the web have no rate limit - is that true? work on it"): the PDF
+// shelf is the vault, so it rides the SAME metered key route as the
+// question banks.
+func bundleKeyForStatic(master []byte, path string) []byte {
+        mac := hmac.New(sha256.New, master)
+        mac.Write([]byte("renance-static/v1|" + path))
+        return mac.Sum(nil)
+}
+
+// staticCodePrefix tags a key request for a static CDN asset. The code
+// is "static:" + the asset path relative to apps/web/public (e.g.
+// "static:pdfs/futa/cos101.pdf").
+const staticCodePrefix = "static:"
+
+// isCorpusPath reports whether a static asset belongs to the school
+// corpus (NERDC schemes + lesson notes) rather than the past-question
+// PDF shelf. The corpus rides a gentler anonymous cap: curriculum
+// browsing is a public product surface, the PDFs are the vault.
+func isCorpusPath(path string) bool {
+        return strings.HasPrefix(path, "school-corpus/")
+}
+
+// loadStaticRegistry reads data/static_registry.json (written by
+// scripts/encrypt_pdfs.mjs, committed to the repo so the Docker image
+// carries it via `COPY data/ /app/data/`). Only paths listed here get
+// keys; everything else 404s so enumeration learns nothing. A missing
+// or unreadable file leaves both maps nil - static codes then serve
+// nothing (fail-closed), banks are unaffected.
+func (s *Server) loadStaticRegistry(dataDir string) {
+        if dataDir == "" {
+                return
+        }
+        b, err := os.ReadFile(filepath.Join(dataDir, "static_registry.json"))
+        if err != nil {
+                return
+        }
+        var reg struct {
+                Files     map[string]json.RawMessage `json:"files"`
+                Honeypots []string                   `json:"honeypots"`
+        }
+        if err := json.Unmarshal(b, &reg); err != nil {
+                return
+        }
+        s.staticFiles = make(map[string]struct{}, len(reg.Files))
+        for p := range reg.Files {
+                s.staticFiles[p] = struct{}{}
+        }
+        s.staticHoneypots = make(map[string]struct{}, len(reg.Honeypots))
+        for _, p := range reg.Honeypots {
+                s.staticHoneypots[p] = struct{}{}
+        }
+}
+
 // ---------------------------------------------------------------- PoW
 
 type powEntry struct {
@@ -300,7 +361,7 @@ func (p *powLedger) issue(diffBits int) (nonce string, diff int) {
                 p.sweep()
                 p.last = time.Now()
         }
-        return nonce, 20
+        return nonce, diffBits
 }
 
 func (p *powLedger) sweep() {
@@ -346,9 +407,22 @@ func (s *Server) handleBundleKey(w http.ResponseWriter, r *http.Request) {
         code := strings.TrimSpace(r.URL.Query().Get("code"))
         master := s.cfg.BundleMasterKey
 
+        // Static asset codes ("static:pdfs/futa/cos101.pdf") follow the
+        // same walls as bank codes - one shield, two asset families.
+        isStatic := strings.HasPrefix(code, staticCodePrefix)
+        staticPath := ""
+        if isStatic {
+                staticPath = strings.TrimPrefix(code, staticCodePrefix)
+        }
+
         // Honeypots strike on the key route too (a scraper enumerates keys,
-        // never pages).
-        if _, decoy := honeypotCodes[code]; decoy {
+        // never pages). Bank decoys AND static decoys land here.
+        _, bankDecoy := honeypotCodes[code]
+        var staticDecoy bool
+        if isStatic {
+                _, staticDecoy = s.staticHoneypots[staticPath]
+        }
+        if bankDecoy || staticDecoy {
                 uid, _ := userIDFrom(r)
                 if uid != "" {
                         n := s.ledger.strike(uid)
@@ -356,9 +430,14 @@ func (s *Server) handleBundleKey(w http.ResponseWriter, r *http.Request) {
                 } else {
                         s.shieldLog(r, "honeypot", "code="+code+" (anonymous)")
                 }
-                // Serve a plausible key for the poison bank so the scraper
-                // happily decrypts the canary content and publishes it.
-                writeJSON(w, http.StatusOK, bundleKeyResponse{KID: s.cfg.BundleKeyID, Code: code, Alg: "A256GCM", Key: hex.EncodeToString(bundleKeyFor(master, code))})
+                // Serve a plausible key so the scraper happily keeps
+                // grinding (and, for bank decoys, decrypts the canary
+                // content and publishes the proof).
+                key := bundleKeyFor(master, code)
+                if staticDecoy {
+                        key = bundleKeyForStatic(master, staticPath)
+                }
+                writeJSON(w, http.StatusOK, bundleKeyResponse{KID: s.cfg.BundleKeyID, Code: code, Alg: "A256GCM", Key: hex.EncodeToString(key)})
                 return
         }
 
@@ -368,13 +447,23 @@ func (s *Server) handleBundleKey(w http.ResponseWriter, r *http.Request) {
                 return
         }
 
-        // The code must be a real bank (manifest member). Unknown codes get
-        // no key - enumeration learns nothing.
+        // The code must be a real asset (manifest member for banks,
+        // registry member for statics). Unknown codes get no key -
+        // enumeration learns nothing.
         if code == "" {
                 fail(w, http.StatusBadRequest, "bad_request", "code query parameter is required")
                 return
         }
-        if _, known := s.lib.Bundle(code); !known {
+        if isStatic {
+                if s.staticFiles == nil {
+                        fail(w, http.StatusNotFound, "unknown_asset", "no asset with that code")
+                        return
+                }
+                if _, known := s.staticFiles[staticPath]; !known {
+                        fail(w, http.StatusNotFound, "unknown_asset", "no asset with that code")
+                        return
+                }
+        } else if _, known := s.lib.Bundle(code); !known {
                 fail(w, http.StatusNotFound, "unknown_bank", "no bank with that code")
                 return
         }
@@ -383,23 +472,36 @@ func (s *Server) handleBundleKey(w http.ResponseWriter, r *http.Request) {
         signedIn := err == nil && uid != ""
 
         if signedIn {
-                // Honeypot lockout is the only signed-in wall left. The
-                // daily distinct-bank quota was removed on founder
-                // directive 2026-10-11 - a student prepping every
-                // subject in one day is the PRODUCT, not an attack.
+                // SPEED CAP ONLY (founder directive 2026-10-12: the daily
+                // distinct-bank quota stays REMOVED - "a student prepping
+                // every subject in one day is the PRODUCT" - but every key
+                // fetch is rate limited per account so a scripted
+                // enumerator with one free account cannot walk 3,000 codes
+                // in a burst. 90/min is 10x any real study session.)
+                if !s.bundleKeyUser.allow("u:" + uid) {
+                        s.shieldLog(r, "quota", "key user rate user="+uid)
+                        fail(w, http.StatusTooManyRequests, "slow_down", "too many requests")
+                        return
+                }
+                // Honeypot lockout is the only other signed-in wall.
                 if s.ledger.blocked(uid) {
                         s.shieldLog(r, "blocked", "user="+uid+" bundle key while locked")
                         fail(w, http.StatusForbidden, "access_suspended", "unusual download activity detected on this account")
                         return
                 }
         } else {
-                // Anonymous path.
+                // Anonymous path. PDFs ride the strict vault cap; the
+                // school-corpus files ride the gentler curriculum cap.
                 if !s.cfg.BundleAnonKey {
                         fail(w, http.StatusUnauthorized, "sign_in_required", "sign in to load question banks")
                         return
                 }
                 ip := clientIP(r)
-                if !s.bundleKeyIP.allow("ip:" + ip) {
+                ipCap := s.bundleKeyIP
+                if isStatic && isCorpusPath(staticPath) {
+                        ipCap = s.staticKeyIPCorpus
+                }
+                if !ipCap.allow("ip:" + ip) {
                         s.shieldLog(r, "quota", "anon ip rate ip="+ip)
                         fail(w, http.StatusTooManyRequests, "slow_down", "too many requests")
                         return
@@ -412,7 +514,11 @@ func (s *Server) handleBundleKey(w http.ResponseWriter, r *http.Request) {
                 // Layer 4 PoW: no solution yet -> hand out the challenge.
                 pow := strings.TrimSpace(r.URL.Query().Get("pow"))
                 if pow == "" {
-                        nonce, diff := s.pows.issue(s.cfg.BundlePowBits)
+                        bits := s.cfg.BundlePowBits
+                        if isStatic && isCorpusPath(staticPath) {
+                                bits = s.cfg.BundleCorpusPowBits
+                        }
+                        nonce, diff := s.pows.issue(bits)
                         writeJSON(w, http.StatusUnauthorized, powChallenge{
                                 Code: code, Challenge: powChallengeSpec{
                                         Nonce: nonce, Difficulty: diff, Algo: "sha256",
@@ -429,11 +535,15 @@ func (s *Server) handleBundleKey(w http.ResponseWriter, r *http.Request) {
         }
 
         s.shieldLog(r, "key", "code="+code+" user="+nonEmpty(uid, "anon"))
+        key := bundleKeyFor(master, code)
+        if isStatic {
+                key = bundleKeyForStatic(master, staticPath)
+        }
         writeJSON(w, http.StatusOK, bundleKeyResponse{
                 KID:  s.cfg.BundleKeyID,
                 Code: code,
                 Alg:  "A256GCM",
-                Key:  hex.EncodeToString(bundleKeyFor(master, code)),
+                Key:  hex.EncodeToString(key),
         })
 }
 

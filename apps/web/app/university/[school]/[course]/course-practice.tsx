@@ -14,6 +14,7 @@ import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
 import { withBase } from '@/lib/api';
+import { PdfLink } from '@/components/pdf-link';
 import type { School, UniversityCourse } from '@/lib/university-data';
 import { PART_SIZE, partCount, partHref, partRange, randomHref } from '@/lib/university';
 
@@ -205,11 +206,9 @@ export function CoursePractice({ school, course }: { school: School; course: Uni
         {course.pdf && (
           <section className="mt-8">
             <h3 className="text-sm font-semibold text-on-surface">Course Material</h3>
-            <a
-              href={withBase(course.pdf)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 flex items-center gap-3 rounded-xl border border-outline-variant bg-card p-3 transition hover:border-outline"
+            <PdfLink
+              href={course.pdf}
+              className="mt-3 flex w-full items-center gap-3 rounded-xl border border-outline-variant bg-card p-3 transition hover:border-outline"
             >
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-surface-container text-on-surface">
                 <span className="material-symbols-outlined text-[20px]">picture_as_pdf</span>
@@ -221,7 +220,7 @@ export function CoursePractice({ school, course }: { school: School; course: Uni
                 <p className="text-xs text-on-surface-variant">Opens in a new tab</p>
               </div>
               <span className="material-symbols-outlined text-on-surface-variant">open_in_new</span>
-            </a>
+            </PdfLink>
           </section>
         )}
       </div>

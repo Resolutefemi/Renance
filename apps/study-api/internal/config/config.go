@@ -83,6 +83,24 @@ type Config struct {
         // (18 ≈ 262k hashes, ~0.3s in a browser, per key request).
         BundlePowBits int
 
+        // Static shield (founder directive 2026-10-12: "I told someone
+        // my past questions on the web have no rate limit and can be
+        // scraped - is that true? work on it"). BUNDLE_KEY_USER_PER_MIN
+        // is the per-account SPEED cap on every /bundles/key fetch -
+        // NOT a daily total (the daily bank quota stays removed,
+        // founder directive 2026-10-11). 90/min covers any real study
+        // burst; an enumerator walking every code needs 30+ minutes.
+        BundleKeyUserPerMin int
+        // BUNDLE_CORPUS_IP_PER_HOUR - anonymous key fetches per IP per
+        // hour for school-corpus assets (schemes + notes). The PDF
+        // vault rides the stricter BUNDLE_IP_PER_HOUR (12); curriculum
+        // browsing is a public surface, so it gets 120.
+        BundleCorpusIPPerHour int
+        // BUNDLE_CORPUS_POW_BITS - lighter proof-of-work for corpus keys
+        // (14 bits ≈ 30ms in a browser - a page loading 6 corpus files
+        // stays instant, a scraper pays it per file forever).
+        BundleCorpusPowBits int
+
         // Reset-mail quota armor (founder directive 2026-10-05, trimming
         // the 2026-10-04 armor: "remove the 100 email/day budget... put
         // the 300/day"). RESET_MAIL_DAILY_CAP is the total number of
@@ -137,6 +155,9 @@ func Load() (*Config, error) {
                 BundleAnonKey:       envBool("BUNDLE_ANON_KEY", true),
                 BundleIPPerHour:      envInt("BUNDLE_IP_PER_HOUR", 12),
                 BundlePowBits:       envInt("BUNDLE_POW_BITS", 18),
+                BundleKeyUserPerMin: envInt("BUNDLE_KEY_USER_PER_MIN", 90),
+                BundleCorpusIPPerHour: envInt("BUNDLE_CORPUS_IP_PER_HOUR", 120),
+                BundleCorpusPowBits: envInt("BUNDLE_CORPUS_POW_BITS", 14),
                 ResetMailDailyCap: envInt("RESET_MAIL_DAILY_CAP", 300),
 
                 ArenaQuestions:          envInt("ARENA_QUESTIONS", 15),            // founder rule: 15-question duels

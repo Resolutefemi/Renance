@@ -70,7 +70,14 @@ jobs:
       - name: Build release APK (universal)
         working-directory: apps/mobile
         run: |
+          # --obfuscate + --split-debug-info (founder directive
+          # 2026-10-12: "make sure nobody can decompile my mobile app"):
+          # Dart symbols are stripped from the release binary - a
+          # decompiler sees mangled names, no class/method map, no
+          # string-literal debug info. The symbol map stays in CI only
+          # (never shipped, never committed) for crash de-obfuscation.
           flutter build apk --release \
+            --obfuscate --split-debug-info=build/symbols/apk-universal \
             --dart-define=RENANCE_API_BASE=${{ vars.PUBLIC_API_BASE || 'https://renance-api.onrender.com' }} \
             --dart-define=GOOGLE_WEB_CLIENT_ID=${{ vars.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '' }}
           # Stage immediately: the split build below writes its own files
@@ -88,6 +95,7 @@ jobs:
           # so every flavor upgrades/interchanges cleanly.
           flutter build apk --release --split-per-abi \
             -Pforce-version-code-ignoring-abi=true \
+            --obfuscate --split-debug-info=build/symbols/apk-split \
             --dart-define=RENANCE_API_BASE=${{ vars.PUBLIC_API_BASE || 'https://renance-api.onrender.com' }} \
             --dart-define=GOOGLE_WEB_CLIENT_ID=${{ vars.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '' }}
           cp build/app/outputs/flutter-apk/app-arm64-v8a-release.apk dist/renance-arm64.apk
@@ -97,6 +105,7 @@ jobs:
         working-directory: apps/mobile
         run: |
           flutter build appbundle --release \
+            --obfuscate --split-debug-info=build/symbols/aab \
             --dart-define=RENANCE_API_BASE=${{ vars.PUBLIC_API_BASE || 'https://renance-api.onrender.com' }} \
             --dart-define=GOOGLE_WEB_CLIENT_ID=${{ vars.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '' }}
 

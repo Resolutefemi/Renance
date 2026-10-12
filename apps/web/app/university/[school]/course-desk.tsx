@@ -14,6 +14,7 @@ import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
 import { withBase } from '@/lib/api';
+import { PdfLink } from '@/components/pdf-link';
 import type { School, SchoolCatalog, UniversityCourse } from '@/lib/university-data';
 
 export function UniversityCourseDesk({
@@ -138,11 +139,9 @@ export function UniversityCourseDesk({
             <ul className="mt-3 grid gap-2 sm:grid-cols-2">
               {withPdfs.map((c) => (
                 <li key={c.slug}>
-                  <a
-                    href={withBase(c.pdf!)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 rounded-xl border border-outline-variant bg-card p-3 transition hover:border-outline"
+                  <PdfLink
+                    href={c.pdf!}
+                    className="flex w-full items-center gap-3 rounded-xl border border-outline-variant bg-card p-3 transition hover:border-outline"
                   >
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-surface-container text-on-surface">
                       <span className="material-symbols-outlined text-[20px]">picture_as_pdf</span>
@@ -155,7 +154,7 @@ export function UniversityCourseDesk({
                       <p className="text-xs text-on-surface-variant">PDF · opens in a new tab</p>
                     </div>
                     <span className="material-symbols-outlined text-on-surface-variant">open_in_new</span>
-                  </a>
+                  </PdfLink>
                 </li>
               ))}
             </ul>
