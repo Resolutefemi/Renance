@@ -347,64 +347,36 @@ export default function ProfilePage() {
             )}
           </section>
 
-          {/* REN wallet: the coins, the referral code, the exchange.
-              2026-10-13 founder pass: Supreme gradient hero + SOLID
-              white copy - the /70-opacity small text on flat green was
-              unreadable on a card this size. */}
-          <section className="rounded-2xl bg-gradient-to-br from-primary to-treefrog-dark p-5 text-white shadow-[0_4px_0_0_color-mix(in_srgb,var(--color-primary)_62%,#000)]">
-            <div className="flex items-center justify-between gap-3">
-              <div>
-                <p className="font-mono text-[10px] font-bold uppercase tracking-[0.24em] text-white/90">
-                  REN wallet
-                </p>
-                <p className="mt-1 text-3xl font-extrabold tracking-tight">
-                  {me.entitlement?.renCoins ?? 0}
-                  <span className="text-base font-bold text-white/90"> REN</span>
+          {/* The big premium subscription card is RETIRED (founder
+              directive 2026-10-14: "remove that big premium subscription
+              card from the profile") — the whole REN wallet gradient
+              with it. The referral invite below keeps the
+              invite-friends-for-points loop alive in a compact card. */}
+          {me.entitlement?.referralCode && (
+            <section className="flex items-center gap-3 rounded-2xl bg-card p-3.5 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/15">
+                <span className="material-symbols-outlined text-[20px] text-primary-ink">card_giftcard</span>
+              </span>
+              <div className="min-w-0 flex-1">
+                <p className="text-[14px] font-bold text-on-surface">Invite friends, earn REN</p>
+                <p className="truncate font-mono text-[12px] font-bold tracking-wider text-on-surface-variant">
+                  {me.entitlement.referralCode}
                 </p>
               </div>
-              <Link
-                href="/pricing"
-                className="inline-flex h-10 shrink-0 items-center gap-1.5 rounded-xl bg-white px-4 text-[13px] font-extrabold text-on-surface shadow-[0_2px_0_0_rgba(0,0,0,0.25)] transition active:translate-y-[2px] active:shadow-none"
+              <button
+                type="button"
+                onClick={() => {
+                  const link = `${window.location.origin}/register/?ref=${me.entitlement!.referralCode}`;
+                  void navigator.clipboard?.writeText(link);
+                  setCopied(true);
+                  window.setTimeout(() => setCopied(false), 1800);
+                }}
+                className="key-btn shrink-0 bg-primary px-3.5 text-[12px] text-white"
               >
-                Redeem for premium
-                <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-              </Link>
-            </div>
-            <div className="mt-4 grid grid-cols-2 gap-2 text-[12.5px]">
-              <div className="rounded-lg bg-white/12 px-3 py-2">
-                <p className="font-extrabold text-white">+1 REN</p>
-                <p className="font-semibold text-white/95">every arena duel you win</p>
-              </div>
-              <div className="rounded-lg bg-white/12 px-3 py-2">
-                <p className="font-extrabold text-white">+3 REN</p>
-                <p className="font-semibold text-white/95">every friend who signs up with your code</p>
-              </div>
-            </div>
-            {me.entitlement?.referralCode && (
-              <div className="mt-3 flex items-center justify-between gap-3 rounded-lg border border-white/25 px-3 py-2.5">
-                <div className="min-w-0">
-                  <p className="font-mono text-[10px] font-bold uppercase tracking-widest text-white/90">
-                    Your referral code
-                  </p>
-                  <p className="truncate font-mono text-sm font-bold tracking-wider text-white">
-                    {me.entitlement.referralCode}
-                  </p>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => {
-                    const link = `${window.location.origin}/register/?ref=${me.entitlement!.referralCode}`;
-                    void navigator.clipboard?.writeText(link);
-                    setCopied(true);
-                    window.setTimeout(() => setCopied(false), 1800);
-                  }}
-                  className="shrink-0 rounded-full border-2 border-white/40 px-3.5 py-1.5 text-[12px] font-extrabold text-white transition hover:bg-white/15"
-                >
-                  {copied ? 'Link copied' : 'Copy invite link'}
-                </button>
-              </div>
-            )}
-          </section>
+                {copied ? 'Copied' : 'Copy link'}
+              </button>
+            </section>
+          )}
 
           {/* The follow strip (founder 2026-10-14 evening pass): followers
               and following read right on the profile; tapping opens the

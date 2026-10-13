@@ -26,15 +26,21 @@ type Tab = 'followers' | 'following';
 export default function ProfileSocialPage() {
   const router = useRouter();
   const [conn, setConn] = useState<Connections | null>(null);
-  const [error, setError] = useState('');
+  const [offline, setOffline] = useState(false);
   const [tab, setTab] = useState<Tab>('followers');
   const [busy, setBusy] = useState('');
 
   const load = useCallback(() => {
-    setError('');
     fetchConnections()
-      .then(setConn)
-      .catch(() => setError('Your people could not load. Check your connection, then retry.'));
+      .then((c) => {
+        setConn(c);
+        setOffline(false);
+      })
+      .catch(() => {
+        // No dead-end error card (founder: "remove retry"): the quiet
+        // poll below keeps trying until the lists arrive.
+        setOffline(true);
+      });
   }, []);
 
   useEffect(() => {
@@ -44,6 +50,14 @@ export default function ProfileSocialPage() {
     }
     load();
   }, [load, router]);
+
+  // The quiet re-sync: until the lists answer, poll every 8s. The page
+  // heals itself — nothing for the scholar to press.
+  useEffect(() => {
+    if (conn || !offline) return;
+    const t = window.setInterval(load, 8000);
+    return () => window.clearInterval(t);
+  }, [conn, offline, load]);
 
   async function flip(row: FollowRow) {
     if (busy) return;
@@ -92,15 +106,17 @@ export default function ProfileSocialPage() {
           ))}
         </div>
 
-        {error && (
-          <div className="learn-tile mt-4 flex flex-col items-center gap-3 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-4 py-10 text-center">
-            <span className="material-symbols-outlined text-[34px] text-on-surface-variant">wifi_off</span>
-            <p className="text-[13.5px] font-bold text-on-surface-variant">{error}</p>
-            <button type="button" onClick={load} className="key-btn bg-primary text-white">Retry</button>
-          </div>
-        )}
-        {!conn && !error && (
+        {!conn && !offline && (
           <div className="mt-6 flex justify-center"><LogoActivityIndicator /></div>
+        )}
+        {!conn && offline && (
+          <div className="learn-tile mt-4 flex flex-col items-center gap-2 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-4 py-12 text-center">
+            <span className="material-symbols-outlined text-[36px] text-primary">diversity_3</span>
+            <p className="text-[15px] font-black text-on-surface">Your people are syncing…</p>
+            <p className="max-w-xs text-[12.5px] font-bold text-on-surface-variant">
+              Followers and following appear the moment the connection is back.
+            </p>
+          </div>
         )}
 
         {conn && rows.length === 0 && (

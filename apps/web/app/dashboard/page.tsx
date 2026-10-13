@@ -440,24 +440,26 @@ export default function DashboardPage() {
             back and visible (/12, the old /5 was imperceptible) on
             every focus homepage hero. 2026-10-13 tactile pass: the card
             stands on an extruded ledge (.hero-card) and the progress
-            rail gets the recessed-track + gloss-fill treatment. */}
-        <section className="hero-card relative mt-4 flex flex-col gap-4 overflow-hidden bg-hero p-4 sm:p-5">
-          <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-on-hero/12" />
-          <div className="absolute -bottom-14 -left-12 h-28 w-28 rounded-full bg-on-hero/12" />
+            rail gets the recessed-track + gloss-fill treatment.
+            2026-10-14 founder pass: the card shrinks to fit the UI —
+            tighter padding, smaller title, 44px CTA. */}
+        <section className="hero-card relative mt-3 flex flex-col gap-2.5 overflow-hidden bg-hero p-3.5 sm:p-4">
+          <div className="absolute -right-14 -top-14 h-32 w-32 rounded-full bg-on-hero/12" />
+          <div className="absolute -bottom-12 -left-10 h-24 w-24 rounded-full bg-on-hero/12" />
           <div className="relative z-10 flex items-start justify-between gap-4">
             <div>
-              <p className="font-mono text-[11px] uppercase tracking-wider text-hero-muted">Next Target</p>
-              <h2 className="text-2xl font-bold tracking-tight text-on-hero sm:text-3xl">{targetTitle}</h2>
+              <p className="font-mono text-[10px] uppercase tracking-wider text-hero-muted">Next Target</p>
+              <h2 className="text-xl font-bold tracking-tight text-on-hero sm:text-2xl">{targetTitle}</h2>
             </div>
             <div className="text-right">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-hero-muted">Countdown</p>
-              <p className="mt-1 inline-block rounded-full bg-on-hero/10 px-3 py-1 text-sm font-bold text-on-hero">
+              <p className="font-mono text-[10px] uppercase tracking-wider text-hero-muted">Countdown</p>
+              <p className="mt-0.5 inline-block rounded-full bg-on-hero/10 px-2.5 py-0.5 text-[13px] font-bold text-on-hero">
                 {days == null ? 'Set a year' : days <= 0 ? 'This month' : `${days} Days`}
               </p>
             </div>
           </div>
-          <div className="relative z-10 flex flex-col gap-2">
-            <div className="flex justify-between font-mono text-xs text-hero-muted">
+          <div className="relative z-10 flex flex-col gap-1.5">
+            <div className="flex justify-between font-mono text-[11px] text-hero-muted">
               <span>Syllabus Completion</span>
               <span className="font-semibold text-on-hero">{coveragePct}%</span>
             </div>
@@ -479,17 +481,17 @@ export default function DashboardPage() {
                 // the composed paper's plumbing label.
                 daily: activeExam.daily ? '1' : undefined,
               })}
-              className="relative z-10 flex h-[52px] items-center justify-center gap-2 rounded-[12px] bg-hero-cta text-[15px] font-bold text-on-hero-cta transition-transform active:scale-[0.98]"
+              className="relative z-10 flex h-11 items-center justify-center gap-2 rounded-[12px] bg-hero-cta text-[14px] font-bold text-on-hero-cta transition-transform active:scale-[0.98]"
             >
-              <span className="material-symbols-outlined text-[20px]">play_arrow</span>
+              <span className="material-symbols-outlined text-[18px]">play_arrow</span>
               Continue Exam · {pausedExamAnswers}/{Math.max(activeExam.questionCount, pausedExamAnswers)}
             </Link>
           ) : (
             <Link
               href={isJamb || isWaec || isNeco ? setupHref : exams[0] ? examHref(exams[0].code) : '/packs'}
-              className="relative z-10 flex h-[52px] items-center justify-center gap-2 rounded-[12px] bg-hero-cta text-[15px] font-bold text-on-hero-cta transition-transform active:scale-[0.98]"
+              className="relative z-10 flex h-11 items-center justify-center gap-2 rounded-[12px] bg-hero-cta text-[14px] font-bold text-on-hero-cta transition-transform active:scale-[0.98]"
             >
-              <span className="material-symbols-outlined text-[20px]">play_arrow</span>
+              <span className="material-symbols-outlined text-[18px]">play_arrow</span>
               {isJamb ? 'Start Mock Exam' : 'Start Practice'}
             </Link>
           )}
@@ -663,23 +665,23 @@ function PostUtmeHome({ onMore }: { onMore: () => void }) {
       {/* Founder directive 2026-10-11: corner blob ornaments back on
           every focus hero - both corners, visible strength (/12).
           2026-10-13 tactile pass: extruded ledge via .hero-card. */}
-      <section className="hero-card relative mt-4 flex flex-col gap-4 overflow-hidden bg-hero p-4 sm:p-6">
-        <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-on-hero/12" />
-        <div className="absolute -bottom-14 -left-12 h-28 w-28 rounded-full bg-on-hero/12" />
+      <section className="hero-card relative mt-3 flex flex-col gap-2.5 overflow-hidden bg-hero p-3.5 sm:p-4">
+        <div className="absolute -right-14 -top-14 h-32 w-32 rounded-full bg-on-hero/12" />
+        <div className="absolute -bottom-12 -left-10 h-24 w-24 rounded-full bg-on-hero/12" />
         <div className="relative z-10 flex items-center justify-between gap-4">
-          <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-hero-muted">
+          <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-hero-muted">
             Post UTME Desk
           </p>
-          <span className="flex items-center gap-1 rounded-full bg-dark-text-primary/15 px-2 py-1 font-mono text-[11px] text-on-hero">
-            <span className="material-symbols-outlined text-[14px]">school</span>
+          <span className="flex items-center gap-1 rounded-full bg-dark-text-primary/15 px-2 py-0.5 font-mono text-[11px] text-on-hero">
+            <span className="material-symbols-outlined text-[13px]">school</span>
             {school?.short ?? 'Post UTME'}
           </span>
         </div>
         <div className="relative z-10">
-          <h2 className="text-2xl font-bold tracking-tight text-on-hero sm:text-3xl">
+          <h2 className="text-xl font-bold tracking-tight text-on-hero sm:text-2xl">
             {school?.name ?? 'Pick your school'}
           </h2>
-          <p className="mt-1 text-[15px] font-semibold text-hero-muted">
+          <p className="mt-0.5 text-[13px] font-semibold text-hero-muted">
             {own.length > 0
               ? `${own.length} school prep packs · ${general.length} general banks`
               : `${general.length} general practice banks · pick a school for its past questions`}
@@ -688,9 +690,9 @@ function PostUtmeHome({ onMore }: { onMore: () => void }) {
         <div className="relative z-10 flex flex-col gap-2 sm:flex-row">
           <Link
             href="/post-utme"
-            className="flex h-[52px] flex-1 items-center justify-center gap-2 rounded-[12px] bg-hero-cta text-[15px] font-bold text-on-hero-cta transition-transform active:scale-[0.98]"
+            className="flex h-11 flex-1 items-center justify-center gap-2 rounded-[12px] bg-hero-cta text-[14px] font-bold text-on-hero-cta transition-transform active:scale-[0.98]"
           >
-            <span className="material-symbols-outlined text-[20px]">menu_book</span>
+            <span className="material-symbols-outlined text-[18px]">menu_book</span>
             {school ? 'Open past questions' : 'Pick School'}
           </Link>
         </div>
@@ -776,26 +778,26 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
       {/* School hero card ---------------------------------------------- */}
       {/* Founder directive 2026-10-11: corner blob ornaments back on
           every focus hero - both corners, visible strength (/12).
-          2026-10-13 tactile pass: extruded ledge via .hero-card, and the
-          CTA carries the mobile app's exact spec - 52px tall, full
-          width, radius 10, the school glyph, "Open your school desk". */}
-      <section className="hero-card relative mt-4 flex flex-col gap-4 overflow-hidden bg-hero p-4 sm:p-6">
-        <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-on-hero/12" />
-        <div className="absolute -bottom-14 -left-12 h-28 w-28 rounded-full bg-on-hero/12" />
+          2026-10-13 tactile pass: extruded ledge via .hero-card.
+          2026-10-14 founder pass: shrunk to fit the UI like the main
+          hero - tighter padding, smaller title, 44px CTA. */}
+      <section className="hero-card relative mt-3 flex flex-col gap-2.5 overflow-hidden bg-hero p-3.5 sm:p-4">
+        <div className="absolute -right-14 -top-14 h-32 w-32 rounded-full bg-on-hero/12" />
+        <div className="absolute -bottom-12 -left-10 h-24 w-24 rounded-full bg-on-hero/12" />
         <div className="relative z-10 flex items-center justify-between gap-4">
-          <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-hero-muted">
+          <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-hero-muted">
             School Desk
           </p>
-          <span className="flex items-center gap-1 rounded-full bg-dark-text-primary/15 px-2 py-1 font-mono text-[11px] text-on-hero">
-            <span className="material-symbols-outlined text-[14px]">school</span>
+          <span className="flex items-center gap-1 rounded-full bg-dark-text-primary/15 px-2 py-0.5 font-mono text-[11px] text-on-hero">
+            <span className="material-symbols-outlined text-[13px]">school</span>
             {school?.short ?? 'School'}
           </span>
         </div>
         <div className="relative z-10">
-          <h2 className="text-2xl font-bold tracking-tight text-on-hero sm:text-3xl">
+          <h2 className="text-xl font-bold tracking-tight text-on-hero sm:text-2xl">
             {school?.name ?? 'Pick your school'}
           </h2>
-          <p className="mt-1 text-[15px] font-semibold text-hero-muted">
+          <p className="mt-0.5 text-[13px] font-semibold text-hero-muted">
             {catalog && schoolSlug
               ? `${courses.length} courses · ${courses.reduce((n, c) => n + c.questionCount, 0).toLocaleString()} questions`
               : 'Course content lands as it is harvested'}
@@ -803,37 +805,36 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
         </div>
         <div className="relative z-10 flex flex-col gap-2">
           {/* The mobile app's button, verbatim (university_home_screen.dart):
-              52px tall, full width, radius 10, Icons.school, and the
+              full width, radius 10, Icons.school, and the
               "Open your school desk" label once a school is picked. */}
           <Link
             href={`/university/${slug}`}
-            className="flex h-[52px] w-full items-center justify-center gap-2 rounded-[10px] bg-hero-cta text-[15px] font-semibold text-on-hero-cta transition-transform active:scale-[0.98]"
+            className="flex h-11 w-full items-center justify-center gap-2 rounded-[10px] bg-hero-cta text-[14px] font-semibold text-on-hero-cta transition-transform active:scale-[0.98]"
           >
-            <span className="material-symbols-outlined text-[20px]">school</span>
+            <span className="material-symbols-outlined text-[18px]">school</span>
             {schoolSlug ? 'Open your school desk' : 'Pick School'}
           </Link>
         </div>
       </section>
 
       {/* Active courses chips ------------------------------------------- */}
+      {/* 2026-10-14 founder pass: the floating chips shrink — tighter
+          pills, no scale pop on the first one, so the strip stays one
+          calm row under the hero. */}
       {courses.length > 0 && (
-        <section className="mt-2">
+        <section className="mt-1">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-semibold text-on-surface">Active Courses</h3>
             <Link href={`/university/${slug}`} className="p-2 text-[13px] text-on-surface-variant hover:opacity-70">
               View all
             </Link>
           </div>
-          <div className="no-scrollbar -mx-4 flex items-center gap-2 overflow-x-auto px-4 pb-1 pt-2">
-            {courses.slice(0, 8).map((c, i) => (
+          <div className="no-scrollbar -mx-4 flex items-center gap-1.5 overflow-x-auto px-4 pb-1 pt-1.5">
+            {courses.slice(0, 10).map((c) => (
               <Link
                 key={c.slug}
                 href={`/university/${slug}/${c.slug}`}
-                className={`whitespace-nowrap rounded-full border-2 px-6 py-2 text-sm transition ${
-                  i === 0
-                    ? 'scale-105 border-outline-variant bg-selection-blue font-semibold text-on-surface shadow-[0_3px_0_0_var(--color-outline-variant)]'
-                    : 'border-outline-variant/70 bg-surface-container-low text-on-surface-variant hover:bg-surface-variant'
-                }`}
+                className="whitespace-nowrap rounded-full border-2 border-outline-variant/70 bg-surface-container-low px-3.5 py-1 text-[12px] font-semibold text-on-surface-variant transition hover:bg-surface-variant active:translate-y-[1px]"
               >
                 {c.code}
               </Link>

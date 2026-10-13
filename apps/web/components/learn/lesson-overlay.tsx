@@ -60,6 +60,11 @@ export function LessonOverlay({
   // updated live when a completion pays back the economy.
   const [hearts, setHearts] = useState<number | null>(null);
   const startedRef = useRef(Date.now());
+  // The quiet self-reload (founder: "remove retry"): when a lesson
+  // fails to load the overlay retries ITSELF a few times before it
+  // ever shows a final error — no button for the scholar to press.
+  const [reloadTick, setReloadTick] = useState(0);
+  const errorRetries = useRef(0);
 
   useEffect(() => {
     let live = true;
@@ -96,10 +101,18 @@ export function LessonOverlay({
       } catch {
         if (!live) return;
         setPhase('error');
+        if (errorRetries.current < 4) {
+          errorRetries.current += 1;
+          window.setTimeout(() => {
+            if (!live) return;
+            setPhase('loading');
+            setReloadTick((t) => t + 1);
+          }, 5000);
+        }
       }
     })();
     return () => { live = false; };
-  }, [mode, topicId, courseId, unit]);
+  }, [mode, topicId, courseId, unit, reloadTick]);
 
   // Rotating loading copy (Supreme touch).
   useEffect(() => {
@@ -228,13 +241,13 @@ export function LessonOverlay({
           </div>
         )}
 
-        {/* ── Error ── */}
+        {/* ── Error (final, after the quiet self-retries) ── */}
         {phase === 'error' && (
           <div className="flex h-full flex-col items-center justify-center gap-3 py-24 text-center">
             <span className="material-symbols-outlined text-[44px] text-error">cloud_off</span>
             <p className="text-[15px] font-extrabold text-on-surface">This lesson could not load</p>
-            <p className="max-w-sm text-[13px] text-on-surface-variant">The generator may be busy — try again in a few seconds. Everything else on your account is safe.</p>
-            <button type="button" onClick={() => window.location.reload()} className="key-btn bg-primary text-white">Try again</button>
+            <p className="max-w-sm text-[13px] text-on-surface-variant">The generator may be busy — close and reopen in a few seconds. Everything else on your account is safe.</p>
+            <button type="button" onClick={onClose} className="key-btn bg-primary text-white">Back to my course</button>
           </div>
         )}
 

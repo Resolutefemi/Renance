@@ -3,21 +3,27 @@
 /**
  * Feed — the Renance social feed (founder directive 2026-10-14: "the
  * major update feeds just like Duolingo feeds that people interact
- * with"). Two voices interleave by time:
+ * with"). THE PLATFORM'S VOICE ONLY (founder directive 2026-10-14,
+ * second pass: "remove post from the feed, users should not be able
+ * to write post themselves" — exactly how the real Duolingo feed
+ * works, stories are written BY the app, never by scholars):
  *
  *   · MILESTONE posts the platform writes on the student's behalf —
  *     "just hit a 400-day streak 🔥", "scored 360 in JAMB 🎯", "reached
  *     the Platinum League 🏆", "won an arena duel ⚔️" — each written
  *     once, ever, by the study-api's milestone hooks.
- *   · USER posts the scholar writes themselves with the composer.
  *
- * Every post is interactive: hearts (likes), comments, and a Share
+ * Every story is interactive: hearts (likes), comments, and a Share
  * action that fires the native share sheet (or copies a link) so a
  * moment can travel to friends on social media like a card. Author
  * rows open the scholar's public profile at /u/{username}.
+ *
+ * No Retry button anywhere: when the connection drops the feed shows
+ * its friendly empty face and quietly re-syncs itself a few seconds
+ * later (founder: "remove retry").
  */
 
-import { FormEvent, useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import PageBar from '@/components/page-bar';
@@ -30,8 +36,6 @@ import {
   type SocialComment,
   type SocialPost,
   addComment,
-  createPost,
-  deletePost,
   fetchComments,
   fetchFeed,
   milestoneVisual,
@@ -42,10 +46,7 @@ import {
 export default function FeedPage() {
   const router = useRouter();
   const [posts, setPosts] = useState<SocialPost[] | null>(null);
-  const [error, setError] = useState('');
-  const [draft, setDraft] = useState('');
-  const [posting, setPosting] = useState(false);
-  const [pageError, setPageError] = useState('');
+  const [offline, setOffline] = useState(false);
   const [busy, setBusy] = useState('');
   const [commentsFor, setCommentsFor] = useState<number | null>(null);
   const [comments, setComments] = useState<SocialComment[]>([]);
@@ -54,10 +55,18 @@ export default function FeedPage() {
   const sentinel = useRef<HTMLDivElement | null>(null);
 
   const load = useCallback(() => {
-    setError('');
     fetchFeed()
-      .then((r) => setPosts(r.posts))
-      .catch(() => setError('The feed could not load. Check your connection, then retry.'));
+      .then((r) => {
+        setPosts(r.posts);
+        setOffline(false);
+      })
+      .catch(() => {
+        // No dead-end error card (founder: "remove retry"): keep
+        // whatever is on screen, mark the feed as offline and let the
+        // quiet re-sync below bring it back.
+        setPosts((cur) => cur ?? []);
+        setOffline(true);
+      });
   }, []);
 
   useEffect(() => {
@@ -67,6 +76,14 @@ export default function FeedPage() {
     }
     load();
   }, [load, router]);
+
+  // The quiet re-sync: while offline, poll every 8s until the feed
+  // answers. No button to press — the page heals itself.
+  useEffect(() => {
+    if (!offline) return;
+    const t = window.setInterval(load, 8000);
+    return () => window.clearInterval(t);
+  }, [offline, load]);
 
   // Infinite scroll: one more page whenever the sentinel enters view.
   useEffect(() => {
@@ -95,38 +112,6 @@ export default function FeedPage() {
   function flash(msg: string) {
     setToast(msg);
     window.setTimeout(() => setToast(''), 2200);
-  }
-
-  async function submitPost(e: FormEvent) {
-    e.preventDefault();
-    const body = draft.trim();
-    if (!body || posting) return;
-    setPosting(true);
-    setPageError('');
-    try {
-      const { id } = await createPost(body);
-      setDraft('');
-      // Optimistic prepend; the next pull reconciles.
-      setPosts((cur) => [
-        {
-          id,
-          author: null as unknown as SocialPost['author'],
-          kind: 'user',
-          body,
-          likes: 0,
-          comments: 0,
-          likedByMe: false,
-          mine: true,
-          createdAtMs: Date.now(),
-        },
-        ...(cur ?? []),
-      ]);
-      load();
-    } catch (err) {
-      setPageError(err instanceof Error ? err.message.replace('social: ', '') : 'Could not post');
-    } finally {
-      setPosting(false);
-    }
   }
 
   async function like(post: SocialPost) {
@@ -198,20 +183,6 @@ export default function FeedPage() {
     }
   }
 
-  async function remove(post: SocialPost) {
-    setBusy(`del-${post.id}`);
-    try {
-      await deletePost(post.id);
-      setPosts((cur) => (cur ?? []).filter((p) => p.id !== post.id));
-    } catch {
-      flash('Could not delete');
-    } finally {
-      setBusy('');
-    }
-  }
-
-  const me = getStoredUser();
-
   return (
     <div className="min-h-screen bg-background md:pl-[var(--rail-w)]">
       <SideNav />
@@ -223,54 +194,20 @@ export default function FeedPage() {
       <PageBar title="Feed" backHref="/dashboard" />
 
       <main className="mx-auto w-full max-w-2xl px-4 pb-28 pt-4">
-        {/* Composer ---------------------------------------------------- */}
-        <form onSubmit={submitPost} className="learn-tile flex flex-col gap-3 rounded-2xl border-2 border-outline-variant bg-card p-4">
-          <div className="flex items-start gap-3">
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-[15px] font-bold text-on-primary">
-              {(me?.username ?? 'R').slice(0, 1).toUpperCase()}
-            </span>
-            <textarea
-              value={draft}
-              onChange={(e) => setDraft(e.target.value.slice(0, 500))}
-              placeholder="Share a win, a struggle, a tip…"
-              rows={draft.length > 90 ? 4 : 2}
-              className="min-h-[52px] w-full resize-none rounded-xl bg-surface-container px-3.5 py-2.5 text-[14.5px] text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/40"
-            />
-          </div>
-          {pageError && (
-            <p className="rounded-lg bg-error-container px-3 py-2 text-[12.5px] text-on-error-container">{pageError}</p>
-          )}
-          <div className="flex items-center justify-between">
-            <span className="font-mono text-[11px] text-on-surface-variant">{draft.length}/500</span>
-            <button
-              type="submit"
-              disabled={!draft.trim() || posting}
-              className="key-btn flex items-center gap-1.5 bg-primary px-5 text-[13.5px] text-white disabled:opacity-40"
-            >
-              {posting ? 'Posting…' : 'Post'}
-            </button>
-          </div>
-        </form>
-
         {/* Load state -------------------------------------------------- */}
-        {error && (
-          <div className="learn-tile mt-4 flex flex-col items-center gap-3 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-4 py-10 text-center">
-            <span className="material-symbols-outlined text-[34px] text-on-surface-variant">wifi_off</span>
-            <p className="text-[13.5px] font-bold text-on-surface-variant">{error}</p>
-            <button type="button" onClick={load} className="key-btn bg-primary text-white">Retry</button>
-          </div>
-        )}
-        {!posts && !error && (
-          <div className="mt-4 flex justify-center py-10"><LogoActivityIndicator /></div>
+        {!posts && (
+          <div className="flex justify-center py-10"><LogoActivityIndicator /></div>
         )}
 
         {/* The feed ---------------------------------------------------- */}
         {posts && posts.length === 0 && (
           <div className="learn-tile mt-4 flex flex-col items-center gap-2 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-4 py-12 text-center">
             <span className="material-symbols-outlined text-[36px] text-primary">newspaper</span>
-            <p className="text-[15px] font-black text-on-surface">The feed is waiting for its first story</p>
+            <p className="text-[15px] font-black text-on-surface">
+              {offline ? 'Finding your feed…' : 'The feed is waiting for its first story'}
+            </p>
             <p className="max-w-xs text-[12.5px] font-bold text-on-surface-variant">
-              Streaks, big scores, league promotions and arena wins show up here automatically. Or write the first post yourself.
+              Streaks, big scores, league promotions and arena wins show up here automatically as you study.
             </p>
           </div>
         )}
@@ -312,17 +249,6 @@ export default function FeedPage() {
                   )}
                   <p className="text-[11.5px] font-bold text-on-surface-variant">{timeAgo(post.createdAtMs)}</p>
                 </div>
-                {post.mine && (
-                  <button
-                    type="button"
-                    onClick={() => void remove(post)}
-                    disabled={busy === `del-${post.id}`}
-                    aria-label="Delete post"
-                    className="flex h-8 w-8 items-center justify-center rounded-full text-outline transition hover:bg-surface-container hover:text-error"
-                  >
-                    <span className="material-symbols-outlined text-[18px]">delete</span>
-                  </button>
-                )}
               </div>
               <p className="whitespace-pre-wrap px-4 py-3 text-[15px] font-semibold leading-relaxed text-on-surface">
                 {post.body}
