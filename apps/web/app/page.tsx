@@ -379,7 +379,7 @@ export default function Landing() {
               </div>
               <Link
                 href="/subjects/"
-                className="shrink-0 text-sm font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                className="shrink-0 rounded-full bg-white px-5 py-2.5 text-sm font-extrabold text-[#111c2d] shadow-[0_4px_0_0_rgba(0,0,0,0.35)] transition hover:bg-white/90 active:translate-y-[2px] active:shadow-[0_2px_0_0_rgba(0,0,0,0.35)]"
               >
                 See full subject coverage →
               </Link>
@@ -413,7 +413,7 @@ export default function Landing() {
               ].map((b) => (
                 <div
                   key={b.body}
-                  className="rounded-2xl bg-white/[0.06] p-5 ring-1 ring-white/10 backdrop-blur-sm transition hover:bg-white/[0.1]"
+                  className="rounded-2xl bg-white/[0.06] p-5 ring-1 ring-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.07),0_3px_0_0_rgba(0,0,0,0.30)] transition hover:bg-white/[0.1]"
                 >
                   <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/60">
                     {b.body}
@@ -460,19 +460,19 @@ export default function Landing() {
               <div className="flex shrink-0 flex-wrap gap-3">
                 <Link
                   href="/register/?audience=school"
-                  className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#111c2d] transition hover:bg-white/90"
+                  className="rounded-full bg-white px-6 py-3 text-sm font-extrabold text-[#111c2d] shadow-[0_4px_0_0_rgba(0,0,0,0.35)] transition hover:bg-white/90 active:translate-y-[2px] active:shadow-[0_2px_0_0_rgba(0,0,0,0.35)]"
                 >
                   Register your school
                 </Link>
                 <Link
                   href="/school/check/"
-                  className="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                  className="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white shadow-[0_4px_0_0_rgba(0,0,0,0.28)] transition hover:bg-white/10 active:translate-y-[2px] active:shadow-[0_2px_0_0_rgba(0,0,0,0.28)]"
                 >
                   Check a result PIN
                 </Link>
                 <Link
                   href="/for-schools/"
-                  className="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                  className="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white shadow-[0_4px_0_0_rgba(0,0,0,0.28)] transition hover:bg-white/10 active:translate-y-[2px] active:shadow-[0_2px_0_0_rgba(0,0,0,0.28)]"
                 >
                   Explore Renance for Schools
                 </Link>
@@ -483,10 +483,10 @@ export default function Landing() {
               {SCHOOL_FEATURES.map((f) => (
                 <div
                   key={f.title}
-                  className="rounded-2xl bg-white/[0.06] p-5 ring-1 ring-white/10 backdrop-blur-sm transition hover:bg-white/[0.1]"
+                  className="rounded-2xl bg-white/[0.06] p-5 ring-1 ring-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.07),0_3px_0_0_rgba(0,0,0,0.30)] transition hover:bg-white/[0.1]"
                 >
                   <span
-                    className="chip-icon material-symbols-outlined h-10 w-10 rounded-xl bg-white text-[#111c2d]"
+                    className="chip-icon material-symbols-outlined h-10 w-10 rounded-xl bg-white text-[#111c2d] shadow-[0_3px_0_0_rgba(0,0,0,0.35)]"
                     aria-hidden
                   >
                     {f.icon}
@@ -642,7 +642,7 @@ export default function Landing() {
                   {['Ch 1-3', 'Ch 4-6', 'Ch 7-9', 'Ch 10-12'].map((c) => (
                     <span
                       key={c}
-                      className="rounded-xl bg-white/[0.06] px-2 py-2.5 text-center text-[11px] font-semibold text-white/75 ring-1 ring-white/10"
+                      className="rounded-xl bg-white/[0.06] px-2 py-2.5 text-center text-[11px] font-semibold text-white/75 ring-1 ring-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.07),0_3px_0_0_rgba(0,0,0,0.30)]"
                     >
                       {c}
                     </span>
@@ -724,7 +724,7 @@ export default function Landing() {
                 >
                   Create free account
                 </Link>
-                <OpenAppButton className="hero-cta-primary !bg-white !bg-none !text-[#111c2d]" />
+                <OpenAppButton className="hero-cta-primary hero-cta-white !bg-white !bg-none !text-[#111c2d]" />
               </div>
               <p className="mt-5 font-mono text-xs text-white/50">
                 Android · iOS · Windows · macOS · Web

@@ -29,6 +29,7 @@ import { aiChat, aiConfigured } from '@/lib/ai';
 import { QText, apiImg } from '@/lib/qtext';
 import { isSaved, toggleSave } from '@/lib/saved-questions';
 import { findEverydayScenario } from '@/lib/scenarios';
+import { RenanceMark } from '@/components/renance-logo';
 
 export interface ExplanationData {
   questionId: string;
@@ -479,7 +480,7 @@ export function AiExplanationSheet({
               <p className="rounded-xl bg-error-container px-4 py-3 text-[13.5px] text-on-error-container">{error}</p>
             ) : (
               <div className="flex items-center gap-3 py-6 text-on-surface-variant">
-                <span className="material-symbols-outlined animate-spin text-[22px]">progress_activity</span>
+                <RenanceMark size={26} state="busy" />
                 <span className="text-sm">Thinking through the solution…</span>
               </div>
             )}

@@ -17,6 +17,7 @@
 
 import { useState, type MouseEvent, type ReactNode } from 'react';
 import { openPdfAsset } from '@/lib/asset-crypto';
+import { RenanceMark } from '@/components/renance-logo';
 
 type Status = 'idle' | 'working' | 'error';
 
@@ -61,8 +62,8 @@ export function PdfLink({
     >
       {children}
       {status === 'working' && (
-        <span className="ml-2 flex shrink-0 items-center text-on-surface-variant">
-          <span className="material-symbols-outlined animate-spin text-[20px]">progress_activity</span>
+        <span className="ml-2 flex shrink-0 items-center">
+          <RenanceMark size={18} state="busy" />
         </span>
       )}
       {status === 'error' && (

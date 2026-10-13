@@ -283,37 +283,77 @@ body {
 }
 
 /* ------------------------------------------------------------------ */
-/* Renance logomark animation (ADR: no generic spinners, ever).        */
-/* The mark breathes while orbiting arc segments shift opacities,     */
-/* idle / busy / grading states.                                       */
+/* Renance logomark - 3D FLAT keycap (founder directive 2026-10-13,    */
+/* the Supreme splash pass). The R sits on a chunky app-icon tile:     */
+/* solid brand face, extruded darker bottom edge, soft inner top       */
+/* highlight. Idle it is the logo; busy it floats (Supreme splash      */
+/* motion). Sizes scale via --mark-size; the edge caps at 6px so the   */
+/* 22px in-button mark never drowns. No generic spinners, ever.        */
 /* ------------------------------------------------------------------ */
 
-@keyframes renance-breathe {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(0.94); opacity: 0.72; }
+.renance-mark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 26%;
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--color-primary) 86%, #ffffff) 0%,
+    var(--color-primary) 58%,
+    color-mix(in srgb, var(--color-primary) 90%, #000000) 100%);
+  box-shadow:
+    0 max(3px, min(calc(var(--mark-size, 44px) * 0.11), 6px)) 0
+      color-mix(in srgb, var(--color-primary) 62%, #000000),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    0 14px 22px -10px rgba(17, 28, 45, 0.4);
 }
 
-@keyframes renance-orbit {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+/* White keycap + navy R for dark panels (landing final CTA). */
+.renance-mark-inverse {
+  background: linear-gradient(180deg, #ffffff 0%, #f0f0f3 100%);
+  box-shadow:
+    0 max(3px, min(calc(var(--mark-size, 44px) * 0.11), 6px)) 0
+      color-mix(in srgb, #ffffff 42%, #0a1630),
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    0 14px 22px -10px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes renance-arc-1 {
-  0%, 100% { opacity: 1; }
-  33% { opacity: 0.15; }
-  66% { opacity: 0.45; }
+.renance-mark-glyph {
+  width: 62%;
+  height: 62%;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 0 rgba(17, 28, 45, 0.18));
+  pointer-events: none;
+  user-select: none;
+}
+.renance-mark-inverse .renance-mark-glyph { filter: drop-shadow(0 1px 0 rgba(17, 28, 45, 0.08)); }
+
+/* busy: the Supreme splash float - the keycap gently hovers. */
+.renance-mark-busy { animation: renance-float 2.2s ease-in-out infinite; }
+@keyframes renance-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(min(calc(var(--mark-size, 44px) * -0.09), -6px)); }
 }
 
-@keyframes renance-arc-2 {
-  0%, 100% { opacity: 0.45; }
-  33% { opacity: 1; }
-  66% { opacity: 0.15; }
+/* The splash column: keycap + wordmark + caption (LogoActivityIndicator). */
+.renance-splash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
 }
-
-@keyframes renance-arc-3 {
-  0%, 100% { opacity: 0.15; }
-  33% { opacity: 0.45; }
-  66% { opacity: 1; }
+.renance-splash-word {
+  font-size: 1.45rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--color-primary);
+}
+.renance-splash-caption {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-on-surface-variant, var(--muted));
 }
 
 @keyframes renance-rise {
@@ -333,12 +373,6 @@ body {
   100% { transform: translateX(100%); }
 }
 
-.renance-breathe { animation: renance-breathe 1.8s ease-in-out infinite; }
-.renance-breathe-fast { animation: renance-breathe 0.9s ease-in-out infinite; }
-.renance-orbit { animation: renance-orbit 2.4s linear infinite; transform-origin: center; }
-.renance-arc-1 { animation: renance-arc-1 1.5s ease-in-out infinite; }
-.renance-arc-2 { animation: renance-arc-2 1.5s ease-in-out infinite; }
-.renance-arc-3 { animation: renance-arc-3 1.5s ease-in-out infinite; }
 .renance-rise { animation: renance-rise 0.45s ease-out both; }
 
 /* ------------------------------------------------------------------ */
@@ -1539,4 +1573,226 @@ a.bg-primary .material-symbols-outlined,
 button.bg-hero-cta .material-symbols-outlined,
 a.bg-hero-cta .material-symbols-outlined {
   font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ==================================================================
+   TACTILE HERO CARDS (dashboard focus heroes, founder polish pass
+   2026-10-13). The desk heroes stop being flat sheets and become
+   chunky tactile panels: 24px squircle, 2px outline, a hard 4px
+   extruded bottom edge and an inner top highlight - the same physics
+   as the buttons, at card scale. Edges derive from the LIVE hero
+   token via color-mix, so the light desk (white hero), the dark tier
+   (#1c2638) and the Mixed tier navy band (#111c2d) all get a correct
+   ledge for free, and the school portals keep their own tokens.
+   Applied as one class on the three focus heroes (default, Post
+   UTME, University/School Desk).
+   ================================================================== */
+
+.hero-card {
+  border-radius: 24px;
+  border: 2px solid color-mix(in srgb, var(--color-hero) 82%, var(--color-on-hero) 18%);
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-hero) 76%, #000),
+    0 16px 32px -20px rgba(17, 28, 45, 0.45),
+    inset 0 2px 0 color-mix(in srgb, var(--color-on-hero) 12%, transparent);
+}
+
+/* The hero progress rail goes tactile: recessed track, chunky fill
+   with a gloss line on top (the Duolingo progress-bar look). Markup
+   supplies the spans; this only pins the sizes that Tailwind finds
+   awkward to express inline. */
+.hero-progress {
+  height: 12px;
+  border-radius: 9999px;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.14), inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+}
+.hero-progress-fill {
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.12);
+}
+.hero-progress-fill > .hero-progress-gloss {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  top: 2px;
+  height: 3px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* ==================================================================
+   LANDING TACTILE SURFACES (founder polish pass 2026-10-13).
+   The glassmorphism kit goes 3D flat: frosted blur retires, text
+   cards stand on white faces with 2px swan outlines and hard 4px
+   extruded ledges - the same keycap physics as every button. Faces
+   and edges read the live tokens, so the dark tier and the school
+   portals re-skin without extra rules. These classes are marketing
+   surfaces only (landing, about, for-schools, privacy, guide) - the
+   school management portal does not use them.
+   Placed last: must out-cascade the original glass definitions.
+   ================================================================== */
+
+/* --- glass primitives -> tactile cards --- */
+.glass {
+  background: var(--color-card, #ffffff);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border: 2px solid var(--color-outline-variant, #e5e5e5);
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+}
+[data-theme='dark'] .glass {
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 48%, #000),
+    inset 0 2px 0 rgba(240, 243, 255, 0.08);
+}
+.glass-hover:hover {
+  transform: translateY(-3px);
+  background: var(--color-card, #ffffff);
+  box-shadow:
+    0 6px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000),
+    0 22px 40px -22px rgba(17, 28, 45, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* --- floating hero cards --- */
+.glass-float {
+  background: var(--color-card, #ffffff);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border: 2px solid var(--color-outline-variant, #e5e5e5);
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+}
+[data-theme='dark'] .glass-float {
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 48%, #000),
+    inset 0 2px 0 rgba(240, 243, 255, 0.08);
+}
+.glass-float-icon {
+  box-shadow:
+    0 3px 0 0 rgba(17, 28, 45, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* --- stats band --- */
+.stat-glass {
+  background: var(--color-card, #ffffff);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border: 2px solid var(--color-outline-variant, #e5e5e5);
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+}
+/* the rainbow top line is glass-era; the ledge replaces it */
+.stat-glass::before { content: none; }
+[data-theme='dark'] .stat-glass {
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 48%, #000),
+    inset 0 2px 0 rgba(240, 243, 255, 0.08);
+}
+
+/* --- feature / step text cards --- */
+.feature-card {
+  background: var(--color-card, #ffffff);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border: 2px solid var(--color-outline-variant, #e5e5e5);
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+}
+[data-theme='dark'] .feature-card {
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 48%, #000),
+    inset 0 2px 0 rgba(240, 243, 255, 0.08);
+}
+.feature-card:hover {
+  transform: translateY(-3px);
+  background: var(--color-card, #ffffff);
+  box-shadow:
+    0 6px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000),
+    0 22px 40px -22px rgba(17, 28, 45, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+}
+.feature-icon,
+.feature-icon.material-symbols-outlined {
+  border-radius: 0.9rem;
+  box-shadow:
+    0 4px 0 0 rgba(17, 28, 45, 0.28),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3);
+}
+.feature-card:hover .feature-icon { transform: scale(1.08) rotate(-6deg); }
+
+/* --- eyebrow chips --- */
+.eyebrow {
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  box-shadow: 0 3px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000);
+}
+
+/* --- marquee chips --- */
+.marquee-chip {
+  background: var(--color-card, #ffffff);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border: 2px solid var(--color-outline-variant, #e5e5e5);
+  box-shadow: 0 3px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000);
+  font-weight: 700;
+}
+
+/* --- secondary CTA: the white tactile key --- */
+.hero-cta-secondary {
+  background: var(--color-card, #ffffff);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border: 2px solid var(--color-outline-variant, #e5e5e5);
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+  font-weight: 800;
+}
+.hero-cta-secondary:hover {
+  transform: translateY(-1px);
+  background: var(--color-card, #ffffff);
+}
+.hero-cta-secondary:active {
+  transform: translateY(2px);
+  box-shadow:
+    0 2px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* --- dark panels: extruded ledges + score pills --- */
+.cbt-panel {
+  box-shadow:
+    0 6px 0 0 rgba(0, 0, 0, 0.32),
+    0 30px 80px -30px rgba(17, 28, 45, 0.65),
+    inset 0 2px 0 rgba(240, 243, 255, 0.1);
+}
+.final-cta {
+  box-shadow:
+    0 6px 0 0 rgba(0, 0, 0, 0.35),
+    0 40px 90px -35px rgba(17, 28, 45, 0.7),
+    inset 0 2px 0 rgba(240, 243, 255, 0.12);
+}
+.cbt-score-pill {
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* The final CTA's white keycap variant: the default hero-cta edge is
+   derived from the green token, which reads wrong under a white face -
+   this swaps it to the navy-tinted gray ledge. */
+.hero-cta-primary.hero-cta-white {
+  border-bottom-color: color-mix(in srgb, #ffffff 46%, #0a1630) !important;
+}
+
+/* the keycap mark joins the reduced-motion contract */
+@media (prefers-reduced-motion: reduce) {
+  .renance-mark-busy { animation: none !important; }
 }

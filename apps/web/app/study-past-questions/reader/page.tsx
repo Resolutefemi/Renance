@@ -18,6 +18,7 @@
 
 import { Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
+import { RenanceMark } from '@/components/renance-logo';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { fetchBankBundle, subjectName, type Bundle, type BundleQuestion } from '@/lib/exams';
 import { QText, apiImg } from '@/lib/qtext';
@@ -157,7 +158,7 @@ function ReaderScreen() {
   if (!bundle) {
     return (
       <Centered>
-        <span className="material-symbols-outlined animate-spin text-3xl text-on-surface-variant">progress_activity</span>
+        <RenanceMark size={44} state="busy" />
         <p className="mt-2 text-sm text-on-surface-variant">Opening the questions…</p>
       </Centered>
     );
