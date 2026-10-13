@@ -244,10 +244,10 @@ export function QuizPlayer({ data }: { data: StudioQuizData }) {
       {submitted ? (
         <div className="flex flex-col gap-3">
           <div className="rounded-2xl bg-primary px-5 py-4 text-center text-on-primary">
-            <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-on-primary/60">Your score</p>
+            <p className="font-mono text-[10px] font-bold uppercase tracking-[0.24em] text-on-primary/90">Your score</p>
             <p className="mt-1 text-3xl font-bold tracking-tight">
               {score}
-              <span className="text-base text-on-primary/60"> / {questions.length}</span>
+              <span className="text-base font-semibold text-on-primary/90"> / {questions.length}</span>
             </p>
           </div>
           {/* Review navigation (founder directive, 2026-10-02): Previous

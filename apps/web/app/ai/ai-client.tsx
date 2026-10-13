@@ -318,17 +318,22 @@ export default function AiClient() {
       <div className="flex min-h-dvh flex-col bg-surface-container-lowest">
         <PageBar title="Renance AI" backHref="/dashboard" />
         <main className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center gap-4 px-6 pb-28">
-          <div className="rounded-2xl bg-primary px-6 py-8 text-on-primary">
-            <span className="material-symbols-outlined text-[28px]">smart_toy</span>
-            <h1 className="mt-2 text-xl font-bold tracking-tight">Renance AI Studio</h1>
-            <p className="mt-2 text-[13px] leading-relaxed text-on-primary/75">
+          {/* 2026-10-13 founder pass: the flat green slab becomes the
+              Supreme gradient hero (primary -> treefrog-dark, hard
+              extruded ledge) and the small copy runs SOLID white -
+              white/75-on-green was the exact "small text not visible on
+              big cards" complaint. */}
+          <div className="rounded-2xl bg-gradient-to-br from-primary to-treefrog-dark px-5 py-6 text-white shadow-[0_4px_0_0_color-mix(in_srgb,var(--color-primary)_62%,#000)]">
+            <span className="material-symbols-outlined text-[26px]">smart_toy</span>
+            <h1 className="mt-2 text-xl font-extrabold tracking-tight">Renance AI Studio</h1>
+            <p className="mt-2 text-[13px] font-semibold leading-relaxed text-white/95">
               Chats, folders and memories, quizzes, notes, notebooks and lesson notes - grounded
               on {stats ? stats.questions.toLocaleString() : '235,110+'} real past questions.
             </p>
           </div>
           <Link
             href="/login"
-            className="rounded-xl bg-primary py-3.5 text-center text-[14px] font-semibold text-on-primary"
+            className="rounded-xl bg-macaw py-3.5 text-center text-[14px] font-extrabold text-white"
           >
             Sign in to start
           </Link>
@@ -578,14 +583,16 @@ export default function AiClient() {
               <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-3 px-4 py-4">
                 {messages.length === 0 && !busy && (
                   <div className="renance-rise">
-                    <div className="rounded-2xl bg-primary px-6 py-7 text-on-primary">
+                    {/* Supreme gradient hero + solid white copy (see the
+                        signed-out card note above). */}
+                    <div className="rounded-2xl bg-gradient-to-br from-primary to-treefrog-dark px-5 py-5 text-white shadow-[0_4px_0_0_color-mix(in_srgb,var(--color-primary)_62%,#000)]">
                       <div className="flex items-center gap-2.5">
-                        <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-card/10">
+                        <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/15 shadow-[inset_0_1px_0_rgba(255,255,255,0.35)]">
                           <AiSparkle className="h-5 w-5" />
                         </span>
-                        <h1 className="text-lg font-bold tracking-tight">Renance AI Studio</h1>
+                        <h1 className="text-lg font-extrabold tracking-tight">Renance AI Studio</h1>
                       </div>
-                      <p className="mt-1.5 text-[13px] leading-relaxed text-on-primary/75">
+                      <p className="mt-2 text-[13px] font-semibold leading-relaxed text-white/95">
                         The study companion trained on Renance itself
                         {stats ? ` - ${stats.questions.toLocaleString()} real past questions across ${stats.exams} exam banks` : ' - 235,110+ real past questions'}
                         , the scheme of work and lesson notes. Ask it to teach, research past

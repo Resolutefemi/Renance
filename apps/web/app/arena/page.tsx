@@ -313,7 +313,7 @@ function ArenaInner() {
                 <span className={`h-2 w-2 rounded-full ${phase === 'over' ? 'bg-on-primary/40' : 'animate-pulse bg-error'}`} />
                 {phase === 'over' ? 'Full time' : 'Live duel'}
               </span>
-              <span className="font-mono text-[11px] uppercase tracking-widest text-on-primary/60">
+              <span className="font-mono text-[11px] font-semibold uppercase tracking-widest text-on-primary/90">
                 {focus} · {packCode}
               </span>
             </div>
@@ -499,7 +499,7 @@ function ArenaInner() {
           <section className="renance-rise relative mt-4 overflow-hidden rounded-2xl bg-primary p-6">
             <span className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-card/5" />
             <span className="absolute -bottom-14 -left-10 h-36 w-36 rounded-full bg-card/5" />
-            <p className="relative font-mono text-[10px] uppercase tracking-[0.3em] text-on-primary/60">
+            <p className="relative font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-on-primary/90">
               {focusLabel(focus)} floor
             </p>
             <h2 className="relative mt-1 text-2xl font-black uppercase tracking-tight text-on-primary">

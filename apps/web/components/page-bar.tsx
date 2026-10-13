@@ -1,9 +1,14 @@
 'use client';
 
 /**
- * PageBar: the back affordance the founder asked for on every page.
- * Sits at the very top LHS: a round back button, the page title, and an
- * optional right slot. Sticky, blurred, same header language as Stitch.
+ * PageBar: the back affordance on every page. Sits at the very top
+ * LHS: a round back button, the page title, and an optional right
+ * slot. Sticky, blurred.
+ *
+ * 2026-10-13 founder pass ("the top navbar is too big, make it normal
+ * and moderate just like supreme.git"): one compact 48px bar at every
+ * breakpoint (was 56/64px), a hard 2px swan rule like the Supreme top
+ * bar, a 36px back key and a calm 15px title.
  */
 
 import { ReactNode } from 'react';
@@ -40,17 +45,17 @@ export default function PageBar({
   }
 
   return (
-    <div className="sticky top-0 z-40 w-full border-b border-outline-variant/40 bg-surface/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-14 w-full max-w-5xl items-center gap-1 px-2 sm:px-4 md:h-16 md:px-6">
+    <div className="sticky top-0 z-40 w-full border-b-2 border-outline-variant bg-surface/90 backdrop-blur-xl">
+      <div className="mx-auto flex h-12 w-full max-w-5xl items-center gap-1 px-2 sm:px-4">
         <button
           type="button"
           onClick={goBack}
           aria-label="Go back"
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-on-surface transition hover:bg-surface-container md:h-11 md:w-11"
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-on-surface transition hover:bg-polar"
         >
           <span className="material-symbols-outlined text-[22px]">arrow_back</span>
         </button>
-        <h1 className="min-w-0 flex-1 truncate text-[15px] font-semibold text-on-surface md:text-[17px]">{title}</h1>
+        <h1 className="min-w-0 flex-1 truncate text-[15px] font-extrabold tracking-tight text-on-surface">{title}</h1>
         {right}
       </div>
     </div>

@@ -247,7 +247,7 @@ export function LandingNav() {
       <nav className="landing-nav-pill" aria-label="Primary">
         <Link href="/" className="landing-nav-brand" onClick={close}>
           <RenanceMark size={30} />
-          <span className="landing-nav-word">Renance</span>
+          <span className="landing-nav-word">renance</span>
         </Link>
 
         <div className="landing-nav-links">

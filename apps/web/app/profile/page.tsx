@@ -299,43 +299,46 @@ export default function ProfilePage() {
             </div>
           </section>
 
-          {/* REN wallet: the coins, the referral code, the exchange */}
-          <section className="rounded-xl bg-primary p-5 text-on-primary shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
+          {/* REN wallet: the coins, the referral code, the exchange.
+              2026-10-13 founder pass: Supreme gradient hero + SOLID
+              white copy - the /70-opacity small text on flat green was
+              unreadable on a card this size. */}
+          <section className="rounded-2xl bg-gradient-to-br from-primary to-treefrog-dark p-5 text-white shadow-[0_4px_0_0_color-mix(in_srgb,var(--color-primary)_62%,#000)]">
             <div className="flex items-center justify-between gap-3">
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-on-primary/70">
+                <p className="font-mono text-[10px] font-bold uppercase tracking-[0.24em] text-white/90">
                   REN wallet
                 </p>
-                <p className="mt-1 text-3xl font-bold tracking-tight">
+                <p className="mt-1 text-3xl font-extrabold tracking-tight">
                   {me.entitlement?.renCoins ?? 0}
-                  <span className="text-base font-medium text-on-primary/70"> REN</span>
+                  <span className="text-base font-bold text-white/90"> REN</span>
                 </p>
               </div>
               <Link
                 href="/pricing"
-                className="inline-flex h-10 shrink-0 items-center gap-1.5 rounded-lg bg-card px-4 text-[13px] font-semibold text-on-surface transition hover:bg-card/90"
+                className="inline-flex h-10 shrink-0 items-center gap-1.5 rounded-xl bg-white px-4 text-[13px] font-extrabold text-on-surface shadow-[0_2px_0_0_rgba(0,0,0,0.25)] transition active:translate-y-[2px] active:shadow-none"
               >
                 Redeem for premium
                 <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
               </Link>
             </div>
             <div className="mt-4 grid grid-cols-2 gap-2 text-[12.5px]">
-              <div className="rounded-lg bg-card/5 px-3 py-2">
-                <p className="font-semibold text-on-primary">+1 REN</p>
-                <p className="text-on-primary/70">every arena duel you win</p>
+              <div className="rounded-lg bg-white/12 px-3 py-2">
+                <p className="font-extrabold text-white">+1 REN</p>
+                <p className="font-semibold text-white/95">every arena duel you win</p>
               </div>
-              <div className="rounded-lg bg-card/5 px-3 py-2">
-                <p className="font-semibold text-on-primary">+3 REN</p>
-                <p className="text-on-primary/70">every friend who signs up with your code</p>
+              <div className="rounded-lg bg-white/12 px-3 py-2">
+                <p className="font-extrabold text-white">+3 REN</p>
+                <p className="font-semibold text-white/95">every friend who signs up with your code</p>
               </div>
             </div>
             {me.entitlement?.referralCode && (
-              <div className="mt-3 flex items-center justify-between gap-3 rounded-lg border border-on-primary/15 px-3 py-2.5">
+              <div className="mt-3 flex items-center justify-between gap-3 rounded-lg border border-white/25 px-3 py-2.5">
                 <div className="min-w-0">
-                  <p className="font-mono text-[10px] uppercase tracking-widest text-on-primary/70">
+                  <p className="font-mono text-[10px] font-bold uppercase tracking-widest text-white/90">
                     Your referral code
                   </p>
-                  <p className="truncate font-mono text-sm font-bold tracking-wider text-on-primary">
+                  <p className="truncate font-mono text-sm font-bold tracking-wider text-white">
                     {me.entitlement.referralCode}
                   </p>
                 </div>
@@ -347,7 +350,7 @@ export default function ProfilePage() {
                     setCopied(true);
                     window.setTimeout(() => setCopied(false), 1800);
                   }}
-                  className="shrink-0 rounded-full border border-on-primary/30 px-3.5 py-1.5 text-[12px] font-semibold text-on-primary transition hover:bg-on-primary/10"
+                  className="shrink-0 rounded-full border-2 border-white/40 px-3.5 py-1.5 text-[12px] font-extrabold text-white transition hover:bg-white/15"
                 >
                   {copied ? 'Link copied' : 'Copy invite link'}
                 </button>

@@ -126,13 +126,16 @@ export default function PaywallModal({ open, onClose, context, entitlement, onRe
             </div>
           ) : catalog.studentBillingEnabled === false ? (
             <>
-              {/* paused billing: everything is open, nothing to buy */}
-              <div className="rounded-xl bg-primary px-5 py-6 text-on-primary">
-                <p className="flex items-center gap-2 text-[15px] font-bold">
+              {/* paused billing: everything is open, nothing to buy.
+                  Supreme gradient hero + solid white copy (founder pass
+                  2026-10-13 - small text must stay readable on big
+                  coloured cards). */}
+              <div className="rounded-xl bg-gradient-to-br from-primary to-treefrog-dark px-5 py-5 text-white shadow-[0_4px_0_0_color-mix(in_srgb,var(--color-primary)_62%,#000)]">
+                <p className="flex items-center gap-2 text-[15px] font-extrabold">
                   <span className="material-symbols-outlined text-[18px]">verified</span>
                   Everything is unlocked right now
                 </p>
-                <p className="mt-2 text-[13px] leading-relaxed text-on-primary/80">
+                <p className="mt-2 text-[13px] font-semibold leading-relaxed text-white/95">
                   Subscriptions are paused - every paper, the AI tutor and
                   every premium perk are open to every student, free. Your
                   coins are safe and keep stacking; spend them the day
@@ -141,7 +144,7 @@ export default function PaywallModal({ open, onClose, context, entitlement, onRe
               </div>
               <button
                 onClick={onClose}
-                className="mt-4 flex h-10 w-full items-center justify-center rounded-full bg-primary text-[13px] font-semibold text-on-primary transition hover:opacity-90"
+                className="mt-4 flex h-10 w-full items-center justify-center rounded-full bg-macaw text-[13px] font-extrabold text-white transition hover:opacity-90"
               >
                 Back to my paper - it&apos;s all open
               </button>
@@ -168,7 +171,7 @@ export default function PaywallModal({ open, onClose, context, entitlement, onRe
                           {p.label}
                         </span>
                         {best && (
-                          <span className="rounded-full bg-primary px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-on-primary">
+                          <span className="rounded-full bg-primary-ink px-2 py-0.5 font-mono text-[9px] font-bold uppercase tracking-wider text-white">
                             best value
                           </span>
                         )}
@@ -192,7 +195,9 @@ export default function PaywallModal({ open, onClose, context, entitlement, onRe
                           )}
                         </ul>
                       )}
-                      <span className="mt-3 flex h-9 items-center justify-center rounded-full bg-primary text-[12.5px] font-semibold text-on-primary transition group-hover:opacity-90">
+                      {/* Blue pay key - money actions wear macaw (founder
+                          2026-10-13), the Supreme pay-button recipe. */}
+                      <span className="mt-3 flex h-9 items-center justify-center rounded-full bg-macaw text-[12.5px] font-extrabold text-white shadow-[0_2px_0_0_var(--color-macaw-dark)] transition group-hover:opacity-90">
                         {catalog.paystackEnabled
                           ? busyPlan === p.code
                             ? 'Opening checkout…'

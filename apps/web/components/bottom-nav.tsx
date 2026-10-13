@@ -1,10 +1,16 @@
 'use client';
 
 /**
- * BottomNav: the Stitch tab bar (Home / Practice / Review / Profile) for
- * phone-width viewports. Hidden from md up, where the PC layout takes
- * over. Active tab fills its icon and grows the 4px dot, exactly like
- * the app and the Stitch export.
+ * BottomNav: the base tab bar (Home / Practice / Review / Profile) for
+ * phone-width viewports. Hidden from md up, where the SideNav takes
+ * over.
+ *
+ * 2026-10-13 founder pass ("make the icons in the base navbar be like
+ * the supreme own"): rebuilt 1:1 on the supreme.git NavButton - a white
+ * bar over a hard 2px swan top rule, compact rounded-xl tab buttons,
+ * and the signature ACTIVE STATE: a light-macaw (#ddf4ff) pill with a
+ * darker macaw icon (#1899d6), gray idle tabs, chunky 10px black
+ * labels. The old dot indicator + fill-on-active treatment is retired.
  */
 
 import Link from 'next/link';
@@ -22,8 +28,8 @@ export default function BottomNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 rounded-t-xl bg-card/90 shadow-[0_-1px_8px_rgba(0,0,0,0.04)] backdrop-blur-xl md:hidden">
-      <div className="flex h-16 items-center justify-between px-4">
+    <nav className="fixed bottom-0 left-0 right-0 z-50 border-t-2 border-outline-variant bg-card md:hidden">
+      <div className="mx-auto flex w-full max-w-lg items-center justify-between px-2 py-1.5">
         {TABS.map((tab) => {
           const active = tab.match != null && pathname === tab.match;
           return (
@@ -31,19 +37,14 @@ export default function BottomNav() {
               key={tab.label}
               href={tab.href}
               aria-current={active ? 'page' : undefined}
-              className={`flex flex-1 flex-col items-center justify-center gap-1 transition-colors ${
-                active ? 'text-primary' : 'text-on-surface-variant'
+              className={`flex min-h-[48px] min-w-[56px] flex-1 flex-col items-center justify-center gap-0.5 rounded-xl px-1.5 py-1 transition-colors ${
+                active
+                  ? 'bg-macaw-light text-macaw-dark'
+                  : 'text-hare hover:text-wolf'
               }`}
             >
-              <span
-                className={`material-symbols-outlined ${active ? 'fill-current' : ''}`}
-              >
-                {tab.icon}
-              </span>
-              <span className="text-[13px] leading-none">{tab.label}</span>
-              <span
-                className={`h-1 w-1 rounded-full ${active ? 'bg-primary' : 'bg-transparent'}`}
-              />
+              <span className="material-symbols-outlined text-[24px]">{tab.icon}</span>
+              <span className="text-[10px] font-extrabold leading-none">{tab.label}</span>
             </Link>
           );
         })}

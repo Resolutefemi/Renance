@@ -42,7 +42,7 @@ export default function PatronPage() {
           PATRON STATUS
         </p>
         <p className="mt-3 text-[28px] font-bold tracking-tight text-on-primary">₦184,000</p>
-        <p className="mt-1.5 text-[15px] text-on-primary/70">unlocked · 46 students supported</p>
+        <p className="mt-1.5 text-[15px] font-semibold text-on-primary/95">unlocked · 46 students supported</p>
         <div className="mt-5 grid grid-cols-2 gap-2.5">
           <button className="h-12 rounded-xl bg-card text-sm font-semibold text-on-surface transition active:scale-[0.98]">
             + Add Funds
