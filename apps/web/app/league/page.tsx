@@ -21,12 +21,17 @@ export default function LeaguePage() {
   const router = useRouter();
   const [board, setBoard] = useState<LeagueBoard | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
 
   const load = useCallback(() => {
-    setError('');
-    setLoading(true);
-    fetchLeague().then(setBoard).catch(() => setError('The league could not load. Check your connection, then retry.')).finally(() => setLoading(false));
+    fetchLeague()
+      .then(setBoard)
+      .catch(() => {
+        // No dead-end error card (founder: "remove retry"): the page
+        // keeps its syncing face and the quiet poll below heals it.
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   useEffect(() => {
@@ -37,20 +42,31 @@ export default function LeaguePage() {
     load();
   }, [load, router]);
 
+  // The quiet re-sync: until the board answers, poll every 8s. The
+  // page heals itself — nothing for the scholar to press.
+  useEffect(() => {
+    if (board) return;
+    const t = window.setInterval(load, 8000);
+    return () => window.clearInterval(t);
+  }, [board, load]);
+
   return (
     <div className="min-h-screen bg-background md:pl-[var(--rail-w)]">
       <SideNav />
       <PageBar title="Leagues" backHref="/dashboard" />
 
       <main className="mx-auto w-full max-w-2xl px-4 pb-28 pt-4">
-        {error && (
-          <div className="learn-tile flex flex-col items-center gap-3 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-4 py-10 text-center">
-            <span className="material-symbols-outlined text-[34px] text-on-surface-variant">wifi_off</span>
-            <p className="text-[13.5px] font-bold text-on-surface-variant">{error}</p>
-            <button type="button" onClick={load} className="key-btn bg-primary text-white">Retry</button>
+        {loading && <div className="h-64 animate-pulse rounded-2xl bg-surface-container" aria-hidden />}
+
+        {!loading && !board && (
+          <div className="learn-tile flex flex-col items-center gap-2 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-4 py-12 text-center">
+            <span className="material-symbols-outlined text-[36px] text-primary">emoji_events</span>
+            <p className="text-[15px] font-black text-on-surface">The league table is syncing…</p>
+            <p className="max-w-xs text-[12.5px] font-bold text-on-surface-variant">
+              Your weekly standings appear the moment the connection is back.
+            </p>
           </div>
         )}
-        {loading && <div className="h-64 animate-pulse rounded-2xl bg-surface-container" aria-hidden />}
 
         {board && (
           <div className="flex flex-col gap-4">

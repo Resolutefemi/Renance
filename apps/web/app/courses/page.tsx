@@ -13,10 +13,16 @@
  *   3. PATH        — the Supreme zig-zag ladder: units, chests, trophy
  *      reviews and the current topic node, opening LessonOverlay.
  *
- * The catalog is focus-aware: JAMB/WAEC/NECO desks see that body's
- * subject roadmaps; university students browse the full tertiary tree
- * (faculty filter). NO level tag anywhere — the founder removed it
- * from the courses list.
+ * THE CATALOG IS HARDCODED (founder directive 2026-10-14: "make sure
+ * the courses list are hard coded and make sure it's working just like
+ * supreme"). The 41 JAMB/WAEC/NECO subjects ride inside the bundle and
+ * the 10,604-course tertiary tree is a static JSON asset — the list is
+ * on screen the instant the tab opens, exactly like the Supreme
+ * reference site, and a backend hiccup can never blank it again. The
+ * API is only asked for the student's OWN list, and that list falls
+ * back to the last cached copy on this device.
+ *
+ * NO level tag anywhere — the founder removed it from the courses list.
  */
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
@@ -28,16 +34,57 @@ import { ProgressBar } from '@/components/learn/bits';
 import { getStoredUser } from '@/lib/session';
 import { useRouter } from 'next/navigation';
 import { api } from '@/lib/api';
+import { withBase } from '@/lib/api';
 import {
   CatalogItem, CoursePath, MyCourse, TopicNode, UnitNode,
-  fetchCatalog, fetchCoursePath, fetchMyCourses, learnBodyFromExams,
+  fetchCoursePath, fetchMyCourses, learnBodyFromExams,
   learnBodyLabel, setActiveCourse, setMyCourses,
 } from '@/lib/learn';
+import { secondaryCatalog } from '@/lib/learn-catalog-secondary';
 
 type Face = 'list' | 'select' | 'path';
 
 interface ProfileLite {
   profile?: { exams?: string[] } | null;
+}
+
+/** The device cache keys: the course list and focus survive outages. */
+const MINE_CACHE_KEY = 'renance.mycourses.v1';
+const BODY_CACHE_KEY = 'renance.learnBody.v1';
+
+function cacheMine(courses: MyCourse[]) {
+  try {
+    window.localStorage.setItem(MINE_CACHE_KEY, JSON.stringify(courses));
+  } catch {
+    /* private mode: the cache is a bonus, never a requirement */
+  }
+}
+
+function readCachedMine(): MyCourse[] | null {
+  try {
+    const raw = window.localStorage.getItem(MINE_CACHE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as MyCourse[];
+    return Array.isArray(parsed) ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
+function cacheBody(body: string) {
+  try {
+    window.localStorage.setItem(BODY_CACHE_KEY, body);
+  } catch {
+    /* same: best effort */
+  }
+}
+
+function readCachedBody(): string {
+  try {
+    return window.localStorage.getItem(BODY_CACHE_KEY) || 'jamb';
+  } catch {
+    return 'jamb';
+  }
 }
 
 export default function CoursesPage() {
@@ -49,29 +96,40 @@ export default function CoursesPage() {
   const [topic, setTopic] = useState<TopicNode | null>(null);
   const [reviewUnit, setReviewUnit] = useState<UnitNode | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
+  const [notice, setNotice] = useState('');
 
-  // Selection state
-  const [catalog, setCatalog] = useState<CatalogItem[]>([]);
-  const [catTotal, setCatTotal] = useState(0);
-  const [catPage, setCatPage] = useState(1);
+  // Selection state — the catalog itself is HARDCODED, only the view
+  // state (query, filter, page) is component state.
+  const [tertiaryTree, setTertiaryTree] = useState<CatalogItem[] | null>(null);
   const [catQuery, setCatQuery] = useState('');
   const [faculty, setFaculty] = useState('All');
-  const [faculties, setFaculties] = useState<string[]>([]);
+  const [catPage, setCatPage] = useState(1);
   const [picked, setPicked] = useState<Set<string>>(new Set());
   const [saving, setSaving] = useState(false);
 
   const boot = useCallback(async () => {
     setLoading(true);
-    setError('');
+    setNotice('');
+    // Focus first: cached instantly, refined by /me when it answers.
+    let nextBody = readCachedBody();
     try {
       const me = await api<ProfileLite>('/me');
-      setBody(learnBodyFromExams(me.profile?.exams));
+      nextBody = learnBodyFromExams(me.profile?.exams);
+      cacheBody(nextBody);
+    } catch {
+      /* offline: the cached focus keeps the right shelf showing */
+    }
+    setBody(nextBody);
+    // The student's own list: API first, device cache as the net.
+    try {
       const list = await fetchMyCourses();
       setMine(list.courses);
+      cacheMine(list.courses);
       setFace(list.courses.length > 0 ? 'list' : 'select');
     } catch {
-      setError('Could not load your courses. Check your connection, then retry.');
+      const cached = readCachedMine();
+      setMine(cached ?? []);
+      setFace(cached && cached.length > 0 ? 'list' : 'select');
     } finally {
       setLoading(false);
     }
@@ -85,35 +143,80 @@ export default function CoursesPage() {
     void boot();
   }, [boot, router]);
 
-  // Catalog loader (selection face)
-  const loadCatalog = useCallback(async (page = 1) => {
-    try {
-      const res = await fetchCatalog({
-        body, q: catQuery, faculty: body === 'tertiary' ? faculty : '', page, pageSize: 24,
+  // ── The hardcoded catalog ────────────────────────────────────────────────
+  // Secondary: in the bundle, zero fetch. Tertiary: one static JSON
+  // pulled once when the tertiary shelf is first shown.
+  const secondaryItems = useMemo<CatalogItem[]>(
+    () =>
+      secondaryCatalog(body).map((s) => ({
+        id: s.id,
+        title: s.title,
+        faculty: 'Senior Secondary',
+        institutionType: learnBodyLabel(body),
+        body,
+        topicCount: s.n,
+        inList: false,
+        learnerCount: 0,
+      })),
+    [body],
+  );
+
+  useEffect(() => {
+    if (body !== 'tertiary' || tertiaryTree) return;
+    let alive = true;
+    fetch(withBase('/learn/tertiary-catalog.json'))
+      .then((r) => r.json())
+      .then((j: { courses: Array<{ i: string; t: string; f: string; y: string; n: number }> }) => {
+        if (!alive) return;
+        setTertiaryTree(
+          j.courses.map((c) => ({
+            id: c.i,
+            title: c.t,
+            faculty: c.f,
+            institutionType: c.y,
+            body: 'tertiary',
+            topicCount: c.n,
+            inList: false,
+            learnerCount: 0,
+          })),
+        );
+      })
+      .catch(() => {
+        if (alive) setTertiaryTree([]);
       });
-      setCatalog((prev) => (page === 1 ? res.items : [...prev, ...res.items]));
-      setCatTotal(res.total);
-      setCatPage(page);
-    } catch {
-      /* keep the old list on failure */
-    }
-  }, [body, catQuery, faculty]);
+    return () => {
+      alive = false;
+    };
+  }, [body, tertiaryTree]);
+
+  const faculties = useMemo(() => {
+    if (!tertiaryTree) return [];
+    const seen = new Set<string>();
+    for (const c of tertiaryTree) if (c.faculty) seen.add(c.faculty);
+    return Array.from(seen).sort();
+  }, [tertiaryTree]);
+
+  const filteredCatalog = useMemo(() => {
+    const source = body === 'tertiary' ? tertiaryTree ?? [] : secondaryItems;
+    const q = catQuery.trim().toLowerCase();
+    return source.filter((c) => {
+      if (body === 'tertiary' && faculty !== 'All' && c.faculty !== faculty) return false;
+      if (!q) return true;
+      return c.title.toLowerCase().includes(q) || c.id.toLowerCase().includes(q);
+    });
+  }, [body, tertiaryTree, secondaryItems, catQuery, faculty]);
+
+  const PAGE = 24;
+  const catTotal = filteredCatalog.length;
+  const catalog = useMemo(() => filteredCatalog.slice(0, catPage * PAGE), [filteredCatalog, catPage]);
 
   useEffect(() => {
-    if (face !== 'select') return;
-    const t = setTimeout(() => void loadCatalog(1), catQuery ? 350 : 0);
-    return () => clearTimeout(t);
-  }, [face, loadCatalog, catQuery]);
-
-  useEffect(() => {
-    if (face !== 'select' || body !== 'tertiary') return;
-    api<{ faculties: string[] }>('/learn/faculties')
-      .then((r) => setFaculties(r.faculties ?? []))
-      .catch(() => setFaculties([]));
-  }, [face, body]);
+    setCatPage(1);
+  }, [catQuery, faculty, body]);
 
   const openPath = useCallback(async (courseId: string) => {
     setLoading(true);
+    setNotice('');
     try {
       await setActiveCourse(courseId);
       const p = await fetchCoursePath(courseId);
@@ -121,7 +224,7 @@ export default function CoursesPage() {
       setFace('path');
       window.scrollTo({ top: 0 });
     } catch {
-      setError('Could not open that course.');
+      setNotice('Could not open that course just now — it will open once the connection is back.');
     } finally {
       setLoading(false);
     }
@@ -129,6 +232,7 @@ export default function CoursesPage() {
 
   const saveSelection = useCallback(async () => {
     setSaving(true);
+    setNotice('');
     try {
       // Preserve the student's existing picks when managing; the
       // checkbox list only carries the NEW marks and removals happen
@@ -137,21 +241,35 @@ export default function CoursesPage() {
       const merged = Array.from(new Set([...base, ...Array.from(picked)]));
       const res = await setMyCourses(merged);
       setMine(res.courses);
+      cacheMine(res.courses);
       setPicked(new Set());
       setFace('list');
     } catch {
-      setError('Saving your courses failed — try again.');
+      setNotice('Saving your picks failed — check your connection and save again.');
     } finally {
       setSaving(false);
     }
   }, [picked, mine]);
 
-  const removeFromList = useCallback(async (courseId: string) => {
-    if (!mine) return;
-    const next = mine.filter((m) => m.id !== courseId).map((m) => m.id);
-    const res = await setMyCourses(next);
-    setMine(res.courses);
-  }, [mine]);
+  const removeFromList = useCallback(
+    async (courseId: string) => {
+      if (!mine) return;
+      const next = mine.filter((m) => m.id !== courseId).map((m) => m.id);
+      try {
+        const res = await setMyCourses(next);
+        setMine(res.courses);
+        cacheMine(res.courses);
+      } catch {
+        // Offline removal still sticks on the device and reconciles
+        // the next time the list saves from a live connection.
+        const cached = mine.filter((m) => m.id !== courseId);
+        setMine(cached);
+        cacheMine(cached);
+        setNotice('Removed on this device — it syncs away next time you are online.');
+      }
+    },
+    [mine],
+  );
 
   const togglePick = (id: string) => {
     setPicked((prev) => {
@@ -200,12 +318,10 @@ export default function CoursesPage() {
       />
 
       <main className="mx-auto w-full max-w-3xl px-4 pb-28 pt-4">
-        {error && (
-          <div className="learn-tile flex flex-col items-center gap-3 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-4 py-10 text-center">
-            <span className="material-symbols-outlined text-[34px] text-on-surface-variant">wifi_off</span>
-            <p className="text-[13.5px] font-bold text-on-surface-variant">{error}</p>
-            <button type="button" onClick={() => void boot()} className="key-btn bg-primary text-white">Retry</button>
-          </div>
+        {notice && (
+          <p className="mb-3 rounded-xl bg-surface-container px-4 py-2.5 text-[12.5px] font-bold text-on-surface-variant">
+            {notice}
+          </p>
         )}
         {loading && <SkeletonList />}
 
@@ -248,7 +364,7 @@ export default function CoursesPage() {
           </div>
         )}
 
-        {/* ── Face 2: selection catalog ── */}
+        {/* ── Face 2: selection catalog (hardcoded) ── */}
         {!loading && face === 'select' && (
           <div className="flex flex-col gap-3">
             <div className="rounded-2xl border-2 border-primary/40 bg-primary/10 p-4">
@@ -317,13 +433,18 @@ export default function CoursesPage() {
             </ul>
 
             {catalog.length < catTotal && (
-              <button type="button" onClick={() => void loadCatalog(catPage + 1)} className="key-btn mx-auto bg-card text-on-surface">
+              <button type="button" onClick={() => setCatPage(catPage + 1)} className="key-btn mx-auto bg-card text-on-surface">
                 Load more ({catTotal - catalog.length} left)
               </button>
             )}
-            {catalog.length === 0 && (
+            {body === 'tertiary' && !tertiaryTree && (
               <p className="py-10 text-center text-[13px] font-bold text-on-surface-variant">
-                Nothing matches “{catQuery}” yet — the curriculum may still be seeding on first boot.
+                Loading the course tree…
+              </p>
+            )}
+            {catTotal === 0 && (body !== 'tertiary' || tertiaryTree) && (
+              <p className="py-10 text-center text-[13px] font-bold text-on-surface-variant">
+                Nothing matches “{catQuery}”.
               </p>
             )}
           </div>

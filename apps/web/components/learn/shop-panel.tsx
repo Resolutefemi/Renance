@@ -16,21 +16,33 @@ import { ShopResponse, buyShopItem, fetchShop } from '@/lib/learn';
 export default function ShopPanel({ id }: { id?: string }) {
   const [shop, setShop] = useState<ShopResponse | null>(null);
   const [loading, setLoading] = useState(true);
-  const [failed, setFailed] = useState(false);
+  const [offline, setOffline] = useState(false);
   const [buying, setBuying] = useState('');
   const [toast, setToast] = useState('');
   const [tone, setTone] = useState<'green' | 'red'>('green');
 
   const load = useCallback(() => {
-    setFailed(false);
-    setLoading(true);
     fetchShop()
-      .then(setShop)
-      .catch(() => setFailed(true))
+      .then((s) => {
+        setShop(s);
+        setOffline(false);
+      })
+      .catch(() => {
+        // No dead-end error card (founder: "remove retry"): the quiet
+        // poll below keeps trying until the shelves arrive.
+        setOffline(true);
+      })
       .finally(() => setLoading(false));
   }, []);
 
   useEffect(load, [load]);
+
+  // The quiet re-sync: until the shop answers, poll every 8s.
+  useEffect(() => {
+    if (shop || !offline) return;
+    const t = window.setInterval(load, 8000);
+    return () => window.clearInterval(t);
+  }, [shop, offline, load]);
 
   const buy = useCallback(async (item: string) => {
     setBuying(item);
@@ -51,11 +63,13 @@ export default function ShopPanel({ id }: { id?: string }) {
   return (
     <section id={id} className="flex flex-col gap-3">
       <ToastBanner text={toast} tone={tone} />
-      {failed && (
-        <div className="learn-tile flex flex-col items-center gap-3 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-4 py-8 text-center">
-          <span className="material-symbols-outlined text-[32px] text-on-surface-variant">wifi_off</span>
-          <p className="text-[13.5px] font-bold text-on-surface-variant">The shop could not load.</p>
-          <button type="button" onClick={load} className="key-btn bg-primary text-white">Retry</button>
+      {offline && !shop && (
+        <div className="learn-tile flex flex-col items-center gap-2 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-4 py-8 text-center">
+          <span className="material-symbols-outlined text-[32px] text-primary">storefront</span>
+          <p className="text-[14px] font-black text-on-surface">The shop is syncing…</p>
+          <p className="max-w-xs text-[12.5px] font-bold text-on-surface-variant">
+            The shelves appear the moment the connection is back.
+          </p>
         </div>
       )}
       {loading && !shop && <div className="h-40 animate-pulse rounded-2xl bg-surface-container" aria-hidden />}

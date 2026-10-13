@@ -306,10 +306,16 @@ func (s *Server) Handler() http.Handler {
         mux.HandleFunc("GET /learn/review", s.auth(s.handleLearnReview))
 
         // ── The Renance social layer (feed + follows, 2026-10-14): the
-        // Duolingo-style feed of milestone + user posts, likes, comments,
+        // Duolingo-style feed of MILESTONE stories, likes, comments,
         // the follow graph and the public profiles every board opens.
         mux.HandleFunc("GET /social/feed", s.auth(s.handleSocialFeed))
-        mux.HandleFunc("POST /social/feed", s.auth(s.handleSocialPostCreate))
+        // Founder directive 2026-10-14, second pass: "remove post from
+        // the feed, users should not be able to write post themselves"
+        // — the feed is the PLATFORM'S voice only (milestone stories
+        // written by the hooks), exactly like the real Duolingo feed.
+        // The old POST /social/feed (freeform user posts) is retired
+        // from the route table; the handler stays for a future mobile
+        // reversal but no client can write a post anymore.
         mux.HandleFunc("DELETE /social/posts/{id}", s.auth(s.handleSocialPostDelete))
         mux.HandleFunc("POST /social/posts/{id}/like", s.auth(s.handleSocialLike))
         mux.HandleFunc("GET /social/posts/{id}/comments", s.auth(s.handleSocialCommentsGet))
