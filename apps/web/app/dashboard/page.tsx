@@ -449,8 +449,10 @@ export default function DashboardPage() {
             flips it to the dark #111C2D band (home_dashboard_mixed_mode).
             Founder directive 2026-10-11: the corner blob ornaments are
             back and visible (/12, the old /5 was imperceptible) on
-            every focus homepage hero. */}
-        <section className="relative mt-4 flex flex-col gap-4 overflow-hidden rounded-xl bg-hero p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] sm:p-6">
+            every focus homepage hero. 2026-10-13 tactile pass: the card
+            stands on an extruded ledge (.hero-card) and the progress
+            rail gets the recessed-track + gloss-fill treatment. */}
+        <section className="hero-card relative mt-4 flex flex-col gap-4 overflow-hidden bg-hero p-4 sm:p-6">
           <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-on-hero/12" />
           <div className="absolute -bottom-14 -left-12 h-28 w-28 rounded-full bg-on-hero/12" />
           <div className="relative z-10 flex items-start justify-between gap-4">
@@ -460,7 +462,7 @@ export default function DashboardPage() {
             </div>
             <div className="text-right">
               <p className="font-mono text-[11px] uppercase tracking-wider text-hero-muted">Countdown</p>
-              <p className="text-sm font-semibold text-on-hero">
+              <p className="mt-1 inline-block rounded-full bg-on-hero/10 px-3 py-1 text-sm font-bold text-on-hero">
                 {days == null ? 'Set a year' : days <= 0 ? 'This month' : `${days} Days`}
               </p>
             </div>
@@ -470,8 +472,10 @@ export default function DashboardPage() {
               <span>Syllabus Completion</span>
               <span className="font-semibold text-on-hero">{coveragePct}%</span>
             </div>
-            <div className="h-2 w-full overflow-hidden rounded-full bg-hero-track">
-              <div className="h-full rounded-full bg-hero-cta transition-all" style={{ width: `${coveragePct}%` }} />
+            <div className="hero-progress w-full bg-hero-track">
+              <div className="hero-progress-fill h-full bg-hero-cta transition-all" style={{ width: `${coveragePct}%` }}>
+                <span className="hero-progress-gloss" />
+              </div>
             </div>
           </div>
           {/* Continue Exam only exists when a paper was paused and left;
@@ -486,7 +490,7 @@ export default function DashboardPage() {
                 // the composed paper's plumbing label.
                 daily: activeExam.daily ? '1' : undefined,
               })}
-              className="relative z-10 flex h-[52px] items-center justify-center gap-2 rounded-lg bg-hero-cta text-[15px] font-semibold text-on-hero-cta transition-transform active:scale-[0.98]"
+              className="relative z-10 flex h-[52px] items-center justify-center gap-2 rounded-[12px] bg-hero-cta text-[15px] font-bold text-on-hero-cta transition-transform active:scale-[0.98]"
             >
               <span className="material-symbols-outlined text-[20px]">play_arrow</span>
               Continue Exam · {pausedExamAnswers}/{Math.max(activeExam.questionCount, pausedExamAnswers)}
@@ -494,7 +498,7 @@ export default function DashboardPage() {
           ) : (
             <Link
               href={isJamb || isWaec || isNeco ? setupHref : exams[0] ? examHref(exams[0].code) : '/packs'}
-              className="relative z-10 flex h-[52px] items-center justify-center gap-2 rounded-lg bg-hero-cta text-[15px] font-semibold text-on-hero-cta transition-transform active:scale-[0.98]"
+              className="relative z-10 flex h-[52px] items-center justify-center gap-2 rounded-[12px] bg-hero-cta text-[15px] font-bold text-on-hero-cta transition-transform active:scale-[0.98]"
             >
               <span className="material-symbols-outlined text-[20px]">play_arrow</span>
               {isJamb ? 'Start Mock Exam' : 'Start Practice'}
@@ -675,8 +679,9 @@ function PostUtmeHome({ onMore }: { onMore: () => void }) {
     <>
       {/* Post UTME hero card ------------------------------------------ */}
       {/* Founder directive 2026-10-11: corner blob ornaments back on
-          every focus hero - both corners, visible strength (/12). */}
-      <section className="relative mt-4 flex flex-col gap-4 overflow-hidden rounded-xl bg-hero p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] sm:p-6">
+          every focus hero - both corners, visible strength (/12).
+          2026-10-13 tactile pass: extruded ledge via .hero-card. */}
+      <section className="hero-card relative mt-4 flex flex-col gap-4 overflow-hidden bg-hero p-4 sm:p-6">
         <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-on-hero/12" />
         <div className="absolute -bottom-14 -left-12 h-28 w-28 rounded-full bg-on-hero/12" />
         <div className="relative z-10 flex items-center justify-between gap-4">
@@ -701,7 +706,7 @@ function PostUtmeHome({ onMore }: { onMore: () => void }) {
         <div className="relative z-10 flex flex-col gap-2 sm:flex-row">
           <Link
             href="/post-utme"
-            className="flex h-[52px] flex-1 items-center justify-center gap-2 rounded-[10px] bg-hero-cta text-[15px] font-semibold text-on-hero-cta shadow-md transition-transform active:scale-[0.98]"
+            className="flex h-[52px] flex-1 items-center justify-center gap-2 rounded-[12px] bg-hero-cta text-[15px] font-bold text-on-hero-cta transition-transform active:scale-[0.98]"
           >
             <span className="material-symbols-outlined text-[20px]">menu_book</span>
             {school ? 'Open past questions' : 'Pick School'}
@@ -788,8 +793,11 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
     <>
       {/* School hero card ---------------------------------------------- */}
       {/* Founder directive 2026-10-11: corner blob ornaments back on
-          every focus hero - both corners, visible strength (/12). */}
-      <section className="relative mt-4 flex flex-col gap-4 overflow-hidden rounded-xl bg-hero p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] sm:p-6">
+          every focus hero - both corners, visible strength (/12).
+          2026-10-13 tactile pass: extruded ledge via .hero-card, and the
+          CTA carries the mobile app's exact spec - 52px tall, full
+          width, radius 10, the school glyph, "Open your school desk". */}
+      <section className="hero-card relative mt-4 flex flex-col gap-4 overflow-hidden bg-hero p-4 sm:p-6">
         <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-on-hero/12" />
         <div className="absolute -bottom-14 -left-12 h-28 w-28 rounded-full bg-on-hero/12" />
         <div className="relative z-10 flex items-center justify-between gap-4">
@@ -811,13 +819,16 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
               : 'Course content lands as it is harvested'}
           </p>
         </div>
-        <div className="relative z-10 flex flex-col gap-2 sm:flex-row">
+        <div className="relative z-10 flex flex-col gap-2">
+          {/* The mobile app's button, verbatim (university_home_screen.dart):
+              52px tall, full width, radius 10, Icons.school, and the
+              "Open your school desk" label once a school is picked. */}
           <Link
             href={`/university/${slug}`}
-            className="flex h-[52px] flex-1 items-center justify-center gap-2 rounded-[10px] bg-hero-cta text-[15px] font-semibold text-on-hero-cta shadow-md transition-transform active:scale-[0.98]"
+            className="flex h-[52px] w-full items-center justify-center gap-2 rounded-[10px] bg-hero-cta text-[15px] font-semibold text-on-hero-cta transition-transform active:scale-[0.98]"
           >
-            <span className="material-symbols-outlined text-[20px]">menu_book</span>
-            {schoolSlug ? 'Open courses' : 'Pick School'}
+            <span className="material-symbols-outlined text-[20px]">school</span>
+            {schoolSlug ? 'Open your school desk' : 'Pick School'}
           </Link>
         </div>
       </section>
@@ -836,10 +847,10 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
               <Link
                 key={c.slug}
                 href={`/university/${slug}/${c.slug}`}
-                className={`whitespace-nowrap rounded-full px-6 py-2 text-sm transition ${
+                className={`whitespace-nowrap rounded-full border-2 px-6 py-2 text-sm transition ${
                   i === 0
-                    ? 'scale-105 bg-selection-blue font-semibold text-on-surface shadow-sm'
-                    : 'bg-surface-container-low text-on-surface-variant hover:bg-surface-variant'
+                    ? 'scale-105 border-outline-variant bg-selection-blue font-semibold text-on-surface shadow-[0_3px_0_0_var(--color-outline-variant)]'
+                    : 'border-outline-variant/70 bg-surface-container-low text-on-surface-variant hover:bg-surface-variant'
                 }`}
               >
                 {c.code}
