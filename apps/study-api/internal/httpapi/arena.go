@@ -13,6 +13,7 @@ import (
         "renance.dev/study-api/internal/grading"
         "renance.dev/study-api/internal/jwtx"
         "renance.dev/study-api/internal/plans"
+        "renance.dev/study-api/internal/social"
         "renance.dev/study-api/internal/store"
 )
 
@@ -110,6 +111,14 @@ func arenaSink(st *store.Store) arena.MatchSink {
                                 if err := st.AddCoins(ctx, r.WinnerID, plans.ArenaWinCoins); err != nil {
                                         slog.Error("arena: ren coin award", "user", r.WinnerID, "err", err)
                                 }
+                        }
+                        // Feed milestone (founder directive 2026-10-14): a duel
+                        // won is feed-worthy. The key rides the match id, so
+                        // every win announces exactly once. Bots never post.
+                        if !strings.HasPrefix(r.WinnerID, "bot:") {
+                                social.Milestone(ctx, st.Pool, r.WinnerID, "arena_"+r.MatchID,
+                                        "just won an arena duel! ⚔️",
+                                        map[string]any{"matchId": r.MatchID, "body": r.Body})
                         }
                 }
                 return nil

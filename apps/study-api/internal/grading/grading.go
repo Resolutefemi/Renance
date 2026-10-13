@@ -8,13 +8,16 @@ package grading
 
 import (
         "context"
+        "fmt"
         "log/slog"
         "math"
         "sort"
+        "strings"
         "sync"
 
         "renance.dev/study-api/internal/cbtdata"
         "renance.dev/study-api/internal/daily"
+        "renance.dev/study-api/internal/social"
         "renance.dev/study-api/internal/store"
 )
 
@@ -156,6 +159,44 @@ func (e *Engine) grade(ctx context.Context, job Job, worker int) {
         }
         e.log.Info("graded", "worker", worker, "attempt", job.AttemptID,
                 "code", job.Code, "score", result.Score, "total", result.Total)
+
+        // Feed milestone (founder directive 2026-10-14): a strong mock
+        // score is a feed-worthy moment — "Joy scored 360 in JAMB".
+        // Daily sprints keep their own board and never post here.
+        if job.UserID != "" && job.DailyDay == "" {
+                e.postScoreMilestone(ctx, job.UserID, job.Code, bundle.Body, result)
+        }
+}
+
+// postScoreMilestone announces strong mock results on the Renance feed:
+// composite UTME mocks at 250+/400, other banks at 75%+. The milestone
+// key carries the score, so beating your best posts again — improving
+// students keep their feed alive, repeating a score does not spam it.
+func (e *Engine) postScoreMilestone(ctx context.Context, userID, code, body string, result *store.Result) {
+        defer func() { _ = recover() }() // a feed hiccup never breaks grading
+        if result == nil || result.Total == 0 {
+                return
+        }
+        if strings.HasPrefix(code, "jamb-mock-") && len(result.Subjects) > 0 {
+                utme := 0.0
+                for _, s := range result.Subjects {
+                        utme += s.Score
+                }
+                score := int(math.Round(utme))
+                if score >= 250 {
+                        social.Milestone(ctx, e.store.Pool, userID, fmt.Sprintf("jamb_%d", score),
+                                fmt.Sprintf("scored %d in JAMB! 🎯", score),
+                                map[string]any{"score": score, "exam": "JAMB"})
+                }
+                return
+        }
+        pct := 100 * float64(result.Score) / float64(result.Total)
+        if pct >= 75 && (body == "WAEC" || body == "NECO" || body == "POST-UTME") {
+                score := int(math.Round(pct))
+                social.Milestone(ctx, e.store.Pool, userID, fmt.Sprintf("%s_%d", strings.ToLower(body), score),
+                        fmt.Sprintf("scored %d%% in %s! 🎯", score, body),
+                        map[string]any{"score": score, "exam": body})
+        }
 }
 
 // TopicRow is one row of the per-topic breakdown.

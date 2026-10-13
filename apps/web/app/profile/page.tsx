@@ -25,7 +25,9 @@ import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import { LeagueBadge } from '@/components/learn/bits';
+import ShopPanel from '@/components/learn/shop-panel';
 import { LearnProfile, fetchLearnProfile } from '@/lib/learn';
+import { type Connections, fetchConnections } from '@/lib/social';
 import SideNav from '@/components/side-nav';
 
 interface Profile {
@@ -92,6 +94,10 @@ export default function ProfilePage() {
   // Supreme learn stats (founder 2026-10-14): gems, hearts, league,
   // topics done and perfect scores live on the profile too.
   const [learn, setLearn] = useState<LearnProfile | null>(null);
+  // The follow graph (founder 2026-10-14 evening pass): followers and
+  // following counts read right on the profile; the lists live on
+  // /profile/social with follow-backs.
+  const [connections, setConnections] = useState<Connections | null>(null);
 
   // Focus switcher state ---------------------------------------------------
   const [editing, setEditing] = useState(false);
@@ -131,6 +137,9 @@ export default function ProfilePage() {
       .then((g) => alive && setState(g.state))
       .catch(() => {});
     fetchLearnProfile().then((p) => alive && setLearn(p)).catch(() => {});
+    fetchConnections()
+      .then((c) => alive && setConnections(c))
+      .catch(() => {});
     return () => {
       alive = false;
     };
@@ -395,6 +404,36 @@ export default function ProfilePage() {
                 </button>
               </div>
             )}
+          </section>
+
+          {/* The follow strip (founder 2026-10-14 evening pass): followers
+              and following read right on the profile; tapping opens the
+              lists on /profile/social with follow-backs. */}
+          <section className="flex items-stretch overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+            <Link href="/profile/social" className="flex flex-1 items-center justify-center gap-2 py-3.5 transition hover:bg-surface-container-high">
+              <span className="material-symbols-outlined text-[19px] text-primary">group</span>
+              <span className="text-[14px] font-bold text-on-surface">{connections?.followers.length ?? 0}</span>
+              <span className="text-[13px] font-semibold text-text-secondary">Followers</span>
+            </Link>
+            <div className="my-3 w-px bg-outline-light/40" />
+            <Link href="/profile/social" className="flex flex-1 items-center justify-center gap-2 py-3.5 transition hover:bg-surface-container-high">
+              <span className="material-symbols-outlined text-[19px] text-macaw-dark">person_add</span>
+              <span className="text-[14px] font-bold text-on-surface">{connections?.following.length ?? 0}</span>
+              <span className="text-[13px] font-semibold text-text-secondary">Following</span>
+            </Link>
+          </section>
+
+          {/* The SHOP lives here now (founder 2026-10-14 evening pass):
+              "the shop feature should be under profile and the heart read
+              too" — the gem store, the heart readout (REAL data, the ∞
+              symbol is retired) and the Super trial ride inside this
+              section. The old /shop page redirects here. */}
+          <section className="rounded-2xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+            <div className="mb-3 flex items-center gap-2">
+              <span className="material-symbols-outlined text-[20px] text-primary-ink">storefront</span>
+              <h3 className="text-[15px] font-bold text-on-surface">Shop</h3>
+            </div>
+            <ShopPanel id="shop" />
           </section>
 
           {/* Learning focus switcher (founder directive) ---------------------- */}
@@ -680,6 +719,16 @@ export default function ProfilePage() {
             )}
           </section>
 
+          {/* Menu group: account (the avatar popup retired — everything it
+              held now lives here, founder 2026-10-14 evening pass) ------- */}
+          <section className="flex flex-col overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+            <MenuLink icon="insights" tint="text-on-surface" label="Performance Analysis" href="/performance" />
+            <MenuDivider />
+            <MenuLink icon="bookmark" tint="text-on-surface" label="Saved Questions" href="/saved" />
+            <MenuDivider />
+            <MenuLink icon="settings" tint="text-on-surface" label="App Settings" href="/settings" />
+          </section>
+
           {/* Menu group: content ------------------------------------------- */}
           <section className="flex flex-col overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
             <MenuLink icon="auto_stories" tint="text-accent-ink" label="My Packs" href="/packs" />
@@ -704,6 +753,18 @@ export default function ProfilePage() {
               </div>
               <div className="flex-1 text-[15px] font-semibold text-error">Sign Out</div>
             </button>
+            <MenuDivider />
+            {/* Delete account (from the retired avatar popup): asks twice
+                via the server's own confirm flow, then purges everything. */}
+            <a
+              href="/delete-account"
+              className="group flex w-full items-center gap-4 p-4 text-left transition hover:bg-error-container"
+            >
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-error-container text-error transition group-hover:bg-card">
+                <span className="material-symbols-outlined">delete_forever</span>
+              </div>
+              <div className="flex-1 text-[15px] font-semibold text-error">Delete account</div>
+            </a>
           </section>
 
           <p className="pb-4 text-center text-[13px] text-text-secondary">

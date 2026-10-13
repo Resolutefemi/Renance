@@ -19,6 +19,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
+import Link from 'next/link';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
@@ -573,13 +574,17 @@ function ArenaInner() {
             )}
             {players?.map((p) => (
               <div key={p.userId} className="flex items-center gap-3 px-4 py-3">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-container-low">
+                <Link
+                  href={`/profile/view/?u=${encodeURIComponent(p.username)}`}
+                  aria-label={`${p.username} on their profile`}
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-container-low transition hover:ring-2 hover:ring-primary"
+                >
                   <span className="material-symbols-outlined text-[20px] text-on-surface-variant">person</span>
-                </span>
-                <span className="min-w-0 flex-1">
+                </Link>
+                <Link href={`/profile/view/?u=${encodeURIComponent(p.username)}`} className="min-w-0 flex-1 hover:underline">
                   <span className="block truncate text-[14.5px] font-semibold text-on-surface">{p.username}</span>
                   <span className="block font-mono text-[11px] text-on-surface-variant">{p.renPoints} Ren Points</span>
-                </span>
+                </Link>
                 <button
                   onClick={() => send({ type: 'challenge', target: p.userId, body: focus })}
                   className="flex h-9 shrink-0 items-center gap-1 rounded-full bg-primary px-4 text-[12.5px] font-bold text-on-primary transition hover:opacity-90 active:scale-[0.97]"

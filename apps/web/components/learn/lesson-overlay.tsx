@@ -18,7 +18,7 @@ import {
 } from '@/components/learn/bits';
 import {
   CompleteResult, LearnQuizQ, LessonDoc, PracticeQuestion,
-  fetchLesson, fetchPractice, fetchReview, gradePractice, postProgress,
+  fetchLearnProfile, fetchLesson, fetchPractice, fetchReview, gradePractice, postProgress,
 } from '@/lib/learn';
 import { QText } from '@/lib/qtext';
 
@@ -56,7 +56,20 @@ export function LessonOverlay({
   const [confetti, setConfetti] = useState(0);
   const [toast, setToast] = useState('');
   const [copyIdx, setCopyIdx] = useState(0);
+  // The REAL heart count for the top rail (∞ retired, founder rule);
+  // updated live when a completion pays back the economy.
+  const [hearts, setHearts] = useState<number | null>(null);
   const startedRef = useRef(Date.now());
+
+  useEffect(() => {
+    let live = true;
+    fetchLearnProfile()
+      .then((p) => live && setHearts(p.hearts))
+      .catch(() => {});
+    return () => {
+      live = false;
+    };
+  }, []);
 
   // ── Load ────────────────────────────────────────────────────────────────
   useEffect(() => {
@@ -116,11 +129,13 @@ export function LessonOverlay({
           abandoned,
         });
         setResult(res);
+        setHearts(res.hearts);
         if (!abandoned) setConfetti((c) => c + 1);
       } else {
         const resolved = questions.filter((qq) => qq.userAnswer === qq.answer).map((qq) => qq.id);
         res = await gradePractice({ correct: correctCount, total, resolvedIds: resolved });
         setResult(res);
+        setHearts(res.hearts);
         if (!abandoned) setConfetti((c) => c + 1);
       }
       setPhase('done');
@@ -196,7 +211,7 @@ export function LessonOverlay({
             <ProgressBar value={total > 0 && phase !== 'study' ? ((idx + (revealed ? 1 : 0)) / total) * 100 : phase === 'done' ? 100 : 0} />
           </div>
           <div className="flex items-center gap-1.5">
-            <StatHeart unlimited />
+            <StatHeart hearts={hearts} />
             <GemIcon size={17} />
             <span className="font-mono text-[12px] font-bold text-on-surface">{result ? result.gems : ''}</span>
           </div>
@@ -397,11 +412,15 @@ export function LessonOverlay({
   );
 }
 
-function StatHeart({ unlimited }: { unlimited?: boolean }) {
+function StatHeart({ hearts }: { hearts: number | null }) {
+  // The REAL heart count — the ∞ symbol is retired everywhere
+  // (founder rule 2026-10-14: "remove that infinite symbol replace
+  // with real data"). While the value is still loading, the heart
+  // stands alone instead of printing a placeholder digit.
   return (
-    <span className="flex items-center gap-0.5" title={unlimited ? 'Unlimited hearts at launch' : 'Hearts'}>
+    <span className="flex items-center gap-0.5" title="Hearts">
       <HeartIcon size={16} />
-      <span className="text-[12px] font-black text-on-surface">{unlimited ? '∞' : ''}</span>
+      <span className="text-[12px] font-black text-on-surface">{hearts ?? ''}</span>
     </span>
   );
 }

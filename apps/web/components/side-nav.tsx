@@ -29,8 +29,8 @@ const TABS = [
   { icon: 'home', label: 'Home', href: '/dashboard', match: '/dashboard' },
   { icon: 'menu_book', label: 'Course', href: '/courses', match: '/courses' },
   { icon: 'trophy', label: 'Leagues', href: '/league', match: '/league' },
+  { icon: 'newspaper', label: 'Feed', href: '/feed', match: '/feed' },
   { icon: 'target', label: 'Quests', href: '/quests', match: '/quests' },
-  { icon: 'storefront', label: 'Shop', href: '/shop', match: '/shop' },
   { icon: 'person', label: 'Profile', href: '/profile', match: '/profile' },
 ] as const;
 

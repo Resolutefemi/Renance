@@ -57,6 +57,8 @@ import (
         "renance.dev/study-api/internal/schoolcorpus"
         "renance.dev/study-api/internal/store"
         "renance.dev/study-api/internal/tutor"
+
+        "github.com/jackc/pgx/v5/pgxpool"
 )
 
 type Server struct {
@@ -167,9 +169,15 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
         // The learn module shares the tutor's OpenAI-compatible provider
         // for JIT lesson generation; unlimited hearts is the launch
         // posture (founder 2026-10-14: everyone unlimited for now, gems
-        // and hearts still accrue as rewards).
+        // and hearts still accrue as rewards). The pool may be nil in
+        // unit tests that never touch learn routes — constructing with a
+        // nil pool is fine, dereferencing st was not.
+        var learnPool *pgxpool.Pool
+        if st != nil {
+                learnPool = st.Pool
+        }
         s.learn = &learn.Service{
-                Pool:            st.Pool,
+                Pool:            learnPool,
                 Log:             log,
                 Engine:          learn.NewEngine(aiProvider, lib),
                 UnlimitedHearts: cfg.LearnUnlimitedHearts,
@@ -296,6 +304,19 @@ func (s *Server) Handler() http.Handler {
         mux.HandleFunc("GET /learn/practice", s.auth(s.handleLearnPractice))
         mux.HandleFunc("POST /learn/practice", s.auth(s.handleLearnPractice))
         mux.HandleFunc("GET /learn/review", s.auth(s.handleLearnReview))
+
+        // ── The Renance social layer (feed + follows, 2026-10-14): the
+        // Duolingo-style feed of milestone + user posts, likes, comments,
+        // the follow graph and the public profiles every board opens.
+        mux.HandleFunc("GET /social/feed", s.auth(s.handleSocialFeed))
+        mux.HandleFunc("POST /social/feed", s.auth(s.handleSocialPostCreate))
+        mux.HandleFunc("DELETE /social/posts/{id}", s.auth(s.handleSocialPostDelete))
+        mux.HandleFunc("POST /social/posts/{id}/like", s.auth(s.handleSocialLike))
+        mux.HandleFunc("GET /social/posts/{id}/comments", s.auth(s.handleSocialCommentsGet))
+        mux.HandleFunc("POST /social/posts/{id}/comments", s.auth(s.handleSocialCommentAdd))
+        mux.HandleFunc("POST /social/users/{username}/follow", s.auth(s.handleSocialFollow))
+        mux.HandleFunc("GET /social/users/{username}", s.auth(s.handleSocialPublicProfile))
+        mux.HandleFunc("GET /social/connections", s.auth(s.handleSocialConnections))
         mux.HandleFunc("POST /me/sessions", s.auth(s.handleLogSession))
         mux.HandleFunc("GET /me/cards/progress", s.auth(s.handleCardProgress))
         mux.HandleFunc("POST /me/cards/progress", s.auth(s.handleGradeCards))

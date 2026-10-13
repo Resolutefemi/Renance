@@ -12,6 +12,7 @@
  */
 
 import { useCallback, useEffect, useState } from 'react';
+import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
@@ -272,9 +273,11 @@ export default function LeaderboardClient() {
             arena?.entries.map((entry) => {
               const highlight = me != null && entry.rank === me.rank;
               return (
-                <div
+                <Link
+                  href={`/profile/view/?u=${encodeURIComponent(entry.username)}`}
                   key={`${entry.rank}-${entry.username}`}
-                  className={`flex items-center gap-3 border-b border-outline-variant/30 px-4 py-3 last:border-b-0 ${
+                  title={`${entry.username} on their profile`}
+                  className={`flex items-center gap-3 border-b border-outline-variant/30 px-4 py-3 transition last:border-b-0 hover:bg-surface-container-low ${
                     highlight ? 'bg-selection-blue/30' : ''
                   }`}
                 >
@@ -292,7 +295,7 @@ export default function LeaderboardClient() {
                       {entry.wins}W · {entry.matches}m
                     </p>
                   </div>
-                </div>
+                </Link>
               );
             })}
 
@@ -300,9 +303,11 @@ export default function LeaderboardClient() {
             focus?.entries.map((entry) => {
               const highlight = me != null && entry.rank === me.rank;
               return (
-                <div
+                <Link
+                  href={`/profile/view/?u=${encodeURIComponent(entry.username)}`}
                   key={`${entry.rank}-${entry.username}`}
-                  className={`flex items-center gap-3 border-b border-outline-variant/30 px-4 py-3 last:border-b-0 ${
+                  title={`${entry.username} on their profile`}
+                  className={`flex items-center gap-3 border-b border-outline-variant/30 px-4 py-3 transition last:border-b-0 hover:bg-surface-container-low ${
                     highlight ? 'bg-selection-blue/30' : ''
                   }`}
                 >
@@ -323,7 +328,7 @@ export default function LeaderboardClient() {
                       {entry.papers} {entry.papers === 1 ? 'paper' : 'papers'}
                     </p>
                   </div>
-                </div>
+                </Link>
               );
             })}
 
@@ -331,9 +336,11 @@ export default function LeaderboardClient() {
             streak?.entries.map((entry) => {
               const highlight = me != null && entry.rank === me.rank;
               return (
-                <div
+                <Link
+                  href={`/profile/view/?u=${encodeURIComponent(entry.username)}`}
                   key={`${entry.rank}-${entry.username}`}
-                  className={`flex items-center gap-3 border-b border-outline-variant/30 px-4 py-3 last:border-b-0 ${
+                  title={`${entry.username} on their profile`}
+                  className={`flex items-center gap-3 border-b border-outline-variant/30 px-4 py-3 transition last:border-b-0 hover:bg-surface-container-low ${
                     highlight ? 'bg-selection-blue/30' : ''
                   }`}
                 >
@@ -351,7 +358,7 @@ export default function LeaderboardClient() {
                     </p>
                     <p>best {entry.bestStreak}d</p>
                   </div>
-                </div>
+                </Link>
               );
             })}
 
