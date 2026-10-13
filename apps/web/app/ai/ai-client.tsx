@@ -399,7 +399,7 @@ export default function AiClient() {
           <button
             type="button"
             onClick={() => newChat()}
-            className="flex items-center justify-center gap-2 rounded-xl border border-outline-variant/70 bg-card px-3 py-2.5 text-[13px] font-semibold text-on-surface shadow-[0_1px_2px_0_rgba(20,28,45,0.05)] transition hover:border-primary/50 hover:shadow-[0_1px_4px_0_rgba(20,28,45,0.10)] active:scale-[0.98]"
+            className="flex items-center justify-center gap-2 rounded-xl border-2 border-outline-variant bg-card px-3 py-2.5 text-[13px] font-extrabold text-on-surface shadow-[0_3px_0_0_var(--color-outline-variant)] transition hover:border-primary/50 hover:bg-surface-container-low active:translate-y-[2px] active:shadow-[0_1px_0_0_var(--color-outline-variant)]"
           >
             <span className="material-symbols-outlined text-[18px] text-on-surface">edit_square</span>
             New chat
@@ -598,7 +598,7 @@ export default function AiClient() {
                           key={s}
                           type="button"
                           onClick={() => void send(s)}
-                          className="rounded-xl border border-outline-variant/60 bg-card px-4 py-3 text-left text-[13px] leading-snug text-on-surface transition hover:border-primary/60 active:scale-[0.99]"
+                          className="rounded-xl border-2 border-outline-variant bg-card px-4 py-3 text-left text-[13px] font-semibold leading-snug text-on-surface shadow-[0_3px_0_0_var(--color-outline-variant)] transition hover:border-primary/60 hover:bg-surface-container-low active:translate-y-[2px] active:shadow-[0_1px_0_0_var(--color-outline-variant)]"
                         >
                           {s}
                         </button>
@@ -674,7 +674,7 @@ export default function AiClient() {
                 <button
                   type="button"
                   onClick={() => setCanvasOpen(true)}
-                  className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl border border-outline-variant/60 bg-card py-3 text-[13px] font-semibold text-on-surface lg:hidden"
+                  className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl border-2 border-outline-variant bg-card py-3 text-[13px] font-extrabold text-on-surface shadow-[0_3px_0_0_var(--color-outline-variant)] transition hover:bg-surface-container-low active:translate-y-[2px] active:shadow-[0_1px_0_0_var(--color-outline-variant)] lg:hidden"
                 >
                   <span className="material-symbols-outlined text-[17px]">right_panel_open</span>
                   Open {artifact.kind === 'quiz' ? 'quiz' : artifact.kind === 'notebook' ? 'notebook' : artifact.kind === 'lesson_note' ? 'lesson note' : 'note'} in canvas

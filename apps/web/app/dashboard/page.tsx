@@ -976,11 +976,12 @@ function LauncherTile({
             ? // Founder directive (2026-10-02): the Tutor tile follows the
               // theme colour - bg-primary / text-on-primary like the R
               // tile - instead of the near-black accent-ink that ignored
-              // the Chrome-style seed.
-              'bg-primary text-on-primary shadow-[0_2px_8px_0_rgba(17,28,45,0.25)]'
+              // the Chrome-style seed. Tactile pass: hard 3px extruded
+              // edge (Duolingo app-icon look) replaces the blur shadow.
+              'bg-primary text-on-primary shadow-[0_3px_0_0_color-mix(in_srgb,var(--color-primary)_68%,#000)]'
             : muted
-              ? 'border border-outline-light/30 bg-surface-container text-on-surface-variant'
-              : 'bg-card text-on-surface shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]'
+              ? 'border-2 border-outline-variant bg-surface-container text-on-surface-variant shadow-[0_3px_0_0_var(--color-outline-variant)]'
+              : 'border-2 border-outline-variant bg-card text-on-surface shadow-[0_3px_0_0_var(--color-outline-variant)]'
         } ${inverse ? 'overflow-hidden' : ''}`}
       >
         {inverse && <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-white/20" />}

@@ -1960,42 +1960,42 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
                   key={letter}
                   onClick={() => pick(question.id, letter)}
                   disabled={revealed}
-                  className={`flex w-full items-start gap-3.5 rounded-[12px] border px-4 py-3.5 text-left text-sm transition ${
+                  className={`flex w-full items-start gap-3.5 rounded-[14px] border-2 px-4 py-3.5 text-left text-sm transition ${
                     showCorrect
-                      ? 'border-accent-emerald border-[1.6px] bg-accent-emerald/12'
+                      ? 'border-accent-emerald bg-accent-emerald/12 shadow-[0_3px_0_0_color-mix(in_srgb,var(--color-accent-emerald)_70%,#000)]'
                       : showWrong
-                        ? 'border-error border-[1.6px] bg-error-container/40'
+                        ? 'border-error bg-error-container/40 shadow-[0_3px_0_0_color-mix(in_srgb,var(--color-error)_72%,#000)]'
                         : selected
-                          ? 'border-primary border-[1.6px] bg-selection-blue/45'
-                          : 'border-outline-variant bg-card hover:border-outline hover:shadow-sm active:scale-[0.995]'
+                          ? 'border-primary bg-selection-blue/50 shadow-[0_3px_0_0_color-mix(in_srgb,var(--color-primary)_68%,#000)]'
+                          : 'border-outline-variant bg-card shadow-[0_3px_0_0_var(--color-outline-variant)] hover:bg-surface-container-low active:translate-y-[2px] active:shadow-[0_1px_0_0_var(--color-outline-variant)]'
                   } ${revealed ? 'cursor-default' : ''}`}
                 >
-                  {/* the radio circle - hollow, ink-filled when picked */}
+                  {/* the option key-badge - Duolingo-style squircle: the
+                      letter while live, check/cross once the reveal lands */}
                   <span
-                    className={`mt-0.5 h-6 w-6 shrink-0 rounded-full border transition ${
+                    className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-[9px] border-2 text-[13.5px] font-black uppercase transition ${
                       showCorrect
-                        ? 'border-accent-emerald bg-accent-emerald text-on-primary'
+                        ? 'border-accent-emerald bg-accent-emerald text-white'
                         : showWrong
-                          ? 'border-error bg-error'
+                          ? 'border-error bg-error text-white'
                           : selected
-                            ? 'border-primary bg-primary'
-                            : 'border-outline bg-card'
-                    } flex items-center justify-center ${selected || showCorrect || showWrong ? '' : 'border-[1.6px]'}`}
+                            ? 'border-primary bg-primary text-on-primary'
+                            : 'border-outline-variant bg-surface-container-low text-on-surface-variant'
+                    }`}
                   >
-                    {(showCorrect || showWrong) && (
-                      <span
-                        className={`material-symbols-outlined text-[15px] font-bold text-white ${showCorrect ? 'text-white' : 'text-white'}`}
-                      >
-                        {showCorrect ? 'check' : 'close'}
+                    {showCorrect ? (
+                      <span className="material-symbols-outlined text-[16px] font-bold text-white">
+                        check
                       </span>
+                    ) : showWrong ? (
+                      <span className="material-symbols-outlined text-[16px] font-bold text-white">
+                        close
+                      </span>
+                    ) : (
+                      letter
                     )}
                   </span>
-                  <span className={`w-4 shrink-0 pt-[1px] text-[15.5px] font-extrabold ${
-                    showCorrect ? 'text-accent-emerald' : showWrong ? 'text-error' : 'text-error/90'
-                  }`}>
-                    {letter}
-                  </span>
-                  <span className="flex-1 min-w-0 pt-[1px] text-[15px] leading-snug text-on-surface">
+                  <span className="flex-1 min-w-0 pt-[2px] text-[15px] leading-snug text-on-surface">
                     <QText html={text} />
                   </span>
                 </button>
@@ -2047,7 +2047,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             <button
               onClick={() => goTo(Math.max(0, current - 1))}
               disabled={current === 0}
-              className="flex h-11 shrink-0 items-center gap-0.5 rounded-full border border-outline-variant bg-card px-3 text-[14px] font-semibold text-on-surface transition hover:bg-surface-container-low disabled:opacity-40 md:h-[46px] md:px-4 md:text-[14.5px]"
+              className="flex h-11 shrink-0 items-center gap-0.5 rounded-full border-2 border-outline-variant bg-card px-3 text-[14px] font-extrabold text-on-surface shadow-[0_3px_0_0_var(--color-outline-variant)] transition hover:bg-surface-container-low active:translate-y-[2px] active:shadow-[0_1px_0_0_var(--color-outline-variant)] disabled:opacity-40 disabled:shadow-none md:h-[46px] md:px-4 md:text-[14.5px]"
             >
               <span className="material-symbols-outlined text-[18px]">chevron_left</span>
               Previous
@@ -2064,7 +2064,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             {current === bundle.questionCount - 1 || answeredCount === bundle.questionCount ? (
               <button
                 onClick={requestSubmit}
-                className="flex h-11 shrink-0 items-center gap-0.5 rounded-full border border-outline-variant bg-card px-3 text-[14px] font-bold text-error transition hover:bg-error-container/30 md:h-[46px] md:px-4 md:text-[14.5px]"
+                className="flex h-11 shrink-0 items-center gap-0.5 rounded-full border-2 border-outline-variant bg-card px-3 text-[14px] font-extrabold text-error shadow-[0_3px_0_0_var(--color-outline-variant)] transition hover:bg-error-container/30 active:translate-y-[2px] active:shadow-[0_1px_0_0_var(--color-outline-variant)] md:h-[46px] md:px-4 md:text-[14.5px]"
               >
                 Submit
                 <span className="material-symbols-outlined text-[18px]">chevron_right</span>
@@ -2072,7 +2072,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             ) : (
               <button
                 onClick={() => goTo(Math.min(bundle.questionCount - 1, current + 1))}
-                className="flex h-11 shrink-0 items-center gap-0.5 rounded-full border border-outline-variant bg-card px-3 text-[14px] font-bold text-error transition hover:bg-error-container/20 md:h-[46px] md:px-4 md:text-[14.5px]"
+                className="flex h-11 shrink-0 items-center gap-0.5 rounded-full border-2 border-outline-variant bg-card px-3 text-[14px] font-extrabold text-error shadow-[0_3px_0_0_var(--color-outline-variant)] transition hover:bg-error-container/20 active:translate-y-[2px] active:shadow-[0_1px_0_0_var(--color-outline-variant)] md:h-[46px] md:px-4 md:text-[14.5px]"
               >
                 Next
                 <span className="material-symbols-outlined text-[18px]">chevron_right</span>
