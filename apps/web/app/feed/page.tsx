@@ -1,0 +1,415 @@
+'use client';
+
+/**
+ * Feed — the Renance social feed (founder directive 2026-10-14: "the
+ * major update feeds just like Duolingo feeds that people interact
+ * with"). Two voices interleave by time:
+ *
+ *   · MILESTONE posts the platform writes on the student's behalf —
+ *     "just hit a 400-day streak 🔥", "scored 360 in JAMB 🎯", "reached
+ *     the Platinum League 🏆", "won an arena duel ⚔️" — each written
+ *     once, ever, by the study-api's milestone hooks.
+ *   · USER posts the scholar writes themselves with the composer.
+ *
+ * Every post is interactive: hearts (likes), comments, and a Share
+ * action that fires the native share sheet (or copies a link) so a
+ * moment can travel to friends on social media like a card. Author
+ * rows open the scholar's public profile at /u/{username}.
+ */
+
+import { FormEvent, useCallback, useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import PageBar from '@/components/page-bar';
+import BottomNav from '@/components/bottom-nav';
+import SideNav from '@/components/side-nav';
+import { LogoActivityIndicator } from '@/components/renance-logo';
+import BlueTick from '@/components/blue-tick';
+import { getStoredUser } from '@/lib/session';
+import {
+  type SocialComment,
+  type SocialPost,
+  addComment,
+  createPost,
+  deletePost,
+  fetchComments,
+  fetchFeed,
+  milestoneVisual,
+  timeAgo,
+  toggleLike,
+} from '@/lib/social';
+
+export default function FeedPage() {
+  const router = useRouter();
+  const [posts, setPosts] = useState<SocialPost[] | null>(null);
+  const [error, setError] = useState('');
+  const [draft, setDraft] = useState('');
+  const [posting, setPosting] = useState(false);
+  const [pageError, setPageError] = useState('');
+  const [busy, setBusy] = useState('');
+  const [commentsFor, setCommentsFor] = useState<number | null>(null);
+  const [comments, setComments] = useState<SocialComment[]>([]);
+  const [commentDraft, setCommentDraft] = useState('');
+  const [toast, setToast] = useState('');
+  const sentinel = useRef<HTMLDivElement | null>(null);
+
+  const load = useCallback(() => {
+    setError('');
+    fetchFeed()
+      .then((r) => setPosts(r.posts))
+      .catch(() => setError('The feed could not load. Check your connection, then retry.'));
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && !getStoredUser()) {
+      router.replace('/login?next=/feed');
+      return;
+    }
+    load();
+  }, [load, router]);
+
+  // Infinite scroll: one more page whenever the sentinel enters view.
+  useEffect(() => {
+    if (!posts || posts.length < 25) return;
+    const el = sentinel.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (!entries[0].isIntersecting) return;
+        const oldest = posts[posts.length - 1];
+        if (!oldest) return;
+        fetchFeed(oldest.id)
+          .then((r) => {
+            if (r.posts.length === 0) return;
+            const seen = new Set(posts.map((p) => p.id));
+            setPosts((cur) => [...(cur ?? []), ...r.posts.filter((p) => !seen.has(p.id))]);
+          })
+          .catch(() => {});
+      },
+      { rootMargin: '400px' },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [posts]);
+
+  function flash(msg: string) {
+    setToast(msg);
+    window.setTimeout(() => setToast(''), 2200);
+  }
+
+  async function submitPost(e: FormEvent) {
+    e.preventDefault();
+    const body = draft.trim();
+    if (!body || posting) return;
+    setPosting(true);
+    setPageError('');
+    try {
+      const { id } = await createPost(body);
+      setDraft('');
+      // Optimistic prepend; the next pull reconciles.
+      setPosts((cur) => [
+        {
+          id,
+          author: null as unknown as SocialPost['author'],
+          kind: 'user',
+          body,
+          likes: 0,
+          comments: 0,
+          likedByMe: false,
+          mine: true,
+          createdAtMs: Date.now(),
+        },
+        ...(cur ?? []),
+      ]);
+      load();
+    } catch (err) {
+      setPageError(err instanceof Error ? err.message.replace('social: ', '') : 'Could not post');
+    } finally {
+      setPosting(false);
+    }
+  }
+
+  async function like(post: SocialPost) {
+    setBusy(`like-${post.id}`);
+    // Optimistic flip; the server count wins on return.
+    setPosts((cur) =>
+      (cur ?? []).map((p) =>
+        p.id === post.id
+          ? { ...p, likedByMe: !p.likedByMe, likes: p.likes + (p.likedByMe ? -1 : 1) }
+          : p,
+      ),
+    );
+    try {
+      const r = await toggleLike(post.id);
+      setPosts((cur) =>
+        (cur ?? []).map((p) => (p.id === post.id ? { ...p, likes: r.likes, likedByMe: r.liked } : p)),
+      );
+    } catch {
+      /* keep the optimistic state; next pull reconciles */
+    } finally {
+      setBusy('');
+    }
+  }
+
+  async function openComments(post: SocialPost) {
+    if (commentsFor === post.id) {
+      setCommentsFor(null);
+      return;
+    }
+    setCommentsFor(post.id);
+    setComments([]);
+    setCommentDraft('');
+    try {
+      const r = await fetchComments(post.id);
+      setComments(r.comments);
+    } catch {
+      setComments([]);
+    }
+  }
+
+  async function submitComment(post: SocialPost) {
+    const body = commentDraft.trim();
+    if (!body) return;
+    setCommentDraft('');
+    try {
+      const r = await addComment(post.id, body);
+      setComments(r.comments);
+      setPosts((cur) =>
+        (cur ?? []).map((p) => (p.id === post.id ? { ...p, comments: r.comments.length } : p)),
+      );
+    } catch {
+      flash('Could not comment');
+    }
+  }
+
+  async function share(post: SocialPost) {
+    const name = post.author?.name ?? 'A scholar';
+    const text = `${name} ${post.body} — via Renance`;
+    const url = typeof window !== 'undefined' ? window.location.origin + '/feed' : '';
+    try {
+      if (typeof navigator !== 'undefined' && navigator.share) {
+        await navigator.share({ title: 'Renance', text, url });
+        return;
+      }
+      await navigator.clipboard?.writeText(`${text} ${url}`);
+      flash('Link copied — share it anywhere');
+    } catch {
+      /* the sheet was dismissed */
+    }
+  }
+
+  async function remove(post: SocialPost) {
+    setBusy(`del-${post.id}`);
+    try {
+      await deletePost(post.id);
+      setPosts((cur) => (cur ?? []).filter((p) => p.id !== post.id));
+    } catch {
+      flash('Could not delete');
+    } finally {
+      setBusy('');
+    }
+  }
+
+  const me = getStoredUser();
+
+  return (
+    <div className="min-h-screen bg-background md:pl-[var(--rail-w)]">
+      <SideNav />
+      {toast && (
+        <div className="pointer-events-none fixed inset-x-0 top-16 z-[70] mx-auto w-fit max-w-[90vw] rounded-xl bg-primary px-4 py-2 text-[13px] font-extrabold text-white learn-toast-shadow">
+          {toast}
+        </div>
+      )}
+      <PageBar title="Feed" backHref="/dashboard" />
+
+      <main className="mx-auto w-full max-w-2xl px-4 pb-28 pt-4">
+        {/* Composer ---------------------------------------------------- */}
+        <form onSubmit={submitPost} className="learn-tile flex flex-col gap-3 rounded-2xl border-2 border-outline-variant bg-card p-4">
+          <div className="flex items-start gap-3">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-[15px] font-bold text-on-primary">
+              {(me?.username ?? 'R').slice(0, 1).toUpperCase()}
+            </span>
+            <textarea
+              value={draft}
+              onChange={(e) => setDraft(e.target.value.slice(0, 500))}
+              placeholder="Share a win, a struggle, a tip…"
+              rows={draft.length > 90 ? 4 : 2}
+              className="min-h-[52px] w-full resize-none rounded-xl bg-surface-container px-3.5 py-2.5 text-[14.5px] text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/40"
+            />
+          </div>
+          {pageError && (
+            <p className="rounded-lg bg-error-container px-3 py-2 text-[12.5px] text-on-error-container">{pageError}</p>
+          )}
+          <div className="flex items-center justify-between">
+            <span className="font-mono text-[11px] text-on-surface-variant">{draft.length}/500</span>
+            <button
+              type="submit"
+              disabled={!draft.trim() || posting}
+              className="key-btn flex items-center gap-1.5 bg-primary px-5 text-[13.5px] text-white disabled:opacity-40"
+            >
+              {posting ? 'Posting…' : 'Post'}
+            </button>
+          </div>
+        </form>
+
+        {/* Load state -------------------------------------------------- */}
+        {error && (
+          <div className="learn-tile mt-4 flex flex-col items-center gap-3 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-4 py-10 text-center">
+            <span className="material-symbols-outlined text-[34px] text-on-surface-variant">wifi_off</span>
+            <p className="text-[13.5px] font-bold text-on-surface-variant">{error}</p>
+            <button type="button" onClick={load} className="key-btn bg-primary text-white">Retry</button>
+          </div>
+        )}
+        {!posts && !error && (
+          <div className="mt-4 flex justify-center py-10"><LogoActivityIndicator /></div>
+        )}
+
+        {/* The feed ---------------------------------------------------- */}
+        {posts && posts.length === 0 && (
+          <div className="learn-tile mt-4 flex flex-col items-center gap-2 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-4 py-12 text-center">
+            <span className="material-symbols-outlined text-[36px] text-primary">newspaper</span>
+            <p className="text-[15px] font-black text-on-surface">The feed is waiting for its first story</p>
+            <p className="max-w-xs text-[12.5px] font-bold text-on-surface-variant">
+              Streaks, big scores, league promotions and arena wins show up here automatically. Or write the first post yourself.
+            </p>
+          </div>
+        )}
+
+        {posts?.map((post) => {
+          const mv = post.kind === 'milestone' ? milestoneVisual(post) : null;
+          const author = post.author;
+          return (
+            <article key={post.id} className="learn-tile mt-4 overflow-hidden rounded-2xl border-2 border-outline-variant bg-card">
+              {mv && (
+                <div className="flex items-center gap-2 px-4 pt-3" style={{ color: mv.tint }}>
+                  <span className="material-symbols-outlined text-[17px]">{mv.icon}</span>
+                  <span className="text-[11px] font-black uppercase tracking-widest">{mv.label}</span>
+                </div>
+              )}
+              <div className="flex items-center gap-3 px-4 pt-3">
+                {author ? (
+                  <Link
+                    href={`/profile/view/?u=${encodeURIComponent(author.username)}`}
+                    aria-label={`${author.name} on their profile`}
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-container-high text-[15px] font-bold text-on-surface transition hover:ring-2 hover:ring-primary"
+                  >
+                    {author.name.slice(0, 1).toUpperCase()}
+                  </Link>
+                ) : (
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-[15px] font-bold text-on-primary">R</span>
+                )}
+                <div className="min-w-0 flex-1">
+                  {author ? (
+                    <Link
+                      href={`/profile/view/?u=${encodeURIComponent(author.username)}`}
+                      className="flex items-center gap-1.5 text-[14.5px] font-extrabold text-on-surface hover:underline"
+                    >
+                      <span className="min-w-0 truncate">{author.name}</span>
+                      {author.premium && <BlueTick size={15} />}
+                    </Link>
+                  ) : (
+                    <p className="text-[14.5px] font-extrabold text-on-surface">You</p>
+                  )}
+                  <p className="text-[11.5px] font-bold text-on-surface-variant">{timeAgo(post.createdAtMs)}</p>
+                </div>
+                {post.mine && (
+                  <button
+                    type="button"
+                    onClick={() => void remove(post)}
+                    disabled={busy === `del-${post.id}`}
+                    aria-label="Delete post"
+                    className="flex h-8 w-8 items-center justify-center rounded-full text-outline transition hover:bg-surface-container hover:text-error"
+                  >
+                    <span className="material-symbols-outlined text-[18px]">delete</span>
+                  </button>
+                )}
+              </div>
+              <p className="whitespace-pre-wrap px-4 py-3 text-[15px] font-semibold leading-relaxed text-on-surface">
+                {post.body}
+              </p>
+              <div className="flex items-center gap-1 border-t-2 border-outline-variant/40 px-2 py-1.5">
+                <button
+                  type="button"
+                  onClick={() => void like(post)}
+                  disabled={busy === `like-${post.id}`}
+                  aria-pressed={post.likedByMe}
+                  className={`flex flex-1 items-center justify-center gap-1.5 rounded-xl py-2 text-[12.5px] font-extrabold transition active:translate-y-[1px] ${
+                    post.likedByMe ? 'text-error' : 'text-on-surface-variant hover:bg-surface-container'
+                  }`}
+                >
+                  <span className={`material-symbols-outlined text-[19px] ${post.likedByMe ? 'fill-current' : ''}`}>
+                    {post.likedByMe ? 'favorite' : 'favorite_border'}
+                  </span>
+                  {post.likes > 0 ? post.likes : 'Love'}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => void openComments(post)}
+                  className="flex flex-1 items-center justify-center gap-1.5 rounded-xl py-2 text-[12.5px] font-extrabold text-on-surface-variant transition hover:bg-surface-container active:translate-y-[1px]"
+                >
+                  <span className="material-symbols-outlined text-[19px]">chat_bubble</span>
+                  {post.comments > 0 ? post.comments : 'Comment'}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => void share(post)}
+                  className="flex flex-1 items-center justify-center gap-1.5 rounded-xl py-2 text-[12.5px] font-extrabold text-on-surface-variant transition hover:bg-surface-container active:translate-y-[1px]"
+                >
+                  <span className="material-symbols-outlined text-[19px]">ios_share</span>
+                  Share
+                </button>
+              </div>
+              {commentsFor === post.id && (
+                <div className="border-t-2 border-outline-variant/40 bg-surface-container-lowest px-4 py-3">
+                  {comments.length === 0 && (
+                    <p className="py-2 text-[12.5px] font-bold text-on-surface-variant">No comments yet — cheer them on.</p>
+                  )}
+                  {comments.map((c) => (
+                    <div key={c.id} className="flex items-start gap-2.5 py-2">
+                      <Link
+                        href={`/profile/view/?u=${encodeURIComponent(c.author.username)}`}
+                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-surface-container-high text-[12.5px] font-bold text-on-surface"
+                      >
+                        {c.author.name.slice(0, 1).toUpperCase()}
+                      </Link>
+                      <div className="min-w-0 flex-1 rounded-xl bg-surface-container px-3 py-2">
+                        <p className="text-[12.5px] font-extrabold text-on-surface">
+                          {c.author.name}
+                          <span className="ml-1.5 font-bold text-on-surface-variant">{timeAgo(c.createdAtMs)}</span>
+                        </p>
+                        <p className="whitespace-pre-wrap text-[13.5px] font-medium text-on-surface">{c.body}</p>
+                      </div>
+                    </div>
+                  ))}
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      void submitComment(post);
+                    }}
+                    className="mt-1 flex items-center gap-2"
+                  >
+                    <input
+                      value={commentDraft}
+                      onChange={(e) => setCommentDraft(e.target.value.slice(0, 300))}
+                      placeholder="Add a comment…"
+                      className="h-10 flex-1 rounded-full bg-surface-container px-4 text-[13.5px] text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/40"
+                    />
+                    <button
+                      type="submit"
+                      disabled={!commentDraft.trim()}
+                      className="key-btn bg-primary px-4 text-[12.5px] text-white disabled:opacity-40"
+                    >
+                      Send
+                    </button>
+                  </form>
+                </div>
+              )}
+            </article>
+          );
+        })}
+        <div ref={sentinel} aria-hidden />
+      </main>
+      <BottomNav />
+    </div>
+  );
+}

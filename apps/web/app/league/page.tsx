@@ -8,6 +8,7 @@
  */
 
 import { useCallback, useEffect, useState } from 'react';
+import Link from 'next/link';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
@@ -82,14 +83,16 @@ export default function LeaguePage() {
               {board.entries.map((e, i) => {
                 const rank = i + 1;
                 const zone = rank <= board.promotedCut ? 'bg-primary' : rank >= board.demotedFrom ? 'bg-error' : 'bg-transparent';
-                return (
-                  <li key={`${e.name}-${i}`} className={`relative flex items-center gap-3 border-b-2 border-outline-variant px-3.5 py-2.5 last:border-b-0 ${e.isYou ? 'bg-primary/10' : ''}`}>
+                // Real members (username present) open their public
+                // profile; the deterministic rivals stay plain.
+                const body = (
+                  <>
                     <span className={`absolute inset-y-0 left-0 w-1 ${zone}`} aria-hidden />
                     <span className="w-6 text-center font-mono text-[12.5px] font-black text-on-surface-variant">{rank}</span>
                     {e.isYou ? (
                       <span className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-primary bg-primary text-[13px] font-black text-white">Y</span>
                     ) : (
-                      <span className="flex h-8 w-8 items-center justify-center rounded-full text-[13px] font-black text-white" style={{ background: e.color }}>
+                      <span className="flex h-8 w-8 items-center justify-center rounded-full text-[13px] font-black text-white" style={{ background: e.color || 'var(--color-on-surface-variant)' }}>
                         {e.name.slice(0, 1)}
                       </span>
                     )}
@@ -97,6 +100,24 @@ export default function LeaguePage() {
                       {e.name}{e.isYou ? ' (You)' : ''}
                     </span>
                     <span className="font-mono text-[12.5px] font-black text-on-surface">{e.xp.toLocaleString()} XP</span>
+                  </>
+                );
+                if (e.username && !e.isYou) {
+                  return (
+                    <li key={`${e.name}-${i}`} className="border-b-2 border-outline-variant last:border-b-0">
+                      <Link
+                        href={`/profile/view/?u=${encodeURIComponent(e.username)}`}
+                        title={`${e.name} on their profile`}
+                        className="relative flex items-center gap-3 px-3.5 py-2.5 transition hover:bg-surface-container-low"
+                      >
+                        {body}
+                      </Link>
+                    </li>
+                  );
+                }
+                return (
+                  <li key={`${e.name}-${i}`} className={`relative flex items-center gap-3 border-b-2 border-outline-variant px-3.5 py-2.5 last:border-b-0 ${e.isYou ? 'bg-primary/10' : ''}`}>
+                    {body}
                   </li>
                 );
               })}

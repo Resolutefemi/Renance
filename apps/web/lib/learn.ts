@@ -153,6 +153,8 @@ export interface ShopItem {
 
 export interface ShopResponse {
   gems: number;
+  /** The REAL heart count — the ∞ readout is retired (founder rule). */
+  hearts: number;
   items: ShopItem[];
   superTrial: ShopItem;
 }
@@ -162,6 +164,9 @@ export interface LeagueEntry {
   xp: number;
   color: string;
   isYou: boolean;
+  /** Set on REAL members (never the deterministic rivals) — link them to /u/{username}. */
+  username?: string;
+  isReal: boolean;
 }
 
 export interface LeagueBoard {

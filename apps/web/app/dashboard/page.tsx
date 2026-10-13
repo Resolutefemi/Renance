@@ -23,7 +23,6 @@ import {
 import BottomNav from '@/components/bottom-nav';
 import AiFloatingButton from '@/components/ai-floating-button';
 import SideNav from '@/components/side-nav';
-import AccountSheet from '@/components/account-sheet';
 import { LearnStatChips, useLearnStats } from '@/components/learn/learn-stats';
 import DailyComboModal, { COMBO_BODIES } from '@/components/daily-combo-modal';
 import FeatureTour from '@/components/feature-tour';
@@ -150,9 +149,6 @@ export default function DashboardPage() {
   const [bootNonce, setBootNonce] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [moreOpen, setMoreOpen] = useState(false);
-  // The Myschool-cut account sheet: the header avatar (top-RHS) opens
-  // the identity + menu sheet instead of jumping straight to /profile.
-  const [accountOpen, setAccountOpen] = useState(false);
   // Today's daily challenge (JAMB desk): the tile deep-links into the
   // sprint, or into the setup when the API has no challenge for us.
   const [daily, setDaily] = useState<DailyTileInfo | null>(null);
@@ -399,10 +395,13 @@ export default function DashboardPage() {
             <span className="text-[21px] font-black lowercase tracking-tight text-primary">renance</span>
           </Link>
           <div className="flex items-center">
-            {/* The merged-learn top bar (founder 2026-10-14): the search
-                icon is GONE; the Supreme gem + heart counters lead the
-                row (both tap through to the Shop), then the streak pill
-                and the bell, then a wider breath before the avatar. */}
+            {/* The merged-learn top bar (founder 2026-10-14, evening pass):
+                the search icon, the heart chip and the profile avatar are
+                ALL GONE from the top navbar — the gem counter leads the
+                row (taps into the profile shop), then the streak pill and
+                the bell. Profile lives in the base navbar, hearts read on
+                the profile page, and everything the old avatar popup held
+                moved onto the profile page itself. */}
             <LearnStatChips stats={learnStats} />
             <Link
               href="/notifications"
@@ -420,15 +419,6 @@ export default function DashboardPage() {
               <span className="material-symbols-outlined text-[19px] text-accent-amber">local_fire_department</span>
               <span className="font-mono text-[12.5px] text-on-surface">{streak}</span>
             </div>
-            <button
-              type="button"
-              onClick={() => setAccountOpen(true)}
-              aria-label="Open account menu"
-              title="Account"
-              className="ml-3 flex h-8 w-8 items-center justify-center rounded-full border border-outline-light bg-surface-container-high text-xs font-semibold text-on-surface transition hover:ring-2 hover:ring-primary"
-            >
-              {(me.profile?.fullName || me.user.username || 'R').slice(0, 1).toUpperCase()}
-            </button>
           </div>
         </div>
       </header>
@@ -549,8 +539,6 @@ export default function DashboardPage() {
               <LauncherTile icon="auto_stories" label="Notes" href="/notes" />
               <LauncherTile icon="smart_toy" label="Renance AI" href="/ai" />
               <LauncherTile icon="style" label="Flashcards" href="/flashcards" />
-              <LauncherTile icon="download" label="Downloads" href="/downloads" />
-              <LauncherTile icon="category" label="Subjects" href="/subjects" />
             </div>
           </section>
         </div>
@@ -564,7 +552,6 @@ export default function DashboardPage() {
             <LauncherTile icon="more_horiz" label="More" muted onMore={() => setMoreOpen(true)} />
           </div>
         </section>
-
         </>
         )}
 
@@ -614,10 +601,6 @@ export default function DashboardPage() {
 
       {/* New-student walkthrough: shows once, Skippable always. */}
       <FeatureTour />
-
-      {/* The account sheet rides on every desk: identity + menu at the
-          top-RHS, the school app's way. */}
-      <AccountSheet open={accountOpen} onClose={() => setAccountOpen(false)} />
 
       <SideNav />
       <BottomNav />
@@ -900,19 +883,22 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
 
 function MoreSheet({ onClose }: { onClose: () => void }) {
   // The rest of the drawer, by design: the daily drivers (Exams, Packs,
-  // Review, Flashcards, Arena, Daily, Leaderboard, Study Plan, Lessons,
-  // Syllabus) live on the home grids, so only the occasional tools
-  // remain in here. Progress and Certificates were cut (founder call);
-  // the GPA calculator lives on the University desk only.
+  // Review, Flashcards, Arena, Daily, Leaderboard) live on the home
+  // grids, so the occasional tools remain in here — plus Downloads and
+  // Subjects, which moved off the home desk in the 2026-10-14 evening
+  // pass ("reduce the icon size and fill the more page with the rest").
   const items = [
     { icon: 'insights', label: 'Performance Analysis', href: '/performance' },
     { icon: 'bookmark', label: 'Saved Questions', href: '/saved' },
     { icon: 'auto_stories', label: 'Study Resources', href: '/study' },
+    { icon: 'category', label: 'Subjects', href: '/subjects' },
+    { icon: 'download', label: 'Downloads', href: '/downloads' },
     { icon: 'notifications', label: 'Notifications', href: '/notifications' },
     { icon: 'laptop_mac', label: 'Career Bridge', href: '/career-bridge' },
     { icon: 'auto_awesome', label: 'Renance AI Studio', href: '/ai' },
     { icon: 'volunteer_activism', label: 'Patron Portal', href: '/patron' },
-    { icon: 'menu_book', label: 'Subjects', href: '/subjects' },
+    { icon: 'menu_book', label: 'Syllabus Map', href: '/syllabus' },
+    { icon: 'event_note', label: 'Study Plan', href: '/study-plan' },
     { icon: 'person', label: 'Profile', href: '/profile' },
     { icon: 'settings', label: 'Settings', href: '/settings' },
     { icon: 'help', label: 'Help & FAQ', href: '/faq' },
@@ -981,7 +967,7 @@ function LauncherTile({
   const inner = (
     <>
       <div
-        className={`relative flex h-14 w-14 items-center justify-center rounded-[18px] transition-transform group-active:scale-95 md:h-16 md:w-16 md:rounded-[22px] ${
+        className={`relative flex h-12 w-12 items-center justify-center rounded-[16px] transition-transform group-active:scale-95 md:h-14 md:w-14 md:rounded-[19px] ${
           inverse
             ? // Founder directive (2026-10-02): the Tutor tile follows the
               // theme colour - bg-primary / text-on-primary like the R
@@ -995,7 +981,7 @@ function LauncherTile({
         } ${inverse ? 'overflow-hidden' : ''}`}
       >
         {inverse && <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-white/20" />}
-        <span className={`material-symbols-outlined relative z-10 ${amber ? 'text-accent-amber' : ''}`}>{icon}</span>
+        <span className={`material-symbols-outlined relative z-10 text-[21px] md:text-[23px] ${amber ? 'text-accent-amber' : ''}`}>{icon}</span>
         {badge != null && (
           <span className="absolute -right-1.5 -top-1.5 rounded-full bg-accent-emerald px-1.5 py-0.5 font-mono text-[10px] font-bold text-white shadow-sm">
             {badge}
@@ -1003,7 +989,7 @@ function LauncherTile({
         )}
       </div>
       <span
-        className={`w-full truncate text-center text-[11px] font-bold md:text-[12px] ${
+        className={`w-full truncate text-center text-[10.5px] font-bold md:text-[11.5px] ${
           inverse ? 'text-primary-ink' : 'text-on-surface-variant'
         }`}
       >

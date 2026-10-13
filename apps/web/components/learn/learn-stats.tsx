@@ -2,19 +2,15 @@
 
 /**
  * LearnStats — the top-bar gamification counters (founder directive
- * 2026-10-14): the Supreme gem + heart chips on the Renance header,
- * live from GET /learn/profile. Gems and hearts both open the Shop.
- * Hearts read ∞ while the unlimited launch flag is on; the streak
- * flame keeps its existing pill next to them. Search was removed from
- * this row by the same directive.
- *
- * Founder fix (2026-10-14, "add the diamond count, the heart too to
- * the top navbar"): the chips must ALWAYS be visible. They used to
- * return null whenever /learn/profile failed (cold backend, offline,
- * deploy lag), so the counters silently vanished from the header.
- * The last known stats are cached in localStorage and rendered
- * immediately — zeros on a brand-new device — then refreshed live
- * whenever the API answers.
+ * 2026-10-14): the Supreme gem chip on the Renance header, live from
+ * GET /learn/profile. The founder's 2026-10-14 evening pass moved the
+ * HEART chip out of the top navbar ("remove the profile icon, and
+ * heart from the top navbar") — hearts now read on the profile page,
+ * where the shop lives too. The heart readout shows the REAL number
+ * ("remove that infinite symbol replace with real data") — the ∞ is
+ * retired everywhere. The last known stats are cached in localStorage
+ * and rendered immediately — zeros on a brand-new device — then
+ * refreshed live whenever the API answers.
  */
 
 import { useEffect, useState } from 'react';
@@ -84,30 +80,40 @@ export function useLearnStats(enabled: boolean) {
   return stats;
 }
 
+/**
+ * The top navbar chip: GEMS ONLY (founder 2026-10-14 evening pass —
+ * the heart left the top bar for the profile page). Taps through to
+ * the profile, where the shop now lives.
+ */
 export function LearnStatChips({ stats }: { stats: LearnProfile | null }) {
   const s = stats ?? FALLBACK;
   return (
-    <>
-      <Link
-        href="/shop"
-        aria-label={`Gems: ${s.gems}`}
-        title="Gems — open the Shop"
-        className="flex h-8 min-w-[54px] items-center justify-center gap-1 rounded-full border-2 border-outline-light bg-surface-container px-2 transition active:translate-y-[2px]"
-      >
-        <GemIcon size={17} />
-        <span className="font-mono text-[12.5px] font-bold text-on-surface">{s.gems.toLocaleString()}</span>
-      </Link>
-      <Link
-        href="/shop"
-        aria-label={s.unlimitedHearts ? 'Hearts: unlimited' : `Hearts: ${s.hearts}`}
-        title={s.unlimitedHearts ? 'Unlimited hearts at launch' : 'Hearts — open the Shop'}
-        className="flex h-8 min-w-[46px] items-center justify-center gap-1 rounded-full border-2 border-outline-light bg-surface-container px-2 transition active:translate-y-[2px]"
-      >
-        <HeartIcon size={16} />
-        <span className="font-mono text-[12.5px] font-bold text-on-surface">
-          {s.unlimitedHearts ? '∞' : s.hearts}
-        </span>
-      </Link>
-    </>
+    <Link
+      href="/profile#shop"
+      aria-label={`Gems: ${s.gems}`}
+      title="Gems — open the shop on your profile"
+      className="flex h-8 min-w-[54px] items-center justify-center gap-1 rounded-full border-2 border-outline-light bg-surface-container px-2 transition active:translate-y-[2px]"
+    >
+      <GemIcon size={17} />
+      <span className="font-mono text-[12.5px] font-bold text-on-surface">{s.gems.toLocaleString()}</span>
+    </Link>
+  );
+}
+
+/**
+ * The heart readout — real data, never ∞ (founder rule). Lives on the
+ * profile page next to the shop; taps scroll to the shop panel.
+ */
+export function HeartChip({ hearts, superActive }: { hearts: number; superActive?: boolean }) {
+  return (
+    <Link
+      href="/profile#shop"
+      aria-label={`Hearts: ${hearts}`}
+      title={superActive ? 'Super active — hearts refill instantly' : 'Hearts — refill in the shop'}
+      className="flex h-8 min-w-[46px] items-center justify-center gap-1 rounded-full border-2 border-outline-light bg-surface-container px-2 transition active:translate-y-[2px]"
+    >
+      <HeartIcon size={16} />
+      <span className="font-mono text-[12.5px] font-bold text-on-surface">{hearts}</span>
+    </Link>
   );
 }

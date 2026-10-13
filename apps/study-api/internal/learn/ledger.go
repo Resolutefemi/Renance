@@ -12,6 +12,8 @@ import (
         "fmt"
         "math"
         "time"
+
+        "renance.dev/study-api/internal/social"
 )
 
 // ─── Completion ledger ────────────────────────────────────────────────────
@@ -61,6 +63,9 @@ func (s *Service) Complete(ctx context.Context, userID string, req CompleteReque
         if err != nil {
                 return nil, err
         }
+        // The league seat before this attempt lands (promotion detection
+        // for the feed milestone after commit).
+        prevLeague := s.leagueIndex(ctx, userID)
 
         // Topic + course context.
         var courseID string
@@ -225,7 +230,37 @@ func (s *Service) Complete(ctx context.Context, userID string, req CompleteReque
         if l != nil {
                 res.Hearts, res.Gems, res.XPTotal, res.Unlimited = l.Hearts, l.Gems, l.XP, s.UnlimitedHearts || l.SuperActive
         }
+
+        // Feed milestones (best-effort, never fail the completion): the
+        // platform posts the big moments — streaks and league promotions
+        // — to the Renance feed (founder directive 2026-10-14). Exam
+        // scores post from the grading engine; arena wins from the hub.
+        s.postFeedMilestones(ctx, userID, prevLeague, res)
         return res, nil
+}
+
+// streakMilestones: the streak counts big enough to announce. The
+// milestone dedup index writes each of these once, ever.
+var streakMilestones = map[int]bool{
+        3: true, 7: true, 14: true, 21: true, 30: true, 50: true, 75: true,
+        100: true, 150: true, 200: true, 250: true, 300: true, 365: true,
+        400: true, 500: true, 600: true, 700: true, 730: true, 800: true,
+        900: true, 1000: true,
+}
+
+func (s *Service) postFeedMilestones(ctx context.Context, userID string, prevLeague int, res *CompleteResult) {
+        defer func() { _ = recover() }() // a feed hiccup never breaks a lesson
+        if res.Streak > 0 && streakMilestones[res.Streak] {
+                social.Milestone(ctx, s.Pool, userID, fmt.Sprintf("streak_%d", res.Streak),
+                        fmt.Sprintf("just hit a %d-day streak! 🔥", res.Streak),
+                        map[string]any{"streak": res.Streak})
+        }
+        if newLeague := s.leagueIndex(ctx, userID); newLeague > prevLeague && newLeague > 0 {
+                name := Leagues[clamp(newLeague, 0, len(Leagues)-1)]
+                social.Milestone(ctx, s.Pool, userID, fmt.Sprintf("league_%d", newLeague),
+                        fmt.Sprintf("just reached the %s League! 🏆", name),
+                        map[string]any{"league": name})
+        }
 }
 
 func boolInt(b bool) int {
@@ -242,6 +277,10 @@ type LeagueEntry struct {
         XP      int    `json:"xp"`
         Color   string `json:"color"`
         IsYou   bool   `json:"isYou"`
+        // Username is set on REAL members (never the deterministic
+        // rivals): the board links those rows to the public profile.
+        Username string `json:"username,omitempty"`
+        IsReal   bool   `json:"isReal"`
 }
 
 type LeagueBoard struct {
@@ -364,9 +403,40 @@ func (s *Service) League(ctx context.Context, userID string) (*LeagueBoard, erro
                 EndsInMs: WeekEndsIn().Sub(now).Milliseconds(),
                 PromotedCut: PromoteCut, DemotedFrom: DemoteFrom,
         }
-        board.Entries = append(board.Entries, LeagueEntry{Name: "You", XP: mine, IsYou: true})
-        for _, r := range RivalsFor(week, league, progress) {
-                board.Entries = append(board.Entries, LeagueEntry{Name: r.Name, XP: r.XP, Color: r.Color})
+        board.Entries = append(board.Entries, LeagueEntry{Name: "You", XP: mine, IsYou: true, IsReal: true})
+
+        // Real members seated in this week's league (founder directive
+        // 2026-10-14: the board links to real profiles). They ride ahead
+        // of the deterministic rivals, ranked together below.
+        realRows, err := s.Pool.Query(ctx, `
+                SELECT u.username, COALESCE(SUM(x.amount),0)
+                FROM learn.league_members lm
+                JOIN study.users u ON u.id = lm.user_id
+                LEFT JOIN learn.xp_events x ON x.user_id = lm.user_id AND x.week_key = lm.week_key
+                WHERE lm.week_key = $1 AND lm.league = $2 AND lm.user_id <> $3
+                GROUP BY u.id, u.username
+                ORDER BY 2 DESC LIMIT 29`, week, league, userID)
+        if err == nil {
+                for realRows.Next() {
+                        var name string
+                        var xp int
+                        if err := realRows.Scan(&name, &xp); err != nil {
+                                break
+                        }
+                        board.Entries = append(board.Entries, LeagueEntry{Name: name, XP: xp, Username: name, IsReal: true})
+                }
+                realRows.Close()
+        }
+        // The deterministic rivals fill the rest of the 30-seat board.
+        fill := 30 - len(board.Entries)
+        if fill > 0 {
+                for _, r := range RivalsFor(week, league, progress) {
+                        if fill <= 0 {
+                                break
+                        }
+                        board.Entries = append(board.Entries, LeagueEntry{Name: r.Name, XP: r.XP, Color: r.Color})
+                        fill--
+                }
         }
         // Rank by XP desc (stable: ties keep insertion order).
         for i := 0; i < len(board.Entries); i++ {
@@ -560,9 +630,10 @@ type ShopItem struct {
 }
 
 type ShopResponse struct {
-        Gems  int        `json:"gems"`
-        Items []ShopItem `json:"items"`
-        Super ShopItem   `json:"superTrial"`
+        Gems   int        `json:"gems"`
+        Hearts int        `json:"hearts"` // the real count — the ∞ readout is retired (founder rule)
+        Items  []ShopItem `json:"items"`
+        Super  ShopItem   `json:"superTrial"`
 }
 
 func (s *Service) Shop(ctx context.Context, userID string) (*ShopResponse, error) {
@@ -573,7 +644,7 @@ func (s *Service) Shop(ctx context.Context, userID string) (*ShopResponse, error
         if err != nil {
                 return nil, err
         }
-        resp := &ShopResponse{Gems: l.Gems}
+        resp := &ShopResponse{Gems: l.Gems, Hearts: l.Hearts}
         heartsFull := s.UnlimitedHearts || l.SuperActive || l.Hearts >= MaxHearts
         resp.Items = []ShopItem{
                 {Key: "freeze", Title: "Streak Freeze", Desc: "Protects your streak for a day of rest", Gems: FreezePrice, Icon: "ac_unit", Owned: l.FreezeCount, Max: MaxFreezes, SoldOut: l.FreezeCount >= MaxFreezes},

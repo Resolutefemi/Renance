@@ -7,6 +7,14 @@
   "trailingSlash": true,
   "rewrites": [
     {
+      "source": "/u/:username/",
+      "destination": "/profile/view/?u=:username"
+    },
+    {
+      "source": "/u/:username",
+      "destination": "/profile/view/?u=:username"
+    },
+    {
       "source": "/api/app-version",
       "destination": "https://renance-api.onrender.com/app-version"
     }

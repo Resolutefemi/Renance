@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS learn.lessons (
 -- ─── Learner economy (1:1 with the Renance account) ───────────────────────
 
 CREATE TABLE IF NOT EXISTS learn.learners (
-  user_id           TEXT PRIMARY KEY REFERENCES study.users(id) ON DELETE CASCADE,
+  user_id           uuid PRIMARY KEY REFERENCES study.users(id) ON DELETE CASCADE,
   hearts            INT NOT NULL DEFAULT 5,
   hearts_updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
   gems              INT NOT NULL DEFAULT 0,
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS learn.learners (
 );
 
 CREATE TABLE IF NOT EXISTS learn.user_courses (
-  user_id   TEXT NOT NULL REFERENCES study.users(id) ON DELETE CASCADE,
+  user_id   uuid NOT NULL REFERENCES study.users(id) ON DELETE CASCADE,
   course_id TEXT NOT NULL REFERENCES learn.courses(course_id) ON DELETE CASCADE,
   added_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
   PRIMARY KEY (user_id, course_id)
@@ -88,12 +88,12 @@ CREATE TABLE IF NOT EXISTS learn.user_courses (
 CREATE INDEX IF NOT EXISTS learn_user_courses_user_idx ON learn.user_courses(user_id);
 
 CREATE TABLE IF NOT EXISTS learn.active_course (
-  user_id   TEXT PRIMARY KEY REFERENCES study.users(id) ON DELETE CASCADE,
+  user_id   uuid PRIMARY KEY REFERENCES study.users(id) ON DELETE CASCADE,
   course_id TEXT NOT NULL REFERENCES learn.courses(course_id) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS learn.progress (
-  user_id     TEXT NOT NULL REFERENCES study.users(id) ON DELETE CASCADE,
+  user_id     uuid NOT NULL REFERENCES study.users(id) ON DELETE CASCADE,
   topic_id    TEXT NOT NULL REFERENCES learn.topics(topic_id) ON DELETE CASCADE,
   status      TEXT NOT NULL DEFAULT 'completed',
   best_score  INT NOT NULL DEFAULT 0,
@@ -108,7 +108,7 @@ CREATE INDEX IF NOT EXISTS learn_progress_user_idx ON learn.progress(user_id);
 
 CREATE TABLE IF NOT EXISTS learn.xp_events (
   id         BIGSERIAL PRIMARY KEY,
-  user_id    TEXT NOT NULL REFERENCES study.users(id) ON DELETE CASCADE,
+  user_id    uuid NOT NULL REFERENCES study.users(id) ON DELETE CASCADE,
   amount     INT NOT NULL,
   kind       TEXT NOT NULL DEFAULT 'lesson', -- lesson|practice|review|quest|chest|league
   week_key   TEXT NOT NULL,
@@ -119,7 +119,7 @@ CREATE INDEX IF NOT EXISTS learn_xp_events_week_idx ON learn.xp_events(user_id, 
 CREATE INDEX IF NOT EXISTS learn_xp_events_day_idx ON learn.xp_events(user_id, day_key);
 
 CREATE TABLE IF NOT EXISTS learn.daily_stats (
-  user_id       TEXT NOT NULL REFERENCES study.users(id) ON DELETE CASCADE,
+  user_id       uuid NOT NULL REFERENCES study.users(id) ON DELETE CASCADE,
   day_key       TEXT NOT NULL,
   xp            INT NOT NULL DEFAULT 0,
   correct       INT NOT NULL DEFAULT 0,
@@ -132,7 +132,7 @@ CREATE TABLE IF NOT EXISTS learn.daily_stats (
 );
 
 CREATE TABLE IF NOT EXISTS learn.mistakes (
-  user_id     TEXT NOT NULL REFERENCES study.users(id) ON DELETE CASCADE,
+  user_id     uuid NOT NULL REFERENCES study.users(id) ON DELETE CASCADE,
   question_id TEXT NOT NULL,
   topic_id    TEXT,
   payload     JSONB NOT NULL DEFAULT '{}',
@@ -143,7 +143,7 @@ CREATE TABLE IF NOT EXISTS learn.mistakes (
 );
 
 CREATE TABLE IF NOT EXISTS learn.quest_claims (
-  user_id    TEXT NOT NULL REFERENCES study.users(id) ON DELETE CASCADE,
+  user_id    uuid NOT NULL REFERENCES study.users(id) ON DELETE CASCADE,
   quest_key  TEXT NOT NULL,
   period_key TEXT NOT NULL,
   claimed_at TIMESTAMPTZ NOT NULL DEFAULT now(),
@@ -151,7 +151,7 @@ CREATE TABLE IF NOT EXISTS learn.quest_claims (
 );
 
 CREATE TABLE IF NOT EXISTS learn.league_members (
-  user_id   TEXT NOT NULL REFERENCES study.users(id) ON DELETE CASCADE,
+  user_id   uuid NOT NULL REFERENCES study.users(id) ON DELETE CASCADE,
   week_key  TEXT NOT NULL,
   league    INT NOT NULL DEFAULT 0, -- 0=Bronze .. 9=Diamond
   promoted  BOOLEAN NOT NULL DEFAULT FALSE,
@@ -160,7 +160,7 @@ CREATE TABLE IF NOT EXISTS learn.league_members (
 );
 
 CREATE TABLE IF NOT EXISTS learn.chest_opens (
-  user_id   TEXT NOT NULL REFERENCES study.users(id) ON DELETE CASCADE,
+  user_id   uuid NOT NULL REFERENCES study.users(id) ON DELETE CASCADE,
   chest_key TEXT NOT NULL,            -- courseId#unitIndex
   gems      INT NOT NULL,
   opened_at TIMESTAMPTZ NOT NULL DEFAULT now(),
