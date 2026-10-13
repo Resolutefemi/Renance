@@ -15,6 +15,7 @@ import { api } from '@/lib/api';
 import { clearSession, getToken } from '@/lib/session';
 import { readSeedColor, setSeedColor, type ThemeMode } from '@/lib/theme';
 import AppearancePanel from '@/components/appearance-panel';
+import { LearnProfile, fetchLearnProfile, patchLearnProfile, resetLearnProgress } from '@/lib/learn';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
@@ -37,12 +38,19 @@ export default function SettingsPage() {
   const [seed, setSeed] = useState<string | null>(null);
   const [me, setMe] = useState<MeResponse | null>(null);
   const [cleared, setCleared] = useState(false);
+  // Supreme learn settings (founder 2026-10-14): the daily goal grid,
+  // course management and the learn-progress reset live here now.
+  const [learn, setLearn] = useState<LearnProfile | null>(null);
+  const [goalSaving, setGoalSaving] = useState(false);
+  const [resetArmed, setResetArmed] = useState(false);
+  const [resetDone, setResetDone] = useState(false);
 
   useEffect(() => {
     setTheme(readTheme());
     setSeed(readSeedColor());
     if (getToken()) {
       api<MeResponse>('/me').then(setMe).catch(() => setMe(null));
+      fetchLearnProfile().then(setLearn).catch(() => setLearn(null));
     }
   }, []);
 
@@ -65,6 +73,35 @@ export default function SettingsPage() {
     }
     setCleared(true);
     setTimeout(() => setCleared(false), 2400);
+  }
+
+  async function pickGoal(goal: number) {
+    setGoalSaving(true);
+    try {
+      const next = await patchLearnProfile({ dailyGoal: goal });
+      setLearn(next);
+    } catch {
+      /* the grid re-reads on next visit */
+    } finally {
+      setGoalSaving(false);
+    }
+  }
+
+  async function resetLearn() {
+    if (!resetArmed) {
+      setResetArmed(true);
+      setTimeout(() => setResetArmed(false), 4000);
+      return;
+    }
+    try {
+      await resetLearnProgress();
+      setLearn(null);
+      setResetDone(true);
+      setResetArmed(false);
+      setTimeout(() => setResetDone(false), 3000);
+    } catch {
+      /* honest failure: the button stays armed */
+    }
   }
 
   function signOut() {
@@ -108,15 +145,58 @@ export default function SettingsPage() {
               Learning
             </h2>
           </div>
-          <div className="flex items-center gap-3 border-b border-outline-variant/50 px-5 py-4">
-            <span className="material-symbols-outlined text-on-surface-variant">flag</span>
+          {/* Daily goal (Supreme parity): drives the header goal ring
+              and quest pacing - 20 / 50 / 100 / 200 XP. */}
+          <div className="border-b border-outline-variant/50 px-5 py-4">
+            <div className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-on-surface-variant">flag</span>
+              <div className="flex-1">
+                <p className="text-[15px] font-semibold text-on-surface">Daily Goal</p>
+                <p className="text-[13px] text-on-surface-variant">
+                  {goalSaving ? 'Saving…' : learn ? `${learn.dailyGoal} XP a day` : 'Sign in to set your goal'}
+                </p>
+              </div>
+            </div>
+            <div className="mt-3 grid grid-cols-4 gap-2">
+              {[20, 50, 100, 200].map((g) => {
+                const active = learn?.dailyGoal === g;
+                return (
+                  <button
+                    key={g}
+                    type="button"
+                    disabled={!learn || goalSaving}
+                    onClick={() => void pickGoal(g)}
+                    aria-pressed={active}
+                    className={`rounded-xl border-2 px-2 py-2 text-center transition ${
+                      active
+                        ? 'border-primary bg-primary/10 text-primary-ink'
+                        : 'border-outline-variant bg-surface text-on-surface hover:border-primary/40'
+                    } disabled:opacity-50`}
+                  >
+                    <span className="block text-[15px] font-black">{g}</span>
+                    <span className="block text-[10px] font-bold uppercase tracking-wide text-on-surface-variant">XP / day</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Course management (the merged Supreme courses list). */}
+          <a
+            href="/courses"
+            className="flex items-center gap-3 border-b border-outline-variant/50 px-5 py-4"
+          >
+            <span className="material-symbols-outlined text-on-surface-variant">menu_book</span>
             <div className="flex-1">
-              <p className="text-[15px] font-semibold text-on-surface">Daily Goals</p>
-              <p className="text-[13px] text-on-surface-variant">20 questions a day</p>
+              <p className="text-[15px] font-semibold text-on-surface">My Courses</p>
+              <p className="text-[13px] text-on-surface-variant">
+                {learn ? `${learn.courseCount} on your list · add or remove any time` : 'Add or remove courses'}
+              </p>
             </div>
             <span className="material-symbols-outlined text-outline">chevron_right</span>
-          </div>
-          <div className="flex items-center gap-3 px-5 py-4">
+          </a>
+
+          <div className="flex items-center gap-3 border-b border-outline-variant/50 px-5 py-4">
             <span className="material-symbols-outlined text-on-surface-variant">
               notifications_active
             </span>
@@ -126,6 +206,21 @@ export default function SettingsPage() {
             </div>
             <span className="material-symbols-outlined text-outline">chevron_right</span>
           </div>
+
+          {/* Reset the learn economy (two-tap confirm, honest states). */}
+          <button type="button" onClick={() => void resetLearn()} className="flex w-full items-center gap-3 px-5 py-4 text-left">
+            <span className="material-symbols-outlined text-error">restart_alt</span>
+            <div className="flex-1">
+              <p className="text-[15px] font-semibold text-error">Reset Learning Progress</p>
+              <p className="text-[13px] text-on-surface-variant">
+                {resetDone
+                  ? 'Progress, XP, gems and quests cleared.'
+                  : resetArmed
+                    ? 'Tap again to confirm - this cannot be undone.'
+                    : 'Clears your course paths, XP, gems, quests and league history'}
+              </p>
+            </div>
+          </button>
         </section>
 
         {/* Data & storage -------------------------------------------------- */}

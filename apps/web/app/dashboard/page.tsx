@@ -24,6 +24,7 @@ import BottomNav from '@/components/bottom-nav';
 import AiFloatingButton from '@/components/ai-floating-button';
 import SideNav from '@/components/side-nav';
 import AccountSheet from '@/components/account-sheet';
+import { LearnStatChips, useLearnStats } from '@/components/learn/learn-stats';
 import DailyComboModal, { COMBO_BODIES } from '@/components/daily-combo-modal';
 import FeatureTour from '@/components/feature-tour';
 
@@ -140,6 +141,8 @@ export default function DashboardPage() {
   const [me, setMe] = useState<MeResponse | null>(null);
   const [exams, setExams] = useState<ExamMeta[]>([]);
   const [streak, setStreak] = useState(0);
+  // Supreme learn counters for the top bar (gems + hearts, live).
+  const learnStats = useLearnStats(true);
   const [attempts, setAttempts] = useState<AttemptRow[]>([]);
   const [reviewDueCount, setReviewDueCount] = useState(0);
   const [needsProfile, setNeedsProfile] = useState(false);
@@ -396,20 +399,15 @@ export default function DashboardPage() {
             <span className="text-[21px] font-black lowercase tracking-tight text-primary">renance</span>
           </Link>
           <div className="flex items-center">
-            {/* The app home header cut: plain round icon buttons (no
-                bordered circles), the streak pill after the bell, then
-                a wider breath before the avatar. */}
-            <Link
-              href="/search"
-              aria-label="Search"
-              className="flex h-9 w-9 items-center justify-center rounded-full text-on-surface transition hover:bg-surface-container-high"
-            >
-              <span className="material-symbols-outlined text-[22px]">search</span>
-            </Link>
+            {/* The merged-learn top bar (founder 2026-10-14): the search
+                icon is GONE; the Supreme gem + heart counters lead the
+                row (both tap through to the Shop), then the streak pill
+                and the bell, then a wider breath before the avatar. */}
+            <LearnStatChips stats={learnStats} />
             <Link
               href="/notifications"
               aria-label={`Notifications${unread ? ` (${unread} unread)` : ''}`}
-              className="relative ml-0.5 flex h-9 w-9 items-center justify-center rounded-full text-on-surface transition hover:bg-surface-container-high md:hidden"
+              className="relative ml-1.5 flex h-9 w-9 items-center justify-center rounded-full text-on-surface transition hover:bg-surface-container-high md:hidden"
             >
               <span className="material-symbols-outlined text-[22px]">notifications</span>
               {unread > 0 && (

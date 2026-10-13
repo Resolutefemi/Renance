@@ -25,6 +25,12 @@ export default function manifest(): MetadataRoute.Manifest {
     lang: 'en-NG',
     icons: [
       {
+        src: `${base}/icon-192.png`,
+        sizes: '192x192',
+        type: 'image/png',
+        purpose: 'any',
+      },
+      {
         src: `${base}/renance-mark.png`,
         sizes: '512x512',
         type: 'image/png',
@@ -35,6 +41,13 @@ export default function manifest(): MetadataRoute.Manifest {
         sizes: '512x512',
         type: 'image/png',
         purpose: 'maskable',
+      },
+      {
+        // Founder build target: the dedicated 500px store icon.
+        src: `${base}/renance-mark-500.png`,
+        sizes: '500x500',
+        type: 'image/png',
+        purpose: 'any',
       },
     ],
   };

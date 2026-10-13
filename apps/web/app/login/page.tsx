@@ -9,7 +9,6 @@ import { chooseSchool, schoolMe } from '@/lib/school';
 import { RenanceMark } from '@/components/renance-logo';
 import { GoogleSignIn } from '@/components/google-signin';
 import ConfirmEmailCard from '@/components/confirm-email-card';
-import AppearanceModal, { needsAppearanceIntro } from '@/components/appearance-modal';
 import { AudienceToggle, type Audience } from '@/components/audience-toggle';
 import { MailIcon, LockIcon, ArrowIcon, EyeIcon } from '@/components/icons';
 
@@ -22,12 +21,9 @@ export default function LoginPage() {
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
-  // Founder directive (2026-10-02, restored): the appearance popup
-  // fires on the FIRST login (or Google sign-in) on a device that never
-  // met the picker - students who signed up during the popup-less
-  // releases still get to meet it once, then it never shows again.
-  const [showAppearance, setShowAppearance] = useState(false);
-  const [afterAppearance, setAfterAppearance] = useState<(() => void) | null>(null);
+  // Founder directive (2026-10-14): the appearance POPUP is retired
+  // completely. Students who want to change how Renance looks go to
+  // Settings → Appearance themselves; sign-in flows straight through.
 
   // Deep link (founder bugfix 2026-10-05): /login/?audience=school opens
   // the For Schools form - the register page's Log In hop carries the
@@ -44,20 +40,7 @@ export default function LoginPage() {
   }, []);
 
   const finishLogin = (next: () => void) => {
-    if (needsAppearanceIntro()) {
-      setAfterAppearance(() => next);
-      setShowAppearance(true);
-      setBusy(false);
-      return;
-    }
     next();
-  };
-
-  const closeAppearance = () => {
-    setShowAppearance(false);
-    const next = afterAppearance;
-    setAfterAppearance(null);
-    next?.();
   };
 
   // Founder directive (2026-09-30): a login whose signup email was never
@@ -157,7 +140,6 @@ export default function LoginPage() {
   if (confirmEmail) {
     return (
       <>
-        <AppearanceModal open={showAppearance} onClose={closeAppearance} />
         <ConfirmEmailCard
           email={confirmEmail}
           mailFailed={confirmMailFailed}
@@ -177,7 +159,6 @@ export default function LoginPage() {
     // letting the page grow: on small phones the For Schools form is taller
     // than the viewport, and justify-center would clip the unreachable top.
     <main className="flex min-h-dvh w-full flex-col items-center bg-surface-container px-4">
-      <AppearanceModal open={showAppearance} onClose={closeAppearance} />
       <div className="my-auto flex w-full max-w-sm min-w-0 flex-col items-center">
         {/* Logo block, mockup: logo, h1, subtitle, centered */}
         <div className="mb-8 flex min-w-0 flex-col items-center">

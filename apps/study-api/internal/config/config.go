@@ -50,6 +50,12 @@ type Config struct {
         AIModel     string
         AIProvider  string // "zai"; shown by /tutor/status
         AIMaxTokens int
+        // LearnUnlimitedHearts: the launch posture of the merged Supreme
+        // economy (founder 2026-10-14): EVERY student rides unlimited
+        // hearts for now, while gems and hearts still accrue as rewards
+        // from quests, chests and lessons. Flip LEARN_UNLIMITED_HEARTS=0
+        // to arm the 5-heart / 45-min regen economy.
+        LearnUnlimitedHearts bool
         // AI_THINKING: "disabled" (default) makes Z.ai's GLM-4.5 answer
         // directly instead of reasoning first - verified far faster and
         // the reply always fits the token budget. "enabled" restores
@@ -138,6 +144,7 @@ func Load() (*Config, error) {
                 AIModel:     strings.TrimSpace(os.Getenv("AI_MODEL")),
                 AIMaxTokens: envInt("AI_MAX_TOKENS", 320),
                 AIThinking:  envStr("AI_THINKING", "disabled"),
+                LearnUnlimitedHearts: os.Getenv("LEARN_UNLIMITED_HEARTS") != "0",
 
                 PaystackSecretKey: strings.TrimSpace(os.Getenv("PAYSTACK_SECRET_KEY")),
 

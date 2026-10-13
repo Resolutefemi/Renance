@@ -19,6 +19,7 @@ import (
         "renance.dev/study-api/internal/config"
         "renance.dev/study-api/internal/grading"
         "renance.dev/study-api/internal/httpapi"
+	"renance.dev/study-api/internal/learn"
         "renance.dev/study-api/internal/plans"
         "renance.dev/study-api/internal/store"
         "renance.dev/study-api/internal/syncer"
@@ -62,6 +63,18 @@ func main() {
                 os.Exit(1)
         }
         log.Info("database ready (study schema current)")
+
+        // The learn curriculum seeds itself once, in the background
+        // (founder directive 2026-10-14: Supreme merges into Renance).
+        // First boot pays the ~140k-row insert; every later boot
+        // returns on the count check. Boot never blocks on it.
+        go func() {
+                seedCtx, seedCancel := context.WithTimeout(context.Background(), 10*time.Minute)
+                defer seedCancel()
+                if err := learn.SeedIfEmpty(seedCtx, st.Pool, log); err != nil {
+                        log.Error("learn: curriculum seed failed", "err", err)
+                }
+        }()
 
         // Founder directive, 2026-09-28: student subscriptions are PAUSED -
         // everyone rides premium for free. Every boot, any entitlement row

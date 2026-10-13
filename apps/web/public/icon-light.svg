@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<defs><linearGradient id="hl" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity=".30"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient></defs>
+<rect x="3" y="3" width="58" height="58" rx="15" fill="#3f9801"/>
+<rect x="3" y="3" width="58" height="50" rx="15" fill="#58cc02"/>
+<rect x="9" y="9" width="46" height="27" rx="10" fill="url(#hl)"/>
+<text x="32" y="42" text-anchor="middle" font-family="Nunito, Arial Rounded MT Bold, Arial, sans-serif" font-weight="900" font-size="38" fill="#ffffff">R</text>
+</svg>

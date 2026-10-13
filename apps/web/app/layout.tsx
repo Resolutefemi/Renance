@@ -210,7 +210,13 @@ export const metadata: Metadata = {
    computed palettes ride in renance.seedVars (lib/theme.ts wrote them
    at pick time), so this stays pure DOM writes. Mixed mode is retired
    (founder 2026-10-13): a stored 'mixed' boots as light. */
-const themeBootstrap = `(function(){try{var t=localStorage.getItem('renance.theme');if(t!=='dark')t='light';document.documentElement.dataset.theme=t;var sv=null;try{sv=JSON.parse(localStorage.getItem('renance.seedVars')||'null')}catch(e){}if(sv&&sv[t]){for(var k in sv[t]){document.documentElement.style.setProperty(k,sv[t][k]);}}}catch(e){document.documentElement.dataset.theme='light';}})();`;
+const themeBootstrap = `(function(){try{var t=localStorage.getItem('renance.theme');if(t!=='dark')t='light';document.documentElement.dataset.theme=t;var sv=null;try{sv=JSON.parse(localStorage.getItem('renance.seedVars')||'null')}catch(e){}if(sv&&sv[t]){for(var k in sv[t]){document.documentElement.style.setProperty(k,sv[t][k]);}}}catch(e){document.documentElement.dataset.theme='light';}
+/* Favicon theme sync (founder 2026-10-14): the tab strip follows the
+   IN-APP appearance, not just the OS. data-theme=dark pins the white
+   keycap (/icon-dark.svg), light pins the green keycap, and an unset
+   theme (landing) restores the OS-adaptive /icon.svg. Re-runs whenever
+   the html[data-theme] attribute flips. */
+try{var BP='${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}';var fav=function(h){var l=document.querySelector('link[rel="icon"][type="image/svg+xml"]');if(l&&l.getAttribute('href')!==h)l.setAttribute('href',h);};var favSync=function(){var t=document.documentElement.dataset.theme;if(t==='dark')fav(BP+'/icon-dark.svg');else if(t==='light')fav(BP+'/icon-light.svg');else fav(BP+'/icon.svg');};favSync();new MutationObserver(favSync).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});}catch(e){}})();`;
 
 /* suppressHydrationWarning: the inline theme bootstrap writes data-theme
    onto <html> before React hydrates, so the DOM attribute never matches
