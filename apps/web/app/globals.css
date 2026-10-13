@@ -55,6 +55,25 @@
   font-display: swap;
   src: url('../public/fonts/inter-latin-700-normal.woff2') format('woff2');
 }
+/* Nunito - the rounded, friendly Duolingo-style UI typeface (variable
+   200-1000). Self-hosted like Inter so no CDN dependency; Inter stays
+   as the fallback in the stack. */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 200 1000;
+  font-display: swap;
+  src: url('../public/fonts/nunito-latin-variable.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 200 1000;
+  font-display: swap;
+  src: url('../public/fonts/nunito-latin-ext-variable.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
 @font-face {
   font-family: 'JetBrains Mono';
   font-style: normal;
@@ -79,58 +98,92 @@
 /* ------------------------------------------------------------------ */
 
 @theme {
-  /* surfaces */
-  --color-background: #f9f9ff;
-  --color-surface: #f9f9ff;
-  --color-surface-bright: #f9f9ff;
-  --color-surface-dim: #cfdaf2;
+  /* surfaces - clean high-contrast white/gray (Duolingo snow/polar/swan),
+     replacing the old blue-tinted Material-3 washes */
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-bright: #ffffff;
+  --color-surface-dim: #e5e5e5;
   --color-surface-container-lowest: #ffffff;
-  --color-card: #ffffff; /* card surface used app-wide (was silently transparent) */
-  --color-surface-container-low: #f0f3ff;
-  --color-surface-container: #e7eeff;
-  --color-surface-container-high: #dee8ff;
-  --color-surface-container-highest: #d8e3fb;
-  --color-surface-variant: #d8e3fb;
+  --color-card: #ffffff;
+  --color-surface-container-low: #f7f7f7;
+  --color-surface-container: #f0f0f3;
+  --color-surface-container-high: #ebebef;
+  --color-surface-container-highest: #e5e5e8;
+  --color-surface-variant: #ebebef;
 
-  /* on-colors / ink */
-  --color-on-background: #111c2d;
-  --color-on-surface: #111c2d;
-  --color-on-surface-variant: #45464d;
+  /* on-colors / ink - warm neutral Duolingo eel/wolf */
+  --color-on-background: #3c3c46;
+  --color-on-surface: #3c3c46;
+  --color-on-surface-variant: #777777;
   --color-on-primary: #ffffff;
   --color-on-secondary: #ffffff;
   --color-on-primary-container: #7c839b;
 
-  /* primaries & secondaries */
-  --color-primary: #000000;
+  /* primaries & secondaries - treefrog green primary (was black) */
+  --color-primary: #58cc02;
   --color-primary-container: #131b2e;
-  --color-secondary: #505f76;
-  --color-secondary-container: #d0e1fb;
-  --color-on-secondary-container: #54647a;
+  --color-secondary: #6f6f7a;
+  --color-secondary-container: #f1f1f4;
+  --color-on-secondary-container: #55555f;
   --color-inverse-primary: #bec6e0;
 
-  /* outlines */
-  --color-outline: #76777d;
-  --color-outline-variant: #c6c6cd;
-  --color-outline-light: #c6c6cd;
+  /* outlines - swan light borders, hare strong borders */
+  --color-outline: #b0b0b8;
+  --color-outline-variant: #e5e5e5;
+  --color-outline-light: #e5e5e5;
 
-  /* errors */
-  --color-error: #ba1a1a;
-  --color-error-container: #ffdad6;
-  --color-on-error-container: #93000a;
+  /* errors - cardinal red */
+  --color-error: #ff4b4b;
+  --color-error-container: #ffebeb;
+  --color-on-error-container: #b81f1f;
 
-  /* type, mockups load Inter + JetBrains Mono from Google Fonts */
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  /* type: Nunito carries the tactile 3D UI (Duolingo-style rounded
+     letterforms); Inter remains the fallback. */
+  --font-sans: "Nunito", "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  /* Duolingo-style saturated accents (3D Flat / Tactile palette).
+     juice-edge is derived at use-site via color-mix() so it follows
+     the Chrome-style seed system too. */
+  --color-macaw: #1cb0f6;
+  --color-macaw-dark: #1899d6;
+  --color-treefrog: #58cc02;
+  --color-treefrog-dark: #58a700;
+  --color-owl: #89e219;
+  --color-seafoam: #00cd9c;
+  --color-bee: #ffc800;
+  --color-bee-dark: #e6ac00;
+  --color-fox: #ff9600;
+  --color-cardinal: #ff4b4b;
+  --color-cardinal-dark: #ea2b2b;
+  --color-beetle: #ce82ff;
+  --color-humpback: #2b70c9;
+  --color-eel: #4b4b4b;
+  --color-wolf: #777777;
+  --color-hare: #afafaf;
+  --color-swan: #e5e5e5;
+  --color-polar: #f7f7f7;
+  --color-iguana: #d7ffb8;
+
+  /* Big squircle radii: every rounded-* utility gets friendlier
+     (Duolingo-style 16-24px surfaces) app-wide, one override here. */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+  --radius-3xl: 1.5rem;
 
   /* Hero scope (the dashboard progress band). These MUST live inside
      @theme: Tailwind 4 only emits utilities for variables declared here,
      so bg-hero / bg-hero-cta / text-on-hero-cta silently no-op from a
-     plain :root block. Light tier = white band, black CTA (as before). */
+     plain :root block. Light tier = white band, treefrog CTA. */
   --color-hero: #ffffff;
-  --color-on-hero: #111c2d;
-  --color-hero-muted: #45464d;
-  --color-hero-track: #d8e3fb;
-  --color-hero-cta: #000000;
+  --color-on-hero: #3c3c46;
+  --color-hero-muted: #777777;
+  --color-hero-track: #e5e5e5;
+  --color-hero-cta: #58cc02;
   --color-on-hero-cta: #ffffff;
 }
 
@@ -186,8 +239,8 @@
   --color-on-background: #f0f3ff;
   --color-on-surface: #f0f3ff;
   --color-on-surface-variant: #a2aab8;
-  --color-primary: #ffffff;
-  --color-on-primary: #111c2d;
+  --color-primary: #58cc02;
+  --color-on-primary: #ffffff;
   --color-primary-container: #17223b;
   --color-on-primary-container: #f0f3ff;
   --color-secondary: #a2aab8;
@@ -207,8 +260,8 @@
   --color-on-hero: #f0f3ff;
   --color-hero-muted: #a2aab8;
   --color-hero-track: #17223b;
-  --color-hero-cta: #ffffff;
-  --color-on-hero-cta: #111c2d;
+  --color-hero-cta: #58cc02;
+  --color-on-hero-cta: #ffffff;
 }
 
 /* Mixed: light body, dark hero chrome (the exam-player treatment). */
@@ -218,8 +271,8 @@
   --color-on-hero: #f0f3ff;
   --color-hero-muted: #b9c2d4;
   --color-hero-track: #17223b;
-  --color-hero-cta: #ffffff;
-  --color-on-hero-cta: #111c2d;
+  --color-hero-cta: #58cc02;
+  --color-on-hero-cta: #ffffff;
 }
 
 body {
@@ -300,7 +353,7 @@ body {
   --color-dark-surface-low: #17223b;
   --color-dark-text-primary: #f0f3ff;
   --color-dark-text-secondary: #a2aab8;
-  --color-selection-blue: #d0e1fb;
+  --color-selection-blue: #d7ffb8;
   --color-inverse-surface: #263143;
   --color-inverse-on-surface: #ecf1ff;
   --color-amber-tint: #fff3d6;
@@ -308,7 +361,10 @@ body {
   --color-ink-tint: #e7eeff;
 }
 
-/* Material Symbols ligatures, same icon system as the Stitch designs. */
+/* Material Symbols ligatures, same icon system as the Stitch designs.
+   Tactile pass: the variable font renders at wght 600 so every icon
+   reads bold, chunky and gamified (Duolingo-style rounded weight) -
+   one edit here, every icon on every page obeys. */
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';
   font-weight: normal;
@@ -322,11 +378,12 @@ body {
   word-wrap: normal;
   direction: ltr;
   font-feature-settings: 'liga';
+  font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24;
   -webkit-font-smoothing: antialiased;
   user-select: none;
 }
 .material-symbols-outlined.fill-current {
-  font-variation-settings: 'FILL' 1;
+  font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24;
 }
 
 /* Chip rails scroll horizontally without a visible scrollbar. */
@@ -1384,4 +1441,102 @@ html[data-rail='collapsed'] {
   .result-sheet .rs-footer div {
     font-size: 8.5px !important;
   }
+}
+
+/* ================================================================== */
+/* TACTILE 3D PRESS SYSTEM (3D Flat / Duolingo-style, founder brief)   */
+/* Buttons stop being flat rectangles: a solid darker bottom edge      */
+/* (border-bottom: 4px) makes them read as physical keys, and pressing */
+/* sinks them 2px while the edge collapses - the signature tactile     */
+/* push-button feel.                                                   */
+/*                                                                     */
+/* Scope: elements that ALREADY carry a filled-action background       */
+/* utility (bg-primary / bg-hero-cta / bg-on-surface / bg-error), so   */
+/* every page - CBT player, AI studio, dashboard, auth, school - gets  */
+/* it with ZERO markup changes. Edges derive from the live token via   */
+/* color-mix(), so the Chrome-style seed palette keeps working: the    */
+/* edge is always a darker tone of whatever the primary currently is.  */
+/* Placed last on purpose: these rules must win the cascade over the   */
+/* landing glass classes and Tailwind utilities.                       */
+/* ================================================================== */
+
+button.bg-primary,
+a.bg-primary {
+  border-bottom: 4px solid color-mix(in srgb, var(--color-primary) 68%, #000) !important;
+  font-weight: 800;
+}
+
+button.bg-hero-cta,
+a.bg-hero-cta {
+  border-bottom: 4px solid color-mix(in srgb, var(--color-hero-cta) 68%, #000) !important;
+  font-weight: 800;
+}
+
+button.bg-on-surface,
+a.bg-on-surface {
+  border-bottom: 4px solid color-mix(in srgb, var(--color-on-surface) 72%, #000) !important;
+}
+
+button.bg-error,
+a.bg-error {
+  border-bottom: 4px solid color-mix(in srgb, var(--color-error) 72%, #000) !important;
+}
+
+/* The press: sink 2px, edge collapses 4px -> 2px. Real physical key. */
+button.bg-primary:not(:disabled):active,
+a.bg-primary:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px !important;
+}
+
+button.bg-hero-cta:not(:disabled):active,
+a.bg-hero-cta:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px !important;
+}
+
+button.bg-on-surface:not(:disabled):active,
+a.bg-on-surface:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px !important;
+}
+
+button.bg-error:not(:disabled):active,
+a.bg-error:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px !important;
+}
+
+/* Landing 2026 glass CTAs join the tactile system (hero CTA + nav
+   pills). The edge tone follows each pill's own background token. */
+.hero-cta-primary,
+.landing-sheet-start {
+  border-bottom: 4px solid color-mix(in srgb, var(--color-hero-cta) 68%, #000) !important;
+}
+.landing-nav-start {
+  border-bottom: 4px solid color-mix(in srgb, var(--ink) 72%, #000) !important;
+}
+.hero-cta-primary:active,
+.landing-nav-start:active,
+.landing-sheet-start:active {
+  transform: translateY(2px) !important;
+  border-bottom-width: 2px !important;
+}
+
+/* Tiny action chips (< 32px tall) get a slimmer 3px edge so the
+   extrusion never swallows the label - the Ask-AI chip, mode tabs,
+   jump pills and similar compact controls. */
+button.bg-primary.px-3\.5.py-1\.5,
+button.bg-primary.px-3\.5.py-\[7px\],
+button.bg-primary.px-3 {
+  border-bottom-width: 3px !important;
+}
+
+/* Icons on filled action buttons render pure white and slightly
+   larger so they pop like gamified badges. */
+button.bg-primary .material-symbols-outlined,
+a.bg-primary .material-symbols-outlined,
+button.bg-hero-cta .material-symbols-outlined,
+a.bg-hero-cta .material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24;
 }
