@@ -24,6 +24,8 @@ import {
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import { LeagueBadge } from '@/components/learn/bits';
+import { LearnProfile, fetchLearnProfile } from '@/lib/learn';
 import SideNav from '@/components/side-nav';
 
 interface Profile {
@@ -87,6 +89,9 @@ export default function ProfilePage() {
   const router = useRouter();
   const [me, setMe] = useState<MeResponse | null>(null);
   const [state, setState] = useState<GameState | null>(null);
+  // Supreme learn stats (founder 2026-10-14): gems, hearts, league,
+  // topics done and perfect scores live on the profile too.
+  const [learn, setLearn] = useState<LearnProfile | null>(null);
 
   // Focus switcher state ---------------------------------------------------
   const [editing, setEditing] = useState(false);
@@ -125,6 +130,7 @@ export default function ProfilePage() {
     api<{ state: GameState }>('/me/gamification')
       .then((g) => alive && setState(g.state))
       .catch(() => {});
+    fetchLearnProfile().then((p) => alive && setLearn(p)).catch(() => {});
     return () => {
       alive = false;
     };
@@ -293,10 +299,43 @@ export default function ProfilePage() {
               </div>
               <div className="h-8 w-px bg-outline-light/30" />
               <div className="flex flex-1 flex-col items-center">
+                <span className="text-[13px] text-text-secondary">Gems</span>
+                <div className="flex items-center gap-1">
+                  <span aria-hidden className="inline-block h-3.5 w-3.5 rounded-[3px] bg-macaw shadow-[0_1px_0_0_#1899d6]" />
+                  <span className="text-2xl font-bold tracking-tight text-macaw-dark">
+                    {learn ? learn.gems.toLocaleString() : 0}
+                  </span>
+                </div>
+              </div>
+              <div className="h-8 w-px bg-outline-light/30" />
+              <div className="flex flex-1 flex-col items-center">
                 <span className="text-[13px] text-text-secondary">Accuracy</span>
                 <span className="text-2xl font-bold tracking-tight text-accent-emerald">{accuracy}%</span>
               </div>
             </div>
+
+            {/* The learn strip: league badge + course path progress
+                (founder 2026-10-14: supreme profile data joins the
+                Renance profile). */}
+            {learn && (
+              <div className="mt-2 flex items-center gap-3 rounded-lg bg-surface-container p-2.5">
+                <LeagueBadge name={learn.league} size={40} />
+                <div className="min-w-0 flex-1">
+                  <p className="text-[13.5px] font-extrabold text-on-surface">
+                    {learn.league} League · {learn.todayXp}/{learn.dailyGoal} XP today
+                  </p>
+                  <p className="text-[12px] font-bold text-on-surface-variant">
+                    {learn.topicsDone} topics done · {learn.perfectCount} perfect · {learn.courseCount} courses
+                  </p>
+                </div>
+                <Link
+                  href="/league"
+                  className="shrink-0 rounded-xl border-2 border-outline-variant bg-card px-3 py-1.5 text-[12px] font-extrabold text-on-surface transition active:translate-y-[2px]"
+                >
+                  Standings
+                </Link>
+              </div>
+            )}
           </section>
 
           {/* REN wallet: the coins, the referral code, the exchange.

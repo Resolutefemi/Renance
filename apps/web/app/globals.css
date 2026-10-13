@@ -272,6 +272,13 @@
   --color-error-container: #93000a;
   --color-on-error-container: #ffdad6;
   --color-selection-blue: #17223b;
+  /* Dark-mode TEXT colour pass (founder 2026-10-14): small green
+     labels invert to a light tint instead of mixing toward black -
+     primary-ink on navy was the worst offender; wolf/hare gray steps
+     lift two notches so 12-13px labels read cleanly on the containers. */
+  --color-primary-ink: color-mix(in srgb, var(--color-primary) 58%, #d7ffb8);
+  --color-wolf: #a2aab8;
+  --color-hare: #8b93a3;
   --color-amber-tint: #3a2f14;
   --color-emerald-tint: #12301f;
   --color-ink-tint: #17223b;
@@ -1856,4 +1863,133 @@ a.bg-hero-cta .material-symbols-outlined {
 /* the keycap mark joins the reduced-motion contract */
 @media (prefers-reduced-motion: reduce) {
   .renance-mark-busy { animation: none !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   LEARN MODULE — the merged Supreme economy surfaces (2026-10-14).
+   Course selection + zig-zag path + lesson overlay + quests / shop /
+   league chips. Everything reads the live tokens, so the light, dark
+   and seeded-palette tiers all stay legible. School-portal pages never
+   load these classes.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Tactile key button: the Duolingo press used across the learn shell
+   (overview rows, quiz actions, shop buys). Colours come from the
+   caller's bg-* utility; the edge is derived from the same token via
+   color-mix, so seeded palettes stay coherent. */
+.key-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  border-radius: 12px;
+  padding: 0.625rem 1rem;
+  font-weight: 800;
+  font-size: 13.5px;
+  line-height: 1;
+  border: 2px solid transparent;
+  border-bottom-width: 4px;
+  transition: transform 60ms ease, border-bottom-width 60ms ease, filter 120ms ease;
+  cursor: pointer;
+}
+.key-btn:active:not(:disabled) {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+  margin-bottom: 2px;
+}
+.key-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+.key-btn.bg-primary { border-color: color-mix(in srgb, var(--color-primary) 68%, #000); }
+.key-btn.bg-macaw { border-color: color-mix(in srgb, var(--color-macaw, #1cb0f6) 68%, #000); }
+.key-btn.bg-error { border-color: color-mix(in srgb, var(--color-error, #ff4b4b) 68%, #000); }
+.key-btn.bg-accent-amber { border-color: color-mix(in srgb, var(--color-accent-amber, #ffc800) 68%, #000); }
+.key-btn.bg-card { border-color: var(--color-outline-variant, #e5e5e5); border-bottom-color: color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 78%, #000); }
+
+/* The 3D circular back/close key for overlay top bars (founder: the
+   back button should be Duolingo's own, and 3D). */
+.back-key {
+  width: 38px;
+  height: 38px;
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 2px solid var(--color-outline-variant, #e5e5e5);
+  background: var(--color-card, #ffffff);
+  color: var(--color-on-surface, #3c3c46);
+  box-shadow: 0 3px 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 72%, #000);
+  cursor: pointer;
+  transition: transform 60ms ease, box-shadow 60ms ease;
+}
+.back-key:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 72%, #000);
+}
+
+/* Learn surface tiles: soft 3D card with the tactile bottom ledge. */
+.learn-tile {
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 55%, transparent),
+    inset 0 2px 0 color-mix(in srgb, #ffffff 55%, transparent);
+}
+[data-theme='dark'] .learn-tile {
+  box-shadow:
+    0 4px 0 0 rgba(0, 0, 0, 0.4),
+    inset 0 2px 0 rgba(240, 243, 255, 0.08);
+}
+
+/* Path nodes */
+.learn-node-done { border-color: color-mix(in srgb, var(--color-primary) 72%, #000); }
+.learn-node-current {
+  border-color: color-mix(in srgb, var(--color-accent-amber, #ffc800) 70%, #000);
+  animation: learn-node-pulse 1.8s ease-in-out infinite;
+}
+@keyframes learn-node-pulse {
+  0%, 100% { box-shadow: 0 4px 0 color-mix(in srgb, var(--color-accent-amber, #ffc800) 60%, #000), 0 0 0 0 color-mix(in srgb, var(--color-accent-amber, #ffc800) 45%, transparent); }
+  50% { box-shadow: 0 4px 0 color-mix(in srgb, var(--color-accent-amber, #ffc800) 60%, #000), 0 0 0 10px transparent; }
+}
+
+/* The "Start" speech bubble on the current node. */
+.learn-bubble {
+  position: relative;
+  background: var(--color-on-surface, #3c3c46);
+  color: var(--color-surface, #fff);
+  font-size: 10.5px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+.learn-bubble::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-width: 0;
+  border-bottom-color: var(--color-on-surface, #3c3c46);
+}
+
+/* Confetti (rewards) */
+.learn-confetti { animation: learn-confetti-fall 2s cubic-bezier(0.16, 0.7, 0.35, 1) forwards; }
+@keyframes learn-confetti-fall {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+  100% { transform: translate(var(--dx, 0px), 260px) rotate(540deg); opacity: 0; }
+}
+
+/* Toast shadow */
+.learn-toast-shadow {
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.22), 0 14px 30px -12px rgba(17, 28, 45, 0.5);
+}
+
+/* Drawing figures (structural formulas / waves) inside lesson notes.
+   currentColor keeps them on-theme in every tier. */
+.learn-drawing svg { width: 100%; height: auto; max-height: 300px; display: block; margin: 0 auto; }
+.learn-drawing text { font-family: var(--font-sans, Nunito, sans-serif); }
+
+/* the learn module joins the reduced-motion contract */
+@media (prefers-reduced-motion: reduce) {
+  .learn-node-current, .learn-confetti { animation: none !important; }
 }

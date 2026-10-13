@@ -53,6 +53,7 @@ import (
         "renance.dev/study-api/internal/googleid"
         "renance.dev/study-api/internal/grading"
         "renance.dev/study-api/internal/jwtx"
+        "renance.dev/study-api/internal/learn"
         "renance.dev/study-api/internal/schoolcorpus"
         "renance.dev/study-api/internal/store"
         "renance.dev/study-api/internal/tutor"
@@ -118,6 +119,12 @@ type Server struct {
         // from the data folder; nil keeps the routes returning clean
         // empty lists (unit tests without a data dir).
         corpus *schoolcorpus.Corpus
+
+        // The Supreme learn module merged into Renance (founder
+        // directive 2026-10-14): gamified course paths, quests, shop,
+        // league - all keyed to the real account. nil in tests keeps
+        // every /learn route on a clean 503.
+        learn *learn.Service
 }
 
 // syncerKicker is the narrow interface the handlers need from the syncer.
@@ -144,6 +151,7 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
         // hint mode. Founder setup: Z.ai ONLY (AI_API_KEY) - Groq's key
         // was revoked and the provider removed, Gemini is gone.
         s.tutor = &tutor.Tutor{MaxTokens: cfg.AIMaxTokens, Log: log}
+        var aiProvider tutor.Provider
         if cfg.AIAPIKey != "" {
                 s.tutor.Provider = &tutor.OpenAICompat{
                         BaseURL: cfg.AIBaseURL, APIKey: cfg.AIAPIKey, Model: cfg.AIModel, Thinking: cfg.AIThinking,
@@ -154,6 +162,17 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
                         // every notebook attempt in half.
                         HTTP: &http.Client{Timeout: 85 * time.Second},
                 }
+                aiProvider = s.tutor.Provider
+        }
+        // The learn module shares the tutor's OpenAI-compatible provider
+        // for JIT lesson generation; unlimited hearts is the launch
+        // posture (founder 2026-10-14: everyone unlimited for now, gems
+        // and hearts still accrue as rewards).
+        s.learn = &learn.Service{
+                Pool:            st.Pool,
+                Log:             log,
+                Engine:          learn.NewEngine(aiProvider, lib),
+                UnlimitedHearts: cfg.LearnUnlimitedHearts,
         }
         s.limiter = newRateLimiter(cfg.TutorPerMin, cfg.TutorPerMin)
         s.authIP = newRateLimiter(cfg.AuthPerMin, cfg.AuthPerMin*2)
@@ -253,6 +272,30 @@ func (s *Server) Handler() http.Handler {
         mux.HandleFunc("GET /me/gamification", s.auth(s.handleGamification))
         mux.HandleFunc("GET /me/review", s.auth(s.handleReviewQueue))
         mux.HandleFunc("GET /me/fatigue", s.auth(s.handleFatigue))
+
+        // ── The learn module (Supreme merged into Renance, 2026-10-14).
+        // Every route rides the standard JWT auth: the gamified course
+        // paths, quests, shop and league all live on the Renance account.
+        mux.HandleFunc("GET /learn/profile", s.auth(s.handleLearnProfile))
+        mux.HandleFunc("PATCH /learn/profile", s.auth(s.handleLearnPatchProfile))
+        mux.HandleFunc("DELETE /learn/profile", s.auth(s.handleLearnReset))
+        mux.HandleFunc("GET /learn/catalog", s.auth(s.handleLearnCatalog))
+        mux.HandleFunc("GET /learn/faculties", s.auth(s.handleLearnFaculties))
+        mux.HandleFunc("GET /learn/my-courses", s.auth(s.handleLearnMyCourses))
+        mux.HandleFunc("POST /learn/my-courses", s.auth(s.handleLearnSetMyCourses))
+        mux.HandleFunc("POST /learn/active-course", s.auth(s.handleLearnActiveCourse))
+        mux.HandleFunc("GET /learn/courses/{id}", s.auth(s.handleLearnCoursePath))
+        mux.HandleFunc("GET /learn/topics/{id}/content", s.auth(s.handleLearnLesson))
+        mux.HandleFunc("POST /learn/progress", s.auth(s.handleLearnProgress))
+        mux.HandleFunc("GET /learn/quests", s.auth(s.handleLearnQuests))
+        mux.HandleFunc("POST /learn/quests", s.auth(s.handleLearnQuests))
+        mux.HandleFunc("GET /learn/shop", s.auth(s.handleLearnShop))
+        mux.HandleFunc("POST /learn/shop", s.auth(s.handleLearnShop))
+        mux.HandleFunc("GET /learn/leaderboard", s.auth(s.handleLearnLeague))
+        mux.HandleFunc("POST /learn/chests", s.auth(s.handleLearnChest))
+        mux.HandleFunc("GET /learn/practice", s.auth(s.handleLearnPractice))
+        mux.HandleFunc("POST /learn/practice", s.auth(s.handleLearnPractice))
+        mux.HandleFunc("GET /learn/review", s.auth(s.handleLearnReview))
         mux.HandleFunc("POST /me/sessions", s.auth(s.handleLogSession))
         mux.HandleFunc("GET /me/cards/progress", s.auth(s.handleCardProgress))
         mux.HandleFunc("POST /me/cards/progress", s.auth(s.handleGradeCards))

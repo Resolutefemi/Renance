@@ -27,8 +27,10 @@ const RAIL_KEY = 'renance.rail.v1';
 
 const TABS = [
   { icon: 'home', label: 'Home', href: '/dashboard', match: '/dashboard' },
-  { icon: 'edit_note', label: 'Practice', href: '/packs', match: null },
-  { icon: 'history_edu', label: 'Review', href: '/review', match: '/review' },
+  { icon: 'menu_book', label: 'Course', href: '/courses', match: '/courses' },
+  { icon: 'trophy', label: 'Leagues', href: '/league', match: '/league' },
+  { icon: 'target', label: 'Quests', href: '/quests', match: '/quests' },
+  { icon: 'storefront', label: 'Shop', href: '/shop', match: '/shop' },
   { icon: 'person', label: 'Profile', href: '/profile', match: '/profile' },
 ] as const;
 
@@ -114,7 +116,7 @@ export default function SideNav() {
       {/* Primary destinations */}
       <div className={`flex flex-1 flex-col ${open ? 'gap-1 overflow-y-auto p-3' : 'gap-2 p-2.5'}`}>
         {TABS.map((tab) => {
-          const active = tab.match != null && pathname === tab.match;
+          const active = pathname.startsWith(tab.match);
           return (
             <Link
               key={tab.label}

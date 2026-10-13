@@ -8,7 +8,6 @@ import { schoolRegister, setActiveSchool } from '@/lib/school';
 import { RenanceMark } from '@/components/renance-logo';
 import { GoogleSignIn } from '@/components/google-signin';
 import ConfirmEmailCard from '@/components/confirm-email-card';
-import AppearanceModal, { needsAppearanceIntro } from '@/components/appearance-modal';
 import { AudienceToggle, type Audience } from '@/components/audience-toggle';
 import { MailIcon, LockIcon, EyeIcon } from '@/components/icons';
 
@@ -45,23 +44,9 @@ export default function RegisterPage() {
   // never met the picker), before whatever comes next (verify notice or
   // dashboard). afterAppearance holds the pending continuation so the
   // flow resumes the moment the student closes the dialog.
-  const [showAppearance, setShowAppearance] = useState(false);
-  const [afterAppearance, setAfterAppearance] = useState<(() => void) | null>(null);
 
   const finishStudentSignup = (next: () => void) => {
-    if (needsAppearanceIntro()) {
-      setAfterAppearance(() => next);
-      setShowAppearance(true);
-      return;
-    }
     next();
-  };
-
-  const closeAppearance = () => {
-    setShowAppearance(false);
-    const next = afterAppearance;
-    setAfterAppearance(null);
-    next?.();
   };
 
   // school-only fields
@@ -193,7 +178,6 @@ export default function RegisterPage() {
   if (verifySent) {
     return (
       <>
-        <AppearanceModal open={showAppearance} onClose={closeAppearance} />
         <ConfirmEmailCard
           email={signedEmail}
           mailFailed={mailFailed}
@@ -210,7 +194,6 @@ export default function RegisterPage() {
     // of the card. Everything wraps: break-words guards the headings even
     // when Android font scaling inflates the text past the card edge.
     <main className="flex min-h-dvh w-full flex-col items-center bg-surface-container px-4 py-10">
-      <AppearanceModal open={showAppearance} onClose={closeAppearance} />
       <div className="renance-rise my-auto flex w-full max-w-sm min-w-0 flex-col rounded-xl bg-surface-container-lowest p-6 shadow-md">
         {/* Logo block, mockup: logo, headline, sub */}
         <div className="mb-5 flex min-w-0 flex-col items-center gap-3 text-center">
