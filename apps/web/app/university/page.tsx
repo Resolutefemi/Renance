@@ -152,7 +152,7 @@ export default function UniversityPage() {
 
         <ul className="mt-5 grid gap-2 sm:grid-cols-2">
           {results.map((s) => (
-            <li key={s.slug} className={s.slug === 'others' ? 'sm:col-span-2' : undefined}>
+            <li key={s.slug} className={`min-w-0 ${s.slug === 'others' ? 'sm:col-span-2' : ''}`}>
               <SchoolRow school={s} postUtmeOnly={postUtmeOnly.has(s.slug) && !s.live} />
             </li>
           ))}

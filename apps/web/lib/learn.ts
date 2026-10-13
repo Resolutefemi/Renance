@@ -208,7 +208,7 @@ export async function fetchLearnProfile(): Promise<LearnProfile> {
 }
 
 export async function patchLearnProfile(body: { dailyGoal?: number }): Promise<LearnProfile> {
-  return api<LearnProfile>('/learn/profile', { method: 'PATCH', body: JSON.stringify(body) });
+  return api<LearnProfile>('/learn/profile', { method: 'PATCH', body });
 }
 
 export async function resetLearnProgress(): Promise<void> {
@@ -235,12 +235,12 @@ export async function fetchMyCourses(): Promise<{ courses: MyCourse[] }> {
 export async function setMyCourses(courseIds: string[]): Promise<{ courses: MyCourse[] }> {
   return api<{ courses: MyCourse[] }>('/learn/my-courses', {
     method: 'POST',
-    body: JSON.stringify({ courseIds }),
+    body: { courseIds },
   });
 }
 
 export async function setActiveCourse(courseId: string): Promise<void> {
-  await api('/learn/active-course', { method: 'POST', body: JSON.stringify({ courseId }) });
+  await api('/learn/active-course', { method: 'POST', body: { courseId } });
 }
 
 export async function fetchCoursePath(courseId: string): Promise<CoursePath> {
@@ -262,7 +262,7 @@ export async function postProgress(body: {
   }>;
   abandoned: boolean;
 }): Promise<CompleteResult> {
-  return api<CompleteResult>('/learn/progress', { method: 'POST', body: JSON.stringify(body) });
+  return api<CompleteResult>('/learn/progress', { method: 'POST', body });
 }
 
 export async function fetchQuests(): Promise<QuestsResponse> {
@@ -270,7 +270,7 @@ export async function fetchQuests(): Promise<QuestsResponse> {
 }
 
 export async function claimQuest(questKey: string): Promise<{ gems: number }> {
-  return api<{ gems: number }>('/learn/quests', { method: 'POST', body: JSON.stringify({ questKey }) });
+  return api<{ gems: number }>('/learn/quests', { method: 'POST', body: { questKey } });
 }
 
 export async function fetchShop(): Promise<ShopResponse> {
@@ -278,7 +278,7 @@ export async function fetchShop(): Promise<ShopResponse> {
 }
 
 export async function buyShopItem(item: string): Promise<ShopResponse> {
-  return api<ShopResponse>('/learn/shop', { method: 'POST', body: JSON.stringify({ item }) });
+  return api<ShopResponse>('/learn/shop', { method: 'POST', body: { item } });
 }
 
 export async function fetchLeague(): Promise<LeagueBoard> {
@@ -286,7 +286,7 @@ export async function fetchLeague(): Promise<LeagueBoard> {
 }
 
 export async function openChest(chestKey: string): Promise<{ chestKey: string; gems: number; gemsTotal: number }> {
-  return api(`/learn/chests`, { method: 'POST', body: JSON.stringify({ chestKey }) });
+  return api(`/learn/chests`, { method: 'POST', body: { chestKey } });
 }
 
 export async function fetchPractice(): Promise<{ questions: PracticeQuestion[] }> {
@@ -296,7 +296,7 @@ export async function fetchPractice(): Promise<{ questions: PracticeQuestion[] }
 export async function gradePractice(body: {
   correct: number; total: number; resolvedIds: string[];
 }): Promise<CompleteResult> {
-  return api('/learn/practice', { method: 'POST', body: JSON.stringify(body) });
+  return api('/learn/practice', { method: 'POST', body });
 }
 
 export async function fetchReview(courseId: string, unit: number): Promise<{ questions: PracticeQuestion[] }> {

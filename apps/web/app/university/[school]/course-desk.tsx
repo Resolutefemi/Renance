@@ -138,7 +138,7 @@ export function UniversityCourseDesk({
             </p>
             <ul className="mt-3 grid gap-2 sm:grid-cols-2">
               {withPdfs.map((c) => (
-                <li key={c.slug}>
+                <li key={c.slug} className="min-w-0">
                   <PdfLink
                     href={c.pdf!}
                     className="flex w-full items-center gap-3 rounded-xl border border-outline-variant bg-card p-3 transition hover:border-outline"
@@ -197,7 +197,7 @@ function CourseCard({ course, school }: { course: UniversityCourse; school: Scho
     'flex w-full items-center gap-3 rounded-xl border border-outline-variant bg-card p-3 text-left transition';
   if (course.bank) {
     return (
-      <li>
+      <li className="min-w-0">
         <Link
           href={`/university/${school.slug}/${course.slug}`}
           className={`${cls} hover:border-outline hover:shadow-sm`}
@@ -208,7 +208,7 @@ function CourseCard({ course, school }: { course: UniversityCourse; school: Scho
     );
   }
   return (
-    <li>
+    <li className="min-w-0">
       <div className={`${cls} opacity-60`} aria-disabled>
         {body}
       </div>

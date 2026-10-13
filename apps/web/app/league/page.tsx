@@ -7,7 +7,7 @@
  * ranks 26+ demote. Countdown resets every Lagos Monday.
  */
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
@@ -22,13 +22,19 @@ export default function LeaguePage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
+  const load = useCallback(() => {
+    setError('');
+    setLoading(true);
+    fetchLeague().then(setBoard).catch(() => setError('The league could not load. Check your connection, then retry.')).finally(() => setLoading(false));
+  }, []);
+
   useEffect(() => {
     if (typeof window !== 'undefined' && !getStoredUser()) {
       router.replace('/login?next=/league');
       return;
     }
-    fetchLeague().then(setBoard).catch(() => setError('The league could not load — reload to retry.')).finally(() => setLoading(false));
-  }, [router]);
+    load();
+  }, [load, router]);
 
   return (
     <div className="min-h-screen bg-background md:pl-[var(--rail-w)]">
@@ -36,7 +42,13 @@ export default function LeaguePage() {
       <PageBar title="Leagues" backHref="/dashboard" />
 
       <main className="mx-auto w-full max-w-2xl px-4 pb-28 pt-4">
-        {error && <p className="rounded-xl bg-error-container px-4 py-3 text-sm font-bold text-on-error-container">{error}</p>}
+        {error && (
+          <div className="learn-tile flex flex-col items-center gap-3 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-4 py-10 text-center">
+            <span className="material-symbols-outlined text-[34px] text-on-surface-variant">wifi_off</span>
+            <p className="text-[13.5px] font-bold text-on-surface-variant">{error}</p>
+            <button type="button" onClick={load} className="key-btn bg-primary text-white">Retry</button>
+          </div>
+        )}
         {loading && <div className="h-64 animate-pulse rounded-2xl bg-surface-container" aria-hidden />}
 
         {board && (

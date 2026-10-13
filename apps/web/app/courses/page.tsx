@@ -71,7 +71,7 @@ export default function CoursesPage() {
       setMine(list.courses);
       setFace(list.courses.length > 0 ? 'list' : 'select');
     } catch {
-      setError('Could not load your courses. Reload to retry.');
+      setError('Could not load your courses. Check your connection, then retry.');
     } finally {
       setLoading(false);
     }
@@ -200,7 +200,13 @@ export default function CoursesPage() {
       />
 
       <main className="mx-auto w-full max-w-3xl px-4 pb-28 pt-4">
-        {error && <p className="mb-3 rounded-xl bg-error-container px-4 py-3 text-sm font-bold text-on-error-container">{error}</p>}
+        {error && (
+          <div className="learn-tile flex flex-col items-center gap-3 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-4 py-10 text-center">
+            <span className="material-symbols-outlined text-[34px] text-on-surface-variant">wifi_off</span>
+            <p className="text-[13.5px] font-bold text-on-surface-variant">{error}</p>
+            <button type="button" onClick={() => void boot()} className="key-btn bg-primary text-white">Retry</button>
+          </div>
+        )}
         {loading && <SkeletonList />}
 
         {/* ── Face 1: my courses ── */}

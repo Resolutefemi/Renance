@@ -26,7 +26,9 @@ export default function ShopPage() {
   const [error, setError] = useState('');
 
   const load = useCallback(() => {
-    fetchShop().then(setShop).catch(() => setError('The shop could not load — reload to retry.')).finally(() => setLoading(false));
+    setError('');
+    setLoading(true);
+    fetchShop().then(setShop).catch(() => setError('The shop could not load. Check your connection, then retry.')).finally(() => setLoading(false));
   }, []);
 
   useEffect(() => {
@@ -60,7 +62,13 @@ export default function ShopPage() {
       <PageBar title="Shop" backHref="/dashboard" />
 
       <main className="mx-auto w-full max-w-2xl px-4 pb-28 pt-4">
-        {error && <p className="rounded-xl bg-error-container px-4 py-3 text-sm font-bold text-on-error-container">{error}</p>}
+        {error && (
+          <div className="learn-tile flex flex-col items-center gap-3 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-4 py-10 text-center">
+            <span className="material-symbols-outlined text-[34px] text-on-surface-variant">wifi_off</span>
+            <p className="text-[13.5px] font-bold text-on-surface-variant">{error}</p>
+            <button type="button" onClick={load} className="key-btn bg-primary text-white">Retry</button>
+          </div>
+        )}
         {loading && <div className="h-40 animate-pulse rounded-2xl bg-surface-container" aria-hidden />}
 
         {shop && (
