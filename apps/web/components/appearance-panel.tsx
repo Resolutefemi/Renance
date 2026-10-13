@@ -1,12 +1,15 @@
 'use client';
 
 /**
- * AppearancePanel - the Stitch "Renance Learning OS" theme screen,
- * 1:1 with the founder's mock: a Mode segmented control (Light / Mixed
- * / Dark) and a Seed Colour section. The seed drives a Chrome-style
- * colour picker - a saturation/brightness field, a rainbow hue rail,
- * preset swatches and a hex box - and every black/ink surface in the
- * product re-tints live (lib/theme.ts paints the token palette).
+ * AppearancePanel - the Settings appearance screen. 2026-10-13 founder
+ * pass: the mode control is Light / Dark ONLY - Mixed is retired from
+ * the product ("remove the mix mode completely from the appearance
+ * setup"), while dark/light stays here in Settings (founder: "users
+ * can do that under settings after login" - the first-signup popup is
+ * colours-only now). The seed drives a Chrome-style colour picker - a
+ * saturation/brightness field, a rainbow hue rail, preset swatches and
+ * a hex box - and every surface re-tints live (lib/theme.ts paints the
+ * token palette).
  */
 
 import { useEffect, useRef, useState } from 'react';
@@ -23,7 +26,6 @@ import {
 
 const MODES: Array<{ value: ThemeMode; icon: string; label: string }> = [
   { value: 'light', icon: 'light_mode', label: 'Light' },
-  { value: 'mixed', icon: 'contrast', label: 'Mixed' },
   { value: 'dark', icon: 'dark_mode', label: 'Dark' },
 ];
 
@@ -53,8 +55,8 @@ export default function AppearancePanel({ mode, onMode }: { mode: ThemeMode; onM
       <div className="flex items-center gap-3">
         <span className="material-symbols-outlined text-on-surface-variant">brightness_medium</span>
         <div>
-          <h2 className="text-[18px] font-semibold leading-6 tracking-[-0.01em] text-on-surface">Mode</h2>
-          <p className="text-[13px] text-on-surface-variant">Light, Mixed or Dark, saved to this device</p>
+          <h2 className="text-[18px] font-extrabold leading-6 tracking-[-0.01em] text-on-surface">Mode</h2>
+          <p className="text-[13px] font-semibold text-on-surface-variant">Light or Dark, saved to this device</p>
         </div>
       </div>
       <div className="flex gap-2">
@@ -69,9 +71,9 @@ export default function AppearancePanel({ mode, onMode }: { mode: ThemeMode; onM
                 setThemeMode(o.value);
               }}
               aria-pressed={selected}
-              className={`flex flex-1 flex-col items-center gap-1.5 rounded-[10px] border px-2 py-3 transition ${
+              className={`flex flex-1 flex-col items-center gap-1.5 rounded-[10px] border-2 px-2 py-3 transition ${
                 selected
-                  ? 'border-on-surface bg-selection-blue text-on-surface'
+                  ? 'border-macaw-ring bg-macaw-light text-macaw-dark'
                   : 'border-outline-variant bg-surface-container-lowest text-on-surface-variant hover:border-outline'
               }`}
             >

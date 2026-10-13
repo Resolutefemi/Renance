@@ -192,12 +192,12 @@ function SharedQuizClient() {
         {submitted ? (
           <div className="flex flex-col gap-3">
             <div className="rounded-2xl bg-primary px-5 py-5 text-center text-on-primary">
-              <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-on-primary/60">Your score</p>
+              <p className="font-mono text-[10px] font-bold uppercase tracking-[0.24em] text-on-primary/90">Your score</p>
               <p className="mt-1 text-3xl font-bold tracking-tight">
                 {score}
-                <span className="text-base text-on-primary/60"> / {questions.length}</span>
+                <span className="text-base font-semibold text-on-primary/90"> / {questions.length}</span>
               </p>
-              <p className="mt-2 text-[12.5px] leading-relaxed text-on-primary/70">
+              <p className="mt-2 text-[12.5px] font-semibold leading-relaxed text-on-primary/95">
                 {score === questions.length
                   ? 'Perfect score. Your friend made this with Renance AI - imagine what you would make.'
                   : 'Every question carries a worked explanation. Renance AI can make you one like this in seconds.'}

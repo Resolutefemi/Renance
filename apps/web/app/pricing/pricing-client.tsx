@@ -65,27 +65,29 @@ export default function PricingClient() {
       <PageBar title="Plans" backHref="/dashboard" />
 
       <main className="mx-auto w-full max-w-2xl px-4 pb-28 pt-4 sm:px-6">
-        {/* hero */}
-        <section className="rounded-2xl bg-primary px-6 py-8 text-on-primary">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-on-primary/60">
+        {/* hero - Supreme gradient hero: solid white copy at readable
+            weight (the old white/60-75 on flat green was unreadable at
+            small sizes), hard extruded ledge. */}
+        <section className="rounded-2xl bg-gradient-to-br from-primary to-treefrog-dark px-5 py-6 text-white shadow-[0_4px_0_0_color-mix(in_srgb,var(--color-primary)_62%,#000)]">
+          <p className="font-mono text-[10px] font-bold uppercase tracking-[0.28em] text-white/90">
             The founder&apos;s pricing, no games
           </p>
-          <h1 className="mt-2 flex items-center gap-2 text-2xl font-bold tracking-tight">
+          <h1 className="mt-2 flex items-center gap-2 text-2xl font-extrabold tracking-tight">
             Renance Premium <BlueTick size={22} />
           </h1>
-          <p className="mt-2 max-w-md text-[13.5px] leading-relaxed text-on-primary/75">
+          <p className="mt-2 max-w-md text-[13.5px] font-semibold leading-relaxed text-white/95">
             A full year of JAMB for ₦5,000 - WAEC, NECO and Post-UTME ride
             along. Or a burst of premium from ₦500 a week. Full papers, the
             official 400-scale score slip, and the blue tick on every
             leaderboard.
           </p>
           {paused && (
-            <p className="mt-4 rounded-xl bg-card/10 px-4 py-3 text-[13px] leading-relaxed">
-              <b className="flex items-center gap-1.5">
+            <p className="mt-4 rounded-xl bg-white/12 px-4 py-3 text-[13px] font-semibold leading-relaxed text-white/95">
+              <b className="flex items-center gap-1.5 text-white">
                 <span className="material-symbols-outlined text-[16px]">verified</span>
                 Everything is unlocked right now
               </b>
-              <span className="mt-1 block text-on-primary/80">
+              <span className="mt-1 block">
                 Subscriptions are paused - every paper, the AI tutor and
                 every premium perk are open to every student, free. No card,
                 no cap, no nagging.
@@ -93,7 +95,7 @@ export default function PricingClient() {
             </p>
           )}
           {premium && (
-            <p className="mt-4 inline-flex items-center gap-2 rounded-full bg-card/10 px-4 py-2 text-[12.5px]">
+            <p className="mt-4 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-[12.5px] font-bold text-white">
               <BlueTick size={16} />
               Your premium is active
               {entitlement?.premiumExpiresAt
@@ -120,7 +122,7 @@ export default function PricingClient() {
                   {p.label}
                 </span>
                 {p.code === 'jamb' && (
-                  <span className="rounded-full bg-primary px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-on-primary">
+                  <span className="rounded-full bg-primary-ink px-2 py-0.5 font-mono text-[9px] font-bold uppercase tracking-wider text-white">
                     best value
                   </span>
                 )}
@@ -144,7 +146,10 @@ export default function PricingClient() {
                   ))}
                 </ul>
               )}
-              <span className="mt-3 flex h-9 items-center justify-center rounded-full bg-primary text-[12.5px] font-semibold text-on-primary">
+              {/* The pay key goes BLUE (founder 2026-10-13: money actions
+                  wear macaw, like supreme.git's pay buttons); the tactile
+                  system extrudes + presses a.bg-macaw keys. */}
+              <span className="mt-3 flex h-9 items-center justify-center rounded-full bg-macaw text-[12.5px] font-extrabold text-white shadow-[0_2px_0_0_var(--color-macaw-dark)]">
                 {paused ? 'Included free right now' : 'Pay with Paystack'}
               </span>
             </button>

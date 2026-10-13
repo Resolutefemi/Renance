@@ -145,9 +145,16 @@
 
   /* Duolingo-style saturated accents (3D Flat / Tactile palette).
      juice-edge is derived at use-site via color-mix() so it follows
-     the Chrome-style seed system too. */
+     the Chrome-style seed system too. Founder directive 2026-10-13:
+     the default scheme is GREEN with a measured amount of BLUE - the
+     macaw family powers the nav active pills, pay buttons and info
+     accents exactly like supreme.git; primary-ink is the small-text
+     green (bright #58cc02 dies at 10-13px on white cards, the seeded
+     color-mix keeps it readable under every palette). */
   --color-macaw: #1cb0f6;
   --color-macaw-dark: #1899d6;
+  --color-macaw-light: #ddf4ff;
+  --color-macaw-ring: #84d8ff;
   --color-treefrog: #58cc02;
   --color-treefrog-dark: #58a700;
   --color-owl: #89e219;
@@ -166,14 +173,26 @@
   --color-polar: #f7f7f7;
   --color-iguana: #d7ffb8;
 
-  /* Big squircle radii: every rounded-* utility gets friendlier
-     (Duolingo-style 16-24px surfaces) app-wide, one override here. */
+  /* Selection tint, supreme.git edition: the CBT answers, mode tiles
+     and focus cards highlight in the light-macaw wash (#ddf4ff) with
+     the blue ring - the Supreme option-selected recipe - instead of
+     the old green iguana tint. (iguana stays for success surfaces.) */
+  --color-selection-blue: #ddf4ff;
+
+  /* Small-text primary: the seed darkened ~28% toward black. Resolves
+     live, so a seeded red/blue palette darkens its OWN hue. */
+  --color-primary-ink: color-mix(in srgb, var(--color-primary) 72%, #000000);
+
+  /* Squircle radii, moderated one notch to the supreme.git scale
+     (founder: cards read "too big" on the first pass): rounded-xl is
+     14px, cards at rounded-2xl land on Supreme's 16px, heroes keep
+     20px. The hero-card class below pins its own 20px. */
   --radius-sm: 0.5rem;
   --radius-md: 0.625rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
-  --radius-2xl: 1.25rem;
-  --radius-3xl: 1.5rem;
+  --radius-lg: 0.7rem;
+  --radius-xl: 0.875rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.25rem;
 
   /* Hero scope (the dashboard progress band). These MUST live inside
      @theme: Tailwind 4 only emits utilities for variables declared here,
@@ -344,7 +363,7 @@ body {
   gap: 0.8rem;
 }
 .renance-splash-word {
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-weight: 900;
   letter-spacing: -0.02em;
   line-height: 1;
@@ -428,6 +447,24 @@ body {
   display: none;
 }
 
+/* ------------------------------------------------------------------ */
+/* Small green text contrast (founder complaint 2026-10-13: "that      */
+/* green colour small text is not visible when it's used for a big     */
+/* card that contains small text"). Bright #58cc02 dies on white at    */
+/* 10-13px. Every green LABEL chip pairs text-primary with the pale    */
+/* green tint (bg-primary/10), so ONE combo rule darkens them all to   */
+/* primary-ink (seed darkened ~28%) - curriculum, practice, post-utme, */
+/* university, exam pages, everywhere, with zero markup edits. The     */
+/* dark tier reverts to the bright seed: its tinted chip background    */
+/* is dark, so the darkened ink would vanish there.                    */
+/* ------------------------------------------------------------------ */
+.text-primary.bg-primary\/10 {
+  color: var(--color-primary-ink);
+}
+[data-theme='dark'] .text-primary.bg-primary\/10 {
+  color: var(--color-primary);
+}
+
 /* Desktop side rail: the SideNav hamburger collapses the menu list to an
    icon strip; every page offsets its content with --rail-w so the reflow
    is one variable away. 15rem = w-60 (open), 4rem = w-16 (collapsed). */
@@ -435,7 +472,7 @@ body {
   --rail-w: 15rem;
 }
 html[data-rail='collapsed'] {
-  --rail-w: 4rem;
+  --rail-w: 4.25rem;
 }
 
 /* ------------------------------------------------------------------ */
@@ -633,7 +670,13 @@ html[data-rail='collapsed'] {
   display: inline-flex; align-items: center; gap: 0.55rem;
   text-decoration: none; color: var(--ink); margin-right: auto;
 }
-.landing-nav-word { font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em; }
+/* Brand wordmark: lowercase, green - the supreme.git signature. */
+.landing-nav-word {
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+  color: var(--color-primary);
+}
 
 .landing-nav-links { display: none; align-items: center; gap: 0.15rem; }
 .landing-nav-link {
@@ -1516,6 +1559,24 @@ a.bg-error {
   border-bottom: 4px solid color-mix(in srgb, var(--color-error) 72%, #000) !important;
 }
 
+/* Blue action keys (founder 2026-10-13: "some button blue like the
+   supreme own", paywall + pricing + secondary entries). Macaw face,
+   darker macaw edge - the Supreme CatalogScreen pay-button recipe. */
+button.bg-macaw,
+a.bg-macaw {
+  border-bottom: 4px solid color-mix(in srgb, var(--color-macaw) 70%, #000) !important;
+  font-weight: 800;
+}
+button.bg-macaw:not(:disabled):active,
+a.bg-macaw:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px !important;
+}
+button.bg-macaw .material-symbols-outlined,
+a.bg-macaw .material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+}
+
 /* The press: sink 2px, edge collapses 4px -> 2px. Real physical key. */
 button.bg-primary:not(:disabled):active,
 a.bg-primary:active {
@@ -1589,11 +1650,11 @@ a.bg-hero-cta .material-symbols-outlined {
    ================================================================== */
 
 .hero-card {
-  border-radius: 24px;
+  border-radius: 20px;
   border: 2px solid color-mix(in srgb, var(--color-hero) 82%, var(--color-on-hero) 18%);
   box-shadow:
     0 4px 0 0 color-mix(in srgb, var(--color-hero) 76%, #000),
-    0 16px 32px -20px rgba(17, 28, 45, 0.45),
+    0 14px 28px -20px rgba(17, 28, 45, 0.45),
     inset 0 2px 0 color-mix(in srgb, var(--color-on-hero) 12%, transparent);
 }
 

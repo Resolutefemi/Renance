@@ -206,10 +206,11 @@ export const metadata: Metadata = {
 };
 
 /* Appearance bootstrap: applied before first paint so the chosen tier
-   (light / mixed / dark) and the seeded colour palette never flash.
-   The seed's computed palettes ride in renance.seedVars (lib/theme.ts
-   wrote all three tiers at pick time), so this stays pure DOM writes. */
-const themeBootstrap = `(function(){try{var t=localStorage.getItem('renance.theme');if(t!=='mixed'&&t!=='dark')t='light';document.documentElement.dataset.theme=t;var sv=null;try{sv=JSON.parse(localStorage.getItem('renance.seedVars')||'null')}catch(e){}if(sv&&sv[t]){for(var k in sv[t]){document.documentElement.style.setProperty(k,sv[t][k]);}}}catch(e){document.documentElement.dataset.theme='light';}})();`;
+   (light / dark) and the seeded colour palette never flash. The seed's
+   computed palettes ride in renance.seedVars (lib/theme.ts wrote them
+   at pick time), so this stays pure DOM writes. Mixed mode is retired
+   (founder 2026-10-13): a stored 'mixed' boots as light. */
+const themeBootstrap = `(function(){try{var t=localStorage.getItem('renance.theme');if(t!=='dark')t='light';document.documentElement.dataset.theme=t;var sv=null;try{sv=JSON.parse(localStorage.getItem('renance.seedVars')||'null')}catch(e){}if(sv&&sv[t]){for(var k in sv[t]){document.documentElement.style.setProperty(k,sv[t][k]);}}}catch(e){document.documentElement.dataset.theme='light';}})();`;
 
 /* suppressHydrationWarning: the inline theme bootstrap writes data-theme
    onto <html> before React hydrates, so the DOM attribute never matches

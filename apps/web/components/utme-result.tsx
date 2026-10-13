@@ -61,7 +61,7 @@ export default function UtmeResultSlip({ subjects, delta, caption }: Props) {
     >
       {/* slip head: the aggregate IS the headline */}
       <div className="border-b-2 border-primary bg-primary px-4 pb-7 pt-6 text-center text-on-primary sm:px-6">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-on-primary/60">
+        <p className="font-mono text-[10px] font-bold uppercase tracking-[0.28em] text-on-primary/90">
           Unified Tertiary Matriculation Examination · Official Score
         </p>
         <p className="mt-3 text-7xl font-bold leading-none tracking-tight sm:text-8xl">
@@ -148,7 +148,7 @@ export default function UtmeResultSlip({ subjects, delta, caption }: Props) {
               </td>
               <td className="px-2 py-3 text-center font-mono text-base font-bold">
                 {aggregate}
-                <span className="text-on-primary/60">/400</span>
+                <span className="text-on-primary/90">/400</span>
               </td>
               <td className="px-4 py-3 text-right font-mono text-[13.5px] sm:px-6">
                 {fmtTime(totalTime)}

@@ -75,7 +75,7 @@ export function LogoActivityIndicator({
   return (
     <div className="renance-splash" role="status" aria-live="polite">
       <RenanceMark size={76} state={state} inverse={inverse} />
-      <span className="renance-splash-word">Renance</span>
+      <span className="renance-splash-word">renance</span>
       {label && <span className="renance-splash-caption">{label}</span>}
     </div>
   );

@@ -137,13 +137,13 @@ export function NotesClient({ lessons }: { lessons: LessonCard[] }) {
             <div className="flex items-start justify-between gap-3">
               <div>
                 <p className="text-[15.5px] font-semibold">PDF notes with Renance AI</p>
-                <p className="mt-1 max-w-lg text-[13px] leading-relaxed text-on-primary/70">
+                <p className="mt-1 max-w-lg text-[13px] font-semibold leading-relaxed text-on-primary/95">
                   Study notes, full notebooks and school lesson notes in the house template -
                   grounded on 235,110+ real past questions, exportable as PDF, saved to this
                   page the moment they are generated.
                 </p>
               </div>
-              <span className="material-symbols-outlined hidden text-[26px] text-on-primary/60 sm:block">smart_toy</span>
+              <span className="material-symbols-outlined hidden text-[26px] text-on-primary/90 sm:block">smart_toy</span>
             </div>
           </div>
 

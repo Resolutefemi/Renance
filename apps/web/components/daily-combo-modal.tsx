@@ -117,7 +117,7 @@ export default function DailyComboModal({
                   }`}
                 >
                   {subjectName(r.slug)}
-                  <span className={`ml-1 font-mono text-[10px] ${on ? 'text-on-primary/70' : 'text-outline'}`}>
+                  <span className={`ml-1 font-mono text-[10px] font-bold ${on ? 'text-on-primary/95' : 'text-outline'}`}>
                     {r.count.toLocaleString()} Q
                   </span>
                 </button>

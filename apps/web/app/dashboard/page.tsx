@@ -381,18 +381,19 @@ export default function DashboardPage() {
       )}
 
       {/* Brand header: fixed, blurred, hairline shadow (home_dashboard).
-          Founder rule: the logo and the avatar are both clickable. */}
-      <header className="fixed left-0 right-0 top-0 z-50 border-b border-outline-variant/40 bg-surface/80 backdrop-blur-xl md:left-[var(--rail-w)]">
-        <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-4 sm:px-6">
+          Founder rule: the logo and the avatar are both clickable.
+          2026-10-13 founder pass: compact 56px bar (was 64), the 3D R
+          keycap + the lowercase green wordmark - the supreme.git brand
+          row. */}
+      <header className="fixed left-0 right-0 top-0 z-50 border-b-2 border-outline-variant bg-surface/90 backdrop-blur-xl md:left-[var(--rail-w)]">
+        <div className="mx-auto flex h-14 w-full max-w-5xl items-center justify-between px-4 sm:px-6">
           <Link
             href="/dashboard"
             aria-label="Renance home"
             className="flex items-center gap-2 transition-opacity hover:opacity-80"
           >
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary font-bold text-on-primary">
-              R
-            </div>
-            <span className="text-2xl font-bold tracking-tight text-on-surface">Renance</span>
+            <RenanceMark size={30} />
+            <span className="text-[21px] font-black lowercase tracking-tight text-primary">renance</span>
           </Link>
           <div className="flex items-center">
             {/* The app home header cut: plain round icon buttons (no
@@ -434,7 +435,7 @@ export default function DashboardPage() {
         </div>
       </header>
 
-      <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-4 pt-20 sm:px-6">
+      <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-4 pt-[4.5rem] sm:px-6">
         {error && (
           <p className="rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">{error}</p>
         )}
@@ -452,7 +453,7 @@ export default function DashboardPage() {
             every focus homepage hero. 2026-10-13 tactile pass: the card
             stands on an extruded ledge (.hero-card) and the progress
             rail gets the recessed-track + gloss-fill treatment. */}
-        <section className="hero-card relative mt-4 flex flex-col gap-4 overflow-hidden bg-hero p-4 sm:p-6">
+        <section className="hero-card relative mt-4 flex flex-col gap-4 overflow-hidden bg-hero p-4 sm:p-5">
           <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-on-hero/12" />
           <div className="absolute -bottom-14 -left-12 h-28 w-28 rounded-full bg-on-hero/12" />
           <div className="relative z-10 flex items-start justify-between gap-4">
@@ -1004,8 +1005,8 @@ function LauncherTile({
         )}
       </div>
       <span
-        className={`w-full truncate text-center text-[11px] md:text-[12.5px] ${
-          inverse ? 'font-semibold text-primary' : 'text-on-surface-variant'
+        className={`w-full truncate text-center text-[11px] font-bold md:text-[12px] ${
+          inverse ? 'text-primary-ink' : 'text-on-surface-variant'
         }`}
       >
         {label}
@@ -1056,7 +1057,7 @@ function ExamCard({ exam, ready }: { exam: ExamMeta; ready: boolean }) {
         <span className="text-xs text-outline transition group-hover:text-on-surface-variant">
           {ready ? 'Ready offline' : 'syncing…'}
         </span>
-        <span className="text-sm font-semibold text-primary transition-transform group-hover:translate-x-0.5">
+        <span className="text-sm font-extrabold text-primary-ink transition-transform group-hover:translate-x-0.5">
           Start →
         </span>
       </div>

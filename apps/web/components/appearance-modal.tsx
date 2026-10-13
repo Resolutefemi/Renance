@@ -6,13 +6,16 @@
  * signup on the app or website display change appearance pop up that
  * will change the seed colour".
  *
- * A compact dialog that mirrors the Settings Appearance panel: Mode
- * (Light / Mixed / Dark) + the ten Seed Color presets. Every tap applies
- * LIVE through lib/theme.ts (setThemeMode + setSeedColor), so the whole
- * product re-tints behind the dialog, Chrome-style. One-time per
- * ACCOUNT: the flag stores the account id it already greeted in
- * localStorage next to the theme keys, and needsAppearanceIntro() /
- * markAppearanceIntroDone() gate the flows.
+ * 2026-10-13 founder pass: the popup is COLOURS ONLY. The Light /
+ * Mixed / Dark mode row is gone from here - mixed mode is retired
+ * outright, and dark/light lives in Settings after login (founder:
+ * "in the appearance pop up remove the dark/light mode settings, only
+ * those colour should be there, users can do that under settings after
+ * login"). Every tap still applies LIVE through lib/theme.ts
+ * (setSeedColor), so the whole product re-tints behind the dialog,
+ * Chrome-style. One-time per ACCOUNT: the flag stores the account id
+ * it already greeted in localStorage next to the theme keys, and
+ * needsAppearanceIntro() / markAppearanceIntroDone() gate the flows.
  */
 
 import { useEffect, useState } from 'react';
@@ -20,10 +23,7 @@ import { getStoredUser } from '@/lib/session';
 import {
   SEED_PRESETS,
   readSeedColor,
-  readThemeMode,
   setSeedColor,
-  setThemeMode,
-  type ThemeMode,
 } from '@/lib/theme';
 
 export const APPEARANCE_ASKED_KEY = 'renance.appearanceAsked';
@@ -59,12 +59,6 @@ export function markAppearanceIntroDone(): void {
   }
 }
 
-const MODES: Array<{ value: ThemeMode; icon: string; label: string }> = [
-  { value: 'light', icon: 'light_mode', label: 'Light' },
-  { value: 'mixed', icon: 'contrast', label: 'Mixed' },
-  { value: 'dark', icon: 'dark_mode', label: 'Dark' },
-];
-
 export default function AppearanceModal({
   open,
   onClose,
@@ -72,28 +66,18 @@ export default function AppearanceModal({
   open: boolean;
   onClose: () => void;
 }) {
-  const [mode, setMode] = useState<ThemeMode>('light');
   const [seed, setSeed] = useState<string | null>(null);
 
   useEffect(() => {
     if (!open) return;
     setSeed(readSeedColor());
-    setMode(readThemeMode());
   }, [open]);
 
   if (!open) return null;
 
   function pick(hex: string | null) {
     setSeed(hex);
-    setSeedColor(hex, mode);
-  }
-
-  function pickMode(m: ThemeMode) {
-    setMode(m);
-    setThemeMode(m);
-    // Re-apply the current seed under the new tier so the preview is
-    // honest (setSeedColor already accepts a mode override).
-    if (seed) setSeedColor(seed, m);
+    setSeedColor(hex);
   }
 
   return (
@@ -103,53 +87,26 @@ export default function AppearanceModal({
       aria-modal="true"
       aria-label="Change appearance"
     >
-      <div className="w-full max-w-md rounded-2xl border border-outline-variant bg-card p-6 shadow-2xl">
+      <div className="w-full max-w-md rounded-2xl border-2 border-outline-variant bg-card p-6 shadow-[0_6px_0_0_var(--color-outline-variant)]">
         <div className="flex items-center gap-3">
-          <span className="material-symbols-outlined text-on-surface-variant">palette</span>
-          <h2 className="text-[20px] font-semibold tracking-[-0.01em] text-on-surface">
-            Make Renance yours
+          <span className="material-symbols-outlined text-primary">palette</span>
+          <h2 className="text-[20px] font-extrabold tracking-[-0.01em] text-on-surface">
+            Make renance yours
           </h2>
         </div>
-        <p className="mt-1 text-[14px] leading-5 text-on-surface-variant">
-          Pick an appearance - it re-tints every page, like Chrome. You can
-          change it anytime in Settings.
+        <p className="mt-1 text-[14px] font-semibold leading-5 text-on-surface-variant">
+          Pick a colour - it re-tints every page, like Chrome. Dark or
+          light mode can be switched later in Settings after you sign in.
         </p>
-
-        {/* Mode */}
-        <div className="mt-5">
-          <span className="block text-[13px] font-semibold uppercase tracking-wide text-on-surface-variant">
-            Mode
-          </span>
-          <div className="mt-2 flex gap-2">
-            {MODES.map((o) => {
-              const selected = mode === o.value;
-              return (
-                <button
-                  key={o.value}
-                  type="button"
-                  onClick={() => pickMode(o.value)}
-                  aria-pressed={selected}
-                  className={`flex flex-1 flex-col items-center gap-1.5 rounded-[10px] border px-2 py-3 transition ${
-                    selected
-                      ? 'border-on-surface bg-selection-blue text-on-surface'
-                      : 'border-outline-variant bg-surface-container-lowest text-on-surface-variant hover:border-outline'
-                  }`}
-                >
-                  <span className="material-symbols-outlined text-[22px]">{o.icon}</span>
-                  <span className="text-[13px] font-semibold">{o.label}</span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
 
         {/* Seed presets - the Renance Default (ink and paper) leads the
             list (founder directive 2026-10-05: "among the colour appearance
             pop up, add the default colour to the colour list"); tapping
-            it clears the seed entirely */}
+            it clears the seed entirely. This is the WHOLE popup now:
+            colours only, no mode row (founder directive 2026-10-13). */}
         <div className="mt-5">
-          <span className="block text-[13px] font-semibold uppercase tracking-wide text-on-surface-variant">
-            Seed color
+          <span className="block text-[13px] font-extrabold uppercase tracking-wide text-on-surface-variant">
+            Colour
           </span>
           <div className="mt-3 flex flex-wrap items-center gap-3">
             <button
@@ -207,7 +164,7 @@ export default function AppearanceModal({
             markAppearanceIntroDone();
             onClose();
           }}
-          className="mt-6 w-full rounded-[12px] bg-on-surface px-4 py-3 text-[15px] font-semibold text-surface-container-lowest transition hover:opacity-90"
+          className="mt-6 w-full rounded-[12px] bg-primary px-4 py-3 text-[15px] font-extrabold text-on-primary"
         >
           Looks good
         </button>

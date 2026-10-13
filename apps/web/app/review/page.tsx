@@ -399,7 +399,7 @@ function ReviewQueue() {
 
       {/* black hero: what the plan wants today */}
       <section className="renance-rise mt-6 overflow-hidden rounded-xl bg-primary px-6 py-7 text-center">
-        <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-on-primary/70">
+        <p className="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-on-primary/90">
           {hasWork ? 'Spaced repetition plan' : 'Review desk'}
         </p>
         <p className="mt-3 flex items-baseline justify-center gap-2">
@@ -410,11 +410,11 @@ function ReviewQueue() {
           >
             {due}
           </span>
-          <span className="text-base font-medium text-on-primary/70">
+          <span className="text-base font-bold text-on-primary/90">
             {hasWork ? 'topics due' : 'all caught up'}
           </span>
         </p>
-        <p className="mt-2 font-mono text-[11.5px] text-on-primary/70">
+        <p className="mt-2 font-mono text-[11.5px] font-semibold text-on-primary/95">
           {hasWork
             ? `${overdue.length} overdue · about ${due * 2} minutes today`
             : latestGraded

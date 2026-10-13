@@ -288,7 +288,9 @@ export function readThemeMode(forced?: ThemeMode): ThemeMode {
   if (forced) return forced;
   if (typeof window === 'undefined') return 'light';
   const t = window.localStorage.getItem('renance.theme');
-  return t === 'mixed' || t === 'dark' ? t : 'light';
+  // Mixed mode is retired (founder 2026-10-13): any stored 'mixed'
+  // lands on light so nobody keeps a zombie tier after the removal.
+  return t === 'dark' ? 'dark' : 'light';
 }
 
 /** Mode switch (Light/Mixed/Dark): persist, flip the tier attribute and

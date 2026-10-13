@@ -27,7 +27,8 @@ interface MeResponse {
 function readTheme(): ThemeMode {
   if (typeof window === 'undefined') return 'light';
   const t = window.localStorage.getItem('renance.theme');
-  return t === 'mixed' || t === 'dark' ? t : 'light';
+  // Mixed is retired (founder 2026-10-13): stored 'mixed' reads light.
+  return t === 'dark' ? 'dark' : 'light';
 }
 
 export default function SettingsPage() {
