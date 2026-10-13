@@ -1,0 +1,34 @@
+# .dockerignore — the study-api image (apps/study-api/Dockerfile) needs
+# exactly two things from the repo root: the Go module and the content
+# library. Everything else in the tree was riding the build context on
+# every deploy — 1.5GB+ of node_modules, the static export, the mobile
+# app, .git — which is why Render deploys crawled. Trim to the bone.
+
+# Version control + CI
+.git
+.github
+.gitignore
+
+# The web workspace (built by Vercel, never by Docker)
+apps/web
+node_modules
+**/node_modules
+
+# The mobile app
+apps/mobile
+
+# Repo docs, scripts, tooling
+*.md
+docs
+scripts
+tools
+uploads
+correction
+legacy
+render.yaml
+vercel.json
+turbo.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
+package.json
+tsconfig.base.json
