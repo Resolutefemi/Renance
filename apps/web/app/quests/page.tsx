@@ -26,13 +26,22 @@ export default function QuestsPage() {
   const [confetti, setConfetti] = useState(0);
   const [error, setError] = useState('');
 
+  const load = useCallback(() => {
+    setError('');
+    setLoading(true);
+    fetchQuests()
+      .then(setData)
+      .catch(() => setError('Quests could not load. Check your connection, then retry.'))
+      .finally(() => setLoading(false));
+  }, []);
+
   useEffect(() => {
     if (typeof window !== 'undefined' && !getStoredUser()) {
       router.replace('/login?next=/quests');
       return;
     }
-    fetchQuests().then(setData).catch(() => setError('Quests could not load — reload to retry.')).finally(() => setLoading(false));
-  }, [router]);
+    load();
+  }, [load, router]);
 
   const claim = useCallback(async (key: string) => {
     setClaiming(key);
@@ -58,7 +67,13 @@ export default function QuestsPage() {
       <PageBar title="Quests" backHref="/dashboard" />
 
       <main className="mx-auto w-full max-w-2xl px-4 pb-28 pt-4">
-        {error && <p className="rounded-xl bg-error-container px-4 py-3 text-sm font-bold text-on-error-container">{error}</p>}
+        {error && (
+          <div className="learn-tile flex flex-col items-center gap-3 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-4 py-10 text-center">
+            <span className="material-symbols-outlined text-[34px] text-on-surface-variant">wifi_off</span>
+            <p className="text-[13.5px] font-bold text-on-surface-variant">{error}</p>
+            <button type="button" onClick={load} className="key-btn bg-primary text-white">Retry</button>
+          </div>
+        )}
         {loading && <div className="h-40 animate-pulse rounded-2xl bg-surface-container" aria-hidden />}
 
         {data && (

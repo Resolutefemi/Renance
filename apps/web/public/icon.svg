@@ -1,35 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<!-- Renance 3D keycap favicon (2026-10-14 founder pass): the app icon
-     rebuilt as the tactile keycap - green face, extruded darker bottom
-     edge, glassy top lip, Nunito Black R. Adapts twice:
-       1. OS-level: internal prefers-color-scheme flips to the white
-          keycap + navy R on dark browsers.
-       2. In-app: themeBootstrap in app/layout.tsx swaps this href to
-          /icon-light.svg or /icon-dark.svg when the student flips the
-          in-app appearance, so the tab strip follows the app theme. -->
-<style>
-  .dark-key { display: none; }
-  @media (prefers-color-scheme: dark) {
-    .light-key { display: none; }
-    .dark-key { display: block; }
-  }
-</style>
-<g class="light-key">
-  <defs><linearGradient id="hl" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#ffffff" stop-opacity=".30"/>
-    <stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient></defs>
-  <rect x="3" y="3" width="58" height="58" rx="15" fill="#3f9801"/>
-  <rect x="3" y="3" width="58" height="50" rx="15" fill="#58cc02"/>
-  <rect x="9" y="9" width="46" height="27" rx="10" fill="url(#hl)"/>
-  <text x="32" y="42" text-anchor="middle" font-family="Nunito, Arial Rounded MT Bold, Arial, sans-serif" font-weight="900" font-size="38" fill="#ffffff">R</text>
-</g>
-<g class="dark-key">
-  <defs><linearGradient id="hd" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#000000" stop-opacity=".10"/>
-    <stop offset="1" stop-color="#000000" stop-opacity="0"/></linearGradient></defs>
-  <rect x="3" y="3" width="58" height="58" rx="15" fill="#d8d8de"/>
-  <rect x="3" y="3" width="58" height="50" rx="15" fill="#ffffff"/>
-  <rect x="9" y="9" width="46" height="27" rx="10" fill="url(#hd)"/>
-  <text x="32" y="42" text-anchor="middle" font-family="Nunito, Arial Rounded MT Bold, Arial, sans-serif" font-weight="900" font-size="38" fill="#111c2d">R</text>
-</g>
+<!-- Renance 3D keycap favicon (2026-10-14 founder pass): ONE green
+     keycap for every browser and every theme - "use the light-mode
+     favicon for the icons", the white dark-mode variant is retired.
+     Inside the signed-in app the favicon is repainted live by the
+     bootstrap in app/layout.tsx so it follows the student's appearance
+     colour (Settings → Appearance red → red favicon). This static file
+     is the crawler / no-JS / default-green fallback. -->
+<defs><linearGradient id="hl" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity=".30"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient></defs>
+<rect x="3" y="3" width="58" height="58" rx="15" fill="#3f9801"/>
+<rect x="3" y="3" width="58" height="50" rx="15" fill="#58cc02"/>
+<rect x="9" y="9" width="46" height="27" rx="10" fill="url(#hl)"/>
+<text x="32" y="42" text-anchor="middle" font-family="Nunito, Arial Rounded MT Bold, Arial, sans-serif" font-weight="900" font-size="38" fill="#ffffff">R</text>
 </svg>

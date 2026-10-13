@@ -211,12 +211,40 @@ export const metadata: Metadata = {
    at pick time), so this stays pure DOM writes. Mixed mode is retired
    (founder 2026-10-13): a stored 'mixed' boots as light. */
 const themeBootstrap = `(function(){try{var t=localStorage.getItem('renance.theme');if(t!=='dark')t='light';document.documentElement.dataset.theme=t;var sv=null;try{sv=JSON.parse(localStorage.getItem('renance.seedVars')||'null')}catch(e){}if(sv&&sv[t]){for(var k in sv[t]){document.documentElement.style.setProperty(k,sv[t][k]);}}}catch(e){document.documentElement.dataset.theme='light';}
-/* Favicon theme sync (founder 2026-10-14): the tab strip follows the
-   IN-APP appearance, not just the OS. data-theme=dark pins the white
-   keycap (/icon-dark.svg), light pins the green keycap, and an unset
-   theme (landing) restores the OS-adaptive /icon.svg. Re-runs whenever
-   the html[data-theme] attribute flips. */
-try{var BP='${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}';var fav=function(h){var l=document.querySelector('link[rel="icon"][type="image/svg+xml"]');if(l&&l.getAttribute('href')!==h)l.setAttribute('href',h);};var favSync=function(){var t=document.documentElement.dataset.theme;if(t==='dark')fav(BP+'/icon-dark.svg');else if(t==='light')fav(BP+'/icon-light.svg');else fav(BP+'/icon.svg');};favSync();new MutationObserver(favSync).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});}catch(e){}})();`;
+/* Favicon appearance sync (founder 2026-10-14, second directive): ONE
+   green keycap everywhere at rest - the white dark-mode favicon is
+   retired - and when the student picks a colour under Settings →
+   Appearance the favicon is REPAINTED in that colour ("if the user
+   picks red the splash and the favicon should change too"). The keycap
+   is drawn on a 64px canvas from the live --color-primary /
+   --color-on-primary tokens and set as a data URL; icon.svg stays the
+   static green fallback for crawlers and no-JS visitors. */
+try{
+var lastKey='';
+function mixEdge(hex){hex=hex.replace('#','');if(hex.length===3)hex=hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];var r=parseInt(hex.slice(0,2),16),g=parseInt(hex.slice(2,4),16),b=parseInt(hex.slice(4,6),16);r=Math.round(r*0.62);g=Math.round(g*0.62);b=Math.round(b*0.62);return 'rgb('+r+','+g+','+b+')';}
+function letterFor(hex){hex=hex.replace('#','');if(hex.length===3)hex=hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];var r=parseInt(hex.slice(0,2),16)/255,g=parseInt(hex.slice(2,4),16)/255,b=parseInt(hex.slice(4,6),16)/255;var f=function(c){return c<=0.03928?c/12.92:Math.pow((c+0.055)/1.055,2.4);};var lum=0.2126*f(r)+0.7152*f(g)+0.0722*f(b);return lum>0.55?'#111c2d':'#ffffff';}
+function roundRect(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+function paintFav(){
+var root=document.documentElement;var cs=getComputedStyle(root);
+var prim=(cs.getPropertyValue('--color-primary')||'').trim()||'#58cc02';
+var onP=(cs.getPropertyValue('--color-on-primary')||'').trim()||letterFor(prim);
+if(prim.charAt(0)!=='#')return;
+var key=prim+'|'+onP;if(key===lastKey)return;lastKey=key;
+try{
+var c=document.createElement('canvas');c.width=64;c.height=64;var x=c.getContext('2d');if(!x)return;
+x.clearRect(0,0,64,64);roundRect(x,3,3,58,58,15);x.fillStyle=mixEdge(prim);x.fill();
+roundRect(x,3,3,58,50,15);x.fillStyle=prim;x.fill();
+var g=x.createLinearGradient(0,9,0,36);g.addColorStop(0,'rgba(255,255,255,0.30)');g.addColorStop(1,'rgba(255,255,255,0)');roundRect(x,9,9,46,27,10);x.fillStyle=g;x.fill();
+x.font='900 38px Nunito, "Arial Rounded MT Bold", Arial, sans-serif';x.textAlign='center';x.textBaseline='alphabetic';x.fillStyle=onP;x.fillText('R',32,42.5);
+var d=c.toDataURL('image/png');
+var icon=document.querySelector('link[rel="icon"]');if(icon){icon.setAttribute('type','image/png');icon.setAttribute('href',d);}
+var ai=document.querySelector('link[rel="apple-touch-icon"]');if(ai)ai.setAttribute('href',d);
+}catch(e){}}
+paintFav();
+window.addEventListener('load',paintFav);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){lastKey='';paintFav();});
+new MutationObserver(function(){lastKey='';paintFav();}).observe(document.documentElement,{attributes:true,attributeFilter:['style','data-theme']});
+}catch(e){}})();`;
 
 /* suppressHydrationWarning: the inline theme bootstrap writes data-theme
    onto <html> before React hydrates, so the DOM attribute never matches
@@ -246,10 +274,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           crossOrigin="anonymous"
         />
         <meta name="author" content="Ariyo Oluwafemi Stephen (Resolute Femi)" />
-        {/* Theme-adaptive favicon: flips white on dark browsers, ink on
-            light (the .ico/.png fallbacks Next auto-links are static).
-            Served from /public so Next ships it verbatim with the media
-            query intact, app/icon.svg would get rasterised to a PNG. */}
+        {/* Brand favicon: the static green keycap (crawlers + no-JS).
+            In-app the bootstrap above repaints it as a canvas data URL
+            so the tab strip follows the student's appearance colour. */}
         <link
           rel="icon"
           type="image/svg+xml"
