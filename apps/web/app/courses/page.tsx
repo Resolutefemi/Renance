@@ -1,28 +1,28 @@
 'use client';
 
 /**
- * Courses — the Course tab of the merged learn module (founder
+ * Courses - the Course tab of the merged learn module (founder
  * directive 2026-10-14). One client shell, three faces:
  *
- *   1. MY COURSES  — the student's own list with progress; a tap opens
+ *   1. MY COURSES  - the student's own list with progress; a tap opens
  *      the path. Empty list → the selection face.
- *   2. SELECTION   — the catalog with CHECKBOXES: a new user marks all
+ *   2. SELECTION   - the catalog with CHECKBOXES: a new user marks all
  *      the courses they want in one pass (founder: "select and mark
  *      all the ones they want to add"), then saves; more can be added
  *      or removed here at any time.
- *   3. PATH        — the Supreme zig-zag ladder: units, chests, trophy
+ *   3. PATH        - the Supreme zig-zag ladder: units, chests, trophy
  *      reviews and the current topic node, opening LessonOverlay.
  *
  * THE CATALOG IS HARDCODED (founder directive 2026-10-14: "make sure
  * the courses list are hard coded and make sure it's working just like
  * supreme"). The 41 JAMB/WAEC/NECO subjects ride inside the bundle and
- * the 10,604-course tertiary tree is a static JSON asset — the list is
+ * the 10,604-course tertiary tree is a static JSON asset - the list is
  * on screen the instant the tab opens, exactly like the Supreme
  * reference site, and a backend hiccup can never blank it again. The
  * API is only asked for the student's OWN list, and that list falls
  * back to the last cached copy on this device.
  *
- * NO level tag anywhere — the founder removed it from the courses list.
+ * NO level tag anywhere - the founder removed it from the courses list.
  */
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
@@ -98,7 +98,7 @@ export default function CoursesPage() {
   const [loading, setLoading] = useState(true);
   const [notice, setNotice] = useState('');
 
-  // Selection state — the catalog itself is HARDCODED, only the view
+  // Selection state - the catalog itself is HARDCODED, only the view
   // state (query, filter, page) is component state.
   const [tertiaryTree, setTertiaryTree] = useState<CatalogItem[] | null>(null);
   const [catQuery, setCatQuery] = useState('');
@@ -224,7 +224,7 @@ export default function CoursesPage() {
       setFace('path');
       window.scrollTo({ top: 0 });
     } catch {
-      setNotice('Could not open that course just now — it will open once the connection is back.');
+      setNotice('Could not open that course just now - it will open once the connection is back.');
     } finally {
       setLoading(false);
     }
@@ -245,7 +245,7 @@ export default function CoursesPage() {
       setPicked(new Set());
       setFace('list');
     } catch {
-      setNotice('Saving your picks failed — check your connection and save again.');
+      setNotice('Saving your picks failed - check your connection and save again.');
     } finally {
       setSaving(false);
     }
@@ -265,7 +265,7 @@ export default function CoursesPage() {
         const cached = mine.filter((m) => m.id !== courseId);
         setMine(cached);
         cacheMine(cached);
-        setNotice('Removed on this device — it syncs away next time you are online.');
+        setNotice('Removed on this device - it syncs away next time you are online.');
       }
     },
     [mine],
@@ -333,7 +333,7 @@ export default function CoursesPage() {
             ) : (
               <>
                 <p className="px-1 text-[12.5px] font-bold text-on-surface-variant">
-                  Your course list — tap one to open its roadmap.
+                  Your course list - tap one to open its roadmap.
                 </p>
                 {mine.map((c) => (
                   <button
@@ -373,7 +373,7 @@ export default function CoursesPage() {
               </h2>
               <p className="mt-1 text-[12.5px] font-bold leading-snug text-on-surface-variant">
                 {body === 'tertiary'
-                  ? 'Your institution\'s full course tree is here — mark the ones on your current semester and add more any time.'
+                  ? 'Your institution\'s full course tree is here - mark the ones on your current semester and add more any time.'
                   : `Every ${learnBodyLabel(body)} subject with real past questions on Renance is listed. Mark all the ones you offer.`}
               </p>
             </div>
@@ -615,7 +615,7 @@ function EmptyList({ onChoose }: { onChoose: () => void }) {
       </span>
       <h2 className="text-[17px] font-black text-on-surface">Build your course list</h2>
       <p className="max-w-sm text-[13.5px] font-bold leading-snug text-on-surface-variant">
-        Mark every course you want on your desk — each one becomes a long roadmap of topics, notes with real drawings, and your actual past questions.
+        Mark every course you want on your desk - each one becomes a long roadmap of topics, notes with real drawings, and your actual past questions.
       </p>
       <button type="button" onClick={onChoose} className="key-btn mt-1 bg-primary text-white">Choose courses</button>
     </div>

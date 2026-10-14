@@ -1,4 +1,4 @@
-// ledger.go — the completion ledger and the reward economy: everything
+// ledger.go - the completion ledger and the reward economy: everything
 // that happens when a student finishes a topic quiz (XP, gems, hearts,
 // streak, mistakes, daily stats, league rollover), plus quests, shop,
 // league board, chests and mistakes practice. Direct port of Supreme's
@@ -232,8 +232,8 @@ func (s *Service) Complete(ctx context.Context, userID string, req CompleteReque
         }
 
         // Feed milestones (best-effort, never fail the completion): the
-        // platform posts the big moments — streaks and league promotions
-        // — to the Renance feed (founder directive 2026-10-14). Exam
+        // platform posts the big moments - streaks and league promotions
+        // - to the Renance feed (founder directive 2026-10-14). Exam
         // scores post from the grading engine; arena wins from the hub.
         s.postFeedMilestones(ctx, userID, prevLeague, res)
         return res, nil
@@ -631,7 +631,7 @@ type ShopItem struct {
 
 type ShopResponse struct {
         Gems   int        `json:"gems"`
-        Hearts int        `json:"hearts"` // the real count — the ∞ readout is retired (founder rule)
+        Hearts int        `json:"hearts"` // the real count - the ∞ readout is retired (founder rule)
         Items  []ShopItem `json:"items"`
         Super  ShopItem   `json:"superTrial"`
 }

@@ -349,7 +349,7 @@ export default function ProfilePage() {
 
           {/* The big premium subscription card is RETIRED (founder
               directive 2026-10-14: "remove that big premium subscription
-              card from the profile") — the whole REN wallet gradient
+              card from the profile") - the whole REN wallet gradient
               with it. The referral invite below keeps the
               invite-friends-for-points loop alive in a compact card. */}
           {me.entitlement?.referralCode && (
@@ -397,7 +397,7 @@ export default function ProfilePage() {
 
           {/* The SHOP lives here now (founder 2026-10-14 evening pass):
               "the shop feature should be under profile and the heart read
-              too" — the gem store, the heart readout (REAL data, the ∞
+              too" - the gem store, the heart readout (REAL data, the ∞
               symbol is retired) and the Super trial ride inside this
               section. The old /shop page redirects here. */}
           <section className="rounded-2xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
@@ -691,7 +691,7 @@ export default function ProfilePage() {
             )}
           </section>
 
-          {/* Menu group: account (the avatar popup retired — everything it
+          {/* Menu group: account (the avatar popup retired - everything it
               held now lives here, founder 2026-10-14 evening pass) ------- */}
           <section className="flex flex-col overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
             <MenuLink icon="insights" tint="text-on-surface" label="Performance Analysis" href="/performance" />

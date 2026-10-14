@@ -7,7 +7,7 @@
  * 2026-10-14 evening pass (founder): the base navbar now reads
  * Home · Course · Leagues · FEED · Quests · Profile. The feed takes
  * the old Quests slot, Quests slides into the old Shop slot, and the
- * Shop left the bar entirely — it lives on the profile page now, next
+ * Shop left the bar entirely - it lives on the profile page now, next
  * to the heart readout. Practice and Review stay off the bar.
  */
 
