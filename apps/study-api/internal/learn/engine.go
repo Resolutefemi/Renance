@@ -569,6 +569,12 @@ func firstNonEmpty(vals ...string) string {
 }
 
 func (s *Service) persistLesson(ctx context.Context, doc *LessonDoc) error {
+        // NOTE: the marshalled docs go in as STRING, not []byte. pgx sends
+        // a []byte param as bytea (simple protocol: a \x hex literal) and
+        // Postgres refuses to cast that into the jsonb columns - "invalid
+        // input syntax for type json" - so every lesson generated but
+        // never cached and every poll restarted generation forever
+        // (founder's "notes and questions not loading", 2026-10-14).
         notes, _ := json.Marshal(doc.Notes)
         kp, _ := json.Marshal(doc.KeyPoints)
         quiz, _ := json.Marshal(doc.Quiz)
@@ -578,7 +584,7 @@ func (s *Service) persistLesson(ctx context.Context, doc *LessonDoc) error {
                 VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
                 ON CONFLICT (topic_id) DO UPDATE SET title=$2, summary=$3, notes=$4, key_points=$5,
                   quiz=$6, drawings=$7, source=$8, generated_at=now()`,
-                doc.TopicID, doc.Title, doc.Summary, notes, kp, quiz, draw, doc.Source)
+                doc.TopicID, doc.Title, doc.Summary, string(notes), string(kp), string(quiz), string(draw), doc.Source)
         return err
 }
 

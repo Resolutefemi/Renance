@@ -85,7 +85,7 @@ func (s *Service) Complete(ctx context.Context, userID string, req CompleteReque
                         ON CONFLICT (user_id, question_id) DO UPDATE
                           SET resolved = FALSE, misses = learn.mistakes.misses + 1,
                               payload = EXCLUDED.payload, updated_at = now()`,
-                        userID, m.ID, req.TopicID, payload); err != nil {
+                        userID, m.ID, req.TopicID, string(payload)); err != nil {
                         return nil, err
                 }
         }
