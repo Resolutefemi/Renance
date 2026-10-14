@@ -140,6 +140,28 @@ var codeAliases = map[string][]string{
 // aliasFor returns the canonical prefixes an entered code also matches.
 func aliasFor(code string) []string { return codeAliases[strings.ToUpper(code)] }
 
+// codeDeptHints are the department-name fragments the typed code is
+// LOOKING for. The master sheet codes Computer Science "CS" - the same
+// letters Chinese Studies carries - so a student typing CSC must not
+// get a wall of Mandarin courses: CS-code rows whose department smells
+// of computers outrank the rest. Same idea for MTS/MTH (mathematics),
+// CHM (chemistry), PHY (physics), BIO (the bio family).
+var codeDeptHints = map[string][]string{
+        "CSC": {"computer science", "computer engineering", "informatics", "computer"},
+        "COS": {"computer science", "computer engineering", "informatics", "computer"},
+        "CMP": {"computer science", "computer engineering", "informatics", "computer"},
+        "CS":  {"computer science", "computer engineering", "informatics", "computer"},
+        "MTH": {"mathematic"},
+        "MTS": {"mathematic"},
+        "MAT": {"mathematic"},
+        "CHM": {"chem"},
+        "CHE": {"chem"},
+        "PHY": {"physic"},
+        "BIO": {"biolog", "biochem", "microbiol", "plant", "zool"},
+        "GLG": {"geolog"},
+        "STA": {"statistic"},
+}
+
 // generalTitleRxSQL is the national first-year general shelf, as a
 // Postgres case-insensitive regex over the course title (the set the
 // founder asked us to research: GST/GNS English, Nigerian Peoples &
@@ -334,18 +356,49 @@ func (s *Service) SearchCourses(ctx context.Context, userID, q string) ([]DeskCo
         if err := rows.Err(); err != nil {
                 return nil, err
         }
-        // Rank: the typed code beats its aliases beats title/topic hits,
-        // title order inside each band, capped for the picker.
+        // Rank: the typed code (in its department) beats its aliases
+        // beats title/topic hits, title order inside each band, capped
+        // for the picker. The department hint is what makes CSC honest:
+        // the sheet codes Computer Science "CS" - exactly what Chinese
+        // Studies carries - so code matches in departments the code is
+        // LOOKING for outrank the strangers sharing the letters.
+        hints := codeDeptHints[rankCode]
+        hintFor := func(code string) []string {
+                if code == rankCode {
+                        return hints
+                }
+                for _, a := range aliasCodes {
+                        if code == a {
+                                return codeDeptHints[a]
+                        }
+                }
+                return nil
+        }
         rank := func(c DeskCourse) int {
+                dept := strings.ToLower(c.Department)
+                hinted := func() bool {
+                        for _, h := range hintFor(c.Code) {
+                                if strings.Contains(dept, h) {
+                                        return true
+                                }
+                        }
+                        return false
+                }
                 if c.Code == rankCode {
-                        return 0
+                        if len(hints) == 0 || hinted() {
+                                return 0
+                        }
+                        return 1
                 }
                 for _, a := range aliasCodes {
                         if c.Code == a {
-                                return 1
+                                if len(codeDeptHints[a]) == 0 || hinted() {
+                                        return 2
+                                }
+                                return 3
                         }
                 }
-                return 2
+                return 4
         }
         sort.SliceStable(out, func(i, j int) bool {
                 ri, rj := rank(out[i]), rank(out[j])
