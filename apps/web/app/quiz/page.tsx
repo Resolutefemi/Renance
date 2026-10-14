@@ -277,7 +277,7 @@ function SharedQuizClient() {
 
       <footer className="border-t border-outline-variant/40 px-4 py-4 text-center">
         <p className="text-[11.5px] text-on-surface-variant">
-          Made with Renance AI - the Nigerian study OS for JAMB, WAEC, NECO and university
+          Made with Renance AI - the Nigerian educational app for JAMB, WAEC, NECO and tertiary institution
         </p>
       </footer>
     </div>

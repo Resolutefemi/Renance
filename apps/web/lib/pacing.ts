@@ -1,5 +1,5 @@
 /**
- * CBT Pacing & Panic Forensics Engine for Renance Study OS.
+ * Pacing & Panic Forensics Engine for the Renance educational app.
  *
  * Trains students to manage the CBT clock, avoid deadly time-traps,
  * and eliminate end-of-exam panic in high-stakes tests (e.g. JAMB UTME, WAEC).

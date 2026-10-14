@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * PacingGauge - Live Exam Clock Coach for Renance Study OS.
+ * PacingGauge - Live Exam Clock Coach for the Renance educational app.
  *
  * Keeps students conscious of per-question time limits without inducing panic.
  * Follows Renance light M3 tokens with subtle status indicators.

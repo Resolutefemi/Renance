@@ -25,7 +25,7 @@ const STEPS: Step[] = [
   {
     icon: 'school',
     title: 'Welcome to Renance',
-    body: 'Your study OS for JAMB, WAEC, NECO, Post-UTME and university - 235,110+ real past questions, spaced review, and an AI that was raised on all of it. Here is the tour.',
+    body: 'Your educational app for JAMB, WAEC, NECO, Post-UTME and tertiary institution - 235,110+ real past questions, spaced review, and an AI that was raised on all of it. Here is the tour.',
   },
   {
     icon: 'edit_note',

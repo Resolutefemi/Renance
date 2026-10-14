@@ -71,7 +71,7 @@ export default function PracticeGate({
         <div className="flex w-full flex-col gap-4 rounded-xl bg-surface-container-lowest p-6 shadow-sm">
           <ul className="flex flex-col gap-3">
             {[
-              ['library_books', '235,110+ real past questions', 'JAMB, WAEC, NECO, Post-UTME and university banks.'],
+              ['library_books', '235,110+ real past questions', 'JAMB, WAEC, NECO, Post-UTME and tertiary institution banks.'],
               ['fact_check', 'Worked explanations', 'A step-by-step reason for every option, on every question.'],
               ['timer', 'Real CBT mode', 'Server-graded mocks timed exactly like the exam hall.'],
               ['bolt', 'Free forever', 'Creating an account takes seconds - email and password.'],

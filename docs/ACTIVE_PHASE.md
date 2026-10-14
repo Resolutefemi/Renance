@@ -19,7 +19,7 @@ pending extraction. Neon `core.*`/`cbt.*` tables remain in place, untouched.
 
 ---
 
-## ERA 2 - Renance Study OS (Go backend)         [ACTIVE]
+## ERA 2 - Renance Educational App (Go backend)     [ACTIVE]
 
 One repository, one product: the global student study operating system.
 Go service (`apps/study-api`) + Next.js web (`apps/web`) + Flutter shell

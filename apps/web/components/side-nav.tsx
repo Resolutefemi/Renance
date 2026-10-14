@@ -169,7 +169,7 @@ export default function SideNav() {
       {/* Footnote */}
       {open && (
         <p className="shrink-0 border-t-2 border-outline-variant/60 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-hare">
-          renance · study os
+          renance · educational app
         </p>
       )}
     </nav>

@@ -150,7 +150,7 @@ export default function GpaPage() {
         <div className="mx-auto flex w-full max-w-md flex-col items-center px-4 pt-24 text-center">
           <span className="material-symbols-outlined text-4xl text-on-surface-variant">school</span>
           <h1 className="mt-4 text-lg font-semibold text-on-surface">
-            The GPA calculator lives on the University desk
+            The GPA calculator lives on the Tertiary Institution desk
           </h1>
           <p className="mt-2 text-sm text-on-surface-variant">
             It is a tertiary tool: semester GPAs and a cumulative CGPA on

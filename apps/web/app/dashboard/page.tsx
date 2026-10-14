@@ -74,7 +74,7 @@ const EXAM_LABELS: Record<string, string> = {
   WAEC: 'WAEC',
   NECO: 'NECO',
   'POST-UTME': 'Post UTME',
-  'University Modules': 'School Desk (University)',
+  'University Modules': 'School Desk (Tertiary Institution)',
 };
 
 const TARGET_LABELS: Record<string, string> = {

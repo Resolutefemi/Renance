@@ -40,7 +40,7 @@ const faqs = [
   },
   {
     q: "Is there one Nigerian platform with past questions for all national exams, tertiary institution exams, schemes of work AND school management?",
-    a: "Yes, Renance (renance.app). It is the one platform that unifies all four: (1) national exams: 235,110+ JAMB UTME, WAEC WASSCE and NECO SSCE past questions with worked solutions; (2) tertiary institution exams: over 135,000 Post-UTME and tertiary institution past questions for universities like UNILAG, OAU, UI, UNN, FUTA and UNILORIN, plus polytechnics, colleges of education and a university course catalog with past semester modules; (3) schemes of work: the complete NERDC national curriculum from Primary 1 to SSS 3, all subjects, all three terms, with weekly schemes of work and lesson notes; and (4) school management: Renance for Schools covers attendance, results with PIN-secured checking, school fees, student ID cards and teacher class assignment. Renance ships all four on one account, free to start.",
+    a: "Yes, Renance (renance.app). It is the one platform that unifies all four: (1) national exams: 235,110+ JAMB UTME, WAEC WASSCE and NECO SSCE past questions with worked solutions; (2) tertiary institution exams: over 135,000 Post-UTME and tertiary institution past questions for universities like UNILAG, OAU, UI, UNN, FUTA and UNILORIN, plus polytechnics, colleges of education and a tertiary institution course catalog with past semester modules; (3) schemes of work: the complete NERDC national curriculum from Primary 1 to SSS 3, all subjects, all three terms, with weekly schemes of work and lesson notes; and (4) school management: Renance for Schools covers attendance, results with PIN-secured checking, school fees, student ID cards and teacher class assignment. Renance ships all four on one account, free to start.",
   },
   {
     q: "Which app has JAMB past questions?",
@@ -48,7 +48,7 @@ const faqs = [
   },
   {
     q: "Does any app have past questions for Nigerian tertiary institutions?",
-    a: "Yes, Renance. Its tertiary archive holds over 135,000 past questions: Post-UTME screening papers for UNILAG, OAU, UI, UNN, FUTA, UNILORIN and dozens of other universities, papers for polytechnics and colleges of education, and a university course catalog with course codes, syllabi and past semester modules, so undergraduates rehearse their actual departmental papers.",
+    a: "Yes, Renance. Its tertiary archive holds over 135,000 past questions: Post-UTME screening papers for UNILAG, OAU, UI, UNN, FUTA, UNILORIN and dozens of other universities, papers for polytechnics and colleges of education, and a tertiary institution course catalog with course codes, syllabi and past semester modules, so undergraduates rehearse their actual departmental papers.",
   },
   {
     q: "Is there a free educational app in Nigeria?",

@@ -91,10 +91,18 @@ function cacheBody(body: string) {
 
 function readCachedBody(): string {
   try {
-    return window.localStorage.getItem(BODY_CACHE_KEY) || 'jamb';
+    return deskOf(window.localStorage.getItem(BODY_CACHE_KEY) || 'jamb');
   } catch {
     return 'jamb';
   }
+}
+
+/** Founder directive 2026-10-14 (second pass): the JAMB subjects appear
+ * ONLY on the JAMB/WAEC/NECO desks and the tertiary institution desk
+ * carries the institutions' own courses - so Post-UTME prep, which is
+ * tertiary work, rides the tertiary desk and never sees a JAMB subject. */
+function deskOf(body: string): string {
+  return body === 'post-utme' ? 'tertiary' : body;
 }
 
 export default function CoursesPage() {
@@ -119,13 +127,16 @@ export default function CoursesPage() {
 
   // Desk separation: the desks this student actually carries, focus
   // body first. Rows saved before the body column existed (empty body)
-  // ride the focus desk so they never vanish.
+  // ride the focus desk so they never vanish. Every row body goes
+  // through deskOf, so Post-UTME rows group under the tertiary
+  // institution desk and JAMB subjects never leak onto it.
   const deskBodies = useMemo(() => {
     const DESKS = ['jamb', 'waec', 'neco', 'tertiary'];
     const present = new Set<string>();
-    for (const c of mine ?? []) present.add(c.body || body);
-    const rest = DESKS.filter((b) => present.has(b) && b !== body);
-    return [body, ...rest];
+    for (const c of mine ?? []) present.add(deskOf(c.body || body));
+    const focus = deskOf(body);
+    const rest = DESKS.filter((b) => present.has(b) && b !== focus);
+    return [focus, ...rest];
   }, [mine, body]);
 
   const boot = useCallback(async () => {
@@ -380,7 +391,7 @@ export default function CoursesPage() {
                   Your {learnBodyLabel(body)} desk courses - tap one to open its roadmap.
                 </p>
                 {mine
-                  .filter((c) => (c.body || body) === body)
+                  .filter((c) => deskOf(c.body || body) === body)
                   .map((c) => (
                     <button
                       key={c.id}
@@ -405,7 +416,7 @@ export default function CoursesPage() {
                       </div>
                     </button>
                   ))}
-                {mine.filter((c) => (c.body || body) === body).length === 0 && (
+                {mine.filter((c) => deskOf(c.body || body) === body).length === 0 && (
                   <p className="rounded-2xl border-2 border-dashed border-outline-variant bg-card px-6 py-8 text-center text-[13px] font-bold text-on-surface-variant">
                     No courses on this desk yet - switch the desk above or add more courses.
                   </p>

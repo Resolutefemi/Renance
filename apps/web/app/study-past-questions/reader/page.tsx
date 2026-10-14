@@ -39,7 +39,7 @@ const BODY_LABEL: Record<string, string> = {
   waec: 'WAEC',
   neco: 'NECO',
   'post-utme': 'Post-UTME',
-  university: 'University',
+  university: 'Tertiary Institution',
 };
 
 function ReaderInner() {

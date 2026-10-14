@@ -14,14 +14,14 @@ export const dynamic = 'force-static';
 import { SITE_URL } from '@/lib/site-url';
 
 export const metadata: Metadata = {
-  title: 'Subjects & syllabus coverage | JAMB, WAEC, NECO & university modules',
+  title: 'Subjects & syllabus coverage | JAMB, WAEC, NECO & tertiary institution modules',
   description:
-    'Every subject and topic Renance covers for JAMB, WAEC, NECO and university modules. Browse the syllabus trees, then practise each topic with server-graded CBT papers in the Renance app.',
+    'Every subject and topic Renance covers for JAMB, WAEC, NECO and tertiary institution modules. Browse the syllabus trees, then practise each topic with server-graded CBT papers in the Renance app.',
   alternates: { canonical: '/subjects/' },
   openGraph: {
     title: 'Subjects & syllabus coverage · Renance',
     description:
-      'Every subject and topic Renance covers for JAMB, WAEC, NECO and university modules.',
+      'Every subject and topic Renance covers for JAMB, WAEC, NECO and tertiary institution modules.',
     url: `${SITE_URL}/subjects/`,
     images: [...OG_IMAGES],
   },
