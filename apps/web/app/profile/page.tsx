@@ -355,7 +355,7 @@ export default function ProfilePage() {
           {me.entitlement?.referralCode && (
             <section className="flex items-center gap-3 rounded-2xl bg-card p-3.5 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/15">
-                <span className="material-symbols-outlined text-[20px] text-primary-ink">card_giftcard</span>
+                <span className="material-symbols-outlined text-[20px] text-primary-ink">redeem</span>
               </span>
               <div className="min-w-0 flex-1">
                 <p className="text-[14px] font-bold text-on-surface">Invite friends, earn REN</p>

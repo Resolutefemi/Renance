@@ -371,7 +371,7 @@ export function LessonOverlay({
         {/* ── Done ── */}
         {phase === 'done' && (
           <div className="flex h-full flex-col items-center justify-center gap-4 py-16 text-center">
-            <span className="material-symbols-outlined text-[56px] text-primary">emoji_events</span>
+            <span className="material-symbols-outlined text-[56px] text-primary">trophy</span>
             <h2 className="text-[22px] font-black text-on-surface">{mode === 'lesson' ? 'Topic complete!' : mode === 'review' ? 'Unit review done!' : 'Practice done!'}</h2>
             <p className="text-[13.5px] font-bold text-on-surface-variant">
               {correctCount}/{total} correct · {accuracy}% accuracy

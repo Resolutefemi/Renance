@@ -35,6 +35,11 @@ NEW_ICONS = [
     "remove", "check", "check_circle", "cancel", "chevron_right", "arrow_upward",
     "rocket_launch", "history_edu", "auto_stories", "bookmark_add",
     "hourglass_top", "error",
+    # The merged Supreme learn module (founder directive 2026-10-14):
+    # shop reward rows, league trophy, feed/follow empty states. The old
+    # Material Icons names (emoji_events, card_giftcard) no longer exist
+    # upstream - the code now uses the current Material Symbols names.
+    "trophy", "redeem", "person_off",
 ]
 
 
