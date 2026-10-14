@@ -114,33 +114,10 @@ func (l *Library) loadSyllabi(dataDir string) error {
 	return nil
 }
 
-// validateTopics enforces the join: bundle topics must live in their
-// body's tree whenever that tree exists. Bundles without a body (test
-// fixtures) and bodies without a tree are left alone, qbuild lint and
-// the syllabus endpoint surface those as warnings/404 instead.
-func (l *Library) validateTopics() error {
-	for _, ex := range l.manifest.Exams {
-		b := l.bundles[ex.Code]
-		if b == nil || b.Body == "" {
-			continue
-		}
-		sy, ok := l.syllabi[b.Body]
-		if !ok {
-			continue
-		}
-		set := sy.TopicSet()
-		for _, q := range b.Questions {
-			if q.Topic == "" {
-				continue // lands in the "General" bucket downstream
-			}
-			if _, ok := set[q.Topic]; !ok {
-				return fmt.Errorf("cbtdata: bundle %s question %s: topic %q is not in the %s syllabus tree (data/syllabus/%s.json) - fix the tag or extend the tree",
-					ex.Code, q.ID, q.Topic, b.Body, Slug(b.Body))
-			}
-		}
-	}
-	return nil
-}
+// validateTopics no longer exists as a pass over parsed bundles: the
+// topic join is enforced by the boot probe in scanBanks (cbtdata.go),
+// which walks every question's topic tag while the file bytes are
+// already in hand. Same contract, zero resident question structs.
 
 // SyllabusForBody looks a tree up by exact body name or slug.
 func (l *Library) SyllabusForBody(body string) (*Syllabus, bool) {
@@ -168,31 +145,53 @@ func (l *Library) SyllabusBodies() []string {
 
 // TopicCounts counts the questions per topic across every bundle of one
 // body, the "42 Questions" column of the syllabus map. Empty topics
-// bucket into "General". Bodies without packs return an empty map.
+// bucket into "General". Bodies without packs return an empty map. The
+// counts come straight from the boot probe - no bank is parsed.
 func (l *Library) TopicCounts(body string) map[string]int {
 	counts := map[string]int{}
+	l.mu.RLock()
+	defer l.mu.RUnlock()
 	for _, ex := range l.manifest.Exams {
-		b := l.bundles[ex.Code]
-		if b == nil || b.Body != body {
+		m := l.stats[ex.Code]
+		if m == nil || m.Body != body {
 			continue
 		}
-		for _, q := range b.Questions {
-			t := q.Topic
-			if t == "" {
-				t = "General"
-			}
-			counts[t]++
+		if len(m.Topics) == 0 {
+			counts["General"] += m.Questions
+			continue
 		}
+		for t, n := range m.Topics {
+			counts[t] += n
+		}
+		counts["General"] += m.Questions - topicTagged(m)
 	}
 	return counts
+}
+
+// topicTagged counts the questions a bank's probe tagged with a topic.
+func topicTagged(m *BundleMeta) int {
+	n := 0
+	for _, c := range m.Topics {
+		n += c
+	}
+	return n
 }
 
 // PackBodies lists the distinct bodies actually served by packs.
 func (l *Library) PackBodies() []string {
 	seen := map[string]struct{}{}
+	l.mu.RLock()
+	defer l.mu.RUnlock()
 	for _, ex := range l.manifest.Exams {
-		if b := l.bundles[ex.Code]; b != nil && b.Body != "" {
-			seen[b.Body] = struct{}{}
+		body := ""
+		if m := l.stats[ex.Code]; m != nil {
+			body = m.Body
+		}
+		if body == "" {
+			body = ex.Body
+		}
+		if body != "" {
+			seen[body] = struct{}{}
 		}
 	}
 	out := make([]string, 0, len(seen))
