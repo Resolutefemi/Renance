@@ -385,6 +385,62 @@ export function splitMathSegments(input: string): MathSeg[] {
   return segs;
 }
 
+/* ------------------------------------------------------------------ */
+/* Bare caret/underscore maths (founder directive 2026-10-15: "make   */
+/* sure the mathematical equations or stuff are written well - x² not  */
+/* x^2"): lesson bodies and question stems occasionally carry plain-  */
+/* text maths OUTSIDE any $...$ span. This conservative pass folds    */
+/* the same unicode super/subscripts latexToText produces onto the    */
+/* TEXT runs. Snake_case identifiers are left alone: the body after   */
+/* `_` must be digits, or a single letter that ends a word -          */
+/* `word_bank` and `AI_MODEL` never match, `H_2O`, `x_1` and `a_n` do. */
+/* ------------------------------------------------------------------ */
+
+const SUPER_MAP: Record<string, string> = {
+  '0': '\u2070', '1': '\u00b9', '2': '\u00b2', '3': '\u00b3', '4': '\u2074',
+  '5': '\u2075', '6': '\u2076', '7': '\u2077', '8': '\u2078', '9': '\u2079',
+  '+': '\u207a', '-': '\u207b', '=': '\u207c', '(': '\u207d', ')': '\u207e',
+  n: '\u207f', i: '\u2071',
+};
+const SUB_MAP: Record<string, string> = {
+  '0': '\u2080', '1': '\u2081', '2': '\u2082', '3': '\u2083', '4': '\u2084',
+  '5': '\u2085', '6': '\u2086', '7': '\u2087', '8': '\u2088', '9': '\u2089',
+  '+': '\u208a', '-': '\u208b', '=': '\u208c', '(': '\u208d', ')': '\u208e',
+  n: '\u2099', m: '\u2098', x: '\u2093', e: '\u2091', o: '\u2092',
+  a: '\u2090', i: '\u1d62', r: '\u1d63', u: '\u1d64', v: '\u1d65',
+};
+
+function mappable(body: string, map: Record<string, string>): string | null {
+  if (!body) return null;
+  let out = '';
+  for (const ch of body) {
+    const mapped = map[ch];
+    if (mapped === undefined) return null;
+    out += mapped;
+  }
+  return out;
+}
+
+/** Fold bare `x^2` / `H_2O` notation into unicode super/subscripts. */
+export function plainMathToUnicode(text: string): string {
+  if (!text || (!text.includes('^') && !text.includes('_'))) return text;
+  let out = text.replace(
+    /\^\(([^)\n]{1,12})\)|\^\{([^}\n]{1,12})\}|\^([0-9+\-]{1,6})|\^([a-zA-Z](?![a-zA-Z]))/g,
+    (whole: string, paren?: string, brace?: string, digits?: string, single?: string) => {
+      const mapped = mappable((paren ?? brace ?? digits ?? single) as string, SUPER_MAP);
+      return mapped ?? whole;
+    },
+  );
+  out = out.replace(
+    /_\(([^)\n]{1,12})\)|_\{([^}\n]{1,12})\}|_([0-9]{1,6})|_([a-zA-Z](?![a-zA-Z]))/g,
+    (whole: string, paren?: string, brace?: string, digits?: string, single?: string) => {
+      const mapped = mappable((paren ?? brace ?? digits ?? single) as string, SUB_MAP);
+      return mapped ?? whole;
+    },
+  );
+  return out;
+}
+
 function pushText(ctx: Ctx, raw: string) {
   const text = decodeEntities(normalizeLatexEscapes(raw));
   for (const seg of splitMathSegments(text)) {
@@ -394,7 +450,7 @@ function pushText(ctx: Ctx, raw: string) {
         <MathSpan key={ctx.key++} tex={seg.body} display={seg.display} approx={approx} />,
       );
     } else if (seg.body) {
-      ctx.nodes.push(seg.body);
+      ctx.nodes.push(plainMathToUnicode(seg.body));
     }
   }
 }

@@ -815,21 +815,38 @@ func (s *Service) PracticeSet(ctx context.Context, userID string) (*PracticeSet,
                 if err := rows2.Scan(&raw); err != nil {
                         continue
                 }
-                var qs []PracticeQuestion
+                var qs []LessonQuizQ
                 if json.Unmarshal(raw, &qs) != nil {
                         continue
                 }
+                // Same serve-time sweep as the lesson itself: every quiz
+                // question that reaches a student is three options wide
+                // with an answer that points at one of them.
+                qs, _ = sanitizeQuiz(qs)
                 for _, q := range qs {
                         if len(set.Questions) >= 8 {
                                 break
                         }
                         if q.ID != "" && !seen[q.ID] && q.Answer != "" {
                                 seen[q.ID] = true
-                                set.Questions = append(set.Questions, q)
+                                set.Questions = append(set.Questions, practiceFromLesson(q))
                         }
                 }
         }
         return set, nil
+}
+
+// practiceFromLesson carries one sanitized lesson question into the
+// practice payload (identical wire shape, kept explicit for the reader).
+func practiceFromLesson(q LessonQuizQ) PracticeQuestion {
+        return PracticeQuestion{
+                ID:          q.ID,
+                Type:        q.Type,
+                Stem:        q.Stem,
+                Options:     q.Options,
+                Answer:      q.Answer,
+                Explanation: q.Explanation,
+        }
 }
 
 // GradePractice pays the small practice reward: 2 XP per correct
@@ -922,17 +939,20 @@ func (s *Service) ReviewSet(ctx context.Context, userID, courseID string, unit i
                 if err := rows.Scan(&raw); err != nil {
                         continue
                 }
-                var qs []PracticeQuestion
+                var qs []LessonQuizQ
                 if json.Unmarshal(raw, &qs) != nil {
                         continue
                 }
+                // Serve-time sweep (founder 2026-10-15): the review quiz
+                // obeys the same three-option + resolvable-answer doctrine.
+                qs, _ = sanitizeQuiz(qs)
                 for _, q := range qs {
                         if len(set.Questions) >= 8 {
                                 break
                         }
                         if q.ID != "" && !seen[q.ID] {
                                 seen[q.ID] = true
-                                set.Questions = append(set.Questions, q)
+                                set.Questions = append(set.Questions, practiceFromLesson(q))
                         }
                 }
         }

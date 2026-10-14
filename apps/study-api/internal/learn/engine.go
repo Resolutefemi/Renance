@@ -12,6 +12,7 @@ import (
         "fmt"
         "regexp"
         "sort"
+        "strconv"
         "strings"
         "sync"
         "time"
@@ -52,6 +53,16 @@ type LessonDoc struct {
         Cached    bool         `json:"cached"`
 }
 
+// LessonSource is the lesson FORMAT stamp: the generation recipe it
+// follows. A cached row carrying a different stamp was written by an
+// older recipe and regenerates at the current depth on its next open
+// (founder 2026-10-15: "the notes generated in each part are too small
+// and short, not that explainable" - the old recipe allowed 60-140-word
+// bodies; the current one demands 150-260 words and worked examples).
+// If regeneration fails (AI down), the stale doc still serves - its
+// quiz is sanitized on the way out either way.
+const LessonSource = "zai-glm-2"
+
 type Engine struct {
         AI  tutor.Provider
         Lib *cbtdata.Library
@@ -81,17 +92,16 @@ func NewEngine(ai tutor.Provider, lib *cbtdata.Library) *Engine {
 
 // ─── Prompting ────────────────────────────────────────────────────────────
 
-const lessonSystem = `You are Renance's AI tutor: an expert Nigerian teacher writing lesson notes for students preparing for their exams.
+const lessonSystem = `You are Renance's AI tutor: an expert Nigerian teacher writing full lesson notes for students preparing for their exams.
 
 Rules:
 - Write for the topic's exam body. JAMB/WAEC/NECO topics follow the Nigerian senior-secondary syllabus; university topics follow the NUC CCMAS / NBTE / NCCE curricula.
 - Output STRICT JSON only. No markdown fences, no commentary.
-- Shape: {"title": string, "summary": string, "notes": [{"heading": string, "body": string}], "key_points": [string], "quiz": [{"type": "mcq"|"true_false"|"fill_blank", "stem": string, "options": {"A": string, "B": string, "C": string, "D": string}, "answer": "A"|"B"|"C"|"D"|"true"|"false"|string, "explanation": string}]}
-- notes: 3 to 5 bite-sized sections. Each body: 60-140 words, plain text paragraphs (no HTML, no markdown syntax). Teach with Nigerian examples (naira, kana, Lagos/Kano/Akure contexts) where natural.
-- In bodies you may write simple chemistry/maths notation as plain text (CH3COOH, H2O, v = fλ) and use $...$ for LaTeX the renderer typesets.
-- key_points: 3 to 6 exam-focused takeaways.
-- quiz: 6 to 8 items. At least 2 mcq, at least 1 true_false, at least 1 fill_blank (fill_blank has no options; answer is the exact word/phrase). Ramping difficulty. Every item carries a short explanation.
-- Distractors must be plausible; never reveal the answer inside the stem.`
+- Shape: {"title": string, "summary": string, "notes": [{"heading": string, "body": string}], "key_points": [string], "quiz": [{"type": "mcq", "stem": string, "options": {"A": string, "B": string, "C": string}, "answer": "A"|"B"|"C", "explanation": string}]}
+- notes: 5 to 7 sections that TEACH, not tease. Each body: 150-260 words of plain-text paragraphs (no HTML, no markdown syntax). Define every term in full, walk through at least one worked example step by step (numbered steps), point out the exam trap students actually fail on, and use Nigerian examples (naira, kana, Lagos/Kano/Akure contexts) where natural. A student who reads ONLY these notes must be able to answer every quiz item.
+- MATHS NOTATION (strict): every formula, equation, exponent or symbol is LaTeX wrapped in dollar signs. Write $x^2$, $H_2O$, $\\frac{dy}{dx}$, $\\lim_{x \\to \\infty} f(x)$, $\\int_0^1 x^2\\,dx$, $\\sum_{i=1}^{n} i$. NEVER write bare caret or underscore notation (x^2, H_2O, 10^5) outside $...$ - the renderer typesets $...$ only and prints everything else raw.
+- key_points: 4 to 6 exam-focused takeaways.
+- quiz: 6 to 8 items. EVERY item has "type": "mcq" and EXACTLY 3 options keyed "A", "B", "C" - never 2, never 4, never a fill-in-the-blank or true/false item. Each stem tests THIS lesson's notes (same terms, same worked examples); anything the notes did not teach is forbidden. "answer" is the LETTER ("A", "B" or "C") of the correct option. Distractors must be plausible; never reveal the answer inside the stem. Ramping difficulty. Every item carries a short explanation.`
 
 func lessonUserPrompt(topic, course, body, subject string, seq, total int) string {
         band := "Nigerian university level (NUC CCMAS)"
@@ -148,16 +158,21 @@ func extractJSON(raw string) string {
         return trimmed
 }
 
+// validateAI gates the AI output before it is ever served. The quiz
+// contract (founder directive 2026-10-15): every item an exactly-3-option
+// mcq whose answer resolves to one of ITS OWN option letters - anything
+// else is sent back for the one repair retry, and normalizeQuiz still
+// sweeps whatever slips through.
 func validateAI(raw []byte) (*aiLesson, error) {
         var l aiLesson
         if err := json.Unmarshal(raw, &l); err != nil {
                 return nil, err
         }
-        if len(l.Notes) < 2 || len(l.Notes) > 6 {
-                return nil, fmt.Errorf("want 2-6 notes, got %d", len(l.Notes))
+        if len(l.Notes) < 3 || len(l.Notes) > 8 {
+                return nil, fmt.Errorf("want 3-8 notes, got %d", len(l.Notes))
         }
-        if len(l.Quiz) < 3 {
-                return nil, fmt.Errorf("want >=3 quiz items, got %d", len(l.Quiz))
+        if len(l.Quiz) < 5 {
+                return nil, fmt.Errorf("want >=5 quiz items, got %d", len(l.Quiz))
         }
         for i, n := range l.Notes {
                 if strings.TrimSpace(n.Body) == "" {
@@ -166,14 +181,50 @@ func validateAI(raw []byte) (*aiLesson, error) {
                 if strings.Contains(n.Body, "<") && strings.Contains(n.Body, ">") {
                         return nil, fmt.Errorf("note %d contains HTML", i)
                 }
+                // The founder's "notes are too small and short, not that
+                // explainable" (2026-10-15): thin bodies are a validation
+                // failure now - the repair retry regenerates them at full depth.
+                if words := len(strings.Fields(n.Body)); words < 90 {
+                        return nil, fmt.Errorf("note %d is too thin (%d words, want >=90)", i, words)
+                }
         }
+        mcqs := 0
         for i, q := range l.Quiz {
                 if strings.TrimSpace(q.Stem) == "" || strings.TrimSpace(q.Answer) == "" {
                         return nil, fmt.Errorf("quiz %d missing stem/answer", i)
                 }
-                if q.Type == "mcq" && len(q.Options) < 2 {
-                        return nil, fmt.Errorf("mcq %d has <2 options", i)
+                t := strings.ToLower(strings.TrimSpace(q.Type))
+                if t != "mcq" && t != "multiple_choice" && t != "multiplechoice" {
+                        return nil, fmt.Errorf("quiz %d: type %q is not mcq - every item must be a 3-option mcq", i, q.Type)
                 }
+                opts := map[string]bool{}
+                for k, v := range q.Options {
+                        if strings.TrimSpace(v) != "" {
+                                opts[strings.ToUpper(strings.TrimSpace(k))] = true
+                        }
+                }
+                if len(opts) != 3 {
+                        return nil, fmt.Errorf("quiz %d: want exactly 3 options, got %d", i, len(opts))
+                }
+                ans := strings.ToUpper(strings.TrimSpace(q.Answer))
+                if len(ans) == 1 && opts[ans] {
+                        mcqs++
+                        continue
+                }
+                // Text answers are accepted only when they name one of the options.
+                found := false
+                for _, v := range q.Options {
+                        if strings.EqualFold(strings.TrimSpace(v), strings.TrimSpace(q.Answer)) {
+                                found = true
+                        }
+                }
+                if !found {
+                        return nil, fmt.Errorf("quiz %d: answer %q matches no option letter or option text", i, q.Answer)
+                }
+                mcqs++
+        }
+        if mcqs < 5 {
+                return nil, fmt.Errorf("want >=5 solid mcq items, got %d", mcqs)
         }
         return &l, nil
 }
@@ -184,8 +235,11 @@ func validateAI(raw []byte) (*aiLesson, error) {
 // shows and nothing below it is tappable. So:
 //   - fill_blank            → word_bank (distractors from the lesson corpus)
 //   - true_false (+aliases) → true_false (answer folded to true/false)
-//   - mcq                   → mcq, letters uppercased; fewer than 2 usable
-//                             options degrades to word_bank (type-in)
+//   - mcq                   → mcq, letters uppercased, answer resolved to
+//                             an option letter and trimmed to EXACTLY 3
+//                             options (founder directive 2026-10-15: every
+//                             choice question ships three options, never
+//                             two, four or zero)
 //   - anything else         → true_false when the answer reads boolean,
 //                             else word_bank - never an option-less mcq
 func (e *Engine) normalizeQuiz(in []aiQuizQ, topicID string, corpus []string) []LessonQuizQ {
@@ -208,7 +262,7 @@ func (e *Engine) normalizeQuiz(in []aiQuizQ, topicID string, corpus []string) []
                                 if strings.TrimSpace(v) == "" {
                                         continue
                                 }
-                                fixed[strings.ToUpper(strings.TrimSpace(k))] = v
+                                fixed[strings.ToUpper(strings.TrimSpace(k))] = strings.TrimSpace(v)
                         }
                         if len(fixed) < 2 {
                                 // An MCQ with no real options can never be answered
@@ -216,7 +270,13 @@ func (e *Engine) normalizeQuiz(in []aiQuizQ, topicID string, corpus []string) []
                                 o.Type = "word_bank"
                                 o.Options = buildWordBank(o.Answer, corpus)
                         } else {
-                                o.Options = fixed
+                                o.Options, o.Answer, o.ID = trimToThree(fixed, o.Answer, o.ID)
+                                if o.Options == nil {
+                                        // answer matched no option: degrade to a type-in
+                                        // keyed to the answer text, never a dead letter
+                                        o.Type = "word_bank"
+                                        o.Options = buildWordBank(o.Answer, corpus)
+                                }
                         }
                 case "true_false", "truefalse", "true/false", "boolean":
                         o.Type = "true_false"
@@ -254,6 +314,162 @@ func (e *Engine) normalizeQuiz(in []aiQuizQ, topicID string, corpus []string) []
                 out = append(out, o)
         }
         return out
+}
+
+// ─── The three-option doctrine (founder 2026-10-15) ────────────────────────
+//
+// "There will be questions in some and the options will not be three, or
+// the right answer will be picked and it will mark the user wrong." Both
+// halves have one root: questions whose stored answer does not line up
+// with the options the student actually sees. trimToThree resolves the
+// answer to one of the question's own option letters (letter OR exact
+// text), then re-letters the question to EXACTLY three options - the
+// answer plus two distractors, answer position deterministic per
+// question id. It returns nil options when the answer matches nothing
+// (caller degrades to a type-in / drops the question).
+
+// answerLetter finds the option the stored answer points at: a direct
+// letter hit first, then an exact (case/space-insensitive) text hit.
+func answerLetter(opts map[string]string, answer string) (string, bool) {
+        ans := strings.TrimSpace(answer)
+        if len(ans) == 1 {
+                letter := strings.ToUpper(ans)
+                if _, ok := opts[letter]; ok {
+                        return letter, true
+                }
+        }
+        for k, v := range opts {
+                if strings.EqualFold(strings.TrimSpace(v), ans) {
+                        return k, true
+                }
+        }
+        // Common bank quirk: answers recorded as 1..N indices.
+        if n, err := strconv.Atoi(ans); err == nil && n >= 1 && n <= len(opts) {
+                letters := sortedKeys(opts)
+                return letters[n-1], true
+        }
+        return "", false
+}
+
+func sortedKeys(m map[string]string) []string {
+        ks := make([]string, 0, len(m))
+        for k := range m {
+                ks = append(ks, k)
+        }
+        sort.Strings(ks)
+        return ks
+}
+
+// trimToThree re-letters an MCQ to exactly three options: the answer plus
+// the first two distractors. A question that already carries exactly three
+// options and a resolvable letter answer keeps its own letters untouched;
+// everything else (4+ options, text answers, dead letters) is re-lettered
+// with the answer at a deterministic slot per question (hash of the id) so
+// a re-serve never reshuffles it.
+func trimToThree(opts map[string]string, answer, id string) (map[string]string, string, string) {
+        ansLetter, ok := answerLetter(opts, answer)
+        if !ok {
+                return nil, answer, id
+        }
+        if len(opts) == 3 {
+                if len(strings.TrimSpace(answer)) == 1 && strings.ToUpper(strings.TrimSpace(answer)) == ansLetter {
+                        return opts, ansLetter, id // already doctrine-clean
+                }
+                // Exactly three options but a text/index answer: fold the
+                // answer to its own letter, keep the option letters as they are.
+                return opts, ansLetter, id
+        }
+        distractors := make([]string, 0, 2)
+        for _, k := range sortedKeys(opts) {
+                if k != ansLetter && len(distractors) < 2 {
+                        distractors = append(distractors, k)
+                }
+        }
+        // Position the answer at a deterministic slot (0, 1 or 2).
+        slot := int(hashStr(id) % 3)
+        if slot > len(distractors) { // fewer distractors than the slot needs
+                slot = len(distractors)
+        }
+        ordered := make([]string, 0, 3)
+        ordered = append(ordered, distractors[:slot]...)
+        ordered = append(ordered, ansLetter)
+        ordered = append(ordered, distractors[slot:]...)
+
+        out := make(map[string]string, len(ordered))
+        newAnswer := ""
+        for i, k := range ordered {
+                letter := string(rune('A' + i))
+                out[letter] = opts[k]
+                if k == ansLetter {
+                        newAnswer = letter
+                }
+        }
+        return out, newAnswer, id
+}
+
+// sanitizeQuiz is the SERVE-TIME sweep (founder bug reports 2026-10-15):
+// lessons cached before the three-option doctrine carry 4-5-option bank
+// questions, text answers, true_false letters and option-less mcqs.
+// Every read path (lesson serve, practice set, review set) runs this so
+// the whole back catalogue heals without a single regeneration. It
+// returns the cleaned slice and whether anything changed (the lesson
+// cache persists the healed form once, piggy-backing on a serve that
+// already touches the database).
+func sanitizeQuiz(in []LessonQuizQ) ([]LessonQuizQ, bool) {
+        if len(in) == 0 {
+                return in, false
+        }
+        changed := false
+        out := make([]LessonQuizQ, 0, len(in))
+        for _, q := range in {
+                switch q.Type {
+                case "mcq":
+                        fixed := map[string]string{}
+                        for k, v := range q.Options {
+                                if strings.TrimSpace(v) == "" {
+                                        continue
+                                }
+                                fixed[strings.ToUpper(strings.TrimSpace(k))] = strings.TrimSpace(v)
+                        }
+                        if len(fixed) < 2 {
+                                changed = true
+                                continue // unanswerable: drop, never ship a blank quiz
+                        }
+                        if len(fixed) != len(q.Options) {
+                                changed = true
+                        }
+                        trimmed, answer, _ := trimToThree(fixed, q.Answer, q.ID)
+                        if trimmed == nil {
+                                changed = true
+                                continue // answer points nowhere: dead question, drop it
+                        }
+                        if len(q.Options) != len(trimmed) || answer != q.Answer {
+                                changed = true
+                        }
+                        q.Options = trimmed
+                        q.Answer = answer
+                case "true_false":
+                        ans := strings.ToLower(strings.TrimSpace(q.Answer))
+                        folded := "false"
+                        if strings.HasPrefix(ans, "t") || strings.HasPrefix(ans, "y") || ans == "1" {
+                                folded = "true"
+                        }
+                        if folded != q.Answer {
+                                changed = true
+                                q.Answer = folded
+                        }
+                        q.Options = nil
+                default:
+                        // word_bank / fill_blank stay as shipped - the client
+                        // self-heals their word tiles.
+                }
+                if strings.TrimSpace(q.Stem) != "" {
+                        out = append(out, q)
+                } else {
+                        changed = true
+                }
+        }
+        return out, changed
 }
 
 func buildWordBank(answer string, corpus []string) map[string]string {
@@ -295,7 +511,11 @@ var stripRe = regexp.MustCompile(`[^a-z0-9]+`)
 
 // bankQuestions filters a body's bundle for stems matching the topic
 // keywords, deterministic order, capped. This is the founder's rule:
-// the course quizzes carry the students' ACTUAL past questions.
+// the course quizzes carry the students' ACTUAL past questions - and
+// (2026-10-15) they must correspond with the topic being studied: a
+// single generic-word hit no longer qualifies, questions RANK by how
+// many topic keywords they match, and every survivor is re-lettered to
+// exactly three options.
 func (e *Engine) bankQuestions(body, subject string, keywords []string, topicID string, cap int) []LessonQuizQ {
         if e.Lib == nil || cap <= 0 || len(keywords) == 0 {
                 return nil
@@ -317,41 +537,80 @@ func (e *Engine) bankQuestions(body, subject string, keywords []string, topicID 
         if keys, hasKeys := e.Lib.KeysFor(code); hasKeys {
                 b = b.WithKeyMaterial(keys)
         }
-        lk := make([]string, 0, len(keywords))
+        // Strong keywords (≥6 letters, e.g. "photosynthesis") qualify on
+        // their own; short generic ones ("word", "cell", "form") need at
+        // least two distinct hits. Founder report 2026-10-15: "the past
+        // questions the AI is fetching to the quiz are not corresponding
+        // with the notes or subject at all" - the old single-≥4-char-match
+        // let generic words drag whole off-topic sections in.
+        type scored struct {
+                q     cbtdata.Question
+                score int
+        }
+        strong := map[string]bool{}
+        weak := map[string]bool{}
         for _, k := range keywords {
-                if kk := stripRe.ReplaceAllString(strings.ToLower(k), ""); len(kk) >= 4 {
-                        lk = append(lk, kk)
+                if kk := stripRe.ReplaceAllString(strings.ToLower(k), ""); len(kk) >= 6 {
+                        strong[kk] = true
+                } else if len(kk) >= 4 {
+                        weak[kk] = true
                 }
         }
-        if len(lk) == 0 {
+        if len(strong)+len(weak) == 0 {
                 return nil
         }
-        var hits []cbtdata.Question
+        var hits []scored
         for _, q := range b.Questions {
                 if q.Type != "mcq" || q.Answer == "" || len(q.Options) < 2 {
                         continue
                 }
                 stem := stripRe.ReplaceAllString(strings.ToLower(q.Stem+" "+q.Topic), "")
-                for _, k := range lk {
+                score, strongHit := 0, false
+                for k := range strong {
                         if strings.Contains(stem, k) {
-                                hits = append(hits, q)
-                                break
+                                score += 2
+                                strongHit = true
                         }
                 }
+                weakHits := 0
+                for k := range weak {
+                        if strings.Contains(stem, k) {
+                                weakHits++
+                                if weakHits >= 2 {
+                                        break
+                                }
+                        }
+                }
+                score += weakHits
+                // Qualify: one strong keyword, or two weak ones together.
+                if !strongHit && weakHits < 2 {
+                        continue
+                }
+                hits = append(hits, scored{q: q, score: score})
         }
-        // Deterministic shuffle keyed by topic, then cap.
+        // Rank: topic relevance first, then the founder's recency bias.
+        sort.SliceStable(hits, func(i, j int) bool {
+                if hits[i].score != hits[j].score {
+                        return hits[i].score > hits[j].score
+                }
+                return hits[i].q.Year > hits[j].q.Year
+        })
+        // Deterministic shuffle within the same score band, then cap.
         seed := uint32(len(hits)) ^ hashStr(topicID)
         rng := mulberry32(seed)
         for i := len(hits) - 1; i > 0; i-- {
                 j := int(rng() % uint32(i+1))
                 hits[i], hits[j] = hits[j], hits[i]
         }
+        // Keep the score order across the shuffle: re-stable-sort by score
+        // (shuffle only broke ties inside equal bands).
+        sort.SliceStable(hits, func(i, j int) bool { return hits[i].score > hits[j].score })
         if len(hits) > cap {
                 hits = hits[:cap]
         }
-        sort.SliceStable(hits, func(i, j int) bool { return hits[i].Year > hits[j].Year })
         out := make([]LessonQuizQ, 0, len(hits))
-        for i, q := range hits {
+        for _, h := range hits {
+                q := h.q
                 o := LessonQuizQ{
                         ID:          q.ID,
                         Type:        "mcq",
@@ -365,7 +624,22 @@ func (e *Engine) bankQuestions(body, subject string, keywords []string, topicID 
                 if o.Explanation == "" {
                         o.Explanation = "A real past question from the Renance bank."
                 }
-                _ = i
+                // Three-option doctrine: keep the answer + two distractors,
+                // re-lettered A/B/C with the answer deterministically placed.
+                // A survivor whose answer cannot be resolved is dropped rather
+                // than shipped as a misgrade waiting to happen.
+                fixed := map[string]string{}
+                for k, v := range o.Options {
+                        if strings.TrimSpace(v) == "" {
+                                continue
+                        }
+                        fixed[strings.ToUpper(strings.TrimSpace(k))] = strings.TrimSpace(v)
+                }
+                if trimmed, answer, _ := trimToThree(fixed, o.Answer, o.ID); trimmed != nil {
+                        o.Options, o.Answer = trimmed, answer
+                } else {
+                        continue
+                }
                 out = append(out, o)
         }
         return out
@@ -420,27 +694,43 @@ const lessonWaitBudget = 22 * time.Second
 // a polling client's disconnects and the server's WriteTimeout can
 // never abort it - and wait=1 callers block for at most lessonWaitBudget
 // before receiving ErrGenerating (the 202 the client polls on).
+// A stale-format cached doc (old recipe) regenerates on open, falling
+// back to the stale doc when generation fails.
 func (s *Service) Lesson(ctx context.Context, topicID string, wait bool) (*LessonDoc, error) {
         t, err := s.loadTopicCtx(ctx, topicID)
         if err != nil {
                 return nil, err
         }
 
-        // Cache hit.
-        if doc, err := s.cachedLesson(ctx, t); err == nil && doc != nil {
-                return doc, nil
-        } else if err != nil {
-                return nil, err
+        // Cache hit (or a stale-format doc kept as the fallback).
+        staleDoc, cacheErr := s.cachedLesson(ctx, t)
+        if cacheErr != nil {
+                return nil, cacheErr
+        }
+        if staleDoc != nil && staleDoc.Source == LessonSource {
+                return staleDoc, nil
         }
 
-        // Miss → single-flight; first caller spawns the background
-        // generator, everyone else rides its done channel.
+        // Miss (or stale format) → single-flight; first caller spawns the
+        // background generator, everyone else rides its done channel.
         fl := s.kickOff(t)
+        // Generation failed: the stale doc (quiz already sanitized on
+        // the way out) beats a hard error - a lesson the student can
+        // still study, never a dead screen.
+        resolve := func(doc *LessonDoc, genErr error) (*LessonDoc, error) {
+                if doc != nil {
+                        return doc, nil
+                }
+                if genErr != nil && staleDoc != nil {
+                        return staleDoc, nil
+                }
+                return doc, genErr
+        }
 
         if !wait {
                 select {
                 case <-fl.done:
-                        return fl.doc, fl.err
+                        return resolve(fl.doc, fl.err)
                 default:
                         return nil, ErrGenerating
                 }
@@ -449,7 +739,7 @@ func (s *Service) Lesson(ctx context.Context, topicID string, wait bool) (*Lesso
         defer timer.Stop()
         select {
         case <-fl.done:
-                return fl.doc, fl.err
+                return resolve(fl.doc, fl.err)
         case <-ctx.Done():
                 return nil, ctx.Err()
         case <-timer.C:
@@ -514,6 +804,22 @@ func (s *Service) cachedLesson(ctx context.Context, t *topicCtx) (*LessonDoc, er
         if err := json.Unmarshal(quizRaw, &doc.Quiz); err != nil {
                 doc.Quiz = nil
         }
+        // Serve-time sweep (founder 2026-10-15): lessons cached before the
+        // three-option doctrine carry 4-5-option questions, letter/text
+        // answer mismatches and option-less mcqs. Sanitize before ANY
+        // student sees them; when the sweep changed something, persist the
+        // healed form once (piggy-backing on this serve, which already
+        // touches the row for hit_count) so practice and review sets read
+        // clean rows too. No regeneration, no extra AI, no extra wake.
+        if healed, changed := sanitizeQuiz(doc.Quiz); changed {
+                doc.Quiz = healed
+                if fixed, err := json.Marshal(doc.Quiz); err == nil {
+                        _, _ = s.Pool.Exec(ctx,
+                                `UPDATE learn.lessons SET quiz=$2 WHERE topic_id=$1`, t.ID, string(fixed))
+                }
+        } else {
+                doc.Quiz = healed
+        }
         if err := json.Unmarshal(drawRaw, &doc.Drawings); err != nil {
                 doc.Drawings = nil
         }
@@ -537,7 +843,7 @@ func (s *Service) generateLesson(ctx context.Context, t *topicCtx) (*LessonDoc, 
                 if attempt > 0 && lastErr != nil {
                         prompt += fmt.Sprintf("\n\nYour previous attempt failed validation: %v\nFix exactly those problems and return the corrected JSON object.", lastErr)
                 }
-                out, err := s.Engine.AI.Complete(ctx, lessonSystem, []tutor.Message{{Role: "user", Content: prompt}}, 3500)
+                out, err := s.Engine.AI.Complete(ctx, lessonSystem, []tutor.Message{{Role: "user", Content: prompt}}, 6000)
                 if err != nil {
                         lastErr = err
                         continue
@@ -557,7 +863,7 @@ func (s *Service) generateLesson(ctx context.Context, t *topicCtx) (*LessonDoc, 
                         TopicID: t.ID, CourseID: t.CourseID, Course: t.Course,
                         Title: firstNonEmpty(parsed.Title, t.Title),
                         Summary: parsed.Summary,
-                        Source: "zai-glm",
+                        Source: LessonSource,
                 }
                 for _, n := range parsed.Notes {
                         doc.Notes = append(doc.Notes, LessonNote{Heading: n.Heading, Body: n.Body})

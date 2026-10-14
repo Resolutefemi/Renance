@@ -528,22 +528,30 @@ function TertiaryDesk({
   }, [query]);
 
   const chooseInstitution = async (t: string) => {
-    setGateBusy(true);
+    // Optimistic gate (founder report 2026-10-14/15: "the school type
+    // selection is not working" - the old flow BLOCKED on the desk save,
+    // so a cold Render start froze the screen for up to 45s and the tap
+    // looked dead). The gate advances the moment the student picks; the
+    // save rides in the background (nothing waits on it - the department
+    // pick saves BOTH values in one idempotent call, so a failed
+    // institution-only save is repaired by the very next tap without
+    // the student ever knowing).
+    setItype(t);
+    setPhase('dept');
+    void loadDeps(t);
     try {
       await saveDesk(t, '');
-      setItype(t);
-      setPhase('dept');
-      void loadDeps(t);
     } catch {
-      onNotice('Could not save that - check your connection and try again.');
-    } finally {
-      setGateBusy(false);
+      // The department save re-issues the full pair - nothing to alert
+      // the student about yet.
     }
   };
 
   const chooseDepartment = async (d: DeskDepartment) => {
     setGateBusy(true);
     try {
+      // Saves institution kind + department together (idempotent upsert):
+      // this also lands a first institution-only save that failed above.
       await saveDesk(itype, d.id);
       await loadShelf();
     } catch {

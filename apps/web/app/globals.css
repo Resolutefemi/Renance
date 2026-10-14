@@ -120,8 +120,10 @@
   --color-on-secondary: #ffffff;
   --color-on-primary-container: #7c839b;
 
-  /* primaries & secondaries - treefrog green primary (was black) */
-  --color-primary: #58cc02;
+  /* primaries & secondaries - Renance green primary (founder directive
+     2026-10-15: the old treefrog #58cc02 was "too light" - the brand
+     green is now the vivid #10da11, still white-text safe) */
+  --color-primary: #10da11;
   --color-primary-container: #131b2e;
   --color-secondary: #6f6f7a;
   --color-secondary-container: #f1f1f4;
@@ -202,7 +204,7 @@
   --color-on-hero: #3c3c46;
   --color-hero-muted: #777777;
   --color-hero-track: #e5e5e5;
-  --color-hero-cta: #58cc02;
+  --color-hero-cta: #10da11;
   --color-on-hero-cta: #ffffff;
 }
 
@@ -258,7 +260,7 @@
   --color-on-background: #f0f3ff;
   --color-on-surface: #f0f3ff;
   --color-on-surface-variant: #a2aab8;
-  --color-primary: #58cc02;
+  --color-primary: #10da11;
   --color-on-primary: #ffffff;
   --color-primary-container: #17223b;
   --color-on-primary-container: #f0f3ff;
@@ -286,7 +288,7 @@
   --color-on-hero: #f0f3ff;
   --color-hero-muted: #a2aab8;
   --color-hero-track: #17223b;
-  --color-hero-cta: #58cc02;
+  --color-hero-cta: #10da11;
   --color-on-hero-cta: #ffffff;
 }
 
@@ -297,7 +299,7 @@
   --color-on-hero: #f0f3ff;
   --color-hero-muted: #b9c2d4;
   --color-hero-track: #17223b;
-  --color-hero-cta: #58cc02;
+  --color-hero-cta: #10da11;
   --color-on-hero-cta: #ffffff;
 }
 
@@ -462,6 +464,22 @@ body {
 }
 [data-theme='dark'] .text-primary.bg-primary\/10 {
   color: var(--color-primary);
+}
+
+/* ------------------------------------------------------------------ */
+/* The nav active pill (bottom bar + side rail). Founder directive    */
+/* 2026-10-15: "the blue active state pill for dark mode should be    */
+/* very light blue and the normal blue base border... just make the   */
+/* active pill for dark mode look good, not too blue." The light      */
+/* tier keeps the Supreme light-macaw fill untouched; the dark tier   */
+/* swaps the bright #ddf4ff slab for a soft light-blue tint washed    */
+/* over the dark card, ringed by the NORMAL macaw blue - calm,        */
+/* readable, never a saturated block.                                 */
+/* ------------------------------------------------------------------ */
+[data-theme='dark'] .nav-pill {
+  background: color-mix(in srgb, var(--color-macaw, #1cb0f6) 15%, var(--color-card, #1c2638));
+  color: var(--color-macaw-light, #ddf4ff);
+  box-shadow: inset 0 0 0 2px var(--color-macaw, #1cb0f6);
 }
 
 /* Desktop side rail: the SideNav hamburger collapses the menu list to an

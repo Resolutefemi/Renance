@@ -153,5 +153,5 @@ export function milestoneVisual(post: SocialPost): { icon: string; tint: string;
   if (meta.league) return { icon: 'trophy', tint: '#ce82ff', label: `${meta.league} League` };
   if (meta.score != null && meta.exam) return { icon: 'target', tint: '#1cb0f6', label: `${meta.exam} score` };
   if (meta.matchId) return { icon: 'swords', tint: '#ff4b4b', label: 'Arena' };
-  return { icon: 'military_tech', tint: '#58cc02', label: 'Milestone' };
+  return { icon: 'military_tech', tint: '#10da11', label: 'Milestone' };
 }
