@@ -60,7 +60,7 @@ export default function LeaguePage() {
 
         {!loading && !board && (
           <div className="learn-tile flex flex-col items-center gap-2 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-4 py-12 text-center">
-            <span className="material-symbols-outlined text-[36px] text-primary">emoji_events</span>
+            <span className="material-symbols-outlined text-[36px] text-primary">trophy</span>
             <p className="text-[15px] font-black text-on-surface">The league table is syncing…</p>
             <p className="max-w-xs text-[12.5px] font-bold text-on-surface-variant">
               Your weekly standings appear the moment the connection is back.

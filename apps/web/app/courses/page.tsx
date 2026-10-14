@@ -602,7 +602,7 @@ function CoursePathView({
                     disabled={!u.reviewReady}
                     className="flex items-center gap-1 rounded-lg border-2 border-white/50 bg-white/20 px-2 py-1 text-[11px] font-extrabold text-white disabled:opacity-60"
                   >
-                    <span className="material-symbols-outlined text-[15px]">emoji_events</span>
+                    <span className="material-symbols-outlined text-[15px]">trophy</span>
                     {u.reviewReady ? 'Review' : 'Locked'}
                   </button>
                 )}
