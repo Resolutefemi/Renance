@@ -29,7 +29,10 @@ func (s *Server) handleReviewQueue(w http.ResponseWriter, r *http.Request) {
 // maintenance probe. DISABLED (404) unless ADMIN_TOKEN is configured; with
 // it set, callers must echo the token in the X-Admin-Token header. It is
 // read-only and idempotent: queue-wide counters plus a server timestamp,
-// safe to point a Render cron at (which doubles as a keep-warm ping).
+// safe to point a Render cron at. KEEP-WARM NOTE (Neon compute budget,
+// 2026-10-14): this handler READS Postgres, so it WAKES the database -
+// never point an uptime monitor or keep-warm cron here. The free
+// keep-warm targets are GET /app-version and GET /healthz (both DB-free).
 func (s *Server) handleReviewTick(w http.ResponseWriter, r *http.Request) {
 	if s.cfg.AdminToken == "" {
 		fail(w, http.StatusNotFound, "not_found", "unknown route")
