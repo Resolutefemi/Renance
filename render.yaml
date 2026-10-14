@@ -29,6 +29,15 @@ services:
     dockerfilePath: ./apps/study-api/Dockerfile
     dockerContext: .
     healthCheckPath: /healthz
+    # NEON COMPUTE BUDGET (2026-10-14): /healthz is DB-free on purpose.
+    # Any uptime monitor / keep-warm cron must point at
+    #   https://renance-api.onrender.com/app-version   (or /healthz)
+    # NEVER at /readyz (real Postgres probe), /internal/review/tick or
+    # any other endpoint - a ping that touches Postgres every few
+    # minutes keeps the 0.25-CU compute awake 24/7, which is exactly
+    # how the 100 CU-hour free allowance was on track to run out by
+    # mid-month. /readyz exists for humans + CI to verify the Neon
+    # connection on demand.
     autoDeploy: true
     envVars:
       - key: DATABASE_URL

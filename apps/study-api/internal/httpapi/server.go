@@ -259,6 +259,11 @@ func (s *Server) Handler() http.Handler {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("GET /healthz", s.handleHealth)
+	// The REAL Postgres probe (Neon compute budget, 2026-10-14): /healthz
+	// is DB-free so keep-warm pingers can never wake the database; any
+	// human or CI check that must prove the Neon connection lives points
+	// here instead. Deliberately NOT in the bot shield's tool whitelist.
+	mux.HandleFunc("GET /readyz", s.handleReady)
 	// The mobile update gate's version check (founder directive
 	// 2026-10-04): public, unauthenticated - the app reads it before
 	// any sign-in through https://renance.app/api/app-version.
