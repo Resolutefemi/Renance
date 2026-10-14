@@ -95,8 +95,11 @@ func TestLoadHarvestsAnswersAndSanitizes(t *testing.T) {
 	if k.Letter != "B" || k.Explanation != "because two is two" {
 		t.Fatalf("harvested key wrong: %+v", k)
 	}
-	if all := lib.AllKeys(); len(all) != 1 || len(all["test-bank"]) != 1 {
-		t.Fatalf("AllKeys wrong: %+v", all)
+	if !lib.HasKeys("test-bank") {
+		t.Fatal("probe lost the bank's answer material")
+	}
+	if n := lib.KeyedBankCount(); n != 1 {
+		t.Fatalf("KeyedBankCount wrong: %d", n)
 	}
 }
 
