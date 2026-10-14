@@ -1,4 +1,4 @@
-// social.go — the HTTP surface of the Renance feed + follows (founder
+// social.go - the HTTP surface of the Renance feed + follows (founder
 // directive 2026-10-14). Thin parse → service → writeJSON handlers in
 // the house style; every route rides s.auth like the rest of the
 // student surface.
@@ -12,7 +12,7 @@ import (
 	"renance.dev/study-api/internal/social"
 )
 
-// GET /social/feed?before=&limit= — one page of the global feed.
+// GET /social/feed?before=&limit= - one page of the global feed.
 func (s *Server) handleSocialFeed(w http.ResponseWriter, r *http.Request) {
 	viewer := r.Context().Value(ctxUserID).(string)
 	qp := r.URL.Query()
@@ -27,7 +27,7 @@ func (s *Server) handleSocialFeed(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]any{"posts": posts})
 }
 
-// POST /social/feed {body} — a freeform post (≤500 chars).
+// POST /social/feed {body} - a freeform post (≤500 chars).
 func (s *Server) handleSocialPostCreate(w http.ResponseWriter, r *http.Request) {
 	viewer := r.Context().Value(ctxUserID).(string)
 	var body struct {
@@ -45,7 +45,7 @@ func (s *Server) handleSocialPostCreate(w http.ResponseWriter, r *http.Request) 
 	writeJSON(w, http.StatusOK, map[string]any{"id": id})
 }
 
-// DELETE /social/posts/{id} — retire one of your own posts.
+// DELETE /social/posts/{id} - retire one of your own posts.
 func (s *Server) handleSocialPostDelete(w http.ResponseWriter, r *http.Request) {
 	viewer := r.Context().Value(ctxUserID).(string)
 	id, err := strconv.ParseInt(r.PathValue("id"), 10, 64)
@@ -65,7 +65,7 @@ func (s *Server) handleSocialPostDelete(w http.ResponseWriter, r *http.Request) 
 	writeJSON(w, http.StatusOK, map[string]bool{"ok": true})
 }
 
-// POST /social/posts/{id}/like — toggle (idempotent per call pair).
+// POST /social/posts/{id}/like - toggle (idempotent per call pair).
 func (s *Server) handleSocialLike(w http.ResponseWriter, r *http.Request) {
 	viewer := r.Context().Value(ctxUserID).(string)
 	id, err := strconv.ParseInt(r.PathValue("id"), 10, 64)
@@ -124,7 +124,7 @@ func (s *Server) handleSocialCommentAdd(w http.ResponseWriter, r *http.Request) 
 	writeJSON(w, http.StatusOK, map[string]any{"comments": comments})
 }
 
-// POST /social/users/{username}/follow — toggle.
+// POST /social/users/{username}/follow - toggle.
 func (s *Server) handleSocialFollow(w http.ResponseWriter, r *http.Request) {
 	viewer := r.Context().Value(ctxUserID).(string)
 	username := r.PathValue("username")
@@ -141,7 +141,7 @@ func (s *Server) handleSocialFollow(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]bool{"following": following})
 }
 
-// GET /social/users/{username} — the public profile.
+// GET /social/users/{username} - the public profile.
 func (s *Server) handleSocialPublicProfile(w http.ResponseWriter, r *http.Request) {
 	viewer := r.Context().Value(ctxUserID).(string)
 	p, err := social.LoadPublicProfile(r.Context(), s.store.Pool, viewer, r.PathValue("username"))
@@ -153,7 +153,7 @@ func (s *Server) handleSocialPublicProfile(w http.ResponseWriter, r *http.Reques
 	writeJSON(w, http.StatusOK, map[string]any{"profile": p, "posts": posts})
 }
 
-// GET /social/connections — my followers + following.
+// GET /social/connections - my followers + following.
 func (s *Server) handleSocialConnections(w http.ResponseWriter, r *http.Request) {
 	viewer := r.Context().Value(ctxUserID).(string)
 	c, err := social.LoadConnections(r.Context(), s.store.Pool, viewer)

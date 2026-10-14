@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * League — the weekly XP league of the merged learn module (founder
+ * League - the weekly XP league of the merged learn module (founder
  * directive 2026-10-14). Your real week's XP from XPEvents stands
  * against the deterministic rival board; top 7 promote (+50 gems),
  * ranks 26+ demote. Countdown resets every Lagos Monday.
@@ -43,7 +43,7 @@ export default function LeaguePage() {
   }, [load, router]);
 
   // The quiet re-sync: until the board answers, poll every 8s. The
-  // page heals itself — nothing for the scholar to press.
+  // page heals itself - nothing for the scholar to press.
   useEffect(() => {
     if (board) return;
     const t = window.setInterval(load, 8000);
@@ -83,7 +83,7 @@ export default function LeaguePage() {
                     ? 'border-primary bg-primary/10 text-primary-ink'
                     : 'border-error bg-error/10 text-error'
                 }`}>
-                  {board.promotedLastWeek ? 'Promoted last week — +50 gems!' : 'Demoted last week'}
+                  {board.promotedLastWeek ? 'Promoted last week - +50 gems!' : 'Demoted last week'}
                 </p>
               )}
             </header>
@@ -140,7 +140,7 @@ export default function LeaguePage() {
             </ol>
 
             <p className="px-1 text-center text-[12px] font-bold text-on-surface-variant">
-              Only lessons, reviews and practice earn league XP — win streaks do not count.
+              Only lessons, reviews and practice earn league XP - win streaks do not count.
             </p>
           </div>
         )}

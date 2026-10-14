@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Learn bits — the gamification atoms of the merged Supreme module,
+ * Learn bits - the gamification atoms of the merged Supreme module,
  * rebuilt in Renance's tactile design language (2026-10-14). Gem and
  * heart counters, the flame, the daily-goal ring, league badges and
  * the confetti burst. All surfaces read the live theme tokens, so

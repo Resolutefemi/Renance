@@ -161,7 +161,7 @@ func (e *Engine) grade(ctx context.Context, job Job, worker int) {
 		"code", job.Code, "score", result.Score, "total", result.Total)
 
 	// Feed milestone (founder directive 2026-10-14): a strong mock
-	// score is a feed-worthy moment — "Joy scored 360 in JAMB".
+	// score is a feed-worthy moment - "Joy scored 360 in JAMB".
 	// Daily sprints keep their own board and never post here.
 	if job.UserID != "" && job.DailyDay == "" {
 		e.postScoreMilestone(ctx, job.UserID, job.Code, bundle.Body, result)
@@ -170,7 +170,7 @@ func (e *Engine) grade(ctx context.Context, job Job, worker int) {
 
 // postScoreMilestone announces strong mock results on the Renance feed:
 // composite UTME mocks at 250+/400, other banks at 75%+. The milestone
-// key carries the score, so beating your best posts again — improving
+// key carries the score, so beating your best posts again - improving
 // students keep their feed alive, repeating a score does not spam it.
 func (e *Engine) postScoreMilestone(ctx context.Context, userID, code, body string, result *store.Result) {
 	defer func() { _ = recover() }() // a feed hiccup never breaks grading

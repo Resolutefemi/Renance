@@ -1,15 +1,15 @@
 'use client';
 
 /**
- * LearnStats — the top-bar gamification counters (founder directive
+ * LearnStats - the top-bar gamification counters (founder directive
  * 2026-10-14): the Supreme gem chip on the Renance header, live from
  * GET /learn/profile. The founder's 2026-10-14 evening pass moved the
  * HEART chip out of the top navbar ("remove the profile icon, and
- * heart from the top navbar") — hearts now read on the profile page,
+ * heart from the top navbar") - hearts now read on the profile page,
  * where the shop lives too. The heart readout shows the REAL number
- * ("remove that infinite symbol replace with real data") — the ∞ is
+ * ("remove that infinite symbol replace with real data") - the ∞ is
  * retired everywhere. The last known stats are cached in localStorage
- * and rendered immediately — zeros on a brand-new device — then
+ * and rendered immediately - zeros on a brand-new device - then
  * refreshed live whenever the API answers.
  */
 
@@ -81,7 +81,7 @@ export function useLearnStats(enabled: boolean) {
 }
 
 /**
- * The top navbar chip: GEMS ONLY (founder 2026-10-14 evening pass —
+ * The top navbar chip: GEMS ONLY (founder 2026-10-14 evening pass -
  * the heart left the top bar for the profile page). Taps through to
  * the profile, where the shop now lives.
  */
@@ -91,7 +91,7 @@ export function LearnStatChips({ stats }: { stats: LearnProfile | null }) {
     <Link
       href="/profile#shop"
       aria-label={`Gems: ${s.gems}`}
-      title="Gems — open the shop on your profile"
+      title="Gems - open the shop on your profile"
       className="flex h-8 min-w-[54px] items-center justify-center gap-1 rounded-full border-2 border-outline-light bg-surface-container px-2 transition active:translate-y-[2px]"
     >
       <GemIcon size={17} />
@@ -101,7 +101,7 @@ export function LearnStatChips({ stats }: { stats: LearnProfile | null }) {
 }
 
 /**
- * The heart readout — real data, never ∞ (founder rule). Lives on the
+ * The heart readout - real data, never ∞ (founder rule). Lives on the
  * profile page next to the shop; taps scroll to the shop panel.
  */
 export function HeartChip({ hearts, superActive }: { hearts: number; superActive?: boolean }) {
@@ -109,7 +109,7 @@ export function HeartChip({ hearts, superActive }: { hearts: number; superActive
     <Link
       href="/profile#shop"
       aria-label={`Hearts: ${hearts}`}
-      title={superActive ? 'Super active — hearts refill instantly' : 'Hearts — refill in the shop'}
+      title={superActive ? 'Super active - hearts refill instantly' : 'Hearts - refill in the shop'}
       className="flex h-8 min-w-[46px] items-center justify-center gap-1 rounded-full border-2 border-outline-light bg-surface-container px-2 transition active:translate-y-[2px]"
     >
       <HeartIcon size={16} />

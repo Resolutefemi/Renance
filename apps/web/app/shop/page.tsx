@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * /shop — RETIRED as a standalone tab (founder directive 2026-10-14
+ * /shop - RETIRED as a standalone tab (founder directive 2026-10-14
  * evening pass: "the shop feature should be under profile and the
  * heart read too"). The shop now lives inside the profile page; this
  * route keeps every stale link and gem chip working by walking the

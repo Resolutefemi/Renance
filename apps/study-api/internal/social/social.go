@@ -1,11 +1,11 @@
-// Package social — the Renance feed + follows (founder directive
+// Package social - the Renance feed + follows (founder directive
 // 2026-10-14): Duolingo-style milestone posts the platform writes on
 // the student's behalf ("hits 400 streak", "scored 360 in JAMB",
 // "reached Platinum league", "won an arena duel"), freeform user
 // posts, likes, comments, the follow graph and the public profile every
 // leaderboard/feed row opens. Plain functions over the pgx pool, the
 // same house style as the rest of study-api. Every identity rides the
-// REAL study.users id (uuid — see the 0028 FK fix).
+// REAL study.users id (uuid - see the 0028 FK fix).
 package social
 
 import (
@@ -94,7 +94,7 @@ type Connections struct {
 
 // Milestone writes the platform post for one milestone. Deduped by the
 // unique (user_id, milestone) index: the 400-streak post is written
-// once, ever. Safe to call inside any hot path — failures never
+// once, ever. Safe to call inside any hot path - failures never
 // surface to the student.
 func Milestone(ctx context.Context, pool *pgxpool.Pool, userID, milestone, body string, meta map[string]any) {
         if userID == "" || milestone == "" {
@@ -329,7 +329,7 @@ func Comments(ctx context.Context, pool *pgxpool.Pool, viewer string, postID int
 }
 
 // levelFor mirrors the gamification ladder (store.ApplyGrade): one step
-// per 100 XP after the first 50. Kept coarse on purpose — the profile
+// per 100 XP after the first 50. Kept coarse on purpose - the profile
 // badge is cosmetic, the ledger stays authoritative.
 func levelFor(xp int) int {
         if xp < 50 {
@@ -360,7 +360,7 @@ func LoadPublicProfile(ctx context.Context, pool *pgxpool.Pool, viewer, username
         p.IsSelf = viewer == p.ID
 
         // Learn economy (the learn.learners row may not exist for an account
-        // that never studied — every read is COALESCEd over the LEFT JOIN).
+        // that never studied - every read is COALESCEd over the LEFT JOIN).
         var leagueIdx int
         _ = pool.QueryRow(ctx, `
                 SELECT COALESCE(x.xp,0), COALESCE(x.streak_count,0),

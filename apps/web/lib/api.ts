@@ -95,7 +95,7 @@ export async function api<T>(path: string, opts: Options = {}): Promise<T> {
     });
   } catch (err) {
     if (controller.signal.aborted) {
-      throw new ApiError(0, 'timeout', 'The study API is not answering right now — try again shortly.');
+      throw new ApiError(0, 'timeout', 'The study API is not answering right now - try again shortly.');
     }
     throw err;
   } finally {

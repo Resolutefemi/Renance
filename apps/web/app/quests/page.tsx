@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Quests — daily / weekly / monthly challenges of the merged learn
+ * Quests - daily / weekly / monthly challenges of the merged learn
  * module (founder directive 2026-10-14). Progress is LIVE: it counts
  * the questions, topics, combos and XP the student actually earned on
  * their Renance account, and claims pay gems into the same wallet the
@@ -44,7 +44,7 @@ export default function QuestsPage() {
   }, [load, router]);
 
   // The quiet re-sync: until the quests answer, poll every 8s. The
-  // page heals itself — nothing for the scholar to press.
+  // page heals itself - nothing for the scholar to press.
   useEffect(() => {
     if (data) return;
     const t = window.setInterval(load, 8000);
@@ -60,7 +60,7 @@ export default function QuestsPage() {
       setTimeout(() => setToast(''), 2200);
       setData(await fetchQuests());
     } catch {
-      setToast('Claim failed — finish the quest first');
+      setToast('Claim failed - finish the quest first');
       setTimeout(() => setToast(''), 2000);
     } finally {
       setClaiming('');

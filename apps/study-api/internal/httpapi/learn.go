@@ -1,4 +1,4 @@
-// learn.go — the HTTP surface of the learn module. Every route rides
+// learn.go - the HTTP surface of the learn module. Every route rides
 // the standard s.auth (JWT, real Renance account). Handlers are thin:
 // parse → service → writeJSON, matching the house style.
 package httpapi
@@ -14,7 +14,7 @@ import (
 
 func (s *Server) learnService() *learn.Service { return s.learn }
 
-// GET /learn/profile — top-bar counters + settings payload.
+// GET /learn/profile - top-bar counters + settings payload.
 func (s *Server) handleLearnProfile(w http.ResponseWriter, r *http.Request) {
 	userID := r.Context().Value(ctxUserID).(string)
 	p, err := s.learn.Profile(r.Context(), userID)
@@ -25,7 +25,7 @@ func (s *Server) handleLearnProfile(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, p)
 }
 
-// PATCH /learn/profile {dailyGoal?} — settings mutations.
+// PATCH /learn/profile {dailyGoal?} - settings mutations.
 func (s *Server) handleLearnPatchProfile(w http.ResponseWriter, r *http.Request) {
 	userID := r.Context().Value(ctxUserID).(string)
 	var body struct {
@@ -49,7 +49,7 @@ func (s *Server) handleLearnPatchProfile(w http.ResponseWriter, r *http.Request)
 	writeJSON(w, http.StatusOK, p)
 }
 
-// DELETE /learn/profile — reset all learn progress (settings).
+// DELETE /learn/profile - reset all learn progress (settings).
 func (s *Server) handleLearnReset(w http.ResponseWriter, r *http.Request) {
 	userID := r.Context().Value(ctxUserID).(string)
 	if err := s.learn.ResetProgress(r.Context(), userID); err != nil {
@@ -95,7 +95,7 @@ func (s *Server) handleLearnMyCourses(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]any{"courses": courses})
 }
 
-// POST /learn/my-courses {courseIds: [...]} — the multi-select picker.
+// POST /learn/my-courses {courseIds: [...]} - the multi-select picker.
 func (s *Server) handleLearnSetMyCourses(w http.ResponseWriter, r *http.Request) {
 	userID := r.Context().Value(ctxUserID).(string)
 	var body struct {
@@ -134,7 +134,7 @@ func (s *Server) handleLearnActiveCourse(w http.ResponseWriter, r *http.Request)
 	writeJSON(w, http.StatusOK, map[string]bool{"ok": true})
 }
 
-// GET /learn/courses/{id} — the path ladder.
+// GET /learn/courses/{id} - the path ladder.
 func (s *Server) handleLearnCoursePath(w http.ResponseWriter, r *http.Request) {
 	userID := r.Context().Value(ctxUserID).(string)
 	path, err := s.learn.CoursePath(r.Context(), userID, r.PathValue("id"))
@@ -230,7 +230,7 @@ func (s *Server) handleLearnShop(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, resp)
 }
 
-// GET /learn/leaderboard — the weekly league board.
+// GET /learn/leaderboard - the weekly league board.
 func (s *Server) handleLearnLeague(w http.ResponseWriter, r *http.Request) {
 	userID := r.Context().Value(ctxUserID).(string)
 	board, err := s.learn.League(r.Context(), userID)

@@ -1,11 +1,11 @@
 'use client';
 
 /**
- * /profile/social — the follower + following lists (founder directive
+ * /profile/social - the follower + following lists (founder directive
  * 2026-10-14: "add the followers and following to profile"). Rows link
  * to the scholar's public profile; following rows offer an inline
  * unfollow, follower rows a follow-back. Contact-list friend finding
- * is deliberately PAUSED on web (founder call — it ships in the mobile
+ * is deliberately PAUSED on web (founder call - it ships in the mobile
  * app later); the invite-friends card on the profile covers growth for
  * now.
  */
@@ -52,7 +52,7 @@ export default function ProfileSocialPage() {
   }, [load, router]);
 
   // The quiet re-sync: until the lists answer, poll every 8s. The page
-  // heals itself — nothing for the scholar to press.
+  // heals itself - nothing for the scholar to press.
   useEffect(() => {
     if (conn || !offline) return;
     const t = window.setInterval(load, 8000);
@@ -127,7 +127,7 @@ export default function ProfileSocialPage() {
             </p>
             <p className="max-w-xs text-[12.5px] font-bold text-on-surface-variant">
               {tab === 'followers'
-                ? 'Post your wins on the feed and share your invite link — they will come.'
+                ? 'Post your wins on the feed and share your invite link - they will come.'
                 : 'Tap any name on the feed, the boards or the arena and follow them from their profile.'}
             </p>
           </div>

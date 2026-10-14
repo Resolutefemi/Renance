@@ -1,16 +1,16 @@
 'use client';
 
 /**
- * Feed — the Renance social feed (founder directive 2026-10-14: "the
+ * Feed - the Renance social feed (founder directive 2026-10-14: "the
  * major update feeds just like Duolingo feeds that people interact
  * with"). THE PLATFORM'S VOICE ONLY (founder directive 2026-10-14,
  * second pass: "remove post from the feed, users should not be able
- * to write post themselves" — exactly how the real Duolingo feed
+ * to write post themselves" - exactly how the real Duolingo feed
  * works, stories are written BY the app, never by scholars):
  *
- *   · MILESTONE posts the platform writes on the student's behalf —
+ *   · MILESTONE posts the platform writes on the student's behalf -
  *     "just hit a 400-day streak 🔥", "scored 360 in JAMB 🎯", "reached
- *     the Platinum League 🏆", "won an arena duel ⚔️" — each written
+ *     the Platinum League 🏆", "won an arena duel ⚔️" - each written
  *     once, ever, by the study-api's milestone hooks.
  *
  * Every story is interactive: hearts (likes), comments, and a Share
@@ -78,7 +78,7 @@ export default function FeedPage() {
   }, [load, router]);
 
   // The quiet re-sync: while offline, poll every 8s until the feed
-  // answers. No button to press — the page heals itself.
+  // answers. No button to press - the page heals itself.
   useEffect(() => {
     if (!offline) return;
     const t = window.setInterval(load, 8000);
@@ -169,7 +169,7 @@ export default function FeedPage() {
 
   async function share(post: SocialPost) {
     const name = post.author?.name ?? 'A scholar';
-    const text = `${name} ${post.body} — via Renance`;
+    const text = `${name} ${post.body} - via Renance`;
     const url = typeof window !== 'undefined' ? window.location.origin + '/feed' : '';
     try {
       if (typeof navigator !== 'undefined' && navigator.share) {
@@ -177,7 +177,7 @@ export default function FeedPage() {
         return;
       }
       await navigator.clipboard?.writeText(`${text} ${url}`);
-      flash('Link copied — share it anywhere');
+      flash('Link copied - share it anywhere');
     } catch {
       /* the sheet was dismissed */
     }
@@ -288,7 +288,7 @@ export default function FeedPage() {
               {commentsFor === post.id && (
                 <div className="border-t-2 border-outline-variant/40 bg-surface-container-lowest px-4 py-3">
                   {comments.length === 0 && (
-                    <p className="py-2 text-[12.5px] font-bold text-on-surface-variant">No comments yet — cheer them on.</p>
+                    <p className="py-2 text-[12.5px] font-bold text-on-surface-variant">No comments yet - cheer them on.</p>
                   )}
                   {comments.map((c) => (
                     <div key={c.id} className="flex items-start gap-2.5 py-2">

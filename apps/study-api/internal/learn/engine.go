@@ -1,4 +1,4 @@
-// engine.go — the just-in-time lesson pipeline (Supreme engine.ts
+// engine.go - the just-in-time lesson pipeline (Supreme engine.ts
 // ported): cache hit → serve; miss → one strict-JSON AI generation
 // (two attempts, repair retry), validated, decorated with the curated
 // drawing library and REAL past questions from the Renance bank, then

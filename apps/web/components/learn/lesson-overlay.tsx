@@ -1,10 +1,10 @@
 'use client';
 
 /**
- * LessonOverlay — the study → quiz → rewards flow of the merged learn
+ * LessonOverlay - the study → quiz → rewards flow of the merged learn
  * module (Supreme LessonOverlay adapted to Renance's tactile design,
  * 2026-10-14). Phases: loading (keycap splash) → study (notes + the
- * curated drawing library + key points) → quiz (up to 20 questions —
+ * curated drawing library + key points) → quiz (up to 20 questions -
  * AI teaching items AND real past questions from the Renance bank) →
  * done (XP / gems / streak chips + confetti). Hearts are unlimited at
  * launch (founder directive), so wrong answers bank as mistakes but
@@ -62,7 +62,7 @@ export function LessonOverlay({
   const startedRef = useRef(Date.now());
   // The quiet self-reload (founder: "remove retry"): when a lesson
   // fails to load the overlay retries ITSELF a few times before it
-  // ever shows a final error — no button for the scholar to press.
+  // ever shows a final error - no button for the scholar to press.
   const [reloadTick, setReloadTick] = useState(0);
   const errorRetries = useRef(0);
 
@@ -246,7 +246,7 @@ export function LessonOverlay({
           <div className="flex h-full flex-col items-center justify-center gap-3 py-24 text-center">
             <span className="material-symbols-outlined text-[44px] text-error">cloud_off</span>
             <p className="text-[15px] font-extrabold text-on-surface">This lesson could not load</p>
-            <p className="max-w-sm text-[13px] text-on-surface-variant">The generator may be busy — close and reopen in a few seconds. Everything else on your account is safe.</p>
+            <p className="max-w-sm text-[13px] text-on-surface-variant">The generator may be busy - close and reopen in a few seconds. Everything else on your account is safe.</p>
             <button type="button" onClick={onClose} className="key-btn bg-primary text-white">Back to my course</button>
           </div>
         )}
@@ -426,7 +426,7 @@ export function LessonOverlay({
 }
 
 function StatHeart({ hearts }: { hearts: number | null }) {
-  // The REAL heart count — the ∞ symbol is retired everywhere
+  // The REAL heart count - the ∞ symbol is retired everywhere
   // (founder rule 2026-10-14: "remove that infinite symbol replace
   // with real data"). While the value is still loading, the heart
   // stands alone instead of printing a placeholder digit.

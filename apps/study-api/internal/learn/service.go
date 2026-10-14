@@ -1,4 +1,4 @@
-// service.go — the learn module's economy core: learner profile,
+// service.go - the learn module's economy core: learner profile,
 // catalog, course paths, the completion ledger (XP / gems / hearts /
 // streak / quests / league / chests), mistakes practice and the shop.
 // Every row is keyed by the real study.users id - the founder's rule

@@ -1,4 +1,4 @@
-// drawings.go — the curated figure library. Real structural-formula
+// drawings.go - the curated figure library. Real structural-formula
 // SVGs for the flagship senior-secondary topics (founder directive:
 // organic chemistry and waves must carry actual drawings). All figures
 // draw in currentColor so they follow the light/dark tier; strokes are
@@ -52,37 +52,37 @@ func itoa(n int) string {
 var DrawingLibrary = map[string]DrawingRef{
         // ─── Organic chemistry: displayed structural formulas ────────────────
         "alkane-methane": {
-                ID: "alkane-methane", Title: "Methane (CH₄) — displayed structural formula",
+                ID: "alkane-methane", Title: "Methane (CH₄) - displayed structural formula",
                 SVG: svg(
                         // central C with four bonds
                         `<path d="M210 110 L160 60"/><path d="M210 110 L260 60"/><path d="M210 110 L160 160"/><path d="M210 110 L260 160"/>` +
                                 txt(210, 118, "C") + txt(150, 56, "H") + txt(272, 56, "H") + txt(148, 168, "H") + txt(272, 168, "H") +
-                                txt(210, 205, "Four single covalent bonds — a saturated tetrahedral molecule (109.5° bond angle)."),
+                                txt(210, 205, "Four single covalent bonds - a saturated tetrahedral molecule (109.5° bond angle)."),
                 ),
         },
         "alkane-ethane": {
-                ID: "alkane-ethane", Title: "Ethane (C₂H₆) — displayed structural formula",
+                ID: "alkane-ethane", Title: "Ethane (C₂H₆) - displayed structural formula",
                 SVG: svg(
                         `<path d="M150 120 L270 120"/><path d="M150 120 L150 70"/><path d="M150 120 L110 145"/><path d="M150 120 L190 145"/>` +
                                 `<path d="M270 120 L270 70"/><path d="M270 120 L230 145"/><path d="M270 120 L310 145"/>` +
                                 txt(150, 128, "C") + txt(270, 128, "C") +
                                 txt(150, 62, "H") + txt(100, 152, "H") + txt(198, 152, "H") +
                                 txt(270, 62, "H") + txt(222, 152, "H") + txt(318, 152, "H") +
-                                txt(210, 205, "Two carbons joined by a single bond — the second member of the alkane homologous series (CₙH₂ₙ₊₂)."),
+                                txt(210, 205, "Two carbons joined by a single bond - the second member of the alkane homologous series (CₙH₂ₙ₊₂)."),
                 ),
         },
         "alkene-ethene": {
-                ID: "alkene-ethene", Title: "Ethene (C₂H₄) — displayed structural formula",
+                ID: "alkene-ethene", Title: "Ethene (C₂H₄) - displayed structural formula",
                 SVG: svg(
                         `<path d="M170 120 L250 120"/><path d="M175 110 L245 110"/>` +
                                 `<path d="M170 120 L170 70"/><path d="M170 120 L130 150"/><path d="M250 120 L250 70"/><path d="M250 120 L290 150"/>` +
                                 txt(170, 130, "C") + txt(250, 130, "C") +
                                 txt(170, 62, "H") + txt(120, 158, "H") + txt(250, 62, "H") + txt(300, 158, "H") +
-                                txt(210, 205, "The C=C double bond makes it UNSATURATED — ethene decolourises bromine water quickly."),
+                                txt(210, 205, "The C=C double bond makes it UNSATURATED - ethene decolourises bromine water quickly."),
                 ),
         },
         "alkanol-ethanol": {
-                ID: "alkanol-ethanol", Title: "Ethanol (C₂H₅OH) — displayed structural formula",
+                ID: "alkanol-ethanol", Title: "Ethanol (C₂H₅OH) - displayed structural formula",
                 SVG: svg(
                         `<path d="M140 120 L210 120"/><path d="M210 120 L280 120"/><path d="M280 120 L280 75"/>` +
                                 `<path d="M140 120 L140 75"/><path d="M140 120 L105 150"/><path d="M140 120 L175 150"/>` +
@@ -90,36 +90,36 @@ var DrawingLibrary = map[string]DrawingRef{
                                 txt(140, 128, "C") + txt(210, 128, "C") + txt(287, 128, "O") +
                                 txt(287, 68, "H") +
                                 txt(140, 68, "H") + txt(96, 158, "H") + txt(184, 168, "H") + txt(217, 168, "H") +
-                                txt(210, 205, "The –OH (hydroxyl) functional group on the end carbon makes it an alkanol."),
+                                txt(210, 205, "The -OH (hydroxyl) functional group on the end carbon makes it an alkanol."),
                 ),
         },
         "alkanoic-acid-ethanoic": {
-                ID: "alkanoic-acid-ethanoic", Title: "Ethanoic acid (CH₃COOH) — displayed structural formula",
+                ID: "alkanoic-acid-ethanoic", Title: "Ethanoic acid (CH₃COOH) - displayed structural formula",
                 SVG: svg(
                         `<path d="M150 130 L220 130"/><path d="M220 130 L290 130"/><path d="M290 130 L290 82"/><path d="M290 130 L340 158"/>` +
                                 `<path d="M150 130 L150 85"/><path d="M150 130 L115 160"/><path d="M150 130 L185 160"/>` +
                                 `<path d="M220 130 L220 172"/>` +
-                                txt(150, 138, "C") + txt(220, 138, "C") + txt(290, 140, "C") + txt(290, 74, "O") + txt(350, 168, "O–H") +
+                                txt(150, 138, "C") + txt(220, 138, "C") + txt(290, 140, "C") + txt(290, 74, "O") + txt(350, 168, "O-H") +
                                 txt(150, 78, "H") + txt(106, 168, "H") + txt(192, 180, "H") + txt(227, 180, "H") +
-                                txt(210, 213, "The –COOH (carboxyl) group: C=O double bond plus O–H — the alkanoic acid functional group."),
+                                txt(210, 213, "The -COOH (carboxyl) group: C=O double bond plus O-H - the alkanoic acid functional group."),
                 ),
         },
         "esterification": {
-                ID: "esterification", Title: "Esterification — ethanol + ethanoic acid → ethyl ethanoate + water",
+                ID: "esterification", Title: "Esterification - ethanol + ethanoic acid → ethyl ethanoate + water",
                 SVG: svgWide(
                         // ethanol condensed displayed
-                        txt(30, 120, "C₂H₅–OH") +
+                        txt(30, 120, "C₂H₅-OH") +
                                 txt(110, 124, "+") +
                                 txt(190, 120, "CH₃COOH") +
                                 // equilibrium arrow + catalyst
                                 `<path d="M260 118 L320 118"/><path d="M312 112 L322 118 L312 124"/>` +
                                 txt(290, 105, "conc. H₂SO₄") + txt(290, 140, "heat") +
                                 txt(375, 120, "CH₃COOC₂H₅") + txt(470, 124, "+") + txt(500, 120, "H₂O") +
-                                txt(260, 205, "Sweet-smelling ester + water. The acid's –OH leaves with the alcohol's H — a condensation reaction."),
+                                txt(260, 205, "Sweet-smelling ester + water. The acid's -OH leaves with the alcohol's H - a condensation reaction."),
                 ),
         },
         "benzene": {
-                ID: "benzene", Title: "Benzene (C₆H₆) — the delocalised ring",
+                ID: "benzene", Title: "Benzene (C₆H₆) - the delocalised ring",
                 SVG: svg(
                         `<path d="M210 45 L285 87 L285 173 L210 215 L135 173 L135 87 Z"/>` +
                                 `<circle cx="210" cy="130" r="42"/>` +
@@ -128,7 +128,7 @@ var DrawingLibrary = map[string]DrawingRef{
                 ),
         },
         "polyethene": {
-                ID: "polyethene", Title: "Addition polymerisation — ethene → polyethene",
+                ID: "polyethene", Title: "Addition polymerisation - ethene → polyethene",
                 SVG: svgWide(
                         txt(60, 110, "n CH₂=CH₂") +
                                 `<path d="M150 108 L210 108"/><path d="M202 102 L212 108 L202 114"/>` +
@@ -136,14 +136,14 @@ var DrawingLibrary = map[string]DrawingRef{
                                 // repeat unit brackets
                                 `<path d="M260 75 L245 75 L245 150 L260 150"/>` +
                                 `<path d="M370 75 L385 75 L385 150 L370 150"/>` +
-                                txt(280, 118, "– CH₂ – CH₂ –") + txt(408, 118, "n") +
-                                txt(260, 205, "The C=C opens and links into a long saturated chain — an addition polymer."),
+                                txt(280, 118, "- CH₂ - CH₂ -") + txt(408, 118, "n") +
+                                txt(260, 205, "The C=C opens and links into a long saturated chain - an addition polymer."),
                 ),
         },
 
         // ─── Physics: waves ───────────────────────────────────────────────────
         "wave-anatomy": {
-                ID: "wave-anatomy", Title: "Anatomy of a transverse wave — amplitude, wavelength, crest, trough",
+                ID: "wave-anatomy", Title: "Anatomy of a transverse wave - amplitude, wavelength, crest, trough",
                 SVG: svg(
                         `<path d="M30 120 Q 75 30 120 120 T 210 120 T 300 120 T 390 120"/>` +
                                 // axis
@@ -187,7 +187,7 @@ var DrawingLibrary = map[string]DrawingRef{
                                 txt(105, 212, "v (m/s)") +
                                 txt(255, 195, "f = cycles per second (Hz)") +
                                 txt(210, 90, "v = f × λ") +
-                                txt(210, 235, "Frequency never changes between media — speed and wavelength do."),
+                                txt(210, 235, "Frequency never changes between media - speed and wavelength do."),
                 ),
         },
 }

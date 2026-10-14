@@ -1,4 +1,4 @@
-// store.go — every SQL statement the learn module runs. pgx simple
+// store.go - every SQL statement the learn module runs. pgx simple
 // protocol (the pool is already configured for it), chunked inserts,
 // structure owned by migration 0028_learn.sql.
 package learn

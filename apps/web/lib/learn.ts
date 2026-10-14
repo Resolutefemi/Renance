@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * lib/learn.ts — the client for the merged Supreme learn module
+ * lib/learn.ts - the client for the merged Supreme learn module
  * (founder directive 2026-10-14): gamified course paths, quests, shop,
  * league and hearts/gems economy, all served by the study-api's
  * /learn/* routes on the REAL Renance account. Every call rides the
@@ -153,7 +153,7 @@ export interface ShopItem {
 
 export interface ShopResponse {
   gems: number;
-  /** The REAL heart count — the ∞ readout is retired (founder rule). */
+  /** The REAL heart count - the ∞ readout is retired (founder rule). */
   hearts: number;
   items: ShopItem[];
   superTrial: ShopItem;
@@ -164,7 +164,7 @@ export interface LeagueEntry {
   xp: number;
   color: string;
   isYou: boolean;
-  /** Set on REAL members (never the deterministic rivals) — link them to /u/{username}. */
+  /** Set on REAL members (never the deterministic rivals) - link them to /u/{username}. */
   username?: string;
   isReal: boolean;
 }

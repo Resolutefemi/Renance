@@ -397,7 +397,7 @@ export default function DashboardPage() {
           <div className="flex items-center">
             {/* The merged-learn top bar (founder 2026-10-14, evening pass):
                 the search icon, the heart chip and the profile avatar are
-                ALL GONE from the top navbar — the gem counter leads the
+                ALL GONE from the top navbar - the gem counter leads the
                 row (taps into the profile shop), then the streak pill and
                 the bell. Profile lives in the base navbar, hearts read on
                 the profile page, and everything the old avatar popup held
@@ -441,7 +441,7 @@ export default function DashboardPage() {
             every focus homepage hero. 2026-10-13 tactile pass: the card
             stands on an extruded ledge (.hero-card) and the progress
             rail gets the recessed-track + gloss-fill treatment.
-            2026-10-14 founder pass: the card shrinks to fit the UI —
+            2026-10-14 founder pass: the card shrinks to fit the UI -
             tighter padding, smaller title, 44px CTA. */}
         <section className="hero-card relative mt-3 flex flex-col gap-2.5 overflow-hidden bg-hero p-3.5 sm:p-4">
           <div className="absolute -right-14 -top-14 h-32 w-32 rounded-full bg-on-hero/12" />
@@ -818,7 +818,7 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
       </section>
 
       {/* Active courses chips ------------------------------------------- */}
-      {/* 2026-10-14 founder pass: the floating chips shrink — tighter
+      {/* 2026-10-14 founder pass: the floating chips shrink - tighter
           pills, no scale pop on the first one, so the strip stays one
           calm row under the hero. */}
       {courses.length > 0 && (
@@ -885,7 +885,7 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
 function MoreSheet({ onClose }: { onClose: () => void }) {
   // The rest of the drawer, by design: the daily drivers (Exams, Packs,
   // Review, Flashcards, Arena, Daily, Leaderboard) live on the home
-  // grids, so the occasional tools remain in here — plus Downloads and
+  // grids, so the occasional tools remain in here - plus Downloads and
   // Subjects, which moved off the home desk in the 2026-10-14 evening
   // pass ("reduce the icon size and fill the more page with the rest").
   const items = [

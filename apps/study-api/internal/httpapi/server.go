@@ -170,7 +170,7 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
         // for JIT lesson generation; unlimited hearts is the launch
         // posture (founder 2026-10-14: everyone unlimited for now, gems
         // and hearts still accrue as rewards). The pool may be nil in
-        // unit tests that never touch learn routes — constructing with a
+        // unit tests that never touch learn routes - constructing with a
         // nil pool is fine, dereferencing st was not.
         var learnPool *pgxpool.Pool
         if st != nil {
@@ -311,7 +311,7 @@ func (s *Server) Handler() http.Handler {
         mux.HandleFunc("GET /social/feed", s.auth(s.handleSocialFeed))
         // Founder directive 2026-10-14, second pass: "remove post from
         // the feed, users should not be able to write post themselves"
-        // — the feed is the PLATFORM'S voice only (milestone stories
+        // - the feed is the PLATFORM'S voice only (milestone stories
         // written by the hooks), exactly like the real Duolingo feed.
         // The old POST /social/feed (freeform user posts) is retired
         // from the route table; the handler stays for a future mobile

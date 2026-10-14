@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * ShopPanel — the gem store of the merged learn module, lifted out of
+ * ShopPanel - the gem store of the merged learn module, lifted out of
  * the retired /shop page so it can live ON the profile page (founder
  * directive 2026-10-14: "the shop feature should be under profile and
  * the heart read too"). Streak freezes, heart refills, double-XP
@@ -76,7 +76,7 @@ export default function ShopPanel({ id }: { id?: string }) {
 
       {shop && (
         <>
-          {/* Wallet row: gems + the heart readout — REAL data, never ∞ */}
+          {/* Wallet row: gems + the heart readout - REAL data, never ∞ */}
           <div className="grid grid-cols-2 gap-3">
             <div className="learn-tile flex items-center justify-center gap-2 rounded-2xl border-2 border-macaw-ring bg-macaw-light px-3 py-4">
               <GemIcon size={22} />

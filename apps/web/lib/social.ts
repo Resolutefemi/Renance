@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * lib/social.ts — the client for the Renance social layer (founder
+ * lib/social.ts - the client for the Renance social layer (founder
  * directive 2026-10-14): the Duolingo-style feed of milestone + user
  * posts, likes, comments, the follow graph and the public profiles
  * every board opens. All calls ride the shared api() helper (Bearer
@@ -131,7 +131,7 @@ export async function fetchConnections(): Promise<Connections> {
 
 // ─── Local helpers ────────────────────────────────────────────────────────
 
-/** "2h", "3d", "just now" — the feed's relative clock. */
+/** "2h", "3d", "just now" - the feed's relative clock. */
 export function timeAgo(ms: number): string {
   const s = Math.max(1, Math.floor((Date.now() - ms) / 1000));
   if (s < 60) return 'just now';
