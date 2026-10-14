@@ -271,11 +271,18 @@ func (e *Engine) bankQuestions(body, subject string, keywords []string, topicID 
         b, ok := e.Lib.Bundle(code)
         if !ok {
                 // Some WAEC subjects split obj/theory: try the object paper name.
-                code2 := fmt.Sprintf("%s-%s-obj-bank", body, subject)
-                b, ok = e.Lib.Bundle(code2)
+                code = fmt.Sprintf("%s-%s-obj-bank", body, subject)
+                b, ok = e.Lib.Bundle(code)
                 if !ok {
                         return nil
                 }
+        }
+        // The library's resident copy is answer-free (harvest+sanitize,
+        // memory doctrine): re-attach the harvested key material on a
+        // transient copy so the filter below sees real answers and the
+        // quiz ships with its explanations. The LRU copy stays sanitized.
+        if keys, hasKeys := e.Lib.KeysFor(code); hasKeys {
+                b = b.WithKeyMaterial(keys)
         }
         lk := make([]string, 0, len(keywords))
         for _, k := range keywords {
@@ -363,8 +370,23 @@ func (s *Service) loadTopicCtx(ctx context.Context, topicID string) (*topicCtx, 
         return t, nil
 }
 
+// lessonGenBudget bounds one background generation (AI 2 attempts +
+// bank parse + persist). Detached from any request.
+const lessonGenBudget = 150 * time.Second
+
+// lessonWaitBudget caps how long a wait=1 request blocks IN the handler.
+// The api server's WriteTimeout is 30s: a response that takes longer is
+// killed mid-flight and the client sees a dead connection (the founder's
+// "notes not loading" spin, 2026-10-14). 22s leaves the server room to
+// write the 200 before that deadline; anything slower answers 202 and
+// the client polls.
+const lessonWaitBudget = 22 * time.Second
+
 // Lesson returns the cached lesson or generates one (single-flight per
-// topic, concurrency-capped).
+// topic, concurrency-capped). Generation runs on a DETACHED context -
+// a polling client's disconnects and the server's WriteTimeout can
+// never abort it - and wait=1 callers block for at most lessonWaitBudget
+// before receiving ErrGenerating (the 202 the client polls on).
 func (s *Service) Lesson(ctx context.Context, topicID string, wait bool) (*LessonDoc, error) {
         t, err := s.loadTopicCtx(ctx, topicID)
         if err != nil {
@@ -378,38 +400,63 @@ func (s *Service) Lesson(ctx context.Context, topicID string, wait bool) (*Lesso
                 return nil, err
         }
 
-        // Miss → single-flight.
-        s.Engine.mu.Lock()
-        if fl, ok := s.Engine.live[topicID]; ok {
-                s.Engine.mu.Unlock()
-                if !wait {
-                        return nil, ErrGenerating
-                }
+        // Miss → single-flight; first caller spawns the background
+        // generator, everyone else rides its done channel.
+        fl := s.kickOff(t)
+
+        if !wait {
                 select {
                 case <-fl.done:
                         return fl.doc, fl.err
-                case <-ctx.Done():
-                        return nil, ctx.Err()
+                default:
+                        return nil, ErrGenerating
                 }
         }
+        timer := time.NewTimer(lessonWaitBudget)
+        defer timer.Stop()
+        select {
+        case <-fl.done:
+                return fl.doc, fl.err
+        case <-ctx.Done():
+                return nil, ctx.Err()
+        case <-timer.C:
+                return nil, ErrGenerating // client polls; generation continues
+        }
+}
+
+// kickOff returns the live inflight for the topic, spawning the
+// generator on a detached context when none is running. The detached
+// context is the load-bearing wall: under the old design the generation
+// rode the first requester's request context, so the 30s WriteTimeout
+// cancelled it mid-flight and every poll restarted it from scratch -
+// a cold topic could literally never finish generating.
+func (s *Service) kickOff(t *topicCtx) *inflight {
+        s.Engine.mu.Lock()
+        if fl, ok := s.Engine.live[t.ID]; ok {
+                s.Engine.mu.Unlock()
+                return fl
+        }
         fl := &inflight{done: make(chan struct{})}
-        s.Engine.live[topicID] = fl
+        s.Engine.live[t.ID] = fl
         s.Engine.mu.Unlock()
 
-        defer func() {
-                s.Engine.mu.Lock()
-                delete(s.Engine.live, topicID)
-                s.Engine.mu.Unlock()
-                close(fl.done)
+        go func() {
+                defer func() {
+                        s.Engine.mu.Lock()
+                        delete(s.Engine.live, t.ID)
+                        s.Engine.mu.Unlock()
+                        close(fl.done)
+                }()
+                ctx, cancel := context.WithTimeout(context.Background(), lessonGenBudget)
+                defer cancel()
+                fl.doc, fl.err = s.generateLesson(ctx, t)
+                if fl.err == nil {
+                        // Prefetch the next two topics in the background
+                        // (Supreme look-ahead), deduped by the cache.
+                        go s.prefetchNext(t)
+                }
         }()
-
-        fl.doc, fl.err = s.generateLesson(ctx, t)
-        if fl.err == nil {
-                // Prefetch the next two topics in the background (Supreme
-                // look-ahead), deduped by the cache.
-                go s.prefetchNext(t)
-        }
-        return fl.doc, fl.err
+        return fl
 }
 
 // ErrGenerating tells the handler to answer 202 (the client polls).
@@ -555,8 +602,18 @@ func (s *Service) prefetchNext(t *topicCtx) {
         }
         rows.Close()
         for _, id := range ids {
-                if _, err := s.Lesson(ctx, id, true); err != nil {
+                nt, err := s.loadTopicCtx(ctx, id)
+                if err != nil {
                         return // stop prefetching on first failure (budget guard)
+                }
+                fl := s.kickOff(nt) // detached generation keeps running after we return
+                select {
+                case <-fl.done:
+                        if fl.err != nil {
+                                return // stop prefetching on first failure (budget guard)
+                        }
+                case <-ctx.Done():
+                        return
                 }
         }
 }
