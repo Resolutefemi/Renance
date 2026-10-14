@@ -63,6 +63,11 @@ func (s *Service) Departments(ctx context.Context, itype string) ([]DeskDepartme
 // SetDesk saves the student's institution kind + department on the
 // learner row. The department must exist and belong to the institution
 // kind, so a stale client can never park a student in a mismatched desk.
+// The learner row is materialized FIRST: a brand-new account has no
+// learn.learners row yet, and an UPDATE against a missing row affects
+// 0 rows while still returning success - the student's first desk pick
+// was silently thrown away and only a second click ever stuck (founder
+// bug report 2026-10-14: tapping an institution did nothing).
 func (s *Service) SetDesk(ctx context.Context, userID, itype, department string) error {
         itype = strings.TrimSpace(itype)
         department = strings.TrimSpace(department)
@@ -86,6 +91,9 @@ func (s *Service) SetDesk(ctx context.Context, userID, itype, department string)
                 if n == 0 {
                         return fmt.Errorf("department does not belong to that institution kind")
                 }
+        }
+        if err := s.ensureLearner(ctx, s.Pool, userID); err != nil {
+                return err
         }
         _, err := s.Pool.Exec(ctx,
                 `UPDATE learn.learners SET institution_type=$2, department=$3 WHERE user_id=$1`,

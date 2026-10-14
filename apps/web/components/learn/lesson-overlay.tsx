@@ -56,6 +56,10 @@ export function LessonOverlay({
   const [confetti, setConfetti] = useState(0);
   const [toast, setToast] = useState('');
   const [copyIdx, setCopyIdx] = useState(0);
+  // Study pagination (founder bug report 2026-10-14: the explanation must
+  // page through ONE section at a time - Supreme courses parity - never
+  // a single wall of notes). studyStep walks the study pages.
+  const [studyStep, setStudyStep] = useState(0);
   // The REAL heart count for the top rail (∞ retired, founder rule);
   // updated live when a completion pays back the economy.
   const [hearts, setHearts] = useState<number | null>(null);
@@ -86,6 +90,7 @@ export function LessonOverlay({
           if (!live) return;
           setDoc(d);
           setQuestions((d.quiz ?? []).map((q) => ({ ...q })));
+          setStudyStep(0);
           // Study the notes first; straight to the quiz when a cached
           // lesson somehow carries no questions.
           setPhase((d.quiz ?? []).length > 0 ? 'study' : 'quiz');
@@ -124,6 +129,34 @@ export function LessonOverlay({
   const q = questions[idx];
   const total = questions.length;
   const isLast = idx >= total - 1;
+
+  // ── Study pagination layout: intro page, then one note per page, then
+  // the drawings page (when the topic carries curated figures), then the
+  // key-points page. Derived from the loaded doc only.
+  const studyPages = useMemo(() => {
+    if (!doc) return { count: 1, notesEnd: 1, drawingsPage: -1, keysPage: -1 };
+    const hasDrawings = (doc.drawings?.length ?? 0) > 0;
+    const hasKeys = (doc.keyPoints?.length ?? 0) > 0;
+    const notesEnd = 1 + doc.notes.length;
+    return {
+      count: notesEnd + (hasDrawings ? 1 : 0) + (hasKeys ? 1 : 0),
+      notesEnd,
+      drawingsPage: hasDrawings ? notesEnd : -1,
+      keysPage: hasKeys ? notesEnd + (hasDrawings ? 1 : 0) : -1,
+    };
+  }, [doc]);
+  const studyAt = Math.min(studyStep, studyPages.count - 1);
+
+  // Arrow keys page through the study sections (desktop scholars).
+  useEffect(() => {
+    if (phase !== 'study') return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight') setStudyStep((s) => Math.min(s + 1, studyPages.count - 1));
+      if (e.key === 'ArrowLeft') setStudyStep((s) => Math.max(0, s - 1));
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [phase, studyPages.count]);
 
   const finish = useCallback(async (abandoned: boolean) => {
     setPhase('submitting');
@@ -221,7 +254,12 @@ export function LessonOverlay({
             <span className="material-symbols-outlined text-[20px]">close</span>
           </button>
           <div className="flex-1">
-            <ProgressBar value={total > 0 && phase !== 'study' ? ((idx + (revealed ? 1 : 0)) / total) * 100 : phase === 'done' ? 100 : 0} />
+            <ProgressBar value={
+              phase === 'study' && studyPages.count > 0
+                ? ((studyAt + 1) / studyPages.count) * 100
+                : total > 0 && phase !== 'study'
+                  ? ((idx + (revealed ? 1 : 0)) / total) * 100
+                  : phase === 'done' ? 100 : 0} />
           </div>
           <div className="flex items-center gap-1.5">
             <StatHeart hearts={hearts} />
@@ -251,16 +289,28 @@ export function LessonOverlay({
           </div>
         )}
 
-        {/* ── Study phase ── */}
+        {/* ── Study phase: ONE section per page (Supreme courses parity). ── */}
         {phase === 'study' && doc && (
           <div className="flex flex-col gap-4">
-            <header className="rounded-2xl border-2 border-outline-variant bg-surface-container p-4 learn-tile">
-              <p className="text-[11px] font-black uppercase tracking-wide text-primary-ink">{doc.course}</p>
-              <h2 className="mt-0.5 text-[19px] font-black leading-snug text-on-surface">{doc.title}</h2>
-              {doc.summary && <p className="mt-1.5 text-[13.5px] leading-relaxed text-on-surface-variant">{doc.summary}</p>}
-            </header>
+            <div className="flex items-center justify-between">
+              <p className="text-[12px] font-black uppercase tracking-wide text-on-surface-variant">
+                Part {studyAt + 1} of {studyPages.count}
+              </p>
+              <p className="max-w-[55%] truncate text-[11px] font-bold text-outline">{doc.course}</p>
+            </div>
 
-            {doc.notes.map((n, i) => (
+            {studyAt === 0 && (
+              <header className="rounded-2xl border-2 border-outline-variant bg-surface-container p-4 learn-tile">
+                <p className="text-[11px] font-black uppercase tracking-wide text-primary-ink">{doc.course}</p>
+                <h2 className="mt-0.5 text-[19px] font-black leading-snug text-on-surface">{doc.title}</h2>
+                {doc.summary && <p className="mt-1.5 text-[13.5px] leading-relaxed text-on-surface-variant">{doc.summary}</p>}
+                <p className="mt-2.5 rounded-xl bg-surface-container-low px-3 py-2 text-[12px] font-bold leading-snug text-on-surface-variant">
+                  {Math.max(0, studyPages.count - 1)} more section{studyPages.count - 1 === 1 ? '' : 's'} to read, then {doc.quiz.length} question{doc.quiz.length === 1 ? '' : 's'}. Tap Next to keep going.
+                </p>
+              </header>
+            )}
+
+            {doc.notes.map((n, i) => studyAt === i + 1 && (
               <article key={i} className="rounded-2xl border-2 border-outline-variant bg-card p-4 learn-tile">
                 <h3 className="text-[15px] font-black text-on-surface">{i + 1}. {n.heading}</h3>
                 {n.image && (
@@ -273,7 +323,7 @@ export function LessonOverlay({
               </article>
             ))}
 
-            {doc.drawings?.length > 0 && (
+            {studyPages.drawingsPage === studyAt && doc.drawings?.length > 0 && (
               <section className="rounded-2xl border-2 border-outline-variant bg-card p-4 learn-tile">
                 <h3 className="text-[15px] font-black text-on-surface">Real drawings for this topic</h3>
                 <div className="mt-2 flex flex-col gap-4">
@@ -288,7 +338,7 @@ export function LessonOverlay({
               </section>
             )}
 
-            {doc.keyPoints?.length > 0 && (
+            {studyPages.keysPage === studyAt && doc.keyPoints?.length > 0 && (
               <section className="rounded-2xl border-2 border-primary/40 bg-primary/10 p-4">
                 <h3 className="text-[14px] font-black text-primary-ink">Key points</h3>
                 <ul className="mt-1.5 list-disc space-y-1 pl-5">
@@ -318,7 +368,14 @@ export function LessonOverlay({
               <QText html={q.stem} />
             </h2>
 
-            {(q.type === 'mcq' || q.type === 'true_false') && (
+            {/* Self-healing answer surface (founder bug report 2026-10-14:
+                a cached lesson can carry an mcq whose options never made
+                it - the stem rendered and the answer area was a blank
+                void). When a choice question has no usable options, the
+                type-in judge takes over so the question stays answerable
+                without waiting on a regeneration. */}
+            {(q.type === 'mcq' || q.type === 'true_false') &&
+              (q.type === 'true_false' || Object.entries(q.options ?? {}).filter(([, v]) => (v ?? '').trim() !== '').length >= 2) && (
               <div className="flex flex-col gap-2.5">
                 {(q.type === 'true_false'
                   ? [{ A: 'True' }, { B: 'False' }]
@@ -355,7 +412,12 @@ export function LessonOverlay({
               </div>
             )}
 
-            {(q.type === 'fill_blank' || q.type === 'word_bank') && <BlankInput q={q} revealed={revealed} onJudge={judgeBlank} />}
+            {((q.type === 'fill_blank' || q.type === 'word_bank') ||
+              ((q.type === 'mcq' || q.type === 'true_false') &&
+                q.type !== 'true_false' &&
+                Object.entries(q.options ?? {}).filter(([, v]) => (v ?? '').trim() !== '').length < 2)) && (
+              <BlankInput q={q} revealed={revealed} onJudge={judgeBlank} />
+            )}
 
             {revealed && (
               <div className={`rounded-xl border-2 p-3 ${picked === q.answer ? 'border-primary bg-primary/10' : 'border-error bg-error/10'}`}>
@@ -400,9 +462,18 @@ export function LessonOverlay({
           <div className="mx-auto flex max-w-2xl items-center gap-3">
             {phase === 'study' ? (
               <>
-                <button type="button" onClick={onClose} className="key-btn flex-1 bg-card text-on-surface">Quit for now</button>
-                <button type="button" onClick={() => setPhase('quiz')} disabled={!doc} className="key-btn flex-[2] bg-primary text-white">
-                  Start quiz {doc ? `(${doc.quiz.length})` : ''}
+                {studyAt > 0 && (
+                  <button type="button" onClick={() => setStudyStep((s) => Math.max(0, s - 1))} className="key-btn flex-1 bg-card text-on-surface">
+                    Back
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={() => (studyAt < studyPages.count - 1 ? setStudyStep((s) => s + 1) : setPhase('quiz'))}
+                  disabled={!doc}
+                  className={`key-btn ${studyAt > 0 ? 'flex-[2]' : 'flex-1'} bg-primary text-white`}
+                >
+                  {studyAt < studyPages.count - 1 ? 'Next section' : `Start quiz ${doc ? `(${doc.quiz.length})` : ''}`}
                 </button>
               </>
             ) : (
