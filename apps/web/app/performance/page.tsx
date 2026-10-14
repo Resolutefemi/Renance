@@ -52,7 +52,7 @@ function bodyOf(code: string): string {
   if (code.startsWith('waec-')) return 'WAEC';
   if (code.startsWith('neco-')) return 'NECO';
   if (code.startsWith('daily-')) return 'Daily Challenge';
-  return 'University';
+  return 'Tertiary Institution';
 }
 
 const BODY_TINT: Record<string, string> = {
@@ -61,7 +61,7 @@ const BODY_TINT: Record<string, string> = {
   'JAMB Practice': 'bg-primary/8 border-primary/20',
   WAEC: 'bg-accent-emerald/8 border-accent-emerald/25',
   NECO: 'bg-accent-amber/10 border-accent-amber/25',
-  University: 'bg-secondary-container/60 border-outline-variant/40',
+  'Tertiary Institution': 'bg-secondary-container/60 border-outline-variant/40',
   'Daily Challenge': 'bg-accent-amber/10 border-accent-amber/25',
 };
 

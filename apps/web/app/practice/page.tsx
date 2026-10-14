@@ -64,7 +64,7 @@ const EXAM_BODIES = [
   {
     slug: 'post-utme',
     title: 'Post UTME',
-    subtitle: 'University Post-UTME Screening',
+    subtitle: 'Tertiary Institution Post-UTME Screening',
     emoji: '🏛️',
     color: 'bg-purple-500/10 text-purple-600 dark:text-purple-400',
     border: 'hover:border-purple-300 dark:hover:border-purple-500/60',

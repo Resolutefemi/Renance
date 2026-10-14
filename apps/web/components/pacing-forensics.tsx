@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * PacingForensicsCard - Post-Exam Time & Panic Diagnostics for Renance Study OS.
+ * PacingForensicsCard - Post-Exam Time & Panic Diagnostics for the Renance educational app.
  *
  * Displays on the graded results screen to expose time leaks, identified time-traps,
  * and end-of-paper panic, helping students strategize for real exam day.

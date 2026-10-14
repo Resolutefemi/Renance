@@ -60,7 +60,7 @@ const mmss = (total: number) => {
 };
 
 function focusLabel(f: string) {
-  return f === 'University Modules' ? 'Tertiary' : f;
+  return f === 'University Modules' ? 'Tertiary Institution' : f;
 }
 
 export default function ArenaPage() {

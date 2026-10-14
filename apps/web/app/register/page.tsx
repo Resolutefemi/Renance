@@ -204,8 +204,8 @@ export default function RegisterPage() {
             </h1>
             <p className="mt-1 break-words text-sm text-on-surface-variant">
               {audience === 'schools'
-                ? 'The study OS for your whole school: management, teachers and students.'
-                : 'Join the global student study OS.'}
+                ? 'The educational app for your whole school: management, teachers and students.'
+                : 'Join the global student educational app.'}
             </p>
           </div>
         </div>

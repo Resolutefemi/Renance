@@ -39,7 +39,7 @@ const BODY_LABEL: Record<Body, string> = {
   waec: 'WAEC',
   neco: 'NECO',
   'post-utme': 'Post UTME',
-  university: 'School Desk (University)',
+  university: 'School Desk (Tertiary Institution)',
 };
 
 interface SubjectRow {

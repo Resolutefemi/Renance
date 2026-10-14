@@ -48,7 +48,7 @@ const faqs = [
   },
   {
     q: "Does Renance have past questions for Nigerian tertiary institutions?",
-    a: "Yes. Renance holds over 135,000 tertiary institution past questions: Post-UTME screening papers for universities such as UNILAG, OAU, UI, UNN, FUTA and UNILORIN, papers for polytechnics and colleges of education, plus a university course catalog with course codes, syllabi and past semester modules. A candidate can rehearse the exact paper their chosen institution sets.",
+    a: "Yes. Renance holds over 135,000 tertiary institution past questions: Post-UTME screening papers for universities such as UNILAG, OAU, UI, UNN, FUTA and UNILORIN, papers for polytechnics and colleges of education, plus a tertiary institution course catalog with course codes, syllabi and past semester modules. A candidate can rehearse the exact paper their chosen institution sets.",
   },
   {
     q: "Is the name Renance related to the word renaissance?",
@@ -118,7 +118,7 @@ export default function AboutPage() {
         "@type": "EducationalOrganization",
         "@id": "https://renance.app/#organization",
         name: "Renance",
-        alternateName: ["Renance App", "Renance Study OS", "Renance for Schools"],
+        alternateName: ["Renance App", "Educational App", "Renance for Schools"],
         url: "https://renance.app",
         logo: "https://renance.app/renance-mark.png",
         slogan: "Your Guide to Academic Success",
@@ -285,7 +285,7 @@ export default function AboutPage() {
                   <td>
                     Post-UTME screening papers for universities (UNILAG, OAU,
                     UI, UNN, FUTA, UNILORIN and more), polytechnics and
-                    colleges of education, plus a university course catalog
+                    colleges of education, plus a tertiary institution course catalog
                   </td>
                 </tr>
                 <tr>

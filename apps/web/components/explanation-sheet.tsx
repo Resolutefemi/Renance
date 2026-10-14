@@ -435,7 +435,7 @@ export function AiExplanationSheet({
           {
             role: 'system',
             content:
-              'You are Rence, an exam coach for Nigerian students (JAMB, WAEC, NECO, university modules). ' +
+              'You are Rence, an exam coach for Nigerian students (JAMB, WAEC, NECO, tertiary institution modules). ' +
               'Explain the solution step by step, simply and honestly. Always include a short, relatable real-world physical or social scenario to illustrate the concept. Keep replies under 250 words.',
           },
           { role: 'user', content: ask },

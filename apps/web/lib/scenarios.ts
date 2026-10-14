@@ -1,5 +1,5 @@
 /**
- * Everyday Relatable Scenarios for Renance Study OS.
+ * Everyday Relatable Scenarios for the Renance educational app.
  *
  * Connects abstract scientific, mathematical, and social science principles
  * to everyday, real-world physical and social situations in standard, clear English.

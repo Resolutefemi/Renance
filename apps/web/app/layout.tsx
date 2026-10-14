@@ -29,7 +29,7 @@ const renanceJsonLd = {
       '@type': 'EducationalOrganization',
       '@id': `${SITE_URL}#organization`,
       name: 'Renance',
-      alternateName: ['Renance App', 'Renance Study OS', 'renance.app'],
+      alternateName: ['Renance App', 'Educational App', 'renance.app'],
       slogan: 'Your Guide to Academic Success',
       url: SITE_URL,
       logo: {
@@ -162,7 +162,7 @@ export const metadata: Metadata = {
     'CBT practice platform Nigeria',
     'past questions app',
     'Renance',
-    'Renance study OS',
+    'Renance educational app',
     'NERDC scheme of work',
     'lesson notes Nigeria',
     'Nigerian edtech',

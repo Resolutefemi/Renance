@@ -9,7 +9,7 @@ import SearchClient, {
 const BODIES: Array<[string, string]> = [
   ['jamb', 'JAMB'],
   ['waec', 'WAEC'],
-  ['university-modules', 'University'],
+  ['university-modules', 'Tertiary Institution'],
 ];
 
 /**

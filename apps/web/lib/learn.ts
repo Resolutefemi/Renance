@@ -310,11 +310,15 @@ export async function fetchReview(courseId: string, unit: number): Promise<{ que
 
 // ─── Local helpers ────────────────────────────────────────────────────────
 
-/** Focus body for the desk: jamb | waec | neco | post-utme | tertiary. */
+/** Focus desk for the course tab: jamb | waec | neco | tertiary.
+ * Founder directive 2026-10-14: the JAMB/WAEC/NECO subjects appear ONLY
+ * on their own desks, and Post-UTME prep belongs to the tertiary
+ * institution desk (its courses are the institutions' own), so the
+ * desk never resolves to 'post-utme'. */
 export function learnBodyFromExams(exams: string[] | undefined): string {
   const first = (exams && exams[0] ? exams[0] : '').toLowerCase();
   if (first.includes('university')) return 'tertiary';
-  if (first.includes('post-utme') || first.includes('post utme')) return 'post-utme';
+  if (first.includes('post-utme') || first.includes('post utme')) return 'tertiary';
   if (first.includes('waec')) return 'waec';
   if (first.includes('neco')) return 'neco';
   return 'jamb';
@@ -327,7 +331,7 @@ export function learnBodyLabel(body: string): string {
     case 'waec': return 'WAEC';
     case 'neco': return 'NECO';
     case 'post-utme': return 'Post-UTME';
-    case 'tertiary': return 'University';
+    case 'tertiary': return 'Tertiary Institution';
     default: return body;
   }
 }

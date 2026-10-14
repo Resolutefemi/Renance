@@ -251,7 +251,8 @@ export default function Landing() {
             </h1>
 
             <p className="hero-enter hero-enter-2 mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-on-surface-variant sm:text-lg">
-              Renance is the educational app in Nigeria for JAMB, WAEC, NECO and university
+              Renance is the educational app in Nigeria for JAMB, WAEC, NECO and tertiary
+              institution
               success: learn exam-ready courses step by step, drill {fmt(totalQuestions)}+ real
               past questions from {yearFrom} to {yearTo} with server-graded CBT mocks, and stay
               in the game with daily quests, leagues, a live arena and a feed that celebrates
@@ -405,7 +406,7 @@ export default function Landing() {
                   note: 'objectives + theory packs',
                 },
                 {
-                  body: 'University',
+                  body: 'Tertiary Institution',
                   count: sum(uniExams),
                   packs: uniExams.length,
                   note: 'per-school course banks, more landing',

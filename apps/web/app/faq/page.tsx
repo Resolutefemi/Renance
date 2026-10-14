@@ -14,11 +14,11 @@ import { SITE_URL } from '@/lib/site-url';
 const QA: Array<{ q: string; a: string }> = [
   {
     q: 'What is Renance?',
-    a: 'Renance is the educational app in Nigeria for exam success - a study OS for students: mock CBT exams that are graded server-side, a spaced-repetition review plan built from every paper you take, voice flashcards, exam-focused lessons and a Socratic tutor that coaches you through the questions you got wrong. It works on Android, iOS, Windows, macOS and the web.',
+    a: 'Renance is the educational app in Nigeria for exam success - built for students: mock CBT exams that are graded server-side, a spaced-repetition review plan built from every paper you take, voice flashcards, exam-focused lessons and a Socratic tutor that coaches you through the questions you got wrong. It works on Android, iOS, Windows, macOS and the web.',
   },
   {
     q: 'Who builds Renance?',
-    a: 'Renance is built by Resolute Femi (Ariyo Oluwafemi Stephen), a Nigerian software engineer. The platform is designed for students preparing JAMB, WAEC, NECO and university module exams across Africa and beyond.',
+    a: 'Renance is built by Resolute Femi (Ariyo Oluwafemi Stephen), a Nigerian software engineer. The platform is designed for students preparing JAMB, WAEC, NECO and tertiary institution module exams across Africa and beyond.',
   },
   {
     q: 'Is Renance free?',
@@ -34,7 +34,7 @@ const QA: Array<{ q: string; a: string }> = [
   },
   {
     q: 'What exams does Renance cover?',
-    a: 'JAMB, WAEC, NECO and Post-UTME past questions, plus university course modules. See the subjects page for the full coverage list, which grows with every content release.',
+    a: 'JAMB, WAEC, NECO and Post-UTME past questions, plus tertiary institution course modules. See the subjects page for the full coverage list, which grows with every content release.',
   },
   {
     q: 'Can my school use Renance?',
@@ -61,7 +61,7 @@ const QA: Array<{ q: string; a: string }> = [
 export const metadata: Metadata = {
   title: "FAQ - Nigeria's Educational App",
   description:
-    'How Renance works: free server-graded mock exams, spaced repetition, offline study, voice flashcards and the Socratic tutor, for JAMB, WAEC, NECO and university students.',
+    'How Renance works: free server-graded mock exams, spaced repetition, offline study, voice flashcards and the Socratic tutor, for JAMB, WAEC, NECO and tertiary institution students.',
   alternates: { canonical: '/faq/' },
   openGraph: {
     title: 'FAQ - how Renance works',

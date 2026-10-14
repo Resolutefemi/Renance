@@ -15,7 +15,7 @@ export const dynamic = 'force-static';
 export const metadata: Metadata = {
   title: 'Notes | your school and exam study notes',
   description:
-    'Study notes scoped to you: course PDFs and lecture materials for your university courses, exam-focused notes for your JAMB, WAEC or NECO subjects.',
+    'Study notes scoped to you: course PDFs and lecture materials for your tertiary institution courses, exam-focused notes for your JAMB, WAEC or NECO subjects.',
   alternates: { canonical: '/notes/' },
 };
 

@@ -246,7 +246,7 @@ export default function PricingClient() {
             Tertiary institutions
           </h2>
           <p className="mt-1 text-[13px] leading-relaxed text-on-surface-variant">
-            University modules follow the same pattern: the free cap, the
+            Tertiary Institution modules follow the same pattern: the free cap, the
             one testing paper, the same tiers. Students of partner schools
             get premium through their school&apos;s subscription.
           </p>

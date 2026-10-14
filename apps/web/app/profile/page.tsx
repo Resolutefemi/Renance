@@ -64,7 +64,7 @@ const EXAM_OPTIONS = ['JAMB', 'WAEC', 'NECO', 'POST-UTME', 'University Modules']
 const TARGET_YEARS = [2026, 2027, 2028] as const;
 
 const EXAM_META: Record<string, { title: string; subtitle: string; icon: string }> = {
-  JAMB: { title: 'JAMB UTME', subtitle: 'Nigerian university admissions', icon: 'school' },
+  JAMB: { title: 'JAMB UTME', subtitle: 'Nigerian tertiary institution admissions', icon: 'school' },
   WAEC: {
     title: 'WAEC/WASSCE',
     subtitle: 'West African senior school certificate',

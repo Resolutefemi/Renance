@@ -160,7 +160,7 @@ history: `docs/ACTIVE_PHASE.md` header + `legacy/nestjs-monolith/`.
 
 **Renance** is designed and engineered by **Resolute Femi** - full name
 **Ariyo Oluwafemi Stephen** - a Nigerian software engineer and the founder
-of the Renance suite (Renance Study OS, Renance CBT for FUTA students,
+of the Renance suite (the Renance educational app, Renance CBT for FUTA students,
 Renance JAMB CBT, Renance DevTools, Renance Playground, Naija Locator).
 
 - GitHub: <https://github.com/Resolutefemi>
