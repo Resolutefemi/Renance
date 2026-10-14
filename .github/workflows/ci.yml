@@ -59,7 +59,9 @@ jobs:
             # /readyz is the REAL Postgres probe. /healthz is DB-free by
             # doctrine (keep-warm pingers must never wake Neon), so it
             # can no longer prove the DB is reachable - readyz can.
-            if curl -fsS http://127.0.0.1:3990/readyz | grep -q '"db":"ok"'; then
+            # The probe UA is the e2e agent's own - the bot shield
+            # 403s default tool agents on purpose.
+            if curl -fsS -A "RenanceE2E/1.0 (CI probe)" http://127.0.0.1:3990/readyz | grep -q '"db":"ok"'; then
               echo "API healthy (Postgres reachable)"; exit 0
             fi
             sleep 1
