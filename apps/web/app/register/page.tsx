@@ -8,6 +8,10 @@ import { schoolRegister, setActiveSchool } from '@/lib/school';
 import { RenanceMark } from '@/components/renance-logo';
 import { GoogleSignIn } from '@/components/google-signin';
 import ConfirmEmailCard from '@/components/confirm-email-card';
+import AppearanceModal, {
+  markAppearanceIntroDone,
+  needsAppearanceIntro,
+} from '@/components/appearance-modal';
 import { AudienceToggle, type Audience } from '@/components/audience-toggle';
 import { MailIcon, LockIcon, EyeIcon } from '@/components/icons';
 
@@ -44,9 +48,27 @@ export default function RegisterPage() {
   // never met the picker), before whatever comes next (verify notice or
   // dashboard). afterAppearance holds the pending continuation so the
   // flow resumes the moment the student closes the dialog.
+  // 2026-10-14: the modal greets every NEW account again (a UI pass had
+  // orphaned it - new students never saw it), and it carries ONLY the
+  // seed colours; light/dark lives in Settings after login.
+  const [appearanceOpen, setAppearanceOpen] = useState(false);
+  const afterAppearanceRef = useRef<(() => void) | null>(null);
 
   const finishStudentSignup = (next: () => void) => {
+    if (needsAppearanceIntro()) {
+      afterAppearanceRef.current = next;
+      setAppearanceOpen(true);
+      return;
+    }
     next();
+  };
+
+  const closeAppearance = () => {
+    markAppearanceIntroDone();
+    setAppearanceOpen(false);
+    const cont = afterAppearanceRef.current;
+    afterAppearanceRef.current = null;
+    cont?.();
   };
 
   // school-only fields
@@ -183,6 +205,7 @@ export default function RegisterPage() {
           mailFailed={mailFailed}
           onVerified={() => finishStudentSignup(() => router.replace(nextPath()))}
         />
+        <AppearanceModal open={appearanceOpen} onClose={closeAppearance} />
       </>
     );
   }
@@ -438,6 +461,7 @@ export default function RegisterPage() {
           </button>
         </p>
       </div>
+      <AppearanceModal open={appearanceOpen} onClose={closeAppearance} />
     </main>
   );
 }

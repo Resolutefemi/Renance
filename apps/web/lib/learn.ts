@@ -326,7 +326,29 @@ export async function fetchCoursePath(courseId: string): Promise<CoursePath> {
 }
 
 export async function fetchLesson(topicId: string, wait = true): Promise<LessonDoc> {
-  return api<LessonDoc>(`/learn/topics/${encodeURIComponent(topicId)}/content${wait ? '?wait=1' : ''}`);
+  // Lesson polling (founder report 2026-10-14: "the notes and questions
+  // is not loading"): a first-open lesson is generated server-side (AI
+  // notes + real past questions), which takes longer than one honest
+  // request should stay open - the backend now answers 202
+  // {status:"generating"} while a detached generator finishes, so this
+  // client polls until the real doc arrives. The shared api() 12s guard
+  // stays useful: every individual poll is a short request. `wait` is
+  // kept for signature compatibility; the poll loop is strictly better
+  // than holding one request open.
+  void wait;
+  const deadline = Date.now() + 110_000;
+  for (;;) {
+    const doc = await api<LessonDoc & { status?: string }>(
+      `/learn/topics/${encodeURIComponent(topicId)}/content`,
+    );
+    if (!doc || (doc as { status?: string }).status !== 'generating') {
+      return doc as LessonDoc;
+    }
+    if (Date.now() > deadline) {
+      throw new Error('This lesson is still being written - hang on a moment.');
+    }
+    await new Promise((r) => setTimeout(r, 3000));
+  }
 }
 
 export async function postProgress(body: {
