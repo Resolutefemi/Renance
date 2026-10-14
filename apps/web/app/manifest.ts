@@ -15,7 +15,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Renance - Nigeria's Educational App",
     short_name: 'Renance',
     description:
-      "Renance is the educational app in Nigeria: 235,110+ JAMB, WAEC, NECO and Post-UTME past questions, free server-graded CBT mocks, lesson notes and Renance AI.",
+      "Renance is the educational app in Nigeria: learn JAMB, WAEC, NECO and university courses step by step, practise 235,110+ real past questions, win daily quests and climb the leagues.",
     start_url: '/',
     scope: '/',
     display: 'standalone',

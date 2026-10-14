@@ -148,7 +148,7 @@ export const metadata: Metadata = {
     template: '%s · Renance',
   },
   description:
-    "Renance is the educational app in Nigeria: 235,110+ JAMB, WAEC, NECO and Post-UTME past questions with worked solutions, free server-graded CBT mocks, NERDC lesson notes, Renance AI and school management (Renance for Schools) - built by Resolute Femi.",
+    "Renance is the educational app in Nigeria: learn JAMB, WAEC, NECO and university courses step by step, practise 235,110+ real past questions with worked solutions, win daily quests, climb the leagues and follow friends on the feed - free, built by Resolute Femi.",
   keywords: [
     'JAMB past questions',
     'JAMB past questions and answers',
@@ -192,14 +192,14 @@ export const metadata: Metadata = {
     locale: 'en_NG',
     title: "Renance - Nigeria's Educational App for JAMB, WAEC & NECO",
     description:
-      '235,110+ real past questions with worked explanations, free server-graded CBT mocks, lesson notes, Renance AI and school management - built for Nigerian students and schools.',
+      'Learn JAMB, WAEC, NECO and university courses step by step, practise 235,110+ real past questions with worked solutions, win daily quests, climb the leagues and follow friends on the feed - free on renance.app.',
     images: [...OG_IMAGES],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Renance - Nigeria's Educational App for JAMB, WAEC & NECO",
     description:
-      '235,110+ real past questions with worked explanations, free server-graded CBT mocks, lesson notes, Renance AI and school management - built for Nigerian students and schools.',
+      'Learn JAMB, WAEC, NECO and university courses step by step, practise 235,110+ real past questions, win daily quests, climb the leagues and follow friends on the feed - free on renance.app.',
     creator: '@Resolutefemi',
     images: [TWITTER_CARD_IMAGE],
   },

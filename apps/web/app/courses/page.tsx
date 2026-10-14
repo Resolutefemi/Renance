@@ -22,6 +22,16 @@
  * API is only asked for the student's OWN list, and that list falls
  * back to the last cached copy on this device.
  *
+ * DESK SEPARATION (founder directive 2026-10-14, evening pass:
+ * "separate jamb waec and neco subject from course in tertiary
+ * institution desk page - their subject should only appear in their
+ * own desk"): every body is its own desk on this tab. The list face
+ * shows ONLY the active desk's courses; a student carrying subjects
+ * from several bodies gets a small desk switcher and each subject
+ * appears strictly under its own desk. The selection catalog follows
+ * the active desk too - the tertiary desk's tree never lists a JAMB
+ * subject, and vice versa.
+ *
  * NO level tag anywhere - the founder removed it from the courses list.
  */
 
@@ -106,6 +116,17 @@ export default function CoursesPage() {
   const [catPage, setCatPage] = useState(1);
   const [picked, setPicked] = useState<Set<string>>(new Set());
   const [saving, setSaving] = useState(false);
+
+  // Desk separation: the desks this student actually carries, focus
+  // body first. Rows saved before the body column existed (empty body)
+  // ride the focus desk so they never vanish.
+  const deskBodies = useMemo(() => {
+    const DESKS = ['jamb', 'waec', 'neco', 'tertiary'];
+    const present = new Set<string>();
+    for (const c of mine ?? []) present.add(c.body || body);
+    const rest = DESKS.filter((b) => present.has(b) && b !== body);
+    return [body, ...rest];
+  }, [mine, body]);
 
   const boot = useCallback(async () => {
     setLoading(true);
@@ -332,33 +353,63 @@ export default function CoursesPage() {
               <EmptyList onChoose={() => setFace('select')} />
             ) : (
               <>
+                {/* Desk switcher: one desk per exam body - each subject
+                    appears ONLY under its own desk (founder 2026-10-14).
+                    Hidden entirely when every saved course lives on the
+                    active desk. */}
+                {deskBodies.length > 1 && (
+                  <div className="no-scrollbar -mx-4 flex items-center gap-1.5 overflow-x-auto px-4">
+                    {deskBodies.map((b) => (
+                      <button
+                        key={b}
+                        type="button"
+                        onClick={() => setBody(b)}
+                        aria-pressed={b === body}
+                        className={`whitespace-nowrap rounded-full border-2 px-3.5 py-1.5 text-[12px] font-extrabold transition active:translate-y-[1px] ${
+                          b === body
+                            ? 'border-primary bg-primary text-white'
+                            : 'border-outline-variant bg-card text-on-surface-variant'
+                        }`}
+                      >
+                        {learnBodyLabel(b)} desk
+                      </button>
+                    ))}
+                  </div>
+                )}
                 <p className="px-1 text-[12.5px] font-bold text-on-surface-variant">
-                  Your course list - tap one to open its roadmap.
+                  Your {learnBodyLabel(body)} desk courses - tap one to open its roadmap.
                 </p>
-                {mine.map((c) => (
-                  <button
-                    key={c.id}
-                    type="button"
-                    onClick={() => void openPath(c.id)}
-                    className="learn-tile w-full rounded-2xl border-2 border-outline-variant bg-card p-4 text-left transition hover:border-primary/40 active:translate-y-[2px]"
-                  >
-                    <div className="flex items-center gap-3">
-                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/15">
-                        <span className="material-symbols-outlined text-[22px] text-primary-ink">menu_book</span>
-                      </span>
-                      <span className="min-w-0 flex-1">
-                        <span className="block truncate text-[15px] font-black text-on-surface">{c.title}</span>
-                        <span className="mt-0.5 block text-[12px] font-bold text-on-surface-variant">
-                          {learnBodyLabel(c.body)} · {c.completedTopics}/{c.topicCount} topics done
+                {mine
+                  .filter((c) => (c.body || body) === body)
+                  .map((c) => (
+                    <button
+                      key={c.id}
+                      type="button"
+                      onClick={() => void openPath(c.id)}
+                      className="learn-tile w-full rounded-2xl border-2 border-outline-variant bg-card p-4 text-left transition hover:border-primary/40 active:translate-y-[2px]"
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/15">
+                          <span className="material-symbols-outlined text-[22px] text-primary-ink">menu_book</span>
                         </span>
-                        <span className="mt-1.5 block">
-                          <ProgressBar value={c.topicCount ? (c.completedTopics / c.topicCount) * 100 : 0} />
+                        <span className="min-w-0 flex-1">
+                          <span className="block truncate text-[15px] font-black text-on-surface">{c.title}</span>
+                          <span className="mt-0.5 block text-[12px] font-bold text-on-surface-variant">
+                            {c.completedTopics}/{c.topicCount} topics done
+                          </span>
+                          <span className="mt-1.5 block">
+                            <ProgressBar value={c.topicCount ? (c.completedTopics / c.topicCount) * 100 : 0} />
+                          </span>
                         </span>
-                      </span>
-                      <span className="material-symbols-outlined text-[20px] text-on-surface-variant">chevron_right</span>
-                    </div>
-                  </button>
-                ))}
+                        <span className="material-symbols-outlined text-[20px] text-on-surface-variant">chevron_right</span>
+                      </div>
+                    </button>
+                  ))}
+                {mine.filter((c) => (c.body || body) === body).length === 0 && (
+                  <p className="rounded-2xl border-2 border-dashed border-outline-variant bg-card px-6 py-8 text-center text-[13px] font-bold text-on-surface-variant">
+                    No courses on this desk yet - switch the desk above or add more courses.
+                  </p>
+                )}
               </>
             )}
           </div>
