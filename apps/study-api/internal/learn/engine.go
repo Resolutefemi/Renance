@@ -178,9 +178,16 @@ func validateAI(raw []byte) (*aiLesson, error) {
         return &l, nil
 }
 
-// normalizeQuiz converts fill_blank → word_bank (distractors from the
-// lesson corpus, Supreme parity), normalizes true_false answers and
-// stamps ids.
+// normalizeQuiz converts every AI item into a shape the client can
+// RENDER. Doctrine (founder bug report 2026-10-14: quiz questions with
+// a blank answer area): an MCQ without options is a dead end - the stem
+// shows and nothing below it is tappable. So:
+//   - fill_blank            → word_bank (distractors from the lesson corpus)
+//   - true_false (+aliases) → true_false (answer folded to true/false)
+//   - mcq                   → mcq, letters uppercased; fewer than 2 usable
+//                             options degrades to word_bank (type-in)
+//   - anything else         → true_false when the answer reads boolean,
+//                             else word_bank - never an option-less mcq
 func (e *Engine) normalizeQuiz(in []aiQuizQ, topicID string, corpus []string) []LessonQuizQ {
         out := make([]LessonQuizQ, 0, len(in))
         for i, q := range in {
@@ -188,35 +195,61 @@ func (e *Engine) normalizeQuiz(in []aiQuizQ, topicID string, corpus []string) []
                         ID:          fmt.Sprintf("%s-ai-%d", topicID, i+1),
                         Type:        q.Type,
                         Stem:        strings.TrimSpace(q.Stem),
+                        Options:     q.Options, // THE blank-quiz bug (2026-10-14): the old copy loop dropped this field, so every AI mcq reached the client with an empty options map - stem rendered, answer area blank.
                         Answer:      strings.TrimSpace(q.Answer),
                         Explanation: strings.TrimSpace(q.Explanation),
                 }
-                switch strings.ToLower(o.Type) {
-                case "mcq":
+                switch strings.ToLower(strings.TrimSpace(o.Type)) {
+                case "mcq", "multiple_choice", "multiplechoice":
                         o.Type = "mcq"
-                        if o.Options == nil {
-                                o.Options = map[string]string{}
-                        }
-                        // Uppercase option letters.
+                        // Uppercase option letters and drop empty ones.
                         fixed := map[string]string{}
                         for k, v := range o.Options {
+                                if strings.TrimSpace(v) == "" {
+                                        continue
+                                }
                                 fixed[strings.ToUpper(strings.TrimSpace(k))] = v
                         }
-                        o.Options = fixed
-                case "true_false", "truefalse", "true/false":
+                        if len(fixed) < 2 {
+                                // An MCQ with no real options can never be answered
+                                // on screen - ship it as a type-in instead.
+                                o.Type = "word_bank"
+                                o.Options = buildWordBank(o.Answer, corpus)
+                        } else {
+                                o.Options = fixed
+                        }
+                case "true_false", "truefalse", "true/false", "boolean":
                         o.Type = "true_false"
+                        o.Options = nil
                         ans := strings.ToLower(o.Answer)
-                        if strings.HasPrefix(ans, "t") {
+                        if strings.HasPrefix(ans, "t") || strings.HasPrefix(ans, "y") || ans == "1" {
                                 o.Answer = "true"
                         } else {
                                 o.Answer = "false"
                         }
-                case "fill_blank":
+                case "fill_blank", "short_answer", "input":
                         // → word_bank with distractors harvested from the notes.
                         o.Type = "word_bank"
                         o.Options = buildWordBank(o.Answer, corpus)
                 default:
-                        o.Type = "mcq"
+                        // Unknown type the client has no renderer for: never ship
+                        // it raw. Boolean-looking answers become true_false; any
+                        // other answer becomes a word-bank type-in keyed to the
+                        // exact answer text.
+                        ans := strings.ToLower(o.Answer)
+                        if ans == "true" || ans == "false" || ans == "t" || ans == "f" ||
+                                ans == "yes" || ans == "no" {
+                                o.Type = "true_false"
+                                o.Options = nil
+                                if strings.HasPrefix(ans, "t") || strings.HasPrefix(ans, "y") {
+                                        o.Answer = "true"
+                                } else {
+                                        o.Answer = "false"
+                                }
+                        } else {
+                                o.Type = "word_bank"
+                                o.Options = buildWordBank(o.Answer, corpus)
+                        }
                 }
                 out = append(out, o)
         }

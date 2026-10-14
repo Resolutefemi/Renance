@@ -69,6 +69,17 @@ interface Options {
   noRedirect?: boolean;
 }
 
+/**
+ * Client timeout. The old 12s guard predated the Render free-tier reality:
+ * a cold-spun service often needs 30-50s just to accept the first
+ * connection, so 12s fired mid-cold-start and every first tap on a fresh
+ * session died with "check your connection" (founder bug report
+ * 2026-10-14: tapping an institution threw exactly that). 45s covers the
+ * worst honest cold start plus the server's own 30s write budget; past
+ * it the call throws and callers fall back to cache / friendly notices.
+ */
+const FETCH_TIMEOUT_MS = 45_000;
+
 export async function api<T>(path: string, opts: Options = {}): Promise<T> {
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
@@ -80,26 +91,42 @@ export async function api<T>(path: string, opts: Options = {}): Promise<T> {
   // Dead-API guard (founder report 2026-10-14: "the new pages are still
   // not loading"): when the study API hangs (Render restart, free-plan
   // cold start, dead network) an untimed fetch holds every page on its
-  // skeletons for minutes. Twelve seconds is past any honest cold
-  // start; past it the call throws and every caller's catch falls back
-  // to the device cache / friendly notice instead of an eternal spinner.
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 12_000);
-  let res: Response;
-  try {
-    res = await fetch(`${API_BASE}${path}`, {
-      method: opts.method ?? 'GET',
-      headers,
-      body: opts.body === undefined ? undefined : JSON.stringify(opts.body),
-      signal: controller.signal,
-    });
-  } catch (err) {
-    if (controller.signal.aborted) {
-      throw new ApiError(0, 'timeout', 'The study API is not answering right now - try again shortly.');
+  // skeletons for minutes. 45s is past any honest cold start; past it
+  // the call throws and every caller's catch falls back to the device
+  // cache / friendly notice instead of an eternal spinner.
+  // GETs retry once automatically: a cold-start connection that dies
+  // mid-warm-up is the most common first-tap failure, and a read is
+  // always safe to re-issue. Mutating methods never auto-retry here
+  // (a retried POST could double-submit an attempt).
+  const canRetry = (opts.method ?? 'GET') === 'GET';
+  let res: Response | null = null;
+  let lastErr: unknown = null;
+  for (let attempt = 0; attempt < (canRetry ? 2 : 1); attempt++) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+    try {
+      res = await fetch(`${API_BASE}${path}`, {
+        method: opts.method ?? 'GET',
+        headers,
+        body: opts.body === undefined ? undefined : JSON.stringify(opts.body),
+        signal: controller.signal,
+      });
+      lastErr = null;
+      break;
+    } catch (err) {
+      lastErr = err;
+      // Only connection-level failures (timeout, dead socket) retry;
+      // anything the browser threw for another reason surfaces now.
+      if (!controller.signal.aborted && attempt === 0 && !(err instanceof TypeError)) throw err;
+    } finally {
+      clearTimeout(timer);
     }
-    throw err;
-  } finally {
-    clearTimeout(timer);
+  }
+  if (res === null) {
+    if (lastErr instanceof Error && lastErr.name !== 'AbortError' && !(lastErr instanceof TypeError) && !(lastErr as { message?: string })?.message?.includes('aborted')) {
+      throw lastErr;
+    }
+    throw new ApiError(0, 'timeout', 'The study API is not answering right now - try again shortly.');
   }
 
   if (res.status === 401 && opts.auth !== false && !opts.noRedirect) {
