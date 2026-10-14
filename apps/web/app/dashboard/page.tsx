@@ -244,6 +244,19 @@ export default function DashboardPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router, bootNonce]);
 
+  // The quiet reboot (founder: "remove retry"): a failed desk boot
+  // retries ITSELF every few seconds, up to four quiet attempts, before
+  // the notice just stays - the scholar never hunts for a button.
+  useEffect(() => {
+    if (bootError == null) return;
+    if (bootNonce >= 4) return;
+    const t = window.setTimeout(() => {
+      setBootError(null);
+      setBootNonce((n) => n + 1);
+    }, 4000);
+    return () => window.clearTimeout(t);
+  }, [bootError, bootNonce]);
+
   /** Silent background asset sync: server job + client prefetch, in
       parallel. No banner, the desk is ready long before it is asked for.
       The prefetch now lands in IndexedDB (localStorage blew the ~5MB
@@ -344,17 +357,11 @@ export default function DashboardPage() {
             <p className="max-w-sm rounded-xl bg-error-container px-5 py-3 text-center text-sm text-on-error-container">
               {bootError || 'Could not load your desk.'}
             </p>
-            <button
-              type="button"
-              onClick={() => {
-                setBootError(null);
-                setBootNonce((n) => n + 1);
-              }}
-              className="flex h-11 items-center gap-2 rounded-[10px] bg-primary px-5 text-sm font-semibold text-on-primary transition-transform active:scale-[0.98]"
-            >
-              <span className="material-symbols-outlined text-[20px]">refresh</span>
-              Try again
-            </button>
+            {/* No button (founder: "remove retry"): the desk reboots
+                itself a few seconds later, up to four quiet attempts. */}
+            <p className="text-[13px] font-semibold text-on-surface-variant">
+              Retrying in a few seconds…
+            </p>
           </>
         )}
       </main>
