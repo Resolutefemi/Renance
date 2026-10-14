@@ -317,9 +317,10 @@ export function setThemeMode(mode: ThemeMode): void {
   }
 }
 
-/** Preset swatches under the picker (the stitches' gem tones + Chrome set). */
+/** Preset swatches under the picker (the stitches' gem tones + Chrome set).
+ *  Renance Green follows the founder's 2026-10-15 default (#10da11). */
 export const SEED_PRESETS: Array<{ hex: string; name: string }> = [
-  { hex: '#13dc1b', name: 'Renance Green' },
+  { hex: '#10da11', name: 'Renance Green' },
   { hex: '#1a73e8', name: 'Chrome Blue' },
   { hex: '#8b5cf6', name: 'Violet' },
   { hex: '#10b981', name: 'Emerald' },

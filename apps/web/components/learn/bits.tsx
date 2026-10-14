@@ -86,7 +86,7 @@ export function GoalRing({ value, max }: { value: number; max: number }) {
       <circle cx="15" cy="15" r={r} fill="none" stroke="var(--color-outline-light, #e5e5e5)" strokeWidth="3.5" />
       <circle
         cx="15" cy="15" r={r} fill="none"
-        stroke="var(--color-primary, #58cc02)"
+        stroke="var(--color-primary, #10da11)"
         strokeWidth="3.5" strokeLinecap="round"
         strokeDasharray={`${c * pct} ${c}`}
         transform="rotate(-90 15 15)"
@@ -104,7 +104,7 @@ export function LeagueBadge({ name, size = 44 }: { name: string; size?: number }
     Sapphire: '#1cb0f6', Ruby: '#ff4b4b', Emerald: '#2ec46e', Amethyst: '#ce82ff',
     Pearl: '#e8e6f2', Diamond: '#84d8ff',
   };
-  const fill = tones[name] ?? '#58cc02';
+  const fill = tones[name] ?? '#10da11';
   return (
     <svg width={size} height={size} viewBox="0 0 44 44" aria-label={`${name} league`}>
       <path d="M22 3l16 6v12c0 10-6.8 16.9-16 20C12.8 37.9 6 31 6 21V9l16-6z" fill={fill} stroke="rgba(0,0,0,.25)" strokeWidth="2" />
@@ -129,7 +129,7 @@ export function ProgressBar({ value, tone = 'green' }: { value: number; tone?: '
 
 // ─── Confetti ─────────────────────────────────────────────────────────────
 
-const CONFETTI_COLORS = ['#58cc02', '#1cb0f6', '#ffc800', '#ff9600', '#ff4b4b', '#ce82ff'];
+const CONFETTI_COLORS = ['#10da11', '#1cb0f6', '#ffc800', '#ff9600', '#ff4b4b', '#ce82ff'];
 
 export function ConfettiBurst({ fire }: { fire: number }) {
   const [pieces, setPieces] = useState<Array<{ id: number; left: number; delay: number; color: string; dx: number }>>([]);

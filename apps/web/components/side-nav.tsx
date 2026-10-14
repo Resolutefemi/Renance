@@ -71,13 +71,15 @@ export default function SideNav() {
   };
 
   // Supreme sidebar row: 48px min height, rounded-2xl, small black
-  // uppercase label; active = light-macaw pill + blue ring + blue text.
+  // uppercase label; active = light-macaw pill + blue ring + blue text
+  // (dark tier: nav-pill swaps in the soft light-blue tint + normal
+  // macaw border, founder directive 2026-10-15).
   const rowCls = (active: boolean) =>
     `relative flex items-center rounded-2xl text-[13px] font-extrabold uppercase tracking-wide transition-colors ${
       open ? 'gap-3 px-3 py-2.5' : 'h-12 w-12 justify-center self-center p-0'
     } ${
       active
-        ? 'bg-macaw-light text-macaw-dark ring-2 ring-macaw-ring'
+        ? 'nav-pill bg-macaw-light text-macaw-dark ring-2 ring-macaw-ring'
         : 'text-wolf hover:bg-polar hover:text-on-surface'
     }`;
 

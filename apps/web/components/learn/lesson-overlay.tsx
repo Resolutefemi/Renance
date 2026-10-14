@@ -209,17 +209,51 @@ export function LessonOverlay({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [q && q.id]);
 
+  // ── Canonical answer judging (founder bug report 2026-10-15: "the
+  // right answer will be picked and it will mark the user wrong") ──
+  // The graded value is what the server stores: "true"/"false" for
+  // true_false (the True/False tiles carry no letters), and for mcq the
+  // answer LETTER - with a text fallback for cached questions whose
+  // stored answer is the option text itself. A picked option is right
+  // when its letter matches, or when its TEXT equals the stored answer.
+  const isRightChoice = useCallback((qq: LearnQuizQ, letter: string): boolean => {
+    if (qq.type === 'true_false') {
+      return (letter === 'A' ? 'true' : 'false') === String(qq.answer ?? '').trim().toLowerCase();
+    }
+    const ans = String(qq.answer ?? '').trim();
+    if (!ans) return false;
+    if (letter === ans) return true;
+    const text = String(qq.options?.[letter] ?? '').trim();
+    return text !== '' && text.toLowerCase() === ans.toLowerCase();
+  }, []);
+
+  // The text a question's stored answer points at (for the reveal line
+  // and the self-healing type-in): the option text behind the letter,
+  // falling back to the raw stored answer.
+  const answerTextOf = useCallback((qq: LearnQuizQ): string => {
+    const ans = String(qq.answer ?? '').trim();
+    if (qq.type === 'true_false') return ans.toLowerCase() === 'true' ? 'True' : 'False';
+    const viaLetter = String(qq.options?.[ans.toUpperCase()] ?? '').trim();
+    return viaLetter || ans;
+  }, []);
+
   const answer = useCallback((letter: string) => {
     if (revealed || !q) return;
     setPicked(letter);
     setRevealed(true);
-    const right = letter === q.answer;
-    settle(right, letter);
+    const right = isRightChoice(q, letter);
+    // The canonical graded value rides the mistake record so practice
+    // resolution (userAnswer === answer) actually matches.
+    const graded = q.type === 'true_false' ? (letter === 'A' ? 'true' : 'false') : letter;
+    settle(right, graded);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [revealed, q && q.id, settle]);
+  }, [revealed, q && q.id, settle, isRightChoice]);
 
-  // Blank answers (fill_blank / word_bank): the input component judges
-  // the typed text itself and reports the boolean.
+  // Blank answers (fill_blank / word_bank / the self-healing type-in):
+  // the input component judges the typed text itself and reports the
+  // boolean. The comparison uses the ANSWER TEXT behind a letter answer
+  // (the founder's "typed Anion, got marked wrong against Answer: D")
+  // plus the raw stored answer, so both stored shapes grade correctly.
   const judgeBlank = useCallback((isRight: boolean, userText: string) => {
     if (revealed || !q) return;
     setPicked(isRight ? q.answer : '__wrong__');
@@ -275,7 +309,6 @@ export function LessonOverlay({
           <div className="flex h-full flex-col items-center justify-center gap-4 py-24">
             <RenanceMark size={76} state="busy" />
             <p className="text-[14px] font-extrabold text-primary-ink">{LOADING_COPY[copyIdx]}</p>
-            <p className="text-[12px] text-on-surface-variant">Lessons are generated once, then cached for you and every student.</p>
           </div>
         )}
 
@@ -384,8 +417,8 @@ export function LessonOverlay({
                   const letter = Object.keys(opt)[0];
                   const text = opt[letter];
                   const isPicked = picked === letter;
-                  const isAnswer = revealed && letter === q.answer;
-                  const isWrongPick = revealed && isPicked && letter !== q.answer;
+                  const isAnswer = revealed && isRightChoice(q, letter);
+                  const isWrongPick = revealed && isPicked && !isAnswer;
                   return (
                     <button
                       key={letter + i}
@@ -416,13 +449,15 @@ export function LessonOverlay({
               ((q.type === 'mcq' || q.type === 'true_false') &&
                 q.type !== 'true_false' &&
                 Object.entries(q.options ?? {}).filter(([, v]) => (v ?? '').trim() !== '').length < 2)) && (
-              <BlankInput q={q} revealed={revealed} onJudge={judgeBlank} />
+              <BlankInput key={q.id} q={q} revealed={revealed} onJudge={judgeBlank} answerText={answerTextOf(q)} />
             )}
 
             {revealed && (
-              <div className={`rounded-xl border-2 p-3 ${picked === q.answer ? 'border-primary bg-primary/10' : 'border-error bg-error/10'}`}>
-                <p className={`text-[13px] font-black ${picked === q.answer ? 'text-primary-ink' : 'text-error'}`}>
-                  {picked === q.answer ? 'Correct!' : `Answer: ${q.type === 'true_false' ? (q.answer === 'true' ? 'True' : 'False') : q.answer.toUpperCase()}`}
+              <div className={`rounded-xl border-2 p-3 ${picked !== null && isRightChoice(q, picked) ? 'border-primary bg-primary/10' : 'border-error bg-error/10'}`}>
+                <p className={`text-[13px] font-black ${picked !== null && isRightChoice(q, picked) ? 'text-primary-ink' : 'text-error'}`}>
+                  {picked !== null && isRightChoice(q, picked)
+                    ? 'Correct!'
+                    : `Answer: ${q.type === 'true_false' ? answerTextOf(q) : (String(q.answer ?? '').trim().length === 1 && q.options?.[q.answer.toUpperCase()] ? `${String(q.answer).toUpperCase()} - ${answerTextOf(q)}` : answerTextOf(q))}`}
                 </p>
                 {q.explanation && <p className="mt-1 text-[13px] leading-relaxed text-on-surface"><QText html={q.explanation} /></p>}
               </div>
@@ -521,23 +556,30 @@ function FlameInline() {
   return <span className="material-symbols-outlined text-[17px] text-accent-amber">local_fire_department</span>;
 }
 
-/** fill_blank / word_bank: type-in with an optional tile bank. */
+/** fill_blank / word_bank / the self-healing type-in: type-in with an
+ *  optional tile bank. Keyed by question id so a new question always
+ *  starts with a clean input (the founder's screenshot: Q7's box still
+ *  carried Q6's "Anion"). Judgement compares the typed text against the
+ *  ANSWER TEXT (what a letter answer points at), never against a bare
+ *  letter the student cannot see. */
 function BlankInput({
-  q, revealed, onJudge,
+  q, revealed, onJudge, answerText,
 }: {
-  q: LearnQuizQ; revealed: boolean;
+  q: LearnQuizQ; revealed: boolean; answerText: string;
   onJudge: (isRight: boolean, userText: string) => void;
 }) {
   const entries = useMemo(() => Object.entries(q.options ?? {}), [q.options]);
   const [value, setValue] = useState('');
 
+  const norm = (s: unknown) => String(s ?? '').trim().toLowerCase();
+  const isAnswerText = (text: string) => norm(text) === norm(answerText) || norm(text) === norm(q.answer);
+
   const check = (text: string) => {
     if (revealed) return;
-    const right = String(text).trim().toLowerCase() === String(q.answer).trim().toLowerCase();
-    onJudge(right, text);
+    onJudge(isAnswerText(text), text);
   };
 
-  const right = revealed && value.trim().toLowerCase() === String(q.answer).trim().toLowerCase();
+  const right = revealed && (isAnswerText(value) || norm(value) === norm(answerText));
   return (
     <div className="flex flex-col gap-3">
       <input
@@ -563,7 +605,7 @@ function BlankInput({
               disabled={revealed}
               onClick={() => { setValue(w); check(w); }}
               className={`rounded-lg border-2 px-3 py-1.5 text-[13px] font-extrabold transition ${
-                revealed && String(w).toLowerCase() === String(q.answer).trim().toLowerCase()
+                revealed && (norm(w) === norm(answerText) || norm(w) === norm(q.answer))
                   ? 'border-primary bg-primary text-white'
                   : 'border-outline-variant bg-card text-on-surface'
               }`}
@@ -578,7 +620,7 @@ function BlankInput({
       )}
       {revealed && (
         <p className={`text-[13px] font-black ${right ? 'text-primary-ink' : 'text-error'}`}>
-          {right ? 'Correct!' : `Answer: ${q.answer}`}
+          {right ? 'Correct!' : `Answer: ${answerText}`}
         </p>
       )}
     </div>

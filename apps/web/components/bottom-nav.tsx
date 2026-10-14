@@ -38,7 +38,7 @@ export default function BottomNav() {
               aria-current={active ? 'page' : undefined}
               className={`flex min-h-[48px] min-w-0 flex-1 flex-col items-center justify-center gap-0.5 rounded-xl px-0.5 py-1 transition-colors ${
                 active
-                  ? 'bg-macaw-light text-macaw-dark'
+                  ? 'nav-pill bg-macaw-light text-macaw-dark'
                   : 'text-hare hover:text-wolf'
               }`}
             >
