@@ -25,15 +25,26 @@ func (s *Server) handleLearnProfile(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, p)
 }
 
-// PATCH /learn/profile {dailyGoal?} - settings mutations.
+// PATCH /learn/profile {dailyGoal?, institutionType?, department?} -
+// settings + course desk mutations. The desk pair validates against
+// the seeded departments (learn.SetDesk) before it saves.
 func (s *Server) handleLearnPatchProfile(w http.ResponseWriter, r *http.Request) {
 	userID := r.Context().Value(ctxUserID).(string)
 	var body struct {
-		DailyGoal *int `json:"dailyGoal"`
+		DailyGoal       *int   `json:"dailyGoal"`
+		InstitutionType string `json:"institutionType"`
+		Department      string `json:"department"`
+		SetDesk         bool   `json:"setDesk"`
 	}
 	if err := json.NewDecoder(http.MaxBytesReader(w, r.Body, 4096)).Decode(&body); err != nil {
 		fail(w, http.StatusBadRequest, "bad_json", "invalid request body")
 		return
+	}
+	if body.SetDesk {
+		if err := s.learn.SetDesk(r.Context(), userID, body.InstitutionType, body.Department); err != nil {
+			fail(w, http.StatusBadRequest, "learn_desk", err.Error())
+			return
+		}
 	}
 	if body.DailyGoal != nil {
 		if err := s.learn.SetDailyGoal(r.Context(), userID, *body.DailyGoal); err != nil {
@@ -82,6 +93,57 @@ func (s *Server) handleLearnFaculties(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	writeJSON(w, http.StatusOK, map[string]any{"faculties": f})
+}
+
+// GET /learn/departments?itype=University - the department gate list.
+func (s *Server) handleLearnDepartments(w http.ResponseWriter, r *http.Request) {
+	deps, err := s.learn.Departments(r.Context(), r.URL.Query().Get("itype"))
+	if err != nil {
+		fail(w, http.StatusInternalServerError, "learn_departments", err.Error())
+		return
+	}
+	writeJSON(w, http.StatusOK, map[string]any{"departments": deps})
+}
+
+// GET /learn/course-desk - the tertiary shelves: general first, then
+// the student's department.
+func (s *Server) handleLearnCourseDesk(w http.ResponseWriter, r *http.Request) {
+	userID := r.Context().Value(ctxUserID).(string)
+	shelf, err := s.learn.CourseDesk(r.Context(), userID)
+	if err != nil {
+		fail(w, http.StatusInternalServerError, "learn_desk", err.Error())
+		return
+	}
+	writeJSON(w, http.StatusOK, shelf)
+}
+
+// GET /learn/search?q= - code / title / key-topic search over the
+// tertiary tree.
+func (s *Server) handleLearnSearch(w http.ResponseWriter, r *http.Request) {
+	userID := r.Context().Value(ctxUserID).(string)
+	items, err := s.learn.SearchCourses(r.Context(), userID, r.URL.Query().Get("q"))
+	if err != nil {
+		fail(w, http.StatusInternalServerError, "learn_search", err.Error())
+		return
+	}
+	writeJSON(w, http.StatusOK, map[string]any{"items": items})
+}
+
+// POST /learn/ai-match {text} - the AI course finder: paste your
+// course titles, the matcher grounds every line in the real catalogue.
+func (s *Server) handleLearnAIMatch(w http.ResponseWriter, r *http.Request) {
+	userID := r.Context().Value(ctxUserID).(string)
+	var body learn.AIMatchRequest
+	if err := json.NewDecoder(http.MaxBytesReader(w, r.Body, 1<<16)).Decode(&body); err != nil {
+		fail(w, http.StatusBadRequest, "bad_json", "invalid request body")
+		return
+	}
+	lines, err := s.learn.AIMatchCourses(r.Context(), userID, body.Text)
+	if err != nil {
+		fail(w, http.StatusInternalServerError, "learn_ai_match", err.Error())
+		return
+	}
+	writeJSON(w, http.StatusOK, map[string]any{"lines": lines})
 }
 
 // GET /learn/my-courses

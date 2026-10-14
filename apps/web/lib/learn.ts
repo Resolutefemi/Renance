@@ -28,6 +28,9 @@ export interface LearnProfile {
   courseCount: number;
   topicsDone: number;
   perfectCount: number;
+  institutionType: string;
+  department: string;
+  departmentName: string;
 }
 
 export interface CatalogItem {
@@ -235,6 +238,76 @@ export async function fetchCatalog(params: {
 
 export async function fetchMyCourses(): Promise<{ courses: MyCourse[] }> {
   return api<{ courses: MyCourse[] }>('/learn/my-courses');
+}
+
+// ─── The course desk (founder directive 2026-10-14: institution kind
+// ─── gate, then department gate, general-first shelves, search, AI) ──────
+
+export interface DeskCourse {
+  id: string;
+  code: string; // short dept code badge, no numbers
+  title: string;
+  department: string;
+  topicCount: number;
+  inList: boolean;
+}
+
+export interface DeskShelves {
+  institutionType: string;
+  department: string;
+  departmentName: string;
+  general: DeskCourse[];
+  departmental: DeskCourse[];
+}
+
+export interface DeskDepartment {
+  id: string;
+  faculty: string;
+  name: string;
+  focus: string;
+  courseCount: number;
+}
+
+export interface AIMatchLine {
+  input: string;
+  matches: DeskCourse[];
+  picked?: string;
+}
+
+/** The institution-kind gate options (matches learn.departments.itype). */
+export const DESK_INSTITUTIONS = ['University', 'Polytechnic', 'College of Education'] as const;
+
+/** The student's saved desk (from the learn profile). */
+export function fetchDeskProfile(): Promise<Pick<LearnProfile, 'institutionType' | 'department' | 'departmentName'>> {
+  return api('/learn/profile');
+}
+
+/** Save the institution kind + department (real rows in learn.learners). */
+export function saveDesk(institutionType: string, department: string): Promise<LearnProfile> {
+  return api('/learn/profile', {
+    method: 'PATCH',
+    body: { setDesk: true, institutionType, department },
+  });
+}
+
+/** Departments of one institution kind, from the seeded curriculum. */
+export function fetchDepartments(itype: string): Promise<{ departments: DeskDepartment[] }> {
+  return api(`/learn/departments?itype=${encodeURIComponent(itype)}`);
+}
+
+/** The tertiary shelves: national general courses first, then the department. */
+export function fetchCourseDesk(): Promise<DeskShelves> {
+  return api('/learn/course-desk');
+}
+
+/** Code / title / key-topic search over the tertiary tree. */
+export function searchDeskCourses(q: string): Promise<{ items: DeskCourse[] }> {
+  return api(`/learn/search?q=${encodeURIComponent(q)}`);
+}
+
+/** AI course finder: paste the registration slip, get grounded matches. */
+export function aiMatchCourses(text: string): Promise<{ lines: AIMatchLine[] }> {
+  return api('/learn/ai-match', { method: 'POST', body: { text } });
 }
 
 export async function setMyCourses(courseIds: string[]): Promise<{ courses: MyCourse[] }> {
