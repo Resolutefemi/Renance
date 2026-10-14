@@ -167,7 +167,8 @@ export interface LeagueEntry {
   xp: number;
   color: string;
   isYou: boolean;
-  /** Set on REAL members (never the deterministic rivals) - link them to /u/{username}. */
+  /** Set on REAL members - every board row is a real account now, and
+ *  links to /u/{username}. */
   username?: string;
   isReal: boolean;
 }
@@ -284,9 +285,14 @@ export function fetchDeskProfile(): Promise<Pick<LearnProfile, 'institutionType'
 
 /** Save the institution kind + department (real rows in learn.learners). */
 export function saveDesk(institutionType: string, department: string): Promise<LearnProfile> {
+  // The desk save is a full upsert of two columns: re-issuing it after
+  // a cold-start timeout lands the same state, and the founder's
+  // "not saved, try again" on every first pick was exactly this
+  // mutation dying mid-wake-up.
   return api('/learn/profile', {
     method: 'PATCH',
     body: { setDesk: true, institutionType, department },
+    idempotentRetry: true,
   });
 }
 
@@ -370,7 +376,9 @@ export async function fetchQuests(): Promise<QuestsResponse> {
 }
 
 export async function claimQuest(questKey: string): Promise<{ gems: number }> {
-  return api<{ gems: number }>('/learn/quests', { method: 'POST', body: { questKey } });
+  // PK-guarded server side (quest_claims): a retry after a lost
+  // connection re-answers "already claimed", never double-pays.
+  return api<{ gems: number }>('/learn/quests', { method: 'POST', body: { questKey }, idempotentRetry: true });
 }
 
 export async function fetchShop(): Promise<ShopResponse> {
@@ -378,7 +386,10 @@ export async function fetchShop(): Promise<ShopResponse> {
 }
 
 export async function buyShopItem(item: string): Promise<ShopResponse> {
-  return api<ShopResponse>('/learn/shop', { method: 'POST', body: { item } });
+  // The wallet re-validates on every apply (stash full / already
+  // running / not enough gems), so a cold-start retry cannot
+  // double-spend gems.
+  return api<ShopResponse>('/learn/shop', { method: 'POST', body: { item }, idempotentRetry: true });
 }
 
 export async function fetchLeague(): Promise<LeagueBoard> {
@@ -386,7 +397,9 @@ export async function fetchLeague(): Promise<LeagueBoard> {
 }
 
 export async function openChest(chestKey: string): Promise<{ chestKey: string; gems: number; gemsTotal: number }> {
-  return api(`/learn/chests`, { method: 'POST', body: { chestKey } });
+  // chest_opens is keyed per (user, chestKey): the retry either lands
+  // fresh or answers "already opened", never double-pays.
+  return api(`/learn/chests`, { method: 'POST', body: { chestKey }, idempotentRetry: true });
 }
 
 export async function fetchPractice(): Promise<{ questions: PracticeQuestion[] }> {

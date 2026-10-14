@@ -12,8 +12,10 @@ BASE="${1:-http://127.0.0.1:3990}"
 jsonget() { python3 -c "import json,sys;d=json.load(sys.stdin);print(eval(sys.argv[1]))" "$1"; }
 step() { printf '▸ %s\n' "$1"; }
 
-step "healthz (db must be ok)"
-curl -A "RenanceE2E/1.0 (CI probe)" -fsS "$BASE/healthz" | grep -q '"db":"ok"'
+step "readyz (the REAL Postgres probe - healthz is DB-free by doctrine)"
+curl -A "RenanceE2E/1.0 (CI probe)" -fsS "$BASE/readyz" | grep -q '"db":"ok"'
+step "healthz answers DB-free (never wakes Neon)"
+printf '%s' "$(curl -A "RenanceE2E/1.0 (CI probe)" -fsS "$BASE/healthz")" | grep -q '"db":"not-probed'
 
 USERNAME="e2e$RANDOM$RANDOM"
 PASSWORD="e2e-password-1"
@@ -993,5 +995,147 @@ printf '%s' "$PACK" | jsonget "d['version']" | grep -qE "^[0-9]+-[0-9]+-[0-9]{14
 printf '%s' "$PACK" | jsonget "d['fetchedAt']" | grep -qE "^20[0-9]{2}-"
 # a syllabus branch carries a class + subject name so the app pickers work
 printf '%s' "$PACK" | jsonget "d['syllabus'][0]['className']" | grep -qE "."
+
+# --- Learn module (founder directive 2026-10-14): the desk that ate the
+# first tap, the LIVE quests, the guarded shop wallet and the REAL-only
+# league board. Every assertion here is a regression net for bugs the
+# founder hit on the live site. ---
+AUTHH="Authorization: Bearer $TOKEN"
+
+step "learn: first desk save STICKS (regression: the eaten first tap)"
+DESK=$(curl -A "RenanceE2E/1.0 (CI probe)" -fsS -X PATCH "$BASE/learn/profile" \
+  -H "$AUTHH" -H 'Content-Type: application/json' \
+  -d '{"setDesk":true,"institutionType":"University","department":""}')
+printf '%s' "$DESK" | jsonget "d['institutionType']" | grep -q "University"
+
+step "learn: departments seed waits in the background, then lists"
+DEPTS="[]"
+for _ in $(seq 1 150); do
+  DEPTS=$(curl -A "RenanceE2E/1.0 (CI probe)" -fsS "$BASE/learn/departments?itype=University" -H "$AUTHH")
+  N=$(printf '%s' "$DEPTS" | jsonget "len(d['departments'])")
+  [ "$N" -ge 1 ] && break
+  sleep 2
+done
+[ "$N" -ge 1 ]
+DEPT=$(printf '%s' "$DEPTS" | jsonget "d['departments'][0]['id']")
+
+step "learn: department save sticks + reads back from the DB"
+curl -A "RenanceE2E/1.0 (CI probe)" -fsS -X PATCH "$BASE/learn/profile" \
+  -H "$AUTHH" -H 'Content-Type: application/json' \
+  -d "{\"setDesk\":true,\"institutionType\":\"University\",\"department\":\"$DEPT\"}" >/dev/null
+curl -A "RenanceE2E/1.0 (CI probe)" -fsS "$BASE/learn/profile" -H "$AUTHH" \
+  | jsonget "d['institutionType'] + '/' + d['department']" | grep -q "University/"
+
+step "learn: mismatched department rejected (Polytechnic desk, University dept)"
+CODE=$(curl -A "RenanceE2E/1.0 (CI probe)" -s -o /dev/null -w '%{http_code}' -X PATCH "$BASE/learn/profile" \
+  -H "$AUTHH" -H 'Content-Type: application/json' \
+  -d "{\"setDesk\":true,\"institutionType\":\"Polytechnic\",\"department\":\"$DEPT\"}")
+[ "$CODE" = "400" ]
+
+step "learn: course desk shelf answers"
+SHELF=$(curl -A "RenanceE2E/1.0 (CI probe)" -fsS "$BASE/learn/course-desk" -H "$AUTHH")
+SHELFN=$(printf '%s' "$SHELF" | python3 -c "
+import json,sys
+d=json.load(sys.stdin)
+n=0
+for k in ('general','departmental','national','department','shelves','courses'):
+    v=d.get(k)
+    if isinstance(v,list): n+=len(v)
+    elif isinstance(v,dict): n+=sum(len(x) for x in v.values() if isinstance(x,list))
+print(n)")
+[ "$SHELFN" -ge 1 ]
+
+step "learn: course path serves a real topic id"
+COURSE=$(printf '%s' "$SHELF" | python3 -c "
+import json,sys
+d=json.load(sys.stdin)
+cid=None
+def hunt(o):
+    global cid
+    if isinstance(o,dict):
+        if o.get('id') and o.get('topicCount') is not None and cid is None: cid=o['id']
+        for v in o.values(): hunt(v)
+    elif isinstance(o,list):
+        for v in o: hunt(v)
+hunt(d)
+print(cid or '')")
+[ -n "$COURSE" ]
+# course ids carry spaces ("GST 103") - the URL needs them encoded
+COURSE_ENC=$(python3 -c "import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1]))" "$COURSE")
+PATHJ=$(curl -A "RenanceE2E/1.0 (CI probe)" -fsS "$BASE/learn/courses/$COURSE_ENC" -H "$AUTHH")
+TOPIC=$(printf '%s' "$PATHJ" | python3 -c "
+import json,sys
+d=json.load(sys.stdin)
+for t in d.get('topics') or []:
+    if t.get('id'):
+        print(t['id']); break
+else:
+    print('')")
+[ -n "$TOPIC" ]
+
+step "learn: completing a topic pays XP into the LIVE quest counters (not mock)"
+PROG=$(curl -A "RenanceE2E/1.0 (CI probe)" -fsS -X POST "$BASE/learn/progress" \
+  -H "$AUTHH" -H 'Content-Type: application/json' \
+  -d "{\"topicId\":\"$TOPIC\",\"correct\":10,\"total\":10,\"maxCombo\":3}")
+printf '%s' "$PROG" | jsonget "d['xpEarned']" | grep -qE "^[0-9]+$"
+XPQ1=$(curl -A "RenanceE2E/1.0 (CI probe)" -fsS "$BASE/learn/quests" -H "$AUTHH" \
+  | jsonget "sum(q['progress'] for q in d['daily'] if q['kind']=='xp')")
+[ "$XPQ1" -ge 1 ]
+
+step "learn: quest catalogue serves 3 dailies + weekly + monthly"
+QUESTS=$(curl -A "RenanceE2E/1.0 (CI probe)" -fsS "$BASE/learn/quests" -H "$AUTHH")
+[ "$(printf '%s' "$QUESTS" | jsonget "len(d['daily'])")" -eq 3 ]
+printf '%s' "$QUESTS" | jsonget "d['weekly']['key']" | grep -q "weekly_xp_250"
+printf '%s' "$QUESTS" | jsonget "d['monthly']['key']" | grep -q "monthly_xp_1000"
+
+step "learn: a finished quest CLAIMS gems into the live wallet"
+# Any daily whose progress crossed its target is claimable right now;
+# the claim must pay gems and mark the row claimed (PK-guarded).
+CLAIMABLE=$(printf '%s' "$QUESTS" | python3 -c "
+import json,sys
+d=json.load(sys.stdin)
+done=[q['key'] for q in d['daily'] if q.get('complete')]
+print(done[0] if done else '')")
+if [ -n "$CLAIMABLE" ]; then
+  CKEY="$CLAIMABLE"
+  GEMS_BEFORE=$(curl -A "RenanceE2E/1.0 (CI probe)" -fsS "$BASE/learn/shop" -H "$AUTHH" | jsonget "d['gems']")
+  CLAIM=$(curl -A "RenanceE2E/1.0 (CI probe)" -fsS -X POST "$BASE/learn/quests" \
+    -H "$AUTHH" -H 'Content-Type: application/json' -d "{\"questKey\":\"$CKEY\"}")
+  [ "$(printf '%s' "$CLAIM" | jsonget "d['gems']")" -ge 1 ]
+  curl -A "RenanceE2E/1.0 (CI probe)" -fsS "$BASE/learn/shop" -H "$AUTHH" \
+    | python3 -c "
+import json,sys
+d=json.load(sys.stdin)
+assert d['gems'] > $GEMS_BEFORE, f\"gems did not grow: {d['gems']} <= $GEMS_BEFORE\"
+print('gems grew after claim')"
+  # claiming twice must refuse, never double-pay
+  CODE=$(curl -A "RenanceE2E/1.0 (CI probe)" -s -o /dev/null -w '%{http_code}' -X POST "$BASE/learn/quests" \
+    -H "$AUTHH" -H 'Content-Type: application/json' -d "{\"questKey\":\"$CKEY\"}")
+  [ "$CODE" = "400" ]
+else
+  echo "no daily finished yet today (deterministic pick) - claim path covered by unit tests"
+fi
+
+step "learn: shop wallet is LIVE (gems read + guarded buy refuses an empty wallet)"
+SHOP=$(curl -A "RenanceE2E/1.0 (CI probe)" -fsS "$BASE/learn/shop" -H "$AUTHH")
+printf '%s' "$SHOP" | jsonget "d['gems']" | grep -qE "^[0-9]+$"
+[ "$(printf '%s' "$SHOP" | jsonget "len(d['items'])")" -eq 3 ]
+CODE=$(curl -A "RenanceE2E/1.0 (CI probe)" -s -o /dev/null -w '%{http_code}' -X POST "$BASE/learn/shop" \
+  -H "$AUTHH" -H 'Content-Type: application/json' -d '{"item":"freeze"}')
+[ "$CODE" = "400" ]
+
+step "learn: league board is REAL-only (regression: the 30 synthetic rivals)"
+LEAGUE=$(curl -A "RenanceE2E/1.0 (CI probe)" -fsS "$BASE/learn/leaderboard" -H "$AUTHH")
+printf '%s' "$LEAGUE" | jsonget "d['entries'][0]['isYou']" | grep -q "True"
+FAKES=$(printf '%s' "$LEAGUE" | python3 -c "
+import json,sys
+d=json.load(sys.stdin)
+print(sum(1 for e in d['entries'] if not e.get('isYou') and not e.get('username')))")
+[ "$FAKES" -eq 0 ]
+printf '%s' "$LEAGUE" | jsonget "d['league']" | grep -qE "^(Bronze|Copper|Silver|Gold|Sapphire|Ruby|Emerald|Amethyst|Pearl|Diamond)$"
+
+step "learn: league without token -> 401"
+CODE=$(curl -A "RenanceE2E/1.0 (CI probe)" -s -o /dev/null -w '%{http_code}' "$BASE/learn/leaderboard")
+[ "$CODE" = "401" ]
 
 printf 'ALL E2E STEPS GREEN, %s\n' "$BASE"

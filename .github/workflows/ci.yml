@@ -52,12 +52,15 @@ jobs:
       - name: Build API binary
         working-directory: apps/study-api
         run: go build -o /tmp/study-api ./cmd/api
-      - name: Boot API (waits for /healthz db=ok)
+      - name: Boot API (waits for /readyz db=ok)
         run: |
           /tmp/study-api &
-          for _ in $(seq 1 30); do
-            if curl -fsS http://127.0.0.1:3990/healthz | grep -q '"db":"ok"'; then
-              echo "API healthy"; exit 0
+          for _ in $(seq 1 60); do
+            # /readyz is the REAL Postgres probe. /healthz is DB-free by
+            # doctrine (keep-warm pingers must never wake Neon), so it
+            # can no longer prove the DB is reachable - readyz can.
+            if curl -fsS http://127.0.0.1:3990/readyz | grep -q '"db":"ok"'; then
+              echo "API healthy (Postgres reachable)"; exit 0
             fi
             sleep 1
           done
