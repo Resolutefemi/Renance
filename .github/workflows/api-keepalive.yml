@@ -8,8 +8,9 @@ name: api-keepalive (Render free tier)
 # delays scheduled runs by wide margins on free repos - the old */10
 # schedule actually landed only 3-6 times a DAY, far too few to matter.
 # Denser cron = more chances to land a warm-up between real students.
-# Each ping also touches Postgres (/healthz pings the DB), which keeps
-# the Neon compute from suspending between lessons.
+# The ping points at /healthz, which is DB-free by doctrine
+# (2026-10-14): it keeps the RENDER service warm without ever waking
+# the Neon database - the compute stays suspended between lessons.
 
 on:
   schedule:

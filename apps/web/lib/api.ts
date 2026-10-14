@@ -67,6 +67,15 @@ interface Options {
    *  /login. Content endpoints with a local fallback (question bundles)
    *  must never kick a student out of what they were doing. */
   noRedirect?: boolean;
+  /** Opt-in single retry for IDEMPOTENT mutations when the connection
+   *  itself dies (timeout / dead socket). Render's free-plan cold start
+   *  outruns even 45s, and the desk save died exactly there (founder
+   *  report 2026-10-14: "not saved, try again" on every first pick
+   *  after a break). Only calls whose server side re-validates and
+   *  refuses a double apply (desk upsert, PK-guarded claims, guarded
+   *  wallet buys) may set this - retrying a fresh exam submit here
+   *  would double-count it, so the default stays NO retry. */
+  idempotentRetry?: boolean;
 }
 
 /**
@@ -96,9 +105,10 @@ export async function api<T>(path: string, opts: Options = {}): Promise<T> {
   // cache / friendly notice instead of an eternal spinner.
   // GETs retry once automatically: a cold-start connection that dies
   // mid-warm-up is the most common first-tap failure, and a read is
-  // always safe to re-issue. Mutating methods never auto-retry here
-  // (a retried POST could double-submit an attempt).
-  const canRetry = (opts.method ?? 'GET') === 'GET';
+  // always safe to re-issue. Mutating methods stay single-shot UNLESS
+  // the caller opts in with idempotentRetry (server-guarded upserts
+  // and PK-guarded claims only).
+  const canRetry = (opts.method ?? 'GET') === 'GET' || opts.idempotentRetry === true;
   let res: Response | null = null;
   let lastErr: unknown = null;
   for (let attempt = 0; attempt < (canRetry ? 2 : 1); attempt++) {

@@ -19,38 +19,38 @@ import (
 // ─── Completion ledger ────────────────────────────────────────────────────
 
 type MistakeIn struct {
-        ID         string          `json:"id"`
-        Stem       string          `json:"stem"`
-        Type       string          `json:"type"`
-        Options    map[string]string `json:"options,omitempty"`
-        Answer     string          `json:"answer"`
-        Explanation string         `json:"explanation,omitempty"`
-        UserAnswer json.RawMessage `json:"userAnswer,omitempty"`
-        Year       int             `json:"year,omitempty"`
+        ID          string            `json:"id"`
+        Stem        string            `json:"stem"`
+        Type        string            `json:"type"`
+        Options     map[string]string `json:"options,omitempty"`
+        Answer      string            `json:"answer"`
+        Explanation string            `json:"explanation,omitempty"`
+        UserAnswer  json.RawMessage   `json:"userAnswer,omitempty"`
+        Year        int               `json:"year,omitempty"`
 }
 
 type CompleteRequest struct {
-        TopicID   string       `json:"topicId"`
-        Correct   int          `json:"correct"`
-        Total     int          `json:"total"`
-        MaxCombo  int          `json:"maxCombo"`
-        Mistakes  []MistakeIn  `json:"mistakes"`
-        Abandoned bool         `json:"abandoned"`
+        TopicID   string      `json:"topicId"`
+        Correct   int         `json:"correct"`
+        Total     int         `json:"total"`
+        MaxCombo  int         `json:"maxCombo"`
+        Mistakes  []MistakeIn `json:"mistakes"`
+        Abandoned bool        `json:"abandoned"`
 }
 
 type CompleteResult struct {
-        XPEarned      int    `json:"xpEarned"`
-        GemsEarned    int    `json:"gemsEarned"`
-        Perfect       bool   `json:"perfect"`
-        FirstClear    bool   `json:"firstClear"`
-        ComboBonus    int    `json:"comboBonus"`
-        Boosted       bool   `json:"boosted"`
-        Streak        int    `json:"streak"`
-        Hearts        int    `json:"hearts"`
-        Unlimited     bool   `json:"unlimitedHearts"`
-        Gems          int    `json:"gems"`
-        XPTotal       int    `json:"xp"`
-        CompletedPct  int    `json:"completedPercent"`
+        XPEarned     int  `json:"xpEarned"`
+        GemsEarned   int  `json:"gemsEarned"`
+        Perfect      bool `json:"perfect"`
+        FirstClear   bool `json:"firstClear"`
+        ComboBonus   int  `json:"comboBonus"`
+        Boosted      bool `json:"boosted"`
+        Streak       int  `json:"streak"`
+        Hearts       int  `json:"hearts"`
+        Unlimited    bool `json:"unlimitedHearts"`
+        Gems         int  `json:"gems"`
+        XPTotal      int  `json:"xp"`
+        CompletedPct int  `json:"completedPercent"`
 }
 
 // Complete records a topic attempt and pays every reward. Abandoned
@@ -273,12 +273,12 @@ func boolInt(b bool) int {
 // ─── Weekly league (rollover + board) ─────────────────────────────────────
 
 type LeagueEntry struct {
-        Name    string `json:"name"`
-        XP      int    `json:"xp"`
-        Color   string `json:"color"`
-        IsYou   bool   `json:"isYou"`
-        // Username is set on REAL members (never the deterministic
-        // rivals): the board links those rows to the public profile.
+        Name  string `json:"name"`
+        XP    int    `json:"xp"`
+        Color string `json:"color"`
+        IsYou bool   `json:"isYou"`
+        // Username is set on REAL members: the board links those rows
+        // to the public profile. Every row is real now - no fillers.
         Username string `json:"username,omitempty"`
         IsReal   bool   `json:"isReal"`
 }
@@ -297,7 +297,8 @@ type LeagueBoard struct {
 
 // ensureLeague finalizes last week when the learner's first touch of
 // the new week happens (promotion pays 50 gems), then seats them in
-// the current week's board.
+// the current week's board. Promotion and demotion rank the learner
+// against the REAL members of their league only.
 func (s *Service) ensureLeague(ctx context.Context, q querier, userID string) error {
         now := time.Now()
         thisWeek := weekKey(now)
@@ -315,8 +316,9 @@ func (s *Service) ensureLeague(ctx context.Context, q querier, userID string) er
                 return nil
         }
 
-        // Finalize the previous week: your XPEvent sum vs the deterministic
-        // rivals at full-week pace.
+        // Finalize the previous week: rank the live XPEvent sum against
+        // the REAL members seated in that week's league (founder directive
+        // 2026-10-14: no synthetic rivals anywhere).
         prev := weekKey(now.AddDate(0, 0, -7))
         var mine int
         _ = q.QueryRow(ctx, `SELECT COALESCE(SUM(amount),0) FROM learn.xp_events WHERE user_id=$1 AND week_key=$2`,
@@ -331,12 +333,17 @@ func (s *Service) ensureLeague(ctx context.Context, q querier, userID string) er
 
         promoted, demoted := false, false
         if mine > 0 || prevRow.league > 0 {
-                rank := 1
-                for _, r := range RivalsFor(prev, effLeague, 1.0) {
-                        if r.XP > mine {
-                                rank++
-                        }
-                }
+                var ahead int
+                _ = q.QueryRow(ctx, `
+                        SELECT COUNT(*) FROM (
+                                SELECT lm.user_id
+                                FROM learn.league_members lm
+                                LEFT JOIN learn.xp_events x ON x.user_id = lm.user_id AND x.week_key = lm.week_key
+                                WHERE lm.week_key = $1 AND lm.league = $2 AND lm.user_id <> $3
+                                GROUP BY lm.user_id
+                                HAVING COALESCE(SUM(x.amount), 0) > $4
+                        ) t`, prev, effLeague, userID, mine).Scan(&ahead)
+                rank := ahead + 1
                 if rank <= PromoteCut {
                         promoted = true
                         if _, err := q.Exec(ctx, `UPDATE learn.learners SET gems = gems + $2 WHERE user_id=$1`,
@@ -374,7 +381,9 @@ func (s *Service) leagueIndex(ctx context.Context, userID string) int {
         return idx
 }
 
-// League renders the weekly board: you + 30 deterministic rivals,
+// League renders the weekly board: you + every REAL member seated in
+// this week's league (founder directive 2026-10-14: the synthetic rival
+// rows are gone - a small board is simply a small board), the
 // promote/demote zones and the countdown.
 func (s *Service) League(ctx context.Context, userID string) (*LeagueBoard, error) {
         if err := s.ensureLearner(ctx, s.Pool, userID); err != nil {
@@ -394,20 +403,16 @@ func (s *Service) League(ctx context.Context, userID string) (*LeagueBoard, erro
         _ = s.Pool.QueryRow(ctx, `SELECT COALESCE(SUM(amount),0) FROM learn.xp_events WHERE user_id=$1 AND week_key=$2`,
                 userID, week).Scan(&mine)
 
-        // Week progress drives rival pacing (Supreme weekProgress).
-        start := weekStart(now)
-        progress := now.Sub(start).Hours() / (7 * 24)
-
         board := &LeagueBoard{
                 League: Leagues[clamp(league, 0, len(Leagues)-1)], LeagueIndex: league,
-                EndsInMs: WeekEndsIn().Sub(now).Milliseconds(),
+                EndsInMs:    WeekEndsIn().Sub(now).Milliseconds(),
                 PromotedCut: PromoteCut, DemotedFrom: DemoteFrom,
         }
-        board.Entries = append(board.Entries, LeagueEntry{Name: "You", XP: mine, IsYou: true, IsReal: true})
+        board.Entries = append(board.Entries, LeagueEntry{Name: "You", XP: mine, IsYou: true, IsReal: true, Color: AvatarColor("you:" + userID)})
 
-        // Real members seated in this week's league (founder directive
-        // 2026-10-14: the board links to real profiles). They ride ahead
-        // of the deterministic rivals, ranked together below.
+        // Real members seated in this week's league, ranked by their live
+        // weekly XPEvent sum. Every row is a real account: the board links
+        // it to the public profile.
         realRows, err := s.Pool.Query(ctx, `
                 SELECT u.username, COALESCE(SUM(x.amount),0)
                 FROM learn.league_members lm
@@ -415,7 +420,7 @@ func (s *Service) League(ctx context.Context, userID string) (*LeagueBoard, erro
                 LEFT JOIN learn.xp_events x ON x.user_id = lm.user_id AND x.week_key = lm.week_key
                 WHERE lm.week_key = $1 AND lm.league = $2 AND lm.user_id <> $3
                 GROUP BY u.id, u.username
-                ORDER BY 2 DESC LIMIT 29`, week, league, userID)
+                ORDER BY 2 DESC LIMIT 30`, week, league, userID)
         if err == nil {
                 for realRows.Next() {
                         var name string
@@ -423,20 +428,9 @@ func (s *Service) League(ctx context.Context, userID string) (*LeagueBoard, erro
                         if err := realRows.Scan(&name, &xp); err != nil {
                                 break
                         }
-                        board.Entries = append(board.Entries, LeagueEntry{Name: name, XP: xp, Username: name, IsReal: true})
+                        board.Entries = append(board.Entries, LeagueEntry{Name: name, XP: xp, Username: name, IsReal: true, Color: AvatarColor(name)})
                 }
                 realRows.Close()
-        }
-        // The deterministic rivals fill the rest of the 30-seat board.
-        fill := 30 - len(board.Entries)
-        if fill > 0 {
-                for _, r := range RivalsFor(week, league, progress) {
-                        if fill <= 0 {
-                                break
-                        }
-                        board.Entries = append(board.Entries, LeagueEntry{Name: r.Name, XP: r.XP, Color: r.Color})
-                        fill--
-                }
         }
         // Rank by XP desc (stable: ties keep insertion order).
         for i := 0; i < len(board.Entries); i++ {
@@ -460,23 +454,34 @@ func (s *Service) League(ctx context.Context, userID string) (*LeagueBoard, erro
         return board, nil
 }
 
-func weekStart(now time.Time) time.Time {
-        n := now.In(lagos)
-        weekday := int(n.Weekday())
-        if weekday == 0 {
-                weekday = 7
+func minInt(a, b int) int {
+        if a < b {
+                return a
         }
-        return time.Date(n.Year(), n.Month(), n.Day(), 0, 0, 0, 0, lagos).AddDate(0, 0, -(weekday - 1))
+        return b
 }
-
-func minInt(a, b int) int { if a < b { return a }; return b }
-func maxInt(a, b int) int { if a > b { return a }; return b }
+func maxInt(a, b int) int {
+        if a > b {
+                return a
+        }
+        return b
+}
 
 // ─── Quests ───────────────────────────────────────────────────────────────
 
+// QuestOut is the serve shape: QuestDef carries the catalogue row,
+// the three state fields ride the OUTSIDE because QuestDef's own
+// Progress/Claimed/Complete are json:"-" (they exist only to be
+// filled at serve time). Without these the API shipped quests with
+// NO progress at all - every bar sat at zero and the founder read
+// the page as mock data (founder report 2026-10-14: "make sure the
+// quest is working live").
 type QuestOut struct {
         QuestDef
         PeriodKey string `json:"periodKey"`
+        Progress  int    `json:"progress"`
+        Claimed   bool   `json:"claimed"`
+        Complete  bool   `json:"complete"`
 }
 
 type QuestsResponse struct {
@@ -522,7 +527,7 @@ func (s *Service) Quests(ctx context.Context, userID string) (*QuestsResponse, e
         for _, q := range DailyQuestsFor(now) {
                 o := QuestOut{QuestDef: q, PeriodKey: day}
                 o.Progress = stat(o.Kind)
-                s.fillClaimState(ctx, userID, &o.QuestDef, day)
+                s.fillQuestState(ctx, userID, &o, day)
                 resp.Daily = append(resp.Daily, o)
         }
 
@@ -532,7 +537,7 @@ func (s *Service) Quests(ctx context.Context, userID string) (*QuestsResponse, e
                 userID, week).Scan(&weekXP)
         resp.Weekly = QuestOut{QuestDef: weeklyQuest, PeriodKey: week}
         resp.Weekly.Progress = weekXP
-        s.fillClaimState(ctx, userID, &resp.Weekly.QuestDef, week)
+        s.fillQuestState(ctx, userID, &resp.Weekly, week)
 
         month := monthKey(now)
         var monthXP int
@@ -541,16 +546,16 @@ func (s *Service) Quests(ctx context.Context, userID string) (*QuestsResponse, e
                 WHERE user_id=$1 AND day_key LIKE $2 || '-%'`, userID, month).Scan(&monthXP)
         resp.Monthly = QuestOut{QuestDef: monthlyQuest, PeriodKey: month}
         resp.Monthly.Progress = monthXP
-        s.fillClaimState(ctx, userID, &resp.Monthly.QuestDef, month)
+        s.fillQuestState(ctx, userID, &resp.Monthly, month)
         return resp, nil
 }
 
-func (s *Service) fillClaimState(ctx context.Context, userID string, q *QuestDef, periodKey string) {
+func (s *Service) fillQuestState(ctx context.Context, userID string, o *QuestOut, periodKey string) {
         var claimed bool
         _ = s.Pool.QueryRow(ctx, `SELECT EXISTS (SELECT 1 FROM learn.quest_claims WHERE user_id=$1 AND quest_key=$2 AND period_key=$3)`,
-                userID, q.Key, periodKey).Scan(&claimed)
-        q.Claimed = claimed
-        q.Complete = q.Progress >= q.Target && !claimed
+                userID, o.Key, periodKey).Scan(&claimed)
+        o.Claimed = claimed
+        o.Complete = o.Progress >= o.Target && !claimed
 }
 
 // ClaimQuest pays a finished quest's gems (idempotent via the PK).
@@ -619,14 +624,14 @@ func (s *Service) ClaimQuest(ctx context.Context, userID, questKey string) (int,
 // ─── Shop ─────────────────────────────────────────────────────────────────
 
 type ShopItem struct {
-        Key        string `json:"key"`
-        Title      string `json:"title"`
-        Desc       string `json:"desc"`
-        Gems       int    `json:"gems"`
-        Icon       string `json:"icon"`
-        Owned      int    `json:"owned"`
-        Max        int    `json:"max"`
-        SoldOut    bool   `json:"soldOut"`
+        Key     string `json:"key"`
+        Title   string `json:"title"`
+        Desc    string `json:"desc"`
+        Gems    int    `json:"gems"`
+        Icon    string `json:"icon"`
+        Owned   int    `json:"owned"`
+        Max     int    `json:"max"`
+        SoldOut bool   `json:"soldOut"`
 }
 
 type ShopResponse struct {
@@ -709,9 +714,9 @@ func (s *Service) Buy(ctx context.Context, userID, item string) (*ShopResponse, 
 // ─── Chests ───────────────────────────────────────────────────────────────
 
 type ChestResult struct {
-        ChestKey string `json:"chestKey"`
-        Gems     int    `json:"gems"`
-        GemsTotal int   `json:"gemsTotal"`
+        ChestKey  string `json:"chestKey"`
+        Gems      int    `json:"gems"`
+        GemsTotal int    `json:"gemsTotal"`
 }
 
 // OpenChest pays the unit-1 treasure chest (idempotent per key).

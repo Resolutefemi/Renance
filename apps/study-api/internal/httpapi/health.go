@@ -3,8 +3,20 @@ package httpapi
 import (
 	"context"
 	"net/http"
+	"os"
 	"time"
 )
+
+// buildVersion reports the git commit this binary was built from.
+// Render injects RENDER_GIT_COMMIT at build/run time; anything else
+// (local runs, CI) reads as "dev". Surfaced by /healthz so a DB-free
+// GET proves which deploy is live.
+var buildVersion = func() string {
+	if c := os.Getenv("RENDER_GIT_COMMIT"); len(c) >= 7 {
+		return c[:7]
+	}
+	return "dev"
+}()
 
 // NEON COMPUTE BUDGET (founder report 2026-10-14: Neon "81% of the 100
 // CU-hour monthly allowance" by mid-month). The math: 80.5 CU-hours over
@@ -16,11 +28,11 @@ import (
 //
 // The doctrine, therefore:
 //
-//	GET /healthz  - PROCESS health only. ZERO database calls. Any
-//	                monitor, cron or keep-warm pinger may hammer this
-//	                as often as it likes without ever waking Neon.
-//	GET /readyz   - the REAL Postgres probe. Humans and CI use it;
-//	                keep-warm pingers must NOT point here.
+//      GET /healthz  - PROCESS health only. ZERO database calls. Any
+//                      monitor, cron or keep-warm pinger may hammer this
+//                      as often as it likes without ever waking Neon.
+//      GET /readyz   - the REAL Postgres probe. Humans and CI use it;
+//                      keep-warm pingers must NOT point here.
 //
 // Deploy-time safety is unchanged: store.Connect still pings Postgres
 // once at boot, so a broken DATABASE_URL fails the deploy exactly as
@@ -30,11 +42,16 @@ import (
 // by touching Postgres. Uptime monitors and keep-warm pingers point
 // HERE (or at /app-version) - both are DB-free, so Neon can actually
 // scale to zero between real student traffic.
+//
+// The response also echoes the git commit the binary was built from
+// (Render injects RENDER_GIT_COMMIT), so a DB-free GET proves WHICH
+// deploy is live - "is the fix actually shipped?" without waking Neon.
 func (s *Server) handleHealth(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]any{
 		"status":  "ok",
 		"service": "renance-study-api",
 		"db":      "not-probed (see /readyz)",
+		"version": buildVersion,
 		"time":    time.Now().UTC().Format(time.RFC3339),
 	})
 }

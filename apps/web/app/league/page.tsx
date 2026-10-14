@@ -2,9 +2,11 @@
 
 /**
  * League - the weekly XP league of the merged learn module (founder
- * directive 2026-10-14). Your real week's XP from XPEvents stands
- * against the deterministic rival board; top 7 promote (+50 gems),
- * ranks 26+ demote. Countdown resets every Lagos Monday.
+ * directive 2026-10-14). Your real week's XP from XPEvents stands next
+ * to every REAL member seated in this week's league - the synthetic
+ * rival rows are retired (founder directive 2026-10-14: "remove those
+ * mock students") - top 7 promote (+50 gems), ranks 26+ demote.
+ * Countdown resets every Lagos Monday.
  */
 
 import { useCallback, useEffect, useState } from 'react';
@@ -88,10 +90,13 @@ export default function LeaguePage() {
               )}
             </header>
 
-            {/* Zones legend */}
+            {/* Zones legend (demotion only renders when the board is
+                actually big enough to have a demote zone) */}
             <div className="flex items-center justify-center gap-4 text-[11.5px] font-extrabold text-on-surface-variant">
               <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-primary" /> promotion zone (top {board.promotedCut})</span>
-              <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-error" /> demotion (rank {board.demotedFrom}+)</span>
+              {board.entries.length >= board.demotedFrom && (
+                <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-error" /> demotion (rank {board.demotedFrom}+)</span>
+              )}
             </div>
 
             {/* Board */}
@@ -99,8 +104,8 @@ export default function LeaguePage() {
               {board.entries.map((e, i) => {
                 const rank = i + 1;
                 const zone = rank <= board.promotedCut ? 'bg-primary' : rank >= board.demotedFrom ? 'bg-error' : 'bg-transparent';
-                // Real members (username present) open their public
-                // profile; the deterministic rivals stay plain.
+                // Every row is a real account: each one opens the
+                // member's public profile.
                 const body = (
                   <>
                     <span className={`absolute inset-y-0 left-0 w-1 ${zone}`} aria-hidden />
