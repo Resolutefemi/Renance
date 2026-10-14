@@ -341,6 +341,19 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
     };
   }, [code, retry]);
 
+  // The quiet self-reload (founder: "remove retry"): when the pack fails
+  // to open, the exam retries ITSELF a few times every few seconds
+  // before the scholar ever needs to care - no button to press.
+  useEffect(() => {
+    if (phase !== 'error') return;
+    if (retry >= 4) return; // four quiet attempts, then the notice stays
+    const t = window.setTimeout(() => {
+      setPhase('loading');
+      setRetry((n) => n + 1);
+    }, 4000);
+    return () => window.clearTimeout(t);
+  }, [phase, retry]);
+
   /** Rebuild a paused sitting: same picks, same walk, honest clock. */
   function resumeAttempt(snap: ActiveExam, b: Bundle) {
     let ordered = b;
@@ -888,21 +901,19 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         <p className="max-w-md rounded-xl bg-error-container px-6 py-5 text-center text-sm text-on-error-container">
           {error}
         </p>
-        <div className="mt-4 flex items-center gap-4">
-          <button
-            onClick={() => setRetry((n) => n + 1)}
-            className="flex h-11 items-center gap-2 rounded-[10px] bg-primary px-5 text-sm font-semibold text-on-primary transition-transform active:scale-[0.98]"
-          >
-            <span className="material-symbols-outlined text-[20px]">refresh</span>
-            Retry
-          </button>
-          <button
-            onClick={() => router.push('/dashboard')}
-            className="text-sm text-primary underline-offset-4 hover:underline"
-          >
-            ← back to dashboard
-          </button>
-        </div>
+        {/* No Retry button (founder directive: "remove retry"): the
+            loader self-heals - a quiet timer re-opens the pack every few
+            seconds up to four attempts, so a hiccup passes without the
+            scholar pressing anything. The back link stays as the exit. */}
+        <p className="mt-4 text-[13px] font-semibold text-on-surface-variant">
+          Retrying in a few seconds…
+        </p>
+        <button
+          onClick={() => router.push('/dashboard')}
+          className="mt-3 text-sm text-primary underline-offset-4 hover:underline"
+        >
+          ← back to dashboard
+        </button>
         {confirmCard}
       </Centered>
     );
