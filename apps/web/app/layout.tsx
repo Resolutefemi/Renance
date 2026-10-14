@@ -224,12 +224,27 @@ var lastKey='';
 function mixEdge(hex){hex=hex.replace('#','');if(hex.length===3)hex=hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];var r=parseInt(hex.slice(0,2),16),g=parseInt(hex.slice(2,4),16),b=parseInt(hex.slice(4,6),16);r=Math.round(r*0.62);g=Math.round(g*0.62);b=Math.round(b*0.62);return 'rgb('+r+','+g+','+b+')';}
 function letterFor(hex){hex=hex.replace('#','');if(hex.length===3)hex=hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];var r=parseInt(hex.slice(0,2),16)/255,g=parseInt(hex.slice(2,4),16)/255,b=parseInt(hex.slice(4,6),16)/255;var f=function(c){return c<=0.03928?c/12.92:Math.pow((c+0.055)/1.055,2.4);};var lum=0.2126*f(r)+0.7152*f(g)+0.0722*f(b);return lum>0.55?'#111c2d':'#ffffff';}
 function roundRect(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+/* A fresh (unpainted) icon link in the head? React 19 re-renders the
+   metadata links at hydration, REPLACING the painted ones with the
+   static green set - the repaint must survive that or the tab flips
+   back to green the moment the app hydrates. */
+function needsPaint(){
+var links=document.querySelectorAll('link[rel="icon"],link[rel="shortcut icon"],link[rel="apple-touch-icon"]');
+if(!links.length)return false;
+for(var i=0;i<links.length;i++){
+var h=links[i].getAttribute('href')||'';
+if(h.indexOf('data:image/png')!==0)return true;
+}
+return false;}
 function paintFav(){
 var root=document.documentElement;var cs=getComputedStyle(root);
 var prim=(cs.getPropertyValue('--color-primary')||'').trim()||'#58cc02';
 var onP=(cs.getPropertyValue('--color-on-primary')||'').trim()||letterFor(prim);
 if(prim.charAt(0)!=='#')return;
-var key=prim+'|'+onP;if(key===lastKey)return;lastKey=key;
+var key=prim+'|'+onP;
+/* Same colour is NOT the same as painted: hydration re-adds green
+   links with the colour unchanged, so the guard consults the head. */
+if(key===lastKey&&!needsPaint())return;
 try{
 var c=document.createElement('canvas');c.width=64;c.height=64;var x=c.getContext('2d');if(!x)return;
 x.clearRect(0,0,64,64);roundRect(x,3,3,58,58,15);x.fillStyle=mixEdge(prim);x.fill();
@@ -237,13 +252,22 @@ roundRect(x,3,3,58,50,15);x.fillStyle=prim;x.fill();
 var g=x.createLinearGradient(0,9,0,36);g.addColorStop(0,'rgba(255,255,255,0.30)');g.addColorStop(1,'rgba(255,255,255,0)');roundRect(x,9,9,46,27,10);x.fillStyle=g;x.fill();
 x.font='900 38px Nunito, "Arial Rounded MT Bold", Arial, sans-serif';x.textAlign='center';x.textBaseline='alphabetic';x.fillStyle=onP;x.fillText('R',32,42.5);
 var d=c.toDataURL('image/png');
-var icon=document.querySelector('link[rel="icon"]');if(icon){icon.setAttribute('type','image/png');icon.setAttribute('href',d);}
-var ai=document.querySelector('link[rel="apple-touch-icon"]');if(ai)ai.setAttribute('href',d);
-}catch(e){}}
+var links=document.querySelectorAll('link[rel="icon"],link[rel="shortcut icon"],link[rel="apple-touch-icon"]');
+if(!links.length){lastKey='';return;} /* head not parsed that far yet - a retry hook will run again */
+for(var i=0;i<links.length;i++){links[i].setAttribute('type','image/png');links[i].setAttribute('href',d);}
+lastKey=key;
+}catch(e){lastKey='';}}
 paintFav();
+setTimeout(paintFav,0);
+document.addEventListener('DOMContentLoaded',paintFav);
 window.addEventListener('load',paintFav);
-if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){lastKey='';paintFav();});
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(paintFav);
+(function tick(){paintFav();if(needsPaint())setTimeout(tick,120);})();
+/* Theme changes (html style/data-theme writes) repaint the keycap. */
 new MutationObserver(function(){lastKey='';paintFav();}).observe(document.documentElement,{attributes:true,attributeFilter:['style','data-theme']});
+/* Hydration / metadata re-renders (head link swaps) repaint too - the
+   guard's needsPaint check keeps this observer from looping. */
+if(document.head)new MutationObserver(function(){paintFav();}).observe(document.head,{childList:true,subtree:true,attributes:true,attributeFilter:['href','type']});
 }catch(e){}})();`;
 
 /* suppressHydrationWarning: the inline theme bootstrap writes data-theme

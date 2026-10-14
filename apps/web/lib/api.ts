@@ -77,11 +77,30 @@ export async function api<T>(path: string, opts: Options = {}): Promise<T> {
     const token = getToken();
     if (token) headers.Authorization = `Bearer ${token}`;
   }
-  const res = await fetch(`${API_BASE}${path}`, {
-    method: opts.method ?? 'GET',
-    headers,
-    body: opts.body === undefined ? undefined : JSON.stringify(opts.body),
-  });
+  // Dead-API guard (founder report 2026-10-14: "the new pages are still
+  // not loading"): when the study API hangs (Render restart, free-plan
+  // cold start, dead network) an untimed fetch holds every page on its
+  // skeletons for minutes. Twelve seconds is past any honest cold
+  // start; past it the call throws and every caller's catch falls back
+  // to the device cache / friendly notice instead of an eternal spinner.
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 12_000);
+  let res: Response;
+  try {
+    res = await fetch(`${API_BASE}${path}`, {
+      method: opts.method ?? 'GET',
+      headers,
+      body: opts.body === undefined ? undefined : JSON.stringify(opts.body),
+      signal: controller.signal,
+    });
+  } catch (err) {
+    if (controller.signal.aborted) {
+      throw new ApiError(0, 'timeout', 'The study API is not answering right now — try again shortly.');
+    }
+    throw err;
+  } finally {
+    clearTimeout(timer);
+  }
 
   if (res.status === 401 && opts.auth !== false && !opts.noRedirect) {
     clearSession();
