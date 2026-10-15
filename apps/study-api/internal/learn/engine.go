@@ -222,8 +222,8 @@ func validateNotesAI(raw []byte) (*aiLesson, error) {
 		if strings.Contains(n.Body, "<") && strings.Contains(n.Body, ">") {
 			return nil, fmt.Errorf("note %d contains HTML", i)
 		}
-		if words := len(strings.Fields(n.Body)); words < 140 {
-			return nil, fmt.Errorf("note %d is too thin (%d words, want >=140)", i, words)
+		if words := len(strings.Fields(n.Body)); words < 110 {
+			return nil, fmt.Errorf("note %d is too thin (%d words, want >=110)", i, words)
 		}
 	}
 	return &l, nil
