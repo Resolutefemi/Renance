@@ -694,7 +694,7 @@ func (s *Service) loadTopicCtx(ctx context.Context, topicID string) (*topicCtx, 
 
 // lessonGenBudget bounds one background generation (notes + top-up
 // rounds + quiz + bank parse + persist). Detached from any request.
-const lessonGenBudget = 240 * time.Second
+const lessonGenBudget = 300 * time.Second
 
 // lessonWaitBudget caps how long a wait=1 request blocks IN the handler.
 // The api server's WriteTimeout is 30s: a response that takes longer is
@@ -951,11 +951,11 @@ func (s *Service) genNotes(ctx context.Context, t *topicCtx) (*aiLesson, error) 
 		if attempt > 0 && lastErr != nil {
 			prompt += fmt.Sprintf("\n\nYour previous attempt failed validation: %v\nFix exactly those problems and return the corrected JSON object.", lastErr)
 		}
-		// 2600 tokens per pass: each pass asks for HALF the
-		// lesson (6 sections / 10 questions ≈ 1,500 real
-		// tokens ≈ 60-90s on the free tier) so no single call
-		// ever brushes the provider ceiling or the timeout.
-		out, err := s.Engine.AI.Complete(ctx, lessonNotesSystem, []tutor.Message{{Role: "user", Content: prompt}}, 2600)
+		// 6000 cap (the provider's proven ceiling - the old
+		// recipe ran it for months) with a TWO-PASS ask: each
+		// pass requests 6 sections, so the ACTUAL output stays
+		// ~1,500-2,500 tokens and never truncates.
+		out, err := s.Engine.AI.Complete(ctx, lessonNotesSystem, []tutor.Message{{Role: "user", Content: prompt}}, 6000)
 		if err != nil {
 			lastErr = err
 			continue
@@ -984,14 +984,14 @@ func (s *Service) genNotes(ctx context.Context, t *topicCtx) (*aiLesson, error) 
 // output (the provider clamps long generations mid-object) by closing
 // the open brackets around the last complete element.
 func notesFromOutput(out string) (*aiLesson, error) {
-	raw := extractJSON(out)
-	if parsed, err := parseNotesLenient([]byte(raw)); err == nil {
-		return parsed, nil
-	}
-	salvaged := salvageJSON(raw)
-	if salvaged != raw {
-		if parsed, err := parseNotesLenient([]byte(salvaged)); err == nil {
+	for _, raw := range []string{extractJSON(out), strings.TrimSpace(out)} {
+		if parsed, err := parseNotesLenient([]byte(raw)); err == nil {
 			return parsed, nil
+		}
+		if salvaged := salvageJSON(raw); salvaged != raw {
+			if parsed, err := parseNotesLenient([]byte(salvaged)); err == nil {
+				return parsed, nil
+			}
 		}
 	}
 	return nil, fmt.Errorf("notes output unusable")
@@ -1034,8 +1034,14 @@ func salvageJSON(raw string) string {
 			}
 		}
 	}
-	if len(stack) == 0 {
-		return trimmed
+	// A truncation mid-string leaves the quote open (and possibly a
+	// dangling escape - LaTeX in note bodies makes this common): drop
+	// the escape, close the quote, THEN close the brackets.
+	if esc && len(trimmed) > 0 && trimmed[len(trimmed)-1] == '\\' {
+		trimmed = trimmed[:len(trimmed)-1]
+	}
+	if inStr {
+		trimmed += `"`
 	}
 	for i := len(stack) - 1; i >= 0; i-- {
 		trimmed += string(stack[i])
@@ -1123,7 +1129,7 @@ func (s *Service) genQuiz(ctx context.Context, t *topicCtx) ([]aiQuizQ, error) {
 		if attempt > 0 && lastErr != nil {
 			prompt += fmt.Sprintf("\n\nYour previous attempt failed validation: %v\nFix exactly those problems and return the corrected JSON object.", lastErr)
 		}
-		out, err := s.Engine.AI.Complete(ctx, lessonQuizSystem, []tutor.Message{{Role: "user", Content: prompt}}, 2600)
+		out, err := s.Engine.AI.Complete(ctx, lessonQuizSystem, []tutor.Message{{Role: "user", Content: prompt}}, 6000)
 		if err != nil {
 			lastErr = err
 			continue
@@ -1155,16 +1161,17 @@ func (s *Service) genQuiz(ctx context.Context, t *topicCtx) ([]aiQuizQ, error) {
 // quizFromOutput parses a quiz half, salvaging truncated JSON the same
 // way the notes half does.
 func quizFromOutput(out string) ([]aiQuizQ, error) {
-	raw := extractJSON(out)
 	var partial struct {
 		Quiz []aiQuizQ `json:"quiz"`
 	}
-	if err := json.Unmarshal([]byte(raw), &partial); err == nil && len(partial.Quiz) > 0 {
-		return partial.Quiz, nil
-	}
-	if salvaged := salvageJSON(raw); salvaged != raw {
-		if err := json.Unmarshal([]byte(salvaged), &partial); err == nil && len(partial.Quiz) > 0 {
+	for _, raw := range []string{extractJSON(out), strings.TrimSpace(out)} {
+		if err := json.Unmarshal([]byte(raw), &partial); err == nil && len(partial.Quiz) > 0 {
 			return partial.Quiz, nil
+		}
+		if salvaged := salvageJSON(raw); salvaged != raw {
+			if err := json.Unmarshal([]byte(salvaged), &partial); err == nil && len(partial.Quiz) > 0 {
+				return partial.Quiz, nil
+			}
 		}
 	}
 	return nil, fmt.Errorf("quiz output unusable")
@@ -1203,7 +1210,7 @@ Shape: {"quiz": [{"type": "mcq"|"true_false"|"fill_blank", "stem": string, "opti
 - EXACTLY %d new items; mcq carries 4 options keyed A-D; every item carries a short explanation.
 - MATHS NOTATION (strict): LaTeX wrapped in dollar signs only.`,
 			t.Title, t.Course, strings.Join(stems, " | "), need, need)
-		out, err := s.Engine.AI.Complete(ctx, lessonQuizSystem, []tutor.Message{{Role: "user", Content: prompt}}, 2600)
+		out, err := s.Engine.AI.Complete(ctx, lessonQuizSystem, []tutor.Message{{Role: "user", Content: prompt}}, 6000)
 		if err != nil {
 			return nil, err
 		}
