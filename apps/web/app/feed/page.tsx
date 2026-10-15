@@ -187,7 +187,7 @@ export default function FeedPage() {
     <div className="min-h-screen bg-background md:pl-[var(--rail-w)]">
       <SideNav />
       {toast && (
-        <div className="pointer-events-none fixed inset-x-0 top-16 z-[70] mx-auto w-fit max-w-[90vw] rounded-xl bg-primary px-4 py-2 text-[13px] font-extrabold text-white learn-toast-shadow">
+        <div className="pointer-events-none fixed inset-x-0 top-16 z-[70] mx-auto w-fit max-w-[90vw] rounded-xl bg-primary px-4 py-2 text-[13px] font-extrabold text-on-primary learn-toast-shadow">
           {toast}
         </div>
       )}
@@ -323,7 +323,7 @@ export default function FeedPage() {
                     <button
                       type="submit"
                       disabled={!commentDraft.trim()}
-                      className="key-btn bg-primary px-4 text-[12.5px] text-white disabled:opacity-40"
+                      className="key-btn bg-primary px-4 text-[12.5px] text-on-primary disabled:opacity-40"
                     >
                       Send
                     </button>

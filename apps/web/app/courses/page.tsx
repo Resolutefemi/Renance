@@ -26,9 +26,17 @@
  * with AI" reads a pasted course list, grounds every line in the real
  * catalogue and sets the course list up from the picks.
  *
- * DESK SEPARATION (earlier pass, kept): every body is its own desk -
- * JAMB/WAEC/NECO subjects never appear on the tertiary institution
- * desk and vice versa.
+ * DESK SEPARATION (founder 2026-10-15, switcher-removal pass): the
+ * top desk-switcher pills are GONE. The page renders ONE desk - the
+ * student's active focus body (JAMB/WAEC/NECO get the secondary
+ * faces; the School/Tertiary focus gets the tertiary desk and ONLY
+ * that focus ever sees it). Borrowed courses, the AI finder and the
+ * manual checkboxes keep working as before.
+ *
+ * MARK/SELECT SPEED (same pass): the checkbox answer is OPTIMISTIC -
+ * a tap flips the row on this frame from a ref-derived list and the
+ * server save rides behind it; opening a course no longer waits on
+ * the active-course marker write.
  *
  * NO level tag anywhere - the founder removed it from the courses list.
  */
@@ -121,19 +129,16 @@ export default function CoursesPage() {
   const [secQuery, setSecQuery] = useState('');
   const [saving, setSaving] = useState(false);
 
-  // Desk separation: the desks this student actually carries, focus
-  // body first. Rows saved before the body column existed (empty body)
-  // ride the focus desk so they never vanish. Every row body goes
-  // through deskOf, so Post-UTME rows group under the tertiary
-  // institution desk and JAMB subjects never leak onto it.
-  const deskBodies = useMemo(() => {
-    const DESKS = ['jamb', 'waec', 'neco', 'tertiary'];
-    const present = new Set<string>();
-    for (const c of mine ?? []) present.add(deskOf(c.body || body));
-    const focus = deskOf(body);
-    const rest = DESKS.filter((b) => present.has(b) && b !== focus);
-    return [focus, ...rest];
-  }, [mine, body]);
+  /** Single writer for the course list: state, the device cache and
+   *  the tap-race ref move together. The optimistic toggle reads the
+   *  REF (not the render snapshot), so rapid taps on several rows
+   *  never stack onto a stale list. */
+  const mineRef = useRef<MyCourse[] | null>(null);
+  const applyMine = useCallback((rows: MyCourse[]) => {
+    mineRef.current = rows;
+    setMine(rows);
+    cacheMine(rows);
+  }, []);
 
   // The hardcoded secondary shelf for the selection face.
   const secondaryItems = useMemo<CatalogItem[]>(() => {
@@ -175,17 +180,16 @@ export default function CoursesPage() {
     // The student's own list: API first, device cache as the net.
     try {
       const list = await fetchMyCourses();
-      setMine(list.courses);
-      cacheMine(list.courses);
+      applyMine(list.courses);
       setFace(list.courses.length > 0 ? 'list' : 'select');
     } catch {
       const cached = readCachedMine();
-      setMine(cached ?? []);
+      applyMine(cached ?? []);
       setFace(cached && cached.length > 0 ? 'list' : 'select');
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [applyMine]);
 
   useEffect(() => {
     if (typeof window !== 'undefined' && !getStoredUser()) {
@@ -198,8 +202,12 @@ export default function CoursesPage() {
   const openPath = useCallback(async (courseId: string) => {
     setLoading(true);
     setNotice('');
+    // The active-course marker rides in the BACKGROUND (founder
+    // 2026-10-15: selecting a course felt slow) - it is bookkeeping,
+    // not a prerequisite of the path read, and awaiting it cost a full
+    // round trip before every roadmap opened.
+    void setActiveCourse(courseId).catch(() => {});
     try {
-      await setActiveCourse(courseId);
       const p = await fetchCoursePath(courseId);
       setPath(p);
       setFace('path');
@@ -211,33 +219,56 @@ export default function CoursesPage() {
     }
   }, []);
 
-  /** Add/remove one course id on the real list (the desk rows toggle). */
-  const toggleCourse = useCallback(async (courseId: string) => {
-    if (!mine) return;
-    const has = mine.some((m) => m.id === courseId);
-    const next = has
-      ? mine.filter((m) => m.id !== courseId).map((m) => m.id)
-      : [...mine.map((m) => m.id), courseId];
+  /** Add/remove one course id on the real list - OPTIMISTIC (founder
+   *  report 2026-10-15: "the reaction time when I mark or select a
+   *  course is too slow"). The checkbox answers on the SAME frame as
+   *  the tap: the next list is derived from the ref and applied at
+   *  once, the server save rides behind it, and only a failed save
+   *  rolls the row back. `hint` seeds the optimistic row so the new
+   *  tertiary card shows its real title/topics before the canonical
+   *  list returns. */
+  const toggleCourse = useCallback(async (
+    courseId: string,
+    hint?: { title?: string; topicCount?: number },
+  ) => {
+    const cur = mineRef.current;
+    if (!cur) return;
+    const has = cur.some((m) => m.id === courseId);
+    const next: MyCourse[] = has
+      ? cur.filter((m) => m.id !== courseId)
+      : [
+          ...cur,
+          {
+            id: courseId,
+            title: hint?.title || courseId,
+            body,
+            topicCount: hint?.topicCount ?? 0,
+            completedTopics: 0,
+            bestScoreSum: 0,
+            active: false,
+          },
+        ];
+    applyMine(next); // the tap answers NOW - no server round trip first
     try {
-      const res = await setMyCourses(next);
-      setMine(res.courses);
-      cacheMine(res.courses);
+      const res = await setMyCourses(next.map((m) => m.id));
+      applyMine(res.courses);
     } catch {
+      applyMine(cur); // roll back to what the server last confirmed
       setNotice('That change did not stick - check your connection and try again.');
     }
-  }, [mine]);
+  }, [applyMine, body]);
 
   /** Merge a batch of picks (the AI finder) into the real list.
    *  Returns whether the merge landed, so the AI panel only closes -
    *  and the shelf only re-seats - on a real save. */
   const addCourses = useCallback(async (ids: string[]): Promise<boolean> => {
-    if (!mine || ids.length === 0) return false;
+    const cur = mineRef.current;
+    if (!cur || ids.length === 0) return false;
     setSaving(true);
     try {
-      const merged = Array.from(new Set([...mine.map((m) => m.id), ...ids]));
+      const merged = Array.from(new Set([...cur.map((m) => m.id), ...ids]));
       const res = await setMyCourses(merged);
-      setMine(res.courses);
-      cacheMine(res.courses);
+      applyMine(res.courses);
       return true;
     } catch {
       setNotice('Saving your courses failed - check your connection and try again.');
@@ -245,7 +276,7 @@ export default function CoursesPage() {
     } finally {
       setSaving(false);
     }
-  }, [mine]);
+  }, [applyMine]);
 
   const afterLesson = useCallback(async () => {
     setTopic(null);
@@ -278,45 +309,29 @@ export default function CoursesPage() {
         )}
         {loading && <SkeletonList />}
 
-        {/* Founder directive 2026-10-15 ("remove the desk switcher
-            buttons from top of the School desk focus page"): the toggle
-            pills - including the "JAMB desk" button - are NOT rendered
-            while the tertiary / School desk is the focus. The JAMB desk
-            stays reachable only from its own focus views (profile exam
-            bodies / the secondary desks); the tertiary flow is a clean
-            two-gate course desk. */}
-        {!loading && face !== 'path' && body !== 'tertiary' && deskBodies.length > 1 && (
-          <div className="no-scrollbar -mx-4 mb-3 flex items-center gap-1.5 overflow-x-auto px-4">
-            {deskBodies.map((b) => (
-              <button
-                key={b}
-                type="button"
-                onClick={() => setBody(b)}
-                aria-pressed={b === body}
-                className={`whitespace-nowrap rounded-full border-2 px-3.5 py-1.5 text-[12px] font-extrabold transition active:translate-y-[1px] ${
-                  b === body
-                    ? 'border-primary bg-primary text-white'
-                    : 'border-outline-variant bg-card text-on-surface-variant'
-                }`}
-              >
-                {learnBodyLabel(b)} desk
-              </button>
-            ))}
-          </div>
+        {/* Founder directive 2026-10-15 (switcher-removal pass): the
+            "JAMB desk / Tertiary Institution desk" toggle pills are
+            GONE. The page renders exactly ONE desk - the student's
+            active focus body - and the tertiary desk is reachable ONLY
+            through that focus; no pill ever flips a secondary student
+            onto the School desk or back. */}
+
+        {/* ── The tertiary institution desk: the ONLY thing a School
+            focus student sees (gates → shelf), at any face but path ── */}
+        {!loading && body === 'tertiary' && mine && face !== 'path' && (
+          <TertiaryDesk
+            mine={mine}
+            onOpen={(id) => void openPath(id)}
+            onToggle={(id, hint) => void toggleCourse(id, hint)}
+            onAdd={(ids) => addCourses(ids)}
+            onNotice={setNotice}
+          />
         )}
 
-        {/* ── Face 1: my courses ── */}
-        {!loading && face === 'list' && mine && (
+        {/* ── Face 1: my courses (secondary desks) ── */}
+        {!loading && face === 'list' && body !== 'tertiary' && mine && (
           mine.length === 0 ? (
-            <EmptyList tertiary={body === 'tertiary'} onChoose={() => setFace('select')} />
-          ) : body === 'tertiary' ? (
-            <TertiaryDesk
-              mine={mine}
-              onOpen={(id) => void openPath(id)}
-              onToggle={(id) => void toggleCourse(id)}
-              onAdd={(ids) => addCourses(ids)}
-              onNotice={setNotice}
-            />
+            <EmptyList onChoose={() => setFace('select')} />
           ) : (
             <div className="flex flex-col gap-3">
               <p className="px-1 text-[12.5px] font-bold text-on-surface-variant">
@@ -325,32 +340,11 @@ export default function CoursesPage() {
               {mine
                 .filter((c) => deskOf(c.body || body) === body)
                 .map((c) => (
-                  <button
-                    key={c.id}
-                    type="button"
-                    onClick={() => void openPath(c.id)}
-                    className="learn-tile w-full rounded-2xl border-2 border-outline-variant bg-card p-4 text-left transition hover:border-primary/40 active:translate-y-[2px]"
-                  >
-                    <div className="flex items-center gap-3">
-                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/15">
-                        <span className="material-symbols-outlined text-[22px] text-primary-ink">menu_book</span>
-                      </span>
-                      <span className="min-w-0 flex-1">
-                        <span className="block truncate text-[15px] font-black text-on-surface">{c.title}</span>
-                        <span className="mt-0.5 block text-[12px] font-bold text-on-surface-variant">
-                          {c.completedTopics}/{c.topicCount} topics done
-                        </span>
-                        <span className="mt-1.5 block">
-                          <ProgressBar value={c.topicCount ? (c.completedTopics / c.topicCount) * 100 : 0} />
-                        </span>
-                      </span>
-                      <span className="material-symbols-outlined text-[20px] text-on-surface-variant">chevron_right</span>
-                    </div>
-                  </button>
+                  <CourseCard key={c.id} c={c} onOpen={() => void openPath(c.id)} />
                 ))}
               {mine.filter((c) => deskOf(c.body || body) === body).length === 0 && (
                 <p className="rounded-2xl border-2 border-dashed border-outline-variant bg-card px-6 py-8 text-center text-[13px] font-bold text-on-surface-variant">
-                  No courses on this desk yet - switch the desk above or add more courses.
+                  No courses on this desk yet - tap Add / remove courses below.
                 </p>
               )}
               {/* The inline add-remove affordance (founder 2026-10-15):
@@ -386,14 +380,14 @@ export default function CoursesPage() {
                   <li key={c.id}>
                     <button
                       type="button"
-                      onClick={() => void toggleCourse(c.id)}
+                      onClick={() => void toggleCourse(c.id, { title: c.title, topicCount: c.topicCount })}
                       aria-pressed={inList}
                       className={`learn-tile flex w-full items-center gap-3 rounded-2xl border-2 p-3.5 text-left transition active:translate-y-[2px] ${
                         inList ? 'border-primary bg-primary/10' : 'border-outline-variant bg-card'
                       }`}
                     >
                       <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border-2 transition ${
-                        inList ? 'border-primary bg-primary text-white' : 'border-outline-variant bg-surface'
+                        inList ? 'border-primary bg-primary text-on-primary' : 'border-outline-variant bg-surface'
                       }`} aria-hidden>
                         {inList && <span className="material-symbols-outlined text-[16px]">check</span>}
                       </span>
@@ -420,7 +414,7 @@ export default function CoursesPage() {
             <button
               type="button"
               onClick={() => setFace('list')}
-              className="key-btn mx-auto mt-2 bg-primary text-white"
+              className="key-btn mx-auto mt-2 bg-primary text-on-primary"
             >
               Done
             </button>
@@ -462,7 +456,7 @@ function TertiaryDesk({
 }: {
   mine: MyCourse[];
   onOpen: (courseId: string) => void;
-  onToggle: (courseId: string) => void;
+  onToggle: (courseId: string, hint?: { title?: string; topicCount?: number }) => void;
   onAdd: (courseIds: string[]) => Promise<boolean>;
   onNotice: (msg: string) => void;
 }) {
@@ -779,10 +773,19 @@ function TertiaryDesk({
     );
   }
 
-  // ── The shelf: general first, then the department ──
+  // ── The shelf: your courses first, then general, then the department ──
   const general = shelf?.general ?? [];
   const departmental = shelf?.departmental ?? [];
   const showSearch = query.trim().length >= 2;
+  // The student's picked courses on THIS desk (founder directive
+  // 2026-10-15: list them as cards styled like the JAMB desk cards -
+  // progress "0/12 topics done" and an action arrow - at the TOP of
+  // the desk, one tap from their roadmap). Post-UTME rows group under
+  // the tertiary desk through deskOf.
+  const myRows = useMemo(
+    () => mine.filter((c) => deskOf(c.body || 'tertiary') === 'tertiary'),
+    [mine],
+  );
   return (
     <div className="flex flex-col gap-4">
       {/* Desk header + change control */}
@@ -800,6 +803,19 @@ function TertiaryDesk({
           Change
         </button>
       </div>
+
+      {/* YOUR COURSES - the picked courses as JAMB-style cards */}
+      {myRows.length > 0 && (
+        <section className="flex flex-col gap-2">
+          <h3 className="px-1 text-[13px] font-black uppercase tracking-wide text-on-surface-variant">
+            Your courses
+            <span className="ml-1.5 font-bold normal-case text-on-surface-variant/70">- tap one to open its roadmap</span>
+          </h3>
+          {myRows.map((c) => (
+            <CourseCard key={c.id} c={c} onOpen={() => onOpen(c.id)} />
+          ))}
+        </section>
+      )}
 
       {/* Search: short code (CSC, MTH…), title, or a key topic */}
       <div className="flex flex-col gap-2">
@@ -834,7 +850,7 @@ function TertiaryDesk({
             )}
             {!searching && (results ?? []).map((c) => {
               const row = withLive(c);
-              return <DeskRow key={c.id} c={row} onOpen={() => row.inList && onOpen(c.id)} onToggle={() => onToggle(c.id)} />;
+              return <DeskRow key={c.id} c={row} onOpen={() => row.inList && onOpen(c.id)} onToggle={() => onToggle(c.id, { title: c.title, topicCount: c.topicCount })} />;
             })}
           </div>
         )}
@@ -873,7 +889,7 @@ function TertiaryDesk({
               type="button"
               disabled={aiBusy || !aiText.trim()}
               onClick={() => void runAI()}
-              className="key-btn mx-auto bg-primary text-white disabled:opacity-60"
+              className="key-btn mx-auto bg-primary text-on-primary disabled:opacity-60"
             >
               {aiBusy ? 'Finding your courses…' : 'Find my courses'}
             </button>
@@ -926,7 +942,7 @@ function TertiaryDesk({
                     type="button"
                     disabled={gateBusy}
                     onClick={() => void saveAI()}
-                    className="key-btn mx-auto bg-primary text-white disabled:opacity-60"
+                    className="key-btn mx-auto bg-primary text-on-primary disabled:opacity-60"
                   >
                     {gateBusy ? 'Saving…' : `Add ${aiPicked.size} course${aiPicked.size === 1 ? '' : 's'} to my list`}
                   </button>
@@ -945,7 +961,7 @@ function TertiaryDesk({
         </h3>
         {general.map((c) => {
           const row = withLive(c);
-          return <DeskRow key={c.id} c={row} onOpen={() => row.inList && onOpen(c.id)} onToggle={() => onToggle(c.id)} />;
+          return <DeskRow key={c.id} c={row} onOpen={() => row.inList && onOpen(c.id)} onToggle={() => onToggle(c.id, { title: c.title, topicCount: c.topicCount })} />;
         })}
         {general.length === 0 && (
           <p className="rounded-2xl border-2 border-dashed border-outline-variant bg-card px-5 py-6 text-center text-[12.5px] font-bold text-on-surface-variant">
@@ -962,7 +978,7 @@ function TertiaryDesk({
           </h3>
           {departmental.map((c) => {
             const row = withLive(c);
-            return <DeskRow key={c.id} c={row} onOpen={() => row.inList && onOpen(c.id)} onToggle={() => onToggle(c.id)} />;
+            return <DeskRow key={c.id} c={row} onOpen={() => row.inList && onOpen(c.id)} onToggle={() => onToggle(c.id, { title: c.title, topicCount: c.topicCount })} />;
           })}
           {departmental.length === 0 && (
             <p className="rounded-2xl border-2 border-dashed border-outline-variant bg-card px-5 py-6 text-center text-[12.5px] font-bold text-on-surface-variant">
@@ -988,7 +1004,7 @@ function TertiaryDesk({
         )}
         {(others ?? []).map((c) => {
           const row = withLive(c);
-          return <DeskRow key={c.id} c={row} onOpen={() => row.inList && onOpen(c.id)} onToggle={() => onToggle(c.id)} />;
+          return <DeskRow key={c.id} c={row} onOpen={() => row.inList && onOpen(c.id)} onToggle={() => onToggle(c.id, { title: c.title, topicCount: c.topicCount })} />;
         })}
         {others !== null && others.length === 0 && (
           <p className="rounded-2xl border-2 border-dashed border-outline-variant bg-card px-5 py-6 text-center text-[12.5px] font-bold text-on-surface-variant">
@@ -1035,7 +1051,7 @@ function DeskRow({ c, onOpen, onToggle }: { c: DeskCourse; onOpen: () => void; o
         aria-pressed={c.inList}
         aria-label={c.inList ? `Remove ${c.title}` : `Add ${c.title}`}
         className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border-2 transition active:scale-95 ${
-          c.inList ? 'border-primary bg-primary text-white' : 'border-outline-variant bg-surface'
+          c.inList ? 'border-primary bg-primary text-on-primary' : 'border-outline-variant bg-surface'
         }`}
       >
         {c.inList && <span className="material-symbols-outlined text-[16px]">check</span>}
@@ -1060,6 +1076,38 @@ function DeskRow({ c, onOpen, onToggle }: { c: DeskCourse; onOpen: () => void; o
         </button>
       )}
     </div>
+  );
+}
+
+// ─── The course card (shared, the JAMB-desk style) ─────────────────────
+
+/** The card the founder asked to share across desks (2026-10-15):
+ *  book icon, title, "0/12 topics done" progress line, the bar and the
+ *  action arrow. A tap opens the course roadmap. The secondary desks
+ *  and the tertiary desk's YOUR COURSES section render the same tile. */
+function CourseCard({ c, onOpen }: { c: MyCourse; onOpen: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onOpen}
+      className="learn-tile w-full rounded-2xl border-2 border-outline-variant bg-card p-4 text-left transition hover:border-primary/40 active:translate-y-[2px]"
+    >
+      <div className="flex items-center gap-3">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/15">
+          <span className="material-symbols-outlined text-[22px] text-primary-ink">menu_book</span>
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="block truncate text-[15px] font-black text-on-surface">{c.title}</span>
+          <span className="mt-0.5 block text-[12px] font-bold text-on-surface-variant">
+            {c.completedTopics}/{c.topicCount} topics done
+          </span>
+          <span className="mt-1.5 block">
+            <ProgressBar value={c.topicCount ? (c.completedTopics / c.topicCount) * 100 : 0} />
+          </span>
+        </span>
+        <span className="material-symbols-outlined text-[20px] text-on-surface-variant">chevron_right</span>
+      </div>
+    </button>
   );
 }
 
@@ -1126,7 +1174,7 @@ function CoursePathView({
         return (
           <section key={u.index} className="flex flex-col">
             {/* Unit banner */}
-            <div className="sticky top-12 z-10 -mx-1 rounded-xl border-2 border-primary/50 bg-primary px-3.5 py-2.5 text-white learn-tile">
+            <div className="sticky top-12 z-10 -mx-1 rounded-xl border-2 border-primary/50 bg-primary px-3.5 py-2.5 text-on-primary learn-tile">
               <div className="flex items-center justify-between gap-2">
                 <p className="text-[13px] font-black">{u.name}</p>
                 {isChest ? (
@@ -1179,7 +1227,7 @@ function PathNode({ topic, offset, onOpen }: { topic: TopicNode; offset: string;
         aria-label={`${topic.title}${locked ? ' (locked)' : ''}`}
         className={`flex h-[76px] w-[76px] items-center justify-center rounded-full border-2 transition ${
           done
-            ? 'bg-primary text-white learn-node-done'
+            ? 'bg-primary text-on-primary learn-node-done'
             : current
               ? 'bg-accent-amber text-white learn-node-current'
               : 'border-outline-variant bg-surface-container-high text-on-surface-variant'
@@ -1202,7 +1250,7 @@ function PathNode({ topic, offset, onOpen }: { topic: TopicNode; offset: string;
 
 // ─── Empty + skeleton ─────────────────────────────────────────────────────
 
-function EmptyList({ tertiary, onChoose }: { tertiary: boolean; onChoose: () => void }) {
+function EmptyList({ onChoose }: { onChoose: () => void }) {
   return (
     <div className="learn-tile flex flex-col items-center gap-3 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-6 py-12 text-center">
       <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/15">
@@ -1210,11 +1258,9 @@ function EmptyList({ tertiary, onChoose }: { tertiary: boolean; onChoose: () => 
       </span>
       <h2 className="text-[17px] font-black text-on-surface">Build your course list</h2>
       <p className="max-w-sm text-[13.5px] font-bold leading-snug text-on-surface-variant">
-        {tertiary
-          ? 'Pick your institution kind and department first - your general courses and department courses appear right after.'
-          : 'Mark every course you want on your desk - each one becomes a long roadmap of topics, notes with real drawings, and your actual past questions.'}
+        Mark every course you want on your desk - each one becomes a long roadmap of topics, notes with real drawings, and your actual past questions.
       </p>
-      {!tertiary && <button type="button" onClick={onChoose} className="key-btn mt-1 bg-primary text-white">Choose courses</button>}
+      <button type="button" onClick={onChoose} className="key-btn mt-1 bg-primary text-on-primary">Choose courses</button>
     </div>
   );
 }

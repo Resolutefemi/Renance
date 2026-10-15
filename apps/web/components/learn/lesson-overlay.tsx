@@ -318,7 +318,7 @@ export function LessonOverlay({
             <span className="material-symbols-outlined text-[44px] text-error">cloud_off</span>
             <p className="text-[15px] font-extrabold text-on-surface">This lesson could not load</p>
             <p className="max-w-sm text-[13px] text-on-surface-variant">The generator may be busy - close and reopen in a few seconds. Everything else on your account is safe.</p>
-            <button type="button" onClick={onClose} className="key-btn bg-primary text-white">Back to my course</button>
+            <button type="button" onClick={onClose} className="key-btn bg-primary text-on-primary">Back to my course</button>
           </div>
         )}
 
@@ -436,7 +436,7 @@ export function LessonOverlay({
                       }`}
                     >
                       <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border-2 text-[12px] font-black ${
-                        isAnswer ? 'border-primary bg-primary text-white' : isWrongPick ? 'border-error bg-error text-white' : 'border-outline-variant text-primary-ink'
+                        isAnswer ? 'border-primary bg-primary text-on-primary' : isWrongPick ? 'border-error bg-error text-white' : 'border-outline-variant text-primary-ink'
                       }`}>{letter}</span>
                       <span className="min-w-0 flex-1"><QText html={text} /></span>
                     </button>
@@ -483,7 +483,7 @@ export function LessonOverlay({
             )}
             {result?.perfect && <p className="text-[13px] font-black uppercase tracking-wide text-primary-ink">Perfect score!</p>}
             <div className="mt-3 flex gap-2.5">
-              <button type="button" onClick={onClose} className="key-btn bg-primary text-white">
+              <button type="button" onClick={onClose} className="key-btn bg-primary text-on-primary">
                 {mode === 'lesson' ? 'Continue' : 'Done'}
               </button>
             </div>
@@ -506,14 +506,14 @@ export function LessonOverlay({
                   type="button"
                   onClick={() => (studyAt < studyPages.count - 1 ? setStudyStep((s) => s + 1) : setPhase('quiz'))}
                   disabled={!doc}
-                  className={`key-btn ${studyAt > 0 ? 'flex-[2]' : 'flex-1'} bg-primary text-white`}
+                  className={`key-btn ${studyAt > 0 ? 'flex-[2]' : 'flex-1'} bg-primary text-on-primary`}
                 >
                   {studyAt < studyPages.count - 1 ? 'Next section' : `Start quiz ${doc ? `(${doc.quiz.length})` : ''}`}
                 </button>
               </>
             ) : (
               revealed && (
-                <button type="button" onClick={next} className="key-btn w-full bg-primary text-white">
+                <button type="button" onClick={next} className="key-btn w-full bg-primary text-on-primary">
                   {isLast ? 'Finish' : 'Continue'}
                 </button>
               )
@@ -606,7 +606,7 @@ function BlankInput({
               onClick={() => { setValue(w); check(w); }}
               className={`rounded-lg border-2 px-3 py-1.5 text-[13px] font-extrabold transition ${
                 revealed && (norm(w) === norm(answerText) || norm(w) === norm(q.answer))
-                  ? 'border-primary bg-primary text-white'
+                  ? 'border-primary bg-primary text-on-primary'
                   : 'border-outline-variant bg-card text-on-surface'
               }`}
             >{w}</button>
@@ -614,7 +614,7 @@ function BlankInput({
         </div>
       )}
       {!revealed && (
-        <button type="button" onClick={() => check(value)} disabled={!value.trim()} className="key-btn bg-primary text-white">
+        <button type="button" onClick={() => check(value)} disabled={!value.trim()} className="key-btn bg-primary text-on-primary">
           Check
         </button>
       )}

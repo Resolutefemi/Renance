@@ -93,7 +93,7 @@ export default function ProfileSocialPage() {
               type="button"
               onClick={() => setTab(t)}
               className={`key-btn flex items-center justify-center gap-1.5 py-2.5 text-[13px] ${
-                tab === t ? 'bg-primary text-white' : 'bg-surface-container text-on-surface-variant'
+                tab === t ? 'bg-primary text-on-primary' : 'bg-surface-container text-on-surface-variant'
               }`}
             >
               {t === 'followers' ? (
@@ -157,8 +157,8 @@ export default function ProfileSocialPage() {
                 type="button"
                 onClick={() => void flip(row)}
                 disabled={busy === row.username}
-                className={`key-btn shrink-0 px-4 text-[12.5px] text-white disabled:opacity-50 ${
-                  row.following ? 'bg-on-surface-variant' : 'bg-primary'
+                className={`key-btn shrink-0 px-4 text-[12.5px] disabled:opacity-50 ${
+                  row.following ? 'bg-on-surface-variant text-white' : 'bg-primary text-on-primary'
                 }`}
               >
                 {row.following ? 'Following' : row.followsYou ? 'Follow back' : 'Follow'}

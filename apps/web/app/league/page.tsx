@@ -111,7 +111,7 @@ export default function LeaguePage() {
                     <span className={`absolute inset-y-0 left-0 w-1 ${zone}`} aria-hidden />
                     <span className="w-6 text-center font-mono text-[12.5px] font-black text-on-surface-variant">{rank}</span>
                     {e.isYou ? (
-                      <span className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-primary bg-primary text-[13px] font-black text-white">Y</span>
+                      <span className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-primary bg-primary text-[13px] font-black text-on-primary">Y</span>
                     ) : (
                       <span className="flex h-8 w-8 items-center justify-center rounded-full text-[13px] font-black text-white" style={{ background: e.color || 'var(--color-on-surface-variant)' }}>
                         {e.name.slice(0, 1)}

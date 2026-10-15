@@ -93,7 +93,7 @@ function PublicProfileView() {
         <main className="mx-auto w-full max-w-2xl px-4 pb-28 pt-6 text-center">
           <span className="material-symbols-outlined text-[38px] text-on-surface-variant">person_off</span>
           <p className="mt-2 text-[14px] font-bold text-on-surface-variant">{error}</p>
-          <Link href="/dashboard" className="key-btn mt-4 inline-flex bg-primary text-white">Back to the desk</Link>
+          <Link href="/dashboard" className="key-btn mt-4 inline-flex bg-primary text-on-primary">Back to the desk</Link>
         </main>
       </div>
     );
@@ -144,7 +144,7 @@ function PublicProfileView() {
               type="button"
               onClick={() => void follow()}
               disabled={busy}
-              className={`key-btn px-8 text-[14px] text-white ${profile.isFollowing ? 'bg-on-surface-variant' : 'bg-primary'} disabled:opacity-50`}
+              className={`key-btn px-8 text-[14px] disabled:opacity-50 ${profile.isFollowing ? 'bg-on-surface-variant text-white' : 'bg-primary text-on-primary'}`}
             >
               {profile.isFollowing ? 'Following ✓' : 'Follow'}
             </button>

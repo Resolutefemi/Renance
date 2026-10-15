@@ -374,7 +374,7 @@ export default function ProfilePage() {
                   setCopied(true);
                   window.setTimeout(() => setCopied(false), 1800);
                 }}
-                className="key-btn shrink-0 bg-primary px-3.5 text-[12px] text-white"
+                className="key-btn shrink-0 bg-primary px-3.5 text-[12px] text-on-primary"
               >
                 {copied ? 'Copied' : 'Copy link'}
               </button>

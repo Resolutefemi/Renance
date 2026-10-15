@@ -267,7 +267,15 @@
   --color-on-surface: #f0f3f6;
   --color-on-surface-variant: #a6adba;
   --color-primary: #10da11;
-  --color-on-primary: #ffffff;
+  /* Founder directive 2026-10-15 ("for the default seed colour the text
+     in boxes or containers must be BLACK, not white, in dark mode - the
+     open-your-school-desk text, the pick-your-school text, the R in the
+     home-page logo, the AI float mark, the profile copy-link pill..."):
+     the dark tier paints the SAME vivid green as light, so the label ink
+     follows buildPalette('#10da11','dark') exactly - hslToHex(121,42,10)
+     - instead of white vanishing on the bright accent. Seeded students
+     already get this ink from lib/theme.ts; the stylesheet now agrees. */
+  --color-on-primary: #0f240f;
   --color-primary-container: #151a22;
   --color-on-primary-container: #f0f3f6;
   --color-secondary: #a6adba;
@@ -299,7 +307,9 @@
   --color-hero-muted: #a6adba;
   --color-hero-track: #191f28;
   --color-hero-cta: #10da11;
-  --color-on-hero-cta: #ffffff;
+  /* buildPalette(seed,'dark') pairs the CTA with on-primary - the same
+     dark ink, never white-on-green (founder dark-text pass 2026-10-15). */
+  --color-on-hero-cta: #0f240f;
 }
 
 /* Mixed: light body, dark hero chrome (the exam-player treatment). */
@@ -472,6 +482,11 @@ body {
 .text-primary.bg-primary\/10 {
   color: var(--color-primary-ink);
 }
+/* The SUPER chips (paywall / pricing) paint bg-primary-ink with a white
+   label - right on the light tier's dark ink, wrong on the dark tier's
+   light tint. The label flips to the near-black ink in dark mode. */
+[data-theme='dark'] .bg-primary-ink.text-white { color: var(--color-ink-deep); }
+
 [data-theme='dark'] .text-primary.bg-primary\/10 {
   color: var(--color-primary);
 }

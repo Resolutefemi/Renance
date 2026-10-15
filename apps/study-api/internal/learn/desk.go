@@ -538,6 +538,153 @@ func generalKey(title string) string {
 
 // ─── AI course finder ─────────────────────────────────────────────────────
 
+// fuzzyStopWords are the glue words no title match needs.
+var fuzzyStopWords = map[string]bool{
+        "and": true, "or": true, "of": true, "to": true, "the": true,
+        "in": true, "for": true, "with": true, "a": true, "an": true, "on": true,
+}
+
+// romanNumerals are the registration-slip section suffixes ("Linear
+// Algebra I", "Elementary Differential Equation II") - markers, not
+// subject words, so they never drive a match.
+var romanNumerals = map[string]bool{
+        "i": true, "ii": true, "iii": true, "iv": true, "v": true,
+        "vi": true, "vii": true, "viii": true, "ix": true, "x": true,
+        "xi": true, "xii": true,
+}
+
+// splitTitleWords breaks a lowercased line into its letter/number words.
+func splitTitleWords(s string) []string {
+        return strings.FieldsFunc(s, func(r rune) bool {
+                return !unicode.IsLetter(r) && !unicode.IsDigit(r)
+        })
+}
+
+// fuzzyTokens reduces a pasted course line to the significant words the
+// catalogue sweep should look for: parenthetical qualifiers dropped
+// ("General Agriculture (Theory)"), glue words and roman-numeral
+// section markers dropped, capped at four words. "Mathematical Methods
+// I" -> [mathematical methods]; "Computer Programming I" -> [computer
+// programming].
+func fuzzyTokens(line string) []string {
+        s := strings.ToLower(line)
+        if i := strings.IndexByte(s, '('); i >= 0 {
+                if j := strings.IndexByte(s[i:], ')'); j > 0 {
+                        s = s[:i] + " " + s[i+j+1:]
+                }
+        }
+        var out []string
+        for _, f := range splitTitleWords(s) {
+                if len(f) < 4 || fuzzyStopWords[f] || romanNumerals[f] {
+                        continue
+                }
+                out = append(out, f)
+                if len(out) >= 4 {
+                        break
+                }
+        }
+        return out
+}
+
+// fuzzyKey canonicalises a title for the deterministic pick: lowercase,
+// parentheticals dropped, punctuation to spaces, glue words and roman
+// numerals dropped, the trailing plural "s" trimmed per word - so
+// "Elementary Differential Equation I" and "Elementary Differential
+// Equations" land on the same key, and a pasted line whose title only
+// differs by those crumbs still picks without the AI pass.
+func fuzzyKey(line string) string {
+        s := strings.ToLower(line)
+        if i := strings.IndexByte(s, '('); i >= 0 {
+                if j := strings.IndexByte(s[i:], ')'); j > 0 {
+                        s = s[:i] + " " + s[i+j+1:]
+                }
+        }
+        var b strings.Builder
+        for _, f := range splitTitleWords(s) {
+                if len(f) < 2 || fuzzyStopWords[f] || romanNumerals[f] {
+                        continue
+                }
+                b.WriteString(strings.TrimSuffix(f, "s"))
+                b.WriteByte(' ')
+        }
+        return strings.TrimSpace(b.String())
+}
+
+// fuzzyTitleCourses is the AI finder's safety net: the honest search
+// answers nothing when the pasted title is a near-miss ("Mathematical
+// Methods I" against the catalogue's "Mathematical Methods") - and the
+// AI can only choose among candidates that EXIST. The line's
+// significant words sweep the whole tertiary catalogue (schools borrow
+// across departments): titles carrying EVERY word first, then the
+// widest OR-sweep ranked in Go by how many words the title carries,
+// richest copy breaking ties.
+func (s *Service) fuzzyTitleCourses(ctx context.Context, userID, line string) ([]DeskCourse, error) {
+        tokens := fuzzyTokens(line)
+        if len(tokens) == 0 {
+                return []DeskCourse{}, nil
+        }
+        sweep := func(op string) ([]DeskCourse, error) {
+                var args []any
+                arg := func(v any) string {
+                        args = append(args, v)
+                        return fmt.Sprintf("$%d", len(args))
+                }
+                args = append(args, userID) // $1 - the deskCourseSelect userID
+                likes := make([]string, 0, len(tokens))
+                for _, t := range tokens {
+                        likes = append(likes, fmt.Sprintf("c.title ILIKE %s", arg("%"+t+"%")))
+                }
+                // Gapless $1..$n: the select embeds $1, the likes continue it.
+                rows, err := s.Pool.Query(ctx, `
+                SELECT DISTINCT ON (c.course_id) `+deskCourseSelect+`
+                FROM learn.courses c JOIN learn.departments d ON d.dept_id = c.dept_id
+                WHERE c.body = 'tertiary' AND c.title <> '' AND (`+strings.Join(likes, " "+op+" ")+`)
+                ORDER BY c.course_id LIMIT 40`, args...)
+                if err != nil {
+                        return nil, err
+                }
+                defer rows.Close()
+                out := []DeskCourse{}
+                for rows.Next() {
+                        c, err := scanDeskCourse(rows)
+                        if err != nil {
+                                return nil, err
+                        }
+                        out = append(out, c)
+                }
+                return out, rows.Err()
+        }
+        out, err := sweep("AND")
+        if err != nil || len(out) > 0 {
+                return out, err
+        }
+        wide, err := sweep("OR")
+        if err != nil || len(wide) == 0 {
+                return wide, err
+        }
+        score := func(c DeskCourse) int {
+                n := 0
+                low := strings.ToLower(c.Title)
+                for _, t := range tokens {
+                        if strings.Contains(low, t) {
+                                n++
+                        }
+                }
+                return n
+        }
+        sort.SliceStable(wide, func(i, j int) bool {
+                si, sj := score(wide[i]), score(wide[j])
+                if si != sj {
+                        return si > sj
+                }
+                return wide[i].TopicCount > wide[j].TopicCount
+        })
+        if len(wide) > 12 {
+                wide = wide[:12]
+        }
+        return wide, nil
+}
+
 // AIMatchRequest is the "Find my courses with AI" payload: the student
 // pastes every course title on their registration slip.
 type AIMatchRequest struct {
@@ -574,15 +721,47 @@ func (s *Service) AIMatchCourses(ctx context.Context, userID, text string) ([]AI
                 if matches == nil {
                         matches = []DeskCourse{}
                 }
+                // Near-miss titles (founder 2026-10-15: "if the AI doesn't
+                // find the exact course title for some courses make sure
+                // the ai find course title that are same as the one
+                // entered"): when the honest search came back thin, sweep
+                // the catalogue for titles built from the same significant
+                // words - "Mathematical Methods I" must reach the
+                // catalogue's "Mathematical Methods" - so the AI shelf
+                // holds real candidates for every line. The merge is
+                // capped so forty lines cannot blow the AI shelf up.
+                if len(matches) < 3 {
+                        if fuzzy, ferr := s.fuzzyTitleCourses(ctx, userID, line); ferr == nil {
+                                seen := make(map[string]bool, len(matches))
+                                for _, m := range matches {
+                                        seen[m.ID] = true
+                                }
+                                added := 0
+                                for _, f := range fuzzy {
+                                        if added >= 12 {
+                                                break
+                                        }
+                                        if !seen[f.ID] {
+                                                matches = append(matches, f)
+                                                seen[f.ID] = true
+                                                added++
+                                        }
+                                }
+                        }
+                }
                 for _, m := range matches {
                         candidates[m.ID] = true
                 }
                 out = append(out, AIMatchLine{Input: line, Matches: matches})
         }
-        // Deterministic picks first: an exact title hit needs no AI.
+        // Deterministic picks first: an exact title hit needs no AI -
+        // and neither does a canonical match, both sides normalised
+        // through fuzzyKey ("...Equation I" vs "...Equations", "General
+        // Agriculture (Theory)" vs "General Agriculture").
         for i := range out {
+                key := fuzzyKey(out[i].Input)
                 for _, m := range out[i].Matches {
-                        if strings.EqualFold(m.Title, out[i].Input) {
+                        if strings.EqualFold(m.Title, out[i].Input) || (key != "" && fuzzyKey(m.Title) == key) {
                                 out[i].Picked = m.ID
                                 break
                         }
@@ -611,7 +790,7 @@ func (s *Service) AIMatchCourses(ctx context.Context, userID, text string) ([]AI
                                 }
                                 shelf, _ := json.Marshal(titles)
                                 prompt := fmt.Sprintf(
-                                        "Each numbered line is a course a Nigerian student must register. Below is the ONLY catalogue allowed (id = title). For every line choose the single best catalogue id, or NONE when no row matches. Reply with one line per input, exactly \"<number>: <id-or-NONE>\".\n\nLINES:\n%s\nCATALOGUE (JSON):\n%s",
+                                        "Each numbered line is a course a Nigerian student must register. Below is the ONLY catalogue allowed (id = title). For every line choose the single best catalogue id, or NONE when no row matches. A catalogue row counts even when its title differs a little from the line (roman numerals, plurals, extra qualifiers) as long as it covers the SAME subject content. Reply with one line per input, exactly \"<number>: <id-or-NONE>\".\n\nLINES:\n%s\nCATALOGUE (JSON):\n%s",
                                         b.String(), shelf)
                                 if reply, err := s.Engine.AI.Complete(ctx, aiMatchSystem,
                                         []tutor.Message{{Role: "user", Content: prompt}}, 1600); err == nil {

@@ -164,9 +164,14 @@ export function ConfettiBurst({ fire }: { fire: number }) {
 
 export function ToastBanner({ text, tone = 'green' }: { text: string; tone?: 'green' | 'blue' | 'red' }) {
   if (!text) return null;
+  // The label ink follows the background token: the seed-driven green
+  // pairs with on-primary (black in the dark tier on the bright accent,
+  // founder dark-text pass 2026-10-15); the fixed macaw/error tones
+  // keep white in every tier.
   const bg = tone === 'blue' ? 'bg-macaw' : tone === 'red' ? 'bg-error' : 'bg-primary';
+  const ink = tone === 'blue' || tone === 'red' ? 'text-white' : 'text-on-primary';
   return (
-    <div className={`pointer-events-none fixed inset-x-0 top-16 z-[70] mx-auto w-fit max-w-[90vw] rounded-xl px-4 py-2 text-[13px] font-extrabold text-white learn-toast-shadow ${bg}`}>
+    <div className={`pointer-events-none fixed inset-x-0 top-16 z-[70] mx-auto w-fit max-w-[90vw] rounded-xl px-4 py-2 text-[13px] font-extrabold learn-toast-shadow ${bg} ${ink}`}>
       {text}
     </div>
   );
