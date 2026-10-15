@@ -109,7 +109,7 @@ Rules:
 - Write for the topic's exam body. JAMB/WAEC/NECO topics follow the Nigerian senior-secondary syllabus; university topics follow the NUC CCMAS / NBTE / NCCE curricula.
 - Output STRICT JSON only. No markdown fences, no commentary.
 - Shape: {"title": string, "summary": string, "notes": [{"heading": string, "body": string}], "key_points": [string]}
-- notes: EXACTLY 10 to 12 sections that TEACH, not tease - the student must read every part in order before their quiz unlocks. Each body: 150-260 words of plain-text paragraphs (no HTML, no markdown syntax). Build the topic from first principles: define every term in full, develop each concept across several sections, walk through at least two worked examples step by step (numbered steps) across the whole lesson, point out the exam traps students actually fail on, and use Nigerian examples (naira, kana, Lagos/Kano/Akure contexts) where natural. A student who reads ONLY these notes must be able to answer every quiz item on the topic.
+- notes: the number of sections the brief asks for (the lesson is built in two passes - write exactly how many the brief says). Every section TEACHES, never teases: each body is 150-260 words of plain-text paragraphs (no HTML, no markdown syntax). Build the topic from first principles: define every term in full, walk through worked examples step by step (numbered steps), point out the exam traps students actually fail on, and use Nigerian examples (naira, kana, Lagos/Kano/Akure contexts) where natural. A student who reads ONLY these notes must be able to answer every quiz item on the topic.
 - MATHS NOTATION (strict): every formula, equation, exponent or symbol is LaTeX wrapped in dollar signs. Write $x^2$, $H_2O$, $\\frac{dy}{dx}$, $\\lim_{x \\to \\infty} f(x)$, $\\int_0^1 x^2\\,dx$, $\\sum_{i=1}^{n} i$. NEVER write bare caret or underscore notation (x^2, H_2O, 10^5) outside $...$ - the renderer typesets $...$ only and prints everything else raw.
 - key_points: 5 to 7 exam-focused takeaways.`
 
@@ -119,7 +119,7 @@ Rules:
 - Write for the topic's exam body. JAMB/WAEC/NECO topics follow the Nigerian senior-secondary syllabus; university topics follow the NUC CCMAS / NBTE / NCCE curricula.
 - Output STRICT JSON only. No markdown fences, no commentary.
 - Shape: {"quiz": [{"type": "mcq"|"true_false"|"fill_blank", "stem": string, "options": {"A": string, "B": string, "C": string, "D": string}, "answer": "A"|"B"|"C"|"D"|"true"|"false"|string, "explanation": string}]}
-- quiz: EXACTLY 20 items covering the WHOLE breadth of the topic, ramping easy to hard - every part of a standard treatment of this topic gets at least one question. Multiple-choice questions carry exactly 4 options keyed "A", "B", "C", "D" - the standard Nigerian exam shape (use 5 options "A"-"E" only where the past papers themselves carry five). Mix the types: at least 12 mcq, at least 3 true_false, at least 3 fill_blank (fill_blank has no options; answer is the exact word/phrase). Each stem must be answerable from a comprehensive lesson on THIS topic; anything a proper lesson on this topic would not teach is forbidden. For mcq the "answer" is the LETTER of the correct option; for true_false it is "true" or "false". Distractors must be plausible; never reveal the answer inside the stem. Every item carries a short explanation.
+- quiz: the number of items the brief asks for (the exam is built in two passes - write exactly how many the brief says). Multiple-choice questions carry exactly 4 options keyed "A", "B", "C", "D" - the standard Nigerian exam shape (use 5 options "A"-"E" only where the past papers themselves carry five). Mix the types: mostly mcq plus true_false and fill_blank (fill_blank has no options; answer is the exact word/phrase). Each stem must be answerable from a comprehensive lesson on THIS topic; anything a proper lesson on this topic would not teach is forbidden. For mcq the "answer" is the LETTER of the correct option; for true_false it is "true" or "false". Distractors must be plausible; never reveal the answer inside the stem. Every item carries a short explanation.
 - MATHS NOTATION (strict): every formula or symbol is LaTeX wrapped in dollar signs ($x^2$, $\\frac{dy}{dx}$). Never bare caret/underscore notation outside $...$.`
 
 func lessonUserPrompt(topic, course, body, subject string, seq, total int) string {
@@ -136,6 +136,8 @@ Topic: %s
 Course: %s%s
 Standard: %s
 Position: topic %d of %d in the course roadmap.
+
+This is the FIRST pass of the lesson: write EXACTLY 6 sections - the foundational half (definitions, first principles, the first worked example). A second pass will add the deeper 6.
 
 Return the JSON object now.`, topic, course, subjectLine, band, seq, total)
 }
@@ -155,7 +157,9 @@ Course: %s%s
 Standard: %s
 Position: topic %d of %d in the course roadmap.
 
-Return the JSON object now.`, LessonQuizTarget, topic, course, subjectLine, band, seq, total)
+This is the FIRST pass of the exam: write EXACTLY %d items - the easier ramp (definitions, direct recall, one-step applications). A second pass will add the harder half.
+
+Return the JSON object now.`, LessonQuizTarget/2, topic, course, subjectLine, band, seq, total, LessonQuizTarget/2)
 }
 
 // ─── JSON validation ──────────────────────────────────────────────────────
@@ -938,10 +942,11 @@ func (s *Service) genNotes(ctx context.Context, t *topicCtx) (*aiLesson, error) 
 		if attempt > 0 && lastErr != nil {
 			prompt += fmt.Sprintf("\n\nYour previous attempt failed validation: %v\nFix exactly those problems and return the corrected JSON object.", lastErr)
 		}
-		// 3000 tokens = the largest budget the provider provably
-		// accepts (the AI Studio quiz generator runs this exact
-		// shape in production); bigger asks 400 on the free tier.
-		out, err := s.Engine.AI.Complete(ctx, lessonNotesSystem, []tutor.Message{{Role: "user", Content: prompt}}, 3000)
+		// 2600 tokens per pass: each pass asks for HALF the
+		// lesson (6 sections / 10 questions ≈ 1,500 real
+		// tokens ≈ 60-90s on the free tier) so no single call
+		// ever brushes the provider ceiling or the timeout.
+		out, err := s.Engine.AI.Complete(ctx, lessonNotesSystem, []tutor.Message{{Role: "user", Content: prompt}}, 2600)
 		if err != nil {
 			lastErr = err
 			continue
@@ -1057,8 +1062,11 @@ func parseNotesLenient(raw []byte) (*aiLesson, error) {
 // (two rounds max) until the merged lesson carries 10+ long parts.
 func (s *Service) topUpNotes(ctx context.Context, t *topicCtx, partial *aiLesson) (*aiLesson, error) {
 	notes := partial.Notes
-	for round := 0; round < 2 && len(notes) < 10; round++ {
+	for round := 0; round < 3 && len(notes) < 10; round++ {
 		need := 12 - len(notes)
+		if need > 6 {
+			need = 6 // small continuations never brush the ceiling
+		}
 		headings := make([]string, len(notes))
 		for i, n := range notes {
 			headings[i] = n.Heading
@@ -1106,7 +1114,7 @@ func (s *Service) genQuiz(ctx context.Context, t *topicCtx) ([]aiQuizQ, error) {
 		if attempt > 0 && lastErr != nil {
 			prompt += fmt.Sprintf("\n\nYour previous attempt failed validation: %v\nFix exactly those problems and return the corrected JSON object.", lastErr)
 		}
-		out, err := s.Engine.AI.Complete(ctx, lessonQuizSystem, []tutor.Message{{Role: "user", Content: prompt}}, 3000)
+		out, err := s.Engine.AI.Complete(ctx, lessonQuizSystem, []tutor.Message{{Role: "user", Content: prompt}}, 2600)
 		if err != nil {
 			lastErr = err
 			continue
@@ -1161,6 +1169,9 @@ func (s *Service) topUpQuiz(ctx context.Context, t *topicCtx, quiz []aiQuizQ) ([
 	}
 	for round := 0; round < 3 && len(quiz) < 18; round++ {
 		need := 20 - len(quiz)
+		if need > 10 {
+			need = 10 // small continuations never brush the ceiling
+		}
 		stems := make([]string, 0, len(quiz))
 		for i, q := range quiz {
 			if i >= 12 {
@@ -1183,7 +1194,7 @@ Shape: {"quiz": [{"type": "mcq"|"true_false"|"fill_blank", "stem": string, "opti
 - EXACTLY %d new items; mcq carries 4 options keyed A-D; every item carries a short explanation.
 - MATHS NOTATION (strict): LaTeX wrapped in dollar signs only.`,
 			t.Title, t.Course, strings.Join(stems, " | "), need, need)
-		out, err := s.Engine.AI.Complete(ctx, lessonQuizSystem, []tutor.Message{{Role: "user", Content: prompt}}, 3000)
+		out, err := s.Engine.AI.Complete(ctx, lessonQuizSystem, []tutor.Message{{Role: "user", Content: prompt}}, 2600)
 		if err != nil {
 			return nil, err
 		}
