@@ -217,13 +217,19 @@ func (s *Service) Complete(ctx context.Context, userID string, req CompleteReque
                 return nil, err
         }
 
-        // Course completion percentage for the done screen.
+        // Course completion percentage for the done screen. The original
+        // read `COALESCE(int(round(100.0 * (done), (total))), 0)` - two
+        // bugs: Postgres has no int() function, and the DIVISION between
+        // the done and total counts was missing (that comma made the
+        // total round's "decimal places" argument). The statement failed
+        // on every call and the swallowed error left CompletedPct at 0
+        // forever. Fixed: a real division with a zero-total guard.
         _ = s.Pool.QueryRow(ctx, `
-                SELECT COALESCE(int(round(100.0 * (
+                SELECT COALESCE(round(100.0 * (
                   SELECT COUNT(*) FROM learn.progress pr
                   JOIN learn.topics t ON t.topic_id = pr.topic_id
-                  WHERE pr.user_id=$1 AND t.course_id=$2), (
-                  SELECT COUNT(*) FROM learn.topics t WHERE t.course_id=$2))), 0)`,
+                  WHERE pr.user_id=$1 AND t.course_id=$2) / NULLIF((
+                  SELECT COUNT(*) FROM learn.topics t WHERE t.course_id=$2), 0))::int, 0)`,
                 userID, courseID).Scan(&res.CompletedPct)
 
         l, _ = s.loadLearner(ctx, s.Pool, userID)

@@ -1078,8 +1078,16 @@ PROG=$(curl -A "RenanceE2E/1.0 (CI probe)" -fsS -X POST "$BASE/learn/progress" \
   -H "$AUTHH" -H 'Content-Type: application/json' \
   -d "{\"topicId\":\"$TOPIC\",\"correct\":10,\"total\":10,\"maxCombo\":3}")
 printf '%s' "$PROG" | jsonget "d['xpEarned']" | grep -qE "^[0-9]+$"
+# Date-proof quest check: the 3-of-7 daily rotation is seeded by the
+# calendar day, so an 'xp'-kind quest is NOT guaranteed to be in today's
+# set (2026-10-15 rolled {lessons, practice, combo} and this check
+# failed on a rotation, not on the code). A perfect 10/10 lesson always
+# increments at least two of xp/correct/lessons/perfect/combo - the
+# pool carries exactly one 'practice' quest, so at most one of the
+# three dailies can stay at zero. Sum ALL dailies instead of the
+# kind='xp' subset.
 XPQ1=$(curl -A "RenanceE2E/1.0 (CI probe)" -fsS "$BASE/learn/quests" -H "$AUTHH" \
-  | jsonget "sum(q['progress'] for q in d['daily'] if q['kind']=='xp')")
+  | jsonget "sum(q['progress'] for q in d['daily'])")
 [ "$XPQ1" -ge 1 ]
 
 step "learn: quest catalogue serves 3 dailies + weekly + monthly"
