@@ -955,7 +955,7 @@ func (s *Service) genNotes(ctx context.Context, t *topicCtx) (*aiLesson, error) 
 		// recipe ran it for months) with a TWO-PASS ask: each
 		// pass requests 6 sections, so the ACTUAL output stays
 		// ~1,500-2,500 tokens and never truncates.
-		out, err := s.Engine.AI.Complete(ctx, lessonNotesSystem, []tutor.Message{{Role: "user", Content: prompt}}, 6000)
+		out, err := s.completeRetry429(ctx, lessonNotesSystem, prompt, 6000)
 		if err != nil {
 			lastErr = err
 			continue
@@ -1134,6 +1134,33 @@ func salvageQuizElements(raw string) []aiQuizQ {
 	return out
 }
 
+// completeRetry429 rides out the free tier's rate-limit window: a 429
+// (Z.ai code 1302) backs off 20s/35s and retries - the generation
+// budget is 300s and the student polls, so waiting out the limiter
+// beats failing the lesson. Any other error returns immediately.
+func (s *Service) completeRetry429(ctx context.Context, system, prompt string, maxTokens int) (string, error) {
+	var lastErr error
+	for i := 0; i < 3; i++ {
+		out, err := s.Engine.AI.Complete(ctx, system, []tutor.Message{{Role: "user", Content: prompt}}, maxTokens)
+		if err == nil {
+			return out, nil
+		}
+		lastErr = err
+		if !strings.Contains(err.Error(), "429") {
+			return "", err
+		}
+		if s.Engine.Log != nil {
+			s.Engine.Log.Info("learn: provider rate-limited - backing off", "attempt", i+1)
+		}
+		select {
+		case <-ctx.Done():
+			return "", ctx.Err()
+		case <-time.After(time.Duration(20*(i+1)) * time.Second):
+		}
+	}
+	return "", lastErr
+}
+
 // parseNotesLenient accepts a chunk of 1-16 notes with a softer word
 // floor (80) - continuation rounds are validated strictly as a whole.
 func parseNotesLenient(raw []byte) (*aiLesson, error) {
@@ -1182,7 +1209,7 @@ Shape: {"notes": [{"heading": string, "body": string}]}
 - EXACTLY %d new sections; each body 150-260 words of plain-text paragraphs (no HTML, no markdown syntax).
 - MATHS NOTATION (strict): every formula or symbol is LaTeX wrapped in dollar signs ($x^2$, $\\frac{dy}{dx}$). Never bare caret/underscore notation outside $...$.`,
 			t.Title, t.Course, strings.Join(headings, " | "), need, need)
-		out, err := s.Engine.AI.Complete(ctx, lessonNotesSystem, []tutor.Message{{Role: "user", Content: prompt}}, 6000)
+		out, err := s.completeRetry429(ctx, lessonNotesSystem, prompt, 6000)
 		if err != nil {
 			return nil, err
 		}
@@ -1221,7 +1248,7 @@ func (s *Service) genQuiz(ctx context.Context, t *topicCtx) ([]aiQuizQ, error) {
 		if attempt > 0 && lastErr != nil {
 			prompt += fmt.Sprintf("\n\nYour previous attempt failed validation: %v\nFix exactly those problems and return the corrected JSON object.", lastErr)
 		}
-		out, err := s.Engine.AI.Complete(ctx, lessonQuizSystem, []tutor.Message{{Role: "user", Content: prompt}}, 6000)
+		out, err := s.completeRetry429(ctx, lessonQuizSystem, prompt, 6000)
 		if err != nil {
 			lastErr = err
 			continue
@@ -1302,7 +1329,7 @@ Shape: {"quiz": [{"type": "mcq"|"true_false"|"fill_blank", "stem": string, "opti
 - EXACTLY %d new items; mcq carries 4 options keyed A-D; every item carries a short explanation.
 - MATHS NOTATION (strict): LaTeX wrapped in dollar signs only.`,
 			t.Title, t.Course, strings.Join(stems, " | "), need, need)
-		out, err := s.Engine.AI.Complete(ctx, lessonQuizSystem, []tutor.Message{{Role: "user", Content: prompt}}, 6000)
+		out, err := s.completeRetry429(ctx, lessonQuizSystem, prompt, 6000)
 		if err != nil {
 			return nil, err
 		}
