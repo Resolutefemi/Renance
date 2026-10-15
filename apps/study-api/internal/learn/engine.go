@@ -925,10 +925,11 @@ func (s *Service) generateLesson(ctx context.Context, t *topicCtx) (*LessonDoc, 
 }
 
 // genNotes produces the deep notes half (10-12 long sections). Models
-// under-produce very long single outputs, so a short first answer is
-// not a failure: whatever valid sections came back are kept and the
-// missing ones are requested as a CONTINUATION (top-up) - the founder's
-// "at least 10 distinct, long parts" is guaranteed by construction.
+// under-produce (or truncate) very long single outputs, so a short or
+// clipped first answer is not a failure: whatever valid sections came
+// back are salvaged and the missing ones are requested as CONTINUATION
+// (top-up) rounds - the founder's "at least 10 distinct, long parts"
+// is guaranteed by construction, never by luck.
 func (s *Service) genNotes(ctx context.Context, t *topicCtx) (*aiLesson, error) {
 	user := lessonUserPrompt(t.Title, t.Course, t.Body, t.Subject, t.Seq, t.Total)
 	var lastErr error
@@ -937,23 +938,95 @@ func (s *Service) genNotes(ctx context.Context, t *topicCtx) (*aiLesson, error) 
 		if attempt > 0 && lastErr != nil {
 			prompt += fmt.Sprintf("\n\nYour previous attempt failed validation: %v\nFix exactly those problems and return the corrected JSON object.", lastErr)
 		}
-		out, err := s.Engine.AI.Complete(ctx, lessonNotesSystem, []tutor.Message{{Role: "user", Content: prompt}}, 6000)
+		// 3000 tokens = the largest budget the provider provably
+		// accepts (the AI Studio quiz generator runs this exact
+		// shape in production); bigger asks 400 on the free tier.
+		out, err := s.Engine.AI.Complete(ctx, lessonNotesSystem, []tutor.Message{{Role: "user", Content: prompt}}, 3000)
 		if err != nil {
 			lastErr = err
 			continue
 		}
-		parsed, err := validateNotesAI([]byte(extractJSON(out)))
-		if err == nil {
-			return parsed, nil
+		partial, perr := notesFromOutput(out)
+		if perr == nil && len(partial.Notes) >= 10 {
+			if parsed, verr := validateNotesAI([]byte(extractJSON(out))); verr == nil {
+				return parsed, nil
+			}
 		}
-		// Under-production top-up: keep what arrived, ask for more.
-		merged, terr := s.topUpNotes(ctx, t, out)
+		if perr != nil {
+			lastErr = perr
+			continue
+		}
+		// Under-production or truncation: keep what arrived, ask for more.
+		merged, terr := s.topUpNotes(ctx, t, partial)
 		if terr == nil {
 			return merged, nil
 		}
-		lastErr = err
+		lastErr = fmt.Errorf("top-up failed: %v (first pass: %v)", terr, perr)
 	}
 	return nil, lastErr
+}
+
+// notesFromOutput parses a notes half, salvaging a truncated JSON
+// output (the provider clamps long generations mid-object) by closing
+// the open brackets around the last complete element.
+func notesFromOutput(out string) (*aiLesson, error) {
+	raw := extractJSON(out)
+	if parsed, err := parseNotesLenient([]byte(raw)); err == nil {
+		return parsed, nil
+	}
+	salvaged := salvageJSON(raw)
+	if salvaged != raw {
+		if parsed, err := parseNotesLenient([]byte(salvaged)); err == nil {
+			return parsed, nil
+		}
+	}
+	return nil, fmt.Errorf("notes output unusable")
+}
+
+// salvageJSON closes the open brackets of a truncated strict-JSON
+// document around its last complete element.
+func salvageJSON(raw string) string {
+	lastClose := strings.LastIndex(raw, "}")
+	if lastClose < 0 {
+		return raw
+	}
+	trimmed := raw[:lastClose+1]
+	stack := []rune{}
+	inStr, esc := false, false
+	for _, r := range trimmed {
+		if esc {
+			esc = false
+			continue
+		}
+		if r == '\\' && inStr {
+			esc = true
+			continue
+		}
+		if r == '"' {
+			inStr = !inStr
+			continue
+		}
+		if inStr {
+			continue
+		}
+		switch r {
+		case '{':
+			stack = append(stack, '}')
+		case '[':
+			stack = append(stack, ']')
+		case '}', ']':
+			if len(stack) > 0 {
+				stack = stack[:len(stack)-1]
+			}
+		}
+	}
+	if len(stack) == 0 {
+		return trimmed
+	}
+	for i := len(stack) - 1; i >= 0; i-- {
+		trimmed += string(stack[i])
+	}
+	return trimmed
 }
 
 // parseNotesLenient accepts a chunk of 1-16 notes with a softer word
@@ -982,11 +1055,7 @@ func parseNotesLenient(raw []byte) (*aiLesson, error) {
 
 // topUpNotes requests the missing sections as continuation rounds
 // (two rounds max) until the merged lesson carries 10+ long parts.
-func (s *Service) topUpNotes(ctx context.Context, t *topicCtx, firstOut string) (*aiLesson, error) {
-	partial, perr := parseNotesLenient([]byte(extractJSON(firstOut)))
-	if perr != nil {
-		return nil, perr
-	}
+func (s *Service) topUpNotes(ctx context.Context, t *topicCtx, partial *aiLesson) (*aiLesson, error) {
 	notes := partial.Notes
 	for round := 0; round < 2 && len(notes) < 10; round++ {
 		need := 12 - len(notes)
@@ -1037,20 +1106,28 @@ func (s *Service) genQuiz(ctx context.Context, t *topicCtx) ([]aiQuizQ, error) {
 		if attempt > 0 && lastErr != nil {
 			prompt += fmt.Sprintf("\n\nYour previous attempt failed validation: %v\nFix exactly those problems and return the corrected JSON object.", lastErr)
 		}
-		out, err := s.Engine.AI.Complete(ctx, lessonQuizSystem, []tutor.Message{{Role: "user", Content: prompt}}, 4500)
+		out, err := s.Engine.AI.Complete(ctx, lessonQuizSystem, []tutor.Message{{Role: "user", Content: prompt}}, 3000)
 		if err != nil {
 			lastErr = err
 			continue
 		}
-		quiz, verr := validateQuizAI([]byte(extractJSON(out)))
-		if verr == nil {
-			return quiz, nil
+		quiz, qerr := quizFromOutput(out)
+		if qerr != nil {
+			lastErr = qerr
+			continue
 		}
-		merged, terr := s.topUpQuiz(ctx, t, out)
+		if len(quiz) >= 18 {
+			if validated, verr := validateQuizAI([]byte(extractJSON(out))); verr == nil {
+				return validated, nil
+			}
+			// A 18+ set that fails strict validation still gets
+			// the top-up chance below (it may just be a thin mcq mix).
+		}
+		merged, terr := s.topUpQuiz(ctx, t, quiz)
 		if terr == nil {
 			return merged, nil
 		}
-		lastErr = verr
+		lastErr = fmt.Errorf("quiz top-up failed: %v", terr)
 	}
 	if s.Engine.Log != nil {
 		s.Engine.Log.Info("learn: quiz generation failed - falling back to bank questions", "topic", t.ID, "err", lastErr)
@@ -1058,20 +1135,31 @@ func (s *Service) genQuiz(ctx context.Context, t *topicCtx) ([]aiQuizQ, error) {
 	return nil, lastErr
 }
 
-// topUpQuiz requests the missing questions in continuation rounds
-// (two max) until 18+ items exist.
-func (s *Service) topUpQuiz(ctx context.Context, t *topicCtx, firstOut string) ([]aiQuizQ, error) {
+// quizFromOutput parses a quiz half, salvaging truncated JSON the same
+// way the notes half does.
+func quizFromOutput(out string) ([]aiQuizQ, error) {
+	raw := extractJSON(out)
 	var partial struct {
 		Quiz []aiQuizQ `json:"quiz"`
 	}
-	if err := json.Unmarshal([]byte(extractJSON(firstOut)), &partial); err != nil {
-		return nil, err
+	if err := json.Unmarshal([]byte(raw), &partial); err == nil && len(partial.Quiz) > 0 {
+		return partial.Quiz, nil
 	}
-	quiz := partial.Quiz
+	if salvaged := salvageJSON(raw); salvaged != raw {
+		if err := json.Unmarshal([]byte(salvaged), &partial); err == nil && len(partial.Quiz) > 0 {
+			return partial.Quiz, nil
+		}
+	}
+	return nil, fmt.Errorf("quiz output unusable")
+}
+
+// topUpQuiz requests the missing questions in continuation rounds
+// (two max) until 18+ items exist.
+func (s *Service) topUpQuiz(ctx context.Context, t *topicCtx, quiz []aiQuizQ) ([]aiQuizQ, error) {
 	if len(quiz) == 0 || len(quiz) > 24 {
 		return nil, fmt.Errorf("quiz chunk unusable (%d items)", len(quiz))
 	}
-	for round := 0; round < 2 && len(quiz) < 18; round++ {
+	for round := 0; round < 3 && len(quiz) < 18; round++ {
 		need := 20 - len(quiz)
 		stems := make([]string, 0, len(quiz))
 		for i, q := range quiz {
@@ -1095,20 +1183,18 @@ Shape: {"quiz": [{"type": "mcq"|"true_false"|"fill_blank", "stem": string, "opti
 - EXACTLY %d new items; mcq carries 4 options keyed A-D; every item carries a short explanation.
 - MATHS NOTATION (strict): LaTeX wrapped in dollar signs only.`,
 			t.Title, t.Course, strings.Join(stems, " | "), need, need)
-		out, err := s.Engine.AI.Complete(ctx, lessonQuizSystem, []tutor.Message{{Role: "user", Content: prompt}}, 3800)
+		out, err := s.Engine.AI.Complete(ctx, lessonQuizSystem, []tutor.Message{{Role: "user", Content: prompt}}, 3000)
 		if err != nil {
 			return nil, err
 		}
-		var extra struct {
-			Quiz []aiQuizQ `json:"quiz"`
+		extra, eerr := quizFromOutput(out)
+		if eerr != nil {
+			return nil, eerr
 		}
-		if err := json.Unmarshal([]byte(extractJSON(out)), &extra); err != nil {
-			return nil, err
-		}
-		if len(extra.Quiz) == 0 {
+		if len(extra) == 0 {
 			return nil, fmt.Errorf("quiz continuation returned nothing")
 		}
-		quiz = append(quiz, extra.Quiz...)
+		quiz = append(quiz, extra...)
 	}
 	// The merged set must clear the full 18+ bar (with the same mcq
 	// answer-alignment checks) before it ships.
