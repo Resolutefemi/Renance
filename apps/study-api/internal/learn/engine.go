@@ -51,6 +51,10 @@ type LessonDoc struct {
 	Drawings  []DrawingRef  `json:"drawings"`
 	Source    string        `json:"source"`
 	Cached    bool          `json:"cached"`
+	// GenError carries the generation failure reason when a stale doc
+	// serves as the fallback - ops forensics without log access (the
+	// founder reads the API, not the Render console).
+	GenError string `json:"genError,omitempty"`
 }
 
 // LessonSource is the lesson FORMAT stamp: the generation recipe it
@@ -738,6 +742,11 @@ func (s *Service) Lesson(ctx context.Context, topicID string, wait bool) (*Lesso
 			return doc, nil
 		}
 		if genErr != nil && staleDoc != nil {
+			msg := genErr.Error()
+			if len(msg) > 240 {
+				msg = msg[:240]
+			}
+			staleDoc.GenError = msg
 			return staleDoc, nil
 		}
 		return doc, genErr
