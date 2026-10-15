@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS learn.course_units (
 );
 
 CREATE TABLE IF NOT EXISTS learn.topic_chests (
-    user_id       UUID        NOT NULL REFERENCES study.users(user_id) ON DELETE CASCADE,
+    user_id       UUID        NOT NULL REFERENCES study.users(id) ON DELETE CASCADE,
     topic_id      TEXT        NOT NULL REFERENCES learn.topics(topic_id) ON DELETE CASCADE,
     reward_kind   TEXT        NOT NULL, -- gems | freeze | boost
     reward_amount INT         NOT NULL,
