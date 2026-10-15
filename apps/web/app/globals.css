@@ -2018,6 +2018,93 @@ a.bg-hero-cta .material-symbols-outlined {
   box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.22), 0 14px 30px -12px rgba(17, 28, 45, 0.5);
 }
 
+/* ── Celebrations (founder directive 2026-10-16) ───────────────────────
+   The topic chest (shake → open → spin → reward pop) and the streak
+   flame. Pure CSS so they ride the reduced-motion contract below. */
+
+.learn-chest-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  width: 170px;
+}
+.learn-chest {
+  position: relative;
+  height: 88px;
+  width: 118px;
+  filter: drop-shadow(0 16px 22px rgba(0, 0, 0, 0.45));
+}
+.learn-chest-lid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 34px;
+  border-radius: 16px 16px 5px 5px;
+  background: linear-gradient(180deg, #d99a2b, #b47614);
+  border: 3px solid #7a4c08;
+  transform-origin: top center;
+  transition: transform 0.55s cubic-bezier(0.2, 1.4, 0.4, 1);
+  z-index: 2;
+}
+.learn-chest-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  border-radius: 6px 6px 12px 12px;
+  background: linear-gradient(180deg, #c8891f, #9a6410);
+  border: 3px solid #7a4c08;
+  border-top: none;
+}
+.learn-chest-lock {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 20px;
+  width: 22px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #ffe08a, #d99a2b);
+  border: 3px solid #7a4c08;
+}
+.stage-open .learn-chest-lid, .stage-spin .learn-chest-lid, .stage-reward .learn-chest-lid {
+  transform: rotate(-104deg) translateY(-4px);
+}
+.stage-shake .learn-chest { animation: learn-chest-shake 0.32s ease-in-out 3; }
+@keyframes learn-chest-shake {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(-4deg) translateY(-3px); }
+  75% { transform: rotate(4deg) translateY(-3px); }
+}
+.stage-spin .learn-chest { animation: learn-chest-spin 1.05s cubic-bezier(0.3, 0.9, 0.3, 1) 1; }
+@keyframes learn-chest-spin {
+  0% { transform: rotate(0deg) scale(1); }
+  55% { transform: rotate(360deg) scale(1.12); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+.learn-chest-reward {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  margin-left: -32px;
+  z-index: 3;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.5);
+  animation: learn-chest-pop 0.6s cubic-bezier(0.2, 1.5, 0.4, 1) 1;
+}
+@keyframes learn-chest-pop {
+  0% { transform: translateY(26px) scale(0.4); opacity: 0; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+.learn-streak-flame { animation: learn-streak-beat 0.9s ease-in-out infinite; }
+@keyframes learn-streak-beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
 /* Drawing figures (structural formulas / waves) inside lesson notes.
    currentColor keeps them on-theme in every tier. */
 .learn-drawing svg { width: 100%; height: auto; max-height: 300px; display: block; margin: 0 auto; }
@@ -2025,5 +2112,7 @@ a.bg-hero-cta .material-symbols-outlined {
 
 /* the learn module joins the reduced-motion contract */
 @media (prefers-reduced-motion: reduce) {
-  .learn-node-current, .learn-confetti { animation: none !important; }
+  .learn-node-current, .learn-confetti,
+  .learn-chest-stage, .learn-chest, .learn-chest-reward,
+  .learn-streak-flame { animation: none !important; transition: none !important; }
 }

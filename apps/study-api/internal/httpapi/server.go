@@ -180,6 +180,7 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
                 Engine:          learn.NewEngine(aiProvider, lib),
                 UnlimitedHearts: cfg.LearnUnlimitedHearts,
         }
+        s.learn.WireExpGuard()
         s.limiter = newRateLimiter(cfg.TutorPerMin, cfg.TutorPerMin)
         s.authIP = newRateLimiter(cfg.AuthPerMin, cfg.AuthPerMin*2)
         s.authGlobal = newRateLimiter(cfg.AuthGlobalPerMin, cfg.AuthGlobalPerMin)

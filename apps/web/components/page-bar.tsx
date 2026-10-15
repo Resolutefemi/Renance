@@ -18,15 +18,26 @@ export default function PageBar({
   title,
   right,
   backHref = '/dashboard',
+  onBack,
 }: {
   title: string;
   right?: ReactNode;
   /** Fallback when there is no in-app history to go back to. */
   backHref?: string;
+  /** Optional full override: pages with internal state faces (the
+   *  courses desk's list → select → path ladder) pass a handler so
+   *  back unwinds THEIR state first and only then leaves the page -
+   *  the founder's fix for back "dumping the user to the home page"
+   *  from a deep screen (2026-10-16). */
+  onBack?: () => void;
 }) {
   const router = useRouter();
 
   function goBack() {
+    if (onBack) {
+      onBack();
+      return;
+    }
     if (typeof window !== 'undefined') {
       // Next.js keeps `idx` in the history state: the index of the
       // current entry in the app's own history stack. idx > 0 means

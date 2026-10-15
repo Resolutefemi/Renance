@@ -286,6 +286,33 @@ export default function CoursesPage() {
     }
   }, [path]);
 
+  /** The back key unwinds the page's OWN faces first (founder report
+   *  2026-10-16: the top-left back button dumped students on the home
+   *  page). Path → the course list; selection → the list; and only
+   *  from the list face does it leave the page - real history back
+   *  where one exists (the desk, the dashboard, wherever the student
+   *  came from), /dashboard as the fresh-entry fallback. */
+  const handleBack = useCallback(() => {
+    if (face === 'path') {
+      setTopic(null);
+      setReviewUnit(null);
+      setPath(null);
+      setFace('list');
+      return;
+    }
+    if (face === 'select') {
+      setFace('list');
+      setSecQuery('');
+      return;
+    }
+    const state = typeof window !== 'undefined' ? (window.history.state as { idx?: number } | null) : null;
+    if (typeof window !== 'undefined' && window.history.length > 1 && (state?.idx ?? 0) > 0) {
+      router.back();
+      return;
+    }
+    router.push('/dashboard');
+  }, [face, router]);
+
   // ─── Render ───────────────────────────────────────────────────────────────
 
   return (
@@ -298,7 +325,7 @@ export default function CoursesPage() {
           act on). */}
       <PageBar
         title={face === 'path' && path ? path.title : 'Course'}
-        backHref="/dashboard"
+        onBack={handleBack}
       />
 
       <main className="mx-auto w-full max-w-3xl px-4 pb-28 pt-4">
@@ -460,7 +487,14 @@ function TertiaryDesk({
   onAdd: (courseIds: string[]) => Promise<boolean>;
   onNotice: (msg: string) => void;
 }) {
-  const [phase, setPhase] = useState<'load' | 'itype' | 'dept' | 'shelf'>('load');
+  // 'desk' = MY SEMESTER DASHBOARD (the clean study view the founder
+  // asked for: chosen courses as cards, no config noise, no delete
+  // buttons). 'manage' = Add / Remove Courses (selection, the AI
+  // finder, department switching, and the only place a course can be
+  // removed). The gates (itype/dept) sit in front of both; 'shelf' is
+  // the transient "gates passed" state the landing effect resolves to
+  // desk or manage.
+  const [phase, setPhase] = useState<'load' | 'itype' | 'dept' | 'shelf' | 'desk' | 'manage'>('load');
   const [itype, setItype] = useState('');
   const [shelf, setShelf] = useState<DeskShelves | null>(null);
   const [deps, setDeps] = useState<DeskDepartment[] | null>(null);
@@ -506,7 +540,7 @@ function TertiaryDesk({
       } else if (!s.institutionType) {
         setPhase('itype');
       } else {
-        setPhase('shelf');
+        setPhase('shelf'); // the post-gate effect lands desk or manage
       }
     } catch {
       setPhase('itype'); // the gate works even when the shelf hiccups
@@ -548,6 +582,25 @@ function TertiaryDesk({
   }, [phase]);
 
   useEffect(() => { void loadShelf(); }, [loadShelf]);
+
+  // Post-gate landing + the dead-end fix (founder directive 2026-10-16):
+  // "Once a tertiary user selects their department and courses,
+  // automatically transition them out of the configuration screen into
+  // a dedicated My Semester Dashboard." A configured desk with courses
+  // lands on the dashboard; a fresh desk lands in manage to pick
+  // courses; and the FIRST course that lands while in manage (AI finder
+  // or manual checkbox) flips the view to the dashboard by itself.
+  const mineCount = mine.length;
+  const mineSeenRef = useRef(0);
+  useEffect(() => {
+    if (phase === 'shelf') {
+      setPhase(mineCount > 0 ? 'desk' : 'manage');
+    } else if (phase === 'manage' && mineCount > 0 && mineSeenRef.current === 0) {
+      setPhase('desk');
+      window.scrollTo({ top: 0 });
+    }
+    mineSeenRef.current = mineCount;
+  }, [phase, mineCount]);
 
   // Course search: debounced, real rows only (code / title / key topic).
   useEffect(() => {
@@ -667,8 +720,10 @@ function TertiaryDesk({
       setAiText('');
       setAiLines(null);
       setAiPicked(new Set());
-      // Land at the top of the refreshed shelf - the checked rows are
-      // ready to tap straight into their course paths.
+      // Straight to the My Semester dashboard (founder 2026-10-16:
+      // "add to my courses" must land on the page where the saved
+      // courses are shown and clickable).
+      setPhase('desk');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } finally {
       setGateBusy(false);
@@ -773,7 +828,70 @@ function TertiaryDesk({
     );
   }
 
-  // ── The shelf: your courses first, then general, then the department ──
+  // ── MY SEMESTER DASHBOARD (founder directive 2026-10-16): the clean
+  // study view a configured tertiary student lands on - chosen courses
+  // as independent JAMB-style cards with progress bars and roadmap
+  // links, NO configuration noise and NO delete buttons (removal lives
+  // behind the Add / remove courses mode). ──
+  if (phase === 'desk') {
+    const totalTopics = mine.reduce((n, c) => n + (c.topicCount ?? 0), 0);
+    const doneTopics = mine.reduce((n, c) => n + (c.completedTopics ?? 0), 0);
+    return (
+      <div className="flex flex-col gap-4">
+        {/* Semester header */}
+        <div className="learn-tile rounded-2xl border-2 border-primary/40 bg-gradient-to-br from-primary to-[color-mix(in_srgb,var(--color-primary)_78%,#000)] p-4 text-on-primary">
+          <div className="flex items-center gap-2.5">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/20">
+              <span className="material-symbols-outlined text-[22px]">school</span>
+            </span>
+            <div className="min-w-0 flex-1">
+              <p className="text-[16px] font-black leading-tight">My Semester</p>
+              <p className="truncate text-[11.5px] font-bold opacity-85">
+                {shelf?.institutionType || itype} · {shelf?.departmentName || 'Your department'}
+              </p>
+            </div>
+          </div>
+          <div className="mt-3 flex items-center gap-3 rounded-xl bg-white/15 px-3 py-2 text-[12px] font-extrabold">
+            <span>{mine.length} course{mine.length === 1 ? '' : 's'}</span>
+            <span className="opacity-60">·</span>
+            <span>{doneTopics.toLocaleString()} / {totalTopics.toLocaleString()} topics done</span>
+          </div>
+        </div>
+
+        {/* The semester's courses - tap one to open its roadmap. */}
+        {mine.length > 0 ? (
+          <section className="flex flex-col gap-2">
+            <h3 className="px-1 text-[13px] font-black uppercase tracking-wide text-on-surface-variant">
+              Your courses
+              <span className="ml-1.5 font-bold normal-case text-on-surface-variant/70">- tap one to open its roadmap</span>
+            </h3>
+            {mine.map((c) => (
+              <CourseCard key={c.id} c={c} onOpen={() => onOpen(c.id)} />
+            ))}
+          </section>
+        ) : (
+          <p className="rounded-2xl border-2 border-dashed border-outline-variant bg-card px-6 py-8 text-center text-[13px] font-bold text-on-surface-variant">
+            No courses on your semester yet - add your first ones below.
+          </p>
+        )}
+
+        {/* The single management doorway - keeps the study page clean. */}
+        <button
+          type="button"
+          onClick={() => { setPhase('manage'); setQuery(''); }}
+          className="key-btn mx-auto bg-card text-on-surface"
+        >
+          Add / remove courses
+        </button>
+        <p className="text-center text-[11.5px] font-bold text-on-surface-variant/70">
+          Your courses and department can be changed anytime.
+        </p>
+      </div>
+    );
+  }
+
+  // ── Manage: Add / Remove Courses (selection, AI finder, removal,
+  // department switching - the decoupled configuration mode) ──
   const general = shelf?.general ?? [];
   const departmental = shelf?.departmental ?? [];
   const showSearch = query.trim().length >= 2;
@@ -791,31 +909,32 @@ function TertiaryDesk({
   // own and can be changed later").
   return (
     <div className="flex flex-col gap-4">
-      {/* Desk header + change control */}
-      <div className="flex items-center gap-2 rounded-2xl border-2 border-primary/40 bg-primary/10 px-4 py-3">
-        <span className="material-symbols-outlined text-[20px] text-primary-ink">school</span>
+      {/* Manage header: the Done key back to the semester dashboard */}
+      <div className="flex items-center gap-2 rounded-2xl border-2 border-outline-variant bg-card px-4 py-3">
+        <span className="material-symbols-outlined text-[20px] text-primary-ink">tune</span>
         <div className="min-w-0 flex-1">
-          <p className="truncate text-[14px] font-black text-on-surface">{shelf?.departmentName || 'Your department'}</p>
-          <p className="text-[11.5px] font-bold text-on-surface-variant">{shelf?.institutionType || itype} · general + your department + every other department's courses</p>
+          <p className="truncate text-[14px] font-black text-on-surface">Add / remove courses</p>
+          <p className="text-[11.5px] font-bold text-on-surface-variant">{shelf?.institutionType || itype} · {shelf?.departmentName || 'your department'} · general + your department + every other department's courses</p>
         </div>
         <button
           type="button"
-          onClick={() => { setPhase('dept'); setDepQuery(''); }}
-          className="shrink-0 rounded-xl border-2 border-outline-variant bg-card px-3 py-1.5 text-[11.5px] font-extrabold text-on-surface transition active:translate-y-[2px]"
+          onClick={() => { setPhase('desk'); window.scrollTo({ top: 0 }); }}
+          className="shrink-0 rounded-xl bg-primary px-3.5 py-1.5 text-[11.5px] font-extrabold text-on-primary transition active:translate-y-[2px]"
         >
-          Change
+          Done
         </button>
       </div>
 
       {/* YOUR COURSES - every picked course as a JAMB-style card
-          (progress "0/12 topics done", bar, action arrow), each with a
-          remove control so the list stays editable in place; the shelf
-          below keeps adding more. */}
+          (progress "0/12 topics done", bar, action arrow). This is the
+          MANAGE mode, so each card carries its remove control - the
+          only place a course can be deleted from (the dashboard's
+          cards have no X, so accidental taps can never drop a course). */}
       {mine.length > 0 && (
         <section className="flex flex-col gap-2">
           <h3 className="px-1 text-[13px] font-black uppercase tracking-wide text-on-surface-variant">
             Your courses
-            <span className="ml-1.5 font-bold normal-case text-on-surface-variant/70">- tap one to open its roadmap</span>
+            <span className="ml-1.5 font-bold normal-case text-on-surface-variant/70">- tap the × to remove one</span>
           </h3>
           {mine.map((c) => (
             <CourseCard key={c.id} c={c} onOpen={() => onOpen(c.id)} onRemove={() => onToggle(c.id)} />
@@ -1028,6 +1147,16 @@ function TertiaryDesk({
           </button>
         )}
       </section>
+
+      {/* Department switching lives here, in manage mode - the study
+          dashboard never offers it (founder directive 2026-10-16). */}
+      <button
+        type="button"
+        onClick={() => { setPhase('dept'); setDepQuery(''); }}
+        className="mx-auto rounded-xl border-2 border-outline-variant bg-card px-4 py-2 text-[12.5px] font-extrabold text-on-surface-variant transition active:translate-y-[2px]"
+      >
+        Change department or institution kind
+      </button>
     </div>
   );
 }
@@ -1231,6 +1360,20 @@ function CoursePathView({
           </section>
         );
       })}
+
+      {/* The deep-tree promise (founder 2026-10-16): while the background
+          loop writes the next unit of 10 topics, the ladder shows a
+          quiet "being prepared" node instead of pretending the course
+          ends here. It self-replaces on the next path refresh. */}
+      {path.generating && (
+        <div className="flex flex-col items-center gap-2 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-6 py-7 text-center">
+          <span className="material-symbols-outlined animate-pulse text-[26px] text-primary-ink">progress_activity</span>
+          <p className="text-[13px] font-black text-on-surface">Unit {(path.units[path.units.length - 1]?.index ?? 0) + 1} is being prepared</p>
+          <p className="max-w-xs text-[11.5px] font-bold leading-snug text-on-surface-variant">
+            The next 10 topics are quietly being written for this course. Reopen it in a moment and they will be waiting on the ladder.
+          </p>
+        </div>
+      )}
     </div>
   );
 }

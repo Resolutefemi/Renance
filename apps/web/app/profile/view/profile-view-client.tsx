@@ -146,7 +146,10 @@ function PublicProfileView() {
               disabled={busy}
               className={`key-btn px-8 text-[14px] disabled:opacity-50 ${profile.isFollowing ? 'bg-on-surface-variant text-white' : 'bg-primary text-on-primary'}`}
             >
-              {profile.isFollowing ? 'Following ✓' : 'Follow'}
+              {/* Follow-back awareness (founder 2026-10-16): when they
+                  already follow the viewer, the button invites the
+                  follow-back explicitly. */}
+              {profile.isFollowing ? 'Following ✓' : profile.followsYou ? 'Follow back' : 'Follow'}
             </button>
             <p className="text-[11.5px] font-bold text-on-surface-variant">
               On Renance since {new Date(profile.joinedMs).toLocaleDateString(undefined, { month: 'long', year: 'numeric' })}

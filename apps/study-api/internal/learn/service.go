@@ -26,6 +26,17 @@ type Service struct {
 	Log             *slog.Logger
 	Engine          *Engine
 	UnlimitedHearts bool
+	// expGuard single-flights per-course unit expansion (expand.go):
+	// two students opening the same growing course never double-generate.
+	expGuard *expGuard
+}
+
+// WireExpGuard arms the per-course expansion single-flight. Nil-safe
+// (tests construct Service structs directly without it).
+func (s *Service) WireExpGuard() {
+	if s.expGuard == nil {
+		s.expGuard = newExpGuard()
+	}
 }
 
 // querier is the narrow surface shared by store.Pool and pgx.Tx so
@@ -407,6 +418,10 @@ type CoursePath struct {
 	Topics       []TopicNode `json:"topics"`
 	Units        []UnitNode  `json:"units"`
 	CompletedPct int         `json:"completedPercent"`
+	// Generating: the course tree is still growing (the background
+	// loop is adding the next unit of 10 topics). The ladder renders
+	// a quiet "being prepared" node instead of a fake locked one.
+	Generating bool `json:"generating"`
 }
 
 // CoursePath renders the Supreme LearnPath ladder: completed behind,
@@ -488,5 +503,22 @@ func (s *Service) CoursePath(ctx context.Context, userID, courseID string) (*Cou
 		cp.Units = append(cp.Units, un)
 	}
 	cp.CompletedPct = int(math.Round(float64(done) * 100 / float64(len(cp.Topics))))
+
+	// The deep tree (founder directive 2026-10-16): when the student
+	// is studying inside the LAST generated unit, the background
+	// loop silently grows the next unit (10 AI topics) and pre-warms
+	// its first lessons. The ladder flags it so the client can show
+	// a "being prepared" node instead of pretending the course ends.
+	currentUnit := 1
+	for _, t := range cp.Topics {
+		if t.Status != "completed" {
+			currentUnit = t.Unit
+			break
+		}
+	}
+	cp.Generating = maxUnit < MaxCourseUnits && currentUnit >= maxUnit
+	if cp.Generating {
+		go s.EnsureUnitsAhead(userID, courseID)
+	}
 	return &cp, nil
 }

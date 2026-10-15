@@ -365,13 +365,10 @@ export default function LeaderboardClient() {
           {tab === 'daily' &&
             daily?.entries.map((entry) => {
               const highlight = me != null && entry.rank === me.rank;
-              return (
-                <div
-                  key={`${entry.rank}-${entry.username}`}
-                  className={`flex items-center gap-3 border-b border-outline-variant/30 px-4 py-3 last:border-b-0 ${
-                    highlight ? 'bg-selection-blue/30' : ''
-                  }`}
-                >
+              // Founder 2026-10-16: every board row opens the player's
+              // profile - the daily board was the last one that didn't.
+              const row = (
+                <>
                   <RankPill rank={entry.rank} />
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-ink/10 text-[13px] font-bold text-accent-ink">
                     {initial(entry.username)}
@@ -383,7 +380,21 @@ export default function LeaderboardClient() {
                   <p className="text-right font-mono text-sm font-bold text-on-surface">
                     {entry.score}/{entry.total}
                   </p>
-                </div>
+                </>
+              );
+              const cls = `flex items-center gap-3 border-b border-outline-variant/30 px-4 py-3 last:border-b-0 ${
+                highlight ? 'bg-selection-blue/30' : ''
+              }`;
+              return highlight ? (
+                <div key={`${entry.rank}-${entry.username}`} className={cls}>{row}</div>
+              ) : (
+                <Link
+                  key={`${entry.rank}-${entry.username}`}
+                  href={`/profile/view/?u=${encodeURIComponent(entry.username)}`}
+                  className={`${cls} transition active:bg-surface-container`}
+                >
+                  {row}
+                </Link>
               );
             })}
         </section>

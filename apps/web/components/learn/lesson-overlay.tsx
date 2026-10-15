@@ -16,6 +16,7 @@ import { RenanceMark } from '@/components/renance-logo';
 import {
   ConfettiBurst, GemIcon, HeartIcon, ProgressBar, ToastBanner,
 } from '@/components/learn/bits';
+import { ChestOpening, MilestoneCelebration, StreakCelebration } from '@/components/learn/celebrations';
 import {
   CompleteResult, LearnQuizQ, LessonDoc, PracticeQuestion,
   fetchLearnProfile, fetchLesson, fetchPractice, fetchReview, gradePractice, postProgress,
@@ -23,6 +24,9 @@ import {
 import { QText } from '@/lib/qtext';
 
 type Phase = 'loading' | 'study' | 'quiz' | 'submitting' | 'done' | 'error';
+
+/** The celebration queue: chest → streak → milestone, one at a time. */
+type Celebration = 'chest' | 'streak' | 'milestone';
 
 const LOADING_COPY = [
   'Sharpening the explanation…', 'Picking real past questions…',
@@ -63,6 +67,10 @@ export function LessonOverlay({
   // The REAL heart count for the top rail (∞ retired, founder rule);
   // updated live when a completion pays back the economy.
   const [hearts, setHearts] = useState<number | null>(null);
+  // The celebration queue (founder directive 2026-10-16): the topic
+  // chest, the streak popup and the achievement card play one after
+  // another on the done screen - each gets its full moment.
+  const [celebQueue, setCelebQueue] = useState<Celebration[]>([]);
   const startedRef = useRef(Date.now());
   // The quiet self-reload (founder: "remove retry"): when a lesson
   // fails to load the overlay retries ITSELF a few times before it
@@ -177,6 +185,14 @@ export function LessonOverlay({
         setResult(res);
         setHearts(res.hearts);
         if (!abandoned) setConfetti((c) => c + 1);
+        // Queue the celebrations the server actually paid: the chest
+        // drop, a streak that moved up (the Duolingo-style popup), and
+        // the milestone the platform just posted to the feed.
+        const q: Celebration[] = [];
+        if (res?.chest) q.push('chest');
+        if (res?.streakUp && (res?.streak ?? 0) > 0) q.push('streak');
+        if (res?.milestone) q.push('milestone');
+        setCelebQueue(q);
       } else {
         const resolved = questions.filter((qq) => qq.userAnswer === qq.answer).map((qq) => qq.id);
         res = await gradePractice({ correct: correctCount, total, resolvedIds: resolved });
@@ -275,6 +291,12 @@ export function LessonOverlay({
   }, [isLast, finish]);
 
   const accuracy = total > 0 ? Math.round((correctCount / total) * 100) : 0;
+
+  const dismissCelebration = useCallback(() => {
+    setCelebQueue((q) => q.slice(1));
+  }, []);
+
+  const activeCeleb = celebQueue[0] ?? null;
 
   return (
     <div className="fixed inset-0 z-[80] flex flex-col bg-surface" role="dialog" aria-modal="true" aria-label={doc?.title ?? 'Lesson'}>
@@ -490,6 +512,17 @@ export function LessonOverlay({
           </div>
         )}
       </div>
+
+      {/* ── Celebrations: chest → streak → milestone (one moment each) ── */}
+      {activeCeleb === 'chest' && result?.chest && (
+        <ChestOpening drop={result.chest} onDone={dismissCelebration} />
+      )}
+      {activeCeleb === 'streak' && result && (
+        <StreakCelebration streak={result.streak} onDone={dismissCelebration} />
+      )}
+      {activeCeleb === 'milestone' && result?.milestone && (
+        <MilestoneCelebration milestone={result.milestone} onDone={dismissCelebration} />
+      )}
 
       {/* Sticky footer action */}
       {(phase === 'study' || phase === 'quiz') && (

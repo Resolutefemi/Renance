@@ -177,11 +177,11 @@ func TestSanitizeQuizKeepsFiveOptions(t *testing.T) {
 // student wrong. The option count stays as stored.
 func TestSanitizeQuizResolvesTextAnswerToLetter(t *testing.T) {
 	in := []LessonQuizQ{{
-		ID:     "T-X-ai-6",
-		Type:   "mcq",
-		Stem:   "Which particle has a negative charge?",
+		ID:      "T-X-ai-6",
+		Type:    "mcq",
+		Stem:    "Which particle has a negative charge?",
 		Options: map[string]string{"A": "Proton", "B": "Neutron", "C": "Electron", "D": "Anion"},
-		Answer: "Anion",
+		Answer:  "Anion",
 	}}
 	out, changed := sanitizeQuiz(in)
 	if !changed {
@@ -202,11 +202,11 @@ func TestSanitizeQuizResolvesTextAnswerToLetter(t *testing.T) {
 // The 1..N index quirk some banks carry: "2" means the second letter.
 func TestSanitizeQuizResolvesIndexAnswer(t *testing.T) {
 	in := []LessonQuizQ{{
-		ID:     "neco-physics-bank-0042",
-		Type:   "mcq",
-		Stem:   "The SI unit of force is the",
+		ID:      "neco-physics-bank-0042",
+		Type:    "mcq",
+		Stem:    "The SI unit of force is the",
 		Options: map[string]string{"A": "joule", "B": "newton", "C": "watt", "D": "pascal"},
-		Answer: "2",
+		Answer:  "2",
 	}}
 	out, changed := sanitizeQuiz(in)
 	if !changed {

@@ -84,6 +84,8 @@ export interface CoursePath {
   topics: TopicNode[];
   units: UnitNode[];
   completedPercent: number;
+  /** The background loop is still growing this course's unit tree. */
+  generating?: boolean;
 }
 
 export interface LearnNote {
@@ -193,11 +195,31 @@ export interface CompleteResult {
   comboBonus: number;
   boosted: boolean;
   streak: number;
+  /** The streak counter moved up with this completion (celebration). */
+  streakUp?: boolean;
   hearts: number;
   unlimitedHearts: boolean;
   gems: number;
   xp: number;
   completedPercent: number;
+  /** The reward chest the finished topic opened (gems/freeze/boost). */
+  chest?: ChestDrop | null;
+  /** The achievement the platform just posted to the feed. */
+  milestone?: MilestoneInfo | null;
+}
+
+/** One topic chest's randomized reward (founder directive 2026-10-16). */
+export interface ChestDrop {
+  kind: 'gems' | 'freeze' | 'boost';
+  amount: number;
+  icon: string;
+  label: string;
+}
+
+/** An achievement the platform just posted to the Renance feed. */
+export interface MilestoneInfo {
+  code: string;
+  label: string;
 }
 
 export interface PracticeQuestion {

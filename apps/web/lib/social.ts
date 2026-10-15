@@ -70,6 +70,8 @@ export interface PublicProfile {
   followers: number;
   following: number;
   isFollowing: boolean;
+  /** They already follow the viewer - the button reads "Follow back". */
+  followsYou?: boolean;
   isSelf: boolean;
   joinedMs: number;
   courses: CoursePulse[] | null;

@@ -426,6 +426,19 @@ export default function DashboardPage() {
               <span className="material-symbols-outlined text-[19px] text-accent-amber">local_fire_department</span>
               <span className="font-mono text-[12.5px] text-on-surface">{streak}</span>
             </div>
+            {/* The streak freeze counter (founder directive 2026-10-16):
+                freezes were invisible in the UI - the student could not
+                see the protection they owned. It rides next to the
+                streak flame whenever a freeze is in the stash. */}
+            {(learnStats?.freezeCount ?? 0) > 0 && (
+              <div
+                className="ml-1.5 flex items-center gap-1 rounded-full bg-surface-container px-2 py-1"
+                aria-label={`${learnStats?.freezeCount} streak freeze${(learnStats?.freezeCount ?? 0) === 1 ? '' : 's'} saved`}
+              >
+                <span className="material-symbols-outlined text-[19px] text-[#1899d6]">ac_unit</span>
+                <span className="font-mono text-[12.5px] text-on-surface">{learnStats?.freezeCount}</span>
+              </div>
+            )}
           </div>
         </div>
       </header>
@@ -811,15 +824,17 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
           </p>
         </div>
         <div className="relative z-10 flex flex-col gap-2">
-          {/* The mobile app's button, verbatim (university_home_screen.dart):
-              full width, radius 10, Icons.school, and the
-              "Open your school desk" label once a school is picked. */}
+          {/* Founder directive 2026-10-16 (the School Desk overhaul): the
+              tertiary student's primary CTA opens MY SEMESTER - the
+              gamified /courses desk with the picked courses, progress
+              bars and roadmaps. The old school portal stays one tap
+              away in the hero's corner link above. */}
           <Link
-            href={`/university/${slug}`}
+            href="/courses"
             className="flex h-11 w-full items-center justify-center gap-2 rounded-[10px] bg-hero-cta text-[14px] font-semibold text-on-hero-cta transition-transform active:scale-[0.98]"
           >
             <span className="material-symbols-outlined text-[18px]">school</span>
-            {schoolSlug ? 'Open your school desk' : 'Pick School'}
+            Open your semester desk
           </Link>
         </div>
       </section>
@@ -855,7 +870,7 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
         <section className="mt-2">
           <h3 className="text-sm text-on-surface-variant">Study</h3>
           <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-            <LauncherTile icon="assignment" label="Courses" href={`/university/${slug}`} />
+            <LauncherTile icon="assignment" label="Courses" href="/courses" />
             <LauncherTile icon="fact_check" label="Quizzes" href={`/university/${slug}`} />
             {/* Founder directive (2026-10-04): the university desk's Study
                 tile must open the SCHOOL past-questions study setup, never
