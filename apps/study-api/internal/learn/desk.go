@@ -342,17 +342,26 @@ func (s *Service) OthersCourses(ctx context.Context, userID string, offset, limi
         // ever appears on both: the GST suite plus the general
         // first-year titles at the student's institution level.
         // Everything else outside the student's own department rides
-        // the borrowed pages, richest home department first.
+        // the borrowed pages, richest home department first. The count
+        // query carries its OWN gapless $1..$3 (dept, level, rx) - the
+        // page query numbers $1..$6 (the select embeds $1 = userID) -
+        // a placeholder gap makes pgx refuse the statement.
         where := `
                 FROM learn.courses c JOIN learn.departments d ON d.dept_id = c.dept_id
                 WHERE c.body = 'tertiary' AND c.title <> ''
                   AND ($2 = '' OR c.dept_id <> $2)
                   AND NOT ( c.course_id LIKE 'GST %'
                          OR (c.level = $3 AND c.title ~* $4) )`
+        countWhere := `
+                FROM learn.courses c JOIN learn.departments d ON d.dept_id = c.dept_id
+                WHERE c.body = 'tertiary' AND c.title <> ''
+                  AND ($1 = '' OR c.dept_id <> $1)
+                  AND NOT ( c.course_id LIKE 'GST %'
+                         OR (c.level = $2 AND c.title ~* $3) )`
         var total int
         if err := s.Pool.QueryRow(ctx,
-                `SELECT COUNT(*) `+where,
-                userID, dept, firstYearLevel(itype), generalTitleRxSQL).Scan(&total); err != nil {
+                `SELECT COUNT(*) `+countWhere,
+                dept, firstYearLevel(itype), generalTitleRxSQL).Scan(&total); err != nil {
                 return nil, 0, err
         }
         rows, err := s.Pool.Query(ctx, `
