@@ -1049,6 +1049,91 @@ func salvageJSON(raw string) string {
 	return trimmed
 }
 
+// balancedChunks returns every balanced {...} group in raw, tracking
+// strings so LaTeX braces inside note bodies never confuse the scan.
+// Corrupted continuation outputs (a snapped quote mid-object) still
+// carry complete elements BEFORE the corruption point - this recovers
+// them one object at a time.
+func balancedChunks(raw string) []string {
+	var out []string
+	depth, start := 0, -1
+	inStr, esc := false, false
+	for i, r := range raw {
+		if esc {
+			esc = false
+			continue
+		}
+		if r == '\\' && inStr {
+			esc = true
+			continue
+		}
+		if r == '"' {
+			inStr = !inStr
+			continue
+		}
+		if inStr {
+			continue
+		}
+		switch r {
+		case '{':
+			if depth == 0 {
+				start = i
+			}
+			depth++
+		case '}':
+			depth--
+			if depth == 0 && start >= 0 {
+				out = append(out, raw[start:i+1])
+				start = -1
+			}
+		}
+	}
+	return out
+}
+
+// salvageNoteElements recovers individual note objects from a corrupted
+// output; every survivor has a real heading and an 80+ word body.
+func salvageNoteElements(raw string) []struct {
+	Heading string `json:"heading"`
+	Body    string `json:"body"`
+} {
+	var out []struct {
+		Heading string `json:"heading"`
+		Body    string `json:"body"`
+	}
+	for _, chunk := range balancedChunks(raw) {
+		var el struct {
+			Heading string `json:"heading"`
+			Body    string `json:"body"`
+		}
+		if err := json.Unmarshal([]byte(chunk), &el); err != nil {
+			continue
+		}
+		if strings.TrimSpace(el.Body) == "" || len(strings.Fields(el.Body)) < 80 {
+			continue
+		}
+		out = append(out, el)
+	}
+	return out
+}
+
+// salvageQuizElements recovers individual question objects from a
+// corrupted output; every survivor has a stem and an answer.
+func salvageQuizElements(raw string) []aiQuizQ {
+	var out []aiQuizQ
+	for _, chunk := range balancedChunks(raw) {
+		var el aiQuizQ
+		if err := json.Unmarshal([]byte(chunk), &el); err != nil {
+			continue
+		}
+		if strings.TrimSpace(el.Stem) == "" || strings.TrimSpace(el.Answer) == "" {
+			continue
+		}
+		out = append(out, el)
+	}
+	return out
+}
+
 // parseNotesLenient accepts a chunk of 1-16 notes with a softer word
 // floor (80) - continuation rounds are validated strictly as a whole.
 func parseNotesLenient(raw []byte) (*aiLesson, error) {
@@ -1097,13 +1182,20 @@ Shape: {"notes": [{"heading": string, "body": string}]}
 - EXACTLY %d new sections; each body 150-260 words of plain-text paragraphs (no HTML, no markdown syntax).
 - MATHS NOTATION (strict): every formula or symbol is LaTeX wrapped in dollar signs ($x^2$, $\\frac{dy}{dx}$). Never bare caret/underscore notation outside $...$.`,
 			t.Title, t.Course, strings.Join(headings, " | "), need, need)
-		out, err := s.Engine.AI.Complete(ctx, lessonNotesSystem, []tutor.Message{{Role: "user", Content: prompt}}, 3800)
+		out, err := s.Engine.AI.Complete(ctx, lessonNotesSystem, []tutor.Message{{Role: "user", Content: prompt}}, 6000)
 		if err != nil {
 			return nil, err
 		}
 		extra, verr := parseNotesLenient([]byte(extractJSON(out)))
 		if verr != nil {
-			return nil, verr
+			// Element salvage: a snapped quote mid-object kills the
+			// whole-document parse, but the complete objects before
+			// the corruption are still good notes.
+			els := salvageNoteElements(out)
+			if len(els) == 0 {
+				return nil, verr
+			}
+			extra = &aiLesson{Notes: els}
 		}
 		notes = append(notes, extra.Notes...)
 	}
@@ -1216,7 +1308,13 @@ Shape: {"quiz": [{"type": "mcq"|"true_false"|"fill_blank", "stem": string, "opti
 		}
 		extra, eerr := quizFromOutput(out)
 		if eerr != nil {
-			return nil, eerr
+			// Element salvage: keep every complete question
+			// before the corruption point.
+			els := salvageQuizElements(out)
+			if len(els) == 0 {
+				return nil, eerr
+			}
+			extra = els
 		}
 		if len(extra) == 0 {
 			return nil, fmt.Errorf("quiz continuation returned nothing")
