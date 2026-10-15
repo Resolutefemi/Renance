@@ -777,15 +777,18 @@ function TertiaryDesk({
   const general = shelf?.general ?? [];
   const departmental = shelf?.departmental ?? [];
   const showSearch = query.trim().length >= 2;
-  // The student's picked courses on THIS desk (founder directive
-  // 2026-10-15: list them as cards styled like the JAMB desk cards -
-  // progress "0/12 topics done" and an action arrow - at the TOP of
-  // the desk, one tap from their roadmap). Post-UTME rows group under
-  // the tertiary desk through deskOf.
-  const myRows = useMemo(
-    () => mine.filter((c) => deskOf(c.body || 'tertiary') === 'tertiary'),
-    [mine],
-  );
+  // YOUR COURSES renders straight from the `mine` prop - founder report
+  // 2026-10-16: the rows used to come from a useMemo parked BELOW the
+  // phase early-returns above, so reaching the shelf added one hook to
+  // the render and React tore the whole tree down ("Rendered more hooks
+  // than during the previous render" - the client-side exception the
+  // founder saw on /courses and, after any navigation, on every other
+  // page until a full reload). Plain render data has no hook to
+  // misplace, and the desk lists ALL of the student's picked courses:
+  // it is a School-focus student's only desk, so no row is hidden by
+  // the body it was added under (founder: "make sure ALL the selected
+  // courses ... are now arranged and listed just like the JAMB focus
+  // own and can be changed later").
   return (
     <div className="flex flex-col gap-4">
       {/* Desk header + change control */}
@@ -804,15 +807,18 @@ function TertiaryDesk({
         </button>
       </div>
 
-      {/* YOUR COURSES - the picked courses as JAMB-style cards */}
-      {myRows.length > 0 && (
+      {/* YOUR COURSES - every picked course as a JAMB-style card
+          (progress "0/12 topics done", bar, action arrow), each with a
+          remove control so the list stays editable in place; the shelf
+          below keeps adding more. */}
+      {mine.length > 0 && (
         <section className="flex flex-col gap-2">
           <h3 className="px-1 text-[13px] font-black uppercase tracking-wide text-on-surface-variant">
             Your courses
             <span className="ml-1.5 font-bold normal-case text-on-surface-variant/70">- tap one to open its roadmap</span>
           </h3>
-          {myRows.map((c) => (
-            <CourseCard key={c.id} c={c} onOpen={() => onOpen(c.id)} />
+          {mine.map((c) => (
+            <CourseCard key={c.id} c={c} onOpen={() => onOpen(c.id)} onRemove={() => onToggle(c.id)} />
           ))}
         </section>
       )}
@@ -1084,30 +1090,45 @@ function DeskRow({ c, onOpen, onToggle }: { c: DeskCourse; onOpen: () => void; o
 /** The card the founder asked to share across desks (2026-10-15):
  *  book icon, title, "0/12 topics done" progress line, the bar and the
  *  action arrow. A tap opens the course roadmap. The secondary desks
- *  and the tertiary desk's YOUR COURSES section render the same tile. */
-function CourseCard({ c, onOpen }: { c: MyCourse; onOpen: () => void }) {
+ *  and the tertiary desk's YOUR COURSES section render the same tile.
+ *  Optional `onRemove` (founder 2026-10-16: the tertiary list must
+ *  "be changed later") sits as a SIBLING overlay button - never
+ *  nested inside the open button - so the tap targets stay honest. */
+function CourseCard({ c, onOpen, onRemove }: { c: MyCourse; onOpen: () => void; onRemove?: () => void }) {
   return (
-    <button
-      type="button"
-      onClick={onOpen}
-      className="learn-tile w-full rounded-2xl border-2 border-outline-variant bg-card p-4 text-left transition hover:border-primary/40 active:translate-y-[2px]"
-    >
-      <div className="flex items-center gap-3">
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/15">
-          <span className="material-symbols-outlined text-[22px] text-primary-ink">menu_book</span>
-        </span>
-        <span className="min-w-0 flex-1">
-          <span className="block truncate text-[15px] font-black text-on-surface">{c.title}</span>
-          <span className="mt-0.5 block text-[12px] font-bold text-on-surface-variant">
-            {c.completedTopics}/{c.topicCount} topics done
+    <div className="relative">
+      <button
+        type="button"
+        onClick={onOpen}
+        className="learn-tile w-full rounded-2xl border-2 border-outline-variant bg-card p-4 text-left transition hover:border-primary/40 active:translate-y-[2px]"
+      >
+        <div className="flex items-center gap-3">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/15">
+            <span className="material-symbols-outlined text-[22px] text-primary-ink">menu_book</span>
           </span>
-          <span className="mt-1.5 block">
-            <ProgressBar value={c.topicCount ? (c.completedTopics / c.topicCount) * 100 : 0} />
+          <span className="min-w-0 flex-1">
+            <span className="block truncate text-[15px] font-black text-on-surface">{c.title}</span>
+            <span className="mt-0.5 block text-[12px] font-bold text-on-surface-variant">
+              {c.completedTopics}/{c.topicCount} topics done
+            </span>
+            <span className="mt-1.5 block">
+              <ProgressBar value={c.topicCount ? (c.completedTopics / c.topicCount) * 100 : 0} />
+            </span>
           </span>
-        </span>
-        <span className="material-symbols-outlined text-[20px] text-on-surface-variant">chevron_right</span>
-      </div>
-    </button>
+          <span className="material-symbols-outlined text-[20px] text-on-surface-variant">chevron_right</span>
+        </div>
+      </button>
+      {onRemove && (
+        <button
+          type="button"
+          onClick={onRemove}
+          aria-label={`Remove ${c.title} from your list`}
+          className="absolute right-2 top-2 z-10 rounded-full bg-surface-container-high p-1 text-on-surface-variant transition hover:text-on-surface active:scale-90"
+        >
+          <span className="material-symbols-outlined text-[16px]">close</span>
+        </button>
+      )}
+    </div>
   );
 }
 
