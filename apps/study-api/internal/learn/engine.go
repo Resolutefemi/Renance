@@ -886,7 +886,7 @@ func (s *Service) generateLesson(ctx context.Context, t *topicCtx) (*LessonDoc, 
 		if s.Engine.Log != nil {
 			s.Engine.Log.Error("learn: lesson generation failed twice", "topic", t.ID, "err", nErr)
 		}
-		return nil, fmt.Errorf("learn: lesson generation failed, try again shortly")
+		return nil, fmt.Errorf("learn: lesson generation failed: %w", nErr)
 	}
 	// A quiz miss keeps the lesson alive: quizRaw stays empty and the
 	// bank top-up below fills what it can (secondary desks), while
