@@ -470,6 +470,28 @@ func isWriteSQL(sql string) bool {
         if strings.HasPrefix(head, "with") {
                 return cteChangesData(s)
         }
+        if strings.HasPrefix(head, "select") {
+                return callsMutatingFunction(s)
+        }
+        return false
+}
+
+// mutatingFunctions are the schema functions that CHANGE data but
+// ride SELECT heads (account purge, 0027). The mirror must replay
+// them - a delete that only lands on the primary resurrects at the
+// next boot sync (the mirror is ahead, the back-copy re-inserts the
+// purged account). Grow this list when a new mutating function ships.
+var mutatingFunctions = []string{
+        "study.purge_user",
+        "study.purge_deleted_users",
+}
+
+func callsMutatingFunction(s string) bool {
+        for _, fn := range mutatingFunctions {
+                if strings.Contains(s, fn+"(") {
+                        return true
+                }
+        }
         return false
 }
 
