@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// db-keepalive.mjs — one authenticated action on EVERY fallback
+// db-keepalive.mjs - one authenticated action on EVERY fallback
 // database so no free-tier project is ever idle long enough to be
 // paused (founder directive 2026-10-15: "make sure Supabase and
 // insforge are not inactive, make sure an action is taken every 6
@@ -8,21 +8,21 @@
 // Per provider it does:
 //   1. Postgres wire ping: SELECT 1 + CREATE TABLE IF NOT EXISTS
 //      public.db_keepalive + INSERT a heartbeat row (the row is VISIBLE
-//      in the Supabase table editor — "I can't find anything in
-//      Supabase table yet" — and on InsForge).
+//      in the Supabase table editor - "I can't find anything in
+//      Supabase table yet" - and on InsForge).
 //   2. Supabase only: an authenticated REST request (API-side activity
 //      counts toward the free project's activity metric too).
 //
 // Env (GitHub Actions secrets):
-//   SUPABASE_DATABASE_URL  — pooled DSN (aws-1-eu-west-3…:5432)
-//   SUPABASE_URL           — https://zfxrmcwdnmmxjawmsiyp.supabase.co
-//   SUPABASE_SECRET_KEY    — sb_secret_… (REST ping)
-//   INSFORGE_DATABASE_URL  — the wire DSN
-//   KEEPALIVE_OUT          — where to write last-run.json
+//   SUPABASE_DATABASE_URL  - pooled DSN (aws-1-eu-west-3…:5432)
+//   SUPABASE_URL           - https://zfxrmcwdnmmxjawmsiyp.supabase.co
+//   SUPABASE_SECRET_KEY    - sb_secret_… (REST ping)
+//   INSFORGE_DATABASE_URL  - the wire DSN
+//   KEEPALIVE_OUT          - where to write last-run.json
 //                            (default: <cwd>/supabase/keepalive/last-run.json)
 //
 // A missing secret for ONE provider is a warning; the run fails only
-// when ZERO databases answered. Neon is NEVER contacted — the script
+// when ZERO databases answered. Neon is NEVER contacted - the script
 // has no Neon credential and no path to one.
 
 import pg from 'pg';
@@ -114,5 +114,5 @@ try {
 
 const answered = results.filter((r) => r.ok).length;
 const providersOk = new Set(results.filter((r) => r.ok).map((r) => r.provider));
-log(`RESULT: ${answered}/${results.length} checks ok — providers alive: ${[...providersOk].join(', ') || 'NONE'}`);
+log(`RESULT: ${answered}/${results.length} checks ok - providers alive: ${[...providersOk].join(', ') || 'NONE'}`);
 process.exit(providersOk.size > 0 ? 0 : 1);

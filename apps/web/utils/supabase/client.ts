@@ -4,7 +4,7 @@
  * Supabase browser client (founder directive 2026-10-15: "install the
  * Supabase packages, add the env variables and the client helpers").
  *
- * STATIC-EXPORT NOTE: apps/web builds with `output: 'export'` — there
+ * STATIC-EXPORT NOTE: apps/web builds with `output: 'export'` - there
  * is no server runtime and no middleware at deploy time, so the
  * server-side half of the standard Supabase snippet
  * (utils/supabase/server.ts with next/headers cookies) and a

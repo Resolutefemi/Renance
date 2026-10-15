@@ -5,7 +5,7 @@ name: db-keepalive (Supabase + InsForge)
 # will not be paused."
 #
 # Supabase pauses free projects after 7 days without activity; this
-# schedule fires on day-of-month 1, 7, 13, 19, 25, 31 — the longest
+# schedule fires on day-of-month 1, 7, 13, 19, 25, 31 - the longest
 # real gap is 6 days (25 → 1 on a 30-day month; 31-day months get the
 # extra 31st run). Each run:
 #
@@ -15,7 +15,7 @@ name: db-keepalive (Supabase + InsForge)
 #   2. Pings the Supabase REST API with the project's secret key
 #      (API requests also count as activity).
 #   3. Commits supabase/keepalive/last-run.json to the
-#      chore/db-keepalive branch — the commit keeps THIS repository
+#      chore/db-keepalive branch - the commit keeps THIS repository
 #      active, which is what stops GitHub from disabling scheduled
 #      workflows after 60 idle days (the cron would silently die long
 #      before the databases ever paused).
@@ -48,7 +48,7 @@ jobs:
         with:
           node-version: 22
 
-      - name: Install the Postgres driver (scratch dir — repo lockfile untouched)
+      - name: Install the Postgres driver (scratch dir - repo lockfile untouched)
         run: |
           mkdir -p /tmp/keepalive && cd /tmp/keepalive
           npm init -y >/dev/null
