@@ -74,6 +74,25 @@ services:
       # named vars above when set.
       - key: FALLBACK_DATABASE_URLS
         sync: false
+      # ── Dual-write mirror (founder directive 2026-10-15: "make sure
+      # you copy all the user details, all the dB, to Supabase too, and
+      # everything should save simultaneously on both neon and Supabase
+      # at once") ─────────────────────────────────────────────────────
+      # Both default ON; listed here so the dashboards show the
+      # switches. Every write the primary (Neon) accepts replays
+      # asynchronously to Supabase and InsForge (store/mirror.go); the
+      # boot sync (store/mirrorsync.go) copies any rows a mirror is
+      # missing - the first boot after this deploys copies every live
+      # account/progress row off Neon onto both mirrors, and every
+      # later boot pays one COUNT per table. Run history is visible in
+      # BOTH dashboards: public.mirror_sync (next to db_keepalive).
+      #   MIRROR_WRITES=0 -> classic single-pool behaviour, no mirror
+      #     connections at all.
+      #   MIRROR_SYNC=0   -> writes still mirror, but no boot row-merge.
+      - key: MIRROR_WRITES
+        value: "1"
+      - key: MIRROR_SYNC
+        value: "1"
       - key: JWT_SECRET
         generateValue: true
       - key: GOOGLE_CLIENT_ID

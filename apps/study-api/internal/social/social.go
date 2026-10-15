@@ -15,7 +15,7 @@ import (
         "strings"
         "time"
 
-        "github.com/jackc/pgx/v5/pgxpool"
+        "renance.dev/study-api/internal/store"
 )
 
 // ─── Shapes ───────────────────────────────────────────────────────────────
@@ -96,7 +96,7 @@ type Connections struct {
 // unique (user_id, milestone) index: the 400-streak post is written
 // once, ever. Safe to call inside any hot path - failures never
 // surface to the student.
-func Milestone(ctx context.Context, pool *pgxpool.Pool, userID, milestone, body string, meta map[string]any) {
+func Milestone(ctx context.Context, pool store.Pool, userID, milestone, body string, meta map[string]any) {
         if userID == "" || milestone == "" {
                 return
         }
@@ -112,7 +112,7 @@ func Milestone(ctx context.Context, pool *pgxpool.Pool, userID, milestone, body 
 }
 
 // UserPost writes a freeform post; returns the new post id.
-func UserPost(ctx context.Context, pool *pgxpool.Pool, userID, body string) (int64, error) {
+func UserPost(ctx context.Context, pool store.Pool, userID, body string) (int64, error) {
         body = strings.TrimSpace(body)
         if body == "" {
                 return 0, fmt.Errorf("social: empty post")
@@ -128,7 +128,7 @@ func UserPost(ctx context.Context, pool *pgxpool.Pool, userID, body string) (int
 }
 
 // DeletePost removes a post the caller owns.
-func DeletePost(ctx context.Context, pool *pgxpool.Pool, userID string, postID int64) (bool, error) {
+func DeletePost(ctx context.Context, pool store.Pool, userID string, postID int64) (bool, error) {
         tag, err := pool.Exec(ctx, `DELETE FROM social.posts WHERE post_id=$1 AND user_id=$2`, postID, userID)
         if err != nil {
                 return false, err
@@ -137,7 +137,7 @@ func DeletePost(ctx context.Context, pool *pgxpool.Pool, userID string, postID i
 }
 
 // ToggleLike likes/unlikes; returns the like count + the new state.
-func ToggleLike(ctx context.Context, pool *pgxpool.Pool, userID string, postID int64) (int, bool, error) {
+func ToggleLike(ctx context.Context, pool store.Pool, userID string, postID int64) (int, bool, error) {
         tx, err := pool.Begin(ctx)
         if err != nil {
                 return 0, false, err
@@ -165,7 +165,7 @@ func ToggleLike(ctx context.Context, pool *pgxpool.Pool, userID string, postID i
 }
 
 // AddComment appends a comment; returns the comment id.
-func AddComment(ctx context.Context, pool *pgxpool.Pool, userID string, postID int64, body string) (int64, error) {
+func AddComment(ctx context.Context, pool store.Pool, userID string, postID int64, body string) (int64, error) {
         body = strings.TrimSpace(body)
         if body == "" {
                 return 0, fmt.Errorf("social: empty comment")
@@ -181,7 +181,7 @@ func AddComment(ctx context.Context, pool *pgxpool.Pool, userID string, postID i
 }
 
 // Follow toggles the edge viewer→subject; returns the new state.
-func Follow(ctx context.Context, pool *pgxpool.Pool, viewerID, subjectID string) (bool, error) {
+func Follow(ctx context.Context, pool store.Pool, viewerID, subjectID string) (bool, error) {
         if viewerID == subjectID {
                 return false, fmt.Errorf("social: cannot follow yourself")
         }
@@ -205,7 +205,7 @@ func authorSel(u, p string) string {
 
 // Feed reads one page of the global feed (newest first). before==0 means
 // "from the top". Milestones and user posts interleave by time.
-func Feed(ctx context.Context, pool *pgxpool.Pool, viewer string, before int64, limit int) ([]Post, error) {
+func Feed(ctx context.Context, pool store.Pool, viewer string, before int64, limit int) ([]Post, error) {
         if limit <= 0 || limit > 50 {
                 limit = 25
         }
@@ -245,7 +245,7 @@ func Feed(ctx context.Context, pool *pgxpool.Pool, viewer string, before int64, 
 }
 
 // UserPosts reads one user's posts (public profile timeline).
-func UserPosts(ctx context.Context, pool *pgxpool.Pool, viewer, subjectID string, limit int) ([]Post, error) {
+func UserPosts(ctx context.Context, pool store.Pool, viewer, subjectID string, limit int) ([]Post, error) {
         if limit <= 0 || limit > 50 {
                 limit = 20
         }
@@ -296,7 +296,7 @@ func scanPost(row interface{ Scan(...any) error }, _ string) (*Post, error) {
 }
 
 // Comments lists a post's comments, oldest first.
-func Comments(ctx context.Context, pool *pgxpool.Pool, viewer string, postID int64) ([]Comment, error) {
+func Comments(ctx context.Context, pool store.Pool, viewer string, postID int64) ([]Comment, error) {
         rows, err := pool.Query(ctx, `
                 SELECT c.id, c.body, c.created_at,
                        `+authorSel(`u`, `p`)+`, c.user_id = $2
@@ -341,7 +341,7 @@ func levelFor(xp int) int {
 var leagueNames = []string{"Bronze", "Copper", "Silver", "Gold", "Sapphire", "Ruby", "Emerald", "Amethyst", "Pearl", "Diamond"}
 
 // LoadPublicProfile assembles /u/{username}.
-func LoadPublicProfile(ctx context.Context, pool *pgxpool.Pool, viewer, username string) (*PublicProfile, error) {
+func LoadPublicProfile(ctx context.Context, pool store.Pool, viewer, username string) (*PublicProfile, error) {
         p := &PublicProfile{}
         var joined time.Time
         err := pool.QueryRow(ctx, `
@@ -413,7 +413,7 @@ func LoadPublicProfile(ctx context.Context, pool *pgxpool.Pool, viewer, username
 
 // LoadConnections lists the viewer's followers + following, flagged so
 // the UI can offer follow-backs.
-func LoadConnections(ctx context.Context, pool *pgxpool.Pool, viewer string) (*Connections, error) {
+func LoadConnections(ctx context.Context, pool store.Pool, viewer string) (*Connections, error) {
         c := &Connections{Followers: []FollowRow{}, Following: []FollowRow{}}
         followers, err := pool.Query(ctx, `
                 SELECT `+authorSel(`u`, `p`)+`,
@@ -465,7 +465,7 @@ func LoadConnections(ctx context.Context, pool *pgxpool.Pool, viewer string) (*C
 }
 
 // UserIDByUsername resolves a handle → study.users.id (empty when unknown).
-func UserIDByUsername(ctx context.Context, pool *pgxpool.Pool, username string) string {
+func UserIDByUsername(ctx context.Context, pool store.Pool, username string) string {
         var id string
         if err := pool.QueryRow(ctx, `SELECT id FROM study.users WHERE lower(username) = lower($1)`, username).Scan(&id); err != nil {
                 return ""

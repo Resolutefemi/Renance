@@ -13,12 +13,31 @@
  * client below is the static-export-safe half; the app's authoritative
  * data path stays the Go study-api, which talks to Supabase directly
  * as the fallback database (see render.yaml → SUPABASE_DATABASE_URL).
+ *
+ * VERCEL NOTE (founder directive 2026-10-15: "add it to Vercel
+ * yourself"): NEXT_PUBLIC_ values are baked at BUILD time, so the
+ * cleanest self-serve deploy is the same doctrine as API_BASE in
+ * lib/api.ts - the production fallbacks below carry the project's
+ * public-by-design values (the URL and the publishable key; both are
+ * safe to expose in client code by Supabase's own design, and this
+ * repository is private). Setting NEXT_PUBLIC_SUPABASE_URL /
+ * NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY in the Vercel dashboard still
+ * works and simply overrides these constants.
  */
 
 import { createBrowserClient } from '@supabase/ssr';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+// Project zfxrmcwdnmmxjawmsiyp (eu-west-3). Publishable key = public
+// by design (the secret key lives only on the Go study-api side).
+const FALLBACK_URL = 'https://zfxrmcwdnmmxjawmsiyp.supabase.co';
+const FALLBACK_PUBLISHABLE_KEY = 'sb_publishable_T7XQbiSigWyiSuq-ZQwA0g_wgIW1GnI';
+
+const supabaseUrl =
+  process.env.NEXT_PUBLIC_SUPABASE_URL ??
+  (process.env.NODE_ENV === 'production' ? FALLBACK_URL : undefined);
+const supabaseKey =
+  process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ??
+  (process.env.NODE_ENV === 'production' ? FALLBACK_PUBLISHABLE_KEY : undefined);
 
 let cached: ReturnType<typeof createBrowserClient> | null = null;
 

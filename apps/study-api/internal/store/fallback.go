@@ -28,6 +28,7 @@ import (
 	"net/url"
 	"os"
 	"strings"
+	"time"
 )
 
 // FallbackDSNs returns the ordered fallback DSN list from the
@@ -80,6 +81,16 @@ func redactDSN(dsn string) string {
 // pings. Every hop is logged with the DSN redacted; when everything
 // fails the returned error names every candidate (redacted) so the
 // operator knows exactly what was tried.
+//
+// DUAL-WRITE (founder directive 2026-10-15: "everything should save
+// simultaneously on both Neon and Supabase at once"): after the
+// winner is chosen, every candidate BEHIND it in the chain (never the
+// dead ones in front of it - a suspended Neon must not be woken as a
+// mirror) is connected in parallel, migrated on its own journal, and
+// attached as a write mirror through NewMirror. The returned Store
+// then fans every accepted write out to all mirrors while reads and
+// errors stay primary-authoritative. MIRROR_WRITES=0 restores the
+// classic single-pool boot exactly.
 func ConnectWithFallback(ctx context.Context, dsn string, fallbacks []string, log *slog.Logger) (*Store, error) {
 	candidates := make([]string, 0, 1+len(fallbacks))
 	if strings.TrimSpace(dsn) != "" {
@@ -90,6 +101,9 @@ func ConnectWithFallback(ctx context.Context, dsn string, fallbacks []string, lo
 		return nil, fmt.Errorf("store: no database configured - set DATABASE_URL (primary) and optionally FALLBACK_DATABASE_URLS")
 	}
 	var lastErr error
+	var primary *Store
+	var primaryDSN string
+	var primaryIdx int
 	for i, candidate := range candidates {
 		if strings.TrimSpace(candidate) == "" {
 			continue
@@ -100,13 +114,14 @@ func ConnectWithFallback(ctx context.Context, dsn string, fallbacks []string, lo
 		}
 		st, err := Connect(ctx, candidate)
 		if err == nil {
+			primary, primaryDSN, primaryIdx = st, strings.TrimSpace(candidate), i
 			if log != nil {
 				log.Info("database connected",
 					"dsn", redactDSN(candidate),
 					"role", role,
 				)
 			}
-			return st, nil
+			break
 		}
 		lastErr = err
 		if log != nil {
@@ -117,12 +132,90 @@ func ConnectWithFallback(ctx context.Context, dsn string, fallbacks []string, lo
 			)
 		}
 	}
-	names := make([]string, 0, len(candidates))
-	for _, c := range candidates {
-		if strings.TrimSpace(c) != "" {
-			names = append(names, redactDSN(c))
+	if primary == nil {
+		names := make([]string, 0, len(candidates))
+		for _, c := range candidates {
+			if strings.TrimSpace(c) != "" {
+				names = append(names, redactDSN(c))
+			}
+		}
+		return nil, fmt.Errorf("store: every database is unreachable (tried: %s) - last error: %w",
+			strings.Join(names, " -> "), lastErr)
+	}
+
+	// Attach the mirrors (only when dual-write is on).
+	if mirrorWritesEnabled() {
+		var mirrorDSNs []string
+		for _, c := range candidates[primaryIdx+1:] {
+			c = strings.TrimSpace(c)
+			if c == "" || c == primaryDSN {
+				continue
+			}
+			mirrorDSNs = append(mirrorDSNs, c)
+		}
+		if len(mirrorDSNs) > 0 {
+			pools := make([]Pool, len(mirrorDSNs))
+			names := make([]string, len(mirrorDSNs))
+			done := make(chan struct{}, len(mirrorDSNs))
+			for i, md := range mirrorDSNs {
+				go func(idx int, mirrorDSN string) {
+					mctx, mcancel := context.WithTimeout(context.Background(), 60*time.Second)
+					defer mcancel()
+					mst, err := Connect(mctx, mirrorDSN)
+					if err != nil {
+						if log != nil {
+							log.Warn("mirror unreachable - dual-write continues without it (heals on a later boot)",
+								"dsn", redactDSN(mirrorDSN), "err", err.Error())
+						}
+						done <- struct{}{}
+						return
+					}
+					// The mirror migrates on its OWN journal: a fresh
+					// fallback database provisions itself, and a drifted
+					// one heals, before the first mirrored write lands.
+					if err := mst.Migrate(mctx); err != nil {
+						if log != nil {
+							log.Warn("mirror migration failed - the mirror is attached anyway and the boot sync will retry",
+								"dsn", redactDSN(mirrorDSN), "err", err.Error())
+						}
+					}
+					pools[idx] = mst.Pool
+					names[idx] = mirrorNameFromDSN(mirrorDSN)
+					if log != nil {
+						log.Info("mirror connected - schema migrated, writes will replay here",
+							"dsn", redactDSN(mirrorDSN), "role", "mirror")
+					}
+					done <- struct{}{}
+				}(i, md)
+			}
+			for range mirrorDSNs {
+				<-done
+			}
+			attached := pools[:0:0]
+			attachedNames := names[:0:0]
+			for i, p := range pools {
+				if p != nil {
+					attached = append(attached, p)
+					attachedNames = append(attachedNames, names[i])
+				}
+			}
+			primary.Pool = NewMirror(primary.Pool, attached, attachedNames, log)
 		}
 	}
-	return nil, fmt.Errorf("store: every database is unreachable (tried: %s) - last error: %w",
-		strings.Join(names, " -> "), lastErr)
+	return primary, nil
+}
+
+// mirrorNameFromDSN derives a short log label from the DSN host.
+func mirrorNameFromDSN(dsn string) string {
+	u, err := url.Parse(strings.TrimSpace(dsn))
+	if err != nil || u.Host == "" {
+		return "mirror"
+	}
+	host := u.Hostname()
+	for _, hint := range []string{"supabase", "insforge", "neon"} {
+		if strings.Contains(host, hint) {
+			return hint
+		}
+	}
+	return host
 }

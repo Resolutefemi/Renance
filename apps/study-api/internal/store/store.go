@@ -33,7 +33,10 @@ var ErrUniqueEmail = errors.New("store: email already registered")
 const uniqueViolation = "23505"
 
 type Store struct {
-        Pool *pgxpool.Pool
+        // Pool is the app's whole database surface: the primary pool,
+        // or the dual-write Mirror wrapping primary + mirrors when
+        // fallback DSNs are configured (see pool.go / mirror.go).
+        Pool Pool
 }
 
 func Connect(ctx context.Context, dsn string) (*Store, error) {
@@ -57,7 +60,36 @@ func Connect(ctx context.Context, dsn string) (*Store, error) {
         return &Store{Pool: pool}, nil
 }
 
-func (s *Store) Close() { s.Pool.Close() }
+func (s *Store) Close() {
+        s.Pool.Close()
+}
+
+// Primary returns the RAW primary pool (no mirror fan-out): reads
+// and writes that must not wait for or depend on the mirrors (the
+// curriculum seed, the boot sync).
+func (s *Store) Primary() Pool {
+        if m, ok := s.Pool.(*Mirror); ok {
+                return m.primary
+        }
+        return s.Pool
+}
+
+// MirrorPools returns the RAW mirror pools for the boot sync; nil
+// when no mirror is attached.
+func (s *Store) MirrorPools() []Pool {
+        if m, ok := s.Pool.(*Mirror); ok {
+                return m.MirrorPools()
+        }
+        return nil
+}
+
+// MirrorNames labels the attached mirrors (for logs).
+func (s *Store) MirrorNames() []string {
+        if m, ok := s.Pool.(*Mirror); ok {
+                return m.MirrorNames()
+        }
+        return nil
+}
 
 // normalizeDSN strips libpq parameters pgx has no support for. Neon's
 // console hands out URIs ending in channel_binding=require; without this
@@ -120,7 +152,8 @@ func (s *Store) Migrate(ctx context.Context) error {
                         return fmt.Errorf("store: apply %s: %w", name, err)
                 }
                 if _, err := tx.Exec(ctx,
-                        `INSERT INTO study.schema_migrations (version) VALUES ($1)`, name); err != nil {
+                        `INSERT INTO study.schema_migrations (version) VALUES ($1)
+                        ON CONFLICT (version) DO NOTHING`, name); err != nil {
                         _ = tx.Rollback(ctx)
                         return fmt.Errorf("store: journal %s: %w", name, err)
                 }
@@ -866,8 +899,8 @@ func (s *Store) LatestSyncJob(ctx context.Context, userID string) (*SyncJob, err
 // nullableJSON maps an empty JSON blob to SQL NULL so optional jsonb
 // columns (result subjects) stay NULL instead of the string "null".
 func nullableJSON(b []byte) any {
-	if len(b) == 0 {
-		return nil
-	}
-	return string(b)
+        if len(b) == 0 {
+                return nil
+        }
+        return string(b)
 }

@@ -14,17 +14,21 @@ import (
 
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgconn"
-	"github.com/jackc/pgx/v5/pgxpool"
+
+	"renance.dev/study-api/internal/store"
 )
 
 type Service struct {
-	Pool            *pgxpool.Pool
+	// Pool is the store's database surface - the raw primary pool
+	// or the dual-write Mirror (Neon + Supabase/InsForge): every
+	// accepted write the ledger lands replays to the mirrors.
+	Pool            store.Pool
 	Log             *slog.Logger
 	Engine          *Engine
 	UnlimitedHearts bool
 }
 
-// querier is the narrow surface shared by *pgxpool.Pool and pgx.Tx so
+// querier is the narrow surface shared by store.Pool and pgx.Tx so
 // ledger writes can run inside one transaction.
 type querier interface {
 	QueryRow(ctx context.Context, sql string, args ...any) pgx.Row

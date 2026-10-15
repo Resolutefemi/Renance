@@ -57,8 +57,6 @@ import (
 	"renance.dev/study-api/internal/schoolcorpus"
 	"renance.dev/study-api/internal/store"
 	"renance.dev/study-api/internal/tutor"
-
-	"github.com/jackc/pgx/v5/pgxpool"
 )
 
 type Server struct {
@@ -172,7 +170,7 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
 	// and hearts still accrue as rewards). The pool may be nil in
 	// unit tests that never touch learn routes - constructing with a
 	// nil pool is fine, dereferencing st was not.
-	var learnPool *pgxpool.Pool
+	var learnPool store.Pool
 	if st != nil {
 		learnPool = st.Pool
 	}

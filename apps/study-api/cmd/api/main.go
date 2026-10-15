@@ -7,6 +7,7 @@ package main
 import (
 	"context"
 	"errors"
+	"fmt"
 	"log/slog"
 	"net/http"
 	"os"
@@ -83,12 +84,44 @@ func main() {
 	// The learn curriculum seeds itself once, in the background
 	// (founder directive 2026-10-14: Supreme merges into Renance).
 	// First boot pays the ~140k-row insert; every later boot
-	// returns on the count check. Boot never blocks on it.
+	// returns on the count check. Boot never blocks on it. It runs
+	// on the RAW primary pool: the mirrors were provisioned by
+	// dbapply/migrations and any rows they lack are healed by the
+	// mirror sync below, so the seed never needs to fan out.
 	go func() {
 		seedCtx, seedCancel := context.WithTimeout(context.Background(), 10*time.Minute)
 		defer seedCancel()
-		if err := learn.SeedIfEmpty(seedCtx, st.Pool, log); err != nil {
+		if err := learn.SeedIfEmpty(seedCtx, st.Primary(), log); err != nil {
 			log.Error("learn: curriculum seed failed", "err", err)
+		}
+	}()
+
+	// The mirror sync (founder directive 2026-10-15: "make sure you
+	// copy all the user details, all the dB, to Supabase too"): in the
+	// background, a bidirectional missing-row merge between the
+	// primary and every attached mirror - the first boot copies the
+	// live accounts/progress off Neon onto Supabase and InsForge;
+	// every later boot only pays one COUNT per table when everything
+	// already agrees. Idempotent, bounded, MIRROR_SYNC=0 disables.
+	go func() {
+		if !store.MirrorSyncEnabled() {
+			return
+		}
+		mirrorPools := st.MirrorPools()
+		mirrorNames := st.MirrorNames()
+		for i, mp := range mirrorPools {
+			name := fmt.Sprintf("mirror-%d", i+1)
+			if i < len(mirrorNames) {
+				name = mirrorNames[i]
+			}
+			syncCtx, syncCancel := context.WithTimeout(context.Background(), 15*time.Minute)
+			stats, err := store.SyncMirrorData(syncCtx, st.Primary(), mp, log, "primary", name)
+			syncCancel()
+			if err != nil {
+				log.Error("mirror sync failed - retried on the next boot", "mirror", name, "err", err)
+				continue
+			}
+			_ = stats
 		}
 	}()
 
