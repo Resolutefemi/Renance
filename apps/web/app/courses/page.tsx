@@ -47,7 +47,7 @@ import {
   DeskCourse, DeskDepartment, DeskShelves, AIMatchLine,
   fetchCourseDesk, fetchCoursePath, fetchDepartments, fetchMyCourses, learnBodyFromExams,
   learnBodyLabel, aiMatchCourses, saveDesk, searchDeskCourses,
-  setActiveCourse, setMyCourses,
+  setActiveCourse, setMyCourses, deskSaveError,
 } from '@/lib/learn';
 import { JAMB_CATALOG, NECO_CATALOG, WAEC_CATALOG } from '@/lib/learn-catalog-secondary';
 
@@ -274,7 +274,14 @@ export default function CoursesPage() {
         )}
         {loading && <SkeletonList />}
 
-        {!loading && face !== 'path' && deskBodies.length > 1 && (
+        {/* Founder directive 2026-10-15 ("remove the desk switcher
+            buttons from top of the School desk focus page"): the toggle
+            pills - including the "JAMB desk" button - are NOT rendered
+            while the tertiary / School desk is the focus. The JAMB desk
+            stays reachable only from its own focus views (profile exam
+            bodies / the secondary desks); the tertiary flow is a clean
+            two-gate course desk. */}
+        {!loading && face !== 'path' && body !== 'tertiary' && deskBodies.length > 1 && (
           <div className="no-scrollbar -mx-4 mb-3 flex items-center gap-1.5 overflow-x-auto px-4">
             {deskBodies.map((b) => (
               <button
@@ -539,21 +546,49 @@ function TertiaryDesk({
     void loadDeps(t);
     try {
       await saveDesk(t, '');
-    } catch {
+    } catch (err) {
+      // Dev forensics (founder 2026-10-15: log the full error object -
+      // status, code, message, payload - so a failing save is
+      // diagnosable from the browser console).
+      if (process.env.NODE_ENV !== 'production') {
+        console.error('[desk-save] institution-only save failed', err);
+      }
       // The department save re-issues the full pair - nothing to alert
       // the student about yet.
     }
   };
 
   const chooseDepartment = async (d: DeskDepartment) => {
+    // Payload guard (founder 2026-10-15: "ensure no field is unexpectedly
+    // null or undefined"): the save pair must never ride with an empty
+    // institution kind - if state somehow lost it, recover it from the
+    // shelf before sending.
+    const kind = (itype || shelf?.institutionType || '').trim();
+    if (!kind || !d?.id) {
+      setPhase('itype');
+      setDepQuery('');
+      onNotice('Pick your kind of institution first, then your department.');
+      return;
+    }
     setGateBusy(true);
     try {
       // Saves institution kind + department together (idempotent upsert):
       // this also lands a first institution-only save that failed above.
-      await saveDesk(itype, d.id);
+      await saveDesk(kind, d.id);
       await loadShelf();
-    } catch {
-      onNotice('Could not save that - check your connection and try again.');
+    } catch (err) {
+      // Error categorisation (founder directive 2026-10-15: "even with an
+      // active internet connection" the app blamed the connection):
+      // an HTTP answer (400/409/500) surfaces the server's own actionable
+      // message - e.g. "department does not belong to that institution
+      // kind" - via deskSaveError(); ONLY a real network failure / timeout
+      // keeps the "check your connection" wording. 401 already bounced
+      // the session to /login inside api(). In dev the full error object
+      // (status, code, message, data) logs to the console.
+      if (process.env.NODE_ENV !== 'production') {
+        console.error('[desk-save] department save failed', err);
+      }
+      onNotice(deskSaveError(err, 'Could not save that - check your connection and try again.'));
     } finally {
       setGateBusy(false);
     }

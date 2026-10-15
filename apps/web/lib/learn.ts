@@ -8,7 +8,7 @@
  * shared api() helper (Bearer token, 401 bounce).
  */
 
-import { api } from '@/lib/api';
+import { api, ApiError } from '@/lib/api';
 
 // ─── Types (server contract, internal/learn) ──────────────────────────────
 
@@ -294,6 +294,32 @@ export function saveDesk(institutionType: string, department: string): Promise<L
     body: { setDesk: true, institutionType, department },
     idempotentRetry: true,
   });
+}
+
+/** Categorise a failed desk save the way the founder asked
+ * (2026-10-15, "Could not save that - check your connection" even
+ * while online): a server ANSWER (400/409/500…) surfaces the server's
+ * own reason - e.g. "department does not belong to that institution
+ * kind" - so the student gets an actionable message instead of a
+ * false connection blame; only a genuine network failure / timeout
+ * (status 0) keeps the connection wording. A 401 has already bounced
+ * the session to /login inside api(), so it never reaches here as a
+ * save error in practice. */
+export function deskSaveError(err: unknown, fallback: string): string {
+  if (err instanceof ApiError) {
+    if (err.status === 0) {
+      return 'The study service did not answer in time - tap your pick again.';
+    }
+    if (err.status === 401) {
+      return 'Your session expired - sign in again and re-pick your department.';
+    }
+    const serverMsg = err.message || '';
+    if (err.status >= 400 && err.status < 500 && serverMsg && !serverMsg.startsWith('Request failed')) {
+      return `Could not save that: ${serverMsg}`;
+    }
+    return `Could not save that - the server answered ${err.status}. Please try again.`;
+  }
+  return fallback;
 }
 
 /** Departments of one institution kind, from the seeded curriculum. */

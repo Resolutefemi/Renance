@@ -51,13 +51,25 @@ services:
       # it automatically. Runtime detection is CU-aware (dbwatch.go):
       # it only probes after real request failures, never on a
       # schedule, so nothing here ever keeps Neon's compute awake.
-      # Fill either in the Render dashboard (sync: false = secret);
-      # both are optional - no fallback configured simply keeps the
-      # pre-fallback behaviour.
+      #
+      # FOUNDER DIRECTIVE 2026-10-15 ("set up the database and
+      # everything yourself and make it's working"): both fallback DSNs
+      # are the VERIFIED, PROVISIONED values baked in below (the repo is
+      # private - the same practice as BUNDLE_MASTER_KEY above). Both
+      # databases were migrated + curriculum-seeded (293 departments /
+      # 10,725 courses / 130,275 topics) and the full student desk flow
+      # was E2E-verified against BOTH on 2026-10-15.
+      #   SUPABASE: session mode (5432) of the project's supavisor
+      #     pooler, aws-1-eu-west-3 - the IPv4-safe host (the direct
+      #     db.<ref>.supabase.co host is IPv6-only and unreachable from
+      #     Render's egress). Rotate the password in the Supabase
+      #     dashboard any time: update it here AND in the GitHub Actions
+      #     secret SUPABASE_DATABASE_URL (db-keepalive workflow).
+      #   INSFORGE: the wire-verified DSN (dbeqj4dx, us-east).
       - key: SUPABASE_DATABASE_URL
-        sync: false
+        value: "postgresql://postgres.zfxrmcwdnmmxjawmsiyp:Stephen2474life%23@aws-1-eu-west-3.pooler.supabase.com:5432/postgres?sslmode=require"
       - key: INSFORGE_DATABASE_URL
-        sync: false
+        value: "postgresql://postgres:8261cb984054ff872330f6b73200eb99@dbeqj4dx.us-east.database.insforge.app:5432/insforge?sslmode=require"
       # Explicit ordered chain (comma-separated) overrides the two
       # named vars above when set.
       - key: FALLBACK_DATABASE_URLS

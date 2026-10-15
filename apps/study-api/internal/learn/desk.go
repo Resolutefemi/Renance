@@ -60,6 +60,16 @@ func (s *Service) Departments(ctx context.Context, itype string) ([]DeskDepartme
         return out, rows.Err()
 }
 
+// ValidationError is a client-fixable desk save problem (an unknown
+// institution kind, or a department that does not belong to it). The
+// HTTP layer maps it to 400 with the real message; ANY other error from
+// SetDesk is a genuine database fault and answers 500, so the web
+// client never blames the student's connection for a server-side
+// failure (founder directive 2026-10-15).
+type ValidationError struct{ Msg string }
+
+func (e *ValidationError) Error() string { return e.Msg }
+
 // SetDesk saves the student's institution kind + department on the
 // learner row. The department must exist and belong to the institution
 // kind, so a stale client can never park a student in a mismatched desk.
@@ -79,7 +89,7 @@ func (s *Service) SetDesk(ctx context.Context, userID, itype, department string)
                 }
         }
         if !valid {
-                return fmt.Errorf("unknown institution kind")
+                return &ValidationError{Msg: "unknown institution kind"}
         }
         if department != "" {
                 var n int
@@ -89,7 +99,7 @@ func (s *Service) SetDesk(ctx context.Context, userID, itype, department string)
                         return err
                 }
                 if n == 0 {
-                        return fmt.Errorf("department does not belong to that institution kind")
+                        return &ValidationError{Msg: "department does not belong to that institution kind"}
                 }
         }
         if err := s.ensureLearner(ctx, s.Pool, userID); err != nil {

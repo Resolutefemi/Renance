@@ -1,0 +1,75 @@
+name: db-keepalive (Supabase + InsForge)
+
+# FOUNDER DIRECTIVE 2026-10-15: "make sure Supabase and insforge are
+# not inactive, make sure an action is taken every 6 days, so that they
+# will not be paused."
+#
+# Supabase pauses free projects after 7 days without activity; this
+# schedule fires on day-of-month 1, 7, 13, 19, 25, 31 — the longest
+# real gap is 6 days (25 → 1 on a 30-day month; 31-day months get the
+# extra 31st run). Each run:
+#
+#   1. Pings BOTH fallback databases over the Postgres wire and inserts
+#      a heartbeat row into public.db_keepalive (visible in the
+#      Supabase table editor + on InsForge).
+#   2. Pings the Supabase REST API with the project's secret key
+#      (API requests also count as activity).
+#   3. Commits supabase/keepalive/last-run.json to the
+#      chore/db-keepalive branch — the commit keeps THIS repository
+#      active, which is what stops GitHub from disabling scheduled
+#      workflows after 60 idle days (the cron would silently die long
+#      before the databases ever paused).
+#
+# The heartbeat branch is NOT main: GITHUB_TOKEN pushes trigger no CI
+# and no Render deploy, so nothing here ever wakes the Neon primary.
+# Credentials ride GitHub Actions secrets (rotate them in the repo
+# settings whenever a provider password changes). Run it any time
+# manually from the Actions tab (workflow_dispatch).
+
+on:
+  schedule:
+    - cron: '23 3 */6 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: db-keepalive
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install the Postgres driver (scratch dir — repo lockfile untouched)
+        run: |
+          mkdir -p /tmp/keepalive && cd /tmp/keepalive
+          npm init -y >/dev/null
+          npm install pg --no-audit --no-fund --silent
+          cp "$GITHUB_WORKSPACE/scripts/db-keepalive.mjs" .
+
+      - name: Ping every fallback database
+        env:
+          SUPABASE_DATABASE_URL: ${{ secrets.SUPABASE_DATABASE_URL }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+          INSFORGE_DATABASE_URL: ${{ secrets.INSFORGE_DATABASE_URL }}
+          KEEPALIVE_OUT: ${{ github.workspace }}/supabase/keepalive/last-run.json
+        run: node /tmp/keepalive/db-keepalive.mjs
+
+      - name: Commit the heartbeat (keeps the schedule itself alive)
+        run: |
+          git config user.name "db-keepalive bot"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -B chore/db-keepalive
+          git add supabase/keepalive/last-run.json
+          git commit -m "chore: db keepalive heartbeat $(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            || echo "nothing new to commit"
+          git push origin chore/db-keepalive --force

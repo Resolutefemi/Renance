@@ -13,6 +13,7 @@
  */
 
 import { useEffect } from 'react';
+import { pingSupabase } from '@/utils/supabase/client';
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
@@ -30,6 +31,12 @@ export default function SwRegister() {
       /* a failed registration never breaks the page - the raw-text
        * fallback simply stays as it was */
     });
+    // Supabase activity ping (founder directive 2026-10-15: "make sure
+    // Supabase is not inactive"): one fire-and-forget authenticated REST
+    // request per production page load counts as project activity, so
+    // real student traffic keeps the fallback project awake between the
+    // scheduled db-keepalive workflow runs. Never blocks, never throws.
+    void pingSupabase();
   }, []);
   return null;
 }

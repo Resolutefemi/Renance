@@ -5,6 +5,7 @@ package httpapi
 
 import (
 	"encoding/json"
+	"errors"
 	"net/http"
 	"strconv"
 	"strings"
@@ -42,7 +43,21 @@ func (s *Server) handleLearnPatchProfile(w http.ResponseWriter, r *http.Request)
 	}
 	if body.SetDesk {
 		if err := s.learn.SetDesk(r.Context(), userID, body.InstitutionType, body.Department); err != nil {
-			fail(w, http.StatusBadRequest, "learn_desk", err.Error())
+			// Status split (founder directive 2026-10-15: a
+			// failing desk save was surfaced as "check your
+			// connection" even while online): a VALIDATION
+			// problem is the client's to fix and answers 400
+			// with the real reason; a database fault answers
+			// 500 so the web client stops blaming the
+			// student's network for server-side failures.
+			var ve *learn.ValidationError
+			if errors.As(err, &ve) {
+				fail(w, http.StatusBadRequest, "learn_desk", ve.Error())
+			} else {
+				s.log.Error("desk save", "err", err)
+				fail(w, http.StatusInternalServerError, "learn_desk",
+					"the desk save hit a database problem - please try again")
+			}
 			return
 		}
 	}
