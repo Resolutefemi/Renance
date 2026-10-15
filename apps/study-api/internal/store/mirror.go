@@ -35,8 +35,10 @@
 //     behaviour (zero fan-out); MIRROR_SYNC=0 skips the boot sync.
 //     Both default ON.
 //
-// Reads NEVER bounce to a mirror (Query/QueryRow below) - the primary
-// is authoritative and a mirror can legally lag one write behind.
+// Reads NEVER bounce to a mirror for their RESULTS (the primary is
+// authoritative and a mirror can legally lag a write behind) - but a
+// write riding QueryRow (INSERT ... RETURNING, the house pattern)
+// still replicates AFTER the primary row scanned cleanly.
 package store
 
 import (
@@ -44,6 +46,8 @@ import (
         "fmt"
         "log/slog"
         "os"
+        "reflect"
+        "regexp"
         "strconv"
         "strings"
         "sync"
@@ -195,9 +199,43 @@ func (m *Mirror) Query(ctx context.Context, sql string, args ...any) (pgx.Rows, 
         return m.primary.Query(ctx, sql, args...)
 }
 
-// QueryRow reads the primary only.
+// Query reads the primary only - UNLESS the SQL is a write riding
+// QueryRow (the house pattern: INSERT/UPDATE ... RETURNING ...).
+// The result row always comes from the primary; after a SUCCESSFUL
+// scan the statement replays to the mirrors. A write that the
+// primary rejects (unique violation, no rows) never replicates.
 func (m *Mirror) QueryRow(ctx context.Context, sql string, args ...any) pgx.Row {
-        return m.primary.QueryRow(ctx, sql, args...)
+        row := m.primary.QueryRow(ctx, sql, args...)
+        if m.enabled && isWriteSQL(sql) {
+                return &mirrorRow{Row: row, m: m, sql: sql, args: args}
+        }
+        return row
+}
+
+// mirrorRow is a pgx.Row that fans a write-with-RETURNING out to
+// the mirrors once the primary row scanned cleanly (pgx.Row is
+// lazy: the statement only runs at Scan time, so this is the one
+// place success is knowable).
+type mirrorRow struct {
+        pgx.Row
+        m    *Mirror
+        sql  string
+        args []any
+        once bool
+}
+
+func (r *mirrorRow) Scan(dest ...any) error {
+        err := r.Row.Scan(dest...)
+        if err == nil && !r.once {
+                r.once = true
+                replaySQL, replayArgs, pinned := pinReturningValues(r.sql, r.args, dest)
+                if os.Getenv("MIRROR_DEBUG") != "" {
+                        fmt.Fprintf(os.Stderr, "MIRROR_DEBUG: queryrow write dispatching to %d mirror(s) (pinned=%v): %.80s\n",
+                                len(r.m.workers), pinned, compactSQL(replaySQL))
+                }
+                r.m.dispatch(mirrorOp{sql: replaySQL, args: replayArgs})
+        }
+        return err
 }
 
 // SendBatch runs the batch on the primary (the caller drains the
@@ -315,7 +353,11 @@ func (w *mirrorWorker) stop() {
 }
 
 func (w *mirrorWorker) runExec(ctx context.Context, sql string, args []any) {
-        if _, err := w.pool.Exec(ctx, sql, args...); err != nil {
+        tag, err := w.pool.Exec(ctx, sql, args...)
+        if os.Getenv("MIRROR_DEBUG") != "" {
+                fmt.Fprintf(os.Stderr, "MIRROR_DEBUG: worker %s exec: err=%v rows=%d sql=%.80s args=%v\n", w.name, err, tag.RowsAffected(), compactSQL(sql), args)
+        }
+        if err != nil {
                 w.m.noteFailure(fmt.Sprintf("%s: %v - sql %.90s", w.name, err, compactSQL(sql)))
                 return
         }
@@ -408,28 +450,276 @@ func compactSQL(sql string) string {
         return strings.Join(strings.Fields(sql), " ")
 }
 
-// isWriteSQL screens obvious reads so a fan-out never ships a SELECT
-// to the mirrors (writes only; the pool surface is write-shaped but
-// CTE-writing SELECTs and similar edge shapes stay single-DB).
+// isWriteSQL screens statements so the fan-out only ever ships
+// writes to the mirrors. INSERT/UPDATE/DELETE heads are writes;
+// WITH heads (CTEs) are writes only when the CTE chain ends in a
+// data-changing statement (the codebase's WITH+SELECT reads must
+// never pay a mirror round-trip). Query(...) stays read-only by
+// doctrine - writes ride Exec, QueryRow (RETURNING) or SendBatch.
 func isWriteSQL(sql string) bool {
         s := strings.TrimSpace(sql)
         if s == "" {
                 return false
         }
         head := strings.ToLower(s[:min(len(s), 12)])
-        for _, kw := range []string{"insert", "update", "delete", "with"} {
+        for _, kw := range []string{"insert", "update", "delete"} {
                 if strings.HasPrefix(head, kw) {
                         return true
                 }
         }
+        if strings.HasPrefix(head, "with") {
+                return cteChangesData(s)
+        }
         return false
 }
+
+// cteChangesData reports whether a WITH... statement ends in
+// INSERT/UPDATE/DELETE (a bare WITH...SELECT is a read).
+func cteChangesData(sql string) bool {
+        return writeTail.FindString(strings.ToLower(sql)) != ""
+}
+
+var writeTail = regexp.MustCompile(`\)\s*(insert|update|delete)\b`)
 
 func min(a, b int) int {
         if a < b {
                 return a
         }
         return b
+}
+
+// pinReturningValues rewrites an INSERT ... RETURNING so the mirror
+// stores the PRIMARY's generated values instead of generating its
+// own. Without this, `INSERT INTO study.users (username, password_hash)
+// VALUES ($1,$2) RETURNING id, created_at` lands on the mirror with a
+// FRESH random uuid - and every child row dispatched next (learners,
+// sessions, profiles - all FK-keyed to the primary's uuid) fails with
+// a foreign-key violation on the mirror.
+//
+// The rewrite (shape verified against every INSERT..RETURNING in this
+// codebase; unmatched shapes replay verbatim and let the boot sync
+// heal):
+//
+//   INSERT INTO t (a, b) VALUES ($1, $2) [ON CONFLICT ...] RETURNING x, y
+//   ->
+//   INSERT INTO t (a, b, x, y) VALUES ($1, $2, $3, $4) [ON CONFLICT ...]
+//
+// where $3/$4 carry the values the primary RETURNED (the dest slice
+// after a successful Scan). UPDATE/DELETE never generate ids - they
+// replay verbatim.
+func pinReturningValues(sql string, args []any, dest []any) (string, []any, bool) {
+        s := strings.TrimSpace(sql)
+        up := strings.ToUpper(s)
+        if !strings.HasPrefix(up, "INSERT") {
+                return s, args, false // UPDATE/DELETE: replay as-is
+        }
+        retIdx := lastKeyword(s, "RETURNING")
+        if retIdx < 0 {
+                return s, args, false // no generated values to pin
+        }
+        base := strings.TrimRight(s[:retIdx], " \t\n\r")
+        retCols := splitIdentList(s[retIdx+len("RETURNING"):])
+        if len(retCols) == 0 || len(retCols) != len(dest) {
+                // The caller scans fewer dests than RETURNING columns
+                // (pgx allows that) - pinning is unsafe, replay as-is.
+                return s, args, false
+        }
+
+        m := insertHeadRe.FindStringSubmatchIndex(base)
+        if m == nil {
+                return s, args, false
+        }
+        table := base[m[2]:m[3]]
+        colOpen := m[1] // the full match ends just past '('
+        colClose := strings.IndexByte(base[colOpen:], ')')
+        if colClose < 0 {
+                return s, args, false
+        }
+        colClose += colOpen
+        cols := splitIdentList(base[colOpen:colClose])
+
+        valIdx := keywordAt(base, colClose, "VALUES")
+        if valIdx < 0 {
+                return s, args, false
+        }
+        rest := base[valIdx+len("VALUES"):]
+        tOpen := strings.IndexByte(rest, '(')
+        if tOpen < 0 {
+                return s, args, false
+        }
+        tClose := scanTupleEnd(rest, tOpen)
+        if tClose < 0 {
+                return s, args, false
+        }
+        inner := rest[tOpen+1 : tClose]
+        suffix := strings.TrimSpace(rest[tClose+1:]) // ON CONFLICT ... DO ...
+
+        // Only pin returning columns not already inserted explicitly.
+        have := make(map[string]bool, len(cols))
+        for _, c := range cols {
+                have[strings.ToLower(c)] = true
+        }
+        var addCols []string
+        var addVals []any
+        for i, rc := range retCols {
+                if have[strings.ToLower(rc)] {
+                        continue
+                }
+                addCols = append(addCols, rc)
+                addVals = append(addVals, derefScanDest(dest[i]))
+        }
+        if len(addCols) == 0 {
+                return s, args, false
+        }
+        k := len(args)
+        var ph []string
+        for range addCols {
+                k++
+                ph = append(ph, "$"+strconv.Itoa(k))
+        }
+        var b strings.Builder
+        b.WriteString("INSERT INTO ")
+        b.WriteString(table)
+        b.WriteString(" (")
+        b.WriteString(strings.Join(cols, ", "))
+        b.WriteString(", ")
+        b.WriteString(strings.Join(addCols, ", "))
+        b.WriteString(") VALUES (")
+        b.WriteString(inner)
+        b.WriteString(", ")
+        b.WriteString(strings.Join(ph, ", "))
+        b.WriteString(")")
+        if suffix != "" {
+                b.WriteString(" ")
+                b.WriteString(suffix)
+        }
+        out := append(append([]any{}, args...), addVals...)
+        return b.String(), out, true
+}
+
+// insertHeadRe captures "INSERT INTO <table> (" (case-insensitive).
+var insertHeadRe = regexp.MustCompile(`(?i)^INSERT\s+INTO\s+([\w."]+)\s*\(`)
+
+// lastKeyword finds the last whole-word, case-insensitive occurrence
+// of kw outside of string literals.
+func lastKeyword(s, kw string) int {
+        idx := -1
+        lower := strings.ToLower(s)
+        needle := strings.ToLower(kw)
+        for i := 0; i+len(needle) <= len(lower); {
+                j := strings.Index(lower[i:], needle)
+                if j < 0 {
+                        break
+                }
+                pos := i + j
+                before := pos == 0 || !isWordByte(lower[pos-1])
+                after := pos+len(needle) == len(lower) || !isWordByte(lower[pos+len(needle)])
+                if before && after {
+                        idx = pos
+                }
+                i = pos + len(needle)
+        }
+        return idx
+}
+
+// keywordAt finds kw at or after from, before the end of the statement.
+func keywordAt(s string, from int, kw string) int {
+        if from >= len(s) {
+                return -1
+        }
+        sub := s[from:]
+        i := keywordIndexFold(sub, kw)
+        if i < 0 {
+                return -1
+        }
+        return from + i
+}
+
+func keywordIndexFold(s, kw string) int {
+        lower := strings.ToLower(s)
+        needle := strings.ToLower(kw)
+        for i := 0; i+len(needle) <= len(lower); {
+                j := strings.Index(lower[i:], needle)
+                if j < 0 {
+                        return -1
+                }
+                pos := i + j
+                before := pos == 0 || !isWordByte(lower[pos-1])
+                after := pos+len(needle) == len(lower) || !isWordByte(lower[pos+len(needle)])
+                if before && after {
+                        return pos
+                }
+                i = pos + len(needle)
+        }
+        return -1
+}
+
+func isWordByte(b byte) bool {
+        return b == '_' || (b >= '0' && b <= '9') || (b >= 'a' && b <= 'z') || (b >= 'A' && b <= 'Z')
+}
+
+// splitIdentList splits a comma-separated identifier list, trimming
+// spaces; empty items drop out.
+func splitIdentList(s string) []string {
+        var out []string
+        for _, part := range strings.Split(s, ",") {
+                if part = strings.TrimSpace(part); part != "" {
+                        out = append(out, part)
+                }
+        }
+        return out
+}
+
+// scanTupleEnd walks a VALUES tuple from its opening '(' to the
+// matching ')', skipping single-quoted string literals.
+func scanTupleEnd(s string, open int) int {
+        depth := 0
+        inStr := false
+        for i := open; i < len(s); i++ {
+                c := s[i]
+                switch {
+                case inStr:
+                        if c == '\'' {
+                                if i+1 < len(s) && s[i+1] == '\'' {
+                                        i++ // escaped quote
+                                } else {
+                                        inStr = false
+                                }
+                        }
+                case c == '\'':
+                        inStr = true
+                case c == '(':
+                        depth++
+                case c == ')':
+                        depth--
+                        if depth == 0 {
+                                return i
+                        }
+                }
+        }
+        return -1
+}
+
+// derefScanDest lifts the scanned value out of a Scan destination
+// pointer. []byte becomes string (jsonb/text columns replay as text;
+// the schema has no bytea). A typed nil stays nil.
+func derefScanDest(d any) any {
+        v := reflect.Indirect(reflect.ValueOf(d))
+        if !v.IsValid() {
+                return nil
+        }
+        switch v.Kind() {
+        case reflect.Invalid, reflect.Ptr, reflect.Interface, reflect.Slice, reflect.Map:
+                if v.Kind() == reflect.Slice && v.Type().Elem().Kind() == reflect.Uint8 && v.Len() >= 0 {
+                        return string(v.Bytes())
+                }
+                return nil
+        }
+        val := v.Interface()
+        if b, ok := val.([]byte); ok {
+                return string(b)
+        }
+        return val
 }
 
 // ─── DualTx: the transaction half ─────────────────────────────────────────
@@ -462,7 +752,33 @@ func (t *DualTx) Query(ctx context.Context, sql string, args ...any) (pgx.Rows, 
 }
 
 func (t *DualTx) QueryRow(ctx context.Context, sql string, args ...any) pgx.Row {
-        return t.pt.QueryRow(ctx, sql, args...)
+        row := t.pt.QueryRow(ctx, sql, args...)
+        if t.m.enabled && isWriteSQL(sql) {
+                return &dualTxRow{Row: row, t: t, sql: sql, args: args}
+        }
+        return row
+}
+
+// dualTxRow buffers a write-with-RETURNING into the transaction's
+// mirror burst after the primary row scanned cleanly.
+type dualTxRow struct {
+        pgx.Row
+        t    *DualTx
+        sql  string
+        args []any
+        once bool
+}
+
+func (r *dualTxRow) Scan(dest ...any) error {
+        err := r.Row.Scan(dest...)
+        if err == nil && !r.once {
+                r.once = true
+                replaySQL, replayArgs, _ := pinReturningValues(r.sql, r.args, dest)
+                r.t.mu.Lock()
+                r.t.stmts = append(r.t.stmts, mirrorStmt{sql: replaySQL, args: replayArgs})
+                r.t.mu.Unlock()
+        }
+        return err
 }
 
 // SendBatch runs the batch on the primary tx (caller drains) and
