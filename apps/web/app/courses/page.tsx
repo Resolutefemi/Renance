@@ -256,28 +256,14 @@ export default function CoursesPage() {
   return (
     <div className="min-h-screen bg-background md:pl-[var(--rail-w)]">
       <SideNav />
+      {/* Founder directive 2026-10-15: the courses area carries NO
+          top button / header anymore - the PageBar is a plain back +
+          title bar (the Add-remove / Done pills that used to ride it
+          are gone; the affordances live inline with the list they
+          act on). */}
       <PageBar
         title={face === 'path' && path ? path.title : 'Course'}
         backHref="/dashboard"
-        right={
-          face === 'list' && body !== 'tertiary' && mine && mine.length > 0 ? (
-            <button
-              type="button"
-              onClick={() => { setFace('select'); setSecQuery(''); }}
-              className="rounded-xl border-2 border-outline-variant bg-card px-3 py-1.5 text-[12px] font-extrabold text-on-surface transition active:translate-y-[2px]"
-            >
-              Add / remove
-            </button>
-          ) : face === 'select' && body !== 'tertiary' ? (
-            <button
-              type="button"
-              onClick={() => setFace('list')}
-              className="key-btn bg-primary text-white"
-            >
-              Done
-            </button>
-          ) : null
-        }
       />
 
       <main className="mx-auto w-full max-w-3xl px-4 pb-28 pt-4">
@@ -356,6 +342,15 @@ export default function CoursesPage() {
                   No courses on this desk yet - switch the desk above or add more courses.
                 </p>
               )}
+              {/* The inline add-remove affordance (founder 2026-10-15):
+                  no top button - a quiet text link under the desk rows. */}
+              <button
+                type="button"
+                onClick={() => { setFace('select'); setSecQuery(''); }}
+                className="mx-auto rounded-xl px-4 py-2.5 text-[12.5px] font-extrabold text-primary-ink transition hover:bg-primary/10 active:translate-y-[1px]"
+              >
+                Add / remove courses
+              </button>
             </div>
           )
         )}
@@ -363,15 +358,8 @@ export default function CoursesPage() {
         {/* ── Face 2: secondary selection catalog (hardcoded + search) ── */}
         {!loading && face === 'select' && body !== 'tertiary' && (
           <div className="flex flex-col gap-3">
-            <div className="rounded-2xl border-2 border-primary/40 bg-primary/10 p-4">
-              <h2 className="text-[15px] font-black text-on-surface">
-                {mine && mine.length === 0 ? 'Mark every course you want to learn' : 'Add more courses'}
-              </h2>
-              <p className="mt-1 text-[12.5px] font-bold leading-snug text-on-surface-variant">
-                Every {learnBodyLabel(body)} subject with real past questions on Renance is listed. Mark all the ones you offer.
-              </p>
-            </div>
-
+            {/* Founder directive 2026-10-15: the big intro header card is
+                gone - the catalog starts straight in with the search box. */}
             <input
               value={secQuery}
               onChange={(e) => setSecQuery(e.target.value)}
@@ -415,6 +403,16 @@ export default function CoursesPage() {
                 Nothing matches &ldquo;{secQuery}&rdquo;.
               </p>
             )}
+
+            {/* Done (founder 2026-10-15): the top-bar pill is gone; the
+                exit rides quietly at the end of the catalog. */}
+            <button
+              type="button"
+              onClick={() => setFace('list')}
+              className="key-btn mx-auto mt-2 bg-primary text-white"
+            >
+              Done
+            </button>
           </div>
         )}
 

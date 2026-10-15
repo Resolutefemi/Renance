@@ -24,7 +24,6 @@ import {
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
-import { LeagueBadge } from '@/components/learn/bits';
 import ShopPanel from '@/components/learn/shop-panel';
 import { LearnProfile, fetchLearnProfile } from '@/lib/learn';
 import { type Connections, fetchConnections } from '@/lib/social';
@@ -290,7 +289,11 @@ export default function ProfilePage() {
             <div className="mt-1 flex items-center justify-between rounded-lg bg-surface-container p-2">
               <div className="flex flex-1 flex-col items-center">
                 <span className="text-[13px] text-text-secondary">XP</span>
-                <span className="text-2xl font-bold tracking-tight text-accent-ink">
+                {/* Founder 2026-10-15: the XP readout reads primary-ink
+                    (light pastel accent on the fixed dark surface - the
+                    dark accent-ink was invisible on the dark strip) with
+                    tabular figures so the number never jitters. */}
+                <span className="text-2xl font-bold tabular-nums tracking-tight text-primary-ink">
                   {xpLabel(state?.totalXp ?? 0)}
                 </span>
               </div>
@@ -323,28 +326,28 @@ export default function ProfilePage() {
               </div>
             </div>
 
-            {/* The learn strip: league badge + course path progress
-                (founder 2026-10-14: supreme profile data joins the
-                Renance profile). */}
-            {learn && (
-              <div className="mt-2 flex items-center gap-3 rounded-lg bg-surface-container p-2.5">
-                <LeagueBadge name={learn.league} size={40} />
-                <div className="min-w-0 flex-1">
-                  <p className="text-[13.5px] font-extrabold text-on-surface">
-                    {learn.league} League · {learn.todayXp}/{learn.dailyGoal} XP today
-                  </p>
-                  <p className="text-[12px] font-bold text-on-surface-variant">
-                    {learn.topicsDone} topics done · {learn.perfectCount} perfect · {learn.courseCount} courses
-                  </p>
-                </div>
-                <Link
-                  href="/league"
-                  className="shrink-0 rounded-xl border-2 border-outline-variant bg-card px-3 py-1.5 text-[12px] font-extrabold text-on-surface transition active:translate-y-[2px]"
-                >
-                  Standings
-                </Link>
-              </div>
-            )}
+          </section>
+
+          {/* The league strip is RETIRED (founder 2026-10-15: "remove the
+              Bronze League card from the profile"). The league standings
+              still live on /league from the sidebar. */}
+
+          {/* The follow strip (founder 2026-10-14 evening pass): followers
+              and following read right on the profile; tapping opens the
+              lists on /profile/social with follow-backs. Founder
+              2026-10-15: it sits DIRECTLY above the invite-friends card. */}
+          <section className="flex items-stretch overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+            <Link href="/profile/social" className="flex flex-1 items-center justify-center gap-2 py-3.5 transition hover:bg-surface-container-high">
+              <span className="material-symbols-outlined text-[19px] text-primary">group</span>
+              <span className="text-[14px] font-bold text-on-surface">{connections?.followers.length ?? 0}</span>
+              <span className="text-[13px] font-semibold text-text-secondary">Followers</span>
+            </Link>
+            <div className="my-3 w-px bg-outline-light/40" />
+            <Link href="/profile/social" className="flex flex-1 items-center justify-center gap-2 py-3.5 transition hover:bg-surface-container-high">
+              <span className="material-symbols-outlined text-[19px] text-macaw-dark">person_add</span>
+              <span className="text-[14px] font-bold text-on-surface">{connections?.following.length ?? 0}</span>
+              <span className="text-[13px] font-semibold text-text-secondary">Following</span>
+            </Link>
           </section>
 
           {/* The big premium subscription card is RETIRED (founder
@@ -378,22 +381,9 @@ export default function ProfilePage() {
             </section>
           )}
 
-          {/* The follow strip (founder 2026-10-14 evening pass): followers
-              and following read right on the profile; tapping opens the
-              lists on /profile/social with follow-backs. */}
-          <section className="flex items-stretch overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
-            <Link href="/profile/social" className="flex flex-1 items-center justify-center gap-2 py-3.5 transition hover:bg-surface-container-high">
-              <span className="material-symbols-outlined text-[19px] text-primary">group</span>
-              <span className="text-[14px] font-bold text-on-surface">{connections?.followers.length ?? 0}</span>
-              <span className="text-[13px] font-semibold text-text-secondary">Followers</span>
-            </Link>
-            <div className="my-3 w-px bg-outline-light/40" />
-            <Link href="/profile/social" className="flex flex-1 items-center justify-center gap-2 py-3.5 transition hover:bg-surface-container-high">
-              <span className="material-symbols-outlined text-[19px] text-macaw-dark">person_add</span>
-              <span className="text-[14px] font-bold text-on-surface">{connections?.following.length ?? 0}</span>
-              <span className="text-[13px] font-semibold text-text-secondary">Following</span>
-            </Link>
-          </section>
+          {/* The follow strip (founder 2026-10-14 evening pass) lives
+              DIRECTLY above the invite card now (founder 2026-10-15) -
+              it was moved up to sit on top of "Invite friends". */}
 
           {/* The SHOP lives here now (founder 2026-10-14 evening pass):
               "the shop feature should be under profile and the heart read
@@ -703,7 +693,10 @@ export default function ProfilePage() {
 
           {/* Menu group: content ------------------------------------------- */}
           <section className="flex flex-col overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
-            <MenuLink icon="auto_stories" tint="text-accent-ink" label="My Packs" href="/packs" />
+            {/* Founder 2026-10-15: the My Packs icon is pure white in the
+                dark tier (text-on-surface) like its sibling menu icons -
+                the old accent-ink tint vanished on the dark card. */}
+            <MenuLink icon="auto_stories" tint="text-on-surface" label="My Packs" href="/packs" />
           </section>
 
           {/* Menu group: system -------------------------------------------- */}

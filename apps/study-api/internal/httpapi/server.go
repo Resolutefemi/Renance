@@ -490,7 +490,13 @@ func (s *Server) Handler() http.Handler {
 	// moved UP into the workspace block above, where it stays on plain
 	// s.auth - students read the national corpus too.
 
-	return s.botShield(s.securityHeaders(s.cors(mux)))
+	// dbWatch (dbwatch.go, founder directive 2026-10-15): the CU-aware
+	// database-down detector - counts 5xx responses, probes the pool
+	// only after a real failure burst, and exits so the platform
+	// restart re-runs the boot fallback onto a live DSN. Innermost on
+	// purpose: it counts handler 500s (the DB failure surface), while
+	// the CORS and security wrappers still decorate every response.
+	return s.botShield(s.securityHeaders(s.cors(s.dbWatch(mux))))
 }
 
 // ------------------------------------------------------------------ glue

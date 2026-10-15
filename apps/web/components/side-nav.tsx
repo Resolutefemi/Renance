@@ -146,14 +146,14 @@ export default function SideNav() {
               <>
                 <span className="flex-1">Notifications</span>
                 {unread > 0 && (
-                  <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-error px-1.5 font-mono text-[10px] font-bold text-on-error">
+                  <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-red-600 px-1.5 font-mono text-[10px] font-bold text-white">
                     {unread > 9 ? '9+' : unread}
                   </span>
                 )}
               </>
             )}
             {!open && unread > 0 && (
-              <span className="absolute left-5 top-2.5 h-2 w-2 rounded-full bg-error" />
+              <span className="absolute left-5 top-2.5 h-2 w-2 rounded-full bg-red-600" />
             )}
           </Link>
           <Link

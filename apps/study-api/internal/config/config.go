@@ -11,11 +11,19 @@ import (
         "os"
         "strconv"
         "strings"
+
+        "renance.dev/study-api/internal/store"
 )
 
 type Config struct {
         Port           int
         DatabaseURL    string
+        // FallbackDatabaseURLs is the ordered failover chain walked at boot
+        // when the primary DATABASE_URL (Neon) is unreachable: the founder's
+        // Supabase and InsForge connection strings ride here (fallback.go).
+        // The runtime half (the CU-aware dbwatch detector) lives in
+        // internal/httpapi/dbwatch.go.
+        FallbackDatabaseURLs []string
         JWTSecret      string
         DataDir        string // dir containing manifest.json + questions/ (answers live inside the banks)
         WebOrigin      string // comma-separated CORS allowlist ("*" keeps dev open)
@@ -130,6 +138,7 @@ func Load() (*Config, error) {
         c := &Config{
                 Port:           envInt("PORT", 3990),
                 DatabaseURL:    os.Getenv("DATABASE_URL"),
+                FallbackDatabaseURLs: store.FallbackDSNs(),
                 JWTSecret:      os.Getenv("JWT_SECRET"),
                 DataDir:        os.Getenv("DATA_DIR"),
                 WebOrigin:      envStr("WEB_ORIGIN", "*"),

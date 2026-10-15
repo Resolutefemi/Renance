@@ -97,11 +97,11 @@ const lessonSystem = `You are Renance's AI tutor: an expert Nigerian teacher wri
 Rules:
 - Write for the topic's exam body. JAMB/WAEC/NECO topics follow the Nigerian senior-secondary syllabus; university topics follow the NUC CCMAS / NBTE / NCCE curricula.
 - Output STRICT JSON only. No markdown fences, no commentary.
-- Shape: {"title": string, "summary": string, "notes": [{"heading": string, "body": string}], "key_points": [string], "quiz": [{"type": "mcq", "stem": string, "options": {"A": string, "B": string, "C": string}, "answer": "A"|"B"|"C", "explanation": string}]}
+- Shape: {"title": string, "summary": string, "notes": [{"heading": string, "body": string}], "key_points": [string], "quiz": [{"type": "mcq"|"true_false"|"fill_blank", "stem": string, "options": {"A": string, "B": string, "C": string, "D": string}, "answer": "A"|"B"|"C"|"D"|"true"|"false"|string, "explanation": string}]}
 - notes: 5 to 7 sections that TEACH, not tease. Each body: 150-260 words of plain-text paragraphs (no HTML, no markdown syntax). Define every term in full, walk through at least one worked example step by step (numbered steps), point out the exam trap students actually fail on, and use Nigerian examples (naira, kana, Lagos/Kano/Akure contexts) where natural. A student who reads ONLY these notes must be able to answer every quiz item.
 - MATHS NOTATION (strict): every formula, equation, exponent or symbol is LaTeX wrapped in dollar signs. Write $x^2$, $H_2O$, $\\frac{dy}{dx}$, $\\lim_{x \\to \\infty} f(x)$, $\\int_0^1 x^2\\,dx$, $\\sum_{i=1}^{n} i$. NEVER write bare caret or underscore notation (x^2, H_2O, 10^5) outside $...$ - the renderer typesets $...$ only and prints everything else raw.
 - key_points: 4 to 6 exam-focused takeaways.
-- quiz: 6 to 8 items. EVERY item has "type": "mcq" and EXACTLY 3 options keyed "A", "B", "C" - never 2, never 4, never a fill-in-the-blank or true/false item. Each stem tests THIS lesson's notes (same terms, same worked examples); anything the notes did not teach is forbidden. "answer" is the LETTER ("A", "B" or "C") of the correct option. Distractors must be plausible; never reveal the answer inside the stem. Ramping difficulty. Every item carries a short explanation.`
+- quiz: 6 to 8 items. Multiple-choice questions carry exactly 4 options keyed "A", "B", "C", "D" - the standard Nigerian exam shape (use 5 options "A"-"E" only where the past papers themselves carry five). Mix the types: at least 3 mcq, at least 1 true_false, at least 1 fill_blank (fill_blank has no options; answer is the exact word/phrase). Each stem tests THIS lesson's notes (same terms, same worked examples); anything the notes did not teach is forbidden. For mcq the "answer" is the LETTER of the correct option; for true_false it is "true" or "false". Distractors must be plausible; never reveal the answer inside the stem. Ramping difficulty. Every item carries a short explanation.`
 
 func lessonUserPrompt(topic, course, body, subject string, seq, total int) string {
         band := "Nigerian university level (NUC CCMAS)"
@@ -159,10 +159,13 @@ func extractJSON(raw string) string {
 }
 
 // validateAI gates the AI output before it is ever served. The quiz
-// contract (founder directive 2026-10-15): every item an exactly-3-option
-// mcq whose answer resolves to one of ITS OWN option letters - anything
-// else is sent back for the one repair retry, and normalizeQuiz still
-// sweeps whatever slips through.
+// contract (founder directive 2026-10-15, REVERSED 2026-10-15 later the
+// same day: "the options will not be three" - questions keep their full
+// option count): mixed types are welcome again, an mcq carries 3+ usable
+// options (4 is the target), and every mcq's answer must resolve to one
+// of ITS OWN options (letter or exact text) - anything else is sent back
+// for the one repair retry, and normalizeQuiz still sweeps what slips
+// through.
 func validateAI(raw []byte) (*aiLesson, error) {
         var l aiLesson
         if err := json.Unmarshal(raw, &l); err != nil {
@@ -194,37 +197,36 @@ func validateAI(raw []byte) (*aiLesson, error) {
                         return nil, fmt.Errorf("quiz %d missing stem/answer", i)
                 }
                 t := strings.ToLower(strings.TrimSpace(q.Type))
-                if t != "mcq" && t != "multiple_choice" && t != "multiplechoice" {
-                        return nil, fmt.Errorf("quiz %d: type %q is not mcq - every item must be a 3-option mcq", i, q.Type)
-                }
-                opts := map[string]bool{}
-                for k, v := range q.Options {
-                        if strings.TrimSpace(v) != "" {
-                                opts[strings.ToUpper(strings.TrimSpace(k))] = true
+                if t == "mcq" || t == "multiple_choice" || t == "multiplechoice" {
+                        opts := map[string]bool{}
+                        for k, v := range q.Options {
+                                if strings.TrimSpace(v) != "" {
+                                        opts[strings.ToUpper(strings.TrimSpace(k))] = true
+                                }
                         }
-                }
-                if len(opts) != 3 {
-                        return nil, fmt.Errorf("quiz %d: want exactly 3 options, got %d", i, len(opts))
-                }
-                ans := strings.ToUpper(strings.TrimSpace(q.Answer))
-                if len(ans) == 1 && opts[ans] {
+                        if len(opts) < 3 {
+                                return nil, fmt.Errorf("quiz %d: mcq has %d usable options, want >=3", i, len(opts))
+                        }
+                        ans := strings.ToUpper(strings.TrimSpace(q.Answer))
+                        if len(ans) == 1 && opts[ans] {
+                                mcqs++
+                                continue
+                        }
+                        // Text answers are accepted only when they name one of the options.
+                        found := false
+                        for _, v := range q.Options {
+                                if strings.EqualFold(strings.TrimSpace(v), strings.TrimSpace(q.Answer)) {
+                                        found = true
+                                }
+                        }
+                        if !found {
+                                return nil, fmt.Errorf("quiz %d: answer %q matches no option letter or option text", i, q.Answer)
+                        }
                         mcqs++
-                        continue
                 }
-                // Text answers are accepted only when they name one of the options.
-                found := false
-                for _, v := range q.Options {
-                        if strings.EqualFold(strings.TrimSpace(v), strings.TrimSpace(q.Answer)) {
-                                found = true
-                        }
-                }
-                if !found {
-                        return nil, fmt.Errorf("quiz %d: answer %q matches no option letter or option text", i, q.Answer)
-                }
-                mcqs++
         }
-        if mcqs < 5 {
-                return nil, fmt.Errorf("want >=5 solid mcq items, got %d", mcqs)
+        if mcqs < 2 {
+                return nil, fmt.Errorf("want >=2 mcq items, got %d", mcqs)
         }
         return &l, nil
 }
@@ -235,11 +237,12 @@ func validateAI(raw []byte) (*aiLesson, error) {
 // shows and nothing below it is tappable. So:
 //   - fill_blank            → word_bank (distractors from the lesson corpus)
 //   - true_false (+aliases) → true_false (answer folded to true/false)
-//   - mcq                   → mcq, letters uppercased, answer resolved to
-//                             an option letter and trimmed to EXACTLY 3
-//                             options (founder directive 2026-10-15: every
-//                             choice question ships three options, never
-//                             two, four or zero)
+//   - mcq                   → mcq, letters uppercased and the answer
+//                             resolved to one of its own option letters
+//                             (founder directive 2026-10-15, later the
+//                             same day: "the options will not be three" -
+//                             the option COUNT is never rewritten, only
+//                             the answer alignment is enforced)
 //   - anything else         → true_false when the answer reads boolean,
 //                             else word_bank - never an option-less mcq
 func (e *Engine) normalizeQuiz(in []aiQuizQ, topicID string, corpus []string) []LessonQuizQ {
@@ -269,14 +272,19 @@ func (e *Engine) normalizeQuiz(in []aiQuizQ, topicID string, corpus []string) []
                                 // on screen - ship it as a type-in instead.
                                 o.Type = "word_bank"
                                 o.Options = buildWordBank(o.Answer, corpus)
+                        } else if letter, ok := answerLetter(fixed, o.Answer); ok {
+                                // The answer resolves to one of the question's own
+                                // options: keep EVERY option as generated (4 or 5 wide
+                                // is the normal exam shape) and point the graded value
+                                // at its letter, so the client's letter comparison can
+                                // never misgrade a correct student.
+                                o.Options = fixed
+                                o.Answer = letter
                         } else {
-                                o.Options, o.Answer, o.ID = trimToThree(fixed, o.Answer, o.ID)
-                                if o.Options == nil {
-                                        // answer matched no option: degrade to a type-in
-                                        // keyed to the answer text, never a dead letter
-                                        o.Type = "word_bank"
-                                        o.Options = buildWordBank(o.Answer, corpus)
-                                }
+                                // answer matched no option: degrade to a type-in
+                                // keyed to the answer text, never a dead letter
+                                o.Type = "word_bank"
+                                o.Options = buildWordBank(o.Answer, corpus)
                         }
                 case "true_false", "truefalse", "true/false", "boolean":
                         o.Type = "true_false"
@@ -316,17 +324,16 @@ func (e *Engine) normalizeQuiz(in []aiQuizQ, topicID string, corpus []string) []
         return out
 }
 
-// ─── The three-option doctrine (founder 2026-10-15) ────────────────────────
+// ─── The answer-alignment doctrine (founder 2026-10-15) ───────────────────
 //
-// "There will be questions in some and the options will not be three, or
-// the right answer will be picked and it will mark the user wrong." Both
-// halves have one root: questions whose stored answer does not line up
-// with the options the student actually sees. trimToThree resolves the
-// answer to one of the question's own option letters (letter OR exact
-// text), then re-letters the question to EXACTLY three options - the
-// answer plus two distractors, answer position deterministic per
-// question id. It returns nil options when the answer matches nothing
-// (caller degrades to a type-in / drops the question).
+// "The right answer will be picked and it will mark the user wrong" has
+// one root: a stored answer that does not line up with the options the
+// student actually sees. answerLetter resolves the stored answer (a
+// letter, the option TEXT, or a 1..N index - a common bank quirk) to
+// one of the question's own option letters. The REVERSED half of the
+// same day's directive ("the options will not be three"): the option
+// COUNT is never rewritten - 4- and 5-option questions ship exactly as
+// the paper (or the generator) carried them.
 
 // answerLetter finds the option the stored answer points at: a direct
 // letter hit first, then an exact (case/space-insensitive) text hit.
@@ -360,61 +367,17 @@ func sortedKeys(m map[string]string) []string {
         return ks
 }
 
-// trimToThree re-letters an MCQ to exactly three options: the answer plus
-// the first two distractors. A question that already carries exactly three
-// options and a resolvable letter answer keeps its own letters untouched;
-// everything else (4+ options, text answers, dead letters) is re-lettered
-// with the answer at a deterministic slot per question (hash of the id) so
-// a re-serve never reshuffles it.
-func trimToThree(opts map[string]string, answer, id string) (map[string]string, string, string) {
-        ansLetter, ok := answerLetter(opts, answer)
-        if !ok {
-                return nil, answer, id
-        }
-        if len(opts) == 3 {
-                if len(strings.TrimSpace(answer)) == 1 && strings.ToUpper(strings.TrimSpace(answer)) == ansLetter {
-                        return opts, ansLetter, id // already doctrine-clean
-                }
-                // Exactly three options but a text/index answer: fold the
-                // answer to its own letter, keep the option letters as they are.
-                return opts, ansLetter, id
-        }
-        distractors := make([]string, 0, 2)
-        for _, k := range sortedKeys(opts) {
-                if k != ansLetter && len(distractors) < 2 {
-                        distractors = append(distractors, k)
-                }
-        }
-        // Position the answer at a deterministic slot (0, 1 or 2).
-        slot := int(hashStr(id) % 3)
-        if slot > len(distractors) { // fewer distractors than the slot needs
-                slot = len(distractors)
-        }
-        ordered := make([]string, 0, 3)
-        ordered = append(ordered, distractors[:slot]...)
-        ordered = append(ordered, ansLetter)
-        ordered = append(ordered, distractors[slot:]...)
-
-        out := make(map[string]string, len(ordered))
-        newAnswer := ""
-        for i, k := range ordered {
-                letter := string(rune('A' + i))
-                out[letter] = opts[k]
-                if k == ansLetter {
-                        newAnswer = letter
-                }
-        }
-        return out, newAnswer, id
-}
-
 // sanitizeQuiz is the SERVE-TIME sweep (founder bug reports 2026-10-15):
-// lessons cached before the three-option doctrine carry 4-5-option bank
-// questions, text answers, true_false letters and option-less mcqs.
-// Every read path (lesson serve, practice set, review set) runs this so
-// the whole back catalogue heals without a single regeneration. It
-// returns the cleaned slice and whether anything changed (the lesson
-// cache persists the healed form once, piggy-backing on a serve that
-// already touches the database).
+// lessons cached before the answer-alignment doctrine carry text
+// answers, true_false letters and option-less mcqs. Every read path
+// (lesson serve, practice set, review set) runs this so the whole back
+// catalogue heals without a single regeneration. It NEVER rewrites an
+// option count (founder reversal 2026-10-15: "the options will not be
+// three") - 4- and 5-option questions ship as they are; only the
+// answer's alignment with the options is healed. It returns the cleaned
+// slice and whether anything changed (the lesson cache persists the
+// healed form once, piggy-backing on a serve that already touches the
+// database).
 func sanitizeQuiz(in []LessonQuizQ) ([]LessonQuizQ, bool) {
         if len(in) == 0 {
                 return in, false
@@ -438,16 +401,16 @@ func sanitizeQuiz(in []LessonQuizQ) ([]LessonQuizQ, bool) {
                         if len(fixed) != len(q.Options) {
                                 changed = true
                         }
-                        trimmed, answer, _ := trimToThree(fixed, q.Answer, q.ID)
-                        if trimmed == nil {
+                        letter, ok := answerLetter(fixed, q.Answer)
+                        if !ok {
                                 changed = true
                                 continue // answer points nowhere: dead question, drop it
                         }
-                        if len(q.Options) != len(trimmed) || answer != q.Answer {
+                        if letter != q.Answer {
                                 changed = true
+                                q.Answer = letter
                         }
-                        q.Options = trimmed
-                        q.Answer = answer
+                        q.Options = fixed
                 case "true_false":
                         ans := strings.ToLower(strings.TrimSpace(q.Answer))
                         folded := "false"
@@ -624,10 +587,12 @@ func (e *Engine) bankQuestions(body, subject string, keywords []string, topicID 
                 if o.Explanation == "" {
                         o.Explanation = "A real past question from the Renance bank."
                 }
-                // Three-option doctrine: keep the answer + two distractors,
-                // re-lettered A/B/C with the answer deterministically placed.
-                // A survivor whose answer cannot be resolved is dropped rather
-                // than shipped as a misgrade waiting to happen.
+                // Answer alignment: the stored answer must point at one of
+                // the options the student sees (letter, text or 1..N index)
+                // - a misgrade waiting to happen is dropped instead. The
+                // bank's own option count (4 or 5 wide, exactly as the past
+                // paper carried it) is NEVER rewritten (founder reversal
+                // 2026-10-15: "the options will not be three").
                 fixed := map[string]string{}
                 for k, v := range o.Options {
                         if strings.TrimSpace(v) == "" {
@@ -635,8 +600,8 @@ func (e *Engine) bankQuestions(body, subject string, keywords []string, topicID 
                         }
                         fixed[strings.ToUpper(strings.TrimSpace(k))] = strings.TrimSpace(v)
                 }
-                if trimmed, answer, _ := trimToThree(fixed, o.Answer, o.ID); trimmed != nil {
-                        o.Options, o.Answer = trimmed, answer
+                if letter, ok := answerLetter(fixed, o.Answer); ok {
+                        o.Options, o.Answer = fixed, letter
                 } else {
                         continue
                 }
@@ -805,12 +770,12 @@ func (s *Service) cachedLesson(ctx context.Context, t *topicCtx) (*LessonDoc, er
                 doc.Quiz = nil
         }
         // Serve-time sweep (founder 2026-10-15): lessons cached before the
-        // three-option doctrine carry 4-5-option questions, letter/text
-        // answer mismatches and option-less mcqs. Sanitize before ANY
-        // student sees them; when the sweep changed something, persist the
-        // healed form once (piggy-backing on this serve, which already
-        // touches the row for hit_count) so practice and review sets read
-        // clean rows too. No regeneration, no extra AI, no extra wake.
+        // answer-alignment doctrine carry letter/text answer mismatches and
+        // option-less mcqs. Sanitize before ANY student sees them; when the
+        // sweep changed something, persist the healed form once (piggy-backing
+        // on this serve, which already touches the row for hit_count) so
+        // practice and review sets read clean rows too. The option count is
+        // never rewritten. No regeneration, no extra AI, no extra wake.
         if healed, changed := sanitizeQuiz(doc.Quiz); changed {
                 doc.Quiz = healed
                 if fixed, err := json.Marshal(doc.Quiz); err == nil {

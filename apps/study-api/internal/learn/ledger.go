@@ -820,8 +820,9 @@ func (s *Service) PracticeSet(ctx context.Context, userID string) (*PracticeSet,
                         continue
                 }
                 // Same serve-time sweep as the lesson itself: every quiz
-                // question that reaches a student is three options wide
-                // with an answer that points at one of them.
+                // question that reaches a student has an answer that points
+                // at one of its own options (the option count itself is
+                // never rewritten).
                 qs, _ = sanitizeQuiz(qs)
                 for _, q := range qs {
                         if len(set.Questions) >= 8 {
@@ -944,7 +945,8 @@ func (s *Service) ReviewSet(ctx context.Context, userID, courseID string, unit i
                         continue
                 }
                 // Serve-time sweep (founder 2026-10-15): the review quiz
-                // obeys the same three-option + resolvable-answer doctrine.
+                // obeys the same answer-alignment doctrine (option counts
+                // are never rewritten).
                 qs, _ = sanitizeQuiz(qs)
                 for _, q := range qs {
                         if len(set.Questions) >= 8 {

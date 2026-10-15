@@ -1,0 +1,14 @@
+# Renance's Supabase project, wired into the multi-database fallback
+# (founder directive 2026-10-15). This file exists for the Supabase CLI
+# (`npx supabase link`) and for documentation: the study-api itself
+# needs nothing from it - it talks to Supabase over the plain Postgres
+# wire via SUPABASE_DATABASE_URL.
+project_id = "zfxrmcwdnmmxjawmsiyp"
+
+[api]
+enabled = true
+port = 54321
+
+[db]
+port = 54322
+major_version = 15

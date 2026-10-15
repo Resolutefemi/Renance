@@ -18,8 +18,9 @@ func TestNormalizeQuizNeverShipsUnanswerable(t *testing.T) {
 		"Plasma is the liquid portion of blood.",
 	}
 	in := []aiQuizQ{
-		// honest mcq with options: must stay mcq, letters uppercased
-		{Type: "mcq", Stem: "Which is a fruit?", Options: map[string]string{"a": "Mango", "B": "Stone", "c": "Water", "": ""}, Answer: "A"},
+		// honest mcq with options: must stay mcq, letters uppercased,
+		// option count untouched (founder reversal 2026-10-15)
+		{Type: "mcq", Stem: "Which is a fruit?", Options: map[string]string{"a": "Mango", "B": "Stone", "c": "Water", "d": "Orange", "": ""}, Answer: "A"},
 		// mcq whose options all vanished: must degrade to a type-in
 		{Type: "mcq", Stem: "What pigment makes leaves green?", Answer: "Chlorophyll"},
 		// mcq with one empty option and one real one: still unanswerable
@@ -74,6 +75,11 @@ func TestNormalizeQuizNeverShipsUnanswerable(t *testing.T) {
 	if out[0].Type != "mcq" || out[0].Options["A"] != "Mango" {
 		t.Errorf("q0: honest mcq mangled: %+v", out[0])
 	}
+	// THE REVERSAL (founder 2026-10-15): a 4-option mcq must arrive at
+	// the student with all four options intact - never trimmed.
+	if len(out[0].Options) != 4 {
+		t.Errorf("q0: 4-option mcq lost options, got %d (%v)", len(out[0].Options), out[0].Options)
+	}
 	if out[1].Type != "word_bank" {
 		t.Errorf("q1: option-less mcq should degrade to word_bank, got %s", out[1].Type)
 	}
@@ -100,22 +106,24 @@ func TestNormalizeQuizNeverShipsUnanswerable(t *testing.T) {
 // for a well-formed mcq, which the spot checks above cover.
 func TestNormalizeQuizStampsTopicIDs(t *testing.T) {
 	e := &Engine{}
-	out := e.normalizeQuiz([]aiQuizQ{{Type: "mcq", Stem: "s", Options: map[string]string{"A": "x", "B": "y"}, Answer: "A"}}, "SEC-T-001", nil)
+	out := e.normalizeQuiz([]aiQuizQ{{Type: "mcq", Stem: "s", Options: map[string]string{"A": "x", "B": "y", "C": "z", "D": "w"}, Answer: "A"}}, "SEC-T-001", nil)
 	if out[0].ID != "SEC-T-001-ai-1" {
 		t.Errorf("id stamp wrong: %q", out[0].ID)
 	}
 }
 
-// ─── The three-option doctrine (founder 2026-10-15) ────────────────────────
+// ─── The answer-alignment doctrine (founder 2026-10-15) ───────────────────
 //
-// "There will be question in some and the options will not be three, or
+// "There will be questions in some and the options will not be three, or
 // the right answer will be picked and it will mark the user wrong."
-// Every scenario below is one the founder actually screenshotted.
+// The doctrine is REVERSED: option counts are never rewritten - only the
+// answer's alignment with the visible options is healed. Every scenario
+// below is one the founder actually screenshotted.
 
-// The pH past question from the screenshots: five bank options A-E must
-// arrive at the student as exactly three options whose stored answer
-// letter names the option the explanation defends (8.0 - litmus blue).
-func TestSanitizeQuizTrimsBankQuestionToThree(t *testing.T) {
+// The pH past question from the screenshots: four bank options A-D must
+// arrive at the student as FOUR options, answer still B (8.0 - litmus
+// blue), unchanged and reported clean.
+func TestSanitizeQuizKeepsBankOptionCount(t *testing.T) {
 	in := []LessonQuizQ{{
 		ID:   "jamb-chemistry-bank-0100",
 		Type: "mcq",
@@ -128,25 +136,45 @@ func TestSanitizeQuizTrimsBankQuestionToThree(t *testing.T) {
 		Year:        2025, FromBank: true,
 	}}
 	out, changed := sanitizeQuiz(in)
-	if !changed {
-		t.Fatalf("expected the sweep to report a change")
+	if changed {
+		t.Fatalf("a clean 4-option letter-answer question reported a change")
 	}
 	if len(out) != 1 {
 		t.Fatalf("want 1 question, got %d", len(out))
 	}
 	q := out[0]
-	if len(q.Options) != 3 {
-		t.Fatalf("want exactly 3 options, got %d (%v)", len(q.Options), q.Options)
+	if len(q.Options) != 4 {
+		t.Fatalf("the 4-option bank question must keep all four options, got %d (%v)", len(q.Options), q.Options)
 	}
-	if q.Options[q.Answer] != "8.0" {
-		t.Fatalf("answer %q must point at \"8.0\", options %v", q.Answer, q.Options)
+	if q.Answer != "B" || q.Options[q.Answer] != "8.0" {
+		t.Fatalf("answer %q must stay B pointing at \"8.0\", options %v", q.Answer, q.Options)
+	}
+}
+
+// Five-option questions (A-E, WAEC/NECO obj shape) keep all five.
+func TestSanitizeQuizKeepsFiveOptions(t *testing.T) {
+	in := []LessonQuizQ{{
+		ID:   "waec-biology-bank-0007",
+		Type: "mcq",
+		Stem: "The organ that produces bile is the",
+		Options: map[string]string{
+			"A": "kidney", "B": "pancreas", "C": "liver", "D": "spleen", "E": "gall bladder",
+		},
+		Answer: "C",
+	}}
+	out, changed := sanitizeQuiz(in)
+	if changed {
+		t.Fatalf("clean 5-option question reported a change")
+	}
+	if len(out) != 1 || len(out[0].Options) != 5 {
+		t.Fatalf("5-option question must keep five options, got %d", len(out[0].Options))
 	}
 }
 
 // The "Anion" misgrade: an mcq whose stored answer is the option TEXT
 // (or a letter that no longer exists) must resolve to its own option -
 // never ship a letter the client cannot match, never mark a correct
-// student wrong.
+// student wrong. The option count stays as stored.
 func TestSanitizeQuizResolvesTextAnswerToLetter(t *testing.T) {
 	in := []LessonQuizQ{{
 		ID:     "T-X-ai-6",
@@ -155,16 +183,37 @@ func TestSanitizeQuizResolvesTextAnswerToLetter(t *testing.T) {
 		Options: map[string]string{"A": "Proton", "B": "Neutron", "C": "Electron", "D": "Anion"},
 		Answer: "Anion",
 	}}
-	out, _ := sanitizeQuiz(in)
+	out, changed := sanitizeQuiz(in)
+	if !changed {
+		t.Fatalf("expected the text answer to be resolved to a letter")
+	}
 	if len(out) != 1 {
 		t.Fatalf("want 1 question, got %d", len(out))
 	}
 	q := out[0]
-	if len(q.Options) != 3 {
-		t.Fatalf("want exactly 3 options, got %d", len(q.Options))
+	if len(q.Options) != 4 {
+		t.Fatalf("option count must be untouched, got %d", len(q.Options))
 	}
-	if q.Options[q.Answer] != "Anion" {
-		t.Fatalf("answer %q must resolve to the Anion option, got %v", q.Answer, q.Options)
+	if q.Answer != "D" || q.Options[q.Answer] != "Anion" {
+		t.Fatalf("answer must resolve to D - the Anion option, got %q (%v)", q.Answer, q.Options)
+	}
+}
+
+// The 1..N index quirk some banks carry: "2" means the second letter.
+func TestSanitizeQuizResolvesIndexAnswer(t *testing.T) {
+	in := []LessonQuizQ{{
+		ID:     "neco-physics-bank-0042",
+		Type:   "mcq",
+		Stem:   "The SI unit of force is the",
+		Options: map[string]string{"A": "joule", "B": "newton", "C": "watt", "D": "pascal"},
+		Answer: "2",
+	}}
+	out, changed := sanitizeQuiz(in)
+	if !changed {
+		t.Fatalf("expected the index answer to be resolved to a letter")
+	}
+	if out[0].Answer != "B" {
+		t.Fatalf("index 2 must resolve to B, got %q", out[0].Answer)
 	}
 }
 
@@ -182,6 +231,9 @@ func TestSanitizeQuizDropsDeadAnswer(t *testing.T) {
 	}
 	if len(out) != 1 || out[0].ID != "live" {
 		t.Fatalf("want only the live question, got %+v", out)
+	}
+	if len(out[0].Options) != 3 {
+		t.Fatalf("the 3-option live question keeps its three options, got %d", len(out[0].Options))
 	}
 }
 
@@ -201,14 +253,15 @@ func TestSanitizeQuizFoldsTrueFalse(t *testing.T) {
 	}
 }
 
-// A doctrine-clean lesson (every mcq exactly three options, letter
-// answers) passes untouched and reports NO change - the cache write
-// only ever happens once.
+// A doctrine-clean lesson (mcqs with letter answers, mixed option
+// counts of 3, 4 or 5) passes untouched and reports NO change - the
+// cache write only ever happens once.
 func TestSanitizeQuizLeavesCleanQuizAlone(t *testing.T) {
 	in := []LessonQuizQ{
 		{ID: "q1", Type: "mcq", Stem: "s1", Options: map[string]string{"A": "1", "B": "2", "C": "3"}, Answer: "B"},
-		{ID: "q2", Type: "mcq", Stem: "s2", Options: map[string]string{"A": "4", "B": "5", "C": "6"}, Answer: "C"},
-		{ID: "q3", Type: "true_false", Stem: "s3", Answer: "true"},
+		{ID: "q2", Type: "mcq", Stem: "s2", Options: map[string]string{"A": "4", "B": "5", "C": "6", "D": "7"}, Answer: "C"},
+		{ID: "q3", Type: "mcq", Stem: "s3", Options: map[string]string{"A": "8", "B": "9", "C": "10", "D": "11", "E": "12"}, Answer: "E"},
+		{ID: "q4", Type: "true_false", Stem: "s4", Answer: "true"},
 	}
 	out, changed := sanitizeQuiz(in)
 	if changed {

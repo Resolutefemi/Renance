@@ -246,34 +246,40 @@
 /* ------------------------------------------------------------------ */
 [data-theme='dark'] {
   color-scheme: dark;
-  --color-background: #111c2d;
-  --color-surface: #111c2d;
-  --color-surface-bright: #111c2d;
-  --color-surface-dim: #0d1522;
-  --color-surface-container-lowest: #1c2638;
-  --color-card: #1c2638;
-  --color-surface-container-low: #131b2e;
-  --color-surface-container: #1c2638;
-  --color-surface-container-high: #17223b;
-  --color-surface-container-highest: #17223b;
-  --color-surface-variant: #17223b;
-  --color-on-background: #f0f3ff;
-  --color-on-surface: #f0f3ff;
-  --color-on-surface-variant: #a2aab8;
+  /* Founder directive 2026-10-15 (evening): every dark surface is a
+     FIXED near-black. The dynamic seed may repaint the accent (primary,
+     CTA) but never the dark canvas - the dark tier no longer shifts
+     navy/rose/violet with the palette picker. The ramp below matches
+     lib/theme.ts buildPalette(seed, 'dark') exactly, so seeded and
+     seedless students see the identical dark chrome. */
+  --color-background: #0f1216;
+  --color-surface: #0f1216;
+  --color-surface-bright: #161b22;
+  --color-surface-dim: #0a0d11;
+  --color-surface-container-lowest: #0c0f14;
+  --color-card: #131720;
+  --color-surface-container-low: #11151c;
+  --color-surface-container: #151a22;
+  --color-surface-container-high: #191f28;
+  --color-surface-container-highest: #1d242e;
+  --color-surface-variant: #191f28;
+  --color-on-background: #f0f3f6;
+  --color-on-surface: #f0f3f6;
+  --color-on-surface-variant: #a6adba;
   --color-primary: #10da11;
   --color-on-primary: #ffffff;
-  --color-primary-container: #17223b;
-  --color-on-primary-container: #f0f3ff;
-  --color-secondary: #a2aab8;
-  --color-secondary-container: #131b2e;
-  --color-on-secondary-container: #f0f3ff;
-  --color-outline: #a2aab8;
-  --color-outline-variant: #3a4661;
-  --color-outline-light: #3a4661;
+  --color-primary-container: #151a22;
+  --color-on-primary-container: #f0f3f6;
+  --color-secondary: #a6adba;
+  --color-secondary-container: #11151c;
+  --color-on-secondary-container: #f0f3f6;
+  --color-outline: #a6adba;
+  --color-outline-variant: #363d49;
+  --color-outline-light: #363d49;
   --color-error: #ffb4ab;
   --color-error-container: #93000a;
   --color-on-error-container: #ffdad6;
-  --color-selection-blue: #17223b;
+  --color-selection-blue: #1a212b;
   /* Dark-mode TEXT colour pass (founder 2026-10-14): small green
      labels invert to a light tint instead of mixing toward black -
      primary-ink on navy was the worst offender; wolf/hare gray steps
@@ -284,10 +290,14 @@
   --color-amber-tint: #3a2f14;
   --color-emerald-tint: #12301f;
   --color-ink-tint: #17223b;
-  --color-hero: #1c2638;
-  --color-on-hero: #f0f3ff;
-  --color-hero-muted: #a2aab8;
-  --color-hero-track: #17223b;
+  /* The sidebar row hover wash: a LOW-OPACITY translucent surface,
+     never the light tier's #f7f7f7 polar (the "white flash" on the
+     dark sidebar, founder 2026-10-15). */
+  --color-polar: rgba(240, 243, 255, 0.07);
+  --color-hero: #131720;
+  --color-on-hero: #f0f3f6;
+  --color-hero-muted: #a6adba;
+  --color-hero-track: #191f28;
   --color-hero-cta: #10da11;
   --color-on-hero-cta: #ffffff;
 }
@@ -468,18 +478,17 @@ body {
 
 /* ------------------------------------------------------------------ */
 /* The nav active pill (bottom bar + side rail). Founder directive    */
-/* 2026-10-15: "the blue active state pill for dark mode should be    */
-/* very light blue and the normal blue base border... just make the   */
-/* active pill for dark mode look good, not too blue." The light      */
-/* tier keeps the Supreme light-macaw fill untouched; the dark tier   */
-/* swaps the bright #ddf4ff slab for a soft light-blue tint washed    */
-/* over the dark card, ringed by the NORMAL macaw blue - calm,        */
-/* readable, never a saturated block.                                 */
+/* 2026-10-15 (evening, second pass): the dark-tier pill is a LOW-    */
+/* OPACITY translucent wash over the fixed near-black surface with a  */
+/* SOFT PASTEL accent - a gentle 9% macaw tint, a muted 45% pastel    */
+/* border and pale pastel text. Never the saturated light-macaw slab, */
+/* never a heavy ring. The light tier keeps the Supreme light-macaw   */
+/* fill untouched.                                                    */
 /* ------------------------------------------------------------------ */
 [data-theme='dark'] .nav-pill {
-  background: color-mix(in srgb, var(--color-macaw, #1cb0f6) 15%, var(--color-card, #1c2638));
-  color: var(--color-macaw-light, #ddf4ff);
-  box-shadow: inset 0 0 0 2px var(--color-macaw, #1cb0f6);
+  background: color-mix(in srgb, var(--color-macaw, #1cb0f6) 9%, var(--color-surface, #0f1216));
+  color: #a9d6ff;
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--color-macaw, #1cb0f6) 45%, transparent);
 }
 
 /* Desktop side rail: the SideNav hamburger collapses the menu list to an

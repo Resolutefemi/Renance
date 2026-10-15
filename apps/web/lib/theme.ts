@@ -117,43 +117,56 @@ export function buildPalette(seedHex: string, mode: ThemeMode): PaletteVars {
   const vars: PaletteVars = {};
 
   if (mode === 'dark') {
-    vars['--color-background'] = hslToHex(hue, 34, 9);
-    vars['--color-surface'] = vars['--color-background'];
-    vars['--color-surface-bright'] = hslToHex(hue, 30, 15);
-    vars['--color-surface-dim'] = hslToHex(hue, 32, 6);
-    vars['--color-surface-container-lowest'] = hslToHex(hue, 30, 11);
-    vars['--color-card'] = hslToHex(hue, 30, 14);
-    vars['--color-surface-container-low'] = hslToHex(hue, 30, 10);
-    vars['--color-surface-container'] = hslToHex(hue, 28, 14);
-    vars['--color-surface-container-high'] = hslToHex(hue, 28, 17);
-    vars['--color-surface-container-highest'] = hslToHex(hue, 28, 20);
-    vars['--color-surface-variant'] = hslToHex(hue, 28, 17);
-    vars['--color-on-background'] = hslToHex(hue, 60, 96);
-    vars['--color-on-surface'] = vars['--color-on-background'];
-    vars['--color-on-surface-variant'] = hslToHex(hue, 14, 72);
+    // Founder directive 2026-10-15 (evening): every dark surface is a
+    // FIXED near-black - the seed no longer tints the dark backgrounds.
+    // "All the black colours can be changed" now means the ACCENT only:
+    // primary / hero CTA / inverse chrome follow the seed, the canvas
+    // stays the same calm near-black under every palette. The constants
+    // mirror [data-theme='dark'] in globals.css exactly, so seeded and
+    // seedless students see the identical dark chrome.
+    vars['--color-background'] = '#0f1216';
+    vars['--color-surface'] = '#0f1216';
+    vars['--color-surface-bright'] = '#161b22';
+    vars['--color-surface-dim'] = '#0a0d11';
+    vars['--color-surface-container-lowest'] = '#0c0f14';
+    vars['--color-card'] = '#131720';
+    vars['--color-surface-container-low'] = '#11151c';
+    vars['--color-surface-container'] = '#151a22';
+    vars['--color-surface-container-high'] = '#191f28';
+    vars['--color-surface-container-highest'] = '#1d242e';
+    vars['--color-surface-variant'] = '#191f28';
+    vars['--color-on-background'] = '#f0f3f6';
+    vars['--color-on-surface'] = '#f0f3f6';
+    vars['--color-on-surface-variant'] = '#a6adba';
     // the seed lights up as the accent on dark
     const primary = hslToHex(hue, sat, Math.min(76, Math.max(58, l0(seedHex))));
     vars['--color-primary'] = primary;
     vars['--color-on-primary'] = wantsDarkText(primary) ? hslToHex(hue, 42, 10) : '#ffffff';
-    vars['--color-primary-container'] = hslToHex(hue, 26, 19);
-    vars['--color-on-primary-container'] = hslToHex(hue, 62, 90);
-    vars['--color-secondary'] = hslToHex(hue, 14, 72);
-    vars['--color-secondary-container'] = hslToHex(hue, 24, 15);
-    vars['--color-on-secondary-container'] = hslToHex(hue, 55, 94);
-    vars['--color-outline'] = hslToHex(hue, 14, 66);
-    vars['--color-outline-variant'] = hslToHex(hue, 20, 28);
+    vars['--color-primary-container'] = '#151a22';
+    vars['--color-on-primary-container'] = '#f0f3f6';
+    vars['--color-secondary'] = '#a6adba';
+    vars['--color-secondary-container'] = '#11151c';
+    vars['--color-on-secondary-container'] = '#f0f3f6';
+    vars['--color-outline'] = '#a6adba';
+    vars['--color-outline-variant'] = '#363d49';
     vars['--color-outline-light'] = vars['--color-outline-variant'];
-    vars['--color-selection-blue'] = hslToHex(hue, 30, 19);
-    vars['--color-hero'] = hslToHex(hue, 30, 14);
-    vars['--color-on-hero'] = vars['--color-on-background'];
-    vars['--color-hero-muted'] = vars['--color-on-surface-variant'];
-    vars['--color-hero-track'] = hslToHex(hue, 28, 17);
+    vars['--color-selection-blue'] = '#1a212b';
+    // the sidebar row hover wash: a low-opacity translucent surface,
+    // never the light tier's #f7f7f7 polar (white flash on dark).
+    vars['--color-polar'] = 'rgba(240, 243, 255, 0.07)';
+    vars['--color-hero'] = '#131720';
+    vars['--color-on-hero'] = '#f0f3f6';
+    vars['--color-hero-muted'] = '#a6adba';
+    vars['--color-hero-track'] = '#191f28';
     vars['--color-hero-cta'] = primary;
     vars['--color-on-hero-cta'] = vars['--color-on-primary'];
-    vars['--color-accent-ink'] = hslToHex(hue, 34, 17);
-    vars['--color-ink-deep'] = hslToHex(hue, 32, 12);
+    // accent-ink is the SCRIM/dark-ink colour (bg-accent-ink/40 modal
+    // washes, dark chips): it stays a fixed dark neutral in the dark
+    // tier - only its hue-tint is dropped, the seed never repaints it.
+    vars['--color-accent-ink'] = '#242c38';
+    vars['--color-ink-deep'] = '#161c26';
     vars['--color-dark-surface'] = vars['--color-ink-deep'];
-    vars['--color-dark-surface-low'] = hslToHex(hue, 30, 15);
+    vars['--color-dark-surface-low'] = '#131820';
     vars['--color-inverse-surface'] = hslToHex(hue, 40, 88);
     vars['--color-inverse-on-surface'] = hslToHex(hue, 35, 12);
     return vars;

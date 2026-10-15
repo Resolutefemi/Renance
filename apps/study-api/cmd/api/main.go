@@ -59,7 +59,16 @@ func main() {
 
 	ctx, cancel := context.WithTimeout(context.Background(), 60*time.Second)
 	defer cancel()
-	st, err := store.Connect(ctx, cfg.DatabaseURL)
+	// The multi-database fallback (founder directive 2026-10-15: "can
+	// the project share two databases, or use another as a backup when
+	// the first one's free trial ends?"): DATABASE_URL (Neon) first,
+	// then FALLBACK_DATABASE_URLS (the founder's Supabase + InsForge
+	// DSNs). The first candidate that connects AND pings wins - a
+	// suspended primary boots straight onto the fallback, and the
+	// migrations + curriculum seed below provision it automatically.
+	// The runtime half (dbwatch, CU-aware) rides inside the HTTP
+	// handler chain (internal/httpapi/dbwatch.go).
+	st, err := store.ConnectWithFallback(ctx, cfg.DatabaseURL, cfg.FallbackDatabaseURLs, log)
 	if err != nil {
 		log.Error("db", "err", err)
 		os.Exit(1)

@@ -42,6 +42,26 @@ services:
     envVars:
       - key: DATABASE_URL
         sync: false
+      # ── Multi-database fallback (founder directive 2026-10-15: "can
+      # the project share two databases, or use another as a backup
+      # when the first one's free trial ends?") ─────────────────────
+      # At boot the API walks DATABASE_URL (Neon) first, then these in
+      # order: SUPABASE_DATABASE_URL, then INSFORGE_DATABASE_URL. The
+      # first live DSN wins; migrations + the curriculum seed provision
+      # it automatically. Runtime detection is CU-aware (dbwatch.go):
+      # it only probes after real request failures, never on a
+      # schedule, so nothing here ever keeps Neon's compute awake.
+      # Fill either in the Render dashboard (sync: false = secret);
+      # both are optional - no fallback configured simply keeps the
+      # pre-fallback behaviour.
+      - key: SUPABASE_DATABASE_URL
+        sync: false
+      - key: INSFORGE_DATABASE_URL
+        sync: false
+      # Explicit ordered chain (comma-separated) overrides the two
+      # named vars above when set.
+      - key: FALLBACK_DATABASE_URLS
+        sync: false
       - key: JWT_SECRET
         generateValue: true
       - key: GOOGLE_CLIENT_ID

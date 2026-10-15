@@ -5,6 +5,8 @@ import './globals.css';
 import { SITE_URL } from '@/lib/site-url';
 import { OG_IMAGES } from '@/lib/og';
 import ContentGuard from '@/components/content-guard';
+import OfflineBanner from '@/components/offline-banner';
+import SwRegister from '@/components/sw-register';
 
 const FOUNDER = {
   '@type': 'Person',
@@ -326,6 +328,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* Founder content lock: no selecting, copying or dragging site
             content (notes, schemes, questions); forms keep working. */}
         <ContentGuard />
+        {/* The offline shield (founder bug report 2026-10-15: offline
+            sessions fell through to raw RSC text pages like
+            /courses/index.txt): the worker catches failed navigations
+            and serves the clean /offline state; the banner says it in
+            app too. */}
+        <SwRegister />
+        <OfflineBanner />
         {children}
       </body>
     </html>
