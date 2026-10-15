@@ -615,74 +615,64 @@ func fuzzyKey(line string) string {
 // Methods I" against the catalogue's "Mathematical Methods") - and the
 // AI can only choose among candidates that EXIST. The line's
 // significant words sweep the whole tertiary catalogue (schools borrow
-// across departments): titles carrying EVERY word first, then the
-// widest OR-sweep ranked in Go by how many words the title carries,
-// richest copy breaking ties.
+// across departments), and SQL ranks the sweep: titles carrying MORE
+// of the line's words first, then the LEANEST title (fewest extra
+// words - "General Agriculture" outruns "General Chemistry for
+// Agriculture"), then the richest copy. Ranking inside the query (not
+// after a LIMIT) is what lets the lone real "General Agriculture" row
+// surface past hundreds of "General ... for Agriculture" copies.
 func (s *Service) fuzzyTitleCourses(ctx context.Context, userID, line string) ([]DeskCourse, error) {
         tokens := fuzzyTokens(line)
         if len(tokens) == 0 {
                 return []DeskCourse{}, nil
         }
-        sweep := func(op string) ([]DeskCourse, error) {
-                var args []any
-                arg := func(v any) string {
-                        args = append(args, v)
-                        return fmt.Sprintf("$%d", len(args))
-                }
-                args = append(args, userID) // $1 - the deskCourseSelect userID
-                likes := make([]string, 0, len(tokens))
-                for _, t := range tokens {
-                        likes = append(likes, fmt.Sprintf("c.title ILIKE %s", arg("%"+t+"%")))
-                }
-                // Gapless $1..$n: the select embeds $1, the likes continue it.
-                rows, err := s.Pool.Query(ctx, `
-                SELECT DISTINCT ON (c.course_id) `+deskCourseSelect+`
+        var args []any
+        arg := func(v any) string {
+                args = append(args, v)
+                return fmt.Sprintf("$%d", len(args))
+        }
+        args = append(args, userID) // $1 - the deskCourseSelect userID
+        likes := make([]string, 0, len(tokens))
+        cases := make([]string, 0, len(tokens))
+        for _, t := range tokens {
+                ph := arg("%" + t + "%")
+                likes = append(likes, fmt.Sprintf("c.title ILIKE %s", ph))
+                cases = append(cases, fmt.Sprintf("CASE WHEN c.title ILIKE %s THEN 1 ELSE 0 END", ph))
+        }
+        // Gapless $1..$n: the select embeds $1, the token cases continue it.
+        // The coverage score rides as the 7th column; topicCount is the 5th
+        // select column, so the tie-break orders by ordinal. Rows dedupe by
+        // title in Go (the same course title is seeded per department) and
+        // the AI shelf takes the top dozen.
+        rows, err := s.Pool.Query(ctx, `
+                SELECT `+deskCourseSelect+`, (`+strings.Join(cases, " + ")+`) AS cov
                 FROM learn.courses c JOIN learn.departments d ON d.dept_id = c.dept_id
-                WHERE c.body = 'tertiary' AND c.title <> '' AND (`+strings.Join(likes, " "+op+" ")+`)
-                ORDER BY c.course_id LIMIT 40`, args...)
-                if err != nil {
+                WHERE c.body = 'tertiary' AND c.title <> '' AND (`+strings.Join(likes, " OR ")+`)
+                ORDER BY cov DESC, char_length(c.title) ASC, 5 DESC, c.course_id
+                LIMIT 30`, args...)
+        if err != nil {
+                return nil, err
+        }
+        defer rows.Close()
+        seen := map[string]bool{}
+        out := []DeskCourse{}
+        for rows.Next() {
+                var c DeskCourse
+                var cov int
+                if err := rows.Scan(&c.ID, &c.Code, &c.Title, &c.Department, &c.TopicCount, &c.InList, &cov); err != nil {
                         return nil, err
                 }
-                defer rows.Close()
-                out := []DeskCourse{}
-                for rows.Next() {
-                        c, err := scanDeskCourse(rows)
-                        if err != nil {
-                                return nil, err
-                        }
-                        out = append(out, c)
+                c.Code = deskCode(c.Code)
+                if seen[c.Title] {
+                        continue
                 }
-                return out, rows.Err()
-        }
-        out, err := sweep("AND")
-        if err != nil || len(out) > 0 {
-                return out, err
-        }
-        wide, err := sweep("OR")
-        if err != nil || len(wide) == 0 {
-                return wide, err
-        }
-        score := func(c DeskCourse) int {
-                n := 0
-                low := strings.ToLower(c.Title)
-                for _, t := range tokens {
-                        if strings.Contains(low, t) {
-                                n++
-                        }
+                seen[c.Title] = true
+                out = append(out, c)
+                if len(out) >= 12 {
+                        break
                 }
-                return n
         }
-        sort.SliceStable(wide, func(i, j int) bool {
-                si, sj := score(wide[i]), score(wide[j])
-                if si != sj {
-                        return si > sj
-                }
-                return wide[i].TopicCount > wide[j].TopicCount
-        })
-        if len(wide) > 12 {
-                wide = wide[:12]
-        }
-        return wide, nil
+        return out, rows.Err()
 }
 
 // AIMatchRequest is the "Find my courses with AI" payload: the student
