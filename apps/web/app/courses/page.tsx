@@ -45,7 +45,7 @@ import { api } from '@/lib/api';
 import {
   CatalogItem, CoursePath, MyCourse, TopicNode, UnitNode,
   DeskCourse, DeskDepartment, DeskShelves, AIMatchLine,
-  fetchCourseDesk, fetchCoursePath, fetchDepartments, fetchMyCourses, learnBodyFromExams,
+  fetchCourseDesk, fetchCoursePath, fetchDepartments, fetchDeskOthers, fetchMyCourses, learnBodyFromExams,
   learnBodyLabel, aiMatchCourses, saveDesk, searchDeskCourses,
   setActiveCourse, setMyCourses, deskSaveError,
 } from '@/lib/learn';
@@ -227,17 +227,21 @@ export default function CoursesPage() {
     }
   }, [mine]);
 
-  /** Merge a batch of picks (the AI finder) into the real list. */
-  const addCourses = useCallback(async (ids: string[]) => {
-    if (!mine || ids.length === 0) return;
+  /** Merge a batch of picks (the AI finder) into the real list.
+   *  Returns whether the merge landed, so the AI panel only closes -
+   *  and the shelf only re-seats - on a real save. */
+  const addCourses = useCallback(async (ids: string[]): Promise<boolean> => {
+    if (!mine || ids.length === 0) return false;
     setSaving(true);
     try {
       const merged = Array.from(new Set([...mine.map((m) => m.id), ...ids]));
       const res = await setMyCourses(merged);
       setMine(res.courses);
       cacheMine(res.courses);
+      return true;
     } catch {
       setNotice('Saving your courses failed - check your connection and try again.');
+      return false;
     } finally {
       setSaving(false);
     }
@@ -310,7 +314,7 @@ export default function CoursesPage() {
               mine={mine}
               onOpen={(id) => void openPath(id)}
               onToggle={(id) => void toggleCourse(id)}
-              onAdd={(ids) => void addCourses(ids)}
+              onAdd={(ids) => addCourses(ids)}
               onNotice={setNotice}
             />
           ) : (
@@ -459,7 +463,7 @@ function TertiaryDesk({
   mine: MyCourse[];
   onOpen: (courseId: string) => void;
   onToggle: (courseId: string) => void;
-  onAdd: (courseIds: string[]) => void;
+  onAdd: (courseIds: string[]) => Promise<boolean>;
   onNotice: (msg: string) => void;
 }) {
   const [phase, setPhase] = useState<'load' | 'itype' | 'dept' | 'shelf'>('load');
@@ -478,6 +482,24 @@ function TertiaryDesk({
   const [aiBusy, setAiBusy] = useState(false);
   const [aiLines, setAiLines] = useState<AIMatchLine[] | null>(null);
   const [aiPicked, setAiPicked] = useState<Set<string>>(new Set());
+
+  // The borrowed-course pages (founder directive 2026-10-15: schools
+  // borrow courses across departments - the desk offers the WHOLE
+  // catalogue, paged 100 at a time so a phone never swallows all of it).
+  const [others, setOthers] = useState<DeskCourse[] | null>(null);
+  const [othersTotal, setOthersTotal] = useState(0);
+  const [othersBusy, setOthersBusy] = useState(false);
+
+  // Live in-list flags: the checkboxes ride the parent's mine list -
+  // the server's canonical answer after every toggle - instead of the
+  // shelf snapshot, which only refreshes on a full reload and made the
+  // manual checkboxes look dead (founder report 2026-10-15: "I can't
+  // mark the course manually"). A tap now shows its check immediately.
+  const inListIds = useMemo(() => new Set((mine ?? []).map((m) => m.id)), [mine]);
+  const withLive = useCallback(
+    (c: DeskCourse): DeskCourse => ({ ...c, inList: inListIds.has(c.id) }),
+    [inListIds],
+  );
 
   const loadShelf = useCallback(async () => {
     try {
@@ -507,6 +529,29 @@ function TertiaryDesk({
       setDeps([]);
     }
   }, []);
+
+  // The borrowed pages: the first page lands with the shelf, and
+  // "Show more" appends the next hundred. reset=true refetches from
+  // zero (also the right move when the department itself changes).
+  const loadOthers = useCallback(async (reset: boolean) => {
+    setOthersBusy(true);
+    try {
+      const offset = reset ? 0 : others?.length ?? 0;
+      const res = await fetchDeskOthers(offset, 100);
+      setOthersTotal(res.total);
+      setOthers((prev) => (reset ? res.items : [...(prev ?? []), ...res.items]));
+    } catch {
+      if (reset) setOthers([]);
+    } finally {
+      setOthersBusy(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [others]);
+
+  useEffect(() => {
+    if (phase === 'shelf') void loadOthers(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase]);
 
   useEffect(() => { void loadShelf(); }, [loadShelf]);
 
@@ -616,12 +661,21 @@ function TertiaryDesk({
     if (ids.length === 0) return;
     setGateBusy(true);
     try {
-      onAdd(ids); // the parent merges into the real list + device cache
-      await loadShelf(); // refresh the shelf's inList flags
+      // Wait for the merge to actually land before touching the view:
+      // the old fire-and-forget raced the shelf refresh, the refreshed
+      // rows came back with stale inList flags, and the student read
+      // "added nothing, nothing is clickable" (founder report
+      // 2026-10-15: the AI picks never moved to the course list).
+      const ok = await onAdd(ids);
+      if (!ok) return; // the notice explains; the picks stay on screen
+      await loadShelf();
       setAiOpen(false);
       setAiText('');
       setAiLines(null);
       setAiPicked(new Set());
+      // Land at the top of the refreshed shelf - the checked rows are
+      // ready to tap straight into their course paths.
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } finally {
       setGateBusy(false);
     }
@@ -736,7 +790,7 @@ function TertiaryDesk({
         <span className="material-symbols-outlined text-[20px] text-primary-ink">school</span>
         <div className="min-w-0 flex-1">
           <p className="truncate text-[14px] font-black text-on-surface">{shelf?.departmentName || 'Your department'}</p>
-          <p className="text-[11.5px] font-bold text-on-surface-variant">{shelf?.institutionType || itype} · general courses + your department</p>
+          <p className="text-[11.5px] font-bold text-on-surface-variant">{shelf?.institutionType || itype} · general + your department + every other department's courses</p>
         </div>
         <button
           type="button"
@@ -778,9 +832,10 @@ function TertiaryDesk({
                 Nothing matches &ldquo;{query}&rdquo;. Try a course code (three letters) or a topic.
               </p>
             )}
-            {!searching && (results ?? []).map((c) => (
-              <DeskRow key={c.id} c={c} onOpen={() => c.inList && onOpen(c.id)} onToggle={() => onToggle(c.id)} />
-            ))}
+            {!searching && (results ?? []).map((c) => {
+              const row = withLive(c);
+              return <DeskRow key={c.id} c={row} onOpen={() => row.inList && onOpen(c.id)} onToggle={() => onToggle(c.id)} />;
+            })}
           </div>
         )}
       </div>
@@ -888,9 +943,10 @@ function TertiaryDesk({
           {shelf?.institutionType === 'Polytechnic' ? 'ND I general courses' : shelf?.institutionType === 'College of Education' ? 'NCE I general courses' : '100 Level general courses'}
           <span className="ml-1.5 font-bold normal-case text-on-surface-variant/70">- everyone takes these</span>
         </h3>
-        {general.map((c) => (
-          <DeskRow key={c.id} c={c} onOpen={() => c.inList && onOpen(c.id)} onToggle={() => onToggle(c.id)} />
-        ))}
+        {general.map((c) => {
+          const row = withLive(c);
+          return <DeskRow key={c.id} c={row} onOpen={() => row.inList && onOpen(c.id)} onToggle={() => onToggle(c.id)} />;
+        })}
         {general.length === 0 && (
           <p className="rounded-2xl border-2 border-dashed border-outline-variant bg-card px-5 py-6 text-center text-[12.5px] font-bold text-on-surface-variant">
             The general shelf is on its way - check your connection.
@@ -904,9 +960,10 @@ function TertiaryDesk({
           <h3 className="px-1 text-[13px] font-black uppercase tracking-wide text-on-surface-variant">
             {shelf.departmentName} courses
           </h3>
-          {departmental.map((c) => (
-            <DeskRow key={c.id} c={c} onOpen={() => c.inList && onOpen(c.id)} onToggle={() => onToggle(c.id)} />
-          ))}
+          {departmental.map((c) => {
+            const row = withLive(c);
+            return <DeskRow key={c.id} c={row} onOpen={() => row.inList && onOpen(c.id)} onToggle={() => onToggle(c.id)} />;
+          })}
           {departmental.length === 0 && (
             <p className="rounded-2xl border-2 border-dashed border-outline-variant bg-card px-5 py-6 text-center text-[12.5px] font-bold text-on-surface-variant">
               No courses listed for this department yet.
@@ -914,6 +971,41 @@ function TertiaryDesk({
           )}
         </section>
       )}
+
+      {/* Other departments' courses - schools borrow courses across
+          departments, so the desk offers the WHOLE catalogue (founder
+          directive 2026-10-15: "add the remaining 10,000 to the list").
+          Paged at 100, so a phone never swallows all of it at once. */}
+      <section className="flex flex-col gap-2">
+        <h3 className="px-1 text-[13px] font-black uppercase tracking-wide text-on-surface-variant">
+          Other departments&rsquo; courses
+          <span className="ml-1.5 font-bold normal-case text-on-surface-variant/70">
+            {othersTotal > 0 ? `- ${othersTotal.toLocaleString()} borrowable` : '- borrowed across schools'}
+          </span>
+        </h3>
+        {others === null && (
+          <p className="px-1 text-[12px] font-bold text-on-surface-variant">Loading the rest of the catalogue…</p>
+        )}
+        {(others ?? []).map((c) => {
+          const row = withLive(c);
+          return <DeskRow key={c.id} c={row} onOpen={() => row.inList && onOpen(c.id)} onToggle={() => onToggle(c.id)} />;
+        })}
+        {others !== null && others.length === 0 && (
+          <p className="rounded-2xl border-2 border-dashed border-outline-variant bg-card px-5 py-6 text-center text-[12.5px] font-bold text-on-surface-variant">
+            Nothing beyond the shelves above - your department covers the catalogue.
+          </p>
+        )}
+        {others !== null && others.length < othersTotal && (
+          <button
+            type="button"
+            disabled={othersBusy}
+            onClick={() => void loadOthers(false)}
+            className="mx-auto rounded-xl border-2 border-outline-variant bg-card px-4 py-2 text-[12.5px] font-extrabold text-on-surface transition active:translate-y-[2px] disabled:opacity-60"
+          >
+            {othersBusy ? 'Loading…' : `Show more (${(othersTotal - others.length).toLocaleString()} more)`}
+          </button>
+        )}
+      </section>
     </div>
   );
 }

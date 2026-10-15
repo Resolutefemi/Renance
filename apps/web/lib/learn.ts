@@ -332,6 +332,15 @@ export function fetchCourseDesk(): Promise<DeskShelves> {
   return api('/learn/course-desk');
 }
 
+/** The rest of the catalogue: every tertiary course outside the
+ *  student's department that is not on the general shelf - schools
+ *  borrow courses across departments (founder directive 2026-10-15:
+ *  "add the remaining 10,000 to the list"). One page at a time; the
+ *  desk pagers through with Show-more. */
+export function fetchDeskOthers(offset: number, limit = 100): Promise<{ items: DeskCourse[]; total: number }> {
+  return api(`/learn/course-desk/others?offset=${offset}&limit=${limit}`);
+}
+
 /** Code / title / key-topic search over the tertiary tree. */
 export function searchDeskCourses(q: string): Promise<{ items: DeskCourse[] }> {
   return api(`/learn/search?q=${encodeURIComponent(q)}`);

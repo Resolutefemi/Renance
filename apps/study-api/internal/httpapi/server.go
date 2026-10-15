@@ -294,6 +294,7 @@ func (s *Server) Handler() http.Handler {
         mux.HandleFunc("GET /learn/faculties", s.auth(s.handleLearnFaculties))
         mux.HandleFunc("GET /learn/departments", s.auth(s.handleLearnDepartments))
         mux.HandleFunc("GET /learn/course-desk", s.auth(s.handleLearnCourseDesk))
+        mux.HandleFunc("GET /learn/course-desk/others", s.auth(s.handleLearnCourseDeskOthers))
         mux.HandleFunc("GET /learn/search", s.auth(s.handleLearnSearch))
         mux.HandleFunc("POST /learn/ai-match", s.auth(s.handleLearnAIMatch))
         mux.HandleFunc("GET /learn/my-courses", s.auth(s.handleLearnMyCourses))

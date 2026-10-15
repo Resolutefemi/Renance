@@ -312,6 +312,72 @@ func (s *Service) CourseDesk(ctx context.Context, userID string) (*DeskShelves, 
         return shelf, nil
 }
 
+// ─── The borrowed-course pages ────────────────────────────────────────────
+
+// OthersCourses serves the REST of the catalogue the two shelves do
+// not show: every tertiary course outside the student's department
+// that is not on the national general shelf. Founder directive
+// 2026-10-15: schools borrow courses across departments, so after the
+// department shelf the desk must offer the remaining ~10,000 courses
+// too. They ride in pages (LIMIT/OFFSET) so a phone never downloads
+// the whole tree at once; the full catalogue stays reachable through
+// the Show-more pager and the search bar up top.
+func (s *Service) OthersCourses(ctx context.Context, userID string, offset, limit int) ([]DeskCourse, int, error) {
+        if limit <= 0 {
+                limit = 100
+        }
+        if limit > 200 {
+                limit = 200
+        }
+        if offset < 0 {
+                offset = 0
+        }
+        var itype, dept string
+        if err := s.Pool.QueryRow(ctx,
+                `SELECT institution_type, department FROM learn.learners WHERE user_id=$1`, userID).
+                Scan(&itype, &dept); err != nil {
+                return nil, 0, err
+        }
+        // The same exclusion the general shelf applies, so no course
+        // ever appears on both: the GST suite plus the general
+        // first-year titles at the student's institution level.
+        // Everything else outside the student's own department rides
+        // the borrowed pages, richest home department first.
+        where := `
+                FROM learn.courses c JOIN learn.departments d ON d.dept_id = c.dept_id
+                WHERE c.body = 'tertiary' AND c.title <> ''
+                  AND ($2 = '' OR c.dept_id <> $2)
+                  AND NOT ( c.course_id LIKE 'GST %'
+                         OR (c.level = $3 AND c.title ~* $4) )`
+        var total int
+        if err := s.Pool.QueryRow(ctx,
+                `SELECT COUNT(*) `+where,
+                userID, dept, firstYearLevel(itype), generalTitleRxSQL).Scan(&total); err != nil {
+                return nil, 0, err
+        }
+        rows, err := s.Pool.Query(ctx, `
+                SELECT `+deskCourseSelect+where+`
+                ORDER BY d.name, c.code, c.title
+                LIMIT $5 OFFSET $6`,
+                userID, dept, firstYearLevel(itype), generalTitleRxSQL, limit, offset)
+        if err != nil {
+                return nil, 0, err
+        }
+        defer rows.Close()
+        items := []DeskCourse{}
+        for rows.Next() {
+                c, err := scanDeskCourse(rows)
+                if err != nil {
+                        return nil, 0, err
+                }
+                items = append(items, c)
+        }
+        if err := rows.Err(); err != nil {
+                return nil, 0, err
+        }
+        return items, total, nil
+}
+
 // ─── Search ───────────────────────────────────────────────────────────────
 
 // SearchCourses matches the tertiary tree by short code (with street
