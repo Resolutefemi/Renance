@@ -313,8 +313,16 @@ func (m *liveMatch) snapshotScores() map[string]int {
 	return out
 }
 
-// persist hands the outcome to the sink with a hard timeout; a failure
-// is logged and dropped, the players already have their result.
+// persist hands the outcome to the sink and STAYS AT IT until the row
+// lands. Founder bug 2026-10-17: the old save was a 5s best-effort -
+// every duel whose save raced a suspended Neon compute (free tier sleeps
+// after ~5 idle minutes, and a duel is exactly the kind of quiet the
+// sleep loves) lost its match row silently: empty history, a board that
+// never moved, a Ren Point never paid. That read as "the arena is
+// completely broken". The first attempt stays synchronous so a healthy
+// database records the match before the over frame even lands; a failed
+// attempt retries in the background with a widening backoff and only
+// gives up after roughly two minutes of trying.
 func (m *liveMatch) persist(status, winner string) {
 	if m.sink == nil {
 		return
@@ -333,11 +341,33 @@ func (m *liveMatch) persist(status, winner string) {
 			IsBot:    p.IsBot,
 		})
 	}
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-	defer cancel()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	if err := m.sink.SaveMatch(ctx, r); err != nil {
-		m.log.Error("arena: persist match", "match", m.cfg.MatchID, "err", err)
+		cancel()
+		m.log.Error("arena: persist match (will retry)", "match", m.cfg.MatchID, "err", err)
+		go m.persistRetry(r)
+		return
 	}
+	cancel()
+}
+
+// persistRetry re-attempts a dropped save: 5s, 15s, 30s, 60s - about
+// two minutes of cover, long enough for a sleeping database compute to
+// wake and take the row. SaveArenaMatch is an upsert keyed by match id
+// (and replaces participants), so retries can never double-count.
+func (m *liveMatch) persistRetry(r MatchResult) {
+	for _, wait := range []time.Duration{5 * time.Second, 15 * time.Second, 30 * time.Second, 60 * time.Second} {
+		time.Sleep(wait)
+		ctx, cancel := context.WithTimeout(context.Background(), 20*time.Second)
+		err := m.sink.SaveMatch(ctx, r)
+		cancel()
+		if err == nil {
+			m.log.Info("arena: persist landed on retry", "match", r.MatchID)
+			return
+		}
+		m.log.Error("arena: persist match retry", "match", r.MatchID, "err", err)
+	}
+	m.log.Error("arena: persist match given up after retries", "match", r.MatchID)
 }
 
 func (m *liveMatch) done() {
