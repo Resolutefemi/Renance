@@ -392,30 +392,104 @@ func LoadPublicProfile(ctx context.Context, pool store.Pool, viewer, username st
 			p.ID, viewer).Scan(&p.FollowsYou)
 	}
 
-	// The courses they are taking, with progress.
-	rows, err := pool.Query(ctx, `
-                SELECT c.title, c.body,
-                       (SELECT COUNT(*) FROM learn.topics t WHERE t.course_id = c.course_id),
-                       (SELECT COUNT(*) FROM learn.progress pr2 WHERE pr2.user_id = uc.user_id AND pr2.topic_id IN
-                         (SELECT topic_id FROM learn.topics t2 WHERE t2.course_id = c.course_id))
-                FROM learn.user_courses uc
-                JOIN learn.courses c ON c.course_id = uc.course_id
-                WHERE uc.user_id = $1
-                ORDER BY uc.added_at DESC LIMIT 12`, p.ID)
-	if err == nil {
-		for rows.Next() {
-			var cp CoursePulse
-			if err := rows.Scan(&cp.Title, &cp.Body, &cp.Topics, &cp.Done); err != nil {
-				break
-			}
-			if cp.Topics > 0 {
-				cp.Percent = cp.Done * 100 / cp.Topics
-			}
-			p.Courses = append(p.Courses, cp)
+	// The courses they are taking, with progress. Two-step
+	// pool-safe rewrite (user_courses + progress on the user
+	// database, titles + topic counts on the content database).
+	if courseIDs, err := userCourseIDs(ctx, pool, p.ID, 12); err == nil && len(courseIDs) > 0 {
+		type pulseBase struct {
+			title, body string
+			topics      int
 		}
-		rows.Close()
+		bases := map[string]pulseBase{}
+		if rows, err := pool.Query(ctx, `
+                SELECT c.course_id, c.title, c.body,
+                       (SELECT COUNT(*) FROM learn.topics t WHERE t.course_id = c.course_id)
+                FROM learn.courses c WHERE c.course_id = ANY($1)`, courseIDs); err == nil {
+			for rows.Next() {
+				var id, title, body string
+				var topics int
+				if rows.Scan(&id, &title, &body, &topics) == nil {
+					bases[id] = pulseBase{title: title, body: body, topics: topics}
+				}
+			}
+			rows.Close()
+		}
+		// Done counts: the profile owner's progress rows over every
+		// topic of their courses (user pool, one ANY query).
+		type courseTopics struct {
+			course string
+			topic  string
+		}
+		var links []courseTopics
+		var flat []string
+		if rows, err := pool.Query(ctx, `
+                SELECT t.course_id, t.topic_id FROM learn.topics t
+                WHERE t.course_id = ANY($1) ORDER BY t.seq`, courseIDs); err == nil {
+			for rows.Next() {
+				var l courseTopics
+				if rows.Scan(&l.course, &l.topic) == nil {
+					links = append(links, l)
+					flat = append(flat, l.topic)
+				}
+			}
+			rows.Close()
+		}
+		doneByTopic := map[string]bool{}
+		if len(flat) > 0 {
+			if rows, err := pool.Query(ctx, `
+                SELECT topic_id FROM learn.progress
+                WHERE user_id = $1 AND topic_id = ANY($2)`, p.ID, flat); err == nil {
+				for rows.Next() {
+					var tid string
+					if rows.Scan(&tid) == nil {
+						doneByTopic[tid] = true
+					}
+				}
+				rows.Close()
+			}
+		}
+		doneByCourse := map[string]int{}
+		for _, l := range links {
+			if doneByTopic[l.topic] {
+				doneByCourse[l.course]++
+			}
+		}
+		for _, id := range courseIDs {
+			b, ok := bases[id]
+			if !ok || b.topics == 0 {
+				continue
+			}
+			done := doneByCourse[id]
+			pct := 0
+			if b.topics > 0 {
+				pct = done * 100 / b.topics
+			}
+			p.Courses = append(p.Courses, CoursePulse{
+				Title: b.title, Body: b.body, Topics: b.topics, Done: done, Percent: pct,
+			})
+		}
 	}
 	return p, nil
+}
+
+// userCourseIDs lists the courses on a profile's list (user pool).
+func userCourseIDs(ctx context.Context, pool store.Pool, userID string, limit int) ([]string, error) {
+	rows, err := pool.Query(ctx, `
+                SELECT course_id FROM learn.user_courses
+                WHERE user_id = $1 ORDER BY added_at DESC LIMIT $2`, userID, limit)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var out []string
+	for rows.Next() {
+		var id string
+		if err := rows.Scan(&id); err != nil {
+			return nil, err
+		}
+		out = append(out, id)
+	}
+	return out, rows.Err()
 }
 
 // LoadConnections lists the viewer's followers + following, flagged so

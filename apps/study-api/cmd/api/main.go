@@ -81,6 +81,29 @@ func main() {
 	}
 	log.Info("database ready (study schema current)")
 
+	// The split-horizon backfill (founder directive 2026-10-16:
+	// "users details and progress stored in Neon and InsForge
+	// alone, Supabase only holds the courses, topics and units").
+	// Runs SYNCHRONOUSLY before the listener opens: the user rows
+	// (freshest on the content database, which was the live primary
+	// while the user database sat disconnected) land on the user
+	// primary exactly once, then the lesson cache merges content ->
+	// cache every boot. A failed backfill aborts the boot (no
+	// traffic ever hits a half-migrated database) and Render retries.
+	bfCtx, bfCancel := context.WithTimeout(context.Background(), store.BackfillDeadline())
+	bfStats, bfErr := store.BackfillSplit(bfCtx, st.Primary(), st.Content(), st.Cache(), log)
+	bfCancel()
+	if bfErr != nil {
+		log.Error("split backfill", "err", bfErr)
+		os.Exit(1)
+	}
+	if bfStats.UserBackfillRan || bfStats.LessonsCopied {
+		log.Info("split backfill complete",
+			"userRowsCopied", bfStats.UserRowsCopied,
+			"lessonRowsCopied", bfStats.LessonRowsCopied,
+			"skipped", bfStats.Skipped)
+	}
+
 	// The learn curriculum seeds itself once, in the background
 	// (founder directive 2026-10-14: Supreme merges into Renance).
 	// First boot pays the ~140k-row insert; every later boot
@@ -91,7 +114,7 @@ func main() {
 	go func() {
 		seedCtx, seedCancel := context.WithTimeout(context.Background(), 10*time.Minute)
 		defer seedCancel()
-		if err := learn.SeedIfEmpty(seedCtx, st.Primary(), log); err != nil {
+		if err := learn.SeedIfEmpty(seedCtx, st.Content(), log); err != nil {
 			log.Error("learn: curriculum seed failed", "err", err)
 		}
 	}()
@@ -115,7 +138,9 @@ func main() {
 				name = mirrorNames[i]
 			}
 			syncCtx, syncCancel := context.WithTimeout(context.Background(), 15*time.Minute)
-			stats, err := store.SyncMirrorData(syncCtx, st.Primary(), mp, log, "primary", name)
+			stats, err := store.SyncMirrorDataFiltered(syncCtx, st.Primary(), mp, log, "primary", name, store.SyncOptions{
+				SkipTables: store.DomainSkipTablesExported(),
+			})
 			syncCancel()
 			if err != nil {
 				log.Error("mirror sync failed - retried on the next boot", "mirror", name, "err", err)

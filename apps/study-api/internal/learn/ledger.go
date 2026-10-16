@@ -302,13 +302,28 @@ func (s *Service) Complete(ctx context.Context, userID string, req CompleteReque
 	// total round's "decimal places" argument). The statement failed
 	// on every call and the swallowed error left CompletedPct at 0
 	// forever. Fixed: a real division with a zero-total guard.
-	_ = s.Pool.QueryRow(ctx, `
-                SELECT COALESCE(round(100.0 * (
-                  SELECT COUNT(*) FROM learn.progress pr
-                  JOIN learn.topics t ON t.topic_id = pr.topic_id
-                  WHERE pr.user_id=$1 AND t.course_id=$2) / NULLIF((
-                  SELECT COUNT(*) FROM learn.topics t WHERE t.course_id=$2), 0))::int, 0)`,
-		userID, courseID).Scan(&res.CompletedPct)
+	// Two-step pool-safe rewrite (topics on the content database,
+	// progress on the user database): the topic ids come from the
+	// content pool, the done count from the user pool.
+	{
+		var total int
+		if err := s.Pool.QueryRow(ctx, `
+                SELECT COUNT(*) FROM learn.topics WHERE course_id=$1`, courseID).Scan(&total); err == nil && total > 0 {
+			var ids []string
+			if rows, err := s.Pool.Query(ctx, `
+                SELECT topic_id FROM learn.topics WHERE course_id=$1`, courseID); err == nil {
+				for rows.Next() {
+					var id string
+					if rows.Scan(&id) == nil {
+						ids = append(ids, id)
+					}
+				}
+				rows.Close()
+				done, _ := s.progressDoneSet(ctx, userID, ids)
+				res.CompletedPct = 100 * len(done) / total
+			}
+		}
+	}
 
 	l, _ = s.loadLearner(ctx, s.Pool, userID)
 	if l != nil {
@@ -354,16 +369,43 @@ func rollChestDrop(userID, topicID string, freezeCount int) (string, int) {
 func (s *Service) PrefetchAfterComplete(topicID, courseID string) {
 	ctx, cancel := context.WithTimeout(context.Background(), 120*time.Second)
 	defer cancel()
-	var nid string
-	err := s.Pool.QueryRow(ctx, `
+	// Two-step pool-safe rewrite (content step for the seq anchor and
+	// the next candidates, cache step for the already-cached filter).
+	var seq int
+	if err := s.Pool.QueryRow(ctx, `
+                SELECT seq FROM learn.topics WHERE topic_id=$1`, topicID).Scan(&seq); err != nil {
+		return
+	}
+	rows, err := s.Pool.Query(ctx, `
                 SELECT topic_id FROM learn.topics
-                WHERE course_id=$1
-                  AND seq > (SELECT seq FROM learn.topics WHERE topic_id=$2)
-                  AND NOT EXISTS (SELECT 1 FROM learn.lessons l WHERE l.topic_id = learn.topics.topic_id)
-                ORDER BY seq LIMIT 1`, courseID, topicID).Scan(&nid)
+                WHERE course_id=$1 AND seq > $2
+                ORDER BY seq LIMIT 4`, courseID, seq)
 	if err != nil {
 		return
 	}
+	var candidates []string
+	for rows.Next() {
+		var id string
+		if rows.Scan(&id) == nil {
+			candidates = append(candidates, id)
+		}
+	}
+	rows.Close()
+	if err := rows.Err(); err != nil {
+		return
+	}
+	cached, _ := s.cachedTopicSet(ctx, candidates)
+	var nid string
+	for _, id := range candidates {
+		if !cached[id] {
+			nid = id
+			break
+		}
+	}
+	if nid == "" {
+		return
+	}
+	_ = err
 	nt, err := s.loadTopicCtx(ctx, nid)
 	if err != nil {
 		return
@@ -961,22 +1003,37 @@ func (s *Service) PracticeSet(ctx context.Context, userID string) (*PracticeSet,
 		return set, rows.Err()
 	}
 
-	// Top up from cached lesson quizzes.
-	rows2, err := s.Pool.Query(ctx, `
-                SELECT l.quiz FROM learn.lessons l
-                JOIN learn.topics t ON t.topic_id = l.topic_id
-                JOIN learn.user_courses uc ON uc.course_id = t.course_id
-                WHERE uc.user_id=$1 AND jsonb_array_length(l.quiz) > 0
-                ORDER BY l.hit_count DESC, random() LIMIT 12`, userID)
-	if err != nil {
+	// Top up from cached lesson quizzes. Two-step pool-safe rewrite
+	// (user_courses on the user database, topics on the content
+	// database, lessons on the cache database): enrolled course ids
+	// from the user pool, topic ids from the content pool, quizzes
+	// from the cache pool.
+	tqs, terr := func() ([]topicQuiz, error) {
+		courses, err := s.enrolledCourseIDs(ctx, userID, 40)
+		if err != nil {
+			return nil, err
+		}
+		tmap, err := s.topicIDsForCourses(ctx, courses)
+		if err != nil {
+			return nil, err
+		}
+		var ids []string
+		for _, list := range tmap {
+			ids = append(ids, list...)
+		}
+		if len(ids) > 3000 {
+			ids = ids[:3000]
+		}
+		return s.lessonQuizzesByTopic(ctx, ids, 12)
+	}()
+	if terr != nil {
 		return set, nil
 	}
-	defer rows2.Close()
-	for rows2.Next() && len(set.Questions) < 8 {
-		var raw []byte
-		if err := rows2.Scan(&raw); err != nil {
-			continue
+	for _, tq := range tqs {
+		if len(set.Questions) >= 8 {
+			break
 		}
+		raw := []byte(tq.Raw)
 		var qs []LessonQuizQ
 		if json.Unmarshal(raw, &qs) != nil {
 			continue
@@ -1086,22 +1143,44 @@ func (s *Service) GradePractice(ctx context.Context, userID string, correct, tot
 // ReviewSet mixes the cached quizzes of a unit's completed topics.
 func (s *Service) ReviewSet(ctx context.Context, userID, courseID string, unit int) (*PracticeSet, error) {
 	set := &PracticeSet{Questions: []PracticeQuestion{}}
-	rows, err := s.Pool.Query(ctx, `
-                SELECT l.quiz FROM learn.lessons l
-                JOIN learn.topics t ON t.topic_id = l.topic_id
-                JOIN learn.progress pr ON pr.user_id=$1 AND pr.topic_id = t.topic_id
-                WHERE t.course_id=$2 AND t.unit=$3 AND jsonb_array_length(l.quiz) > 0
-                ORDER BY random() LIMIT 3`, userID, courseID, unit)
-	if err != nil {
+	// Two-step pool-safe rewrite (progress on the user database,
+	// topics on the content database, lessons on the cache
+	// database): the unit's completed topic ids come from the user +
+	// content pools, the quizzes from the cache pool.
+	tqs, terr := func() ([]topicQuiz, error) {
+		var ids []string
+		if rows, err := s.Pool.Query(ctx, `
+                SELECT topic_id FROM learn.topics
+                WHERE course_id=$1 AND unit=$2 ORDER BY seq`, courseID, unit); err == nil {
+			for rows.Next() {
+				var id string
+				if rows.Scan(&id) == nil {
+					ids = append(ids, id)
+				}
+			}
+			rows.Close()
+		}
+		done, err := s.progressDoneSet(ctx, userID, ids)
+		if err != nil {
+			return nil, err
+		}
+		var doneIDs []string
+		for _, id := range ids {
+			if done[id] {
+				doneIDs = append(doneIDs, id)
+			}
+		}
+		if len(doneIDs) == 0 {
+			return nil, nil
+		}
+		return s.lessonQuizzesRandom(ctx, doneIDs, 3)
+	}()
+	if terr != nil {
 		return set, nil
 	}
-	defer rows.Close()
 	seen := map[string]bool{}
-	for rows.Next() {
-		var raw []byte
-		if err := rows.Scan(&raw); err != nil {
-			continue
-		}
+	for _, tq := range tqs {
+		raw := []byte(tq.Raw)
 		var qs []LessonQuizQ
 		if json.Unmarshal(raw, &qs) != nil {
 			continue
@@ -1120,7 +1199,7 @@ func (s *Service) ReviewSet(ctx context.Context, userID, courseID string, unit i
 			}
 		}
 	}
-	return set, rows.Err()
+	return set, nil
 }
 
 // ─── Unit revision (the special last section of every unit) ──────────────

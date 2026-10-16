@@ -49,14 +49,45 @@ services:
     # connection on demand.
     autoDeploy: true
     envVars:
-      # PRIMARY (founder directive 2026-10-16): the Supabase session-mode
-      # pooler (port 5432, IPv4-safe) - the DB the synthgen cache and the
-      # mirrored accounts already live on. If it is ever unreachable at
-      # boot, the chain walks SUPABASE_DATABASE_URL (same DB, harmless
-      # repeat) and then INSFORGE_DATABASE_URL automatically, so the API
-      # always finds a live Postgres without manual steps.
+      # PRIMARY / USER domain (founder directive 2026-10-16: "users
+      # details and progress are stored in Neon and InsForge alone,
+      # Supabase should only hold the courses, topics and units"):
+      #   USER_DATABASE_URL    = Neon (user tables, the authoritative
+      #                          accounts + progress). PASTE THE NEON
+      #                          POOLED DSN in the Render dashboard
+      #                          (Environment -> USER_DATABASE_URL) -
+      #                          first boot copies every user row off
+      #                          Supabase automatically (the marker
+      #                          makes it exactly-once) and the
+      #                          dual-write mirror keeps InsForge in
+      #                          sync from then on. Until it is set,
+      #                          the user tables ride DATABASE_URL
+      #                          (Supabase) exactly as before - zero
+      #                          behaviour change.
+      #   CONTENT_DATABASE_URL = Supabase (baked below): the catalog
+      #                          ONLY - departments, courses, units,
+      #                          topics. The 90 MB lesson cache moved
+      #                          to InsForge and the user tables move
+      #                          to Neon, so Supabase stops filling.
+      #   CACHE_DATABASE_URL   = defaults to INSFORGE_DATABASE_URL
+      #                          (baked below): learn.lessons lives
+      #                          there under its own storage cap.
+      # DATABASE_URL stays the legacy/fallback DSN (Supabase): with
+      # USER_DATABASE_URL empty it keeps serving the user tables
+      # (today's posture); once Neon is set it is only a failover.
       - key: DATABASE_URL
         value: "postgresql://postgres.zfxrmcwdnmmxjawmsiyp:Stephen2474life%23@aws-1-eu-west-3.pooler.supabase.com:5432/postgres?sslmode=require"
+      - key: USER_DATABASE_URL
+        sync: false
+      - key: CONTENT_DATABASE_URL
+        value: "postgresql://postgres.zfxrmcwdnmmxjawmsiyp:Stephen2474life%23@aws-1-eu-west-3.pooler.supabase.com:5432/postgres?sslmode=require"
+      # Lesson cache cap for the CACHE database (InsForge): the guard
+      # pauses new lesson writes past this size - lessons still serve
+      # from the deterministic engine either way. InsForge sits at
+      # ~120 MB after the catalog reclaim; 460 leaves the user mirror
+      # ~340 MB of cache room. Raise after any plan upgrade.
+      - key: LESSON_CACHE_CAP_MB
+        value: "460"
       # ── Multi-database fallback (founder directive 2026-10-15: "can
       # the project share two databases, or use another as a backup
       # when the first one's free trial ends?") ─────────────────────
@@ -70,7 +101,12 @@ services:
       # FOUNDER DIRECTIVE 2026-10-15 ("set up the database and
       # everything yourself and make it's working"): both fallback DSNs
       # are the VERIFIED, PROVISIONED values baked in below (the repo is
-      # private - the same practice as BUNDLE_MASTER_KEY above). Both
+      # private - the same practice as BUNDLE_MASTER_KEY above).
+      # 2026-10-16 role change: SUPABASE_DATABASE_URL is the CONTENT
+      # database's failover handle (and the legacy user fallback while
+      # USER_DATABASE_URL is unset); it is no longer a user-mirror
+      # target once the split is live - the router excludes the content
+      # database from the user mirror list. Both
       # databases were migrated + curriculum-seeded (293 departments /
       # 10,725 courses / 130,275 topics) and the full student desk flow
       # was E2E-verified against BOTH on 2026-10-15.

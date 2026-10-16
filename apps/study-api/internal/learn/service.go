@@ -19,10 +19,15 @@ import (
 )
 
 type Service struct {
-	// Pool is the store's database surface - the raw primary pool
-	// or the dual-write Mirror (Neon + Supabase/InsForge): every
-	// accepted write the ledger lands replays to the mirrors.
-	Pool            store.Pool
+	// Pool is the store's database surface - the split-horizon
+	// router (user / content / cache domains), the dual-write Mirror
+	// or the raw primary pool. Every accepted write the ledger lands
+	// replays to the mirrors.
+	Pool store.Pool
+	// CachePool is the dedicated lesson-cache database (InsForge).
+	// Set by the server wiring; when nil the storage-cap probe reads
+	// Pool instead (single-database boots).
+	CachePool       store.Pool
 	Log             *slog.Logger
 	Engine          *Engine
 	UnlimitedHearts bool
@@ -249,19 +254,18 @@ func (s *Service) Catalog(ctx context.Context, userID, body, q, faculty, itype s
 }
 
 func (s *Service) catalogQuery(ctx context.Context, userID, base string, args []any, pageSize, offset int) ([]CatalogItem, int, error) {
-	nArg := func(v any) string {
-		args = append(args, v)
-		return fmt.Sprintf("$%d", len(args))
-	}
+	// Two-step pool-safe rewrite (the catalog lives on the content
+	// database, user_courses/progress on the user database): the page
+	// is content-only, the InList + Learners columns fill from the
+	// user pool over the page's course ids.
+	pageSizePh := fmt.Sprintf("$%d", len(args)+1)
+	offsetPh := fmt.Sprintf("$%d", len(args)+2)
+	args = append(args, pageSize, offset)
 	sql := `
                 SELECT c.course_id, c.title, d.faculty, d.itype, c.body,
-                       (SELECT COUNT(*) FROM learn.topics t WHERE t.course_id = c.course_id),
-                       EXISTS (SELECT 1 FROM learn.user_courses uc WHERE uc.user_id = ` +
-		nArg(userID) + ` AND uc.course_id = c.course_id),
-                       (SELECT COUNT(*) FROM learn.progress pr JOIN learn.user_courses uc2
-                          ON uc2.user_id = pr.user_id AND uc2.course_id = c.course_id)
+                       (SELECT COUNT(*) FROM learn.topics t WHERE t.course_id = c.course_id)
                 ` + base + `
-                ORDER BY c.title LIMIT ` + nArg(pageSize) + ` OFFSET ` + nArg(offset)
+                ORDER BY c.title LIMIT ` + pageSizePh + ` OFFSET ` + offsetPh
 	rows, err := s.Pool.Query(ctx, sql, args...)
 	if err != nil {
 		return nil, 0, err
@@ -271,12 +275,29 @@ func (s *Service) catalogQuery(ctx context.Context, userID, base string, args []
 	for rows.Next() {
 		var it CatalogItem
 		if err := rows.Scan(&it.ID, &it.Title, &it.Faculty, &it.Institution, &it.Body,
-			&it.TopicCount, &it.InList, &it.Learners); err != nil {
+			&it.TopicCount); err != nil {
 			return nil, 0, err
 		}
 		out = append(out, it)
 	}
-	return out, len(out), rows.Err()
+	if err := rows.Err(); err != nil {
+		return nil, 0, err
+	}
+	ids := make([]string, len(out))
+	for i := range out {
+		ids[i] = out[i].ID
+	}
+	if enrolled, err := s.enrolledSet(ctx, userID, ids); err == nil {
+		for i := range out {
+			out[i].InList = enrolled[out[i].ID]
+		}
+	}
+	if counts, err := s.enrolledLearnerCounts(ctx, ids); err == nil {
+		for i := range out {
+			out[i].Learners = counts[out[i].ID]
+		}
+	}
+	return out, len(out), nil
 }
 
 // Faculties returns the distinct faculty list of the tertiary tree.
@@ -312,29 +333,104 @@ type MyCourse struct {
 }
 
 func (s *Service) MyCourses(ctx context.Context, userID string) ([]MyCourse, error) {
-	rows, err := s.Pool.Query(ctx, `
-                SELECT c.course_id, c.title, c.body,
-                       (SELECT COUNT(*) FROM learn.topics t WHERE t.course_id = c.course_id),
-                       (SELECT COUNT(*) FROM learn.progress pr WHERE pr.user_id = uc.user_id AND pr.topic_id IN
-                         (SELECT topic_id FROM learn.topics t2 WHERE t2.course_id = c.course_id)),
-                       (SELECT COALESCE(SUM(best_score),0) FROM learn.progress pr2 WHERE pr2.user_id = uc.user_id AND pr2.topic_id IN
-                         (SELECT topic_id FROM learn.topics t3 WHERE t3.course_id = c.course_id)),
-                       EXISTS (SELECT 1 FROM learn.active_course ac WHERE ac.user_id = uc.user_id AND ac.course_id = c.course_id)
-                FROM learn.user_courses uc JOIN learn.courses c ON c.course_id = uc.course_id
+	// Two-step pool-safe rewrite (the list + active flag + progress
+	// on the user database, titles + topic counts on the content
+	// database): the ordered list comes from user_courses, the
+	// catalog columns fill over the course ids, the per-course
+	// progress aggregates ride the user pool over the topic ids.
+	listRows, err := s.Pool.Query(ctx, `
+                SELECT uc.course_id,
+                       EXISTS (SELECT 1 FROM learn.active_course ac
+                                WHERE ac.user_id = uc.user_id AND ac.course_id = uc.course_id)
+                FROM learn.user_courses uc
                 WHERE uc.user_id = $1 ORDER BY uc.added_at DESC`, userID)
 	if err != nil {
 		return nil, err
 	}
-	defer rows.Close()
-	out := []MyCourse{}
-	for rows.Next() {
-		var c MyCourse
-		if err := rows.Scan(&c.ID, &c.Title, &c.Body, &c.TopicCount, &c.DoneCount, &c.BestSum, &c.Active); err != nil {
+	defer listRows.Close()
+	type entry struct {
+		active bool
+		item   MyCourse
+	}
+	ordered := []entry{}
+	var ids []string
+	for listRows.Next() {
+		var id string
+		var active bool
+		if err := listRows.Scan(&id, &active); err != nil {
 			return nil, err
+		}
+		ordered = append(ordered, entry{active: active, item: MyCourse{ID: id}})
+		ids = append(ids, id)
+	}
+	if err := listRows.Err(); err != nil {
+		return nil, err
+	}
+	if len(ids) == 0 {
+		return []MyCourse{}, nil
+	}
+	crows, err := s.Pool.Query(ctx, `
+                SELECT c.course_id, c.title, c.body,
+                       (SELECT COUNT(*) FROM learn.topics t WHERE t.course_id = c.course_id)
+                FROM learn.courses c WHERE c.course_id = ANY($1)`, ids)
+	if err != nil {
+		return nil, err
+	}
+	defer crows.Close()
+	byCourse := map[string]MyCourse{}
+	for crows.Next() {
+		var c MyCourse
+		if err := crows.Scan(&c.ID, &c.Title, &c.Body, &c.TopicCount); err != nil {
+			return nil, err
+		}
+		byCourse[c.ID] = c
+	}
+	if err := crows.Err(); err != nil {
+		return nil, err
+	}
+	tmap, err := s.topicIDsForCourses(ctx, ids)
+	if err != nil {
+		return nil, err
+	}
+	var flat []string
+	for _, list := range tmap {
+		flat = append(flat, list...)
+	}
+	progress := map[string]struct {
+		done int
+		sum  int
+	}{}
+	if len(flat) > 0 {
+		prows, err := s.Pool.Query(ctx, `
+                SELECT topic_id, COALESCE(best_score, 0) FROM learn.progress
+                WHERE user_id = $1 AND topic_id = ANY($2)`, userID, flat)
+		if err == nil {
+			for prows.Next() {
+				var tid string
+				var best int
+				if prows.Scan(&tid, &best) == nil {
+					p := progress[tid]
+					p.done++
+					p.sum += best
+					progress[tid] = p
+				}
+			}
+			prows.Close()
+		}
+	}
+	out := make([]MyCourse, 0, len(ordered))
+	for _, e := range ordered {
+		c := byCourse[e.item.ID]
+		c.Active = e.active
+		for _, tid := range tmap[e.item.ID] {
+			if p, ok := progress[tid]; ok {
+				c.DoneCount += p.done
+				c.BestSum += p.sum
+			}
 		}
 		out = append(out, c)
 	}
-	return out, rows.Err()
+	return out, nil
 }
 
 // SetMyCourses replaces the student's course list (the multi-select
@@ -436,22 +532,43 @@ func (s *Service) CoursePath(ctx context.Context, userID, courseID string) (*Cou
 	if err != nil {
 		return nil, err
 	}
+	// Two-step pool-safe rewrite (topics on the content database,
+	// progress on the user database): the ordered ladder comes from
+	// the content pool, the best scores fill over the topic ids.
 	rows, err := s.Pool.Query(ctx, `
-                SELECT t.topic_id, t.title, t.category, t.seq, t.unit, COALESCE(pr.best_score, -1)
+                SELECT t.topic_id, t.title, t.category, t.seq, t.unit
                 FROM learn.topics t
-                LEFT JOIN learn.progress pr ON pr.topic_id = t.topic_id AND pr.user_id = $1
-                WHERE t.course_id = $2 ORDER BY t.seq`, userID, courseID)
+                WHERE t.course_id = $1 ORDER BY t.seq`, courseID)
 	if err != nil {
 		return nil, err
 	}
 	defer rows.Close()
-	currentSet := false
-	done := 0
+	var ids []string
+	nodeOf := map[string]*TopicNode{}
+	var order []*TopicNode
 	for rows.Next() {
 		var n TopicNode
-		var best int
-		if err := rows.Scan(&n.ID, &n.Title, &n.Category, &n.Seq, &n.Unit, &best); err != nil {
+		if err := rows.Scan(&n.ID, &n.Title, &n.Category, &n.Seq, &n.Unit); err != nil {
 			return nil, err
+		}
+		ids = append(ids, n.ID)
+		nodeOf[n.ID] = &n
+		order = append(order, &n)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	bestByTopic, err := s.progressBestByTopic(ctx, userID, ids)
+	if err != nil {
+		return nil, err
+	}
+	currentSet := false
+	done := 0
+	for _, np := range order {
+		n := *np
+		best, has := bestByTopic[np.ID]
+		if !has {
+			best = -1
 		}
 		switch {
 		case best >= 0:

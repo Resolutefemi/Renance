@@ -339,17 +339,43 @@ func (s *Service) EnsureUnitsAhead(userID, courseID string) {
         ctx, cancel := context.WithTimeout(context.Background(), expandBudget)
         defer cancel()
 
-        var currentUnit int
-        err := s.Pool.QueryRow(ctx, `
-                SELECT COALESCE((
-                  SELECT t.unit FROM learn.topics t
-                  LEFT JOIN learn.progress pr ON pr.topic_id = t.topic_id AND pr.user_id = $1
-                  WHERE t.course_id = $2 AND COALESCE(pr.best_score, -1) < 0
-                  ORDER BY t.seq LIMIT 1), 1)`,
-                userID, courseID).Scan(&currentUnit)
-        if err != nil {
-                return
-        }
+        // Two-step pool-safe rewrite (split-horizon: topics on the
+        // content database, progress on the user database): the first
+        // topic by seq holding NO progress row decides the unit.
+        currentUnit := 1
+        func() {
+                rows, err := s.Pool.Query(ctx, `
+                SELECT topic_id, unit FROM learn.topics
+                WHERE course_id = $1 ORDER BY seq`, courseID)
+                if err != nil {
+                        return
+                }
+                defer rows.Close()
+                var ids []string
+                unitOf := map[string]int{}
+                for rows.Next() {
+                        var id string
+                        var u int
+                        if err := rows.Scan(&id, &u); err != nil {
+                                return
+                        }
+                        ids = append(ids, id)
+                        unitOf[id] = u
+                }
+                if err := rows.Err(); err != nil {
+                        return
+                }
+                done, err := s.progressDoneSet(ctx, userID, ids)
+                if err != nil {
+                        return
+                }
+                for _, id := range ids {
+                        if !done[id] {
+                                currentUnit = unitOf[id]
+                                return
+                        }
+                }
+        }()
         var maxUnit int
         if err := s.Pool.QueryRow(ctx, `SELECT COALESCE(MAX(unit),1) FROM learn.topics WHERE course_id=$1`, courseID).Scan(&maxUnit); err != nil {
                 return
@@ -422,22 +448,38 @@ func (s *Service) refillUnit(ctx context.Context, courseID string, unit int) {
 // prefetchUnitLessons quietly generates the first lessons of a fresh
 // unit (the same look-ahead doctrine as prefetchNext).
 func (s *Service) prefetchUnitLessons(ctx context.Context, courseID string, unit int) {
+        // Two-step pool-safe rewrite (topics on the content database,
+        // the lesson cache on the cache database): take the first
+        // topics of the unit, drop the already-cached ones, warm the
+        // first two of what is left.
         rows, err := s.Pool.Query(ctx, `
                 SELECT topic_id FROM learn.topics
                 WHERE course_id=$1 AND unit=$2
-                  AND NOT EXISTS (SELECT 1 FROM learn.lessons l WHERE l.topic_id = learn.topics.topic_id)
-                ORDER BY seq LIMIT 2`, courseID, unit)
+                ORDER BY seq LIMIT 6`, courseID, unit)
         if err != nil {
                 return
         }
-        var ids []string
+        var candidates []string
         for rows.Next() {
                 var id string
                 if err := rows.Scan(&id); err == nil {
-                        ids = append(ids, id)
+                        candidates = append(candidates, id)
                 }
         }
         rows.Close()
+        if err := rows.Err(); err != nil {
+                return
+        }
+        cached, _ := s.cachedTopicSet(ctx, candidates)
+        var ids []string
+        for _, id := range candidates {
+                if !cached[id] {
+                        ids = append(ids, id)
+                        if len(ids) >= 2 {
+                                break
+                        }
+                }
+        }
         for _, id := range ids {
                 nt, err := s.loadTopicCtx(ctx, id)
                 if err != nil {

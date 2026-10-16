@@ -5,6 +5,8 @@ import (
 	"net/http"
 	"os"
 	"time"
+
+	"renance.dev/study-api/internal/store"
 )
 
 // buildVersion reports the git commit this binary was built from.
@@ -73,10 +75,31 @@ func (s *Server) handleReady(w http.ResponseWriter, r *http.Request) {
 		})
 		return
 	}
-	writeJSON(w, http.StatusOK, map[string]any{
+	// The split-horizon domains report individually: the user
+	// database gates readiness (the split router degrades content and
+	// cache onto it), while a lagging catalog or lesson cache shows
+	// here without failing the probe.
+	report := map[string]any{
 		"status":  "ok",
 		"service": "renance-study-api",
 		"db":      "ok",
 		"time":    time.Now().UTC().Format(time.RFC3339),
-	})
+	}
+	probe := func(name string, pool store.Pool) {
+		if pool == nil {
+			return
+		}
+		pctx, pcancel := context.WithTimeout(context.Background(), 3*time.Second)
+		defer pcancel()
+		if err := pool.Ping(pctx); err != nil {
+			report[name] = "unreachable: " + truncateErr(err)
+			return
+		}
+		report[name] = "ok"
+	}
+	if sp, ok := s.store.Pool.(*store.Split); ok {
+		probe("content", sp.Content)
+		probe("cache", sp.Cache)
+	}
+	writeJSON(w, http.StatusOK, report)
 }

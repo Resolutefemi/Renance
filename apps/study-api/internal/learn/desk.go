@@ -199,20 +199,42 @@ func firstYearLevel(itype string) string {
 	}
 }
 
+// deskCourseSelect is CONTENT-ONLY (the split-horizon router keeps
+// learn.courses/departments/topics on the content database, while
+// learn.user_courses lives on the user database) - the InList flag
+// fills afterwards through fillDeskInList over the page's course ids.
 const deskCourseSelect = `
         c.course_id, c.code, c.title, d.name,
-        (SELECT COUNT(*) FROM learn.topics t WHERE t.course_id = c.course_id),
-        EXISTS (SELECT 1 FROM learn.user_courses uc WHERE uc.user_id = $1 AND uc.course_id = c.course_id)`
+        (SELECT COUNT(*) FROM learn.topics t WHERE t.course_id = c.course_id)`
 
 func scanDeskCourse(rows interface {
 	Scan(...any) error
 }) (DeskCourse, error) {
 	var c DeskCourse
-	if err := rows.Scan(&c.ID, &c.Code, &c.Title, &c.Department, &c.TopicCount, &c.InList); err != nil {
+	if err := rows.Scan(&c.ID, &c.Code, &c.Title, &c.Department, &c.TopicCount); err != nil {
 		return c, err
 	}
 	c.Code = deskCode(c.Code)
 	return c, nil
+}
+
+// fillDeskInList flags the courses already on the student's list
+// (the user-side half of the old deskCourseSelect join).
+func (s *Service) fillDeskInList(ctx context.Context, userID string, items []DeskCourse) {
+	if len(items) == 0 {
+		return
+	}
+	ids := make([]string, len(items))
+	for i, c := range items {
+		ids[i] = c.ID
+	}
+	set, err := s.enrolledSet(ctx, userID, ids)
+	if err != nil {
+		return
+	}
+	for i := range items {
+		items[i].InList = set[items[i].ID]
+	}
 }
 
 // ─── The desk shelves ─────────────────────────────────────────────────────
@@ -254,10 +276,10 @@ func (s *Service) CourseDesk(ctx context.Context, userID string) (*DeskShelves, 
                 FROM learn.courses c JOIN learn.departments d ON d.dept_id = c.dept_id
                 WHERE c.body = 'tertiary' AND c.title <> ''
                   AND ( c.course_id LIKE 'GST %'
-                     OR (c.level = $2 AND c.title ~* $3) )
+                     OR (c.level = $1 AND c.title ~* $2) )
                 ORDER BY c.title,
                          (SELECT COUNT(*) FROM learn.topics t WHERE t.course_id = c.course_id) DESC`,
-		userID, firstYearLevel(itype), generalTitleRxSQL)
+		firstYearLevel(itype), generalTitleRxSQL)
 	if err != nil {
 		return nil, err
 	}
@@ -286,14 +308,15 @@ func (s *Service) CourseDesk(ctx context.Context, userID string) (*DeskShelves, 
 		}
 		return shelf.General[i].Title < shelf.General[j].Title
 	})
+	s.fillDeskInList(ctx, userID, shelf.General)
 
 	// Department shelf: the department's own courses, code order.
 	if dept != "" {
 		drows, err := s.Pool.Query(ctx, `
                         SELECT `+deskCourseSelect+`
                         FROM learn.courses c JOIN learn.departments d ON d.dept_id = c.dept_id
-                        WHERE c.dept_id = $2
-                        ORDER BY c.code, c.title`, userID, dept)
+                        WHERE c.dept_id = $1
+                        ORDER BY c.code, c.title`, dept)
 		if err != nil {
 			return nil, err
 		}
@@ -308,6 +331,7 @@ func (s *Service) CourseDesk(ctx context.Context, userID string) (*DeskShelves, 
 		if err := drows.Err(); err != nil {
 			return nil, err
 		}
+		s.fillDeskInList(ctx, userID, shelf.Departmental)
 	}
 	return shelf, nil
 }
@@ -367,8 +391,8 @@ func (s *Service) OthersCourses(ctx context.Context, userID string, offset, limi
 	rows, err := s.Pool.Query(ctx, `
                 SELECT `+deskCourseSelect+where+`
                 ORDER BY d.name, c.code, c.title
-                LIMIT $5 OFFSET $6`,
-		userID, dept, firstYearLevel(itype), generalTitleRxSQL, limit, offset)
+                LIMIT $4 OFFSET $5`,
+		dept, firstYearLevel(itype), generalTitleRxSQL, limit, offset)
 	if err != nil {
 		return nil, 0, err
 	}
@@ -384,6 +408,7 @@ func (s *Service) OthersCourses(ctx context.Context, userID string, offset, limi
 	if err := rows.Err(); err != nil {
 		return nil, 0, err
 	}
+	s.fillDeskInList(ctx, userID, items)
 	return items, total, nil
 }
 
@@ -405,7 +430,8 @@ func (s *Service) SearchCourses(ctx context.Context, userID, q string) ([]DeskCo
 		args = append(args, v)
 		return fmt.Sprintf("$%d", len(args))
 	}
-	args = append(args, userID) // $1 - the deskCourseSelect userID
+	// The select is content-only now; InList fills via fillDeskInList
+	// after the rank pass (the old $1 was the user_courses EXISTS).
 
 	frag := arg("%" + q + "%")
 	conds := []string{
@@ -503,6 +529,7 @@ func (s *Service) SearchCourses(ctx context.Context, userID, q string) ([]DeskCo
 	if len(out) > 40 {
 		out = out[:40]
 	}
+	s.fillDeskInList(ctx, userID, out)
 	return out, nil
 }
 
@@ -631,7 +658,7 @@ func (s *Service) fuzzyTitleCourses(ctx context.Context, userID, line string) ([
 		args = append(args, v)
 		return fmt.Sprintf("$%d", len(args))
 	}
-	args = append(args, userID) // $1 - the deskCourseSelect userID
+	// The select is content-only; InList fills via fillDeskInList.
 	likes := make([]string, 0, len(tokens))
 	cases := make([]string, 0, len(tokens))
 	for _, t := range tokens {
@@ -659,7 +686,7 @@ func (s *Service) fuzzyTitleCourses(ctx context.Context, userID, line string) ([
 	for rows.Next() {
 		var c DeskCourse
 		var cov int
-		if err := rows.Scan(&c.ID, &c.Code, &c.Title, &c.Department, &c.TopicCount, &c.InList, &cov); err != nil {
+		if err := rows.Scan(&c.ID, &c.Code, &c.Title, &c.Department, &c.TopicCount, &cov); err != nil {
 			return nil, err
 		}
 		c.Code = deskCode(c.Code)
@@ -672,7 +699,11 @@ func (s *Service) fuzzyTitleCourses(ctx context.Context, userID, line string) ([
 			break
 		}
 	}
-	return out, rows.Err()
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	s.fillDeskInList(ctx, userID, out)
+	return out, nil
 }
 
 // AIMatchRequest is the "Find my courses with AI" payload: the student

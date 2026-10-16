@@ -175,11 +175,14 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
 	// unit tests that never touch learn routes - constructing with a
 	// nil pool is fine, dereferencing st was not.
 	var learnPool store.Pool
+	var learnCachePool store.Pool
 	if st != nil {
 		learnPool = st.Pool
+		learnCachePool = st.Cache()
 	}
 	s.learn = &learn.Service{
 		Pool:            learnPool,
+		CachePool:       learnCachePool,
 		Log:             log,
 		Engine:          learn.NewEngine(aiProvider, lib),
 		UnlimitedHearts: cfg.LearnUnlimitedHearts,
