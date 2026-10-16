@@ -45,7 +45,7 @@ import (
 
 func main() {
         var (
-                phase    = flag.String("phase", "all", "all | structure | lessons")
+                phase    = flag.String("phase", "all", "all | structure | lessons | retitles")
                 workers  = flag.Int("workers", 8, "parallel workers")
                 limit    = flag.Int("limit", 0, "max lessons to write this run (0 = until storage cap)")
                 capMB    = flag.Int("cap-mb", 470, "stop when pg_database_size exceeds this many MB")
@@ -90,12 +90,15 @@ func main() {
         log.Printf("synthgen: connected; database is at %d MB (cap %d MB)", dbMB, *capMB)
 
         g := &runner{pool: pool, capMB: *capMB, limit: *limit, course: *course, units: *capUnits}
-        if dbMB >= g.capMB {
+        if *phase != "retitles" && dbMB >= g.capMB {
                 log.Printf("synthgen: storage cap already reached; nothing to do")
                 return
         }
 
         start := time.Now()
+        if *phase == "retitles" {
+                g.runRetitles(ctx, *workers)
+        }
         if *phase == "all" || *phase == "structure" {
                 g.runStructure(ctx, *workers)
         }
@@ -426,6 +429,130 @@ func (r *runner) runLessons(ctx context.Context, workers int) {
         wg.Wait()
         log.Printf("synthgen: lessons phase complete: %d lessons, db %d MB, %s",
                 written.Load(), r.sizeMB(ctx), time.Since(start).Round(time.Second))
+}
+
+/* ------------------------- retitles phase ------------------------- */
+
+// runRetitles repairs topic and unit titles written before the pack
+// routing fix (title first, dept only as fallback). The engine is
+// deterministic, so each course's CORRECT titles are recomputed and
+// only rows that actually differ are UPDATEd in place: no delete and
+// reinsert, no bloat, and correctly routed courses cost one read.
+func (r *runner) runRetitles(ctx context.Context, workers int) {
+        rows, err := r.pool.Query(ctx, `
+                SELECT c.course_id, c.title, COALESCE(d.name,''), COALESCE(d.faculty,'')
+                FROM learn.courses c JOIN learn.departments d ON d.dept_id = c.dept_id
+                WHERE c.body = 'tertiary'
+                ORDER BY c.course_id`)
+        if err != nil {
+                log.Fatalf("synthgen: courses query: %v", err)
+        }
+        defer rows.Close()
+        courses := []courseRow{}
+        for rows.Next() {
+                var c courseRow
+                if err := rows.Scan(&c.id, &c.title, &c.dept, &c.faculty); err == nil {
+                        if r.course == "" || strings.HasPrefix(c.id, r.course) {
+                                courses = append(courses, c)
+                        }
+                }
+        }
+        log.Printf("synthgen: retitles phase over %d courses", len(courses))
+
+        var done, changed atomic.Int64
+        ch := make(chan courseRow, workers*2)
+        var wg sync.WaitGroup
+        for w := 0; w < workers; w++ {
+                wg.Add(1)
+                go func() {
+                        defer wg.Done()
+                        for c := range ch {
+                                n, err := r.retitleCourse(ctx, c)
+                                if err != nil {
+                                        log.Printf("synthgen: retitle %s: %v", c.id, err)
+                                        continue
+                                }
+                                changed.Add(int64(n))
+                                if done.Add(1)%1000 == 0 {
+                                        log.Printf("synthgen: retitles %d/%d courses (%d titles updated, db %d MB)",
+                                                done.Load(), len(courses), changed.Load(), r.sizeMB(ctx))
+                                }
+                        }
+                }()
+        }
+        for _, c := range courses {
+                ch <- c
+        }
+        close(ch)
+        wg.Wait()
+        log.Printf("synthgen: retitles phase complete: %d courses, %d titles updated, db %d MB",
+                done.Load(), changed.Load(), r.sizeMB(ctx))
+}
+
+// retitleCourse recomputes one course's plans and updates the rows
+// whose stored titles differ from the corrected output.
+func (r *runner) retitleCourse(ctx context.Context, c courseRow) (int, error) {
+        // stored titles per unit, one query, seq order maps to plan order
+        stored := map[int][]struct {
+                id, title string
+                unit      int
+        }{}
+        rows, err := r.pool.Query(ctx,
+                `SELECT topic_id, title, unit FROM learn.topics WHERE course_id=$1 AND unit >= 2 ORDER BY unit, seq`, c.id)
+        if err != nil {
+                return 0, err
+        }
+        for rows.Next() {
+                var id, title string
+                var u int
+                if err := rows.Scan(&id, &title, &u); err == nil {
+                        stored[u] = append(stored[u], struct {
+                                id, title string
+                                unit      int
+                        }{id, title, u})
+                }
+        }
+        rows.Close()
+        unitTitles := map[int]string{}
+        urows, err := r.pool.Query(ctx, `SELECT unit, title FROM learn.course_units WHERE course_id=$1`, c.id)
+        if err == nil {
+                for urows.Next() {
+                        var u int
+                        var t string
+                        if err := urows.Scan(&u, &t); err == nil {
+                                unitTitles[u] = t
+                        }
+                }
+                urows.Close()
+        }
+
+        batch := &pgx.Batch{}
+        updates := 0
+        for u := 2; u <= r.units; u++ {
+                title, tops := synth.UnitPlan(c.id, c.title, c.dept, c.faculty, u)
+                if st, ok := unitTitles[u]; ok && st != title {
+                        batch.Queue(`UPDATE learn.course_units SET title=$2 WHERE course_id=$1 AND unit=$3`, c.id, title, u)
+                        updates++
+                }
+                sl := stored[u]
+                for i, tp := range tops {
+                        if i >= len(sl) {
+                                break
+                        }
+                        if sl[i].title != tp.Title {
+                                batch.Queue(`UPDATE learn.topics SET title=$2, category=$3 WHERE topic_id=$1`,
+                                        sl[i].id, tp.Title, tp.Category)
+                                updates++
+                        }
+                }
+        }
+        if updates == 0 {
+                return 0, nil
+        }
+        if err := r.pool.SendBatch(ctx, batch).Close(); err != nil {
+                return updates, err
+        }
+        return updates, nil
 }
 
 func isStorageErr(err error) bool {
