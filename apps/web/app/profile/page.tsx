@@ -39,6 +39,7 @@ interface Profile {
   gradeLevel: string;
   exams: string[];
   targetYear?: number;
+  avatar?: string;
   completed: boolean;
 }
 
@@ -65,6 +66,12 @@ interface GameState {
 
 const EXAM_OPTIONS = ['JAMB', 'WAEC', 'NECO', 'POST-UTME', 'University Modules'] as const;
 const TARGET_YEARS = [2026, 2027, 2028] as const;
+
+// The 50 baked-in avatars (founder directive 2026-10-17). Deterministic
+// filenames: avatar-01.svg .. avatar-50.svg under /avatars.
+const AVATAR_COUNT = 50;
+const AVATARS = Array.from({ length: AVATAR_COUNT }, (_, i) => `avatar-${String(i + 1).padStart(2, '0')}`);
+const avatarSrc = (key: string) => `/avatars/${key}.svg`;
 
 const EXAM_META: Record<string, { title: string; subtitle: string; icon: string }> = {
   JAMB: { title: 'JAMB UTME', subtitle: 'Nigerian tertiary institution admissions', icon: 'school' },
@@ -119,6 +126,16 @@ export default function ProfilePage() {
   // hook declared below the loading early-return crashes the page with
   // "Rendered fewer hooks than expected" the moment /me resolves.
   const [copied, setCopied] = useState(false);
+
+  // The identity editor (founder directive 2026-10-17: the pencil sits
+  // where the level badge used to be): username, display name and one
+  // of the 50 Renance avatars, saved through PUT /me/profile.
+  const [idOpen, setIdOpen] = useState(false);
+  const [idUsername, setIdUsername] = useState('');
+  const [idName, setIdName] = useState('');
+  const [idAvatar, setIdAvatar] = useState('');
+  const [idBusy, setIdBusy] = useState(false);
+  const [idError, setIdError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!getToken()) {
@@ -195,6 +212,56 @@ export default function ProfilePage() {
     window.location.href = `${bp}/login`;
   }
 
+  function openIdentityEditor() {
+    setIdUsername(me?.user.username ?? '');
+    setIdName(profile?.fullName ?? '');
+    setIdAvatar(profile?.avatar ?? '');
+    setIdError(null);
+    setIdOpen(true);
+  }
+
+  async function saveIdentity(e: FormEvent) {
+    e.preventDefault();
+    if (!me || !profile || idBusy) return;
+    const name = idName.trim();
+    if (name.length < 2) {
+      setIdError('Your full name needs at least 2 characters');
+      return;
+    }
+    setIdBusy(true);
+    setIdError(null);
+    try {
+      const res = await api<{ profile: Profile; user?: { username: string } }>('/me/profile', {
+        method: 'PUT',
+        body: {
+          fullName: name,
+          institution: profile.institution,
+          gradeLevel: profile.gradeLevel,
+          exams: profile.exams,
+          targetYear: profile.targetYear ?? null,
+          avatar: idAvatar,
+          ...(idUsername.trim() && idUsername.trim().toLowerCase() !== me.user.username
+            ? { username: idUsername.trim().toLowerCase() }
+            : {}),
+        },
+      });
+      setMe((prev) =>
+        prev
+          ? {
+              ...prev,
+              profile: res.profile,
+              user: res.user ? { ...prev.user, username: res.user.username } : prev.user,
+            }
+          : prev,
+      );
+      setIdBusy(false);
+      setIdOpen(false);
+    } catch (err) {
+      setIdError(err instanceof Error ? err.message.replace('learn: ', '') : 'Could not save your profile');
+      setIdBusy(false);
+    }
+  }
+
   async function saveSchool(e: FormEvent) {
     e.preventDefault();
     if (!profile || schoolBusy) return;
@@ -269,7 +336,6 @@ export default function ProfilePage() {
   const schoolEditable = isFounder || !hasSchool;
 
   const name = profile?.fullName || me.user.username || 'Renance scholar';
-  const level = state?.level ?? 1;
 
   return (
     <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
@@ -281,12 +347,29 @@ export default function ProfilePage() {
           <section className="flex flex-col gap-4 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
             <div className="flex items-center gap-4">
               <div className="relative shrink-0">
-                <div className="flex h-20 w-20 items-center justify-center rounded-full border border-outline-light bg-surface-container-high text-2xl font-semibold text-on-surface">
-                  {name.slice(0, 1).toUpperCase()}
-                </div>
-                <div className="absolute -bottom-1 -right-1 flex items-center justify-center rounded-full border-2 border-card bg-primary px-2 py-0.5 font-mono text-[11px] text-on-primary shadow-sm">
-                  Lvl {level}
-                </div>
+                {profile?.avatar ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={avatarSrc(profile.avatar)}
+                    alt="Your avatar"
+                    className="h-20 w-20 rounded-full border border-outline-light bg-surface-container-high object-cover"
+                  />
+                ) : (
+                  <div className="flex h-20 w-20 items-center justify-center rounded-full border border-outline-light bg-surface-container-high text-2xl font-semibold text-on-surface">
+                    {name.slice(0, 1).toUpperCase()}
+                  </div>
+                )}
+                {/* The pencil (founder directive 2026-10-17: it replaces
+                    the level badge): opens the identity editor - username,
+                    display name and the 50-avatar picker. */}
+                <button
+                  type="button"
+                  onClick={openIdentityEditor}
+                  aria-label="Edit your profile"
+                  className="absolute -bottom-1 -right-1 flex h-8 w-8 items-center justify-center rounded-full border-2 border-card bg-primary text-on-primary shadow-sm transition active:scale-95"
+                >
+                  <span className="material-symbols-outlined text-[16px]">edit</span>
+                </button>
               </div>
               <div className="min-w-0 flex-1">
                 <h2 className="truncate text-2xl font-bold tracking-tight text-on-surface">{name}</h2>
@@ -769,6 +852,119 @@ export default function ProfilePage() {
           </p>
         </div>
       </div>
+
+      {/* The identity editor: username, display name, avatar. */}
+      {idOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 p-0 sm:items-center sm:p-4"
+          onClick={() => !idBusy && setIdOpen(false)}
+          role="presentation"
+        >
+          <form
+            onSubmit={saveIdentity}
+            onClick={(e) => e.stopPropagation()}
+            className="flex max-h-[92dvh] w-full max-w-md flex-col overflow-hidden rounded-t-2xl bg-card shadow-xl sm:rounded-2xl"
+          >
+            <div className="flex items-center gap-2 border-b border-outline-variant/40 px-4 py-3.5">
+              <span className="material-symbols-outlined text-[20px] text-primary-ink">edit</span>
+              <h3 className="text-[15px] font-bold text-on-surface">Edit profile</h3>
+              <button
+                type="button"
+                onClick={() => !idBusy && setIdOpen(false)}
+                aria-label="Close"
+                className="ml-auto flex h-8 w-8 items-center justify-center rounded-full text-on-surface-variant transition hover:bg-surface-container"
+              >
+                <span className="material-symbols-outlined text-[18px]">close</span>
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-y-auto px-4 py-4">
+              <p className="mb-2 font-mono text-xs uppercase tracking-wider text-on-surface-variant">
+                Pick your avatar
+              </p>
+              <div className="grid grid-cols-5 gap-2 sm:grid-cols-6">
+                {AVATARS.map((a) => {
+                  const active = idAvatar === a;
+                  return (
+                    <button
+                      key={a}
+                      type="button"
+                      onClick={() => setIdAvatar(active ? '' : a)}
+                      aria-label={`Choose avatar ${a}`}
+                      className={`relative overflow-hidden rounded-full transition ${
+                        active ? 'ring-2 ring-primary ring-offset-2 ring-offset-card' : 'opacity-90 hover:opacity-100'
+                      }`}
+                    >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={avatarSrc(a)} alt="" className="aspect-square w-full object-cover" />
+                      {active && (
+                        <span className="absolute bottom-0 right-0 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-on-primary">
+                          <span className="material-symbols-outlined text-[11px] leading-none">check</span>
+                        </span>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+
+              <label className="mt-4 block">
+                <span className="mb-1 block font-mono text-xs uppercase tracking-wider text-on-surface-variant">
+                  Full name
+                </span>
+                <input
+                  value={idName}
+                  onChange={(e) => setIdName(e.target.value)}
+                  maxLength={120}
+                  className="w-full rounded-lg border border-outline-variant bg-surface-container px-3.5 py-2.5 text-sm text-on-surface focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/40"
+                  placeholder="Your name"
+                />
+              </label>
+
+              <label className="mt-3 block">
+                <span className="mb-1 block font-mono text-xs uppercase tracking-wider text-on-surface-variant">
+                  Username
+                </span>
+                <div className="flex items-center rounded-lg border border-outline-variant bg-surface-container px-3.5 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/40">
+                  <span className="text-sm text-text-secondary">@</span>
+                  <input
+                    value={idUsername}
+                    onChange={(e) => setIdUsername(e.target.value.toLowerCase().replace(/[^a-z0-9_]/g, ''))}
+                    maxLength={24}
+                    className="w-full bg-transparent py-2.5 pl-0.5 text-sm text-on-surface focus:outline-none"
+                    placeholder="your_handle"
+                  />
+                </div>
+                <span className="mt-1 block text-[11.5px] text-text-secondary">
+                  3-24 characters: lowercase letters, numbers, underscores.
+                </span>
+              </label>
+
+              {idError && (
+                <p className="mt-3 rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">{idError}</p>
+              )}
+            </div>
+
+            <div className="flex gap-2 border-t border-outline-variant/40 px-4 py-3.5">
+              <button
+                type="button"
+                onClick={() => setIdOpen(false)}
+                disabled={idBusy}
+                className="rounded-lg px-4 py-3 text-sm font-medium text-on-surface-variant transition hover:bg-surface-container"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                disabled={idBusy || idName.trim().length < 2}
+                className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-primary py-3 text-sm font-semibold text-on-primary transition-transform active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                {idBusy && <RenanceMark size={20} state="busy" />}
+                {idBusy ? 'Saving…' : 'Save profile'}
+              </button>
+            </div>
+          </form>
+        </div>
+      )}
 
       <SideNav />
       <BottomNav />

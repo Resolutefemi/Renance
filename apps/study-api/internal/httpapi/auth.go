@@ -20,6 +20,9 @@ import (
 // (mobile) keep posting username + password and keep working unchanged.
 var usernameRE = regexp.MustCompile(`^[a-z0-9_]{3,24}$`)
 
+// avatarKeyRE guards the 50 baked-in avatar keys ('avatar-01'..'avatar-50').
+var avatarKeyRE = regexp.MustCompile(`^avatar-(?:0[1-9]|[1-4][0-9]|50)$`)
+
 // Practical RFC-ish gate: one @, a dot in the domain, no spaces/controls.
 // Deliverability is not our job - a typo'd address still yields a working
 // account, it just cannot receive mail yet.

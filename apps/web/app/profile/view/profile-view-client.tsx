@@ -23,6 +23,7 @@ import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
 import { LogoActivityIndicator } from '@/components/renance-logo';
 import BlueTick from '@/components/blue-tick';
+import { avatarUrl } from '@/lib/social';
 import { LeagueBadge, ProgressBar } from '@/components/learn/bits';
 import { getStoredUser } from '@/lib/session';
 import {
@@ -122,8 +123,13 @@ function PublicProfileView() {
           {/* Header -------------------------------------------------- */}
           <section className="learn-tile flex flex-col items-center gap-3 rounded-2xl border-2 border-outline-variant bg-card px-4 py-6 text-center">
             <div className="relative">
-              <span className="flex h-20 w-20 items-center justify-center rounded-full bg-primary text-[30px] font-black text-on-primary">
-                {profile.name.slice(0, 1).toUpperCase()}
+              <span className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-primary text-[30px] font-black text-on-primary">
+                {avatarUrl(profile.avatar) ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={avatarUrl(profile.avatar)!} alt="" className="h-full w-full object-cover" />
+                ) : (
+                  profile.name.slice(0, 1).toUpperCase()
+                )}
               </span>
               <span className="absolute -bottom-1 -right-1 rounded-full border-2 border-card bg-primary px-2 py-0.5 font-mono text-[11px] font-bold text-on-primary">
                 Lvl {profile.level}

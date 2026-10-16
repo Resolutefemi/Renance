@@ -28,6 +28,7 @@ import { LearnStatChips, useLearnStats } from '@/components/learn/learn-stats';
 import DailyComboModal, { COMBO_BODIES } from '@/components/daily-combo-modal';
 import FeatureTour, { PastQuestionsTip } from '@/components/feature-tour';
 import AppearanceModal, { needsAppearanceIntro } from '@/components/appearance-modal';
+import WhatsAppChannelModal from '@/components/whatsapp-channel-modal';
 
 interface Profile {
   fullName: string;
@@ -658,6 +659,9 @@ export default function DashboardPage() {
           feature tour waits behind it, and the unsupported-school tip
           waits behind both, so the three never stack. */}
       <AppearanceModal open={appearanceOpen} onClose={() => setAppearanceOpen(false)} />
+      {/* The founder's WhatsApp channel sheet: stamped by every login/signup,
+          shown once per session until the student taps Join. */}
+      <WhatsAppChannelModal />
       <FeatureTour paused={appearanceOpen} />
       <PastQuestionsTip
         paused={appearanceOpen}

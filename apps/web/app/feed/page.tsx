@@ -31,6 +31,7 @@ import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
 import { LogoActivityIndicator } from '@/components/renance-logo';
 import BlueTick from '@/components/blue-tick';
+import { avatarUrl } from '@/lib/social';
 import { getStoredUser } from '@/lib/session';
 import {
   type SocialComment,
@@ -268,9 +269,14 @@ export default function FeedPage() {
                   <Link
                     href={`/profile/view/?u=${encodeURIComponent(author.username)}`}
                     aria-label={`${author.name} on their profile`}
-                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-container-high text-[15px] font-bold text-on-surface transition hover:ring-2 hover:ring-primary"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-surface-container-high text-[15px] font-bold text-on-surface transition hover:ring-2 hover:ring-primary"
                   >
-                    {author.name.slice(0, 1).toUpperCase()}
+                    {avatarUrl(author.avatar) ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={avatarUrl(author.avatar)!} alt="" className="h-full w-full object-cover" />
+                    ) : (
+                      author.name.slice(0, 1).toUpperCase()
+                    )}
                   </Link>
                 ) : (
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-[15px] font-bold text-on-primary">R</span>
@@ -345,9 +351,14 @@ export default function FeedPage() {
                     <div key={c.id} className="flex items-start gap-2.5 py-2">
                       <Link
                         href={`/profile/view/?u=${encodeURIComponent(c.author.username)}`}
-                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-surface-container-high text-[12.5px] font-bold text-on-surface"
+                        className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-full bg-surface-container-high text-[12.5px] font-bold text-on-surface"
                       >
-                        {c.author.name.slice(0, 1).toUpperCase()}
+                        {avatarUrl(c.author.avatar) ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img src={avatarUrl(c.author.avatar)!} alt="" className="h-full w-full object-cover" />
+                        ) : (
+                          c.author.name.slice(0, 1).toUpperCase()
+                        )}
                       </Link>
                       <div className="min-w-0 flex-1 rounded-xl bg-surface-container px-3 py-2">
                         <p className="text-[12.5px] font-extrabold text-on-surface">

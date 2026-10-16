@@ -17,6 +17,12 @@ export interface SocialAuthor {
   username: string;
   name: string;
   premium: boolean;
+  avatar?: string;
+}
+
+/** The public URL of one of the 50 baked-in avatars. */
+export function avatarUrl(key?: string): string | null {
+  return key ? `/avatars/${key}.svg` : null;
 }
 
 export interface SocialPost {
@@ -61,6 +67,7 @@ export interface PublicProfile {
   username: string;
   name: string;
   premium: boolean;
+  avatar?: string;
   level: number;
   xp: number;
   streak: number;
@@ -82,6 +89,7 @@ export interface FollowRow {
   username: string;
   name: string;
   premium: boolean;
+  avatar?: string;
   followsYou: boolean;
   following: boolean;
 }

@@ -499,6 +499,7 @@ type Profile struct {
         Exams       []string  `json:"exams"`
         Subjects    []string  `json:"subjects"`
         TargetYear  *int      `json:"targetYear,omitempty"`
+        Avatar      string    `json:"avatar,omitempty"` // 'avatar-17' or '' for the initial-letter avatar
         Completed   bool      `json:"completed"`
         UpdatedAt   time.Time `json:"-"`
 }
@@ -524,8 +525,8 @@ func (s *Store) UpsertProfile(ctx context.Context, userID string, p *Profile) (*
         }
         out := &Profile{}
         err = s.Pool.QueryRow(ctx, `
-                INSERT INTO study.profiles (user_id, full_name, institution, grade_level, exams, subjects, target_year, completed, updated_at)
-                VALUES ($1, $2, $3, $4, $5::jsonb, $6::jsonb, $7, true, now())
+                INSERT INTO study.profiles (user_id, full_name, institution, grade_level, exams, subjects, target_year, avatar, completed, updated_at)
+                VALUES ($1, $2, $3, $4, $5::jsonb, $6::jsonb, $7, $8, true, now())
                 ON CONFLICT (user_id) DO UPDATE
                 SET full_name   = EXCLUDED.full_name,
                     institution = EXCLUDED.institution,
@@ -533,11 +534,12 @@ func (s *Store) UpsertProfile(ctx context.Context, userID string, p *Profile) (*
                     exams       = EXCLUDED.exams,
                     subjects    = EXCLUDED.subjects,
                     target_year = EXCLUDED.target_year,
+                    avatar      = EXCLUDED.avatar,
                     completed   = true,
                     updated_at  = now()
-                RETURNING full_name, institution, grade_level, exams, subjects, target_year, completed, updated_at`,
-                userID, p.FullName, p.Institution, p.GradeLevel, string(examsJSON), string(subjectsJSON), p.TargetYear,
-        ).Scan(&out.FullName, &out.Institution, &out.GradeLevel, &examsJSON, &subjectsJSON, &out.TargetYear, &out.Completed, &out.UpdatedAt)
+                RETURNING full_name, institution, grade_level, exams, subjects, target_year, avatar, completed, updated_at`,
+                userID, p.FullName, p.Institution, p.GradeLevel, string(examsJSON), string(subjectsJSON), p.TargetYear, p.Avatar,
+        ).Scan(&out.FullName, &out.Institution, &out.GradeLevel, &examsJSON, &subjectsJSON, &out.TargetYear, &out.Avatar, &out.Completed, &out.UpdatedAt)
         if err != nil {
                 return nil, fmt.Errorf("store: upsert profile: %w", err)
         }
@@ -554,9 +556,9 @@ func (s *Store) ProfileByUser(ctx context.Context, userID string) (*Profile, err
         var examsJSON, subjectsJSON []byte
         p := &Profile{}
         err := s.Pool.QueryRow(ctx, `
-                SELECT full_name, institution, grade_level, exams, subjects, target_year, completed, updated_at
+                SELECT full_name, institution, grade_level, exams, subjects, target_year, avatar, completed, updated_at
                 FROM study.profiles WHERE user_id = $1`, userID,
-        ).Scan(&p.FullName, &p.Institution, &p.GradeLevel, &examsJSON, &subjectsJSON, &p.TargetYear, &p.Completed, &p.UpdatedAt)
+        ).Scan(&p.FullName, &p.Institution, &p.GradeLevel, &examsJSON, &subjectsJSON, &p.TargetYear, &p.Avatar, &p.Completed, &p.UpdatedAt)
         if errors.Is(err, pgx.ErrNoRows) {
                 return nil, nil
         }

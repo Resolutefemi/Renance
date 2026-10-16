@@ -4,6 +4,7 @@ import { FormEvent, useCallback, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { ApiError, api, authWithGoogle } from '@/lib/api';
 import { nextPath, setSession } from '@/lib/session';
+import { stampWhatsAppPrompt } from '@/components/whatsapp-channel-modal';
 import { schoolRegister, setActiveSchool } from '@/lib/school';
 import { RenanceMark } from '@/components/renance-logo';
 import { GoogleSignIn } from '@/components/google-signin';
@@ -55,6 +56,10 @@ export default function RegisterPage() {
   const afterAppearanceRef = useRef<(() => void) | null>(null);
 
   const finishStudentSignup = (next: () => void) => {
+    // Founder directive 2026-10-17: new accounts get the WhatsApp
+    // channel sheet on first landing, and every login after until they
+    // join (see whatsapp-channel-modal.tsx).
+    stampWhatsAppPrompt();
     if (needsAppearanceIntro()) {
       afterAppearanceRef.current = next;
       setAppearanceOpen(true);

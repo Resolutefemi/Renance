@@ -26,6 +26,9 @@ type Author struct {
 	Username string `json:"username"`
 	Name     string `json:"name"`
 	Premium  bool   `json:"premium"`
+	// Avatar is the chosen Renance avatar key ('avatar-17'), empty when
+	// the account still wears the classic initial-letter avatar.
+	Avatar string `json:"avatar,omitempty"`
 }
 
 // Post is one feed row.
@@ -204,7 +207,7 @@ func Follow(ctx context.Context, pool store.Pool, viewerID, subjectID string) (b
 // ─── Reading ──────────────────────────────────────────────────────────────
 
 func authorSel(u, p string) string {
-	return fmt.Sprintf(`%s.id, %s.username, COALESCE(%s.full_name,''), COALESCE(%s.account_kind,'') = 'premium'`, u, u, p, u)
+	return fmt.Sprintf(`%s.id, %s.username, COALESCE(%s.full_name,''), COALESCE(%s.account_kind,'') = 'premium', COALESCE(%s.avatar,'')`, u, u, p, u, p)
 }
 
 // Feed reads one page of the global feed (newest first). before==0 means
@@ -286,7 +289,7 @@ func scanPost(row interface{ Scan(...any) error }, _ string) (*Post, error) {
 	var meta []byte
 	var createdAt time.Time
 	if err := row.Scan(&p.ID, &p.Kind, &p.Body, &meta, &createdAt,
-		&author.ID, &author.Username, &author.Name, &author.Premium,
+		&author.ID, &author.Username, &author.Name, &author.Premium, &author.Avatar,
 		&p.Likes, &p.Comments, &p.LikedByMe, &p.Mine); err != nil {
 		return nil, err
 	}
@@ -319,7 +322,7 @@ func Comments(ctx context.Context, pool store.Pool, viewer string, postID int64)
 		var author Author
 		var createdAt time.Time
 		if err := rows.Scan(&c.ID, &c.Body, &createdAt,
-			&author.ID, &author.Username, &author.Name, &author.Premium, &c.Mine); err != nil {
+			&author.ID, &author.Username, &author.Name, &author.Premium, &author.Avatar, &c.Mine); err != nil {
 			return nil, err
 		}
 		if author.Name == "" {
@@ -349,11 +352,11 @@ func LoadPublicProfile(ctx context.Context, pool store.Pool, viewer, username st
 	p := &PublicProfile{}
 	var joined time.Time
 	err := pool.QueryRow(ctx, `
-                SELECT u.id, u.username, COALESCE(pr.full_name,''), COALESCE(u.account_kind,'') = 'premium', u.created_at
+                SELECT u.id, u.username, COALESCE(pr.full_name,''), COALESCE(u.account_kind,'') = 'premium', COALESCE(pr.avatar,''), u.created_at
                 FROM study.users u
                 LEFT JOIN study.profiles pr ON pr.user_id = u.id
                 WHERE lower(u.username) = lower($1)`, username).
-		Scan(&p.ID, &p.Username, &p.Name, &p.Premium, &joined)
+		Scan(&p.ID, &p.Username, &p.Name, &p.Premium, &p.Avatar, &joined)
 	if err != nil {
 		return nil, err
 	}
@@ -511,7 +514,7 @@ func LoadConnections(ctx context.Context, pool store.Pool, viewer string) (*Conn
 	defer followers.Close()
 	for followers.Next() {
 		var r FollowRow
-		if err := followers.Scan(&r.ID, &r.Username, &r.Name, &r.Premium, &r.FollowsYou, &r.Following); err != nil {
+		if err := followers.Scan(&r.ID, &r.Username, &r.Name, &r.Premium, &r.Avatar, &r.FollowsYou, &r.Following); err != nil {
 			return nil, err
 		}
 		if r.Name == "" {
@@ -534,7 +537,7 @@ func LoadConnections(ctx context.Context, pool store.Pool, viewer string) (*Conn
 	defer following.Close()
 	for following.Next() {
 		var r FollowRow
-		if err := following.Scan(&r.ID, &r.Username, &r.Name, &r.Premium, &r.FollowsYou, &r.Following); err != nil {
+		if err := following.Scan(&r.ID, &r.Username, &r.Name, &r.Premium, &r.Avatar, &r.FollowsYou, &r.Following); err != nil {
 			return nil, err
 		}
 		if r.Name == "" {

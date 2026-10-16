@@ -18,6 +18,7 @@ import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
 import { LogoActivityIndicator } from '@/components/renance-logo';
 import BlueTick from '@/components/blue-tick';
+import { avatarUrl } from '@/lib/social';
 import { getStoredUser } from '@/lib/session';
 import { type Connections, type FollowRow, fetchConnections, toggleFollow } from '@/lib/social';
 
@@ -139,9 +140,14 @@ export default function ProfileSocialPage() {
               <Link
                 href={`/profile/view/?u=${encodeURIComponent(row.username)}`}
                 aria-label={`${row.name} on their profile`}
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-surface-container-high text-[16px] font-bold text-on-surface transition hover:ring-2 hover:ring-primary"
+                className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-surface-container-high text-[16px] font-bold text-on-surface transition hover:ring-2 hover:ring-primary"
               >
-                {row.name.slice(0, 1).toUpperCase()}
+                {avatarUrl(row.avatar) ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={avatarUrl(row.avatar)!} alt="" className="h-full w-full object-cover" />
+                ) : (
+                  row.name.slice(0, 1).toUpperCase()
+                )}
               </Link>
               <div className="min-w-0 flex-1">
                 <Link href={`/profile/view/?u=${encodeURIComponent(row.username)}`} className="flex items-center gap-1.5">

@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { ApiError, api, authWithGoogle } from '@/lib/api';
 import { clearSession, nextPath, setSession } from '@/lib/session';
+import { stampWhatsAppPrompt } from '@/components/whatsapp-channel-modal';
 import { chooseSchool, schoolMe } from '@/lib/school';
 import { RenanceMark } from '@/components/renance-logo';
 import { GoogleSignIn } from '@/components/google-signin';
@@ -40,6 +41,10 @@ export default function LoginPage() {
   }, []);
 
   const finishLogin = (next: () => void) => {
+    // Founder directive 2026-10-17: every login pings the WhatsApp
+    // channel sheet (until the student actually joins - the Join button
+    // is the only thing that silences it forever).
+    stampWhatsAppPrompt();
     next();
   };
 

@@ -119,30 +119,11 @@ export default function ShopPanel({ id }: { id?: string }) {
                 )}
               </div>
             ))}
-
-            {/* Super trial */}
-            <div className="learn-tile flex items-center gap-3 rounded-2xl border-2 border-macaw-ring bg-gradient-to-br from-macaw to-macaw-dark p-4 text-white">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/20">
-                <span className="material-symbols-outlined text-[24px]">workspace_premium</span>
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="text-[14px] font-black">{shop.superTrial.title}</p>
-                <p className="text-[11.5px] font-bold leading-snug text-white/90">{shop.superTrial.desc}</p>
-              </div>
-              {shop.superTrial.soldOut ? (
-                <span className="shrink-0 rounded-xl border-2 border-white/60 bg-white/20 px-3 py-1.5 text-[12px] font-black">Active</span>
-              ) : (
-                <button
-                  type="button"
-                  onClick={() => void buy('super_trial')}
-                  disabled={buying === 'super_trial'}
-                  className="key-btn shrink-0 border-white bg-white px-3 text-[12.5px] text-macaw-dark"
-                >
-                  Free trial
-                </button>
-              )}
-            </div>
           </div>
+
+          {/* The Super Renance trial card is RETIRED (founder directive
+              2026-10-17: "remove that super Renance too from the shop").
+              Premium returns with the paid subscription later. */}
 
           <p className="px-1 text-center text-[11.5px] font-bold text-on-surface-variant">
             Gems come from quests, topic chests, first clears and perfect scores. Unlimited hearts stay on for everyone at launch.
