@@ -369,8 +369,8 @@ func TestBotFillsAfterWaitAndDrawsWhenPerfect(t *testing.T) {
 	if botRow.Score != 5 || humanRow.Score != 2 {
 		t.Fatalf("scores bot=%d human=%d, want bot 5 (q1+q2) human 2 (q1)", botRow.Score, humanRow.Score)
 	}
-	if botRow.UserID[:4] != "bot:" {
-		t.Fatalf("bot userID %q lacks prefix", botRow.UserID)
+	if botRow.UserID != "" {
+		t.Fatalf("bot userID %q must be empty (bots own no user row - a raw bot id here 22P02-crashed every bot duel's save)", botRow.UserID)
 	}
 }
 

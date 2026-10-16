@@ -106,20 +106,24 @@ func arenaSink(st *store.Store) arena.MatchSink {
 		// REN wallet (founder rule): a duel won pays 1 REN coin. Best
 		// effort: a dropped coin never breaks the match record, and the
 		// entitlement row lazily exists for anyone who fought a duel.
-		if r.Status == "completed" && r.WinnerID != "" {
-			if _, err := st.EnsureEntitlement(ctx, r.WinnerID); err == nil {
-				if err := st.AddCoins(ctx, r.WinnerID, plans.ArenaWinCoins); err != nil {
-					slog.Error("arena: ren coin award", "user", r.WinnerID, "err", err)
+		// Status is what the hub reports ("finished" | "aborted") - the
+		// old "completed" check never matched, so no coin EVER paid.
+		winnerID := r.WinnerID
+		if strings.HasPrefix(winnerID, "bot:") {
+			winnerID = "" // bots hold no wallet and never post
+		}
+		if r.Status == "finished" && winnerID != "" {
+			if _, err := st.EnsureEntitlement(ctx, winnerID); err == nil {
+				if err := st.AddCoins(ctx, winnerID, plans.ArenaWinCoins); err != nil {
+					slog.Error("arena: ren coin award", "user", winnerID, "err", err)
 				}
 			}
 			// Feed milestone (founder directive 2026-10-14): a duel
 			// won is feed-worthy. The key rides the match id, so
-			// every win announces exactly once. Bots never post.
-			if !strings.HasPrefix(r.WinnerID, "bot:") {
-				social.Milestone(ctx, st.Pool, r.WinnerID, "arena_"+r.MatchID,
-					"just won an arena duel! ⚔️",
-					map[string]any{"matchId": r.MatchID, "body": r.Body})
-			}
+			// every win announces exactly once.
+			social.Milestone(ctx, st.Pool, winnerID, "arena_"+r.MatchID,
+				"just won an arena duel! ⚔️",
+				map[string]any{"matchId": r.MatchID, "body": r.Body})
 		}
 		return nil
 	})

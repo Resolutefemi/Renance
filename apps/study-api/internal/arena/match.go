@@ -4,6 +4,7 @@ import (
 	"context"
 	"log/slog"
 	"math/rand"
+	"strings"
 	"time"
 )
 
@@ -332,8 +333,12 @@ func (m *liveMatch) persist(status, winner string) {
 		Status: status, WinnerID: winner,
 	}
 	for _, p := range []*Player{m.a, m.b} {
+		uid := p.UserID
+		if strings.HasPrefix(uid, botID) {
+			uid = "" // the house bot owns no user row (store contract: "UserID is '' for the house bot")
+		}
 		r.Participants = append(r.Participants, ParticipantResult{
-			UserID:   p.UserID,
+			UserID:   uid,
 			Username: p.Username,
 			Score:    m.scores[p.UserID],
 			Correct:  m.correct[p.UserID],

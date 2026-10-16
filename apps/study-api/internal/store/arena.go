@@ -2,6 +2,7 @@ package store
 
 import (
 	"context"
+	"strings"
 	"time"
 )
 
@@ -46,13 +47,13 @@ func (s *Store) SaveArenaMatch(ctx context.Context, m ArenaMatchRecord) error {
 	}
 
 	_, err = tx.Exec(ctx, `
-		INSERT INTO arena.matches (id, code, body, status, winner_user_id, player_count, finished_at)
-		VALUES ($1, $2, $3, $4, NULLIF($5, '')::uuid, $6, now())
-		ON CONFLICT (id) DO UPDATE SET
-			status = EXCLUDED.status,
-			winner_user_id = EXCLUDED.winner_user_id,
-			finished_at = EXCLUDED.finished_at
-	`, m.MatchID, m.Code, m.Body, m.Status, winner, len(m.Participants))
+                INSERT INTO arena.matches (id, code, body, status, winner_user_id, player_count, finished_at)
+                VALUES ($1, $2, $3, $4, NULLIF($5, '')::uuid, $6, now())
+                ON CONFLICT (id) DO UPDATE SET
+                        status = EXCLUDED.status,
+                        winner_user_id = EXCLUDED.winner_user_id,
+                        finished_at = EXCLUDED.finished_at
+        `, m.MatchID, m.Code, m.Body, m.Status, winner, len(m.Participants))
 	if err != nil {
 		return err
 	}
@@ -62,12 +63,16 @@ func (s *Store) SaveArenaMatch(ctx context.Context, m ArenaMatchRecord) error {
 		return err
 	}
 	for _, p := range m.Participants {
+		uid := p.UserID
+		if strings.HasPrefix(uid, "bot:") {
+			uid = "" // defensive: a bot id here once 22P02-crashed every bot duel's save
+		}
 		if _, err := tx.Exec(ctx, `
-			INSERT INTO arena.participants
-				(match_id, user_id, username, score, correct, answered, is_bot, finished_at)
-			VALUES ($1, NULLIF($2, '')::uuid, $3, $4, $5, $6, $7, now())
-			ON CONFLICT (match_id, user_id) DO NOTHING
-		`, m.MatchID, p.UserID, p.Username, p.Score, p.Correct, p.Answered, p.IsBot); err != nil {
+                        INSERT INTO arena.participants
+                                (match_id, user_id, username, score, correct, answered, is_bot, finished_at)
+                        VALUES ($1, NULLIF($2, '')::uuid, $3, $4, $5, $6, $7, now())
+                        ON CONFLICT (match_id, user_id) DO NOTHING
+                `, m.MatchID, uid, p.Username, p.Score, p.Correct, p.Answered, p.IsBot); err != nil {
 			return err
 		}
 	}
@@ -94,21 +99,21 @@ func (s *Store) ArenaHistory(ctx context.Context, userID string, limit int) ([]A
 		limit = 20
 	}
 	rows, err := s.Pool.Query(ctx, `
-		SELECT p.match_id, m.code, m.body, m.status,
-		       p.score, p.correct, p.answered,
-		       COALESCE(m.winner_user_id = p.user_id, false) AS won,
-		       COALESCE(opp.username, '')                    AS opponent,
-		       m.finished_at
-		FROM arena.participants p
-		JOIN arena.matches m
-		  ON m.id = p.match_id
-		LEFT JOIN arena.participants opp
-		  ON opp.match_id = p.match_id
-		 AND opp.user_id IS DISTINCT FROM p.user_id
-		WHERE p.user_id = $1
-		ORDER BY m.finished_at DESC NULLS LAST
-		LIMIT $2
-	`, userID, limit)
+                SELECT p.match_id, m.code, m.body, m.status,
+                       p.score, p.correct, p.answered,
+                       COALESCE(m.winner_user_id = p.user_id, false) AS won,
+                       COALESCE(opp.username, '')                    AS opponent,
+                       m.finished_at
+                FROM arena.participants p
+                JOIN arena.matches m
+                  ON m.id = p.match_id
+                LEFT JOIN arena.participants opp
+                  ON opp.match_id = p.match_id
+                 AND opp.user_id IS DISTINCT FROM p.user_id
+                WHERE p.user_id = $1
+                ORDER BY m.finished_at DESC NULLS LAST
+                LIMIT $2
+        `, userID, limit)
 	if err != nil {
 		return nil, err
 	}
