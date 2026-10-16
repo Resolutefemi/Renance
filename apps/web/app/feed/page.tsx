@@ -37,15 +37,51 @@ import {
   type SocialPost,
   addComment,
   fetchComments,
+  fetchConnections,
   fetchFeed,
   milestoneVisual,
   timeAgo,
+  toggleFollow,
   toggleLike,
 } from '@/lib/social';
 
 export default function FeedPage() {
   const router = useRouter();
   const [posts, setPosts] = useState<SocialPost[] | null>(null);
+  // Follow state for the feed's author chips (founder 2026-10-17):
+  // seeded from the connections list, flipped optimistically.
+  const [followed, setFollowed] = useState<Set<string>>(new Set());
+  const [followBusy, setFollowBusy] = useState<string | null>(null);
+
+  const flipFollow = useCallback(async (username: string) => {
+    setFollowBusy(username);
+    const wasFollowing = followed.has(username);
+    // Optimistic flip; the API is the truth on settle.
+    setFollowed((prev) => {
+      const next = new Set(prev);
+      if (wasFollowing) next.delete(username);
+      else next.add(username);
+      return next;
+    });
+    try {
+      const res = await toggleFollow(username);
+      setFollowed((prev) => {
+        const next = new Set(prev);
+        if (res.following) next.add(username);
+        else next.delete(username);
+        return next;
+      });
+    } catch {
+      setFollowed((prev) => {
+        const next = new Set(prev);
+        if (wasFollowing) next.add(username);
+        else next.delete(username);
+        return next;
+      });
+    } finally {
+      setFollowBusy(null);
+    }
+  }, [followed]);
   const [offline, setOffline] = useState(false);
   const [busy, setBusy] = useState('');
   const [commentsFor, setCommentsFor] = useState<number | null>(null);
@@ -75,6 +111,10 @@ export default function FeedPage() {
       return;
     }
     load();
+    // Seed the follow chips with who I already follow.
+    fetchConnections()
+      .then((c) => setFollowed(new Set(c.following.map((f) => f.username))))
+      .catch(() => undefined);
   }, [load, router]);
 
   // The quiet re-sync: while offline, poll every 8s until the feed
@@ -249,6 +289,17 @@ export default function FeedPage() {
                   )}
                   <p className="text-[11.5px] font-bold text-on-surface-variant">{timeAgo(post.createdAtMs)}</p>
                 </div>
+                {/* Founder directive (2026-10-17): follow straight from
+                    the feed - the complete follow/unfollow loop without
+                    detouring through the profile. */}
+                {author && (
+                  <FollowChip
+                    username={author.username}
+                    followedSet={followed}
+                    onToggle={flipFollow}
+                    busy={followBusy === author.username}
+                  />
+                )}
               </div>
               <p className="whitespace-pre-wrap px-4 py-3 text-[15px] font-semibold leading-relaxed text-on-surface">
                 {post.body}
@@ -337,5 +388,32 @@ export default function FeedPage() {
       </main>
       <BottomNav />
     </div>
+  );
+}
+
+/** Compact follow/unfollow chip on a feed post's author row. */
+function FollowChip({
+  username, followedSet, onToggle, busy,
+}: {
+  username: string;
+  followedSet: Set<string>;
+  onToggle: (username: string) => void;
+  busy: boolean;
+}) {
+  const isFollowing = followedSet.has(username);
+  return (
+    <button
+      type="button"
+      onClick={() => onToggle(username)}
+      disabled={busy}
+      aria-pressed={isFollowing}
+      className={`flex h-8 shrink-0 items-center rounded-full px-3.5 text-[12px] font-extrabold transition disabled:opacity-60 ${
+        isFollowing
+          ? 'border-2 border-outline-variant bg-card text-on-surface-variant'
+          : 'bg-primary text-on-primary'
+      }`}
+    >
+      {isFollowing ? 'Following' : 'Follow'}
+    </button>
   );
 }

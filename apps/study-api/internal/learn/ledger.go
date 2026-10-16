@@ -499,6 +499,8 @@ type LeagueEntry struct {
 type LeagueBoard struct {
         League       string        `json:"league"`
         LeagueIndex  int           `json:"leagueIndex"`
+        Leagues      []string      `json:"leagues"`
+        Viewing      bool          `json:"viewing"`
         Entries      []LeagueEntry `json:"entries"`
         EndsInMs     int64         `json:"endsInMs"`
         PromotedCut  int           `json:"promotedCut"`
@@ -598,7 +600,12 @@ func (s *Service) leagueIndex(ctx context.Context, userID string) int {
 // this week's league (founder directive 2026-10-14: the synthetic rival
 // rows are gone - a small board is simply a small board), the
 // promote/demote zones and the countdown.
-func (s *Service) League(ctx context.Context, userID string) (*LeagueBoard, error) {
+//
+// viewLeague (founder directive 2026-10-17): -1 renders the caller's
+// own league; 0..19 renders ANY league's board so learners can browse
+// the whole 20-tier ladder and open the profiles inside it. YourRank is
+// only meaningful when viewing your own board.
+func (s *Service) League(ctx context.Context, userID string, viewLeague int) (*LeagueBoard, error) {
         if err := s.ensureLearner(ctx, s.Pool, userID); err != nil {
                 return nil, err
         }
@@ -612,16 +619,23 @@ func (s *Service) League(ctx context.Context, userID string) (*LeagueBoard, erro
                 userID, week).Scan(&league); err != nil {
                 league = 0
         }
+        viewing := viewLeague >= 0 && viewLeague < len(Leagues) && viewLeague != league
+        if viewing {
+                league = viewLeague
+        }
         var mine int
         _ = s.Pool.QueryRow(ctx, `SELECT COALESCE(SUM(amount),0) FROM learn.xp_events WHERE user_id=$1 AND week_key=$2`,
                 userID, week).Scan(&mine)
 
         board := &LeagueBoard{
                 League: Leagues[clamp(league, 0, len(Leagues)-1)], LeagueIndex: league,
-                EndsInMs:    WeekEndsIn().Sub(now).Milliseconds(),
+                Leagues:  Leagues, Viewing: viewing,
+                EndsInMs: WeekEndsIn().Sub(now).Milliseconds(),
                 PromotedCut: PromoteCut, DemotedFrom: DemoteFrom,
         }
-        board.Entries = append(board.Entries, LeagueEntry{Name: "You", XP: mine, IsYou: true, IsReal: true, Color: AvatarColor("you:" + userID)})
+        if !viewing {
+                board.Entries = append(board.Entries, LeagueEntry{Name: "You", XP: mine, IsYou: true, IsReal: true, Color: AvatarColor("you:" + userID)})
+        }
 
         // Real members seated in this week's league, ranked by their live
         // weekly XPEvent sum. Every row is a real account: the board links

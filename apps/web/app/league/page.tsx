@@ -23,9 +23,13 @@ export default function LeaguePage() {
   const router = useRouter();
   const [board, setBoard] = useState<LeagueBoard | null>(null);
   const [loading, setLoading] = useState(true);
+  // Founder directive (2026-10-17): 20 tiers, Diamond last - and every
+  // learner can browse ANY tier's board and open the profiles in it.
+  // null = your own league; a number browses that tier.
+  const [viewLeague, setViewLeague] = useState<number | null>(null);
 
   const load = useCallback(() => {
-    fetchLeague()
+    fetchLeague(viewLeague ?? undefined)
       .then(setBoard)
       .catch(() => {
         // No dead-end error card (founder: "remove retry"): the page
@@ -34,7 +38,7 @@ export default function LeaguePage() {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [viewLeague]);
 
   useEffect(() => {
     if (typeof window !== 'undefined' && !getStoredUser()) {
@@ -51,6 +55,12 @@ export default function LeaguePage() {
     const t = window.setInterval(load, 8000);
     return () => window.clearInterval(t);
   }, [board, load]);
+
+  useEffect(() => {
+    setLoading(true);
+    setBoard(null);
+    load();
+  }, [viewLeague, load]);
 
   return (
     <div className="min-h-screen bg-background md:pl-[var(--rail-w)]">
@@ -72,6 +82,38 @@ export default function LeaguePage() {
 
         {board && (
           <div className="flex flex-col gap-4">
+            {/* Tier switcher: the whole 20-league ladder (founder
+                directive 2026-10-17). Browsing another tier hides the
+                "you" row; every row still opens that member's profile. */}
+            <div className="no-scrollbar -mx-1 flex gap-2 overflow-x-auto px-1 pb-1">
+              {(board.leagues ?? []).map((name, i) => {
+                const active = viewLeague === null ? !board.viewing && i === board.leagueIndex : i === viewLeague;
+                return (
+                  <button
+                    key={name}
+                    type="button"
+                    onClick={() => setViewLeague(i)}
+                    className={`flex shrink-0 items-center gap-1.5 rounded-full border-2 px-3 py-1.5 text-[12px] font-extrabold transition ${
+                      active
+                        ? 'border-primary bg-primary/10 text-primary-ink'
+                        : 'border-outline-variant bg-card text-on-surface-variant hover:border-outline'
+                    }`}
+                  >
+                    <LeagueBadge name={name} size={16} />
+                    {name}
+                  </button>
+                );
+              })}
+            </div>
+            {board.viewing && (
+              <button
+                type="button"
+                onClick={() => setViewLeague(null)}
+                className="self-start rounded-full bg-surface-container px-3.5 py-1.5 text-[12px] font-extrabold text-on-surface-variant"
+              >
+                ← Back to my league
+              </button>
+            )}
             {/* Header */}
             <header className="learn-tile flex flex-col items-center gap-2 rounded-2xl border-2 border-outline-variant bg-card px-4 py-6 text-center">
               <LeagueBadge name={board.league} size={64} />

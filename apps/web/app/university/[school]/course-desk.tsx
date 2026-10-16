@@ -15,6 +15,7 @@ import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
 import { withBase } from '@/lib/api';
 import { PdfLink } from '@/components/pdf-link';
+import { CourseRequestModal } from '@/components/learn/voice';
 import type { School, SchoolCatalog, UniversityCourse } from '@/lib/university-data';
 
 export function UniversityCourseDesk({
@@ -26,6 +27,7 @@ export function UniversityCourseDesk({
 }) {
   const [semester, setSemester] = useState<1 | 2>(1);
   const [courseQuery, setCourseQuery] = useState('');
+  const [requestOpen, setRequestOpen] = useState(false);
 
   const courses = useMemo(
     () =>
@@ -119,9 +121,22 @@ export function UniversityCourseDesk({
           </div>
         </div>
         {courses.length === 0 && (
-          <p className="mt-3 rounded-xl border border-dashed border-outline-variant p-5 text-center text-sm text-on-surface-variant">
-            No course matches “{courseQuery}”. Try the code, e.g. GST 102.
-          </p>
+          <div className="mt-3 rounded-xl border border-dashed border-outline-variant p-5 text-center">
+            <p className="text-sm text-on-surface-variant">
+              No course matches “{courseQuery}”. Try the code, e.g. GST 102.
+            </p>
+            {/* Founder directive (2026-10-17): a learner who cannot find
+                their course submits it - with topics - straight from the
+                desk; it lands on the admin dashboard with their name. */}
+            <button
+              type="button"
+              onClick={() => setRequestOpen(true)}
+              className="mt-3 inline-flex h-10 items-center gap-1.5 rounded-full bg-primary px-5 text-[13px] font-semibold text-on-primary"
+            >
+              <span className="material-symbols-outlined text-[16px]">add_circle</span>
+              Submit this course instead
+            </button>
+          </div>
         )}
         <ul className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {courses.map((c) => (
@@ -161,6 +176,12 @@ export function UniversityCourseDesk({
           </>
         )}
       </div>
+      {requestOpen && (
+        <CourseRequestModal
+          defaultSchool={school.name}
+          onClose={() => setRequestOpen(false)}
+        />
+      )}
       <SideNav />
       <BottomNav />
     </main>

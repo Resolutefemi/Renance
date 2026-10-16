@@ -56,7 +56,7 @@ interface DailyEntry {
   premium?: boolean;
 }
 
-type Tab = 'arena' | 'jamb' | 'waec' | 'neco' | 'streak' | 'daily';
+type Tab = 'arena' | 'jamb' | 'waec' | 'neco' | 'streak' | 'gems' | 'daily';
 
 const TABS: Array<{ id: Tab; icon: string; label: string }> = [
   { id: 'arena', icon: 'sports_esports', label: 'Arena' },
@@ -64,8 +64,19 @@ const TABS: Array<{ id: Tab; icon: string; label: string }> = [
   { id: 'waec', icon: 'menu_book', label: 'WAEC' },
   { id: 'neco', icon: 'history_edu', label: 'NECO' },
   { id: 'streak', icon: 'local_fire_department', label: 'Streak' },
+  { id: 'gems', icon: 'diamond', label: 'Diamonds' },
   { id: 'daily', icon: 'event_repeat', label: "Today's Challenge" },
 ];
+
+interface GemsEntry {
+  rank: number;
+  userId: string;
+  username: string;
+  gems: number;
+  xp: number;
+  streak: number;
+  premium?: boolean;
+}
 
 function medal(rank: number): string {
   if (rank === 1) return '🥇';
@@ -93,6 +104,7 @@ export default function LeaderboardClient() {
   const [arena, setArena] = useState<{ entries: ArenaEntry[]; me: ArenaEntry | null } | null>(null);
   const [focus, setFocus] = useState<{ entries: FocusEntry[]; me: FocusEntry | null } | null>(null);
   const [streak, setStreak] = useState<{ entries: StreakEntry[]; me: StreakEntry | null } | null>(null);
+  const [gems, setGems] = useState<{ entries: GemsEntry[]; me: GemsEntry | null } | null>(null);
   const [daily, setDaily] = useState<{
     day: string;
     title: string;
@@ -110,6 +122,8 @@ export default function LeaderboardClient() {
         setFocus(await api(`/leaderboard/focus?focus=${tab}`));
       } else if (tab === 'streak') {
         setStreak(await api('/leaderboard/streak'));
+      } else if (tab === 'gems') {
+        setGems(await api('/leaderboard/gems'));
       } else {
         setDaily(await api('/daily/jamb/leaderboard'));
       }
@@ -123,7 +137,7 @@ export default function LeaderboardClient() {
   }, [load]);
 
   const isFocus = tab === 'jamb' || tab === 'waec' || tab === 'neco';
-  const hasMe = tab === 'arena' || isFocus || tab === 'streak' || tab === 'daily';
+  const hasMe = tab === 'arena' || isFocus || tab === 'streak' || tab === 'gems' || tab === 'daily';
   const me = hasMe
     ? tab === 'arena'
       ? arena?.me
@@ -131,7 +145,9 @@ export default function LeaderboardClient() {
         ? focus?.me
         : tab === 'streak'
           ? streak?.me
-          : daily?.me
+          : tab === 'gems'
+            ? gems?.me
+            : daily?.me
     : null;
 
   const emptyHint =
@@ -145,7 +161,9 @@ export default function LeaderboardClient() {
             ? 'No graded paper in this focus yet. Be the first on the board.'
             : tab === 'streak'
               ? 'No streaks yet. Study today and start yours.'
-              : 'Nobody has played today yet, be the first seat on the board.';
+              : tab === 'gems'
+                ? 'No gems banked yet. Clear a topic to earn your first diamonds.'
+                : 'Nobody has played today yet, be the first seat on the board.';
 
   return (
     <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16">
@@ -252,6 +270,7 @@ export default function LeaderboardClient() {
           {((tab === 'arena' && !arena) ||
             (isFocus && !focus) ||
             (tab === 'streak' && !streak) ||
+            (tab === 'gems' && !gems) ||
             (tab === 'daily' && !daily)) &&
             !error && (
               <p className="px-4 py-10 text-center text-sm text-on-surface-variant">Loading the board…</p>
@@ -263,6 +282,9 @@ export default function LeaderboardClient() {
             <p className="px-4 py-10 text-center text-sm text-on-surface-variant">{emptyHint}</p>
           )}
           {tab === 'streak' && streak && streak.entries.length === 0 && (
+            <p className="px-4 py-10 text-center text-sm text-on-surface-variant">{emptyHint}</p>
+          )}
+          {tab === 'gems' && gems && gems.entries.length === 0 && (
             <p className="px-4 py-10 text-center text-sm text-on-surface-variant">{emptyHint}</p>
           )}
           {tab === 'daily' && daily && daily.entries.length === 0 && (
@@ -357,6 +379,38 @@ export default function LeaderboardClient() {
                       🔥 {entry.currentStreak} <span className="text-[11px] font-normal">days</span>
                     </p>
                     <p>best {entry.bestStreak}d</p>
+                  </div>
+                </Link>
+              );
+            })}
+
+          {tab === 'gems' &&
+            gems?.entries.map((entry) => {
+              const highlight = me != null && entry.rank === me.rank;
+              return (
+                <Link
+                  href={`/profile/view/?u=${encodeURIComponent(entry.username)}`}
+                  key={`${entry.rank}-${entry.username}`}
+                  title={`${entry.username} on their profile`}
+                  className={`flex items-center gap-3 border-b border-outline-variant/30 px-4 py-3 transition last:border-b-0 hover:bg-surface-container-low ${
+                    highlight ? 'bg-selection-blue/30' : ''
+                  }`}
+                >
+                  <RankPill rank={entry.rank} />
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-ink/10 text-[13px] font-bold text-accent-ink">
+                    {initial(entry.username)}
+                  </span>
+                  <p className="flex min-w-0 flex-1 items-center gap-1.5 text-[15px] font-medium text-on-surface">
+                    <span className="min-w-0 truncate">{entry.username}</span>
+                    {entry.premium && <BlueTick size={15} />}
+                  </p>
+                  <div className="text-right font-mono text-[12px] leading-4 text-on-surface-variant">
+                    <p className="text-sm font-bold text-on-surface">
+                      {'\u25C6'} {entry.gems.toLocaleString()}
+                    </p>
+                    <p>
+                      {entry.xp.toLocaleString()} xp{entry.streak > 0 ? ` · ${entry.streak}d` : ''}
+                    </p>
                   </div>
                 </Link>
               );

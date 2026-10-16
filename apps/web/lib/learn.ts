@@ -178,6 +178,10 @@ export interface LeagueEntry {
 export interface LeagueBoard {
   league: string;
   leagueIndex: number;
+  /** All 20 tier names, Bronze first, Diamond last (2026-10-17). */
+  leagues?: string[];
+  /** True when this board is a browsed tier, not your own. */
+  viewing?: boolean;
   entries: LeagueEntry[];
   endsInMs: number;
   promotedCut: number;
@@ -455,14 +459,51 @@ export async function buyShopItem(item: string): Promise<ShopResponse> {
   return api<ShopResponse>('/learn/shop', { method: 'POST', body: { item }, idempotentRetry: true });
 }
 
-export async function fetchLeague(): Promise<LeagueBoard> {
-  return api<LeagueBoard>('/learn/leaderboard');
+export async function fetchLeague(viewLeague?: number): Promise<LeagueBoard> {
+  // ?league=N browses any tier of the 20-league ladder; absent = your own.
+  const q = typeof viewLeague === 'number' && viewLeague >= 0 ? `?league=${viewLeague}` : '';
+  return api<LeagueBoard>(`/learn/leaderboard${q}`);
 }
 
 export async function openChest(chestKey: string): Promise<{ chestKey: string; gems: number; gemsTotal: number }> {
   // chest_opens is keyed per (user, chestKey): the retry either lands
   // fresh or answers "already opened", never double-pays.
   return api(`/learn/chests`, { method: 'POST', body: { chestKey }, idempotentRetry: true });
+}
+
+/** Presence + time-on-app ping (admin dashboard activity). Streak-neutral. */
+export async function sendHeartbeat(seconds: number): Promise<void> {
+  await api('/learn/heartbeat', { method: 'POST', body: { seconds } });
+}
+
+export interface FlagInput {
+  source: string;
+  questionId?: string;
+  courseCode?: string;
+  reason: string;
+  details?: string;
+}
+
+/** Report a wrong/broken question to the founder's desk. */
+export async function flagQuestion(input: FlagInput): Promise<{ ok: boolean; id: number }> {
+  return api('/learn/flags', { method: 'POST', body: input });
+}
+
+export interface CourseSubmissionInput {
+  institutionType?: string;
+  schoolName: string;
+  department?: string;
+  courseCode?: string;
+  courseTitle?: string;
+  topics?: string;
+  details?: string;
+}
+
+/** Submit a missing course (with topics) for the founder to review. */
+export async function submitCourseRequest(
+  input: CourseSubmissionInput,
+): Promise<{ ok: boolean; id: number }> {
+  return api('/learn/course-requests', { method: 'POST', body: input });
 }
 
 export async function fetchPractice(): Promise<{ questions: PracticeQuestion[] }> {

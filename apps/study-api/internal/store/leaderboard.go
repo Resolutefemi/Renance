@@ -349,3 +349,84 @@ func (s *Store) StreakRank(ctx context.Context, userID string) (StreakBoardEntry
         }
         return e, true, nil
 }
+
+// GemsBoardEntry: one row of the diamond leaderboard - the learners
+// richest in gems (founder directive 2026-10-17: "rank users with
+// diamond too"). Gems are the learn economy's only currency.
+type GemsBoardEntry struct {
+	Rank     int    `json:"rank"`
+	UserID   string `json:"userId"`
+	Username string `json:"username"`
+	Gems     int    `json:"gems"`
+	XP       int    `json:"xp"`
+	Streak   int    `json:"streak"`
+	Premium  bool   `json:"premium"`
+}
+
+// GemsLeaderboard: the top gem holders, real accounts only (the learn
+// tables never held bots, but the JOIN keeps the board honest if one
+// ever lands).
+func (s *Store) GemsLeaderboard(ctx context.Context, limit int) ([]GemsBoardEntry, error) {
+	if limit <= 0 || limit > 100 {
+		limit = 25
+	}
+	rows, err := s.Pool.Query(ctx, `
+		SELECT l.user_id::text, u.username,
+		       l.gems::int, l.xp::int, COALESCE(l.streak_count, 0)::int,
+		       COALESCE(e.premium_role
+		                AND (e.premium_expires_at IS NULL
+		                     OR e.premium_expires_at > now()), false) AS premium
+		FROM learn.learners l
+		JOIN study.users u ON u.id = l.user_id
+		LEFT JOIN study.entitlements e ON e.user_id = l.user_id
+		WHERE l.gems > 0
+		ORDER BY l.gems DESC, l.xp DESC, u.username ASC
+		LIMIT $1
+	`, limit)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	out := make([]GemsBoardEntry, 0, limit)
+	for rows.Next() {
+		var e GemsBoardEntry
+		if err := rows.Scan(&e.UserID, &e.Username, &e.Gems, &e.XP, &e.Streak, &e.Premium); err != nil {
+			return nil, err
+		}
+		out = append(out, e)
+	}
+	return out, rows.Err()
+}
+
+// GemsRank returns the caller's absolute gem rank (same ordering as
+// GemsLeaderboard). ok is false when the learner has no gem balance.
+func (s *Store) GemsRank(ctx context.Context, userID string) (GemsBoardEntry, bool, error) {
+	row := s.Pool.QueryRow(ctx, `
+		WITH ranked AS (
+			SELECT l.user_id::text AS user_id, u.username,
+			       l.gems::int AS gems, l.xp::int AS xp,
+			       COALESCE(l.streak_count, 0)::int AS streak,
+			       COALESCE(e.premium_role
+			                AND (e.premium_expires_at IS NULL
+			                     OR e.premium_expires_at > now()), false) AS premium,
+			       ROW_NUMBER() OVER (ORDER BY l.gems DESC, l.xp DESC, u.username ASC)::int AS rank
+			FROM learn.learners l
+			JOIN study.users u ON u.id = l.user_id
+			LEFT JOIN study.entitlements e ON e.user_id = l.user_id
+			WHERE l.gems > 0
+		)
+		SELECT user_id, rank, username, gems, xp, streak, premium
+		FROM ranked
+		WHERE user_id = $1
+	`, userID)
+
+	var e GemsBoardEntry
+	if err := row.Scan(&e.UserID, &e.Rank, &e.Username, &e.Gems, &e.XP, &e.Streak, &e.Premium); err != nil {
+		if errors.Is(err, pgx.ErrNoRows) {
+			return e, false, nil
+		}
+		return e, false, err
+	}
+	return e, true, nil
+}

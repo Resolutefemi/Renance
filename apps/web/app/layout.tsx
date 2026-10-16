@@ -6,6 +6,7 @@ import { SITE_URL } from '@/lib/site-url';
 import { OG_IMAGES, RENANCE_DESCRIPTION } from '@/lib/og';
 import ContentGuard from '@/components/content-guard';
 import OfflineBanner from '@/components/offline-banner';
+import ActivityHeartbeat from '@/components/activity-heartbeat';
 import SwRegister from '@/components/sw-register';
 
 const FOUNDER = {
@@ -345,6 +346,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             app too. */}
         <SwRegister />
         <OfflineBanner />
+        {/* Presence + time-on-app for the admin desk (streak-neutral). */}
+        <ActivityHeartbeat />
         {children}
       </body>
     </html>

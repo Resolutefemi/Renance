@@ -159,3 +159,33 @@ func (s *Server) handleStreakLeaderboard(w http.ResponseWriter, r *http.Request)
                 "entries": entries,
         })
 }
+
+// GET /leaderboard/gems - the diamond board (founder directive
+// 2026-10-17): learners ranked by their gem balance. Same contract as
+// the other boards: top 25 + the caller's own row as "me".
+func (s *Server) handleGemsLeaderboard(w http.ResponseWriter, r *http.Request) {
+	uid := r.Context().Value(ctxUserID).(string)
+	entries, err := s.store.GemsLeaderboard(r.Context(), 25)
+	if err != nil {
+		s.log.Error("gems leaderboard", "err", err)
+		fail(w, http.StatusInternalServerError, "internal", "could not load leaderboard")
+		return
+	}
+	var me *store.GemsBoardEntry
+	if row, found, err := s.store.GemsRank(r.Context(), uid); err != nil {
+		s.log.Error("gems rank", "err", err)
+		fail(w, http.StatusInternalServerError, "internal", "could not load leaderboard")
+		return
+	} else if found {
+		me = &row
+	}
+	for i := range entries {
+		entries[i].Rank = i + 1
+	}
+	writeJSON(w, http.StatusOK, map[string]any{
+		"board":   "gems",
+		"period":  "all",
+		"me":      me,
+		"entries": entries,
+	})
+}

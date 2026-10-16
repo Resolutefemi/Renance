@@ -954,6 +954,10 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
           <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
             <LauncherTile icon="calculate" label="CGPA" href="/gpa" />
             <LauncherTile icon="sports_esports" label="Arena" href="/arena" />
+            {/* Founder directive (2026-10-17): the school desk gets the
+                same Leaderboard entry the JAMB desk has, ranked with
+                diamonds too. */}
+            <LauncherTile icon="leaderboard" label="Leaderboard" href="/leaderboard" />
             <LauncherTile icon="event_note" label="Study Plan" href="/study-plan" />
             <LauncherTile icon="psychology" label="Flashcards" href="/flashcards" />
           </div>

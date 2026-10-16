@@ -17,6 +17,7 @@ import {
   ConfettiBurst, GemIcon, HeartIcon, ProgressBar, ToastBanner,
 } from '@/components/learn/bits';
 import { ChestOpening, MilestoneCelebration, StreakCelebration } from '@/components/learn/celebrations';
+import { FlagQuestionModal } from '@/components/learn/voice';
 import {
   CompleteResult, LearnQuizQ, LessonDoc, PracticeQuestion,
   fetchLearnProfile, fetchLesson, fetchPractice, fetchReview, fetchRevision, gradePractice, postProgress,
@@ -51,6 +52,9 @@ export function LessonOverlay({
   const [doc, setDoc] = useState<LessonDoc | null>(null);
   const [questions, setQuestions] = useState<PlayQ[]>([]);
   const [idx, setIdx] = useState(0);
+  // The report-this-question surface (founder 2026-10-17): wrong keys
+  // and broken questions land on the admin desk, not in a void.
+  const [flagOpen, setFlagOpen] = useState(false);
   const [picked, setPicked] = useState<string | null>(null);
   const [revealed, setRevealed] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
@@ -423,6 +427,15 @@ export function LessonOverlay({
                   {q.year ? `Past question ${q.year}` : 'Real past question'}
                 </span>
               )}
+              <button
+                type="button"
+                onClick={() => setFlagOpen(true)}
+                title="Report this question"
+                aria-label="Report this question"
+                className="ml-auto flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-on-surface-variant transition hover:bg-surface-container hover:text-on-surface"
+              >
+                <span className="material-symbols-outlined text-[16px]">flag</span>
+              </button>
             </div>
             <h2 className="text-[17px] font-black leading-snug text-on-surface">
               <QText html={q.stem} />
@@ -532,6 +545,14 @@ export function LessonOverlay({
       )}
       {activeCeleb === 'milestone' && result?.milestone && (
         <MilestoneCelebration milestone={result.milestone} onDone={dismissCelebration} />
+      )}
+
+      {flagOpen && (
+        <FlagQuestionModal
+          onClose={() => setFlagOpen(false)}
+          source={mode === 'revision' ? 'revision' : mode === 'practice' ? 'practice' : 'lesson'}
+          questionId={q?.id ?? ''}
+        />
       )}
 
       {/* Sticky footer action */}

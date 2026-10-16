@@ -29,7 +29,7 @@ func DefaultConfig() Config {
                 Questions:          15,
                 SecondsPerQuestion: 20,
                 IntroCountdown:     3 * time.Second,
-                BotWait:            20 * time.Second,
+                BotWait:            8 * time.Second, // founder 2026-10-17: 20s of waiting read as a broken arena
                 BotSkill:           0.6,
                 RoomTTL:            15 * time.Minute,
         }

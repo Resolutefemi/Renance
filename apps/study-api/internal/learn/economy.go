@@ -51,10 +51,17 @@ const (
         UnlimitedHeartsDefault = true
 )
 
-// Leagues: 10 tiers, Bronze → Diamond (Supreme economy.ts LEAGUES).
+// Leagues: 20 tiers, Bronze → Diamond (founder directive 2026-10-17:
+// "up to 20 different leagues, diamond should be the last one"). The
+// first nine indices keep their original names so seated members keep
+// their tier; the old index 9 (Diamond) is remapped to 19 by migration
+// 0034 - the ladder now climbs through the collector gems before the
+// crown.
 var Leagues = []string{
         "Bronze", "Copper", "Silver", "Gold", "Sapphire",
-        "Ruby", "Emerald", "Amethyst", "Pearl", "Diamond",
+        "Ruby", "Emerald", "Amethyst", "Pearl", "Obsidian",
+        "Jade", "Topaz", "Garnet", "Quartz", "Tourmaline",
+        "Opal", "Platinum", "Titanium", "Aurora", "Diamond",
 }
 
 // DailyQuest / WeeklyQuest / MonthlyQuest mirror the Supreme quest

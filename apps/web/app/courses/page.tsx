@@ -46,6 +46,7 @@ import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
 import { LessonOverlay } from '@/components/learn/lesson-overlay';
+import { CourseRequestModal } from '@/components/learn/voice';
 import { ProgressBar } from '@/components/learn/bits';
 import { getStoredUser } from '@/lib/session';
 import { useRouter } from 'next/navigation';
@@ -511,6 +512,9 @@ function TertiaryDesk({
   const [results, setResults] = useState<DeskCourse[] | null>(null);
   const [searching, setSearching] = useState(false);
   const [aiOpen, setAiOpen] = useState(false);
+  // "I cannot find my course" (founder 2026-10-17): the learner submits
+  // the course + topics; it lands on the admin desk with their name.
+  const [courseReqOpen, setCourseReqOpen] = useState(false);
   const [aiText, setAiText] = useState('');
   const [aiBusy, setAiBusy] = useState(false);
   const [aiLines, setAiLines] = useState<AIMatchLine[] | null>(null);
@@ -1083,6 +1087,24 @@ function TertiaryDesk({
         )}
       </div>
 
+      {/* Still lost? Submit the missing course straight to the desk. */}
+      <button
+        type="button"
+        onClick={() => setCourseReqOpen(true)}
+        className="flex items-center gap-2.5 rounded-2xl border-2 border-dashed border-outline-variant bg-card p-4 text-left transition hover:border-outline"
+      >
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-surface-container-high">
+          <span className="material-symbols-outlined text-[20px] text-on-surface-variant">add_circle</span>
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="block text-[13.5px] font-black text-on-surface">Can&apos;t find your course?</span>
+          <span className="block text-[11.5px] font-bold text-on-surface-variant">
+            Submit the course and its topics - the desk builds the bank for it.
+          </span>
+        </span>
+        <span className="material-symbols-outlined shrink-0 text-on-surface-variant">chevron_right</span>
+      </button>
+
       {/* General shelf: the national first-year courses, GST suite first */}
       <section className="flex flex-col gap-2">
         <h3 className="px-1 text-[13px] font-black uppercase tracking-wide text-on-surface-variant">
@@ -1162,6 +1184,12 @@ function TertiaryDesk({
       >
         Change department or institution kind
       </button>
+      {courseReqOpen && (
+        <CourseRequestModal
+          defaultSchool=''
+          onClose={() => setCourseReqOpen(false)}
+        />
+      )}
     </div>
   );
 }
