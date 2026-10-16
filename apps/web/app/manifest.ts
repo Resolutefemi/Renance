@@ -24,27 +24,30 @@ export default function manifest(): MetadataRoute.Manifest {
     categories: ['education'],
     lang: 'en-NG',
     icons: [
+      /* Version query on every icon URL (founder bug 2026-10-16): the
+         browser/PWA icon caches key on the URL, so a changed URL forces
+         a fresh fetch. Bump v= on any future logo change. */
       {
-        src: `${base}/icon-192.png`,
+        src: `${base}/icon-192.png?v=20261016b`,
         sizes: '192x192',
         type: 'image/png',
         purpose: 'any',
       },
       {
-        src: `${base}/renance-mark.png`,
+        src: `${base}/renance-mark.png?v=20261016b`,
         sizes: '512x512',
         type: 'image/png',
         purpose: 'any',
       },
       {
-        src: `${base}/renance-mark.png`,
+        src: `${base}/renance-mark.png?v=20261016b`,
         sizes: '512x512',
         type: 'image/png',
         purpose: 'maskable',
       },
       {
         // Founder build target: the dedicated 500px store icon.
-        src: `${base}/renance-mark-500.png`,
+        src: `${base}/renance-mark-500.png?v=20261016b`,
         sizes: '500x500',
         type: 'image/png',
         purpose: 'any',

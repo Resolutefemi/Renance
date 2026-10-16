@@ -23,24 +23,13 @@ import {
   LIVE_SCHOOLS,
   OTHERS_SCHOOL,
   SCHOOLS,
+  TYPE_ICONS,
+  TYPE_LABELS,
   storedSchoolSlug,
+  storePendingInstitution,
   storeSchoolSlug,
   type School,
 } from '@/lib/university';
-
-const TYPE_LABELS: Record<School['type'], string> = {
-  university: 'University',
-  polytechnic: 'Polytechnic',
-  'college-of-education': 'College of Education',
-  'college-of-nursing': 'College of Nursing / Health',
-};
-
-const TYPE_ICONS: Record<School['type'], string> = {
-  university: 'account_balance',
-  polytechnic: 'precision_manufacturing',
-  'college-of-education': 'history_edu',
-  'college-of-nursing': 'medical_services',
-};
 
 export default function UniversityPage() {
   const router = useRouter();
@@ -92,15 +81,21 @@ export default function UniversityPage() {
     };
   }, [router]);
 
-  // Selection list (founder directive 2026-10-04): ONLY schools with
-  // available past questions are listed - the locked "not wrapped yet"
-  // rows are gone. Students whose school is not on the list pick
-  // "Other Schools", the merged general-course desk (every school's
-  // BIO 101 questions become one generic BIO 101), pinned last.
-  const listed = useMemo(
-    () => LIVE_SCHOOLS.filter((s) => s.slug !== 'others'),
-    [],
-  );
+  // Selection list (founder directive 2026-10-16, second batch): the
+  // FULL Nigerian tertiary directory is listed - the 40 banked desks
+  // first, then every other university, polytechnic, college of
+  // education and nursing/health college in the registry (1,100+).
+  // A school without its own banked questions is still a real pick:
+  // choosing it routes the student into the merged general-course pool
+  // (Other Schools) with their institution stamped, so the dashboard
+  // hero and the profile carry the real school name. Other Schools
+  // itself stays pinned last - the fallback for a name the student
+  // still cannot find.
+  const listed = useMemo(() => {
+    const all = SCHOOLS.filter((s) => s.slug !== 'others');
+    const byName = (a: School, b: School) => a.name.localeCompare(b.name);
+    return [...all.filter((s) => s.live).sort(byName), ...all.filter((s) => !s.live).sort(byName)];
+  }, []);
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
     const base = q
@@ -125,10 +120,12 @@ export default function UniversityPage() {
             Which school are you in?
           </h2>
           <p className="text-sm text-on-surface-variant">
-            Pick your institution: {listed.length} Nigerian schools with banked past questions,
-            plus <span className="font-semibold text-on-surface">Other Schools</span> for everyone
-            else. Your desk wraps each school&apos;s own courses and question banks. This pick
-            sticks: it can be changed later only from your profile.
+            Every Nigerian tertiary institution is listed - {LIVE_SCHOOLS.length - 1} with a
+            banked past-question desk and{' '}
+            {listed.length - (LIVE_SCHOOLS.length - 1)}+ more (universities, polytechnics,
+            colleges of education, nursing and health colleges). A school without its own desk
+            yet rides the shared general pool. Your pick sticks: it can be changed later only
+            from your profile.
           </p>
         </div>
 
@@ -149,7 +146,6 @@ export default function UniversityPage() {
             every school shares.
           </p>
         )}
-
         <ul className="mt-5 grid gap-2 sm:grid-cols-2">
           {results.map((s) => (
             <li key={s.slug} className={`min-w-0 ${s.slug === 'others' ? 'sm:col-span-2' : ''}`}>
@@ -159,11 +155,10 @@ export default function UniversityPage() {
         </ul>
 
         <p className="mt-8 rounded-xl bg-surface-container-low px-4 py-3 text-xs text-on-surface-variant">
-          Your school not on the list? Pick <b>Other Schools</b>: its desk gathers the general
-          courses (GST, MTH 101, BIO 101, CHM 101, PHY 101 &hellip;) of every banked school into
-          one merged library, so you practise real past questions even before your school gets
-          its own desk. Students of listed schools can also use the JAMB, WAEC and NECO desks,
-          and Post-UTME candidates have their own desk.
+          Every school in the list is real - the banked ones open their own desk, and the rest
+          carry your school&apos;s name over the shared general pool (GST, MTH 101, BIO 101,
+          CHM 101, PHY 101 &hellip;). Students of listed schools can also use the JAMB, WAEC and
+          NECO desks, and Post-UTME candidates have their own desk.
         </p>
       </div>
       <SideNav />
@@ -207,12 +202,12 @@ function SchoolRow({ school: s, postUtmeOnly }: { school: School; postUtmeOnly: 
             : s.live
               ? `${TYPE_LABELS[s.type]} · ${s.state}`
               : postUtmeOnly
-                ? 'Post-UTME past questions only · see the Post UTME desk'
-                : `${TYPE_LABELS[s.type]} · ${s.state}`}
+                ? `${TYPE_LABELS[s.type]} · Post-UTME banks on the Post UTME desk`
+                : `${TYPE_LABELS[s.type]}${s.state ? ` · ${s.state}` : ''} · shared general pool`}
         </p>
       </div>
       <span className="material-symbols-outlined text-on-surface-variant">
-        {s.live ? 'chevron_right' : 'lock'}
+        {isOthers || s.live ? 'chevron_right' : postUtmeOnly ? 'lock' : 'swap_horiz'}
       </span>
     </>
   );
@@ -228,9 +223,27 @@ function SchoolRow({ school: s, postUtmeOnly }: { school: School; postUtmeOnly: 
       </Link>
     );
   }
+  if (isOthers || postUtmeOnly) {
+    return (
+      <div className={cls} aria-disabled title="Content not wrapped for this school yet">
+        {inner}
+      </div>
+    );
+  }
+  /* Founder 2026-10-16: a school without its own banked questions is
+     still a real pick - selecting it saves the institution name and
+     routes into the merged general-course pool (Other Schools), the
+     same content every unbanked school shares. */
   return (
-    <div className={cls} aria-disabled title="Content not wrapped for this school yet">
+    <Link
+      href="/university/others"
+      onClick={() => {
+        storeSchoolSlug('others');
+        storePendingInstitution(s.name);
+      }}
+      className={cls}
+    >
       {inner}
-    </div>
+    </Link>
   );
 }

@@ -126,6 +126,53 @@ export const OTHERS_SCHOOL: School =
     live: true,
   };
 
+/* Type labels + Material icons shared by every school listing (the
+   profile picker, the School Desk gate, the directory rows). */
+export const TYPE_LABELS: Record<School['type'], string> = {
+  university: 'University',
+  polytechnic: 'Polytechnic',
+  'college-of-education': 'College of Education',
+  'college-of-nursing': 'College of Nursing / Health',
+};
+
+export const TYPE_ICONS: Record<School['type'], string> = {
+  university: 'account_balance',
+  polytechnic: 'precision_manufacturing',
+  'college-of-education': 'history_edu',
+  'college-of-nursing': 'medical_services',
+};
+
+/* Pending institution (founder directive 2026-10-16): picking a school
+   that has no banked desk yet on the School Desk gate routes the
+   student into the shared general pool AND stamps their institution
+   here, so the dashboard hero brands itself with the real school name
+   (never "Other Schools") before the profile record catches up. */
+const PENDING_INSTITUTION_KEY = 'renance.uni.pendingInstitution.v1';
+
+export function readPendingInstitution(): string {
+  try {
+    return (window.localStorage.getItem(PENDING_INSTITUTION_KEY) ?? '').trim();
+  } catch {
+    return '';
+  }
+}
+
+export function storePendingInstitution(name: string): void {
+  try {
+    window.localStorage.setItem(PENDING_INSTITUTION_KEY, name);
+  } catch {
+    /* private mode: the pick still routes, it just does not brand */
+  }
+}
+
+export function clearPendingInstitution(): void {
+  try {
+    window.localStorage.removeItem(PENDING_INSTITUTION_KEY);
+  } catch {
+    /* ignore */
+  }
+}
+
 /** The bundled course catalog for a school, or null when it has none. */
 export function clientCatalog(slug: string): SchoolCatalog | null {
   return CATALOGS[slug] ?? null;

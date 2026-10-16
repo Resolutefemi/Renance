@@ -15,9 +15,13 @@ import { api, API_BASE } from '@/lib/api';
 import { clearSession, getToken } from '@/lib/session';
 import { focusFromExams, setFocus } from '@/lib/focus';
 import {
-  LIVE_SCHOOLS,
   OTHERS_SCHOOL,
+  SCHOOLS,
+  TYPE_ICONS,
+  TYPE_LABELS,
+  clearPendingInstitution,
   findSchoolByName,
+  readPendingInstitution,
   storeSchoolSlug,
   type School,
 } from '@/lib/university';
@@ -210,7 +214,13 @@ export default function ProfilePage() {
       setMe((prev) => (prev ? { ...prev, profile: res.profile } : prev));
       // Keep the School Desk pick in step with the profile record.
       const matched = findSchoolByName(schoolName.trim());
-      if (matched) storeSchoolSlug(matched.slug);
+      if (matched) {
+        // A school without a banked desk yet still becomes the student's
+        // institution - its content rides the shared general pool, so
+        // the desk slug routes to Other Schools (founder 2026-10-16).
+        storeSchoolSlug(matched.live ? matched.slug : 'others');
+      }
+      clearPendingInstitution();
       setSchoolBusy(false);
       setSchoolEditing(false);
     } catch (err) {
@@ -219,14 +229,18 @@ export default function ProfilePage() {
     }
   }
 
-  // The school picker's browsable list (founder bug report 2026-10-11:
-  // the datalist never listed the schools and its dropdown did not
-  // work). Every live desk - the same listing as the School Desk gate -
-  // plus Other Schools pinned last; the search box only narrows, an
-  // empty query shows the full shelf so it is ALWAYS browsable.
+  // The school picker's browsable list (founder directive 2026-10-16,
+  // second batch: the FULL directory - 1,100+ Nigerian tertiary
+  // institutions, every university, polytechnic, college of education
+  // and nursing/health college in the registry - is browsable here, not
+  // only the schools with banked desks; a school without content yet
+  // still becomes the student's institution and rides the shared
+  // general pool). Other Schools stays pinned last: the fallback for
+  // a name the student still cannot find. The search box narrows, an
+  // empty query shows the whole shelf so it is ALWAYS browsable.
   const schoolPickResults = useMemo<School[]>(() => {
     const q = schoolQuery.trim().toLowerCase();
-    const listed = LIVE_SCHOOLS.filter((s) => s.slug !== 'others');
+    const listed = SCHOOLS.filter((s) => s.slug !== 'others');
     const base = q
       ? listed.filter(
           (s) =>
@@ -519,8 +533,12 @@ export default function ProfilePage() {
                 <button
                   type="button"
                   onClick={() => {
-                    setSchoolName(profile?.institution ?? '');
-                    setSchoolQuery(profile?.institution ?? '');
+                    // Prefill the saved institution; a School Desk gate
+                    // pick that has not reached the profile yet (the
+                    // pending stamp) fills the editor until Save lands.
+                    const prefill = profile?.institution || readPendingInstitution();
+                    setSchoolName(prefill);
+                    setSchoolQuery(prefill);
                     setSchoolError(null);
                     setSchoolEditing(true);
                   }}
@@ -534,7 +552,9 @@ export default function ProfilePage() {
                     <p className="truncate text-[13px] text-text-secondary">
                       {profile?.institution
                         ? profile.institution
-                        : 'Not set yet. Pick your school here.'}
+                        : readPendingInstitution()
+                          ? `${readPendingInstitution()} (picked on the School Desk - tap save to keep it)`
+                          : 'Not set yet. Pick your school here.'}
                     </p>
                   </div>
                   <span className="material-symbols-outlined text-outline-light">edit</span>
@@ -625,7 +645,7 @@ export default function ProfilePage() {
                             }`}
                           >
                             <span className="material-symbols-outlined text-[16px] leading-none">
-                              {isOthers ? 'diversity_3' : 'account_balance'}
+                              {isOthers ? 'diversity_3' : TYPE_ICONS[s.type] ?? 'account_balance'}
                             </span>
                           </span>
                           <span className="min-w-0 flex-1">
@@ -637,7 +657,9 @@ export default function ProfilePage() {
                               {s.name}
                             </span>
                             <span className="block truncate text-[11.5px] text-on-surface-variant">
-                              {isOthers ? 'Merged general course banks for every unlisted school' : s.state}
+                              {isOthers
+                                ? 'Merged general course banks for every unlisted school'
+                                : `${TYPE_LABELS[s.type]}${s.state ? ` · ${s.state}` : ''}`}
                             </span>
                           </span>
                           {selected && (

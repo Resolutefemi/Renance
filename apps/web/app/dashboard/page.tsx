@@ -16,6 +16,7 @@ import {
   clientCatalog,
   findSchoolByName,
   liveCourses,
+  readPendingInstitution,
   resolveSchoolSlug,
   storedPostUtmeSchoolSlug,
   storedSchoolSlug,
@@ -329,7 +330,10 @@ export default function DashboardPage() {
   // the merged general course pool, and the one thing they must learn is
   // "To access past questions, click on Quizzes." No institution, no tip.
   const pqTip = useMemo(() => {
-    const inst = (me?.profile?.institution ?? '').trim();
+    // A School Desk gate pick that has not reached the profile record
+    // yet (the pending stamp) counts too - the student still rides the
+    // pool and still needs the "click on Quizzes" pointer.
+    const inst = (me?.profile?.institution ?? '').trim() || readPendingInstitution();
     if (!inst) return null;
     const matched = findSchoolByName(inst);
     if (matched && matched.live && matched.slug !== 'others') return null;
@@ -838,7 +842,8 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
   // with the shared pool's stats underneath; only a student who picked
   // the pool without naming a school sees the neutral general label.
   const isGeneralPool = school?.slug === 'others';
-  const customInstitution = (profile?.institution ?? '').trim();
+  const customInstitution =
+    (profile?.institution ?? '').trim() || readPendingInstitution();
   const hasCustomBrand =
     isGeneralPool &&
     customInstitution.length > 0 &&

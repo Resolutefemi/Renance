@@ -302,11 +302,23 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="author" content="Ariyo Oluwafemi Stephen (Resolute Femi)" />
         {/* Brand favicon: the static green keycap (crawlers + no-JS).
             In-app the bootstrap above repaints it as a canvas data URL
-            so the tab strip follows the student's appearance colour. */}
+            so the tab strip follows the student's appearance colour.
+            Founder bug 2026-10-16: the OLD logo kept showing in Chrome
+            after the keycap landed - Chrome's favicon database keys on
+            the icon URL and never re-validates an unchanged one. Every
+            icon URL now carries a version query (?v=20261016b), so the
+            new URLs are treated as brand-new icons and fetched fresh;
+            bump the version on any future logo change. */}
         <link
           rel="icon"
           type="image/svg+xml"
-          href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/icon.svg`}
+          href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/icon.svg?v=20261016b`}
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/favicon-32.png?v=20261016b`}
         />
         <script
           type="application/ld+json"
