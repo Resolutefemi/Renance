@@ -1,0 +1,72 @@
+# synthgen.yml - continues the agent's bulk content generation after
+# the 2026-10-16 session ends (founder directive: "all the notes and
+# quizzes should be cached to Supabase as you generate them").
+#
+# What it does, per run:
+#   1. structure phase: tops every tertiary course up to the 15 unit x
+#      10 topic ladder (idempotent; a completed course is skipped).
+#   2. lessons phase: synthesizes deep lessons (10 long sections + 20
+#      questions each) for topics with no cached lesson, breadth first
+#      by unit, until the storage cap or a 50 minute budget stops it.
+#
+# The API synthesizes lessons on open regardless of this cache, so
+# this workflow is a pre warming service, never a dependency.
+#
+# Needs repo secrets: SUPABASE_DATABASE_URL (the pooler DSN) and
+# (implicitly) write access for the autocommit tail.
+
+name: synthgen
+
+on:
+  workflow_dispatch:
+    inputs:
+      phase:
+        description: "all | structure | lessons"
+        default: "all"
+      minutes:
+        description: "self stop budget in minutes"
+        default: "50"
+  schedule:
+    - cron: "17 3,9,15,21 * * *" # four passes a day, off the hour
+
+concurrency:
+  group: synthgen
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.23"
+
+      - name: Build synthgen
+        working-directory: apps/study-api
+        run: go build -o /tmp/synthgen ./cmd/synthgen
+
+      - name: Run generation
+        env:
+          DATABASE_URL: ${{ secrets.SUPABASE_DATABASE_URL }}
+        run: |
+          if [ -z "$DATABASE_URL" ]; then
+            echo "SUPABASE_DATABASE_URL secret missing; skipping run"
+            exit 0
+          fi
+          /tmp/synthgen \
+            -phase "${{ github.event.inputs.phase || 'all' }}" \
+            -workers 6 \
+            -cap-mb 470
+
+      - name: Autocommit any engine source drift
+        run: |
+          git config user.name "Resolute Femi"
+          git config user.email "ariyooluwafemi487@gmail.com"
+          if [[ -n $(git status --porcelain) ]]; then
+            git add -A
+            git commit -m "synthgen: keep engine source in step with the run"
+            git push
+          fi
