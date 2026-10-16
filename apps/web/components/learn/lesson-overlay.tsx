@@ -523,7 +523,12 @@ export function LessonOverlay({
         <ChestOpening drop={result.chest} onDone={dismissCelebration} />
       )}
       {activeCeleb === 'streak' && result && (
-        <StreakCelebration streak={result.streak} onDone={dismissCelebration} />
+        <StreakCelebration
+          streak={result.streak}
+          forgiven={result.streakForgiven}
+          forgivesLeft={result.streakForgivesLeft}
+          onDone={dismissCelebration}
+        />
       )}
       {activeCeleb === 'milestone' && result?.milestone && (
         <MilestoneCelebration milestone={result.milestone} onDone={dismissCelebration} />

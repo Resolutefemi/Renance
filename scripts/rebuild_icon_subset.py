@@ -53,6 +53,13 @@ def used_ligatures():
                 used.add(m.group(1))
             for m in re.finditer(r"icon:\s*'([a-z][a-z_]+)'", t):
                 used.add(m.group(1))
+            # QUOTED values only (keep `icon: string` type annotations out):
+            # JSX props icon="assignment" + double-quoted object fields.
+            # The single-quote-only scan is how "assignment" reached the
+            # dashboard while missing from the subset - it renders raw
+            # ("IGNMENT") over the University Study grid.
+            for m in re.finditer(r"\bicon\s*[:=]\s*[\"']([a-z][a-z_]+)[\"']", t):
+                used.add(m.group(1))
     return {u for u in used if u not in IGNORE and len(u) > 2}
 
 

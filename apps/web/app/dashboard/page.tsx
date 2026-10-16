@@ -1071,7 +1071,7 @@ function LauncherTile({
             : muted
               ? 'border-2 border-outline-variant bg-surface-container text-on-surface-variant shadow-[0_3px_0_0_var(--color-outline-variant)]'
               : 'border-2 border-outline-variant bg-card text-on-surface shadow-[0_3px_0_0_var(--color-outline-variant)]'
-        } ${inverse ? 'overflow-hidden' : ''}`}
+        } overflow-hidden`}
       >
         {inverse && <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-white/20" />}
         <span className={`material-symbols-outlined relative z-10 text-[21px] md:text-[23px] ${amber ? 'text-accent-amber' : ''}`}>{icon}</span>

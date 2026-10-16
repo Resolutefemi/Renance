@@ -197,6 +197,12 @@ export interface CompleteResult {
   streak: number;
   /** The streak counter moved up with this completion (celebration). */
   streakUp?: boolean;
+  /** True when THIS completion restored a lost 7+ day streak through
+   *  the forgiveness pool (no freeze available, back within 3 quiet
+   *  days) - the streak celebration explains the save. */
+  streakForgiven?: boolean;
+  /** How many free restores the learner still owns (cap 3, lifetime). */
+  streakForgivesLeft?: number;
   hearts: number;
   unlimitedHearts: boolean;
   gems: number;

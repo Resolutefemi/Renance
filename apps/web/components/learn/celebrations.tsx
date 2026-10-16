@@ -95,7 +95,20 @@ function StreakCount({ to }: { to: number }) {
   return <span className="tabular-nums">{n}</span>;
 }
 
-export function StreakCelebration({ streak, onDone }: { streak: number; onDone?: () => void }) {
+export function StreakCelebration({
+  streak,
+  forgiven,
+  forgivesLeft,
+  onDone,
+}: {
+  streak: number;
+  onDone?: () => void;
+  /** True when the forgiveness pool restored a lost 7+ day streak
+   *  (founder rules 2026-10-17) - the popup explains the save and how
+   *  many free restores are left. */
+  forgiven?: boolean;
+  forgivesLeft?: number;
+}) {
   useEffect(() => {
     const t = window.setTimeout(() => onDone?.(), 5200);
     return () => window.clearTimeout(t);
@@ -107,15 +120,23 @@ export function StreakCelebration({ streak, onDone }: { streak: number; onDone?:
         <span className="material-symbols-outlined text-[64px] text-white">local_fire_department</span>
       </div>
       <p className="mt-6 text-[15px] font-black uppercase tracking-[0.16em] text-white/85">
-        {streak >= 2 ? 'Streak extended' : 'Streak started'}
+        {forgiven ? 'Streak restored' : streak >= 2 ? 'Streak extended' : 'Streak started'}
       </p>
       <p className="mt-1 flex items-baseline gap-2 text-[56px] font-black leading-none text-white">
         <StreakCount to={streak} />
         <span className="text-[22px] font-extrabold text-white/85">day{streak === 1 ? '' : 's'}</span>
       </p>
-      <p className="mt-3 max-w-xs text-center text-[13px] font-bold leading-relaxed text-white/75">
-        You studied today - that is how streaks survive. Miss a day and a Streak Freeze saves it for you.
-      </p>
+      {forgiven ? (
+        <p className="mt-3 max-w-xs text-center text-[13px] font-bold leading-relaxed text-white/75">
+          Welcome back - we forgave your streak! No freeze spent.
+          {typeof forgivesLeft === 'number' &&
+            ` ${forgivesLeft} free restore${forgivesLeft === 1 ? '' : 's'} left.`}
+        </p>
+      ) : (
+        <p className="mt-3 max-w-xs text-center text-[13px] font-bold leading-relaxed text-white/75">
+          You studied today - that is how streaks survive. Miss a day and a Streak Freeze saves it for you.
+        </p>
+      )}
       <button
         type="button"
         onClick={() => onDone?.()}

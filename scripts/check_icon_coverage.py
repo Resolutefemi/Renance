@@ -46,6 +46,14 @@ def used_ligatures():
             # dynamic data fields:  icon: 'auto_stories'
             for m in re.finditer(r"icon:\s*'([a-z][a-z_]+)'", t):
                 used.add(m.group(1))
+            # QUOTED values only: JSX props (icon="assignment") and
+            # double-quoted object fields (icon: "assignment").  The old
+            # single-quote-only scan was exactly how the dashboard's
+            # <LauncherTile icon="assignment"> leaked "IGNMENT" over the
+            # Study grid while every audit stayed green - the University
+            # Study tiles are the ONLY place that ligature appears.
+            for m in re.finditer(r"\bicon\s*[:=]\s*[\"']([a-z][a-z_]+)[\"']", t):
+                used.add(m.group(1))
     return {u for u in used if u not in IGNORE and len(u) > 2}
 
 
