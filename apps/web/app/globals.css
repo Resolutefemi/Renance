@@ -25,7 +25,9 @@
   font-style: normal;
   font-weight: 100 700;
   font-display: block;
-  src: url('../public/fonts/material-symbols-outlined.subset.woff2') format('woff2');
+  /* ?v busts any intermediary that cached a previous subset -
+   bump on every rebuild (2026-10-17: v3, 199 ligatures). */
+  src: url('../public/fonts/material-symbols-outlined.subset.woff2?v=3') format('woff2');
 }
 @font-face {
   font-family: 'Inter';
