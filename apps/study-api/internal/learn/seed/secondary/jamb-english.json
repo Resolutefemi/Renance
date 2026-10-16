@@ -1,57 +1,2485 @@
 {
-  "body": "jamb",
-  "subject": "english",
-  "title": "English Language",
-  "topics": [
-    { "title": "Parts of speech: nouns, pronouns and articles", "category": "Concepts & Foundations", "keywords": ["parts of speech", "nouns", "pronouns", "articles"] },
-    { "title": "Verbs, tenses and their correct forms", "category": "Concepts & Foundations", "keywords": ["verbs", "tenses", "correct forms", "verb"] },
-    { "title": "Subject-verb agreement and concord", "category": "Concepts & Foundations", "keywords": ["concord", "subject verb agreement", "agreement"] },
-    { "title": "Pronoun case and reference in sentences", "category": "Theory", "keywords": ["pronoun", "case", "reference", "antecedent"] },
-    { "title": "Adjectives and adverbs: comparison and order", "category": "Theory", "keywords": ["adjectives", "adverbs", "comparative", "superlative"] },
-    { "title": "Prepositions and their correct usage", "category": "Concepts & Foundations", "keywords": ["prepositions", "usage", "phrases"] },
-    { "title": "Conjunctions and sentence connectors", "category": "Concepts & Foundations", "keywords": ["conjunctions", "connectors", "linking words"] },
-    { "title": "Question tags, statements and responses", "category": "Theory", "keywords": ["question tags", "statements", "responses"] },
-    { "title": "Active and passive voice transformations", "category": "Methods", "keywords": ["active voice", "passive voice", "transformation"] },
-    { "title": "Direct and indirect speech (reported speech)", "category": "Methods", "keywords": ["direct speech", "indirect speech", "reported speech"] },
-    { "title": "Phrasal verbs and multi-word verbs", "category": "Concepts & Foundations", "keywords": ["phrasal verbs", "multi word verbs", "meanings"] },
-    { "title": "Sentence types: simple, compound and complex", "category": "Theory", "keywords": ["simple sentence", "compound sentence", "complex sentence"] },
-    { "title": "Clauses and phrases: identification and use", "category": "Theory", "keywords": ["clauses", "phrases", "main clause", "subordinate clause"] },
-    { "title": "Punctuation and capitalisation rules", "category": "Methods", "keywords": ["punctuation", "comma", "capitalisation", "apostrophe"] },
-    { "title": "Spelling and commonly confused words", "category": "Methods", "keywords": ["spelling", "confused words", "correct spelling"] },
-    { "title": "Word formation: prefixes and suffixes", "category": "Methods", "keywords": ["prefixes", "suffixes", "word formation", "affixes"] },
-    { "title": "Vocabulary in context: word meaning", "category": "Concepts & Foundations", "keywords": ["vocabulary", "context", "meaning", "words in context"] },
-    { "title": "Synonyms: choosing the nearest in meaning", "category": "Applications", "keywords": ["synonyms", "nearest in meaning", "word choice"] },
-    { "title": "Antonyms: words opposite in meaning", "category": "Applications", "keywords": ["antonyms", "opposite in meaning", "opposites"] },
-    { "title": "Idioms and idiomatic expressions", "category": "Theory", "keywords": ["idioms", "idiomatic expressions", "meanings"] },
-    { "title": "Collocations and fixed expressions", "category": "Theory", "keywords": ["collocations", "fixed expressions", "combinations"] },
-    { "title": "Homophones, homographs and homonyms", "category": "Theory", "keywords": ["homophones", "homographs", "homonyms"] },
-    { "title": "Proverbs, sayings and their meanings", "category": "Theory", "keywords": ["proverbs", "sayings", "meanings"] },
-    { "title": "Interpreting figurative expressions", "category": "Theory", "keywords": ["figurative", "metaphor", "simile", "hyperbole"] },
-    { "title": "Understanding registers and appropriate lexis", "category": "Concepts & Foundations", "keywords": ["registers", "lexis", "appropriate", "jargon"] },
-    { "title": "Registers: law, medicine and the court", "category": "Applications", "keywords": ["registers", "law", "medicine", "court", "verdict"] },
-    { "title": "Registers: agriculture, sports and military", "category": "Applications", "keywords": ["registers", "agriculture", "sports", "military"] },
-    { "title": "Registers: finance, stock exchange and trade", "category": "Applications", "keywords": ["registers", "stock exchange", "finance", "shares"] },
-    { "title": "Registers: religion, advertising and media", "category": "Applications", "keywords": ["registers", "religion", "advertising", "media"] },
-    { "title": "Comprehension: main ideas and topic sentences", "category": "Concepts & Foundations", "keywords": ["comprehension", "main idea", "topic sentence", "passage"] },
-    { "title": "Comprehension: inference and deduction", "category": "Theory", "keywords": ["inference", "deduction", "implied", "passage"] },
-    { "title": "Comprehension: writer's purpose and tone", "category": "Theory", "keywords": ["purpose", "tone", "attitude", "mood"] },
-    { "title": "Comprehension: facts, opinions and evaluation", "category": "Theory", "keywords": ["facts", "opinions", "evaluation", "evidence"] },
-    { "title": "Cloze passages and gap-filling tests", "category": "Methods", "keywords": ["cloze", "gap", "appropriate word", "passage"] },
-    { "title": "Summary writing: selecting key points", "category": "Methods", "keywords": ["summary", "key points", "main points", "concise"] },
-    { "title": "Listening comprehension skills", "category": "Methods", "keywords": ["listening", "comprehension", "details", "main points"] },
-    { "title": "Dialogue interpretation and speaker intent", "category": "Theory", "keywords": ["dialogue", "speaker", "intent", "utterance"] },
-    { "title": "Oral English: vowel sounds and phonemes", "category": "Concepts & Foundations", "keywords": ["vowel sounds", "phonemes", "monophthongs", "diphthongs"] },
-    { "title": "Oral English: consonant sounds and clusters", "category": "Concepts & Foundations", "keywords": ["consonant sounds", "clusters", "articulation"] },
-    { "title": "Rhyming words and sound patterns", "category": "Methods", "keywords": ["rhymes", "rhyming", "sound pattern"] },
-    { "title": "Word stress and syllable structure", "category": "Theory", "keywords": ["word stress", "syllables", "stressed syllable"] },
-    { "title": "Emphatic stress and sentence stress", "category": "Theory", "keywords": ["emphatic stress", "sentence stress", "stress"] },
-    { "title": "Intonation: rising and falling tunes", "category": "Theory", "keywords": ["intonation", "rising tune", "falling tune", "pitch"] },
-    { "title": "English for everyday communication", "category": "Applications", "keywords": ["communication", "greetings", "polite forms", "etiquette"] },
-    { "title": "Comprehension of technical and expository texts", "category": "Applications", "keywords": ["expository", "technical", "text", "explanation"] },
-    { "title": "Answering use of English questions correctly", "category": "Methods", "keywords": ["use of english", "questions", "options", "answer"] },
-    { "title": "Nigerian English and standard usage", "category": "Nigerian Context", "keywords": ["nigerian english", "standard english", "usage", "interference"] },
-    { "title": "English in Nigerian media and public life", "category": "Nigerian Context", "keywords": ["newspaper", "radio", "media", "headlines"] },
-    { "title": "Language, communication and national development", "category": "Contemporary Issues", "keywords": ["language", "communication", "development", "society"] },
-    { "title": "Examination drill: english past questions by topic", "category": "Applications", "keywords": ["past questions", "revision", "examination", "jamb"] }
-  ]
+ "body": "jamb",
+ "subject": "english",
+ "title": "English Language",
+ "unitTitles": [
+  "Grammar Foundations",
+  "Sentences, Vocabulary and Meaning",
+  "Idioms, Registers and Comprehension",
+  "Comprehension, Summary and Oral Skills",
+  "Stress, Intonation and Communication",
+  "Tenses and Concord Clinic",
+  "Articles, Modals and Prepositions",
+  "Sentence Structure and Errors",
+  "Vocabulary Building in Depth",
+  "Lexis of Nigerian Institutions",
+  "Comprehension Mastery I",
+  "Comprehension Mastery II",
+  "Summary Writing Mastery",
+  "Oral English: Vowels in Depth",
+  "Oral English: Consonants and Stress",
+  "Idioms and Figurative Language",
+  "Letter and Essay Writing",
+  "Punctuation and Mechanics",
+  "Listening and Dialogue Interpretation",
+  "Cloze and Gap-Fill Strategy",
+  "Register Switching Practice",
+  "Grammar in Longer Texts",
+  "English in Nigerian Public Life",
+  "Reading Speed and Accuracy",
+  "Structured Revision: Set A",
+  "Structured Revision: Set B",
+  "Grammar Drills Workshop",
+  "JAMB Masterclass: Final Lap",
+  "Comprehension: Science and Technology",
+  "Style: Combining and Tightening"
+ ],
+ "topics": [
+  {
+   "title": "Parts of speech: nouns, pronouns and articles",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "parts of speech",
+    "nouns",
+    "pronouns",
+    "articles"
+   ]
+  },
+  {
+   "title": "Verbs, tenses and their correct forms",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "verbs",
+    "tenses",
+    "correct forms",
+    "verb"
+   ]
+  },
+  {
+   "title": "Subject-verb agreement and concord",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "concord",
+    "subject verb agreement",
+    "agreement"
+   ]
+  },
+  {
+   "title": "Pronoun case and reference in sentences",
+   "category": "Theory",
+   "keywords": [
+    "pronoun",
+    "case",
+    "reference",
+    "antecedent"
+   ]
+  },
+  {
+   "title": "Adjectives and adverbs: comparison and order",
+   "category": "Theory",
+   "keywords": [
+    "adjectives",
+    "adverbs",
+    "comparative",
+    "superlative"
+   ]
+  },
+  {
+   "title": "Prepositions and their correct usage",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "prepositions",
+    "usage",
+    "phrases"
+   ]
+  },
+  {
+   "title": "Conjunctions and sentence connectors",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "conjunctions",
+    "connectors",
+    "linking words"
+   ]
+  },
+  {
+   "title": "Question tags, statements and responses",
+   "category": "Theory",
+   "keywords": [
+    "question tags",
+    "statements",
+    "responses"
+   ]
+  },
+  {
+   "title": "Active and passive voice transformations",
+   "category": "Methods",
+   "keywords": [
+    "active voice",
+    "passive voice",
+    "transformation"
+   ]
+  },
+  {
+   "title": "Direct and indirect speech (reported speech)",
+   "category": "Methods",
+   "keywords": [
+    "direct speech",
+    "indirect speech",
+    "reported speech"
+   ]
+  },
+  {
+   "title": "Phrasal verbs and multi-word verbs",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "phrasal verbs",
+    "multi word verbs",
+    "meanings"
+   ]
+  },
+  {
+   "title": "Sentence types: simple, compound and complex",
+   "category": "Theory",
+   "keywords": [
+    "simple sentence",
+    "compound sentence",
+    "complex sentence"
+   ]
+  },
+  {
+   "title": "Clauses and phrases: identification and use",
+   "category": "Theory",
+   "keywords": [
+    "clauses",
+    "phrases",
+    "main clause",
+    "subordinate clause"
+   ]
+  },
+  {
+   "title": "Punctuation and capitalisation rules",
+   "category": "Methods",
+   "keywords": [
+    "punctuation",
+    "comma",
+    "capitalisation",
+    "apostrophe"
+   ]
+  },
+  {
+   "title": "Spelling and commonly confused words",
+   "category": "Methods",
+   "keywords": [
+    "spelling",
+    "confused words",
+    "correct spelling"
+   ]
+  },
+  {
+   "title": "Word formation: prefixes and suffixes",
+   "category": "Methods",
+   "keywords": [
+    "prefixes",
+    "suffixes",
+    "word formation",
+    "affixes"
+   ]
+  },
+  {
+   "title": "Vocabulary in context: word meaning",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "vocabulary",
+    "context",
+    "meaning",
+    "words in context"
+   ]
+  },
+  {
+   "title": "Synonyms: choosing the nearest in meaning",
+   "category": "Applications",
+   "keywords": [
+    "synonyms",
+    "nearest in meaning",
+    "word choice"
+   ]
+  },
+  {
+   "title": "Antonyms: words opposite in meaning",
+   "category": "Applications",
+   "keywords": [
+    "antonyms",
+    "opposite in meaning",
+    "opposites"
+   ]
+  },
+  {
+   "title": "Idioms and idiomatic expressions",
+   "category": "Theory",
+   "keywords": [
+    "idioms",
+    "idiomatic expressions",
+    "meanings"
+   ]
+  },
+  {
+   "title": "Collocations and fixed expressions",
+   "category": "Theory",
+   "keywords": [
+    "collocations",
+    "fixed expressions",
+    "combinations"
+   ]
+  },
+  {
+   "title": "Homophones, homographs and homonyms",
+   "category": "Theory",
+   "keywords": [
+    "homophones",
+    "homographs",
+    "homonyms"
+   ]
+  },
+  {
+   "title": "Proverbs, sayings and their meanings",
+   "category": "Theory",
+   "keywords": [
+    "proverbs",
+    "sayings",
+    "meanings"
+   ]
+  },
+  {
+   "title": "Interpreting figurative expressions",
+   "category": "Theory",
+   "keywords": [
+    "figurative",
+    "metaphor",
+    "simile",
+    "hyperbole"
+   ]
+  },
+  {
+   "title": "Understanding registers and appropriate lexis",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "registers",
+    "lexis",
+    "appropriate",
+    "jargon"
+   ]
+  },
+  {
+   "title": "Registers: law, medicine and the court",
+   "category": "Applications",
+   "keywords": [
+    "registers",
+    "law",
+    "medicine",
+    "court",
+    "verdict"
+   ]
+  },
+  {
+   "title": "Registers: agriculture, sports and military",
+   "category": "Applications",
+   "keywords": [
+    "registers",
+    "agriculture",
+    "sports",
+    "military"
+   ]
+  },
+  {
+   "title": "Registers: finance, stock exchange and trade",
+   "category": "Applications",
+   "keywords": [
+    "registers",
+    "stock exchange",
+    "finance",
+    "shares"
+   ]
+  },
+  {
+   "title": "Registers: religion, advertising and media",
+   "category": "Applications",
+   "keywords": [
+    "registers",
+    "religion",
+    "advertising",
+    "media"
+   ]
+  },
+  {
+   "title": "Comprehension: main ideas and topic sentences",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "comprehension",
+    "main idea",
+    "topic sentence",
+    "passage"
+   ]
+  },
+  {
+   "title": "Comprehension: inference and deduction",
+   "category": "Theory",
+   "keywords": [
+    "inference",
+    "deduction",
+    "implied",
+    "passage"
+   ]
+  },
+  {
+   "title": "Comprehension: writer's purpose and tone",
+   "category": "Theory",
+   "keywords": [
+    "purpose",
+    "tone",
+    "attitude",
+    "mood"
+   ]
+  },
+  {
+   "title": "Comprehension: facts, opinions and evaluation",
+   "category": "Theory",
+   "keywords": [
+    "facts",
+    "opinions",
+    "evaluation",
+    "evidence"
+   ]
+  },
+  {
+   "title": "Cloze passages and gap-filling tests",
+   "category": "Methods",
+   "keywords": [
+    "cloze",
+    "gap",
+    "appropriate word",
+    "passage"
+   ]
+  },
+  {
+   "title": "Summary writing: selecting key points",
+   "category": "Methods",
+   "keywords": [
+    "summary",
+    "key points",
+    "main points",
+    "concise"
+   ]
+  },
+  {
+   "title": "Listening comprehension skills",
+   "category": "Methods",
+   "keywords": [
+    "listening",
+    "comprehension",
+    "details",
+    "main points"
+   ]
+  },
+  {
+   "title": "Dialogue interpretation and speaker intent",
+   "category": "Theory",
+   "keywords": [
+    "dialogue",
+    "speaker",
+    "intent",
+    "utterance"
+   ]
+  },
+  {
+   "title": "Oral English: vowel sounds and phonemes",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "vowel sounds",
+    "phonemes",
+    "monophthongs",
+    "diphthongs"
+   ]
+  },
+  {
+   "title": "Oral English: consonant sounds and clusters",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "consonant sounds",
+    "clusters",
+    "articulation"
+   ]
+  },
+  {
+   "title": "Rhyming words and sound patterns",
+   "category": "Methods",
+   "keywords": [
+    "rhymes",
+    "rhyming",
+    "sound pattern"
+   ]
+  },
+  {
+   "title": "Word stress and syllable structure",
+   "category": "Theory",
+   "keywords": [
+    "word stress",
+    "syllables",
+    "stressed syllable"
+   ]
+  },
+  {
+   "title": "Emphatic stress and sentence stress",
+   "category": "Theory",
+   "keywords": [
+    "emphatic stress",
+    "sentence stress",
+    "stress"
+   ]
+  },
+  {
+   "title": "Intonation: rising and falling tunes",
+   "category": "Theory",
+   "keywords": [
+    "intonation",
+    "rising tune",
+    "falling tune",
+    "pitch"
+   ]
+  },
+  {
+   "title": "English for everyday communication",
+   "category": "Applications",
+   "keywords": [
+    "communication",
+    "greetings",
+    "polite forms",
+    "etiquette"
+   ]
+  },
+  {
+   "title": "Comprehension of technical and expository texts",
+   "category": "Applications",
+   "keywords": [
+    "expository",
+    "technical",
+    "text",
+    "explanation"
+   ]
+  },
+  {
+   "title": "Answering use of English questions correctly",
+   "category": "Methods",
+   "keywords": [
+    "use of english",
+    "questions",
+    "options",
+    "answer"
+   ]
+  },
+  {
+   "title": "Nigerian English and standard usage",
+   "category": "Nigerian Context",
+   "keywords": [
+    "nigerian english",
+    "standard english",
+    "usage",
+    "interference"
+   ]
+  },
+  {
+   "title": "English in Nigerian media and public life",
+   "category": "Nigerian Context",
+   "keywords": [
+    "newspaper",
+    "radio",
+    "media",
+    "headlines"
+   ]
+  },
+  {
+   "title": "Language, communication and national development",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "language",
+    "communication",
+    "development",
+    "society"
+   ]
+  },
+  {
+   "title": "Examination drill: english past questions by topic",
+   "category": "Applications",
+   "keywords": [
+    "past questions",
+    "revision",
+    "examination",
+    "jamb"
+   ]
+  },
+  {
+   "title": "The present tenses: forms and uses",
+   "category": "Methods",
+   "keywords": [
+    "present tense",
+    "forms"
+   ]
+  },
+  {
+   "title": "The past tenses: simple, continuous, perfect",
+   "category": "Methods",
+   "keywords": [
+    "past tense",
+    "perfect"
+   ]
+  },
+  {
+   "title": "Future forms: will, shall and going to",
+   "category": "Methods",
+   "keywords": [
+    "future tense",
+    "forms"
+   ]
+  },
+  {
+   "title": "Sequence of tenses in narratives",
+   "category": "Theory",
+   "keywords": [
+    "sequence of tenses"
+   ]
+  },
+  {
+   "title": "Concord: proximity and notional agreement",
+   "category": "Theory",
+   "keywords": [
+    "concord",
+    "agreement"
+   ]
+  },
+  {
+   "title": "Tricky subjects: each, every, neither",
+   "category": "Methods",
+   "keywords": [
+    "concord",
+    "each",
+    "every"
+   ]
+  },
+  {
+   "title": "Collective nouns and their verbs",
+   "category": "Methods",
+   "keywords": [
+    "collective nouns",
+    "verbs"
+   ]
+  },
+  {
+   "title": "Tense errors Nigerians commonly make",
+   "category": "Nigerian Context",
+   "keywords": [
+    "tense errors",
+    "common"
+   ]
+  },
+  {
+   "title": "Correcting concord in paragraphs",
+   "category": "Methods",
+   "keywords": [
+    "concord",
+    "paragraphs"
+   ]
+  },
+  {
+   "title": "Examination drill: tenses past questions",
+   "category": "Applications",
+   "keywords": [
+    "tenses",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The articles: a, an and the in use",
+   "category": "Methods",
+   "keywords": [
+    "articles",
+    "usage"
+   ]
+  },
+  {
+   "title": "Zero article situations",
+   "category": "Methods",
+   "keywords": [
+    "zero article"
+   ]
+  },
+  {
+   "title": "Modals of ability, permission and advice",
+   "category": "Theory",
+   "keywords": [
+    "modals",
+    "ability",
+    "permission"
+   ]
+  },
+  {
+   "title": "Modals of probability and obligation",
+   "category": "Theory",
+   "keywords": [
+    "modals",
+    "obligation"
+   ]
+  },
+  {
+   "title": "Prepositional collocations with verbs",
+   "category": "Methods",
+   "keywords": [
+    "prepositions",
+    "collocations"
+   ]
+  },
+  {
+   "title": "Prepositional collocations with adjectives",
+   "category": "Methods",
+   "keywords": [
+    "prepositions",
+    "adjectives"
+   ]
+  },
+  {
+   "title": "Between, among, beside and besides",
+   "category": "Methods",
+   "keywords": [
+    "prepositions",
+    "confusions"
+   ]
+  },
+  {
+   "title": "Phrasal prepositions in formal writing",
+   "category": "Methods",
+   "keywords": [
+    "phrasal prepositions"
+   ]
+  },
+  {
+   "title": "Common preposition errors corrected",
+   "category": "Methods",
+   "keywords": [
+    "preposition errors"
+   ]
+  },
+  {
+   "title": "Examination drill: structures past questions",
+   "category": "Applications",
+   "keywords": [
+    "structures",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Fragments, run-ons and comma splices",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "fragments",
+    "run-ons"
+   ]
+  },
+  {
+   "title": "Pronoun-antecedent agreement",
+   "category": "Theory",
+   "keywords": [
+    "pronoun",
+    "antecedent"
+   ]
+  },
+  {
+   "title": "Dangling and misplaced modifiers",
+   "category": "Theory",
+   "keywords": [
+    "modifiers",
+    "dangling"
+   ]
+  },
+  {
+   "title": "Parallel structure in lists and pairs",
+   "category": "Theory",
+   "keywords": [
+    "parallel structure"
+   ]
+  },
+  {
+   "title": "Redundancy and wordiness cut down",
+   "category": "Methods",
+   "keywords": [
+    "redundancy",
+    "wordiness"
+   ]
+  },
+  {
+   "title": "Question formation and tags revisited",
+   "category": "Methods",
+   "keywords": [
+    "questions",
+    "tags"
+   ]
+  },
+  {
+   "title": "Negation: not, no and negatives",
+   "category": "Methods",
+   "keywords": [
+    "negation",
+    "negatives"
+   ]
+  },
+  {
+   "title": "Comparatives and superlatives correctly",
+   "category": "Methods",
+   "keywords": [
+    "comparatives",
+    "superlatives"
+   ]
+  },
+  {
+   "title": "Common structural errors in essays",
+   "category": "Methods",
+   "keywords": [
+    "structural errors",
+    "essays"
+   ]
+  },
+  {
+   "title": "Examination drill: error spotting past questions",
+   "category": "Applications",
+   "keywords": [
+    "error spotting",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Word roots: Latin and Greek origins",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "word roots",
+    "origins"
+   ]
+  },
+  {
+   "title": "Prefix families: re-, pre-, mis-, dis-",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "prefixes",
+    "families"
+   ]
+  },
+  {
+   "title": "Suffix families: -tion, -ment, -able",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "suffixes",
+    "families"
+   ]
+  },
+  {
+   "title": "Synonym discrimination: fine differences",
+   "category": "Methods",
+   "keywords": [
+    "synonyms",
+    "discrimination"
+   ]
+  },
+  {
+   "title": "Antonym pairs in context",
+   "category": "Methods",
+   "keywords": [
+    "antonyms",
+    "context"
+   ]
+  },
+  {
+   "title": "Confusables: principal, principle, stationery",
+   "category": "Methods",
+   "keywords": [
+    "confusables",
+    "spelling"
+   ]
+  },
+  {
+   "title": "Building vocabulary from reading",
+   "category": "Applications",
+   "keywords": [
+    "vocabulary",
+    "reading"
+   ]
+  },
+  {
+   "title": "Words often misused in Nigerian English",
+   "category": "Nigerian Context",
+   "keywords": [
+    "misused words",
+    "Nigerian English"
+   ]
+  },
+  {
+   "title": "Using a thesaurus without distortion",
+   "category": "Applications",
+   "keywords": [
+    "thesaurus",
+    "usage"
+   ]
+  },
+  {
+   "title": "Examination drill: vocabulary past questions",
+   "category": "Applications",
+   "keywords": [
+    "vocabulary",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The lexis of Nigerian government",
+   "category": "Nigerian Context",
+   "keywords": [
+    "lexis",
+    "government"
+   ]
+  },
+  {
+   "title": "The lexis of courts and police",
+   "category": "Nigerian Context",
+   "keywords": [
+    "lexis",
+    "courts"
+   ]
+  },
+  {
+   "title": "The lexis of banking and finance",
+   "category": "Nigerian Context",
+   "keywords": [
+    "lexis",
+    "banking"
+   ]
+  },
+  {
+   "title": "The lexis of hospitals and clinics",
+   "category": "Nigerian Context",
+   "keywords": [
+    "lexis",
+    "hospitals"
+   ]
+  },
+  {
+   "title": "The lexis of farming and markets",
+   "category": "Nigerian Context",
+   "keywords": [
+    "lexis",
+    "farming"
+   ]
+  },
+  {
+   "title": "The lexis of schools and universities",
+   "category": "Nigerian Context",
+   "keywords": [
+    "lexis",
+    "schools"
+   ]
+  },
+  {
+   "title": "The lexis of sports commentary",
+   "category": "Nigerian Context",
+   "keywords": [
+    "lexis",
+    "sports"
+   ]
+  },
+  {
+   "title": "The lexis of religion and worship",
+   "category": "Nigerian Context",
+   "keywords": [
+    "lexis",
+    "religion"
+   ]
+  },
+  {
+   "title": "Slang, formal and neutral registers",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "slang",
+    "registers"
+   ]
+  },
+  {
+   "title": "Examination drill: lexis past questions",
+   "category": "Applications",
+   "keywords": [
+    "lexis",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Previewing passages: skimming and scanning",
+   "category": "Methods",
+   "keywords": [
+    "skimming",
+    "scanning"
+   ]
+  },
+  {
+   "title": "Locating main ideas per paragraph",
+   "category": "Methods",
+   "keywords": [
+    "main ideas",
+    "paragraphs"
+   ]
+  },
+  {
+   "title": "Inferring meaning from context clues",
+   "category": "Methods",
+   "keywords": [
+    "inference",
+    "context clues"
+   ]
+  },
+  {
+   "title": "Distinguishing fact from opinion",
+   "category": "Methods",
+   "keywords": [
+    "fact",
+    "opinion"
+   ]
+  },
+  {
+   "title": "Identifying the writer's tone",
+   "category": "Methods",
+   "keywords": [
+    "tone",
+    "writer"
+   ]
+  },
+  {
+   "title": "Tracking pronoun references in passages",
+   "category": "Methods",
+   "keywords": [
+    "pronoun reference",
+    "passages"
+   ]
+  },
+  {
+   "title": "Answering 'according to the passage' items",
+   "category": "Methods",
+   "keywords": [
+    "according to the passage"
+   ]
+  },
+  {
+   "title": "Vocabulary-in-context questions strategy",
+   "category": "Methods",
+   "keywords": [
+    "vocabulary in context"
+   ]
+  },
+  {
+   "title": "Managing time across comprehension sets",
+   "category": "Methods",
+   "keywords": [
+    "time management",
+    "comprehension"
+   ]
+  },
+  {
+   "title": "Examination drill: comprehension past questions",
+   "category": "Applications",
+   "keywords": [
+    "comprehension",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Expository texts: structures and signals",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "expository texts",
+    "structure"
+   ]
+  },
+  {
+   "title": "Argumentative texts: claims and support",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "argumentative",
+    "claims"
+   ]
+  },
+  {
+   "title": "Narrative passages: sequence and viewpoint",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "narrative",
+    "viewpoint"
+   ]
+  },
+  {
+   "title": "Technical passages: science and ICT",
+   "category": "Applications",
+   "keywords": [
+    "technical passages",
+    "ICT"
+   ]
+  },
+  {
+   "title": "Newspaper and media excerpts",
+   "category": "Nigerian Context",
+   "keywords": [
+    "newspaper",
+    "media"
+   ]
+  },
+  {
+   "title": "Interpreting statistics inside passages",
+   "category": "Methods",
+   "keywords": [
+    "statistics",
+    "passages"
+   ]
+  },
+  {
+   "title": "Making valid deductions from texts",
+   "category": "Methods",
+   "keywords": [
+    "deduction",
+    "texts"
+   ]
+  },
+  {
+   "title": "Author's purpose and audience questions",
+   "category": "Methods",
+   "keywords": [
+    "author's purpose",
+    "audience"
+   ]
+  },
+  {
+   "title": "Rereading strategically: when and how",
+   "category": "Methods",
+   "keywords": [
+    "rereading",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Examination drill: expository past questions",
+   "category": "Applications",
+   "keywords": [
+    "expository",
+    "past questions"
+   ]
+  },
+  {
+   "title": "What summary questions truly reward",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "summary",
+    "requirements"
+   ]
+  },
+  {
+   "title": "Selecting topic sentences fast",
+   "category": "Methods",
+   "keywords": [
+    "topic sentences",
+    "selection"
+   ]
+  },
+  {
+   "title": "Deleting examples and repetitions",
+   "category": "Methods",
+   "keywords": [
+    "deleting",
+    "repetition"
+   ]
+  },
+  {
+   "title": "Compressing lists into phrases",
+   "category": "Methods",
+   "keywords": [
+    "compressing",
+    "lists"
+   ]
+  },
+  {
+   "title": "Paraphrasing without changing meaning",
+   "category": "Methods",
+   "keywords": [
+    "paraphrase",
+    "meaning"
+   ]
+  },
+  {
+   "title": "Sentence length and penalty rules",
+   "category": "Methods",
+   "keywords": [
+    "sentence length",
+    "rules"
+   ]
+  },
+  {
+   "title": "Own words versus lifted words",
+   "category": "Methods",
+   "keywords": [
+    "own words",
+    "lifting"
+   ]
+  },
+  {
+   "title": "Practising 100-word summaries",
+   "category": "Applications",
+   "keywords": [
+    "summaries",
+    "practice"
+   ]
+  },
+  {
+   "title": "Marking your own summary strictly",
+   "category": "Methods",
+   "keywords": [
+    "self-marking",
+    "summaries"
+   ]
+  },
+  {
+   "title": "Examination drill: summary past questions",
+   "category": "Applications",
+   "keywords": [
+    "summary",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The pure vowels: minimal pair drills",
+   "category": "Methods",
+   "keywords": [
+    "pure vowels",
+    "minimal pairs"
+   ]
+  },
+  {
+   "title": "Short and long vowel contrasts",
+   "category": "Methods",
+   "keywords": [
+    "short vowels",
+    "long vowels"
+   ]
+  },
+  {
+   "title": "The diphthongs in Nigerian speech",
+   "category": "Methods",
+   "keywords": [
+    "diphthongs",
+    "speech"
+   ]
+  },
+  {
+   "title": "Weak forms and the schwa",
+   "category": "Theory",
+   "keywords": [
+    "schwa",
+    "weak forms"
+   ]
+  },
+  {
+   "title": "Vowel length before voiced endings",
+   "category": "Theory",
+   "keywords": [
+    "vowel length",
+    "endings"
+   ]
+  },
+  {
+   "title": "Rhyme recognition in exam items",
+   "category": "Methods",
+   "keywords": [
+    "rhyme",
+    "recognition"
+   ]
+  },
+  {
+   "title": "Same-sound sets: choosing the odd one",
+   "category": "Methods",
+   "keywords": [
+    "same sound",
+    "odd one"
+   ]
+  },
+  {
+   "title": "Vowel errors Nigerian speakers correct",
+   "category": "Nigerian Context",
+   "keywords": [
+    "vowel errors",
+    "speakers"
+   ]
+  },
+  {
+   "title": "Listening drills with dictation",
+   "category": "Methods",
+   "keywords": [
+    "dictation",
+    "listening"
+   ]
+  },
+  {
+   "title": "Examination drill: vowels past questions",
+   "category": "Applications",
+   "keywords": [
+    "vowels",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Consonant clusters: initial and final",
+   "category": "Methods",
+   "keywords": [
+    "consonant clusters"
+   ]
+  },
+  {
+   "title": "The sounds th, v, w and r",
+   "category": "Methods",
+   "keywords": [
+    "th sound",
+    "v sound"
+   ]
+  },
+  {
+   "title": "Silent letters in common words",
+   "category": "Methods",
+   "keywords": [
+    "silent letters"
+   ]
+  },
+  {
+   "title": "Word stress: two-syllable patterns",
+   "category": "Methods",
+   "keywords": [
+    "word stress",
+    "syllables"
+   ]
+  },
+  {
+   "title": "Word stress: three-syllable and beyond",
+   "category": "Methods",
+   "keywords": [
+    "word stress",
+    "three syllables"
+   ]
+  },
+  {
+   "title": "Stress shifts in word families",
+   "category": "Theory",
+   "keywords": [
+    "stress shift",
+    "word families"
+   ]
+  },
+  {
+   "title": "Emphatic stress and question answers",
+   "category": "Theory",
+   "keywords": [
+    "emphatic stress",
+    "answers"
+   ]
+  },
+  {
+   "title": "Intonation: questions versus statements",
+   "category": "Theory",
+   "keywords": [
+    "intonation",
+    "questions"
+   ]
+  },
+  {
+   "title": "Falling and rising tunes in dialogue",
+   "category": "Theory",
+   "keywords": [
+    "rising tune",
+    "falling tune"
+   ]
+  },
+  {
+   "title": "Examination drill: stress past questions",
+   "category": "Applications",
+   "keywords": [
+    "stress",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Animal idioms and their meanings",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "idioms",
+    "animals"
+   ]
+  },
+  {
+   "title": "Body-part idioms in everyday English",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "idioms",
+    "body"
+   ]
+  },
+  {
+   "title": "Colour idioms and associations",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "idioms",
+    "colours"
+   ]
+  },
+  {
+   "title": "Idioms from sports and seafaring",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "idioms",
+    "sports"
+   ]
+  },
+  {
+   "title": "Proverbs: Nigerian and English compared",
+   "category": "Nigerian Context",
+   "keywords": [
+    "proverbs",
+    "Nigerian"
+   ]
+  },
+  {
+   "title": "Metaphors versus similes in texts",
+   "category": "Theory",
+   "keywords": [
+    "metaphor",
+    "simile"
+   ]
+  },
+  {
+   "title": "Hyperbole and understatement in use",
+   "category": "Theory",
+   "keywords": [
+    "hyperbole",
+    "understatement"
+   ]
+  },
+  {
+   "title": "Personification in descriptive writing",
+   "category": "Theory",
+   "keywords": [
+    "personification"
+   ]
+  },
+  {
+   "title": "Interpreting unfamiliar idioms safely",
+   "category": "Methods",
+   "keywords": [
+    "idioms",
+    "interpretation"
+   ]
+  },
+  {
+   "title": "Examination drill: idioms past questions",
+   "category": "Applications",
+   "keywords": [
+    "idioms",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Formal letters: layout and salutations",
+   "category": "Methods",
+   "keywords": [
+    "formal letters",
+    "layout"
+   ]
+  },
+  {
+   "title": "Semi-formal letters: tone control",
+   "category": "Methods",
+   "keywords": [
+    "semi-formal letters",
+    "tone"
+   ]
+  },
+  {
+   "title": "Informal letters: warmth with order",
+   "category": "Methods",
+   "keywords": [
+    "informal letters",
+    "tone"
+   ]
+  },
+  {
+   "title": "Expository essays: explaining clearly",
+   "category": "Methods",
+   "keywords": [
+    "expository essays"
+   ]
+  },
+  {
+   "title": "Argumentative essays: convincing structure",
+   "category": "Methods",
+   "keywords": [
+    "argumentative essays"
+   ]
+  },
+  {
+   "title": "Narrative essays: plotting tightly",
+   "category": "Methods",
+   "keywords": [
+    "narrative essays"
+   ]
+  },
+  {
+   "title": "Descriptive essays: showing not telling",
+   "category": "Methods",
+   "keywords": [
+    "descriptive essays"
+   ]
+  },
+  {
+   "title": "Speech writing for occasions",
+   "category": "Applications",
+   "keywords": [
+    "speech writing"
+   ]
+  },
+  {
+   "title": "Article writing for school magazines",
+   "category": "Applications",
+   "keywords": [
+    "article writing"
+   ]
+  },
+  {
+   "title": "Examination drill: essay past questions",
+   "category": "Applications",
+   "keywords": [
+    "essays",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The comma: all its honest jobs",
+   "category": "Methods",
+   "keywords": [
+    "comma",
+    "usage"
+   ]
+  },
+  {
+   "title": "Full stops, semicolons and colons",
+   "category": "Methods",
+   "keywords": [
+    "semicolons",
+    "colons"
+   ]
+  },
+  {
+   "title": "Apostrophes: possession and contraction",
+   "category": "Methods",
+   "keywords": [
+    "apostrophes",
+    "possession"
+   ]
+  },
+  {
+   "title": "Quotation marks and dialogue layout",
+   "category": "Methods",
+   "keywords": [
+    "quotation marks",
+    "dialogue"
+   ]
+  },
+  {
+   "title": "Hyphens and dashes distinguished",
+   "category": "Methods",
+   "keywords": [
+    "hyphens",
+    "dashes"
+   ]
+  },
+  {
+   "title": "Capital letters: the full rule set",
+   "category": "Methods",
+   "keywords": [
+    "capital letters",
+    "rules"
+   ]
+  },
+  {
+   "title": "Brackets and ellipses in writing",
+   "category": "Methods",
+   "keywords": [
+    "brackets",
+    "ellipses"
+   ]
+  },
+  {
+   "title": "Punctuation errors examiners punish",
+   "category": "Methods",
+   "keywords": [
+    "punctuation errors",
+    "examiners"
+   ]
+  },
+  {
+   "title": "Proofreading your own writing",
+   "category": "Methods",
+   "keywords": [
+    "proofreading"
+   ]
+  },
+  {
+   "title": "Examination drill: punctuation past questions",
+   "category": "Applications",
+   "keywords": [
+    "punctuation",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Listening for gist on first hearing",
+   "category": "Methods",
+   "keywords": [
+    "listening",
+    "gist"
+   ]
+  },
+  {
+   "title": "Listening for specific information",
+   "category": "Methods",
+   "keywords": [
+    "listening",
+    "details"
+   ]
+  },
+  {
+   "title": "Speaker intent: polite refusals, hints",
+   "category": "Theory",
+   "keywords": [
+    "speaker intent",
+    "hints"
+   ]
+  },
+  {
+   "title": "Interpreting indirect requests",
+   "category": "Theory",
+   "keywords": [
+    "indirect requests"
+   ]
+  },
+  {
+   "title": "Dialogue tone: formal versus casual",
+   "category": "Theory",
+   "keywords": [
+    "dialogue tone"
+   ]
+  },
+  {
+   "title": "Responding appropriately in dialogues",
+   "category": "Methods",
+   "keywords": [
+    "responding",
+    "dialogues"
+   ]
+  },
+  {
+   "title": "Note-taking while listening",
+   "category": "Methods",
+   "keywords": [
+    "note-taking",
+    "listening"
+   ]
+  },
+  {
+   "title": "Nigerian accents in exam recordings",
+   "category": "Nigerian Context",
+   "keywords": [
+    "accents",
+    "recordings"
+   ]
+  },
+  {
+   "title": "Practice with past listening items",
+   "category": "Applications",
+   "keywords": [
+    "listening practice",
+    "past items"
+   ]
+  },
+  {
+   "title": "Examination drill: listening past questions",
+   "category": "Applications",
+   "keywords": [
+    "listening",
+    "past questions"
+   ]
+  },
+  {
+   "title": "How cloze passages are built",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "cloze",
+    "construction"
+   ]
+  },
+  {
+   "title": "Grammar clues inside the gaps",
+   "category": "Methods",
+   "keywords": [
+    "grammar clues",
+    "gaps"
+   ]
+  },
+  {
+   "title": "Vocabulary clues and collocation",
+   "category": "Methods",
+   "keywords": [
+    "collocation",
+    "clues"
+   ]
+  },
+  {
+   "title": "Cohesion links across sentences",
+   "category": "Theory",
+   "keywords": [
+    "cohesion",
+    "links"
+   ]
+  },
+  {
+   "title": "Choosing connectors logically",
+   "category": "Methods",
+   "keywords": [
+    "connectors",
+    "logic"
+   ]
+  },
+  {
+   "title": "Verifying the completed passage",
+   "category": "Methods",
+   "keywords": [
+    "verification",
+    "passage"
+   ]
+  },
+  {
+   "title": "Timed cloze practice sets",
+   "category": "Applications",
+   "keywords": [
+    "cloze",
+    "timed practice"
+   ]
+  },
+  {
+   "title": "Error patterns in cloze answers",
+   "category": "Methods",
+   "keywords": [
+    "error patterns",
+    "cloze"
+   ]
+  },
+  {
+   "title": "Building reading speed for cloze",
+   "category": "Methods",
+   "keywords": [
+    "reading speed",
+    "cloze"
+   ]
+  },
+  {
+   "title": "Examination drill: cloze past questions",
+   "category": "Applications",
+   "keywords": [
+    "cloze",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Formal versus informal: the shifts",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "register shift",
+    "formal"
+   ]
+  },
+  {
+   "title": "Rewriting casual sentences formally",
+   "category": "Methods",
+   "keywords": [
+    "rewriting",
+    "formal"
+   ]
+  },
+  {
+   "title": "Choosing lexis for the audience",
+   "category": "Methods",
+   "keywords": [
+    "lexis",
+    "audience"
+   ]
+  },
+  {
+   "title": "Polite forms and indirectness",
+   "category": "Theory",
+   "keywords": [
+    "politeness",
+    "indirectness"
+   ]
+  },
+  {
+   "title": "Office and workplace English",
+   "category": "Nigerian Context",
+   "keywords": [
+    "office English",
+    "workplace"
+   ]
+  },
+  {
+   "title": "Customer service conversations",
+   "category": "Nigerian Context",
+   "keywords": [
+    "customer service"
+   ]
+  },
+  {
+   "title": "Announcements and public notices",
+   "category": "Nigerian Context",
+   "keywords": [
+    "announcements",
+    "notices"
+   ]
+  },
+  {
+   "title": "Email and message etiquette",
+   "category": "Applications",
+   "keywords": [
+    "email etiquette"
+   ]
+  },
+  {
+   "title": "Avoiding mother-tongue interference",
+   "category": "Nigerian Context",
+   "keywords": [
+    "interference",
+    "mother tongue"
+   ]
+  },
+  {
+   "title": "Examination drill: register past questions",
+   "category": "Applications",
+   "keywords": [
+    "register",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Agreement across long sentences",
+   "category": "Methods",
+   "keywords": [
+    "agreement",
+    "long sentences"
+   ]
+  },
+  {
+   "title": "Tense consistency in paragraphs",
+   "category": "Methods",
+   "keywords": [
+    "tense consistency",
+    "paragraphs"
+   ]
+  },
+  {
+   "title": "Pronoun chains and clarity",
+   "category": "Methods",
+   "keywords": [
+    "pronoun chains",
+    "clarity"
+   ]
+  },
+  {
+   "title": "Connectives that organise essays",
+   "category": "Methods",
+   "keywords": [
+    "connectives",
+    "essays"
+   ]
+  },
+  {
+   "title": "Sentence variety for flow",
+   "category": "Methods",
+   "keywords": [
+    "sentence variety",
+    "flow"
+   ]
+  },
+  {
+   "title": "Editing a flawed paragraph",
+   "category": "Methods",
+   "keywords": [
+    "editing",
+    "paragraph"
+   ]
+  },
+  {
+   "title": "Combining sentences elegantly",
+   "category": "Methods",
+   "keywords": [
+    "combining sentences"
+   ]
+  },
+  {
+   "title": "Transition words and their tones",
+   "category": "Theory",
+   "keywords": [
+    "transition words",
+    "tone"
+   ]
+  },
+  {
+   "title": "Reading like an examiner",
+   "category": "Methods",
+   "keywords": [
+    "examiner",
+    "reading"
+   ]
+  },
+  {
+   "title": "Examination drill: grammar past questions",
+   "category": "Applications",
+   "keywords": [
+    "grammar",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Understanding news bulletins",
+   "category": "Nigerian Context",
+   "keywords": [
+    "news bulletins"
+   ]
+  },
+  {
+   "title": "Political speeches: rhetoric and vagueness",
+   "category": "Nigerian Context",
+   "keywords": [
+    "speeches",
+    "rhetoric"
+   ]
+  },
+  {
+   "title": "Advertising language and persuasion",
+   "category": "Nigerian Context",
+   "keywords": [
+    "advertising",
+    "persuasion"
+   ]
+  },
+  {
+   "title": "Religious discourse registers",
+   "category": "Nigerian Context",
+   "keywords": [
+    "religious discourse"
+   ]
+  },
+  {
+   "title": "Social media English and formality",
+   "category": "Nigerian Context",
+   "keywords": [
+    "social media",
+    "English"
+   ]
+  },
+  {
+   "title": "Nigerian English: acceptable standards",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Nigerian English",
+    "standards"
+   ]
+  },
+  {
+   "title": "Code-switching and its contexts",
+   "category": "Nigerian Context",
+   "keywords": [
+    "code-switching"
+   ]
+  },
+  {
+   "title": "Language and national development",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "national development",
+    "language"
+   ]
+  },
+  {
+   "title": "Global English: varieties compared",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "global English",
+    "varieties"
+   ]
+  },
+  {
+   "title": "Examination drill: media past questions",
+   "category": "Applications",
+   "keywords": [
+    "media",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Measuring your reading speed",
+   "category": "Methods",
+   "keywords": [
+    "reading speed",
+    "measurement"
+   ]
+  },
+  {
+   "title": "Fixation and regression habits",
+   "category": "Theory",
+   "keywords": [
+    "fixation",
+    "regression"
+   ]
+  },
+  {
+   "title": "Building speed without losing meaning",
+   "category": "Methods",
+   "keywords": [
+    "speed",
+    "comprehension"
+   ]
+  },
+  {
+   "title": "Previewing questions before passages",
+   "category": "Methods",
+   "keywords": [
+    "preview questions",
+    "passages"
+   ]
+  },
+  {
+   "title": "Scanning for names and numbers",
+   "category": "Methods",
+   "keywords": [
+    "scanning",
+    "names",
+    "numbers"
+   ]
+  },
+  {
+   "title": "Managing a 40-minute English paper",
+   "category": "Methods",
+   "keywords": [
+    "time management",
+    "paper"
+   ]
+  },
+  {
+   "title": "Stamina: reading long passages calmly",
+   "category": "Methods",
+   "keywords": [
+    "stamina",
+    "passages"
+   ]
+  },
+  {
+   "title": "Practice: three passages in 30 minutes",
+   "category": "Applications",
+   "keywords": [
+    "practice",
+    "passages"
+   ]
+  },
+  {
+   "title": "Reviewing errors after timed sets",
+   "category": "Methods",
+   "keywords": [
+    "reviewing errors"
+   ]
+  },
+  {
+   "title": "Examination drill: speed past questions",
+   "category": "Applications",
+   "keywords": [
+    "reading speed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "JAMB Use of English structure and strategy",
+   "category": "Methods",
+   "keywords": [
+    "JAMB",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Objective questions on grammar",
+   "category": "Applications",
+   "keywords": [
+    "grammar",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on vocabulary",
+   "category": "Applications",
+   "keywords": [
+    "vocabulary",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on lexis and structure",
+   "category": "Applications",
+   "keywords": [
+    "lexis",
+    "structure",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on oral forms",
+   "category": "Applications",
+   "keywords": [
+    "oral forms",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Comprehension sets: guided practice",
+   "category": "Applications",
+   "keywords": [
+    "comprehension",
+    "practice"
+   ]
+  },
+  {
+   "title": "Summary sets: guided practice",
+   "category": "Applications",
+   "keywords": [
+    "summary",
+    "practice"
+   ]
+  },
+  {
+   "title": "Cloze sets: guided practice",
+   "category": "Applications",
+   "keywords": [
+    "cloze",
+    "practice"
+   ]
+  },
+  {
+   "title": "Register items: guided practice",
+   "category": "Applications",
+   "keywords": [
+    "register",
+    "practice"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set A past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed practice: the 60-question sprint",
+   "category": "Applications",
+   "keywords": [
+    "timed practice",
+    "sprint"
+   ]
+  },
+  {
+   "title": "Review of common wrong options",
+   "category": "Methods",
+   "keywords": [
+    "wrong options",
+    "review"
+   ]
+  },
+  {
+   "title": "Elimination techniques for structure items",
+   "category": "Methods",
+   "keywords": [
+    "elimination",
+    "structure"
+   ]
+  },
+  {
+   "title": "Sound-based questions: fast strategies",
+   "category": "Methods",
+   "keywords": [
+    "sound questions",
+    "strategies"
+   ]
+  },
+  {
+   "title": "Vocabulary questions: root shortcuts",
+   "category": "Methods",
+   "keywords": [
+    "roots",
+    "shortcuts"
+   ]
+  },
+  {
+   "title": "Idiom questions: context first",
+   "category": "Methods",
+   "keywords": [
+    "idioms",
+    "context first"
+   ]
+  },
+  {
+   "title": "Common grammar misconceptions corrected",
+   "category": "Methods",
+   "keywords": [
+    "misconceptions",
+    "grammar"
+   ]
+  },
+  {
+   "title": "Oral English myths corrected",
+   "category": "Methods",
+   "keywords": [
+    "myths",
+    "oral English"
+   ]
+  },
+  {
+   "title": "Marking schemes: what earns the mark",
+   "category": "Methods",
+   "keywords": [
+    "marking schemes"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set B past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Concord drills: 20 items against the clock",
+   "category": "Methods",
+   "keywords": [
+    "concord drills",
+    "timed"
+   ]
+  },
+  {
+   "title": "Tense drills: narratives and reports",
+   "category": "Methods",
+   "keywords": [
+    "tense drills",
+    "narratives"
+   ]
+  },
+  {
+   "title": "Article drills: tricky contexts",
+   "category": "Methods",
+   "keywords": [
+    "article drills",
+    "contexts"
+   ]
+  },
+  {
+   "title": "Preposition drills: collocations",
+   "category": "Methods",
+   "keywords": [
+    "preposition drills",
+    "collocations"
+   ]
+  },
+  {
+   "title": "Modal drills: meaning matching",
+   "category": "Methods",
+   "keywords": [
+    "modal drills",
+    "meaning"
+   ]
+  },
+  {
+   "title": "Question-tag drills",
+   "category": "Methods",
+   "keywords": [
+    "question tags",
+    "drills"
+   ]
+  },
+  {
+   "title": "Conditional sentences: all types",
+   "category": "Theory",
+   "keywords": [
+    "conditionals",
+    "types"
+   ]
+  },
+  {
+   "title": "Reported speech transformations",
+   "category": "Methods",
+   "keywords": [
+    "reported speech",
+    "transformations"
+   ]
+  },
+  {
+   "title": "Active-passive transformations",
+   "category": "Methods",
+   "keywords": [
+    "active passive",
+    "transformations"
+   ]
+  },
+  {
+   "title": "Examination drill: drills workshop past questions",
+   "category": "Applications",
+   "keywords": [
+    "drills",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Building the final revision timetable",
+   "category": "Methods",
+   "keywords": [
+    "revision timetable"
+   ]
+  },
+  {
+   "title": "Grammar rules: the one-page digest",
+   "category": "Methods",
+   "keywords": [
+    "grammar rules",
+    "digest"
+   ]
+  },
+  {
+   "title": "Word families and confusables list",
+   "category": "Methods",
+   "keywords": [
+    "word families",
+    "confusables"
+   ]
+  },
+  {
+   "title": "Sound chart: vowels and consonants",
+   "category": "Methods",
+   "keywords": [
+    "sound chart"
+   ]
+  },
+  {
+   "title": "The most repeated Use of English themes",
+   "category": "Methods",
+   "keywords": [
+    "repeated themes",
+    "JAMB"
+   ]
+  },
+  {
+   "title": "Mock examination: full paper in one hour",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Marking your mock: error analysis",
+   "category": "Methods",
+   "keywords": [
+    "error analysis",
+    "mock"
+   ]
+  },
+  {
+   "title": "Guessing rules: when and how",
+   "category": "Methods",
+   "keywords": [
+    "guessing rules"
+   ]
+  },
+  {
+   "title": "Staying calm through long passages",
+   "category": "Methods",
+   "keywords": [
+    "composure",
+    "passages"
+   ]
+  },
+  {
+   "title": "Exam day strategy and final confidence",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Science passages: process description",
+   "category": "Applications",
+   "keywords": [
+    "science passages",
+    "process"
+   ]
+  },
+  {
+   "title": "Technology passages: how it works",
+   "category": "Applications",
+   "keywords": [
+    "technology passages"
+   ]
+  },
+  {
+   "title": "Health and medicine excerpts",
+   "category": "Applications",
+   "keywords": [
+    "health",
+    "medicine"
+   ]
+  },
+  {
+   "title": "Environmental report excerpts",
+   "category": "Applications",
+   "keywords": [
+    "environmental",
+    "reports"
+   ]
+  },
+  {
+   "title": "Interpreting instructions and manuals",
+   "category": "Methods",
+   "keywords": [
+    "instructions",
+    "manuals"
+   ]
+  },
+  {
+   "title": "Sequence words in process texts",
+   "category": "Methods",
+   "keywords": [
+    "sequence words"
+   ]
+  },
+  {
+   "title": "Cause and effect signals tracked",
+   "category": "Methods",
+   "keywords": [
+    "cause and effect",
+    "signals"
+   ]
+  },
+  {
+   "title": "Technical vocabulary guessed safely",
+   "category": "Methods",
+   "keywords": [
+    "technical vocabulary"
+   ]
+  },
+  {
+   "title": "Data and figures inside texts",
+   "category": "Methods",
+   "keywords": [
+    "data",
+    "figures"
+   ]
+  },
+  {
+   "title": "Examination drill: science texts past questions",
+   "category": "Applications",
+   "keywords": [
+    "science",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Simple sentences joined with and, but",
+   "category": "Methods",
+   "keywords": [
+    "simple sentences",
+    "joining"
+   ]
+  },
+  {
+   "title": "Relative clauses added smoothly",
+   "category": "Methods",
+   "keywords": [
+    "relative clauses"
+   ]
+  },
+  {
+   "title": "Participle phrases for economy",
+   "category": "Methods",
+   "keywords": [
+    "participle phrases"
+   ]
+  },
+  {
+   "title": "Appositives: naming in a dash",
+   "category": "Methods",
+   "keywords": [
+    "appositives"
+   ]
+  },
+  {
+   "title": "Subordinating with because, although",
+   "category": "Methods",
+   "keywords": [
+    "subordination"
+   ]
+  },
+  {
+   "title": "Varying sentence openings on purpose",
+   "category": "Methods",
+   "keywords": [
+    "sentence openings"
+   ]
+  },
+  {
+   "title": "Wordiness cut: 20 rewrites",
+   "category": "Methods",
+   "keywords": [
+    "wordiness",
+    "rewrites"
+   ]
+  },
+  {
+   "title": "Register kept consistent while combining",
+   "category": "Methods",
+   "keywords": [
+    "register",
+    "consistency"
+   ]
+  },
+  {
+   "title": "Paragraph rhythm and reading ease",
+   "category": "Theory",
+   "keywords": [
+    "paragraph rhythm"
+   ]
+  },
+  {
+   "title": "Examination drill: style past questions",
+   "category": "Applications",
+   "keywords": [
+    "style",
+    "past questions"
+   ]
+  }
+ ]
 }

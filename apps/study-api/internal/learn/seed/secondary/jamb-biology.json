@@ -1,66 +1,2577 @@
 {
-  "body": "jamb",
-  "subject": "biology",
-  "title": "Biology",
-  "topics": [
-    { "title": "Biology and the characteristics of life", "category": "Concepts & Foundations", "keywords": ["biology", "living things", "characteristics", "life processes"] },
-    { "title": "Levels of organisation: cells to systems", "category": "Concepts & Foundations", "keywords": ["cell", "tissue", "organ", "system", "organism"] },
-    { "title": "The microscope and cell observation", "category": "Methods", "keywords": ["microscope", "magnification", "observation", "slides"] },
-    { "title": "Cell structure: plant and animal cells", "category": "Concepts & Foundations", "keywords": ["cell structure", "plant cell", "animal cell", "nucleus", "cytoplasm"] },
-    { "title": "Cell organelles and their functions", "category": "Theory", "keywords": ["organelles", "mitochondria", "ribosomes", "chloroplast", "vacuole"] },
-    { "title": "Diffusion, osmosis and plasmolysis", "category": "Theory", "keywords": ["diffusion", "osmosis", "plasmolysis", "turgid", "flaccid"] },
-    { "title": "Cell division: mitosis and meiosis", "category": "Theory", "keywords": ["mitosis", "meiosis", "chromosomes", "cell division"] },
-    { "title": "Cellular respiration: energy release", "category": "Theory", "keywords": ["respiration", "aerobic", "anaerobic", "energy", "atp"] },
-    { "title": "Enzymes: properties, actions and specificity", "category": "Theory", "keywords": ["enzymes", "substrate", "specificity", "denatured", "catalyst"] },
-    { "title": "Classification of living organisms into kingdoms", "category": "Concepts & Foundations", "keywords": ["classification", "kingdoms", "taxonomy", "species"] },
-    { "title": "Viruses: structure and characteristics", "category": "Concepts & Foundations", "keywords": ["viruses", "pathogens", "structure", "host cell"] },
-    { "title": "Bacteria: structure, types and roles", "category": "Concepts & Foundations", "keywords": ["bacteria", "cocci", "bacilli", "decomposers"] },
-    { "title": "Fungi and their economic importance", "category": "Concepts & Foundations", "keywords": ["fungi", "mushroom", "yeast", "mould", "fermentation"] },
-    { "title": "Kingdom Plantae: thallophytes to angiosperms", "category": "Concepts & Foundations", "keywords": ["plantae", "bryophytes", "pteridophytes", "gymnosperms", "angiosperms"] },
-    { "title": "Flowering plants: roots, stems and leaves", "category": "Concepts & Foundations", "keywords": ["roots", "stems", "leaves", "flowering plants"] },
-    { "title": "Plant tissues and their functions", "category": "Theory", "keywords": ["tissues", "xylem", "phloem", "parenchyma", "cambium"] },
-    { "title": "Photosynthesis: process and requirements", "category": "Theory", "keywords": ["photosynthesis", "chlorophyll", "light", "starch"] },
-    { "title": "Mineral requirements and nutrition in plants", "category": "Theory", "keywords": ["minerals", "nitrogen", "magnesium", "deficiency"] },
-    { "title": "Transport in plants: transpiration and translocation", "category": "Theory", "keywords": ["transpiration", "translocation", "xylem", "stomata"] },
-    { "title": "Gaseous exchange and respiration in plants", "category": "Theory", "keywords": ["gaseous exchange", "stomata", "lenticels", "respiration"] },
-    { "title": "Asexual reproduction in flowering plants", "category": "Theory", "keywords": ["asexual reproduction", "vegetative propagation", "runners", "bulbs"] },
-    { "title": "Sexual reproduction in flowering plants", "category": "Theory", "keywords": ["pollination", "fertilisation", "ovule", "pollen grains"] },
-    { "title": "Fruits and seeds: formation and dispersal", "category": "Theory", "keywords": ["fruits", "seeds", "dispersal", "germination"] },
-    { "title": "Seed germination and seedling establishment", "category": "Theory", "keywords": ["germination", "epigeal", "hypogeal", "seedling"] },
-    { "title": "Growth and its measurement in organisms", "category": "Theory", "keywords": ["growth", "growth curve", "auxins", "dormancy"] },
-    { "title": "Plant hormones, tropisms and responses", "category": "Theory", "keywords": ["auxins", "tropism", "phototropism", "geotropism"] },
-    { "title": "Nutrition: modes of feeding in organisms", "category": "Concepts & Foundations", "keywords": ["nutrition", "autotrophic", "heterotrophic", "saprophytic", "parasitic"] },
-    { "title": "Human digestive system and digestion", "category": "Theory", "keywords": ["digestion", "alimentary canal", "enzymes", "absorption"] },
-    { "title": "Dentition in humans and other animals", "category": "Theory", "keywords": ["teeth", "dentition", "incisors", "carnivores", "herbivores"] },
-    { "title": "Human transport system: blood and heart", "category": "Theory", "keywords": ["blood", "heart", "circulation", "arteries", "veins"] },
-    { "title": "Blood groups, clotting and immunity", "category": "Theory", "keywords": ["blood groups", "clotting", "immunity", "antibodies", "haemoglobin"] },
-    { "title": "Human breathing and gaseous exchange", "category": "Theory", "keywords": ["breathing", "lungs", "gaseous exchange", "alveoli", "diaphragm"] },
-    { "title": "Human excretory system and the kidney", "category": "Theory", "keywords": ["kidney", "excretion", "nephron", "urine", "homeostasis"] },
-    { "title": "The skin: structure and temperature control", "category": "Theory", "keywords": ["skin", "thermoregulation", "sweating", "epidermis"] },
-    { "title": "The human skeleton and locomotion", "category": "Theory", "keywords": ["skeleton", "bones", "joints", "muscles", "locomotion"] },
-    { "title": "Nervous coordination: neurons and reflexes", "category": "Theory", "keywords": ["neurons", "reflex action", "central nervous system", "synapse"] },
-    { "title": "The eye and the ear: sense organs", "category": "Theory", "keywords": ["eye", "ear", "sense organs", "retina", "cochlea"] },
-    { "title": "Hormones and the endocrine system", "category": "Theory", "keywords": ["hormones", "endocrine", "insulin", "adrenaline", "pituitary"] },
-    { "title": "Human reproductive system and gametes", "category": "Theory", "keywords": ["reproduction", "gametes", "fertilisation", "uterus"] },
-    { "title": "Pregnancy, development and birth in humans", "category": "Theory", "keywords": ["pregnancy", "foetus", "placenta", "birth"] },
-    { "title": "Reproduction in fish, amphibians and insects", "category": "Theory", "keywords": ["metamorphosis", "spawning", "tadpole", "external fertilisation"] },
-    { "title": "Ecology: habitats, niches and ecosystems", "category": "Concepts & Foundations", "keywords": ["ecosystem", "habitat", "niche", "population", "community"] },
-    { "title": "Food chains, food webs and pyramids", "category": "Theory", "keywords": ["food chain", "food web", "producers", "trophic level", "pyramid"] },
-    { "title": "Nutrient cycling: carbon, water and nitrogen cycles", "category": "Theory", "keywords": ["carbon cycle", "water cycle", "nitrogen cycle", "decomposers"] },
-    { "title": "Nigerian biomes: rainforest, savanna and mangrove", "category": "Nigerian Context", "keywords": ["rainforest", "savanna", "mangrove", "biomes", "vegetation"] },
-    { "title": "Population studies: sampling and ecological methods", "category": "Methods", "keywords": ["population", "sampling", "quadrat", "transect", "ecological methods"] },
-    { "title": "Energy flow and conservation of resources", "category": "Theory", "keywords": ["energy flow", "conservation", "renewable", "ecosystem"] },
-    { "title": "Adaptation of organisms to their habitats", "category": "Theory", "keywords": ["adaptation", "aquatic", "terrestrial", "xerophytes", "halophytes"] },
-    { "title": "Pollution: water, air and land in Nigeria", "category": "Nigerian Context", "keywords": ["pollution", "oil spillage", "air pollution", "water pollution", "waste"] },
-    { "title": "Pests and diseases of crops in Nigeria", "category": "Nigerian Context", "keywords": ["pests", "crop diseases", "weevils", "locusts", "control"] },
-    { "title": "Disease-causing organisms and their control", "category": "Applications", "keywords": ["pathogens", "malaria", "mosquito", "tsetse fly", "control"] },
-    { "title": "Public health and hygiene practices", "category": "Applications", "keywords": ["public health", "hygiene", "sanitation", "immunisation"] },
-    { "title": "HIV/AIDS and other sexually transmitted infections", "category": "Contemporary Issues", "keywords": ["hiv", "aids", "sti", "infections", "prevention"] },
-    { "title": "Variation in populations: continuous and discontinuous", "category": "Theory", "keywords": ["variation", "continuous", "discontinuous", "phenotypes"] },
-    { "title": "Heredity: Mendel's laws and inheritance", "category": "Theory", "keywords": ["heredity", "mendel", "genes", "alleles", "dominant"] },
-    { "title": "Genotype, blood groups and inheritance patterns", "category": "Theory", "keywords": ["genotype", "phenotype", "blood groups", "inheritance"] },
-    { "title": "Applications of genetics: screening and counselling", "category": "Applications", "keywords": ["genetic counselling", "sickle cell", "screening", "marriage"] },
-    { "title": "Evolution: Lamarck, Darwin and the evidence", "category": "Theory", "keywords": ["evolution", "natural selection", "lamarck", "darwin", "fossils"] },
-    { "title": "Examination drill: biology past questions by topic", "category": "Applications", "keywords": ["past questions", "revision", "examination", "jamb"] }
-  ]
+ "body": "jamb",
+ "subject": "biology",
+ "title": "Biology",
+ "unitTitles": [
+  "Cell Biology and Classification",
+  "Microbes, Plants and Plant Physiology",
+  "Reproduction, Growth and Animal Nutrition",
+  "Human Body Systems",
+  "Ecology and Environmental Biology",
+  "Health, Heredity and Evolution",
+  "Cell Biology in Depth",
+  "Microorganisms and Disease",
+  "Plant Physiology in Depth",
+  "Animal Nutrition and Digestion",
+  "Circulation and Respiration Deep Dive",
+  "Excretion, Homeostasis and Coordination",
+  "Reproduction and Development",
+  "Genetics in Depth",
+  "Evolution and Speciation",
+  "Ecology in Depth",
+  "Nigerian Ecosystems in Focus",
+  "Conservation and Sustainability",
+  "Agricultural Biology",
+  "Public Health in Nigeria",
+  "Biotechnology and Applied Genetics",
+  "Laboratory Biology Skills",
+  "Interpreting Biological Data",
+  "Comparative Physiology",
+  "Biology of Nigerian Food Chains",
+  "Structured Revision: Set A",
+  "Structured Revision: Set B",
+  "Diagrams and Structures Workshop",
+  "Biology Around You",
+  "JAMB Masterclass: Final Lap"
+ ],
+ "topics": [
+  {
+   "title": "Biology and the characteristics of life",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "biology",
+    "living things",
+    "characteristics",
+    "life processes"
+   ]
+  },
+  {
+   "title": "Levels of organisation: cells to systems",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "cell",
+    "tissue",
+    "organ",
+    "system",
+    "organism"
+   ]
+  },
+  {
+   "title": "The microscope and cell observation",
+   "category": "Methods",
+   "keywords": [
+    "microscope",
+    "magnification",
+    "observation",
+    "slides"
+   ]
+  },
+  {
+   "title": "Cell structure: plant and animal cells",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "cell structure",
+    "plant cell",
+    "animal cell",
+    "nucleus",
+    "cytoplasm"
+   ]
+  },
+  {
+   "title": "Cell organelles and their functions",
+   "category": "Theory",
+   "keywords": [
+    "organelles",
+    "mitochondria",
+    "ribosomes",
+    "chloroplast",
+    "vacuole"
+   ]
+  },
+  {
+   "title": "Diffusion, osmosis and plasmolysis",
+   "category": "Theory",
+   "keywords": [
+    "diffusion",
+    "osmosis",
+    "plasmolysis",
+    "turgid",
+    "flaccid"
+   ]
+  },
+  {
+   "title": "Cell division: mitosis and meiosis",
+   "category": "Theory",
+   "keywords": [
+    "mitosis",
+    "meiosis",
+    "chromosomes",
+    "cell division"
+   ]
+  },
+  {
+   "title": "Cellular respiration: energy release",
+   "category": "Theory",
+   "keywords": [
+    "respiration",
+    "aerobic",
+    "anaerobic",
+    "energy",
+    "atp"
+   ]
+  },
+  {
+   "title": "Enzymes: properties, actions and specificity",
+   "category": "Theory",
+   "keywords": [
+    "enzymes",
+    "substrate",
+    "specificity",
+    "denatured",
+    "catalyst"
+   ]
+  },
+  {
+   "title": "Classification of living organisms into kingdoms",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "classification",
+    "kingdoms",
+    "taxonomy",
+    "species"
+   ]
+  },
+  {
+   "title": "Viruses: structure and characteristics",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "viruses",
+    "pathogens",
+    "structure",
+    "host cell"
+   ]
+  },
+  {
+   "title": "Bacteria: structure, types and roles",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "bacteria",
+    "cocci",
+    "bacilli",
+    "decomposers"
+   ]
+  },
+  {
+   "title": "Fungi and their economic importance",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "fungi",
+    "mushroom",
+    "yeast",
+    "mould",
+    "fermentation"
+   ]
+  },
+  {
+   "title": "Kingdom Plantae: thallophytes to angiosperms",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "plantae",
+    "bryophytes",
+    "pteridophytes",
+    "gymnosperms",
+    "angiosperms"
+   ]
+  },
+  {
+   "title": "Flowering plants: roots, stems and leaves",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "roots",
+    "stems",
+    "leaves",
+    "flowering plants"
+   ]
+  },
+  {
+   "title": "Plant tissues and their functions",
+   "category": "Theory",
+   "keywords": [
+    "tissues",
+    "xylem",
+    "phloem",
+    "parenchyma",
+    "cambium"
+   ]
+  },
+  {
+   "title": "Photosynthesis: process and requirements",
+   "category": "Theory",
+   "keywords": [
+    "photosynthesis",
+    "chlorophyll",
+    "light",
+    "starch"
+   ]
+  },
+  {
+   "title": "Mineral requirements and nutrition in plants",
+   "category": "Theory",
+   "keywords": [
+    "minerals",
+    "nitrogen",
+    "magnesium",
+    "deficiency"
+   ]
+  },
+  {
+   "title": "Transport in plants: transpiration and translocation",
+   "category": "Theory",
+   "keywords": [
+    "transpiration",
+    "translocation",
+    "xylem",
+    "stomata"
+   ]
+  },
+  {
+   "title": "Gaseous exchange and respiration in plants",
+   "category": "Theory",
+   "keywords": [
+    "gaseous exchange",
+    "stomata",
+    "lenticels",
+    "respiration"
+   ]
+  },
+  {
+   "title": "Asexual reproduction in flowering plants",
+   "category": "Theory",
+   "keywords": [
+    "asexual reproduction",
+    "vegetative propagation",
+    "runners",
+    "bulbs"
+   ]
+  },
+  {
+   "title": "Sexual reproduction in flowering plants",
+   "category": "Theory",
+   "keywords": [
+    "pollination",
+    "fertilisation",
+    "ovule",
+    "pollen grains"
+   ]
+  },
+  {
+   "title": "Fruits and seeds: formation and dispersal",
+   "category": "Theory",
+   "keywords": [
+    "fruits",
+    "seeds",
+    "dispersal",
+    "germination"
+   ]
+  },
+  {
+   "title": "Seed germination and seedling establishment",
+   "category": "Theory",
+   "keywords": [
+    "germination",
+    "epigeal",
+    "hypogeal",
+    "seedling"
+   ]
+  },
+  {
+   "title": "Growth and its measurement in organisms",
+   "category": "Theory",
+   "keywords": [
+    "growth",
+    "growth curve",
+    "auxins",
+    "dormancy"
+   ]
+  },
+  {
+   "title": "Plant hormones, tropisms and responses",
+   "category": "Theory",
+   "keywords": [
+    "auxins",
+    "tropism",
+    "phototropism",
+    "geotropism"
+   ]
+  },
+  {
+   "title": "Nutrition: modes of feeding in organisms",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "nutrition",
+    "autotrophic",
+    "heterotrophic",
+    "saprophytic",
+    "parasitic"
+   ]
+  },
+  {
+   "title": "Human digestive system and digestion",
+   "category": "Theory",
+   "keywords": [
+    "digestion",
+    "alimentary canal",
+    "enzymes",
+    "absorption"
+   ]
+  },
+  {
+   "title": "Dentition in humans and other animals",
+   "category": "Theory",
+   "keywords": [
+    "teeth",
+    "dentition",
+    "incisors",
+    "carnivores",
+    "herbivores"
+   ]
+  },
+  {
+   "title": "Human transport system: blood and heart",
+   "category": "Theory",
+   "keywords": [
+    "blood",
+    "heart",
+    "circulation",
+    "arteries",
+    "veins"
+   ]
+  },
+  {
+   "title": "Blood groups, clotting and immunity",
+   "category": "Theory",
+   "keywords": [
+    "blood groups",
+    "clotting",
+    "immunity",
+    "antibodies",
+    "haemoglobin"
+   ]
+  },
+  {
+   "title": "Human breathing and gaseous exchange",
+   "category": "Theory",
+   "keywords": [
+    "breathing",
+    "lungs",
+    "gaseous exchange",
+    "alveoli",
+    "diaphragm"
+   ]
+  },
+  {
+   "title": "Human excretory system and the kidney",
+   "category": "Theory",
+   "keywords": [
+    "kidney",
+    "excretion",
+    "nephron",
+    "urine",
+    "homeostasis"
+   ]
+  },
+  {
+   "title": "The skin: structure and temperature control",
+   "category": "Theory",
+   "keywords": [
+    "skin",
+    "thermoregulation",
+    "sweating",
+    "epidermis"
+   ]
+  },
+  {
+   "title": "The human skeleton and locomotion",
+   "category": "Theory",
+   "keywords": [
+    "skeleton",
+    "bones",
+    "joints",
+    "muscles",
+    "locomotion"
+   ]
+  },
+  {
+   "title": "Nervous coordination: neurons and reflexes",
+   "category": "Theory",
+   "keywords": [
+    "neurons",
+    "reflex action",
+    "central nervous system",
+    "synapse"
+   ]
+  },
+  {
+   "title": "The eye and the ear: sense organs",
+   "category": "Theory",
+   "keywords": [
+    "eye",
+    "ear",
+    "sense organs",
+    "retina",
+    "cochlea"
+   ]
+  },
+  {
+   "title": "Hormones and the endocrine system",
+   "category": "Theory",
+   "keywords": [
+    "hormones",
+    "endocrine",
+    "insulin",
+    "adrenaline",
+    "pituitary"
+   ]
+  },
+  {
+   "title": "Human reproductive system and gametes",
+   "category": "Theory",
+   "keywords": [
+    "reproduction",
+    "gametes",
+    "fertilisation",
+    "uterus"
+   ]
+  },
+  {
+   "title": "Pregnancy, development and birth in humans",
+   "category": "Theory",
+   "keywords": [
+    "pregnancy",
+    "foetus",
+    "placenta",
+    "birth"
+   ]
+  },
+  {
+   "title": "Reproduction in fish, amphibians and insects",
+   "category": "Theory",
+   "keywords": [
+    "metamorphosis",
+    "spawning",
+    "tadpole",
+    "external fertilisation"
+   ]
+  },
+  {
+   "title": "Ecology: habitats, niches and ecosystems",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "ecosystem",
+    "habitat",
+    "niche",
+    "population",
+    "community"
+   ]
+  },
+  {
+   "title": "Food chains, food webs and pyramids",
+   "category": "Theory",
+   "keywords": [
+    "food chain",
+    "food web",
+    "producers",
+    "trophic level",
+    "pyramid"
+   ]
+  },
+  {
+   "title": "Nutrient cycling: carbon, water and nitrogen cycles",
+   "category": "Theory",
+   "keywords": [
+    "carbon cycle",
+    "water cycle",
+    "nitrogen cycle",
+    "decomposers"
+   ]
+  },
+  {
+   "title": "Nigerian biomes: rainforest, savanna and mangrove",
+   "category": "Nigerian Context",
+   "keywords": [
+    "rainforest",
+    "savanna",
+    "mangrove",
+    "biomes",
+    "vegetation"
+   ]
+  },
+  {
+   "title": "Population studies: sampling and ecological methods",
+   "category": "Methods",
+   "keywords": [
+    "population",
+    "sampling",
+    "quadrat",
+    "transect",
+    "ecological methods"
+   ]
+  },
+  {
+   "title": "Energy flow and conservation of resources",
+   "category": "Theory",
+   "keywords": [
+    "energy flow",
+    "conservation",
+    "renewable",
+    "ecosystem"
+   ]
+  },
+  {
+   "title": "Adaptation of organisms to their habitats",
+   "category": "Theory",
+   "keywords": [
+    "adaptation",
+    "aquatic",
+    "terrestrial",
+    "xerophytes",
+    "halophytes"
+   ]
+  },
+  {
+   "title": "Pollution: water, air and land in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "pollution",
+    "oil spillage",
+    "air pollution",
+    "water pollution",
+    "waste"
+   ]
+  },
+  {
+   "title": "Pests and diseases of crops in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "pests",
+    "crop diseases",
+    "weevils",
+    "locusts",
+    "control"
+   ]
+  },
+  {
+   "title": "Disease-causing organisms and their control",
+   "category": "Applications",
+   "keywords": [
+    "pathogens",
+    "malaria",
+    "mosquito",
+    "tsetse fly",
+    "control"
+   ]
+  },
+  {
+   "title": "Public health and hygiene practices",
+   "category": "Applications",
+   "keywords": [
+    "public health",
+    "hygiene",
+    "sanitation",
+    "immunisation"
+   ]
+  },
+  {
+   "title": "HIV/AIDS and other sexually transmitted infections",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "hiv",
+    "aids",
+    "sti",
+    "infections",
+    "prevention"
+   ]
+  },
+  {
+   "title": "Variation in populations: continuous and discontinuous",
+   "category": "Theory",
+   "keywords": [
+    "variation",
+    "continuous",
+    "discontinuous",
+    "phenotypes"
+   ]
+  },
+  {
+   "title": "Heredity: Mendel's laws and inheritance",
+   "category": "Theory",
+   "keywords": [
+    "heredity",
+    "mendel",
+    "genes",
+    "alleles",
+    "dominant"
+   ]
+  },
+  {
+   "title": "Genotype, blood groups and inheritance patterns",
+   "category": "Theory",
+   "keywords": [
+    "genotype",
+    "phenotype",
+    "blood groups",
+    "inheritance"
+   ]
+  },
+  {
+   "title": "Applications of genetics: screening and counselling",
+   "category": "Applications",
+   "keywords": [
+    "genetic counselling",
+    "sickle cell",
+    "screening",
+    "marriage"
+   ]
+  },
+  {
+   "title": "Evolution: Lamarck, Darwin and the evidence",
+   "category": "Theory",
+   "keywords": [
+    "evolution",
+    "natural selection",
+    "lamarck",
+    "darwin",
+    "fossils"
+   ]
+  },
+  {
+   "title": "Examination drill: biology past questions by topic",
+   "category": "Applications",
+   "keywords": [
+    "past questions",
+    "revision",
+    "examination",
+    "jamb"
+   ]
+  },
+  {
+   "title": "Cellular defences and the lymphatic system",
+   "category": "Theory",
+   "keywords": [
+    "lymphatic system",
+    "defence"
+   ]
+  },
+  {
+   "title": "Prokaryotic versus eukaryotic cells compared",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "prokaryotic",
+    "eukaryotic"
+   ]
+  },
+  {
+   "title": "Cell specialisation: from stem to tissue",
+   "category": "Theory",
+   "keywords": [
+    "specialisation",
+    "stem cells"
+   ]
+  },
+  {
+   "title": "Ultrastructure of mitochondria and chloroplasts",
+   "category": "Theory",
+   "keywords": [
+    "mitochondria",
+    "chloroplasts"
+   ]
+  },
+  {
+   "title": "Active transport, endocytosis and exocytosis",
+   "category": "Theory",
+   "keywords": [
+    "active transport",
+    "endocytosis"
+   ]
+  },
+  {
+   "title": "Osmotic pressure effects in cells",
+   "category": "Methods",
+   "keywords": [
+    "osmotic pressure",
+    "cells"
+   ]
+  },
+  {
+   "title": "The cell cycle and its control points",
+   "category": "Theory",
+   "keywords": [
+    "cell cycle",
+    "control"
+   ]
+  },
+  {
+   "title": "Meiosis errors and chromosomal disorders",
+   "category": "Theory",
+   "keywords": [
+    "meiosis",
+    "disorders"
+   ]
+  },
+  {
+   "title": "ATP: the energy currency of cells",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "ATP",
+    "energy"
+   ]
+  },
+  {
+   "title": "Metabolic pathways and enzyme chains",
+   "category": "Theory",
+   "keywords": [
+    "metabolic pathways",
+    "enzymes"
+   ]
+  },
+  {
+   "title": "Examination drill: cell biology past questions",
+   "category": "Applications",
+   "keywords": [
+    "cell biology",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Protists: amoeba, plasmodium and paramecium",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "protists",
+    "plasmodium"
+   ]
+  },
+  {
+   "title": "Pathogenic bacteria and bacterial toxins",
+   "category": "Theory",
+   "keywords": [
+    "pathogenic bacteria",
+    "toxins"
+   ]
+  },
+  {
+   "title": "Fungal diseases of humans and crops",
+   "category": "Applications",
+   "keywords": [
+    "fungal diseases",
+    "crops"
+   ]
+  },
+  {
+   "title": "Viral diseases: polio, influenza and COVID-19",
+   "category": "Applications",
+   "keywords": [
+    "viral diseases",
+    "COVID-19"
+   ]
+  },
+  {
+   "title": "Malaria: the Plasmodium life cycle",
+   "category": "Theory",
+   "keywords": [
+    "malaria",
+    "life cycle"
+   ]
+  },
+  {
+   "title": "Typhoid, cholera and sanitation in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "typhoid",
+    "cholera"
+   ]
+  },
+  {
+   "title": "Tuberculosis and respiratory infections",
+   "category": "Applications",
+   "keywords": [
+    "tuberculosis",
+    "infections"
+   ]
+  },
+  {
+   "title": "The immune response: antibodies and memory cells",
+   "category": "Theory",
+   "keywords": [
+    "immune response",
+    "antibodies"
+   ]
+  },
+  {
+   "title": "Vaccination programmes and herd immunity",
+   "category": "Applications",
+   "keywords": [
+    "vaccination",
+    "herd immunity"
+   ]
+  },
+  {
+   "title": "Examination drill: microorganisms past questions",
+   "category": "Applications",
+   "keywords": [
+    "microorganisms",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Water potential and movement through xylem",
+   "category": "Theory",
+   "keywords": [
+    "water potential",
+    "xylem"
+   ]
+  },
+  {
+   "title": "The cohesion-tension theory explained",
+   "category": "Theory",
+   "keywords": [
+    "cohesion-tension",
+    "theory"
+   ]
+  },
+  {
+   "title": "Experiments on transpiration rate factors",
+   "category": "Methods",
+   "keywords": [
+    "transpiration",
+    "experiments"
+   ]
+  },
+  {
+   "title": "Guttation, bleeding and root pressure",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "guttation",
+    "root pressure"
+   ]
+  },
+  {
+   "title": "Photosynthesis: light and dark reactions",
+   "category": "Theory",
+   "keywords": [
+    "light reactions",
+    "dark reactions"
+   ]
+  },
+  {
+   "title": "Limiting factors of photosynthesis",
+   "category": "Theory",
+   "keywords": [
+    "limiting factors",
+    "photosynthesis"
+   ]
+  },
+  {
+   "title": "Carbon enrichment and crop yields",
+   "category": "Applications",
+   "keywords": [
+    "carbon enrichment",
+    "crop yields"
+   ]
+  },
+  {
+   "title": "Translocation: the mass flow hypothesis",
+   "category": "Theory",
+   "keywords": [
+    "translocation",
+    "mass flow"
+   ]
+  },
+  {
+   "title": "Storage organs: tubers, bulbs and corms",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "storage organs",
+    "tubers"
+   ]
+  },
+  {
+   "title": "Examination drill: plant physiology past questions",
+   "category": "Applications",
+   "keywords": [
+    "plant physiology",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Balanced diets and malnutrition diseases",
+   "category": "Applications",
+   "keywords": [
+    "balanced diet",
+    "malnutrition"
+   ]
+  },
+  {
+   "title": "Kwashiorkor and marasmus in Nigerian children",
+   "category": "Nigerian Context",
+   "keywords": [
+    "kwashiorkor",
+    "marasmus"
+   ]
+  },
+  {
+   "title": "Vitamins: sources and deficiency diseases",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "vitamins",
+    "deficiency"
+   ]
+  },
+  {
+   "title": "The liver: functions and disorders",
+   "category": "Theory",
+   "keywords": [
+    "liver",
+    "functions"
+   ]
+  },
+  {
+   "title": "Absorption: villi and the surface area story",
+   "category": "Theory",
+   "keywords": [
+    "absorption",
+    "villi"
+   ]
+  },
+  {
+   "title": "Assimilation of absorbed food materials",
+   "category": "Theory",
+   "keywords": [
+    "assimilation",
+    "food"
+   ]
+  },
+  {
+   "title": "Ruminant digestion versus monogastric",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "ruminant",
+    "digestion"
+   ]
+  },
+  {
+   "title": "Dental caries and oral hygiene",
+   "category": "Applications",
+   "keywords": [
+    "dental caries",
+    "hygiene"
+   ]
+  },
+  {
+   "title": "Enzyme defects and metabolic disorders",
+   "category": "Theory",
+   "keywords": [
+    "enzyme defects",
+    "disorders"
+   ]
+  },
+  {
+   "title": "Examination drill: nutrition past questions",
+   "category": "Applications",
+   "keywords": [
+    "nutrition",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The cardiac cycle and its regulation",
+   "category": "Theory",
+   "keywords": [
+    "cardiac cycle",
+    "regulation"
+   ]
+  },
+  {
+   "title": "Blood vessels: arteries, veins and capillaries",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "arteries",
+    "veins",
+    "capillaries"
+   ]
+  },
+  {
+   "title": "Tissue fluid and lymph formation",
+   "category": "Theory",
+   "keywords": [
+    "tissue fluid",
+    "lymph"
+   ]
+  },
+  {
+   "title": "Hypertension and cardiovascular disease",
+   "category": "Applications",
+   "keywords": [
+    "hypertension",
+    "cardiovascular"
+   ]
+  },
+  {
+   "title": "Anaemia: causes and types",
+   "category": "Applications",
+   "keywords": [
+    "anaemia",
+    "causes"
+   ]
+  },
+  {
+   "title": "Haemoglobin and oxygen dissociation",
+   "category": "Theory",
+   "keywords": [
+    "haemoglobin",
+    "oxygen"
+   ]
+  },
+  {
+   "title": "Breathing volumes and spirometry",
+   "category": "Methods",
+   "keywords": [
+    "spirometry",
+    "breathing"
+   ]
+  },
+  {
+   "title": "Smoking and lung disease",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "smoking",
+    "lung disease"
+   ]
+  },
+  {
+   "title": "Adaptation to high altitude",
+   "category": "Applications",
+   "keywords": [
+    "altitude",
+    "adaptation"
+   ]
+  },
+  {
+   "title": "Examination drill: circulation past questions",
+   "category": "Applications",
+   "keywords": [
+    "circulation",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The nephron: ultrafiltration and reabsorption",
+   "category": "Theory",
+   "keywords": [
+    "nephron",
+    "ultrafiltration"
+   ]
+  },
+  {
+   "title": "Kidney failure, dialysis and transplants",
+   "category": "Applications",
+   "keywords": [
+    "kidney failure",
+    "dialysis"
+   ]
+  },
+  {
+   "title": "Osmoregulation and ADH action",
+   "category": "Theory",
+   "keywords": [
+    "osmoregulation",
+    "ADH"
+   ]
+  },
+  {
+   "title": "Thermoregulation in ectotherms and endotherms",
+   "category": "Theory",
+   "keywords": [
+    "thermoregulation",
+    "ectotherms"
+   ]
+  },
+  {
+   "title": "Blood glucose control and diabetes",
+   "category": "Applications",
+   "keywords": [
+    "blood glucose",
+    "diabetes"
+   ]
+  },
+  {
+   "title": "The reflex arc and voluntary action",
+   "category": "Theory",
+   "keywords": [
+    "reflex arc",
+    "voluntary"
+   ]
+  },
+  {
+   "title": "The brain: regions and their functions",
+   "category": "Theory",
+   "keywords": [
+    "brain",
+    "regions"
+   ]
+  },
+  {
+   "title": "Drug actions on the nervous system",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "drugs",
+    "nervous system"
+   ]
+  },
+  {
+   "title": "Homeostasis: the full feedback picture",
+   "category": "Theory",
+   "keywords": [
+    "homeostasis",
+    "feedback"
+   ]
+  },
+  {
+   "title": "Examination drill: homeostasis past questions",
+   "category": "Applications",
+   "keywords": [
+    "homeostasis",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The menstrual cycle and its hormones",
+   "category": "Theory",
+   "keywords": [
+    "menstrual cycle",
+    "hormones"
+   ]
+  },
+  {
+   "title": "Fertility, contraception and family planning",
+   "category": "Applications",
+   "keywords": [
+    "fertility",
+    "contraception"
+   ]
+  },
+  {
+   "title": "Development: from zygote to foetus",
+   "category": "Theory",
+   "keywords": [
+    "zygote",
+    "foetus"
+   ]
+  },
+  {
+   "title": "The birth process and neonatal care",
+   "category": "Applications",
+   "keywords": [
+    "birth",
+    "neonatal"
+   ]
+  },
+  {
+   "title": "Growth curves in humans and insects",
+   "category": "Methods",
+   "keywords": [
+    "growth curves",
+    "insects"
+   ]
+  },
+  {
+   "title": "Complete and incomplete metamorphosis",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "metamorphosis",
+    "complete"
+   ]
+  },
+  {
+   "title": "Reproduction in mammals: placentation",
+   "category": "Theory",
+   "keywords": [
+    "mammals",
+    "placentation"
+   ]
+  },
+  {
+   "title": "Cloning and artificial reproduction",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "cloning",
+    "artificial"
+   ]
+  },
+  {
+   "title": "Reproductive technologies and ethics",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "reproductive technology",
+    "ethics"
+   ]
+  },
+  {
+   "title": "Examination drill: reproduction past questions",
+   "category": "Applications",
+   "keywords": [
+    "reproduction",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Monohybrid and dihybrid crosses practice",
+   "category": "Methods",
+   "keywords": [
+    "monohybrid",
+    "dihybrid"
+   ]
+  },
+  {
+   "title": "Test crosses and pedigree analysis",
+   "category": "Methods",
+   "keywords": [
+    "test cross",
+    "pedigree"
+   ]
+  },
+  {
+   "title": "Incomplete dominance and co-dominance",
+   "category": "Theory",
+   "keywords": [
+    "incomplete dominance",
+    "co-dominance"
+   ]
+  },
+  {
+   "title": "Sex-linked inheritance: colour blindness",
+   "category": "Theory",
+   "keywords": [
+    "sex-linked",
+    "colour blindness"
+   ]
+  },
+  {
+   "title": "Multiple alleles and the blood groups",
+   "category": "Theory",
+   "keywords": [
+    "multiple alleles",
+    "blood groups"
+   ]
+  },
+  {
+   "title": "Chromosomal mutations and Down syndrome",
+   "category": "Theory",
+   "keywords": [
+    "chromosomal mutation",
+    "Down syndrome"
+   ]
+  },
+  {
+   "title": "Gene mutations: sickle cell anaemia",
+   "category": "Theory",
+   "keywords": [
+    "gene mutation",
+    "sickle cell"
+   ]
+  },
+  {
+   "title": "DNA structure and replication",
+   "category": "Theory",
+   "keywords": [
+    "DNA",
+    "replication"
+   ]
+  },
+  {
+   "title": "Protein synthesis: transcription and translation",
+   "category": "Theory",
+   "keywords": [
+    "transcription",
+    "translation"
+   ]
+  },
+  {
+   "title": "Examination drill: genetics past questions",
+   "category": "Applications",
+   "keywords": [
+    "genetics",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Natural selection in action: the peppered moth",
+   "category": "Theory",
+   "keywords": [
+    "natural selection",
+    "peppered moth"
+   ]
+  },
+  {
+   "title": "Genetic drift in small populations",
+   "category": "Theory",
+   "keywords": [
+    "genetic drift",
+    "populations"
+   ]
+  },
+  {
+   "title": "Speciation and isolation mechanisms",
+   "category": "Theory",
+   "keywords": [
+    "speciation",
+    "isolation"
+   ]
+  },
+  {
+   "title": "Evidence from fossils and rock strata",
+   "category": "Theory",
+   "keywords": [
+    "fossils",
+    "strata"
+   ]
+  },
+  {
+   "title": "Comparative anatomy: homologous structures",
+   "category": "Theory",
+   "keywords": [
+    "homologous",
+    "anatomy"
+   ]
+  },
+  {
+   "title": "Vestigial organs and their stories",
+   "category": "Theory",
+   "keywords": [
+    "vestigial organs"
+   ]
+  },
+  {
+   "title": "Darwin versus Lamarck: the verdict",
+   "category": "Theory",
+   "keywords": [
+    "darwin",
+    "lamarck"
+   ]
+  },
+  {
+   "title": "Human evolution: the major milestones",
+   "category": "Theory",
+   "keywords": [
+    "human evolution",
+    "milestones"
+   ]
+  },
+  {
+   "title": "Antibiotic resistance as observed evolution",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "antibiotic resistance"
+   ]
+  },
+  {
+   "title": "Examination drill: evolution past questions",
+   "category": "Applications",
+   "keywords": [
+    "evolution",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Ecological factors: biotic and abiotic",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "biotic factors",
+    "abiotic factors"
+   ]
+  },
+  {
+   "title": "Succession: from bare ground to forest",
+   "category": "Theory",
+   "keywords": [
+    "succession",
+    "forest"
+   ]
+  },
+  {
+   "title": "Energy transfer efficiency in food chains",
+   "category": "Methods",
+   "keywords": [
+    "energy transfer",
+    "efficiency"
+   ]
+  },
+  {
+   "title": "Ecological pyramids: numbers, biomass, energy",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "ecological pyramids",
+    "biomass"
+   ]
+  },
+  {
+   "title": "Population growth curves and carrying capacity",
+   "category": "Theory",
+   "keywords": [
+    "population growth",
+    "carrying capacity"
+   ]
+  },
+  {
+   "title": "Competition, predation and symbiosis",
+   "category": "Theory",
+   "keywords": [
+    "competition",
+    "predation",
+    "symbiosis"
+   ]
+  },
+  {
+   "title": "Nitrogen fixation and soil fertility",
+   "category": "Applications",
+   "keywords": [
+    "nitrogen fixation",
+    "fertility"
+   ]
+  },
+  {
+   "title": "Decomposers and nutrient recycling",
+   "category": "Theory",
+   "keywords": [
+    "decomposers",
+    "recycling"
+   ]
+  },
+  {
+   "title": "Measuring and valuing biodiversity",
+   "category": "Theory",
+   "keywords": [
+    "biodiversity",
+    "measurement"
+   ]
+  },
+  {
+   "title": "Examination drill: ecology past questions",
+   "category": "Applications",
+   "keywords": [
+    "ecology",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Rainforest zones and their resources",
+   "category": "Nigerian Context",
+   "keywords": [
+    "rainforest",
+    "resources"
+   ]
+  },
+  {
+   "title": "Guinea and Sudan savanna ecology",
+   "category": "Nigerian Context",
+   "keywords": [
+    "guinea savanna",
+    "sudan savanna"
+   ]
+  },
+  {
+   "title": "Mangrove swamps and the Niger Delta",
+   "category": "Nigerian Context",
+   "keywords": [
+    "mangrove",
+    "Niger Delta"
+   ]
+  },
+  {
+   "title": "Lake Chad: the shrinking waters",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Lake Chad",
+    "shrinking"
+   ]
+  },
+  {
+   "title": "Kainji Lake National Park ecology",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Kainji",
+    "national park"
+   ]
+  },
+  {
+   "title": "Yankari Game Reserve ecosystems",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Yankari",
+    "game reserve"
+   ]
+  },
+  {
+   "title": "Desertification and the Great Green Wall",
+   "category": "Nigerian Context",
+   "keywords": [
+    "desertification",
+    "green wall"
+   ]
+  },
+  {
+   "title": "Gully erosion in the south-east",
+   "category": "Nigerian Context",
+   "keywords": [
+    "gully erosion",
+    "south-east"
+   ]
+  },
+  {
+   "title": "Wetlands and their ecosystem services",
+   "category": "Nigerian Context",
+   "keywords": [
+    "wetlands",
+    "services"
+   ]
+  },
+  {
+   "title": "Examination drill: Nigerian ecosystems past questions",
+   "category": "Applications",
+   "keywords": [
+    "ecosystems",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Endangered species in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "endangered species",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "National parks and forest reserves",
+   "category": "Applications",
+   "keywords": [
+    "national parks",
+    "reserves"
+   ]
+  },
+  {
+   "title": "Wildlife trafficking and protection laws",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "wildlife trafficking",
+    "laws"
+   ]
+  },
+  {
+   "title": "Sustainable farming practices",
+   "category": "Applications",
+   "keywords": [
+    "sustainable farming"
+   ]
+  },
+  {
+   "title": "Reforestation and afforestation programmes",
+   "category": "Applications",
+   "keywords": [
+    "reforestation",
+    "afforestation"
+   ]
+  },
+  {
+   "title": "Conservation education and advocacy",
+   "category": "Applications",
+   "keywords": [
+    "conservation education"
+   ]
+  },
+  {
+   "title": "Ecotourism potential in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "ecotourism",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "Climate change impacts on biodiversity",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "climate change",
+    "biodiversity"
+   ]
+  },
+  {
+   "title": "Community carbon footprints",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "carbon footprint",
+    "community"
+   ]
+  },
+  {
+   "title": "Examination drill: conservation past questions",
+   "category": "Applications",
+   "keywords": [
+    "conservation",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Soil microorganisms and fertility",
+   "category": "Applications",
+   "keywords": [
+    "soil microorganisms",
+    "fertility"
+   ]
+  },
+  {
+   "title": "Crop improvement: selection and hybridisation",
+   "category": "Applications",
+   "keywords": [
+    "crop improvement",
+    "hybridisation"
+   ]
+  },
+  {
+   "title": "Biological pest control methods",
+   "category": "Applications",
+   "keywords": [
+    "pest control",
+    "biological"
+   ]
+  },
+  {
+   "title": "Nitrogen-fixing bacteria and legumes",
+   "category": "Theory",
+   "keywords": [
+    "nitrogen-fixing",
+    "legumes"
+   ]
+  },
+  {
+   "title": "Photosynthesis and crop productivity",
+   "category": "Applications",
+   "keywords": [
+    "photosynthesis",
+    "productivity"
+   ]
+  },
+  {
+   "title": "Cassava mosaic and other plant diseases",
+   "category": "Nigerian Context",
+   "keywords": [
+    "cassava mosaic",
+    "diseases"
+   ]
+  },
+  {
+   "title": "Animal improvement: cross-breeding programmes",
+   "category": "Applications",
+   "keywords": [
+    "animal improvement",
+    "cross-breeding"
+   ]
+  },
+  {
+   "title": "Artificial insemination practice in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "artificial insemination"
+   ]
+  },
+  {
+   "title": "Fish farming biology and pond management",
+   "category": "Nigerian Context",
+   "keywords": [
+    "fish farming",
+    "ponds"
+   ]
+  },
+  {
+   "title": "Examination drill: agricultural biology past questions",
+   "category": "Applications",
+   "keywords": [
+    "agriculture",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The Nigerian health system structure",
+   "category": "Nigerian Context",
+   "keywords": [
+    "health system",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "Disease surveillance and notification",
+   "category": "Applications",
+   "keywords": [
+    "surveillance",
+    "notification"
+   ]
+  },
+  {
+   "title": "Immunisation schedules and programmes",
+   "category": "Applications",
+   "keywords": [
+    "immunisation",
+    "schedules"
+   ]
+  },
+  {
+   "title": "Malaria control: nets and chemotherapy",
+   "category": "Applications",
+   "keywords": [
+    "malaria control",
+    "nets"
+   ]
+  },
+  {
+   "title": "HIV/AIDS: prevention and management",
+   "category": "Applications",
+   "keywords": [
+    "HIV/AIDS",
+    "prevention"
+   ]
+  },
+  {
+   "title": "Maternal and child health programmes",
+   "category": "Applications",
+   "keywords": [
+    "maternal health",
+    "child health"
+   ]
+  },
+  {
+   "title": "Food fortification and nutrition programmes",
+   "category": "Applications",
+   "keywords": [
+    "fortification",
+    "nutrition"
+   ]
+  },
+  {
+   "title": "Sanitation, sewage and disease prevention",
+   "category": "Applications",
+   "keywords": [
+    "sanitation",
+    "sewage"
+   ]
+  },
+  {
+   "title": "Community health workers and their impact",
+   "category": "Nigerian Context",
+   "keywords": [
+    "community health",
+    "workers"
+   ]
+  },
+  {
+   "title": "Examination drill: public health past questions",
+   "category": "Applications",
+   "keywords": [
+    "public health",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Fermentation biotechnology: foods and fuels",
+   "category": "Applications",
+   "keywords": [
+    "fermentation",
+    "biotechnology"
+   ]
+  },
+  {
+   "title": "Enzymes in industry and detergents",
+   "category": "Applications",
+   "keywords": [
+    "industrial enzymes",
+    "detergents"
+   ]
+  },
+  {
+   "title": "Genetic engineering: recombinant DNA",
+   "category": "Theory",
+   "keywords": [
+    "genetic engineering",
+    "recombinant DNA"
+   ]
+  },
+  {
+   "title": "Insulin and genetically engineered medicines",
+   "category": "Applications",
+   "keywords": [
+    "insulin",
+    "medicines"
+   ]
+  },
+  {
+   "title": "Genetically modified crops: pros and cons",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "GM crops",
+    "debate"
+   ]
+  },
+  {
+   "title": "Tissue culture and micropropagation",
+   "category": "Applications",
+   "keywords": [
+    "tissue culture",
+    "micropropagation"
+   ]
+  },
+  {
+   "title": "DNA fingerprinting in forensics",
+   "category": "Applications",
+   "keywords": [
+    "DNA fingerprinting",
+    "forensics"
+   ]
+  },
+  {
+   "title": "Gene therapy: hopes and limits",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "gene therapy"
+   ]
+  },
+  {
+   "title": "Bioethics debates in modern biology",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "bioethics",
+    "debates"
+   ]
+  },
+  {
+   "title": "Examination drill: biotechnology past questions",
+   "category": "Applications",
+   "keywords": [
+    "biotechnology",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Microscope handling and slide preparation",
+   "category": "Methods",
+   "keywords": [
+    "microscope",
+    "slides"
+   ]
+  },
+  {
+   "title": "Biological drawings: the rules and practice",
+   "category": "Methods",
+   "keywords": [
+    "biological drawings",
+    "rules"
+   ]
+  },
+  {
+   "title": "Food tests: reducing sugars to fats",
+   "category": "Methods",
+   "keywords": [
+    "food tests",
+    "sugars"
+   ]
+  },
+  {
+   "title": "Staining cells: iodine and methylene blue",
+   "category": "Methods",
+   "keywords": [
+    "staining",
+    "iodine"
+   ]
+  },
+  {
+   "title": "Measuring transpiration with a potometer",
+   "category": "Methods",
+   "keywords": [
+    "potometer",
+    "transpiration"
+   ]
+  },
+  {
+   "title": "Quadrat and transect sampling practice",
+   "category": "Methods",
+   "keywords": [
+    "quadrat",
+    "transect"
+   ]
+  },
+  {
+   "title": "Enzyme experiments: temperature and pH",
+   "category": "Methods",
+   "keywords": [
+    "enzyme experiments",
+    "pH"
+   ]
+  },
+  {
+   "title": "Water cultures and mineral deficiency tests",
+   "category": "Methods",
+   "keywords": [
+    "water cultures",
+    "deficiency"
+   ]
+  },
+  {
+   "title": "Dissection skills: rat and fish",
+   "category": "Methods",
+   "keywords": [
+    "dissection",
+    "rat"
+   ]
+  },
+  {
+   "title": "Examination drill: laboratory past questions",
+   "category": "Applications",
+   "keywords": [
+    "laboratory",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Reading population growth graphs",
+   "category": "Methods",
+   "keywords": [
+    "population graphs",
+    "interpretation"
+   ]
+  },
+  {
+   "title": "Interpreting ecological pyramid data",
+   "category": "Methods",
+   "keywords": [
+    "pyramids",
+    "data"
+   ]
+  },
+  {
+   "title": "Genetics from pedigree charts",
+   "category": "Methods",
+   "keywords": [
+    "pedigree charts",
+    "genetics"
+   ]
+  },
+  {
+   "title": "Enzyme activity graphs interpretation",
+   "category": "Methods",
+   "keywords": [
+    "enzyme graphs",
+    "activity"
+   ]
+  },
+  {
+   "title": "Nutrition data tables analysis",
+   "category": "Methods",
+   "keywords": [
+    "nutrition data",
+    "tables"
+   ]
+  },
+  {
+   "title": "Health statistics and reading trends",
+   "category": "Methods",
+   "keywords": [
+    "health statistics",
+    "trends"
+   ]
+  },
+  {
+   "title": "Pulse and breathing rate data",
+   "category": "Methods",
+   "keywords": [
+    "pulse rate",
+    "breathing rate"
+   ]
+  },
+  {
+   "title": "Photosynthesis rate graphs",
+   "category": "Methods",
+   "keywords": [
+    "photosynthesis graphs",
+    "rate"
+   ]
+  },
+  {
+   "title": "Ecosystem energy flow calculations",
+   "category": "Methods",
+   "keywords": [
+    "energy flow",
+    "calculations"
+   ]
+  },
+  {
+   "title": "Examination drill: data past questions",
+   "category": "Applications",
+   "keywords": [
+    "data",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Osmoregulation in fresh and salt water fish",
+   "category": "Theory",
+   "keywords": [
+    "osmoregulation",
+    "fish"
+   ]
+  },
+  {
+   "title": "Breathing in insects, fish and mammals",
+   "category": "Theory",
+   "keywords": [
+    "breathing",
+    "insects",
+    "fish"
+   ]
+  },
+  {
+   "title": "Circulation: open versus closed systems",
+   "category": "Theory",
+   "keywords": [
+    "open circulation",
+    "closed circulation"
+   ]
+  },
+  {
+   "title": "Excretion: contractile vacuoles to kidneys",
+   "category": "Theory",
+   "keywords": [
+    "contractile vacuole",
+    "excretion"
+   ]
+  },
+  {
+   "title": "Support: hydrostatic skeletons to bones",
+   "category": "Theory",
+   "keywords": [
+    "hydrostatic skeleton",
+    "bones"
+   ]
+  },
+  {
+   "title": "Locomotion: fins, wings and limbs",
+   "category": "Theory",
+   "keywords": [
+    "locomotion",
+    "fins",
+    "wings"
+   ]
+  },
+  {
+   "title": "Feeding structures across animal groups",
+   "category": "Theory",
+   "keywords": [
+    "feeding structures",
+    "animals"
+   ]
+  },
+  {
+   "title": "Thermoregulation strategies compared",
+   "category": "Theory",
+   "keywords": [
+    "thermoregulation",
+    "strategies"
+   ]
+  },
+  {
+   "title": "Reproductive strategies: r and K selection",
+   "category": "Theory",
+   "keywords": [
+    "r selection",
+    "K selection"
+   ]
+  },
+  {
+   "title": "Examination drill: comparative past questions",
+   "category": "Applications",
+   "keywords": [
+    "comparative",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Farm to table: the production biology",
+   "category": "Nigerian Context",
+   "keywords": [
+    "farm to table",
+    "production"
+   ]
+  },
+  {
+   "title": "Food spoilage organisms and prevention",
+   "category": "Applications",
+   "keywords": [
+    "food spoilage",
+    "organisms"
+   ]
+  },
+  {
+   "title": "Food preservation: traditional and modern",
+   "category": "Nigerian Context",
+   "keywords": [
+    "food preservation",
+    "traditional"
+   ]
+  },
+  {
+   "title": "Mycotoxins in stored grains",
+   "category": "Applications",
+   "keywords": [
+    "mycotoxins",
+    "grains"
+   ]
+  },
+  {
+   "title": "Nutrition security in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "nutrition security"
+   ]
+  },
+  {
+   "title": "Protein sources: plants versus animals",
+   "category": "Applications",
+   "keywords": [
+    "protein sources"
+   ]
+  },
+  {
+   "title": "Cassava biology and processing",
+   "category": "Nigerian Context",
+   "keywords": [
+    "cassava",
+    "processing"
+   ]
+  },
+  {
+   "title": "Aquaculture species: catfish and tilapia",
+   "category": "Nigerian Context",
+   "keywords": [
+    "catfish",
+    "tilapia"
+   ]
+  },
+  {
+   "title": "Urban agriculture and its biology",
+   "category": "Nigerian Context",
+   "keywords": [
+    "urban agriculture"
+   ]
+  },
+  {
+   "title": "Examination drill: food chains past questions",
+   "category": "Applications",
+   "keywords": [
+    "food chains",
+    "past questions"
+   ]
+  },
+  {
+   "title": "JAMB biology paper structure and strategy",
+   "category": "Methods",
+   "keywords": [
+    "JAMB",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Objective questions on cell biology",
+   "category": "Applications",
+   "keywords": [
+    "cell biology",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on physiology",
+   "category": "Applications",
+   "keywords": [
+    "physiology",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on ecology",
+   "category": "Applications",
+   "keywords": [
+    "ecology",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on genetics",
+   "category": "Applications",
+   "keywords": [
+    "genetics",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on evolution",
+   "category": "Applications",
+   "keywords": [
+    "evolution",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on microorganisms",
+   "category": "Applications",
+   "keywords": [
+    "microorganisms",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on plant biology",
+   "category": "Applications",
+   "keywords": [
+    "plant biology",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on human systems",
+   "category": "Applications",
+   "keywords": [
+    "human systems",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on applied biology",
+   "category": "Applications",
+   "keywords": [
+    "applied biology",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Timed practice: the 40-question sprint",
+   "category": "Applications",
+   "keywords": [
+    "timed practice",
+    "sprint"
+   ]
+  },
+  {
+   "title": "Review of common wrong options",
+   "category": "Methods",
+   "keywords": [
+    "wrong options",
+    "review"
+   ]
+  },
+  {
+   "title": "Interpreting biological diagrams quickly",
+   "category": "Methods",
+   "keywords": [
+    "diagrams",
+    "interpretation"
+   ]
+  },
+  {
+   "title": "Terminology drills: definitions that score",
+   "category": "Methods",
+   "keywords": [
+    "terminology",
+    "definitions"
+   ]
+  },
+  {
+   "title": "Elimination techniques for objective questions",
+   "category": "Methods",
+   "keywords": [
+    "elimination",
+    "techniques"
+   ]
+  },
+  {
+   "title": "Life cycle diagrams you must know",
+   "category": "Methods",
+   "keywords": [
+    "life cycles",
+    "diagrams"
+   ]
+  },
+  {
+   "title": "Matching structures with functions",
+   "category": "Methods",
+   "keywords": [
+    "structures",
+    "functions"
+   ]
+  },
+  {
+   "title": "Misconceptions in genetics corrected",
+   "category": "Methods",
+   "keywords": [
+    "misconceptions",
+    "genetics"
+   ]
+  },
+  {
+   "title": "Errors in ecological terminology corrected",
+   "category": "Methods",
+   "keywords": [
+    "ecological terms",
+    "errors"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set B past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Label the cell: ultrastructure drills",
+   "category": "Methods",
+   "keywords": [
+    "cell structure",
+    "drills"
+   ]
+  },
+  {
+   "title": "The nephron and alimentary canal diagrams",
+   "category": "Methods",
+   "keywords": [
+    "nephron",
+    "alimentary canal"
+   ]
+  },
+  {
+   "title": "Heart and circulatory system diagrams",
+   "category": "Methods",
+   "keywords": [
+    "heart",
+    "circulation"
+   ]
+  },
+  {
+   "title": "Flower structure and pollination diagrams",
+   "category": "Methods",
+   "keywords": [
+    "flower structure",
+    "pollination"
+   ]
+  },
+  {
+   "title": "The eye and ear: labelling drills",
+   "category": "Methods",
+   "keywords": [
+    "eye",
+    "ear"
+   ]
+  },
+  {
+   "title": "Leaf and root cross-sections",
+   "category": "Methods",
+   "keywords": [
+    "leaf cross-section",
+    "root"
+   ]
+  },
+  {
+   "title": "Skeleton and joint diagrams",
+   "category": "Methods",
+   "keywords": [
+    "skeleton",
+    "joints"
+   ]
+  },
+  {
+   "title": "Life cycles: mosquito, housefly, plasmodium",
+   "category": "Methods",
+   "keywords": [
+    "mosquito",
+    "housefly"
+   ]
+  },
+  {
+   "title": "Ecological field equipment identification",
+   "category": "Methods",
+   "keywords": [
+    "field equipment",
+    "ecology"
+   ]
+  },
+  {
+   "title": "Examination drill: diagrams past questions",
+   "category": "Applications",
+   "keywords": [
+    "diagrams",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Biology in the Nigerian kitchen",
+   "category": "Nigerian Context",
+   "keywords": [
+    "kitchen",
+    "biology"
+   ]
+  },
+  {
+   "title": "Handwashing, hygiene and germ theory",
+   "category": "Applications",
+   "keywords": [
+    "handwashing",
+    "hygiene"
+   ]
+  },
+  {
+   "title": "Wounds, healing and the skin barrier",
+   "category": "Applications",
+   "keywords": [
+    "wounds",
+    "healing"
+   ]
+  },
+  {
+   "title": "Sleep, the body clock and health",
+   "category": "Applications",
+   "keywords": [
+    "sleep",
+    "body clock"
+   ]
+  },
+  {
+   "title": "Biology in laundry and cleaning",
+   "category": "Applications",
+   "keywords": [
+    "laundry",
+    "cleaning"
+   ]
+  },
+  {
+   "title": "Pets, zoonoses and safe contact",
+   "category": "Applications",
+   "keywords": [
+    "pets",
+    "zoonoses"
+   ]
+  },
+  {
+   "title": "The human microbiome at a glance",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "microbiome"
+   ]
+  },
+  {
+   "title": "Biology in sports and fitness",
+   "category": "Applications",
+   "keywords": [
+    "sports",
+    "fitness"
+   ]
+  },
+  {
+   "title": "The biology of ageing",
+   "category": "Theory",
+   "keywords": [
+    "ageing",
+    "biology"
+   ]
+  },
+  {
+   "title": "Examination drill: applications past questions",
+   "category": "Applications",
+   "keywords": [
+    "applications",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Building the final revision timetable",
+   "category": "Methods",
+   "keywords": [
+    "revision timetable"
+   ]
+  },
+  {
+   "title": "Definitions and terms at a glance",
+   "category": "Methods",
+   "keywords": [
+    "definitions",
+    "terms"
+   ]
+  },
+  {
+   "title": "Life cycles: one-page summaries",
+   "category": "Methods",
+   "keywords": [
+    "life cycles",
+    "summary"
+   ]
+  },
+  {
+   "title": "Hormones and enzymes: the master tables",
+   "category": "Methods",
+   "keywords": [
+    "hormones",
+    "enzymes"
+   ]
+  },
+  {
+   "title": "The most repeated JAMB biology themes",
+   "category": "Methods",
+   "keywords": [
+    "repeated themes",
+    "JAMB"
+   ]
+  },
+  {
+   "title": "Mock examination: 60 questions in 60 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Marking your mock: error analysis",
+   "category": "Methods",
+   "keywords": [
+    "error analysis",
+    "mock"
+   ]
+  },
+  {
+   "title": "Diagrams examiners love to set",
+   "category": "Methods",
+   "keywords": [
+    "diagrams",
+    "examiners"
+   ]
+  },
+  {
+   "title": "Handling unfamiliar scenarios calmly",
+   "category": "Methods",
+   "keywords": [
+    "unfamiliar scenarios"
+   ]
+  },
+  {
+   "title": "Exam day strategy and final confidence",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "strategy"
+   ]
+  }
+ ]
 }

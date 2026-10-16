@@ -49,6 +49,17 @@ func unitNamesFor(u int) string {
         return unitNameCycle[(u-1)%len(unitNameCycle)]
 }
 
+// maxUnitsFor is the per-body unit ceiling. JAMB subjects follow the
+// founder's 2026-10-17 ladder: 30 units of 10 topics each (fully
+// materialised by the seeded roadmaps, so the expander no-ops);
+// every other body keeps the 15-unit expansion ceiling.
+func maxUnitsFor(body string) int {
+        if strings.EqualFold(strings.TrimSpace(body), "jamb") {
+                return 30
+        }
+        return MaxCourseUnits
+}
+
 // expFlight is the per-course single-flight for unit expansion.
 type expFlight struct {
         done chan struct{}
@@ -290,7 +301,7 @@ func (s *Service) ExpandNextUnit(ctx context.Context, courseID string) (bool, er
         if err != nil {
                 return false, err
         }
-        if st.MaxUnit >= MaxCourseUnits {
+        if st.MaxUnit >= maxUnitsFor(st.Body) {
                 return false, nil // the tree is fully grown
         }
         next := st.MaxUnit + 1
@@ -380,6 +391,9 @@ func (s *Service) EnsureUnitsAhead(userID, courseID string) {
         if err := s.Pool.QueryRow(ctx, `SELECT COALESCE(MAX(unit),1) FROM learn.topics WHERE course_id=$1`, courseID).Scan(&maxUnit); err != nil {
                 return
         }
+        var courseBody string
+        _ = s.Pool.QueryRow(ctx, `SELECT body FROM learn.courses WHERE course_id=$1`, courseID).Scan(&courseBody)
+        unitCap := maxUnitsFor(courseBody)
 
         // Repair pass: a course_units row with no topics under it gets
         // refilled before anything else looks at the ladder.
@@ -397,7 +411,7 @@ func (s *Service) EnsureUnitsAhead(userID, courseID string) {
         }
 
         // Grow while the student is within ONE unit of the edge.
-        for maxUnit-currentUnit < 1 && maxUnit < MaxCourseUnits {
+        for maxUnit-currentUnit < 1 && maxUnit < unitCap {
                 fl, leader := s.expGuard.begin(courseID)
                 if !leader {
                         select {

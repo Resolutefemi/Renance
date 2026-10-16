@@ -1,57 +1,2512 @@
 {
-  "body": "jamb",
-  "subject": "literature",
-  "title": "Literature in English",
-  "topics": [
-    { "title": "Literature: definition, genres and functions", "category": "Concepts & Foundations", "keywords": ["literature", "genres", "drama", "prose", "poetry"] },
-    { "title": "Drama: meaning, origin and major types", "category": "Concepts & Foundations", "keywords": ["drama", "tragedy", "comedy", "tragicomedy", "farce"] },
-    { "title": "Tragedy: elements and tragic heroes", "category": "Theory", "keywords": ["tragedy", "tragic hero", "hamartia", "catharsis"] },
-    { "title": "Comedy, farce, melodrama and tragicomedy", "category": "Theory", "keywords": ["comedy", "farce", "melodrama", "tragicomedy"] },
-    { "title": "Elements of drama: plot and structure", "category": "Theory", "keywords": ["plot", "structure", "exposition", "denouement", "climax"] },
-    { "title": "Dramatis personae, cast and characters", "category": "Theory", "keywords": ["dramatis personae", "cast", "characters", "protagonist", "antagonist"] },
-    { "title": "Setting, stage directions and scenery", "category": "Theory", "keywords": ["setting", "stage directions", "scenery", "props"] },
-    { "title": "Theme and subject matter in drama", "category": "Theory", "keywords": ["theme", "subject matter", "conflict"] },
-    { "title": "Dramatic techniques: soliloquy and aside", "category": "Theory", "keywords": ["soliloquy", "aside", "monologue", "dialogue"] },
-    { "title": "Dramatic irony, foreshadowing and flashback", "category": "Theory", "keywords": ["dramatic irony", "foreshadowing", "flashback", "suspense"] },
-    { "title": "Mime, costume, lighting and audience", "category": "Theory", "keywords": ["mime", "costume", "lighting", "audience", "playwright"] },
-    { "title": "Prose fiction: the novel and novella", "category": "Concepts & Foundations", "keywords": ["novel", "novella", "prose", "fiction"] },
-    { "title": "Short stories and narrative techniques", "category": "Theory", "keywords": ["short story", "narrative technique", "flashback", "epistolary"] },
-    { "title": "Point of view: first and third person narration", "category": "Theory", "keywords": ["point of view", "first person", "third person", "omniscient"] },
-    { "title": "Plot development in prose fiction", "category": "Theory", "keywords": ["plot", "conflict", "suspense", "resolution"] },
-    { "title": "Characterisation in novels and stories", "category": "Theory", "keywords": ["characterisation", "flat character", "round character", "foil"] },
-    { "title": "Setting and atmosphere in the novel", "category": "Theory", "keywords": ["setting", "atmosphere", "background", "milieu"] },
-    { "title": "Themes in African and non-African prose", "category": "Theory", "keywords": ["themes", "african prose", "colonialism", "tradition"] },
-    { "title": "Poetry: meaning, nature and major types", "category": "Concepts & Foundations", "keywords": ["poetry", "lyric", "narrative poem", "sonnet", "elegy"] },
-    { "title": "The sonnet: Shakespearean and Petrarchan", "category": "Theory", "keywords": ["sonnet", "shakespearean", "petrarchan", "quatrain", "octave"] },
-    { "title": "Odes, ballads, elegies and dirges", "category": "Theory", "keywords": ["ode", "ballad", "elegy", "dirge"] },
-    { "title": "Blank verse, free verse and rhymed verse", "category": "Theory", "keywords": ["blank verse", "free verse", "rhyme", "verse forms"] },
-    { "title": "Stanza, verse and line arrangement", "category": "Theory", "keywords": ["stanza", "couplet", "quatrain", "sestet", "octave"] },
-    { "title": "Rhythm, metre and scansion in poetry", "category": "Theory", "keywords": ["rhythm", "metre", "iambic", "scansion", "feet"] },
-    { "title": "Rhyme scheme and musical sound devices", "category": "Theory", "keywords": ["rhyme scheme", "alliteration", "assonance", "onomatopoeia"] },
-    { "title": "Imagery and sensory appeal in poetry", "category": "Theory", "keywords": ["imagery", "senses", "visual", "auditory"] },
-    { "title": "Figures of speech: simile and metaphor", "category": "Theory", "keywords": ["simile", "metaphor", "personification", "figure of speech"] },
-    { "title": "Irony, hyperbole and understatement", "category": "Theory", "keywords": ["irony", "hyperbole", "understatement", "litotes"] },
-    { "title": "Symbolism and allusion in literature", "category": "Theory", "keywords": ["symbolism", "allusion", "symbols", "reference"] },
-    { "title": "Tone, mood and atmosphere in poems", "category": "Theory", "keywords": ["tone", "mood", "atmosphere", "attitude"] },
-    { "title": "Pun, paradox, oxymoron and antithesis", "category": "Theory", "keywords": ["pun", "paradox", "oxymoron", "antithesis"] },
-    { "title": "Apostrophe, euphemism and metonymy", "category": "Theory", "keywords": ["apostrophe", "euphemism", "metonymy", "synecdoche"] },
-    { "title": "More literary terms: catharsis, hubris and motif", "category": "Theory", "keywords": ["catharsis", "hubris", "motif", "caricature"] },
-    { "title": "Poetic devices: repetition and refrain", "category": "Theory", "keywords": ["repetition", "refrain", "anaphora", "emphasis"] },
-    { "title": "Approaching an unseen poem in the exam", "category": "Methods", "keywords": ["unseen poem", "analysis", "interpretation", "theme"] },
-    { "title": "Literary appreciation: how to answer questions", "category": "Methods", "keywords": ["appreciation", "answering", "comments", "quotation"] },
-    { "title": "African drama: themes and techniques", "category": "Theory", "keywords": ["african drama", "playwright", "ritual", "community"] },
-    { "title": "African poetry: themes, style and poets", "category": "Theory", "keywords": ["african poetry", "negritude", "oral tradition", "themes"] },
-    { "title": "Non-African drama and poetry: an overview", "category": "Theory", "keywords": ["non african", "shakespeare", "classical", "western"] },
-    { "title": "Oral literature: folktales and praise poetry", "category": "Concepts & Foundations", "keywords": ["oral literature", "folktales", "praise poetry", "storytelling", "didactic"] },
-    { "title": "Literary movements: romanticism to realism", "category": "Theory", "keywords": ["romanticism", "realism", "naturalism", "renaissance"] },
-    { "title": "Style, diction and language in texts", "category": "Theory", "keywords": ["style", "diction", "language", "register"] },
-    { "title": "Themes of colonialism and independence", "category": "Nigerian Context", "keywords": ["colonialism", "independence", "neo colonialism", "oppression"] },
-    { "title": "Literature and society: social criticism", "category": "Contemporary Issues", "keywords": ["social criticism", "society", "satire", "reform"] },
-    { "title": "Gender and identity in literary texts", "category": "Contemporary Issues", "keywords": ["gender", "identity", "women", "patriarchy"] },
-    { "title": "Approaching the prescribed drama text", "category": "Methods", "keywords": ["prescribed drama", "text", "scenes", "characters"] },
-    { "title": "Approaching the prescribed prose text", "category": "Methods", "keywords": ["prescribed prose", "novel", "chapters", "narrator"] },
-    { "title": "Approaching the prescribed poetry text", "category": "Methods", "keywords": ["prescribed poetry", "anthology", "poems", "poet"] },
-    { "title": "Comparing themes across prescribed texts", "category": "Methods", "keywords": ["comparison", "themes", "texts", "similarities"] },
-    { "title": "Examination drill: literature past questions by topic", "category": "Applications", "keywords": ["past questions", "revision", "examination", "jamb"] }
-  ]
+ "body": "jamb",
+ "subject": "literature",
+ "title": "Literature in English",
+ "unitTitles": [
+  "Drama: Forms and Elements",
+  "Prose Fiction: Craft and Analysis",
+  "Poetry: Forms and Sound",
+  "Figures, Appreciation and Oral Literature",
+  "Movements, Themes and Prescribed Texts",
+  "Dramatic Technique Clinic",
+  "Prose Analysis in Depth",
+  "Poetry Analysis in Depth",
+  "Figures of Speech Mastery",
+  "African Literary Traditions",
+  "Literary Movements in Depth",
+  "Themes of Colonialism",
+  "Gender and Identity in Texts",
+  "Approaching the Drama Text",
+  "Approaching the Prose Text",
+  "Approaching the Poetry Text",
+  "Essay Writing for Literature",
+  "Literary Terms Workshop",
+  "Reading Unseen Texts",
+  "Literature and Society",
+  "Structured Revision: Set A",
+  "Structured Revision: Set B",
+  "Close Reading Workshop",
+  "JAMB Masterclass: Final Lap",
+  "Prescribed Texts: Quote Bank",
+  "Comparative Essays Across Genres",
+  "African Prose Classics",
+  "World Classics Survey",
+  "Poetry: Modern to Spoken Word",
+  "Criticism Lenses Practice"
+ ],
+ "topics": [
+  {
+   "title": "Literature: definition, genres and functions",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "literature",
+    "genres",
+    "drama",
+    "prose",
+    "poetry"
+   ]
+  },
+  {
+   "title": "Drama: meaning, origin and major types",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "drama",
+    "tragedy",
+    "comedy",
+    "tragicomedy",
+    "farce"
+   ]
+  },
+  {
+   "title": "Tragedy: elements and tragic heroes",
+   "category": "Theory",
+   "keywords": [
+    "tragedy",
+    "tragic hero",
+    "hamartia",
+    "catharsis"
+   ]
+  },
+  {
+   "title": "Comedy, farce, melodrama and tragicomedy",
+   "category": "Theory",
+   "keywords": [
+    "comedy",
+    "farce",
+    "melodrama",
+    "tragicomedy"
+   ]
+  },
+  {
+   "title": "Elements of drama: plot and structure",
+   "category": "Theory",
+   "keywords": [
+    "plot",
+    "structure",
+    "exposition",
+    "denouement",
+    "climax"
+   ]
+  },
+  {
+   "title": "Dramatis personae, cast and characters",
+   "category": "Theory",
+   "keywords": [
+    "dramatis personae",
+    "cast",
+    "characters",
+    "protagonist",
+    "antagonist"
+   ]
+  },
+  {
+   "title": "Setting, stage directions and scenery",
+   "category": "Theory",
+   "keywords": [
+    "setting",
+    "stage directions",
+    "scenery",
+    "props"
+   ]
+  },
+  {
+   "title": "Theme and subject matter in drama",
+   "category": "Theory",
+   "keywords": [
+    "theme",
+    "subject matter",
+    "conflict"
+   ]
+  },
+  {
+   "title": "Dramatic techniques: soliloquy and aside",
+   "category": "Theory",
+   "keywords": [
+    "soliloquy",
+    "aside",
+    "monologue",
+    "dialogue"
+   ]
+  },
+  {
+   "title": "Dramatic irony, foreshadowing and flashback",
+   "category": "Theory",
+   "keywords": [
+    "dramatic irony",
+    "foreshadowing",
+    "flashback",
+    "suspense"
+   ]
+  },
+  {
+   "title": "Mime, costume, lighting and audience",
+   "category": "Theory",
+   "keywords": [
+    "mime",
+    "costume",
+    "lighting",
+    "audience",
+    "playwright"
+   ]
+  },
+  {
+   "title": "Prose fiction: the novel and novella",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "novel",
+    "novella",
+    "prose",
+    "fiction"
+   ]
+  },
+  {
+   "title": "Short stories and narrative techniques",
+   "category": "Theory",
+   "keywords": [
+    "short story",
+    "narrative technique",
+    "flashback",
+    "epistolary"
+   ]
+  },
+  {
+   "title": "Point of view: first and third person narration",
+   "category": "Theory",
+   "keywords": [
+    "point of view",
+    "first person",
+    "third person",
+    "omniscient"
+   ]
+  },
+  {
+   "title": "Plot development in prose fiction",
+   "category": "Theory",
+   "keywords": [
+    "plot",
+    "conflict",
+    "suspense",
+    "resolution"
+   ]
+  },
+  {
+   "title": "Characterisation in novels and stories",
+   "category": "Theory",
+   "keywords": [
+    "characterisation",
+    "flat character",
+    "round character",
+    "foil"
+   ]
+  },
+  {
+   "title": "Setting and atmosphere in the novel",
+   "category": "Theory",
+   "keywords": [
+    "setting",
+    "atmosphere",
+    "background",
+    "milieu"
+   ]
+  },
+  {
+   "title": "Themes in African and non-African prose",
+   "category": "Theory",
+   "keywords": [
+    "themes",
+    "african prose",
+    "colonialism",
+    "tradition"
+   ]
+  },
+  {
+   "title": "Poetry: meaning, nature and major types",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "poetry",
+    "lyric",
+    "narrative poem",
+    "sonnet",
+    "elegy"
+   ]
+  },
+  {
+   "title": "The sonnet: Shakespearean and Petrarchan",
+   "category": "Theory",
+   "keywords": [
+    "sonnet",
+    "shakespearean",
+    "petrarchan",
+    "quatrain",
+    "octave"
+   ]
+  },
+  {
+   "title": "Odes, ballads, elegies and dirges",
+   "category": "Theory",
+   "keywords": [
+    "ode",
+    "ballad",
+    "elegy",
+    "dirge"
+   ]
+  },
+  {
+   "title": "Blank verse, free verse and rhymed verse",
+   "category": "Theory",
+   "keywords": [
+    "blank verse",
+    "free verse",
+    "rhyme",
+    "verse forms"
+   ]
+  },
+  {
+   "title": "Stanza, verse and line arrangement",
+   "category": "Theory",
+   "keywords": [
+    "stanza",
+    "couplet",
+    "quatrain",
+    "sestet",
+    "octave"
+   ]
+  },
+  {
+   "title": "Rhythm, metre and scansion in poetry",
+   "category": "Theory",
+   "keywords": [
+    "rhythm",
+    "metre",
+    "iambic",
+    "scansion",
+    "feet"
+   ]
+  },
+  {
+   "title": "Rhyme scheme and musical sound devices",
+   "category": "Theory",
+   "keywords": [
+    "rhyme scheme",
+    "alliteration",
+    "assonance",
+    "onomatopoeia"
+   ]
+  },
+  {
+   "title": "Imagery and sensory appeal in poetry",
+   "category": "Theory",
+   "keywords": [
+    "imagery",
+    "senses",
+    "visual",
+    "auditory"
+   ]
+  },
+  {
+   "title": "Figures of speech: simile and metaphor",
+   "category": "Theory",
+   "keywords": [
+    "simile",
+    "metaphor",
+    "personification",
+    "figure of speech"
+   ]
+  },
+  {
+   "title": "Irony, hyperbole and understatement",
+   "category": "Theory",
+   "keywords": [
+    "irony",
+    "hyperbole",
+    "understatement",
+    "litotes"
+   ]
+  },
+  {
+   "title": "Symbolism and allusion in literature",
+   "category": "Theory",
+   "keywords": [
+    "symbolism",
+    "allusion",
+    "symbols",
+    "reference"
+   ]
+  },
+  {
+   "title": "Tone, mood and atmosphere in poems",
+   "category": "Theory",
+   "keywords": [
+    "tone",
+    "mood",
+    "atmosphere",
+    "attitude"
+   ]
+  },
+  {
+   "title": "Pun, paradox, oxymoron and antithesis",
+   "category": "Theory",
+   "keywords": [
+    "pun",
+    "paradox",
+    "oxymoron",
+    "antithesis"
+   ]
+  },
+  {
+   "title": "Apostrophe, euphemism and metonymy",
+   "category": "Theory",
+   "keywords": [
+    "apostrophe",
+    "euphemism",
+    "metonymy",
+    "synecdoche"
+   ]
+  },
+  {
+   "title": "More literary terms: catharsis, hubris and motif",
+   "category": "Theory",
+   "keywords": [
+    "catharsis",
+    "hubris",
+    "motif",
+    "caricature"
+   ]
+  },
+  {
+   "title": "Poetic devices: repetition and refrain",
+   "category": "Theory",
+   "keywords": [
+    "repetition",
+    "refrain",
+    "anaphora",
+    "emphasis"
+   ]
+  },
+  {
+   "title": "Approaching an unseen poem in the exam",
+   "category": "Methods",
+   "keywords": [
+    "unseen poem",
+    "analysis",
+    "interpretation",
+    "theme"
+   ]
+  },
+  {
+   "title": "Literary appreciation: how to answer questions",
+   "category": "Methods",
+   "keywords": [
+    "appreciation",
+    "answering",
+    "comments",
+    "quotation"
+   ]
+  },
+  {
+   "title": "African drama: themes and techniques",
+   "category": "Theory",
+   "keywords": [
+    "african drama",
+    "playwright",
+    "ritual",
+    "community"
+   ]
+  },
+  {
+   "title": "African poetry: themes, style and poets",
+   "category": "Theory",
+   "keywords": [
+    "african poetry",
+    "negritude",
+    "oral tradition",
+    "themes"
+   ]
+  },
+  {
+   "title": "Non-African drama and poetry: an overview",
+   "category": "Theory",
+   "keywords": [
+    "non african",
+    "shakespeare",
+    "classical",
+    "western"
+   ]
+  },
+  {
+   "title": "Oral literature: folktales and praise poetry",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "oral literature",
+    "folktales",
+    "praise poetry",
+    "storytelling",
+    "didactic"
+   ]
+  },
+  {
+   "title": "Literary movements: romanticism to realism",
+   "category": "Theory",
+   "keywords": [
+    "romanticism",
+    "realism",
+    "naturalism",
+    "renaissance"
+   ]
+  },
+  {
+   "title": "Style, diction and language in texts",
+   "category": "Theory",
+   "keywords": [
+    "style",
+    "diction",
+    "language",
+    "register"
+   ]
+  },
+  {
+   "title": "Themes of colonialism and independence",
+   "category": "Nigerian Context",
+   "keywords": [
+    "colonialism",
+    "independence",
+    "neo colonialism",
+    "oppression"
+   ]
+  },
+  {
+   "title": "Literature and society: social criticism",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "social criticism",
+    "society",
+    "satire",
+    "reform"
+   ]
+  },
+  {
+   "title": "Gender and identity in literary texts",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "gender",
+    "identity",
+    "women",
+    "patriarchy"
+   ]
+  },
+  {
+   "title": "Approaching the prescribed drama text",
+   "category": "Methods",
+   "keywords": [
+    "prescribed drama",
+    "text",
+    "scenes",
+    "characters"
+   ]
+  },
+  {
+   "title": "Approaching the prescribed prose text",
+   "category": "Methods",
+   "keywords": [
+    "prescribed prose",
+    "novel",
+    "chapters",
+    "narrator"
+   ]
+  },
+  {
+   "title": "Approaching the prescribed poetry text",
+   "category": "Methods",
+   "keywords": [
+    "prescribed poetry",
+    "anthology",
+    "poems",
+    "poet"
+   ]
+  },
+  {
+   "title": "Comparing themes across prescribed texts",
+   "category": "Methods",
+   "keywords": [
+    "comparison",
+    "themes",
+    "texts",
+    "similarities"
+   ]
+  },
+  {
+   "title": "Examination drill: literature past questions by topic",
+   "category": "Applications",
+   "keywords": [
+    "past questions",
+    "revision",
+    "examination",
+    "jamb"
+   ]
+  },
+  {
+   "title": "Analysing dialogue for character",
+   "category": "Methods",
+   "keywords": [
+    "dialogue",
+    "character"
+   ]
+  },
+  {
+   "title": "Stage directions as meaning makers",
+   "category": "Methods",
+   "keywords": [
+    "stage directions",
+    "meaning"
+   ]
+  },
+  {
+   "title": "Dramatic irony: spotting and effects",
+   "category": "Methods",
+   "keywords": [
+    "dramatic irony",
+    "effects"
+   ]
+  },
+  {
+   "title": "Foreshadowing and suspense control",
+   "category": "Theory",
+   "keywords": [
+    "foreshadowing",
+    "suspense"
+   ]
+  },
+  {
+   "title": "Conflict types on stage",
+   "category": "Theory",
+   "keywords": [
+    "conflict",
+    "stage"
+   ]
+  },
+  {
+   "title": "Climax, crisis and denouement",
+   "category": "Theory",
+   "keywords": [
+    "climax",
+    "denouement"
+   ]
+  },
+  {
+   "title": "Tragic flaw analysis practice",
+   "category": "Methods",
+   "keywords": [
+    "tragic flaw",
+    "analysis"
+   ]
+  },
+  {
+   "title": "Comic relief and its functions",
+   "category": "Theory",
+   "keywords": [
+    "comic relief",
+    "functions"
+   ]
+  },
+  {
+   "title": "Symbolism in stage properties",
+   "category": "Theory",
+   "keywords": [
+    "symbolism",
+    "properties"
+   ]
+  },
+  {
+   "title": "Examination drill: drama past questions",
+   "category": "Applications",
+   "keywords": [
+    "drama",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Opening chapters: hooks and promises",
+   "category": "Methods",
+   "keywords": [
+    "opening chapters",
+    "hooks"
+   ]
+  },
+  {
+   "title": "Character arcs across a novel",
+   "category": "Theory",
+   "keywords": [
+    "character arcs",
+    "novel"
+   ]
+  },
+  {
+   "title": "Setting as a shaping force",
+   "category": "Theory",
+   "keywords": [
+    "setting",
+    "force"
+   ]
+  },
+  {
+   "title": "Flashback and linear narrative compared",
+   "category": "Theory",
+   "keywords": [
+    "flashback",
+    "linear"
+   ]
+  },
+  {
+   "title": "Narrative voice reliability",
+   "category": "Theory",
+   "keywords": [
+    "narrative voice",
+    "reliability"
+   ]
+  },
+  {
+   "title": "Diction and class in novels",
+   "category": "Theory",
+   "keywords": [
+    "diction",
+    "class"
+   ]
+  },
+  {
+   "title": "Symbolic objects in prose",
+   "category": "Theory",
+   "keywords": [
+    "symbols",
+    "prose"
+   ]
+  },
+  {
+   "title": "Themes versus subject matter clarified",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "themes",
+    "subject matter"
+   ]
+  },
+  {
+   "title": "Comparing two novels' openings",
+   "category": "Methods",
+   "keywords": [
+    "comparing",
+    "openings"
+   ]
+  },
+  {
+   "title": "Examination drill: prose past questions",
+   "category": "Applications",
+   "keywords": [
+    "prose",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Reading a poem three times",
+   "category": "Methods",
+   "keywords": [
+    "reading poems",
+    "method"
+   ]
+  },
+  {
+   "title": "Paraphrase without losing music",
+   "category": "Methods",
+   "keywords": [
+    "paraphrase",
+    "music"
+   ]
+  },
+  {
+   "title": "Imagery clusters and their effects",
+   "category": "Theory",
+   "keywords": [
+    "imagery",
+    "clusters"
+   ]
+  },
+  {
+   "title": "Sound patterns: alliteration to assonance",
+   "category": "Theory",
+   "keywords": [
+    "alliteration",
+    "assonance"
+   ]
+  },
+  {
+   "title": "Enjambment and caesura effects",
+   "category": "Theory",
+   "keywords": [
+    "enjambment",
+    "caesura"
+   ]
+  },
+  {
+   "title": "Meter basics: iambic and trochaic",
+   "category": "Theory",
+   "keywords": [
+    "meter",
+    "iambic"
+   ]
+  },
+  {
+   "title": "Tone shifts within poems",
+   "category": "Methods",
+   "keywords": [
+    "tone shifts",
+    "poems"
+   ]
+  },
+  {
+   "title": "Allusion: biblical and classical",
+   "category": "Theory",
+   "keywords": [
+    "allusion",
+    "biblical"
+   ]
+  },
+  {
+   "title": "Titles as keys to poems",
+   "category": "Methods",
+   "keywords": [
+    "titles",
+    "keys"
+   ]
+  },
+  {
+   "title": "Examination drill: poetry past questions",
+   "category": "Applications",
+   "keywords": [
+    "poetry",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Simile, metaphor, personification drills",
+   "category": "Methods",
+   "keywords": [
+    "simile",
+    "metaphor",
+    "drills"
+   ]
+  },
+  {
+   "title": "Metonymy and synecdoche untangled",
+   "category": "Theory",
+   "keywords": [
+    "metonymy",
+    "synecdoche"
+   ]
+  },
+  {
+   "title": "Oxymoron and paradox in texts",
+   "category": "Theory",
+   "keywords": [
+    "oxymoron",
+    "paradox"
+   ]
+  },
+  {
+   "title": "Litotes and euphemism practice",
+   "category": "Theory",
+   "keywords": [
+    "litotes",
+    "euphemism"
+   ]
+  },
+  {
+   "title": "Hyperbole: scale and effect",
+   "category": "Theory",
+   "keywords": [
+    "hyperbole",
+    "scale"
+   ]
+  },
+  {
+   "title": "Irony: verbal, dramatic, situational",
+   "category": "Theory",
+   "keywords": [
+    "verbal irony",
+    "situational irony"
+   ]
+  },
+  {
+   "title": "Puns and wordplay analysis",
+   "category": "Theory",
+   "keywords": [
+    "puns",
+    "wordplay"
+   ]
+  },
+  {
+   "title": "Zeugma and chiasmus at a glance",
+   "category": "Theory",
+   "keywords": [
+    "zeugma",
+    "chiasmus"
+   ]
+  },
+  {
+   "title": "Identifying figures under exam time",
+   "category": "Methods",
+   "keywords": [
+    "identifying figures",
+    "exam"
+   ]
+  },
+  {
+   "title": "Examination drill: figures past questions",
+   "category": "Applications",
+   "keywords": [
+    "figures of speech",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Oral poetry: dirges and praise songs",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "oral poetry",
+    "dirges"
+   ]
+  },
+  {
+   "title": "Folktales: structure and morals",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "folktales",
+    "structure"
+   ]
+  },
+  {
+   "title": "Trickster tales and their wisdom",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "trickster",
+    "tales"
+   ]
+  },
+  {
+   "title": "Myths: origins and functions",
+   "category": "Theory",
+   "keywords": [
+    "myths",
+    "functions"
+   ]
+  },
+  {
+   "title": "Proverbs in African drama",
+   "category": "Theory",
+   "keywords": [
+    "proverbs",
+    "drama"
+   ]
+  },
+  {
+   "title": "Riddles and their logic",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "riddles",
+    "logic"
+   ]
+  },
+  {
+   "title": "Performance: costume, drum, dance",
+   "category": "Theory",
+   "keywords": [
+    "performance",
+    "drum"
+   ]
+  },
+  {
+   "title": "Written literature's oral roots",
+   "category": "Theory",
+   "keywords": [
+    "written literature",
+    "oral roots"
+   ]
+  },
+  {
+   "title": "Nigerian writers who shaped the canon",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Nigerian writers",
+    "canon"
+   ]
+  },
+  {
+   "title": "Examination drill: oral literature past questions",
+   "category": "Applications",
+   "keywords": [
+    "oral literature",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Romanticism: nature and emotion",
+   "category": "Theory",
+   "keywords": [
+    "romanticism",
+    "nature"
+   ]
+  },
+  {
+   "title": "Realism: society as it is",
+   "category": "Theory",
+   "keywords": [
+    "realism",
+    "society"
+   ]
+  },
+  {
+   "title": "Modernism: experiments and fragments",
+   "category": "Theory",
+   "keywords": [
+    "modernism",
+    "experiments"
+   ]
+  },
+  {
+   "title": "Negritude: identity and pride",
+   "category": "Theory",
+   "keywords": [
+    "negritude",
+    "identity"
+   ]
+  },
+  {
+   "title": "African aesthetics: uniqueness debates",
+   "category": "Theory",
+   "keywords": [
+    "African aesthetics",
+    "debates"
+   ]
+  },
+  {
+   "title": "Postcolonial voices and hybridity",
+   "category": "Theory",
+   "keywords": [
+    "postcolonial",
+    "hybridity"
+   ]
+  },
+  {
+   "title": "Feminist criticism: the basics",
+   "category": "Theory",
+   "keywords": [
+    "feminist criticism"
+   ]
+  },
+  {
+   "title": "Marxist readings: class on the page",
+   "category": "Theory",
+   "keywords": [
+    "marxist",
+    "class"
+   ]
+  },
+  {
+   "title": "Movements matched to sample texts",
+   "category": "Methods",
+   "keywords": [
+    "movements",
+    "sample texts"
+   ]
+  },
+  {
+   "title": "Examination drill: movements past questions",
+   "category": "Applications",
+   "keywords": [
+    "movements",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Arrival narratives and first contacts",
+   "category": "Theory",
+   "keywords": [
+    "arrival",
+    "first contact"
+   ]
+  },
+  {
+   "title": "Mission education in fiction",
+   "category": "Theory",
+   "keywords": [
+    "mission education",
+    "fiction"
+   ]
+  },
+  {
+   "title": "Culture conflict dramatised",
+   "category": "Theory",
+   "keywords": [
+    "culture conflict",
+    "drama"
+   ]
+  },
+  {
+   "title": "Resistance and rebellion characters",
+   "category": "Theory",
+   "keywords": [
+    "resistance",
+    "rebellion"
+   ]
+  },
+  {
+   "title": "Independence and disillusionment in texts",
+   "category": "Theory",
+   "keywords": [
+    "independence",
+    "disillusionment"
+   ]
+  },
+  {
+   "title": "The returned graduate motif",
+   "category": "Theory",
+   "keywords": [
+    "returned graduate",
+    "motif"
+   ]
+  },
+  {
+   "title": "Language choice: English versus vernacular",
+   "category": "Theory",
+   "keywords": [
+    "language choice",
+    "vernacular"
+   ]
+  },
+  {
+   "title": "Land and dispossession themes",
+   "category": "Theory",
+   "keywords": [
+    "land",
+    "dispossession"
+   ]
+  },
+  {
+   "title": "Comparing colonial themes across genres",
+   "category": "Methods",
+   "keywords": [
+    "colonial themes",
+    "genres"
+   ]
+  },
+  {
+   "title": "Examination drill: colonialism past questions",
+   "category": "Applications",
+   "keywords": [
+    "colonialism",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Female protagonists across the canon",
+   "category": "Theory",
+   "keywords": [
+    "female protagonists",
+    "canon"
+   ]
+  },
+  {
+   "title": "Masculinity performed in drama",
+   "category": "Theory",
+   "keywords": [
+    "masculinity",
+    "drama"
+   ]
+  },
+  {
+   "title": "Marriage plots examined critically",
+   "category": "Theory",
+   "keywords": [
+    "marriage plots"
+   ]
+  },
+  {
+   "title": "Motherhood and power in novels",
+   "category": "Theory",
+   "keywords": [
+    "motherhood",
+    "power"
+   ]
+  },
+  {
+   "title": "Silence and voice as motifs",
+   "category": "Theory",
+   "keywords": [
+    "silence",
+    "voice"
+   ]
+  },
+  {
+   "title": "Patriarchy: definition in literature terms",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "patriarchy",
+    "literature"
+   ]
+  },
+  {
+   "title": "Women writers of Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "women writers",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "Identity: tradition versus modernity",
+   "category": "Theory",
+   "keywords": [
+    "identity",
+    "modernity"
+   ]
+  },
+  {
+   "title": "Close reading a gendered passage",
+   "category": "Methods",
+   "keywords": [
+    "gendered passage",
+    "reading"
+   ]
+  },
+  {
+   "title": "Examination drill: gender past questions",
+   "category": "Applications",
+   "keywords": [
+    "gender",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Plot map of the prescribed play",
+   "category": "Methods",
+   "keywords": [
+    "plot map",
+    "prescribed play"
+   ]
+  },
+  {
+   "title": "Character profiles with quotations",
+   "category": "Methods",
+   "keywords": [
+    "character profiles",
+    "quotations"
+   ]
+  },
+  {
+   "title": "Key scenes for examination essays",
+   "category": "Methods",
+   "keywords": [
+    "key scenes",
+    "essays"
+   ]
+  },
+  {
+   "title": "Themes with supporting moments",
+   "category": "Methods",
+   "keywords": [
+    "themes",
+    "moments"
+   ]
+  },
+  {
+   "title": "Language and style of the play",
+   "category": "Methods",
+   "keywords": [
+    "language",
+    "style",
+    "play"
+   ]
+  },
+  {
+   "title": "Dramatic techniques in the text",
+   "category": "Methods",
+   "keywords": [
+    "dramatic techniques",
+    "text"
+   ]
+  },
+  {
+   "title": "Likely character questions and answers",
+   "category": "Methods",
+   "keywords": [
+    "character questions"
+   ]
+  },
+  {
+   "title": "Likely theme questions and answers",
+   "category": "Methods",
+   "keywords": [
+    "theme questions"
+   ]
+  },
+  {
+   "title": "Quoting accurately under exam time",
+   "category": "Methods",
+   "keywords": [
+    "quoting",
+    "exam time"
+   ]
+  },
+  {
+   "title": "Examination drill: prescribed drama past questions",
+   "category": "Applications",
+   "keywords": [
+    "prescribed drama",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Plot summary in your own words",
+   "category": "Methods",
+   "keywords": [
+    "plot summary",
+    "own words"
+   ]
+  },
+  {
+   "title": "Character web: who affects whom",
+   "category": "Methods",
+   "keywords": [
+    "character web"
+   ]
+  },
+  {
+   "title": "Setting and its symbolic weight",
+   "category": "Methods",
+   "keywords": [
+    "setting",
+    "symbolic"
+   ]
+  },
+  {
+   "title": "Turning points and their causes",
+   "category": "Methods",
+   "keywords": [
+    "turning points",
+    "causes"
+   ]
+  },
+  {
+   "title": "Narrative technique of the novel",
+   "category": "Methods",
+   "keywords": [
+    "narrative technique",
+    "novel"
+   ]
+  },
+  {
+   "title": "Themes traceable through chapters",
+   "category": "Methods",
+   "keywords": [
+    "themes",
+    "chapters"
+   ]
+  },
+  {
+   "title": "Style: sentence, diction, imagery",
+   "category": "Methods",
+   "keywords": [
+    "style",
+    "diction"
+   ]
+  },
+  {
+   "title": "Likely prose questions and answers",
+   "category": "Methods",
+   "keywords": [
+    "prose questions"
+   ]
+  },
+  {
+   "title": "Using chapter references properly",
+   "category": "Methods",
+   "keywords": [
+    "chapter references"
+   ]
+  },
+  {
+   "title": "Examination drill: prescribed prose past questions",
+   "category": "Applications",
+   "keywords": [
+    "prescribed prose",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Poem-by-poem quick scans",
+   "category": "Methods",
+   "keywords": [
+    "poem scans",
+    "quick"
+   ]
+  },
+  {
+   "title": "Subjects and concerns of the collection",
+   "category": "Methods",
+   "keywords": [
+    "collection",
+    "concerns"
+   ]
+  },
+  {
+   "title": "Recurring images across poems",
+   "category": "Methods",
+   "keywords": [
+    "recurring images",
+    "poems"
+   ]
+  },
+  {
+   "title": "Tone map of the collection",
+   "category": "Methods",
+   "keywords": [
+    "tone map",
+    "collection"
+   ]
+  },
+  {
+   "title": "Form choices and their reasons",
+   "category": "Methods",
+   "keywords": [
+    "form choices"
+   ]
+  },
+  {
+   "title": "Comparing two poems from the text",
+   "category": "Methods",
+   "keywords": [
+    "comparing poems"
+   ]
+  },
+  {
+   "title": "Likely poetry questions and answers",
+   "category": "Methods",
+   "keywords": [
+    "poetry questions"
+   ]
+  },
+  {
+   "title": "Quoting lines precisely",
+   "category": "Methods",
+   "keywords": [
+    "quoting lines"
+   ]
+  },
+  {
+   "title": "Unseen poem: transferring the skills",
+   "category": "Methods",
+   "keywords": [
+    "unseen poem",
+    "skills"
+   ]
+  },
+  {
+   "title": "Examination drill: prescribed poetry past questions",
+   "category": "Applications",
+   "keywords": [
+    "prescribed poetry",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The PEEL paragraph for literature",
+   "category": "Methods",
+   "keywords": [
+    "PEEL",
+    "paragraphs"
+   ]
+  },
+  {
+   "title": "Thesis statements that argue",
+   "category": "Methods",
+   "keywords": [
+    "thesis statements"
+   ]
+  },
+  {
+   "title": "Embedding quotations smoothly",
+   "category": "Methods",
+   "keywords": [
+    "embedding quotations"
+   ]
+  },
+  {
+   "title": "Analysing rather than narrating",
+   "category": "Methods",
+   "keywords": [
+    "analysing",
+    "narrating"
+   ]
+  },
+  {
+   "title": "Answering 'discuss' questions fully",
+   "category": "Methods",
+   "keywords": [
+    "discuss questions"
+   ]
+  },
+  {
+   "title": "Comparative essay structures",
+   "category": "Methods",
+   "keywords": [
+    "comparative essays",
+    "structure"
+   ]
+  },
+  {
+   "title": "Timing a literature essay",
+   "category": "Methods",
+   "keywords": [
+    "timing",
+    "essay"
+   ]
+  },
+  {
+   "title": "Common essay pitfalls to avoid",
+   "category": "Methods",
+   "keywords": [
+    "essay pitfalls"
+   ]
+  },
+  {
+   "title": "Sample essays marked and improved",
+   "category": "Applications",
+   "keywords": [
+    "sample essays",
+    "marked"
+   ]
+  },
+  {
+   "title": "Examination drill: essay past questions",
+   "category": "Applications",
+   "keywords": [
+    "essays",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Plot terms: exposition to resolution",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "plot terms",
+    "resolution"
+   ]
+  },
+  {
+   "title": "Character terms: foil, stock, round",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "foil",
+    "stock character"
+   ]
+  },
+  {
+   "title": "Point-of-view terms precisely",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "point of view",
+    "terms"
+   ]
+  },
+  {
+   "title": "Sound terms: assonance to sibilance",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "assonance",
+    "sibilance"
+   ]
+  },
+  {
+   "title": "Structure terms: stanza, couplet, quatrain",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "stanza",
+    "couplet"
+   ]
+  },
+  {
+   "title": "Dramatic terms: aside to soliloquy",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "aside",
+    "soliloquy"
+   ]
+  },
+  {
+   "title": "Genre terms: fable, allegory, satire",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "fable",
+    "allegory",
+    "satire"
+   ]
+  },
+  {
+   "title": "Criticism terms: canon, trope, motif",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "canon",
+    "trope",
+    "motif"
+   ]
+  },
+  {
+   "title": "Matching terms to text samples",
+   "category": "Methods",
+   "keywords": [
+    "matching terms",
+    "samples"
+   ]
+  },
+  {
+   "title": "Examination drill: terms past questions",
+   "category": "Applications",
+   "keywords": [
+    "literary terms",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The unseen drama extract method",
+   "category": "Methods",
+   "keywords": [
+    "unseen drama",
+    "method"
+   ]
+  },
+  {
+   "title": "The unseen prose extract method",
+   "category": "Methods",
+   "keywords": [
+    "unseen prose",
+    "method"
+   ]
+  },
+  {
+   "title": "The unseen poem method",
+   "category": "Methods",
+   "keywords": [
+    "unseen poem",
+    "method"
+   ]
+  },
+  {
+   "title": "Question words decoded precisely",
+   "category": "Methods",
+   "keywords": [
+    "question words",
+    "decoded"
+   ]
+  },
+  {
+   "title": "Allocating time per unseen text",
+   "category": "Methods",
+   "keywords": [
+    "time allocation",
+    "unseen"
+   ]
+  },
+  {
+   "title": "Guessing intelligently on hard items",
+   "category": "Methods",
+   "keywords": [
+    "guessing",
+    "intelligently"
+   ]
+  },
+  {
+   "title": "Practice set: three unseen texts",
+   "category": "Applications",
+   "keywords": [
+    "practice",
+    "unseen texts"
+   ]
+  },
+  {
+   "title": "Marking your own unseen answers",
+   "category": "Methods",
+   "keywords": [
+    "self-marking",
+    "unseen"
+   ]
+  },
+  {
+   "title": "Speed with accuracy: balancing",
+   "category": "Methods",
+   "keywords": [
+    "speed",
+    "accuracy"
+   ]
+  },
+  {
+   "title": "Examination drill: unseen past questions",
+   "category": "Applications",
+   "keywords": [
+    "unseen texts",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Literature as social criticism",
+   "category": "Theory",
+   "keywords": [
+    "social criticism"
+   ]
+  },
+  {
+   "title": "Censorship and writers' courage",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "censorship",
+    "writers"
+   ]
+  },
+  {
+   "title": "Literature prizes and recognition",
+   "category": "Nigerian Context",
+   "keywords": [
+    "prizes",
+    "recognition"
+   ]
+  },
+  {
+   "title": "Publishing in Nigeria today",
+   "category": "Nigerian Context",
+   "keywords": [
+    "publishing",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "Film and stage adaptations",
+   "category": "Applications",
+   "keywords": [
+    "adaptations",
+    "film"
+   ]
+  },
+  {
+   "title": "Spoken word and performance poetry",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "spoken word"
+   ]
+  },
+  {
+   "title": "Literature festivals and communities",
+   "category": "Nigerian Context",
+   "keywords": [
+    "festivals",
+    "communities"
+   ]
+  },
+  {
+   "title": "Reading culture and book clubs",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "reading culture"
+   ]
+  },
+  {
+   "title": "Why literature still matters",
+   "category": "Theory",
+   "keywords": [
+    "literature",
+    "matters"
+   ]
+  },
+  {
+   "title": "Examination drill: society past questions",
+   "category": "Applications",
+   "keywords": [
+    "literature society",
+    "past questions"
+   ]
+  },
+  {
+   "title": "JAMB literature paper structure and strategy",
+   "category": "Methods",
+   "keywords": [
+    "JAMB",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Objective questions on drama",
+   "category": "Applications",
+   "keywords": [
+    "drama",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on prose",
+   "category": "Applications",
+   "keywords": [
+    "prose",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on poetry",
+   "category": "Applications",
+   "keywords": [
+    "poetry",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on literary principles",
+   "category": "Applications",
+   "keywords": [
+    "principles",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on literary terms",
+   "category": "Applications",
+   "keywords": [
+    "terms",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on the prescribed drama",
+   "category": "Applications",
+   "keywords": [
+    "prescribed drama",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on the prescribed prose",
+   "category": "Applications",
+   "keywords": [
+    "prescribed prose",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on the prescribed poetry",
+   "category": "Applications",
+   "keywords": [
+    "prescribed poetry",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set A past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed practice: the 50-question sprint",
+   "category": "Applications",
+   "keywords": [
+    "timed practice",
+    "sprint"
+   ]
+  },
+  {
+   "title": "Review of common wrong options",
+   "category": "Methods",
+   "keywords": [
+    "wrong options",
+    "review"
+   ]
+  },
+  {
+   "title": "Term-first question tactics",
+   "category": "Methods",
+   "keywords": [
+    "term-first",
+    "tactics"
+   ]
+  },
+  {
+   "title": "Quote-identification drills",
+   "category": "Methods",
+   "keywords": [
+    "quote identification",
+    "drills"
+   ]
+  },
+  {
+   "title": "Character-trait evidence drills",
+   "category": "Methods",
+   "keywords": [
+    "character traits",
+    "evidence"
+   ]
+  },
+  {
+   "title": "Theme-spotting drills",
+   "category": "Methods",
+   "keywords": [
+    "theme spotting",
+    "drills"
+   ]
+  },
+  {
+   "title": "Misconceptions about irony corrected",
+   "category": "Methods",
+   "keywords": [
+    "misconceptions",
+    "irony"
+   ]
+  },
+  {
+   "title": "Errors about poetic form corrected",
+   "category": "Methods",
+   "keywords": [
+    "poetic form",
+    "errors"
+   ]
+  },
+  {
+   "title": "Options-elimination for literature",
+   "category": "Methods",
+   "keywords": [
+    "elimination",
+    "literature"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set B past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Close reading a dramatic passage",
+   "category": "Methods",
+   "keywords": [
+    "close reading",
+    "drama"
+   ]
+  },
+  {
+   "title": "Close reading a narrative passage",
+   "category": "Methods",
+   "keywords": [
+    "close reading",
+    "narrative"
+   ]
+  },
+  {
+   "title": "Close reading a lyric poem",
+   "category": "Methods",
+   "keywords": [
+    "close reading",
+    "lyric"
+   ]
+  },
+  {
+   "title": "Noting patterns of imagery",
+   "category": "Methods",
+   "keywords": [
+    "patterns",
+    "imagery"
+   ]
+  },
+  {
+   "title": "Tracking a theme's development",
+   "category": "Methods",
+   "keywords": [
+    "theme",
+    "development"
+   ]
+  },
+  {
+   "title": "Style shifts and their meanings",
+   "category": "Methods",
+   "keywords": [
+    "style shifts",
+    "meaning"
+   ]
+  },
+  {
+   "title": "From observation to interpretation",
+   "category": "Methods",
+   "keywords": [
+    "observation",
+    "interpretation"
+   ]
+  },
+  {
+   "title": "Workshop: mark model answers",
+   "category": "Applications",
+   "keywords": [
+    "model answers",
+    "marking"
+   ]
+  },
+  {
+   "title": "Workshop: rewrite a weak answer",
+   "category": "Applications",
+   "keywords": [
+    "rewrite",
+    "weak answer"
+   ]
+  },
+  {
+   "title": "Examination drill: close reading past questions",
+   "category": "Applications",
+   "keywords": [
+    "close reading",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Building the final revision timetable",
+   "category": "Methods",
+   "keywords": [
+    "revision timetable"
+   ]
+  },
+  {
+   "title": "Terms digest: every definition that scores",
+   "category": "Methods",
+   "keywords": [
+    "terms digest"
+   ]
+  },
+  {
+   "title": "Character lists: the full tables",
+   "category": "Methods",
+   "keywords": [
+    "character lists",
+    "tables"
+   ]
+  },
+  {
+   "title": "Theme grids for the prescribed texts",
+   "category": "Methods",
+   "keywords": [
+    "theme grids",
+    "prescribed"
+   ]
+  },
+  {
+   "title": "The most repeated JAMB literature themes",
+   "category": "Methods",
+   "keywords": [
+    "repeated themes",
+    "JAMB"
+   ]
+  },
+  {
+   "title": "Mock examination: full paper in one hour",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Marking your mock: error analysis",
+   "category": "Methods",
+   "keywords": [
+    "error analysis",
+    "mock"
+   ]
+  },
+  {
+   "title": "Quick recall of quotes that prove points",
+   "category": "Methods",
+   "keywords": [
+    "quote recall"
+   ]
+  },
+  {
+   "title": "Staying calm on unfamiliar texts",
+   "category": "Methods",
+   "keywords": [
+    "composure",
+    "unfamiliar"
+   ]
+  },
+  {
+   "title": "Exam day strategy and final confidence",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Twenty quotes every candidate memorises",
+   "category": "Methods",
+   "keywords": [
+    "quotes",
+    "memorise"
+   ]
+  },
+  {
+   "title": "Speaker and scene for each quote",
+   "category": "Methods",
+   "keywords": [
+    "speaker",
+    "scene"
+   ]
+  },
+  {
+   "title": "Quotes that prove major themes",
+   "category": "Methods",
+   "keywords": [
+    "quotes",
+    "themes"
+   ]
+  },
+  {
+   "title": "Quotes that reveal character",
+   "category": "Methods",
+   "keywords": [
+    "quotes",
+    "character"
+   ]
+  },
+  {
+   "title": "Poem lines for tone questions",
+   "category": "Methods",
+   "keywords": [
+    "lines",
+    "tone"
+   ]
+  },
+  {
+   "title": "Prose lines for setting questions",
+   "category": "Methods",
+   "keywords": [
+    "lines",
+    "setting"
+   ]
+  },
+  {
+   "title": "Drama lines for irony questions",
+   "category": "Methods",
+   "keywords": [
+    "lines",
+    "irony"
+   ]
+  },
+  {
+   "title": "Flash-card drills: quote to idea",
+   "category": "Methods",
+   "keywords": [
+    "flash cards",
+    "drills"
+   ]
+  },
+  {
+   "title": "Self-test: 30 rapid quote items",
+   "category": "Applications",
+   "keywords": [
+    "self-test",
+    "quotes"
+   ]
+  },
+  {
+   "title": "Examination drill: quote past questions",
+   "category": "Applications",
+   "keywords": [
+    "quotes",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Theme across drama and prose",
+   "category": "Methods",
+   "keywords": [
+    "theme",
+    "drama",
+    "prose"
+   ]
+  },
+  {
+   "title": "Conflict across the prescribed texts",
+   "category": "Methods",
+   "keywords": [
+    "conflict",
+    "texts"
+   ]
+  },
+  {
+   "title": "Women characters across texts",
+   "category": "Methods",
+   "keywords": [
+    "women characters"
+   ]
+  },
+  {
+   "title": "Setting effects across genres",
+   "category": "Methods",
+   "keywords": [
+    "setting",
+    "genres"
+   ]
+  },
+  {
+   "title": "Language styles compared honestly",
+   "category": "Methods",
+   "keywords": [
+    "language",
+    "comparison"
+   ]
+  },
+  {
+   "title": "Structuring a comparison fast",
+   "category": "Methods",
+   "keywords": [
+    "structuring",
+    "comparison"
+   ]
+  },
+  {
+   "title": "Balance: never half a comparison",
+   "category": "Methods",
+   "keywords": [
+    "balance",
+    "comparison"
+   ]
+  },
+  {
+   "title": "Model comparative essay marked",
+   "category": "Applications",
+   "keywords": [
+    "model essay",
+    "marked"
+   ]
+  },
+  {
+   "title": "Timed comparative practice",
+   "category": "Applications",
+   "keywords": [
+    "timed",
+    "comparative"
+   ]
+  },
+  {
+   "title": "Examination drill: comparative past questions",
+   "category": "Applications",
+   "keywords": [
+    "comparative",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Things Fall Apart: tragedy read",
+   "category": "Theory",
+   "keywords": [
+    "Things Fall Apart"
+   ]
+  },
+  {
+   "title": "Arrow of God: priest and power",
+   "category": "Theory",
+   "keywords": [
+    "Arrow of God"
+   ]
+  },
+  {
+   "title": "The River Between: faith divides",
+   "category": "Theory",
+   "keywords": [
+    "River Between"
+   ]
+  },
+  {
+   "title": "So Long a Letter: voice and grief",
+   "category": "Theory",
+   "keywords": [
+    "So Long a Letter"
+   ]
+  },
+  {
+   "title": "The Joys of Motherhood: cost examined",
+   "category": "Theory",
+   "keywords": [
+    "Joys of Motherhood"
+   ]
+  },
+  {
+   "title": "Season of Anomy and social visions",
+   "category": "Theory",
+   "keywords": [
+    "Season of Anomy"
+   ]
+  },
+  {
+   "title": "Comparing village and city novels",
+   "category": "Methods",
+   "keywords": [
+    "village",
+    "city novels"
+   ]
+  },
+  {
+   "title": "Oral features inside written prose",
+   "category": "Theory",
+   "keywords": [
+    "oral features",
+    "prose"
+   ]
+  },
+  {
+   "title": "Proverbs as character revelation",
+   "category": "Theory",
+   "keywords": [
+    "proverbs",
+    "character"
+   ]
+  },
+  {
+   "title": "Examination drill: African prose past questions",
+   "category": "Applications",
+   "keywords": [
+    "African prose",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Greek tragedy: Antigone revisited",
+   "category": "Theory",
+   "keywords": [
+    "Antigone"
+   ]
+  },
+  {
+   "title": "Shakespeare: Romeo and Juliet mapped",
+   "category": "Theory",
+   "keywords": [
+    "Romeo and Juliet"
+   ]
+  },
+  {
+   "title": "Dickens: society in Hard Times",
+   "category": "Theory",
+   "keywords": [
+    "Dickens",
+    "Hard Times"
+   ]
+  },
+  {
+   "title": "Orwell: warning in Animal Farm",
+   "category": "Theory",
+   "keywords": [
+    "Animal Farm"
+   ]
+  },
+  {
+   "title": "Achebe meets Shakespeare: tragedy compared",
+   "category": "Methods",
+   "keywords": [
+    "tragedy",
+    "comparison"
+   ]
+  },
+  {
+   "title": "The epic: from Homer to Sundiata",
+   "category": "Theory",
+   "keywords": [
+    "epic",
+    "Homer",
+    "Sundiata"
+   ]
+  },
+  {
+   "title": "Satire across the ages",
+   "category": "Theory",
+   "keywords": [
+    "satire",
+    "ages"
+   ]
+  },
+  {
+   "title": "Why classics survive: themes",
+   "category": "Theory",
+   "keywords": [
+    "classics",
+    "survive"
+   ]
+  },
+  {
+   "title": "Translation: reading across languages",
+   "category": "Theory",
+   "keywords": [
+    "translation",
+    "languages"
+   ]
+  },
+  {
+   "title": "Examination drill: world classics past questions",
+   "category": "Applications",
+   "keywords": [
+    "world classics",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Modern African poets: voices mapped",
+   "category": "Theory",
+   "keywords": [
+    "modern African poets"
+   ]
+  },
+  {
+   "title": "Soyinka, Clark, Okigbo sampled",
+   "category": "Theory",
+   "keywords": [
+    "Soyinka",
+    "Okigbo"
+   ]
+  },
+  {
+   "title": "Negritude poets in translation",
+   "category": "Theory",
+   "keywords": [
+    "negritude",
+    "translation"
+   ]
+  },
+  {
+   "title": "War poems: grief and protest",
+   "category": "Theory",
+   "keywords": [
+    "war poems"
+   ]
+  },
+  {
+   "title": "Spoken word: performance analysed",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "spoken word",
+    "performance"
+   ]
+  },
+  {
+   "title": "Slam culture in Nigerian cities",
+   "category": "Nigerian Context",
+   "keywords": [
+    "slam",
+    "cities"
+   ]
+  },
+  {
+   "title": "Poetry and protest movements",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "poetry",
+    "protest"
+   ]
+  },
+  {
+   "title": "Writing your own response poem",
+   "category": "Applications",
+   "keywords": [
+    "response poem"
+   ]
+  },
+  {
+   "title": "Oral performance cues: voice and pause",
+   "category": "Theory",
+   "keywords": [
+    "voice",
+    "pause"
+   ]
+  },
+  {
+   "title": "Examination drill: modern poetry past questions",
+   "category": "Applications",
+   "keywords": [
+    "modern poetry",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Formalist lens: text only",
+   "category": "Methods",
+   "keywords": [
+    "formalist lens"
+   ]
+  },
+  {
+   "title": "Historical lens: context first",
+   "category": "Methods",
+   "keywords": [
+    "historical lens"
+   ]
+  },
+  {
+   "title": "Feminist lens: rereading scenes",
+   "category": "Methods",
+   "keywords": [
+    "feminist lens"
+   ]
+  },
+  {
+   "title": "Marxist lens: class tracked",
+   "category": "Methods",
+   "keywords": [
+    "marxist lens"
+   ]
+  },
+  {
+   "title": "Psychoanalytic lens: motives probed",
+   "category": "Methods",
+   "keywords": [
+    "psychoanalytic lens"
+   ]
+  },
+  {
+   "title": "Postcolonial lens: voice and power",
+   "category": "Methods",
+   "keywords": [
+    "postcolonial lens"
+   ]
+  },
+  {
+   "title": "Choosing a lens for the question",
+   "category": "Methods",
+   "keywords": [
+    "choosing lens"
+   ]
+  },
+  {
+   "title": "One scene, three lenses tried",
+   "category": "Applications",
+   "keywords": [
+    "one scene",
+    "lenses"
+   ]
+  },
+  {
+   "title": "Criticism terms used correctly in essays",
+   "category": "Methods",
+   "keywords": [
+    "criticism terms",
+    "essays"
+   ]
+  },
+  {
+   "title": "Examination drill: criticism past questions",
+   "category": "Applications",
+   "keywords": [
+    "criticism",
+    "past questions"
+   ]
+  }
+ ]
 }

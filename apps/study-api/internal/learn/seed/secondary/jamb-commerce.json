@@ -1,59 +1,2487 @@
 {
-  "body": "jamb",
-  "subject": "commerce",
-  "title": "Commerce",
-  "topics": [
-    { "title": "Commerce: meaning, scope and importance", "category": "Concepts & Foundations", "keywords": ["commerce", "scope", "trade", "aids to trade"] },
-    { "title": "Production: types, levels and interdependence", "category": "Concepts & Foundations", "keywords": ["production", "primary", "secondary", "tertiary", "industrial"] },
-    { "title": "Occupations: industrial, commercial and services", "category": "Concepts & Foundations", "keywords": ["occupation", "services", "commercial", "extractive"] },
-    { "title": "Division of labour and specialisation", "category": "Theory", "keywords": ["division of labour", "specialisation", "mass production"] },
-    { "title": "Home trade: retail trade and the retailer", "category": "Theory", "keywords": ["retail trade", "retailer", "functions", "small scale"] },
-    { "title": "Wholesale trade and the wholesaler", "category": "Theory", "keywords": ["wholesale", "wholesaler", "functions", "middlemen"] },
-    { "title": "Channels of distribution and middlemen", "category": "Theory", "keywords": ["channels of distribution", "middlemen", "agents", "removal of middlemen"] },
-    { "title": "Types of retailers and modern retailing", "category": "Applications", "keywords": ["supermarket", "departmental store", "hawking", "e commerce", "mail order"] },
-    { "title": "Foreign trade: import, export and entreport", "category": "Theory", "keywords": ["import", "export", "entreport", "visible trade", "invisible trade"] },
-    { "title": "Documents used in home and foreign trade", "category": "Methods", "keywords": ["invoice", "receipt", "order", "bill of lading", "indent"] },
-    { "title": "Terms of trade: CIF, FOB and discounts", "category": "Methods", "keywords": ["cif", "fob", "discount", "trade discount", "cash discount"] },
-    { "title": "Trade associations and chambers of commerce", "category": "Applications", "keywords": ["trade association", "chambers of commerce", "manufacturer association"] },
-    { "title": "Sole proprietorship: features and problems", "category": "Concepts & Foundations", "keywords": ["sole proprietorship", "features", "unlimited liability", "capital"] },
-    { "title": "Partnership: formation, deeds and types", "category": "Concepts & Foundations", "keywords": ["partnership", "deed", "limited partner", "sleeping partner"] },
-    { "title": "Limited liability companies: private and public", "category": "Concepts & Foundations", "keywords": ["company", "private company", "public company", "shares", "memorandum"] },
-    { "title": "Cooperative societies: types and aims", "category": "Nigerian Context", "keywords": ["cooperative", "producers", "consumers", "thrift", "credit"] },
-    { "title": "Public enterprises and privatisation in Nigeria", "category": "Nigerian Context", "keywords": ["public enterprise", "privatisation", "commercialisation", "parastatals"] },
-    { "title": "Formation of companies and company documents", "category": "Methods", "keywords": ["memorandum of association", "articles", "prospectus", "certificate"] },
-    { "title": "Sources of finance for business units", "category": "Applications", "keywords": ["finance", "loan", "overdraft", "leasing", "retained profit"] },
-    { "title": "Shares, debentures and stock exchange", "category": "Theory", "keywords": ["shares", "debentures", "stock exchange", "dividend", "capital"] },
-    { "title": "Business mergers, amalgamation and cartels", "category": "Theory", "keywords": ["merger", "amalgamation", "cartel", "consortium", "trust"] },
-    { "title": "Dissolution and bankruptcy of businesses", "category": "Theory", "keywords": ["dissolution", "bankruptcy", "insolvency", "liquidation"] },
-    { "title": "Business environment: internal and external", "category": "Theory", "keywords": ["business environment", "external factors", "internal factors", "stakeholders"] },
-    { "title": "Transportation: modes and choice factors", "category": "Applications", "keywords": ["transport", "road", "rail", "air", "water"] },
-    { "title": "Problems of transportation in Nigeria", "category": "Nigerian Context", "keywords": ["transport", "roads", "ports", "congestion", "nigeria"] },
-    { "title": "Communication: types and business media", "category": "Applications", "keywords": ["communication", "post", "telephone", "internet", "media"] },
-    { "title": "Postal and courier services in business", "category": "Applications", "keywords": ["postal", "courier", "registered mail", "post office box"] },
-    { "title": "Warehousing: types, functions and location", "category": "Applications", "keywords": ["warehousing", "bonded warehouse", "storage", "functions"] },
-    { "title": "Insurance: principles and types of policies", "category": "Theory", "keywords": ["insurance", "premium", "policy", "indemnity", "assurance"] },
-    { "title": "Life, marine, fire and motor insurance", "category": "Applications", "keywords": ["life assurance", "marine insurance", "fire", "motor", "fidelity guarantee"] },
-    { "title": "Banking services used in commerce", "category": "Applications", "keywords": ["bank", "current account", "overdraft", "transfer", "cheque"] },
-    { "title": "The cheque and other payment instruments", "category": "Methods", "keywords": ["cheque", "crossed cheque", "stale cheque", "bank draft", "standing order"] },
-    { "title": "Advertising: types, media and functions", "category": "Applications", "keywords": ["advertising", "media", "informative", "persuasive", "billboard"] },
-    { "title": "Sales promotion and personal selling", "category": "Applications", "keywords": ["sales promotion", "personal selling", "discounts", "after sales"] },
-    { "title": "The stock exchange and capital market", "category": "Nigerian Context", "keywords": ["stock exchange", "capital market", "sec", "brokers", "listing"] },
-    { "title": "Money: functions and the cashless economy", "category": "Contemporary Issues", "keywords": ["money", "legal tender", "cashless", "e payment", "naira"] },
-    { "title": "Credit: types, instruments and credit sales", "category": "Theory", "keywords": ["credit", "hire purchase", "credit sales", "promissory note"] },
-    { "title": "Hire purchase, leasing and instalment buying", "category": "Applications", "keywords": ["hire purchase", "leasing", "instalment", "deposit"] },
-    { "title": "Business documents: quotation to statement", "category": "Methods", "keywords": ["quotation", "pro forma invoice", "statement of account", "debit note", "credit note"] },
-    { "title": "Contracts: offer, acceptance and consideration", "category": "Theory", "keywords": ["contract", "offer", "acceptance", "consideration", "breach"] },
-    { "title": "Agency and bailment in business law", "category": "Theory", "keywords": ["agency", "agent", "bailment", "principal"] },
-    { "title": "Consumer protection and consumer rights", "category": "Nigerian Context", "keywords": ["consumer protection", "consumer rights", "fccpc", "standards organisation"] },
-    { "title": "Consumerism and consumer behaviour", "category": "Theory", "keywords": ["consumerism", "consumer behaviour", "buying motives"] },
-    { "title": "E-commerce and electronic business", "category": "Contemporary Issues", "keywords": ["e commerce", "online shopping", "electronic business", "website"] },
-    { "title": "Information and communication technology in trade", "category": "Contemporary Issues", "keywords": ["ict", "internet", "automated teller machine", "point of sale"] },
-    { "title": "Business ethics and corporate social responsibility", "category": "Contemporary Issues", "keywords": ["business ethics", "social responsibility", "ethics", "community"] },
-    { "title": "Entrepreneurship and small business in Nigeria", "category": "Nigerian Context", "keywords": ["entrepreneurship", "small business", "sme", "self employment"] },
-    { "title": "Government regulation and business taxation", "category": "Nigerian Context", "keywords": ["regulation", "taxation", "licences", "company income tax"] },
-    { "title": "Nigerian ports, customs and trade facilitation", "category": "Nigerian Context", "keywords": ["ports", "customs", "tariffs", "clearing", "freight"] },
-    { "title": "Globalisation and international business", "category": "Contemporary Issues", "keywords": ["globalisation", "multinational", "afcfta", "foreign investment"] },
-    { "title": "Business arithmetic: turnover, profit and margins", "category": "Methods", "keywords": ["turnover", "gross profit", "net profit", "margin", "mark up"] },
-    { "title": "Examination drill: commerce past questions by topic", "category": "Applications", "keywords": ["past questions", "revision", "examination", "jamb"] }
-  ]
+ "body": "jamb",
+ "subject": "commerce",
+ "title": "Commerce",
+ "unitTitles": [
+  "Production, Trade and the Retail World",
+  "Business Units and Finance",
+  "Transport, Communication and Distribution",
+  "Insurance, Banking and Payments",
+  "Promotion, Documents and Business Law",
+  "Agency, Consumers and E-Commerce",
+  "Trade Deep Dive",
+  "Retailing in Depth",
+  "Wholesaling and Channels",
+  "Business Ownership Deep Dive",
+  "Business Finance in Depth",
+  "Stock Exchange Deep Dive",
+  "Transport Deep Dive",
+  "Warehousing and Inventory",
+  "Insurance Deep Dive",
+  "Banking Services in Depth",
+  "Advertising and Sales Promotion",
+  "Business Documents Mastery",
+  "Business Law Essentials",
+  "ICT in Commerce",
+  "Entrepreneurship in Practice",
+  "Structured Revision: Set A",
+  "Structured Revision: Set B",
+  "Case Applications Workshop",
+  "JAMB Masterclass: Final Lap",
+  "Maritime Trade and Ports",
+  "Retail Management in Practice",
+  "Business Communication and Negotiation",
+  "Risk and Business Protection",
+  "Commerce Masterclass Drills"
+ ],
+ "topics": [
+  {
+   "title": "Commerce: meaning, scope and importance",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "commerce",
+    "scope",
+    "trade",
+    "aids to trade"
+   ]
+  },
+  {
+   "title": "Production: types, levels and interdependence",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "production",
+    "primary",
+    "secondary",
+    "tertiary",
+    "industrial"
+   ]
+  },
+  {
+   "title": "Occupations: industrial, commercial and services",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "occupation",
+    "services",
+    "commercial",
+    "extractive"
+   ]
+  },
+  {
+   "title": "Division of labour and specialisation",
+   "category": "Theory",
+   "keywords": [
+    "division of labour",
+    "specialisation",
+    "mass production"
+   ]
+  },
+  {
+   "title": "Home trade: retail trade and the retailer",
+   "category": "Theory",
+   "keywords": [
+    "retail trade",
+    "retailer",
+    "functions",
+    "small scale"
+   ]
+  },
+  {
+   "title": "Wholesale trade and the wholesaler",
+   "category": "Theory",
+   "keywords": [
+    "wholesale",
+    "wholesaler",
+    "functions",
+    "middlemen"
+   ]
+  },
+  {
+   "title": "Channels of distribution and middlemen",
+   "category": "Theory",
+   "keywords": [
+    "channels of distribution",
+    "middlemen",
+    "agents",
+    "removal of middlemen"
+   ]
+  },
+  {
+   "title": "Types of retailers and modern retailing",
+   "category": "Applications",
+   "keywords": [
+    "supermarket",
+    "departmental store",
+    "hawking",
+    "e commerce",
+    "mail order"
+   ]
+  },
+  {
+   "title": "Foreign trade: import, export and entreport",
+   "category": "Theory",
+   "keywords": [
+    "import",
+    "export",
+    "entreport",
+    "visible trade",
+    "invisible trade"
+   ]
+  },
+  {
+   "title": "Documents used in home and foreign trade",
+   "category": "Methods",
+   "keywords": [
+    "invoice",
+    "receipt",
+    "order",
+    "bill of lading",
+    "indent"
+   ]
+  },
+  {
+   "title": "Terms of trade: CIF, FOB and discounts",
+   "category": "Methods",
+   "keywords": [
+    "cif",
+    "fob",
+    "discount",
+    "trade discount",
+    "cash discount"
+   ]
+  },
+  {
+   "title": "Trade associations and chambers of commerce",
+   "category": "Applications",
+   "keywords": [
+    "trade association",
+    "chambers of commerce",
+    "manufacturer association"
+   ]
+  },
+  {
+   "title": "Sole proprietorship: features and problems",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "sole proprietorship",
+    "features",
+    "unlimited liability",
+    "capital"
+   ]
+  },
+  {
+   "title": "Partnership: formation, deeds and types",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "partnership",
+    "deed",
+    "limited partner",
+    "sleeping partner"
+   ]
+  },
+  {
+   "title": "Limited liability companies: private and public",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "company",
+    "private company",
+    "public company",
+    "shares",
+    "memorandum"
+   ]
+  },
+  {
+   "title": "Cooperative societies: types and aims",
+   "category": "Nigerian Context",
+   "keywords": [
+    "cooperative",
+    "producers",
+    "consumers",
+    "thrift",
+    "credit"
+   ]
+  },
+  {
+   "title": "Public enterprises and privatisation in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "public enterprise",
+    "privatisation",
+    "commercialisation",
+    "parastatals"
+   ]
+  },
+  {
+   "title": "Formation of companies and company documents",
+   "category": "Methods",
+   "keywords": [
+    "memorandum of association",
+    "articles",
+    "prospectus",
+    "certificate"
+   ]
+  },
+  {
+   "title": "Sources of finance for business units",
+   "category": "Applications",
+   "keywords": [
+    "finance",
+    "loan",
+    "overdraft",
+    "leasing",
+    "retained profit"
+   ]
+  },
+  {
+   "title": "Shares, debentures and stock exchange",
+   "category": "Theory",
+   "keywords": [
+    "shares",
+    "debentures",
+    "stock exchange",
+    "dividend",
+    "capital"
+   ]
+  },
+  {
+   "title": "Business mergers, amalgamation and cartels",
+   "category": "Theory",
+   "keywords": [
+    "merger",
+    "amalgamation",
+    "cartel",
+    "consortium",
+    "trust"
+   ]
+  },
+  {
+   "title": "Dissolution and bankruptcy of businesses",
+   "category": "Theory",
+   "keywords": [
+    "dissolution",
+    "bankruptcy",
+    "insolvency",
+    "liquidation"
+   ]
+  },
+  {
+   "title": "Business environment: internal and external",
+   "category": "Theory",
+   "keywords": [
+    "business environment",
+    "external factors",
+    "internal factors",
+    "stakeholders"
+   ]
+  },
+  {
+   "title": "Transportation: modes and choice factors",
+   "category": "Applications",
+   "keywords": [
+    "transport",
+    "road",
+    "rail",
+    "air",
+    "water"
+   ]
+  },
+  {
+   "title": "Problems of transportation in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "transport",
+    "roads",
+    "ports",
+    "congestion",
+    "nigeria"
+   ]
+  },
+  {
+   "title": "Communication: types and business media",
+   "category": "Applications",
+   "keywords": [
+    "communication",
+    "post",
+    "telephone",
+    "internet",
+    "media"
+   ]
+  },
+  {
+   "title": "Postal and courier services in business",
+   "category": "Applications",
+   "keywords": [
+    "postal",
+    "courier",
+    "registered mail",
+    "post office box"
+   ]
+  },
+  {
+   "title": "Warehousing: types, functions and location",
+   "category": "Applications",
+   "keywords": [
+    "warehousing",
+    "bonded warehouse",
+    "storage",
+    "functions"
+   ]
+  },
+  {
+   "title": "Insurance: principles and types of policies",
+   "category": "Theory",
+   "keywords": [
+    "insurance",
+    "premium",
+    "policy",
+    "indemnity",
+    "assurance"
+   ]
+  },
+  {
+   "title": "Life, marine, fire and motor insurance",
+   "category": "Applications",
+   "keywords": [
+    "life assurance",
+    "marine insurance",
+    "fire",
+    "motor",
+    "fidelity guarantee"
+   ]
+  },
+  {
+   "title": "Banking services used in commerce",
+   "category": "Applications",
+   "keywords": [
+    "bank",
+    "current account",
+    "overdraft",
+    "transfer",
+    "cheque"
+   ]
+  },
+  {
+   "title": "The cheque and other payment instruments",
+   "category": "Methods",
+   "keywords": [
+    "cheque",
+    "crossed cheque",
+    "stale cheque",
+    "bank draft",
+    "standing order"
+   ]
+  },
+  {
+   "title": "Advertising: types, media and functions",
+   "category": "Applications",
+   "keywords": [
+    "advertising",
+    "media",
+    "informative",
+    "persuasive",
+    "billboard"
+   ]
+  },
+  {
+   "title": "Sales promotion and personal selling",
+   "category": "Applications",
+   "keywords": [
+    "sales promotion",
+    "personal selling",
+    "discounts",
+    "after sales"
+   ]
+  },
+  {
+   "title": "The stock exchange and capital market",
+   "category": "Nigerian Context",
+   "keywords": [
+    "stock exchange",
+    "capital market",
+    "sec",
+    "brokers",
+    "listing"
+   ]
+  },
+  {
+   "title": "Money: functions and the cashless economy",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "money",
+    "legal tender",
+    "cashless",
+    "e payment",
+    "naira"
+   ]
+  },
+  {
+   "title": "Credit: types, instruments and credit sales",
+   "category": "Theory",
+   "keywords": [
+    "credit",
+    "hire purchase",
+    "credit sales",
+    "promissory note"
+   ]
+  },
+  {
+   "title": "Hire purchase, leasing and instalment buying",
+   "category": "Applications",
+   "keywords": [
+    "hire purchase",
+    "leasing",
+    "instalment",
+    "deposit"
+   ]
+  },
+  {
+   "title": "Business documents: quotation to statement",
+   "category": "Methods",
+   "keywords": [
+    "quotation",
+    "pro forma invoice",
+    "statement of account",
+    "debit note",
+    "credit note"
+   ]
+  },
+  {
+   "title": "Contracts: offer, acceptance and consideration",
+   "category": "Theory",
+   "keywords": [
+    "contract",
+    "offer",
+    "acceptance",
+    "consideration",
+    "breach"
+   ]
+  },
+  {
+   "title": "Agency and bailment in business law",
+   "category": "Theory",
+   "keywords": [
+    "agency",
+    "agent",
+    "bailment",
+    "principal"
+   ]
+  },
+  {
+   "title": "Consumer protection and consumer rights",
+   "category": "Nigerian Context",
+   "keywords": [
+    "consumer protection",
+    "consumer rights",
+    "fccpc",
+    "standards organisation"
+   ]
+  },
+  {
+   "title": "Consumerism and consumer behaviour",
+   "category": "Theory",
+   "keywords": [
+    "consumerism",
+    "consumer behaviour",
+    "buying motives"
+   ]
+  },
+  {
+   "title": "E-commerce and electronic business",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "e commerce",
+    "online shopping",
+    "electronic business",
+    "website"
+   ]
+  },
+  {
+   "title": "Information and communication technology in trade",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "ict",
+    "internet",
+    "automated teller machine",
+    "point of sale"
+   ]
+  },
+  {
+   "title": "Business ethics and corporate social responsibility",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "business ethics",
+    "social responsibility",
+    "ethics",
+    "community"
+   ]
+  },
+  {
+   "title": "Entrepreneurship and small business in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "entrepreneurship",
+    "small business",
+    "sme",
+    "self employment"
+   ]
+  },
+  {
+   "title": "Government regulation and business taxation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "regulation",
+    "taxation",
+    "licences",
+    "company income tax"
+   ]
+  },
+  {
+   "title": "Nigerian ports, customs and trade facilitation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "ports",
+    "customs",
+    "tariffs",
+    "clearing",
+    "freight"
+   ]
+  },
+  {
+   "title": "Globalisation and international business",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "globalisation",
+    "multinational",
+    "afcfta",
+    "foreign investment"
+   ]
+  },
+  {
+   "title": "Business arithmetic: turnover, profit and margins",
+   "category": "Methods",
+   "keywords": [
+    "turnover",
+    "gross profit",
+    "net profit",
+    "margin",
+    "mark up"
+   ]
+  },
+  {
+   "title": "Examination drill: commerce past questions by topic",
+   "category": "Applications",
+   "keywords": [
+    "past questions",
+    "revision",
+    "examination",
+    "jamb"
+   ]
+  },
+  {
+   "title": "Chambers of commerce functions",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "chambers of commerce"
+   ]
+  },
+  {
+   "title": "Trade unions and employer associations",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "trade unions",
+    "employers"
+   ]
+  },
+  {
+   "title": "Collective bargaining in business",
+   "category": "Theory",
+   "keywords": [
+    "collective bargaining"
+   ]
+  },
+  {
+   "title": "Business clusters and market days",
+   "category": "Nigerian Context",
+   "keywords": [
+    "clusters",
+    "market days"
+   ]
+  },
+  {
+   "title": "Franchise operations in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "franchise",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "Import documentation drill",
+   "category": "Methods",
+   "keywords": [
+    "import documents"
+   ]
+  },
+  {
+   "title": "Export promotion strategies",
+   "category": "Applications",
+   "keywords": [
+    "export promotion"
+   ]
+  },
+  {
+   "title": "E-payment integration for shops",
+   "category": "Applications",
+   "keywords": [
+    "e-payment",
+    "shops"
+   ]
+  },
+  {
+   "title": "Home trade versus foreign trade compared",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "home trade",
+    "foreign trade"
+   ]
+  },
+  {
+   "title": "Entreport trade explained with examples",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "entreport trade"
+   ]
+  },
+  {
+   "title": "Visible and invisible trade balances",
+   "category": "Theory",
+   "keywords": [
+    "visible trade",
+    "invisible trade"
+   ]
+  },
+  {
+   "title": "Terms of payment: cash, credit, instalment",
+   "category": "Theory",
+   "keywords": [
+    "terms of payment"
+   ]
+  },
+  {
+   "title": "Bill of exchange mechanics",
+   "category": "Theory",
+   "keywords": [
+    "bill of exchange"
+   ]
+  },
+  {
+   "title": "Letters of credit in import trade",
+   "category": "Applications",
+   "keywords": [
+    "letters of credit"
+   ]
+  },
+  {
+   "title": "Trade barriers: tariffs and embargoes",
+   "category": "Theory",
+   "keywords": [
+    "trade barriers",
+    "tariffs"
+   ]
+  },
+  {
+   "title": "Nigeria's export promotion councils",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NEPC",
+    "exports"
+   ]
+  },
+  {
+   "title": "Balanced trade arguments",
+   "category": "Theory",
+   "keywords": [
+    "balanced trade"
+   ]
+  },
+  {
+   "title": "Examination drill: trade past questions",
+   "category": "Applications",
+   "keywords": [
+    "trade",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Small retailers: kiosks and stalls",
+   "category": "Nigerian Context",
+   "keywords": [
+    "small retailers",
+    "kiosks"
+   ]
+  },
+  {
+   "title": "Multiple shops and chain stores",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "multiple shops",
+    "chain stores"
+   ]
+  },
+  {
+   "title": "Departmental stores and variety",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "departmental stores"
+   ]
+  },
+  {
+   "title": "Supermarkets and self-service economics",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "supermarkets",
+    "self-service"
+   ]
+  },
+  {
+   "title": "Mobile trading and hawking",
+   "category": "Nigerian Context",
+   "keywords": [
+    "mobile trading",
+    "hawking"
+   ]
+  },
+  {
+   "title": "Vending machines and automation",
+   "category": "Applications",
+   "keywords": [
+    "vending machines"
+   ]
+  },
+  {
+   "title": "E-retail platforms in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "e-retail",
+    "platforms"
+   ]
+  },
+  {
+   "title": "After-sales service importance",
+   "category": "Applications",
+   "keywords": [
+    "after-sales service"
+   ]
+  },
+  {
+   "title": "Retail location decisions",
+   "category": "Theory",
+   "keywords": [
+    "retail location"
+   ]
+  },
+  {
+   "title": "Examination drill: retailing past questions",
+   "category": "Applications",
+   "keywords": [
+    "retailing",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Functions of the wholesaler listed",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "wholesaler",
+    "functions"
+   ]
+  },
+  {
+   "title": "Channel levels: direct to multi-tier",
+   "category": "Theory",
+   "keywords": [
+    "channel levels"
+   ]
+  },
+  {
+   "title": "Removing middlemen: who really pays",
+   "category": "Theory",
+   "keywords": [
+    "middlemen",
+    "removal"
+   ]
+  },
+  {
+   "title": "Cash and carry operations",
+   "category": "Applications",
+   "keywords": [
+    "cash and carry"
+   ]
+  },
+  {
+   "title": "Brokerage and agency houses",
+   "category": "Theory",
+   "keywords": [
+    "brokerage",
+    "agency"
+   ]
+  },
+  {
+   "title": "Factors and del credere agents",
+   "category": "Theory",
+   "keywords": [
+    "factors",
+    "del credere"
+   ]
+  },
+  {
+   "title": "Auction sales procedure",
+   "category": "Applications",
+   "keywords": [
+    "auctions"
+   ]
+  },
+  {
+   "title": "Commodity exchanges overview",
+   "category": "Applications",
+   "keywords": [
+    "commodity exchanges"
+   ]
+  },
+  {
+   "title": "Distributor agreements terms",
+   "category": "Applications",
+   "keywords": [
+    "distributor agreements"
+   ]
+  },
+  {
+   "title": "Examination drill: wholesaling past questions",
+   "category": "Applications",
+   "keywords": [
+    "wholesaling",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Sole trader: merits and demerits revisited",
+   "category": "Theory",
+   "keywords": [
+    "sole trader"
+   ]
+  },
+  {
+   "title": "Partnership types: general to limited",
+   "category": "Theory",
+   "keywords": [
+    "partnership",
+    "types"
+   ]
+  },
+  {
+   "title": "Private versus public companies compared",
+   "category": "Theory",
+   "keywords": [
+    "private",
+    "public companies"
+   ]
+  },
+  {
+   "title": "Cooperatives: principles in action",
+   "category": "Theory",
+   "keywords": [
+    "cooperatives",
+    "principles"
+   ]
+  },
+  {
+   "title": "Public corporations: features and control",
+   "category": "Theory",
+   "keywords": [
+    "public corporations"
+   ]
+  },
+  {
+   "title": "Franchising as a business model",
+   "category": "Applications",
+   "keywords": [
+    "franchising"
+   ]
+  },
+  {
+   "title": "Multinationals in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "multinationals",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "Choosing the right form: cases",
+   "category": "Methods",
+   "keywords": [
+    "choosing form",
+    "cases"
+   ]
+  },
+  {
+   "title": "CAC registration process in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "CAC",
+    "registration"
+   ]
+  },
+  {
+   "title": "Examination drill: ownership past questions",
+   "category": "Applications",
+   "keywords": [
+    "ownership",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Short-term finance: trade credit and overdrafts",
+   "category": "Theory",
+   "keywords": [
+    "short-term finance",
+    "overdrafts"
+   ]
+  },
+  {
+   "title": "Medium-term: leasing and hire purchase",
+   "category": "Theory",
+   "keywords": [
+    "leasing",
+    "hire purchase"
+   ]
+  },
+  {
+   "title": "Long-term: shares and debentures",
+   "category": "Theory",
+   "keywords": [
+    "long-term",
+    "shares",
+    "debentures"
+   ]
+  },
+  {
+   "title": "Retained profits as finance",
+   "category": "Theory",
+   "keywords": [
+    "retained profits"
+   ]
+  },
+  {
+   "title": "Bank of Industry and intervention funds",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Bank of Industry"
+   ]
+  },
+  {
+   "title": "Venture capital and angel funds",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "venture capital"
+   ]
+  },
+  {
+   "title": "Crowdfunding for startups",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "crowdfunding"
+   ]
+  },
+  {
+   "title": "Cost of capital: an introduction",
+   "category": "Theory",
+   "keywords": [
+    "cost of capital"
+   ]
+  },
+  {
+   "title": "Working capital management basics",
+   "category": "Methods",
+   "keywords": [
+    "working capital"
+   ]
+  },
+  {
+   "title": "Examination drill: finance past questions",
+   "category": "Applications",
+   "keywords": [
+    "finance",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Primary versus secondary markets",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "primary market",
+    "secondary market"
+   ]
+  },
+  {
+   "title": "Listing requirements on NGX",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NGX",
+    "listing"
+   ]
+  },
+  {
+   "title": "Bulls, bears and stags defined",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "bulls",
+    "bears",
+    "stags"
+   ]
+  },
+  {
+   "title": "Jobbers and brokers' roles",
+   "category": "Theory",
+   "keywords": [
+    "jobbers",
+    "brokers"
+   ]
+  },
+  {
+   "title": "Reading share price movements",
+   "category": "Methods",
+   "keywords": [
+    "share prices",
+    "reading"
+   ]
+  },
+  {
+   "title": "Dividends versus capital gains",
+   "category": "Theory",
+   "keywords": [
+    "dividends",
+    "capital gains"
+   ]
+  },
+  {
+   "title": "Market indices meaning",
+   "category": "Theory",
+   "keywords": [
+    "market indices"
+   ]
+  },
+  {
+   "title": "SEC and investor protection",
+   "category": "Nigerian Context",
+   "keywords": [
+    "SEC",
+    "investors"
+   ]
+  },
+  {
+   "title": "Ponzi schemes: the red flags",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "Ponzi",
+    "red flags"
+   ]
+  },
+  {
+   "title": "Examination drill: stock exchange past questions",
+   "category": "Applications",
+   "keywords": [
+    "stock exchange",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Road transport: merits, demerits, costs",
+   "category": "Theory",
+   "keywords": [
+    "road transport",
+    "merits"
+   ]
+  },
+  {
+   "title": "Rail transport economics in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "rail",
+    "economics"
+   ]
+  },
+  {
+   "title": "Water transport: coastal and inland",
+   "category": "Theory",
+   "keywords": [
+    "water transport"
+   ]
+  },
+  {
+   "title": "Air transport: cargo and passengers",
+   "category": "Theory",
+   "keywords": [
+    "air transport",
+    "cargo"
+   ]
+  },
+  {
+   "title": "Pipelines and specialised transport",
+   "category": "Theory",
+   "keywords": [
+    "pipelines"
+   ]
+  },
+  {
+   "title": "Choosing transport: factors grid",
+   "category": "Methods",
+   "keywords": [
+    "choosing transport",
+    "factors"
+   ]
+  },
+  {
+   "title": "Freight documents: bills of lading",
+   "category": "Methods",
+   "keywords": [
+    "bill of lading"
+   ]
+  },
+  {
+   "title": "Incoterms: FOB and CIF in practice",
+   "category": "Applications",
+   "keywords": [
+    "Incoterms",
+    "FOB",
+    "CIF"
+   ]
+  },
+  {
+   "title": "Cold chain and perishables logistics",
+   "category": "Applications",
+   "keywords": [
+    "cold chain"
+   ]
+  },
+  {
+   "title": "Examination drill: transport past questions",
+   "category": "Applications",
+   "keywords": [
+    "transport",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Warehousing functions listed precisely",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "warehousing",
+    "functions"
+   ]
+  },
+  {
+   "title": "Types: bonded, public, private",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "bonded warehouses",
+    "public"
+   ]
+  },
+  {
+   "title": "Bonded warehouse and customs duty",
+   "category": "Applications",
+   "keywords": [
+    "bonded warehouse",
+    "customs"
+   ]
+  },
+  {
+   "title": "Warehouse siting decisions",
+   "category": "Theory",
+   "keywords": [
+    "warehouse siting"
+   ]
+  },
+  {
+   "title": "Stock levels: minimum and re-order",
+   "category": "Methods",
+   "keywords": [
+    "stock levels",
+    "re-order"
+   ]
+  },
+  {
+   "title": "Just-in-time basics",
+   "category": "Theory",
+   "keywords": [
+    "just-in-time"
+   ]
+  },
+  {
+   "title": "Inventory records and stock-taking",
+   "category": "Methods",
+   "keywords": [
+    "stock-taking",
+    "records"
+   ]
+  },
+  {
+   "title": "Preservation methods in storage",
+   "category": "Applications",
+   "keywords": [
+    "preservation",
+    "storage"
+   ]
+  },
+  {
+   "title": "Cold storage for farm produce",
+   "category": "Applications",
+   "keywords": [
+    "cold storage",
+    "produce"
+   ]
+  },
+  {
+   "title": "Examination drill: warehousing past questions",
+   "category": "Applications",
+   "keywords": [
+    "warehousing",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Principle of indemnity explained",
+   "category": "Theory",
+   "keywords": [
+    "indemnity",
+    "principle"
+   ]
+  },
+  {
+   "title": "Utmost good faith and disclosure",
+   "category": "Theory",
+   "keywords": [
+    "utmost good faith"
+   ]
+  },
+  {
+   "title": "Insurable interest demonstrated",
+   "category": "Theory",
+   "keywords": [
+    "insurable interest"
+   ]
+  },
+  {
+   "title": "Subrogation and contribution",
+   "category": "Theory",
+   "keywords": [
+    "subrogation",
+    "contribution"
+   ]
+  },
+  {
+   "title": "Premium computation basics",
+   "category": "Methods",
+   "keywords": [
+    "premium",
+    "computation"
+   ]
+  },
+  {
+   "title": "Underwriting and risk classes",
+   "category": "Applications",
+   "keywords": [
+    "underwriting",
+    "risk"
+   ]
+  },
+  {
+   "title": "Claims procedure step by step",
+   "category": "Methods",
+   "keywords": [
+    "claims",
+    "procedure"
+   ]
+  },
+  {
+   "title": "Reinsurance meaning",
+   "category": "Theory",
+   "keywords": [
+    "reinsurance"
+   ]
+  },
+  {
+   "title": "NAICOM and insurance regulation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NAICOM"
+   ]
+  },
+  {
+   "title": "Examination drill: insurance past questions",
+   "category": "Applications",
+   "keywords": [
+    "insurance",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Account types: current, savings, domiciliary",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "account types",
+    "current",
+    "savings"
+   ]
+  },
+  {
+   "title": "Cheque types: open, crossed, order",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "cheque types",
+    "crossed"
+   ]
+  },
+  {
+   "title": "Endorsement and dishonour of cheques",
+   "category": "Theory",
+   "keywords": [
+    "endorsement",
+    "dishonour"
+   ]
+  },
+  {
+   "title": "Standing orders and direct debits",
+   "category": "Applications",
+   "keywords": [
+    "standing orders"
+   ]
+  },
+  {
+   "title": "Bank transfers: NIBSS and instant payments",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NIBSS",
+    "transfers"
+   ]
+  },
+  {
+   "title": "Mobile banking and USSD",
+   "category": "Nigerian Context",
+   "keywords": [
+    "mobile banking",
+    "USSD"
+   ]
+  },
+  {
+   "title": "POS agents and financial inclusion",
+   "category": "Nigerian Context",
+   "keywords": [
+    "POS agents",
+    "inclusion"
+   ]
+  },
+  {
+   "title": "Card payments: debit versus credit",
+   "category": "Applications",
+   "keywords": [
+    "card payments"
+   ]
+  },
+  {
+   "title": "Central bank roles revisited",
+   "category": "Theory",
+   "keywords": [
+    "central bank",
+    "roles"
+   ]
+  },
+  {
+   "title": "Examination drill: banking past questions",
+   "category": "Applications",
+   "keywords": [
+    "banking",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Advertising objectives: inform, persuade, remind",
+   "category": "Theory",
+   "keywords": [
+    "advertising",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Media types: reach and cost compared",
+   "category": "Methods",
+   "keywords": [
+    "media types",
+    "reach"
+   ]
+  },
+  {
+   "title": "Radio and TV in Nigerian markets",
+   "category": "Nigerian Context",
+   "keywords": [
+    "radio",
+    "TV",
+    "markets"
+   ]
+  },
+  {
+   "title": "Outdoor and transit advertising",
+   "category": "Applications",
+   "keywords": [
+    "outdoor",
+    "transit"
+   ]
+  },
+  {
+   "title": "Digital ads: social and search",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "digital ads",
+    "social"
+   ]
+  },
+  {
+   "title": "Sales promotion tools listed",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "sales promotion",
+    "tools"
+   ]
+  },
+  {
+   "title": "Personal selling process stages",
+   "category": "Theory",
+   "keywords": [
+    "personal selling",
+    "stages"
+   ]
+  },
+  {
+   "title": "Publicity versus advertising",
+   "category": "Theory",
+   "keywords": [
+    "publicity",
+    "advertising"
+   ]
+  },
+  {
+   "title": "Ethics and truth in advertising",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "ethics",
+    "advertising"
+   ]
+  },
+  {
+   "title": "Examination drill: advertising past questions",
+   "category": "Applications",
+   "keywords": [
+    "advertising",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Enquiry and quotation documents",
+   "category": "Methods",
+   "keywords": [
+    "enquiry",
+    "quotation"
+   ]
+  },
+  {
+   "title": "Pro-forma invoice versus invoice",
+   "category": "Methods",
+   "keywords": [
+    "pro-forma invoice"
+   ]
+  },
+  {
+   "title": "Delivery notes and waybills",
+   "category": "Methods",
+   "keywords": [
+    "delivery note",
+    "waybill"
+   ]
+  },
+  {
+   "title": "Credit notes and debit notes",
+   "category": "Methods",
+   "keywords": [
+    "credit note",
+    "debit note"
+   ]
+  },
+  {
+   "title": "Statements of account cycles",
+   "category": "Methods",
+   "keywords": [
+    "statements",
+    "cycles"
+   ]
+  },
+  {
+   "title": "Receipts and their evidential role",
+   "category": "Methods",
+   "keywords": [
+    "receipts"
+   ]
+  },
+  {
+   "title": "Document flow: order to payment",
+   "category": "Methods",
+   "keywords": [
+    "document flow"
+   ]
+  },
+  {
+   "title": "Errors on documents: remedies",
+   "category": "Methods",
+   "keywords": [
+    "document errors",
+    "remedies"
+   ]
+  },
+  {
+   "title": "Digital documents and e-signatures",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "digital documents"
+   ]
+  },
+  {
+   "title": "Examination drill: documents past questions",
+   "category": "Applications",
+   "keywords": [
+    "documents",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Contract: offer and acceptance analysed",
+   "category": "Theory",
+   "keywords": [
+    "contract",
+    "offer",
+    "acceptance"
+   ]
+  },
+  {
+   "title": "Consideration and capacity rules",
+   "category": "Theory",
+   "keywords": [
+    "consideration",
+    "capacity"
+   ]
+  },
+  {
+   "title": "Void and voidable contracts",
+   "category": "Theory",
+   "keywords": [
+    "void",
+    "voidable"
+   ]
+  },
+  {
+   "title": "Discharge of contracts: performance to breach",
+   "category": "Theory",
+   "keywords": [
+    "discharge",
+    "breach"
+   ]
+  },
+  {
+   "title": "Remedies for breach listed",
+   "category": "Theory",
+   "keywords": [
+    "remedies",
+    "breach"
+   ]
+  },
+  {
+   "title": "Sale of Goods Act highlights",
+   "category": "Theory",
+   "keywords": [
+    "sale of goods"
+   ]
+  },
+  {
+   "title": "Hire purchase act protections",
+   "category": "Theory",
+   "keywords": [
+    "hire purchase act"
+   ]
+  },
+  {
+   "title": "Negotiable instruments act basics",
+   "category": "Theory",
+   "keywords": [
+    "negotiable instruments"
+   ]
+  },
+  {
+   "title": "Arbitration as dispute resolution",
+   "category": "Applications",
+   "keywords": [
+    "arbitration"
+   ]
+  },
+  {
+   "title": "Examination drill: business law past questions",
+   "category": "Applications",
+   "keywords": [
+    "business law",
+    "past questions"
+   ]
+  },
+  {
+   "title": "E-commerce models: B2B, B2C, C2C",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "B2B",
+    "B2C",
+    "C2C"
+   ]
+  },
+  {
+   "title": "Online marketplaces in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "marketplaces",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "Digital payments ecosystem",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "digital payments"
+   ]
+  },
+  {
+   "title": "Cybersecurity in trade",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "cybersecurity",
+    "trade"
+   ]
+  },
+  {
+   "title": "Logistics tech: tracking and delivery",
+   "category": "Applications",
+   "keywords": [
+    "logistics tech",
+    "tracking"
+   ]
+  },
+  {
+   "title": "Social commerce phenomena",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "social commerce"
+   ]
+  },
+  {
+   "title": "Customer data and privacy",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "data privacy"
+   ]
+  },
+  {
+   "title": "E-filing and business compliance",
+   "category": "Nigerian Context",
+   "keywords": [
+    "e-filing",
+    "compliance"
+   ]
+  },
+  {
+   "title": "Barcodes and inventory tech",
+   "category": "Applications",
+   "keywords": [
+    "barcodes",
+    "inventory"
+   ]
+  },
+  {
+   "title": "Examination drill: ICT past questions",
+   "category": "Applications",
+   "keywords": [
+    "ICT",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Opportunity spotting in local markets",
+   "category": "Applications",
+   "keywords": [
+    "opportunity spotting"
+   ]
+  },
+  {
+   "title": "Business plan essentials",
+   "category": "Methods",
+   "keywords": [
+    "business plan"
+   ]
+  },
+  {
+   "title": "Feasibility versus viability checks",
+   "category": "Methods",
+   "keywords": [
+    "feasibility",
+    "viability"
+   ]
+  },
+  {
+   "title": "Sourcing startup capital",
+   "category": "Applications",
+   "keywords": [
+    "startup capital"
+   ]
+  },
+  {
+   "title": "Registration and permits steps",
+   "category": "Nigerian Context",
+   "keywords": [
+    "registration",
+    "permits"
+   ]
+  },
+  {
+   "title": "Marketing a new brand",
+   "category": "Applications",
+   "keywords": [
+    "branding",
+    "marketing"
+   ]
+  },
+  {
+   "title": "Managing growth and staff",
+   "category": "Applications",
+   "keywords": [
+    "growth",
+    "staff"
+   ]
+  },
+  {
+   "title": "Failure lessons: common causes",
+   "category": "Theory",
+   "keywords": [
+    "failure",
+    "causes"
+   ]
+  },
+  {
+   "title": "Youth enterprise programmes in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "youth enterprise"
+   ]
+  },
+  {
+   "title": "Examination drill: entrepreneurship past questions",
+   "category": "Applications",
+   "keywords": [
+    "entrepreneurship",
+    "past questions"
+   ]
+  },
+  {
+   "title": "JAMB commerce paper structure and strategy",
+   "category": "Methods",
+   "keywords": [
+    "JAMB",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Objective questions on trade",
+   "category": "Applications",
+   "keywords": [
+    "trade",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on business units",
+   "category": "Applications",
+   "keywords": [
+    "business units",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on transport and warehousing",
+   "category": "Applications",
+   "keywords": [
+    "transport",
+    "warehousing",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on insurance and banking",
+   "category": "Applications",
+   "keywords": [
+    "insurance",
+    "banking",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on advertising",
+   "category": "Applications",
+   "keywords": [
+    "advertising",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on documents",
+   "category": "Applications",
+   "keywords": [
+    "documents",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on business law",
+   "category": "Applications",
+   "keywords": [
+    "business law",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Term-definition drills",
+   "category": "Methods",
+   "keywords": [
+    "term-definition",
+    "drills"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set A past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed practice: the 40-question sprint",
+   "category": "Applications",
+   "keywords": [
+    "timed practice",
+    "sprint"
+   ]
+  },
+  {
+   "title": "Review of common wrong options",
+   "category": "Methods",
+   "keywords": [
+    "wrong options",
+    "review"
+   ]
+  },
+  {
+   "title": "Which-is-not drills",
+   "category": "Methods",
+   "keywords": [
+    "which-is-not",
+    "drills"
+   ]
+  },
+  {
+   "title": "Matching terms to definitions fast",
+   "category": "Methods",
+   "keywords": [
+    "matching terms"
+   ]
+  },
+  {
+   "title": "Elimination techniques for objective questions",
+   "category": "Methods",
+   "keywords": [
+    "elimination",
+    "techniques"
+   ]
+  },
+  {
+   "title": "Misconceptions about insurance corrected",
+   "category": "Methods",
+   "keywords": [
+    "misconceptions",
+    "insurance"
+   ]
+  },
+  {
+   "title": "Errors about cheques corrected",
+   "category": "Methods",
+   "keywords": [
+    "cheques",
+    "errors"
+   ]
+  },
+  {
+   "title": "Reading scenario options fast",
+   "category": "Methods",
+   "keywords": [
+    "scenarios",
+    "reading"
+   ]
+  },
+  {
+   "title": "Document order recall drills",
+   "category": "Methods",
+   "keywords": [
+    "document order",
+    "drills"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set B past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Case: choosing distribution channels",
+   "category": "Applications",
+   "keywords": [
+    "distribution channels",
+    "case"
+   ]
+  },
+  {
+   "title": "Case: financing a growing boutique",
+   "category": "Applications",
+   "keywords": [
+    "financing",
+    "boutique"
+   ]
+  },
+  {
+   "title": "Case: an import transaction end-to-end",
+   "category": "Applications",
+   "keywords": [
+    "import",
+    "transaction"
+   ]
+  },
+  {
+   "title": "Case: insurance claim on fire goods",
+   "category": "Applications",
+   "keywords": [
+    "insurance claim",
+    "fire"
+   ]
+  },
+  {
+   "title": "Case: contract dispute on delivery",
+   "category": "Applications",
+   "keywords": [
+    "contract dispute",
+    "delivery"
+   ]
+  },
+  {
+   "title": "Case: expanding from kiosk to store",
+   "category": "Applications",
+   "keywords": [
+    "expansion",
+    "kiosk"
+   ]
+  },
+  {
+   "title": "Case: going digital for sales",
+   "category": "Applications",
+   "keywords": [
+    "digital sales",
+    "case"
+   ]
+  },
+  {
+   "title": "Case: warehousing seasonal stock",
+   "category": "Applications",
+   "keywords": [
+    "seasonal stock",
+    "case"
+   ]
+  },
+  {
+   "title": "Case: cooperative marketing of produce",
+   "category": "Applications",
+   "keywords": [
+    "cooperative marketing"
+   ]
+  },
+  {
+   "title": "Examination drill: cases past questions",
+   "category": "Applications",
+   "keywords": [
+    "cases",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Building the final revision timetable",
+   "category": "Methods",
+   "keywords": [
+    "revision timetable"
+   ]
+  },
+  {
+   "title": "Definitions digest: the full list",
+   "category": "Methods",
+   "keywords": [
+    "definitions digest"
+   ]
+  },
+  {
+   "title": "Documents and their uses table",
+   "category": "Methods",
+   "keywords": [
+    "documents table"
+   ]
+  },
+  {
+   "title": "The most repeated JAMB commerce themes",
+   "category": "Methods",
+   "keywords": [
+    "repeated themes",
+    "JAMB"
+   ]
+  },
+  {
+   "title": "Mock examination: 50 questions in 50 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Marking your mock: error analysis",
+   "category": "Methods",
+   "keywords": [
+    "error analysis",
+    "mock"
+   ]
+  },
+  {
+   "title": "Tricky pairs: insurance terms",
+   "category": "Methods",
+   "keywords": [
+    "tricky pairs",
+    "insurance"
+   ]
+  },
+  {
+   "title": "Tricky pairs: transport terms",
+   "category": "Methods",
+   "keywords": [
+    "tricky pairs",
+    "transport"
+   ]
+  },
+  {
+   "title": "Handling unfamiliar business scenarios",
+   "category": "Methods",
+   "keywords": [
+    "unfamiliar scenarios"
+   ]
+  },
+  {
+   "title": "Exam day strategy and final confidence",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Lagos ports: Apapa and Tin Can",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Apapa",
+    "Tin Can"
+   ]
+  },
+  {
+   "title": "Onne and Port Harcourt ports",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Onne"
+   ]
+  },
+  {
+   "title": "Calabar and Warri ports roles",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Calabar",
+    "Warri"
+   ]
+  },
+  {
+   "title": "Customs: clearing process steps",
+   "category": "Nigerian Context",
+   "keywords": [
+    "customs",
+    "clearing"
+   ]
+  },
+  {
+   "title": "Freight forwarders and agents",
+   "category": "Applications",
+   "keywords": [
+    "freight forwarders"
+   ]
+  },
+  {
+   "title": "Demurrage: costs and avoidance",
+   "category": "Applications",
+   "keywords": [
+    "demurrage"
+   ]
+  },
+  {
+   "title": "Container trade basics",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "containers"
+   ]
+  },
+  {
+   "title": "Cabotage law highlights",
+   "category": "Nigerian Context",
+   "keywords": [
+    "cabotage"
+   ]
+  },
+  {
+   "title": "Port congestion economics",
+   "category": "Applications",
+   "keywords": [
+    "congestion"
+   ]
+  },
+  {
+   "title": "Examination drill: ports past questions",
+   "category": "Applications",
+   "keywords": [
+    "ports",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Store layout and shelf psychology",
+   "category": "Applications",
+   "keywords": [
+    "store layout"
+   ]
+  },
+  {
+   "title": "Pricing tactics: odd pricing, bundles",
+   "category": "Methods",
+   "keywords": [
+    "pricing tactics"
+   ]
+  },
+  {
+   "title": "Stock rotation: FEFO and FIFO",
+   "category": "Methods",
+   "keywords": [
+    "stock rotation",
+    "FEFO"
+   ]
+  },
+  {
+   "title": "Customer service that retains",
+   "category": "Applications",
+   "keywords": [
+    "customer service"
+   ]
+  },
+  {
+   "title": "Handling complaints and refunds",
+   "category": "Methods",
+   "keywords": [
+    "complaints",
+    "refunds"
+   ]
+  },
+  {
+   "title": "Shrinkage: theft and losses cut",
+   "category": "Applications",
+   "keywords": [
+    "shrinkage"
+   ]
+  },
+  {
+   "title": "Record books every shop keeps",
+   "category": "Methods",
+   "keywords": [
+    "record books"
+   ]
+  },
+  {
+   "title": "Hiring and training sales staff",
+   "category": "Applications",
+   "keywords": [
+    "sales staff"
+   ]
+  },
+  {
+   "title": "Going online: a small shop's move",
+   "category": "Applications",
+   "keywords": [
+    "going online"
+   ]
+  },
+  {
+   "title": "Examination drill: retail past questions",
+   "category": "Applications",
+   "keywords": [
+    "retail",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Business letters: enquiry to order",
+   "category": "Methods",
+   "keywords": [
+    "business letters"
+   ]
+  },
+  {
+   "title": "Memoranda and internal notes",
+   "category": "Methods",
+   "keywords": [
+    "memoranda"
+   ]
+  },
+  {
+   "title": "Reports that managers read",
+   "category": "Methods",
+   "keywords": [
+    "reports"
+   ]
+  },
+  {
+   "title": "Meetings: notices, agenda, minutes",
+   "category": "Methods",
+   "keywords": [
+    "meetings",
+    "minutes"
+   ]
+  },
+  {
+   "title": "Negotiation: prepare, propose, close",
+   "category": "Methods",
+   "keywords": [
+    "negotiation",
+    "stages"
+   ]
+  },
+  {
+   "title": "Telephone and video meeting etiquette",
+   "category": "Applications",
+   "keywords": [
+    "etiquette",
+    "calls"
+   ]
+  },
+  {
+   "title": "Persuasive writing for clients",
+   "category": "Methods",
+   "keywords": [
+    "persuasive writing"
+   ]
+  },
+  {
+   "title": "Cross-cultural communication in trade",
+   "category": "Theory",
+   "keywords": [
+    "cross-cultural"
+   ]
+  },
+  {
+   "title": "Conflict de-escalation with customers",
+   "category": "Applications",
+   "keywords": [
+    "de-escalation"
+   ]
+  },
+  {
+   "title": "Examination drill: communication past questions",
+   "category": "Applications",
+   "keywords": [
+    "communication",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Business risks: types listed",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "business risks",
+    "types"
+   ]
+  },
+  {
+   "title": "Risk assessment simple grid",
+   "category": "Methods",
+   "keywords": [
+    "risk assessment"
+   ]
+  },
+  {
+   "title": "Insurance cover for shops",
+   "category": "Applications",
+   "keywords": [
+    "insurance",
+    "shops"
+   ]
+  },
+  {
+   "title": "Security: guards, CCTV, alarms",
+   "category": "Applications",
+   "keywords": [
+    "security",
+    "CCTV"
+   ]
+  },
+  {
+   "title": "Fraud inside businesses: controls",
+   "category": "Methods",
+   "keywords": [
+    "fraud",
+    "controls"
+   ]
+  },
+  {
+   "title": "Debtors who will not pay: remedies",
+   "category": "Methods",
+   "keywords": [
+    "debtors",
+    "remedies"
+   ]
+  },
+  {
+   "title": "Fire and flood preparedness",
+   "category": "Applications",
+   "keywords": [
+    "fire",
+    "flood"
+   ]
+  },
+  {
+   "title": "Succession planning for family firms",
+   "category": "Theory",
+   "keywords": [
+    "succession"
+   ]
+  },
+  {
+   "title": "Data backup for business records",
+   "category": "Applications",
+   "keywords": [
+    "backup",
+    "records"
+   ]
+  },
+  {
+   "title": "Examination drill: risk past questions",
+   "category": "Applications",
+   "keywords": [
+    "risk",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed drill: trade and channels",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "trade"
+   ]
+  },
+  {
+   "title": "Timed drill: business units",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "units"
+   ]
+  },
+  {
+   "title": "Timed drill: transport and warehousing",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "transport"
+   ]
+  },
+  {
+   "title": "Timed drill: insurance and banking",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "insurance"
+   ]
+  },
+  {
+   "title": "Timed drill: documents and law",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "documents"
+   ]
+  },
+  {
+   "title": "Timed drill: advertising and ICT",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "advertising"
+   ]
+  },
+  {
+   "title": "Mock: 50 questions in 50 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Error analysis of your mock",
+   "category": "Methods",
+   "keywords": [
+    "error analysis"
+   ]
+  },
+  {
+   "title": "Term-pairs: the confusing ten",
+   "category": "Methods",
+   "keywords": [
+    "term pairs"
+   ]
+  },
+  {
+   "title": "Exam day: the calm plan",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "plan"
+   ]
+  }
+ ]
 }

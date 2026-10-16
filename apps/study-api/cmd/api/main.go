@@ -117,6 +117,13 @@ func main() {
                 if err := learn.SeedIfEmpty(seedCtx, st.Content(), log); err != nil {
                         log.Error("learn: curriculum seed failed", "err", err)
                 }
+                // The secondary refresh upgrades populated databases to
+                // the current JAMB ladder (30 units x 10 topics) in one
+                // idempotent pass; later boots short-circuit on the
+                // seed_meta version.
+                if err := learn.RefreshSecondary(seedCtx, st.Content(), log); err != nil {
+                        log.Error("learn: secondary refresh failed", "err", err)
+                }
         }()
 
         // The mirror sync (founder directive 2026-10-15: "make sure you

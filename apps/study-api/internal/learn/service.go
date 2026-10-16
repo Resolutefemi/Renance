@@ -647,12 +647,29 @@ func (s *Service) CoursePath(ctx context.Context, userID, courseID string) (*Cou
         }
         names := []string{"Foundations", "Core Principles", "Applications in Practice", "Advanced Topics", "Mastery & Project"}
         maxUnit := cp.Topics[len(cp.Topics)-1].Unit
+        // Real unit captions win when the roadmap carries them
+        // (learn.course_units rows from the secondary refresh and the
+        // expansion loop); the cycle names remain the fallback.
+        titledUnits := map[int]string{}
+        if tRows, err := s.Pool.Query(ctx, `SELECT unit, title FROM learn.course_units WHERE course_id=$1 AND title <> ''`, courseID); err == nil {
+                for tRows.Next() {
+                        var u int
+                        var t string
+                        if tRows.Scan(&u, &t) == nil {
+                                titledUnits[u] = t
+                        }
+                }
+                tRows.Close()
+        }
         for u := 1; u <= maxUnit; u++ {
                 ts := byUnit[u]
                 if len(ts) == 0 {
                         continue
                 }
-                name := names[(u-1)%len(names)]
+                name := titledUnits[u]
+                if name == "" {
+                        name = names[(u-1)%len(names)]
+                }
                 role := u
                 un := UnitNode{Index: u, Name: fmt.Sprintf("Unit %d · %s", u, name), From: ts[0].Seq, To: ts[len(ts)-1].Seq}
                 // Chest/review readiness: every topic but the last complete.
@@ -684,7 +701,7 @@ func (s *Service) CoursePath(ctx context.Context, userID, courseID string) (*Cou
                         break
                 }
         }
-        cp.Generating = maxUnit < MaxCourseUnits && currentUnit >= maxUnit
+        cp.Generating = maxUnit < maxUnitsFor(cp.Body) && currentUnit >= maxUnit
         if cp.Generating {
                 go s.EnsureUnitsAhead(userID, courseID)
         }

@@ -1,74 +1,2616 @@
 {
-  "body": "jamb",
-  "subject": "chemistry",
-  "title": "Chemistry",
-  "topics": [
-    { "title": "Particulate nature of matter: atoms, molecules and ions", "category": "Concepts & Foundations", "keywords": ["atoms", "molecules", "ions", "particulate"] },
-    { "title": "States of matter and changes of state", "category": "Concepts & Foundations", "keywords": ["melting", "boiling", "evaporation", "sublimation", "condensation"] },
-    { "title": "Elements, compounds and mixtures", "category": "Concepts & Foundations", "keywords": ["elements", "compounds", "mixtures"] },
-    { "title": "Separation techniques", "category": "Methods", "keywords": ["filtration", "distillation", "chromatography", "separation", "fractional distillation"] },
-    { "title": "Atomic structure: protons, neutrons and electrons", "category": "Concepts & Foundations", "keywords": ["protons", "neutrons", "electrons", "atomic structure", "nucleus"] },
-    { "title": "Isotopes and relative atomic mass", "category": "Concepts & Foundations", "keywords": ["isotopes", "relative atomic mass", "isotope abundance"] },
-    { "title": "The periodic table: groups and periods", "category": "Concepts & Foundations", "keywords": ["periodic table", "groups", "periods", "alkali metals", "halogens"] },
-    { "title": "Periodicity: trends across periods and down groups", "category": "Theory", "keywords": ["periodicity", "trends", "atomic radius", "electronegativity"] },
-    { "title": "Chemical formulae, valency and radicals", "category": "Methods", "keywords": ["valency", "radicals", "chemical formula"] },
-    { "title": "Balancing chemical equations", "category": "Methods", "keywords": ["balancing", "chemical equations", "skeletal equation"] },
-    { "title": "Empirical and molecular formulae", "category": "Methods", "keywords": ["empirical formula", "molecular formula", "percentage composition"] },
-    { "title": "IUPAC nomenclature of inorganic compounds", "category": "Methods", "keywords": ["nomenclature", "iupac", "naming compounds"] },
-    { "title": "The mole concept and Avogadro's number", "category": "Theory", "keywords": ["mole", "avogadro", "molar mass", "stoichiometry"] },
-    { "title": "Calculations from chemical equations (stoichiometry)", "category": "Methods", "keywords": ["stoichiometry", "mole ratio", "limiting reagent", "yield"] },
-    { "title": "Ionic (electrovalent) bonding", "category": "Theory", "keywords": ["ionic bond", "electrovalent", "electron transfer", "lattice"] },
-    { "title": "Covalent bonding and dative bonds", "category": "Theory", "keywords": ["covalent bond", "dative bond", "shared electrons", "molecules"] },
-    { "title": "Metallic bonding and giant structures", "category": "Theory", "keywords": ["metallic bond", "giant structure", "crystal lattice"] },
-    { "title": "Shapes of molecules and intermolecular forces", "category": "Theory", "keywords": ["intermolecular", "hydrogen bond", "van der waals", "dipole"] },
-    { "title": "Kinetic theory of matter and gas behaviour", "category": "Theory", "keywords": ["kinetic theory", "gas", "diffusion", "brownian"] },
-    { "title": "The gas laws: Boyle, Charles and the combined law", "category": "Theory", "keywords": ["boyle's law", "charles' law", "pressure law", "gas laws"] },
-    { "title": "Solutions, solubility and saturated solutions", "category": "Concepts & Foundations", "keywords": ["solubility", "saturated", "solute", "solvent", "solution"] },
-    { "title": "Concentration terms: molarity, molality and ppm", "category": "Methods", "keywords": ["molarity", "molality", "concentration", "dilution"] },
-    { "title": "Acids and bases: Arrhenius to Lewis", "category": "Concepts & Foundations", "keywords": ["acids", "bases", "lewis", "bronsted", "alkali"] },
-    { "title": "The pH scale and indicators", "category": "Concepts & Foundations", "keywords": ["ph scale", "indicators", "litmus", "universal indicator"] },
-    { "title": "Salts: types and preparation", "category": "Concepts & Foundations", "keywords": ["salts", "normal salt", "acid salt", "double salt", "complex salt"] },
-    { "title": "Acid-base titrations and standard solutions", "category": "Methods", "keywords": ["titration", "standard solution", "neutralization point", "burette"] },
-    { "title": "Hydrolysis of salts", "category": "Theory", "keywords": ["hydrolysis", "salt hydrolysis", "aqueous"] },
-    { "title": "Oxidation numbers and redox reactions", "category": "Theory", "keywords": ["oxidation number", "redox", "oxidizing agent", "reducing agent"] },
-    { "title": "Balancing redox equations (ion-electron method)", "category": "Methods", "keywords": ["balancing redox", "ion electron", "half equations"] },
-    { "title": "Electrolysis: electrolytes, electrodes and products", "category": "Theory", "keywords": ["electrolysis", "electrolyte", "electrodes", "cathode", "anode"] },
-    { "title": "Faraday's laws of electrolysis", "category": "Theory", "keywords": ["faraday's laws", "coulombs", "electrochemical equivalent"] },
-    { "title": "Industrial electrolysis: alumina, brine and electroplating", "category": "Applications", "keywords": ["electroplating", "alumina", "brine", "downs cell"] },
-    { "title": "Electrochemical cells and electrode potentials", "category": "Theory", "keywords": ["electrochemical cell", "galvanic", "electrode potential", "daniell"] },
-    { "title": "Corrosion, rusting and its prevention", "category": "Applications", "keywords": ["corrosion", "rusting", "galvanizing", "anodizing"] },
-    { "title": "Energy changes: exothermic and endothermic reactions", "category": "Theory", "keywords": ["exothermic", "endothermic", "enthalpy", "heat of reaction"] },
-    { "title": "Energy profiles and activation energy", "category": "Theory", "keywords": ["activation energy", "energy profile", "catalyst", "transition"] },
-    { "title": "Rates of reaction and collision theory", "category": "Theory", "keywords": ["rate of reaction", "collision theory", "surface area", "concentration"] },
-    { "title": "Factors affecting reaction rates and catalysis", "category": "Applications", "keywords": ["catalyst", "temperature effect", "enzyme", "rate factors"] },
-    { "title": "Chemical equilibrium: reversible reactions", "category": "Theory", "keywords": ["equilibrium", "reversible reaction", "dynamic equilibrium"] },
-    { "title": "Le Chatelier's principle and industrial processes", "category": "Applications", "keywords": ["le chatelier", "shift equilibrium", "haber process", "conditions"] },
-    { "title": "Introduction to organic chemistry: catenation and homologous series", "category": "Concepts & Foundations", "keywords": ["organic chemistry", "catenation", "homologous series", "tetravalency", "hydrocarbon"], "drawings": ["alkane-methane"] },
-    { "title": "Alkanes: structure, nomenclature and properties", "category": "Concepts & Foundations", "keywords": ["alkanes", "methane", "substitution reaction", "saturated"], "drawings": ["alkane-methane", "alkane-ethane"] },
-    { "title": "Alkenes: unsaturation and addition reactions", "category": "Concepts & Foundations", "keywords": ["alkenes", "ethene", "addition reaction", "unsaturated", "bromine water"], "drawings": ["alkene-ethene"] },
-    { "title": "Alkynes and the triple bond", "category": "Concepts & Foundations", "keywords": ["alkynes", "ethyne", "triple bond", "unsaturated"] },
-    { "title": "Isomerism in hydrocarbons", "category": "Theory", "keywords": ["isomerism", "structural isomers", "chain isomerism", "butane"] },
-    { "title": "Aromatic hydrocarbons: benzene and its stability", "category": "Theory", "keywords": ["benzene", "aromatic", "resonance", "delocalised"], "drawings": ["benzene"] },
-    { "title": "Alkanols: monohydric alcohols and ethanol", "category": "Concepts & Foundations", "keywords": ["alkanols", "ethanol", "hydroxyl group", "fermentation", "alcohol"], "drawings": ["alkanol-ethanol"] },
-    { "title": "Alkanoic acids: ethanoic acid and acidity", "category": "Concepts & Foundations", "keywords": ["alkanoic acid", "ethanoic acid", "carboxylic acid", "acidity"], "drawings": ["alkanoic-acid-ethanoic"] },
-    { "title": "Esters and esterification", "category": "Theory", "keywords": ["esters", "esterification", "sweet smell", "condensation"], "drawings": ["esterification"] },
-    { "title": "Fats, oils and saponification", "category": "Applications", "keywords": ["fats", "oils", "saponification", "soap", "alkali"] },
-    { "title": "Natural and synthetic polymers", "category": "Applications", "keywords": ["polymers", "polyethene", "polymerisation", "plastics", "monomer"], "drawings": ["polyethene"] },
-    { "title": "Petroleum refining and petrochemistry in Nigeria", "category": "Nigerian Context", "keywords": ["crude oil", "petroleum", "refinery", "fractions", "niger delta"] },
-    { "title": "Metals: general properties and reactivity series", "category": "Concepts & Foundations", "keywords": ["metals", "reactivity series", "displacement", "activity series"] },
-    { "title": "Extraction of sodium, aluminium and iron", "category": "Applications", "keywords": ["extraction", "blast furnace", "bauxite", "downs process"] },
-    { "title": "Alloys and their everyday uses", "category": "Applications", "keywords": ["alloys", "brass", "bronze", "steel", "solder"] },
-    { "title": "Hydrogen, oxygen and water", "category": "Concepts & Foundations", "keywords": ["hydrogen", "oxygen", "water", "preparation", "test"] },
-    { "title": "Water hardness, treatment and supply in Nigeria", "category": "Nigerian Context", "keywords": ["hard water", "water treatment", "chlorination", "boiler scale"] },
-    { "title": "Chlorine and the halogen family", "category": "Concepts & Foundations", "keywords": ["chlorine", "halogens", "bleaching", "displacement"] },
-    { "title": "Nitrogen, ammonia and the Haber process", "category": "Theory", "keywords": ["nitrogen", "ammonia", "haber process", "fertilizer"] },
-    { "title": "Sulphur, sulphuric acid and the contact process", "category": "Theory", "keywords": ["sulphur", "sulphuric acid", "contact process", "hydrogen sulphide"] },
-    { "title": "Carbon, its oxides and carbonates", "category": "Concepts & Foundations", "keywords": ["carbon dioxide", "carbon monoxide", "carbonates", "lime", "coke"] },
-    { "title": "Air, combustion, rusting and air pollution", "category": "Nigerian Context", "keywords": ["air", "combustion", "rusting", "pollution", "greenhouse", "acid rain"] },
-    { "title": "Qualitative analysis: tests for cations", "category": "Methods", "keywords": ["cations", "qualitative analysis", "flame test", "ammonia test"] },
-    { "title": "Qualitative analysis: tests for anions and gases", "category": "Methods", "keywords": ["anions", "test for gases", "carbonate test", "nitrate test"] },
-    { "title": "Radioactivity and nuclear chemistry", "category": "Contemporary Issues", "keywords": ["radioactivity", "half life", "radiation", "nuclear"] },
-    { "title": "Chemistry industries and the Nigerian economy", "category": "Nigerian Context", "keywords": ["cement", "industry", "petrochemical", "employment", "nigeria"] },
-    { "title": "Examination drill: chemistry past questions by topic", "category": "Applications", "keywords": ["past questions", "revision", "examination", "jamb"] }
-  ]
+ "body": "jamb",
+ "subject": "chemistry",
+ "title": "Chemistry",
+ "unitTitles": [
+  "Matter, Atomic Structure and Equations",
+  "The Mole Concept and Bonding",
+  "Solutions, Acids, Bases and Redox",
+  "Electrochemistry, Energy and Equilibrium",
+  "Organic Chemistry: Hydrocarbons to Esters",
+  "Metals, Non-metals and Industry",
+  "Carbon Family, Analysis and Radioactivity",
+  "Colloids and Solution Behaviour",
+  "Gases: Kinetic Theory and Calculations",
+  "Volumetric Analysis Mastery",
+  "Thermodynamics and Energetics",
+  "Kinetics and Equilibrium Calculations",
+  "Metals and Their Compounds",
+  "Non-metals and Their Compounds",
+  "Organic Reaction Mechanisms",
+  "Benzene, Aromatics and Polymers",
+  "Electrochemistry Calculations",
+  "Periodic Chemistry Deep Dive",
+  "Chemical Industry in Nigeria",
+  "Environmental Chemistry",
+  "Interpreting Chemical Data",
+  "Laboratory Practice and Safety",
+  "Chemistry in Daily Life",
+  "Nuclear Chemistry Applications",
+  "Connecting the Concepts",
+  "Structured Revision: Set A",
+  "Structured Revision: Set B",
+  "Calculations Workshop",
+  "Chemistry Around You",
+  "JAMB Masterclass: Final Lap"
+ ],
+ "topics": [
+  {
+   "title": "Particulate nature of matter: atoms, molecules and ions",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "atoms",
+    "molecules",
+    "ions",
+    "particulate"
+   ]
+  },
+  {
+   "title": "States of matter and changes of state",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "melting",
+    "boiling",
+    "evaporation",
+    "sublimation",
+    "condensation"
+   ]
+  },
+  {
+   "title": "Elements, compounds and mixtures",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "elements",
+    "compounds",
+    "mixtures"
+   ]
+  },
+  {
+   "title": "Separation techniques",
+   "category": "Methods",
+   "keywords": [
+    "filtration",
+    "distillation",
+    "chromatography",
+    "separation",
+    "fractional distillation"
+   ]
+  },
+  {
+   "title": "Atomic structure: protons, neutrons and electrons",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "protons",
+    "neutrons",
+    "electrons",
+    "atomic structure",
+    "nucleus"
+   ]
+  },
+  {
+   "title": "Isotopes and relative atomic mass",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "isotopes",
+    "relative atomic mass",
+    "isotope abundance"
+   ]
+  },
+  {
+   "title": "The periodic table: groups and periods",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "periodic table",
+    "groups",
+    "periods",
+    "alkali metals",
+    "halogens"
+   ]
+  },
+  {
+   "title": "Periodicity: trends across periods and down groups",
+   "category": "Theory",
+   "keywords": [
+    "periodicity",
+    "trends",
+    "atomic radius",
+    "electronegativity"
+   ]
+  },
+  {
+   "title": "Chemical formulae, valency and radicals",
+   "category": "Methods",
+   "keywords": [
+    "valency",
+    "radicals",
+    "chemical formula"
+   ]
+  },
+  {
+   "title": "Balancing chemical equations",
+   "category": "Methods",
+   "keywords": [
+    "balancing",
+    "chemical equations",
+    "skeletal equation"
+   ]
+  },
+  {
+   "title": "Empirical and molecular formulae",
+   "category": "Methods",
+   "keywords": [
+    "empirical formula",
+    "molecular formula",
+    "percentage composition"
+   ]
+  },
+  {
+   "title": "IUPAC nomenclature of inorganic compounds",
+   "category": "Methods",
+   "keywords": [
+    "nomenclature",
+    "iupac",
+    "naming compounds"
+   ]
+  },
+  {
+   "title": "The mole concept and Avogadro's number",
+   "category": "Theory",
+   "keywords": [
+    "mole",
+    "avogadro",
+    "molar mass",
+    "stoichiometry"
+   ]
+  },
+  {
+   "title": "Calculations from chemical equations (stoichiometry)",
+   "category": "Methods",
+   "keywords": [
+    "stoichiometry",
+    "mole ratio",
+    "limiting reagent",
+    "yield"
+   ]
+  },
+  {
+   "title": "Ionic (electrovalent) bonding",
+   "category": "Theory",
+   "keywords": [
+    "ionic bond",
+    "electrovalent",
+    "electron transfer",
+    "lattice"
+   ]
+  },
+  {
+   "title": "Covalent bonding and dative bonds",
+   "category": "Theory",
+   "keywords": [
+    "covalent bond",
+    "dative bond",
+    "shared electrons",
+    "molecules"
+   ]
+  },
+  {
+   "title": "Metallic bonding and giant structures",
+   "category": "Theory",
+   "keywords": [
+    "metallic bond",
+    "giant structure",
+    "crystal lattice"
+   ]
+  },
+  {
+   "title": "Shapes of molecules and intermolecular forces",
+   "category": "Theory",
+   "keywords": [
+    "intermolecular",
+    "hydrogen bond",
+    "van der waals",
+    "dipole"
+   ]
+  },
+  {
+   "title": "Kinetic theory of matter and gas behaviour",
+   "category": "Theory",
+   "keywords": [
+    "kinetic theory",
+    "gas",
+    "diffusion",
+    "brownian"
+   ]
+  },
+  {
+   "title": "The gas laws: Boyle, Charles and the combined law",
+   "category": "Theory",
+   "keywords": [
+    "boyle's law",
+    "charles' law",
+    "pressure law",
+    "gas laws"
+   ]
+  },
+  {
+   "title": "Solutions, solubility and saturated solutions",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "solubility",
+    "saturated",
+    "solute",
+    "solvent",
+    "solution"
+   ]
+  },
+  {
+   "title": "Concentration terms: molarity, molality and ppm",
+   "category": "Methods",
+   "keywords": [
+    "molarity",
+    "molality",
+    "concentration",
+    "dilution"
+   ]
+  },
+  {
+   "title": "Acids and bases: Arrhenius to Lewis",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "acids",
+    "bases",
+    "lewis",
+    "bronsted",
+    "alkali"
+   ]
+  },
+  {
+   "title": "The pH scale and indicators",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "ph scale",
+    "indicators",
+    "litmus",
+    "universal indicator"
+   ]
+  },
+  {
+   "title": "Salts: types and preparation",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "salts",
+    "normal salt",
+    "acid salt",
+    "double salt",
+    "complex salt"
+   ]
+  },
+  {
+   "title": "Acid-base titrations and standard solutions",
+   "category": "Methods",
+   "keywords": [
+    "titration",
+    "standard solution",
+    "neutralization point",
+    "burette"
+   ]
+  },
+  {
+   "title": "Hydrolysis of salts",
+   "category": "Theory",
+   "keywords": [
+    "hydrolysis",
+    "salt hydrolysis",
+    "aqueous"
+   ]
+  },
+  {
+   "title": "Oxidation numbers and redox reactions",
+   "category": "Theory",
+   "keywords": [
+    "oxidation number",
+    "redox",
+    "oxidizing agent",
+    "reducing agent"
+   ]
+  },
+  {
+   "title": "Balancing redox equations (ion-electron method)",
+   "category": "Methods",
+   "keywords": [
+    "balancing redox",
+    "ion electron",
+    "half equations"
+   ]
+  },
+  {
+   "title": "Electrolysis: electrolytes, electrodes and products",
+   "category": "Theory",
+   "keywords": [
+    "electrolysis",
+    "electrolyte",
+    "electrodes",
+    "cathode",
+    "anode"
+   ]
+  },
+  {
+   "title": "Faraday's laws of electrolysis",
+   "category": "Theory",
+   "keywords": [
+    "faraday's laws",
+    "coulombs",
+    "electrochemical equivalent"
+   ]
+  },
+  {
+   "title": "Industrial electrolysis: alumina, brine and electroplating",
+   "category": "Applications",
+   "keywords": [
+    "electroplating",
+    "alumina",
+    "brine",
+    "downs cell"
+   ]
+  },
+  {
+   "title": "Electrochemical cells and electrode potentials",
+   "category": "Theory",
+   "keywords": [
+    "electrochemical cell",
+    "galvanic",
+    "electrode potential",
+    "daniell"
+   ]
+  },
+  {
+   "title": "Corrosion, rusting and its prevention",
+   "category": "Applications",
+   "keywords": [
+    "corrosion",
+    "rusting",
+    "galvanizing",
+    "anodizing"
+   ]
+  },
+  {
+   "title": "Energy changes: exothermic and endothermic reactions",
+   "category": "Theory",
+   "keywords": [
+    "exothermic",
+    "endothermic",
+    "enthalpy",
+    "heat of reaction"
+   ]
+  },
+  {
+   "title": "Energy profiles and activation energy",
+   "category": "Theory",
+   "keywords": [
+    "activation energy",
+    "energy profile",
+    "catalyst",
+    "transition"
+   ]
+  },
+  {
+   "title": "Rates of reaction and collision theory",
+   "category": "Theory",
+   "keywords": [
+    "rate of reaction",
+    "collision theory",
+    "surface area",
+    "concentration"
+   ]
+  },
+  {
+   "title": "Factors affecting reaction rates and catalysis",
+   "category": "Applications",
+   "keywords": [
+    "catalyst",
+    "temperature effect",
+    "enzyme",
+    "rate factors"
+   ]
+  },
+  {
+   "title": "Chemical equilibrium: reversible reactions",
+   "category": "Theory",
+   "keywords": [
+    "equilibrium",
+    "reversible reaction",
+    "dynamic equilibrium"
+   ]
+  },
+  {
+   "title": "Le Chatelier's principle and industrial processes",
+   "category": "Applications",
+   "keywords": [
+    "le chatelier",
+    "shift equilibrium",
+    "haber process",
+    "conditions"
+   ]
+  },
+  {
+   "title": "Introduction to organic chemistry: catenation and homologous series",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "organic chemistry",
+    "catenation",
+    "homologous series",
+    "tetravalency",
+    "hydrocarbon"
+   ],
+   "drawings": [
+    "alkane-methane"
+   ]
+  },
+  {
+   "title": "Alkanes: structure, nomenclature and properties",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "alkanes",
+    "methane",
+    "substitution reaction",
+    "saturated"
+   ],
+   "drawings": [
+    "alkane-methane",
+    "alkane-ethane"
+   ]
+  },
+  {
+   "title": "Alkenes: unsaturation and addition reactions",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "alkenes",
+    "ethene",
+    "addition reaction",
+    "unsaturated",
+    "bromine water"
+   ],
+   "drawings": [
+    "alkene-ethene"
+   ]
+  },
+  {
+   "title": "Alkynes and the triple bond",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "alkynes",
+    "ethyne",
+    "triple bond",
+    "unsaturated"
+   ]
+  },
+  {
+   "title": "Isomerism in hydrocarbons",
+   "category": "Theory",
+   "keywords": [
+    "isomerism",
+    "structural isomers",
+    "chain isomerism",
+    "butane"
+   ]
+  },
+  {
+   "title": "Aromatic hydrocarbons: benzene and its stability",
+   "category": "Theory",
+   "keywords": [
+    "benzene",
+    "aromatic",
+    "resonance",
+    "delocalised"
+   ],
+   "drawings": [
+    "benzene"
+   ]
+  },
+  {
+   "title": "Alkanols: monohydric alcohols and ethanol",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "alkanols",
+    "ethanol",
+    "hydroxyl group",
+    "fermentation",
+    "alcohol"
+   ],
+   "drawings": [
+    "alkanol-ethanol"
+   ]
+  },
+  {
+   "title": "Alkanoic acids: ethanoic acid and acidity",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "alkanoic acid",
+    "ethanoic acid",
+    "carboxylic acid",
+    "acidity"
+   ],
+   "drawings": [
+    "alkanoic-acid-ethanoic"
+   ]
+  },
+  {
+   "title": "Esters and esterification",
+   "category": "Theory",
+   "keywords": [
+    "esters",
+    "esterification",
+    "sweet smell",
+    "condensation"
+   ],
+   "drawings": [
+    "esterification"
+   ]
+  },
+  {
+   "title": "Fats, oils and saponification",
+   "category": "Applications",
+   "keywords": [
+    "fats",
+    "oils",
+    "saponification",
+    "soap",
+    "alkali"
+   ]
+  },
+  {
+   "title": "Natural and synthetic polymers",
+   "category": "Applications",
+   "keywords": [
+    "polymers",
+    "polyethene",
+    "polymerisation",
+    "plastics",
+    "monomer"
+   ],
+   "drawings": [
+    "polyethene"
+   ]
+  },
+  {
+   "title": "Petroleum refining and petrochemistry in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "crude oil",
+    "petroleum",
+    "refinery",
+    "fractions",
+    "niger delta"
+   ]
+  },
+  {
+   "title": "Metals: general properties and reactivity series",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "metals",
+    "reactivity series",
+    "displacement",
+    "activity series"
+   ]
+  },
+  {
+   "title": "Extraction of sodium, aluminium and iron",
+   "category": "Applications",
+   "keywords": [
+    "extraction",
+    "blast furnace",
+    "bauxite",
+    "downs process"
+   ]
+  },
+  {
+   "title": "Alloys and their everyday uses",
+   "category": "Applications",
+   "keywords": [
+    "alloys",
+    "brass",
+    "bronze",
+    "steel",
+    "solder"
+   ]
+  },
+  {
+   "title": "Hydrogen, oxygen and water",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "hydrogen",
+    "oxygen",
+    "water",
+    "preparation",
+    "test"
+   ]
+  },
+  {
+   "title": "Water hardness, treatment and supply in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "hard water",
+    "water treatment",
+    "chlorination",
+    "boiler scale"
+   ]
+  },
+  {
+   "title": "Chlorine and the halogen family",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "chlorine",
+    "halogens",
+    "bleaching",
+    "displacement"
+   ]
+  },
+  {
+   "title": "Nitrogen, ammonia and the Haber process",
+   "category": "Theory",
+   "keywords": [
+    "nitrogen",
+    "ammonia",
+    "haber process",
+    "fertilizer"
+   ]
+  },
+  {
+   "title": "Sulphur, sulphuric acid and the contact process",
+   "category": "Theory",
+   "keywords": [
+    "sulphur",
+    "sulphuric acid",
+    "contact process",
+    "hydrogen sulphide"
+   ]
+  },
+  {
+   "title": "Carbon, its oxides and carbonates",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "carbon dioxide",
+    "carbon monoxide",
+    "carbonates",
+    "lime",
+    "coke"
+   ]
+  },
+  {
+   "title": "Air, combustion, rusting and air pollution",
+   "category": "Nigerian Context",
+   "keywords": [
+    "air",
+    "combustion",
+    "rusting",
+    "pollution",
+    "greenhouse",
+    "acid rain"
+   ]
+  },
+  {
+   "title": "Qualitative analysis: tests for cations",
+   "category": "Methods",
+   "keywords": [
+    "cations",
+    "qualitative analysis",
+    "flame test",
+    "ammonia test"
+   ]
+  },
+  {
+   "title": "Qualitative analysis: tests for anions and gases",
+   "category": "Methods",
+   "keywords": [
+    "anions",
+    "test for gases",
+    "carbonate test",
+    "nitrate test"
+   ]
+  },
+  {
+   "title": "Radioactivity and nuclear chemistry",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "radioactivity",
+    "half life",
+    "radiation",
+    "nuclear"
+   ]
+  },
+  {
+   "title": "Chemistry industries and the Nigerian economy",
+   "category": "Nigerian Context",
+   "keywords": [
+    "cement",
+    "industry",
+    "petrochemical",
+    "employment",
+    "nigeria"
+   ]
+  },
+  {
+   "title": "Examination drill: chemistry past questions by topic",
+   "category": "Applications",
+   "keywords": [
+    "past questions",
+    "revision",
+    "examination",
+    "jamb"
+   ]
+  },
+  {
+   "title": "Systematic qualitative analysis strategy",
+   "category": "Methods",
+   "keywords": [
+    "qualitative analysis",
+    "systematic"
+   ]
+  },
+  {
+   "title": "Solubility curves and crystallisation data",
+   "category": "Methods",
+   "keywords": [
+    "solubility curves",
+    "crystallisation"
+   ]
+  },
+  {
+   "title": "Laboratory preparation and collection of gases",
+   "category": "Methods",
+   "keywords": [
+    "gas preparation",
+    "collection"
+   ]
+  },
+  {
+   "title": "Colloids: sols, gels, emulsions and the Tyndall effect",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "colloids",
+    "tyndall"
+   ]
+  },
+  {
+   "title": "Brownian motion and the kinetic basis of colloids",
+   "category": "Theory",
+   "keywords": [
+    "brownian motion",
+    "colloids"
+   ]
+  },
+  {
+   "title": "Dialysis and purification of colloidal solutions",
+   "category": "Methods",
+   "keywords": [
+    "dialysis",
+    "purification"
+   ]
+  },
+  {
+   "title": "Adsorption on activated charcoal and its uses",
+   "category": "Applications",
+   "keywords": [
+    "adsorption",
+    "charcoal"
+   ]
+  },
+  {
+   "title": "Solubility curves and crystallisation calculations",
+   "category": "Methods",
+   "keywords": [
+    "solubility",
+    "crystallisation"
+   ]
+  },
+  {
+   "title": "Fractional crystallisation of salt mixtures",
+   "category": "Applications",
+   "keywords": [
+    "fractional crystallisation",
+    "mixtures"
+   ]
+  },
+  {
+   "title": "Paper chromatography and Rf values",
+   "category": "Methods",
+   "keywords": [
+    "chromatography",
+    "Rf values"
+   ]
+  },
+  {
+   "title": "Hardness of water: causes and removal",
+   "category": "Applications",
+   "keywords": [
+    "hardness",
+    "water softening"
+   ]
+  },
+  {
+   "title": "Water treatment stages and coagulation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "water treatment",
+    "coagulation",
+    "alum"
+   ]
+  },
+  {
+   "title": "Efflorescence, deliquescence and hygroscopy",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "efflorescence",
+    "deliquescence"
+   ]
+  },
+  {
+   "title": "Graham's law of diffusion and relative density",
+   "category": "Theory",
+   "keywords": [
+    "graham's law",
+    "diffusion"
+   ]
+  },
+  {
+   "title": "Molar volume of gases and Avogadro's law",
+   "category": "Methods",
+   "keywords": [
+    "molar volume",
+    "avogadro's law"
+   ]
+  },
+  {
+   "title": "Ideal gas equation PV = nRT in problem solving",
+   "category": "Methods",
+   "keywords": [
+    "ideal gas",
+    "PV = nRT"
+   ]
+  },
+  {
+   "title": "Real gases and deviations from ideality",
+   "category": "Theory",
+   "keywords": [
+    "real gases",
+    "deviation"
+   ]
+  },
+  {
+   "title": "Saturated vapour pressure and boiling",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "vapour pressure",
+    "boiling"
+   ]
+  },
+  {
+   "title": "Relative humidity and weather readings",
+   "category": "Applications",
+   "keywords": [
+    "humidity",
+    "weather"
+   ]
+  },
+  {
+   "title": "Gay-Lussac's law of combining volumes",
+   "category": "Theory",
+   "keywords": [
+    "gay-lussac",
+    "combining volumes"
+   ]
+  },
+  {
+   "title": "Gas law calculations with kelvin conversions",
+   "category": "Methods",
+   "keywords": [
+    "gas laws",
+    "kelvin"
+   ]
+  },
+  {
+   "title": "Diffusion rates of ammonia and hydrogen chloride",
+   "category": "Applications",
+   "keywords": [
+    "diffusion rates",
+    "ammonia"
+   ]
+  },
+  {
+   "title": "Examination drill: gas laws past questions",
+   "category": "Applications",
+   "keywords": [
+    "gas laws",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Primary standards and standard solutions",
+   "category": "Methods",
+   "keywords": [
+    "primary standard",
+    "standard solution"
+   ]
+  },
+  {
+   "title": "Choice of indicators in acid-base titrations",
+   "category": "Methods",
+   "keywords": [
+    "indicators",
+    "titration"
+   ]
+  },
+  {
+   "title": "Titration calculations in mol per dm3",
+   "category": "Methods",
+   "keywords": [
+    "titration",
+    "concentration"
+   ]
+  },
+  {
+   "title": "Back titration and its applications",
+   "category": "Methods",
+   "keywords": [
+    "back titration",
+    "applications"
+   ]
+  },
+  {
+   "title": "Double indicator titrations of mixed carbonates",
+   "category": "Methods",
+   "keywords": [
+    "double indicator",
+    "carbonates"
+   ]
+  },
+  {
+   "title": "Heat of neutralisation experiments",
+   "category": "Applications",
+   "keywords": [
+    "heat of neutralisation",
+    "experiments"
+   ]
+  },
+  {
+   "title": "Buffer solutions and buffer action",
+   "category": "Theory",
+   "keywords": [
+    "buffers",
+    "buffer action"
+   ]
+  },
+  {
+   "title": "Normality, equivalents and basicity of acids",
+   "category": "Methods",
+   "keywords": [
+    "normality",
+    "equivalents"
+   ]
+  },
+  {
+   "title": "Errors and accuracy in volumetric work",
+   "category": "Methods",
+   "keywords": [
+    "errors",
+    "accuracy"
+   ]
+  },
+  {
+   "title": "Examination drill: titration past questions",
+   "category": "Applications",
+   "keywords": [
+    "titration",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Enthalpy changes of formation and combustion",
+   "category": "Theory",
+   "keywords": [
+    "enthalpy",
+    "combustion"
+   ]
+  },
+  {
+   "title": "Hess's law and energy cycles",
+   "category": "Theory",
+   "keywords": [
+    "hess's law",
+    "energy cycle"
+   ]
+  },
+  {
+   "title": "Bond energies and reaction enthalpies",
+   "category": "Methods",
+   "keywords": [
+    "bond energy",
+    "enthalpy"
+   ]
+  },
+  {
+   "title": "Calorimetry and heat change calculations",
+   "category": "Methods",
+   "keywords": [
+    "calorimetry",
+    "heat change"
+   ]
+  },
+  {
+   "title": "Lattice energy and hydration energy",
+   "category": "Theory",
+   "keywords": [
+    "lattice energy",
+    "hydration"
+   ]
+  },
+  {
+   "title": "Entropy and spontaneity: an introduction",
+   "category": "Theory",
+   "keywords": [
+    "entropy",
+    "spontaneity"
+   ]
+  },
+  {
+   "title": "Fuels: calorific values and combustion analysis",
+   "category": "Applications",
+   "keywords": [
+    "fuels",
+    "calorific value"
+   ]
+  },
+  {
+   "title": "Energy conversions in laboratory processes",
+   "category": "Applications",
+   "keywords": [
+    "energy conversion",
+    "laboratory"
+   ]
+  },
+  {
+   "title": "Energy profile diagrams and catalysed pathways",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "energy profile",
+    "catalysis"
+   ]
+  },
+  {
+   "title": "Examination drill: energetics past questions",
+   "category": "Applications",
+   "keywords": [
+    "energetics",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Rate laws, order of reaction and rate constants",
+   "category": "Theory",
+   "keywords": [
+    "rate law",
+    "order of reaction"
+   ]
+  },
+  {
+   "title": "Quantitative experiments on rate factors",
+   "category": "Methods",
+   "keywords": [
+    "rate factors",
+    "experiments"
+   ]
+  },
+  {
+   "title": "Half-life of reactions and radioactive decay",
+   "category": "Theory",
+   "keywords": [
+    "half-life",
+    "decay"
+   ]
+  },
+  {
+   "title": "Equilibrium constants Kc and Kp",
+   "category": "Methods",
+   "keywords": [
+    "equilibrium constant",
+    "Kc",
+    "Kp"
+   ]
+  },
+  {
+   "title": "Calculations on equilibrium concentrations",
+   "category": "Methods",
+   "keywords": [
+    "equilibrium",
+    "concentrations"
+   ]
+  },
+  {
+   "title": "Solubility product and precipitation reactions",
+   "category": "Theory",
+   "keywords": [
+    "solubility product",
+    "precipitation"
+   ]
+  },
+  {
+   "title": "Common ion effect and its applications",
+   "category": "Applications",
+   "keywords": [
+    "common ion effect",
+    "applications"
+   ]
+  },
+  {
+   "title": "The Haber process: conditions and compromise",
+   "category": "Nigerian Context",
+   "keywords": [
+    "haber process",
+    "conditions"
+   ]
+  },
+  {
+   "title": "The Contact process: conditions explained",
+   "category": "Nigerian Context",
+   "keywords": [
+    "contact process",
+    "conditions"
+   ]
+  },
+  {
+   "title": "Examination drill: kinetics past questions",
+   "category": "Applications",
+   "keywords": [
+    "kinetics",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Alkali metals: properties and reactions",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "alkali metals",
+    "sodium"
+   ]
+  },
+  {
+   "title": "Alkaline earth metals and their compounds",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "alkaline earth",
+    "calcium"
+   ]
+  },
+  {
+   "title": "Aluminium: properties, uses and recycling",
+   "category": "Applications",
+   "keywords": [
+    "aluminium",
+    "uses"
+   ]
+  },
+  {
+   "title": "Iron: corrosion chemistry and protection",
+   "category": "Applications",
+   "keywords": [
+    "iron",
+    "corrosion"
+   ]
+  },
+  {
+   "title": "Copper: extraction, properties and alloys",
+   "category": "Applications",
+   "keywords": [
+    "copper",
+    "extraction"
+   ]
+  },
+  {
+   "title": "Transition metals and variable oxidation states",
+   "category": "Theory",
+   "keywords": [
+    "transition metals",
+    "oxidation states"
+   ]
+  },
+  {
+   "title": "Complex ions and ligands: an introduction",
+   "category": "Theory",
+   "keywords": [
+    "complex ions",
+    "ligands"
+   ]
+  },
+  {
+   "title": "Amphoteric oxides and their reactions",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "amphoteric",
+    "oxides"
+   ]
+  },
+  {
+   "title": "Identifying metal ions: summary of tests",
+   "category": "Methods",
+   "keywords": [
+    "metal ions",
+    "tests"
+   ]
+  },
+  {
+   "title": "Examination drill: metals past questions",
+   "category": "Applications",
+   "keywords": [
+    "metals",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Hydrogen: preparation, properties and uses",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "hydrogen",
+    "preparation"
+   ]
+  },
+  {
+   "title": "Oxygen and the classification of oxides",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "oxygen",
+    "oxides"
+   ]
+  },
+  {
+   "title": "Water: purity tests and treatment",
+   "category": "Applications",
+   "keywords": [
+    "water",
+    "purity"
+   ]
+  },
+  {
+   "title": "Halogens: comparative reactivity and displacement",
+   "category": "Theory",
+   "keywords": [
+    "halogens",
+    "displacement"
+   ]
+  },
+  {
+   "title": "Hydrogen chloride and hydrochloric acid",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "hydrogen chloride",
+    "hydrochloric acid"
+   ]
+  },
+  {
+   "title": "Sulphur: allotropes and important compounds",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "sulphur",
+    "allotropes"
+   ]
+  },
+  {
+   "title": "Sulphur dioxide: bleaching and redox behaviour",
+   "category": "Theory",
+   "keywords": [
+    "sulphur dioxide",
+    "bleaching"
+   ]
+  },
+  {
+   "title": "Nitrogen: inertness and oxides of nitrogen",
+   "category": "Theory",
+   "keywords": [
+    "nitrogen",
+    "oxides"
+   ]
+  },
+  {
+   "title": "Ammonia: fountain experiment and fertilisers",
+   "category": "Applications",
+   "keywords": [
+    "ammonia",
+    "fountain experiment"
+   ]
+  },
+  {
+   "title": "Trioxonitrate(V) acid: properties and uses",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "trioxonitrate",
+    "nitric acid"
+   ]
+  },
+  {
+   "title": "Free radical substitution in alkanes",
+   "category": "Theory",
+   "keywords": [
+    "free radical",
+    "substitution"
+   ]
+  },
+  {
+   "title": "Electrophilic addition and Markovnikov's rule",
+   "category": "Theory",
+   "keywords": [
+    "electrophilic addition",
+    "markovnikov"
+   ]
+  },
+  {
+   "title": "Oxidation of alkenes with potassium permanganate",
+   "category": "Methods",
+   "keywords": [
+    "alkenes",
+    "permanganate"
+   ]
+  },
+  {
+   "title": "Nucleophilic substitution in haloalkanes",
+   "category": "Theory",
+   "keywords": [
+    "nucleophilic substitution",
+    "haloalkanes"
+   ]
+  },
+  {
+   "title": "Esterification mechanism and hydrolysis",
+   "category": "Theory",
+   "keywords": [
+    "esterification",
+    "hydrolysis"
+   ]
+  },
+  {
+   "title": "Fermentation chemistry and ethanol production",
+   "category": "Applications",
+   "keywords": [
+    "fermentation",
+    "ethanol"
+   ]
+  },
+  {
+   "title": "Oxidation of alkanols to alkanoic acids",
+   "category": "Methods",
+   "keywords": [
+    "alkanols",
+    "oxidation"
+   ]
+  },
+  {
+   "title": "Tests for alkanols, alkanoic acids and carbonyls",
+   "category": "Methods",
+   "keywords": [
+    "functional group tests",
+    "alkanols"
+   ]
+  },
+  {
+   "title": "Soapless detergents and alkylbenzene sulphonates",
+   "category": "Applications",
+   "keywords": [
+    "detergents",
+    "sulphonates"
+   ]
+  },
+  {
+   "title": "Examination drill: mechanisms past questions",
+   "category": "Applications",
+   "keywords": [
+    "mechanisms",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Benzene: resonance and substitution reactions",
+   "category": "Theory",
+   "keywords": [
+    "benzene",
+    "resonance"
+   ]
+  },
+  {
+   "title": "Nitration and sulphonation of benzene",
+   "category": "Theory",
+   "keywords": [
+    "nitration",
+    "sulphonation"
+   ]
+  },
+  {
+   "title": "Side-chain reactions of alkylbenzenes",
+   "category": "Theory",
+   "keywords": [
+    "alkylbenzenes",
+    "side chain"
+   ]
+  },
+  {
+   "title": "Addition polymers: polythene, PVC, polypropene",
+   "category": "Applications",
+   "keywords": [
+    "addition polymers",
+    "polythene"
+   ]
+  },
+  {
+   "title": "Condensation polymers: nylon and terylene",
+   "category": "Applications",
+   "keywords": [
+    "condensation polymers",
+    "nylon"
+   ]
+  },
+  {
+   "title": "Thermoplastics and thermosetting plastics",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "thermoplastics",
+    "thermosets"
+   ]
+  },
+  {
+   "title": "Rubber: vulcanisation and uses",
+   "category": "Applications",
+   "keywords": [
+    "rubber",
+    "vulcanisation"
+   ]
+  },
+  {
+   "title": "Polymer waste and environmental pollution",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "polymer waste",
+    "pollution"
+   ]
+  },
+  {
+   "title": "Biopolymers: starch, cellulose and proteins",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "biopolymers",
+    "starch"
+   ]
+  },
+  {
+   "title": "Examination drill: polymers past questions",
+   "category": "Applications",
+   "keywords": [
+    "polymers",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Standard electrode potentials and cell e.m.f.",
+   "category": "Methods",
+   "keywords": [
+    "electrode potential",
+    "e.m.f."
+   ]
+  },
+  {
+   "title": "Predicting feasibility of redox reactions",
+   "category": "Methods",
+   "keywords": [
+    "redox",
+    "feasibility"
+   ]
+  },
+  {
+   "title": "Electrolysis products of brine and dilute acid",
+   "category": "Applications",
+   "keywords": [
+    "electrolysis",
+    "brine"
+   ]
+  },
+  {
+   "title": "Faraday calculations: mass and gas volume",
+   "category": "Methods",
+   "keywords": [
+    "faraday",
+    "mass deposited"
+   ]
+  },
+  {
+   "title": "Charge, current and time in electrolysis problems",
+   "category": "Methods",
+   "keywords": [
+    "charge",
+    "current",
+    "electrolysis"
+   ]
+  },
+  {
+   "title": "Corrosion prevention and sacrificial anodes",
+   "category": "Applications",
+   "keywords": [
+    "sacrificial anode",
+    "corrosion"
+   ]
+  },
+  {
+   "title": "Concentration cells: a first look",
+   "category": "Theory",
+   "keywords": [
+    "concentration cell"
+   ]
+  },
+  {
+   "title": "Lead-acid accumulators and storage cells",
+   "category": "Applications",
+   "keywords": [
+    "accumulator",
+    "storage cell"
+   ]
+  },
+  {
+   "title": "Fuel cells and electrochemical sensors",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "fuel cell",
+    "sensors"
+   ]
+  },
+  {
+   "title": "Examination drill: electrochemistry past questions",
+   "category": "Applications",
+   "keywords": [
+    "electrochemistry",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Diagonal relationships in the periodic table",
+   "category": "Theory",
+   "keywords": [
+    "diagonal relationship",
+    "periodic table"
+   ]
+  },
+  {
+   "title": "Period 3 oxides and acid-base character",
+   "category": "Theory",
+   "keywords": [
+    "period 3",
+    "oxides"
+   ]
+  },
+  {
+   "title": "Chlorides of period 3 elements",
+   "category": "Theory",
+   "keywords": [
+    "chlorides",
+    "period 3"
+   ]
+  },
+  {
+   "title": "Atomic and ionic radii trends explained",
+   "category": "Theory",
+   "keywords": [
+    "atomic radius",
+    "ionic radius"
+   ]
+  },
+  {
+   "title": "Ionisation energies as configuration evidence",
+   "category": "Theory",
+   "keywords": [
+    "ionisation energy",
+    "configuration"
+   ]
+  },
+  {
+   "title": "Electronegativity and bond character",
+   "category": "Theory",
+   "keywords": [
+    "electronegativity",
+    "bond character"
+   ]
+  },
+  {
+   "title": "Group trends from I to VII summarised",
+   "category": "Theory",
+   "keywords": [
+    "group trends",
+    "summary"
+   ]
+  },
+  {
+   "title": "The unusual position of hydrogen",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "hydrogen",
+    "position"
+   ]
+  },
+  {
+   "title": "Isotopy calculations: abundance and R.A.M.",
+   "category": "Methods",
+   "keywords": [
+    "isotopy",
+    "relative atomic mass"
+   ]
+  },
+  {
+   "title": "Examination drill: periodicity past questions",
+   "category": "Applications",
+   "keywords": [
+    "periodicity",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Limestone calcination and cement production",
+   "category": "Nigerian Context",
+   "keywords": [
+    "limestone",
+    "cement"
+   ]
+  },
+  {
+   "title": "NPK fertiliser blending plants",
+   "category": "Nigerian Context",
+   "keywords": [
+    "fertiliser",
+    "NPK"
+   ]
+  },
+  {
+   "title": "The Solvay process and soda ash",
+   "category": "Applications",
+   "keywords": [
+    "solvay process",
+    "soda ash"
+   ]
+  },
+  {
+   "title": "Sugar refining and crystallisation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "sugar refining",
+    "crystallisation"
+   ]
+  },
+  {
+   "title": "Vegetable oil refining and hydrogenation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "vegetable oil",
+    "hydrogenation"
+   ]
+  },
+  {
+   "title": "Soap and detergent manufacturing lines",
+   "category": "Nigerian Context",
+   "keywords": [
+    "soap manufacturing",
+    "detergent"
+   ]
+  },
+  {
+   "title": "Aluminium smelting and electrolysis plants",
+   "category": "Nigerian Context",
+   "keywords": [
+    "aluminium smelting",
+    "electrolysis"
+   ]
+  },
+  {
+   "title": "Steel production and the blast furnace",
+   "category": "Nigerian Context",
+   "keywords": [
+    "steel",
+    "blast furnace"
+   ]
+  },
+  {
+   "title": "Natural gas processing and fractionation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "natural gas",
+    "fractionation"
+   ]
+  },
+  {
+   "title": "Examination drill: industry past questions",
+   "category": "Applications",
+   "keywords": [
+    "industry",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Air pollutants: carbon monoxide and particulates",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "air pollution",
+    "carbon monoxide"
+   ]
+  },
+  {
+   "title": "Acid rain: formation and effects",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "acid rain",
+    "formation"
+   ]
+  },
+  {
+   "title": "Greenhouse gases and global warming",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "greenhouse gases",
+    "global warming"
+   ]
+  },
+  {
+   "title": "Ozone depletion and chlorofluorocarbons",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "ozone",
+    "CFCs"
+   ]
+  },
+  {
+   "title": "Water pollution and dissolved oxygen",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "water pollution",
+    "dissolved oxygen"
+   ]
+  },
+  {
+   "title": "Oil spillage chemistry in the Niger Delta",
+   "category": "Nigerian Context",
+   "keywords": [
+    "oil spillage",
+    "Niger Delta"
+   ]
+  },
+  {
+   "title": "Waste management: reduce, reuse, recycle",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "waste management",
+    "recycling"
+   ]
+  },
+  {
+   "title": "Sewage treatment chemistry",
+   "category": "Applications",
+   "keywords": [
+    "sewage",
+    "treatment"
+   ]
+  },
+  {
+   "title": "Urban air quality and smog formation",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "smog",
+    "air quality"
+   ]
+  },
+  {
+   "title": "Examination drill: environment past questions",
+   "category": "Applications",
+   "keywords": [
+    "environment",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Reading solubility and rate graphs",
+   "category": "Methods",
+   "keywords": [
+    "graphs",
+    "solubility"
+   ]
+  },
+  {
+   "title": "Interpreting titration curves",
+   "category": "Methods",
+   "keywords": [
+    "titration curves",
+    "interpretation"
+   ]
+  },
+  {
+   "title": "Percentage purity and percentage yield",
+   "category": "Methods",
+   "keywords": [
+    "purity",
+    "yield"
+   ]
+  },
+  {
+   "title": "Limiting reagent multi-step problems",
+   "category": "Methods",
+   "keywords": [
+    "limiting reagent",
+    "problems"
+   ]
+  },
+  {
+   "title": "Water of crystallisation calculations",
+   "category": "Methods",
+   "keywords": [
+    "water of crystallisation",
+    "hydrated salts"
+   ]
+  },
+  {
+   "title": "Gas volume ratios in problem solving",
+   "category": "Methods",
+   "keywords": [
+    "gas volumes",
+    "ratios"
+   ]
+  },
+  {
+   "title": "Temperature-time heating curves",
+   "category": "Methods",
+   "keywords": [
+    "heating curve",
+    "temperature"
+   ]
+  },
+  {
+   "title": "Reading energy level diagrams",
+   "category": "Methods",
+   "keywords": [
+    "energy level diagram"
+   ]
+  },
+  {
+   "title": "Using electrode potential tables",
+   "category": "Methods",
+   "keywords": [
+    "electrode potentials",
+    "tables"
+   ]
+  },
+  {
+   "title": "Examination drill: data past questions",
+   "category": "Applications",
+   "keywords": [
+    "data interpretation",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Laboratory apparatus and correct usage",
+   "category": "Methods",
+   "keywords": [
+    "apparatus",
+    "usage"
+   ]
+  },
+  {
+   "title": "The Bunsen burner and heating techniques",
+   "category": "Methods",
+   "keywords": [
+    "bunsen burner",
+    "heating"
+   ]
+  },
+  {
+   "title": "Assembling separation apparatus",
+   "category": "Methods",
+   "keywords": [
+    "separation",
+    "apparatus"
+   ]
+  },
+  {
+   "title": "Safety rules and first aid in the laboratory",
+   "category": "Applications",
+   "keywords": [
+    "safety",
+    "first aid"
+   ]
+  },
+  {
+   "title": "Handling corrosive and flammable reagents",
+   "category": "Applications",
+   "keywords": [
+    "corrosive",
+    "flammable"
+   ]
+  },
+  {
+   "title": "The systematic analysis scheme in practice",
+   "category": "Methods",
+   "keywords": [
+    "analysis scheme",
+    "practice"
+   ]
+  },
+  {
+   "title": "Confirmatory tests and their reagents",
+   "category": "Methods",
+   "keywords": [
+    "confirmatory tests",
+    "reagents"
+   ]
+  },
+  {
+   "title": "Methods of collecting gases compared",
+   "category": "Methods",
+   "keywords": [
+    "gas collection",
+    "methods"
+   ]
+  },
+  {
+   "title": "Measurement accuracy and common errors",
+   "category": "Methods",
+   "keywords": [
+    "measurement",
+    "errors"
+   ]
+  },
+  {
+   "title": "Examination drill: laboratory past questions",
+   "category": "Applications",
+   "keywords": [
+    "laboratory",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Alcohols in fuels, sanitizers and beverages",
+   "category": "Applications",
+   "keywords": [
+    "alcohols",
+    "fuels"
+   ]
+  },
+  {
+   "title": "Carboxylic acids in food and medicine",
+   "category": "Applications",
+   "keywords": [
+    "carboxylic acids",
+    "food"
+   ]
+  },
+  {
+   "title": "Esters as flavours and perfumes",
+   "category": "Applications",
+   "keywords": [
+    "esters",
+    "flavours"
+   ]
+  },
+  {
+   "title": "Fats and oils: saturation and health",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "fats",
+    "oils",
+    "health"
+   ]
+  },
+  {
+   "title": "Sugars, starch and cellulose chemistry",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "sugars",
+    "starch",
+    "cellulose"
+   ]
+  },
+  {
+   "title": "Amino acids and protein structure",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "amino acids",
+    "proteins"
+   ]
+  },
+  {
+   "title": "Soap versus detergent performance",
+   "category": "Applications",
+   "keywords": [
+    "soap",
+    "detergent"
+   ]
+  },
+  {
+   "title": "Petrochemicals in everyday products",
+   "category": "Nigerian Context",
+   "keywords": [
+    "petrochemicals",
+    "products"
+   ]
+  },
+  {
+   "title": "Radiocarbon dating of artefacts",
+   "category": "Applications",
+   "keywords": [
+    "carbon dating",
+    "radiocarbon"
+   ]
+  },
+  {
+   "title": "Examination drill: daily life past questions",
+   "category": "Applications",
+   "keywords": [
+    "daily life",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Nuclear stability and the neutron ratio",
+   "category": "Theory",
+   "keywords": [
+    "nuclear stability",
+    "neutron ratio"
+   ]
+  },
+  {
+   "title": "Balancing nuclear equations",
+   "category": "Methods",
+   "keywords": [
+    "nuclear equations",
+    "balancing"
+   ]
+  },
+  {
+   "title": "Half-life calculations in medicine and dating",
+   "category": "Methods",
+   "keywords": [
+    "half-life",
+    "calculations"
+   ]
+  },
+  {
+   "title": "Radioisotopes in agriculture and medicine",
+   "category": "Applications",
+   "keywords": [
+    "radioisotopes",
+    "medicine"
+   ]
+  },
+  {
+   "title": "Nuclear fission reactors: the basics",
+   "category": "Theory",
+   "keywords": [
+    "fission",
+    "reactors"
+   ]
+  },
+  {
+   "title": "Radiation hazards and safety practice",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "radiation hazards",
+    "safety"
+   ]
+  },
+  {
+   "title": "Detecting radiation with the G-M tube",
+   "category": "Methods",
+   "keywords": [
+    "geiger-muller",
+    "detection"
+   ]
+  },
+  {
+   "title": "Nuclear power debate in Nigeria",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "nuclear power",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "Background radiation and natural sources",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "background radiation"
+   ]
+  },
+  {
+   "title": "Examination drill: nuclear past questions",
+   "category": "Applications",
+   "keywords": [
+    "nuclear",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Structure determines properties: case studies",
+   "category": "Theory",
+   "keywords": [
+    "structure",
+    "properties"
+   ]
+  },
+  {
+   "title": "Bonding across organic and inorganic chemistry",
+   "category": "Theory",
+   "keywords": [
+    "bonding",
+    "organic",
+    "inorganic"
+   ]
+  },
+  {
+   "title": "Redox in metabolism and corrosion",
+   "category": "Applications",
+   "keywords": [
+    "redox",
+    "metabolism",
+    "corrosion"
+   ]
+  },
+  {
+   "title": "Equilibrium in the body and in industry",
+   "category": "Applications",
+   "keywords": [
+    "equilibrium",
+    "body",
+    "industry"
+   ]
+  },
+  {
+   "title": "Energy changes across reaction types",
+   "category": "Theory",
+   "keywords": [
+    "energy changes",
+    "reactions"
+   ]
+  },
+  {
+   "title": "Rates in nature: rusting to digestion",
+   "category": "Applications",
+   "keywords": [
+    "rates",
+    "rusting",
+    "digestion"
+   ]
+  },
+  {
+   "title": "Acids and bases in environment and body",
+   "category": "Applications",
+   "keywords": [
+    "acids",
+    "bases",
+    "body"
+   ]
+  },
+  {
+   "title": "The carbon cycle and organic chemistry",
+   "category": "Applications",
+   "keywords": [
+    "carbon cycle",
+    "organic"
+   ]
+  },
+  {
+   "title": "Water as solvent, reagent and product",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "water",
+    "solvent"
+   ]
+  },
+  {
+   "title": "Examination drill: connections past questions",
+   "category": "Applications",
+   "keywords": [
+    "connections",
+    "past questions"
+   ]
+  },
+  {
+   "title": "JAMB chemistry paper structure and strategy",
+   "category": "Methods",
+   "keywords": [
+    "JAMB",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Objective questions on atomic structure",
+   "category": "Applications",
+   "keywords": [
+    "atomic structure",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on bonding and structure",
+   "category": "Applications",
+   "keywords": [
+    "bonding",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on stoichiometry",
+   "category": "Applications",
+   "keywords": [
+    "stoichiometry",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on acids and bases",
+   "category": "Applications",
+   "keywords": [
+    "acids",
+    "bases",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on electrochemistry",
+   "category": "Applications",
+   "keywords": [
+    "electrochemistry",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on organic chemistry",
+   "category": "Applications",
+   "keywords": [
+    "organic chemistry",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on metals and non-metals",
+   "category": "Applications",
+   "keywords": [
+    "metals",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on energy and rates",
+   "category": "Applications",
+   "keywords": [
+    "energy",
+    "rates",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on environmental chemistry",
+   "category": "Applications",
+   "keywords": [
+    "environmental",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Timed practice: the 40-question sprint",
+   "category": "Applications",
+   "keywords": [
+    "timed practice",
+    "sprint"
+   ]
+  },
+  {
+   "title": "Review of common wrong options",
+   "category": "Methods",
+   "keywords": [
+    "wrong options",
+    "review"
+   ]
+  },
+  {
+   "title": "Data-based questions: the smart approach",
+   "category": "Methods",
+   "keywords": [
+    "data questions",
+    "approach"
+   ]
+  },
+  {
+   "title": "Calculation shortcuts that save minutes",
+   "category": "Methods",
+   "keywords": [
+    "shortcuts",
+    "calculations"
+   ]
+  },
+  {
+   "title": "Elimination techniques for objective questions",
+   "category": "Methods",
+   "keywords": [
+    "elimination",
+    "techniques"
+   ]
+  },
+  {
+   "title": "Keywords that reveal the intended answer",
+   "category": "Methods",
+   "keywords": [
+    "keywords",
+    "answers"
+   ]
+  },
+  {
+   "title": "Balancing speed with accuracy",
+   "category": "Methods",
+   "keywords": [
+    "speed",
+    "accuracy"
+   ]
+  },
+  {
+   "title": "Misconceptions in mole calculations corrected",
+   "category": "Methods",
+   "keywords": [
+    "misconceptions",
+    "mole"
+   ]
+  },
+  {
+   "title": "Common errors in ionic equations corrected",
+   "category": "Methods",
+   "keywords": [
+    "ionic equations",
+    "errors"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set B past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Multi-step mole and concentration problems",
+   "category": "Methods",
+   "keywords": [
+    "mole",
+    "concentration",
+    "problems"
+   ]
+  },
+  {
+   "title": "Gas laws and stoichiometry combined problems",
+   "category": "Methods",
+   "keywords": [
+    "gas laws",
+    "stoichiometry"
+   ]
+  },
+  {
+   "title": "Titration and purity combined problems",
+   "category": "Methods",
+   "keywords": [
+    "titration",
+    "purity"
+   ]
+  },
+  {
+   "title": "Enthalpy and calorimetry combined problems",
+   "category": "Methods",
+   "keywords": [
+    "enthalpy",
+    "calorimetry"
+   ]
+  },
+  {
+   "title": "Electrolysis and charge combined problems",
+   "category": "Methods",
+   "keywords": [
+    "electrolysis",
+    "charge"
+   ]
+  },
+  {
+   "title": "Equilibrium and Kc combined problems",
+   "category": "Methods",
+   "keywords": [
+    "equilibrium",
+    "Kc"
+   ]
+  },
+  {
+   "title": "Determining organic formulae from data",
+   "category": "Methods",
+   "keywords": [
+    "organic formulae",
+    "data"
+   ]
+  },
+  {
+   "title": "Isotopy and relative atomic mass problems",
+   "category": "Methods",
+   "keywords": [
+    "isotopy",
+    "R.A.M."
+   ]
+  },
+  {
+   "title": "Rate graphs and calculations combined",
+   "category": "Methods",
+   "keywords": [
+    "rate graphs",
+    "calculations"
+   ]
+  },
+  {
+   "title": "Examination drill: workshop past questions",
+   "category": "Applications",
+   "keywords": [
+    "workshop",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Soil pH, liming and fertiliser chemistry",
+   "category": "Nigerian Context",
+   "keywords": [
+    "soil pH",
+    "liming"
+   ]
+  },
+  {
+   "title": "Food preservation and additive chemistry",
+   "category": "Applications",
+   "keywords": [
+    "food preservation",
+    "additives"
+   ]
+  },
+  {
+   "title": "Cleaning agents and water softening at home",
+   "category": "Applications",
+   "keywords": [
+    "cleaning agents",
+    "softening"
+   ]
+  },
+  {
+   "title": "Medicines, analgesics and simple drugs",
+   "category": "Applications",
+   "keywords": [
+    "medicines",
+    "analgesics"
+   ]
+  },
+  {
+   "title": "Batteries in phones and electric vehicles",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "batteries",
+    "vehicles"
+   ]
+  },
+  {
+   "title": "Paints, dyes and pigment chemistry",
+   "category": "Applications",
+   "keywords": [
+    "paints",
+    "dyes",
+    "pigments"
+   ]
+  },
+  {
+   "title": "Cement setting and construction chemistry",
+   "category": "Nigerian Context",
+   "keywords": [
+    "cement setting",
+    "construction"
+   ]
+  },
+  {
+   "title": "Brewing and the fermentation industry",
+   "category": "Nigerian Context",
+   "keywords": [
+    "brewing",
+    "fermentation"
+   ]
+  },
+  {
+   "title": "Packaging plastics and sachet water chemistry",
+   "category": "Nigerian Context",
+   "keywords": [
+    "packaging",
+    "sachet water"
+   ]
+  },
+  {
+   "title": "Examination drill: applications past questions",
+   "category": "Applications",
+   "keywords": [
+    "applications",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Building the final revision timetable",
+   "category": "Methods",
+   "keywords": [
+    "revision timetable"
+   ]
+  },
+  {
+   "title": "Formulae and constants to memorise",
+   "category": "Methods",
+   "keywords": [
+    "formulae",
+    "constants"
+   ]
+  },
+  {
+   "title": "Flame tests and gas tests at a glance",
+   "category": "Methods",
+   "keywords": [
+    "flame tests",
+    "gas tests"
+   ]
+  },
+  {
+   "title": "Organic families: one-page summaries",
+   "category": "Methods",
+   "keywords": [
+    "organic families",
+    "summary"
+   ]
+  },
+  {
+   "title": "Industrial processes: the conditions table",
+   "category": "Methods",
+   "keywords": [
+    "industrial processes",
+    "conditions"
+   ]
+  },
+  {
+   "title": "Laws and principles: one-line definitions",
+   "category": "Methods",
+   "keywords": [
+    "laws",
+    "definitions"
+   ]
+  },
+  {
+   "title": "The most repeated JAMB chemistry themes",
+   "category": "Methods",
+   "keywords": [
+    "repeated themes",
+    "JAMB"
+   ]
+  },
+  {
+   "title": "Mock examination: 60 questions in 60 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Marking your mock: error analysis",
+   "category": "Methods",
+   "keywords": [
+    "error analysis",
+    "mock"
+   ]
+  },
+  {
+   "title": "Exam day strategy and final confidence",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "strategy"
+   ]
+  }
+ ]
 }

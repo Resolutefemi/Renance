@@ -1,62 +1,2547 @@
 {
-  "body": "jamb",
-  "subject": "agricultural-science",
-  "title": "Agricultural Science",
-  "topics": [
-    { "title": "Agriculture: meaning, branches and importance", "category": "Concepts & Foundations", "keywords": ["agriculture", "branches", "importance", "crop", "livestock"] },
-    { "title": "History and development of agriculture in Nigeria", "category": "Nigerian Context", "keywords": ["history", "development", "nigeria", "farm settlement"] },
-    { "title": "Agro-ecological zones of Nigeria", "category": "Nigerian Context", "keywords": ["agro ecological", "zones", "rainforest", "savanna", "ecology"] },
-    { "title": "Land use and land tenure in Nigeria", "category": "Nigerian Context", "keywords": ["land use", "land tenure", "land use act", "ownership"] },
-    { "title": "Farm tools and simple farm implements", "category": "Methods", "keywords": ["farm tools", "cutlass", "hoe", "spade", "implements"] },
-    { "title": "Farm machinery, tractors and mechanisation", "category": "Methods", "keywords": ["machinery", "tractor", "mechanisation", "harvester", "planter"] },
-    { "title": "Farm surveying and planning equipment", "category": "Methods", "keywords": ["surveying", "theodolite", "chain survey", "planning", "measuring"] },
-    { "title": "Crop classification: by use and life cycle", "category": "Concepts & Foundations", "keywords": ["classification", "crops", "annual", "perennial", "cereals", "legumes"] },
-    { "title": "Parts of a plant and their functions", "category": "Concepts & Foundations", "keywords": ["plant parts", "roots", "leaves", "flowers", "functions"] },
-    { "title": "Plant propagation: sexual and asexual", "category": "Methods", "keywords": ["propagation", "seeds", "grafting", "cutting", "budding"] },
-    { "title": "Nursery practices and transplanting", "category": "Methods", "keywords": ["nursery", "transplanting", "seedlings", "pricking out"] },
-    { "title": "Cultural practices: tillage to thinning", "category": "Methods", "keywords": ["tillage", "planting", "weeding", "thinning", "mulching"] },
-    { "title": "Crop rotation, mixed farming and fallowing", "category": "Methods", "keywords": ["crop rotation", "mixed farming", "fallowing", "cropping systems"] },
-    { "title": "Weeds: types, effects and control", "category": "Theory", "keywords": ["weeds", "control", "herbicides", "effects", "competition"] },
-    { "title": "Crop pests: types, damage and control", "category": "Theory", "keywords": ["pests", "damage", "control", "insects", "rodents"] },
-    { "title": "Diseases of crops: viruses, fungi, bacteria", "category": "Theory", "keywords": ["crop diseases", "fungi", "virus", "bacteria", "blight"] },
-    { "title": "Pesticides, herbicides and safe application", "category": "Applications", "keywords": ["pesticides", "herbicides", "application", "safety", "dosage"] },
-    { "title": "Husbandry of maize, rice and guinea corn", "category": "Applications", "keywords": ["maize", "rice", "guinea corn", "cultivation", "varieties"] },
-    { "title": "Husbandry of yam, cassava and cocoyam", "category": "Applications", "keywords": ["yam", "cassava", "cocoyam", "tubers", "mounds"] },
-    { "title": "Husbandry of cocoa, oil palm and rubber", "category": "Applications", "keywords": ["cocoa", "oil palm", "rubber", "plantation", "processing"] },
-    { "title": "Husbandry of cotton, groundnut and tomatoes", "category": "Applications", "keywords": ["cotton", "groundnut", "tomatoes", "field practices", "harvesting"] },
-    { "title": "Pastures, forage crops and grazing management", "category": "Theory", "keywords": ["pasture", "forage", "grazing", "hay", "silage"] },
-    { "title": "Floriculture, landscaping and ornamentals", "category": "Applications", "keywords": ["floriculture", "landscaping", "ornamental", "flowers", "lawns"] },
-    { "title": "Forestry: importance and forest management", "category": "Applications", "keywords": ["forestry", "forest management", "timber", "afforestation", "silviculture"] },
-    { "title": "Wildlife conservation and game reserves", "category": "Nigerian Context", "keywords": ["wildlife", "game reserves", "conservation", "national parks"] },
-    { "title": "Fish farming, ponds and aquaculture", "category": "Applications", "keywords": ["fish farming", "ponds", "aquaculture", "catfish", "tilapia"] },
-    { "title": "Apiculture, snail rearing and micro-livestock", "category": "Applications", "keywords": ["apiculture", "beekeeping", "honey", "snail", "rearing"] },
-    { "title": "Farm animals: classification and terminology", "category": "Concepts & Foundations", "keywords": ["farm animals", "classification", "ruminants", "non ruminants", "monogastrics"] },
-    { "title": "Anatomy and physiology of farm animals", "category": "Theory", "keywords": ["anatomy", "physiology", "digestive system", "ruminant stomach"] },
-    { "title": "Animal reproduction and parturition", "category": "Theory", "keywords": ["reproduction", "oestrus", "gestation", "parturition", "mating"] },
-    { "title": "Animal nutrition: feeds and rationing", "category": "Theory", "keywords": ["nutrition", "feeds", "ration", "concentrates", "roughages"] },
-    { "title": "Poultry production and management", "category": "Applications", "keywords": ["poultry", "layers", "broilers", "incubation", "candling"] },
-    { "title": "Management of cattle, sheep and goats", "category": "Applications", "keywords": ["cattle", "sheep", "goats", "dairying", "management"] },
-    { "title": "Pig and rabbit production practices", "category": "Applications", "keywords": ["pigs", "rabbits", "hutches", "litters", "management"] },
-    { "title": "Animal genetics, breeding and improvement", "category": "Theory", "keywords": ["genetics", "breeding", "crossbreeding", "selection", "inbreeding"] },
-    { "title": "Artificial insemination and embryo transfer", "category": "Applications", "keywords": ["artificial insemination", "embryo transfer", "semen", "breeding"] },
-    { "title": "Parasites of livestock: endo and ecto parasites", "category": "Theory", "keywords": ["parasites", "ticks", "worms", "endo parasites", "ecto parasites"] },
-    { "title": "Livestock diseases: viral and bacterial", "category": "Theory", "keywords": ["diseases", "newcastle", "foot and mouth", "bacteria", "virus"] },
-    { "title": "Farm animal health management and vaccination", "category": "Applications", "keywords": ["vaccination", "health", "quarantine", "treatment", "veterinary"] },
-    { "title": "Soil science: profile, texture and structure", "category": "Theory", "keywords": ["soil profile", "texture", "structure", "horizons", "components"] },
-    { "title": "Soil fertility, nutrients and fertilisers", "category": "Theory", "keywords": ["soil fertility", "nutrients", "fertilisers", "npk", "manure"] },
-    { "title": "Soil conservation and erosion control", "category": "Applications", "keywords": ["soil conservation", "erosion", "contour ploughing", "terracing", "mulching"] },
-    { "title": "Irrigation and drainage in agriculture", "category": "Applications", "keywords": ["irrigation", "drainage", "canal", "sprinkler", "furrow"] },
-    { "title": "Farm records, accounts and budgeting", "category": "Methods", "keywords": ["farm records", "accounts", "budgeting", "income", "expenditure"] },
-    { "title": "Agricultural economics: supply and demand", "category": "Theory", "keywords": ["supply", "demand", "prices", "agricultural economics"] },
-    { "title": "Agricultural marketing and marketing boards", "category": "Nigerian Context", "keywords": ["marketing", "marketing boards", "middlemen", "prices", "channels"] },
-    { "title": "Agricultural extension and extension agents", "category": "Nigerian Context", "keywords": ["extension", "agents", "farmers", "demonstration", "training"] },
-    { "title": "Cooperatives and farmers associations", "category": "Nigerian Context", "keywords": ["cooperatives", "farmers associations", "credit", "societies"] },
-    { "title": "Agricultural finance and credit sources", "category": "Applications", "keywords": ["finance", "credit", "loans", "banks", "subsidies"] },
-    { "title": "Crop storage, processing and preservation", "category": "Applications", "keywords": ["storage", "processing", "preservation", "silos", "barns"] },
-    { "title": "Food security and national agricultural policy", "category": "Nigerian Context", "keywords": ["food security", "policy", "programmes", "self sufficiency"] },
-    { "title": "Biotechnology and genetic engineering in agriculture", "category": "Contemporary Issues", "keywords": ["biotechnology", "genetic engineering", "gmo", "tissue culture"] },
-    { "title": "Climate change impacts on agriculture", "category": "Contemporary Issues", "keywords": ["climate change", "drought", "flooding", "adaptation"] },
-    { "title": "Youth empowerment through agriculture", "category": "Contemporary Issues", "keywords": ["youth", "empowerment", "employment", "agriculture"] },
-    { "title": "Examination drill: agricultural science past questions by topic", "category": "Applications", "keywords": ["past questions", "revision", "examination", "jamb"] }
-  ]
+ "body": "jamb",
+ "subject": "agricultural-science",
+ "title": "Agricultural Science",
+ "unitTitles": [
+  "Agriculture, Tools and the Nigerian Farm",
+  "Crops: Classification, Practices and Protection",
+  "Crop Husbandry to Livestock Essentials",
+  "Animal Production and Health",
+  "Soil Science and Farm Management",
+  "Economics, Extension and the Future",
+  "Crop Production in Depth",
+  "Major Crops of Nigeria",
+  "Animal Nutrition in Depth",
+  "Poultry Production in Depth",
+  "Ruminant and Monogastric Management",
+  "Animal Health in Depth",
+  "Soil Science in Depth",
+  "Water, Irrigation and Conservation",
+  "Farm Mechanisation",
+  "Farm Management and Records",
+  "Agricultural Marketing",
+  "Forestry, Fishery and Wildlife",
+  "Agricultural Extension",
+  "Climate and Agriculture",
+  "Structured Revision: Set A",
+  "Structured Revision: Set B",
+  "Calculations and Data Workshop",
+  "JAMB Masterclass: Final Lap",
+  "Crop Pests Workshop",
+  "Animal Diseases Workshop",
+  "Soil Fertility Workshop",
+  "Farm Business Workshop",
+  "Fisheries and Wildlife Workshop",
+  "Agric Masterclass Drills"
+ ],
+ "topics": [
+  {
+   "title": "Agriculture: meaning, branches and importance",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "agriculture",
+    "branches",
+    "importance",
+    "crop",
+    "livestock"
+   ]
+  },
+  {
+   "title": "History and development of agriculture in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "history",
+    "development",
+    "nigeria",
+    "farm settlement"
+   ]
+  },
+  {
+   "title": "Agro-ecological zones of Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "agro ecological",
+    "zones",
+    "rainforest",
+    "savanna",
+    "ecology"
+   ]
+  },
+  {
+   "title": "Land use and land tenure in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "land use",
+    "land tenure",
+    "land use act",
+    "ownership"
+   ]
+  },
+  {
+   "title": "Farm tools and simple farm implements",
+   "category": "Methods",
+   "keywords": [
+    "farm tools",
+    "cutlass",
+    "hoe",
+    "spade",
+    "implements"
+   ]
+  },
+  {
+   "title": "Farm machinery, tractors and mechanisation",
+   "category": "Methods",
+   "keywords": [
+    "machinery",
+    "tractor",
+    "mechanisation",
+    "harvester",
+    "planter"
+   ]
+  },
+  {
+   "title": "Farm surveying and planning equipment",
+   "category": "Methods",
+   "keywords": [
+    "surveying",
+    "theodolite",
+    "chain survey",
+    "planning",
+    "measuring"
+   ]
+  },
+  {
+   "title": "Crop classification: by use and life cycle",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "classification",
+    "crops",
+    "annual",
+    "perennial",
+    "cereals",
+    "legumes"
+   ]
+  },
+  {
+   "title": "Parts of a plant and their functions",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "plant parts",
+    "roots",
+    "leaves",
+    "flowers",
+    "functions"
+   ]
+  },
+  {
+   "title": "Plant propagation: sexual and asexual",
+   "category": "Methods",
+   "keywords": [
+    "propagation",
+    "seeds",
+    "grafting",
+    "cutting",
+    "budding"
+   ]
+  },
+  {
+   "title": "Nursery practices and transplanting",
+   "category": "Methods",
+   "keywords": [
+    "nursery",
+    "transplanting",
+    "seedlings",
+    "pricking out"
+   ]
+  },
+  {
+   "title": "Cultural practices: tillage to thinning",
+   "category": "Methods",
+   "keywords": [
+    "tillage",
+    "planting",
+    "weeding",
+    "thinning",
+    "mulching"
+   ]
+  },
+  {
+   "title": "Crop rotation, mixed farming and fallowing",
+   "category": "Methods",
+   "keywords": [
+    "crop rotation",
+    "mixed farming",
+    "fallowing",
+    "cropping systems"
+   ]
+  },
+  {
+   "title": "Weeds: types, effects and control",
+   "category": "Theory",
+   "keywords": [
+    "weeds",
+    "control",
+    "herbicides",
+    "effects",
+    "competition"
+   ]
+  },
+  {
+   "title": "Crop pests: types, damage and control",
+   "category": "Theory",
+   "keywords": [
+    "pests",
+    "damage",
+    "control",
+    "insects",
+    "rodents"
+   ]
+  },
+  {
+   "title": "Diseases of crops: viruses, fungi, bacteria",
+   "category": "Theory",
+   "keywords": [
+    "crop diseases",
+    "fungi",
+    "virus",
+    "bacteria",
+    "blight"
+   ]
+  },
+  {
+   "title": "Pesticides, herbicides and safe application",
+   "category": "Applications",
+   "keywords": [
+    "pesticides",
+    "herbicides",
+    "application",
+    "safety",
+    "dosage"
+   ]
+  },
+  {
+   "title": "Husbandry of maize, rice and guinea corn",
+   "category": "Applications",
+   "keywords": [
+    "maize",
+    "rice",
+    "guinea corn",
+    "cultivation",
+    "varieties"
+   ]
+  },
+  {
+   "title": "Husbandry of yam, cassava and cocoyam",
+   "category": "Applications",
+   "keywords": [
+    "yam",
+    "cassava",
+    "cocoyam",
+    "tubers",
+    "mounds"
+   ]
+  },
+  {
+   "title": "Husbandry of cocoa, oil palm and rubber",
+   "category": "Applications",
+   "keywords": [
+    "cocoa",
+    "oil palm",
+    "rubber",
+    "plantation",
+    "processing"
+   ]
+  },
+  {
+   "title": "Husbandry of cotton, groundnut and tomatoes",
+   "category": "Applications",
+   "keywords": [
+    "cotton",
+    "groundnut",
+    "tomatoes",
+    "field practices",
+    "harvesting"
+   ]
+  },
+  {
+   "title": "Pastures, forage crops and grazing management",
+   "category": "Theory",
+   "keywords": [
+    "pasture",
+    "forage",
+    "grazing",
+    "hay",
+    "silage"
+   ]
+  },
+  {
+   "title": "Floriculture, landscaping and ornamentals",
+   "category": "Applications",
+   "keywords": [
+    "floriculture",
+    "landscaping",
+    "ornamental",
+    "flowers",
+    "lawns"
+   ]
+  },
+  {
+   "title": "Forestry: importance and forest management",
+   "category": "Applications",
+   "keywords": [
+    "forestry",
+    "forest management",
+    "timber",
+    "afforestation",
+    "silviculture"
+   ]
+  },
+  {
+   "title": "Wildlife conservation and game reserves",
+   "category": "Nigerian Context",
+   "keywords": [
+    "wildlife",
+    "game reserves",
+    "conservation",
+    "national parks"
+   ]
+  },
+  {
+   "title": "Fish farming, ponds and aquaculture",
+   "category": "Applications",
+   "keywords": [
+    "fish farming",
+    "ponds",
+    "aquaculture",
+    "catfish",
+    "tilapia"
+   ]
+  },
+  {
+   "title": "Apiculture, snail rearing and micro-livestock",
+   "category": "Applications",
+   "keywords": [
+    "apiculture",
+    "beekeeping",
+    "honey",
+    "snail",
+    "rearing"
+   ]
+  },
+  {
+   "title": "Farm animals: classification and terminology",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "farm animals",
+    "classification",
+    "ruminants",
+    "non ruminants",
+    "monogastrics"
+   ]
+  },
+  {
+   "title": "Anatomy and physiology of farm animals",
+   "category": "Theory",
+   "keywords": [
+    "anatomy",
+    "physiology",
+    "digestive system",
+    "ruminant stomach"
+   ]
+  },
+  {
+   "title": "Animal reproduction and parturition",
+   "category": "Theory",
+   "keywords": [
+    "reproduction",
+    "oestrus",
+    "gestation",
+    "parturition",
+    "mating"
+   ]
+  },
+  {
+   "title": "Animal nutrition: feeds and rationing",
+   "category": "Theory",
+   "keywords": [
+    "nutrition",
+    "feeds",
+    "ration",
+    "concentrates",
+    "roughages"
+   ]
+  },
+  {
+   "title": "Poultry production and management",
+   "category": "Applications",
+   "keywords": [
+    "poultry",
+    "layers",
+    "broilers",
+    "incubation",
+    "candling"
+   ]
+  },
+  {
+   "title": "Management of cattle, sheep and goats",
+   "category": "Applications",
+   "keywords": [
+    "cattle",
+    "sheep",
+    "goats",
+    "dairying",
+    "management"
+   ]
+  },
+  {
+   "title": "Pig and rabbit production practices",
+   "category": "Applications",
+   "keywords": [
+    "pigs",
+    "rabbits",
+    "hutches",
+    "litters",
+    "management"
+   ]
+  },
+  {
+   "title": "Animal genetics, breeding and improvement",
+   "category": "Theory",
+   "keywords": [
+    "genetics",
+    "breeding",
+    "crossbreeding",
+    "selection",
+    "inbreeding"
+   ]
+  },
+  {
+   "title": "Artificial insemination and embryo transfer",
+   "category": "Applications",
+   "keywords": [
+    "artificial insemination",
+    "embryo transfer",
+    "semen",
+    "breeding"
+   ]
+  },
+  {
+   "title": "Parasites of livestock: endo and ecto parasites",
+   "category": "Theory",
+   "keywords": [
+    "parasites",
+    "ticks",
+    "worms",
+    "endo parasites",
+    "ecto parasites"
+   ]
+  },
+  {
+   "title": "Livestock diseases: viral and bacterial",
+   "category": "Theory",
+   "keywords": [
+    "diseases",
+    "newcastle",
+    "foot and mouth",
+    "bacteria",
+    "virus"
+   ]
+  },
+  {
+   "title": "Farm animal health management and vaccination",
+   "category": "Applications",
+   "keywords": [
+    "vaccination",
+    "health",
+    "quarantine",
+    "treatment",
+    "veterinary"
+   ]
+  },
+  {
+   "title": "Soil science: profile, texture and structure",
+   "category": "Theory",
+   "keywords": [
+    "soil profile",
+    "texture",
+    "structure",
+    "horizons",
+    "components"
+   ]
+  },
+  {
+   "title": "Soil fertility, nutrients and fertilisers",
+   "category": "Theory",
+   "keywords": [
+    "soil fertility",
+    "nutrients",
+    "fertilisers",
+    "npk",
+    "manure"
+   ]
+  },
+  {
+   "title": "Soil conservation and erosion control",
+   "category": "Applications",
+   "keywords": [
+    "soil conservation",
+    "erosion",
+    "contour ploughing",
+    "terracing",
+    "mulching"
+   ]
+  },
+  {
+   "title": "Irrigation and drainage in agriculture",
+   "category": "Applications",
+   "keywords": [
+    "irrigation",
+    "drainage",
+    "canal",
+    "sprinkler",
+    "furrow"
+   ]
+  },
+  {
+   "title": "Farm records, accounts and budgeting",
+   "category": "Methods",
+   "keywords": [
+    "farm records",
+    "accounts",
+    "budgeting",
+    "income",
+    "expenditure"
+   ]
+  },
+  {
+   "title": "Agricultural economics: supply and demand",
+   "category": "Theory",
+   "keywords": [
+    "supply",
+    "demand",
+    "prices",
+    "agricultural economics"
+   ]
+  },
+  {
+   "title": "Agricultural marketing and marketing boards",
+   "category": "Nigerian Context",
+   "keywords": [
+    "marketing",
+    "marketing boards",
+    "middlemen",
+    "prices",
+    "channels"
+   ]
+  },
+  {
+   "title": "Agricultural extension and extension agents",
+   "category": "Nigerian Context",
+   "keywords": [
+    "extension",
+    "agents",
+    "farmers",
+    "demonstration",
+    "training"
+   ]
+  },
+  {
+   "title": "Cooperatives and farmers associations",
+   "category": "Nigerian Context",
+   "keywords": [
+    "cooperatives",
+    "farmers associations",
+    "credit",
+    "societies"
+   ]
+  },
+  {
+   "title": "Agricultural finance and credit sources",
+   "category": "Applications",
+   "keywords": [
+    "finance",
+    "credit",
+    "loans",
+    "banks",
+    "subsidies"
+   ]
+  },
+  {
+   "title": "Crop storage, processing and preservation",
+   "category": "Applications",
+   "keywords": [
+    "storage",
+    "processing",
+    "preservation",
+    "silos",
+    "barns"
+   ]
+  },
+  {
+   "title": "Food security and national agricultural policy",
+   "category": "Nigerian Context",
+   "keywords": [
+    "food security",
+    "policy",
+    "programmes",
+    "self sufficiency"
+   ]
+  },
+  {
+   "title": "Biotechnology and genetic engineering in agriculture",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "biotechnology",
+    "genetic engineering",
+    "gmo",
+    "tissue culture"
+   ]
+  },
+  {
+   "title": "Climate change impacts on agriculture",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "climate change",
+    "drought",
+    "flooding",
+    "adaptation"
+   ]
+  },
+  {
+   "title": "Youth empowerment through agriculture",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "youth",
+    "empowerment",
+    "employment",
+    "agriculture"
+   ]
+  },
+  {
+   "title": "Examination drill: agricultural science past questions by topic",
+   "category": "Applications",
+   "keywords": [
+    "past questions",
+    "revision",
+    "examination",
+    "jamb"
+   ]
+  },
+  {
+   "title": "Farm surveys and simple mapping",
+   "category": "Methods",
+   "keywords": [
+    "farm survey",
+    "mapping"
+   ]
+  },
+  {
+   "title": "Agro-input dealers and regulation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "agro-input",
+    "regulation"
+   ]
+  },
+  {
+   "title": "The livestock feed industry",
+   "category": "Nigerian Context",
+   "keywords": [
+    "feed industry"
+   ]
+  },
+  {
+   "title": "Agricultural shows and innovation",
+   "category": "Applications",
+   "keywords": [
+    "shows",
+    "innovation"
+   ]
+  },
+  {
+   "title": "Examination drill: systems past questions",
+   "category": "Applications",
+   "keywords": [
+    "systems",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Seed selection, viability and germination tests",
+   "category": "Methods",
+   "keywords": [
+    "seed selection",
+    "viability"
+   ]
+  },
+  {
+   "title": "Seedbed types: beds, ridges and mounds",
+   "category": "Methods",
+   "keywords": [
+    "seedbed",
+    "ridges"
+   ]
+  },
+  {
+   "title": "Spacing, plant population calculations",
+   "category": "Methods",
+   "keywords": [
+    "spacing",
+    "plant population"
+   ]
+  },
+  {
+   "title": "Nursery management for vegetables",
+   "category": "Applications",
+   "keywords": [
+    "nursery",
+    "vegetables"
+   ]
+  },
+  {
+   "title": "Grafting, budding and layering practice",
+   "category": "Methods",
+   "keywords": [
+    "grafting",
+    "budding"
+   ]
+  },
+  {
+   "title": "Weed competition and critical periods",
+   "category": "Theory",
+   "keywords": [
+    "weed competition",
+    "critical period"
+   ]
+  },
+  {
+   "title": "Integrated weed management strategies",
+   "category": "Applications",
+   "keywords": [
+    "weed management",
+    "integrated"
+   ]
+  },
+  {
+   "title": "Fertiliser placement and timing",
+   "category": "Methods",
+   "keywords": [
+    "fertiliser placement",
+    "timing"
+   ]
+  },
+  {
+   "title": "Post-harvest handling of tomatoes",
+   "category": "Applications",
+   "keywords": [
+    "post-harvest",
+    "tomatoes"
+   ]
+  },
+  {
+   "title": "Examination drill: crop production past questions",
+   "category": "Applications",
+   "keywords": [
+    "crop production",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Maize: ecology, varieties and yields",
+   "category": "Nigerian Context",
+   "keywords": [
+    "maize",
+    "varieties"
+   ]
+  },
+  {
+   "title": "Rice: lowland and upland systems",
+   "category": "Nigerian Context",
+   "keywords": [
+    "rice",
+    "systems"
+   ]
+  },
+  {
+   "title": "Cassava: from stem cutting to garri",
+   "category": "Nigerian Context",
+   "keywords": [
+    "cassava",
+    "garri"
+   ]
+  },
+  {
+   "title": "Yam: minisett technique and storage barns",
+   "category": "Nigerian Context",
+   "keywords": [
+    "yam",
+    "minisett"
+   ]
+  },
+  {
+   "title": "Cocoa: fermentation and quality",
+   "category": "Nigerian Context",
+   "keywords": [
+    "cocoa",
+    "fermentation"
+   ]
+  },
+  {
+   "title": "Oil palm: fresh fruit bunch processing",
+   "category": "Nigerian Context",
+   "keywords": [
+    "oil palm",
+    "processing"
+   ]
+  },
+  {
+   "title": "Groundnut: production in the north",
+   "category": "Nigerian Context",
+   "keywords": [
+    "groundnut",
+    "north"
+   ]
+  },
+  {
+   "title": "Cotton and textiles history",
+   "category": "Nigerian Context",
+   "keywords": [
+    "cotton",
+    "textiles"
+   ]
+  },
+  {
+   "title": "Rubber: tapping and coagulation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "rubber",
+    "tapping"
+   ]
+  },
+  {
+   "title": "Examination drill: major crops past questions",
+   "category": "Applications",
+   "keywords": [
+    "crops",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Feed classes: energy, protein, minerals",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "feed classes",
+    "energy",
+    "protein"
+   ]
+  },
+  {
+   "title": "Ration formulation: simple problems",
+   "category": "Methods",
+   "keywords": [
+    "ration formulation",
+    "problems"
+   ]
+  },
+  {
+   "title": "Digestibility and feed conversion ratio",
+   "category": "Methods",
+   "keywords": [
+    "digestibility",
+    "feed conversion"
+   ]
+  },
+  {
+   "title": "Hay, silage and feed preservation",
+   "category": "Applications",
+   "keywords": [
+    "hay",
+    "silage"
+   ]
+  },
+  {
+   "title": "Feed additives: pros and regulation",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "feed additives"
+   ]
+  },
+  {
+   "title": "Water requirements of livestock",
+   "category": "Theory",
+   "keywords": [
+    "water requirements",
+    "livestock"
+   ]
+  },
+  {
+   "title": "Malnutrition signs in farm animals",
+   "category": "Methods",
+   "keywords": [
+    "malnutrition",
+    "signs"
+   ]
+  },
+  {
+   "title": "Feed storage and mycotoxin control",
+   "category": "Applications",
+   "keywords": [
+    "feed storage",
+    "mycotoxins"
+   ]
+  },
+  {
+   "title": "Pasture improvement: oversowing, fertilising",
+   "category": "Applications",
+   "keywords": [
+    "pasture improvement"
+   ]
+  },
+  {
+   "title": "Examination drill: nutrition past questions",
+   "category": "Applications",
+   "keywords": [
+    "animal nutrition",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Broiler production cycle day by day",
+   "category": "Applications",
+   "keywords": [
+    "broiler",
+    "cycle"
+   ]
+  },
+  {
+   "title": "Layer production: point of lay to cull",
+   "category": "Applications",
+   "keywords": [
+    "layers",
+    "point of lay"
+   ]
+  },
+  {
+   "title": "Incubation: natural and artificial",
+   "category": "Methods",
+   "keywords": [
+    "incubation",
+    "artificial"
+   ]
+  },
+  {
+   "title": "Egg structure, grading and candling",
+   "category": "Methods",
+   "keywords": [
+    "egg structure",
+    "candling"
+   ]
+  },
+  {
+   "title": "Brooding: temperature and litter management",
+   "category": "Methods",
+   "keywords": [
+    "brooding",
+    "litter"
+   ]
+  },
+  {
+   "title": "Vaccination schedules for poultry",
+   "category": "Methods",
+   "keywords": [
+    "vaccination",
+    "schedules"
+   ]
+  },
+  {
+   "title": "Common poultry diseases and control",
+   "category": "Applications",
+   "keywords": [
+    "poultry diseases",
+    "control"
+   ]
+  },
+  {
+   "title": "Poultry housing systems compared",
+   "category": "Theory",
+   "keywords": [
+    "housing systems",
+    "poultry"
+   ]
+  },
+  {
+   "title": "Economics of a 500-bird unit",
+   "category": "Methods",
+   "keywords": [
+    "economics",
+    "poultry unit"
+   ]
+  },
+  {
+   "title": "Examination drill: poultry past questions",
+   "category": "Applications",
+   "keywords": [
+    "poultry",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Cattle breeds: tropical zebu and taurine",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "cattle breeds",
+    "zebu"
+   ]
+  },
+  {
+   "title": "Dairy production and milking hygiene",
+   "category": "Applications",
+   "keywords": [
+    "dairy",
+    "milking"
+   ]
+  },
+  {
+   "title": "Beef fattening systems",
+   "category": "Applications",
+   "keywords": [
+    "beef",
+    "fattening"
+   ]
+  },
+  {
+   "title": "Sheep and goat management calendars",
+   "category": "Applications",
+   "keywords": [
+    "sheep",
+    "goats",
+    "calendar"
+   ]
+  },
+  {
+   "title": "Pig housing and farrowing care",
+   "category": "Applications",
+   "keywords": [
+    "pigs",
+    "farrowing"
+   ]
+  },
+  {
+   "title": "Rabbitry: housing, feeding and records",
+   "category": "Applications",
+   "keywords": [
+    "rabbitry",
+    "records"
+   ]
+  },
+  {
+   "title": "Fish pond construction and stocking rates",
+   "category": "Applications",
+   "keywords": [
+    "fish pond",
+    "stocking"
+   ]
+  },
+  {
+   "title": "Beekeeping: hive types and harvesting",
+   "category": "Applications",
+   "keywords": [
+    "beekeeping",
+    "hives"
+   ]
+  },
+  {
+   "title": "Animal identification and record keeping",
+   "category": "Methods",
+   "keywords": [
+    "identification",
+    "records"
+   ]
+  },
+  {
+   "title": "Examination drill: livestock past questions",
+   "category": "Applications",
+   "keywords": [
+    "livestock",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Signs of health versus disease",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "health signs",
+    "disease"
+   ]
+  },
+  {
+   "title": "Notifiable diseases: anthrax to bird flu",
+   "category": "Applications",
+   "keywords": [
+    "notifiable diseases"
+   ]
+  },
+  {
+   "title": "Newcastle disease and vaccination",
+   "category": "Applications",
+   "keywords": [
+    "Newcastle",
+    "vaccination"
+   ]
+  },
+  {
+   "title": "Trypanosomiasis and tsetse control",
+   "category": "Applications",
+   "keywords": [
+    "trypanosomiasis",
+    "tsetse"
+   ]
+  },
+  {
+   "title": "Helminthosis and deworming programmes",
+   "category": "Applications",
+   "keywords": [
+    "helminthosis",
+    "deworming"
+   ]
+  },
+  {
+   "title": "Ticks: life cycle and control",
+   "category": "Theory",
+   "keywords": [
+    "ticks",
+    "life cycle"
+   ]
+  },
+  {
+   "title": "Quarantine and movement control",
+   "category": "Applications",
+   "keywords": [
+    "quarantine",
+    "movement"
+   ]
+  },
+  {
+   "title": "Drug withdrawal periods and safety",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "withdrawal periods",
+    "safety"
+   ]
+  },
+  {
+   "title": "First aid on the farm",
+   "category": "Applications",
+   "keywords": [
+    "first aid",
+    "farm"
+   ]
+  },
+  {
+   "title": "Examination drill: animal health past questions",
+   "category": "Applications",
+   "keywords": [
+    "animal health",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Soil forming factors and processes",
+   "category": "Theory",
+   "keywords": [
+    "soil formation",
+    "factors"
+   ]
+  },
+  {
+   "title": "Physical properties: texture triangles",
+   "category": "Methods",
+   "keywords": [
+    "texture triangle",
+    "properties"
+   ]
+  },
+  {
+   "title": "Chemical properties: pH, CEC and bases",
+   "category": "Theory",
+   "keywords": [
+    "soil pH",
+    "CEC"
+   ]
+  },
+  {
+   "title": "Soil organic matter and humus",
+   "category": "Theory",
+   "keywords": [
+    "organic matter",
+    "humus"
+   ]
+  },
+  {
+   "title": "Soil microorganisms and their roles",
+   "category": "Theory",
+   "keywords": [
+    "microorganisms",
+    "roles"
+   ]
+  },
+  {
+   "title": "Sampling and soil testing procedure",
+   "category": "Methods",
+   "keywords": [
+    "soil sampling",
+    "testing"
+   ]
+  },
+  {
+   "title": "Fertiliser types and NPK arithmetic",
+   "category": "Methods",
+   "keywords": [
+    "fertiliser types",
+    "NPK"
+   ]
+  },
+  {
+   "title": "Lime requirement calculations",
+   "category": "Methods",
+   "keywords": [
+    "lime requirement",
+    "calculations"
+   ]
+  },
+  {
+   "title": "Composting methods step by step",
+   "category": "Applications",
+   "keywords": [
+    "composting",
+    "methods"
+   ]
+  },
+  {
+   "title": "Examination drill: soil science past questions",
+   "category": "Applications",
+   "keywords": [
+    "soil science",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Irrigation types: basin, furrow, sprinkler, drip",
+   "category": "Applications",
+   "keywords": [
+    "irrigation",
+    "drip"
+   ]
+  },
+  {
+   "title": "Choosing irrigation systems by crop",
+   "category": "Methods",
+   "keywords": [
+    "irrigation systems",
+    "choice"
+   ]
+  },
+  {
+   "title": "Water quality for irrigation",
+   "category": "Theory",
+   "keywords": [
+    "water quality",
+    "irrigation"
+   ]
+  },
+  {
+   "title": "Drainage: surface and subsurface",
+   "category": "Applications",
+   "keywords": [
+    "drainage",
+    "subsurface"
+   ]
+  },
+  {
+   "title": "Erosion types: sheet, rill, gully",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "erosion",
+    "sheet",
+    "gully"
+   ]
+  },
+  {
+   "title": "Erosion control: terraces, cover crops",
+   "category": "Applications",
+   "keywords": [
+    "terraces",
+    "cover crops"
+   ]
+  },
+  {
+   "title": "Conservation agriculture principles",
+   "category": "Applications",
+   "keywords": [
+    "conservation agriculture"
+   ]
+  },
+  {
+   "title": "Watershed management basics",
+   "category": "Theory",
+   "keywords": [
+    "watershed",
+    "management"
+   ]
+  },
+  {
+   "title": "Dams and their agricultural roles",
+   "category": "Nigerian Context",
+   "keywords": [
+    "dams",
+    "agriculture"
+   ]
+  },
+  {
+   "title": "Examination drill: irrigation past questions",
+   "category": "Applications",
+   "keywords": [
+    "irrigation",
+    "conservation",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Primary and secondary tillage implements",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "tillage",
+    "implements"
+   ]
+  },
+  {
+   "title": "Tractor systems: power take-off basics",
+   "category": "Theory",
+   "keywords": [
+    "tractor",
+    "PTO"
+   ]
+  },
+  {
+   "title": "Planters, harvesters and their adjustments",
+   "category": "Applications",
+   "keywords": [
+    "planters",
+    "harvesters"
+   ]
+  },
+  {
+   "title": "Maintenance schedules and simple repairs",
+   "category": "Methods",
+   "keywords": [
+    "maintenance",
+    "repairs"
+   ]
+  },
+  {
+   "title": "Mechanisation versus labour economics",
+   "category": "Theory",
+   "keywords": [
+    "mechanisation",
+    "labour"
+   ]
+  },
+  {
+   "title": "Animal traction: merits and limits",
+   "category": "Applications",
+   "keywords": [
+    "animal traction"
+   ]
+  },
+  {
+   "title": "Workshop tools and safe handling",
+   "category": "Methods",
+   "keywords": [
+    "workshop tools",
+    "safety"
+   ]
+  },
+  {
+   "title": "Farm structures: silos, cribs, barns",
+   "category": "Applications",
+   "keywords": [
+    "farm structures",
+    "silos"
+   ]
+  },
+  {
+   "title": "Choosing machinery by farm size",
+   "category": "Methods",
+   "keywords": [
+    "machinery",
+    "farm size"
+   ]
+  },
+  {
+   "title": "Examination drill: mechanisation past questions",
+   "category": "Applications",
+   "keywords": [
+    "mechanisation",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Farm records: types and uses",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "farm records",
+    "types"
+   ]
+  },
+  {
+   "title": "Inventory and asset registers",
+   "category": "Methods",
+   "keywords": [
+    "inventory",
+    "assets"
+   ]
+  },
+  {
+   "title": "Gross margin calculations",
+   "category": "Methods",
+   "keywords": [
+    "gross margin",
+    "calculations"
+   ]
+  },
+  {
+   "title": "Net farm income statements",
+   "category": "Methods",
+   "keywords": [
+    "net farm income"
+   ]
+  },
+  {
+   "title": "Break-even analysis for enterprises",
+   "category": "Methods",
+   "keywords": [
+    "break-even",
+    "enterprises"
+   ]
+  },
+  {
+   "title": "Labour management and wage systems",
+   "category": "Applications",
+   "keywords": [
+    "labour",
+    "wages"
+   ]
+  },
+  {
+   "title": "Enterprise selection: comparing margins",
+   "category": "Methods",
+   "keywords": [
+    "enterprise selection"
+   ]
+  },
+  {
+   "title": "Risk management: crop insurance ideas",
+   "category": "Applications",
+   "keywords": [
+    "risk",
+    "insurance"
+   ]
+  },
+  {
+   "title": "Agribusiness planning for youths",
+   "category": "Nigerian Context",
+   "keywords": [
+    "agribusiness",
+    "youths"
+   ]
+  },
+  {
+   "title": "Examination drill: farm management past questions",
+   "category": "Applications",
+   "keywords": [
+    "farm management",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Marketing channels for maize and tomatoes",
+   "category": "Nigerian Context",
+   "keywords": [
+    "marketing channels"
+   ]
+  },
+  {
+   "title": "Price fluctuations and seasonal gluts",
+   "category": "Theory",
+   "keywords": [
+    "price fluctuations",
+    "gluts"
+   ]
+  },
+  {
+   "title": "Middlemen: costs and benefits",
+   "category": "Theory",
+   "keywords": [
+    "middlemen",
+    "costs"
+   ]
+  },
+  {
+   "title": "Storage as a marketing tool",
+   "category": "Applications",
+   "keywords": [
+    "storage",
+    "marketing"
+   ]
+  },
+  {
+   "title": "Cooperatives and collective selling",
+   "category": "Nigerian Context",
+   "keywords": [
+    "cooperatives",
+    "selling"
+   ]
+  },
+  {
+   "title": "Contracts and outgrower schemes",
+   "category": "Nigerian Context",
+   "keywords": [
+    "outgrower",
+    "contracts"
+   ]
+  },
+  {
+   "title": "Digital markets and price apps",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "digital markets",
+    "price apps"
+   ]
+  },
+  {
+   "title": "Export produce: quality standards",
+   "category": "Applications",
+   "keywords": [
+    "export",
+    "standards"
+   ]
+  },
+  {
+   "title": "Packaging and branding produce",
+   "category": "Applications",
+   "keywords": [
+    "packaging",
+    "branding"
+   ]
+  },
+  {
+   "title": "Examination drill: marketing past questions",
+   "category": "Applications",
+   "keywords": [
+    "marketing",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Forest types in Nigeria and their uses",
+   "category": "Nigerian Context",
+   "keywords": [
+    "forest types"
+   ]
+  },
+  {
+   "title": "Silviculture: nursery to plantation",
+   "category": "Applications",
+   "keywords": [
+    "silviculture",
+    "plantation"
+   ]
+  },
+  {
+   "title": "Agroforestry systems and benefits",
+   "category": "Applications",
+   "keywords": [
+    "agroforestry",
+    "benefits"
+   ]
+  },
+  {
+   "title": "Timber harvesting and regeneration",
+   "category": "Applications",
+   "keywords": [
+    "timber",
+    "regeneration"
+   ]
+  },
+  {
+   "title": "Bush burning: effects and alternatives",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "bush burning"
+   ]
+  },
+  {
+   "title": "Fisheries: capture versus culture",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "capture fisheries",
+    "culture"
+   ]
+  },
+  {
+   "title": "Pond management: liming to harvesting",
+   "category": "Methods",
+   "keywords": [
+    "pond management",
+    "liming"
+   ]
+  },
+  {
+   "title": "Game reserves and wildlife laws",
+   "category": "Nigerian Context",
+   "keywords": [
+    "game reserves",
+    "laws"
+   ]
+  },
+  {
+   "title": "Anti-poaching and community policing",
+   "category": "Applications",
+   "keywords": [
+    "anti-poaching"
+   ]
+  },
+  {
+   "title": "Examination drill: forestry past questions",
+   "category": "Applications",
+   "keywords": [
+    "forestry",
+    "fishery",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Extension: meaning, aims and methods",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "extension",
+    "aims"
+   ]
+  },
+  {
+   "title": "Extension agents: roles and challenges",
+   "category": "Nigerian Context",
+   "keywords": [
+    "extension agents",
+    "challenges"
+   ]
+  },
+  {
+   "title": "Demonstration plots and field days",
+   "category": "Applications",
+   "keywords": [
+    "demonstrations",
+    "field days"
+   ]
+  },
+  {
+   "title": "Farmer field schools approach",
+   "category": "Applications",
+   "keywords": [
+    "field schools"
+   ]
+  },
+  {
+   "title": "Adoption and diffusion of innovations",
+   "category": "Theory",
+   "keywords": [
+    "adoption",
+    "diffusion"
+   ]
+  },
+  {
+   "title": "Radio, SMS and digital extension",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "digital extension",
+    "radio"
+   ]
+  },
+  {
+   "title": "Women in agriculture programmes",
+   "category": "Nigerian Context",
+   "keywords": [
+    "women",
+    "programmes"
+   ]
+  },
+  {
+   "title": "Training and visit system history",
+   "category": "Theory",
+   "keywords": [
+    "training and visit"
+   ]
+  },
+  {
+   "title": "Evaluating extension impact",
+   "category": "Methods",
+   "keywords": [
+    "extension impact",
+    "evaluation"
+   ]
+  },
+  {
+   "title": "Examination drill: extension past questions",
+   "category": "Applications",
+   "keywords": [
+    "extension",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Rainfall patterns and cropping calendars",
+   "category": "Nigerian Context",
+   "keywords": [
+    "rainfall",
+    "calendars"
+   ]
+  },
+  {
+   "title": "Agro-ecological zones revisited with data",
+   "category": "Nigerian Context",
+   "keywords": [
+    "agro-ecological",
+    "data"
+   ]
+  },
+  {
+   "title": "Drought-tolerant crops and varieties",
+   "category": "Applications",
+   "keywords": [
+    "drought-tolerant",
+    "varieties"
+   ]
+  },
+  {
+   "title": "Heat stress in livestock and poultry",
+   "category": "Applications",
+   "keywords": [
+    "heat stress",
+    "livestock"
+   ]
+  },
+  {
+   "title": "Climate-smart agriculture practices",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "climate-smart"
+   ]
+  },
+  {
+   "title": "Greenhouse production basics",
+   "category": "Applications",
+   "keywords": [
+    "greenhouse",
+    "basics"
+   ]
+  },
+  {
+   "title": "Carbon credits for farmers: an intro",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "carbon credits"
+   ]
+  },
+  {
+   "title": "Floods and flood-recession farming",
+   "category": "Nigerian Context",
+   "keywords": [
+    "floods",
+    "farming"
+   ]
+  },
+  {
+   "title": "Weather forecasting services for farms",
+   "category": "Applications",
+   "keywords": [
+    "forecasting",
+    "farms"
+   ]
+  },
+  {
+   "title": "Examination drill: climate past questions",
+   "category": "Applications",
+   "keywords": [
+    "climate",
+    "past questions"
+   ]
+  },
+  {
+   "title": "JAMB agricultural science paper structure",
+   "category": "Methods",
+   "keywords": [
+    "JAMB",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Objective questions on crop production",
+   "category": "Applications",
+   "keywords": [
+    "crops",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on animal production",
+   "category": "Applications",
+   "keywords": [
+    "animals",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on soil science",
+   "category": "Applications",
+   "keywords": [
+    "soil",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on agricultural economics",
+   "category": "Applications",
+   "keywords": [
+    "economics",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on extension",
+   "category": "Applications",
+   "keywords": [
+    "extension",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on mechanisation",
+   "category": "Applications",
+   "keywords": [
+    "mechanisation",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on fisheries and forestry",
+   "category": "Applications",
+   "keywords": [
+    "fisheries",
+    "forestry",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Diagram drills: equipment identification",
+   "category": "Methods",
+   "keywords": [
+    "equipment",
+    "drills"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set A past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed practice: the 40-question sprint",
+   "category": "Applications",
+   "keywords": [
+    "timed practice",
+    "sprint"
+   ]
+  },
+  {
+   "title": "Review of common wrong options",
+   "category": "Methods",
+   "keywords": [
+    "wrong options",
+    "review"
+   ]
+  },
+  {
+   "title": "Calculation drills: population and fertiliser rates",
+   "category": "Methods",
+   "keywords": [
+    "calculations",
+    "rates"
+   ]
+  },
+  {
+   "title": "Terminology drills: precise meanings",
+   "category": "Methods",
+   "keywords": [
+    "terminology",
+    "drills"
+   ]
+  },
+  {
+   "title": "Elimination techniques for objective questions",
+   "category": "Methods",
+   "keywords": [
+    "elimination",
+    "techniques"
+   ]
+  },
+  {
+   "title": "Misconceptions about fertilisers corrected",
+   "category": "Methods",
+   "keywords": [
+    "misconceptions",
+    "fertilisers"
+   ]
+  },
+  {
+   "title": "Errors about breeds corrected",
+   "category": "Methods",
+   "keywords": [
+    "breeds",
+    "errors"
+   ]
+  },
+  {
+   "title": "Matching crops with ecologies fast",
+   "category": "Methods",
+   "keywords": [
+    "crops",
+    "ecologies"
+   ]
+  },
+  {
+   "title": "Reading diagrams of farm tools",
+   "category": "Methods",
+   "keywords": [
+    "diagrams",
+    "tools"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set B past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Plant population and spacing problems",
+   "category": "Methods",
+   "keywords": [
+    "plant population",
+    "spacing"
+   ]
+  },
+  {
+   "title": "Fertiliser rate and NPK problems",
+   "category": "Methods",
+   "keywords": [
+    "fertiliser rate",
+    "NPK"
+   ]
+  },
+  {
+   "title": "Feed ration and FCR problems",
+   "category": "Methods",
+   "keywords": [
+    "ration",
+    "FCR"
+   ]
+  },
+  {
+   "title": "Gross margin enterprise problems",
+   "category": "Methods",
+   "keywords": [
+    "gross margin",
+    "enterprise"
+   ]
+  },
+  {
+   "title": "Seed rate and germination problems",
+   "category": "Methods",
+   "keywords": [
+    "seed rate",
+    "germination"
+   ]
+  },
+  {
+   "title": "Stocking density and yield problems",
+   "category": "Methods",
+   "keywords": [
+    "stocking density",
+    "yield"
+   ]
+  },
+  {
+   "title": "Depreciation of farm machines",
+   "category": "Methods",
+   "keywords": [
+    "depreciation",
+    "machines"
+   ]
+  },
+  {
+   "title": "Data tables: yields by zone",
+   "category": "Methods",
+   "keywords": [
+    "data tables",
+    "yields"
+   ]
+  },
+  {
+   "title": "Graph reading: rainfall and output",
+   "category": "Methods",
+   "keywords": [
+    "graphs",
+    "rainfall"
+   ]
+  },
+  {
+   "title": "Examination drill: workshop past questions",
+   "category": "Applications",
+   "keywords": [
+    "workshop",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Building the final revision timetable",
+   "category": "Methods",
+   "keywords": [
+    "revision timetable"
+   ]
+  },
+  {
+   "title": "Facts digest: crops, breeds, soils",
+   "category": "Methods",
+   "keywords": [
+    "facts digest"
+   ]
+  },
+  {
+   "title": "Numbers to remember: rates and ratios",
+   "category": "Methods",
+   "keywords": [
+    "numbers",
+    "rates"
+   ]
+  },
+  {
+   "title": "The most repeated JAMB agric themes",
+   "category": "Methods",
+   "keywords": [
+    "repeated themes",
+    "JAMB"
+   ]
+  },
+  {
+   "title": "Mock examination: 50 questions in 50 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Marking your mock: error analysis",
+   "category": "Methods",
+   "keywords": [
+    "error analysis",
+    "mock"
+   ]
+  },
+  {
+   "title": "Equipment diagrams: last look",
+   "category": "Methods",
+   "keywords": [
+    "equipment diagrams"
+   ]
+  },
+  {
+   "title": "Handling unfamiliar crop scenarios",
+   "category": "Methods",
+   "keywords": [
+    "unfamiliar scenarios"
+   ]
+  },
+  {
+   "title": "Speed and accuracy balanced",
+   "category": "Methods",
+   "keywords": [
+    "speed",
+    "accuracy"
+   ]
+  },
+  {
+   "title": "Exam day strategy and final confidence",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Insect pests: chewers and suckers",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "insect pests",
+    "chewers"
+   ]
+  },
+  {
+   "title": "Weevils of stored grain controlled",
+   "category": "Applications",
+   "keywords": [
+    "weevils",
+    "grain"
+   ]
+  },
+  {
+   "title": "Rodent pests and farm hygiene",
+   "category": "Applications",
+   "keywords": [
+    "rodents"
+   ]
+  },
+  {
+   "title": "Bird scares: traditional to modern",
+   "category": "Applications",
+   "keywords": [
+    "bird scares"
+   ]
+  },
+  {
+   "title": "Nematodes and root damage",
+   "category": "Theory",
+   "keywords": [
+    "nematodes"
+   ]
+  },
+  {
+   "title": "Pest life cycles: timing control",
+   "category": "Theory",
+   "keywords": [
+    "life cycles",
+    "timing"
+   ]
+  },
+  {
+   "title": "Chemical control: safe labels read",
+   "category": "Methods",
+   "keywords": [
+    "chemical control",
+    "labels"
+   ]
+  },
+  {
+   "title": "Resistance: why sprays fail",
+   "category": "Theory",
+   "keywords": [
+    "resistance",
+    "sprays"
+   ]
+  },
+  {
+   "title": "IPM field plan drafted",
+   "category": "Applications",
+   "keywords": [
+    "IPM",
+    "plan"
+   ]
+  },
+  {
+   "title": "Examination drill: pests past questions",
+   "category": "Applications",
+   "keywords": [
+    "pests",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Foot and mouth disease managed",
+   "category": "Applications",
+   "keywords": [
+    "foot and mouth"
+   ]
+  },
+  {
+   "title": "Rinderpest history: eradicated",
+   "category": "Theory",
+   "keywords": [
+    "rinderpest"
+   ]
+  },
+  {
+   "title": "CBPP in cattle controlled",
+   "category": "Applications",
+   "keywords": [
+    "CBPP"
+   ]
+  },
+  {
+   "title": "Peste des petits ruminants in goats",
+   "category": "Applications",
+   "keywords": [
+    "PPR"
+   ]
+  },
+  {
+   "title": "African swine fever: biosecurity",
+   "category": "Applications",
+   "keywords": [
+    "ASF",
+    "biosecurity"
+   ]
+  },
+  {
+   "title": "Newcastle and Gumboro drilled",
+   "category": "Applications",
+   "keywords": [
+    "Newcastle",
+    "Gumboro"
+   ]
+  },
+  {
+   "title": "Zoonoses: brucellosis and rabies",
+   "category": "Applications",
+   "keywords": [
+    "zoonoses"
+   ]
+  },
+  {
+   "title": "Vaccination calendars drawn",
+   "category": "Methods",
+   "keywords": [
+    "vaccination calendar"
+   ]
+  },
+  {
+   "title": "Workshop: disease signs matched",
+   "category": "Methods",
+   "keywords": [
+    "signs matched"
+   ]
+  },
+  {
+   "title": "Examination drill: diseases past questions",
+   "category": "Applications",
+   "keywords": [
+    "diseases",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Nutrient deficiency symptoms read",
+   "category": "Methods",
+   "keywords": [
+    "deficiency",
+    "symptoms"
+   ]
+  },
+  {
+   "title": "NPK roles in plant growth",
+   "category": "Theory",
+   "keywords": [
+    "NPK",
+    "roles"
+   ]
+  },
+  {
+   "title": "Organic manures: types and rates",
+   "category": "Methods",
+   "keywords": [
+    "manures",
+    "rates"
+   ]
+  },
+  {
+   "title": "Green manures and cover crops",
+   "category": "Applications",
+   "keywords": [
+    "green manures"
+   ]
+  },
+  {
+   "title": "Crop rotation plans drawn",
+   "category": "Methods",
+   "keywords": [
+    "rotation plans"
+   ]
+  },
+  {
+   "title": "Fallow and shifting cultivation today",
+   "category": "Theory",
+   "keywords": [
+    "fallow",
+    "shifting"
+   ]
+  },
+  {
+   "title": "Biofertilisers: rhizobium use",
+   "category": "Applications",
+   "keywords": [
+    "biofertilisers"
+   ]
+  },
+  {
+   "title": "Soil testing interpreted simply",
+   "category": "Methods",
+   "keywords": [
+    "soil testing"
+   ]
+  },
+  {
+   "title": "Workshop: fertiliser schedule built",
+   "category": "Applications",
+   "keywords": [
+    "schedule"
+   ]
+  },
+  {
+   "title": "Examination drill: fertility past questions",
+   "category": "Applications",
+   "keywords": [
+    "fertility",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Enterprise budgets drawn line by line",
+   "category": "Methods",
+   "keywords": [
+    "enterprise budget"
+   ]
+  },
+  {
+   "title": "Cash flow projections made",
+   "category": "Methods",
+   "keywords": [
+    "cash flow",
+    "projections"
+   ]
+  },
+  {
+   "title": "Record books: daily to annual",
+   "category": "Methods",
+   "keywords": [
+    "record books"
+   ]
+  },
+  {
+   "title": "Input costs tracked honestly",
+   "category": "Methods",
+   "keywords": [
+    "input costs"
+   ]
+  },
+  {
+   "title": "Output pricing decisions taken",
+   "category": "Methods",
+   "keywords": [
+    "pricing",
+    "output"
+   ]
+  },
+  {
+   "title": "Loans: appraising repayment",
+   "category": "Methods",
+   "keywords": [
+    "loans",
+    "repayment"
+   ]
+  },
+  {
+   "title": "Insurance for crops and herds",
+   "category": "Applications",
+   "keywords": [
+    "insurance",
+    "crops"
+   ]
+  },
+  {
+   "title": "Diversification decisions tested",
+   "category": "Applications",
+   "keywords": [
+    "diversification"
+   ]
+  },
+  {
+   "title": "Workshop: a one-acre plan priced",
+   "category": "Applications",
+   "keywords": [
+    "one-acre plan"
+   ]
+  },
+  {
+   "title": "Examination drill: farm business past questions",
+   "category": "Applications",
+   "keywords": [
+    "farm business",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Catfish: hatchery to table",
+   "category": "Applications",
+   "keywords": [
+    "catfish",
+    "hatchery"
+   ]
+  },
+  {
+   "title": "Tilapia pond culture steps",
+   "category": "Applications",
+   "keywords": [
+    "tilapia",
+    "ponds"
+   ]
+  },
+  {
+   "title": "Water quality: DO, pH, ammonia",
+   "category": "Methods",
+   "keywords": [
+    "water quality",
+    "DO"
+   ]
+  },
+  {
+   "title": "Feeding fish: rates and times",
+   "category": "Methods",
+   "keywords": [
+    "feeding fish"
+   ]
+  },
+  {
+   "title": "Fish diseases and treatment",
+   "category": "Applications",
+   "keywords": [
+    "fish diseases"
+   ]
+  },
+  {
+   "title": "Harvesting and marketing fish",
+   "category": "Applications",
+   "keywords": [
+    "harvesting",
+    "marketing"
+   ]
+  },
+  {
+   "title": "Wildlife: habitats and tracks",
+   "category": "Theory",
+   "keywords": [
+    "wildlife",
+    "habitats"
+   ]
+  },
+  {
+   "title": "Anti-poaching patrols simulated",
+   "category": "Applications",
+   "keywords": [
+    "anti-poaching"
+   ]
+  },
+  {
+   "title": "Game ranching as a business",
+   "category": "Applications",
+   "keywords": [
+    "game ranching"
+   ]
+  },
+  {
+   "title": "Examination drill: fisheries past questions",
+   "category": "Applications",
+   "keywords": [
+    "fisheries",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed drill: crops",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "crops"
+   ]
+  },
+  {
+   "title": "Timed drill: animals",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "animals"
+   ]
+  },
+  {
+   "title": "Timed drill: soils",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "soils"
+   ]
+  },
+  {
+   "title": "Timed drill: economics and extension",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "economics"
+   ]
+  },
+  {
+   "title": "Calculations: population and feed",
+   "category": "Methods",
+   "keywords": [
+    "calculations"
+   ]
+  },
+  {
+   "title": "Diagrams: tools and structures",
+   "category": "Methods",
+   "keywords": [
+    "diagrams"
+   ]
+  },
+  {
+   "title": "Mock: 50 questions in 50 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Error analysis of your mock",
+   "category": "Methods",
+   "keywords": [
+    "error analysis"
+   ]
+  },
+  {
+   "title": "Facts: the last-night sheet",
+   "category": "Methods",
+   "keywords": [
+    "facts sheet"
+   ]
+  },
+  {
+   "title": "Exam day: the calm plan",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "plan"
+   ]
+  }
+ ]
 }
