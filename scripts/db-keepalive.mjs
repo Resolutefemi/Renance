@@ -17,7 +17,12 @@
 //   SUPABASE_DATABASE_URL  - pooled DSN (aws-1-eu-west-3…:5432)
 //   SUPABASE_URL           - https://zfxrmcwdnmmxjawmsiyp.supabase.co
 //   SUPABASE_SECRET_KEY    - sb_secret_… (REST ping)
-//   INSFORGE_DATABASE_URL  - the wire DSN
+//   INSFORGE_DATABASE_URL  - the lesson cache DSN (the founder's
+//                            second InsForge, 6zctb6jv)
+//   INSFORGE_MIRROR_DATABASE_URL - the user mirror DSN (the first
+//                            InsForge, dbeqj4dx) - optional; when set
+//                            both InsForge projects get their wire
+//                            ping every run
 //   KEEPALIVE_OUT          - where to write last-run.json
 //                            (default: <cwd>/supabase/keepalive/last-run.json)
 //
@@ -102,7 +107,8 @@ async function supabaseRestPing() {
 
 await wirePing('supabase', process.env.SUPABASE_DATABASE_URL);
 await supabaseRestPing();
-await wirePing('insforge', process.env.INSFORGE_DATABASE_URL);
+await wirePing('insforge-cache', process.env.INSFORGE_DATABASE_URL);
+await wirePing('insforge-mirror', process.env.INSFORGE_MIRROR_DATABASE_URL);
 
 try {
   mkdirSync(dirname(out), { recursive: true });

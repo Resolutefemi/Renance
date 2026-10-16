@@ -86,6 +86,9 @@ func (s *Store) AddExamQuestion(ctx context.Context, q *SchoolExamQuestion) (*Sc
         if !errors.Is(err, pgx.ErrNoRows) {
                 return nil, fmt.Errorf("store: exam dedupe: %w", err)
         }
+        if q.Options == nil {
+                q.Options = []string{} // never store the json null literal (see store.UpsertProfile)
+        }
         opts, err := json.Marshal(q.Options)
         if err != nil {
                 return nil, fmt.Errorf("store: exam options marshal: %w", err)
