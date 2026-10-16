@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: 'Renance',
     images: [
       {
-        url: '/og.jpg',
+        url: '/og-2026.jpg',
         width: 1200,
         height: 630,
         alt: 'Renance privacy policy',

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Renance",
     images: [
       {
-        url: "https://renance.app/og.jpg",
+        url: "https://renance.app/og-2026.jpg",
         width: 1200,
         height: 630,
         alt: "Renance for Schools, the school management suite in Nigeria's educational app",
@@ -34,14 +34,14 @@ export const metadata: Metadata = {
     title: "Renance for Schools | School Management Software in Nigeria",
     description:
       "NERDC curriculum, attendance, results, fees and ID cards: run your school on Renance, Nigeria's educational app.",
-    images: ["https://renance.app/og.jpg"],
+    images: ["https://renance.app/og-2026.jpg"],
   },
 };
 
 const faqs = [
   {
     q: "Is Renance a school management software?",
-    a: "Yes. Renance is an edtech platform in Nigeria with two sides: an educational app for candidates (JAMB, WAEC, NECO and Post-UTME past questions, including over 135,000 tertiary institution past questions, CBT mocks, lesson notes and Renance AI) and Renance for Schools, a full school management suite that covers the NERDC curriculum, syllabuses, lesson notes, attendance, results, school fees and student ID cards. Schools register free and manage everything from one desk.",
+    a: "Yes. Renance is an edtech platform in Nigeria with two sides: an educational app for candidates (JAMB, WAEC, NECO and Post-UTME past questions, including over 200,000 Post-UTME and tertiary institution course questions, CBT mocks, lesson notes and Renance AI) and Renance for Schools, a full school management suite that covers the NERDC curriculum, syllabuses, lesson notes, attendance, results, school fees and student ID cards. Schools register free and manage everything from one desk.",
   },
   {
     q: "How much does Renance for Schools cost?",
@@ -293,8 +293,8 @@ export default function ForSchoolsPage() {
                 <span className="rfs-kicker">For your students</span>
                 <p>
                   Every student you enroll inherits the Renance educational app:
-                  235,110+ JAMB, WAEC, NECO and Post-UTME past questions with
-                  worked solutions, including over 135,000 tertiary institution
+                  290,000+ JAMB, WAEC, NECO, Post-UTME and tertiary institution past questions with
+                  worked solutions, including over 200,000 Post-UTME and tertiary institution course questions
                   past questions for universities, polytechnics and colleges of
                   education. They get free server-graded CBT mock exams that
                   feel like the real exam hall, NERDC lesson notes, and the

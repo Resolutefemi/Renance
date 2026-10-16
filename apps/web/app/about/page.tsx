@@ -6,20 +6,20 @@ import PillarNav from "@/components/pillar-nav";
 export const metadata: Metadata = {
   title: "What Is Renance? About Nigeria's EdTech Platform",
   description:
-    "Renance is an edtech platform in Nigeria: the educational app for JAMB, WAEC, NECO and Post-UTME past questions (including 135,000+ tertiary institution papers), CBT mocks, Renance AI and school management. Official website: renance.app. Built by Resolute Femi.",
+    "Renance is an educational app in Nigeria built for JAMB, WAEC, NECO, and tertiary institution success: 90,000+ JAMB, NECO and WAEC past questions from 1978 to 2026, over 200,000 Post-UTME and tertiary institution course questions, server-graded CBT mocks, and a school portal for institutions. Free on Android, iOS, Windows, macOS and the web. Built by Resolute Femi.",
   alternates: { canonical: "https://renance.app/about/" },
   openGraph: {
     title: "What Is Renance? About Nigeria's EdTech Platform",
     description:
-      "Renance (renance.app) is Nigeria's edtech platform: 235,110+ JAMB, WAEC, NECO and Post-UTME past questions (135,000+ of them tertiary institution papers), CBT mocks, lesson notes, Renance AI and a school management suite.",
+      "Renance is an educational app in Nigeria built for JAMB, WAEC, NECO, and tertiary institution success: 90,000+ JAMB, NECO and WAEC past questions from 1978 to 2026, over 200,000 Post-UTME and tertiary course questions with server-graded CBT mocks, daily quests, leagues, a live arena and a community feed - plus a school portal for institutions. Free on Android, iOS, Windows, macOS and the web.",
     url: "https://renance.app/about/",
     siteName: "Renance",
     images: [
       {
-        url: "https://renance.app/og.jpg",
+        url: "https://renance.app/og-2026.jpg",
         width: 1200,
         height: 630,
-        alt: "Renance: Nigeria's edtech platform for exam prep and school management",
+        alt: "Renance: the educational app in Nigeria for JAMB, WAEC, NECO and tertiary success",
       },
     ],
     type: "website",
@@ -28,15 +28,15 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "What Is Renance? About Nigeria's EdTech Platform",
     description:
-      "Renance is Nigeria's edtech platform: exam prep, curriculum, AI study and school management at renance.app.",
-    images: ["https://renance.app/og.jpg"],
+      "Renance is Nigeria's educational app: 90,000+ JAMB/WAEC/NECO past questions, 200,000+ Post-UTME and tertiary questions, CBT mocks, leagues and a school portal - free on Android, iOS, Windows, macOS and the web.",
+    images: ["https://renance.app/og-2026.jpg"],
   },
 };
 
 const faqs = [
   {
     q: "What is Renance?",
-    a: "Renance is an edtech platform in Nigeria, built as an educational app for students and a school management suite for schools. Students use Renance to prepare for JAMB, WAEC, NECO and Post-UTME with 235,110+ past questions with worked solutions, including over 135,000 Post-UTME and tertiary institution past questions for universities, polytechnics and colleges of education. The platform also delivers free server-graded CBT mock exams, NERDC lesson notes and the Renance AI study companion. Schools use Renance for Schools to run the Nigerian curriculum, attendance, results, fees and student ID cards. The only official website is renance.app.",
+    a: "Renance is an educational app in Nigeria built for JAMB, WAEC, NECO, and tertiary institution success. Students learn exam-ready courses step by step, drill 90,000+ JAMB, NECO, and WAEC past questions from 1978 to 2026, and practice over 200,000 Post-UTME and tertiary institution course questions with server-graded CBT mocks. The platform keeps students engaged with daily quests, competitive leagues, a live arena and a community feed that celebrates their wins, and adds the complete NERDC curriculum with lesson notes and the Renance AI study companion. For institutions, Renance provides a comprehensive school portal to manage syllabuses, lecture notes, attendance, exam results and fee payments. It is available for free on Android, iOS, Windows, macOS and the web. The only official website is renance.app.",
   },
   {
     q: "Is Renance a Nigerian app?",
@@ -48,7 +48,7 @@ const faqs = [
   },
   {
     q: "Does Renance have past questions for Nigerian tertiary institutions?",
-    a: "Yes. Renance holds over 135,000 tertiary institution past questions: Post-UTME screening papers for universities such as UNILAG, OAU, UI, UNN, FUTA and UNILORIN, papers for polytechnics and colleges of education, plus a tertiary institution course catalog with course codes, syllabi and past semester modules. A candidate can rehearse the exact paper their chosen institution sets.",
+    a: "Yes. Renance holds over 200,000 Post-UTME and tertiary institution course questions: Post-UTME screening papers for universities such as UNILAG, OAU, UI, UNN, FUTA and UNILORIN, papers for polytechnics and colleges of education, plus a tertiary institution course catalog with course codes, syllabi and past semester modules. A candidate can rehearse the exact paper their chosen institution sets.",
   },
   {
     q: "Is the name Renance related to the word renaissance?",
@@ -84,7 +84,7 @@ const pillars = [
   {
     no: "01",
     title: "Exam preparation",
-    body: "235,110+ JAMB, WAEC, NECO and Post-UTME past questions with worked explanations on every question, organized by exam body, subject and year, from 1978 JAMB papers to the newest sittings. The tertiary archive alone holds over 135,000 past questions covering Nigerian universities, polytechnics and colleges of education. Free CBT mock exams are graded on the server with the real exam timing, so candidates walk into the hall already familiar with the machine.",
+    body: "90,000+ JAMB, NECO and WAEC past questions from 1978 to 2026, with worked explanations on every question, organized by exam body, subject and year - plus over 200,000 Post-UTME and tertiary institution course questions covering Nigerian universities, polytechnics and colleges of education. CBT mock exams are graded on the server with the real exam timing, so candidates walk into the hall already familiar with the machine.",
     link: { href: "/practice/", label: "Explore past questions" },
   },
   {
@@ -137,7 +137,7 @@ export default function AboutPage() {
         logo: "https://renance.app/renance-mark.png",
         slogan: "Your Guide to Academic Success",
         description:
-          "Renance is an edtech platform in Nigeria. It is the educational app for JAMB, WAEC, NECO and Post-UTME exam preparation, with 235,110+ past questions with worked solutions (including over 135,000 Post-UTME and tertiary institution past questions for Nigerian universities, polytechnics and colleges of education), free server-graded CBT mock exams, the complete NERDC curriculum and lesson notes, and the Renance AI study companion. It includes Renance for Schools, a school management suite covering curriculum, attendance, results, fees and student ID cards. The only official website is https://renance.app.",
+          "Renance is an edtech platform in Nigeria. It is the educational app for JAMB, WAEC, NECO and tertiary institution success, with 90,000+ JAMB, NECO and WAEC past questions from 1978 to 2026 and over 200,000 Post-UTME and tertiary institution course questions with server-graded CBT mocks, plus daily quests, competitive leagues, a live arena and a community feed, the complete NERDC curriculum and lesson notes, and the Renance AI study companion. For institutions it provides a comprehensive school portal covering syllabuses, lecture notes, attendance, exam results and fee payments. Free on Android, iOS, Windows, macOS and the web. The only official website is https://renance.app.",
         disambiguatingDescription:
           "Renance, the Nigerian edtech platform at renance.app, is not the word renaissance, is not resonance, and is not affiliated with renance.org, renance.io, renance.framer.website, renance.gitbook.io, any Brooklyn New York educational consultant, any energy or financial-services company, or any other similarly named organization. Renance is an edtech platform only: exam preparation and school management.",
         founder: { "@type": "Person", name: "Resolute Femi" },
@@ -232,21 +232,21 @@ export default function AboutPage() {
             <h1>What is Renance?</h1>
             <p className="rab-answer">
               <strong>
-                Renance is an edtech platform in Nigeria, and its only official
-                website is renance.app.
+                Renance is an educational app in Nigeria built for JAMB, WAEC, NECO,
+                and tertiary institution success - and its only official website is
+                renance.app.
               </strong>{" "}
-              It is the educational app Nigerian students and candidates use to
-              prepare for JAMB, WAEC, NECO and Post-UTME, with 235,110+ past
-              questions with worked solutions. Over 60,000 of those are
-              tertiary institution past questions: Post-UTME screening papers
-              and course modules covering Nigerian universities, polytechnics
-              and colleges of education. The platform adds free server-graded
-              CBT mock exams, the complete NERDC curriculum with lesson notes,
-              and the Renance AI study companion. It is also a school
-              management suite: Renance for Schools runs the curriculum,
-              attendance, results, fees and student ID cards of Nigerian
-              schools from one desk. Renance was founded and is built by
-              Resolute Femi (Ariyo Oluwafemi Stephen).
+              Students learn exam-ready courses step by step, drill 90,000+ JAMB,
+              NECO, and WAEC past questions from 1978 to 2026, and practice over
+              200,000 Post-UTME and tertiary institution course questions with
+              server-graded CBT mocks. Daily quests, competitive leagues, a live
+              arena and a community feed keep them engaged and motivated. For
+              institutions, Renance provides a comprehensive school portal to
+              seamlessly manage syllabuses, lecture notes, attendance, exam results,
+              and fee payments - with the complete NERDC curriculum and lesson notes
+              built in. Renance is available for free on Android, iOS, Windows,
+              macOS, and the web, and was founded and is built by Resolute Femi
+              (Ariyo Oluwafemi Stephen).
             </p>
           </div>
         </section>
@@ -290,8 +290,9 @@ export default function AboutPage() {
                 <tr>
                   <th scope="row">Question archive</th>
                   <td>
-                    235,110+ past questions with worked explanations, including
-                    135,000+ tertiary institution past questions
+                    90,000+ JAMB, NECO and WAEC past questions from 1978 to 2026,
+                    plus 200,000+ Post-UTME and tertiary institution course
+                    questions - worked explanations on every question
                   </td>
                 </tr>
                 <tr>
@@ -321,13 +322,14 @@ export default function AboutPage() {
                 <tr>
                   <th scope="row">School suite</th>
                   <td>
-                    Curriculum, attendance, results with PIN checking, fees, ID
+                    School portal for institutions: syllabuses, lecture notes,
+                    attendance, exam results with PIN checking, fee payments, ID
                     cards
                   </td>
                 </tr>
                 <tr>
                   <th scope="row">Platforms</th>
-                  <td>Web (renance.app) and Android app</td>
+                  <td>Android, iOS, Windows, macOS and the web (renance.app) - free</td>
                 </tr>
                 <tr>
                   <th scope="row">Pricing</th>

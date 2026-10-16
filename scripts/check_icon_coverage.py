@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
-"""Verify every Material Symbols ligature the web app uses ships in the subset.
+"""Verify every Material Symbols ligature the web app actually SHAPES.
 
-The subset font only renders the ligatures it was built with; anything
-missing falls back to raw text ("auto_stories" spelled out), which bursts
-out of its icon chip and looks off-center / broken. This audit scans the
-tsx/ts sources for every ligature (literal children and `icon:` data
-fields), reads the shipped woff2, and exits non-zero on any gap.
+The audit shapes each icon name with HarfBuzz against the shipped
+subset (decompressed to its TTF payload first - some HarfBuzz builds
+read a woff2's cmap but never apply its GSUB, and browsers decompress
+before shaping anyway). An icon that shapes to ONE glyph renders as the
+icon; anything that stays N letter glyphs falls back to raw text
+("auto_stories" spelled out), which bursts out of its icon chip.
+
+History: the first audit compared ligature GLYPH NAMES, which the
+Google-served subset renames to uniExxx - it reported every icon
+missing while the font was fine. Shaping is the ground truth.
 
 Usage:  python3 scripts/check_icon_coverage.py
 """
+import io
 import re
 import sys
 from pathlib import Path
@@ -43,37 +49,48 @@ def used_ligatures():
     return {u for u in used if u not in IGNORE and len(u) > 2}
 
 
-def shipped_ligatures():
+def shaping_font() -> bytes:
+    """The subset's TTF payload (what a browser shapes after decode)."""
     from fontTools.ttLib import TTFont
 
-    font = TTFont(FONT)
-    names = set()
-    gsub = font["GSUB"].table
-    for lk in gsub.LookupList.Lookup:
-        for st in lk.SubTable:
-            t = st.ExtSubTable if lk.LookupType == 7 else st
-            lt = t.LookupType if hasattr(t, "LookupType") else lk.LookupType
-            if lt == 4 and getattr(t, "ligatures", None):
-                for _first, ligs in t.ligatures.items():
-                    for lig in ligs:
-                        names.add(lig.LigGlyph)
-    return names
+    raw = TTFont(FONT)
+    raw.flavor = None
+    out = io.BytesIO()
+    raw.save(out)
+    return out.getvalue()
 
 
 def main():
+    try:
+        import uharfbuzz as hb
+    except ImportError:
+        print("uharfbuzz is required:  pip install uharfbuzz")
+        return 2
+
     used = used_ligatures()
-    shipped = shipped_ligatures()
-    missing = sorted(used - shipped)
-    print(f"icon audit: {len(used)} ligatures used, {len(shipped)} shipped")
-    if missing:
+    data = shaping_font()
+    face = hb.Face(data)
+    font = hb.Font(face)
+
+    def glyph_count(text: str) -> int:
+        buf = hb.Buffer()
+        buf.add_str(text)
+        buf.guess_segment_properties()
+        hb.shape(font, buf)
+        return len(buf.glyph_infos)
+
+    broken = sorted(n for n in used if glyph_count(n) != 1)
+    print(f"icon audit: {len(used)} ligatures used, "
+          f"{FONT.stat().st_size / 1024:.0f} KB subset")
+    if broken:
         print("MISSING from the subset font (they render as raw text):")
-        for m in missing:
+        for m in broken:
             print("  ", m)
-        print("\nFix: add real Material Symbols names to NEW_ICONS in")
-        print("scripts/subset_material_symbols.py, download the upstream")
-        print("variable TTF, re-run it, or correct the ligature name above.")
+        print("\nFix: rebuild the subset - download the upstream variable")
+        print("TTF and run scripts/rebuild_icon_subset.py /tmp/msym.ttf,")
+        print("or correct the ligature name above.")
         return 1
-    print("coverage ok")
+    print("coverage ok - every used icon shapes to one glyph")
     return 0
 
 

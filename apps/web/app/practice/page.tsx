@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: 'Practice Past Questions - JAMB, WAEC, NECO',
   description:
     'Free JAMB, WAEC, NECO and Post UTME past questions with full explanations and CBT mode. ' +
-    'Nigeria\'s largest exam practice bank - 235,110+ questions, 100% free.',
+    'Nigeria\'s largest exam practice bank - 290,000+ questions, 100% free.',
   keywords: [
     'JAMB past questions',
     'WAEC past questions',
@@ -93,13 +93,13 @@ export default function PracticeRootPage() {
               Past Questions Practice
             </h1>
             <p className="mt-3 text-sm text-on-surface-variant max-w-lg mx-auto leading-relaxed">
-              235,110+ free past questions across JAMB, WAEC, NECO and Post UTME.
+              290,000+ free past questions across JAMB, WAEC, NECO and Post UTME.
               Full explanations, CBT timer, instant grading - built for Nigerian students.
             </p>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-xs text-on-surface-variant">
               <span className="flex items-center gap-1">
                 <span className="material-symbols-outlined text-[14px] text-primary">check_circle</span>
-                235,110+ questions
+                290,000+ questions
               </span>
               <span className="flex items-center gap-1">
                 <span className="material-symbols-outlined text-[14px] text-primary">check_circle</span>

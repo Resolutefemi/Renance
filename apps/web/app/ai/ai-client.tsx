@@ -328,7 +328,7 @@ export default function AiClient() {
             <h1 className="mt-2 text-xl font-extrabold tracking-tight">Renance AI Studio</h1>
             <p className="mt-2 text-[13px] font-semibold leading-relaxed text-white/95">
               Chats, folders and memories, quizzes, notes, notebooks and lesson notes - grounded
-              on {stats ? stats.questions.toLocaleString() : '235,110+'} real past questions.
+              on {stats ? stats.questions.toLocaleString() : '290,000+'} real past questions.
             </p>
           </div>
           <Link
@@ -594,7 +594,7 @@ export default function AiClient() {
                       </div>
                       <p className="mt-2 text-[13px] font-semibold leading-relaxed text-white/95">
                         The study companion trained on Renance itself
-                        {stats ? ` - ${stats.questions.toLocaleString()} real past questions across ${stats.exams} exam banks` : ' - 235,110+ real past questions'}
+                        {stats ? ` - ${stats.questions.toLocaleString()} real past questions across ${stats.exams} exam banks` : ' - 290,000+ real past questions'}
                         , the scheme of work and lesson notes. Ask it to teach, research past
                         questions, drill or mark you.
                       </p>

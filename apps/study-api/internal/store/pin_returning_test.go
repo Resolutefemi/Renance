@@ -92,6 +92,85 @@ func TestPinReturningValuesShapes(t *testing.T) {
         }
 }
 
+// TestPinReturningCastColumns covers the school module's house pattern
+// - RETURNING lists that cast columns to text ("RETURNING id,
+// school_id::text"). The CI bug 2026-10-16: the rewrite copied the cast
+// INTO the INSERT column list ("..., school_id::text)"), which is a
+// syntax error, so every school write to the mirror died. A cast must
+// pin its BASE column; expressions (COALESCE) must be skipped.
+func TestPinReturningCastColumns(t *testing.T) {
+        // school.fee_payments shape (the exact CI failure).
+        sqlFees := `INSERT INTO school.fee_payments (school_id, fee_id, student_id, amount_kobo, method, reference, paid_on)
+                VALUES ($1, $2, $3, $4, $5, $6, COALESCE(NULLIF($7,'')::date, current_date))
+                RETURNING id, paid_on::text`
+        newSQL, args, pinned := pinReturningValues(sqlFees,
+                []any{"s1", "f1", "st1", int64(2500), "transfer", "E2E-1", ""},
+                []any{ptr("5d2bcd8d-f4fb-4890-bd69-d04e1c7339e1"), ptr("2026-10-16")})
+        if !pinned {
+                t.Fatal("expected the fee insert to be pinned")
+        }
+        if strings.Contains(newSQL, "::text)") || strings.Contains(newSQL, "::text,") {
+                t.Fatalf("a cast leaked into the column list: %s", newSQL)
+        }
+        // paid_on is inserted explicitly already (same arg value the
+        // primary returned), so only the generated id is appended.
+        if !strings.Contains(newSQL, "reference, paid_on, id) VALUES") {
+                t.Fatalf("cast column not pinned as its base: %s", newSQL)
+        }
+        if len(args) != 8 || args[7] != "5d2bcd8d-f4fb-4890-bd69-d04e1c7339e1" {
+                t.Fatalf("args: %v", args)
+        }
+
+        // school.exams shape: cast column + plain id, ON CONFLICT suffix.
+        sqlExams := `INSERT INTO school.exams (school_id, class_id, subject_id, term, session, title, duration_minutes, question_count, status, created_by)
+                VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+                ON CONFLICT (class_id, subject_id, term, session) DO UPDATE SET title = EXCLUDED.title
+                RETURNING id, school_id::text`
+        newSQL, _, pinned = pinReturningValues(sqlExams,
+                []any{"s1", "c1", "sub1", "1", "2025/2026", "E2E paper", "45", "4", "published", "u1"},
+                []any{ptr("b08f2e49"), ptr("s1")})
+        if !pinned {
+                t.Fatal("expected the exam insert to be pinned")
+        }
+        if strings.Contains(newSQL, "school_id::text") {
+                t.Fatalf("cast leaked into the column list: %s", newSQL)
+        }
+        if !strings.Contains(newSQL, "created_by, id) VALUES") {
+                t.Fatalf("cast base column missing: %s", newSQL)
+        }
+        // school_id is already inserted explicitly - only id is appended.
+        if strings.Count(newSQL, "school_id") != 1 {
+                t.Fatalf("school_id duplicated: %s", newSQL)
+        }
+
+        // COALESCE expressions are skipped, plain columns still pin.
+        sqlCards := `INSERT INTO school.id_cards (school_id, student_id, serial, session)
+                VALUES ($1, $2, $3, $4)
+                RETURNING id, school_id::text, student_id::text, serial, session, COALESCE(issued_by::text, ''), issued_at`
+        var issuedBy *string
+        newSQL, args, pinned = pinReturningValues(sqlCards,
+                []any{"s1", "st1", "SER-1", "2025/2026"},
+                []any{ptr("id1"), ptr("s1"), ptr("st1"), ptr("SER-1"), ptr("2025/2026"), ptr(issuedBy), ptr("2026-10-16")})
+        if !pinned {
+                t.Fatal("expected the idcard insert to be pinned")
+        }
+        if strings.Contains(newSQL, "COALESCE") && strings.Contains(newSQL, "RETURNING") {
+                t.Fatalf("RETURNING clause survived: %s", newSQL)
+        }
+        if strings.Contains(newSQL, "issued_by") {
+                t.Fatalf("COALESCE expression was not skipped: %s", newSQL)
+        }
+        if !strings.Contains(newSQL, "serial, session, id, issued_at) VALUES") {
+                t.Fatalf("skip/pin mix wrong: %s", newSQL)
+        }
+        // 4 original args + 2 pinned values (id, issued_at): the cast
+        // columns school_id/student_id were inserted explicitly already,
+        // so their bases dedupe out and the COALESCE is skipped.
+        if len(args) != 6 || args[4] != "id1" || args[5] != "2026-10-16" {
+                t.Fatalf("args: %v", args)
+        }
+}
+
 // TestDerefScanDestBytes verifies []byte scanned values replay as
 // strings (jsonb/text round-trip; the schema has no bytea columns).
 func TestDerefScanDestBytes(t *testing.T) {

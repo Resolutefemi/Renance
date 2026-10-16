@@ -230,7 +230,7 @@ function SharedQuizClient() {
               href="/register"
               className="rounded-xl bg-primary py-3.5 text-center text-[14px] font-semibold text-on-primary transition active:scale-[0.98]"
             >
-              Join Renance free - 235,110+ past questions
+              Join Renance free - 290,000+ past questions
             </Link>
             <Link
               href="/ai"

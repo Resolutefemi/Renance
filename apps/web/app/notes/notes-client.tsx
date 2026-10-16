@@ -139,7 +139,7 @@ export function NotesClient({ lessons }: { lessons: LessonCard[] }) {
                 <p className="text-[15.5px] font-semibold">PDF notes with Renance AI</p>
                 <p className="mt-1 max-w-lg text-[13px] font-semibold leading-relaxed text-on-primary/95">
                   Study notes, full notebooks and school lesson notes in the house template -
-                  grounded on 235,110+ real past questions, exportable as PDF, saved to this
+                  grounded on 290,000+ real past questions, exportable as PDF, saved to this
                   page the moment they are generated.
                 </p>
               </div>

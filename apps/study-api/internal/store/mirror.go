@@ -529,6 +529,16 @@ func min(a, b int) int {
 // where $3/$4 carry the values the primary RETURNED (the dest slice
 // after a successful Scan). UPDATE/DELETE never generate ids - they
 // replay verbatim.
+//
+// RETURNING casts ("RETURNING id, school_id::text" - the school
+// module's house pattern, founder CI bug 2026-10-16) pin their BASE
+// column: an INSERT column list cannot carry expressions, so the raw
+// rewrite produced "(..., school_id::text)" and every school write to
+// the mirror died with a syntax error. The pinned value is exactly the
+// text the primary returned and Postgres casts it back into the real
+// column type. Non-column expressions (COALESCE(issued_by::text, ''))
+// are skipped - the mirror regenerates that column and the boot sync
+// heals it.
 func pinReturningValues(sql string, args []any, dest []any) (string, []any, bool) {
         s := strings.TrimSpace(sql)
         up := strings.ToUpper(s)
@@ -584,10 +594,11 @@ func pinReturningValues(sql string, args []any, dest []any) (string, []any, bool
         var addCols []string
         var addVals []any
         for i, rc := range retCols {
-                if have[strings.ToLower(rc)] {
+                col, ok := pinnableColumn(rc)
+                if !ok || have[strings.ToLower(col)] {
                         continue
                 }
-                addCols = append(addCols, rc)
+                addCols = append(addCols, col)
                 addVals = append(addVals, derefScanDest(dest[i]))
         }
         if len(addCols) == 0 {
@@ -621,6 +632,30 @@ func pinReturningValues(sql string, args []any, dest []any) (string, []any, bool
 
 // insertHeadRe captures "INSERT INTO <table> (" (case-insensitive).
 var insertHeadRe = regexp.MustCompile(`(?i)^INSERT\s+INTO\s+([\w."]+)\s*\(`)
+
+// pinnableColumn maps a RETURNING item to the plain column it names:
+// "id" -> id; "paid_on::text" / "school_id::text" -> paid_on / school_id
+// (a cast pins its base column - the value is the same one the primary
+// returned and Postgres casts it back). Expressions (COALESCE(...),
+// function calls) are not columns - not pinnable.
+func pinnableColumn(item string) (string, bool) {
+        item = strings.TrimSpace(item)
+        if i := strings.Index(item, "::"); i >= 0 {
+                item = strings.TrimSpace(item[:i])
+        }
+        if item == "" {
+                return "", false
+        }
+        for j := 0; j < len(item); j++ {
+                if !isWordByte(item[j]) {
+                        return "", false // anything non-word: an expression
+                }
+        }
+        if item[0] >= '0' && item[0] <= '9' {
+                return "", false
+        }
+        return item, true
+}
 
 // lastKeyword finds the last whole-word, case-insensitive occurrence
 // of kw outside of string literals.
@@ -681,13 +716,42 @@ func isWordByte(b byte) bool {
 }
 
 // splitIdentList splits a comma-separated identifier list, trimming
-// spaces; empty items drop out.
+// spaces; empty items drop out. Commas inside parentheses (a RETURNING
+// COALESCE(x::text, '')) and inside single-quoted literals never split
+// - an expression must survive as ONE item so pinnableColumn can see
+// and skip it whole.
 func splitIdentList(s string) []string {
         var out []string
-        for _, part := range strings.Split(s, ",") {
-                if part = strings.TrimSpace(part); part != "" {
-                        out = append(out, part)
+        depth := 0
+        inStr := false
+        start := 0
+        for i := 0; i < len(s); i++ {
+                switch c := s[i]; {
+                case inStr:
+                        if c == '\'' {
+                                if i+1 < len(s) && s[i+1] == '\'' {
+                                        i++ // escaped quote
+                                } else {
+                                        inStr = false
+                                }
+                        }
+                case c == '\'':
+                        inStr = true
+                case c == '(':
+                        depth++
+                case c == ')':
+                        if depth > 0 {
+                                depth--
+                        }
+                case c == ',' && depth == 0:
+                        if part := strings.TrimSpace(s[start:i]); part != "" {
+                                out = append(out, part)
+                        }
+                        start = i + 1
                 }
+        }
+        if part := strings.TrimSpace(s[start:]); part != "" {
+                out = append(out, part)
         }
         return out
 }

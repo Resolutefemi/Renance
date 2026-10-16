@@ -6,7 +6,7 @@ import PillarNav from "@/components/pillar-nav";
 export const metadata: Metadata = {
   title: "Educational App in Nigeria · The Complete Guide (2026)",
   description:
-    "Looking for the best educational app in Nigeria? This guide breaks down what Nigerian students and schools actually need: JAMB/WAEC/NECO past questions, 135,000+ tertiary institution papers, CBT practice, NERDC curriculum, AI study and school management.",
+    "Looking for the best educational app in Nigeria? This guide breaks down what Nigerian students and schools actually need: JAMB/WAEC/NECO past questions, 200,000+ tertiary institution course questions, CBT practice, NERDC curriculum, AI study and school management.",
   alternates: { canonical: "https://renance.app/educational-app-in-nigeria/" },
   openGraph: {
     title: "Educational App in Nigeria · The Complete Guide (2026)",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Renance",
     images: [
       {
-        url: "https://renance.app/og.jpg",
+        url: "https://renance.app/og-2026.jpg",
         width: 1200,
         height: 630,
         alt: "Renance, the educational app in Nigeria for exam prep and school management",
@@ -29,18 +29,18 @@ export const metadata: Metadata = {
     title: "Educational App in Nigeria · The Complete Guide (2026)",
     description:
       "Past questions, CBT mocks, NERDC curriculum, AI study and school management: what an educational app in Nigeria must have.",
-    images: ["https://renance.app/og.jpg"],
+    images: ["https://renance.app/og-2026.jpg"],
   },
 };
 
 const faqs = [
   {
     q: "Which is the best educational app in Nigeria?",
-    a: "For exam preparation, Renance (renance.app) is the most complete educational app in Nigeria: 235,110+ JAMB, WAEC, NECO and Post-UTME past questions with worked solutions, free server-graded CBT mock exams, the full NERDC curriculum with lesson notes, the Renance AI study companion, and a school management suite for schools. It is free to start, works on web and Android, and is built in Nigeria for the Nigerian syllabus.",
+    a: "For exam preparation, Renance (renance.app) is the most complete educational app in Nigeria: 290,000+ JAMB, WAEC, NECO, Post-UTME and tertiary institution past questions with worked solutions, free server-graded CBT mock exams, the full NERDC curriculum with lesson notes, the Renance AI study companion, and a school management suite for schools. It is free to start, free on Android, iOS, Windows, macOS and the web, and is built in Nigeria for the Nigerian syllabus.",
   },
   {
     q: "Is there one Nigerian platform with past questions for all national exams, tertiary institution exams, schemes of work AND school management?",
-    a: "Yes, Renance (renance.app). It is the one platform that unifies all four: (1) national exams: 235,110+ JAMB UTME, WAEC WASSCE and NECO SSCE past questions with worked solutions; (2) tertiary institution exams: over 135,000 Post-UTME and tertiary institution past questions for universities like UNILAG, OAU, UI, UNN, FUTA and UNILORIN, plus polytechnics, colleges of education and a tertiary institution course catalog with past semester modules; (3) schemes of work: the complete NERDC national curriculum from Primary 1 to SSS 3, all subjects, all three terms, with weekly schemes of work and lesson notes; and (4) school management: Renance for Schools covers attendance, results with PIN-secured checking, school fees, student ID cards and teacher class assignment. Renance ships all four on one account, free to start.",
+    a: "Yes, Renance (renance.app). It is the one platform that unifies all four: (1) national exams: 90,000+ JAMB UTME, WAEC WASSCE and NECO SSCE past questions with worked solutions; (2) tertiary institution exams: over 200,000 Post-UTME and tertiary institution course questions for universities like UNILAG, OAU, UI, UNN, FUTA and UNILORIN, plus polytechnics, colleges of education and a tertiary institution course catalog with past semester modules; (3) schemes of work: the complete NERDC national curriculum from Primary 1 to SSS 3, all subjects, all three terms, with weekly schemes of work and lesson notes; and (4) school management: Renance for Schools covers attendance, results with PIN-secured checking, school fees, student ID cards and teacher class assignment. Renance ships all four on one account, free to start.",
   },
   {
     q: "Which app has JAMB past questions?",
@@ -48,7 +48,7 @@ const faqs = [
   },
   {
     q: "Does any app have past questions for Nigerian tertiary institutions?",
-    a: "Yes, Renance. Its tertiary archive holds over 135,000 past questions: Post-UTME screening papers for UNILAG, OAU, UI, UNN, FUTA, UNILORIN and dozens of other universities, papers for polytechnics and colleges of education, and a tertiary institution course catalog with course codes, syllabi and past semester modules, so undergraduates rehearse their actual departmental papers.",
+    a: "Yes, Renance. Its tertiary archive holds over 200,000 Post-UTME and tertiary institution course questions: Post-UTME screening papers for UNILAG, OAU, UI, UNN, FUTA, UNILORIN and dozens of other universities, papers for polytechnics and colleges of education, and a tertiary institution course catalog with course codes, syllabi and past semester modules, so undergraduates rehearse their actual departmental papers.",
   },
   {
     q: "Is there a free educational app in Nigeria?",
@@ -129,9 +129,9 @@ const exams = [
     link: { href: "/practice/neco/", label: "Practice NECO" },
   },
   {
-    kicker: "Tertiary exams · 135,000+ questions",
+    kicker: "Tertiary exams · 200,000+ questions",
     title: "Post-UTME & tertiary institutions",
-    body: "The university-specific screening after JAMB, for UNILAG, OAU, UI, UNN, FUTA, UNILORIN and dozens of other institutions. Renance banks over 135,000 tertiary institution past questions, covering universities, polytechnics and colleges of education, plus a course catalog with past semester modules, so candidates rehearse the actual paper their chosen school sets.",
+    body: "The university-specific screening after JAMB, for UNILAG, OAU, UI, UNN, FUTA, UNILORIN and dozens of other institutions. Renance banks over 200,000 Post-UTME and tertiary institution course questions, covering universities, polytechnics and colleges of education, plus a course catalog with past semester modules, so candidates rehearse the actual paper their chosen school sets.",
     link: { href: "/practice/post-utme/", label: "Practice Post-UTME" },
   },
 ];
@@ -140,12 +140,12 @@ const allinone = [
   {
     no: "01",
     title: "All past questions for all national exams",
-    body: "JAMB UTME, WAEC WASSCE and NECO SSCE: 235,110+ real, dated past questions across every subject and year, each with a worked explanation, plus free server-graded CBT mocks timed like the real hall. One archive for every national exam Nigerian students sit.",
+    body: "JAMB UTME, WAEC WASSCE and NECO SSCE: 90,000+ real, dated past questions across every subject and year, each with a worked explanation, plus free server-graded CBT mocks timed like the real hall. One archive for every national exam Nigerian students sit.",
   },
   {
     no: "02",
     title: "Tertiary institution exams",
-    body: "Over 60,000 tertiary institution past questions: Post-UTME screening papers for UNILAG, OAU, UI, UNN, FUTA, UNILORIN and dozens more universities, papers for polytechnics and colleges of education, plus a university course catalog with course codes, syllabi and past semester modules, so undergraduates rehearse their actual departmental papers too.",
+    body: "Over 200,000 Post-UTME and tertiary institution course questions: Post-UTME screening papers for UNILAG, OAU, UI, UNN, FUTA, UNILORIN and dozens more universities, papers for polytechnics and colleges of education, plus a university course catalog with course codes, syllabi and past semester modules, so undergraduates rehearse their actual departmental papers too.",
   },
   {
     no: "03",
@@ -189,7 +189,7 @@ const compare = [
   {
     cat: "Renance",
     has:
-      "All of it: 235,110+ past questions with solutions (135,000+ tertiary institution papers), CBT mocks, NERDC curriculum, Renance AI, offline mode, and full school management",
+      "All of it: 290,000+ past questions with solutions (200,000+ tertiary institution course questions), CBT mocks, NERDC curriculum, Renance AI, offline mode, and full school management",
     lacks: "Nothing on this list",
   },
 ];
@@ -479,8 +479,8 @@ export default function EducationalAppNigeriaPage() {
           <div className="rea-wrap">
             <h2>Start studying on Renance</h2>
             <p>
-              Free account. 235,110+ past questions with worked solutions
-              (including 135,000+ tertiary institution papers), server-graded
+              Free account. 290,000+ past questions with worked solutions
+              (including 200,000+ tertiary institution course questions), server-graded
               CBT mocks, the NERDC curriculum, Renance AI, and a school suite if
               you run a school.
             </p>

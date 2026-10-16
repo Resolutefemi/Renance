@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import './globals.css';
 
 import { SITE_URL } from '@/lib/site-url';
-import { OG_IMAGES } from '@/lib/og';
+import { OG_IMAGES, RENANCE_DESCRIPTION } from '@/lib/og';
 import ContentGuard from '@/components/content-guard';
 import OfflineBanner from '@/components/offline-banner';
 import SwRegister from '@/components/sw-register';
@@ -41,7 +41,7 @@ const renanceJsonLd = {
         height: 512,
       },
       description:
-        'Renance is an edtech platform in Nigeria - the educational app for students, with 235,110+ JAMB, WAEC, NECO and Post-UTME past questions (including over 135,000 Post-UTME and tertiary institution past questions for Nigerian universities, polytechnics and colleges of education), free server-graded CBT mock exams, NERDC curriculum schemes of work, lesson notes and an AI study companion - plus Renance for Schools, a school management suite (curriculum, attendance, results, fees, ID cards). Free for students and schools. The only official website is renance.app.',
+        'Renance is an educational app in Nigeria built for JAMB, WAEC, NECO, and tertiary institution success. Students learn exam-ready courses step by step, drill 90,000+ JAMB, NECO, and WAEC past questions from 1978 to 2026, and practice over 200,000 Post-UTME and tertiary institution course questions with server-graded CBT mocks - with daily quests, competitive leagues, a live arena and a community feed, free on Android, iOS, Windows, macOS and the web. For institutions, Renance provides a comprehensive school portal to manage syllabuses, lecture notes, attendance, exam results and fee payments, alongside the NERDC curriculum, lesson notes and Renance AI. The only official website is renance.app.',
       /* Knowledge-graph disambiguation: Google must never fold
        * "Renance" into renaissance/resonance or the unrelated
        * renance.org / renance.io entities when it mints the brand's
@@ -90,16 +90,16 @@ const renanceJsonLd = {
       alternateName: "Renance - Nigeria's educational app",
       applicationCategory: 'EducationalApplication',
       applicationSubCategory: 'Exam preparation',
-      operatingSystem: 'Android, iOS, Web',
+      operatingSystem: 'Android, iOS, Windows, macOS, Web',
       url: SITE_URL,
       description:
-        'Renance is the educational app in Nigeria - "Your Guide to Academic Success". Students register free, sync past questions, notes and syllabi to their device, and take server-graded mock CBT exams for JAMB, WAEC, NECO and Post-UTME, with over 135,000 tertiary institution past questions covering universities, polytechnics and colleges of education. It also includes Renance for Schools, a school management suite: NERDC curriculum, attendance, results, school fees and student ID cards. Built by Resolute Femi (Ariyo Oluwafemi Stephen).',
+        'Renance is an educational app in Nigeria built for JAMB, WAEC, NECO, and tertiary institution success. Students learn exam-ready courses step by step, drill 90,000+ JAMB, NECO, and WAEC past questions from 1978 to 2026, and practice over 200,000 Post-UTME and tertiary institution course questions with server-graded CBT mocks, with daily quests, competitive leagues, a live arena and a community feed that celebrates their wins. It also includes Renance for Schools, a comprehensive school portal: syllabuses, lecture notes, attendance, exam results and fee payments. Available free on Android, iOS, Windows, macOS and the web. Built by Resolute Femi (Ariyo Oluwafemi Stephen).',
       author: { '@id': `${SITE_URL}#organization` },
       creator: { '@id': `${SITE_URL}/#person` },
       publisher: { '@id': `${SITE_URL}#organization` },
       brand: { '@type': 'Brand', name: 'Renance' },
       logo: `${SITE_URL}/renance-mark.png`,
-      screenshot: `${SITE_URL}/og.jpg`,
+      screenshot: `${SITE_URL}/og-2026.jpg`,
       isAccessibleForFree: true,
       inLanguage: 'en-NG',
       offers: {
@@ -109,13 +109,14 @@ const renanceJsonLd = {
         description: 'Free accounts with full access to past questions, CBT mocks and lesson notes.',
       },
       featureList: [
-        '235,110+ JAMB, WAEC, NECO and Post-UTME past questions',
-        'Over 60,000 tertiary institution past questions: Post-UTME screening papers and course modules for Nigerian universities, polytechnics and colleges of education',
-        'Free CBT mock exams with server-side grading',
-        'Worked explanations for every question',
-        'Renance AI study companion grounded on the question banks',
+        '90,000+ JAMB, NECO and WAEC past questions from 1978 to 2026',
+        'Over 200,000 Post-UTME and tertiary institution course questions',
+        'Free server-graded CBT mock exams with exam-hall timing',
+        'Exam-ready courses learned step by step, with worked explanations',
+        'Daily quests, competitive leagues, a live arena and a community feed',
+        'School portal for institutions: syllabuses, lecture notes, attendance, exam results and fee payments',
         'NERDC scheme of work and lesson notes for schools',
-        'School management suite (Renance for Schools): curriculum, attendance, results, fees and ID cards',
+        'Free on Android, iOS, Windows, macOS and the web',
       ],
     },
     {
@@ -132,7 +133,7 @@ const renanceJsonLd = {
   ],
 };
 
-const OG_IMAGE = '/og.jpg';
+const OG_IMAGE = '/og-2026.jpg';
 const TWITTER_CARD_IMAGE = `${SITE_URL}${OG_IMAGE}`;
 
 /* OpenGraph images live in lib/og.ts (OG_IMAGES) so every page that
@@ -149,8 +150,7 @@ export const metadata: Metadata = {
     default: "Renance - Nigeria's Educational App for JAMB, WAEC & NECO Past Questions",
     template: '%s · Renance',
   },
-  description:
-    "Renance is the educational app in Nigeria: learn JAMB, WAEC, NECO and university courses step by step, practise 235,110+ real past questions with worked solutions, win daily quests, climb the leagues and follow friends on the feed - free, built by Resolute Femi.",
+  description: RENANCE_DESCRIPTION,
   keywords: [
     'JAMB past questions',
     'JAMB past questions and answers',
@@ -193,15 +193,13 @@ export const metadata: Metadata = {
     url: SITE_URL,
     locale: 'en_NG',
     title: "Renance - Nigeria's Educational App for JAMB, WAEC & NECO",
-    description:
-      'Learn JAMB, WAEC, NECO and university courses step by step, practise 235,110+ real past questions with worked solutions, win daily quests, climb the leagues and follow friends on the feed - free on renance.app.',
+    description: RENANCE_DESCRIPTION,
     images: [...OG_IMAGES],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Renance - Nigeria's Educational App for JAMB, WAEC & NECO",
-    description:
-      'Learn JAMB, WAEC, NECO and university courses step by step, practise 235,110+ real past questions, win daily quests, climb the leagues and follow friends on the feed - free on renance.app.',
+    description: RENANCE_DESCRIPTION,
     creator: '@Resolutefemi',
     images: [TWITTER_CARD_IMAGE],
   },
