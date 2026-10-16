@@ -120,6 +120,7 @@ export default function CoursesPage() {
   const [path, setPath] = useState<CoursePath | null>(null);
   const [topic, setTopic] = useState<TopicNode | null>(null);
   const [reviewUnit, setReviewUnit] = useState<UnitNode | null>(null);
+  const [revisionUnit, setRevisionUnit] = useState<UnitNode | null>(null);
   const [loading, setLoading] = useState(true);
   const [notice, setNotice] = useState('');
 
@@ -296,6 +297,7 @@ export default function CoursesPage() {
     if (face === 'path') {
       setTopic(null);
       setReviewUnit(null);
+      setRevisionUnit(null);
       setPath(null);
       setFace('list');
       return;
@@ -450,7 +452,7 @@ export default function CoursesPage() {
 
         {/* ── Face 3: the path ── */}
         {!loading && face === 'path' && path && (
-          <CoursePathView path={path} onOpenTopic={setTopic} onOpenReview={setReviewUnit} onBack={() => { setFace('list'); setPath(null); }} />
+          <CoursePathView path={path} onOpenTopic={setTopic} onOpenReview={setReviewUnit} onOpenRevision={setRevisionUnit} onBack={() => { setFace('list'); setPath(null); }} />
         )}
       </main>
 
@@ -459,6 +461,9 @@ export default function CoursesPage() {
       )}
       {reviewUnit && path && (
         <LessonOverlay mode="review" courseId={path.id} unit={reviewUnit.index} onClose={() => setReviewUnit(null)} onCompleted={afterLesson} />
+      )}
+      {revisionUnit && path && (
+        <LessonOverlay mode="revision" courseId={path.id} unit={revisionUnit.index} onClose={() => setRevisionUnit(null)} onCompleted={afterLesson} />
       )}
 
       <BottomNav />
@@ -1265,12 +1270,48 @@ function CourseCard({ c, onOpen, onRemove }: { c: MyCourse; onOpen: () => void; 
 
 const ZIGZAG = ['ml-0', 'ml-14', 'ml-28', 'ml-14'];
 
+/** Unit colours (founder directive 2026-10-16: "make the course page
+ * lively - unit 1 hero card green, unit 2 blue, unit 3 purple, unit 4
+ * orange, and the other units some good random colours"). The later
+ * units rotate one fixed vivid palette instead of literal randomness:
+ * a repaint on every refresh would feel broken, a stable rotation
+ * stays lively AND predictable. White ink works on every entry. */
+interface UnitTheme {
+  solid: string; // banner / node / icon fill
+  deep: string;  // gradient partner, darker
+  wash: string;  // same hue at ~12% alpha, card backgrounds
+  ink: string;   // readable accent on light surfaces
+}
+const UNIT_COLORS: UnitTheme[] = [
+  { solid: '#16a34a', deep: '#15803d', wash: '#16a34a1f', ink: '#15803d' }, // 1 green
+  { solid: '#2563eb', deep: '#1d4ed8', wash: '#2563eb1f', ink: '#1d4ed8' }, // 2 blue
+  { solid: '#9333ea', deep: '#7e22ce', wash: '#9333ea1f', ink: '#7e22ce' }, // 3 purple
+  { solid: '#ea580c', deep: '#c2410c', wash: '#ea580c1f', ink: '#c2410c' }, // 4 orange
+  { solid: '#0d9488', deep: '#0f766e', wash: '#0d94881f', ink: '#0f766e' }, // 5 teal
+  { solid: '#e11d48', deep: '#be123c', wash: '#e11d481f', ink: '#be123c' }, // 6 rose
+  { solid: '#4f46e5', deep: '#4338ca', wash: '#4f46e51f', ink: '#4338ca' }, // 7 indigo
+  { solid: '#0891b2', deep: '#0e7490', wash: '#0891b21f', ink: '#0e7490' }, // 8 cyan
+  { solid: '#c026d3', deep: '#a21caf', wash: '#c026d31f', ink: '#a21caf' }, // 9 fuchsia
+  { solid: '#65a30d', deep: '#4d7c0f', wash: '#65a30d1f', ink: '#4d7c0f' }, // 10 lime
+  { solid: '#0284c7', deep: '#0369a1', wash: '#0284c71f', ink: '#0369a1' }, // 11 sky
+  { solid: '#d97706', deep: '#b45309', wash: '#d977061f', ink: '#b45309' }, // 12 amber
+  { solid: '#059669', deep: '#047857', wash: '#0596691f', ink: '#047857' }, // 13 emerald
+  { solid: '#7c3aed', deep: '#6d28d9', wash: '#7c3aed1f', ink: '#6d28d9' }, // 14 violet
+  { solid: '#dc2626', deep: '#b91c1c', wash: '#dc26261f', ink: '#b91c1c' }, // 15 red
+];
+
+function unitTheme(unit: number): UnitTheme {
+  const t = UNIT_COLORS[(unit - 1) % UNIT_COLORS.length];
+  return t ?? UNIT_COLORS[0];
+}
+
 function CoursePathView({
-  path, onOpenTopic, onOpenReview, onBack,
+  path, onOpenTopic, onOpenReview, onOpenRevision, onBack,
 }: {
   path: CoursePath;
   onOpenTopic: (t: TopicNode) => void;
   onOpenReview: (u: UnitNode) => void;
+  onOpenRevision: (u: UnitNode) => void;
   onBack: () => void;
 }) {
   const [chestToast, setChestToast] = useState('');
@@ -1321,10 +1362,20 @@ function CoursePathView({
       {path.units.map((u) => {
         const topics = byUnit.get(u.index) ?? [];
         const isChest = u.index === 1;
+        const theme = unitTheme(u.index);
+        const revisionUnlocked = topics.some((t) => t.status === 'completed');
         return (
           <section key={u.index} className="flex flex-col">
-            {/* Unit banner */}
-            <div className="sticky top-12 z-10 -mx-1 rounded-xl border-2 border-primary/50 bg-primary px-3.5 py-2.5 text-on-primary learn-tile">
+            {/* Unit banner - every unit wears its own colour (founder
+                2026-10-16: green, blue, purple, orange, then a vivid
+                rotation) */}
+            <div
+              className="sticky top-12 z-10 -mx-1 rounded-xl border-2 px-3.5 py-2.5 text-white learn-tile"
+              style={{
+                borderColor: theme.deep,
+                background: `linear-gradient(135deg, ${theme.solid}, ${theme.deep})`,
+              }}
+            >
               <div className="flex items-center justify-between gap-2">
                 <p className="text-[13px] font-black">{u.name}</p>
                 {isChest ? (
@@ -1354,9 +1405,46 @@ function CoursePathView({
             {/* Zig-zag ladder */}
             <div className="mt-3 flex flex-col items-center gap-1">
               {topics.map((t, i) => (
-                <PathNode key={t.id} topic={t} offset={ZIGZAG[i % ZIGZAG.length]} onOpen={() => onOpenTopic(t)} />
+                <PathNode key={t.id} topic={t} offset={ZIGZAG[i % ZIGZAG.length]} color={theme.solid} onOpen={() => onOpenTopic(t)} />
               ))}
             </div>
+
+            {/* The unit revision - the special section at the LAST place
+                of every unit (founder 2026-10-16): one tap serves a
+                50 question paper drawn from every topic of the unit. */}
+            <button
+              type="button"
+              onClick={() => revisionUnlocked && onOpenRevision(u)}
+              disabled={!revisionUnlocked}
+              aria-label={`Unit ${u.index} revision: 50 questions`}
+              className={`learn-tile mt-4 w-full rounded-2xl border-2 p-3.5 text-left transition ${revisionUnlocked ? 'active:translate-y-[2px] hover:brightness-[1.03]' : 'opacity-70'}`}
+              style={{
+                borderColor: theme.solid,
+                background: `linear-gradient(135deg, ${theme.wash}, transparent 72%)`,
+              }}
+            >
+              <div className="flex items-center gap-3">
+                <span
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-white"
+                  style={{ backgroundColor: theme.solid }}
+                >
+                  <span className="material-symbols-outlined text-[22px]">fact_check</span>
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="block text-[13.5px] font-black" style={{ color: theme.ink }}>
+                    Unit {u.index} Revision
+                  </span>
+                  <span className="block text-[11.5px] font-bold leading-snug text-on-surface-variant">
+                    {revisionUnlocked
+                      ? `50 questions from all ${topics.length} topics of this unit`
+                      : 'Finish a topic in this unit to unlock the revision paper'}
+                  </span>
+                </span>
+                <span className="material-symbols-outlined shrink-0 text-[20px]" style={{ color: theme.ink }}>
+                  {revisionUnlocked ? 'chevron_right' : 'lock'}
+                </span>
+              </div>
+            </button>
           </section>
         );
       })}
@@ -1378,7 +1466,7 @@ function CoursePathView({
   );
 }
 
-function PathNode({ topic, offset, onOpen }: { topic: TopicNode; offset: string; onOpen: () => void }) {
+function PathNode({ topic, offset, color, onOpen }: { topic: TopicNode; offset: string; color: string; onOpen: () => void }) {
   const locked = topic.status === 'locked';
   const done = topic.status === 'completed';
   const current = topic.status === 'current';
@@ -1391,11 +1479,12 @@ function PathNode({ topic, offset, onOpen }: { topic: TopicNode; offset: string;
         aria-label={`${topic.title}${locked ? ' (locked)' : ''}`}
         className={`flex h-[76px] w-[76px] items-center justify-center rounded-full border-2 transition ${
           done
-            ? 'bg-primary text-on-primary learn-node-done'
+            ? 'text-white learn-node-done'
             : current
               ? 'bg-accent-amber text-white learn-node-current'
               : 'border-outline-variant bg-surface-container-high text-on-surface-variant'
         } ${locked ? 'opacity-70' : 'active:translate-y-[3px] hover:brightness-105'}`}
+        style={done ? { backgroundColor: color, borderColor: color } : undefined}
       >
         <span className="material-symbols-outlined text-[30px]">
           {done ? 'star' : current ? 'school' : 'lock'}
@@ -1405,7 +1494,7 @@ function PathNode({ topic, offset, onOpen }: { topic: TopicNode; offset: string;
         {topic.title}
       </p>
       {done && topic.bestScore >= 100 && (
-        <p className="text-[10.5px] font-black uppercase text-primary-ink">Perfect!</p>
+        <p className="text-[10.5px] font-black uppercase" style={{ color }}>Perfect!</p>
       )}
       {current && <p className="learn-bubble mt-0.5">Start</p>}
     </div>

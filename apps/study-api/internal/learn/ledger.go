@@ -13,6 +13,7 @@ import (
 	"math"
 	"time"
 
+	"renance.dev/study-api/internal/learn/synth"
 	"renance.dev/study-api/internal/social"
 )
 
@@ -1120,4 +1121,150 @@ func (s *Service) ReviewSet(ctx context.Context, userID, courseID string, unit i
 		}
 	}
 	return set, rows.Err()
+}
+
+// ─── Unit revision (the special last section of every unit) ──────────────
+
+// RevisionTarget is the size of the unit revision exam (founder
+// directive 2026-10-16: "build a section at the last place of each
+// unit, a special unit, 50 revision questions fetched from the topics
+// under that unit"). Ten topics carry 20 questions each, a 200 item
+// pool; the exam draws an equal spread across ALL of the unit's
+// topics so it revises the whole unit, not three lucky rows.
+const RevisionTarget = 50
+
+// RevisionSet assembles the 50 question revision exam for one unit.
+// Every topic under the unit contributes: its cached quiz when the
+// lesson cache holds one, otherwise the deterministic engine writes
+// the quiz on the spot (pure CPU - no AI call, no budget, no cache
+// write). Each topic donates an equal share, donations rotate so
+// repeat visits meet different questions, and the final order shuffles
+// deterministically per course+unit+UTC day: a mid exam refresh never
+// rearranges the paper, the next day does.
+func (s *Service) RevisionSet(ctx context.Context, userID, courseID string, unit int) (*PracticeSet, error) {
+	set := &PracticeSet{Questions: []PracticeQuestion{}}
+	if unit < 1 {
+		unit = 1
+	}
+
+	// The course context the synthesis engine needs.
+	var title, dept, faculty string
+	err := s.Pool.QueryRow(ctx, `
+                SELECT c.title, COALESCE(d.name,''), COALESCE(d.faculty,'')
+                FROM learn.courses c JOIN learn.departments d ON d.dept_id = c.dept_id
+                WHERE c.course_id=$1`, courseID).Scan(&title, &dept, &faculty)
+	if err != nil {
+		return set, nil
+	}
+
+	type unitTopic struct {
+		id, title string
+		unit      int
+	}
+	rows, err := s.Pool.Query(ctx, `
+                SELECT topic_id, title, unit FROM learn.topics
+                WHERE course_id=$1 AND unit=$2 ORDER BY seq`, courseID, unit)
+	if err != nil {
+		return set, nil
+	}
+	topics := []unitTopic{}
+	for rows.Next() {
+		var t unitTopic
+		if err := rows.Scan(&t.id, &t.title, &t.unit); err == nil {
+			topics = append(topics, t)
+		}
+	}
+	rows.Close()
+	if len(topics) == 0 {
+		return set, nil
+	}
+
+	// One round trip for every cached quiz under the unit.
+	ids := make([]string, 0, len(topics))
+	for _, t := range topics {
+		ids = append(ids, t.id)
+	}
+	cached := map[string][]LessonQuizQ{}
+	crows, err := s.Pool.Query(ctx, `
+                SELECT topic_id, quiz FROM learn.lessons
+                WHERE topic_id = ANY($1) AND jsonb_array_length(quiz) > 0`, ids)
+	if err == nil {
+		for crows.Next() {
+			var tid string
+			var raw []byte
+			if err := crows.Scan(&tid, &raw); err != nil {
+				continue
+			}
+			var qs []LessonQuizQ
+			if json.Unmarshal(raw, &qs) != nil {
+				continue
+			}
+			cached[tid] = qs
+		}
+		crows.Close()
+	}
+
+	// Equal share per topic, the remainder spread from the front.
+	// Ten topics donate exactly 5 each; a short unit gives what it
+	// has and the spread tops up from the strongest donors.
+	per := RevisionTarget / len(topics)
+	if per == 0 {
+		per = 1
+	}
+	rem := RevisionTarget - per*len(topics)
+
+	seen := map[string]bool{}
+	pool := []PracticeQuestion{}
+	for i, t := range topics {
+		quiz := cached[t.id]
+		if len(quiz) == 0 {
+			// The deterministic agent engine writes the quiz on
+			// the spot - instant and identical to what the topic
+			// open would serve, so the revision never waits on
+			// the cache and never grows it either.
+			out := synth.BuildLesson(t.id, title, dept, faculty, t.title, t.unit)
+			quiz = make([]LessonQuizQ, 0, len(out.Quiz))
+			for _, q := range out.Quiz {
+				quiz = append(quiz, LessonQuizQ{
+					ID: q.ID, Type: q.Type, Stem: q.Stem,
+					Options: q.Options, Answer: q.Answer, Explanation: q.Explanation,
+				})
+			}
+		}
+		// Same serve-time sweep the lesson and review paths use.
+		quiz, _ = sanitizeQuiz(quiz)
+		if len(quiz) == 0 {
+			continue
+		}
+		take := per
+		if i < rem {
+			take++
+		}
+		if take > len(quiz) {
+			take = len(quiz)
+		}
+		start := (i * take) % len(quiz)
+		for k := 0; k < take; k++ {
+			q := quiz[(start+k)%len(quiz)]
+			if q.ID == "" || q.Stem == "" || q.Answer == "" || seen[q.ID] {
+				continue
+			}
+			seen[q.ID] = true
+			pq := practiceFromLesson(q)
+			pq.TopicID = t.id
+			pool = append(pool, pq)
+		}
+	}
+
+	// Deterministic shuffle keyed on course+unit+UTC day.
+	g := synth.NewRNG(fmt.Sprintf("%s|revision|%d|%s", courseID, unit, time.Now().UTC().Format("2006-01-02")))
+	for i := len(pool) - 1; i > 0; i-- {
+		j := g.Intn(i + 1)
+		pool[i], pool[j] = pool[j], pool[i]
+	}
+	if len(pool) > RevisionTarget {
+		pool = pool[:RevisionTarget]
+	}
+	set.Questions = pool
+	return set, nil
 }

@@ -317,6 +317,7 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("GET /learn/practice", s.auth(s.handleLearnPractice))
 	mux.HandleFunc("POST /learn/practice", s.auth(s.handleLearnPractice))
 	mux.HandleFunc("GET /learn/review", s.auth(s.handleLearnReview))
+	mux.HandleFunc("GET /learn/revision", s.auth(s.handleLearnRevision))
 
 	// ── The Renance social layer (feed + follows, 2026-10-14): the
 	// Duolingo-style feed of MILESTONE stories, likes, comments,

@@ -1,11 +1,20 @@
 # Render Blueprint, one-click deploy of the Renance study API (free plan).
 #
 # Render.com -> New + -> Blueprint -> pick Resolutefemi/Renance -> Apply.
-# DATABASE_URL is the only value you are asked for: paste the Neon POOLED
-# connection string (…pooler….neon.tech/…?sslmode=require). Everything else
-# is filled in, JWT_SECRET is generated for you and GOOGLE_CLIENT_ID ships
-# with both public OAuth client IDs (web + Android), so Google sign-in works
-# on the first boot.
+# DATABASE_URL ships FILLED IN (founder directive 2026-10-16: "point
+# DATABASE_URL at the Supabase pooler DSN - the full cache serves
+# immediately"): the primary is now the Supabase SESSION-mode pooler DSN,
+# the database that already carries the full 15-unit x 10-topic ladder
+# for every one of the 10,725 courses (1.6M+ topics, 149k units) plus
+# every account mirrored from Neon by the dual-write mirror. Everything
+# else is filled in, JWT_SECRET is generated for you and
+# GOOGLE_CLIENT_ID ships with both public OAuth client IDs (web +
+# Android), so Google sign-in works on the first boot.
+#
+# Prefer the dashboard instead? Render.com -> renance-api -> Environment
+# -> DATABASE_URL -> paste the Supabase pooler DSN below -> Save Changes
+# (the service redeploys itself; the same value is baked here so a
+# blueprint sync applies it either way).
 #
 # VERIFIED 2026-09-07: the live service at https://renance-api.onrender.com
 # answers /healthz {"db":"ok"} and the full student-flow E2E
@@ -40,13 +49,19 @@ services:
     # connection on demand.
     autoDeploy: true
     envVars:
+      # PRIMARY (founder directive 2026-10-16): the Supabase session-mode
+      # pooler (port 5432, IPv4-safe) - the DB the synthgen cache and the
+      # mirrored accounts already live on. If it is ever unreachable at
+      # boot, the chain walks SUPABASE_DATABASE_URL (same DB, harmless
+      # repeat) and then INSFORGE_DATABASE_URL automatically, so the API
+      # always finds a live Postgres without manual steps.
       - key: DATABASE_URL
-        sync: false
+        value: "postgresql://postgres.zfxrmcwdnmmxjawmsiyp:Stephen2474life%23@aws-1-eu-west-3.pooler.supabase.com:5432/postgres?sslmode=require"
       # ── Multi-database fallback (founder directive 2026-10-15: "can
       # the project share two databases, or use another as a backup
       # when the first one's free trial ends?") ─────────────────────
-      # At boot the API walks DATABASE_URL (Neon) first, then these in
-      # order: SUPABASE_DATABASE_URL, then INSFORGE_DATABASE_URL. The
+      # At boot the API walks DATABASE_URL (Supabase since 2026-10-16)
+      # first, then SUPABASE_DATABASE_URL, then INSFORGE_DATABASE_URL. The
       # first live DSN wins; migrations + the curriculum seed provision
       # it automatically. Runtime detection is CU-aware (dbwatch.go):
       # it only probes after real request failures, never on a

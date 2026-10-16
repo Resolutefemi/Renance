@@ -19,7 +19,7 @@ import {
 import { ChestOpening, MilestoneCelebration, StreakCelebration } from '@/components/learn/celebrations';
 import {
   CompleteResult, LearnQuizQ, LessonDoc, PracticeQuestion,
-  fetchLearnProfile, fetchLesson, fetchPractice, fetchReview, gradePractice, postProgress,
+  fetchLearnProfile, fetchLesson, fetchPractice, fetchReview, fetchRevision, gradePractice, postProgress,
 } from '@/lib/learn';
 import { QText } from '@/lib/qtext';
 
@@ -39,8 +39,9 @@ export function LessonOverlay({
   topicId, mode = 'lesson', courseId, unit, onClose, onCompleted,
 }: {
   topicId?: string;
-  /** lesson = full study+quiz flow; practice/review = straight quiz. */
-  mode?: 'lesson' | 'practice' | 'review';
+  /** lesson = full study+quiz flow; practice/review/revision = straight
+   *  quiz (revision is the 50 question unit exam, founder 2026-10-16). */
+  mode?: 'lesson' | 'practice' | 'review' | 'revision';
   courseId?: string;
   unit?: number;
   onClose: () => void;
@@ -105,11 +106,16 @@ export function LessonOverlay({
         } else {
           const set = mode === 'review'
             ? await fetchReview(courseId!, unit ?? 1)
-            : await fetchPractice();
+            : mode === 'revision'
+              ? await fetchRevision(courseId!, unit ?? 1)
+              : await fetchPractice();
           if (!live) return;
           const qs: PlayQ[] = (set.questions ?? []).map((q: PracticeQuestion) => ({ ...q }));
           setQuestions(qs);
-          setPhase('quiz');
+          // A quiz mode that arrives with no paper has nothing to show
+          // in the quiz phase - route to the honest error state (the
+          // overlay retries itself a few times first).
+          setPhase(qs.length > 0 ? 'quiz' : 'error');
         }
       } catch {
         if (!live) return;
@@ -126,7 +132,6 @@ export function LessonOverlay({
     })();
     return () => { live = false; };
   }, [mode, topicId, courseId, unit, reloadTick]);
-
   // Rotating loading copy (Supreme touch).
   useEffect(() => {
     if (phase !== 'loading') return;
@@ -491,7 +496,7 @@ export function LessonOverlay({
         {phase === 'done' && (
           <div className="flex h-full flex-col items-center justify-center gap-4 py-16 text-center">
             <span className="material-symbols-outlined text-[56px] text-primary">trophy</span>
-            <h2 className="text-[22px] font-black text-on-surface">{mode === 'lesson' ? 'Topic complete!' : mode === 'review' ? 'Unit review done!' : 'Practice done!'}</h2>
+            <h2 className="text-[22px] font-black text-on-surface">{mode === 'lesson' ? 'Topic complete!' : mode === 'review' ? 'Unit review done!' : mode === 'revision' ? 'Unit revision done!' : 'Practice done!'}</h2>
             <p className="text-[13.5px] font-bold text-on-surface-variant">
               {correctCount}/{total} correct · {accuracy}% accuracy
             </p>

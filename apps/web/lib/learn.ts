@@ -473,6 +473,14 @@ export async function fetchReview(courseId: string, unit: number): Promise<{ que
   return api(`/learn/review?courseId=${encodeURIComponent(courseId)}&unit=${unit}`);
 }
 
+/** The special revision section at the last place of every unit
+ * (founder directive 2026-10-16): 50 questions drawn from ALL of the
+ * unit's topics - cached quizzes first, the deterministic engine
+ * fills any gap instantly, so the paper is always complete. */
+export async function fetchRevision(courseId: string, unit: number): Promise<{ questions: PracticeQuestion[] }> {
+  return api(`/learn/revision?courseId=${encodeURIComponent(courseId)}&unit=${unit}`);
+}
+
 // ─── Local helpers ────────────────────────────────────────────────────────
 
 /** Focus desk for the course tab: jamb | waec | neco | tertiary.
