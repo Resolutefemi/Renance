@@ -48,11 +48,12 @@ import SideNav from '@/components/side-nav';
 import { LessonOverlay } from '@/components/learn/lesson-overlay';
 import { CourseRequestModal } from '@/components/learn/voice';
 import { ProgressBar } from '@/components/learn/bits';
+import { ChestOpening } from '@/components/learn/celebrations';
 import { getStoredUser } from '@/lib/session';
 import { useRouter } from 'next/navigation';
 import { api } from '@/lib/api';
 import {
-  CatalogItem, CoursePath, MyCourse, TopicNode, UnitNode,
+  CatalogItem, CoursePath, ChestDrop, MyCourse, TopicNode, UnitNode,
   DeskCourse, DeskDepartment, DeskShelves, AIMatchLine,
   fetchCourseDesk, fetchCoursePath, fetchDepartments, fetchDeskOthers, fetchMyCourses, learnBodyFromExams,
   learnBodyLabel, aiMatchCourses, saveDesk, searchDeskCourses,
@@ -1343,6 +1344,11 @@ function CoursePathView({
   onBack: () => void;
 }) {
   const [chestToast, setChestToast] = useState('');
+  // The founder's gamification pass: opening the unit-1 treasure chest
+  // plays the SAME full-screen chest-opening moment a topic chest gets
+  // (shake → lid bursts → spin → gems pop out) instead of a quiet toast.
+  const [chestDrop, setChestDrop] = useState<ChestDrop | null>(null);
+  const [localOpened, setLocalOpened] = useState<Set<number>>(new Set());
   const byUnit = useMemo(() => {
     const m = new Map<number, TopicNode[]>();
     for (const t of path.topics) {
@@ -1354,11 +1360,12 @@ function CoursePathView({
   }, [path.topics]);
 
   const openChest = async (u: UnitNode) => {
+    if (localOpened.has(u.index)) return;
     try {
       const { openChest: post } = await import('@/lib/learn');
       const res = await post(`${path.id}#${u.index}`);
-      setChestToast(`+${res.gems} gems from the chest!`);
-      setTimeout(() => setChestToast(''), 2200);
+      setLocalOpened((s) => new Set(s).add(u.index));
+      setChestDrop({ kind: 'gems', amount: res.gems, icon: 'diamond', label: `${res.gems} gems` });
     } catch {
       setChestToast('Chest already opened');
       setTimeout(() => setChestToast(''), 1600);
@@ -1367,6 +1374,9 @@ function CoursePathView({
 
   return (
     <div className="flex flex-col gap-5">
+      {/* The full-screen chest moment - same celebration a topic quiz pays. */}
+      {chestDrop && <ChestOpening drop={chestDrop} onDone={() => setChestDrop(null)} />}
+
       {chestToast && (
         <div className="learn-toast-shadow pointer-events-none fixed inset-x-0 top-16 z-[70] mx-auto w-fit rounded-xl bg-accent-amber px-4 py-2 text-[13px] font-extrabold text-white">
           {chestToast}
@@ -1410,11 +1420,11 @@ function CoursePathView({
                   <button
                     type="button"
                     onClick={() => void openChest(u)}
-                    disabled={u.chestOpened}
+                    disabled={u.chestOpened || localOpened.has(u.index)}
                     className="flex items-center gap-1 rounded-lg border-2 border-white/50 bg-white/20 px-2 py-1 text-[11px] font-extrabold text-white disabled:opacity-60"
                   >
-                    <span className="material-symbols-outlined text-[15px]">{u.chestOpened ? 'inventory_2' : 'redeem'}</span>
-                    {u.chestOpened ? 'Opened' : 'Open chest'}
+                    <span className="material-symbols-outlined text-[15px]">{u.chestOpened || localOpened.has(u.index) ? 'inventory_2' : 'redeem'}</span>
+                    {u.chestOpened || localOpened.has(u.index) ? 'Opened' : 'Open chest'}
                   </button>
                 ) : (
                   <button

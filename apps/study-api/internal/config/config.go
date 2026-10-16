@@ -179,7 +179,7 @@ func Load() (*Config, error) {
                 ArenaQuestions:          envInt("ARENA_QUESTIONS", 15),            // founder rule: 15-question duels
                 ArenaSecondsPerQuestion: envInt("ARENA_SECONDS_PER_QUESTION", 20), // 15 x 20s = five minutes
                 ArenaIntroSeconds:       envInt("ARENA_INTRO_SECONDS", 3),
-                ArenaBotWaitSeconds:     envInt("ARENA_BOT_WAIT_SECONDS", 20),
+                ArenaBotWaitSeconds:     envInt("ARENA_BOT_WAIT_SECONDS", 8), // founder 2026-10-17: 20s of solo waiting read as a broken arena - the house bot steps in at 8s
                 ArenaBotSkill:           envFloat("ARENA_BOT_SKILL", 0.6),
                 ArenaRoomTTLSeconds:     envInt("ARENA_ROOM_TTL_SECONDS", 900),
         }

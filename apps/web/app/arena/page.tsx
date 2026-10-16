@@ -26,7 +26,8 @@ import SideNav from '@/components/side-nav';
 import { RenanceMark } from '@/components/renance-logo';
 import { QText } from '@/lib/qtext';
 import { api } from '@/lib/api';
-import { ArenaSocket, type ArenaInbound } from '@/lib/arena';
+import { ArenaSocket, type ArenaInbound, type ArenaOutbound, type ArenaStatus } from '@/lib/arena';
+import { ConfettiBurst } from '@/components/learn/bits';
 
 type Phase = 'idle' | 'queued' | 'hosted' | 'challengeSent' | 'dueling' | 'over';
 
@@ -78,7 +79,11 @@ function ArenaInner() {
   const [meId, setMeId] = useState('');
   const [focus, setFocus] = useState<Focus>('JAMB');
   const [phase, setPhase] = useState<Phase>('idle');
-  const [sockDown, setSockDown] = useState(false);
+  // The socket heals itself (lib/arena.ts); the page just wears its
+  // status. 'fatal' only ever means signed out.
+  const [sockStatus, setSockStatus] = useState<ArenaStatus | 'fatal'>('connecting');
+  const [retryAttempt, setRetryAttempt] = useState(0);
+  const [celebrateWin, setCelebrateWin] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   // lobby data
@@ -111,6 +116,13 @@ function ArenaInner() {
   const askedAt = useRef(0);
   const focusRef = useRef<Focus>('JAMB');
   focusRef.current = focus;
+  const phaseRef = useRef<Phase>('idle');
+  phaseRef.current = phase;
+  // The last waiting-intent (queue / host / join / challenge). The hub
+  // forgets the session the moment a socket drops - queue seat gone,
+  // room deleted, duel forfeited - so on every reconnect the page
+  // replays it and the student never has to reload.
+  const intentRef = useRef<ArenaOutbound | null>(null);
 
   // 1s heartbeat drives the round clock + countdowns.
   useEffect(() => {
@@ -143,9 +155,11 @@ function ArenaInner() {
     setPicked(null);
     setLastCorrect(null);
     setWinner(null);
+    setCelebrateWin(false);
     setOpponent('');
     setRoomCode('');
     setErrorMsg(null);
+    intentRef.current = null;
   }, []);
 
   const handleFrame = useCallback(
@@ -168,6 +182,7 @@ function ArenaInner() {
           setChallenged({ opponent: frame.opponent, code: frame.code });
           break;
         case 'matched':
+          intentRef.current = null;
           setOpponent(frame.opponent || 'Renance Bot');
           setPackCode(frame.code || '');
           setQuestionCount(frame.questionCount ?? 15);
@@ -175,6 +190,7 @@ function ArenaInner() {
           setYou(0);
           setRival(0);
           setWinner(null);
+          setCelebrateWin(false);
           setQ(null);
           setPicked(null);
           setRoomCode('');
@@ -201,7 +217,10 @@ function ArenaInner() {
           const other = Object.entries(scores).find(([id]) => id !== meId);
           if (meId && scores[meId] != null) setYou(scores[meId]);
           if (other) setRival(other[1]);
-          setWinner(frame.winner);
+          setWinner(frame.winner || null);
+          // The victory moment (founder's gamification pass): a won duel
+          // gets the same full-screen joy a topic chest gets.
+          if (meId && frame.winner && frame.winner === meId) setCelebrateWin(true);
           setPhase('over');
           break;
         }
@@ -248,8 +267,34 @@ function ArenaInner() {
         onFrame: (frame) => {
           if (alive) handleFrame(frame);
         },
-        onDown: () => {
-          if (alive) setSockDown(true);
+        onStatus: (st, attempt) => {
+          if (alive) {
+            setSockStatus(st);
+            setRetryAttempt(attempt);
+          }
+        },
+        onFatal: () => {
+          if (alive) setSockStatus('fatal');
+        },
+        onOpen: () => {
+          if (!alive) return;
+          setSockStatus('open');
+          // Reconnect recovery: the hub wiped this session on the drop.
+          // Re-play what the student was mid-doing.
+          const at = phaseRef.current;
+          if (at === 'queued') {
+            const intent = intentRef.current?.type === 'queue' ? intentRef.current : { type: 'queue' as const, body: focusRef.current };
+            sockRef.current?.send(intent);
+          } else if (at === 'hosted' || at === 'challengeSent') {
+            // The old room died with the drop; re-host / re-challenge.
+            // A fresh code frame overwrites the stale one on arrival.
+            if (intentRef.current) sockRef.current?.send(intentRef.current);
+          } else if (at === 'dueling') {
+            // A mid-duel drop is a forfeit on the hub; say so plainly
+            // instead of leaving the student on a frozen scoreboard.
+            backToLobby();
+            setErrorMsg('The connection dropped mid-duel - it counted as a forfeit. Queue up and run it back.');
+          }
         },
       });
     })();
@@ -262,6 +307,10 @@ function ArenaInner() {
 
   const send = useCallback((frame: Parameters<ArenaSocket['send']>[0]) => {
     setErrorMsg(null);
+    // Waiting intents survive drops: the reconnect handler replays them.
+    if (frame.type === 'queue' || frame.type === 'host' || frame.type === 'join' || frame.type === 'challenge') {
+      intentRef.current = frame;
+    }
     sockRef.current?.send(frame);
   }, []);
 
@@ -513,45 +562,49 @@ function ArenaInner() {
                 </span>
               ))}
             </div>
-            {sockDown ? (
+            {sockStatus !== 'open' && (
               <div className="relative mt-5 rounded-xl bg-card/10 px-4 py-3 text-center text-[13.5px] text-on-primary">
-                The arena socket dropped.
-                <button type="button" onClick={() => window.location.reload()} className="ml-1 font-bold underline">
-                  Reconnect
-                </button>
-              </div>
-            ) : (
-              <div className="relative mt-5 grid gap-2 sm:grid-cols-3">
-                <button
-                  onClick={() => send({ type: 'queue', body: focus })}
-                  className="col-span-1 flex h-[52px] items-center justify-center gap-2 rounded-xl bg-card text-[14.5px] font-bold text-on-surface transition-all hover:shadow-md active:scale-[0.98] sm:col-span-3"
-                >
-                  <span className="material-symbols-outlined text-[20px]">swords</span>
-                  Quick Match
-                </button>
-                <button
-                  onClick={() => send({ type: 'host', body: focus })}
-                  className="flex h-11 items-center justify-center gap-1.5 rounded-xl bg-card/10 text-[13px] font-semibold text-on-primary transition hover:bg-card/15"
-                >
-                  <span className="material-symbols-outlined text-[17px]">meeting_room</span>
-                  Host a room
-                </button>
-                <button
-                  onClick={() => {
-                    setJoinCode('');
-                    setJoinOpen(true);
-                  }}
-                  className="flex h-11 items-center justify-center gap-1.5 rounded-xl bg-card/10 text-[13px] font-semibold text-on-primary transition hover:bg-card/15"
-                >
-                  <span className="material-symbols-outlined text-[17px]">group_add</span>
-                  Join with code
-                </button>
-                <button
-                  onClick={() => players?.[0] && send({ type: 'challenge', target: players[0].userId, body: focus })}
-                  className="hidden"
-                />
+                {sockStatus === 'fatal' ? (
+                  <>Sign in first - the arena floor needs your token.</>
+                ) : sockStatus === 'retrying' ? (
+                  <>
+                    Reaching the arena floor… (try {retryAttempt}) - it opens on its own, no reload needed.
+                  </>
+                ) : (
+                  <>Opening the floor…</>
+                )}
               </div>
             )}
+            <div className="relative mt-5 grid gap-2 sm:grid-cols-3">
+              <button
+                onClick={() => send({ type: 'queue', body: focus })}
+                className="col-span-1 flex h-[52px] items-center justify-center gap-2 rounded-xl bg-card text-[14.5px] font-bold text-on-surface transition-all hover:shadow-md active:scale-[0.98] sm:col-span-3"
+              >
+                <span className="material-symbols-outlined text-[20px]">swords</span>
+                Quick Match
+              </button>
+              <button
+                onClick={() => send({ type: 'host', body: focus })}
+                className="flex h-11 items-center justify-center gap-1.5 rounded-xl bg-card/10 text-[13px] font-semibold text-on-primary transition hover:bg-card/15"
+              >
+                <span className="material-symbols-outlined text-[17px]">meeting_room</span>
+                Host a room
+              </button>
+              <button
+                onClick={() => {
+                  setJoinCode('');
+                  setJoinOpen(true);
+                }}
+                className="flex h-11 items-center justify-center gap-1.5 rounded-xl bg-card/10 text-[13px] font-semibold text-on-primary transition hover:bg-card/15"
+              >
+                <span className="material-symbols-outlined text-[17px]">group_add</span>
+                Join with code
+              </button>
+              <button
+                onClick={() => players?.[0] && send({ type: 'challenge', target: players[0].userId, body: focus })}
+                className="hidden"
+              />
+            </div>
             {errorMsg && <p className="relative mt-3 rounded-lg bg-error/20 px-3 py-2 text-[12.5px] text-on-primary">{errorMsg}</p>}
           </section>
 
@@ -649,6 +702,27 @@ function ArenaInner() {
               </div>
             )}
           </div>
+        </div>
+      )}
+
+      {/* --------------------------------------- victory celebration */}
+      {celebrateWin && phase === 'over' && (
+        <div className="fixed inset-0 z-[97] flex flex-col items-center justify-center bg-black/70 px-6 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Duel won">
+          <ConfettiBurst fire={1} />
+          <div className="learn-streak-flame flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-b from-[#ffd54d] to-[#ff8f00] shadow-[0_0_60px_rgba(255,180,0,0.55)]">
+            <span className="material-symbols-outlined text-[64px] text-white">emoji_events</span>
+          </div>
+          <p className="mt-6 text-[15px] font-black uppercase tracking-[0.16em] text-white/85">Duel won</p>
+          <p className="mt-1 flex items-baseline gap-2 text-[56px] font-black leading-none text-white">
+            {you}
+            <span className="text-[22px] font-extrabold text-white/85">- {rival}</span>
+          </p>
+          <p className="mt-3 max-w-xs text-center text-[13px] font-bold leading-relaxed text-white/75">
+            +1 Ren Point banked - the {focusLabel(focus)} ladder just moved.
+          </p>
+          <button type="button" onClick={() => setCelebrateWin(false)} className="key-btn mt-7 w-56 bg-primary text-on-primary">
+            Claim it
+          </button>
         </div>
       )}
 
