@@ -1,6 +1,18 @@
 # synthgen.yml - continues the agent's bulk content generation after
 # the 2026-10-16 session ends (founder directive: "all the notes and
-# quizzes should be cached to Supabase as you generate them").
+# quizzes should be cached as you generate them").
+#
+# SPLIT-HORIZON DATABASES (founder directive 2026-10-16: "Supabase
+# should only hold the courses, topics and units"): the generator now
+# speaks to TWO databases -
+#   CONTENT_DATABASE_URL = SUPABASE_DATABASE_URL secret: the catalog
+#     (departments / courses / units / topics) - the structure and
+#     retitles phases read AND write here; the lessons phase reads
+#     candidate topics here.
+#   DATABASE_URL         = INSFORGE_DATABASE_URL secret: the lesson
+#     cache (learn.lessons) - every synthesized note/quiz lands here
+#     under the 460 MB cap. NEVER Supabase: refilling learn.lessons
+#     there is what ate the free tier down to 20 MB.
 #
 # What it does, per run:
 #   1. structure phase: tops every tertiary course up to the 15 unit x
@@ -12,8 +24,8 @@
 # The API synthesizes lessons on open regardless of this cache, so
 # this workflow is a pre warming service, never a dependency.
 #
-# Needs repo secrets: SUPABASE_DATABASE_URL (the pooler DSN) and
-# (implicitly) write access for the autocommit tail.
+# Needs repo secrets: SUPABASE_DATABASE_URL (the catalog pooler DSN)
+# and INSFORGE_DATABASE_URL (the lesson cache DSN).
 
 name: synthgen
 
@@ -50,16 +62,21 @@ jobs:
 
       - name: Run generation
         env:
-          DATABASE_URL: ${{ secrets.SUPABASE_DATABASE_URL }}
+          DATABASE_URL: ${{ secrets.INSFORGE_DATABASE_URL }}
+          CONTENT_DATABASE_URL: ${{ secrets.SUPABASE_DATABASE_URL }}
         run: |
           if [ -z "$DATABASE_URL" ]; then
+            echo "INSFORGE_DATABASE_URL secret missing; skipping run"
+            exit 0
+          fi
+          if [ -z "$CONTENT_DATABASE_URL" ]; then
             echo "SUPABASE_DATABASE_URL secret missing; skipping run"
             exit 0
           fi
           /tmp/synthgen \
             -phase "${{ github.event.inputs.phase || 'all' }}" \
             -workers 6 \
-            -cap-mb 470
+            -cap-mb 460
 
       - name: Autocommit any engine source drift
         run: |

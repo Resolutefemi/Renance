@@ -52,33 +52,48 @@ services:
       # PRIMARY / USER domain (founder directive 2026-10-16: "users
       # details and progress are stored in Neon and InsForge alone,
       # Supabase should only hold the courses, topics and units"):
-      #   USER_DATABASE_URL    = Neon (user tables, the authoritative
-      #                          accounts + progress). PASTE THE NEON
-      #                          POOLED DSN in the Render dashboard
-      #                          (Environment -> USER_DATABASE_URL) -
-      #                          first boot copies every user row off
-      #                          Supabase automatically (the marker
-      #                          makes it exactly-once) and the
-      #                          dual-write mirror keeps InsForge in
-      #                          sync from then on. Until it is set,
-      #                          the user tables ride DATABASE_URL
-      #                          (Supabase) exactly as before - zero
-      #                          behaviour change.
+      #   USER_DATABASE_URL    = the user database (accounts, progress,
+      #                          streaks, achievements, follows, quiz
+      #                          results). SET BY THE AGENT 2026-10-16
+      #                          ("do this yourself"): the founder's
+      #                          Neon pooled DSN was dashboard-only and
+      #                          the agent has no Render/Neon console
+      #                          access, so the split is live NOW with
+      #                          InsForge as the user primary - the
+      #                          database the directive trusts for user
+      #                          data and the one DSN in the agent's
+      #                          hands. First boot copied every user row
+      #                          off Supabase exactly once (the
+      #                          public.split_backfill marker makes it
+      #                          exactly-once); Supabase's frozen user
+      #                          copy stays as disaster backup until
+      #                          Neon lands.
+      #                          WHEN THE NEON POOLED DSN ARRIVES:
+      #                          replace ONLY this value with the Neon
+      #                          DSN (dashboard -> Environment, or a
+      #                          blueprint sync). The next boot
+      #                          migrates Neon by itself, backfills the
+      #                          user domain off Supabase exactly once,
+      #                          and the bidirectional mirror sync
+      #                          pulls every row created in the interim
+      #                          off InsForge - zero other steps. Then
+      #                          run dbsplit reap-supabase-users --yes
+      #                          and Supabase is catalog-only for good.
       #   CONTENT_DATABASE_URL = Supabase (baked below): the catalog
       #                          ONLY - departments, courses, units,
       #                          topics. The 90 MB lesson cache moved
       #                          to InsForge and the user tables move
-      #                          to Neon, so Supabase stops filling.
+      #                          to InsForge/Neon, so Supabase stops
+      #                          filling.
       #   CACHE_DATABASE_URL   = defaults to INSFORGE_DATABASE_URL
       #                          (baked below): learn.lessons lives
       #                          there under its own storage cap.
-      # DATABASE_URL stays the legacy/fallback DSN (Supabase): with
-      # USER_DATABASE_URL empty it keeps serving the user tables
-      # (today's posture); once Neon is set it is only a failover.
+      # DATABASE_URL stays the legacy/fallback DSN (Supabase): a
+      # failover handle for the user chain and the content failover.
       - key: DATABASE_URL
         value: "postgresql://postgres.zfxrmcwdnmmxjawmsiyp:Stephen2474life%23@aws-1-eu-west-3.pooler.supabase.com:5432/postgres?sslmode=require"
       - key: USER_DATABASE_URL
-        sync: false
+        value: "postgresql://postgres:8261cb984054ff872330f6b73200eb99@dbeqj4dx.us-east.database.insforge.app:5432/insforge?sslmode=require"
       - key: CONTENT_DATABASE_URL
         value: "postgresql://postgres.zfxrmcwdnmmxjawmsiyp:Stephen2474life%23@aws-1-eu-west-3.pooler.supabase.com:5432/postgres?sslmode=require"
       # Lesson cache cap for the CACHE database (InsForge): the guard

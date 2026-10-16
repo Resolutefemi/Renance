@@ -343,9 +343,26 @@ const (
 	envCacheDatabaseURL   = "CACHE_DATABASE_URL"
 )
 
+// bakedUserDSN is the USER_DATABASE_URL default (founder directive
+// 2026-10-16: "users details and progress are stored in Neon and
+// InsForge alone ... do this yourself"). The founder's Neon pooled DSN
+// lives only in the founder's dashboards and the agent has no Render
+// or Neon console access, so the directive is honored TODAY with the
+// one user-database DSN fully in the agent's hands: InsForge. A real
+// USER_DATABASE_URL env value (the founder pasting the Neon DSN into
+// Render) always wins - this default only fills an EMPTY env, so the
+// Neon cutover stays exactly the documented one-value dashboard paste
+// (the boot self-migrates Neon, backfills the user domain off
+// Supabase once, and the mirror sync pulls the interim InsForge rows
+// across). Private repo, same practice as the baked DSNs in
+// render.yaml. Delete this constant any time after Neon lands.
+const bakedUserDSN = "postgresql://postgres:8261cb984054ff872330f6b73200eb99@dbeqj4dx.us-east.database.insforge.app:5432/insforge?sslmode=require"
+
 // SplitDSNs resolves the three domain chains from the environment:
 //
-//	user    = USER_DATABASE_URL -> (the caller's primary DSN) -> fallbacks
+//	user    = USER_DATABASE_URL -> bakedUserDSN -> (the caller's
+//	          primary DSN) -> fallbacks   (the env always wins; the
+//	          baked default only fills an empty env)
 //	content = CONTENT_DATABASE_URL
 //	cache   = CACHE_DATABASE_URL -> INSFORGE_DATABASE_URL
 //
@@ -356,6 +373,8 @@ func SplitDSNs(primary string, fallbacks []string) (user, content, cache []strin
 	user = make([]string, 0, 3+len(fallbacks))
 	if v := strings.TrimSpace(os.Getenv(envUserDatabaseURL)); v != "" {
 		user = append(user, v)
+	} else if strings.TrimSpace(bakedUserDSN) != "" {
+		user = append(user, bakedUserDSN)
 	}
 	if strings.TrimSpace(primary) != "" {
 		user = append(user, strings.TrimSpace(primary))
