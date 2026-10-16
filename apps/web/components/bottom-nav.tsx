@@ -28,7 +28,12 @@ export default function BottomNav() {
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 border-t-2 border-outline-variant bg-card md:hidden">
-      <div className="mx-auto flex w-full max-w-lg items-stretch justify-between px-1 py-1.5">
+      {/* pb keeps the tabs clear of the Android/iOS home indicator:
+          at least the designed 6px, or the full safe-area inset when
+          the device has one (founder bug 2026-10-17 - floating widgets
+          parked their offsets against the OLD 62px bar height and
+          collided with the taller real bar on notched screens). */}
+      <div className="mx-auto flex w-full max-w-lg items-stretch justify-between px-1 pt-1.5 pb-[max(0.375rem,env(safe-area-inset-bottom))]">
         {TABS.map((tab) => {
           const active = pathname.startsWith(tab.match);
           return (

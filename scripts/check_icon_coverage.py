@@ -15,18 +15,61 @@ missing while the font was fine. Shaping is the ground truth.
 Usage:  python3 scripts/check_icon_coverage.py
 """
 import io
+import json
 import re
 import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 WEB = REPO / "apps" / "web"
+DATA = REPO / "data"
 FONT = WEB / "public" / "fonts" / "material-symbols-outlined.subset.woff2"
+
+ICON_VALUE = re.compile(r"^[a-z][a-z_]+$")
+ICON_KEY = re.compile(r"icon", re.IGNORECASE)
+# Const blocks whose name carries ICON (FIELD_ICONS, CAT_ICONS, ...):
+# their quoted snake_case values are icon names even though the object
+# keys are category words ("Tech: 'computer'").
+ICON_MAP_BLOCK = re.compile(r"\b\w*ICON\w*\b[^={]*=\s*\{(.*?)\}", re.DOTALL)
+QUOTED_SNAKE = re.compile(r"[\"']([a-z][a-z_]+)[\"']")
 
 # Tokens that match the ligature shape but are never icon names.
 IGNORE = {
     "icon", "icons", "the", "and", "for", "with", "none", "fill_current",
 }
+
+
+def _walk_json(node, used):
+    """Collect icon-name strings under any *icon* key, at any depth."""
+    if isinstance(node, dict):
+        for k, v in node.items():
+            if ICON_KEY.search(str(k)) and isinstance(v, str) and ICON_VALUE.match(v):
+                used.add(v)
+            else:
+                _walk_json(v, used)
+    elif isinstance(node, list):
+        for item in node:
+            _walk_json(item, used)
+
+
+def data_icons():
+    """Icons referenced by the committed data/ JSON payloads.
+
+    The school course catalogs (data/university/courses/*.json) drive the
+    course cards' icons - 'computer', 'engineering', 'translate', ... were
+    used on 40 school desks and missing from the subset, spelling
+    "MPUTER" / "NEERING" raw over every card while the code-scan audit
+    stayed green (it never looked at data files)."""
+    used = set()
+    if not DATA.is_dir():
+        return used
+    for p in DATA.glob("**/*.json"):
+        try:
+            parsed = json.loads(p.read_text(encoding="utf-8", errors="ignore"))
+        except (json.JSONDecodeError, OSError):
+            continue
+        _walk_json(parsed, used)
+    return used
 
 
 def used_ligatures():
@@ -54,6 +97,15 @@ def used_ligatures():
             # Study tiles are the ONLY place that ligature appears.
             for m in re.finditer(r"\bicon\s*[:=]\s*[\"']([a-z][a-z_]+)[\"']", t):
                 used.add(m.group(1))
+            # Category-keyed icon maps (Record<string, string>): values
+            # like FIELD_ICONS = { Tech: 'computer' } - the key is a
+            # category word, so the icon: patterns above never saw them
+            # and the career desk leaked "MPUTER" the same way.
+            for block in ICON_MAP_BLOCK.finditer(t):
+                for m in QUOTED_SNAKE.finditer(block.group(1)):
+                    used.add(m.group(1))
+    # Data-driven icons: the school catalogs' "icon" fields.
+    used |= data_icons()
     return {u for u in used if u not in IGNORE and len(u) > 2}
 
 
@@ -76,6 +128,8 @@ def main():
         return 2
 
     used = used_ligatures()
+    print(f"sources: {len(used)} candidate ligatures "
+          f"(code + *_ICONS maps + data/university JSONs)")
     data = shaping_font()
     face = hb.Face(data)
     font = hb.Font(face)

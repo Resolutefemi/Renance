@@ -41,8 +41,10 @@ export function CoursePractice({ school, course }: { school: School; course: Uni
         <section className="relative overflow-hidden rounded-xl bg-hero p-5 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] sm:p-6">
           <div className="absolute -right-14 -top-14 h-36 w-36 rounded-full bg-on-hero/10" />
           <div className="relative z-10 flex items-start gap-4">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-on-hero/15 text-on-hero">
-              <span className="material-symbols-outlined text-[26px]">{course.icon}</span>
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-on-hero/15 text-on-hero">
+              <span className="material-symbols-outlined text-[26px]" aria-hidden>
+                {course.icon}
+              </span>
             </div>
             <div className="min-w-0">
               <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-hero-muted">

@@ -378,7 +378,7 @@ function BodyCustomSetup({ body }: { body: 'waec' | 'neco' }) {
       </div>
 
       {/* Sticky Bottom Action */}
-      <div className="fixed bottom-16 inset-x-0 z-30 bg-gradient-to-t from-surface via-surface/90 to-transparent p-4 pb-6 md:bottom-4">
+      <div className="fixed bottom-[calc(4rem+env(safe-area-inset-bottom))] inset-x-0 z-30 bg-gradient-to-t from-surface via-surface/90 to-transparent p-4 pb-6 md:bottom-4">
         <div className="mx-auto w-full max-w-2xl">
           <button
             type="button"
@@ -953,7 +953,7 @@ function ExamSetupInner() {
       </div>
 
       {/* Sticky Bottom Action */}
-      <div className="fixed bottom-16 inset-x-0 z-30 bg-gradient-to-t from-surface via-surface/90 to-transparent p-4 pb-6 md:bottom-4">
+      <div className="fixed bottom-[calc(4rem+env(safe-area-inset-bottom))] inset-x-0 z-30 bg-gradient-to-t from-surface via-surface/90 to-transparent p-4 pb-6 md:bottom-4">
         <div className="mx-auto w-full max-w-2xl">
           <button
             type="button"

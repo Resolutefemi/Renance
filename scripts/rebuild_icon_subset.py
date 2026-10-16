@@ -39,28 +39,14 @@ from fontTools.subset import Subsetter, Options
 
 
 def used_ligatures():
-    """Every lowercase_snake token plausibly ligated in app/components."""
-    used = set()
-    for pattern in ("app/**/*.tsx", "app/**/*.ts", "components/**/*.tsx",
-                    "components/**/*.ts", "lib/**/*.tsx", "lib/**/*.ts"):
-        for p in WEB.glob(pattern):
-            if "node_modules" in str(p) or "out" in p.parts:
-                continue
-            t = p.read_text(errors="ignore")
-            for m in re.finditer(
-                r"material-symbols-outlined[^>]*>\s*([a-z][a-z_]+)\s*<", t
-            ):
-                used.add(m.group(1))
-            for m in re.finditer(r"icon:\s*'([a-z][a-z_]+)'", t):
-                used.add(m.group(1))
-            # QUOTED values only (keep `icon: string` type annotations out):
-            # JSX props icon="assignment" + double-quoted object fields.
-            # The single-quote-only scan is how "assignment" reached the
-            # dashboard while missing from the subset - it renders raw
-            # ("IGNMENT") over the University Study grid.
-            for m in re.finditer(r"\bicon\s*[:=]\s*[\"']([a-z][a-z_]+)[\"']", t):
-                used.add(m.group(1))
-    return {u for u in used if u not in IGNORE and len(u) > 2}
+    """The audit scanner is the single source of truth (code + data JSONs
+    + category-keyed *_ICONS maps).  Importing keeps the builder and the
+    CI gate from drifting apart - drift is exactly how the school
+    catalogs' icons ('computer', 'engineering', ...) went missing and
+    spelled "MPUTER" / "NEERING" raw over every course card."""
+    sys.path.insert(0, str(REPO / "scripts"))
+    from check_icon_coverage import used_ligatures as scan
+    return scan()
 
 
 def current_font_strings():

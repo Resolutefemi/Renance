@@ -168,28 +168,40 @@ export function UniversityCourseDesk({
 }
 
 function CourseCard({ course, school }: { course: UniversityCourse; school: School }) {
+  // Layout doctrine (founder bug 2026-10-17): the leading icon chip is
+  // overflow-hidden so a future icon-font gap can NEVER paint raw
+  // ligature text ("NEERING", "MPUTER") over the card again, and the
+  // text column is an explicit flex stack with line-heights and gaps -
+  // the code line, the title line and the status line can no longer
+  // collide vertically on any state (live, coming soon, no title).
   const body = (
     <>
       <div
-        className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${
+        className={`flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl ${
           course.bank ? 'bg-primary text-on-primary' : 'bg-surface-container text-on-surface-variant'
         }`}
       >
-        <span className="material-symbols-outlined text-[22px]">{course.icon}</span>
+        <span className="material-symbols-outlined text-[22px]" aria-hidden>
+          {course.icon}
+        </span>
       </div>
-      <div className="min-w-0 flex-1">
-        <p className="truncate text-sm font-bold text-on-surface">{course.code}</p>
-        <p className="truncate text-xs text-on-surface-variant">
+      <div className="flex min-w-0 flex-1 flex-col justify-center gap-0.5">
+        <p className="truncate text-sm font-bold leading-5 text-on-surface">{course.code}</p>
+        <p className="truncate text-xs leading-4 text-on-surface-variant">
           {course.title ?? 'Course practice'}
         </p>
-        <p className="mt-1 font-mono text-[11px] text-on-surface-variant">
+        <p className="truncate font-mono text-[11px] leading-4 text-on-surface-variant">
           {course.bank ? `${course.questionCount.toLocaleString()} questions` : 'coming soon'}
         </p>
       </div>
       {course.bank ? (
-        <span className="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+        <span className="material-symbols-outlined shrink-0 text-on-surface-variant" aria-hidden>
+          chevron_right
+        </span>
       ) : (
-        <span className="material-symbols-outlined text-on-surface-variant">hourglass_empty</span>
+        <span className="material-symbols-outlined shrink-0 text-on-surface-variant" aria-hidden>
+          hourglass_empty
+        </span>
       )}
     </>
   );
@@ -209,7 +221,7 @@ function CourseCard({ course, school }: { course: UniversityCourse; school: Scho
   }
   return (
     <li className="min-w-0">
-      <div className={`${cls} opacity-60`} aria-disabled>
+      <div className={`${cls} select-none opacity-60`} aria-disabled>
         {body}
       </div>
     </li>

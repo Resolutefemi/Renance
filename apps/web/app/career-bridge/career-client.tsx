@@ -138,7 +138,7 @@ export default function CareerClient({ data }: { data: CareerData | null }) {
                 rel="noopener noreferrer"
                 className="flex w-full items-center gap-3.5 p-4 text-left transition hover:bg-surface-container-low/50"
               >
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-surface-container-high">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full bg-surface-container-high">
                   <span className="material-symbols-outlined text-[24px] text-accent-ink">
                     {FIELD_ICONS[s.tags[0]] ?? 'school'}
                   </span>
@@ -160,7 +160,7 @@ export default function CareerClient({ data }: { data: CareerData | null }) {
                 key={s.title}
                 className="flex w-full items-center gap-3.5 p-4 text-left transition hover:bg-surface-container-low/50"
               >
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-surface-container-high">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full bg-surface-container-high">
                   <span className="material-symbols-outlined text-[24px] text-accent-ink">{s.icon}</span>
                 </span>
                 <span className="min-w-0 flex-1">
@@ -214,7 +214,7 @@ export default function CareerClient({ data }: { data: CareerData | null }) {
                 key={p.id}
                 className="flex items-start gap-3.5 rounded-xl px-1 py-3"
               >
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-surface-container-high">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full bg-surface-container-high">
                   <span className="material-symbols-outlined text-[24px] text-accent-ink">
                     {FIELD_ICONS[p.field] ?? 'trending_up'}
                   </span>

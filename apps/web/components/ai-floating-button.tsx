@@ -23,7 +23,7 @@ export default function AiFloatingButton() {
     <Link
       href="/ai"
       aria-label="Renance AI Studio - chat, quizzes, notes, notebooks"
-      className="group fixed bottom-24 right-4 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-on-primary shadow-[0_6px_20px_rgba(16,20,24,0.35)] ring-1 ring-black/10 transition-transform duration-150 hover:scale-105 active:scale-95 md:bottom-6 md:right-6 md:h-16 md:w-16"
+      className="group fixed bottom-[calc(6rem+env(safe-area-inset-bottom))] right-4 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-on-primary shadow-[0_6px_20px_rgba(16,20,24,0.35)] ring-1 ring-black/10 transition-transform duration-150 hover:scale-105 active:scale-95 md:bottom-6 md:right-6 md:h-16 md:w-16"
     >
       <AiSparkle className="h-7 w-7 md:h-8 md:w-8" />
       {/* Desktop hover flourish: the studio is one tap away */}
