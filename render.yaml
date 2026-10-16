@@ -76,30 +76,45 @@ services:
       #                          topics. The lesson cache and the user
       #                          tables live elsewhere, so Supabase
       #                          stops filling.
-      #   CACHE_DATABASE_URL   = the founder's SECOND InsForge
-      #                          (6zctb6jv, ~1 GB, baked below + as the
-      #                          code default store.bakedCacheDSN): the
-      #                          dedicated lesson cache home. The 36k
-      #                          cached lessons were moved there with
-      #                          dbsplit move-lessons on 2026-10-16, so
-      #                          the 900 MB cap (LESSON_CACHE_CAP_MB
-      #                          below) has real headroom. InsForge #1
-      #                          is the chain's fallback cache.
+      #   CACHE_DATABASE_URL   = InsForge #1 (dbeqj4dx, baked below + as
+      #                          the code default store.bakedCacheDSN):
+      #                          the lesson cache home since the
+      #                          2026-10-16 move (founder directive:
+      #                          "don't use insforge #2 for lesson cache
+      #                          only use #1" - #2 turned out to be the
+      #                          500 MB free tier while the cache had
+      #                          grown to 901 MB). The newest ~36k
+      #                          cached lessons were carried over
+      #                          dblink (server to server) and the 887
+      #                          MB table was dropped off #2, so the
+      #                          400 MB cap (LESSON_CACHE_CAP_MB below)
+      #                          keeps mirror + cache inside #1's own
+      #                          500 MB tier with headroom.
       # DATABASE_URL stays the legacy/fallback DSN (Supabase): a
       # failover handle for the user chain and the content failover.
       - key: DATABASE_URL
         value: "postgresql://postgres.zfxrmcwdnmmxjawmsiyp:Stephen2474life%23@aws-1-eu-west-3.pooler.supabase.com:5432/postgres?sslmode=require"
       - key: USER_DATABASE_URL
         value: "postgresql://neondb_owner:npg_siaeB4m7IMUZ@ep-snowy-base-axf83q3b-pooler.c-4.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+      # NEON CU CALLBACK PLAN (founder 2026-10-16, Neon at 84% of the
+      # monthly compute): the user chain now fails over to InsForge #1
+      # (the live dual-write mirror) BEFORE the legacy Supabase handle -
+      # store.bakedUserFallbackDSN carries it in code. When Neon's free
+      # tier runs dry the API keeps serving login/signup/progress from
+      # the mirror; when Neon resets it wins the chain again at boot and
+      # `dbsplit adopt-mirror` carries outage-window rows back.
+      # Dashboard knob that helps most: Neon -> your project -> Compute
+      # -> Suspend timeout -> 60 seconds (scale to zero between lulls).
       - key: CONTENT_DATABASE_URL
         value: "postgresql://postgres.zfxrmcwdnmmxjawmsiyp:Stephen2474life%23@aws-1-eu-west-3.pooler.supabase.com:5432/postgres?sslmode=require"
-      # Lesson cache cap for the CACHE database (the founder's second
-      # InsForge, ~1 GB free tier): the guard pauses new lesson writes
-      # past this size - lessons still serve from the deterministic
-      # engine either way. 900 leaves ~100 MB of the plan for the
-      # cache database's own bookkeeping. Raise after any upgrade.
+      # Lesson cache cap for the CACHE database (InsForge #1, the 500 MB
+      # free tier that also carries the user mirror): the guard pauses
+      # new lesson writes past this size - lessons still serve from the
+      # deterministic engine either way. 400 leaves ~70 MB of the plan
+      # for the mirror (~28 MB) and the database's own bookkeeping.
+      # Raise only after a plan upgrade.
       - key: LESSON_CACHE_CAP_MB
-        value: "900"
+        value: "400"
       # ── Multi-database fallback (founder directive 2026-10-15: "can
       # the project share two databases, or use another as a backup
       # when the first one's free trial ends?") ─────────────────────
@@ -129,18 +144,23 @@ services:
       #     dashboard any time: update it here AND in the GitHub Actions
       #     secret SUPABASE_DATABASE_URL (db-keepalive workflow).
       #   INSFORGE: the wire-verified DSN (dbeqj4dx, us-east) - the
-      #     user MIRROR and the legacy fallback cache home.
+      #     user MIRROR and since 2026-10-16 ALSO the lesson cache home
+      #     (cache and mirror share the database under the 400 MB cap;
+      #     the second InsForge, 6zctb6jv, was retired from cache duty
+      #     - it is the 500 MB free tier and the cache had outgrown it).
       - key: SUPABASE_DATABASE_URL
         value: "postgresql://postgres.zfxrmcwdnmmxjawmsiyp:Stephen2474life%23@aws-1-eu-west-3.pooler.supabase.com:5432/postgres?sslmode=require"
       - key: INSFORGE_DATABASE_URL
         value: "postgresql://postgres:8261cb984054ff872330f6b73200eb99@dbeqj4dx.us-east.database.insforge.app:5432/insforge?sslmode=require"
-      # The dedicated lesson cache (the founder's second InsForge,
-      # ~1 GB - "so that's two insforge for the lesson cache"). The
-      # 36k cached lessons live here; keepalives + synthgen top-ups
-      # target it via the same INSFORGE_DATABASE_URL GitHub secret
-      # convention (the Actions secret points at THIS database).
+      # CACHE_DATABASE_URL above carries the SAME dbeqj4dx DSN: since
+      # the 2026-10-16 move the cache lives with the mirror on InsForge
+      # #1. Keepalives + synthgen top-ups target it via the
+      # INSFORGE_DATABASE_URL GitHub secret convention (the Actions
+      # secret points at THIS database). The retired cache host
+      # (6zctb6jv, InsForge #2) now holds no Renance tables - keep it
+      # as a cold spare or delete the project.
       - key: CACHE_DATABASE_URL
-        value: "postgresql://postgres:887095676c6726afd1fe5a5371a27e5d@6zctb6jv.us-east.database.insforge.app:5432/insforge?sslmode=require"
+        value: "postgresql://postgres:8261cb984054ff872330f6b73200eb99@dbeqj4dx.us-east.database.insforge.app:5432/insforge?sslmode=require"
       # Explicit ordered chain (comma-separated) overrides the two
       # named vars above when set.
       - key: FALLBACK_DATABASE_URLS

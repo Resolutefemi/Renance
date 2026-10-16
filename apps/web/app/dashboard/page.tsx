@@ -25,7 +25,8 @@ import AiFloatingButton from '@/components/ai-floating-button';
 import SideNav from '@/components/side-nav';
 import { LearnStatChips, useLearnStats } from '@/components/learn/learn-stats';
 import DailyComboModal, { COMBO_BODIES } from '@/components/daily-combo-modal';
-import FeatureTour from '@/components/feature-tour';
+import FeatureTour, { PastQuestionsTip } from '@/components/feature-tour';
+import AppearanceModal, { needsAppearanceIntro } from '@/components/appearance-modal';
 
 interface Profile {
   fullName: string;
@@ -160,6 +161,16 @@ export default function DashboardPage() {
   const [comboOpen, setComboOpen] = useState(false);
   // The paper the student paused and left, if any (drives Continue Exam).
   const [activeExam, setActiveExam] = useState<ActiveExam | null>(null);
+  // Founder directive 2026-10-16: the appearance picker now also greets
+  // any account whose first WEB session never met the register-time
+  // popup - new signups AND first logins both land on it (the per-account
+  // localStorage gate in needsAppearanceIntro decides).
+  const [appearanceOpen, setAppearanceOpen] = useState(false);
+  useEffect(() => {
+    if (!me) return;
+    const t = window.setTimeout(() => setAppearanceOpen(needsAppearanceIntro()), 350);
+    return () => window.clearTimeout(t);
+  }, [me]);
 
   useEffect(() => {
     const read = () => setActiveExam(loadActiveExam());
@@ -312,6 +323,23 @@ export default function DashboardPage() {
       : isNeco
         ? '/exams/setup?body=neco'
         : '/university';
+
+  // The unsupported-school tip (founder directive 2026-10-16): fires for
+  // any student whose institution is NOT a listed live desk - they ride
+  // the merged general course pool, and the one thing they must learn is
+  // "To access past questions, click on Quizzes." No institution, no tip.
+  const pqTip = useMemo(() => {
+    const inst = (me?.profile?.institution ?? '').trim();
+    if (!inst) return null;
+    const matched = findSchoolByName(inst);
+    if (matched && matched.live && matched.slug !== 'others') return null;
+    const body = (me?.profile?.exams?.[0] ?? '').toUpperCase();
+    const href =
+      body.includes('UNIVERSITY') || body.includes('POST')
+        ? '/university/others' // the merged general-pool Quizzes desk
+        : '/packs'; // secondary desks: the Quizzes tile reads the pack shelf
+    return { name: inst, href };
+  }, [me]);
 
   const coveragePct = useMemo(() => {
     const gradedCodes = new Set(
@@ -621,8 +649,17 @@ export default function DashboardPage() {
           student touches daily sits on the home grid (more_features_sheet_light). */}
       {moreOpen && <MoreSheet onClose={() => setMoreOpen(false)} />}
 
-      {/* New-student walkthrough: shows once, Skippable always. */}
-      <FeatureTour />
+      {/* Founder directive 2026-10-16: the appearance picker greets every
+          NEW account and every first web LOGIN (per-account gate). The
+          feature tour waits behind it, and the unsupported-school tip
+          waits behind both, so the three never stack. */}
+      <AppearanceModal open={appearanceOpen} onClose={() => setAppearanceOpen(false)} />
+      <FeatureTour paused={appearanceOpen} />
+      <PastQuestionsTip
+        paused={appearanceOpen}
+        quizzesHref={pqTip?.href ?? '/packs'}
+        schoolName={pqTip?.name ?? 'your school'}
+      />
 
       <SideNav />
       <BottomNav />
@@ -793,6 +830,34 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
   const school = schoolSlug ? SCHOOLS.find((s) => s.slug === slug) ?? null : null;
   const catalog = clientCatalog(slug);
   const courses = liveCourses(catalog);
+
+  // Founder directive 2026-10-16 (dynamic hero branding): a student
+  // whose school has no independent question bank rides the merged
+  // general course pool - but the hero card must NEVER say "Other
+  // Schools". It carries the student's OWN institution name instead,
+  // with the shared pool's stats underneath; only a student who picked
+  // the pool without naming a school sees the neutral general label.
+  const isGeneralPool = school?.slug === 'others';
+  const customInstitution = (profile?.institution ?? '').trim();
+  const hasCustomBrand =
+    isGeneralPool &&
+    customInstitution.length > 0 &&
+    customInstitution.toLowerCase() !== 'other schools';
+  const heroShort = hasCustomBrand
+    ? customInstitution
+        .split(/\s+/)
+        .filter((w) => /^[A-Za-z]/.test(w))
+        .slice(0, 3)
+        .map((w) => w[0].toUpperCase())
+        .join('') || 'GEN'
+    : isGeneralPool
+      ? 'GENERAL'
+      : school?.short ?? 'School';
+  const heroName = hasCustomBrand
+    ? customInstitution
+    : isGeneralPool
+      ? 'General Course Desk'
+      : school?.name ?? 'Pick your school';
   return (
     <>
       {/* School hero card ---------------------------------------------- */}
@@ -810,16 +875,16 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
           </p>
           <span className="flex items-center gap-1 rounded-full bg-dark-text-primary/15 px-2 py-0.5 font-mono text-[11px] text-on-hero">
             <span className="material-symbols-outlined text-[13px]">school</span>
-            {school?.short ?? 'School'}
+            {heroShort}
           </span>
         </div>
         <div className="relative z-10">
           <h2 className="text-xl font-bold tracking-tight text-on-hero sm:text-2xl">
-            {school?.name ?? 'Pick your school'}
+            {heroName}
           </h2>
           <p className="mt-0.5 text-[13px] font-semibold text-hero-muted">
             {catalog && schoolSlug
-              ? `${courses.length} courses · ${courses.reduce((n, c) => n + c.questionCount, 0).toLocaleString()} questions`
+              ? `${courses.length} courses · ${courses.reduce((n, c) => n + c.questionCount, 0).toLocaleString()} questions${isGeneralPool ? ' · shared general pool' : ''}`
               : 'Course content lands as it is harvested'}
           </p>
         </div>

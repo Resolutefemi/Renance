@@ -70,6 +70,14 @@ const faqs = [
     q: "Is Renance free?",
     a: "Yes. Creating a student account, practicing past questions, taking server-graded CBT mocks, reading lesson notes and using the core platform is free. Schools also register free and get the NERDC curriculum, attendance, results and ID card tools. Optional premium upgrades exist, but the core educational experience stays free.",
   },
+  {
+    q: "My school is not on Renance yet. Can I still practice its past questions?",
+    a: "Yes. Students of institutions whose own question bank is still being wrapped are moved to the shared general course pool automatically: the merged desk gathers the courses every banked school teaches (GST, MTH 101, BIO 101, CHM 101 and 145 courses in all, over 49,968 questions) under the student's own school name. To access past questions, click on Quizzes on the dashboard. When the school's own bank goes live it replaces the shared pool one desk at a time.",
+  },
+  {
+    q: "How do streaks, gems and reward chests work?",
+    a: "Every completed topic spins open a reward chest that can hold streak freezes, gems (capped at 30 per drop) or a double XP boost. Studying on consecutive days builds a streak that celebrates with a full-screen popup, and a streak freeze earned from chests automatically saves the streak if a day is missed. Milestones at 7, 14, 30, 50 and 100+ days and course completions post to the Renance feed, where students can share them further or follow each other from the leaderboards.",
+  },
 ];
 
 const pillars = [
@@ -96,6 +104,12 @@ const pillars = [
     title: "School management",
     body: "Renance for Schools runs the school itself: NERDC curriculum install, teacher class assignments, an editable note library, a classroom attendance kiosk, CA and exam score entry that finalizes into positions and grades, PIN-secured student result checking, school fees tracking and student ID cards.",
     link: { href: "/for-schools/", label: "Renance for Schools" },
+  },
+  {
+    no: "05",
+    title: "The gamified semester",
+    body: "Tertiary students get a semester desk of over 10,000 courses: every unit opens into long, structured notes and ends with quizzes and a 50-question revision exam. Studying pays: finishing a topic spins open a reward chest (streak freezes, gems or XP boosts), daily streaks climb with Duolingo-style celebrations and freeze cards rescue a missed day, milestones fire at 7, 14, 30, 50 and 100+ days, and every achievement can be shared to the Renance feed or straight to other apps. Students follow each other from leaderboards and cheer each other on.",
+    link: { href: "/courses/", label: "Open the semester desk" },
   },
 ];
 
@@ -293,6 +307,18 @@ export default function AboutPage() {
                   <td>NERDC national curriculum, Primary 1 to SSS 3</td>
                 </tr>
                 <tr>
+                  <th scope="row">Learn system</th>
+                  <td>
+                    10,000+ tertiary courses with unit-by-unit long-form notes,
+                    end-of-unit 50-question revision exams, streaks, gems and
+                    reward chests
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Community</th>
+                  <td>Social feed, achievement sharing and a follow system built on the leaderboards</td>
+                </tr>
+                <tr>
                   <th scope="row">School suite</th>
                   <td>
                     Curriculum, attendance, results with PIN checking, fees, ID
@@ -320,8 +346,8 @@ export default function AboutPage() {
           <div className="rab-wrap">
             <h2 className="rab-h2">What Renance does</h2>
             <p className="rab-sub">
-              Four pillars, one platform: study, curriculum, AI and school
-              management.
+              Five pillars, one platform: study, curriculum, AI, school
+              management and the gamified semester.
             </p>
             <div className="rab-grid">
               {pillars.map((p) => (

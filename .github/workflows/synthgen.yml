@@ -76,7 +76,7 @@ jobs:
           /tmp/synthgen \
             -phase "${{ github.event.inputs.phase || 'all' }}" \
             -workers 6 \
-            -cap-mb 900
+            -cap-mb 400
 
       - name: Autocommit any engine source drift
         run: |

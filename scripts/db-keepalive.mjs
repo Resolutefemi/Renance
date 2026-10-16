@@ -18,7 +18,9 @@
 //   SUPABASE_URL           - https://zfxrmcwdnmmxjawmsiyp.supabase.co
 //   SUPABASE_SECRET_KEY    - sb_secret_… (REST ping)
 //   INSFORGE_DATABASE_URL  - the lesson cache DSN (the founder's
-//                            second InsForge, 6zctb6jv)
+//                            first InsForge, dbeqj4dx - since the
+//                            2026-10-16 cache move the cache and the
+//                            user mirror share this database)
 //   INSFORGE_MIRROR_DATABASE_URL - the user mirror DSN (the first
 //                            InsForge, dbeqj4dx) - optional; when set
 //                            both InsForge projects get their wire

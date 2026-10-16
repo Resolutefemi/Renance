@@ -65,11 +65,12 @@ const STEPS: Step[] = [
   },
 ];
 
-export default function FeatureTour() {
+export default function FeatureTour({ paused = false }: { paused?: boolean }) {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(0);
 
   useEffect(() => {
+    if (paused) return; // the appearance picker (or the PQ tip) owns the screen first
     try {
       if (window.localStorage.getItem(TOUR_KEY) !== 'done') {
         // Tiny delay so the dashboard paints first.
@@ -79,7 +80,7 @@ export default function FeatureTour() {
     } catch {
       /* storage blocked: never block the dashboard on it */
     }
-  }, []);
+  }, [paused]);
 
   function dismiss() {
     try {
@@ -169,6 +170,113 @@ export default function FeatureTour() {
               Next
             </button>
           )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* PastQuestionsTip - the unsupported-school onboarding tip (founder   */
+/* directive 2026-10-16): every student whose institution rides the    */
+/* merged general course pool gets ONE explicit popup:                 */
+/* "To access past questions, click on Quizzes." It fires on the       */
+/* dashboard once the profile has an institution, whether the student  */
+/* just finished the tour or already dismissed it long ago (its own    */
+/* localStorage key, so existing accounts see it too).                 */
+/* ------------------------------------------------------------------ */
+
+const PQ_TIP_KEY = 'renance.pqtip.v2';
+
+export function PastQuestionsTip({
+  paused = false,
+  quizzesHref,
+  schoolName,
+}: {
+  paused?: boolean;
+  quizzesHref: string;
+  schoolName: string;
+}) {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (paused) return;
+    let alive = true;
+    let timer = 0;
+    const attempt = () => {
+      if (!alive) return;
+      try {
+        if (window.localStorage.getItem(PQ_TIP_KEY) === 'done') return;
+        // Queue behind the feature tour (and the appearance picker, via
+        // the paused prop): one popup at a time, never a stack.
+        if (window.localStorage.getItem(TOUR_KEY) !== 'done') {
+          timer = window.setTimeout(attempt, 1500);
+          return;
+        }
+        setOpen(true);
+      } catch {
+        return;
+      }
+    };
+    timer = window.setTimeout(attempt, 1200);
+    return () => {
+      alive = false;
+      window.clearTimeout(timer);
+    };
+  }, [paused]);
+
+  function dismiss() {
+    try {
+      window.localStorage.setItem(PQ_TIP_KEY, 'done');
+    } catch {
+      /* private mode: it just asks once per visit */
+    }
+    setOpen(false);
+  }
+
+  if (!open) return null;
+  return (
+    <div
+      className="fixed inset-0 z-[72] flex items-end justify-center bg-on-background/70 backdrop-blur-sm sm:items-center"
+      role="dialog"
+      aria-modal="true"
+      aria-label="How to reach past questions"
+      onClick={dismiss}
+    >
+      <div
+        className="renance-rise w-full max-w-md rounded-t-2xl bg-surface-container-lowest p-6 shadow-xl sm:rounded-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-start gap-3">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary text-on-primary">
+            <span className="material-symbols-outlined text-[24px]">quiz</span>
+          </div>
+          <div className="min-w-0">
+            <h3 className="text-lg font-bold leading-snug tracking-tight text-on-surface">
+              To access past questions, click on Quizzes.
+            </h3>
+            <p className="mt-1.5 text-[13.5px] leading-relaxed text-on-surface-variant">
+              {schoolName} shares the general Renance course pool for now, and every
+              past question lives behind the Quizzes tile - your school&apos;s own
+              desk joins the list the moment its bank is wrapped.
+            </p>
+          </div>
+        </div>
+        <div className="mt-5 flex items-center gap-2">
+          <Link
+            href={quizzesHref}
+            onClick={dismiss}
+            className="flex-1 rounded-xl bg-primary py-3 text-center text-[13.5px] font-semibold text-on-primary transition active:scale-[0.98]"
+          >
+            Open Quizzes
+          </Link>
+          <button
+            type="button"
+            onClick={dismiss}
+            className="rounded-xl border border-outline-variant/70 px-4 py-3 text-[13px] font-semibold text-on-surface transition hover:border-primary/40"
+          >
+            Got it
+          </button>
         </div>
       </div>
     </div>

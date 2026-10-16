@@ -177,17 +177,24 @@ function SchoolRow({ school: s, postUtmeOnly }: { school: School; postUtmeOnly: 
   const inner = (
     <>
       <div
-        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${
+        className={`flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl ${
           s.live ? 'bg-primary text-on-primary' : 'bg-surface-container text-on-surface-variant'
         }`}
       >
-        <span className="material-symbols-outlined text-[20px]">
+        {/* Founder bug 2026-10-16: fixed square tile, glyph clipped to
+            the rounded box - the fallback row uses the standard school
+            building mark like every other row, so no stretched or
+            off-centre icon can appear even if a glyph is missing. */}
+        <span className="material-symbols-outlined text-[20px] leading-none">
           {isOthers ? 'diversity_3' : TYPE_ICONS[s.type]}
         </span>
       </div>
       <div className="min-w-0 flex-1">
-        <p className="flex items-center gap-2 truncate text-sm font-semibold text-on-surface">
-          {s.name}
+        {/* Founder bug 2026-10-16: long school names may wrap (two
+            lines) instead of being cut early; the live badge stays
+            pinned beside the first line. */}
+        <p className="flex flex-wrap items-center gap-x-2 text-sm font-semibold text-on-surface">
+          <span className="break-words leading-snug">{s.name}</span>
           {s.live && !isOthers && (
             <span className="shrink-0 rounded-full bg-primary/10 px-2 py-0.5 font-mono text-[10px] font-bold uppercase text-primary">
               live

@@ -598,8 +598,12 @@ export default function ProfilePage() {
 
                 {/* The browsable, scrollable school list: every live
                     desk (the same listing as the School Desk gate) plus
-                    Other Schools pinned last. */}
-                <ul className="mt-3 max-h-72 divide-y divide-outline-variant/40 overflow-y-auto overscroll-contain rounded-xl border border-outline-variant/60 bg-card">
+                    Other Schools pinned last. Founder bug 2026-10-16:
+                    the list sits on its OWN opaque, isolated layer -
+                    z-stacked above the summary text and action row, with
+                    a viewport-fraction height bound so it can never
+                    overflow onto the Save buttons. */}
+                <ul className="relative z-10 mt-3 max-h-[45vh] list-none divide-y divide-outline-variant/40 overflow-y-auto overscroll-contain rounded-xl border border-outline-variant/60 bg-card shadow-sm">
                   {schoolPickResults.map((s) => {
                     const isOthers = s.slug === 'others';
                     const selected = schoolName.trim().toLowerCase() === s.name.toLowerCase();
@@ -616,16 +620,22 @@ export default function ProfilePage() {
                           }`}
                         >
                           <span
-                            className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full ${
+                            className={`flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-full ${
                               selected ? 'bg-primary text-on-primary' : 'bg-surface-container text-on-surface-variant'
                             }`}
                           >
-                            <span className="material-symbols-outlined text-[16px]">
+                            <span className="material-symbols-outlined text-[16px] leading-none">
                               {isOthers ? 'diversity_3' : 'account_balance'}
                             </span>
                           </span>
                           <span className="min-w-0 flex-1">
-                            <span className="block truncate text-[14px] font-semibold text-on-surface">{s.name}</span>
+                            {/* Founder bug 2026-10-16: long university
+                                names wrapped to an early "…" even with
+                                room to spare - the name may now use the
+                                full row width and wrap to two lines. */}
+                            <span className="block break-words text-[14px] font-semibold leading-snug text-on-surface">
+                              {s.name}
+                            </span>
                             <span className="block truncate text-[11.5px] text-on-surface-variant">
                               {isOthers ? 'Merged general course banks for every unlisted school' : s.state}
                             </span>
