@@ -87,7 +87,7 @@ services:
       #                          cached lessons were carried over
       #                          dblink (server to server) and the 887
       #                          MB table was dropped off #2, so the
-      #                          400 MB cap (LESSON_CACHE_CAP_MB below)
+      #                          430 MB cap (LESSON_CACHE_CAP_MB below)
       #                          keeps mirror + cache inside #1's own
       #                          500 MB tier with headroom.
       # DATABASE_URL stays the legacy/fallback DSN (Supabase): a
@@ -109,12 +109,12 @@ services:
         value: "postgresql://postgres.zfxrmcwdnmmxjawmsiyp:Stephen2474life%23@aws-1-eu-west-3.pooler.supabase.com:5432/postgres?sslmode=require"
       # Lesson cache cap for the CACHE database (InsForge #1, the 500 MB
       # free tier that also carries the user mirror): the guard pauses
-      # new lesson writes past this size - lessons still serve from the
-      # deterministic engine either way. 400 leaves ~70 MB of the plan
-      # for the mirror (~28 MB) and the database's own bookkeeping.
-      # Raise only after a plan upgrade.
+      # new lesson writes past this size (it probes the whole DATABASE
+      # size, and mirror + lessons share it) - lessons still serve from
+      # the deterministic engine either way. 430 leaves ~60 MB of write
+      # headroom inside the plan. Raise only after a plan upgrade.
       - key: LESSON_CACHE_CAP_MB
-        value: "400"
+        value: "430"
       # ── Multi-database fallback (founder directive 2026-10-15: "can
       # the project share two databases, or use another as a backup
       # when the first one's free trial ends?") ─────────────────────
@@ -145,7 +145,7 @@ services:
       #     secret SUPABASE_DATABASE_URL (db-keepalive workflow).
       #   INSFORGE: the wire-verified DSN (dbeqj4dx, us-east) - the
       #     user MIRROR and since 2026-10-16 ALSO the lesson cache home
-      #     (cache and mirror share the database under the 400 MB cap;
+      #     (cache and mirror share the database under the 430 MB cap;
       #     the second InsForge, 6zctb6jv, was retired from cache duty
       #     - it is the 500 MB free tier and the cache had outgrown it).
       - key: SUPABASE_DATABASE_URL

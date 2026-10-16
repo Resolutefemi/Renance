@@ -381,8 +381,9 @@ const bakedUserFallbackDSN = "postgresql://postgres:8261cb984054ff872330f6b73200
 // the cache moved onto the FIRST InsForge (dbeqj4dx): scripts/
 // move_cache_dblink.js carried the newest ~36k lessons over dblink
 // (server to server inside Insforge's own network) and dropped the
-// 887 MB table off #2. LESSON_CACHE_CAP_MB drops 900 -> 400 so the
-// mirror (~28 MB) plus cache stays safely inside the 500 MB tier.
+// 887 MB table off #2. LESSON_CACHE_CAP_MB drops 900 -> 430 so the
+// mirror plus cache (the guard probes the whole DATABASE size)
+// stays safely inside the 500 MB tier with write headroom.
 // A real CACHE_DATABASE_URL env value always wins - this default only
 // fills an EMPTY env.
 const bakedCacheDSN = "postgresql://postgres:8261cb984054ff872330f6b73200eb99@dbeqj4dx.us-east.database.insforge.app:5432/insforge?sslmode=require"
@@ -396,7 +397,7 @@ const bakedCacheDSN = "postgresql://postgres:8261cb984054ff872330f6b73200eb99@db
 //	content = CONTENT_DATABASE_URL
 //	cache   = CACHE_DATABASE_URL -> bakedCacheDSN (InsForge #1,
 //	          the mirror database - cache and mirror share it
-//	          under the 400 MB cap) -> INSFORGE_DATABASE_URL
+//	          under the 430 MB cap) -> INSFORGE_DATABASE_URL
 //
 // The first live DSN of each chain wins at boot; every hop is logged
 // redacted. An empty content chain means "ride the user pool" (the
