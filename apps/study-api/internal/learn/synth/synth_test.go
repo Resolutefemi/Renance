@@ -203,3 +203,25 @@ func minInt(a, b int) int {
         }
         return b
 }
+
+func TestPackRouting(t *testing.T) {
+	// the founder caught General Biology teaching economics because
+	// its department is Agricultural Economics: the TITLE must win
+	cases := []struct{ title, dept, faculty, want string }{
+		{"General Biology", "Agricultural Economics & Farm Management", "Agriculture", "biology"},
+		{"General Chemistry for Agriculture", "Agricultural Economics & Farm Management", "Agriculture", "chemistry"},
+		{"General Mathematics I", "Agricultural Extension & Rural Development", "Agriculture", "mathematics"},
+		{"Criminal Law", "Jurisprudence and International Law", "Law", "law"},
+		{"Principles of Economics", "Economics", "Social Sciences", "economics"},
+		{"Polymer Chemistry", "Chemistry", "Science", "chemistry"},
+		{"Introduction to Computer Science", "Computer Science", "Science", "computing"},
+		{"Human Anatomy", "Anatomy", "Basic Medical Sciences", "health"},
+		{"Soil Science", "Soil Science", "Agriculture", "agriculture"},
+	}
+	for _, c := range cases {
+		got := PackFor(c.title, c.dept, c.faculty).key
+		if got != c.want {
+			t.Errorf("PackFor(%q,%q): got %s want %s", c.title, c.dept, got, c.want)
+		}
+	}
+}

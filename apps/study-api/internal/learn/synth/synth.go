@@ -14,15 +14,28 @@ import (
 
 /* --------------------------- pack routing ------------------------- */
 
-// PackFor picks the best matching discipline pack for a course.
+// PackFor picks the best matching discipline pack for a course. The
+// course TITLE dominates: a course named "General Biology" inside the
+// Agricultural Economics department must teach biology, not economics
+// (the founder caught exactly that mismatch in production). Dept and
+// faculty only break ties and rescue untitled or generic courses.
 func PackFor(title, dept, faculty string) *pack {
         best := genericPack
-        bestScore := 0
+        bestTitle, bestDept := 0, 0
         for _, p := range packs {
-                s := p.match(title, dept, faculty)
-                if s > bestScore {
-                        bestScore = s
-                        best = p
+                ts := p.match(title)
+                ds := p.match(dept + " " + faculty)
+                if ts > bestTitle || (ts == bestTitle && ts > 0 && ds > bestDept) {
+                        best, bestTitle, bestDept = p, ts, ds
+                }
+        }
+        if bestTitle > 0 {
+                return best
+        }
+        // title said nothing: fall back to dept/faculty, then generic
+        for _, p := range packs {
+                if p.match(dept+" "+faculty) > bestDept {
+                        best, bestDept = p, p.match(dept+" "+faculty)
                 }
         }
         return best

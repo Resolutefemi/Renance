@@ -353,7 +353,7 @@ func (r *runner) runLessons(ctx context.Context, workers int) {
                                         log.Printf("synthgen: lessons %d written in %s (db %d MB)",
                                                 n, time.Since(start).Round(time.Second), r.sizeMB(ctx))
                                 }
-                                if n%4000 < batchN && r.sizeMB(ctx) >= r.capMB {
+                                if n%500 < batchN && r.sizeMB(ctx) >= r.capMB {
                                         log.Printf("synthgen: storage cap reached at %d MB", r.capMB)
                                         stop.Store(true)
                                 }

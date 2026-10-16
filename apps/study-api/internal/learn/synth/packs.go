@@ -29,12 +29,18 @@ var packs = []*pack{mathPack, physicsPack, chemistryPack, biologyPack, csPack,
         healthPack, agriculturePack, educationPack, socialPack, humanitiesPack,
         mediaPack, geoPack, statsPack, builtPack, hospitalityPack, genericPack}
 
-func (p *pack) match(title, dept, faculty string) int {
-        h := strings.ToLower(title + " " + dept + " " + faculty)
+// match scores a haystack against the pack's keywords. The score
+// weights a keyword by its length and pulls it DOWN by how late it
+// appears: the subject word of a title leads ("Chemistry" in "General
+// Chemistry for Agriculture"), context qualifiers trail ("for
+// Agriculture", "in Nigeria"), so a leading subject beats a trailing
+// qualifier even when the qualifier is the longer word.
+func (p *pack) match(haystack string) int {
+        h := strings.ToLower(haystack)
         score := 0
         for _, kw := range p.keywords {
-                if strings.Contains(h, kw) {
-                        score += len(kw)
+                if i := strings.Index(h, kw); i >= 0 {
+                        score += len(kw)*2 - i
                 }
         }
         return score
@@ -260,7 +266,7 @@ var biologyPack = &pack{
         calc: "",
         keywords: []string{"biolog", "botany", "zoology", "plant science", "plant biology",
                 "animal science", "microbiolog", "genetic", "ecology", "parasitolog",
-                "entomolog", "anatomy", "physiolog", "biochem", "cell biolog", "marine biolog",
+                "entomolog", "biochem", "cell biolog", "marine biolog",
                 "fisherie", "wildlife", "forestry"},
         nouns: []string{"the cell and its organelles", "cell transport mechanisms",
                 "cell division: mitosis and meiosis", "DNA structure and replication",

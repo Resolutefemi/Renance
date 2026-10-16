@@ -10,6 +10,7 @@ import (
         "context"
         "encoding/json"
         "fmt"
+        "os"
         "regexp"
         "sort"
         "strconv"
@@ -77,6 +78,28 @@ const LessonSource = "zai-glm-3"
 // x 10 topics of deep notes and quizzes, so the agent generated the
 // content engine itself. Both stamps count as CURRENT format.
 const AgentSource = "agent-v1"
+
+// lessonCacheCapMB is the storage guard for the agent read through
+// cache: past this database size the API STOPS writing new lesson
+// rows (synthesis still serves every topic instantly) so the cache can
+// never eat the headroom the app's own writes need - progress, streaks,
+// chests and the social feed must never fail for a cache fill.
+// LESSON_CACHE_CAP_MB raises it after a plan upgrade.
+var lessonCacheCapMB = func() int {
+        if v := os.Getenv("LESSON_CACHE_CAP_MB"); v != "" {
+                if n, err := strconv.Atoi(v); err == nil && n > 100 {
+                        return n
+                }
+        }
+        return 470
+}()
+
+// agentPersistGate tracks agent cache writes between size probes.
+var agentPersistState struct {
+        mu       sync.Mutex
+        since    int
+        disabled bool
+}
 
 type Engine struct {
         AI  tutor.Provider
@@ -994,16 +1017,48 @@ func (s *Service) generateLessonAgent(ctx context.Context, t *topicCtx) (*Lesson
         }
         doc.Drawings = decorateDrawings(t, nil)
 
-        // Cache best effort: when the database is at its storage cap the
-        // INSERT fails, but the doc is still valid content - a student
-        // must NEVER see a failed lesson just because the cache is full
-        // (the founder reads the app, not the disk). Log and serve.
+        // Cache best effort under the storage guard: synthesis already
+        // produced a valid lesson, so a skipped or failed cache write is a
+        // speed detail, never a missing lesson. The gate probes the
+        // database size every 200 writes and stops caching past the cap so
+        // the app's own writes (progress, streaks, chests, feed) always
+        // keep their headroom.
+        if !agentCacheAllowed(s) {
+                return doc, nil
+        }
         if err := s.persistLesson(ctx, doc); err != nil {
                 if s.Engine.Log != nil {
                         s.Engine.Log.Error("learn: agent lesson persist failed - serving uncached", "topic", t.ID, "err", err)
                 }
         }
         return doc, nil
+}
+
+// agentCacheAllowed probes the database size every 200 agent cache
+// writes and reports whether the cache may keep growing.
+func agentCacheAllowed(s *Service) bool {
+        agentPersistState.mu.Lock()
+        defer agentPersistState.mu.Unlock()
+        if agentPersistState.disabled {
+                return false
+        }
+        agentPersistState.since++
+        if agentPersistState.since%200 != 1 {
+                return true
+        }
+        var mb int
+        if err := s.Pool.QueryRow(context.Background(),
+                `SELECT pg_database_size(current_database())/1048576`).Scan(&mb); err != nil {
+                return true // probe failed: assume allowed, the write is best effort anyway
+        }
+        if mb >= lessonCacheCapMB {
+                agentPersistState.disabled = true
+                if s.Engine.Log != nil {
+                        s.Engine.Log.Error("learn: lesson cache paused at storage cap - lessons still serve from the engine", "db_mb", mb, "cap_mb", lessonCacheCapMB)
+                }
+                return false
+        }
+        return true
 }
 
 // genNotes produces the deep notes half (10-12 long sections). Models
