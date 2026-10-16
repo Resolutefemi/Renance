@@ -81,7 +81,7 @@ export default function WhatsAppChannelModal() {
           </span>
           <h3 className="text-[18px] font-black text-on-surface">Join our WhatsApp channel</h3>
           <p className="max-w-[19rem] text-[13px] font-semibold leading-snug text-on-surface-variant">
-            Stay tuned for new features, study packs and exam tips — straight to your WhatsApp.
+            Stay tuned for new features, study packs and exam tips - straight to your WhatsApp.
           </p>
         </div>
         <div className="flex flex-col gap-2 px-6 pb-6">
