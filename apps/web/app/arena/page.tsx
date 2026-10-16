@@ -118,6 +118,12 @@ function ArenaInner() {
   focusRef.current = focus;
   const phaseRef = useRef<Phase>('idle');
   phaseRef.current = phase;
+  // Frames arrive through a socket created ONCE at mount, so the frame
+  // handler must read identity through a ref - a state variable captured
+  // in that closure stays frozen at mount (""), which silently broke the
+  // live scoreline (the YOU counter never moved on results) and the
+  // victory celebration (winner === "" never matched).
+  const meIdRef = useRef('');
   // The last waiting-intent (queue / host / join / challenge). The hub
   // forgets the session the moment a socket drops - queue seat gone,
   // room deleted, duel forfeited - so on every reconnect the page
@@ -208,36 +214,40 @@ function ArenaInner() {
         case 'result': {
           setLastCorrect(frame.correctLetter);
           const solved = frame.solved ?? {};
-          if (meId && solved[meId]) setYou((n) => n + 1);
-          else if (Object.entries(solved).some(([id, ok]) => ok && id !== meId)) setRival((n) => n + 1);
+          const me = meIdRef.current;
+          if (me && solved[me]) setYou((n) => n + 1);
+          else if (Object.entries(solved).some(([id, ok]) => ok && id !== me)) setRival((n) => n + 1);
           break;
         }
         case 'over': {
           const scores = frame.scores ?? {};
-          const other = Object.entries(scores).find(([id]) => id !== meId);
-          if (meId && scores[meId] != null) setYou(scores[meId]);
+          const me = meIdRef.current;
+          const other = Object.entries(scores).find(([id]) => id !== me);
+          if (me && scores[me] != null) setYou(scores[me]);
           if (other) setRival(other[1]);
           setWinner(frame.winner || null);
           // The victory moment (founder's gamification pass): a won duel
           // gets the same full-screen joy a topic chest gets.
-          if (meId && frame.winner && frame.winner === meId) setCelebrateWin(true);
+          if (me && frame.winner && frame.winner === me) setCelebrateWin(true);
           setPhase('over');
           break;
         }
         case 'error':
           if (frame.errorCode === 'no_pack_available') {
             setErrorMsg(`No live pack for ${focusRef.current} yet, try another focus.`);
-            setPhase('idle');
+            if (phaseRef.current !== 'dueling' && phaseRef.current !== 'over') setPhase('idle');
           } else if (frame.errorCode !== 'already_queued' && frame.errorCode !== 'in_match') {
             setErrorMsg(frame.message || 'The arena refused that move.');
-            if (phase !== 'dueling' && phase !== 'over') setPhase('idle');
+            if (phaseRef.current !== 'dueling' && phaseRef.current !== 'over') setPhase('idle');
           }
           break;
         default:
           break;
       }
     },
-    [meId, phase],
+    // All frame reads go through refs (meIdRef/phaseRef/focusRef) - the
+    // socket holds this handler forever, so no state may leak into it.
+    [],
   );
 
   // One socket for the whole session.
@@ -260,6 +270,7 @@ function ArenaInner() {
       }
       if (!alive) return;
       setMeId(id);
+      meIdRef.current = id;
       setFocus(body as Focus);
       setJoinOpen(!!params.get('join'));
 
