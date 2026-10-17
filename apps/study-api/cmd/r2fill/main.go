@@ -129,7 +129,20 @@ func main() {
                         if *firstN > 0 && int(pushed.Load()+failed.Load()) >= *firstN {
                                 return
                         }
-                        rows <- r
+                        // Stop aware send: when the deadline fires the workers walk
+                        // away, so a producer parked on a full channel would hang the
+                        // run forever. Wake up every 100ms and re-check instead.
+                        sent := false
+                        for !sent {
+                                if stop.Load() {
+                                        return
+                                }
+                                select {
+                                case rows <- r:
+                                        sent = true
+                                case <-time.After(100 * time.Millisecond):
+                                }
+                        }
                 }
                 if err := sc.Err(); err != nil {
                         fmt.Fprintf(os.Stderr, "r2fill: queue read: %v\n", err)
