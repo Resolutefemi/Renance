@@ -266,6 +266,34 @@ services:
       # Paystack: paste the secret key and card payments switch on.
       - key: PAYSTACK_SECRET_KEY
         sync: false
+      # ── Cloudflare R2 lesson blobs (the durable lesson home since
+      # 2026-10-16, commit 94a61e8: the bucket is the home, the cache
+      # DB is the index; reads fall back R2 -> DB -> generation, writes
+      # are dual bucket+DB and a bucket failure never fails a lesson).
+      # FOUNDER DIRECTIVE 2026-10-18: the bucket name changes to
+      # "render" - R2_BUCKET is baked here so a blueprint sync applies
+      # it. The OTHER THREE keys stay dashboard-managed (sync:false,
+      # their values were set on the Render environment during the
+      # cutover and are not stored in this repo):
+      #   R2_ACCOUNT_ID / R2_ACCESS_KEY_ID / R2_SECRET_ACCESS_KEY.
+      # TWO DEPLOY-DAY TRAPS: (1) a bucket literally named "render"
+      # MUST exist in Cloudflare first - R2 cannot rename a bucket,
+      # and a name mismatch turns R2 inert (reads miss to the DB,
+      # failed writes just log, students never notice). (2) if the R2
+      # API token was scoped to the old renance-lessons bucket it
+      # cannot reach "render" - mint a new Object Read & Write token
+      # scoped to "render" (or account-wide) and paste it over the
+      # two dashboard keys. Lessons already pushed to the old bucket
+      # are safe: the DB stays the index, `dbsplit r2-push` re-fills
+      # the new bucket from it any time.
+      - key: R2_BUCKET
+        value: "render"
+      - key: R2_ACCOUNT_ID
+        sync: false
+      - key: R2_ACCESS_KEY_ID
+        sync: false
+      - key: R2_SECRET_ACCESS_KEY
+        sync: false
       # Management rescue line (founder directive 2026-10-02): guards the
       # internal endpoints - POST /internal/device/unbind (free a student
       # who lost/changed their phone from the one-account-per-device
