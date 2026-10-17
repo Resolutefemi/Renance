@@ -28,6 +28,12 @@ type Service struct {
         // Set by the server wiring; when nil the storage-cap probe reads
         // Pool instead (single-database boots).
         CachePool       store.Pool
+        // Blobs is the object-storage home of whole lesson documents
+        // (Cloudflare R2, founder 2026-10-17): R2-first reads, dual
+        // writes (bucket + cache database), three read tiers with clean
+        // falls. nil keeps the cache database as the only home - every
+        // path degrades to today's posture.
+        Blobs           LessonBlobs
         Log             *slog.Logger
         Engine          *Engine
         UnlimitedHearts bool

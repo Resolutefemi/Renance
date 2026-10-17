@@ -54,6 +54,7 @@ import (
         "renance.dev/study-api/internal/grading"
         "renance.dev/study-api/internal/jwtx"
         "renance.dev/study-api/internal/learn"
+        "renance.dev/study-api/internal/r2store"
         "renance.dev/study-api/internal/schoolcorpus"
         "renance.dev/study-api/internal/store"
         "renance.dev/study-api/internal/tutor"
@@ -186,6 +187,18 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
                 Log:             log,
                 Engine:          learn.NewEngine(aiProvider, lib),
                 UnlimitedHearts: cfg.LearnUnlimitedHearts,
+        }
+        // Lesson blobs (founder 2026-10-17, "how do we move to cloudflare
+        // r2"): with the R2_* environment set, Cloudflare R2 becomes the
+        // durable home of every lesson document - R2-first reads, dual
+        // writes (bucket + cache database). Unset keeps the single-home
+        // posture; nothing else changes.
+        if blobs := r2store.FromEnv(log); blobs != nil {
+                s.learn.Blobs = blobs
+                log.Info("lesson blobs: cloudflare r2 attached - the bucket is the durable lesson home",
+                        "bucket", blobs.Bucket(), "prefix", blobs.Prefix())
+        } else {
+                log.Info("lesson blobs: r2 not configured - the cache database stays the only lesson home")
         }
         s.learn.WireExpGuard()
         s.limiter = newRateLimiter(cfg.TutorPerMin, cfg.TutorPerMin)

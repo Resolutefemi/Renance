@@ -1,12 +1,12 @@
 package httpapi
 
 import (
-	"context"
-	"net/http"
-	"os"
-	"time"
+        "context"
+        "net/http"
+        "os"
+        "time"
 
-	"renance.dev/study-api/internal/store"
+        "renance.dev/study-api/internal/store"
 )
 
 // buildVersion reports the git commit this binary was built from.
@@ -14,10 +14,10 @@ import (
 // (local runs, CI) reads as "dev". Surfaced by /healthz so a DB-free
 // GET proves which deploy is live.
 var buildVersion = func() string {
-	if c := os.Getenv("RENDER_GIT_COMMIT"); len(c) >= 7 {
-		return c[:7]
-	}
-	return "dev"
+        if c := os.Getenv("RENDER_GIT_COMMIT"); len(c) >= 7 {
+                return c[:7]
+        }
+        return "dev"
 }()
 
 // NEON COMPUTE BUDGET (founder report 2026-10-14: Neon "81% of the 100
@@ -49,13 +49,20 @@ var buildVersion = func() string {
 // (Render injects RENDER_GIT_COMMIT), so a DB-free GET proves WHICH
 // deploy is live - "is the fix actually shipped?" without waking Neon.
 func (s *Server) handleHealth(w http.ResponseWriter, r *http.Request) {
-	writeJSON(w, http.StatusOK, map[string]any{
-		"status":  "ok",
-		"service": "renance-study-api",
-		"db":      "not-probed (see /readyz)",
-		"version": buildVersion,
-		"time":    time.Now().UTC().Format(time.RFC3339),
-	})
+        // The blob tier is a pure memory check (no bucket call, no
+        // database call) - still DB-free by doctrine.
+        blobs := "off"
+        if s.learn != nil && s.learn.Blobs != nil {
+                blobs = "r2"
+        }
+        writeJSON(w, http.StatusOK, map[string]any{
+                "status":  "ok",
+                "service": "renance-study-api",
+                "db":      "not-probed (see /readyz)",
+                "blobs":   blobs,
+                "version": buildVersion,
+                "time":    time.Now().UTC().Format(time.RFC3339),
+        })
 }
 
 // handleReady answers the database probe: one real Pool.Ping against
@@ -64,42 +71,42 @@ func (s *Server) handleHealth(w http.ResponseWriter, r *http.Request) {
 // the bot shield, and no monitor or keep-warm cron should point here -
 // every call wakes the database and burns compute hours.
 func (s *Server) handleReady(w http.ResponseWriter, r *http.Request) {
-	ctx, cancel := context.WithTimeout(r.Context(), 3*time.Second)
-	defer cancel()
-	if err := s.store.Pool.Ping(ctx); err != nil {
-		writeJSON(w, http.StatusServiceUnavailable, map[string]any{
-			"status":  "degraded",
-			"service": "renance-study-api",
-			"db":      "unreachable: " + truncateErr(err),
-			"time":    time.Now().UTC().Format(time.RFC3339),
-		})
-		return
-	}
-	// The split-horizon domains report individually: the user
-	// database gates readiness (the split router degrades content and
-	// cache onto it), while a lagging catalog or lesson cache shows
-	// here without failing the probe.
-	report := map[string]any{
-		"status":  "ok",
-		"service": "renance-study-api",
-		"db":      "ok",
-		"time":    time.Now().UTC().Format(time.RFC3339),
-	}
-	probe := func(name string, pool store.Pool) {
-		if pool == nil {
-			return
-		}
-		pctx, pcancel := context.WithTimeout(context.Background(), 3*time.Second)
-		defer pcancel()
-		if err := pool.Ping(pctx); err != nil {
-			report[name] = "unreachable: " + truncateErr(err)
-			return
-		}
-		report[name] = "ok"
-	}
-	if sp, ok := s.store.Pool.(*store.Split); ok {
-		probe("content", sp.Content)
-		probe("cache", sp.Cache)
-	}
-	writeJSON(w, http.StatusOK, report)
+        ctx, cancel := context.WithTimeout(r.Context(), 3*time.Second)
+        defer cancel()
+        if err := s.store.Pool.Ping(ctx); err != nil {
+                writeJSON(w, http.StatusServiceUnavailable, map[string]any{
+                        "status":  "degraded",
+                        "service": "renance-study-api",
+                        "db":      "unreachable: " + truncateErr(err),
+                        "time":    time.Now().UTC().Format(time.RFC3339),
+                })
+                return
+        }
+        // The split-horizon domains report individually: the user
+        // database gates readiness (the split router degrades content and
+        // cache onto it), while a lagging catalog or lesson cache shows
+        // here without failing the probe.
+        report := map[string]any{
+                "status":  "ok",
+                "service": "renance-study-api",
+                "db":      "ok",
+                "time":    time.Now().UTC().Format(time.RFC3339),
+        }
+        probe := func(name string, pool store.Pool) {
+                if pool == nil {
+                        return
+                }
+                pctx, pcancel := context.WithTimeout(context.Background(), 3*time.Second)
+                defer pcancel()
+                if err := pool.Ping(pctx); err != nil {
+                        report[name] = "unreachable: " + truncateErr(err)
+                        return
+                }
+                report[name] = "ok"
+        }
+        if sp, ok := s.store.Pool.(*store.Split); ok {
+                probe("content", sp.Content)
+                probe("cache", sp.Cache)
+        }
+        writeJSON(w, http.StatusOK, report)
 }

@@ -39,20 +39,37 @@
 //                            the unreferenced public.user_details that the
 //                            split router never reads)
 //
+//      r2-status             the Cloudflare R2 lesson-blob ledger: rows in
+//                            learn.lessons vs objects in the bucket, with
+//                            bytes
+//      r2-push               one-time backfill: every learn.lessons row on
+//                            the cache database uploads to R2 as
+//                            lessons/<topic_id>.json (resumable - objects
+//                            already in the bucket skip unless --force)
+//      r2-restore            the disaster-rebuild path: every bucket object
+//                            upserts back into learn.lessons on the cache
+//                            database (hit_count resets; the bucket was
+//                            always the durable home)
+//
 // Destructive subcommands need --yes. All DSNs come from the same
 // environment the API boots with: USER_DATABASE_URL /
 // DATABASE_URL, CONTENT_DATABASE_URL, CACHE_DATABASE_URL /
-// INSFORGE_DATABASE_URL.
+// INSFORGE_DATABASE_URL. The R2 commands additionally need
+// R2_ACCOUNT_ID, R2_BUCKET, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY
+// (optional R2_PREFIX) - the same variables the API boots with.
 package main
 
 import (
         "context"
+        "encoding/json"
         "fmt"
         "log/slog"
         "os"
         "strings"
         "time"
 
+        "renance.dev/study-api/internal/learn"
+        "renance.dev/study-api/internal/r2store"
         "renance.dev/study-api/internal/store"
 )
 
@@ -143,17 +160,25 @@ commands:
   reap-insforge-catalog drop the catalog tables on the cache database
   reap-insforge-lessons drop learn.lessons on the old cache (INSFORGE_DATABASE_URL)
   reap-user-stale       drop dead catalog/lesson/legacy tables off the user database
+  r2-status             lesson rows in the cache database vs objects in the R2 bucket
+  r2-push               backfill every cache lesson row into R2 (resumable, --force rewrites)
+  r2-restore            rebuild learn.lessons from the R2 bucket (--yes required)
 
 environment: USER_DATABASE_URL (or DATABASE_URL), CONTENT_DATABASE_URL,
-CACHE_DATABASE_URL (or INSFORGE_DATABASE_URL).
+CACHE_DATABASE_URL (or INSFORGE_DATABASE_URL); the r2-* commands also
+need R2_ACCOUNT_ID, R2_BUCKET, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY.
 `)
                 os.Exit(2)
         }
         cmd := os.Args[1]
         yes := false
+        force := false
         for _, a := range os.Args[2:] {
-                if a == "--yes" {
+                switch a {
+                case "--yes":
                         yes = true
+                case "--force":
+                        force = true
                 }
         }
         ctx, cancel := context.WithTimeout(context.Background(), 90*time.Minute)
@@ -340,6 +365,154 @@ CACHE_DATABASE_URL (or INSFORGE_DATABASE_URL).
                         fmt.Println("  dropped " + t)
                 }
                 fmt.Println("user database stale tables dropped")
+
+        case "r2-status":
+                // The migration ledger: rows on the cache database vs
+                // objects in the bucket. When the two counts agree (or
+                // the bucket is ahead - freshly generated lessons dual-
+                // write), the backfill is complete.
+                k := cacheStore()
+                blobs := r2store.FromEnv(log)
+                if blobs == nil {
+                        fatalf("r2-status: set R2_ACCOUNT_ID, R2_BUCKET, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY (optional R2_PREFIX) first")
+                }
+                var rows int64
+                if err := k.Pool.QueryRow(ctx, `SELECT COUNT(*) FROM learn.lessons`).Scan(&rows); err != nil {
+                        fatalf("r2-status: count learn.lessons: %v", err)
+                }
+                objects, err := blobs.ListLessons(ctx)
+                if err != nil {
+                        fatalf("r2-status: list bucket: %v", err)
+                }
+                var bytes int64
+                for _, sz := range objects {
+                        bytes += sz
+                }
+                fmt.Printf("cache database rows  : %d\n", rows)
+                fmt.Printf("bucket objects       : %d (prefix %s)\n", len(objects), blobs.Prefix())
+                fmt.Printf("bucket lesson bytes  : %.1f MB\n", float64(bytes)/1048576)
+                if int(rows) > len(objects) {
+                        fmt.Printf("backfill pending     : %d rows not yet in the bucket (run r2-push)\n", int(rows)-len(objects))
+                } else {
+                        fmt.Printf("backfill complete    : the bucket covers every database row\n")
+                }
+                fmt.Printf("bucket is the durable home; database is the index\n")
+
+        case "r2-push":
+                // The one-time backfill (runbook: docs/cloudflare-r2.md).
+                // Streams every learn.lessons row off the cache database
+                // and PUTs it as lessons/<topic_id>.json. Resumable: the
+                // bucket's existing keys skip unless --force, so a half-
+                // finished run continues where it stopped. 36k rows of
+                // ~40 KB is ~1.5 GB - inside the 10 GB free tier.
+                k := cacheStore()
+                blobs := r2store.FromEnv(log)
+                if blobs == nil {
+                        fatalf("r2-push: set R2_ACCOUNT_ID, R2_BUCKET, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY (optional R2_PREFIX) first")
+                }
+                existing, err := blobs.ListLessons(ctx)
+                if err != nil {
+                        fatalf("r2-push: list bucket: %v", err)
+                }
+                fmt.Printf("r2-push: %d objects already in the bucket (skip unless --force)\n", len(existing))
+                rows, err := k.Pool.Query(ctx, `
+                        SELECT topic_id, title, summary, notes, key_points, quiz, drawings, source,
+                               COALESCE(generated_at::text, '')
+                        FROM learn.lessons ORDER BY topic_id`)
+                if err != nil {
+                        fatalf("r2-push: read learn.lessons: %v", err)
+                }
+                defer rows.Close()
+                pushed, skipped, failed, total := 0, 0, 0, 0
+                for rows.Next() {
+                        var blob learn.LessonBlob
+                        var notes, kp, quiz, draw []byte
+                        if err := rows.Scan(&blob.TopicID, &blob.Title, &blob.Summary,
+                                &notes, &kp, &quiz, &draw, &blob.Source, &blob.GeneratedAt); err != nil {
+                                fatalf("r2-push: scan: %v", err)
+                        }
+                        blob.Notes, blob.KeyPoints, blob.Quiz, blob.Drawings = notes, kp, quiz, draw
+                        total++
+                        if _, done := existing[blob.TopicID]; done && !force {
+                                skipped++
+                                continue
+                        }
+                        payload, err := json.Marshal(blob)
+                        if err != nil {
+                                fmt.Fprintf(os.Stderr, "  marshal %s: %v\n", blob.TopicID, err)
+                                failed++
+                                continue
+                        }
+                        if err := blobs.Put(ctx, blob.TopicID, payload); err != nil {
+                                fmt.Fprintf(os.Stderr, "  put %s: %v\n", blob.TopicID, err)
+                                failed++
+                                continue
+                        }
+                        pushed++
+                        if pushed%500 == 0 {
+                                fmt.Printf("  ... %d pushed, %d skipped, %d failed (scanned %d)\n", pushed, skipped, failed, total)
+                        }
+                }
+                if err := rows.Err(); err != nil {
+                        fatalf("r2-push: rows: %v", err)
+                }
+                fmt.Printf("r2-push complete: pushed %d, skipped %d, failed %d (scanned %d rows)\n", pushed, skipped, failed, total)
+                if failed > 0 {
+                        os.Exit(1)
+                }
+
+        case "r2-restore":
+                // The disaster-rebuild path: the cache database was lost
+                // or wiped, the bucket holds everything. Every object
+                // upserts back into learn.lessons (hit_count restarts at
+                // zero - it is a serving statistic, not content).
+                if !yes {
+                        fatalf("r2-restore overwrites cache rows - pass --yes when sure")
+                }
+                k := cacheStore()
+                blobs := r2store.FromEnv(log)
+                if blobs == nil {
+                        fatalf("r2-restore: set R2_ACCOUNT_ID, R2_BUCKET, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY (optional R2_PREFIX) first")
+                }
+                objects, err := blobs.ListLessons(ctx)
+                if err != nil {
+                        fatalf("r2-restore: list bucket: %v", err)
+                }
+                fmt.Printf("r2-restore: %d objects in the bucket\n", len(objects))
+                restored, failed := 0, 0
+                for topicID := range objects {
+                        payload, ok, err := blobs.Get(ctx, topicID)
+                        if err != nil || !ok {
+                                fmt.Fprintf(os.Stderr, "  get %s: ok=%v err=%v\n", topicID, ok, err)
+                                failed++
+                                continue
+                        }
+                        var blob learn.LessonBlob
+                        if err := json.Unmarshal(payload, &blob); err != nil {
+                                fmt.Fprintf(os.Stderr, "  decode %s: %v\n", topicID, err)
+                                failed++
+                                continue
+                        }
+                        if _, err := k.Pool.Exec(ctx, `
+                                INSERT INTO learn.lessons (topic_id, title, summary, notes, key_points, quiz, drawings, source, generated_at)
+                                VALUES ($1,$2,$3,$4,$5,$6,$7,$8,COALESCE(NULLIF($9,'')::timestamptz, now()))
+                                ON CONFLICT (topic_id) DO UPDATE SET title=$2, summary=$3, notes=$4, key_points=$5,
+                                  quiz=$6, drawings=$7, source=$8, generated_at=COALESCE(NULLIF($9,'')::timestamptz, learn.lessons.generated_at)`,
+                                blob.TopicID, blob.Title, blob.Summary, string(blob.Notes), string(blob.KeyPoints),
+                                string(blob.Quiz), string(blob.Drawings), blob.Source, blob.GeneratedAt); err != nil {
+                                fmt.Fprintf(os.Stderr, "  upsert %s: %v\n", topicID, err)
+                                failed++
+                                continue
+                        }
+                        restored++
+                        if restored%500 == 0 {
+                                fmt.Printf("  ... %d restored, %d failed\n", restored, failed)
+                        }
+                }
+                fmt.Printf("r2-restore complete: restored %d, failed %d\n", restored, failed)
+                if failed > 0 {
+                        os.Exit(1)
+                }
 
         default:
                 fatalf("unknown command %q", cmd)
