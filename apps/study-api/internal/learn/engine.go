@@ -426,8 +426,12 @@ func answerLetter(opts map[string]string, answer string) (string, bool) {
                         return letter, true
                 }
         }
-        for k, v := range opts {
-                if strings.EqualFold(strings.TrimSpace(v), ans) {
+        // The value match walks SORTED option keys on purpose: two options
+        // whose values fold equal must resolve to the same letter on every
+        // serve, or the heal never settles and each serve burns one more
+        // bucket write on the write back path.
+        for _, k := range sortedKeys(opts) {
+                if strings.EqualFold(strings.TrimSpace(opts[k]), ans) {
                         return k, true
                 }
         }

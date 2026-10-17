@@ -10,6 +10,7 @@ import (
         "fmt"
         "log/slog"
         "math"
+        "sync"
         "time"
 
         "github.com/jackc/pgx/v5"
@@ -40,6 +41,14 @@ type Service struct {
         // expGuard single-flights per-course unit expansion (expand.go):
         // two students opening the same growing course never double-generate.
         expGuard *expGuard
+        // blobMemo remembers, per topic id, the content hash of the last
+        // bucket write this process attempted (see blobs.go). One Class A
+        // PUT per content version per boot: a heal write back served twice,
+        // a deterministic agent lesson regenerated, any repeat with byte
+        // identical content never touches the bucket again (founder,
+        // October 2026: manage the Class A operation budget). The zero value
+        // is ready, so tests that build Service literals need nothing.
+        blobMemo sync.Map
 }
 
 // WireExpGuard arms the per-course expansion single-flight. Nil-safe

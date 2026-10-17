@@ -9,6 +9,8 @@ package learn
 
 import (
         "context"
+        "crypto/sha256"
+        "encoding/hex"
         "encoding/json"
         "time"
 )
@@ -53,6 +55,17 @@ type LessonBlob struct {
 // blobSave marshals a lesson doc into the envelope and PUTs it.
 // Best-effort by doctrine: a bucket outage is a log line, never a
 // failed lesson - the database write in persistLesson still lands.
+//
+// Class A discipline (founder, October 2026, "manage my class A
+// operation"): R2 charges for writes and listings, not for reads, so
+// every avoidable PUT is budget burned. The memo on Service.blobMemo
+// hashes the content of the envelope with the timestamp excluded, and
+// one content version gets exactly ONE PUT attempt per process,
+// success or failure alike. A heal write back on a lesson served ten
+// times costs one PUT, not ten; a deterministic agent lesson
+// regenerated after a cache loss costs one PUT; and a payload whose
+// upload failed is not hammered again on every serve. The student
+// still sees the healed form from memory; the next boot retries once.
 func (s *Service) blobSave(ctx context.Context, doc *LessonDoc) {
         if s.Blobs == nil || doc == nil || doc.TopicID == "" {
                 return
@@ -61,6 +74,27 @@ func (s *Service) blobSave(ctx context.Context, doc *LessonDoc) {
         kp, _ := json.Marshal(doc.KeyPoints)
         quiz, _ := json.Marshal(doc.Quiz)
         draw, _ := json.Marshal(doc.Drawings)
+        // Content hash over the already marshalled columns plus the
+        // short header fields. generated_at is deliberately outside:
+        // the stamp churns on every call and would defeat the guard.
+        sum := sha256.New()
+        for _, part := range [][]byte{notes, kp, quiz, draw} {
+                sum.Write(part)
+                sum.Write([]byte{0})
+        }
+        for _, field := range []string{doc.TopicID, doc.Title, doc.Summary, doc.Source} {
+                sum.Write([]byte(field))
+                sum.Write([]byte{0})
+        }
+        contentHash := hex.EncodeToString(sum.Sum(nil))
+        // LoadOrStore is the claim on the single PUT attempt. When the
+        // slot already held this exact content the attempt happened
+        // earlier this boot and the bucket must not be touched again;
+        // when the content changed the new hash replaces the old and a
+        // fresh attempt is correct.
+        if prev, loaded := s.blobMemo.LoadOrStore(doc.TopicID, contentHash); loaded && prev == contentHash {
+                return
+        }
         payload, err := json.Marshal(LessonBlob{
                 TopicID:     doc.TopicID,
                 Title:       doc.Title,

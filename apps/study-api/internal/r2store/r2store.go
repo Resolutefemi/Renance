@@ -46,6 +46,11 @@ import (
 // x-amz-content-sha256 value for GET / HEAD / LIST requests.
 const emptyPayloadHash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
+// oversizeWarnBytes flags lesson payloads far past the ~40 KB norm
+// (1 MiB) on the write path. A twelve megabyte object in a bucket
+// full of small documents is a content bug worth one log line.
+const oversizeWarnBytes = 1 << 20
+
 // Client is the lesson-blob surface over one R2 bucket. Build with
 // FromEnv; FromEnv returns nil when R2 is not configured, and every
 // consumer treats nil as "bucket off".
@@ -160,9 +165,17 @@ func (c *Client) Get(ctx context.Context, topicID string) (payload []byte, ok bo
 
 // Put stores one lesson blob (content-type application/json). One
 // Class A operation per generated lesson - nothing else writes.
+//
+// An oversize payload is logged so the whale is visible: a lesson
+// far past the ~40 KB norm means something bloated the document and
+// every upload of it drags megabytes through the write budget.
 func (c *Client) Put(ctx context.Context, topicID string, payload []byte) error {
         if c == nil {
                 return errors.New("r2store: client not configured")
+        }
+        if len(payload) > oversizeWarnBytes && c.log != nil {
+                c.log.Warn("r2store: oversize lesson payload on the write path",
+                        "topic", topicID, "bytes", len(payload))
         }
         sum := sha256.Sum256(payload)
         status, body, err := c.roundTrip(ctx, http.MethodPut, "application/json", payload, hex.EncodeToString(sum[:]), nil, c.lessonKey(topicID))

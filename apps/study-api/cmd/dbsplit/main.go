@@ -384,13 +384,20 @@ need R2_ACCOUNT_ID, R2_BUCKET, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY.
                 if err != nil {
                         fatalf("r2-status: list bucket: %v", err)
                 }
-                var bytes int64
-                for _, sz := range objects {
+                var bytes, largestSize int64
+                largest := ""
+                for id, sz := range objects {
                         bytes += sz
+                        if sz > largestSize {
+                                largest, largestSize = id, sz
+                        }
                 }
                 fmt.Printf("cache database rows  : %d\n", rows)
                 fmt.Printf("bucket objects       : %d (prefix %s)\n", len(objects), blobs.Prefix())
                 fmt.Printf("bucket lesson bytes  : %.1f MB\n", float64(bytes)/1048576)
+                if largestSize > 0 {
+                        fmt.Printf("largest object       : %s (%.2f MB)\n", largest, float64(largestSize)/1048576)
+                }
                 if int(rows) > len(objects) {
                         fmt.Printf("backfill pending     : %d rows not yet in the bucket (run r2-push)\n", int(rows)-len(objects))
                 } else {
