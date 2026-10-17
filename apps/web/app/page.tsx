@@ -200,89 +200,138 @@ export default function Landing() {
       </MotionPrefs>
 
       {/* ============================================================ */}
-      {/* HERO - aurora field, gradient headline, floating glass       */}
+      {/* HERO - aurora field, split desktop layout, contained badges  */}
+      {/* 2026-10-18 desktop pass: the old hero floated four glass      */}
+      {/* cards around the headline (they drifted into the margins and  */}
+      {/* crowded the title on wide monitors) and forced 100svh, which  */}
+      {/* clipped the pack ticker at the fold. Now: a structured split  */}
+      {/* - copy left, live CBT paper preview right - and ONE calm      */}
+      {/* feature row under the CTAs at every breakpoint.               */}
       {/* ============================================================ */}
-      <section className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden pb-16 pt-32 sm:pt-36">
+      <section className="relative overflow-hidden pb-16 pt-32 sm:pt-36 lg:pb-24">
         <AuroraField />
 
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6">
-          {/* floating glass cards - desktop only, orbit the copy */}
-          <div className="pointer-events-none absolute inset-0 hidden xl:block" aria-hidden>
-            <div className="absolute left-0 top-[16%] hero-enter hero-enter-3">
-              <FloatingCard
-                tone="blue"
-                icon="fact_check"
-                title="Server-graded"
-                body="Marked on the server, not your browser"
-                delay={900}
-              />
+          <div className="lg:grid lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-12 xl:gap-16">
+            <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:max-w-none lg:text-left">
+              <h1 className="hero-headline hero-enter hero-enter-1 text-on-surface">
+                Renance: Your Guide to <span className="hero-gradient-text">Academic Success</span>
+              </h1>
+
+              <p className="hero-enter hero-enter-2 mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-on-surface-variant sm:text-lg lg:mx-0">
+                Renance is a Nigerian exam-prep app for JAMB, WAEC and NECO candidates, and for
+                anyone carrying a tertiary course load. Sit CBT mocks the server marks with sealed
+                answer keys, drill {fmt(totalQuestions)}+ past questions from {yearFrom} to {yearTo},
+                and work through Post-UTME and course questions topic by topic. Whatever you miss
+                goes into a review queue and comes back before the exam can catch you.
+              </p>
+              <p className="hero-enter hero-enter-2 mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-on-surface-variant sm:text-lg lg:mx-0">
+                Schools get their own portal too: syllabuses, lecture notes, attendance, results
+                with positions, ID cards and fee receipts - the records a Nigerian school actually
+                keeps, in one place. Free on Android, iOS, Windows, macOS and the web.
+              </p>
+
+              <div className="hero-enter hero-enter-3 mt-9 flex flex-wrap items-center justify-center gap-3.5 lg:justify-start">
+                <OpenAppButton className="hero-cta-primary" />
+                <Link href="/subjects/" className="hero-cta-secondary">
+                  Browse {exams.length} question packs
+                  <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden>
+                    <path
+                      d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </Link>
+              </div>
             </div>
-            <div className="absolute right-0 top-[24%] hero-enter hero-enter-4">
-              <FloatingCard
-                tone="emerald"
-                icon="event_repeat"
-                title="Review queue"
-                body="Missed topics return on schedule"
-                delay={1100}
-              />
-            </div>
-            <div className="absolute bottom-[12%] left-[6%] hero-enter hero-enter-5">
-              <FloatingCard
-                tone="amber"
-                icon="record_voice_over"
-                title="Voice flashcards"
-                body="Drill hands-free, anywhere"
-                delay={1300}
-              />
-            </div>
-            <div className="absolute bottom-[20%] right-[4%] hero-enter hero-enter-5">
-              <FloatingCard
-                tone="blue"
-                icon="workspace_premium"
-                title={`${fmt(totalQuestions)}+ questions`}
-                body="Real papers, sealed keys"
-                delay={1500}
-              />
+
+            {/* the live-paper preview - desktop only. A still of an actual
+                UTME question mid-sit: progress, timer, options, the sealed
+                server grade. Pure presentational markup (aria-hidden). */}
+            <div className="hero-enter hero-enter-4 mt-12 hidden lg:mt-0 lg:block" aria-hidden>
+              <div className="relative">
+                <div className="glass relative rounded-3xl p-5 xl:p-6">
+                  <div className="flex items-center justify-between gap-3">
+                    <div>
+                      <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
+                        UTME 2025 · Use of English
+                      </p>
+                      <p className="mt-1 text-[15px] font-bold text-on-surface">Question 14 of 60</p>
+                    </div>
+                    <span className="flex items-center gap-1 rounded-full bg-[var(--ink)] px-2.5 py-1 font-mono text-[11px] font-bold text-[var(--color-background)]">
+                      <span className="material-symbols-outlined text-[13px]">timer</span>
+                      12:47
+                    </span>
+                  </div>
+                  <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-[var(--ink)]/10">
+                    <div className="h-full w-[23%] rounded-full bg-gradient-to-r from-[#3b82f6] to-[#10b981]" />
+                  </div>
+                  <p className="mt-5 text-[15px] leading-relaxed text-on-surface">
+                    Choose the option <em>nearest</em> in meaning to the word underlined: The
+                    clerk&apos;s{' '}
+                    <span className="font-bold underline decoration-2 underline-offset-4">gregarious</span>{' '}
+                    nature won him friends in every office.
+                  </p>
+                  <div className="mt-4 grid gap-2">
+                    {[
+                      { k: 'A', v: 'talkative', ok: false },
+                      { k: 'B', v: 'mysterious', ok: false },
+                      { k: 'C', v: 'sociable', ok: true },
+                      { k: 'D', v: 'selfish', ok: false },
+                    ].map((o) => (
+                      <div
+                        key={o.k}
+                        className={`flex items-center gap-3 rounded-xl border px-3.5 py-2.5 ${
+                          o.ok
+                            ? 'border-emerald-500/40 bg-emerald-500/10'
+                            : 'border-[var(--glass-ring)] bg-[var(--glass-bg)]/40'
+                        }`}
+                      >
+                        <span
+                          className={`grid h-6 w-6 shrink-0 place-items-center rounded-full font-mono text-[11px] font-bold ${
+                            o.ok ? 'bg-emerald-500 text-white' : 'bg-[var(--ink)]/8 text-on-surface-variant'
+                          }`}
+                        >
+                          {o.k}
+                        </span>
+                        <span className="text-[13.5px] text-on-surface">{o.v}</span>
+                        {o.ok && (
+                          <span className="material-symbols-outlined ml-auto text-[16px] text-emerald-500">
+                            check_circle
+                          </span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-5 flex items-center justify-between gap-3 border-t border-[var(--glass-border)] pt-4">
+                    <span className="flex items-center gap-1.5 text-[12px] font-semibold text-on-surface-variant">
+                      <span className="material-symbols-outlined text-[15px] text-emerald-500">verified</span>
+                      Server-graded · sealed answer keys
+                    </span>
+                    <span className="font-mono text-[11px] text-on-surface-variant">1978-{yearTo}</span>
+                  </div>
+                </div>
+                {/* one anchored chip, the only survivor of the old orbit */}
+                <div className="glass-float float-emerald absolute -bottom-6 -right-3 max-w-[13rem]">
+                  <div className="glass-float-icon">
+                    <span className="material-symbols-outlined">military_tech</span>
+                  </div>
+                  <div>
+                    <p className="glass-float-title">Graded in seconds</p>
+                    <p className="glass-float-body">Score synced to your desk</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="hero-headline hero-enter hero-enter-1 text-on-surface">
-              Renance: Your Guide to <span className="hero-gradient-text">Academic Success</span>
-            </h1>
-
-            <p className="hero-enter hero-enter-2 mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-on-surface-variant sm:text-lg">
-              Renance is a Nigerian exam-prep app for JAMB, WAEC and NECO candidates, and for
-              anyone carrying a tertiary course load. Sit CBT mocks the server marks with sealed
-              answer keys, drill {fmt(totalQuestions)}+ past questions from {yearFrom} to {yearTo},
-              and work through Post-UTME and course questions topic by topic. Whatever you miss
-              goes into a review queue and comes back before the exam can catch you.
-            </p>
-            <p className="hero-enter hero-enter-2 mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-on-surface-variant sm:text-lg">
-              Schools get their own portal too: syllabuses, lecture notes, attendance, results
-              with positions, ID cards and fee receipts - the records a Nigerian school actually
-              keeps, in one place. Free on Android, iOS, Windows, macOS and the web.
-            </p>
-
-            <div className="hero-enter hero-enter-3 mt-9 flex flex-wrap items-center justify-center gap-3.5">
-              <OpenAppButton className="hero-cta-primary" />
-              <Link href="/subjects/" className="hero-cta-secondary">
-                Browse {exams.length} question packs
-                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden>
-                  <path
-                    d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Link>
-            </div>
-          </div>
-
-          {/* floating cards on mobile/tablet - inline strip */}
-          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4 xl:hidden">
+          {/* the feature row - every breakpoint, one calm grid directly
+              under the hero copy and CTAs. The old desktop orbit cards
+              lived here no longer (2026-10-18 desktop pass). */}
+          <div className="mt-14 grid grid-cols-2 gap-3 sm:grid-cols-4">
             <FloatingCard
               tone="blue"
               icon="fact_check"
@@ -310,9 +359,10 @@ export default function Landing() {
           </div>
         </div>
 
-        {/* exam-pack ticker */}
+        {/* exam-pack ticker - the section now flows at its natural height
+            on desktop, so the rail can never be guillotined by the fold */}
         {tickerItems.length > 0 && (
-          <div className="hero-enter hero-enter-5 relative z-10 mt-14">
+          <div className="hero-enter hero-enter-5 relative z-10 mt-14 lg:mt-16">
             <MarqueeRail items={tickerItems} />
           </div>
         )}

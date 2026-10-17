@@ -487,67 +487,73 @@ export default function DashboardPage() {
           <PostUtmeHome onMore={() => setMoreOpen(true)} />
         ) : (
         <>
-        {/* Hero progress card. Uses the hero token scope so Mixed tier
-            flips it to the dark #111C2D band (home_dashboard_mixed_mode).
-            Founder directive 2026-10-11: the corner blob ornaments are
-            back and visible (/12, the old /5 was imperceptible) on
-            every focus homepage hero. 2026-10-13 tactile pass: the card
+        {/* 2026-10-13 tactile pass: the card
             stands on an extruded ledge (.hero-card) and the progress
             rail gets the recessed-track + gloss-fill treatment.
             2026-10-14 founder pass: the card shrinks to fit the UI -
-            tighter padding, smaller title, 44px CTA. */}
-        <section className="hero-card relative mt-3 flex flex-col gap-2.5 overflow-hidden bg-hero p-3.5 sm:p-4">
+            tighter padding, smaller title, 44px CTA.
+            2026-10-18 desktop pass: split panel - target + progress
+            left, the resume/start action standing on its own on the
+            right, so the desk opens like a desktop workflow, not a
+            blown-up phone card. */}
+        <section className="hero-card relative mt-3 overflow-hidden bg-hero p-3.5 sm:p-4 lg:p-5">
           <div className="absolute -right-14 -top-14 h-32 w-32 rounded-full bg-on-hero/12" />
           <div className="absolute -bottom-12 -left-10 h-24 w-24 rounded-full bg-on-hero/12" />
-          <div className="relative z-10 flex items-start justify-between gap-4">
-            <div>
-              <p className="font-mono text-[10px] uppercase tracking-wider text-hero-muted">Next Target</p>
-              <h2 className="text-xl font-bold tracking-tight text-on-hero sm:text-2xl">{targetTitle}</h2>
-            </div>
-            <div className="text-right">
-              <p className="font-mono text-[10px] uppercase tracking-wider text-hero-muted">Countdown</p>
-              <p className="mt-0.5 inline-block rounded-full bg-on-hero/10 px-2.5 py-0.5 text-[13px] font-bold text-on-hero">
-                {days == null ? 'Set a year' : days <= 0 ? 'This month' : `${days} Days`}
-              </p>
-            </div>
-          </div>
-          <div className="relative z-10 flex flex-col gap-1.5">
-            <div className="flex justify-between font-mono text-[11px] text-hero-muted">
-              <span>Syllabus Completion</span>
-              <span className="font-semibold text-on-hero">{coveragePct}%</span>
-            </div>
-            <div className="hero-progress w-full bg-hero-track">
-              <div className="hero-progress-fill h-full bg-hero-cta transition-all" style={{ width: `${coveragePct}%` }}>
-                <span className="hero-progress-gloss" />
+          <div className="relative z-10 flex flex-col gap-2.5 lg:flex-row lg:items-center lg:gap-10">
+            <div className="min-w-0 flex-1">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="font-mono text-[10px] uppercase tracking-wider text-hero-muted">Next Target</p>
+                  <h2 className="text-xl font-bold tracking-tight text-on-hero sm:text-2xl">{targetTitle}</h2>
+                </div>
+                <div className="text-right">
+                  <p className="font-mono text-[10px] uppercase tracking-wider text-hero-muted">Countdown</p>
+                  <p className="mt-0.5 inline-block rounded-full bg-on-hero/10 px-2.5 py-0.5 text-[13px] font-bold text-on-hero">
+                    {days == null ? 'Set a year' : days <= 0 ? 'This month' : `${days} Days`}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-2.5 flex flex-col gap-1.5">
+                <div className="flex justify-between font-mono text-[11px] text-hero-muted">
+                  <span>Syllabus Completion</span>
+                  <span className="font-semibold text-on-hero">{coveragePct}%</span>
+                </div>
+                <div className="hero-progress w-full bg-hero-track">
+                  <div className="hero-progress-fill h-full bg-hero-cta transition-all" style={{ width: `${coveragePct}%` }}>
+                    <span className="hero-progress-gloss" />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+            <div className="lg:w-64 lg:shrink-0 xl:w-72">
           {/* Continue Exam only exists when a paper was paused and left;
               otherwise the desk offers a way in, never a fake resume. */}
           {activeExam ? (
-            <Link
-              href={examHref(activeExam.code, {
-                resume: '1',
-                // The daily sprint's paused seat keeps its "Daily Quiz"
-                // head - the flag rides the snapshot, so the exam page
-                // refetches the daily context instead of falling back to
-                // the composed paper's plumbing label.
-                daily: activeExam.daily ? '1' : undefined,
-              })}
-              className="relative z-10 flex h-11 items-center justify-center gap-2 rounded-[12px] bg-hero-cta text-[14px] font-bold text-on-hero-cta transition-transform active:scale-[0.98]"
-            >
-              <span className="material-symbols-outlined text-[18px]">play_arrow</span>
-              Continue Exam · {pausedExamAnswers}/{Math.max(activeExam.questionCount, pausedExamAnswers)}
-            </Link>
-          ) : (
-            <Link
-              href={isJamb || isWaec || isNeco ? setupHref : exams[0] ? examHref(exams[0].code) : '/packs'}
-              className="relative z-10 flex h-11 items-center justify-center gap-2 rounded-[12px] bg-hero-cta text-[14px] font-bold text-on-hero-cta transition-transform active:scale-[0.98]"
-            >
-              <span className="material-symbols-outlined text-[18px]">play_arrow</span>
-              {isJamb ? 'Start Mock Exam' : 'Start Practice'}
-            </Link>
-          )}
+              <Link
+                href={examHref(activeExam.code, {
+                  resume: '1',
+                  // The daily sprint's paused seat keeps its "Daily Quiz"
+                  // head - the flag rides the snapshot, so the exam page
+                  // refetches the daily context instead of falling back to
+                  // the composed paper's plumbing label.
+                  daily: activeExam.daily ? '1' : undefined,
+                })}
+                className="flex h-11 items-center justify-center gap-2 rounded-[12px] bg-hero-cta text-[14px] font-bold text-on-hero-cta transition-transform active:scale-[0.98] lg:h-12"
+              >
+                <span className="material-symbols-outlined text-[18px]">play_arrow</span>
+                Continue Exam · {pausedExamAnswers}/{Math.max(activeExam.questionCount, pausedExamAnswers)}
+              </Link>
+            ) : (
+              <Link
+                href={isJamb || isWaec || isNeco ? setupHref : exams[0] ? examHref(exams[0].code) : '/packs'}
+                className="flex h-11 items-center justify-center gap-2 rounded-[12px] bg-hero-cta text-[14px] font-bold text-on-hero-cta transition-transform active:scale-[0.98] lg:h-12"
+              >
+                <span className="material-symbols-outlined text-[18px]">play_arrow</span>
+                {isJamb ? 'Start Mock Exam' : 'Start Practice'}
+              </Link>
+            )}
+          </div>
+          </div>
         </section>
 
         {/* Renance AI Studio band retired (founder directive, 2026-09-30):
@@ -560,51 +566,57 @@ export default function DashboardPage() {
             /exams/setup (JAMB-only by design). */}
 
         {/* Launcher grids: the daily drivers live on the desk, the rest in
-            the More sheet. One Stitch pair on phones, side by side on PC. */}
+            the More sheet. One Stitch pair on phones; from lg the tiles
+            become full-width horizontal cards - icon left, label + hint
+            right - so the desktop canvas fills with density instead of
+            four lonely bubbles in a row (2026-10-18 desktop pass). */}
         <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
           <section className="mt-2">
             <h3 className="text-sm text-on-surface-variant">Practice</h3>
-            <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-              <LauncherTile icon="description" label="Exams" href={setupHref} />
-              <LauncherTile icon="inventory_2" label="Question Pack" href="/packs" />
-              <LauncherTile icon="local_library" label="Study" href="/study-past-questions" />
-              <LauncherTile icon="history" label="Review Due" badge={reviewDueCount > 0 ? reviewDueCount : undefined} href="/review" />
+            <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-2">
+              <LauncherTile icon="description" label="Exams" hint="Set up your CBT mock" href={setupHref} />
+              <LauncherTile icon="inventory_2" label="Question Pack" hint="Every pack, ready offline" href="/packs" />
+              <LauncherTile icon="local_library" label="Study" hint="Practice topic by topic" href="/study-past-questions" />
+              <LauncherTile icon="history" label="Review Due" hint="Missed questions, resurfaced" badge={reviewDueCount > 0 ? reviewDueCount : undefined} href="/review" />
             </div>
           </section>
 
           <section className="mt-4 lg:mt-2">
             <h3 className="text-sm text-on-surface-variant">Compete</h3>
-            <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-              <LauncherTile icon="sports_esports" label="Arena" href="/arena" />
+            <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-2">
+              <LauncherTile icon="sports_esports" label="Arena" hint="1-v-1 timed battles" href="/arena" />
               <LauncherTile
                 icon="event_repeat"
                 label="Daily Quiz"
+                hint="Today's sprint"
                 amber
                 href={daily ? examHref(daily.code, { daily: '1' }) : setupHref}
                 onMore={needsCombo ? () => setComboOpen(true) : undefined}
               />
-              <LauncherTile icon="leaderboard" label="Leaderboard" href="/leaderboard" />
-              <LauncherTile icon="event_note" label="Study Plan" href="/study-plan" />
-            </div>
-          </section>
-
-          <section className="mt-4 lg:mt-0">
-            <h3 className="text-sm text-on-surface-variant">Learn</h3>
-            <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-              <LauncherTile icon="auto_stories" label="Notes" href="/notes" />
-              <LauncherTile icon="smart_toy" label="Renance AI" href="/ai" />
-              <LauncherTile icon="style" label="Flashcards" href="/flashcards" />
+              <LauncherTile icon="leaderboard" label="Leaderboard" hint="Where you rank this week" href="/leaderboard" />
+              <LauncherTile icon="event_note" label="Study Plan" hint="Your days to the exam" href="/study-plan" />
             </div>
           </section>
         </div>
 
-        {/* Tools: the occasional utilities, with More holding the rest. */}
         <section className="mt-4">
-          <h3 className="text-sm text-on-surface-variant">Tools</h3>
-          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-            <LauncherTile icon="menu_book" label="Syllabus Map" href="/syllabus" />
-            <LauncherTile icon="smart_toy" label="Tutor" inverse href="/review" />
-            <LauncherTile icon="more_horiz" label="More" muted onMore={() => setMoreOpen(true)} />
+          <h3 className="text-sm text-on-surface-variant">Learn</h3>
+          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-3">
+            <LauncherTile icon="auto_stories" label="Notes" hint="Lesson notes & PDFs" href="/notes" />
+            <LauncherTile icon="smart_toy" label="Renance AI" hint="Ask, explain, generate" href="/ai" />
+            <LauncherTile icon="style" label="Flashcards" hint="Spaced-repetition drills" href="/flashcards" />
+          </div>
+        </section>
+
+        {/* Tools & Resources: the occasional utilities get real names and
+            one-line descriptions instead of bare icon bubbles (2026-10-18
+            desktop pass), with More holding the rest. */}
+        <section className="mt-4">
+          <h3 className="text-sm text-on-surface-variant">Tools &amp; Resources</h3>
+          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-3">
+            <LauncherTile icon="menu_book" label="Syllabus Map" hint="Every topic the body tests" href="/syllabus" />
+            <LauncherTile icon="smart_toy" label="Tutor" hint="Walk any question with AI" inverse href="/review" />
+            <LauncherTile icon="more_horiz" label="More" hint="Performance, saved questions…" muted onMore={() => setMoreOpen(true)} />
           </div>
         </section>
         </>
@@ -729,37 +741,42 @@ function PostUtmeHome({ onMore }: { onMore: () => void }) {
       {/* Post UTME hero card ------------------------------------------ */}
       {/* Founder directive 2026-10-11: corner blob ornaments back on
           every focus hero - both corners, visible strength (/12).
-          2026-10-13 tactile pass: extruded ledge via .hero-card. */}
-      <section className="hero-card relative mt-3 flex flex-col gap-2.5 overflow-hidden bg-hero p-3.5 sm:p-4">
+          2026-10-13 tactile pass: extruded ledge via .hero-card.
+          2026-10-18 desktop pass: split panel like the other desks. */}
+      <section className="hero-card relative mt-3 overflow-hidden bg-hero p-3.5 sm:p-4 lg:p-5">
         <div className="absolute -right-14 -top-14 h-32 w-32 rounded-full bg-on-hero/12" />
         <div className="absolute -bottom-12 -left-10 h-24 w-24 rounded-full bg-on-hero/12" />
-        <div className="relative z-10 flex items-center justify-between gap-4">
-          <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-hero-muted">
-            Post UTME Desk
-          </p>
-          <span className="flex items-center gap-1 rounded-full bg-dark-text-primary/15 px-2 py-0.5 font-mono text-[11px] text-on-hero">
-            <span className="material-symbols-outlined text-[13px]">school</span>
-            {school?.short ?? 'Post UTME'}
-          </span>
-        </div>
-        <div className="relative z-10">
-          <h2 className="text-xl font-bold tracking-tight text-on-hero sm:text-2xl">
-            {school?.name ?? 'Pick your school'}
-          </h2>
-          <p className="mt-0.5 text-[13px] font-semibold text-hero-muted">
-            {own.length > 0
-              ? `${own.length} school prep packs · ${general.length} general banks`
-              : `${general.length} general practice banks · pick a school for its past questions`}
-          </p>
-        </div>
-        <div className="relative z-10 flex flex-col gap-2 sm:flex-row">
-          <Link
-            href="/post-utme"
-            className="flex h-11 flex-1 items-center justify-center gap-2 rounded-[12px] bg-hero-cta text-[14px] font-bold text-on-hero-cta transition-transform active:scale-[0.98]"
-          >
-            <span className="material-symbols-outlined text-[18px]">menu_book</span>
-            {school ? 'Open past questions' : 'Pick School'}
-          </Link>
+        <div className="relative z-10 flex flex-col gap-2.5 lg:flex-row lg:items-center lg:gap-10">
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center justify-between gap-4">
+              <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-hero-muted">
+                Post UTME Desk
+              </p>
+              <span className="flex items-center gap-1 rounded-full bg-dark-text-primary/15 px-2 py-0.5 font-mono text-[11px] text-on-hero">
+                <span className="material-symbols-outlined text-[13px]">school</span>
+                {school?.short ?? 'Post UTME'}
+              </span>
+            </div>
+            <div className="mt-2">
+              <h2 className="text-xl font-bold tracking-tight text-on-hero sm:text-2xl">
+                {school?.name ?? 'Pick your school'}
+              </h2>
+              <p className="mt-0.5 text-[13px] font-semibold text-hero-muted">
+                {own.length > 0
+                  ? `${own.length} school prep packs · ${general.length} general banks`
+                  : `${general.length} general practice banks · pick a school for its past questions`}
+              </p>
+            </div>
+          </div>
+          <div className="lg:w-64 lg:shrink-0 xl:w-72">
+            <Link
+              href="/post-utme"
+              className="flex h-11 items-center justify-center gap-2 rounded-[12px] bg-hero-cta text-[14px] font-bold text-on-hero-cta transition-transform active:scale-[0.98] lg:h-12"
+            >
+              <span className="material-symbols-outlined text-[18px]">menu_book</span>
+              {school ? 'Open past questions' : 'Pick School'}
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -767,20 +784,20 @@ function PostUtmeHome({ onMore }: { onMore: () => void }) {
       <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
         <section className="mt-2">
           <h3 className="text-sm text-on-surface-variant">Practice</h3>
-          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-            <LauncherTile icon="description" label="Past Questions" href="/post-utme" />
-            <LauncherTile icon="local_library" label="Study" href="/study-past-questions?body=post-utme" />
-            <LauncherTile icon="history" label="Review Due" href="/review" />
-            <LauncherTile icon="inventory_2" label="Question Pack" href="/packs" />
+          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-2">
+            <LauncherTile icon="description" label="Past Questions" hint="Your school's banks" href="/post-utme" />
+            <LauncherTile icon="local_library" label="Study" hint="Practice topic by topic" href="/study-past-questions?body=post-utme" />
+            <LauncherTile icon="history" label="Review Due" hint="Missed questions, resurfaced" href="/review" />
+            <LauncherTile icon="inventory_2" label="Question Pack" hint="Every pack, ready offline" href="/packs" />
           </div>
         </section>
         <section className="mt-4 lg:mt-2">
           <h3 className="text-sm text-on-surface-variant">Compete</h3>
-          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-            <LauncherTile icon="sports_esports" label="Arena" href="/arena" />
-            <LauncherTile icon="leaderboard" label="Leaderboard" href="/leaderboard" />
-            <LauncherTile icon="event_note" label="Study Plan" href="/study-plan" />
-            <LauncherTile icon="auto_stories" label="Notes" href="/notes" />
+          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-2">
+            <LauncherTile icon="sports_esports" label="Arena" hint="1-v-1 timed battles" href="/arena" />
+            <LauncherTile icon="leaderboard" label="Leaderboard" hint="Where you rank this week" href="/leaderboard" />
+            <LauncherTile icon="event_note" label="Study Plan" hint="Your days to the exam" href="/study-plan" />
+            <LauncherTile icon="auto_stories" label="Notes" hint="Lesson notes & PDFs" href="/notes" />
           </div>
         </section>
       </div>
@@ -789,7 +806,7 @@ function PostUtmeHome({ onMore }: { onMore: () => void }) {
       {packs.length > 0 && (
         <section className="mt-4">
           <h3 className="text-sm text-on-surface-variant">Post UTME banks</h3>
-          <div className="mt-3 grid gap-2 sm:grid-cols-2">
+          <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {packs.slice(0, 6).map((e) => (
               <ExamCard key={e.code} exam={e} ready />
             ))}
@@ -797,14 +814,14 @@ function PostUtmeHome({ onMore }: { onMore: () => void }) {
         </section>
       )}
 
-      {/* Tools ------------------------------------------------------------ */}
+      {/* Tools & Resources ------------------------------------------------ */}
       <section className="mt-4">
-        <h3 className="text-sm text-on-surface-variant">Tools</h3>
-        <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-          <LauncherTile icon="import_contacts" label="Notes" href="/notes" />
-          <LauncherTile icon="download" label="Downloads" href="/downloads" />
-          <LauncherTile icon="smart_toy" label="Tutor" inverse href="/review" />
-          <LauncherTile icon="more_horiz" label="More" muted onMore={onMore} />
+        <h3 className="text-sm text-on-surface-variant">Tools &amp; Resources</h3>
+        <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-4">
+          <LauncherTile icon="import_contacts" label="Notes" hint="Lesson notes & PDFs" href="/notes" />
+          <LauncherTile icon="download" label="Downloads" hint="Your offline packs" href="/downloads" />
+          <LauncherTile icon="smart_toy" label="Tutor" hint="Walk any question with AI" inverse href="/review" />
+          <LauncherTile icon="more_horiz" label="More" hint="Performance, saved questions…" muted onMore={onMore} />
         </div>
       </section>
     </>
@@ -874,49 +891,59 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
           every focus hero - both corners, visible strength (/12).
           2026-10-13 tactile pass: extruded ledge via .hero-card.
           2026-10-14 founder pass: shrunk to fit the UI like the main
-          hero - tighter padding, smaller title, 44px CTA. */}
-      <section className="hero-card relative mt-3 flex flex-col gap-2.5 overflow-hidden bg-hero p-3.5 sm:p-4">
+          hero - tighter padding, smaller title, 44px CTA.
+          2026-10-18 desktop pass: split panel - school identity left,
+          the semester CTA standing on its own right. */}
+      <section className="hero-card relative mt-3 overflow-hidden bg-hero p-3.5 sm:p-4 lg:p-5">
         <div className="absolute -right-14 -top-14 h-32 w-32 rounded-full bg-on-hero/12" />
         <div className="absolute -bottom-12 -left-10 h-24 w-24 rounded-full bg-on-hero/12" />
-        <div className="relative z-10 flex items-center justify-between gap-4">
-          <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-hero-muted">
-            School Desk
-          </p>
-          <span className="flex items-center gap-1 rounded-full bg-dark-text-primary/15 px-2 py-0.5 font-mono text-[11px] text-on-hero">
-            <span className="material-symbols-outlined text-[13px]">school</span>
-            {heroShort}
-          </span>
-        </div>
-        <div className="relative z-10">
-          <h2 className="text-xl font-bold tracking-tight text-on-hero sm:text-2xl">
-            {heroName}
-          </h2>
-          <p className="mt-0.5 text-[13px] font-semibold text-hero-muted">
-            {catalog && schoolSlug
-              ? `${courses.length} courses · ${courses.reduce((n, c) => n + c.questionCount, 0).toLocaleString()} questions${isGeneralPool ? ' · shared general pool' : ''}`
-              : 'Course content lands as it is harvested'}
-          </p>
-        </div>
-        <div className="relative z-10 flex flex-col gap-2">
-          {/* Founder directive 2026-10-16 (the School Desk overhaul): the
-              tertiary student's primary CTA opens MY SEMESTER - the
-              gamified /courses desk with the picked courses, progress
-              bars and roadmaps. The old school portal stays one tap
-              away in the hero's corner link above. */}
-          <Link
-            href="/courses"
-            className="flex h-11 w-full items-center justify-center gap-2 rounded-[10px] bg-hero-cta text-[14px] font-semibold text-on-hero-cta transition-transform active:scale-[0.98]"
-          >
-            <span className="material-symbols-outlined text-[18px]">school</span>
-            Open your semester desk
-          </Link>
+        <div className="relative z-10 flex flex-col gap-2.5 lg:flex-row lg:items-center lg:gap-10">
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center justify-between gap-4">
+              <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-hero-muted">
+                School Desk
+              </p>
+              <span className="flex items-center gap-1 rounded-full bg-dark-text-primary/15 px-2 py-0.5 font-mono text-[11px] text-on-hero">
+                <span className="material-symbols-outlined text-[13px]">school</span>
+                {heroShort}
+              </span>
+            </div>
+            <div className="mt-2">
+              <h2 className="text-xl font-bold tracking-tight text-on-hero sm:text-2xl">
+                {heroName}
+              </h2>
+              <p className="mt-0.5 text-[13px] font-semibold text-hero-muted">
+                {catalog && schoolSlug
+                  ? `${courses.length} courses · ${courses.reduce((n, c) => n + c.questionCount, 0).toLocaleString()} questions${isGeneralPool ? ' · shared general pool' : ''}`
+                  : 'Course content lands as it is harvested'}
+              </p>
+            </div>
+          </div>
+          <div className="lg:w-64 lg:shrink-0 xl:w-72">
+            {/* Founder directive 2026-10-16 (the School Desk overhaul): the
+                tertiary student's primary CTA opens MY SEMESTER - the
+                gamified /courses desk with the picked courses, progress
+                bars and roadmaps. The old school portal stays one tap
+                away in the hero's corner link above. */}
+            <Link
+              href="/courses"
+              className="flex h-11 w-full items-center justify-center gap-2 rounded-[10px] bg-hero-cta text-[14px] font-semibold text-on-hero-cta transition-transform active:scale-[0.98] lg:h-12"
+            >
+              <span className="material-symbols-outlined text-[18px]">school</span>
+              Open your semester desk
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Active courses chips ------------------------------------------- */}
+      {/* Active courses ------------------------------------------------- */}
       {/* 2026-10-14 founder pass: the floating chips shrink - tighter
           pills, no scale pop on the first one, so the strip stays one
-          calm row under the hero. */}
+          calm row under the hero.
+          2026-10-18 desktop pass: phones keep the calm strip; from md
+          the pills become rich course cards - icon, code, title,
+          semester and bank size. The desk carries no per-course
+          progress here, so the card shows honest data only. */}
       {courses.length > 0 && (
         <section className="mt-1">
           <div className="flex items-center justify-between">
@@ -925,7 +952,7 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
               View all
             </Link>
           </div>
-          <div className="no-scrollbar -mx-4 flex items-center gap-1.5 overflow-x-auto px-4 pb-1 pt-1.5">
+          <div className="no-scrollbar -mx-4 flex items-center gap-1.5 overflow-x-auto px-4 pb-1 pt-1.5 md:hidden">
             {courses.slice(0, 10).map((c) => (
               <Link
                 key={c.slug}
@@ -936,46 +963,80 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
               </Link>
             ))}
           </div>
+          <div className="mt-3 hidden gap-3 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {courses.slice(0, 8).map((c) => (
+              <Link
+                key={c.slug}
+                href={`/university/${slug}/${c.slug}`}
+                className="group rounded-2xl border-2 border-outline-variant/70 bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.06)] transition hover:border-outline hover:bg-surface-container-low"
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <span className="flex min-w-0 items-center gap-2">
+                    <span className="material-symbols-outlined text-[18px] text-primary">{c.icon}</span>
+                    <span className="truncate font-mono text-[12px] font-bold uppercase tracking-wider text-on-surface">
+                      {c.code}
+                    </span>
+                  </span>
+                  <span className="shrink-0 rounded-md bg-surface-container px-2 py-0.5 font-mono text-[10px] text-on-surface-variant">
+                    {c.questionCount} Q
+                  </span>
+                </div>
+                <p className="mt-2 truncate text-[13px] font-medium text-on-surface-variant">
+                  {c.title ?? 'Course question bank'}
+                </p>
+                <div className="mt-3 flex items-center justify-between">
+                  <span className="text-[11px] font-semibold text-outline transition group-hover:text-primary-ink">
+                    Semester {c.semester}
+                  </span>
+                  <span className="material-symbols-outlined text-[16px] text-outline transition group-hover:translate-x-0.5 group-hover:text-on-surface-variant">
+                    arrow_forward
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
         </section>
       )}
 
-      {/* University Study / Grow grids, the university desk's OWN icons */}
+      {/* University Study / Grow grids, the university desk's OWN icons.
+          2026-10-18 desktop pass: card tiles with hints; Flashcards
+          spans both columns so Grow closes with no orphan cell. */}
       <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
         <section className="mt-2">
           <h3 className="text-sm text-on-surface-variant">Study</h3>
-          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-            <LauncherTile icon="assignment" label="Courses" href="/courses" />
-            <LauncherTile icon="fact_check" label="Quizzes" href={`/university/${slug}`} />
+          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-2">
+            <LauncherTile icon="assignment" label="Courses" hint="Your semester, gamified" href="/courses" />
+            <LauncherTile icon="fact_check" label="Quizzes" hint="Course quizzes & banks" href={`/university/${slug}`} />
             {/* Founder directive (2026-10-04): the university desk's Study
                 tile must open the SCHOOL past-questions study setup, never
                 the JAMB default. */}
-            <LauncherTile icon="local_library" label="Study" href={`/study-past-questions?body=university`} />
-            <LauncherTile icon="rate_review" label="Review" href="/review" />
+            <LauncherTile icon="local_library" label="Study" hint="Past questions by topic" href={`/study-past-questions?body=university`} />
+            <LauncherTile icon="rate_review" label="Review" hint="Missed questions, resurfaced" href="/review" />
           </div>
         </section>
         <section className="mt-4 lg:mt-2">
           <h3 className="text-sm text-on-surface-variant">Grow</h3>
-          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-            <LauncherTile icon="calculate" label="CGPA" href="/gpa" />
-            <LauncherTile icon="sports_esports" label="Arena" href="/arena" />
+          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-2">
+            <LauncherTile icon="calculate" label="CGPA" hint="Compute your standing" href="/gpa" />
+            <LauncherTile icon="sports_esports" label="Arena" hint="1-v-1 timed battles" href="/arena" />
             {/* Founder directive (2026-10-17): the school desk gets the
                 same Leaderboard entry the JAMB desk has, ranked with
                 diamonds too. */}
-            <LauncherTile icon="leaderboard" label="Leaderboard" href="/leaderboard" />
-            <LauncherTile icon="event_note" label="Study Plan" href="/study-plan" />
-            <LauncherTile icon="psychology" label="Flashcards" href="/flashcards" />
+            <LauncherTile icon="leaderboard" label="Leaderboard" hint="Where you rank this week" href="/leaderboard" />
+            <LauncherTile icon="event_note" label="Study Plan" hint="Your days to the exam" href="/study-plan" />
+            <LauncherTile icon="psychology" label="Flashcards" hint="Spaced-repetition drills" wide href="/flashcards" />
           </div>
         </section>
       </div>
 
-      {/* Tools: shared with the other desks. */}
+      {/* Tools & Resources: shared with the other desks. */}
       <section className="mt-4">
-        <h3 className="text-sm text-on-surface-variant">Tools</h3>
-        <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-          <LauncherTile icon="import_contacts" label="Notes" href="/notes" />
-          <LauncherTile icon="download" label="Downloads" href="/downloads" />
-          <LauncherTile icon="smart_toy" label="Tutor" inverse href="/review" />
-          <LauncherTile icon="more_horiz" label="More" muted onMore={onMore} />
+        <h3 className="text-sm text-on-surface-variant">Tools &amp; Resources</h3>
+        <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-4">
+          <LauncherTile icon="import_contacts" label="Notes" hint="Lecture notes & materials" href="/notes" />
+          <LauncherTile icon="download" label="Downloads" hint="Your offline packs" href="/downloads" />
+          <LauncherTile icon="smart_toy" label="Tutor" hint="Walk any question with AI" inverse href="/review" />
+          <LauncherTile icon="more_horiz" label="More" hint="Performance, saved questions…" muted onMore={onMore} />
         </div>
       </section>
     </>
@@ -1047,28 +1108,36 @@ function MoreSheet({ onClose }: { onClose: () => void }) {
 function LauncherTile({
   icon,
   label,
+  hint,
   href,
   badge,
   amber,
   inverse,
   muted,
   soon,
+  wide,
   onMore,
 }: {
   icon: string;
   label: string;
+  /** Desktop-only micro description: from lg the tile is a horizontal
+      card (icon left, text right) and the hint fills it with real
+      meaning instead of a bare bubble (2026-10-18 desktop pass). */
+  hint?: string;
   href?: string;
   badge?: number;
   amber?: boolean;
   inverse?: boolean;
   muted?: boolean;
   soon?: boolean;
+  /** Span both columns of the lg card grid - closes an odd-count row. */
+  wide?: boolean;
   onMore?: () => void;
 }) {
   const inner = (
     <>
       <div
-        className={`relative flex h-12 w-12 items-center justify-center rounded-[16px] transition-transform group-active:scale-95 md:h-14 md:w-14 md:rounded-[19px] ${
+        className={`relative flex h-12 w-12 shrink-0 items-center justify-center rounded-[16px] transition-transform group-active:scale-95 md:h-14 md:w-14 md:rounded-[19px] lg:h-12 lg:w-12 lg:rounded-[16px] ${
           inverse
             ? // Founder directive (2026-10-02): the Tutor tile follows the
               // theme colour - bg-primary / text-on-primary like the R
@@ -1087,22 +1156,37 @@ function LauncherTile({
         // instead (rounded-[inherit] overflow-hidden on the overlay).
       >
         {inverse && <div className="absolute inset-0 overflow-hidden rounded-[inherit] bg-gradient-to-tr from-transparent to-white/20" />}
-        <span className={`material-symbols-outlined relative z-10 text-[21px] md:text-[23px] ${amber ? 'text-accent-amber' : ''}`}>{icon}</span>
+        <span className={`material-symbols-outlined relative z-10 text-[21px] md:text-[23px] lg:text-[21px] ${amber ? 'text-accent-amber' : ''}`}>{icon}</span>
         {badge != null && (
           <span className="absolute -right-1.5 -top-1.5 z-10 flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-accent-emerald px-1 font-mono text-[10px] font-bold leading-none text-white shadow-sm">
             {badge}
           </span>
         )}
       </div>
+      {/* phones / tablets: the label rides under the icon bubble */}
       <span
-        className={`w-full truncate text-center text-[10.5px] font-bold md:text-[11.5px] ${
+        className={`w-full truncate text-center text-[10.5px] font-bold md:text-[11.5px] lg:hidden ${
           inverse ? 'text-primary-ink' : 'text-on-surface-variant'
         }`}
       >
         {label}
       </span>
+      {/* desktop: the horizontal card's text block - label + hint */}
+      <span className="hidden min-w-0 flex-1 lg:block">
+        <span className={`block truncate text-[13.5px] font-bold ${inverse ? 'text-primary-ink' : 'text-on-surface'}`}>
+          {label}
+        </span>
+        {hint && (
+          <span className="mt-0.5 block truncate text-[12px] font-medium text-on-surface-variant">
+            {hint}
+          </span>
+        )}
+      </span>
     </>
   );
+
+  const cardCls =
+    'group flex flex-col items-center gap-2 lg:flex-row lg:gap-3.5 lg:rounded-2xl lg:border lg:border-outline-variant/70 lg:bg-card lg:p-3 lg:text-left lg:shadow-[0_1px_3px_0_rgba(20,28,45,0.06)] lg:transition-colors lg:hover:border-outline lg:hover:bg-surface-container-low';
 
   if (soon || onMore) {
     return (
@@ -1110,14 +1194,14 @@ function LauncherTile({
         type="button"
         title={onMore ? `${label} features` : `${label}: ships in an upcoming release`}
         onClick={onMore}
-        className="group flex flex-col items-center gap-2 opacity-70"
+        className={`${cardCls} opacity-70 ${wide ? 'lg:col-span-2' : ''}`}
       >
         {inner}
       </button>
     );
   }
   return (
-    <Link href={href ?? '#'} className="group flex flex-col items-center gap-2">
+    <Link href={href ?? '#'} className={`${cardCls} ${wide ? 'lg:col-span-2' : ''}`}>
       {inner}
     </Link>
   );

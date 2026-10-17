@@ -539,6 +539,12 @@ html[data-rail='collapsed'] {
 @media (min-width: 768px) {
   .launcher-grid { gap: 1.75rem; }
 }
+/* 2026-10-18 desktop pass: from lg the tiles become horizontal cards
+   (icon left, label + hint right) - a card grid wants a tighter rhythm
+   than the phone bubble grid. */
+@media (min-width: 1024px) {
+  .launcher-grid { gap: 0.75rem; }
+}
 
 /* KaTeX maths hosts: keep display blocks centred with breathing room and
    scrollable when a wide array meets a narrow phone. */
@@ -815,7 +821,10 @@ html[data-rail='collapsed'] {
   font-weight: 800;
   letter-spacing: -0.035em;
   line-height: 1.04;
-  font-size: clamp(2.6rem, 7.5vw, 5.2rem);
+  /* 2026-10-18 desktop pass: the split hero puts the headline in a
+     ~550px column, so the old 7.5vw scale (up to 5.2rem) overflowed
+     it. Same mobile floor, a calmer desktop ceiling. */
+  font-size: clamp(2.6rem, 4.5vw + 0.6rem, 4.4rem);
 }
 
 .hero-gradient-text {
