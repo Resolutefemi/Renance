@@ -270,30 +270,31 @@ services:
       # 2026-10-16, commit 94a61e8: the bucket is the home, the cache
       # DB is the index; reads fall back R2 -> DB -> generation, writes
       # are dual bucket+DB and a bucket failure never fails a lesson).
-      # FOUNDER DIRECTIVE 2026-10-18: the bucket name changes to
-      # "render" - R2_BUCKET is baked here so a blueprint sync applies
-      # it. The OTHER THREE keys stay dashboard-managed (sync:false,
-      # their values were set on the Render environment during the
-      # cutover and are not stored in this repo):
-      #   R2_ACCOUNT_ID / R2_ACCESS_KEY_ID / R2_SECRET_ACCESS_KEY.
-      # TWO DEPLOY-DAY TRAPS: (1) a bucket literally named "render"
-      # MUST exist in Cloudflare first - R2 cannot rename a bucket,
-      # and a name mismatch turns R2 inert (reads miss to the DB,
-      # failed writes just log, students never notice). (2) if the R2
-      # API token was scoped to the old renance-lessons bucket it
-      # cannot reach "render" - mint a new Object Read & Write token
-      # scoped to "render" (or account-wide) and paste it over the
-      # two dashboard keys. Lessons already pushed to the old bucket
-      # are safe: the DB stays the index, `dbsplit r2-push` re-fills
-      # the new bucket from it any time.
+      # FOUNDER DIRECTIVE 2026-10-18 (final cut): the bucket is
+      # "renance" - it exists in the Cloudflare account (created
+      # 2026-10-17, the account's only bucket) and the ENTIRE lesson
+      # archive is backfilled into it (36,934 objects / 758.7 MB,
+      # sampled 300/300 against the Supabase catalog 2026-10-18).
+      # The cache DB (InsForge #1) was truncated after the backfill
+      # verified, so this env MUST stay complete or lessons fall back
+      # to on-demand generation. All four values are baked (the
+      # "users own" Object Read & Write token scoped to this bucket;
+      # repo is private - same practice as BUNDLE_MASTER_KEY). Mixing
+      # a new access key with an old dashboard secret breaks auth and
+      # silently inert-R2s the API - keep the four in sync.
+      # Ops doctrine: 1 Class A PUT per generated lesson, LIST pages
+      # 1 op/1000 keys, reads are Class B (10M/month free). Founder
+      # budget: <=300k Class A ops for the 8GB archive era (at the
+      # 21KB avg blob that is ~388k objects, so richer lessons or a
+      # slightly higher budget are the levers - never chunked PUTs).
       - key: R2_BUCKET
-        value: "render"
+        value: "renance"
       - key: R2_ACCOUNT_ID
-        sync: false
+        value: "ff1e18e32afe87e8e07b3c35595fdd0e"
       - key: R2_ACCESS_KEY_ID
-        sync: false
+        value: "78b8e71ffccaf0bdf12b95a6b108000f"
       - key: R2_SECRET_ACCESS_KEY
-        sync: false
+        value: "38a5c0c95e93a6adb6bbb41a6c1297242d07c48ad23c0405bb631830083852d2"
       # Management rescue line (founder directive 2026-10-02): guards the
       # internal endpoints - POST /internal/device/unbind (free a student
       # who lost/changed their phone from the one-account-per-device

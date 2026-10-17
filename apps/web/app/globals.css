@@ -901,7 +901,9 @@ html[data-rail='collapsed'] {
 }
 .hero-cta-secondary:hover { transform: translateY(-2px); background: var(--glass-bg-strong); }
 
-/* floating glass cards around the hero */
+/* glass cards around the hero - STABLE (founder 2026-10-18: "make those
+   floating card stable"): the float-drift animation is gone, the tiles sit
+   still. The float-* classes survive as tone hooks only. */
 .glass-float {
   display: flex; align-items: flex-start; gap: 0.7rem;
   padding: 0.85rem 1rem;
@@ -911,20 +913,15 @@ html[data-rail='collapsed'] {
   backdrop-filter: blur(20px) saturate(1.8);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.5);
-  animation: float-drift 7s ease-in-out infinite;
-  will-change: transform;
   max-width: 15.5rem;
 }
 [data-theme='dark'] .glass-float { box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(240, 243, 255, 0.1); }
 
-@keyframes float-drift {
-  0%, 100% { transform: translateY(0) rotate(var(--tilt, 0deg)); }
-  50% { transform: translateY(-12px) rotate(var(--tilt, 0deg)); }
-}
-
-.float-blue { --tilt: -3deg; animation-duration: 7s; }
-.float-emerald { --tilt: 2.5deg; animation-duration: 8.5s; animation-delay: -2.5s; }
-.float-amber { --tilt: -2deg; animation-duration: 7.8s; animation-delay: -4s; }
+/* float-* survive as tone hooks only - the drift keyframes are gone
+   (founder 2026-10-18: stable cards, no drifting, no clipping). */
+.float-blue { --tilt: -3deg; }
+.float-emerald { --tilt: 2.5deg; }
+.float-amber { --tilt: -2deg; }
 
 .glass-float-icon {
   display: grid; place-items: center;
@@ -1088,20 +1085,27 @@ html[data-rail='collapsed'] {
 
 .cbt-panel {
   border-radius: 1.6rem;
-  /* dark ink ground that rides the selected colour: 20-26% of the
-     primary (black stock, the student's colour when a seed is live,
-     white on dark) poured over the navy - the landing's black panels
-     follow the Appearance colour without going day-glo. */
-  background: linear-gradient(160deg,
-    color-mix(in srgb, var(--color-primary) 24%, #101a2e) 0%,
-    color-mix(in srgb, var(--color-primary) 30%, #1c2a47) 60%,
-    color-mix(in srgb, var(--color-primary) 26%, #16213a) 100%);
+  /* FOUNDER DIRECTIVE 2026-10-18: the harsh primary-green wash (#10da11
+     mixed into navy) is gone. Deep sophisticated dark base instead - the
+     recommended stack (emerald-950/50 -> slate-950/90 -> slate-950)
+     composited over slate-950 so the panel stays opaque on the light
+     page - with an emerald-500/20 hairline border. Headings stay white,
+     body stays white/70: contrast untouched. */
+  background:
+    linear-gradient(to bottom,
+      rgba(2, 44, 34, 0.5) 0%,
+      rgba(2, 6, 23, 0.9) 55%,
+      #020617 100%),
+    #020617;
   color: #f0f3ff;
-  border: 1px solid rgba(240, 243, 255, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  /* founder directive: the emerald hairline warms to 40% on hover */
+  transition: border-color 0.3s ease;
   box-shadow: 0 30px 80px -30px rgba(17, 28, 45, 0.65);
   position: relative;
   overflow: hidden;
 }
+.cbt-panel:hover { border-color: rgba(16, 185, 129, 0.4); }
 .cbt-panel::before {
   content: ''; position: absolute; inset: 0;
   background: radial-gradient(42rem 18rem at 85% -10%, rgba(59, 130, 246, 0.22), transparent 60%),
@@ -1126,16 +1130,20 @@ html[data-rail='collapsed'] {
   border-radius: 2rem;
   overflow: hidden;
   padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.25rem, 4vw, 3rem);
-  /* same seed-riding ink ground as .cbt-panel (see above). */
-  background: linear-gradient(140deg,
-    color-mix(in srgb, var(--color-primary) 24%, #131b2e) 0%,
-    color-mix(in srgb, var(--color-primary) 32%, #22335a) 55%,
-    color-mix(in srgb, var(--color-primary) 28%, #14304f) 100%);
+  /* same slate-green base as .cbt-panel (founder directive above). */
+  background:
+    linear-gradient(to bottom,
+      rgba(2, 44, 34, 0.5) 0%,
+      rgba(2, 6, 23, 0.9) 55%,
+      #020617 100%),
+    #020617;
   color: #f0f3ff;
   text-align: center;
-  border: 1px solid rgba(240, 243, 255, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  transition: border-color 0.3s ease;
   box-shadow: 0 40px 90px -35px rgba(17, 28, 45, 0.7);
 }
+.final-cta:hover { border-color: rgba(16, 185, 129, 0.4); }
 .final-cta::before {
   content: ''; position: absolute; inset: 0;
   background: radial-gradient(36rem 16rem at 50% 120%, rgba(59, 130, 246, 0.28), transparent 65%),

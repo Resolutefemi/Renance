@@ -207,8 +207,12 @@ export default function Landing() {
       {/* clipped the pack ticker at the fold. Now: a structured split  */}
       {/* - copy left, live CBT paper preview right - and ONE calm      */}
       {/* feature row under the CTAs at every breakpoint.               */}
+      {/* 2026-10-18 mobile pass: top padding tightened so the headline */}
+      {/* anchors near the fold under the fixed pill nav, the wall of   */}
+      {/* copy became one lead line + three scannable bullets, and the  */}
+      {/* CTA sits right under them. Floating cards are static now.     */}
       {/* ============================================================ */}
-      <section className="relative overflow-hidden pb-16 pt-32 sm:pt-36 lg:pb-24">
+      <section className="relative overflow-hidden pb-16 pt-24 sm:pt-28 lg:pb-24 lg:pt-36">
         <AuroraField />
 
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6">
@@ -218,20 +222,39 @@ export default function Landing() {
                 Renance: Your Guide to <span className="hero-gradient-text">Academic Success</span>
               </h1>
 
-              <p className="hero-enter hero-enter-2 mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-on-surface-variant sm:text-lg lg:mx-0">
-                Renance is a Nigerian exam-prep app for JAMB, WAEC and NECO candidates, and for
-                anyone carrying a tertiary course load. Sit CBT mocks the server marks with sealed
-                answer keys, drill {fmt(totalQuestions)}+ past questions from {yearFrom} to {yearTo},
-                and work through Post-UTME and course questions topic by topic. Whatever you miss
-                goes into a review queue and comes back before the exam can catch you.
+              <p className="hero-enter hero-enter-2 mx-auto mt-4 max-w-xl text-[15px] font-medium leading-relaxed text-on-surface sm:text-lg lg:mx-0">
+                Nigerian exam prep for JAMB, WAEC and NECO candidates - and anyone carrying a
+                tertiary course load. {fmt(totalQuestions)}+ real past questions from {yearFrom} to{" "}
+                {yearTo}, ready the moment you tap.
               </p>
-              <p className="hero-enter hero-enter-2 mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-on-surface-variant sm:text-lg lg:mx-0">
-                Schools get their own portal too: syllabuses, lecture notes, attendance, results
-                with positions, ID cards and fee receipts - the records a Nigerian school actually
-                keeps, in one place. Free on Android, iOS, Windows, macOS and the web.
-              </p>
+              <ul className="hero-enter hero-enter-2 mx-auto mt-4 flex max-w-xl flex-col gap-2 text-left sm:gap-2.5 lg:mx-0">
+                {[
+                  {
+                    icon: 'fact_check',
+                    text: 'CBT mocks the server grades - sealed answer keys, honest scores in seconds.',
+                  },
+                  {
+                    icon: 'event_repeat',
+                    text: 'A smart review queue - topics you miss come back before you forget them.',
+                  },
+                  {
+                    icon: 'school',
+                    text: 'Schools get a portal too - notes, attendance, results and fees.',
+                  },
+                ].map((b) => (
+                  <li
+                    key={b.icon}
+                    className="flex items-start gap-2.5 text-[13.5px] leading-snug text-on-surface-variant sm:text-[15px]"
+                  >
+                    <span className="material-symbols-outlined mt-0.5 text-[17px] text-primary" aria-hidden>
+                      {b.icon}
+                    </span>
+                    {b.text}
+                  </li>
+                ))}
+              </ul>
 
-              <div className="hero-enter hero-enter-3 mt-9 flex flex-wrap items-center justify-center gap-3.5 lg:justify-start">
+              <div className="hero-enter hero-enter-3 mt-6 flex flex-wrap items-center justify-center gap-3.5 lg:justify-start">
                 <OpenAppButton className="hero-cta-primary" />
                 <Link href="/subjects/" className="hero-cta-secondary">
                   Browse {exams.length} question packs
@@ -331,7 +354,7 @@ export default function Landing() {
           {/* the feature row - every breakpoint, one calm grid directly
               under the hero copy and CTAs. The old desktop orbit cards
               lived here no longer (2026-10-18 desktop pass). */}
-          <div className="mt-14 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:grid-cols-4">
             <FloatingCard
               tone="blue"
               icon="fact_check"
@@ -362,7 +385,7 @@ export default function Landing() {
         {/* exam-pack ticker - the section now flows at its natural height
             on desktop, so the rail can never be guillotined by the fold */}
         {tickerItems.length > 0 && (
-          <div className="hero-enter hero-enter-5 relative z-10 mt-14 lg:mt-16">
+          <div className="hero-enter hero-enter-5 relative z-10 mt-12 lg:mt-16">
             <MarqueeRail items={tickerItems} />
           </div>
         )}
