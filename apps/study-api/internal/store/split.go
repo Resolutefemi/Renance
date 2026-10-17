@@ -347,33 +347,118 @@ func mixedVerdict(sql string) int {
         return domainUser
 }
 
+// contentQueryTimeout bounds every statement the split routes to the
+// content or cache pool. The catalog and lesson-cache pools idle
+// between student traffic - when their network path rots (the
+// zombie-connection outage of 2026-10-17), the bounded deadline turns
+// what used to be a ~15-minute TCP retransmit hang into a clean
+// failure; pgxpool discards the poisoned connection and the next
+// request dials fresh. The user pool is deliberately NOT bounded:
+// auth traffic keeps it warm and its queries own no such corpse risk.
+const contentQueryTimeout = 20 * time.Second
+
+// routeCtx bounds ctx for content/cache-routed statements. The
+// returned cancel is always non-nil when ok is true; callers MUST
+// run it (the deadline itself is the backstop).
+func (s *Split) routeCtx(ctx context.Context, sql string) (context.Context, context.CancelFunc, bool) {
+        if s.sameContent && s.sameCache {
+                return ctx, nil, false
+        }
+        d, _ := classifySQL(sql)
+        if d != domainContent && d != domainCache {
+                return ctx, nil, false
+        }
+        if d == domainContent && s.sameContent {
+                return ctx, nil, false
+        }
+        if d == domainCache && s.sameCache {
+                return ctx, nil, false
+        }
+        c, cancel := context.WithTimeout(ctx, contentQueryTimeout)
+        return c, cancel, true
+}
+
+// cancelRow releases the bounded context once the caller actually
+// scans the row (pgx Row is lazy - the query runs on Scan).
+type cancelRow struct {
+        pgx.Row
+        cancel context.CancelFunc
+        once   sync.Once
+}
+
+func (r *cancelRow) Scan(dest ...any) error {
+        defer r.once.Do(r.cancel)
+        return r.Row.Scan(dest...)
+}
+
+// cancelRows releases the bounded context when the caller closes the
+// result set; an abandoned Rows dies at the deadline instead.
+type cancelRows struct {
+        pgx.Rows
+        cancel context.CancelFunc
+        once   sync.Once
+}
+
+func (r *cancelRows) Close() {
+        r.once.Do(r.cancel)
+        r.Rows.Close()
+}
+
 func (s *Split) Exec(ctx context.Context, sql string, args ...any) (pgconn.CommandTag, error) {
+        qctx, cancel, bounded := s.routeCtx(ctx, sql)
+        if bounded {
+                defer cancel()
+        }
         if p, degraded := s.guard(sql); degraded {
-                tag, err := p.Exec(ctx, sql, args...)
+                tag, err := p.Exec(qctx, sql, args...)
                 s.noteContentFailure(sql, err)
                 return tag, err
         }
-        tag, err := s.route(sql).Exec(ctx, sql, args...)
+        tag, err := s.route(sql).Exec(qctx, sql, args...)
         s.noteContentFailure(sql, err)
         return tag, err
 }
 
 func (s *Split) Query(ctx context.Context, sql string, args ...any) (pgx.Rows, error) {
+        qctx, cancel, bounded := s.routeCtx(ctx, sql)
         if p, degraded := s.guard(sql); degraded {
-                rows, err := p.Query(ctx, sql, args...)
+                rows, err := p.Query(qctx, sql, args...)
+                if bounded {
+                        if err != nil {
+                                cancel()
+                        } else {
+                                rows = &cancelRows{Rows: rows, cancel: cancel}
+                        }
+                }
                 s.noteContentFailure(sql, err)
                 return rows, err
         }
-        rows, err := s.route(sql).Query(ctx, sql, args...)
+        rows, err := s.route(sql).Query(qctx, sql, args...)
+        if bounded {
+                if err != nil {
+                        cancel()
+                } else {
+                        rows = &cancelRows{Rows: rows, cancel: cancel}
+                }
+        }
         s.noteContentFailure(sql, err)
         return rows, err
 }
 
 func (s *Split) QueryRow(ctx context.Context, sql string, args ...any) pgx.Row {
+        qctx, cancel, bounded := s.routeCtx(ctx, sql)
         if p, degraded := s.guard(sql); degraded {
-                return p.QueryRow(ctx, sql, args...)
+                row := p.QueryRow(qctx, sql, args...)
+                if bounded {
+                        row = &cancelRow{Row: row, cancel: cancel}
+                }
+                return row
         }
-        return s.route(sql).QueryRow(ctx, sql, args...)
+        row := s.route(sql).QueryRow(qctx, sql, args...)
+        if bounded {
+                row = &cancelRow{Row: row, cancel: cancel}
+        }
+        return row
 }
 
 // SendBatch routes a batch to ONE pool: every queued statement must
@@ -395,14 +480,36 @@ func (s *Split) SendBatch(ctx context.Context, b *pgx.Batch) pgx.BatchResults {
                         return p.SendBatch(ctx, b)
                 }
         }
+        qctx, cancel, bounded := s.routeCtx(ctx, batchHead(b))
         switch dom {
         case domainContent:
-                return s.Content.SendBatch(ctx, b)
+                br := s.Content.SendBatch(qctx, b)
+                if bounded {
+                        br = &cancelBatchResults{BatchResults: br, cancel: cancel}
+                }
+                return br
         case domainCache:
-                return s.Cache.SendBatch(ctx, b)
+                br := s.Cache.SendBatch(qctx, b)
+                if bounded {
+                        br = &cancelBatchResults{BatchResults: br, cancel: cancel}
+                }
+                return br
         default:
                 return s.User.SendBatch(ctx, b)
         }
+}
+
+// cancelBatchResults releases the bounded context when the batch is
+// closed; a batch abandoned without Close dies at the deadline.
+type cancelBatchResults struct {
+        pgx.BatchResults
+        cancel context.CancelFunc
+        once   sync.Once
+}
+
+func (r *cancelBatchResults) Close() error {
+        defer r.once.Do(r.cancel)
+        return r.BatchResults.Close()
 }
 
 func batchHead(b *pgx.Batch) string {

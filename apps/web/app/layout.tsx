@@ -307,7 +307,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             the icon URL and never re-validates an unchanged one. Every
             icon URL now carries a version query (?v=20261016b), so the
             new URLs are treated as brand-new icons and fetched fresh;
-            bump the version on any future logo change. */}
+            bump the version on any future logo change.
+            Founder SEO pass 2026-10-17 (the Google Favicon crawler
+            checklist): the classic stable paths are declared too -
+            /favicon.ico (multi-size 16/32/48, the 48 the crawler
+            requires), a 48-multiple PNG (192) and the apple-touch
+            icon - all redirect-free so Google re-discovers them fast. */}
+        <link
+          rel="icon"
+          href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/favicon.ico`}
+          sizes="any"
+        />
         <link
           rel="icon"
           type="image/svg+xml"
@@ -318,6 +328,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           type="image/png"
           sizes="32x32"
           href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/favicon-32.png?v=20261016b`}
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/icon-192.png`}
+        />
+        <link
+          rel="apple-touch-icon"
+          href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/apple-touch-icon.png`}
         />
         <script
           type="application/ld+json"

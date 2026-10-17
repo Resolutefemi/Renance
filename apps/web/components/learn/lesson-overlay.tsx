@@ -83,6 +83,23 @@ export function LessonOverlay({
   const [reloadTick, setReloadTick] = useState(0);
   const errorRetries = useRef(0);
 
+  // The lesson screen is a full takeover (fixed inset-0, its own close
+  // button and stats header) - the global bottom tab bar must NOT sit
+  // underneath it (founder report 2026-10-17: the persistent nav
+  // crowded the lesson's bottom rows and the device home indicator).
+  // While this overlay is mounted the nav is REMOVED. Mechanism: a
+  // body flag (a late-mounting nav reads the truth) + a window event
+  // (a live one gets the news). The study, quiz, loading and done
+  // phases all run inside this single mount, so one flag covers them.
+  useEffect(() => {
+    document.body.dataset.lessonOpen = '1';
+    window.dispatchEvent(new CustomEvent('renance:lesson-visibility'));
+    return () => {
+      delete document.body.dataset.lessonOpen;
+      window.dispatchEvent(new CustomEvent('renance:lesson-visibility'));
+    };
+  }, []);
+
   useEffect(() => {
     let live = true;
     fetchLearnProfile()
@@ -334,7 +351,7 @@ export function LessonOverlay({
         </div>
       </div>
 
-      <div className="mx-auto w-full max-w-2xl flex-1 overflow-y-auto px-4 pb-28 pt-4">
+      <div className="mx-auto w-full max-w-2xl flex-1 overflow-y-auto px-4 pb-[calc(6.5rem+env(safe-area-inset-bottom))] pt-4">
         {/* ── Loading ── */}
         {phase === 'loading' && (
           <div className="flex h-full flex-col items-center justify-center gap-4 py-24">
@@ -555,9 +572,11 @@ export function LessonOverlay({
         />
       )}
 
-      {/* Sticky footer action */}
+      {/* Sticky footer action - the pb rides the device safe area:
+          on notched screens the home indicator must never bite the
+          Next/Continue buttons (founder report 2026-10-17). */}
       {(phase === 'study' || phase === 'quiz') && (
-        <div className="fixed inset-x-0 bottom-0 border-t-2 border-outline-variant bg-surface/95 px-4 py-3 backdrop-blur">
+        <div className="fixed inset-x-0 bottom-0 z-10 border-t-2 border-outline-variant bg-surface/95 px-4 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur">
           <div className="mx-auto flex max-w-2xl items-center gap-3">
             {phase === 'study' ? (
               <>

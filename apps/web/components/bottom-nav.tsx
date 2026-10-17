@@ -13,6 +13,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const TABS = [
   { icon: 'home', label: 'Home', href: '/dashboard', match: '/dashboard' },
@@ -25,6 +26,23 @@ const TABS = [
 
 export default function BottomNav() {
   const pathname = usePathname();
+  // The lesson takeover (LessonOverlay - study, quiz, loading and done
+  // all run inside it) removes this bar entirely: the founder's
+  // instruction of 2026-10-17 - no persistent tab bar under an active
+  // lesson's own close button and stats header. The overlay sets a
+  // body flag (read here on mount, for a nav that mounts late) and
+  // fires a window event (heard here live, for a nav already on the
+  // page).
+  const [lessonOpen, setLessonOpen] = useState(
+    () => typeof document !== 'undefined' && document.body.dataset.lessonOpen === '1',
+  );
+  useEffect(() => {
+    const sync = () => setLessonOpen(document.body.dataset.lessonOpen === '1');
+    window.addEventListener('renance:lesson-visibility', sync);
+    return () => window.removeEventListener('renance:lesson-visibility', sync);
+  }, []);
+
+  if (lessonOpen) return null;
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 border-t-2 border-outline-variant bg-card md:hidden">

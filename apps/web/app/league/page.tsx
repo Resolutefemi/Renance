@@ -136,14 +136,14 @@ export default function LeaguePage() {
                 actually big enough to have a demote zone) */}
             <div className="flex items-center justify-center gap-4 text-[11.5px] font-extrabold text-on-surface-variant">
               <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-primary" /> promotion zone (top {board.promotedCut})</span>
-              {board.entries.length >= board.demotedFrom && (
+              {(board.entries?.length ?? 0) >= board.demotedFrom && (
                 <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-error" /> demotion (rank {board.demotedFrom}+)</span>
               )}
             </div>
 
             {/* Board */}
             <ol className="overflow-hidden rounded-2xl border-2 border-outline-variant bg-card">
-              {board.entries.map((e, i) => {
+              {(board.entries ?? []).map((e, i) => {
                 const rank = i + 1;
                 const zone = rank <= board.promotedCut ? 'bg-primary' : rank >= board.demotedFrom ? 'bg-error' : 'bg-transparent';
                 // Every row is a real account: each one opens the
@@ -156,13 +156,13 @@ export default function LeaguePage() {
                       <span className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-primary bg-primary text-[13px] font-black text-on-primary">Y</span>
                     ) : (
                       <span className="flex h-8 w-8 items-center justify-center rounded-full text-[13px] font-black text-white" style={{ background: e.color || 'var(--color-on-surface-variant)' }}>
-                        {e.name.slice(0, 1)}
+                        {(e.name || '?').slice(0, 1)}
                       </span>
                     )}
                     <span className={`min-w-0 flex-1 truncate text-[14px] font-extrabold ${e.isYou ? 'text-primary-ink' : 'text-on-surface'}`}>
-                      {e.name}{e.isYou ? ' (You)' : ''}
+                      {e.name || 'Learner'}{e.isYou ? ' (You)' : ''}
                     </span>
-                    <span className="font-mono text-[12.5px] font-black text-on-surface">{e.xp.toLocaleString()} XP</span>
+                    <span className="font-mono text-[12.5px] font-black text-on-surface">{(e.xp ?? 0).toLocaleString()} XP</span>
                   </>
                 );
                 if (e.username && !e.isYou) {

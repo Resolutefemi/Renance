@@ -332,7 +332,11 @@ export default function CoursesPage() {
         onBack={handleBack}
       />
 
-      <main className="mx-auto w-full max-w-3xl px-4 pb-28 pt-4">
+      {/* pb clears the fixed BottomNav AND the device safe area: the
+          path ladder's last rows (the lock node and its description,
+          the unit revision card) must never sit behind the bar or the
+          home indicator (founder report 2026-10-17). */}
+      <main className="mx-auto w-full max-w-3xl px-4 pb-[calc(7rem+env(safe-area-inset-bottom))] pt-4">
         {notice && (
           <p className="mb-3 rounded-xl bg-surface-container px-4 py-2.5 text-[12.5px] font-bold text-on-surface-variant">
             {notice}

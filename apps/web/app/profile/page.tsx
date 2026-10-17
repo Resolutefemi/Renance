@@ -878,7 +878,13 @@ export default function ProfilePage() {
               </button>
             </div>
 
-            <div className="flex-1 overflow-y-auto px-4 py-4">
+            {/* min-h-0 is the load-bearing fix (founder report
+                2026-10-17: mobile could never reach the Save button):
+                without it the flex child refuses to shrink below its
+                content height, the 50-avatar grid pushes the footer
+                past the 92dvh sheet, and overflow-hidden clips the
+                Save button off forever. */}
+            <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
               <p className="mb-2 font-mono text-xs uppercase tracking-wider text-on-surface-variant">
                 Pick your avatar
               </p>
@@ -944,7 +950,7 @@ export default function ProfilePage() {
               )}
             </div>
 
-            <div className="flex gap-2 border-t border-outline-variant/40 px-4 py-3.5">
+            <div className="flex gap-2 border-t border-outline-variant/40 px-4 pt-3.5 pb-[max(0.875rem,env(safe-area-inset-bottom))]">
               <button
                 type="button"
                 onClick={() => setIdOpen(false)}

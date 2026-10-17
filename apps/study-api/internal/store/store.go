@@ -96,6 +96,21 @@ func Connect(ctx context.Context, dsn string) (*Store, error) {
         // Transaction-mode poolers (Neon) break prepared-statement caching.
         cfg.ConnConfig.DefaultQueryExecMode = pgx.QueryExecModeSimpleProtocol
         cfg.MaxConns = 8
+        // Zombie-connection armor (the courses-are-down hang, 2026-10-17).
+        // A pool that lets a connection idle forever lets the network
+        // path rot underneath it: Render's egress NAT silently drops
+        // idle mappings, Supavisor restarts strand sessions without an
+        // RST, and the next query on the dead socket hangs in TCP
+        // retransmit for ~15 minutes. Three walls:
+        //   1. keepaliveDialer - tight TCP keepalive probes bury a dead
+        //      socket in ~30s (see keepalive_unix.go);
+        //   2. MaxConnIdleTime - the pool itself closes any connection
+        //      that idles 2 minutes; the next request dials fresh;
+        //   3. HealthCheckPeriod - the background reaper sweeps broken
+        //      connections every 30s instead of the 1m default.
+        cfg.ConnConfig.DialFunc = keepaliveDialer()
+        cfg.MaxConnIdleTime = 2 * time.Minute
+        cfg.HealthCheckPeriod = 30 * time.Second
         pool, err := pgxpool.NewWithConfig(ctx, cfg)
         if err != nil {
                 return nil, fmt.Errorf("store: connect: %w", err)

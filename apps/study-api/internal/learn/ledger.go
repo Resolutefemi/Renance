@@ -632,6 +632,10 @@ func (s *Service) League(ctx context.Context, userID string, viewLeague int) (*L
                 Leagues:  Leagues, Viewing: viewing,
                 EndsInMs: WeekEndsIn().Sub(now).Milliseconds(),
                 PromotedCut: PromoteCut, DemotedFrom: DemoteFrom,
+                // Always a slice, never nil (the browsed-tier crash of
+                // 2026-10-17): an empty tier serialized as
+                // "entries":null and the web board died on .map().
+                Entries: []LeagueEntry{},
         }
         if !viewing {
                 board.Entries = append(board.Entries, LeagueEntry{Name: "You", XP: mine, IsYou: true, IsReal: true, Color: AvatarColor("you:" + userID)})
