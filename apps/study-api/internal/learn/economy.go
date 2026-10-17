@@ -247,6 +247,41 @@ func ComputeStreak(current int, lastActiveOn string, freezeStock, forgivenCount 
         }
 }
 
+// DisplayStreak is ComputeStreak without side effects: the streak the
+// learner should SEE right now given the stored state. The stored
+// streak_count only moves on activity, so while a learner is away the
+// flame would sit frozen at its last number forever - the founder bug
+// report 2026-10-17 ("I didn't do anything on Renance today and my
+// streak didn't reset"). The read path therefore decays for display:
+// inside the return window (the same or next calendar day, or a
+// freeze / forgiveness bridge that will cover the gap on return) the
+// flame keeps its number; past every bridge it is out - the doctrine,
+// a streak is lost on the SECOND quiet day. The stored value itself
+// self-corrects the next time the learner actually acts.
+func DisplayStreak(current int, lastActiveOn string, freezeStock, forgivenCount int, now time.Time) int {
+        if current <= 0 {
+                return 0
+        }
+        today := dayKey(now)
+        if lastActiveOn == today {
+                return current
+        }
+        missed := MissedDaysBetween(lastActiveOn, now)
+        switch {
+        case missed <= 1:
+                // The return window is still open.
+                return current
+        case missed == 2 && freezeStock >= 1:
+                return current
+        case missed == 3 && freezeStock >= 2:
+                return current
+        case missed <= 3 && current >= StreakForgivableMin && forgivenCount < MaxStreakForgiveness:
+                return current
+        default:
+                return 0
+        }
+}
+
 // ─── Board colors (FNV-1a, Supreme palette) ───────────────────────────────
 //
 // The weekly league board shows REAL students only (founder directive

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { OG_IMAGES } from '@/lib/og';
 import Link from 'next/link';
 import { loadLessons, loadManifest } from '@/lib/site-data';
+import { GUIDES } from '@/lib/guides';
 import OpenAppButton from '@/components/open-app-button';
 import LandingDefaultTheme from '@/components/landing-default-theme';
 import { RenanceMark } from '@/components/renance-logo';
@@ -46,8 +47,8 @@ const FEATURES = [
     icon: 'event_repeat',
     tone: 'violet',
     glow: 'rgba(139,92,246,0.16)',
-    title: 'Spaced review that plans itself',
-    body: 'Topics you miss enter an SM-2 spaced-repetition queue and return exactly when you would forget them. Clear the queue, keep the knowledge, no planner to maintain.',
+    title: 'Missed topics return before you forget',
+    body: 'Topics you miss enter an SM-2 spaced-repetition queue and come back right when memory starts to fade. Clear the queue, keep the knowledge, no planner to maintain.',
   },
   {
     icon: 'record_voice_over',
@@ -212,7 +213,7 @@ export default function Landing() {
                 tone="blue"
                 icon="fact_check"
                 title="Server-graded"
-                body="87% avg. score improvement"
+                body="Marked on the server, not your browser"
                 delay={900}
               />
             </div>
@@ -221,7 +222,7 @@ export default function Landing() {
                 tone="emerald"
                 icon="event_repeat"
                 title="Review queue"
-                body="Plans itself while you sleep"
+                body="Missed topics return on schedule"
                 delay={1100}
               />
             </div>
@@ -251,18 +252,16 @@ export default function Landing() {
             </h1>
 
             <p className="hero-enter hero-enter-2 mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-on-surface-variant sm:text-lg">
-              Renance is an educational app in Nigeria built for JAMB, WAEC, NECO, and
-              tertiary institution success. Learn exam-ready courses step by step, drill
-              90,000+ JAMB, NECO, and WAEC past questions from 1978 to 2026, and practice
-              over 200,000 Post-UTME and tertiary institution course questions with
-              server-graded CBT mocks. Stay engaged and motivated with daily quests,
-              competitive leagues, a live arena, and a community feed that celebrates your
-              wins.
+              Renance is a Nigerian exam-prep app for JAMB, WAEC and NECO candidates, and for
+              anyone carrying a tertiary course load. Sit CBT mocks the server marks with sealed
+              answer keys, drill {fmt(totalQuestions)}+ past questions from {yearFrom} to {yearTo},
+              and work through Post-UTME and course questions topic by topic. Whatever you miss
+              goes into a review queue and comes back before the exam can catch you.
             </p>
             <p className="hero-enter hero-enter-2 mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-on-surface-variant sm:text-lg">
-              For institutions, Renance provides a comprehensive school portal to seamlessly
-              manage syllabuses, lecture notes, attendance, exam results, and fee payments.
-              Available for free on Android, iOS, Windows, macOS, and the web.
+              Schools get their own portal too: syllabuses, lecture notes, attendance, results
+              with positions, ID cards and fee receipts - the records a Nigerian school actually
+              keeps, in one place. Free on Android, iOS, Windows, macOS and the web.
             </p>
 
             <div className="hero-enter hero-enter-3 mt-9 flex flex-wrap items-center justify-center gap-3.5">
@@ -294,7 +293,7 @@ export default function Landing() {
               tone="emerald"
               icon="event_repeat"
               title="Review queue"
-              body="Plans itself"
+              body="Missed topics return"
             />
             <FloatingCard
               tone="amber"
@@ -708,6 +707,46 @@ export default function Landing() {
       )}
 
       {/* ============================================================ */}
+      {/* GUIDES - the explainers AI and search engines can cite        */}
+      {/* ============================================================ */}
+      <section className="mx-auto w-full max-w-6xl px-4 pb-20 sm:px-6">
+        <Reveal>
+          <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+            <div>
+              <span className="eyebrow">Exam guides</span>
+              <h2 className="mt-3 text-2xl font-bold tracking-tight text-on-surface sm:text-3xl">
+                Understand the exam, not just the questions
+              </h2>
+              <p className="mt-2 max-w-xl text-sm leading-relaxed text-on-surface-variant">
+                Plain explanations of how the UTME is scored, what your result can and
+                cannot do, which O&apos;level body fits you, and what actually happens in
+                the CBT hall.
+              </p>
+            </div>
+            <Link href="/guides/" className="shrink-0 text-sm font-bold text-primary hover:underline">
+              All guides →
+            </Link>
+          </div>
+          <div className="mt-6 grid gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
+            {GUIDES.slice(0, 3).map((g) => (
+              <Link
+                key={g.slug}
+                href={`/guides/${g.slug}/`}
+                className="group rounded-2xl border-2 border-outline-variant bg-card p-5 shadow-[0_3px_0_0_var(--color-outline-variant)] transition hover:bg-surface-container active:translate-y-[2px]"
+              >
+                <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">
+                  {g.tag} · {g.minutes} min
+                </span>
+                <h3 className="mt-2 text-[15px] font-bold leading-snug text-on-surface group-hover:underline">
+                  {g.title}
+                </h3>
+              </Link>
+            ))}
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ============================================================ */}
       {/* FINAL CTA                                                    */}
       {/* ============================================================ */}
       <section className="mx-auto w-full max-w-6xl px-4 pb-20 sm:px-6">
@@ -843,6 +882,11 @@ export default function Landing() {
               <li>
                 <Link href="/flashcards/" className="hover:underline">
                   Flashcards
+                </Link>
+              </li>
+              <li>
+                <Link href="/guides/" className="hover:underline">
+                  Exam guides
                 </Link>
               </li>
               <li>

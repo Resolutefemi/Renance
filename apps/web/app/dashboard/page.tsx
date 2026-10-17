@@ -1079,12 +1079,17 @@ function LauncherTile({
             : muted
               ? 'border-2 border-outline-variant bg-surface-container text-on-surface-variant shadow-[0_3px_0_0_var(--color-outline-variant)]'
               : 'border-2 border-outline-variant bg-card text-on-surface shadow-[0_3px_0_0_var(--color-outline-variant)]'
-        } overflow-hidden`}
+        }`}
+        // No overflow-hidden here on purpose: the count badge hangs
+        // OUTSIDE the icon box (-top-1.5 -right-1.5) and the box's own
+        // bounding clip used to guillotine its top-right corner. The
+        // inverse tile's sheen gradient keeps its own corner rounding
+        // instead (rounded-[inherit] overflow-hidden on the overlay).
       >
-        {inverse && <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-white/20" />}
+        {inverse && <div className="absolute inset-0 overflow-hidden rounded-[inherit] bg-gradient-to-tr from-transparent to-white/20" />}
         <span className={`material-symbols-outlined relative z-10 text-[21px] md:text-[23px] ${amber ? 'text-accent-amber' : ''}`}>{icon}</span>
         {badge != null && (
-          <span className="absolute -right-1.5 -top-1.5 rounded-full bg-accent-emerald px-1.5 py-0.5 font-mono text-[10px] font-bold text-white shadow-sm">
+          <span className="absolute -right-1.5 -top-1.5 z-10 flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-accent-emerald px-1 font-mono text-[10px] font-bold leading-none text-white shadow-sm">
             {badge}
           </span>
         )}

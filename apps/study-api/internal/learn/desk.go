@@ -19,6 +19,8 @@ import (
         "time"
         "unicode"
 
+        "github.com/jackc/pgx/v5"
+
         "renance.dev/study-api/internal/tutor"
 )
 
@@ -255,10 +257,21 @@ type DeskShelves struct {
 // The general shelf dedupes the cross-department general courses to one
 // row each (the copy with the most topics wins), GST suite first.
 func (s *Service) CourseDesk(ctx context.Context, userID string) (*DeskShelves, error) {
+        // A brand-new scholar has no learn.learners row yet - materialize
+        // it (signup-time lazy init, same as /learn/profile) and treat a
+        // still-missing row as an empty desk, never a 500. Founder bug
+        // 2026-10-17: the first course-desk visit after signup answered
+        // "no rows in result set".
+        if err := s.ensureLearner(ctx, s.Pool, userID); err != nil {
+                return nil, err
+        }
         var itype, dept string
         if err := s.Pool.QueryRow(ctx,
                 `SELECT institution_type, department FROM learn.learners WHERE user_id=$1`, userID).
                 Scan(&itype, &dept); err != nil {
+                if errors.Is(err, pgx.ErrNoRows) {
+                        return &DeskShelves{General: []DeskCourse{}, Departmental: []DeskCourse{}}, nil
+                }
                 return nil, err
         }
         shelf := &DeskShelves{InstitutionType: itype, Department: dept,

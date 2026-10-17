@@ -42,6 +42,7 @@ import (
         "context"
         "crypto/sha256"
         "encoding/hex"
+        "errors"
         "fmt"
         "log/slog"
         "os"
@@ -162,6 +163,100 @@ type Split struct {
         log     *slog.Logger
         mixedMu sync.Mutex
         mixed   map[string]bool // throttled mixed-domain warnings by SQL hash
+
+        // Content self-heal (the courses-are-down repair, 2026-10-17).
+        // When the content chain was unreachable (or its migration
+        // failed) at boot, the catalog degrades onto the user pool -
+        // every catalog query then answers 42P01 forever, because
+        // nothing re-probes. The healer re-runs the content chain
+        // (connect + content-role migrate) after a content-routed
+        // statement misses a relation there, at most once per cooldown,
+        // single-flight. nil on single-pool boots.
+        healMu      sync.Mutex
+        healing     bool
+        lastHeal    time.Time
+        lastHealErr error
+        healer      func() (Pool, error)
+}
+
+// healCooldown keeps a dead Supabase from being re-probed on every
+// failing request: one attempt per cooldown, and the request that
+// found the failure still answers its error - the next catalog read
+// rides the healed pool.
+const healCooldown = 10 * time.Minute
+
+// SetContentHealer wires the boot's content chain re-connect closure.
+func (s *Split) SetContentHealer(fn func() (Pool, error)) {
+        s.healMu.Lock()
+        s.healer = fn
+        s.healMu.Unlock()
+}
+
+// noteContentFailure inspects a failed content-routed statement: while
+// the catalog is degraded onto the user pool, a missing-relation error
+// on a content table is the "catalog is down" signature, and it never
+// fixes itself on its own - try the healer.
+func (s *Split) noteContentFailure(sql string, err error) {
+        if err == nil || !s.sameContent {
+                // Healthy split: a 42P01 on the content pool is a real
+                // schema bug, not a degradation - do not churn heals.
+                return
+        }
+        d, _ := classifySQL(sql)
+        if d != domainContent {
+                return
+        }
+        var pgErr *pgconn.PgError
+        if !errors.As(err, &pgErr) || (pgErr.Code != "42P01" && pgErr.Code != "42703") {
+                return
+        }
+        s.maybeHeal()
+}
+
+func (s *Split) maybeHeal() {
+        s.healMu.Lock()
+        if s.healing || s.healer == nil || time.Since(s.lastHeal) < healCooldown {
+                s.healMu.Unlock()
+                return
+        }
+        s.healing = true
+        s.lastHeal = time.Now()
+        heal := s.healer
+        s.healMu.Unlock()
+
+        go func() {
+                defer func() {
+                        if r := recover(); r != nil {
+                                if s.log != nil {
+                                        s.log.Error("store: content heal panicked", "err", r)
+                                }
+                        }
+                        s.healMu.Lock()
+                        s.healing = false
+                        s.healMu.Unlock()
+                }()
+                pool, err := heal()
+                s.healMu.Lock()
+                s.lastHealErr = err
+                s.healMu.Unlock()
+                if err != nil {
+                        if s.log != nil {
+                                s.log.Warn("store: content heal failed - catalog stays on the user pool until the next attempt", "err", err.Error())
+                        }
+                        return
+                }
+                s.healMu.Lock()
+                old := s.Content
+                s.Content = pool
+                s.sameContent = false
+                s.healMu.Unlock()
+                if s.log != nil {
+                        s.log.Info("store: content pool healed - the catalog is live again")
+                }
+                if closer, ok := old.(interface{ Close() }); ok && old != s.User {
+                        closer.Close()
+                }
+        }()
 }
 
 // NewSplit wires the three domain pools. A nil domain pool (or one
@@ -254,16 +349,24 @@ func mixedVerdict(sql string) int {
 
 func (s *Split) Exec(ctx context.Context, sql string, args ...any) (pgconn.CommandTag, error) {
         if p, degraded := s.guard(sql); degraded {
-                return p.Exec(ctx, sql, args...)
+                tag, err := p.Exec(ctx, sql, args...)
+                s.noteContentFailure(sql, err)
+                return tag, err
         }
-        return s.route(sql).Exec(ctx, sql, args...)
+        tag, err := s.route(sql).Exec(ctx, sql, args...)
+        s.noteContentFailure(sql, err)
+        return tag, err
 }
 
 func (s *Split) Query(ctx context.Context, sql string, args ...any) (pgx.Rows, error) {
         if p, degraded := s.guard(sql); degraded {
-                return p.Query(ctx, sql, args...)
+                rows, err := p.Query(ctx, sql, args...)
+                s.noteContentFailure(sql, err)
+                return rows, err
         }
-        return s.route(sql).Query(ctx, sql, args...)
+        rows, err := s.route(sql).Query(ctx, sql, args...)
+        s.noteContentFailure(sql, err)
+        return rows, err
 }
 
 func (s *Split) QueryRow(ctx context.Context, sql string, args ...any) pgx.Row {

@@ -111,6 +111,15 @@ func (s *Service) loadLearner(ctx context.Context, q querier, userID string) (*L
         return l, nil
 }
 
+// displayStreak is the streak the learner should SEE (economy.go
+// DisplayStreak): the stored streak_count only moves on activity, so
+// the read path decays it once the quiet days outrun every freeze /
+// forgiveness bridge. Presentation only - nothing is written back
+// here; the stored value self-corrects on the learner's next action.
+func (l *Learner) displayStreak() int {
+        return DisplayStreak(l.Streak, l.LastActive, l.FreezeCount, l.StreakForgiven, time.Now())
+}
+
 // TouchStreakForQuiz advances the Supreme streak for a GRADED quiz/mock
 // attempt (founder directive 2026-10-17: "a streak should only be
 // updated when a user attempts any quiz or lesson - simply opening the
@@ -194,7 +203,7 @@ func (s *Service) Profile(ctx context.Context, userID string) (*Profile, error) 
         }
         p := &Profile{
                 Hearts: l.Hearts, UnlimitedHearts: s.UnlimitedHearts || l.SuperActive,
-                Gems: l.Gems, XP: l.XP, Streak: l.Streak, DailyGoal: l.DailyGoal,
+                Gems: l.Gems, XP: l.XP, Streak: l.displayStreak(), DailyGoal: l.DailyGoal,
                 SuperActive: l.SuperActive, BoostActive: l.BoostActive, FreezeCount: l.FreezeCount,
         }
         _ = s.Pool.QueryRow(ctx, `SELECT COALESCE(SUM(xp),0) FROM learn.daily_stats WHERE user_id=$1 AND day_key=$2`,

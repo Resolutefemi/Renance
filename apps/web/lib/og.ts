@@ -20,13 +20,13 @@
  *  description for the landing page, og:description and twitter:
  *  description. One source of truth; edit here only. */
 export const RENANCE_DESCRIPTION =
-  "Renance is an educational app in Nigeria built for JAMB, WAEC, NECO, and tertiary institution success. Learn exam-ready courses step by step, drill 90,000+ JAMB, NECO, and WAEC past questions from 1978 to 2026, and practice over 200,000 Post-UTME and tertiary institution course questions with server-graded CBT mocks. Stay engaged and motivated with daily quests, competitive leagues, a live arena, and a community feed that celebrates your wins. For institutions, Renance provides a comprehensive school portal to seamlessly manage syllabuses, lecture notes, attendance, exam results, and fee payments. Available for free on Android, iOS, Windows, macOS, and the web.";
+  "Renance is a Nigerian exam-prep app for JAMB, WAEC, NECO and tertiary institution students. Sit CBT mocks the server marks with sealed answer keys, drill 90,000+ past questions from 1978 to 2026, and work through 200,000+ Post-UTME and course questions topic by topic - missed topics return through a spaced-repetition review queue. Daily quests, leagues and a live arena keep the practice competitive. Schools run their own portal: syllabuses, notes, attendance, results and fees, with the NERDC curriculum built in. Free on Android, iOS, Windows, macOS and the web.";
 
 export const OG_IMAGE = {
   url: '/og-2026.jpg',
   width: 1200,
   height: 630,
-  alt: 'Renance - the educational app in Nigeria: 90,000+ JAMB, WAEC and NECO past questions from 1978 to 2026, over 200,000 Post-UTME and tertiary institution course questions, server-graded CBT mocks, daily quests, leagues, a live arena and a community feed - free on Android, iOS, Windows, macOS and the web.',
+  alt: 'Renance - the Nigerian exam-prep app: 90,000+ JAMB, WAEC and NECO past questions from 1978 to 2026, over 200,000 Post-UTME and tertiary institution course questions, server-graded CBT mocks, spaced review, daily quests, leagues and a live arena - free on Android, iOS, Windows, macOS and the web.',
 } as const;
 
 export const OG_IMAGES = [OG_IMAGE];

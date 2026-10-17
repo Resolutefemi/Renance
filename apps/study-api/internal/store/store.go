@@ -154,6 +154,72 @@ func normalizeDSN(dsn string) string {
 
 // Migrate applies every not-yet-applied migration in filename order.
 func (s *Store) Migrate(ctx context.Context) error {
+        return s.migrate(ctx, migrateRoleFull)
+}
+
+// Migration roles. The split-horizon boot migrates THREE databases
+// with ONE journal, and the journal carries statements for every
+// domain - so each pool migrates under a role that decides what to do
+// when a migration names a table this pool does not own:
+//
+//   full    (user primary + mirrors): every statement must apply. A
+//           missing relation here is a real bug and aborts the boot.
+//   content (the catalog database, Supabase): user-domain tables
+//           (study./arena./school./social. schemas and the learn
+//           user tables) were deliberately dropped during the split -
+//           a migration that fails on them is NOT APPLICABLE to this
+//           pool. Skipping it keeps the catalog alive; journaling it
+//           would be wrong, so the skip is retried (and re-skipped)
+//           harmlessly on every boot.
+//
+// Founder bug 2026-10-17: 0034 (learn.learners) and 0036
+// (study.profiles) failed on the content pool, connectSplit degraded
+// the catalog onto the user primary (which has no catalog), and every
+// course-desk / catalog / faculty request in production answered
+// SQLSTATE 42P01 - the whole "courses no longer open" outage. The
+// content role is the permanent fix, and any future migration that
+// only touches user tables can never break the catalog again.
+type migrateRole string
+
+const (
+        migrateRoleFull    migrateRole = "full"
+        migrateRoleContent migrateRole = "content"
+)
+
+// userDomainMarkers: if a migration's failure names one of these
+// prefixes/tables, the missing relation belongs to the user domain
+// (see split.go userPrefixes / userLearnTables - kept in textual sync
+// on purpose, the classifier is the single source at runtime).
+var userDomainMarkers = []string{
+        "study.", "arena.", "school.", "social.", "public.",
+        "learn.learners", "learn.progress", "learn.user_courses",
+        "learn.active_course", "learn.mistakes", "learn.daily_stats",
+        "learn.xp_events", "learn.chest_opens", "learn.topic_chests",
+        "learn.quest_claims", "learn.league_members",
+        "learn.question_flags", "learn.course_submissions",
+}
+
+// userDomainFailure reports whether a failed statement missed a
+// user-domain relation (SQLSTATE 42P01 undefined_table, 42P01
+// undefined_object shapes, or 42703 undefined_column on a user table).
+func userDomainFailure(err error) bool {
+        var pgErr *pgconn.PgError
+        if !errors.As(err, &pgErr) {
+                return false
+        }
+        if pgErr.Code != "42P01" && pgErr.Code != "42703" {
+                return false
+        }
+        msg := strings.ToLower(pgErr.Message)
+        for _, m := range userDomainMarkers {
+                if strings.Contains(msg, strings.ToLower(m)) {
+                        return true
+                }
+        }
+        return false
+}
+
+func (s *Store) migrate(ctx context.Context, role migrateRole) error {
         if _, err := s.Pool.Exec(ctx, `
                 CREATE SCHEMA IF NOT EXISTS study;
                 CREATE TABLE IF NOT EXISTS study.schema_migrations (
@@ -194,6 +260,14 @@ func (s *Store) Migrate(ctx context.Context) error {
                 }
                 if _, err := tx.Exec(ctx, string(sqlBytes)); err != nil {
                         _ = tx.Rollback(ctx)
+                        if role == migrateRoleContent && userDomainFailure(err) {
+                                // Not applicable on the catalog database:
+                                // skip without journaling so a future role
+                                // change re-runs it. Boot stays fast - the
+                                // check is one SELECT and the skip one
+                                // failed BEGIN/ROLLBACK.
+                                continue
+                        }
                         return fmt.Errorf("store: apply %s: %w", name, err)
                 }
                 if _, err := tx.Exec(ctx,

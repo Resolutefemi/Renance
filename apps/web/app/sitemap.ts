@@ -10,6 +10,7 @@ export const dynamic = 'force-static';
  * the same commit as its sitemap entry, so the sets can never drift.
  */
 import { loadLessons } from '@/lib/site-data';
+import { GUIDES } from '@/lib/guides';
 import { loadSchools, loadCatalog } from '@/lib/university-data';
 import {
   getAllSEOCurriculumParams,
@@ -35,6 +36,7 @@ const PUBLIC_ROUTES: Array<{ path: string; priority: number; freq: 'daily' | 'we
   { path: '/study-past-questions/', priority: 0.8, freq: 'weekly' },
   { path: '/career-bridge/', priority: 0.8, freq: 'weekly' },
   { path: '/about/', priority: 0.8, freq: 'monthly' },
+  { path: '/guides/', priority: 0.85, freq: 'weekly' },
   { path: '/for-schools/', priority: 0.9, freq: 'weekly' },
   { path: '/educational-app-in-nigeria/', priority: 0.9, freq: 'weekly' },
   { path: '/faq/', priority: 0.7, freq: 'monthly' },
@@ -57,6 +59,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified,
     changeFrequency: 'weekly' as const,
     priority: 0.8,
+  }));
+  // Guides ship in the same commit as lib/guides.ts, so the sitemap can
+  // never drift from the article pages.
+  const guideEntries = GUIDES.map((g) => ({
+    url: `${SITE_URL}/guides/${g.slug}/`,
+    lastModified: new Date(g.updated),
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
   }));
   // The university desk is public per school + course, the same commit
   // that wraps a school's content ships its sitemap entries.
@@ -134,6 +144,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...statics,
     ...lessonEntries,
+    ...guideEntries,
     ...schoolEntries,
     ...bodyEntries,
     ...subjectEntries,

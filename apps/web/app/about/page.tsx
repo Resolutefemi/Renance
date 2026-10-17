@@ -236,14 +236,15 @@ export default function AboutPage() {
                 and tertiary institution success - and its only official website is
                 renance.app.
               </strong>{" "}
-              Students learn exam-ready courses step by step, drill 90,000+ JAMB,
-              NECO, and WAEC past questions from 1978 to 2026, and practice over
-              200,000 Post-UTME and tertiary institution course questions with
-              server-graded CBT mocks. Daily quests, competitive leagues, a live
-              arena and a community feed keep them engaged and motivated. For
-              institutions, Renance provides a comprehensive school portal to
-              seamlessly manage syllabuses, lecture notes, attendance, exam results,
-              and fee payments - with the complete NERDC curriculum and lesson notes
+              Students sit CBT mocks the server marks with sealed answer keys,
+              drill 90,000+ JAMB, NECO, and WAEC past questions from 1978 to
+              2026, and work through over 200,000 Post-UTME and tertiary
+              institution course questions topic by topic - and whatever they
+              miss enters a spaced-repetition review queue. Daily quests,
+              leagues and a live arena keep the practice honest and competitive.
+              For schools, Renance runs its own portal: syllabuses, lecture
+              notes, attendance, exam results with positions, ID cards and fee
+              receipts, with the complete NERDC curriculum and lesson notes
               built in. Renance is available for free on Android, iOS, Windows,
               macOS, and the web, and was founded and is built by Resolute Femi
               (Ariyo Oluwafemi Stephen).
