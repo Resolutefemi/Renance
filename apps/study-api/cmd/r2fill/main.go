@@ -57,6 +57,8 @@ func main() {
         firstN := flag.Int("n", 0, "process at most this many eligible rows (0 = all)")
         every := flag.Int("every", 500, "progress line every N pushes")
         maxSeconds := flag.Int("max-seconds", 0, "stop cleanly after this many seconds (0 = run to the target)")
+        statePath := flag.String("state", "/home/z/my-project/scripts/.r2fill_state.json", "resume state file")
+        verify := flag.Bool("verify", false, "force a fresh full bucket LIST and rebuild the state from it")
         flag.Parse()
 
         log := slog.New(slog.NewTextHandler(os.Stderr, &slog.HandlerOptions{Level: slog.LevelWarn}))
@@ -69,18 +71,98 @@ func main() {
         ctx, cancel := context.WithCancel(context.Background())
         defer cancel()
 
-        existing, err := blobs.ListLessons(ctx)
-        if err != nil {
-                fmt.Fprintf(os.Stderr, "r2fill: list bucket: %v\n", err)
-                os.Exit(1)
+        // Startup cost discipline: a full LIST is sequential at roughly one
+        // second per 1000 objects, so at archive scale it would eat minutes
+        // of every chunk. The bucket is verified ONCE into the state file;
+        // every later chunk resumes from the state plus the append-only done
+        // ledger (one line per landed PUT) and spends zero LIST operations.
+        type fillState struct {
+                VerifiedObjects int64             `json:"verified_objects"`
+                VerifiedBytes   int64             `json:"verified_bytes"`
+                ExistingFile    string            `json:"existing_file"`
+                PushedTotal     int64             `json:"pushed_total"`
+                PushedBytes     int64             `json:"pushed_bytes"`
         }
-        var startBytes int64
-        for _, sz := range existing {
-                startBytes += sz
+        type sizeMap map[string]int64
+        existingFile := strings.TrimSuffix(*statePath, ".json") + "_existing.json"
+        donePath := strings.TrimSuffix(*statePath, ".json") + "_done.txt"
+
+        var existing sizeMap
+        var startBytes, carryPushed, carryPushedBytes int64
+        var err error
+        st, serr := func() (*fillState, error) {
+                raw, err := os.ReadFile(*statePath)
+                if err != nil {
+                        return nil, err
+                }
+                var s fillState
+                err = json.Unmarshal(raw, &s)
+                return &s, err
+        }()
+        if *verify || serr != nil || st == nil {
+                existing, err = blobs.ListLessons(ctx)
+                if err != nil {
+                        fmt.Fprintf(os.Stderr, "r2fill: list bucket: %v\n", err)
+                        os.Exit(1)
+                }
+                for _, sz := range existing {
+                        startBytes += sz
+                }
+                raw, _ := json.Marshal(existing)
+                if werr := os.WriteFile(existingFile, raw, 0644); werr != nil {
+                        fmt.Fprintf(os.Stderr, "r2fill: write existing cache: %v\n", werr)
+                        os.Exit(1)
+                }
+                st = &fillState{VerifiedObjects: int64(len(existing)), VerifiedBytes: startBytes, ExistingFile: existingFile}
+                if raw, err := json.Marshal(st); err == nil {
+                        _ = os.WriteFile(*statePath, raw, 0644)
+                }
+                if cerr := os.WriteFile(donePath, nil, 0644); cerr != nil {
+                        fmt.Fprintf(os.Stderr, "r2fill: reset done ledger: %v\n", cerr)
+                        os.Exit(1)
+                }
+                fmt.Printf("r2fill: verified %d objects (%.1f MB) into %s\n", len(existing), float64(startBytes)/1048576, *statePath)
+        } else {
+                existing = sizeMap{}
+                raw, rerr := os.ReadFile(st.ExistingFile)
+                if rerr != nil {
+                        fmt.Fprintf(os.Stderr, "r2fill: read existing cache: %v\n", rerr)
+                        os.Exit(1)
+                }
+                if uerr := json.Unmarshal(raw, &existing); uerr != nil {
+                        fmt.Fprintf(os.Stderr, "r2fill: parse existing cache: %v\n", uerr)
+                        os.Exit(1)
+                }
+                doneRaw, derr := os.ReadFile(donePath)
+                if derr != nil {
+                        fmt.Fprintf(os.Stderr, "r2fill: read done ledger: %v\n", derr)
+                        os.Exit(1)
+                }
+                for _, line := range strings.Split(string(doneRaw), "\n") {
+                        if id := strings.TrimSpace(line); id != "" {
+                                existing[id] = 1
+                        }
+                }
+                startBytes, carryPushed, carryPushedBytes = st.VerifiedBytes, st.PushedTotal, st.PushedBytes
+                fmt.Printf("r2fill: resuming after %d carried pushes (%.1f MB carried); skip set %d ids; no LIST spent\n",
+                        carryPushed, float64(carryPushedBytes)/1048576, len(existing))
         }
         target := int64(*targetMB) << 20
-        fmt.Printf("r2fill: bucket holds %d objects (%.1f MB); target %d MB; %d lanes\n",
-                len(existing), float64(startBytes)/1048576, *targetMB, *workers)
+        fmt.Printf("r2fill: bucket at %.1f MB; target %d MB; %d lanes\n",
+                float64(startBytes+carryPushedBytes)/1048576, *targetMB, *workers)
+
+        doneFile, derr := os.OpenFile(donePath, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
+        if derr != nil {
+                fmt.Fprintf(os.Stderr, "r2fill: open done ledger: %v\n", derr)
+                os.Exit(1)
+        }
+        defer doneFile.Close()
+        var doneMu sync.Mutex
+        markDone := func(id string) {
+                doneMu.Lock()
+                doneFile.WriteString(id + "\n")
+                doneMu.Unlock()
+        }
 
         f, err := os.Open(*queuePath)
         if err != nil {
@@ -163,15 +245,16 @@ func main() {
                                         failed.Add(1)
                                         continue
                                 }
+                                markDone(r.TID)
                                 total := pushedBytes.Add(pb)
                                 nPushed := pushed.Add(1)
-                                if startBytes+total >= target {
+                                if startBytes+carryPushedBytes+total >= target {
                                         stop.Store(true)
                                 }
                                 if nPushed%int64(*every) == 0 {
                                         elapsed := time.Since(start).Seconds()
                                         rate := float64(nPushed) / elapsed
-                                        remaining := target - (startBytes + total)
+                                        remaining := target - (startBytes + carryPushedBytes + total)
                                         eta := time.Duration(float64(remaining) / (float64(total) / elapsed)) * time.Second
                                         fmt.Printf("  ... %d pushed (%.1f MB this run), %d failed, %.0f lessons/s, ETA %s\n",
                                                 nPushed, float64(total)/1048576, failed.Load(), rate, eta.Round(time.Second))
@@ -182,13 +265,21 @@ func main() {
         producers.Wait()
         wg.Wait()
 
-        totalBucket := startBytes + pushedBytes.Load()
+        thisPushed, thisBytes := pushed.Load(), pushedBytes.Load()
+        totalBucket := startBytes + carryPushedBytes + thisBytes
         fmt.Printf("r2fill done: pushed %d (%.1f MB, %.0f B avg), skipped %d existing, failed %d, scanned %d rows in %.1f min\n",
-                pushed.Load(), float64(pushedBytes.Load())/1048576, avg(pushedBytes.Load(), pushed.Load()), skipped.Load(), failed.Load(), scanned.Load(), time.Since(start).Minutes())
+                thisPushed, float64(thisBytes)/1048576, avg(thisBytes, thisPushed), skipped.Load(), failed.Load(), scanned.Load(), time.Since(start).Minutes())
         fmt.Printf("bucket now: %.1f MB of %d MB target (%.1f%%)\n",
                 float64(totalBucket)/1048576, *targetMB, float64(totalBucket)/float64(target)*100)
         if failed.Load() > 0 {
                 fmt.Println("re-run r2fill to retry the failed rows (they stayed eligible)")
+        }
+        // Carry the run into the state so the next chunk resumes without a LIST.
+        if thisPushed > 0 {
+                st.PushedTotal, st.PushedBytes = carryPushed+thisPushed, carryPushedBytes+thisBytes
+                if raw, err := json.Marshal(st); err == nil {
+                        _ = os.WriteFile(*statePath, raw, 0644)
+                }
         }
 }
 
