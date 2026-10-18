@@ -24,9 +24,9 @@ const COUNT_PRESETS = [25, 50, 100] as const;
 export function CoursePractice({ school, course }: { school: School; course: UniversityCourse }) {
   const [timer, setTimer] = useState<number>(0);
   const [randomCount, setRandomCount] = useState<number>(50);
-  // Renancecbt parity: answers show the moment you pick (Practice) by
-  // default; Exam Mode hides them until Submit.
-  const [instant, setInstant] = useState<boolean>(true);
+  // The founder pulled the answer-mode picker (the eye) from the course
+  // desk: every course sitting plays as practice with instant answers,
+  // nothing for the student to switch on or off.
 
   const total = course.questionCount;
   const parts = useMemo(() => partCount(total), [total]);
@@ -61,61 +61,6 @@ export function CoursePractice({ school, course }: { school: School; course: Uni
           <p className="relative z-10 mt-3 font-mono text-xs text-hero-muted">
             {total.toLocaleString()} questions in the bank
           </p>
-        </section>
-
-        {/* Answer mode --------------------------------------------------- */}
-        <section className="mt-6">
-          <h3 className="text-sm font-semibold text-on-surface">Answer Mode</h3>
-          <p className="text-xs text-on-surface-variant">
-            Instant answers mark each option the moment you pick. Exam Mode keeps
-            everything hidden until you submit, like the real CBT.
-          </p>
-          <div className="mt-3 grid gap-2 sm:grid-cols-2">
-            <button
-              type="button"
-              onClick={() => setInstant(true)}
-              className={`flex items-start gap-3 rounded-xl border p-3.5 text-left transition ${
-                instant
-                  ? 'border-primary border-[1.6px] bg-selection-blue/25'
-                  : 'border-outline-variant bg-card hover:border-outline'
-              }`}
-            >
-              <span className="material-symbols-outlined mt-0.5 text-[20px] text-accent-emerald">
-                {instant ? 'radio_button_checked' : 'radio_button_unchecked'}
-              </span>
-              <span>
-                <span className="block text-sm font-bold text-on-surface">
-                  Practice Mode (Instant Answers)
-                </span>
-                <span className="mt-0.5 block text-xs text-on-surface-variant">
-                  The correct option turns green as soon as you pick, with the
-                  explanation and Renance AI right below.
-                </span>
-              </span>
-            </button>
-            <button
-              type="button"
-              onClick={() => setInstant(false)}
-              className={`flex items-start gap-3 rounded-xl border p-3.5 text-left transition ${
-                !instant
-                  ? 'border-primary border-[1.6px] bg-selection-blue/25'
-                  : 'border-outline-variant bg-card hover:border-outline'
-              }`}
-            >
-              <span className="material-symbols-outlined mt-0.5 text-[20px] text-primary">
-                {!instant ? 'radio_button_checked' : 'radio_button_unchecked'}
-              </span>
-              <span>
-                <span className="block text-sm font-bold text-on-surface">
-                  Exam Mode (Answers at End)
-                </span>
-                <span className="mt-0.5 block text-xs text-on-surface-variant">
-                  Nothing is revealed until you submit. Your full graded review
-                  unlocks afterwards.
-                </span>
-              </span>
-            </button>
-          </div>
         </section>
 
         {/* Random Mode --------------------------------------------------- */}
@@ -160,7 +105,7 @@ export function CoursePractice({ school, course }: { school: School; course: Uni
               ))}
             </div>
             <Link
-              href={randomHref(bank, Math.min(randomCount, total), timer || undefined, instant)}
+              href={randomHref(bank, Math.min(randomCount, total), timer || undefined)}
               className="mt-4 flex h-12 items-center justify-center gap-2 rounded-[10px] bg-hero-cta text-[15px] font-semibold text-on-hero-cta shadow-md transition-transform active:scale-[0.98]"
             >
               <span className="material-symbols-outlined text-[20px]">shuffle</span>
@@ -182,7 +127,7 @@ export function CoursePractice({ school, course }: { school: School; course: Uni
               return (
                 <li key={p}>
                   <Link
-                    href={partHref(bank, p, total, timer || undefined, instant)}
+                    href={partHref(bank, p, total, timer || undefined)}
                     className="flex items-center gap-3 rounded-xl border border-outline-variant bg-card p-3 transition hover:border-outline hover:shadow-sm"
                   >
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-surface-container text-on-surface">

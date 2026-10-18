@@ -6,7 +6,7 @@
  *   /review?attemptId=<id>      → one graded paper's answer review
  */
 
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { api } from '@/lib/api';
@@ -321,17 +321,50 @@ function ReviewQueue() {
   const [error, setError] = useState<string | null>(null);
   // Clear-all watermark (localStorage): hides the papers on the list at
   // tap time on this device; new papers still appear, server records and
-  // leaderboard entries are untouched.
+  // leaderboard entries are untouched. Graded rows filter by timestamp,
+  // in-progress rows (no submittedAt) by the IDs frozen at clear time.
   const [clearedAt, setClearedAt] = useState(0);
+  const [clearedOpenIds, setClearedOpenIds] = useState<string[]>([]);
   const [confirmClear, setConfirmClear] = useState(false);
+  const confirmTimerRef = useRef<number | null>(null);
   useEffect(() => {
-    setClearedAt(Number(localStorage.getItem('renance.examHistory.clearedAt') || 0));
+    try {
+      const raw = JSON.parse(localStorage.getItem('renance.examHistory.clearedAt') || '0');
+      if (typeof raw === 'number') setClearedAt(raw);
+      else if (raw && typeof raw === 'object') {
+        setClearedAt(Number(raw.at) || 0);
+        setClearedOpenIds(Array.isArray(raw.openIds) ? raw.openIds : []);
+      }
+    } catch {
+      /* corrupt watermark - treat as never cleared */
+    }
+    return () => {
+      if (confirmTimerRef.current) window.clearTimeout(confirmTimerRef.current);
+    };
   }, []);
   const clearAllHistory = () => {
     const now = Date.now();
-    localStorage.setItem('renance.examHistory.clearedAt', String(now));
+    const openIds = (attempts ?? [])
+      .filter((a) => a.status !== 'graded' && a.status !== 'error')
+      .map((a) => a.attemptId);
+    localStorage.setItem(
+      'renance.examHistory.clearedAt',
+      JSON.stringify({ at: now, openIds }),
+    );
     setClearedAt(now);
+    setClearedOpenIds(openIds);
     setConfirmClear(false);
+    if (confirmTimerRef.current) window.clearTimeout(confirmTimerRef.current);
+  };
+  const armConfirm = () => {
+    setConfirmClear(true);
+    // Auto-disarm: a timed confirm window, not an onBlur reset. The old
+    // onBlur broke the second tap on phones (the browser fires blur
+    // mid-gesture and iOS double-tap-zoom eats the tap) and the label
+    // resize made the retry land off the button - the founder saw a
+    // clear button that never cleared.
+    if (confirmTimerRef.current) window.clearTimeout(confirmTimerRef.current);
+    confirmTimerRef.current = window.setTimeout(() => setConfirmClear(false), 3500);
   };
 
   useEffect(() => {
@@ -384,6 +417,7 @@ function ReviewQueue() {
   const visibleGraded = gradedAttempts.filter(
     (a) => !a.submittedAt || !clearedAt || new Date(a.submittedAt).getTime() > clearedAt,
   );
+  const visibleOpen = openAttempts.filter((a) => !clearedOpenIds.includes(a.attemptId));
   const latestGraded = gradedAttempts[0];
 
   return (
@@ -458,21 +492,22 @@ function ReviewQueue() {
             <h2 className="text-xl font-bold tracking-tight text-on-surface">
               Exam History
             </h2>
-            {visibleGraded.length > 0 && (
+            {(visibleGraded.length > 0 || visibleOpen.length > 0) && (
               <button
                 type="button"
-                onClick={() =>
-                  confirmClear ? clearAllHistory() : setConfirmClear(true)
-                }
-                onBlur={() => setConfirmClear(false)}
-                className="rounded-[10px] border border-outline-variant px-3 py-1.5 text-[13px] font-semibold text-on-surface transition hover:bg-surface-container"
+                onClick={() => (confirmClear ? clearAllHistory() : armConfirm())}
+                className={`touch-manipulation whitespace-nowrap rounded-[10px] border px-3 py-1.5 text-[13px] font-semibold transition select-none ${
+                  confirmClear
+                    ? 'border-error bg-error-container/40 text-error'
+                    : 'border-outline-variant text-on-surface hover:bg-surface-container'
+                }`}
               >
                 {confirmClear ? 'Tap again to clear' : 'Clear all Exam History'}
               </button>
             )}
           </div>
           <div className="mt-3 divide-y divide-outline-variant/40">
-            {[...openAttempts, ...visibleGraded]
+            {[...visibleOpen, ...visibleGraded]
               .slice(0, showAllPapers ? undefined : 6)
               .map((a, idx) => {
                 const pct =
@@ -521,7 +556,13 @@ function ReviewQueue() {
                   </Link>
                 );
               })}
-            {gradedAttempts.length + openAttempts.length > 6 && (
+            {visibleGraded.length + visibleOpen.length === 0 && (
+              <p className="py-6 text-center text-[13.5px] text-on-surface-variant">
+                Exam history cleared on this device. New papers show up here as
+                you grade them.
+              </p>
+            )}
+            {visibleGraded.length + visibleOpen.length > 6 && (
               <button
                 type="button"
                 onClick={() => setShowAllPapers((v) => !v)}
@@ -529,7 +570,7 @@ function ReviewQueue() {
               >
                 {showAllPapers
                   ? 'Show fewer'
-                  : `Show all ${gradedAttempts.length + openAttempts.length} papers`}
+                  : `Show all ${visibleGraded.length + visibleOpen.length} papers`}
               </button>
             )}
           </div>

@@ -266,20 +266,14 @@ export function partRange(part: number, total: number): { from: number; to: numb
 }
 
 /** href of a course part, a contiguous Q-chunk, portal-style.
- *  instant=false links the sitting in Exam Mode (answers at the end). */
-export function partHref(bank: string, part: number, total: number, timer?: number, instant = true): string {
+ *  Every course sitting plays as practice with instant answers - the
+ *  founder pulled the answer-mode picker, no Exam Mode links exist. */
+export function partHref(bank: string, part: number, total: number, timer?: number): string {
   const { from, to } = partRange(part, total);
-  return examHref(
-    buildPickCode(bank, { from, count: to - from + 1, timer }),
-    instant === false ? { instant: '0' } : undefined,
-  );
+  return examHref(buildPickCode(bank, { from, count: to - from + 1, timer }));
 }
 
-/** href of a Random Mode sitting (shuffled draw).
- *  instant=false links the sitting in Exam Mode (answers at the end). */
-export function randomHref(bank: string, count: number, timer?: number, instant = true): string {
-  return examHref(
-    buildPickCode(bank, { count, timer }),
-    instant === false ? { instant: '0' } : undefined,
-  );
+/** href of a Random Mode sitting (shuffled draw). */
+export function randomHref(bank: string, count: number, timer?: number): string {
+  return examHref(buildPickCode(bank, { count, timer }));
 }

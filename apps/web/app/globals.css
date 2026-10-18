@@ -26,8 +26,10 @@
   font-weight: 100 700;
   font-display: block;
   /* ?v busts any intermediary that cached a previous subset -
-   bump on every rebuild (2026-10-17: v4, 200 ligatures). */
-  src: url('../public/fonts/material-symbols-outlined.subset.woff2?v=4') format('woff2');
+   bump on every rebuild (2026-10-18: v5, 233 names - adds stop, home,
+   target, assignment, healing, refresh. v4's collector missed
+   multiline icon ternaries, so the quiz bar spelled VISIBILITY). */
+  src: url('../public/fonts/material-symbols-outlined.subset.woff2?v=5') format('woff2');
 }
 @font-face {
   font-family: 'Inter';

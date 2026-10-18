@@ -157,10 +157,6 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
   const [timerOverride, setTimerOverride] = useState<number | null>(
     timerParam && timerParam !== '0' ? Math.max(1, Number(timerParam) || 0) : null,
   );
-  // Instant Answers (Renancecbt parity): default ON for practice papers
-  // (?instant=0 opts out / course desk's Exam Mode); official mocks keep
-  // their full-CBT behaviour regardless.
-  const instantParam = searchParams.get('instant');
 
   const [phase, setPhase] = useState<Phase>('loading');
   const [retry, setRetry] = useState(0);
@@ -216,10 +212,11 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
   // lock, options are changeable on every quiz page. Custom/pick
   // papers compose server-side but play in practice mode.
   const examMode = isMockPaperCode(code);
-  // Instant Answers (Renancecbt parity): practice papers reveal the correct
-  // option + explanation the moment the student picks; mocks stay strict.
-  // The student can flip it mid-sitting from the player's top chip.
-  const [instant, setInstant] = useState<boolean>(instantParam !== '0' && !examMode);
+  // Instant Answers (Renancecbt parity): practice papers ALWAYS reveal the
+  // correct option + explanation the moment the student picks; official
+  // mocks (exam mode) never do. No toggle anywhere - the founder pulled
+  // the eye from every setup: there is nothing to switch on or off.
+  const instant = !examMode;
   const [aiSheetOpen, setAiSheetOpen] = useState(false);
   const [calcOpen, setCalcOpen] = useState(false);
   // The manifest feeds the instructions page's Summary (per-subject
@@ -1175,7 +1172,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
                 <p className="text-[15px] font-bold text-on-surface">Test Mode</p>
                 <p className="text-[12px] text-on-surface-variant">
                   {examMode
-                    ? 'Full test mode: the clock auto-submits at zero, answers stay editable.'
+                    ? 'Full test mode: the clock auto-submits at zero, answers stay editable. No instant answers in the hall - the full graded review unlocks after you submit.'
                     : timerOverride != null
                       ? `Practice mode: ${timerOverride} minutes on the clock, answers stay editable.`
                       : bundle.durationMinutes != null
@@ -1183,31 +1180,12 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
                         : 'Practice mode: untimed, answers stay editable.'}
                 </p>
               </div>
-              {/* Instant Answers toggle: default ON for practice (Renancecbt) */}
-              {!examMode && (
-                <button
-                  type="button"
-                  onClick={() => setInstant((v) => !v)}
-                  className={`flex shrink-0 items-center gap-1.5 rounded-full px-3 py-2 text-[12px] font-bold transition ${
-                    instant
-                      ? 'bg-accent-emerald/15 text-accent-emerald'
-                      : 'bg-surface-container-low text-on-surface-variant'
-                  }`}
-                >
-                  <span className="material-symbols-outlined text-[16px]">
-                    {instant ? 'visibility' : 'visibility_off'}
-                  </span>
-                  {instant ? 'Instant Answers: ON' : 'Instant Answers: OFF'}
-                </button>
-              )}
             </div>
-            {!examMode && (
-              <p className="mt-2 text-[11.5px] leading-snug text-on-surface-variant">
-                {instant
-                  ? 'Each option is marked the moment you pick - green for correct, red for a wrong pick - with the explanation and Renance AI right below.'
-                  : 'Answers stay hidden until you submit; the full graded review unlocks afterwards.'}
-              </p>
-            )}
+            <p className="mt-2 text-[11.5px] leading-snug text-on-surface-variant">
+              {examMode
+                ? 'Strict CBT rules: nothing is revealed while you answer, the sealed key opens with your report.'
+                : 'Each option is marked the moment you pick - green for correct, red for a wrong pick - with the explanation and Renance AI right below.'}
+            </p>
           </div>
 
           <div className="mt-3 rounded-[14px] border border-outline-variant/50 bg-card p-4">
@@ -1692,28 +1670,6 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             <h1 className="min-w-0 flex-1 truncate text-[14.5px] font-semibold text-on-surface">
               {paperTitle}
             </h1>
-            {/* Instant Answers chip - flip the reveal any time mid-sitting */}
-            {!examMode && phase === 'playing' && (
-              <button
-                type="button"
-                onClick={() => setInstant((v) => !v)}
-                title={
-                  instant
-                    ? 'Instant Answers are ON - tap to hide answers until you submit'
-                    : 'Instant Answers are OFF - tap to reveal answers as you pick'
-                }
-                className={`mr-0.5 flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1.5 text-[11px] font-bold transition ${
-                  instant
-                    ? 'bg-accent-emerald/15 text-accent-emerald'
-                    : 'bg-surface-container-low text-on-surface-variant'
-                }`}
-              >
-                <span className="material-symbols-outlined text-[15px]">
-                  {instant ? 'visibility' : 'visibility_off'}
-                </span>
-                <span className="hidden sm:inline">Instant</span>
-              </button>
-            )}
             {/* RHS - clock first, Quit + Submit right behind it, pinned
                 to the screen's right edge */}
             <div className="ml-auto flex shrink-0 items-center gap-2 md:gap-2.5">
