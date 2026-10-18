@@ -129,7 +129,15 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                                   ],
                                 ),
                                 child: Image.asset(
-                                    'assets/brand/renance_mark.png'),
+                                    // Tier-correct mark: the dark navy
+                                    // modular R on the light card, the
+                                    // white variant on the dark card -
+                                    // the dark mark on darkCard is
+                                    // invisible (night-bug fix
+                                    // 2026-10-19).
+                                    context.darkChrome
+                                        ? 'assets/brand/renance_mark_white.png'
+                                        : 'assets/brand/renance_mark.png'),
                               ),
                               SizedBox(height: 18),
                               Text(
