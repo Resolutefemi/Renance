@@ -50,6 +50,16 @@ dependency_overrides:
   # conflicts with flutter_local_notifications, so pin the last
   # archive-4.0.9-compatible image line instead.
   image: 4.10.0
+  # shared_preferences_android 2.5.0 rewrote its Android impl on jnigen,
+  # which drags the jni package's CMake/NDK build into every Gradle run
+  # (a 2.2GB NDK fetch the app's own code never needs). 2.4.28 is the
+  # last Kotlin-only release and sits inside shared_preferences' own
+  # supported range (^2.3.4), so this pin is a supported configuration.
+  shared_preferences_android: 2.4.28
+  # Same jnigen story: path_provider_android 2.3.x drags in jni's CMake
+  # build too. 2.2.23 is the last Kotlin-only release and sits inside
+  # path_provider's supported range (^2.2.5).
+  path_provider_android: 2.2.23
 
 flutter:
   uses-material-design: true
