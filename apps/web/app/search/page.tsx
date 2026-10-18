@@ -23,7 +23,7 @@ const BODIES: Array<[string, string]> = [
 export const metadata: Metadata = {
   title: 'Search',
   description:
-    'Search Renance for practice packs, lessons, flashcard decks and syllabus topics in one place.',
+    'Search Renance for practice packs, lessons and syllabus topics in one place.',
   robots: { index: false },
 };
 

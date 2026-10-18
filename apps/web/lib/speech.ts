@@ -1,5 +1,5 @@
 /**
- * Voice flashcards (ROADMAP #7), browser speech synthesis. Like the
+ * Voice read-aloud helpers, browser speech synthesis. Like the
  * app's on-device TTS: recording-free, no microphone permission, and the
  * browser's local voices work offline. Voice is an enhancement, every
  * call is a safe no-op when the browser has no speech engine.

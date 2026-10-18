@@ -604,7 +604,6 @@ export default function DashboardPage() {
           <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-3">
             <LauncherTile icon="auto_stories" label="Notes" hint="Lesson notes & PDFs" href="/notes" />
             <LauncherTile icon="smart_toy" label="Renance AI" hint="Ask, explain, generate" href="/ai" />
-            <LauncherTile icon="style" label="Flashcards" hint="Spaced-repetition drills" href="/flashcards" />
           </div>
         </section>
 
@@ -999,8 +998,7 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
       )}
 
       {/* University Study / Grow grids, the university desk's OWN icons.
-          2026-10-18 desktop pass: card tiles with hints; Flashcards
-          spans both columns so Grow closes with no orphan cell. */}
+          2026-10-18 desktop pass: card tiles with hints. */}
       <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
         <section className="mt-2">
           <h3 className="text-sm text-on-surface-variant">Study</h3>
@@ -1024,7 +1022,6 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
                 diamonds too. */}
             <LauncherTile icon="leaderboard" label="Leaderboard" hint="Where you rank this week" href="/leaderboard" />
             <LauncherTile icon="event_note" label="Study Plan" hint="Your days to the exam" href="/study-plan" />
-            <LauncherTile icon="psychology" label="Flashcards" hint="Spaced-repetition drills" wide href="/flashcards" />
           </div>
         </section>
       </div>
@@ -1045,7 +1042,7 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
 
 function MoreSheet({ onClose }: { onClose: () => void }) {
   // The rest of the drawer, by design: the daily drivers (Exams, Packs,
-  // Review, Flashcards, Arena, Daily, Leaderboard) live on the home
+  // Review, Arena, Daily, Leaderboard) live on the home
   // grids, so the occasional tools remain in here - plus Downloads and
   // Subjects, which moved off the home desk in the 2026-10-14 evening
   // pass ("reduce the icon size and fill the more page with the rest").

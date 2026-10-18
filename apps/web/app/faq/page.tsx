@@ -14,7 +14,7 @@ import { SITE_URL } from '@/lib/site-url';
 const QA: Array<{ q: string; a: string }> = [
   {
     q: 'What is Renance?',
-    a: 'Renance is the educational app in Nigeria for exam success - built for students: mock CBT exams that are graded server-side, a spaced-repetition review plan built from every paper you take, voice flashcards, exam-focused lessons and a Socratic tutor that coaches you through the questions you got wrong. It works on Android, iOS, Windows, macOS and the web.',
+    a: 'Renance is the educational app in Nigeria for exam success - built for students: mock CBT exams that are graded server-side, a spaced-repetition review plan built from every paper you take, exam-focused lessons and a Socratic tutor that coaches you through the questions you got wrong. It works on Android, iOS, Windows, macOS and the web.',
   },
   {
     q: 'Who builds Renance?',
@@ -22,7 +22,7 @@ const QA: Array<{ q: string; a: string }> = [
   },
   {
     q: 'Is Renance free?',
-    a: 'Yes. Creating an account takes seconds (username and password only), and practising, reviewing, flashcards and lessons are free.',
+    a: 'Yes. Creating an account takes seconds (username and password only), and practising, reviewing and lessons are free.',
   },
   {
     q: 'How does grading work?',
@@ -61,7 +61,7 @@ const QA: Array<{ q: string; a: string }> = [
 export const metadata: Metadata = {
   title: "FAQ - Nigeria's Educational App",
   description:
-    'How Renance works: free server-graded mock exams, spaced repetition, offline study, voice flashcards and the Socratic tutor, for JAMB, WAEC, NECO and tertiary institution students.',
+    'How Renance works: free server-graded mock exams, spaced repetition, offline study, lessons and the Socratic tutor, for JAMB, WAEC, NECO and tertiary institution students.',
   alternates: { canonical: '/faq/' },
   openGraph: {
     title: 'FAQ - how Renance works',

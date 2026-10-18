@@ -1,11 +1,12 @@
 'use client';
 
 /**
- * Search (Stitch search_light on the web). One field, four shelves: packs,
- * lessons, flashcard decks and syllabus topics. The lessons and syllabus
- * trees are baked into the page at build time (static export doctrine);
- * packs and decks arrive from the authed API in the background. All
- * matching runs in the browser, so nothing extra is exposed server-side.
+ * Search (Stitch search_light on the web). One field, three shelves: packs,
+ * lessons and syllabus topics. The lessons and syllabus trees are baked
+ * into the page at build time (static export doctrine); packs arrive from
+ * the authed API in the background. All matching runs in the browser, so
+ * nothing extra is exposed server-side. (Flashcards left the product
+ * entirely, founder directive 2026-10-18.)
  */
 
 import { useEffect, useMemo, useState } from 'react';
@@ -14,7 +15,6 @@ import { useRouter } from 'next/navigation';
 import { getToken } from '@/lib/session';
 import { api } from '@/lib/api';
 import { fetchManifest, type ExamMeta } from '@/lib/exams';
-import { fetchDecks, type FlashcardDeckMeta } from '@/lib/flashcards';
 
 export interface LessonHit {
   slug: string;
@@ -36,7 +36,7 @@ interface Props {
   topics: TopicHit[];
 }
 
-type Shelf = 'packs' | 'lessons' | 'decks' | 'topics';
+type Shelf = 'packs' | 'lessons' | 'topics';
 
 interface Hit {
   shelf: Shelf;
@@ -49,14 +49,12 @@ interface Hit {
 const SHELF_LABEL: Record<Shelf, string> = {
   packs: 'Packs',
   lessons: 'Lessons',
-  decks: 'Flashcards',
   topics: 'Syllabus topics',
 };
 
 const ICON: Record<Shelf, string> = {
   packs: 'description',
   lessons: 'menu_book',
-  decks: 'style',
   topics: 'account_tree',
 };
 
@@ -72,7 +70,6 @@ export default function SearchClient({ lessons, topics }: Props) {
   const router = useRouter();
   const [query, setQuery] = useState('');
   const [packs, setPacks] = useState<ExamMeta[]>([]);
-  const [decks, setDecks] = useState<FlashcardDeckMeta[]>([]);
 
   useEffect(() => {
     if (!getToken()) {
@@ -82,9 +79,6 @@ export default function SearchClient({ lessons, topics }: Props) {
     let alive = true;
     fetchManifest()
       .then((m) => alive && setPacks(m.exams))
-      .catch(() => {});
-    fetchDecks()
-      .then((d) => alive && setDecks(d))
       .catch(() => {});
     return () => {
       alive = false;
@@ -120,16 +114,6 @@ export default function SearchClient({ lessons, topics }: Props) {
         icon: ICON.lessons,
       });
     }
-    for (const d of decks) {
-      if (!matches(query, [d.title, d.subject ?? '', d.body ?? ''])) continue;
-      push({
-        shelf: 'decks',
-        title: d.title,
-        subtitle: `${d.cardCount} cards`,
-        href: '/flashcards',
-        icon: ICON.decks,
-      });
-    }
     for (const t of topics) {
       if (!matches(query, [t.topic, t.subject, t.label])) continue;
       push({
@@ -141,7 +125,7 @@ export default function SearchClient({ lessons, topics }: Props) {
       });
     }
     return out;
-  }, [query, packs, decks, lessons, topics]);
+  }, [query, packs, lessons, topics]);
 
   const total = [...grouped.values()].reduce((n, l) => n + l.length, 0);
 
@@ -159,7 +143,7 @@ export default function SearchClient({ lessons, topics }: Props) {
           <div>
             <h1 className="text-2xl font-bold tracking-tight text-on-surface">Search</h1>
             <p className="text-[13px] text-on-surface-variant">
-              Packs, lessons, flashcard decks and syllabus topics, all in one field.
+              Packs, lessons and syllabus topics, all in one field.
             </p>
           </div>
         </header>
@@ -201,7 +185,7 @@ export default function SearchClient({ lessons, topics }: Props) {
           </div>
         ) : (
           <div className="mt-6 space-y-6">
-            {(['packs', 'lessons', 'decks', 'topics'] as Shelf[]).map((shelf) => {
+            {(['packs', 'lessons', 'topics'] as Shelf[]).map((shelf) => {
               const hits = grouped.get(shelf);
               if (!hits?.length) return null;
               return (

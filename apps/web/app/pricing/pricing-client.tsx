@@ -195,8 +195,8 @@ export default function PricingClient() {
                 fuel: every paper uncapped, every subject.
               </li>
               <li className="text-[13px] leading-snug text-on-surface">
-                <b>1 Month (₦1,500)</b> - thirty days of everything, notes
-                and flashcards included.
+                <b>1 Month (₦1,500)</b> - thirty days of everything, notes and
+                lessons included.
               </li>
               <li className="text-[13px] leading-snug text-on-surface">
                 <b>3 Months (₦2,500)</b> - a term of everything, the best

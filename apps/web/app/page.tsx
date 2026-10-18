@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { OG_IMAGES } from '@/lib/og';
 import Link from 'next/link';
-import { loadLessons, loadManifest } from '@/lib/site-data';
+import { loadManifest } from '@/lib/site-data';
 import { GUIDES } from '@/lib/guides';
 import OpenAppButton from '@/components/open-app-button';
 import LandingDefaultTheme from '@/components/landing-default-theme';
@@ -17,9 +17,13 @@ import {
 } from '@/components/landing-motion';
 
 /**
- * The public landing page. The motto "Your Guide to Academic Success"
- * lives in the navbar now (founder directive 2026-10-18); the hero
- * carries the platform claim and the founder-written description.
+ * The public landing page. Punchy by founder directive 2026-10-18:
+ * the motto "Your Guide to Academic Success" anchors the hero again
+ * (and repeats small in the navbar), the description is the
+ * founder-written platform copy, and the page carries only the
+ * sections that match the product today - no archive panel, no
+ * schools mega-panel, no Lekki/flashcards cards, no lessons preview.
+ * Dark card backgrounds are banned on this page.
  *
  * Built to feel alive: an aurora gradient field drifts behind frosted
  * glass panels, feature tiles lift on hover, stats count in on scroll
@@ -53,32 +57,11 @@ const FEATURES = [
     body: 'Topics you miss enter an SM-2 spaced-repetition queue and come back right when memory starts to fade. Clear the queue, keep the knowledge, no planner to maintain.',
   },
   {
-    icon: 'record_voice_over',
-    tone: 'teal',
-    glow: 'rgba(20,184,166,0.16)',
-    title: 'Voice flashcards',
-    body: 'Decks that read themselves aloud on your phone, so you can drill while walking, cooking or commuting. Leitner-boxed so hard cards come back sooner and easy ones fade away.',
-  },
-  {
-    icon: 'auto_stories',
-    tone: 'emerald',
-    glow: 'rgba(16,185,129,0.16)',
-    title: 'The JAMB novel, question by question',
-    body: 'The Lekki Headmaster ships as an opt-in question set inside every Use of English mock. Switch it on when you are ready, exactly like the hall asks.',
-  },
-  {
     icon: 'battery_saver',
     tone: 'amber',
     glow: 'rgba(245,158,11,0.18)',
     title: 'Fatigue-aware sessions',
     body: 'Renance notices when your answer pace collapses and nudges you to take five, because tired practice teaches the wrong lessons.',
-  },
-  {
-    icon: 'bolt',
-    tone: 'blue',
-    glow: 'rgba(99,102,241,0.16)',
-    title: 'Instant practice, anywhere',
-    body: 'Every past-question bank ships with the site, so a paper opens the moment you tap it. Answers and worked solutions grade right on your device, even on a weak network.',
   },
 ] as const;
 
@@ -100,80 +83,24 @@ const STEPS = [
   },
 ] as const;
 
-// The For Schools story: the same platform, wearing the school badge.
-const SCHOOL_FEATURES = [
-  {
-    icon: 'account_balance',
-    title: 'The Nigerian curriculum, pre-installed',
-    body: 'Primary 1 to 6, JSS 1 to 3 and SSS 1 to 3 with the NERDC subject list land in your portal the moment you register. Senior classes compose their subjects from Core, Art, Science and Commercial tracks.',
-  },
-  {
-    icon: 'auto_stories',
-    title: 'Syllabuses, topics and a real note library',
-    body: 'Every term syllabus carries its topics, weekly scheme of work and notes your teachers can edit. Notes come from classnotes.ng and NERDC-sourced material, credited and kept legal, and schools pour in more any time.',
-  },
-  {
-    icon: 'fact_check',
-    title: 'Attendance with a classroom kiosk',
-    body: 'Mark the daily register in seconds, or project the kiosk and let pupils tap themselves present. Every term rolls up into per-student attendance rates.',
-  },
-  {
-    icon: 'workspace_premium',
-    title: 'Results with positions and PIN-secured checking',
-    body: 'Fill CA1, CA2 and exam scores per subject, finalize, and the portal computes positions, grades and class averages. Each student gets a private 6-digit PIN to check their own result.',
-  },
-  {
-    icon: 'calendar_month',
-    title: 'Weekly timetable, period by period',
-    body: 'Draw each class week on a live grid: subjects per period, assembly and break blocks, bell times included. Edit on the web and the whole school reads the same grid.',
-  },
-  {
-    icon: 'quiz',
-    title: 'An exam question bank per subject per term',
-    body: 'Original, NERDC-aligned questions pour into your school pool in one tap, and publishing a paper draws from it ready to print. Your teachers keep adding school-written questions.',
-  },
-  {
-    icon: 'badge',
-    title: 'Serial-numbered student ID cards',
-    body: 'Issue every student a card with their photo, class and a school-unique serial, then print the sheet on normal paper. A lost card is revoked, not forgotten.',
-  },
-  {
-    icon: 'payments',
-    title: 'Fees and receipts in one ledger',
-    body: 'Price term charges per class or school-wide, record cash, transfer or POS receipts per student, and read the outstanding balance straight off the debtors list.',
-  },
-  {
-    icon: 'co_present',
-    title: 'Teacher accounts with real boundaries',
-    body: 'Create an account per teacher, assign them classes and subjects, and they fill exactly those results cells and teach exactly those notes. Nothing more.',
-  },
-  {
-    icon: 'devices',
-    title: 'Offline app for your staff',
-    body: 'Teachers and management get syllabus, scheme of work and notes on the Renance app, downloadable for offline use in the classroom. Records and results stay on the web.',
-  },
-] as const;
+// The For Schools story lives on /for-schools now (founder directive
+// 2026-10-18: the landing page stays punchy, the deep school tour is
+// one click away in the footer).
 
 function fmt(n: number): string {
   return n.toLocaleString('en-US');
 }
 
+/* The founder's public numbers (2026-10-18 copy directive). The old
+   landing computed its own counts from the bundle manifest and always
+   read stale next to the real catalogue. */
+const PAST_QUESTIONS = 288500;
+const COURSES = 10000;
+const TOPICS = 2000000;
+
 export default function Landing() {
-  const lessons = loadLessons().slice(0, 3);
   const manifest = loadManifest();
   const exams = manifest?.exams ?? [];
-  const totalQuestions = exams.reduce((s, e) => s + (e.questionCount ?? 0), 0);
-  // A sane floor guards the headline: bundle metadata has carried
-  // stray small ints before, and "past questions from 1" is silly.
-  const allYears = exams.flatMap((e) => e.years ?? []).filter((y) => y >= 1970 && y <= 2100);
-  const yearFrom = allYears.length ? Math.min(...allYears) : 1978;
-  const yearTo = allYears.length ? Math.max(...allYears) : new Date().getFullYear();
-  const byBody = (body: string) => exams.filter((e) => e.body === body);
-  const jambExams = byBody('JAMB');
-  const waecExams = byBody('WAEC');
-  const necoExams = byBody('NECO');
-  const uniExams = exams.filter((e) => e.category === 'university');
-  const sum = (list: typeof exams) => list.reduce((s, e) => s + (e.questionCount ?? 0), 0);
 
   /* exam-pack ticker: the biggest packs by question count */
   const tickerItems = [...exams]
@@ -221,8 +148,7 @@ export default function Landing() {
           <div className="lg:grid lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-12 xl:gap-16">
             <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:max-w-none lg:text-left">
               <h1 className="hero-headline hero-enter hero-enter-1 text-on-surface">
-                Renance: Nigeria&apos;s <span className="hero-gradient-text">Biggest</span> Educational
-                and School Management App
+                Renance: Your Guide to <span className="hero-gradient-text">Academic Success</span>
               </h1>
 
               <p className="hero-enter hero-enter-2 mx-auto mt-4 max-w-xl text-[15px] font-medium leading-relaxed text-on-surface sm:text-lg lg:mx-0">
@@ -235,28 +161,6 @@ export default function Landing() {
                 courses and over 2,000,000+ topics. For schools, it automates administration with
                 attendance, results, ID cards, and lecture notes all in one place.
               </p>
-              <ul className="hero-enter hero-enter-2 mx-auto mt-4 flex max-w-xl flex-col gap-2 text-left sm:gap-2.5 lg:mx-0">
-                {[
-                  {
-                    icon: 'fact_check',
-                    text: 'CBT mocks the server grades - sealed answer keys, honest scores in seconds.',
-                  },
-                  {
-                    icon: 'event_repeat',
-                    text: 'A smart review queue - topics you miss come back before you forget them.',
-                  },
-                ].map((b) => (
-                  <li
-                    key={b.icon}
-                    className="flex items-start gap-2.5 text-[13.5px] leading-snug text-on-surface-variant sm:text-[15px]"
-                  >
-                    <span className="material-symbols-outlined mt-0.5 text-[17px] text-primary" aria-hidden>
-                      {b.icon}
-                    </span>
-                    {b.text}
-                  </li>
-                ))}
-              </ul>
 
               <div className="hero-enter hero-enter-3 mt-6 flex flex-wrap items-center justify-center gap-3.5 lg:justify-start">
                 <OpenAppButton className="hero-cta-primary" />
@@ -338,7 +242,7 @@ export default function Landing() {
                       <span className="material-symbols-outlined text-[15px] text-emerald-500">verified</span>
                       Server-graded · sealed answer keys
                     </span>
-                    <span className="font-mono text-[11px] text-on-surface-variant">1978-{yearTo}</span>
+                    <span className="font-mono text-[11px] text-on-surface-variant">1978-2025</span>
                   </div>
                 </div>
                 {/* one anchored chip, the only survivor of the old orbit */}
@@ -358,7 +262,7 @@ export default function Landing() {
           {/* the feature row - every breakpoint, one calm grid directly
               under the hero copy and CTAs. The old desktop orbit cards
               lived here no longer (2026-10-18 desktop pass). */}
-          <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:grid-cols-4">
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:grid-cols-3">
             <FloatingCard
               tone="blue"
               icon="fact_check"
@@ -372,15 +276,9 @@ export default function Landing() {
               body="Missed topics return"
             />
             <FloatingCard
-              tone="amber"
-              icon="record_voice_over"
-              title="Voice flashcards"
-              body="Drill hands-free"
-            />
-            <FloatingCard
               tone="blue"
               icon="workspace_premium"
-              title={`${fmt(totalQuestions)}+ questions`}
+              title={`${fmt(PAST_QUESTIONS)}+ questions`}
               body="Real papers"
             />
           </div>
@@ -396,28 +294,28 @@ export default function Landing() {
       </section>
 
       {/* ============================================================ */}
-      {/* STATS BAND                                                   */}
+      {/* STATS BAND - the founder's public numbers                     */}
       {/* ============================================================ */}
       <section className="relative z-10 mx-auto -mt-2 w-full max-w-6xl px-4 sm:px-6">
         <Reveal>
           <dl className="grid grid-cols-2 gap-3.5 sm:gap-4 lg:grid-cols-4">
             <div className="stat-glass glass-hover">
               <dd className="stat-value">
-                <CountUp to={totalQuestions} suffix="+" />
+                <CountUp to={PAST_QUESTIONS} suffix="+" />
               </dd>
               <dt className="stat-label">Past questions</dt>
             </div>
             <div className="stat-glass glass-hover">
               <dd className="stat-value">
-                <CountUp to={exams.length} />
+                <CountUp to={COURSES} suffix="+" />
               </dd>
-              <dt className="stat-label">Exam packs</dt>
+              <dt className="stat-label">Courses</dt>
             </div>
             <div className="stat-glass glass-hover">
               <dd className="stat-value">
-                {yearFrom}-{yearTo}
+                <CountUp to={TOPICS} suffix="+" />
               </dd>
-              <dt className="stat-label">Years covered</dt>
+              <dt className="stat-label">Topics</dt>
             </div>
             <div className="stat-glass glass-hover">
               <dd className="stat-value text-[clamp(1.2rem,2.6vw,1.7rem)] leading-tight">
@@ -426,164 +324,6 @@ export default function Landing() {
               <dt className="stat-label">Exam bodies</dt>
             </div>
           </dl>
-        </Reveal>
-      </section>
-
-      {/* ============================================================ */}
-      {/* COVERAGE - the archive, by body                              */}
-      {/* ============================================================ */}
-      {/* pb-20 pairs with the for-schools section's own pb-20: the two
-          dark panels below are full-bleed neighbours and used to touch
-          edge to edge (founder screenshot 2026-10-04). */}
-      <section className="mx-auto w-full max-w-6xl px-4 pb-20 pt-20 sm:px-6">
-        <Reveal>
-          <div className="cbt-panel p-6 sm:p-10">
-            <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
-              <div>
-                <span
-                  className="eyebrow"
-                  style={{
-                    color: '#7db2ff',
-                    background: 'rgba(125,178,255,0.1)',
-                    borderColor: 'rgba(125,178,255,0.22)',
-                  }}
-                >
-                  The archive
-                </span>
-                <h2 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl">
-                  The archive is the product
-                </h2>
-                <p className="mt-2 max-w-xl text-sm leading-relaxed text-white/70">
-                  Every pack carries the year it was sat, the options, the sealed answer key and the
-                  worked explanation, harvested, cleaned and organised so you practise the real
-                  thing, not a paraphrase.
-                </p>
-              </div>
-              <Link
-                href="/subjects/"
-                className="shrink-0 rounded-full bg-white px-5 py-2.5 text-sm font-extrabold text-[#111c2d] shadow-[0_4px_0_0_rgba(0,0,0,0.35)] transition hover:bg-white/90 active:translate-y-[2px] active:shadow-[0_2px_0_0_rgba(0,0,0,0.35)]"
-              >
-                See full subject coverage →
-              </Link>
-            </div>
-            <div className="mt-8 grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
-              {[
-                {
-                  body: 'JAMB (UTME)',
-                  count: sum(jambExams),
-                  packs: jambExams.length,
-                  note: '1978-2025 · all subjects · novel included',
-                },
-                {
-                  body: 'WAEC',
-                  count: sum(waecExams),
-                  packs: waecExams.length,
-                  note: 'objectives + theory with model answers',
-                },
-                {
-                  body: 'NECO',
-                  count: sum(necoExams),
-                  packs: necoExams.length,
-                  note: 'objectives + theory packs',
-                },
-                {
-                  body: 'Tertiary Institution',
-                  count: sum(uniExams),
-                  packs: uniExams.length,
-                  note: 'per-school course banks, more landing',
-                },
-              ].map((b) => (
-                <div
-                  key={b.body}
-                  className="rounded-2xl bg-white/[0.06] p-5 ring-1 ring-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.07),0_3px_0_0_rgba(0,0,0,0.30)] transition hover:bg-white/[0.1]"
-                >
-                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/60">
-                    {b.body}
-                  </p>
-                  <p className="mt-2 text-2xl font-bold text-white">{fmt(b.count)}</p>
-                  <p className="mt-0.5 text-xs text-white/60">
-                    questions · {b.packs} packs · {b.note}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Reveal>
-      </section>
-
-      {/* ============================================================ */}
-      {/* FOR SCHOOLS                                                   */}
-      {/* ============================================================ */}
-      <section id="for-schools" className="mx-auto w-full max-w-6xl px-4 pb-20 sm:px-6">
-        <Reveal>
-          <div className="cbt-panel p-6 sm:p-10">
-            <div className="flex flex-col items-start justify-between gap-5 lg:flex-row lg:items-end">
-              <div className="max-w-2xl">
-                <span
-                  className="eyebrow"
-                  style={{
-                    color: '#ffffff',
-                    background: 'rgba(255,255,255,0.08)',
-                    borderColor: 'rgba(255,255,255,0.2)',
-                  }}
-                >
-                  New · For Schools
-                </span>
-                <h2 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-4xl">
-                  Run your school on the same platform
-                </h2>
-                <p className="mt-3 text-[15px] leading-relaxed text-white/75">
-                  Renance is no longer only for candidates. Register your school, install the
-                  Nigerian curriculum in one tap, enroll your students with full details, hand your
-                  teachers their classes, and manage syllabuses, notes, attendance and results from
-                  one desk. Students check their results themselves with a private PIN.
-                </p>
-              </div>
-              <div className="flex shrink-0 flex-wrap gap-3">
-                <Link
-                  href="/register/?audience=school"
-                  className="rounded-full bg-white px-6 py-3 text-sm font-extrabold text-[#111c2d] shadow-[0_4px_0_0_rgba(0,0,0,0.35)] transition hover:bg-white/90 active:translate-y-[2px] active:shadow-[0_2px_0_0_rgba(0,0,0,0.35)]"
-                >
-                  Register your school
-                </Link>
-                <Link
-                  href="/school/check/"
-                  className="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white shadow-[0_4px_0_0_rgba(0,0,0,0.28)] transition hover:bg-white/10 active:translate-y-[2px] active:shadow-[0_2px_0_0_rgba(0,0,0,0.28)]"
-                >
-                  Check a result PIN
-                </Link>
-                <Link
-                  href="/for-schools/"
-                  className="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white shadow-[0_4px_0_0_rgba(0,0,0,0.28)] transition hover:bg-white/10 active:translate-y-[2px] active:shadow-[0_2px_0_0_rgba(0,0,0,0.28)]"
-                >
-                  Explore Renance for Schools
-                </Link>
-              </div>
-            </div>
-
-            <div className="mt-9 grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
-              {SCHOOL_FEATURES.map((f) => (
-                <div
-                  key={f.title}
-                  className="rounded-2xl bg-white/[0.06] p-5 ring-1 ring-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.07),0_3px_0_0_rgba(0,0,0,0.30)] transition hover:bg-white/[0.1]"
-                >
-                  <span
-                    className="chip-icon material-symbols-outlined h-10 w-10 rounded-xl bg-white text-[#111c2d] shadow-[0_3px_0_0_rgba(0,0,0,0.35)]"
-                    aria-hidden
-                  >
-                    {f.icon}
-                  </span>
-                  <h3 className="mt-4 text-[15px] font-bold text-white">{f.title}</h3>
-                  <p className="mt-2 text-[13px] leading-relaxed text-white/70">{f.body}</p>
-                </div>
-              ))}
-            </div>
-
-            <p className="mt-7 border-t border-white/10 pt-5 text-xs leading-relaxed text-white/50">
-              The school portal is strict black and white on the web. Management runs records and
-              results there; staff carry syllabuses, schemes of work and notes offline in the app.
-            </p>
-          </div>
         </Reveal>
       </section>
 
@@ -652,138 +392,6 @@ export default function Landing() {
       </section>
 
       {/* ============================================================ */}
-      {/* EXAM-DAY FIDELITY                                            */}
-      {/* ============================================================ */}
-      <section className="mx-auto w-full max-w-6xl px-4 pb-20 sm:px-6">
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-          <Reveal>
-            <div className="cbt-panel h-full p-6 sm:p-8">
-              <div className="relative">
-                <span
-                  className="feature-icon material-symbols-outlined"
-                  style={{ background: 'linear-gradient(135deg,#3b82f6,#6366f1)' }}
-                >
-                  desktop_windows
-                </span>
-                <h3 className="mt-4 text-lg font-bold tracking-tight text-white">
-                  A CBT hall on every screen
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/75">
-                  The player mirrors the real JAMB software: a live question map, flag-and-return,
-                  answers that lock in exam mode, a hall-approved calculator, auto-submit at zero,
-                  and a keyboard-first desktop layout (A-F to pick, arrows to move) so laptop
-                  candidates train the way they will sit.
-                </p>
-                <ul className="mt-5 space-y-2.5">
-                  {[
-                    'Pause & resume with an honest clock',
-                    'Topic breakdown after every paper',
-                    'Worked explanations on every review',
-                  ].map((t) => (
-                    <li key={t} className="cbt-check">
-                      <span className="material-symbols-outlined text-[17px] text-emerald-400">
-                        check_circle
-                      </span>
-                      {t}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  <span className="cbt-score-pill">⏱ 59:47 left</span>
-                  <span className="cbt-score-pill">Q17 / 60</span>
-                  <span className="cbt-score-pill" style={{ color: '#6ee7b7' }}>
-                    ▲ 87%
-                  </span>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal delay={100}>
-            <div className="cbt-panel h-full p-6 sm:p-8">
-              <div className="relative">
-                <span
-                  className="feature-icon material-symbols-outlined"
-                  style={{ background: 'linear-gradient(135deg,#f59e0b,#f97316)' }}
-                >
-                  auto_stories
-                </span>
-                <h3 className="mt-4 text-lg font-bold tracking-tight text-white">
-                  Reading “The Lekki Headmaster”?
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/75">
-                  JAMB&apos;s recommended text ships inside Renance as a proper question set: fifty
-                  questions across all twelve chapters, each with the sealed answer and a worked
-                  explanation. Switch it on in Mock Setup when you are ready; leave it off while you
-                  are still reading.
-                </p>
-                <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.2em] text-white/50">
-                  Kabir Alabi Garba · UTME Use of English
-                </p>
-                <div className="mt-6 grid grid-cols-4 gap-2">
-                  {['Ch 1-3', 'Ch 4-6', 'Ch 7-9', 'Ch 10-12'].map((c) => (
-                    <span
-                      key={c}
-                      className="rounded-xl bg-white/[0.06] px-2 py-2.5 text-center text-[11px] font-semibold text-white/75 ring-1 ring-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.07),0_3px_0_0_rgba(0,0,0,0.30)]"
-                    >
-                      {c}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ============================================================ */}
-      {/* LESSONS PREVIEW                                              */}
-      {/* ============================================================ */}
-      {lessons.length > 0 && (
-        <section className="mx-auto w-full max-w-6xl px-4 pb-20 sm:px-6">
-          <Reveal className="flex flex-wrap items-end justify-between gap-3">
-            <div>
-              <span className="eyebrow">Free library</span>
-              <h2 className="mt-4 text-2xl font-bold tracking-tight text-on-surface sm:text-4xl">
-                Start reading free
-              </h2>
-            </div>
-            <Link
-              href="/lessons/"
-              className="text-sm font-semibold text-on-surface-variant hover:text-on-surface"
-            >
-              All lessons →
-            </Link>
-          </Reveal>
-          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {lessons.map((les, i) => (
-              <Reveal key={les.slug} delay={i * 80}>
-                <Link
-                  href={`/lessons/${les.slug}/`}
-                  className="glass glass-hover group flex h-full flex-col rounded-2xl p-5 no-underline"
-                >
-                  {les.subject && (
-                    <span className="w-fit rounded-full bg-selection-blue px-2.5 py-0.5 text-[11px] font-medium text-on-surface">
-                      {les.subject}
-                    </span>
-                  )}
-                  <h3 className="mt-3 text-[15px] font-semibold leading-snug text-on-surface group-hover:underline">
-                    {les.title}
-                  </h3>
-                  <p className="mt-2 line-clamp-2 text-[13px] leading-relaxed text-on-surface-variant">
-                    {les.summary}
-                  </p>
-                  <span className="mt-auto pt-3 font-mono text-xs text-on-surface-variant">
-                    {les.minutes} min read →
-                  </span>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* ============================================================ */}
       {/* GUIDES - the explainers AI and search engines can cite        */}
       {/* ============================================================ */}
       <section className="mx-auto w-full max-w-6xl px-4 pb-20 sm:px-6">
@@ -831,24 +439,21 @@ export default function Landing() {
           <div className="final-cta">
             <div className="final-cta-glow" />
             <div className="relative">
-              <RenanceMark size={56} inverse />
-              <h2 className="mx-auto mt-5 max-w-2xl text-2xl font-bold tracking-tight text-white sm:text-4xl">
+              <RenanceMark size={56} />
+              <h2 className="mx-auto mt-5 max-w-2xl text-2xl font-bold tracking-tight text-on-surface sm:text-4xl">
                 Your competition started revising yesterday.
               </h2>
-              <p className="mx-auto mt-3 max-w-lg text-[15px] leading-relaxed text-white/75">
+              <p className="mx-auto mt-3 max-w-lg text-[15px] leading-relaxed text-on-surface-variant">
                 Create a free account and sit your first server-graded paper in the next two
-                minutes, {fmt(totalQuestions)}+ past questions are waiting.
+                minutes, {fmt(PAST_QUESTIONS)}+ past questions are waiting.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5">
-                <Link
-                  href="/register/"
-                  className="hero-cta-secondary !border-white/25 !bg-white/10 !text-white hover:!bg-white/20"
-                >
+                <Link href="/register/" className="hero-cta-secondary">
                   Create free account
                 </Link>
-                <OpenAppButton className="hero-cta-primary hero-cta-white !bg-white !bg-none !text-[#111c2d]" />
+                <OpenAppButton className="hero-cta-primary" />
               </div>
-              <p className="mt-5 font-mono text-xs text-white/50">
+              <p className="mt-5 font-mono text-xs text-on-surface-variant">
                 Android · iOS · Windows · macOS · Web
               </p>
             </div>
@@ -954,11 +559,6 @@ export default function Landing() {
               <li>
                 <Link href="/lessons/" className="hover:underline">
                   Lessons library
-                </Link>
-              </li>
-              <li>
-                <Link href="/flashcards/" className="hover:underline">
-                  Flashcards
                 </Link>
               </li>
               <li>

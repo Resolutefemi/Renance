@@ -18,11 +18,9 @@ import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
 import { api } from '@/lib/api';
 import { getToken } from '@/lib/session';
-import { fetchCardProgress } from '@/lib/flashcards';
 import type { SyllabusTree } from '@/lib/syllabus';
 import type { ReviewSummary } from '@/lib/review';
 import {
-  cardsDueToday,
   deriveStudyPlanValues,
   type FatigueState,
   type StudyPlanValues,
@@ -96,10 +94,9 @@ export default function StudyPlanPage() {
       if (!alive || !me) return;
       setFocusSlug(bodySlugOf(me));
       setFocusLabel(focusLabelOf(me));
-      const [review, fatigue, progress, tree] = await Promise.all([
+      const [review, fatigue, tree] = await Promise.all([
         api<ReviewSummary>('/me/review').catch(() => null),
         api<FatigueState>('/me/fatigue').catch(() => null),
-        fetchCardProgress().catch(() => null),
         api<SyllabusTree>(`/syllabus/${bodySlugOf(me)}`).catch(() => null),
       ]);
       if (!alive) return;
@@ -107,7 +104,6 @@ export default function StudyPlanPage() {
         deriveStudyPlanValues({
           signedIn: true,
           dueTopics: review ? review.stats.due : null,
-          cardsDue: cardsDueToday(progress),
           weakestSubject: weakestSubjectOf(tree),
           fatigue,
         }),
@@ -136,15 +132,6 @@ export default function StudyPlanPage() {
       meta: `${plan.reviewMinutes} min`,
       focus: 'Medium focus',
       href: '/review',
-    },
-    {
-      icon: 'mic',
-      iconBg: 'bg-amber-tint',
-      iconColor: 'text-accent-amber',
-      title: 'Voice Flashcards',
-      meta: `${plan.cardsMinutes} min`,
-      focus: 'Low focus',
-      href: '/flashcards',
     },
     {
       icon: 'history_edu',
