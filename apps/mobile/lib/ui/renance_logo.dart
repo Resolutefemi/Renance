@@ -3,15 +3,19 @@
 /// custom animation of the logomark, pulsing and shifting opacities during
 /// fetching/processing (Bybit-style brand transition).
 ///
-/// The mark itself is the official Stitch brand sheet extraction
-/// (the founder's mark, R cut out with a transparent background by
-/// scripts/make_brand.py). Two tones ship: the ink navy original for light
-/// surfaces and a white cut for dark containers (`onDark: true`).
+/// The mark itself is the 3D FLAT keycap (founder 2026-10-18 parity
+/// pass, the web's renance-mark-svg): solid brand face, extruded darker
+/// bottom edge, glassy inner top highlight. It reads the LIVE seed so a
+/// student's appearance colour re-tints it, exactly like the website's
+/// favicon; dark containers keep the white cut (`onDark: true`).
 library;
 
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+
+import 'tactile.dart';
+import 'theme.dart';
 
 class RenanceMark extends StatefulWidget {
   const RenanceMark({
@@ -71,14 +75,13 @@ class _RenanceMarkState extends State<RenanceMark>
                 ),
               Transform.scale(
                 scale: scale,
-                child: Image.asset(
-                  onDarkSurface
-                      ? 'assets/brand/renance_mark_white.png'
-                      : 'assets/brand/renance_mark.png',
-                  width: widget.size * 0.86,
-                  height: widget.size * 0.86,
-                  filterQuality: FilterQuality.medium,
-                  semanticLabel: 'Renance',
+                child: RenanceKeycap(
+                  size: widget.size * 0.86,
+                  // The white cut on dark surfaces keeps the old
+                  // contract; otherwise the keycap reads the live seed
+                  // (the web's appearance-adaptive mark).
+                  face: onDarkSurface ? Colors.white : null,
+                  onPrimary: onDarkSurface ? RenanceColors.mixedHero : null,
                 ),
               ),
             ],
@@ -98,7 +101,7 @@ class _OrbitPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     canvas.scale(size.width / 64, size.height / 64);
-    const Color emerald = Color(0xFF10B981);
+    const Color emerald = Color(0xFF00CD9C);
     final Rect orbit = Rect.fromCircle(
       center: const Offset(32, 32),
       radius: 30,
@@ -147,7 +150,7 @@ class LogoActivityIndicator extends StatelessWidget {
             child: Text(
               label!,
               style: const TextStyle(
-                color: Color(0xFF45464D),
+                color: Color(0xFF777777),
                 fontSize: 14,
               ),
             ),

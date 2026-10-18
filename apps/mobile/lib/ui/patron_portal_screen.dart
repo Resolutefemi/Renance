@@ -182,7 +182,7 @@ class PatronPortalScreen extends StatelessWidget {
                             '"Thanks to the WAEC fee support, I can finally take my final exams this..."',
                         status: 'Funded',
                         gradient: <Color>[
-                          Color(0xFFD8E3FB),
+                          Color(0xFFEBEBEF),
                           Color(0xFFB9CFF4),
                         ],
                       ),
@@ -193,7 +193,7 @@ class PatronPortalScreen extends StatelessWidget {
                             '"The monthly data grant keeps my access online..."',
                         status: 'In Progress',
                         gradient: <Color>[
-                          Color(0xFFE7EEFF),
+                          Color(0xFFF7F7F7),
                           Color(0xFFCBD9F6),
                         ],
                       ),

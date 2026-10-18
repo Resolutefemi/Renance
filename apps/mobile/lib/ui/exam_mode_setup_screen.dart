@@ -894,7 +894,7 @@ class _BeginBar extends StatelessWidget {
           colors: <Color>[
             Color(0x00F9F9FF),
             Color(0xE6F9F9FF),
-            Color(0xFFF9F9FF),
+            Color(0xFFFFFFFF),
           ],
           stops: <double>[0.0, 0.4, 1.0],
         ),

@@ -387,7 +387,7 @@ class _OptionTile extends StatelessWidget {
     if (wrong) {
       border = context.isDarkTier
           ? const Color(0xFF8F4444)
-          : const Color(0xFFDC2626);
+          : const Color(0xFFFF4B4B);
       bg = context.isDarkTier
           ? const Color(0xFF331719)
           : const Color(0xFFFEF2F2);
@@ -439,7 +439,7 @@ class _OptionTile extends StatelessWidget {
                   size: 18,
                   color: context.isDarkTier
                       ? const Color(0xFFF87171)
-                      : const Color(0xFFDC2626)),
+                      : const Color(0xFFFF4B4B)),
           ],
         ),
       ),

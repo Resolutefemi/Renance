@@ -23,6 +23,7 @@ import 'exam_report_screen.dart';
 import 'fatigue_nudge.dart';
 import 'review_screen.dart' show ReviewDetailScreen;
 import 'renance_logo.dart';
+import 'tactile.dart';
 import 'theme.dart';
 import 'pacing_ui.dart';
 import 'premium_screen.dart';
@@ -895,26 +896,56 @@ class _ExamHeader extends StatelessWidget {
           ),
           const SizedBox(width: 8),
           // Submit - right behind the clock, where the thumb lands.
-          InkWell(
-            onTap: () => _Player.maybeSubmit(context, controller),
-            borderRadius: BorderRadius.circular(999),
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(999),
-                color: context.inverseChip,
-              ),
-              child: Text(
-                'Submit',
-                style: TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w700,
-                  color: context.onInverseChip,
-                ),
-              ),
-            ),
-          ),
+          _SubmitKey(onTap: () => _Player.maybeSubmit(context, controller)),
         ],
+      ),
+    );
+  }
+}
+
+/// The Submit key - the brand pill with the 3px extruded edge that
+/// sinks on press (the tactile push-button physics).
+class _SubmitKey extends StatefulWidget {
+  const _SubmitKey({required this.onTap});
+
+  final VoidCallback onTap;
+
+  @override
+  State<_SubmitKey> createState() => _SubmitKeyState();
+}
+
+class _SubmitKeyState extends State<_SubmitKey> {
+  bool _pressing = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTapDown: (_) => setState(() => _pressing = true),
+      onTapCancel: () => setState(() => _pressing = false),
+      onTapUp: (_) => setState(() => _pressing = false),
+      onTap: widget.onTap,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 90),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(999),
+          color: context.inverseChip,
+          boxShadow: [
+            BoxShadow(
+              color: mixTowardBlack(context.inverseChip, 0.68),
+              offset: Offset(0, _pressing ? 1 : 3),
+              blurRadius: 0,
+            ),
+          ],
+        ),
+        child: Text(
+          'Submit',
+          style: TextStyle(
+            fontSize: 13,
+            fontWeight: FontWeight.w800,
+            color: context.onInverseChip,
+          ),
+        ),
       ),
     );
   }
@@ -1650,10 +1681,11 @@ class _MiniNumber extends StatelessWidget {
 /// Option row: letter chip + stem; selected = selection-blue card with
 /// the primary ring and the primary letter chip (Stitch selectOption
 /// state machine, the student's colour when a seed is live).
-/// Option row - the school app's radio-circle grammar: the circle
-/// radio (hollow → ink-filled when picked), the letter, the text. The
-/// student's colour rides the ring whenever a seed is live.
-class _OptionTile extends StatelessWidget {
+/// Option row - the web's CBT key-card grammar (3D tactile pass): the
+/// squircle letter badge, the 2px border, the 3px extruded ledge and the
+/// macaw wash when picked (the Supreme option-selected recipe). Pressing
+/// sinks the card like a physical key.
+class _OptionTile extends StatefulWidget {
   const _OptionTile({
     required this.letter,
     required this.text,
@@ -1667,53 +1699,72 @@ class _OptionTile extends StatelessWidget {
   final VoidCallback onTap;
 
   @override
+  State<_OptionTile> createState() => _OptionTileState();
+}
+
+class _OptionTileState extends State<_OptionTile> {
+  bool _pressing = false;
+
+  @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(12),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+    final bool dark = context.darkChrome;
+    final Color face = widget.selected
+        ? context.selectionBlue
+        : context.card;
+    final Color outline = widget.selected
+        ? RenanceColors.macaw
+        : (dark ? RenanceColors.darkOutline : RenanceColors.swan);
+    final Color ledge = mixTowardBlack(outline, dark ? 0.48 : 0.62);
+    final double sink = _pressing ? 1 : 3;
+
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTapDown: (_) => setState(() => _pressing = true),
+      onTapCancel: () => setState(() => _pressing = false),
+      onTapUp: (_) => setState(() => _pressing = false),
+      onTap: widget.onTap,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 90),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 13),
         decoration: BoxDecoration(
-          color: selected
-              ? context.selectionBlue.withValues(alpha: 0.45)
-              : context.card,
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: selected ? context.primary : context.outlineVariant,
-            width: selected ? 1.6 : 1,
-          ),
+          color: face,
+          borderRadius: RenanceRadius.field,
+          border: Border.all(color: outline, width: 2),
+          boxShadow: [
+            BoxShadow(color: ledge, offset: Offset(0, sink), blurRadius: 0),
+          ],
         ),
         child: Row(
           children: <Widget>[
-            // The radio circle.
+            // The squircle letter badge.
             Container(
-              width: 24,
-              height: 24,
+              width: 30,
+              height: 30,
+              alignment: Alignment.center,
               decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: selected ? context.primary : context.card,
-                border: Border.all(
-                  color: selected ? context.primary : context.outlineDark,
-                  width: selected ? 7 : 1.6,
+                color: widget.selected
+                    ? RenanceColors.macaw
+                    : context.inverseChip,
+                borderRadius: BorderRadius.circular(9),
+              ),
+              child: Text(
+                widget.letter,
+                style: TextStyle(
+                  fontFamily: 'Nunito',
+                  fontSize: 14,
+                  fontWeight: FontWeight.w800,
+                  color: widget.selected
+                      ? Colors.white
+                      : context.onInverseChip,
                 ),
               ),
             ),
             const SizedBox(width: 14),
-            Text(
-              letter,
-              style: TextStyle(
-                fontFamily: 'Inter',
-                fontSize: 15.5,
-                fontWeight: FontWeight.w800,
-                color: context.error.withValues(alpha: 0.9),
-              ),
-            ),
-            const SizedBox(width: 16),
             Expanded(
               child: QuestionText(
-                text,
+                widget.text,
                 style: RenanceText.bodyBase.copyWith(
-                  fontWeight: selected ? FontWeight.w600 : FontWeight.w400,
+                  fontWeight: widget.selected ? FontWeight.w700 : FontWeight.w600,
                   fontSize: 15,
                   height: 1.4,
                 ),

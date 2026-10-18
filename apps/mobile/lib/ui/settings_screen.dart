@@ -817,13 +817,13 @@ class _HueRailState extends State<_HueRail> {
   }
 
   static const List<Color> _rainbow = <Color>[
-    Color(0xFFFF0000),
+    Color(0xFFFF4B4B),
     Color(0xFFFFFF00),
     Color(0xFF00FF00),
     Color(0xFF00FFFF),
     Color(0xFF0000FF),
     Color(0xFFFF00FF),
-    Color(0xFFFF0000),
+    Color(0xFFFF4B4B),
   ];
 
   @override

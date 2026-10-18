@@ -425,7 +425,7 @@ class _ArenaLobbyScreenState extends State<ArenaLobbyScreen> {
                     width: 8,
                     height: 8,
                     decoration: const BoxDecoration(
-                      color: Color(0xFF10B981),
+                      color: Color(0xFF00CD9C),
                       shape: BoxShape.circle,
                     ),
                   ),

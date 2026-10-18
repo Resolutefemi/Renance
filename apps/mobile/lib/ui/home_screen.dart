@@ -27,7 +27,6 @@ import 'leaderboard_screen.dart';
 import 'study_resources_screen.dart';
 import 'study_setup_screen.dart';
 import 'study_plan_screen.dart';
-import 'flashcards_screen.dart';
 import 'lessons_screen.dart';
 import 'ai_screen.dart';
 import 'ai_sparkle.dart';
@@ -1163,17 +1162,6 @@ class _LauncherTab extends StatelessWidget {
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
                       builder: (_) => const LessonsScreen(),
-                    ),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: LauncherTile(
-                  icon: Icons.style,
-                  label: 'Flashcards',
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (_) => const FlashcardsScreen(),
                     ),
                   ),
                 ),

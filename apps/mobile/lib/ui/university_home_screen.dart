@@ -13,7 +13,6 @@ import 'package:provider/provider.dart';
 import '../controllers.dart';
 import '../storage.dart';
 import 'arena_lobby_screen.dart';
-import 'flashcards_screen.dart';
 import 'gamification_hub_screen.dart';
 import 'gpa_screen.dart';
 import 'home_screen.dart' show LauncherTile, openDailyQuiz;
@@ -208,16 +207,6 @@ class UniversityHomeTab extends StatelessWidget {
                   badge: student.dueTopics > 0 ? '${student.dueTopics}' : null,
                   badgeColor: RenanceColors.emerald,
                   onTap: () => onGoTab(2),
-                ),
-              ),
-              Expanded(
-                child: LauncherTile(
-                  icon: Icons.style,
-                  label: 'Cards',
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                        builder: (_) => const FlashcardsScreen()),
-                  ),
                 ),
               ),
               Expanded(

@@ -1,11 +1,24 @@
-/// Renance design system, the Stitch export as Flutter tokens.
+/// Renance design system - the 3D FLAT / TACTILE (Duolingo-style) tokens.
 ///
-/// Light tier comes from the founder's auth mockups and every Stitch
-/// screen's tailwind config: blue-tinted M3 surfaces (#f9f9ff / #e7eeff),
-/// ink #111c2d, black primary buttons, white cards, 12px rounding.
-/// Dark tier tokens mirror the Stitch `dark-surface` palette, and the
-/// full type scale (display / section-title / stat-number / body /
-/// caption / label-mono) is lifted 1:1 from the export's fontSize map.
+/// 2026-10-18 parity pass: this is the Dart twin of the web's
+/// `apps/web/app/globals.css` @theme block (commit 5d9d184a "3D Flat /
+/// Tactile (Duolingo-style) restyle across the whole web app" and every
+/// founder pass since). The stock tiers now mirror the website exactly:
+///
+///  * Light  - clean white faces (#ffffff), swan/polar neutral wells,
+///             warm eel/wolf ink, VIVID green primary #10da11 (founder
+///             2026-10-15: the old #58cc02 was "too light"), cardinal
+///             errors, macaw blue accents, Nunito letterforms.
+///  * Mixed  - light body, dark #111c2d hero chrome (exam player).
+///  * Dark   - FIXED near-black canvas (#0f1216 page, #131720 cards -
+///             founder 2026-10-15 evening: the seed repaints the accent,
+///             never the dark canvas), same vivid green, black ink on
+///             green CTAs (#0f240f).
+///
+/// Token names match the web one-to-one (treefrog, macaw, cardinal,
+/// swan, polar, iguana...) so the two surfaces stay auditable against
+/// each other. The type scale keeps the Renance sizes but rides Nunito,
+/// the web's app typeface.
 library;
 
 import 'package:flutter/material.dart';
@@ -18,61 +31,132 @@ export 'seed_palette.dart'
     show SeedPalette, kSeedPresets, hexToHsl, hslToHex, normalizeHex;
 
 class RenanceColors {
-  // Light tier
-  static const Color background = Color(0xFFF9F9FF);
-  static const Color surfaceContainer = Color(0xFFE7EEFF);
+  // -- Light tier (web :root / @theme) ----------------------------------
+  // surfaces - clean high-contrast white/gray (Duolingo snow/polar/swan)
+  static const Color background = Color(0xFFFFFFFF);
+  static const Color surfaceContainer = Color(0xFFF0F0F3);
   static const Color surfaceContainerLowest = Color(0xFFFFFFFF);
-  static const Color surfaceContainerLow = Color(0xFFF0F3FF);
-  static const Color surfaceContainerHigh = Color(0xFFDEE8FF);
-  static const Color surfaceVariant = Color(0xFFD8E3FB);
-  static const Color selectionBlue = Color(0xFFD0E1FB);
+  static const Color surfaceContainerLow = Color(0xFFF7F7F7); // polar
+  static const Color surfaceContainerHigh = Color(0xFFEBEBEF);
+  static const Color surfaceContainerHighest = Color(0xFFE5E5E8);
+  static const Color surfaceVariant = Color(0xFFEBEBEF);
   static const Color card = Color(0xFFFFFFFF);
-  static const Color ink = Color(0xFF111C2D);
-  static const Color textSecondary = Color(0xFF45464D);
-  static const Color secondaryContainer = Color(0xFFD8DFF9);
-  static const Color secondary = Color(0xFF565E74);
-  static const Color outline = Color(0xFF7E7576);
-  static const Color outlineDark = Color(0xFF76777D);
-  static const Color outlineLight = Color(0xFFC6C6CD);
-  static const Color outlineVariant = Color(0xFFCFC4C5);
-  static const Color error = Color(0xFFBA1A1A);
-  static const Color errorContainer = Color(0xFFFFDAD6);
 
-  // Accents
-  static const Color emerald = Color(0xFF10B981);
-  static const Color amber = Color(0xFFF59E0B);
+  // on-colors / ink - warm neutral Duolingo eel/wolf
+  static const Color ink = Color(0xFF3C3C46); // on-background / on-surface
+  static const Color eel = Color(0xFF4B4B4B);
+  static const Color textSecondary = Color(0xFF777777); // wolf
+  static const Color secondaryContainer = Color(0xFFF1F1F4);
+  static const Color secondary = Color(0xFF6F6F7A);
 
-  // Dark tier (Stitch full-dark screens)
-  static const Color darkPage = Color(0xFF111C2D); // full-dark page ground
-  static const Color darkSurface = Color(0xFF131B2E); // dark chrome container
-  static const Color darkSurfaceLow = Color(0xFF17223B); // wells / tracks
-  static const Color darkCard = Color(0xFF1C2638); // elevated dark card
-  static const Color darkTextPrimary = Color(0xFFF0F3FF);
-  static const Color darkTextSecondary = Color(0xFFA2AAB8);
-  static const Color darkMuted = Color(0xFF8A94A6);
-  static const Color darkOutline = Color(0xFF3A4661);
+  // outlines - swan light borders, hare strong borders
+  static const Color outline = Color(0xFFB0B0B8);
+  static const Color outlineDark = Color(0xFFAFAFAF); // hare
+  static const Color outlineLight = Color(0xFFE5E5E5); // swan
+  static const Color outlineVariant = Color(0xFFE5E5E5);
+
+  // errors - cardinal red
+  static const Color error = Color(0xFFFF4B4B); // cardinal
+  static const Color cardinalDark = Color(0xFFEA2B2B);
+  static const Color errorContainer = Color(0xFFFFEBEB);
+
+  // selection - the Supreme option-selected macaw wash
+  static const Color selectionBlue = Color(0xFFDDF4FF); // macaw-light
+
+  // -- Duolingo saturated accents (3D Flat / Tactile palette) ----------
+  static const Color primary = Color(0xFF10DA11); // brand vivid green
+  static const Color primaryDeep = Color(0xFF0F240F); // black ink on green
+  static const Color treefrog = Color(0xFF58CC02);
+  static const Color treefrogDark = Color(0xFF58A700);
+  static const Color owl = Color(0xFF89E219);
+  static const Color seafoam = Color(0xFF00CD9C);
+  static const Color macaw = Color(0xFF1CB0F6);
+  static const Color macawDark = Color(0xFF1899D6);
+  static const Color macawLight = Color(0xFFDDF4FF);
+  static const Color macawRing = Color(0xFF84D8FF);
+  static const Color bee = Color(0xFFFFC800);
+  static const Color beeDark = Color(0xFFE6AC00);
+  static const Color fox = Color(0xFFFF9600);
+  static const Color cardinal = Color(0xFFFF4B4B);
+  static const Color beetle = Color(0xFFCE82FF);
+  static const Color humpback = Color(0xFF2B70C9);
+  static const Color wolf = Color(0xFF777777);
+  static const Color hare = Color(0xFFAFAFAF);
+  static const Color swan = Color(0xFFE5E5E5);
+  static const Color polar = Color(0xFFF7F7F7);
+  static const Color iguana = Color(0xFFD7FFB8);
+
+  // Legacy accent names kept for the screens that still reference them,
+  // re-tuned to the Duolingo family (seafoam success, fox warning).
+  static const Color emerald = seafoam;
+  static const Color amber = fox;
+
+  // -- Dark tier (web [data-theme='dark'], the FIXED near-black canvas) -
+  // Founder directive 2026-10-15 (evening): every dark surface is a fixed
+  // near-black; the seed/primary repaints the ACCENT only.
+  static const Color darkPage = Color(0xFF0F1216); // full-dark page ground
+  static const Color darkSurface = Color(0xFF131720); // dark card / chrome
+  static const Color darkSurfaceLow = Color(0xFF11151C); // wells / tracks
+  static const Color darkCard = Color(0xFF131720); // elevated dark card
+  static const Color darkCardHigh = Color(0xFF191F28);
+  static const Color darkCardHighest = Color(0xFF1D242E);
+  static const Color darkBright = Color(0xFF161B22);
+  static const Color darkDim = Color(0xFF0A0D11);
+  static const Color darkLowest = Color(0xFF0C0F14);
+  static const Color darkContainer = Color(0xFF151A22);
+  static const Color darkTextPrimary = Color(0xFFF0F3F6);
+  static const Color darkTextSecondary = Color(0xFFA6ADBA);
+  static const Color darkMuted = Color(0xFF8B93A3);
+  static const Color darkOutline = Color(0xFF363D49);
   static const Color darkError = Color(0xFFFFB4AB);
   static const Color darkErrorContainer = Color(0xFF93000A);
   static const Color onDarkErrorContainer = Color(0xFFFFDAD6);
+  static const Color darkHero = Color(0xFF131720);
+  static const Color darkHeroTrack = Color(0xFF191F28);
+  static const Color darkSelection = Color(0xFF1A212B);
+  static const Color darkAccentInk = Color(0xFF242C38);
+  static const Color darkInkDeep = Color(0xFF161C26);
+
+  // Mixed tier hero chrome (light body, dark hero - exam player).
+  static const Color mixedHero = Color(0xFF111C2D);
+  static const Color mixedOnHero = Color(0xFFF0F3FF);
+  static const Color mixedHeroMuted = Color(0xFFB9C2D4);
+  static const Color mixedHeroTrack = Color(0xFF11151C);
 }
 
-/// The full-dark ThemeData (Settings → Appearance → Dark).
+/// Squircle radius scale, the web's moderated supreme.git notch
+/// (globals.css --radius-sm..3xl). Cards land on 16, heroes on 20.
+class RenanceRadius {
+  static const double sm = 8;
+  static const double md = 10;
+  static const double lg = 11;
+  static const double xl = 14;
+  static const double xxl = 16;
+  static const double xxxl = 20;
+  static const BorderRadius card = BorderRadius.all(Radius.circular(xxl));
+  static const BorderRadius hero = BorderRadius.all(Radius.circular(xxxl));
+  static const BorderRadius field = BorderRadius.all(Radius.circular(md + 2));
+  static const BorderRadius button = BorderRadius.all(Radius.circular(xl - 2));
+  static const BorderRadius chip = BorderRadius.all(Radius.circular(999));
+}
+
+/// The full-dark ThemeData (Settings -> Appearance -> Dark).
 /// [seed] re-tints the theme-level colors (buttons, fields, app bars)
 /// to match the Chrome-style seed palette the screens resolve through
-/// the context getters.
+/// the context getters. The canvas stays the fixed near-black ramp.
 ThemeData buildRenanceDarkTheme({SeedPalette? seed}) {
   const scheme = ColorScheme.dark(
-    primary: Colors.white,
-    onPrimary: RenanceColors.darkPage,
-    primaryContainer: RenanceColors.darkSurface,
+    primary: RenanceColors.primary,
+    onPrimary: RenanceColors.primaryDeep,
+    primaryContainer: RenanceColors.darkContainer,
     onPrimaryContainer: RenanceColors.darkTextPrimary,
     secondary: RenanceColors.darkTextSecondary,
     onSecondary: RenanceColors.darkTextPrimary,
-    secondaryContainer: RenanceColors.darkSurface,
+    secondaryContainer: RenanceColors.darkSurfaceLow,
     onSecondaryContainer: RenanceColors.darkTextPrimary,
     surface: RenanceColors.darkPage,
     onSurface: RenanceColors.darkTextPrimary,
-    surfaceContainerHighest: RenanceColors.darkCard,
+    surfaceContainerHighest: RenanceColors.darkCardHigh,
     onSurfaceVariant: RenanceColors.darkTextSecondary,
     outline: RenanceColors.darkTextSecondary,
     outlineVariant: RenanceColors.darkOutline,
@@ -95,15 +179,11 @@ ThemeData buildRenanceDarkTheme({SeedPalette? seed}) {
     scaffoldBackgroundColor: seed?.pageBg ?? RenanceColors.darkPage,
   );
 
-  // The light tier applies the brand text theme; the dark tier must do
-  // the same or every theme-styled Text falls back to the platform font
-  // (Roboto / SF) and the Inter type scale silently disappears in dark.
-  // Founder directive (2026-10-02): the text colours are SEED-AWARE -
-  // a live seed re-tints every theme-styled text (the "Renance"
-  // wordmark included) instead of staying stock ink.
+  // Nunito carries the tactile UI on both tiers; the seed-aware text
+  // colours keep working (founder 2026-10-02).
   return base.copyWith(
     textTheme: base.textTheme.apply(
-      fontFamily: 'Inter',
+      fontFamily: 'Nunito',
       bodyColor: seed?.ink ?? RenanceColors.darkTextPrimary,
       displayColor: seed?.ink ?? RenanceColors.darkTextPrimary,
     ),
@@ -112,10 +192,10 @@ ThemeData buildRenanceDarkTheme({SeedPalette? seed}) {
       surfaceTintColor: Colors.transparent,
       elevation: 0,
       centerTitle: false,
-      titleTextStyle: TextStyle(
-        color: seed?.ink ?? RenanceColors.darkTextPrimary,
+      titleTextStyle: const TextStyle(
+        color: RenanceColors.darkTextPrimary,
         fontSize: 18,
-        fontWeight: FontWeight.w600,
+        fontWeight: FontWeight.w700,
       ),
       systemOverlayStyle: SystemUiOverlayStyle.light,
     ),
@@ -124,80 +204,87 @@ ThemeData buildRenanceDarkTheme({SeedPalette? seed}) {
       surfaceTintColor: Colors.transparent,
       elevation: 0,
       margin: EdgeInsets.zero,
+      // The tactile card treatment: white (here near-black) face with a
+      // 2px outline - the web's .glass recipe on the dark ramp.
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(12)),
+        borderRadius: RenanceRadius.card,
+        side: BorderSide(color: RenanceColors.darkOutline, width: 2),
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: seed?.card ?? RenanceColors.darkCard,
+      fillColor: seed?.card ?? RenanceColors.darkSurfaceLow,
       hintStyle: const TextStyle(color: RenanceColors.darkTextSecondary),
       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: RenanceRadius.field,
         borderSide: BorderSide.none,
       ),
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
-        borderSide: BorderSide.none,
+        borderRadius: RenanceRadius.field,
+        borderSide: const BorderSide(color: RenanceColors.darkOutline, width: 2),
       ),
-      focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
-        borderSide: const BorderSide(
-            color: RenanceColors.darkTextPrimary, width: 1.4),
+      focusedBorder: const OutlineInputBorder(
+        borderRadius: RenanceRadius.field,
+        borderSide: BorderSide(color: RenanceColors.macaw, width: 2),
       ),
       errorBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
-        borderSide: const BorderSide(color: RenanceColors.darkError, width: 1.2),
+        borderRadius: RenanceRadius.field,
+        borderSide: const BorderSide(color: RenanceColors.darkError, width: 2),
       ),
     ),
     filledButtonTheme: FilledButtonThemeData(
       style: FilledButton.styleFrom(
-        backgroundColor: seed?.primary ?? Colors.white,
-        foregroundColor: seed?.onPrimary ?? RenanceColors.darkPage,
+        backgroundColor: seed?.primary ?? RenanceColors.primary,
+        foregroundColor: seed?.onPrimary ?? RenanceColors.primaryDeep,
         minimumSize: const Size.fromHeight(52),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        shape: const RoundedRectangleBorder(borderRadius: RenanceRadius.button),
         // styleFrom textStyle replaces labelLarge wholesale, so the family
         // must be restated or the CTA label falls back to the platform font.
         textStyle: const TextStyle(
-            fontFamily: 'Inter', fontSize: 15, fontWeight: FontWeight.w600),
+            fontFamily: 'Nunito', fontSize: 15, fontWeight: FontWeight.w800),
       ),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         foregroundColor: RenanceColors.darkTextPrimary,
-        side: const BorderSide(color: RenanceColors.darkOutline),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        side: const BorderSide(color: RenanceColors.darkOutline, width: 2),
+        shape: const RoundedRectangleBorder(borderRadius: RenanceRadius.button),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        textStyle: const TextStyle(
+            fontFamily: 'Nunito', fontSize: 15, fontWeight: FontWeight.w700),
       ),
     ),
-    chipTheme: ChipThemeData(
-      backgroundColor: RenanceColors.darkSurface,
+    chipTheme: const ChipThemeData(
+      backgroundColor: RenanceColors.darkSurfaceLow,
       selectedColor: RenanceColors.darkCard,
-      side: const BorderSide(color: RenanceColors.darkOutline),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      labelStyle: const TextStyle(
-          fontFamily: 'Inter',
+      side: BorderSide(color: RenanceColors.darkOutline),
+      shape: RoundedRectangleBorder(borderRadius: RenanceRadius.chip),
+      labelStyle: TextStyle(
+          fontFamily: 'Nunito',
           color: RenanceColors.darkTextPrimary,
-          fontSize: 13),
+          fontSize: 13,
+          fontWeight: FontWeight.w700),
     ),
-    snackBarTheme: const SnackBarThemeData(
-      backgroundColor: RenanceColors.darkTextPrimary,
-      contentTextStyle: TextStyle(color: RenanceColors.darkSurface),
+    snackBarTheme: SnackBarThemeData(
+      backgroundColor: seed?.primary ?? RenanceColors.primary,
+      contentTextStyle: TextStyle(color: seed?.onPrimary ?? RenanceColors.primaryDeep),
       behavior: SnackBarBehavior.floating,
+      shape: const RoundedRectangleBorder(borderRadius: RenanceRadius.button),
     ),
   );
 }
 
 // ---------------------------------------------------------------------------
-// Stitch type scale, 1:1 from the export's fontSize config.
-// display-lg 28/36 -2% w700 · display-md 24/32 -1% w700 · section-title
-// 18/24 -1% w600 · stat-number 24/28 -2% w700 · body-medium 15/22 w600 ·
-// body-base 15/22 w400 · caption 13/18 w400 · label-mono 13/18 w500 (mono).
+// Renance type scale - the web sizes, now riding Nunito (the 3D tactile
+// typeface). display-lg 28/36 -2% w800 · display-md 24/32 -1% w800 ·
+// section-title 18/24 -1% w700 · stat-number 24/28 -2% w800 ·
+// body-medium 15/22 w700 · body-base 15/22 w400 · caption 13/18 w400 ·
+// label-mono 13/18 w500 (mono).
 // ---------------------------------------------------------------------------
 
 class RenanceText {
-  static const String _fontFamily = 'Inter';
+  static const String _fontFamily = 'Nunito';
   static const String _monoFamily = 'JetBrainsMono';
 
   static const TextStyle displayLg = TextStyle(
@@ -205,34 +292,34 @@ class RenanceText {
     fontSize: 28,
     height: 36 / 28,
     letterSpacing: -0.02 * 28,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.w800,
   );
   static const TextStyle displayMd = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 24,
     height: 32 / 24,
     letterSpacing: -0.01 * 24,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.w800,
   );
   static const TextStyle sectionTitle = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 18,
     height: 24 / 18,
     letterSpacing: -0.01 * 18,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w700,
   );
   static const TextStyle statNumber = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 24,
     height: 28 / 24,
     letterSpacing: -0.02 * 24,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.w800,
   );
   static const TextStyle bodyMedium = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 15,
     height: 22 / 15,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w700,
   );
   static const TextStyle bodyBase = TextStyle(
     fontFamily: _fontFamily,
@@ -265,30 +352,30 @@ class RenanceText {
     fontSize: 11,
     height: 16 / 11,
     letterSpacing: 1.2,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w600,
   );
 }
 
 ThemeData buildRenanceTheme({SeedPalette? seed}) {
   final scheme = ColorScheme.light(
-    primary: Colors.black,
+    primary: RenanceColors.primary,
     onPrimary: Colors.white,
     primaryContainer: const Color(0xFF131B2E),
-    onPrimaryContainer: Colors.white,
-    secondary: const Color(0xFF505F76),
+    onPrimaryContainer: const Color(0xFF7C839B),
+    secondary: RenanceColors.secondary,
     onSecondary: Colors.white,
     secondaryContainer: RenanceColors.secondaryContainer,
-    onSecondaryContainer: RenanceColors.ink,
+    onSecondaryContainer: const Color(0xFF55555F),
     surface: RenanceColors.background,
     onSurface: RenanceColors.ink,
     surfaceContainerHighest: RenanceColors.surfaceContainerHigh,
     onSurfaceVariant: RenanceColors.textSecondary,
-    outline: RenanceColors.outlineDark,
-    outlineVariant: RenanceColors.outlineLight,
+    outline: RenanceColors.outline,
+    outlineVariant: RenanceColors.outlineVariant,
     error: RenanceColors.error,
     onError: Colors.white,
     errorContainer: RenanceColors.errorContainer,
-    onErrorContainer: const Color(0xFF93000A),
+    onErrorContainer: const Color(0xFFB81F1F),
   );
 
   final base = ThemeData(
@@ -307,10 +394,10 @@ ThemeData buildRenanceTheme({SeedPalette? seed}) {
 
   return base.copyWith(
     textTheme: base.textTheme.apply(
-      fontFamily: 'Inter',
+      fontFamily: 'Nunito',
       // Founder directive (2026-10-02): seed-aware text colours - a live
-      // seed re-tints every theme-styled text (the "Renance" wordmark
-      // included) instead of staying stock ink.
+      // seed re-tints every theme-styled text (the "Renance"
+      // wordmark included) instead of staying stock ink.
       bodyColor: seed?.ink ?? RenanceColors.ink,
       displayColor: seed?.ink ?? RenanceColors.ink,
     ),
@@ -322,79 +409,89 @@ ThemeData buildRenanceTheme({SeedPalette? seed}) {
       titleTextStyle: TextStyle(
         color: seed?.ink ?? RenanceColors.ink,
         fontSize: 18,
-        fontWeight: FontWeight.w600,
+        fontWeight: FontWeight.w700,
       ),
       systemOverlayStyle: SystemUiOverlayStyle.dark,
     ),
     cardTheme: const CardThemeData(
       color: RenanceColors.card,
       surfaceTintColor: Colors.transparent,
-      elevation: 1,
-      shadowColor: Color(0x141C2D34),
+      elevation: 0,
       margin: EdgeInsets.zero,
+      // The tactile card treatment (web .glass): white face, 2px swan
+      // outline, hard 4px ledge via TactileCard where it matters.
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(12)),
+        borderRadius: RenanceRadius.card,
+        side: BorderSide(color: RenanceColors.swan, width: 2),
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: seed?.cardLow ?? RenanceColors.surfaceContainerLow,
-      hintStyle: const TextStyle(color: RenanceColors.outline),
+      fillColor: seed?.card ?? RenanceColors.polar,
+      hintStyle: const TextStyle(color: RenanceColors.hare),
       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: RenanceRadius.field,
         borderSide: BorderSide.none,
       ),
+      // Duolingo inputs: 2px swan rest border, macaw focus ring.
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
-        borderSide: BorderSide.none,
+        borderRadius: RenanceRadius.field,
+        borderSide: const BorderSide(color: RenanceColors.swan, width: 2),
       ),
-      focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
-        borderSide: const BorderSide(color: RenanceColors.ink, width: 1.4),
+      focusedBorder: const OutlineInputBorder(
+        borderRadius: RenanceRadius.field,
+        borderSide: BorderSide(color: RenanceColors.macaw, width: 2),
       ),
       errorBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
-        borderSide: const BorderSide(color: RenanceColors.error, width: 1.2),
+        borderRadius: RenanceRadius.field,
+        borderSide: const BorderSide(color: RenanceColors.cardinal, width: 2),
       ),
     ),
     filledButtonTheme: FilledButtonThemeData(
       style: FilledButton.styleFrom(
-        backgroundColor: seed?.primary ?? Colors.black,
+        backgroundColor: seed?.primary ?? RenanceColors.primary,
         foregroundColor: seed?.onPrimary ?? Colors.white,
         minimumSize: const Size.fromHeight(52),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        shape: const RoundedRectangleBorder(borderRadius: RenanceRadius.button),
         textStyle: const TextStyle(
-            fontFamily: 'Inter', fontSize: 15, fontWeight: FontWeight.w600),
+            fontFamily: 'Nunito', fontSize: 15, fontWeight: FontWeight.w800),
       ),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         foregroundColor: seed?.ink ?? RenanceColors.ink,
-        side: BorderSide(color: seed?.outlineVariant ?? RenanceColors.outlineLight),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        side: BorderSide(
+            color: seed?.outlineVariant ?? RenanceColors.swan, width: 2),
+        shape: const RoundedRectangleBorder(borderRadius: RenanceRadius.button),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        textStyle: const TextStyle(
+            fontFamily: 'Nunito', fontSize: 15, fontWeight: FontWeight.w700),
       ),
     ),
     chipTheme: ChipThemeData(
-      backgroundColor: seed?.cardLow ?? RenanceColors.surfaceContainerLow,
+      backgroundColor: seed?.cardLow ?? RenanceColors.polar,
       selectedColor: seed?.selectionBlue ?? RenanceColors.selectionBlue,
-      side: BorderSide(color: seed?.outlineVariant ?? RenanceColors.outlineLight),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      side: BorderSide(color: seed?.outlineVariant ?? RenanceColors.swan),
+      shape: const RoundedRectangleBorder(borderRadius: RenanceRadius.chip),
       labelStyle: TextStyle(
-          fontFamily: 'Inter', color: seed?.ink ?? RenanceColors.ink, fontSize: 13),
+          fontFamily: 'Nunito',
+          color: seed?.ink ?? RenanceColors.ink,
+          fontSize: 13,
+          fontWeight: FontWeight.w700),
     ),
     snackBarTheme: SnackBarThemeData(
       backgroundColor: seed?.accentInk ?? RenanceColors.ink,
       contentTextStyle: TextStyle(color: seed?.onPrimary ?? Colors.white),
       behavior: SnackBarBehavior.floating,
+      shape: const RoundedRectangleBorder(borderRadius: RenanceRadius.button),
     ),
   );
 }
 
-/// The three Appearance options from the Stitch settings screen.
-/// Mixed = light surfaces with the dark containers the player/results
-/// screens use (chrome-level dark, light body).
+/// The three Appearance options. Mixed = light surfaces with the dark
+/// containers the player/results screens use (chrome-level dark, light
+/// body) - exactly the web's [data-theme='mixed'].
 enum RenanceThemeMode { light, mixed, dark }
 
 /// Persists the Appearance choice + the Chrome-style seed colour and
@@ -423,7 +520,7 @@ class ThemeController extends ChangeNotifier {
 
   RenanceThemeMode get mode => _mode;
 
-  /// The stored seed hex (null = the classic ink & paper look).
+  /// The stored seed hex (null = the classic look).
   String? get seed => _seed;
 
   /// The palette for the CURRENT tier, or null when no seed is set.
@@ -501,12 +598,13 @@ class RenanceModeScope extends InheritedWidget {
 
 /// Theme-aware design tokens. Every screen resolves colors through
 /// these getters so the Light, Mixed and Full-dark tiers all fall out
-/// of the same markup:
+/// of the same markup - now mirroring the web's 3D tactile palette:
 ///
-///  * Light  - #F9F9FF page, white cards, ink text.
-///  * Mixed  - light page, dark #111C2D hero/chrome (the exam player
+///  * Light  - white page, white cards, eel/wolf ink, green #10da11 CTA.
+///  * Mixed  - light page, dark #111C2D hero chrome (the exam player
 ///             treatment), light cards everywhere else.
-///  * Dark   - #111C2D page throughout, #1C2638 cards, #F0F3FF text.
+///  * Dark   - fixed near-black #0F1216 page, #131720 cards, #F0F3F6
+///             text, green CTA with #0F240F ink.
 extension RenanceScheme on BuildContext {
   RenanceThemeMode get renanceMode => RenanceModeScope.of(this);
   SeedPalette? get _pal => RenanceModeScope.maybeOf(this)?.palette;
@@ -516,10 +614,12 @@ extension RenanceScheme on BuildContext {
   /// Surfaces that carry the dark chrome in mixed AND full dark.
   bool get darkChrome => isDarkTier || isMixedTier;
 
-  /// The student's colour when a seed is live: black in stock light,
-  /// white in stock dark, the tinted primary everywhere when seeded.
-  Color get primary => _pal?.primary ?? (isDarkTier ? RenanceColors.darkTextPrimary : Colors.black);
-  Color get onPrimary => _pal?.onPrimary ?? (isDarkTier ? RenanceColors.darkPage : Colors.white);
+  /// The student's colour when a seed is live: the vivid brand green in
+  /// stock tiers (the web's bg-primary), on both light and dark.
+  Color get primary => _pal?.primary ?? RenanceColors.primary;
+  Color get onPrimary =>
+      _pal?.onPrimary ??
+      (isDarkTier ? RenanceColors.primaryDeep : Colors.white);
 
   // Page ground ------------------------------------------------------
   Color get pageBg => _pal?.pageBg ??
@@ -529,49 +629,57 @@ extension RenanceScheme on BuildContext {
   Color get card => _pal?.card ??
       (isDarkTier ? RenanceColors.darkCard : RenanceColors.card);
   Color get cardLowest => _pal?.cardLowest ?? (isDarkTier
-      ? RenanceColors.darkCard
+      ? RenanceColors.darkLowest
       : RenanceColors.surfaceContainerLowest);
   Color get cardLow => _pal?.cardLow ?? (isDarkTier
-      ? RenanceColors.darkSurface
+      ? RenanceColors.darkSurfaceLow
       : RenanceColors.surfaceContainerLow);
   Color get cardHigh => _pal?.cardHigh ?? (isDarkTier
-      ? RenanceColors.darkSurfaceLow
+      ? RenanceColors.darkCardHigh
       : RenanceColors.surfaceContainerHigh);
   Color get cardHighest => _pal?.cardHighest ?? (isDarkTier
-      ? RenanceColors.darkSurfaceLow
-      : RenanceColors.surfaceVariant);
+      ? RenanceColors.darkCardHighest
+      : RenanceColors.surfaceContainerHighest);
   Color get surfaceContainer => _pal?.surfaceContainer ?? (isDarkTier
-      ? RenanceColors.darkCard
+      ? RenanceColors.darkContainer
       : RenanceColors.surfaceContainer);
   Color get surfaceVariant => _pal?.surfaceVariant ?? (isDarkTier
-      ? RenanceColors.darkSurfaceLow
+      ? RenanceColors.darkCardHigh
       : RenanceColors.surfaceVariant);
   Color get selectionBlue => _pal?.selectionBlue ?? (isDarkTier
-      ? RenanceColors.darkSurfaceLow
+      ? RenanceColors.darkSelection
       : RenanceColors.selectionBlue);
   Color get secondaryContainer => _pal?.secondaryContainer ?? (isDarkTier
-      ? RenanceColors.darkSurface
+      ? RenanceColors.darkSurfaceLow
       : RenanceColors.secondaryContainer);
 
-  // Hero / chrome: the big dark surface (same ink ground in every tier,
-  // per the light, mixed and full-dark home designs).
-  Color get heroGround => RenanceColors.darkPage;
+  // Hero / chrome ------------------------------------------------------
+  // The web's --color-hero: a WHITE band in light (the "dark cards
+  // banned" pass), the #111C2D chrome in mixed, #131720 in full dark.
+  Color get heroGround => _pal?.heroCard ?? (isDarkTier
+      ? RenanceColors.darkHero
+      : (isMixedTier ? RenanceColors.mixedHero : RenanceColors.background));
   Color get heroCard => _pal?.heroCard ?? (isDarkTier
       ? RenanceColors.darkCard
-      : (isMixedTier ? RenanceColors.darkPage : RenanceColors.card));
+      : (isMixedTier ? RenanceColors.mixedHero : RenanceColors.card));
   Color get onHeroCard => _pal?.onHeroCard ?? (isDarkTier
       ? RenanceColors.darkTextPrimary
-      : (isMixedTier ? Colors.white : RenanceColors.ink));
+      : (isMixedTier ? RenanceColors.mixedOnHero : RenanceColors.ink));
   Color get heroMuted => _pal?.heroMuted ?? (isDarkTier
       ? RenanceColors.darkTextSecondary
-      : (isMixedTier ? const Color(0xFFB9C2D4) : RenanceColors.textSecondary));
-  Color get heroTrack => _pal?.heroTrack ?? (isDarkTier || isMixedTier
-      ? RenanceColors.darkSurfaceLow
-      : RenanceColors.surfaceVariant);
+      : (isMixedTier ? RenanceColors.mixedHeroMuted : RenanceColors.textSecondary));
+  Color get heroTrack => _pal?.heroTrack ?? (isDarkTier
+      ? RenanceColors.darkHeroTrack
+      : (isMixedTier ? RenanceColors.mixedHeroTrack : RenanceColors.surfaceVariant));
 
-  /// The hero progress fill / solid hero CTA - the web's bg-hero-cta.
-  Color get heroCta => _pal?.heroCta ?? (darkChrome ? Colors.white : Colors.black);
-  Color get onHeroCta => _pal?.onHeroCta ?? (darkChrome ? RenanceColors.ink : Colors.white);
+  /// The hero progress fill / solid hero CTA - the web's bg-hero-cta:
+  /// the vivid green (seed when live) with black ink in full dark.
+  Color get heroCta => _pal?.heroCta ?? (isMixedTier
+      ? RenanceColors.primary
+      : RenanceColors.primary);
+  Color get onHeroCta => _pal?.onHeroCta ?? (isDarkTier
+      ? RenanceColors.primaryDeep
+      : (isMixedTier ? Colors.white : Colors.white));
 
   // Ink / text ---------------------------------------------------------
   Color get ink => _pal?.ink ??
@@ -583,7 +691,7 @@ extension RenanceScheme on BuildContext {
       ? RenanceColors.darkTextSecondary
       : RenanceColors.secondary);
   Color get textMuted => _pal?.textMuted ??
-      (isDarkTier ? RenanceColors.darkMuted : RenanceColors.outline);
+      (isDarkTier ? RenanceColors.darkMuted : RenanceColors.hare);
 
   // Outlines -----------------------------------------------------------
   Color get outline => _pal?.outline ??
@@ -606,17 +714,13 @@ extension RenanceScheme on BuildContext {
       : RenanceColors.errorContainer;
   Color get onErrorContainer => isDarkTier
       ? const Color(0xFFFFDAD6)
-      : RenanceColors.onDarkErrorContainer;
+      : const Color(0xFFB81F1F);
 
   // The "ink bubble" treatment (level bubbles, Lvl chips, solid CTAs,
-  // the R tile and the Tutor tile): the web paints these bg-primary
-  // text-on-primary, so a live seed lights them up in the student's
-  // colour - founder directive (2026-10-02): every black element in the
-  // app follows the theme colour. Stock tiers keep the classic ink
-  // (light) / white (dark) look - and the dark tier's chip becomes
-  // visible where the old ink-on-ink fell away.
-  Color get inverseChip => _pal?.primary ??
-      (isDarkTier ? RenanceColors.darkTextPrimary : RenanceColors.ink);
-  Color get onInverseChip => _pal?.onPrimary ??
-      (isDarkTier ? RenanceColors.darkPage : Colors.white);
+  // the R tile and the Tutor tile): the web paints these bg-primary -
+  // the vivid green (seed when live) - so a live seed lights them up
+  // in the student's colour. Stock tiers keep the brand green; the
+  // label ink is black-on-green in full dark (founder 2026-10-15).
+  Color get inverseChip => _pal?.primary ?? RenanceColors.primary;
+  Color get onInverseChip => _pal?.onPrimary ?? onPrimary;
 }

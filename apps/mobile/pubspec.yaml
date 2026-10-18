@@ -1,7 +1,7 @@
 name: renance
 description: "Renance, the global student study OS. Offline-first mobile shell."
 publish_to: "none"
-version: 2.6.17+23
+version: 2.6.18+24
 
 environment:
   sdk: ">=3.5.0 <4.0.0"
@@ -58,6 +58,9 @@ flutter:
     - assets/brand/renance_mark_white.png
     - assets/nerdc_schemes.json
   fonts:
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito-Variable.ttf
     - family: Inter
       fonts:
         - asset: assets/fonts/Inter-Regular.ttf

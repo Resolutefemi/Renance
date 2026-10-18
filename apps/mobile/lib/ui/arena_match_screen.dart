@@ -459,7 +459,7 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                                             BorderRadius.circular(14),
                                         border: Border.all(
                                           color: truth
-                                              ? const Color(0xFF10B981)
+                                              ? const Color(0xFF00CD9C)
                                               : mine
                                                   ? context.ink
                                                   : context.outlineLight,

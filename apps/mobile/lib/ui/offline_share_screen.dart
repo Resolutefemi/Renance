@@ -435,7 +435,7 @@ class _RadarPainter extends CustomPainter {
     final Paint ring = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.4
-      ..color = const Color(0xFFD8E3FB);
+      ..color = const Color(0xFFEBEBEF);
     for (final double r in <double>[0.16, 0.30, 0.44]) {
       canvas.drawCircle(c, size.shortestSide * r, ring);
     }

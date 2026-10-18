@@ -146,7 +146,7 @@ extension SchoolChrome on BuildContext {
       isDarkTier ? const Color(0xFF3A2A55) : SchoolInk.purple100;
 
   /// GGSA gold - grade column headers, serial chips, highlight strokes.
-  Color get schoolGold => isDarkTier ? const Color(0xFFFBBF24) : SchoolInk.gold;
+  Color get schoolGold => isDarkTier ? const Color(0xFFFFC800) : SchoolInk.gold;
 
   /// The result-sheet table zebra row.
   Color get schoolZebra =>
@@ -154,7 +154,7 @@ extension SchoolChrome on BuildContext {
 
   /// The paper ground for the result sheet / ID card face (light tier
   /// stays pure white; dark tier keeps the sheet readable on ink).
-  Color get schoolPaper => isDarkTier ? const Color(0xFF17223B) : Colors.white;
+  Color get schoolPaper => isDarkTier ? const Color(0xFF11151C) : Colors.white;
 }
 
 // ---------------------------------------------------------------- arguments

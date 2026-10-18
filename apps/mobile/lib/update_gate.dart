@@ -120,7 +120,7 @@ class UpdateGateScreen extends StatelessWidget {
                   width: 96,
                   alignment: Alignment.center,
                   decoration: const BoxDecoration(
-                    color: Color(0xFF111C2D),
+                    color: Color(0xFF10DA11),
                     shape: BoxShape.circle,
                   ),
                   child: const Icon(Icons.school_outlined,
@@ -135,7 +135,7 @@ class UpdateGateScreen extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 21,
                     fontWeight: FontWeight.w800,
-                    color: Color(0xFF111C2D),
+                    color: Color(0xFF3C3C46),
                     height: 1.25,
                   ),
                 ),
@@ -151,14 +151,14 @@ class UpdateGateScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     fontSize: 14.5,
-                    color: Color(0xFF5A6B7B),
+                    color: Color(0xFF777777),
                     height: 1.5,
                   ),
                 ),
                 const SizedBox(height: 28),
                 FilledButton(
                   style: FilledButton.styleFrom(
-                    backgroundColor: const Color(0xFF111C2D),
+                    backgroundColor: const Color(0xFF10DA11),
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(

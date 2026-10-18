@@ -697,7 +697,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                               color: p.blocked
                                   ? context.error
                                   : p.ready
-                                      ? const Color(0xFF10B981)
+                                      ? const Color(0xFF00CD9C)
                                       : RenanceColors.amber,
                             ),
                             const SizedBox(width: 8),
@@ -740,7 +740,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                                 style: TextStyle(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w600,
-                                  color: Color(0xFF10B981),
+                                  color: Color(0xFF00CD9C),
                                 ),
                               ),
                           ],
@@ -1046,7 +1046,7 @@ class _DeskTile extends StatelessWidget {
               ),
             ),
             if (complete)
-              const Icon(Icons.check_circle, size: 18, color: Color(0xFF10B981)),
+              const Icon(Icons.check_circle, size: 18, color: Color(0xFF00CD9C)),
           ],
         ),
         subtitle: Text(

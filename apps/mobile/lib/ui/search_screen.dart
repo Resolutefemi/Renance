@@ -1,6 +1,6 @@
 /// Search, the Stitch search_light screen, 1:1.
 ///
-/// One field, four shelves: packs, lessons, flashcard decks and syllabus
+/// One field, three shelves: packs, lessons and syllabus
 /// topics. Everything is matched on-device against data the app already
 /// holds (manifest, lesson metas, deck metas, syllabus trees), so search
 /// works offline and leaks nothing. Results are grouped with counts and
@@ -21,7 +21,6 @@ import '../models.dart';
 import 'exam_screen.dart' show ExamScreen;
 import 'lessons_screen.dart' show LessonReaderScreen;
 import 'pack_detail_screen.dart' show PackDetailScreen;
-import 'flashcards_screen.dart' show FlashcardsScreen;
 import 'renance_logo.dart';
 import 'theme.dart';
 
@@ -34,7 +33,7 @@ const List<(String, String)> kSearchBodies = <(String, String)>[
 
 // ------------------------------------------------------------------ model
 
-enum SearchShelf { packs, lessons, decks, topics }
+enum SearchShelf { packs, lessons, topics }
 
 class SearchHit {
   const SearchHit({
@@ -47,12 +46,11 @@ class SearchHit {
   final SearchShelf shelf;
   final String title;
   final String subtitle;
-  final Object? payload; // ExamMeta | LessonMeta | FlashcardDeckMeta | (body, topic)
+  final Object? payload; // ExamMeta | LessonMeta | (body, topic)
 
   IconData get icon => switch (shelf) {
         SearchShelf.packs => Icons.description_outlined,
         SearchShelf.lessons => Icons.menu_book_outlined,
-        SearchShelf.decks => Icons.style_outlined,
         SearchShelf.topics => Icons.account_tree_outlined,
       };
 }
@@ -114,13 +112,12 @@ class _SearchScreenState extends State<SearchScreen> {
   }
 
   /// Assembles the searchable corpus from controllers (packs arrive with
-  /// the shell; lessons and decks load on demand; syllabus trees are
+  /// the shell; lessons load on demand; syllabus trees are
   /// fetched per body). Failure degrades to searching what we already
   /// hold: search never blocks on the network.
   Future<void> _buildIndex() async {
     final SyncController sync = context.read<SyncController>();
     final LessonsController lessons = context.read<LessonsController>();
-    final FlashcardsController cards = context.read<FlashcardsController>();
     final ApiClient api = context.read<ApiClient>();
 
     final List<SearchHit> hits = <SearchHit>[
@@ -147,16 +144,6 @@ class _SearchScreenState extends State<SearchScreen> {
             subtitle: '${l.minutes} min read'
                 '${l.subject.isEmpty ? '' : ' · ${l.subject}'}',
             payload: l,
-          ),
-      ]);
-      await cards.loadDecks();
-      hits.addAll(<SearchHit>[
-        for (final FlashcardDeckMeta d in cards.decks)
-          SearchHit(
-            shelf: SearchShelf.decks,
-            title: d.title,
-            subtitle: '${d.cardCount} cards',
-            payload: d,
           ),
       ]);
       for (final (String slug, String label) in kSearchBodies) {
@@ -247,12 +234,6 @@ class _SearchScreenState extends State<SearchScreen> {
             title: lesson.title,
           ),
         ));
-      case SearchShelf.decks:
-        // The decks screen is the shelf: open it and let the student pick
-        // the deck (it already carries per-deck state and voice controls).
-        nav.push<void>(MaterialPageRoute<void>(
-          builder: (_) => const FlashcardsScreen(),
-        ));
       case SearchShelf.topics:
         nav.pop(); // back to home; syllabus is reachable from the launcher
     }
@@ -312,7 +293,6 @@ class _SearchScreenState extends State<SearchScreen> {
   static String _shelfLabel(SearchShelf shelf) => switch (shelf) {
         SearchShelf.packs => 'Packs',
         SearchShelf.lessons => 'Lessons',
-        SearchShelf.decks => 'Flashcards',
         SearchShelf.topics => 'Syllabus topics',
       };
 }
@@ -353,7 +333,7 @@ class _SearchBar extends StatelessWidget {
               textInputAction: TextInputAction.search,
               style: RenanceText.bodyBase,
               decoration: InputDecoration(
-                hintText: 'Search packs, lessons, decks, topics',
+                hintText: 'Search packs, lessons, topics',
                 hintStyle: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
                 prefixIcon: Icon(Icons.search,
                     color: context.textSecondary),
@@ -400,7 +380,7 @@ class _EmptyQuery extends StatelessWidget {
         Text(
           indexFailed
               ? 'Only what is already on this device is searchable right now. Reconnect once to index everything.'
-              : 'Find a practice pack, a lesson, a flashcard deck or any syllabus topic. Try "cells", "essay" or "Newton".',
+              : 'Find a practice pack, a lesson or any syllabus topic. Try "cells", "essay" or "Newton".',
           style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
         ),
       ],

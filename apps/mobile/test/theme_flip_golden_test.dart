@@ -33,7 +33,6 @@ import 'package:renance/ui/downloads_screen.dart';
 import 'package:renance/ui/exam_mode_setup_screen.dart';
 import 'package:renance/ui/exam_screen.dart' show ExamScreen;
 import 'package:renance/ui/fatigue_nudge.dart';
-import 'package:renance/ui/flashcards_screen.dart';
 import 'package:renance/ui/gamification_hub_screen.dart';
 import 'package:renance/ui/home_screen.dart';
 import 'package:renance/ui/jamb_subject_selection_screen.dart';
@@ -69,10 +68,6 @@ class MemPackStore extends PackStore {
     'jamb-chemistry-bank': 2097152,
   };
   final List<PendingSubmission> subs = <PendingSubmission>[];
-  final List<PendingCardGrade> grades = <PendingCardGrade>[];
-  List<FlashcardDeckMeta> decks = const <FlashcardDeckMeta>[];
-  final Map<String, FlashcardDeck> deckBodies = <String, FlashcardDeck>{};
-  List<CardProgress> cardProgress = const <CardProgress>[];
   List<LessonMeta> lessonMetas = const <LessonMeta>[];
   final Map<String, Lesson> lessonBodies = <String, Lesson>{};
   final Map<String, SchoolPack> schoolPacks = <String, SchoolPack>{};
@@ -108,35 +103,6 @@ class MemPackStore extends PackStore {
   @override
   Future<void> removeSubmission(String id) async =>
       subs.removeWhere((PendingSubmission s) => s.id == id);
-
-  @override
-  Future<void> saveDeckMetas(List<FlashcardDeckMeta> d) async => decks = d;
-
-  @override
-  Future<List<FlashcardDeckMeta>> cachedDeckMetas() async => decks;
-
-  @override
-  Future<void> saveDeck(FlashcardDeck d) async => deckBodies[d.code] = d;
-
-  @override
-  Future<FlashcardDeck?> loadDeck(String code) async => deckBodies[code];
-
-  @override
-  Future<void> saveCardProgress(List<CardProgress> rows) async =>
-      cardProgress = rows;
-
-  @override
-  Future<List<CardProgress>> loadCardProgress() async => cardProgress;
-
-  @override
-  Future<void> queueCardGrade(PendingCardGrade g) async => grades.add(g);
-
-  @override
-  Future<List<PendingCardGrade>> pendingCardGrades() async => grades;
-
-  @override
-  Future<void> removeCardGrade(String id) async =>
-      grades.removeWhere((PendingCardGrade g) => g.id == id);
 
   @override
   Future<void> saveLessonMetas(List<LessonMeta> l) async => lessonMetas = l;
@@ -346,9 +312,6 @@ class Harness {
       ChangeNotifierProvider<LessonsController>(
         create: (_) => LessonsController(api: api, store: store),
       ),
-      ChangeNotifierProvider<FlashcardsController>(
-        create: (_) => FlashcardsController(api: api, store: store),
-      ),
     ];
   }
 }
@@ -437,8 +400,6 @@ WidgetBuilder screenFor(String name) {
     case 'lesson_reader':
       return (_) =>
           const LessonReaderScreen(slug: 'demo', title: 'Cell Division');
-    case 'flashcards':
-      return (_) => const FlashcardsScreen();
     case 'arena_lobby':
       return (_) => const ArenaLobbyScreen();
     case 'arena_match':
@@ -559,7 +520,6 @@ const List<String> kScreens = <String>[
   'tutor',
   'lessons',
   'lesson_reader',
-  'flashcards',
   'arena_lobby',
   'arena_match',
   'career_bridge',

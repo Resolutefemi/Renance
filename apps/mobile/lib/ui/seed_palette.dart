@@ -192,6 +192,11 @@ class SeedPalette {
     final double sat = math.max(30, math.min(100, hsl.s));
 
     if (mode == RenanceThemeMode.dark) {
+      // Founder directive 2026-10-15 (evening), synced 2026-10-18 with
+      // apps/web/lib/theme.ts: every dark surface is a FIXED near-black -
+      // the seed repaints the ACCENT only (primary / hero CTA), the
+      // canvas stays the same calm near-black under every palette. The
+      // constants mirror [data-theme='dark'] in the web globals.css.
       final String primaryHex =
           hslToHex(hue, sat, math.min(76, math.max(58, _l0(seedHex))));
       final Color primary = _c(primaryHex);
@@ -199,30 +204,30 @@ class SeedPalette {
           ? _c(hslToHex(hue, 42, 10))
           : Colors.white;
       return SeedPalette(
-        pageBg: _c(hslToHex(hue, 34, 9)),
-        card: _c(hslToHex(hue, 30, 14)),
-        cardLowest: _c(hslToHex(hue, 30, 11)),
-        cardLow: _c(hslToHex(hue, 30, 10)),
-        cardHigh: _c(hslToHex(hue, 28, 17)),
-        cardHighest: _c(hslToHex(hue, 28, 20)),
-        surfaceContainer: _c(hslToHex(hue, 28, 14)),
-        surfaceVariant: _c(hslToHex(hue, 28, 17)),
-        selectionBlue: _c(hslToHex(hue, 30, 19)),
-        secondaryContainer: _c(hslToHex(hue, 24, 15)),
-        ink: _c(hslToHex(hue, 60, 96)),
-        textSecondary: _c(hslToHex(hue, 14, 72)),
-        secondary: _c(hslToHex(hue, 14, 72)),
-        textMuted: _c(hslToHex(hue, 14, 72)),
-        outline: _c(hslToHex(hue, 14, 66)),
-        outlineDark: _c(hslToHex(hue, 14, 66)),
-        outlineLight: _c(hslToHex(hue, 20, 28)),
-        outlineVariant: _c(hslToHex(hue, 20, 28)),
-        accentInk: _c(hslToHex(hue, 34, 17)),
-        inkDeep: _c(hslToHex(hue, 32, 12)),
-        heroCard: _c(hslToHex(hue, 30, 14)),
-        onHeroCard: _c(hslToHex(hue, 60, 96)),
-        heroMuted: _c(hslToHex(hue, 14, 72)),
-        heroTrack: _c(hslToHex(hue, 28, 17)),
+        pageBg: _c('#0f1216'),
+        card: _c('#131720'),
+        cardLowest: _c('#0c0f14'),
+        cardLow: _c('#11151c'),
+        cardHigh: _c('#191f28'),
+        cardHighest: _c('#1d242e'),
+        surfaceContainer: _c('#151a22'),
+        surfaceVariant: _c('#191f28'),
+        selectionBlue: _c('#1a212b'),
+        secondaryContainer: _c('#11151c'),
+        ink: _c('#f0f3f6'),
+        textSecondary: _c('#a6adba'),
+        secondary: _c('#a6adba'),
+        textMuted: _c('#a6adba'),
+        outline: _c('#a6adba'),
+        outlineDark: _c('#a6adba'),
+        outlineLight: _c('#363d49'),
+        outlineVariant: _c('#363d49'),
+        accentInk: _c('#242c38'),
+        inkDeep: _c('#161c26'),
+        heroCard: _c('#131720'),
+        onHeroCard: _c('#f0f3f6'),
+        heroMuted: _c('#a6adba'),
+        heroTrack: _c('#191f28'),
         heroCta: primary,
         onHeroCta: onPrimary,
         primary: primary,

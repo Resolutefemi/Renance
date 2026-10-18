@@ -9,8 +9,7 @@ void main() {
       expect(v.practiceTitle, 'Biology Practice');
       expect(v.practiceMinutes, 15);
       expect(v.reviewMinutes, 12);
-      expect(v.cardsMinutes, 15);
-      expect(v.totalMinutes, 42);
+      expect(v.totalMinutes, 27);
       expect(
         v.insight,
         "You usually fade after ~25 min in the evening. We've placed "
@@ -21,8 +20,7 @@ void main() {
     test('unknown slices while signed in keep the mock minutes', () {
       final StudyPlanValues v = deriveStudyPlanValues(signedIn: true);
       expect(v.reviewMinutes, 12);
-      expect(v.cardsMinutes, 15);
-      expect(v.totalMinutes, 42);
+      expect(v.totalMinutes, 27);
       expect(v.insight, startsWith('No sittings logged today yet'));
     });
 
@@ -45,24 +43,6 @@ void main() {
       );
     });
 
-    test('voice minutes follow the 45s per due card rule', () {
-      expect(
-        deriveStudyPlanValues(signedIn: true, cardsDue: 20).cardsMinutes,
-        15,
-      );
-      expect(
-        deriveStudyPlanValues(signedIn: true, cardsDue: 1).cardsMinutes,
-        5,
-      );
-      expect(
-        deriveStudyPlanValues(signedIn: true, cardsDue: 100).cardsMinutes,
-        20,
-      );
-      expect(
-        deriveStudyPlanValues(signedIn: true, cardsDue: 0).cardsMinutes,
-        5,
-      );
-    });
 
     test('weakest subject names the practice block and the insight', () {
       final StudyPlanValues v = deriveStudyPlanValues(

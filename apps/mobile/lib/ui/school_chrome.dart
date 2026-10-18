@@ -58,7 +58,7 @@ PreferredSizeWidget schoolWorkspaceAppBar(
           width: 30,
           height: 30,
           decoration: BoxDecoration(
-            color: const Color(0xFFFBBF24), // amber-400 - the web badge
+            color: const Color(0xFFFFC800), // amber-400 - the web badge
             borderRadius: BorderRadius.circular(8),
           ),
           child: const Icon(

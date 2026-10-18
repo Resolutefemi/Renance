@@ -1,0 +1,445 @@
+/// The 3D FLAT / TACTILE system, the Flutter twin of the web's press
+/// physics (apps/web/app/globals.css, commits 5d9d184a + 5682eb87).
+///
+/// Founder directive 2026-10-13: buttons stop being flat rectangles - a
+/// solid darker bottom edge (4px) makes them read as physical keys, and
+/// pressing sinks them 2px while the edge collapses (4 -> 2). Cards stand
+/// on white faces with 2px swan outlines and hard 4px extruded ledges.
+/// Edges derive from the live token so the Chrome-style seed palette
+/// keeps working: the edge is always a darker tone of whatever the
+/// primary currently is (the web's color-mix(bg 68%, black)).
+library;
+
+import 'package:flutter/material.dart';
+
+import 'theme.dart';
+
+/// `color-mix(in srgb, c <t>%, #000)` - the web's edge derivation.
+Color mixTowardBlack(Color c, double t) {
+  return Color.fromARGB(
+    (c.a * 255.0).round().clamp(0, 255),
+    ((c.r * 255.0) * t).round().clamp(0, 255),
+    ((c.g * 255.0) * t).round().clamp(0, 255),
+    ((c.b * 255.0) * t).round().clamp(0, 255),
+  );
+}
+
+/// The tactile push-button. A hard 4px extruded bottom edge; pressing
+/// sinks the face 2px and the edge collapses to 2px - a real key.
+class TactileButton extends StatefulWidget {
+  const TactileButton({
+    super.key,
+    required this.onPressed,
+    required this.child,
+    this.face,
+    this.onFace,
+    this.edge,
+    this.height = 52,
+    this.radius = RenanceRadius.button,
+    this.fontSize = 15,
+    this.fontWeight = FontWeight.w800,
+    this.expand = true,
+    this.padding,
+  });
+
+  final VoidCallback? onPressed;
+  final Widget child;
+
+  /// Face colour. Null resolves to the seed/brand primary.
+  final Color? face;
+  final Color? onFace;
+
+  /// Extruded edge colour. Null derives color-mix(face 68%, black).
+  final Color? edge;
+  final double height;
+  final BorderRadius radius;
+  final double fontSize;
+  final FontWeight fontWeight;
+  final bool expand;
+  final EdgeInsetsGeometry? padding;
+
+  @override
+  State<TactileButton> createState() => _TactileButtonState();
+}
+
+class _TactileButtonState extends State<TactileButton> {
+  bool _pressing = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final face =
+        widget.face ?? Theme.of(context).colorScheme.primary;
+    final label =
+        widget.onFace ?? Theme.of(context).colorScheme.onPrimary;
+    final edge = widget.edge ?? mixTowardBlack(face, 0.68);
+    final enabled = widget.onPressed != null;
+    final lift = _pressing && enabled ? 2.0 : 4.0;
+
+    final btn = AnimatedContainer(
+      duration: const Duration(milliseconds: 90),
+      height: widget.height - lift,
+      decoration: BoxDecoration(
+        color: face,
+        borderRadius: widget.radius,
+        boxShadow: enabled
+            ? [BoxShadow(color: edge, offset: Offset(0, lift), blurRadius: 0)]
+            : null,
+      ),
+      padding:
+          widget.padding ?? const EdgeInsets.symmetric(horizontal: 20),
+      alignment: Alignment.center,
+      child: DefaultTextStyle.merge(
+        style: TextStyle(
+          fontFamily: 'Nunito',
+          fontSize: widget.fontSize,
+          fontWeight: widget.fontWeight,
+          color: label,
+          height: 1.0,
+        ),
+        textAlign: TextAlign.center,
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
+        child: widget.child,
+      ),
+    );
+
+    final gesture = GestureDetector(
+      onTapDown: enabled ? (_) => setState(() => _pressing = true) : null,
+      onTapCancel: enabled ? () => setState(() => _pressing = false) : null,
+      onTapUp: enabled ? (_) => setState(() => _pressing = false) : null,
+      onTap: widget.onPressed,
+      child: btn,
+    );
+
+    return Semantics(
+      button: true,
+      enabled: enabled,
+      child: widget.expand ? SizedBox(width: double.infinity, child: gesture) : gesture,
+    );
+  }
+}
+
+/// The tactile card: white face, 2px swan outline, hard 4px extruded
+/// ledge, glassy inner top highlight (the web's .glass / .glass-float).
+/// [float] plays the hover lift (translateY -3px, deeper shadow) on
+/// press instead of the sink - the floating hero cards.
+class TactileCard extends StatefulWidget {
+  const TactileCard({
+    super.key,
+    required this.child,
+    this.onTap,
+    this.color,
+    this.outline,
+    this.ledge,
+    this.radius = RenanceRadius.card,
+    this.padding = const EdgeInsets.all(16),
+    this.float = false,
+  });
+
+  final VoidCallback? onTap;
+  final Widget child;
+  final Color? color;
+  final Color? outline;
+  final Color? ledge;
+  final BorderRadius radius;
+  final EdgeInsetsGeometry padding;
+  final bool float;
+
+  @override
+  State<TactileCard> createState() => _TactileCardState();
+}
+
+class _TactileCardState extends State<TactileCard> {
+  bool _active = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final dark = context.darkChrome;
+    final face = widget.color ?? context.card;
+    final outline =
+        widget.outline ?? context.outlineVariant;
+    final ledge = widget.ledge ??
+        mixTowardBlack(outline, dark ? 0.48 : 0.62);
+    final lift = _active ? (widget.float ? 6.0 : 2.0) : 4.0;
+    final offset = _active
+        ? (widget.float ? const Offset(0, -3) : const Offset(0, 0))
+        : const Offset(0, 0);
+
+    final card = AnimatedContainer(
+      duration: const Duration(milliseconds: 120),
+      decoration: BoxDecoration(
+        color: face,
+        borderRadius: widget.radius,
+        border: Border.all(color: outline, width: 2),
+        boxShadow: [
+          // the hard extruded ledge
+          BoxShadow(
+            color: ledge,
+            offset: widget.float && _active ? offset : Offset(0, lift),
+            blurRadius: 0,
+          ),
+          // the soft float shadow, hover only
+          if (widget.float && _active)
+            BoxShadow(
+              color: const Color(0x40111C2D),
+              offset: const Offset(0, 22),
+              blurRadius: 40,
+              spreadRadius: -22,
+            ),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: widget.radius,
+        // the glassy inner top lip: white 70% -> 0 in light,
+        // hero ink 8% -> 0 in dark (the web's inset highlight).
+        child: Stack(
+          children: [
+            Positioned.fill(
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    stops: const [0, 0.35],
+                    colors: dark
+                        ? [const Color(0x14F0F3FF), const Color(0x00F0F3FF)]
+                        : [const Color(0xB3FFFFFF), const Color(0x00FFFFFF)],
+                  ),
+                ),
+              ),
+            ),
+            Padding(padding: widget.padding, child: widget.child),
+          ],
+        ),
+      ),
+    );
+
+    if (widget.onTap == null) return card;
+    return GestureDetector(
+      onTapDown: (_) => setState(() => _active = true),
+      onTapCancel: () => setState(() => _active = false),
+      onTapUp: (_) => setState(() => _active = false),
+      onTap: widget.onTap,
+      child: card,
+    );
+  }
+}
+
+/// The Renance 3D FLAT keycap logomark - the ONLY loading/progress
+/// visual in the product, now in Flutter exactly as the web draws it:
+/// solid brand face, extruded darker bottom edge, glassy inner top
+/// highlight, Nunito-900 "R". Reads the LIVE seed: a student who picks
+/// red in Settings -> Appearance gets a red keycap here, in the splash
+/// and everywhere else (the web's appearance-adaptive favicon rule).
+class RenanceKeycap extends StatelessWidget {
+  const RenanceKeycap({super.key, this.size = 44, this.onPrimary, this.face});
+
+  final double size;
+
+  /// Letter colour override; null resolves white on the face.
+  final Color? onPrimary;
+
+  /// Face override; null resolves the live primary (seed-aware).
+  final Color? face;
+
+  @override
+  Widget build(BuildContext context) {
+    final f = face ?? context.primary;
+    final letter = onPrimary ?? context.onPrimary;
+    final edge = mixTowardBlack(f, 0.62);
+    return CustomPaint(
+      size: Size.square(size),
+      painter: _KeycapPainter(face: f, edge: edge, letter: letter),
+    );
+  }
+}
+
+class _KeycapPainter extends CustomPainter {
+  _KeycapPainter({required this.face, required this.edge, required this.letter});
+
+  final Color face;
+  final Color edge;
+  final Color letter;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final s = size.width / 64;
+    final edgePaint = Paint()..color = edge;
+    final facePaint = Paint()..color = face;
+
+    // extruded bottom edge (behind the face)
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(
+          Rect.fromLTWH(3 * s, 3 * s, 58 * s, 58 * s), Radius.circular(15 * s)),
+      edgePaint,
+    );
+    // face, lifted up to reveal the edge
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(
+          Rect.fromLTWH(3 * s, 3 * s, 58 * s, 50 * s), Radius.circular(15 * s)),
+      facePaint,
+    );
+    // glassy top lip
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(
+          Rect.fromLTWH(9 * s, 9 * s, 46 * s, 27 * s), Radius.circular(10 * s)),
+      Paint()
+        ..shader = LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [const Color(0x4DFFFFFF), const Color(0x00FFFFFF)],
+        ).createShader(Rect.fromLTWH(9 * s, 9 * s, 46 * s, 27 * s)),
+    );
+
+    // the letter
+    final tp = TextPainter(
+      text: TextSpan(
+        text: 'R',
+        style: TextStyle(
+          fontFamily: 'Nunito',
+          fontSize: 38 * s,
+          fontWeight: FontWeight.w900,
+          color: letter,
+          height: 1.0,
+        ),
+      ),
+      textDirection: TextDirection.ltr,
+    )..layout();
+    tp.paint(
+      canvas,
+      Offset(32 * s - tp.width / 2, 42.5 * s - tp.height / 2),
+    );
+  }
+
+  @override
+  bool shouldRepaint(_KeycapPainter old) =>
+      old.face != face || old.edge != edge || old.letter != letter;
+}
+
+/// The CBT player option row: a tactile key-card (2px border, 3px
+/// extruded shadow, press physics) with a Duolingo squircle letter
+/// badge; selection highlights in the macaw wash with the blue ring,
+/// and the reveal paints check/cross (iguana / cardinal) - the exact
+/// web recipe. [state]: rest, selected, correct, wrong.
+enum KeyCardState { rest, selected, correct, wrong }
+
+class TactileKeyCard extends StatefulWidget {
+  const TactileKeyCard({
+    super.key,
+    required this.label,
+    required this.badge,
+    required this.state,
+    required this.onTap,
+  });
+
+  final String label;
+  final String badge;
+  final KeyCardState state;
+  final VoidCallback onTap;
+
+  @override
+  State<TactileKeyCard> createState() => _TactileKeyCardState();
+}
+
+class _TactileKeyCardState extends State<TactileKeyCard> {
+  bool _pressing = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final dark = context.darkChrome;
+    final Color face;
+    final Color outline;
+    switch (widget.state) {
+      case KeyCardState.selected:
+        face = context.selectionBlue;
+        outline = RenanceColors.macaw;
+        break;
+      case KeyCardState.correct:
+        face = dark ? const Color(0xFF12301F) : RenanceColors.iguana;
+        outline = RenanceColors.treefrogDark;
+        break;
+      case KeyCardState.wrong:
+        face = dark ? const Color(0xFF3A1214) : const Color(0xFFFFDFDF);
+        outline = RenanceColors.cardinalDark;
+        break;
+      case KeyCardState.rest:
+        face = context.card;
+        outline = dark ? RenanceColors.darkOutline : RenanceColors.swan;
+        break;
+    }
+    final ledge = mixTowardBlack(outline, dark ? 0.48 : 0.62);
+    final sink = _pressing ? 1.0 : 3.0;
+
+    final badgeBg = switch (widget.state) {
+      KeyCardState.selected => RenanceColors.macaw,
+      KeyCardState.correct => RenanceColors.treefrogDark,
+      KeyCardState.wrong => RenanceColors.cardinalDark,
+      KeyCardState.rest => context.inverseChip,
+    };
+    final badgeFg = switch (widget.state) {
+      KeyCardState.selected => Colors.white,
+      KeyCardState.correct => Colors.white,
+      KeyCardState.wrong => Colors.white,
+      KeyCardState.rest => context.onInverseChip,
+    };
+
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTapDown: (_) => setState(() => _pressing = true),
+      onTapCancel: () => setState(() => _pressing = false),
+      onTapUp: (_) => setState(() => _pressing = false),
+      onTap: widget.onTap,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 90),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+        decoration: BoxDecoration(
+          color: face,
+          borderRadius: RenanceRadius.field,
+          border: Border.all(color: outline, width: 2),
+          boxShadow: [
+            BoxShadow(
+              color: ledge,
+              offset: Offset(0, sink),
+              blurRadius: 0,
+            ),
+          ],
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 30,
+              height: 30,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: badgeBg,
+                borderRadius: BorderRadius.circular(9),
+              ),
+              child: Text(
+                widget.badge,
+                style: TextStyle(
+                  fontFamily: 'Nunito',
+                  fontWeight: FontWeight.w800,
+                  fontSize: 14,
+                  color: badgeFg,
+                ),
+              ),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Text(
+                widget.label,
+                style: TextStyle(
+                  fontFamily: 'Nunito',
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
+                  color: context.ink,
+                  height: 1.25,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

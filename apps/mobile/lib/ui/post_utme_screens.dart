@@ -18,7 +18,6 @@ import '../models.dart';
 import '../storage.dart';
 import 'arena_lobby_screen.dart';
 import 'exam_screen.dart';
-import 'flashcards_screen.dart';
 import 'home_screen.dart' show LauncherTile, openDailyQuiz;
 import 'leaderboard_screen.dart';
 import 'renance_logo.dart';
@@ -250,16 +249,6 @@ class PostUtmeHomeTab extends StatelessWidget {
                       student.dueTopics > 0 ? '${student.dueTopics}' : null,
                   badgeColor: RenanceColors.emerald,
                   onTap: () => onGoTab(2),
-                ),
-              ),
-              Expanded(
-                child: LauncherTile(
-                  icon: Icons.style,
-                  label: 'Cards',
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                        builder: (_) => const FlashcardsScreen()),
-                  ),
                 ),
               ),
             ],

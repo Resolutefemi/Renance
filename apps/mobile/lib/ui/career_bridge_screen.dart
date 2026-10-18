@@ -255,7 +255,7 @@ class _CareerBridgeScreenState extends State<CareerBridgeScreen> {
                             end: Alignment.bottomRight,
                             colors: <Color>[
                               Color(0xFFEAF1FE),
-                              Color(0xFFD8E3FB),
+                              Color(0xFFEBEBEF),
                               Color(0xFFC7D9F7),
                             ],
                           ),

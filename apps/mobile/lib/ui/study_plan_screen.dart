@@ -26,7 +26,6 @@ import 'package:provider/provider.dart';
 import '../api_client.dart';
 import '../controllers.dart';
 import '../models.dart';
-import 'flashcards_screen.dart';
 import 'theme.dart';
 
 /// Study plan screen entry.
@@ -53,7 +52,6 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
 
   // Live slices loaded once; null = unknown, fall back to Stitch copy.
   String? _weakestSubject;
-  int? _cardsDue;
   bool _signedIn = false;
 
   @override
@@ -79,20 +77,6 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
       final String? subject = _subjectOf(tree, topic);
       if (!mounted) return;
       setState(() => _weakestSubject = subject);
-    } on ApiException catch (_) {
-      // design fallback
-    } on NetworkException catch (_) {
-      // design fallback
-    }
-
-    // Flashcards due today for the voice block.
-    try {
-      final List<CardProgress> rows = await api.cardProgress();
-      if (!mounted) return;
-      setState(
-        () => _cardsDue =
-            rows.where((CardProgress r) => r.isDue).length,
-      );
     } on ApiException catch (_) {
       // design fallback
     } on NetworkException catch (_) {
@@ -130,7 +114,6 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
     final StudyPlanValues plan = deriveStudyPlanValues(
       signedIn: _signedIn,
       dueTopics: student.review?.stats.due,
-      cardsDue: _cardsDue,
       weakestSubject: _weakestSubject,
       fatigue: student.fatigue,
     );
@@ -208,26 +191,12 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
                       const SizedBox(height: 10),
                       _PlanRow(
                         icon: Icons.style_outlined,
-                        iconBg: const Color(0xFFE7EEFF),
+                        iconBg: const Color(0xFFF7F7F7),
                         iconColor: context.ink,
                         title: 'Review Cards',
                         meta: '${plan.reviewMinutes} min',
                         focus: 'Medium focus',
                         onTap: () => widget.onGoTab?.call(2),
-                      ),
-                      const SizedBox(height: 10),
-                      _PlanRow(
-                        icon: Icons.mic_outlined,
-                        iconBg: const Color(0xFFFFF3D6),
-                        iconColor: RenanceColors.amber,
-                        title: 'Voice Flashcards',
-                        meta: '${plan.cardsMinutes} min',
-                        focus: 'Low focus',
-                        onTap: () => Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) => const FlashcardsScreen(),
-                          ),
-                        ),
                       ),
                     ],
                   ),
@@ -319,7 +288,6 @@ class StudyPlanValues {
     required this.practiceTitle,
     required this.practiceMinutes,
     required this.reviewMinutes,
-    required this.cardsMinutes,
     required this.totalMinutes,
     required this.insight,
   });
@@ -327,7 +295,6 @@ class StudyPlanValues {
   final String practiceTitle;
   final int practiceMinutes; // a focused practice block, 15 min
   final int reviewMinutes;
-  final int cardsMinutes;
   final int totalMinutes;
   final String insight;
 }
@@ -335,16 +302,14 @@ class StudyPlanValues {
 /// Stitch fallbacks, the numbers the design mock carries.
 const int kPlanPracticeMinutes = 15;
 const int kPlanReviewMinutes = 12;
-const int kPlanCardsMinutes = 15;
 
 /// The derivation. [dueTopics] is the SM-2 queue's stats.due (null while
-/// loading), [cardsDue] the Leitner rows due today, [weakestSubject] the
+/// loading), [weakestSubject] the
 /// subject of the syllabus map's weakest topic, [fatigue] the cached
 /// /me/fatigue advisory.
 StudyPlanValues deriveStudyPlanValues({
   required bool signedIn,
   int? dueTopics,
-  int? cardsDue,
   String? weakestSubject,
   FatigueState? fatigue,
 }) {
@@ -359,16 +324,6 @@ StudyPlanValues deriveStudyPlanValues({
     reviewMinutes = (dueTopics * 2).clamp(6, 40);
   }
 
-  // Voice block: about 45 seconds per due card, 5 to 20 min window.
-  final int cardsMinutes;
-  if (cardsDue == null) {
-    cardsMinutes = kPlanCardsMinutes;
-  } else if (cardsDue <= 0) {
-    cardsMinutes = 5;
-  } else {
-    cardsMinutes = (cardsDue * 0.75).round().clamp(5, 20);
-  }
-
   final String practiceTitle =
       weakestSubject == null ? 'Biology Practice' : '$weakestSubject Practice';
 
@@ -376,8 +331,7 @@ StudyPlanValues deriveStudyPlanValues({
     practiceTitle: practiceTitle,
     practiceMinutes: kPlanPracticeMinutes,
     reviewMinutes: reviewMinutes,
-    cardsMinutes: cardsMinutes,
-    totalMinutes: kPlanPracticeMinutes + reviewMinutes + cardsMinutes,
+    totalMinutes: kPlanPracticeMinutes + reviewMinutes,
     insight: _insight(signedIn, fatigue, weakestSubject),
   );
 }

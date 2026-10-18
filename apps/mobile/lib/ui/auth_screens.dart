@@ -23,6 +23,7 @@ import '../storage.dart';
 import 'appearance_sheet.dart';
 import 'google_logo.dart';
 import 'renance_logo.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 /// Shared scaffold for the credential screens (mockup layout: logo block,
@@ -577,25 +578,24 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ],
           const SizedBox(height: 20),
-          FilledButton.icon(
+          TactileButton(
             onPressed: _busy ? null : _submit,
-            icon: _busy
-                ? RenanceMark(
-                    size: 16,
-                    busy: true,
-                    // The CTA ground is black in stock light and the
-                    // seed colour when one is live - the mark cut flips
-                    // with the on-colour so it never disappears (a
-                    // yellow CTA gets the ink mark).
-                    onDark: context.onPrimary == Colors.white,
-                  )
-                : const Icon(Icons.arrow_forward, size: 18),
-            label: Text(
-              _busy
-                  ? 'Signing in…'
-                  : isSchool
-                      ? 'Open school workspace'
-                      : 'Sign In',
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                if (_busy)
+                  const RenanceMark(size: 16, busy: true, onDark: true)
+                else
+                  const Icon(Icons.arrow_forward, size: 18),
+                const SizedBox(width: 8),
+                Text(
+                  _busy
+                      ? 'Signing in…'
+                      : isSchool
+                          ? 'Open school workspace'
+                          : 'Sign In',
+                ),
+              ],
             ),
           ),
           if (!isSchool && googleWebClientId.isNotEmpty) ...<Widget>[
@@ -1000,23 +1000,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
           ],
           const SizedBox(height: 20),
-          FilledButton.icon(
+          TactileButton(
             // Dead until the consent box is ticked (founder directive
             // 2026-10-05); _submit re-checks for belt and braces.
             onPressed: (_busy || !_acceptedTerms) ? null : _submit,
-            icon: _busy
-                ? RenanceMark(
-                    size: 16,
-                    busy: true,
-                    onDark: context.onPrimary == Colors.white,
-                  )
-                : const Icon(Icons.arrow_forward, size: 18),
-            label: Text(
-              _busy
-                  ? 'Setting up…'
-                  : isSchool
-                      ? 'Create school workspace'
-                      : 'Start studying',
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                if (_busy)
+                  const RenanceMark(size: 16, busy: true, onDark: true)
+                else
+                  const Icon(Icons.arrow_forward, size: 18),
+                const SizedBox(width: 8),
+                Text(
+                  _busy
+                      ? 'Setting up…'
+                      : isSchool
+                          ? 'Create school workspace'
+                          : 'Start studying',
+                ),
+              ],
             ),
           ),
           if (!isSchool && googleWebClientId.isNotEmpty) ...<Widget>[
