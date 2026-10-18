@@ -140,8 +140,13 @@ export default function Landing() {
       {/* anchors near the fold under the fixed pill nav, the wall of   */}
       {/* copy became one lead line + three scannable bullets, and the  */}
       {/* CTA sits right under them. Floating cards are static now.     */}
+      {/* 2026-10-18 mobile pass 2 ("less fat"): headline floor down to  */}
+      {/* 2.4rem on 1.15 leading, hero padding trimmed (pt-20 / pb-12),  */}
+      {/* the two subtext lines pulled into the CTAs (mt-3.5 / 2.5,      */}
+      {/* buttons at mt-4) and the stacked button gap cut to 10px - on   */}
+      {/* phones the headline + CTAs land inside the first viewport.     */}
       {/* ============================================================ */}
-      <section className="relative overflow-hidden pb-16 pt-24 sm:pt-28 lg:pb-24 lg:pt-36">
+      <section className="relative overflow-hidden pb-12 pt-20 sm:pt-24 lg:pb-24 lg:pt-36">
         <AuroraField />
 
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6">
@@ -151,18 +156,18 @@ export default function Landing() {
                 Renance: Your Guide to <span className="hero-gradient-text">Academic Success</span>
               </h1>
 
-              <p className="hero-enter hero-enter-2 mx-auto mt-4 max-w-xl text-[15px] font-medium leading-relaxed text-on-surface sm:text-lg lg:mx-0">
+              <p className="hero-enter hero-enter-2 mx-auto mt-3.5 max-w-xl text-[15px] font-medium leading-relaxed text-on-surface sm:text-lg lg:mx-0">
                 Renance is Nigeria&apos;s Biggest Educational and school management app available on
                 Android, iOS, Windows, macOS, and Web.
               </p>
-              <p className="hero-enter hero-enter-2 mx-auto mt-3 max-w-xl text-[14px] leading-relaxed text-on-surface-variant sm:text-[15px] lg:mx-0">
+              <p className="hero-enter hero-enter-2 mx-auto mt-2.5 max-w-xl text-[14px] leading-relaxed text-on-surface-variant sm:text-[15px] lg:mx-0">
                 For students, the app helps master JAMB, WAEC, NECO, and university exams using
                 over 288,500 past questions spanning from 1978 to 2025 alongside more than 10,000
                 courses and over 2,000,000+ topics. For schools, it automates administration with
                 attendance, results, ID cards, and lecture notes all in one place.
               </p>
 
-              <div className="hero-enter hero-enter-3 mt-6 flex flex-wrap items-center justify-center gap-3.5 lg:justify-start">
+              <div className="hero-enter hero-enter-3 mt-4 flex flex-wrap items-center justify-center gap-2.5 lg:mt-6 lg:justify-start lg:gap-3.5">
                 <OpenAppButton className="hero-cta-primary" />
                 <Link href="/subjects/" className="hero-cta-secondary">
                   Browse {exams.length} question packs

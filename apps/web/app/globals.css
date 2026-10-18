@@ -841,11 +841,16 @@ html[data-rail='collapsed'] {
 .hero-headline {
   font-weight: 800;
   letter-spacing: -0.035em;
-  line-height: 1.04;
-  /* 2026-10-18 desktop pass: the split hero puts the headline in a
-     ~550px column, so the old 7.5vw scale (up to 5.2rem) overflowed
-     it. Same mobile floor, a calmer desktop ceiling. */
-  font-size: clamp(2.6rem, 4.5vw + 0.6rem, 4.4rem);
+  /* 2026-10-18 mobile "less fat" pass: the 2.6rem floor at 1.04 built a
+     tall three-line stack that pushed the CTAs below the fold on phones.
+     Mobile now runs a slightly smaller floor on 1.15 leading - the stack
+     reads tighter and more balanced; the desktop split hero keeps its
+     approved tight 1.04 rhythm. */
+  line-height: 1.15;
+  font-size: clamp(2.4rem, 4.5vw + 0.6rem, 4.4rem);
+}
+@media (min-width: 1024px) {
+  .hero-headline { line-height: 1.04; }
 }
 
 .hero-gradient-text {
