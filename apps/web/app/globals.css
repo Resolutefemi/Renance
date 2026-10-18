@@ -726,6 +726,25 @@ html[data-rail='collapsed'] {
   letter-spacing: -0.02em;
   color: var(--color-primary);
 }
+/* Brand motto: "Your Guide to Academic Success" moved here from the
+   hero headline (founder directive 2026-10-18). A quiet hairline
+   divider separates it from the wordmark; lg+ only keeps the pill
+   calm on tablets and phones where space is scarce. */
+.landing-nav-tagline {
+  display: none;
+  margin-left: 0.35rem;
+  padding-left: 0.8rem;
+  border-left: 1px solid rgba(17, 28, 45, 0.14);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+@media (min-width: 1024px) {
+  .landing-nav-tagline { display: inline-block; }
+}
+[data-theme='dark'] .landing-nav-tagline { border-left-color: rgba(240, 243, 255, 0.16); }
 
 .landing-nav-links { display: none; align-items: center; gap: 0.15rem; }
 .landing-nav-link {

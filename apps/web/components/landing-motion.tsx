@@ -248,6 +248,10 @@ export function LandingNav() {
         <Link href="/" className="landing-nav-brand" onClick={close}>
           <RenanceMark size={30} />
           <span className="landing-nav-word">renance</span>
+          {/* Motto shifted out of the hero headline into the navbar
+              (founder directive 2026-10-18). Hidden below lg so the
+              pill never crowds the links or CTAs. */}
+          <span className="landing-nav-tagline">Your Guide to Academic Success</span>
         </Link>
 
         <div className="landing-nav-links">

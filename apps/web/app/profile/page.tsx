@@ -361,14 +361,20 @@ export default function ProfilePage() {
                 )}
                 {/* The pencil (founder directive 2026-10-17: it replaces
                     the level badge): opens the identity editor - username,
-                    display name and the 50-avatar picker. */}
+                    display name and the 50-avatar picker. 2026-10-18:
+                    anchored hard to the avatar's bottom-right edge
+                    (bottom-0 right-0, no negative overhang), one size
+                    step down so it reads as a crisp badge on the
+                    80px circle instead of floating between the avatar
+                    and the username block, and z-10 keeps it above the
+                    image without ever escaping the card. */}
                 <button
                   type="button"
                   onClick={openIdentityEditor}
                   aria-label="Edit your profile"
-                  className="absolute -bottom-1 -right-1 flex h-8 w-8 items-center justify-center rounded-full border-2 border-card bg-primary text-on-primary shadow-sm transition active:scale-95"
+                  className="absolute bottom-0 right-0 z-10 flex h-7 w-7 items-center justify-center rounded-full border-2 border-card bg-primary text-on-primary shadow-sm transition active:scale-95"
                 >
-                  <span className="material-symbols-outlined text-[16px]">edit</span>
+                  <span className="material-symbols-outlined text-[14px]">edit</span>
                 </button>
               </div>
               <div className="min-w-0 flex-1">
@@ -862,7 +868,19 @@ export default function ProfilePage() {
         >
           <form
             onSubmit={saveIdentity}
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) => {
+              e.stopPropagation();
+              // Tap a blank stretch of the sheet and the soft keyboard
+              // steps aside (founder report 2026-10-18: the keyboard
+              // hid the pinned Save bar; dismissing it reveals the
+              // footer instantly). Only bare background taps blur -
+              // taps on inputs, buttons, labels and links pass through.
+              const target = e.target as HTMLElement;
+              if (!target.closest('input, button, a, label, [role=\'button\']')) {
+                const active = document.activeElement;
+                if (active instanceof HTMLElement && active.tagName === 'INPUT') active.blur();
+              }
+            }}
             className="flex max-h-[92dvh] w-full max-w-md flex-col overflow-hidden rounded-t-2xl bg-card shadow-xl sm:rounded-2xl"
           >
             <div className="flex items-center gap-2 border-b border-outline-variant/40 px-4 py-3.5">
@@ -883,12 +901,58 @@ export default function ProfilePage() {
                 without it the flex child refuses to shrink below its
                 content height, the 50-avatar grid pushes the footer
                 past the 92dvh sheet, and overflow-hidden clips the
-                Save button off forever. */}
-            <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
-              <p className="mb-2 font-mono text-xs uppercase tracking-wider text-on-surface-variant">
+                Save button off forever. 2026-10-18 pass: the text
+                fields now lead and the avatar grid lives in its own
+                capped, independently scrolled region, so the pinned
+                Save bar stays in view with at most a flick through the
+                grid; overscroll-contain stops the inner scroll from
+                chaining to the page behind the sheet. */}
+            <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-4">
+              <label className="block">
+                <span className="mb-1 block font-mono text-xs uppercase tracking-wider text-on-surface-variant">
+                  Full name
+                </span>
+                <input
+                  value={idName}
+                  onChange={(e) => setIdName(e.target.value)}
+                  maxLength={120}
+                  enterKeyHint="done"
+                  autoComplete="name"
+                  className="w-full rounded-lg border border-outline-variant bg-surface-container px-3.5 py-2.5 text-sm text-on-surface focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/40"
+                  placeholder="Your name"
+                />
+              </label>
+
+              <label className="mt-3 block">
+                <span className="mb-1 block font-mono text-xs uppercase tracking-wider text-on-surface-variant">
+                  Username
+                </span>
+                <div className="flex items-center rounded-lg border border-outline-variant bg-surface-container px-3.5 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/40">
+                  <span className="text-sm text-text-secondary">@</span>
+                  <input
+                    value={idUsername}
+                    onChange={(e) => setIdUsername(e.target.value.toLowerCase().replace(/[^a-z0-9_]/g, ''))}
+                    maxLength={24}
+                    enterKeyHint="go"
+                    autoCapitalize="none"
+                    autoComplete="username"
+                    className="w-full bg-transparent py-2.5 pl-0.5 text-sm text-on-surface focus:outline-none"
+                    placeholder="your_handle"
+                  />
+                </div>
+                <span className="mt-1 block text-[11.5px] text-text-secondary">
+                  3-24 characters: lowercase letters, numbers, underscores.
+                </span>
+              </label>
+
+              {idError && (
+                <p className="mt-3 rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">{idError}</p>
+              )}
+
+              <p className="mb-2 mt-4 font-mono text-xs uppercase tracking-wider text-on-surface-variant">
                 Pick your avatar
               </p>
-              <div className="grid grid-cols-5 gap-2 sm:grid-cols-6">
+              <div className="grid max-h-44 grid-cols-5 gap-2 overflow-y-auto overscroll-contain pr-1 sm:grid-cols-6">
                 {AVATARS.map((a) => {
                   const active = idAvatar === a;
                   return (
@@ -912,42 +976,6 @@ export default function ProfilePage() {
                   );
                 })}
               </div>
-
-              <label className="mt-4 block">
-                <span className="mb-1 block font-mono text-xs uppercase tracking-wider text-on-surface-variant">
-                  Full name
-                </span>
-                <input
-                  value={idName}
-                  onChange={(e) => setIdName(e.target.value)}
-                  maxLength={120}
-                  className="w-full rounded-lg border border-outline-variant bg-surface-container px-3.5 py-2.5 text-sm text-on-surface focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/40"
-                  placeholder="Your name"
-                />
-              </label>
-
-              <label className="mt-3 block">
-                <span className="mb-1 block font-mono text-xs uppercase tracking-wider text-on-surface-variant">
-                  Username
-                </span>
-                <div className="flex items-center rounded-lg border border-outline-variant bg-surface-container px-3.5 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/40">
-                  <span className="text-sm text-text-secondary">@</span>
-                  <input
-                    value={idUsername}
-                    onChange={(e) => setIdUsername(e.target.value.toLowerCase().replace(/[^a-z0-9_]/g, ''))}
-                    maxLength={24}
-                    className="w-full bg-transparent py-2.5 pl-0.5 text-sm text-on-surface focus:outline-none"
-                    placeholder="your_handle"
-                  />
-                </div>
-                <span className="mt-1 block text-[11.5px] text-text-secondary">
-                  3-24 characters: lowercase letters, numbers, underscores.
-                </span>
-              </label>
-
-              {idError && (
-                <p className="mt-3 rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">{idError}</p>
-              )}
             </div>
 
             <div className="flex gap-2 border-t border-outline-variant/40 px-4 pt-3.5 pb-[max(0.875rem,env(safe-area-inset-bottom))]">

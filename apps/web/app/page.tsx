@@ -17,7 +17,9 @@ import {
 } from '@/components/landing-motion';
 
 /**
- * The public landing page - "Your Guide to Academic Success".
+ * The public landing page. The motto "Your Guide to Academic Success"
+ * lives in the navbar now (founder directive 2026-10-18); the hero
+ * carries the platform claim and the founder-written description.
  *
  * Built to feel alive: an aurora gradient field drifts behind frosted
  * glass panels, feature tiles lift on hover, stats count in on scroll
@@ -219,13 +221,19 @@ export default function Landing() {
           <div className="lg:grid lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-12 xl:gap-16">
             <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:max-w-none lg:text-left">
               <h1 className="hero-headline hero-enter hero-enter-1 text-on-surface">
-                Renance: Your Guide to <span className="hero-gradient-text">Academic Success</span>
+                Renance: Nigeria&apos;s <span className="hero-gradient-text">Biggest</span> Educational
+                and School Management App
               </h1>
 
               <p className="hero-enter hero-enter-2 mx-auto mt-4 max-w-xl text-[15px] font-medium leading-relaxed text-on-surface sm:text-lg lg:mx-0">
-                Nigerian exam prep for JAMB, WAEC and NECO candidates - and anyone carrying a
-                tertiary course load. {fmt(totalQuestions)}+ real past questions from {yearFrom} to{" "}
-                {yearTo}, ready the moment you tap.
+                Renance is Nigeria&apos;s Biggest Educational and school management app available on
+                Android, iOS, Windows, macOS, and Web.
+              </p>
+              <p className="hero-enter hero-enter-2 mx-auto mt-3 max-w-xl text-[14px] leading-relaxed text-on-surface-variant sm:text-[15px] lg:mx-0">
+                For students, the app helps master JAMB, WAEC, NECO, and university exams using
+                over 288,500 past questions spanning from 1978 to 2025 alongside more than 10,000
+                courses and over 2,000,000+ topics. For schools, it automates administration with
+                attendance, results, ID cards, and lecture notes all in one place.
               </p>
               <ul className="hero-enter hero-enter-2 mx-auto mt-4 flex max-w-xl flex-col gap-2 text-left sm:gap-2.5 lg:mx-0">
                 {[
@@ -236,10 +244,6 @@ export default function Landing() {
                   {
                     icon: 'event_repeat',
                     text: 'A smart review queue - topics you miss come back before you forget them.',
-                  },
-                  {
-                    icon: 'school',
-                    text: 'Schools get a portal too - notes, attendance, results and fees.',
                   },
                 ].map((b) => (
                   <li
