@@ -4709,15 +4709,22 @@ class _SchoolProfileTab extends StatelessWidget {
               style: RenanceText.overline.copyWith(color: context.textSecondary)),
           const SizedBox(height: 8),
           SegmentedButton<RenanceThemeMode>(
+            // Light / Dark only - web parity (Mixed is retired from the
+            // appearance setup; the tier stays internal for exam chrome).
+            // A manager still parked on a persisted mixed tier maps the
+            // pill to Light so the selection set never holds a segment
+            // that no longer exists; picking a side rewrites it.
             segments: const <ButtonSegment<RenanceThemeMode>>[
               ButtonSegment<RenanceThemeMode>(
                   value: RenanceThemeMode.light, label: Text('Light')),
               ButtonSegment<RenanceThemeMode>(
-                  value: RenanceThemeMode.mixed, label: Text('Mixed')),
-              ButtonSegment<RenanceThemeMode>(
                   value: RenanceThemeMode.dark, label: Text('Dark')),
             ],
-            selected: <RenanceThemeMode>{theme.mode},
+            selected: <RenanceThemeMode>{
+              theme.mode == RenanceThemeMode.mixed
+                  ? RenanceThemeMode.light
+                  : theme.mode
+            },
             onSelectionChanged: (Set<RenanceThemeMode> s) =>
                 theme.setMode(s.first),
           ),

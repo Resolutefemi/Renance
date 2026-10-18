@@ -1,3 +1,6 @@
 <resources>
     <color name="ic_launcher_background">#FFFFFF</color>
+    <!-- Android 12+ system-splash ground: the white the light Flutter
+         splash opens on (one continuous splash, no ground pop). -->
+    <color name="splash_ground">#FFFFFF</color>
 </resources>

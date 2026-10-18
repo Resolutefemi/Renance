@@ -7,10 +7,11 @@
 /// already greeted, next to the theme keys in SharedPreferences - the
 /// per-device bool it used to be suppressed fresh signups forever on
 /// any device that had already met the picker, manual or Google): the
-/// Chrome-style Mode switch (Light / Mixed / Dark) and the ten Seed
-/// Color presets - the same palette the Settings screen drives, so a
-/// seed picked here re-tints EVERY screen immediately (seed_palette.dart
-/// maths).
+/// ten Seed Color presets - the same palette the Settings screen
+/// drives, so a seed picked here re-tints EVERY screen immediately
+/// (seed_palette.dart maths). COLOURS-ONLY by web parity (2026-10-13
+/// founder pass: "the first-signup popup is colours-only now" - the
+/// Light/Dark mode control lives in Settings after login).
 ///
 /// Fired from the verified-email unlock, the first Google sign-in, and
 /// the first login on a device that has never greeted that account - so
@@ -129,27 +130,9 @@ class _AppearanceSheetState extends State<AppearanceSheet> {
               ),
               const SizedBox(height: 6),
               Text(
-                'Pick an appearance - you can change it anytime in Settings.',
+                'Pick your colour - you can change it anytime in Settings.',
                 style: RenanceText.bodySecondary
                     .copyWith(color: palette.textSecondary, fontSize: 13),
-              ),
-              const SizedBox(height: 16),
-
-              // Mode -----------------------------------------------------
-              SegmentedButton<RenanceThemeMode>(
-                segments: const <ButtonSegment<RenanceThemeMode>>[
-                  ButtonSegment<RenanceThemeMode>(
-                      value: RenanceThemeMode.light, label: Text('Light')),
-                  ButtonSegment<RenanceThemeMode>(
-                      value: RenanceThemeMode.mixed, label: Text('Mixed')),
-                  ButtonSegment<RenanceThemeMode>(
-                      value: RenanceThemeMode.dark, label: Text('Dark')),
-                ],
-                selected: <RenanceThemeMode>{_mode},
-                onSelectionChanged: (Set<RenanceThemeMode> s) {
-                  setState(() => _mode = s.first);
-                  theme.setMode(_mode);
-                },
               ),
               const SizedBox(height: 16),
 

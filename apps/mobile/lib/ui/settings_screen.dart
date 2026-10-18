@@ -15,6 +15,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../controllers.dart';
 import '../storage.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -372,16 +373,15 @@ class _SeedPanel extends StatelessWidget {
                     ),
                     child: Row(
                       children: <Widget>[
-                        Container(
-                          width: 36,
-                          height: 36,
-                          decoration: BoxDecoration(
-                            color: current,
-                            shape: BoxShape.circle,
-                            border: Border.all(
-                              color: context.outlineVariant.withValues(alpha: 0.6),
-                            ),
-                          ),
+                        // The favicon-parity preview: the web repaints the
+                        // browser favicon live as the seed changes; the app
+                        // shows the same contract here - the 3D Renance mark
+                        // (splash + every in-app surface) re-tints with the
+                        // pick before your eyes. Launcher icon stays brand
+                        // green (no Android API re-tints it safely).
+                        RenanceKeycap(
+                          size: 40,
+                          face: seed == null ? null : current,
                         ),
                         const SizedBox(width: 12),
                         Expanded(
@@ -885,17 +885,27 @@ class _AppearanceSwitch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Web parity (appearance-panel.tsx 2026-10-13): the mode control is
+    // Light / Dark ONLY - Mixed is retired from the Appearance setup
+    // ("remove the mix mode completely from the appearance setup"). The
+    // mixed TIER itself stays in the product for the exam player's hero
+    // chrome, and a student who already persisted it keeps it until they
+    // pick a side here - exactly the website's behaviour.
     const List<(RenanceThemeMode, IconData, String)> options = <(
       RenanceThemeMode,
       IconData,
       String
     )>[
       (RenanceThemeMode.light, Icons.light_mode, 'Light'),
-      (RenanceThemeMode.mixed, Icons.contrast, 'Mixed'),
       (RenanceThemeMode.dark, Icons.dark_mode, 'Dark'),
     ];
-    final int index =
-        options.indexWhere(((RenanceThemeMode, IconData, String) o) => o.$1 == mode);
+    // A student still parked on the retired mixed tier (persisted before
+    // the parity pass) resolves to no option; clamp the pill to Light so
+    // the selector never animates off-canvas. Picking a side rewrites it.
+    final int index = math.max(
+        0,
+        options.indexWhere(
+            ((RenanceThemeMode, IconData, String) o) => o.$1 == mode));
 
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
@@ -918,10 +928,10 @@ class _AppearanceSwitch extends StatelessWidget {
               AnimatedPositioned(
                 duration: const Duration(milliseconds: 300),
                 curve: Curves.easeOut,
-                left: 4 + index * ((w - 8) / 3),
+                left: 4 + index * ((w - 8) / 2),
                 top: 4,
                 bottom: 4,
-                width: (w - 8) / 3 - 4,
+                width: (w - 8) / 2 - 4,
                 child: Container(
                   decoration: BoxDecoration(
                     color: context.selectionBlue,
