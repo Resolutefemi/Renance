@@ -23,6 +23,10 @@ func TestNextStreak(t *testing.T) {
 		{"yesterday increments", 7, yesterday, 8},
 		{"gap resets to 1", 7, twoDaysAgo, 1},
 		{"long gap resets to 1", 120, today.AddDate(0, 0, -45), 1},
+		// A "future" last_active (the Lagos-date vs UTC-date overlap
+		// between 23:00 and 00:00 UTC, or clock skew) must never reset
+		// a streak.
+		{"future last_active keeps streak", 7, today.AddDate(0, 0, 1), 7},
 	}
 	for _, tc := range cases {
 		t.Run(tc.name, func(t *testing.T) {

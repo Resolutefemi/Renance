@@ -43,16 +43,18 @@ type GradeOutcome struct {
 }
 
 // NextStreak is the pure streak rule: same day → unchanged; yesterday → +1;
-// anything older (or first ever) → reset to 1.
+// anything older (or first ever) → reset to 1. A "future" last_active
+// (negative gap - the Lagos-date vs UTC-date convention overlap between
+// 23:00 and 00:00 UTC, or clock skew) never punishes: the streak stays.
 func NextStreak(current int, lastActive, today time.Time) int {
         if lastActive.IsZero() {
                 return 1
         }
         days := today.Truncate(24*time.Hour).Sub(lastActive.Truncate(24*time.Hour)) / (24 * time.Hour)
-        switch days {
-        case 0:
+        switch {
+        case days <= 0:
                 return current
-        case 1:
+        case days == 1:
                 return current + 1
         default:
                 return 1

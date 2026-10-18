@@ -165,24 +165,76 @@ func (s *Service) TouchStreakForQuiz(ctx context.Context, userID string) {
                 }
                 return
         }
+        sr, today, advanced, err := advanceLearnStreak(ctx, s.Pool, l)
+        if err != nil {
+                if s.Log != nil {
+                        s.Log.Error("learn: quiz streak touch write", "err", err, "user", userID)
+                }
+                return
+        }
+        if !advanced {
+                return // already active today - the lesson path owns this touch
+        }
+        if err := mirrorStudyStreak(ctx, s.Pool, userID, sr.Count, today); err != nil && s.Log != nil {
+                s.Log.Error("learn: quiz streak mirror", "err", err, "user", userID)
+        }
+}
+
+// advanceLearnStreak is the Supreme touchStreak shared by every streak
+// -earning activity (lesson completion, mistakes practice, graded quiz
+// via TouchStreakForQuiz): active today -> unchanged; else compute the
+// founder's rules (one quiet day keeps the flame, freezes bridge 2-3
+// day gaps, a 7+ day streak without cover is forgiven) and write the
+// learner row. The returned day is the Lagos day key the write used.
+// advanced is false when the learner was already active today.
+func advanceLearnStreak(ctx context.Context, q querier, l *Learner) (StreakResult, string, bool, error) {
         today := LagosToday()
         if l.LastActive == today {
-                return // already active today - the lesson path owns this touch
+                return StreakResult{Count: l.Streak}, today, false, nil
         }
         sr := ComputeStreak(l.Streak, l.LastActive, l.FreezeCount, l.StreakForgiven, time.Now())
         forgiven := l.StreakForgiven
         if sr.Forgiven {
                 forgiven++
         }
-        if _, err := s.Pool.Exec(ctx, `
+        if _, err := q.Exec(ctx, `
                 UPDATE learn.learners SET streak_count=$2, last_active_on=$3,
                        freeze_count=$4, streak_forgiven_count=$5
                 WHERE user_id=$1`,
-                userID, sr.Count, today, l.FreezeCount-sr.FreezesUsed, forgiven); err != nil {
-                if s.Log != nil {
-                        s.Log.Error("learn: quiz streak touch write", "err", err, "user", userID)
-                }
+                l.UserID, sr.Count, today, l.FreezeCount-sr.FreezesUsed, forgiven); err != nil {
+                return sr, today, false, err
         }
+        return sr, today, true, nil
+}
+
+// mirrorStudyStreak keeps the legacy gamification streak (study.streaks)
+// in lockstep with the Supreme streak. Root fix for the founder bug
+// report "streak counting is not working" (2026-10-18): study.streaks
+// was only ever written by the grading engine, so a student who
+// completed LESSONS saw the dashboard flame, the profile counters, the
+// mobile app and the streak leaderboard all sit at zero. Every streak
+// surface reads study.streaks, so every streak-earning activity now
+// mirrors the Supreme number here (streak fields only - total_xp,
+// total_correct and attempts_count stay the graded papers' ledger,
+// owned by ApplyGrade). Idempotent ON CONFLICT upsert, so the mirror
+// replay and a replayed completion can never double-apply.
+func mirrorStudyStreak(ctx context.Context, q querier, userID string, streak int, lagosDay string) error {
+        day, err := time.ParseInLocation("2006-01-02", lagosDay, time.UTC)
+        if err != nil {
+                // Never silently drop the touch over a bad key: fall back
+                // to now() and let the DATE column truncate.
+                day = time.Now().UTC()
+        }
+        _, err = q.Exec(ctx, `
+                INSERT INTO study.streaks (user_id, current_streak, best_streak, last_active, updated_at)
+                VALUES ($1, $2, $2, $3, now())
+                ON CONFLICT (user_id) DO UPDATE SET
+                        current_streak = EXCLUDED.current_streak,
+                        best_streak    = GREATEST(study.streaks.best_streak, EXCLUDED.best_streak),
+                        last_active    = EXCLUDED.last_active,
+                        updated_at     = now()`,
+                userID, streak, day)
+        return err
 }
 
 // ─── Profile (top-bar counters + settings page payload) ───────────────────

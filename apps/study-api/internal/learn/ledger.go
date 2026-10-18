@@ -221,26 +221,27 @@ func (s *Service) Complete(ctx context.Context, userID string, req CompleteReque
         // restored free, at most three times in a lifetime.
         streakBefore := l.Streak
         freezeNow := l.FreezeCount
-        today := LagosToday()
-        if l.LastActive != today {
-                sr := ComputeStreak(l.Streak, l.LastActive, l.FreezeCount, l.StreakForgiven, time.Now())
+        mirrorStreak, mirrorDay := -1, ""
+        if sr, today, advanced, err := advanceLearnStreak(ctx, tx, l); err != nil {
+                return nil, err
+        } else if advanced {
                 res.Streak = sr.Count
-                freeze := l.FreezeCount - sr.FreezesUsed
+                freezeNow = l.FreezeCount - sr.FreezesUsed
                 forgiven := l.StreakForgiven
                 if sr.Forgiven {
                         forgiven++
                         res.StreakForgiven = true
                 }
                 res.StreakForgivesLeft = MaxStreakForgiveness - forgiven
-                freezeNow = freeze
-                if _, err := tx.Exec(ctx, `
-                        UPDATE learn.learners SET streak_count=$2, last_active_on=$3, freeze_count=$4, streak_forgiven_count=$5
-                        WHERE user_id=$1`, userID, sr.Count, today, freeze, forgiven); err != nil {
-                        return nil, err
-                }
                 l.Streak = sr.Count
+                // Mirror the fresh Supreme streak into the legacy
+                // gamification row AFTER the commit (below): every streak
+                // surface (dashboard, profile, mobile, leaderboard) reads
+                // study.streaks, and lesson completions must move it too -
+                // the founder bug "streak counting is not working".
+                mirrorStreak, mirrorDay = sr.Count, today
         } else {
-                res.Streak = l.Streak
+                res.Streak = sr.Count
         }
         res.StreakUp = res.Streak > streakBefore
 
@@ -306,6 +307,15 @@ func (s *Service) Complete(ctx context.Context, userID string, req CompleteReque
 
         if err := tx.Commit(ctx); err != nil {
                 return nil, err
+        }
+
+        // Legacy-streak mirror, post-commit so a study.streaks hiccup can
+        // never fail a finished completion (the learn ledger above is the
+        // truth; this only syncs the display row - best-effort).
+        if mirrorStreak >= 0 {
+                if err := mirrorStudyStreak(ctx, s.Pool, userID, mirrorStreak, mirrorDay); err != nil && s.Log != nil {
+                        s.Log.Error("learn: completion streak mirror", "err", err, "user", userID)
+                }
         }
 
         // Course completion percentage for the done screen. The original
@@ -1146,6 +1156,21 @@ func (s *Service) GradePractice(ctx context.Context, userID string, correct, tot
                 userID, day, xp, correct); err != nil {
                 return nil, err
         }
+        // Streak touch (founder directive 2026-10-17: any quiz activity
+        // keeps the flame; the notifications desk promises "complete any
+        // practice or review today to keep it alive"): a mistakes-practice
+        // sitting advances the Supreme streak exactly like a lesson.
+        mirrorStreak, mirrorDay := -1, ""
+        if sr, today, advanced, err := advanceLearnStreak(ctx, tx, l); err != nil {
+                return nil, err
+        } else if advanced {
+                res.Streak = sr.Count
+                res.StreakUp = sr.Count > l.Streak
+                mirrorStreak, mirrorDay = sr.Count, today
+        } else {
+                res.Streak = sr.Count
+        }
+
         heartsFull := false
         if percent >= 80 && !s.UnlimitedHearts && !l.SuperActive && l.Hearts < MaxHearts {
                 if _, err := tx.Exec(ctx, `UPDATE learn.learners SET hearts=$2, hearts_updated_at=now() WHERE user_id=$1`,
@@ -1159,6 +1184,14 @@ func (s *Service) GradePractice(ctx context.Context, userID string, correct, tot
         }
         if err := tx.Commit(ctx); err != nil {
                 return nil, err
+        }
+        // Legacy-streak mirror post-commit (best-effort): study.streaks is
+        // what the dashboard, profile, mobile app and streak leaderboard
+        // display - practice must move it too.
+        if mirrorStreak >= 0 {
+                if err := mirrorStudyStreak(ctx, s.Pool, userID, mirrorStreak, mirrorDay); err != nil && s.Log != nil {
+                        s.Log.Error("learn: practice streak mirror", "err", err, "user", userID)
+                }
         }
         res.Hearts = MaxHearts
         _ = heartsFull
