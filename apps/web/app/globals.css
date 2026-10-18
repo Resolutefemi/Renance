@@ -841,13 +841,13 @@ html[data-rail='collapsed'] {
 .hero-headline {
   font-weight: 800;
   letter-spacing: -0.035em;
-  /* 2026-10-18 mobile "less fat" pass: the 2.6rem floor at 1.04 built a
-     tall three-line stack that pushed the CTAs below the fold on phones.
-     Mobile now runs a slightly smaller floor on 1.15 leading - the stack
-     reads tighter and more balanced; the desktop split hero keeps its
-     approved tight 1.04 rhythm. */
-  line-height: 1.15;
-  font-size: clamp(2.4rem, 4.5vw + 0.6rem, 4.4rem);
+  /* 2026-10-19 mobile pass 3: 2.4rem still dwarfed phone screens and
+     crowded the pill nav. Floor now 1.75rem (28px) on 1.22 leading -
+     comfortable two-to-three line stack per the founder's spec; the
+     fluid 4.5vw ramp and the 4.4rem cap keep tablet scaling smooth and
+     the desktop split hero keeps its approved tight 1.04 rhythm. */
+  line-height: 1.22;
+  font-size: clamp(1.75rem, 4.5vw + 0.6rem, 4.4rem);
 }
 @media (min-width: 1024px) {
   .hero-headline { line-height: 1.04; }

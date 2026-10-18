@@ -145,8 +145,15 @@ export default function Landing() {
       {/* the two subtext lines pulled into the CTAs (mt-3.5 / 2.5,      */}
       {/* buttons at mt-4) and the stacked button gap cut to 10px - on   */}
       {/* phones the headline + CTAs land inside the first viewport.     */}
+      {/* 2026-10-19 mobile pass 3: the pill nav's bottom edge sits      */}
+      {/* ~74px down, so pt-20 left only ~6px of air under it - raised   */}
+      {/* to pt-28 (~38px clearance, inside the founder's 32-40px band,  */}
+      {/* holds through <lg where the burger pill is the nav), the        */}
+      {/* headline floor dropped to 1.75rem/1.22 so it stops dominating  */}
+      {/* phones, and the "Browse N question packs" secondary CTA is     */}
+      {/* gone - the hero now closes on the single Open App button.      */}
       {/* ============================================================ */}
-      <section className="relative overflow-hidden pb-12 pt-20 sm:pt-24 lg:pb-24 lg:pt-36">
+      <section className="relative overflow-hidden pb-12 pt-28 lg:pb-24 lg:pt-36">
         <AuroraField />
 
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6">
@@ -169,18 +176,6 @@ export default function Landing() {
 
               <div className="hero-enter hero-enter-3 mt-4 flex flex-wrap items-center justify-center gap-2.5 lg:mt-6 lg:justify-start lg:gap-3.5">
                 <OpenAppButton className="hero-cta-primary" />
-                <Link href="/subjects/" className="hero-cta-secondary">
-                  Browse {exams.length} question packs
-                  <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden>
-                    <path
-                      d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </Link>
               </div>
             </div>
 
