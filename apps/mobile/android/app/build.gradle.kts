@@ -10,10 +10,13 @@ android {
     // requires compiling against Android API 36; Flutter 3.47's default
     // is 34. compileSdk is compile-time only, runtime targets stay put.
     compileSdk = 36
-    // NDK not needed: every plugin in this app is pure Kotlin/Java, and
-    // pinning ndkVersion made AGP eagerly fetch a 2.2GB NDK the build
-    // never uses. Re-add only if a plugin gains real native (C/C++) code.
-    // ndkVersion = flutter.ndkVersion
+    // NDK not needed: every plugin in this app is pure Kotlin/Java. The
+    // version is pinned (not left to AGP's default) so the Flutter gradle
+    // plugin's forceNdkDownload back-off sees a CONFIGURED version that
+    // matches the sdkmanager-installed list; unpinned, it configures a
+    // synthetic CMake project that drags the whole 2.2GB NDK in. With the
+    // pin + the installed marker, no CXX task is ever created.
+    ndkVersion = flutter.ndkVersion
 
     compileOptions {
         // flutter_local_notifications (java.time on old Android) needs
