@@ -45,7 +45,7 @@ class _FeedScreenState extends State<FeedScreen> {
   final ScrollController _scroll = ScrollController();
   final List<_FeedPost> _posts = <_FeedPost>[];
   final Map<int, bool> _following = <int, bool>{};
-  final Map<int, List<SocialComment>> _comments = <int, List<SocialComment>>[];
+  final Map<int, List<SocialComment>> _comments = <int, List<SocialComment>>{};
   final Map<int, bool> _expanded = <int, bool>{};
   // Comment drafts survive collapse (the web keeps the box state).
   final Map<int, TextEditingController> _drafts = <int, TextEditingController>{};
@@ -84,7 +84,7 @@ class _FeedScreenState extends State<FeedScreen> {
       final List<SocialPost> posts = await api.socialFeed(limit: 25);
       final List<_FeedPost> wrapped =
           posts.map((SocialPost p) => _FeedPost(p)).toList();
-      final SocialConnections conns;
+      SocialConnections conns;
       try {
         conns = await api.socialConnections();
       } catch (_) {
@@ -197,8 +197,8 @@ class _FeedScreenState extends State<FeedScreen> {
           await api.socialAddComment(fp.post.id, body);
       if (!mounted) return;
       setState(() {
-        _comments[post.id] = comments;
-        _postById(post.id)?.comments = comments.length;
+        _comments[fp.post.id] = comments;
+        _postById(fp.post.id)?.comments = comments.length;
       });
       draft?.clear();
     } on ApiException catch (e) {
@@ -236,9 +236,9 @@ class _FeedScreenState extends State<FeedScreen> {
     return null;
   }
 
-  Future<void> _share(SocialPost post) async {
-    final String name = post.author?.name ?? 'A scholar';
-    final String text = '$name ${post.body} - via Renance';
+  Future<void> _share(_FeedPost fp) async {
+    final String name = fp.post.author?.name ?? 'A scholar';
+    final String text = '$name ${fp.post.body} - via Renance';
     try {
       await Share.share(text, subject: 'Renance');
     } catch (_) {

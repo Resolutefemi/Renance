@@ -69,6 +69,9 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
             _boards[_tab] = await api.leaderboardStreak();
           case _Board.daily:
             _boards[_tab] = await api.dailyLeaderboard();
+          case _Board.gems:
+            // Handled above via _gemsBoard; unreachable.
+            break;
         }
       }
       if (!mounted) return;
@@ -534,6 +537,9 @@ class _RankCard extends StatelessWidget {
         headline = '${entry.score}';
         headlineUnit = '/${entry.total}';
         headlineLabel = 'Score';
+      case _Board.gems:
+        // Routed at the screen level (_GemsBoardList); never reached.
+        break;
     }
 
     final List<Widget> chips = <Widget>[];
@@ -583,6 +589,9 @@ class _RankCard extends StatelessWidget {
           label: 'Score',
           value: '${entry.score}/${entry.total}',
         ));
+      case _Board.gems:
+        // Routed at the screen level (_GemsBoardList); never reached.
+        break;
     }
 
     return Container(

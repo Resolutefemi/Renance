@@ -1166,7 +1166,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               autocorrect: false,
               enableSuggestions: false,
               textInputAction: TextInputAction.done,
-              onSubmitted: _submit,
+              onSubmitted: (_) => _submit(),
               decoration: const InputDecoration(
                 hintText: 'REN…',
               ),

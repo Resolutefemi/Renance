@@ -1534,284 +1534,6 @@ class ApiClient {
         as Map<dynamic, dynamic>;
     return (data['shareSlug'] ?? '') as String;
   }
-}
-
-/// Corpus size behind the AI bridge.
-class AiBridgeStats {
-  const AiBridgeStats({required this.exams, required this.questions});
-  final int exams;
-  final int questions;
-}
-
-/// One studio chat thread.
-class AiStudioChat {
-  const AiStudioChat({
-    required this.id,
-    required this.folder,
-    required this.title,
-    required this.updatedAt,
-  });
-  factory AiStudioChat.fromJson(Map<String, dynamic> j) => AiStudioChat(
-        id: (j['id'] ?? '') as String,
-        folder: (j['folder'] ?? 'General') as String,
-        title: (j['title'] ?? 'New chat') as String,
-        updatedAt: DateTime.tryParse((j['updatedAt'] ?? '') as String) ??
-            DateTime.now(),
-      );
-  final String id;
-  final String folder;
-  final String title;
-  final DateTime updatedAt;
-}
-
-/// A thread plus its messages.
-class AiStudioChatThread {
-  const AiStudioChatThread({required this.chat, required this.messages});
-  factory AiStudioChatThread.fromJson(Map<String, dynamic> j) =>
-      AiStudioChatThread(
-        chat: AiStudioChat.fromJson(
-            ((j['chat'] ?? const <String, dynamic>{}) as Map)
-                .cast<String, dynamic>()),
-        messages: ((j['messages'] ?? const <dynamic>[]) as List<dynamic>)
-            .map((dynamic e) => AiStudioMessage.fromJson(
-                (e as Map).cast<String, dynamic>()))
-            .toList(),
-      );
-  final AiStudioChat chat;
-  final List<AiStudioMessage> messages;
-}
-
-/// One persisted message turn.
-class AiStudioMessage {
-  const AiStudioMessage({
-    required this.id,
-    required this.role,
-    required this.content,
-    this.thinking,
-    this.bridged = 0,
-  });
-  factory AiStudioMessage.fromJson(Map<String, dynamic> j) => AiStudioMessage(
-        id: (j['id'] ?? 0) as int,
-        role: (j['role'] ?? 'user') as String,
-        content: (j['content'] ?? '') as String,
-        thinking: j['thinking'] as String?,
-        bridged: (j['bridged'] ?? 0) as int,
-      );
-  final int id;
-  final String role; // user | assistant
-  final String content;
-  final String? thinking;
-  final int bridged;
-}
-
-/// One turn exchange: the persisted pair + the phases to replay.
-class AiStudioChatTurn {
-  const AiStudioChatTurn({
-    required this.userMessage,
-    required this.assistantMessage,
-    required this.mode,
-    required this.bridged,
-    this.memorySaved = false,
-  });
-  factory AiStudioChatTurn.fromJson(Map<String, dynamic> j) =>
-      AiStudioChatTurn(
-        userMessage: AiStudioMessage.fromJson(
-            ((j['userMessage'] ?? const <String, dynamic>{}) as Map)
-                .cast<String, dynamic>()),
-        assistantMessage: AiStudioMessage.fromJson(
-            ((j['assistantMessage'] ?? const <String, dynamic>{}) as Map)
-                .cast<String, dynamic>()),
-        mode: (j['mode'] ?? 'ai') as String,
-        bridged: (j['bridged'] ?? 0) as int,
-        memorySaved: (j['memorySaved'] ?? false) as bool,
-      );
-  final AiStudioMessage userMessage;
-  final AiStudioMessage assistantMessage;
-  final String mode;
-  final int bridged;
-  final bool memorySaved;
-}
-
-/// A folder with its thread count.
-class AiStudioFolder {
-  const AiStudioFolder({required this.name, required this.count});
-  factory AiStudioFolder.fromJson(Map<String, dynamic> j) => AiStudioFolder(
-        name: (j['name'] ?? 'General') as String,
-        count: (j['count'] ?? 0) as int,
-      );
-  final String name;
-  final int count;
-}
-
-/// One durable memory.
-class AiStudioMemory {
-  const AiStudioMemory({required this.id, required this.content});
-  factory AiStudioMemory.fromJson(Map<String, dynamic> j) => AiStudioMemory(
-        id: (j['id'] ?? 0) as int,
-        content: (j['content'] ?? '') as String,
-      );
-  final int id;
-  final String content;
-}
-
-/// One generated document (quiz | note | notebook | lesson_note).
-class AiStudioArtifact {
-  const AiStudioArtifact({
-    required this.id,
-    required this.kind,
-    required this.title,
-    required this.data,
-    this.subject = '',
-    this.classLevel = '',
-    this.shareSlug = '',
-  });
-  factory AiStudioArtifact.fromJson(Map<String, dynamic> j) =>
-      AiStudioArtifact(
-        id: (j['id'] ?? '') as String,
-        kind: (j['kind'] ?? 'note') as String,
-        title: (j['title'] ?? '') as String,
-        subject: (j['subject'] ?? '') as String,
-        classLevel: (j['classLevel'] ?? '') as String,
-        shareSlug: (j['shareSlug'] ?? '') as String,
-        data: (j['data'] ?? const <String, dynamic>{}) as Map<dynamic, dynamic>,
-      );
-  final String id;
-  final String kind; // quiz | note | notebook | lesson_note
-  final String title;
-  final String subject;
-  final String classLevel;
-  final String shareSlug;
-  final Map<dynamic, dynamic> data;
-}
-
-/// One Renance AI exchange's answer.
-class AiChatReply {
-  const AiChatReply({required this.text, required this.mode});
-  final String text;
-  final String mode; // ai (the canned 'guide' mode was removed 2026-10-12)
-}
-
-/// The billing catalog (public): plans, redemption table, WhatsApp.
-class PlanCatalog {
-  const PlanCatalog({
-    required this.plans,
-    required this.redemptions,
-    required this.paystackEnabled,
-    required this.whatsapp,
-    this.studentBillingEnabled = true,
-  });
-
-  final List<PremiumPlan> plans;
-  final List<RenRedemption> redemptions;
-  final bool paystackEnabled;
-  final String whatsapp;
-  /// False while the founder's "everyone rides premium for now" window
-  /// is on: paywalls show the all-unlocked banner instead of buy buttons.
-  final bool studentBillingEnabled;
-
-  factory PlanCatalog.fromJson(Map<String, dynamic> j) => PlanCatalog(
-        plans: ((j['plans'] ?? const <dynamic>[]) as List<dynamic>)
-            .map((dynamic e) => PremiumPlan.fromJson((e as Map).cast<String, dynamic>()))
-            .toList(),
-        redemptions: ((j['redemptions'] ?? const <dynamic>[]) as List<dynamic>)
-            .map((dynamic e) => RenRedemption.fromJson((e as Map).cast<String, dynamic>()))
-            .toList(),
-        paystackEnabled: (j['paystackEnabled'] ?? false) as bool,
-        whatsapp: (j['whatsapp'] ?? '') as String,
-        studentBillingEnabled: (j['studentBillingEnabled'] ?? true) as bool,
-      );
-}
-
-/// One purchasable premium tier.
-class PremiumPlan {
-  const PremiumPlan({
-    required this.code,
-    required this.label,
-    required this.amountNaira,
-    required this.durationDays,
-    required this.perks,
-    this.scope = 'all',
-    this.tier = 0,
-    this.features = const <String>[],
-  });
-
-  final String code;
-  final String label;
-  final int amountNaira;
-  final int durationDays;
-  final String perks;
-  /// "jamb" bounds the annual plan to JAMB papers; "all" opens every body.
-  final String scope;
-  /// Ladder rank: 1 jamb < 2 basic < 3 standard < 4 premium.
-  final int tier;
-  /// The per-tier bullet list the catalog owns.
-  final List<String> features;
-
-  factory PremiumPlan.fromJson(Map<String, dynamic> j) => PremiumPlan(
-        code: (j['code'] ?? '') as String,
-        label: (j['label'] ?? '') as String,
-        amountNaira: ((j['amountNaira'] ?? 0) as num).toInt(),
-        durationDays: ((j['durationDays'] ?? 0) as num).toInt(),
-        perks: (j['perks'] ?? '') as String,
-        scope: (j['scope'] ?? 'all') as String,
-        tier: ((j['tier'] ?? 0) as num).toInt(),
-        features: ((j['features'] ?? const <dynamic>[]) as List<dynamic>)
-            .map((dynamic e) => e.toString())
-            .toList(),
-      );
-}
-
-/// One REN coin exchange rate.
-class RenRedemption {
-  const RenRedemption({
-    required this.code,
-    required this.label,
-    required this.coins,
-  });
-
-  final String code;
-  final String label;
-  final int coins;
-
-  factory RenRedemption.fromJson(Map<String, dynamic> j) => RenRedemption(
-        code: (j['code'] ?? '') as String,
-        label: (j['label'] ?? '') as String,
-        coins: ((j['coins'] ?? 0) as num).toInt(),
-      );
-}
-
-/// One user's entitlement row: premium flag + type + expiry, the REN
-/// wallet, and email verification. The Neon console shape.
-class Entitlement {
-  const Entitlement({
-    required this.premiumRole,
-    required this.premiumType,
-    required this.premiumExpiresAt,
-    required this.renCoins,
-    required this.emailVerified,
-  });
-
-  final bool premiumRole;
-  final String premiumType;
-  final DateTime? premiumExpiresAt;
-  final int renCoins;
-  final bool emailVerified;
-
-  /// Premium is live: role on, and the expiry (when stamped) still ahead.
-  bool get premiumActive =>
-      premiumRole &&
-      (premiumExpiresAt == null || premiumExpiresAt!.isAfter(DateTime.now()));
-
-  factory Entitlement.fromJson(Map<String, dynamic> j) => Entitlement(
-        premiumRole: (j['premiumRole'] ?? false) as bool,
-        premiumType: (j['premiumType'] ?? '') as String,
-        premiumExpiresAt: j['premiumExpiresAt'] == null
-            ? null
-            : DateTime.tryParse(j['premiumExpiresAt'].toString()),
-        renCoins: ((j['renCoins'] ?? 0) as num).toInt(),
-        emailVerified: (j['emailVerified'] ?? false) as bool,
-      );
-
   // -------------------------------------------------- learn & social parity
   // The web's Learn module (courses hub, lesson player, quests, league,
   // shop, chests) and social layer (feed, follows, public profiles),
@@ -2207,4 +1929,282 @@ class Entitlement {
     final dynamic data = await _send('GET', '/leaderboard/gems');
     return GemsLeaderboardData.fromJson((data as Map).cast<String, dynamic>());
   }
+}
+
+/// Corpus size behind the AI bridge.
+class AiBridgeStats {
+  const AiBridgeStats({required this.exams, required this.questions});
+  final int exams;
+  final int questions;
+}
+
+/// One studio chat thread.
+class AiStudioChat {
+  const AiStudioChat({
+    required this.id,
+    required this.folder,
+    required this.title,
+    required this.updatedAt,
+  });
+  factory AiStudioChat.fromJson(Map<String, dynamic> j) => AiStudioChat(
+        id: (j['id'] ?? '') as String,
+        folder: (j['folder'] ?? 'General') as String,
+        title: (j['title'] ?? 'New chat') as String,
+        updatedAt: DateTime.tryParse((j['updatedAt'] ?? '') as String) ??
+            DateTime.now(),
+      );
+  final String id;
+  final String folder;
+  final String title;
+  final DateTime updatedAt;
+}
+
+/// A thread plus its messages.
+class AiStudioChatThread {
+  const AiStudioChatThread({required this.chat, required this.messages});
+  factory AiStudioChatThread.fromJson(Map<String, dynamic> j) =>
+      AiStudioChatThread(
+        chat: AiStudioChat.fromJson(
+            ((j['chat'] ?? const <String, dynamic>{}) as Map)
+                .cast<String, dynamic>()),
+        messages: ((j['messages'] ?? const <dynamic>[]) as List<dynamic>)
+            .map((dynamic e) => AiStudioMessage.fromJson(
+                (e as Map).cast<String, dynamic>()))
+            .toList(),
+      );
+  final AiStudioChat chat;
+  final List<AiStudioMessage> messages;
+}
+
+/// One persisted message turn.
+class AiStudioMessage {
+  const AiStudioMessage({
+    required this.id,
+    required this.role,
+    required this.content,
+    this.thinking,
+    this.bridged = 0,
+  });
+  factory AiStudioMessage.fromJson(Map<String, dynamic> j) => AiStudioMessage(
+        id: (j['id'] ?? 0) as int,
+        role: (j['role'] ?? 'user') as String,
+        content: (j['content'] ?? '') as String,
+        thinking: j['thinking'] as String?,
+        bridged: (j['bridged'] ?? 0) as int,
+      );
+  final int id;
+  final String role; // user | assistant
+  final String content;
+  final String? thinking;
+  final int bridged;
+}
+
+/// One turn exchange: the persisted pair + the phases to replay.
+class AiStudioChatTurn {
+  const AiStudioChatTurn({
+    required this.userMessage,
+    required this.assistantMessage,
+    required this.mode,
+    required this.bridged,
+    this.memorySaved = false,
+  });
+  factory AiStudioChatTurn.fromJson(Map<String, dynamic> j) =>
+      AiStudioChatTurn(
+        userMessage: AiStudioMessage.fromJson(
+            ((j['userMessage'] ?? const <String, dynamic>{}) as Map)
+                .cast<String, dynamic>()),
+        assistantMessage: AiStudioMessage.fromJson(
+            ((j['assistantMessage'] ?? const <String, dynamic>{}) as Map)
+                .cast<String, dynamic>()),
+        mode: (j['mode'] ?? 'ai') as String,
+        bridged: (j['bridged'] ?? 0) as int,
+        memorySaved: (j['memorySaved'] ?? false) as bool,
+      );
+  final AiStudioMessage userMessage;
+  final AiStudioMessage assistantMessage;
+  final String mode;
+  final int bridged;
+  final bool memorySaved;
+}
+
+/// A folder with its thread count.
+class AiStudioFolder {
+  const AiStudioFolder({required this.name, required this.count});
+  factory AiStudioFolder.fromJson(Map<String, dynamic> j) => AiStudioFolder(
+        name: (j['name'] ?? 'General') as String,
+        count: (j['count'] ?? 0) as int,
+      );
+  final String name;
+  final int count;
+}
+
+/// One durable memory.
+class AiStudioMemory {
+  const AiStudioMemory({required this.id, required this.content});
+  factory AiStudioMemory.fromJson(Map<String, dynamic> j) => AiStudioMemory(
+        id: (j['id'] ?? 0) as int,
+        content: (j['content'] ?? '') as String,
+      );
+  final int id;
+  final String content;
+}
+
+/// One generated document (quiz | note | notebook | lesson_note).
+class AiStudioArtifact {
+  const AiStudioArtifact({
+    required this.id,
+    required this.kind,
+    required this.title,
+    required this.data,
+    this.subject = '',
+    this.classLevel = '',
+    this.shareSlug = '',
+  });
+  factory AiStudioArtifact.fromJson(Map<String, dynamic> j) =>
+      AiStudioArtifact(
+        id: (j['id'] ?? '') as String,
+        kind: (j['kind'] ?? 'note') as String,
+        title: (j['title'] ?? '') as String,
+        subject: (j['subject'] ?? '') as String,
+        classLevel: (j['classLevel'] ?? '') as String,
+        shareSlug: (j['shareSlug'] ?? '') as String,
+        data: (j['data'] ?? const <String, dynamic>{}) as Map<dynamic, dynamic>,
+      );
+  final String id;
+  final String kind; // quiz | note | notebook | lesson_note
+  final String title;
+  final String subject;
+  final String classLevel;
+  final String shareSlug;
+  final Map<dynamic, dynamic> data;
+}
+
+/// One Renance AI exchange's answer.
+class AiChatReply {
+  const AiChatReply({required this.text, required this.mode});
+  final String text;
+  final String mode; // ai (the canned 'guide' mode was removed 2026-10-12)
+}
+
+/// The billing catalog (public): plans, redemption table, WhatsApp.
+class PlanCatalog {
+  const PlanCatalog({
+    required this.plans,
+    required this.redemptions,
+    required this.paystackEnabled,
+    required this.whatsapp,
+    this.studentBillingEnabled = true,
+  });
+
+  final List<PremiumPlan> plans;
+  final List<RenRedemption> redemptions;
+  final bool paystackEnabled;
+  final String whatsapp;
+  /// False while the founder's "everyone rides premium for now" window
+  /// is on: paywalls show the all-unlocked banner instead of buy buttons.
+  final bool studentBillingEnabled;
+
+  factory PlanCatalog.fromJson(Map<String, dynamic> j) => PlanCatalog(
+        plans: ((j['plans'] ?? const <dynamic>[]) as List<dynamic>)
+            .map((dynamic e) => PremiumPlan.fromJson((e as Map).cast<String, dynamic>()))
+            .toList(),
+        redemptions: ((j['redemptions'] ?? const <dynamic>[]) as List<dynamic>)
+            .map((dynamic e) => RenRedemption.fromJson((e as Map).cast<String, dynamic>()))
+            .toList(),
+        paystackEnabled: (j['paystackEnabled'] ?? false) as bool,
+        whatsapp: (j['whatsapp'] ?? '') as String,
+        studentBillingEnabled: (j['studentBillingEnabled'] ?? true) as bool,
+      );
+}
+
+/// One purchasable premium tier.
+class PremiumPlan {
+  const PremiumPlan({
+    required this.code,
+    required this.label,
+    required this.amountNaira,
+    required this.durationDays,
+    required this.perks,
+    this.scope = 'all',
+    this.tier = 0,
+    this.features = const <String>[],
+  });
+
+  final String code;
+  final String label;
+  final int amountNaira;
+  final int durationDays;
+  final String perks;
+  /// "jamb" bounds the annual plan to JAMB papers; "all" opens every body.
+  final String scope;
+  /// Ladder rank: 1 jamb < 2 basic < 3 standard < 4 premium.
+  final int tier;
+  /// The per-tier bullet list the catalog owns.
+  final List<String> features;
+
+  factory PremiumPlan.fromJson(Map<String, dynamic> j) => PremiumPlan(
+        code: (j['code'] ?? '') as String,
+        label: (j['label'] ?? '') as String,
+        amountNaira: ((j['amountNaira'] ?? 0) as num).toInt(),
+        durationDays: ((j['durationDays'] ?? 0) as num).toInt(),
+        perks: (j['perks'] ?? '') as String,
+        scope: (j['scope'] ?? 'all') as String,
+        tier: ((j['tier'] ?? 0) as num).toInt(),
+        features: ((j['features'] ?? const <dynamic>[]) as List<dynamic>)
+            .map((dynamic e) => e.toString())
+            .toList(),
+      );
+}
+
+/// One REN coin exchange rate.
+class RenRedemption {
+  const RenRedemption({
+    required this.code,
+    required this.label,
+    required this.coins,
+  });
+
+  final String code;
+  final String label;
+  final int coins;
+
+  factory RenRedemption.fromJson(Map<String, dynamic> j) => RenRedemption(
+        code: (j['code'] ?? '') as String,
+        label: (j['label'] ?? '') as String,
+        coins: ((j['coins'] ?? 0) as num).toInt(),
+      );
+}
+
+/// One user's entitlement row: premium flag + type + expiry, the REN
+/// wallet, and email verification. The Neon console shape.
+class Entitlement {
+  const Entitlement({
+    required this.premiumRole,
+    required this.premiumType,
+    required this.premiumExpiresAt,
+    required this.renCoins,
+    required this.emailVerified,
+  });
+
+  final bool premiumRole;
+  final String premiumType;
+  final DateTime? premiumExpiresAt;
+  final int renCoins;
+  final bool emailVerified;
+
+  /// Premium is live: role on, and the expiry (when stamped) still ahead.
+  bool get premiumActive =>
+      premiumRole &&
+      (premiumExpiresAt == null || premiumExpiresAt!.isAfter(DateTime.now()));
+
+  factory Entitlement.fromJson(Map<String, dynamic> j) => Entitlement(
+        premiumRole: (j['premiumRole'] ?? false) as bool,
+        premiumType: (j['premiumType'] ?? '') as String,
+        premiumExpiresAt: j['premiumExpiresAt'] == null
+            ? null
+            : DateTime.tryParse(j['premiumExpiresAt'].toString()),
+        renCoins: ((j['renCoins'] ?? 0) as num).toInt(),
+        emailVerified: (j['emailVerified'] ?? false) as bool,
+      );
+
 }

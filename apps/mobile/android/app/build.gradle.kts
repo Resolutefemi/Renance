@@ -99,6 +99,15 @@ android {
 // plugin to this module (the `compilerOptions` extension does not resolve).
 // The Flutter plugin aligns the Kotlin JVM target with the Java
 // compileOptions above on its own, so the explicit block is unnecessary.
+// 2026-10-19: with Flutter 3.47 + KGP 2.4 + AGP 9.1 the auto-alignment no
+// longer happens (Kotlin resolves the JDK 21 toolchain while Java stays on
+// 17), so the explicit target is back - pinned to 17 to match the Java
+// compileOptions and every previous release build.
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+    }
+}
 
 flutter {
     source = "../.."

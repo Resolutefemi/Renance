@@ -182,7 +182,7 @@ class _LessonOverlayScreenState extends State<_LessonOverlayScreen> {
             if (!mounted) return;
           }
           if (doc == null) {
-            throw const NetworkException(
+            throw NetworkException(
               'The generator is still writing this lesson - reopen it in a '
               'few seconds.',
             );
