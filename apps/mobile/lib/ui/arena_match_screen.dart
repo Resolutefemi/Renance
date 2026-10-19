@@ -15,6 +15,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import '../arena_client.dart';
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 class ArenaMatchScreen extends StatefulWidget {
@@ -215,7 +217,7 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                     children: <Widget>[
                       IconButton(
                         onPressed: () => Navigator.of(context).pop(),
-                        icon: const Icon(Icons.chevron_left, size: 24),
+                        icon: const MsIcon('chevron_left', size: 24),
                         color: context.ink,
                       ),
                       const SizedBox(width: 4),
@@ -344,34 +346,23 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                                     Row(
                                       children: <Widget>[
                                         Expanded(
-                                          child: FilledButton(
-                                            style: FilledButton.styleFrom(
-                                              backgroundColor:
-                                                  context.inverseChip,
-                                              foregroundColor:
-                                                  context.onInverseChip,
-                                              minimumSize:
-                                                  const Size.fromHeight(50),
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(12),
-                                              ),
-                                            ),
+                                          child: TactileButton(
+                                            face: context.inverseChip,
+                                            onFace: context.onInverseChip,
+                                            height: 50,
+                                            radius: BorderRadius.circular(12),
                                             onPressed: _rematch,
                                             child: const Text('Rematch'),
                                           ),
                                         ),
                                         const SizedBox(width: 10),
                                         Expanded(
-                                          child: OutlinedButton(
-                                            style: OutlinedButton.styleFrom(
-                                              minimumSize:
-                                                  const Size.fromHeight(50),
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(12),
-                                              ),
-                                            ),
+                                          child: TactileButton(
+                                            outline: context.outlineVariant,
+                                            edge: context.outlineVariant,
+                                            edgeWidth: 3,
+                                            height: 50,
+                                            radius: BorderRadius.circular(12),
                                             onPressed: () =>
                                                 Navigator.of(context).pop(),
                                             child: const Text('The floor'),
@@ -440,72 +431,22 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                                 final bool mine = _picked == opt['letter'];
                                 final bool truth =
                                     _correct == opt['letter'];
+                                final KeyCardState state = truth
+                                    ? KeyCardState.correct
+                                    : _correct != null && mine
+                                        ? KeyCardState.wrong
+                                        : mine
+                                            ? KeyCardState.selected
+                                            : KeyCardState.rest;
                                 return Padding(
                                   padding: const EdgeInsets.only(bottom: 10),
-                                  child: InkWell(
+                                  child: TactileKeyCard(
+                                    label: opt['text'] ?? '',
+                                    badge: opt['letter'] ?? '',
+                                    state: state,
                                     onTap: _picked != null
-                                        ? null
+                                        ? () {}
                                         : () => _pick(opt['letter']!),
-                                    borderRadius: BorderRadius.circular(14),
-                                    child: Container(
-                                      padding: const EdgeInsets.all(12),
-                                      decoration: BoxDecoration(
-                                        color: truth
-                                            ? const Color(0xFFDFF5EA)
-                                            : mine
-                                                ? context.selectionBlue
-                                                : context.card,
-                                        borderRadius:
-                                            BorderRadius.circular(14),
-                                        border: Border.all(
-                                          color: truth
-                                              ? const Color(0xFF00CD9C)
-                                              : mine
-                                                  ? context.ink
-                                                  : context.outlineLight,
-                                          width: mine || truth ? 2 : 1,
-                                        ),
-                                      ),
-                                      child: Row(
-                                        children: <Widget>[
-                                          Container(
-                                            width: 36,
-                                            height: 36,
-                                            alignment: Alignment.center,
-                                            decoration: BoxDecoration(
-                                              color: mine
-                                                  ? context.primary
-                                                  : context.cardLow,
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Text(
-                                              opt['letter'] ?? '',
-                                              style: TextStyle(
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.w700,
-                                                  color: mine
-                                                      ? context.onPrimary
-                                                      : context.ink),
-                                            ),
-                                          ),
-                                          const SizedBox(width: 12),
-                                          Expanded(
-                                            child: Text(
-                                              opt['text'] ?? '',
-                                              style: RenanceText.bodyMedium
-                                                  .copyWith(
-                                                      fontSize: 15.5,
-                                                      fontWeight: mine
-                                                          ? FontWeight.w700
-                                                          : FontWeight.w600),
-                                            ),
-                                          ),
-                                          if (mine)
-                                            Icon(Icons.check_circle,
-                                                size: 20, color: context.textMuted),
-                                        ],
-                                      ),
-                                    ),
                                   ),
                                 );
                               }),

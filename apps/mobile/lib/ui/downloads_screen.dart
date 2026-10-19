@@ -25,6 +25,8 @@ import '../notifications.dart';
 import '../storage.dart';
 import 'university_screens.dart'
     show UniCourse, kUniversitySchools, universityCourses;
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 const String _wifiOnlyPref = 'renance.downloads.wifi_only';
@@ -210,15 +212,15 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
     }
   }
 
-  IconData _connectionIcon(ConnectivityResult c) {
+  String _connectionIcon(ConnectivityResult c) {
     switch (c) {
       case ConnectivityResult.wifi:
-        return Icons.wifi;
+        return 'wifi';
       case ConnectivityResult.mobile:
       case ConnectivityResult.satellite:
-        return Icons.signal_cellular_alt;
+        return 'signal_cellular_alt';
       default:
-        return Icons.wifi_off;
+        return 'wifi_off';
     }
   }
 
@@ -485,19 +487,25 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
             ),
           ],
           const SizedBox(height: 14),
-          FilledButton.icon(
+          TactileButton(
             // Never disabled for an empty selection: tapping with nothing
             // picked downloads EVERY student desk (the old disabled button
             // read as "the download is broken"). Marked School Desk
             // schools ride along first.
             onPressed: busy ? null : _downloadSelected,
-            icon: const Icon(Icons.download_rounded, size: 20),
-            label: Text(
-              _selectedDesks.isEmpty &&
-                      _selectedSchools.isEmpty &&
-                      _selectedUniSchools.isEmpty
-                  ? 'Download everything'
-                  : 'Download ${_selectedDesks.length + _selectedSchools.length + _selectedUniSchools.length} selection(s)',
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                const MsIcon('download', size: 20, fill: true),
+                const SizedBox(width: 8),
+                Text(
+                  _selectedDesks.isEmpty &&
+                          _selectedSchools.isEmpty &&
+                          _selectedUniSchools.isEmpty
+                      ? 'Download everything'
+                      : 'Download ${_selectedDesks.length + _selectedSchools.length + _selectedUniSchools.length} selection(s)',
+                ),
+              ],
             ),
           ),
           if (_selectedUniSchools.isNotEmpty) ...<Widget>[
@@ -562,20 +570,20 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
     }
   }
 
-  IconData _deskIcon(String desk) {
+  String _deskIcon(String desk) {
     switch (desk) {
       case 'POST-UTME':
-        return Icons.apartment;
+        return 'apartment';
       case 'WAEC':
-        return Icons.school;
+        return 'school';
       case 'NECO':
-        return Icons.history_edu;
+        return 'history_edu';
       case 'GCSE':
-        return Icons.public;
+        return 'public';
       case 'NEET':
-        return Icons.medical_services_outlined;
+        return 'medical_services';
       default:
-        return Icons.verified;
+        return 'verified';
     }
   }
 
@@ -594,7 +602,8 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
         ? (packsBytes > 0 ? 1.0 : 0.0)
         : packsBytes / total;
 
-    return Card(
+    return TactileCard(
+      padding: EdgeInsets.zero,
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -602,7 +611,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
           children: <Widget>[
             Row(
               children: <Widget>[
-                const Icon(Icons.storage_outlined, size: 20),
+                const MsIcon('storage', size: 20),
                 const SizedBox(width: 8),
                 Text('Storage', style: RenanceText.sectionTitle.copyWith(color: context.ink)),
                 const Spacer(),
@@ -652,7 +661,8 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
   }
 
   Widget _buildPermissionsCard() {
-    return Card(
+    return TactileCard(
+      padding: EdgeInsets.zero,
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -660,7 +670,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
           children: <Widget>[
             Row(
               children: <Widget>[
-                const Icon(Icons.admin_panel_settings_outlined, size: 20),
+                const MsIcon('admin_panel_settings', size: 20),
                 const SizedBox(width: 8),
                 Text('Permissions', style: RenanceText.sectionTitle.copyWith(color: context.ink)),
               ],
@@ -687,12 +697,12 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                             // OS version genuinely needs no grant). Amber
                             // = a dialog can still fix it. Red = the user
                             // blocked it, only Settings can undo that.
-                            Icon(
+                            MsIcon(
                               p.blocked
-                                  ? Icons.block
+                                  ? 'block'
                                   : p.ready
-                                      ? Icons.check_circle
-                                      : Icons.error_outline,
+                                      ? 'check_circle'
+                                      : 'error',
                               size: 18,
                               color: p.blocked
                                   ? context.error
@@ -783,9 +793,12 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
 
   Widget _buildConnectionCard() {
     final bool isWifi = _connection == ConnectivityResult.wifi;
-    return Card(
-      child: SwitchListTile(
-        secondary: Icon(
+    return TactileCard(
+      padding: EdgeInsets.zero,
+      child: Material(
+        color: Colors.transparent,
+        child: SwitchListTile(
+        secondary: MsIcon(
           _connectionIcon(_connection),
           color: _connection == ConnectivityResult.none
               ? context.error
@@ -808,6 +821,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
           });
         },
       ),
+      ),
     );
   }
 
@@ -824,15 +838,19 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
     final int donePacks = schools.keys
         .fold<int>(0, (int a, String s) => a + _uniSchoolDownloaded(s));
     final List<String> slugs = schools.keys.toList()..sort();
-    return Card(
-      margin: const EdgeInsets.only(top: 10),
-      child: Column(
-        children: <Widget>[
+    return Padding(
+      padding: const EdgeInsets.only(top: 10),
+      child: TactileCard(
+        padding: EdgeInsets.zero,
+        child: Material(
+          color: Colors.transparent,
+          child: Column(
+          children: <Widget>[
           _DeskTile(
             title: 'School Desk (University)',
             subtitle:
                 'Mark the school(s) you want, then download their packs',
-            icon: Icons.account_balance_outlined,
+            icon: 'account_balance',
             packCount: totalPacks,
             downloadedCount: donePacks,
             selected: _selectedUniSchools.isNotEmpty,
@@ -895,19 +913,25 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
           ],
         ],
       ),
+      ),
+      ),
     );
   }
 
   Widget _buildSchoolsTile(SchoolController school) {
     final bool expanded = _schoolsExpanded;
-    return Card(
-      margin: const EdgeInsets.only(top: 10),
-      child: Column(
-        children: <Widget>[
+    return Padding(
+      padding: const EdgeInsets.only(top: 10),
+      child: TactileCard(
+        padding: EdgeInsets.zero,
+        child: Material(
+          color: Colors.transparent,
+          child: Column(
+          children: <Widget>[
           _DeskTile(
             title: 'Schools',
             subtitle: 'Syllabus, scheme of work & notes for school staff',
-            icon: Icons.school_outlined,
+            icon: 'school',
             packCount: _schools.length,
             downloadedCount: school.packs.length,
             selected: _selectedSchools.isNotEmpty,
@@ -971,6 +995,8 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
           ],
         ],
       ),
+      ),
+      ),
     );
   }
 }
@@ -1021,7 +1047,7 @@ class _DeskTile extends StatelessWidget {
 
   final String title;
   final String subtitle;
-  final IconData icon;
+  final String icon;
   final int packCount;
   final int downloadedCount;
   final bool selected;
@@ -1030,13 +1056,17 @@ class _DeskTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final bool complete = packCount > 0 && downloadedCount >= packCount;
-    return Card(
-      margin: const EdgeInsets.only(bottom: 8),
-      child: CheckboxListTile(
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8),
+      child: TactileCard(
+        padding: EdgeInsets.zero,
+        child: Material(
+          color: Colors.transparent,
+          child: CheckboxListTile(
         controlAffinity: ListTileControlAffinity.leading,
         value: selected,
         onChanged: (bool? v) => onChanged(v ?? false),
-        secondary: Icon(icon, size: 26, color: context.ink),
+        secondary: MsIcon(icon, size: 26, color: context.ink),
         title: Row(
           children: <Widget>[
             Expanded(
@@ -1046,13 +1076,15 @@ class _DeskTile extends StatelessWidget {
               ),
             ),
             if (complete)
-              const Icon(Icons.check_circle, size: 18, color: Color(0xFF00CD9C)),
+              const MsIcon('check_circle', size: 18, color: Color(0xFF00CD9C)),
           ],
         ),
         subtitle: Text(
           '$subtitle · $downloadedCount of ${packCount > 0 ? packCount : '?'} packs offline',
           style: RenanceText.caption.copyWith(color: context.textSecondary),
         ),
+      ),
+      ),
       ),
     );
   }

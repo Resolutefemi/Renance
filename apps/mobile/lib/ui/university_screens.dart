@@ -21,7 +21,9 @@ import '../models.dart';
 import '../papers.dart';
 import '../storage.dart';
 import 'exam_screen.dart';
+import 'msymbols.dart';
 import 'renance_logo.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 /// slug -> (short name, full name) for every school whose banks ship.
@@ -212,7 +214,7 @@ class UniversityPickerScreen extends StatelessWidget {
                     children: <Widget>[
                       IconButton(
                         onPressed: () => Navigator.of(context).pop(),
-                        icon: const Icon(Icons.arrow_back_ios_new, size: 20),
+                        icon: const MsIcon('arrow_back_ios_new', size: 20),
                         color: context.ink,
                       ),
                     ],
@@ -308,14 +310,15 @@ class _PickerCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.only(bottom: 10),
-      elevation: 0,
-      color: locked ? context.cardLow : context.card,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      child: ListTile(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: TactileCard(
+        color: locked ? context.cardLow : context.card,
+        radius: BorderRadius.circular(12),
+        padding: EdgeInsets.zero,
         onTap: onTap,
+        child: ListTile(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         enabled: onTap != null,
         leading: Container(
           width: 44,
@@ -347,6 +350,7 @@ class _PickerCard extends StatelessWidget {
             style: RenanceText.labelMono.copyWith(
                 fontSize: 11,
                 color: context.textSecondary)),
+      ),
       ),
     );
   }
@@ -426,7 +430,7 @@ class _UniversityDeskScreenState extends State<UniversityDeskScreen> {
                     children: <Widget>[
                       IconButton(
                         onPressed: () => Navigator.of(context).pop(),
-                        icon: const Icon(Icons.arrow_back_ios_new, size: 20),
+                        icon: const MsIcon('arrow_back_ios_new', size: 20),
                         color: context.ink,
                       ),
                     ],
@@ -450,12 +454,12 @@ class _UniversityDeskScreenState extends State<UniversityDeskScreen> {
                         textInputAction: TextInputAction.search,
                         decoration: InputDecoration(
                           hintText: 'Search courses - try "GST 112"',
-                          prefixIcon: const Icon(Icons.search, size: 20),
+                          prefixIcon: const MsIcon('search', size: 20),
                           suffixIcon: _query.isEmpty
                               ? null
                               : IconButton(
                                   tooltip: 'Clear',
-                                  icon: const Icon(Icons.close, size: 18),
+                                  icon: const MsIcon('close', size: 18),
                                   onPressed: () {
                                     _searchCtrl.clear();
                                     setState(() => _query = '');
@@ -554,14 +558,15 @@ class _CourseTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.only(bottom: 10),
-      elevation: 0,
-      color: context.card,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      child: ListTile(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: TactileCard(
+        color: context.card,
+        radius: BorderRadius.circular(12),
+        padding: EdgeInsets.zero,
         onTap: onOpen,
+        child: ListTile(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         leading: Container(
           width: 44,
           height: 44,
@@ -570,8 +575,8 @@ class _CourseTile extends StatelessWidget {
             color: context.cardHigh,
             borderRadius: BorderRadius.circular(10),
           ),
-          child: Icon(
-            course.isPostUtme ? Icons.history_edu : Icons.quiz,
+          child: MsIcon(
+            course.isPostUtme ? 'history_edu' : 'quiz',
             size: 22,
             color: context.ink,
           ),
@@ -583,14 +588,15 @@ class _CourseTile extends StatelessWidget {
           style: RenanceText.caption.copyWith(color: context.textSecondary),
         ),
         trailing: downloaded
-            ? const Icon(Icons.check_circle,
+            ? const MsIcon('check_circle',
                 size: 20, color: RenanceColors.emerald)
             : IconButton(
-                icon: Icon(Icons.download, size: 20,
+                icon: MsIcon('download', size: 20,
                     color: context.textSecondary),
                 onPressed: onDownload,
                 tooltip: 'Download for offline',
               ),
+      ),
       ),
     );
   }
@@ -730,7 +736,7 @@ class _PracticeSheetState extends State<_PracticeSheet> {
                 children: <Widget>[
                   for (final int n in _randomSizes) ...<Widget>[
                     Expanded(
-                      child: OutlinedButton(
+                      child: TactileButton(
                         onPressed: () => _start(
                           context,
                           pickExamMeta(
@@ -739,9 +745,11 @@ class _PracticeSheetState extends State<_PracticeSheet> {
                             count: n,
                           ),
                         ),
-                        style: OutlinedButton.styleFrom(
-                          padding: const EdgeInsets.symmetric(vertical: 12),
-                        ),
+                        outline: context.outlineVariant,
+                        edge: context.outlineVariant,
+                        edgeWidth: 3,
+                        height: 46,
+                        fontSize: 14,
                         child: Text('$n Q'),
                       ),
                     ),
@@ -762,29 +770,35 @@ class _PracticeSheetState extends State<_PracticeSheet> {
                   childAspectRatio: 2.4,
                   children: <Widget>[
                     for (int p = 0; p < parts; p++)
-                      OutlinedButton(
-                        onPressed: () {
-                          final int from = p * _partSize + 1;
-                          _start(
-                            context,
-                            pickExamMeta(
-                              buildPickCode(
-                                course.exam.code,
+                      Center(
+                        child: TactileButton(
+                          onPressed: () {
+                            final int from = p * _partSize + 1;
+                            _start(
+                              context,
+                              pickExamMeta(
+                                buildPickCode(
+                                  course.exam.code,
+                                  count: _partSize,
+                                  from: from,
+                                ),
+                                course.exam,
                                 count: _partSize,
-                                from: from,
                               ),
-                              course.exam,
-                              count: _partSize,
-                            ),
-                          );
-                        },
-                        style: OutlinedButton.styleFrom(
-                          padding: EdgeInsets.zero,
-                        ),
-                        child: Text(
-                          'Q${p * _partSize + 1}-'
-                          '${(p + 1) * _partSize > total ? total : (p + 1) * _partSize}',
-                          style: RenanceText.labelMono.copyWith(fontSize: 11),
+                            );
+                          },
+                          outline: context.outlineVariant,
+                          edge: context.outlineVariant,
+                          edgeWidth: 3,
+                          height: 44,
+                          radius: BorderRadius.circular(12),
+                          fontSize: 12.5,
+                          expand: false,
+                          padding: const EdgeInsets.symmetric(horizontal: 14),
+                          child: Text(
+                            'Q${p * _partSize + 1}-'
+                            '${(p + 1) * _partSize > total ? total : (p + 1) * _partSize}',
+                          ),
                         ),
                       ),
                   ],

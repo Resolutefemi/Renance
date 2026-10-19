@@ -26,6 +26,7 @@ import 'package:provider/provider.dart';
 import '../api_client.dart';
 import '../controllers.dart';
 import '../models.dart';
+import 'msymbols.dart';
 import 'theme.dart';
 
 /// Study plan screen entry.
@@ -44,10 +45,10 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
   int _energy = 0; // 0 Sharp, 1 Normal, 2 Tired
 
   static const List<String> _kEnergies = <String>['Sharp', 'Normal', 'Tired'];
-  static const List<IconData> _kEnergyIcons = <IconData>[
-    Icons.bolt,
-    Icons.battery_charging_full,
-    Icons.battery_1_bar,
+  static const List<String> _kEnergyIcons = <String>[
+    'bolt',
+    'battery_charging_full',
+    'battery_1_bar',
   ];
 
   // Live slices loaded once; null = unknown, fall back to Stitch copy.
@@ -132,7 +133,7 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
                   children: <Widget>[
                     IconButton(
                       onPressed: () => Navigator.of(context).pop(),
-                      icon: const Icon(Icons.arrow_back_ios_new, size: 20),
+                      icon: const MsIcon('arrow_back_ios_new', size: 20),
                       color: context.ink,
                     ),
                     const SizedBox(width: 4),
@@ -170,7 +171,7 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
                               color: context.cardLow,
                               shape: BoxShape.circle,
                             ),
-                            child: Icon(Icons.edit_outlined,
+                            child: MsIcon('edit',
                                 size: 20, color: context.ink),
                           ),
                         ],
@@ -180,7 +181,7 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
                           style: RenanceText.displayMd),
                       const SizedBox(height: 16),
                       _PlanRow(
-                        icon: Icons.science_outlined,
+                        icon: 'science',
                         iconBg: const Color(0xFFE8F5E9),
                         iconColor: RenanceColors.emerald,
                         title: plan.practiceTitle,
@@ -190,7 +191,7 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
                       ),
                       const SizedBox(height: 10),
                       _PlanRow(
-                        icon: Icons.style_outlined,
+                        icon: 'style',
                         iconBg: const Color(0xFFF7F7F7),
                         iconColor: context.ink,
                         title: 'Review Cards',
@@ -240,7 +241,7 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
                           color: context.card,
                           shape: BoxShape.circle,
                         ),
-                        child: Icon(Icons.lightbulb_outlined,
+                        child: MsIcon('lightbulb',
                             size: 22, color: context.ink),
                       ),
                       const SizedBox(width: 16),
@@ -381,7 +382,7 @@ class _PlanRow extends StatelessWidget {
     this.onTap,
   });
 
-  final IconData icon;
+  final String icon;
   final Color iconBg;
   final Color iconColor;
   final String title;
@@ -433,7 +434,7 @@ class _PlanRow extends StatelessWidget {
                 color: iconBg,
                 shape: BoxShape.circle,
               ),
-              child: Icon(icon, size: 24, color: iconColor),
+              child: MsIcon(icon, size: 24, color: iconColor),
             ),
             const SizedBox(width: 14),
             Expanded(
@@ -449,7 +450,7 @@ class _PlanRow extends StatelessWidget {
                 ],
               ),
             ),
-            Icon(Icons.play_arrow_rounded,
+            MsIcon('play_arrow',
                 size: 26, color: context.ink),
           ],
         ),
@@ -468,7 +469,7 @@ class _EnergyChip extends StatelessWidget {
   });
 
   final String label;
-  final IconData icon;
+  final String icon;
   final bool selected;
   final VoidCallback onTap;
 
@@ -489,7 +490,7 @@ class _EnergyChip extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Icon(icon,
+              MsIcon(icon,
                   size: 18,
                   color: selected ? context.ink : context.textSecondary),
               const SizedBox(width: 6),

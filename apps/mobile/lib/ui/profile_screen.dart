@@ -26,6 +26,7 @@ import 'learn_bits.dart';
 import 'msymbols.dart';
 import 'shop_panel.dart';
 import 'social_screens.dart';
+import 'tactile.dart';
 import 'theme.dart';
 import 'university_screens.dart';
 
@@ -273,7 +274,7 @@ class ProfileScreen extends StatelessWidget {
         // Premium: the plans desk, the REN wallet and the blue tick.
         _MenuGroup(items: <_MenuItem>[
           _MenuItem(
-            icon: Icons.verified,
+            icon: 'verified',
             tint: const Color(0xFF1D9BF0),
             label: 'Renance Premium',
             onTap: () {
@@ -288,7 +289,7 @@ class ProfileScreen extends StatelessWidget {
         // affordance for the on-device pack library) ----------------------
         _MenuGroup(items: <_MenuItem>[
           _MenuItem(
-            icon: Icons.history_edu,
+            icon: 'history_edu',
             tint: context.ink,
             label: 'Exam History',
             onTap: () {
@@ -297,7 +298,7 @@ class ProfileScreen extends StatelessWidget {
             },
           ),
           _MenuItem(
-            icon: Icons.insights,
+            icon: 'insights',
             tint: context.ink,
             label: 'Performance Analysis',
             onTap: () {
@@ -306,7 +307,7 @@ class ProfileScreen extends StatelessWidget {
             },
           ),
           _MenuItem(
-            icon: Icons.bookmark_border,
+            icon: 'bookmark',
             tint: context.ink,
             label: 'Saved Questions',
             onTap: () {
@@ -315,13 +316,13 @@ class ProfileScreen extends StatelessWidget {
             },
           ),
           _MenuItem(
-            icon: Icons.auto_stories,
+            icon: 'auto_stories',
             tint: context.ink,
             label: 'My Packs',
             onTap: () => onGoTab(1),
           ),
           _MenuItem(
-            icon: Icons.download,
+            icon: 'download',
             tint: context.ink,
             label: 'Downloads',
             onTap: () {
@@ -330,7 +331,7 @@ class ProfileScreen extends StatelessWidget {
             },
           ),
           _MenuItem(
-            icon: Icons.calculate,
+            icon: 'calculate',
             tint: context.ink,
             label: 'GPA Calculator',
             onTap: () {
@@ -343,7 +344,7 @@ class ProfileScreen extends StatelessWidget {
         // Menu group: system ---------------------------------------------
         _MenuGroup(items: <_MenuItem>[
           _MenuItem(
-            icon: Icons.settings,
+            icon: 'settings',
             tint: context.textSecondary,
             label: 'Settings',
             onTap: () {
@@ -352,13 +353,13 @@ class ProfileScreen extends StatelessWidget {
             },
           ),
           _MenuItem(
-            icon: Icons.history_edu,
+            icon: 'history_edu',
             tint: context.textSecondary,
             label: 'My papers',
             onTap: () => onGoTab(2),
           ),
           _MenuItem(
-            icon: Icons.help,
+            icon: 'help',
             tint: context.textSecondary,
             label: 'Help & Support',
             onTap: () {
@@ -400,7 +401,7 @@ class ProfileScreen extends StatelessWidget {
                       color: context.errorContainer,
                     ),
                     child:
-                        Icon(Icons.logout, color: context.error),
+                        MsIcon('logout', size: 24, color: context.error),
                   ),
                   const SizedBox(width: 16),
                   Text('Sign Out',
@@ -452,7 +453,7 @@ class _FocusCard extends StatelessWidget {
                   shape: BoxShape.circle,
                   color: context.selectionBlue,
                 ),
-                child: Icon(Icons.track_changes,
+                child: MsIcon('track_changes',
                     size: 22, color: context.ink),
               ),
               const SizedBox(width: 16),
@@ -483,8 +484,8 @@ class _FocusCard extends StatelessWidget {
                         RenanceText.labelMono.copyWith(fontSize: 12)),
               ),
               const SizedBox(width: 8),
-              Icon(Icons.swap_horiz,
-                  color: context.outlineLight),
+              MsIcon('swap_horiz',
+                  size: 24, color: context.outlineLight),
             ],
           ),
         ),
@@ -560,7 +561,7 @@ class _MenuItem {
     required this.onTap,
   });
 
-  final IconData icon;
+  final String icon;
   final Color tint;
   final String label;
   final VoidCallback onTap;
@@ -600,14 +601,14 @@ class _MenuGroup extends StatelessWidget {
                         shape: BoxShape.circle,
                         color: context.surfaceContainer,
                       ),
-                      child: Icon(items[i].icon, size: 22, color: items[i].tint),
+                      child: MsIcon(items[i].icon, size: 22, color: items[i].tint),
                     ),
                     const SizedBox(width: 16),
                     Expanded(
                       child: Text(items[i].label, style: RenanceText.bodyMedium),
                     ),
-                    Icon(Icons.chevron_right,
-                        color: context.outlineLight),
+                    MsIcon('chevron_right',
+                        size: 24, color: context.outlineLight),
                   ],
                 ),
               ),
@@ -693,44 +694,44 @@ class _SchoolCard extends StatelessWidget {
                     final (String short, String full) =
                         kUniversitySchools[slug] ??
                             (slug.toUpperCase(), slug);
-                    return Card(
-                      margin: const EdgeInsets.only(bottom: 8),
-                      elevation: 0,
-                      color: sheetContext.card,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)),
-                      child: ListTile(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                        leading: Container(
-                          width: 44,
-                          height: 44,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            color: sheetContext.selectionBlue
-                                .withValues(alpha: 0.15),
-                            borderRadius: BorderRadius.circular(10),
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 8),
+                      child: TactileCard(
+                        color: sheetContext.card,
+                        radius: BorderRadius.circular(12),
+                        padding: EdgeInsets.zero,
+                        onTap: () => Navigator.of(sheetContext).pop(slug),
+                        child: ListTile(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12)),
+                          leading: Container(
+                            width: 44,
+                            height: 44,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: sheetContext.selectionBlue
+                                  .withValues(alpha: 0.15),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Text(
+                              short.length <= 5 ? short : short.substring(0, 4),
+                              style: RenanceText.labelMono.copyWith(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w700,
+                                  color: sheetContext.ink),
+                            ),
                           ),
-                          child: Text(
-                            short.length <= 5 ? short : short.substring(0, 4),
-                            style: RenanceText.labelMono.copyWith(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w700,
-                                color: sheetContext.ink),
-                          ),
+                          title: Text(short,
+                              style: RenanceText.bodyMedium
+                                  .copyWith(fontWeight: FontWeight.w600)),
+                          subtitle: Text(full,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: RenanceText.caption.copyWith(
+                                  color: sheetContext.textSecondary)),
+                          trailing: MsIcon('chevron_right',
+                              size: 24, color: sheetContext.outlineLight),
                         ),
-                        title: Text(short,
-                            style: RenanceText.bodyMedium
-                                .copyWith(fontWeight: FontWeight.w600)),
-                        subtitle: Text(full,
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: RenanceText.caption.copyWith(
-                                color: sheetContext.textSecondary)),
-                        trailing: Icon(Icons.chevron_right,
-                            color: sheetContext.outlineLight),
-                        onTap: () =>
-                            Navigator.of(sheetContext).pop(slug),
                       ),
                     );
                   },
@@ -812,7 +813,7 @@ class _SchoolCard extends StatelessWidget {
                   shape: BoxShape.circle,
                   color: context.selectionBlue,
                 ),
-                child: Icon(Icons.account_balance_outlined,
+                child: MsIcon('account_balance',
                     size: 22, color: context.ink),
               ),
               const SizedBox(width: 16),
@@ -831,9 +832,9 @@ class _SchoolCard extends StatelessWidget {
                 ),
               ),
               if (editable)
-                Icon(Icons.edit, size: 20, color: context.outlineLight)
+                MsIcon('edit', size: 20, color: context.outlineLight)
               else
-                Icon(Icons.lock_outline,
+                MsIcon('lock',
                     size: 18, color: context.outlineLight),
             ],
           ),

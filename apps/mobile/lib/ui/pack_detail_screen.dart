@@ -16,7 +16,9 @@ import '../controllers.dart';
 import '../models.dart';
 import '../papers.dart';
 import '../storage.dart';
+import 'msymbols.dart';
 import 'practice_setup_screen.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 class PackDetailScreen extends StatefulWidget {
@@ -193,7 +195,7 @@ class _Header extends StatelessWidget {
       children: <Widget>[
         IconButton(
           onPressed: onBack,
-          icon: const Icon(Icons.arrow_back_ios_new, size: 20),
+          icon: const MsIcon('arrow_back_ios_new', size: 20),
           color: context.ink,
         ),
         const SizedBox(width: 4),
@@ -235,14 +237,14 @@ class _SubjectIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String code = exam.code.toLowerCase();
-    final IconData icon = switch (code) {
-      final String c when c.contains('bio') => Icons.biotech,
-      final String c when c.contains('chem') => Icons.science,
-      final String c when c.contains('phys') => Icons.rocket_launch,
-      final String c when c.contains('english') => Icons.translate,
-      final String c when c.contains('math') => Icons.calculate,
-      final String c when c.contains('cos') => Icons.terminal,
-      _ => Icons.description,
+    final String icon = switch (code) {
+      final String c when c.contains('bio') => 'biotech',
+      final String c when c.contains('chem') => 'science',
+      final String c when c.contains('phys') => 'rocket_launch',
+      final String c when c.contains('english') => 'translate',
+      final String c when c.contains('math') => 'calculate',
+      final String c when c.contains('cos') => 'terminal',
+      _ => 'description',
     };
     return Container(
       width: 48,
@@ -251,7 +253,7 @@ class _SubjectIcon extends StatelessWidget {
         color: context.cardHigh,
         borderRadius: BorderRadius.circular(12),
       ),
-      child: Icon(icon, color: context.ink, size: 24),
+      child: MsIcon(icon, color: context.ink, size: 24),
     );
   }
 }
@@ -325,22 +327,22 @@ class _OfflineCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final (IconData icon, String title, String body, Color tint) = downloaded
+    final (String icon, String title, String body, Color tint) = downloaded
         ? (
-            Icons.offline_bolt,
+            'offline_bolt',
             'Ready offline',
             'This pack lives on your device. Practice without data.',
             RenanceColors.emerald,
           )
         : downloading
             ? (
-                Icons.downloading,
+                'downloading',
                 'Downloading…',
                 'The pack lands on your device in moments.',
                 RenanceColors.amber,
               )
             : (
-                Icons.cloud_download_outlined,
+                'cloud_download',
                 'Not on this device yet',
                 'Tap download to keep this pack available without data.',
                 context.textSecondary,
@@ -361,7 +363,7 @@ class _OfflineCard extends StatelessWidget {
               color: context.card,
               shape: BoxShape.circle,
             ),
-            child: Icon(icon, size: 20, color: tint),
+            child: MsIcon(icon, size: 20, color: tint),
           ),
           const SizedBox(width: 12),
           Expanded(
@@ -494,38 +496,15 @@ class _PrimaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return TactileButton(
       height: 52,
-      child: DecoratedBox(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: const <BoxShadow>[
-            BoxShadow(
-              color: Color(0x14000000),
-              blurRadius: 8,
-              offset: Offset(0, 2),
-            ),
-          ],
-        ),
-        child: FilledButton(
-          onPressed: onPressed,
-          style: FilledButton.styleFrom(
-            backgroundColor: context.inverseChip,
-            foregroundColor: context.onInverseChip,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
-          ),
-          child: Text(
-            label,
-            style: const TextStyle(
-              fontFamily: 'Inter',
-              fontSize: 15,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-        ),
-      ),
+      radius: BorderRadius.circular(10),
+      face: context.inverseChip,
+      onFace: context.onInverseChip,
+      fontSize: 15,
+      fontWeight: FontWeight.w600,
+      onPressed: onPressed,
+      child: Text(label),
     );
   }
 }

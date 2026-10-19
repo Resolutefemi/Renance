@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../api_client.dart';
 import '../models.dart';
+import 'msymbols.dart';
 import 'theme.dart';
 
 /// Tutor entry (ROADMAP #9): pick a graded paper, then a question, then
@@ -72,8 +73,8 @@ class _TutorEntryScreenState extends State<TutorEntryScreen> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Icon(
-                      Icons.smart_toy,
+                    MsIcon(
+                      'smart_toy',
                       size: 40,
                       color: context.primary,
                     ),
@@ -138,8 +139,8 @@ class _PaperRow extends StatelessWidget {
           ),
           child: Row(
             children: <Widget>[
-              Icon(
-                Icons.smart_toy,
+              MsIcon(
+                'smart_toy',
                 size: 20,
                 color: context.primary,
               ),
@@ -157,8 +158,8 @@ class _PaperRow extends StatelessWidget {
                 style: RenanceText.labelMono.copyWith(fontSize: 12),
               ),
               const SizedBox(width: 4),
-              Icon(
-                Icons.chevron_right,
+              MsIcon(
+                'chevron_right',
                 size: 18,
                 color: context.textSecondary,
               ),
@@ -329,8 +330,8 @@ class _QuestionRow extends StatelessWidget {
                   ),
                 ),
               ),
-              Icon(
-                Icons.chevron_right,
+              MsIcon(
+                'chevron_right',
                 size: 18,
                 color: context.textSecondary,
               ),
@@ -664,8 +665,8 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
                       ),
                       IconButton(
                         onPressed: _busy ? null : () => _send(_input.text),
-                        icon: Icon(
-                          Icons.send,
+                        icon: MsIcon(
+                          'send',
                           size: 20,
                           color: context.primary,
                         ),
@@ -699,9 +700,10 @@ class _PickedCorrectRow extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Icon(
-          good ? Icons.check_circle : (dim ? Icons.circle_outlined : Icons.cancel),
+        MsIcon(
+          good ? 'check_circle' : (dim ? 'circle' : 'cancel'),
           size: 16,
+          fill: good || !dim,
           color: dim
               ? context.textSecondary
               : good

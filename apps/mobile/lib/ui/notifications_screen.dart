@@ -15,6 +15,7 @@ import 'package:provider/provider.dart';
 import '../controllers.dart';
 import '../models.dart';
 import 'lessons_screen.dart' show LessonReaderScreen;
+import 'msymbols.dart';
 import 'theme.dart';
 
 /// One feed row. `time` is a short relative label computed at build.
@@ -30,7 +31,7 @@ class FeedItem {
   });
 
   final String key;
-  final IconData icon;
+  final String icon;
   final Color tint;
   final String title;
   final String body;
@@ -72,7 +73,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
     if (due > 0) {
       feed.add(FeedItem(
         key: 'review-due',
-        icon: Icons.history_edu,
+        icon: 'history_edu',
         tint: RenanceColors.emerald,
         title: '$due topic${due == 1 ? '' : 's'} due for review',
         body: 'Spaced repetition picked these from your weaker topics.',
@@ -87,7 +88,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
     final List<Award> awards = List<Award>.of(student.gamification?.awards ?? <Award>[])
       ..sort((Award a, Award b) => b.earnedAt.compareTo(a.earnedAt));
     for (final Award award in awards.take(5)) {
-      final (String label, IconData icon, Color tint) = _awardLabel(award.code);
+      final (String label, String icon, Color tint) = _awardLabel(award.code);
       feed.add(FeedItem(
         key: 'award-${award.code}-${award.earnedAt.millisecondsSinceEpoch}',
         icon: icon,
@@ -103,7 +104,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
     if (streak >= 2) {
       feed.add(FeedItem(
         key: 'streak',
-        icon: Icons.local_fire_department,
+        icon: 'local_fire_department',
         tint: RenanceColors.amber,
         title: '$streak-day streak running',
         body: 'Practice anything today to keep the flame alive.',
@@ -116,7 +117,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
     for (final LessonMeta lesson in lessons.lessons.take(3)) {
       feed.add(FeedItem(
         key: 'lesson-${lesson.slug}',
-        icon: Icons.menu_book,
+        icon: 'menu_book',
         tint: context.ink,
         title: lesson.title,
         body: lesson.summary.isEmpty
@@ -136,32 +137,32 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
     return feed;
   }
 
-  (String, IconData, Color) _awardLabel(String code) => switch (code) {
-        'first_blood' => ('First Blood', Icons.flag, context.ink),
-        'xp_500' => ('Scholar', Icons.school, context.ink),
-        'xp_2000' => ('Champion', Icons.military_tech, RenanceColors.amber),
-        'century' => ('Century', Icons.emoji_events, RenanceColors.emerald),
+  (String, String, Color) _awardLabel(String code) => switch (code) {
+        'first_blood' => ('First Blood', 'flag', context.ink),
+        'xp_500' => ('Scholar', 'school', context.ink),
+        'xp_2000' => ('Champion', 'military_tech', RenanceColors.amber),
+        'century' => ('Century', 'emoji_events', RenanceColors.emerald),
         'perfect_paper' => (
             'Flawless',
-            Icons.workspace_premium,
+            'workspace_premium',
             context.ink
           ),
         'streak_3' => (
             'Warming Up',
-            Icons.local_fire_department,
+            'local_fire_department',
             RenanceColors.amber
           ),
         'streak_7' => (
             'On Fire',
-            Icons.local_fire_department,
+            'local_fire_department',
             RenanceColors.amber
           ),
         'streak_30' => (
             'Unstoppable',
-            Icons.rocket_launch,
+            'rocket_launch',
             context.ink
           ),
-        _ => ('Badge', Icons.emoji_events, context.ink),
+        _ => ('Badge', 'emoji_events', context.ink),
       };
 
   static String _awardHint(String code) => switch (code) {
@@ -206,7 +207,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                     children: <Widget>[
                       IconButton(
                         onPressed: () => Navigator.of(context).pop(),
-                        icon: const Icon(Icons.arrow_back_ios_new, size: 20),
+                        icon: const MsIcon('arrow_back_ios_new', size: 20),
                         color: context.ink,
                       ),
                       const SizedBox(width: 4),
@@ -257,7 +258,7 @@ class _AllCaughtUp extends StatelessWidget {
               color: context.cardHigh,
               shape: BoxShape.circle,
             ),
-            child: const Icon(Icons.done_all,
+            child: const MsIcon('done_all',
                 color: RenanceColors.emerald, size: 26),
           ),
           const SizedBox(height: 14),
@@ -300,7 +301,7 @@ class _FeedRow extends StatelessWidget {
                   color: context.cardLow,
                   shape: BoxShape.circle,
                 ),
-                child: Icon(item.icon, size: 19, color: item.tint),
+                child: MsIcon(item.icon, size: 19, color: item.tint),
               ),
               const SizedBox(width: 12),
               Expanded(

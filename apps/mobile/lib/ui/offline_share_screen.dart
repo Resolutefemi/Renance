@@ -23,6 +23,8 @@ import 'package:share_plus/share_plus.dart';
 import '../controllers.dart';
 import '../models.dart';
 import '../pack_share.dart';
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 class OfflineShareScreen extends StatefulWidget {
@@ -63,7 +65,7 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                       IconButton(
                         onPressed: () => Navigator.of(context).pop(),
                         icon:
-                            const Icon(Icons.arrow_back_ios_new, size: 20),
+                            const MsIcon('arrow_back_ios_new', size: 20),
                         color: context.ink,
                       ),
                       const SizedBox(width: 4),
@@ -86,7 +88,7 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                     children: <Widget>[
                       Expanded(
                         child: _ActionCard(
-                          icon: Icons.arrow_upward,
+                          icon: 'arrow_upward',
                           label: 'Send Pack',
                           onTap: () => _sendFlow(context),
                         ),
@@ -94,7 +96,7 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                       const SizedBox(width: 12),
                       Expanded(
                         child: _ActionCard(
-                          icon: Icons.arrow_downward,
+                          icon: 'arrow_downward',
                           label: 'Receive',
                           onTap: () => _receiveFlow(context),
                         ),
@@ -191,7 +193,7 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                                 color: context.cardHigh,
                                 shape: BoxShape.circle,
                               ),
-                              child: Icon(Icons.smartphone_outlined,
+                              child: MsIcon('smartphone',
                                   size: 22, color: context.ink),
                             ),
                             const SizedBox(width: 12),
@@ -208,27 +210,17 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                                 ],
                               ),
                             ),
-                            SizedBox(
+                            TactileButton(
                               height: 44,
-                              child: FilledButton(
-                                style: FilledButton.styleFrom(
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius:
-                                          BorderRadius.circular(12)),
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 20),
-                                  // The theme's minimum width is infinite
-                                  // (full-width buttons); this Row measures
-                                  // children unbounded, so pin a real min.
-                                  minimumSize: const Size(96, 44),
-                                ),
-                                onPressed: () => _snack(
-                                    'Peer transfer ships in an upcoming release.'),
-                                child: const Text('Connect',
-                                    style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w600)),
-                              ),
+                              radius: BorderRadius.circular(12),
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              expand: false,
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 20),
+                              onPressed: () => _snack(
+                                  'Peer transfer ships in an upcoming release.'),
+                              child: const Text('Connect'),
                             ),
                           ],
                         ),
@@ -314,7 +306,7 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                         color: sheetContext.cardHigh,
                         shape: BoxShape.circle,
                       ),
-                      child: Icon(Icons.folder_outlined,
+                      child: MsIcon('folder',
                           size: 22, color: sheetContext.ink),
                     ),
                     title: Text(
@@ -327,7 +319,7 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                       style: RenanceText.caption
                           .copyWith(color: sheetContext.textSecondary),
                     ),
-                    trailing: Icon(Icons.chevron_right,
+                    trailing: MsIcon('chevron_right',
                         size: 24, color: sheetContext.textSecondary),
                     onTap: () => Navigator.of(sheetContext).pop(onDevice[i]),
                   ),
@@ -391,40 +383,30 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
 class _ActionCard extends StatelessWidget {
   const _ActionCard({required this.icon, required this.label, required this.onTap});
 
-  final IconData icon;
+  final String icon;
   final String label;
   final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return TactileCard(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(16),
-      child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 24),
-        decoration: BoxDecoration(
-          color: context.card,
-          borderRadius: BorderRadius.circular(16),
-          boxShadow: const <BoxShadow>[
-            BoxShadow(
-                color: Color(0x14141C2D), blurRadius: 6, offset: Offset(0, 2)),
-          ],
-        ),
-        child: Column(
-          children: <Widget>[
-            Container(
-              width: 56,
-              height: 56,
-              decoration: BoxDecoration(
-                color: context.cardLow,
-                shape: BoxShape.circle,
-              ),
-              child: Icon(icon, size: 26, color: context.ink),
+      radius: BorderRadius.circular(16),
+      padding: const EdgeInsets.symmetric(vertical: 24),
+      child: Column(
+        children: <Widget>[
+          Container(
+            width: 56,
+            height: 56,
+            decoration: BoxDecoration(
+              color: context.cardLow,
+              shape: BoxShape.circle,
             ),
-            const SizedBox(height: 14),
-            Text(label, style: RenanceText.bodyMedium.copyWith(fontSize: 17)),
-          ],
-        ),
+            child: MsIcon(icon, size: 26, color: context.ink),
+          ),
+          const SizedBox(height: 14),
+          Text(label, style: RenanceText.bodyMedium.copyWith(fontSize: 17)),
+        ],
       ),
     );
   }

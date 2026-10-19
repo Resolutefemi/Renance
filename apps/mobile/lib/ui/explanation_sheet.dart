@@ -21,6 +21,8 @@ import '../api_client.dart';
 import '../scenarios.dart';
 import '../models.dart';
 import '../qtext.dart';
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 class ExplanationSheet extends StatefulWidget {
@@ -134,19 +136,10 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                 ),
                 child: Row(
                   children: <Widget>[
-                    InkWell(
+                    TactileBackKey(
                       onTap: () => Navigator.of(context).pop(),
-                      customBorder: const CircleBorder(),
-                      child: Container(
-                        width: 40,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(color: context.error),
-                        ),
-                        child:
-                            Icon(Icons.close, size: 19, color: context.error),
-                      ),
+                      icon: 'close',
+                      size: 40,
                     ),
                     const SizedBox(width: 12),
                     Expanded(
@@ -158,37 +151,25 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                       ),
                     ),
                     // The Save pill - Myschool's bookmark position.
-                    InkWell(
-                      onTap: _toggleSave,
-                      borderRadius: BorderRadius.circular(999),
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 14, vertical: 8),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(999),
-                          border: Border.all(color: context.error),
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: <Widget>[
-                            Icon(
-                              widget.saved
-                                  ? Icons.bookmark
-                                  : Icons.bookmark_border,
-                              size: 16,
-                              color: context.error,
-                            ),
-                            const SizedBox(width: 6),
-                            Text(
-                              widget.saved ? 'Saved' : 'Save',
-                              style: TextStyle(
-                                fontSize: 13.5,
-                                fontWeight: FontWeight.w700,
-                                color: context.error,
-                              ),
-                            ),
-                          ],
-                        ),
+                    TactileButton(
+                      onPressed: _toggleSave,
+                      outline: context.error,
+                      onFace: context.error,
+                      height: 36,
+                      radius: RenanceRadius.chip,
+                      fontSize: 12.5,
+                      fontWeight: FontWeight.w700,
+                      edgeWidth: 3,
+                      expand: false,
+                      padding: const EdgeInsets.symmetric(horizontal: 14),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          MsIcon('bookmark',
+                              size: 16, fill: widget.saved),
+                          const SizedBox(width: 6),
+                          Text(widget.saved ? 'Saved' : 'Save'),
+                        ],
                       ),
                     ),
                   ],
@@ -324,7 +305,7 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: <Widget>[
-                                      Icon(Icons.auto_awesome,
+                                      MsIcon('auto_awesome',
                                           size: 13,
                                           color: context.textSecondary),
                                       const SizedBox(width: 5),
@@ -389,7 +370,7 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                     children: <Widget>[
                       Row(
                         children: <Widget>[
-                          Icon(Icons.lightbulb_outline,
+                          MsIcon('lightbulb',
                               size: 16, color: context.textSecondary),
                           const SizedBox(width: 6),
                           Expanded(
@@ -443,52 +424,37 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                     if (graded)
                       Align(
                         alignment: Alignment.center,
-                        child: Material(
-                          color: context.cardLowest,
-                          elevation: 4,
-                          shadowColor: const Color(0x22141C2D),
-                          borderRadius: BorderRadius.circular(999),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(999),
-                            onTap: () {
-                              showModalBottomSheet<void>(
-                                context: context,
-                                isScrollControlled: true,
-                                backgroundColor: Colors.transparent,
-                                builder: (_) => AiExplanationSheet(
-                                  attemptId: widget.attemptId,
-                                  questionId: widget.questionId,
-                                  stem: widget.stem,
-                                  options: widget.options,
-                                  correct: widget.correct,
-                                ),
-                              );
-                            },
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 16, vertical: 10),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(999),
-                                border: Border.all(
-                                  color: context.outlineVariant,
-                                ),
+                        child: TactileButton(
+                          onPressed: () {
+                            showModalBottomSheet<void>(
+                              context: context,
+                              isScrollControlled: true,
+                              backgroundColor: Colors.transparent,
+                              builder: (_) => AiExplanationSheet(
+                                attemptId: widget.attemptId,
+                                questionId: widget.questionId,
+                                stem: widget.stem,
+                                options: widget.options,
+                                correct: widget.correct,
                               ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  const Icon(Icons.auto_awesome, size: 16),
-                                  const SizedBox(width: 7),
-                                  Text(
-                                    "Get Renance's AI Explanation",
-                                    style: TextStyle(
-                                      fontSize: 13.5,
-                                      fontWeight: FontWeight.w700,
-                                      color: context.ink,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
+                            );
+                          },
+                          outline: context.outlineVariant,
+                          edge: context.outlineVariant,
+                          height: 40,
+                          radius: RenanceRadius.chip,
+                          fontSize: 13.5,
+                          fontWeight: FontWeight.w700,
+                          edgeWidth: 3,
+                          expand: false,
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              const MsIcon('auto_awesome', size: 16),
+                              const SizedBox(width: 7),
+                              const Text("Get Renance's AI Explanation"),
+                            ],
                           ),
                         ),
                       ),
@@ -506,7 +472,7 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                               child: Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
-                                  Icon(Icons.flag_outlined,
+                                  MsIcon('flag',
                                       size: 17, color: context.error),
                                   const SizedBox(width: 5),
                                   Text(
@@ -523,33 +489,31 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                           ),
                         const Spacer(),
                         if (widget.onPrevious != null)
-                          FilledButton(
-                            onPressed: widget.onPrevious,
-                            style: FilledButton.styleFrom(
-                              minimumSize: const Size(108, 46),
-                              backgroundColor: context.inverseChip,
-                              foregroundColor: context.onInverseChip,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
+                          SizedBox(
+                            width: 108,
+                            child: TactileButton(
+                              onPressed: widget.onPrevious,
+                              face: context.inverseChip,
+                              onFace: context.onInverseChip,
+                              height: 46,
+                              radius: BorderRadius.circular(10),
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              child: const Text('Previous'),
                             ),
-                            child: const Text('Previous',
-                                style: TextStyle(
-                                    fontSize: 14, fontWeight: FontWeight.w600)),
                           ),
                         const SizedBox(width: 10),
                         if (widget.onNext != null)
-                          FilledButton(
-                            onPressed: widget.onNext,
-                            style: FilledButton.styleFrom(
-                              minimumSize: const Size(96, 46),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
+                          SizedBox(
+                            width: 96,
+                            child: TactileButton(
+                              onPressed: widget.onNext,
+                              height: 46,
+                              radius: BorderRadius.circular(10),
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              child: const Text('Next'),
                             ),
-                            child: const Text('Next',
-                                style: TextStyle(
-                                    fontSize: 14, fontWeight: FontWeight.w600)),
                           ),
                       ],
                     ),
@@ -629,9 +593,10 @@ class _ReviewOption extends StatelessWidget {
             ),
           ),
           if (isCorrect)
-            const Icon(Icons.check_circle,
+            const MsIcon('check_circle',
                 size: 19, color: RenanceColors.emerald),
-          if (isWrongPick) Icon(Icons.cancel, size: 19, color: context.error),
+          if (isWrongPick)
+            MsIcon('cancel', size: 19, color: context.error),
         ],
       ),
     );
@@ -744,22 +709,13 @@ class _AiExplanationSheetState extends State<AiExplanationSheet> {
                 ),
                 child: Row(
                   children: <Widget>[
-                    InkWell(
+                    TactileBackKey(
                       onTap: () => Navigator.of(context).pop(),
-                      customBorder: const CircleBorder(),
-                      child: Container(
-                        width: 40,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(color: context.error),
-                        ),
-                        child:
-                            Icon(Icons.close, size: 19, color: context.error),
-                      ),
+                      icon: 'close',
+                      size: 40,
                     ),
                     const SizedBox(width: 12),
-                    const Icon(Icons.auto_awesome, size: 20),
+                    const MsIcon('auto_awesome', size: 20),
                     const SizedBox(width: 8),
                     const Expanded(
                       child: Text(
@@ -828,7 +784,7 @@ class _AiExplanationSheetState extends State<AiExplanationSheet> {
                             ),
                           ),
                           const SizedBox(height: 14),
-                          OutlinedButton(
+                          TactileButton(
                             onPressed: () {
                               setState(() {
                                 _error = null;
@@ -836,6 +792,11 @@ class _AiExplanationSheetState extends State<AiExplanationSheet> {
                               });
                               _ask();
                             },
+                            outline: context.outlineVariant,
+                            edge: context.outlineVariant,
+                            edgeWidth: 3,
+                            height: 46,
+                            fontSize: 14,
                             child: const Text('Try again'),
                           ),
                         ],

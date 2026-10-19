@@ -4,7 +4,9 @@ import 'package:provider/provider.dart';
 import '../api_client.dart';
 import '../models.dart';
 import '../controllers.dart';
+import 'msymbols.dart';
 import 'renance_logo.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 /// The syllabus map (Stitch syllabus_map_light, ROADMAP #4): the
@@ -355,7 +357,7 @@ class _FocusNext extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      const Icon(Icons.local_fire_department,
+                      const MsIcon('local_fire_department',
                           size: 14, color: RenanceColors.amber),
                       const SizedBox(width: 4),
                       Text(
@@ -480,7 +482,7 @@ class _SectionCard extends StatelessWidget {
                   AnimatedRotation(
                     turns: open ? 0.5 : 0,
                     duration: const Duration(milliseconds: 200),
-                    child: Icon(Icons.expand_more,
+                    child: MsIcon('expand_more',
                         size: 20, color: context.outlineDark),
                   ),
                 ],
@@ -650,7 +652,7 @@ class _ErrorPane extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Icon(Icons.menu_book_outlined,
+            MsIcon('menu_book',
                 size: 40, color: context.outlineLight),
             const SizedBox(height: 12),
             Text(
@@ -659,7 +661,15 @@ class _ErrorPane extends StatelessWidget {
               style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, height: 1.4),
             ),
             const SizedBox(height: 16),
-            OutlinedButton(onPressed: onRetry, child: const Text('Try again')),
+            TactileButton(
+              onPressed: onRetry,
+              outline: context.outlineVariant,
+              edge: context.outlineVariant,
+              edgeWidth: 3,
+              height: 46,
+              fontSize: 14,
+              child: const Text('Try again'),
+            ),
           ],
         ),
       ),

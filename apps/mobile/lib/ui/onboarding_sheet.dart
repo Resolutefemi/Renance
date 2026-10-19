@@ -16,7 +16,9 @@ import 'package:provider/provider.dart';
 import '../api_client.dart';
 import '../models.dart';
 import '../storage.dart';
+import 'msymbols.dart';
 import 'renance_logo.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 class OnboardingSheet extends StatefulWidget {
@@ -50,31 +52,31 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
 
   static const List<_TargetOption> _targets = <_TargetOption>[
     _TargetOption(
-      icon: Icons.school,
+      icon: 'school',
       title: 'JAMB UTME',
       subtitle: 'Nigerian university admissions',
       server: 'JAMB',
     ),
     _TargetOption(
-      icon: Icons.workspace_premium,
+      icon: 'workspace_premium',
       title: 'WAEC/WASSCE',
       subtitle: 'West African senior school certificate',
       server: 'WAEC',
     ),
     _TargetOption(
-      icon: Icons.verified,
+      icon: 'verified',
       title: 'NECO',
       subtitle: 'National examinations council',
       server: 'NECO',
     ),
     _TargetOption(
-      icon: Icons.fact_check,
+      icon: 'fact_check',
       title: 'Post UTME',
       subtitle: 'School screening past questions',
       server: 'POST-UTME',
     ),
     _TargetOption(
-      icon: Icons.account_balance,
+      icon: 'account_balance',
       title: 'School Desk (University)',
       subtitle: 'Undergraduate semester exams',
       server: 'University Modules',
@@ -196,12 +198,9 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
           style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, height: 1.45),
         ),
         const SizedBox(height: 24),
-        SizedBox(
-          width: double.infinity,
-          child: FilledButton(
-            onPressed: () => setState(() => _step = 1),
-            child: const Text('Continue'),
-          ),
+        TactileButton(
+          onPressed: () => setState(() => _step = 1),
+          child: const Text('Continue'),
         ),
       ],
     );
@@ -233,7 +232,7 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
           maxLength: 24,
           decoration: const InputDecoration(
             prefixText: '@ ',
-            prefixIcon: Icon(Icons.alternate_email, size: 20),
+            prefixIcon: MsIcon('alternate_email', size: 20),
             hintText: 'lowercase letters, digits, _',
             counterText: '',
           ),
@@ -256,7 +255,7 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
             ),
             const SizedBox(width: 8),
             Expanded(
-              child: FilledButton(
+              child: TactileButton(
                 onPressed: _handleOk ? () => setState(() => _step = 2) : null,
                 child: const Text('Continue'),
               ),
@@ -319,7 +318,7 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
                             : context.surfaceContainer,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Icon(t.icon,
+                      child: MsIcon(t.icon,
                           size: 22,
                           color: selected
                               ? context.onPrimary
@@ -340,7 +339,7 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
                       ),
                     ),
                     if (selected)
-                      Icon(Icons.check_circle,
+                      MsIcon('check_circle',
                           size: 20, color: context.primary),
                   ],
                 ),
@@ -372,7 +371,7 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
             ),
             const SizedBox(width: 8),
             Expanded(
-              child: FilledButton(
+              child: TactileButton(
                 onPressed: (_targetExam != null && _targetYear != null)
                     ? () => setState(() => _step = 3)
                     : null,
@@ -403,7 +402,7 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
         const SizedBox(height: 6),
         TextField(
           decoration: const InputDecoration(
-            prefixIcon: Icon(Icons.person_outline, size: 20),
+            prefixIcon: MsIcon('person', size: 20),
             hintText: 'e.g. Ariyo Oluwafemi',
           ),
           onChanged: (String v) => _fullName = v,
@@ -414,7 +413,7 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
         DropdownButtonFormField<String>(
           initialValue: _gradeLevel,
           decoration: const InputDecoration(
-            prefixIcon: Icon(Icons.stairs_outlined, size: 20),
+            prefixIcon: MsIcon('stairs', size: 20),
           ),
           items: const <DropdownMenuItem<String>>[
             DropdownMenuItem<String>(value: 'JSS1', child: Text('JSS1')),
@@ -445,7 +444,7 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
             ),
             const SizedBox(width: 8),
             Expanded(
-              child: FilledButton(
+              child: TactileButton(
                 onPressed: (_detailsValid && !_busy) ? _submit : null,
                 child: Text(_busy ? 'Saving…' : 'Done, start syncing'),
               ),
@@ -465,7 +464,7 @@ class _TargetOption {
     required this.server,
   });
 
-  final IconData icon;
+  final String icon;
   final String title;
   final String subtitle;
   final String server;

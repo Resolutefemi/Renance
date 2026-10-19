@@ -19,11 +19,13 @@ import 'package:provider/provider.dart';
 import '../api_client.dart';
 import '../qtext.dart';
 import 'explanation_sheet.dart';
+import 'msymbols.dart';
 import 'saved_questions.dart';
 import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
 import 'renance_logo.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 /// The small filter pills of the reader (Wrong / Skipped / All).
@@ -195,8 +197,8 @@ class _ReviewQueueCard extends StatelessWidget {
         children: <Widget>[
           Row(
             children: <Widget>[
-              const Icon(
-                Icons.local_fire_department,
+              const MsIcon(
+                'local_fire_department',
                 size: 18,
                 color: RenanceColors.amber,
               ),
@@ -248,29 +250,21 @@ class _ReviewQueueCard extends StatelessWidget {
             style: RenanceText.caption.copyWith(color: context.textSecondary, height: 1.4),
           ),
           const SizedBox(height: 12),
-          SizedBox(
+          TactileButton(
+            onPressed: onStart,
             height: 44,
-            child: FilledButton(
-              onPressed: onStart,
-              style: FilledButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+            radius: BorderRadius.circular(10),
+            fontSize: 14,
+            fontWeight: FontWeight.w600,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  hasWork ? 'Start Review' : 'Revise latest paper',
                 ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                    hasWork ? 'Start Review' : 'Revise latest paper',
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  const SizedBox(width: 6),
-                  const Icon(Icons.arrow_forward, size: 18),
-                ],
-              ),
+                const SizedBox(width: 6),
+                const MsIcon('arrow_forward', size: 18, fill: true),
+              ],
             ),
           ),
         ],
@@ -501,7 +495,7 @@ class _PaperCard extends StatelessWidget {
                   style: RenanceText.statNumber.copyWith(color: pctColor),
                 ),
                 const SizedBox(width: 4),
-                Icon(Icons.chevron_right, color: context.outlineDark),
+                MsIcon('chevron_right', color: context.outlineDark),
               ],
             ),
             // The score bar: the paper's story in one glance.
@@ -700,8 +694,14 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
                                         color: context.textSecondary),
                                   ),
                                   const SizedBox(height: 16),
-                                  OutlinedButton(
+                                  TactileButton(
                                     onPressed: _load,
+                                    outline: context.outlineVariant,
+                                    edge: context.outlineVariant,
+                                    edgeWidth: 3,
+                                    height: 46,
+                                    radius: BorderRadius.circular(12),
+                                    fontSize: 14,
                                     child: const Text('Retry'),
                                   ),
                                 ],
@@ -776,7 +776,7 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
                                     setState(() => _query = v.trim().toLowerCase()),
                                 decoration: InputDecoration(
                                   hintText: 'Search Question',
-                                  prefixIcon: Icon(Icons.search,
+                                  prefixIcon: MsIcon('search',
                                       size: 20, color: context.outline),
                                   filled: true,
                                   fillColor: context.card,
@@ -1114,19 +1114,9 @@ class _ReaderHeader extends StatelessWidget {
         height: 48,
         child: Row(
           children: <Widget>[
-            InkWell(
+            TactileBackKey(
               onTap: onBack,
-              customBorder: const CircleBorder(),
-              child: Container(
-                width: 44,
-                height: 44,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(color: context.outlineVariant),
-                  color: context.card,
-                ),
-                child: Icon(Icons.arrow_back, size: 20, color: context.ink),
-              ),
+              size: 44,
             ),
             const Spacer(),
             Container(
@@ -1342,25 +1332,17 @@ class _StudyQuestionCard extends StatelessWidget {
             children: <Widget>[
               // The View Explanation pill - Myschool's red cut becomes
               // Renance ink.
-              InkWell(
-                onTap: onView,
-                borderRadius: BorderRadius.circular(999),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 18, vertical: 10),
-                  decoration: BoxDecoration(
-                    color: context.inverseChip,
-                    borderRadius: BorderRadius.circular(999),
-                  ),
-                  child: Text(
-                    'View Explanation',
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w700,
-                      color: context.onInverseChip,
-                    ),
-                  ),
-                ),
+              TactileButton(
+                onPressed: onView,
+                face: context.inverseChip,
+                onFace: context.onInverseChip,
+                height: 40,
+                radius: RenanceRadius.chip,
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+                expand: false,
+                padding: const EdgeInsets.symmetric(horizontal: 18),
+                child: const Text('View Explanation'),
               ),
               const Spacer(),
               InkWell(
@@ -1383,7 +1365,7 @@ class _StudyQuestionCard extends StatelessWidget {
                     shape: BoxShape.circle,
                     border: Border.all(color: context.outlineVariant),
                   ),
-                  child: Icon(Icons.copy_outlined,
+                  child: MsIcon('content_copy',
                       size: 17, color: context.ink),
                 ),
               ),

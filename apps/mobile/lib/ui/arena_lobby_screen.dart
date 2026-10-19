@@ -25,6 +25,8 @@ import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
 import 'arena_match_screen.dart';
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 const List<String> _kFoci = <String>[
@@ -352,13 +354,13 @@ class _ArenaLobbyScreenState extends State<ArenaLobbyScreen> {
                       const SizedBox(height: 8),
                       _ArenaButton(
                         label: 'Copy invite link',
-                        icon: Icons.link,
+                        icon: 'link',
                         onTap: () => _copyInvite(context),
                       ),
                       const SizedBox(height: 8),
                       _ArenaButton(
                         label: 'Cancel',
-                        icon: Icons.close,
+                        icon: 'close',
                         onTap: () {
                           _send(const <String, dynamic>{'type': 'cancel'});
                           _backToIdle();
@@ -379,7 +381,7 @@ class _ArenaLobbyScreenState extends State<ArenaLobbyScreen> {
                           ),
                           onPressed:
                               (_connecting || _down) ? null : _quickMatch,
-                          icon: const Icon(Icons.sports_kabaddi, size: 20),
+                          icon: MsIcon('swords', size: 20),
                           label: Text(
                             _connecting ? 'Connecting…' : 'Quick Match',
                             style: const TextStyle(
@@ -393,7 +395,7 @@ class _ArenaLobbyScreenState extends State<ArenaLobbyScreen> {
                           Expanded(
                             child: _ArenaButton(
                               label: 'Host a room',
-                              icon: Icons.meeting_room,
+                              icon: 'meeting_room',
                               onTap:
                                   (_connecting || _down) ? null : _hostRoom,
                             ),
@@ -402,7 +404,7 @@ class _ArenaLobbyScreenState extends State<ArenaLobbyScreen> {
                           Expanded(
                             child: _ArenaButton(
                               label: 'Join with code',
-                              icon: Icons.group_add,
+                              icon: 'group_add',
                               onTap:
                                   (_connecting || _down) ? null : _joinRoom,
                             ),
@@ -473,7 +475,7 @@ class _ArenaLobbyScreenState extends State<ArenaLobbyScreen> {
                           CircleAvatar(
                             radius: 19,
                             backgroundColor: context.surfaceVariant,
-                            child: Icon(Icons.person,
+                            child: MsIcon('person',
                                 size: 20, color: context.textMuted),
                           ),
                           const SizedBox(width: 12),
@@ -500,27 +502,27 @@ class _ArenaLobbyScreenState extends State<ArenaLobbyScreen> {
                               ],
                             ),
                           ),
-                          FilledButton.icon(
-                            style: FilledButton.styleFrom(
-                              backgroundColor: context.inverseChip,
-                              foregroundColor: context.onInverseChip,
-                              minimumSize: const Size(0, 38),
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 14),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(999),
-                              ),
-                            ),
+                          TactileButton(
+                            height: 36,
+                            radius: RenanceRadius.chip,
+                            fontSize: 12.5,
+                            face: context.inverseChip,
+                            onFace: context.onInverseChip,
+                            expand: false,
+                            padding: const EdgeInsets.symmetric(horizontal: 14),
                             onPressed: () => _send(<String, dynamic>{
                               'type': 'challenge',
                               'target': p.userId,
                               'body': _focus,
                             }),
-                            icon: const Icon(Icons.sports_kabaddi, size: 16),
-                            label: const Text('Battle',
-                                style: TextStyle(
-                                    fontSize: 12.5,
-                                    fontWeight: FontWeight.w700)),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: const <Widget>[
+                                MsIcon('swords', size: 15),
+                                SizedBox(width: 4),
+                                Text('Battle'),
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -653,27 +655,41 @@ class _ArenaButton extends StatelessWidget {
   });
 
   final String label;
-  final IconData icon;
+  final String icon;
   final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 44,
-      child: OutlinedButton.icon(
-        style: OutlinedButton.styleFrom(
-          foregroundColor: context.onPrimary,
-          side: BorderSide(
-              color: context.onPrimary.withValues(alpha: 0.3)),
-          shape: RoundedRectangleBorder(
+    // The web's arena secondary keys: flat translucent pills
+    // (bg-card/10 on the green hero) - deliberately not 3D keys.
+    final bool enabled = onTap != null;
+    return GestureDetector(
+      onTap: onTap,
+      child: Opacity(
+        opacity: enabled ? 1 : 0.55,
+        child: Container(
+          height: 44,
+          decoration: BoxDecoration(
+            color: context.onPrimary.withValues(alpha: 0.10),
             borderRadius: BorderRadius.circular(12),
           ),
-        ),
-        onPressed: onTap,
-        icon: Icon(icon, size: 17),
-        label: Text(
-          label,
-          style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+          child: Center(
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                MsIcon(icon, size: 17, color: context.onPrimary),
+                const SizedBox(width: 6),
+                Text(
+                  label,
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    color: context.onPrimary,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );

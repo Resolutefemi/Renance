@@ -17,7 +17,9 @@ import 'gamification_hub_screen.dart';
 import 'gpa_screen.dart';
 import 'home_screen.dart' show LauncherTile, openDailyQuiz;
 import 'leaderboard_screen.dart';
+import 'msymbols.dart';
 import 'syllabus_screen.dart';
+import 'tactile.dart';
 import 'theme.dart';
 import 'tutor_screen.dart';
 import 'university_screens.dart';
@@ -192,7 +194,7 @@ class UniversityHomeTab extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.quiz,
+                  msIcon: 'quiz',
                   label: 'Quizzes',
                   // Founder directive (2026-10-04): the quiz icon opens
                   // the PICKED school's quizzes / past questions only -
@@ -202,7 +204,7 @@ class UniversityHomeTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.history_edu,
+                  msIcon: 'history_edu',
                   label: 'Review',
                   badge: student.dueTopics > 0 ? '${student.dueTopics}' : null,
                   badgeColor: RenanceColors.emerald,
@@ -211,7 +213,7 @@ class UniversityHomeTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.library_books,
+                  msIcon: 'library_books',
                   label: 'Outline',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
@@ -235,7 +237,7 @@ class UniversityHomeTab extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.timeline,
+                  msIcon: 'timeline',
                   label: 'GPA',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
@@ -245,7 +247,7 @@ class UniversityHomeTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.military_tech,
+                  msIcon: 'military_tech',
                   iconColor: RenanceColors.amber,
                   label: 'Badges',
                   onTap: () => Navigator.of(context).push(
@@ -257,7 +259,7 @@ class UniversityHomeTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.smart_toy,
+                  msIcon: 'smart_toy',
                   iconColor: context.onInverseChip,
                   highlight: true,
                   label: 'Tutor',
@@ -287,7 +289,7 @@ class UniversityHomeTab extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.sports_esports,
+                  msIcon: 'sports_esports',
                   label: 'Arena',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
@@ -297,7 +299,7 @@ class UniversityHomeTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.event_repeat,
+                  msIcon: 'event_repeat',
                   iconColor: RenanceColors.amber,
                   label: 'Daily Quiz',
                   onTap: () => openDailyQuiz(context, sync),
@@ -305,7 +307,7 @@ class UniversityHomeTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.leaderboard,
+                  msIcon: 'leaderboard',
                   label: 'Leaderboard',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
@@ -425,7 +427,7 @@ class _SchoolHeroCard extends StatelessWidget {
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Icon(syncing ? Icons.sync : Icons.check_circle,
+                    MsIcon(syncing ? 'sync' : 'check_circle',
                         size: 14, color: context.onHeroCard),
                     const SizedBox(width: 4),
                     Text(
@@ -482,23 +484,23 @@ class _SchoolHeroCard extends StatelessWidget {
           // The once-only school pick (founder rule): Pick School until
           // one is stored, Open courses afterwards. No Change School
           // button; the profile edit is the only way to change it.
-          SizedBox(
+          TactileButton(
             height: 52,
-            width: double.infinity,
-            child: FilledButton.icon(
-              onPressed: onOpen,
-              style: FilledButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+            radius: BorderRadius.circular(10),
+            face: context.heroCta,
+            onFace: context.onHeroCta,
+            fontSize: 15,
+            fontWeight: FontWeight.w600,
+            onPressed: onOpen,
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                const MsIcon('school', size: 20, fill: true),
+                const SizedBox(width: 8),
+                Text(
+                  picked ? 'Open your school desk' : 'Pick School',
                 ),
-                backgroundColor: context.heroCta,
-                foregroundColor: context.onHeroCta,
-              ),
-              icon: const Icon(Icons.school, size: 20),
-              label: Text(
-                picked ? 'Open your school desk' : 'Pick School',
-                style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
-              ),
+              ],
             ),
           ),
         ],

@@ -18,6 +18,8 @@ import 'package:provider/provider.dart';
 import '../api_client.dart';
 import '../controllers.dart';
 import '../models.dart';
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 class PerformanceScreen extends StatefulWidget {
@@ -108,20 +110,10 @@ class _PerformanceScreenState extends State<PerformanceScreen> {
                 height: 56,
                 child: Row(
                   children: <Widget>[
-                    InkWell(
+                    TactileBackKey(
                       onTap: () => Navigator.of(context).pop(),
-                      customBorder: const CircleBorder(),
-                      child: Container(
-                        width: 42,
-                        height: 42,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(color: context.outlineVariant),
-                          color: context.card,
-                        ),
-                        child: Icon(Icons.arrow_back,
-                            size: 19, color: context.ink),
-                      ),
+                      size: 42,
+                      icon: 'arrow_back',
                     ),
                     const SizedBox(width: 8),
                   ],
@@ -190,18 +182,18 @@ class _PerformanceScreenState extends State<PerformanceScreen> {
     // Dark tier (dark-mode polish 2026-10-06): the fixed light pastels
     // render as five bright blocks on the dark page, so each card carries
     // a lifted dark accent and falls back to the dark card surfaces.
-    const List<(String, String, Color, Color, Color, IconData)> cards =
-        <(String, String, Color, Color, Color, IconData)>[
+    const List<(String, String, Color, Color, Color, String)> cards =
+        <(String, String, Color, Color, Color, String)>[
       ('jamb', 'JAMB Test', Color(0xFFE7F5EC), Color(0xFF1F7A4D),
-          Color(0xFF6EE7A8), Icons.school),
+          Color(0xFF6EE7A8), 'school'),
       ('cbt', 'University Test', Color(0xFFFDF0E7), Color(0xFFC2410C),
-          Color(0xFFFDBA74), Icons.computer),
+          Color(0xFFFDBA74), 'computer'),
       ('waec', 'WAEC Test', Color(0xFFE5F0FB), Color(0xFF1D4ED8),
-          Color(0xFF93C5FD), Icons.workspace_premium),
+          Color(0xFF93C5FD), 'workspace_premium'),
       ('neco', 'NECO Test', Color(0xFFF2F7E2), Color(0xFF4D7C0F),
-          Color(0xFFBEF264), Icons.verified),
+          Color(0xFFBEF264), 'verified'),
       ('challenge', 'Challenge Test', Color(0xFFE0F5F1), Color(0xFF0F766E),
-          Color(0xFF5EEAD4), Icons.bolt),
+          Color(0xFF5EEAD4), 'bolt'),
     ];
 
     final List<Widget> out = <Widget>[];
@@ -211,7 +203,7 @@ class _PerformanceScreenState extends State<PerformanceScreen> {
       Color tint,
       Color accent,
       Color darkAccent,
-      IconData icon,
+      String icon,
     ) in cards) {
       final List<AttemptRow>? rows = buckets[key];
       if (rows == null || rows.isEmpty) continue;
@@ -314,7 +306,7 @@ class _BodyCard extends StatelessWidget {
   /// Lifted accent for the dark tier, where the light pastel tint and
   /// mid-tone accent would both drop below contrast (2026-10-06 polish).
   final Color darkAccent;
-  final IconData icon;
+  final String icon;
   final int avg;
   final int taken;
 
@@ -342,7 +334,7 @@ class _BodyCard extends StatelessWidget {
                   shape: BoxShape.circle,
                   color: wellBg,
                 ),
-                child: Icon(icon, size: 22, color: tone),
+                child: MsIcon(icon, size: 22, color: tone),
               ),
               const SizedBox(width: 12),
               Expanded(

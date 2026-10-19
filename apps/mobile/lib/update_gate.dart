@@ -7,6 +7,9 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
 
+import 'ui/msymbols.dart';
+import 'ui/tactile.dart';
+
 /// UpdateGate - the founder's "no shared APKs" directive:
 ///
 ///   1. Play-store install check: if the app was NOT installed from
@@ -123,7 +126,7 @@ class UpdateGateScreen extends StatelessWidget {
                     color: Color(0xFF10DA11),
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(Icons.school_outlined,
+                  child: const MsIcon('school',
                       size: 46, color: Colors.white),
                 ),
                 const SizedBox(height: 24),
@@ -156,19 +159,16 @@ class UpdateGateScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 28),
-                FilledButton(
-                  style: FilledButton.styleFrom(
-                    backgroundColor: const Color(0xFF10DA11),
-                    foregroundColor: Colors.white,
-                    padding: const EdgeInsets.symmetric(vertical: 16),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(14)),
-                  ),
+                TactileButton(
+                  face: const Color(0xFF10DA11),
+                  onFace: Colors.white,
+                  height: 52,
+                  radius: BorderRadius.circular(14),
+                  fontSize: 15.5,
+                  fontWeight: FontWeight.w700,
                   onPressed: () => launchUrl(Uri.parse(_kPlayStoreUrl),
                       mode: LaunchMode.externalApplication),
-                  child: const Text('Get Renance on Google Play',
-                      style:
-                          TextStyle(fontSize: 15.5, fontWeight: FontWeight.w700)),
+                  child: const Text('Get Renance on Google Play'),
                 ),
                 const SizedBox(height: 12),
                 if (shared)

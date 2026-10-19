@@ -16,6 +16,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../controllers.dart';
 import '../learn_controller.dart';
 import '../storage.dart';
+import 'msymbols.dart';
 import 'tactile.dart';
 import 'theme.dart';
 
@@ -148,7 +149,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               leading: CircleAvatar(
                 radius: 16,
                 backgroundColor: context.selectionBlue,
-                child: Icon(Icons.flag,
+                child: MsIcon('flag',
                     size: 18, color: context.ink),
               ),
               title: const Text('Daily Goal', style: RenanceText.bodyBase),
@@ -201,7 +202,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               secondary: CircleAvatar(
                 radius: 16,
                 backgroundColor: context.secondaryContainer,
-                child: Icon(Icons.notifications_active,
+                child: MsIcon('notifications_active',
                     size: 18, color: context.ink),
               ),
               title: const Text('Study Reminders', style: RenanceText.bodyBase),
@@ -265,7 +266,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               leading: CircleAvatar(
                 radius: 16,
                 backgroundColor: context.errorContainer,
-                child: Icon(Icons.delete_outline,
+                child: MsIcon('delete',
                     size: 18, color: context.error),
               ),
               title: const Text('Clear offline packs',
@@ -370,7 +371,7 @@ class _SeedPanel extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 2),
               child: Row(
                 children: <Widget>[
-                  Icon(Icons.palette_outlined,
+                  MsIcon('palette',
                       size: 22, color: context.textSecondary),
                   const SizedBox(width: 12),
                   Expanded(
@@ -389,7 +390,7 @@ class _SeedPanel extends StatelessWidget {
                   AnimatedRotation(
                     turns: open ? 0.5 : 0,
                     duration: const Duration(milliseconds: 200),
-                    child: Icon(Icons.expand_more,
+                    child: MsIcon('expand_more',
                         color: context.textSecondary),
                   ),
                 ],
@@ -449,17 +450,19 @@ class _SeedPanel extends StatelessWidget {
                           ),
                         ),
                         if (seed != null)
-                          OutlinedButton(
+                          TactileButton(
                             onPressed: () => onApply(null),
-                            style: OutlinedButton.styleFrom(
-                              minimumSize: Size.zero,
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 12, vertical: 6),
-                              side: BorderSide(color: context.outlineVariant),
-                            ),
-                            child: Text('Reset',
-                                style: RenanceText.caption
-                                    .copyWith(fontWeight: FontWeight.w600)),
+                            outline: context.outlineVariant,
+                            edge: context.outlineVariant,
+                            edgeWidth: 3,
+                            height: 36,
+                            radius: RenanceRadius.chip,
+                            fontSize: 12.5,
+                            fontWeight: FontWeight.w600,
+                            expand: false,
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 14),
+                            child: const Text('Reset'),
                           ),
                       ],
                     ),
@@ -935,13 +938,13 @@ class _AppearanceSwitch extends StatelessWidget {
     // mixed TIER itself stays in the product for the exam player's hero
     // chrome, and a student who already persisted it keeps it until they
     // pick a side here - exactly the website's behaviour.
-    const List<(RenanceThemeMode, IconData, String)> options = <(
+    const List<(RenanceThemeMode, String, String)> options = <(
       RenanceThemeMode,
-      IconData,
+      String,
       String
     )>[
-      (RenanceThemeMode.light, Icons.light_mode, 'Light'),
-      (RenanceThemeMode.dark, Icons.dark_mode, 'Dark'),
+      (RenanceThemeMode.light, 'light_mode', 'Light'),
+      (RenanceThemeMode.dark, 'dark_mode', 'Dark'),
     ];
     // A student still parked on the retired mixed tier (persisted before
     // the parity pass) resolves to no option; clamp the pill to Light so
@@ -949,7 +952,7 @@ class _AppearanceSwitch extends StatelessWidget {
     final int index = math.max(
         0,
         options.indexWhere(
-            ((RenanceThemeMode, IconData, String) o) => o.$1 == mode));
+            ((RenanceThemeMode, String, String) o) => o.$1 == mode));
 
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
@@ -986,14 +989,14 @@ class _AppearanceSwitch extends StatelessWidget {
               Row(
                 children: options
                     .map(
-                      ((RenanceThemeMode, IconData, String) o) => Expanded(
+                      ((RenanceThemeMode, String, String) o) => Expanded(
                         child: InkWell(
                           onTap: () => onPick(o.$1),
                           borderRadius: BorderRadius.circular(8),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              Icon(
+                              MsIcon(
                                 o.$2,
                                 size: 20,
                                 color: o.$1 == mode

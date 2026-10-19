@@ -14,6 +14,8 @@ library;
 import 'package:flutter/material.dart';
 
 import '../papers.dart';
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 /// One selectable subject row.
@@ -21,43 +23,43 @@ class _PickableSubject {
   const _PickableSubject(this.slug, this.name, this.icon);
   final String slug;
   final String name;
-  final IconData icon;
+  final String icon;
 }
 
-IconData _iconFor(String slug) => switch (slug) {
-      'english' => Icons.menu_book,
-      'mathematics' => Icons.calculate,
-      'physics' => Icons.psychology,
-      'chemistry' => Icons.science,
-      'biology' => Icons.biotech,
-      'literature' => Icons.auto_stories,
-      'crs' => Icons.church,
-      'irs' => Icons.mosque,
-      'agricultural-science' => Icons.agriculture,
-      'commerce' => Icons.storefront,
-      'accounting' => Icons.receipt_long,
-      'computer-studies' => Icons.computer,
-      'civic-education' => Icons.gavel,
-      'economics' => Icons.trending_up,
-      'government' => Icons.account_balance,
-      'geography' => Icons.public,
-      'history' => Icons.history_edu,
-      'french' => Icons.translate,
-      'arabic' => Icons.language,
-      'hausa' => Icons.record_voice_over,
-      'igbo' => Icons.record_voice_over,
-      'yoruba' => Icons.record_voice_over,
-      'music' => Icons.music_note,
-      'fine-arts' => Icons.palette,
-      'home-economics' => Icons.home,
-      'physical-education' => Icons.sports_soccer,
-      _ => Icons.book,
+String _iconFor(String slug) => switch (slug) {
+      'english' => 'menu_book',
+      'mathematics' => 'calculate',
+      'physics' => 'psychology',
+      'chemistry' => 'science',
+      'biology' => 'biotech',
+      'literature' => 'auto_stories',
+      'crs' => 'church',
+      'irs' => 'mosque',
+      'agricultural-science' => 'agriculture',
+      'commerce' => 'storefront',
+      'accounting' => 'receipt_long',
+      'computer-studies' => 'computer',
+      'civic-education' => 'gavel',
+      'economics' => 'trending_up',
+      'government' => 'account_balance',
+      'geography' => 'public',
+      'history' => 'history_edu',
+      'french' => 'translate',
+      'arabic' => 'language',
+      'hausa' => 'record_voice_over',
+      'igbo' => 'record_voice_over',
+      'yoruba' => 'record_voice_over',
+      'music' => 'music_note',
+      'fine-arts' => 'palette',
+      'home-economics' => 'home',
+      'physical-education' => 'sports_soccer',
+      _ => 'book',
     };
 
 /// English first, then the electives in catalogue order.
 List<_PickableSubject> _catalogue(Set<String> available) {
   final List<_PickableSubject> list = <_PickableSubject>[
-    const _PickableSubject('english', 'Use of English', Icons.menu_book),
+    const _PickableSubject('english', 'Use of English', 'menu_book'),
   ];
   for (final (String slug, String name) in kUtmeElectives) {
     if (available.isEmpty || available.contains(slug)) {
@@ -231,7 +233,7 @@ class _JambSubjectSelectionScreenState
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: <Widget>[
-                                      Icon(Icons.info_outline,
+                                      MsIcon('info',
                                           size: 14,
                                           color: context.textSecondary),
                                       const SizedBox(width: 6),
@@ -283,7 +285,7 @@ class _JambSubjectSelectionScreenState
                           onChanged: (String v) => setState(() => _query = v),
                           decoration: InputDecoration(
                             hintText: 'Search subjects',
-                            prefixIcon: const Icon(Icons.search, size: 20),
+                            prefixIcon: const MsIcon('search', size: 20),
                             isDense: true,
                             filled: true,
                             fillColor: context.card,
@@ -354,7 +356,7 @@ class _JambSubjectSelectionScreenState
   }
 }
 
-/// 40px circular back button, surface-container fill (Stitch top bar).
+/// 40px circular back button, the web's .back-key (Stitch top bar).
 class _RoundBack extends StatelessWidget {
   const _RoundBack({required this.onBack});
 
@@ -362,19 +364,7 @@ class _RoundBack extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: context.surfaceContainer,
-      shape: const CircleBorder(),
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: onBack,
-        child: SizedBox(
-          width: 40,
-          height: 40,
-          child: Icon(Icons.arrow_back, size: 20, color: context.ink),
-        ),
-      ),
-    );
+    return TactileBackKey(onTap: onBack, size: 40);
   }
 }
 
@@ -435,7 +425,7 @@ class _SubjectTile extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   alignment: Alignment.center,
-                  child: Icon(subject.icon, size: 24, color: tileIconColor),
+                  child: MsIcon(subject.icon, size: 24, color: tileIconColor),
                 ),
                 const SizedBox(width: 16),
                 Expanded(
@@ -500,7 +490,7 @@ class _CheckCircle extends StatelessWidget {
       ),
       alignment: Alignment.center,
       child: filled
-          ? const Icon(Icons.check, size: 14, color: Colors.white)
+          ? const MsIcon('check', size: 14, color: Colors.white)
           : const SizedBox.shrink(),
     );
   }
@@ -531,45 +521,21 @@ class _StartBar extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
-        child: SizedBox(
+        child: TactileButton(
+          onPressed: enabled ? onStart : null,
           height: 52,
-          child: Opacity(
-            opacity: enabled ? 1 : 0.4,
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                color: context.inverseChip,
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: enabled
-                    ? const <BoxShadow>[
-                        BoxShadow(
-                          color: Color(0x33000000),
-                          blurRadius: 8,
-                          offset: Offset(0, 4),
-                        ),
-                      ]
-                    : const <BoxShadow>[],
-              ),
-              child: TextButton(
-                onPressed: enabled ? onStart : null,
-                style: TextButton.styleFrom(
-                  foregroundColor: context.onInverseChip,
-                  disabledForegroundColor:
-                      context.onInverseChip.withValues(alpha: 0.5),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    const Icon(Icons.rocket_launch, size: 20),
-                    const SizedBox(width: 8),
-                    Text(label,
-                        style: RenanceText.bodyMedium
-                            .copyWith(color: context.onInverseChip)),
-                  ],
-                ),
-              ),
-            ),
+          radius: BorderRadius.circular(10),
+          face: context.inverseChip,
+          onFace: context.onInverseChip,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const MsIcon('rocket_launch', size: 20, fill: true),
+              const SizedBox(width: 8),
+              Text(label,
+                  style: RenanceText.bodyMedium
+                      .copyWith(color: context.onInverseChip)),
+            ],
           ),
         ),
       ),

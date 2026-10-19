@@ -14,19 +14,20 @@ import '../controllers.dart';
 import '../models.dart';
 import 'badge_detail_screen.dart';
 import 'leaderboard_screen.dart';
+import 'msymbols.dart';
 import 'notifications_screen.dart';
 import 'theme.dart';
 
 /// Badge chip catalog for the grid, keyed to the server's badge codes.
-const List<(String, String, IconData)> _kHubBadges = <(String, String, IconData)>[
-  ('first_blood', 'First Blood', Icons.flag),
-  ('xp_500', 'Scholar', Icons.school),
-  ('streak_3', 'Warming Up', Icons.local_fire_department),
-  ('century', 'Century', Icons.emoji_events),
-  ('perfect_paper', 'Flawless', Icons.workspace_premium),
-  ('streak_7', 'On Fire', Icons.local_fire_department),
-  ('xp_2000', 'Champion', Icons.military_tech),
-  ('streak_30', 'Unstoppable', Icons.rocket_launch),
+const List<(String, String, String)> _kHubBadges = <(String, String, String)>[
+  ('first_blood', 'First Blood', 'flag'),
+  ('xp_500', 'Scholar', 'school'),
+  ('streak_3', 'Warming Up', 'local_fire_department'),
+  ('century', 'Century', 'emoji_events'),
+  ('perfect_paper', 'Flawless', 'workspace_premium'),
+  ('streak_7', 'On Fire', 'local_fire_department'),
+  ('xp_2000', 'Champion', 'military_tech'),
+  ('streak_30', 'Unstoppable', 'rocket_launch'),
 ];
 
 const List<String> _kAwardHints = <String>[
@@ -81,7 +82,7 @@ class GamificationHubScreen extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      const Icon(Icons.local_fire_department,
+                      const MsIcon('local_fire_department',
                           size: 20, color: RenanceColors.amber),
                       const SizedBox(width: 4),
                       Text('${state.currentStreak}',
@@ -95,7 +96,7 @@ class GamificationHubScreen extends StatelessWidget {
                     MaterialPageRoute<void>(
                         builder: (_) => NotificationsScreen()),
                   ),
-                  icon: const Icon(Icons.notifications_none),
+                  icon: const MsIcon('notifications_none', size: 24),
                   color: context.textSecondary,
                 ),
               ],
@@ -130,7 +131,7 @@ class GamificationHubScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         alignment: Alignment.center,
-                        child: const Icon(Icons.emoji_events_outlined, size: 22),
+                        child: const MsIcon('emoji_events', size: 22),
                       ),
                       const SizedBox(width: 12),
                       Expanded(
@@ -145,7 +146,7 @@ class GamificationHubScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const Icon(Icons.chevron_right, size: 20),
+                      const MsIcon('chevron_right', size: 20),
                     ],
                   ),
                 ),
@@ -169,7 +170,7 @@ class GamificationHubScreen extends StatelessWidget {
               crossAxisSpacing: 12,
               childAspectRatio: 0.98,
               children: <Widget>[
-                for (final (String code, String label, IconData icon)
+                for (final (String code, String label, String icon)
                     in _kHubBadges)
                   _BadgeCell(
                     code: code,
@@ -187,7 +188,7 @@ class GamificationHubScreen extends StatelessWidget {
                             fg: context.ink,
                             hint: () {
                               final int i = _kHubBadges.indexWhere(
-                                  ((String, String, IconData) b) =>
+                                  ((String, String, String) b) =>
                                       b.$1 == code);
                               return i >= 0
                                   ? _kAwardHints[i]
@@ -227,15 +228,15 @@ class GamificationHubScreen extends StatelessWidget {
             else
               ...g.awards.reversed.take(4).map<Widget>((Award a) {
                 final int idx = _kHubBadges
-                    .indexWhere(((String, String, IconData) b) =>
+                    .indexWhere(((String, String, String) b) =>
                         b.$1 == a.code);
                 final String title = idx >= 0
                     ? '${_kHubBadges[idx].$2} Badge Earned'
                     : '${a.code} Badge Earned';
                 final String hint =
                     idx >= 0 ? _kAwardHints[idx] : 'Keep the grind going';
-                final IconData icon =
-                    idx >= 0 ? _kHubBadges[idx].$3 : Icons.emoji_events;
+                final String icon =
+                    idx >= 0 ? _kHubBadges[idx].$3 : 'emoji_events';
                 return Container(
                   margin: const EdgeInsets.only(bottom: 10),
                   padding: const EdgeInsets.all(12),
@@ -252,7 +253,7 @@ class GamificationHubScreen extends StatelessWidget {
                           shape: BoxShape.circle,
                           color: context.selectionBlue,
                         ),
-                        child: Icon(icon,
+                        child: MsIcon(icon,
                             size: 22, color: context.ink),
                       ),
                       const SizedBox(width: 12),
@@ -297,7 +298,7 @@ class _RoundBack extends StatelessWidget {
       ),
       child: IconButton(
         onPressed: onBack,
-        icon: const Icon(Icons.arrow_back, size: 20),
+        icon: const MsIcon('arrow_back', size: 20),
         color: context.ink,
       ),
     );
@@ -326,7 +327,7 @@ class _StreakHero extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              const Icon(Icons.local_fire_department,
+              const MsIcon('local_fire_department',
                   size: 24, color: RenanceColors.amber),
               const SizedBox(width: 8),
               Text('Current Streak', style: RenanceText.sectionTitle),
@@ -408,15 +409,13 @@ class _DayDot extends StatelessWidget {
           width: 32,
           height: 32,
           decoration: BoxDecoration(shape: BoxShape.circle, color: circle),
-          child: Icon(
-            isToday
-                ? Icons.local_fire_department
-                : isDone
-                    ? Icons.check
-                    : null,
-            size: 16,
-            color: fg,
-          ),
+          child: isToday || isDone
+              ? MsIcon(
+                  isToday ? 'local_fire_department' : 'check',
+                  size: 16,
+                  color: fg,
+                )
+              : null,
         ),
       ],
     );
@@ -449,8 +448,8 @@ class _LevelCard extends StatelessWidget {
                         Text('Level ${state.level}',
                             style: RenanceText.sectionTitle),
                         const SizedBox(width: 8),
-                        const Icon(Icons.verified,
-                            size: 20, color: RenanceColors.emerald),
+                        const MsIcon('verified',
+                            size: 20, fill: true, color: RenanceColors.emerald),
                       ],
                     ),
                     const SizedBox(height: 2),
@@ -515,7 +514,7 @@ class _BadgeCell extends StatelessWidget {
 
   final String code;
   final String label;
-  final IconData icon;
+  final String icon;
   final bool earned;
   final VoidCallback onTap;
 
@@ -531,7 +530,7 @@ class _BadgeCell extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           Center(
-            child: Icon(icon,
+            child: MsIcon(icon,
                 size: 32,
                 color: earned ? context.ink : context.textSecondary),
           ),
@@ -549,8 +548,8 @@ class _BadgeCell extends StatelessWidget {
                     BoxShadow(color: Color(0x14141C2D), blurRadius: 2),
                   ],
                 ),
-                child: const Icon(Icons.check_circle,
-                    size: 14, color: RenanceColors.emerald),
+                child: const MsIcon('check_circle',
+                    size: 14, fill: true, color: RenanceColors.emerald),
               ),
             )
           else
@@ -561,7 +560,7 @@ class _BadgeCell extends StatelessWidget {
                   shape: BoxShape.circle,
                   color: context.pageBg.withValues(alpha: 0.5),
                 ),
-                child: Icon(Icons.lock,
+                child: MsIcon('lock',
                     size: 16, color: context.textSecondary),
               ),
             ),

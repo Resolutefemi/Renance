@@ -16,6 +16,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../qtext.dart';
 import 'explanation_sheet.dart';
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 // ------------------------------------------------------------------ store
@@ -253,7 +255,7 @@ class _SavedQuestionsScreenState extends State<SavedQuestionsScreen> {
                 decoration: InputDecoration(
                   hintText: 'Search Question',
                   prefixIcon:
-                      Icon(Icons.search, size: 20, color: context.outline),
+                      MsIcon('search', size: 20, color: context.outline),
                   filled: true,
                   fillColor: context.card,
                   enabledBorder: OutlineInputBorder(
@@ -324,19 +326,9 @@ class _RoundBack extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return TactileBackKey(
       onTap: onBack,
-      customBorder: const CircleBorder(),
-      child: Container(
-        width: 44,
-        height: 44,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          border: Border.all(color: context.outlineVariant),
-          color: context.card,
-        ),
-        child: Icon(Icons.arrow_back, size: 20, color: context.ink),
-      ),
+      size: 44,
     );
   }
 }
@@ -351,7 +343,7 @@ class _EmptySaved extends StatelessWidget {
       padding: const EdgeInsets.all(32),
       children: <Widget>[
         const SizedBox(height: 60),
-        Icon(Icons.bookmark_border, size: 44, color: context.outlineLight),
+        MsIcon('bookmark', size: 44, color: context.outlineLight),
         const SizedBox(height: 14),
         Text(
           empty
@@ -398,7 +390,7 @@ class _SavedCard extends StatelessWidget {
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  Icon(Icons.bookmark, size: 15, color: context.ink),
+                  MsIcon('bookmark', size: 15, color: context.ink, fill: true),
                   const SizedBox(width: 6),
                   Expanded(
                     child: Text(
@@ -416,7 +408,7 @@ class _SavedCard extends StatelessWidget {
                     customBorder: const CircleBorder(),
                     child: Padding(
                       padding: const EdgeInsets.all(4),
-                      child: Icon(Icons.delete_outline,
+                      child: MsIcon('delete',
                           size: 18, color: context.error),
                     ),
                   ),

@@ -59,6 +59,7 @@ import 'review_screen.dart';
 import 'syllabus_screen.dart';
 import 'settings_screen.dart';
 import 'university_home_screen.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -621,7 +622,7 @@ class HomeHeader extends StatelessWidget {
               if (onNotifications != null) ...<Widget>[
                 const SizedBox(width: 8),
                 _HeaderIcon(
-                  icon: Icons.notifications_none,
+                  icon: 'notifications_none',
                   onTap: onNotifications,
                   alert: alert,
                   badge: alertCount > 0 ? '$alertCount' : null,
@@ -702,7 +703,7 @@ class _HeaderIcon extends StatelessWidget {
     this.badge,
   });
 
-  final IconData icon;
+  final String icon;
   final VoidCallback? onTap;
   final bool alert;
 
@@ -716,10 +717,10 @@ class _HeaderIcon extends StatelessWidget {
       children: <Widget>[
         IconButton(
           onPressed: onTap,
-          icon: Icon(icon, size: 22),
+          icon: MsIcon(icon, size: 22),
           color: context.ink,
           visualDensity: VisualDensity.compact,
-          tooltip: icon == Icons.search
+          tooltip: icon == 'search'
               ? 'Search'
               : 'Notifications',
         ),
@@ -786,8 +787,8 @@ class StreakPill extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          const Icon(
-            Icons.local_fire_department,
+          const MsIcon(
+            'local_fire_department',
             size: 20,
             color: RenanceColors.amber,
           ),
@@ -1506,16 +1507,19 @@ class LauncherTile extends StatelessWidget {
         color: iconColor ?? context.primary,
       );
     }
-    return Icon(
-      icon ?? Icons.circle_outlined,
-      size: 24,
-      // The launcher glyphs are the icon list's "black", and the seed
-      // doctrine says the black becomes the student's colour. Stock
-      // tiers: black on light, white on dark - unchanged. Seeded: the
-      // whole grid takes the picked colour, matching how the website's
-      // desk visibly re-tints per appearance.
-      color: iconColor ?? context.primary,
-    );
+    if (icon != null) {
+      return Icon(
+        icon!,
+        size: 24,
+        // The launcher glyphs are the icon list's "black", and the seed
+        // doctrine says the black becomes the student's colour. Stock
+        // tiers: black on light, white on dark - unchanged. Seeded: the
+        // whole grid takes the picked colour, matching how the website's
+        // desk visibly re-tints per appearance.
+        color: iconColor ?? context.primary,
+      );
+    }
+    return MsIcon('circle', size: 24, color: iconColor ?? context.primary);
   }
 
   @override
@@ -1684,8 +1688,8 @@ class _RecentActivityCard extends StatelessWidget {
                     ? RenanceColors.amber.withValues(alpha: 0.15)
                     : context.errorContainer,
               ),
-              child: Icon(
-                inProgress ? Icons.pause_circle : Icons.science,
+              child: MsIcon(
+                inProgress ? 'pause_circle' : 'science',
                 size: 20,
                 color: inProgress ? RenanceColors.amber : context.error,
               ),
@@ -1711,7 +1715,7 @@ class _RecentActivityCard extends StatelessWidget {
                 ],
               ),
             ),
-            Icon(Icons.chevron_right, color: context.outlineDark),
+            MsIcon('chevron_right', color: context.outlineDark),
           ],
         ),
       ),
@@ -1745,7 +1749,7 @@ class _EmptyActivityCard extends StatelessWidget {
                 style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
               ),
             ),
-            Icon(Icons.chevron_right, color: context.outlineDark),
+            MsIcon('chevron_right', color: context.outlineDark),
           ],
         ),
       ),
@@ -1770,7 +1774,7 @@ class _PendingBanner extends StatelessWidget {
       ),
       child: Row(
         children: <Widget>[
-          const Icon(Icons.schedule, size: 18, color: RenanceColors.amber),
+          const MsIcon('schedule', size: 18, color: RenanceColors.amber),
           const SizedBox(width: 10),
           Expanded(
             child: Text(
@@ -1803,8 +1807,8 @@ class _SyncErrorBanner extends StatelessWidget {
       ),
       child: Row(
         children: <Widget>[
-          Icon(
-            Icons.cloud_off_outlined,
+          MsIcon(
+            'cloud_off',
             size: 18,
             color: context.error,
           ),
@@ -2083,8 +2087,8 @@ class _FatigueBanner extends StatelessWidget {
       ),
       child: Row(
         children: <Widget>[
-          Icon(
-            Icons.self_improvement,
+          MsIcon(
+            'self_improvement',
             size: 22,
             color: context.ink,
           ),
@@ -2156,8 +2160,9 @@ class _MoreTile extends StatelessWidget {
             ),
             child: msIcon != null
                 ? MsIcon(msIcon!, size: 20, color: context.ink)
-                : Icon(icon ?? Icons.circle_outlined,
-                    size: 20, color: context.ink),
+                : (icon != null
+                    ? Icon(icon!, size: 20, color: context.ink)
+                    : MsIcon('circle', size: 20, color: context.ink)),
           ),
           const SizedBox(height: 4),
           Text(

@@ -15,6 +15,8 @@ import 'dart:ui' show PathMetric, PathMetrics;
 
 import 'package:flutter/material.dart';
 
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 /// Plain data for one badge, decoupled from the progress screen's
@@ -32,7 +34,7 @@ class BadgeSpec {
 
   final String code;
   final String label;
-  final IconData icon;
+  final String icon;
   final Color bg;
   final Color fg;
   final String hint;
@@ -124,7 +126,7 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                     children: <Widget>[
                       IconButton(
                         onPressed: () => Navigator.of(context).pop(),
-                        icon: const Icon(Icons.arrow_back_ios_new, size: 20),
+                        icon: const MsIcon('arrow_back_ios_new', size: 20),
                         color: context.ink,
                       ),
                     ],
@@ -181,18 +183,12 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                                       ),
                                     ),
                                   ),
-                                  Icon(
+                                  MsIcon(
                                     widget.spec.icon,
                                     size: 96,
                                     color: widget.spec.earned
                                         ? widget.spec.fg
                                         : context.outlineLight,
-                                    shadows: const <Shadow>[
-                                      Shadow(
-                                        blurRadius: 24,
-                                        color: Color(0x33000000),
-                                      ),
-                                    ],
                                   ),
                                 ],
                               ),
@@ -214,8 +210,10 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
-                                Icon(Icons.star,
-                                    size: 16, color: context.secondary),
+                                MsIcon('star',
+                                    size: 16,
+                                    fill: true,
+                                    color: context.secondary),
                                 const SizedBox(width: 4),
                                 Text(
                                   widget.spec.earned
@@ -305,8 +303,8 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                                     ),
                                   ],
                                 ),
-                                const Icon(
-                                  Icons.local_fire_department,
+                                const MsIcon(
+                                  'local_fire_department',
                                   size: 20,
                                   color: RenanceColors.amber,
                                 ),
@@ -383,7 +381,7 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                                   style: RenanceText.bodyMedium.copyWith(
                                       fontSize: 14,
                                       color: context.ink)),
-                              Icon(Icons.chevron_right,
+                              MsIcon('chevron_right',
                                   size: 18, color: context.ink),
                             ],
                           ),
@@ -406,32 +404,15 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                       ),
                       const SizedBox(height: 24),
                       // Share Achievement ------------------------------------
-                      SizedBox(
+                      TactileButton(
+                        onPressed: _share,
                         height: 52,
-                        child: DecoratedBox(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            boxShadow: const <BoxShadow>[
-                              BoxShadow(
-                                color: Color(0x1A000000),
-                                blurRadius: 12,
-                                offset: Offset(0, 4),
-                              ),
-                            ],
-                          ),
-                          child: TextButton(
-                            onPressed: _share,
-                            style: TextButton.styleFrom(
-                              backgroundColor: context.primary,
-                              foregroundColor: context.onPrimary,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10)),
-                            ),
-                            child: Text('Share Achievement',
-                                style: RenanceText.bodyMedium
-                                    .copyWith(color: context.onPrimary)),
-                          ),
-                        ),
+                        radius: BorderRadius.circular(10),
+                        face: context.primary,
+                        onFace: context.onPrimary,
+                        child: Text('Share Achievement',
+                            style: RenanceText.bodyMedium
+                                .copyWith(color: context.onPrimary)),
                       ),
                     ],
                   ),
@@ -533,7 +514,7 @@ class _RelatedBadgeCard extends StatelessWidget {
                         : context.cardLowest,
                   ),
                   alignment: Alignment.center,
-                  child: Icon(
+                  child: MsIcon(
                     spec.icon,
                     size: 32,
                     color: earned ? spec.fg : context.outlineLight,
@@ -551,7 +532,7 @@ class _RelatedBadgeCard extends StatelessWidget {
                         borderRadius: BorderRadius.circular(999),
                         border: Border.all(color: Colors.white),
                       ),
-                      child: Icon(Icons.lock,
+                      child: MsIcon('lock',
                           size: 14, color: context.textSecondary),
                     ),
                   ),

@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import '../controllers.dart';
 import '../models.dart';
 import '../pacing.dart';
+import 'msymbols.dart';
 import 'theme.dart';
 
 /// Live pacing coach for the question currently on screen. The monochrome
@@ -78,11 +79,11 @@ class _PacingGaugeCardState extends State<PacingGaugeCard> {
         ),
         child: Row(
           children: <Widget>[
-            Icon(
+            MsIcon(
               switch (info.state) {
-                PacingState.onTrack => Icons.schedule,
-                PacingState.lingering => Icons.hourglass_top,
-                PacingState.trapRisk => Icons.timer_off,
+                PacingState.onTrack => 'schedule',
+                PacingState.lingering => 'hourglass_top',
+                PacingState.trapRisk => 'timer_off',
               },
               size: 18,
               color: text,
@@ -209,7 +210,7 @@ class _PacingForensicsSectionState extends State<PacingForensicsSection> {
         children: <Widget>[
           Row(
             children: <Widget>[
-              Icon(Icons.timer_outlined, size: 18, color: context.ink),
+              MsIcon('timer', size: 18, color: context.ink),
               const SizedBox(width: 8),
               Expanded(
                 child: Text(
@@ -263,8 +264,9 @@ class _PacingForensicsSectionState extends State<PacingForensicsSection> {
                 padding: const EdgeInsets.only(bottom: 6),
                 child: Row(
                   children: <Widget>[
-                    Icon(
-                      trap.correct ? Icons.check_circle_outline : Icons.cancel_outlined,
+                    MsIcon(
+                      trap.correct ? 'check_circle' : 'cancel',
+                      fill: !trap.correct,
                       size: 16,
                       color: context.ink.withValues(alpha: trap.correct ? 0.45 : 1),
                     ),
@@ -289,7 +291,7 @@ class _PacingForensicsSectionState extends State<PacingForensicsSection> {
             const SizedBox(height: 8),
             Row(
               children: <Widget>[
-                Icon(Icons.directions_run, size: 16, color: context.ink),
+                MsIcon('directions_run', size: 16, color: context.ink),
                 const SizedBox(width: 8),
                 Expanded(
                   child: Text(

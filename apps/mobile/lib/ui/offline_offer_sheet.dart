@@ -13,6 +13,8 @@ import 'package:provider/provider.dart';
 
 import '../controllers.dart';
 import '../storage.dart';
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 /// The prefs key remembering the student answered the offer. One ask:
@@ -98,7 +100,7 @@ class OfflineOfferSheet extends StatelessWidget {
                     color: context.cardHigh,
                     borderRadius: BorderRadius.circular(14),
                   ),
-                  child: Icon(Icons.offline_bolt_rounded,
+                  child: MsIcon('offline_bolt',
                       size: 26, color: context.ink),
                 ),
                 const SizedBox(width: 12),
@@ -133,40 +135,31 @@ class OfflineOfferSheet extends StatelessWidget {
             Row(
               children: <Widget>[
                 Expanded(
-                  child: OutlinedButton(
+                  child: TactileButton(
                     onPressed: () => _decline(context),
-                    style: OutlinedButton.styleFrom(
-                      minimumSize: const Size.fromHeight(52),
-                      // Theme-aware (dark-mode fix 2026-10-11): the label
-                      // and the stroke follow the active tier so "Later"
-                      // stays readable on the dark card.
-                      foregroundColor: context.ink,
-                      side: BorderSide(color: context.outlineVariant),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                    ),
+                    // Theme-aware (dark-mode fix 2026-10-11): the label
+                    // and the stroke follow the active tier so "Later"
+                    // stays readable on the dark card.
+                    outline: context.outlineVariant,
+                    edge: context.outlineVariant,
+                    edgeWidth: 3,
+                    height: 52,
+                    radius: BorderRadius.circular(12),
                     child: const Text('Later'),
                   ),
                 ),
                 const SizedBox(width: 10),
                 Expanded(
-                  child: FilledButton(
+                  child: TactileButton(
                     onPressed: () => _accept(context),
-                    style: FilledButton.styleFrom(
-                      minimumSize: const Size.fromHeight(52),
-                      // Founder directive (2026-10-02): the black CTA
-                      // follows the seed colour.
-                      backgroundColor: context.inverseChip,
-                      foregroundColor: context.onInverseChip,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                    ),
-                    child: const Text(
-                      'Download all',
-                      style: TextStyle(fontWeight: FontWeight.w700),
-                    ),
+                    // Founder directive (2026-10-02): the black CTA
+                    // follows the seed colour.
+                    face: context.inverseChip,
+                    onFace: context.onInverseChip,
+                    height: 52,
+                    radius: BorderRadius.circular(12),
+                    fontWeight: FontWeight.w700,
+                    child: const Text('Download all'),
                   ),
                 ),
               ],

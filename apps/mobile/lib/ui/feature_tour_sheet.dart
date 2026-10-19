@@ -16,6 +16,8 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'appearance_sheet.dart';
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 const String _kTourKey = 'renance.tour.v1';
@@ -28,7 +30,7 @@ class _TourStep {
     this.whereToTap,
     this.actionLabel,
   });
-  final IconData icon;
+  final String icon;
   final String title;
   final String body;
 
@@ -41,14 +43,14 @@ class _TourStep {
 
 const List<_TourStep> _steps = <_TourStep>[
   _TourStep(
-    icon: Icons.school_outlined,
+    icon: 'school',
     title: 'Welcome to Renance',
     body: 'Your study OS for JAMB, WAEC, NECO, Post-UTME and university - '
         '235,110+ real past questions, spaced review, and an AI raised on all of it. '
         'Here is the full tour.',
   ),
   _TourStep(
-    icon: Icons.apps,
+    icon: 'apps',
     title: 'The five tabs at the bottom',
     body: 'Everything in Renance lives behind five tabs: HOME (your desk), '
         'PRACTICE (question packs and papers), REVIEW (spaced repetition), '
@@ -57,7 +59,7 @@ const List<_TourStep> _steps = <_TourStep>[
     whereToTap: 'Bottom bar - Home, Practice, Review, Progress, Profile',
   ),
   _TourStep(
-    icon: Icons.edit_note,
+    icon: 'edit_note',
     title: 'Practice with real past questions',
     body: 'Pick your exam body and subject, then drill actual past papers year by '
         'year. Every question carries a worked explanation on the review screen. '
@@ -66,7 +68,7 @@ const List<_TourStep> _steps = <_TourStep>[
     whereToTap: 'Practice tab, or the Exams tile on Home',
   ),
   _TourStep(
-    icon: Icons.search,
+    icon: 'search',
     title: 'Search anything, instantly',
     body: 'Looking for a topic, a course code or a past paper? The magnifier at '
         'the top of Home searches the whole corpus - subjects, courses and '
@@ -74,7 +76,7 @@ const List<_TourStep> _steps = <_TourStep>[
     whereToTap: 'Magnifier icon - top right of the Home header',
   ),
   _TourStep(
-    icon: Icons.auto_awesome,
+    icon: 'auto_awesome',
     title: 'Renance AI Studio',
     body: 'Chat with an AI grounded on the full past-question corpus, generate playable '
         'quizzes, study notes, notebooks and lesson notes - all exportable as PDF, with '
@@ -82,7 +84,7 @@ const List<_TourStep> _steps = <_TourStep>[
     whereToTap: 'The sparkle button - bottom right of Home',
   ),
   _TourStep(
-    icon: Icons.history_edu_outlined,
+    icon: 'history_edu',
     title: 'Review that never forgets',
     body: 'Wrong answers come back on a spaced-repetition schedule, and every paper you sit '
         'lands in your history with a full report - pace, accuracy, topics. When the badge '
@@ -90,7 +92,7 @@ const List<_TourStep> _steps = <_TourStep>[
     whereToTap: 'Review tab - watch for the green badge count',
   ),
   _TourStep(
-    icon: Icons.emoji_events_outlined,
+    icon: 'emoji_events',
     title: 'Duel and climb',
     body: 'Challenge friends to live 1v1 arena duels, take the daily quiz, and climb the '
         'leaderboards - Arena, JAMB, WAEC, NECO, streaks and the daily board. '
@@ -98,7 +100,7 @@ const List<_TourStep> _steps = <_TourStep>[
     whereToTap: 'Compete row on Home - Arena, Daily Quiz, Leaderboard',
   ),
   _TourStep(
-    icon: Icons.offline_bolt,
+    icon: 'offline_bolt',
     title: 'Make Renance work offline',
     body: 'Download your question packs once and Renance works with no data at all - '
         'on a bus, in a hall, anywhere. Manage or delete packs any time from the '
@@ -106,7 +108,7 @@ const List<_TourStep> _steps = <_TourStep>[
     whereToTap: 'The offline offer after signup, or the Downloads tile',
   ),
   _TourStep(
-    icon: Icons.school,
+    icon: 'school',
     title: 'Your focus shapes the app',
     body: 'Set your learning focus - JAMB, WAEC, NECO, Post-UTME or University - and the '
         'whole app reshapes around it: the home desk, the packs, the leaderboards. '
@@ -114,7 +116,7 @@ const List<_TourStep> _steps = <_TourStep>[
     whereToTap: 'Profile tab - Learning focus card',
   ),
   _TourStep(
-    icon: Icons.palette_outlined,
+    icon: 'palette',
     title: 'Make it yours - Appearance',
     body: 'Light, dark or mixed mode, plus a seed colour that re-tints the whole app. '
         'Open it right now and see every surface change - you can always find it '
@@ -123,7 +125,7 @@ const List<_TourStep> _steps = <_TourStep>[
     actionLabel: 'Try appearance settings now',
   ),
   _TourStep(
-    icon: Icons.rocket_launch_outlined,
+    icon: 'rocket_launch',
     title: 'You are all set',
     body: 'Set your learning focus in Profile whenever your target changes - the whole app '
         'reshapes around it. Happy studying, scholar.',
@@ -193,7 +195,7 @@ class _FeatureTourDialogState extends State<_FeatureTourDialog> {
                     color: context.primary,
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  child: Icon(s.icon, color: context.onPrimary, size: 24),
+                  child: MsIcon(s.icon, color: context.onPrimary, size: 24),
                 ),
                 const Spacer(),
                 TextButton(
@@ -249,7 +251,7 @@ class _FeatureTourDialogState extends State<_FeatureTourDialog> {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Icon(Icons.touch_app_outlined,
+                    MsIcon('touch_app',
                         size: 16, color: context.textSecondary),
                     const SizedBox(width: 8),
                     Expanded(
@@ -269,24 +271,41 @@ class _FeatureTourDialogState extends State<_FeatureTourDialog> {
             // The live action: opens the real appearance sheet.
             if (s.actionLabel != null) ...<Widget>[
               const SizedBox(height: 12),
-              OutlinedButton.icon(
+              TactileButton(
                 onPressed: _runAction,
-                icon: const Icon(Icons.open_in_new_rounded, size: 16),
-                label: Text(s.actionLabel!),
+                outline: context.outlineVariant,
+                edge: context.outlineVariant,
+                edgeWidth: 3,
+                height: 46,
+                fontSize: 14,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const MsIcon('open_in_new', size: 16),
+                    const SizedBox(width: 8),
+                    Text(s.actionLabel!),
+                  ],
+                ),
               ),
             ],
             const SizedBox(height: 18),
             Row(
               children: <Widget>[
                 if (_step > 0) ...<Widget>[
-                  OutlinedButton(
+                  TactileButton(
                     onPressed: () => setState(() => _step--),
+                    outline: context.outlineVariant,
+                    edge: context.outlineVariant,
+                    edgeWidth: 3,
+                    height: 46,
+                    fontSize: 14,
+                    expand: false,
                     child: const Text('Back'),
                   ),
                   const SizedBox(width: 8),
                 ],
                 Expanded(
-                  child: FilledButton(
+                  child: TactileButton(
                     onPressed: () {
                       if (last) {
                         Navigator.of(context).pop();
@@ -294,6 +313,8 @@ class _FeatureTourDialogState extends State<_FeatureTourDialog> {
                         setState(() => _step++);
                       }
                     },
+                    height: 46,
+                    fontSize: 14,
                     child: Text(last ? 'Start studying' : 'Next'),
                   ),
                 ),

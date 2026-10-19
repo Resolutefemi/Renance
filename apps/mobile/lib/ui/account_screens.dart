@@ -23,9 +23,11 @@ import '../storage.dart';
 import 'downloads_screen.dart';
 import 'gpa_screen.dart';
 import 'home_screen.dart' show AvatarCircle;
+import 'msymbols.dart';
 import 'performance_screen.dart';
 import 'saved_questions.dart';
 import 'settings_screen.dart';
+import 'tactile.dart';
 import 'theme.dart';
 import 'update_questions_screen.dart';
 
@@ -39,7 +41,7 @@ Future<void> _confirmDeleteAccount(BuildContext context) async {
   final bool? confirmed = await showDialog<bool>(
     context: context,
     builder: (BuildContext dialogContext) => AlertDialog(
-      icon: const Icon(Icons.delete_forever_outlined, size: 32),
+      icon: const MsIcon('delete_forever', size: 32),
       title: const Text('Delete your account?'),
       content: const Text(
         'Everything on this account goes with it: your results, exam '
@@ -155,19 +157,9 @@ class AccountSheet extends StatelessWidget {
                       ],
                     ),
                   ),
-                  InkWell(
+                  TactileBackKey(
                     onTap: () => Navigator.of(context).pop(),
-                    customBorder: const CircleBorder(),
-                    child: Container(
-                      width: 38,
-                      height: 38,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: context.cardLow,
-                      ),
-                      child:
-                          Icon(Icons.close, size: 18, color: context.ink),
-                    ),
+                    icon: 'close',
                   ),
                 ],
               ),
@@ -175,7 +167,7 @@ class AccountSheet extends StatelessWidget {
             Divider(height: 1, color: context.outlineLight),
             // menu
             _SheetItem(
-              icon: Icons.dashboard_outlined,
+              icon: 'dashboard',
               label: 'Dashboard',
               onTap: () {
                 Navigator.of(context).pop();
@@ -183,7 +175,7 @@ class AccountSheet extends StatelessWidget {
               },
             ),
             _SheetItem(
-              icon: Icons.insights,
+              icon: 'insights',
               label: 'Performance Analysis',
               onTap: () {
                 Navigator.of(context).pop();
@@ -192,7 +184,7 @@ class AccountSheet extends StatelessWidget {
               },
             ),
             _SheetItem(
-              icon: Icons.history_edu,
+              icon: 'history_edu',
               label: 'Exam History',
               onTap: () {
                 Navigator.of(context).pop();
@@ -200,7 +192,7 @@ class AccountSheet extends StatelessWidget {
               },
             ),
             _SheetItem(
-              icon: Icons.bookmark_border,
+              icon: 'bookmark',
               label: 'Saved Questions',
               onTap: () {
                 Navigator.of(context).pop();
@@ -209,7 +201,7 @@ class AccountSheet extends StatelessWidget {
               },
             ),
             _SheetItem(
-              icon: Icons.sync,
+              icon: 'sync',
               label: 'Update Questions',
               onTap: () {
                 Navigator.of(context).pop();
@@ -218,7 +210,7 @@ class AccountSheet extends StatelessWidget {
               },
             ),
             _SheetItem(
-              icon: Icons.settings_outlined,
+              icon: 'settings',
               label: 'App Settings',
               onTap: () {
                 Navigator.of(context).pop();
@@ -227,7 +219,7 @@ class AccountSheet extends StatelessWidget {
               },
             ),
             _SheetItem(
-              icon: Icons.logout,
+              icon: 'logout',
               label: 'Logout',
               destructive: true,
               onTap: () async {
@@ -239,7 +231,7 @@ class AccountSheet extends StatelessWidget {
               },
             ),
             _SheetItem(
-              icon: Icons.delete_outline,
+              icon: 'delete',
               label: 'Delete account',
               destructive: true,
               onTap: () {
@@ -263,7 +255,7 @@ class _SheetItem extends StatelessWidget {
     this.destructive = false,
   });
 
-  final IconData icon;
+  final String icon;
   final String label;
   final VoidCallback onTap;
   final bool destructive;
@@ -278,7 +270,7 @@ class _SheetItem extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         child: Row(
           children: <Widget>[
-            Icon(icon, size: 21, color: tint),
+            MsIcon(icon, size: 21, color: tint),
             const SizedBox(width: 16),
             Expanded(
               child: Text(
@@ -289,7 +281,8 @@ class _SheetItem extends StatelessWidget {
                 ),
               ),
             ),
-            Icon(Icons.chevron_right, size: 19, color: context.outlineLight),
+            MsIcon('chevron_right',
+                size: 19, color: context.outlineLight),
           ],
         ),
       ),
@@ -323,20 +316,9 @@ class MyAccountScreen extends StatelessWidget {
                 height: 56,
                 child: Row(
                   children: <Widget>[
-                    InkWell(
+                    TactileBackKey(
                       onTap: () => Navigator.of(context).pop(),
-                      customBorder: const CircleBorder(),
-                      child: Container(
-                        width: 42,
-                        height: 42,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(color: context.outlineVariant),
-                          color: context.card,
-                        ),
-                        child: Icon(Icons.arrow_back,
-                            size: 19, color: context.ink),
-                      ),
+                      size: 42,
                     ),
                     const SizedBox(width: 8),
                   ],
@@ -352,7 +334,7 @@ class MyAccountScreen extends StatelessWidget {
                   const SizedBox(height: 18),
                   _AccountGroup(rows: <_AccountRow>[
                     _AccountRow(
-                      icon: Icons.bar_chart,
+                      icon: 'bar_chart',
                       label: 'Performance Analysis',
                       onTap: () => Navigator.of(context).push(
                         MaterialPageRoute<void>(
@@ -360,7 +342,7 @@ class MyAccountScreen extends StatelessWidget {
                       ),
                     ),
                     _AccountRow(
-                      icon: Icons.history_edu,
+                      icon: 'history_edu',
                       label: 'Exam History',
                       onTap: () {
                         Navigator.of(context).pop();
@@ -368,7 +350,7 @@ class MyAccountScreen extends StatelessWidget {
                       },
                     ),
                     _AccountRow(
-                      icon: Icons.bookmark_border,
+                      icon: 'bookmark',
                       label: 'Saved Questions',
                       onTap: () => Navigator.of(context).push(
                         MaterialPageRoute<void>(
@@ -376,7 +358,7 @@ class MyAccountScreen extends StatelessWidget {
                       ),
                     ),
                     _AccountRow(
-                      icon: Icons.download_outlined,
+                      icon: 'download',
                       label: 'Downloads',
                       onTap: () => Navigator.of(context).push(
                         MaterialPageRoute<void>(
@@ -384,7 +366,7 @@ class MyAccountScreen extends StatelessWidget {
                       ),
                     ),
                     _AccountRow(
-                      icon: Icons.calculate_outlined,
+                      icon: 'calculate',
                       label: 'GPA Calculator',
                       onTap: () => Navigator.of(context).push(
                         MaterialPageRoute<void>(
@@ -395,7 +377,7 @@ class MyAccountScreen extends StatelessWidget {
                   const SizedBox(height: 14),
                   _AccountGroup(rows: <_AccountRow>[
                     _AccountRow(
-                      icon: Icons.sync,
+                      icon: 'sync',
                       label: 'Update Questions',
                       onTap: () => Navigator.of(context).push(
                         MaterialPageRoute<void>(
@@ -403,7 +385,7 @@ class MyAccountScreen extends StatelessWidget {
                       ),
                     ),
                     _AccountRow(
-                      icon: Icons.settings_outlined,
+                      icon: 'settings',
                       label: 'App Settings',
                       onTap: () => Navigator.of(context).push(
                         MaterialPageRoute<void>(
@@ -411,7 +393,7 @@ class MyAccountScreen extends StatelessWidget {
                       ),
                     ),
                     _AccountRow(
-                      icon: Icons.help_outline,
+                      icon: 'help',
                       label: 'Help & Support',
                       onTap: () => showLicensePage(
                         context: context,
@@ -423,7 +405,7 @@ class MyAccountScreen extends StatelessWidget {
                   const SizedBox(height: 14),
                   _AccountGroup(rows: <_AccountRow>[
                     _AccountRow(
-                      icon: Icons.logout,
+                      icon: 'logout',
                       label: 'Logout',
                       destructive: true,
                       onTap: () async {
@@ -434,7 +416,7 @@ class MyAccountScreen extends StatelessWidget {
                       },
                     ),
                     _AccountRow(
-                      icon: Icons.delete_outline,
+                      icon: 'delete',
                       label: 'Delete account',
                       destructive: true,
                       onTap: () => _confirmDeleteAccount(context),
@@ -487,7 +469,7 @@ class _AccountRow extends StatelessWidget {
     this.destructive = false,
   });
 
-  final IconData icon;
+  final String icon;
   final String label;
   final VoidCallback onTap;
   final bool destructive;
@@ -501,7 +483,7 @@ class _AccountRow extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
         child: Row(
           children: <Widget>[
-            Icon(icon, size: 21, color: tint),
+            MsIcon(icon, size: 21, color: tint),
             const SizedBox(width: 18),
             Expanded(
               child: Text(
@@ -512,7 +494,8 @@ class _AccountRow extends StatelessWidget {
                 ),
               ),
             ),
-            Icon(Icons.chevron_right, size: 19, color: context.outlineLight),
+            MsIcon('chevron_right',
+                size: 19, color: context.outlineLight),
           ],
         ),
       ),

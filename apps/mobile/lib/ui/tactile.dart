@@ -12,6 +12,7 @@ library;
 
 import 'package:flutter/material.dart';
 
+import 'msymbols.dart';
 import 'theme.dart';
 
 /// `color-mix(in srgb, c <t>%, #000)` - the web's edge derivation.
@@ -26,6 +27,16 @@ Color mixTowardBlack(Color c, double t) {
 
 /// The tactile push-button. A hard 4px extruded bottom edge; pressing
 /// sinks the face 2px and the edge collapses to 2px - a real key.
+///
+/// The web's variants, all through this one widget:
+/// - filled keys (bg-primary / bg-hero-cta / bg-macaw / bg-error) -
+///   pass [face]; the edge derives color-mix(face 68%, black).
+/// - the WHITE key (.hero-cta-secondary / .key-btn.bg-card) - pass
+///   [outline]; the face resolves to the card token, a 2px outline
+///   draws and the ledge derives color-mix(outline 78%, black).
+/// - slim chips (< 32px tall: the Ask-AI chip, mode tabs, jump pills)
+///   get a 3px edge via [edgeWidth] so the extrusion never swallows
+///   the label.
 class TactileButton extends StatefulWidget {
   const TactileButton({
     super.key,
@@ -34,6 +45,8 @@ class TactileButton extends StatefulWidget {
     this.face,
     this.onFace,
     this.edge,
+    this.outline,
+    this.edgeWidth = 4,
     this.height = 52,
     this.radius = RenanceRadius.button,
     this.fontSize = 15,
@@ -51,6 +64,14 @@ class TactileButton extends StatefulWidget {
 
   /// Extruded edge colour. Null derives color-mix(face 68%, black).
   final Color? edge;
+
+  /// The white-key variant: pass the outline token (web .hero-cta-
+  /// secondary / .key-btn.bg-card) and the button draws a 2px outline
+  /// on the card face with a deeper derived ledge.
+  final Color? outline;
+
+  /// Resting edge thickness - 4 (default) or 3 for slim chips.
+  final double edgeWidth;
   final double height;
   final BorderRadius radius;
   final double fontSize;
@@ -67,13 +88,15 @@ class _TactileButtonState extends State<TactileButton> {
 
   @override
   Widget build(BuildContext context) {
-    final face =
-        widget.face ?? Theme.of(context).colorScheme.primary;
-    final label =
-        widget.onFace ?? Theme.of(context).colorScheme.onPrimary;
-    final edge = widget.edge ?? mixTowardBlack(face, 0.68);
+    final white = widget.outline != null;
+    final face = widget.face ??
+        (white ? context.card : Theme.of(context).colorScheme.primary);
+    final label = widget.onFace ??
+        (white ? context.ink : Theme.of(context).colorScheme.onPrimary);
+    final edge = widget.edge ??
+        (white ? mixTowardBlack(widget.outline!, 0.78) : mixTowardBlack(face, 0.68));
     final enabled = widget.onPressed != null;
-    final lift = _pressing && enabled ? 2.0 : 4.0;
+    final lift = _pressing && enabled ? 2.0 : widget.edgeWidth;
 
     final btn = AnimatedContainer(
       duration: const Duration(milliseconds: 90),
@@ -81,6 +104,7 @@ class _TactileButtonState extends State<TactileButton> {
       decoration: BoxDecoration(
         color: face,
         borderRadius: widget.radius,
+        border: white ? Border.all(color: widget.outline!, width: 2) : null,
         boxShadow: enabled
             ? [BoxShadow(color: edge, offset: Offset(0, lift), blurRadius: 0)]
             : null,
@@ -114,7 +138,13 @@ class _TactileButtonState extends State<TactileButton> {
     return Semantics(
       button: true,
       enabled: enabled,
-      child: widget.expand ? SizedBox(width: double.infinity, child: gesture) : gesture,
+      child: Opacity(
+        // the web's .key-btn:disabled { opacity: 0.55 }
+        opacity: enabled ? 1 : 0.55,
+        child: widget.expand
+            ? SizedBox(width: double.infinity, child: gesture)
+            : gesture,
+      ),
     );
   }
 }
@@ -323,6 +353,75 @@ class _KeycapPainter extends CustomPainter {
   @override
   bool shouldRepaint(_KeycapPainter old) =>
       old.face != face || old.edge != edge || old.letter != letter;
+}
+
+/// The web's .back-key (globals.css): the 3D circular back/close key
+/// for overlay and sheet top bars - "the back button should be
+/// Duolingo's own, and 3D" (founder directive). 38px circle, 2px
+/// outline, card face, a hard 3px ledge; pressing sinks 2px while the
+/// ledge collapses to 1px. The glyph is the site's own Material
+/// Symbols Outlined at the header settings.
+class TactileBackKey extends StatefulWidget {
+  const TactileBackKey({
+    super.key,
+    this.onTap,
+    this.icon = 'arrow_back',
+    this.size = 38,
+    this.semanticLabel,
+  });
+
+  final VoidCallback? onTap;
+
+  /// Material Symbols ligature name ('arrow_back', 'close', ...).
+  final String icon;
+  final double size;
+  final String? semanticLabel;
+
+  @override
+  State<TactileBackKey> createState() => _TactileBackKeyState();
+}
+
+class _TactileBackKeyState extends State<TactileBackKey> {
+  bool _pressing = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final outline = context.outlineVariant;
+    final ledge = mixTowardBlack(outline, 0.72);
+    final lift = _pressing ? 1.0 : 3.0;
+
+    return Semantics(
+      button: true,
+      label: widget.semanticLabel,
+      child: GestureDetector(
+        onTapDown: widget.onTap != null ? (_) => setState(() => _pressing = true) : null,
+        onTapCancel: widget.onTap != null ? () => setState(() => _pressing = false) : null,
+        onTapUp: widget.onTap != null ? (_) => setState(() => _pressing = false) : null,
+        onTap: widget.onTap,
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 90),
+          width: widget.size,
+          height: widget.size - lift,
+          decoration: BoxDecoration(
+            color: context.card,
+            shape: BoxShape.circle,
+            border: Border.all(color: outline, width: 2),
+            boxShadow: [
+              BoxShadow(color: ledge, offset: Offset(0, lift), blurRadius: 0),
+            ],
+          ),
+          child: Center(
+            child: MsIcon(
+              widget.icon,
+              size: widget.size * 0.58,
+              wght: 700,
+              color: context.ink,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 /// The CBT player option row: a tactile key-card (2px border, 3px

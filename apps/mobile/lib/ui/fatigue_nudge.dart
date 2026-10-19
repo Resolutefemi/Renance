@@ -11,6 +11,7 @@ import 'dart:ui' show ImageFilter;
 import 'package:flutter/material.dart';
 
 import 'renance_logo.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 /// Shows the nudge card over [child] when [visible] is true.
@@ -96,18 +97,11 @@ class FatigueNudgeOverlay extends StatelessWidget {
                                   ),
                                 ),
                                 const SizedBox(height: 24),
-                                SizedBox(
-                                  width: double.infinity,
+                                TactileButton(
+                                  onPressed: onTakeBreak,
                                   height: 52,
-                                  child: FilledButton(
-                                    onPressed: onTakeBreak,
-                                    style: FilledButton.styleFrom(
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10)),
-                                    ),
-                                    child: const Text('Take 5'),
-                                  ),
+                                  radius: BorderRadius.circular(10),
+                                  child: const Text('Take 5'),
                                 ),
                                 SizedBox(
                                   width: double.infinity,

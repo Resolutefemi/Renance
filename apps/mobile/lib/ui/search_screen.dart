@@ -21,6 +21,7 @@ import '../models.dart';
 import 'exam_screen.dart' show ExamScreen;
 import 'lessons_screen.dart' show LessonReaderScreen;
 import 'pack_detail_screen.dart' show PackDetailScreen;
+import 'msymbols.dart';
 import 'renance_logo.dart';
 import 'theme.dart';
 
@@ -48,10 +49,10 @@ class SearchHit {
   final String subtitle;
   final Object? payload; // ExamMeta | LessonMeta | (body, topic)
 
-  IconData get icon => switch (shelf) {
-        SearchShelf.packs => Icons.description_outlined,
-        SearchShelf.lessons => Icons.menu_book_outlined,
-        SearchShelf.topics => Icons.account_tree_outlined,
+  String get icon => switch (shelf) {
+        SearchShelf.packs => 'description',
+        SearchShelf.lessons => 'menu_book',
+        SearchShelf.topics => 'account_tree',
       };
 }
 
@@ -320,7 +321,7 @@ class _SearchBar extends StatelessWidget {
         children: <Widget>[
           IconButton(
             onPressed: () => Navigator.of(context).pop(),
-            icon: const Icon(Icons.arrow_back_ios_new, size: 20),
+            icon: const MsIcon('arrow_back_ios_new', size: 20),
             color: context.ink,
           ),
           SizedBox(width: 4),
@@ -335,8 +336,8 @@ class _SearchBar extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: 'Search packs, lessons, topics',
                 hintStyle: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
-                prefixIcon: Icon(Icons.search,
-                    color: context.textSecondary),
+                prefixIcon: MsIcon('search',
+                    size: 24, color: context.textSecondary),
                 filled: true,
                 fillColor: Colors.white,
                 contentPadding: const EdgeInsets.symmetric(vertical: 12),
@@ -399,7 +400,7 @@ class _NoResults extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Icon(Icons.search_off,
+            MsIcon('search_off',
                 size: 40, color: context.outlineLight),
             const SizedBox(height: 12),
             Text('Nothing matches yet', style: RenanceText.sectionTitle),
@@ -466,7 +467,7 @@ class _HitRow extends StatelessWidget {
                     color: context.cardHigh,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Icon(hit.icon, size: 20, color: context.ink),
+                  child: MsIcon(hit.icon, size: 20, color: context.ink),
                 ),
                 const SizedBox(width: 12),
                 Expanded(
@@ -491,8 +492,8 @@ class _HitRow extends StatelessWidget {
                     ],
                   ),
                 ),
-                Icon(Icons.chevron_right,
-                    color: context.outlineLight),
+                MsIcon('chevron_right',
+                    size: 24, color: context.outlineLight),
               ],
             ),
           ),

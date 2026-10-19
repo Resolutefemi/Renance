@@ -20,8 +20,10 @@ import 'arena_lobby_screen.dart';
 import 'exam_screen.dart';
 import 'home_screen.dart' show LauncherTile, openDailyQuiz;
 import 'leaderboard_screen.dart';
+import 'msymbols.dart';
 import 'renance_logo.dart';
 import 'study_setup_screen.dart';
+import 'tactile.dart';
 import 'theme.dart';
 import 'university_screens.dart';
 
@@ -153,8 +155,11 @@ class PostUtmeHomeTab extends StatelessWidget {
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
-                          Icon(syncing ? Icons.sync : Icons.check_circle,
-                              size: 14, color: context.onHeroCard),
+                          MsIcon(
+                              syncing ? 'sync' : 'check_circle',
+                              size: 14,
+                              fill: !syncing,
+                              color: context.onHeroCard),
                           const SizedBox(width: 4),
                           Text(
                             syncing ? 'Syncing' : 'Synced',
@@ -178,31 +183,30 @@ class PostUtmeHomeTab extends StatelessWidget {
                 const SizedBox(height: 16),
                 // The Pick School button, the same seat the School Desk
                 // keeps it in. No Change School button: the pick sticks.
-                SizedBox(
-                  height: 52,
-                  width: double.infinity,
-                  child: FilledButton.icon(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute<void>(
-                          builder: (_) =>
-                              PostUtmePickerScreen(exams: sync.exams),
-                        ),
-                      );
-                    },
-                    style: FilledButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                TactileButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute<void>(
+                        builder: (_) =>
+                            PostUtmePickerScreen(exams: sync.exams),
                       ),
-                      backgroundColor: context.heroCta,
-                      foregroundColor: context.onHeroCta,
-                    ),
-                    icon: const Icon(Icons.school, size: 20),
-                    label: Text(
-                      slug != null ? 'Open past questions' : 'Pick School',
-                      style: const TextStyle(
-                          fontSize: 15, fontWeight: FontWeight.w600),
-                    ),
+                    );
+                  },
+                  height: 52,
+                  radius: BorderRadius.circular(10),
+                  face: context.heroCta,
+                  onFace: context.onHeroCta,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      const MsIcon('school', size: 20, fill: true),
+                      const SizedBox(width: 8),
+                      Text(
+                        slug != null ? 'Open past questions' : 'Pick School',
+                        style: const TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.w600),
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -226,7 +230,7 @@ class PostUtmeHomeTab extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.history_edu,
+                  msIcon: 'history_edu',
                   label: 'Study',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
@@ -236,14 +240,14 @@ class PostUtmeHomeTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.inventory_2,
+                  msIcon: 'inventory_2',
                   label: 'Packs',
                   onTap: () => onGoTab(1),
                 ),
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.history,
+                  msIcon: 'history',
                   label: 'Review',
                   badge:
                       student.dueTopics > 0 ? '${student.dueTopics}' : null,
@@ -270,7 +274,7 @@ class PostUtmeHomeTab extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.sports_esports,
+                  msIcon: 'sports_esports',
                   label: 'Arena',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
@@ -280,7 +284,7 @@ class PostUtmeHomeTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.event_repeat,
+                  msIcon: 'event_repeat',
                   iconColor: RenanceColors.amber,
                   label: 'Daily Quiz',
                   onTap: () => openDailyQuiz(context, sync),
@@ -288,7 +292,7 @@ class PostUtmeHomeTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.leaderboard,
+                  msIcon: 'leaderboard',
                   label: 'Leaderboard',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
@@ -386,7 +390,7 @@ class PostUtmePickerScreen extends StatelessWidget {
                     children: <Widget>[
                       IconButton(
                         onPressed: () => Navigator.of(context).pop(),
-                        icon: const Icon(Icons.arrow_back_ios_new, size: 20),
+                        icon: const MsIcon('arrow_back_ios_new', size: 20),
                         color: context.ink,
                       ),
                     ],
@@ -479,44 +483,46 @@ class _PostUtmePickerCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.only(bottom: 10),
-      elevation: 0,
-      color: locked ? context.cardLow : context.card,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      child: ListTile(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: TactileCard(
+        color: locked ? context.cardLow : context.card,
+        radius: BorderRadius.circular(12),
+        padding: EdgeInsets.zero,
         onTap: onTap,
-        enabled: onTap != null,
-        leading: Container(
-          width: 44,
-          height: 44,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: locked
-                ? context.surfaceContainer
-                : context.selectionBlue.withValues(alpha: 0.15),
-            borderRadius: BorderRadius.circular(10),
+        child: ListTile(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          enabled: onTap != null,
+          leading: Container(
+            width: 44,
+            height: 44,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: locked
+                  ? context.surfaceContainer
+                  : context.selectionBlue.withValues(alpha: 0.15),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Text(
+              short.length <= 5 ? short : short.substring(0, 4),
+              style: RenanceText.labelMono.copyWith(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w700,
+                  color: locked ? context.textSecondary : context.ink),
+            ),
           ),
-          child: Text(
-            short.length <= 5 ? short : short.substring(0, 4),
-            style: RenanceText.labelMono.copyWith(
-                fontSize: 12,
-                fontWeight: FontWeight.w700,
-                color: locked ? context.textSecondary : context.ink),
-          ),
+          title: Text(short,
+              style: RenanceText.bodyMedium
+                  .copyWith(fontWeight: FontWeight.w600)),
+          subtitle: Text(full,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style:
+                  RenanceText.caption.copyWith(color: context.textSecondary)),
+          trailing: Text(trailing,
+              style:
+                  RenanceText.labelMono.copyWith(fontSize: 11, color: picked ? context.ink : context.textSecondary)),
         ),
-        title: Text(short,
-            style: RenanceText.bodyMedium
-                .copyWith(fontWeight: FontWeight.w600)),
-        subtitle: Text(full,
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-            style:
-                RenanceText.caption.copyWith(color: context.textSecondary)),
-        trailing: Text(trailing,
-            style:
-                RenanceText.labelMono.copyWith(fontSize: 11, color: picked ? context.ink : context.textSecondary)),
       ),
     );
   }
@@ -557,7 +563,7 @@ class PostUtmePacksScreen extends StatelessWidget {
                     children: <Widget>[
                       IconButton(
                         onPressed: () => Navigator.of(context).pop(),
-                        icon: const Icon(Icons.arrow_back_ios_new, size: 20),
+                        icon: const MsIcon('arrow_back_ios_new', size: 20),
                         color: context.ink,
                       ),
                     ],
@@ -624,39 +630,41 @@ class _PostUtmePackTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.only(bottom: 10),
-      elevation: 0,
-      color: context.card,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      child: ListTile(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: TactileCard(
+        color: context.card,
+        radius: BorderRadius.circular(12),
+        padding: EdgeInsets.zero,
         onTap: onOpen,
-        leading: Container(
-          width: 44,
-          height: 44,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: context.cardHigh,
-            borderRadius: BorderRadius.circular(10),
+        child: ListTile(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          leading: Container(
+            width: 44,
+            height: 44,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: context.cardHigh,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: MsIcon('history_edu', size: 22, color: context.ink),
           ),
-          child: Icon(Icons.history_edu, size: 22, color: context.ink),
+          title: Text(label, style: RenanceText.bodyMedium),
+          subtitle: Text(
+            '${exam.questionCount} questions'
+            '${downloaded ? ' · on device' : ''}',
+            style: RenanceText.caption.copyWith(color: context.textSecondary),
+          ),
+          trailing: downloaded
+              ? const MsIcon('check_circle',
+                  size: 20, fill: true, color: RenanceColors.emerald)
+              : IconButton(
+                  icon: MsIcon('download', size: 20,
+                      color: context.textSecondary),
+                  onPressed: onDownload,
+                  tooltip: 'Download for offline',
+                ),
         ),
-        title: Text(label, style: RenanceText.bodyMedium),
-        subtitle: Text(
-          '${exam.questionCount} questions'
-          '${downloaded ? ' · on device' : ''}',
-          style: RenanceText.caption.copyWith(color: context.textSecondary),
-        ),
-        trailing: downloaded
-            ? const Icon(Icons.check_circle,
-                size: 20, color: RenanceColors.emerald)
-            : IconButton(
-                icon: Icon(Icons.download, size: 20,
-                    color: context.textSecondary),
-                onPressed: onDownload,
-                tooltip: 'Download for offline',
-              ),
       ),
     );
   }

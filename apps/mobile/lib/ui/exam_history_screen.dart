@@ -18,7 +18,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../controllers.dart';
 import '../models.dart';
 import 'exam_report_screen.dart';
+import 'msymbols.dart';
 import 'renance_logo.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 /// SharedPreferences key holding the epoch-ms watermark of the last
@@ -107,20 +109,9 @@ class _ExamHistoryScreenState extends State<ExamHistoryScreen> {
                 height: 56,
                 child: Row(
                   children: <Widget>[
-                    InkWell(
+                    TactileBackKey(
                       onTap: () => Navigator.of(context).pop(),
-                      customBorder: const CircleBorder(),
-                      child: Container(
-                        width: 42,
-                        height: 42,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(color: context.outlineVariant),
-                          color: context.card,
-                        ),
-                        child: Icon(Icons.arrow_back,
-                            size: 19, color: context.ink),
-                      ),
+                      size: 42,
                     ),
                     const SizedBox(width: 8),
                   ],
@@ -143,29 +134,17 @@ class _ExamHistoryScreenState extends State<ExamHistoryScreen> {
                     ),
                   ),
                   if (papers.isNotEmpty)
-                    InkWell(
-                      borderRadius: BorderRadius.circular(10),
-                      onTap: () => _confirmClearAll(papers.length),
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 12, vertical: 7),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(
-                            color: context.isDarkTier
-                                ? RenanceColors.darkOutline
-                                : const Color(0xFFE0E0E0),
-                            width: 1.2,
-                          ),
-                        ),
-                        child: Text(
-                          'Clear all Exam History',
-                          style: RenanceText.bodyMedium.copyWith(
-                            fontSize: 13,
-                            color: context.ink,
-                          ),
-                        ),
-                      ),
+                    TactileButton(
+                      onPressed: () => _confirmClearAll(papers.length),
+                      outline: context.outlineVariant,
+                      edge: context.outlineVariant,
+                      edgeWidth: 3,
+                      height: 36,
+                      radius: BorderRadius.circular(10),
+                      fontSize: 12.5,
+                      expand: false,
+                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      child: const Text('Clear all Exam History'),
                     ),
                 ],
               ),

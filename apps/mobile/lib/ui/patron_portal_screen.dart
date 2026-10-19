@@ -9,6 +9,8 @@ library;
 
 import 'package:flutter/material.dart';
 
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 class PatronPortalScreen extends StatelessWidget {
@@ -29,7 +31,7 @@ class PatronPortalScreen extends StatelessWidget {
                   children: <Widget>[
                     IconButton(
                       onPressed: () => Navigator.of(context).pop(),
-                      icon: const Icon(Icons.arrow_back_ios_new, size: 20),
+                      icon: const MsIcon('arrow_back_ios_new', size: 20),
                       color: context.ink,
                     ),
                     const SizedBox(width: 4),
@@ -52,7 +54,7 @@ class PatronPortalScreen extends StatelessWidget {
                     children: <Widget>[
                       Row(
                         children: const <Widget>[
-                          Icon(Icons.push_pin_outlined,
+                          MsIcon('push_pin',
                               size: 16, color: RenanceColors.amber),
                           SizedBox(width: 8),
                           Expanded(child: Text('PATRON STATUS',
@@ -80,57 +82,43 @@ class PatronPortalScreen extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Expanded(
-                            child: SizedBox(
+                            child: TactileButton(
+                              // Inverse chip on the seed-coloured hero:
+                              // onPrimary face + primary label in every
+                              // tier (white chip + black label stock).
+                              face: context.onPrimary,
+                              onFace: context.primary,
                               height: 48,
-                              child: FilledButton(
-                                style: FilledButton.styleFrom(
-                                  // Inverse chip on the seed-coloured hero:
-                                  // onPrimary bg + primary label in every
-                                  // tier (white chip + black label stock).
-                                  backgroundColor: context.onPrimary,
-                                  foregroundColor: context.primary,
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius:
-                                          BorderRadius.circular(12)),
-                                ),
-                                onPressed: () => _snack(context,
-                                    'Payments ship with the funding rail.'),
-                                child: const Text('+ Add Funds',
-                                    style: TextStyle(
-                                        fontFamily: 'Inter',
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w600)),
-                              ),
+                              radius: BorderRadius.circular(12),
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              onPressed: () => _snack(context,
+                                  'Payments ship with the funding rail.'),
+                              child: const Text('+ Add Funds'),
                             ),
                           ),
                           const SizedBox(width: 10),
                           Expanded(
-                            child: SizedBox(
+                            child: TactileButton(
+                              // The web's ghost key: a face cut from the
+                              // hero ground with a translucent on-hero
+                              // ledge.
+                              face: context.primary,
+                              onFace: context.onPrimary,
+                              edge: context.onPrimary.withValues(alpha: 0.3),
                               height: 48,
-                              child: OutlinedButton(
-                                style: OutlinedButton.styleFrom(
-                                  foregroundColor: context.onPrimary,
-                                  side: BorderSide(
-                                      color: context.onPrimary
-                                          .withValues(alpha: 0.3)),
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius:
-                                          BorderRadius.circular(12)),
-                                ),
-                                onPressed: () => _snack(context,
-                                    'Impact story copied for sharing.'),
-                                child: const Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    Icon(Icons.share_outlined, size: 16),
-                                    SizedBox(width: 6),
-                                    Text('Share Impact',
-                                        style: TextStyle(
-                                            fontSize: 14,
-                                            fontWeight:
-                                                FontWeight.w600)),
-                                  ],
-                                ),
+                              radius: BorderRadius.circular(12),
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              onPressed: () => _snack(context,
+                                  'Impact story copied for sharing.'),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: const <Widget>[
+                                  MsIcon('share', size: 16),
+                                  SizedBox(width: 6),
+                                  Text('Share Impact'),
+                                ],
                               ),
                             ),
                           ),
@@ -161,7 +149,7 @@ class PatronPortalScreen extends StatelessWidget {
                                     fontWeight: FontWeight.w600,
                                     color: context.ink)),
                             SizedBox(width: 4),
-                            Icon(Icons.arrow_forward,
+                            MsIcon('arrow_forward',
                                 size: 15, color: context.ink),
                           ],
                         ),
@@ -267,14 +255,14 @@ class PatronPortalScreen extends StatelessWidget {
                   child: Column(
                     children: <Widget>[
                       _LedgerRow(
-                        icon: Icons.account_balance_outlined,
+                        icon: 'account_balance',
                         title: 'Disbursed to JAMB Board',
                         date: 'Oct 12, 2023',
                         amount: '-₦14,200',
                       ),
                       Divider(height: 1, color: context.outlineLight),
                       _LedgerRow(
-                        icon: Icons.savings_outlined,
+                        icon: 'savings',
                         title: 'Your Contribution',
                         date: 'Oct 10, 2023',
                         amount: '+₦50,000',
@@ -282,7 +270,7 @@ class PatronPortalScreen extends StatelessWidget {
                       ),
                       Divider(height: 1, color: context.outlineLight),
                       _LedgerRow(
-                        icon: Icons.menu_book_outlined,
+                        icon: 'menu_book',
                         title: 'Textbook Supplier Payment',
                         date: 'Sep 28, 2023',
                         amount: '-₦8,500',
@@ -301,7 +289,7 @@ class PatronPortalScreen extends StatelessWidget {
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
-                          Icon(Icons.download_outlined,
+                          MsIcon('download',
                               size: 18, color: context.ink),
                           SizedBox(width: 8),
                           Text('Download Full Ledger (PDF)',
@@ -509,22 +497,17 @@ class _NeedCard extends StatelessWidget {
           const SizedBox(height: 4),
           Text(raised, style: RenanceText.labelMono.copyWith(fontSize: 12)),
           const SizedBox(height: 14),
-          SizedBox(
-            width: double.infinity,
+          TactileButton(
             height: 48,
-            child: FilledButton(
-              style: FilledButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
-              ),
-              onPressed: () => ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                    content:
-                        Text('Payments ship with the funding rail.')),
-              ),
-              child: const Text('Fund this',
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600)),
+            radius: BorderRadius.circular(12),
+            fontSize: 15,
+            fontWeight: FontWeight.w600,
+            onPressed: () => ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                  content:
+                      Text('Payments ship with the funding rail.')),
             ),
+            child: const Text('Fund this'),
           ),
         ],
       ),
@@ -541,7 +524,7 @@ class _LedgerRow extends StatelessWidget {
     this.positive = false,
   });
 
-  final IconData icon;
+  final String icon;
   final String title;
   final String date;
   final String amount;
@@ -560,7 +543,7 @@ class _LedgerRow extends StatelessWidget {
               color: context.cardLow,
               shape: BoxShape.circle,
             ),
-            child: Icon(icon, size: 20, color: context.ink),
+            child: MsIcon(icon, size: 20, color: context.ink),
           ),
           const SizedBox(width: 12),
           Expanded(

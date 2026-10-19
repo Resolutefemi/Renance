@@ -26,6 +26,8 @@ import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
 import 'appearance_sheet.dart' show maybeShowFirstAppearanceSheet;
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 class VerifyScreen extends StatefulWidget {
@@ -278,7 +280,7 @@ class _VerifyScreenState extends State<VerifyScreen>
                     shape: BoxShape.circle,
                     color: context.surfaceContainer,
                   ),
-                  child: Icon(Icons.mark_email_unread_outlined,
+                  child: MsIcon('mark_email_unread',
                       size: 30, color: context.ink),
                 ),
                 const SizedBox(height: 20),
@@ -333,31 +335,19 @@ class _VerifyScreenState extends State<VerifyScreen>
                   onSubmitted: (_) => _verify(),
                 ),
                 const SizedBox(height: 14),
-                SizedBox(
-                  width: double.infinity,
+                TactileButton(
+                  onPressed: _busy ? null : _verify,
                   height: 52,
-                  child: FilledButton(
-                    style: FilledButton.styleFrom(
-                      backgroundColor: context.ink,
-                      foregroundColor: context.onInverseChip,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                    onPressed: _busy ? null : _verify,
-                    child: _busy
-                        ? const SizedBox(
-                            width: 20,
-                            height: 20,
-                            child: CircularProgressIndicator(strokeWidth: 2),
-                          )
-                        : Text(
-                            'Confirm my email',
-                            style: RenanceText.bodyMedium.copyWith(
-                              color: context.onInverseChip,
-                            ),
-                          ),
-                  ),
+                  radius: BorderRadius.circular(10),
+                  face: context.ink,
+                  onFace: context.onInverseChip,
+                  child: _busy
+                      ? const SizedBox(
+                          width: 20,
+                          height: 20,
+                          child: CircularProgressIndicator(strokeWidth: 2),
+                        )
+                      : const Text('Confirm my email'),
                 ),
                 const SizedBox(height: 12),
                 // Spam-folder hint (founder directive 2026-10-02): the
@@ -385,33 +375,23 @@ class _VerifyScreenState extends State<VerifyScreen>
                   ),
                 ),
                 const SizedBox(height: 28),
-                SizedBox(
-                  width: double.infinity,
+                TactileButton(
+                  onPressed: _busy ? null : _resend,
                   height: 52,
-                  child: FilledButton(
-                    style: FilledButton.styleFrom(
-                      backgroundColor: context.ink,
-                      foregroundColor: context.onInverseChip,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                    onPressed: _busy ? null : _resend,
-                    child: _busy
-                        ? const SizedBox(
-                            width: 20,
-                            height: 20,
-                            child: CircularProgressIndicator(strokeWidth: 2),
-                          )
-                        : Text(
-                            _sent
-                                ? 'Code sent, check the inbox'
-                                : 'Resend the code',
-                            style: RenanceText.bodyMedium.copyWith(
-                              color: context.onInverseChip,
-                            ),
-                          ),
-                  ),
+                  radius: BorderRadius.circular(10),
+                  face: context.ink,
+                  onFace: context.onInverseChip,
+                  child: _busy
+                      ? const SizedBox(
+                          width: 20,
+                          height: 20,
+                          child: CircularProgressIndicator(strokeWidth: 2),
+                        )
+                      : Text(
+                          _sent
+                              ? 'Code sent, check the inbox'
+                              : 'Resend the code',
+                        ),
                 ),
                 const SizedBox(height: 10),
                 TextButton(
@@ -450,25 +430,13 @@ class _VerifyScreenState extends State<VerifyScreen>
                       ),
                     ),
                     const SizedBox(height: 10),
-                    SizedBox(
-                      width: double.infinity,
+                    TactileButton(
+                      onPressed: _busy ? null : _changeEmail,
                       height: 52,
-                      child: FilledButton(
-                        style: FilledButton.styleFrom(
-                          backgroundColor: context.ink,
-                          foregroundColor: context.onInverseChip,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                        onPressed: _busy ? null : _changeEmail,
-                        child: Text(
-                          'Save and send the code there',
-                          style: RenanceText.bodyMedium.copyWith(
-                            color: context.onInverseChip,
-                          ),
-                        ),
-                      ),
+                      radius: BorderRadius.circular(10),
+                      face: context.ink,
+                      onFace: context.onInverseChip,
+                      child: const Text('Save and send the code there'),
                     ),
                     const SizedBox(height: 10),
                   ],

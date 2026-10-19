@@ -24,6 +24,8 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../storage.dart' show SessionStore;
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 const String kAppearanceAskedKey = 'renance.appearanceAsked';
@@ -116,7 +118,7 @@ class _AppearanceSheetState extends State<AppearanceSheet> {
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  Icon(Icons.palette_outlined,
+                  MsIcon('palette',
                       size: 22, color: palette.primary),
                   const SizedBox(width: 10),
                   Expanded(
@@ -167,13 +169,19 @@ class _AppearanceSheetState extends State<AppearanceSheet> {
               ),
               const SizedBox(height: 16),
 
-              FilledButton.icon(
+              TactileButton(
                 onPressed: () => Navigator.of(context).pop(),
-                icon: const Icon(Icons.check_rounded, size: 18),
-                label: const Text('Looks good'),
-                style: FilledButton.styleFrom(
-                  backgroundColor: palette.primary,
-                  foregroundColor: palette.onPrimary,
+                height: 48,
+                radius: BorderRadius.circular(12),
+                face: palette.primary,
+                onFace: palette.onPrimary,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: const <Widget>[
+                    MsIcon('check', size: 18),
+                    SizedBox(width: 8),
+                    Text('Looks good'),
+                  ],
                 ),
               ),
             ],
@@ -270,7 +278,7 @@ class _SeedDot extends StatelessWidget {
             ],
           ),
           child: selected
-              ? const Icon(Icons.check, size: 20, color: Colors.white)
+              ? const MsIcon('check', size: 20, color: Colors.white)
               : null,
         ),
       ),

@@ -23,6 +23,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../api_client.dart';
 import '../controllers.dart';
 import '../models.dart';
+import 'msymbols.dart';
 import 'syllabus_screen.dart';
 import 'theme.dart';
 
@@ -47,22 +48,22 @@ class _CareerBridgeScreenState extends State<CareerBridgeScreen> {
   ];
 
   // The Stitch demo rows, kept verbatim for the signed-out render.
-  static const List<({IconData icon, String title, String meta, bool urgent})>
-  _kStitchScholarships = <({IconData icon, String title, String meta, bool urgent})>[
+  static const List<({String icon, String title, String meta, bool urgent})>
+  _kStitchScholarships = <({String icon, String title, String meta, bool urgent})>[
     (
-      icon: Icons.school_outlined,
+      icon: 'school',
       title: 'National STEM Grant',
       meta: 'Closes in 12 days • \$5,000',
       urgent: true,
     ),
     (
-      icon: Icons.biotech_outlined,
+      icon: 'biotech',
       title: 'Future Biotech Leaders',
       meta: 'Nov 15 Deadline • Full Tuition',
       urgent: false,
     ),
     (
-      icon: Icons.eco_outlined,
+      icon: 'eco',
       title: 'Conservation Initiative',
       meta: 'Dec 01 Deadline • \$2,500',
       urgent: false,
@@ -132,13 +133,13 @@ class _CareerBridgeScreenState extends State<CareerBridgeScreen> {
     return null;
   }
 
-  List<({IconData icon, String title, String meta, bool urgent})>
+  List<({String icon, String title, String meta, bool urgent})>
   get _scholarshipRows {
     final CareerData? career = _career;
     if (career == null || career.scholarships.isEmpty) {
       return _kStitchScholarships;
     }
-    return <({IconData icon, String title, String meta, bool urgent})>[
+    return <({String icon, String title, String meta, bool urgent})>[
       for (final CareerScholarship s in career.scholarships)
         (
           icon: _scholarshipIcon(s.tags),
@@ -149,14 +150,14 @@ class _CareerBridgeScreenState extends State<CareerBridgeScreen> {
     ];
   }
 
-  IconData _scholarshipIcon(List<String> tags) => switch (
+  String _scholarshipIcon(List<String> tags) => switch (
         tags.isEmpty ? '' : tags.first
       ) {
-        'Health' => Icons.healing_outlined,
-        'Engineering' => Icons.precision_manufacturing_outlined,
-        'Tech' => Icons.computer_outlined,
-        'Research' => Icons.biotech_outlined,
-        _ => Icons.school_outlined,
+        'Health' => 'healing',
+        'Engineering' => 'precision_manufacturing',
+        'Tech' => 'computer',
+        'Research' => 'biotech',
+        _ => 'school',
       };
 
   String _levelLabel(String level) => switch (level) {
@@ -165,13 +166,13 @@ class _CareerBridgeScreenState extends State<CareerBridgeScreen> {
         _ => 'Undergraduate',
       };
 
-  IconData _fieldIcon(String field) => switch (field) {
-        'Health' => Icons.healing_outlined,
-        'Research' => Icons.biotech_outlined,
-        'Ecology' => Icons.eco_outlined,
-        'Engineering' => Icons.precision_manufacturing_outlined,
-        'Tech' => Icons.computer_outlined,
-        _ => Icons.trending_up_outlined,
+  String _fieldIcon(String field) => switch (field) {
+        'Health' => 'healing',
+        'Research' => 'biotech',
+        'Ecology' => 'eco',
+        'Engineering' => 'precision_manufacturing',
+        'Tech' => 'computer',
+        _ => 'trending_up',
       };
 
   List<String> get _filterOptions {
@@ -225,7 +226,7 @@ class _CareerBridgeScreenState extends State<CareerBridgeScreen> {
                   children: <Widget>[
                     IconButton(
                       onPressed: () => Navigator.of(context).pop(),
-                      icon: const Icon(Icons.arrow_back_ios_new, size: 20),
+                      icon: const MsIcon('arrow_back_ios_new', size: 20),
                       color: context.ink,
                     ),
                     const SizedBox(width: 4),
@@ -355,8 +356,8 @@ class _CareerBridgeScreenState extends State<CareerBridgeScreen> {
                           decoration: InputDecoration(
                             hintText:
                                 'Search degrees (e.g. B.Sc Marine Biology)',
-                            icon: Icon(Icons.search,
-                                color: context.textSecondary),
+                            icon: MsIcon('search',
+                                size: 24, color: context.textSecondary),
                             border: InputBorder.none,
                             filled: false,
                           ),
@@ -421,7 +422,7 @@ class _CareerBridgeScreenState extends State<CareerBridgeScreen> {
 class _ScholarshipRow extends StatelessWidget {
   const _ScholarshipRow({required this.row, this.onTap});
 
-  final ({IconData icon, String title, String meta, bool urgent}) row;
+  final ({String icon, String title, String meta, bool urgent}) row;
   final VoidCallback? onTap;
 
   @override
@@ -439,7 +440,7 @@ class _ScholarshipRow extends StatelessWidget {
                 color: context.cardHigh,
                 shape: BoxShape.circle,
               ),
-              child: Icon(row.icon, size: 24, color: context.ink),
+              child: MsIcon(row.icon, size: 24, color: context.ink),
             ),
             const SizedBox(width: 14),
             Expanded(
@@ -482,7 +483,7 @@ class _ScholarshipRow extends StatelessWidget {
                 ],
               ),
             ),
-            Icon(Icons.chevron_right, size: 24, color: context.textSecondary),
+            MsIcon('chevron_right', size: 24, color: context.textSecondary),
           ],
         ),
       ),
@@ -497,7 +498,7 @@ class _PathRow extends StatelessWidget {
   const _PathRow({required this.path, required this.icon, this.onOpen});
 
   final CareerPath path;
-  final IconData icon;
+  final String icon;
   final VoidCallback? onOpen;
 
   @override
@@ -517,7 +518,7 @@ class _PathRow extends StatelessWidget {
                 color: context.cardHigh,
                 shape: BoxShape.circle,
               ),
-              child: Icon(icon, size: 24, color: context.ink),
+              child: MsIcon(icon, size: 24, color: context.ink),
             ),
             const SizedBox(width: 14),
             Expanded(
@@ -570,7 +571,7 @@ class _PathRow extends StatelessWidget {
                 ],
               ),
             ),
-            Icon(Icons.chevron_right, size: 24, color: context.textSecondary),
+            MsIcon('chevron_right', size: 24, color: context.textSecondary),
           ],
         ),
       ),

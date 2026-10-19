@@ -23,6 +23,7 @@ import 'exam_report_screen.dart';
 import 'fatigue_nudge.dart';
 import 'review_screen.dart' show ReviewDetailScreen;
 import 'renance_logo.dart';
+import 'msymbols.dart';
 import 'tactile.dart';
 import 'theme.dart';
 import 'pacing_ui.dart';
@@ -118,7 +119,7 @@ class _ExamScreenState extends State<ExamScreen> {
           : AppBar(
               backgroundColor: context.cardLowest,
               leading: IconButton(
-                icon: const Icon(Icons.arrow_back, size: 22),
+                icon: MsIcon('arrow_back', size: 22),
                 onPressed: () => Navigator.of(context).maybePop(),
               ),
               title: Text(
@@ -331,7 +332,7 @@ class _Intro extends StatelessWidget {
                   child: SizedBox(
                     width: 40,
                     height: 40,
-                    child: Icon(Icons.arrow_back,
+                    child: MsIcon('arrow_back',
                         size: 20, color: context.ink),
                   ),
                 ),
@@ -409,7 +410,7 @@ class _Intro extends StatelessWidget {
                       color: context.inverseChip,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Icon(Icons.fact_check,
+                    child: MsIcon('fact_check',
                         size: 18, color: context.onInverseChip),
                   ),
                   const SizedBox(width: 10),
@@ -446,7 +447,7 @@ class _Intro extends StatelessWidget {
               const SizedBox(height: 12),
               if (subjectRows.isNotEmpty)
                 _SummaryCard(
-                  icon: Icons.menu_book,
+                  icon: 'menu_book',
                   iconBg: RenanceColors.emerald,
                   title: 'Subjects',
                   caption:
@@ -481,7 +482,7 @@ class _Intro extends StatelessWidget {
                 )
               else
                 _SummaryCard(
-                  icon: Icons.menu_book,
+                  icon: 'menu_book',
                   iconBg: RenanceColors.emerald,
                   title: 'Subjects',
                   caption: null,
@@ -492,7 +493,7 @@ class _Intro extends StatelessWidget {
                 ),
               const SizedBox(height: 12),
               _SummaryCard(
-                icon: Icons.access_time_filled,
+                icon: 'access_time_filled',
                 iconBg: const Color(0xFF2563EB),
                 title: 'Test Mode',
                 caption: null,
@@ -525,7 +526,7 @@ class _Intro extends StatelessWidget {
               ),
               const SizedBox(height: 12),
               _SummaryCard(
-                icon: Icons.calendar_month,
+                icon: 'calendar_month',
                 iconBg: RenanceColors.amber,
                 title: 'Exam Year',
                 caption: null,
@@ -541,37 +542,35 @@ class _Intro extends StatelessWidget {
               _SmartOrderToggle(controller: controller),
               const SizedBox(height: 16),
               // Proceed to Test ------------------------------------
-              SizedBox(
+              TactileButton(
+                onPressed: () => controller.begin(),
                 height: 54,
-                width: double.infinity,
-                child: FilledButton(
-                  onPressed: () => controller.begin(),
-                  style: FilledButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
+                radius: BorderRadius.circular(12),
+                face: context.inverseChip,
+                onFace: context.onInverseChip,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const MsIcon('play_arrow', size: 20, fill: true),
+                    const SizedBox(width: 8),
+                    Text(
+                      studyMode ? 'Start Study' : 'Proceed to Test',
+                      style: const TextStyle(
+                          fontSize: 16, fontWeight: FontWeight.w700),
                     ),
-                    backgroundColor: context.inverseChip,
-                    foregroundColor: context.onInverseChip,
-                  ),
-                  child: Text(
-                    studyMode ? 'Start Study' : 'Proceed to Test',
-                    style: const TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.w700),
-                  ),
+                  ],
                 ),
               ),
               const SizedBox(height: 6),
               Center(
                 child: TextButton(
                   onPressed: () => Navigator.of(context).pop(),
-                  child: Text(
-                    'Edit Selections',
-                    style: TextStyle(
-                      fontSize: 14.5,
-                      fontWeight: FontWeight.w700,
-                      color: context.error,
-                    ),
+                  style: TextButton.styleFrom(
+                    foregroundColor: context.textSecondary,
+                    textStyle: const TextStyle(
+                        fontSize: 13, fontWeight: FontWeight.w500),
                   ),
+                  child: const Text('Edit Selections'),
                 ),
               ),
             ],
@@ -603,7 +602,7 @@ class _Instruction extends StatelessWidget {
               color: RenanceColors.emerald.withValues(alpha: 0.14),
               borderRadius: BorderRadius.circular(7),
             ),
-            child: const Icon(Icons.check,
+            child: MsIcon('check',
                 size: 13, color: RenanceColors.emerald),
           ),
           const SizedBox(width: 10),
@@ -633,7 +632,7 @@ class _SummaryCard extends StatelessWidget {
     this.caption,
   });
 
-  final IconData icon;
+  final String icon;
   final Color iconBg;
   final String title;
   final String? caption;
@@ -659,7 +658,7 @@ class _SummaryCard extends StatelessWidget {
                   color: iconBg,
                   borderRadius: BorderRadius.circular(9),
                 ),
-                child: Icon(icon, size: 17, color: Colors.white),
+                child: MsIcon(icon, size: 17, color: Colors.white),
               ),
               const SizedBox(width: 10),
               Text(title,
@@ -735,7 +734,7 @@ class _SmartOrderToggleState extends State<_SmartOrderToggle> {
       ),
       child: Row(
         children: <Widget>[
-          Icon(Icons.auto_awesome,
+          MsIcon('auto_awesome',
               size: 18, color: on ? context.ink : context.outlineDark),
           const SizedBox(width: 8),
           Expanded(
@@ -891,7 +890,7 @@ class _ExamHeader extends StatelessWidget {
                 shape: BoxShape.circle,
                 border: Border.all(color: context.error),
               ),
-              child: Icon(Icons.logout, size: 17, color: context.error),
+              child: MsIcon('logout', size: 17, color: context.error),
             ),
           ),
           const SizedBox(width: 8),
@@ -957,7 +956,7 @@ class _SubmitKeyState extends State<_SubmitKey> {
 class _CardRoundIcon extends StatelessWidget {
   const _CardRoundIcon({required this.icon, required this.onTap});
 
-  final IconData icon;
+  final String icon;
   final VoidCallback onTap;
 
   @override
@@ -973,7 +972,7 @@ class _CardRoundIcon extends StatelessWidget {
           border: Border.all(color: context.outlineVariant),
           color: context.card,
         ),
-        child: Icon(icon, size: 16, color: context.textSecondary),
+        child: MsIcon(icon, size: 16, color: context.textSecondary),
       ),
     );
   }
@@ -1048,13 +1047,13 @@ class _SubjectStrip extends StatelessWidget {
         children: <Widget>[
           // < - jump to the previous subject (dim on the first one).
           _SubjectChevron(
-            icon: Icons.chevron_left,
+            icon: 'chevron_left',
             onTap: activeIdx > 0
                 ? () => controller.goTo(sections[activeIdx - 1].$2)
                 : null,
           ),
           const SizedBox(width: 8),
-          Icon(Icons.subject, size: 15, color: context.primary),
+          MsIcon('subject', size: 15, color: context.primary),
           const SizedBox(width: 6),
           Expanded(
             child: Text(
@@ -1100,7 +1099,7 @@ class _SubjectStrip extends StatelessWidget {
           const SizedBox(width: 8),
           // > - jump to the next subject (dim on the last one).
           _SubjectChevron(
-            icon: Icons.chevron_right,
+            icon: 'chevron_right',
             onTap: activeIdx < sections.length - 1
                 ? () => controller.goTo(sections[activeIdx + 1].$2)
                 : null,
@@ -1116,7 +1115,7 @@ class _SubjectStrip extends StatelessWidget {
 class _SubjectChevron extends StatelessWidget {
   const _SubjectChevron({required this.icon, this.onTap});
 
-  final IconData icon;
+  final String icon;
   final VoidCallback? onTap;
 
   @override
@@ -1132,7 +1131,7 @@ class _SubjectChevron extends StatelessWidget {
           color: context.card,
           border: Border.all(color: context.outlineVariant),
         ),
-        child: Icon(
+        child: MsIcon(
           icon,
           size: 17,
           color: enabled ? context.ink : context.outlineLight,
@@ -1318,12 +1317,12 @@ class _Player extends StatelessWidget {
                         // round icons that always fit the row, never
                         // shoved out of the card edge on small phones.
                         _CardRoundIcon(
-                          icon: Icons.copy_outlined,
+                          icon: 'content_copy',
                           onTap: () => _copyQuestion(context),
                         ),
                         const SizedBox(width: 6),
                         _CardRoundIcon(
-                          icon: Icons.calculate_outlined,
+                          icon: 'calculate',
                           onTap: () => _openCalculator(context),
                         ),
                         const SizedBox(width: 6),
@@ -1346,11 +1345,10 @@ class _Player extends StatelessWidget {
                                       .withValues(alpha: 0.15)
                                   : context.card,
                             ),
-                            child: Icon(
-                              flagged
-                                  ? Icons.flag
-                                  : Icons.flag_outlined,
+                            child: MsIcon(
+                              'flag',
                               size: 16,
+                              fill: flagged,
                               color: flagged
                                   ? RenanceColors.amber
                                   : context.textSecondary,
@@ -1451,79 +1449,71 @@ class _Player extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 // ← Previous -------------------------------------------
-                OutlinedButton(
-                  onPressed:
-                      controller.index == 0 ? null : () => controller.previous(),
-                  style: OutlinedButton.styleFrom(
-                    side: BorderSide(color: context.outlineVariant),
-                    backgroundColor: context.card,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(999)),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 12),
-                  ),
+                TactileButton(
+                  onPressed: controller.index == 0
+                      ? null
+                      : () => controller.previous(),
+                  height: 44,
+                  radius: RenanceRadius.chip,
+                  outline: context.outlineVariant,
+                  edge: context.outlineVariant,
+                  edgeWidth: 3,
+                  fontSize: 14,
+                  expand: false,
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      Icon(Icons.chevron_left,
-                          size: 18,
-                          color: controller.index == 0
-                              ? context.outlineLight
-                              : context.ink),
-                      const SizedBox(width: 4),
-                      Text('Previous',
-                          style: TextStyle(
-                              fontSize: 14.5,
-                              fontWeight: FontWeight.w600,
-                              color: controller.index == 0
-                                  ? context.outlineLight
-                                  : context.ink)),
+                    children: const <Widget>[
+                      MsIcon('chevron_left', size: 18),
+                      SizedBox(width: 4),
+                      Text('Previous'),
                     ],
                   ),
                 ),
                 const Spacer(),
                 // Next → / Submit ---------------------------------------
                 if (!last)
-                  OutlinedButton(
+                  TactileButton(
                     onPressed: () => controller.next(),
-                    style: OutlinedButton.styleFrom(
-                      side: BorderSide(color: context.outlineVariant),
-                      backgroundColor: context.card,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(999)),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 22, vertical: 12),
-                    ),
+                    height: 44,
+                    radius: RenanceRadius.chip,
+                    outline: context.outlineVariant,
+                    edge: context.outlineVariant,
+                    edgeWidth: 3,
+                    fontSize: 14,
+                    onFace: context.error,
+                    expand: false,
+                    padding: const EdgeInsets.symmetric(horizontal: 14),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        Text('Next',
-                            style: TextStyle(
-                                fontSize: 14.5,
-                                fontWeight: FontWeight.w700,
-                                color: context.error)),
-                        const SizedBox(width: 4),
-                        Icon(Icons.chevron_right,
-                            size: 18, color: context.error),
+                      children: const <Widget>[
+                        Text('Next'),
+                        SizedBox(width: 4),
+                        MsIcon('chevron_right', size: 18),
                       ],
                     ),
                   )
                 else
-                  FilledButton(
+                  TactileButton(
                     onPressed: () =>
                         _Player.maybeSubmit(context, controller),
-                    style: FilledButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(999)),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 24, vertical: 12),
-                      backgroundColor: context.inverseChip,
-                      foregroundColor: context.onInverseChip,
+                    height: 44,
+                    radius: RenanceRadius.chip,
+                    outline: context.outlineVariant,
+                    edge: context.outlineVariant,
+                    edgeWidth: 3,
+                    fontSize: 14,
+                    onFace: context.error,
+                    expand: false,
+                    padding: const EdgeInsets.symmetric(horizontal: 14),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: const <Widget>[
+                        Text('Submit'),
+                        SizedBox(width: 4),
+                        MsIcon('chevron_right', size: 18),
+                      ],
                     ),
-                    child: const Text('Submit',
-                        style: TextStyle(
-                            fontSize: 14.5,
-                            fontWeight: FontWeight.w700)),
                   ),
               ],
             ),
@@ -1591,7 +1581,7 @@ class _BottomNavigator extends StatelessWidget {
                   onTap: onExpand,
                   child: Padding(
                     padding: const EdgeInsets.all(4),
-                    child: Icon(Icons.keyboard_arrow_up,
+                    child: MsIcon('keyboard_arrow_up',
                         size: 22, color: context.textSecondary),
                   ),
                 ),
@@ -1872,7 +1862,7 @@ class _NavigatorSheetState extends State<_NavigatorSheet> {
                       color: context.cardLow,
                       shape: BoxShape.circle,
                     ),
-                    child: Icon(Icons.close,
+                    child: MsIcon('close',
                         size: 20, color: context.ink),
                   ),
                 ),
@@ -1942,15 +1932,12 @@ class _NavigatorSheetState extends State<_NavigatorSheet> {
             ),
             const SizedBox(height: 16),
             // Resume Exam ------------------------------------------------
-            SizedBox(
-              width: double.infinity,
-              height: 52,
-              child: FilledButton(
-                onPressed: widget.onClose,
-                child: const Text('Resume Exam',
-                    style:
-                        TextStyle(fontSize: 15, fontWeight: FontWeight.w600)),
-              ),
+            TactileButton(
+              onPressed: widget.onClose,
+              face: context.inverseChip,
+              onFace: context.onInverseChip,
+              child: const Text('Resume Exam',
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600)),
             ),
           ],
         ),
@@ -2178,8 +2165,10 @@ class _Queued extends StatelessWidget {
               style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, height: 1.5),
             ),
             const SizedBox(height: 24),
-            FilledButton(
+            TactileButton(
               onPressed: () => Navigator.of(context).pop(),
+              face: context.inverseChip,
+              onFace: context.onInverseChip,
               child: const Text('Back to library'),
             ),
           ],
@@ -2275,7 +2264,7 @@ class _ErrorView extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Icon(Icons.error_outline,
+            MsIcon('error',
                 size: 40, color: context.error),
             const SizedBox(height: 12),
             Text(
@@ -2285,8 +2274,11 @@ class _ErrorView extends StatelessWidget {
                   color: context.error, height: 1.5),
             ),
             const SizedBox(height: 20),
-            OutlinedButton(
+            TactileButton(
               onPressed: () => Navigator.of(context).pop(),
+              outline: context.outlineVariant,
+              fontSize: 14,
+              height: 44,
               child: const Text('Back'),
             ),
           ],
@@ -2490,7 +2482,7 @@ class _RenanceCalculatorSheetState extends State<RenanceCalculatorSheet> {
                   ),
                   IconButton(
                     onPressed: () => Navigator.of(context).pop(),
-                    icon: const Icon(Icons.close, size: 20),
+                    icon: MsIcon('close', size: 20),
                     color: context.textSecondary,
                     tooltip: 'Close',
                   ),

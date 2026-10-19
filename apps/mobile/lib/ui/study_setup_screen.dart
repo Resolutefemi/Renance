@@ -21,7 +21,9 @@ import '../models.dart';
 import '../papers.dart' show subjectName;
 import '../storage.dart';
 import 'exam_mode_setup_screen.dart';
+import 'msymbols.dart';
 import 'study_reader_screen.dart';
+import 'tactile.dart';
 import 'university_screens.dart';
 import 'update_questions_screen.dart';
 import 'theme.dart';
@@ -248,19 +250,9 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
               padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
               child: Row(
                 children: <Widget>[
-                  Material(
-                    color: context.surfaceContainer,
-                    shape: const CircleBorder(),
-                    clipBehavior: Clip.antiAlias,
-                    child: InkWell(
-                      onTap: () => Navigator.of(context).pop(),
-                      child: SizedBox(
-                        width: 40,
-                        height: 40,
-                        child: Icon(Icons.arrow_back,
-                            size: 20, color: context.ink),
-                      ),
-                    ),
+                  TactileBackKey(
+                    onTap: () => Navigator.of(context).pop(),
+                    size: 40,
                   ),
                   const SizedBox(width: 12),
                   Expanded(
@@ -289,7 +281,7 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
                       shape: BoxShape.circle,
                       color: RenanceColors.emerald,
                     ),
-                    child: const Icon(Icons.menu_book,
+                    child: const MsIcon('menu_book',
                         size: 20, color: Colors.white),
                   ),
                 ],
@@ -343,7 +335,7 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
                                         fontSize: 13.5),
                                   ),
                                   const SizedBox(width: 4),
-                                  Icon(Icons.chevron_right,
+                                  MsIcon('chevron_right',
                                       size: 17, color: context.ink),
                                 ],
                               ),
@@ -351,7 +343,7 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
                             const Spacer(),
                             Padding(
                               padding: const EdgeInsets.only(top: 8),
-                              child: Icon(Icons.chevron_right,
+                              child: MsIcon('chevron_right',
                                   size: 18, color: context.textSecondary),
                             ),
                           ],
@@ -419,31 +411,25 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
                     ),
                     const SizedBox(height: 24),
                     // ---- Start Study ----------------------------------
-                    SizedBox(
+                    TactileButton(
+                      onPressed: _starting ? null : _start,
                       height: 54,
-                      child: FilledButton(
-                        onPressed: _starting ? null : _start,
-                        style: FilledButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          backgroundColor: context.inverseChip,
-                          foregroundColor: context.onInverseChip,
-                        ),
-                        child: _starting
-                            ? const SizedBox(
-                                width: 20,
-                                height: 20,
-                                child: CircularProgressIndicator(
-                                    strokeWidth: 2, color: Colors.white),
-                              )
-                            : const Text(
-                                'Start Study',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w700),
-                              ),
-                      ),
+                      radius: BorderRadius.circular(12),
+                      face: context.inverseChip,
+                      onFace: context.onInverseChip,
+                      child: _starting
+                          ? const SizedBox(
+                              width: 20,
+                              height: 20,
+                              child: CircularProgressIndicator(
+                                  strokeWidth: 2, color: Colors.white),
+                            )
+                          : const Text(
+                              'Start Study',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700),
+                            ),
                     ),
                   ],
               ),
@@ -496,7 +482,7 @@ class _PickerField extends StatelessWidget {
         child: DropdownButton<String>(
           value: items.contains(value) ? value : items.firstOrNull,
           isExpanded: true,
-          icon: Icon(Icons.arrow_drop_down,
+          icon: MsIcon('arrow_drop_down',
               size: 24, color: context.textSecondary),
           dropdownColor: context.cardLowest,
           hint: Text(value,
@@ -539,7 +525,7 @@ class _FocusChip extends StatelessWidget {
       ),
       child: Row(
         children: <Widget>[
-          Icon(Icons.bookmark, size: 18, color: context.textMuted),
+          MsIcon('bookmark', size: 18, color: context.textMuted),
           const SizedBox(width: 10),
           Text(
             'Focus',

@@ -9,6 +9,8 @@ library;
 import 'package:flutter/material.dart';
 
 import '../api_client.dart';
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 /// Bodies that carry per-subject banks (the only ones that ever ask).
@@ -175,31 +177,26 @@ class _DailySubjectsSheetState extends State<_DailySubjectsSheet> {
             Row(
               children: <Widget>[
                 Expanded(
-                  child: OutlinedButton(
+                  child: TactileButton(
                     onPressed: _busy ? null : () => Navigator.of(context).pop(),
-                    style: OutlinedButton.styleFrom(
-                      minimumSize: const Size.fromHeight(50),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                    ),
+                    outline: context.outlineVariant,
+                    edge: context.outlineVariant,
+                    edgeWidth: 3,
+                    height: 50,
+                    radius: BorderRadius.circular(12),
                     child: const Text('Not now'),
                   ),
                 ),
                 const SizedBox(width: 10),
                 Expanded(
-                  child: FilledButton(
+                  child: TactileButton(
                     onPressed: (_picked.isEmpty || _busy) ? null : _save,
-                    style: FilledButton.styleFrom(
-                      minimumSize: const Size.fromHeight(50),
-                      // Founder directive (2026-10-02): the black CTA
-                      // follows the seed colour.
-                      backgroundColor: context.inverseChip,
-                      foregroundColor: context.onInverseChip,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                    ),
+                    // Founder directive (2026-10-02): the black CTA
+                    // follows the seed colour.
+                    face: context.inverseChip,
+                    onFace: context.onInverseChip,
+                    height: 50,
+                    radius: BorderRadius.circular(12),
                     child: Text(_busy ? 'Saving…' : 'Save & start'),
                   ),
                 ),
@@ -227,43 +224,37 @@ class _SubjectChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(999),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
-        decoration: BoxDecoration(
-          // The selected chip rides the theme colour (the old ink
-          // bubble), the resting chip stays a hairline tint.
-          color: on
-              ? context.inverseChip
-              : context.ink.withValues(alpha: 0.05),
-          borderRadius: BorderRadius.circular(999),
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            Text(
-              label,
-              style: TextStyle(
-                fontSize: 13,
-                fontWeight: on ? FontWeight.w600 : FontWeight.w500,
-                color: on ? context.onInverseChip : context.textSecondary,
-              ),
+    return TactileButton(
+      onPressed: onTap,
+      // The selected chip rides the theme colour (the old ink
+      // bubble), the resting chip stays a hairline tint.
+      face: on
+          ? context.inverseChip
+          : context.ink.withValues(alpha: 0.05),
+      onFace: on ? context.onInverseChip : context.textSecondary,
+      height: 36,
+      radius: RenanceRadius.chip,
+      fontSize: 12.5,
+      fontWeight: on ? FontWeight.w600 : FontWeight.w500,
+      edgeWidth: 3,
+      expand: false,
+      padding: const EdgeInsets.symmetric(horizontal: 14),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          Text(label),
+          const SizedBox(width: 5),
+          Text(
+            '$count Q',
+            style: TextStyle(
+              fontSize: 10,
+              fontFamily: 'JetBrainsMono',
+              color: on
+                  ? context.onInverseChip.withValues(alpha: 0.7)
+                  : context.textMuted,
             ),
-            const SizedBox(width: 5),
-            Text(
-              '$count Q',
-              style: TextStyle(
-                fontSize: 10,
-                fontFamily: 'JetBrainsMono',
-                color: on
-                    ? context.onInverseChip.withValues(alpha: 0.7)
-                    : context.textMuted,
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

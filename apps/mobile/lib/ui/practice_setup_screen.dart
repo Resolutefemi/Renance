@@ -13,6 +13,8 @@ library;
 import 'package:flutter/material.dart';
 
 import '../models.dart';
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 /// What Start Practice hands back to the caller.
@@ -99,19 +101,9 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                   padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
                   child: Row(
                     children: <Widget>[
-                      Material(
-                        color: context.surfaceContainer,
-                        shape: const CircleBorder(),
-                        clipBehavior: Clip.antiAlias,
-                        child: InkWell(
-                          onTap: () => Navigator.of(context).pop(),
-                          child: SizedBox(
-                            width: 40,
-                            height: 40,
-                            child: Icon(Icons.arrow_back,
-                                size: 20, color: context.ink),
-                          ),
-                        ),
+                      TactileBackKey(
+                        onTap: () => Navigator.of(context).pop(),
+                        size: 40,
                       ),
                     ],
                   ),
@@ -134,7 +126,7 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                           children: <Widget>[
                             Row(
                               children: <Widget>[
-                                Icon(Icons.history,
+                                MsIcon('history',
                                     size: 22, color: context.outlineLight),
                                 const SizedBox(width: 12),
                                 Text('Past Question Year',
@@ -188,7 +180,7 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                           children: <Widget>[
                             Row(
                               children: <Widget>[
-                                Icon(Icons.format_list_numbered,
+                                MsIcon('format_list_numbered',
                                     size: 22,
                                     color: context.outlineLight),
                                 const SizedBox(width: 12),
@@ -202,7 +194,7 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                                   MainAxisAlignment.spaceBetween,
                               children: <Widget>[
                                 _RoundStep(
-                                  icon: Icons.remove,
+                                  icon: 'remove',
                                   onTap: () => setState(() {
                                     if (_count > 5) _count -= 5;
                                   }),
@@ -219,7 +211,7 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                                   ],
                                 ),
                                 _RoundStep(
-                                  icon: Icons.add,
+                                  icon: 'add',
                                   onTap: () => setState(() {
                                     if (_count < 100) _count += 5;
                                   }),
@@ -257,7 +249,7 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                           children: <Widget>[
                             Row(
                               children: <Widget>[
-                                Icon(Icons.timer,
+                                MsIcon('timer',
                                     size: 22, color: context.outlineLight),
                                 const SizedBox(width: 12),
                                 Text('Timer', style: RenanceText.sectionTitle),
@@ -301,7 +293,7 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                         child: Column(
                           children: <Widget>[
                             _ToggleRow(
-                              icon: Icons.shuffle,
+                              icon: 'shuffle',
                               label: 'Shuffle Questions',
                               value: _shuffleQuestions,
                               first: true,
@@ -330,38 +322,21 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
-                    child: SizedBox(
+                    child: TactileButton(
+                      onPressed: _finish,
                       height: 52,
-                      child: DecoratedBox(
-                        decoration: BoxDecoration(
-                          color: context.inverseChip,
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: const <BoxShadow>[
-                            BoxShadow(
-                              color: Color(0x33000000),
-                              blurRadius: 8,
-                              offset: Offset(0, 4),
-                            ),
-                          ],
-                        ),
-                        child: TextButton(
-                          onPressed: _finish,
-                          style: TextButton.styleFrom(
-                            foregroundColor: context.onInverseChip,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              const Icon(Icons.play_arrow, size: 22),
-                              const SizedBox(width: 8),
-                              Text('Start Practice',
-                                  style: RenanceText.bodyMedium
-                                      .copyWith(color: context.onInverseChip)),
-                            ],
-                          ),
-                        ),
+                      radius: BorderRadius.circular(10),
+                      face: context.inverseChip,
+                      onFace: context.onInverseChip,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          const MsIcon('play_arrow', size: 22, fill: true),
+                          const SizedBox(width: 8),
+                          Text('Start Practice',
+                              style: RenanceText.bodyMedium
+                                  .copyWith(color: context.onInverseChip)),
+                        ],
                       ),
                     ),
                   ),
@@ -407,7 +382,7 @@ class _Card extends StatelessWidget {
 class _RoundStep extends StatelessWidget {
   const _RoundStep({required this.icon, required this.onTap});
 
-  final IconData icon;
+  final String icon;
   final VoidCallback onTap;
 
   @override
@@ -421,7 +396,7 @@ class _RoundStep extends StatelessWidget {
         child: SizedBox(
           width: 48,
           height: 48,
-          child: Icon(icon, size: 22, color: context.ink),
+          child: MsIcon(icon, size: 22, color: context.ink),
         ),
       ),
     );
@@ -516,7 +491,7 @@ class _ToggleRow extends StatelessWidget {
     this.first = false,
   });
 
-  final IconData icon;
+  final String icon;
   final String label;
   final bool value;
   final ValueChanged<bool> onChanged;
@@ -534,7 +509,7 @@ class _ToggleRow extends StatelessWidget {
       ),
       child: Row(
         children: <Widget>[
-          Icon(icon, size: 22, color: context.textSecondary),
+          MsIcon(icon, size: 22, color: context.textSecondary),
           const SizedBox(width: 12),
           Expanded(
             child: Text(label, style: RenanceText.bodyMedium),

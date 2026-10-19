@@ -3,8 +3,10 @@ import 'package:provider/provider.dart';
 
 import '../controllers.dart';
 import '../models.dart';
+import 'msymbols.dart';
 import 'renance_logo.dart' show LogoActivityIndicator;
 import 'school_chrome.dart' show schoolWorkspaceAppBar;
+import 'tactile.dart';
 import 'theme.dart';
 
 /// The national curriculum bank (scheme of work + lesson notes) served
@@ -198,7 +200,8 @@ class _CorpusBrowserScreenState extends State<CorpusBrowserScreen> {
         style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
       );
     }
-    return Card(
+    return TactileCard(
+      padding: EdgeInsets.zero,
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -243,8 +246,9 @@ class _CorpusBrowserScreenState extends State<CorpusBrowserScreen> {
         for (final SchoolTopicInfo t in notes.topics)
           Padding(
             padding: const EdgeInsets.only(bottom: 8),
-            child: Card(
-              margin: EdgeInsets.zero,
+            child: TactileCard(
+              padding: EdgeInsets.zero,
+              onTap: () => _openNote(t),
               child: ListTile(
                 contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                 title: Text(
@@ -259,8 +263,7 @@ class _CorpusBrowserScreenState extends State<CorpusBrowserScreen> {
                         style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, fontSize: 12),
                       )
                     : null,
-                trailing: const Icon(Icons.chevron_right),
-                onTap: () => _openNote(t),
+                trailing: const MsIcon('chevron_right', size: 24),
               ),
             ),
           ),

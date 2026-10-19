@@ -13,6 +13,8 @@ import 'package:pdf/widgets.dart' as pw;
 import 'package:share_plus/share_plus.dart';
 
 import '../api_client.dart';
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 // ---------------------------------------------------------------------------
@@ -282,25 +284,32 @@ class _AiQuizPlayerState extends State<AiQuizPlayer> {
               Row(
                 children: <Widget>[
                   Expanded(
-                    child: OutlinedButton(
+                    child: TactileButton(
                       onPressed:
                           _idx > 0 ? () => setState(() => _idx--) : null,
+                      outline: context.outlineVariant,
+                      edge: context.outlineVariant,
+                      edgeWidth: 3,
+                      height: 46,
+                      fontSize: 14,
                       child: const Text('Previous'),
                     ),
                   ),
                   const SizedBox(width: 8),
                   Expanded(
-                    child: FilledButton(
+                    child: TactileButton(
                       onPressed: _idx < qs.length - 1
                           ? () => setState(() => _idx++)
                           : null,
+                      height: 46,
+                      fontSize: 14,
                       child: const Text('Next'),
                     ),
                   ),
                 ],
               ),
               const SizedBox(height: 8),
-              OutlinedButton(
+              TactileButton(
                 onPressed: () => setState(() {
                   _submitted = false;
                   _idx = 0;
@@ -308,6 +317,11 @@ class _AiQuizPlayerState extends State<AiQuizPlayer> {
                     p.clear();
                   }
                 }),
+                outline: context.outlineVariant,
+                edge: context.outlineVariant,
+                edgeWidth: 3,
+                height: 46,
+                fontSize: 14,
                 child: const Text('Play again'),
               ),
             ],
@@ -316,14 +330,20 @@ class _AiQuizPlayerState extends State<AiQuizPlayer> {
           Row(
             children: <Widget>[
               if (_idx > 0) ...<Widget>[
-                OutlinedButton(
+                TactileButton(
                   onPressed: () => setState(() => _idx--),
+                  outline: context.outlineVariant,
+                  edge: context.outlineVariant,
+                  edgeWidth: 3,
+                  height: 46,
+                  fontSize: 14,
+                  expand: false,
                   child: const Text('Back'),
                 ),
                 const SizedBox(width: 8),
               ],
               Expanded(
-                child: FilledButton(
+                child: TactileButton(
                   onPressed: picked == null
                       ? null
                       : () => setState(() {
@@ -333,6 +353,8 @@ class _AiQuizPlayerState extends State<AiQuizPlayer> {
                               _idx++;
                             }
                           }),
+                  height: 46,
+                  fontSize: 14,
                   child: Text(last ? 'Submit and score me' : 'Next question'),
                 ),
               ),
@@ -429,13 +451,13 @@ class _OptionTile extends StatelessWidget {
                   style: RenanceText.bodyBase.copyWith(fontSize: 13.5, color: fg)),
             ),
             if (correct)
-              Icon(Icons.check_circle,
+              MsIcon('check_circle',
                   size: 18,
                   color: context.isDarkTier
                       ? const Color(0xFF4ADE80)
                       : const Color(0xFF16A34A)),
             if (wrong)
-              Icon(Icons.cancel,
+              MsIcon('cancel',
                   size: 18,
                   color: context.isDarkTier
                       ? const Color(0xFFF87171)

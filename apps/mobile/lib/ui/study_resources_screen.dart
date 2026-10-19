@@ -8,6 +8,7 @@ library;
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'msymbols.dart';
 import 'theme.dart';
 
 class _Resource {
@@ -21,12 +22,12 @@ class _Resource {
 class _Category {
   const _Category(this.title, this.icon, this.items);
   final String title;
-  final IconData icon;
+  final String icon;
   final List<_Resource> items;
 }
 
 const List<_Category> _studyCategories = <_Category>[
-  _Category('Official syllabi & exam bodies', Icons.gavel, <_Resource>[
+  _Category('Official syllabi & exam bodies', 'gavel', <_Resource>[
     _Resource(
       'JAMB IBASS',
       'The official UTME brochure and subject syllabus, straight from the exam body.',
@@ -52,7 +53,7 @@ const List<_Category> _studyCategories = <_Category>[
       'Web',
     ),
   ]),
-  _Category('Free textbooks (PDF)', Icons.picture_as_pdf, <_Resource>[
+  _Category('Free textbooks (PDF)', 'picture_as_pdf', <_Resource>[
     _Resource(
       'OpenStax, Biology 2e',
       'Full university-standard biology textbook, free PDF, covers every WAEC/NECO bio topic.',
@@ -96,7 +97,7 @@ const List<_Category> _studyCategories = <_Category>[
       'PDF',
     ),
   ]),
-  _Category('Reading & set texts', Icons.auto_stories, <_Resource>[
+  _Category('Reading & set texts', 'auto_stories', <_Resource>[
     _Resource(
       'Project Gutenberg',
       '70,000+ free classics, most literature set texts live here as free eBooks.',
@@ -110,7 +111,7 @@ const List<_Category> _studyCategories = <_Category>[
       'PDF',
     ),
   ]),
-  _Category('Computer studies & coding', Icons.code, <_Resource>[
+  _Category('Computer studies & coding', 'code', <_Resource>[
     _Resource(
       'freeCodeCamp',
       'Free full curriculum for web development, data analysis and more, with certificates.',
@@ -136,7 +137,7 @@ const List<_Category> _studyCategories = <_Category>[
       'Web',
     ),
   ]),
-  _Category('Curated collections', Icons.collections_bookmark, <_Resource>[
+  _Category('Curated collections', 'collections_bookmark', <_Resource>[
     _Resource(
       'All-Resources by Resolute Femi',
       '300 hand-picked open educational repositories from across the globe, textbooks, notes, past questions.',
@@ -193,7 +194,7 @@ class _StudyResourcesScreenState extends State<StudyResourcesScreen> {
                   children: <Widget>[
                     IconButton(
                       onPressed: () => Navigator.of(context).pop(),
-                      icon: const Icon(Icons.arrow_back_ios_new, size: 20),
+                      icon: const MsIcon('arrow_back_ios_new', size: 20),
                       color: context.ink,
                       tooltip: 'Back',
                     ),
@@ -283,7 +284,7 @@ class _CategoryCard extends StatelessWidget {
                       color: context.cardHigh,
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Icon(category.icon,
+                    child: MsIcon(category.icon,
                         size: 22, color: context.ink),
                   ),
                   const SizedBox(width: 12),
@@ -302,7 +303,7 @@ class _CategoryCard extends StatelessWidget {
                   AnimatedRotation(
                     turns: open ? 0.5 : 0,
                     duration: const Duration(milliseconds: 200),
-                    child: Icon(Icons.expand_more,
+                    child: MsIcon('expand_more',
                         size: 20, color: context.textMuted),
                   ),
                 ],

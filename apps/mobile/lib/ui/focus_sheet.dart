@@ -12,6 +12,8 @@ import 'package:provider/provider.dart';
 import '../api_client.dart';
 import '../controllers.dart';
 import '../models.dart';
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 class FocusSheet extends StatefulWidget {
@@ -42,31 +44,31 @@ class _FocusSheetState extends State<FocusSheet> {
 
   static const List<_FocusOption> _options = <_FocusOption>[
     _FocusOption(
-      icon: Icons.school,
+      icon: 'school',
       title: 'JAMB UTME',
       subtitle: 'Nigerian university admissions',
       server: 'JAMB',
     ),
     _FocusOption(
-      icon: Icons.workspace_premium,
+      icon: 'workspace_premium',
       title: 'WAEC/WASSCE',
       subtitle: 'West African senior school certificate',
       server: 'WAEC',
     ),
     _FocusOption(
-      icon: Icons.verified,
+      icon: 'verified',
       title: 'NECO',
       subtitle: 'National examinations council',
       server: 'NECO',
     ),
     _FocusOption(
-      icon: Icons.fact_check,
+      icon: 'fact_check',
       title: 'Post UTME',
       subtitle: 'School screening past questions',
       server: 'POST-UTME',
     ),
     _FocusOption(
-      icon: Icons.account_balance,
+      icon: 'account_balance',
       title: 'School Desk',
       subtitle: 'Undergraduate semester exams',
       server: 'University Modules',
@@ -191,18 +193,12 @@ class _FocusSheetState extends State<FocusSheet> {
               // Pinned Continue button, the Stitch exam_target pattern.
               Padding(
                 padding: const EdgeInsets.fromLTRB(24, 8, 24, 20),
-                child: SizedBox(
-                  width: double.infinity,
+                child: TactileButton(
+                  onPressed:
+                      (_exam != null && _year != null && !_busy) ? _save : null,
                   height: 52,
-                  child: FilledButton(
-                    onPressed:
-                        (_exam != null && _year != null && !_busy) ? _save : null,
-                    style: FilledButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8)),
-                    ),
-                    child: Text(_busy ? 'Saving…' : 'Continue'),
-                  ),
+                  radius: BorderRadius.circular(8),
+                  child: Text(_busy ? 'Saving…' : 'Continue'),
                 ),
               ),
             ],
@@ -249,7 +245,7 @@ class _FocusSheetState extends State<FocusSheet> {
                       : context.cardLow,
                   shape: BoxShape.circle,
                 ),
-                child: Icon(t.icon,
+                child: MsIcon(t.icon,
                     size: 22,
                     color: selected ? context.onPrimary : context.ink),
               ),
@@ -267,8 +263,8 @@ class _FocusSheetState extends State<FocusSheet> {
                 ),
               ),
               if (selected)
-                Icon(Icons.check_circle,
-                    size: 20, color: context.primary),
+                MsIcon('check_circle',
+                    size: 20, fill: true, color: context.primary),
             ],
           ),
         ),
@@ -285,7 +281,7 @@ class _FocusOption {
     required this.server,
   });
 
-  final IconData icon;
+  final String icon;
   final String title;
   final String subtitle;
   final String server;
@@ -304,28 +300,16 @@ class _YearChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(999),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        decoration: BoxDecoration(
-          color: selected
-              ? context.selectionBlue
-              : context.cardLow,
-          borderRadius: BorderRadius.circular(999),
-          border: Border.all(
-            color: selected ? context.primary : Colors.transparent,
-            width: 1.4,
-          ),
-        ),
-        child: Text(
-          '$year',
-          style: RenanceText.labelMono.copyWith(
-            color: selected ? context.ink : context.textSecondary,
-          ),
-        ),
-      ),
+    return TactileButton(
+      onPressed: onTap,
+      face: selected ? context.selectionBlue : context.cardLow,
+      onFace: selected ? context.ink : context.textSecondary,
+      height: 36,
+      radius: RenanceRadius.chip,
+      fontSize: 12.5,
+      expand: false,
+      padding: const EdgeInsets.symmetric(horizontal: 14),
+      child: Text('$year'),
     );
   }
 }

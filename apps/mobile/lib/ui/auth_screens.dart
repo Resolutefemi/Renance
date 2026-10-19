@@ -302,10 +302,10 @@ class _PasswordFieldState extends State<_PasswordField> {
           ? null
           : (_) => widget.onSubmitted!(),
       decoration: InputDecoration(
-        prefixIcon: const Icon(Icons.lock_outline, size: 20),
+        prefixIcon: const MsIcon('lock', size: 20),
         suffixIcon: IconButton(
-          icon: Icon(
-            _visible ? Icons.visibility_outlined : Icons.visibility_off_outlined,
+          icon: MsIcon(
+            _visible ? 'visibility' : 'visibility_off',
             size: 20,
           ),
           onPressed: () => setState(() => _visible = !_visible),
@@ -353,7 +353,7 @@ Future<bool> _maybeShowDeviceLockHelp(
     await showDialog<void>(
       context: context,
       builder: (BuildContext dialogContext) => AlertDialog(
-        icon: const Icon(Icons.devices_other_outlined, size: 32),
+        icon: const MsIcon('devices_other', size: 32),
         title: const Text('This device owns an account'),
         content: const Text(
           'This phone is already signed up with a Renance account, and a '
@@ -384,7 +384,7 @@ Future<bool> _maybeShowDeviceLockHelp(
   await showDialog<void>(
     context: context,
     builder: (BuildContext dialogContext) => AlertDialog(
-      icon: const Icon(Icons.phonelink_lock_outlined, size: 32),
+      icon: const MsIcon('phonelink_lock', size: 32),
       title: const Text('One account, one device'),
       content: Column(
         mainAxisSize: MainAxisSize.min,
@@ -410,7 +410,7 @@ Future<bool> _maybeShowDeviceLockHelp(
           child: const Text('Close'),
         ),
         FilledButton.icon(
-          icon: const Icon(Icons.support_agent_outlined, size: 20),
+          icon: const MsIcon('support_agent', size: 20),
           label: const Text('DM management'),
           onPressed: () {
             Navigator.of(dialogContext).pop();
@@ -426,6 +426,47 @@ Future<bool> _maybeShowDeviceLockHelp(
   return true;
 }
 
+/// The OR divider above the Google button (the web's google-signin.tsx):
+/// hairline rules in outline-variant around a small uppercase 'or'.
+class _GoogleDivider extends StatelessWidget {
+  const _GoogleDivider();
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        Expanded(
+          child: Divider(
+            color: context.outlineVariant,
+            thickness: 1,
+            height: 1,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          child: Text(
+            'OR',
+            style: TextStyle(
+              fontFamily: 'Nunito',
+              fontSize: 11,
+              letterSpacing: 2,
+              fontWeight: FontWeight.w600,
+              color: context.textSecondary,
+            ),
+          ),
+        ),
+        Expanded(
+          child: Divider(
+            color: context.outlineVariant,
+            thickness: 1,
+            height: 1,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
 /// Google sign-in button, rendered only when GOOGLE_WEB_CLIENT_ID was
 /// baked at build time, mirroring the web app's graceful degradation.
 /// (Students only - school staff sign in with their school email.)
@@ -436,10 +477,22 @@ class _GoogleButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedButton.icon(
+    return TactileButton(
       onPressed: onPressed,
-      icon: const GoogleLogo(size: 18),
-      label: const Text('Continue with Google'),
+      outline: context.outlineVariant,
+      edge: context.outlineVariant,
+      edgeWidth: 3,
+      height: 46,
+      radius: BorderRadius.circular(12),
+      fontSize: 14,
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: const <Widget>[
+          GoogleLogo(size: 18),
+          SizedBox(width: 8),
+          Text('Continue with Google'),
+        ],
+      ),
     );
   }
 }
@@ -648,6 +701,139 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+  // The web's login card (app/login/page.tsx): email-first fields, the
+  // error banner, the right-aligned forgot link, the h-12 rounded-lg
+  // submit key, then the OR divider + Google key. Restored after the
+  // parity pass accidentally dropped the build method.
+  @override
+  Widget build(BuildContext context) {
+    final bool isSchool = _audience == AuthAudience.schools;
+    return AuthScaffold(
+      // The web's split: the logo block sits ABOVE the white card on
+      // login (register wraps it inside).
+      logoInCard: false,
+      title: 'Welcome back',
+      subtitle: isSchool
+          ? 'Management and teachers sign in with the school email.'
+          : 'Sign in to continue to Renance.',
+      audience: _audience,
+      onAudienceChanged: (AuthAudience a) => setState(() => _audience = a),
+      form: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          _FieldLabel(isSchool ? 'School email' : 'Email address'),
+          TextField(
+            controller: _username,
+            autocorrect: false,
+            keyboardType: TextInputType.emailAddress,
+            textInputAction: TextInputAction.next,
+            decoration: const InputDecoration(
+              prefixIcon: MsIcon('mail', size: 20),
+              hintText: 'you@example.com',
+            ),
+          ),
+          const SizedBox(height: 16),
+          _FieldLabel('Password'),
+          _PasswordField(controller: _password, onSubmitted: _submit),
+          if (_error != null) ...<Widget>[
+            const SizedBox(height: 14),
+            Container(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+              decoration: BoxDecoration(
+                color: const Color(0xFFFFEBEB),
+                borderRadius: BorderRadius.circular(11),
+              ),
+              child: Text(
+                _error!,
+                style: const TextStyle(
+                  fontFamily: 'Nunito',
+                  fontSize: 13,
+                  color: Color(0xFFB81F1F),
+                ),
+              ),
+            ),
+          ],
+          // Forgot password (founder directive 2026-10-02): works for
+          // student and school accounts - the reset link mails to the
+          // address on the account and opens the web reset page in any
+          // browser, the phone's included.
+          Align(
+            alignment: Alignment.centerRight,
+            child: GestureDetector(
+              onTap: _busy
+                  ? null
+                  : () => _openForgotPassword(context, isSchool),
+              child: Text(
+                'Forgot password?',
+                style: TextStyle(
+                  color: context.textSecondary,
+                  fontSize: 13,
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(height: 20),
+          TactileButton(
+            onPressed: _busy ? null : _submit,
+            height: 48,
+            radius: BorderRadius.circular(8),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                if (_busy) ...<Widget>[
+                  const RenanceMark(size: 22, busy: true, onDark: true),
+                  const SizedBox(width: 8),
+                  const Text('Signing in…'),
+                ] else ...<Widget>[
+                  Text(isSchool ? 'Open school workspace' : 'Sign In'),
+                  const SizedBox(width: 8),
+                  const MsIcon('arrow_forward', size: 20),
+                ],
+              ],
+            ),
+          ),
+          if (!isSchool && googleWebClientId.isNotEmpty) ...<Widget>[
+            const SizedBox(height: 16),
+            _GoogleDivider(),
+            const SizedBox(height: 12),
+            _GoogleButton(onPressed: _busy ? null : _signInWithGoogle),
+          ],
+        ],
+      ),
+      footer: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          const Text(
+            "Don't have an account? ",
+            style: TextStyle(
+              fontFamily: 'Nunito',
+              color: Color(0xFF777777),
+              fontSize: 14,
+            ),
+          ),
+          GestureDetector(
+            onTap: () => Navigator.of(context).pushReplacementNamed(
+              '/register',
+              // Carry the tab across (founder bugfix 2026-10-05): a
+              // school sign-up started from the school sign-in stays on
+              // the For Schools side.
+              arguments: _audience,
+            ),
+            child: Text(
+              'Sign up',
+              style: TextStyle(
+                fontFamily: 'Nunito',
+                color: context.primary,
+                fontWeight: FontWeight.w600,
+                fontSize: 14,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class RegisterScreen extends StatefulWidget {
@@ -1278,7 +1464,7 @@ class _ForgotPasswordSheetState extends State<_ForgotPasswordSheet> {
                     textInputAction: TextInputAction.done,
                     onSubmitted: (_) => _submit(),
                     decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.alternate_email, size: 20),
+                      prefixIcon: MsIcon('alternate_email', size: 20),
                       hintText: 'you@example.com',
                     ),
                   ),
@@ -1290,7 +1476,7 @@ class _ForgotPasswordSheetState extends State<_ForgotPasswordSheet> {
                     ),
                   ],
                   const SizedBox(height: 20),
-                  FilledButton(
+                  TactileButton(
                     onPressed: _busy ? null : _submit,
                     child: Text(_busy ? 'Sending…' : 'Send reset link'),
                   ),

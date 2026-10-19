@@ -10,6 +10,8 @@ library;
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 const List<({String letter, int points})> _grades = <({String letter, int points})>[
@@ -232,7 +234,7 @@ class _GpaScreenState extends State<GpaScreen> {
                     children: <Widget>[
                       IconButton(
                         onPressed: () => Navigator.of(context).pop(),
-                        icon: const Icon(Icons.arrow_back_ios_new, size: 20),
+                        icon: const MsIcon('arrow_back_ios_new', size: 20),
                         color: context.ink,
                       ),
                     ],
@@ -366,7 +368,7 @@ class _GpaScreenState extends State<GpaScreen> {
                           }),
                         ),
                       const SizedBox(height: 8),
-                      OutlinedButton.icon(
+                      TactileButton(
                         onPressed: () => _mutate(() {
                           final int nextId = _rows
                               .map((_CourseRow r) => r.id)
@@ -378,8 +380,20 @@ class _GpaScreenState extends State<GpaScreen> {
                             grade: 'A',
                           ));
                         }),
-                        icon: const Icon(Icons.add, size: 18),
-                        label: const Text('Add course'),
+                        outline: context.outlineVariant,
+                        edge: context.outlineVariant,
+                        edgeWidth: 3,
+                        height: 46,
+                        radius: BorderRadius.circular(12),
+                        fontSize: 14,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: const <Widget>[
+                            MsIcon('add', size: 18),
+                            SizedBox(width: 8),
+                            Text('Add course'),
+                          ],
+                        ),
                       ),
                       // Previous sessions fold-in -----------------------
                       const SizedBox(height: 24),
@@ -568,7 +582,7 @@ class _CourseRowTileState extends State<_CourseRowTile> {
           IconButton(
             visualDensity: VisualDensity.compact,
             onPressed: widget.onRemove,
-            icon: const Icon(Icons.close, size: 18),
+            icon: const MsIcon('close', size: 18),
             color: context.textSecondary,
             tooltip: 'Remove ${row.code.isEmpty ? 'course' : row.code}',
           ),

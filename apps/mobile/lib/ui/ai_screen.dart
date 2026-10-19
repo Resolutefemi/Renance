@@ -12,6 +12,8 @@ import 'package:provider/provider.dart';
 import '../api_client.dart';
 import 'ai_studio_widgets.dart';
 import 'ai_sparkle.dart';
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 enum AiStudioTab { chat, quiz, note, notebook, lesson }
@@ -329,14 +331,14 @@ class _AiScreenState extends State<AiScreen> {
                   _messages = <AiStudioMessage>[];
                 });
               },
-              icon: const Icon(Icons.edit_square),
+              icon: MsIcon('edit_square'),
             ),
           // The rail toggle: endDrawer does not auto-dock a button, so
           // the hamburger lives here - always reachable, every tab.
           IconButton(
             tooltip: 'Chats, folders and memories',
             onPressed: _openRail,
-            icon: const Icon(Icons.menu),
+            icon: MsIcon('menu'),
           ),
           const SizedBox(width: 4),
         ],
@@ -527,7 +529,7 @@ class _ChatTab extends StatelessWidget {
                     Center(
                       child: TextButton.icon(
                         onPressed: onOpenRail,
-                        icon: const Icon(Icons.menu, size: 16),
+                        icon: MsIcon('menu', size: 16),
                         label: const Text('Folders, memories and documents'),
                       ),
                     ),
@@ -595,17 +597,17 @@ class _ChatTab extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 8),
-                InkWell(
-                  onTap: busy ? null : () => onSend(controller.text),
-                  customBorder: const CircleBorder(),
-                  child: Container(
-                    width: 44,
+                SizedBox(
+                  width: 44,
+                  child: TactileButton(
+                    onPressed: busy ? null : () => onSend(controller.text),
                     height: 44,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: context.primary,
-                    ),
-                    child: Icon(Icons.arrow_upward, color: context.onPrimary, size: 20),
+                    radius: RenanceRadius.chip,
+                    padding: EdgeInsets.zero,
+                    face: context.primary,
+                    onFace: context.onPrimary,
+                    expand: false,
+                    child: MsIcon('arrow_upward', size: 20),
                   ),
                 ),
               ],
@@ -648,7 +650,7 @@ class _CountStepper extends StatelessWidget {
         children: <Widget>[
           _stepBtn(
             context,
-            icon: Icons.remove,
+            icon: 'remove',
             enabled: count > min,
             onTap: () => onChange(count - 1),
             left: true,
@@ -664,7 +666,7 @@ class _CountStepper extends StatelessWidget {
           ),
           _stepBtn(
             context,
-            icon: Icons.add,
+            icon: 'add',
             enabled: count < max,
             onTap: () => onChange(count + 1),
             left: false,
@@ -676,7 +678,7 @@ class _CountStepper extends StatelessWidget {
 
   Widget _stepBtn(
     BuildContext context, {
-    required IconData icon,
+    required String icon,
     required bool enabled,
     required VoidCallback onTap,
     required bool left,
@@ -690,7 +692,7 @@ class _CountStepper extends StatelessWidget {
           left: Radius.circular(left ? 10 : 0),
           right: Radius.circular(left ? 0 : 10),
         ),
-        child: Icon(
+        child: MsIcon(
           icon,
           size: 18,
           color: enabled
@@ -741,7 +743,7 @@ class _StudioBubble extends StatelessWidget {
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    const Icon(Icons.travel_explore, size: 12),
+                    const MsIcon('travel_explore', size: 12),
                     const SizedBox(width: 4),
                     Text(
                       'GROUNDED ON ${message.bridged} REAL PAST QUESTIONS',
@@ -780,7 +782,7 @@ class _StudioBubble extends StatelessWidget {
                     onTap: () => onSaveNote(message),
                     child: Row(
                       children: <Widget>[
-                        const Icon(Icons.note_add, size: 13),
+                        const MsIcon('note_add', size: 13),
                         const SizedBox(width: 4),
                         Text('SAVE AS NOTE',
                             style: RenanceText.labelMono.copyWith(fontSize: 9)),
@@ -1153,13 +1155,24 @@ class _GenerateTabState extends State<_GenerateTab> {
                   ),
                   const SizedBox(height: 10),
                 ],
-                FilledButton.icon(
+                TactileButton(
                   onPressed: () {
                     setState(() => _busy = true);
                     _run();
                   },
-                  icon: const Icon(Icons.auto_awesome, size: 18),
-                  label: const Text('Generate with Renance AI'),
+                  height: 46,
+                  radius: BorderRadius.circular(12),
+                  face: context.inverseChip,
+                  onFace: context.onInverseChip,
+                  fontSize: 14,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const <Widget>[
+                      MsIcon('auto_awesome', size: 18, fill: true),
+                      SizedBox(width: 8),
+                      Text('Generate with Renance AI'),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -1227,7 +1240,7 @@ class _StudioRail extends StatelessWidget {
                 ),
                 IconButton(
                   onPressed: () => Navigator.of(context).pop(),
-                  icon: const Icon(Icons.close),
+                  icon: MsIcon('close'),
                 ),
               ],
             ),
@@ -1237,13 +1250,24 @@ class _StudioRail extends StatelessWidget {
                 style: RenanceText.bodySecondary.copyWith(fontSize: 12),
               ),
             const SizedBox(height: 12),
-            FilledButton.icon(
+            TactileButton(
               onPressed: () => onNewChat(null),
-              icon: const Icon(Icons.edit_square, size: 17),
-              label: const Text('New chat'),
+              height: 46,
+              radius: BorderRadius.circular(12),
+              fontSize: 14,
+              face: context.inverseChip,
+              onFace: context.onInverseChip,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: const <Widget>[
+                  MsIcon('edit_square', size: 17),
+                  SizedBox(width: 8),
+                  Text('New chat'),
+                ],
+              ),
             ),
             const SizedBox(height: 6),
-            OutlinedButton.icon(
+            TactileButton(
               onPressed: () {
                 final TextEditingController f = TextEditingController();
                 showDialog<String>(
@@ -1262,15 +1286,27 @@ class _StudioRail extends StatelessWidget {
                   if (name != null && name.isNotEmpty) onNewChat(name);
                 });
               },
-              icon: const Icon(Icons.create_new_folder_outlined, size: 18),
-              label: const Text('New folder'),
+              height: 46,
+              radius: BorderRadius.circular(12),
+              fontSize: 14,
+              outline: context.outlineVariant,
+              edge: context.outlineVariant,
+              edgeWidth: 3,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: const <Widget>[
+                  MsIcon('create_new_folder', size: 18),
+                  SizedBox(width: 8),
+                  Text('New folder'),
+                ],
+              ),
             ),
             if (folders.isNotEmpty) ...<Widget>[
               const _RailHeading('Folders'),
               for (final AiStudioFolder f in folders)
                 ListTile(
                   dense: true,
-                  leading: const Icon(Icons.folder_outlined, size: 20),
+                  leading: MsIcon('folder', size: 20),
                   title: Text(f.name,
                       style: RenanceText.bodyBase.copyWith(fontSize: 13.5)),
                   trailing: Text('${f.count}',
@@ -1288,7 +1324,7 @@ class _StudioRail extends StatelessWidget {
               ListTile(
                 dense: true,
                 selected: c.id == activeChatId,
-                leading: const Icon(Icons.chat_bubble_outline, size: 20),
+                leading: MsIcon('chat_bubble', size: 20),
                 title: Text(c.title,
                     maxLines: 1, overflow: TextOverflow.ellipsis,
                     style: RenanceText.bodyBase.copyWith(fontSize: 13.5)),
@@ -1300,11 +1336,11 @@ class _StudioRail extends StatelessWidget {
                   children: <Widget>[
                     InkWell(
                         onTap: () => onRenameChat(c),
-                        child: const Icon(Icons.edit_outlined, size: 16)),
+                        child: MsIcon('edit', size: 16)),
                     const SizedBox(width: 10),
                     InkWell(
                         onTap: () => onDeleteChat(c),
-                        child: const Icon(Icons.delete_outline, size: 16)),
+                        child: MsIcon('delete', size: 16)),
                   ],
                 ),
               ),
@@ -1320,14 +1356,14 @@ class _StudioRail extends StatelessWidget {
             for (final AiStudioArtifact a in artifacts)
               ListTile(
                 dense: true,
-                leading: Icon(
+                leading: MsIcon(
                   a.kind == 'quiz'
-                      ? Icons.quiz_outlined
+                      ? 'quiz'
                       : a.kind == 'notebook'
-                          ? Icons.menu_book_outlined
+                          ? 'menu_book'
                           : a.kind == 'lesson_note'
-                              ? Icons.co_present_outlined
-                              : Icons.description_outlined,
+                              ? 'co_present'
+                              : 'description',
                   size: 20,
                 ),
                 title: Text(a.title,
@@ -1364,7 +1400,7 @@ class _StudioRail extends StatelessWidget {
                     ),
                     IconButton(
                       onPressed: () => onDeleteMemory(m.id),
-                      icon: const Icon(Icons.close, size: 16),
+                      icon: MsIcon('close', size: 16),
                     ),
                   ],
                 ),
@@ -1393,7 +1429,7 @@ class _StudioRail extends StatelessWidget {
                     height: 40,
                     decoration: BoxDecoration(
                         shape: BoxShape.circle, color: context.ink),
-                    child: Icon(Icons.add, color: context.onPrimary, size: 20),
+                    child: MsIcon('add', color: context.onPrimary, size: 20),
                   ),
                 ),
               ],
@@ -1465,12 +1501,12 @@ class AiArtifactScreen extends StatelessWidget {
                   }
                 }
               },
-              icon: const Icon(Icons.share),
+              icon: MsIcon('share'),
             ),
           IconButton(
             tooltip: 'Export PDF',
             onPressed: () => shareArtifactPdf(artifact),
-            icon: const Icon(Icons.picture_as_pdf_outlined),
+            icon: MsIcon('picture_as_pdf'),
           ),
         ],
       ),
@@ -1485,8 +1521,8 @@ class AiArtifactScreen extends StatelessWidget {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Icon(
-                      pending ? Icons.hourglass_top : Icons.error_outline,
+                    MsIcon(
+                      pending ? 'hourglass_top' : 'error',
                       size: 40,
                       color: context.textSecondary,
                     ),

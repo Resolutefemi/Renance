@@ -3,7 +3,9 @@ import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../api_client.dart';
+import 'msymbols.dart';
 import 'renance_logo.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 /// PremiumScreen: the paywall and the plans desk. Founder pricing on
@@ -143,7 +145,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
                           children: <Widget>[
                             Row(
                               children: <Widget>[
-                                Icon(Icons.verified_rounded,
+                                MsIcon('verified',
                                     size: 20, color: context.pageBg),
                                 const SizedBox(width: 8),
                                 Text('Everything is unlocked',
@@ -256,7 +258,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
                                   child: Row(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: <Widget>[
-                                      Icon(Icons.check_circle_outline,
+                                      MsIcon('check_circle',
                                           size: 14, color: context.textSecondary),
                                       const SizedBox(width: 7),
                                       Expanded(
@@ -272,12 +274,9 @@ class _PremiumScreenState extends State<PremiumScreen> {
                                 ),
                             ],
                             const SizedBox(height: 12),
-                            SizedBox(
-                              height: 42,
-                              child: catalog.studentBillingEnabled
-                                  ? _payButton(p, catalog)
-                                  : _includedChip(),
-                            ),
+                            catalog.studentBillingEnabled
+                                ? _payButton(p, catalog)
+                                : _includedChip(),
                           ],
                         ),
                       );
@@ -340,42 +339,41 @@ class _PremiumScreenState extends State<PremiumScreen> {
 
   /// The paused-billing stand-in for a plan's pay button.
   Widget _includedChip() {
-    return OutlinedButton(
+    return TactileButton(
       onPressed: null,
-      style: OutlinedButton.styleFrom(
-        side: BorderSide(color: context.outlineVariant),
-      ),
-      child: Text('Included free right now',
-          style: RenanceText.bodySecondary.copyWith(
-            fontSize: 12.5, color: context.textSecondary,
-          )),
+      height: 42,
+      radius: BorderRadius.circular(12),
+      outline: context.outlineVariant,
+      edge: context.outlineVariant,
+      edgeWidth: 3,
+      fontSize: 12.5,
+      child: const Text('Included free right now'),
     );
   }
 
   Widget _payButton(PremiumPlan p, PlanCatalog catalog) {
     if (!catalog.paystackEnabled) {
-      return OutlinedButton(
+      return TactileButton(
         onPressed: null,
-        style: OutlinedButton.styleFrom(
-          side: BorderSide(color: context.outlineVariant),
-        ),
-        child: Text('Card payments coming',
-            style: RenanceText.bodySecondary.copyWith(
-              fontSize: 12.5, color: context.textSecondary,
-            )),
+        height: 42,
+        radius: BorderRadius.circular(12),
+        outline: context.outlineVariant,
+        edge: context.outlineVariant,
+        edgeWidth: 3,
+        fontSize: 12.5,
+        child: const Text('Card payments coming'),
       );
     }
-    return FilledButton(
+    return TactileButton(
       onPressed: _busyPlan == null ? () => _subscribe(p) : null,
-      style: FilledButton.styleFrom(
-        backgroundColor: context.ink,
-        foregroundColor: context.pageBg,
-      ),
+      height: 42,
+      radius: BorderRadius.circular(12),
+      face: context.ink,
+      onFace: context.pageBg,
+      fontSize: 12.5,
+      fontWeight: FontWeight.w600,
       child: Text(
         _busyPlan == p.code ? 'Opening checkout…' : 'Pay with Paystack',
-        style: RenanceText.bodySecondary.copyWith(
-          fontSize: 12.5, fontWeight: FontWeight.w600, color: context.pageBg,
-        ),
       ),
     );
   }
@@ -407,30 +405,26 @@ class _RedeemChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Opacity(
-      opacity: enabled ? 1 : 0.45,
-      child: InkWell(
-        onTap: enabled ? onTap : null,
-        borderRadius: BorderRadius.circular(999),
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(999),
-            border: Border.all(color: context.outlineVariant),
-            color: context.card,
-          ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              Text(label, style: RenanceText.bodySecondary.copyWith(fontSize: 12.5)),
-              const SizedBox(width: 6),
-              Text('$coins REN',
-                  style: RenanceText.labelMono.copyWith(
-                    fontSize: 11, color: context.textSecondary,
-                  )),
-            ],
-          ),
-        ),
+    return TactileButton(
+      onPressed: enabled ? onTap : null,
+      height: 36,
+      radius: RenanceRadius.chip,
+      outline: context.outlineVariant,
+      edge: context.outlineVariant,
+      edgeWidth: 3,
+      fontSize: 12.5,
+      expand: false,
+      padding: const EdgeInsets.symmetric(horizontal: 14),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          Text(label),
+          const SizedBox(width: 6),
+          Text('$coins REN',
+              style: RenanceText.labelMono.copyWith(
+                fontSize: 11, color: context.textSecondary,
+              )),
+        ],
       ),
     );
   }

@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../controllers.dart';
 import '../models.dart';
+import 'msymbols.dart';
 import 'theme.dart';
 import 'inline_text.dart';
 
@@ -125,8 +126,8 @@ class _LessonCard extends StatelessWidget {
               const SizedBox(height: 10),
               Row(
                 children: <Widget>[
-                  Icon(
-                    Icons.schedule,
+                  MsIcon(
+                    'schedule',
                     size: 13,
                     color: context.textSecondary,
                   ),
@@ -136,8 +137,8 @@ class _LessonCard extends StatelessWidget {
                     style: RenanceText.labelMono.copyWith(fontSize: 11),
                   ),
                   const Spacer(),
-                  Icon(
-                    Icons.arrow_forward,
+                  MsIcon(
+                    'arrow_forward',
                     size: 16,
                     color: context.textSecondary,
                   ),
@@ -264,8 +265,8 @@ class _LessonReaderScreenState extends State<LessonReaderScreen> {
                       const SizedBox(width: 6),
                     if (_lesson!.body.isNotEmpty) _Chip(label: _lesson!.body),
                     const Spacer(),
-                    Icon(
-                      Icons.schedule,
+                    MsIcon(
+                      'schedule',
                       size: 13,
                       color: context.textSecondary,
                     ),
@@ -324,8 +325,8 @@ class _ListenPill extends StatelessWidget {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  Icon(
-                    active ? Icons.stop : Icons.volume_up,
+                  MsIcon(
+                    active ? 'stop' : 'volume_up',
                     size: 16,
                     color: context.textSecondary,
                   ),
@@ -470,8 +471,8 @@ class _OfflineNote extends StatelessWidget {
       ),
       child: Row(
         children: <Widget>[
-          Icon(
-            Icons.cloud_off,
+          MsIcon(
+            'cloud_off',
             size: 15,
             color: context.textSecondary,
           ),

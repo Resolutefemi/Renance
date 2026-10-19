@@ -16,8 +16,10 @@ import '../api_client.dart';
 import '../learn_models.dart' show GemsBoardEntry, GemsLeaderboardData;
 import '../models.dart';
 import 'learn_bits.dart';
+import 'msymbols.dart';
 import 'renance_logo.dart';
 import 'social_screens.dart';
+import 'tactile.dart';
 import 'theme.dart';
 import 'blue_tick.dart';
 
@@ -110,20 +112,9 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                 height: 56,
                 child: Row(
                   children: <Widget>[
-                    InkWell(
+                    TactileBackKey(
                       onTap: () => Navigator.of(context).pop(),
-                      customBorder: const CircleBorder(),
-                      child: Container(
-                        width: 42,
-                        height: 42,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(color: context.outlineVariant),
-                          color: context.card,
-                        ),
-                        child:
-                            Icon(Icons.arrow_back, size: 19, color: context.ink),
-                      ),
+                      size: 42,
                     ),
                     const SizedBox(width: 8),
                     const Expanded(
@@ -169,7 +160,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
-                                Icon(b.icon, size: 15,
+                                MsIcon(b.icon, size: 15,
                                     color: _tab == b
                                         ? context.onInverseChip
                                         : context.textSecondary),
@@ -236,24 +227,24 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
 /// The ladders the ranking page serves, each with its pill label and
 /// the one-line explanation under the tabs. Schools are not ranked.
 enum _Board {
-  arena('Arena', Icons.sports_esports,
+  arena('Arena', 'sports_esports',
       'Head-to-head duels, weekly and all time. A win is a point.'),
-  jamb('JAMB', Icons.school,
+  jamb('JAMB', 'school',
       'Your best official UTME aggregate out of 400. The sealed subject ledger decides.'),
-  waec('WAEC', Icons.menu_book,
+  waec('WAEC', 'menu_book',
       'Your best WAEC paper, graded on the server against the sealed keys.'),
-  neco('NECO', Icons.history_edu,
+  neco('NECO', 'history_edu',
       'Your best NECO paper, graded on the server against the sealed keys.'),
-  streak('Streak', Icons.local_fire_department,
+  streak('Streak', 'local_fire_department',
       'The students still showing up, day after day. Miss a day and it resets.'),
-  gems('Diamonds', Icons.diamond,
+  gems('Diamonds', 'diamond',
       'The gem holders - quest claimants, chest openers, perfect scorers.'),
-  daily('Daily', Icons.event_repeat,
+  daily('Daily', 'event_repeat',
       "Today's challenge, one sprint, everyone worldwide.");
 
   const _Board(this.label, this.icon, this.hint);
   final String label;
-  final IconData icon;
+  final String icon;
   final String hint;
 }
 
@@ -550,17 +541,17 @@ class _RankCard extends StatelessWidget {
       case _Board.arena:
         chips.addAll(<Widget>[
           _StatChip(
-            icon: Icons.emoji_events_outlined,
+            icon: 'emoji_events',
             label: 'Wins',
             value: '${entry.wins}',
           ),
           _StatChip(
-            icon: Icons.history_edu,
+            icon: 'history_edu',
             label: 'Matches',
             value: '${entry.matches}',
           ),
           _StatChip(
-            icon: Icons.check_circle_outline,
+            icon: 'check_circle',
             label: 'Correct',
             value: '${entry.correct}',
           ),
@@ -569,26 +560,26 @@ class _RankCard extends StatelessWidget {
       case _Board.waec:
       case _Board.neco:
         chips.add(_StatChip(
-          icon: Icons.history_edu,
+          icon: 'history_edu',
           label: 'Papers',
           value: '${entry.papers}',
         ));
       case _Board.streak:
         chips.addAll(<Widget>[
           _StatChip(
-            icon: Icons.military_tech,
+            icon: 'military_tech',
             label: 'Best',
             value: '${entry.bestStreak}d',
           ),
           _StatChip(
-            icon: Icons.history_edu,
+            icon: 'history_edu',
             label: 'Papers',
             value: '${entry.attempts}',
           ),
         ]);
       case _Board.daily:
         chips.add(_StatChip(
-          icon: Icons.check_circle_outline,
+          icon: 'check_circle',
           label: 'Score',
           value: '${entry.score}/${entry.total}',
         ));
@@ -638,7 +629,8 @@ class _RankCard extends StatelessWidget {
                       : null,
                 ),
                 child: rank == 1
-                    ? const Icon(Icons.emoji_events, size: 20, color: Color(0xFFB7791F))
+                    ? const MsIcon('emoji_events',
+                        size: 20, fill: true, color: Color(0xFFB7791F))
                     : Text(
                         '$rank',
                         style: RenanceText.bodyMedium.copyWith(
@@ -738,7 +730,7 @@ class _StatChip extends StatelessWidget {
     required this.value,
   });
 
-  final IconData icon;
+  final String icon;
   final String label;
   final String value;
 
@@ -753,7 +745,7 @@ class _StatChip extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Icon(icon, size: 13, color: context.textSecondary),
+          MsIcon(icon, size: 13, color: context.textSecondary),
           const SizedBox(width: 5),
           Text(
             label,

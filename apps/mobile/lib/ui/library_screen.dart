@@ -12,9 +12,11 @@ import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
 import 'exam_mode_setup_screen.dart';
+import 'msymbols.dart';
 import 'pack_detail_screen.dart';
 import 'renance_logo.dart';
 import 'quests_screen.dart';
+import 'tactile.dart';
 import 'theme.dart';
 import 'university_screens.dart';
 
@@ -47,15 +49,15 @@ class _LibraryScreenState extends State<LibraryScreen> {
   List<String> _shelves(List<String> bodies, String ownBody) =>
       <String>[if (ownBody.isNotEmpty) ownBody, ...bodies.where((String b) => b != ownBody)];
 
-  IconData _iconFor(ExamMeta exam) {
+  String _iconFor(ExamMeta exam) {
     final String t = '${exam.title} ${exam.category}'.toLowerCase();
-    if (t.contains('biolog') || t.contains('microb')) return Icons.biotech;
-    if (t.contains('chem')) return Icons.science;
-    if (t.contains('math') || t.contains('calcul')) return Icons.calculate;
-    if (t.contains('histor') || t.contains('english')) return Icons.history_edu;
-    if (t.contains('physic')) return Icons.bolt;
-    if (t.contains('econom')) return Icons.trending_up;
-    return Icons.description;
+    if (t.contains('biolog') || t.contains('microb')) return 'biotech';
+    if (t.contains('chem')) return 'science';
+    if (t.contains('math') || t.contains('calcul')) return 'calculate';
+    if (t.contains('histor') || t.contains('english')) return 'history_edu';
+    if (t.contains('physic')) return 'bolt';
+    if (t.contains('econom')) return 'trending_up';
+    return 'description';
   }
 
   @override
@@ -202,7 +204,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
                     Text('See all',
                         style: RenanceText.labelMono.copyWith(
                             fontSize: 12, color: context.ink)),
-                    Icon(Icons.arrow_forward,
+                    MsIcon('arrow_forward',
                         size: 14, color: context.ink),
                   ],
                 ),
@@ -288,26 +290,16 @@ class _Chip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(999),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-        decoration: BoxDecoration(
-          color: selected
-              ? context.selectionBlue
-              : context.cardLow,
-          borderRadius: BorderRadius.circular(999),
-        ),
-        alignment: Alignment.center,
-        child: Text(
-          label,
-          style: RenanceText.bodyMedium.copyWith(
-            fontSize: 13,
-            color: selected ? context.ink : context.textSecondary,
-          ),
-        ),
-      ),
+    return TactileButton(
+      onPressed: onTap,
+      face: selected ? context.selectionBlue : context.cardLow,
+      onFace: selected ? context.ink : context.textSecondary,
+      height: 36,
+      radius: RenanceRadius.chip,
+      fontSize: 12.5,
+      expand: false,
+      padding: const EdgeInsets.symmetric(horizontal: 14),
+      child: Text(label),
     );
   }
 }
@@ -346,7 +338,7 @@ class _DailyQuestCard extends StatelessWidget {
               children: <Widget>[
                 Row(
                   children: <Widget>[
-                    const Icon(Icons.local_fire_department,
+                    const MsIcon('local_fire_department',
                         size: 18, color: RenanceColors.amber),
                     const SizedBox(width: 6),
                     Text('DAILY QUEST',
@@ -444,7 +436,7 @@ class _MockExamCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 alignment: Alignment.center,
-                child: Icon(Icons.timer,
+                child: MsIcon('timer',
                     size: 22, color: context.onPrimary),
               ),
               const SizedBox(width: 14),
@@ -463,7 +455,7 @@ class _MockExamCard extends StatelessWidget {
                   ],
                 ),
               ),
-              Icon(Icons.arrow_forward,
+              MsIcon('arrow_forward',
                   size: 20,
                   color: context.onPrimary.withValues(alpha: 0.7)),
             ],
@@ -488,7 +480,7 @@ class _PackCard extends StatelessWidget {
   });
 
   final ExamMeta exam;
-  final IconData icon;
+  final String icon;
   final bool downloaded;
   final bool attempted;
   final bool downloading;
@@ -526,7 +518,7 @@ class _PackCard extends StatelessWidget {
                     color: context.cardHigh,
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: Icon(icon, size: 22, color: context.ink),
+                  child: MsIcon(icon, size: 22, color: context.ink),
                 ),
                 const Spacer(),
                 SizedBox(
@@ -545,7 +537,7 @@ class _PackCard extends StatelessWidget {
                                 color: RenanceColors.emerald
                                     .withValues(alpha: 0.1),
                               ),
-                              child: const Icon(Icons.check,
+                              child: const MsIcon('check',
                                   size: 16, color: RenanceColors.emerald),
                             )
                           : InkWell(
@@ -556,7 +548,7 @@ class _PackCard extends StatelessWidget {
                                   shape: BoxShape.circle,
                                   color: context.cardLow,
                                 ),
-                                child: Icon(Icons.download,
+                                child: MsIcon('download',
                                     size: 16, color: context.textSecondary),
                               ),
                             ),

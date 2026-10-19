@@ -21,6 +21,8 @@ import 'package:flutter/material.dart';
 import '../models.dart';
 import '../papers.dart';
 import 'jamb_subject_selection_screen.dart';
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 /// Every year the corpus actually carries, Random FIRST (founder
@@ -218,7 +220,7 @@ class _ExamModeSetupScreenState extends State<ExamModeSetupScreen> {
                       // Header Area -------------------------------------
                       Row(
                         children: <Widget>[
-                          Icon(Icons.timer, size: 24, color: context.ink),
+                          MsIcon('timer', size: 24, color: context.ink),
                           const SizedBox(width: 10),
                           Expanded(
                             child: Text(
@@ -283,9 +285,9 @@ class _ExamModeSetupScreenState extends State<ExamModeSetupScreen> {
                                 onTap: () => setState(() => _standard = true),
                                 title: 'Standard UTME Mock',
                                 titleColor: context.ink,
-                                chips: const <(IconData, String)>[
-                                  (Icons.schedule, '2 Hours'),
-                                  (Icons.menu_book, '4 Subjects'),
+                                chips: const <(String, String)>[
+                                  ('schedule', '2 Hours'),
+                                  ('menu_book', '4 Subjects'),
                                 ],
                               ),
                               const SizedBox(height: 8),
@@ -343,7 +345,7 @@ class _ExamModeSetupScreenState extends State<ExamModeSetupScreen> {
                                         ),
                                         if (jambMode) ...<Widget>[
                                           const SizedBox(width: 2),
-                                          Icon(Icons.edit,
+                                          MsIcon('edit',
                                               size: 12,
                                               color: context.textSecondary),
                                         ],
@@ -391,31 +393,24 @@ class _ExamModeSetupScreenState extends State<ExamModeSetupScreen> {
                               ),
                             if (jambMode) ...<Widget>[
                               const SizedBox(height: 10),
-                              InkWell(
-                                borderRadius: BorderRadius.circular(8),
-                                onTap: _openSubjectSelection,
-                                child: Container(
-                                  width: double.infinity,
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical: 10),
-                                  alignment: Alignment.center,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                        color: context.outlineVariant),
-                                    borderRadius: BorderRadius.circular(8),
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      Icon(Icons.add,
-                                          size: 16,
-                                          color: context.textSecondary),
-                                      const SizedBox(width: 6),
-                                      Text('Add or remove subjects',
-                                          style: RenanceText.caption.copyWith(
-                                              color: context.textSecondary)),
-                                    ],
-                                  ),
+                              TactileButton(
+                                onPressed: _openSubjectSelection,
+                                outline: context.outlineVariant,
+                                edge: context.outlineVariant,
+                                edgeWidth: 3,
+                                height: 40,
+                                radius: BorderRadius.circular(8),
+                                fontSize: 13,
+                                onFace: context.textSecondary,
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    MsIcon('add',
+                                        size: 16,
+                                        color: context.textSecondary),
+                                    const SizedBox(width: 6),
+                                    const Text('Add or remove subjects'),
+                                  ],
                                 ),
                               ),
                             ],
@@ -481,7 +476,7 @@ class _ExamModeSetupScreenState extends State<ExamModeSetupScreen> {
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Icon(Icons.info_outline,
+                            MsIcon('info',
                                 size: 18, color: context.outlineDark),
                             const SizedBox(width: 8),
                             Expanded(
@@ -564,19 +559,7 @@ class _BackBar extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
       child: Row(
         children: <Widget>[
-          Material(
-            color: context.surfaceContainer,
-            shape: const CircleBorder(),
-            clipBehavior: Clip.antiAlias,
-            child: InkWell(
-              onTap: onBack,
-              child: SizedBox(
-                width: 40,
-                height: 40,
-                child: Icon(Icons.arrow_back, size: 20, color: context.ink),
-              ),
-            ),
-          ),
+          TactileBackKey(onTap: onBack, size: 40),
         ],
       ),
     );
@@ -653,7 +636,7 @@ class _SubjectChip extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             if (selected) ...<Widget>[
-              Icon(Icons.check, size: 14, color: context.ink),
+              MsIcon('check', size: 14, color: context.ink),
               const SizedBox(width: 4),
             ],
             Text(
@@ -687,7 +670,7 @@ class _FormatRow extends StatelessWidget {
   final String title;
   final Color titleColor;
   final String? caption;
-  final List<(IconData, String)>? chips;
+  final List<(String, String)>? chips;
 
   @override
   Widget build(BuildContext context) {
@@ -706,11 +689,10 @@ class _FormatRow extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Icon(
-              selected
-                  ? Icons.radio_button_checked
-                  : Icons.radio_button_unchecked,
+            MsIcon(
+              selected ? 'radio_button_checked' : 'radio_button_unchecked',
               size: 22,
+              fill: selected,
               color: selected ? context.ink : context.outline,
             ),
             const SizedBox(width: 14),
@@ -732,7 +714,7 @@ class _FormatRow extends StatelessWidget {
                       spacing: 6,
                       runSpacing: 6,
                       children: <Widget>[
-                        for (final (IconData icon, String label) in chips!)
+                        for (final (String icon, String label) in chips!)
                           Container(
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 8, vertical: 4),
@@ -743,7 +725,7 @@ class _FormatRow extends StatelessWidget {
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
-                                Icon(icon,
+                                MsIcon(icon,
                                     size: 14, color: context.textSecondary),
                                 const SizedBox(width: 4),
                                 Text(label,
@@ -857,7 +839,7 @@ class _SubjectRow extends StatelessWidget {
                 onChanged: (String? v) {
                   if (v != null) onYear(v);
                 },
-                icon: Icon(Icons.arrow_drop_down,
+                icon: MsIcon('arrow_drop_down',
                     size: 16, color: context.outline),
                 dropdownColor: context.card,
               ),
@@ -867,7 +849,7 @@ class _SubjectRow extends StatelessWidget {
             IconButton(
               visualDensity: VisualDensity.compact,
               onPressed: onRemove,
-              icon: const Icon(Icons.close, size: 16),
+              icon: const MsIcon('close', size: 16),
               color: context.textSecondary,
               tooltip: 'Remove $name',
             ),
@@ -901,38 +883,21 @@ class _BeginBar extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
-        child: SizedBox(
+        child: TactileButton(
+          onPressed: onBegin,
           height: 52,
-          child: DecoratedBox(
-            decoration: BoxDecoration(
-              color: context.inverseChip,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: const <BoxShadow>[
-                BoxShadow(
-                  color: Color(0x33000000),
-                  blurRadius: 8,
-                  offset: Offset(0, 4),
-                ),
-              ],
-            ),
-            child: TextButton(
-              onPressed: onBegin,
-              style: TextButton.styleFrom(
-                foregroundColor: context.onInverseChip,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text(label,
-                      style: RenanceText.bodyMedium
-                          .copyWith(color: context.onInverseChip)),
-                  const SizedBox(width: 8),
-                  const Icon(Icons.arrow_forward, size: 20),
-                ],
-              ),
-            ),
+          radius: BorderRadius.circular(10),
+          face: context.inverseChip,
+          onFace: context.onInverseChip,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(label,
+                  style: RenanceText.bodyMedium
+                      .copyWith(color: context.onInverseChip)),
+              const SizedBox(width: 8),
+              const MsIcon('arrow_forward', size: 20),
+            ],
           ),
         ),
       ),

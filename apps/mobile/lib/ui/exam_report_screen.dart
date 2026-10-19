@@ -35,8 +35,10 @@ import '../api_client.dart';
 import '../controllers.dart';
 import '../models.dart';
 import 'leaderboard_screen.dart';
+import 'msymbols.dart';
 import 'review_screen.dart' show ReviewDetailScreen;
 import 'syllabus_screen.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 /// The report body. Embeds in the exam player (graded phase) and inside
@@ -326,7 +328,7 @@ class _ErrorPane extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Icon(Icons.cloud_off,
+            MsIcon('cloud_off',
                 size: 40, color: context.textSecondary),
             const SizedBox(height: 12),
             Text(message,
@@ -334,7 +336,15 @@ class _ErrorPane extends StatelessWidget {
                 style: RenanceText.bodyBase.copyWith(
                     color: context.textSecondary, height: 1.5)),
             const SizedBox(height: 20),
-            FilledButton(onPressed: onRetry, child: const Text('Try again')),
+            TactileButton(
+              onPressed: onRetry,
+              outline: context.outlineVariant,
+              edge: context.outlineVariant,
+              edgeWidth: 3,
+              height: 46,
+              fontSize: 14,
+              child: const Text('Try again'),
+            ),
           ],
         ),
       ),
@@ -372,19 +382,9 @@ class _ReportBanner extends StatelessWidget {
           ),
           Row(
             children: <Widget>[
-              InkWell(
+              TactileBackKey(
                 onTap: onBack,
-                customBorder: const CircleBorder(),
-                child: Container(
-                  width: 44,
-                  height: 44,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: context.outlineVariant),
-                    color: context.card,
-                  ),
-                  child: Icon(Icons.arrow_back, size: 20, color: context.ink),
-                ),
+                size: 44,
               ),
               const SizedBox(width: 8),
               Expanded(
@@ -475,8 +475,8 @@ class _DeltaPill extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Icon(
-            up ? Icons.trending_up : Icons.trending_down,
+          MsIcon(
+            up ? 'trending_up' : 'trending_down',
             size: 14,
             color: up ? RenanceColors.emerald : context.error,
           ),
@@ -683,7 +683,7 @@ class _BreakdownCard extends StatelessWidget {
         children: <Widget>[
           Row(
             children: <Widget>[
-              Icon(Icons.grid_view_rounded,
+              MsIcon('grid_view',
                   size: 21,
                   color: dark ? const Color(0xFFB39DDB) : const Color(0xFF673AB7)),
               const SizedBox(width: 9),
@@ -907,7 +907,7 @@ class _FocusNextChips extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      const Icon(Icons.local_fire_department,
+                      const MsIcon('local_fire_department',
                           size: 14, color: RenanceColors.amber),
                       const SizedBox(width: 4),
                       Text('${row.topic} · ${row.correct}/${row.total}',
@@ -942,12 +942,12 @@ class _XpPill extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          const Icon(Icons.stars, size: 15, color: RenanceColors.amber),
+          const MsIcon('stars', size: 15, color: RenanceColors.amber),
           const SizedBox(width: 5),
           Text('+$xpEarned XP',
               style: RenanceText.bodyMedium.copyWith(fontSize: 13.5)),
           const SizedBox(width: 10),
-          const Icon(Icons.local_fire_department,
+          const MsIcon('local_fire_department',
               size: 15, color: RenanceColors.amber),
           const SizedBox(width: 5),
           Text('Streak Day $streak',
@@ -996,28 +996,22 @@ class _ReportActions extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            SizedBox(
-              width: double.infinity,
+            TactileButton(
               height: 52,
-              child: FilledButton(
-                style: FilledButton.styleFrom(
-                  backgroundColor: context.primary,
-                  foregroundColor: context.onPrimary,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                ),
-                onPressed: !hasServerAttempt
-                    ? null
-                    : () => Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) =>
-                                ReviewDetailScreen(attemptId: attemptId!),
-                          ),
+              radius: BorderRadius.circular(12),
+              face: context.primary,
+              onFace: context.onPrimary,
+              fontSize: 15.5,
+              fontWeight: FontWeight.w600,
+              onPressed: !hasServerAttempt
+                  ? null
+                  : () => Navigator.of(context).push(
+                        MaterialPageRoute<void>(
+                          builder: (_) =>
+                              ReviewDetailScreen(attemptId: attemptId!),
                         ),
-                child: const Text('View Corrections',
-                    style:
-                        TextStyle(fontSize: 15.5, fontWeight: FontWeight.w600)),
-              ),
+                      ),
+              child: const Text('View Corrections'),
             ),
             const SizedBox(height: 8),
             SizedBox(
@@ -1038,7 +1032,7 @@ class _ReportActions extends StatelessWidget {
                           MaterialPageRoute<void>(
                               builder: (_) => const LeaderboardScreen()),
                         ),
-                icon: const Icon(Icons.leaderboard_rounded, size: 19),
+                icon: MsIcon('leaderboard', size: 19),
                 label: const Text('Send to Online Ranking',
                     style:
                         TextStyle(fontSize: 15.5, fontWeight: FontWeight.w600)),

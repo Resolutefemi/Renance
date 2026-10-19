@@ -20,6 +20,8 @@ import '../api_client.dart';
 import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
+import 'msymbols.dart';
+import 'tactile.dart';
 import 'theme.dart';
 class UpdateQuestionsScreen extends StatefulWidget {
   const UpdateQuestionsScreen({super.key});
@@ -185,20 +187,9 @@ class _UpdateQuestionsScreenState extends State<UpdateQuestionsScreen> {
                 height: 56,
                 child: Row(
                   children: <Widget>[
-                    InkWell(
+                    TactileBackKey(
                       onTap: () => Navigator.of(context).pop(),
-                      customBorder: const CircleBorder(),
-                      child: Container(
-                        width: 42,
-                        height: 42,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(color: context.outlineVariant),
-                          color: context.card,
-                        ),
-                        child: Icon(Icons.arrow_back,
-                            size: 19, color: context.ink),
-                      ),
+                      size: 42,
                     ),
                     const SizedBox(width: 8),
                   ],
@@ -283,7 +274,7 @@ class _UpdateQuestionsScreenState extends State<UpdateQuestionsScreen> {
                                   setState(() => _query = v.trim().toLowerCase()),
                               decoration: InputDecoration(
                                 hintText: 'Search subjects…',
-                                prefixIcon: Icon(Icons.search,
+                                prefixIcon: MsIcon('search',
                                     size: 20, color: context.outline),
                                 filled: true,
                                 fillColor: context.cardLow,
@@ -352,36 +343,35 @@ class _UpdateQuestionsScreenState extends State<UpdateQuestionsScreen> {
                 ),
                 child: SafeArea(
                   minimum: const EdgeInsets.fromLTRB(16, 10, 16, 10),
-                  child: SizedBox(
+                  child: TactileButton(
+                    onPressed: _bulk ? null : _updateSelected,
                     height: 52,
-                    child: FilledButton.icon(
-                      onPressed: _bulk ? null : _updateSelected,
-                      style: FilledButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
+                    radius: BorderRadius.circular(12),
+                    face: _bulk ? context.outlineLight : context.inverseChip,
+                    onFace: context.onInverseChip,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        if (_bulk)
+                          const SizedBox(
+                            width: 18,
+                            height: 18,
+                            child: CircularProgressIndicator(
+                              strokeWidth: 2,
+                              color: Colors.white,
+                            ),
+                          )
+                        else
+                          const MsIcon('sync', size: 19, fill: true),
+                        const SizedBox(width: 6),
+                        Text(
+                          _bulk
+                              ? 'Updating… ($_done)'
+                              : 'Update Questions',
                         ),
-                        backgroundColor: _bulk
-                            ? context.outlineLight
-                            : context.inverseChip,
-                        foregroundColor: context.onInverseChip,
-                      ),
-                      icon: _bulk
-                          ? const SizedBox(
-                              width: 18,
-                              height: 18,
-                              child: CircularProgressIndicator(
-                                strokeWidth: 2,
-                                color: Colors.white,
-                              ),
-                            )
-                          : const Icon(Icons.sync, size: 19),
-                      label: Text(
-                        _bulk
-                            ? 'Updating… ($_done)'
-                            : 'Update Questions',
-                        style: const TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.w600),
-                      ),
+                      ],
                     ),
                   ),
                 ),
@@ -479,42 +469,33 @@ class _SubjectUpdateCard extends StatelessWidget {
           ),
           const SizedBox(width: 2),
           // The black Update pill.
-          InkWell(
-            onTap: updating ? null : onUpdate,
-            borderRadius: BorderRadius.circular(999),
-            child: Container(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
-              decoration: BoxDecoration(
-                color: updating ? context.outlineLight : context.inverseChip,
-                borderRadius: BorderRadius.circular(999),
-              ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  if (updating)
-                    const SizedBox(
-                      width: 13,
-                      height: 13,
-                      child: CircularProgressIndicator(
-                        strokeWidth: 2,
-                        color: Colors.white,
-                      ),
-                    )
-                  else
-                    Icon(Icons.sync,
-                        size: 15, color: context.onInverseChip),
-                  const SizedBox(width: 6),
-                  Text(
-                    updating ? '…' : 'Update',
-                    style: TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w700,
-                      color: context.onInverseChip,
+          TactileButton(
+            onPressed: updating ? null : onUpdate,
+            face: updating ? context.outlineLight : context.inverseChip,
+            onFace: context.onInverseChip,
+            height: 36,
+            radius: RenanceRadius.chip,
+            fontSize: 13,
+            fontWeight: FontWeight.w700,
+            expand: false,
+            padding: const EdgeInsets.symmetric(horizontal: 14),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                if (updating)
+                  const SizedBox(
+                    width: 13,
+                    height: 13,
+                    child: CircularProgressIndicator(
+                      strokeWidth: 2,
+                      color: Colors.white,
                     ),
-                  ),
-                ],
-              ),
+                  )
+                else
+                  const MsIcon('sync', size: 15, fill: true),
+                const SizedBox(width: 6),
+                Text(updating ? '…' : 'Update'),
+              ],
             ),
           ),
         ],

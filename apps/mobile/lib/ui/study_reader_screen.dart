@@ -24,7 +24,9 @@ import '../models.dart';
 import '../qtext.dart';
 import '../storage.dart';
 import 'explanation_sheet.dart';
+import 'msymbols.dart';
 import 'saved_questions.dart';
+import 'tactile.dart';
 import 'theme.dart';
 
 /// One page size step, exactly the web's "Show 25 more".
@@ -242,7 +244,7 @@ class _StudyReaderScreenState extends State<StudyReaderScreen> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Icon(Icons.cloud_off_outlined,
+                MsIcon('cloud_off',
                     size: 40, color: context.textSecondary),
                 const SizedBox(height: 12),
                 Text(
@@ -252,7 +254,15 @@ class _StudyReaderScreenState extends State<StudyReaderScreen> {
                       .copyWith(color: context.textSecondary),
                 ),
                 const SizedBox(height: 16),
-                OutlinedButton(onPressed: _load, child: const Text('Retry')),
+                TactileButton(
+                  onPressed: _load,
+                  outline: context.outlineVariant,
+                  edge: context.outlineVariant,
+                  edgeWidth: 3,
+                  height: 46,
+                  fontSize: 14,
+                  child: const Text('Retry'),
+                ),
               ],
             ),
           ),
@@ -292,9 +302,14 @@ class _StudyReaderScreenState extends State<StudyReaderScreen> {
                             if (i >= shown) {
                               return Padding(
                                 padding: const EdgeInsets.only(top: 4),
-                                child: OutlinedButton(
+                                child: TactileButton(
                                   onPressed: () => setState(
                                       () => _limit = _limit + _pageSize),
+                                  outline: context.outlineVariant,
+                                  edge: context.outlineVariant,
+                                  edgeWidth: 3,
+                                  height: 46,
+                                  fontSize: 14,
                                   child: Text(
                                     'Show $_pageSize more · '
                                     '${filtered.length - shown} left',
@@ -351,13 +366,8 @@ class _StudyReaderScreenState extends State<StudyReaderScreen> {
             padding: const EdgeInsets.fromLTRB(8, 8, 16, 0),
             child: Row(
               children: <Widget>[
-                InkWell(
+                TactileBackKey(
                   onTap: () => Navigator.of(context).pop(),
-                  customBorder: const CircleBorder(),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8),
-                    child: Icon(Icons.arrow_back, size: 22, color: context.ink),
-                  ),
                 ),
                 const SizedBox(width: 6),
                 Expanded(
@@ -460,7 +470,7 @@ class _StudyReaderScreenState extends State<StudyReaderScreen> {
               decoration: InputDecoration(
                 isDense: true,
                 prefixIcon:
-                    Icon(Icons.search, size: 20, color: context.textSecondary),
+                    MsIcon('search', size: 20, color: context.textSecondary),
                 hintText: 'Search the questions…',
                 hintStyle:
                     RenanceText.bodyBase.copyWith(color: context.textSecondary),
@@ -616,7 +626,7 @@ class _StudyReaderScreenState extends State<StudyReaderScreen> {
           isDense: true,
           borderRadius: BorderRadius.circular(12),
           dropdownColor: context.cardLowest,
-          icon: Icon(Icons.expand_more, size: 18, color: context.textSecondary),
+          icon: MsIcon('expand_more', size: 18, color: context.textSecondary),
           hint: Text(hint,
               style: RenanceText.labelMono
                   .copyWith(fontSize: 12, color: context.textSecondary)),
@@ -771,9 +781,10 @@ class _ReaderCard extends StatelessWidget {
               IconButton(
                 visualDensity: VisualDensity.compact,
                 onPressed: onToggleSave,
-                icon: Icon(
-                  saved ? Icons.bookmark : Icons.bookmark_border,
+                icon: MsIcon(
+                  'bookmark',
                   size: 20,
+                  fill: saved,
                   color: saved ? context.primary : context.textSecondary,
                 ),
                 tooltip: saved ? 'Unsave' : 'Save question',
@@ -787,7 +798,7 @@ class _ReaderCard extends StatelessWidget {
                       '${e.key}) ${e.value}',
                   ].join('\n'),
                 )),
-                icon: Icon(Icons.copy_outlined,
+                icon: MsIcon('content_copy',
                     size: 18, color: context.textSecondary),
                 tooltip: 'Copy question',
               ),
@@ -848,21 +859,21 @@ class _ReaderCard extends StatelessWidget {
               ),
           ],
           const SizedBox(height: 10),
-          SizedBox(
-            width: double.infinity,
+          TactileButton(
             height: 44,
-            child: FilledButton.icon(
-              onPressed: onExplain,
-              style: FilledButton.styleFrom(
-                backgroundColor: context.inverseChip,
-                foregroundColor: context.onInverseChip,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-              ),
-              icon: const Icon(Icons.auto_stories, size: 17),
-              label: const Text('View Explanation',
-                  style:
-                      TextStyle(fontSize: 13.5, fontWeight: FontWeight.w700)),
+            radius: BorderRadius.circular(10),
+            face: context.inverseChip,
+            onFace: context.onInverseChip,
+            fontSize: 13.5,
+            fontWeight: FontWeight.w700,
+            onPressed: onExplain,
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                const MsIcon('auto_stories', size: 17, fill: true),
+                const SizedBox(width: 8),
+                const Text('View Explanation'),
+              ],
             ),
           ),
         ],
