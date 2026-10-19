@@ -12,6 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../controllers.dart';
+import '../learn_controller.dart';
 import '../models.dart';
 import '../notifications.dart';
 import '../storage.dart';
@@ -22,8 +23,17 @@ import 'account_screens.dart';
 import 'career_bridge_screen.dart';
 import 'offline_share_screen.dart';
 import 'patron_portal_screen.dart';
+import 'performance_screen.dart';
+import 'saved_questions.dart';
+import 'gpa_screen.dart';
 import 'downloads_screen.dart';
 import 'leaderboard_screen.dart';
+import 'courses_screen.dart';
+import 'league_screen.dart';
+import 'feed_screen.dart';
+import 'quests_screen.dart';
+import 'learn_bits.dart';
+import 'msymbols.dart';
 import 'study_resources_screen.dart';
 import 'study_setup_screen.dart';
 import 'study_plan_screen.dart';
@@ -73,6 +83,11 @@ class _HomeScreenState extends State<HomeScreen> {
     final StudentController student = context.read<StudentController>();
     final SyncController sync = context.read<SyncController>();
     final SessionStore session = context.read<SessionStore>();
+    // The learn wallet (gems chip, freeze pill) paints from the cache
+    // instantly, then refreshes quietly beside the profile.
+    context.read<LearnController>()
+      ..hydrate()
+      ..refresh();
     await student.refresh();
     if (!mounted) return;
     // ONLY the server's own auth decision (401/403) ends the session -
@@ -207,6 +222,34 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  /// Legacy tab-index routing (the old 4-tab shell's callers): 0 home,
+  /// 1 library, 2 review, anything else the Profile tab. Library and
+  /// Review left the tab bar with the web's 6-tab nav, so they push.
+  void _goTab(int t) {
+    switch (t) {
+      case 0:
+        setState(() => _tab = 0);
+      case 1:
+        Navigator.of(context).push(
+          MaterialPageRoute<void>(
+            builder: (_) => LibraryScreen(onOpenExam: _openExam),
+          ),
+        );
+      case 2:
+        Navigator.of(context).push(
+          MaterialPageRoute<void>(builder: (_) => const ReviewScreen()),
+        );
+      default:
+        setState(() => _tab = 5);
+    }
+  }
+
+  /// Pull the learner wallet (gems/hearts/streak/freeze) after any learn
+  /// action so the header chips stay live.
+  void _refreshLearnWallet() {
+    context.read<LearnController>().refresh();
+  }
+
   void _openExam(
     BuildContext context,
     ExamMeta exam, {
@@ -233,18 +276,22 @@ class _HomeScreenState extends State<HomeScreen> {
     final bool firstSyncUnderway =
         !_bootstrapped && sync.exams.isEmpty && sync.isSyncing;
 
+    // The web's 6-tab bottom nav (bottom-nav.tsx): Home / Course /
+    // Leagues / Feed / Quests / Profile. Practice and Review leave the
+    // tab bar (they are launcher tiles + pushed routes, exactly the
+    // web's dashboard behaviour).
     final bodies = <Widget>[
       if (student.isPostUtmeFocus)
         PostUtmeHomeTab(
           student: student,
           sync: sync,
-          onGoTab: (int t) => setState(() => _tab = t),
+          onGoTab: _goTab,
         )
       else if (student.isTertiaryFocus)
         UniversityHomeTab(
           student: student,
           sync: sync,
-          onGoTab: (int t) => setState(() => _tab = t),
+          onGoTab: _goTab,
         )
       else
         _LauncherTab(
@@ -252,13 +299,15 @@ class _HomeScreenState extends State<HomeScreen> {
           sync: sync,
           firstSyncUnderway: firstSyncUnderway,
           onOpenExam: _openExam,
-          onGoTab: (int t) => setState(() => _tab = t),
+          onGoTab: _goTab,
           onOnboarding: _showOnboarding,
         ),
-      LibraryScreen(onOpenExam: _openExam),
-      const ReviewScreen(),
+      CoursesScreen(onNeedsResync: () => _refreshLearnWallet()),
+      const LeagueScreen(),
+      const FeedScreen(),
+      const QuestsScreen(),
       ProfileScreen(
-        onGoTab: (int t) => setState(() => _tab = t),
+        onGoTab: _goTab,
         onFocusChanged: () async {
           final StudentController fresh = context.read<StudentController>();
           final SyncController freshSync = context.read<SyncController>();
@@ -277,7 +326,9 @@ class _HomeScreenState extends State<HomeScreen> {
             child: IndexedStack(index: _tab, children: bodies),
           ),
         ),
-        // Brand header, bg-surface/80 + hairline shadow (Stitch header).
+        // Brand header, the web dashboard's 56px bar: keycap + wordmark
+        // left; gems chip, bell, streak and freeze pills right (founder
+        // directive 2026-10-14: no search icon, no avatar).
         Positioned(
           top: 0,
           left: 0,
@@ -288,16 +339,14 @@ class _HomeScreenState extends State<HomeScreen> {
             onBrand: () => setState(() => _tab = 0),
             onAvatar: () => showAccountSheet(
               context,
-              onGoTab: (int t) => setState(() => _tab = t),
+              onGoTab: _goTab,
             ),
             onBackPressed: _tab == 0 ? null : () => setState(() => _tab = 0),
-            onSearch: () => Navigator.of(context).push<void>(
-              MaterialPageRoute<void>(builder: (_) => const SearchScreen()),
-            ),
+            onGems: () => setState(() => _tab = 5),
             onNotifications: () => Navigator.of(context).push<void>(
               MaterialPageRoute<void>(
                 builder: (_) => NotificationsScreen(
-                  onGoTab: (int t) => setState(() => _tab = t),
+                  onGoTab: _goTab,
                 ),
               ),
             ),
@@ -391,12 +440,8 @@ class _WideRail extends StatelessWidget {
   final int reviewBadge;
   final ValueChanged<int> onTap;
 
-  static const _items = <(IconData, IconData, String)>[
-    (Icons.home_outlined, Icons.home, 'Home'),
-    (Icons.edit_note, Icons.edit_note, 'Practice'),
-    (Icons.history_edu, Icons.history_edu, 'Review'),
-    (Icons.person_outline, Icons.person, 'Profile'),
-  ];
+  static const _items = <String>['home', 'menu_book', 'trophy', 'newspaper', 'target', 'person'];
+  static const _labels = <String>['Home', 'Course', 'Leagues', 'Feed', 'Quests', 'Profile'];
 
   @override
   Widget build(BuildContext context) {
@@ -446,11 +491,12 @@ class _WideRail extends StatelessWidget {
                         Stack(
                           clipBehavior: Clip.none,
                           children: <Widget>[
-                            Icon(
-                              i == active ? _items[i].$2 : _items[i].$1,
+                            MsIcon(
+                              _items[i],
                               size: 24,
+                              fill: i == active,
                               color: i == active
-                                  ? context.ink
+                                  ? RenanceColors.macawDark
                                   : context.textSecondary,
                             ),
                             if (i == 2 && reviewBadge > 0)
@@ -480,15 +526,15 @@ class _WideRail extends StatelessWidget {
                         ),
                         const SizedBox(height: 5),
                         Text(
-                          _items[i].$3,
+                          _labels[i],
                           style: TextStyle(
-                            fontFamily: 'Inter',
+                            fontFamily: 'Nunito',
                             fontSize: 12,
                             color: i == active
-                                ? context.ink
+                                ? RenanceColors.macawDark
                                 : context.textSecondary,
                             fontWeight: i == active
-                                ? FontWeight.w600
+                                ? FontWeight.w800
                                 : FontWeight.w400,
                           ),
                         ),
@@ -524,6 +570,7 @@ class HomeHeader extends StatelessWidget {
     this.onAvatar,
     this.onBackPressed,
     this.onSearch,
+    this.onGems,
     this.onNotifications,
     this.alert = false,
     this.alertCount = 0,
@@ -535,6 +582,7 @@ class HomeHeader extends StatelessWidget {
   final VoidCallback? onAvatar;
   final VoidCallback? onBackPressed;
   final VoidCallback? onSearch;
+  final VoidCallback? onGems;
   final VoidCallback? onNotifications;
 
   /// Emerald dot on the bell when something needs attention (review due).
@@ -565,13 +613,13 @@ class HomeHeader extends StatelessWidget {
             children: <Widget>[
               _Tappable(onTap: onBrand, child: const _BrandMark()),
               const Spacer(),
-              if (onSearch != null)
-                _HeaderIcon(
-                  icon: Icons.search,
-                  onTap: onSearch,
-                ),
+              // The gems wallet chip (web LearnStatChips) -> the shop on
+              // the profile page.
+              GemStatChip(
+                onTap: onGems,
+              ),
               if (onNotifications != null) ...<Widget>[
-                const SizedBox(width: 2),
+                const SizedBox(width: 8),
                 _HeaderIcon(
                   icon: Icons.notifications_none,
                   onTap: onNotifications,
@@ -581,10 +629,10 @@ class HomeHeader extends StatelessWidget {
               ],
               const SizedBox(width: 6),
               StreakPill(streak: streak),
-              const SizedBox(width: 16),
-              _Tappable(
-                onTap: onAvatar,
-                child: AvatarCircle(name: name, size: 32),
+              // The freeze pill renders only while freezes are held
+              // (web rule) - reads the live learn wallet.
+              FreezeHeaderPill(
+                count: context.watch<LearnController>().freezeCount,
               ),
             ],
           ),
@@ -592,6 +640,7 @@ class HomeHeader extends StatelessWidget {
       ),
     );
   }
+
 }
 
 /// Pointer-cursor tap wrapper used for header affordances so the brand
@@ -623,30 +672,20 @@ class _BrandMark extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
-        Container(
-          width: 32,
-          height: 32,
-          decoration: BoxDecoration(
-            color: context.inverseChip,
-            borderRadius: BorderRadius.circular(8),
-          ),
-          alignment: Alignment.center,
-          child: Text(
-            'R',
-            style: TextStyle(
-              color: context.onInverseChip,
-              fontWeight: FontWeight.w700,
-              fontSize: 17,
-            ),
-          ),
-        ),
+        // The live-seed 3D keycap (the web header's RenanceMark 30).
+        const RenanceKeycap(size: 30),
         const SizedBox(width: 8),
-        // The wordmark follows the seed's ink tone (the web paints it
-        // text-on-surface), so a live theme colour retints it too -
-        // founder directive 2026-10-02: every black element adapts.
+        // The wordmark is the brand green lowercase, Nunito-900, 21px -
+        // the exact web header treatment (text-primary).
         Text(
-          'Renance',
-          style: RenanceText.displayMd.copyWith(color: context.ink),
+          'renance',
+          style: TextStyle(
+            fontFamily: 'Nunito',
+            fontSize: 21,
+            fontWeight: FontWeight.w900,
+            letterSpacing: -0.3,
+            color: context.primary,
+          ),
         ),
       ],
     );
@@ -809,11 +848,21 @@ class HomeNav extends StatelessWidget {
   final int reviewBadge;
   final ValueChanged<int> onTap;
 
-  static const _items = <(IconData, IconData, String)>[
-    (Icons.home_outlined, Icons.home, 'Home'),
-    (Icons.edit_note, Icons.edit_note, 'Practice'),
-    (Icons.history_edu, Icons.history_edu, 'Review'),
-    (Icons.person_outline, Icons.person, 'Profile'),
+  static const _items = <String>[
+    'home',
+    'menu_book',
+    'trophy',
+    'newspaper',
+    'target',
+    'person',
+  ];
+  static const _labels = <String>[
+    'Home',
+    'Course',
+    'Leagues',
+    'Feed',
+    'Quests',
+    'Profile',
   ];
 
   @override
@@ -844,70 +893,41 @@ class HomeNav extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Stack(
-                        clipBehavior: Clip.none,
-                        children: <Widget>[
-                          Icon(
-                            i == active ? _items[i].$2 : _items[i].$1,
-                            size: 24,
-                            // Active tab = the student's colour: the web
-                            // bottom nav paints text-primary/bg-primary,
-                            // so a seed colour must light the tab up here
-                            // too. Stock tiers stay black (light/mixed)
-                            // and white (dark) - identical to the old ink.
-                            color: i == active
-                                ? context.primary
-                                : context.textSecondary,
-                          ),
-                          if (i == 2 && reviewBadge > 0)
-                            Positioned(
-                              top: -6,
-                              right: -8,
-                              child: Container(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 5,
-                                  vertical: 1,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: RenanceColors.emerald,
-                                  borderRadius: BorderRadius.circular(999),
-                                ),
-                                child: Text(
-                                  '$reviewBadge',
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
-                              ),
-                            ),
-                        ],
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        _items[i].$3,
-                        style: TextStyle(
-                          fontFamily: 'Inter',
-                          fontSize: 12,
-                          height: 1.0,
+                      // The web's active treatment: a macaw-light pill
+                      // behind a macaw-dark glyph (nav-pill).
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 14, vertical: 3),
+                        decoration: BoxDecoration(
                           color: i == active
-                              ? context.primary
-                              : context.textSecondary,
-                          fontWeight: i == active
-                              ? FontWeight.w600
-                              : FontWeight.w400,
+                              ? RenanceColors.macawLight
+                              : Colors.transparent,
+                          borderRadius: BorderRadius.circular(999),
+                        ),
+                        child: MsIcon(
+                          _items[i],
+                          size: 22,
+                          fill: i == active,
+                          color: i == active
+                              ? RenanceColors.macawDark
+                              : (context.darkChrome
+                                  ? RenanceColors.darkTextSecondary
+                                  : RenanceColors.hare),
                         ),
                       ),
-                      const SizedBox(height: 2),
-                      Container(
-                        width: 4,
-                        height: 4,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
+                      const SizedBox(height: 3),
+                      Text(
+                        _labels[i],
+                        style: TextStyle(
+                          fontFamily: 'Nunito',
+                          fontSize: 9.5,
+                          height: 1.0,
                           color: i == active
-                              ? context.primary
-                              : Colors.transparent,
+                              ? RenanceColors.macawDark
+                              : (context.darkChrome
+                                  ? RenanceColors.darkTextSecondary
+                                  : RenanceColors.hare),
+                          fontWeight: FontWeight.w800,
                         ),
                       ),
                     ],
@@ -1036,7 +1056,7 @@ class _LauncherTab extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.description,
+                  msIcon: 'description',
                   label: 'Exams',
                   onTap: () {
                     // Mock Exam Setup is the Exams content for JAMBites
@@ -1059,14 +1079,14 @@ class _LauncherTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.inventory_2,
+                  msIcon: 'inventory_2',
                   label: 'Question Pack',
                   onTap: () => onGoTab(1),
                 ),
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.local_library,
+                  msIcon: 'local_library',
                   label: 'Study',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
@@ -1079,7 +1099,7 @@ class _LauncherTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.history,
+                  msIcon: 'history',
                   label: 'Review Due',
                   badge: student.dueTopics > 0 ? '${student.dueTopics}' : null,
                   badgeColor: RenanceColors.emerald,
@@ -1102,7 +1122,7 @@ class _LauncherTab extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.sports_esports,
+                  msIcon: 'sports_esports',
                   label: 'Arena',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
@@ -1113,15 +1133,15 @@ class _LauncherTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.event_repeat,
-                  iconColor: RenanceColors.amber,
+                  msIcon: 'event_repeat',
+                  iconColor: const Color(0xFFF59E0B),
                   label: 'Daily Quiz',
                   onTap: () => _openDaily(context),
                 ),
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.leaderboard,
+                  msIcon: 'leaderboard',
                   label: 'Leaderboard',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
@@ -1132,7 +1152,7 @@ class _LauncherTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.event_note,
+                  msIcon: 'event_note',
                   label: 'Study Plan',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
@@ -1143,7 +1163,7 @@ class _LauncherTab extends StatelessWidget {
               ),
             ],
           ),
-          // Learn -----------------------------------------------------------
+          // Learn - the web's two tiles --------------------------------
           const SizedBox(height: 16),
           Text(
             'Learn',
@@ -1157,7 +1177,7 @@ class _LauncherTab extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.auto_stories,
+                  msIcon: 'auto_stories',
                   label: 'Notes',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
@@ -1168,26 +1188,8 @@ class _LauncherTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.download,
-                  label: 'Downloads',
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (_) => const DownloadsScreen(),
-                    ),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: LauncherTile(
-                  icon: Icons.category,
-                  label: 'Subjects',
-                  onTap: () => onGoTab(1),
-                ),
-              ),
-              Expanded(
-                child: LauncherTile(
-                  icon: Icons.auto_awesome,
-                  label: 'Renance AI Studio',
+                  msIcon: 'smart_toy',
+                  label: 'Renance AI',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
                       builder: (_) => const AiScreen(),
@@ -1195,12 +1197,14 @@ class _LauncherTab extends StatelessWidget {
                   ),
                 ),
               ),
+              const Expanded(child: SizedBox()),
+              const Expanded(child: SizedBox()),
             ],
           ),
-          // Tools -----------------------------------------------------------
+          // Tools & Resources - the web's three tiles ------------------
           const SizedBox(height: 16),
           Text(
-            'Tools',
+            'Tools & Resources',
             style: RenanceText.sectionTitle.copyWith(
               color: context.textSecondary,
               fontSize: 14,
@@ -1211,7 +1215,7 @@ class _LauncherTab extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.menu_book,
+                  msIcon: 'menu_book',
                   label: 'Syllabus Map',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
@@ -1222,7 +1226,7 @@ class _LauncherTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.smart_toy,
+                  msIcon: 'smart_toy',
                   iconColor: context.onInverseChip,
                   highlight: true,
                   label: 'Tutor',
@@ -1235,24 +1239,14 @@ class _LauncherTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.history_edu,
-                  label: 'Exam History',
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (_) => const ExamHistoryScreen(),
-                    ),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: LauncherTile(
-                  icon: Icons.more_horiz,
+                  msIcon: 'more_horiz',
                   iconColor: context.textSecondary,
                   muted: true,
                   label: 'More',
                   onTap: () => showMoreSheet(context, onGoTab: onGoTab),
                 ),
               ),
+              const Expanded(child: SizedBox()),
             ],
           ),
           // Recent activity ------------------------------------------------
@@ -1298,6 +1292,17 @@ class _HeroCard extends StatelessWidget {
 
   final StudentController student;
   final VoidCallback onContinue;
+
+  /// The web's hero CTA copy: a paused paper offers its seat back,
+  /// JAMBites get the mock composer, everyone else starts practice.
+  String get _ctaLabel {
+    final AttemptRow? latest = student.latestAttempt;
+    if (latest != null && latest.status == 'in_progress') {
+      return 'Continue Exam';
+    }
+    if (student.isJambFocus) return 'Start Mock Exam';
+    return 'Start Practice';
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -1436,29 +1441,21 @@ class _HeroCard extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 16),
-                SizedBox(
+                TactileButton(
+                  onPressed: onContinue,
                   height: 52,
-                  width: double.infinity,
-                  child: FilledButton.icon(
-                    onPressed: onContinue,
-                    // The hero CTA is context.heroCta in every tier -
-                    // black on light, white on dark chrome, and the
-                    // student's seed colour whenever one is live.
-                    style: FilledButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      backgroundColor: context.heroCta,
-                      foregroundColor: context.onHeroCta,
-                    ),
-                    icon: const Icon(Icons.play_arrow, size: 20),
-                    label: const Text(
-                      'Continue Practice',
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
+                  radius: BorderRadius.circular(12),
+                  fontSize: 14,
+                  face: context.heroCta,
+                  onFace: context.onHeroCta,
+                  edge: mixTowardBlack(context.heroCta, 0.68),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      const MsIcon('play_arrow', size: 18, fill: true),
+                      const SizedBox(width: 6),
+                      Text(_ctaLabel),
+                    ],
                   ),
                 ),
               ],
@@ -1476,7 +1473,8 @@ class _HeroCard extends StatelessWidget {
 class LauncherTile extends StatelessWidget {
   const LauncherTile({
     super.key,
-    required this.icon,
+    this.icon,
+    this.msIcon,
     required this.label,
     required this.onTap,
     this.iconColor,
@@ -1486,7 +1484,11 @@ class LauncherTile extends StatelessWidget {
     this.badgeColor = RenanceColors.emerald,
   });
 
-  final IconData icon;
+  /// Flutter Material icon (legacy focus-variant call sites).
+  final IconData? icon;
+
+  /// Material Symbols name (web parity) - takes precedence over [icon].
+  final String? msIcon;
   final String label;
   final VoidCallback onTap;
   final Color? iconColor;
@@ -1494,6 +1496,27 @@ class LauncherTile extends StatelessWidget {
   final bool muted; // More tile: tinted bg + hairline border
   final String? badge;
   final Color badgeColor;
+
+  Widget _glyph(BuildContext context) {
+    if (msIcon != null) {
+      return MsIcon(
+        msIcon!,
+        size: 24,
+        wght: 600,
+        color: iconColor ?? context.primary,
+      );
+    }
+    return Icon(
+      icon ?? Icons.circle_outlined,
+      size: 24,
+      // The launcher glyphs are the icon list's "black", and the seed
+      // doctrine says the black becomes the student's colour. Stock
+      // tiers: black on light, white on dark - unchanged. Seeded: the
+      // whole grid takes the picked colour, matching how the website's
+      // desk visibly re-tints per appearance.
+      color: iconColor ?? context.primary,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -1555,19 +1578,9 @@ class LauncherTile extends StatelessWidget {
                             ],
                           ),
                         ),
-                        child: Icon(icon, size: 24, color: iconColor),
+                        child: _glyph(context),
                       )
-                    : Icon(
-                        icon,
-                        size: 24,
-                        // The launcher glyphs are the icon list's "black",
-                        // and the seed doctrine says the black becomes the
-                        // student's colour. Stock tiers: black on light,
-                        // white on dark - unchanged. Seeded: the whole
-                        // grid takes the picked colour, matching how the
-                        // website's desk visibly re-tints per appearance.
-                        color: iconColor ?? context.primary,
-                      ),
+                    : _glyph(context),
               ),
               if (badge != null)
                 Positioned(
@@ -1816,6 +1829,18 @@ class _SyncErrorBanner extends StatelessWidget {
 ///
 /// [onGoTab] routes feed rows back into the shell's tabs when the caller
 /// lives inside the shell (launcher); null keeps notifications self-contained.
+/// Pops the sheet then pushes the route (shared by every More tile).
+VoidCallback _push(
+  BuildContext sheetContext,
+  BuildContext context,
+  WidgetBuilder builder,
+) {
+  return () {
+    Navigator.of(sheetContext).pop();
+    Navigator.of(context).push(MaterialPageRoute<void>(builder: builder));
+  };
+}
+
 Future<void> showMoreSheet(
   BuildContext context, {
   void Function(int tab)? onGoTab,
@@ -1855,10 +1880,10 @@ Future<void> showMoreSheet(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  const Text('All Features', style: RenanceText.sectionTitle),
+                  const Text('More', style: RenanceText.sectionTitle),
                   const SizedBox(height: 2),
                   Text(
-                    'Explore everything Renance has to offer',
+                    'Less-used tools, your daily drivers are on the home grid.',
                     style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, fontSize: 13),
                   ),
                 ],
@@ -1876,19 +1901,39 @@ Future<void> showMoreSheet(
                   childAspectRatio: 0.92,
                   children: <Widget>[
                     _MoreTile(
-                      icon: Icons.search,
-                      label: 'Search',
+                      msIcon: 'insights',
+                      label: 'Performance',
+                      onTap: _push(sheetContext, context,
+                          (_) => const PerformanceScreen()),
+                    ),
+                    _MoreTile(
+                      msIcon: 'bookmark',
+                      label: 'Saved Questions',
+                      onTap: _push(sheetContext, context,
+                          (_) => const SavedQuestionsScreen()),
+                    ),
+                    _MoreTile(
+                      msIcon: 'collections_bookmark',
+                      label: 'Study Resources',
+                      onTap: _push(sheetContext, context,
+                          (_) => const StudyResourcesScreen()),
+                    ),
+                    _MoreTile(
+                      msIcon: 'category',
+                      label: 'Subjects',
                       onTap: () {
                         Navigator.of(sheetContext).pop();
-                        Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) => const SearchScreen(),
-                          ),
-                        );
+                        onGoTab?.call(1);
                       },
                     ),
                     _MoreTile(
-                      icon: Icons.notifications_none,
+                      msIcon: 'download',
+                      label: 'Downloads',
+                      onTap: _push(sheetContext, context,
+                          (_) => const DownloadsScreen()),
+                    ),
+                    _MoreTile(
+                      msIcon: 'notifications',
                       label: 'Notifications',
                       onTap: () {
                         Navigator.of(sheetContext).pop();
@@ -1902,43 +1947,31 @@ Future<void> showMoreSheet(
                       },
                     ),
                     _MoreTile(
-                      icon: Icons.download,
-                      label: 'Downloads',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) => const DownloadsScreen(),
-                          ),
-                        );
-                      },
+                      msIcon: 'laptop_mac',
+                      label: 'Career Bridge',
+                      onTap: _push(sheetContext, context,
+                          (_) => const CareerBridgeScreen()),
                     ),
                     _MoreTile(
-                      icon: Icons.collections_bookmark_outlined,
-                      label: 'Study Shelf',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) => const StudyResourcesScreen(),
-                          ),
-                        );
-                      },
+                      msIcon: 'smart_toy',
+                      label: 'AI Studio',
+                      onTap: _push(sheetContext, context,
+                          (_) => const AiScreen()),
                     ),
                     _MoreTile(
-                      icon: Icons.menu_book,
-                      label: 'Lessons',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) => const LessonsScreen(),
-                          ),
-                        );
-                      },
+                      msIcon: 'volunteer_activism',
+                      label: 'Patron Portal',
+                      onTap: _push(sheetContext, context,
+                          (_) => const PatronPortalScreen()),
                     ),
                     _MoreTile(
-                      icon: Icons.event_note_outlined,
+                      msIcon: 'menu_book',
+                      label: 'Syllabus Map',
+                      onTap: _push(sheetContext, context,
+                          (_) => const SyllabusScreen()),
+                    ),
+                    _MoreTile(
+                      msIcon: 'event_note',
                       label: 'Study Plan',
                       onTap: () {
                         Navigator.of(sheetContext).pop();
@@ -1952,116 +1985,22 @@ Future<void> showMoreSheet(
                       },
                     ),
                     _MoreTile(
-                      icon: Icons.sports_esports_outlined,
-                      label: 'Arena',
+                      msIcon: 'person',
+                      label: 'Profile',
                       onTap: () {
                         Navigator.of(sheetContext).pop();
-                        Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) => const ArenaLobbyScreen(),
-                          ),
-                        );
+                        onGoTab?.call(3);
                       },
                     ),
                     _MoreTile(
-                      icon: Icons.laptop_mac_outlined,
-                      label: 'Career Bridge',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) => const CareerBridgeScreen(),
-                          ),
-                        );
-                      },
-                    ),
-                    _MoreTile(
-                      icon: Icons.auto_awesome,
-                      label: 'AI Generator',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) => const AiGeneratorScreen(),
-                          ),
-                        );
-                      },
-                    ),
-                    _MoreTile(
-                      icon: Icons.volunteer_activism_outlined,
-                      label: 'Patron Portal',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) => const PatronPortalScreen(),
-                          ),
-                        );
-                      },
-                    ),
-                    _MoreTile(
-                      icon: Icons.wifi_off,
-                      label: 'Offline Share',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) => const OfflineShareScreen(),
-                          ),
-                        );
-                      },
-                    ),
-                    _MoreTile(
-                      icon: Icons.emoji_events,
-                      label: 'Awards Hub',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) => const GamificationHubScreen(),
-                          ),
-                        );
-                      },
-                    ),
-                    _MoreTile(
-                      icon: Icons.menu_book,
-                      label: 'Syllabus',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) => const SyllabusScreen(),
-                          ),
-                        );
-                      },
-                    ),
-                    _MoreTile(
-                      icon: Icons.smart_toy,
-                      label: 'AI Generator',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) => const AiGeneratorScreen(),
-                          ),
-                        );
-                      },
-                    ),
-                    _MoreTile(
-                      icon: Icons.settings,
+                      msIcon: 'settings',
                       label: 'Settings',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) => const SettingsScreen(),
-                          ),
-                        );
-                      },
+                      onTap: _push(sheetContext, context,
+                          (_) => const SettingsScreen()),
                     ),
                     _MoreTile(
-                      icon: Icons.help_center,
-                      label: 'Help',
+                      msIcon: 'help',
+                      label: 'Help & FAQ',
                       onTap: () {
                         Navigator.of(sheetContext).pop();
                         showLicensePage(
@@ -2070,6 +2009,49 @@ Future<void> showMoreSheet(
                           applicationLegalese: 'Learn. Practice. Rise.',
                         );
                       },
+                    ),
+                    // Mobile-native extras (no web counterpart).
+                    _MoreTile(
+                      msIcon: 'search',
+                      label: 'Search',
+                      onTap: _push(sheetContext, context,
+                          (_) => const SearchScreen()),
+                    ),
+                    _MoreTile(
+                      msIcon: 'history_edu',
+                      label: 'Exam History',
+                      onTap: _push(sheetContext, context,
+                          (_) => const ExamHistoryScreen()),
+                    ),
+                    _MoreTile(
+                      msIcon: 'emoji_events',
+                      label: 'Awards Hub',
+                      onTap: _push(sheetContext, context,
+                          (_) => const GamificationHubScreen()),
+                    ),
+                    _MoreTile(
+                      msIcon: 'wifi_off',
+                      label: 'Offline Share',
+                      onTap: _push(sheetContext, context,
+                          (_) => const OfflineShareScreen()),
+                    ),
+                    _MoreTile(
+                      msIcon: 'auto_awesome',
+                      label: 'AI Generator',
+                      onTap: _push(sheetContext, context,
+                          (_) => const AiGeneratorScreen()),
+                    ),
+                    _MoreTile(
+                      msIcon: 'calculate',
+                      label: 'GPA Calculator',
+                      onTap: _push(sheetContext, context,
+                          (_) => const GpaScreen()),
+                    ),
+                    _MoreTile(
+                      msIcon: 'auto_stories',
+                      label: 'Lessons',
+                      onTap: _push(sheetContext, context,
+                          (_) => const LessonsScreen()),
                     ),
                   ],
                 ),
@@ -2135,12 +2117,14 @@ class _FatigueBanner extends StatelessWidget {
 
 class _MoreTile extends StatelessWidget {
   const _MoreTile({
-    required this.icon,
+    this.icon,
+    this.msIcon,
     required this.label,
     required this.onTap,
   });
 
-  final IconData icon;
+  final IconData? icon;
+  final String? msIcon;
   final String label;
   final VoidCallback onTap;
 
@@ -2170,7 +2154,10 @@ class _MoreTile extends StatelessWidget {
               shape: BoxShape.circle,
               color: context.cardLow,
             ),
-            child: Icon(icon, size: 20, color: context.ink),
+            child: msIcon != null
+                ? MsIcon(msIcon!, size: 20, color: context.ink)
+                : Icon(icon ?? Icons.circle_outlined,
+                    size: 20, color: context.ink),
           ),
           const SizedBox(height: 4),
           Text(

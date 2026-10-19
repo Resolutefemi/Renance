@@ -305,9 +305,18 @@ class _KeycapPainter extends CustomPainter {
       ),
       textDirection: TextDirection.ltr,
     )..layout();
+    // Founder bug report 2026-10-18 (the R sat too low in every in-app
+    // keycap): the web SVG's y="42.5" is the glyph's BASELINE, but the
+    // old port subtracted half the line-box height - landing the R ~19
+    // units lower than the web inside the 64-unit keycap. Paint so the
+    // alphabetic baseline itself sits at 42.5*s and the glyph optically
+    // centres on the face (face spans y 3..53, centre y=28), exactly
+    // the geometry icon.svg draws.
+    final double baseline =
+        tp.computeDistanceToActualBaseline(TextBaseline.alphabetic);
     tp.paint(
       canvas,
-      Offset(32 * s - tp.width / 2, 42.5 * s - tp.height / 2),
+      Offset(32 * s - tp.width / 2, 42.5 * s - baseline),
     );
   }
 

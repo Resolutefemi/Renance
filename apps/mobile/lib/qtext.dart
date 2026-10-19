@@ -10,10 +10,13 @@
 /// maths questions" bug. This library converts the safe subset into
 /// Flutter inline spans: unknown tags are unwrapped (text kept),
 /// <script>/<style> content is discarded, entities are decoded, and
-/// LaTeX is turned into unicode super/subscripts and symbols.
+/// LaTeX is typeset FULLY by the KaTeX-grade engine
+/// (flutter_math_fork) - the exact web behaviour - with the old
+/// unicode approximation kept as the parse-failure fallback.
 library;
 
 import 'package:flutter/material.dart';
+import 'package:flutter_math_fork/flutter_math.dart' as fmath;
 
 import 'config.dart';
 
@@ -231,6 +234,179 @@ String convertMath(String text) {
       .replaceAllMapped(dollarRe, (Match m) => latexToText(m.group(1)!));
 }
 
+// ------------------------------------------------------------- KaTeX
+
+/// The environments a bare \begin{env} can open (web qtext.tsx set).
+const Set<String> _mathEnvs = <String>{
+  'array', 'align', 'align*', 'aligned', 'alignat', 'alignat*', 'gather',
+  'gather*', 'gathered', 'cases', 'dcases', 'rcases', 'matrix', 'pmatrix',
+  'bmatrix', 'Bmatrix', 'vmatrix', 'Vmatrix', 'smallmatrix', 'split',
+  'multline', 'multline*', 'equation', 'equation*', 'eqnarray', 'eqnarray*',
+  'subarray',
+};
+
+/// One run of a split question: prose or math (web MathSeg).
+class MathSeg {
+  const MathSeg.text(String this.body)
+      : isMath = false,
+        display = false;
+  const MathSeg.math(String this.body, {required this.display})
+      : isMath = true;
+
+  final bool isMath;
+  final String body;
+  final bool display;
+}
+
+/// Splits a question into prose and math runs - the exact port of the
+/// web's splitMathSegments: \(…\) inline, \[…\] display, $$…$$
+/// display, $…$ when the body looks like maths (prose dollar amounts
+/// stay prose), and bare \begin{env}…\end{env} blocks.
+List<MathSeg> splitMathSegments(String input) {
+  final List<MathSeg> segs = <MathSeg>[];
+  final StringBuffer text = StringBuffer();
+
+  void flush() {
+    if (text.isNotEmpty) {
+      segs.add(MathSeg.text(text.toString()));
+      text.clear();
+    }
+  }
+
+  int i = 0;
+  while (i < input.length) {
+    final String ch = input[i];
+    // \( … \) - the banks' dominant inline form
+    if (ch == '\\' && input.startsWith(r'\(', i)) {
+      final int end = input.indexOf(r'\)', i + 2);
+      if (end >= 0) {
+        flush();
+        segs.add(MathSeg.math(input.substring(i + 2, end), display: false));
+        i = end + 2;
+        continue;
+      }
+    }
+    // \[ … \] display maths
+    if (ch == '\\' && input.startsWith(r'\[', i)) {
+      final int end = input.indexOf(r'\]', i + 2);
+      if (end >= 0) {
+        flush();
+        segs.add(MathSeg.math(input.substring(i + 2, end), display: true));
+        i = end + 2;
+        continue;
+      }
+    }
+    // $$ … $$
+    if (ch == r'\$' && input.startsWith(r'\$\$', i)) {
+      final int end = input.indexOf(r'\$\$', i + 2);
+      if (end > i + 2) {
+        flush();
+        segs.add(MathSeg.math(input.substring(i + 2, end), display: true));
+        i = end + 2;
+        continue;
+      }
+    }
+    // \$ … \$ (maths-looking bodies only - prose dollars stay prose)
+    if (ch == r'\$') {
+      final int end = input.indexOf(r'\$', i + 1);
+      if (end > i + 1) {
+        final String body = input.substring(i + 1, end);
+        if (RegExp(r'\\[a-zA-Z]+|\^|_|=').hasMatch(body)) {
+          flush();
+          segs.add(MathSeg.math(body, display: false));
+          i = end + 1;
+          continue;
+        }
+      }
+    }
+    // bare \begin{env} … \end{env} (KaTeX needs the whole environment)
+    if (ch == '\\' && input.startsWith(r'\begin{', i)) {
+      final RegExpMatch? m =
+          RegExp(r'^\\begin\{([a-zA-Z*]+)\}').firstMatch(input.substring(i));
+      if (m != null && _mathEnvs.contains(m.group(1)!)) {
+        final String endToken = r'\end{' + m.group(1)! + '}';
+        final int end = input.indexOf(endToken, i + m.end);
+        if (end >= 0) {
+          flush();
+          segs.add(MathSeg.math(
+            input.substring(i, end + endToken.length),
+            display: true,
+          ));
+          i = end + endToken.length;
+          continue;
+        }
+      }
+    }
+    text.write(ch);
+    i++;
+  }
+  flush();
+  return segs;
+}
+
+/// A run of >=2 backslashes followed by letters is double-escaping from
+/// an upstream archive dump ("\\begin" for "\begin"), never valid
+/// LaTeX - shave one backslash off so the typesetter sees sane input.
+String normalizeLatexEscapes(String text) {
+  if (!text.contains('\\')) return text;
+  return text.replaceAllMapped(
+    RegExp(r'\\{2,}(?=[a-zA-Z])'),
+    (Match m) => m.group(0)!.substring(1),
+  );
+}
+
+/// Does this string carry any math delimiter the splitter honours?
+bool _carriesMath(String input) =>
+    input.contains(r'\(') ||
+    input.contains(r'\[') ||
+    input.contains(r'\$') ||
+    input.contains(r'\begin{');
+
+/// One typeset math run: the KaTeX-grade engine, falling back to the
+/// unicode approximation on parse failure (exactly the web's
+/// katex + approx behaviour).
+class MathTex extends StatelessWidget {
+  const MathTex(this.tex, {super.key, this.display = false, this.style});
+
+  final String tex;
+  final bool display;
+  final TextStyle? style;
+
+  @override
+  Widget build(BuildContext context) {
+    final String normalized = normalizeLatexEscapes(tex.trim());
+    final TextStyle base =
+        style ?? DefaultTextStyle.of(context).style.copyWith(height: 1.45);
+    return fmath.Math.tex(
+      normalized,
+      mathStyle: display ? fmath.MathStyle.display : fmath.MathStyle.text,
+      textStyle: base,
+      onErrorFallback: (Object err) => Text(latexToText(normalized), style: base),
+    );
+  }
+}
+
+/// Renders a string as prose + math runs (the plain-text fast path).
+List<InlineSpan> buildMathAwareSpans(String input, TextStyle base) {
+  if (!_carriesMath(input)) {
+    return <InlineSpan>[TextSpan(text: input, style: base)];
+  }
+  final List<InlineSpan> spans = <InlineSpan>[];
+  for (final MathSeg seg in splitMathSegments(input)) {
+    if (!seg.isMath) {
+      spans.add(TextSpan(text: seg.body, style: base));
+    } else {
+      spans.add(
+        WidgetSpan(
+          alignment: PlaceholderAlignment.middle,
+          child: MathTex(seg.body, display: seg.display, style: base),
+        ),
+      );
+    }
+  }
+  return spans;
+}
+
 // ------------------------------------------------------------------ HTML
 
 enum _TokKind { text, open, close }
@@ -305,9 +481,25 @@ class _Parser {
   final List<InlineSpan> spans = <InlineSpan>[];
 
   void _addText(String raw, TextStyle style) {
-    final String text = convertMath(decodeEntities(raw));
+    final String text = decodeEntities(raw);
     if (text.isEmpty) return;
-    spans.add(TextSpan(text: text, style: style));
+    if (!_carriesMath(text)) {
+      spans.add(TextSpan(text: text, style: style));
+      return;
+    }
+    for (final MathSeg seg in splitMathSegments(text)) {
+      if (!seg.isMath) {
+        if (seg.body.isEmpty) continue;
+        spans.add(TextSpan(text: seg.body, style: style));
+      } else {
+        spans.add(
+          WidgetSpan(
+            alignment: PlaceholderAlignment.middle,
+            child: MathTex(seg.body, display: seg.display, style: style),
+          ),
+        );
+      }
+    }
   }
 
   /// Block-level: '\n' before the element's content, mimicking margins.
@@ -489,14 +681,26 @@ class QuestionText extends StatelessWidget {
     final TextStyle base =
         (style ?? const TextStyle()).copyWith(height: 1.45);
     if (!text.contains('<')) {
-      // plain text (possibly with LaTeX): keep line breaks
-      final String plain = convertMath(decodeEntities(text)).replaceAll('\r\n', '\n');
-      return Text(
-        plain,
-        style: base,
+      // plain text (possibly with LaTeX): keep line breaks, typeset the
+      // math runs with the KaTeX-grade engine.
+      final String plain = decodeEntities(text).replaceAll('\r\n', '\n');
+      if (!_carriesMath(plain)) {
+        return Text(
+          plain,
+          style: base,
+          textAlign: textAlign,
+          maxLines: maxLines,
+          overflow: overflow,
+        );
+      }
+      return RichText(
+        text: TextSpan(
+          children: buildMathAwareSpans(plain, base),
+          style: base,
+        ),
         textAlign: textAlign,
         maxLines: maxLines,
-        overflow: overflow,
+        overflow: overflow ?? TextOverflow.clip,
       );
     }
     return RichText(

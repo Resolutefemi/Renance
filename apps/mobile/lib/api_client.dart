@@ -8,6 +8,7 @@ import 'dart:io' show SocketException;
 
 import 'package:http/http.dart' as http;
 
+import 'learn_models.dart';
 import 'models.dart';
 
 /// The server answered with a defined error (400/401/404/409/...).
@@ -1810,4 +1811,400 @@ class Entitlement {
         renCoins: ((j['renCoins'] ?? 0) as num).toInt(),
         emailVerified: (j['emailVerified'] ?? false) as bool,
       );
+
+  // -------------------------------------------------- learn & social parity
+  // The web's Learn module (courses hub, lesson player, quests, league,
+  // shop, chests) and social layer (feed, follows, public profiles),
+  // field-for-field with apps/web/lib/learn.ts + lib/social.ts. Every
+  // method here rides the same transport as the rest of the client.
+
+  /// GET /learn/profile - the learner wallet (hearts, gems, streak,
+  /// league, freeze count, daily goal).
+  Future<LearnProfile> learnProfile() async {
+    final dynamic data = await _send('GET', '/learn/profile');
+    return LearnProfile.fromJson((data as Map).cast<String, dynamic>());
+  }
+
+  /// PATCH /learn/profile - daily goal or the tertiary desk pair.
+  Future<LearnProfile> learnPatchProfile({
+    int? dailyGoal,
+    String? institutionType,
+    String? department,
+    bool setDesk = false,
+  }) async {
+    final dynamic data = await _send(
+      'PATCH',
+      '/learn/profile',
+      body: <String, dynamic>{
+        if (dailyGoal != null) 'dailyGoal': dailyGoal,
+        if (institutionType != null) 'institutionType': institutionType,
+        if (department != null) 'department': department,
+        if (setDesk) 'setDesk': true,
+      },
+    );
+    return LearnProfile.fromJson((data as Map).cast<String, dynamic>());
+  }
+
+  /// GET /learn/catalog - the browsable course catalog (paged).
+  Future<(List<CatalogItem>, int)> learnCatalog({
+    String body = '',
+    String q = '',
+    String faculty = '',
+    String itype = '',
+    int page = 1,
+    int pageSize = 24,
+  }) async {
+    final Map<String, String> query = <String, String>{
+      if (body.isNotEmpty) 'body': body,
+      if (q.isNotEmpty) 'q': q,
+      if (faculty.isNotEmpty) 'faculty': faculty,
+      if (itype.isNotEmpty) 'itype': itype,
+      'page': '$page',
+      'pageSize': '$pageSize',
+    };
+    final dynamic data = await _send('GET', '/learn/catalog?$query');
+    final Map<String, dynamic> j = (data as Map).cast<String, dynamic>();
+    final List<CatalogItem> items = ((j['items'] ?? const <dynamic>[])
+            as List<dynamic>)
+        .map((dynamic e) => CatalogItem.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+    return (items, ((j['total'] ?? 0) as num).toInt());
+  }
+
+  /// GET /learn/my-courses - the desk's course list.
+  Future<List<MyCourse>> learnMyCourses() async {
+    final dynamic data = await _send('GET', '/learn/my-courses');
+    final Map<String, dynamic> j = (data as Map).cast<String, dynamic>();
+    return ((j['courses'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => MyCourse.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  /// POST /learn/my-courses - replace the course list (checkbox saves).
+  Future<bool> learnSetMyCourses(List<String> courseIds) async {
+    final dynamic data = await _send(
+      'POST',
+      '/learn/my-courses',
+      body: <String, dynamic>{'courseIds': courseIds},
+      retryOnTimeout: false,
+    );
+    if (data is Map) return data['ok'] == true;
+    return data != null;
+  }
+
+  /// GET /learn/courses/{id} - the PATH ladder document.
+  Future<CoursePathModel> learnCoursePath(String courseId) async {
+    final dynamic data = await _send('GET', '/learn/courses/$courseId');
+    return CoursePathModel.fromJson((data as Map).cast<String, dynamic>());
+  }
+
+  /// GET /learn/topics/{id}/content - the lesson document, or null
+  /// while the server is still writing it (the 202 generating state).
+  Future<LessonDoc?> learnLessonContent(String topicId) async {
+    final dynamic data = await _send('GET', '/learn/topics/$topicId/content');
+    final Map<String, dynamic> j = (data as Map).cast<String, dynamic>();
+    if (j['status'] == 'generating') return null;
+    return LessonDoc.fromJson(j);
+  }
+
+  /// POST /learn/progress - bank a finished lesson run.
+  Future<CompleteResult> learnProgress({
+    required String topicId,
+    required int correct,
+    required int total,
+    required int maxCombo,
+    required List<String> mistakes,
+    bool abandoned = false,
+  }) async {
+    final dynamic data = await _send(
+      'POST',
+      '/learn/progress',
+      body: <String, dynamic>{
+        'topicId': topicId,
+        'correct': correct,
+        'total': total,
+        'maxCombo': maxCombo,
+        'mistakes': mistakes,
+        'abandoned': abandoned,
+      },
+    );
+    return CompleteResult.fromJson((data as Map).cast<String, dynamic>());
+  }
+
+  /// GET /learn/quests - the daily/weekly/monthly challenge set.
+  Future<QuestsResponse> learnQuests() async {
+    final dynamic data = await _send('GET', '/learn/quests');
+    return QuestsResponse.fromJson((data as Map).cast<String, dynamic>());
+  }
+
+  /// POST /learn/quests - claim one quest's gem reward.
+  Future<int> learnClaimQuest(String questKey) async {
+    final dynamic data = await _send(
+      'POST',
+      '/learn/quests',
+      body: <String, dynamic>{'questKey': questKey},
+    );
+    return ((data as Map)['gems'] as num?)?.toInt() ?? 0;
+  }
+
+  /// GET /learn/shop - the gem shop.
+  Future<ShopResponse> learnShop() async {
+    final dynamic data = await _send('GET', '/learn/shop');
+    return ShopResponse.fromJson((data as Map).cast<String, dynamic>());
+  }
+
+  /// POST /learn/shop - buy one item with gems.
+  Future<ShopResponse> learnBuy(String item) async {
+    final dynamic data = await _send(
+      'POST',
+      '/learn/shop',
+      body: <String, dynamic>{'item': item},
+      retryOnTimeout: false,
+    );
+    return ShopResponse.fromJson((data as Map).cast<String, dynamic>());
+  }
+
+  /// GET /learn/leaderboard - one league tier's weekly board
+  /// ([league] null = your own tier).
+  Future<LeagueBoard> learnLeague({int? league}) async {
+    final dynamic data = await _send(
+      'GET',
+      league == null ? '/learn/leaderboard' : '/learn/leaderboard?league=$league',
+    );
+    return LeagueBoard.fromJson((data as Map).cast<String, dynamic>());
+  }
+
+  /// POST /learn/chests - open one unit chest.
+  Future<ChestOpenResult> learnOpenChest(String chestKey) async {
+    final dynamic data = await _send(
+      'POST',
+      '/learn/chests',
+      body: <String, dynamic>{'chestKey': chestKey},
+      retryOnTimeout: false,
+    );
+    return ChestOpenResult.fromJson((data as Map).cast<String, dynamic>());
+  }
+
+  /// GET /learn/course-desk - the tertiary semester shelves.
+  Future<DeskShelves> learnCourseDesk() async {
+    final dynamic data = await _send('GET', '/learn/course-desk');
+    return DeskShelves.fromJson((data as Map).cast<String, dynamic>());
+  }
+
+  /// GET /learn/course-desk/others - borrowable courses, paged.
+  Future<(List<DeskCourse>, int)> learnCourseDeskOthers({
+    int offset = 0,
+    int limit = 100,
+  }) async {
+    final dynamic data =
+        await _send('GET', '/learn/course-desk/others?offset=$offset&limit=$limit');
+    final Map<String, dynamic> j = (data as Map).cast<String, dynamic>();
+    final List<DeskCourse> items = ((j['items'] ?? const <dynamic>[])
+            as List<dynamic>)
+        .map((dynamic e) => DeskCourse.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+    return (items, ((j['total'] ?? 0) as num).toInt());
+  }
+
+  /// GET /learn/search - desk search by code / title / topic.
+  Future<List<DeskCourse>> learnSearch(String q) async {
+    final dynamic data = await _send('GET', '/learn/search?q=${Uri.encodeQueryComponent(q)}');
+    final Map<String, dynamic> j = (data as Map).cast<String, dynamic>();
+    return ((j['items'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => DeskCourse.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  /// POST /learn/ai-match - paste course titles, get grounded matches.
+  Future<List<AIMatchLine>> learnAiMatch(String text) async {
+    final dynamic data = await _send(
+      'POST',
+      '/learn/ai-match',
+      body: <String, dynamic>{'text': text},
+      timeout: const Duration(seconds: 90),
+    );
+    final Map<String, dynamic> j = (data as Map).cast<String, dynamic>();
+    return ((j['lines'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => AIMatchLine.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  /// GET /learn/departments - the department list for an institution
+  /// kind (University / Polytechnic / College of Education).
+  Future<List<DeskDepartment>> learnDepartments(String itype) async {
+    final dynamic data = await _send('GET', '/learn/departments?itype=$itype');
+    final Map<String, dynamic> j = (data as Map).cast<String, dynamic>();
+    return ((j['departments'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => DeskDepartment.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  /// POST /learn/flags - report a broken lesson question.
+  Future<bool> learnFlagQuestion({
+    required String source,
+    required String questionId,
+    String courseCode = '',
+    required String reason,
+    String details = '',
+  }) async {
+    final dynamic data = await _send(
+      'POST',
+      '/learn/flags',
+      body: <String, dynamic>{
+        'source': source,
+        'questionId': questionId,
+        'courseCode': courseCode,
+        'reason': reason,
+        'details': details,
+      },
+      retryOnTimeout: false,
+    );
+    return data != null;
+  }
+
+  /// POST /learn/course-requests - "can't find my course".
+  Future<bool> learnRequestCourse({
+    required String institutionType,
+    required String schoolName,
+    String department = '',
+    String code = '',
+    String title = '',
+    String topics = '',
+  }) async {
+    final dynamic data = await _send(
+      'POST',
+      '/learn/course-requests',
+      body: <String, dynamic>{
+        'institutionType': institutionType,
+        'schoolName': schoolName,
+        'department': department,
+        'code': code,
+        'title': title,
+        'topics': topics,
+      },
+      retryOnTimeout: false,
+    );
+    return data != null;
+  }
+
+  /// GET /learn/practice - the mistakes practice set.
+  Future<PracticeSet> learnPractice() async {
+    final dynamic data = await _send('GET', '/learn/practice');
+    return PracticeSet.fromJson((data as Map).cast<String, dynamic>());
+  }
+
+  /// POST /learn/practice - grade a practice run.
+  Future<CompleteResult> learnSubmitPractice({
+    required int correct,
+    required int total,
+    required List<String> resolvedIds,
+  }) async {
+    final dynamic data = await _send(
+      'POST',
+      '/learn/practice',
+      body: <String, dynamic>{
+        'correct': correct,
+        'total': total,
+        'resolvedIds': resolvedIds,
+      },
+    );
+    return CompleteResult.fromJson((data as Map).cast<String, dynamic>());
+  }
+
+  /// GET /learn/review - the unit review set.
+  Future<PracticeSet> learnReviewSet(String courseId, int unit) async {
+    final dynamic data = await _send(
+      'GET',
+      '/learn/review?courseId=$courseId&unit=$unit',
+    );
+    return PracticeSet.fromJson((data as Map).cast<String, dynamic>());
+  }
+
+  /// GET /learn/revision - the 50-question unit revision paper.
+  Future<PracticeSet> learnRevisionSet(String courseId, int unit) async {
+    final dynamic data = await _send(
+      'GET',
+      '/learn/revision?courseId=$courseId&unit=$unit',
+    );
+    return PracticeSet.fromJson((data as Map).cast<String, dynamic>());
+  }
+
+  // ---------------------------------------------------------------- social
+
+  /// GET /social/feed - one page of the milestone feed.
+  Future<List<SocialPost>> socialFeed({int? before, int limit = 25}) async {
+    final dynamic data = await _send(
+      'GET',
+      '/social/feed?limit=$limit${before == null ? '' : '&before=$before'}',
+    );
+    final Map<String, dynamic> j = (data as Map).cast<String, dynamic>();
+    return ((j['posts'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => SocialPost.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  /// POST /social/posts/{id}/like - toggle the heart.
+  Future<(int, bool)> socialLike(int postId) async {
+    final dynamic data = await _send('POST', '/social/posts/$postId/like');
+    final Map<String, dynamic> j = (data as Map).cast<String, dynamic>();
+    return (((j['likes'] ?? 0) as num).toInt(), (j['liked'] ?? false) as bool);
+  }
+
+  /// GET /social/posts/{id}/comments - the thread, oldest first.
+  Future<List<SocialComment>> socialComments(int postId) async {
+    final dynamic data = await _send('GET', '/social/posts/$postId/comments');
+    final Map<String, dynamic> j = (data as Map).cast<String, dynamic>();
+    return ((j['comments'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => SocialComment.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  /// POST /social/posts/{id}/comments - add a comment (<= 300 chars).
+  Future<List<SocialComment>> socialAddComment(int postId, String body) async {
+    final dynamic data = await _send(
+      'POST',
+      '/social/posts/$postId/comments',
+      body: <String, dynamic>{'body': body},
+      retryOnTimeout: false,
+    );
+    final Map<String, dynamic> j = (data as Map).cast<String, dynamic>();
+    return ((j['comments'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => SocialComment.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  /// POST /social/users/{username}/follow - toggle the follow edge.
+  Future<bool> socialFollow(String username) async {
+    final dynamic data =
+        await _send('POST', '/social/users/$username/follow');
+    return ((data as Map)['following'] ?? false) as bool;
+  }
+
+  /// GET /social/users/{username} - the public profile + posts.
+  Future<(PublicProfile, List<SocialPost>)> socialPublicProfile(
+    String username,
+  ) async {
+    final dynamic data = await _send('GET', '/social/users/$username');
+    final Map<String, dynamic> j = (data as Map).cast<String, dynamic>();
+    final PublicProfile profile = PublicProfile.fromJson(
+      (j['profile'] as Map).cast<String, dynamic>(),
+    );
+    final List<SocialPost> posts = ((j['posts'] ?? const <dynamic>[])
+            as List<dynamic>)
+        .map((dynamic e) => SocialPost.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+    return (profile, posts);
+  }
+
+  /// GET /social/connections - my followers + following.
+  Future<SocialConnections> socialConnections() async {
+    final dynamic data = await _send('GET', '/social/connections');
+    return SocialConnections.fromJson((data as Map).cast<String, dynamic>());
+  }
+
+  /// GET /leaderboard/gems - the diamond board (7th leaderboard).
+  Future<GemsLeaderboardData> leaderboardGems() async {
+    final dynamic data = await _send('GET', '/leaderboard/gems');
+    return GemsLeaderboardData.fromJson((data as Map).cast<String, dynamic>());
+  }
 }

@@ -14,6 +14,7 @@ import '../storage.dart';
 import 'exam_mode_setup_screen.dart';
 import 'pack_detail_screen.dart';
 import 'renance_logo.dart';
+import 'quests_screen.dart';
 import 'theme.dart';
 import 'university_screens.dart';
 
@@ -323,7 +324,11 @@ class _DailyQuestCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final bool complete = done >= goal;
-    return Container(
+    return GestureDetector(
+      onTap: () => Navigator.of(context).push(
+        MaterialPageRoute<void>(builder: (_) => const QuestsScreen(standalone: true)),
+      ),
+      child: Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: RenanceColors.amber.withValues(alpha: 0.10),
@@ -404,6 +409,7 @@ class _DailyQuestCard extends StatelessWidget {
             ],
           ),
         ],
+      ),
       ),
     );
   }

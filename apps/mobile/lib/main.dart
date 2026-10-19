@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'api_client.dart';
 import 'config.dart';
 import 'controllers.dart';
+import 'learn_controller.dart';
 import 'models.dart';
 import 'notifications.dart';
 import 'storage.dart';
@@ -97,6 +98,13 @@ class RenanceApp extends StatelessWidget {
         ),
         ChangeNotifierProvider<LessonNarrator>(
           create: (_) => LessonNarrator(),
+        ),
+        // The learn wallet (gems, hearts, streak, freeze, league) - the
+        // web's useLearnStats hook as a provider.
+        ChangeNotifierProvider<LearnController>(
+          create: (_) => LearnController(api: api, prefs: prefs)
+            ..hydrate()
+            ..refresh(),
         ),
       ],
       child: AnimatedBuilder(

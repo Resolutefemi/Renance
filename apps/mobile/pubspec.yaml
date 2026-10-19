@@ -37,6 +37,14 @@ dependencies:
   # shared preferences. Falls back to prefs only if the secure store
   # is unavailable (tests, exotic devices).
   flutter_secure_storage: ^9.2.2
+  # Full KaTeX rendering (web parity, founder directive 2026-10-18):
+  # the question banks' LaTeX used to be approximated to unicode; the
+  # engine now typesets it exactly like the website's KaTeX, with the
+  # old unicode conversion kept as the parse-failure fallback.
+  flutter_math_fork: ^0.7.2
+  # The learn module's curated drawing library ships server-side SVGs
+  # (stroke-2 currentColor figures); the web renders them inline.
+  flutter_svg: ^2.0.10
 
 dev_dependencies:
   flutter_test:
@@ -85,3 +93,6 @@ flutter:
       fonts:
         - asset: assets/fonts/JetBrainsMono-Medium.ttf
           weight: 500
+    - family: MaterialSymbolsOutlined
+      fonts:
+        - asset: assets/fonts/MaterialSymbolsOutlined.ttf

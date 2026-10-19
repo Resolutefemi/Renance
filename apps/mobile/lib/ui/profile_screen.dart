@@ -10,6 +10,7 @@ import 'package:provider/provider.dart';
 
 import '../api_client.dart';
 import '../controllers.dart';
+import '../learn_controller.dart';
 import '../models.dart';
 import '../storage.dart';
 import 'downloads_screen.dart';
@@ -21,6 +22,10 @@ import 'performance_screen.dart';
 import 'saved_questions.dart';
 import 'premium_screen.dart';
 import 'settings_screen.dart';
+import 'learn_bits.dart';
+import 'msymbols.dart';
+import 'shop_panel.dart';
+import 'social_screens.dart';
 import 'theme.dart';
 import 'university_screens.dart';
 
@@ -165,6 +170,16 @@ class ProfileScreen extends StatelessWidget {
                     const _Divider(),
                     Expanded(
                       child: _Stat(
+                        label: 'Gems',
+                        value:
+                            '${context.watch<LearnController>().gems}',
+                        color: RenanceColors.macawDark,
+                        gem: true,
+                      ),
+                    ),
+                    const _Divider(),
+                    Expanded(
+                      child: _Stat(
                           label: 'Accuracy',
                           value: '${student.accuracyPct}%',
                           color: RenanceColors.emerald),
@@ -172,6 +187,69 @@ class ProfileScreen extends StatelessWidget {
                   ],
                 ),
               ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 12),
+        // Follow strip: your people (followers + following management).
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 4),
+          child: Row(
+            children: <Widget>[
+              const MsIcon('group', size: 18, color: Color(0xFF777777)),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  'Followers and following',
+                  style: RenanceText.caption.copyWith(
+                    color: context.textSecondary,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (_) => const SocialManagementScreen(),
+                  ),
+                ),
+                child: Text(
+                  'View all',
+                  style: TextStyle(
+                    fontFamily: 'Nunito',
+                    fontSize: 13,
+                    fontWeight: FontWeight.w700,
+                    color: context.primary,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 16),
+        // Shop (web /profile#shop): the gem wallet + the item list.
+        Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: context.card,
+            borderRadius: BorderRadius.circular(12),
+            boxShadow: const <BoxShadow>[
+              BoxShadow(
+                  color: Color(0x14141C2D), blurRadius: 3, offset: Offset(0, 1)),
+            ],
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  const MsIcon('storefront', size: 20, color: Color(0xFF777777)),
+                  const SizedBox(width: 8),
+                  Text('Shop', style: RenanceText.sectionTitle),
+                ],
+              ),
+              const SizedBox(height: 14),
+              const ShopPanel(),
             ],
           ),
         ),
@@ -422,30 +500,40 @@ class _Stat extends StatelessWidget {
     required this.value,
     required this.color,
     this.flame = false,
+    this.gem = false,
   });
 
   final String label;
   final String value;
   final Color color;
   final bool flame;
+  final bool gem;
 
   @override
   Widget build(BuildContext context) {
+    Widget? adorn;
+    if (flame) {
+      adorn = const MsIcon('local_fire_department',
+          size: 18, color: Color(0xFFF59E0B), fill: true);
+    } else if (gem) {
+      adorn = const GemIcon(size: 16);
+    }
     return Column(
       children: <Widget>[
         Text(label, style: RenanceText.caption.copyWith(color: context.textSecondary)),
         const SizedBox(height: 2),
-        flame
-            ? Row(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  const Icon(Icons.local_fire_department,
-                      size: 18, color: RenanceColors.amber),
-                  const SizedBox(width: 2),
-                  Text(value, style: RenanceText.statNumber.copyWith(color: color)),
-                ],
-              )
-            : Text(value, style: RenanceText.statNumber.copyWith(color: color)),
+        if (adorn != null)
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              adorn,
+              const SizedBox(width: 4),
+              Text(value, style: RenanceText.statNumber.copyWith(color: color)),
+            ],
+          )
+        else
+          Text(value, style: RenanceText.statNumber.copyWith(color: color)),
+        const SizedBox(height: 2),
       ],
     );
   }

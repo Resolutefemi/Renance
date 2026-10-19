@@ -14,6 +14,7 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../controllers.dart';
+import '../learn_controller.dart';
 import '../storage.dart';
 import 'tactile.dart';
 import 'theme.dart';
@@ -28,7 +29,7 @@ class SettingsScreen extends StatefulWidget {
 class _SettingsScreenState extends State<SettingsScreen> {
   bool _reminders = true;
   bool _seedOpen = false;
-  int _dailyGoal = 25;
+  int _dailyGoal = 50;
   int _packBytes = 0;
   String? _seed;
   String _hexDraft = '#13dc1b';
@@ -46,7 +47,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     if (!mounted) return;
     setState(() {
       _reminders = prefs.getBool('renance.reminders') ?? true;
-      _dailyGoal = prefs.getInt('renance.dailyGoal') ?? 25;
+      _dailyGoal = prefs.getInt('renance.dailyGoal') ?? 50;
       _packBytes = sizes.values.fold(0, (int a, int b) => a + b);
       _seed = context.read<ThemeController>().seed;
       _hexDraft = _seed ?? '#13dc1b';
@@ -67,6 +68,33 @@ class _SettingsScreenState extends State<SettingsScreen> {
     if (bytes >= 1 << 20) return '${(bytes / (1 << 20)).toStringAsFixed(1)} MB';
     if (bytes >= 1 << 10) return '${(bytes / (1 << 10)).toStringAsFixed(0)} KB';
     return '$bytes B';
+  }
+
+  void _pickDailyGoal(BuildContext context) {
+    // The tile opens the same picker the pills offer - a tap target for
+    // the whole row (accessibility parity with the web's radio tiles).
+    _setDailyGoal(_dailyGoal == 20
+        ? 50
+        : _dailyGoal == 50
+            ? 100
+            : _dailyGoal == 100
+                ? 200
+                : 20);
+  }
+
+  Future<void> _setDailyGoal(int goal) async {
+    if (goal == _dailyGoal) return;
+    setState(() => _dailyGoal = goal);
+    final LearnController learn = context.read<LearnController>();
+    try {
+      await learn.patchProfile(dailyGoal: goal);
+    } on Exception {
+      // Offline: the pick stays local, the next online patch syncs it.
+    }
+    await context
+        .read<ThemeController>()
+        .prefs
+        .setInt('renance.dailyGoal', goal);
   }
 
   @override
@@ -113,6 +141,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
           Text('LEARNING', style: RenanceText.overline.copyWith(color: context.textSecondary)),
           const SizedBox(height: 8),
           _CardGroup(children: <Widget>[
+            // Daily Goal (web /settings): 20 / 50 / 100 / 200 XP a day,
+            // saved through PATCH /learn/profile.
             ListTile(
               contentPadding: const EdgeInsets.symmetric(horizontal: 16),
               leading: CircleAvatar(
@@ -122,36 +152,50 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     size: 18, color: context.ink),
               ),
               title: const Text('Daily Goal', style: RenanceText.bodyBase),
-              trailing: Row(
-                mainAxisSize: MainAxisSize.min,
+              subtitle: Text('$_dailyGoal XP a day',
+                  style: RenanceText.bodySecondary
+                      .copyWith(color: context.textSecondary)),
+              onTap: () => _pickDailyGoal(context),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 4, 16, 12),
+              child: Row(
                 children: <Widget>[
-                  Text('$_dailyGoal mins',
-                      style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
-                  Icon(Icons.chevron_right,
-                      color: context.outlineLight),
+                  for (final int goal in <int>[20, 50, 100, 200])
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: () => _setDailyGoal(goal),
+                        child: AnimatedContainer(
+                          duration: const Duration(milliseconds: 120),
+                          margin: EdgeInsets.only(
+                              right: goal == 200 ? 0 : 8),
+                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          decoration: BoxDecoration(
+                            color: goal == _dailyGoal
+                                ? context.selectionBlue
+                                : context.cardLow,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: goal == _dailyGoal
+                                  ? context.primary
+                                  : context.outlineVariant,
+                              width: 2,
+                            ),
+                          ),
+                          child: Text(
+                            '$goal',
+                            textAlign: TextAlign.center,
+                            style: RenanceText.labelMono.copyWith(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w700,
+                              color: context.ink,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
                 ],
               ),
-              onTap: () async {
-                final ThemeController theme = context.read<ThemeController>();
-                final int? picked = await showDialog<int>(
-                  context: context,
-                  builder: (BuildContext ctx) => SimpleDialog(
-                    title: const Text('Daily Goal'),
-                    children: <int>[15, 25, 40, 60]
-                        .map((int m) => SimpleDialogOption(
-                              onPressed: () => Navigator.of(ctx).pop(m),
-                              child: Text('$m mins',
-                                  style: RenanceText.bodyBase),
-                            ))
-                        .toList(),
-                  ),
-                );
-                if (picked != null) {
-                  await theme.prefs.setInt('renance.dailyGoal', picked);
-                  if (!mounted) return;
-                  setState(() => _dailyGoal = picked);
-                }
-              },
             ),
             SwitchListTile(
               secondary: CircleAvatar(

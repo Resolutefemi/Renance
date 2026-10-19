@@ -22,12 +22,15 @@ import '../controllers.dart';
 import '../storage.dart';
 import 'appearance_sheet.dart';
 import 'google_logo.dart';
+import 'msymbols.dart';
 import 'renance_logo.dart';
 import 'tactile.dart';
 import 'theme.dart';
 
-/// Shared scaffold for the credential screens (mockup layout: logo block,
-/// audience switch, white card form, footer link).
+/// Shared scaffold for the credential screens - the web's auth shell:
+/// a #f0f0f3 canvas, the keycap + heading block, the FOR STUDENTS / FOR
+/// SCHOOLS pill toggle, then the white card form (logo INSIDE the card
+/// on register/forgot, ABOVE it on login, the web's split).
 class AuthScaffold extends StatelessWidget {
   const AuthScaffold({
     super.key,
@@ -37,6 +40,8 @@ class AuthScaffold extends StatelessWidget {
     required this.onAudienceChanged,
     required this.form,
     required this.footer,
+    this.logoInCard = true,
+    this.registerMode = false,
   });
 
   final String title;
@@ -46,67 +51,192 @@ class AuthScaffold extends StatelessWidget {
   final Widget form;
   final Widget footer;
 
+  /// Login keeps the logo block above the white card; register wraps
+  /// everything in one card (the web's two layouts).
+  final bool logoInCard;
+
+  /// The audience toggle's helper copy mode (login vs register).
+  final bool registerMode;
+
   @override
   Widget build(BuildContext context) {
+    final Widget logoBlock = Column(
+      children: <Widget>[
+        const RenanceMark(size: 64),
+        const SizedBox(height: 16),
+        Text(
+          title,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            fontFamily: 'Nunito',
+            fontSize: 24,
+            fontWeight: FontWeight.w600,
+            letterSpacing: -0.3,
+            color: Color(0xFF3C3C46),
+          ),
+        ),
+        const SizedBox(height: 6),
+        Text(
+          subtitle,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            fontFamily: 'Nunito',
+            fontSize: 14,
+            color: Color(0xFF777777),
+          ),
+        ),
+      ],
+    );
+
+    final Widget audienceBlock = Column(
+      children: <Widget>[
+        _AudienceToggle(
+          value: audience,
+          onChanged: onAudienceChanged,
+        ),
+        const SizedBox(height: 10),
+        Text(
+          registerMode
+              ? (audience == AuthAudience.schools
+                  ? 'Create your school workspace with management + teacher '
+                      'accounts, syllabuses, notes and results.'
+                  : '')
+              : (audience == AuthAudience.schools
+                  ? 'Management and teachers: sign in with your school email '
+                      'to open the school workspace.'
+                  : ''),
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            fontFamily: 'Nunito',
+            fontSize: 12,
+            color: Color(0xFF777777),
+          ),
+        ),
+      ],
+    );
+
     return Scaffold(
+      backgroundColor: const Color(0xFFF0F0F3),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
-            child: Column(
-              children: <Widget>[
-                RenanceMark(size: 72),
-                SizedBox(height: 16),
-                Text(
-                  title,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w700,
-                    color: context.ink,
-                  ),
-                ),
-                SizedBox(height: 6),
-                Text(
-                  subtitle,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: context.textSecondary,
-                    fontSize: 14,
-                  ),
-                ),
-                const SizedBox(height: 20),
-                SegmentedButton<AuthAudience>(
-                  segments: const <ButtonSegment<AuthAudience>>[
-                    ButtonSegment<AuthAudience>(
-                      value: AuthAudience.students,
-                      icon: Icon(Icons.person_outline, size: 18),
-                      label: Text('For Students'),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 384),
+              child: Column(
+                children: <Widget>[
+                  if (!logoInCard) ...<Widget>[
+                    logoBlock,
+                    const SizedBox(height: 20),
+                    audienceBlock,
+                    const SizedBox(height: 20),
+                    Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.all(24),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(14),
+                        boxShadow: const <BoxShadow>[
+                          BoxShadow(
+                            color: Color(0x14000000),
+                            blurRadius: 6,
+                            offset: Offset(0, 1),
+                          ),
+                        ],
+                      ),
+                      child: form,
                     ),
-                    ButtonSegment<AuthAudience>(
-                      value: AuthAudience.schools,
-                      icon: Icon(Icons.school_outlined, size: 18),
-                      label: Text('For Schools'),
+                  ] else ...<Widget>[
+                    Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.all(24),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(14),
+                        boxShadow: const <BoxShadow>[
+                          BoxShadow(
+                            color: Color(0x1F000000),
+                            blurRadius: 8,
+                            offset: Offset(0, 2),
+                          ),
+                        ],
+                      ),
+                      child: Column(
+                        children: <Widget>[
+                          logoBlock,
+                          const SizedBox(height: 20),
+                          audienceBlock,
+                          const SizedBox(height: 20),
+                          form,
+                        ],
+                      ),
                     ),
                   ],
-                  selected: <AuthAudience>{audience},
-                  onSelectionChanged: (Set<AuthAudience> s) =>
-                      onAudienceChanged(s.first),
-                  showSelectedIcon: false,
-                ),
-                const SizedBox(height: 20),
-                Card(
-                  child: Padding(
-                    padding: const EdgeInsets.all(24),
-                    child: form,
-                  ),
-                ),
-                SizedBox(height: 24),
-                footer,
-              ],
+                  const SizedBox(height: 24),
+                  footer,
+                ],
+              ),
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+/// The FOR STUDENTS / FOR SCHOOLS segmented pill (audience-toggle.tsx):
+/// a #f0f0f3 track, the active half filled primary with white ink.
+class _AudienceToggle extends StatelessWidget {
+  const _AudienceToggle({required this.value, required this.onChanged});
+
+  final AuthAudience value;
+  final ValueChanged<AuthAudience> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    final Color primary = context.primary;
+    return Container(
+      padding: const EdgeInsets.all(4),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF0F0F3),
+        borderRadius: BorderRadius.circular(999),
+      ),
+      child: Row(
+        children: <Widget>[
+          for (final AuthAudience a in AuthAudience.values)
+            Expanded(
+              child: GestureDetector(
+                onTap: () => onChanged(a),
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 150),
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  decoration: BoxDecoration(
+                    color: a == value ? primary : Colors.transparent,
+                    borderRadius: BorderRadius.circular(999),
+                    boxShadow: a == value
+                        ? <BoxShadow>[
+                            BoxShadow(
+                              color: primary.withValues(alpha: 0.35),
+                              blurRadius: 6,
+                              offset: const Offset(0, 2),
+                            ),
+                          ]
+                        : null,
+                  ),
+                  child: Text(
+                    a == AuthAudience.students ? 'For Students' : 'For Schools',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontFamily: 'Nunito',
+                      fontSize: 14,
+                      fontWeight: a == value ? FontWeight.w700 : FontWeight.w500,
+                      color: a == value ? Colors.white : const Color(0xFF777777),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+        ],
       ),
     );
   }
@@ -518,125 +648,11 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  @override
-  Widget build(BuildContext context) {
-    final bool isSchool = _audience == AuthAudience.schools;
-    return AuthScaffold(
-      title: 'Welcome back',
-      subtitle: isSchool
-          ? 'Management and teachers sign in with the school email.'
-          : 'Sign in to continue your streak.',
-      audience: _audience,
-      onAudienceChanged: (AuthAudience a) =>
-          setState(() => _audience = a),
-      form: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          _FieldLabel(isSchool ? 'School email' : 'Username or email'),
-          TextField(
-            controller: _username,
-            autocorrect: false,
-            keyboardType: isSchool
-                ? TextInputType.emailAddress
-                : TextInputType.text,
-            textInputAction: TextInputAction.next,
-            decoration: InputDecoration(
-              prefixIcon: Icon(
-                isSchool ? Icons.alternate_email : Icons.person_outline,
-                size: 20,
-              ),
-              hintText: isSchool ? 'school@yourdomain.com' : 'your username',
-            ),
-          ),
-          SizedBox(height: 16),
-          _FieldLabel('Password'),
-          _PasswordField(controller: _password, onSubmitted: _submit),
-          // Forgot password (founder directive 2026-10-02): works for
-          // student and school accounts - the reset link mails to the
-          // address on the account and opens the web reset page in any
-          // browser, the phone's included.
-          Align(
-            alignment: Alignment.centerRight,
-            child: GestureDetector(
-              onTap: _busy
-                  ? null
-                  : () => _openForgotPassword(context, isSchool),
-              child: Text(
-                'Forgot password?',
-                style: TextStyle(
-                  color: context.textSecondary,
-                  fontSize: 13,
-                ),
-              ),
-            ),
-          ),
-          if (_error != null) ...<Widget>[
-            SizedBox(height: 14),
-            Text(
-              _error!,
-              style: TextStyle(color: context.error, fontSize: 13),
-            ),
-          ],
-          const SizedBox(height: 20),
-          TactileButton(
-            onPressed: _busy ? null : _submit,
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                if (_busy)
-                  const RenanceMark(size: 16, busy: true, onDark: true)
-                else
-                  const Icon(Icons.arrow_forward, size: 18),
-                const SizedBox(width: 8),
-                Text(
-                  _busy
-                      ? 'Signing in…'
-                      : isSchool
-                          ? 'Open school workspace'
-                          : 'Sign In',
-                ),
-              ],
-            ),
-          ),
-          if (!isSchool && googleWebClientId.isNotEmpty) ...<Widget>[
-            SizedBox(height: 10),
-            _GoogleButton(onPressed: _busy ? null : _signInWithGoogle),
-          ],
-        ],
-      ),
-      footer: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            "Don't have an account? ",
-            style: TextStyle(color: context.textSecondary, fontSize: 14),
-          ),
-          GestureDetector(
-            onTap: () => Navigator.of(context).pushReplacementNamed(
-              '/register',
-              // Carry the tab across (founder bugfix 2026-10-05): a
-              // school sign-up started from the school sign-in stays on
-              // the For Schools side.
-              arguments: _audience,
-            ),
-            child: Text(
-              'Sign up',
-              style: TextStyle(
-                color: context.ink,
-                fontWeight: FontWeight.w600,
-                fontSize: 14,
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
 }
 
 class RegisterScreen extends StatefulWidget {
   // initialAudience (founder bugfix 2026-10-05): the hop from the login
-  // screen carries the FOR STUDENTS / FOR SCHOOLS tab across - "Sign up
+  // screen carries the FOR STUDENTS / FOR SCHOOLS tab across - "sign up
   // for school" opens the SCHOOL sign-up form, not the student one.
   const RegisterScreen({
     super.key,
@@ -651,7 +667,6 @@ class RegisterScreen extends StatefulWidget {
 
 class _RegisterScreenState extends State<RegisterScreen> {
   late AuthAudience _audience = widget.initialAudience;
-  final TextEditingController _username = TextEditingController();
   final TextEditingController _password = TextEditingController();
   // Confirmation password (founder directive 2026-10-03): the password
   // is typed twice - a mismatch never leaves the phone.
@@ -661,6 +676,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController _schoolName = TextEditingController();
   final TextEditingController _fullName = TextEditingController();
   final TextEditingController _email = TextEditingController();
+  // Referral code (optional): mints the referrer 3 REN coins.
+  final TextEditingController _referral = TextEditingController();
   String _schoolType = 'secondary';
   bool _busy = false;
   String? _error;
@@ -672,13 +689,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   @override
   void dispose() {
-    _username.dispose();
     _password.dispose();
     _confirmPassword.dispose();
     _confirmFocus.dispose();
     _schoolName.dispose();
     _fullName.dispose();
     _email.dispose();
+    _referral.dispose();
     super.dispose();
   }
 
@@ -688,7 +705,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     if (!_acceptedTerms) {
       setState(() {
         _error =
-            'Accept the Terms of Service and Privacy Policy to continue.';
+            'Please accept the Terms of Service and Privacy Policy.';
       });
       return;
     }
@@ -696,7 +713,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     // sign-ups share the two fields).
     if (_password.text != _confirmPassword.text) {
       setState(() {
-        _error = 'Passwords do not match - type the same password twice.';
+        _error = 'Passwords do not match.';
       });
       return;
     }
@@ -711,7 +728,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         if (_schoolName.text.trim().length < 3 ||
             _fullName.text.trim().length < 3) {
           setState(() {
-            _error = 'Enter the school name and your full name.';
+            _error = 'Enter the school name.';
             _busy = false;
           });
           return;
@@ -739,8 +756,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
         await Navigator.of(context).pushReplacementNamed('/school');
         return;
       }
-      final String email = _email.text.trim();
-      if (email.isEmpty || !email.contains('@')) {
+      final String email = _email.text.trim().toLowerCase();
+      if (email.isEmpty ||
+          !RegExp(r'^[^\s@]+@[^\s@]+\.[^\s@]{2,}\$').hasMatch(email)) {
         setState(() {
           _error =
               'Enter your email address - the confirmation code goes there.';
@@ -748,29 +766,33 @@ class _RegisterScreenState extends State<RegisterScreen> {
         });
         return;
       }
+      if (_password.text.length < 8) {
+        setState(() {
+          _error = 'Passwords must be at least 8 characters.';
+          _busy = false;
+        });
+        return;
+      }
+      // Email-first flow (web parity, the server's email branch): the
+      // account is created from the address alone, the username seeds
+      // from its local part, and the onboarding sheet asks for the
+      // handle after the 6-digit code is verified.
       final AuthTokens res = await api.registerFull(
-        _username.text.trim(),
+        email,
         password: _password.text,
         email: email,
         deviceId: await DeviceId.get(),
+        referral: _referral.text.trim(),
       );
       await session.save(res.token, res.user);
       final SharedPreferences prefs = session.prefs;
       await SchoolController.forgetSchoolSession(prefs);
       if (!mounted) return;
-      // Founder directive (2026-10-02, restored) - amended 2026-10-05:
-      // the appearance popup now waits until the 6-digit email code is
-      // VERIFIED (it fires from the verify screen's unlock, before the
-      // desk opens), so a brand-new student never meets the picker
-      // before their account is unlocked.
       // Founder directive (2026-09-30): the signup does NOT enter the
       // desk until the emailed 6-digit code is consumed - the session
-      // the API returned is restricted to the confirmation surface. The
-      // verify screen offers resend and the wrong-email rescue, takes
-      // the code entry, polls /me on resume and unlocks the moment the
-      // right code lands (appearance popup included, post-verification).
-      await Navigator.of(context).pushReplacementNamed('/verify',
-          arguments: email);
+      // the API returned is restricted to the confirmation surface.
+      await Navigator.of(context)
+          .pushReplacementNamed('/verify', arguments: email);
     } on ApiException catch (e) {
       // One account per device: registering on a device that already
       // owns an account gets the rescue dialog, not the inline error.
@@ -807,7 +829,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     if (!_acceptedTerms) {
       setState(() {
         _error =
-            'Accept the Terms of Service and Privacy Policy to continue.';
+            'Please accept the Terms of Service and Privacy Policy.';
       });
       return;
     }
@@ -837,14 +859,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     final bool isSchool = _audience == AuthAudience.schools;
+    final bool mismatch = _confirmPassword.text.isNotEmpty &&
+        _password.text != _confirmPassword.text;
     return AuthScaffold(
+      logoInCard: true,
+      registerMode: true,
       title: isSchool ? 'Register your school' : 'Create your account',
       subtitle: isSchool
-          ? 'Management + teacher accounts, syllabuses, notes and results.'
-          : 'Under a minute - then pick how Renance looks.',
+          ? 'The educational app for your whole school: management, teachers '
+              'and students.'
+          : 'Join the global student educational app.',
       audience: _audience,
-      onAudienceChanged: (AuthAudience a) =>
-          setState(() => _audience = a),
+      onAudienceChanged: (AuthAudience a) => setState(() => _audience = a),
       form: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
@@ -855,35 +881,36 @@ class _RegisterScreenState extends State<RegisterScreen> {
               textInputAction: TextInputAction.next,
               textCapitalization: TextCapitalization.words,
               decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.school_outlined, size: 20),
                 hintText: 'e.g. Living Grace Academy',
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             _FieldLabel('School type'),
-            SegmentedButton<String>(
-              segments: const <ButtonSegment<String>>[
-                ButtonSegment<String>(value: 'primary', label: Text('Primary')),
-                ButtonSegment<String>(value: 'secondary', label: Text('Secondary')),
-                ButtonSegment<String>(value: 'both', label: Text('Both')),
+            DropdownButtonFormField<String>(
+              initialValue: _schoolType,
+              items: const <DropdownMenuItem<String>>[
+                DropdownMenuItem<String>(
+                    value: 'primary', child: Text('Primary school')),
+                DropdownMenuItem<String>(
+                    value: 'secondary', child: Text('Secondary school')),
+                DropdownMenuItem<String>(
+                    value: 'both',
+                    child: Text('Both (primary + secondary)')),
               ],
-              selected: <String>{_schoolType},
-              onSelectionChanged: (Set<String> s) =>
-                  setState(() => _schoolType = s.first),
-              showSelectedIcon: false,
+              onChanged: (String? v) =>
+                  setState(() => _schoolType = v ?? 'secondary'),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             _FieldLabel('Your full name (management)'),
             TextField(
               controller: _fullName,
               textInputAction: TextInputAction.next,
               textCapitalization: TextCapitalization.words,
               decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.badge_outlined, size: 20),
                 hintText: 'e.g. Mr Kelvin O.',
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             _FieldLabel('School email'),
             TextField(
               controller: _email,
@@ -891,25 +918,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
               autocorrect: false,
               textInputAction: TextInputAction.next,
               decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.alternate_email, size: 20),
-                hintText: 'school@yourdomain.com',
+                prefixIcon: MsIcon('mail', size: 20),
+                hintText: 'you@example.com',
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
           ] else ...<Widget>[
-            _FieldLabel('Username'),
-            TextField(
-              controller: _username,
-              autocorrect: false,
-              enableSuggestions: false,
-              textInputAction: TextInputAction.next,
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.person_outline, size: 20),
-                hintText: 'lowercase letters, digits, _',
-              ),
-            ),
-            SizedBox(height: 16),
-            _FieldLabel('Email'),
+            _FieldLabel('Email address'),
             TextField(
               controller: _email,
               keyboardType: TextInputType.emailAddress,
@@ -917,11 +932,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
               autofillHints: const <String>[AutofillHints.email],
               textInputAction: TextInputAction.next,
               decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.alternate_email, size: 20),
+                prefixIcon: MsIcon('mail', size: 20),
                 hintText: 'you@example.com',
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
           ],
           _FieldLabel('Password'),
           _PasswordField(
@@ -929,19 +944,60 @@ class _RegisterScreenState extends State<RegisterScreen> {
             textInputAction: TextInputAction.next,
             onSubmitted: () => _confirmFocus.requestFocus(),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 6),
+          Text(
+            "At least 8 characters. We ask for the rest after you're in.",
+            style: const TextStyle(
+              fontFamily: 'Nunito',
+              fontSize: 11.5,
+              color: Color(0xFF777777),
+            ),
+          ),
+          const SizedBox(height: 16),
           _FieldLabel('Confirm password'),
           _PasswordField(
             controller: _confirmPassword,
-            hint: 'the same password again',
+            hint: '••••••••',
             focusNode: _confirmFocus,
             onSubmitted: _submit,
           ),
-          SizedBox(height: 16),
+          if (mismatch) ...<Widget>[
+            const SizedBox(height: 6),
+            const Text(
+              'Passwords do not match.',
+              style: TextStyle(
+                fontFamily: 'Nunito',
+                fontSize: 11.5,
+                color: Color(0xFFFF4B4B),
+              ),
+            ),
+          ],
+          if (!isSchool) ...<Widget>[
+            const SizedBox(height: 16),
+            _FieldLabel('Referral code (optional)'),
+            TextField(
+              controller: _referral,
+              autocorrect: false,
+              enableSuggestions: false,
+              textInputAction: TextInputAction.done,
+              onSubmitted: _submit,
+              decoration: const InputDecoration(
+                hintText: 'REN…',
+              ),
+            ),
+            const SizedBox(height: 6),
+            const Text(
+              'Your friend earns 3 REN coins when you join.',
+              style: TextStyle(
+                fontFamily: 'Nunito',
+                fontSize: 11.5,
+                color: Color(0xFF777777),
+              ),
+            ),
+          ],
+          const SizedBox(height: 16),
           // Consent row (founder directive 2026-10-05): rides BOTH
-          // signup forms, sits right above the submit so the disabled
-          // button explains itself. Tapping the words toggles the box;
-          // Privacy Policy opens the public policy page.
+          // signup forms, sits right above the submit.
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -954,15 +1010,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       setState(() => _acceptedTerms = v ?? false),
                 ),
               ),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               Expanded(
                 child: GestureDetector(
                   onTap: () =>
                       setState(() => _acceptedTerms = !_acceptedTerms),
                   child: Text.rich(
                     TextSpan(
-                      text:
-                          'I accept the Terms of Service and ',
+                      text: 'I accept the Terms of Service and ',
                       children: <InlineSpan>[
                         WidgetSpan(
                           alignment: PlaceholderAlignment.baseline,
@@ -974,7 +1029,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               style: TextStyle(
                                 color: context.primary,
                                 fontWeight: FontWeight.w700,
-                                fontSize: 13,
+                                fontSize: 12.5,
                                 decoration: TextDecoration.underline,
                               ),
                             ),
@@ -983,9 +1038,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         const TextSpan(text: '.'),
                       ],
                     ),
-                    style: TextStyle(
-                      color: context.textSecondary,
-                      fontSize: 13,
+                    style: const TextStyle(
+                      fontFamily: 'Nunito',
+                      color: Color(0xFF777777),
+                      fontSize: 12.5,
+                      height: 1.4,
                     ),
                   ),
                 ),
@@ -993,67 +1050,80 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ],
           ),
           if (_error != null) ...<Widget>[
-            SizedBox(height: 14),
-            Text(
-              _error!,
-              style: TextStyle(color: context.error, fontSize: 13),
+            const SizedBox(height: 10),
+            Container(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+              decoration: BoxDecoration(
+                color: const Color(0xFFFFEBEB),
+                borderRadius: BorderRadius.circular(11),
+              ),
+              child: Text(
+                _error!,
+                style: const TextStyle(
+                  fontFamily: 'Nunito',
+                  fontSize: 13,
+                  color: Color(0xFFB81F1F),
+                ),
+              ),
             ),
           ],
-          const SizedBox(height: 20),
+          const SizedBox(height: 16),
           TactileButton(
             // Dead until the consent box is ticked (founder directive
             // 2026-10-05); _submit re-checks for belt and braces.
-            onPressed: (_busy || !_acceptedTerms) ? null : _submit,
+            onPressed: (_busy || !_acceptedTerms || mismatch)
+                ? null
+                : _submit,
+            height: 48,
+            radius: BorderRadius.circular(999),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 if (_busy)
-                  const RenanceMark(size: 16, busy: true, onDark: true)
+                  const RenanceMark(size: 22, busy: true, onDark: true)
                 else
-                  const Icon(Icons.arrow_forward, size: 18),
+                  const MsIcon('arrow_forward', size: 18, color: Colors.white),
                 const SizedBox(width: 8),
                 Text(
                   _busy
-                      ? 'Setting up…'
+                      ? (isSchool ? 'Setting up school…' : 'Creating account…')
                       : isSchool
-                          ? 'Create school workspace'
-                          : 'Start studying',
+                          ? 'Create School Workspace'
+                          : 'Create Account',
                 ),
               ],
             ),
           ),
           if (!isSchool && googleWebClientId.isNotEmpty) ...<Widget>[
-            SizedBox(height: 10),
+            const SizedBox(height: 16),
+            _GoogleDivider(),
+            const SizedBox(height: 12),
             _GoogleButton(onPressed: _busy ? null : _signUpWithGoogle),
           ],
-          SizedBox(height: 10),
-          Text(
-            isSchool
-                ? 'The full Nigerian curriculum - classes, subjects, term syllabuses with notes - is installed for you automatically.'
-                : "We'll send a 6-digit confirmation code to your email, then ask about your school and exams right after.",
-            textAlign: TextAlign.center,
-            style: TextStyle(color: context.outline, fontSize: 12),
-          ),
         ],
       ),
       footer: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text(
-            'Already studying with us? ',
-            style: TextStyle(color: context.textSecondary, fontSize: 14),
+          const Text(
+            'Already have an account? ',
+            style: TextStyle(
+              fontFamily: 'Nunito',
+              color: Color(0xFF777777),
+              fontSize: 14,
+            ),
           ),
           GestureDetector(
             onTap: () => Navigator.of(context).pushReplacementNamed(
               '/login',
-              // Carry the tab across (founder bugfix 2026-10-05): the
-              // school sign-up's "Sign in" opens the school sign-in.
               arguments: _audience,
             ),
             child: Text(
-              'Sign in',
+              'Log In',
               style: TextStyle(
-                color: context.ink,
+                fontFamily: 'Nunito',
+                color: context.primary,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
               ),
