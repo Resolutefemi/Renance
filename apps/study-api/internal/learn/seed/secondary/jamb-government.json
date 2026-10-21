@@ -1,0 +1,2514 @@
+{
+ "body": "jamb",
+ "subject": "government",
+ "title": "Government",
+ "unitTitles": [
+  "State, Power and Constitutions",
+  "Organs, Citizenship and Elections",
+  "Administration and Governance in Practice",
+  "Nigeria's Constitutional Journey",
+  "Federalism and International Relations",
+  "Democratisation Today",
+  "Basic Concepts in Depth",
+  "Organs of Government in Depth",
+  "Political Parties and Elections",
+  "Public Administration",
+  "Military Rule in Nigeria",
+  "Colonial Administration",
+  "Nationalism and Independence",
+  "The First Republic",
+  "The Civil War Years",
+  "The Second and Third Republics",
+  "The Fourth Republic",
+  "Federalism and Resource Control",
+  "Foreign Policy in Depth",
+  "Political Economy of Nigeria",
+  "Ideologies and Systems Compared",
+  "Pressure Groups and Public Opinion",
+  "Local Government Today",
+  "Structured Revision: Set A",
+  "Structured Revision: Set B",
+  "Case Studies Workshop",
+  "JAMB Masterclass: Final Lap",
+  "Nigerian Institutions Tour",
+  "Comparative Politics Workshop",
+  "Governance Data and Current Affairs"
+ ],
+ "topics": [
+  {
+   "title": "Government and the basic concepts of the state",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "state",
+    "nation",
+    "society",
+    "government"
+   ]
+  },
+  {
+   "title": "Power, authority, legitimacy and influence",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "power",
+    "authority",
+    "legitimacy",
+    "influence"
+   ]
+  },
+  {
+   "title": "Sovereignty: meaning, features and limitations",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "sovereignty",
+    "limitations",
+    "supreme",
+    "state"
+   ]
+  },
+  {
+   "title": "Political culture, socialisation and participation",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "political culture",
+    "socialisation",
+    "participation",
+    "apathy"
+   ]
+  },
+  {
+   "title": "Forms of government: monarchy to democracy",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "monarchy",
+    "democracy",
+    "aristocracy",
+    "oligarchy",
+    "republic"
+   ]
+  },
+  {
+   "title": "Presidential and parliamentary systems",
+   "category": "Theory",
+   "keywords": [
+    "presidential",
+    "parliamentary",
+    "cabinet",
+    "executive president"
+   ]
+  },
+  {
+   "title": "Separation of powers and checks and balances",
+   "category": "Theory",
+   "keywords": [
+    "separation of powers",
+    "checks and balances",
+    "organs of government"
+   ]
+  },
+  {
+   "title": "The rule of law: principles and applications",
+   "category": "Theory",
+   "keywords": [
+    "rule of law",
+    "due process",
+    "equality",
+    "supremacy"
+   ]
+  },
+  {
+   "title": "Fundamental human rights and obligations",
+   "category": "Theory",
+   "keywords": [
+    "human rights",
+    "fundamental rights",
+    "obligations",
+    "enforcement"
+   ]
+  },
+  {
+   "title": "Constitutions: definition, types and sources",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "constitution",
+    "written",
+    "unwritten",
+    "sources",
+    "rigid",
+    "flexible"
+   ]
+  },
+  {
+   "title": "Features of federal and unitary constitutions",
+   "category": "Theory",
+   "keywords": [
+    "federalism",
+    "unitary",
+    "constitution",
+    "division of powers"
+   ]
+  },
+  {
+   "title": "Confederation and other forms of union",
+   "category": "Theory",
+   "keywords": [
+    "confederation",
+    "union",
+    "unitary",
+    "federation"
+   ]
+  },
+  {
+   "title": "The legislature: composition and functions",
+   "category": "Theory",
+   "keywords": [
+    "legislature",
+    "law making",
+    "unicameral",
+    "bicameral",
+    "oversight"
+   ]
+  },
+  {
+   "title": "The executive: types and functions",
+   "category": "Theory",
+   "keywords": [
+    "executive",
+    "cabinet",
+    "functions",
+    "president"
+   ]
+  },
+  {
+   "title": "The judiciary: structure and functions",
+   "category": "Theory",
+   "keywords": [
+    "judiciary",
+    "courts",
+    "judicial review",
+    "interpretation"
+   ]
+  },
+  {
+   "title": "Judicial independence and impartiality",
+   "category": "Theory",
+   "keywords": [
+    "judicial independence",
+    "impartiality",
+    "security of tenure"
+   ]
+  },
+  {
+   "title": "Citizenship: acquisition and duties",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "citizenship",
+    "naturalisation",
+    "birth",
+    "duties",
+    "rights"
+   ]
+  },
+  {
+   "title": "Democracy: features and institutions",
+   "category": "Theory",
+   "keywords": [
+    "democracy",
+    "features",
+    "institutions",
+    "participation"
+   ]
+  },
+  {
+   "title": "Political parties: functions and organisation",
+   "category": "Theory",
+   "keywords": [
+    "political parties",
+    "functions",
+    "manifesto",
+    "organisation"
+   ]
+  },
+  {
+   "title": "Party systems: one-party, two-party, multi-party",
+   "category": "Theory",
+   "keywords": [
+    "one party",
+    "two party",
+    "multi party",
+    "party system"
+   ]
+  },
+  {
+   "title": "Elections: types, purposes and franchise",
+   "category": "Theory",
+   "keywords": [
+    "elections",
+    "franchise",
+    "suffrage",
+    "electoral college"
+   ]
+  },
+  {
+   "title": "Electoral systems and voting methods",
+   "category": "Theory",
+   "keywords": [
+    "electoral system",
+    "ballot",
+    "voting",
+    "proportional representation"
+   ]
+  },
+  {
+   "title": "The electoral commission and INEC in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "inec",
+    "electoral commission",
+    "election petition",
+    "registration"
+   ]
+  },
+  {
+   "title": "Public opinion, mass media and pressure groups",
+   "category": "Theory",
+   "keywords": [
+    "public opinion",
+    "mass media",
+    "pressure groups",
+    "interest groups"
+   ]
+  },
+  {
+   "title": "Political ideologies: capitalism to socialism",
+   "category": "Theory",
+   "keywords": [
+    "capitalism",
+    "socialism",
+    "communism",
+    "liberalism",
+    "ideology"
+   ]
+  },
+  {
+   "title": "Public administration and the civil service",
+   "category": "Theory",
+   "keywords": [
+    "civil service",
+    "public administration",
+    "bureaucracy",
+    "permanent secretary"
+   ]
+  },
+  {
+   "title": "Public corporations and their control",
+   "category": "Theory",
+   "keywords": [
+    "public corporations",
+    "control",
+    "parastatals",
+    "commercialisation"
+   ]
+  },
+  {
+   "title": "Local government administration in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "local government",
+    "councillors",
+    "chairman",
+    "functions",
+    "1976 reform"
+   ]
+  },
+  {
+   "title": "The armed forces and military rule in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "military rule",
+    "armed forces",
+    "coup",
+    "decrees"
+   ]
+  },
+  {
+   "title": "Colonial administration in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "colonial",
+    "indirect rule",
+    "lord lugard",
+    "native authority"
+   ]
+  },
+  {
+   "title": "Indirect rule: features and effects",
+   "category": "Nigerian Context",
+   "keywords": [
+    "indirect rule",
+    "effects",
+    "traditional rulers",
+    "emirs"
+   ]
+  },
+  {
+   "title": "Nationalism and the rise of political parties",
+   "category": "Nigerian Context",
+   "keywords": [
+    "nationalism",
+    "ncnc",
+    "ag",
+    "npc",
+    "press"
+   ]
+  },
+  {
+   "title": "Constitutional development: Clifford to Richards",
+   "category": "Nigerian Context",
+   "keywords": [
+    "clifford constitution",
+    "richards constitution",
+    "1922",
+    "1946"
+   ]
+  },
+  {
+   "title": "Constitutional development: Macpherson to Lyttleton",
+   "category": "Nigerian Context",
+   "keywords": [
+    "macpherson constitution",
+    "lyttleton constitution",
+    "1951",
+    "1954"
+   ]
+  },
+  {
+   "title": "The 1960 independence and 1963 republican constitutions",
+   "category": "Nigerian Context",
+   "keywords": [
+    "independence constitution",
+    "1960",
+    "1963",
+    "republican"
+   ]
+  },
+  {
+   "title": "The First Republic and its collapse",
+   "category": "Nigerian Context",
+   "keywords": [
+    "first republic",
+    "1964 election",
+    "coup",
+    "balewa"
+   ]
+  },
+  {
+   "title": "Military governments in Nigeria: 1966 to 1999",
+   "category": "Nigerian Context",
+   "keywords": [
+    "gowon",
+    "murtala",
+    "babangida",
+    "abacha",
+    "military"
+   ]
+  },
+  {
+   "title": "The Second Republic and the 1979 constitution",
+   "category": "Nigerian Context",
+   "keywords": [
+    "second republic",
+    "1979 constitution",
+    "shagari",
+    "presidential system"
+   ]
+  },
+  {
+   "title": "Features of the 1999 Nigerian Constitution",
+   "category": "Nigerian Context",
+   "keywords": [
+    "1999 constitution",
+    "fundamental rights",
+    "federal character"
+   ]
+  },
+  {
+   "title": "Federalism in Nigeria: origin and features",
+   "category": "Nigerian Context",
+   "keywords": [
+    "federalism",
+    "origin",
+    "features",
+    "states creation"
+   ]
+  },
+  {
+   "title": "Revenue allocation and fiscal federalism",
+   "category": "Nigerian Context",
+   "keywords": [
+    "revenue allocation",
+    "fiscal federalism",
+    "allocation formula",
+    "derivation"
+   ]
+  },
+  {
+   "title": "National integration and national question",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "national integration",
+    "national question",
+    "unity",
+    "federal character"
+   ]
+  },
+  {
+   "title": "Nigerian foreign policy: principles and objectives",
+   "category": "Nigerian Context",
+   "keywords": [
+    "foreign policy",
+    "principles",
+    "africa centrepiece",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Nigeria and international organisations",
+   "category": "Nigerian Context",
+   "keywords": [
+    "united nations",
+    "commonwealth",
+    "oau",
+    "au",
+    "ecowas"
+   ]
+  },
+  {
+   "title": "ECOWAS and economic integration in West Africa",
+   "category": "Nigerian Context",
+   "keywords": [
+    "ecowas",
+    "integration",
+    "west africa",
+    "free movement"
+   ]
+  },
+  {
+   "title": "The United Nations and global peacekeeping",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "united nations",
+    "peacekeeping",
+    "security council",
+    "general assembly"
+   ]
+  },
+  {
+   "title": "The Commonwealth, OAU and African Union",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "commonwealth",
+    "african union",
+    "oau",
+    "colonialism"
+   ]
+  },
+  {
+   "title": "Non-alignment and cold war politics",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "non alignment",
+    "cold war",
+    "alignment",
+    "blocs"
+   ]
+  },
+  {
+   "title": "Public commissions: federal character and ombudsman",
+   "category": "Nigerian Context",
+   "keywords": [
+    "federal character commission",
+    "ombudsman",
+    "public complaints commission"
+   ]
+  },
+  {
+   "title": "Nigeria's judiciary and election tribunals",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "election tribunal",
+    "judiciary",
+    "petitions",
+    "judgments"
+   ]
+  },
+  {
+   "title": "Civil society organisations and democratisation",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "civil society",
+    "ngo",
+    "democratisation",
+    "advocacy"
+   ]
+  },
+  {
+   "title": "Political crises and national reconciliation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "civil war",
+    "reconciliation",
+    "aburi",
+    "amnesty"
+   ]
+  },
+  {
+   "title": "Current democratic governance issues in Nigeria",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "corruption",
+    "governance",
+    "accountability",
+    "transparency"
+   ]
+  },
+  {
+   "title": "Electoral reforms and voting technology",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "electoral reform",
+    "bvas",
+    "card reader",
+    "voting"
+   ]
+  },
+  {
+   "title": "Examination drill: government past questions by topic",
+   "category": "Applications",
+   "keywords": [
+    "past questions",
+    "revision",
+    "examination",
+    "jamb"
+   ]
+  },
+  {
+   "title": "Civil society and election monitoring",
+   "category": "Applications",
+   "keywords": [
+    "civil society",
+    "elections"
+   ]
+  },
+  {
+   "title": "Political crises and reconciliation lessons",
+   "category": "Theory",
+   "keywords": [
+    "crises",
+    "reconciliation"
+   ]
+  },
+  {
+   "title": "Governance issues in the Fourth Republic",
+   "category": "Nigerian Context",
+   "keywords": [
+    "governance",
+    "Fourth Republic"
+   ]
+  },
+  {
+   "title": "Electoral reforms: from manual to digital",
+   "category": "Nigerian Context",
+   "keywords": [
+    "electoral reforms",
+    "digital"
+   ]
+  },
+  {
+   "title": "Comparing democracies across West Africa",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "democracies",
+    "West Africa"
+   ]
+  },
+  {
+   "title": "Nation, state and nation-state distinguished",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "nation",
+    "state"
+   ]
+  },
+  {
+   "title": "Legitimacy and its sources in depth",
+   "category": "Theory",
+   "keywords": [
+    "legitimacy",
+    "sources"
+   ]
+  },
+  {
+   "title": "Political socialisation: agents compared",
+   "category": "Theory",
+   "keywords": [
+    "socialisation",
+    "agents"
+   ]
+  },
+  {
+   "title": "Civilian control of the military",
+   "category": "Theory",
+   "keywords": [
+    "civilian control",
+    "military"
+   ]
+  },
+  {
+   "title": "Preamble analysis of the 1999 Constitution",
+   "category": "Methods",
+   "keywords": [
+    "preamble",
+    "1999 Constitution"
+   ]
+  },
+  {
+   "title": "Supremacy of the constitution explained",
+   "category": "Theory",
+   "keywords": [
+    "supremacy",
+    "constitution"
+   ]
+  },
+  {
+   "title": "Amendment procedures: section 9 examined",
+   "category": "Methods",
+   "keywords": [
+    "amendment",
+    "section 9"
+   ]
+  },
+  {
+   "title": "Constitutional cases that shaped Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "constitutional cases",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "Written versus unwritten constitutions",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "written",
+    "unwritten"
+   ]
+  },
+  {
+   "title": "Examination drill: concepts past questions",
+   "category": "Applications",
+   "keywords": [
+    "concepts",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Bicameralism: the Senate and House",
+   "category": "Theory",
+   "keywords": [
+    "bicameralism",
+    "Senate"
+   ]
+  },
+  {
+   "title": "Law-making: from bill to assent",
+   "category": "Methods",
+   "keywords": [
+    "bill",
+    "assent"
+   ]
+  },
+  {
+   "title": "Committee system in the National Assembly",
+   "category": "Applications",
+   "keywords": [
+    "committees",
+    "Assembly"
+   ]
+  },
+  {
+   "title": "Executive powers and immunity clauses",
+   "category": "Theory",
+   "keywords": [
+    "executive powers",
+    "immunity"
+   ]
+  },
+  {
+   "title": "Civil service neutrality and anonymity",
+   "category": "Theory",
+   "keywords": [
+    "civil service",
+    "neutrality"
+   ]
+  },
+  {
+   "title": "Court hierarchy in Nigeria explained",
+   "category": "Nigerian Context",
+   "keywords": [
+    "court hierarchy",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "Judicial review and its limits",
+   "category": "Theory",
+   "keywords": [
+    "judicial review",
+    "limits"
+   ]
+  },
+  {
+   "title": "Impeachment: process and precedents",
+   "category": "Nigerian Context",
+   "keywords": [
+    "impeachment",
+    "precedents"
+   ]
+  },
+  {
+   "title": "Checks that actually worked historically",
+   "category": "Applications",
+   "keywords": [
+    "checks",
+    "history"
+   ]
+  },
+  {
+   "title": "Examination drill: organs past questions",
+   "category": "Applications",
+   "keywords": [
+    "organs",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Party manifestos and ideological positioning",
+   "category": "Theory",
+   "keywords": [
+    "manifestos",
+    "ideology"
+   ]
+  },
+  {
+   "title": "Party primaries and delegate politics",
+   "category": "Nigerian Context",
+   "keywords": [
+    "primaries",
+    "delegates"
+   ]
+  },
+  {
+   "title": "Campaign finance and regulations",
+   "category": "Nigerian Context",
+   "keywords": [
+    "campaign finance",
+    "regulations"
+   ]
+  },
+  {
+   "title": "INEC: powers and independence tested",
+   "category": "Nigerian Context",
+   "keywords": [
+    "INEC",
+    "independence"
+   ]
+  },
+  {
+   "title": "Voter registration and PVC technology",
+   "category": "Nigerian Context",
+   "keywords": [
+    "voter registration",
+    "PVC"
+   ]
+  },
+  {
+   "title": "Ballot systems: open, secret, electronic",
+   "category": "Theory",
+   "keywords": [
+    "ballot systems",
+    "electronic"
+   ]
+  },
+  {
+   "title": "Election petitions and tribunals",
+   "category": "Nigerian Context",
+   "keywords": [
+    "election petitions",
+    "tribunals"
+   ]
+  },
+  {
+   "title": "Electoral violence and its remedies",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "electoral violence",
+    "remedies"
+   ]
+  },
+  {
+   "title": "Youth participation in elections",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "youth participation",
+    "elections"
+   ]
+  },
+  {
+   "title": "Examination drill: elections past questions",
+   "category": "Applications",
+   "keywords": [
+    "elections",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The Nigerian civil service structure",
+   "category": "Nigerian Context",
+   "keywords": [
+    "civil service",
+    "structure"
+   ]
+  },
+  {
+   "title": "Ministries, departments and agencies",
+   "category": "Nigerian Context",
+   "keywords": [
+    "ministries",
+    "agencies"
+   ]
+  },
+  {
+   "title": "Public corporations: performance and reform",
+   "category": "Applications",
+   "keywords": [
+    "public corporations",
+    "reform"
+   ]
+  },
+  {
+   "title": "Privatisation: successes and criticisms",
+   "category": "Nigerian Context",
+   "keywords": [
+    "privatisation",
+    "criticisms"
+   ]
+  },
+  {
+   "title": "Local government: creation and functions",
+   "category": "Nigerian Context",
+   "keywords": [
+    "local government",
+    "functions"
+   ]
+  },
+  {
+   "title": "State joint local government account",
+   "category": "Nigerian Context",
+   "keywords": [
+    "joint account",
+    "local government"
+   ]
+  },
+  {
+   "title": "Ombudsman: the public complaints commission",
+   "category": "Applications",
+   "keywords": [
+    "ombudsman",
+    "complaints"
+   ]
+  },
+  {
+   "title": "Bureaucracy: Weber's model applied",
+   "category": "Theory",
+   "keywords": [
+    "bureaucracy",
+    "Weber"
+   ]
+  },
+  {
+   "title": "Red tape and service delivery",
+   "category": "Applications",
+   "keywords": [
+    "red tape",
+    "services"
+   ]
+  },
+  {
+   "title": "Examination drill: administration past questions",
+   "category": "Applications",
+   "keywords": [
+    "administration",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Why soldiers entered politics",
+   "category": "Theory",
+   "keywords": [
+    "military rule",
+    "causes"
+   ]
+  },
+  {
+   "title": "Supreme military councils compared",
+   "category": "Theory",
+   "keywords": [
+    "military councils"
+   ]
+  },
+  {
+   "title": "Decree-making under military regimes",
+   "category": "Theory",
+   "keywords": [
+    "decree",
+    "regimes"
+   ]
+  },
+  {
+   "title": "Economic management under the military",
+   "category": "Applications",
+   "keywords": [
+    "economy",
+    "military"
+   ]
+  },
+  {
+   "title": "Transitions programmes: Abacha to Obasanjo",
+   "category": "Nigerian Context",
+   "keywords": [
+    "transition",
+    "Abacha"
+   ]
+  },
+  {
+   "title": "Human rights under military rule",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "human rights",
+    "military"
+   ]
+  },
+  {
+   "title": "Military legacies in Nigerian politics",
+   "category": "Theory",
+   "keywords": [
+    "legacies",
+    "politics"
+   ]
+  },
+  {
+   "title": "Comparing military and civilian budgets",
+   "category": "Methods",
+   "keywords": [
+    "budgets",
+    "comparison"
+   ]
+  },
+  {
+   "title": "Lessons learned from military eras",
+   "category": "Theory",
+   "keywords": [
+    "lessons",
+    "eras"
+   ]
+  },
+  {
+   "title": "Examination drill: military rule past questions",
+   "category": "Applications",
+   "keywords": [
+    "military rule",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The scramble and Berlin conference",
+   "category": "Theory",
+   "keywords": [
+    "Berlin conference",
+    "scramble"
+   ]
+  },
+  {
+   "title": "Lugard and the doctrine of indirect rule",
+   "category": "Theory",
+   "keywords": [
+    "Lugard",
+    "indirect rule"
+   ]
+  },
+  {
+   "title": "Indirect rule in the north: success factors",
+   "category": "Nigerian Context",
+   "keywords": [
+    "indirect rule",
+    "north"
+   ]
+  },
+  {
+   "title": "Indirect rule in the west and east",
+   "category": "Nigerian Context",
+   "keywords": [
+    "indirect rule",
+    "east"
+   ]
+  },
+  {
+   "title": "Chieftaincy under colonialism",
+   "category": "Nigerian Context",
+   "keywords": [
+    "chieftaincy",
+    "colonialism"
+   ]
+  },
+  {
+   "title": "Economic policies: cash crops and taxation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "cash crops",
+    "taxation"
+   ]
+  },
+  {
+   "title": "Railways and colonial infrastructure",
+   "category": "Nigerian Context",
+   "keywords": [
+    "railways",
+    "infrastructure"
+   ]
+  },
+  {
+   "title": "Education missions and their politics",
+   "category": "Nigerian Context",
+   "keywords": [
+    "education",
+    "missions"
+   ]
+  },
+  {
+   "title": "Resistance: Ekumeku, Satiru and Aro expeditions",
+   "category": "Nigerian Context",
+   "keywords": [
+    "resistance",
+    "expeditions"
+   ]
+  },
+  {
+   "title": "Examination drill: colonial past questions",
+   "category": "Applications",
+   "keywords": [
+    "colonial",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Causes of Nigerian nationalism",
+   "category": "Theory",
+   "keywords": [
+    "nationalism",
+    "causes"
+   ]
+  },
+  {
+   "title": "The NNDP and early party politics",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NNDP",
+    "parties"
+   ]
+  },
+  {
+   "title": "NCNC, AG and NPC: bases and leaders",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NCNC",
+    "AG",
+    "NPC"
+   ]
+  },
+  {
+   "title": "The 1945 and 1950 strikes",
+   "category": "Nigerian Context",
+   "keywords": [
+    "strikes",
+    "1945"
+   ]
+  },
+  {
+   "title": "Regionalism and its consequences",
+   "category": "Theory",
+   "keywords": [
+    "regionalism",
+    "consequences"
+   ]
+  },
+  {
+   "title": "Minority fears and the Willink commission",
+   "category": "Nigerian Context",
+   "keywords": [
+    "minorities",
+    "Willink"
+   ]
+  },
+  {
+   "title": "The 1959 federal election",
+   "category": "Nigerian Context",
+   "keywords": [
+    "1959 election"
+   ]
+  },
+  {
+   "title": "Independence celebrations and challenges",
+   "category": "Nigerian Context",
+   "keywords": [
+    "independence",
+    "1960"
+   ]
+  },
+  {
+   "title": "Founding fathers compared",
+   "category": "Theory",
+   "keywords": [
+    "founding fathers"
+   ]
+  },
+  {
+   "title": "Examination drill: nationalism past questions",
+   "category": "Applications",
+   "keywords": [
+    "nationalism",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The 1960 and 1963 constitutions compared",
+   "category": "Methods",
+   "keywords": [
+    "1960",
+    "1963 constitutions"
+   ]
+  },
+  {
+   "title": "Coalition politics and the NPC-NCNC pact",
+   "category": "Nigerian Context",
+   "keywords": [
+    "coalition",
+    "NPC"
+   ]
+  },
+  {
+   "title": "The 1962Action Group crisis",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Action Group",
+    "crisis"
+   ]
+  },
+  {
+   "title": "The 1964 federal election crisis",
+   "category": "Nigerian Context",
+   "keywords": [
+    "1964 election",
+    "crisis"
+   ]
+  },
+  {
+   "title": "The 1965 western election and 'Operation Wetie'",
+   "category": "Nigerian Context",
+   "keywords": [
+    "1965 election"
+   ]
+  },
+  {
+   "title": "Census controversies of 1962-63",
+   "category": "Nigerian Context",
+   "keywords": [
+    "census",
+    "controversies"
+   ]
+  },
+  {
+   "title": "Why the First Republic collapsed",
+   "category": "Theory",
+   "keywords": [
+    "collapse",
+    "First Republic"
+   ]
+  },
+  {
+   "title": "January 1966 coup: causes and actors",
+   "category": "Nigerian Context",
+   "keywords": [
+    "1966 coup"
+   ]
+  },
+  {
+   "title": "Ironsi's unitary decree",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Ironsi",
+    "decree"
+   ]
+  },
+  {
+   "title": "Examination drill: First Republic past questions",
+   "category": "Applications",
+   "keywords": [
+    "First Republic",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The 1966 counter-coup and Gowon",
+   "category": "Nigerian Context",
+   "keywords": [
+    "counter-coup",
+    "Gowon"
+   ]
+  },
+  {
+   "title": "Aburi accord: positions and outcomes",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Aburi",
+    "accord"
+   ]
+  },
+  {
+   "title": "Creation of twelve states in 1967",
+   "category": "Nigerian Context",
+   "keywords": [
+    "twelve states",
+    "1967"
+   ]
+  },
+  {
+   "title": "Declaration of Biafra and the war's course",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Biafra",
+    "civil war"
+   ]
+  },
+  {
+   "title": "The three Rs: reconstruction, rehabilitation, reconciliation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "three Rs"
+   ]
+  },
+  {
+   "title": "War economies and relief operations",
+   "category": "Applications",
+   "keywords": [
+    "relief",
+    "operations"
+   ]
+  },
+  {
+   "title": "No victor, no vanquished: the rhetoric",
+   "category": "Theory",
+   "keywords": [
+    "no victor",
+    "rhetoric"
+   ]
+  },
+  {
+   "title": "Lessons of the war for federalism",
+   "category": "Theory",
+   "keywords": [
+    "federalism",
+    "lessons"
+   ]
+  },
+  {
+   "title": "Memoirs and historiography of the war",
+   "category": "Theory",
+   "keywords": [
+    "historiography",
+    "war"
+   ]
+  },
+  {
+   "title": "Examination drill: civil war past questions",
+   "category": "Applications",
+   "keywords": [
+    "civil war",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The 1979 constitution: presidential features",
+   "category": "Theory",
+   "keywords": [
+    "1979 constitution",
+    "presidential"
+   ]
+  },
+  {
+   "title": "NPN, UPN, NPP: the party contest",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NPN",
+    "UPN",
+    "NPP"
+   ]
+  },
+  {
+   "title": "Shagari's government: policies and problems",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Shagari",
+    "policies"
+   ]
+  },
+  {
+   "title": "The 1983 election and its flaws",
+   "category": "Nigerian Context",
+   "keywords": [
+    "1983 election"
+   ]
+  },
+  {
+   "title": "Buhari's war against indiscipline",
+   "category": "Nigerian Context",
+   "keywords": [
+    "WAI",
+    "Buhari"
+   ]
+  },
+  {
+   "title": "Babangida's structural adjustment era",
+   "category": "Nigerian Context",
+   "keywords": [
+    "SAP",
+    "Babangida"
+   ]
+  },
+  {
+   "title": "The transition programme and banned politicians",
+   "category": "Nigerian Context",
+   "keywords": [
+    "transition",
+    "bans"
+   ]
+  },
+  {
+   "title": "June 12 1993: the annulled election",
+   "category": "Nigerian Context",
+   "keywords": [
+    "June 12",
+    "annulment"
+   ]
+  },
+  {
+   "title": "Interim government and Abacha's seizure",
+   "category": "Nigerian Context",
+   "keywords": [
+    "interim government",
+    "Abacha"
+   ]
+  },
+  {
+   "title": "Examination drill: republics past questions",
+   "category": "Applications",
+   "keywords": [
+    "republics",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The 1999 constitution: key features",
+   "category": "Theory",
+   "keywords": [
+    "1999 constitution",
+    "features"
+   ]
+  },
+  {
+   "title": "Obasanjo years: reforms and controversies",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Obasanjo",
+    "reforms"
+   ]
+  },
+  {
+   "title": "Third term bid and its failure",
+   "category": "Nigerian Context",
+   "keywords": [
+    "third term"
+   ]
+  },
+  {
+   "title": "Yar'Adua, Jonathan and the amnesty programme",
+   "category": "Nigerian Context",
+   "keywords": [
+    "amnesty",
+    "Jonathan"
+   ]
+  },
+  {
+   "title": "Buhari era: policies and elections",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Buhari",
+    "policies"
+   ]
+  },
+  {
+   "title": "Not Too Young To Run and inclusion",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "Not Too Young To Run"
+   ]
+  },
+  {
+   "title": "Independent candidature and party defections",
+   "category": "Nigerian Context",
+   "keywords": [
+    "defections"
+   ]
+  },
+  {
+   "title": "State policing debate",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "state policing",
+    "debate"
+   ]
+  },
+  {
+   "title": "Restructuring arguments mapped",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "restructuring",
+    "arguments"
+   ]
+  },
+  {
+   "title": "Examination drill: Fourth Republic past questions",
+   "category": "Applications",
+   "keywords": [
+    "Fourth Republic",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Derivation formula: history and disputes",
+   "category": "Nigerian Context",
+   "keywords": [
+    "derivation",
+    "formula"
+   ]
+  },
+  {
+   "title": "Fiscal federalism: theory versus practice",
+   "category": "Theory",
+   "keywords": [
+    "fiscal federalism"
+   ]
+  },
+  {
+   "title": "The 13 percent derivation debate",
+   "category": "Nigerian Context",
+   "keywords": [
+    "13 percent",
+    "derivation"
+   ]
+  },
+  {
+   "title": "Excess crude account and savings",
+   "category": "Nigerian Context",
+   "keywords": [
+    "excess crude"
+   ]
+  },
+  {
+   "title": "Resource control litigation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "resource control",
+    "litigation"
+   ]
+  },
+  {
+   "title": "Comparing federations: USA, India, Nigeria",
+   "category": "Theory",
+   "keywords": [
+    "federations",
+    "comparison"
+   ]
+  },
+  {
+   "title": "Creation of states: 1967 to 1996",
+   "category": "Nigerian Context",
+   "keywords": [
+    "states creation"
+   ]
+  },
+  {
+   "title": "Federal character commission in action",
+   "category": "Nigerian Context",
+   "keywords": [
+    "federal character"
+   ]
+  },
+  {
+   "title": "Asymmetric federalism ideas",
+   "category": "Theory",
+   "keywords": [
+    "asymmetric federalism"
+   ]
+  },
+  {
+   "title": "Examination drill: federalism past questions",
+   "category": "Applications",
+   "keywords": [
+    "federalism",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Africa as centrepiece: meaning and record",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Africa centerpiece"
+   ]
+  },
+  {
+   "title": "ECOWAS interventions: Liberia and Sierra Leone",
+   "category": "Applications",
+   "keywords": [
+    "ECOWAS",
+    "interventions"
+   ]
+  },
+  {
+   "title": "Nigeria and the UN Security Council bid",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "Security Council",
+    "bid"
+   ]
+  },
+  {
+   "title": "OPEC membership and oil diplomacy",
+   "category": "Applications",
+   "keywords": [
+    "OPEC",
+    "oil diplomacy"
+   ]
+  },
+  {
+   "title": "Apartheid: Nigeria's anti-apartheid record",
+   "category": "Nigerian Context",
+   "keywords": [
+    "apartheid",
+    "record"
+   ]
+  },
+  {
+   "title": "Diplomatic missions and consular work",
+   "category": "Applications",
+   "keywords": [
+    "missions",
+    "consular"
+   ]
+  },
+  {
+   "title": "Bilateral trade agreements",
+   "category": "Applications",
+   "keywords": [
+    "bilateral",
+    "trade"
+   ]
+  },
+  {
+   "title": "AfCFTA and Nigerian interests",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "AfCFTA",
+    "interests"
+   ]
+  },
+  {
+   "title": "Diaspora and citizenship policy",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "diaspora",
+    "policy"
+   ]
+  },
+  {
+   "title": "Examination drill: foreign policy past questions",
+   "category": "Applications",
+   "keywords": [
+    "foreign policy",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Oil boom politics and rentier state ideas",
+   "category": "Theory",
+   "keywords": [
+    "rentier state",
+    "oil boom"
+   ]
+  },
+  {
+   "title": "Corruption: forms, costs and agencies",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "corruption",
+    "EFCC"
+   ]
+  },
+  {
+   "title": "Fuel subsidy politics over the decades",
+   "category": "Nigerian Context",
+   "keywords": [
+    "fuel subsidy"
+   ]
+  },
+  {
+   "title": "Minimum wage struggles",
+   "category": "Nigerian Context",
+   "keywords": [
+    "minimum wage"
+   ]
+  },
+  {
+   "title": "ASUU strikes and education funding",
+   "category": "Nigerian Context",
+   "keywords": [
+    "ASUU",
+    "education"
+   ]
+  },
+  {
+   "title": "Poverty alleviation programmes compared",
+   "category": "Nigerian Context",
+   "keywords": [
+    "poverty programmes"
+   ]
+  },
+  {
+   "title": "Niger Delta militancy and amnesty",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Niger Delta",
+    "amnesty"
+   ]
+  },
+  {
+   "title": "Boko Haram and insecurity politics",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "Boko Haram",
+    "insecurity"
+   ]
+  },
+  {
+   "title": "The state and the economy: conclusions",
+   "category": "Theory",
+   "keywords": [
+    "state",
+    "economy"
+   ]
+  },
+  {
+   "title": "Examination drill: political economy past questions",
+   "category": "Applications",
+   "keywords": [
+    "political economy",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Capitalism, socialism and mixed economies",
+   "category": "Theory",
+   "keywords": [
+    "capitalism",
+    "socialism"
+   ]
+  },
+  {
+   "title": "Communalism in African thought",
+   "category": "Theory",
+   "keywords": [
+    "communalism",
+    "Africa"
+   ]
+  },
+  {
+   "title": "Totalitarianism and authoritarianism",
+   "category": "Theory",
+   "keywords": [
+    "totalitarianism",
+    "authoritarianism"
+   ]
+  },
+  {
+   "title": "Welfare state features",
+   "category": "Theory",
+   "keywords": [
+    "welfare state"
+   ]
+  },
+  {
+   "title": "Democracy indices: measuring freedom",
+   "category": "Applications",
+   "keywords": [
+    "democracy indices",
+    "freedom"
+   ]
+  },
+  {
+   "title": "Propaganda and political communication",
+   "category": "Theory",
+   "keywords": [
+    "propaganda",
+    "communication"
+   ]
+  },
+  {
+   "title": "Populism in modern politics",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "populism"
+   ]
+  },
+  {
+   "title": "Comparing presidential powers worldwide",
+   "category": "Methods",
+   "keywords": [
+    "presidential powers",
+    "comparison"
+   ]
+  },
+  {
+   "title": "Political culture surveys",
+   "category": "Methods",
+   "keywords": [
+    "political culture",
+    "surveys"
+   ]
+  },
+  {
+   "title": "Examination drill: ideologies past questions",
+   "category": "Applications",
+   "keywords": [
+    "ideologies",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Types of pressure groups with examples",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "pressure groups",
+    "types"
+   ]
+  },
+  {
+   "title": "NLC and labour politics",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NLC",
+    "labour"
+   ]
+  },
+  {
+   "title": "Professional associations in politics",
+   "category": "Nigerian Context",
+   "keywords": [
+    "professional associations"
+   ]
+  },
+  {
+   "title": "Market women associations historically",
+   "category": "Nigerian Context",
+   "keywords": [
+    "market women"
+   ]
+  },
+  {
+   "title": "Methods: lobbying, strikes, boycotts",
+   "category": "Theory",
+   "keywords": [
+    "lobbying",
+    "strikes"
+   ]
+  },
+  {
+   "title": "Mass media as the fourth estate",
+   "category": "Theory",
+   "keywords": [
+    "mass media",
+    "fourth estate"
+   ]
+  },
+  {
+   "title": "Social media activism: EndSARS case",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "EndSARS",
+    "activism"
+   ]
+  },
+  {
+   "title": "Measuring public opinion: polls",
+   "category": "Methods",
+   "keywords": [
+    "public opinion",
+    "polls"
+   ]
+  },
+  {
+   "title": "Civil liberties organisations",
+   "category": "Nigerian Context",
+   "keywords": [
+    "civil liberties",
+    "organisations"
+   ]
+  },
+  {
+   "title": "Examination drill: pressure groups past questions",
+   "category": "Applications",
+   "keywords": [
+    "pressure groups",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The 1976 local government reforms",
+   "category": "Nigerian Context",
+   "keywords": [
+    "1976 reforms",
+    "local government"
+   ]
+  },
+  {
+   "title": "The 1989 and 1991 reforms",
+   "category": "Nigerian Context",
+   "keywords": [
+    "1989 reforms"
+   ]
+  },
+  {
+   "title": "Autonomy debates: joint account problems",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "autonomy",
+    "joint account"
+   ]
+  },
+  {
+   "title": "Councillors, chairs and cabinets",
+   "category": "Theory",
+   "keywords": [
+    "councillors",
+    "chairs"
+   ]
+  },
+  {
+   "title": "Revenue sources of local councils",
+   "category": "Nigerian Context",
+   "keywords": [
+    "revenue",
+    "councils"
+   ]
+  },
+  {
+   "title": "Community development associations",
+   "category": "Nigerian Context",
+   "keywords": [
+    "community development"
+   ]
+  },
+  {
+   "title": "Traditional rulers: roles today",
+   "category": "Nigerian Context",
+   "keywords": [
+    "traditional rulers",
+    "roles"
+   ]
+  },
+  {
+   "title": "Amalgamation of 1914 revisited",
+   "category": "Nigerian Context",
+   "keywords": [
+    "1914",
+    "amalgamation"
+   ]
+  },
+  {
+   "title": "Service delivery at the grassroots",
+   "category": "Applications",
+   "keywords": [
+    "grassroots",
+    "services"
+   ]
+  },
+  {
+   "title": "Examination drill: local government past questions",
+   "category": "Applications",
+   "keywords": [
+    "local government",
+    "past questions"
+   ]
+  },
+  {
+   "title": "JAMB government paper structure and strategy",
+   "category": "Methods",
+   "keywords": [
+    "JAMB",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Objective questions on basic concepts",
+   "category": "Applications",
+   "keywords": [
+    "concepts",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on organs of government",
+   "category": "Applications",
+   "keywords": [
+    "organs",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on Nigerian constitutional development",
+   "category": "Applications",
+   "keywords": [
+    "constitutional",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on institutions",
+   "category": "Applications",
+   "keywords": [
+    "institutions",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on political behaviour",
+   "category": "Applications",
+   "keywords": [
+    "behaviour",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on foreign policy",
+   "category": "Applications",
+   "keywords": [
+    "foreign policy",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on international organisations",
+   "category": "Applications",
+   "keywords": [
+    "organisations",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Map and chronology drills",
+   "category": "Methods",
+   "keywords": [
+    "chronology",
+    "drills"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set A past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed practice: the 40-question sprint",
+   "category": "Applications",
+   "keywords": [
+    "timed practice",
+    "sprint"
+   ]
+  },
+  {
+   "title": "Review of common wrong options",
+   "category": "Methods",
+   "keywords": [
+    "wrong options",
+    "review"
+   ]
+  },
+  {
+   "title": "Dates and constitutions: memory tricks",
+   "category": "Methods",
+   "keywords": [
+    "dates",
+    "memory tricks"
+   ]
+  },
+  {
+   "title": "Elimination techniques for objective questions",
+   "category": "Methods",
+   "keywords": [
+    "elimination",
+    "techniques"
+   ]
+  },
+  {
+   "title": "Similar-option discrimination practice",
+   "category": "Methods",
+   "keywords": [
+    "similar options"
+   ]
+  },
+  {
+   "title": "Cause-and-effect question handling",
+   "category": "Methods",
+   "keywords": [
+    "cause and effect"
+   ]
+  },
+  {
+   "title": "Misconceptions about federalism corrected",
+   "category": "Methods",
+   "keywords": [
+    "misconceptions",
+    "federalism"
+   ]
+  },
+  {
+   "title": "Errors about the military era corrected",
+   "category": "Methods",
+   "keywords": [
+    "military era",
+    "errors"
+   ]
+  },
+  {
+   "title": "Reading political passages fast",
+   "category": "Methods",
+   "keywords": [
+    "reading",
+    "passages"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set B past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Case study: the 2015 election transfer",
+   "category": "Applications",
+   "keywords": [
+    "2015 election",
+    "case study"
+   ]
+  },
+  {
+   "title": "Case study: the 2023 election cycle",
+   "category": "Applications",
+   "keywords": [
+    "2023 election",
+    "case study"
+   ]
+  },
+  {
+   "title": "Case study: subsidy removal debates",
+   "category": "Applications",
+   "keywords": [
+    "subsidy removal"
+   ]
+  },
+  {
+   "title": "Case study: a state creation request",
+   "category": "Applications",
+   "keywords": [
+    "state creation",
+    "request"
+   ]
+  },
+  {
+   "title": "Case study: an impeachment saga",
+   "category": "Applications",
+   "keywords": [
+    "impeachment",
+    "saga"
+   ]
+  },
+  {
+   "title": "Case study: tribunal verdicts",
+   "category": "Applications",
+   "keywords": [
+    "tribunal",
+    "verdicts"
+   ]
+  },
+  {
+   "title": "Case study: local council autonomy court ruling",
+   "category": "Applications",
+   "keywords": [
+    "autonomy",
+    "ruling"
+   ]
+  },
+  {
+   "title": "Case study: census exercises compared",
+   "category": "Applications",
+   "keywords": [
+    "census",
+    "comparison"
+   ]
+  },
+  {
+   "title": "Case study: national conference outcomes",
+   "category": "Applications",
+   "keywords": [
+    "national conference"
+   ]
+  },
+  {
+   "title": "Examination drill: case studies past questions",
+   "category": "Applications",
+   "keywords": [
+    "case studies",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Building the final revision timetable",
+   "category": "Methods",
+   "keywords": [
+    "revision timetable"
+   ]
+  },
+  {
+   "title": "Constitution facts: the one-page digest",
+   "category": "Methods",
+   "keywords": [
+    "constitution facts",
+    "digest"
+   ]
+  },
+  {
+   "title": "Chronology: 1914 to date in one table",
+   "category": "Methods",
+   "keywords": [
+    "chronology",
+    "table"
+   ]
+  },
+  {
+   "title": "Definitions examiners love to test",
+   "category": "Methods",
+   "keywords": [
+    "definitions",
+    "examiners"
+   ]
+  },
+  {
+   "title": "The most repeated JAMB government themes",
+   "category": "Methods",
+   "keywords": [
+    "repeated themes",
+    "JAMB"
+   ]
+  },
+  {
+   "title": "Mock examination: 60 questions in 60 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Marking your mock: error analysis",
+   "category": "Methods",
+   "keywords": [
+    "error analysis",
+    "mock"
+   ]
+  },
+  {
+   "title": "Handling unfamiliar scenario questions",
+   "category": "Methods",
+   "keywords": [
+    "unfamiliar scenarios"
+   ]
+  },
+  {
+   "title": "Speed reading political options",
+   "category": "Methods",
+   "keywords": [
+    "speed reading",
+    "options"
+   ]
+  },
+  {
+   "title": "Exam day strategy and final confidence",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "strategy"
+   ]
+  },
+  {
+   "title": "INEC: structure and commissioners",
+   "category": "Nigerian Context",
+   "keywords": [
+    "INEC",
+    "structure"
+   ]
+  },
+  {
+   "title": "The NJC and judicial appointments",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NJC",
+    "appointments"
+   ]
+  },
+  {
+   "title": "Code of Conduct Bureau and tribunal",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Code of Conduct"
+   ]
+  },
+  {
+   "title": "EFCC: mandate and controversies",
+   "category": "Nigerian Context",
+   "keywords": [
+    "EFCC",
+    "mandate"
+   ]
+  },
+  {
+   "title": "ICPC: prevention and enforcement",
+   "category": "Nigerian Context",
+   "keywords": [
+    "ICPC"
+   ]
+  },
+  {
+   "title": "The National Population Commission",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NPC",
+    "census"
+   ]
+  },
+  {
+   "title": "Federal Character Commission operations",
+   "category": "Nigerian Context",
+   "keywords": [
+    "FCC",
+    "operations"
+   ]
+  },
+  {
+   "title": "NYSC: scheme and governance",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NYSC"
+   ]
+  },
+  {
+   "title": "NNPC limited: corporatisation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NNPC"
+   ]
+  },
+  {
+   "title": "Examination drill: institutions past questions",
+   "category": "Applications",
+   "keywords": [
+    "institutions",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The UK parliamentary model traced",
+   "category": "Theory",
+   "keywords": [
+    "UK",
+    "parliamentary"
+   ]
+  },
+  {
+   "title": "The US presidential model traced",
+   "category": "Theory",
+   "keywords": [
+    "US",
+    "presidential"
+   ]
+  },
+  {
+   "title": "Semi-presidential France compared",
+   "category": "Theory",
+   "keywords": [
+    "France",
+    "semi-presidential"
+   ]
+  },
+  {
+   "title": "Ghana and Nigeria: democracies compared",
+   "category": "Methods",
+   "keywords": [
+    "Ghana",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "One-party systems: case studies",
+   "category": "Theory",
+   "keywords": [
+    "one-party",
+    "cases"
+   ]
+  },
+  {
+   "title": "Coalition governments: pros and cons",
+   "category": "Theory",
+   "keywords": [
+    "coalitions"
+   ]
+  },
+  {
+   "title": "Devolution in the United Kingdom",
+   "category": "Theory",
+   "keywords": [
+    "devolution",
+    "UK"
+   ]
+  },
+  {
+   "title": "American federalism versus Nigerian",
+   "category": "Methods",
+   "keywords": [
+    "American federalism"
+   ]
+  },
+  {
+   "title": "Executive dominance: warning signs",
+   "category": "Theory",
+   "keywords": [
+    "executive dominance"
+   ]
+  },
+  {
+   "title": "Examination drill: comparative past questions",
+   "category": "Applications",
+   "keywords": [
+    "comparative politics",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Election results 1999 to 2023 read",
+   "category": "Nigerian Context",
+   "keywords": [
+    "election results",
+    "1999-2023"
+   ]
+  },
+  {
+   "title": "Voter turnout trends analysed",
+   "category": "Methods",
+   "keywords": [
+    "turnout",
+    "trends"
+   ]
+  },
+  {
+   "title": "Women in the National Assembly: numbers",
+   "category": "Nigerian Context",
+   "keywords": [
+    "women",
+    "Assembly"
+   ]
+  },
+  {
+   "title": "Youth candidates and the data",
+   "category": "Nigerian Context",
+   "keywords": [
+    "youth",
+    "candidates"
+   ]
+  },
+  {
+   "title": "Party deregistration rules applied",
+   "category": "Nigerian Context",
+   "keywords": [
+    "deregistration"
+   ]
+  },
+  {
+   "title": "Off-cycle elections: Edo, Anambra, Osun",
+   "category": "Nigerian Context",
+   "keywords": [
+    "off-cycle elections"
+   ]
+  },
+  {
+   "title": "Bimodal voter accreditation reviewed",
+   "category": "Nigerian Context",
+   "keywords": [
+    "BVAS"
+   ]
+  },
+  {
+   "title": "IReV portal and result transparency",
+   "category": "Nigerian Context",
+   "keywords": [
+    "IReV"
+   ]
+  },
+  {
+   "title": "Reading INEC press releases fast",
+   "category": "Methods",
+   "keywords": [
+    "press releases",
+    "INEC"
+   ]
+  },
+  {
+   "title": "Examination drill: current affairs past questions",
+   "category": "Applications",
+   "keywords": [
+    "current affairs",
+    "past questions"
+   ]
+  }
+ ]
+}

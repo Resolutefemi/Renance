@@ -1,0 +1,33 @@
+{
+  "class": "JSS 1",
+  "subject": "Computer Studies",
+  "term": 1,
+  "session": "",
+  "overwrite": false,
+  "provenance": {
+    "source": "renance-nerdc-seed",
+    "method": "original Renance summaries keyed to the official NERDC JSS1 Computer Studies first-term scheme"
+  },
+  "topics": [
+    {
+      "title": "Definition and history of the computer",
+      "week": 1,
+      "content": "A computer is an electronic machine that accepts data (input), processes it according to instructions, stores it, and gives out information (output).\n\nA short history:\n- Early counting devices: fingers and toes, stones (abacus was developed from this), tally marks.\n- Mechanical devices: Blaise Pascal built the first mechanical adding machine (1642). Charles Babbage designed the Analytical Engine in the 1830s, so he is called the father of the computer.\n- Electronic computers: ENIAC (1946) was one of the first large electronic computers. Modern computers are small, fast and can fit in a pocket as smartphones.\n\nGenerations of computers:\n- First generation: used vacuum tubes, very big and slow.\n- Second generation: used transistors, smaller and faster.\n- Third generation: used integrated circuits.\n- Fourth generation: used microprocessors, the computers we use today.\n\nEvaluation questions:\n1. Define a computer.\n2. Who is called the father of the computer and why?\n3. Mention the four generations of computers."
+    },
+    {
+      "title": "Characteristics of the computer",
+      "week": 2,
+      "content": "The computer is a wonderful machine because of these qualities:\n- Speed: it works in fractions of a second. A job that takes a man hours takes the computer seconds.\n- Accuracy: it hardly makes mistakes. Errors usually come from wrong input by human beings (garbage in, garbage out).\n- Storage: it can store a very large amount of information and bring it back when needed.\n- Diligence: it does not get tired or bored. It can work for many hours the same way.\n- Versatility: it can do many different jobs at different times, for example typing, playing music, calculating.\n- Automation: once given instructions, it can complete the work with little human help.\n\nWeaknesses of the computer: it has no brain of its own (it depends on human instructions), it cannot think or decide by itself, and it needs electricity to work.\n\nEvaluation questions:\n1. Mention five characteristics of the computer.\n2. What is meant by garbage in, garbage out?\n3. State two weaknesses of the computer."
+    },
+    {
+      "title": "Components of a computer: hardware and software",
+      "week": 3,
+      "content": "A computer system is made of two main parts: hardware and software.\n\nHardware is the physical part of the computer, the parts you can see and touch. Examples: monitor, keyboard, mouse, system unit, printer.\n\nHardware groups:\n- Input devices: used to send data into the computer, for example keyboard, mouse, scanner, microphone.\n- Processing device: the central processing unit (CPU), the brain of the computer inside the system unit.\n- Output devices: used to bring results out, for example monitor, printer, speaker.\n- Storage devices: used to keep information, for example hard disk, flash drive, memory card, CD.\n\nSoftware is the set of instructions (programs) that tells the hardware what to do. You cannot touch software. Examples: Windows (operating system), Microsoft Word, games, browsers.\n\nHardware without software is like a car without a driver.\n\nEvaluation questions:\n1. Differentiate between hardware and software.\n2. Mention three input devices and three output devices.\n3. What does the CPU do?"
+    },
+    {
+      "title": "Uses of computers and laboratory rules",
+      "week": 4,
+      "content": "Uses of computers in daily life:\n- Education: learning apps, typing notes, online lessons.\n- Hospitals: keeping patient records and running lab machines.\n- Banks: ATM machines, keeping accounts.\n- Business: typing documents, sending emails, selling online.\n- Entertainment: music, films and games.\n- Transportation: air traffic control and booking tickets.\n- Communication: email, video calls, social media.\n\nRules for the computer laboratory:\n- Enter quietly and do not run about.\n- Do not eat or drink inside the laboratory.\n- Do not touch cables with wet hands.\n- Follow the teacher's instructions before switching on any machine.\n- Do not delete other people's work.\n- Shut down properly after use and arrange your chair.\n\nEvaluation questions:\n1. Mention four uses of the computer.\n2. State four computer laboratory rules and why they matter.\n3. Why must we not eat inside the computer laboratory?"
+    }
+  ]
+}

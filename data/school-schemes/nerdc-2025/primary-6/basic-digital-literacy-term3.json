@@ -1,0 +1,72 @@
+{
+  "class": "Primary 6",
+  "subject": "Basic Digital Literacy",
+  "term": 3,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Advanced Robotics Concepts",
+      "content": "Robotic sensors: ultrasonic, infrared, touch, light,\ntemperature. Actuators: motors, servos. Robot\nprogramming logic. Obstacle avoidance. Line\nfollowing basics. Robot competitions overview."
+    },
+    {
+      "week": 2,
+      "topic": "Physical Computing",
+      "content": "Introduction to microcontrollers: Arduino basics.\nInput and output pins. LED control. Button inputs.\nSimple circuits. Safety with electronics. Real-world\nphysical computing applications."
+    },
+    {
+      "week": 3,
+      "topic": "Machine Learning Basics",
+      "content": "Understanding machine learning: computers\nlearning from data. Supervised vs unsupervised\nlearning. Training models with examples. Image\nrecognition, text classification. Bias in AI. Practical\nML demonstrations."
+    },
+    {
+      "week": 4,
+      "topic": "AI in Pictoblox",
+      "content": "Pictoblox AI extensions. Image recognition\nprojects. Speech recognition. Text-to-speech. Pose\ndetection. Creating AI-powered games. Combining\nAI with robotics simulations."
+    },
+    {
+      "week": 5,
+      "topic": "MIDTERM EXAMINATION",
+      "content": "Assessment covering Weeks 1-4"
+    },
+    {
+      "week": 6,
+      "topic": "MIDTERM BREAK",
+      "content": "Holiday"
+    },
+    {
+      "week": 7,
+      "topic": "Game Development Project I",
+      "content": "Complete game development cycle. Game design\ndocument creation. Choosing game genre.\nDesigning characters and levels. Planning game\nmechanics. Storyboarding. Asset creation or\nsourcing."
+    },
+    {
+      "week": 8,
+      "topic": "Game Development Project II Programming game logic. Adding multiple levels.",
+      "content": "Implementing game in Scratch or Pictoblox.\nScore systems and lives. Game testing and\ndebugging. Sound effects and music."
+    },
+    {
+      "week": 9,
+      "topic": "Technology and Society",
+      "content": "Technology impact on daily life. Digital divide:\naccess inequality. Technology careers overview.\nEthical technology use. Environmental impact of\ntechnology. E-waste awareness. Sustainable\ntechnology practices."
+    },
+    {
+      "week": 10,
+      "topic": "Preparing for Digital Future ( computing. Skills for future: coding, creativity,",
+      "content": "Future technology trends: VR, AR, IoT, quantum\ncritical thinking, collaboration. Continuous learning\nimportance. Building digital portfolio. Resources for\nfurther learning. Transition to secondary school\nICT."
+    },
+    {
+      "week": 11,
+      "topic": "REVISION digital literacy curriculum. Final capstone projects combining multiple skills. Presentations and demonstrations.",
+      "content": "Comprehensive review of entire primary school"
+    },
+    {
+      "week": 12,
+      "topic": "EXAMINATION End of T Primary School Final Examination (Theory and Practical)",
+      "content": "hird Term/Annual Examination and"
+    },
+    {
+      "week": 13,
+      "topic": "CLOSING/GRADUATION Report d to secondary school",
+      "content": "istribution, awards ceremony, graduation"
+    }
+  ]
+}

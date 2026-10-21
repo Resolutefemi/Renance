@@ -1,0 +1,2551 @@
+{
+ "body": "jamb",
+ "subject": "mathematics",
+ "title": "Mathematics",
+ "unitTitles": [
+  "Number, Indices and Financial Maths",
+  "Algebra and Quadratics",
+  "Inequalities, Sequences and Coordinates",
+  "Geometry and Trigonometry",
+  "Calculus and Statistics",
+  "Probability, Vectors and Logic",
+  "Indices, Logarithms and Surds Mastery",
+  "Algebraic Mastery",
+  "Quadratics Problem Clinic",
+  "Sequences, Series and Progressions",
+  "Coordinate Geometry Mastery",
+  "Circle Geometry Theorems",
+  "Trigonometry Mastery",
+  "Mensuration Mastery",
+  "Statistics Mastery I",
+  "Statistics Mastery II and Probability",
+  "Permutations and Combinations",
+  "Vectors and Transformations",
+  "Calculus: Differentiation Clinic",
+  "Calculus: Integration Clinic",
+  "Number Theory and Modular Ideas",
+  "Set Theory in Depth",
+  "Financial Mathematics",
+  "Everyday Arithmetic in Nigeria",
+  "Logic and Reasoning",
+  "Graphs and Functions Workshop",
+  "Structured Revision: Set A",
+  "Structured Revision: Set B",
+  "Calculations Workshop",
+  "JAMB Masterclass: Final Lap"
+ ],
+ "topics": [
+  {
+   "title": "Number systems and the real number line",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "natural numbers",
+    "integers",
+    "rational numbers",
+    "real numbers"
+   ]
+  },
+  {
+   "title": "Number bases: conversion and arithmetic",
+   "category": "Methods",
+   "keywords": [
+    "base",
+    "binary",
+    "conversion",
+    "base two"
+   ]
+  },
+  {
+   "title": "Fractions, decimals and approximations",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "fractions",
+    "decimals",
+    "significant figures",
+    "decimal places"
+   ]
+  },
+  {
+   "title": "Laws of indices and their applications",
+   "category": "Theory",
+   "keywords": [
+    "indices",
+    "powers",
+    "index laws",
+    "exponents"
+   ]
+  },
+  {
+   "title": "Logarithms, characteristics and mantissa",
+   "category": "Theory",
+   "keywords": [
+    "logarithms",
+    "antilogarithms",
+    "common logarithms",
+    "base ten"
+   ]
+  },
+  {
+   "title": "Surds: simplification and rationalisation",
+   "category": "Methods",
+   "keywords": [
+    "surds",
+    "rationalise",
+    "conjugate",
+    "simplify"
+   ]
+  },
+  {
+   "title": "Sets: types, union and intersection",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "sets",
+    "union",
+    "intersection",
+    "complement"
+   ]
+  },
+  {
+   "title": "Venn diagrams and set problem solving",
+   "category": "Methods",
+   "keywords": [
+    "venn diagram",
+    "subset",
+    "universal set",
+    "elements"
+   ]
+  },
+  {
+   "title": "Percentages, profit, loss and discount",
+   "category": "Applications",
+   "keywords": [
+    "percentage",
+    "profit",
+    "loss",
+    "discount"
+   ]
+  },
+  {
+   "title": "Simple interest and compound interest",
+   "category": "Applications",
+   "keywords": [
+    "simple interest",
+    "compound interest",
+    "principal",
+    "rate"
+   ]
+  },
+  {
+   "title": "Ratio, rates and proportional division",
+   "category": "Methods",
+   "keywords": [
+    "ratio",
+    "rate",
+    "proportion",
+    "share"
+   ]
+  },
+  {
+   "title": "Direct, inverse and joint variation",
+   "category": "Theory",
+   "keywords": [
+    "variation",
+    "direct variation",
+    "inverse variation",
+    "joint variation",
+    "constant"
+   ]
+  },
+  {
+   "title": "Nigerian currency and financial calculations",
+   "category": "Nigerian Context",
+   "keywords": [
+    "naira",
+    "kobo",
+    "currency",
+    "value added tax"
+   ]
+  },
+  {
+   "title": "Algebraic expressions and expansion",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "expansion",
+    "algebraic expression",
+    "binomial",
+    "brackets"
+   ]
+  },
+  {
+   "title": "Factorisation: common factors and grouping",
+   "category": "Methods",
+   "keywords": [
+    "factorisation",
+    "grouping",
+    "common factor",
+    "difference of two squares"
+   ]
+  },
+  {
+   "title": "Quadratic expressions: completing the square",
+   "category": "Methods",
+   "keywords": [
+    "completing the square",
+    "quadratic expression",
+    "perfect square"
+   ]
+  },
+  {
+   "title": "Linear equations and word problems",
+   "category": "Methods",
+   "keywords": [
+    "linear equation",
+    "unknown",
+    "word problems",
+    "solve"
+   ]
+  },
+  {
+   "title": "Quadratic equations and their roots",
+   "category": "Theory",
+   "keywords": [
+    "quadratic equation",
+    "roots",
+    "factorisation",
+    "formula"
+   ]
+  },
+  {
+   "title": "Nature of roots and the discriminant",
+   "category": "Theory",
+   "keywords": [
+    "discriminant",
+    "roots",
+    "real roots",
+    "equal roots"
+   ]
+  },
+  {
+   "title": "Simultaneous linear and quadratic equations",
+   "category": "Methods",
+   "keywords": [
+    "simultaneous equations",
+    "elimination",
+    "substitution"
+   ]
+  },
+  {
+   "title": "Inequalities and number line solutions",
+   "category": "Theory",
+   "keywords": [
+    "inequalities",
+    "number line",
+    "solution set"
+   ]
+  },
+  {
+   "title": "Linear programming and feasible regions",
+   "category": "Applications",
+   "keywords": [
+    "linear programming",
+    "feasible region",
+    "constraints",
+    "optimal"
+   ]
+  },
+  {
+   "title": "Sequences and series: patterns of numbers",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "sequence",
+    "series",
+    "pattern",
+    "nth term"
+   ]
+  },
+  {
+   "title": "Arithmetic progression and its sum",
+   "category": "Theory",
+   "keywords": [
+    "arithmetic progression",
+    "common difference",
+    "nth term",
+    "sum"
+   ]
+  },
+  {
+   "title": "Geometric progression (GP) and sum to infinity",
+   "category": "Theory",
+   "keywords": [
+    "geometric progression",
+    "common ratio",
+    "sum to infinity",
+    "nth term"
+   ]
+  },
+  {
+   "title": "Binary operations and identity elements",
+   "category": "Theory",
+   "keywords": [
+    "binary operation",
+    "identity",
+    "closure",
+    "commutative"
+   ]
+  },
+  {
+   "title": "Algebraic fractions and operations",
+   "category": "Methods",
+   "keywords": [
+    "algebraic fractions",
+    "simplify",
+    "denominator"
+   ]
+  },
+  {
+   "title": "Functions, mappings and relations",
+   "category": "Theory",
+   "keywords": [
+    "functions",
+    "mapping",
+    "relation",
+    "domain",
+    "range"
+   ]
+  },
+  {
+   "title": "Coordinate geometry: distance and midpoint",
+   "category": "Methods",
+   "keywords": [
+    "coordinate geometry",
+    "distance",
+    "midpoint",
+    "gradient"
+   ]
+  },
+  {
+   "title": "Equation of a straight line and gradients",
+   "category": "Theory",
+   "keywords": [
+    "straight line",
+    "gradient",
+    "intercept",
+    "equation of line"
+   ]
+  },
+  {
+   "title": "Circle geometry: chords, arcs and theorems",
+   "category": "Theory",
+   "keywords": [
+    "circle",
+    "chord",
+    "arc",
+    "theorems",
+    "cyclic quadrilateral"
+   ]
+  },
+  {
+   "title": "Angles, polygons and their properties",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "angles",
+    "polygons",
+    "interior angles",
+    "exterior angles"
+   ]
+  },
+  {
+   "title": "Triangles: congruence and similarity",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "triangles",
+    "congruent",
+    "similar",
+    "isosceles"
+   ]
+  },
+  {
+   "title": "Bearings, distances and navigation",
+   "category": "Applications",
+   "keywords": [
+    "bearings",
+    "distance",
+    "navigation",
+    "three figure bearing"
+   ]
+  },
+  {
+   "title": "Mensuration: perimeter and area of plane shapes",
+   "category": "Methods",
+   "keywords": [
+    "perimeter",
+    "area",
+    "rectangle",
+    "triangle",
+    "trapezium"
+   ]
+  },
+  {
+   "title": "Mensuration: surface area and volume of solids",
+   "category": "Methods",
+   "keywords": [
+    "volume",
+    "surface area",
+    "cylinder",
+    "cone",
+    "sphere"
+   ]
+  },
+  {
+   "title": "Length of arcs and area of sectors",
+   "category": "Methods",
+   "keywords": [
+    "arc length",
+    "sector",
+    "radians",
+    "circle"
+   ]
+  },
+  {
+   "title": "Introduction to trigonometric ratios",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "sine",
+    "cosine",
+    "tangent",
+    "trigonometry",
+    "ratios"
+   ]
+  },
+  {
+   "title": "Angles of elevation and depression",
+   "category": "Applications",
+   "keywords": [
+    "elevation",
+    "depression",
+    "angle",
+    "tower"
+   ]
+  },
+  {
+   "title": "Sine and cosine rules, area of triangles",
+   "category": "Theory",
+   "keywords": [
+    "sine rule",
+    "cosine rule",
+    "area of triangle"
+   ]
+  },
+  {
+   "title": "Trigonometric identities and graphs",
+   "category": "Theory",
+   "keywords": [
+    "identities",
+    "trigonometric graphs",
+    "amplitude",
+    "period"
+   ]
+  },
+  {
+   "title": "Differentiation: limits and rates of change",
+   "category": "Theory",
+   "keywords": [
+    "differentiation",
+    "limits",
+    "rate of change",
+    "gradient"
+   ]
+  },
+  {
+   "title": "Techniques of differentiation: product and quotient",
+   "category": "Theory",
+   "keywords": [
+    "product rule",
+    "quotient rule",
+    "chain rule",
+    "differentiate"
+   ]
+  },
+  {
+   "title": "Applications of differentiation: maxima and minima",
+   "category": "Applications",
+   "keywords": [
+    "maxima",
+    "minima",
+    "maximum",
+    "minimum",
+    "optimisation"
+   ]
+  },
+  {
+   "title": "Integration as reverse of differentiation",
+   "category": "Theory",
+   "keywords": [
+    "integration",
+    "indefinite integral",
+    "antiderivative"
+   ]
+  },
+  {
+   "title": "Definite integrals and areas under curves",
+   "category": "Applications",
+   "keywords": [
+    "definite integral",
+    "area under curve",
+    "integration"
+   ]
+  },
+  {
+   "title": "Statistics: data collection and presentation",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "data",
+    "bar chart",
+    "pie chart",
+    "histogram",
+    "frequency"
+   ]
+  },
+  {
+   "title": "Measures of central tendency: mean, median, mode",
+   "category": "Methods",
+   "keywords": [
+    "mean",
+    "median",
+    "mode",
+    "average"
+   ]
+  },
+  {
+   "title": "Dispersion: range, variance and standard deviation",
+   "category": "Theory",
+   "keywords": [
+    "range",
+    "variance",
+    "standard deviation",
+    "mean deviation"
+   ]
+  },
+  {
+   "title": "Cumulative frequency and quartiles",
+   "category": "Methods",
+   "keywords": [
+    "cumulative frequency",
+    "quartiles",
+    "ogive",
+    "percentiles"
+   ]
+  },
+  {
+   "title": "Probability: simple and combined events",
+   "category": "Theory",
+   "keywords": [
+    "probability",
+    "events",
+    "mutually exclusive",
+    "independent"
+   ]
+  },
+  {
+   "title": "Permutations, combinations and arrangements",
+   "category": "Methods",
+   "keywords": [
+    "permutation",
+    "combination",
+    "arrangement",
+    "factorial"
+   ]
+  },
+  {
+   "title": "Vectors in a plane and their operations",
+   "category": "Theory",
+   "keywords": [
+    "vectors",
+    "magnitude",
+    "direction",
+    "resultant"
+   ]
+  },
+  {
+   "title": "Loci and construction in the plane",
+   "category": "Applications",
+   "keywords": [
+    "locus",
+    "construction",
+    "perpendicular bisector",
+    "compass"
+   ]
+  },
+  {
+   "title": "Logical reasoning and simple statements",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "logic",
+    "statements",
+    "truth table",
+    "negation"
+   ]
+  },
+  {
+   "title": "Everyday arithmetic: rates, bills and budgeting",
+   "category": "Nigerian Context",
+   "keywords": [
+    "electricity bill",
+    "budget",
+    "bills",
+    "exchange rate"
+   ]
+  },
+  {
+   "title": "Statistics in Nigerian planning and everyday life",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "statistics",
+    "census",
+    "planning",
+    "population"
+   ]
+  },
+  {
+   "title": "Examination drill: mathematics past questions by topic",
+   "category": "Applications",
+   "keywords": [
+    "past questions",
+    "revision",
+    "examination",
+    "jamb"
+   ]
+  },
+  {
+   "title": "Venn diagrams with three sets revisited",
+   "category": "Methods",
+   "keywords": [
+    "Venn diagrams",
+    "three sets"
+   ]
+  },
+  {
+   "title": "Vector geometry: simple proofs",
+   "category": "Theory",
+   "keywords": [
+    "vector geometry",
+    "proofs"
+   ]
+  },
+  {
+   "title": "Exponential equations with equal bases",
+   "category": "Methods",
+   "keywords": [
+    "exponential equations",
+    "bases"
+   ]
+  },
+  {
+   "title": "Log laws: product, quotient and power",
+   "category": "Methods",
+   "keywords": [
+    "log laws",
+    "product rule"
+   ]
+  },
+  {
+   "title": "Solving equations with logarithms",
+   "category": "Methods",
+   "keywords": [
+    "logarithms",
+    "equations"
+   ]
+  },
+  {
+   "title": "Logarithmic graphs and their shapes",
+   "category": "Theory",
+   "keywords": [
+    "logarithmic graphs",
+    "shapes"
+   ]
+  },
+  {
+   "title": "Change of base and calculator work",
+   "category": "Methods",
+   "keywords": [
+    "change of base",
+    "calculator"
+   ]
+  },
+  {
+   "title": "Rationalising denominators with conjugates",
+   "category": "Methods",
+   "keywords": [
+    "rationalise",
+    "conjugate"
+   ]
+  },
+  {
+   "title": "Nested surds and simplification strategies",
+   "category": "Methods",
+   "keywords": [
+    "nested surds",
+    "simplification"
+   ]
+  },
+  {
+   "title": "Standard form and order of magnitude",
+   "category": "Methods",
+   "keywords": [
+    "standard form",
+    "magnitude"
+   ]
+  },
+  {
+   "title": "Growth and decay exponential models",
+   "category": "Applications",
+   "keywords": [
+    "exponential growth",
+    "decay"
+   ]
+  },
+  {
+   "title": "Examination drill: indices and logs past questions",
+   "category": "Applications",
+   "keywords": [
+    "indices",
+    "logarithms",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Factorising harder quadratics by inspection",
+   "category": "Methods",
+   "keywords": [
+    "factorise",
+    "quadratics"
+   ]
+  },
+  {
+   "title": "The factor and remainder theorems",
+   "category": "Theory",
+   "keywords": [
+    "factor theorem",
+    "remainder theorem"
+   ]
+  },
+  {
+   "title": "Polynomial division and identity work",
+   "category": "Methods",
+   "keywords": [
+    "polynomial division",
+    "identities"
+   ]
+  },
+  {
+   "title": "Symmetric functions of quadratic roots",
+   "category": "Theory",
+   "keywords": [
+    "symmetric functions",
+    "roots"
+   ]
+  },
+  {
+   "title": "Forming equations from given roots",
+   "category": "Methods",
+   "keywords": [
+    "forming equations",
+    "roots"
+   ]
+  },
+  {
+   "title": "Algebraic fractions: combined operations",
+   "category": "Methods",
+   "keywords": [
+    "algebraic fractions",
+    "operations"
+   ]
+  },
+  {
+   "title": "Substitution: positive, negative, fractional",
+   "category": "Methods",
+   "keywords": [
+    "substitution",
+    "fractions"
+   ]
+  },
+  {
+   "title": "Change of subject in harder formulae",
+   "category": "Methods",
+   "keywords": [
+    "change of subject",
+    "formulae"
+   ]
+  },
+  {
+   "title": "Word problems leading to equations",
+   "category": "Applications",
+   "keywords": [
+    "word problems",
+    "equations"
+   ]
+  },
+  {
+   "title": "Examination drill: algebra past questions",
+   "category": "Applications",
+   "keywords": [
+    "algebra",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Solving quadratics by all four methods",
+   "category": "Methods",
+   "keywords": [
+    "quadratics",
+    "solving"
+   ]
+  },
+  {
+   "title": "Discriminant problems: nature of roots",
+   "category": "Methods",
+   "keywords": [
+    "discriminant",
+    "nature of roots"
+   ]
+  },
+  {
+   "title": "Maxima and minima by completing squares",
+   "category": "Methods",
+   "keywords": [
+    "completing squares",
+    "maxima"
+   ]
+  },
+  {
+   "title": "Quadratic graphs: sketching and reading",
+   "category": "Methods",
+   "keywords": [
+    "quadratic graphs",
+    "sketching"
+   ]
+  },
+  {
+   "title": "Symmetry properties of parabolas",
+   "category": "Theory",
+   "keywords": [
+    "parabola",
+    "symmetry"
+   ]
+  },
+  {
+   "title": "Quadratic inequalities and shaded regions",
+   "category": "Methods",
+   "keywords": [
+    "inequalities",
+    "regions"
+   ]
+  },
+  {
+   "title": "Applied quadratics: area and motion",
+   "category": "Applications",
+   "keywords": [
+    "quadratics",
+    "area",
+    "motion"
+   ]
+  },
+  {
+   "title": "Sum and product of roots drills",
+   "category": "Methods",
+   "keywords": [
+    "sum of roots",
+    "product of roots"
+   ]
+  },
+  {
+   "title": "Intersection of a line and a parabola",
+   "category": "Methods",
+   "keywords": [
+    "intersection",
+    "parabola"
+   ]
+  },
+  {
+   "title": "Examination drill: quadratics past questions",
+   "category": "Applications",
+   "keywords": [
+    "quadratics",
+    "past questions"
+   ]
+  },
+  {
+   "title": "nth term drills for AP and GP",
+   "category": "Methods",
+   "keywords": [
+    "nth term",
+    "AP",
+    "GP"
+   ]
+  },
+  {
+   "title": "Sum of an AP: applications",
+   "category": "Methods",
+   "keywords": [
+    "sum of AP",
+    "applications"
+   ]
+  },
+  {
+   "title": "Sum of GP and sum to infinity",
+   "category": "Methods",
+   "keywords": [
+    "sum of GP",
+    "infinity"
+   ]
+  },
+  {
+   "title": "Recurrence relations and generating terms",
+   "category": "Theory",
+   "keywords": [
+    "recurrence",
+    "relations"
+   ]
+  },
+  {
+   "title": "Arithmetic mean and geometric mean",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "arithmetic mean",
+    "geometric mean"
+   ]
+  },
+  {
+   "title": "Mixed problems: AP meets GP",
+   "category": "Methods",
+   "keywords": [
+    "mixed",
+    "AP",
+    "GP"
+   ]
+  },
+  {
+   "title": "Savings plans modelled with AP",
+   "category": "Applications",
+   "keywords": [
+    "savings",
+    "AP"
+   ]
+  },
+  {
+   "title": "Compound growth modelled with GP",
+   "category": "Applications",
+   "keywords": [
+    "compound growth",
+    "GP"
+   ]
+  },
+  {
+   "title": "Pattern sequences from diagrams",
+   "category": "Applications",
+   "keywords": [
+    "patterns",
+    "sequences"
+   ]
+  },
+  {
+   "title": "Examination drill: sequences past questions",
+   "category": "Applications",
+   "keywords": [
+    "sequences",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Gradients: parallel and perpendicular lines",
+   "category": "Methods",
+   "keywords": [
+    "gradient",
+    "perpendicular"
+   ]
+  },
+  {
+   "title": "Equation of a line: all the forms",
+   "category": "Methods",
+   "keywords": [
+    "equation of line",
+    "forms"
+   ]
+  },
+  {
+   "title": "Intersection points of two lines",
+   "category": "Methods",
+   "keywords": [
+    "intersection",
+    "lines"
+   ]
+  },
+  {
+   "title": "Distance and midpoint applications",
+   "category": "Methods",
+   "keywords": [
+    "distance",
+    "midpoint"
+   ]
+  },
+  {
+   "title": "Locus problems on the plane",
+   "category": "Methods",
+   "keywords": [
+    "locus",
+    "plane"
+   ]
+  },
+  {
+   "title": "Areas of triangles from coordinates",
+   "category": "Methods",
+   "keywords": [
+    "triangle area",
+    "coordinates"
+   ]
+  },
+  {
+   "title": "Coordinate proofs of geometric properties",
+   "category": "Theory",
+   "keywords": [
+    "coordinate proof",
+    "properties"
+   ]
+  },
+  {
+   "title": "The perpendicular bisector in problems",
+   "category": "Methods",
+   "keywords": [
+    "perpendicular bisector"
+   ]
+  },
+  {
+   "title": "Families of lines through a point",
+   "category": "Theory",
+   "keywords": [
+    "family of lines",
+    "point"
+   ]
+  },
+  {
+   "title": "Examination drill: coordinate geometry past questions",
+   "category": "Applications",
+   "keywords": [
+    "coordinate geometry",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Angle at centre and circumference theorems",
+   "category": "Theory",
+   "keywords": [
+    "angle at centre",
+    "circumference"
+   ]
+  },
+  {
+   "title": "Cyclic quadrilaterals and their angles",
+   "category": "Theory",
+   "keywords": [
+    "cyclic quadrilateral",
+    "angles"
+   ]
+  },
+  {
+   "title": "Tangent and radius properties",
+   "category": "Theory",
+   "keywords": [
+    "tangent",
+    "radius"
+   ]
+  },
+  {
+   "title": "Alternate segment theorem applications",
+   "category": "Theory",
+   "keywords": [
+    "alternate segment",
+    "theorem"
+   ]
+  },
+  {
+   "title": "Intersecting chords theorem problems",
+   "category": "Methods",
+   "keywords": [
+    "intersecting chords",
+    "theorem"
+   ]
+  },
+  {
+   "title": "Arc length and sector area drills",
+   "category": "Methods",
+   "keywords": [
+    "arc length",
+    "sector area"
+   ]
+  },
+  {
+   "title": "Writing proofs with circle theorems",
+   "category": "Methods",
+   "keywords": [
+    "proofs",
+    "circle theorems"
+   ]
+  },
+  {
+   "title": "Combined circle and triangle problems",
+   "category": "Applications",
+   "keywords": [
+    "circle",
+    "triangle"
+   ]
+  },
+  {
+   "title": "Tangents drawn from external points",
+   "category": "Methods",
+   "keywords": [
+    "tangents",
+    "external points"
+   ]
+  },
+  {
+   "title": "Examination drill: circle theorems past questions",
+   "category": "Applications",
+   "keywords": [
+    "circle theorems",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Special angles and exact values",
+   "category": "Methods",
+   "keywords": [
+    "special angles",
+    "exact values"
+   ]
+  },
+  {
+   "title": "Graphs of sine, cosine and tangent",
+   "category": "Theory",
+   "keywords": [
+    "sine graphs",
+    "cosine graphs"
+   ]
+  },
+  {
+   "title": "Solving simple trigonometric equations",
+   "category": "Methods",
+   "keywords": [
+    "trigonometric equations"
+   ]
+  },
+  {
+   "title": "Amplitude, period and phase shifts",
+   "category": "Theory",
+   "keywords": [
+    "amplitude",
+    "period"
+   ]
+  },
+  {
+   "title": "Sine rule: finding sides and angles",
+   "category": "Methods",
+   "keywords": [
+    "sine rule",
+    "sides"
+   ]
+  },
+  {
+   "title": "Cosine rule in non-right triangles",
+   "category": "Methods",
+   "keywords": [
+    "cosine rule",
+    "triangles"
+   ]
+  },
+  {
+   "title": "Area of triangles: half ab sin C",
+   "category": "Methods",
+   "keywords": [
+    "area of triangle",
+    "sin C"
+   ]
+  },
+  {
+   "title": "Bearings problems with trigonometry",
+   "category": "Applications",
+   "keywords": [
+    "bearings",
+    "trigonometry"
+   ]
+  },
+  {
+   "title": "Elevation angles in real scenes",
+   "category": "Applications",
+   "keywords": [
+    "elevation",
+    "angles"
+   ]
+  },
+  {
+   "title": "Examination drill: trigonometry past questions",
+   "category": "Applications",
+   "keywords": [
+    "trigonometry",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Areas of composite plane figures",
+   "category": "Methods",
+   "keywords": [
+    "composite areas",
+    "figures"
+   ]
+  },
+  {
+   "title": "Surface area of cones and pyramids",
+   "category": "Methods",
+   "keywords": [
+    "surface area",
+    "cones"
+   ]
+  },
+  {
+   "title": "Volume of cones, spheres and frustums",
+   "category": "Methods",
+   "keywords": [
+    "volume",
+    "spheres",
+    "frustums"
+   ]
+  },
+  {
+   "title": "Density and volume applications",
+   "category": "Applications",
+   "keywords": [
+    "density",
+    "volume"
+   ]
+  },
+  {
+   "title": "Cross-sections and rates of filling",
+   "category": "Applications",
+   "keywords": [
+    "cross-sections",
+    "filling"
+   ]
+  },
+  {
+   "title": "Sector-based perimeter problems",
+   "category": "Methods",
+   "keywords": [
+    "sector perimeter",
+    "problems"
+   ]
+  },
+  {
+   "title": "Solids of uniform cross-section",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "uniform cross-section",
+    "solids"
+   ]
+  },
+  {
+   "title": "Scale models and volume ratios",
+   "category": "Methods",
+   "keywords": [
+    "scale models",
+    "ratios"
+   ]
+  },
+  {
+   "title": "Water tank capacity problems",
+   "category": "Applications",
+   "keywords": [
+    "tank capacity",
+    "problems"
+   ]
+  },
+  {
+   "title": "Examination drill: mensuration past questions",
+   "category": "Applications",
+   "keywords": [
+    "mensuration",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Mean for grouped and ungrouped data",
+   "category": "Methods",
+   "keywords": [
+    "mean",
+    "grouped data"
+   ]
+  },
+  {
+   "title": "Median and mode from frequency tables",
+   "category": "Methods",
+   "keywords": [
+    "median",
+    "mode"
+   ]
+  },
+  {
+   "title": "The assumed mean method in practice",
+   "category": "Methods",
+   "keywords": [
+    "assumed mean",
+    "method"
+   ]
+  },
+  {
+   "title": "Range, variance and standard deviation drills",
+   "category": "Methods",
+   "keywords": [
+    "variance",
+    "standard deviation"
+   ]
+  },
+  {
+   "title": "Quartiles and the interquartile range",
+   "category": "Methods",
+   "keywords": [
+    "quartiles",
+    "interquartile range"
+   ]
+  },
+  {
+   "title": "Reading cumulative frequency curves",
+   "category": "Methods",
+   "keywords": [
+    "cumulative frequency",
+    "curves"
+   ]
+  },
+  {
+   "title": "Box plots and spotting outliers",
+   "category": "Methods",
+   "keywords": [
+    "box plots",
+    "outliers"
+   ]
+  },
+  {
+   "title": "Comparing distributions with statistics",
+   "category": "Theory",
+   "keywords": [
+    "comparing distributions"
+   ]
+  },
+  {
+   "title": "Weighted means in real contexts",
+   "category": "Applications",
+   "keywords": [
+    "weighted mean",
+    "contexts"
+   ]
+  },
+  {
+   "title": "Examination drill: statistics past questions",
+   "category": "Applications",
+   "keywords": [
+    "statistics",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Sample space construction and listing",
+   "category": "Methods",
+   "keywords": [
+    "sample space",
+    "listing"
+   ]
+  },
+  {
+   "title": "Probability of single and combined events",
+   "category": "Methods",
+   "keywords": [
+    "probability",
+    "combined events"
+   ]
+  },
+  {
+   "title": "Mutually exclusive versus independent events",
+   "category": "Theory",
+   "keywords": [
+    "mutually exclusive",
+    "independent"
+   ]
+  },
+  {
+   "title": "Tree diagrams for successive events",
+   "category": "Methods",
+   "keywords": [
+    "tree diagrams",
+    "events"
+   ]
+  },
+  {
+   "title": "Conditional probability: an introduction",
+   "category": "Theory",
+   "keywords": [
+    "conditional probability"
+   ]
+  },
+  {
+   "title": "Probability from Venn diagrams",
+   "category": "Methods",
+   "keywords": [
+    "probability",
+    "Venn diagrams"
+   ]
+  },
+  {
+   "title": "Experimental versus theoretical probability",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "experimental probability",
+    "theoretical"
+   ]
+  },
+  {
+   "title": "Probability in games and lotteries",
+   "category": "Applications",
+   "keywords": [
+    "probability",
+    "games"
+   ]
+  },
+  {
+   "title": "Expected value in simple cases",
+   "category": "Methods",
+   "keywords": [
+    "expected value"
+   ]
+  },
+  {
+   "title": "Examination drill: probability past questions",
+   "category": "Applications",
+   "keywords": [
+    "probability",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Factorial notation and arrangements",
+   "category": "Methods",
+   "keywords": [
+    "factorial",
+    "arrangements"
+   ]
+  },
+  {
+   "title": "Permutations without repetition",
+   "category": "Methods",
+   "keywords": [
+    "permutations",
+    "repetition"
+   ]
+  },
+  {
+   "title": "Permutations with restrictions",
+   "category": "Methods",
+   "keywords": [
+    "permutations",
+    "restrictions"
+   ]
+  },
+  {
+   "title": "Combinations: selecting groups",
+   "category": "Methods",
+   "keywords": [
+    "combinations",
+    "selection"
+   ]
+  },
+  {
+   "title": "Choosing permutation or combination",
+   "category": "Methods",
+   "keywords": [
+    "permutation or combination"
+   ]
+  },
+  {
+   "title": "Simple circular arrangements",
+   "category": "Methods",
+   "keywords": [
+    "circular arrangements"
+   ]
+  },
+  {
+   "title": "Committee selection problems",
+   "category": "Applications",
+   "keywords": [
+    "committee",
+    "selection"
+   ]
+  },
+  {
+   "title": "Probability computed with combinations",
+   "category": "Methods",
+   "keywords": [
+    "probability",
+    "combinations"
+   ]
+  },
+  {
+   "title": "Arranging words with repeated letters",
+   "category": "Methods",
+   "keywords": [
+    "repeated letters",
+    "words"
+   ]
+  },
+  {
+   "title": "Examination drill: permutations past questions",
+   "category": "Applications",
+   "keywords": [
+    "permutations",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Vector addition and the triangle law",
+   "category": "Theory",
+   "keywords": [
+    "vector addition",
+    "triangle law"
+   ]
+  },
+  {
+   "title": "Position vectors and direction",
+   "category": "Theory",
+   "keywords": [
+    "position vectors",
+    "direction"
+   ]
+  },
+  {
+   "title": "Magnitude and unit vectors",
+   "category": "Methods",
+   "keywords": [
+    "magnitude",
+    "unit vectors"
+   ]
+  },
+  {
+   "title": "Vectors written in component form",
+   "category": "Methods",
+   "keywords": [
+    "component form",
+    "vectors"
+   ]
+  },
+  {
+   "title": "Testing parallel and collinear points",
+   "category": "Methods",
+   "keywords": [
+    "parallel vectors",
+    "collinear"
+   ]
+  },
+  {
+   "title": "Simple vector geometry proofs",
+   "category": "Theory",
+   "keywords": [
+    "vector proofs",
+    "geometry"
+   ]
+  },
+  {
+   "title": "Reflection as a transformation",
+   "category": "Theory",
+   "keywords": [
+    "reflection",
+    "transformation"
+   ]
+  },
+  {
+   "title": "Rotation about the origin",
+   "category": "Theory",
+   "keywords": [
+    "rotation",
+    "origin"
+   ]
+  },
+  {
+   "title": "Translation and enlargement effects",
+   "category": "Theory",
+   "keywords": [
+    "translation",
+    "enlargement"
+   ]
+  },
+  {
+   "title": "Examination drill: vectors past questions",
+   "category": "Applications",
+   "keywords": [
+    "vectors",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Gradient of a curve from first principles",
+   "category": "Methods",
+   "keywords": [
+    "first principles",
+    "gradient"
+   ]
+  },
+  {
+   "title": "Power rule drills on polynomials",
+   "category": "Methods",
+   "keywords": [
+    "power rule",
+    "polynomials"
+   ]
+  },
+  {
+   "title": "Differentiating products: simple cases",
+   "category": "Methods",
+   "keywords": [
+    "product rule",
+    "differentiation"
+   ]
+  },
+  {
+   "title": "Quotient rule: guided practice",
+   "category": "Methods",
+   "keywords": [
+    "quotient rule",
+    "practice"
+   ]
+  },
+  {
+   "title": "Chain rule with composite functions",
+   "category": "Methods",
+   "keywords": [
+    "chain rule",
+    "composite"
+   ]
+  },
+  {
+   "title": "Tangents and normals to curves",
+   "category": "Methods",
+   "keywords": [
+    "tangents",
+    "normals"
+   ]
+  },
+  {
+   "title": "Stationary points: maxima and minima",
+   "category": "Methods",
+   "keywords": [
+    "stationary points",
+    "maxima"
+   ]
+  },
+  {
+   "title": "Rates of change applications",
+   "category": "Applications",
+   "keywords": [
+    "rates of change"
+   ]
+  },
+  {
+   "title": "Second derivatives and concavity",
+   "category": "Theory",
+   "keywords": [
+    "second derivative",
+    "concavity"
+   ]
+  },
+  {
+   "title": "Examination drill: differentiation past questions",
+   "category": "Applications",
+   "keywords": [
+    "differentiation",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Indefinite integration of polynomials",
+   "category": "Methods",
+   "keywords": [
+    "indefinite integration",
+    "polynomials"
+   ]
+  },
+  {
+   "title": "Evaluating definite integrals",
+   "category": "Methods",
+   "keywords": [
+    "definite integrals",
+    "evaluation"
+   ]
+  },
+  {
+   "title": "Areas under curves and axes",
+   "category": "Methods",
+   "keywords": [
+    "area under curve",
+    "axes"
+   ]
+  },
+  {
+   "title": "Areas between curves: simple cases",
+   "category": "Methods",
+   "keywords": [
+    "area between curves"
+   ]
+  },
+  {
+   "title": "Integration as accumulation: motion",
+   "category": "Theory",
+   "keywords": [
+    "integration",
+    "accumulation",
+    "motion"
+   ]
+  },
+  {
+   "title": "Velocity from acceleration integrals",
+   "category": "Methods",
+   "keywords": [
+    "velocity",
+    "acceleration"
+   ]
+  },
+  {
+   "title": "Displacement from velocity integrals",
+   "category": "Methods",
+   "keywords": [
+    "displacement",
+    "velocity"
+   ]
+  },
+  {
+   "title": "The average value of a function",
+   "category": "Theory",
+   "keywords": [
+    "average value",
+    "function"
+   ]
+  },
+  {
+   "title": "Integration in economics contexts",
+   "category": "Applications",
+   "keywords": [
+    "integration",
+    "economics"
+   ]
+  },
+  {
+   "title": "Examination drill: integration past questions",
+   "category": "Applications",
+   "keywords": [
+    "integration",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Divisibility rules and quick proofs",
+   "category": "Methods",
+   "keywords": [
+    "divisibility",
+    "rules"
+   ]
+  },
+  {
+   "title": "HCF and LCM word problems",
+   "category": "Methods",
+   "keywords": [
+    "HCF",
+    "LCM"
+   ]
+  },
+  {
+   "title": "Modular arithmetic: clocks and cycles",
+   "category": "Theory",
+   "keywords": [
+    "modular arithmetic",
+    "clocks"
+   ]
+  },
+  {
+   "title": "Recurring decimals into fractions",
+   "category": "Methods",
+   "keywords": [
+    "recurring decimals",
+    "fractions"
+   ]
+  },
+  {
+   "title": "Rational and irrational number drills",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "rational numbers",
+    "irrational"
+   ]
+  },
+  {
+   "title": "Surds inside geometry problems",
+   "category": "Applications",
+   "keywords": [
+    "surds",
+    "geometry"
+   ]
+  },
+  {
+   "title": "Digit problems and place value",
+   "category": "Methods",
+   "keywords": [
+    "digit problems",
+    "place value"
+   ]
+  },
+  {
+   "title": "Number puzzles from past papers",
+   "category": "Applications",
+   "keywords": [
+    "number puzzles",
+    "past papers"
+   ]
+  },
+  {
+   "title": "Simple Diophantine-style problems",
+   "category": "Methods",
+   "keywords": [
+    "Diophantine",
+    "problems"
+   ]
+  },
+  {
+   "title": "Examination drill: number theory past questions",
+   "category": "Applications",
+   "keywords": [
+    "number theory",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Set notation and building sets",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "set notation",
+    "sets"
+   ]
+  },
+  {
+   "title": "Union, intersection, complement drills",
+   "category": "Methods",
+   "keywords": [
+    "union",
+    "intersection",
+    "complement"
+   ]
+  },
+  {
+   "title": "Three-set Venn diagram problems",
+   "category": "Methods",
+   "keywords": [
+    "three sets",
+    "Venn"
+   ]
+  },
+  {
+   "title": "Turning word problems into set language",
+   "category": "Methods",
+   "keywords": [
+    "word problems",
+    "set language"
+   ]
+  },
+  {
+   "title": "De Morgan's laws in action",
+   "category": "Theory",
+   "keywords": [
+    "de Morgan",
+    "laws"
+   ]
+  },
+  {
+   "title": "Cardinality and inclusion-exclusion",
+   "category": "Methods",
+   "keywords": [
+    "cardinality",
+    "inclusion-exclusion"
+   ]
+  },
+  {
+   "title": "Counting subsets and power sets",
+   "category": "Methods",
+   "keywords": [
+    "subsets",
+    "power set"
+   ]
+  },
+  {
+   "title": "Survey data with Venn diagrams",
+   "category": "Applications",
+   "keywords": [
+    "surveys",
+    "Venn"
+   ]
+  },
+  {
+   "title": "Verifying set identities",
+   "category": "Theory",
+   "keywords": [
+    "set identities",
+    "verification"
+   ]
+  },
+  {
+   "title": "Examination drill: set theory past questions",
+   "category": "Applications",
+   "keywords": [
+    "set theory",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Simple interest: the full problem types",
+   "category": "Methods",
+   "keywords": [
+    "simple interest",
+    "problems"
+   ]
+  },
+  {
+   "title": "Compound interest over n periods",
+   "category": "Methods",
+   "keywords": [
+    "compound interest",
+    "periods"
+   ]
+  },
+  {
+   "title": "Depreciation and asset value over time",
+   "category": "Applications",
+   "keywords": [
+    "depreciation",
+    "asset value"
+   ]
+  },
+  {
+   "title": "Profit, loss, margin and mark-up",
+   "category": "Methods",
+   "keywords": [
+    "profit",
+    "loss",
+    "margin"
+   ]
+  },
+  {
+   "title": "Single and successive discounts",
+   "category": "Methods",
+   "keywords": [
+    "discounts",
+    "successive"
+   ]
+  },
+  {
+   "title": "Commissions and VAT calculations",
+   "category": "Nigerian Context",
+   "keywords": [
+    "commission",
+    "VAT"
+   ]
+  },
+  {
+   "title": "Exchange rates and naira conversions",
+   "category": "Nigerian Context",
+   "keywords": [
+    "exchange rates",
+    "naira"
+   ]
+  },
+  {
+   "title": "Hire purchase: the effective cost",
+   "category": "Applications",
+   "keywords": [
+    "hire purchase",
+    "cost"
+   ]
+  },
+  {
+   "title": "Wages, salaries and overtime pay",
+   "category": "Applications",
+   "keywords": [
+    "wages",
+    "overtime"
+   ]
+  },
+  {
+   "title": "Examination drill: financial maths past questions",
+   "category": "Applications",
+   "keywords": [
+    "financial maths",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Market arithmetic: buying and selling",
+   "category": "Nigerian Context",
+   "keywords": [
+    "market arithmetic",
+    "trading"
+   ]
+  },
+  {
+   "title": "Fuel consumption and distance problems",
+   "category": "Applications",
+   "keywords": [
+    "fuel consumption",
+    "distance"
+   ]
+  },
+  {
+   "title": "Water and electricity billing calculations",
+   "category": "Nigerian Context",
+   "keywords": [
+    "billing",
+    "electricity"
+   ]
+  },
+  {
+   "title": "Data plans and value comparisons",
+   "category": "Nigerian Context",
+   "keywords": [
+    "data plans",
+    "comparisons"
+   ]
+  },
+  {
+   "title": "Time zones and travel planning",
+   "category": "Applications",
+   "keywords": [
+    "time zones",
+    "travel"
+   ]
+  },
+  {
+   "title": "Speed-time-distance on Nigerian journeys",
+   "category": "Applications",
+   "keywords": [
+    "speed",
+    "distance",
+    "time"
+   ]
+  },
+  {
+   "title": "Sharing by ratios: inheritance cases",
+   "category": "Nigerian Context",
+   "keywords": [
+    "ratios",
+    "inheritance"
+   ]
+  },
+  {
+   "title": "Work rates: painters, taps and pipes",
+   "category": "Methods",
+   "keywords": [
+    "work rates",
+    "pipes"
+   ]
+  },
+  {
+   "title": "Mixing problems: solutions and blends",
+   "category": "Methods",
+   "keywords": [
+    "mixing",
+    "solutions"
+   ]
+  },
+  {
+   "title": "Examination drill: everyday arithmetic past questions",
+   "category": "Applications",
+   "keywords": [
+    "arithmetic",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Statements, negation and quantifiers",
+   "category": "Theory",
+   "keywords": [
+    "statements",
+    "negation"
+   ]
+  },
+  {
+   "title": "Conjunction, disjunction and implications",
+   "category": "Theory",
+   "keywords": [
+    "conjunction",
+    "disjunction"
+   ]
+  },
+  {
+   "title": "Truth tables for compound statements",
+   "category": "Methods",
+   "keywords": [
+    "truth tables",
+    "statements"
+   ]
+  },
+  {
+   "title": "Converse, inverse and contrapositive",
+   "category": "Theory",
+   "keywords": [
+    "converse",
+    "contrapositive"
+   ]
+  },
+  {
+   "title": "Valid and invalid deductions",
+   "category": "Theory",
+   "keywords": [
+    "valid deductions",
+    "invalid"
+   ]
+  },
+  {
+   "title": "Conditionals inside word problems",
+   "category": "Applications",
+   "keywords": [
+    "conditionals",
+    "word problems"
+   ]
+  },
+  {
+   "title": "Logical reasoning from past papers",
+   "category": "Applications",
+   "keywords": [
+    "logical reasoning",
+    "past papers"
+   ]
+  },
+  {
+   "title": "Spotting flawed arguments",
+   "category": "Theory",
+   "keywords": [
+    "flawed arguments"
+   ]
+  },
+  {
+   "title": "Translating sentences into symbols",
+   "category": "Methods",
+   "keywords": [
+    "symbols",
+    "translations"
+   ]
+  },
+  {
+   "title": "Examination drill: logic past questions",
+   "category": "Applications",
+   "keywords": [
+    "logic",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Reading linear and quadratic graphs",
+   "category": "Methods",
+   "keywords": [
+    "linear graphs",
+    "quadratic graphs"
+   ]
+  },
+  {
+   "title": "Cubic function shapes and roots",
+   "category": "Theory",
+   "keywords": [
+    "cubic functions",
+    "roots"
+   ]
+  },
+  {
+   "title": "Inverse functions and their graphs",
+   "category": "Theory",
+   "keywords": [
+    "inverse functions",
+    "graphs"
+   ]
+  },
+  {
+   "title": "Evaluating composite functions",
+   "category": "Methods",
+   "keywords": [
+    "composite functions"
+   ]
+  },
+  {
+   "title": "Determining domain and range",
+   "category": "Methods",
+   "keywords": [
+    "domain",
+    "range"
+   ]
+  },
+  {
+   "title": "Solving equations graphically",
+   "category": "Methods",
+   "keywords": [
+    "graphical solution",
+    "equations"
+   ]
+  },
+  {
+   "title": "Transformations of basic graphs",
+   "category": "Theory",
+   "keywords": [
+    "transformations",
+    "graphs"
+   ]
+  },
+  {
+   "title": "Modelling with linear functions",
+   "category": "Applications",
+   "keywords": [
+    "linear models"
+   ]
+  },
+  {
+   "title": "Sketching exponential growth",
+   "category": "Theory",
+   "keywords": [
+    "exponential growth",
+    "sketches"
+   ]
+  },
+  {
+   "title": "Examination drill: functions past questions",
+   "category": "Applications",
+   "keywords": [
+    "functions",
+    "past questions"
+   ]
+  },
+  {
+   "title": "JAMB mathematics paper structure and strategy",
+   "category": "Methods",
+   "keywords": [
+    "JAMB",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Objective questions on number and indices",
+   "category": "Applications",
+   "keywords": [
+    "number",
+    "indices",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on algebra",
+   "category": "Applications",
+   "keywords": [
+    "algebra",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on geometry",
+   "category": "Applications",
+   "keywords": [
+    "geometry",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on trigonometry",
+   "category": "Applications",
+   "keywords": [
+    "trigonometry",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on calculus",
+   "category": "Applications",
+   "keywords": [
+    "calculus",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on statistics",
+   "category": "Applications",
+   "keywords": [
+    "statistics",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on probability",
+   "category": "Applications",
+   "keywords": [
+    "probability",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on vectors",
+   "category": "Applications",
+   "keywords": [
+    "vectors",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on everyday maths",
+   "category": "Applications",
+   "keywords": [
+    "everyday maths",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Timed practice: the 40-question sprint",
+   "category": "Applications",
+   "keywords": [
+    "timed practice",
+    "sprint"
+   ]
+  },
+  {
+   "title": "Review of common wrong options",
+   "category": "Methods",
+   "keywords": [
+    "wrong options",
+    "review"
+   ]
+  },
+  {
+   "title": "Calculator-free calculation drills",
+   "category": "Methods",
+   "keywords": [
+    "calculator-free",
+    "drills"
+   ]
+  },
+  {
+   "title": "Estimating answers before computing",
+   "category": "Methods",
+   "keywords": [
+    "estimation",
+    "answers"
+   ]
+  },
+  {
+   "title": "Elimination techniques for objective questions",
+   "category": "Methods",
+   "keywords": [
+    "elimination",
+    "techniques"
+   ]
+  },
+  {
+   "title": "Working backwards from the options",
+   "category": "Methods",
+   "keywords": [
+    "working backwards",
+    "options"
+   ]
+  },
+  {
+   "title": "Breaking careless error patterns",
+   "category": "Methods",
+   "keywords": [
+    "careless errors",
+    "patterns"
+   ]
+  },
+  {
+   "title": "Algebra misconceptions corrected",
+   "category": "Methods",
+   "keywords": [
+    "misconceptions",
+    "algebra"
+   ]
+  },
+  {
+   "title": "Geometry errors corrected",
+   "category": "Methods",
+   "keywords": [
+    "geometry errors",
+    "corrections"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set B past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Mixed algebra and geometry problems",
+   "category": "Methods",
+   "keywords": [
+    "algebra",
+    "geometry",
+    "problems"
+   ]
+  },
+  {
+   "title": "Trigonometry with bearings combined",
+   "category": "Methods",
+   "keywords": [
+    "trigonometry",
+    "bearings"
+   ]
+  },
+  {
+   "title": "Statistics with probability combined",
+   "category": "Methods",
+   "keywords": [
+    "statistics",
+    "probability"
+   ]
+  },
+  {
+   "title": "Calculus and coordinate geometry combined",
+   "category": "Methods",
+   "keywords": [
+    "calculus",
+    "coordinates"
+   ]
+  },
+  {
+   "title": "Mensuration with ratio combined",
+   "category": "Methods",
+   "keywords": [
+    "mensuration",
+    "ratio"
+   ]
+  },
+  {
+   "title": "Sequences and finance combined",
+   "category": "Methods",
+   "keywords": [
+    "sequences",
+    "finance"
+   ]
+  },
+  {
+   "title": "Vectors and coordinates combined",
+   "category": "Methods",
+   "keywords": [
+    "vectors",
+    "coordinates"
+   ]
+  },
+  {
+   "title": "Surds and indices combined",
+   "category": "Methods",
+   "keywords": [
+    "surds",
+    "indices"
+   ]
+  },
+  {
+   "title": "Functions and graphs combined",
+   "category": "Methods",
+   "keywords": [
+    "functions",
+    "graphs"
+   ]
+  },
+  {
+   "title": "Examination drill: workshop past questions",
+   "category": "Applications",
+   "keywords": [
+    "workshop",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Building the final revision timetable",
+   "category": "Methods",
+   "keywords": [
+    "revision timetable"
+   ]
+  },
+  {
+   "title": "The complete formulae sheet by topic",
+   "category": "Methods",
+   "keywords": [
+    "formulae sheet"
+   ]
+  },
+  {
+   "title": "Standard results to memorise cold",
+   "category": "Methods",
+   "keywords": [
+    "standard results",
+    "memorise"
+   ]
+  },
+  {
+   "title": "The most repeated JAMB maths themes",
+   "category": "Methods",
+   "keywords": [
+    "repeated themes",
+    "JAMB"
+   ]
+  },
+  {
+   "title": "Mock examination: 60 questions in 60 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Marking your mock: error analysis",
+   "category": "Methods",
+   "keywords": [
+    "error analysis",
+    "mock"
+   ]
+  },
+  {
+   "title": "Time management: 40 questions in 40 minutes",
+   "category": "Methods",
+   "keywords": [
+    "time management"
+   ]
+  },
+  {
+   "title": "Shortcut techniques that stay safe",
+   "category": "Methods",
+   "keywords": [
+    "shortcuts",
+    "techniques"
+   ]
+  },
+  {
+   "title": "Handling pressure and blank moments",
+   "category": "Methods",
+   "keywords": [
+    "pressure",
+    "blank moments"
+   ]
+  },
+  {
+   "title": "Exam day strategy and final confidence",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "strategy"
+   ]
+  }
+ ]
+}

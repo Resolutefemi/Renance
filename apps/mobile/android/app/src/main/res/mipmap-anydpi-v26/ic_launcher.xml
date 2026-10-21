@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The 2D FLAT keycap launcher icon (2026-10-19 founder pass): the 3D
+     mark is flattened - uniform #3f9801 border, #58cc02 face, white
+     Nunito-900 R optically centred, no extrusion, no gloss. Doctrine:
+     ONE green keycap for every theme (day AND night ground white, the
+     web favicon rule), so the icon never sits in a black box. The
+     monochrome layer powers the Android 13+ themed icons; the launcher
+     icon itself stays the fixed brand green (Android has no live
+     re-tint API - the seed adaptation lives on the in-app 3D mark,
+     the splash and every surface, exactly like the web favicon
+     repaints only inside the signed-in browser app). -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_background"/>
+    <foreground android:drawable="@mipmap/ic_launcher_foreground"/>
+    <monochrome android:drawable="@mipmap/ic_launcher_monochrome"/>
+</adaptive-icon>

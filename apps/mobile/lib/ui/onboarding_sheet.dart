@@ -1,0 +1,512 @@
+/// Onboarding, the Stitch onboarding_light + exam_target_light flow.
+///
+/// Step 1: "Your exam, your plan" intro carousel page.
+/// Step 2: "Pick your username" - the handle step every fresh account
+///         meets (founder directive 2026-10-02), manual and Google
+///         signups alike, pre-seeded from the account.
+/// Step 3: "What are you preparing for?", the target list (JAMB UTME /
+///         WAEC / NECO / University) + exam year chips.
+/// Step 4: the scholar's details (name / level) the server requires,
+///         then the profile lands and the silent sync kicks.
+library;
+
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../api_client.dart';
+import '../models.dart';
+import '../storage.dart';
+import 'msymbols.dart';
+import 'renance_logo.dart';
+import 'tactile.dart';
+import 'theme.dart';
+
+class OnboardingSheet extends StatefulWidget {
+  const OnboardingSheet({super.key, this.username});
+
+  /// The seeded handle (email-derived, or Google-seeded): the founder
+  /// directive of 2026-10-02 asks for the username right after signup,
+  /// so the sheet opens on the pick-your-handle step pre-filled with
+  /// whatever the account carries today.
+  final String? username;
+
+  @override
+  State<OnboardingSheet> createState() => _OnboardingSheetState();
+}
+
+class _OnboardingSheetState extends State<OnboardingSheet> {
+  int _step = 0;
+
+  late final TextEditingController _handle =
+      TextEditingController(text: widget.username ?? '');
+  String? _targetExam; // server value
+  int? _targetYear;
+  String _fullName = '';
+  String _gradeLevel = 'SS3';
+  bool _busy = false;
+  String? _error;
+
+  /// Same handle rules the server enforces (and the web modal shows).
+  bool get _handleOk =>
+      RegExp(r'^[a-z0-9_]{3,24}$').hasMatch(_handle.text.trim());
+
+  static const List<_TargetOption> _targets = <_TargetOption>[
+    _TargetOption(
+      icon: 'school',
+      title: 'JAMB UTME',
+      subtitle: 'Nigerian university admissions',
+      server: 'JAMB',
+    ),
+    _TargetOption(
+      icon: 'workspace_premium',
+      title: 'WAEC/WASSCE',
+      subtitle: 'West African senior school certificate',
+      server: 'WAEC',
+    ),
+    _TargetOption(
+      icon: 'verified',
+      title: 'NECO',
+      subtitle: 'National examinations council',
+      server: 'NECO',
+    ),
+    _TargetOption(
+      icon: 'fact_check',
+      title: 'Post UTME',
+      subtitle: 'School screening past questions',
+      server: 'POST-UTME',
+    ),
+    _TargetOption(
+      icon: 'account_balance',
+      title: 'School Desk (University)',
+      subtitle: 'Undergraduate semester exams',
+      server: 'University Modules',
+    ),
+  ];
+
+  static const List<int> _years = <int>[2026, 2027, 2028];
+
+  bool get _detailsValid =>
+      _fullName.trim().length >= 2 && _gradeLevel.isNotEmpty;
+
+  Future<void> _submit() async {
+    if (_targetExam == null || _targetYear == null) return;
+    setState(() {
+      _busy = true;
+      _error = null;
+    });
+    final ApiClient api = context.read<ApiClient>();
+    try {
+      final ProfileSaveResult saved = await api.updateProfile(
+        fullName: _fullName.trim(),
+        // No school question at signup (founder rule): the school is
+        // picked on the desk's Pick School button afterwards, and only
+        // the profile edit changes it later.
+        institution: '',
+        gradeLevel: _gradeLevel,
+        exams: <String>[_targetExam!],
+        targetYear: _targetYear,
+        username: _handle.text.trim(),
+      );
+      // The handle may have changed: refresh the stored session user so
+      // the profile sheet and the next launch carry the new identity.
+      // The mounted guard comes first - the awaits above may have popped
+      // this sheet (or the whole route) already.
+      if (!mounted) return;
+      if (saved.user != null) {
+        final SessionStore session = context.read<SessionStore>();
+        final String? token = session.token;
+        if (token != null) {
+          await session.save(token, saved.user!);
+        }
+      }
+      if (!mounted) return;
+      Navigator.of(context).pop(true);
+    } on ApiException catch (e) {
+      if (!mounted) return;
+      setState(() {
+        _busy = false;
+        _error = e.message;
+      });
+    } on NetworkException catch (e) {
+      if (!mounted) return;
+      setState(() {
+        _busy = false;
+        _error = e.message;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding:
+          EdgeInsets.only(bottom: MediaQuery.viewInsetsOf(context).bottom),
+      child: Container(
+        decoration: BoxDecoration(
+          color: context.pageBg,
+          borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+                color: Color(0x1F111C2D), blurRadius: 24, offset: Offset(0, -4)),
+          ],
+        ),
+        child: SafeArea(
+          top: false,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              const SizedBox(height: 8),
+              Container(
+                width: 48,
+                height: 6,
+                decoration: BoxDecoration(
+                  color: context.outlineVariant,
+                  borderRadius: BorderRadius.circular(999),
+                ),
+              ),
+              Flexible(
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.fromLTRB(24, 20, 24, 24),
+                  child: switch (_step) {
+                    0 => _buildIntro(context),
+                    1 => _buildHandle(context),
+                    2 => _buildTarget(context),
+                    _ => _buildDetails(context),
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  // ------------------------------------------------------------------ step 1
+
+  Widget _buildIntro(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        const RenanceMark(size: 56),
+        const SizedBox(height: 20),
+        const Text('Your exam, your plan', style: RenanceText.displayLg),
+        const SizedBox(height: 8),
+        Text(
+          "Pick what you're preparing for and the whole app reshapes "
+          'around it.',
+          style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, height: 1.45),
+        ),
+        const SizedBox(height: 24),
+        TactileButton(
+          onPressed: () => setState(() => _step = 1),
+          child: const Text('Continue'),
+        ),
+      ],
+    );
+  }
+
+  // ------------------------------------------------------------------ step 2
+
+  /// Pick your username (founder directive 2026-10-02): every fresh
+  /// account confirms or renames the handle right here - manual signups
+  /// and Google signups alike - before the exam questions.
+  Widget _buildHandle(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        const Text('Pick your username', style: RenanceText.displayMd),
+        const SizedBox(height: 8),
+        Text(
+          'This is how friends find you on Renance - and how you sign in '
+          'when you don\'t feel like typing the whole email.',
+          style: RenanceText.bodySecondary.copyWith(
+              color: context.textSecondary, height: 1.45),
+        ),
+        const SizedBox(height: 20),
+        TextField(
+          controller: _handle,
+          autocorrect: false,
+          enableSuggestions: false,
+          textInputAction: TextInputAction.done,
+          maxLength: 24,
+          decoration: const InputDecoration(
+            prefixText: '@ ',
+            prefixIcon: MsIcon('alternate_email', size: 20),
+            hintText: 'lowercase letters, digits, _',
+            counterText: '',
+          ),
+          onChanged: (_) => setState(() {}),
+        ),
+        const SizedBox(height: 6),
+        Text(
+          _handleOk
+              ? 'Looks good.'
+              : '3-24 characters: lowercase letters, digits and _ only.',
+          style: RenanceText.caption.copyWith(
+              color: _handleOk ? context.textSecondary : context.error),
+        ),
+        const SizedBox(height: 24),
+        Row(
+          children: <Widget>[
+            TextButton(
+              onPressed: () => setState(() => _step = 0),
+              child: const Text('Back'),
+            ),
+            const SizedBox(width: 8),
+            Expanded(
+              child: TactileButton(
+                onPressed: _handleOk ? () => setState(() => _step = 2) : null,
+                child: const Text('Continue'),
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  // ------------------------------------------------------------------ step 3
+
+  Widget _buildTarget(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        const Text('What are you preparing for?',
+            style: RenanceText.displayMd),
+        const SizedBox(height: 8),
+        Text('Select your target exam to customize your learning OS.',
+            style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
+        const SizedBox(height: 20),
+        ..._targets.map((_TargetOption t) {
+          final bool selected = _targetExam == t.server;
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: InkWell(
+              borderRadius: BorderRadius.circular(12),
+              onTap: () => setState(() => _targetExam = t.server),
+              child: Container(alignment: Alignment.center,
+                
+                padding: const EdgeInsets.all(14),
+                decoration: BoxDecoration(
+                  color: selected
+                      ? context.selectionBlue
+                      : context.card,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: selected
+                        ? context.primary
+                        : context.outlineLight,
+                    width: selected ? 1.6 : 1,
+                  ),
+                  boxShadow: selected
+                      ? const <BoxShadow>[]
+                      : const <BoxShadow>[
+                          BoxShadow(
+                              color: Color(0x0F141C2D),
+                              blurRadius: 3,
+                              offset: Offset(0, 1)),
+                        ],
+                ),
+                child: Row(
+                  children: <Widget>[
+                    Container(alignment: Alignment.center,
+                      
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: selected
+                            ? context.primary
+                            : context.surfaceContainer,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: MsIcon(t.icon,
+                          size: 22,
+                          color: selected
+                              ? context.onPrimary
+                              : context.ink),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(t.title,
+                              style: RenanceText.bodyMedium.copyWith(
+                                  fontWeight: FontWeight.w600)),
+                          const SizedBox(height: 2),
+                          Text(t.subtitle,
+                              style: RenanceText.caption.copyWith(color: context.textSecondary)),
+                        ],
+                      ),
+                    ),
+                    if (selected)
+                      MsIcon('check_circle',
+                          size: 20, color: context.primary),
+                  ],
+                ),
+              ),
+            ),
+          );
+        }),
+        const SizedBox(height: 8),
+        Text('EXAM YEAR', style: RenanceText.overline.copyWith(color: context.textSecondary)),
+        const SizedBox(height: 8),
+        Row(
+          children: <Widget>[
+            for (final int y in _years) ...<Widget>[
+              _YearChip(
+                year: y,
+                selected: _targetYear == y,
+                onTap: () => setState(() => _targetYear = y),
+              ),
+              const SizedBox(width: 8),
+            ],
+          ],
+        ),
+        const SizedBox(height: 24),
+        Row(
+          children: <Widget>[
+            TextButton(
+              onPressed: () => setState(() => _step = 0),
+              child: const Text('Back'),
+            ),
+            const SizedBox(width: 8),
+            Expanded(
+              child: TactileButton(
+                onPressed: (_targetExam != null && _targetYear != null)
+                    ? () => setState(() => _step = 3)
+                    : null,
+                child: const Text('Continue'),
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  // ------------------------------------------------------------------ step 4
+
+  Widget _buildDetails(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        const Text('Almost there', style: RenanceText.displayMd),
+        const SizedBox(height: 8),
+        Text(
+          'Tell us who is studying so results, streaks and badges carry '
+          'your name.',
+          style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, height: 1.45),
+        ),
+        const SizedBox(height: 20),
+        const Text('Full name', style: RenanceText.labelMono),
+        const SizedBox(height: 6),
+        TextField(
+          decoration: const InputDecoration(
+            prefixIcon: MsIcon('person', size: 20),
+            hintText: 'e.g. Ariyo Oluwafemi',
+          ),
+          onChanged: (String v) => _fullName = v,
+        ),
+        const SizedBox(height: 16),
+        const Text('Current level', style: RenanceText.labelMono),
+        const SizedBox(height: 6),
+        DropdownButtonFormField<String>(
+          initialValue: _gradeLevel,
+          decoration: const InputDecoration(
+            prefixIcon: MsIcon('stairs', size: 20),
+          ),
+          items: const <DropdownMenuItem<String>>[
+            DropdownMenuItem<String>(value: 'JSS1', child: Text('JSS1')),
+            DropdownMenuItem<String>(value: 'JSS2', child: Text('JSS2')),
+            DropdownMenuItem<String>(value: 'JSS3', child: Text('JSS3')),
+            DropdownMenuItem<String>(value: 'SS1', child: Text('SS1')),
+            DropdownMenuItem<String>(value: 'SS2', child: Text('SS2')),
+            DropdownMenuItem<String>(value: 'SS3', child: Text('SS3')),
+            DropdownMenuItem<String>(
+                value: 'Undergraduate', child: Text('Undergraduate')),
+            DropdownMenuItem<String>(
+                value: 'Postgraduate', child: Text('Postgraduate')),
+          ],
+          onChanged: (String? v) => setState(() => _gradeLevel = v ?? 'SS3'),
+        ),
+        if (_error != null) ...<Widget>[
+          const SizedBox(height: 14),
+          Text(_error!,
+              style:
+                  RenanceText.caption.copyWith(color: context.error)),
+        ],
+        const SizedBox(height: 24),
+        Row(
+          children: <Widget>[
+            TextButton(
+              onPressed: _busy ? null : () => setState(() => _step = 2),
+              child: const Text('Back'),
+            ),
+            const SizedBox(width: 8),
+            Expanded(
+              child: TactileButton(
+                onPressed: (_detailsValid && !_busy) ? _submit : null,
+                child: Text(_busy ? 'Saving…' : 'Done, start syncing'),
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+class _TargetOption {
+  const _TargetOption({
+    required this.icon,
+    required this.title,
+    required this.subtitle,
+    required this.server,
+  });
+
+  final String icon;
+  final String title;
+  final String subtitle;
+  final String server;
+}
+
+class _YearChip extends StatelessWidget {
+  const _YearChip({
+    required this.year,
+    required this.selected,
+    required this.onTap,
+  });
+
+  final int year;
+  final bool selected;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(999),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        decoration: BoxDecoration(
+          color: selected
+              ? context.selectionBlue
+              : context.cardLow,
+          borderRadius: BorderRadius.circular(999),
+          border: Border.all(
+            color: selected ? context.primary : Colors.transparent,
+            width: 1.4,
+          ),
+        ),
+        child: Text(
+          '$year',
+          style: RenanceText.labelMono.copyWith(
+            color: selected ? context.ink : context.textSecondary,
+          ),
+        ),
+      ),
+    );
+  }
+}

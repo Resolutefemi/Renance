@@ -1,0 +1,88 @@
+// The starter exam bank: original, NERDC-aligned questions written for
+// Renance. Nothing here is scraped or copied; every question is ours,
+// tagged renance-original, and schools grow the pool from the portal.
+// Subject codes match the curriculum catalog in curriculum.go, so the
+// pour resolves subjects per school.
+
+package school
+
+// SeedExamQuestion is one bank row the seeder pours into a school.
+type SeedExamQuestion struct {
+	SubjectCode string // curriculum code, e.g. ENG-J
+	Band        string // primary | junior | senior
+	Term        int    // 1..3
+	Question    string
+	Options     [4]string
+	AnswerIndex int
+	Explanation string
+}
+
+// ExamBankBands lists the bands the starter bank covers.
+var ExamBankBands = []string{"junior", "senior"}
+
+// ExamBank returns every starter question across the bands. The store
+// pour consumes this list.
+var extraBanks []SeedExamQuestion
+
+func ExamBank() []SeedExamQuestion {
+	all := make([]SeedExamQuestion, 0,
+		len(examBankJunior)+len(examBankSeniorScience)+len(examBankSeniorCore))
+	all = append(all, examBankJunior...)
+	all = append(all, examBankSeniorScience...)
+	all = append(all, examBankSeniorCore...)
+	all = append(all, extraBanks...)
+	return all
+}
+
+// extraBanks gathers the per-subject starter files added after the
+// first three core files; each lands in its own file under this
+// package and joins the pour here.
+func init() {
+	extraBanks = append(extraBanks, examBankJuniorP2...)
+	extraBanks = append(extraBanks, examBankSeniorScienceP2...)
+	extraBanks = append(extraBanks, examBankSeniorCoreP2...)
+	extraBanks = append(extraBanks, examBankCivic...)
+	extraBanks = append(extraBanks, examBankCivicP2...)
+	extraBanks = append(extraBanks, examBankSocial...)
+	extraBanks = append(extraBanks, examBankSocialP2...)
+	extraBanks = append(extraBanks, examBankBasicTech...)
+	extraBanks = append(extraBanks, examBankBasicTechP2...)
+	extraBanks = append(extraBanks, examBankComputer...)
+	extraBanks = append(extraBanks, examBankComputerP2...)
+	extraBanks = append(extraBanks, examBankAgric...)
+	extraBanks = append(extraBanks, examBankAgricP2...)
+	extraBanks = append(extraBanks, examBankCRS...)
+	extraBanks = append(extraBanks, examBankCRSP2...)
+	extraBanks = append(extraBanks, examBankIRS...)
+	extraBanks = append(extraBanks, examBankIRSP2...)
+	extraBanks = append(extraBanks, examBankFrench...)
+	extraBanks = append(extraBanks, examBankFrenchP2...)
+	extraBanks = append(extraBanks, examBankGovernment...)
+	extraBanks = append(extraBanks, examBankGovernmentP2...)
+	extraBanks = append(extraBanks, examBankLiterature...)
+	extraBanks = append(extraBanks, examBankLiteratureP2...)
+	extraBanks = append(extraBanks, examBankCommerce...)
+	extraBanks = append(extraBanks, examBankCommerceP2...)
+	extraBanks = append(extraBanks, examBankAccounting...)
+	extraBanks = append(extraBanks, examBankAccountingP2...)
+	extraBanks = append(extraBanks, examBankFurtherMaths...)
+	extraBanks = append(extraBanks, examBankFurtherMathsP2...)
+	extraBanks = append(extraBanks, examBankCompSci...)
+	extraBanks = append(extraBanks, examBankCompSciP2...)
+	extraBanks = append(extraBanks, examBankGeography...)
+	extraBanks = append(extraBanks, examBankGeographyP2...)
+	extraBanks = append(extraBanks, examBankTechDrawing...)
+	extraBanks = append(extraBanks, examBankTechDrawingP2...)
+	extraBanks = append(extraBanks, examBankSecurity...)
+	extraBanks = append(extraBanks, examBankSecurityP2...)
+	extraBanks = append(extraBanks, examBankHomeEconomics...)
+	extraBanks = append(extraBanks, examBankHomeEconomicsP2...)
+	extraBanks = append(extraBanks, examBankBusiness...)
+	extraBanks = append(extraBanks, examBankBusinessP2...)
+	extraBanks = append(extraBanks, examBankPHE...)
+	extraBanks = append(extraBanks, examBankPHEP2...)
+	extraBanks = append(extraBanks, examBankPrimaryCore...)
+	extraBanks = append(extraBanks, examBankPrimaryWider...)
+	extraBanks = append(extraBanks, examBankPrevocational...)
+	extraBanks = append(extraBanks, examBankCCA...)
+}

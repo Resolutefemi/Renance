@@ -1,0 +1,611 @@
+{
+ "code": "neet-neet-bank",
+ "title": "NEET - Neet",
+ "version": 1,
+ "questionCount": 50,
+ "totalMarks": 50,
+ "questions": [
+  {
+   "id": "neet-neet-bank-0001",
+   "type": "mcq",
+   "stem": "An impure sample of \\(\\text{KClO}_3\\) (molar mass = 122.5 g/mol) weighing 12.25 g is heated strongly to drive off all the oxygen. If the residue left weighs 8.41 g, what is the percentage purity of the original \\(\\text{KClO}_3\\) sample? (Assume impurities do not decompose).",
+   "marks": 1,
+   "options": {
+    "A": "80%",
+    "B": "60%",
+    "C": "75%",
+    "D": "50%"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0002",
+   "type": "mcq",
+   "stem": "Let \\(v_1\\) be the velocity of an electron in the first Bohr orbit of the hydrogen atom, and let \\(\\lambda_1\\) be its de Broglie wavelength. For the \\(\\text{He}^+\\) ion, the corresponding quantities in the second Bohr orbit are \\(v_2\\) and \\(\\lambda_2\\). Which of the following relations is correct?",
+   "marks": 1,
+   "options": {
+    "A": "\\(v_2 = v_1\\) and \\(\\lambda_2 = \\lambda_1\\)",
+    "B": "\\(v_2 = 2v_1\\) and \\(\\lambda_2 = 2\\lambda_1\\)",
+    "C": "\\(v_2 = 0.5v_1\\) and \\(\\lambda_2 = 0.5\\lambda_1\\)",
+    "D": "\\(v_2 = v_1\\) and \\(\\lambda_2 = 2\\lambda_1\\)"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0003",
+   "type": "mcq",
+   "stem": "For 1 mole of a van der Waals gas, the compressibility factor \\(Z = \\frac{PV}{RT}\\) at high pressure is given by:",
+   "marks": 1,
+   "options": {
+    "A": "\\(1 + \\frac{Pb}{RT}\\)",
+    "B": "\\(1 - \\frac{Pb}{RT}\\)",
+    "C": "\\(1 + \\frac{a}{RTV}\\)",
+    "D": "\\(1 - \\frac{a}{RTV}\\)"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0004",
+   "type": "mcq",
+   "stem": "One mole of an ideal monatomic gas initially at 300 K is expanded adiabatically to double its volume. If \\(W_r\\) is the work done in a reversible expansion and \\(W_{irr}\\) is the work done against a constant external pressure equal to the final pressure of the reversible expansion, which statement accurately compares their magnitudes?",
+   "marks": 1,
+   "options": {
+    "A": "\\(|W_r| > |W_{irr}|\\)",
+    "B": "\\(|W_r| < |W_{irr}|\\)",
+    "C": "\\(|W_r| = |W_{irr}|\\)",
+    "D": "Cannot be determined without initial pressure"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0005",
+   "type": "mcq",
+   "stem": "For the reaction \\(\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)\\), the degree of dissociation is \\(\\alpha\\) at equilibrium pressure \\(P\\). If \\(\\alpha \\ll 1\\), the equilibrium constant \\(K_p\\) is approximately proportional to:",
+   "marks": 1,
+   "options": {
+    "A": "\\(\\alpha P\\)",
+    "B": "\\(\\alpha^2 P\\)",
+    "C": "\\(\\alpha / P\\)",
+    "D": "\\(\\alpha^2 / P\\)"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0006",
+   "type": "mcq",
+   "stem": "The solubility product of \\(\\text{AgBr}\\) is \\(5 \\times 10^{-13}\\) and the formation constant of \\([\\text{Ag}(\\text{S}_2\\text{O}_3)_2]^{3-}\\) is \\(5 \\times 10^{13}\\). What is the solubility of \\(\\text{AgBr}\\) in a 0.1 M \\(\\text{Na}_2\\text{S}_2\\text{O}_3\\) solution?",
+   "marks": 1,
+   "options": {
+    "A": "\\(0.045\\,\\text{M}\\)",
+    "B": "\\(0.025\\,\\text{M}\\)",
+    "C": "\\(0.1\\,\\text{M}\\)",
+    "D": "\\(0.05\\,\\text{M}\\)"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0007",
+   "type": "mcq",
+   "stem": "In mildly alkaline medium, \\(\\text{KMnO}_4\\) is used to titrate a reducing agent. If 1 mole of \\(\\text{KMnO}_4\\) reacts completely, how many moles of electrons are gained by manganese?",
+   "marks": 1,
+   "options": {
+    "A": "5 moles",
+    "B": "3 moles",
+    "C": "1 mole",
+    "D": "4 moles"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0008",
+   "type": "mcq",
+   "stem": "A metal crystallizes in an fcc lattice with edge length 'a'. The closest distance between two octahedral voids in this lattice is:",
+   "marks": 1,
+   "options": {
+    "A": "\\(a\\)",
+    "B": "\\(a / \\sqrt{2}\\)",
+    "C": "\\(a / 2\\)",
+    "D": "\\(\\sqrt{3} a / 2\\)"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0009",
+   "type": "mcq",
+   "stem": "An aqueous solution contains 0.1 M \\(\\text{NaCl}\\) and 0.05 M \\(\\text{BaCl}_2\\). Assuming 100% dissociation for both salts, the freezing point of the solution is approximately: (\\(K_f\\) for water = 1.86 K kg/mol, assume molality \\(\\approx\\) molarity)",
+   "marks": 1,
+   "options": {
+    "A": "\\(-0.279^\\circ\\text{C}\\)",
+    "B": "\\(-0.651^\\circ\\text{C}\\)",
+    "C": "\\(-0.558^\\circ\\text{C}\\)",
+    "D": "\\(-0.837^\\circ\\text{C}\\)"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0010",
+   "type": "mcq",
+   "stem": "The EMF of the cell \\(\\text{Ag} | \\text{AgI} (s), \\text{KI} (0.1\\,\\text{M}) || \\text{AgNO}_3 (0.01\\,\\text{M}) | \\text{Ag}\\) at 298 K is 0.767 V. Given that \\(\\frac{2.303RT}{F} = 0.059\\,\\text{V}\\), the \\(K_{sp}\\) of \\(\\text{AgI}\\) is approximately:",
+   "marks": 1,
+   "options": {
+    "A": "\\(10^{-16}\\)",
+    "B": "\\(10^{-14}\\)",
+    "C": "\\(10^{-12}\\)",
+    "D": "\\(10^{-10}\\)"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0011",
+   "type": "mcq",
+   "stem": "A current of 9.65 A is passed through an aqueous solution of \\(\\text{CuSO}_4\\) for 100 minutes. If the current efficiency is 80%, the mass of copper deposited at the cathode is approximately: (Atomic mass of Cu = 63.5 g/mol)",
+   "marks": 1,
+   "options": {
+    "A": "15.24 g",
+    "B": "19.05 g",
+    "C": "24.00 g",
+    "D": "30.48 g"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0012",
+   "type": "mcq",
+   "stem": "For a first-order reaction, the rate constant at 300 K is \\(k_1\\) and at 310 K is \\(k_2\\). If the activation energy is \\(50\\,\\text{kJ mol}^{-1}\\), the ratio \\(k_2/k_1\\) is closest to: (Assume \\(R = 8.314\\,\\text{J K}^{-1}\\text{mol}^{-1}\\), and \\(\\ln x = 2.303 \\log x\\))",
+   "marks": 1,
+   "options": {
+    "A": "1.5",
+    "B": "2.0",
+    "C": "2.5",
+    "D": "3.0"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0013",
+   "type": "mcq",
+   "stem": "For a zero-order reaction, the half-life \\(t_{1/2}\\) is directly proportional to:",
+   "marks": 1,
+   "options": {
+    "A": "Square of the initial concentration",
+    "B": "Initial concentration",
+    "C": "Independent of initial concentration",
+    "D": "Inverse of initial concentration"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0014",
+   "type": "mcq",
+   "stem": "In the Freundlich adsorption isotherm plot of \\(\\log(x/m)\\) versus \\(\\log P\\), the slope is \\(0.5\\) and the intercept is \\(0.3010\\). What is the extent of adsorption \\((x/m)\\) at a pressure of \\(4\\,\\text{atm}\\)?",
+   "marks": 1,
+   "options": {
+    "A": "2.0",
+    "B": "4.0",
+    "C": "8.0",
+    "D": "10.0"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0015",
+   "type": "mcq",
+   "stem": "For a specific reaction, \\(\\Delta H^\\circ = -400\\,\\text{kJ mol}^{-1}\\) and \\(\\Delta S^\\circ = -200\\,\\text{J K}^{-1}\\text{mol}^{-1}\\). Assuming enthalpy and entropy are independent of temperature, above what temperature will the reaction become non-spontaneous?",
+   "marks": 1,
+   "options": {
+    "A": "2000 K",
+    "B": "1000 K",
+    "C": "200 K",
+    "D": "Spontaneous at all temperatures"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0016",
+   "type": "mcq",
+   "stem": "Two volatile liquids A and B form an ideal solution. The vapor pressures of pure A and B are 400 torr and 600 torr, respectively. If the mole fraction of A in the vapor phase over the solution is 0.4, what is the mole fraction of A in the liquid phase?",
+   "marks": 1,
+   "options": {
+    "A": "0.50",
+    "B": "0.40",
+    "C": "0.60",
+    "D": "0.25"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0017",
+   "type": "mcq",
+   "stem": "Which of the following compounds or ions is NOT aromatic?",
+   "marks": 1,
+   "options": {
+    "A": "Cyclopentadienyl anion",
+    "B": "Tropylium cation",
+    "C": "Cycloheptatrienyl anion",
+    "D": "Furan"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0018",
+   "type": "mcq",
+   "stem": "Arrange the following compounds in decreasing order of their acidic strength: \nI. p-Nitrophenol \nII. p-Cresol \nIII. m-Nitrophenol \nIV. Phenol",
+   "marks": 1,
+   "options": {
+    "A": "I > III > IV > II",
+    "B": "I > IV > III > II",
+    "C": "III > I > IV > II",
+    "D": "I > III > II > IV"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0019",
+   "type": "mcq",
+   "stem": "Which of the following carbocations is the most stable?",
+   "marks": 1,
+   "options": {
+    "A": "Benzyl carbocation",
+    "B": "Allyl carbocation",
+    "C": "Triphenylmethyl carbocation",
+    "D": "tert-Butyl carbocation"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0020",
+   "type": "mcq",
+   "stem": "An alkene \\(X\\) upon reductive ozonolysis yields a single symmetrical diketone \\(Y\\). The diketone \\(Y\\) undergoes intramolecular aldol condensation upon heating with dilute \\(\\text{NaOH}\\) to yield 3-methylcyclopent-2-en-1-one. The starting alkene \\(X\\) is:",
+   "marks": 1,
+   "options": {
+    "A": "1,2-Dimethylcyclohexene",
+    "B": "2,3-Dimethylcyclohexene",
+    "C": "1,5-Dimethylcyclopentene",
+    "D": "1-Methylcyclohexene"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0021",
+   "type": "mcq",
+   "stem": "Propyne is treated with aqueous \\(\\text{H}_2\\text{SO}_4\\) in the presence of \\(\\text{HgSO}_4\\). The major product formed undergoes which type of isomerism to reach its stable form?",
+   "marks": 1,
+   "options": {
+    "A": "Geometrical isomerism",
+    "B": "Tautomerism",
+    "C": "Optical isomerism",
+    "D": "Position isomerism"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0022",
+   "type": "mcq",
+   "stem": "Which of the following conditions strongly favors the \\(\\text{S}_\\text{N}2\\) mechanism over \\(\\text{S}_\\text{N}1\\) and \\(\\text{E}2\\)?",
+   "marks": 1,
+   "options": {
+    "A": "Tertiary alkyl halide in a polar protic solvent",
+    "B": "Primary alkyl halide with a strong, bulky base (e.g., t-butoxide)",
+    "C": "Primary alkyl halide with a good nucleophile (e.g., \\(\\text{I}^-\\)) in a polar aprotic solvent",
+    "D": "Secondary alkyl halide with a weak nucleophile in water"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0023",
+   "type": "mcq",
+   "stem": "Reaction of 2-bromo-2-methylbutane with alcoholic \\(\\text{KOH}\\) predominantly gives:",
+   "marks": 1,
+   "options": {
+    "A": "2-Methylbutan-2-ol",
+    "B": "2-Methylbut-2-ene",
+    "C": "2-Methylbut-1-ene",
+    "D": "3-Methylbutan-2-ol"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0024",
+   "type": "mcq",
+   "stem": "In the Pinacol-Pinacolone rearrangement of 2,3-dimethylbutane-2,3-diol using dilute \\(\\text{H}_2\\text{SO}_4\\), the critical intermediate driving the alkyl shift is:",
+   "marks": 1,
+   "options": {
+    "A": "A primary carbocation",
+    "B": "A secondary carbocation",
+    "C": "A tertiary carbocation adjacent to a hydroxyl group",
+    "D": "A carbanion intermediate"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0025",
+   "type": "mcq",
+   "stem": "The electrophile in the Reimer-Tiemann reaction of phenol with \\(\\text{CHCl}_3\\) and aqueous \\(\\text{NaOH}\\) is:",
+   "marks": 1,
+   "options": {
+    "A": "Formyl cation \\(\\text{CHO}^+\\)",
+    "B": "Trichloromethyl anion \\(\\text{CCl}_3^-\\)",
+    "C": "Dichlorocarbene \\(:\\text{CCl}_2\\)",
+    "D": "Chloronium ion \\(\\text{Cl}^+\\)"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0026",
+   "type": "mcq",
+   "stem": "Arrange the following compounds in increasing order of their reactivity towards nucleophilic addition reactions: \nI. Ethanal \nII. Propanone \nIII. Butanone \nIV. Methanal",
+   "marks": 1,
+   "options": {
+    "A": "III < II < I < IV",
+    "B": "II < III < I < IV",
+    "C": "IV < I < II < III",
+    "D": "III < II < IV < I"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0027",
+   "type": "mcq",
+   "stem": "When a mixture of benzaldehyde and formaldehyde is treated with concentrated \\(\\text{NaOH}\\), the major products formed are:",
+   "marks": 1,
+   "options": {
+    "A": "Sodium benzoate and methanol",
+    "B": "Benzyl alcohol and sodium formate",
+    "C": "Sodium benzoate and sodium formate",
+    "D": "Benzyl alcohol and methanol"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0028",
+   "type": "mcq",
+   "stem": "Propanoic acid reacts with \\(\\text{Br}_2\\) in the presence of red phosphorus to yield 2-bromopropanoic acid. This reaction is known as:",
+   "marks": 1,
+   "options": {
+    "A": "Haloform reaction",
+    "B": "Hell-Volhard-Zelinsky (HVZ) reaction",
+    "C": "Hunsdiecker reaction",
+    "D": "Decarboxylation"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0029",
+   "type": "mcq",
+   "stem": "The correct decreasing order of basicity of the following amines in aqueous solution is: \nI. \\(\\text{NH}_3\\) \nII. \\(\\text{CH}_3\\text{NH}_2\\) \nIII. \\((\\text{CH}_3)_2\\text{NH}\\) \nIV. \\((\\text{CH}_3)_3\\text{N}\\)",
+   "marks": 1,
+   "options": {
+    "A": "IV > III > II > I",
+    "B": "III > II > IV > I",
+    "C": "II > III > IV > I",
+    "D": "III > IV > II > I"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0030",
+   "type": "mcq",
+   "stem": "Which of the following amides will NOT undergo the Hofmann bromamide degradation reaction?",
+   "marks": 1,
+   "options": {
+    "A": "Propanamide",
+    "B": "Benzamide",
+    "C": "N-Methylacetamide",
+    "D": "Ethanamide"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0031",
+   "type": "mcq",
+   "stem": "Mutarotation is NOT observed in which of the following carbohydrates?",
+   "marks": 1,
+   "options": {
+    "A": "D-Glucose",
+    "B": "D-Fructose",
+    "C": "Sucrose",
+    "D": "Lactose"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0032",
+   "type": "mcq",
+   "stem": "Lysine is a basic amino acid with three \\(pK_a\\) values: \\(pK_{a1} = 2.18\\) (\\(\\alpha\\)-COOH), \\(pK_{a2} = 8.95\\) (\\(\\alpha\\)-\\(\\text{NH}_3^+\\)), and \\(pK_{a3} = 10.53\\) (side-chain \\(\\text{NH}_3^+\\)). The isoelectric point (pI) of lysine is approximately:",
+   "marks": 1,
+   "options": {
+    "A": "5.56",
+    "B": "6.35",
+    "C": "9.74",
+    "D": "10.53"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0033",
+   "type": "mcq",
+   "stem": "Which of the following is a step-growth (condensation) polymer?",
+   "marks": 1,
+   "options": {
+    "A": "Teflon",
+    "B": "Buna-S",
+    "C": "Nylon-6,6",
+    "D": "Neoprene"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0034",
+   "type": "mcq",
+   "stem": "In Lassaigne's test for halogens, the sodium fusion extract is first boiled with dilute \\(\\text{HNO}_3\\) before adding \\(\\text{AgNO}_3\\). The purpose of boiling with \\(\\text{HNO}_3\\) is:",
+   "marks": 1,
+   "options": {
+    "A": "To dissolve the formed silver halides",
+    "B": "To decompose any \\(\\text{NaCN}\\) or \\(\\text{Na}_2\\text{S}\\) present",
+    "C": "To convert sodium halides into free halogens",
+    "D": "To act as a strong oxidizing agent for the test"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0035",
+   "type": "mcq",
+   "stem": "Which of the following elements has the highest first ionization enthalpy?",
+   "marks": 1,
+   "options": {
+    "A": "Nitrogen",
+    "B": "Oxygen",
+    "C": "Carbon",
+    "D": "Boron"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0036",
+   "type": "mcq",
+   "stem": "According to VSEPR theory, the molecular geometry and hybridization of the central atom in \\(\\text{XeF}_4\\) are respectively:",
+   "marks": 1,
+   "options": {
+    "A": "Tetrahedral, \\(sp^3\\)",
+    "B": "Square planar, \\(sp^3d^2\\)",
+    "C": "See-saw, \\(sp^3d\\)",
+    "D": "Square pyramidal, \\(sp^3d^2\\)"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0037",
+   "type": "mcq",
+   "stem": "Which of the following species has a bond order of 2.5 and is paramagnetic?",
+   "marks": 1,
+   "options": {
+    "A": "\\(\\text{N}_2^+\\)",
+    "B": "\\(\\text{O}_2\\)",
+    "C": "\\(\\text{O}_2^-\\)",
+    "D": "Both \\(\\text{N}_2^+\\) and \\(\\text{O}_2^-\\) have bond order 2.5, but only one is paramagnetic."
+   }
+  },
+  {
+   "id": "neet-neet-bank-0038",
+   "type": "mcq",
+   "stem": "Among the following, the compound with the maximum covalent character is:",
+   "marks": 1,
+   "options": {
+    "A": "\\(\\text{SnCl}_2\\)",
+    "B": "\\(\\text{SnCl}_4\\)",
+    "C": "\\(\\text{PbCl}_2\\)",
+    "D": "\\(\\text{CaCl}_2\\)"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0039",
+   "type": "mcq",
+   "stem": "Which of the following statements about alkali metals dissolving in liquid ammonia is INCORRECT?",
+   "marks": 1,
+   "options": {
+    "A": "The dilute solution is blue and highly conducting.",
+    "B": "The blue color is due to ammoniated electrons.",
+    "C": "On standing, the solution slowly liberates \\(\\text{H}_2\\) gas and forms amide.",
+    "D": "Concentrated solutions are blue and diamagnetic."
+   }
+  },
+  {
+   "id": "neet-neet-bank-0040",
+   "type": "mcq",
+   "stem": "The correct sequence of thermal stability of alkaline earth metal carbonates is:",
+   "marks": 1,
+   "options": {
+    "A": "\\(\\text{BaCO}_3 > \\text{SrCO}_3 > \\text{CaCO}_3 > \\text{MgCO}_3 > \\text{BeCO}_3\\)",
+    "B": "\\(\\text{BeCO}_3 > \\text{MgCO}_3 > \\text{CaCO}_3 > \\text{SrCO}_3 > \\text{BaCO}_3\\)",
+    "C": "\\(\\text{MgCO}_3 > \\text{BeCO}_3 > \\text{CaCO}_3 > \\text{SrCO}_3 > \\text{BaCO}_3\\)",
+    "D": "\\(\\text{BaCO}_3 > \\text{CaCO}_3 > \\text{SrCO}_3 > \\text{MgCO}_3 > \\text{BeCO}_3\\)"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0041",
+   "type": "mcq",
+   "stem": "In the structure of diborane \\(\\text{B}_2\\text{H}_6\\), what is the nature of the bonding?",
+   "marks": 1,
+   "options": {
+    "A": "Four 2c-2e B-H bonds and two 3c-2e B-H-B bonds",
+    "B": "Six 2c-2e B-H bonds and one B-B bond",
+    "C": "Two 2c-2e B-H bonds and four 3c-2e B-H-B bonds",
+    "D": "All six B-H bonds are equivalent 2c-2e bonds"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0042",
+   "type": "mcq",
+   "stem": "Which of the following silicates contains discrete \\(\\text{Si}_3\\text{O}_9^{6-}\\) rings?",
+   "marks": 1,
+   "options": {
+    "A": "Pyrosilicate",
+    "B": "Cyclic silicate",
+    "C": "Chain silicate",
+    "D": "Sheet silicate"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0043",
+   "type": "mcq",
+   "stem": "Basicity of orthophosphoric acid, pyrophosphoric acid, and phosphorous acid respectively are:",
+   "marks": 1,
+   "options": {
+    "A": "3, 4, 2",
+    "B": "3, 3, 2",
+    "C": "3, 4, 3",
+    "D": "2, 4, 3"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0044",
+   "type": "mcq",
+   "stem": "Partial hydrolysis of \\(\\text{XeF}_6\\) yields a compound \\(X\\) and HF. Complete hydrolysis of \\(\\text{XeF}_6\\) yields a compound \\(Y\\) and HF. Compounds \\(X\\) and \\(Y\\) respectively are:",
+   "marks": 1,
+   "options": {
+    "A": "\\(\\text{XeOF}_4\\) and \\(\\text{XeO}_2\\text{F}_2\\)",
+    "B": "\\(\\text{XeOF}_4\\) and \\(\\text{XeO}_3\\)",
+    "C": "\\(\\text{XeO}_2\\text{F}_2\\) and \\(\\text{XeO}_3\\)",
+    "D": "\\(\\text{XeO}_3\\) and \\(\\text{XeOF}_4\\)"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0045",
+   "type": "mcq",
+   "stem": "Calculate the spin-only magnetic moment of an aqueous \\(\\text{Mn}^{2+}\\) ion.",
+   "marks": 1,
+   "options": {
+    "A": "3.87 BM",
+    "B": "4.90 BM",
+    "C": "5.92 BM",
+    "D": "6.93 BM"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0046",
+   "type": "mcq",
+   "stem": "Which of the following pairs of elements have almost identical atomic radii due to the lanthanoid contraction?",
+   "marks": 1,
+   "options": {
+    "A": "Zr and Hf",
+    "B": "Nb and Ta",
+    "C": "Mo and W",
+    "D": "All of the above"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0047",
+   "type": "mcq",
+   "stem": "The number of possible stereoisomers for the complex \\([\\text{Co}(\\text{en})_2\\text{Cl}_2]^+$\\) is:",
+   "marks": 1,
+   "options": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0048",
+   "type": "mcq",
+   "stem": "For an octahedral complex of a \\(d^6\\) metal ion, the mean pairing energy is \\(P\\) and the crystal field splitting energy is \\(\\Delta_o\\). What is the condition and the corresponding CFSE (ignoring pairing energy of the free ion) for forming a low-spin complex?",
+   "marks": 1,
+   "options": {
+    "A": "\\(\\Delta_o > P\\), CFSE = \\(-2.4 \\Delta_o + 3P\\)",
+    "B": "\\(\\Delta_o < P\\), CFSE = \\(-0.4 \\Delta_o + P\\)",
+    "C": "\\(\\Delta_o > P\\), CFSE = \\(-2.4 \\Delta_o\\)",
+    "D": "\\(\\Delta_o < P\\), CFSE = \\(-2.4 \\Delta_o + 2P\\)"
+   }
+  },
+  {
+   "id": "neet-neet-bank-0049",
+   "type": "mcq",
+   "stem": "In metal carbonyls, the C-O bond length increases compared to free CO molecule. This is mainly due to:",
+   "marks": 1,
+   "options": {
+    "A": "Donation of lone pair of electrons from carbon to empty d-orbital of metal.",
+    "B": "Back donation of electrons from filled d-orbital of metal into empty \\(\\pi^*\\) orbital of CO.",
+    "C": "Strong electrostatic attraction between metal and carbon.",
+    "D": "Sp hybridization of carbon in the carbonyl ligand."
+   }
+  },
+  {
+   "id": "neet-neet-bank-0050",
+   "type": "mcq",
+   "stem": "Which of the following processes is used for the purification of Zirconium (Zr) or Titanium (Ti) to remove oxygen and nitrogen impurities?",
+   "marks": 1,
+   "options": {
+    "A": "Mond process",
+    "B": "van Arkel method",
+    "C": "Zone refining",
+    "D": "Liquation"
+   }
+  }
+ ],
+ "category": "NEET",
+ "body": "Neet"
+}

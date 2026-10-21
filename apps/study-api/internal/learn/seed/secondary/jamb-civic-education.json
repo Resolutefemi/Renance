@@ -1,0 +1,2479 @@
+{
+ "body": "jamb",
+ "subject": "civic-education",
+ "title": "Civic Education",
+ "unitTitles": [
+  "Values, Citizenship and Rights",
+  "Democracy, Government and Participation",
+  "Nationalism, Symbols and Socialisation",
+  "Social Challenges: Drugs, Crime and Health",
+  "Community, Service and Safety",
+  "Governance and National Development",
+  "Values in Depth",
+  "Citizenship in Depth",
+  "Democracy in Depth",
+  "Rule of Law and Due Process",
+  "Constitutionalism in Depth",
+  "Political Participation",
+  "National Unity and Integration",
+  "Human Dignity and Social Vices",
+  "Health and Wellbeing",
+  "Safety and Emergency Response",
+  "Community Service and Development",
+  "Employment and Entrepreneurship",
+  "Peace and Conflict Resolution",
+  "Nigeria and the World",
+  "Structured Revision: Set A",
+  "Structured Revision: Set B",
+  "Applications Workshop",
+  "JAMB Masterclass: Final Lap",
+  "Civic Rights Enforcement Workshop",
+  "Digital Citizenship and Online Safety",
+  "The Economy and the Citizen",
+  "The Nigerian Youth Movement",
+  "Institutions Deep Dive",
+  "Civic Masterclass Drills"
+ ],
+ "topics": [
+  {
+   "title": "Civic education: meaning and importance",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "civic education",
+    "importance",
+    "citizenship",
+    "society"
+   ]
+  },
+  {
+   "title": "Values: meaning, types and sources",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "values",
+    "types",
+    "sources",
+    "norms"
+   ]
+  },
+  {
+   "title": "National values: honesty and integrity",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "honesty",
+    "integrity",
+    "national values",
+    "discipline"
+   ]
+  },
+  {
+   "title": "Work ethics, dignity of labour and diligence",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "work ethics",
+    "dignity of labour",
+    "diligence",
+    "productivity"
+   ]
+  },
+  {
+   "title": "Cooperation, self-reliance and patriotism",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "cooperation",
+    "self reliance",
+    "patriotism",
+    "unity"
+   ]
+  },
+  {
+   "title": "Citizenship: definition, types and acquisition",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "citizenship",
+    "acquisition",
+    "naturalisation",
+    "registration",
+    "dual citizenship"
+   ]
+  },
+  {
+   "title": "Rights, duties and obligations of citizens",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "rights",
+    "duties",
+    "obligations",
+    "citizens"
+   ]
+  },
+  {
+   "title": "Nationalism and the Nigerian state",
+   "category": "Nigerian Context",
+   "keywords": [
+    "nationalism",
+    "nigeria",
+    "independence",
+    "patriotism"
+   ]
+  },
+  {
+   "title": "Democracy: meaning, features and types",
+   "category": "Theory",
+   "keywords": [
+    "democracy",
+    "features",
+    "direct democracy",
+    "representative"
+   ]
+  },
+  {
+   "title": "Rule of law, due process and its principles",
+   "category": "Theory",
+   "keywords": [
+    "rule of law",
+    "due process",
+    "principles",
+    "equality"
+   ]
+  },
+  {
+   "title": "Constitution and constitutionalism",
+   "category": "Theory",
+   "keywords": [
+    "constitution",
+    "constitutionalism",
+    "supremacy",
+    "amendment"
+   ]
+  },
+  {
+   "title": "Fundamental human rights in Nigeria",
+   "category": "Theory",
+   "keywords": [
+    "human rights",
+    "fundamental rights",
+    "1999 constitution",
+    "enforcement"
+   ]
+  },
+  {
+   "title": "Human rights abuse and its remedies",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "human rights abuse",
+    "remedies",
+    "violation",
+    "public complaints"
+   ]
+  },
+  {
+   "title": "Structures of government: three organs",
+   "category": "Theory",
+   "keywords": [
+    "organs of government",
+    "executive",
+    "legislature",
+    "judiciary"
+   ]
+  },
+  {
+   "title": "Separation of powers and checks and balances",
+   "category": "Theory",
+   "keywords": [
+    "separation of powers",
+    "checks and balances",
+    "organs of government"
+   ]
+  },
+  {
+   "title": "Political parties and party systems",
+   "category": "Theory",
+   "keywords": [
+    "political parties",
+    "party systems",
+    "functions",
+    "opposition"
+   ]
+  },
+  {
+   "title": "Elections and the electoral process",
+   "category": "Theory",
+   "keywords": [
+    "elections",
+    "electoral process",
+    "voting",
+    "franchise"
+   ]
+  },
+  {
+   "title": "INEC and election management in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "inec",
+    "election management",
+    "voters register",
+    "ballot"
+   ]
+  },
+  {
+   "title": "Civic duties: taxes, jury service and voting",
+   "category": "Applications",
+   "keywords": [
+    "taxes",
+    "voting",
+    "jury service",
+    "civic duties"
+   ]
+  },
+  {
+   "title": "Community service and social responsibility",
+   "category": "Applications",
+   "keywords": [
+    "community service",
+    "social responsibility",
+    "volunteering",
+    "development"
+   ]
+  },
+  {
+   "title": "The family as an agent of socialisation",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "family",
+    "socialisation",
+    "agent",
+    "nuclear",
+    "extended"
+   ]
+  },
+  {
+   "title": "Agents of socialisation: school and media",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "school",
+    "mass media",
+    "peer group",
+    "religious bodies"
+   ]
+  },
+  {
+   "title": "Interpersonal relations and tolerance",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "interpersonal",
+    "tolerance",
+    "relations",
+    "conflict resolution"
+   ]
+  },
+  {
+   "title": "Nigerian national symbols and their meanings",
+   "category": "Nigerian Context",
+   "keywords": [
+    "national symbols",
+    "flag",
+    "anthem",
+    "coat of arms",
+    "naira"
+   ]
+  },
+  {
+   "title": "Orderliness, queuing culture and patience",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "orderliness",
+    "queuing",
+    "patience",
+    "discipline"
+   ]
+  },
+  {
+   "title": "Attitude to work and productivity",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "attitude to work",
+    "productivity",
+    "diligence"
+   ]
+  },
+  {
+   "title": "Ethnic problems and national unity",
+   "category": "Nigerian Context",
+   "keywords": [
+    "ethnicity",
+    "tribalism",
+    "national unity",
+    "integration"
+   ]
+  },
+  {
+   "title": "Federal character and power sharing",
+   "category": "Nigerian Context",
+   "keywords": [
+    "federal character",
+    "power sharing",
+    "quotas",
+    "representation"
+   ]
+  },
+  {
+   "title": "Corruption: causes, effects and solutions",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "corruption",
+    "efcc",
+    "icpc",
+    "effects",
+    "solutions"
+   ]
+  },
+  {
+   "title": "Drug abuse: causes, effects and prevention",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "drug abuse",
+    "prevention",
+    "effects",
+    "narcotics",
+    "ndlea"
+   ]
+  },
+  {
+   "title": "Human trafficking and child labour",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "human trafficking",
+    "child labour",
+    "naptip",
+    "smuggling"
+   ]
+  },
+  {
+   "title": "Cultism: causes, effects and control",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "cultism",
+    "campus",
+    "effects",
+    "control",
+    "secret cult"
+   ]
+  },
+  {
+   "title": "HIV/AIDS education and stigmatisation",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "hiv",
+    "aids",
+    "stigmatisation",
+    "prevention",
+    "awareness"
+   ]
+  },
+  {
+   "title": "Sexually transmitted infections and health",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "sexually transmitted",
+    "infections",
+    "health",
+    "prevention"
+   ]
+  },
+  {
+   "title": "Unemployment, poverty and social vices",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "unemployment",
+    "poverty",
+    "social vices",
+    "idleness"
+   ]
+  },
+  {
+   "title": "Youth empowerment and skill acquisition",
+   "category": "Applications",
+   "keywords": [
+    "youth empowerment",
+    "skill acquisition",
+    "vocation",
+    "training"
+   ]
+  },
+  {
+   "title": "Self-employment and entrepreneurship",
+   "category": "Applications",
+   "keywords": [
+    "self employment",
+    "entrepreneurship",
+    "small business",
+    "skills"
+   ]
+  },
+  {
+   "title": "Emergency management and first aid",
+   "category": "Applications",
+   "keywords": [
+    "emergency management",
+    "first aid",
+    "disasters",
+    "fire fighting"
+   ]
+  },
+  {
+   "title": "Road traffic regulations and safety",
+   "category": "Nigerian Context",
+   "keywords": [
+    "traffic",
+    "frsc",
+    "road safety",
+    "regulations",
+    "accidents"
+   ]
+  },
+  {
+   "title": "Population census and family planning",
+   "category": "Nigerian Context",
+   "keywords": [
+    "census",
+    "population",
+    "family planning",
+    "birth rate"
+   ]
+  },
+  {
+   "title": "Environmental sanitation and hygiene",
+   "category": "Nigerian Context",
+   "keywords": [
+    "sanitation",
+    "hygiene",
+    "environmental",
+    "waste disposal"
+   ]
+  },
+  {
+   "title": "Responsible parenthood and family life",
+   "category": "Applications",
+   "keywords": [
+    "parenthood",
+    "family life",
+    "responsibility",
+    "upbringing"
+   ]
+  },
+  {
+   "title": "Civil society and mass media roles",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "civil society",
+    "mass media",
+    "watchdog",
+    "ngo"
+   ]
+  },
+  {
+   "title": "Public service and civil service ethics",
+   "category": "Theory",
+   "keywords": [
+    "public service",
+    "civil service",
+    "ethics",
+    "accountability"
+   ]
+  },
+  {
+   "title": "The 1999 constitution and civic rights",
+   "category": "Nigerian Context",
+   "keywords": [
+    "1999 constitution",
+    "civic rights",
+    "citizens",
+    "provisions"
+   ]
+  },
+  {
+   "title": "Nigeria's national conferences and dialogue",
+   "category": "Nigerian Context",
+   "keywords": [
+    "national conference",
+    "sovereign",
+    "dialogue",
+    "recommendations"
+   ]
+  },
+  {
+   "title": "Conflict resolution and peace building",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "conflict resolution",
+    "peace building",
+    "mediation",
+    "dialogue"
+   ]
+  },
+  {
+   "title": "Globalisation and international civic issues",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "globalisation",
+    "international cooperation",
+    "treaties",
+    "conventions"
+   ]
+  },
+  {
+   "title": "National youth service corps and unity",
+   "category": "Nigerian Context",
+   "keywords": [
+    "nysc",
+    "youth corps",
+    "unity",
+    "posting"
+   ]
+  },
+  {
+   "title": "Democracy, good governance and development",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "good governance",
+    "development",
+    "democracy",
+    "accountability"
+   ]
+  },
+  {
+   "title": "Examination drill: civic education past questions by topic",
+   "category": "Applications",
+   "keywords": [
+    "past questions",
+    "revision",
+    "examination",
+    "jamb"
+   ]
+  },
+  {
+   "title": "Good governance: indicators listed",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "good governance",
+    "indicators"
+   ]
+  },
+  {
+   "title": "Anti-corruption agencies compared",
+   "category": "Nigerian Context",
+   "keywords": [
+    "anti-corruption",
+    "agencies"
+   ]
+  },
+  {
+   "title": "Media freedom and responsibility",
+   "category": "Theory",
+   "keywords": [
+    "media freedom"
+   ]
+  },
+  {
+   "title": "Electoral umpire independence tested",
+   "category": "Nigerian Context",
+   "keywords": [
+    "electoral umpire",
+    "independence"
+   ]
+  },
+  {
+   "title": "Local governance: wards and councillors",
+   "category": "Nigerian Context",
+   "keywords": [
+    "wards",
+    "councillors"
+   ]
+  },
+  {
+   "title": "Constitution review processes explained",
+   "category": "Nigerian Context",
+   "keywords": [
+    "constitution review"
+   ]
+  },
+  {
+   "title": "Public accounts and audit scrutiny",
+   "category": "Applications",
+   "keywords": [
+    "public accounts",
+    "audit"
+   ]
+  },
+  {
+   "title": "Citizens' charters and service delivery",
+   "category": "Applications",
+   "keywords": [
+    "citizens' charter"
+   ]
+  },
+  {
+   "title": "Examination drill: governance past questions",
+   "category": "Applications",
+   "keywords": [
+    "governance",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Types of values: personal and communal",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "values",
+    "types"
+   ]
+  },
+  {
+   "title": "Honesty: costs and rewards",
+   "category": "Applications",
+   "keywords": [
+    "honesty",
+    "rewards"
+   ]
+  },
+  {
+   "title": "Integrity in examinations and results",
+   "category": "Nigerian Context",
+   "keywords": [
+    "integrity",
+    "exams"
+   ]
+  },
+  {
+   "title": "Corruption as a value failure",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "corruption",
+    "values"
+   ]
+  },
+  {
+   "title": "Rebuilding trust in institutions",
+   "category": "Applications",
+   "keywords": [
+    "trust",
+    "institutions"
+   ]
+  },
+  {
+   "title": "Role models: choosing them wisely",
+   "category": "Applications",
+   "keywords": [
+    "role models"
+   ]
+  },
+  {
+   "title": "Value conflicts: handling dilemmas",
+   "category": "Theory",
+   "keywords": [
+    "value conflicts",
+    "dilemmas"
+   ]
+  },
+  {
+   "title": "Religious and ethnic tolerance values",
+   "category": "Nigerian Context",
+   "keywords": [
+    "tolerance",
+    "values"
+   ]
+  },
+  {
+   "title": "Work ethics and productivity links",
+   "category": "Theory",
+   "keywords": [
+    "work ethics",
+    "productivity"
+   ]
+  },
+  {
+   "title": "Examination drill: values past questions",
+   "category": "Applications",
+   "keywords": [
+    "values",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Citizenship by birth, registration, naturalisation",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "birth",
+    "registration",
+    "naturalisation"
+   ]
+  },
+  {
+   "title": "Dual citizenship: the rules",
+   "category": "Theory",
+   "keywords": [
+    "dual citizenship"
+   ]
+  },
+  {
+   "title": "Rights and their limits: section 45",
+   "category": "Theory",
+   "keywords": [
+    "rights",
+    "limits"
+   ]
+  },
+  {
+   "title": "Enforcing rights: courts and NHRC",
+   "category": "Applications",
+   "keywords": [
+    "rights",
+    "enforcement"
+   ]
+  },
+  {
+   "title": "Civic obligations: taxes and defence",
+   "category": "Theory",
+   "keywords": [
+    "obligations",
+    "taxes"
+   ]
+  },
+  {
+   "title": "Voting: why every vote matters",
+   "category": "Applications",
+   "keywords": [
+    "voting",
+    "matters"
+   ]
+  },
+  {
+   "title": "Youth roles in civic life",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "youth",
+    "civic life"
+   ]
+  },
+  {
+   "title": "Global citizenship: an introduction",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "global citizenship"
+   ]
+  },
+  {
+   "title": "Naturalisation case studies",
+   "category": "Methods",
+   "keywords": [
+    "naturalisation",
+    "cases"
+   ]
+  },
+  {
+   "title": "Examination drill: citizenship past questions",
+   "category": "Applications",
+   "keywords": [
+    "citizenship",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Features of democracy: full list analysed",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "democracy",
+    "features"
+   ]
+  },
+  {
+   "title": "Direct versus representative democracy",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "direct",
+    "representative"
+   ]
+  },
+  {
+   "title": "Majoritarianism and minority rights",
+   "category": "Theory",
+   "keywords": [
+    "majoritarianism",
+    "minorities"
+   ]
+  },
+  {
+   "title": "Civilian supremacy and its defence",
+   "category": "Theory",
+   "keywords": [
+    "civilian supremacy"
+   ]
+  },
+  {
+   "title": "Elections as democratic instruments",
+   "category": "Theory",
+   "keywords": [
+    "elections",
+    "instruments"
+   ]
+  },
+  {
+   "title": "Independent electoral bodies compared",
+   "category": "Theory",
+   "keywords": [
+    "electoral bodies"
+   ]
+  },
+  {
+   "title": "Democratic dividends: measuring them",
+   "category": "Applications",
+   "keywords": [
+    "dividends",
+    "democracy"
+   ]
+  },
+  {
+   "title": "Threats to democracy: case studies",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "threats",
+    "democracy"
+   ]
+  },
+  {
+   "title": "Democratic culture in schools",
+   "category": "Applications",
+   "keywords": [
+    "culture",
+    "schools"
+   ]
+  },
+  {
+   "title": "Examination drill: democracy past questions",
+   "category": "Applications",
+   "keywords": [
+    "democracy",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Dicey's principles examined",
+   "category": "Theory",
+   "keywords": [
+    "Dicey",
+    "principles"
+   ]
+  },
+  {
+   "title": "Equality before the law in practice",
+   "category": "Theory",
+   "keywords": [
+    "equality",
+    "law"
+   ]
+  },
+  {
+   "title": "Presumption of innocence explained",
+   "category": "Theory",
+   "keywords": [
+    "presumption",
+    "innocence"
+   ]
+  },
+  {
+   "title": "Fair hearing: the twin pillars",
+   "category": "Theory",
+   "keywords": [
+    "fair hearing"
+   ]
+  },
+  {
+   "title": "Police powers and citizens' rights",
+   "category": "Nigerian Context",
+   "keywords": [
+    "police",
+    "rights"
+   ]
+  },
+  {
+   "title": "Bail: rights and procedures",
+   "category": "Applications",
+   "keywords": [
+    "bail",
+    "procedures"
+   ]
+  },
+  {
+   "title": "Due process in public contracts",
+   "category": "Nigerian Context",
+   "keywords": [
+    "due process",
+    "contracts"
+   ]
+  },
+  {
+   "title": "Impunity: causes and cures",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "impunity"
+   ]
+  },
+  {
+   "title": "Legal aid for the poor",
+   "category": "Applications",
+   "keywords": [
+    "legal aid"
+   ]
+  },
+  {
+   "title": "Examination drill: rule of law past questions",
+   "category": "Applications",
+   "keywords": [
+    "rule of law",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Constitutional supremacy revisited",
+   "category": "Theory",
+   "keywords": [
+    "constitutional supremacy"
+   ]
+  },
+  {
+   "title": "Separation of powers: case applications",
+   "category": "Methods",
+   "keywords": [
+    "separation of powers"
+   ]
+  },
+  {
+   "title": "Checks and balances working: examples",
+   "category": "Nigerian Context",
+   "keywords": [
+    "checks",
+    "balances"
+   ]
+  },
+  {
+   "title": "Federal character: aims and debates",
+   "category": "Nigerian Context",
+   "keywords": [
+    "federal character"
+   ]
+  },
+  {
+   "title": "Amending the 1999 constitution",
+   "category": "Methods",
+   "keywords": [
+    "amendment",
+    "1999"
+   ]
+  },
+  {
+   "title": "Fundamental objectives: chapter 2 duties",
+   "category": "Theory",
+   "keywords": [
+    "fundamental objectives"
+   ]
+  },
+  {
+   "title": "Land use act highlights",
+   "category": "Nigerian Context",
+   "keywords": [
+    "land use act"
+   ]
+  },
+  {
+   "title": "Local government in the constitution",
+   "category": "Nigerian Context",
+   "keywords": [
+    "local government",
+    "constitution"
+   ]
+  },
+  {
+   "title": "Constitutional rights of arrested persons",
+   "category": "Applications",
+   "keywords": [
+    "arrested",
+    "rights"
+   ]
+  },
+  {
+   "title": "Examination drill: constitutionalism past questions",
+   "category": "Applications",
+   "keywords": [
+    "constitutionalism",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Forms of participation: beyond voting",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "participation",
+    "forms"
+   ]
+  },
+  {
+   "title": "Joining parties: roles of members",
+   "category": "Applications",
+   "keywords": [
+    "parties",
+    "members"
+   ]
+  },
+  {
+   "title": "Pressure groups as participation",
+   "category": "Theory",
+   "keywords": [
+    "pressure groups"
+   ]
+  },
+  {
+   "title": "Protests and petitions: the rules",
+   "category": "Applications",
+   "keywords": [
+    "protests",
+    "petitions"
+   ]
+  },
+  {
+   "title": "Town unions and community politics",
+   "category": "Nigerian Context",
+   "keywords": [
+    "town unions"
+   ]
+  },
+  {
+   "title": "Student unionism and leadership",
+   "category": "Applications",
+   "keywords": [
+    "student unionism"
+   ]
+  },
+  {
+   "title": "Women's political participation",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "women",
+    "politics"
+   ]
+  },
+  {
+   "title": "Persons with disabilities and inclusion",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "disabilities",
+    "inclusion"
+   ]
+  },
+  {
+   "title": "Diaspora voting debate",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "diaspora voting"
+   ]
+  },
+  {
+   "title": "Examination drill: participation past questions",
+   "category": "Applications",
+   "keywords": [
+    "participation",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Unity in diversity: the Nigerian idea",
+   "category": "Nigerian Context",
+   "keywords": [
+    "unity",
+    "diversity"
+   ]
+  },
+  {
+   "title": "National symbols and their protocols",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "symbols",
+    "protocols"
+   ]
+  },
+  {
+   "title": "The anthem and pledge: meanings",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "anthem",
+    "pledge"
+   ]
+  },
+  {
+   "title": "NYSC: history and impact",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NYSC",
+    "impact"
+   ]
+  },
+  {
+   "title": "Federal character and inclusion balance",
+   "category": "Nigerian Context",
+   "keywords": [
+    "federal character",
+    "balance"
+   ]
+  },
+  {
+   "title": "Ethnicity: managing its politics",
+   "category": "Theory",
+   "keywords": [
+    "ethnicity",
+    "politics"
+   ]
+  },
+  {
+   "title": "Religious harmony practices",
+   "category": "Nigerian Context",
+   "keywords": [
+    "religious harmony"
+   ]
+  },
+  {
+   "title": "Indigene-settler tensions resolved",
+   "category": "Nigerian Context",
+   "keywords": [
+    "indigene",
+    "settler"
+   ]
+  },
+  {
+   "title": "Inter-marriage and integration",
+   "category": "Applications",
+   "keywords": [
+    "inter-marriage"
+   ]
+  },
+  {
+   "title": "Examination drill: unity past questions",
+   "category": "Applications",
+   "keywords": [
+    "unity",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Human dignity: constitutional meaning",
+   "category": "Theory",
+   "keywords": [
+    "dignity",
+    "meaning"
+   ]
+  },
+  {
+   "title": "Drug abuse: classes and signs",
+   "category": "Applications",
+   "keywords": [
+    "drug abuse",
+    "signs"
+   ]
+  },
+  {
+   "title": "Trafficking: patterns and rescue",
+   "category": "Nigerian Context",
+   "keywords": [
+    "trafficking",
+    "rescue"
+   ]
+  },
+  {
+   "title": "Child labour and the law",
+   "category": "Nigerian Context",
+   "keywords": [
+    "child labour",
+    "law"
+   ]
+  },
+  {
+   "title": "Cultism: signs and exit paths",
+   "category": "Applications",
+   "keywords": [
+    "cultism",
+    "exit"
+   ]
+  },
+  {
+   "title": "Exam malpractice: everyone loses",
+   "category": "Nigerian Context",
+   "keywords": [
+    "malpractice",
+    "exams"
+   ]
+  },
+  {
+   "title": "Internet fraud: yahoo plus harms",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "fraud",
+    "harms"
+   ]
+  },
+  {
+   "title": "Gangsterism in schools checked",
+   "category": "Applications",
+   "keywords": [
+    "gangsterism",
+    "schools"
+   ]
+  },
+  {
+   "title": "Rehabilitation and counselling services",
+   "category": "Applications",
+   "keywords": [
+    "rehabilitation"
+   ]
+  },
+  {
+   "title": "Examination drill: vices past questions",
+   "category": "Applications",
+   "keywords": [
+    "vices",
+    "past questions"
+   ]
+  },
+  {
+   "title": "HIV/AIDS: facts versus stigma",
+   "category": "Applications",
+   "keywords": [
+    "HIV/AIDS",
+    "stigma"
+   ]
+  },
+  {
+   "title": "STIs: prevention and care",
+   "category": "Applications",
+   "keywords": [
+    "STIs",
+    "prevention"
+   ]
+  },
+  {
+   "title": "Mental health: myths and help",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "mental health"
+   ]
+  },
+  {
+   "title": "Substance use disorder recovery",
+   "category": "Applications",
+   "keywords": [
+    "recovery"
+   ]
+  },
+  {
+   "title": "Family planning methods overview",
+   "category": "Applications",
+   "keywords": [
+    "family planning"
+   ]
+  },
+  {
+   "title": "Maternal health and safe motherhood",
+   "category": "Applications",
+   "keywords": [
+    "maternal health"
+   ]
+  },
+  {
+   "title": "Nutrition and balanced diets",
+   "category": "Applications",
+   "keywords": [
+    "nutrition",
+    "diets"
+   ]
+  },
+  {
+   "title": "Malaria prevention at home",
+   "category": "Nigerian Context",
+   "keywords": [
+    "malaria",
+    "prevention"
+   ]
+  },
+  {
+   "title": "Health insurance: NHIS and state schemes",
+   "category": "Nigerian Context",
+   "keywords": [
+    "health insurance"
+   ]
+  },
+  {
+   "title": "Examination drill: health past questions",
+   "category": "Applications",
+   "keywords": [
+    "health",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Road signs and their meanings",
+   "category": "Methods",
+   "keywords": [
+    "road signs",
+    "meanings"
+   ]
+  },
+  {
+   "title": "Traffic rules and FRSC duties",
+   "category": "Nigerian Context",
+   "keywords": [
+    "traffic",
+    "FRSC"
+   ]
+  },
+  {
+   "title": "Fire safety at home and school",
+   "category": "Applications",
+   "keywords": [
+    "fire safety"
+   ]
+  },
+  {
+   "title": "First aid: bleeding and burns",
+   "category": "Methods",
+   "keywords": [
+    "first aid",
+    "bleeding"
+   ]
+  },
+  {
+   "title": "CPR basics and emergency numbers",
+   "category": "Methods",
+   "keywords": [
+    "CPR",
+    "emergency"
+   ]
+  },
+  {
+   "title": "Flood and fire evacuation plans",
+   "category": "Applications",
+   "keywords": [
+    "evacuation",
+    "plans"
+   ]
+  },
+  {
+   "title": "Building collapse: prevention",
+   "category": "Nigerian Context",
+   "keywords": [
+    "building collapse"
+   ]
+  },
+  {
+   "title": "Security awareness in public places",
+   "category": "Applications",
+   "keywords": [
+    "security",
+    "awareness"
+   ]
+  },
+  {
+   "title": "NEMA and state emergency agencies",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NEMA"
+   ]
+  },
+  {
+   "title": "Examination drill: safety past questions",
+   "category": "Applications",
+   "keywords": [
+    "safety",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Community service: forms and benefits",
+   "category": "Applications",
+   "keywords": [
+    "community service",
+    "benefits"
+   ]
+  },
+  {
+   "title": "Volunteering: skills and networks",
+   "category": "Applications",
+   "keywords": [
+    "volunteering"
+   ]
+  },
+  {
+   "title": "Self-help projects that worked",
+   "category": "Nigerian Context",
+   "keywords": [
+    "self-help",
+    "projects"
+   ]
+  },
+  {
+   "title": "Community development associations",
+   "category": "Nigerian Context",
+   "keywords": [
+    "CDAs"
+   ]
+  },
+  {
+   "title": "Social responsibility of businesses",
+   "category": "Theory",
+   "keywords": [
+    "CSR",
+    "businesses"
+   ]
+  },
+  {
+   "title": "Fundraising ethically for causes",
+   "category": "Applications",
+   "keywords": [
+    "fundraising",
+    "ethics"
+   ]
+  },
+  {
+   "title": "Environmental clean-ups organised",
+   "category": "Applications",
+   "keywords": [
+    "clean-ups"
+   ]
+  },
+  {
+   "title": "Mentoring younger students",
+   "category": "Applications",
+   "keywords": [
+    "mentoring"
+   ]
+  },
+  {
+   "title": "Digital volunteering opportunities",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "digital volunteering"
+   ]
+  },
+  {
+   "title": "Examination drill: community past questions",
+   "category": "Applications",
+   "keywords": [
+    "community service",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Job search skills: CVs and interviews",
+   "category": "Methods",
+   "keywords": [
+    "CV",
+    "interviews"
+   ]
+  },
+  {
+   "title": "Employability skills employers want",
+   "category": "Applications",
+   "keywords": [
+    "employability",
+    "skills"
+   ]
+  },
+  {
+   "title": "Entrepreneurship: from idea to income",
+   "category": "Applications",
+   "keywords": [
+    "entrepreneurship",
+    "idea"
+   ]
+  },
+  {
+   "title": "Business ethics for young traders",
+   "category": "Applications",
+   "keywords": [
+    "business ethics"
+   ]
+  },
+  {
+   "title": "Financial literacy: save, budget, invest",
+   "category": "Methods",
+   "keywords": [
+    "financial literacy"
+   ]
+  },
+  {
+   "title": "Scams and get-rich traps avoided",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "scams",
+    "traps"
+   ]
+  },
+  {
+   "title": "Skill acquisition programmes mapped",
+   "category": "Nigerian Context",
+   "keywords": [
+    "skill acquisition"
+   ]
+  },
+  {
+   "title": "Work-life discipline habits",
+   "category": "Applications",
+   "keywords": [
+    "discipline",
+    "habits"
+   ]
+  },
+  {
+   "title": "Retirement planning awareness",
+   "category": "Applications",
+   "keywords": [
+    "retirement"
+   ]
+  },
+  {
+   "title": "Examination drill: employment past questions",
+   "category": "Applications",
+   "keywords": [
+    "employment",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Conflict: types and escalation",
+   "category": "Theory",
+   "keywords": [
+    "conflict",
+    "types"
+   ]
+  },
+  {
+   "title": "Dialogue and mediation skills",
+   "category": "Methods",
+   "keywords": [
+    "dialogue",
+    "mediation"
+   ]
+  },
+  {
+   "title": "Peacebuilding in communities",
+   "category": "Applications",
+   "keywords": [
+    "peacebuilding"
+   ]
+  },
+  {
+   "title": "Farming conflicts and resolutions",
+   "category": "Nigerian Context",
+   "keywords": [
+    "farmer conflicts"
+   ]
+  },
+  {
+   "title": "Religious tolerance in practice",
+   "category": "Applications",
+   "keywords": [
+    "tolerance",
+    "practice"
+   ]
+  },
+  {
+   "title": "Justice and reconciliation processes",
+   "category": "Theory",
+   "keywords": [
+    "justice",
+    "reconciliation"
+   ]
+  },
+  {
+   "title": "Regional security initiatives",
+   "category": "Nigerian Context",
+   "keywords": [
+    "security",
+    "initiatives"
+   ]
+  },
+  {
+   "title": "Amnesty and DDR basics",
+   "category": "Theory",
+   "keywords": [
+    "amnesty",
+    "DDR"
+   ]
+  },
+  {
+   "title": "International peacekeeping roles",
+   "category": "Applications",
+   "keywords": [
+    "peacekeeping"
+   ]
+  },
+  {
+   "title": "Examination drill: peace past questions",
+   "category": "Applications",
+   "keywords": [
+    "peace",
+    "conflict",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Foreign policy basics for citizens",
+   "category": "Theory",
+   "keywords": [
+    "foreign policy",
+    "basics"
+   ]
+  },
+  {
+   "title": "UN and its agencies in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "UN",
+    "agencies"
+   ]
+  },
+  {
+   "title": "AU and ECOWAS citizenship",
+   "category": "Applications",
+   "keywords": [
+    "AU",
+    "ECOWAS"
+   ]
+  },
+  {
+   "title": "Globalisation: opportunities and risks",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "globalisation"
+   ]
+  },
+  {
+   "title": "Climate treaties and Nigeria",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "climate treaties"
+   ]
+  },
+  {
+   "title": "Migration: legal pathways",
+   "category": "Applications",
+   "keywords": [
+    "migration",
+    "legal"
+   ]
+  },
+  {
+   "title": "International scholarships and exchange",
+   "category": "Applications",
+   "keywords": [
+    "scholarships",
+    "exchange"
+   ]
+  },
+  {
+   "title": "Nigeria's soft power: music and film",
+   "category": "Nigerian Context",
+   "keywords": [
+    "soft power",
+    "music"
+   ]
+  },
+  {
+   "title": "Being a global citizen online",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "global citizen",
+    "online"
+   ]
+  },
+  {
+   "title": "Examination drill: international past questions",
+   "category": "Applications",
+   "keywords": [
+    "international",
+    "past questions"
+   ]
+  },
+  {
+   "title": "JAMB civic education paper structure",
+   "category": "Methods",
+   "keywords": [
+    "JAMB",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Objective questions on national values",
+   "category": "Applications",
+   "keywords": [
+    "values",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on citizenship",
+   "category": "Applications",
+   "keywords": [
+    "citizenship",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on democracy",
+   "category": "Applications",
+   "keywords": [
+    "democracy",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on rights and duties",
+   "category": "Applications",
+   "keywords": [
+    "rights",
+    "duties",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on social problems",
+   "category": "Applications",
+   "keywords": [
+    "social problems",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on civic bodies",
+   "category": "Applications",
+   "keywords": [
+    "civic bodies",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on current affairs",
+   "category": "Applications",
+   "keywords": [
+    "current affairs",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Fact drills: agencies and mandates",
+   "category": "Methods",
+   "keywords": [
+    "agencies",
+    "drills"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set A past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed practice: the 40-question sprint",
+   "category": "Applications",
+   "keywords": [
+    "timed practice",
+    "sprint"
+   ]
+  },
+  {
+   "title": "Review of common wrong options",
+   "category": "Methods",
+   "keywords": [
+    "wrong options",
+    "review"
+   ]
+  },
+  {
+   "title": "Scenario-judgement drills",
+   "category": "Methods",
+   "keywords": [
+    "scenario",
+    "drills"
+   ]
+  },
+  {
+   "title": "Which-is-best drills on duties",
+   "category": "Methods",
+   "keywords": [
+    "duties",
+    "drills"
+   ]
+  },
+  {
+   "title": "Elimination techniques for objective questions",
+   "category": "Methods",
+   "keywords": [
+    "elimination",
+    "techniques"
+   ]
+  },
+  {
+   "title": "Misconceptions about rights corrected",
+   "category": "Methods",
+   "keywords": [
+    "misconceptions",
+    "rights"
+   ]
+  },
+  {
+   "title": "Errors about agencies corrected",
+   "category": "Methods",
+   "keywords": [
+    "agencies",
+    "errors"
+   ]
+  },
+  {
+   "title": "Definition matching speed drills",
+   "category": "Methods",
+   "keywords": [
+    "definitions",
+    "speed"
+   ]
+  },
+  {
+   "title": "Current affairs: what still gets asked",
+   "category": "Methods",
+   "keywords": [
+    "current affairs"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set B past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Apply values to 10 dilemmas",
+   "category": "Applications",
+   "keywords": [
+    "values",
+    "dilemmas"
+   ]
+  },
+  {
+   "title": "Apply rights to 10 police scenarios",
+   "category": "Applications",
+   "keywords": [
+    "rights",
+    "scenarios"
+   ]
+  },
+  {
+   "title": "Apply duties to 10 civic cases",
+   "category": "Applications",
+   "keywords": [
+    "duties",
+    "cases"
+   ]
+  },
+  {
+   "title": "Analyse 5 community problems",
+   "category": "Applications",
+   "keywords": [
+    "community",
+    "problems"
+   ]
+  },
+  {
+   "title": "Draft 3 community project ideas",
+   "category": "Applications",
+   "keywords": [
+    "projects",
+    "ideas"
+   ]
+  },
+  {
+   "title": "Role-play conflict mediations",
+   "category": "Applications",
+   "keywords": [
+    "role-play",
+    "mediations"
+   ]
+  },
+  {
+   "title": "Debate: youth in politics",
+   "category": "Applications",
+   "keywords": [
+    "debate",
+    "youth"
+   ]
+  },
+  {
+   "title": "Plan: a school cleanliness campaign",
+   "category": "Applications",
+   "keywords": [
+    "cleanliness",
+    "campaign"
+   ]
+  },
+  {
+   "title": "Evaluate: 5 public programmes",
+   "category": "Applications",
+   "keywords": [
+    "programmes",
+    "evaluation"
+   ]
+  },
+  {
+   "title": "Examination drill: applications past questions",
+   "category": "Applications",
+   "keywords": [
+    "applications",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Building the final revision timetable",
+   "category": "Methods",
+   "keywords": [
+    "revision timetable"
+   ]
+  },
+  {
+   "title": "Facts digest: sections, agencies, dates",
+   "category": "Methods",
+   "keywords": [
+    "facts digest"
+   ]
+  },
+  {
+   "title": "Definitions examiners love to test",
+   "category": "Methods",
+   "keywords": [
+    "definitions",
+    "examiners"
+   ]
+  },
+  {
+   "title": "The most repeated JAMB civic themes",
+   "category": "Methods",
+   "keywords": [
+    "repeated themes",
+    "JAMB"
+   ]
+  },
+  {
+   "title": "Mock examination: 50 questions in 50 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Marking your mock: error analysis",
+   "category": "Methods",
+   "keywords": [
+    "error analysis",
+    "mock"
+   ]
+  },
+  {
+   "title": "Scenario questions: the calm method",
+   "category": "Methods",
+   "keywords": [
+    "scenarios",
+    "method"
+   ]
+  },
+  {
+   "title": "Dates and constitutions at a glance",
+   "category": "Methods",
+   "keywords": [
+    "dates",
+    "constitutions"
+   ]
+  },
+  {
+   "title": "Guessing ethically and wisely",
+   "category": "Methods",
+   "keywords": [
+    "guessing",
+    "wisely"
+   ]
+  },
+  {
+   "title": "Exam day strategy and final confidence",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Where rights are violated: first steps",
+   "category": "Applications",
+   "keywords": [
+    "violations",
+    "steps"
+   ]
+  },
+  {
+   "title": "Writing a petition that gets read",
+   "category": "Methods",
+   "keywords": [
+    "petition",
+    "writing"
+   ]
+  },
+  {
+   "title": "NHRC complaints: the process",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NHRC",
+    "complaints"
+   ]
+  },
+  {
+   "title": "Public interest litigation cases",
+   "category": "Applications",
+   "keywords": [
+    "litigation",
+    "cases"
+   ]
+  },
+  {
+   "title": "Legal aid clinics mapped",
+   "category": "Applications",
+   "keywords": [
+    "legal aid",
+    "clinics"
+   ]
+  },
+  {
+   "title": "Press and ombudsman channels",
+   "category": "Applications",
+   "keywords": [
+    "ombudsman"
+   ]
+  },
+  {
+   "title": "Documenting evidence properly",
+   "category": "Methods",
+   "keywords": [
+    "evidence",
+    "documentation"
+   ]
+  },
+  {
+   "title": "Case study: unlawful detention resolved",
+   "category": "Applications",
+   "keywords": [
+    "detention",
+    "case"
+   ]
+  },
+  {
+   "title": "Case study: forced eviction resisted",
+   "category": "Applications",
+   "keywords": [
+    "eviction",
+    "case"
+   ]
+  },
+  {
+   "title": "Examination drill: rights enforcement past questions",
+   "category": "Applications",
+   "keywords": [
+    "rights enforcement",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Digital rights and responsibilities",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "digital rights"
+   ]
+  },
+  {
+   "title": "Password and account hygiene",
+   "category": "Applications",
+   "keywords": [
+    "passwords",
+    "hygiene"
+   ]
+  },
+  {
+   "title": "Spotting scams and fake giveaways",
+   "category": "Applications",
+   "keywords": [
+    "scams",
+    "giveaways"
+   ]
+  },
+  {
+   "title": "Cyberstalking and reporting channels",
+   "category": "Applications",
+   "keywords": [
+    "cyberstalking",
+    "reporting"
+   ]
+  },
+  {
+   "title": "Privacy settings audited",
+   "category": "Methods",
+   "keywords": [
+    "privacy settings"
+   ]
+  },
+  {
+   "title": "Screen addiction: honest self-audit",
+   "category": "Applications",
+   "keywords": [
+    "screen addiction"
+   ]
+  },
+  {
+   "title": "Digital payments safety in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "payments",
+    "safety"
+   ]
+  },
+  {
+   "title": "Online learning etiquette",
+   "category": "Applications",
+   "keywords": [
+    "online learning"
+   ]
+  },
+  {
+   "title": "AI tools used responsibly",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "AI",
+    "responsible"
+   ]
+  },
+  {
+   "title": "Examination drill: digital past questions",
+   "category": "Applications",
+   "keywords": [
+    "digital citizenship",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Taxes: why citizens must pay",
+   "category": "Theory",
+   "keywords": [
+    "taxes",
+    "citizens"
+   ]
+  },
+  {
+   "title": "National budget: reading the basics",
+   "category": "Methods",
+   "keywords": [
+    "budget",
+    "reading"
+   ]
+  },
+  {
+   "title": "Inflation and household survival",
+   "category": "Nigerian Context",
+   "keywords": [
+    "inflation",
+    "household"
+   ]
+  },
+  {
+   "title": "Savings culture and cooperatives",
+   "category": "Applications",
+   "keywords": [
+    "savings",
+    "cooperatives"
+   ]
+  },
+  {
+   "title": "Insurance as protection",
+   "category": "Applications",
+   "keywords": [
+    "insurance",
+    "protection"
+   ]
+  },
+  {
+   "title": "Consumer rights in the market",
+   "category": "Applications",
+   "keywords": [
+    "consumer rights"
+   ]
+  },
+  {
+   "title": "Local content and job creation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "local content",
+    "jobs"
+   ]
+  },
+  {
+   "title": "Illegal mining and sabotage costs",
+   "category": "Nigerian Context",
+   "keywords": [
+    "mining",
+    "sabotage"
+   ]
+  },
+  {
+   "title": "Made-in-Nigeria campaigns assessed",
+   "category": "Nigerian Context",
+   "keywords": [
+    "made-in-Nigeria"
+   ]
+  },
+  {
+   "title": "Examination drill: economy past questions",
+   "category": "Applications",
+   "keywords": [
+    "economy",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Youth demographics: the numbers",
+   "category": "Nigerian Context",
+   "keywords": [
+    "youth",
+    "demographics"
+   ]
+  },
+  {
+   "title": "Not Too Young To Run: the story",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Not Too Young To Run"
+   ]
+  },
+  {
+   "title": "Student activism: history and limits",
+   "category": "Theory",
+   "keywords": [
+    "student activism"
+   ]
+  },
+  {
+   "title": "Tech, art and youth enterprise",
+   "category": "Applications",
+   "keywords": [
+    "tech",
+    "enterprise"
+   ]
+  },
+  {
+   "title": "Volunteering as a ladder",
+   "category": "Applications",
+   "keywords": [
+    "volunteering"
+   ]
+  },
+  {
+   "title": "Mentorship circles that work",
+   "category": "Applications",
+   "keywords": [
+    "mentorship"
+   ]
+  },
+  {
+   "title": "Sports and talent pathways",
+   "category": "Applications",
+   "keywords": [
+    "sports",
+    "talent"
+   ]
+  },
+  {
+   "title": "Avoiding desperation traps: japa and betting",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "japa",
+    "betting"
+   ]
+  },
+  {
+   "title": "Building a personal development plan",
+   "category": "Methods",
+   "keywords": [
+    "development plan"
+   ]
+  },
+  {
+   "title": "Examination drill: youth past questions",
+   "category": "Applications",
+   "keywords": [
+    "youth",
+    "past questions"
+   ]
+  },
+  {
+   "title": "INEC beyond election day",
+   "category": "Nigerian Context",
+   "keywords": [
+    "INEC"
+   ]
+  },
+  {
+   "title": "The judiciary: courts explained simply",
+   "category": "Nigerian Context",
+   "keywords": [
+    "judiciary",
+    "courts"
+   ]
+  },
+  {
+   "title": "The legislature: work behind plenary",
+   "category": "Nigerian Context",
+   "keywords": [
+    "legislature"
+   ]
+  },
+  {
+   "title": "The civil service: who does what",
+   "category": "Nigerian Context",
+   "keywords": [
+    "civil service"
+   ]
+  },
+  {
+   "title": "Traditional institutions today",
+   "category": "Nigerian Context",
+   "keywords": [
+    "traditional institutions"
+   ]
+  },
+  {
+   "title": "Religious institutions and peace",
+   "category": "Nigerian Context",
+   "keywords": [
+    "religious institutions"
+   ]
+  },
+  {
+   "title": "The press council and ethics",
+   "category": "Nigerian Context",
+   "keywords": [
+    "press council"
+   ]
+  },
+  {
+   "title": "CSOs: accountability partners",
+   "category": "Nigerian Context",
+   "keywords": [
+    "CSOs"
+   ]
+  },
+  {
+   "title": "Private sector as development partner",
+   "category": "Applications",
+   "keywords": [
+    "private sector"
+   ]
+  },
+  {
+   "title": "Examination drill: institutions past questions",
+   "category": "Applications",
+   "keywords": [
+    "institutions",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed drill: values and citizenship",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "values"
+   ]
+  },
+  {
+   "title": "Timed drill: democracy and rule of law",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "democracy"
+   ]
+  },
+  {
+   "title": "Timed drill: rights and duties",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "rights"
+   ]
+  },
+  {
+   "title": "Timed drill: social problems",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "social"
+   ]
+  },
+  {
+   "title": "Timed drill: institutions",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "institutions"
+   ]
+  },
+  {
+   "title": "Timed drill: current affairs",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "current affairs"
+   ]
+  },
+  {
+   "title": "Mock: 50 questions in 50 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Error analysis of your mock",
+   "category": "Methods",
+   "keywords": [
+    "error analysis"
+   ]
+  },
+  {
+   "title": "Flashcards: agencies and mandates",
+   "category": "Methods",
+   "keywords": [
+    "flashcards",
+    "agencies"
+   ]
+  },
+  {
+   "title": "Exam day: the calm plan",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "plan"
+   ]
+  }
+ ]
+}

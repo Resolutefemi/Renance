@@ -1,0 +1,76 @@
+// Literature-in-English starter questions (senior band, art track).
+// Original content written for Renance; grows term by term.
+
+package school
+
+var examBankLiterature = []SeedExamQuestion{
+	// First Term: the elements
+	{SubjectCode: "LIT", Band: "senior", Term: 1,
+		Question:    "The sequence of events in a novel is called the:",
+		Options:     [4]string{"Theme", "Plot", "Setting", "Mood"},
+		AnswerIndex: 1,
+		Explanation: "Plot is the arranged chain of happenings in a story."},
+	{SubjectCode: "LIT", Band: "senior", Term: 1,
+		Question:    "A comparison using like or as is a:",
+		Options:     [4]string{"Metaphor", "Simile", "Hyperbole", "Irony"},
+		AnswerIndex: 1,
+		Explanation: "Similes compare explicitly with like or as."},
+	{SubjectCode: "LIT", Band: "senior", Term: 1,
+		Question:    "The time and place of a story make up its:",
+		Options:     [4]string{"Plot", "Theme", "Setting", "Conflict"},
+		AnswerIndex: 2,
+		Explanation: "Setting anchors when and where events unfold."},
+
+	// Second Term: drama and poetry
+	{SubjectCode: "LIT", Band: "senior", Term: 2,
+		Question:    "A long narrative poem celebrating heroic deeds is a(n):",
+		Options:     [4]string{"Elegy", "Epic", "Ode", "Ballad"},
+		AnswerIndex: 1,
+		Explanation: "Epics exalt heroes and great deeds in elevated language."},
+	{SubjectCode: "LIT", Band: "senior", Term: 2,
+		Question:    "In drama, the speech a character makes alone on stage revealing inner thoughts is a:",
+		Options:     [4]string{"Dialogue", "Soliloquy", "Aside", "Chorus"},
+		AnswerIndex: 1,
+		Explanation: "A soliloquy speaks thoughts aloud to the audience."},
+	{SubjectCode: "LIT", Band: "senior", Term: 2,
+		Question:    "A poem of mourning for the dead is an:",
+		Options:     [4]string{"Elegy", "Ode", "Sonnet", "Idyll"},
+		AnswerIndex: 0,
+		Explanation: "Elegies lament loss and often end in consolation."},
+
+	// Third Term: appreciation
+	{SubjectCode: "LIT", Band: "senior", Term: 3,
+		Question:    "The central idea a literary work explores is its:",
+		Options:     [4]string{"Plot", "Setting", "Theme", "Rhyme"},
+		AnswerIndex: 2,
+		Explanation: "Theme is the controlling idea beneath the surface story."},
+	{SubjectCode: "LIT", Band: "senior", Term: 3,
+		Question:    "When the audience knows what a character does not, the scene is:",
+		Options:     [4]string{"Tragic", "Dramatic irony", "Comic relief", "A flashback"},
+		AnswerIndex: 1,
+		Explanation: "Dramatic irony turns the gap in knowledge into meaning."},
+	{SubjectCode: "LIT", Band: "senior", Term: 3,
+		Question:    "The repetition of initial consonant sounds in nearby words is:",
+		Options:     [4]string{"Assonance", "Alliteration", "Onomatopoeia", "Rhyme"},
+		AnswerIndex: 1,
+		Explanation: "Alliteration repeats opening sounds, like wild winds."},
+}
+
+// Part two: three more per term for the pool.
+var examBankLiteratureP2 = []SeedExamQuestion{
+        {SubjectCode: "LIT", Band: "senior", Term: 1,
+                Question:    "The narrator who says I and tells the story from inside it is:",
+                Options:     [4]string{"Third-person omniscient", "First-person narrator", "An invisible author", "A chorus"},
+                AnswerIndex: 1,
+                Explanation: "First-person narration filters every event through one teller."},
+        {SubjectCode: "LIT", Band: "senior", Term: 2,
+                Question:    "A fourteen-line poem with a fixed rhyme scheme is a:",
+                Options:     [4]string{"Sonnet", "Elegy", "Ballad", "Dirge"},
+                AnswerIndex: 0,
+                Explanation: "Sonnets run fourteen lines, Petrarchan or Shakespearean."},
+        {SubjectCode: "LIT", Band: "senior", Term: 3,
+                Question:    "A reference within a text to another well-known work is a(n):",
+                Options:     [4]string{"Allusion", "Illusion", "Anachronism", "Allegory"},
+                AnswerIndex: 0,
+                Explanation: "Allusion borrows the weight of the other text."},
+}

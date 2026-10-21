@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The 2D FLAT keycap, round launcher variant - the same adaptive
+     layers and the same one-green-keycap-every-theme doctrine as
+     ic_launcher.xml (day AND night ground white, monochrome layer for
+     the Android 13+ themed icons). -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_background"/>
+    <foreground android:drawable="@mipmap/ic_launcher_foreground"/>
+    <monochrome android:drawable="@mipmap/ic_launcher_monochrome"/>
+</adaptive-icon>

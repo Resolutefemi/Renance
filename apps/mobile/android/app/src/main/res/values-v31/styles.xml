@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android 12+ system splash: the founder rule is "the app icon is
+         the flat 2D keycap, but the splash stays the 3D keycap". The
+         system splash would otherwise reuse the (now 2D) launcher icon,
+         so pin the contained 3D keycap (drawable-xxxhdpi/splash_icon_3d,
+         the web icon.svg geometry) on the white ground the Flutter
+         splash opens with. Pre-12 devices never read these attributes -
+         their cold-start keeps the classic launch_background flow. -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <item name="android:windowSplashScreenBackground">@color/splash_ground</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash_icon_3d</item>
+    </style>
+</resources>

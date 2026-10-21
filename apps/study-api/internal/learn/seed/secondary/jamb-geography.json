@@ -1,0 +1,2520 @@
+{
+ "body": "jamb",
+ "subject": "geography",
+ "title": "Geography",
+ "unitTitles": [
+  "Earth, Maps and Landforms",
+  "Weather, Climate and the Hydrosphere",
+  "Human and Economic Geography",
+  "Nigeria: The Physical Setting",
+  "Nigeria: People, Economy and Environment",
+  "Global Issues and Geographic Skills",
+  "Mapwork Mastery",
+  "Geomorphology in Depth",
+  "Weather and Climate in Depth",
+  "Soils and Vegetation",
+  "Population Geography in Depth",
+  "Settlement Geography",
+  "Economic Geography: Agriculture",
+  "Economic Geography: Industry and Energy",
+  "Transport and Trade Geography",
+  "Regional Geography: Africa",
+  "Environmental Hazards",
+  "Fieldwork and Practical Skills",
+  "Structured Revision: Set A",
+  "Structured Revision: Set B",
+  "Calculations Workshop",
+  "JAMB Masterclass: Final Lap",
+  "Weather Instruments Workshop",
+  "River Studies Workshop",
+  "Urban Geography Fieldwork",
+  "Economic Data Workshop",
+  "Africa Regional Workshop",
+  "World Case Studies",
+  "Diagrams Clinic",
+  "Geography Masterclass Drills"
+ ],
+ "topics": [
+  {
+   "title": "Geography: meaning, scope and branches",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "geography",
+    "scope",
+    "physical geography",
+    "human geography"
+   ]
+  },
+  {
+   "title": "The solar system and the planets",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "solar system",
+    "planets",
+    "sun",
+    "orbit"
+   ]
+  },
+  {
+   "title": "Rotation and revolution of the earth",
+   "category": "Theory",
+   "keywords": [
+    "rotation",
+    "revolution",
+    "day and night",
+    "seasons"
+   ]
+  },
+  {
+   "title": "Latitude and longitude: coordinates",
+   "category": "Methods",
+   "keywords": [
+    "latitude",
+    "longitude",
+    "coordinates",
+    "great circle",
+    "meridian"
+   ]
+  },
+  {
+   "title": "Calculation of local time and distance",
+   "category": "Methods",
+   "keywords": [
+    "local time",
+    "distance",
+    "degrees",
+    "international date line"
+   ]
+  },
+  {
+   "title": "Earth's structure: crust, mantle and core",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "crust",
+    "mantle",
+    "core",
+    "earth structure"
+   ]
+  },
+  {
+   "title": "Rocks: types, characteristics and uses",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "rocks",
+    "igneous",
+    "sedimentary",
+    "metamorphic",
+    "uses of rocks"
+   ]
+  },
+  {
+   "title": "Plate tectonics, earthquakes and volcanoes",
+   "category": "Theory",
+   "keywords": [
+    "plate tectonics",
+    "earthquake",
+    "volcano",
+    "faulting",
+    "folding"
+   ]
+  },
+  {
+   "title": "Mountains, plateaux and plains: types",
+   "category": "Theory",
+   "keywords": [
+    "mountains",
+    "plateaux",
+    "plains",
+    "block mountains",
+    "fold mountains"
+   ]
+  },
+  {
+   "title": "Weathering, mass movement and erosion",
+   "category": "Theory",
+   "keywords": [
+    "weathering",
+    "mass movement",
+    "erosion",
+    "landslides"
+   ]
+  },
+  {
+   "title": "River action and drainage patterns",
+   "category": "Theory",
+   "keywords": [
+    "river",
+    "erosion",
+    "deposition",
+    "drainage pattern",
+    "tributaries"
+   ]
+  },
+  {
+   "title": "Wind and wave action in deserts and coasts",
+   "category": "Theory",
+   "keywords": [
+    "wind erosion",
+    "wave action",
+    "desert",
+    "coastal",
+    "dunes"
+   ]
+  },
+  {
+   "title": "Groundwater and limestone features",
+   "category": "Theory",
+   "keywords": [
+    "groundwater",
+    "limestone",
+    "karst",
+    "spring",
+    "water table"
+   ]
+  },
+  {
+   "title": "Weather and climate: the difference",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "weather",
+    "climate",
+    "elements",
+    "difference"
+   ]
+  },
+  {
+   "title": "Weather instruments and stations",
+   "category": "Methods",
+   "keywords": [
+    "thermometer",
+    "barometer",
+    "rain gauge",
+    "anemometer",
+    "hygrometer"
+   ]
+  },
+  {
+   "title": "Temperature: factors affecting distribution",
+   "category": "Theory",
+   "keywords": [
+    "temperature",
+    "altitude",
+    "latitude",
+    "ocean currents"
+   ]
+  },
+  {
+   "title": "Pressure and wind belts of the world",
+   "category": "Theory",
+   "keywords": [
+    "pressure belts",
+    "winds",
+    "trade winds",
+    "monsoon"
+   ]
+  },
+  {
+   "title": "Rainfall: types, formation and measurement",
+   "category": "Theory",
+   "keywords": [
+    "rainfall",
+    "convectional",
+    "relief rain",
+    "cyclonic"
+   ]
+  },
+  {
+   "title": "World climate types and their regions",
+   "category": "Theory",
+   "keywords": [
+    "climate types",
+    "tropical",
+    "equatorial",
+    "desert",
+    "mediterranean"
+   ]
+  },
+  {
+   "title": "The hydrosphere: oceans and their importance",
+   "category": "Theory",
+   "keywords": [
+    "oceans",
+    "salinity",
+    "currents",
+    "hydrosphere"
+   ]
+  },
+  {
+   "title": "Natural vegetation belts of the world",
+   "category": "Theory",
+   "keywords": [
+    "vegetation",
+    "forest",
+    "grassland",
+    "desert vegetation",
+    "coniferous"
+   ]
+  },
+  {
+   "title": "Soils: formation, profile and properties",
+   "category": "Theory",
+   "keywords": [
+    "soil",
+    "soil profile",
+    "formation",
+    "texture",
+    "leaching"
+   ]
+  },
+  {
+   "title": "Map reading: scale and measurement",
+   "category": "Methods",
+   "keywords": [
+    "scale",
+    "measurement",
+    "distance",
+    "ratio scale"
+   ]
+  },
+  {
+   "title": "Map work: bearings, directions and grids",
+   "category": "Methods",
+   "keywords": [
+    "bearings",
+    "grid reference",
+    "direction",
+    "graticule"
+   ]
+  },
+  {
+   "title": "Map work: contours and relief features",
+   "category": "Methods",
+   "keywords": [
+    "contours",
+    "relief",
+    "cross section",
+    "slopes",
+    "valley"
+   ]
+  },
+  {
+   "title": "Map interpretation and sketch maps",
+   "category": "Methods",
+   "keywords": [
+    "map interpretation",
+    "sketch map",
+    "drainage",
+    "settlement patterns"
+   ]
+  },
+  {
+   "title": "Fieldwork and geographic research methods",
+   "category": "Methods",
+   "keywords": [
+    "fieldwork",
+    "data collection",
+    "questionnaire",
+    "interview"
+   ]
+  },
+  {
+   "title": "Population: growth, distribution and migration",
+   "category": "Theory",
+   "keywords": [
+    "population",
+    "migration",
+    "distribution",
+    "census",
+    "density"
+   ]
+  },
+  {
+   "title": "Settlement: types, patterns and functions",
+   "category": "Theory",
+   "keywords": [
+    "settlement",
+    "rural",
+    "urban",
+    "dispersed",
+    "nucleated"
+   ]
+  },
+  {
+   "title": "Urbanisation: processes and problems",
+   "category": "Theory",
+   "keywords": [
+    "urbanisation",
+    "megacity",
+    "slums",
+    "congestion"
+   ]
+  },
+  {
+   "title": "Agriculture: systems and world production",
+   "category": "Applications",
+   "keywords": [
+    "agriculture",
+    "farming systems",
+    "plantation",
+    "shifting cultivation",
+    "pastoral"
+   ]
+  },
+  {
+   "title": "Manufacturing industries: factors and location",
+   "category": "Applications",
+   "keywords": [
+    "industry",
+    "location",
+    "factors",
+    "manufacturing",
+    "industrialisation"
+   ]
+  },
+  {
+   "title": "Mining and extraction of minerals",
+   "category": "Applications",
+   "keywords": [
+    "mining",
+    "minerals",
+    "extraction",
+    "open cast"
+   ]
+  },
+  {
+   "title": "Energy resources: renewable and non-renewable",
+   "category": "Applications",
+   "keywords": [
+    "energy",
+    "renewable",
+    "non renewable",
+    "hydro",
+    "solar"
+   ]
+  },
+  {
+   "title": "Transport: modes, networks and development",
+   "category": "Applications",
+   "keywords": [
+    "transport",
+    "modes",
+    "network",
+    "railways",
+    "ports"
+   ]
+  },
+  {
+   "title": "Trade, world trade patterns and globalisation",
+   "category": "Applications",
+   "keywords": [
+    "trade",
+    "exports",
+    "imports",
+    "globalisation"
+   ]
+  },
+  {
+   "title": "Tourism and recreation geography",
+   "category": "Applications",
+   "keywords": [
+    "tourism",
+    "recreation",
+    "resorts",
+    "tourist attractions"
+   ]
+  },
+  {
+   "title": "Nigeria: location, size and political divisions",
+   "category": "Nigerian Context",
+   "keywords": [
+    "nigeria",
+    "location",
+    "size",
+    "states",
+    "boundaries"
+   ]
+  },
+  {
+   "title": "Relief and drainage systems of Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "relief",
+    "drainage",
+    "niger",
+    "benue",
+    "highlands"
+   ]
+  },
+  {
+   "title": "Climate of Nigeria and its seasons",
+   "category": "Nigerian Context",
+   "keywords": [
+    "climate",
+    "rainy season",
+    "dry season",
+    "harmattan",
+    "tropical"
+   ]
+  },
+  {
+   "title": "Vegetation belts: mangrove to sahel savanna",
+   "category": "Nigerian Context",
+   "keywords": [
+    "mangrove",
+    "rainforest",
+    "guinea savanna",
+    "sudan savanna",
+    "sahel"
+   ]
+  },
+  {
+   "title": "Soils and agriculture in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "soils",
+    "agriculture",
+    "cash crops",
+    "cocoa",
+    "groundnut"
+   ]
+  },
+  {
+   "title": "Population of Nigeria: distribution and growth",
+   "category": "Nigerian Context",
+   "keywords": [
+    "population",
+    "census",
+    "distribution",
+    "density",
+    "growth"
+   ]
+  },
+  {
+   "title": "Mineral resources and oil in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "mineral resources",
+    "crude oil",
+    "tin",
+    "coal",
+    "limestone"
+   ]
+  },
+  {
+   "title": "Power and manufacturing in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "power",
+    "manufacturing",
+    "cement",
+    "steel",
+    "hydroelectric"
+   ]
+  },
+  {
+   "title": "Transportation networks in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "transportation",
+    "roads",
+    "railways",
+    "ports",
+    "airports"
+   ]
+  },
+  {
+   "title": "Settlement patterns in rural Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "settlement",
+    "rural",
+    "homesteads",
+    "villages",
+    "patterns"
+   ]
+  },
+  {
+   "title": "Environmental degradation problems in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "erosion",
+    "desertification",
+    "oil spillage",
+    "deforestation",
+    "flooding"
+   ]
+  },
+  {
+   "title": "Geographic information systems and remote sensing",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "gis",
+    "remote sensing",
+    "satellite images",
+    "mapping"
+   ]
+  },
+  {
+   "title": "Climate change: causes and impacts",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "climate change",
+    "global warming",
+    "impacts",
+    "adaptation"
+   ]
+  },
+  {
+   "title": "Environmental conservation and sustainability",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "conservation",
+    "sustainability",
+    "resources",
+    "management"
+   ]
+  },
+  {
+   "title": "Geographic thought and early scholars",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "geographic thought",
+    "scholars",
+    "eratosthenes",
+    "development"
+   ]
+  },
+  {
+   "title": "Applying geography to national development",
+   "category": "Nigerian Context",
+   "keywords": [
+    "development",
+    "planning",
+    "resources",
+    "nigeria"
+   ]
+  },
+  {
+   "title": "Examination drill: geography past questions by topic",
+   "category": "Applications",
+   "keywords": [
+    "past questions",
+    "revision",
+    "examination",
+    "jamb"
+   ]
+  },
+  {
+   "title": "Rivers of Nigeria mapped",
+   "category": "Nigerian Context",
+   "keywords": [
+    "rivers",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "National parks of Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "parks",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "Border geography of Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "borders"
+   ]
+  },
+  {
+   "title": "Population census data analysed",
+   "category": "Methods",
+   "keywords": [
+    "census",
+    "data"
+   ]
+  },
+  {
+   "title": "Satellite images interpreted",
+   "category": "Methods",
+   "keywords": [
+    "satellite",
+    "images"
+   ]
+  },
+  {
+   "title": "Examination drill: Nigeria skills past questions",
+   "category": "Applications",
+   "keywords": [
+    "Nigeria",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Grid references: four and six figure",
+   "category": "Methods",
+   "keywords": [
+    "grid references",
+    "four figure"
+   ]
+  },
+  {
+   "title": "Bearings and compass directions on maps",
+   "category": "Methods",
+   "keywords": [
+    "bearings",
+    "compass"
+   ]
+  },
+  {
+   "title": "Measuring distances: straight and winding",
+   "category": "Methods",
+   "keywords": [
+    "measuring distances"
+   ]
+  },
+  {
+   "title": "Measuring areas by grids and strips",
+   "category": "Methods",
+   "keywords": [
+    "measuring areas",
+    "grids"
+   ]
+  },
+  {
+   "title": "Contours, spot heights and cross-sections",
+   "category": "Methods",
+   "keywords": [
+    "contours",
+    "cross-sections"
+   ]
+  },
+  {
+   "title": "Gradient calculations from maps",
+   "category": "Methods",
+   "keywords": [
+    "gradient",
+    "maps"
+   ]
+  },
+  {
+   "title": "Describing drainage patterns",
+   "category": "Methods",
+   "keywords": [
+    "drainage patterns",
+    "description"
+   ]
+  },
+  {
+   "title": "Describing settlement and communication",
+   "category": "Methods",
+   "keywords": [
+    "settlement",
+    "communication"
+   ]
+  },
+  {
+   "title": "Sketch maps: reduction and enlargement",
+   "category": "Methods",
+   "keywords": [
+    "sketch maps",
+    "scale"
+   ]
+  },
+  {
+   "title": "Examination drill: mapwork past questions",
+   "category": "Applications",
+   "keywords": [
+    "mapwork",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Rock weathering: physical and chemical",
+   "category": "Theory",
+   "keywords": [
+    "weathering",
+    "physical",
+    "chemical"
+   ]
+  },
+  {
+   "title": "Mass movement types and triggers",
+   "category": "Theory",
+   "keywords": [
+    "mass movement",
+    "triggers"
+   ]
+  },
+  {
+   "title": "River profiles: upper, middle, lower",
+   "category": "Theory",
+   "keywords": [
+    "river profiles"
+   ]
+  },
+  {
+   "title": "River erosion and deposition features",
+   "category": "Theory",
+   "keywords": [
+    "erosion",
+    "deposition",
+    "features"
+   ]
+  },
+  {
+   "title": "Drainage patterns and their causes",
+   "category": "Theory",
+   "keywords": [
+    "drainage patterns",
+    "causes"
+   ]
+  },
+  {
+   "title": "Coastal features: cliffs to beaches",
+   "category": "Theory",
+   "keywords": [
+    "coastal features"
+   ]
+  },
+  {
+   "title": "Wind action in deserts: dunes and yardangs",
+   "category": "Theory",
+   "keywords": [
+    "wind action",
+    "dunes"
+   ]
+  },
+  {
+   "title": "Karst and limestone scenery",
+   "category": "Theory",
+   "keywords": [
+    "karst",
+    "limestone"
+   ]
+  },
+  {
+   "title": "Glaciation: features and relevance",
+   "category": "Theory",
+   "keywords": [
+    "glaciation",
+    "features"
+   ]
+  },
+  {
+   "title": "Examination drill: geomorphology past questions",
+   "category": "Applications",
+   "keywords": [
+    "geomorphology",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The atmosphere: layers and composition",
+   "category": "Theory",
+   "keywords": [
+    "atmosphere",
+    "layers"
+   ]
+  },
+  {
+   "title": "Insolation and heat budget",
+   "category": "Theory",
+   "keywords": [
+    "insolation",
+    "heat budget"
+   ]
+  },
+  {
+   "title": "Air masses and their properties",
+   "category": "Theory",
+   "keywords": [
+    "air masses",
+    "properties"
+   ]
+  },
+  {
+   "title": "Fronts and frontal rainfall",
+   "category": "Theory",
+   "keywords": [
+    "fronts",
+    "frontal rainfall"
+   ]
+  },
+  {
+   "title": "ITD and West African rainfall regimes",
+   "category": "Nigerian Context",
+   "keywords": [
+    "ITD",
+    "rainfall regimes"
+   ]
+  },
+  {
+   "title": "El Nino and global teleconnections",
+   "category": "Theory",
+   "keywords": [
+    "El Nino",
+    "teleconnections"
+   ]
+  },
+  {
+   "title": "Microclimates in cities: heat islands",
+   "category": "Applications",
+   "keywords": [
+    "heat islands",
+    "cities"
+   ]
+  },
+  {
+   "title": "Reading climographs like a geographer",
+   "category": "Methods",
+   "keywords": [
+    "climographs",
+    "reading"
+   ]
+  },
+  {
+   "title": "Weather station models decoded",
+   "category": "Methods",
+   "keywords": [
+    "station models",
+    "decoded"
+   ]
+  },
+  {
+   "title": "Examination drill: climate past questions",
+   "category": "Applications",
+   "keywords": [
+    "weather",
+    "climate",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Zonal soils of West Africa",
+   "category": "Theory",
+   "keywords": [
+    "zonal soils",
+    "West Africa"
+   ]
+  },
+  {
+   "title": "Laterite and ferruginous soils compared",
+   "category": "Theory",
+   "keywords": [
+    "laterite",
+    "ferruginous"
+   ]
+  },
+  {
+   "title": "Alluvial and volcanic soils fertility",
+   "category": "Theory",
+   "keywords": [
+    "alluvial",
+    "volcanic soils"
+   ]
+  },
+  {
+   "title": "Vegetation succession and climax",
+   "category": "Theory",
+   "keywords": [
+    "succession",
+    "climax"
+   ]
+  },
+  {
+   "title": "Vegetation-soil relationships",
+   "category": "Theory",
+   "keywords": [
+    "vegetation",
+    "soil relationships"
+   ]
+  },
+  {
+   "title": "Deforestation: rates and drivers",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "deforestation",
+    "drivers"
+   ]
+  },
+  {
+   "title": "Soil degradation: salinity and laterisation",
+   "category": "Applications",
+   "keywords": [
+    "soil degradation",
+    "salinity"
+   ]
+  },
+  {
+   "title": "Vegetation conservation strategies",
+   "category": "Applications",
+   "keywords": [
+    "vegetation",
+    "conservation"
+   ]
+  },
+  {
+   "title": "Field soil profile description",
+   "category": "Methods",
+   "keywords": [
+    "soil profile",
+    "description"
+   ]
+  },
+  {
+   "title": "Examination drill: soils past questions",
+   "category": "Applications",
+   "keywords": [
+    "soils",
+    "vegetation",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Population structure: pyramids read",
+   "category": "Methods",
+   "keywords": [
+    "population pyramids",
+    "reading"
+   ]
+  },
+  {
+   "title": "Demographic transition model applied",
+   "category": "Theory",
+   "keywords": [
+    "demographic transition",
+    "model"
+   ]
+  },
+  {
+   "title": "Fertility, mortality and migration measures",
+   "category": "Methods",
+   "keywords": [
+    "fertility",
+    "mortality",
+    "migration"
+   ]
+  },
+  {
+   "title": "Overpopulation, underpopulation, optimum",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "overpopulation",
+    "optimum"
+   ]
+  },
+  {
+   "title": "Malthus versus Boserup debate",
+   "category": "Theory",
+   "keywords": [
+    "Malthus",
+    "Boserup"
+   ]
+  },
+  {
+   "title": "Nigeria's census history and problems",
+   "category": "Nigerian Context",
+   "keywords": [
+    "census",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "Rural-urban migration: push and pull",
+   "category": "Theory",
+   "keywords": [
+    "rural-urban migration",
+    "push",
+    "pull"
+   ]
+  },
+  {
+   "title": "Refugees and displacement geography",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "refugees",
+    "displacement"
+   ]
+  },
+  {
+   "title": "Population policies compared",
+   "category": "Applications",
+   "keywords": [
+    "population policies"
+   ]
+  },
+  {
+   "title": "Examination drill: population past questions",
+   "category": "Applications",
+   "keywords": [
+    "population",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Rural settlement patterns: dispersed to linear",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "settlement patterns",
+    "dispersed"
+   ]
+  },
+  {
+   "title": "Site and situation analysed",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "site",
+    "situation"
+   ]
+  },
+  {
+   "title": "Urban zones: CBD to suburbs",
+   "category": "Theory",
+   "keywords": [
+    "urban zones",
+    "CBD"
+   ]
+  },
+  {
+   "title": "Urban land use models applied",
+   "category": "Theory",
+   "keywords": [
+    "land use models"
+   ]
+  },
+  {
+   "title": "Slums and informal housing",
+   "category": "Nigerian Context",
+   "keywords": [
+    "slums",
+    "informal housing"
+   ]
+  },
+  {
+   "title": "Urban services and their planning",
+   "category": "Applications",
+   "keywords": [
+    "urban services",
+    "planning"
+   ]
+  },
+  {
+   "title": "Transport within Nigerian cities",
+   "category": "Nigerian Context",
+   "keywords": [
+    "transport",
+    "cities"
+   ]
+  },
+  {
+   "title": "Smart cities: an introduction",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "smart cities"
+   ]
+  },
+  {
+   "title": "Field sketch of a settlement",
+   "category": "Methods",
+   "keywords": [
+    "field sketch",
+    "settlement"
+   ]
+  },
+  {
+   "title": "Examination drill: settlement past questions",
+   "category": "Applications",
+   "keywords": [
+    "settlement",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Farming systems: shifting to plantation",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "farming systems",
+    "plantation"
+   ]
+  },
+  {
+   "title": "Intensive versus extensive farming",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "intensive",
+    "extensive"
+   ]
+  },
+  {
+   "title": "Irrigation agriculture worldwide",
+   "category": "Applications",
+   "keywords": [
+    "irrigation agriculture"
+   ]
+  },
+  {
+   "title": "Mediterranean agriculture features",
+   "category": "Theory",
+   "keywords": [
+    "Mediterranean agriculture"
+   ]
+  },
+  {
+   "title": "Nomadic herding in the Sahel",
+   "category": "Nigerian Context",
+   "keywords": [
+    "nomadic herding",
+    "Sahel"
+   ]
+  },
+  {
+   "title": "Plantation crops: cocoa and rubber chains",
+   "category": "Nigerian Context",
+   "keywords": [
+    "plantation",
+    "cocoa",
+    "rubber"
+   ]
+  },
+  {
+   "title": "Food versus cash crops debates",
+   "category": "Theory",
+   "keywords": [
+    "food crops",
+    "cash crops"
+   ]
+  },
+  {
+   "title": "Agricultural mechanisation levels",
+   "category": "Applications",
+   "keywords": [
+    "mechanisation",
+    "levels"
+   ]
+  },
+  {
+   "title": "Global food security issues",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "food security",
+    "global"
+   ]
+  },
+  {
+   "title": "Examination drill: agricultural geography past questions",
+   "category": "Applications",
+   "keywords": [
+    "agriculture",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Industrial location factors weighed",
+   "category": "Theory",
+   "keywords": [
+    "industrial location",
+    "factors"
+   ]
+  },
+  {
+   "title": "Weber's location theory explained",
+   "category": "Theory",
+   "keywords": [
+    "Weber",
+    "location theory"
+   ]
+  },
+  {
+   "title": "Manufacturing regions of Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "manufacturing",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "Agro-allied industries examples",
+   "category": "Nigerian Context",
+   "keywords": [
+    "agro-allied",
+    "industries"
+   ]
+  },
+  {
+   "title": "Energy: hydro, thermal, solar mix",
+   "category": "Applications",
+   "keywords": [
+    "energy",
+    "hydro",
+    "solar"
+   ]
+  },
+  {
+   "title": "Oil and gas geography of Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "oil",
+    "gas",
+    "geography"
+   ]
+  },
+  {
+   "title": "Renewable transitions globally",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "renewable",
+    "transitions"
+   ]
+  },
+  {
+   "title": "Industrial pollution case studies",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "industrial pollution"
+   ]
+  },
+  {
+   "title": "Industrial estates and free zones",
+   "category": "Nigerian Context",
+   "keywords": [
+    "industrial estates",
+    "free zones"
+   ]
+  },
+  {
+   "title": "Examination drill: industry past questions",
+   "category": "Applications",
+   "keywords": [
+    "industry",
+    "energy",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Transport modes: costs and suitability",
+   "category": "Theory",
+   "keywords": [
+    "transport modes",
+    "costs"
+   ]
+  },
+  {
+   "title": "Nigeria's rail revival analysed",
+   "category": "Nigerian Context",
+   "keywords": [
+    "rail",
+    "revival"
+   ]
+  },
+  {
+   "title": "Ports: Lagos, Onne, Calabar roles",
+   "category": "Nigerian Context",
+   "keywords": [
+    "ports",
+    "Lagos",
+    "Onne"
+   ]
+  },
+  {
+   "title": "Inland waterways potential",
+   "category": "Applications",
+   "keywords": [
+    "waterways",
+    "potential"
+   ]
+  },
+  {
+   "title": "Air transport networks",
+   "category": "Applications",
+   "keywords": [
+    "air transport",
+    "networks"
+   ]
+  },
+  {
+   "title": "Trade patterns: exports and imports",
+   "category": "Nigerian Context",
+   "keywords": [
+    "trade patterns"
+   ]
+  },
+  {
+   "title": "Border markets and ECOWAS trade",
+   "category": "Nigerian Context",
+   "keywords": [
+    "border markets",
+    "ECOWAS"
+   ]
+  },
+  {
+   "title": "Globalisation and supply chains",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "globalisation",
+    "supply chains"
+   ]
+  },
+  {
+   "title": "Transport corridor development",
+   "category": "Applications",
+   "keywords": [
+    "corridors",
+    "development"
+   ]
+  },
+  {
+   "title": "Examination drill: transport past questions",
+   "category": "Applications",
+   "keywords": [
+    "transport",
+    "trade",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Africa's physical overview",
+   "category": "Theory",
+   "keywords": [
+    "Africa",
+    "physical"
+   ]
+  },
+  {
+   "title": "The Sahara and desertification",
+   "category": "Theory",
+   "keywords": [
+    "Sahara",
+    "desertification"
+   ]
+  },
+  {
+   "title": "The Nile and Nile valley economies",
+   "category": "Theory",
+   "keywords": [
+    "Nile",
+    "valley"
+   ]
+  },
+  {
+   "title": "East African rift and lakes",
+   "category": "Theory",
+   "keywords": [
+    "rift valley",
+    "lakes"
+   ]
+  },
+  {
+   "title": "Southern Africa mining geography",
+   "category": "Theory",
+   "keywords": [
+    "mining",
+    "Southern Africa"
+   ]
+  },
+  {
+   "title": "Congo basin ecology",
+   "category": "Theory",
+   "keywords": [
+    "Congo basin",
+    "ecology"
+   ]
+  },
+  {
+   "title": "African cities compared: Lagos, Cairo, Nairobi",
+   "category": "Methods",
+   "keywords": [
+    "African cities",
+    "comparison"
+   ]
+  },
+  {
+   "title": "Regional blocs: ECOWAS to AfCFTA",
+   "category": "Applications",
+   "keywords": [
+    "regional blocs",
+    "AfCFTA"
+   ]
+  },
+  {
+   "title": "Africa's demographic future",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "demographic future"
+   ]
+  },
+  {
+   "title": "Examination drill: Africa past questions",
+   "category": "Applications",
+   "keywords": [
+    "Africa",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Floods: causes and Nigerian episodes",
+   "category": "Nigerian Context",
+   "keywords": [
+    "floods",
+    "episodes"
+   ]
+  },
+  {
+   "title": "Drought and famine geography",
+   "category": "Theory",
+   "keywords": [
+    "drought",
+    "famine"
+   ]
+  },
+  {
+   "title": "Erosion disasters in Anambra",
+   "category": "Nigerian Context",
+   "keywords": [
+    "erosion",
+    "Anambra"
+   ]
+  },
+  {
+   "title": "Coastal erosion and Lagos",
+   "category": "Nigerian Context",
+   "keywords": [
+    "coastal erosion",
+    "Lagos"
+   ]
+  },
+  {
+   "title": "Landslides and slope failures",
+   "category": "Theory",
+   "keywords": [
+    "landslides",
+    "slopes"
+   ]
+  },
+  {
+   "title": "Earthquake and volcano basics",
+   "category": "Theory",
+   "keywords": [
+    "earthquake",
+    "volcano"
+   ]
+  },
+  {
+   "title": "Disaster risk reduction framework",
+   "category": "Applications",
+   "keywords": [
+    "disaster risk",
+    "reduction"
+   ]
+  },
+  {
+   "title": "Waste management geography",
+   "category": "Applications",
+   "keywords": [
+    "waste management"
+   ]
+  },
+  {
+   "title": "EIA: environmental impact assessment basics",
+   "category": "Applications",
+   "keywords": [
+    "EIA",
+    "impact assessment"
+   ]
+  },
+  {
+   "title": "Examination drill: hazards past questions",
+   "category": "Applications",
+   "keywords": [
+    "hazards",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Choosing a fieldwork topic",
+   "category": "Methods",
+   "keywords": [
+    "fieldwork topic",
+    "choice"
+   ]
+  },
+  {
+   "title": "Designing questionnaires that work",
+   "category": "Methods",
+   "keywords": [
+    "questionnaires",
+    "design"
+   ]
+  },
+  {
+   "title": "Sampling methods in the field",
+   "category": "Methods",
+   "keywords": [
+    "sampling",
+    "field"
+   ]
+  },
+  {
+   "title": "Recording and tabulating observations",
+   "category": "Methods",
+   "keywords": [
+    "recording",
+    "tabulating"
+   ]
+  },
+  {
+   "title": "Drawing accurate graphs from data",
+   "category": "Methods",
+   "keywords": [
+    "graphs",
+    "data"
+   ]
+  },
+  {
+   "title": "Writing the fieldwork report",
+   "category": "Methods",
+   "keywords": [
+    "report",
+    "writing"
+   ]
+  },
+  {
+   "title": "Photograph and sketch annotation",
+   "category": "Methods",
+   "keywords": [
+    "annotation",
+    "photographs"
+   ]
+  },
+  {
+   "title": "Ethics and safety in fieldwork",
+   "category": "Applications",
+   "keywords": [
+    "ethics",
+    "safety"
+   ]
+  },
+  {
+   "title": "Practice: a market count exercise",
+   "category": "Applications",
+   "keywords": [
+    "market count"
+   ]
+  },
+  {
+   "title": "Examination drill: fieldwork past questions",
+   "category": "Applications",
+   "keywords": [
+    "fieldwork",
+    "past questions"
+   ]
+  },
+  {
+   "title": "JAMB geography paper structure and strategy",
+   "category": "Methods",
+   "keywords": [
+    "JAMB",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Objective questions on physical geography",
+   "category": "Applications",
+   "keywords": [
+    "physical",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on map reading",
+   "category": "Applications",
+   "keywords": [
+    "map reading",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on human geography",
+   "category": "Applications",
+   "keywords": [
+    "human",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on economic geography",
+   "category": "Applications",
+   "keywords": [
+    "economic",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on Nigerian geography",
+   "category": "Applications",
+   "keywords": [
+    "Nigeria",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on regional geography",
+   "category": "Applications",
+   "keywords": [
+    "regional",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on environmental issues",
+   "category": "Applications",
+   "keywords": [
+    "environment",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Interpretation drills: photos and tables",
+   "category": "Methods",
+   "keywords": [
+    "interpretation",
+    "drills"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set A past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed practice: the 50-question sprint",
+   "category": "Applications",
+   "keywords": [
+    "timed practice",
+    "sprint"
+   ]
+  },
+  {
+   "title": "Review of common wrong options",
+   "category": "Methods",
+   "keywords": [
+    "wrong options",
+    "review"
+   ]
+  },
+  {
+   "title": "Map extraction speed drills",
+   "category": "Methods",
+   "keywords": [
+    "map extraction",
+    "drills"
+   ]
+  },
+  {
+   "title": "Data table interpretation drills",
+   "category": "Methods",
+   "keywords": [
+    "data tables",
+    "drills"
+   ]
+  },
+  {
+   "title": "Elimination techniques for objective questions",
+   "category": "Methods",
+   "keywords": [
+    "elimination",
+    "techniques"
+   ]
+  },
+  {
+   "title": "Misconceptions about climate belts corrected",
+   "category": "Methods",
+   "keywords": [
+    "misconceptions",
+    "climate belts"
+   ]
+  },
+  {
+   "title": "Errors about Nigerian rivers corrected",
+   "category": "Methods",
+   "keywords": [
+    "rivers",
+    "errors"
+   ]
+  },
+  {
+   "title": "Diagram labels you must know",
+   "category": "Methods",
+   "keywords": [
+    "diagram labels"
+   ]
+  },
+  {
+   "title": "Managing the maps booklet calmly",
+   "category": "Methods",
+   "keywords": [
+    "maps booklet",
+    "composure"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set B past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Time and distance conversions",
+   "category": "Methods",
+   "keywords": [
+    "time",
+    "distance"
+   ]
+  },
+  {
+   "title": "Gradient and relief calculations",
+   "category": "Methods",
+   "keywords": [
+    "gradient",
+    "relief"
+   ]
+  },
+  {
+   "title": "Area and density calculations",
+   "category": "Methods",
+   "keywords": [
+    "area",
+    "density"
+   ]
+  },
+  {
+   "title": "Population growth rate problems",
+   "category": "Methods",
+   "keywords": [
+    "population growth",
+    "rates"
+   ]
+  },
+  {
+   "title": "Scale conversion problems",
+   "category": "Methods",
+   "keywords": [
+    "scale",
+    "conversion"
+   ]
+  },
+  {
+   "title": "Rainfall reliability computations",
+   "category": "Methods",
+   "keywords": [
+    "rainfall",
+    "reliability"
+   ]
+  },
+  {
+   "title": "Birth and death rate problems",
+   "category": "Methods",
+   "keywords": [
+    "birth rate",
+    "death rate"
+   ]
+  },
+  {
+   "title": "Dependency ratio computations",
+   "category": "Methods",
+   "keywords": [
+    "dependency ratio"
+   ]
+  },
+  {
+   "title": "Graph construction challenge set",
+   "category": "Methods",
+   "keywords": [
+    "graphs",
+    "challenge"
+   ]
+  },
+  {
+   "title": "Examination drill: workshop past questions",
+   "category": "Applications",
+   "keywords": [
+    "workshop",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Building the final revision timetable",
+   "category": "Methods",
+   "keywords": [
+    "revision timetable"
+   ]
+  },
+  {
+   "title": "Facts digest: rivers, zones, figures",
+   "category": "Methods",
+   "keywords": [
+    "facts digest"
+   ]
+  },
+  {
+   "title": "Definitions examiners love to test",
+   "category": "Methods",
+   "keywords": [
+    "definitions",
+    "examiners"
+   ]
+  },
+  {
+   "title": "The most repeated JAMB geography themes",
+   "category": "Methods",
+   "keywords": [
+    "repeated themes",
+    "JAMB"
+   ]
+  },
+  {
+   "title": "Mock examination: 50 questions in 50 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Marking your mock: error analysis",
+   "category": "Methods",
+   "keywords": [
+    "error analysis",
+    "mock"
+   ]
+  },
+  {
+   "title": "Mapwork: the final polish",
+   "category": "Methods",
+   "keywords": [
+    "mapwork",
+    "polish"
+   ]
+  },
+  {
+   "title": "Handling unfamiliar extract questions",
+   "category": "Methods",
+   "keywords": [
+    "extract questions"
+   ]
+  },
+  {
+   "title": "Pace planning across sections",
+   "category": "Methods",
+   "keywords": [
+    "pace planning"
+   ]
+  },
+  {
+   "title": "Exam day strategy and final confidence",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Thermometers: max-min read",
+   "category": "Methods",
+   "keywords": [
+    "thermometers"
+   ]
+  },
+  {
+   "title": "Barometers and pressure readings",
+   "category": "Methods",
+   "keywords": [
+    "barometers"
+   ]
+  },
+  {
+   "title": "Rain gauges sited correctly",
+   "category": "Methods",
+   "keywords": [
+    "rain gauges"
+   ]
+  },
+  {
+   "title": "Anemometers and wind vanes",
+   "category": "Methods",
+   "keywords": [
+    "anemometers",
+    "vanes"
+   ]
+  },
+  {
+   "title": "Hygrometers and humidity read",
+   "category": "Methods",
+   "keywords": [
+    "hygrometers"
+   ]
+  },
+  {
+   "title": "Stevenson screen: why it matters",
+   "category": "Theory",
+   "keywords": [
+    "Stevenson screen"
+   ]
+  },
+  {
+   "title": "Building a class weather station",
+   "category": "Applications",
+   "keywords": [
+    "weather station"
+   ]
+  },
+  {
+   "title": "Recording and charting a week",
+   "category": "Methods",
+   "keywords": [
+    "recording",
+    "charting"
+   ]
+  },
+  {
+   "title": "Workshop: instrument identification",
+   "category": "Methods",
+   "keywords": [
+    "instrument ID"
+   ]
+  },
+  {
+   "title": "Examination drill: instruments past questions",
+   "category": "Applications",
+   "keywords": [
+    "instruments",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Hydrograph basics: lag and peak",
+   "category": "Theory",
+   "keywords": [
+    "hydrograph"
+   ]
+  },
+  {
+   "title": "Discharge measured in the field",
+   "category": "Methods",
+   "keywords": [
+    "discharge",
+    "field"
+   ]
+  },
+  {
+   "title": "Flood causes: natural and human",
+   "category": "Theory",
+   "keywords": [
+    "flood causes"
+   ]
+  },
+  {
+   "title": "Flood control: dams to warnings",
+   "category": "Applications",
+   "keywords": [
+    "flood control"
+   ]
+  },
+  {
+   "title": "Nigerian flood case: 2012 and 2022",
+   "category": "Nigerian Context",
+   "keywords": [
+    "floods",
+    "2012",
+    "2022"
+   ]
+  },
+  {
+   "title": "River pollution profiles read",
+   "category": "Applications",
+   "keywords": [
+    "pollution",
+    "rivers"
+   ]
+  },
+  {
+   "title": "Dams: benefits and displacement",
+   "category": "Theory",
+   "keywords": [
+    "dams",
+    "displacement"
+   ]
+  },
+  {
+   "title": "Workshop: label a river's features",
+   "category": "Methods",
+   "keywords": [
+    "label river"
+   ]
+  },
+  {
+   "title": "Rejuvenation and knick points explained",
+   "category": "Theory",
+   "keywords": [
+    "rejuvenation",
+    "knick points"
+   ]
+  },
+  {
+   "title": "Examination drill: rivers past questions",
+   "category": "Applications",
+   "keywords": [
+    "rivers",
+    "past questions"
+   ]
+  },
+  {
+   "title": "CBD land uses mapped on foot",
+   "category": "Methods",
+   "keywords": [
+    "CBD",
+    "mapping"
+   ]
+  },
+  {
+   "title": "Traffic counts done right",
+   "category": "Methods",
+   "keywords": [
+    "traffic counts"
+   ]
+  },
+  {
+   "title": "Housing quality surveys graded",
+   "category": "Methods",
+   "keywords": [
+    "housing survey"
+   ]
+  },
+  {
+   "title": "Market catchments estimated",
+   "category": "Methods",
+   "keywords": [
+    "catchments"
+   ]
+  },
+  {
+   "title": "Services distribution mapped",
+   "category": "Methods",
+   "keywords": [
+    "services",
+    "mapped"
+   ]
+  },
+  {
+   "title": "Questionnaires: writing better items",
+   "category": "Methods",
+   "keywords": [
+    "questionnaire items"
+   ]
+  },
+  {
+   "title": "Presenting fieldwork data with charts",
+   "category": "Methods",
+   "keywords": [
+    "charts",
+    "data"
+   ]
+  },
+  {
+   "title": "Ethics and courtesy in the field",
+   "category": "Applications",
+   "keywords": [
+    "ethics",
+    "field"
+   ]
+  },
+  {
+   "title": "Workshop: one street, five observations",
+   "category": "Applications",
+   "keywords": [
+    "street study"
+   ]
+  },
+  {
+   "title": "Examination drill: urban past questions",
+   "category": "Applications",
+   "keywords": [
+    "urban",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Reading production tables fast",
+   "category": "Methods",
+   "keywords": [
+    "production tables"
+   ]
+  },
+  {
+   "title": "Trade tables: exports ranked",
+   "category": "Methods",
+   "keywords": [
+    "trade tables"
+   ]
+  },
+  {
+   "title": "Population pyramids drawn accurately",
+   "category": "Methods",
+   "keywords": [
+    "pyramids",
+    "drawn"
+   ]
+  },
+  {
+   "title": "Migration diagrams interpreted",
+   "category": "Methods",
+   "keywords": [
+    "migration diagrams"
+   ]
+  },
+  {
+   "title": "Employment structures compared",
+   "category": "Methods",
+   "keywords": [
+    "employment structure"
+   ]
+  },
+  {
+   "title": "Energy consumption charts read",
+   "category": "Methods",
+   "keywords": [
+    "energy charts"
+   ]
+  },
+  {
+   "title": "Constructing proportional circles",
+   "category": "Methods",
+   "keywords": [
+    "proportional circles"
+   ]
+  },
+  {
+   "title": "Describing patterns: the formula",
+   "category": "Methods",
+   "keywords": [
+    "describing patterns"
+   ]
+  },
+  {
+   "title": "Workshop: five data responses timed",
+   "category": "Applications",
+   "keywords": [
+    "data responses"
+   ]
+  },
+  {
+   "title": "Examination drill: economic data past questions",
+   "category": "Applications",
+   "keywords": [
+    "economic data",
+    "past questions"
+   ]
+  },
+  {
+   "title": "North Africa: oases and cities",
+   "category": "Theory",
+   "keywords": [
+    "North Africa"
+   ]
+  },
+  {
+   "title": "West Africa: zones compared",
+   "category": "Theory",
+   "keywords": [
+    "West Africa"
+   ]
+  },
+  {
+   "title": "East Africa: highlands and lakes",
+   "category": "Theory",
+   "keywords": [
+    "East Africa"
+   ]
+  },
+  {
+   "title": "Central Africa: basin climate",
+   "category": "Theory",
+   "keywords": [
+    "Central Africa"
+   ]
+  },
+  {
+   "title": "Southern Africa: minerals mapped",
+   "category": "Theory",
+   "keywords": [
+    "Southern Africa",
+    "minerals"
+   ]
+  },
+  {
+   "title": "Trans-frontier parks and conservation",
+   "category": "Applications",
+   "keywords": [
+    "parks",
+    "conservation"
+   ]
+  },
+  {
+   "title": "African transport corridors",
+   "category": "Applications",
+   "keywords": [
+    "corridors"
+   ]
+  },
+  {
+   "title": "Regional powers compared",
+   "category": "Methods",
+   "keywords": [
+    "regional powers"
+   ]
+  },
+  {
+   "title": "Africa's demographic dividend debated",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "dividend",
+    "debate"
+   ]
+  },
+  {
+   "title": "Examination drill: Africa past questions - set 2",
+   "category": "Applications",
+   "keywords": [
+    "Africa",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Amazon: rainforest under pressure",
+   "category": "Theory",
+   "keywords": [
+    "Amazon"
+   ]
+  },
+  {
+   "title": "Sahel: desertification frontlines",
+   "category": "Theory",
+   "keywords": [
+    "Sahel"
+   ]
+  },
+  {
+   "title": "Netherlands: winning land from sea",
+   "category": "Theory",
+   "keywords": [
+    "Netherlands"
+   ]
+  },
+  {
+   "title": "Japan: ageing and earthquakes",
+   "category": "Theory",
+   "keywords": [
+    "Japan"
+   ]
+  },
+  {
+   "title": "Dubai: desert megacity",
+   "category": "Theory",
+   "keywords": [
+    "Dubai"
+   ]
+  },
+  {
+   "title": "China: manufacturing rise",
+   "category": "Theory",
+   "keywords": [
+    "China"
+   ]
+  },
+  {
+   "title": "Antarctica: treaty and science",
+   "category": "Theory",
+   "keywords": [
+    "Antarctica"
+   ]
+  },
+  {
+   "title": "Small islands and sea level",
+   "category": "Theory",
+   "keywords": [
+    "sea level",
+    "islands"
+   ]
+  },
+  {
+   "title": "Panama and Suez: canals that moved trade",
+   "category": "Theory",
+   "keywords": [
+    "canals",
+    "trade"
+   ]
+  },
+  {
+   "title": "Examination drill: world past questions",
+   "category": "Applications",
+   "keywords": [
+    "world",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Rock cycle drawn from memory",
+   "category": "Methods",
+   "keywords": [
+    "rock cycle"
+   ]
+  },
+  {
+   "title": "Water cycle labelled perfectly",
+   "category": "Methods",
+   "keywords": [
+    "water cycle"
+   ]
+  },
+  {
+   "title": "Fold and fault block sketches",
+   "category": "Methods",
+   "keywords": [
+    "folds",
+    "faults"
+   ]
+  },
+  {
+   "title": "River cross-sections drawn",
+   "category": "Methods",
+   "keywords": [
+    "cross-sections"
+   ]
+  },
+  {
+   "title": "Convection rainfall drawn",
+   "category": "Methods",
+   "keywords": [
+    "convection rainfall"
+   ]
+  },
+  {
+   "title": "Settlement patterns sketched",
+   "category": "Methods",
+   "keywords": [
+    "settlement sketches"
+   ]
+  },
+  {
+   "title": "Industrial location diagram built",
+   "category": "Methods",
+   "keywords": [
+    "location diagram"
+   ]
+  },
+  {
+   "title": "Sketch map rules applied",
+   "category": "Methods",
+   "keywords": [
+    "sketch map rules"
+   ]
+  },
+  {
+   "title": "Workshop: 12 diagrams against time",
+   "category": "Applications",
+   "keywords": [
+    "12 diagrams"
+   ]
+  },
+  {
+   "title": "Examination drill: diagrams past questions",
+   "category": "Applications",
+   "keywords": [
+    "diagrams",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed drill: physical geography",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "physical"
+   ]
+  },
+  {
+   "title": "Timed drill: mapwork",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "mapwork"
+   ]
+  },
+  {
+   "title": "Timed drill: human geography",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "human"
+   ]
+  },
+  {
+   "title": "Timed drill: economic geography",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "economic"
+   ]
+  },
+  {
+   "title": "Timed drill: Nigeria",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "Timed drill: regions and world",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "regions"
+   ]
+  },
+  {
+   "title": "Mock: 50 questions in 50 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Error analysis of your mock",
+   "category": "Methods",
+   "keywords": [
+    "error analysis"
+   ]
+  },
+  {
+   "title": "Facts: the last-night sheet",
+   "category": "Methods",
+   "keywords": [
+    "facts sheet"
+   ]
+  },
+  {
+   "title": "Exam day: the calm plan",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "plan"
+   ]
+  }
+ ]
+}

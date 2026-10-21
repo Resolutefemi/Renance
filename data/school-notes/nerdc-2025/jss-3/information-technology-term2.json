@@ -1,0 +1,63 @@
+{
+ "class": "JSS 3",
+ "subject": "Information Technology",
+ "term": 2,
+ "session": "",
+ "overwrite": false,
+ "provenance": {
+  "source": "renance-ai-teacher",
+  "method": "lesson notes written from the NERDC 2025 scheme of work outline; every week keeps its scheme topic and bullets as the teaching spine"
+ },
+ "topics": [
+  {
+   "week": 1,
+   "title": "Algorithm thinking",
+   "content": "Behavioural objectives:\nThe students should be able to define algorithm, list steps in algorithm design, explain the purpose of flowcharts, and differentiate between flowcharts and pseudocode.\nIntroduction:\nWe have learned about computer basics in previous terms. Today we will learn how to give step-by-step instructions to computers.\nContent:\nAn algorithm is a set of clear steps to solve a problem. Flowcharts use symbols to show these steps. For example, a rectangle shows a process, a diamond shows a decision. Pseudocode is a simple way to write algorithms in plain English. Like when you plan to cook jollof rice, you list steps: get rice, add water, cook, add tomatoes. That's an algorithm.\nClass activity:\nStudents will work in pairs to create a flowchart for buying recharge card at the market stall.\nEvaluation questions:\nWhat is an algorithm? Name two symbols used in flowcharts. How is pseudocode different from programming language? Write pseudocode for boarding a danfo bus.\nSummary:\nAlgorithms help computers solve problems through clear steps shown in flowcharts or pseudocode."
+  },
+  {
+   "week": 2,
+   "title": "Python first steps",
+   "content": "Behavioural objectives:\nThe students should be able to write a simple print statement, create and use variables, and execute a Python program.\nIntroduction:\nWe have learned about algorithms. Now we will write our first computer programs using Python language.\nContent:\nPython is a programming language. The print command shows information on screen. Variables store data like your name or age. For example: name = \"Tola\". Then print(name) shows Tola. Think of variables like empty buckets you fill with information. We can do math: price = 200, quantity = 5, total = price * quantity.\nClass activity:\nStudents will write Python code to calculate total cost of buying 5 books at Naira 500 each.\nEvaluation questions:\nWhat does print command do? Give an example of a variable. Write Python code to display \"Hello World\". How do you store your age in a variable?\nSummary:\nPython lets us create programs using print statements and variables to store and display information."
+  },
+  {
+   "week": 3,
+   "title": "Python conditions",
+   "content": "Behavioural objectives:\nThe students should be able to write if-else statements, solve problems using conditions, and predict program output with conditions.\nIntroduction:\nWe know how to give instructions in order. Today we will learn how to make decisions in our programs.\nContent:\nConditions let programs make decisions. If statements check if something is true. For example: if score >= 50: print(\"Pass\"). Else runs if the condition is false. Like at the market, if you have enough money, you buy the plantain; else, you go home. We can use multiple conditions with elif. For example checking exam grades: if score >= 70: print(\"A\") elif score >= 60: print(\"B\")\nClass activity:\nStudents will write a program that checks if a student's exam score is pass or fail.\nEvaluation questions:\nWhat is the purpose of if statements? Write Python code to check if age is 18 or above. How does else work? Give an example of elif in real life.\nSummary:\nConditions help programs make decisions like checking scores or prices before taking action."
+  },
+  {
+   "week": 4,
+   "title": "Python loops",
+   "content": "Behavioural objectives:\nThe students should be able to write for and while loops, explain the difference between them, and use loops to repeat tasks.\nIntroduction:\nWe have learned to give instructions one by one. Now we will learn how to repeat instructions multiple times.\nContent:\nLoops repeat code without writing it again. For loops run a specific number of times. For example: for i in range(5): print(i) prints numbers 0 to 4. Like counting money from 1 to 10. While loops run as long as a condition is true. Like while water is not boiling, keep heating. In Harmattan season, while the weather is dry, apply lotion daily.\nClass activity:\nStudents will write a program that prints multiplication table for 5 using a for loop.\nEvaluation questions:\nWhat is a loop? When would you use a for loop? Write a while loop example. How are for and while loops different? Give a real life example of looping.\nSummary:\nLoops help us repeat tasks efficiently, whether we know the exact number of times or just continue while a condition is true."
+  },
+  {
+   "week": 5,
+   "title": "Digital graphics",
+   "content": "Behavioural objectives:\nThe students should be able to identify graphic tools, explain file formats, and create a simple digital poster.\nIntroduction:\nWe have used computers for programming. Today we will learn how to create and edit images on computers.\nContent:\nDigital graphics are computer images. Tools like GIMP or Canva help edit pictures. Common formats are JPEG for photos, PNG for images with transparent backgrounds. Like when you take a picture with your phone, it's usually JPEG. For designing a poster for the school party, we add text, change colors, and arrange elements. Resolution affects quality - higher resolution means clearer images but larger file size.\nClass activity:\nStudents will design a poster for the school inter-house sports using Canva or GIMP.\nEvaluation questions:\nName two graphic file formats. What is the difference between JPEG and PNG? Why is resolution important? Describe steps to create a digital poster.\nSummary:\nDigital graphics tools help us create and edit images for various purposes like posters and social media posts."
+  },
+  {
+   "week": 6,
+   "title": "Audio and video",
+   "content": "Behavioural objectives:\nThe students should be able to list audio/video editing tools, explain basic editing techniques, and create a short edited clip.\nIntroduction:\nWe have worked with static images. Now we will learn how to edit moving images and sound.\nContent:\nAudio and video editing involves changing media files. Tools include Audacity for sound and Shotcut for video. Basic techniques are cutting, adding transitions, and adjusting volume. Like editing a clip of your cultural dance performance - you can remove mistakes, add music, and adjust brightness. File formats matter: MP3 for audio, MP4 for video. When sharing on WhatsApp, we often compress videos to smaller sizes.\nClass activity:\nStudents will create a 30-second video about their favorite Nigerian food using Shotcut or similar software.\nEvaluation questions:\nName two video editing tools. What is the purpose of transitions in videos? How do you reduce video file size? List three basic editing techniques.\nSummary:\nAudio and video editing skills help us create and improve multimedia content for sharing and entertainment."
+  },
+  {
+   "week": 7,
+   "title": "Cyber security",
+   "content": "Behavioural objectives:\nThe students should be able to identify common cyber threats, explain protection methods, and demonstrate secure account practices.\nIntroduction:\nAs we use more digital services, we need to protect ourselves online. Today we will learn about cyber security.\nContent:\nCyber threats are dangers online like viruses, hacking, and scams. Protection includes strong passwords, two-factor authentication, and being careful with links. Like protecting your bank account - you use a complex password and don't share your PIN. Phishing is when criminals pretend to be banks to steal information. Always check website addresses before entering passwords.\nClass activity:\nStudents will create a strong password for a fictional email account and enable two-factor authentication simulation.\nEvaluation questions:\nWhat is phishing? Name two cyber threats. How does two-factor authentication work? Why should you avoid public Wi-Fi for banking? Give an example of a strong password.\nSummary:\nCyber security awareness helps us protect our digital lives from various online threats and scams."
+  },
+  {
+   "week": 8,
+   "title": "Digital ethics",
+   "content": "Behavioural objectives:\nThe students should be able to explain copyright laws, identify fair use, and demonstrate respect for digital content creators.\nIntroduction:\nWe create and share digital content. We must understand how to use others' work responsibly.\nContent:\nCopyright protects creators' rights. Fair use allows limited use without permission for education or review. Like when a teacher shows a short video in class. Plagiarism is using someone's work without credit. Always cite sources when using information online. Respecting creators means not sharing their content without permission or paying for it when required.\nClass activity:\nStudents will write a short paragraph about their favorite Nigerian musician, properly citing sources of information.\nEvaluation questions:\nWhat is copyright? What is fair use? How do you give credit to creators? Why is plagiarism wrong? Give an example of respecting digital creators.\nSummary:\nDigital ethics guides us to use and share digital content responsibly while respecting creators' rights."
+  },
+  {
+   "week": 9,
+   "title": "ICT and society",
+   "content": "Behavioural objectives:\nThe students should be able to define digital divide, explain its causes, and suggest solutions to bridge the gap.\nIntroduction:\nNot everyone has equal access to digital technology. This affects our society in many ways.\nContent:\nThe digital divide is the gap between people with and without access to technology. Causes include poverty, lack of infrastructure, and limited digital skills. In rural areas, students may not have internet access for online learning. Solutions include providing affordable devices, improving internet infrastructure, and teaching digital skills. Like government programs giving tablets to students in remote communities.\nClass activity:\nStudents will brainstorm ideas for bridging the digital divide in their local community.\nEvaluation questions:\nWhat is digital divide? Name two causes of digital divide. How does digital divide affect education? Suggest two solutions. What role can schools play?\nSummary:\nThe digital divide creates inequalities in access to information and opportunities, which we need to address through collective efforts."
+  },
+  {
+   "week": 10,
+   "title": "Revision and BECE practice",
+   "content": "Behavioural objectives:\nThe students should be able to answer past BECE questions, identify common mistake areas, and improve exam techniques.\nIntroduction:\nWe have covered many topics in IT this term. Today we will practice exam questions to prepare for BECE.\nContent:\nWe will review past BECE questions from Information Technology. Common topics include algorithms, Python basics, digital safety, and ICT in society. We will analyze question patterns and practice time management. For example, understanding command words like 'list', 'explain', and 'differentiate' helps answer questions correctly.\nClass activity:\nStudents will work in groups to solve past BECE questions and present their answers to the class.\nEvaluation questions:\nAnswer three past BECE questions covering different topics from this term. What are common mistakes in IT exams? How do you manage time during exams? Which topic do you find most challenging?\nSummary:\nRegular practice with past questions helps improve exam techniques and confidence for BECE Information Technology."
+  }
+ ]
+}

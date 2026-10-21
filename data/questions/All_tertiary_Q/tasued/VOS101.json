@@ -1,0 +1,921 @@
+{
+  "code": "uni-tasued-vos101-bank",
+  "title": "TASUED VOS101 | Course Question Bank",
+  "version": 1,
+  "questionCount": 65,
+  "totalMarks": 65,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-tasued-vos101-bank-0001",
+      "type": "mcq",
+      "stem": "Which product specifically requires a congealing test in cool water during production?",
+      "options": {
+        "A": "Bleach",
+        "B": "Baby Jelly",
+        "C": "Air Freshener",
+        "D": "Shampoo"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A sample is dropped into cool water to test texture during baby jelly production."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0002",
+      "type": "mcq",
+      "stem": "What adjustment should be made if baby jelly remains too soft after testing?",
+      "options": {
+        "A": "Add more paraffin oil",
+        "B": "Add more perfume",
+        "C": "Add more paraffin wax",
+        "D": "Add more water"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "If the mixture is too soft, paraffin wax should be added."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0003",
+      "type": "mcq",
+      "stem": "Which chemical is primarily responsible for killing germs in Dettol antiseptic production?",
+      "options": {
+        "A": "Water",
+        "B": "Chloroxylenol",
+        "C": "Colorant",
+        "D": "Perfume"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Chloroxylenol is a key germicidal ingredient in antiseptic production."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0004",
+      "type": "mcq",
+      "stem": "What visual change is noted during Izal production before water is finally added?",
+      "options": {
+        "A": "The mixture freezes",
+        "B": "The color changes",
+        "C": "The mixture becomes transparent",
+        "D": "The mixture evaporates"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The note states that the color changes before adding water."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0005",
+      "type": "mcq",
+      "stem": "Which of the following products specifically mentions oxidation as its working mechanism?",
+      "options": {
+        "A": "Shampoo",
+        "B": "Bleach",
+        "C": "Air Freshener",
+        "D": "Baby Jelly"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Bleach whitens and disinfects through oxidation."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0006",
+      "type": "mcq",
+      "stem": "Why is caustic soda considered a dangerous chemical in several production processes?",
+      "options": {
+        "A": "It smells bad",
+        "B": "It can cause skin peeling and injury",
+        "C": "It reduces foam",
+        "D": "It spoils fragrance"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The safety precautions warn that caustic soda can damage skin if mishandled."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0007",
+      "type": "mcq",
+      "stem": "Which product specifically lists Vitamin E as one of its ingredients?",
+      "options": {
+        "A": "Shampoo",
+        "B": "Bleach",
+        "C": "Toilet Wash",
+        "D": "Izal"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Vitamin E is listed among the chemicals needed for shampoo production."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0008",
+      "type": "mcq",
+      "stem": "Which product requires hydrochloric acid (HCl) as a major stain-removing component?",
+      "options": {
+        "A": "Liquid soap",
+        "B": "Shampoo",
+        "C": "Toilet Wash",
+        "D": "Air Freshener"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "HCl is a key ingredient in toilet wash production."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0009",
+      "type": "mcq",
+      "stem": "What is the primary definition of liquid soap as provided in the guide?",
+      "options": {
+        "A": "A solid detergent bar",
+        "B": "A detergent in liquid form",
+        "C": "An oil-based cleaning paste",
+        "D": "A gaseous sanitizing agent"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text explicitly defines liquid soap as a detergent in liquid form."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0010",
+      "type": "mcq",
+      "stem": "Which of the following is cited as a reason why liquid soap is considered 'economical'?",
+      "options": {
+        "A": "It requires no water to use",
+        "B": "It never expires",
+        "C": "A small quantity can perform a large amount of washing",
+        "D": "The chemicals are free"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Liquid soap is economical because a little quantity dropped into water will do a great number of washing."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0011",
+      "type": "mcq",
+      "stem": "What is the chemical definition of liquid soap mentioned in the text?",
+      "options": {
+        "A": "A mixture of sodium chloride",
+        "B": "The aqueous mixture of potassium soap",
+        "C": "A compound of pure sulphonic acid",
+        "D": "A dry powder of soda ash"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text states that liquid soap is also the aqueous mixture of potassium soap."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0012",
+      "type": "mcq",
+      "stem": "How does laundry soap differ from liquid soap according to the production guide?",
+      "options": {
+        "A": "It is a gas",
+        "B": "It is hard soap with filter thickeners to increase bulk and hardness",
+        "C": "It is only used for hair",
+        "D": "It cannot foam"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Laundry soap is described as hard soap with filter thickeners used to increase the bulk and hardness of the soap."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0013",
+      "type": "mcq",
+      "stem": "Which of these is NOT listed as a quality of a good liquid soap?",
+      "options": {
+        "A": "It should foam very well",
+        "B": "The fragrance should be attractive",
+        "C": "The color must be appealing",
+        "D": "It should cause mild skin peeling to show it is working"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "A quality of good liquid soap is that it should NOT cause any form of irritation to the skin. Skin peeling is a danger of unprotected chemical contact."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0014",
+      "type": "mcq",
+      "stem": "Why is patience specifically required during the stirring process of soap making?",
+      "options": {
+        "A": "To prevent the bowl from breaking",
+        "B": "To ensure each chemical dissolves properly before adding the next",
+        "C": "To allow the mixture to change color multiple times",
+        "D": "To keep the temperature at 100 degrees"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Stirring requires patience to ensure the chemical added at each stage dissolves properly before adding the next one."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0015",
+      "type": "mcq",
+      "stem": "What is the primary reason for wearing gloves during soap production?",
+      "options": {
+        "A": "To keep the soap sterile",
+        "B": "To prevent hands from peeling due to chemical contact",
+        "C": "To improve the grip on the stirring stick",
+        "D": "To keep the hands warm"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Wearing gloves is essential because without them, the hands will start peeling from the chemicals."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0016",
+      "type": "mcq",
+      "stem": "Which safety equipment is recommended specifically to avoid chemical splashes into the eyes?",
+      "options": {
+        "A": "Apron",
+        "B": "Nose mask",
+        "C": "Safety goggles",
+        "D": "Rubber boots"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Safety goggles are worn to avoid chemicals entering the eyes during the preparation process."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0017",
+      "type": "mcq",
+      "stem": "What is the function of acid in liquid soap production?",
+      "options": {
+        "A": "It is a preservative only",
+        "B": "It boosts SLS performance and acts as a foaming/cleaning agent",
+        "C": "It is used only for fragrance",
+        "D": "It turns the soap into a solid"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "acid is a dark liquid that boosts the performance of SLS and acts as a foaming and cleaning agent."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0018",
+      "type": "mcq",
+      "stem": "How should color be prepared before adding it to the soap mixture?",
+      "options": {
+        "A": "Added as a dry powder directly",
+        "B": "Fried in paraffin oil",
+        "C": "Diluted with water",
+        "D": "Mixed with perfume first"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Color comes in powder form and should be diluted with water before adding it to the soap mixture."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0019",
+      "type": "mcq",
+      "stem": "What chemical serves as a preservative in liquid soap according to the 'Meaning of Chemicals' section?",
+      "options": {
+        "A": "Texapol",
+        "B": "STPP",
+        "C": "Caustic soda",
+        "D": "Nitrosol"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "While listed as a cleaning agent earlier, the text explicitly notes in the summary that STPP is a preservative."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0020",
+      "type": "mcq",
+      "stem": "In the 10-step liquid soap production process, which chemical is added to the 10 liters of water in Bowl 1?",
+      "options": {
+        "A": "acid",
+        "B": "Caustic soda",
+        "C": "Nitrosol",
+        "D": "Perfume"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The first step is to get a clean bowl, measure 10 liters of water, and add nitrosol."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0021",
+      "type": "mcq",
+      "stem": "How is bleach defined in the handout?",
+      "options": {
+        "A": "A cosmetic for skin whitening",
+        "B": "A chemical liquid used to kill bacteria and remove stains",
+        "C": "A thick paste for hair growth",
+        "D": "A natural fruit juice"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Bleach is defined as a strong chemical liquid used to kill harmful bacteria and to remove stains from clothes."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0022",
+      "type": "mcq",
+      "stem": "What chemical process is responsible for the whitening effect of bleach?",
+      "options": {
+        "A": "Evaporation",
+        "B": "Oxidation",
+        "C": "Fermentation",
+        "D": "Condensation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The process of making colored things white with bleach is basically achieved through oxidation."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0023",
+      "type": "mcq",
+      "stem": "During bleach production, how long should the mixture be allowed to settle before sieving?",
+      "options": {
+        "A": "5 minutes",
+        "B": "2 hours",
+        "C": "12 hours",
+        "D": "48 hours"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "After stirring the chemicals, the mixture must be allowed to settle for 12 hours."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0024",
+      "type": "mcq",
+      "stem": "What is the primary purpose of Baby Jelly according to the guide?",
+      "options": {
+        "A": "To wash clothes",
+        "B": "To kill mosquitoes",
+        "C": "To smoothen, soften, and refresh the skin",
+        "D": "To clean toilet bowls"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Baby jelly is specially formulated to smoothen, soften, and refresh the skin."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0025",
+      "type": "mcq",
+      "stem": "In Baby Jelly production, what should you do if the congealed test sample is 'too hard'?",
+      "options": {
+        "A": "Add more paraffin wax",
+        "B": "Add more paraffin oil",
+        "C": "Add water",
+        "D": "Increase the heat"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "If the sample is too hard, you should add paraffin oil to it properly."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0026",
+      "type": "mcq",
+      "stem": "What is the recommended temperature for adding perfume to Baby Jelly?",
+      "options": {
+        "A": "100 degrees Celsius",
+        "B": "35-40 degrees Celsius",
+        "C": "0 degrees Celsius",
+        "D": "Ambient room temperature"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The mixture should cool for 3 minutes until it reaches 35-40 degrees Celsius before adding perfume."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0027",
+      "type": "mcq",
+      "stem": "How are 'Antiseptics' distinguished from 'Disinfectants'?",
+      "options": {
+        "A": "Antiseptics are for floors; Disinfectants are for skin",
+        "B": "Antiseptics are applied on living surfaces; Disinfectants on inanimate objects",
+        "C": "Antiseptics are liquid; Disinfectants are solid",
+        "D": "There is no difference"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Antiseptics are germicides applied on living surfaces, while disinfectants are applied to inanimate objects."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0028",
+      "type": "mcq",
+      "stem": "In the production of Izal (Germicide), why is the mixture sieved at the end?",
+      "options": {
+        "A": "To add color",
+        "B": "To remove particles that refused to dissolve",
+        "C": "To make it foam more",
+        "D": "To reduce the smell"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Sieving is done mainly to remove whatever particles refused to dissolve."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0029",
+      "type": "mcq",
+      "stem": "Which chemical is listed as a potential ingredient for Air Freshener to improve aroma?",
+      "options": {
+        "A": "Hydrochloric acid",
+        "B": "Methanol",
+        "C": "Caustic soda",
+        "D": "Kerosene"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Methanol is listed as one of the chemicals for making liquid air freshener."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0030",
+      "type": "mcq",
+      "stem": "According to the shampoo production section, what property do shampoos share with detergents?",
+      "options": {
+        "A": "They are always blue",
+        "B": "They foam in water and are easily washed off",
+        "C": "They are used to clean floors",
+        "D": "They are highly toxic"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Shampoos, like detergents, foam in water and are easily washed off from the hair and scalp."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0031",
+      "type": "mcq",
+      "stem": "How can you test if Dettol (Antiseptic) is well formulated?",
+      "options": {
+        "A": "It should turn solid",
+        "B": "It should form a milky emulsion of oil droplets when diluted in water",
+        "C": "It should disappear when shaken",
+        "D": "It should smell like pine oil only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A well-formulated Dettol should be able to form a milky emulsion of oil droplets when diluted in water."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0032",
+      "type": "mcq",
+      "stem": "What is the main chemical in Toilet Wash (Harpic) used to remove hard stains?",
+      "options": {
+        "A": "Paraffin oil",
+        "B": "Hydrochloric acid (HCl)",
+        "C": "Glycerine",
+        "D": "Vitamin E"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hydrochloric acid (HCl) is a key chemical listed in the toilet wash production process."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0033",
+      "type": "mcq",
+      "stem": "Which chemical is NOT listed as a requirement for Insecticide production?",
+      "options": {
+        "A": "D.D force/Mulvap",
+        "B": "Sniper",
+        "C": "Kerosene",
+        "D": "Sodium benzoate"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Sodium benzoate is listed as a preservative for liquid soap, but not as an ingredient for insecticides."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0034",
+      "type": "mcq",
+      "stem": "Why is liquid soap described as a 'lucrative skill' in the guide?",
+      "options": {
+        "A": "Because it is difficult to produce",
+        "B": "Because it is only for export",
+        "C": "Because it can be used for both personal and commercial income",
+        "D": "Because it requires expensive machines"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The guide states that liquid soap can be used for personal use or commercial use to make money."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0035",
+      "type": "mcq",
+      "stem": "Which of the following environments is specifically mentioned as a place where liquid soap is widely used?",
+      "options": {
+        "A": "Factories only",
+        "B": "Homes, offices, restaurants, and eateries",
+        "C": "Farms only",
+        "D": "Hospitals only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text states liquid soap is virtually used everywhere including homes, offices, restaurants, and eateries."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0036",
+      "type": "mcq",
+      "stem": "What is the main purpose of industrial salt in liquid soap production?",
+      "options": {
+        "A": "To add fragrance",
+        "B": "To increase thickness",
+        "C": "To change the color",
+        "D": "To preserve the soap"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Industrial salt is used in soap making to improve thickness and consistency."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0037",
+      "type": "mcq",
+      "stem": "Why must production be carried out in a ventilated area during germicide preparation?",
+      "options": {
+        "A": "To speed up drying",
+        "B": "To prevent inhalation of hazardous fumes",
+        "C": "To improve color mixing",
+        "D": "To increase foam"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The precaution states that production should be done in a ventilated area to avoid inhaling harmful chemicals."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0038",
+      "type": "mcq",
+      "stem": "In bleach production, what is the purpose of sieving after settling?",
+      "options": {
+        "A": "To increase chemical reaction",
+        "B": "To remove undissolved sediments",
+        "C": "To change its color",
+        "D": "To reduce oxidation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "After 12 hours of settling, sieving removes sediments that did not dissolve."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0039",
+      "type": "mcq",
+      "stem": "What would likely happen if chemicals are added too quickly without proper stirring during soap production?",
+      "options": {
+        "A": "The soap becomes sweeter",
+        "B": "Some chemicals may not dissolve properly",
+        "C": "The color becomes brighter",
+        "D": "The soap solidifies immediately"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The guide emphasizes patience to ensure each chemical dissolves before adding the next."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0040",
+      "type": "mcq",
+      "stem": "What is the primary difference between antiseptic and disinfectant in application?",
+      "options": {
+        "A": "Antiseptic is stronger",
+        "B": "Disinfectant is cheaper",
+        "C": "Antiseptic is for living tissue; disinfectant for objects",
+        "D": "There is no difference"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The guide clearly distinguishes their surfaces of application."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0041",
+      "type": "mcq",
+      "stem": "Why is glycerine added in liquid soap and shampoo formulations?",
+      "options": {
+        "A": "To act as coloring agent",
+        "B": "To improve skin and hair conditioning properties",
+        "C": "To reduce foam",
+        "D": "To solidify the product"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Glycerine helps moisturize and condition skin and hair."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0042",
+      "type": "mcq",
+      "stem": "Which production process explicitly requires leaving the mixture overnight before packaging?",
+      "options": {
+        "A": "Baby Jelly",
+        "B": "Bleach",
+        "C": "Air Freshener",
+        "D": "Shampoo"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The baby jelly process instructs leaving it overnight before final packing."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0043",
+      "type": "mcq",
+      "stem": "What is the main reason sodium benzoate is included in liquid soap formulation?",
+      "options": {
+        "A": "To thicken the mixture",
+        "B": "To act as preservative",
+        "C": "To add fragrance",
+        "D": "To increase oxidation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Sodium benzoate functions as a preservative in liquid soap."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0044",
+      "type": "mcq",
+      "stem": "Which of the following products provides two different production methods in the guide?",
+      "options": {
+        "A": "Shampoo",
+        "B": "Air Freshener",
+        "C": "Bleach",
+        "D": "Baby Jelly"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The guide provides two separate methods for producing air freshener."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0045",
+      "type": "mcq",
+      "stem": "What is the core business insight repeated across multiple products in the guide?",
+      "options": {
+        "A": "They require large factories",
+        "B": "They are all imported",
+        "C": "They are profitable and highly demanded in the market",
+        "D": "They must be produced only seasonally"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The guide repeatedly emphasizes profitability and strong market demand."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0046",
+      "type": "mcq",
+      "stem": "According to the guide, what makes liquid soap a 'highly demanded' product in the market?",
+      "options": {
+        "A": "It is difficult to produce",
+        "B": "It is virtually used everywhere including homes, offices, and eateries",
+        "C": "It requires expensive imported chemicals",
+        "D": "It can only be produced by licensed manufacturers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The guide states liquid soap is highly demanded because it's used virtually everywhere in homes, offices, restaurants, and eateries."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0047",
+      "type": "mcq",
+      "stem": "What is the purpose of dissolving nitrosol first in the liquid soap production process?",
+      "options": {
+        "A": "To add color",
+        "B": "To create the base solution",
+        "C": "To save money",
+        "D": "To speed up production"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The first step involves dissolving nitrosol in 10 liters of water, establishing the foundational mixture to which all other chemicals are subsequently added."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0048",
+      "type": "mcq",
+      "stem": "In the liquid soap production process, what is the purpose of dissolving chemicals in separate bowls before combining?",
+      "options": {
+        "A": "To create different colors",
+        "B": "To ensure proper dissolution before adding to the main mixture",
+        "C": "To reduce the total production time",
+        "D": "To eliminate the need for stirring"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The process shows chemicals like STPP, caustic soda, texapol, and acid are dissolved separately (Bowls 2, 3, 4) before being added to the main nitrosol mixture to ensure proper incorporation."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0049",
+      "type": "mcq",
+      "stem": "What is the dual purpose of STPP in liquid soap as described in the guide?",
+      "options": {
+        "A": "Fragrance and color",
+        "B": "Cleaning agent and preservative",
+        "C": "Thickening and foaming",
+        "D": "Antiseptic and disinfectant"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "STPP is initially described as a cleaning agent, but later explicitly listed as a preservative in the chemical meanings section."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0050",
+      "type": "mcq",
+      "stem": "During Izal (germicide) production, why is camphor added to the mixture?",
+      "options": {
+        "A": "As a thickening agent",
+        "B": "For its germicidal properties and scent",
+        "C": "To change the color",
+        "D": "To speed up the reaction"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Camphor is listed as an ingredient in germicide production and is known for both its antimicrobial properties and characteristic odor."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0051",
+      "type": "mcq",
+      "stem": "What critical safety warning is repeated across multiple production sections (liquid soap, germicide, toilet wash)?",
+      "options": {
+        "A": "Always wear cotton clothes",
+        "B": "Keep chemicals out of reach of children",
+        "C": "Use metal containers only",
+        "D": "Produce only at night"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "This warning appears in the general precautions and is specifically mentioned because children put things in their mouths."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0052",
+      "type": "mcq",
+      "stem": "In the shampoo production formula, what is the purpose of citric acid?",
+      "options": {
+        "A": "To add fragrance",
+        "B": "To adjust pH balance",
+        "C": "To thicken the shampoo",
+        "D": "To preserve the shampoo"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Citric acid is commonly used in shampoo formulations to balance pH, making it gentle on hair and scalp."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0053",
+      "type": "mcq",
+      "stem": "What is the significance of the milky emulsion test for Dettol antiseptic?",
+      "options": {
+        "A": "It indicates proper color mixing",
+        "B": "It confirms the correct formulation and effectiveness",
+        "C": "It shows the product is too thick",
+        "D": "It means too much water was added"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The guide explicitly states that a well-formulated Dettol should form a milky emulsion when diluted in water."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0054",
+      "type": "mcq",
+      "stem": "In toilet wash production, why is caustic soda handled with extreme caution?",
+      "options": {
+        "A": "It evaporates quickly",
+        "B": "It can cause severe chemical burns on contact",
+        "C": "It is highly flammable",
+        "D": "It ruins the fragrance"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The guide includes a specific warning: 'Be careful at all times when handling caustic soda' due to its corrosive nature."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0055",
+      "type": "mcq",
+      "stem": "What is the role of industrial camphor in insecticide production?",
+      "options": {
+        "A": "As a coloring agent",
+        "B": "As an active ingredient for pest control",
+        "C": "To dilute other chemicals",
+        "D": "To make the product smell sweet"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Camphor is listed among key insecticide ingredients alongside D.D force, Sniper, and Formalin, indicating its role as an active pesticidal component."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0056",
+      "type": "mcq",
+      "stem": "What distinguishes laundry soap from liquid soap in terms of physical properties?",
+      "options": {
+        "A": "Laundry soap is always colored blue",
+        "B": "Laundry soap is hard with filter thickeners",
+        "C": "Laundry soap contains no chemicals",
+        "D": "Laundry soap is only for dishes"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The guide describes laundry soap as 'hard soap with filter thickeners to increase the bulk and hardness.'"
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0057",
+      "type": "mcq",
+      "stem": "During bleach production, what happens during the 12-hour settling period?",
+      "options": {
+        "A": "The mixture evaporates",
+        "B": "Sediments settle at the bottom",
+        "C": "The bleach becomes colored",
+        "D": "The chemicals activate"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The process requires settling for 12 hours, followed by sieving out the sediments, indicating this is when undissolved particles separate."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0058",
+      "type": "mcq",
+      "stem": "In the air freshener production, what is the function of methanol?",
+      "options": {
+        "A": "To provide color",
+        "B": "As a solvent and carrier for fragrance",
+        "C": "To thicken the mixture",
+        "D": "To preserve the product"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Methanol is listed alongside perfume/fragrance in air freshener production and serves as a solvent to help disperse the scent."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0059",
+      "type": "mcq",
+      "stem": "Why is sodium sulphate included in bleach production?",
+      "options": {
+        "A": "For fragrance",
+        "B": "As a filler and to improve stability",
+        "C": "To change color",
+        "D": "To speed up oxidation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Sodium sulphate is listed in the bleach chemicals and commonly serves as a filler and stabilizer in chemical formulations."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0060",
+      "type": "mcq",
+      "stem": "What is the primary difference between Texapon and SLS in soap making?",
+      "options": {
+        "A": "They are the same chemical",
+        "B": "Texapon is for liquid soap, SLS for shampoo",
+        "C": "Texapon is a foaming agent, SLS is a cleaning agent",
+        "D": "Texapon is cheaper than SLS"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The guide lists Texapon as a foaming agent while SLS (Sodium Lauryl Sulfate) is mentioned as a cleaning agent in the chemical meanings section."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0061",
+      "type": "mcq",
+      "stem": "In baby jelly production, what indicates that the consistency is correct?",
+      "options": {
+        "A": "It turns completely solid",
+        "B": "It remains liquid",
+        "C": "It congeals to a spreadable texture when tested",
+        "D": "It becomes transparent"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The production process involves testing in cool water and adjusting with wax (if too soft) or oil (if too hard) to achieve the right consistency."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0062",
+      "type": "mcq",
+      "stem": "What is the role of phenol in both germicide and antiseptic production?",
+      "options": {
+        "A": "As a coloring agent",
+        "B": "As a disinfectant and germ-killing agent",
+        "C": "As a thickening agent",
+        "D": "As a fragrance enhancer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Phenol is listed in both Izal and Dettol formulations and is historically known as a powerful disinfectant (carbolic acid)."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0063",
+      "type": "mcq",
+      "stem": "According to the precautions, why is it dangerous to taste any of the chemicals?",
+      "options": {
+        "A": "They are expensive",
+        "B": "They are toxic and can cause poisoning",
+        "C": "They will ruin the flavor",
+        "D": "They are only for external use"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The guide explicitly warns 'Do not taste any of the chemicals' as a safety precaution due to their toxic nature."
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0064",
+      "type": "mcq",
+      "stem": "In toilet wash production, why are sulphonic acid and texapon mixed together before adding to the main solution?",
+      "options": {
+        "A": "To create heat",
+        "B": "To form a whitish substance that incorporates properly",
+        "C": "To reduce the acid strength",
+        "D": "To save time"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Step 3 specifically states: 'Mix sulphonic acid (2 liters) with texapon (1 kg) in a separate bowl and mix it well to form a whitish substance.'"
+    },
+    {
+      "id": "uni-tasued-vos101-bank-0065",
+      "type": "mcq",
+      "stem": "What does the guide identify as the main application difference between antiseptics and disinfectants?",
+      "options": {
+        "A": "Antiseptics are for living surfaces, disinfectants for inanimate objects",
+        "B": "Antiseptics are for hospitals, disinfectants for homes",
+        "C": "Antiseptics are stronger than disinfectants",
+        "D": "There is no difference"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The guide explicitly distinguishes: 'Antiseptic: applied on living surfaces. Disinfectant: applied to inanimate objects.'"
+    }
+  ]
+}

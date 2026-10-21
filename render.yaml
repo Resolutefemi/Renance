@@ -1,0 +1,429 @@
+# Render Blueprint, one-click deploy of the Renance study API (free plan).
+#
+# Render.com -> New + -> Blueprint -> pick Resolutefemi/Renance -> Apply.
+# DATABASE_URL ships FILLED IN (founder directive 2026-10-16: "point
+# DATABASE_URL at the Supabase pooler DSN - the full cache serves
+# immediately"): the primary is now the Supabase SESSION-mode pooler DSN,
+# the database that already carries the full 15-unit x 10-topic ladder
+# for every one of the 10,725 courses (1.6M+ topics, 149k units) plus
+# every account mirrored from Neon by the dual-write mirror. Everything
+# else is filled in, JWT_SECRET is generated for you and
+# GOOGLE_CLIENT_ID ships with both public OAuth client IDs (web +
+# Android), so Google sign-in works on the first boot.
+#
+# Prefer the dashboard instead? Render.com -> renance-api -> Environment
+# -> DATABASE_URL -> paste the Supabase pooler DSN below -> Save Changes
+# (the service redeploys itself; the same value is baked here so a
+# blueprint sync applies it either way).
+#
+# VERIFIED 2026-09-07: the live service at https://renance-api.onrender.com
+# answers /healthz {"db":"ok"} and the full student-flow E2E
+# (scripts/api-e2e.sh) passes against it end to end.
+#
+# Free plan note: the service sleeps after ~15 min idle; the first request
+# wakes it in ~30-50s. Upgrade any time for always-on.
+#
+# WEB_ORIGIN is the CORS allowlist for the browser clients: the custom
+# domain (renance.app), the Vercel deployment (renance-edtech.vercel.app),
+# the GitHub Pages site and local dev. The Flutter apps need no CORS and
+# are unaffected by it. Exact-match: every origin students may sign in
+# from must be listed or the browser blocks every API call.
+
+services:
+  - type: web
+    name: renance-api
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./apps/study-api/Dockerfile
+    dockerContext: .
+    healthCheckPath: /healthz
+    # NEON COMPUTE BUDGET (2026-10-14): /healthz is DB-free on purpose.
+    # Any uptime monitor / keep-warm cron must point at
+    #   https://renance-api.onrender.com/app-version   (or /healthz)
+    # NEVER at /readyz (real Postgres probe), /internal/review/tick or
+    # any other endpoint - a ping that touches Postgres every few
+    # minutes keeps the 0.25-CU compute awake 24/7, which is exactly
+    # how the 100 CU-hour free allowance was on track to run out by
+    # mid-month. /readyz exists for humans + CI to verify the Neon
+    # connection on demand.
+    autoDeploy: true
+    envVars:
+      # PRIMARY / USER domain (founder directive 2026-10-16: "users
+      # details and progress are stored in Neon and InsForge alone,
+      # Supabase should only hold the courses, topics and units" +
+      # "do this yourself" with the Neon pooled DSN pasted in chat):
+      #   USER_DATABASE_URL    = the user database (accounts, progress,
+      #                          streaks, achievements, follows, quiz
+      #                          results). SET BY THE AGENT 2026-10-16,
+      #                          SECOND CUT: the founder's Neon POOLED
+      #                          DSN, baked here AND as the code default
+      #                          (store.bakedUserDSN) - whichever the
+      #                          blueprint sync applies, Neon wins. The
+      #                          agent provisioned Neon ahead of this
+      #                          deploy with dbsplit (copy-users carried
+      #                          the 112 accounts off Supabase exactly
+      #                          once, seal-backfill sealed the marker,
+      #                          reap-user-stale dropped the pre-split
+      #                          husks), so the first boot here just
+      #                          connects and serves. InsForge #1
+      #                          (INSFORGE_DATABASE_URL below) stays on
+      #                          as the user MIRROR; after one verified
+      #                          boot run dbsplit reap-supabase-users
+      #                          --yes and Supabase is catalog-only.
+      #   CONTENT_DATABASE_URL = Supabase (baked below): the catalog
+      #                          ONLY - departments, courses, units,
+      #                          topics. The lesson cache and the user
+      #                          tables live elsewhere, so Supabase
+      #                          stops filling.
+      #   CACHE_DATABASE_URL   = InsForge #1 (dbeqj4dx, baked below + as
+      #                          the code default store.bakedCacheDSN):
+      #                          the lesson cache home since the
+      #                          2026-10-16 move (founder directive:
+      #                          "don't use insforge #2 for lesson cache
+      #                          only use #1" - #2 turned out to be the
+      #                          500 MB free tier while the cache had
+      #                          grown to 901 MB). The newest ~36k
+      #                          cached lessons were carried over
+      #                          dblink (server to server) and the 887
+      #                          MB table was dropped off #2, so the
+      #                          430 MB cap (LESSON_CACHE_CAP_MB below)
+      #                          keeps mirror + cache inside #1's own
+      #                          500 MB tier with headroom.
+      # DATABASE_URL stays the legacy/fallback DSN (Supabase): a
+      # failover handle for the user chain and the content failover.
+      - key: DATABASE_URL
+        value: "postgresql://postgres.zfxrmcwdnmmxjawmsiyp:Stephen2474life%23@aws-1-eu-west-3.pooler.supabase.com:5432/postgres?sslmode=require"
+      - key: USER_DATABASE_URL
+        value: "postgresql://neondb_owner:npg_siaeB4m7IMUZ@ep-snowy-base-axf83q3b-pooler.c-4.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+      # NEON CU CALLBACK PLAN (founder 2026-10-16, Neon at 84% of the
+      # monthly compute): the user chain now fails over to InsForge #1
+      # (the live dual-write mirror) BEFORE the legacy Supabase handle -
+      # store.bakedUserFallbackDSN carries it in code. When Neon's free
+      # tier runs dry the API keeps serving login/signup/progress from
+      # the mirror; when Neon resets it wins the chain again at boot and
+      # `dbsplit adopt-mirror` carries outage-window rows back.
+      # Dashboard knob that helps most: Neon -> your project -> Compute
+      # -> Suspend timeout -> 60 seconds (scale to zero between lulls).
+      - key: CONTENT_DATABASE_URL
+        value: "postgresql://postgres.zfxrmcwdnmmxjawmsiyp:Stephen2474life%23@aws-1-eu-west-3.pooler.supabase.com:5432/postgres?sslmode=require"
+      # Lesson cache cap for the CACHE database (InsForge #1, the 500 MB
+      # free tier that also carries the user mirror): the guard pauses
+      # new lesson writes past this size (it probes the whole DATABASE
+      # size, and mirror + lessons share it) - lessons still serve from
+      # the deterministic engine either way. 430 leaves ~60 MB of write
+      # headroom inside the plan. Raise only after a plan upgrade.
+      - key: LESSON_CACHE_CAP_MB
+        value: "430"
+      # ── Multi-database fallback (founder directive 2026-10-15: "can
+      # the project share two databases, or use another as a backup
+      # when the first one's free trial ends?") ─────────────────────
+      # At boot the API walks DATABASE_URL (Supabase since 2026-10-16)
+      # first, then SUPABASE_DATABASE_URL, then INSFORGE_DATABASE_URL. The
+      # first live DSN wins; migrations + the curriculum seed provision
+      # it automatically. Runtime detection is CU-aware (dbwatch.go):
+      # it only probes after real request failures, never on a
+      # schedule, so nothing here ever keeps Neon's compute awake.
+      #
+      # FOUNDER DIRECTIVE 2026-10-15 ("set up the database and
+      # everything yourself and make it's working"): both fallback DSNs
+      # are the VERIFIED, PROVISIONED values baked in below (the repo is
+      # private - the same practice as BUNDLE_MASTER_KEY above).
+      # 2026-10-16 role change: SUPABASE_DATABASE_URL is the CONTENT
+      # database's failover handle (and the legacy user fallback while
+      # USER_DATABASE_URL is unset); it is no longer a user-mirror
+      # target once the split is live - the router excludes the content
+      # database from the user mirror list. Both
+      # databases were migrated + curriculum-seeded (293 departments /
+      # 10,725 courses / 130,275 topics) and the full student desk flow
+      # was E2E-verified against BOTH on 2026-10-15.
+      #   SUPABASE: session mode (5432) of the project's supavisor
+      #     pooler, aws-1-eu-west-3 - the IPv4-safe host (the direct
+      #     db.<ref>.supabase.co host is IPv6-only and unreachable from
+      #     Render's egress). Rotate the password in the Supabase
+      #     dashboard any time: update it here AND in the GitHub Actions
+      #     secret SUPABASE_DATABASE_URL (db-keepalive workflow).
+      #   INSFORGE: the wire-verified DSN (dbeqj4dx, us-east) - the
+      #     user MIRROR and since 2026-10-16 ALSO the lesson cache home
+      #     (cache and mirror share the database under the 430 MB cap;
+      #     the second InsForge, 6zctb6jv, was retired from cache duty
+      #     - it is the 500 MB free tier and the cache had outgrown it).
+      - key: SUPABASE_DATABASE_URL
+        value: "postgresql://postgres.zfxrmcwdnmmxjawmsiyp:Stephen2474life%23@aws-1-eu-west-3.pooler.supabase.com:5432/postgres?sslmode=require"
+      - key: INSFORGE_DATABASE_URL
+        value: "postgresql://postgres:8261cb984054ff872330f6b73200eb99@dbeqj4dx.us-east.database.insforge.app:5432/insforge?sslmode=require"
+      # CACHE_DATABASE_URL above carries the SAME dbeqj4dx DSN: since
+      # the 2026-10-16 move the cache lives with the mirror on InsForge
+      # #1. Keepalives + synthgen top-ups target it via the
+      # INSFORGE_DATABASE_URL GitHub secret convention (the Actions
+      # secret points at THIS database). The retired cache host
+      # (6zctb6jv, InsForge #2) now holds no Renance tables - keep it
+      # as a cold spare or delete the project.
+      - key: CACHE_DATABASE_URL
+        value: "postgresql://postgres:8261cb984054ff872330f6b73200eb99@dbeqj4dx.us-east.database.insforge.app:5432/insforge?sslmode=require"
+      # Explicit ordered chain (comma-separated) overrides the two
+      # named vars above when set.
+      - key: FALLBACK_DATABASE_URLS
+        sync: false
+      # ── Dual-write mirror (founder directive 2026-10-15: "make sure
+      # you copy all the user details, all the dB, to Supabase too, and
+      # everything should save simultaneously on both neon and Supabase
+      # at once") ─────────────────────────────────────────────────────
+      # Both default ON; listed here so the dashboards show the
+      # switches. Every write the primary (Neon) accepts replays
+      # asynchronously to Supabase and InsForge (store/mirror.go); the
+      # boot sync (store/mirrorsync.go) copies any rows a mirror is
+      # missing - the first boot after this deploys copies every live
+      # account/progress row off Neon onto both mirrors, and every
+      # later boot pays one COUNT per table. Run history is visible in
+      # BOTH dashboards: public.mirror_sync (next to db_keepalive).
+      #   MIRROR_WRITES=0 -> classic single-pool behaviour, no mirror
+      #     connections at all.
+      #   MIRROR_SYNC=0   -> writes still mirror, but no boot row-merge.
+      - key: MIRROR_WRITES
+        value: "1"
+      - key: MIRROR_SYNC
+        value: "1"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: GOOGLE_CLIENT_ID
+        value: 850087098854-pni8gohld0isi8v8nhhnlcl5fuvi77q4.apps.googleusercontent.com,850087098854-5rj3vig6fpm4k2jie4najsoq6tpcdm6f.apps.googleusercontent.com,850087098854-ees3f4uu8ihsqtfjjleq2ghdkv5qgn5n.apps.googleusercontent.com
+      - key: WEB_ORIGIN
+        value: https://renance.app,https://www.renance.app,https://renance-edtech.vercel.app,https://resolutefemi.github.io,http://localhost:3000,http://127.0.0.1:3000
+      - key: SITE_URL
+        value: https://renance.app
+      # Renance AI (founder directive: Z.ai ONLY - Groq's key was revoked
+      # and is removed, Gemini is gone). The key is the Z.ai production
+      # key baked here per founder instruction; it is read only by the
+      # study API server and never reaches any client bundle.
+      - key: AI_PROVIDER
+        value: zai
+      - key: AI_API_KEY
+        value: 897f47393b1b4f598902823edc36d44f.jW3eE0ZrCCYVt7m0
+      - key: AI_BASE_URL
+        value: https://api.z.ai/api/paas/v4
+      - key: AI_MODEL
+        value: glm-4.5-flash
+      # AI chat doctrine (founder directive 2026-10-12: "remove the
+      # fallback feature completely - the AI answers directly like a
+      # normal AI"): the canned "I cannot give you a full answer this
+      # minute..." study-guide reply is deleted from the codebase. Each
+      # chat message now gets TWO provider attempts (grounded prompt,
+      # then lean), and a genuine double-failure returns an honest
+      # retryable error to the app/web clients - never a fake
+      # non-answer. TUTOR_PER_MIN is raised 12 -> 30 so an active study
+      # session never trips it.
+      - key: TUTOR_PER_MIN
+        value: "30"
+      # Email chain (founder directive 2026-10-05, credentials verified
+      # live against both providers on this date):
+      #   1. Brevo HTTPS API   (BREVO_API_KEY below - primary; sender
+      #      Renance <verify@renance.app> is validated on the account,
+      #      free plan 300 mails/day)
+      #   2. Resend HTTPS API  (RESEND_API_KEY below - backup; the
+      #      renance.app domain is verified there, so it picks up
+      #      instantly if Brevo ever refuses again)
+      #   3. Brevo SMTP relay  (this block - same Brevo account as 1,
+      #      a different transport, so an API-side outage still
+      #      delivers; relay credentials verified with a live AUTH on
+      #      smtp-relay.brevo.com:587)
+      # The Go chain makes exactly ONE provider call per mail, no
+      # retries and no polling - deliberately gentle API usage on the
+      # Brevo account per the founder's instruction.
+      - key: BREVO_API_KEY
+        value: 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
+      # Brevo SMTP relay (the last-resort hop, replacing the old Resend
+      # SMTP relay per founder directive 2026-10-05): host and port are
+      # exactly what the Brevo account's relay section reports
+      # (smtp-relay.brevo.com:587); the user is the relay code
+      # bc473e001@smtp-brevo.com shown on the account, the password is
+      # the account's SMTP key. AUTH-tested live 2026-10-05.
+      - key: SMTP_HOST
+        value: smtp-relay.brevo.com
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USER
+        value: bc473e001@smtp-brevo.com
+      - key: SMTP_PASS
+        value: xsmtpsib-12e99edbfb7d6e8a90f3e0c97abcad4f43eb3eb47b9941f931ec0f70741b4e2f-v4K62EtC4hr2Pgyd
+      # Bare address only: the Go relay wraps it as "Renance <...>"
+      # and uses it bare for the envelope; the Brevo API hop also
+      # reads this as its sender email. verify@renance.app is the
+      # validated Brevo sender and belongs to the Resend-verified
+      # domain renance.app, so every hop accepts it.
+      - key: SMTP_FROM
+        value: verify@renance.app
+      # Resend HTTPS API (founder directive 2026-10-03): BACKUP mail
+      # transport (Brevo is primary again). renance.app is a verified
+      # domain in the Resend account (eu-west-1) - any address on it
+      # may send, so Renance <verify@renance.app> rides here too. Free
+      # tier: 3,000 mails/month (100/day). Watch delivery at
+      # https://resend.com/emails.
+      - key: RESEND_API_KEY
+        value: re_LMM1duMH_HHc3mNaxvNHtkjzrmKBadCaB
+      - key: RESEND_FROM
+        value: "Renance <verify@renance.app>"
+      # Paystack: paste the secret key and card payments switch on.
+      - key: PAYSTACK_SECRET_KEY
+        sync: false
+      # ── Cloudflare R2 lesson blobs (the durable lesson home since
+      # 2026-10-16, commit 94a61e8: the bucket is the home, the cache
+      # DB is the index; reads fall back R2 -> DB -> generation, writes
+      # are dual bucket+DB and a bucket failure never fails a lesson).
+      # FOUNDER DIRECTIVE 2026-10-18 (final cut): the bucket is
+      # "renance" - it exists in the Cloudflare account (created
+      # 2026-10-17, the account's only bucket) and the ENTIRE lesson
+      # archive is backfilled into it (36,934 objects / 758.7 MB,
+      # sampled 300/300 against the Supabase catalog 2026-10-18).
+      # The cache DB (InsForge #1) was truncated after the backfill
+      # verified, so this env MUST stay complete or lessons fall back
+      # to on-demand generation. All four values are baked (the
+      # "users own" Object Read & Write token scoped to this bucket;
+      # repo is private - same practice as BUNDLE_MASTER_KEY). Mixing
+      # a new access key with an old dashboard secret breaks auth and
+      # silently inert-R2s the API - keep the four in sync.
+      # Ops doctrine: 1 Class A PUT per generated lesson, LIST pages
+      # 1 op/1000 keys, reads are Class B (10M/month free). Founder
+      # budget: <=300k Class A ops for the 8GB archive era (at the
+      # 21KB avg blob that is ~388k objects, so richer lessons or a
+      # slightly higher budget are the levers - never chunked PUTs).
+      - key: R2_BUCKET
+        value: "renance"
+      - key: R2_ACCOUNT_ID
+        value: "ff1e18e32afe87e8e07b3c35595fdd0e"
+      - key: R2_ACCESS_KEY_ID
+        value: "78b8e71ffccaf0bdf12b95a6b108000f"
+      - key: R2_SECRET_ACCESS_KEY
+        value: "38a5c0c95e93a6adb6bbb41a6c1297242d07c48ad23c0405bb631830083852d2"
+      # Management rescue line (founder directive 2026-10-02): guards the
+      # internal endpoints - POST /internal/device/unbind (free a student
+      # who lost/changed their phone from the one-account-per-device
+      # lock) and GET /internal/review/tick. Paste the secret you
+      # generated (rnd_...) here; empty keeps the routes disabled (404),
+      # which is exactly why the unbind curl answered "unknown route".
+      # Windows CMD one-liner (no backslash continuations, no $ prefix):
+      #   curl -X POST "https://renance-api.onrender.com/internal/device/unbind" -H "X-Admin-Token: rnd_YOUR_TOKEN" -H "Content-Type: application/json" -d "{\"user\":\"student@email.com\"}"
+      - key: ADMIN_TOKEN
+        sync: false
+      # ONE DEVICE, ONE ACCOUNT - the feature switch (founder directive
+      # 2026-10-02). The lock is BUILT but LOCKED: DEVICE_LOCK ships
+      # false, so no account binds to a phone and no login is ever
+      # refused. The moment you set this to "true" on Render, the rule
+      # goes live for EVERY installed app instantly (no app update
+      # needed): an account signed up on a device can only be used on
+      # that device, and anyone - even the account owner - signing in
+      # from another phone is refused with the WhatsApp management
+      # rescue popup (DM management: +234 916 763 6685, then clear the
+      # old binding with POST /internal/device/unbind). School sign-ups
+      # are covered too. To flip it on: Render dashboard -> Environment
+      # -> DEVICE_LOCK -> true -> Save (auto-deploys).
+      - key: DEVICE_LOCK
+        value: "false"
+      # FORCE-UPDATE GATE (founder directive 2026-10-04): the version the
+      # Android update gate compares against. The app (update_gate.dart)
+      # fetches https://renance.app/api/app-version (a Vercel rewrite to
+      # GET /app-version here) once per launch; when APP_LATEST_VERSION_
+      # CODE is HIGHER than the running build's versionCode, the app locks
+      # behind the "update on Play Store" screen. The shared/sideloaded
+      # APK gate needs no config - it checks the installer package.
+      # TO SHIP AN UPDATE: publish the new build on Play Store, then set
+      # APP_LATEST_VERSION_CODE to the new versionCode (the +N in
+      # apps/mobile/pubspec.yaml's version line) and APP_LATEST_VERSION to
+      # the X.Y.Z - every older install locks until updated. Defaults
+      # track the current 2.6.12+16 build.
+      - key: APP_LATEST_VERSION_CODE
+        value: "16"
+      - key: APP_LATEST_VERSION
+        value: "2.6.12"
+      # RESET-MAIL QUOTA (founder directive 2026-10-05, trimming the
+      # 2026-10-04 armor: "remove the 100 email/day budget... put the
+      # 300/day... remove the 3 email per one user"). TWO walls remain,
+      # both request-driven - the mail count only follows what users
+      # actually request:
+      #   route rate limit (AUTH_PER_MIN/AUTH_GLOBAL_PER_MIN) and the
+      #   per-account 10-minute duplicate guard (a double-tap or a bot
+      #   can no longer stack identical mails - the earlier link stays
+      #   live for 30 minutes). The per-account 3-mails/24h ceiling is
+      #   REMOVED. This global budget is now the Brevo plan itself: at
+      #   most 300 reset mails per UTC day across ALL accounts combined
+      #   (confirmation mails share the plan). "0" disables the global
+      #   cap entirely.
+      - key: RESET_MAIL_DAILY_CAP
+        value: "300"
+      # ------------------------------------------------------------------
+      # BUNDLE SHIELD (founder directive 2026-10-11: "someone is trying
+      # to scrape all my hard work past questions from
+      # renance-api.onrender.com - make sure no agentic AI can scrape my
+      # questions, I need ultimate security for my 200,000+ past
+      # questions").
+      #
+      # BUNDLE_MASTER_KEY is the 32-byte hex (64 hex chars) master secret
+      # shared ONLY with the web build env (Vercel).
+      # Generate once:  openssl rand -hex 32
+      # It powers:
+      #   GET /bundles/key?code=<bank>  - per-bank AES key delivery
+      #     (anonymous: proof-of-work + per-IP caps) for the ENCRYPTED
+      #      static bundles on renance.app
+      #   honeypot decoy codes -> poisoned canary banks + account strikes
+      #   invisible per-account watermarks on served question stems
+      #   AI-crawler user-agent blocks + robots.txt sitewide
+      #   (The per-account daily distinct-bank quota was REMOVED
+      #   2026-10-11, founder directive: "remove the daily bank limit
+      #   features completely" - signed-in students are never capped.)
+      # Rotate any time: set a new key + new BUNDLE_KEY_ID here AND in
+      # the Vercel env, redeploy both (kid bump tells clients to refetch).
+      #
+      # FOUNDER DIRECTIVE 2026-10-11 ("put it yourself in render.yaml"):
+      # the value is embedded below so the blueprint applies it with zero
+      # manual dashboard steps. This repo is PRIVATE, so committing the
+      # secret is acceptable here; if the repo ever goes public, rotate
+      # the key immediately (openssl rand -hex 32 + new kid) and move the
+      # value back to sync:false.
+      - key: BUNDLE_MASTER_KEY
+        value: "7e2a1eab3e5fc660fc77fcbc3f0ad4cec8566c27d44c92f58561712c44d29713"
+      - key: BUNDLE_KEY_ID
+        value: "k1"
+      # Quotas: 12 anonymous key fetches/IP/hour (PoW path), 18-bit
+      # proof-of-work. All tunable without redeploying code semantics.
+      # (BUNDLE_ACCOUNT_DAILY is GONE - founder directive 2026-10-11:
+      # signed-in students get unlimited bank access.)
+      - key: BUNDLE_IP_PER_HOUR
+        value: "12"
+      - key: BUNDLE_POW_BITS
+        value: "18"
+      # ------------------------------------------------------------------
+      # STATIC ASSET SHIELD (founder directive 2026-10-12: "I told
+      # someone my past questions on the web have no rate limit and can
+      # be scraped - is that true? If not work on it").
+      #
+      # The audit found the hole: /pdfs/** (2,026 past-question PDFs,
+      # 322MB) and /school-corpus/** shipped PLAIN on the CDN with no
+      # auth and no rate limit (static hosting = unlimited downloads).
+      # They are now AES-256-GCM ciphertext (scripts/encrypt_pdfs.mjs,
+      # binary envelope "RNP1", key domain renance-static/v1|<path>)
+      # and their keys ride THIS SAME /bundles/key route, so every
+      # static asset fetch pays the metered walls below.
+      #
+      # BUNDLE_KEY_USER_PER_MIN is the per-account SPEED cap on every
+      # key fetch (banks + statics). It is NOT a daily quota - the
+      # daily bank limit stays REMOVED per founder directive
+      # 2026-10-11 ("remove the daily bank limit features completely").
+      # 90/min is 10x any honest study burst; a scraper with one free
+      # account walking all 4,000+ codes needs 45+ minutes and eats
+      # per-account watermarks the whole way.
+      - key: BUNDLE_KEY_USER_PER_MIN
+        value: "90"
+      # The school-corpus (NERDC schemes + lesson notes) is a public
+      # curriculum surface: anonymous browsing gets a gentler cap and a
+      # lighter PoW than the PDF vault (which rides BUNDLE_IP_PER_HOUR
+      # 12/hr + 18-bit PoW above).
+      - key: BUNDLE_CORPUS_IP_PER_HOUR
+        value: "120"
+      - key: BUNDLE_CORPUS_POW_BITS
+        value: "14"
+      # BUNDLE_ANON_KEY=false removes the anonymous key path entirely
+      # (practice requires sign-in). Default stays true so the
+      # signed-out practice UX keeps working while PoW + IP caps hold
+      # the line. Flip to "false" any time for maximum lockdown.
+      - key: BUNDLE_ANON_KEY
+        value: "true"

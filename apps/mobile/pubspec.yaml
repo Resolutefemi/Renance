@@ -1,0 +1,98 @@
+name: renance
+description: "Renance, the global student study OS. Offline-first mobile shell."
+publish_to: "none"
+version: 2.6.22+28
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.0
+  provider: ^6.1.0
+  shared_preferences: ^2.3.0
+  sqflite: ^2.4.0
+  path: ^1.9.0
+  google_sign_in: ^6.2.1
+  flutter_tts: ^4.2.0
+  url_launcher: ^6.3.0
+  crypto: ^3.0.3
+  share_plus: ^10.1.0
+  file_selector: ^1.1.0
+  permission_handler: ^11.3.1
+  path_provider: ^2.1.5
+  connectivity_plus: ^6.1.0
+  pdf: ^3.11.1
+  # Android SDK level (storage permission is retired on 11+) and the
+  # stable Android ID for the one-account-per-device lock.
+  device_info_plus: ^11.3.0
+  # Device notifications (founder directive 2026-10-04): review-due
+  # nudges and download completions drop as real Android notifications.
+  flutter_local_notifications: ^19.5.0
+  # Secure session storage (founder directive 2026-10-11): the auth
+  # token lives in the OS-grade encrypted store (Android
+  # EncryptedSharedPreferences / iOS Keychain) so the session survives
+  # app closes and device restarts without ever sitting in plain
+  # shared preferences. Falls back to prefs only if the secure store
+  # is unavailable (tests, exotic devices).
+  flutter_secure_storage: ^9.2.2
+  # Full KaTeX rendering (web parity, founder directive 2026-10-18):
+  # the question banks' LaTeX used to be approximated to unicode; the
+  # engine now typesets it exactly like the website's KaTeX, with the
+  # old unicode conversion kept as the parse-failure fallback.
+  flutter_math_fork: ^0.7.2
+  # The learn module's curated drawing library ships server-side SVGs
+  # (stroke-2 currentColor figures); the web renders them inline.
+  flutter_svg: ^2.0.10
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ">=5.0.0 <8.0.0"
+
+dependency_overrides:
+  # CI fix 2026-10-12: image 4.11.0 declares archive ^4.0.9 but calls
+  # ZLibDecoder.decodeLazy, which only exists in archive 4.1.0+ - a
+  # fresh pub-cache resolve breaks the golden tests. image 4.11.1
+  # conflicts with flutter_local_notifications, so pin the last
+  # archive-4.0.9-compatible image line instead.
+  image: 4.10.0
+  # shared_preferences_android 2.5.0 rewrote its Android impl on jnigen,
+  # which drags the jni package's CMake/NDK build into every Gradle run
+  # (a 2.2GB NDK fetch the app's own code never needs). 2.4.28 is the
+  # last Kotlin-only release and sits inside shared_preferences' own
+  # supported range (^2.3.4), so this pin is a supported configuration.
+  shared_preferences_android: 2.4.28
+  # Same jnigen story: path_provider_android 2.3.x drags in jni's CMake
+  # build too. 2.2.23 is the last Kotlin-only release and sits inside
+  # path_provider's supported range (^2.2.5).
+  path_provider_android: 2.2.23
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/brand/renance_mark.png
+    - assets/brand/renance_mark_white.png
+    - assets/nerdc_schemes.json
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito-Variable.ttf
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+    - family: JetBrainsMono
+      fonts:
+        - asset: assets/fonts/JetBrainsMono-Medium.ttf
+          weight: 500
+    - family: MaterialSymbolsOutlined
+      fonts:
+        - asset: assets/fonts/MaterialSymbolsOutlined.ttf

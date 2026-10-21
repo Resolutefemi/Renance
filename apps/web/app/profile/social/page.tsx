@@ -1,0 +1,179 @@
+'use client';
+
+/**
+ * /profile/social - the follower + following lists (founder directive
+ * 2026-10-14: "add the followers and following to profile"). Rows link
+ * to the scholar's public profile; following rows offer an inline
+ * unfollow, follower rows a follow-back. Contact-list friend finding
+ * is deliberately PAUSED on web (founder call - it ships in the mobile
+ * app later); the invite-friends card on the profile covers growth for
+ * now.
+ */
+
+import { useCallback, useEffect, useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import PageBar from '@/components/page-bar';
+import BottomNav from '@/components/bottom-nav';
+import SideNav from '@/components/side-nav';
+import { LogoActivityIndicator } from '@/components/renance-logo';
+import BlueTick from '@/components/blue-tick';
+import { avatarUrl } from '@/lib/social';
+import { getStoredUser } from '@/lib/session';
+import { type Connections, type FollowRow, fetchConnections, toggleFollow } from '@/lib/social';
+
+type Tab = 'followers' | 'following';
+
+export default function ProfileSocialPage() {
+  const router = useRouter();
+  const [conn, setConn] = useState<Connections | null>(null);
+  const [offline, setOffline] = useState(false);
+  const [tab, setTab] = useState<Tab>('followers');
+  const [busy, setBusy] = useState('');
+
+  const load = useCallback(() => {
+    fetchConnections()
+      .then((c) => {
+        setConn(c);
+        setOffline(false);
+      })
+      .catch(() => {
+        // No dead-end error card (founder: "remove retry"): the quiet
+        // poll below keeps trying until the lists arrive.
+        setOffline(true);
+      });
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && !getStoredUser()) {
+      router.replace('/login?next=/profile/social');
+      return;
+    }
+    load();
+  }, [load, router]);
+
+  // The quiet re-sync: until the lists answer, poll every 8s. The page
+  // heals itself - nothing for the scholar to press.
+  useEffect(() => {
+    if (conn || !offline) return;
+    const t = window.setInterval(load, 8000);
+    return () => window.clearInterval(t);
+  }, [conn, offline, load]);
+
+  async function flip(row: FollowRow) {
+    if (busy) return;
+    setBusy(row.username);
+    try {
+      const r = await toggleFollow(row.username);
+      setConn((cur) => {
+        if (!cur) return cur;
+        const setRow = (list: FollowRow[]) =>
+          list.map((x) => (x.username === row.username ? { ...x, following: r.following } : x));
+        return { followers: setRow(cur.followers), following: setRow(cur.following) };
+      });
+    } catch {
+      /* leave the state as it was */
+    } finally {
+      setBusy('');
+    }
+  }
+
+  const rows = conn ? (tab === 'followers' ? conn.followers : conn.following) : [];
+
+  return (
+    <div className="min-h-screen bg-background md:pl-[var(--rail-w)]">
+      <SideNav />
+      <PageBar title="Your people" backHref="/profile" />
+
+      <main className="mx-auto w-full max-w-2xl px-4 pb-28 pt-4">
+        {/* Tabs */}
+        <div className="learn-tile grid grid-cols-2 gap-2 rounded-2xl border-2 border-outline-variant bg-card p-2">
+          {(['followers', 'following'] as Tab[]).map((t) => (
+            <button
+              key={t}
+              type="button"
+              onClick={() => setTab(t)}
+              className={`key-btn flex items-center justify-center gap-1.5 py-2.5 text-[13px] ${
+                tab === t ? 'bg-primary text-on-primary' : 'bg-surface-container text-on-surface-variant'
+              }`}
+            >
+              {t === 'followers' ? (
+                <span className="material-symbols-outlined text-[18px]">group</span>
+              ) : (
+                <span className="material-symbols-outlined text-[18px]">person_add</span>
+              )}
+              {t === 'followers' ? `Followers (${conn?.followers.length ?? 0})` : `Following (${conn?.following.length ?? 0})`}
+            </button>
+          ))}
+        </div>
+
+        {!conn && !offline && (
+          <div className="mt-6 flex justify-center"><LogoActivityIndicator /></div>
+        )}
+        {!conn && offline && (
+          <div className="learn-tile mt-4 flex flex-col items-center gap-2 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-4 py-12 text-center">
+            <span className="material-symbols-outlined text-[36px] text-primary">diversity_3</span>
+            <p className="text-[15px] font-black text-on-surface">Your people are syncing…</p>
+            <p className="max-w-xs text-[12.5px] font-bold text-on-surface-variant">
+              Followers and following appear the moment the connection is back.
+            </p>
+          </div>
+        )}
+
+        {conn && rows.length === 0 && (
+          <div className="learn-tile mt-4 flex flex-col items-center gap-2 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-4 py-12 text-center">
+            <span className="material-symbols-outlined text-[36px] text-primary">diversity_3</span>
+            <p className="text-[15px] font-black text-on-surface">
+              {tab === 'followers' ? 'No followers yet' : 'Not following anyone yet'}
+            </p>
+            <p className="max-w-xs text-[12.5px] font-bold text-on-surface-variant">
+              {tab === 'followers'
+                ? 'Post your wins on the feed and share your invite link - they will come.'
+                : 'Tap any name on the feed, the boards or the arena and follow them from their profile.'}
+            </p>
+          </div>
+        )}
+
+        <ul className="mt-3">
+          {rows.map((row) => (
+            <li key={`${tab}-${row.username}`} className="learn-tile mt-2 flex items-center gap-3 rounded-2xl border-2 border-outline-variant bg-card p-3">
+              <Link
+                href={`/profile/view/?u=${encodeURIComponent(row.username)}`}
+                aria-label={`${row.name} on their profile`}
+                className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-surface-container-high text-[16px] font-bold text-on-surface transition hover:ring-2 hover:ring-primary"
+              >
+                {avatarUrl(row.avatar) ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={avatarUrl(row.avatar)!} alt="" className="h-full w-full object-cover" />
+                ) : (
+                  row.name.slice(0, 1).toUpperCase()
+                )}
+              </Link>
+              <div className="min-w-0 flex-1">
+                <Link href={`/profile/view/?u=${encodeURIComponent(row.username)}`} className="flex items-center gap-1.5">
+                  <span className="min-w-0 truncate text-[14.5px] font-extrabold text-on-surface hover:underline">{row.name}</span>
+                  {row.premium && <BlueTick size={15} />}
+                </Link>
+                <p className="text-[12px] font-bold text-on-surface-variant">
+                  @{row.username}
+                  {row.followsYou && <span className="ml-2 rounded-full bg-surface-container px-2 py-0.5 text-[10.5px]">Follows you</span>}
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => void flip(row)}
+                disabled={busy === row.username}
+                className={`key-btn shrink-0 px-4 text-[12.5px] disabled:opacity-50 ${
+                  row.following ? 'bg-on-surface-variant text-white' : 'bg-primary text-on-primary'
+                }`}
+              >
+                {row.following ? 'Following' : row.followsYou ? 'Follow back' : 'Follow'}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </main>
+      <BottomNav />
+    </div>
+  );
+}

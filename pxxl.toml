@@ -1,0 +1,46 @@
+# Pxxl.app blueprint for the Renance study API (the Render alternative).
+#
+# Pxxl -> Deploy -> connect Resolutefemi/Renance and it reads this file
+# for the service table. Secrets NEVER go here: paste them into
+# Pxxl -> project -> Secrets (env vars), one per line - the full
+# checklist is every key=value in the Render dashboard
+# (Render.com -> renance-api -> Environment), 1:1, plus the four
+# R2_* keys that only live there.
+#
+# TWO deployment paths, pick one in the Pxxl dashboard:
+#
+#   1. NATIVE GO (this file's service table):
+#      base dir apps/study-api, Go runtime 1.27 (matches go.mod),
+#      port 3990. The 189 MB data/ content library sits at the REPO
+#      ROOT and the server finds it by walking up from the working
+#      directory (cbtdata.FindDataDir), so the full checkout must be
+#      present at runtime. If Pxxl ships only the base directory to
+#      the runtime, use path 2.
+#
+#   2. DOCKER (closest match to Render, recommended):
+#      project type Docker, Dockerfile path
+#        apps/study-api/Dockerfile
+#      build context = REPO ROOT (the Dockerfile bakes data/ into
+#      the image and starts on ENV PORT=10000) -> Pxxl port field
+#      10000. Skips framework detection entirely.
+#
+# Health check path: /healthz (DB-free on purpose). Any keep-warm cron
+# or uptime monitor must point at /healthz or /app-version ONLY -
+# NEVER /readyz or any Postgres-touching route (Neon CU budget).
+#
+# WEB_ORIGIN / SITE_URL stay unchanged: the frontend is still Vercel,
+# Pxxl only replaces the API host. CORS cares about browser origins,
+# not the API's own domain.
+#
+# One caveat Pxxl does not document: request timeouts for long AI
+# lesson generation (30-60s+). Verify a full generation round-trips
+# before pointing real traffic here.
+
+version = 1
+
+[services.api]
+baseDirectory = "apps/study-api"
+installCommand = "go mod download"
+buildCommand = "CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags='-s -w' -o study-api ./cmd/api"
+startCommand = "./study-api"
+port = 3990

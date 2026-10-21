@@ -1,0 +1,138 @@
+package httpapi
+
+// Composite papers: the "Standard UTME Mock", "Custom Practice" and
+// carved practice-subset backends.
+//
+// The client POSTs /attempts with a canonical composed code (papercode.go
+// grammar) - jamb-mock-…, jamb-custom-… or jamb-pick-…. The server parses
+// the spec, composes that paper on demand - deterministically from the
+// subject banks or the base pack - registers it in the library, assembles
+// its sealed answer key from the source keys, seeds the key store (so
+// grading survives a restart) and hands the ordinary attempt pipeline a
+// bundle like any static pack. No new storage, no migration, no doctrine
+// change: the composite never enters the manifest and never carries
+// answers.
+
+import (
+        "context"
+        "errors"
+        "net/http"
+        "time"
+
+        "renance.dev/study-api/internal/cbtdata"
+        "renance.dev/study-api/internal/store"
+)
+
+// errUnknownPack marks every "this code resolves to nothing servable"
+// outcome: a genuinely unknown code, a bad param parse, or a content
+// defect (missing bank/keys). Compose errors that deserve their own
+// student-facing message (ErrNoQuestionsForYear) ride through as-is.
+var errUnknownPack = errors.New("httpapi: no such study pack")
+
+// ensurePaper resolves any pack code to a servable bundle, composing and
+// registering mock/custom/pick papers on first use (double-checked under
+// the lock so concurrent first requests compose exactly once).
+func (s *Server) ensurePaper(ctx context.Context, code string) (*cbtdata.Bundle, error) {
+        if b, ok := s.lib.Bundle(code); ok {
+                return b, nil
+        }
+        if !cbtdata.IsComposedPaperCode(code) {
+                return nil, errUnknownPack
+        }
+        s.mockMu.Lock()
+        defer s.mockMu.Unlock()
+        if b, ok := s.lib.Bundle(code); ok { // a raced winner already composed it
+                return b, nil
+        }
+        spec, err := s.lib.ParsePaper(code)
+        if err != nil {
+                s.log.Error("paper code parse", "code", code, "err", err)
+                return nil, errUnknownPack
+        }
+
+        var paper *cbtdata.Bundle
+        var keys map[string]store.KeyEntry
+        switch spec.Family {
+        case cbtdata.PaperFamilyMock, cbtdata.PaperFamilyCustom:
+                // The custom family is body-aware: waec-custom-/neco-custom-
+                // papers pull that body's banks; mock and the original
+                // jamb-custom- stay on the JAMB shelves.
+                bankPrefix := spec.BodyName()
+                banks := map[string]*cbtdata.Bundle{}
+                for _, slug := range spec.Subjects {
+                        bank, ok := s.lib.Bundle(bankPrefix + "-" + slug + "-bank")
+                        if !ok {
+                                return nil, errUnknownPack
+                        }
+                        banks[slug] = bank
+                }
+                paper, err = cbtdata.ComposePaper(spec, banks)
+                if err != nil {
+                        s.log.Error("paper compose", "code", code, "err", err)
+                        return nil, err
+                }
+                // The sealed key is the union of the banks' keys. A missing bank
+                // key is a content defect - refuse the paper loudly rather than
+                // strand an ungradable attempt.
+                keys = map[string]store.KeyEntry{}
+                for _, bank := range banks {
+                        bankKeys, ok := s.keys.Get(bank.Code)
+                        if !ok {
+                                s.log.Error("composed paper: bank key missing", "code", code, "bank", bank.Code)
+                                return nil, errUnknownPack
+                        }
+                        for _, q := range bank.Questions {
+                                if k, ok := bankKeys[q.ID]; ok {
+                                        keys[q.ID] = k
+                                }
+                        }
+                }
+        case cbtdata.PaperFamilyPick:
+                base, ok := s.lib.Bundle(spec.Base)
+                if !ok {
+                        return nil, errUnknownPack
+                }
+                paper, err = cbtdata.ComposePickPaper(spec, base)
+                if err != nil {
+                        s.log.Error("pick compose", "code", code, "err", err)
+                        return nil, err
+                }
+                baseKeys, ok := s.keys.Get(base.Code)
+                if !ok {
+                        s.log.Error("pick paper: base key missing", "code", code, "base", base.Code)
+                        return nil, errUnknownPack
+                }
+                keys = map[string]store.KeyEntry{}
+                for _, q := range base.Questions {
+                        if k, ok := baseKeys[q.ID]; ok {
+                                keys[q.ID] = k
+                        }
+                }
+        }
+
+        // Publish the key in-memory only (database persistence removed -
+        // composed-paper keys are rebuilt from the content library on
+        // restart if a re-composition is needed).
+        if putter, ok := s.keys.(interface {
+                Put(code string, keys map[string]store.KeyEntry)
+        }); ok {
+                putter.Put(code, keys)
+        } else {
+                s.log.Error("composed paper: key source cannot grow", "code", code)
+                return nil, errUnknownPack
+        }
+        s.lib.RegisterPaper(paper)
+        s.log.Info("composed paper ready", "code", code,
+                "questions", paper.QuestionCount, "family", spec.Family)
+        return paper, nil
+}
+
+// mockComposeTimeout bounds the composition+key-seed DB work.
+const mockComposeTimeout = 15 * time.Second
+
+// ensurePaperRequest wraps ensurePaper with a request-scoped timeout.
+func (s *Server) ensurePaperRequest(r *http.Request, code string) (*cbtdata.Bundle, error) {
+        ctx, cancel := context.WithTimeout(r.Context(), mockComposeTimeout)
+        defer cancel()
+        return s.ensurePaper(ctx, code)
+}

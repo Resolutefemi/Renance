@@ -1,0 +1,1376 @@
+{
+ "code": "cissp-asset-security-bank",
+ "title": "CISSP -  Asset Security",
+ "version": 1,
+ "questionCount": 105,
+ "totalMarks": 105,
+ "questions": [
+  {
+   "id": "cissp-asset-security-bank-0001",
+   "type": "mcq",
+   "stem": "Angela wants to implement data security controls that are part of the NIST 800-53 Security and Privacy controls. As part of the process, she works to determine which controls are appropriate to her organization's business processes and data handling needs. What term BEST describes the action that she has performed?",
+   "marks": 1,
+   "options": {
+    "A": "Scoping",
+    "B": "Bounds checking",
+    "C": "Data stewardship",
+    "D": "Tailoring"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0002",
+   "type": "mcq",
+   "stem": "Control Objectives for Information and Related Technology (COBIT) is a framework for information technology (IT) management and governance. Which data management role is MOST likely to select and apply COBIT to balance the need for security controls against business requirements?",
+   "marks": 1,
+   "options": {
+    "A": "Business owners",
+    "B": "Data processors",
+    "C": "Data owners",
+    "D": "Data stewards"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0003",
+   "type": "mcq",
+   "stem": "Nadia's company is operating a hybrid cloud environment with some on-site systems and some cloud-based systems. She has satisfactory monitoring on-site but needs to apply security policies to both the activities her users engage in and to report on exceptions with her growing number of cloud services. What type of tool is BEST suited to this purpose?",
+   "marks": 1,
+   "options": {
+    "A": "A NGFW",
+    "B": "A CASB",
+    "C": "An IDS",
+    "D": "A SOAR"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0004",
+   "type": "mcq",
+   "stem": "When media is labeled based on the classification of the data it contains, what rule is TYPICALLY applied regarding labels?",
+   "marks": 1,
+   "options": {
+    "A": "The data is labeled based on its integrity requirements.",
+    "B": "The media is labeled based on the highest classification level of the data it contains.",
+    "C": "The media is labeled with all levels of classification of the data it contains.",
+    "D": "The media is labeled with the lowest level of classification of the data it contains."
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0005",
+   "type": "mcq",
+   "stem": "Which one of the following administrative processes assists organizations in assigning appropriate levels of security control to sensitive information?",
+   "marks": 1,
+   "options": {
+    "A": "Data classification",
+    "B": "Remanence",
+    "C": "Transmitting data",
+    "D": "Clearing"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0006",
+   "type": "mcq",
+   "stem": "How can a data retention policy help to reduce liabilities?",
+   "marks": 1,
+   "options": {
+    "A": "By ensuring that unneeded data isn't retained",
+    "B": "By ensuring that incriminating data is destroyed",
+    "C": "By ensuring that data is securely wiped so it cannot be restored for legal discovery",
+    "D": "By reducing the cost of data storage required by law"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0007",
+   "type": "mcq",
+   "stem": "Staff in an information technology (IT) department who are delegated responsibility for day-to-day tasks hold what data role?",
+   "marks": 1,
+   "options": {
+    "A": "Business owner",
+    "B": "User",
+    "C": "Data processor",
+    "D": "Custodian"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0008",
+   "type": "mcq",
+   "stem": "Helen's company uses a data life cycle that flows in the following sequence: [?] → Data Analysis → Data Usage → Data Retention → Data Destruction. What stage should come FIRST in the company's data life cycle (replacing the [?])?",
+   "marks": 1,
+   "options": {
+    "A": "Data policy creation",
+    "B": "Data labeling",
+    "C": "Data collection",
+    "D": "Data analysis"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0009",
+   "type": "mcq",
+   "stem": "Ben has been tasked with identifying security controls for systems covered by his organization's information classification system. Why might Ben choose to use a security baseline?",
+   "marks": 1,
+   "options": {
+    "A": "It applies in all circumstances, allowing consistent security controls.",
+    "B": "They are approved by industry standards bodies, preventing liability.",
+    "C": "They provide a good starting point that can be tailored to organizational needs.",
+    "D": "They ensure that systems are always in a secure state."
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0010",
+   "type": "mcq",
+   "stem": "Megan wants to prepare media to allow for its reuse in an environment operating at the same sensitivity level. Which of the following is the BEST option to meet her needs?",
+   "marks": 1,
+   "options": {
+    "A": "Clearing",
+    "B": "Erasing",
+    "C": "Purging",
+    "D": "Sanitization"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0011",
+   "type": "mcq",
+   "stem": "Mikayla wants to identify data that should be classified that already exists in her environment. What type of tool is BEST suited to identifying data like Social Security numbers, credit card numbers, and similar well-understood data formats?",
+   "marks": 1,
+   "options": {
+    "A": "Manual searching",
+    "B": "A sensitive data scanning tool",
+    "C": "An asset metadata search tool",
+    "D": "A SOAR"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0012",
+   "type": "mcq",
+   "stem": "What issue is common to spare sectors and bad sectors on hard drives as well as overprovisioned space on modern SSDs?",
+   "marks": 1,
+   "options": {
+    "A": "They can be used to hide data.",
+    "B": "They can only be degaussed.",
+    "C": "They are not addressable, resulting in data remanence.",
+    "D": "They may not be cleared, resulting in data remanence."
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0013",
+   "type": "mcq",
+   "stem": "Naomi knows that commercial data is typically classified based on different criteria than government data. Which of the following is NOT a common criterion for commercial data classification?",
+   "marks": 1,
+   "options": {
+    "A": "Useful lifespan",
+    "B": "Data value",
+    "C": "Impact to national security",
+    "D": "Regulatory or legal requirements"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0014",
+   "type": "mcq",
+   "stem": "SCENARIO: An organization regularly handles three types of data: (1) information shared with customers, stored on web servers; (2) internal business data stored on internal file servers and workstations; and (3) trade secret information stored on internal file servers and workstations. The organization uses memory-resident databases to improve system performance for customer and internal business data. What term BEST describes data that is resident in system memory?",
+   "marks": 1,
+   "options": {
+    "A": "Data at rest",
+    "B": "Buffered data",
+    "C": "Data in use",
+    "D": "Data in motion"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0015",
+   "type": "mcq",
+   "stem": "SCENARIO: An organization stores trade secret information on internal file servers alongside customer and internal business data. If the trade secret data was released or stolen, what technique could you use to mark the information so you can identify it?",
+   "marks": 1,
+   "options": {
+    "A": "Classification",
+    "B": "Symmetric encryption",
+    "C": "Watermarks",
+    "D": "Metadata"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0016",
+   "type": "mcq",
+   "stem": "SCENARIO: An organization stores proprietary data on internal file servers and uses web servers for customer data. What type of encryption is BEST suited for use on the file servers for the proprietary data, and how might you secure the data when it is in motion?",
+   "marks": 1,
+   "options": {
+    "A": "TLS at rest and AES in motion",
+    "B": "AES at rest and TLS in motion",
+    "C": "VPN at rest and TLS in motion",
+    "D": "DES at rest and AES in motion"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0017",
+   "type": "mcq",
+   "stem": "What does labeling data allow a DLP system to do?",
+   "marks": 1,
+   "options": {
+    "A": "The DLP system can detect labels and apply appropriate protections based on rules.",
+    "B": "The DLP system can adjust labels based on changes in the classification scheme.",
+    "C": "The DLP system can modify labels to permit requested actions.",
+    "D": "The DLP system can delete unlabeled data."
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0018",
+   "type": "mcq",
+   "stem": "Why is it cost effective to purchase high-quality media to contain sensitive data?",
+   "marks": 1,
+   "options": {
+    "A": "Expensive media is less likely to fail.",
+    "B": "The value of the data often far exceeds the cost of the media.",
+    "C": "Expensive media is easier to encrypt.",
+    "D": "More expensive media typically improves data integrity."
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0019",
+   "type": "mcq",
+   "stem": "Chris is responsible for workstations used to handle both proprietary information and highly sensitive trade secrets. Which option BEST describes what should happen at the end of their life (EOL) for the workstations he is responsible for?",
+   "marks": 1,
+   "options": {
+    "A": "Erasing",
+    "B": "Clearing",
+    "C": "Sanitization",
+    "D": "Destruction"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0020",
+   "type": "mcq",
+   "stem": "Fred wants to classify his organization's data using common labels: private, sensitive, public, and proprietary. Which of the following should he apply to his HIGHEST classification level based on common industry practices?",
+   "marks": 1,
+   "options": {
+    "A": "Private",
+    "B": "Sensitive",
+    "C": "Public",
+    "D": "Proprietary"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0021",
+   "type": "mcq",
+   "stem": "What scenario describes data at rest?",
+   "marks": 1,
+   "options": {
+    "A": "Data in an IPsec tunnel",
+    "B": "Data in an e-commerce transaction",
+    "C": "Data stored on a hard drive",
+    "D": "Data stored in RAM"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0022",
+   "type": "mcq",
+   "stem": "If you are selecting a security standard for a Windows 11 system that processes credit cards, what security standard is your BEST choice?",
+   "marks": 1,
+   "options": {
+    "A": "Microsoft's Windows 11 security baseline",
+    "B": "The CIS Windows 11 baseline",
+    "C": "PCI DSS",
+    "D": "The NSA Windows 11 Secure Host Baseline"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0023",
+   "type": "mcq",
+   "stem": "SCENARIO: Your organization has decided to use the CIS (Center for Internet Security) benchmarks for its systems. The CIS works with subject-matter experts to create security control lists for operating systems, mobile devices, server software, and network devices. The CIS benchmarks are an example of what practice?",
+   "marks": 1,
+   "options": {
+    "A": "Conducting a risk assessment",
+    "B": "Implementing data labeling",
+    "C": "Implementing proper system ownership",
+    "D": "Using security baselines"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0024",
+   "type": "mcq",
+   "stem": "SCENARIO: Your organization has decided to use the CIS benchmarks for its systems. Adjusting the CIS benchmarks to your organization's mission and your specific IT systems would involve what two processes?",
+   "marks": 1,
+   "options": {
+    "A": "Scoping and selection",
+    "B": "Scoping and tailoring",
+    "C": "Baselining and tailoring",
+    "D": "Tailoring and selection"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0025",
+   "type": "mcq",
+   "stem": "SCENARIO: Your organization has decided to use the CIS benchmarks for its systems. How should you determine which controls from the baseline should be applied to a given system or software package?",
+   "marks": 1,
+   "options": {
+    "A": "Consult the custodians of the data.",
+    "B": "Select based on the data classification of the data it stores or handles.",
+    "C": "Apply the same controls to all systems.",
+    "D": "Consult the business owner of the process the system or data supports."
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0026",
+   "type": "mcq",
+   "stem": "The company that Henry works for operates in the EU and collects data about their customers. They send that data to a third party to analyze and provide reports to help the company make better business decisions. What term BEST describes the third-party analysis company?",
+   "marks": 1,
+   "options": {
+    "A": "The data controller",
+    "B": "The data owner",
+    "C": "The data subject",
+    "D": "The data processor"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0027",
+   "type": "mcq",
+   "stem": "The government defense contractor that Selah works for has shut down a major research project and is planning on reusing hundreds of thousands of dollars of systems and data storage tapes for other purposes. Selah finds that the company manual says the tapes should be destroyed rather than reused. Why isn't Selah allowed to degauss and then reuse the tapes to save her employer money?",
+   "marks": 1,
+   "options": {
+    "A": "Data permanence may be an issue.",
+    "B": "Data remanence is a concern.",
+    "C": "The tapes may suffer from bitrot.",
+    "D": "Data from tapes can't be erased by degaussing."
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0028",
+   "type": "mcq",
+   "stem": "Information maintained about an individual that can be used to distinguish or trace their identity is known as what type of information?",
+   "marks": 1,
+   "options": {
+    "A": "Personally identifiable information (PII)",
+    "B": "Personal health information (PHI)",
+    "C": "Social Security number (SSN)",
+    "D": "Secure identity information (SII)"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0029",
+   "type": "mcq",
+   "stem": "Which of the following information security risks to data at rest would result in the greatest reputational impact on an organization?",
+   "marks": 1,
+   "options": {
+    "A": "Improper classification",
+    "B": "Data breach",
+    "C": "Decryption",
+    "D": "An intentional insider threat"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0030",
+   "type": "mcq",
+   "stem": "Full disk encryption like Microsoft's BitLocker is used to protect data in what state?",
+   "marks": 1,
+   "options": {
+    "A": "Data in transit",
+    "B": "Data at rest",
+    "C": "Unlabeled data",
+    "D": "Labeled data"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0031",
+   "type": "mcq",
+   "stem": "The company that Katie works for provides its staff with mobile phones for employee use, with new phones issued every two years. The phones are still usable and receiving operating system updates. What scenario BEST describes this type of practice?",
+   "marks": 1,
+   "options": {
+    "A": "EOL",
+    "B": "Planned obsolescence",
+    "C": "EOS",
+    "D": "Device risk management"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0032",
+   "type": "mcq",
+   "stem": "What is the PRIMARY purpose of data classification?",
+   "marks": 1,
+   "options": {
+    "A": "It quantifies the cost of a data breach.",
+    "B": "It prioritizes IT expenditures.",
+    "C": "It allows compliance with breach notification laws.",
+    "D": "It identifies the value of the data to the organization."
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0033",
+   "type": "mcq",
+   "stem": "Fred's organization allows downgrading of systems for reuse after projects have been finished and systems have been purged. What concern should Fred raise about the reuse of systems from his Top Secret classified project for a future project classified as Secret?",
+   "marks": 1,
+   "options": {
+    "A": "The Top Secret data may be commingled with the Secret data, resulting in a need to relabel the system.",
+    "B": "The cost of the sanitization process may exceed the cost of new equipment.",
+    "C": "The data may be exposed as part of the sanitization process.",
+    "D": "The organization's DLP system may flag the new system due to the difference in data labels."
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0034",
+   "type": "mcq",
+   "stem": "Which of the following concerns should NOT be part of the decision when classifying data?",
+   "marks": 1,
+   "options": {
+    "A": "The cost to classify the data",
+    "B": "The sensitivity of the data",
+    "C": "The amount of harm that exposure of the data could cause",
+    "D": "The value of the data to the organization"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0035",
+   "type": "mcq",
+   "stem": "Which of the following is the LEAST effective method of removing data from media?",
+   "marks": 1,
+   "options": {
+    "A": "Degaussing",
+    "B": "Purging",
+    "C": "Erasing",
+    "D": "Clearing"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0036",
+   "type": "mcq",
+   "stem": "SCENARIO: Amanda's healthcare company classifies HIPAA data as Confidential with a requirement to encrypt at rest and in transit. Files may be sent only in encrypted form with passwords transferred under separate cover. What encryption technology would be appropriate for HIPAA documents in transit?",
+   "marks": 1,
+   "options": {
+    "A": "BitLocker",
+    "B": "DES",
+    "C": "TLS",
+    "D": "SSL"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0037",
+   "type": "mcq",
+   "stem": "SCENARIO: Amanda's healthcare company classifies data into Confidential (HIPAA), Private (PII/PHI), Sensitive (business confidential), and Public. Amanda's employer asks her to classify patient data that is NOT medical data but includes data such as phone numbers and addresses. The data owner believes that exposure could cause damage (but not exceptional damage) to the organization. How should Amanda classify the data?",
+   "marks": 1,
+   "options": {
+    "A": "Public",
+    "B": "Sensitive",
+    "C": "Private",
+    "D": "Confidential"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0038",
+   "type": "mcq",
+   "stem": "SCENARIO: Amanda's healthcare company classifies HIPAA data as Confidential and needs to prevent it from being emailed out of the organization. What technology could Amanda's employer implement to help prevent confidential data from being emailed out?",
+   "marks": 1,
+   "options": {
+    "A": "DLP",
+    "B": "IDS",
+    "C": "A firewall",
+    "D": "UDP"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0039",
+   "type": "mcq",
+   "stem": "Jacob's organization uses the U.S. government's data classification system: Top Secret, Secret, Confidential, and Unclassified (most to least sensitive). Jacob encounters a system that contains Secret, Confidential, and Top Secret data. How should it be classified?",
+   "marks": 1,
+   "options": {
+    "A": "Top Secret",
+    "B": "Confidential",
+    "C": "Secret",
+    "D": "Mixed classification"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0040",
+   "type": "mcq",
+   "stem": "Elle is planning her organization's asset retention efforts and wants to establish when the company will remove assets from use. Which of the following is TYPICALLY the LAST event in a manufacturer or software provider's life cycle?",
+   "marks": 1,
+   "options": {
+    "A": "End of life",
+    "B": "End of support",
+    "C": "End of sales",
+    "D": "General availability"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0041",
+   "type": "mcq",
+   "stem": "Alice has been asked to ensure that her organization's controls assessment procedures match the specific systems that the company uses. What activity BEST matches this task?",
+   "marks": 1,
+   "options": {
+    "A": "Asset management",
+    "B": "Compliance",
+    "C": "Scoping",
+    "D": "Tailoring"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0042",
+   "type": "mcq",
+   "stem": "Chris is responsible for his organization's security standards and has guided the selection and implementation of a security baseline for Windows PCs. How can Chris MOST effectively make sure that the workstations he is responsible for are being checked for compliance and that settings are being applied as necessary?",
+   "marks": 1,
+   "options": {
+    "A": "Assign users to spot-check baseline compliance.",
+    "B": "Use Microsoft Group Policy.",
+    "C": "Create start-up scripts to apply policy at system start.",
+    "D": "Periodically review the baselines with the data owner and system owners."
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0043",
+   "type": "mcq",
+   "stem": "Frank is reviewing his company's data life cycle and wants to place appropriate controls around the data collection phase. Which of the following ensures that data subjects agree to the processing of their data?",
+   "marks": 1,
+   "options": {
+    "A": "Retention",
+    "B": "Consent",
+    "C": "Certification",
+    "D": "Remanence"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0044",
+   "type": "mcq",
+   "stem": "As a DBA, Amy's data role in her organization includes technical implementations of the data policies and standards, as well as managing the data structures that the data is stored in. What data role BEST fits what Amy does?",
+   "marks": 1,
+   "options": {
+    "A": "Data custodian",
+    "B": "Data owner",
+    "C": "Data processor",
+    "D": "Data user"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0045",
+   "type": "mcq",
+   "stem": "The company Jim works for suffered from a major data breach and now wants to ensure that it knows where data is located and if it is being transferred, copied to a thumb drive, or in a network file share where it should not be. Which solution is BEST suited to tagging, monitoring, and limiting where files are transferred to?",
+   "marks": 1,
+   "options": {
+    "A": "DRM",
+    "B": "DLP",
+    "C": "A network IPS",
+    "D": "Antivirus"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0046",
+   "type": "mcq",
+   "stem": "What security measure can provide an additional security control in the event that backup tapes are stolen or lost?",
+   "marks": 1,
+   "options": {
+    "A": "Keep multiple copies of the tapes.",
+    "B": "Replace tape media with hard drives.",
+    "C": "Use appropriate security labels.",
+    "D": "Use AES-256 encryption."
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0047",
+   "type": "mcq",
+   "stem": "Joe works at a major pharmaceutical research and development company required to comply with the FDA's Code of Federal Regulations Title 21, which requires retaining records with electronic signatures. Why would a signature be part of a retention requirement?",
+   "marks": 1,
+   "options": {
+    "A": "It ensures that someone has reviewed the data.",
+    "B": "It provides confidentiality.",
+    "C": "It ensures that the data has been changed.",
+    "D": "It validates who approved the data."
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0048",
+   "type": "mcq",
+   "stem": "Susan wants to manage her data's life cycle based on retention rules. What technique can she use to ensure that data that has reached the end of its life cycle can be identified and disposed of based on her organization's disposal processes?",
+   "marks": 1,
+   "options": {
+    "A": "Rotation",
+    "B": "DRM",
+    "C": "DLP",
+    "D": "Tagging"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0049",
+   "type": "mcq",
+   "stem": "Ben has been asked to scrub data to eliminate any information that is no longer needed by his organization. What phase of the data life cycle is Ben MOST likely operating in?",
+   "marks": 1,
+   "options": {
+    "A": "Data retention",
+    "B": "Data maintenance",
+    "C": "Data remanence",
+    "D": "Data collection"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0050",
+   "type": "mcq",
+   "stem": "Steve wants to ensure that assets in his organization are properly secured. What should he do to make sure security practices match the data security requirements for each device in his organization?",
+   "marks": 1,
+   "options": {
+    "A": "Sanitization",
+    "B": "Asset tagging",
+    "C": "Tailoring",
+    "D": "Encryption"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0051",
+   "type": "mcq",
+   "stem": "Alex works for a government agency required to meet U.S. federal government requirements for data security. Alex has been tasked with making sure data is identifiable by its classification level when it is created, to help with data asset inventory processes. What should Alex do to the data?",
+   "marks": 1,
+   "options": {
+    "A": "Classify the data.",
+    "B": "Encrypt the data.",
+    "C": "Label the data.",
+    "D": "Apply DRM to the data."
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0052",
+   "type": "mcq",
+   "stem": "Ben is following the NIST SP 800-88 guidelines for sanitization and disposition. He is handling information his organization classified as sensitive (a moderate security categorization). The media is going to be sold as surplus, meaning it will leave organizational control. Per the NIST SP 800-88 flowchart for moderate security categorization where media is being reused and leaving organizational control, what process does Ben need to follow?",
+   "marks": 1,
+   "options": {
+    "A": "Destroy, validate, document",
+    "B": "Clear, purge, document",
+    "C": "Purge, document, validate",
+    "D": "Purge, validate, document"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0053",
+   "type": "mcq",
+   "stem": "What methods are often used to protect data in transit?",
+   "marks": 1,
+   "options": {
+    "A": "Telnet, ISDN, UDP",
+    "B": "BitLocker, FileVault",
+    "C": "AES, Serpent, IDEA",
+    "D": "TLS, VPN, IPsec"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0054",
+   "type": "mcq",
+   "stem": "Which one of the following data roles bears ultimate organizational responsibility for data?",
+   "marks": 1,
+   "options": {
+    "A": "System owners",
+    "B": "Business owners",
+    "C": "Data owners",
+    "D": "Mission owners"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0055",
+   "type": "mcq",
+   "stem": "Shandra wants to secure an encryption key. Which location would be the MOST difficult to protect if the key was kept and used in that location?",
+   "marks": 1,
+   "options": {
+    "A": "On a local network",
+    "B": "On disk",
+    "C": "In memory",
+    "D": "On a public network"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0056",
+   "type": "mcq",
+   "stem": "SCENARIO: Chris's organization uses the following eight-step classification process: (1) Criteria set for classifying data. (2) Data owners established for each data type. (3) Data is classified. (4) Required controls selected per classification. (5) Baseline security standards selected. (6) Controls scoped and tailored. (7) Controls applied and enforced. (8) Access granted and managed. If Chris is one of the data owners, what steps is he MOST likely directly responsible for?",
+   "marks": 1,
+   "options": {
+    "A": "He is responsible for steps 3, 4, and 5.",
+    "B": "He is responsible for steps 1, 2, and 3.",
+    "C": "He is responsible for steps 5, 6, and 7.",
+    "D": "All of the steps are his direct responsibility."
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0057",
+   "type": "mcq",
+   "stem": "SCENARIO: Chris's organization uses an eight-step classification process: (1) set criteria, (2) establish data owners, (3) classify data, (4) select required controls, (5) select baseline standards, (6) scope and tailor controls, (7) apply and enforce controls, (8) grant and manage access. Chris manages a team of system administrators. What data roles are they fulfilling if they conduct steps 6, 7, and 8?",
+   "marks": 1,
+   "options": {
+    "A": "They are system owners and administrators.",
+    "B": "They are administrators and custodians.",
+    "C": "They are data owners and administrators.",
+    "D": "They are custodians and users."
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0058",
+   "type": "mcq",
+   "stem": "SCENARIO: Chris's organization uses an eight-step classification process. If Chris's company operates in the European Union and has been contracted to handle data for a third party, what role is his company operating in when it uses this process to classify and handle that data?",
+   "marks": 1,
+   "options": {
+    "A": "Business owners",
+    "B": "Mission owners",
+    "C": "Data processors",
+    "D": "Data administrators"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0059",
+   "type": "mcq",
+   "stem": "SCENARIO: Eric has been put in charge of his organization's IT service management effort, which includes creating an inventory of both tangible and intangible assets. Eric needs to identify all of the active systems and devices on the network. Which of the following techniques will give him the MOST complete list of connected devices?",
+   "marks": 1,
+   "options": {
+    "A": "Query Active Directory for a list of all computer objects.",
+    "B": "Perform a port scan of all systems on the network.",
+    "C": "Ask all staff members to fill out a form listing all of their systems and devices.",
+    "D": "Use network logs to identify all connected devices and track them down from there."
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0060",
+   "type": "mcq",
+   "stem": "SCENARIO: Eric is building an IT asset inventory and knows it is accurate only at the moment it was completed. How can he BEST ensure that the inventory remains up-to-date?",
+   "marks": 1,
+   "options": {
+    "A": "Perform a point-in-time query of network-connected devices and update the list based on what is found.",
+    "B": "Ensure that procurement and acquisition processes add new devices to the inventory before they are deployed.",
+    "C": "Require every employee to provide an updated inventory of devices they are responsible for on a quarterly basis.",
+    "D": "Manually verify every device in service at each organizational location on a yearly basis."
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0061",
+   "type": "mcq",
+   "stem": "SCENARIO: Eric's organization has significant intellectual property assets, including designs and formulas. He needs to track and inventory those assets and manage data throughout his organization based on its classification or type. How can he MOST effectively ensure this?",
+   "marks": 1,
+   "options": {
+    "A": "Track file extensions for common data types.",
+    "B": "Ensure that data is collected in specific network share locations based on the data type and group that works with it.",
+    "C": "Use metadata tagging based on data type or security level.",
+    "D": "Automatically tag data by file extension type."
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0062",
+   "type": "mcq",
+   "stem": "SCENARIO: Eric has been tasked with identifying intangible assets and needs to provide his team with a list of assets they will be inventorying. Which of the following is NOT an example of an intangible asset?",
+   "marks": 1,
+   "options": {
+    "A": "Patents",
+    "B": "Databases",
+    "C": "Formulas",
+    "D": "Employees"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0063",
+   "type": "mcq",
+   "stem": "Which of the following is NOT a common requirement for the collection of data under data privacy laws and statutes?",
+   "marks": 1,
+   "options": {
+    "A": "Only data that is needed is collected.",
+    "B": "Data should be obtained lawfully and via fair methods.",
+    "C": "Data should be collected only with the consent of the individual whose data is being collected.",
+    "D": "Data should be collected from all individuals equally."
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0064",
+   "type": "mcq",
+   "stem": "Susan works in an organization that labels all removable media with the classification level of the data it contains, including public data. Why would Susan's employer label ALL media instead of labeling only the media that contains data that could cause harm if it was exposed?",
+   "marks": 1,
+   "options": {
+    "A": "It is cheaper to order all prelabeled media.",
+    "B": "It prevents sensitive media from not being marked by mistake.",
+    "C": "It prevents reuse of public media for sensitive data.",
+    "D": "Labeling all media is required by HIPAA."
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0065",
+   "type": "mcq",
+   "stem": "Data stored in RAM is BEST characterized as what type of data?",
+   "marks": 1,
+   "options": {
+    "A": "Data at rest",
+    "B": "Data in use",
+    "C": "Data in transit",
+    "D": "Data at large"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0066",
+   "type": "mcq",
+   "stem": "The NIST SP 800-88 sample Certificate of Sanitization includes sections for: Person Performing Sanitization, Media Information, Sanitization Details, Media Destination, Signature, and Validation. What issue is the Validation portion of the certificate intended to help prevent?",
+   "marks": 1,
+   "options": {
+    "A": "Destruction",
+    "B": "Reuse",
+    "C": "Data remanence",
+    "D": "Attribution"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0067",
+   "type": "mcq",
+   "stem": "Why is declassification rarely chosen as an option for media reuse?",
+   "marks": 1,
+   "options": {
+    "A": "Purging is sufficient for sensitive data.",
+    "B": "Sanitization is the preferred method of data removal.",
+    "C": "It is more expensive than new media and may still fail.",
+    "D": "Clearing is required first."
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0068",
+   "type": "mcq",
+   "stem": "Incineration, crushing, shredding, and disintegration all describe what stage in the life cycle of media?",
+   "marks": 1,
+   "options": {
+    "A": "Sanitization",
+    "B": "Degaussing",
+    "C": "Purging",
+    "D": "Destruction"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0069",
+   "type": "mcq",
+   "stem": "What term is used to describe information like prescriptions and X-rays?",
+   "marks": 1,
+   "options": {
+    "A": "PHI",
+    "B": "Proprietary data",
+    "C": "PID",
+    "D": "PII"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0070",
+   "type": "mcq",
+   "stem": "Why might an organization use unique screen backgrounds or designs on workstations that deal with data of different classification levels?",
+   "marks": 1,
+   "options": {
+    "A": "To indicate the software version in use",
+    "B": "To promote a corporate message",
+    "C": "To promote availability",
+    "D": "To indicate the classification level of the data or system"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0071",
+   "type": "mcq",
+   "stem": "Charles has been asked to downgrade the media used for storage of private data for his organization. What process should Charles follow?",
+   "marks": 1,
+   "options": {
+    "A": "Degauss the drives, and then relabel them with a lower classification level.",
+    "B": "Pulverize the drives, and then reclassify them based on the data they contain.",
+    "C": "Follow the organization's purging process, and then downgrade and replace labels.",
+    "D": "Relabel the media, and then follow the organization's purging process to ensure that the media matches the label."
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0072",
+   "type": "mcq",
+   "stem": "Which of the following tasks is NOT performed by a system owner per NIST SP 800-18?",
+   "marks": 1,
+   "options": {
+    "A": "Develops a system security plan",
+    "B": "Establishes rules for appropriate use and protection of data",
+    "C": "Identifies and implements security controls",
+    "D": "Ensures that system users receive appropriate security training"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0073",
+   "type": "mcq",
+   "stem": "NIST SP 800-60 provides a process to assess information systems with the following steps: (1) Identify Information Types, (2) Select Provisional Impact Levels, (3) Review Provisional Impact Levels, (4) Adjust/Finalize Information Impact Levels, (5) Assign System Security Category. Process outputs are Security Categorization and FIPS 200/SP 800-53 Security Control Selection. What process does this diagram show?",
+   "marks": 1,
+   "options": {
+    "A": "Selecting a standard and implementing it",
+    "B": "Categorizing and selecting controls",
+    "C": "Baselining and selecting controls",
+    "D": "Categorizing and sanitizing"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0074",
+   "type": "mcq",
+   "stem": "SCENARIO: A network diagram contains the following labeled components: User Workstation (A), network link B connecting A to the Internet, Internet (C), network link D connecting the Internet to Server (E), and direct local network link F between Workstation A and Server E. Which letters on this diagram are locations where you might find data at rest?",
+   "marks": 1,
+   "options": {
+    "A": "A, B, and C",
+    "B": "C and E",
+    "C": "A and E",
+    "D": "B, D, and F"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0075",
+   "type": "mcq",
+   "stem": "SCENARIO: A network diagram shows: User Workstation (A) connected via link B to the Internet (C), Internet (C) connected via link D to Server (E), and direct link F between A and E. What would be the BEST way to secure data at points B, D, and F?",
+   "marks": 1,
+   "options": {
+    "A": "AES-256",
+    "B": "SSL",
+    "C": "TLS",
+    "D": "3DES"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0076",
+   "type": "mcq",
+   "stem": "SCENARIO: A network diagram shows: User Workstation (A) connected via link B to Internet (C), Internet connected via link D to Server (E), and direct link F between A and E. What is the BEST way to secure files sent from workstation A via the Internet (C) to remote server E?",
+   "marks": 1,
+   "options": {
+    "A": "Use AES at rest at point A, and use TLS in transit via B and D.",
+    "B": "Encrypt the data files and send them.",
+    "C": "Use 3DES and TLS to provide double security.",
+    "D": "Use full-disk encryption at A and E, and use SSL at B and D."
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0077",
+   "type": "mcq",
+   "stem": "Susan needs to provide a set of minimum security requirements for email. What steps should she recommend for her organization to ensure that the email remains secure?",
+   "marks": 1,
+   "options": {
+    "A": "All email should be encrypted.",
+    "B": "All email should be encrypted and labeled.",
+    "C": "Sensitive email should be encrypted and labeled.",
+    "D": "Only highly sensitive email should be encrypted."
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0078",
+   "type": "mcq",
+   "stem": "How can a data retention policy reduce liabilities?",
+   "marks": 1,
+   "options": {
+    "A": "By reducing the amount of storage in use",
+    "B": "By limiting the number of data classifications",
+    "C": "By reducing the amount of data that may need to be produced for lawsuits",
+    "D": "By reducing the legal penalties for noncompliance"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0079",
+   "type": "mcq",
+   "stem": "What data role does a system that is used to process data have?",
+   "marks": 1,
+   "options": {
+    "A": "Mission owner",
+    "B": "Data owner",
+    "C": "Data processor",
+    "D": "Custodian"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0080",
+   "type": "mcq",
+   "stem": "Which one of the following is NOT considered PII under U.S. federal government regulations?",
+   "marks": 1,
+   "options": {
+    "A": "Name",
+    "B": "Social Security number",
+    "C": "Student ID number",
+    "D": "ZIP code"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0081",
+   "type": "mcq",
+   "stem": "What type of health information is the Health Insurance Portability and Accountability Act required to protect?",
+   "marks": 1,
+   "options": {
+    "A": "PII",
+    "B": "PHI",
+    "C": "SHI",
+    "D": "HPHI"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0082",
+   "type": "mcq",
+   "stem": "The system that Ian has built replaces data in a database field with a randomized string of characters that remains the same for each instance of that data. What technique has he used?",
+   "marks": 1,
+   "options": {
+    "A": "Data masking",
+    "B": "Tokenization",
+    "C": "Anonymization",
+    "D": "DES"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0083",
+   "type": "mcq",
+   "stem": "Juanita's company processes credit cards and wants to select appropriate data security standards. What data security standard is she MOST likely to need to use and comply with?",
+   "marks": 1,
+   "options": {
+    "A": "CC-Comply",
+    "B": "PCI-DSS",
+    "C": "GLBA",
+    "D": "GDPR"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0084",
+   "type": "mcq",
+   "stem": "What is the BEST method to sanitize a solid-state drive (SSD)?",
+   "marks": 1,
+   "options": {
+    "A": "Clearing",
+    "B": "Zero fill",
+    "C": "Disintegration",
+    "D": "Degaussing"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0085",
+   "type": "mcq",
+   "stem": "SCENARIO: The NIST five-step risk management lifecycle consists of: Step 1 (Categorize Systems and Data), Step 2 (Select Security Controls), Step 3 (Implement Security Controls), Step 4 (Assess Security Controls), Step 5 (Monitor Security). What data role will own responsibility for step 1; to whom will they delegate step 2; and what data role will be responsible for step 3?",
+   "marks": 1,
+   "options": {
+    "A": "Data owners, system owners, custodians",
+    "B": "Data processors, custodians, users",
+    "C": "Business owners, administrators, custodians",
+    "D": "System owners, business owners, administrators"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0086",
+   "type": "mcq",
+   "stem": "SCENARIO: The NIST five-step lifecycle is: Step 1 (Categorize Systems and Data), Step 2 (Select Security Controls), Step 3 (Implement), Step 4 (Assess), Step 5 (Monitor). If all systems being assessed handle credit card information and no other sensitive data, at what step would the PCI DSS FIRST play an important role?",
+   "marks": 1,
+   "options": {
+    "A": "Step 1",
+    "B": "Step 2",
+    "C": "Step 3",
+    "D": "Step 4"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0087",
+   "type": "mcq",
+   "stem": "SCENARIO: The NIST five-step lifecycle is: Step 1 (Categorize), Step 2 (Select Controls), Step 3 (Implement), Step 4 (Assess), Step 5 (Monitor Security). What data security role is PRIMARY responsible for step 5?",
+   "marks": 1,
+   "options": {
+    "A": "Data owners",
+    "B": "Data processors",
+    "C": "Custodians",
+    "D": "Users"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0088",
+   "type": "mcq",
+   "stem": "Susan's organization performs a secure disk wipe process on hard drives before they are sent to a third-party organization to be shredded. What issue is her organization attempting to avoid?",
+   "marks": 1,
+   "options": {
+    "A": "Data retention that is longer than defined in policy",
+    "B": "Mishandling of drives by the third party",
+    "C": "Classification mistakes",
+    "D": "Data permanence"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0089",
+   "type": "mcq",
+   "stem": "Mike wants to track hardware assets as devices and equipment are moved throughout his organization. What type of system can help do this without requiring staff to individually check bar codes or serial numbers?",
+   "marks": 1,
+   "options": {
+    "A": "A visual inventory",
+    "B": "Wi-Fi MAC address tracking",
+    "C": "RFID tags",
+    "D": "Steganography"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0090",
+   "type": "mcq",
+   "stem": "Retaining and maintaining information for as long as it is needed is known as what?",
+   "marks": 1,
+   "options": {
+    "A": "Data storage policy",
+    "B": "Data storage",
+    "C": "Asset maintenance",
+    "D": "Record retention"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0091",
+   "type": "mcq",
+   "stem": "Which of the following activities is NOT a consideration during data classification?",
+   "marks": 1,
+   "options": {
+    "A": "Who can access the data",
+    "B": "What the impact would be if the data was lost or breached",
+    "C": "How much the data cost to create",
+    "D": "What protection regulations may be required for the data"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0092",
+   "type": "mcq",
+   "stem": "What type of encryption is TYPICALLY used for data at rest?",
+   "marks": 1,
+   "options": {
+    "A": "Asymmetric encryption",
+    "B": "Symmetric encryption",
+    "C": "DES",
+    "D": "OTP"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-asset-security-bank-0093",
+   "type": "mcq",
+   "stem": "Which data role is tasked with applying rights that provide appropriate access to staff members?",
+   "marks": 1,
+   "options": {
+    "A": "Data processors",
+    "B": "Business owners",
+    "C": "Custodians",
+    "D": "Administrators"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0094",
+   "type": "mcq",
+   "stem": "What element of asset security is often determined by identifying an asset's owner?",
+   "marks": 1,
+   "options": {
+    "A": "It identifies the individual(s) responsible for protecting the asset.",
+    "B": "It provides a law enforcement contact in case of theft.",
+    "C": "It helps establish the value of the asset.",
+    "D": "It determines the security classification of the asset."
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0095",
+   "type": "mcq",
+   "stem": "Fred is preparing to send backup tapes off-site to a secure third-party storage facility. What steps should Fred take before sending the tapes to that facility?",
+   "marks": 1,
+   "options": {
+    "A": "Ensure that the tapes are handled the same way the original media would be handled based on their classification.",
+    "B": "Increase the classification level of the tapes because they are leaving the possession of the company.",
+    "C": "Purge the tapes to ensure that classified data is not lost.",
+    "D": "Decrypt the tapes in case they are lost in transit."
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0096",
+   "type": "mcq",
+   "stem": "Which of the following does NOT describe data in motion?",
+   "marks": 1,
+   "options": {
+    "A": "Data on a backup tape that is being shipped to a storage facility",
+    "B": "Data in a TCP packet",
+    "C": "Data in an e-commerce transaction",
+    "D": "Data in files being copied between locations"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0097",
+   "type": "mcq",
+   "stem": "A new law is passed that would result in significant financial harm to your company if the data that it covers was stolen or inadvertently released. What should your organization do about this?",
+   "marks": 1,
+   "options": {
+    "A": "Select a new security baseline.",
+    "B": "Relabel the data.",
+    "C": "Encrypt all of the data at rest and in transit.",
+    "D": "Review its data classifications and classify the data appropriately."
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0098",
+   "type": "mcq",
+   "stem": "Data owners, data controllers, data custodians, and data processors are all common data roles. Which of the following data roles is MOST commonly found as a THIRD-PARTY contracting relationship rather than inside a company?",
+   "marks": 1,
+   "options": {
+    "A": "Data owners",
+    "B": "Data controllers",
+    "C": "Data custodians",
+    "D": "Data processors"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0099",
+   "type": "mcq",
+   "stem": "What commercial data classification is MOST appropriate for data contained on corporate websites?",
+   "marks": 1,
+   "options": {
+    "A": "Private",
+    "B": "Sensitive",
+    "C": "Public",
+    "D": "Proprietary"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0100",
+   "type": "mcq",
+   "stem": "Which of the following CORRECTLY matches ALL of the listed data elements to their MOST SPECIFIC classification category? (Medical records; Trade secrets; Social Security numbers; Driver's license numbers)",
+   "marks": 1,
+   "options": {
+    "A": "PHI; Proprietary data; PII; PII",
+    "B": "PII; Proprietary data; PHI; PII",
+    "C": "PHI; PII; Proprietary data; PII",
+    "D": "PHI; Proprietary data; PHI; PHI"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0101",
+   "type": "mcq",
+   "stem": "Michelle wants to ensure that her organization's policies are enforced across all of the cloud services that it has adopted. What type of tool would be BEST suited to ensuring her organization's policies are enforced, regardless of the cloud service her users are accessing?",
+   "marks": 1,
+   "options": {
+    "A": "A SIEM",
+    "B": "A DLP",
+    "C": "A CASB",
+    "D": "A NGFW"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-asset-security-bank-0102",
+   "type": "mcq",
+   "stem": "Devices in Adam's organization are no longer receiving updates, and hardware support contracts cannot be extended. How should Adam describe the devices that are impacted by this?",
+   "marks": 1,
+   "options": {
+    "A": "End of support",
+    "B": "End of development",
+    "C": "End of life",
+    "D": "End of sales"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0103",
+   "type": "mcq",
+   "stem": "Gary is responsible for the procurement, management, and life cycle of network devices in his organization. What role BEST describes him?",
+   "marks": 1,
+   "options": {
+    "A": "Data owner",
+    "B": "Asset custodian",
+    "C": "Data custodian",
+    "D": "Asset owner"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-asset-security-bank-0104",
+   "type": "mcq",
+   "stem": "Jessica has adopted the CIS benchmark for Windows 11 workstations for her organization. She has also modified the settings called for in the benchmark to fit her organization's needs. What has she done?",
+   "marks": 1,
+   "options": {
+    "A": "Tailoring",
+    "B": "Scoping",
+    "C": "Editing",
+    "D": "Defining"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-asset-security-bank-0105",
+   "type": "mcq",
+   "stem": "Why is data location a significant concern for data owners, controllers, and custodians?",
+   "marks": 1,
+   "options": {
+    "A": "It prevents the data from being lost.",
+    "B": "Geographic location may impact compliance requirements.",
+    "C": "Geographic location may drive storage costs.",
+    "D": "It ensures that the proper data custodian works with it."
+   },
+   "answer": "B"
+  }
+ ],
+ "category": "CISSP",
+ "body": " Asset Security"
+}

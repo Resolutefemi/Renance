@@ -1,0 +1,4944 @@
+{
+ "code": "uni-uniosun-mth101-bank",
+ "title": "UNIOSUN MTH 101 | Course Question Bank",
+ "version": 1,
+ "questionCount": 374,
+ "totalMarks": 374,
+ "questions": [
+  {
+   "id": "uni-uniosun-mth101-bank-0001",
+   "type": "mcq",
+   "stem": "If A is a subset of a universal set U, the compliment of set A is given as:",
+   "options": {
+    "A": "U",
+    "B": "U - A",
+    "C": "U + B",
+    "D": "U - B"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0002",
+   "type": "mcq",
+   "stem": "The set statement (A \u222a B) \u2229 C = A \u222a (B \u2229)C is relevant to",
+   "options": {
+    "A": "Associative Law",
+    "B": "Cummulative lowa",
+    "C": "Distributibe Law",
+    "D": "Closure"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0003",
+   "type": "mcq",
+   "stem": "If U = (Integers < 20); D = {multiples of 4}; E = {multiples of 3}, the element of D/ \u2229 E are",
+   "options": {
+    "A": "{1,2}",
+    "B": "{3,6,9,15,18}",
+    "C": "{4,8,16,20}",
+    "D": "{3,6,9,.12,15,18}"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0004",
+   "type": "mcq",
+   "stem": "The notation A - B is equivalent to",
+   "options": {
+    "A": "A \u222a Bc",
+    "B": "A \u222a B",
+    "C": "A \u2229 B",
+    "D": "A \u2229 Bc"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0005",
+   "type": "mcq",
+   "stem": "The number of distinct elements found in a given set is called",
+   "options": {
+    "A": "Power set of a set",
+    "B": "Order of a set",
+    "C": "Power of a cardinality",
+    "D": "Cardinality of a power set"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0006",
+   "type": "mcq",
+   "stem": "If two sets A and B are subsets of a universal set, then the notation n(A \u222a B) is equal to",
+   "options": {
+    "A": "n(A) + n(B)",
+    "B": "n(A) + n( + n(A \u222a B) - n(A \u2229 B)",
+    "C": "- n(A \u222a B) n(A) + n(",
+    "D": "n(A) + n("
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0007",
+   "type": "mcq",
+   "stem": "How many study only zoology?",
+   "options": {
+    "A": "12",
+    "B": "10",
+    "C": "0",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0008",
+   "type": "mcq",
+   "stem": "How many study non of the three courses?",
+   "options": {
+    "A": "12",
+    "B": "10",
+    "C": "0",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0009",
+   "type": "mcq",
+   "stem": "How many study the Zoology and Botany?",
+   "options": {
+    "A": "12",
+    "B": "10",
+    "C": "0",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0010",
+   "type": "mcq",
+   "stem": "How many students swim only?",
+   "options": {
+    "A": "6",
+    "B": "2",
+    "C": "9",
+    "D": "20"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0011",
+   "type": "mcq",
+   "stem": "How many students play lawn tennis only?",
+   "options": {
+    "A": "6",
+    "B": "2",
+    "C": "9",
+    "D": "20"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0012",
+   "type": "mcq",
+   "stem": "How many students are in the group?",
+   "options": {
+    "A": "6",
+    "B": "2",
+    "C": "9",
+    "D": "20"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0013",
+   "type": "mcq",
+   "stem": "In a group of 40students, 22 study Maths, 18 study physics, 14 study statistics, 9 study both Maths and Physics, 7 study both Maths and Statistics, 5 study both Physics and Statistics and 2 study all the subjects. How many study none of the subjects?",
+   "options": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0014",
+   "type": "mcq",
+   "stem": "Find the square root of",
+   "options": {
+    "A": "0.8424",
+    "B": "1.8424",
+    "C": "1.8244",
+    "D": "0.8244"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0015",
+   "type": "mcq",
+   "stem": "Find the roots of the equation: x3 + 5x2 - 2x - 24",
+   "options": {
+    "A": "-4,3,2",
+    "B": "-4,-3,-2",
+    "C": "-4,-3,2",
+    "D": "4,3,-2"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0016",
+   "type": "mcq",
+   "stem": "The value of k in",
+   "options": {
+    "A": "9",
+    "B": "10",
+    "C": "11",
+    "D": "12"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0017",
+   "type": "mcq",
+   "stem": "Solve for x in the equation 163x = 1 (32)x-1 4",
+   "options": {
+    "A": "1",
+    "B": "2",
+    "C": "-2",
+    "D": "-1"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0018",
+   "type": "mcq",
+   "stem": "Simplify (216)-1\u20443 \u00d7 (0.16)-1\u20442",
+   "options": {
+    "A": "12/17",
+    "B": "5/13",
+    "C": "12/15",
+    "D": "5/12"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0019",
+   "type": "mcq",
+   "stem": "OBJECTIVE CBT QUESTIONS ON SET THEORY (MTH 101) BY OPRALD TUTORIAL CENTRE 08132588623 In a survey of 60 students, 60 study botany, 50 zoology and 48 biology. If 38 students study botany, zoology and biology, Use the information above to answer questions 8 & 9 In a particular group of students during a school\u2019s sports competition, 15 play lawn tennis, 11 swim, 9 play lawn tennis and swim and 3 none of the sport activities is 27. Given that y = 3x, and 3x-y =",
+   "options": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0020",
+   "type": "mcq",
+   "stem": "If P = {prime factors of 84} and Q = {prime factors of 315}, the elements of P U Q & P \u2229 Q are respectively",
+   "options": {
+    "A": "{3,4,5,7,9 & {3,7}",
+    "B": "{3,4,5,7} & {5,7}",
+    "C": "{2,3,5,7} & {3,7}",
+    "D": "{2,3,5,7} & {2,7}"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0021",
+   "type": "mcq",
+   "stem": "In a class of 100 students, 40 students study botany, 32 study microbiology while 44 study zoology. The number of students that study botany and microbiology is 24, botany and zoology is 24, while 20 study microbiology and zoology. If 20 students study all the three subjects, how many study none of the three courses",
+   "options": {
+    "A": "32",
+    "B": "42",
+    "C": "68",
+    "D": "24"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0022",
+   "type": "mcq",
+   "stem": "The word \u201cInfinity\u201d is",
+   "options": {
+    "A": "a real number",
+    "B": "a complex number",
+    "C": "an integer number",
+    "D": "constant"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0023",
+   "type": "mcq",
+   "stem": "The universal set U contains only elements of the sets A, B, C where A = {3,q,r}, B = {a,2,c} and C = {1,3,4,b}. what are the elements in [(A - B) \u2229 {C - (A \u2229 C)\u2019}]",
+   "options": {
+    "A": "{3,q,r}",
+    "B": "{q,r}",
+    "C": "{3}",
+    "D": "{3,1}"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0024",
+   "type": "mcq",
+   "stem": "In a certain class, 22 pupils take one or more of Chemistry, Economics and Government. 12 take Economics \u20ac, 8 take Government (G) and 7 take Chemistry (C). Nobody takes Economics and Chemistry and 4 pupils take Economics and Government. How many pupils take both Chemistry and Government?",
+   "options": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0025",
+   "type": "mcq",
+   "stem": "The universal set U has subsets M and N such that M \u2286 N. The set of M \u2229 (M \u2229 N)/ is",
+   "options": {
+    "A": "M",
+    "B": "\u2205",
+    "C": "N",
+    "D": "U"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0026",
+   "type": "mcq",
+   "stem": "Evaluate",
+   "options": {
+    "A": "2 x 101",
+    "B": "2 x 102",
+    "C": "1 x 102",
+    "D": "1 x 101"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0027",
+   "type": "mcq",
+   "stem": "In resolving x 1 1 x 2 1 into partial fraction, what are the values of the constants A, B & C? 1",
+   "options": {
+    "A": "-2, /2, /2,",
+    "B": "-1, 1/2, \u00bd",
+    "C": "-1, 1/2, -11/2",
+    "D": ""
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0028",
+   "type": "mcq",
+   "stem": "Find the range of the validity of x in the equation 2xx 1",
+   "options": {
+    "A": "x <1 or x > 0",
+    "B": "x < 0 or x < 1",
+    "C": "x < 0 or x < 1 1 A.",
+    "D": "x > 0 or x > 1"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0029",
+   "type": "mcq",
+   "stem": "What is the remainder when x3 + 3x2 - 13x - 10 is divided by (x - 3)?",
+   "options": {
+    "A": "4",
+    "B": "41/4",
+    "C": "6",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0030",
+   "type": "mcq",
+   "stem": "Given that -2 = A(x - 1)2 + B(x - 1) (x - 2) + C(x - 2), find the value of C",
+   "options": {
+    "A": "2",
+    "B": "-2",
+    "C": "1",
+    "D": "-1"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0031",
+   "type": "mcq",
+   "stem": "Determine the range of values of x for which x2 2 x 2",
+   "options": {
+    "A": "x > -4 or x > 2",
+    "B": "x < -4 or x < 2",
+    "C": "x < 4 or x > 2",
+    "D": "x < -4 or x > 2"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0032",
+   "type": "mcq",
+   "stem": "Determine the values of p & q if (x - 1) & (x + 2) are factors of 2x3 + px2 - x + q",
+   "options": {
+    "A": "p = -5, q = -6",
+    "B": "p = 5, q = 6",
+    "C": "p = 5, q = -6",
+    "D": "p = -6, q = -5"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0033",
+   "type": "mcq",
+   "stem": "Find the value of the constant k if 4x3 + kx2 + 7x - 23 has a remainder 7 when divided by 2x - 5",
+   "options": {
+    "A": "8",
+    "B": "-16",
+    "C": "-8",
+    "D": "16"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0034",
+   "type": "mcq",
+   "stem": "Expresses 3x2 x 21 in partial fractions and find the value of A + B - C x x 1",
+   "options": {
+    "A": "-3",
+    "B": "2",
+    "C": "6",
+    "D": "7"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0035",
+   "type": "mcq",
+   "stem": "The sum of the square of three positive numbers in arithmetic progression is 165. If the sum of the number is 21, find the sum of cubes of each of the numbers?",
+   "options": {
+    "A": "4",
+    "B": "1400",
+    "C": "1407",
+    "D": "104"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0036",
+   "type": "mcq",
+   "stem": "Find the 8th term and the sum of the first 8 terms of the GP sequence: , -1, 2, -4, \u2026 . . ?",
+   "options": {
+    "A": "-64, -42.5",
+    "B": "-64, 42.5",
+    "C": "64, 42.5",
+    "D": "-64, 45.4"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0037",
+   "type": "mcq",
+   "stem": "The sum of the first eight terms of the AP: ln x , lnx2, ln x3 \u2026 .. is",
+   "options": {
+    "A": "ln x8",
+    "B": "ln x9",
+    "C": "ln x36",
+    "D": "ln x72"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0038",
+   "type": "mcq",
+   "stem": "A man places a sum of money on a savings account in the bank. On each succeeding birthday, he deposits two times more than on the previous birthday. His total sum of the first eleven deposits is N20,480. How much was his first deposit?",
+   "options": {
+    "A": "N20",
+    "B": "N25",
+    "C": "N10",
+    "D": "N12.50"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0039",
+   "type": "mcq",
+   "stem": "The second term of an AP is four times the first term, the last term is 13 times the first term and the sum of the series is 70. Find the first three terms of the progression",
+   "options": {
+    "A": "2,4,6",
+    "B": "2,8,14",
+    "C": "2,4,8",
+    "D": "8,12,14"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0040",
+   "type": "mcq",
+   "stem": "A polygon has 25sides, the length of which starting from the smallest side are in AP. If the perimeter of the polygon is 1100cm, and the length of the largest side is ten times that of the smallest, find the length of the smallest side",
+   "options": {
+    "A": "5cm",
+    "B": "6cm",
+    "C": "7cm",
+    "D": "8cm"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0041",
+   "type": "mcq",
+   "stem": "The value of k in is",
+   "options": {
+    "A": "9",
+    "B": "10",
+    "C": "11",
+    "D": "12"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0042",
+   "type": "mcq",
+   "stem": "If 5g4 + 9g3 - 12g2 - 9g + 5 = 0, find the value of R where R is a positive integer and R = g - 1 g",
+   "options": {
+    "A": "2",
+    "B": "1",
+    "C": "1/5",
+    "D": "-2"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0043",
+   "type": "mcq",
+   "stem": "Given that y = 3x, and 3x-y = 1 , find x 81",
+   "options": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0044",
+   "type": "mcq",
+   "stem": "Solve for x in 32x+1 - 18(3x) - 81 = 0",
+   "options": {
+    "A": "-1",
+    "B": "3",
+    "C": "-3",
+    "D": "2"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0045",
+   "type": "mcq",
+   "stem": "Given that log264 = k, find 4klog1632",
+   "options": {
+    "A": "60",
+    "B": "50",
+    "C": "40",
+    "D": "30"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0046",
+   "type": "mcq",
+   "stem": "What is the positive value of y in 3log8y = log4(y + 4)?",
+   "options": {
+    "A": "-2,3",
+    "B": "-2,-3",
+    "C": "2,-3",
+    "D": "2,3"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0047",
+   "type": "mcq",
+   "stem": "If 25x+1 = 64 (5)6 , find x 2",
+   "options": {
+    "A": "-1",
+    "B": "1",
+    "C": "-2",
+    "D": "2"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0048",
+   "type": "mcq",
+   "stem": "Simplify ( 8 )1/3 - (4)1/2 27 9",
+   "options": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0049",
+   "type": "mcq",
+   "stem": "Simplify 18 6n2+n1+ 2\u00d7 \u00d7 2 n 9-n1 \u00d7 \u00d7 4 122n2-n1+1",
+   "options": {
+    "A": "6",
+    "B": "12",
+    "C": "1/6",
+    "D": "1/12"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0050",
+   "type": "mcq",
+   "stem": "If |x| < p, t\u210een",
+   "options": {
+    "A": "p < x < -p",
+    "B": "-p < x < p",
+    "C": "- p > x < p",
+    "D": "- p < x > p"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0051",
+   "type": "mcq",
+   "stem": "The value of x in 5x-1 - 1-2x < 8 + x 3 5",
+   "options": {
+    "A": "x<8",
+    "B": "x < -8",
+    "C": "x>8",
+    "D": "x > -8"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0052",
+   "type": "mcq",
+   "stem": "Find the range of x for which 12 + x - x2 < 0",
+   "options": {
+    "A": "x < 3 or x < -4",
+    "B": "x < -3 or x < 4",
+    "C": "-3 < x < 4",
+    "D": "3 < x < -4"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0053",
+   "type": "mcq",
+   "stem": "If ( x-1)x2(x+3) = 16(xP-1) + 4(xG-1)2 + 16(Hx+3) , the value of P + G + H is",
+   "options": {
+    "A": "3",
+    "B": "1",
+    "C": "7",
+    "D": "10"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0054",
+   "type": "mcq",
+   "stem": "The first 3 terms of the sequence given by Tn = 3 nn++12 respectively are",
+   "options": {
+    "A": "3/8, 4/11, 5/14",
+    "B": "4/11, 5/14, 6/17",
+    "C": "2/5, 3/8, 4/11",
+    "D": "3/8, 4/11, 6/17"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0055",
+   "type": "mcq",
+   "stem": "Given the nth term of a sequence log16(n + 3), what is the difference between the 13th and first terms?",
+   "options": {
+    "A": "\u00bd",
+    "B": "2",
+    "C": "1",
+    "D": "-1"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0056",
+   "type": "mcq",
+   "stem": "The sum of the terms of a sequence is known as",
+   "options": {
+    "A": "Series",
+    "B": "Arithmetic sequence",
+    "C": "Geometric sequence",
+    "D": "Sequence"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0057",
+   "type": "mcq",
+   "stem": "The type of sequence in which the next term differs from the preceding term by a difference is termed",
+   "options": {
+    "A": "Arithmetic Sequence",
+    "B": "Geometric sequence",
+    "C": "Geometric Infinity",
+    "D": "Infinite series"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0058",
+   "type": "mcq",
+   "stem": "The correct expression for the common difference in an A.P. is",
+   "options": {
+    "A": "T - Tn",
+    "B": "Tn - Tn+1",
+    "C": "Tn - Tn-1",
+    "D": "Tn - Tn+2"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0059",
+   "type": "mcq",
+   "stem": "The common difference in the series K, K + 3, K + 6, \u2026 .. is",
+   "options": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "-4"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0060",
+   "type": "mcq",
+   "stem": "If the first 3 terms of an A.P. are y, 3y + 1, 7y - 4, find the 10th term of the sequence",
+   "options": {
+    "A": "66",
+    "B": "55",
+    "C": "44",
+    "D": "33"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0061",
+   "type": "mcq",
+   "stem": "The 6th and 13th term of an A.P. are 0 and 14 respectively, find the 20 th term",
+   "options": {
+    "A": "18",
+    "B": "-18",
+    "C": "28",
+    "D": "-28"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0062",
+   "type": "mcq",
+   "stem": "The union of the set A and B denoted by A U B denoted by A U B, is the set of elements which belong to",
+   "options": {
+    "A": "either A nor B nor both",
+    "B": "either A or B or both",
+    "C": "neither A nor B or both",
+    "D": "neither A or B nor both"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0063",
+   "type": "mcq",
+   "stem": "Simplify 3\u221a(729y-6)1\u20442",
+   "options": {
+    "A": "1 3y",
+    "B": "3y",
+    "C": "y 3",
+    "D": "3 y"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0064",
+   "type": "mcq",
+   "stem": "Evaluate , leaving your answer in standard form",
+   "options": {
+    "A": "2 x 101",
+    "B": "2 x 102",
+    "C": "1 x 102",
+    "D": "1 x 101"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0065",
+   "type": "mcq",
+   "stem": "If a & b are positive numbers, evaluate 4 a b a 2 b 2 b 2 a4",
+   "options": {
+    "A": "32",
+    "B": "32\u221aab",
+    "C": "16",
+    "D": "16\u221aab"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0066",
+   "type": "mcq",
+   "stem": "Determine the square of the remainder when 3x4 - 2x3 - 10x - 5 is divided by x - 4",
+   "options": {
+    "A": "595",
+    "B": "475",
+    "C": "354025",
+    "D": "225625"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0067",
+   "type": "mcq",
+   "stem": "In resolving x x 2 1 into partial fraction, what are the values of the constants A, B & C? 1 1",
+   "options": {
+    "A": "-2, /2, /2,",
+    "B": "-1, 1/2, \u00bd",
+    "C": "-1, 1/2, -11/2",
+    "D": ""
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0068",
+   "type": "mcq",
+   "stem": "Find the range of the validity of x in the equation 2xx 1 1",
+   "options": {
+    "A": "x <1 or x > 0",
+    "B": "x < 0 or x < 1",
+    "C": "x < 0 or x < 1",
+    "D": "x > 0 or x > 1"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0069",
+   "type": "mcq",
+   "stem": "Resolve into partial fraction x3 x2 5x 152 & give the values of A, B, C respectively x 1 x 2",
+   "options": {
+    "A": "2,3,4",
+    "B": "2,3,0",
+    "C": "2,0,3",
+    "D": "2, -2, 3"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0070",
+   "type": "mcq",
+   "stem": "Determine the range of values of x for which x2 2 x 2 x 4",
+   "options": {
+    "A": "x > -4 or x > 2",
+    "B": "x < -4 or x < 2",
+    "C": "x < 4 or x > 2",
+    "D": "x < -4 or x > 2"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0071",
+   "type": "mcq",
+   "stem": "Solve the inequality yy 4 4 1",
+   "options": {
+    "A": "-4 < y < 0",
+    "B": "4<y<0",
+    "C": "0 > y > -4",
+    "D": "0 < y < 4"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": ""
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0072",
+   "type": "mcq",
+   "stem": "If P n r C nr\u22121 = 5, find r",
+   "options": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0073",
+   "type": "mcq",
+   "stem": "C n 4 P n2 = 1 2, find n?",
+   "options": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "6"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0074",
+   "type": "mcq",
+   "stem": "Express in terms of x and y 1 \u22123 log10 y= log10 x",
+   "options": {
+    "A": "x2y2 = 5",
+    "B": "xy3 = 10",
+    "C": "y3x4 = 15",
+    "D": "x3y2 = 0"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0075",
+   "type": "mcq",
+   "stem": "12, x, y, 324, 972, find the sum of x and y",
+   "options": {
+    "A": "144",
+    "B": "52",
+    "C": "75",
+    "D": "109"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0076",
+   "type": "mcq",
+   "stem": "The order of a matrix is determined by _____________",
+   "options": {
+    "A": "number of column \u00d7 number of row",
+    "B": "number of row \u00d7 number of column",
+    "C": "number of column \u00f7 number of row",
+    "D": "none of the above"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0077",
+   "type": "mcq",
+   "stem": "In how many ways can the word MATHEMATICS be arranged",
+   "options": {
+    "A": "3257128",
+    "B": "4635285",
+    "C": "4989600",
+    "D": "all of the above"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0078",
+   "type": "mcq",
+   "stem": "If P= (2 \u22121 4 3 )   Q= (1 \u22123 0 3 ) find |QP\u2212P|",
+   "options": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0079",
+   "type": "mcq",
+   "stem": "Find the determinant of ( 1 2 3 2 1 2 2 3 1 )",
+   "options": {
+    "A": "6",
+    "B": "11",
+    "C": "13",
+    "D": "15"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0080",
+   "type": "mcq",
+   "stem": "log10 y+ 2 log10 x= 3, find y in terms of x?",
+   "options": {
+    "A": "y= 10 x2",
+    "B": "y= 1000 x2",
+    "C": "y= 100 x",
+    "D": "y= 1000x"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0081",
+   "type": "mcq",
+   "stem": "Find the common ratio, if sum to infinity is \u2212 1 10 and first term is \u2212 1 8",
+   "options": {
+    "A": "\u2212 1 2",
+    "B": "\u2212 1 4",
+    "C": "\u2212 1 8",
+    "D": "\u2212 1 16"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0082",
+   "type": "mcq",
+   "stem": "Find the sum to infinity of the exponential sequence a, a3 2b,",
+   "options": {
+    "A": "2ab 2b\u2212a2",
+    "B": "ab a2",
+    "C": "2b\u2212a2 2ab",
+    "D": "all of the above"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0083",
+   "type": "mcq",
+   "stem": "Evaluate C 7 3",
+   "options": {
+    "A": "32",
+    "B": "33",
+    "C": "34",
+    "D": "35"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0084",
+   "type": "mcq",
+   "stem": "Evaluate C 9 4",
+   "options": {
+    "A": "162",
+    "B": "126",
+    "C": "136",
+    "D": "132"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0085",
+   "type": "mcq",
+   "stem": "How many three digit numbers can be formed from 32564 without repeating any of the digits",
+   "options": {
+    "A": "40",
+    "B": "50",
+    "C": "60",
+    "D": "70"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0086",
+   "type": "mcq",
+   "stem": "In how many ways can three sit be occupied if five people are willing to sit",
+   "options": {
+    "A": "36",
+    "B": "50",
+    "C": "60",
+    "D": "48"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0087",
+   "type": "mcq",
+   "stem": "Find the values of n if P n 3 \u22126(nC4) = 0",
+   "options": {
+    "A": "7",
+    "B": "8",
+    "C": "9",
+    "D": "10"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0088",
+   "type": "mcq",
+   "stem": "If P 6 r= 6, find the value of P 6 r+1",
+   "options": {
+    "A": "23",
+    "B": "34",
+    "C": "30",
+    "D": "43"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0089",
+   "type": "mcq",
+   "stem": "If P 8 x C 8 x= 6, find x",
+   "options": {
+    "A": "4",
+    "B": "3",
+    "C": "7",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0090",
+   "type": "mcq",
+   "stem": "If P 6 r+1 = P 6 2, what is r",
+   "options": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0091",
+   "type": "mcq",
+   "stem": "If C 18 r\u2212 C 18 r+2 = 0, find C r 5",
+   "options": {
+    "A": "55",
+    "B": "47",
+    "C": "46",
+    "D": "56"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0092",
+   "type": "mcq",
+   "stem": "Simplify P k 7 C k7",
+   "options": {
+    "A": "5050",
+    "B": "5070",
+    "C": "5000",
+    "D": "5040"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0093",
+   "type": "mcq",
+   "stem": "If \u03b1 and \u03b2 are the roots of the equation 2x2 \u22125x\u22123 = 0, find \u03b12 + \u03b22 \u2212\u03b12\u03b22",
+   "options": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "8"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0094",
+   "type": "mcq",
+   "stem": "If \u03b1 and \u03b2 are the roots of the equation 2x2 \u22123x+ 1 = 0, find (\u03b1+ 1) + (\u03b2+ 1) + 2\u03b1\u03b2",
+   "options": {
+    "A": "7 2",
+    "B": "11 2",
+    "C": "9 2",
+    "D": "15 2"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0095",
+   "type": "mcq",
+   "stem": "If \u03b1 and \u03b2 are the roots of the equation 3x2 \u22125x+ 1 = 0, find \u03b12 \u2212\u03b1\u03b2+ \u03b22",
+   "options": {
+    "A": "16 9",
+    "B": "1.88",
+    "C": "1.90",
+    "D": "1.27"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0096",
+   "type": "mcq",
+   "stem": "Simplify 1 4 ( P n 5 C n4 + 100( P n 0))",
+   "options": {
+    "A": "6n+ 1",
+    "B": "6n+ 2",
+    "C": "6n\u22122",
+    "D": "6n+ 2"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0097",
+   "type": "mcq",
+   "stem": "Simplify P n 3 C n2 + P n 0",
+   "options": {
+    "A": "2n\u22123",
+    "B": "2n+ 3",
+    "C": "n\u22123",
+    "D": "n+ 3"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0098",
+   "type": "mcq",
+   "stem": "Find the term independent of y in the expansion of (3y+ 2 y) 8",
+   "options": {
+    "A": "90722",
+    "B": "90720",
+    "C": "90700",
+    "D": "90710"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0099",
+   "type": "mcq",
+   "stem": "Find the term independent of a in the expansion of (a2 \u2212 2 a) 9",
+   "options": {
+    "A": "5300",
+    "B": "5330",
+    "C": "5376",
+    "D": "5367"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0100",
+   "type": "mcq",
+   "stem": "Find the term independent of x in the binomial expansion of (3x2 \u2212 1 3x) 15",
+   "options": {
+    "A": "1010 81",
+    "B": "1100 81",
+    "C": "1001 81",
+    "D": "1110 81"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0101",
+   "type": "mcq",
+   "stem": "Find the constant term in the binomial expansion of (2x\u2212 3 x) 8",
+   "options": {
+    "A": "90722",
+    "B": "90710",
+    "C": "90720",
+    "D": "90721"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0102",
+   "type": "mcq",
+   "stem": "Find the coefficient of x2y4 in the expansion of (x+ 2y)6",
+   "options": {
+    "A": "240",
+    "B": "250",
+    "C": "260",
+    "D": "270"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0103",
+   "type": "mcq",
+   "stem": "Find the coefficient of x2 in the expansion of (9 + 3x)6",
+   "options": {
+    "A": "885763",
+    "B": "885735",
+    "C": "885776",
+    "D": "885375"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0104",
+   "type": "mcq",
+   "stem": "Find the 4th term in the expansion of (a\u2212b)6 in the ascending power",
+   "options": {
+    "A": "\u221220a3b3",
+    "B": "20a4b5",
+    "C": "20a3b2",
+    "D": "\u221220a5b3"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0105",
+   "type": "mcq",
+   "stem": "Find the sum of the coefficients of x3 and x4 in the expansion of (1 \u2212 1 2 x) 6",
+   "options": {
+    "A": "\u2212 25 16",
+    "B": "16 25",
+    "C": "18 29",
+    "D": "13 15"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0106",
+   "type": "mcq",
+   "stem": "What is the coefficient of the fifth term in  (3x\u22122y)7",
+   "options": {
+    "A": "25321",
+    "B": "12015",
+    "C": "15120",
+    "D": "21630"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0107",
+   "type": "mcq",
+   "stem": "x3 + 5x2 \u22122x\u221224 = 0, if (x+ 3) is a factor, find the other factors",
+   "options": {
+    "A": "(x+ 1)(x+ 2)",
+    "B": "(x+ 4)(x\u22122)",
+    "C": "(x+ 3)(x\u22125)",
+    "D": "(x+ 1)(x+ 3)"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0108",
+   "type": "mcq",
+   "stem": "A 2(x2+1) + B 2(x2+x\u22122) = 1\u22122x2 (x2+1)(x2+3x\u22122) find A\u2212B",
+   "options": {
+    "A": "0",
+    "B": "\u22121",
+    "C": "1",
+    "D": "2"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0109",
+   "type": "mcq",
+   "stem": "Find x, 3\u22125x 91\u2212x= 27x+1",
+   "options": {
+    "A": "2 3",
+    "B": "\u22125 6",
+    "C": "4 9",
+    "D": "3 8"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0110",
+   "type": "mcq",
+   "stem": "C 3n 2 = 15, find n",
+   "options": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0111",
+   "type": "mcq",
+   "stem": "Find the coefficient of x2 in (1 + 3x)5",
+   "options": {
+    "A": "20",
+    "B": "50",
+    "C": "70",
+    "D": "90"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0112",
+   "type": "mcq",
+   "stem": "If the second term and fourth term of a G.P are 8 and 32. Find the sum of the first 10 terms",
+   "options": {
+    "A": "2165",
+    "B": "4092",
+    "C": "8265",
+    "D": "12378"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0113",
+   "type": "mcq",
+   "stem": "Calculate the common ratio if the 4th term is 192 and the 9th term is 6",
+   "options": {
+    "A": "1",
+    "B": "2",
+    "C": "1 2",
+    "D": "1 8"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0114",
+   "type": "mcq",
+   "stem": "If x2 \u221212K+ K= 0 has equal roots, find K?",
+   "options": {
+    "A": "20",
+    "B": "25",
+    "C": "36",
+    "D": "48"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0115",
+   "type": "mcq",
+   "stem": "What is C 8 2+5C3",
+   "options": {
+    "A": "10",
+    "B": "28",
+    "C": "32",
+    "D": "38"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0116",
+   "type": "mcq",
+   "stem": "The 3rd term of an exponential sequence is 360 and the 6th term is 1215. Find the first term of the sequence",
+   "options": {
+    "A": "50",
+    "B": "105",
+    "C": "160",
+    "D": "320"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0117",
+   "type": "mcq",
+   "stem": "If (2k\u22125), (k\u22124), (10 \u22123k) form a sequence of a G.P, find the value of k?",
+   "options": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0118",
+   "type": "mcq",
+   "stem": "n! is equal to",
+   "options": {
+    "A": "n(n\u22121)!",
+    "B": "n(n+ 1)!",
+    "C": "n2",
+    "D": "none"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0119",
+   "type": "mcq",
+   "stem": "\u03bc= {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, X= {1, 2, 3}, Y= {2, 4, 6, 8, 10, 12}, Z= {3, 4, 5, 6, 7}, find (X\u222aY) \u2229Z?",
+   "options": {
+    "A": "{3, 4, 6}",
+    "B": "{1, 3, 6, 8}",
+    "C": "{2, 6, 7, 12}",
+    "D": "none"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0120",
+   "type": "mcq",
+   "stem": "In how many ways can the letter of the word TOTALITY be arranged?",
+   "options": {
+    "A": "8251",
+    "B": "3652",
+    "C": "6720",
+    "D": "2512"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0121",
+   "type": "mcq",
+   "stem": "In how many ways can 3 prefects be chosen out of 8 prefects",
+   "options": {
+    "A": "20",
+    "B": "28",
+    "C": "36",
+    "D": "56"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0122",
+   "type": "mcq",
+   "stem": "If \u03b1 and \u03b2 are the roots of the equation x2 + x\u22122 = 0. Find the product of the roots",
+   "options": {
+    "A": "0",
+    "B": "\u22121",
+    "C": "\u22122",
+    "D": "2"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0123",
+   "type": "mcq",
+   "stem": "3 log a+ 5 log a\u22126 log a= log 64, find a?",
+   "options": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "8"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0124",
+   "type": "mcq",
+   "stem": "|5 3 k 2| = |3 5 4 5|, find the value of k?",
+   "options": {
+    "A": "5",
+    "B": "3",
+    "C": "2",
+    "D": "1"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0125",
+   "type": "mcq",
+   "stem": "The term 160x2 in the expansion of (1 + 4x)5 refers to the",
+   "options": {
+    "A": "1st term",
+    "B": "2nd term",
+    "C": "3rd term",
+    "D": "4th term"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0126",
+   "type": "mcq",
+   "stem": "Solve for x in log8(x2 \u22128x+ 18) = 1 3",
+   "options": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0127",
+   "type": "mcq",
+   "stem": "Solve for x in 32x\u22124(3x+1) + 27 = 0",
+   "options": {
+    "A": "(1, 2)",
+    "B": "(2, 3)",
+    "C": "(4, 1)",
+    "D": "3, 5)"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0128",
+   "type": "mcq",
+   "stem": "In resolving partial fraction 2x2+3x+10 (x\u22121)(x+2) = P+ Q (x+1) \u2212 R (x+2). Find P and R",
+   "options": {
+    "A": "2, \u22124",
+    "B": "\u22124, 2",
+    "C": "2, 3",
+    "D": "1, 0"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0129",
+   "type": "mcq",
+   "stem": "Find the value of | 0 3 2 1 7 8 0 5 4 |",
+   "options": {
+    "A": "0",
+    "B": "\u22122",
+    "C": "\u22123",
+    "D": "4"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0130",
+   "type": "mcq",
+   "stem": "If P= (6 4 5 7) then the value of |PT| is?",
+   "options": {
+    "A": "15",
+    "B": "18",
+    "C": "20",
+    "D": "22"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0131",
+   "type": "mcq",
+   "stem": "Simplify P n r\u00f7nCr",
+   "options": {
+    "A": "(r\u22121)!",
+    "B": "r!",
+    "C": "(n\u22121)!",
+    "D": "n!"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0132",
+   "type": "mcq",
+   "stem": "The coefficient of x4 in (1 \u22123x)6 is",
+   "options": {
+    "A": "1362",
+    "B": "1215",
+    "C": "1278",
+    "D": "2160"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0133",
+   "type": "mcq",
+   "stem": "Express 3 log10 x\u2212 1 2 log10 y+ 1 as a single logarithm",
+   "options": {
+    "A": "log10 ( 10x3 y 1 2 )",
+    "B": "log10 ( y2x 10 )",
+    "C": "log ( 1oy2 x)",
+    "D": "none"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0134",
+   "type": "mcq",
+   "stem": "When x3 \u22122x2 + mx+ 4 is divided by x\u22123, remainder is \u22122, find m",
+   "options": {
+    "A": "\u22122",
+    "B": "\u22123",
+    "C": "\u22124",
+    "D": "\u22125"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0135",
+   "type": "mcq",
+   "stem": "In the equation Tr= (\u22121)r (m+r\u22121)i (m\u22121)!r! br what is Tr when m= 3, r= 3, b= 5 7 x",
+   "options": {
+    "A": "0.2183",
+    "B": "0.5148",
+    "C": "0.0114",
+    "D": "0.3512"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0136",
+   "type": "mcq",
+   "stem": "If A= {\u22121, 0, 10}, B= {0, 5, 6, 8}, C= {1, 9, 10}, what is (A\u2212C) \u222a(A\u2212B)",
+   "options": {
+    "A": "{2, 0, 10}",
+    "B": "{\u22121, 0, 5}",
+    "C": "{\u22121, 0, 10}",
+    "D": "{0, \u22121, \u22125}"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0137",
+   "type": "mcq",
+   "stem": "Solve for x if 1 2 logx 64 = 16",
+   "options": {
+    "A": "0.56",
+    "B": "1.14",
+    "C": "2.73",
+    "D": "2.5"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0138",
+   "type": "mcq",
+   "stem": "The number of elements in the power set of A= {a, b, c, d} is",
+   "options": {
+    "A": "8",
+    "B": "5",
+    "C": "4",
+    "D": "none"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0139",
+   "type": "mcq",
+   "stem": "Find | 1 2 3 4 5 6 7 8 9 |",
+   "options": {
+    "A": "0",
+    "B": "2",
+    "C": "3",
+    "D": "4"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0140",
+   "type": "mcq",
+   "stem": "|4 t 5 3| = 32, Find t?",
+   "options": {
+    "A": "\u22121",
+    "B": "\u22122",
+    "C": "\u22123",
+    "D": "\u22124"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0141",
+   "type": "mcq",
+   "stem": "P n r C nr simplify",
+   "options": {
+    "A": "r!",
+    "B": "(r\u22121)!",
+    "C": "n!",
+    "D": "(n\u22121)!"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0142",
+   "type": "mcq",
+   "stem": "The transpose of the cofactor of a square matrix is",
+   "options": {
+    "A": "adjoint",
+    "B": "minor",
+    "C": "determinant",
+    "D": "order"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0143",
+   "type": "mcq",
+   "stem": "If \u03b1+ \u03b2= 5 and \u03b1\u03b2= 2, find \u03b1\u22122 + \u03b2\u22122",
+   "options": {
+    "A": "2.38",
+    "B": "4.56",
+    "C": "5.21",
+    "D": "all"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0144",
+   "type": "mcq",
+   "stem": "If K= (1 1 2 1), find K2 + K",
+   "options": {
+    "A": "(4 3 6 4)",
+    "B": "(2 0 1 6)",
+    "C": "(1 2 3 2)",
+    "D": "(2 1 6 8)"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0145",
+   "type": "mcq",
+   "stem": "If logx5 = y and logy5 = x, find x y",
+   "options": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0146",
+   "type": "mcq",
+   "stem": "Sum n2 + 5n up to 3rd term",
+   "options": {
+    "A": "15",
+    "B": "20",
+    "C": "44",
+    "D": "48"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0147",
+   "type": "mcq",
+   "stem": "Find the coefficient of x2 in (2 + 3x)6",
+   "options": {
+    "A": "1150",
+    "B": "6218",
+    "C": "2160",
+    "D": "3810"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0148",
+   "type": "mcq",
+   "stem": "log2 x= 2.25, find x",
+   "options": {
+    "A": "4.76",
+    "B": "9.25",
+    "C": "11.56",
+    "D": "18.29"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0149",
+   "type": "mcq",
+   "stem": "The sum of the first n terms of a finite G.P whose ratio is greater than one is",
+   "options": {
+    "A": "a( rn\u22121 r\u22121 )",
+    "B": "a( 1\u2212rn r\u22121 )",
+    "C": "( rn+1 n2\u22121)",
+    "D": "none"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0150",
+   "type": "mcq",
+   "stem": "Solve 5x+ 52\u2212x= 26",
+   "options": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0151",
+   "type": "mcq",
+   "stem": "A matrice in which all elements are zero except the leading element is called _____________",
+   "options": {
+    "A": "diagonal matrice",
+    "B": "singular matrix",
+    "C": "null matrix",
+    "D": "square matrix"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0152",
+   "type": "mcq",
+   "stem": "If a\u221a5 + b\u221a2 is a square root of 95 \u221230\u221a10, find the value of \u2032a\u2032and \u2032b\u2032",
+   "options": {
+    "A": "2, 5",
+    "B": "5, \u22123",
+    "C": "\u22123, 5",
+    "D": "0, 2 i"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0153",
+   "type": "mcq",
+   "stem": "Find the sum of the coefficient of x3 and x4 in the expansion of (1 \u2212 1 2 x) 6",
+   "options": {
+    "A": "11 16",
+    "B": "\u221225 16",
+    "C": "\u221233 16",
+    "D": "27 16"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0154",
+   "type": "mcq",
+   "stem": "For what value of K will the equation x2 \u221214x+ K have equal roots",
+   "options": {
+    "A": "7",
+    "B": "\u22127",
+    "C": "\u221249",
+    "D": "none of the above"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0155",
+   "type": "mcq",
+   "stem": "Find the 4th term in (2x\u2212y)6",
+   "options": {
+    "A": "169x2y3",
+    "B": "\u2212160x3y3",
+    "C": "160x3y2",
+    "D": "\u2212160x2y2"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0156",
+   "type": "mcq",
+   "stem": "Find the 10th term of (x+ y)13",
+   "options": {
+    "A": "715x4y9",
+    "B": "715x5y7",
+    "C": "715x9y4",
+    "D": "715x5y5"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0157",
+   "type": "mcq",
+   "stem": "Find the 5th term of the binomial expansion (3 + x)7",
+   "options": {
+    "A": "905x5",
+    "B": "945x7",
+    "C": "954x4",
+    "D": "945x4"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0158",
+   "type": "mcq",
+   "stem": "Find the 6th term in (2a\u2212b)8",
+   "options": {
+    "A": "\u2212448a2b3",
+    "B": "\u2212445a3b5",
+    "C": "448a5b3",
+    "D": "\u2212448a3b5"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0159",
+   "type": "mcq",
+   "stem": "Find the coefficient of x3y4 term  in the expansion of (x+ y)7",
+   "options": {
+    "A": "36",
+    "B": "35",
+    "C": "30",
+    "D": "32"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0160",
+   "type": "mcq",
+   "stem": "Find the coefficient of x4y2 term in the expansion of (2x\u2212y)6",
+   "options": {
+    "A": "240",
+    "B": "230",
+    "C": "250",
+    "D": "220"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0161",
+   "type": "mcq",
+   "stem": "Find the value of a if x2 \u22122ax+ a+ 2 = 0 has equal root.",
+   "options": {
+    "A": "2 or\u22122",
+    "B": "1 or\u22123",
+    "C": "2 or\u2212 1",
+    "D": "\u22122 or\u22121"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0162",
+   "type": "mcq",
+   "stem": "Find the value of k for which the quadratic equation x2 \u2212(k+ 1)x+ 5k= 19 has equal roots",
+   "options": {
+    "A": "7 or 12",
+    "B": "11 or 10",
+    "C": "11 or 7",
+    "D": "11 or \u221212"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0163",
+   "type": "mcq",
+   "stem": "Find the quadratic equation whose roots are \u22123 \u2212\u221a3 and 3 + \u221a3",
+   "options": {
+    "A": "x2 \u221212 \u22126\u221a3 = 0",
+    "B": "x2 + 12 \u22126\u221a3 = 0",
+    "C": "x2 \u221212 + \u221a3 = 0",
+    "D": "x2 + 12 + \u221a3 = 0"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0164",
+   "type": "mcq",
+   "stem": "Find the quadratic equation whose roots are 5 \u22122 \u221a3 and 5 + 2\u221a3",
+   "options": {
+    "A": "x2 + 10x+ 13 = 0",
+    "B": "x2 \u221210x\u221213 = 0",
+    "C": "x2 \u221210x+ 13 = 0",
+    "D": "x2 + 10x\u221213 = 0"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0165",
+   "type": "mcq",
+   "stem": "Find the quadratic equation whose roots are \u2212 2 3 and 4 5",
+   "options": {
+    "A": "12x2 + x\u22128 = 0",
+    "B": "15x2 \u22122x\u2212 8 = 0",
+    "C": "13x2 + 2x+ 10 = 0",
+    "D": "15x2 + x\u221210 = 0"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0166",
+   "type": "mcq",
+   "stem": "Find the quadratic equation whose roots are 3 7 and 2 7",
+   "options": {
+    "A": "x2 \u221240x+ 16 = 0",
+    "B": "49x2 \u221230x+ 60 = 0",
+    "C": "49x2 \u221235x+ 6 = 0",
+    "D": "49x2 \u221225x+ 10 = 0"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0167",
+   "type": "mcq",
+   "stem": "Find the quadratic equation whose roots are 3 and \u22124",
+   "options": {
+    "A": "x2 \u2212x\u221212 = 0",
+    "B": "x2 \u22122x+ 10 = 0",
+    "C": "x2 + 12x\u22121 = 0",
+    "D": "x2 + x\u221212 = 0"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0168",
+   "type": "mcq",
+   "stem": "If \u03b1 and \u03b2 are the roots of the equation 5x2 \u221216x\u221225 = 0, which of the following statements is or are correct (i) \u03b1+ \u03b2= \u2212 16 5  (ii) \u03b1+ \u03b2= 16 5  (iii) \u03b1+ \u03b2= 5 (iv) \u03b1\u03b2= \u22125",
+   "options": {
+    "A": "I and II",
+    "B": "ii and iv",
+    "C": "iii only",
+    "D": "iii and iv"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0169",
+   "type": "mcq",
+   "stem": "If \u03b1 and \u03b2 are the roots of the equation x2 + px+ q= 0, express 1 \u03b12 + 1 \u03b22  in terms of p and q",
+   "options": {
+    "A": "p\u2212q q2",
+    "B": "p2\u22122q q2",
+    "C": "p2\u22122q 2q2",
+    "D": "p2+2q 2q"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0170",
+   "type": "mcq",
+   "stem": "Find the value of b",
+   "options": {
+    "A": "4",
+    "B": "6",
+    "C": "5",
+    "D": "7"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0171",
+   "type": "mcq",
+   "stem": "If one of the roots of a quadratic equation 27x2 + ax+ 8 = 0 is known to be the square of the other, find the value of a",
+   "options": {
+    "A": "\u221239",
+    "B": "\u221229",
+    "C": "\u221230",
+    "D": "\u221240"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0172",
+   "type": "mcq",
+   "stem": "If a quadratic function y= x2 \u22126x+ 11 is written in the form y= a(x\u2212h)2 + k, find the value of a+ h+ k",
+   "options": {
+    "A": "6",
+    "B": "5",
+    "C": "4",
+    "D": "3"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0173",
+   "type": "mcq",
+   "stem": "If f(x) = 3x2 \u2212x\u22126 find 2a\u2212h+ 3k",
+   "options": {
+    "A": "153 12",
+    "B": "147 12",
+    "C": "149 12",
+    "D": "151 12"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0174",
+   "type": "mcq",
+   "stem": "If y= 2 \u22124x\u2212x2 is transformed, what is 2a\u2212h\u2212k",
+   "options": {
+    "A": "12",
+    "B": "\u221212",
+    "C": "\u22126",
+    "D": "6"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0175",
+   "type": "mcq",
+   "stem": "If f(x) = 5 \u2212x\u22122x2 is transformed to f(x) = a(x\u2212h)2 + k, find the value of a+ h+ k",
+   "options": {
+    "A": "20 8",
+    "B": "23 8",
+    "C": "21 8",
+    "D": "22 8"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0176",
+   "type": "mcq",
+   "stem": "If f(x) = x2 \u22122x\u22123, find f",
+   "options": {
+    "A": "if A= ( 2 \u22121 \u22121 1 2 \u22121 \u22121 \u22121 2 )",
+    "B": "( \u22123 0 1 1 3 \u22122 \u22121 1 \u22124 )",
+    "C": "( 2 1 7 \u22122 0 1 3 \u22122 \u22125 )",
+    "D": "( 2 3 4 1 0 \u22127 6 2 \u22125 )"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0177",
+   "type": "mcq",
+   "stem": "Let A= ( 1 0 0 1 1 1 4 1 2 ), find A\u22121",
+   "options": {
+    "A": "( 0 \u22121 4 3 1 0 \u22122 1 5 )",
+    "B": "( 1 0 \u22121 4 \u22121 \u22122 3 2 \u22123 )",
+    "C": "( 1 0 0 2 2 \u22121 \u22123 \u22121 1 )",
+    "D": "( 1 0 1 2 1 \u22122 2 \u22123 1 )"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0178",
+   "type": "mcq",
+   "stem": "Let A= ( 1 0 0 1 1 1 4 1 2 ), find f",
+   "options": {
+    "A": "if f(x) = x2 + 6 x+ 10",
+    "B": "( 2 1 17 0 \u22121 14 2 0 5 )",
+    "C": "( 2 4 \u22123 0 \u22121 4 1 0 3 )",
+    "D": "no answer"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0179",
+   "type": "mcq",
+   "stem": "Sum the series: S= 2 + 5 2 + 8 22 + 11 23 + \u22ef... ... ....",
+   "options": {
+    "A": "8",
+    "B": "10",
+    "C": "12",
+    "D": "14"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0180",
+   "type": "mcq",
+   "stem": "If Tn is the nth term of a linear sequence, then the common difference",
+   "options": {
+    "D": "can be written as?",
+    "A": "Tn\u22121 \u2212Tn",
+    "B": "Tn\u22121 + Tn",
+    "C": "Tn\u2212Tn\u22121"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0181",
+   "type": "mcq",
+   "stem": "If Tn is the nth term of an exponential sequence, then the common ratio (r) can be written as",
+   "options": {
+    "A": "Tn\u22121 \u2212Tn",
+    "B": "Tn\u22121 + Tn",
+    "C": "Tn\u2212Tn\u22121",
+    "D": "Tn Tn\u22121"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0182",
+   "type": "mcq",
+   "stem": "Find the rank of the coefficient matrix and the augmented matrix from the system of equations x+ y= 1, x+ 2y+ z= 1, x+ y+ z= 2",
+   "options": {
+    "A": "2, 3",
+    "B": "3, 3",
+    "C": "1, 3",
+    "D": "3, 2"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0183",
+   "type": "mcq",
+   "stem": "Let A= (2 \u22121 1 3 ), find f",
+   "options": {
+    "A": "if f",
+    "B": "(2 \u22123 3 5 )",
+    "C": "(0 \u22121 4 3 )",
+    "D": "none of the above"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0184",
+   "type": "mcq",
+   "stem": "Given the 1st four terms of a series 3 5 \u2212 5 52 + 7 53 \u2212 9 54 + ... ... ... ... ... ... .., the nth term is?",
+   "options": {
+    "A": "1n. 2n+1 5n",
+    "B": "\u2212(\u22121)n. 2n+1 5n",
+    "C": "1n. 5n+1 2n",
+    "D": "(\u22121)n. 2n+1 7n"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0185",
+   "type": "mcq",
+   "stem": "Given the 1st four terms of a series 3 5 \u2212 5 52 + 7 53 \u2212 9 54 +. ... ... ... ..., the finite sum as n grows to infinity is",
+   "options": {
+    "A": "9 16",
+    "B": "16 25",
+    "C": "4 9",
+    "D": "4 5"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0186",
+   "type": "mcq",
+   "stem": "The sum of the first 6 terms of the exponential sequence 18, 6, 2.......... Is",
+   "options": {
+    "A": "728 27",
+    "B": "727 28",
+    "C": "728 28",
+    "D": "729 27"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0187",
+   "type": "mcq",
+   "stem": "Sum the series: S= 1 + 2 21 + 3 22 + 4 23 +. ... ... ... ...",
+   "options": {
+    "A": "2",
+    "B": "4",
+    "C": "6",
+    "D": "8"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0188",
+   "type": "mcq",
+   "stem": "Write 0.5 as proper fraction in its lowest term",
+   "options": {
+    "A": "53 98",
+    "B": "53 97",
+    "C": "53 96",
+    "D": "53 99"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0189",
+   "type": "mcq",
+   "stem": "The sum of the 3rd and 7th terms of a linear sequence equals 6, their product is 8, find the sum of the first sixteen terms of the sequence",
+   "options": {
+    "A": "76 or \u221220",
+    "B": "67 or 12",
+    "C": "16 or 7",
+    "D": "61 or 17"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0190",
+   "type": "mcq",
+   "stem": "Occasionally, G.P. is called",
+   "options": {
+    "A": "linear sequence",
+    "B": "exponential sequence",
+    "C": "geometric sequence",
+    "D": "exponential ratio"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0191",
+   "type": "mcq",
+   "stem": "Given a sequence 2, 4, 6, 8........ find the 22nd term and the sum of 30th terms respectively",
+   "options": {
+    "A": "44, 933",
+    "B": "42, 930",
+    "C": "44, 930",
+    "D": "40, 925"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0192",
+   "type": "mcq",
+   "stem": "Five arithmetric means between \u22123 and 21 are",
+   "options": {
+    "A": "1, 4, 7, 10, 13",
+    "B": "0, 3, 6, 9, 12",
+    "C": "1, 3, 5, 7, 9",
+    "D": "1, 5, 9, 13, 17"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0193",
+   "type": "mcq",
+   "stem": "Find the first four terms of the sequence whose general term is given by 7 \u00d7 3n",
+   "options": {
+    "A": "21, 63, 189, 567",
+    "B": "21, 61, 188, 567",
+    "C": "21, 63, 189, 565",
+    "D": "10, 63, 189, 567"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0194",
+   "type": "mcq",
+   "stem": "How many subsets has the set B= {2, 3, 4, 5, 6, 7}",
+   "options": {
+    "A": "20",
+    "B": "32",
+    "C": "64",
+    "D": "128"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0195",
+   "type": "mcq",
+   "stem": "There are 100men in a club and each played at least on game, 21 played football only, 18 hockey only while 22 baseball only, 15 played all the games and an equal number played two games only, how many played football",
+   "options": {
+    "A": "22",
+    "B": "42",
+    "C": "52",
+    "D": "62"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0196",
+   "type": "mcq",
+   "stem": "In a survey of 60 people, it was found that 25 read Newsweek magazine, 26 read time and 26 read fortune, also 9 read both Newsweek and Fortune, 11 read both Newsweek and Time, 8 read both Time and Fortune and 8 read no magazine at all. Find the number of people who read all the three magazines",
+   "options": {
+    "A": "5",
+    "B": "4",
+    "C": "3",
+    "D": "2"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0197",
+   "type": "mcq",
+   "stem": "If A= {1, 2, 3, 4, 5}, find the power set of A?",
+   "options": {
+    "A": "12",
+    "B": "16",
+    "C": "18",
+    "D": "32"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0198",
+   "type": "mcq",
+   "stem": "If P= {1, 3, 5, 7, 9, 11} and Q= {2, 4, 6, 8, 10, 12} Determine the relationship between P and Q (i) Disjoint (ii) P\u2229Q= { } or \u03c6 (iii) (P\u2229Q) = 0",
+   "options": {
+    "A": "I only",
+    "B": "ii only",
+    "C": "I and ii only",
+    "D": "I, ii and iii"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0199",
+   "type": "mcq",
+   "stem": "If X= the set of all perfect squares less than 40, Y= set of odd numbers from 1 to 15, what is X\u2229Y",
+   "options": {
+    "A": "{1, 4, 9}",
+    "B": "{1, 9}",
+    "C": "{2, 4, 25}",
+    "D": "{3, 8, 15}"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0200",
+   "type": "mcq",
+   "stem": "Let A and B be set of real numbers, if the number of n",
+   "options": {
+    "A": "= 23, n",
+    "B": "= 12 and n(A\u222aB) = 35, then A and B are _________ sets",
+    "C": "equal",
+    "D": "empty"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0201",
+   "type": "mcq",
+   "stem": "P= {x\u22361 \u2264x\u22645}, Q= {(x+ 1): 2 \u2264x\u22647} where x is an integer, P and Q are subsets of the universal set \u03bc= {x: 1 \u2264x\u226410}, find (P\u2229Q)1 and P\u222aQ",
+   "options": {
+    "A": "{1, 2, 3, 5, 7, 9, 10} & {2, 3, 4, 5, 6, 7, 8, 10}",
+    "B": "{2, 7, 9, 10} & {1, 4, 8}",
+    "C": "{1, 3, 7, 9} & {2, 3, 6, 8, 10}",
+    "D": "none of the above"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0202",
+   "type": "mcq",
+   "stem": "Evaluate (1 + \u221a2)(1 \u2212\u221a2)",
+   "options": {
+    "A": "0",
+    "B": "\u22121",
+    "C": "1",
+    "D": "2"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0203",
+   "type": "mcq",
+   "stem": "If \u221a32 + \u221a128 \u2212\u221a18 + \u221a50 = K\u221a2, find K?",
+   "options": {
+    "A": "10",
+    "B": "12",
+    "C": "14",
+    "D": "16"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0204",
+   "type": "mcq",
+   "stem": "Given that \u221a3x+ \u221a18 \u2212\u221a98 = \u221a50, find x?",
+   "options": {
+    "A": "32",
+    "B": "42",
+    "C": "54",
+    "D": "72"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0205",
+   "type": "mcq",
+   "stem": "If (3 + 4\u221a3)(2 \u2212a\u221a3) = \u221218 + 2\u221a3, find a?",
+   "options": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "4"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0206",
+   "type": "mcq",
+   "stem": "In a sequence given by Tn= a+ bn the 7th and 15th terms are 19 and 43 respectively. Find the values of a and b?",
+   "options": {
+    "A": "\u22122 & 3",
+    "B": "2 & \u22123",
+    "C": "0 & 2",
+    "D": "\u22121 & 3"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0207",
+   "type": "mcq",
+   "stem": "(x+ 2), (x+ 3) and (2x2 + 1) are three consecutive terms of an A.P. Find the possible values of x?",
+   "options": {
+    "A": "1 2  and 3",
+    "B": "\u2212 1 2  and 3 2",
+    "C": "3 2  and \u22121",
+    "D": "none of the above"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0208",
+   "type": "mcq",
+   "stem": "Find the sum of the multiple of 7 between 50 and 200",
+   "options": {
+    "A": "1082",
+    "B": "1625",
+    "C": "1570",
+    "D": "2646"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0209",
+   "type": "mcq",
+   "stem": "The second and sixth terms of a G.P (r> 0) are 8 9 and 9 2 respectively. Find the sum of the first 6th terms",
+   "options": {
+    "A": "229 38",
+    "B": "665 54",
+    "C": "1028 3",
+    "D": "1651 7"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0210",
+   "type": "mcq",
+   "stem": "Find the number of elements in the power set of the set {1, 2, x, y, z}",
+   "options": {
+    "A": "5",
+    "B": "25",
+    "C": "120",
+    "D": "32"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0211",
+   "type": "mcq",
+   "stem": "A matrix which equals its transpose is called",
+   "options": {
+    "A": "symmetric matrix",
+    "B": "transpose matrix",
+    "C": "square matrix",
+    "D": "none of the above"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0212",
+   "type": "mcq",
+   "stem": "The sum of the first n terms of a finite G.P. whose ratio is less than one is",
+   "options": {
+    "A": "a( 1\u2212rn 1\u2212r)",
+    "B": "a( rn\u22121 r\u22121 )",
+    "C": "a( 1\u2212rn r\u22121 )",
+    "D": "a( rn\u22121 1\u2212r)"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0213",
+   "type": "mcq",
+   "stem": "Sum the integers between 1 and 1000 inclusive",
+   "options": {
+    "A": "500600",
+    "B": "500500",
+    "C": "600500",
+    "D": "500502"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0214",
+   "type": "mcq",
+   "stem": "_____________ is the root of an arithmetric number whose value cannot be obtained exactly",
+   "options": {
+    "A": "polynomial",
+    "B": "surd",
+    "C": "equation",
+    "D": "expression"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0215",
+   "type": "mcq",
+   "stem": "Rationalize 3\u221a2\u22125\u221a3 \u221a2\u2212\u221a3",
+   "options": {
+    "A": "9 \u22122\u221a6",
+    "B": "5 + 2\u221a6",
+    "C": "5 \u22122\u221a6",
+    "D": "9 + 2\u221a6"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0216",
+   "type": "mcq",
+   "stem": "Rationalize the surd 2\u221a2\u2212\u221a3 \u221a2+\u221a3",
+   "options": {
+    "A": "7 + 3\u221a6",
+    "B": "7 \u22123\u221a6",
+    "C": "3 \u2212\u221a6",
+    "D": "3 + \u221a6"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0217",
+   "type": "mcq",
+   "stem": "Find the square root of 7 \u22122\u221a10",
+   "options": {
+    "A": "\u00b1(\u221a5 \u2212\u221a2)",
+    "B": "\u00b1(\u221a7 \u2212\u221a5)",
+    "C": "\u00b1(\u221a5 \u2212\u221a7)",
+    "D": "\u00b1(\u221a2 \u2212\u221a5)"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0218",
+   "type": "mcq",
+   "stem": "Find the square root of the conjugate of 7 + 2\u221a10",
+   "options": {
+    "A": "\u00b1(\u221a5 \u2212\u221a2)",
+    "B": "\u00b1(\u221a7 \u2212\u221a5)",
+    "C": "\u00b1(\u221a5 \u2212\u221a7)",
+    "D": "\u00b1(\u221a2 \u2212\u221a5)"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0219",
+   "type": "mcq",
+   "stem": "Find the square root of 5 \u22122\u221a6",
+   "options": {
+    "A": "\u00b1(\u221a3 \u22122)",
+    "B": "\u00b1(\u221a3 \u2212\u221a2)",
+    "C": "\u00b1(\u221a2 \u2212\u221a3)",
+    "D": "(\u221a3 \u2212\u221a2)"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0220",
+   "type": "mcq",
+   "stem": "Solve for x in the surd equation \u221a2x\u22122 \u2212\u221ax\u22122 = \u221ax",
+   "options": {
+    "A": "1 and 2",
+    "B": "0 and 1",
+    "C": "0 and 2",
+    "D": "2 and 3"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0221",
+   "type": "mcq",
+   "stem": "Factorize 2x3 \u22129x2 + 3x+ 4 completely",
+   "options": {
+    "A": "(x\u22121)(x\u22124)(2x\u22121)",
+    "B": "(x\u22121)(x\u2212 4)(2x+ 1)",
+    "C": "(x+ 1)(x\u22124)(2x+ 1)",
+    "D": "(x+ 1)(x+ 4)(2x+ 1)"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0222",
+   "type": "mcq",
+   "stem": "Given that (x\u22121) is a factor of the equation 2x4 \u22123x3 \u2212px2 + 33x\u221218 = 0, what is p?",
+   "options": {
+    "A": "11",
+    "B": "12",
+    "C": "13",
+    "D": "14"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0223",
+   "type": "mcq",
+   "stem": "Determine the values of p and q if (x\u22121) and (x+ 2) are factors of 2x3 + px2 \u2212x+ q",
+   "options": {
+    "A": "p= 5, q= \u22126",
+    "B": "p= 3, q= \u22123",
+    "C": "p= 4, q= 5",
+    "D": "p= 3, q= 5"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0224",
+   "type": "mcq",
+   "stem": "If one of the zeroes of the polynomial p(x) = x2 + qx+ 6 is 3, find the value of the constant q",
+   "options": {
+    "A": "5",
+    "B": "\u22125",
+    "C": "6",
+    "D": "\u22126"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0225",
+   "type": "mcq",
+   "stem": "If x= \u22123 and x= 1 are zeros of the polynomial ax3 + x2 + bx+ 15, where a and b are constants. Find the value of a\u2212b",
+   "options": {
+    "A": "20",
+    "B": "21",
+    "C": "22",
+    "D": "23"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0226",
+   "type": "mcq",
+   "stem": "For what value of P is (x\u22121) a factor of the polynomial 2x4 \u22123x3 \u2212Px2 + 33x\u221218?",
+   "options": {
+    "A": "11",
+    "B": "12",
+    "C": "13",
+    "D": "14"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0227",
+   "type": "mcq",
+   "stem": "Solve for x an evaluate x2+1 x if 5x4 \u221236x3 + 62x2 \u221236x+ 5 = 0",
+   "options": {
+    "A": "21 5 , 3",
+    "B": "22 5 , 3",
+    "C": "24 5 , 2",
+    "D": "26 5 , 2"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0228",
+   "type": "mcq",
+   "stem": "Find the roots of the equation x3 + 5x2 \u22122x\u221224 = 0",
+   "options": {
+    "A": "2, 3, and \u22124",
+    "B": "2, \u22123, and \u22124",
+    "C": "2, 3, and 4",
+    "D": "\u22122, \u22123, and \u22124"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0229",
+   "type": "mcq",
+   "stem": "Factorize the equation x3 + 5x2 \u22122x\u221224 = 0",
+   "options": {
+    "A": "(x+ 2)(x+ 3)(x\u22124)",
+    "B": "(x\u22122)(x\u2212 3)(x\u22124)",
+    "C": "(x\u22122)(x+ 3)(x+ 4)",
+    "D": "(x+ 2)(x+ 3)(x+ 4)"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0230",
+   "type": "mcq",
+   "stem": "Resolve 5x2+9x\u22121 (2x+3)(x2+5x+2)",
+   "options": {
+    "A": "2 2x+4 + 2x\u22121 x2+5x+8",
+    "B": "1 2x+3 + 2x\u22121 x2+5x+2",
+    "C": "2x+3 3x+5+6 + 1 2x+8",
+    "D": "4 9x+3 + 2x+7 3x2+5x+1"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0231",
+   "type": "mcq",
+   "stem": "Resolve x+7 x2\u22127x+10 into partial fraction",
+   "options": {
+    "A": "2 x\u22125 + 3 x\u22122",
+    "B": "3 x2+2 + 6 3x+7",
+    "C": "4 x\u22125 + 3 7x+8",
+    "D": "4 x\u22125 \u2212 3 x\u22122"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0232",
+   "type": "mcq",
+   "stem": "Resolve 14x2+31x+5 (x\u22121)(2x+3)2 into partial fraction",
+   "options": {
+    "A": "2 x\u22121 + 3 2x+3 + 4 (2x+3)2",
+    "B": "2x+1 x\u22121 + 4 3x2+2 + 1 2x",
+    "C": "2x\u22125 x2+3 + 3 2x+3",
+    "D": "4x+7 x\u22121 + 2 3x+1 + 5 x+2"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0233",
+   "type": "mcq",
+   "stem": "Resolve 3x2 x2\u22125x+4 into partial fraction",
+   "options": {
+    "A": "3 + 16 (x\u22124) \u2212 1 (x\u22121)",
+    "B": "1 x\u22124 + 1 x\u22121",
+    "C": "4 + 15 x\u22124 \u2212 1 x\u22121",
+    "D": "16 x\u22124 \u2212 1 x\u22121"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0234",
+   "type": "mcq",
+   "stem": "Resolve 7x2\u221218x\u22127 (x\u22124)(2x2\u22126x+3) into partial fraction",
+   "options": {
+    "A": "3x+ 2 + 7x\u22123 x2\u2212x\u22126",
+    "B": "2x+1 x2\u22121 \u2212 2 x\u22121 + 1 (x\u22121)2",
+    "C": "x\u22121 x2+1 + 2x x\u22121 + 2 x+1",
+    "D": "3 x\u22124 + x+4 2x2\u22126x+3"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0235",
+   "type": "mcq",
+   "stem": "Resolve 8x\u221272 (x+1)(x\u22123)2 into its partial fraction",
+   "options": {
+    "A": "8 x+1 + (2x\u22121) x2\u22129",
+    "B": "5 x+1 \u2212 5 x\u22123 \u2212 12 (x\u22123)2",
+    "C": "5 x+1 \u2212 5 x\u22123 + 12 (x\u22123)2",
+    "D": "8 x+1 + 5x\u221272 x2\u221232"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0236",
+   "type": "mcq",
+   "stem": "Resolve 3x3\u2212x2\u221213x\u221213 x2\u2212x\u22126 into partial fraction",
+   "options": {
+    "A": "2x+1 x2+1 \u2212 2 x\u22121 + 1 (x\u22121)2",
+    "B": "3x+ 2 + 7x\u22121 x2\u2212x\u22126",
+    "C": "2 x2+1 \u2212 x+1 x\u22121 + 2 (x\u22121)2",
+    "D": "x\u22121 x2+1 \u2212 2x x\u22121 + 2 x+1"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0237",
+   "type": "mcq",
+   "stem": "Resolve into partial fraction 2x\u22121 (x2\u22124)(x2+1)",
+   "options": {
+    "A": "2 20(x\u22122) + 1 4(x+2) + 2x 5(x2+1)",
+    "B": "2x\u22121 + 1 4(x+2) + 1\u22122x 5(x2+1)",
+    "C": "2 20(x\u22122) + 1 4(x+2) + 1\u22122x 5(x2+1)",
+    "D": "3 20(x\u22122) + 1 4(x2\u22121) + 2x\u22121 5(x2+1)"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0238",
+   "type": "mcq",
+   "stem": "Find the value of M if Z\u22123 (1\u2212Z)(Z+2) = M 1\u2212Z+ N Z+2",
+   "options": {
+    "A": "\u2212 2 3",
+    "B": "4",
+    "C": "3 2",
+    "D": "\u22123"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0239",
+   "type": "mcq",
+   "stem": "Given that \u22122 = A(x\u22121)2 + B(x\u22121)(x\u22122) + C(x\u22121), find the value of C",
+   "options": {
+    "A": "5",
+    "B": "4",
+    "C": "3",
+    "D": "2"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0240",
+   "type": "mcq",
+   "stem": "If (a+ b) ( 1 a2 + 1 b2) ( a4 b2 + b4 a2) \u2265K\u221aab, what is the value of K",
+   "options": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "8"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0241",
+   "type": "mcq",
+   "stem": "Simplify a3+b3 a+b",
+   "options": {
+    "A": "2ab",
+    "B": "ab",
+    "C": "3a2b2",
+    "D": "\u221a4ab"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0242",
+   "type": "mcq",
+   "stem": "Simplify 2(a+ b) ( 1 a2 + 1 b2) ( a4 b2 + b4 a2)",
+   "options": {
+    "A": "8ab",
+    "B": "16ab",
+    "C": "12\u221aab",
+    "D": "2ab"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0243",
+   "type": "mcq",
+   "stem": "Simplify (x+ y+ z) ( 1 x+ 1 y+ 1 z)",
+   "options": {
+    "A": "6",
+    "B": "7",
+    "C": "9",
+    "D": "8"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0244",
+   "type": "mcq",
+   "stem": "Solve 2xy= x+ y,   5xz= 6z\u22122x, 3yz= 3y+ 4z",
+   "options": {
+    "A": "x= 2, y= 2 3  and z= \u22121",
+    "B": "x= 1, y= \u22122 and z= 3 2",
+    "C": "x= 3, y= 2 and z= \u22122",
+    "D": "x= 1, y= \u22122 and z= \u22121"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0245",
+   "type": "mcq",
+   "stem": "Solve for x in the equation 52x+1 \u22122(5x+1) + 5 = 0",
+   "options": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0246",
+   "type": "mcq",
+   "stem": "Simplify 2 logax\u22123 loga2x+ logax2",
+   "options": {
+    "A": "loga( x 8)",
+    "B": "loga8x",
+    "C": "loga( x 4)",
+    "D": "loga4x"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0247",
+   "type": "mcq",
+   "stem": "Solve 1 \u221ax+1\u2212\u221ax\u2212 2 \u221ax\u22122+\u221ax= \u221ax+ 1",
+   "options": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0248",
+   "type": "mcq",
+   "stem": "Find y in terms of x in 5 logay\u22122 loga(x2 + 4) = 2 logay+ logax",
+   "options": {
+    "A": "\u221ax(x\u22124)2",
+    "B": "\u221ax(x+ 4) 2",
+    "C": "\u221ax(x+ 4)2 3",
+    "D": "\u221ax(x+ 4)2"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0249",
+   "type": "mcq",
+   "stem": "Simplify 2x+3 \u221215 = 21\u2212x",
+   "options": {
+    "A": "0",
+    "B": "2",
+    "C": "\u2212 1 8",
+    "D": "1"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0250",
+   "type": "mcq",
+   "stem": "Simplify 52x+ 1 = 26(5x\u22121)",
+   "options": {
+    "A": "1, 1",
+    "B": "1, 2",
+    "C": "\u22121, 1",
+    "D": "2, 1"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0251",
+   "type": "mcq",
+   "stem": "The set of values x and y which satisfies the equation x2 \u2212y\u22121 = 0 and y\u22122x+ 2 = 0 is ________________",
+   "options": {
+    "A": "x= 1, y= 0",
+    "B": "x= 1, y= 1",
+    "C": "x= 0, y= 1",
+    "D": "x= \u22121, y= \u22122"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0252",
+   "type": "mcq",
+   "stem": "Simplify 3(2n+1)\u22124(2n\u22121) 2n+1\u22122n",
+   "options": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0253",
+   "type": "mcq",
+   "stem": "If \u221ax2 + 9 = x+ 1, solve for x",
+   "options": {
+    "A": "5",
+    "B": "8",
+    "C": "4",
+    "D": "6"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0254",
+   "type": "mcq",
+   "stem": "If x= 2 \u2212\u221a2, evaluate x2 + 4 x2",
+   "options": {
+    "A": "10",
+    "B": "20",
+    "C": "13",
+    "D": "12"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0255",
+   "type": "mcq",
+   "stem": "Solve the pair of equation xy= 10 \u2212(\u22121), 2(log10 x\u22121) = log10 y",
+   "options": {
+    "A": "x= 10, y= 1",
+    "B": "x= 5, y= 2",
+    "C": "x= 15, y= 16",
+    "D": "x= 8, y= 2"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0256",
+   "type": "mcq",
+   "stem": "Rationalize \u221a1+x+\u221ax \u221a1+x\u2212\u221ax",
+   "options": {
+    "A": "1 + x+ 2\u221ax(1 \u2212x)",
+    "B": "1 + 2x+ 2\u221ax(1 + x)",
+    "C": "1 \u22122x+ 2\u221ax(1 + x)",
+    "D": "1 + 2x\u22122\u221ax(2 + x)"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0257",
+   "type": "mcq",
+   "stem": "Simplify \u221a18x2 + \u221a48x4 + \u221ax8",
+   "options": {
+    "A": "5x",
+    "B": "6x",
+    "C": "10x",
+    "D": "3x"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0258",
+   "type": "mcq",
+   "stem": "If (x2y\u22123z) 3 4 x\u22121y4z6 = xpyqzr, evaluate 2p\u2212q+ r?",
+   "options": {
+    "A": "5",
+    "B": "6",
+    "C": "10",
+    "D": "8"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0259",
+   "type": "mcq",
+   "stem": "Simplify log10 w 1 2 + 1 4 log10 w\u2212 1 12 log10 w7",
+   "options": {
+    "A": "1 5 log10 w",
+    "B": "log10 w",
+    "C": "4 log10 w",
+    "D": "1 6 log10 w"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0260",
+   "type": "mcq",
+   "stem": "Given that y= \u221apx+q+\u221apx\u2212q \u221apx+q\u2212\u221apx\u2212q, what is the value of y+ 1 y?",
+   "options": {
+    "A": "2px q",
+    "B": "px q",
+    "C": "4qx p",
+    "D": "3q px"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0261",
+   "type": "mcq",
+   "stem": "A geometric sequence is defined by \u221a2 \u22121, 3 \u22122\u221a2. Find the common ratio",
+   "options": {
+    "A": "\u221a3 \u22122",
+    "B": "\u221a2 \u22121",
+    "C": "\u221a3 \u22121",
+    "D": "\u221a2 \u22122"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0262",
+   "type": "mcq",
+   "stem": "The sum of the first 4 terms of an exponential sequence is 15 and the common ratio is 1 2, find the first term of the sequence",
+   "options": {
+    "A": "1",
+    "B": "2",
+    "C": "4",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0263",
+   "type": "mcq",
+   "stem": "Which term of the sequence 1024, 512, 256 is 1 8",
+   "options": {
+    "A": "n= 12",
+    "B": "n= 13",
+    "C": "n= 14",
+    "D": "n= 15"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0264",
+   "type": "mcq",
+   "stem": "The sum of the first 3 terms of a linear sequence is 18. Find their product, if the first term is 4",
+   "options": {
+    "A": "150",
+    "B": "184",
+    "C": "176",
+    "D": "192"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0265",
+   "type": "mcq",
+   "stem": "Valuate u5 u6 if the nth term of the sequence is given as 128 ( 1 4) n\u22121",
+   "options": {
+    "A": "2",
+    "B": "8",
+    "C": "6",
+    "D": "4"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0266",
+   "type": "mcq",
+   "stem": "The first term of an A.P is \u22127 and the ratio of the 8th term to the 3rd term is 7:1, calculate the common difference?",
+   "options": {
+    "A": "d= 4",
+    "B": "d= 6",
+    "C": "d= 7",
+    "D": "d= 3"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0267",
+   "type": "mcq",
+   "stem": "The nth term of a sequence is log16(n+ 3). What is the difference between 13th and the first term?",
+   "options": {
+    "A": "2",
+    "B": "2 3",
+    "C": "1 2",
+    "D": "4"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0268",
+   "type": "mcq",
+   "stem": "Find the first four terms of the sequence whose general term is given by Un= n+1 3n+2",
+   "options": {
+    "A": "2 5 , 3 8 , 4 11 , 5 14",
+    "B": "3 8 , 5 14 , 6 16 , 8 17",
+    "C": "2 8 , 4 11 , 6 14 , 8 18",
+    "D": "2 3 , 3 5 , 4 7 , 5 9"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0269",
+   "type": "mcq",
+   "stem": "The nth term of a sequence is 22n\u22121. Which term of the sequence is 29?",
+   "options": {
+    "A": "4",
+    "B": "7",
+    "C": "5",
+    "D": "6"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0270",
+   "type": "mcq",
+   "stem": "The nth term of a sequence is given by (\u22121)n\u22121 \u00d7 2n\u22121. Find the sum of the second and the third term",
+   "options": {
+    "A": "2",
+    "B": "\u22122",
+    "C": "3",
+    "D": "\u22123"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0271",
+   "type": "mcq",
+   "stem": "The nth term of a sequence is defined by un= 32 ( 1 3) n , find u5 u6",
+   "options": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0272",
+   "type": "mcq",
+   "stem": "The nth term of a sequence is 5 + (n\u22121)2. Evaluate u4 \u2212u6",
+   "options": {
+    "A": "\u221213",
+    "B": "\u221220",
+    "C": "\u22129",
+    "D": "\u221216"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0273",
+   "type": "mcq",
+   "stem": "If (x+ 1), 1 2 x and x\u22125 are the first 3 terms of a linear sequence, find their common difference",
+   "options": {
+    "A": "4",
+    "B": "\u22125",
+    "C": "3",
+    "D": "\u22123"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0274",
+   "type": "mcq",
+   "stem": "Find the 15th term of the sequence \u22123, 2, 7 ....",
+   "options": {
+    "A": "60",
+    "B": "67",
+    "C": "70",
+    "D": "82"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0275",
+   "type": "mcq",
+   "stem": "Find the number of terms in an A.P given that the 1st and last term are x are 37x respectively and its common difference is 4x",
+   "options": {
+    "A": "10",
+    "B": "13",
+    "C": "32",
+    "D": "19"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0276",
+   "type": "mcq",
+   "stem": "Find the first term?",
+   "options": {
+    "A": "\u2212 67 2",
+    "B": "65 2",
+    "C": "57 2",
+    "D": "\u2212 63 2"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0277",
+   "type": "mcq",
+   "stem": "The 1st term of a linear sequence is twice the common difference. Find the 5th term of the sequence?",
+   "options": {
+    "A": "3d",
+    "B": "9d",
+    "C": "6d",
+    "D": "2d"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0278",
+   "type": "mcq",
+   "stem": "Calculate the common difference of the progression.",
+   "options": {
+    "A": "3",
+    "B": "5",
+    "C": "8",
+    "D": "6"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0279",
+   "type": "mcq",
+   "stem": "Find the value of the constant P from which we have 2P\u22121, 5P+ 3, 11 are first 3terms of an A.P",
+   "options": {
+    "A": "3",
+    "B": "1 2",
+    "C": "3 2",
+    "D": "2"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0280",
+   "type": "mcq",
+   "stem": "The 6th and 13th term of an AP and 0 and 14 respectively. Find the first term of an A.P?",
+   "options": {
+    "A": "\u22129",
+    "B": "\u221210",
+    "C": "9",
+    "D": "10"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0281",
+   "type": "mcq",
+   "stem": "In a certain linear sequence, the sum of the first and 5th term is 18 and 5th term is 6 more than the 3rd term. Find the sum of the first 10 terms of the sequence",
+   "options": {
+    "A": "180",
+    "B": "178",
+    "C": "165",
+    "D": "159"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0282",
+   "type": "mcq",
+   "stem": "The first term of an A.P is \u22127 and the ratio of the 8th term to the 3rd term is 7:1. If the sum of the first nth term is 120, find the number of terms of the sequence?",
+   "options": {
+    "A": "9",
+    "B": "8",
+    "C": "7",
+    "D": "6"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0283",
+   "type": "mcq",
+   "stem": "Find the last term of a linear sequence, if the sum of the first 6th term is 30 and 1st term is \u22125?",
+   "options": {
+    "A": "12",
+    "B": "13",
+    "C": "14",
+    "D": "15"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0284",
+   "type": "mcq",
+   "stem": "In a certain linear sequence, the sum of the third term and the next fourth term is 18, what is the next fourth term?",
+   "options": {
+    "A": "9 + 2d",
+    "B": "9 \u22122d",
+    "C": "9 + 4d",
+    "D": "6 \u22122d"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0285",
+   "type": "mcq",
+   "stem": "Find the arithmetric mean between 4 and 8",
+   "options": {
+    "A": "6",
+    "B": "8",
+    "C": "9",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0286",
+   "type": "mcq",
+   "stem": "What are the values of b, c and d in the A.P of 8, b, c, d, 20?",
+   "options": {
+    "A": "12, 16, 19",
+    "B": "11, 14, 17",
+    "C": "14, 16, 18",
+    "D": "13, 19, 23"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0287",
+   "type": "mcq",
+   "stem": "Find the three arithmetric mean between \u22123  and 21",
+   "options": {
+    "A": "2, 4, 6, 8, 10",
+    "B": "5, 8, 11, 14, 17",
+    "C": "1, 5, 9, 13, 17",
+    "D": "4, 6, 10, 14"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0288",
+   "type": "mcq",
+   "stem": "The number p\u22124, p+ 2, 3p+ 1 are in G.P, find the two possible values of the common ratio",
+   "options": {
+    "A": "3 4  or \u2212 1 3",
+    "B": "5 2  or \u2212 1 3",
+    "C": "4 5  or 3 4",
+    "D": "3 4  or \u2212 5 2"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0289",
+   "type": "mcq",
+   "stem": "Find the common ratio of an exponential sequence of log p, log p2 , log p4",
+   "options": {
+    "A": "9",
+    "B": "6",
+    "C": "4",
+    "D": "2"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0290",
+   "type": "mcq",
+   "stem": "Find the common ratio of the tree consecutive terms of sin x, cos x, \u2212sin x",
+   "options": {
+    "A": "sin x",
+    "B": "cosx",
+    "C": "tan x",
+    "D": "cot x"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0291",
+   "type": "mcq",
+   "stem": "Find the 7th term of an exponential sequence of the form 5, 10, 20, 40",
+   "options": {
+    "A": "280",
+    "B": "300",
+    "C": "320",
+    "D": "330"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0292",
+   "type": "mcq",
+   "stem": "Find the nth term of the sequence 1 2 , 1 4 , 1 8",
+   "options": {
+    "A": "1 2 ( 1 2) n\u22121",
+    "B": "( 1 2) n",
+    "C": "( 1 2) n\u22121",
+    "D": "1 2 ( 1 2) n"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0293",
+   "type": "mcq",
+   "stem": "An exponential sequence is such that the 3rd term minus the 1st term is 48. The fourth term minus the second term is 144. Find the 6th term of the sequence",
+   "options": {
+    "A": "1428",
+    "B": "1458",
+    "C": "1548",
+    "D": "1287"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0294",
+   "type": "mcq",
+   "stem": "Find the geometric mean between 3 and 27",
+   "options": {
+    "A": "10",
+    "B": "6",
+    "C": "9",
+    "D": "8"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0295",
+   "type": "mcq",
+   "stem": "Find the sum of the 8th term of a G.P 12, 6, 3",
+   "options": {
+    "A": "765 32",
+    "B": "756 31",
+    "C": "765 31",
+    "D": "756 32"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0296",
+   "type": "mcq",
+   "stem": "The fourth and the 7th term of a G.P are 24 and 192 respectively. Find the sum of the first 6 terms",
+   "options": {
+    "A": "189",
+    "B": "190",
+    "C": "179",
+    "D": "182"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0297",
+   "type": "mcq",
+   "stem": "How many terms of the sequence 5, 15, 45, 135.... Must be taken for the sum to exceed 200",
+   "options": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0298",
+   "type": "mcq",
+   "stem": "Find the sum to infinity of the series 1, + 1 2 + 1 4 + 1 8 +. ... ... ....",
+   "options": {
+    "A": "4",
+    "B": "5",
+    "C": "2",
+    "D": "3"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0299",
+   "type": "mcq",
+   "stem": "The fourth and 8th term of a G.P are 24 and 8 27 respectively. Find the two possible values of a and r",
+   "options": {
+    "A": "a= \u00b1469, r= \u00b1 1 4",
+    "B": "a= \u00b1846, r= \u00b13",
+    "C": "a\u00b1 640, r= \u00b1 1 5",
+    "D": "a= \u00b1648, r= \u00b1 1 3"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0300",
+   "type": "mcq",
+   "stem": "Find a formula for the nth term of an A.P 12, 5, \u22122 ... ...",
+   "options": {
+    "A": "19 + 7n",
+    "B": "18 \u22126n",
+    "C": "10 \u22127n",
+    "D": "19 \u22127n"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0301",
+   "type": "mcq",
+   "stem": "Find the sum of the first 20 terms of 2 + 5 + 8+. ... ... ... ...",
+   "options": {
+    "A": "610",
+    "B": "660",
+    "C": "650",
+    "D": "630"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0302",
+   "type": "mcq",
+   "stem": "Given that 2 \u22123k, 2k+ 3, k+ 7 are consecutive terms in a linear sequence, find the common difference",
+   "options": {
+    "A": "1 2",
+    "B": "4 3",
+    "C": "3 1 2",
+    "D": "2 3 5"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0303",
+   "type": "mcq",
+   "stem": "A sequence is defined by 2 + \u221a3, 5 + \u221a3, 8 + \u221a3+. ... ... ... ... Find the 6th term of the sequence?",
+   "options": {
+    "A": "17 \u2212\u221a3",
+    "B": "17 + \u221a3",
+    "C": "15 \u2212\u221a3",
+    "D": "15 + \u221a3"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0304",
+   "type": "mcq",
+   "stem": "Given the sequence 5, 1, \u2212 3........... which term of the sequence is \u221275",
+   "options": {
+    "A": "22nd",
+    "B": "21st",
+    "C": "24th",
+    "D": "25th"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0305",
+   "type": "mcq",
+   "stem": "What is the sum of integers from 1 to 1000",
+   "options": {
+    "A": "510501",
+    "B": "500510",
+    "C": "501510",
+    "D": "500500"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0306",
+   "type": "mcq",
+   "stem": "The 3rd and 9th terms of a linear sequence are 4p\u22122q and 10p\u22128q respectively. Obtain the common difference",
+   "options": {
+    "D": "",
+    "A": "p+ q",
+    "B": "q\u2212p",
+    "C": "p\u2212q"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0307",
+   "type": "mcq",
+   "stem": "The sum of the first n terms of an A.P whose difference is not zero equals half the sum of its subsequent n members. Find the ratio of the sum of the first 3n terms and the sum of the first n terms",
+   "options": {
+    "A": "4",
+    "B": "6",
+    "C": "7",
+    "D": "9"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0308",
+   "type": "mcq",
+   "stem": "Find the sum to infinity of the geometric series 5 \u2212 10 3 + 20 9 \u2212 40 27 +. ... ... ...",
+   "options": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "3"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0309",
+   "type": "mcq",
+   "stem": "In the binomial expansion of (x\u22123y)5, what is the coefficient of x2y3",
+   "options": {
+    "A": "209",
+    "B": "190",
+    "C": "\u2212280",
+    "D": "\u2212270"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0310",
+   "type": "mcq",
+   "stem": "Find the greatest coefficient in the binomial expansion of (3x+ 1)8",
+   "options": {
+    "A": "20421",
+    "B": "20412",
+    "C": "20444",
+    "D": "20123"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0311",
+   "type": "mcq",
+   "stem": "Find the greatest coefficient in the expansion of (2x+ 3)6",
+   "options": {
+    "A": "4089",
+    "B": "4190",
+    "C": "4900",
+    "D": "4860"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0312",
+   "type": "mcq",
+   "stem": "Find the largest coefficient in (3x\u22122)3",
+   "options": {
+    "A": "36",
+    "B": "38",
+    "C": "29",
+    "D": "40"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0313",
+   "type": "mcq",
+   "stem": "Find the greatest coefficient in the expansion of (6 \u22124x)\u22123",
+   "options": {
+    "A": "0.0137",
+    "B": "0.701",
+    "C": "0.0317",
+    "D": "0.1073"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0314",
+   "type": "mcq",
+   "stem": "Find the greatest coefficient of the expression (7 + 5x)\u22123",
+   "options": {
+    "A": "0.0141",
+    "B": "0.0411",
+    "C": "0.0114",
+    "D": "0.0104"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0315",
+   "type": "mcq",
+   "stem": "What is C n r+nCr+1?",
+   "options": {
+    "A": "n+1 (n\u2212r)!r!",
+    "B": "(n+1)! (n\u2212r)!(r+1)!",
+    "C": "n+1 (n\u2212r\u22121)(r+1)",
+    "D": "(n+1)! (n\u2212r+1)!r!"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0316",
+   "type": "mcq",
+   "stem": "The relationship between combination and permutation is _____________",
+   "options": {
+    "A": "C n r= nPr (r\u22121)!",
+    "B": "C n r= P n r Cr",
+    "C": "C n r= P n r r!",
+    "D": "C n r= P n r n!"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0317",
+   "type": "mcq",
+   "stem": "Find the term independent of y in the expression (y4 + 3 y2) 36",
+   "options": {
+    "A": "3.54 \u00d7 1010",
+    "B": "3.54 \u00d7 1020",
+    "C": "3.45 \u00d7 1010",
+    "D": "3.45 \u00d7 1020"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0318",
+   "type": "mcq",
+   "stem": "Find the constant term in the expansion of (2x2 \u2212 1 x) 6 using the binomial expansion",
+   "options": {
+    "A": "40",
+    "B": "50",
+    "C": "60",
+    "D": "70"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0319",
+   "type": "mcq",
+   "stem": "If P n 3 C n4 = 6, what is the value of n",
+   "options": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "8"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0320",
+   "type": "mcq",
+   "stem": "What is the coefficient of x4 in the expansion of (1 + x)(1 \u2212x)n",
+   "options": {
+    "A": "C n 4 \u2212 C n 3",
+    "B": "C n 5 \u2212 C n 3",
+    "C": "C n 3 \u2212 C n 1",
+    "D": "C n 4 \u2212 C n 2"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0321",
+   "type": "mcq",
+   "stem": "Find the term in x2 in the expansion of (1 \u2212 1 2x) 12",
+   "options": {
+    "A": "\u2212 99 4 x2",
+    "B": "99 4 x",
+    "C": "99 4 x2",
+    "D": "\u2212 99 4 x"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0322",
+   "type": "mcq",
+   "stem": "Find the term independent of x in the expansion of (x\u2212 1 2x) 12",
+   "options": {
+    "A": "200 17",
+    "B": "231 16",
+    "C": "213 16",
+    "D": "231 17"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0323",
+   "type": "mcq",
+   "stem": "Einstein\u2019s theory of relativity predicts that if a stick l moves with a velocity in the direction of its length, it will shrink by a factor \u221a(1 \u2212 V2 C2) where C is the speed of light. What is the ZENITH TUTORIALS MTH 101 PDF approximate low speed by taking the first two terms of the expansion?",
+   "options": {
+    "A": "1 + V 2C2",
+    "B": "1 \u2212 V2 2C",
+    "C": "1 \u2212 V 2C",
+    "D": "1 \u2212 V2 2C2"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0324",
+   "type": "mcq",
+   "stem": "Using the expansion of (+8x)4 = (1.04)4, what is the value of x?",
+   "options": {
+    "A": "0.501",
+    "B": "0.006",
+    "C": "0.005",
+    "D": "0.621"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0325",
+   "type": "mcq",
+   "stem": "If Kx4 is a term in the binomial expansion of (1 + 2x)5, what is the value of K?",
+   "options": {
+    "A": "60",
+    "B": "70",
+    "C": "80",
+    "D": "90"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0326",
+   "type": "mcq",
+   "stem": "The coefficient of x2 in the inomial expansion of (1 + bx)5 is 40, what is the value of b?",
+   "options": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0327",
+   "type": "mcq",
+   "stem": "If the first three terms of the expansion of (1 + px)5 in ascending powers of x are 1 + 20x+ 160x2, what is the value of p?",
+   "options": {
+    "A": "4",
+    "B": "3",
+    "C": "2",
+    "D": "1"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0328",
+   "type": "mcq",
+   "stem": "Given that Px3 and Qx4 are two consecutive terms in the binomial expansion of (1 + 4x)6, what is P+ Q?",
+   "options": {
+    "A": "5020",
+    "B": "5120",
+    "C": "5310",
+    "D": "5210"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0329",
+   "type": "mcq",
+   "stem": "What is the square root of the greatest coefficient in the expansion of (2x+ 3)6",
+   "options": {
+    "A": "16\u221a14",
+    "B": "18\u221a15",
+    "C": "18\u221a20",
+    "D": "12\u221a10"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0330",
+   "type": "mcq",
+   "stem": "Given that C n r= C n n\u2212r, solve the equation C 12 1\u22123y= C 12 1\u22122y",
+   "options": {
+    "A": "2",
+    "B": "3",
+    "C": "\u22122",
+    "D": "\u22123"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0331",
+   "type": "mcq",
+   "stem": "Given that C n r= C n n\u2212r, solve the equation C 16 4+3x= C 16 x",
+   "options": {
+    "A": "x= 4",
+    "B": "x= 5",
+    "C": "x= 2",
+    "D": "x= 3"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0332",
+   "type": "mcq",
+   "stem": "_____________ are regarded as the vertical lines of the entries",
+   "options": {
+    "A": "columns of the matrix",
+    "B": "rows of the matrix",
+    "C": "determinant of the matrix",
+    "D": "transpose of the matrix"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0333",
+   "type": "mcq",
+   "stem": "A matrix that has equal number of rows as column is called ____________",
+   "options": {
+    "A": "row matrix",
+    "B": "null matrix",
+    "C": "square matrix",
+    "D": "diagonal matrix"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0334",
+   "type": "mcq",
+   "stem": "A matrix in which all elements are zero except the leading elements is called _______________",
+   "options": {
+    "A": "row matrix",
+    "B": "identity matrix",
+    "C": "null matrix",
+    "D": "diagonal matrix"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0335",
+   "type": "mcq",
+   "stem": "A matrix whose elements are all zero is called _______________",
+   "options": {
+    "A": "singular matrix",
+    "B": "null matrix",
+    "C": "identity matrix",
+    "D": "symmetric matrix"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0336",
+   "type": "mcq",
+   "stem": "A matrix whose determinant is zero is called _______________",
+   "options": {
+    "A": "singular matrix",
+    "B": "null matrix",
+    "C": "identity matrix",
+    "D": "symmetric matrix"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0337",
+   "type": "mcq",
+   "stem": "A matrix whose determinant is not equal to zero is _____________",
+   "options": {
+    "A": "singular matrix",
+    "B": "null matrix",
+    "C": "identity matrix",
+    "D": "non-singular matrix"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0338",
+   "type": "mcq",
+   "stem": "____________ is a matrix that has only one column",
+   "options": {
+    "A": "row matrix",
+    "B": "column matrix",
+    "C": "square matrix",
+    "D": "diagonal matrix"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0339",
+   "type": "mcq",
+   "stem": "____________ is a matrix that has only one row",
+   "options": {
+    "A": "row matrix",
+    "B": "column matrix",
+    "C": "square matrix",
+    "D": "diagonal matrix"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0340",
+   "type": "mcq",
+   "stem": "What type of matrix is ( 1 0 0 0 1 0 0 0 1 )",
+   "options": {
+    "A": "singular matrix",
+    "B": "null matrix",
+    "C": "unit/identity matrix",
+    "D": "diagonal matrix"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0341",
+   "type": "mcq",
+   "stem": "Find x and y if (2x\u22125y 6 \u22124 3x+ y) = (10 4 6 \u22122)",
+   "options": {
+    "A": "\u22121, 3",
+    "B": "0, \u22122",
+    "C": "1, 3",
+    "D": "\u22122, 1"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0342",
+   "type": "mcq",
+   "stem": "Given that A= (a b c d), what is AT?",
+   "options": {
+    "A": "(d c b a)",
+    "B": "(a c b d)",
+    "C": "(a b c d)",
+    "D": "(a d b c)"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0343",
+   "type": "mcq",
+   "stem": "A matrix is an Hermitian matrix if",
+   "options": {
+    "A": "A= |A|",
+    "B": "A= A2",
+    "C": "A= AT",
+    "D": "A= A\u2212T"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0344",
+   "type": "mcq",
+   "stem": "If (x y z w) = (1 2 3 4) what are x, y, z, and w?",
+   "options": {
+    "A": "x= 1, y= 2, z= 3, w= 4",
+    "B": "x= 2, y= 3, z= 4, w= 5",
+    "C": "x= 1, y= 1, z= 1, w= 1",
+    "D": "x= 2, y= 1, z= 4, w= 3"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0345",
+   "type": "mcq",
+   "stem": "If (4x\u22123y 5 \u22123 8x\u2212y) = (10 5 \u22123 \u221210) find x and y",
+   "options": {
+    "A": "x= \u22126, y= \u22123",
+    "B": "x= 3, y= 4",
+    "C": "x= \u22122, y= \u22123",
+    "D": "x= \u22122, y= \u22126"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0346",
+   "type": "mcq",
+   "stem": "If ( 2 2x\u2212y 6x\u22125y xy ) = ( 2 8 32 \u22128) find x and y",
+   "options": {
+    "A": "x= 2, y= 3",
+    "B": "x= 2, y= \u22124",
+    "C": "x= \u22123, y= 2",
+    "D": "x= 5, y= \u22123"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0347",
+   "type": "mcq",
+   "stem": "If ( y+ z 0 4 3 3x\u2212y\u2212z 2 x+ y\u22123z 6 5 ) = ( 6 0 4 3 \u22127 2 \u221213 6 5 ) find x, y and z",
+   "options": {
+    "A": "x= \u2212 1 3 , y= 4 3 , z= 14 3",
+    "B": "x= 2 3 , y= 4 3 , z= 11 3",
+    "C": "x= 2 3 , y= \u2212 3 2 , z= \u2212 4 3",
+    "D": "x= 1 3 , 4 3 , z= 14 2"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0348",
+   "type": "mcq",
+   "stem": "If (x2 \u2212x+ 1 7 0 x) = ( 7 7 x2 \u22127x+ 12 x), find x",
+   "options": {
+    "A": "x= 2 or\u22124",
+    "B": "x= \u22122 or\u22124",
+    "C": "x= \u22122 or 3",
+    "D": "x= 3 or 4"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0349",
+   "type": "mcq",
+   "stem": "The matrix (3 2 \u22121 1 0 5 ) is _____________ matrix",
+   "options": {
+    "A": "3 \u00d7 3 matrix",
+    "B": "3 \u00d7 2 matrix",
+    "C": "2 \u00d7 2 matrix",
+    "D": "2 \u00d7 3 matrix"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0350",
+   "type": "mcq",
+   "stem": "The matrix ( 2 3 0 \u22121 2 5 ) is ____________ matrix",
+   "options": {
+    "A": "3 \u00d7 3 matrix",
+    "B": "3 \u00d7 2 matrix",
+    "C": "2 \u00d7 2 matrix",
+    "D": "2 \u00d7 3 matrix"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0351",
+   "type": "mcq",
+   "stem": "If A= (4 2 3 5 \u22121 2) and B= (1 4 3 5 8 0) what are A+ B and A\u2212B",
+   "options": {
+    "A": "A+ B= ( 6 5 6 10 2 7)  A\u2212B= (3 \u22122 0 0 \u22129 2)",
+    "B": "A+ B= (10 2 7 10 6 6)  A\u2212B= (3 2 1 4 \u22126 2)",
+    "C": "A+ B= ( 5 6 6 10 7 2)   A\u2212B= (3 \u22122 0 0 \u22129 2)",
+    "D": "A+ B= ( 4 5 6 10 9 6)    A\u2212B= (\u22122 0 3 1 \u22122 9)"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0352",
+   "type": "mcq",
+   "stem": "If A= ( 1 2 4 3 2 0 ) and B= (3 2 4 6 1 7    1 5) what is AB?",
+   "options": {
+    "A": "( 15 4 18 30 11 37 6 4 8 11 19 2 )",
+    "B": "( 12 5 8 20 11 17 6 4 8 19 11 2 )",
+    "C": "( 4 4 18 16 12 37 6 6 8 11 19 0 )",
+    "D": "( 15 10 18 27 11 37 8 4 6 11 19 2 )"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0353",
+   "type": "mcq",
+   "stem": "If A= (4 7 6 2 1 3) and B= ( 4 2 3 ) find A\u00d7 B?",
+   "options": {
+    "A": "( 16 28 40 )",
+    "B": "(40 22 16 18 21 8 )",
+    "C": "(19 48)",
+    "D": "(48 19)"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0354",
+   "type": "mcq",
+   "stem": "If A= (2 5 7 4) and B= (6 11 7 \u221213) find A\u00d7 B?",
+   "options": {
+    "A": "(43 \u221247 25 70 )",
+    "B": "(47 \u221243 70 25 )",
+    "C": "( 25 70 \u221243 47)",
+    "D": "(70 \u221243 47 25 )"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0355",
+   "type": "mcq",
+   "stem": "If A= ( 2 3 4 5 1 7 9 8 6 ), find AT?",
+   "options": {
+    "A": "( 4 7 6 3 1 8 2 5 9 )",
+    "B": "( 2 3 4 9 8 6 5 1 7 )",
+    "C": "( 2 5 9 3 1 8 4 7 6 )",
+    "D": "( 2 3 4 5 1 7 9 8 6 )"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0356",
+   "type": "mcq",
+   "stem": "If A= (1 7 5 6), find determinant of A",
+   "options": {
+    "A": "\u221229",
+    "B": "29",
+    "C": "\u221242",
+    "D": "36"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0357",
+   "type": "mcq",
+   "stem": "If A= ( 0 1 4 2 3 1 1 4 1 ) what is the determinant of A?",
+   "options": {
+    "A": "12",
+    "B": "24",
+    "C": "22",
+    "D": "19"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0358",
+   "type": "mcq",
+   "stem": "Find the determinant of the matrix G= ( \u22122 0 1 \u22121 1 2 0 8 1 )",
+   "options": {
+    "A": "\u221224",
+    "B": "22",
+    "C": "33",
+    "D": "19"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0359",
+   "type": "mcq",
+   "stem": "Given that A= ( 4 k 1 \u22123 0 \u2212y 2 \u22121 3 ) and B= ( 4 \u22123 2 \u22121 0 \u22121 1 2 3 ) If A= BT, find (k, y)",
+   "options": {
+    "A": "(k, y) = (1, \u22122)",
+    "B": "(k, y) = (\u22121, \u22122)",
+    "C": "(k, y) = (\u22122, \u22121)",
+    "D": "(k, y) = (\u22122, 1)"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0360",
+   "type": "mcq",
+   "stem": "Find the rank of the matrix ( 1 2 3 2 1 3 1 3 4 )",
+   "options": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0361",
+   "type": "mcq",
+   "stem": "Given that A= (2 3 4 1), find A\u22121",
+   "options": {
+    "A": "1 10 ( 1 3 \u22122 \u22124)",
+    "B": "1 \u221210 (\u22123 2 \u22124 1)",
+    "C": "1 10 (1 \u22123 4 \u22122)",
+    "D": "1 \u221210 ( 1 \u22123 \u22124 2 )"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0362",
+   "type": "mcq",
+   "stem": "What is the value of k if | \u22122 1 1 2 1 k 1 3 \u22121 | = 23",
+   "options": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0363",
+   "type": "mcq",
+   "stem": "If X= (1 2 0 3) and Y= (2 1 4 3), find XY",
+   "options": {
+    "A": "(2 2 0 9)",
+    "B": "(3 3 4 6)",
+    "C": "(10 9 7 12)",
+    "D": "(10 7 12 9)"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0364",
+   "type": "mcq",
+   "stem": "If P= ( 3 \u22122 4 5 0 6 7 5 \u22121 ), what is \u22122P?",
+   "options": {
+    "A": "( \u22126 4 \u22128 \u221210 0 \u221212 \u221214 \u221210 2 )",
+    "B": "( 10 0 12 6 \u22124 8 14 10 \u22122 )",
+    "C": "( \u221210 0 8 6 \u22124 12 10 14 \u22122 )",
+    "D": "( 6 4 \u22128 \u221210 0 12 14 10 2 )"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0365",
+   "type": "mcq",
+   "stem": "Find the non-zero positive value of x which satisfies the equation | x 1 0 1 x 1 0 1 x | = 0",
+   "options": {
+    "A": "\u22122",
+    "B": "2",
+    "C": "\u221a2",
+    "D": "1 2"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0366",
+   "type": "mcq",
+   "stem": "Given that Q= (6 0 4 5) and Q+ P= (7 \u22122 6 8 ) Evaluate |Q+ 2P|",
+   "options": {
+    "A": "200",
+    "B": "120",
+    "C": "100",
+    "D": "130"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0367",
+   "type": "mcq",
+   "stem": "The determinant of the matrix ( x 1 0 1 \u2212x 2 3 1 1 + x 4 ) in terms of x is?",
+   "options": {
+    "A": "\u22123x2 + 9x\u22121",
+    "B": "3x+ 1",
+    "C": "3x2 + 8x+ 2",
+    "D": "4x2 + 7x\u22121"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0368",
+   "type": "mcq",
+   "stem": "Given that matrix K= (2 1 3 4), what is the matrix K2 + K+ 1, where I is a 2 \u00d7 2 matrix",
+   "options": {
+    "A": "( 7 10 21 24)",
+    "B": "(21 24 10 7 )",
+    "C": "(10 7 21 24)",
+    "D": "(10 21 7 24)"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0369",
+   "type": "mcq",
+   "stem": "If the matrix P has an inverse P\u22121 = (1 \u22123 0 1 ) what is P?",
+   "options": {
+    "A": "(1 0 0 1)",
+    "B": "(1 3 1 0)",
+    "C": "(1 0 3 1)",
+    "D": "(1 3 0 1)"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0370",
+   "type": "mcq",
+   "stem": "If |\u2212x 2 4x 1| = |3 3x 4 \u22125|, what is the value of x?",
+   "options": {
+    "A": "4",
+    "B": "\u22124",
+    "C": "\u22125",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0371",
+   "type": "mcq",
+   "stem": "The inverse of the matrix (2 1 1 1) is",
+   "options": {
+    "A": "( 1 \u22121 \u22121 2 )",
+    "B": "(\u22121 1 1 \u22122)",
+    "C": "(1 1 1 2)",
+    "D": "(1 \u22121 1 \u22122)"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0372",
+   "type": "mcq",
+   "stem": "Given that A= ( 1 1 \u2212i 2 + i 3 ), what is A\u0305?",
+   "options": {
+    "A": "( 1 1 + i 2 \u2212i 3 )",
+    "B": "( 1 1 \u2212i 2 \u2212i \u22123 )",
+    "C": "( \u22121 \u22121 + i 2 + 1 \u22123 )",
+    "D": "( 3 1 + i 2 \u2212i 3 )"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0373",
+   "type": "mcq",
+   "stem": "Given the matrix A= ( 1 0 10 1 1 1 4 1 2 ) what is A\u22121",
+   "options": {
+    "A": "( 1 1 4 0 1 1 10 1 2 )",
+    "B": "( 10 1 2 0 1 1 1 1 4 )",
+    "C": "( 1 0 0 \u22122 2 1 \u22123 1 1 )",
+    "D": "( 1 0 0 2 2 \u22121 \u22123 \u22121 1 )"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-mth101-bank-0374",
+   "type": "mcq",
+   "stem": "The product of a (p\u00d7 q) matrix and a (q\u00d7 r) matrix will result in ________________",
+   "options": {
+    "A": "(p\u00d7 q)",
+    "B": "(p\u00d7 r)",
+    "C": "(q\u00d7 r)",
+    "D": "(p\u00d7 q\u00d7 r)"
+   },
+   "marks": 1,
+   "answer": "B"
+  }
+ ],
+ "category": "university",
+ "body": "University Modules"
+}

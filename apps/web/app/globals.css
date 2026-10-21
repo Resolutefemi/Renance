@@ -1,0 +1,2165 @@
+@import "tailwindcss";
+
+/* Dark-variant plumbing: Tailwind's stock `dark:` follows the OS
+   (prefers-color-scheme), but Renance tiers live on <html data-theme>
+   (lib/theme.ts) - students pick Light/Mixed/Dark in-app regardless of
+   their device setting. This re-keys `dark:` onto the data-theme
+   attribute, so `dark:*` classes track the in-app tier (mixed keeps
+   the light body, so dark: correctly does NOT fire there). */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* ------------------------------------------------------------------ */
+/* Self-hosted fonts, icons and type ship from /public/fonts so the   */
+/* app never depends on fonts.googleapis.com being reachable (when     */
+/* that CDN is blocked/slow, Material Symbols ligatures render as      */
+/* raw text like "brightness_medium" all over the UI).                 */
+/* Relative paths on purpose: Next bundles the files into              */
+/* /_next/static/media/ with the deploy basePath applied, so the same  */
+/* build works on GitHub Pages (/Renance) and Vercel (/).              */
+/* Material Symbols is a SUBSET (only the glyphs Renance ligates);     */
+/* add icons freely, then re-run scripts/subset_material_symbols.py    */
+/* to refresh the font, it shape-verifies every used icon.            */
+/* ------------------------------------------------------------------ */
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: block;
+  /* ?v busts any intermediary that cached a previous subset -
+   bump on every rebuild (2026-10-18: v5, 233 names - adds stop, home,
+   target, assignment, healing, refresh. v4's collector missed
+   multiline icon ternaries, so the quiz bar spelled VISIBILITY). */
+  src: url('../public/fonts/material-symbols-outlined.subset.woff2?v=5') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../public/fonts/inter-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../public/fonts/inter-latin-500-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../public/fonts/inter-latin-600-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../public/fonts/inter-latin-700-normal.woff2') format('woff2');
+}
+/* Nunito - the rounded, friendly Duolingo-style UI typeface (variable
+   200-1000). Self-hosted like Inter so no CDN dependency; Inter stays
+   as the fallback in the stack. */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 200 1000;
+  font-display: swap;
+  src: url('../public/fonts/nunito-latin-variable.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 200 1000;
+  font-display: swap;
+  src: url('../public/fonts/nunito-latin-ext-variable.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../public/fonts/jetbrains-mono-latin-500-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../public/fonts/cinzel-latin-700-normal.woff2') format('woff2');
+}
+
+/* ------------------------------------------------------------------ */
+/* Renance design system, lifted 1:1 from the founder's auth mockups  */
+/* (upload/test.html + upload/test3.html): blue-tinted Material-3      */
+/* surfaces, ink #111c2d, black primary buttons, Inter type.           */
+/* Token names intentionally match the mockup's Tailwind config so     */
+/* markup reads the same on web and in the Flutter app theme.          */
+/* ------------------------------------------------------------------ */
+
+@theme {
+  /* surfaces - clean high-contrast white/gray (Duolingo snow/polar/swan),
+     replacing the old blue-tinted Material-3 washes */
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-bright: #ffffff;
+  --color-surface-dim: #e5e5e5;
+  --color-surface-container-lowest: #ffffff;
+  --color-card: #ffffff;
+  --color-surface-container-low: #f7f7f7;
+  --color-surface-container: #f0f0f3;
+  --color-surface-container-high: #ebebef;
+  --color-surface-container-highest: #e5e5e8;
+  --color-surface-variant: #ebebef;
+
+  /* on-colors / ink - warm neutral Duolingo eel/wolf */
+  --color-on-background: #3c3c46;
+  --color-on-surface: #3c3c46;
+  --color-on-surface-variant: #777777;
+  --color-on-primary: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-on-primary-container: #7c839b;
+
+  /* primaries & secondaries - Renance green primary (founder directive
+     2026-10-15: the old treefrog #58cc02 was "too light" - the brand
+     green is now the vivid #10da11, still white-text safe) */
+  --color-primary: #10da11;
+  --color-primary-container: #131b2e;
+  --color-secondary: #6f6f7a;
+  --color-secondary-container: #f1f1f4;
+  --color-on-secondary-container: #55555f;
+  --color-inverse-primary: #bec6e0;
+
+  /* outlines - swan light borders, hare strong borders */
+  --color-outline: #b0b0b8;
+  --color-outline-variant: #e5e5e5;
+  --color-outline-light: #e5e5e5;
+
+  /* errors - cardinal red */
+  --color-error: #ff4b4b;
+  --color-error-container: #ffebeb;
+  --color-on-error-container: #b81f1f;
+
+  /* type: Nunito carries the tactile 3D UI (Duolingo-style rounded
+     letterforms); Inter remains the fallback. */
+  --font-sans: "Nunito", "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  /* Duolingo-style saturated accents (3D Flat / Tactile palette).
+     juice-edge is derived at use-site via color-mix() so it follows
+     the Chrome-style seed system too. Founder directive 2026-10-13:
+     the default scheme is GREEN with a measured amount of BLUE - the
+     macaw family powers the nav active pills, pay buttons and info
+     accents exactly like supreme.git; primary-ink is the small-text
+     green (bright #58cc02 dies at 10-13px on white cards, the seeded
+     color-mix keeps it readable under every palette). */
+  --color-macaw: #1cb0f6;
+  --color-macaw-dark: #1899d6;
+  --color-macaw-light: #ddf4ff;
+  --color-macaw-ring: #84d8ff;
+  --color-treefrog: #58cc02;
+  --color-treefrog-dark: #58a700;
+  --color-owl: #89e219;
+  --color-seafoam: #00cd9c;
+  --color-bee: #ffc800;
+  --color-bee-dark: #e6ac00;
+  --color-fox: #ff9600;
+  --color-cardinal: #ff4b4b;
+  --color-cardinal-dark: #ea2b2b;
+  --color-beetle: #ce82ff;
+  --color-humpback: #2b70c9;
+  --color-eel: #4b4b4b;
+  --color-wolf: #777777;
+  --color-hare: #afafaf;
+  --color-swan: #e5e5e5;
+  --color-polar: #f7f7f7;
+  --color-iguana: #d7ffb8;
+
+  /* Selection tint, supreme.git edition: the CBT answers, mode tiles
+     and focus cards highlight in the light-macaw wash (#ddf4ff) with
+     the blue ring - the Supreme option-selected recipe - instead of
+     the old green iguana tint. (iguana stays for success surfaces.) */
+  --color-selection-blue: #ddf4ff;
+
+  /* Small-text primary: the seed darkened ~28% toward black. Resolves
+     live, so a seeded red/blue palette darkens its OWN hue. */
+  --color-primary-ink: color-mix(in srgb, var(--color-primary) 72%, #000000);
+
+  /* Squircle radii, moderated one notch to the supreme.git scale
+     (founder: cards read "too big" on the first pass): rounded-xl is
+     14px, cards at rounded-2xl land on Supreme's 16px, heroes keep
+     20px. The hero-card class below pins its own 20px. */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 0.7rem;
+  --radius-xl: 0.875rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.25rem;
+
+  /* Hero scope (the dashboard progress band). These MUST live inside
+     @theme: Tailwind 4 only emits utilities for variables declared here,
+     so bg-hero / bg-hero-cta / text-on-hero-cta silently no-op from a
+     plain :root block. Light tier = white band, treefrog CTA. */
+  --color-hero: #ffffff;
+  --color-on-hero: #3c3c46;
+  --color-hero-muted: #777777;
+  --color-hero-track: #e5e5e5;
+  --color-hero-cta: #10da11;
+  --color-on-hero-cta: #ffffff;
+}
+
+/* ------------------------------------------------------------------ */
+/* GGSA brand ramp (God Generals Standard Academy result portal),      */
+/* ported 1:1 for the school workspace. Declared in @theme because     */
+/* Tailwind 4 only emits utilities for variables declared here —       */
+/* nothing outside the school pages uses the brand or ggsa classes,    */
+/* so the student-facing site is untouched.                            */
+/* ------------------------------------------------------------------ */
+@theme {
+  --color-brand-50: #faf5ff;
+  --color-brand-100: #f3e8ff;
+  --color-brand-200: #e9d5ff;
+  --color-brand-300: #d8b4fe;
+  --color-brand-400: #c084fc;
+  --color-brand-500: #a855f7;
+  --color-brand-600: #7e22ce;
+  --color-brand-700: #6b21a8;
+  --color-brand-800: #581c87;
+  --color-brand-900: #3b0764;
+  --color-brand-950: #240046;
+
+  /* GGSA accent tokens: deep portal purple, gold, cream */
+  --color-ggsa-purple: #4c1d95;
+  --color-ggsa-gold: #d97706;
+  --color-ggsa-cream: #fffbeb;
+}
+
+:root {
+  color-scheme: light;
+}
+
+/* ------------------------------------------------------------------ */
+/* Appearance tiers (founder ADR): Light / Mixed / Full dark.          */
+/* Every screen reads tokens, so these overrides re-skin the whole     */
+/* site: Mixed keeps the light body and flips the hero chrome dark;    */
+/* Dark flips everything to the full-dark Stitch tier.                 */
+/* ------------------------------------------------------------------ */
+[data-theme='dark'] {
+  color-scheme: dark;
+  /* Founder directive 2026-10-15 (evening): every dark surface is a
+     FIXED near-black. The dynamic seed may repaint the accent (primary,
+     CTA) but never the dark canvas - the dark tier no longer shifts
+     navy/rose/violet with the palette picker. The ramp below matches
+     lib/theme.ts buildPalette(seed, 'dark') exactly, so seeded and
+     seedless students see the identical dark chrome. */
+  --color-background: #0f1216;
+  --color-surface: #0f1216;
+  --color-surface-bright: #161b22;
+  --color-surface-dim: #0a0d11;
+  --color-surface-container-lowest: #0c0f14;
+  --color-card: #131720;
+  --color-surface-container-low: #11151c;
+  --color-surface-container: #151a22;
+  --color-surface-container-high: #191f28;
+  --color-surface-container-highest: #1d242e;
+  --color-surface-variant: #191f28;
+  --color-on-background: #f0f3f6;
+  --color-on-surface: #f0f3f6;
+  --color-on-surface-variant: #a6adba;
+  --color-primary: #10da11;
+  /* Founder directive 2026-10-15 ("for the default seed colour the text
+     in boxes or containers must be BLACK, not white, in dark mode - the
+     open-your-school-desk text, the pick-your-school text, the R in the
+     home-page logo, the AI float mark, the profile copy-link pill..."):
+     the dark tier paints the SAME vivid green as light, so the label ink
+     follows buildPalette('#10da11','dark') exactly - hslToHex(121,42,10)
+     - instead of white vanishing on the bright accent. Seeded students
+     already get this ink from lib/theme.ts; the stylesheet now agrees. */
+  --color-on-primary: #0f240f;
+  --color-primary-container: #151a22;
+  --color-on-primary-container: #f0f3f6;
+  --color-secondary: #a6adba;
+  --color-secondary-container: #11151c;
+  --color-on-secondary-container: #f0f3f6;
+  --color-outline: #a6adba;
+  --color-outline-variant: #363d49;
+  --color-outline-light: #363d49;
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  --color-selection-blue: #1a212b;
+  /* Dark-mode TEXT colour pass (founder 2026-10-14): small green
+     labels invert to a light tint instead of mixing toward black -
+     primary-ink on navy was the worst offender; wolf/hare gray steps
+     lift two notches so 12-13px labels read cleanly on the containers. */
+  --color-primary-ink: color-mix(in srgb, var(--color-primary) 58%, #d7ffb8);
+  --color-wolf: #a2aab8;
+  --color-hare: #8b93a3;
+  --color-amber-tint: #3a2f14;
+  --color-emerald-tint: #12301f;
+  --color-ink-tint: #17223b;
+  /* The sidebar row hover wash: a LOW-OPACITY translucent surface,
+     never the light tier's #f7f7f7 polar (the "white flash" on the
+     dark sidebar, founder 2026-10-15). */
+  --color-polar: rgba(240, 243, 255, 0.07);
+  --color-hero: #131720;
+  --color-on-hero: #f0f3f6;
+  --color-hero-muted: #a6adba;
+  --color-hero-track: #191f28;
+  --color-hero-cta: #10da11;
+  /* buildPalette(seed,'dark') pairs the CTA with on-primary - the same
+     dark ink, never white-on-green (founder dark-text pass 2026-10-15). */
+  --color-on-hero-cta: #0f240f;
+}
+
+/* Mixed: light body, dark hero chrome (the exam-player treatment). */
+[data-theme='mixed'] {
+  color-scheme: light;
+  --color-hero: #111c2d;
+  --color-on-hero: #f0f3ff;
+  --color-hero-muted: #b9c2d4;
+  --color-hero-track: #17223b;
+  --color-hero-cta: #10da11;
+  --color-on-hero-cta: #ffffff;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-sans);
+  overscroll-behavior: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Renance logomark - 3D FLAT keycap (founder directive 2026-10-13,    */
+/* the Supreme splash pass). The R sits on a chunky app-icon tile:     */
+/* solid brand face, extruded darker bottom edge, soft inner top       */
+/* highlight. Idle it is the logo; busy it floats (Supreme splash      */
+/* motion). Sizes scale via --mark-size. No generic spinners, ever.    */
+/*                                                                     */
+/* 2026-10-14 founder fix ("remove that white colour box"): the tile   */
+/* is painted ENTIRELY by the inline SVG (renance-mark-svg) reading    */
+/* var(--color-primary)/var(--color-on-primary), so the mark follows   */
+/* the appearance colour and no PNG keycap is stacked inside a CSS     */
+/* tile anymore. The wrapper keeps layout + lift shadow + float.       */
+/* ------------------------------------------------------------------ */
+
+.renance-mark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.renance-mark-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter:
+    drop-shadow(0 max(2px, min(calc(var(--mark-size, 44px) * 0.09), 5px)) 0
+      rgba(17, 28, 45, 0.22))
+    drop-shadow(0 10px 16px rgba(17, 28, 45, 0.18));
+}
+
+.renance-mark-inverse .renance-mark-svg {
+  filter:
+    drop-shadow(0 max(2px, min(calc(var(--mark-size, 44px) * 0.09), 5px)) 0
+      rgba(0, 0, 0, 0.30))
+    drop-shadow(0 10px 16px rgba(0, 0, 0, 0.35));
+}
+
+/* busy: the Supreme splash float - the keycap gently hovers. */
+.renance-mark-busy { animation: renance-float 2.2s ease-in-out infinite; }
+@keyframes renance-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(min(calc(var(--mark-size, 44px) * -0.09), -6px)); }
+}
+
+/* The splash column: keycap + wordmark + caption (LogoActivityIndicator). */
+.renance-splash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+.renance-splash-word {
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--color-primary);
+}
+.renance-splash-caption {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-on-surface-variant, var(--muted));
+}
+
+@keyframes renance-rise {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Flashcard voice pill waveform (ROADMAP #7, voice_flashcards_light). */
+@keyframes renance-wave {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
+/* Badge detail progress rail shine (badge_detail_light). */
+@keyframes renance-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.renance-rise { animation: renance-rise 0.45s ease-out both; }
+
+/* ------------------------------------------------------------------ */
+/* Gamification hub accents (gamification hub accent tokens)      */
+/* ------------------------------------------------------------------ */
+@theme {
+  --color-accent-amber: #f59e0b;
+  --color-accent-emerald: #10b981;
+  --color-accent-ink: #111c2d;
+  --color-ink-deep: #131b2e;
+  --color-dark-surface: #131b2e;
+  --color-dark-surface-low: #17223b;
+  --color-dark-text-primary: #f0f3ff;
+  --color-dark-text-secondary: #a2aab8;
+  --color-selection-blue: #d7ffb8;
+  --color-inverse-surface: #263143;
+  --color-inverse-on-surface: #ecf1ff;
+  --color-amber-tint: #fff3d6;
+  --color-emerald-tint: #e8f5e9;
+  --color-ink-tint: #e7eeff;
+}
+
+/* Material Symbols ligatures, same icon system as the Stitch designs.
+   Tactile pass: the variable font renders at wght 600 so every icon
+   reads bold, chunky and gamified (Duolingo-style rounded weight) -
+   one edit here, every icon on every page obeys. */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: 'liga';
+  font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+.material-symbols-outlined.fill-current {
+  font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Chip rails scroll horizontally without a visible scrollbar. */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Small green text contrast (founder complaint 2026-10-13: "that      */
+/* green colour small text is not visible when it's used for a big     */
+/* card that contains small text"). Bright #58cc02 dies on white at    */
+/* 10-13px. Every green LABEL chip pairs text-primary with the pale    */
+/* green tint (bg-primary/10), so ONE combo rule darkens them all to   */
+/* primary-ink (seed darkened ~28%) - curriculum, practice, post-utme, */
+/* university, exam pages, everywhere, with zero markup edits. The     */
+/* dark tier reverts to the bright seed: its tinted chip background    */
+/* is dark, so the darkened ink would vanish there.                    */
+/* ------------------------------------------------------------------ */
+.text-primary.bg-primary\/10 {
+  color: var(--color-primary-ink);
+}
+/* The SUPER chips (paywall / pricing) paint bg-primary-ink with a white
+   label - right on the light tier's dark ink, wrong on the dark tier's
+   light tint. The label flips to the near-black ink in dark mode. */
+[data-theme='dark'] .bg-primary-ink.text-white { color: var(--color-ink-deep); }
+
+[data-theme='dark'] .text-primary.bg-primary\/10 {
+  color: var(--color-primary);
+}
+
+/* ------------------------------------------------------------------ */
+/* The nav active pill (bottom bar + side rail). Founder directive    */
+/* 2026-10-15 (evening, second pass): the dark-tier pill is a LOW-    */
+/* OPACITY translucent wash over the fixed near-black surface with a  */
+/* SOFT PASTEL accent - a gentle 9% macaw tint, a muted 45% pastel    */
+/* border and pale pastel text. Never the saturated light-macaw slab, */
+/* never a heavy ring. The light tier keeps the Supreme light-macaw   */
+/* fill untouched.                                                    */
+/* ------------------------------------------------------------------ */
+[data-theme='dark'] .nav-pill {
+  background: color-mix(in srgb, var(--color-macaw, #1cb0f6) 9%, var(--color-surface, #0f1216));
+  color: #a9d6ff;
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--color-macaw, #1cb0f6) 45%, transparent);
+}
+
+/* Desktop side rail: the SideNav hamburger collapses the menu list to an
+   icon strip; every page offsets its content with --rail-w so the reflow
+   is one variable away. 15rem = w-60 (open), 4rem = w-16 (collapsed). */
+:root {
+  --rail-w: 15rem;
+}
+html[data-rail='collapsed'] {
+  --rail-w: 4.25rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* PC canvas (founder: "the website is not PC responsive, the white    */
+/* space is too much"). The shells cap at 64/80rem for phones; on real */
+/* monitors the page must USE the canvas. These rules lift every       */
+/* mx-auto max-w-5xl shell (and the exam player's 3xl header/foot)     */
+/* one step per breakpoint, one edit here, every page obeys.          */
+/* ------------------------------------------------------------------ */
+@media (min-width: 1280px) {
+  .mx-auto.max-w-5xl { max-width: 84rem; }   /* 1344px */
+  .mx-auto.max-w-3xl { max-width: 56rem; }   /* exam player chrome */
+}
+@media (min-width: 1536px) {
+  .mx-auto.max-w-5xl { max-width: 92rem; }   /* 1472px */
+  .mx-auto.max-w-3xl { max-width: 62rem; }
+}
+
+/* Launcher tiles scale up on the desktop canvas so the home grid reads
+   like a dashboard, not a shrunk phone screen. */
+@media (min-width: 768px) {
+  .launcher-grid { gap: 1.75rem; }
+}
+/* 2026-10-18 desktop pass: from lg the tiles become horizontal cards
+   (icon left, label + hint right) - a card grid wants a tighter rhythm
+   than the phone bubble grid. */
+@media (min-width: 1024px) {
+  .launcher-grid { gap: 0.75rem; }
+}
+
+/* KaTeX maths hosts: keep display blocks centred with breathing room and
+   scrollable when a wide array meets a narrow phone. */
+.katex-host { line-height: 1.4; }
+.katex-host .katex-display { margin: 0.45em 0; }
+.katex-host .katex { font-size: 1.04em; }
+
+/* ================================================================== */
+/* LANDING 2026, "Your Guide to Academic Success"                    */
+/* Apple-grade glassmorphism: frosted layers, aurora gradient field,  */
+/* float physics, scroll reveals. All tokens inherit the theme system */
+/* so light / mixed / dark tiers keep working.                        */
+/* ================================================================== */
+
+.landing {
+  --glass-bg: rgba(255, 255, 255, 0.62);
+  --glass-bg-strong: rgba(255, 255, 255, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.65);
+  --glass-ring: rgba(17, 28, 45, 0.08);
+  --glass-shadow: 0 20px 60px -20px rgba(17, 28, 45, 0.25), 0 2px 8px rgba(17, 28, 45, 0.06);
+  --ink: #111c2d;
+  --muted: #45464d;
+  --pop-blue: #3b82f6;
+  --pop-indigo: #6366f1;
+  --pop-teal: #14b8a6;
+  --pop-emerald: #10b981;
+  --pop-amber: #f59e0b;
+  --pop-violet: #8b5cf6;
+}
+
+[data-theme='dark'] .landing {
+  --glass-bg: rgba(23, 34, 59, 0.55);
+  --glass-bg-strong: rgba(23, 34, 59, 0.75);
+  --glass-border: rgba(240, 243, 255, 0.14);
+  --glass-ring: rgba(240, 243, 255, 0.08);
+  --glass-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.55), 0 2px 8px rgba(0, 0, 0, 0.25);
+  --ink: #f0f3ff;
+  --muted: #a2aab8;
+}
+
+/* ---------------- aurora gradient field ---------------- */
+
+.aurora-field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.aurora {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  opacity: 0.55;
+  will-change: transform;
+  transform: translate3d(calc(var(--tilt-x, 0) * var(--drift-x, 20px)), calc(var(--tilt-y, 0) * var(--drift-y, 20px)), 0);
+}
+
+.aurora-a {
+  width: 46rem; height: 46rem;
+  left: -14rem; top: -16rem;
+  background: radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.5), rgba(99, 102, 241, 0.22) 55%, transparent 72%);
+  animation: aurora-drift-a 22s ease-in-out infinite alternate;
+  --drift-x: 34px; --drift-y: 26px;
+}
+
+.aurora-b {
+  width: 40rem; height: 40rem;
+  right: -12rem; top: -6rem;
+  background: radial-gradient(circle at 60% 40%, rgba(20, 184, 166, 0.42), rgba(16, 185, 129, 0.18) 55%, transparent 72%);
+  animation: aurora-drift-b 26s ease-in-out infinite alternate;
+  --drift-x: -30px; --drift-y: 20px;
+}
+
+.aurora-c {
+  width: 52rem; height: 52rem;
+  left: 24%; top: 30%;
+  background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.30), rgba(59, 130, 246, 0.14) 55%, transparent 72%);
+  animation: aurora-drift-c 30s ease-in-out infinite alternate;
+  --drift-x: 22px; --drift-y: -24px;
+}
+
+[data-theme='dark'] .aurora { opacity: 0.34; }
+
+@keyframes aurora-drift-a {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(4rem, 2.4rem, 0) scale(1.12); }
+  100% { transform: translate3d(-2rem, 4rem, 0) scale(0.96); }
+}
+@keyframes aurora-drift-b {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-3.6rem, 3rem, 0) scale(0.94); }
+  100% { transform: translate3d(2.4rem, -2.2rem, 0) scale(1.1); }
+}
+@keyframes aurora-drift-c {
+  0% { transform: translate3d(0, 0, 0) scale(0.98) rotate(0deg); }
+  100% { transform: translate3d(-3rem, -3.4rem, 0) scale(1.14) rotate(10deg); }
+}
+
+.aurora-grain {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(17, 28, 45, 0.055) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 20%, black 30%, transparent 75%);
+}
+
+[data-theme='dark'] .aurora-grain {
+  background-image: radial-gradient(rgba(240, 243, 255, 0.05) 1px, transparent 1px);
+}
+
+/* ---------------- glass primitives ---------------- */
+
+.glass {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(22px) saturate(1.7);
+  backdrop-filter: blur(22px) saturate(1.7);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+[data-theme='dark'] .glass {
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(240, 243, 255, 0.08);
+}
+
+.glass-hover {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1), background 0.4s ease;
+}
+.glass-hover:hover {
+  transform: translateY(-6px);
+  background: var(--glass-bg-strong);
+  box-shadow: 0 30px 70px -24px rgba(17, 28, 45, 0.32), 0 4px 14px rgba(17, 28, 45, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* ---------------- navbar ---------------- */
+
+.landing-nav {
+  position: fixed;
+  top: 0.9rem;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+  /* Stable navbar: always visible, no hide-on-scroll transform. */
+}
+
+.landing-nav-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 62rem;
+  padding: 0.55rem 0.7rem 0.55rem 1rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  backdrop-filter: blur(24px) saturate(1.8);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 12px 40px -14px rgba(17, 28, 45, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.landing-nav.is-scrolled .landing-nav-pill {
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 16px 48px -16px rgba(17, 28, 45, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+[data-theme='dark'] .landing-nav-pill { background: rgba(19, 27, 46, 0.55); border-color: rgba(240, 243, 255, 0.12); }
+[data-theme='dark'] .landing-nav.is-scrolled .landing-nav-pill { background: rgba(19, 27, 46, 0.78); }
+
+.landing-nav-brand {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  text-decoration: none; color: var(--ink); margin-right: auto;
+}
+/* Brand wordmark: lowercase, green - the supreme.git signature. */
+.landing-nav-word {
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+  color: var(--color-primary);
+}
+/* Brand motto: "Your Guide to Academic Success" moved here from the
+   hero headline (founder directive 2026-10-18). A quiet hairline
+   divider separates it from the wordmark; lg+ only keeps the pill
+   calm on tablets and phones where space is scarce. */
+.landing-nav-tagline {
+  display: none;
+  margin-left: 0.35rem;
+  padding-left: 0.8rem;
+  border-left: 1px solid rgba(17, 28, 45, 0.14);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+@media (min-width: 1024px) {
+  .landing-nav-tagline { display: inline-block; }
+}
+[data-theme='dark'] .landing-nav-tagline { border-left-color: rgba(240, 243, 255, 0.16); }
+
+.landing-nav-links { display: none; align-items: center; gap: 0.15rem; }
+.landing-nav-link {
+  padding: 0.45rem 0.8rem; border-radius: 9999px;
+  font-size: 0.86rem; font-weight: 500; color: var(--muted);
+  text-decoration: none;
+  transition: color 0.25s ease, background 0.25s ease;
+}
+.landing-nav-link:hover { color: var(--ink); background: rgba(17, 28, 45, 0.06); }
+[data-theme='dark'] .landing-nav-link:hover { background: rgba(240, 243, 255, 0.09); }
+
+.landing-nav-cta { display: none; align-items: center; gap: 0.5rem; }
+.landing-nav-login {
+  padding: 0.45rem 0.9rem; border-radius: 9999px;
+  font-size: 0.86rem; font-weight: 600; color: var(--ink); text-decoration: none;
+  transition: background 0.25s ease;
+}
+.landing-nav-login:hover { background: rgba(17, 28, 45, 0.06); }
+[data-theme='dark'] .landing-nav-login:hover { background: rgba(240, 243, 255, 0.09); }
+.landing-nav-start {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.55rem 1.15rem; border-radius: 9999px;
+  font-size: 0.86rem; font-weight: 600; text-decoration: none;
+  background: var(--ink); color: var(--color-background);
+  box-shadow: 0 8px 20px -8px rgba(17, 28, 45, 0.5);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+.landing-nav-start:hover { transform: translateY(-1px) scale(1.02); box-shadow: 0 12px 26px -8px rgba(17, 28, 45, 0.55); }
+
+/* burger (mobile) */
+.landing-nav-burger {
+  position: relative;
+  width: 2.5rem; height: 2.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  display: grid; place-items: center;
+}
+[data-theme='dark'] .landing-nav-burger { background: rgba(240, 243, 255, 0.08); }
+.landing-nav-burger span {
+  position: absolute; left: 32%; right: 32%; height: 2px; border-radius: 2px;
+  background: var(--ink);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), top 0.35s ease;
+}
+.landing-nav-burger span:nth-child(1) { top: 40%; }
+.landing-nav-burger span:nth-child(2) { top: 58%; }
+.landing-nav-burger.is-open span:nth-child(1) { top: 49%; transform: rotate(45deg); }
+.landing-nav-burger.is-open span:nth-child(2) { top: 49%; transform: rotate(-45deg); }
+
+.landing-nav-sheet {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 1rem; right: 1rem;
+  border-radius: 1.4rem;
+  padding: 1rem;
+  display: grid; gap: 0.15rem;
+  background: var(--glass-bg-strong);
+  -webkit-backdrop-filter: blur(28px) saturate(1.8);
+  backdrop-filter: blur(28px) saturate(1.8);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  opacity: 0; transform: translateY(-12px) scale(0.98); pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.landing-nav-sheet.is-open { opacity: 1; transform: none; pointer-events: auto; }
+.landing-sheet-link {
+  padding: 0.75rem 0.9rem; border-radius: 0.9rem; text-decoration: none;
+  color: var(--ink); font-weight: 500; font-size: 0.95rem;
+  transition: background 0.25s ease;
+}
+.landing-sheet-link:hover { background: rgba(17, 28, 45, 0.06); }
+[data-theme='dark'] .landing-sheet-link:hover { background: rgba(240, 243, 255, 0.08); }
+.landing-sheet-actions {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.6rem;
+}
+.landing-sheet-login, .landing-sheet-start {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.75rem; border-radius: 0.9rem; font-weight: 600; font-size: 0.9rem;
+  text-decoration: none;
+}
+.landing-sheet-login { color: var(--ink); border: 1px solid var(--glass-ring); }
+.landing-sheet-start { background: var(--ink); color: var(--color-background); }
+
+@media (min-width: 1024px) {
+  .landing-nav-links, .landing-nav-cta { display: flex; }
+  .landing-nav-burger, .landing-nav-sheet { display: none; }
+}
+
+/* ---------------- hero ---------------- */
+
+.hero-headline {
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  /* 2026-10-19 mobile pass 3: 2.4rem still dwarfed phone screens and
+     crowded the pill nav. Floor now 1.75rem (28px) on 1.22 leading -
+     comfortable two-to-three line stack per the founder's spec; the
+     fluid 4.5vw ramp and the 4.4rem cap keep tablet scaling smooth and
+     the desktop split hero keeps its approved tight 1.04 rhythm. */
+  line-height: 1.22;
+  font-size: clamp(1.75rem, 4.5vw + 0.6rem, 4.4rem);
+}
+@media (min-width: 1024px) {
+  .hero-headline { line-height: 1.04; }
+}
+
+.hero-gradient-text {
+  background: linear-gradient(100deg, #3b82f6 0%, #6366f1 28%, #14b8a6 55%, #10b981 78%, #3b82f6 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-pan 7s linear infinite;
+}
+
+@keyframes gradient-pan {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 220% 50%; }
+}
+
+/* The explanation sheet's gradient section label (blue → violet), the
+   web cut of the app's ShaderMask text. */
+.explanation-gradient-label {
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Material Symbols' FILL axis: solid glyph on demand (Tailwind's
+   fill-current only touches SVG, not the variable font). */
+.icon-fill {
+  font-variation-settings: 'FILL' 1;
+}
+
+.hero-cta-primary {
+  position: relative;
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding: 1rem 2.1rem; border-radius: 9999px;
+  font-weight: 700; font-size: 0.95rem;
+  color: var(--color-on-hero-cta); text-decoration: none;
+  /* the founder's rule: the black CTA becomes the colour the student
+     selected - hero-cta is #000000 stock light, the seed colour with a
+     live seed, white on the dark tier. Subtle lift so a flat seed still
+     reads like a button, never a slab. */
+  background: linear-gradient(135deg,
+    var(--color-hero-cta) 0%,
+    color-mix(in srgb, var(--color-hero-cta) 82%, #ffffff) 100%);
+  box-shadow: 0 18px 40px -14px color-mix(in srgb, var(--color-hero-cta) 55%, transparent);
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+.hero-cta-primary::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.18) 50%, transparent 70%);
+  transform: translateX(-120%);
+  animation: cta-shine 4.5s ease-in-out infinite;
+}
+@keyframes cta-shine {
+  0%, 55% { transform: translateX(-120%); }
+  85%, 100% { transform: translateX(120%); }
+}
+.hero-cta-primary:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 24px 50px -14px color-mix(in srgb, var(--color-hero-cta) 60%, transparent); }
+/* hero-cta flips itself per tier (white on dark), so no override needed. */
+
+.hero-cta-secondary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding: 1rem 2rem; border-radius: 9999px;
+  font-weight: 600; font-size: 0.95rem; text-decoration: none;
+  color: var(--ink);
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(18px) saturate(1.7);
+  backdrop-filter: blur(18px) saturate(1.7);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s ease;
+}
+.hero-cta-secondary:hover { transform: translateY(-2px); background: var(--glass-bg-strong); }
+
+/* glass cards around the hero - STABLE (founder 2026-10-18: "make those
+   floating card stable"): the float-drift animation is gone, the tiles sit
+   still. The float-* classes survive as tone hooks only. */
+.glass-float {
+  display: flex; align-items: flex-start; gap: 0.7rem;
+  padding: 0.85rem 1rem;
+  border-radius: 1.15rem;
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(20px) saturate(1.8);
+  backdrop-filter: blur(20px) saturate(1.8);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  max-width: 15.5rem;
+}
+[data-theme='dark'] .glass-float { box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(240, 243, 255, 0.1); }
+
+/* float-* survive as tone hooks only - the drift keyframes are gone
+   (founder 2026-10-18: stable cards, no drifting, no clipping). */
+.float-blue { --tilt: -3deg; }
+.float-emerald { --tilt: 2.5deg; }
+.float-amber { --tilt: -2deg; }
+
+.glass-float-icon {
+  display: grid; place-items: center;
+  width: 2.1rem; height: 2.1rem; border-radius: 0.7rem;
+  color: #fff; flex-shrink: 0;
+  box-shadow: 0 6px 14px -6px rgba(17, 28, 45, 0.4);
+}
+.glass-float-icon .material-symbols-outlined { font-size: 1.15rem; }
+.tone-blue .glass-float-icon { background: linear-gradient(135deg, #3b82f6, #6366f1); }
+.tone-emerald .glass-float-icon { background: linear-gradient(135deg, #10b981, #14b8a6); }
+.tone-amber .glass-float-icon { background: linear-gradient(135deg, #f59e0b, #f97316); }
+.glass-float-title { font-size: 0.82rem; font-weight: 700; color: var(--ink); line-height: 1.25; }
+.glass-float-body { font-size: 0.72rem; color: var(--muted); line-height: 1.35; margin-top: 0.15rem; }
+
+/* ---------------- marquee ---------------- */
+
+.marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  position: relative;
+  z-index: 1;
+}
+.marquee-track {
+  display: flex; gap: 0.65rem;
+  width: max-content;
+  animation: marquee-scroll 42s linear infinite;
+}
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-chip {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.8rem; font-weight: 500;
+  color: var(--ink);
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(14px) saturate(1.6);
+  backdrop-filter: blur(14px) saturate(1.6);
+  border: 1px solid var(--glass-border);
+}
+.marquee-chip::before {
+  content: ''; width: 0.4rem; height: 0.4rem; border-radius: 9999px;
+  background: linear-gradient(135deg, var(--pop-blue), var(--pop-teal));
+}
+
+/* ---------------- section headings ---------------- */
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--pop-indigo);
+  padding: 0.4rem 0.95rem;
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--pop-indigo) 9%, transparent);
+  border: 1px solid color-mix(in srgb, var(--pop-indigo) 18%, transparent);
+}
+
+/* ---------------- stats band ---------------- */
+
+.stat-glass {
+  position: relative;
+  border-radius: 1.4rem;
+  padding: 1.4rem 1.2rem;
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(20px) saturate(1.7);
+  backdrop-filter: blur(20px) saturate(1.7);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  overflow: hidden;
+}
+.stat-glass::before {
+  content: ''; position: absolute; inset: 0 0 auto 0; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--pop-blue), var(--pop-teal), transparent);
+  opacity: 0; transition: opacity 0.5s ease;
+}
+.stat-glass:hover::before { opacity: 1; }
+.stat-value {
+  font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+  font-weight: 800; letter-spacing: -0.03em; color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.stat-label {
+  margin-top: 0.3rem;
+  font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------------- feature cards ---------------- */
+
+.feature-card {
+  position: relative;
+  border-radius: 1.5rem;
+  padding: 1.6rem 1.5rem;
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(20px) saturate(1.7);
+  backdrop-filter: blur(20px) saturate(1.7);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease, background 0.4s ease;
+  overflow: hidden;
+}
+.feature-card::after {
+  content: ''; position: absolute;
+  width: 12rem; height: 12rem; border-radius: 9999px;
+  right: -4rem; top: -4rem;
+  background: radial-gradient(circle, var(--glow, rgba(59, 130, 246, 0.18)), transparent 70%);
+  opacity: 0; transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.feature-card:hover { transform: translateY(-7px); background: var(--glass-bg-strong); }
+.feature-card:hover::after { opacity: 1; }
+/* The tile span carries BOTH classes; the Google CDN sheet ships
+   .material-symbols-outlined { display:inline-block } unlayered and loads
+   after this bundle, so a plain .feature-icon rule (same 0,1,0 specificity)
+   lost the cascade and glyphs parked top-left. The compound selector below
+   wins at any stylesheet order. The old descendant font-size rule never
+   matched at all (no .feature-icon ANCESTOR exists), also compound now. */
+.feature-icon,
+.feature-icon.material-symbols-outlined {
+  display: grid; place-items: center;
+  width: 2.9rem; height: 2.9rem;
+  border-radius: 0.95rem;
+  color: #fff;
+  box-shadow: 0 10px 22px -8px rgba(17, 28, 45, 0.35);
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.feature-card:hover .feature-icon { transform: scale(1.12) rotate(-6deg); }
+/* Chip tiles that carry BOTH classes: the unlayered ligature rule above
+   sets display:inline-block, which out-ranks any layered Tailwind utility
+   (flex/grid + items/justify-center) and parks the glyph top-left inside
+   its tile. Centering therefore lives here, in a compound rule the
+   utility layer can never out-rank. */
+.chip-icon,
+.chip-icon.material-symbols-outlined {
+  display: grid; place-items: center;
+}
+.feature-icon.material-symbols-outlined {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* ---------------- steps ---------------- */
+
+.step-card { position: relative; border-radius: 1.5rem; }
+.step-num {
+  font-size: 4.2rem; font-weight: 800; letter-spacing: -0.04em;
+  line-height: 1;
+  background: linear-gradient(180deg, var(--pop-blue), transparent 130%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  opacity: 0.5;
+}
+
+/* ---------------- exam-day band ---------------- */
+
+.cbt-panel {
+  border-radius: 1.6rem;
+  /* FOUNDER DIRECTIVE 2026-10-18: the harsh primary-green wash (#10da11
+     mixed into navy) is gone. Deep sophisticated dark base instead - the
+     recommended stack (emerald-950/50 -> slate-950/90 -> slate-950)
+     composited over slate-950 so the panel stays opaque on the light
+     page - with an emerald-500/20 hairline border. Headings stay white,
+     body stays white/70: contrast untouched. */
+  background:
+    linear-gradient(to bottom,
+      rgba(2, 44, 34, 0.5) 0%,
+      rgba(2, 6, 23, 0.9) 55%,
+      #020617 100%),
+    #020617;
+  color: #f0f3ff;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  /* founder directive: the emerald hairline warms to 40% on hover */
+  transition: border-color 0.3s ease;
+  box-shadow: 0 30px 80px -30px rgba(17, 28, 45, 0.65);
+  position: relative;
+  overflow: hidden;
+}
+.cbt-panel:hover { border-color: rgba(16, 185, 129, 0.4); }
+.cbt-panel::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(42rem 18rem at 85% -10%, rgba(59, 130, 246, 0.22), transparent 60%),
+              radial-gradient(30rem 16rem at 5% 110%, rgba(16, 185, 129, 0.16), transparent 60%);
+  pointer-events: none;
+}
+.cbt-check { display: flex; align-items: center; gap: 0.55rem; font-size: 0.84rem; color: rgba(240, 243, 255, 0.82); }
+
+/* mock exam ticker inside the cbt panel */
+.cbt-score-pill {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  padding: 0.45rem 0.85rem; border-radius: 9999px;
+  background: rgba(240, 243, 255, 0.08);
+  border: 1px solid rgba(240, 243, 255, 0.14);
+  font-size: 0.75rem; font-weight: 600;
+}
+
+/* ---------------- closing CTA ---------------- */
+
+.final-cta {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.25rem, 4vw, 3rem);
+  /* FOUNDER DIRECTIVE 2026-10-18: no black card backgrounds on the
+     landing page. The closing card wears the same frosted glass as
+     the stats band with soft brand tints; the old slate-950 wash and
+     white-on-dark text classes are gone from the JSX too. */
+  background:
+    linear-gradient(to bottom, rgba(16, 185, 129, 0.07), rgba(59, 130, 246, 0.05)),
+    var(--glass-bg, rgba(255, 255, 255, 0.66));
+  -webkit-backdrop-filter: blur(20px) saturate(1.7);
+  backdrop-filter: blur(20px) saturate(1.7);
+  color: var(--ink, #111c2d);
+  text-align: center;
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.6));
+  transition: border-color 0.3s ease;
+  box-shadow: 0 30px 80px -30px rgba(17, 28, 45, 0.25);
+}
+.final-cta:hover { border-color: rgba(16, 185, 129, 0.45); }
+.final-cta::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(36rem 16rem at 50% 120%, rgba(59, 130, 246, 0.12), transparent 65%),
+              radial-gradient(24rem 12rem at 90% -10%, rgba(16, 185, 129, 0.1), transparent 60%);
+  pointer-events: none;
+}
+.final-cta-glow {
+  position: absolute; left: 50%; bottom: -40%;
+  width: 34rem; height: 34rem;
+  transform: translateX(-50%);
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.18), transparent 60%);
+  filter: blur(40px);
+  animation: cta-glow 6s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+@keyframes cta-glow {
+  from { opacity: 0.55; transform: translateX(-50%) scale(0.92); }
+  to { opacity: 1; transform: translateX(-50%) scale(1.08); }
+}
+
+/* ---------------- footer ---------------- */
+
+.landing-footer { border-top: 1px solid var(--glass-border); background: transparent; }
+
+/* ---------------- entrance keyframes (hero elements) ---------------- */
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(26px); }
+  to { opacity: 1; transform: none; }
+}
+.hero-enter { animation: rise-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.hero-enter-1 { animation-delay: 0.05s; }
+.hero-enter-2 { animation-delay: 0.18s; }
+.hero-enter-3 { animation-delay: 0.32s; }
+.hero-enter-4 { animation-delay: 0.46s; }
+.hero-enter-5 { animation-delay: 0.6s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter, .glass-float, .aurora, .hero-gradient-text, .marquee-track, .final-cta-glow, .hero-cta-primary::after { animation: none !important; }
+}
+
+/* ------------------------------------------------------------------ */
+/* School portal scope, strict black & white, always.                 */
+/* The founder rule: the accent / tier switching on the student pages  */
+/* must never leak into school pages. .school-bw pins its own tokens   */
+/* (white paper, black ink, black primary) on top of any data-theme.   */
+/* ------------------------------------------------------------------ */
+.school-bw {
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-bright: #ffffff;
+  --color-surface-dim: #ededed;
+  --color-surface-container-lowest: #ffffff;
+  --color-card: #ffffff;
+  --color-surface-container-low: #f7f7f7;
+  --color-surface-container: #f2f2f2;
+  --color-surface-container-high: #ececec;
+  --color-surface-container-highest: #e6e6e6;
+  --color-surface-variant: #ededed;
+
+  --color-on-background: #0a0a0a;
+  --color-on-surface: #0a0a0a;
+  --color-on-surface-variant: #5c5c5c;
+  --color-on-primary: #ffffff;
+
+  --color-primary: #000000;
+  --color-primary-container: #0a0a0a;
+  --color-secondary: #444444;
+  --color-secondary-container: #ededed;
+  --color-on-secondary-container: #333333;
+
+  --color-outline: #1f1f1f;
+  --color-outline-variant: #dcdcdc;
+  --color-outline-light: #dcdcdc;
+
+  --color-hero: #ffffff;
+  --color-on-hero: #0a0a0a;
+  --color-hero-muted: #5c5c5c;
+  --color-hero-track: #ededed;
+  --color-hero-cta: #000000;
+  --color-on-hero-cta: #ffffff;
+
+  background: #ffffff;
+  color: #0a0a0a;
+}
+
+/* ------------------------------------------------------------------ */
+/* School portal scope, GGSA edition (founder directive 2026-10-04):   */
+/* the results-management workspace wears the exact God Generals       */
+/* Standard Academy look — deep purple primary, gold CTA accents,      */
+/* cream paper, slate ink. Same token contract as .school-bw, so       */
+/* every school page re-skins by swapping the wrapper class.           */
+/* .school-bw (strict black & white) stays for pure-B&W surfaces.      */
+/* ------------------------------------------------------------------ */
+.school-ggsa {
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-bright: #ffffff;
+  --color-surface-dim: #e9d5ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-card: #ffffff;
+  --color-surface-container-low: #faf5ff;   /* brand-50 */
+  --color-surface-container: #fffbeb;       /* ggsa cream */
+  --color-surface-container-high: #f3e8ff;  /* brand-100 */
+  --color-surface-container-highest: #e9d5ff; /* brand-200 */
+  --color-surface-variant: #e9d5ff;
+
+  --color-on-background: #0f172a;           /* slate-900, GGSA ink */
+  --color-on-surface: #0f172a;
+  --color-on-surface-variant: #475569;      /* slate-600 */
+  --color-on-primary: #ffffff;
+
+  --color-primary: #4c1d95;                 /* ggsa purple */
+  --color-primary-container: #4c1d95;
+  --color-secondary: #6b21a8;               /* brand-700 */
+  --color-secondary-container: #f3e8ff;     /* brand-100 */
+  --color-on-secondary-container: #581c87;  /* brand-800 */
+
+  --color-outline: #7e22ce;                 /* brand-600 */
+  --color-outline-variant: #cbd5e1;         /* GGSA table border */
+  --color-outline-light: #e9d5ff;           /* brand-200 */
+
+  --color-hero: #4c1d95;
+  --color-on-hero: #ffffff;
+  --color-hero-muted: #d8b4fe;
+  --color-hero-track: #e9d5ff;
+  --color-hero-cta: #fbbf24;                /* amber-400 on purple */
+  --color-on-hero-cta: #4c1d95;
+
+  /* No `background` pin here (unlike .school-bw): .school-ggsa always
+     pairs with an explicit bg-* utility on the same element, and an
+     unlayered background would out-cascade the layered utility. */
+  color: #0f172a;
+  color-scheme: light;
+}
+
+/* Dark tier does not touch the GGSA school portal either. */
+[data-theme='dark'] .school-ggsa {
+  color-scheme: light;
+}
+
+/* Dark tier does not touch the school portal either. */
+[data-theme='dark'] .school-bw {
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-bright: #ffffff;
+  --color-surface-dim: #ededed;
+  --color-surface-container-lowest: #ffffff;
+  --color-card: #ffffff;
+  --color-surface-container-low: #f7f7f7;
+  --color-surface-container: #f2f2f2;
+  --color-surface-container-high: #ececec;
+  --color-surface-container-highest: #e6e6e6;
+  --color-surface-variant: #ededed;
+  --color-on-background: #0a0a0a;
+  --color-on-surface: #0a0a0a;
+  --color-on-surface-variant: #5c5c5c;
+  --color-on-primary: #ffffff;
+  --color-primary: #000000;
+  --color-primary-container: #0a0a0a;
+  --color-secondary: #444444;
+  --color-secondary-container: #ededed;
+  --color-on-secondary-container: #333333;
+  --color-outline: #1f1f1f;
+  --color-outline-variant: #dcdcdc;
+  --color-outline-light: #dcdcdc;
+  color-scheme: light;
+}
+
+/* Sidebar chrome */
+.school-rail-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5c5c5c;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.school-rail-link:hover { background: #f2f2f2; color: #0a0a0a; }
+.school-rail-link[data-active='true'] {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+.school-rail-link .material-symbols-outlined { font-size: 20px; }
+
+.school-rail-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9a9a9a;
+  padding: 0 14px;
+  margin: 18px 0 6px;
+}
+
+/* GGSA rail chrome (scoped to .school-ggsa): links on the deep-purple
+   rail read brand-300, the active stop carries the gold spine. */
+.school-ggsa .school-rail-link {
+  color: #d8b4fe;
+}
+.school-ggsa .school-rail-link:hover {
+  background: #581c87;
+  color: #ffffff;
+}
+.school-ggsa .school-rail-link[data-active='true'] {
+  background: #240046;
+  color: #fbbf24;
+  box-shadow: inset 3px 0 0 0 #d97706;
+}
+.school-ggsa .school-rail-label {
+  color: #c084fc;
+}
+
+.school-shell-card {
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 14px;
+}
+
+/* GGSA card face: white paper, purple-200 hairline. */
+.school-ggsa .school-shell-card {
+  border-color: #e9d5ff;
+}
+
+.school-stat-value { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: #0a0a0a; }
+.school-stat-label { font-size: 13px; color: #5c5c5c; margin-top: 2px; }
+
+.school-ggsa .school-stat-value { color: #3b0764; }
+.school-ggsa .school-stat-label { color: #64748b; }
+
+/* ------------------------------------------------------------------ */
+/* GGSA "Stitch" result sheet (components/result-sheet-view.tsx).       */
+/* Cinzel 700 serif for the school title, Inter for the body — the     */
+/* exact result-card typography of the GGSA portal.                    */
+/* ------------------------------------------------------------------ */
+.school-title {
+  font-family: 'Cinzel', Georgia, 'Times New Roman', serif;
+}
+.result-sheet {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Report table — subtle zebra + fine borders (screen) */
+.table-report th,
+.table-report td {
+  border: 1px solid #cbd5e1;
+}
+.table-report tbody tr:nth-child(even) {
+  background-color: #fcfaff;
+}
+.table-report tbody tr:hover {
+  background-color: #f3e8ff30;
+}
+
+/* The ID card face prints exactly as drawn: black on white, no browser
+   colour stripping, page margins tight enough for three cards across. */
+.ren-card-face {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+@media print {
+  .school-no-print { display: none !important; }
+  .ren-card-face { break-inside: avoid; page-break-inside: avoid; }
+  @page { margin: 12mm; }
+}
+
+/* =====================================================================
+   PRINT — GGSA "Stitch" result sheet on a single A4 page
+   (size: A4 portrait · colours preserved · compact typography).
+   Ported from the GGSA portal globals.css; the sheet prints through a
+   named page so the 12mm ID-card default above stays untouched.
+   ===================================================================== */
+@media print {
+  @page result-sheet {
+    size: A4 portrait;
+    margin: 9mm;
+  }
+  .result-sheet {
+    page: result-sheet;
+  }
+
+  .school-ggsa {
+    background: #ffffff !important;
+  }
+
+  .result-sheet {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    width: 186mm !important;
+    max-width: 186mm !important;
+    font-size: 10px !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Compress the vertical rhythm between sections */
+  .result-sheet > * + * {
+    margin-top: 10px !important;
+  }
+
+  /* ---- Header ---- */
+  .result-sheet .rs-header {
+    padding-bottom: 8px !important;
+  }
+  .result-sheet .rs-logo {
+    width: 74px !important;
+    height: 74px !important;
+  }
+  .result-sheet .school-title {
+    font-size: 19px !important;
+  }
+  .result-sheet .rs-addr {
+    font-size: 9.5px !important;
+    margin-top: 3px !important;
+  }
+  .result-sheet .rs-contact {
+    font-size: 9px !important;
+  }
+  .result-sheet .rs-motto {
+    padding: 4px 8px !important;
+    font-size: 8.5px !important;
+  }
+  .result-sheet .rs-motto span {
+    font-size: 8.5px !important;
+  }
+  .result-sheet .rs-pill {
+    font-size: 10px !important;
+    padding: 3px 14px !important;
+  }
+
+  /* ---- Student bio grid ---- */
+  .result-sheet .rs-bio {
+    padding: 9px 10px !important;
+    font-size: 10px !important;
+  }
+  .result-sheet .rs-bio span {
+    font-size: 10px !important;
+  }
+  .result-sheet .rs-bio .rs-bio-label {
+    font-size: 8px !important;
+  }
+
+  /* ---- Academic table ---- */
+  .result-sheet .rs-table-wrap {
+    overflow: visible !important;
+    overflow-x: visible !important;
+  }
+  .result-sheet .table-report {
+    min-width: 0 !important;
+    width: 100% !important;
+    font-size: 10px !important;
+  }
+  .result-sheet .table-report th {
+    font-size: 8.5px !important;
+    padding: 4.5px 2px !important;
+    letter-spacing: 0.02em !important;
+  }
+  .result-sheet .table-report td {
+    padding: 7px 2px !important;
+    font-size: 10px !important;
+    line-height: 1.3 !important;
+    word-wrap: break-word;
+    overflow: hidden;
+  }
+
+  /* ---- Skills / Behaviour cards ---- */
+  .result-sheet .rs-card .rs-card-head {
+    padding: 4px 10px !important;
+    font-size: 9px !important;
+  }
+  .result-sheet .rs-card > div:last-child {
+    padding: 8px 10px !important;
+  }
+  .result-sheet .rs-card span {
+    font-size: 9.5px !important;
+  }
+
+  /* ---- Reports ---- */
+  .result-sheet .rs-report {
+    padding: 9px 10px !important;
+  }
+  .result-sheet .rs-report p {
+    font-size: 10px !important;
+    margin-top: 3px !important;
+  }
+  .result-sheet .rs-report span {
+    font-size: 9.5px !important;
+  }
+  .result-sheet .rs-report .mt-3 {
+    margin-top: 5px !important;
+  }
+  .result-sheet .rs-report .mt-4 {
+    margin-top: 5px !important;
+  }
+
+  /* ---- Rating keys / next term ---- */
+  .result-sheet .rs-keys {
+    padding: 8px 10px !important;
+  }
+  .result-sheet .rs-keys h4 {
+    font-size: 9.5px !important;
+    margin-bottom: 3px !important;
+  }
+  .result-sheet .rs-keys div {
+    font-size: 9px !important;
+  }
+  .result-sheet .rs-next {
+    padding: 8px 8px !important;
+  }
+  .result-sheet .rs-next span {
+    font-size: 9px !important;
+  }
+  .result-sheet .rs-next div {
+    font-size: 10.5px !important;
+    margin-top: 2px !important;
+  }
+
+  /* ---- Footer ---- */
+  .result-sheet .rs-footer {
+    padding-top: 6px !important;
+  }
+  .result-sheet .rs-footer div {
+    font-size: 8.5px !important;
+  }
+}
+
+/* ================================================================== */
+/* TACTILE 3D PRESS SYSTEM (3D Flat / Duolingo-style, founder brief)   */
+/* Buttons stop being flat rectangles: a solid darker bottom edge      */
+/* (border-bottom: 4px) makes them read as physical keys, and pressing */
+/* sinks them 2px while the edge collapses - the signature tactile     */
+/* push-button feel.                                                   */
+/*                                                                     */
+/* Scope: elements that ALREADY carry a filled-action background       */
+/* utility (bg-primary / bg-hero-cta / bg-on-surface / bg-error), so   */
+/* every page - CBT player, AI studio, dashboard, auth, school - gets  */
+/* it with ZERO markup changes. Edges derive from the live token via   */
+/* color-mix(), so the Chrome-style seed palette keeps working: the    */
+/* edge is always a darker tone of whatever the primary currently is.  */
+/* Placed last on purpose: these rules must win the cascade over the   */
+/* landing glass classes and Tailwind utilities.                       */
+/* ================================================================== */
+
+button.bg-primary,
+a.bg-primary {
+  border-bottom: 4px solid color-mix(in srgb, var(--color-primary) 68%, #000) !important;
+  font-weight: 800;
+}
+
+button.bg-hero-cta,
+a.bg-hero-cta {
+  border-bottom: 4px solid color-mix(in srgb, var(--color-hero-cta) 68%, #000) !important;
+  font-weight: 800;
+}
+
+button.bg-on-surface,
+a.bg-on-surface {
+  border-bottom: 4px solid color-mix(in srgb, var(--color-on-surface) 72%, #000) !important;
+}
+
+button.bg-error,
+a.bg-error {
+  border-bottom: 4px solid color-mix(in srgb, var(--color-error) 72%, #000) !important;
+}
+
+/* Blue action keys (founder 2026-10-13: "some button blue like the
+   supreme own", paywall + pricing + secondary entries). Macaw face,
+   darker macaw edge - the Supreme CatalogScreen pay-button recipe. */
+button.bg-macaw,
+a.bg-macaw {
+  border-bottom: 4px solid color-mix(in srgb, var(--color-macaw) 70%, #000) !important;
+  font-weight: 800;
+}
+button.bg-macaw:not(:disabled):active,
+a.bg-macaw:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px !important;
+}
+button.bg-macaw .material-symbols-outlined,
+a.bg-macaw .material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+}
+
+/* The press: sink 2px, edge collapses 4px -> 2px. Real physical key. */
+button.bg-primary:not(:disabled):active,
+a.bg-primary:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px !important;
+}
+
+button.bg-hero-cta:not(:disabled):active,
+a.bg-hero-cta:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px !important;
+}
+
+button.bg-on-surface:not(:disabled):active,
+a.bg-on-surface:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px !important;
+}
+
+button.bg-error:not(:disabled):active,
+a.bg-error:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px !important;
+}
+
+/* Landing 2026 glass CTAs join the tactile system (hero CTA + nav
+   pills). The edge tone follows each pill's own background token. */
+.hero-cta-primary,
+.landing-sheet-start {
+  border-bottom: 4px solid color-mix(in srgb, var(--color-hero-cta) 68%, #000) !important;
+}
+.landing-nav-start {
+  border-bottom: 4px solid color-mix(in srgb, var(--ink) 72%, #000) !important;
+}
+.hero-cta-primary:active,
+.landing-nav-start:active,
+.landing-sheet-start:active {
+  transform: translateY(2px) !important;
+  border-bottom-width: 2px !important;
+}
+
+/* Tiny action chips (< 32px tall) get a slimmer 3px edge so the
+   extrusion never swallows the label - the Ask-AI chip, mode tabs,
+   jump pills and similar compact controls. */
+button.bg-primary.px-3\.5.py-1\.5,
+button.bg-primary.px-3\.5.py-\[7px\],
+button.bg-primary.px-3 {
+  border-bottom-width: 3px !important;
+}
+
+/* Icons on filled action buttons render pure white and slightly
+   larger so they pop like gamified badges. */
+button.bg-primary .material-symbols-outlined,
+a.bg-primary .material-symbols-outlined,
+button.bg-hero-cta .material-symbols-outlined,
+a.bg-hero-cta .material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ==================================================================
+   TACTILE HERO CARDS (dashboard focus heroes, founder polish pass
+   2026-10-13). The desk heroes stop being flat sheets and become
+   chunky tactile panels: 24px squircle, 2px outline, a hard 4px
+   extruded bottom edge and an inner top highlight - the same physics
+   as the buttons, at card scale. Edges derive from the LIVE hero
+   token via color-mix, so the light desk (white hero), the dark tier
+   (#1c2638) and the Mixed tier navy band (#111c2d) all get a correct
+   ledge for free, and the school portals keep their own tokens.
+   Applied as one class on the three focus heroes (default, Post
+   UTME, University/School Desk).
+   ================================================================== */
+
+.hero-card {
+  border-radius: 20px;
+  border: 2px solid color-mix(in srgb, var(--color-hero) 82%, var(--color-on-hero) 18%);
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-hero) 76%, #000),
+    0 14px 28px -20px rgba(17, 28, 45, 0.45),
+    inset 0 2px 0 color-mix(in srgb, var(--color-on-hero) 12%, transparent);
+}
+
+/* The hero progress rail goes tactile: recessed track, chunky fill
+   with a gloss line on top (the Duolingo progress-bar look). Markup
+   supplies the spans; this only pins the sizes that Tailwind finds
+   awkward to express inline. */
+.hero-progress {
+  height: 12px;
+  border-radius: 9999px;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.14), inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+}
+.hero-progress-fill {
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.12);
+}
+.hero-progress-fill > .hero-progress-gloss {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  top: 2px;
+  height: 3px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* ==================================================================
+   LANDING TACTILE SURFACES (founder polish pass 2026-10-13).
+   The glassmorphism kit goes 3D flat: frosted blur retires, text
+   cards stand on white faces with 2px swan outlines and hard 4px
+   extruded ledges - the same keycap physics as every button. Faces
+   and edges read the live tokens, so the dark tier and the school
+   portals re-skin without extra rules. These classes are marketing
+   surfaces only (landing, about, for-schools, privacy, guide) - the
+   school management portal does not use them.
+   Placed last: must out-cascade the original glass definitions.
+   ================================================================== */
+
+/* --- glass primitives -> tactile cards --- */
+.glass {
+  background: var(--color-card, #ffffff);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border: 2px solid var(--color-outline-variant, #e5e5e5);
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+}
+[data-theme='dark'] .glass {
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 48%, #000),
+    inset 0 2px 0 rgba(240, 243, 255, 0.08);
+}
+.glass-hover:hover {
+  transform: translateY(-3px);
+  background: var(--color-card, #ffffff);
+  box-shadow:
+    0 6px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000),
+    0 22px 40px -22px rgba(17, 28, 45, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* --- floating hero cards --- */
+.glass-float {
+  background: var(--color-card, #ffffff);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border: 2px solid var(--color-outline-variant, #e5e5e5);
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+}
+[data-theme='dark'] .glass-float {
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 48%, #000),
+    inset 0 2px 0 rgba(240, 243, 255, 0.08);
+}
+.glass-float-icon {
+  box-shadow:
+    0 3px 0 0 rgba(17, 28, 45, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* --- stats band --- */
+.stat-glass {
+  background: var(--color-card, #ffffff);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border: 2px solid var(--color-outline-variant, #e5e5e5);
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+}
+/* the rainbow top line is glass-era; the ledge replaces it */
+.stat-glass::before { content: none; }
+[data-theme='dark'] .stat-glass {
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 48%, #000),
+    inset 0 2px 0 rgba(240, 243, 255, 0.08);
+}
+
+/* --- feature / step text cards --- */
+.feature-card {
+  background: var(--color-card, #ffffff);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border: 2px solid var(--color-outline-variant, #e5e5e5);
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+}
+[data-theme='dark'] .feature-card {
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 48%, #000),
+    inset 0 2px 0 rgba(240, 243, 255, 0.08);
+}
+.feature-card:hover {
+  transform: translateY(-3px);
+  background: var(--color-card, #ffffff);
+  box-shadow:
+    0 6px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000),
+    0 22px 40px -22px rgba(17, 28, 45, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+}
+.feature-icon,
+.feature-icon.material-symbols-outlined {
+  border-radius: 0.9rem;
+  box-shadow:
+    0 4px 0 0 rgba(17, 28, 45, 0.28),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3);
+}
+.feature-card:hover .feature-icon { transform: scale(1.08) rotate(-6deg); }
+
+/* --- eyebrow chips --- */
+.eyebrow {
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  box-shadow: 0 3px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000);
+}
+
+/* --- marquee chips --- */
+.marquee-chip {
+  background: var(--color-card, #ffffff);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border: 2px solid var(--color-outline-variant, #e5e5e5);
+  box-shadow: 0 3px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000);
+  font-weight: 700;
+}
+
+/* --- secondary CTA: the white tactile key --- */
+.hero-cta-secondary {
+  background: var(--color-card, #ffffff);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border: 2px solid var(--color-outline-variant, #e5e5e5);
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+  font-weight: 800;
+}
+.hero-cta-secondary:hover {
+  transform: translateY(-1px);
+  background: var(--color-card, #ffffff);
+}
+.hero-cta-secondary:active {
+  transform: translateY(2px);
+  box-shadow:
+    0 2px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 62%, #000),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* --- dark panels: extruded ledges + score pills --- */
+.cbt-panel {
+  box-shadow:
+    0 6px 0 0 rgba(0, 0, 0, 0.32),
+    0 30px 80px -30px rgba(17, 28, 45, 0.65),
+    inset 0 2px 0 rgba(240, 243, 255, 0.1);
+}
+.final-cta {
+  box-shadow:
+    0 6px 0 0 rgba(0, 0, 0, 0.35),
+    0 40px 90px -35px rgba(17, 28, 45, 0.7),
+    inset 0 2px 0 rgba(240, 243, 255, 0.12);
+}
+.cbt-score-pill {
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* The final CTA's white keycap variant: the default hero-cta edge is
+   derived from the green token, which reads wrong under a white face -
+   this swaps it to the navy-tinted gray ledge. */
+.hero-cta-primary.hero-cta-white {
+  border-bottom-color: color-mix(in srgb, #ffffff 46%, #0a1630) !important;
+}
+
+/* the keycap mark joins the reduced-motion contract */
+@media (prefers-reduced-motion: reduce) {
+  .renance-mark-busy { animation: none !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   LEARN MODULE — the merged Supreme economy surfaces (2026-10-14).
+   Course selection + zig-zag path + lesson overlay + quests / shop /
+   league chips. Everything reads the live tokens, so the light, dark
+   and seeded-palette tiers all stay legible. School-portal pages never
+   load these classes.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Tactile key button: the Duolingo press used across the learn shell
+   (overview rows, quiz actions, shop buys). Colours come from the
+   caller's bg-* utility; the edge is derived from the same token via
+   color-mix, so seeded palettes stay coherent. */
+.key-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  border-radius: 12px;
+  padding: 0.625rem 1rem;
+  font-weight: 800;
+  font-size: 13.5px;
+  line-height: 1;
+  border: 2px solid transparent;
+  border-bottom-width: 4px;
+  transition: transform 60ms ease, border-bottom-width 60ms ease, filter 120ms ease;
+  cursor: pointer;
+}
+.key-btn:active:not(:disabled) {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+  margin-bottom: 2px;
+}
+.key-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+.key-btn.bg-primary { border-color: color-mix(in srgb, var(--color-primary) 68%, #000); }
+.key-btn.bg-macaw { border-color: color-mix(in srgb, var(--color-macaw, #1cb0f6) 68%, #000); }
+.key-btn.bg-error { border-color: color-mix(in srgb, var(--color-error, #ff4b4b) 68%, #000); }
+.key-btn.bg-accent-amber { border-color: color-mix(in srgb, var(--color-accent-amber, #ffc800) 68%, #000); }
+.key-btn.bg-card { border-color: var(--color-outline-variant, #e5e5e5); border-bottom-color: color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 78%, #000); }
+
+/* The 3D circular back/close key for overlay top bars (founder: the
+   back button should be Duolingo's own, and 3D). */
+.back-key {
+  width: 38px;
+  height: 38px;
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 2px solid var(--color-outline-variant, #e5e5e5);
+  background: var(--color-card, #ffffff);
+  color: var(--color-on-surface, #3c3c46);
+  box-shadow: 0 3px 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 72%, #000);
+  cursor: pointer;
+  transition: transform 60ms ease, box-shadow 60ms ease;
+}
+.back-key:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 72%, #000);
+}
+
+/* Learn surface tiles: soft 3D card with the tactile bottom ledge. */
+.learn-tile {
+  box-shadow:
+    0 4px 0 0 color-mix(in srgb, var(--color-outline-variant, #e5e5e5) 55%, transparent),
+    inset 0 2px 0 color-mix(in srgb, #ffffff 55%, transparent);
+}
+[data-theme='dark'] .learn-tile {
+  box-shadow:
+    0 4px 0 0 rgba(0, 0, 0, 0.4),
+    inset 0 2px 0 rgba(240, 243, 255, 0.08);
+}
+
+/* Path nodes */
+.learn-node-done { border-color: color-mix(in srgb, var(--color-primary) 72%, #000); }
+.learn-node-current {
+  border-color: color-mix(in srgb, var(--color-accent-amber, #ffc800) 70%, #000);
+  animation: learn-node-pulse 1.8s ease-in-out infinite;
+}
+@keyframes learn-node-pulse {
+  0%, 100% { box-shadow: 0 4px 0 color-mix(in srgb, var(--color-accent-amber, #ffc800) 60%, #000), 0 0 0 0 color-mix(in srgb, var(--color-accent-amber, #ffc800) 45%, transparent); }
+  50% { box-shadow: 0 4px 0 color-mix(in srgb, var(--color-accent-amber, #ffc800) 60%, #000), 0 0 0 10px transparent; }
+}
+
+/* The "Start" speech bubble on the current node. */
+.learn-bubble {
+  position: relative;
+  background: var(--color-on-surface, #3c3c46);
+  color: var(--color-surface, #fff);
+  font-size: 10.5px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+.learn-bubble::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-width: 0;
+  border-bottom-color: var(--color-on-surface, #3c3c46);
+}
+
+/* Confetti (rewards) */
+.learn-confetti { animation: learn-confetti-fall 2s cubic-bezier(0.16, 0.7, 0.35, 1) forwards; }
+@keyframes learn-confetti-fall {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+  100% { transform: translate(var(--dx, 0px), 260px) rotate(540deg); opacity: 0; }
+}
+
+/* Toast shadow */
+.learn-toast-shadow {
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.22), 0 14px 30px -12px rgba(17, 28, 45, 0.5);
+}
+
+/* ── Celebrations (founder directive 2026-10-16) ───────────────────────
+   The topic chest (shake → open → spin → reward pop) and the streak
+   flame. Pure CSS so they ride the reduced-motion contract below. */
+
+.learn-chest-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  width: 170px;
+}
+.learn-chest {
+  position: relative;
+  height: 88px;
+  width: 118px;
+  filter: drop-shadow(0 16px 22px rgba(0, 0, 0, 0.45));
+}
+.learn-chest-lid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 34px;
+  border-radius: 16px 16px 5px 5px;
+  background: linear-gradient(180deg, #d99a2b, #b47614);
+  border: 3px solid #7a4c08;
+  transform-origin: top center;
+  transition: transform 0.55s cubic-bezier(0.2, 1.4, 0.4, 1);
+  z-index: 2;
+}
+.learn-chest-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  border-radius: 6px 6px 12px 12px;
+  background: linear-gradient(180deg, #c8891f, #9a6410);
+  border: 3px solid #7a4c08;
+  border-top: none;
+}
+.learn-chest-lock {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 20px;
+  width: 22px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #ffe08a, #d99a2b);
+  border: 3px solid #7a4c08;
+}
+.stage-open .learn-chest-lid, .stage-spin .learn-chest-lid, .stage-reward .learn-chest-lid {
+  transform: rotate(-104deg) translateY(-4px);
+}
+.stage-shake .learn-chest { animation: learn-chest-shake 0.32s ease-in-out 3; }
+@keyframes learn-chest-shake {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(-4deg) translateY(-3px); }
+  75% { transform: rotate(4deg) translateY(-3px); }
+}
+.stage-spin .learn-chest { animation: learn-chest-spin 1.05s cubic-bezier(0.3, 0.9, 0.3, 1) 1; }
+@keyframes learn-chest-spin {
+  0% { transform: rotate(0deg) scale(1); }
+  55% { transform: rotate(360deg) scale(1.12); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+.learn-chest-reward {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  margin-left: -32px;
+  z-index: 3;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.5);
+  animation: learn-chest-pop 0.6s cubic-bezier(0.2, 1.5, 0.4, 1) 1;
+}
+@keyframes learn-chest-pop {
+  0% { transform: translateY(26px) scale(0.4); opacity: 0; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+.learn-streak-flame { animation: learn-streak-beat 0.9s ease-in-out infinite; }
+@keyframes learn-streak-beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+/* Drawing figures (structural formulas / waves) inside lesson notes.
+   currentColor keeps them on-theme in every tier. */
+.learn-drawing svg { width: 100%; height: auto; max-height: 300px; display: block; margin: 0 auto; }
+.learn-drawing text { font-family: var(--font-sans, Nunito, sans-serif); }
+
+/* the learn module joins the reduced-motion contract */
+@media (prefers-reduced-motion: reduce) {
+  .learn-node-current, .learn-confetti,
+  .learn-chest-stage, .learn-chest, .learn-chest-reward,
+  .learn-streak-flame { animation: none !important; transition: none !important; }
+}

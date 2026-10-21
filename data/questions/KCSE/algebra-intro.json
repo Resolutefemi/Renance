@@ -1,0 +1,76 @@
+{
+ "code": "kcse-algebra-intro-bank",
+ "title": "KCSE - Algebra Intro",
+ "version": 1,
+ "questionCount": 5,
+ "totalMarks": 5,
+ "questions": [
+  {
+   "id": "kcse-algebra-intro-bank-0001",
+   "type": "mcq",
+   "stem": "Simplify: 3x + 2x",
+   "marks": 1,
+   "options": {
+    "A": "5x",
+    "B": "5x²",
+    "C": "6x",
+    "D": "5"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "kcse-algebra-intro-bank-0002",
+   "type": "mcq",
+   "stem": "If x = 3, find the value of 2x + 5",
+   "marks": 1,
+   "options": {
+    "A": "11",
+    "B": "8",
+    "C": "10",
+    "D": "6"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "kcse-algebra-intro-bank-0003",
+   "type": "mcq",
+   "stem": "Solve: x + 7 = 15",
+   "marks": 1,
+   "options": {
+    "A": "x = 8",
+    "B": "x = 7",
+    "C": "x = 22",
+    "D": "x = -8"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "kcse-algebra-intro-bank-0004",
+   "type": "mcq",
+   "stem": "Simplify: 5(a + b) - 3(a + b)",
+   "marks": 1,
+   "options": {
+    "A": "2a + 2b",
+    "B": "2a + b",
+    "C": "5a",
+    "D": "2(a + b)"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "kcse-algebra-intro-bank-0005",
+   "type": "mcq",
+   "stem": "Factorize: 6x + 9",
+   "marks": 1,
+   "options": {
+    "A": "3(2x + 3)",
+    "B": "2(3x + 9)",
+    "C": "6(x + 9)",
+    "D": "3(6x + 3)"
+   },
+   "answer": "A"
+  }
+ ],
+ "category": "KCSE",
+ "body": "Algebra Intro"
+}

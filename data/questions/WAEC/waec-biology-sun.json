@@ -1,0 +1,1355 @@
+{
+ "code": "waec-biology-sun-bank",
+ "title": "WAEC Server | SSCE Bank",
+ "version": 1,
+ "questionCount": 96,
+ "totalMarks": 96,
+ "questions": [
+  {
+   "id": "waec-server-scripts-biology-sun-0000",
+   "type": "mcq",
+   "stem": "What is the primary source of energy for Earth's ecosystem?",
+   "options": {
+    "A": "Wind",
+    "B": "Sun",
+    "C": "Geothermal",
+    "D": "Tides"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Sun provides energy for photosynthesis, which is the basis of energy flow in ecosystems."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0001",
+   "type": "mcq",
+   "stem": "Which organelle is responsible for protein synthesis in a cell?",
+   "options": {
+    "A": "Mitochondrion",
+    "B": "Ribosome",
+    "C": "Nucleus",
+    "D": "Golgi apparatus"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Ribosomes are the sites where proteins are synthesized in the cell."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0002",
+   "type": "mcq",
+   "stem": "What is the main function of the cell membrane?",
+   "options": {
+    "A": "Energy production",
+    "B": "Controlling cell activities",
+    "C": "Regulating substances in and out",
+    "D": "Synthesizing proteins"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The cell membrane regulates the movement of substances into and out of the cell."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0003",
+   "type": "mcq",
+   "stem": "Which gas is primarily used by plants during photosynthesis?",
+   "options": {
+    "A": "Oxygen",
+    "B": "Carbon dioxide",
+    "C": "Nitrogen",
+    "D": "Hydrogen"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Plants use carbon dioxide during photosynthesis to produce glucose."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0004",
+   "type": "mcq",
+   "stem": "What is the basic unit of life?",
+   "options": {
+    "A": "Tissue",
+    "B": "Cell",
+    "C": "Organ",
+    "D": "Molecule"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The cell is the smallest unit capable of performing life functions."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0005",
+   "type": "mcq",
+   "stem": "Which blood group is known as the universal donor?",
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "AB",
+    "D": "O"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Blood group O is the universal donor as it lacks antigens, making it compatible with all blood types."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0006",
+   "type": "mcq",
+   "stem": "What is the process by which plants lose water through their leaves?",
+   "options": {
+    "A": "Respiration",
+    "B": "Transpiration",
+    "C": "Photosynthesis",
+    "D": "Absorption"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Transpiration is the loss of water vapor through the stomata of leaves."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0007",
+   "type": "mcq",
+   "stem": "Which part of a flower produces pollen grains?",
+   "options": {
+    "A": "Ovary",
+    "B": "Stigma",
+    "C": "Anther",
+    "D": "Petal"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The anther is the part of the stamen that produces pollen grains."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0008",
+   "type": "mcq",
+   "stem": "What is the genetic material in most living organisms?",
+   "options": {
+    "A": "RNA",
+    "B": "DNA",
+    "C": "Protein",
+    "D": "Carbohydrate"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "DNA is the primary genetic material that carries hereditary information in most organisms."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0009",
+   "type": "mcq",
+   "stem": "Which type of cell division results in gamete formation?",
+   "options": {
+    "A": "Mitosis",
+    "B": "Meiosis",
+    "C": "Binary fission",
+    "D": "Budding"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Meiosis produces gametes with half the chromosome number for sexual reproduction."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0010",
+   "type": "mcq",
+   "stem": "What is the main function of the kidneys in humans?",
+   "options": {
+    "A": "Digestion",
+    "B": "Filtration of blood",
+    "C": "Respiration",
+    "D": "Circulation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The kidneys filter blood to remove waste and regulate water and electrolyte balance."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0011",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of mammals?",
+   "options": {
+    "A": "Cold-blooded",
+    "B": "Lay eggs",
+    "C": "Have mammary glands",
+    "D": "Have scales"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Mammals have mammary glands that produce milk to nourish their young."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0012",
+   "type": "mcq",
+   "stem": "What is the role of chlorophyll in plants?",
+   "options": {
+    "A": "Transport water",
+    "B": "Absorb light energy",
+    "C": "Store nutrients",
+    "D": "Protect against pests"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Chlorophyll absorbs light energy for photosynthesis."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0013",
+   "type": "mcq",
+   "stem": "Which of the following is an example of a decomposer?",
+   "options": {
+    "A": "Grass",
+    "B": "Fungi",
+    "C": "Lion",
+    "D": "Eagle"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Fungi break down dead organic matter, acting as decomposers in ecosystems."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0014",
+   "type": "mcq",
+   "stem": "What is the process of breaking down food into simpler substances called?",
+   "options": {
+    "A": "Respiration",
+    "B": "Digestion",
+    "C": "Photosynthesis",
+    "D": "Excretion"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Digestion is the process of breaking down food into simpler substances for absorption."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0015",
+   "type": "mcq",
+   "stem": "Which organ is responsible for pumping blood in the human body?",
+   "options": {
+    "A": "Liver",
+    "B": "Heart",
+    "C": "Lung",
+    "D": "Kidney"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The heart pumps blood throughout the body via the circulatory system."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0016",
+   "type": "mcq",
+   "stem": "What is the term for organisms that produce their own food?",
+   "options": {
+    "A": "Heterotrophs",
+    "B": "Autotrophs",
+    "C": "Carnivores",
+    "D": "Omnivores"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Autotrophs, like plants, produce their own food through processes like photosynthesis."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0017",
+   "type": "mcq",
+   "stem": "Which of the following is a function of the root system in plants?",
+   "options": {
+    "A": "Photosynthesis",
+    "B": "Anchorage",
+    "C": "Reproduction",
+    "D": "Respiration"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Roots anchor plants in the soil and absorb water and nutrients."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0018",
+   "type": "mcq",
+   "stem": "What is the genetic makeup of an organism called?",
+   "options": {
+    "A": "Phenotype",
+    "B": "Genotype",
+    "C": "Allele",
+    "D": "Trait"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The genotype is the genetic makeup of an organism, determining its traits."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0019",
+   "type": "mcq",
+   "stem": "Which gas is released as a byproduct of photosynthesis?",
+   "options": {
+    "A": "Carbon dioxide",
+    "B": "Oxygen",
+    "C": "Nitrogen",
+    "D": "Hydrogen"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Oxygen is released as a byproduct during photosynthesis in plants."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0020",
+   "type": "mcq",
+   "stem": "What is the main function of the respiratory system in humans?",
+   "options": {
+    "A": "Digestion",
+    "B": "Gas exchange",
+    "C": "Circulation",
+    "D": "Excretion"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The respiratory system facilitates gas exchange, supplying oxygen and removing carbon dioxide."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0021",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of arthropods?",
+   "options": {
+    "A": "Backbone",
+    "B": "Exoskeleton",
+    "C": "Mammary glands",
+    "D": "Gills"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Arthropods have an exoskeleton made of chitin, providing support and protection."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0022",
+   "type": "mcq",
+   "stem": "What is the process by which organisms produce offspring?",
+   "options": {
+    "A": "Respiration",
+    "B": "Reproduction",
+    "C": "Excretion",
+    "D": "Nutrition"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Reproduction is the process by which organisms produce offspring to continue their species."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0023",
+   "type": "mcq",
+   "stem": "Which biomolecule is the primary source of energy for the body?",
+   "options": {
+    "A": "Protein",
+    "B": "Carbohydrate",
+    "C": "Lipid",
+    "D": "Nucleic acid"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Carbohydrates are the primary source of energy, broken down into glucose for cellular use."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0024",
+   "type": "mcq",
+   "stem": "What is the role of the stomata in plants?",
+   "options": {
+    "A": "Absorb sunlight",
+    "B": "Gas exchange",
+    "C": "Store nutrients",
+    "D": "Transport water"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Stomata allow gas exchange, taking in carbon dioxide and releasing oxygen."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0025",
+   "type": "mcq",
+   "stem": "Which of the following is a producer in a food chain?",
+   "options": {
+    "A": "Lion",
+    "B": "Grass",
+    "C": "Hawk",
+    "D": "Snake"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Grass is a producer, as it synthesizes its own food through photosynthesis."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0026",
+   "type": "mcq",
+   "stem": "What is the function of the nucleus in a cell?",
+   "options": {
+    "A": "Energy production",
+    "B": "Controlling cell activities",
+    "C": "Protein synthesis",
+    "D": "Waste removal"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The nucleus controls cell activities and contains genetic material."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0027",
+   "type": "mcq",
+   "stem": "Which type of reproduction involves only one parent?",
+   "options": {
+    "A": "Sexual reproduction",
+    "B": "Asexual reproduction",
+    "C": "Binary fission",
+    "D": "Budding"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Asexual reproduction involves one parent and produces genetically identical offspring."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0028",
+   "type": "mcq",
+   "stem": "What is the main source of energy for cellular respiration?",
+   "options": {
+    "A": "Glucose",
+    "B": "Oxygen",
+    "C": "Carbon dioxide",
+    "D": "Water"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Glucose is broken down during cellular respiration to release energy."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0029",
+   "type": "mcq",
+   "stem": "Which organelle is known as the powerhouse of the cell?",
+   "options": {
+    "A": "Nucleus",
+    "B": "Mitochondrion",
+    "C": "Ribosome",
+    "D": "Lysosome"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Mitochondria produce ATP, the cell’s energy currency, through respiration."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0030",
+   "type": "mcq",
+   "stem": "What is the term for the physical expression of an organism’s genes?",
+   "options": {
+    "A": "Genotype",
+    "B": "Phenotype",
+    "C": "Allele",
+    "D": "Chromosome"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The phenotype is the observable physical or biochemical traits of an organism."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0031",
+   "type": "mcq",
+   "stem": "Which of the following is a function of the liver?",
+   "options": {
+    "A": "Pumping blood",
+    "B": "Detoxifying harmful substances",
+    "C": "Gas exchange",
+    "D": "Producing urine"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The liver detoxifies harmful substances and performs metabolic functions."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0032",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of bacteria?",
+   "options": {
+    "A": "Have a nucleus",
+    "B": "Lack a nucleus",
+    "C": "Multicellular",
+    "D": "Have chloroplasts"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Bacteria are prokaryotes and lack a true nucleus."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0033",
+   "type": "mcq",
+   "stem": "What is the process by which water moves through a plant from roots to leaves?",
+   "options": {
+    "A": "Photosynthesis",
+    "B": "Transpiration",
+    "C": "Respiration",
+    "D": "Absorption"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Transpiration drives the movement of water from roots to leaves through the plant."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0034",
+   "type": "mcq",
+   "stem": "Which type of tissue provides support in plants?",
+   "options": {
+    "A": "Parenchyma",
+    "B": "Sclerenchyma",
+    "C": "Collenchyma",
+    "D": "Xylem"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Sclerenchyma provides structural support with its thick, lignified cell walls."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0035",
+   "type": "mcq",
+   "stem": "What is the role of red blood cells in the human body?",
+   "options": {
+    "A": "Fight infections",
+    "B": "Transport oxygen",
+    "C": "Clot blood",
+    "D": "Digest food"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Red blood cells transport oxygen from the lungs to body tissues."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0036",
+   "type": "mcq",
+   "stem": "Which of the following is an example of a symbiotic relationship?",
+   "options": {
+    "A": "Predation",
+    "B": "Mutualism",
+    "C": "Competition",
+    "D": "Parasitism"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Mutualism is a symbiotic relationship where both organisms benefit."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0037",
+   "type": "mcq",
+   "stem": "What is the function of the pancreas in digestion?",
+   "options": {
+    "A": "Produces bile",
+    "B": "Produces digestive enzymes",
+    "C": "Absorbs nutrients",
+    "D": "Stores food"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The pancreas produces digestive enzymes that help break down carbohydrates, proteins, and fats."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0038",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of viruses?",
+   "options": {
+    "A": "Have a cell wall",
+    "B": "Reproduce independently",
+    "C": "Require a host to reproduce",
+    "D": "Perform photosynthesis"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Viruses require a host cell to reproduce as they lack their own metabolic machinery."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0039",
+   "type": "mcq",
+   "stem": "What is the term for the variety of life in an ecosystem?",
+   "options": {
+    "A": "Population",
+    "B": "Biodiversity",
+    "C": "Community",
+    "D": "Habitat"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Biodiversity refers to the variety of life forms in an ecosystem."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0040",
+   "type": "mcq",
+   "stem": "Which part of the human brain controls balance and coordination?",
+   "options": {
+    "A": "Cerebrum",
+    "B": "Cerebellum",
+    "C": "Medulla",
+    "D": "Hypothalamus"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The cerebellum is responsible for balance and coordination."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0041",
+   "type": "mcq",
+   "stem": "What is the process by which organisms adapt to their environment over generations?",
+   "options": {
+    "A": "Evolution",
+    "B": "Mutation",
+    "C": "Reproduction",
+    "D": "Respiration"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Evolution is the process of adaptation through natural selection over generations."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0042",
+   "type": "mcq",
+   "stem": "Which of the following is a function of the xylem in plants?",
+   "options": {
+    "A": "Transport food",
+    "B": "Transport water",
+    "C": "Support leaves",
+    "D": "Produce flowers"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Xylem transports water and minerals from roots to other parts of the plant."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0043",
+   "type": "mcq",
+   "stem": "What is the term for a change in an organism’s DNA?",
+   "options": {
+    "A": "Evolution",
+    "B": "Mutation",
+    "C": "Adaptation",
+    "D": "Selection"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A mutation is a change in the DNA sequence of an organism."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0044",
+   "type": "mcq",
+   "stem": "Which of the following is a primary consumer in a food chain?",
+   "options": {
+    "A": "Lion",
+    "B": "Grasshopper",
+    "C": "Hawk",
+    "D": "Snake"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Grasshoppers are primary consumers as they feed directly on producers like plants."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0045",
+   "type": "mcq",
+   "stem": "What is the function of white blood cells in the human body?",
+   "options": {
+    "A": "Transport oxygen",
+    "B": "Fight infections",
+    "C": "Clot blood",
+    "D": "Carry nutrients"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "White blood cells are part of the immune system and fight infections."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0046",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of amphibians?",
+   "options": {
+    "A": "Dry skin",
+    "B": "Live entirely in water",
+    "C": "Moist skin",
+    "D": "Have feathers"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Amphibians have moist skin, which aids in respiration."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0047",
+   "type": "mcq",
+   "stem": "What is the term for the movement of water across a semi-permeable membrane?",
+   "options": {
+    "A": "Diffusion",
+    "B": "Osmosis",
+    "C": "Active transport",
+    "D": "Filtration"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Osmosis is the movement of water across a semi-permeable membrane from high to low concentration."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0048",
+   "type": "mcq",
+   "stem": "Which organ in humans produces insulin?",
+   "options": {
+    "A": "Liver",
+    "B": "Pancreas",
+    "C": "Kidney",
+    "D": "Stomach"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The pancreas produces insulin to regulate blood sugar levels."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0049",
+   "type": "mcq",
+   "stem": "What is the role of the phloem in plants?",
+   "options": {
+    "A": "Transport water",
+    "B": "Transport food",
+    "C": "Support stem",
+    "D": "Absorb sunlight"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Phloem transports food (sugars) produced during photosynthesis to other parts of the plant."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0050",
+   "type": "mcq",
+   "stem": "Which of the following is a method of asexual reproduction in plants?",
+   "options": {
+    "A": "Pollination",
+    "B": "Vegetative propagation",
+    "C": "Fertilization",
+    "D": "Seed dispersal"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Vegetative propagation involves producing new plants from stems, roots, or leaves."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0051",
+   "type": "mcq",
+   "stem": "What is the term for organisms that feed on both plants and animals?",
+   "options": {
+    "A": "Herbivores",
+    "B": "Carnivores",
+    "C": "Omnivores",
+    "D": "Decomposers"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Omnivores consume both plant and animal matter."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0052",
+   "type": "mcq",
+   "stem": "Which part of the human eye detects light?",
+   "options": {
+    "A": "Cornea",
+    "B": "Retina",
+    "C": "Lens",
+    "D": "Iris"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The retina contains photoreceptors that detect light and form images."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0053",
+   "type": "mcq",
+   "stem": "What is the process of cell division that produces identical daughter cells?",
+   "options": {
+    "A": "Meiosis",
+    "B": "Mitosis",
+    "C": "Binary fission",
+    "D": "Budding"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Mitosis produces two identical daughter cells for growth and repair."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0054",
+   "type": "mcq",
+   "stem": "Which of the following is a function of the skeletal system?",
+   "options": {
+    "A": "Gas exchange",
+    "B": "Support and movement",
+    "C": "Digestion",
+    "D": "Excretion"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The skeletal system provides support and enables movement."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0055",
+   "type": "mcq",
+   "stem": "What is the term for the relationship where one organism benefits and the other is harmed?",
+   "options": {
+    "A": "Mutualism",
+    "B": "Parasitism",
+    "C": "Commensalism",
+    "D": "Competition"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Parasitism involves one organism benefiting at the expense of another."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0056",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of fungi?",
+   "options": {
+    "A": "Perform photosynthesis",
+    "B": "Have chlorophyll",
+    "C": "Absorb nutrients",
+    "D": "Are autotrophs"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Fungi absorb nutrients from their environment as they lack chlorophyll."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0057",
+   "type": "mcq",
+   "stem": "What is the function of the small intestine in digestion?",
+   "options": {
+    "A": "Store food",
+    "B": "Absorb nutrients",
+    "C": "Produce bile",
+    "D": "Break down proteins"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The small intestine is the primary site for nutrient absorption in digestion."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0058",
+   "type": "mcq",
+   "stem": "Which of the following is a source of variation in populations?",
+   "options": {
+    "A": "Mitosis",
+    "B": "Mutation",
+    "C": "Photosynthesis",
+    "D": "Respiration"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Mutation introduces genetic variation by altering DNA sequences."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0059",
+   "type": "mcq",
+   "stem": "What is the role of the spinal cord in the human nervous system?",
+   "options": {
+    "A": "Control emotions",
+    "B": "Transmit nerve impulses",
+    "C": "Regulate hormones",
+    "D": "Produce blood cells"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The spinal cord transmits nerve impulses between the brain and body."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0060",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of reptiles?",
+   "options": {
+    "A": "Moist skin",
+    "B": "Scaly skin",
+    "C": "Feathers",
+    "D": "Mammary glands"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Reptiles have scaly skin that prevents water loss."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0061",
+   "type": "mcq",
+   "stem": "What is the term for the movement of substances from high to low concentration without energy?",
+   "options": {
+    "A": "Active transport",
+    "B": "Diffusion",
+    "C": "Osmosis",
+    "D": "Filtration"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Diffusion is the passive movement of substances from high to low concentration."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0062",
+   "type": "mcq",
+   "stem": "Which organ in humans filters blood and produces urine?",
+   "options": {
+    "A": "Liver",
+    "B": "Kidney",
+    "C": "Heart",
+    "D": "Lung"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The kidneys filter blood and produce urine to excrete waste."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0063",
+   "type": "mcq",
+   "stem": "What is the term for the level of organization that includes all living organisms in an area?",
+   "options": {
+    "A": "Population",
+    "B": "Community",
+    "C": "Ecosystem",
+    "D": "Biosphere"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A community includes all living organisms in a specific area."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0064",
+   "type": "mcq",
+   "stem": "Which of the following is a function of the endocrine system?",
+   "options": {
+    "A": "Transport oxygen",
+    "B": "Regulate hormones",
+    "C": "Digest food",
+    "D": "Support movement"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The endocrine system regulates body functions through hormone production."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0065",
+   "type": "mcq",
+   "stem": "What is the term for organisms that feed only on plants?",
+   "options": {
+    "A": "Carnivores",
+    "B": "Herbivores",
+    "C": "Omnivores",
+    "D": "Decomposers"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Herbivores feed exclusively on plants."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0066",
+   "type": "mcq",
+   "stem": "Which part of a plant is primarily responsible for photosynthesis?",
+   "options": {
+    "A": "Root",
+    "B": "Leaf",
+    "C": "Stem",
+    "D": "Flower"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Leaves contain chlorophyll and are the primary site of photosynthesis."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0067",
+   "type": "mcq",
+   "stem": "What is the term for the inheritance of traits from parents to offspring?",
+   "options": {
+    "A": "Evolution",
+    "B": "Heredity",
+    "C": "Mutation",
+    "D": "Adaptation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Heredity is the process by which traits are passed from parents to offspring."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0068",
+   "type": "mcq",
+   "stem": "Which of the following is a function of the nervous system?",
+   "options": {
+    "A": "Produce hormones",
+    "B": "Coordinate body activities",
+    "C": "Transport nutrients",
+    "D": "Digest food"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The nervous system coordinates body activities through nerve impulses."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0069",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of birds?",
+   "options": {
+    "A": "Scaly skin",
+    "B": "Feathers",
+    "C": "Moist skin",
+    "D": "Gills"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Birds are characterized by feathers, which aid in flight and insulation."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0070",
+   "type": "mcq",
+   "stem": "What is the term for the interaction between two species where one benefits and the other is unaffected?",
+   "options": {
+    "A": "Mutualism",
+    "B": "Commensalism",
+    "C": "Parasitism",
+    "D": "Competition"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Commensalism is a relationship where one species benefits and the other is unaffected."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0071",
+   "type": "mcq",
+   "stem": "Which of the following is a function of the Golgi apparatus?",
+   "options": {
+    "A": "Energy production",
+    "B": "Modify and package proteins",
+    "C": "Synthesize DNA",
+    "D": "Break down waste"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Golgi apparatus modifies, packages, and sorts proteins for secretion."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0072",
+   "type": "mcq",
+   "stem": "What is the term for the living components of an ecosystem?",
+   "options": {
+    "A": "Abiotic factors",
+    "B": "Biotic factors",
+    "C": "Habitat",
+    "D": "Niche"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Biotic factors include all living organisms in an ecosystem."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0073",
+   "type": "mcq",
+   "stem": "Which of the following is a function of the skin in humans?",
+   "options": {
+    "A": "Gas exchange",
+    "B": "Temperature regulation",
+    "C": "Blood production",
+    "D": "Digestion"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The skin regulates body temperature through sweating and vasoconstriction."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0074",
+   "type": "mcq",
+   "stem": "What is the term for the process by which organisms maintain a stable internal environment?",
+   "options": {
+    "A": "Evolution",
+    "B": "Homeostasis",
+    "C": "Adaptation",
+    "D": "Metabolism"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Homeostasis is the process of maintaining a stable internal environment."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0075",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of prokaryotes?",
+   "options": {
+    "A": "Have a nucleus",
+    "B": "Lack a nucleus",
+    "C": "Multicellular",
+    "D": "Have chloroplasts"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Prokaryotes, like bacteria, lack a true nucleus."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0076",
+   "type": "mcq",
+   "stem": "What is the function of the trachea in the respiratory system?",
+   "options": {
+    "A": "Absorb oxygen",
+    "B": "Conduct air to lungs",
+    "C": "Produce mucus",
+    "D": "Filter blood"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The trachea conducts air to and from the lungs during respiration."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0077",
+   "type": "mcq",
+   "stem": "Which of the following is a method of seed dispersal?",
+   "options": {
+    "A": "Photosynthesis",
+    "B": "Wind dispersal",
+    "C": "Transpiration",
+    "D": "Respiration"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Wind dispersal is a method by which seeds are spread to new locations."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0078",
+   "type": "mcq",
+   "stem": "What is the term for the role an organism plays in its ecosystem?",
+   "options": {
+    "A": "Population",
+    "B": "Niche",
+    "C": "Community",
+    "D": "Habitat"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The niche is the role or function of an organism in its ecosystem."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0079",
+   "type": "mcq",
+   "stem": "Which of the following is a function of the large intestine in humans?",
+   "options": {
+    "A": "Digest proteins",
+    "B": "Absorb water",
+    "C": "Produce bile",
+    "D": "Store food"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The large intestine absorbs water and forms feces."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0080",
+   "type": "mcq",
+   "stem": "What is the term for the evolutionary process where organisms better suited to their environment survive?",
+   "options": {
+    "A": "Mutation",
+    "B": "Natural selection",
+    "C": "Adaptation",
+    "D": "Heredity"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Natural selection is the process where organisms better adapted to their environment survive and reproduce."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0081",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of monocots?",
+   "options": {
+    "A": "Taproot system",
+    "B": "Parallel leaf veins",
+    "C": "Two seed leaves",
+    "D": "Woody stems"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Monocots have parallel leaf veins, unlike dicots with net-like veins."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0082",
+   "type": "mcq",
+   "stem": "What is the function of platelets in the blood?",
+   "options": {
+    "A": "Transport oxygen",
+    "B": "Fight infections",
+    "C": "Clot blood",
+    "D": "Carry nutrients"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Platelets are responsible for blood clotting to prevent excessive bleeding."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0083",
+   "type": "mcq",
+   "stem": "Which of the following is a function of the lysosome in a cell?",
+   "options": {
+    "A": "Produce energy",
+    "B": "Break down waste",
+    "C": "Synthesize proteins",
+    "D": "Store nutrients"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Lysosomes break down waste materials and cellular debris."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0084",
+   "type": "mcq",
+   "stem": "What is the term for the non-living components of an ecosystem?",
+   "options": {
+    "A": "Biotic factors",
+    "B": "Abiotic factors",
+    "C": "Producers",
+    "D": "Consumers"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Abiotic factors include non-living components like water, air, and sunlight."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0085",
+   "type": "mcq",
+   "stem": "Which of the following is a function of the thyroid gland?",
+   "options": {
+    "A": "Regulate blood sugar",
+    "B": "Regulate metabolism",
+    "C": "Produce digestive enzymes",
+    "D": "Filter blood"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The thyroid gland produces hormones that regulate metabolism."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0086",
+   "type": "mcq",
+   "stem": "What is the term for organisms that feed on dead organic matter?",
+   "options": {
+    "A": "Producers",
+    "B": "Decomposers",
+    "C": "Herbivores",
+    "D": "Carnivores"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Decomposers break down dead organic matter to recycle nutrients."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0087",
+   "type": "mcq",
+   "stem": "Which part of a flower develops into a fruit after fertilization?",
+   "options": {
+    "A": "Ovary",
+    "B": "Anther",
+    "C": "Stigma",
+    "D": "Petal"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The ovary develops into a fruit after fertilization in plants."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0088",
+   "type": "mcq",
+   "stem": "What is the term for the process by which organisms use oxygen to produce energy?",
+   "options": {
+    "A": "Photosynthesis",
+    "B": "Respiration",
+    "C": "Transpiration",
+    "D": "Digestion"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Respiration uses oxygen to break down glucose and produce energy."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0089",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of dicots?",
+   "options": {
+    "A": "Parallel leaf veins",
+    "B": "One seed leaf",
+    "C": "Net-like leaf veins",
+    "D": "Fibrous roots"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Dicots have net-like leaf veins, unlike monocots with parallel veins."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0090",
+   "type": "mcq",
+   "stem": "What is the function of the hypothalamus in the human brain?",
+   "options": {
+    "A": "Control balance",
+    "B": "Regulate body temperature",
+    "C": "Produce blood cells",
+    "D": "Coordinate movement"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The hypothalamus regulates body temperature, hunger, and hormone release."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0091",
+   "type": "mcq",
+   "stem": "Which of the following is a method of preventing soil erosion?",
+   "options": {
+    "A": "Deforestation",
+    "B": "Afforestation",
+    "C": "Overgrazing",
+    "D": "Urbanization"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Afforestation involves planting trees to stabilize soil and prevent erosion."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0092",
+   "type": "mcq",
+   "stem": "What is the term for the group of individuals of the same species living in an area?",
+   "options": {
+    "A": "Community",
+    "B": "Population",
+    "C": "Ecosystem",
+    "D": "Biosphere"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A population is a group of individuals of the same species in a specific area."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0093",
+   "type": "mcq",
+   "stem": "Which of the following is a function of the circulatory system?",
+   "options": {
+    "A": "Gas exchange",
+    "B": "Transport nutrients",
+    "C": "Produce hormones",
+    "D": "Digest food"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The circulatory system transports nutrients, oxygen, and waste throughout the body."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0094",
+   "type": "mcq",
+   "stem": "What is the term for the loss of water vapor from plant surfaces?",
+   "options": {
+    "A": "Respiration",
+    "B": "Transpiration",
+    "C": "Photosynthesis",
+    "D": "Excretion"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Transpiration is the loss of water vapor, primarily through stomata."
+  },
+  {
+   "id": "waec-server-scripts-biology-sun-0095",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of chordates?",
+   "options": {
+    "A": "Exoskeleton",
+    "B": "Notochord",
+    "C": "Gills",
+    "D": "Scales"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Chordates have a notochord at some stage of development."
+  }
+ ],
+ "category": "secondary",
+ "body": "WAEC"
+}

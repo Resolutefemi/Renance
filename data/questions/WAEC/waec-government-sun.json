@@ -1,0 +1,1271 @@
+{
+ "code": "waec-government-sun-bank",
+ "title": "WAEC Server | SSCE Bank",
+ "version": 1,
+ "questionCount": 90,
+ "totalMarks": 90,
+ "questions": [
+  {
+   "id": "waec-server-scripts-government-sun-0000",
+   "type": "mcq",
+   "stem": "What is the term for the supreme power of a state to govern itself?",
+   "options": {
+    "A": "Authority",
+    "B": "Sovereignty",
+    "C": "Legitimacy",
+    "D": "Power"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Sovereignty refers to the supreme power of a state to govern itself without external interference."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0001",
+   "type": "mcq",
+   "stem": "Which system of government has a single ruler with absolute power?",
+   "options": {
+    "A": "Democracy",
+    "B": "Monarchy",
+    "C": "Oligarchy",
+    "D": "Republic"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A monarchy, particularly an absolute monarchy, vests supreme power in a single ruler."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0002",
+   "type": "mcq",
+   "stem": "What is the term for a government ruled by a few powerful individuals?",
+   "options": {
+    "A": "Democracy",
+    "B": "Oligarchy",
+    "C": "Monarchy",
+    "D": "Theocracy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Oligarchy is a system where a small group of people hold power."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0003",
+   "type": "mcq",
+   "stem": "Which document outlines the fundamental laws of a country?",
+   "options": {
+    "A": "Legislation",
+    "B": "Constitution",
+    "C": "Manifesto",
+    "D": "Treaty"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A constitution is a document that outlines the fundamental laws and principles of a country."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0004",
+   "type": "mcq",
+   "stem": "What is the term for a government where citizens participate directly in decision-making?",
+   "options": {
+    "A": "Representative democracy",
+    "B": "Direct democracy",
+    "C": "Constitutional monarchy",
+    "D": "Dictatorship"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Direct democracy allows citizens to participate directly in decision-making processes."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0005",
+   "type": "mcq",
+   "stem": "Which arm of government is responsible for making laws?",
+   "options": {
+    "A": "Executive",
+    "B": "Legislature",
+    "C": "Judiciary",
+    "D": "Bureaucracy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The legislature is responsible for making laws in a government."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0006",
+   "type": "mcq",
+   "stem": "What is the term for the principle that ensures no arm of government dominates others?",
+   "options": {
+    "A": "Rule of law",
+    "B": "Checks and balances",
+    "C": "Separation of powers",
+    "D": "Federalism"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Checks and balances ensure that no single arm of government dominates the others."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0007",
+   "type": "mcq",
+   "stem": "Which system divides power between central and regional governments?",
+   "options": {
+    "A": "Unitary",
+    "B": "Federal",
+    "C": "Confederal",
+    "D": "Presidential"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A federal system divides power between central and regional governments."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0008",
+   "type": "mcq",
+   "stem": "What is the term for a government based on religious laws?",
+   "options": {
+    "A": "Monarchy",
+    "B": "Theocracy",
+    "C": "Oligarchy",
+    "D": "Democracy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A theocracy is a government based on religious laws and principles."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0009",
+   "type": "mcq",
+   "stem": "Which Nigerian constitution introduced the federal system of government?",
+   "options": {
+    "A": "1960 Constitution",
+    "B": "1954 Constitution",
+    "C": "1979 Constitution",
+    "D": "1999 Constitution"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The 1954 Lyttleton Constitution introduced federalism in Nigeria."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0010",
+   "type": "mcq",
+   "stem": "Who was Nigeria’s first Governor-General?",
+   "options": {
+    "A": "Lord Lugard",
+    "B": "Nnamdi Azikiwe",
+    "C": "Ahmadu Bello",
+    "D": "Tafawa Balewa"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Nnamdi Azikiwe was Nigeria’s first Governor-General after independence in 1960."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0011",
+   "type": "mcq",
+   "stem": "What is the term for the right to vote in an election?",
+   "options": {
+    "A": "Citizenship",
+    "B": "Suffrage",
+    "C": "Franchise",
+    "D": "Mandate"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Suffrage is the right to vote in political elections."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0012",
+   "type": "mcq",
+   "stem": "Which Nigerian political party dominated the First Republic?",
+   "options": {
+    "A": "AG",
+    "B": "NPC",
+    "C": "NCNC",
+    "D": "NEPU"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Northern People’s Congress (NPC) dominated Nigeria’s First Republic politics."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0013",
+   "type": "mcq",
+   "stem": "What is the term for a system where one political party dominates?",
+   "options": {
+    "A": "Multi-party system",
+    "B": "One-party system",
+    "C": "Two-party system",
+    "D": "No-party system"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A one-party system is where a single political party dominates governance."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0014",
+   "type": "mcq",
+   "stem": "Which arm of government interprets the constitution?",
+   "options": {
+    "A": "Executive",
+    "B": "Judiciary",
+    "C": "Legislature",
+    "D": "Bureaucracy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The judiciary interprets the constitution and ensures its proper application."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0015",
+   "type": "mcq",
+   "stem": "What is the term for the process of choosing leaders through voting?",
+   "options": {
+    "A": "Referendum",
+    "B": "Election",
+    "C": "Plebiscite",
+    "D": "Coup"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "An election is the process of selecting leaders through voting."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0016",
+   "type": "mcq",
+   "stem": "Which Nigerian constitution established the presidential system?",
+   "options": {
+    "A": "1963 Constitution",
+    "B": "1979 Constitution",
+    "C": "1960 Constitution",
+    "D": "1999 Constitution"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The 1979 Constitution introduced the presidential system in Nigeria."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0017",
+   "type": "mcq",
+   "stem": "What is the term for a government led by elected representatives?",
+   "options": {
+    "A": "Monarchy",
+    "B": "Representative democracy",
+    "C": "Theocracy",
+    "D": "Dictatorship"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Representative democracy involves governance by elected representatives."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0018",
+   "type": "mcq",
+   "stem": "Which body conducts elections in Nigeria?",
+   "options": {
+    "A": "NEC",
+    "B": "INEC",
+    "C": "SIEC",
+    "D": "EFCC"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Independent National Electoral Commission (INEC) conducts elections in Nigeria."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0019",
+   "type": "mcq",
+   "stem": "What is the term for the principle that everyone is equal before the law?",
+   "options": {
+    "A": "Checks and balances",
+    "B": "Rule of law",
+    "C": "Separation of powers",
+    "D": "Sovereignty"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The rule of law ensures that everyone is equal before the law."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0020",
+   "type": "mcq",
+   "stem": "Which system concentrates power in the central government?",
+   "options": {
+    "A": "Federal",
+    "B": "Unitary",
+    "C": "Confederal",
+    "D": "Presidential"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A unitary system concentrates power in the central government."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0021",
+   "type": "mcq",
+   "stem": "Who was Nigeria’s first Prime Minister?",
+   "options": {
+    "A": "Nnamdi Azikiwe",
+    "B": "Tafawa Balewa",
+    "C": "Ahmadu Bello",
+    "D": "Obafemi Awolowo"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Tafawa Balewa was Nigeria’s first Prime Minister from 1960 to 1966."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0022",
+   "type": "mcq",
+   "stem": "What is the term for a vote to decide a specific issue?",
+   "options": {
+    "A": "Election",
+    "B": "Referendum",
+    "C": "Plebiscite",
+    "D": "Coup"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A referendum is a direct vote by citizens on a specific issue."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0023",
+   "type": "mcq",
+   "stem": "Which political ideology emphasizes state ownership of resources?",
+   "options": {
+    "A": "Capitalism",
+    "B": "Socialism",
+    "C": "Liberalism",
+    "D": "Fascism"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Socialism emphasizes state or collective ownership of resources."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0024",
+   "type": "mcq",
+   "stem": "What is the term for the transfer of power to lower levels of government?",
+   "options": {
+    "A": "Centralization",
+    "B": "Devolution",
+    "C": "Federalism",
+    "D": "Unitarism"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Devolution is the transfer of power to lower levels of government."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0025",
+   "type": "mcq",
+   "stem": "Which Nigerian region was prominent in the First Republic?",
+   "options": {
+    "A": "Eastern Region",
+    "B": "Northern Region",
+    "C": "Western Region",
+    "D": "Mid-Western Region"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Northern Region was politically dominant in Nigeria’s First Republic."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0026",
+   "type": "mcq",
+   "stem": "What is the term for a government where the head of state is a monarch?",
+   "options": {
+    "A": "Republic",
+    "B": "Monarchy",
+    "C": "Oligarchy",
+    "D": "Theocracy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A monarchy is a government where the head of state is a monarch."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0027",
+   "type": "mcq",
+   "stem": "Which body in Nigeria is responsible for law enforcement?",
+   "options": {
+    "A": "Army",
+    "B": "Police",
+    "C": "Navy",
+    "D": "Civil Defence"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Nigeria Police Force is responsible for law enforcement."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0028",
+   "type": "mcq",
+   "stem": "What is the term for a system with two dominant political parties?",
+   "options": {
+    "A": "One-party system",
+    "B": "Two-party system",
+    "C": "Multi-party system",
+    "D": "No-party system"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A two-party system is dominated by two major political parties."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0029",
+   "type": "mcq",
+   "stem": "Which Nigerian constitution established the parliamentary system?",
+   "options": {
+    "A": "1963 Constitution",
+    "B": "1960 Constitution",
+    "C": "1979 Constitution",
+    "D": "1999 Constitution"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The 1960 Independence Constitution established Nigeria’s parliamentary system."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0030",
+   "type": "mcq",
+   "stem": "What is the term for the power to influence or control others?",
+   "options": {
+    "A": "Authority",
+    "B": "Power",
+    "C": "Sovereignty",
+    "D": "Legitimacy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Power is the ability to influence or control others in a political context."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0031",
+   "type": "mcq",
+   "stem": "Which organization promotes economic cooperation among West African states?",
+   "options": {
+    "A": "AU",
+    "B": "ECOWAS",
+    "C": "UN",
+    "D": "OPEC"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "ECOWAS (Economic Community of West African States) promotes economic cooperation in West Africa."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0032",
+   "type": "mcq",
+   "stem": "What is the term for a government where the head of state is elected?",
+   "options": {
+    "A": "Monarchy",
+    "B": "Republic",
+    "C": "Theocracy",
+    "D": "Oligarchy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A republic has an elected head of state, such as a president."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0033",
+   "type": "mcq",
+   "stem": "Which Nigerian leader introduced the Structural Adjustment Programme (SAP)?",
+   "options": {
+    "A": "Tafawa Balewa",
+    "B": "Ibrahim Babangida",
+    "C": "Olusegun Obasanjo",
+    "D": "Yakubu Gowon"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Ibrahim Babangida introduced the SAP in Nigeria in 1986."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0034",
+   "type": "mcq",
+   "stem": "What is the term for the right of citizens to participate in government?",
+   "options": {
+    "A": "Sovereignty",
+    "B": "Citizenship",
+    "C": "Franchise",
+    "D": "Authority"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Citizenship includes the right to participate in government activities like voting."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0035",
+   "type": "mcq",
+   "stem": "Which body in Nigeria is responsible for financial oversight?",
+   "options": {
+    "A": "EFCC",
+    "B": "ICPC",
+    "C": "Auditor-General",
+    "D": "CBN"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The Auditor-General is responsible for financial oversight and auditing public accounts."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0036",
+   "type": "mcq",
+   "stem": "What is the term for a system where states loosely cooperate?",
+   "options": {
+    "A": "Federal",
+    "B": "Unitary",
+    "C": "Confederal",
+    "D": "Presidential"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "A confederal system involves states loosely cooperating with a weak central authority."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0037",
+   "type": "mcq",
+   "stem": "Which Nigerian political party was prominent in the Second Republic?",
+   "options": {
+    "A": "NPC",
+    "B": "NPN",
+    "C": "AG",
+    "D": "NEPU"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The National Party of Nigeria (NPN) was prominent in the Second Republic."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0038",
+   "type": "mcq",
+   "stem": "What is the term for the process of amending a constitution?",
+   "options": {
+    "A": "Legislation",
+    "B": "Amendment",
+    "C": "Referendum",
+    "D": "Plebiscite"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Amendment is the process of making changes to a constitution."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0039",
+   "type": "mcq",
+   "stem": "Which international organization promotes peace and security?",
+   "options": {
+    "A": "ECOWAS",
+    "B": "UN",
+    "C": "AU",
+    "D": "OPEC"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The United Nations (UN) promotes global peace and security."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0040",
+   "type": "mcq",
+   "stem": "What is the term for a government led by a military ruler?",
+   "options": {
+    "A": "Democracy",
+    "B": "Military regime",
+    "C": "Monarchy",
+    "D": "Theocracy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A military regime is a government led by military rulers."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0041",
+   "type": "mcq",
+   "stem": "Which Nigerian leader conducted the 1966 coup?",
+   "options": {
+    "A": "Yakubu Gowon",
+    "B": "Chukwuma Nzeogwu",
+    "C": "Olusegun Obasanjo",
+    "D": "Murtala Mohammed"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Chukwuma Nzeogwu led the January 1966 military coup in Nigeria."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0042",
+   "type": "mcq",
+   "stem": "What is the term for the power to enforce laws?",
+   "options": {
+    "A": "Legislative power",
+    "B": "Executive power",
+    "C": "Judicial power",
+    "D": "Sovereign power"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Executive power involves the authority to enforce laws."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0043",
+   "type": "mcq",
+   "stem": "Which Nigerian constitution is currently in use?",
+   "options": {
+    "A": "1960 Constitution",
+    "B": "1979 Constitution",
+    "C": "1999 Constitution",
+    "D": "1963 Constitution"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The 1999 Constitution is currently in use in Nigeria."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0044",
+   "type": "mcq",
+   "stem": "What is the term for a group of people with common political goals?",
+   "options": {
+    "A": "Pressure group",
+    "B": "Political party",
+    "C": "Trade union",
+    "D": "Civil society"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A political party is a group of people with common political goals seeking power."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0045",
+   "type": "mcq",
+   "stem": "Which organization replaced the Organization of African Unity (OAU)?",
+   "options": {
+    "A": "ECOWAS",
+    "B": "AU",
+    "C": "UN",
+    "D": "OPEC"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The African Union (AU) replaced the Organization of African Unity in 2002."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0046",
+   "type": "mcq",
+   "stem": "What is the term for the freedom of the press and speech?",
+   "options": {
+    "A": "Rule of law",
+    "B": "Fundamental rights",
+    "C": "Sovereignty",
+    "D": "Checks and balances"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Fundamental rights include freedom of the press and speech."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0047",
+   "type": "mcq",
+   "stem": "Which Nigerian leader established the NYSC program?",
+   "options": {
+    "A": "Tafawa Balewa",
+    "B": "Yakubu Gowon",
+    "C": "Olusegun Obasanjo",
+    "D": "Ibrahim Babangida"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Yakubu Gowon established the National Youth Service Corps (NYSC) in 1973."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0048",
+   "type": "mcq",
+   "stem": "What is the term for a system with multiple political parties?",
+   "options": {
+    "A": "One-party system",
+    "B": "Multi-party system",
+    "C": "Two-party system",
+    "D": "No-party system"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A multi-party system allows multiple political parties to compete for power."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0049",
+   "type": "mcq",
+   "stem": "Which body in Nigeria investigates financial crimes?",
+   "options": {
+    "A": "INEC",
+    "B": "EFCC",
+    "C": "CBN",
+    "D": "ICPC"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Economic and Financial Crimes Commission (EFCC) investigates financial crimes."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0050",
+   "type": "mcq",
+   "stem": "What is the term for a government where power is inherited?",
+   "options": {
+    "A": "Republic",
+    "B": "Hereditary monarchy",
+    "C": "Oligarchy",
+    "D": "Democracy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A hereditary monarchy is a government where power is passed through family lines."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0051",
+   "type": "mcq",
+   "stem": "Which Nigerian constitution created the Mid-Western Region?",
+   "options": {
+    "A": "1960 Constitution",
+    "B": "1963 Constitution",
+    "C": "1979 Constitution",
+    "D": "1999 Constitution"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The 1963 Constitution created the Mid-Western Region in Nigeria."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0052",
+   "type": "mcq",
+   "stem": "What is the term for a group that influences government policies without seeking power?",
+   "options": {
+    "A": "Political party",
+    "B": "Pressure group",
+    "C": "Trade union",
+    "D": "Civil society"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A pressure group seeks to influence government policies without contesting elections."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0053",
+   "type": "mcq",
+   "stem": "Which international organization regulates global trade?",
+   "options": {
+    "A": "UN",
+    "B": "WTO",
+    "C": "AU",
+    "D": "ECOWAS"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The World Trade Organization (WTO) regulates global trade."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0054",
+   "type": "mcq",
+   "stem": "What is the term for a government where the head of government is a prime minister?",
+   "options": {
+    "A": "Presidential system",
+    "B": "Parliamentary system",
+    "C": "Federal system",
+    "D": "Unitary system"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A parliamentary system has a prime minister as the head of government."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0055",
+   "type": "mcq",
+   "stem": "Which Nigerian leader was assassinated in 1976?",
+   "options": {
+    "A": "Tafawa Balewa",
+    "B": "Murtala Mohammed",
+    "C": "Yakubu Gowon",
+    "D": "Olusegun Obasanjo"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Murtala Mohammed was assassinated in a coup attempt in 1976."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0056",
+   "type": "mcq",
+   "stem": "What is the term for the legal authority to govern?",
+   "options": {
+    "A": "Power",
+    "B": "Legitimacy",
+    "C": "Sovereignty",
+    "D": "Authority"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Authority is the legal right to govern or make decisions."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0057",
+   "type": "mcq",
+   "stem": "Which body in Nigeria regulates the civil service?",
+   "options": {
+    "A": "INEC",
+    "B": "FCSC",
+    "C": "EFCC",
+    "D": "CBN"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Federal Civil Service Commission (FCSC) regulates Nigeria’s civil service."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0058",
+   "type": "mcq",
+   "stem": "What is the term for a government where the head of state is a president?",
+   "options": {
+    "A": "Parliamentary system",
+    "B": "Presidential system",
+    "C": "Monarchy",
+    "D": "Theocracy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A presidential system has a president as the head of state and government."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0059",
+   "type": "mcq",
+   "stem": "Which Nigerian political party won the 1999 elections?",
+   "options": {
+    "A": "PDP",
+    "B": "ANPP",
+    "C": "AD",
+    "D": "APP"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The People’s Democratic Party (PDP) won the 1999 general elections in Nigeria."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0060",
+   "type": "mcq",
+   "stem": "What is the term for the process of law-making?",
+   "options": {
+    "A": "Adjudication",
+    "B": "Legislation",
+    "C": "Administration",
+    "D": "Interpretation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Legislation is the process of making laws by the legislature."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0061",
+   "type": "mcq",
+   "stem": "Which organization promotes African unity and development?",
+   "options": {
+    "A": "ECOWAS",
+    "B": "AU",
+    "C": "UN",
+    "D": "WTO"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The African Union (AU) promotes unity and development among African states."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0062",
+   "type": "mcq",
+   "stem": "What is the term for a government where power is seized by force?",
+   "options": {
+    "A": "Democracy",
+    "B": "Dictatorship",
+    "C": "Monarchy",
+    "D": "Republic"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A dictatorship often involves power being seized or maintained by force."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0063",
+   "type": "mcq",
+   "stem": "Which Nigerian leader introduced the War Against Indiscipline (WAI)?",
+   "options": {
+    "A": "Olusegun Obasanjo",
+    "B": "Muhammadu Buhari",
+    "C": "Ibrahim Babangida",
+    "D": "Yakubu Gowon"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Muhammadu Buhari introduced the War Against Indiscipline in 1984."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0064",
+   "type": "mcq",
+   "stem": "What is the term for the division of government powers into three branches?",
+   "options": {
+    "A": "Checks and balances",
+    "B": "Separation of powers",
+    "C": "Rule of law",
+    "D": "Federalism"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Separation of powers divides government into legislative, executive, and judicial branches."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0065",
+   "type": "mcq",
+   "stem": "Which body in Nigeria is responsible for monetary policy?",
+   "options": {
+    "A": "INEC",
+    "B": "CBN",
+    "C": "EFCC",
+    "D": "ICPC"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Central Bank of Nigeria (CBN) is responsible for monetary policy."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0066",
+   "type": "mcq",
+   "stem": "What is the term for a system where local governments have significant autonomy?",
+   "options": {
+    "A": "Unitary",
+    "B": "Federal",
+    "C": "Confederal",
+    "D": "Centralized"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A federal system grants significant autonomy to local or regional governments."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0067",
+   "type": "mcq",
+   "stem": "Which Nigerian constitution abolished the regional system?",
+   "options": {
+    "A": "1960 Constitution",
+    "B": "1966 Constitution",
+    "C": "1979 Constitution",
+    "D": "1999 Constitution"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The 1966 military decree effectively abolished the regional system in Nigeria."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0068",
+   "type": "mcq",
+   "stem": "What is the term for the process of citizens expressing their opinions to influence government?",
+   "options": {
+    "A": "Lobbying",
+    "B": "Public opinion",
+    "C": "Voting",
+    "D": "Protest"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Public opinion reflects citizens’ views to influence government policies."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0069",
+   "type": "mcq",
+   "stem": "Which organization promotes global health policies?",
+   "options": {
+    "A": "WTO",
+    "B": "WHO",
+    "C": "AU",
+    "D": "ECOWAS"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The World Health Organization (WHO) promotes global health policies."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0070",
+   "type": "mcq",
+   "stem": "What is the term for a government where citizens elect their leaders?",
+   "options": {
+    "A": "Monarchy",
+    "B": "Democracy",
+    "C": "Theocracy",
+    "D": "Oligarchy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Democracy allows citizens to elect their leaders through voting."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0071",
+   "type": "mcq",
+   "stem": "Which Nigerian leader created 12 states in 1967?",
+   "options": {
+    "A": "Tafawa Balewa",
+    "B": "Yakubu Gowon",
+    "C": "Olusegun Obasanjo",
+    "D": "Ibrahim Babangida"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Yakubu Gowon created 12 states in Nigeria in 1967 to replace regions."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0072",
+   "type": "mcq",
+   "stem": "What is the term for the legal process of acquiring citizenship?",
+   "options": {
+    "A": "Immigration",
+    "B": "Naturalization",
+    "C": "Deportation",
+    "D": "Expatriation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Naturalization is the legal process of acquiring citizenship in a country."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0073",
+   "type": "mcq",
+   "stem": "Which body in Nigeria prosecutes corruption cases?",
+   "options": {
+    "A": "INEC",
+    "B": "ICPC",
+    "C": "CBN",
+    "D": "EFCC"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Independent Corrupt Practices Commission (ICPC) prosecutes corruption cases."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0074",
+   "type": "mcq",
+   "stem": "What is the term for a government where power is centralized?",
+   "options": {
+    "A": "Federal",
+    "B": "Unitary",
+    "C": "Confederal",
+    "D": "Presidential"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A unitary government centralizes power in a single authority."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0075",
+   "type": "mcq",
+   "stem": "Which Nigerian political party was prominent in the Third Republic?",
+   "options": {
+    "A": "PDP",
+    "B": "SDP",
+    "C": "ANPP",
+    "D": "AD"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Social Democratic Party (SDP) was prominent in Nigeria’s Third Republic."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0076",
+   "type": "mcq",
+   "stem": "What is the term for the process of removing an elected official from office?",
+   "options": {
+    "A": "Election",
+    "B": "Impeachment",
+    "C": "Referendum",
+    "D": "Coup"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Impeachment is the process of removing an elected official from office for misconduct."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0077",
+   "type": "mcq",
+   "stem": "Which organization promotes oil-producing countries’ interests?",
+   "options": {
+    "A": "UN",
+    "B": "OPEC",
+    "C": "AU",
+    "D": "ECOWAS"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Organization of Petroleum Exporting Countries (OPEC) promotes oil-producing countries’ interests."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0078",
+   "type": "mcq",
+   "stem": "What is the term for a government where the head of state is ceremonial?",
+   "options": {
+    "A": "Presidential system",
+    "B": "Constitutional monarchy",
+    "C": "Dictatorship",
+    "D": "Republic"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A constitutional monarchy has a ceremonial head of state, typically a monarch."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0079",
+   "type": "mcq",
+   "stem": "Which Nigerian leader annulled the 1993 presidential election?",
+   "options": {
+    "A": "Olusegun Obasanjo",
+    "B": "Ibrahim Babangida",
+    "C": "Yakubu Gowon",
+    "D": "Sani Abacha"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Ibrahim Babangida annulled the 1993 presidential election in Nigeria."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0080",
+   "type": "mcq",
+   "stem": "What is the term for the power to review laws for constitutionality?",
+   "options": {
+    "A": "Legislative power",
+    "B": "Judicial review",
+    "C": "Executive power",
+    "D": "Sovereign power"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Judicial review is the power to review laws to ensure they align with the constitution."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0081",
+   "type": "mcq",
+   "stem": "Which body in Nigeria conducts local government elections?",
+   "options": {
+    "A": "INEC",
+    "B": "SIEC",
+    "C": "EFCC",
+    "D": "CBN"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "State Independent Electoral Commissions (SIEC) conduct local government elections."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0082",
+   "type": "mcq",
+   "stem": "What is the term for a system where states share power with a central authority?",
+   "options": {
+    "A": "Unitary",
+    "B": "Federal",
+    "C": "Confederal",
+    "D": "Centralized"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A federal system shares power between central and state governments."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0083",
+   "type": "mcq",
+   "stem": "Which Nigerian political party won the 2015 elections?",
+   "options": {
+    "A": "PDP",
+    "B": "APC",
+    "C": "ANPP",
+    "D": "AD"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The All Progressives Congress (APC) won the 2015 general elections in Nigeria."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0084",
+   "type": "mcq",
+   "stem": "What is the term for the process of forming a new government after elections?",
+   "options": {
+    "A": "Legislation",
+    "B": "Transition",
+    "C": "Referendum",
+    "D": "Coup"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Transition is the process of forming a new government after elections."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0085",
+   "type": "mcq",
+   "stem": "Which organization promotes human rights globally?",
+   "options": {
+    "A": "WTO",
+    "B": "UN",
+    "C": "AU",
+    "D": "ECOWAS"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The United Nations (UN) promotes human rights globally through its charter."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0086",
+   "type": "mcq",
+   "stem": "What is the term for a government where power is held by the people?",
+   "options": {
+    "A": "Monarchy",
+    "B": "Democracy",
+    "C": "Oligarchy",
+    "D": "Theocracy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Democracy is a government where power is held by the people through elections."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0087",
+   "type": "mcq",
+   "stem": "Which Nigerian leader introduced the six geo-political zones?",
+   "options": {
+    "A": "Olusegun Obasanjo",
+    "B": "Sani Abacha",
+    "C": "Yakubu Gowon",
+    "D": "Ibrahim Babangida"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Sani Abacha introduced the six geo-political zones in Nigeria in the 1990s."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0088",
+   "type": "mcq",
+   "stem": "What is the term for the right to fair treatment under the law?",
+   "options": {
+    "A": "Sovereignty",
+    "B": "Due process",
+    "C": "Authority",
+    "D": "Franchise"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Due process ensures fair treatment under the law for all citizens."
+  },
+  {
+   "id": "waec-server-scripts-government-sun-0089",
+   "type": "mcq",
+   "stem": "Which body in Nigeria appoints judges?",
+   "options": {
+    "A": "INEC",
+    "B": "NJC",
+    "C": "EFCC",
+    "D": "CBN"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The National Judicial Council (NJC) appoints and disciplines judges in Nigeria."
+  }
+ ],
+ "category": "secondary",
+ "body": "WAEC"
+}

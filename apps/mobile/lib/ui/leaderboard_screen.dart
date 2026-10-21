@@ -1,0 +1,776 @@
+/// Leaderboard - the focus standings: Arena, JAMB (official aggregate
+/// out of 400), WAEC, NECO, Streak and the daily sprint. Schools are
+/// not ranked (founder directive 2026-09-30).
+///
+/// Sticky back bar with the centred title, the board tabs as pills on a
+/// scrollable track, and the ranking as cards: gold / silver / bronze
+/// for the podium, white cards below, the caller's own row ringed in
+/// ink when it rides along. The XP board is retired - these ladders
+/// rank what students actually chase.
+library;
+
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../api_client.dart';
+import '../learn_models.dart' show GemsBoardEntry, GemsLeaderboardData;
+import '../models.dart';
+import 'learn_bits.dart';
+import 'msymbols.dart';
+import 'renance_logo.dart';
+import 'social_screens.dart';
+import 'tactile.dart';
+import 'theme.dart';
+import 'blue_tick.dart';
+
+class LeaderboardScreen extends StatefulWidget {
+  const LeaderboardScreen({super.key});
+
+  @override
+  State<LeaderboardScreen> createState() => _LeaderboardScreenState();
+}
+
+class _LeaderboardScreenState extends State<LeaderboardScreen> {
+  _Board _tab = _Board.arena;
+  bool _loading = true;
+  String? _error;
+  final Map<_Board, LeaderboardData?> _boards = <_Board, LeaderboardData?>{};
+  GemsLeaderboardData? _gemsBoard;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _load());
+  }
+
+  Future<void> _load() async {
+    final ApiClient api = context.read<ApiClient>();
+    if (!mounted) return;
+    setState(() {
+      _loading = true;
+      _error = null;
+    });
+    try {
+      if (_tab == _Board.gems) {
+        _gemsBoard ??= await api.leaderboardGems();
+      } else if (_boards[_tab] == null) {
+        switch (_tab) {
+          case _Board.arena:
+            _boards[_tab] = await api.leaderboardArena();
+          case _Board.jamb:
+            _boards[_tab] = await api.leaderboardFocus(focus: 'jamb');
+          case _Board.waec:
+            _boards[_tab] = await api.leaderboardFocus(focus: 'waec');
+          case _Board.neco:
+            _boards[_tab] = await api.leaderboardFocus(focus: 'neco');
+          case _Board.streak:
+            _boards[_tab] = await api.leaderboardStreak();
+          case _Board.daily:
+            _boards[_tab] = await api.dailyLeaderboard();
+          case _Board.gems:
+            // Handled above via _gemsBoard; unreachable.
+            break;
+        }
+      }
+      if (!mounted) return;
+      setState(() => _loading = false);
+    } on ApiException catch (e) {
+      if (!mounted) return;
+      setState(() {
+        _loading = false;
+        _error = e.message;
+      });
+    } on NetworkException catch (e) {
+      if (!mounted) return;
+      setState(() {
+        _loading = false;
+        _error = e.message;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: context.pageBg,
+      body: SafeArea(
+        bottom: false,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            // Sticky back bar, centred title - the school app's header.
+            Container(
+              decoration: BoxDecoration(
+                color: context.pageBg,
+                border: Border(
+                  bottom: BorderSide(
+                    color: context.outlineVariant.withValues(alpha: 0.4),
+                  ),
+                ),
+              ),
+              padding: const EdgeInsets.only(left: 8, right: 16),
+              child: SizedBox(
+                height: 56,
+                child: Row(
+                  children: <Widget>[
+                    TactileBackKey(
+                      onTap: () => Navigator.of(context).pop(),
+                      size: 42,
+                    ),
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Text(
+                        'Leaderboard',
+                        textAlign: TextAlign.center,
+                        style: RenanceText.sectionTitle,
+                      ),
+                    ),
+                    const SizedBox(width: 92),
+                  ],
+                ),
+              ),
+            ),
+            // Board tabs: pills on a scrollable track, one per ladder.
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 14, 0, 0),
+              child: SizedBox(
+                height: 46,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  shrinkWrap: true,
+                  children: <Widget>[
+                    for (final _Board b in _Board.values)
+                      Padding(
+                        padding: const EdgeInsets.only(right: 8),
+                        child: GestureDetector(
+                          onTap: () {
+                            if (_tab == b) return;
+                            setState(() => _tab = b);
+                            _load();
+                          },
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 180),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 18, vertical: 9),
+                            decoration: BoxDecoration(
+                              color: _tab == b
+                                  ? context.ink
+                                  : context.cardLow,
+                              borderRadius: BorderRadius.circular(999),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                MsIcon(b.icon, size: 15,
+                                    color: _tab == b
+                                        ? context.onInverseChip
+                                        : context.textSecondary),
+                                const SizedBox(width: 6),
+                                Text(
+                                  b.label,
+                                  style: RenanceText.bodyMedium.copyWith(
+                                    fontSize: 13.5,
+                                    color: _tab == b
+                                        ? context.onInverseChip
+                                        : context.textSecondary,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: _loading
+                  ? Center(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          const RenanceMark(size: 36, busy: true),
+                          const SizedBox(height: 12),
+                          Text('Loading the board…',
+                              style: RenanceText.caption
+                                  .copyWith(color: context.textSecondary)),
+                        ],
+                      ),
+                    )
+                  : _error != null
+                      ? ListView(
+                          padding: const EdgeInsets.all(32),
+                          children: <Widget>[
+                            Text(
+                              _error!,
+                              textAlign: TextAlign.center,
+                              style: RenanceText.bodySecondary
+                                  .copyWith(color: context.textSecondary),
+                            ),
+                            const SizedBox(height: 12),
+                          ],
+                        )
+                      : _tab == _Board.gems
+                          ? _GemsBoardList(data: _gemsBoard)
+                          : _BoardList(
+                              board: _boards[_tab],
+                              tab: _tab,
+                            ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// The ladders the ranking page serves, each with its pill label and
+/// the one-line explanation under the tabs. Schools are not ranked.
+enum _Board {
+  arena('Arena', 'sports_esports',
+      'Head-to-head duels, weekly and all time. A win is a point.'),
+  jamb('JAMB', 'school',
+      'Your best official UTME aggregate out of 400. The sealed subject ledger decides.'),
+  waec('WAEC', 'menu_book',
+      'Your best WAEC paper, graded on the server against the sealed keys.'),
+  neco('NECO', 'history_edu',
+      'Your best NECO paper, graded on the server against the sealed keys.'),
+  streak('Streak', 'local_fire_department',
+      'The students still showing up, day after day. Miss a day and it resets.'),
+  gems('Diamonds', 'diamond',
+      'The gem holders - quest claimants, chest openers, perfect scorers.'),
+  daily('Daily', 'event_repeat',
+      "Today's challenge, one sprint, everyone worldwide.");
+
+  const _Board(this.label, this.icon, this.hint);
+  final String label;
+  final String icon;
+  final String hint;
+}
+
+/// The ranking cards: gold / silver / bronze for the podium, white
+/// cards below, the caller's own row ringed in ink when it rides along.
+class _BoardList extends StatelessWidget {
+  const _BoardList({
+    required this.board,
+    required this.tab,
+  });
+
+  final LeaderboardData? board;
+  final _Board tab;
+
+  String _fmtNum(double n) {
+    if (n == n.roundToDouble()) {
+      if (n >= 1000) {
+        final String s = n.round().toString();
+        return '${s.substring(0, s.length - 3)},${s.substring(s.length - 3)}';
+      }
+      return n.round().toString();
+    }
+    return n.toStringAsFixed(1);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (tab == _Board.gems) {
+      // Routed at the screen level (_GemsBoardList); never reached.
+      return const SizedBox.shrink();
+    }
+    final LeaderboardData? data = board;
+    if (data == null) return const SizedBox.shrink();
+    final List<BoardEntry> rows = <BoardEntry>[...data.entries];
+    final BoardEntry? me = data.me;
+    if (me != null &&
+        !rows.any((BoardEntry e) => e.username == me.username)) {
+      rows.add(me);
+    }
+    final int? meRank = me?.rank;
+
+    if (rows.isEmpty) {
+      return ListView(
+        padding: const EdgeInsets.all(32),
+        children: <Widget>[
+          Text(
+            tab == _Board.jamb
+                ? 'No official UTME mock graded yet. Take one and claim the first seat.'
+                : 'No scores yet, be the first on the board.',
+            textAlign: TextAlign.center,
+            style: RenanceText.bodySecondary
+                .copyWith(color: context.textSecondary),
+          ),
+        ],
+      );
+    }
+
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(16, 14, 16, 32),
+      children: <Widget>[
+        Text(
+          tab.hint,
+          style: RenanceText.bodySecondary.copyWith(
+            fontSize: 12.5,
+            color: context.textSecondary,
+          ),
+        ),
+        const SizedBox(height: 14),
+        for (var i = 0; i < rows.length; i++)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: _RankCard(
+              entry: rows[i],
+              tab: tab,
+              fmt: _fmtNum,
+              you: meRank != null && rows[i].rank == meRank,
+            ),
+          ),
+      ],
+    );
+  }
+}
+
+class _GemsBoardList extends StatelessWidget {
+  const _GemsBoardList({required this.data});
+
+  final GemsLeaderboardData? data;
+
+  @override
+  Widget build(BuildContext context) {
+    final GemsLeaderboardData? d = data;
+    if (d == null) return const SizedBox.shrink();
+    final List<GemsBoardEntry> rows = <GemsBoardEntry>[...d.entries];
+    final GemsBoardEntry? me = d.me;
+    if (me != null && !rows.any((GemsBoardEntry e) => e.username == me.username)) {
+      rows.add(me);
+    }
+    if (rows.isEmpty) {
+      return ListView(
+        padding: const EdgeInsets.all(32),
+        children: <Widget>[
+          Text(
+            'No gem holders yet - claim a quest and take the first seat.',
+            textAlign: TextAlign.center,
+            style:
+                RenanceText.bodySecondary.copyWith(color: context.textSecondary),
+          ),
+        ],
+      );
+    }
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(16, 14, 16, 32),
+      children: <Widget>[
+        Text(
+          _Board.gems.hint,
+          style: RenanceText.bodySecondary.copyWith(
+            fontSize: 12.5,
+            color: context.textSecondary,
+          ),
+        ),
+        const SizedBox(height: 14),
+        for (final GemsBoardEntry e in rows)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: _GemsRankCard(entry: e, you: me != null && e.rank == me.rank),
+          ),
+      ],
+    );
+  }
+}
+
+class _GemsRankCard extends StatelessWidget {
+  const _GemsRankCard({required this.entry, required this.you});
+
+  final GemsBoardEntry entry;
+  final bool you;
+
+  @override
+  Widget build(BuildContext context) {
+    final int rank = entry.rank;
+    final Color tint = rank == 1
+        ? const Color(0xFFF7CE55)
+        : rank == 2
+            ? const Color(0xFFD9DEE7)
+            : rank == 3
+                ? const Color(0xFFE4C3A0)
+                : Colors.transparent;
+    return GestureDetector(
+      onTap: entry.username.isEmpty
+          ? null
+          : () => PublicProfileScreen.push(context, entry.username),
+      child: Container(
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: you ? context.primary.withValues(alpha: 0.08) : context.card,
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(
+            color: you ? context.primary : context.outlineVariant,
+            width: you ? 2 : 1.5,
+          ),
+        ),
+        child: Row(
+          children: <Widget>[
+            Container(
+              width: 34,
+              height: 34,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: tint == Colors.transparent
+                    ? context.cardLow
+                    : tint.withValues(alpha: 0.4),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Text(
+                '$rank',
+                style: RenanceText.labelMono.copyWith(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Row(
+                children: <Widget>[
+                  Flexible(
+                    child: Text(
+                      entry.username,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        fontFamily: 'Nunito',
+                        fontSize: 14.5,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ),
+                  if (entry.premium) ...<Widget>[
+                    const SizedBox(width: 5),
+                    const BlueTickIcon(size: 13),
+                  ],
+                ],
+              ),
+            ),
+            const GemIcon(size: 15),
+            const SizedBox(width: 4),
+            Text(
+              '${entry.gems}',
+              style: RenanceText.labelMono.copyWith(
+                fontSize: 13.5,
+                fontWeight: FontWeight.w700,
+                color: RenanceColors.macawDark,
+              ),
+            ),
+            const SizedBox(width: 10),
+            Text(
+              '${entry.xp} xp · ${entry.streak}d',
+              style: RenanceText.labelMono.copyWith(
+                fontSize: 11.5,
+                color: context.textSecondary,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _RankCard extends StatelessWidget {
+  const _RankCard({
+    required this.entry,
+    required this.tab,
+    required this.fmt,
+    required this.you,
+  });
+
+  final BoardEntry entry;
+  final _Board tab;
+  final String Function(double) fmt;
+  final bool you;
+
+  static const Color _gold = Color(0xFFF7CE55);
+  static const Color _silver = Color(0xFFD9DEE7);
+  static const Color _bronze = Color(0xFFE4C3A0);
+
+  @override
+  Widget build(BuildContext context) {
+    final int rank = entry.rank;
+    final Color tint = rank == 1
+        ? _gold
+        : rank == 2
+            ? _silver
+            : rank == 3
+                ? _bronze
+                : Colors.transparent;
+    final Color valueColor = rank == 1
+        ? const Color(0xFF8A6A00)
+        : rank == 2
+            ? const Color(0xFF4A5568)
+            : rank == 3
+                ? const Color(0xFF7A5230)
+                : context.ink;
+
+    // The headline value each ladder ranks on.
+    String headline = '';
+    String headlineUnit = '';
+    String headlineLabel = 'Renance Points';
+    switch (tab) {
+      case _Board.arena:
+        headline = '${entry.points}';
+        headlineLabel = 'Renance Points';
+      case _Board.jamb:
+        headline = fmt(entry.bestScore);
+        headlineUnit = '/${fmt(entry.scoreOutOf)}';
+        headlineLabel = 'Best UTME';
+      case _Board.waec:
+      case _Board.neco:
+        headline = fmt(entry.bestScore);
+        headlineUnit = '/${fmt(entry.scoreOutOf)}';
+        headlineLabel = 'Best Paper';
+      case _Board.streak:
+        headline = '${entry.currentStreak}';
+        headlineUnit = ' days';
+        headlineLabel = 'Current Streak';
+      case _Board.daily:
+        headline = '${entry.score}';
+        headlineUnit = '/${entry.total}';
+        headlineLabel = 'Score';
+      case _Board.gems:
+        // Routed at the screen level (_GemsBoardList); never reached.
+        break;
+    }
+
+    final List<Widget> chips = <Widget>[];
+    switch (tab) {
+      case _Board.arena:
+        chips.addAll(<Widget>[
+          _StatChip(
+            icon: 'emoji_events',
+            label: 'Wins',
+            value: '${entry.wins}',
+          ),
+          _StatChip(
+            icon: 'history_edu',
+            label: 'Matches',
+            value: '${entry.matches}',
+          ),
+          _StatChip(
+            icon: 'check_circle',
+            label: 'Correct',
+            value: '${entry.correct}',
+          ),
+        ]);
+      case _Board.jamb:
+      case _Board.waec:
+      case _Board.neco:
+        chips.add(_StatChip(
+          icon: 'history_edu',
+          label: 'Papers',
+          value: '${entry.papers}',
+        ));
+      case _Board.streak:
+        chips.addAll(<Widget>[
+          _StatChip(
+            icon: 'military_tech',
+            label: 'Best',
+            value: '${entry.bestStreak}d',
+          ),
+          _StatChip(
+            icon: 'history_edu',
+            label: 'Papers',
+            value: '${entry.attempts}',
+          ),
+        ]);
+      case _Board.daily:
+        chips.add(_StatChip(
+          icon: 'check_circle',
+          label: 'Score',
+          value: '${entry.score}/${entry.total}',
+        ));
+      case _Board.gems:
+        // Routed at the screen level (_GemsBoardList); never reached.
+        break;
+    }
+
+    return Container(
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: rank <= 3 ? tint.withValues(alpha: 0.34) : context.card,
+        borderRadius: BorderRadius.circular(16),
+        border: you
+            ? Border.all(color: context.ink, width: 1.6)
+            : Border.all(
+                color: context.outlineVariant.withValues(alpha: 0.4)),
+        boxShadow: const <BoxShadow>[
+          BoxShadow(
+            color: Color(0x0F141C2D),
+            blurRadius: 4,
+            offset: Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Row(
+            children: <Widget>[
+              // Medal / rank badge.
+              Container(
+                width: 38,
+                height: 38,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: rank <= 3 ? Colors.white : context.cardLow,
+                  border: rank <= 3
+                      ? null
+                      : Border.all(color: context.outlineVariant),
+                  boxShadow: rank <= 3
+                      ? const <BoxShadow>[
+                          BoxShadow(
+                            color: Color(0x22141C2D),
+                            blurRadius: 4,
+                            offset: Offset(0, 1),
+                          ),
+                        ]
+                      : null,
+                ),
+                child: rank == 1
+                    ? const MsIcon('emoji_events',
+                        size: 20, fill: true, color: Color(0xFFB7791F))
+                    : Text(
+                        '$rank',
+                        style: RenanceText.bodyMedium.copyWith(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w700,
+                          color: rank <= 3 ? valueColor : context.ink,
+                        ),
+                      ),
+              ),
+              const SizedBox(width: 10),
+              // Avatar initial.
+              Container(
+                width: 40,
+                height: 40,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: you ? context.inverseChip : context.cardLow,
+                ),
+                child: you
+                    ? Text(
+                        'R',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 16,
+                          color: context.onInverseChip,
+                        ),
+                      )
+                    : Text(
+                        entry.username.isEmpty
+                            ? 'R'
+                            : entry.username[0].toUpperCase(),
+                        style: RenanceText.bodyMedium.copyWith(
+                          fontSize: 15,
+                          color: context.ink,
+                        ),
+                      ),
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Row(
+                  children: <Widget>[
+                    Flexible(
+                      child: Text(
+                        you ? 'You' : entry.username,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: RenanceText.bodyMedium.copyWith(fontSize: 16),
+                      ),
+                    ),
+                    // The premium verified tick, the one blue on the app.
+                    if (entry.premium) ...<Widget>[
+                      const SizedBox(width: 5),
+                      const BlueTickIcon(size: 15),
+                    ],
+                  ],
+                ),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  Text(
+                    headlineLabel,
+                    style: RenanceText.caption.copyWith(
+                      fontSize: 12,
+                      color: context.textSecondary,
+                    ),
+                  ),
+                  Text(
+                    tab == _Board.streak ? '🔥 $headline' : '$headline$headlineUnit',
+                    style: RenanceText.statNumber.copyWith(
+                      fontSize: 22,
+                      color: valueColor,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          // The honest stat chips under each row.
+          Wrap(
+            spacing: 6,
+            runSpacing: 6,
+            children: chips,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _StatChip extends StatelessWidget {
+  const _StatChip({
+    required this.icon,
+    required this.label,
+    required this.value,
+  });
+
+  final String icon;
+  final String label;
+  final String value;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      decoration: BoxDecoration(
+        color: context.cardLowest,
+        borderRadius: BorderRadius.circular(999),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          MsIcon(icon, size: 13, color: context.textSecondary),
+          const SizedBox(width: 5),
+          Text(
+            label,
+            style: RenanceText.caption.copyWith(
+              fontSize: 12,
+              color: context.textSecondary,
+            ),
+          ),
+          const SizedBox(width: 5),
+          Text(
+            value,
+            style: RenanceText.labelMono.copyWith(
+              fontSize: 12,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

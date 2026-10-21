@@ -1,0 +1,130 @@
+name: mobile (Android APK + AAB)
+
+# Builds ONE Android artifact on every push that touches the Flutter
+# app - the arm64-v8a APK (founder directive 2026-10-19: "Don't generate
+# aab for now. Only generate Arm-64 apk so that I can keep testing on my
+# phone till the app is now better"):
+#     renance-arm64.apk  arm64-v8a only (~21MB) - every phone from
+#                        roughly 2017 onwards
+# The universal APK, the arm32 APK and the Play Store AAB return with
+# the Play release (restore them from git history when the directive
+# flips).
+# Get them three ways:
+#   1. Run page artifacts (renance-android-apk / renance-android-aab)
+#   2. Rolling "latest" release below - raw .apk, no zip
+#   3. Tag a version (v*) - attached to a proper GitHub Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'apps/mobile/**'
+      - '.github/workflows/mobile-apk.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.47.2
+          cache: true
+
+      - name: Resolve packages
+        working-directory: apps/mobile
+        run: flutter pub get
+
+      - name: Analyze
+        working-directory: apps/mobile
+        run: flutter analyze
+
+      - name: Test
+        working-directory: apps/mobile
+        run: flutter test
+
+      # Point the app at the deployed study API via the PUBLIC_API_BASE repo
+      # variable (Settings -> Secrets and variables -> Actions -> Variables).
+      # Unset, the fallback is the PRODUCTION API - the app config's own
+      # default - so a release build always syncs and downloads. (The old
+      # loopback fallback shipped dead downloads in every release.)
+      # GOOGLE_WEB_CLIENT_ID (repo variable) is the `serverClientId` Google
+      # sign-in uses so ID tokens carry the API's expected audience.
+      # Founder directive 2026-10-19 ("Don't generate aab for now. Only
+      # generate Arm-64 apk so that I can keep testing on my phone till
+      # the app is now better"): the CI ships ONLY the arm64-v8a APK
+      # while the app is in founder testing. The universal / arm32 / AAB
+      # builds come back with the Play Store release (restore from git
+      # history when the directive flips).
+      - name: Build arm64-v8a release APK
+        working-directory: apps/mobile
+        run: |
+          # --obfuscate + --split-debug-info (founder directive
+          # 2026-10-12: "make sure nobody can decompile my mobile app"):
+          # Dart symbols are stripped from the release binary.
+          # --split-per-abi normally bumps versionCode by 1000*abiCode;
+          # the flag keeps the APK at the pubspec versionCode so every
+          # flavor upgrades/interchanges cleanly.
+          flutter build apk --release --split-per-abi \
+            -Pforce-version-code-ignoring-abi=true \
+            --target-platform android-arm64 \
+            --obfuscate --split-debug-info=build/symbols/apk-split \
+            --dart-define=RENANCE_API_BASE=${{ vars.PUBLIC_API_BASE || 'https://renance-api.onrender.com' }} \
+            --dart-define=GOOGLE_WEB_CLIENT_ID=${{ vars.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '' }}
+          mkdir -p dist
+          cp build/app/outputs/flutter-apk/app-arm64-v8a-release.apk dist/renance-arm64.apk
+
+      # The rolling latest release also carries a version-stamped copy
+      # (Renance-<versionCode>.apk) beside the canonical renance-arm64.apk.
+      - name: Stamp the versioned APK copy
+        working-directory: apps/mobile
+        run: |
+          VER=$(grep -m1 '^version:' pubspec.yaml | cut -d'+' -f2 | tr -d ' \r')
+          cp dist/renance-arm64.apk dist/Renance-${VER}.apk
+
+      # The per-run artifacts are convenience copies only - the real
+      # distribution channels are the rolling "latest" release below and
+      # the AAB hand-off to the Play Console, neither of which touches
+      # the Actions artifact storage quota. When the account quota is
+      # hit ("recalculated every 6-12 hours") the uploads used to fail
+      # the whole job and skip the release publish; now they degrade
+      # gracefully instead (founder hit this 2026-10-05).
+      - name: Upload APK artifact (arm64)
+        uses: actions/upload-artifact@v4
+        continue-on-error: true
+        with:
+          name: renance-android-apk
+          path: apps/mobile/dist/*.apk
+
+      - name: Publish rolling latest release (raw APK, no zip)
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest Android build
+          # A full (non-prerelease) release keeps the canonical
+          # /releases/latest/download/app-release.apk URL working.
+          prerelease: false
+          files: |
+            apps/mobile/dist/renance-arm64.apk
+            apps/mobile/dist/Renance-*.apk
+
+      - name: Attach to GitHub Release (tag builds only)
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            apps/mobile/dist/renance-arm64.apk
+            apps/mobile/dist/Renance-*.apk

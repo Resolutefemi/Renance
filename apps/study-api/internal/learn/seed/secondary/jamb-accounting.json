@@ -1,0 +1,2483 @@
+{
+ "body": "jamb",
+ "subject": "accounting",
+ "title": "Principles of Accounts",
+ "unitTitles": [
+  "Books of Original Entry and the Ledger",
+  "Trial Balance to Final Accounts",
+  "Adjustments and Control Accounts",
+  "Specialised Accounts: Stock to Partnerships",
+  "Companies, Analysis and the Public Sector",
+  "Capital, Revenue and Payroll",
+  "Double Entry Deep Dive",
+  "Cash Book and Bank Mastery",
+  "Final Accounts Adjustments Clinic",
+  "Partnership Accounts Deep Dive",
+  "Company Accounts Deep Dive",
+  "Interpretation of Accounts",
+  "Control and Suspense Mastery",
+  "Not-for-Profit Organisations",
+  "Manufacturing and Departmental Accounts",
+  "Incomplete Records Mastery",
+  "Public Sector Accounting",
+  "Introduction to Auditing and Ethics",
+  "Computerised Accounting",
+  "Structured Revision: Set A",
+  "Structured Revision: Set B",
+  "Calculations Workshop",
+  "JAMB Masterclass: Final Lap",
+  "Stock Valuation Methods",
+  "Purchase of Business",
+  "The Cash Flow Statement",
+  "Value Added Tax Accounting",
+  "Wages and Payroll",
+  "Departmental Accounting Workshop",
+  "Final Accounts Workshop: Sole Trader"
+ ],
+ "topics": [
+  {
+   "title": "Book-keeping and the purpose of accounting",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "book keeping",
+    "accounting",
+    "purpose",
+    "users of accounts"
+   ]
+  },
+  {
+   "title": "Users of accounting information and their needs",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "users",
+    "information",
+    "needs",
+    "stakeholders"
+   ]
+  },
+  {
+   "title": "Accounting concepts and conventions",
+   "category": "Theory",
+   "keywords": [
+    "concepts",
+    "conventions",
+    "going concern",
+    "accruals",
+    "consistency"
+   ]
+  },
+  {
+   "title": "The accounting equation and balance sheet",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "accounting equation",
+    "assets",
+    "liabilities",
+    "capital",
+    "balance sheet"
+   ]
+  },
+  {
+   "title": "Classes of accounts: personal and impersonal",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "personal account",
+    "real account",
+    "nominal account",
+    "impersonal"
+   ]
+  },
+  {
+   "title": "Double entry: debits and credits explained",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "double entry",
+    "debit",
+    "credit",
+    "ledger"
+   ]
+  },
+  {
+   "title": "The journal: books of original entry",
+   "category": "Methods",
+   "keywords": [
+    "journal",
+    "original entry",
+    "narration",
+    "entries"
+   ]
+  },
+  {
+   "title": "The ledger: posting and balancing accounts",
+   "category": "Methods",
+   "keywords": [
+    "ledger",
+    "posting",
+    "balancing",
+    "folio"
+   ]
+  },
+  {
+   "title": "The cash book: two and three column",
+   "category": "Methods",
+   "keywords": [
+    "cash book",
+    "two column",
+    "three column",
+    "cash",
+    "bank"
+   ]
+  },
+  {
+   "title": "Petty cash book and the imprest system",
+   "category": "Methods",
+   "keywords": [
+    "petty cash",
+    "imprest",
+    "analysis columns",
+    "reimbursement"
+   ]
+  },
+  {
+   "title": "Purchases, sales and returns day books",
+   "category": "Methods",
+   "keywords": [
+    "purchases day book",
+    "sales day book",
+    "returns",
+    "invoices"
+   ]
+  },
+  {
+   "title": "Source documents: invoices, receipts and vouchers",
+   "category": "Methods",
+   "keywords": [
+    "source documents",
+    "invoices",
+    "receipts",
+    "vouchers",
+    "credit notes"
+   ]
+  },
+  {
+   "title": "The trial balance and its preparation",
+   "category": "Methods",
+   "keywords": [
+    "trial balance",
+    "preparation",
+    "balances",
+    "agreement"
+   ]
+  },
+  {
+   "title": "Bank reconciliation statements and causes",
+   "category": "Methods",
+   "keywords": [
+    "bank reconciliation",
+    "uncredited",
+    "unpresented",
+    "bank statement"
+   ]
+  },
+  {
+   "title": "Errors not affecting the trial balance",
+   "category": "Methods",
+   "keywords": [
+    "errors",
+    "commission",
+    "omission",
+    "principle",
+    "compensating"
+   ]
+  },
+  {
+   "title": "Suspense accounts and error correction",
+   "category": "Methods",
+   "keywords": [
+    "suspense account",
+    "correction",
+    "errors",
+    "adjustments"
+   ]
+  },
+  {
+   "title": "Trading, profit and loss account of a sole trader",
+   "category": "Methods",
+   "keywords": [
+    "trading account",
+    "profit and loss",
+    "gross profit",
+    "net profit"
+   ]
+  },
+  {
+   "title": "Balance sheet: grouping and presentation",
+   "category": "Methods",
+   "keywords": [
+    "balance sheet",
+    "grouping",
+    "current assets",
+    "fixed assets",
+    "order of permanence"
+   ]
+  },
+  {
+   "title": "Accruals and prepayments adjustments",
+   "category": "Methods",
+   "keywords": [
+    "accruals",
+    "prepayments",
+    "outstanding",
+    "adjustments"
+   ]
+  },
+  {
+   "title": "Depreciation: straight line and reducing balance",
+   "category": "Methods",
+   "keywords": [
+    "depreciation",
+    "straight line",
+    "reducing balance",
+    "residual value"
+   ]
+  },
+  {
+   "title": "Provisions for doubtful debts and discounts",
+   "category": "Methods",
+   "keywords": [
+    "doubtful debts",
+    "bad debts",
+    "provision",
+    "discounts allowed"
+   ]
+  },
+  {
+   "title": "Bad debts written off and recovered",
+   "category": "Methods",
+   "keywords": [
+    "bad debts",
+    "written off",
+    "recovered",
+    "treatment"
+   ]
+  },
+  {
+   "title": "Preparing simple final accounts with adjustments",
+   "category": "Methods",
+   "keywords": [
+    "final accounts",
+    "adjustments",
+    "depreciation",
+    "accruals"
+   ]
+  },
+  {
+   "title": "Control accounts: sales and purchases ledgers",
+   "category": "Methods",
+   "keywords": [
+    "control accounts",
+    "sales ledger",
+    "purchases ledger",
+    "reconciliation"
+   ]
+  },
+  {
+   "title": "Stock valuation: FIFO, LIFO and weighted average",
+   "category": "Methods",
+   "keywords": [
+    "stock valuation",
+    "fifo",
+    "lifo",
+    "weighted average"
+   ]
+  },
+  {
+   "title": "Manufacturing accounts: cost of production",
+   "category": "Methods",
+   "keywords": [
+    "manufacturing account",
+    "prime cost",
+    "factory overheads",
+    "production cost"
+   ]
+  },
+  {
+   "title": "Incomplete records and single entry",
+   "category": "Methods",
+   "keywords": [
+    "incomplete records",
+    "single entry",
+    "statement of affairs",
+    "margin",
+    "mark up"
+   ]
+  },
+  {
+   "title": "Ratios: mark-up, margin and stock turnover",
+   "category": "Methods",
+   "keywords": [
+    "mark up",
+    "margin",
+    "turnover",
+    "ratio",
+    "profit"
+   ]
+  },
+  {
+   "title": "Not-for-profit organisations: receipts and payments",
+   "category": "Methods",
+   "keywords": [
+    "receipts and payments account",
+    "income and expenditure",
+    "subscriptions",
+    "accumulated fund"
+   ]
+  },
+  {
+   "title": "Partnership accounts: formation and goodwill",
+   "category": "Theory",
+   "keywords": [
+    "partnership",
+    "goodwill",
+    "capital accounts",
+    "interest on capital"
+   ]
+  },
+  {
+   "title": "Appropriation of partnership profits",
+   "category": "Theory",
+   "keywords": [
+    "appropriation",
+    "profits",
+    "salaries",
+    "commission",
+    "reserves"
+   ]
+  },
+  {
+   "title": "Admission and dissolution of partnerships",
+   "category": "Theory",
+   "keywords": [
+    "admission",
+    "dissolution",
+    "revaluation",
+    "realisation"
+   ]
+  },
+  {
+   "title": "Company accounts: shares and debentures",
+   "category": "Theory",
+   "keywords": [
+    "shares",
+    "debentures",
+    "ordinary shares",
+    "preference shares",
+    "issue"
+   ]
+  },
+  {
+   "title": "Final accounts of limited companies",
+   "category": "Theory",
+   "keywords": [
+    "company final accounts",
+    "appropriation account",
+    "dividends",
+    "reserves"
+   ]
+  },
+  {
+   "title": "Interpretation of accounts: key ratios",
+   "category": "Methods",
+   "keywords": [
+    "ratios",
+    "liquidity",
+    "profitability",
+    "current ratio",
+    "rate of return"
+   ]
+  },
+  {
+   "title": "Working capital and liquidity analysis",
+   "category": "Methods",
+   "keywords": [
+    "working capital",
+    "liquidity",
+    "acid test",
+    "current ratio"
+   ]
+  },
+  {
+   "title": "Purchase of business and goodwill",
+   "category": "Theory",
+   "keywords": [
+    "purchase of business",
+    "goodwill",
+    "vendor",
+    "consideration"
+   ]
+  },
+  {
+   "title": "Departmental and branch accounts",
+   "category": "Applications",
+   "keywords": [
+    "departmental",
+    "branch accounts",
+    "gross profit",
+    "allocation"
+   ]
+  },
+  {
+   "title": "Public sector accounting and funds in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "public sector",
+    "consolidated fund",
+    "government accounting",
+    "virement"
+   ]
+  },
+  {
+   "title": "Sources of government revenue and expenditure",
+   "category": "Nigerian Context",
+   "keywords": [
+    "government revenue",
+    "taxation",
+    "expenditure",
+    "allocations"
+   ]
+  },
+  {
+   "title": "Capital and revenue expenditure",
+   "category": "Theory",
+   "keywords": [
+    "capital expenditure",
+    "revenue expenditure",
+    "classification",
+    "treatment"
+   ]
+  },
+  {
+   "title": "Capital and revenue receipts distinguished",
+   "category": "Theory",
+   "keywords": [
+    "capital receipts",
+    "revenue receipts",
+    "distinguished"
+   ]
+  },
+  {
+   "title": "Wages, payroll and salaries records",
+   "category": "Applications",
+   "keywords": [
+    "wages",
+    "payroll",
+    "salaries",
+    "deductions",
+    "net pay"
+   ]
+  },
+  {
+   "title": "Accounting for value added tax in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "value added tax",
+    "vat",
+    "output tax",
+    "input tax"
+   ]
+  },
+  {
+   "title": "Cash flow and funds flow statements",
+   "category": "Applications",
+   "keywords": [
+    "cash flow",
+    "funds flow",
+    "statements",
+    "inflows",
+    "outflows"
+   ]
+  },
+  {
+   "title": "Introduction to auditing and its importance",
+   "category": "Applications",
+   "keywords": [
+    "auditing",
+    "internal audit",
+    "vouching",
+    "verification"
+   ]
+  },
+  {
+   "title": "Accounting in the computerised environment",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "computerised accounting",
+    "software",
+    "spreadsheets",
+    "packages"
+   ]
+  },
+  {
+   "title": "Ethics and professional bodies in accounting",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "ethics",
+    "ican",
+    "anan",
+    "integrity"
+   ]
+  },
+  {
+   "title": "Analysis and interpretation using trends",
+   "category": "Applications",
+   "keywords": [
+    "trends",
+    "analysis",
+    "interpretation",
+    "comparisons"
+   ]
+  },
+  {
+   "title": "Examination drill: accounting past questions by topic",
+   "category": "Applications",
+   "keywords": [
+    "past questions",
+    "revision",
+    "examination",
+    "jamb"
+   ]
+  },
+  {
+   "title": "Capital versus revenue expenditure in depth",
+   "category": "Theory",
+   "keywords": [
+    "capital expenditure",
+    "revenue expenditure"
+   ]
+  },
+  {
+   "title": "Receipts classification with cases",
+   "category": "Methods",
+   "keywords": [
+    "receipts",
+    "classification"
+   ]
+  },
+  {
+   "title": "Payroll: gross to net calculations",
+   "category": "Methods",
+   "keywords": [
+    "payroll",
+    "gross",
+    "net"
+   ]
+  },
+  {
+   "title": "Pension contributions accounting",
+   "category": "Applications",
+   "keywords": [
+    "pensions",
+    "contributions"
+   ]
+  },
+  {
+   "title": "The teachers' pension scheme noted",
+   "category": "Nigerian Context",
+   "keywords": [
+    "pension scheme"
+   ]
+  },
+  {
+   "title": "Capital allowances contrasted",
+   "category": "Theory",
+   "keywords": [
+    "capital allowances"
+   ]
+  },
+  {
+   "title": "Revenue receipts of government listed",
+   "category": "Nigerian Context",
+   "keywords": [
+    "revenue receipts"
+   ]
+  },
+  {
+   "title": "Classifying a mixed receipt: cases",
+   "category": "Methods",
+   "keywords": [
+    "mixed receipt",
+    "cases"
+   ]
+  },
+  {
+   "title": "Misclassification effects on profit",
+   "category": "Methods",
+   "keywords": [
+    "misclassification",
+    "profit"
+   ]
+  },
+  {
+   "title": "Examination drill: classification past questions",
+   "category": "Applications",
+   "keywords": [
+    "classification",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Assets, liabilities and capital revisited",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "assets",
+    "liabilities",
+    "capital"
+   ]
+  },
+  {
+   "title": "Expenses and revenues: nominal accounts",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "expenses",
+    "revenues"
+   ]
+  },
+  {
+   "title": "The accounting cycle end to end",
+   "category": "Theory",
+   "keywords": [
+    "accounting cycle"
+   ]
+  },
+  {
+   "title": "Trade versus cash transactions recorded",
+   "category": "Methods",
+   "keywords": [
+    "trade transactions",
+    "cash"
+   ]
+  },
+  {
+   "title": "Discounts: trade and cash recorded",
+   "category": "Methods",
+   "keywords": [
+    "discounts",
+    "trade",
+    "cash"
+   ]
+  },
+  {
+   "title": "Carriage inwards and outwards treatment",
+   "category": "Methods",
+   "keywords": [
+    "carriage inwards",
+    "outwards"
+   ]
+  },
+  {
+   "title": "Drawings and additional capital entries",
+   "category": "Methods",
+   "keywords": [
+    "drawings",
+    "capital"
+   ]
+  },
+  {
+   "title": "Compound journal entries practice",
+   "category": "Methods",
+   "keywords": [
+    "compound entries"
+   ]
+  },
+  {
+   "title": "Ledger balancing and footings drills",
+   "category": "Methods",
+   "keywords": [
+    "ledger balancing"
+   ]
+  },
+  {
+   "title": "Examination drill: double entry past questions",
+   "category": "Applications",
+   "keywords": [
+    "double entry",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Three-column cash book: full drills",
+   "category": "Methods",
+   "keywords": [
+    "cash book",
+    "three-column"
+   ]
+  },
+  {
+   "title": "Contra entries explained",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "contra entries"
+   ]
+  },
+  {
+   "title": "Petty cash: imprest and reimbursement",
+   "category": "Methods",
+   "keywords": [
+    "petty cash",
+    "imprest"
+   ]
+  },
+  {
+   "title": "Bank overdrafts in the cash book",
+   "category": "Methods",
+   "keywords": [
+    "overdrafts",
+    "cash book"
+   ]
+  },
+  {
+   "title": "Bank statement versus cash book",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "bank statement"
+   ]
+  },
+  {
+   "title": "Unpresented cheques and lodgements",
+   "category": "Methods",
+   "keywords": [
+    "unpresented cheques"
+   ]
+  },
+  {
+   "title": "Direct debits and standing orders",
+   "category": "Methods",
+   "keywords": [
+    "direct debits",
+    "standing orders"
+   ]
+  },
+  {
+   "title": "Preparing reconciliation statements fast",
+   "category": "Methods",
+   "keywords": [
+    "reconciliation",
+    "statements"
+   ]
+  },
+  {
+   "title": "Errors revealed by reconciliation",
+   "category": "Methods",
+   "keywords": [
+    "reconciliation errors"
+   ]
+  },
+  {
+   "title": "Examination drill: bank past questions",
+   "category": "Applications",
+   "keywords": [
+    "bank reconciliation",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Closing stock: valuation effects",
+   "category": "Methods",
+   "keywords": [
+    "closing stock",
+    "valuation"
+   ]
+  },
+  {
+   "title": "Accruals in income and expenses",
+   "category": "Methods",
+   "keywords": [
+    "accruals",
+    "income"
+   ]
+  },
+  {
+   "title": "Prepayments: two-sided treatment",
+   "category": "Methods",
+   "keywords": [
+    "prepayments"
+   ]
+  },
+  {
+   "title": "Depreciation: charge and provision accounts",
+   "category": "Methods",
+   "keywords": [
+    "depreciation",
+    "provision"
+   ]
+  },
+  {
+   "title": "Disposal of fixed assets entries",
+   "category": "Methods",
+   "keywords": [
+    "disposal",
+    "fixed assets"
+   ]
+  },
+  {
+   "title": "Bad debts and provisions adjusted",
+   "category": "Methods",
+   "keywords": [
+    "bad debts",
+    "provisions"
+   ]
+  },
+  {
+   "title": "Commission received in advance",
+   "category": "Methods",
+   "keywords": [
+    "commission",
+    "advance"
+   ]
+  },
+  {
+   "title": "Interest on capital and drawings",
+   "category": "Methods",
+   "keywords": [
+    "interest on capital",
+    "drawings"
+   ]
+  },
+  {
+   "title": "Extracting adjusted trial balances",
+   "category": "Methods",
+   "keywords": [
+    "adjusted trial balance"
+   ]
+  },
+  {
+   "title": "Examination drill: adjustments past questions",
+   "category": "Applications",
+   "keywords": [
+    "adjustments",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Partnership deed clauses matter",
+   "category": "Theory",
+   "keywords": [
+    "partnership deed"
+   ]
+  },
+  {
+   "title": "Capital accounts: fixed and fluctuating",
+   "category": "Methods",
+   "keywords": [
+    "capital accounts",
+    "fixed"
+   ]
+  },
+  {
+   "title": "Interest on partners' loans recorded",
+   "category": "Methods",
+   "keywords": [
+    "partners' loans"
+   ]
+  },
+  {
+   "title": "Goodwill: nature and valuation methods",
+   "category": "Theory",
+   "keywords": [
+    "goodwill",
+    "valuation"
+   ]
+  },
+  {
+   "title": "Revaluation of assets on admission",
+   "category": "Methods",
+   "keywords": [
+    "revaluation",
+    "admission"
+   ]
+  },
+  {
+   "title": "New partner's profit share computed",
+   "category": "Methods",
+   "keywords": [
+    "profit share",
+    "admission"
+   ]
+  },
+  {
+   "title": "Retirement: settlement of accounts",
+   "category": "Methods",
+   "keywords": [
+    "retirement",
+    "settlement"
+   ]
+  },
+  {
+   "title": "Dissolution: realisation account drills",
+   "category": "Methods",
+   "keywords": [
+    "dissolution",
+    "realisation"
+   ]
+  },
+  {
+   "title": "Garner v Murray rule: an introduction",
+   "category": "Theory",
+   "keywords": [
+    "Garner v Murray"
+   ]
+  },
+  {
+   "title": "Examination drill: partnership past questions",
+   "category": "Applications",
+   "keywords": [
+    "partnership",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Shares: issue at par, premium, discount",
+   "category": "Methods",
+   "keywords": [
+    "shares",
+    "premium"
+   ]
+  },
+  {
+   "title": "Calls in arrears and advance",
+   "category": "Methods",
+   "keywords": [
+    "calls in arrears"
+   ]
+  },
+  {
+   "title": "Debentures versus shares distinguished",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "debentures",
+    "shares"
+   ]
+  },
+  {
+   "title": "Appropriation account: dividends and reserves",
+   "category": "Methods",
+   "keywords": [
+    "appropriation",
+    "dividends"
+   ]
+  },
+  {
+   "title": "Reserves: revenue versus capital",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "reserves",
+    "revenue",
+    "capital"
+   ]
+  },
+  {
+   "title": "Bonus and rights issues compared",
+   "category": "Theory",
+   "keywords": [
+    "bonus issue",
+    "rights issue"
+   ]
+  },
+  {
+   "title": "Purchase consideration in business purchase",
+   "category": "Methods",
+   "keywords": [
+    "purchase consideration"
+   ]
+  },
+  {
+   "title": "Company final accounts layout",
+   "category": "Methods",
+   "keywords": [
+    "company accounts",
+    "layout"
+   ]
+  },
+  {
+   "title": "IAS-style presentation awareness",
+   "category": "Applications",
+   "keywords": [
+    "IAS",
+    "presentation"
+   ]
+  },
+  {
+   "title": "Examination drill: company past questions",
+   "category": "Applications",
+   "keywords": [
+    "company accounts",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Liquidity ratios: current and quick",
+   "category": "Methods",
+   "keywords": [
+    "liquidity ratios",
+    "current"
+   ]
+  },
+  {
+   "title": "Profitability ratios: margin and return",
+   "category": "Methods",
+   "keywords": [
+    "profitability ratios",
+    "margin"
+   ]
+  },
+  {
+   "title": "Efficiency ratios: turnover family",
+   "category": "Methods",
+   "keywords": [
+    "efficiency ratios",
+    "turnover"
+   ]
+  },
+  {
+   "title": "Gearing and capital structure",
+   "category": "Theory",
+   "keywords": [
+    "gearing",
+    "capital structure"
+   ]
+  },
+  {
+   "title": "Return on capital employed computed",
+   "category": "Methods",
+   "keywords": [
+    "ROCE"
+   ]
+  },
+  {
+   "title": "Inter-firm comparison cautions",
+   "category": "Theory",
+   "keywords": [
+    "inter-firm comparison"
+   ]
+  },
+  {
+   "title": "Trend analysis across years",
+   "category": "Methods",
+   "keywords": [
+    "trend analysis"
+   ]
+  },
+  {
+   "title": "Window dressing: what to spot",
+   "category": "Theory",
+   "keywords": [
+    "window dressing"
+   ]
+  },
+  {
+   "title": "Ratios in decision making cases",
+   "category": "Applications",
+   "keywords": [
+    "ratios",
+    "decisions"
+   ]
+  },
+  {
+   "title": "Examination drill: ratios past questions",
+   "category": "Applications",
+   "keywords": [
+    "ratios",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Sales ledger control accounts drilled",
+   "category": "Methods",
+   "keywords": [
+    "sales control",
+    "ledger"
+   ]
+  },
+  {
+   "title": "Purchases ledger control accounts drilled",
+   "category": "Methods",
+   "keywords": [
+    "purchases control",
+    "ledger"
+   ]
+  },
+  {
+   "title": "Reconciling control with list balances",
+   "category": "Methods",
+   "keywords": [
+    "reconciling",
+    "list balances"
+   ]
+  },
+  {
+   "title": "Errors of omission and commission",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "omission",
+    "commission"
+   ]
+  },
+  {
+   "title": "Errors of principle and original entry",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "principle",
+    "original entry"
+   ]
+  },
+  {
+   "title": "Complete reversal errors spotted",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "reversal errors"
+   ]
+  },
+  {
+   "title": "Suspense accounts: locating the error",
+   "category": "Methods",
+   "keywords": [
+    "suspense account"
+   ]
+  },
+  {
+   "title": "Correcting journal entries written",
+   "category": "Methods",
+   "keywords": [
+    "correcting journal"
+   ]
+  },
+  {
+   "title": "Effect of errors on profit computed",
+   "category": "Methods",
+   "keywords": [
+    "errors",
+    "profit effect"
+   ]
+  },
+  {
+   "title": "Examination drill: control past questions",
+   "category": "Applications",
+   "keywords": [
+    "control accounts",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Receipts and payments accounts prepared",
+   "category": "Methods",
+   "keywords": [
+    "receipts and payments"
+   ]
+  },
+  {
+   "title": "Income and expenditure accounts built",
+   "category": "Methods",
+   "keywords": [
+    "income and expenditure"
+   ]
+  },
+  {
+   "title": "Subscriptions: accruals computations",
+   "category": "Methods",
+   "keywords": [
+    "subscriptions",
+    "accruals"
+   ]
+  },
+  {
+   "title": "Life membership and donations treated",
+   "category": "Methods",
+   "keywords": [
+    "life membership",
+    "donations"
+   ]
+  },
+  {
+   "title": "Bar trading and restaurant accounts",
+   "category": "Methods",
+   "keywords": [
+    "bar trading"
+   ]
+  },
+  {
+   "title": "Special funds and endowments",
+   "category": "Theory",
+   "keywords": [
+    "special funds",
+    "endowments"
+   ]
+  },
+  {
+   "title": "Accumulated fund derived",
+   "category": "Methods",
+   "keywords": [
+    "accumulated fund"
+   ]
+  },
+  {
+   "title": "Club final accounts full example",
+   "category": "Methods",
+   "keywords": [
+    "club accounts"
+   ]
+  },
+  {
+   "title": "Peculiar items: raffles and grants",
+   "category": "Methods",
+   "keywords": [
+    "raffles",
+    "grants"
+   ]
+  },
+  {
+   "title": "Examination drill: club past questions",
+   "category": "Applications",
+   "keywords": [
+    "clubs",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Prime cost and factory overheads",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "prime cost",
+    "overheads"
+   ]
+  },
+  {
+   "title": "Work-in-progress adjustments",
+   "category": "Methods",
+   "keywords": [
+    "work-in-progress"
+   ]
+  },
+  {
+   "title": "Cost of goods manufactured statement",
+   "category": "Methods",
+   "keywords": [
+    "goods manufactured"
+   ]
+  },
+  {
+   "title": "Profit on manufacture treatment",
+   "category": "Methods",
+   "keywords": [
+    "profit on manufacture"
+   ]
+  },
+  {
+   "title": "Departmental accounts: gross profit split",
+   "category": "Methods",
+   "keywords": [
+    "departmental",
+    "gross profit"
+   ]
+  },
+  {
+   "title": "Allocating expenses to departments",
+   "category": "Methods",
+   "keywords": [
+    "allocating expenses"
+   ]
+  },
+  {
+   "title": "Inter-departmental transfers recorded",
+   "category": "Methods",
+   "keywords": [
+    "inter-departmental"
+   ]
+  },
+  {
+   "title": "Branch accounts: debtor method",
+   "category": "Methods",
+   "keywords": [
+    "branch accounts",
+    "debtor"
+   ]
+  },
+  {
+   "title": "Branch accounts: stock and debtor method",
+   "category": "Methods",
+   "keywords": [
+    "branch stock"
+   ]
+  },
+  {
+   "title": "Examination drill: manufacturing past questions",
+   "category": "Applications",
+   "keywords": [
+    "manufacturing",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Statement of affairs for capital",
+   "category": "Methods",
+   "keywords": [
+    "statement of affairs",
+    "capital"
+   ]
+  },
+  {
+   "title": "Sales from debtors control reconstructed",
+   "category": "Methods",
+   "keywords": [
+    "sales reconstructed",
+    "debtors"
+   ]
+  },
+  {
+   "title": "Purchases from creditors reconstructed",
+   "category": "Methods",
+   "keywords": [
+    "purchases reconstructed"
+   ]
+  },
+  {
+   "title": "Expenses from payments reconstructed",
+   "category": "Methods",
+   "keywords": [
+    "expenses reconstructed"
+   ]
+  },
+  {
+   "title": "Drawings and added assets inferred",
+   "category": "Methods",
+   "keywords": [
+    "drawings",
+    "inference"
+   ]
+  },
+  {
+   "title": "Mark-up and margin back-calculations",
+   "category": "Methods",
+   "keywords": [
+    "mark-up",
+    "margin"
+   ]
+  },
+  {
+   "title": "Stock from margin relationships",
+   "category": "Methods",
+   "keywords": [
+    "stock",
+    "margin"
+   ]
+  },
+  {
+   "title": "Preparing final accounts from incomplete data",
+   "category": "Methods",
+   "keywords": [
+    "final accounts",
+    "incomplete"
+   ]
+  },
+  {
+   "title": "Cash stolen: insurance claims math",
+   "category": "Methods",
+   "keywords": [
+    "cash stolen",
+    "claims"
+   ]
+  },
+  {
+   "title": "Examination drill: incomplete past questions",
+   "category": "Applications",
+   "keywords": [
+    "incomplete records",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Objectives of government accounting",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "public sector",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Funds: consolidated, capital, special",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "funds",
+    "consolidated"
+   ]
+  },
+  {
+   "title": "Revenue allocation to tiers",
+   "category": "Nigerian Context",
+   "keywords": [
+    "revenue allocation"
+   ]
+  },
+  {
+   "title": "Virement and supplementary budgets",
+   "category": "Theory",
+   "keywords": [
+    "virement",
+    "supplementary"
+   ]
+  },
+  {
+   "title": "Treasury single account explained",
+   "category": "Nigerian Context",
+   "keywords": [
+    "TSA"
+   ]
+  },
+  {
+   "title": "Public sector audit and checks",
+   "category": "Applications",
+   "keywords": [
+    "public audit"
+   ]
+  },
+  {
+   "title": "Cash versus accrual in government",
+   "category": "Theory",
+   "keywords": [
+    "cash basis",
+    "accrual"
+   ]
+  },
+  {
+   "title": "IPPIS and payroll control",
+   "category": "Nigerian Context",
+   "keywords": [
+    "IPPIS"
+   ]
+  },
+  {
+   "title": "Accounting officers' responsibilities",
+   "category": "Applications",
+   "keywords": [
+    "accounting officers"
+   ]
+  },
+  {
+   "title": "Examination drill: public sector past questions",
+   "category": "Applications",
+   "keywords": [
+    "public sector",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Audit: definition and objectives",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "audit",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Internal versus external audit",
+   "category": "Theory",
+   "keywords": [
+    "internal audit",
+    "external audit"
+   ]
+  },
+  {
+   "title": "Audit evidence and vouching basics",
+   "category": "Methods",
+   "keywords": [
+    "audit evidence",
+    "vouching"
+   ]
+  },
+  {
+   "title": "Verification of assets",
+   "category": "Methods",
+   "keywords": [
+    "verification",
+    "assets"
+   ]
+  },
+  {
+   "title": "True and fair view meaning",
+   "category": "Theory",
+   "keywords": [
+    "true and fair view"
+   ]
+  },
+  {
+   "title": "Auditor's report: opinions types",
+   "category": "Theory",
+   "keywords": [
+    "auditor's report",
+    "opinions"
+   ]
+  },
+  {
+   "title": "Professional bodies: ICAN and ANAN",
+   "category": "Nigerian Context",
+   "keywords": [
+    "ICAN",
+    "ANAN"
+   ]
+  },
+  {
+   "title": "Ethics: integrity and independence",
+   "category": "Theory",
+   "keywords": [
+    "ethics",
+    "independence"
+   ]
+  },
+  {
+   "title": "Fraud detection basics",
+   "category": "Applications",
+   "keywords": [
+    "fraud detection"
+   ]
+  },
+  {
+   "title": "Examination drill: auditing past questions",
+   "category": "Applications",
+   "keywords": [
+    "auditing",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Manual versus computerised systems",
+   "category": "Theory",
+   "keywords": [
+    "manual",
+    "computerised"
+   ]
+  },
+  {
+   "title": "Accounting packages overview",
+   "category": "Applications",
+   "keywords": [
+    "accounting packages"
+   ]
+  },
+  {
+   "title": "Spreadsheets for ledgers",
+   "category": "Applications",
+   "keywords": [
+    "spreadsheets",
+    "ledgers"
+   ]
+  },
+  {
+   "title": "Data integrity and backups",
+   "category": "Applications",
+   "keywords": [
+    "data integrity",
+    "backups"
+   ]
+  },
+  {
+   "title": "E-invoicing and POS records",
+   "category": "Nigerian Context",
+   "keywords": [
+    "e-invoicing",
+    "POS"
+   ]
+  },
+  {
+   "title": "Cloud accounting basics",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "cloud accounting"
+   ]
+  },
+  {
+   "title": "Controls in computerised systems",
+   "category": "Theory",
+   "keywords": [
+    "controls",
+    "systems"
+   ]
+  },
+  {
+   "title": "Migration from manual: pitfalls",
+   "category": "Applications",
+   "keywords": [
+    "migration",
+    "pitfalls"
+   ]
+  },
+  {
+   "title": "Reports a package generates",
+   "category": "Applications",
+   "keywords": [
+    "reports",
+    "package"
+   ]
+  },
+  {
+   "title": "Examination drill: computerised past questions",
+   "category": "Applications",
+   "keywords": [
+    "computerised",
+    "past questions"
+   ]
+  },
+  {
+   "title": "JAMB accounting paper structure and strategy",
+   "category": "Methods",
+   "keywords": [
+    "JAMB",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Objective questions on books of entry",
+   "category": "Applications",
+   "keywords": [
+    "books of entry",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on final accounts",
+   "category": "Applications",
+   "keywords": [
+    "final accounts",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on control accounts",
+   "category": "Applications",
+   "keywords": [
+    "control accounts",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on partnerships",
+   "category": "Applications",
+   "keywords": [
+    "partnerships",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on companies",
+   "category": "Applications",
+   "keywords": [
+    "companies",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on interpretation",
+   "category": "Applications",
+   "keywords": [
+    "interpretation",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on the public sector",
+   "category": "Applications",
+   "keywords": [
+    "public sector",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Format drills: statements layout",
+   "category": "Methods",
+   "keywords": [
+    "format drills",
+    "layout"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set A past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed practice: the 40-question sprint",
+   "category": "Applications",
+   "keywords": [
+    "timed practice",
+    "sprint"
+   ]
+  },
+  {
+   "title": "Review of common wrong options",
+   "category": "Methods",
+   "keywords": [
+    "wrong options",
+    "review"
+   ]
+  },
+  {
+   "title": "Debit or credit: rapid drills",
+   "category": "Methods",
+   "keywords": [
+    "debit",
+    "credit",
+    "drills"
+   ]
+  },
+  {
+   "title": "Which-statement-is-correct drills",
+   "category": "Methods",
+   "keywords": [
+    "statement drills"
+   ]
+  },
+  {
+   "title": "Elimination techniques for objective questions",
+   "category": "Methods",
+   "keywords": [
+    "elimination",
+    "techniques"
+   ]
+  },
+  {
+   "title": "Misconceptions about goodwill corrected",
+   "category": "Methods",
+   "keywords": [
+    "misconceptions",
+    "goodwill"
+   ]
+  },
+  {
+   "title": "Errors about depreciation corrected",
+   "category": "Methods",
+   "keywords": [
+    "depreciation",
+    "errors"
+   ]
+  },
+  {
+   "title": "Reading accounts fast and surely",
+   "category": "Methods",
+   "keywords": [
+    "reading accounts"
+   ]
+  },
+  {
+   "title": "Figure-checking habits that save marks",
+   "category": "Methods",
+   "keywords": [
+    "figure checking"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set B past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Depreciation: straight line and reducing balance problems",
+   "category": "Methods",
+   "keywords": [
+    "depreciation",
+    "problems"
+   ]
+  },
+  {
+   "title": "Ratios: mark-up and margin problems",
+   "category": "Methods",
+   "keywords": [
+    "mark-up",
+    "margin"
+   ]
+  },
+  {
+   "title": "Stock valuation: FIFO and LIFO problems",
+   "category": "Methods",
+   "keywords": [
+    "FIFO",
+    "LIFO"
+   ]
+  },
+  {
+   "title": "Partnership sharing ratio problems",
+   "category": "Methods",
+   "keywords": [
+    "sharing ratio",
+    "problems"
+   ]
+  },
+  {
+   "title": "Subscription accruals problems",
+   "category": "Methods",
+   "keywords": [
+    "subscriptions",
+    "accruals"
+   ]
+  },
+  {
+   "title": "Suspense and error effect problems",
+   "category": "Methods",
+   "keywords": [
+    "suspense",
+    "errors"
+   ]
+  },
+  {
+   "title": "Working capital and ROCE problems",
+   "category": "Methods",
+   "keywords": [
+    "working capital",
+    "ROCE"
+   ]
+  },
+  {
+   "title": "Reconciliation balance problems",
+   "category": "Methods",
+   "keywords": [
+    "reconciliation",
+    "problems"
+   ]
+  },
+  {
+   "title": "Manufacturing cost statement problems",
+   "category": "Methods",
+   "keywords": [
+    "manufacturing",
+    "statement"
+   ]
+  },
+  {
+   "title": "Examination drill: workshop past questions",
+   "category": "Applications",
+   "keywords": [
+    "workshop",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Building the final revision timetable",
+   "category": "Methods",
+   "keywords": [
+    "revision timetable"
+   ]
+  },
+  {
+   "title": "Format digest: every statement layout",
+   "category": "Methods",
+   "keywords": [
+    "format digest"
+   ]
+  },
+  {
+   "title": "Golden rules of debit and credit",
+   "category": "Methods",
+   "keywords": [
+    "golden rules"
+   ]
+  },
+  {
+   "title": "The most repeated JAMB accounting themes",
+   "category": "Methods",
+   "keywords": [
+    "repeated themes",
+    "JAMB"
+   ]
+  },
+  {
+   "title": "Mock examination: 50 questions in 50 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Marking your mock: error analysis",
+   "category": "Methods",
+   "keywords": [
+    "error analysis",
+    "mock"
+   ]
+  },
+  {
+   "title": "Figure traps examiners set",
+   "category": "Methods",
+   "keywords": [
+    "figure traps"
+   ]
+  },
+  {
+   "title": "Order of working for long items",
+   "category": "Methods",
+   "keywords": [
+    "working order"
+   ]
+  },
+  {
+   "title": "Staying calm with big numbers",
+   "category": "Methods",
+   "keywords": [
+    "composure",
+    "numbers"
+   ]
+  },
+  {
+   "title": "Exam day strategy and final confidence",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Periodic versus perpetual systems compared",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "periodic",
+    "perpetual"
+   ]
+  },
+  {
+   "title": "FIFO: issues and closing stock computed",
+   "category": "Methods",
+   "keywords": [
+    "FIFO",
+    "issues"
+   ]
+  },
+  {
+   "title": "LIFO: issues and closing stock computed",
+   "category": "Methods",
+   "keywords": [
+    "LIFO",
+    "issues"
+   ]
+  },
+  {
+   "title": "Weighted average method drills",
+   "category": "Methods",
+   "keywords": [
+    "weighted average"
+   ]
+  },
+  {
+   "title": "Simple average method compared",
+   "category": "Methods",
+   "keywords": [
+    "simple average"
+   ]
+  },
+  {
+   "title": "Stock cards and bin cards kept",
+   "category": "Methods",
+   "keywords": [
+    "stock cards",
+    "bin cards"
+   ]
+  },
+  {
+   "title": "Lower of cost and net realisable value",
+   "category": "Theory",
+   "keywords": [
+    "cost",
+    "net realisable value"
+   ]
+  },
+  {
+   "title": "Obsolete and damaged stock written down",
+   "category": "Applications",
+   "keywords": [
+    "obsolete stock"
+   ]
+  },
+  {
+   "title": "Stock errors: profit effects computed",
+   "category": "Methods",
+   "keywords": [
+    "stock errors",
+    "profit"
+   ]
+  },
+  {
+   "title": "Examination drill: stock past questions",
+   "category": "Applications",
+   "keywords": [
+    "stock valuation",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Purchase consideration computed fully",
+   "category": "Methods",
+   "keywords": [
+    "purchase consideration"
+   ]
+  },
+  {
+   "title": "Goodwill arising on purchase recorded",
+   "category": "Methods",
+   "keywords": [
+    "goodwill",
+    "purchase"
+   ]
+  },
+  {
+   "title": "Business purchase account opened",
+   "category": "Methods",
+   "keywords": [
+    "business purchase"
+   ]
+  },
+  {
+   "title": "Vendor settlement entries written",
+   "category": "Methods",
+   "keywords": [
+    "vendor",
+    "settlement"
+   ]
+  },
+  {
+   "title": "Assets and liabilities taken over recorded",
+   "category": "Methods",
+   "keywords": [
+    "assets",
+    "liabilities"
+   ]
+  },
+  {
+   "title": "Capital reserve on bargain purchases",
+   "category": "Theory",
+   "keywords": [
+    "capital reserve"
+   ]
+  },
+  {
+   "title": "Amalgamation: an introduction",
+   "category": "Theory",
+   "keywords": [
+    "amalgamation"
+   ]
+  },
+  {
+   "title": "Statutory books on incorporation",
+   "category": "Methods",
+   "keywords": [
+    "incorporation"
+   ]
+  },
+  {
+   "title": "Acquisition cases from past papers",
+   "category": "Applications",
+   "keywords": [
+    "acquisition",
+    "cases"
+   ]
+  },
+  {
+   "title": "Examination drill: purchase of business past questions",
+   "category": "Applications",
+   "keywords": [
+    "purchase of business",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Operating, investing, financing classified",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "operating",
+    "investing",
+    "financing"
+   ]
+  },
+  {
+   "title": "Profit reconciled to cash generated",
+   "category": "Methods",
+   "keywords": [
+    "profit",
+    "cash reconciliation"
+   ]
+  },
+  {
+   "title": "Depreciation added back: why",
+   "category": "Theory",
+   "keywords": [
+    "depreciation",
+    "added back"
+   ]
+  },
+  {
+   "title": "Working capital changes captured",
+   "category": "Methods",
+   "keywords": [
+    "working capital",
+    "changes"
+   ]
+  },
+  {
+   "title": "Proceeds and purchase of assets shown",
+   "category": "Methods",
+   "keywords": [
+    "proceeds",
+    "assets"
+   ]
+  },
+  {
+   "title": "Dividends and interest placement",
+   "category": "Methods",
+   "keywords": [
+    "dividends",
+    "interest"
+   ]
+  },
+  {
+   "title": "Cash versus profit: the lesson",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "cash",
+    "profit"
+   ]
+  },
+  {
+   "title": "A Nigerian company cash flow example",
+   "category": "Nigerian Context",
+   "keywords": [
+    "cash flow",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "Cash flow ratios computed",
+   "category": "Methods",
+   "keywords": [
+    "cash flow ratios"
+   ]
+  },
+  {
+   "title": "Examination drill: cash flow past questions",
+   "category": "Applications",
+   "keywords": [
+    "cash flow",
+    "past questions"
+   ]
+  },
+  {
+   "title": "VAT mechanics: output minus input",
+   "category": "Theory",
+   "keywords": [
+    "VAT",
+    "output tax",
+    "input tax"
+   ]
+  },
+  {
+   "title": "VATable versus exempt goods listed",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "VATable",
+    "exempt"
+   ]
+  },
+  {
+   "title": "VAT records and invoices kept",
+   "category": "Methods",
+   "keywords": [
+    "VAT records",
+    "invoices"
+   ]
+  },
+  {
+   "title": "Filing returns with FIRS",
+   "category": "Nigerian Context",
+   "keywords": [
+    "FIRS",
+    "returns"
+   ]
+  },
+  {
+   "title": "VAT rates history in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "VAT rates"
+   ]
+  },
+  {
+   "title": "Penalties for non-remittance",
+   "category": "Applications",
+   "keywords": [
+    "penalties",
+    "remittance"
+   ]
+  },
+  {
+   "title": "VAT inside final accounts shown",
+   "category": "Methods",
+   "keywords": [
+    "VAT",
+    "final accounts"
+   ]
+  },
+  {
+   "title": "Withholding tax distinguished",
+   "category": "Theory",
+   "keywords": [
+    "withholding tax"
+   ]
+  },
+  {
+   "title": "E-commerce VAT questions",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "e-commerce",
+    "VAT"
+   ]
+  },
+  {
+   "title": "Examination drill: VAT past questions",
+   "category": "Applications",
+   "keywords": [
+    "VAT",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Gross pay to net pay computed",
+   "category": "Methods",
+   "keywords": [
+    "gross pay",
+    "net pay"
+   ]
+  },
+  {
+   "title": "PAYE: the pay-as-you-earn logic",
+   "category": "Nigerian Context",
+   "keywords": [
+    "PAYE"
+   ]
+  },
+  {
+   "title": "Pension and NHF deductions recorded",
+   "category": "Nigerian Context",
+   "keywords": [
+    "pension",
+    "NHF"
+   ]
+  },
+  {
+   "title": "Overtime and arrears treated",
+   "category": "Methods",
+   "keywords": [
+    "overtime",
+    "arrears"
+   ]
+  },
+  {
+   "title": "Payroll journal entries written",
+   "category": "Methods",
+   "keywords": [
+    "payroll journal"
+   ]
+  },
+  {
+   "title": "Statutory remittances scheduled",
+   "category": "Applications",
+   "keywords": [
+    "remittances",
+    "statutory"
+   ]
+  },
+  {
+   "title": "Clock cards and time sheets",
+   "category": "Methods",
+   "keywords": [
+    "clock cards",
+    "time sheets"
+   ]
+  },
+  {
+   "title": "Payroll control accounts kept",
+   "category": "Methods",
+   "keywords": [
+    "payroll control"
+   ]
+  },
+  {
+   "title": "Minimum wage payroll effects",
+   "category": "Nigerian Context",
+   "keywords": [
+    "minimum wage",
+    "payroll"
+   ]
+  },
+  {
+   "title": "Examination drill: payroll past questions",
+   "category": "Applications",
+   "keywords": [
+    "payroll",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Apportioning expenses on sensible bases",
+   "category": "Methods",
+   "keywords": [
+    "apportionment",
+    "bases"
+   ]
+  },
+  {
+   "title": "Departmental gross profit compared",
+   "category": "Methods",
+   "keywords": [
+    "gross profit",
+    "departmental"
+   ]
+  },
+  {
+   "title": "Closing a loss-making department",
+   "category": "Applications",
+   "keywords": [
+    "loss-making",
+    "closure"
+   ]
+  },
+  {
+   "title": "Inter-departmental transfers at cost",
+   "category": "Methods",
+   "keywords": [
+    "transfers",
+    "cost"
+   ]
+  },
+  {
+   "title": "Combined final accounts built",
+   "category": "Methods",
+   "keywords": [
+    "combined accounts"
+   ]
+  },
+  {
+   "title": "Stock turnover by department computed",
+   "category": "Methods",
+   "keywords": [
+    "stock turnover",
+    "department"
+   ]
+  },
+  {
+   "title": "Departmental balance sheets grouped",
+   "category": "Methods",
+   "keywords": [
+    "balance sheet",
+    "departmental"
+   ]
+  },
+  {
+   "title": "Branch stock method drilled",
+   "category": "Methods",
+   "keywords": [
+    "branch stock"
+   ]
+  },
+  {
+   "title": "Workshop: a two-department question",
+   "category": "Applications",
+   "keywords": [
+    "two-department",
+    "question"
+   ]
+  },
+  {
+   "title": "Examination drill: departmental past questions",
+   "category": "Applications",
+   "keywords": [
+    "departmental",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Working from trial balance to trading",
+   "category": "Methods",
+   "keywords": [
+    "trial balance",
+    "trading account"
+   ]
+  },
+  {
+   "title": "Gross profit computed with returns",
+   "category": "Methods",
+   "keywords": [
+    "gross profit",
+    "returns"
+   ]
+  },
+  {
+   "title": "Expenses split: admin, selling, finance",
+   "category": "Methods",
+   "keywords": [
+    "expenses",
+    "classification"
+   ]
+  },
+  {
+   "title": "Depreciation and provisions slotted in",
+   "category": "Methods",
+   "keywords": [
+    "depreciation",
+    "provisions"
+   ]
+  },
+  {
+   "title": "Balance sheet: current assets ordered",
+   "category": "Methods",
+   "keywords": [
+    "balance sheet",
+    "current assets"
+   ]
+  },
+  {
+   "title": "Working capital computed and read",
+   "category": "Methods",
+   "keywords": [
+    "working capital"
+   ]
+  },
+  {
+   "title": "Working backwards from gross profit",
+   "category": "Methods",
+   "keywords": [
+    "working backwards"
+   ]
+  },
+  {
+   "title": "The full sample question walked",
+   "category": "Applications",
+   "keywords": [
+    "sample question"
+   ]
+  },
+  {
+   "title": "Time plan for long questions",
+   "category": "Methods",
+   "keywords": [
+    "time plan"
+   ]
+  },
+  {
+   "title": "Examination drill: workshop past questions - set 2",
+   "category": "Applications",
+   "keywords": [
+    "workshop",
+    "past questions"
+   ]
+  }
+ ]
+}

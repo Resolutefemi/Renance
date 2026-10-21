@@ -1,0 +1,2533 @@
+{
+ "body": "jamb",
+ "subject": "history",
+ "title": "History",
+ "unitTitles": [
+  "Early Societies and Empires",
+  "Jihad States and the Slave Trade",
+  "Colonial Conquest and Nationalist Awakening",
+  "Independence and the First Republic",
+  "Military Rule to the Fourth Republic",
+  "Africa and the Wider World",
+  "Sources and Methods of History",
+  "Early Nigerian Societies in Depth",
+  "The Sokoto Jihad Era",
+  "The Atlantic Slave Trade in Depth",
+  "Colonial Economy and Society",
+  "Nationalism in Depth",
+  "The First Republic in Depth",
+  "The Civil War in Depth",
+  "Oil, States and Society",
+  "Africa Under Colonial Rule",
+  "Independent Africa",
+  "Nigeria in World Affairs",
+  "History Skills Workshop",
+  "Structured Revision: Set A",
+  "Structured Revision: Set B",
+  "Essay and Source Workshop",
+  "JAMB Masterclass: Final Lap",
+  "Empires Workshop: Compare and Contrast",
+  "Missionary History Workshop",
+  "Constitutional Documents Workshop",
+  "Coups and Crises Workshop",
+  "African Liberation Workshop",
+  "Economic History Workshop",
+  "History Masterclass Drills"
+ ],
+ "topics": [
+  {
+   "title": "History: meaning and sources of Nigerian history",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "history",
+    "sources",
+    "oral tradition",
+    "archaeology",
+    "written records"
+   ]
+  },
+  {
+   "title": "Peoples and cultures of early Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "peoples",
+    "cultures",
+    "ethnic groups",
+    "origins",
+    "migration"
+   ]
+  },
+  {
+   "title": "The Nok culture and early civilisations",
+   "category": "Nigerian Context",
+   "keywords": [
+    "nok",
+    "culture",
+    "terracotta",
+    "civilisation",
+    "iron"
+   ]
+  },
+  {
+   "title": "Kanem-Bornu: rise and administration",
+   "category": "Nigerian Context",
+   "keywords": [
+    "kanem bornu",
+    "mai",
+    "administration",
+    "islam"
+   ]
+  },
+  {
+   "title": "The Hausa states and their organisation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "hausa states",
+    "kano",
+    "katsina",
+    "emirs",
+    "organisation"
+   ]
+  },
+  {
+   "title": "The Sokoto Caliphate and Usman dan Fodio",
+   "category": "Nigerian Context",
+   "keywords": [
+    "sokoto caliphate",
+    "usman dan fodio",
+    "jihad",
+    "emirates",
+    "flag bearers"
+   ]
+  },
+  {
+   "title": "The Oyo Empire: structure and decline",
+   "category": "Nigerian Context",
+   "keywords": [
+    "oyo empire",
+    "alaafin",
+    "oyomesi",
+    "decline",
+    "army"
+   ]
+  },
+  {
+   "title": "Benin Kingdom: administration and art",
+   "category": "Nigerian Context",
+   "keywords": [
+    "benin",
+    "oba",
+    "bronzes",
+    "administration",
+    "art"
+   ]
+  },
+  {
+   "title": "The Niger Delta states and trading systems",
+   "category": "Nigerian Context",
+   "keywords": [
+    "niger delta",
+    "city states",
+    "bonny",
+    "opobo",
+    "jaja"
+   ]
+  },
+  {
+   "title": "Igbo societies: acephalous organisation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "igbo",
+    "acephalous",
+    "village groups",
+    "elders",
+    "age grades"
+   ]
+  },
+  {
+   "title": "Trans-Saharan trade and its impact",
+   "category": "Nigerian Context",
+   "keywords": [
+    "trans saharan trade",
+    "camels",
+    "routes",
+    "impact",
+    "goods"
+   ]
+  },
+  {
+   "title": "Introduction of Islam into Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "islam",
+    "introduction",
+    "missionaries",
+    "traders",
+    "kanem"
+   ]
+  },
+  {
+   "title": "Introduction of Christianity into Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "christianity",
+    "missionaries",
+    "cms",
+    "freed slaves",
+    "conversion"
+   ]
+  },
+  {
+   "title": "The Atlantic slave trade: origins and impact",
+   "category": "Nigerian Context",
+   "keywords": [
+    "atlantic slave trade",
+    "impact",
+    "middle passage",
+    "abolition"
+   ]
+  },
+  {
+   "title": "Abolition of the slave trade in West Africa",
+   "category": "Nigerian Context",
+   "keywords": [
+    "abolition",
+    "sierra leone",
+    "repatriates",
+    "effects"
+   ]
+  },
+  {
+   "title": "British penetration and legitimate trade",
+   "category": "Nigerian Context",
+   "keywords": [
+    "legitimate trade",
+    "palm oil",
+    "british",
+    "consuls",
+    "trade"
+   ]
+  },
+  {
+   "title": "Colonial conquest and resistance movements",
+   "category": "Nigerian Context",
+   "keywords": [
+    "conquest",
+    "resistance",
+    "jaja",
+    "attahiru",
+    "benin expedition"
+   ]
+  },
+  {
+   "title": "The amalgamation of Nigeria in 1914",
+   "category": "Nigerian Context",
+   "keywords": [
+    "amalgamation",
+    "1914",
+    "lord lugard",
+    "north",
+    "south"
+   ]
+  },
+  {
+   "title": "Indirect rule in Northern and Southern Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "indirect rule",
+    "warrant chiefs",
+    "emirs",
+    "effects"
+   ]
+  },
+  {
+   "title": "Missionary activities and Western education",
+   "category": "Nigerian Context",
+   "keywords": [
+    "missionaries",
+    "education",
+    "schools",
+    "religion",
+    "impact"
+   ]
+  },
+  {
+   "title": "Economic development under colonial rule",
+   "category": "Nigerian Context",
+   "keywords": [
+    "colonial economy",
+    "railways",
+    "cash crops",
+    "mining",
+    "marketing boards"
+   ]
+  },
+  {
+   "title": "Rise and growth of Nigerian nationalism",
+   "category": "Nigerian Context",
+   "keywords": [
+    "nationalism",
+    "nndp",
+    "herbert macaulay",
+    "press"
+   ]
+  },
+  {
+   "title": "Political parties and the struggle for independence",
+   "category": "Nigerian Context",
+   "keywords": [
+    "ncnc",
+    "action group",
+    "npc",
+    "independence",
+    "parties"
+   ]
+  },
+  {
+   "title": "Constitutional developments: 1922 to 1954",
+   "category": "Nigerian Context",
+   "keywords": [
+    "clifford",
+    "richards",
+    "macpherson",
+    "lyttleton",
+    "constitutions"
+   ]
+  },
+  {
+   "title": "The road to independence: 1954 to 1960",
+   "category": "Nigerian Context",
+   "keywords": [
+    "independence",
+    "1957",
+    "1960",
+    "self government",
+    "conferences"
+   ]
+  },
+  {
+   "title": "The First Republic: politics and crises",
+   "category": "Nigerian Context",
+   "keywords": [
+    "first republic",
+    "coalition",
+    "census crisis",
+    "election crisis",
+    "balewa"
+   ]
+  },
+  {
+   "title": "The January and July 1966 coups",
+   "category": "Nigerian Context",
+   "keywords": [
+    "coups",
+    "1966",
+    "ironsi",
+    "gowon",
+    "counter coup"
+   ]
+  },
+  {
+   "title": "The Nigerian Civil War: causes and course",
+   "category": "Nigerian Context",
+   "keywords": [
+    "civil war",
+    "biafra",
+    "secession",
+    "aburi",
+    "surrender"
+   ]
+  },
+  {
+   "title": "Post-war reconstruction and the three Rs",
+   "category": "Nigerian Context",
+   "keywords": [
+    "reconstruction",
+    "three rs",
+    "rehabilitation",
+    "gowon",
+    "unity"
+   ]
+  },
+  {
+   "title": "The oil boom and economic transformation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "oil boom",
+    "petroleum",
+    "economy",
+    "revenue",
+    "niger delta"
+   ]
+  },
+  {
+   "title": "The Second Republic: Shagari's government",
+   "category": "Nigerian Context",
+   "keywords": [
+    "second republic",
+    "shagari",
+    "npn",
+    "elections",
+    "coups"
+   ]
+  },
+  {
+   "title": "Military rule under Buhari and Babangida",
+   "category": "Nigerian Context",
+   "keywords": [
+    "buhari",
+    "babangida",
+    "war against indiscipline",
+    "sap",
+    "transition"
+   ]
+  },
+  {
+   "title": "The June 12 election and its annulment",
+   "category": "Nigerian Context",
+   "keywords": [
+    "june 12",
+    "abiola",
+    "annulment",
+    "babangida",
+    "crisis"
+   ]
+  },
+  {
+   "title": "The Abacha years and transition programme",
+   "category": "Nigerian Context",
+   "keywords": [
+    "abacha",
+    "transition",
+    "pdp",
+    "1999",
+    "opposition"
+   ]
+  },
+  {
+   "title": "Return to civilian rule: the Fourth Republic",
+   "category": "Nigerian Context",
+   "keywords": [
+    "fourth republic",
+    "1999",
+    "obasanjo",
+    "democracy",
+    "elections"
+   ]
+  },
+  {
+   "title": "The imperial scramble for Africa",
+   "category": "Theory",
+   "keywords": [
+    "scramble for africa",
+    "berlin conference",
+    "partition",
+    "imperialism"
+   ]
+  },
+  {
+   "title": "Colonial administration systems in Africa",
+   "category": "Theory",
+   "keywords": [
+    "colonial administration",
+    "assimilation",
+    "indirect rule",
+    "chartered companies"
+   ]
+  },
+  {
+   "title": "Economic impact of colonialism in Africa",
+   "category": "Theory",
+   "keywords": [
+    "colonial economy",
+    "exploitation",
+    "cash crops",
+    "labour",
+    "infrastructure"
+   ]
+  },
+  {
+   "title": "Nationalism and decolonisation in Africa",
+   "category": "Theory",
+   "keywords": [
+    "nationalism",
+    "decolonisation",
+    "pan africanism",
+    "independence",
+    "leaders"
+   ]
+  },
+  {
+   "title": "Apartheid in South Africa and its end",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "apartheid",
+    "south africa",
+    "mandela",
+    "segregation",
+    "sanctions"
+   ]
+  },
+  {
+   "title": "The First World War: causes and effects",
+   "category": "Theory",
+   "keywords": [
+    "first world war",
+    "causes",
+    "treaty of versailles",
+    "effects",
+    "1914"
+   ]
+  },
+  {
+   "title": "The Second World War: causes and effects",
+   "category": "Theory",
+   "keywords": [
+    "second world war",
+    "causes",
+    "hitler",
+    "effects",
+    "united nations"
+   ]
+  },
+  {
+   "title": "The League of Nations and the United Nations",
+   "category": "Theory",
+   "keywords": [
+    "league of nations",
+    "united nations",
+    "failure",
+    "charter",
+    "security council"
+   ]
+  },
+  {
+   "title": "The Cold War and its impact on Africa",
+   "category": "Theory",
+   "keywords": [
+    "cold war",
+    "blocs",
+    "proxy wars",
+    "impact",
+    "africa"
+   ]
+  },
+  {
+   "title": "Pan-Africanism and African unity",
+   "category": "Theory",
+   "keywords": [
+    "pan africanism",
+    "garvey",
+    "nkrumah",
+    "unity",
+    "conferences"
+   ]
+  },
+  {
+   "title": "The Organisation of African Unity to the AU",
+   "category": "Theory",
+   "keywords": [
+    "oau",
+    "african union",
+    "objectives",
+    "achievements",
+    "transformation"
+   ]
+  },
+  {
+   "title": "ECOWAS: formation and achievements",
+   "category": "Theory",
+   "keywords": [
+    "ecowas",
+    "formation",
+    "achievements",
+    "west africa",
+    "integration"
+   ]
+  },
+  {
+   "title": "International organisations and Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "commonwealth",
+    "united nations",
+    "opec",
+    "nigeria",
+    "membership"
+   ]
+  },
+  {
+   "title": "Democracy and governance challenges today",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "democracy",
+    "governance",
+    "challenges",
+    "elections",
+    "corruption"
+   ]
+  },
+  {
+   "title": "Nigeria's place in world affairs today",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "foreign policy",
+    "peacekeeping",
+    "nigeria",
+    "diplomacy"
+   ]
+  },
+  {
+   "title": "History and nation building in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "nation building",
+    "history",
+    "unity",
+    "identity",
+    "values"
+   ]
+  },
+  {
+   "title": "Examination drill: history past questions by topic",
+   "category": "Applications",
+   "keywords": [
+    "past questions",
+    "revision",
+    "examination",
+    "jamb"
+   ]
+  },
+  {
+   "title": "Sources workshop: oral traditions weighed",
+   "category": "Methods",
+   "keywords": [
+    "oral traditions"
+   ]
+  },
+  {
+   "title": "Historiography of the slave trade",
+   "category": "Theory",
+   "keywords": [
+    "historiography",
+    "slave trade"
+   ]
+  },
+  {
+   "title": "Debating the 1914 amalgamation",
+   "category": "Theory",
+   "keywords": [
+    "amalgamation",
+    "debate"
+   ]
+  },
+  {
+   "title": "Census data as historical evidence",
+   "category": "Methods",
+   "keywords": [
+    "census",
+    "evidence"
+   ]
+  },
+  {
+   "title": "Newspapers as primary sources",
+   "category": "Methods",
+   "keywords": [
+    "newspapers",
+    "sources"
+   ]
+  },
+  {
+   "title": "Oral history project designed",
+   "category": "Methods",
+   "keywords": [
+    "oral history",
+    "project"
+   ]
+  },
+  {
+   "title": "Memorials and heritage sites visited",
+   "category": "Applications",
+   "keywords": [
+    "memorials",
+    "heritage"
+   ]
+  },
+  {
+   "title": "Examination drill: sources past questions",
+   "category": "Applications",
+   "keywords": [
+    "sources",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Primary and secondary sources compared",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "primary sources",
+    "secondary"
+   ]
+  },
+  {
+   "title": "Oral tradition: strengths and limits",
+   "category": "Theory",
+   "keywords": [
+    "oral tradition"
+   ]
+  },
+  {
+   "title": "Archaeology: potsherds to pyramids",
+   "category": "Theory",
+   "keywords": [
+    "archaeology"
+   ]
+  },
+  {
+   "title": "Written records and archives",
+   "category": "Theory",
+   "keywords": [
+    "archives",
+    "records"
+   ]
+  },
+  {
+   "title": "Linguistic evidence in history",
+   "category": "Theory",
+   "keywords": [
+    "linguistic evidence"
+   ]
+  },
+  {
+   "title": "Dating methods: C14 and layers",
+   "category": "Methods",
+   "keywords": [
+    "dating",
+    "C14"
+   ]
+  },
+  {
+   "title": "Historical interpretation and bias",
+   "category": "Theory",
+   "keywords": [
+    "interpretation",
+    "bias"
+   ]
+  },
+  {
+   "title": "Using maps and timelines",
+   "category": "Methods",
+   "keywords": [
+    "maps",
+    "timelines"
+   ]
+  },
+  {
+   "title": "Historiography: who writes history",
+   "category": "Theory",
+   "keywords": [
+    "historiography"
+   ]
+  },
+  {
+   "title": "Examination drill: sources past questions - set 2",
+   "category": "Applications",
+   "keywords": [
+    "sources",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Nok terracottas: art and society",
+   "category": "Theory",
+   "keywords": [
+    "Nok",
+    "terracottas"
+   ]
+  },
+  {
+   "title": "Ifé: the cradle of Yoruba art",
+   "category": "Theory",
+   "keywords": [
+    "Ifé",
+    "art"
+   ]
+  },
+  {
+   "title": "Benin bronzes and guild system",
+   "category": "Theory",
+   "keywords": [
+    "Benin",
+    "bronzes"
+   ]
+  },
+  {
+   "title": "Igbo-Ukwu: bronze masterpieces",
+   "category": "Theory",
+   "keywords": [
+    "Igbo-Ukwu",
+    "bronze"
+   ]
+  },
+  {
+   "title": "Kanem-Bornu: mai and administration",
+   "category": "Theory",
+   "keywords": [
+    "Kanem-Bornu",
+    "mai"
+   ]
+  },
+  {
+   "title": "Hausa states: sarauta system",
+   "category": "Theory",
+   "keywords": [
+    "Hausa states",
+    "sarauta"
+   ]
+  },
+  {
+   "title": "Oyo: alaafin, oyomesi, army",
+   "category": "Theory",
+   "keywords": [
+    "Oyo",
+    "alaafin"
+   ]
+  },
+  {
+   "title": "Benin kingdom: oba and chiefs",
+   "category": "Theory",
+   "keywords": [
+    "Benin",
+    "oba"
+   ]
+  },
+  {
+   "title": "Delta trading states: Bonny, Opobo",
+   "category": "Theory",
+   "keywords": [
+    "Bonny",
+    "Opobo"
+   ]
+  },
+  {
+   "title": "Examination drill: early societies past questions",
+   "category": "Applications",
+   "keywords": [
+    "early societies",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Causes of the 1804 jihad",
+   "category": "Theory",
+   "keywords": [
+    "jihad",
+    "causes"
+   ]
+  },
+  {
+   "title": "Usman dan Fodio: teacher and reformer",
+   "category": "Theory",
+   "keywords": [
+    "dan Fodio",
+    "reformer"
+   ]
+  },
+  {
+   "title": "The caliphate: emirate structure",
+   "category": "Theory",
+   "keywords": [
+    "caliphate",
+    "emirates"
+   ]
+  },
+  {
+   "title": "Administration: law and taxation",
+   "category": "Theory",
+   "keywords": [
+    "administration",
+    "taxation"
+   ]
+  },
+  {
+   "title": "Education and scholarship under the caliphate",
+   "category": "Theory",
+   "keywords": [
+    "education",
+    "scholarship"
+   ]
+  },
+  {
+   "title": "Women scholars: Nana Asma'u",
+   "category": "Theory",
+   "keywords": [
+    "Nana Asma'u"
+   ]
+  },
+  {
+   "title": "Effects on the middle belt",
+   "category": "Theory",
+   "keywords": [
+    "middle belt",
+    "effects"
+   ]
+  },
+  {
+   "title": "Borno versus the caliphate",
+   "category": "Theory",
+   "keywords": [
+    "Borno",
+    "caliphate"
+   ]
+  },
+  {
+   "title": "Legacy of the caliphate today",
+   "category": "Nigerian Context",
+   "keywords": [
+    "legacy",
+    "caliphate"
+   ]
+  },
+  {
+   "title": "Examination drill: jihad past questions",
+   "category": "Applications",
+   "keywords": [
+    "jihad",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Why the trade grew: Atlantic demand",
+   "category": "Theory",
+   "keywords": [
+    "slave trade",
+    "demand"
+   ]
+  },
+  {
+   "title": "Routes: capture to Middle Passage",
+   "category": "Theory",
+   "keywords": [
+    "Middle Passage",
+    "routes"
+   ]
+  },
+  {
+   "title": "Coastal kingdoms and the trade",
+   "category": "Theory",
+   "keywords": [
+    "coastal kingdoms"
+   ]
+  },
+  {
+   "title": "Effects on Nigerian societies",
+   "category": "Theory",
+   "keywords": [
+    "effects",
+    "societies"
+   ]
+  },
+  {
+   "title": "Abolition movements in Britain",
+   "category": "Theory",
+   "keywords": [
+    "abolition",
+    "Britain"
+   ]
+  },
+  {
+   "title": "Repatriates: Saro and Amaro returns",
+   "category": "Theory",
+   "keywords": [
+    "Saro",
+    "Amaro"
+   ]
+  },
+  {
+   "title": "Legitimate commerce: palm oil shift",
+   "category": "Theory",
+   "keywords": [
+    "palm oil",
+    "legitimate"
+   ]
+  },
+  {
+   "title": "Numbers and historiography debates",
+   "category": "Methods",
+   "keywords": [
+    "numbers",
+    "debates"
+   ]
+  },
+  {
+   "title": "Memory and monuments today",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "memory",
+    "monuments"
+   ]
+  },
+  {
+   "title": "Examination drill: slave trade past questions",
+   "category": "Applications",
+   "keywords": [
+    "slave trade",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Cash crop economies by region",
+   "category": "Nigerian Context",
+   "keywords": [
+    "cash crops",
+    "regions"
+   ]
+  },
+  {
+   "title": "Railways and ports built",
+   "category": "Nigerian Context",
+   "keywords": [
+    "railways",
+    "ports"
+   ]
+  },
+  {
+   "title": "Taxation and forced labour policies",
+   "category": "Theory",
+   "keywords": [
+    "taxation",
+    "labour"
+   ]
+  },
+  {
+   "title": "Currency changes: cowries to pounds",
+   "category": "Theory",
+   "keywords": [
+    "currency",
+    "cowries"
+   ]
+  },
+  {
+   "title": "Trading companies: UAC ancestors",
+   "category": "Theory",
+   "keywords": [
+    "trading companies"
+   ]
+  },
+  {
+   "title": "Urban growth: Lagos, Kano, Enugu",
+   "category": "Nigerian Context",
+   "keywords": [
+    "urban growth"
+   ]
+  },
+  {
+   "title": "Migrant labour and mines",
+   "category": "Theory",
+   "keywords": [
+    "migrant labour",
+    "mines"
+   ]
+  },
+  {
+   "title": "Health and education missions",
+   "category": "Theory",
+   "keywords": [
+    "missions",
+    "education"
+   ]
+  },
+  {
+   "title": "Social changes: families and classes",
+   "category": "Theory",
+   "keywords": [
+    "social change"
+   ]
+  },
+  {
+   "title": "Examination drill: colonial economy past questions",
+   "category": "Applications",
+   "keywords": [
+    "colonial economy",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Early associations: NNMTD and congresses",
+   "category": "Theory",
+   "keywords": [
+    "associations",
+    "congresses"
+   ]
+  },
+  {
+   "title": "The press as nationalist tool",
+   "category": "Theory",
+   "keywords": [
+    "press",
+    "nationalist"
+   ]
+  },
+  {
+   "title": "Herbert Macaulay's politics",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Macaulay"
+   ]
+  },
+  {
+   "title": "Youth movement and Zik generation",
+   "category": "Theory",
+   "keywords": [
+    "youth movement",
+    "Zik"
+   ]
+  },
+  {
+   "title": "Labour protests: 1945 general strike",
+   "category": "Nigerian Context",
+   "keywords": [
+    "1945 strike"
+   ]
+  },
+  {
+   "title": "Women's movements: Aba women's war",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Aba women's war"
+   ]
+  },
+  {
+   "title": "Rivalries: AG, NCNC, NPC analysed",
+   "category": "Theory",
+   "keywords": [
+    "rivalries",
+    "parties"
+   ]
+  },
+  {
+   "title": "London conferences and constitutions",
+   "category": "Theory",
+   "keywords": [
+    "London conferences"
+   ]
+  },
+  {
+   "title": "Regionalism's birth and fears",
+   "category": "Theory",
+   "keywords": [
+    "regionalism",
+    "fears"
+   ]
+  },
+  {
+   "title": "Examination drill: nationalism past questions",
+   "category": "Applications",
+   "keywords": [
+    "nationalism",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Parliamentary practice 1960-66",
+   "category": "Theory",
+   "keywords": [
+    "parliamentary",
+    "practice"
+   ]
+  },
+  {
+   "title": "Coalitions and opposition roles",
+   "category": "Theory",
+   "keywords": [
+    "coalitions",
+    "opposition"
+   ]
+  },
+  {
+   "title": "Census and election crises compared",
+   "category": "Theory",
+   "keywords": [
+    "census",
+    "elections",
+    "crises"
+   ]
+  },
+  {
+   "title": "The Action Group crisis chain",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Action Group",
+    "crisis"
+   ]
+  },
+  {
+   "title": "Foreign policy: bright of Africa era",
+   "category": "Nigerian Context",
+   "keywords": [
+    "foreign policy"
+   ]
+  },
+  {
+   "title": "Economy of the First Republic",
+   "category": "Nigerian Context",
+   "keywords": [
+    "economy",
+    "First Republic"
+   ]
+  },
+  {
+   "title": "Why the centre collapsed: synthesis",
+   "category": "Theory",
+   "keywords": [
+    "collapse",
+    "synthesis"
+   ]
+  },
+  {
+   "title": "Contemporary accounts and memoirs",
+   "category": "Methods",
+   "keywords": [
+    "memoirs",
+    "accounts"
+   ]
+  },
+  {
+   "title": "Counterfactual debates among historians",
+   "category": "Theory",
+   "keywords": [
+    "counterfactual",
+    "debates"
+   ]
+  },
+  {
+   "title": "Examination drill: First Republic past questions",
+   "category": "Applications",
+   "keywords": [
+    "First Republic",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Pogroms and the exodus of 1966",
+   "category": "Nigerian Context",
+   "keywords": [
+    "pogroms",
+    "1966"
+   ]
+  },
+  {
+   "title": "Aburi: what was agreed",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Aburi",
+    "agreement"
+   ]
+  },
+  {
+   "title": "Strategy: the three commands war",
+   "category": "Theory",
+   "keywords": [
+    "strategy",
+    "commands"
+   ]
+  },
+  {
+   "title": "Key battles and sieges",
+   "category": "Theory",
+   "keywords": [
+    "battles",
+    "sieges"
+   ]
+  },
+  {
+   "title": "Relief corridors and diplomacy",
+   "category": "Theory",
+   "keywords": [
+    "relief",
+    "diplomacy"
+   ]
+  },
+  {
+   "title": "Biafran innovations and propaganda",
+   "category": "Theory",
+   "keywords": [
+    "propaganda",
+    "innovations"
+   ]
+  },
+  {
+   "title": "End of the war: surrender at Owerri",
+   "category": "Nigerian Context",
+   "keywords": [
+    "surrender",
+    "Owerri"
+   ]
+  },
+  {
+   "title": "The three Rs assessed",
+   "category": "Theory",
+   "keywords": [
+    "three Rs",
+    "assessed"
+   ]
+  },
+  {
+   "title": "War literature and memory",
+   "category": "Theory",
+   "keywords": [
+    "war literature",
+    "memory"
+   ]
+  },
+  {
+   "title": "Examination drill: civil war past questions",
+   "category": "Applications",
+   "keywords": [
+    "civil war",
+    "past questions"
+   ]
+  },
+  {
+   "title": "State creation waves: 1967-1996",
+   "category": "Nigerian Context",
+   "keywords": [
+    "state creation",
+    "waves"
+   ]
+  },
+  {
+   "title": "Oil boom: spending and debts",
+   "category": "Nigerian Context",
+   "keywords": [
+    "oil boom",
+    "debts"
+   ]
+  },
+  {
+   "title": "Second Republic politics reviewed",
+   "category": "Theory",
+   "keywords": [
+    "Second Republic"
+   ]
+  },
+  {
+   "title": "The 1983 collapse: cautionary tale",
+   "category": "Theory",
+   "keywords": [
+    "1983",
+    "collapse"
+   ]
+  },
+  {
+   "title": "SAP: policies and pains",
+   "category": "Nigerian Context",
+   "keywords": [
+    "SAP",
+    "policies"
+   ]
+  },
+  {
+   "title": "Structural changes in society",
+   "category": "Theory",
+   "keywords": [
+    "structural",
+    "society"
+   ]
+  },
+  {
+   "title": "June 12: the democracy turning point",
+   "category": "Nigerian Context",
+   "keywords": [
+    "June 12",
+    "turning point"
+   ]
+  },
+  {
+   "title": "Abacha era: repression and resistance",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Abacha",
+    "resistance"
+   ]
+  },
+  {
+   "title": "1999 transition architects",
+   "category": "Nigerian Context",
+   "keywords": [
+    "1999",
+    "transition"
+   ]
+  },
+  {
+   "title": "Examination drill: oil era past questions",
+   "category": "Applications",
+   "keywords": [
+    "oil era",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Berlin conference rules dissected",
+   "category": "Theory",
+   "keywords": [
+    "Berlin conference",
+    "rules"
+   ]
+  },
+  {
+   "title": "Colonies: settler versus indirect",
+   "category": "Theory",
+   "keywords": [
+    "settler",
+    "indirect rule"
+   ]
+  },
+  {
+   "title": "Resistance leaders: Samori, Behanzin",
+   "category": "Theory",
+   "keywords": [
+    "Samori",
+    "Behanzin"
+   ]
+  },
+  {
+   "title": "Ethiopia's survival story",
+   "category": "Theory",
+   "keywords": [
+    "Ethiopia",
+    "survival"
+   ]
+  },
+  {
+   "title": "Economies reshaped for export",
+   "category": "Theory",
+   "keywords": [
+    "economies",
+    "export"
+   ]
+  },
+  {
+   "title": "Education and new elites",
+   "category": "Theory",
+   "keywords": [
+    "education",
+    "elites"
+   ]
+  },
+  {
+   "title": "Urbanisation in colonial Africa",
+   "category": "Theory",
+   "keywords": [
+    "urbanisation",
+    "colonial"
+   ]
+  },
+  {
+   "title": "World wars' African fronts",
+   "category": "Theory",
+   "keywords": [
+    "African fronts",
+    "world wars"
+   ]
+  },
+  {
+   "title": "Decolonisation paths compared",
+   "category": "Theory",
+   "keywords": [
+    "decolonisation",
+    "paths"
+   ]
+  },
+  {
+   "title": "Examination drill: colonial Africa past questions",
+   "category": "Applications",
+   "keywords": [
+    "colonial Africa",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Ghana 1957: the first wave",
+   "category": "Theory",
+   "keywords": [
+    "Ghana",
+    "1957"
+   ]
+  },
+  {
+   "title": "Nkrumah's pan-African project",
+   "category": "Theory",
+   "keywords": [
+    "Nkrumah",
+    "pan-African"
+   ]
+  },
+  {
+   "title": "Congo crisis and Lumumba",
+   "category": "Theory",
+   "keywords": [
+    "Congo",
+    "Lumumba"
+   ]
+  },
+  {
+   "title": "Apartheid: rise and fall",
+   "category": "Theory",
+   "keywords": [
+    "apartheid",
+    "rise",
+    "fall"
+   ]
+  },
+  {
+   "title": "OAU: founding and achievements",
+   "category": "Theory",
+   "keywords": [
+    "OAU",
+    "founding"
+   ]
+  },
+  {
+   "title": "Economic integration experiments",
+   "category": "Theory",
+   "keywords": [
+    "integration",
+    "experiments"
+   ]
+  },
+  {
+   "title": "Military coups across Africa",
+   "category": "Theory",
+   "keywords": [
+    "coups",
+    "Africa"
+   ]
+  },
+  {
+   "title": "Democratisation: the 1990s wave",
+   "category": "Theory",
+   "keywords": [
+    "democratisation",
+    "1990s"
+   ]
+  },
+  {
+   "title": "African Union: from OAU to AU",
+   "category": "Theory",
+   "keywords": [
+    "African Union",
+    "OAU"
+   ]
+  },
+  {
+   "title": "Examination drill: independent Africa past questions",
+   "category": "Applications",
+   "keywords": [
+    "independent Africa",
+    "past questions"
+   ]
+  },
+  {
+   "title": "UN peacekeeping record",
+   "category": "Nigerian Context",
+   "keywords": [
+    "peacekeeping",
+    "record"
+   ]
+  },
+  {
+   "title": "ECOWAS: founding and interventions",
+   "category": "Nigerian Context",
+   "keywords": [
+    "ECOWAS",
+    "interventions"
+   ]
+  },
+  {
+   "title": "OPEC politics and Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "OPEC",
+    "politics"
+   ]
+  },
+  {
+   "title": "Commonwealth membership history",
+   "category": "Theory",
+   "keywords": [
+    "Commonwealth"
+   ]
+  },
+  {
+   "title": "Non-alignment in practice",
+   "category": "Theory",
+   "keywords": [
+    "non-alignment"
+   ]
+  },
+  {
+   "title": "Aid, loans and Bretton Woods",
+   "category": "Theory",
+   "keywords": [
+    "Bretton Woods",
+    "aid"
+   ]
+  },
+  {
+   "title": "AfCFTA and trade futures",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "AfCFTA"
+   ]
+  },
+  {
+   "title": "Diaspora diplomacy",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "diaspora",
+    "diplomacy"
+   ]
+  },
+  {
+   "title": "Soft power: Nollywood and Afrobeats",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Nollywood",
+    "Afrobeats"
+   ]
+  },
+  {
+   "title": "Examination drill: world affairs past questions",
+   "category": "Applications",
+   "keywords": [
+    "world affairs",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Reading sources: provenance first",
+   "category": "Methods",
+   "keywords": [
+    "sources",
+    "provenance"
+   ]
+  },
+  {
+   "title": "Comparing two accounts of an event",
+   "category": "Methods",
+   "keywords": [
+    "comparing",
+    "accounts"
+   ]
+  },
+  {
+   "title": "Cause and consequence mapping",
+   "category": "Methods",
+   "keywords": [
+    "cause",
+    "consequence"
+   ]
+  },
+  {
+   "title": "Change and continuity analysis",
+   "category": "Methods",
+   "keywords": [
+    "change",
+    "continuity"
+   ]
+  },
+  {
+   "title": "Building timelines that argue",
+   "category": "Methods",
+   "keywords": [
+    "timelines",
+    "argue"
+   ]
+  },
+  {
+   "title": "Essay paragraphs with evidence",
+   "category": "Methods",
+   "keywords": [
+    "essays",
+    "evidence"
+   ]
+  },
+  {
+   "title": "Handling 'to what extent' questions",
+   "category": "Methods",
+   "keywords": [
+    "to what extent"
+   ]
+  },
+  {
+   "title": "Cartoons and photographs decoded",
+   "category": "Methods",
+   "keywords": [
+    "cartoons",
+    "photographs"
+   ]
+  },
+  {
+   "title": "Statistics in historical arguments",
+   "category": "Methods",
+   "keywords": [
+    "statistics",
+    "arguments"
+   ]
+  },
+  {
+   "title": "Examination drill: skills past questions",
+   "category": "Applications",
+   "keywords": [
+    "skills",
+    "past questions"
+   ]
+  },
+  {
+   "title": "JAMB history paper structure and strategy",
+   "category": "Methods",
+   "keywords": [
+    "JAMB",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Objective questions on early Nigeria",
+   "category": "Applications",
+   "keywords": [
+    "early Nigeria",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on the jihad and emirates",
+   "category": "Applications",
+   "keywords": [
+    "jihad",
+    "emirates",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on the slave trade",
+   "category": "Applications",
+   "keywords": [
+    "slave trade",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on colonial rule",
+   "category": "Applications",
+   "keywords": [
+    "colonial rule",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on nationalism",
+   "category": "Applications",
+   "keywords": [
+    "nationalism",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on the republics",
+   "category": "Applications",
+   "keywords": [
+    "republics",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on Africa since independence",
+   "category": "Applications",
+   "keywords": [
+    "Africa",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Chronology drills: 1804 to 1999",
+   "category": "Methods",
+   "keywords": [
+    "chronology",
+    "drills"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set A past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed practice: the 40-question sprint",
+   "category": "Applications",
+   "keywords": [
+    "timed practice",
+    "sprint"
+   ]
+  },
+  {
+   "title": "Review of common wrong options",
+   "category": "Methods",
+   "keywords": [
+    "wrong options",
+    "review"
+   ]
+  },
+  {
+   "title": "Who-did-what drills",
+   "category": "Methods",
+   "keywords": [
+    "who did what",
+    "drills"
+   ]
+  },
+  {
+   "title": "Date-pairing drills",
+   "category": "Methods",
+   "keywords": [
+    "date pairing",
+    "drills"
+   ]
+  },
+  {
+   "title": "Elimination techniques for objective questions",
+   "category": "Methods",
+   "keywords": [
+    "elimination",
+    "techniques"
+   ]
+  },
+  {
+   "title": "Misconceptions about indirect rule corrected",
+   "category": "Methods",
+   "keywords": [
+    "indirect rule",
+    "misconceptions"
+   ]
+  },
+  {
+   "title": "Errors about the civil war corrected",
+   "category": "Methods",
+   "keywords": [
+    "civil war",
+    "errors"
+   ]
+  },
+  {
+   "title": "Map locations: empires and trade routes",
+   "category": "Methods",
+   "keywords": [
+    "map",
+    "empires"
+   ]
+  },
+  {
+   "title": "Reading long narrative options fast",
+   "category": "Methods",
+   "keywords": [
+    "narrative options"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set B past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Model answer: causes of the jihad",
+   "category": "Methods",
+   "keywords": [
+    "model answer",
+    "jihad"
+   ]
+  },
+  {
+   "title": "Model answer: effects of colonial economy",
+   "category": "Methods",
+   "keywords": [
+    "model answer",
+    "colonial"
+   ]
+  },
+  {
+   "title": "Model answer: why nationalism succeeded",
+   "category": "Methods",
+   "keywords": [
+    "model answer",
+    "nationalism"
+   ]
+  },
+  {
+   "title": "Source analysis: a Lugard passage",
+   "category": "Methods",
+   "keywords": [
+    "source analysis",
+    "Lugard"
+   ]
+  },
+  {
+   "title": "Source analysis: a nationalist editorial",
+   "category": "Methods",
+   "keywords": [
+    "source analysis",
+    "editorial"
+   ]
+  },
+  {
+   "title": "Bias detection practice set",
+   "category": "Methods",
+   "keywords": [
+    "bias detection"
+   ]
+  },
+  {
+   "title": "Evidence selection for essays",
+   "category": "Methods",
+   "keywords": [
+    "evidence",
+    "essays"
+   ]
+  },
+  {
+   "title": "Paragraph drills: point, proof, link",
+   "category": "Methods",
+   "keywords": [
+    "point proof link"
+   ]
+  },
+  {
+   "title": "Timed essay: one full answer",
+   "category": "Applications",
+   "keywords": [
+    "timed essay"
+   ]
+  },
+  {
+   "title": "Examination drill: essays past questions",
+   "category": "Applications",
+   "keywords": [
+    "essays",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Building the final revision timetable",
+   "category": "Methods",
+   "keywords": [
+    "revision timetable"
+   ]
+  },
+  {
+   "title": "Facts digest: dates, names, treaties",
+   "category": "Methods",
+   "keywords": [
+    "facts digest"
+   ]
+  },
+  {
+   "title": "Definitions examiners love to test",
+   "category": "Methods",
+   "keywords": [
+    "definitions",
+    "examiners"
+   ]
+  },
+  {
+   "title": "The most repeated JAMB history themes",
+   "category": "Methods",
+   "keywords": [
+    "repeated themes",
+    "JAMB"
+   ]
+  },
+  {
+   "title": "Mock examination: 50 questions in 50 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Marking your mock: error analysis",
+   "category": "Methods",
+   "keywords": [
+    "error analysis",
+    "mock"
+   ]
+  },
+  {
+   "title": "Chronology: the one-table revision",
+   "category": "Methods",
+   "keywords": [
+    "chronology",
+    "table"
+   ]
+  },
+  {
+   "title": "Empire facts: the final polish",
+   "category": "Methods",
+   "keywords": [
+    "empire facts"
+   ]
+  },
+  {
+   "title": "Staying calm on unfamiliar eras",
+   "category": "Methods",
+   "keywords": [
+    "composure",
+    "eras"
+   ]
+  },
+  {
+   "title": "Exam day strategy and final confidence",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Oyo versus Benin: administration",
+   "category": "Methods",
+   "keywords": [
+    "Oyo",
+    "Benin"
+   ]
+  },
+  {
+   "title": "Sokoto versus Kanem-Bornu: legitimacy",
+   "category": "Methods",
+   "keywords": [
+    "Sokoto",
+    "Bornu"
+   ]
+  },
+  {
+   "title": "Igbo village republics explained",
+   "category": "Theory",
+   "keywords": [
+    "Igbo",
+    "republics"
+   ]
+  },
+  {
+   "title": "Trade goods across empires mapped",
+   "category": "Methods",
+   "keywords": [
+    "trade",
+    "empires"
+   ]
+  },
+  {
+   "title": "Art and power: Ifé to Benin",
+   "category": "Theory",
+   "keywords": [
+    "art",
+    "power"
+   ]
+  },
+  {
+   "title": "Decline factors compared honestly",
+   "category": "Theory",
+   "keywords": [
+    "decline"
+   ]
+  },
+  {
+   "title": "European contact: timing differences",
+   "category": "Theory",
+   "keywords": [
+    "European contact"
+   ]
+  },
+  {
+   "title": "Map: empires at their peaks",
+   "category": "Methods",
+   "keywords": [
+    "map",
+    "peaks"
+   ]
+  },
+  {
+   "title": "Workshop: one-page empire grids",
+   "category": "Methods",
+   "keywords": [
+    "empire grids"
+   ]
+  },
+  {
+   "title": "Examination drill: empires past questions",
+   "category": "Applications",
+   "keywords": [
+    "empires",
+    "past questions"
+   ]
+  },
+  {
+   "title": "CMS in Yorubaland: timeline",
+   "category": "Theory",
+   "keywords": [
+    "CMS",
+    "Yorubaland"
+   ]
+  },
+  {
+   "title": "Wesleyan and Catholic missions compared",
+   "category": "Theory",
+   "keywords": [
+    "missions",
+    "compared"
+   ]
+  },
+  {
+   "title": "Sudan Interior Mission in the north",
+   "category": "Theory",
+   "keywords": [
+    "SIM",
+    "north"
+   ]
+  },
+  {
+   "title": "Mission education outcomes measured",
+   "category": "Theory",
+   "keywords": [
+    "education",
+    "outcomes"
+   ]
+  },
+  {
+   "title": "Language, translation and printing",
+   "category": "Theory",
+   "keywords": [
+    "translation",
+    "printing"
+   ]
+  },
+  {
+   "title": "Ajayi Crowther: bishop and scholar",
+   "category": "Theory",
+   "keywords": [
+    "Crowther"
+   ]
+  },
+  {
+   "title": "Mission-trader tensions",
+   "category": "Theory",
+   "keywords": [
+    "mission",
+    "tensions"
+   ]
+  },
+  {
+   "title": "Religious change and continuity",
+   "category": "Theory",
+   "keywords": [
+    "change",
+    "continuity"
+   ]
+  },
+  {
+   "title": "Workshop: mission sources read",
+   "category": "Methods",
+   "keywords": [
+    "mission sources"
+   ]
+  },
+  {
+   "title": "Examination drill: missions past questions",
+   "category": "Applications",
+   "keywords": [
+    "missions",
+    "past questions"
+   ]
+  },
+  {
+   "title": "1914 amalgamation papers read",
+   "category": "Methods",
+   "keywords": [
+    "1914",
+    "papers"
+   ]
+  },
+  {
+   "title": "Clifford constitution: features listed",
+   "category": "Theory",
+   "keywords": [
+    "Clifford"
+   ]
+  },
+  {
+   "title": "Richards constitution: the objections",
+   "category": "Theory",
+   "keywords": [
+    "Richards"
+   ]
+  },
+  {
+   "title": "Macpherson: wider consultation",
+   "category": "Theory",
+   "keywords": [
+    "Macpherson"
+   ]
+  },
+  {
+   "title": "Lyttleton: federation born",
+   "category": "Theory",
+   "keywords": [
+    "Lyttleton"
+   ]
+  },
+  {
+   "title": "1960/1963 instruments compared",
+   "category": "Methods",
+   "keywords": [
+    "1960",
+    "1963"
+   ]
+  },
+  {
+   "title": "1979 and 1999 compared line by line",
+   "category": "Methods",
+   "keywords": [
+    "1979",
+    "1999"
+   ]
+  },
+  {
+   "title": "Amendment attempts history",
+   "category": "Theory",
+   "keywords": [
+    "amendment",
+    "attempts"
+   ]
+  },
+  {
+   "title": "Workshop: match clause to constitution",
+   "category": "Methods",
+   "keywords": [
+    "clause match"
+   ]
+  },
+  {
+   "title": "Examination drill: constitutions past questions",
+   "category": "Applications",
+   "keywords": [
+    "constitutions",
+    "past questions"
+   ]
+  },
+  {
+   "title": "January 1966: the majors' motives",
+   "category": "Theory",
+   "keywords": [
+    "January 1966"
+   ]
+  },
+  {
+   "title": "July 1966: the counter-strike",
+   "category": "Theory",
+   "keywords": [
+    "July 1966"
+   ]
+  },
+  {
+   "title": "1975 and 1976: Murtala's shadow",
+   "category": "Theory",
+   "keywords": [
+    "1976",
+    "Murtala"
+   ]
+  },
+  {
+   "title": "Dimka coup: lessons",
+   "category": "Theory",
+   "keywords": [
+    "Dimka"
+   ]
+  },
+  {
+   "title": "1985 palace coup analysed",
+   "category": "Theory",
+   "keywords": [
+    "1985",
+    "coup"
+   ]
+  },
+  {
+   "title": "Vatsa, Orkar: failed plots",
+   "category": "Theory",
+   "keywords": [
+    "failed plots"
+   ]
+  },
+  {
+   "title": "Gideon Orkar speech excerpts read",
+   "category": "Methods",
+   "keywords": [
+    "Orkar speech"
+   ]
+  },
+  {
+   "title": "Military decrees sampled",
+   "category": "Methods",
+   "keywords": [
+    "decrees"
+   ]
+  },
+  {
+   "title": "Workshop: crisis timeline built",
+   "category": "Methods",
+   "keywords": [
+    "timeline"
+   ]
+  },
+  {
+   "title": "Examination drill: coups past questions",
+   "category": "Applications",
+   "keywords": [
+    "coups",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Ghana's independence year read closely",
+   "category": "Theory",
+   "keywords": [
+    "Ghana",
+    "independence"
+   ]
+  },
+  {
+   "title": "Kenya: Mau Mau and negotiation",
+   "category": "Theory",
+   "keywords": [
+    "Kenya",
+    "Mau Mau"
+   ]
+  },
+  {
+   "title": "Algeria: the war of independence",
+   "category": "Theory",
+   "keywords": [
+    "Algeria"
+   ]
+  },
+  {
+   "title": "Congo: 1960 to Katanga",
+   "category": "Theory",
+   "keywords": [
+    "Congo",
+    "Katanga"
+   ]
+  },
+  {
+   "title": "Zimbabwe: chimurenga to 1980",
+   "category": "Theory",
+   "keywords": [
+    "Zimbabwe"
+   ]
+  },
+  {
+   "title": "Angola and Mozambique: Portuguese exit",
+   "category": "Theory",
+   "keywords": [
+    "Angola",
+    "Mozambique"
+   ]
+  },
+  {
+   "title": "Namibia: the long walk",
+   "category": "Theory",
+   "keywords": [
+    "Namibia"
+   ]
+  },
+  {
+   "title": "Frontline states' solidarity",
+   "category": "Theory",
+   "keywords": [
+    "frontline states"
+   ]
+  },
+  {
+   "title": "Workshop: liberation leaders matched",
+   "category": "Methods",
+   "keywords": [
+    "leaders matched"
+   ]
+  },
+  {
+   "title": "Examination drill: liberation past questions",
+   "category": "Applications",
+   "keywords": [
+    "liberation",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Groundnut pyramids remembered",
+   "category": "Nigerian Context",
+   "keywords": [
+    "groundnut pyramids"
+   ]
+  },
+  {
+   "title": "Cocoa marketing boards audited",
+   "category": "Nigerian Context",
+   "keywords": [
+    "cocoa boards"
+   ]
+  },
+  {
+   "title": "Oil: from Oloibiri to boom",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Oloibiri",
+    "boom"
+   ]
+  },
+  {
+   "title": "Indigenisation decrees read",
+   "category": "Theory",
+   "keywords": [
+    "indigenisation"
+   ]
+  },
+  {
+   "title": "Banking milestones listed",
+   "category": "Theory",
+   "keywords": [
+    "banking",
+    "milestones"
+   ]
+  },
+  {
+   "title": "Naira: 1973 changeover",
+   "category": "Nigerian Context",
+   "keywords": [
+    "naira",
+    "1973"
+   ]
+  },
+  {
+   "title": "SAP's diary: 1986 testimony",
+   "category": "Nigerian Context",
+   "keywords": [
+    "SAP",
+    "1986"
+   ]
+  },
+  {
+   "title": "Economic history in one table",
+   "category": "Methods",
+   "keywords": [
+    "one table"
+   ]
+  },
+  {
+   "title": "Railways remembered: dates and routes",
+   "category": "Nigerian Context",
+   "keywords": [
+    "railways",
+    "routes"
+   ]
+  },
+  {
+   "title": "Examination drill: economic past questions",
+   "category": "Applications",
+   "keywords": [
+    "economic history",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed drill: early societies",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "early"
+   ]
+  },
+  {
+   "title": "Timed drill: jihad and trade",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "jihad"
+   ]
+  },
+  {
+   "title": "Timed drill: colonial era",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "colonial"
+   ]
+  },
+  {
+   "title": "Timed drill: independence politics",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "independence"
+   ]
+  },
+  {
+   "title": "Timed drill: republics and military",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "military"
+   ]
+  },
+  {
+   "title": "Timed drill: Africa and the world",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "Africa"
+   ]
+  },
+  {
+   "title": "Mock: 50 questions in 50 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Error analysis of your mock",
+   "category": "Methods",
+   "keywords": [
+    "error analysis"
+   ]
+  },
+  {
+   "title": "Dates: the last sweep",
+   "category": "Methods",
+   "keywords": [
+    "dates",
+    "sweep"
+   ]
+  },
+  {
+   "title": "Exam day: the calm plan",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "plan"
+   ]
+  }
+ ]
+}

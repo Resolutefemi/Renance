@@ -1,0 +1,10 @@
+<resources>
+    <!-- Founder doctrine (web icon.svg 2026-10-14, reaffirmed for the
+         2D flat launcher icon): ONE green keycap for every theme - "use
+         the light-mode favicon for the icons". Night matches day so the
+         icon never sits in a near-black box on dark launchers. -->
+    <color name="ic_launcher_background">#FFFFFF</color>
+    <!-- Android 12+ system-splash ground, dark tier: the #0F1216 the
+         dark Flutter splash opens on (RenanceColors.darkPage). -->
+    <color name="splash_ground">#0F1216</color>
+</resources>

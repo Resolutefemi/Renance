@@ -1,0 +1,72 @@
+{
+  "class": "JSS 3",
+  "subject": "Solar Photovoltaic Installation and Maintenance",
+  "term": 2,
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Revision of First Term Work",
+      "content": "Review of advanced system components and\ninstallation\nRecap on system design and sizing\nQuick diagnostic test and discussion on\nstudents' practical experiences"
+    },
+    {
+      "week": 2,
+      "topic": "Electrical Wiring for Solar S",
+      "content": "ystems Introduction to solar electrical wiring concepts\nTypes of electrical cables (AC/DC cables)\nColour coding and polarity awareness\nCable sizing and voltage drop considerations\nPractical: Connecting panels, controllers, and\nbatteries correctly"
+    },
+    {
+      "week": 3,
+      "topic": "Battery Bank Configuration",
+      "content": "Series and parallel connections in batteries\nBattery capacity and voltage calculation\nFactors affecting battery performance and\nlifespan\nMaintenance and storage of batteries\nPractical: Building a 24V battery bank"
+    },
+    {
+      "week": 4,
+      "topic": "Inverter Operation and Connec",
+      "content": "tion Understanding inverter functions\nTypes of inverters: pure sine wave, modified\nsine wave\nInverter wiring: DC input and AC output\nInstallation precautions and testing\nDemonstration: Connecting an inverter to a\nbattery and load"
+    },
+    {
+      "week": 5,
+      "topic": "MID-TERM EXAMINATION",
+      "content": "Assessment of Weeks 1-4 Topics"
+    },
+    {
+      "week": 6,
+      "topic": "Solar Load Management",
+      "content": "Understanding electrical loads\nLoad prioritization and balancing\nEstimating total load consumption\nPower rating and efficiency management\nPractical: Load distribution for home solar\nsetup"
+    },
+    {
+      "week": 7,
+      "topic": "MID-TERM BREAK",
+      "content": "Holiday/Rest"
+    },
+    {
+      "week": 8,
+      "topic": "Fault Detection and Troubleshooting",
+      "content": "Common faults in solar installations\nDiagnostic tools: multimeter, tester, ammeter\nIdentifying loose connections, faulty panels,\nand inverter issues\nStep-by-step troubleshooting process\nPractical: Testing and rectifying a system fault"
+    },
+    {
+      "week": 9,
+      "topic": "Solar System Testing and Commissioning",
+      "content": "Procedures for testing system performance\nChecking output voltage and current\nPerformance indicators: efficiency, shading\neffects, battery health\nFinal system commissioning checklist\nGroup project: Commissioning a classroom\nsolar setup"
+    },
+    {
+      "week": 10,
+      "topic": "Documentation and Reporting",
+      "content": "Recording installation data\nReport writing and job documentation\nPreparing invoices and customer service records\nGroup task: Prepare a mock solar project report"
+    },
+    {
+      "week": 11,
+      "topic": "REVISION",
+      "content": "Comprehensive review of Second Term topics"
+    },
+    {
+      "week": 12,
+      "topic": "EXAMINATION",
+      "content": "End of Term Practical and Written Assessment"
+    },
+    {
+      "week": 13,
+      "topic": "CLOSING/VACATION",
+      "content": "Term ends"
+    }
+  ]
+}

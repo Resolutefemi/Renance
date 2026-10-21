@@ -1,0 +1,23 @@
+{
+  "ran_at": "2026-10-15T08:49:41.550Z",
+  "results": [
+    {
+      "provider": "supabase",
+      "via": "postgres-wire",
+      "ok": true,
+      "note": "PostgreSQL 17.11"
+    },
+    {
+      "provider": "supabase",
+      "via": "rest",
+      "ok": true,
+      "note": "HTTP 200"
+    },
+    {
+      "provider": "insforge",
+      "via": "postgres-wire",
+      "ok": true,
+      "note": "PostgreSQL 15.18"
+    }
+  ]
+}

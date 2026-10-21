@@ -1,0 +1,879 @@
+{
+  "code": "uni-tasued-mth102-bank",
+  "title": "TASUED MTH102 | Course Question Bank",
+  "version": 1,
+  "questionCount": 62,
+  "totalMarks": 62,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-tasued-mth102-bank-0001",
+      "type": "mcq",
+      "stem": "If $f(x)=x^2e^x$, find $f'(x)$",
+      "options": {
+        "A": "$e^x(x^2+2x)$",
+        "B": "$2xe^x$",
+        "C": "$2x^2e^x$",
+        "D": "$2x^2e^x+xe^x$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Applying the product rule with $u=x^2$ and $v=e^x$ gives $f'(x)=e^x(x^2+2x)$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0002",
+      "type": "mcq",
+      "stem": "If $f(x)=x^2+3x$, find $f(4)$",
+      "options": {
+        "A": "$16$",
+        "B": "$20$",
+        "C": "$28$",
+        "D": "$15$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "$f(4)=4^2+3(4)=16+12=28$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0003",
+      "type": "mcq",
+      "stem": "Evaluate $\\lim_{x \\to 2} \\frac{2x-1}{3x+2}$",
+      "options": {
+        "A": "$\\frac{3}{8}$",
+        "B": "$\\frac{1}{8}$",
+        "C": "$\\frac{5}{8}$",
+        "D": "$3$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Substituting $x=2$ gives $\\frac{2(2)-1}{3(2)+2}=\\frac{3}{8}$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0004",
+      "type": "mcq",
+      "stem": "If $g(x)=3x-7$ and $f(x)=x^2+x-1$, find $\\lim_{x \\to -1} g(f(x))$",
+      "options": {
+        "A": "$-13$",
+        "B": "$-1$",
+        "C": "$-16$",
+        "D": "$-10$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "$f(-1)=-1$, so $g(f(-1))=g(-1)=3(-1)-7=-10$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0005",
+      "type": "mcq",
+      "stem": "Find the second derivative of $x^4$.",
+      "options": {
+        "A": "$4x^3$",
+        "B": "$12x^3$",
+        "C": "$12x^2$",
+        "D": "$4x^2$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Differentiating $4x^3$, the first derivative of $x^4$, gives $12x^2$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0006",
+      "type": "mcq",
+      "stem": "Which of the following is not related to derivative?",
+      "options": {
+        "A": "Product rule",
+        "B": "Quotient rule",
+        "C": "Chain rule",
+        "D": "Chi square rule"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The chi square rule is a statistical test and has no connection to differentiation."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0007",
+      "type": "mcq",
+      "stem": "$\\frac{dy}{dx}$ is",
+      "options": {
+        "A": "$\\lim_{\\Delta x \\to 0} \\frac{\\Delta x}{\\Delta y}$",
+        "B": "$\\lim_{\\Delta x \\to 1} \\frac{\\Delta y}{\\Delta x}$",
+        "C": "$\\lim_{\\Delta x \\to 1} \\frac{\\Delta x}{\\Delta y}$",
+        "D": "$\\lim_{\\Delta x \\to 0} \\frac{\\Delta y}{\\Delta x}$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The derivative is defined as the limit of the ratio $\\frac{\\Delta y}{\\Delta x}$ as $\\Delta x$ approaches $0$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0008",
+      "type": "mcq",
+      "stem": "Find $\\frac{d}{dx}(\\sin x)$",
+      "options": {
+        "A": "$-\\sin x$",
+        "B": "$\\cos x$",
+        "C": "$\\sin x$",
+        "D": "$-\\cos x$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The derivative of $\\sin x$ with respect to $x$ is $\\cos x$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0009",
+      "type": "mcq",
+      "stem": "Evaluate $\\lim_{x \\to \\infty} \\frac{5x^2+7x+7}{3x^2+8x-1}$",
+      "options": {
+        "A": "$5$",
+        "B": "$\\frac{5}{3}$",
+        "C": "$\\frac{7}{8}$",
+        "D": "$3$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "As $x \\to \\infty$, the limit equals the ratio of the leading coefficients, $\\frac{5}{3}$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0010",
+      "type": "mcq",
+      "stem": "Find the gradient of $y=6x^2-5x+3$ at $x=1$",
+      "options": {
+        "A": "$7$",
+        "B": "$-5$",
+        "C": "$12$",
+        "D": "$5$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$\\frac{dy}{dx}=12x-5$, so at $x=1$ the gradient is $12(1)-5=7$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0011",
+      "type": "mcq",
+      "stem": "If $y=3x^5-5x^3+x^2-5$, find $\\frac{dy}{dx}$",
+      "options": {
+        "A": "$15x^4-15x^2+2x-5$",
+        "B": "$15x^4-5x^2+2x$",
+        "C": "$15x^4-15x^2+2x$",
+        "D": "$3x^4-15x^2+2x$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Differentiating each term using the power rule gives $15x^4-15x^2+2x$, since the derivative of a constant is $0$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0012",
+      "type": "mcq",
+      "stem": "The derivative of $\\sqrt{2}$ is",
+      "options": {
+        "A": "$1$",
+        "B": "$-1$",
+        "C": "$0$",
+        "D": "$\\sqrt{2}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "$\\sqrt{2}$ is a constant, and the derivative of any constant is $0$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0013",
+      "type": "mcq",
+      "stem": "If $f(x)=4x^3-\\cos x$, find $f'(x)$",
+      "options": {
+        "A": "$4x^2+\\sin x$",
+        "B": "$12x^2-\\sin x$",
+        "C": "$12x^2+\\sin x$",
+        "D": "$12x^2+\\cos x$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Differentiating gives $12x^2$ from $4x^3$ and $\\sin x$ from $-\\cos x$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0014",
+      "type": "mcq",
+      "stem": "If $y=\\frac{2x^3}{\\sin x}$, find $\\frac{dy}{dx}$",
+      "options": {
+        "A": "$\\frac{6x^2 \\sin x - 2x^3 \\cos x}{\\sin^2 x}$",
+        "B": "$\\frac{3x^2 \\sin x - x^3 \\cos x}{\\sin^2 x}$",
+        "C": "$\\frac{6x^2 \\sin x - x^3 \\cos x}{\\sin^2 x}$",
+        "D": "$\\frac{6x^2 \\sin x + 2x^3 \\cos x}{\\sin^2 x}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Applying the quotient rule with $u=2x^3$ and $v=\\sin x$ gives $\\frac{6x^2 \\sin x - 2x^3 \\cos x}{\\sin^2 x}$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0015",
+      "type": "mcq",
+      "stem": "If $y=(x^3-7)(3x+2)$, find $\\frac{dy}{dx}$",
+      "options": {
+        "A": "$12x^3+6x^2-21$",
+        "B": "$12x^3+6x^2+21$",
+        "C": "$9x^3+6x^2-21$",
+        "D": "$12x^3-6x^2-21$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Applying the product rule gives $3x^2(3x+2)+3(x^3-7)=12x^3+6x^2-21$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0016",
+      "type": "mcq",
+      "stem": "If $f(x)=\\cos(3x-7)$, find $f'(x)$",
+      "options": {
+        "A": "$3x\\cos(3x-7)$",
+        "B": "$3\\sin(3x-7)$",
+        "C": "$-3\\sin(3x-7)$",
+        "D": "$3\\cos(3x-7)$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Using the chain rule, the derivative of $\\cos(u)$ is $-\\sin(u)\\cdot u'$, and $u'=3$, giving $-3\\sin(3x-7)$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0017",
+      "type": "mcq",
+      "stem": "If $f(x)=4(4x+7)^3$, find $f'(x)$",
+      "options": {
+        "A": "$12(4x+7)^2$",
+        "B": "$12(4x+7)^3$",
+        "C": "$48(4x+7)^2$",
+        "D": "$7(4x+7)^2$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Using the chain rule: $f'(x)=4\\cdot3(4x+7)^2\\cdot4=48(4x+7)^2$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0018",
+      "type": "mcq",
+      "stem": "Evaluate $\\int_1^3 (2x+1)\\,dx$",
+      "options": {
+        "A": "$12$",
+        "B": "$10$",
+        "C": "$2$",
+        "D": "$8$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$\\int_1^3(2x+1)\\,dx=\\left[x^2+x\\right]_1^3=(9+3)-(1+1)=12-2=10$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0019",
+      "type": "mcq",
+      "stem": "Which of the following is not a method for solving integration?",
+      "options": {
+        "A": "Integration by substitution",
+        "B": "Integration by partial fraction",
+        "C": "Integration by quotient",
+        "D": "Integration by part"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Integration by quotient is not a standard integration technique. The recognised methods include substitution, partial fractions, and integration by parts."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0020",
+      "type": "mcq",
+      "stem": "Evaluate $\\int_0^1 (x^2+3)\\,dx$",
+      "options": {
+        "A": "$3$",
+        "B": "$\\frac{10}{3}$",
+        "C": "$10$",
+        "D": "$\\frac{3}{10}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$\\int_0^1(x^2+3)\\,dx=\\left[\\frac{x^3}{3}+3x\\right]_0^1=\\frac{1}{3}+3=\\frac{10}{3}$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0021",
+      "type": "mcq",
+      "stem": "Evaluate $\\int 2x\\sin x\\,dx$",
+      "options": {
+        "A": "$-2x\\cos x+c$",
+        "B": "$-2x\\cos x+2\\sin x+c$",
+        "C": "$2x\\cos x+\\sin x+c$",
+        "D": "$-x\\cos x+\\sin x+c$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Integration by parts with $u=2x$ and $dv=\\sin x\\,dx$ gives $-2x\\cos x+2\\sin x+c$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0022",
+      "type": "mcq",
+      "stem": "Evaluate $\\int \\ln x\\,dx$",
+      "options": {
+        "A": "$\\ln x-x+c$",
+        "B": "$x\\ln x-x^2+c$",
+        "C": "$x\\ln x-x+c$",
+        "D": "$\\ln x-2x+c$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Integration by parts with $u=\\ln x$ and $dv=dx$ gives $x\\ln x-x+c$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0023",
+      "type": "mcq",
+      "stem": "Find the area under $y=\\sin x$ from $0$ to $\\pi$.",
+      "options": {
+        "A": "$0$",
+        "B": "$1$",
+        "C": "$-2$",
+        "D": "$2$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "$\\int_0^{\\pi}\\sin x\\,dx=[-\\cos x]_0^{\\pi}=2$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0024",
+      "type": "mcq",
+      "stem": "Find the area under $y=2x+1$ from $0$ to $5$.",
+      "options": {
+        "A": "$-20$",
+        "B": "$20$",
+        "C": "$-30$",
+        "D": "$30$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "$\\int_0^5(2x+1)\\,dx=[x^2+x]_0^5=30$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0025",
+      "type": "mcq",
+      "stem": "Find the area between $y=x$ and $y=x^2$.",
+      "options": {
+        "A": "$\\frac{1}{2}$",
+        "B": "$\\frac{1}{3}$",
+        "C": "$\\frac{1}{6}$",
+        "D": "$\\frac{5}{6}$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "$\\int_0^1(x-x^2)\\,dx=\\frac{1}{2}-\\frac{1}{3}=\\frac{1}{6}$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0026",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a function?",
+      "options": {
+        "A": "$\\{2,1\\}$",
+        "B": "$f(x)=2x-5$",
+        "C": "$\\{(123),e\\}$",
+        "D": "$\\mathbb{R}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A function assigns exactly one output to each input, which only $f(x)=2x-5$ does among the choices."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0027",
+      "type": "mcq",
+      "stem": "Which of the following is an exponential function?",
+      "options": {
+        "A": "$e^{3x-7}$",
+        "B": "$5x-3$",
+        "C": "$\\tan 2x$",
+        "D": "$\\ln(2x-9)$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "An exponential function has the variable in the exponent, which only $e^{3x-7}$ has."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0028",
+      "type": "mcq",
+      "stem": "The following are points on $y=x+1$ except.",
+      "options": {
+        "A": "$(0,1)$",
+        "B": "$(1,2)$",
+        "C": "$(0,5)$",
+        "D": "$(2,3)$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Substituting $x=0$ into $y=x+1$ gives $y=1$, not $5$, so $(0,5)$ is not on the line."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0029",
+      "type": "mcq",
+      "stem": "Find the turning point of $y=x^2-2x+1$.",
+      "options": {
+        "A": "$(3,1)$",
+        "B": "$(1,2)$",
+        "C": "$(1,0)$",
+        "D": "$(2,3)$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Setting $\\frac{dy}{dx}=2x-2=0$ gives $x=1$, and $y(1)=0$, so the turning point is $(1,0)$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0030",
+      "type": "mcq",
+      "stem": "$\\lim_{x\\to a}\\frac{f(x)}{g(x)}=\\frac{L}{M}$, what condition will make this definition not define?",
+      "options": {
+        "A": "$L=0$",
+        "B": "$M=0$",
+        "C": "$L=M$",
+        "D": "$L>M$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Division by zero is undefined, so the limit is undefined when $M=0$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0031",
+      "type": "mcq",
+      "stem": "At which of the following points is $\\frac{x-3}{x-1}$ not continuous?",
+      "options": {
+        "A": "$x=1$",
+        "B": "$x=2$",
+        "C": "$x=3$",
+        "D": "$x=4$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The function is undefined where the denominator $x-1=0$, i.e. at $x=1$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0032",
+      "type": "mcq",
+      "stem": "A turning point is also known as ____",
+      "options": {
+        "A": "line point",
+        "B": "arrow point",
+        "C": "critical point",
+        "D": "interval"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A turning point is the standard term also referred to as a critical point."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0033",
+      "type": "mcq",
+      "stem": "The instantaneous rate of change of $f(x)$ at $x=c$ is ____",
+      "options": {
+        "A": "$f(c)$",
+        "B": "$f'(c)$",
+        "C": "$f(c-1)$",
+        "D": "$f(c+1)$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The instantaneous rate of change at a point is given by the derivative evaluated there, $f'(c)$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0034",
+      "type": "mcq",
+      "stem": "If $y=f(x)$, $\\frac{df(x)}{dx}$ is known as the ____",
+      "options": {
+        "A": "Continuity of $f(x)$",
+        "B": "co-factor of $f(x)$",
+        "C": "Slope of $f(x)$",
+        "D": "Strength of $f(x)$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The derivative $\\frac{df(x)}{dx}$ represents the slope of the function at a point."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0035",
+      "type": "mcq",
+      "stem": "Which of the following is correct?",
+      "options": {
+        "A": "$\\int_a^b 4\\cos x\\,dx=4\\int_a^b\\cos x\\,dx$",
+        "B": "$\\int_a^b x\\cos x\\,dx=x\\int_a^b\\cos x\\,dx$",
+        "C": "$\\int_a^b \\cos x\\,dx=x\\sin x$",
+        "D": "$\\int_a^b x\\cos x\\,dx=x\\cos x$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A constant factor can always be pulled out of an integral, so $\\int 4\\cos x\\,dx=4\\int\\cos x\\,dx$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0036",
+      "type": "mcq",
+      "stem": "Calculate the volume generated by rotating $y=x$ from $0$ to $1$ about the $x$-axis.",
+      "options": {
+        "A": "$\\frac{\\pi}{2}$",
+        "B": "$\\frac{\\pi}{3}$",
+        "C": "$\\frac{3\\pi}{2}$",
+        "D": "$\\frac{2\\pi}{3}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$V=\\pi\\int_0^1 x^2\\,dx=\\frac{\\pi}{3}$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0037",
+      "type": "mcq",
+      "stem": "Which of these is the domain of $f(x)=\\frac{1}{x^2}$",
+      "options": {
+        "A": "$[0,\\infty)$",
+        "B": "$(0,\\infty)$",
+        "C": "$[0,\\infty]$",
+        "D": "$[-\\infty,\\infty]$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Since $x=0$ makes $f(x)=\\frac{1}{x^2}$ undefined, the domain must exclude zero."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0038",
+      "type": "mcq",
+      "stem": "Find the domain of $f(x)=\\frac{x+1}{x-2}$.",
+      "options": {
+        "A": "All values of $x$ except $x\\neq2$",
+        "B": "All values of $x$",
+        "C": "$[0,2]$",
+        "D": "All values of $x$ except $x=2$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The function is undefined when the denominator $x-2=0$, i.e. at $x=2$, so this value must be excluded."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0039",
+      "type": "mcq",
+      "stem": "Find the range of $f(x)=x^2$.",
+      "options": {
+        "A": "$(-\\infty,\\infty)$",
+        "B": "$(-3,\\infty)$",
+        "C": "$[0,\\infty)$",
+        "D": "$(-\\infty,\\infty]$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Since $x^2\\geq0$ for all real $x$, the range is $[0,\\infty)$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0040",
+      "type": "mcq",
+      "stem": "Which of the following functions is even?",
+      "options": {
+        "A": "$f(x)=x^3$",
+        "B": "$f(x)=x^2$",
+        "C": "$f(x)=x+1$",
+        "D": "$f(x)=\\frac{1}{x}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A function is even if $f(-x)=f(x)$, which holds for $f(x)=x^2$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0041",
+      "type": "mcq",
+      "stem": "If $f(x)=2x+3$, find $f^{-1}(x)$.",
+      "options": {
+        "A": "$\\frac{x+3}{2}$",
+        "B": "$\\frac{x-3}{2}$",
+        "C": "$2x-3$",
+        "D": "$x-\\frac{3}{2}$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Solving $y=2x+3$ for $x$ gives $x=\\frac{y-3}{2}$, so $f^{-1}(x)=\\frac{x-3}{2}$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0042",
+      "type": "mcq",
+      "stem": "For $f(x)=x^2-4$, what are the x-intercepts?",
+      "options": {
+        "A": "$(0,-4)$",
+        "B": "$(-2,0)$ and $(2,0)$",
+        "C": "$(0,2)$",
+        "D": "No intercepts"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Setting $x^2-4=0$ gives $x=\\pm2$, so the x-intercepts are $(-2,0)$ and $(2,0)$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0043",
+      "type": "mcq",
+      "stem": "Where is the function $f(x)=x^3$ strictly increasing?",
+      "options": {
+        "A": "$x<0$ Only",
+        "B": "$x>0$ Only",
+        "C": "For all real $x$",
+        "D": "Nowhere"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Since $f'(x)=3x^2\\geq0$ everywhere and the function never decreases, $f(x)=x^3$ increases over all real $x$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0044",
+      "type": "mcq",
+      "stem": "Find the critical point of $f(x)=x^3-3x$",
+      "options": {
+        "A": "$x=\\pm1$",
+        "B": "$x=0$",
+        "C": "$x=3$",
+        "D": "No critical point"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Setting $f'(x)=3x^2-3=0$ gives $x=\\pm1$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0045",
+      "type": "mcq",
+      "stem": "If $f(x)=x^2+x$, find $f(1)$",
+      "options": {
+        "A": "$16$",
+        "B": "$20$",
+        "C": "$2$",
+        "D": "$1$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Substituting $x=1$ gives $f(1)=1^2+1=2$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0046",
+      "type": "mcq",
+      "stem": "Evaluate $\\lim_{x\\to5}\\frac{2x-1}{3x+2}$",
+      "options": {
+        "A": "$\\frac{9}{17}$",
+        "B": "$\\frac{1}{8}$",
+        "C": "$\\frac{5}{8}$",
+        "D": "$3$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Since the numerator and denominator are continuous and the denominator is nonzero at this point, direct substitution gives $\\frac{2(5)-1}{3(5)+2} = \\frac{9}{17}$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0047",
+      "type": "mcq",
+      "stem": "If $g(x)=2x-1$ and $f(x)=x^2+x+2$, find $\\lim_{x\\to1}gof(x)$",
+      "options": {
+        "A": "$-13$",
+        "B": "$-1$",
+        "C": "$-16$",
+        "D": "$7$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "$g(f(x))=2(x^2+x+2)-1=2x^2+2x+3$, and substituting $x=1$ gives $7$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0048",
+      "type": "mcq",
+      "stem": "Find the second derivative of $3x^3$.",
+      "options": {
+        "A": "$2x^3$",
+        "B": "$18x$",
+        "C": "$x^2$",
+        "D": "$4x^2$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Differentiating $3x^3$ twice gives $9x^2$ then $18x$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0049",
+      "type": "mcq",
+      "stem": "$\\int v\\,du =$",
+      "options": {
+        "A": "$uv-\\int v\\,du$",
+        "B": "$uv-\\int u\\,dv$",
+        "C": "$uv+\\int v\\,du$",
+        "D": "$uv-\\int u\\,du$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Rearranging $\\int u\\,dv=uv-\\int v\\,du$ gives $\\int v\\,du=uv-\\int u\\,dv$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0050",
+      "type": "mcq",
+      "stem": "If $y=\\tan x$, $\\frac{dy}{dx}$ is",
+      "options": {
+        "A": "$\\cos x$",
+        "B": "$\\sin x$",
+        "C": "$\\csc^2 x$",
+        "D": "$\\sec^2 x$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The derivative of $\\tan x$ is $\\sec^2 x$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0051",
+      "type": "mcq",
+      "stem": "Find $\\frac{d}{dx}(\\cos x)$",
+      "options": {
+        "A": "$-\\sin x$",
+        "B": "$\\cos x$",
+        "C": "$\\sin x$",
+        "D": "$-\\cos x$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The derivative of $\\cos x$ is $-\\sin x$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0052",
+      "type": "mcq",
+      "stem": "Evaluate $\\lim_{x\\to\\infty}\\frac{3x^2+x+5}{4x^2+3x-1}$",
+      "options": {
+        "A": "$4$",
+        "B": "$\\frac{3}{4}$",
+        "C": "$\\frac{7}{8}$",
+        "D": "$3$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "As $x\\to\\infty$, the limit of a rational function with equal-degree numerator and denominator equals the ratio of leading coefficients, $\\frac{3}{4}$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0053",
+      "type": "mcq",
+      "stem": "Find the gradient of $y=3x^2-5x+3$ at $x=1$",
+      "options": {
+        "A": "$1$",
+        "B": "$-5$",
+        "C": "$2$",
+        "D": "$5$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$\\frac{dy}{dx}=6x-5$, and at $x=1$ this equals $1$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0054",
+      "type": "mcq",
+      "stem": "If $y=4x^5-5x^3+x^2-5$, find $\\frac{dy}{dx}$",
+      "options": {
+        "A": "$15x^4-15x^2+2x-5$",
+        "B": "$15x^4-5x^2+2x$",
+        "C": "$20x^4-15x^2+2x$",
+        "D": "$3x^4-15x^2+2x$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Differentiating each term gives $20x^4-15x^2+2x$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0055",
+      "type": "mcq",
+      "stem": "The derivative of $y=7$ is",
+      "options": {
+        "A": "$1$",
+        "B": "$-1$",
+        "C": "$0$",
+        "D": "$7$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The derivative of a constant is always zero."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0056",
+      "type": "mcq",
+      "stem": "If $f(x)=5x^3-\\cos x$, find $f'(x)$",
+      "options": {
+        "A": "$5x^2+\\sin x$",
+        "B": "$15x^2-\\sin x$",
+        "C": "$15x^2+\\sin x$",
+        "D": "$15x^2+\\cos x$"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Differentiating gives $15x^2$ from $5x^3$ and $\\sin x$ from $-\\cos x$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0057",
+      "type": "mcq",
+      "stem": "If $y=\\frac{3x^3}{\\sin x}$, find $\\frac{dy}{dx}$",
+      "options": {
+        "A": "$\\frac{9x^2\\sin x-3x^3\\cos x}{\\sin^2 x}$",
+        "B": "$\\frac{9x^2\\sin x-x^3\\cos x}{\\sin^2 x}$",
+        "C": "$\\frac{6x^2\\sin x-x^3\\cos x}{\\sin^2 x}$",
+        "D": "$\\frac{6x^2\\sin x+2x^3\\cos x}{\\sin^2 x}$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Applying the quotient rule to $\\frac{3x^3}{\\sin x}$ gives this result."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0058",
+      "type": "mcq",
+      "stem": "If $f(x)=xe^x$, find $f'(x)$",
+      "options": {
+        "A": "$e^x(x+1)$",
+        "B": "$2xe^x$",
+        "C": "$2x^2e^x$",
+        "D": "$2x^2e^x+xe^x$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "By the product rule, $f'(x)=e^x+xe^x=e^x(x+1)$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0059",
+      "type": "mcq",
+      "stem": "If $y=7x^{-2}$, find $\\frac{dy}{dx}$",
+      "options": {
+        "A": "$14x^3$",
+        "B": "$-14x^{-3}$",
+        "C": "$-14x^4$",
+        "D": "$14x^4$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Applying the power rule to $7x^{-2}$ gives the derivative shown."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0060",
+      "type": "mcq",
+      "stem": "Evaluate $\\lim_{x\\to2}\\frac{2x-1}{3x+2}$",
+      "options": {
+        "A": "$\\frac{3}{8}$",
+        "B": "$\\frac{1}{8}$",
+        "C": "$\\frac{5}{8}$",
+        "D": "$3$"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Substituting $x=2$ into the continuous rational function gives $\\frac{2(2)-1}{3(2)+2}=\\frac{3}{8}$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0061",
+      "type": "mcq",
+      "stem": "If $g(x)=3x-7$ and $f(x)=x^2+x-1$, find $\\lim_{x\\to-1}gof(x)$",
+      "options": {
+        "A": "$-13$",
+        "B": "$-1$",
+        "C": "$-16$",
+        "D": "$-10$"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "$g(f(x))=3(x^2+x-1)-7=3x^2+3x-10$, and substituting $x=-1$ gives $-10$."
+    },
+    {
+      "id": "uni-tasued-mth102-bank-0062",
+      "type": "mcq",
+      "stem": "Evaluate $\\lim_{x\\to\\infty}\\frac{5x^2+7x+7}{3x^2+8x-1}$",
+      "options": {
+        "A": "$5$",
+        "B": "$\\frac{5}{3}$",
+        "C": "$\\frac{7}{8}$",
+        "D": "$3$"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "As $x\\to\\infty$, the limit of a rational function with equal-degree numerator and denominator equals the ratio of leading coefficients, $\\frac{5}{3}$."
+    }
+  ]
+}

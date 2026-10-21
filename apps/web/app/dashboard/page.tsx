@@ -1,0 +1,1426 @@
+'use client';
+
+import { FormEvent, useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { api, ApiError } from '@/lib/api';
+import { getToken, setStoredUser } from '@/lib/session';
+import { focusFromExams, setFocus } from '@/lib/focus';
+import { examHref, fetchManifest, migrateBundleCache, prefetchAll, type ExamMeta } from '@/lib/exams';
+import { type ReviewSummary } from '@/lib/review';
+import { RenanceMark } from '@/components/renance-logo';
+import { loadActiveExam, type ActiveExam } from '@/lib/active-exam';
+import { refreshNotifications, subscribeNotifications, unreadCount } from '@/lib/notifications';
+import {
+  SCHOOLS,
+  clientCatalog,
+  findSchoolByName,
+  liveCourses,
+  readPendingInstitution,
+  resolveSchoolSlug,
+  storedPostUtmeSchoolSlug,
+  storedSchoolSlug,
+} from '@/lib/university';
+import BottomNav from '@/components/bottom-nav';
+import AiFloatingButton from '@/components/ai-floating-button';
+import SideNav from '@/components/side-nav';
+import { LearnStatChips, useLearnStats } from '@/components/learn/learn-stats';
+import DailyComboModal, { COMBO_BODIES } from '@/components/daily-combo-modal';
+import FeatureTour, { PastQuestionsTip } from '@/components/feature-tour';
+import AppearanceModal, { needsAppearanceIntro } from '@/components/appearance-modal';
+import WhatsAppChannelModal from '@/components/whatsapp-channel-modal';
+
+interface Profile {
+  fullName: string;
+  institution: string;
+  gradeLevel: string;
+  exams: string[];
+  subjects?: string[];
+  targetYear?: number;
+  completed: boolean;
+}
+
+interface MeResponse {
+  user: { id: string; username: string; profileCompleted: boolean };
+  profile: Profile | null;
+}
+
+interface GamificationResponse {
+  state: { currentStreak: number; bestStreak: number; totalXp: number };
+}
+
+interface AttemptRow {
+  attemptId: string;
+  code: string;
+  status: string;
+  score?: number;
+  total?: number;
+  submittedAt?: string;
+  /** Server attempts carry the daily marker (dailyDay set) so the
+      recent card reopens the sprint under "Daily Quiz". */
+  dailyDay?: string;
+}
+
+interface DailyTileInfo {
+  code: string;
+  day: string;
+  myResult?: { score: number; total: number } | null;
+}
+
+const EXAM_OPTIONS = ['JAMB', 'WAEC', 'NECO', 'POST-UTME', 'University Modules'] as const;
+const GRADE_LEVELS = ['SS1', 'SS2', 'SS3', '100 Level', '200 Level', '300 Level', '400 Level', 'Postgraduate'];
+const TARGET_YEARS = [2026, 2027, 2028] as const;
+
+/** Display label per profile exam value (the value is the manifest body). */
+const EXAM_LABELS: Record<string, string> = {
+  JAMB: 'JAMB',
+  WAEC: 'WAEC',
+  NECO: 'NECO',
+  'POST-UTME': 'Post UTME',
+  'University Modules': 'School Desk (Tertiary Institution)',
+};
+
+const TARGET_LABELS: Record<string, string> = {
+  JAMB: 'UTME',
+  WAEC: 'WASSCE',
+  NECO: 'NECO',
+  'POST-UTME': 'Post UTME',
+  'University Modules': 'Semester',
+};
+
+function daysToTarget(year?: number): number | null {
+  if (!year) return null;
+  return Math.max(0, Math.floor((new Date(year, 4, 1).getTime() - Date.now()) / 86_400_000));
+}
+
+/** Manifest body name for the student's learning focus (daily rotation pool). */
+function focusBodyOf(exams?: string[]): string {
+  const exam = exams?.[0] ?? 'JAMB';
+  if (/waec/i.test(exam)) return 'WAEC';
+  if (/neco/i.test(exam)) return 'NECO';
+  if (/university/i.test(exam)) return 'University Modules';
+  if (/post[-_ ]?utme/i.test(exam)) return 'POST-UTME';
+  return 'JAMB';
+}
+
+/**
+ * The packs this student's desk actually serves: the focus body's
+ * shelf; university students get their own school's banks (stored pick
+ * → institution match), falling back to the body shelf when unknown.
+ */
+function deskExams(
+  exams: ExamMeta[],
+  focusExam?: string,
+  institution?: string,
+): ExamMeta[] {
+  const body = focusBodyOf(focusExam ? [focusExam] : undefined);
+  if (body === 'POST-UTME') {
+    // The Post UTME desk: the general practice banks plus the stored
+    // school's own prep banks, never the whole university shelf.
+    const slug = storedPostUtmeSchoolSlug();
+    const general = exams.filter((e) => e.body === 'POST-UTME');
+    if (slug) {
+      const own = exams.filter((e) => e.code.startsWith(`uni-${slug}-pq-`));
+      return [...general, ...own];
+    }
+    return general;
+  }
+  if (body !== 'University Modules') {
+    return exams.filter((e) => (e.body ?? 'University Modules') === body);
+  }
+  const slug = storedSchoolSlug() ?? (institution ? findSchoolByName(institution)?.slug : null);
+  if (slug) {
+    const own = exams.filter(
+      (e) => e.code.startsWith(`uni-${slug}-`) || e.code.startsWith(`${slug}-post-utme`),
+    );
+    if (own.length > 0) return own;
+  }
+  return exams.filter((e) => (e.body ?? 'University Modules') === body);
+}
+
+export default function DashboardPage() {
+  const router = useRouter();
+  const [me, setMe] = useState<MeResponse | null>(null);
+  const [exams, setExams] = useState<ExamMeta[]>([]);
+  const [streak, setStreak] = useState(0);
+  // Supreme learn counters for the top bar (gems + hearts, live).
+  const learnStats = useLearnStats(true);
+  const [attempts, setAttempts] = useState<AttemptRow[]>([]);
+  const [reviewDueCount, setReviewDueCount] = useState(0);
+  const [needsProfile, setNeedsProfile] = useState(false);
+  const [bootError, setBootError] = useState<string | null>(null);
+  const [bootNonce, setBootNonce] = useState(0);
+  const [error, setError] = useState<string | null>(null);
+  const [moreOpen, setMoreOpen] = useState(false);
+  // Today's daily challenge (JAMB desk): the tile deep-links into the
+  // sprint, or into the setup when the API has no challenge for us.
+  const [daily, setDaily] = useState<DailyTileInfo | null>(null);
+  // The founder rule: the first Daily tap asks for the subject
+  // combination (JAMB/WAEC/NECO only); every sprint afterwards draws
+  // only those subjects, server-composed.
+  const [dailyBody, setDailyBody] = useState('JAMB');
+  const [needsCombo, setNeedsCombo] = useState(false);
+  const [comboOpen, setComboOpen] = useState(false);
+  // The paper the student paused and left, if any (drives Continue Exam).
+  const [activeExam, setActiveExam] = useState<ActiveExam | null>(null);
+  // Founder directive 2026-10-16: the appearance picker now also greets
+  // any account whose first WEB session never met the register-time
+  // popup - new signups AND first logins both land on it (the per-account
+  // localStorage gate in needsAppearanceIntro decides).
+  const [appearanceOpen, setAppearanceOpen] = useState(false);
+  useEffect(() => {
+    if (!me) return;
+    const t = window.setTimeout(() => setAppearanceOpen(needsAppearanceIntro()), 350);
+    return () => window.clearTimeout(t);
+  }, [me]);
+
+  useEffect(() => {
+    const read = () => setActiveExam(loadActiveExam());
+    read();
+    // Retire/refresh the Continue card when the tab regains focus or
+    // another tab's exam client updates the snapshot.
+    window.addEventListener('focus', read);
+    window.addEventListener('storage', read);
+    return () => {
+      window.removeEventListener('focus', read);
+      window.removeEventListener('storage', read);
+    };
+  }, []);
+
+  // Bell badge lives in the header chip (phones) and the side rail (md+).
+  const [unread, setUnread] = useState(0);
+  useEffect(() => {
+    const read = () => setUnread(unreadCount());
+    read();
+    return subscribeNotifications(read);
+  }, []);
+
+  useEffect(() => {
+    if (!getToken()) {
+      router.replace('/login');
+      return;
+    }
+    let alive = true;
+    (async () => {
+      try {
+        const meRes = await api<MeResponse>('/me');
+        if (!alive) return;
+        setMe(meRes);
+        // Record the desk focus so the navs / /gpa can scope themselves.
+        setFocus(focusFromExams(meRes.profile?.exams));
+        api<GamificationResponse>('/me/gamification')
+          .then((g) => alive && setStreak(g.state.currentStreak))
+          .catch(() => {});
+        api<ReviewSummary>('/me/review')
+          .then((r) => alive && setReviewDueCount(r.stats.due))
+          .catch(() => {});
+        api<{ attempts: AttemptRow[] }>('/me/attempts')
+          .then((a) => alive && setAttempts(a.attempts))
+          .catch(() => {});
+        // The daily challenge follows the student's exam body, a WAEC
+        // candidate sprints on WAEC banks, a university student on their
+        // courses, exactly like the rest of the desk.
+        const body = focusBodyOf(meRes.profile?.exams);
+        setDailyBody(body);
+        setNeedsCombo(
+          (COMBO_BODIES as readonly string[]).includes(body) && ((meRes.profile?.subjects?.length ?? 0) === 0),
+        );
+        api<DailyTileInfo>(`/daily/${encodeURIComponent(body)}`)
+          .then((d) => alive && setDaily(d))
+          .catch(() => {}); // tile falls back to the setup screen
+        // The shelf syncs regardless of onboarding state - a fresh
+        // student finishing the profile sheet must not wait for another
+        // manifest round-trip to see packs behind it.
+        void startSyncFlow(meRes.profile ?? undefined);
+        if (!meRes.profile?.completed) {
+          setNeedsProfile(true);
+          return;
+        }
+      } catch (err) {
+        // api() redirects on 401 itself; any other failure must never
+        // strand the desk on an eternal spinner - show it and offer a
+        // retry (offline morning, asleep API, captive portal).
+        if (alive) {
+          setBootError(
+            err instanceof ApiError && err.status === 401
+              ? ''
+              : err instanceof Error
+                ? err.message
+                : 'Could not reach your desk',
+          );
+        }
+      }
+    })();
+    return () => {
+      alive = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router, bootNonce]);
+
+  // The quiet reboot (founder: "remove retry"): a failed desk boot
+  // retries ITSELF every few seconds, up to four quiet attempts, before
+  // the notice just stays - the scholar never hunts for a button.
+  useEffect(() => {
+    if (bootError == null) return;
+    if (bootNonce >= 4) return;
+    const t = window.setTimeout(() => {
+      setBootError(null);
+      setBootNonce((n) => n + 1);
+    }, 4000);
+    return () => window.clearTimeout(t);
+  }, [bootError, bootNonce]);
+
+  /** Silent background asset sync: server job + client prefetch, in
+      parallel. No banner, the desk is ready long before it is asked for.
+      The prefetch now lands in IndexedDB (localStorage blew the ~5MB
+      origin quota on the big banks), and the first pass also migrates
+      any old localStorage bundles across, un-sticking quota-struck
+      devices. */
+  async function startSyncFlow(profile?: Profile | null) {
+    try {
+      migrateBundleCache();
+      const manifest = await fetchManifest();
+      setExams(manifest.exams);
+      // Offline prefetch follows the student's desk, not the whole
+      // archive: a WAEC candidate caches the WAEC shelf, a university
+      // student their school's banks. 632 packs would drown a phone's
+      // storage AND its connection pool.
+      const p = profile ?? me?.profile ?? undefined;
+      const focusExams = deskExams(manifest.exams, p?.exams?.[0], p?.institution);
+      void pollSyncJob();
+      void prefetchAll({ ...manifest, exams: focusExams });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Sync failed');
+    }
+  }
+
+  async function pollSyncJob() {
+    for (let i = 0; i < 60; i++) {
+      const res = await api<{ job: { status: string; progress: number } | null }>('/sync/status');
+      if (!res.job || res.job.status === 'done') return;
+      await new Promise((r) => setTimeout(r, 700));
+    }
+  }
+
+  const targetTitle = useMemo(() => {
+    const p = me?.profile;
+    if (!p?.exams?.length) return 'Set your target';
+    const label = TARGET_LABELS[p.exams[0]] ?? p.exams[0];
+    return p.targetYear ? `${label} ${p.targetYear}` : label;
+  }, [me]);
+
+  const days = daysToTarget(me?.profile?.targetYear);
+  const isJamb = (me?.profile?.exams?.[0] ?? '').toUpperCase().includes('JAMB');
+  const isUniversity = (me?.profile?.exams?.[0] ?? '').includes('University');
+  const isWaec = (me?.profile?.exams?.[0] ?? '').toUpperCase().includes('WAEC');
+  const isNeco = (me?.profile?.exams?.[0] ?? '').toUpperCase().includes('NECO');
+  const isPostUtme = (me?.profile?.exams?.[0] ?? '').toUpperCase().includes('POST');
+  // Every exam body gets a real customise desk now, JAMB's Mock Setup,
+  // the same subject/year/count/timer mode over WAEC/NECO banks, and
+  // the university desk's per-school course grid.
+  const setupHref = isJamb
+    ? '/exams/setup'
+    : isWaec
+      ? '/exams/setup?body=waec'
+      : isNeco
+        ? '/exams/setup?body=neco'
+        : '/university';
+
+  // The unsupported-school tip (founder directive 2026-10-16): fires for
+  // any student whose institution is NOT a listed live desk - they ride
+  // the merged general course pool, and the one thing they must learn is
+  // "To access past questions, click on Quizzes." No institution, no tip.
+  const pqTip = useMemo(() => {
+    // A School Desk gate pick that has not reached the profile record
+    // yet (the pending stamp) counts too - the student still rides the
+    // pool and still needs the "click on Quizzes" pointer.
+    const inst = (me?.profile?.institution ?? '').trim() || readPendingInstitution();
+    if (!inst) return null;
+    const matched = findSchoolByName(inst);
+    if (matched && matched.live && matched.slug !== 'others') return null;
+    const body = (me?.profile?.exams?.[0] ?? '').toUpperCase();
+    const href =
+      body.includes('UNIVERSITY') || body.includes('POST')
+        ? '/university/others' // the merged general-pool Quizzes desk
+        : '/packs'; // secondary desks: the Quizzes tile reads the pack shelf
+    return { name: inst, href };
+  }, [me]);
+
+  const coveragePct = useMemo(() => {
+    const gradedCodes = new Set(
+      attempts.filter((a) => a.status === 'graded' && a.score != null).map((a) => a.code),
+    );
+    const pool = attempts.length ? gradedCodes.size : exams.length || gradedCodes.size;
+    if (!pool) return 0;
+    return Math.min(100, Math.round((gradedCodes.size * 100) / pool));
+  }, [attempts, exams]);
+
+  const recent = attempts[0] ?? null;
+  const recentPct =
+    recent?.score != null && recent?.total ? Math.round((recent.score * 100) / recent.total) : null;
+  const pausedExamAnswers = activeExam ? Object.keys(activeExam.answers).length : 0;
+
+  // Derive the day's notifications from the real desk state. Safe to
+  // re-run: the engine dedupes by key per day and never un-reads a row.
+  useEffect(() => {
+    const lastGraded = attempts.find((a) => a.status === 'graded' && a.score != null && a.submittedAt);
+    refreshNotifications({
+      streak,
+      reviewDue: reviewDueCount,
+      activeExamCode: activeExam?.code ?? null,
+      activeExamAnswers: pausedExamAnswers,
+      lastGrade:
+        lastGraded && lastGraded.score != null && lastGraded.total
+          ? {
+              attemptId: lastGraded.attemptId,
+              pct: Math.round((lastGraded.score! * 100) / lastGraded.total!),
+              at: new Date(lastGraded.submittedAt!).getTime(),
+            }
+          : null,
+      dailyCode: daily?.code ?? null,
+    });
+  }, [streak, reviewDueCount, attempts, daily, activeExam, pausedExamAnswers]);
+
+  if (!me) {
+    return (
+      <main className="flex min-h-dvh flex-col items-center justify-center gap-5 bg-background px-6">
+        <RenanceMark size={44} state={bootError == null ? 'busy' : 'idle'} />
+        {bootError != null && (
+          <>
+            <p className="max-w-sm rounded-xl bg-error-container px-5 py-3 text-center text-sm text-on-error-container">
+              {bootError || 'Could not load your desk.'}
+            </p>
+            {/* No button (founder: "remove retry"): the desk reboots
+                itself a few seconds later, up to four quiet attempts. */}
+            <p className="text-[13px] font-semibold text-on-surface-variant">
+              Retrying in a few seconds…
+            </p>
+          </>
+        )}
+      </main>
+    );
+  }
+
+  return (
+    // Confirmation is signup-only by doctrine: the desk opens straight
+    // after login whether the address is confirmed yet or not. The
+    // mailed link from signup completes it whenever the student gets
+    // to it - signing in is never blocked again.
+    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
+      {needsProfile && (
+        <ProfileModal
+          username={me.user.username}
+          onDone={(profile, user) => {
+            setMe({ ...me, profile, user: user ?? me.user });
+            setStoredUser({ ...me.user, profileCompleted: true, ...(user ?? {}) });
+            setNeedsProfile(false);
+            void startSyncFlow();
+          }}
+        />
+      )}
+
+      {/* Brand header: fixed, blurred, hairline shadow (home_dashboard).
+          Founder rule: the logo and the avatar are both clickable.
+          2026-10-13 founder pass: compact 56px bar (was 64), the 3D R
+          keycap + the lowercase green wordmark - the supreme.git brand
+          row. */}
+      <header className="fixed left-0 right-0 top-0 z-50 border-b-2 border-outline-variant bg-surface/90 backdrop-blur-xl md:left-[var(--rail-w)]">
+        <div className="mx-auto flex h-14 w-full max-w-5xl items-center justify-between px-4 sm:px-6">
+          <Link
+            href="/dashboard"
+            aria-label="Renance home"
+            className="flex items-center gap-2 transition-opacity hover:opacity-80"
+          >
+            <RenanceMark size={30} />
+            <span className="text-[21px] font-black lowercase tracking-tight text-primary">renance</span>
+          </Link>
+          <div className="flex items-center">
+            {/* The merged-learn top bar (founder 2026-10-14, evening pass):
+                the search icon, the heart chip and the profile avatar are
+                ALL GONE from the top navbar - the gem counter leads the
+                row (taps into the profile shop), then the streak pill and
+                the bell. Profile lives in the base navbar, hearts read on
+                the profile page, and everything the old avatar popup held
+                moved onto the profile page itself. */}
+            <LearnStatChips stats={learnStats} />
+            <Link
+              href="/notifications"
+              aria-label={`Notifications${unread ? ` (${unread} unread)` : ''}`}
+              className="relative ml-1.5 flex h-9 w-9 items-center justify-center rounded-full text-on-surface transition hover:bg-surface-container-high md:hidden"
+            >
+              <span className="material-symbols-outlined text-[22px]">notifications</span>
+              {unread > 0 && (
+                <span className="absolute right-1 top-1 flex h-4 min-w-4 items-center justify-center rounded-full border border-surface bg-error px-1 font-mono text-[9px] font-bold text-on-error">
+                  {unread > 9 ? '9+' : unread}
+                </span>
+              )}
+            </Link>
+            <div className="ml-1.5 flex items-center gap-1 rounded-full bg-surface-container px-2 py-1">
+              <span className="material-symbols-outlined text-[19px] text-accent-amber">local_fire_department</span>
+              <span className="font-mono text-[12.5px] text-on-surface">{streak}</span>
+            </div>
+            {/* The streak freeze counter (founder directive 2026-10-16):
+                freezes were invisible in the UI - the student could not
+                see the protection they owned. It rides next to the
+                streak flame whenever a freeze is in the stash. */}
+            {(learnStats?.freezeCount ?? 0) > 0 && (
+              <div
+                className="ml-1.5 flex items-center gap-1 rounded-full bg-surface-container px-2 py-1"
+                aria-label={`${learnStats?.freezeCount} streak freeze${(learnStats?.freezeCount ?? 0) === 1 ? '' : 's'} saved`}
+              >
+                <span className="material-symbols-outlined text-[19px] text-[#1899d6]">ac_unit</span>
+                <span className="font-mono text-[12.5px] text-on-surface">{learnStats?.freezeCount}</span>
+              </div>
+            )}
+          </div>
+        </div>
+      </header>
+
+      <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-4 pt-[4.5rem] sm:px-6">
+        {error && (
+          <p className="rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">{error}</p>
+        )}
+
+        {isUniversity ? (
+          <UniversityHome onMore={() => setMoreOpen(true)} profile={me.profile} />
+        ) : isPostUtme ? (
+          <PostUtmeHome onMore={() => setMoreOpen(true)} />
+        ) : (
+        <>
+        {/* 2026-10-13 tactile pass: the card
+            stands on an extruded ledge (.hero-card) and the progress
+            rail gets the recessed-track + gloss-fill treatment.
+            2026-10-14 founder pass: the card shrinks to fit the UI -
+            tighter padding, smaller title, 44px CTA.
+            2026-10-18 desktop pass: split panel - target + progress
+            left, the resume/start action standing on its own on the
+            right, so the desk opens like a desktop workflow, not a
+            blown-up phone card. */}
+        <section className="hero-card relative mt-3 overflow-hidden bg-hero p-3.5 sm:p-4 lg:p-5">
+          <div className="absolute -right-14 -top-14 h-32 w-32 rounded-full bg-on-hero/12" />
+          <div className="absolute -bottom-12 -left-10 h-24 w-24 rounded-full bg-on-hero/12" />
+          <div className="relative z-10 flex flex-col gap-2.5 lg:flex-row lg:items-center lg:gap-10">
+            <div className="min-w-0 flex-1">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="font-mono text-[10px] uppercase tracking-wider text-hero-muted">Next Target</p>
+                  <h2 className="text-xl font-bold tracking-tight text-on-hero sm:text-2xl">{targetTitle}</h2>
+                </div>
+                <div className="text-right">
+                  <p className="font-mono text-[10px] uppercase tracking-wider text-hero-muted">Countdown</p>
+                  <p className="mt-0.5 inline-block rounded-full bg-on-hero/10 px-2.5 py-0.5 text-[13px] font-bold text-on-hero">
+                    {days == null ? 'Set a year' : days <= 0 ? 'This month' : `${days} Days`}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-2.5 flex flex-col gap-1.5">
+                <div className="flex justify-between font-mono text-[11px] text-hero-muted">
+                  <span>Syllabus Completion</span>
+                  <span className="font-semibold text-on-hero">{coveragePct}%</span>
+                </div>
+                <div className="hero-progress w-full bg-hero-track">
+                  <div className="hero-progress-fill h-full bg-hero-cta transition-all" style={{ width: `${coveragePct}%` }}>
+                    <span className="hero-progress-gloss" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="lg:w-64 lg:shrink-0 xl:w-72">
+          {/* Continue Exam only exists when a paper was paused and left;
+              otherwise the desk offers a way in, never a fake resume. */}
+          {activeExam ? (
+              <Link
+                href={examHref(activeExam.code, {
+                  resume: '1',
+                  // The daily sprint's paused seat keeps its "Daily Quiz"
+                  // head - the flag rides the snapshot, so the exam page
+                  // refetches the daily context instead of falling back to
+                  // the composed paper's plumbing label.
+                  daily: activeExam.daily ? '1' : undefined,
+                })}
+                className="flex h-11 items-center justify-center gap-2 rounded-[12px] bg-hero-cta text-[14px] font-bold text-on-hero-cta transition-transform active:scale-[0.98] lg:h-12"
+              >
+                <span className="material-symbols-outlined text-[18px]">play_arrow</span>
+                Continue Exam · {pausedExamAnswers}/{Math.max(activeExam.questionCount, pausedExamAnswers)}
+              </Link>
+            ) : (
+              <Link
+                href={isJamb || isWaec || isNeco ? setupHref : exams[0] ? examHref(exams[0].code) : '/packs'}
+                className="flex h-11 items-center justify-center gap-2 rounded-[12px] bg-hero-cta text-[14px] font-bold text-on-hero-cta transition-transform active:scale-[0.98] lg:h-12"
+              >
+                <span className="material-symbols-outlined text-[18px]">play_arrow</span>
+                {isJamb ? 'Start Mock Exam' : 'Start Practice'}
+              </Link>
+            )}
+          </div>
+          </div>
+        </section>
+
+        {/* Renance AI Studio band retired (founder directive, 2026-09-30):
+            the flagship now lives in the floating sparkle button, bottom
+            right - one tap from anywhere on the desk, no banner weight
+            under the Start Mock Exam action. */}
+
+        {/* The standalone Mock Exam Setup banner is retired: the JAMBite
+            entry point lives in the Exams tile below, which opens
+            /exams/setup (JAMB-only by design). */}
+
+        {/* Launcher grids: the daily drivers live on the desk, the rest in
+            the More sheet. One Stitch pair on phones; from lg the tiles
+            become full-width horizontal cards - icon left, label + hint
+            right - so the desktop canvas fills with density instead of
+            four lonely bubbles in a row (2026-10-18 desktop pass). */}
+        <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
+          <section className="mt-2">
+            <h3 className="text-sm text-on-surface-variant">Practice</h3>
+            <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-2">
+              <LauncherTile icon="description" label="Exams" hint="Set up your CBT mock" href={setupHref} />
+              <LauncherTile icon="inventory_2" label="Question Pack" hint="Every pack, ready offline" href="/packs" />
+              <LauncherTile icon="local_library" label="Study" hint="Practice topic by topic" href="/study-past-questions" />
+              <LauncherTile icon="history" label="Review Due" hint="Missed questions, resurfaced" badge={reviewDueCount > 0 ? reviewDueCount : undefined} href="/review" />
+            </div>
+          </section>
+
+          <section className="mt-4 lg:mt-2">
+            <h3 className="text-sm text-on-surface-variant">Compete</h3>
+            <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-2">
+              <LauncherTile icon="sports_esports" label="Arena" hint="1-v-1 timed battles" href="/arena" />
+              <LauncherTile
+                icon="event_repeat"
+                label="Daily Quiz"
+                hint="Today's sprint"
+                amber
+                href={daily ? examHref(daily.code, { daily: '1' }) : setupHref}
+                onMore={needsCombo ? () => setComboOpen(true) : undefined}
+              />
+              <LauncherTile icon="leaderboard" label="Leaderboard" hint="Where you rank this week" href="/leaderboard" />
+              {/* Study Plan removed (founder 2026-10-21: useless). */}
+            </div>
+          </section>
+        </div>
+
+        {/* Study Tools: the founder's 2026-10-21 pass fills the two empty
+            slots under the old Learn header with Performance Analysis and
+            Saved Questions - renamed out of 'Learn' because the content is
+            no longer just learning material. */}
+        <section className="mt-4">
+          <h3 className="text-sm text-on-surface-variant">Study Tools</h3>
+          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-4">
+            <LauncherTile icon="auto_stories" label="Notes" hint="Lesson notes & PDFs" href="/notes" />
+            <LauncherTile icon="smart_toy" label="Renance AI" hint="Ask, explain, generate" href="/ai" />
+            <LauncherTile icon="insights" label="Performance Analysis" hint="Scores, pacing, trends" href="/performance" />
+            <LauncherTile icon="bookmark" label="Saved Questions" hint="Your bookmarked questions" href="/saved" />
+          </div>
+        </section>
+
+        {/* Tools & Resources: the occasional utilities get real names and
+            one-line descriptions instead of bare icon bubbles (2026-10-18
+            desktop pass), with More holding the rest. */}
+        <section className="mt-4">
+          <h3 className="text-sm text-on-surface-variant">Tools &amp; Resources</h3>
+          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-3">
+            {/* Syllabus Map removed (founder 2026-10-21: useless). */}
+            <LauncherTile icon="smart_toy" label="Tutor" hint="Walk any question with AI" inverse href="/review" />
+            <LauncherTile icon="more_horiz" label="More" hint="Performance, saved questions…" muted onMore={() => setMoreOpen(true)} />
+          </div>
+        </section>
+        </>
+        )}
+
+        {/* Recent activity ------------------------------------------------ */}
+        {recent && (
+          <Link
+            href={
+              recent.status === 'in_progress'
+                ? examHref(recent.code, { resume: '1', daily: recent.dailyDay ? '1' : undefined })
+                : '/review'
+            }
+            className="mt-6 mb-4 flex items-center gap-3 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)] transition-colors hover:bg-surface-container-lowest"
+          >
+            <div
+              className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${
+                recent.status === 'in_progress' ? 'bg-accent-amber/15' : 'bg-error-container'
+              }`}
+            >
+              <span
+                className={`material-symbols-outlined text-[20px] ${
+                  recent.status === 'in_progress' ? 'text-accent-amber' : 'text-error'
+                }`}
+              >
+                {recent.status === 'in_progress' ? 'pause_circle' : 'science'}
+              </span>
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="truncate text-[15px] font-semibold text-on-surface">{recent.code}</p>
+              <p className="truncate text-[13px] text-on-surface-variant">
+                {recent.status === 'in_progress'
+                  ? 'Paused paper, your seat is saved, continue anytime'
+                  : recentPct != null
+                    ? `Score: ${recentPct}% · ${recentPct >= 75 ? 'Strong work' : recentPct >= 50 ? 'Keep pushing' : 'Focus needed'}`
+                    : recent.status}
+              </p>
+            </div>
+            <span className="material-symbols-outlined text-outline">chevron_right</span>
+          </Link>
+        )}
+
+        {/* Question Pack lives on /packs; the old home pack cards are gone. */}
+      </div>
+
+      {/* More sheet: only the less-used tools live here now, everything a
+          student touches daily sits on the home grid (more_features_sheet_light). */}
+      {moreOpen && <MoreSheet onClose={() => setMoreOpen(false)} />}
+
+      {/* Founder directive 2026-10-16: the appearance picker greets every
+          NEW account and every first web LOGIN (per-account gate). The
+          feature tour waits behind it, and the unsupported-school tip
+          waits behind both, so the three never stack. */}
+      <AppearanceModal open={appearanceOpen} onClose={() => setAppearanceOpen(false)} />
+      {/* The founder's WhatsApp channel sheet: stamped by every login/signup,
+          shown once per session until the student taps Join. */}
+      <WhatsAppChannelModal />
+      <FeatureTour paused={appearanceOpen} />
+      <PastQuestionsTip
+        paused={appearanceOpen}
+        quizzesHref={pqTip?.href ?? '/packs'}
+        schoolName={pqTip?.name ?? 'your school'}
+      />
+
+      <SideNav />
+      <BottomNav />
+
+      {/* The floating Renance AI Studio entry (founder directive): home
+          desk only, bottom-right, the house sparkle glyph. Renders above
+          the bottom nav on phones and above the fold edge on desktop. */}
+      <AiFloatingButton />
+
+      {/* first-tap daily subject combination (founder rule) */}
+      <DailyComboModal
+        open={comboOpen}
+        body={dailyBody}
+        onClose={() => setComboOpen(false)}
+        onSaved={(subjects) => {
+          setComboOpen(false);
+          setNeedsCombo(false);
+          // The sprint now composes from the saved combination: fetch the
+          // fresh code and walk straight into the hall.
+          api<DailyTileInfo>(`/daily/${encodeURIComponent(dailyBody)}`)
+            .then((d) => router.push(examHref(d.code, { daily: '1' })))
+            .catch(() => router.push(examHref(daily?.code ?? '', { daily: '1' })));
+          void subjects;
+        }}
+      />
+    </main>
+  );
+}
+
+/** Small bottom sheet listing the destinations that live beyond the grid. */
+
+/* ----------------------------------------------------------------- */
+/* Post UTME home: the fourth focus entity. Its own desk, its own      */
+/* school pick (a Post UTME candidate targets one school), the school  */
+/* app's Pick School button in the same spot the School Desk has it.   */
+/* ----------------------------------------------------------------- */
+
+function PostUtmeHome({ onMore }: { onMore: () => void }) {
+  const [schoolSlug, setSchoolSlug] = useState<string | null>(null);
+  const [exams, setExams] = useState<ExamMeta[]>([]);
+  useEffect(() => {
+    setSchoolSlug(storedPostUtmeSchoolSlug());
+    let alive = true;
+    fetchManifest()
+      .then((m) => alive && setExams(m.exams))
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, []);
+
+  const school = SCHOOLS.find((s) => s.slug === schoolSlug) ?? null;
+  const general = exams.filter((e) => e.body === 'POST-UTME');
+  const own = schoolSlug ? exams.filter((e) => e.code.startsWith(`uni-${schoolSlug}-pq-`)) : [];
+  const packs = [...own, ...general];
+
+  return (
+    <>
+      {/* Post UTME hero card ------------------------------------------ */}
+      {/* Founder directive 2026-10-11: corner blob ornaments back on
+          every focus hero - both corners, visible strength (/12).
+          2026-10-13 tactile pass: extruded ledge via .hero-card.
+          2026-10-18 desktop pass: split panel like the other desks. */}
+      <section className="hero-card relative mt-3 overflow-hidden bg-hero p-3.5 sm:p-4 lg:p-5">
+        <div className="absolute -right-14 -top-14 h-32 w-32 rounded-full bg-on-hero/12" />
+        <div className="absolute -bottom-12 -left-10 h-24 w-24 rounded-full bg-on-hero/12" />
+        <div className="relative z-10 flex flex-col gap-2.5 lg:flex-row lg:items-center lg:gap-10">
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center justify-between gap-4">
+              <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-hero-muted">
+                Post UTME Desk
+              </p>
+              <span className="flex items-center gap-1 rounded-full bg-dark-text-primary/15 px-2 py-0.5 font-mono text-[11px] text-on-hero">
+                <span className="material-symbols-outlined text-[13px]">school</span>
+                {school?.short ?? 'Post UTME'}
+              </span>
+            </div>
+            <div className="mt-2">
+              <h2 className="text-xl font-bold tracking-tight text-on-hero sm:text-2xl">
+                {school?.name ?? 'Pick your school'}
+              </h2>
+              <p className="mt-0.5 text-[13px] font-semibold text-hero-muted">
+                {own.length > 0
+                  ? `${own.length} school prep packs · ${general.length} general banks`
+                  : `${general.length} general practice banks · pick a school for its past questions`}
+              </p>
+            </div>
+          </div>
+          <div className="lg:w-64 lg:shrink-0 xl:w-72">
+            <Link
+              href="/post-utme"
+              className="flex h-11 items-center justify-center gap-2 rounded-[12px] bg-hero-cta text-[14px] font-bold text-on-hero-cta transition-transform active:scale-[0.98] lg:h-12"
+            >
+              <span className="material-symbols-outlined text-[18px]">menu_book</span>
+              {school ? 'Open past questions' : 'Pick School'}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Practice grid -------------------------------------------------- */}
+      <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
+        <section className="mt-2">
+          <h3 className="text-sm text-on-surface-variant">Practice</h3>
+          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-2">
+            <LauncherTile icon="description" label="Past Questions" hint="Your school's banks" href="/post-utme" />
+            <LauncherTile icon="local_library" label="Study" hint="Practice topic by topic" href="/study-past-questions?body=post-utme" />
+            <LauncherTile icon="history" label="Review Due" hint="Missed questions, resurfaced" href="/review" />
+            <LauncherTile icon="inventory_2" label="Question Pack" hint="Every pack, ready offline" href="/packs" />
+          </div>
+        </section>
+        <section className="mt-4 lg:mt-2">
+          <h3 className="text-sm text-on-surface-variant">Compete</h3>
+          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-2">
+            <LauncherTile icon="sports_esports" label="Arena" hint="1-v-1 timed battles" href="/arena" />
+            <LauncherTile icon="leaderboard" label="Leaderboard" hint="Where you rank this week" href="/leaderboard" />
+            <LauncherTile icon="auto_stories" label="Notes" hint="Lesson notes & PDFs" href="/notes" />
+            {/* Study Plan removed (founder 2026-10-21: useless). */}
+          </div>
+        </section>
+      </div>
+
+      {/* School prep packs ---------------------------------------------- */}
+      {packs.length > 0 && (
+        <section className="mt-4">
+          <h3 className="text-sm text-on-surface-variant">Post UTME banks</h3>
+          <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            {packs.slice(0, 6).map((e) => (
+              <ExamCard key={e.code} exam={e} ready />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Tools & Resources ------------------------------------------------ */}
+      <section className="mt-4">
+        <h3 className="text-sm text-on-surface-variant">Tools &amp; Resources</h3>
+        <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-4">
+          <LauncherTile icon="import_contacts" label="Notes" hint="Lesson notes & PDFs" href="/notes" />
+          <LauncherTile icon="smart_toy" label="Tutor" hint="Walk any question with AI" inverse href="/review" />
+          <LauncherTile icon="more_horiz" label="More" hint="Performance, saved questions…" muted onMore={onMore} />
+          {/* Downloads removed (founder 2026-10-21: useless). */}
+        </div>
+      </section>
+    </>
+  );
+}
+
+/* ----------------------------------------------------------------- */
+/* University home (university_home_dashboard): tertiary students get  */
+/* a course-based desk with its OWN icon set, Courses where the       */
+/* JAMBite desk says Subjects/Exams, CGPA, Lecture Notes… The desk is  */
+/* school-aware: content is wrapped per school, interface is one.      */
+/* ----------------------------------------------------------------- */
+
+function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Profile | null }) {
+  // The student's school: stored pick → profile institution match. No
+  // default school: without a pick the desk shows the Pick School button
+  // (founder rule: the school is chosen once, here, and only editable
+  // from the profile afterwards).
+  const [schoolSlug, setSchoolSlug] = useState<string | null>(null);
+  useEffect(() => {
+    const stored = storedSchoolSlug();
+    if (stored) {
+      setSchoolSlug(stored);
+      return;
+    }
+    const matched = profile?.institution ? findSchoolByName(profile.institution) : null;
+    setSchoolSlug(matched?.slug ?? null);
+  }, [profile]);
+
+  const slug = schoolSlug ?? resolveSchoolSlug();
+  const school = schoolSlug ? SCHOOLS.find((s) => s.slug === slug) ?? null : null;
+  const catalog = clientCatalog(slug);
+  const courses = liveCourses(catalog);
+
+  // Founder directive 2026-10-16 (dynamic hero branding): a student
+  // whose school has no independent question bank rides the merged
+  // general course pool - but the hero card must NEVER say "Other
+  // Schools". It carries the student's OWN institution name instead,
+  // with the shared pool's stats underneath; only a student who picked
+  // the pool without naming a school sees the neutral general label.
+  const isGeneralPool = school?.slug === 'others';
+  const customInstitution =
+    (profile?.institution ?? '').trim() || readPendingInstitution();
+  const hasCustomBrand =
+    isGeneralPool &&
+    customInstitution.length > 0 &&
+    customInstitution.toLowerCase() !== 'other schools';
+  const heroShort = hasCustomBrand
+    ? customInstitution
+        .split(/\s+/)
+        .filter((w) => /^[A-Za-z]/.test(w))
+        .slice(0, 3)
+        .map((w) => w[0].toUpperCase())
+        .join('') || 'GEN'
+    : isGeneralPool
+      ? 'GENERAL'
+      : school?.short ?? 'School';
+  const heroName = hasCustomBrand
+    ? customInstitution
+    : isGeneralPool
+      ? 'General Course Desk'
+      : school?.name ?? 'Pick your school';
+  return (
+    <>
+      {/* School hero card ---------------------------------------------- */}
+      {/* Founder directive 2026-10-11: corner blob ornaments back on
+          every focus hero - both corners, visible strength (/12).
+          2026-10-13 tactile pass: extruded ledge via .hero-card.
+          2026-10-14 founder pass: shrunk to fit the UI like the main
+          hero - tighter padding, smaller title, 44px CTA.
+          2026-10-18 desktop pass: split panel - school identity left,
+          the semester CTA standing on its own right. */}
+      <section className="hero-card relative mt-3 overflow-hidden bg-hero p-3.5 sm:p-4 lg:p-5">
+        <div className="absolute -right-14 -top-14 h-32 w-32 rounded-full bg-on-hero/12" />
+        <div className="absolute -bottom-12 -left-10 h-24 w-24 rounded-full bg-on-hero/12" />
+        <div className="relative z-10 flex flex-col gap-2.5 lg:flex-row lg:items-center lg:gap-10">
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center justify-between gap-4">
+              <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-hero-muted">
+                School Desk
+              </p>
+              <span className="flex items-center gap-1 rounded-full bg-dark-text-primary/15 px-2 py-0.5 font-mono text-[11px] text-on-hero">
+                <span className="material-symbols-outlined text-[13px]">school</span>
+                {heroShort}
+              </span>
+            </div>
+            <div className="mt-2">
+              <h2 className="text-xl font-bold tracking-tight text-on-hero sm:text-2xl">
+                {heroName}
+              </h2>
+              <p className="mt-0.5 text-[13px] font-semibold text-hero-muted">
+                {catalog && schoolSlug
+                  ? `${courses.length} courses · ${courses.reduce((n, c) => n + c.questionCount, 0).toLocaleString()} questions${isGeneralPool ? ' · shared general pool' : ''}`
+                  : 'Course content lands as it is harvested'}
+              </p>
+            </div>
+          </div>
+          <div className="lg:w-64 lg:shrink-0 xl:w-72">
+            {/* Founder directive 2026-10-16 (the School Desk overhaul): the
+                tertiary student's primary CTA opens MY SEMESTER - the
+                gamified /courses desk with the picked courses, progress
+                bars and roadmaps. The old school portal stays one tap
+                away in the hero's corner link above. */}
+            <Link
+              href="/courses"
+              className="flex h-11 w-full items-center justify-center gap-2 rounded-[10px] bg-hero-cta text-[14px] font-semibold text-on-hero-cta transition-transform active:scale-[0.98] lg:h-12"
+            >
+              <span className="material-symbols-outlined text-[18px]">school</span>
+              Open your semester desk
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Active courses ------------------------------------------------- */}
+      {/* 2026-10-14 founder pass: the floating chips shrink - tighter
+          pills, no scale pop on the first one, so the strip stays one
+          calm row under the hero.
+          2026-10-18 desktop pass: phones keep the calm strip; from md
+          the pills become rich course cards - icon, code, title,
+          semester and bank size. The desk carries no per-course
+          progress here, so the card shows honest data only. */}
+      {courses.length > 0 && (
+        <section className="mt-1">
+          <div className="flex items-center justify-between">
+            <h3 className="text-sm font-semibold text-on-surface">Active Courses</h3>
+            <Link href={`/university/${slug}`} className="p-2 text-[13px] text-on-surface-variant hover:opacity-70">
+              View all
+            </Link>
+          </div>
+          <div className="no-scrollbar -mx-4 flex items-center gap-1.5 overflow-x-auto px-4 pb-1 pt-1.5 md:hidden">
+            {courses.slice(0, 10).map((c) => (
+              <Link
+                key={c.slug}
+                href={`/university/${slug}/${c.slug}`}
+                className="whitespace-nowrap rounded-full border-2 border-outline-variant/70 bg-surface-container-low px-3.5 py-1 text-[12px] font-semibold text-on-surface-variant transition hover:bg-surface-variant active:translate-y-[1px]"
+              >
+                {c.code}
+              </Link>
+            ))}
+          </div>
+          <div className="mt-3 hidden gap-3 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {courses.slice(0, 8).map((c) => (
+              <Link
+                key={c.slug}
+                href={`/university/${slug}/${c.slug}`}
+                className="group rounded-2xl border-2 border-outline-variant/70 bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.06)] transition hover:border-outline hover:bg-surface-container-low"
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <span className="flex min-w-0 items-center gap-2">
+                    <span className="material-symbols-outlined text-[18px] text-primary">{c.icon}</span>
+                    <span className="truncate font-mono text-[12px] font-bold uppercase tracking-wider text-on-surface">
+                      {c.code}
+                    </span>
+                  </span>
+                  <span className="shrink-0 rounded-md bg-surface-container px-2 py-0.5 font-mono text-[10px] text-on-surface-variant">
+                    {c.questionCount} Q
+                  </span>
+                </div>
+                <p className="mt-2 truncate text-[13px] font-medium text-on-surface-variant">
+                  {c.title ?? 'Course question bank'}
+                </p>
+                <div className="mt-3 flex items-center justify-between">
+                  <span className="text-[11px] font-semibold text-outline transition group-hover:text-primary-ink">
+                    Semester {c.semester}
+                  </span>
+                  <span className="material-symbols-outlined text-[16px] text-outline transition group-hover:translate-x-0.5 group-hover:text-on-surface-variant">
+                    arrow_forward
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* University Study / Grow grids, the university desk's OWN icons.
+          2026-10-18 desktop pass: card tiles with hints. */}
+      <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
+        <section className="mt-2">
+          <h3 className="text-sm text-on-surface-variant">Study</h3>
+          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-2">
+            <LauncherTile icon="assignment" label="Courses" hint="Your semester, gamified" href="/courses" />
+            <LauncherTile icon="fact_check" label="Quizzes" hint="Course quizzes & banks" href={`/university/${slug}`} />
+            {/* Founder directive (2026-10-04): the university desk's Study
+                tile must open the SCHOOL past-questions study setup, never
+                the JAMB default. */}
+            <LauncherTile icon="local_library" label="Study" hint="Past questions by topic" href={`/study-past-questions?body=university`} />
+            <LauncherTile icon="rate_review" label="Review" hint="Missed questions, resurfaced" href="/review" />
+          </div>
+        </section>
+        <section className="mt-4 lg:mt-2">
+          <h3 className="text-sm text-on-surface-variant">Grow</h3>
+          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-2">
+            <LauncherTile icon="calculate" label="CGPA" hint="Compute your standing" href="/gpa" />
+            <LauncherTile icon="sports_esports" label="Arena" hint="1-v-1 timed battles" href="/arena" />
+            {/* Founder directive (2026-10-17): the school desk gets the
+                same Leaderboard entry the JAMB desk has, ranked with
+                diamonds too. */}
+            <LauncherTile icon="leaderboard" label="Leaderboard" hint="Where you rank this week" href="/leaderboard" />
+            {/* Study Plan removed (founder 2026-10-21: useless). */}
+          </div>
+        </section>
+      </div>
+
+      {/* Tools & Resources: shared with the other desks. */}
+      <section className="mt-4">
+        <h3 className="text-sm text-on-surface-variant">Tools &amp; Resources</h3>
+        <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-4">
+          <LauncherTile icon="import_contacts" label="Notes" hint="Lecture notes & materials" href="/notes" />
+          <LauncherTile icon="smart_toy" label="Tutor" hint="Walk any question with AI" inverse href="/review" />
+          <LauncherTile icon="more_horiz" label="More" hint="Performance, saved questions…" muted onMore={onMore} />
+          {/* Downloads removed (founder 2026-10-21: useless). */}
+        </div>
+      </section>
+    </>
+  );
+}
+
+function MoreSheet({ onClose }: { onClose: () => void }) {
+  // The rest of the drawer, by design: the daily drivers (Exams, Packs,
+  // Review, Arena, Daily, Leaderboard) live on the home grids. Subjects,
+  // Downloads, Notifications, Career Bridge, Patron Portal, Syllabus Map
+  // and Study Plan were removed on the founder's 2026-10-21 order ("they
+  // are now useless") - the entries are gone app-wide, not just hidden.
+  const items = [
+    { icon: 'insights', label: 'Performance Analysis', href: '/performance' },
+    { icon: 'bookmark', label: 'Saved Questions', href: '/saved' },
+    { icon: 'auto_stories', label: 'Study Resources', href: '/study' },
+    { icon: 'auto_awesome', label: 'Renance AI Studio', href: '/ai' },
+    { icon: 'person', label: 'Profile', href: '/profile' },
+    { icon: 'settings', label: 'Settings', href: '/settings' },
+    { icon: 'help', label: 'Help & FAQ', href: '/faq' },
+  ] as const;
+  return (
+    <div
+      className="fixed inset-0 z-[60] flex items-end justify-center bg-on-background/60 backdrop-blur-sm sm:items-center"
+      onClick={onClose}
+      role="presentation"
+    >
+      <div
+        className="renance-rise w-full max-w-md rounded-t-2xl bg-surface-container-lowest p-5 shadow-xl sm:rounded-2xl"
+        onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-label="More features"
+      >
+        <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-outline-variant sm:hidden" />
+        <h3 className="mb-1 text-lg font-semibold text-on-surface">More</h3>
+        <p className="mb-3 text-xs text-on-surface-variant">Less-used tools, your daily drivers are on the home grid.</p>
+        <div className="grid grid-cols-2 gap-2">
+          {items.map((it) => (
+            <Link
+              key={it.label}
+              href={it.href}
+              onClick={onClose}
+              className="flex items-center gap-3 rounded-xl border border-outline-variant/50 bg-card p-3 transition hover:border-outline hover:bg-surface-container-low"
+            >
+              <span className="material-symbols-outlined text-[22px] text-on-surface">{it.icon}</span>
+              <span className="text-sm font-medium text-on-surface">{it.label}</span>
+            </Link>
+          ))}
+        </div>
+        <button
+          type="button"
+          onClick={onClose}
+          className="mt-4 h-12 w-full rounded-lg bg-primary text-sm font-semibold text-on-primary transition-transform active:scale-[0.98]"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function LauncherTile({
+  icon,
+  label,
+  hint,
+  href,
+  badge,
+  amber,
+  inverse,
+  muted,
+  soon,
+  wide,
+  onMore,
+}: {
+  icon: string;
+  label: string;
+  /** Desktop-only micro description: from lg the tile is a horizontal
+      card (icon left, text right) and the hint fills it with real
+      meaning instead of a bare bubble (2026-10-18 desktop pass). */
+  hint?: string;
+  href?: string;
+  badge?: number;
+  amber?: boolean;
+  inverse?: boolean;
+  muted?: boolean;
+  soon?: boolean;
+  /** Span both columns of the lg card grid - closes an odd-count row. */
+  wide?: boolean;
+  onMore?: () => void;
+}) {
+  const inner = (
+    <>
+      <div
+        className={`relative flex h-12 w-12 shrink-0 items-center justify-center rounded-[16px] transition-transform group-active:scale-95 md:h-14 md:w-14 md:rounded-[19px] lg:h-12 lg:w-12 lg:rounded-[16px] ${
+          inverse
+            ? // Founder directive (2026-10-02): the Tutor tile follows the
+              // theme colour - bg-primary / text-on-primary like the R
+              // tile - instead of the near-black accent-ink that ignored
+              // the Chrome-style seed. Tactile pass: hard 3px extruded
+              // edge (Duolingo app-icon look) replaces the blur shadow.
+              'bg-primary text-on-primary shadow-[0_3px_0_0_color-mix(in_srgb,var(--color-primary)_68%,#000)]'
+            : muted
+              ? 'border-2 border-outline-variant bg-surface-container text-on-surface-variant shadow-[0_3px_0_0_var(--color-outline-variant)]'
+              : 'border-2 border-outline-variant bg-card text-on-surface shadow-[0_3px_0_0_var(--color-outline-variant)]'
+        }`}
+        // No overflow-hidden here on purpose: the count badge hangs
+        // OUTSIDE the icon box (-top-1.5 -right-1.5) and the box's own
+        // bounding clip used to guillotine its top-right corner. The
+        // inverse tile's sheen gradient keeps its own corner rounding
+        // instead (rounded-[inherit] overflow-hidden on the overlay).
+      >
+        {inverse && <div className="absolute inset-0 overflow-hidden rounded-[inherit] bg-gradient-to-tr from-transparent to-white/20" />}
+        <span className={`material-symbols-outlined relative z-10 text-[21px] md:text-[23px] lg:text-[21px] ${amber ? 'text-accent-amber' : ''}`}>{icon}</span>
+        {badge != null && (
+          <span className="absolute -right-1.5 -top-1.5 z-10 flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-accent-emerald px-1 font-mono text-[10px] font-bold leading-none text-white shadow-sm">
+            {badge}
+          </span>
+        )}
+      </div>
+      {/* phones / tablets: the label rides under the icon bubble */}
+      <span
+        className={`w-full truncate text-center text-[10.5px] font-bold md:text-[11.5px] lg:hidden ${
+          inverse ? 'text-primary-ink' : 'text-on-surface-variant'
+        }`}
+      >
+        {label}
+      </span>
+      {/* desktop: the horizontal card's text block - label + hint */}
+      <span className="hidden min-w-0 flex-1 lg:block">
+        <span className={`block truncate text-[13.5px] font-bold ${inverse ? 'text-primary-ink' : 'text-on-surface'}`}>
+          {label}
+        </span>
+        {hint && (
+          <span className="mt-0.5 block truncate text-[12px] font-medium text-on-surface-variant">
+            {hint}
+          </span>
+        )}
+      </span>
+    </>
+  );
+
+  const cardCls =
+    'group flex flex-col items-center gap-2 lg:flex-row lg:gap-3.5 lg:rounded-2xl lg:border lg:border-outline-variant/70 lg:bg-card lg:p-3 lg:text-left lg:shadow-[0_1px_3px_0_rgba(20,28,45,0.06)] lg:transition-colors lg:hover:border-outline lg:hover:bg-surface-container-low';
+
+  if (soon || onMore) {
+    return (
+      <button
+        type="button"
+        title={onMore ? `${label} features` : `${label}: ships in an upcoming release`}
+        onClick={onMore}
+        className={`${cardCls} opacity-70 ${wide ? 'lg:col-span-2' : ''}`}
+      >
+        {inner}
+      </button>
+    );
+  }
+  return (
+    <Link href={href ?? '#'} className={`${cardCls} ${wide ? 'lg:col-span-2' : ''}`}>
+      {inner}
+    </Link>
+  );
+}
+
+function ExamCard({ exam, ready }: { exam: ExamMeta; ready: boolean }) {
+  return (
+    <Link
+      href={`/exams/practice?pack=${encodeURIComponent(exam.code)}`}
+      className="group flex h-40 flex-col justify-between rounded-xl bg-card p-5 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)] transition hover:shadow-md"
+    >
+      <div>
+        <div className="flex items-start justify-between gap-2">
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-container-highest text-primary">
+            <span className="material-symbols-outlined fill-current text-[22px]">description</span>
+          </div>
+          <span className="shrink-0 rounded-md bg-surface-container px-2 py-0.5 font-mono text-[10px] text-on-surface">
+            {exam.questionCount} Q
+          </span>
+        </div>
+        <h3 className="mt-2 text-[15px] font-semibold leading-snug text-on-surface">{exam.title}</h3>
+        <p className="mt-1 text-[13px] text-on-surface-variant">
+          {exam.durationMinutes ? `${exam.durationMinutes} min` : 'untimed'} · {exam.totalMarks} marks
+        </p>
+      </div>
+      <div className="flex items-center justify-between">
+        <span className="text-xs text-outline transition group-hover:text-on-surface-variant">
+          {ready ? 'Ready offline' : 'syncing…'}
+        </span>
+        <span className="text-sm font-extrabold text-primary-ink transition-transform group-hover:translate-x-0.5">
+          Start →
+        </span>
+      </div>
+    </Link>
+  );
+}
+
+/* ----------------------------------------------------------------- */
+/* Contextual profile modal: first thing after auth, non-dismissable */
+/* ----------------------------------------------------------------- */
+
+function ProfileModal({
+  username,
+  onDone,
+}: {
+  username: string;
+  onDone: (profile: Profile, user?: { id: string; username: string; profileCompleted: boolean }) => void;
+}) {
+  // The handle arrives seeded from the email (or legacy signup); the scholar
+  // confirms or renames it right here, alongside the exams/class questions.
+  // No school question here (founder rule): the school is picked on the
+  // School Desk home after signup, or edited in the profile later.
+  const [handle, setHandle] = useState(username ?? '');
+  const [fullName, setFullName] = useState('');
+  const [gradeLevel, setGradeLevel] = useState('SS3');
+  const [targetYear, setTargetYear] = useState<number | null>(null);
+  const [selected, setSelected] = useState<string[]>([]);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleOk = /^[a-z0-9_]{3,24}$/.test(handle);
+  const handleTouched = handle !== (username ?? '');
+  const valid = useMemo(
+    () =>
+      handleOk &&
+      fullName.trim().length >= 2 &&
+      selected.length >= 1 &&
+      targetYear != null,
+    [handleOk, fullName, selected, targetYear],
+  );
+
+  async function onSubmit(e: FormEvent) {
+    e.preventDefault();
+    if (!valid) return;
+    setBusy(true);
+    setError(null);
+    try {
+      const res = await api<{ profile: Profile; user?: { id: string; username: string; profileCompleted: boolean } }>('/me/profile', {
+        method: 'PUT',
+        body: {
+          username: handle.trim(),
+          fullName: fullName.trim(),
+          institution: '',
+          gradeLevel,
+          exams: selected,
+          targetYear,
+        },
+      });
+      onDone(res.profile, res.user);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Could not save profile');
+      setBusy(false);
+    }
+  }
+
+  function toggleExam(exam: string) {
+    setSelected(() => [exam]);
+  }
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-on-background/60 p-4 backdrop-blur-sm">
+      <div className="renance-rise max-h-[92dvh] w-full max-w-lg overflow-y-auto rounded-2xl bg-surface-container-lowest p-8 shadow-xl">
+        <div className="mb-6 flex items-center gap-3">
+          <RenanceMark size={44} state="busy" />
+          <div>
+            <h2 className="font-semibold text-on-surface">What are you preparing for?</h2>
+            <p className="text-xs text-on-surface-variant">
+              Pick your username and target exam to customize your learning OS.
+            </p>
+          </div>
+        </div>
+
+        <form onSubmit={onSubmit} className="space-y-5">
+          <label className="block">
+            <span className="mb-1.5 block text-sm text-on-surface-variant">Username</span>
+            <div className="relative flex items-center">
+              <span className="pointer-events-none absolute left-4 text-sm text-on-surface-variant">@</span>
+              <input
+                value={handle}
+                onChange={(e) => setHandle(e.target.value.toLowerCase().replace(/[^a-z0-9_]/g, ''))}
+                required
+                minLength={3}
+                maxLength={24}
+                autoComplete="username"
+                placeholder="yourusername"
+                className={`w-full rounded-lg bg-surface-container py-2.5 pl-9 pr-4 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 ${
+                  handleTouched && !handleOk ? 'ring-2 ring-error' : 'focus:ring-primary'
+                }`}
+              />
+            </div>
+            <span className={`mt-1 block text-xs ${handleOk ? 'text-on-surface-variant' : 'text-error'}`}>
+              3-24 characters: lowercase letters, digits, underscores.
+            </span>
+          </label>
+          <div>
+            <span className="mb-2 block text-sm text-on-surface-variant">Target exam</span>
+            <div className="grid gap-2">
+              {EXAM_OPTIONS.map((exam) => {
+                const active = selected.includes(exam);
+                return (
+                  <button
+                    key={exam}
+                    type="button"
+                    onClick={() => toggleExam(exam)}
+                    className={`flex items-center gap-3 rounded-xl border p-3 text-left transition ${
+                      active
+                        ? 'border-primary bg-selection-blue ring-1 ring-primary'
+                        : 'border-outline-variant bg-card hover:border-outline'
+                    }`}
+                  >
+                    <div
+                      className={`flex h-9 w-9 items-center justify-center rounded-lg ${
+                        active ? 'bg-primary text-on-primary' : 'bg-surface-container text-on-surface'
+                      }`}
+                    >
+                      <span className="material-symbols-outlined text-[20px]">school</span>
+                    </div>
+                    <span className="flex-1 text-sm font-semibold text-on-surface">{EXAM_LABELS[exam] ?? exam}</span>
+                    {active && <span className="material-symbols-outlined text-primary">check_circle</span>}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div>
+            <span className="mb-2 block text-sm text-on-surface-variant">Exam year</span>
+            <div className="flex gap-2">
+              {TARGET_YEARS.map((y) => (
+                <button
+                  key={y}
+                  type="button"
+                  onClick={() => setTargetYear(y)}
+                  className={`rounded-full px-4 py-1.5 font-mono text-sm transition ${
+                    targetYear === y
+                      ? 'border border-primary bg-selection-blue text-on-surface'
+                      : 'bg-surface-container-low text-on-surface-variant'
+                  }`}
+                >
+                  {y}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <label className="block">
+            <span className="mb-1.5 block text-sm text-on-surface-variant">Full name</span>
+            <input
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
+              placeholder="e.g. Ariyo Oluwafemi"
+              required
+              className="w-full rounded-lg bg-surface-container px-4 py-2.5 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+          </label>
+
+          <label className="block">
+            <span className="mb-1.5 block text-sm text-on-surface-variant">Current level</span>
+            <select
+              value={gradeLevel}
+              onChange={(e) => setGradeLevel(e.target.value)}
+              className="w-full rounded-lg bg-surface-container px-4 py-2.5 text-sm text-on-surface focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary"
+            >
+              {GRADE_LEVELS.map((g) => (
+                <option key={g}>{g}</option>
+              ))}
+            </select>
+          </label>
+
+          {error && (
+            <p className="rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">{error}</p>
+          )}
+
+          <button
+            type="submit"
+            disabled={!valid || busy}
+            className="flex w-full items-center justify-center gap-3 rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-on-primary transition-all hover:shadow-md active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            {busy && <RenanceMark size={22} state="busy" />}
+            {busy ? 'Saving…' : 'Done, start syncing'}
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+}

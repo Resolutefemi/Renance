@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- data_extraction_rules (Android 12+): nothing leaves the device via
+     cloud backup or device-to-device transfer (founder directive
+     2026-10-12: "no vulnerability or openings" - a D2D dump of the
+     app's data dir would hand over the session vault contents and any
+     cached study data). -->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="root" />
+        <exclude domain="file" />
+        <exclude domain="database" />
+        <exclude domain="sharedpref" />
+        <exclude domain="external" />
+        <exclude domain="device_protected_data" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="root" />
+        <exclude domain="file" />
+        <exclude domain="database" />
+        <exclude domain="sharedpref" />
+        <exclude domain="external" />
+        <exclude domain="device_protected_data" />
+    </device-transfer>
+</data-extraction-rules>

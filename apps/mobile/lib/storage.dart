@@ -1,0 +1,721 @@
+/// Persistence for the offline-first mobile shell.
+///
+/// Session: JWT in the OS-grade encrypted store (Android
+/// EncryptedSharedPreferences / iOS Keychain - founder directive
+/// 2026-10-11: "Mobile applications save encrypted authentication
+/// tokens directly to the device's secure storage systems so your
+/// session survives even if you close the app or restart your phone")
+/// + cached user in SharedPreferences.
+/// Packs:   downloaded bundles + queued submissions in local SQLite
+///          (the ERA-2 doctrine: phone stores only what you downloaded,
+///          and nothing here ever contains answer material).
+library;
+
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:path/path.dart' as p;
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sqflite/sqflite.dart';
+
+import 'models.dart';
+
+// ---------------------------------------------------------------- session
+
+/// SharedPreferences key of the offline /me cache (written by
+/// StudentController.cacheMe, cleared by SessionStore.clear). Defined
+/// here so the session teardown can reach it without importing
+/// controllers.dart.
+const String kMeCacheKey = 'renance.me.cache';
+
+/// The encrypted token vault: one key in the platform's secure store.
+/// Every call fails SOFT (returns null / false) so a missing secure
+/// store on a test bench or an exotic device degrades to the prefs
+/// fallback instead of crashing the app.
+class SecureTokenVault {
+  const SecureTokenVault();
+
+  static const String _kKey = 'renance.session.jwt';
+
+  final FlutterSecureStorage _storage = const FlutterSecureStorage(
+    aOptions: AndroidOptions(encryptedSharedPreferences: true),
+    iOptions: IOSOptions(accessibility: KeychainAccessibility.first_unlock),
+  );
+
+  Future<String?> read() async {
+    try {
+      return await _storage.read(key: _kKey);
+    } on Exception {
+      return null;
+    } on Error {
+      return null;
+    }
+  }
+
+  Future<bool> write(String token) async {
+    try {
+      await _storage.write(key: _kKey, value: token);
+      return true;
+    } on Exception {
+      return false;
+    } on Error {
+      return false;
+    }
+  }
+
+  Future<bool> delete() async {
+    try {
+      await _storage.delete(key: _kKey);
+      return true;
+    } on Exception {
+      return false;
+    } on Error {
+      return false;
+    }
+  }
+}
+
+class SessionStore {
+  SessionStore(this._prefs, {SecureTokenVault? vault})
+      : _vault = vault ?? const SecureTokenVault();
+
+  final SharedPreferences _prefs;
+  final SecureTokenVault _vault;
+  static const _kToken = 'renance.token';
+  static const _kUser = 'renance.user';
+  static const _kIntroSeen = 'renance.introSeen';
+
+  /// The in-memory copy of the decrypted token. Kept hot so the sync
+  /// getter (ApiClient reads it on every request) never awaits.
+  String? _memToken;
+
+  /// Exposed so feature stores (saved questions, update stamps) can
+  /// persist on the same SharedPreferences instance the shell owns.
+  SharedPreferences get prefs => _prefs;
+
+  /// Boots the store for the app shell: pulls the token out of the
+  /// encrypted vault into memory, and migrates any legacy plain-prefs
+  /// token into the vault (then scrubs it from prefs). A sign-in that
+  /// predates the vault upgrades itself on first launch.
+  static Future<SessionStore> load(SharedPreferences prefs) async {
+    final SessionStore store = SessionStore(prefs);
+    final String? secure = await store._vault.read();
+    final String? legacy = prefs.getString(_kToken);
+    if (secure != null && secure.isNotEmpty) {
+      store._memToken = secure;
+      // Scrub the legacy plaintext copy if one is still lying around.
+      if (legacy != null && legacy.isNotEmpty) {
+        await prefs.remove(_kToken);
+      }
+      return store;
+    }
+    if (legacy != null && legacy.isNotEmpty) {
+      // Migration: the old plaintext token moves into the vault.
+      store._memToken = legacy;
+      final bool ok = await store._vault.write(legacy);
+      if (ok) {
+        await prefs.remove(_kToken);
+      }
+      return store;
+    }
+    return store;
+  }
+
+  /// The signed-in session's bearer token (null = signed out). Reads
+  /// the hot memory copy first; the prefs token remains the fallback
+  /// for tests and for the brief window before load() migrated it.
+  String? get token => (_memToken != null && _memToken!.isNotEmpty)
+      ? _memToken
+      : _prefs.getString(_kToken);
+
+  AppUser? get user {
+    final raw = _prefs.getString(_kUser);
+    if (raw == null) return null;
+    try {
+      return AppUser.fromJson((jsonDecode(raw) as Map).cast<String, dynamic>());
+    } on FormatException {
+      return null;
+    }
+  }
+
+  Future<void> save(String token, AppUser user) async {
+    _memToken = token;
+    // Founder directive (2026-10-11): the token's home is the encrypted
+    // vault. The plaintext prefs copy is only written when the vault is
+    // unavailable (test bench / exotic device) so the session is never
+    // lost entirely.
+    final bool secured = await _vault.write(token);
+    if (secured) {
+      await _prefs.remove(_kToken);
+    } else {
+      await _prefs.setString(_kToken, token);
+    }
+    await _prefs.setString(_kUser, jsonEncode(user.toJson()));
+  }
+
+  Future<void> clear() async {
+    _memToken = null;
+    await _vault.delete();
+    await _prefs.remove(_kToken);
+    await _prefs.remove(_kUser);
+    // The offline /me cache must die with the session: otherwise a
+    // different account signing in on this device reads the previous
+    // student's cached profile (privacy leak). See StudentController
+    // for the writer side; the key is duplicated here deliberately -
+    // storage.dart cannot import controllers.dart.
+    await _prefs.remove(kMeCacheKey);
+  }
+
+  /// Whether the cinematic splash has played on a previous launch.
+  /// First launch gets the full brand sequence; later launches get a
+  /// snappier cut (ROADMAP: "first open ≠ second open").
+  bool get introSeen => _prefs.getBool(_kIntroSeen) ?? false;
+
+  Future<void> markIntroSeen() => _prefs.setBool(_kIntroSeen, true);
+}
+
+// ------------------------------------------------------------- submissions
+
+/// A completed exam waiting to be graded server-side (offline queue entry).
+class PendingSubmission {
+  const PendingSubmission({
+    required this.id,
+    required this.code,
+    required this.attemptId,
+    required this.answers,
+    required this.durationMs,
+    required this.createdAt,
+  });
+
+  final String id; // attemptId doubles as the queue key
+  final String code;
+  final String attemptId;
+  final Map<String, String> answers;
+  final int durationMs;
+  final DateTime createdAt;
+
+  Map<String, dynamic> toJson() => <String, dynamic>{
+        'id': id,
+        'code': code,
+        'attemptId': attemptId,
+        'answers': answers,
+        'durationMs': durationMs,
+        'createdAt': createdAt.millisecondsSinceEpoch,
+      };
+
+  factory PendingSubmission.fromJson(Map<String, dynamic> j) =>
+      PendingSubmission(
+        id: (j['id'] ?? '') as String,
+        code: (j['code'] ?? '') as String,
+        attemptId: (j['attemptId'] ?? '') as String,
+        answers: ((j['answers'] as Map<dynamic, dynamic>?) ?? const {}).map(
+          (k, v) => MapEntry(k.toString(), v.toString()),
+        ),
+        durationMs: (j['durationMs'] ?? 0) as int,
+        createdAt: DateTime.fromMillisecondsSinceEpoch(
+          (j['createdAt'] ?? 0) as int,
+        ),
+      );
+}
+
+// --------------------------------------------------------------- pack store
+
+abstract class PackStore {
+  Future<void> savePack(Bundle bundle, String sha);
+  Future<Bundle?> loadPack(String code, String sha);
+
+  /// One downloaded pack by code, whatever sha it was stored with. The
+  /// offline-share export path needs the bundle back without knowing the
+  /// manifest digest the sending phone originally used.
+  Future<Bundle?> loadPackByCode(String code);
+  Future<Set<String>> downloadedCodes();
+
+  /// On-device footprint per pack code (bytes) for the storage meter.
+  Future<Map<String, int>> packSizes();
+
+  /// Removes one downloaded pack (Downloads screen swipe/delete).
+  Future<void> removePack(String code);
+
+  /// Drops every downloaded pack (Settings → storage).
+  Future<void> clearPacks();
+
+  Future<void> queueSubmission(PendingSubmission submission);
+  Future<List<PendingSubmission>> pendingSubmissions();
+  Future<void> removeSubmission(String id);
+
+
+  /// Lesson cache (ROADMAP #8) - metas for the list, full bundles for
+  /// the reader, so lessons stay readable with zero connectivity.
+  Future<void> saveLessonMetas(List<LessonMeta> lessons);
+  Future<List<LessonMeta>> cachedLessonMetas();
+  Future<void> saveLesson(Lesson lesson);
+  Future<Lesson?> loadLesson(String slug);
+
+  // ---- school workspace (For Schools): offline syllabus/notes packs ----
+
+  /// Stores/refreshes one school's offline pack.
+  Future<void> saveSchoolPack(SchoolPack pack);
+
+  /// Every downloaded school pack (usually 0..2 per device).
+  Future<List<SchoolPack>> loadSchoolPacks();
+
+  Future<void> removeSchoolPack(String schoolId);
+
+  /// On-device bytes per school pack, for the storage meter.
+  Future<Map<String, int>> schoolPackSizes();
+
+  /// The sqlite database file's real on-disk size, when available.
+  Future<int?> databaseSizeBytes();
+}
+
+/// Production implementation backed by sqflite.
+class DbPackStore implements PackStore {
+  DbPackStore({Future<Database> Function()? opener}) : _opener = opener;
+
+  final Future<Database> Function()? _opener;
+  Database? _db;
+
+  Future<Database> _open() async {
+    final existing = _db;
+    if (existing != null) return existing;
+    final open = _opener ?? _defaultOpen;
+    final db = await open();
+    _db = db;
+    return db;
+  }
+
+  static const _lessonTables = [
+    '''
+    CREATE TABLE lessons (
+      slug TEXT PRIMARY KEY,
+      json TEXT NOT NULL,
+      updated_at INTEGER NOT NULL
+    )''',
+  ];
+
+
+  static Future<Database> _defaultOpen() async => openDatabase(
+        p.join(await getDatabasesPath(), 'renance.db'),
+        version: 4,
+        onCreate: (db, version) async {
+          await db.execute('''
+            CREATE TABLE packs (
+              code TEXT PRIMARY KEY,
+              sha TEXT NOT NULL,
+              title TEXT NOT NULL,
+              json TEXT NOT NULL,
+              downloaded_at INTEGER NOT NULL
+            )''');
+          await db.execute('''
+            CREATE TABLE pending_submissions (
+              attempt_id TEXT PRIMARY KEY,
+              code TEXT NOT NULL,
+              payload TEXT NOT NULL,
+              created_at INTEGER NOT NULL
+            )''');
+          for (final ddl in _schoolTables) {
+            await db.execute(ddl);
+          }
+        },
+        onUpgrade: (db, oldVersion, newVersion) async {
+          if (oldVersion < 3) {
+            for (final ddl in _lessonTables) {
+              await db.execute(ddl);
+            }
+          }
+          if (oldVersion < 4) {
+            for (final ddl in _schoolTables) {
+              await db.execute(ddl);
+            }
+          }
+        },
+      );
+
+  /// School workspace (For Schools): one row per downloaded school pack
+  /// - the whole syllabus/scheme/notes bundle, read-only.
+  static const _schoolTables = [
+    '''
+    CREATE TABLE school_packs (
+      school_id TEXT PRIMARY KEY,
+      school_name TEXT NOT NULL,
+      role TEXT NOT NULL DEFAULT 'teacher',
+      version TEXT NOT NULL DEFAULT '',
+      json TEXT NOT NULL,
+      downloaded_at INTEGER NOT NULL
+    )''',
+  ];
+
+  @override
+  Future<void> savePack(Bundle bundle, String sha) async {
+    final db = await _open();
+    await db.insert(
+        'packs',
+        <String, Object?>{
+          'code': bundle.code,
+          'sha': sha,
+          'title': bundle.title,
+          'json': jsonEncode(bundle.toJson()),
+          'downloaded_at': DateTime.now().millisecondsSinceEpoch,
+        },
+        conflictAlgorithm: ConflictAlgorithm.replace);
+  }
+
+  @override
+  Future<Bundle?> loadPack(String code, String sha) async {
+    final db = await _open();
+    final rows = await db.query(
+      'packs',
+      where: 'code = ? AND sha = ?',
+      whereArgs: <Object?>[code, sha],
+      limit: 1,
+    );
+    if (rows.isEmpty) return null;
+    try {
+      return Bundle.fromJson(
+        (jsonDecode(rows.first['json']! as String) as Map)
+            .cast<String, dynamic>(),
+      );
+    } on FormatException {
+      return null;
+    }
+  }
+
+  @override
+  Future<Bundle?> loadPackByCode(String code) async {
+    final db = await _open();
+    final rows = await db.query(
+      'packs',
+      where: 'code = ?',
+      whereArgs: <Object?>[code],
+      limit: 1,
+    );
+    if (rows.isEmpty) return null;
+    try {
+      return Bundle.fromJson(
+        (jsonDecode(rows.first['json']! as String) as Map)
+            .cast<String, dynamic>(),
+      );
+    } on FormatException {
+      return null;
+    }
+  }
+
+  @override
+  Future<Set<String>> downloadedCodes() async {
+    final db = await _open();
+    final rows = await db.query('packs', columns: <String>['code']);
+    return rows.map((r) => r['code']! as String).toSet();
+  }
+
+  @override
+  Future<Map<String, int>> packSizes() async {
+    final db = await _open();
+    final rows = await db.query('packs', columns: <String>['code', 'json']);
+    // Real on-disk bytes: sqlite stores TEXT as UTF-8, so the meter must
+    // measure utf8 length - a Dart .length counts UTF-16 units and
+    // overstates sizes on emoji/unicode-heavy packs.
+    return <String, int>{
+      for (final r in rows)
+        r['code']! as String: utf8.encode(r['json']! as String).length,
+    };
+  }
+
+  @override
+  Future<void> removePack(String code) async {
+    final db = await _open();
+    await db.delete('packs', where: 'code = ?', whereArgs: <Object?>[code]);
+  }
+
+  @override
+  Future<void> clearPacks() async {
+    final db = await _open();
+    await db.delete('packs');
+  }
+
+  @override
+  Future<void> saveSchoolPack(SchoolPack pack) async {
+    final db = await _open();
+    await db.insert(
+      'school_packs',
+      <String, Object?>{
+        'school_id': pack.school.id,
+        'school_name': pack.school.name,
+        'version': pack.version,
+        'json': jsonEncode(pack.toJson()),
+        'downloaded_at': DateTime.now().millisecondsSinceEpoch,
+      },
+      conflictAlgorithm: ConflictAlgorithm.replace,
+    );
+  }
+
+  @override
+  Future<List<SchoolPack>> loadSchoolPacks() async {
+    final db = await _open();
+    final rows = await db.query('school_packs', orderBy: 'downloaded_at DESC');
+    final List<SchoolPack> out = <SchoolPack>[];
+    for (final r in rows) {
+      try {
+        out.add(SchoolPack.fromJson(
+          (jsonDecode(r['json']! as String) as Map).cast<String, dynamic>(),
+        ));
+      } on FormatException {
+        continue;
+      }
+    }
+    return out;
+  }
+
+  @override
+  Future<void> removeSchoolPack(String schoolId) async {
+    final db = await _open();
+    await db.delete('school_packs', where: 'school_id = ?', whereArgs: <Object?>[schoolId]);
+  }
+
+  @override
+  Future<Map<String, int>> schoolPackSizes() async {
+    final db = await _open();
+    final rows =
+        await db.query('school_packs', columns: <String>['school_id', 'json']);
+    return <String, int>{
+      for (final r in rows)
+        r['school_id']! as String: utf8.encode(r['json']! as String).length,
+    };
+  }
+
+  @override
+  Future<int?> databaseSizeBytes() async {
+    try {
+      final db = await _open();
+      final path = db.path;
+      if (path.isEmpty) return null;
+      final f = File(path);
+      if (!f.existsSync()) return null;
+      return f.lengthSync();
+    } catch (_) {
+      return null;
+    }
+  }
+
+  @override
+  Future<void> queueSubmission(PendingSubmission submission) async {
+    final db = await _open();
+    await db.insert(
+        'pending_submissions',
+        <String, Object?>{
+          'attempt_id': submission.attemptId,
+          'code': submission.code,
+          'payload': jsonEncode(submission.toJson()),
+          'created_at': submission.createdAt.millisecondsSinceEpoch,
+        },
+        conflictAlgorithm: ConflictAlgorithm.replace);
+  }
+
+  @override
+  Future<List<PendingSubmission>> pendingSubmissions() async {
+    final db = await _open();
+    final rows = await db.query(
+      'pending_submissions',
+      orderBy: 'created_at ASC',
+    );
+    return rows
+        .map(
+          (r) => PendingSubmission.fromJson(
+            (jsonDecode(r['payload']! as String) as Map)
+                .cast<String, dynamic>(),
+          ),
+        )
+        .toList();
+  }
+
+  @override
+  Future<void> removeSubmission(String id) async {
+    final db = await _open();
+    await db.delete(
+      'pending_submissions',
+      where: 'attempt_id = ?',
+      whereArgs: <Object?>[id],
+    );
+  }
+
+  // Lesson cache (ROADMAP #8) ---------------------------------------------
+
+  @override
+  Future<void> saveLessonMetas(List<LessonMeta> lessons) async {
+    final db = await _open();
+    final now = DateTime.now().millisecondsSinceEpoch;
+    final batch = db.batch();
+    for (final l in lessons) {
+      batch.insert(
+          'lessons',
+          <String, Object?>{
+            'slug': l.slug,
+            'json': jsonEncode(l.toJson()),
+            'updated_at': now,
+          },
+          conflictAlgorithm: ConflictAlgorithm.replace);
+    }
+    await batch.commit(noResult: true);
+  }
+
+  @override
+  Future<List<LessonMeta>> cachedLessonMetas() async {
+    final db = await _open();
+    final rows = await db.query(
+      'lessons',
+      columns: <String>['json'],
+      orderBy: 'slug ASC',
+    );
+    final out = <LessonMeta>[];
+    for (final r in rows) {
+      try {
+        out.add(
+          LessonMeta.fromJson(
+            (jsonDecode(r['json']! as String) as Map).cast<String, dynamic>(),
+          ),
+        );
+      } on FormatException {
+        continue;
+      }
+    }
+    return out;
+  }
+
+  @override
+  Future<void> saveLesson(Lesson lesson) async {
+    final db = await _open();
+    await db.insert(
+        'lessons',
+        <String, Object?>{
+          'slug': lesson.slug,
+          'json': jsonEncode(lesson.toJson()),
+          'updated_at': DateTime.now().millisecondsSinceEpoch,
+        },
+        conflictAlgorithm: ConflictAlgorithm.replace);
+  }
+
+  @override
+  Future<Lesson?> loadLesson(String slug) async {
+    final db = await _open();
+    final rows = await db.query(
+      'lessons',
+      where: 'slug = ?',
+      whereArgs: <Object?>[slug],
+      limit: 1,
+    );
+    if (rows.isEmpty) return null;
+    try {
+      return Lesson.fromJson(
+        (jsonDecode(rows.first['json']! as String) as Map)
+            .cast<String, dynamic>(),
+      );
+    } on FormatException {
+      return null;
+    }
+  }
+}
+
+/// In-memory double for widget/controller tests.
+class MemoryPackStore implements PackStore {
+  final Map<String, Bundle> _packs = <String, Bundle>{};
+  final Map<String, PendingSubmission> _pending = <String, PendingSubmission>{};
+  final Map<String, Lesson> _lessons = <String, Lesson>{};
+
+  @override
+  Future<void> savePack(Bundle bundle, String sha) async =>
+      _packs[bundle.code] = bundle;
+
+  @override
+  Future<Bundle?> loadPack(String code, String sha) async => _packs[code];
+
+  @override
+  Future<Bundle?> loadPackByCode(String code) async => _packs[code];
+
+  @override
+  Future<Set<String>> downloadedCodes() async => _packs.keys.toSet();
+
+  @override
+  Future<Map<String, int>> packSizes() async => <String, int>{
+        for (final e in _packs.entries) e.key: e.value.title.length * 128,
+      };
+
+  @override
+  Future<void> removePack(String code) async => _packs.remove(code);
+
+  @override
+  Future<void> clearPacks() async => _packs.clear();
+
+  @override
+  Future<void> queueSubmission(PendingSubmission submission) async =>
+      _pending[submission.id] = submission;
+
+  @override
+  Future<void> saveSchoolPack(SchoolPack pack) async =>
+      _schoolPacks[pack.school.id] = pack;
+
+  @override
+  Future<List<SchoolPack>> loadSchoolPacks() async =>
+      _schoolPacks.values.toList();
+
+  @override
+  Future<void> removeSchoolPack(String schoolId) async =>
+      _schoolPacks.remove(schoolId);
+
+  @override
+  Future<Map<String, int>> schoolPackSizes() async => <String, int>{
+        for (final e in _schoolPacks.entries)
+          e.key: e.value.topicCount * 2048,
+      };
+
+  @override
+  Future<int?> databaseSizeBytes() async => null;
+
+  @override
+  Future<List<PendingSubmission>> pendingSubmissions() async =>
+      _pending.values.toList();
+
+  @override
+  Future<void> removeSubmission(String id) async => _pending.remove(id);
+
+  final Map<String, SchoolPack> _schoolPacks = <String, SchoolPack>{};
+
+  // Lesson cache (ROADMAP #8) ---------------------------------------------
+
+  @override
+  Future<void> saveLessonMetas(List<LessonMeta> lessons) async {
+    for (final l in lessons) {
+      _lessons[l.slug] = Lesson(
+        slug: l.slug,
+        title: l.title,
+        subject: l.subject,
+        body: l.body,
+        tags: l.tags,
+        minutes: l.minutes,
+        summary: l.summary,
+        sections: const <LessonSection>[],
+      );
+    }
+  }
+
+  @override
+  Future<List<LessonMeta>> cachedLessonMetas() async => _lessons.values
+      .map(
+        (l) => LessonMeta(
+          slug: l.slug,
+          title: l.title,
+          subject: l.subject,
+          body: l.body,
+          tags: l.tags,
+          minutes: l.minutes,
+          summary: l.summary,
+        ),
+      )
+      .toList();
+
+  @override
+  Future<void> saveLesson(Lesson lesson) async =>
+      _lessons[lesson.slug] = lesson;
+
+  @override
+  Future<Lesson?> loadLesson(String slug) async => _lessons[slug];
+}

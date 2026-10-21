@@ -1,0 +1,118 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  api:
+    name: Go study API (vet + test)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: apps/study-api/go.mod
+      - name: Vet
+        working-directory: apps/study-api
+        run: go vet ./...
+      - name: Test
+        working-directory: apps/study-api
+        run: go test ./...
+
+  api-e2e:
+    name: Go study API (E2E on real Postgres)
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: renance
+          POSTGRES_PASSWORD: renance
+          POSTGRES_DB: renance_e2e
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U renance -d renance_e2e"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    env:
+      DATABASE_URL: postgres://renance:renance@localhost:5432/renance_e2e?sslmode=disable
+      JWT_SECRET: ci-e2e-secret-0123456789abcdef
+      # The E2E must ONLY ever touch this throwaway Postgres. Belt and
+      # suspenders with the in-code kill switch (bakedDSNsDisabled in
+      # split.go): every domain chain is pinned to DATABASE_URL here and
+      # both mirror systems are off, so a runner can never again reach
+      # production Neon/InsForge (five CI runs registered e2e scholars
+      # in production before this landed - founder bug 2026-10-16).
+      USER_DATABASE_URL: postgres://renance:renance@localhost:5432/renance_e2e?sslmode=disable
+      CONTENT_DATABASE_URL: postgres://renance:renance@localhost:5432/renance_e2e?sslmode=disable
+      CACHE_DATABASE_URL: postgres://renance:renance@localhost:5432/renance_e2e?sslmode=disable
+      INSFORGE_DATABASE_URL: postgres://renance:renance@localhost:5432/renance_e2e?sslmode=disable
+      MIRROR_SYNC: "0"
+      MIRROR_WRITES: "0"
+      DISABLE_BAKED_DSN: "1"
+      # The E2E harness (scripts/api-e2e.sh) consumes the signup /
+      # resend / change-email _devCode echo to confirm accounts without
+      # a mailbox. That echo is dev-gated now (2026-10-20: production
+      # leaked it unconditionally, letting anyone self-verify any
+      # email), so the runner turns it on here - and ONLY here.
+      DEV_VERIFY_CODES: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: apps/study-api/go.mod
+      - name: Build API binary
+        working-directory: apps/study-api
+        run: go build -o /tmp/study-api ./cmd/api
+      - name: Boot API (waits for /readyz db=ok)
+        run: |
+          /tmp/study-api &
+          for _ in $(seq 1 60); do
+            # /readyz is the REAL Postgres probe. /healthz is DB-free by
+            # doctrine (keep-warm pingers must never wake Neon), so it
+            # can no longer prove the DB is reachable - readyz can.
+            # The probe UA is the e2e agent's own - the bot shield
+            # 403s default tool agents on purpose.
+            if curl -fsS -A "RenanceE2E/1.0 (CI probe)" http://127.0.0.1:3990/readyz | grep -q '"db":"ok"'; then
+              echo "API healthy (Postgres reachable)"; exit 0
+            fi
+            sleep 1
+          done
+          echo "API never became healthy"; exit 1
+      - name: E2E (register → login → profile → exam → grade)
+        run: bash scripts/api-e2e.sh http://127.0.0.1:3990
+
+  web:
+    name: Web (typecheck + static export build)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Typecheck
+        run: pnpm --filter @renance/web typecheck
+      - name: Content rule (no long hyphens)
+        run: python3 scripts/no_long_hyphen.py --check
+      - name: Icon coverage (every ligature ships in the subset font)
+        run: |
+          python3 -m pip install --quiet fonttools brotli uharfbuzz
+          python3 scripts/check_icon_coverage.py
+      - name: Build (Pages-like static export)
+        working-directory: apps/web
+        env:
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+          NEXT_PUBLIC_API_BASE: ${{ vars.PUBLIC_API_BASE || 'http://localhost:3990' }}
+          NEXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: pnpm exec next build

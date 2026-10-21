@@ -1,0 +1,2461 @@
+{
+  "code": "uni-tasued-chm102-bank",
+  "title": "TASUED CHM102 | Course Question Bank",
+  "version": 1,
+  "questionCount": 175,
+  "totalMarks": 175,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-tasued-chm102-bank-0001",
+      "type": "mcq",
+      "stem": "Benzene is classified as:",
+      "options": {
+        "A": "Alkane",
+        "B": "Alkyne",
+        "C": "Aromatic hydrocarbon",
+        "D": "Alcohol"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Due to its stable, resonance-delocalized cyclic structure that follows Hückel's rule, benzene is classified as an aromatic hydrocarbon."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0002",
+      "type": "mcq",
+      "stem": "A carbon-carbon triple bond contains how many sigma (σ) and pi (π) bonds?",
+      "options": {
+        "A": "1 σ and 2 π",
+        "B": "2 σ and 1 π",
+        "C": "1 σ and 1 π",
+        "D": "3 σ bonds"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A triple bond consists of one strong axial end-on $\\sigma$ overlap and two orthogonal sideway parallel $\\pi$ orbital overlaps."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0003",
+      "type": "mcq",
+      "stem": "The tetrahedral geometry of methane (CH₄) is due to which type of hybridization?",
+      "options": {
+        "A": "sp",
+        "B": "sp²",
+        "C": "sp³",
+        "D": "sp³d"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Carbon promotes and mixes its $2s$ and three $2p$ orbitals into four identical $sp^3$ hybrid orbitals directed toward the vertices of a regular tetrahedron."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0004",
+      "type": "mcq",
+      "stem": "In benzene (C₆H₆), the bonding involves:",
+      "options": {
+        "A": "Only single bonds",
+        "B": "Alternating single and double bonds",
+        "C": "Delocalized π-electrons over the ring",
+        "D": "Triple bonds between carbon atoms"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Benzene's $sp^2$ planar ring features unhybridized $p$ orbitals that overlap continuously above and below the ring, creating a delocalized $\\pi$ electron system."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0005",
+      "type": "mcq",
+      "stem": "The most common type of fullerene is:",
+      "options": {
+        "A": "C20",
+        "B": "C60",
+        "C": "C80",
+        "D": "C100"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "$C_{60}$ is the most energetically stable and easily synthesized member of the fullerene group."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0006",
+      "type": "mcq",
+      "stem": "What is the study of Organic Chemistry primarily concerned with?",
+      "options": {
+        "A": "Metals and alloys",
+        "B": "Non-carbon elements only",
+        "C": "Composition and structure of carbon compounds",
+        "D": "Nuclear reactions"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Organic chemistry is specifically defined as the study of the structure, properties, composition, reactions, and preparation of carbon-containing compounds."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0007",
+      "type": "mcq",
+      "stem": "Which of the following is a feature of an organic compound?",
+      "options": {
+        "A": "Contains sodium ions",
+        "B": "Contains carbon atoms",
+        "C": "Always forms ionic bonds",
+        "D": "Does not contain hydrogen"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The defining characteristic of all organic compounds is the presence of carbon atoms covalently bonded to other elements."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0008",
+      "type": "mcq",
+      "stem": "Why do organic compounds with long molecules, such as polymers, tend to have higher boiling points?",
+      "options": {
+        "A": "They are lighter",
+        "B": "They form metallic bonds",
+        "C": "Due to Van der Waals forces",
+        "D": "Because they have ionic lattices"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Longer molecules have a larger surface area, which increases the strength of intermolecular Van der Waals (dispersion) forces, requiring more energy to break."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0009",
+      "type": "mcq",
+      "stem": "What is the primary type of bonding found in organic compounds?",
+      "options": {
+        "A": "Ionic bonding",
+        "B": "Covalent bonding",
+        "C": "Metallic bonding",
+        "D": "Hydrogen bonding"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Carbon has four valence electrons and typically shares electrons with other non-metals (like H, O, N) to form stable covalent bonds."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0010",
+      "type": "mcq",
+      "stem": "Which element is most essential to organic chemistry?",
+      "options": {
+        "A": "Oxygen",
+        "B": "Nitrogen",
+        "C": "Carbon",
+        "D": "Hydrogen"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Carbon is the foundational element of organic chemistry due to its unique ability to form diverse, stable structures via catenation."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0011",
+      "type": "mcq",
+      "stem": "What is the phenomenon of carbon atoms forming bonds with other carbon atoms called?",
+      "options": {
+        "A": "Polymerization",
+        "B": "Catenation",
+        "C": "Isomerism",
+        "D": "Halogenation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Catenation is the linkage of atoms of the same element into longer chains. Carbon exhibits this property exceptionally well."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0012",
+      "type": "mcq",
+      "stem": "Which functional group is characterized by a carbon-carbon triple bond?",
+      "options": {
+        "A": "Alkane",
+        "B": "Alkene",
+        "C": "Alkyne",
+        "D": "Alcohol"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Alkynes are unsaturated hydrocarbons that contain at least one carbon-carbon triple bond."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0013",
+      "type": "mcq",
+      "stem": "What suffix is used for naming ketones in IUPAC nomenclature?",
+      "options": {
+        "A": "-ene",
+        "B": "-ane",
+        "C": "-ol",
+        "D": "-one"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "In IUPAC nomenclature, the suffix '-one' is used to denote the presence of a ketone functional group (e.g., propanone)."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0014",
+      "type": "mcq",
+      "stem": "Which class of organic compounds has the general formula CnH2n+2?",
+      "options": {
+        "A": "Alkanes",
+        "B": "Alkynes",
+        "C": "Alkenes",
+        "D": "Alcohols"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Alkanes are saturated acyclic hydrocarbons and follow the general molecular formula CnH2n+2."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0015",
+      "type": "mcq",
+      "stem": "What type of reaction typically occurs between an alkene and hydrogen halide?",
+      "options": {
+        "A": "Substitution reaction",
+        "B": "Condensation reaction",
+        "C": "Electrophilic addition reaction",
+        "D": "Elimination reaction"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The electron-rich double bond of an alkene undergoes electrophilic addition when reacted with hydrogen halides (like HCl or HBr)."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0016",
+      "type": "mcq",
+      "stem": "Which functional group is characterized by a carbon-nitrogen triple bond?",
+      "options": {
+        "A": "Amine",
+        "B": "Nitrile",
+        "C": "Amide",
+        "D": "Ester"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Nitriles contain a cyano functional group (-C≡N) characterized by a triple bond between carbon and nitrogen."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0017",
+      "type": "mcq",
+      "stem": "What is the product of oxidation of a secondary alcohol?",
+      "options": {
+        "A": "Alkene",
+        "B": "Ketone",
+        "C": "Aldehyde",
+        "D": "Carboxylic acid"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Oxidation of a secondary alcohol removes hydrogen from the hydroxyl group and the attached carbon, yielding a ketone."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0018",
+      "type": "mcq",
+      "stem": "Which group of elements is known as the alkali metals?",
+      "options": {
+        "A": "Group 17",
+        "B": "Group 1",
+        "C": "Transition metals",
+        "D": "Noble gases"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Group 1 elements of the periodic table (excluding hydrogen) are called alkali metals due to their ability to form basic solutions when reacted with water."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0019",
+      "type": "mcq",
+      "stem": "Which type of compounds are formed by the reaction between alcohols and carboxylic acids?",
+      "options": {
+        "A": "Esters",
+        "B": "Ketones",
+        "C": "Ethers",
+        "D": "Aldehydes"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The acid-catalyzed condensation reaction between an alcohol and a carboxylic acid is called esterification, producing an ester and water."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0020",
+      "type": "mcq",
+      "stem": "Which class of organic compounds contains a carbonyl group bonded to two carbon atoms?",
+      "options": {
+        "A": "Aldehydes",
+        "B": "Ketones",
+        "C": "Alcohols",
+        "D": "Acids"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ketones feature a central carbonyl carbon (C=O) bonded directly to two alkyl or aryl carbon chains."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0021",
+      "type": "mcq",
+      "stem": "What is the general name for compounds containing a halogen atom?",
+      "options": {
+        "A": "Alkynes",
+        "B": "Halogenated compounds",
+        "C": "Alcohols",
+        "D": "Alkenes"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Organic compounds containing one or more halogen atoms (F, Cl, Br, I) are collectively classified as halogenated compounds (or alkyl/aryl halides)."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0022",
+      "type": "mcq",
+      "stem": "Which group in the periodic table is known as the halogens?",
+      "options": {
+        "A": "Group 17",
+        "B": "Group 2",
+        "C": "Group 1",
+        "D": "Group 18"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Group 17 (VIIA) elements are called halogens, meaning 'salt-formers' in Greek."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0023",
+      "type": "mcq",
+      "stem": "Which class of organic compounds is characterized by a carbon-oxygen double bond and a hydroxyl group on the same carbon?",
+      "options": {
+        "A": "Esters",
+        "B": "Carboxylic acids",
+        "C": "Ketones",
+        "D": "Alcohols"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Carboxylic acids possess the carboxyl functional group (-COOH), combining a carbonyl group (C=O) and a hydroxyl group (-OH) on the same carbon atom."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0024",
+      "type": "mcq",
+      "stem": "What is the IUPAC name for CH3CH2CH2OH?",
+      "options": {
+        "A": "Methanol",
+        "B": "Ethanol",
+        "C": "Propanol",
+        "D": "Butanol"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The continuous carbon chain contains three carbon atoms (prop-) and an alcohol functional group (-ol), making it 1-propanol."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0025",
+      "type": "mcq",
+      "stem": "What type of isomerism is exhibited by but-2-ene?",
+      "options": {
+        "A": "Chain isomerism",
+        "B": "Geometric isomerism",
+        "C": "Functional isomerism",
+        "D": "Optical isomerism"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "But-2-ene exhibits geometric (cis-trans) isomerism due to restricted rotation around the carbon-carbon double bond."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0026",
+      "type": "mcq",
+      "stem": "Which of the following is considered a chemical property?",
+      "options": {
+        "A": "Melting point",
+        "B": "Density",
+        "C": "Flammability",
+        "D": "Boiling point"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Flammability describes a substance's ability to undergo a chemical change (combustion), unlike boiling point or density which are physical constants."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0027",
+      "type": "mcq",
+      "stem": "What is the typical size range for nanoparticles?",
+      "options": {
+        "A": "1-10 nm",
+        "B": "1-100 nm",
+        "C": "100-500 nm",
+        "D": "500-1000 nm"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Nanomaterials are defined by conventions as structures having at least one dimension spanning within the 1 to 100 nanometers scale."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0028",
+      "type": "mcq",
+      "stem": "What is the classification of organic compounds that have chains of carbon atoms but no rings?",
+      "options": {
+        "A": "Aromatic compounds",
+        "B": "Cyclic compounds",
+        "C": "Acyclic compounds",
+        "D": "Heterocyclic compounds"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Acyclic (open-chain or aliphatic) organic compounds do not contain ring structures in their carbon frameworks."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0029",
+      "type": "mcq",
+      "stem": "What describes a substance's ability to burn in the presence of oxygen?",
+      "options": {
+        "A": "Solubility",
+        "B": "Combustion",
+        "C": "Flammability",
+        "D": "Reactivity"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Flammability is the chemical property that defines how easily a substance catches fire or undergoes combustion when exposed to oxygen."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0030",
+      "type": "mcq",
+      "stem": "Appropriate name for HCOOH in Organic Chemistry is",
+      "options": {
+        "A": "Acetic acid",
+        "B": "Propanoic acid",
+        "C": "Methanoic acid",
+        "D": "Butanoic acid"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The compound has a single carbon atom attached to a carboxylic acid group, giving it the systematic IUPAC name methanoic acid."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0031",
+      "type": "mcq",
+      "stem": "Members of the same homologous series possess the following properties",
+      "options": {
+        "A": "Different chemical properties",
+        "B": "Similar chemical properties",
+        "C": "Opposite boiling points",
+        "D": "Varying bond types"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Compounds within the same homologous series share identical functional groups, leading to very similar chemical properties."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0032",
+      "type": "mcq",
+      "stem": "The general molecular formula of alkynes is",
+      "options": {
+        "A": "CnH2n+2",
+        "B": "CnH2n",
+        "C": "CnH2n-2",
+        "D": "CnH2nO2"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Alkynes have a deficiency of 4 hydrogen atoms compared to alkanes due to their triple bond, yielding the formula CnH2n-2."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0033",
+      "type": "mcq",
+      "stem": "Give the appropriate name for CH3CHClCH2CH2CH2OH",
+      "options": {
+        "A": "1-chloro-4-pentanol",
+        "B": "2-chloro-1-pentanol",
+        "C": "4-chloro-1-pentanol",
+        "D": "3-chloro-2-pentanol"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Numbering starts from the carbon bonded to the principal hydroxyl (-OH) group. Carbon 1 is attached to -OH, and carbon 4 carries the chlorine atom."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0034",
+      "type": "mcq",
+      "stem": "The simplest member of the alkynes series is",
+      "options": {
+        "A": "Ethene",
+        "B": "Methane",
+        "C": "Ethyne",
+        "D": "Butyne"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The simplest alkyne requires at least two carbon atoms to accommodate a triple bond; this compound is ethyne (acetylene)."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0035",
+      "type": "mcq",
+      "stem": "The group of organic compounds having only carbon and hydrogen atoms is called",
+      "options": {
+        "A": "Hydrocarbons",
+        "B": "Alcohols",
+        "C": "Aldehydes",
+        "D": "Ethers"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "As the name implies, hydrocarbons are compounds completely composed of hydrogen and carbon atoms."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0036",
+      "type": "mcq",
+      "stem": "Which of the following is a physical method of separation?",
+      "options": {
+        "A": "Electrolysis",
+        "B": "Chromatography",
+        "C": "Combustion",
+        "D": "Polymerization"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Chromatography isolates components without altering their chemical structures, whereas electrolysis, combustion, and polymerization are chemical reactions."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0037",
+      "type": "mcq",
+      "stem": "In paper chromatography, the retention factor (Rf) is calculated by:",
+      "options": {
+        "A": "Solvent front / distance",
+        "B": "Distance traveled by solvent front",
+        "C": "Distance traveled by compound / distance traveled by solvent front",
+        "D": "Solvent distance / compound distance"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Rf value is the ratio of the distance moved by the substance solute to the distance moved by the solvent front."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0038",
+      "type": "mcq",
+      "stem": "Which technique is used to separate liquids with different boiling points?",
+      "options": {
+        "A": "Filtration",
+        "B": "Decantation",
+        "C": "Fractional distillation",
+        "D": "Chromatography"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Distillation separates miscible liquids based on differences in their volatile boiling points."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0039",
+      "type": "mcq",
+      "stem": "What is the main principle behind centrifugation?",
+      "options": {
+        "A": "Filtration",
+        "B": "Density difference",
+        "C": "Evaporation",
+        "D": "Absorption"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Centrifugation spins mixtures at high speeds, using centrifugal force to separate particles based on size and density differences."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0040",
+      "type": "mcq",
+      "stem": "Which technique separates an insoluble solid from a liquid?",
+      "options": {
+        "A": "Chromatography",
+        "B": "Sublimation",
+        "C": "Filtration",
+        "D": "Distillation"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Filtration uses a porous barrier (like filter paper) to trap insoluble solid aggregates while allowing liquid to pass."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0041",
+      "type": "mcq",
+      "stem": "Sublimation separates substances based on their ability to:",
+      "options": {
+        "A": "Dissolve",
+        "B": "Form ions",
+        "C": "Transit directly from solid to gas",
+        "D": "Conduct electricity"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Sublimation is the direct phase transition of a substance from solid to gaseous form without passing through a liquid intermediate."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0042",
+      "type": "mcq",
+      "stem": "Which method is used in drinking water purification?",
+      "options": {
+        "A": "Chromatography",
+        "B": "Filtration",
+        "C": "Distillation",
+        "D": "Sublimation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Large-scale water treatment utilizes filtration beds (sand, gravel, charcoal) to clarify physical particulate matter from water safely and efficiently."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0043",
+      "type": "mcq",
+      "stem": "In distillation, what happens to the substance with the lowest boiling point?",
+      "options": {
+        "A": "Solidifies",
+        "B": "Sublimates",
+        "C": "Decomposes",
+        "D": "Vaporizes first and is collected"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The component with the lowest boiling point has the highest vapor pressure, meaning it vaporizes first, exits to the condenser, and liquefies into the receiver."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0044",
+      "type": "mcq",
+      "stem": "Which technique is best for separating pigments?",
+      "options": {
+        "A": "Filtration",
+        "B": "Crystallization",
+        "C": "Centrifugation",
+        "D": "Chromatography"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Chromatography techniques (like paper or thin-layer chromatography) are optimized for separating complex mixtures of dyes and plant pigments."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0045",
+      "type": "mcq",
+      "stem": "The method to separate sand and salt is:",
+      "options": {
+        "A": "Decantation",
+        "B": "Filtration",
+        "C": "Sublimation",
+        "D": "Chromatography"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Dissolving the mixture in water solubilizes the salt while leaving the sand insoluble. Filtration then cleanly traps the sand residue."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0046",
+      "type": "mcq",
+      "stem": "The method involving passing a mixture through a medium to separate components is:",
+      "options": {
+        "A": "Filtration",
+        "B": "Crystallization",
+        "C": "Chromatography",
+        "D": "Distillation"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Chromatography is fundamentally defined by passing a mobile phase mixture through a stationary phase medium to differentially separate analytes."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0047",
+      "type": "mcq",
+      "stem": "Which method separates a liquid and a dissolved solid?",
+      "options": {
+        "A": "Chromatography",
+        "B": "Evaporation",
+        "C": "Sublimation",
+        "D": "Distillation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Heating the solution evaporates the liquid solvent entirely away into gas, leaving the non-volatile dissolved solid solutes behind."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0048",
+      "type": "mcq",
+      "stem": "Which process separates components by their ability to dissolve?",
+      "options": {
+        "A": "Solvent extraction",
+        "B": "Filtration",
+        "C": "Distillation",
+        "D": "Centrifugation"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Solvent extraction relies on the relative solubility partitions of components distributed between two immiscible liquid phases."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0049",
+      "type": "mcq",
+      "stem": "What is the key principle behind crystallization?",
+      "options": {
+        "A": "Melting",
+        "B": "Evaporation",
+        "C": "Cooling",
+        "D": "Solubility and evaporation"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Crystallization occurs when a warm, solvent-evaporated solution cools down, exceeding the solute's solubility limit and precipitating pure crystals."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0050",
+      "type": "mcq",
+      "stem": "Which technique separates two liquids with close boiling points?",
+      "options": {
+        "A": "Simple distillation",
+        "B": "Filtration",
+        "C": "Fractional distillation",
+        "D": "Crystallization"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Fractional distillation utilizes a fractionating column filled with packing material to carry out multiple successive vaporization-condensation cycles, ideal for tight boiling points."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0051",
+      "type": "mcq",
+      "stem": "Nanochemistry involves the study of:",
+      "options": {
+        "A": "Large molecules",
+        "B": "Atoms",
+        "C": "Materials at nanoscale",
+        "D": "Fullerenes only"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Nanochemistry studies synthesis and properties of assembly architectures tailored explicitly at the nanometer scale region."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0052",
+      "type": "mcq",
+      "stem": "Fullerenes are primarily composed of which type of bonds?",
+      "options": {
+        "A": "Ionic bonds",
+        "B": "Metallic bonds",
+        "C": "Covalent bonds",
+        "D": "Hydrogen bonds"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Fullerenes are carbon allotropes where sp2 hybridized carbon atoms link together in spherical networks entirely using strong covalent bonds."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0053",
+      "type": "mcq",
+      "stem": "Which separation technique is commonly used to separate two liquids with close boiling points?",
+      "options": {
+        "A": "Simple distillation",
+        "B": "Fractional distillation",
+        "C": "Sublimation",
+        "D": "Crystallization"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "This question duplicates question 45; fractional distillation is the precise method engineered for separating narrow-range boiling solvents."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0054",
+      "type": "mcq",
+      "stem": "The top-down approach to nanomaterial synthesis involves:",
+      "options": {
+        "A": "Building up from atoms",
+        "B": "Breaking down bulk materials",
+        "C": "Growing crystals",
+        "D": "Chemical reactions only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The top-down methodology mechanics scale downward by physically/chemically breaking macroscopic bulk objects into structured nanoparticles."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0055",
+      "type": "mcq",
+      "stem": "The unique optical property of gold nanoparticles is known as:",
+      "options": {
+        "A": "Fluorescence",
+        "B": "Magnetism",
+        "C": "Transparency",
+        "D": "Conductivity"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "While Surface Plasmon Resonance (SPR) is its signature, gold nanoparticles under specific constraints demonstrate pronounced size-dependent fluorescence emissions."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0056",
+      "type": "mcq",
+      "stem": "Which application uses silver nanoparticles?",
+      "options": {
+        "A": "Rocket fuel",
+        "B": "Antibacterial coatings",
+        "C": "Solar panels",
+        "D": "Plastics production"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Silver nanoparticles continuously release ionic silver (Ag+), which alters bacterial respiration and enzymatic tracks, serving as potent antimicrobial coatings."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0057",
+      "type": "mcq",
+      "stem": "Nanomaterials are widely used in drug delivery due to:",
+      "options": {
+        "A": "High melting points",
+        "B": "Targeting specific tissues",
+        "C": "High toxicity",
+        "D": "Easy extraction"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Nanoparticles can be functionalized on their high surface areas to selectively recognize receptors, delivering drugs exclusively to target tissue cells."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0058",
+      "type": "mcq",
+      "stem": "Which property makes nanomaterials useful in sunscreens?",
+      "options": {
+        "A": "Transparency",
+        "B": "UV absorption",
+        "C": "Electrical conductivity",
+        "D": "Magnetism"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Nanomaterials like TiO2 or ZnO strongly scatter and absorb dangerous ultraviolet radiation while remaining cosmetically transparent on skin."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0059",
+      "type": "mcq",
+      "stem": "Which property makes fullerenes suitable for drug delivery?",
+      "options": {
+        "A": "High reactivity",
+        "B": "Large surface area",
+        "C": "Solubility in water",
+        "D": "High melting point"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The hollow cage structures of fullerenes yield an extensive relative surface area perfect for structural payload functionalization or encapsulation."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0060",
+      "type": "mcq",
+      "stem": "A key property of fullerenes is:",
+      "options": {
+        "A": "Insulating behavior",
+        "B": "High electrical conductivity",
+        "C": "Superconductivity",
+        "D": "Radioactivity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Due to delocalized pi-electrons floating across their conjugated cage arrays, fullerenes demonstrate notable electric conductivity properties."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0061",
+      "type": "mcq",
+      "stem": "The structure of C60 fullerene is also called:",
+      "options": {
+        "A": "Nanotube",
+        "B": "Buckminster fullerene",
+        "C": "Graphene",
+        "D": "Nano crystal"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The stable C60 carbon cage molecule is famously christened Buckminsterfullerene (or buckyball) because of its architectural resemblance to geodesic domes."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0062",
+      "type": "mcq",
+      "stem": "Fullerenes show antioxidant properties because they can:",
+      "options": {
+        "A": "Donate electrons",
+        "B": "Absorb UV rays",
+        "C": "Form ions",
+        "D": "Release oxygen"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Fullerenes act as 'radical sponges' capable of easily intercepting or transferring electrons to neutralize damaging free radical groups."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0063",
+      "type": "mcq",
+      "stem": "One renewable energy application of fullerenes is:",
+      "options": {
+        "A": "Food packaging",
+        "B": "Water filtration",
+        "C": "Organic solar cells",
+        "D": "Drug delivery"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Fullerenes show excellent electron acceptor abilities, making them ideal standard configurations inside thin-film organic solar photovoltaic cells."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0064",
+      "type": "mcq",
+      "stem": "A limitation of fullerenes in biomedicine is:",
+      "options": {
+        "A": "Low cost",
+        "B": "High solubility",
+        "C": "High cost of production",
+        "D": "Extreme inertness"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Synthesizing and cleanly isolating pure, uniform fullerenes demands precise electric arc or laser ablation setups that carry a high operational cost."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0065",
+      "type": "mcq",
+      "stem": "The IUPAC name for CH3CH2CH2CH3 is:",
+      "options": {
+        "A": "Methane",
+        "B": "Ethane",
+        "C": "Propane",
+        "D": "Butane"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The unbranched alkane continuous chain contains exactly four carbons, designated by the system stem prefix 'but-' and suffix '-ane'."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0066",
+      "type": "mcq",
+      "stem": "The longest carbon chain in a molecule is called:",
+      "options": {
+        "A": "Parent chain",
+        "B": "Side chain",
+        "C": "Isomer",
+        "D": "Substituent"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "IUPAC convention mandates discovering the longest continuous carbon chain to use as the base backbone or 'parent chain' name."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0067",
+      "type": "mcq",
+      "stem": "The functional group in alcohols is:",
+      "options": {
+        "A": "Carboxyl",
+        "B": "Hydroxyl",
+        "C": "Carbonyl",
+        "D": "Amine"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Alcohols contain the characteristic functional group consisting of an oxygen atom bonded to a hydrogen atom (-OH), known as a hydroxyl group."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0068",
+      "type": "mcq",
+      "stem": "The IUPAC name for CH3CH2OH is:",
+      "options": {
+        "A": "Methanol",
+        "B": "Propanol",
+        "C": "Butanol",
+        "D": "Ethanol"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "A two-carbon hydrocarbon chain unit (eth-) carrying a singular terminal hydroxyl suffix modifier translates directly to ethanol."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0069",
+      "type": "mcq",
+      "stem": "When naming a molecule with a double bond, the suffix is:",
+      "options": {
+        "A": "-ane",
+        "B": "-ene",
+        "C": "-yne",
+        "D": "-one"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unsaturated compounds hosting carbon-carbon alkenic double bonds drop the alkane suffix '-ane' and adopt '-ene'."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0070",
+      "type": "mcq",
+      "stem": "The prefix for a molecule with a benzene ring is:",
+      "options": {
+        "A": "Ethyl",
+        "B": "Methyl",
+        "C": "Phenyl",
+        "D": "Butyl"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "When a benzene ring structures behaves as an attached side-group substituent rather than the principal parent, it is designated a phenyl group."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0071",
+      "type": "mcq",
+      "stem": "When two identical substituents are present, the prefix is:",
+      "options": {
+        "A": "Mono",
+        "B": "Di",
+        "C": "Tri",
+        "D": "Tetra"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "IUPAC structural multipliers assign the multiplier 'di-' to express two identical branch structural substituents (e.g., dimethyl)."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0072",
+      "type": "mcq",
+      "stem": "The functional group in an ester is:",
+      "options": {
+        "A": "Carboxyl",
+        "B": "Amine",
+        "C": "Carbonyl and alkoxy",
+        "D": "Hydroxyl"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Esters feature an acyl carbonyl core structure linked straight to an adjoining alkoxy group parameter (R-C(=O)-O-R')."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0073",
+      "type": "mcq",
+      "stem": "The compound CH3CH=CH2 is:",
+      "options": {
+        "A": "Ethene",
+        "B": "Propene",
+        "C": "Butene",
+        "D": "Pentene"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A chain structure framing three target carbons containing a singular alkene structural double bond unit is systematically named propene."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0074",
+      "type": "mcq",
+      "stem": "The name of CH3CH2OCH2CH3 is:",
+      "options": {
+        "A": "Diethyl ether",
+        "B": "Ethanol",
+        "C": "Acetone",
+        "D": "Propanol"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The central bridging ether oxygen is symmetrically bounded on both flanks by distinct two-carbon ethyl groups, yielding diethyl ether."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0075",
+      "type": "mcq",
+      "stem": "The IUPAC name for CH3COCH3 is:",
+      "options": {
+        "A": "Ethanol",
+        "B": "Propanal",
+        "C": "Propanone",
+        "D": "Propanoic acid"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A three-carbon ketone containing a central internal non-terminal carbonyl unit is properly termed propanone (commonly acetone)."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0076",
+      "type": "mcq",
+      "stem": "Which compound contains an ether group?",
+      "options": {
+        "A": "CH3CH2OCH3",
+        "B": "CH3CH2CH2OH",
+        "C": "CH3COCH3",
+        "D": "CH3CH2COOH"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Ethers are characterized by an oxygen single-bonded directly between two distinct carbon groups (R-O-R')."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0077",
+      "type": "mcq",
+      "stem": "The compound CH3CH2NH2 has which functional group?",
+      "options": {
+        "A": "Amine",
+        "B": "Ester",
+        "C": "Ether",
+        "D": "Carboxylic acid"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The presence of the functional amino group (-NH2) derivative bound directly to an alkyl carbon signifies an amine class configuration."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0078",
+      "type": "mcq",
+      "stem": "The rate of a chemical reaction is defined as:",
+      "options": {
+        "A": "Amount produced",
+        "B": "Time taken",
+        "C": "Temperature change",
+        "D": "Speed of reaction"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Reaction rate fundamentally measures the velocity index or 'speed' of a chemical transformation, quantified as concentration changes per unit time."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0079",
+      "type": "mcq",
+      "stem": "Which group is called the alkali metals?",
+      "options": {
+        "A": "Group 1",
+        "B": "Group 2",
+        "C": "Group 17",
+        "D": "Group 18"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "This duplicate confirms that the s-block periodic columns belonging to Group 1 correspond to alkali metals."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0080",
+      "type": "mcq",
+      "stem": "The correct name for CH3CH2COOH is:",
+      "options": {
+        "A": "Methanoic acid",
+        "B": "Ethanoic acid",
+        "C": "Propanoic acid",
+        "D": "Butanoic acid"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "This three-carbon structure terminates in a carboxylic acid group (-COOH), matching the systematic designation propanoic acid."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0081",
+      "type": "mcq",
+      "stem": "Graphite is used in:",
+      "options": {
+        "A": "Cutting tools",
+        "B": "Pencils",
+        "C": "Jewelry",
+        "D": "Nano-tubes"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Graphite has a layered structure with weak van der Waals forces between sheets, making it soft and slippery enough to leave marks on paper as pencil lead."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0082",
+      "type": "mcq",
+      "stem": "Which of these is a disadvantage of graphite?",
+      "options": {
+        "A": "Softness",
+        "B": "Heat resistance",
+        "C": "Lubricity",
+        "D": "Conductivity"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Because of its weak interlayer forces, graphite is mechanically soft and prone to wearing away easily, which limits its use in heavy-duty structural components."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0083",
+      "type": "mcq",
+      "stem": "Which of the following is a disadvantage of allotropes?",
+      "options": {
+        "A": "Cost",
+        "B": "Synthesis challenge",
+        "C": "Material science application",
+        "D": "All of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Advanced allotropes (like synthetic diamonds and specific fullerenes) often face challenges regarding high production costs and complex purification or synthesis requirements."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0084",
+      "type": "mcq",
+      "stem": "Which of the following is a disadvantage of fullerene?",
+      "options": {
+        "A": "Lightweight",
+        "B": "Toxicity concerns",
+        "C": "Flexibility",
+        "D": "High conductivity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In biological and environmental contexts, certain unmodified fullerene structures present toxicity or accumulation concerns that require careful surface functionalization."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0085",
+      "type": "mcq",
+      "stem": "Which of the following has high hardness and thermal conductivity?",
+      "options": {
+        "A": "Graphite",
+        "B": "Diamond",
+        "C": "Phosphorus",
+        "D": "Fullerene"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Diamond features a rigid 3D tetrahedral network of strong covalent bonds, rendering it the hardest known natural material with exceptionally high thermal conductivity."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0086",
+      "type": "mcq",
+      "stem": "Which allotrope of carbon is soft and slippery?",
+      "options": {
+        "A": "Graphite",
+        "B": "Diamond",
+        "C": "Sulphur",
+        "D": "Fullerene"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Graphite's parallel layers slide smoothly past one another under shear stress, giving it a characteristic soft, slippery feel useful for dry lubrication."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0087",
+      "type": "mcq",
+      "stem": "Fullerenes have interconnected carbon atoms arranged in:",
+      "options": {
+        "A": "Triangles and squares",
+        "B": "Hexagonal and pentagonal rings",
+        "C": "Heptagons only",
+        "D": "Cubic cells"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Fullerene cages consist of fused 6-membered (hexagonal) and 5-membered (pentagonal) carbon rings organized to complete a closed geometric shell."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0088",
+      "type": "mcq",
+      "stem": "A new carbon allotrope was discovered in what year?",
+      "options": {
+        "A": "1804",
+        "B": "1928",
+        "C": "1965",
+        "D": "1985"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Buckminsterfullerene ($C_{60}$) was discovered in 1985 by Harold Kroto, Robert Curl, and Richard Smalley during laser-irradiation experiments."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0089",
+      "type": "mcq",
+      "stem": "Which of the following is mostly used in electronic industries?",
+      "options": {
+        "A": "Nano-onions",
+        "B": "Megatubes",
+        "C": "Nano-tubes",
+        "D": "Polymers"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Carbon nanotubes possess exceptional ballistic electron transport and conductivity parameters, finding extensive use in nanoscale semiconductor electronics."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0090",
+      "type": "mcq",
+      "stem": "Which of these is a type of allotrope of carbon?",
+      "options": {
+        "A": "Monotropic",
+        "B": "Graphite and Diamond",
+        "C": "Fullerene",
+        "D": "All of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Carbon exhibits multiple allotropic forms, including crystalline phases like diamond and graphite, as well as distinct molecular structural arrays like fullerenes."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0091",
+      "type": "mcq",
+      "stem": "Different forms of the same element with same atomic number but different structure are called:",
+      "options": {
+        "A": "Isotopes",
+        "B": "Allotropes",
+        "C": "Diamond",
+        "D": "Monotropic"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Allotropy is the property of some chemical elements to exist in two or more different structural forms in the same physical state."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0092",
+      "type": "mcq",
+      "stem": "Which carbon allotrope has a layered structure?",
+      "options": {
+        "A": "Fullerene",
+        "B": "Megatubes",
+        "C": "Graphite",
+        "D": "Diamond"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Graphite consists of stacked, flat, planar sheets composed of $sp^2$ hybridized carbon atoms organized into hexagonal rings."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0093",
+      "type": "mcq",
+      "stem": "Where does carbon form hexagonal rings?",
+      "options": {
+        "A": "Diamond",
+        "B": "Fullerene",
+        "C": "Graphite",
+        "D": "None of the above"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Carbon atoms in individual graphite graphene sheets are bound to three neighbors at 120-degree angles, creating extensive networks of uniform hexagonal rings."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0094",
+      "type": "mcq",
+      "stem": "Which allotrope is arranged in a 3D rigid network, making it extremely hard?",
+      "options": {
+        "A": "Graphite",
+        "B": "Diamond",
+        "C": "Carbon",
+        "D": "Fullerene"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In diamond, every carbon atom undergoes $sp^3$ hybridization, locking into a dense, infinite three-dimensional tetrahedral crystal lattice."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0095",
+      "type": "mcq",
+      "stem": "Which of the following is not an advantage of allotropes?",
+      "options": {
+        "A": "Energy storage",
+        "B": "Catalysis",
+        "C": "Scalability",
+        "D": "Cost"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "High processing, isolation, and synthesis costs are primary economic drawbacks rather than practical functional advantages of novel advanced allotropes."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0096",
+      "type": "mcq",
+      "stem": "Which has excellent electrical and heat conductivity?",
+      "options": {
+        "A": "Graphite",
+        "B": "Fullerene",
+        "C": "Diamond",
+        "D": "Carbon chain"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Each carbon atom in graphite contributes one delocalized valence electron into a collective $\\pi$ cloud, enabling rapid electrical and thermal transport."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0097",
+      "type": "mcq",
+      "stem": "Fullerenes have similar structure to graphite except they may have:",
+      "options": {
+        "A": "Hexagonal rings",
+        "B": "Square rings",
+        "C": "Pentagonal rings",
+        "D": "Octagonal rings"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Incorporating 12 isolated pentagonal rings into a hexagonal carbon grid provides the necessary positive geometric curvature to close the sheet into a cage or sphere."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0098",
+      "type": "mcq",
+      "stem": "Who discovered the new allotrope with atomic arrangement in closed shells?",
+      "options": {
+        "A": "Fredrick Holder",
+        "B": "Oswald",
+        "C": "Kroto et al.",
+        "D": "Richard J. Buckminster Fuller"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Harold Kroto, Richard Smalley, and Robert Curl discovered fullerenes in 1985 (naming it after architect Buckminster Fuller due to its geodesic dome shape)."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0099",
+      "type": "mcq",
+      "stem": "Which is a molecule made of only carbon atoms in forms like hollow spheres or tubes?",
+      "options": {
+        "A": "Carbon",
+        "B": "Diamond",
+        "C": "Graphite",
+        "D": "Fullerene"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Fullerenes comprise a distinct family of pure carbon allotropes configured structurally into closed-cage hollow spheres, ellipsoids, or long cylinders."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0100",
+      "type": "mcq",
+      "stem": "Which carbon nanomaterial has a large diameter compared to nanotubes?",
+      "options": {
+        "A": "Nanocones",
+        "B": "Nanotubes",
+        "C": "Megatubes",
+        "D": "Polymers"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Megatubes are classified as carbon tubes with significantly larger diameters than traditional single-walled or multi-walled nanotubes."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0101",
+      "type": "mcq",
+      "stem": "C₆₀ is an example of:",
+      "options": {
+        "A": "Diamond",
+        "B": "Buckyball Cluster",
+        "C": "Fullerene",
+        "D": "Graphite"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "$C_{60}$ (Buckminsterfullerene) is the quintessential representative of the fullerene allotropic family."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0102",
+      "type": "mcq",
+      "stem": "Which of the following is spherical in shape?",
+      "options": {
+        "A": "Nano-onions",
+        "B": "Fullerene",
+        "C": "Megatubes",
+        "D": "Graphite"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The standard $C_{60}$ fullerene organizes its carbon framework into an approximate truncated icosahedron, which forms a spherical molecular shape."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0103",
+      "type": "mcq",
+      "stem": "Which of the following is used in the transportation of different-sized molecules?",
+      "options": {
+        "A": "Megatubes",
+        "B": "Nano-tubes",
+        "C": "Polymers",
+        "D": "Buckyball Cluster"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Due to their larger pore diameters, megatubes can host and transport larger molecules, making them useful in specialized molecular transport systems."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0104",
+      "type": "mcq",
+      "stem": "The black portion on a soccer ball is in the shape of:",
+      "options": {
+        "A": "Hexagon",
+        "B": "Heptagon",
+        "C": "Octagon",
+        "D": "Pentagon"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "A standard soccer ball matches a truncated icosahedron geometry, where white patches are hexagonal and black patches form regular pentagons."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0105",
+      "type": "mcq",
+      "stem": "Which carbon nanostructure is used as a good lubricant?",
+      "options": {
+        "A": "Megatubes",
+        "B": "Buckyball Cluster",
+        "C": "Polymers",
+        "D": "Nano-onions"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Carbon nano-onions consist of concentric spherical fullerene shells that roll over one another easily, acting as effective nanoscale lubricants."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0106",
+      "type": "mcq",
+      "stem": "What type of hybridization is found in the carbon atoms of ethene (C₂H₄)?",
+      "options": {
+        "A": "sp",
+        "B": "sp²",
+        "C": "sp³",
+        "D": "dsp³"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Each carbon in ethene forms three $\\sigma$ bonds and one $\\pi$ bond, requiring $sp^2$ trigonal planar orbital mixing."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0107",
+      "type": "mcq",
+      "stem": "Which of the following correctly describes the bonding in alkanes?",
+      "options": {
+        "A": "Only π bonds",
+        "B": "Only σ bonds",
+        "C": "A mixture of σ and π bonds",
+        "D": "Dative bonds"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Alkanes are saturated hydrocarbons containing exclusively single covalent bonds, which are structurally classified as $\\sigma$ bonds."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0108",
+      "type": "mcq",
+      "stem": "In a substitution reaction, an atom or group is:",
+      "options": {
+        "A": "Added",
+        "B": "Removed",
+        "C": "Replaced",
+        "D": "Oxidized"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Substitution involves exchanging or replacing a specific functional atom or group attached to a carbon skeleton with another incoming chemical group."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0109",
+      "type": "mcq",
+      "stem": "Which of these reactions involves the addition of hydrogen to an unsaturated hydrocarbon?",
+      "options": {
+        "A": "Cracking",
+        "B": "Hydrolysis",
+        "C": "Hydrogenation",
+        "D": "Fermentation"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Hydrogenation is an addition reaction where molecular hydrogen ($H_2$) adds across double or triple bonds under catalytic conditions."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0110",
+      "type": "mcq",
+      "stem": "The oxidation of ethanol produces:",
+      "options": {
+        "A": "Ethene",
+        "B": "Ethanoic acid",
+        "C": "Methanol",
+        "D": "Propanol"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ethanol is a primary alcohol that oxidizes first to ethanal (an aldehyde) and subsequently to ethanoic acid (a carboxylic acid) under strong oxidizing conditions."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0111",
+      "type": "mcq",
+      "stem": "Combustion of hydrocarbons always produces:",
+      "options": {
+        "A": "Oxygen and water",
+        "B": "Carbon and hydrogen",
+        "C": "Carbon dioxide and water",
+        "D": "Methane and ethane"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Complete combustion of any hydrocarbon fuel in excess oxygen converts all carbon to $CO_2$ and all hydrogen to $H_2O$ vapor."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0112",
+      "type": "mcq",
+      "stem": "Which of these reactions is used to test for unsaturation in alkenes?",
+      "options": {
+        "A": "Neutralization",
+        "B": "Bromine water test",
+        "C": "Fermentation",
+        "D": "Esterification"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Alkenes undergo electrophilic addition with bromine, rapidly decolorizing the characteristic reddish-brown color of bromine water without evolving gas."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0113",
+      "type": "mcq",
+      "stem": "Which of the following functional groups is found in alcohols?",
+      "options": {
+        "A": "-COOH",
+        "B": "-CHO",
+        "C": "-OH",
+        "D": "-NH₂"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The hydroxyl functional group (-OH) attached to an $sp^3$ hybridized carbon is the defining characteristic of the alcohol family."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0114",
+      "type": "mcq",
+      "stem": "The functional group -COOH represents:",
+      "options": {
+        "A": "Aldehyde",
+        "B": "Carboxylic acid",
+        "C": "Alcohol",
+        "D": "Ester"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The -COOH group is the carboxyl functional group, which consists of a carbonyl and a hydroxyl group centered on the same carbon."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0115",
+      "type": "mcq",
+      "stem": "Which compound contains a carbonyl group?",
+      "options": {
+        "A": "Methane",
+        "B": "Ethanol",
+        "C": "Ethanal",
+        "D": "Ethene"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Ethanal is an aldehyde, which contains a carbon-oxygen double bond ($C=O$), known as a carbonyl group."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0116",
+      "type": "mcq",
+      "stem": "Esterification is a reaction between:",
+      "options": {
+        "A": "Alcohol and alkene",
+        "B": "Acid and alkene",
+        "C": "Alcohol and carboxylic acid",
+        "D": "Amine and acid"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Esterification involves an acid-catalyzed condensation between a carboxylic acid and an alcohol to produce an ester and water."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0117",
+      "type": "mcq",
+      "stem": "Which functional group is present in esters?",
+      "options": {
+        "A": "-NH₂",
+        "B": "-COO-",
+        "C": "-OH",
+        "D": "-CHO"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Esters are characterized by an internal carboxylate linkage group connecting acyl and alkoxy carbon chains."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0118",
+      "type": "mcq",
+      "stem": "Which of the following is an alkyne?",
+      "options": {
+        "A": "Ethane",
+        "B": "Propene",
+        "C": "Ethyne",
+        "D": "Butanol"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Ethyne ($C_2H_2$) features a carbon-carbon triple bond, making it the simplest member of the alkyne series."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0119",
+      "type": "mcq",
+      "stem": "The general formula of alkenes is:",
+      "options": {
+        "A": "CnH2n",
+        "B": "CnH2n+2",
+        "C": "CnH2n-2",
+        "D": "CnH2n+1OH"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Alkenes possess one degree of unsaturation (a double bond), giving them the general molecular formula $C_nH_{2n}$."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0120",
+      "type": "mcq",
+      "stem": "Which class of organic compounds is commonly used in perfumes and esters?",
+      "options": {
+        "A": "Alcohols",
+        "B": "Alkanes",
+        "C": "Carboxylic acids",
+        "D": "Esters"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Esters typically have volatile, pleasant, sweet fruity odors, making them useful in synthetic flavorings and perfumes."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0121",
+      "type": "mcq",
+      "stem": "A compound with the -CHO group is classified as:",
+      "options": {
+        "A": "Alcohol",
+        "B": "Ester",
+        "C": "Aldehyde",
+        "D": "Amine"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The -CHO group represents a terminal carbonyl group, which defines the aldehyde family."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0122",
+      "type": "mcq",
+      "stem": "Which of the following is an amine?",
+      "options": {
+        "A": "CH₃NH₂",
+        "B": "CH₃COOH",
+        "C": "CH₃OH",
+        "D": "CH₃CHO"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "$CH_3NH_2$ (methylamine) contains an amino nitrogen group (-NH₂) bonded directly to an alkyl carbon."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0123",
+      "type": "mcq",
+      "stem": "Which of the following is an example of an alkane?",
+      "options": {
+        "A": "Ethene",
+        "B": "Ethyne",
+        "C": "Propane",
+        "D": "Benzene"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Propane ($C_3H_8$) is a saturated open-chain hydrocarbon that contains only single covalent bonds."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0124",
+      "type": "mcq",
+      "stem": "Alkenes are hydrocarbons that contain:",
+      "options": {
+        "A": "Only single bonds",
+        "B": "Only triple bonds",
+        "C": "At least one double bond",
+        "D": "Aromatic rings"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Alkenes are unsaturated hydrocarbons defined by the presence of at least one carbon-carbon double bond."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0125",
+      "type": "mcq",
+      "stem": "Which of the following is an aromatic compound?",
+      "options": {
+        "A": "Ethanol",
+        "B": "Benzene",
+        "C": "Ethyne",
+        "D": "Butane"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Benzene ($C_6H_6$) is the quintessential cyclic planar aromatic compound with a stable, delocalized system of $\\pi$ electrons."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0126",
+      "type": "mcq",
+      "stem": "Carboxylic acids contain which functional group?",
+      "options": {
+        "A": "-OH",
+        "B": "-COOH",
+        "C": "-CHO",
+        "D": "-NH₂"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Carboxylic acids are defined by the carboxyl functional group (-COOH)."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0127",
+      "type": "mcq",
+      "stem": "Ethers are characterized by the functional group:",
+      "options": {
+        "A": "-OH",
+        "B": "-COO-",
+        "C": "-O-",
+        "D": "-NH₂"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Ethers contain an oxygen atom singly bonded between two alkyl or aryl carbon groups (R-O-R')."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0128",
+      "type": "mcq",
+      "stem": "An example of an alkene is:",
+      "options": {
+        "A": "Ethane",
+        "B": "Ethene",
+        "C": "Propane",
+        "D": "Butane"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ethene ($C_2H_4$) contains a carbon-carbon double bond, which classifies it as an alkene."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0129",
+      "type": "mcq",
+      "stem": "Functional group in alcohol is:",
+      "options": {
+        "A": "-OH",
+        "B": "-COOH",
+        "C": "-NH₂",
+        "D": "-CHO"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The hydroxyl group (-OH) is the active functional component in all simple aliphatic alcohols."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0130",
+      "type": "mcq",
+      "stem": "Which of these compounds has a triple bond?",
+      "options": {
+        "A": "Ethene",
+        "B": "Ethyne",
+        "C": "Ethane",
+        "D": "Propane"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ethyne ($H-C\\equiv C-H$) contains a linear carbon-carbon triple bond, making it an alkyne."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0131",
+      "type": "mcq",
+      "stem": "Organic compounds are mostly:",
+      "options": {
+        "A": "Ionic",
+        "B": "Polar",
+        "C": "Covalent",
+        "D": "Metallic"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Organic chemistry centers on carbon atoms, which form stable covalent bonds by sharing valence electrons with nonmetals like H, O, and N."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0132",
+      "type": "mcq",
+      "stem": "Organic chemistry is the study of compounds containing:",
+      "options": {
+        "A": "Hydrogen only",
+        "B": "Oxygen only",
+        "C": "Carbon",
+        "D": "Nitrogen"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Organic chemistry is formally defined as the study of the structure, properties, and reactions of carbon-based compounds."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0133",
+      "type": "mcq",
+      "stem": "Which of the following is a hydrocarbon?",
+      "options": {
+        "A": "CH₄",
+        "B": "H₂O",
+        "C": "CO₂",
+        "D": "NH₃"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Methane ($CH_4$) is composed entirely of carbon and hydrogen atoms, fitting the definition of a hydrocarbon."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0134",
+      "type": "mcq",
+      "stem": "Which of the following is NOT an organic compound?",
+      "options": {
+        "A": "CH₃COOH",
+        "B": "C₂H₅OH",
+        "C": "NaCl",
+        "D": "C₆H₆"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Sodium chloride ($NaCl$) is an inorganic ionic salt that contains no carbon atoms in its chemical framework."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0135",
+      "type": "mcq",
+      "stem": "Alkanes are also known as:",
+      "options": {
+        "A": "Saturated hydrocarbons",
+        "B": "Unsaturated hydrocarbons",
+        "C": "Aromatic hydrocarbons",
+        "D": "Esters"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Alkanes are called saturated hydrocarbons because they contain the maximum possible number of hydrogen atoms per carbon, with no double or triple bonds."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0136",
+      "type": "mcq",
+      "stem": "The general formula of alkanes is:",
+      "options": {
+        "A": "CnH2n+2",
+        "B": "CnH2n",
+        "C": "CnH2n-2",
+        "D": "CnH2nO"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Acyclic saturated alkanes systematically follow the regular molecular ratio formula $C_nH_{2n+2}$."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0137",
+      "type": "mcq",
+      "stem": "Which of the following is NOT an application of fullerenes?",
+      "options": {
+        "A": "Drug delivery",
+        "B": "Superconductors",
+        "C": "Insulating materials",
+        "D": "Fuel additives"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Fullerenes and their derivatives can accept electrons and conduct charge well, making them more suitable for semiconducting or conducting applications rather than use as electrical insulators."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0138",
+      "type": "mcq",
+      "stem": "Buckminsterfullerene has how many carbon atoms?",
+      "options": {
+        "A": "30",
+        "B": "60",
+        "C": "90",
+        "D": "120"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The most stable, widely studied classic buckyball fullerene molecule is composed of exactly 60 carbon atoms ($C_{60}$)."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0139",
+      "type": "mcq",
+      "stem": "Fullerenes are made entirely of:",
+      "options": {
+        "A": "Hydrogen",
+        "B": "Carbon",
+        "C": "Nitrogen",
+        "D": "Silicon"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Fullerenes are pure allotropic forms of carbon, containing no other elemental components within their cages."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0140",
+      "type": "mcq",
+      "stem": "Fullerenes differ from other carbon allotropes because they are:",
+      "options": {
+        "A": "Crystalline",
+        "B": "Gaseous",
+        "C": "Hollow",
+        "D": "Liquid"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Unlike continuous network solids like diamond or graphite, fullerenes exist as discrete, hollow molecular cages."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0141",
+      "type": "mcq",
+      "stem": "Which structure resembles a soccer ball?",
+      "options": {
+        "A": "Diamond",
+        "B": "Graphene",
+        "C": "C60 fullerene",
+        "D": "Charcoal"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The truncated icosahedron shape of the $C_{60}$ fullerene module matches the exact arrangement of pentagons and hexagons found on a standard soccer ball."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0142",
+      "type": "mcq",
+      "stem": "Fullerenes are allotropes of:",
+      "options": {
+        "A": "Nitrogen",
+        "B": "Oxygen",
+        "C": "Carbon",
+        "D": "Hydrogen"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Fullerenes represent an elemental modification, or allotrope, of the element carbon."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0143",
+      "type": "mcq",
+      "stem": "Fullerenes are shaped like:",
+      "options": {
+        "A": "Cubes",
+        "B": "Cylinders",
+        "C": "Hollow spheres or tubes",
+        "D": "Sheets"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Fullerene carbon structures are shaped like hollow spheres (buckyballs) or elongated hollow cylinders (carbon nanotubes)."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0144",
+      "type": "mcq",
+      "stem": "Which of these is not a property of fullerenes?",
+      "options": {
+        "A": "Good electrical conductor",
+        "B": "High melting point",
+        "C": "Non-reactive",
+        "D": "Insoluble in water"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Fullerenes can undergo addition reactions across their double bonds, meaning they are not completely non-reactive or chemically inert."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0145",
+      "type": "mcq",
+      "stem": "Fullerenes are used in:",
+      "options": {
+        "A": "Fertilizers",
+        "B": "Solar cells",
+        "C": "Food preservatives",
+        "D": "Paints"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Because fullerenes are strong electron acceptors, they are used as electron-transporting layers in organic photovoltaic solar cells."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0146",
+      "type": "mcq",
+      "stem": "Which of these is a benefit of nanotechnology?",
+      "options": {
+        "A": "Reduces surface area",
+        "B": "Increases toxicity",
+        "C": "Improves targeted drug delivery",
+        "D": "Increases pollution"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Functionalized nanoparticles can be engineered to target specific cells, reducing systemic side effects and improving drug delivery precision."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0147",
+      "type": "mcq",
+      "stem": "Nanoparticles are widely used in:",
+      "options": {
+        "A": "Coal mining",
+        "B": "Water purification",
+        "C": "Plastic production",
+        "D": "Shoe making"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Because of their large relative surface area and high reactivity, nanomaterials make effective adsorbents and catalysts for removing pollutants during water treatment."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0148",
+      "type": "mcq",
+      "stem": "Nanochemistry is mostly related to:",
+      "options": {
+        "A": "Large molecules",
+        "B": "Bulk chemicals",
+        "C": "Atoms and molecules at nanoscale",
+        "D": "Macroscopic objects"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Nanochemistry focuses on the unique chemical properties of materials assembled at the 1 to 100 nanometer scale."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0149",
+      "type": "mcq",
+      "stem": "Nanomaterials can be:",
+      "options": {
+        "A": "Only metals",
+        "B": "Only nonmetals",
+        "C": "Metals, nonmetals, and polymers",
+        "D": "Gases only"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Nanostructured configurations can be synthesized across diverse chemical classes, including metallic, inorganic nonmetallic, and organic polymer systems."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0150",
+      "type": "mcq",
+      "stem": "Nanotubes are a form of:",
+      "options": {
+        "A": "Diamond",
+        "B": "Fullerene",
+        "C": "Graphite",
+        "D": "Salt"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cylindrical carbon nanotubes are structurally classified as part of the fullerene family of closed-surface hollow carbon allotropes."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0151",
+      "type": "mcq",
+      "stem": "Nanochemistry deals with materials in the size range of:",
+      "options": {
+        "A": "Micrometres",
+        "B": "Centimetres",
+        "C": "Nanometres",
+        "D": "Kilometres"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Nanochemistry operates within the nanometer scale ($10^{-9}$ meters), where size-dependent quantum effects begin to emerge."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0152",
+      "type": "mcq",
+      "stem": "One nanometre equals:",
+      "options": {
+        "A": "10⁻² m",
+        "B": "10⁻⁶ m",
+        "C": "10⁻⁹ m",
+        "D": "10⁻³ m"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The SI prefix 'nano-' represents a scaling factor of one billionth, or $10^{-9}$ meters."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0153",
+      "type": "mcq",
+      "stem": "Which of the following is an application of nanochemistry?",
+      "options": {
+        "A": "Cooking",
+        "B": "Nano-drug delivery",
+        "C": "Farming",
+        "D": "Painting walls"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Nanochemistry principles enable the construction of nanoscale drug carriers capable of navigating biological barriers for targeted medicine."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0154",
+      "type": "mcq",
+      "stem": "Nanoparticles are useful in medicine because of their:",
+      "options": {
+        "A": "High boiling points",
+        "B": "Large size",
+        "C": "High surface area to volume ratio",
+        "D": "Heavy mass"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A high surface-area-to-volume ratio allows more therapeutic molecules to bind to the nanoparticle's surface, improving drug loading efficiency."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0155",
+      "type": "mcq",
+      "stem": "A common example of nanomaterial is:",
+      "options": {
+        "A": "Sand",
+        "B": "Fullerene",
+        "C": "Table salt",
+        "D": "Limestone"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Fullerenes ($C_{60}$) have well-defined molecular architectures that fall directly within the nanometer dimension range."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0156",
+      "type": "mcq",
+      "stem": "Which of the following elements is a halogen?",
+      "options": {
+        "A": "Oxygen",
+        "B": "Nitrogen",
+        "C": "Chlorine",
+        "D": "Sulphur"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Chlorine is a Group 17 element, classifying it as a halogen."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0157",
+      "type": "mcq",
+      "stem": "Which compound is amphoteric?",
+      "options": {
+        "A": "NaOH",
+        "B": "HCl",
+        "C": "ZnO",
+        "D": "NH₄Cl"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Zinc oxide ($ZnO$) is an amphoteric oxide capable of reacting with both strong acids and strong bases to form salts."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0158",
+      "type": "mcq",
+      "stem": "Which of these oxides is acidic?",
+      "options": {
+        "A": "CO₂",
+        "B": "Na₂O",
+        "C": "CaO",
+        "D": "MgO"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Carbon dioxide ($CO_2$) is a non-metal oxide that dissolves in water to form carbonic acid, making it an acidic oxide."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0159",
+      "type": "mcq",
+      "stem": "The most abundant gas in the atmosphere is:",
+      "options": {
+        "A": "Oxygen",
+        "B": "Hydrogen",
+        "C": "Nitrogen",
+        "D": "Carbon dioxide"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Diatomic nitrogen gas ($N_2$) makes up approximately 78% of the Earth's dry atmosphere by volume."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0160",
+      "type": "mcq",
+      "stem": "Hard water contains:",
+      "options": {
+        "A": "Sodium ions",
+        "B": "Potassium ions",
+        "C": "Calcium and magnesium ions",
+        "D": "Iron ions"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Water hardness is caused by dissolved polyvalent metallic cations, primarily calcium ($Ca^{2+}$) and magnesium ($Mg^{2+}$) ions."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0161",
+      "type": "mcq",
+      "stem": "Inorganic chemistry deals with compounds that are generally:",
+      "options": {
+        "A": "Carbon-based",
+        "B": "Organic in nature",
+        "C": "Non-carbon based",
+        "D": "Hydrocarbons only"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Inorganic chemistry focuses on the properties and behavior of non-carbon-based compounds, covering metals, minerals, and organometallic elements."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0162",
+      "type": "mcq",
+      "stem": "Which of the following is an example of an inorganic compound?",
+      "options": {
+        "A": "Methane",
+        "B": "Acetic acid",
+        "C": "Sodium chloride",
+        "D": "Ethanol"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Sodium chloride ($NaCl$) is a mineral-based ionic salt that does not contain carbon-hydrogen bonds, classifying it as an inorganic compound."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0163",
+      "type": "mcq",
+      "stem": "Which of these is a property of metals?",
+      "options": {
+        "A": "Brittle",
+        "B": "Poor conductor",
+        "C": "Dull",
+        "D": "Malleable"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Metals are malleable, meaning they can be beaten or rolled into thin sheets without shattering due to their non-directional metallic bonding."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0164",
+      "type": "mcq",
+      "stem": "Which gas is produced when metals react with acids?",
+      "options": {
+        "A": "Oxygen",
+        "B": "Carbon dioxide",
+        "C": "Hydrogen",
+        "D": "Nitrogen"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Electropositive metals displace hydrogen ions from dilute mineral acids, liberating elemental hydrogen gas ($H_2$)."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0165",
+      "type": "mcq",
+      "stem": "Which of the following is an alkali metal?",
+      "options": {
+        "A": "Magnesium",
+        "B": "Calcium",
+        "C": "Sodium",
+        "D": "Iron"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Sodium ($Na$) belongs to Group 1 of the periodic table, placing it in the alkali metal family."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0166",
+      "type": "mcq",
+      "stem": "Decantation is suitable for:",
+      "options": {
+        "A": "Homogeneous mixtures",
+        "B": "Separating immiscible liquids",
+        "C": "Removing dissolved substances",
+        "D": "Separating gases"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Decantation allows a dense sediment or an immiscible liquid layer to settle so the top liquid layer can be carefully poured off."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0167",
+      "type": "mcq",
+      "stem": "Which of the following techniques involves a funnel?",
+      "options": {
+        "A": "Evaporation",
+        "B": "Filtration",
+        "C": "Distillation",
+        "D": "Crystallization"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Filtration setups typically utilize a conical funnel to support the porous filter paper barrier that separates solids from liquids."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0168",
+      "type": "mcq",
+      "stem": "What technique is best for separating salt from sea water?",
+      "options": {
+        "A": "Filtration",
+        "B": "Crystallization",
+        "C": "Decantation",
+        "D": "Sedimentation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Evaporating the water concentrates the brine solution until the salt precipitates out as pure crystals."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0169",
+      "type": "mcq",
+      "stem": "Which method separates a mixture based on particle size?",
+      "options": {
+        "A": "Crystallization",
+        "B": "Sieving",
+        "C": "Filtration",
+        "D": "Sublimation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Sieving uses a mesh screen to separate smaller particles from larger particles based on size differences."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0170",
+      "type": "mcq",
+      "stem": "Which of the following is not a separation technique?",
+      "options": {
+        "A": "Chromatography",
+        "B": "Crystallization",
+        "C": "Combustion",
+        "D": "Decantation"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Combustion is a chemical reaction that burns a substance in oxygen, rather than a physical separation method."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0171",
+      "type": "mcq",
+      "stem": "Which separation technique is best for separating a mixture of sand and water?",
+      "options": {
+        "A": "Filtration",
+        "B": "Distillation",
+        "C": "Sublimation",
+        "D": "Chromatography"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Filtration cleanly separates insoluble sand particles from liquid water by trapping the sand on a filter."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0172",
+      "type": "mcq",
+      "stem": "What is the process of converting a solid directly to gas called?",
+      "options": {
+        "A": "Condensation",
+        "B": "Sublimation",
+        "C": "Filtration",
+        "D": "Decantation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Sublimation is the phase transition of a substance directly from the solid to the gas phase without melting into a liquid intermediate."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0173",
+      "type": "mcq",
+      "stem": "Which method is suitable for separating colors in ink?",
+      "options": {
+        "A": "Evaporation",
+        "B": "Chromatography",
+        "C": "Filtration",
+        "D": "Distillation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Chromatography separates individual pigments in ink based on their different affinities for a mobile phase versus a stationary phase."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0174",
+      "type": "mcq",
+      "stem": "Distillation is used to separate:",
+      "options": {
+        "A": "Solids from liquids",
+        "B": "Two immiscible liquids",
+        "C": "Soluble solids from solutions",
+        "D": "Miscible liquids with different boiling points"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Distillation relies on different boiling points to separate miscible liquids by boiling off and condensing the more volatile component."
+    },
+    {
+      "id": "uni-tasued-chm102-bank-0175",
+      "type": "mcq",
+      "stem": "Evaporation is used to recover:",
+      "options": {
+        "A": "Liquids from solutions",
+        "B": "Insoluble solids",
+        "C": "Solids from solutions",
+        "D": "Gases from mixtures"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Heating a solution vaporizes the liquid solvent completely, leaving behind the non-volatile dissolved solid solute."
+    }
+  ]
+}

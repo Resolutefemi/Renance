@@ -1,0 +1,17 @@
+{
+  "school": "uniabuja",
+  "name": "University of Abuja",
+  "short": "UNIABUJA",
+  "courses": [
+    {
+      "slug": "gst111",
+      "code": "GST 111",
+      "title": null,
+      "semester": null,
+      "icon": "menu_book",
+      "bank": "uni-uniabuja-gst111-bank",
+      "questionCount": 35,
+      "pdf": null
+    }
+  ]
+}

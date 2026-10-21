@@ -1,0 +1,1623 @@
+{
+ "code": "uni-uniosun-chm101-bank",
+ "title": "UNIOSUN CHM 101 | Course Question Bank",
+ "version": 1,
+ "questionCount": 124,
+ "totalMarks": 124,
+ "category": "university",
+ "body": "University Modules",
+ "questions": [
+  {
+   "id": "uni-uniosun-chm101-bank-0001",
+   "type": "mcq",
+   "stem": "The variability in errors in a set of measurement, which is usually estimated by least square method is called",
+   "options": {
+    "A": "Personal error",
+    "B": "Indeterminate error",
+    "C": "Operative error",
+    "D": "Relative error"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0002",
+   "type": "mcq",
+   "stem": "Which of the types of errors is best described as the reproducibility of measurements?",
+   "options": {
+    "A": "Relative accuracy",
+    "B": "Probable error",
+    "C": "Precision",
+    "D": "Average deviation"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0003",
+   "type": "mcq",
+   "stem": "If Z = G\u2044Y  , the maximum error in Z is best expressed as",
+   "options": {
+    "A": "Ez = (EGG + EYY)",
+    "B": "Ez = Z (EAA + EBB)",
+    "C": "Ez = Z (EAA \u2212 EBB)",
+    "D": "Ez = Z (EGG + EYY)"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0004",
+   "type": "mcq",
+   "stem": "Given the summation Y = 1.05(\u00b10.02) + 4.10(\u00b10.03) \u2212 1.97(\u00b10.05), the absolute error and percentage relative error in the measurement is",
+   "options": {
+    "A": "0.06 and 1.89%",
+    "B": "0.05 and 1.87%",
+    "C": "0.06 and 1.87%",
+    "D": "0.05 and 1.89%"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0005",
+   "type": "mcq",
+   "stem": "A solution of 0.5moldm-3 NaOH was titrated against 0.2moldm-3 H2SO4 in the burette using phenolphthalein as indicator. The results obtained are: Initial Burette reading = 2.98  \u00b10.05cm3 Final Burette reading = 38.75  \u00b10.05cm3  where \u00b10.05 is the maximum errors Determine the absolute error and relative error in ppt. of the measurements.",
+   "options": {
+    "A": "\u00b10.20, 2.8\u2030",
+    "B": "\u00b10.20, 3.8\u2030",
+    "C": "\u00b10.10, 4.8\u2030",
+    "D": "\u00b10.10, 2.8\u2030"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0006",
+   "type": "mcq",
+   "stem": "Evaluate V = 760mmHg",
+   "options": {
+    "A": "76.20dm3",
+    "B": "76.2dm3",
+    "C": "76dm3",
+    "D": "76.2072dm3 8. The relationship between the substances undergoing chemical reactions is known as"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0007",
+   "type": "mcq",
+   "stem": "Empirical formula is best defined as",
+   "options": {
+    "A": "The simplest formula that shows the number of atoms of a compound",
+    "B": "The simplest formula that shows the number of atoms of each element in one ion of a compound",
+    "C": "The simplest formula that shows the number of atoms of each element in one molecule of a compound",
+    "D": "The simplest formula that shows the actual composition of a molecule of a compound"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0008",
+   "type": "mcq",
+   "stem": "Molecular formula is best defined as",
+   "options": {
+    "A": "The formula that shows the number of atoms of a compound",
+    "B": "The formula that shows the number of atoms of each element in one ion of a compound",
+    "C": "The formula that shows the number of atoms of each element in one molecule of a compound",
+    "D": "The formula that shows the actual composition of a molecule of a compound"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0009",
+   "type": "mcq",
+   "stem": "The equivalence of 1mole of any gas at s.t.p. is",
+   "options": {
+    "A": "22.4cm3",
+    "B": "22400dm3",
+    "C": "0.0224m3",
+    "D": "2.24m3"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0010",
+   "type": "mcq",
+   "stem": "How many moles of atoms of oxygen are there in 0.3mole of SO2?",
+   "options": {
+    "A": "0.3mole",
+    "B": "0.6mole",
+    "C": "0.9mole",
+    "D": "1.2mole"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0011",
+   "type": "mcq",
+   "stem": "How many atoms of oxygen are there in 10g of H2SO4?",
+   "options": {
+    "A": "2.47 x 1023",
+    "B": "2.46 x 1023",
+    "C": "2.45 x 1023",
+    "D": "2.44 x 1023"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0012",
+   "type": "mcq",
+   "stem": "What is the number of copper atoms in a 1naira coin which weighs 7.39g, assume the material from the coin is made is contains 86% copper",
+   "options": {
+    "A": "6.02 x 1023",
+    "B": "6.02 x 1022",
+    "C": "6.02 x 1021",
+    "D": "6.2 x 1023"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0013",
+   "type": "mcq",
+   "stem": "What is the mass of oxygen O2 needed to burn 4.6g of Na in the reaction below? 4Na + O2  \u2192  2Na2O",
+   "options": {
+    "A": "1.3g",
+    "B": "1.6g",
+    "C": "1.5g",
+    "D": "1.4g"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0014",
+   "type": "mcq",
+   "stem": "How many moles of NH3 are there in 500cm3 of the gas?",
+   "options": {
+    "A": "0.02mol",
+    "B": "0.2mol",
+    "C": "0.002mol",
+    "D": "2.00mol"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0015",
+   "type": "mcq",
+   "stem": "What is the mass in grams of 1.45 x 1023 molecules of sucrose C12H22O11?",
+   "options": {
+    "A": "82.11g",
+    "B": "82.09g",
+    "C": "82.08g",
+    "D": "82.12g"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0016",
+   "type": "mcq",
+   "stem": "What mass of CuSO4 will be obtained by starting with 10g of CuO from the following reaction (Cu = 63.5g)?",
+   "options": {
+    "A": "20.04g",
+    "B": "20.05g",
+    "C": "20.06g",
+    "D": "20.07g"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0017",
+   "type": "mcq",
+   "stem": "Calculate the solubility of a solution containing 6g of NaCl   {NaCl = 58.44} in 200cm3 of solution",
+   "options": {
+    "A": "1.531",
+    "B": "0.153",
+    "C": "0.513",
+    "D": "1.153"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0018",
+   "type": "mcq",
+   "stem": "Calculate the amount in moles and grams of KMnO4 present in 3dm3 of 0.250mol",
+   "options": {
+    "A": "1.23mol & 54g",
+    "B": "0.75mol & 119g",
+    "C": "0.25mol & 233g",
+    "D": "0.135mol & 23g"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0019",
+   "type": "mcq",
+   "stem": "A 0.6025g of sample of a chloride salt was dissolved in water and the chloride precipitated by adding excess silver nitrate. The precipitate of silver nitrate was filtered, washed, dried and found to weight 0.7134g. Calculate the percentage chloride in the sample  [Cl = 35.45,  Ag = 107.87]",
+   "options": {
+    "A": "22.95%",
+    "B": "95.22%",
+    "C": "29.25%",
+    "D": "25.29%"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0020",
+   "type": "mcq",
+   "stem": "The smallest unit of matter than has the properties of an element is called",
+   "options": {
+    "A": "Atom",
+    "B": "Molecule",
+    "C": "Ion",
+    "D": "Particles"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0021",
+   "type": "mcq",
+   "stem": "The nucleus of an atom contributes to its .........while electrons contributes to its............",
+   "options": {
+    "A": "Mass/weight",
+    "B": "Volume/Mass",
+    "C": "Mass/volume",
+    "D": "volume/volume"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0022",
+   "type": "mcq",
+   "stem": "Given an atomic species:  MDX, The atomic identity of X is determined by its",
+   "options": {
+    "A": "D",
+    "B": "M",
+    "C": "M-D",
+    "D": "D-M"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0023",
+   "type": "mcq",
+   "stem": "Isotopes are",
+   "options": {
+    "A": "Atoms of same element with different atomic numbers",
+    "B": "Atoms of same element with differences in their number of neutrons",
+    "C": "Atoms of different elements with same mass number",
+    "D": "Atoms of different elements with the same atomic number"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0024",
+   "type": "mcq",
+   "stem": "Isobars are",
+   "options": {
+    "A": "Atoms of same element with the same number of neutrons",
+    "B": "Atoms of same element with differences in their number of neutrons",
+    "C": "Atoms of different elements with same mass number",
+    "D": "Atoms of different elements with the same atomic number"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0025",
+   "type": "mcq",
+   "stem": "Isotones are",
+   "options": {
+    "A": "Atoms of same element with the same number of neutrons",
+    "B": "Atoms of same element with differences in their number of neutrons",
+    "C": "Atoms of different elements with same mass number",
+    "D": "Atoms of different elements with the same atomic number"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0026",
+   "type": "mcq",
+   "stem": "The father of atomic theory was",
+   "options": {
+    "A": "J.J. Thompson [1766 \u2013 1823]",
+    "B": "Ernest Rutherford [1911 \u2013 1934]",
+    "C": "John Dalton [1766 \u2013 1844]",
+    "D": "R."
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0027",
+   "type": "mcq",
+   "stem": "Atoms are .......",
+   "options": {
+    "A": "Indestructible and unchangeable",
+    "B": "Indestructible and predictable",
+    "C": "The smallest particle of an ion",
+    "D": "All of the above"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0028",
+   "type": "mcq",
+   "stem": "When elements combine, they do so in",
+   "options": {
+    "A": "Simple whole number fractions",
+    "B": "Multiple whole number ratios",
+    "C": "Simple whole number ratios",
+    "D": "Multiple whole number fractions"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0029",
+   "type": "mcq",
+   "stem": "Atom of the same two or more given elements can combine indifferent single whole numbers ratio to form different compounds. This statement is best described as",
+   "options": {
+    "A": "Law of Mass Action",
+    "B": "Law of Variable proportion",
+    "C": "Law of Standard proportion",
+    "D": "Law of Multiple proportion"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0030",
+   "type": "mcq",
+   "stem": "The parameters that describe the distribution of electrons in an atom and their fundamental nature are called",
+   "options": {
+    "A": "The Principal quantum numbers",
+    "B": "The Azimuthal quantum numbers",
+    "C": "The Magnetic quantum numbers",
+    "D": "The Quantum numbers"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0031",
+   "type": "mcq",
+   "stem": "Principal quantum number describes",
+   "options": {
+    "A": "Main energy distribution",
+    "B": "Main energy shell",
+    "C": "Main energy sub-level",
+    "D": "Main energy orientation"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0032",
+   "type": "mcq",
+   "stem": "Azimuthal quantum number describes",
+   "options": {
+    "A": "Main energy distribution",
+    "B": "Main energy shell",
+    "C": "Main energy sub-level",
+    "D": "Main energy orientation"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0033",
+   "type": "mcq",
+   "stem": "Azimuthal quantum number is otherwise known as",
+   "options": {
+    "A": "Subordinate quantum number",
+    "B": "Proportional quantum number",
+    "C": "Analytical quantum number",
+    "D": "Subsidiary quantum number"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0034",
+   "type": "mcq",
+   "stem": "The number of possible orientations in a 3-dimensional space for each type of orbital can best be described as",
+   "options": {
+    "A": "Spin Quantum number",
+    "B": "Magnetic Quantum number",
+    "C": "Azimuthal quantum number",
+    "D": "Principal quantum number"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0035",
+   "type": "mcq",
+   "stem": "The number of possible orientations that an electron can have in the presence of a magnetic field or in relation to another is best be described as",
+   "options": {
+    "A": "Spin Quantum number",
+    "B": "Magnetic Quantum number",
+    "C": "Azimuthal quantum number",
+    "D": "Principal quantum number"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0036",
+   "type": "mcq",
+   "stem": "f student took a reading for 20.44% instead of 20.34%. calculate the absolute error and the relative error respectively",
+   "options": {
+    "A": "0.10%, 0.05",
+    "B": "0.10%, 0.005",
+    "C": "1.0%, 0.005",
+    "D": "1.0%, 0.05"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0037",
+   "type": "mcq",
+   "stem": "The molar concentration of a solution is determined by four separate titrations, the results being 0.2041, 0.2039. 0.2049 and 0.2043. calculate the mean & median of the data",
+   "options": {
+    "A": "0.2042 & 0.2044",
+    "B": "0.2043 & 0.2042",
+    "C": "0.2043 & 0.2043",
+    "D": "0.2043 & 0.2041"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0038",
+   "type": "mcq",
+   "stem": "Calculate the root mean square velocity (r.m.s.) of 1 mole of CO2 at 270C (mm = 44gmol-1)",
+   "options": {
+    "A": "4.12 x 102m/s",
+    "B": "12 x 102m/s",
+    "C": "5.2 x 102m/s",
+    "D": "1.2 x 102m/s"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0039",
+   "type": "mcq",
+   "stem": "In a first order reaction, half of the reactant is decomposed in 300seconds. The time taken for 2/3 of the reactant to be decomposed is .................",
+   "options": {
+    "A": "198.84sec",
+    "B": "475.49sec",
+    "C": "2.54 x 10-3sec",
+    "D": "4.75 sec"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0040",
+   "type": "mcq",
+   "stem": "The rate constant for the first order reaction at 500C is twice that at 300C. the activation energy (Ea) of the reaction is ................... (R = 8.314Jmol-1)",
+   "options": {
+    "A": "178KJ",
+    "B": "187KJ",
+    "C": "188KJ",
+    "D": "177KJ"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0041",
+   "type": "mcq",
+   "stem": "Addition of catalyst to a reaction at a particular temperature ..........the rate of reaction by ................the activation energy",
+   "options": {
+    "A": "increase, lowering",
+    "B": "decreasing, lowering",
+    "C": "increase, increasing",
+    "D": "decreasing, increasing"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0042",
+   "type": "mcq",
+   "stem": "The electronic configuration of potassium with the atomic number 19 is ...............",
+   "options": {
+    "A": "1s22s22p63s23p6",
+    "B": "1s22s22p63s23p64s1",
+    "C": "1s22s22p63d9",
+    "D": "1s22s22p63s23p43d1"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0043",
+   "type": "mcq",
+   "stem": ".............ions/molecules are always larger than the atoms from which they are formed",
+   "options": {
+    "A": "neutral",
+    "B": "positive",
+    "C": "negative",
+    "D": "none"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0044",
+   "type": "mcq",
+   "stem": ".............is a substance which accepts a lone pair of electrons in forming a co-ordinate bond",
+   "options": {
+    "A": "base",
+    "B": "acid",
+    "C": "salt",
+    "D": "proton"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0045",
+   "type": "mcq",
+   "stem": "..........is an example of Lewis base",
+   "options": {
+    "A": "NH3",
+    "B": "H+",
+    "C": "SO3",
+    "D": "He"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0046",
+   "type": "mcq",
+   "stem": "............ is an example of a monoprotic acid",
+   "options": {
+    "A": "CH3COOH",
+    "B": "H2SO4",
+    "C": "H2C2O4",
+    "D": "H3PO4"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0047",
+   "type": "mcq",
+   "stem": "A 0.453g sample of a liquid consisting C, H and O was burned in pure oxygen and 1.039g of CO2 and 0.6369 of H2O were obtained. What is the empirical formula of this compound? [C = 12.01115, H = 1.00797,O = 15.9994]",
+   "options": {
+    "A": "CHO",
+    "B": "C4H12O",
+    "C": "C2H6O2",
+    "D": "C2H6O2"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0048",
+   "type": "mcq",
+   "stem": "A reducing agent does",
+   "options": {
+    "A": "accepts electrons",
+    "B": "donates a lone pair of electrons",
+    "C": "donates electrons",
+    "D": "donates and accepts at the same time"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0049",
+   "type": "mcq",
+   "stem": "How many moles of oxygen atom are combined with 4.20moles of Cl atoms in Cl2O7?",
+   "options": {
+    "A": "4.20",
+    "B": "42.00",
+    "C": "17.40",
+    "D": "14.70"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0050",
+   "type": "mcq",
+   "stem": "What is the pH of a solution that is 0.5mol/dm3 in acetic acid (CH3COOH) adn2.5mol/dm3 in sodium acetate (CH3COONa), Ka of acetic acid is 1.75 x 10-3",
+   "options": {
+    "A": "5.23",
+    "B": "4.12",
+    "C": "5.44",
+    "D": "3.50"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0051",
+   "type": "mcq",
+   "stem": "The oxidation number of \u2018B\u2019 in the compound E2BK3 is ....... [E = +1; K = -2]",
+   "options": {
+    "A": "+3",
+    "B": "+2",
+    "C": "+4",
+    "D": "-2"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0052",
+   "type": "mcq",
+   "stem": "The following principles are applicable to writing electronic configurations except",
+   "options": {
+    "A": "Hundi\u2019s principle",
+    "B": "Aufbau principle",
+    "C": "Pauli\u2019s principle",
+    "D": "Hund\u2019s principle"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0053",
+   "type": "mcq",
+   "stem": "The process of building atoms from the ground level, placing the first electron at the lowest potential energy is known as",
+   "options": {
+    "A": "Hundi\u2019s principle",
+    "B": "Aufbau principle",
+    "C": "Pauli\u2019s principle",
+    "D": "Hund\u2019s principle"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0054",
+   "type": "mcq",
+   "stem": "The electronic configuration of oxygen is",
+   "options": {
+    "A": "1s2 2s2 2px2 2py1 2pz1",
+    "B": "1s2 2s2 2p2 4d2",
+    "C": "1s2 2s2 3p2 4d2",
+    "D": "1s2 2s2 2px1 2py1 2pz1"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0055",
+   "type": "mcq",
+   "stem": "The idea of arranging electrons into generated orbitals one by one before pairing is known as",
+   "options": {
+    "A": "Hundi\u2019s principle",
+    "B": "Aufbau principle",
+    "C": "Pauli\u2019s principle",
+    "D": "Hund\u2019s principle"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0056",
+   "type": "mcq",
+   "stem": "The statement \u201cElectrons to the opposite spin can occupy the same orbital\u201d is best described as",
+   "options": {
+    "A": "Hundi\u2019s principle",
+    "B": "Aufbau principle",
+    "C": "Pauli\u2019s principle",
+    "D": "Hund\u2019s principle"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0057",
+   "type": "mcq",
+   "stem": "The state of equilibrium is limited to chemical reactions in",
+   "options": {
+    "A": "An open system",
+    "B": "A reversible system",
+    "C": "A closed system",
+    "D": "A dynamic system"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0058",
+   "type": "mcq",
+   "stem": "The Law of Mass Action states that",
+   "options": {
+    "A": "Rate \u221d Concentration of reaction",
+    "B": "Rate \u221d Concentration of products",
+    "C": "Rate Concentration",
+    "D": "Rate Concentration of reactants"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0059",
+   "type": "mcq",
+   "stem": "Consider a hypothetical reaction:  aA + bB \u2192 cC + yY Which of the following statements is correct?",
+   "options": {
+    "A": "kf[C]c[Y]y = kr[A]a[B]b",
+    "B": "kf[A]a[B]b = kr[C]c[D]d",
+    "C": "kf[A]a[B]b = kr[C]c[Y]y",
+    "D": "kr[C]c[Y]y = kf[A]a[B]b"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0060",
+   "type": "mcq",
+   "stem": "For the reaction:  N2 + 3H2  \u2194  2NH3, the value of kp is",
+   "options": {
+    "A": "PNP2NH  P3H223",
+    "B": "PPNNH  PH3223",
+    "C": "PNH33 PN2  PH22",
+    "D": "PNP2NH  PH323"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0061",
+   "type": "mcq",
+   "stem": "The relationship between kp and kc is",
+   "options": {
+    "A": "kp = kp. (RT)",
+    "B": "kp = kc. (RT)\u2206n",
+    "C": "kc = kp. (RT)\u2206n",
+    "D": "kp = kc. (RT)"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0062",
+   "type": "mcq",
+   "stem": "For the reaction: N2 + O2 \u2194 2NO, the value of  kc is",
+   "options": {
+    "A": "4x2 [a\u2212x][b\u2212x]",
+    "B": "4x2 [a\u2212x][b+x]",
+    "C": "2x2 [a\u2212x][b\u2212x]",
+    "D": "4x2 [a+x][b+x]"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0063",
+   "type": "mcq",
+   "stem": "Phosphorus pentachloride dissociates on heating according to the equation PCl5 \u2194 PCl3 + Cl2. If the kc for the reaction is 0.0326 moldm\u22123, calculate the value of  kp in Pascal at 1910C and R = 8.314J/molK is",
+   "options": {
+    "A": "152.67",
+    "B": "125.69",
+    "C": "125.76",
+    "D": "127.56"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0064",
+   "type": "mcq",
+   "stem": "Factors affecting reactions in equilibrium are",
+   "options": {
+    "A": "Catalyst, Light, Concentration, Pressure",
+    "B": "Catalyst, Temperature, Concentration, Pressure",
+    "C": "Catalyst, Light, Concentration, Surface Area",
+    "D": "Catalyst, Surface Area, Concentration, Pressure"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0065",
+   "type": "mcq",
+   "stem": "The shifting of the equilibrium position to annul the effect of changes to re-establish equilibrium is termed",
+   "options": {
+    "A": "Pauli\u2019s Exclusion Principle",
+    "B": "Le-Chatelier Principle",
+    "C": "Aufbau Principle",
+    "D": "Exclusion Principle"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0066",
+   "type": "mcq",
+   "stem": "In an equilibrium reaction, pressure increase will favour the side with",
+   "options": {
+    "A": "Lower Volume",
+    "B": "Equivalent Volume",
+    "C": "Higher Volume",
+    "D": "Volume"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0067",
+   "type": "mcq",
+   "stem": "In the reaction: H2 + I2  \u2194  2HI,",
+   "options": {
+    "A": "Pressure has no effect",
+    "B": "Increase in pressure will cause equilibrium to shift to the right",
+    "C": "decrease in pressure will cause equilibrium to shift to the right",
+    "D": "decrease in pressure will cause equilibrium to shift to the left"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0068",
+   "type": "mcq",
+   "stem": "In the reaction: PCl5  \u2194  PCl3 + Cl2,",
+   "options": {
+    "A": "Pressure has no effect",
+    "B": "Increase in pressure will cause equilibrium to shift to the right",
+    "C": "decrease in pressure will cause equilibrium to shift to the left",
+    "D": "No Answer"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0069",
+   "type": "mcq",
+   "stem": "Increase in the concentration of products in a reaction will cause the equilibrium position to",
+   "options": {
+    "A": "Shift to the left",
+    "B": "Shift to the right",
+    "C": "Will have no effect",
+    "D": "Shift to both right and left"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0070",
+   "type": "mcq",
+   "stem": "What is the effect of increase in concentration on the equilibrium constant of a reaction?",
+   "options": {
+    "A": "The value of equilibrium constant increases",
+    "B": "The value of equilibrium constant decreases",
+    "C": "The value of equilibrium constant remains constant",
+    "D": "The value of equilibrium constant first increases, and later decreases"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0071",
+   "type": "mcq",
+   "stem": "Increase in temperature will",
+   "options": {
+    "A": "Favour the forward reaction of an exothermic reaction",
+    "B": "Favour the reverse reaction of an exothermic reaction",
+    "C": "Favour both forward and reverse reaction of an exothermic reaction",
+    "D": "Have no effect"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0072",
+   "type": "mcq",
+   "stem": "Does temperature changes affect the equilibrium constant of a reaction?",
+   "options": {
+    "A": "No, it doesn\u2019t",
+    "B": "Yes it does",
+    "C": "Yes, it doesn\u2019t",
+    "D": "No, it does E."
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0073",
+   "type": "mcq",
+   "stem": "Catalyst speeds up the rate of",
+   "options": {
+    "A": "Forward reaction",
+    "B": "Reverse reaction",
+    "C": "Both forward and reverse reaction",
+    "D": "All reactions"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0074",
+   "type": "mcq",
+   "stem": "Catalyst  ................... the rate of reaction by ................... the activation energy",
+   "options": {
+    "A": "decreases/raising",
+    "B": "decreases/lowering",
+    "C": "increases/raising",
+    "D": "increases/lowering"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0075",
+   "type": "mcq",
+   "stem": "Calculate the solubility in gdm-3 at 298K of calcium fluoride (CaF2) in a 0.1M NaF solution. [Ksp = 3.9 x 1014mol3dm\u22129, Ca = 40, F = 19g]",
+   "options": {
+    "A": "3.04 x 10\u22129gdm\u22123",
+    "B": "3.04 x 10\u221210gdm\u22123",
+    "C": "3.04 x 10\u22128gdm\u22123",
+    "D": "3.04 x 10\u22127gdm\u22123"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0076",
+   "type": "mcq",
+   "stem": "The reducing and oxidizing agents respectively in the reaction Fe2O3 + 3CO  \u2192  2Fe + 3CO2 are",
+   "options": {
+    "A": "Fe2O3 and CO",
+    "B": "Fe and CO",
+    "C": "CO and Fe2O3",
+    "D": "CO2 and NH3"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0077",
+   "type": "mcq",
+   "stem": "The oxidation numbers of hydrogen and oxygen are respectively +1 and -2 except in",
+   "options": {
+    "A": "Peroxides and Halogens",
+    "B": "Peroxides and Metallic Halides",
+    "C": "Metallic hydrides and peroxides",
+    "D": "Peroxides"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0078",
+   "type": "mcq",
+   "stem": "In the reaction MnO4\u2212 + Fe2+ + H+  \u2192  Mn2+ + Fe3+, the oxidation number of manganese changes from",
+   "options": {
+    "A": "+5 to +2",
+    "B": "+7 to +2",
+    "C": "+2 to +3",
+    "D": "+6 to +2"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0079",
+   "type": "mcq",
+   "stem": "To balance a redox reaction in basic medium, H2O is added to the side with",
+   "options": {
+    "A": "Lesser number of oxygen atoms",
+    "B": "Lesser number of hydrogen atoms",
+    "C": "More oxygen atoms",
+    "D": "Equivalent number of oxygen atoms"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0080",
+   "type": "mcq",
+   "stem": "The values of w, x and g in the redox reaction: IO3\u2212 + wCr3+ + xOH\u2212  \u2192  zI\u2212 + 2CrO42\u2212 + 5H2O is",
+   "options": {
+    "A": "2,10, 1",
+    "B": "2,1,10",
+    "C": "10,1,2",
+    "D": "10,2,1"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0081",
+   "type": "mcq",
+   "stem": "A reaction in which the same substance on the reactant side is being oxidized and reduced simultaneously is known as",
+   "options": {
+    "A": "Combustion reaction",
+    "B": "Addition reaction",
+    "C": "Dispropornation reaction",
+    "D": "Substitution reaction"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0082",
+   "type": "mcq",
+   "stem": "Substances that dissolve in water to release hydroxonium ion is known as",
+   "options": {
+    "A": "Base",
+    "B": "Salt",
+    "C": "Lewis Base",
+    "D": "Acid"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0083",
+   "type": "mcq",
+   "stem": "A substance that ionizes in solution to produce hydroxyl  ion is",
+   "options": {
+    "A": "Base",
+    "B": "Salt",
+    "C": "Acid",
+    "D": "Lewis Acid"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0084",
+   "type": "mcq",
+   "stem": "The definitions of Arrhenius emphasizes ..........and.......... in water",
+   "options": {
+    "A": "IO3\u2212  &  H2+",
+    "B": "OH\u2212  &  H+",
+    "C": "H2+  &  2OH\u2212",
+    "D": "IO33\u2212  &  H3+"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0085",
+   "type": "mcq",
+   "stem": "The Arrhenius acid and base respectively in the reaction NH3 + H2O  \u2194  NH4+ + OH\u2212",
+   "options": {
+    "A": "H2O  and  NH3",
+    "B": "NH3  and  H2O",
+    "C": "OH\u2212 and H2O",
+    "D": "NH4+ and NH3"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0086",
+   "type": "mcq",
+   "stem": "The conjugate base and acid respectively in question 97 above are",
+   "options": {
+    "A": "H2O  and  NH3",
+    "B": "NH3  and  H2O",
+    "C": "OH\u2212 and H2O",
+    "D": "NH4+ and NH3"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0087",
+   "type": "mcq",
+   "stem": "Water is best described as",
+   "options": {
+    "A": "Acid",
+    "B": "Base",
+    "C": "Amphiprotic",
+    "D": "Ampiteric"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0088",
+   "type": "mcq",
+   "stem": "In the dissociation of water: H2O  \u2194  H+ + OH\u2212, the value of kw is [OH\u2212][H+]",
+   "options": {
+    "A": "kw = [H3O]",
+    "B": "kw = [OH[H\u22122]O[H] +]",
+    "C": "kw =",
+    "D": "kw = [ OH[H\u22123]O[H] +]"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0089",
+   "type": "mcq",
+   "stem": "The hydrogen ion concentration of pure water is",
+   "options": {
+    "A": "1 x 1014",
+    "B": "1 x 10\u221214",
+    "C": "1 x 10\u22127",
+    "D": "1 x 107"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0090",
+   "type": "mcq",
+   "stem": "What is the pH of a neutral solution at 250C?",
+   "options": {
+    "A": "14",
+    "B": "3",
+    "C": "7",
+    "D": "1"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0091",
+   "type": "mcq",
+   "stem": "What is the pH of a basic solution whose hydroxyl ion concentration is 0.00001M?",
+   "options": {
+    "A": "9",
+    "B": "5",
+    "C": "1",
+    "D": "4"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0092",
+   "type": "mcq",
+   "stem": "The pH of a 0.25M solution of acetic acid [HC2H3O2] is found to be 2.68. What is the Ka for this solution and what percentage of the acid ionized?",
+   "options": {
+    "A": "1.76 x 10-5M  and  0.74%",
+    "B": "1.76 x 10-5M  and  0.84%",
+    "C": "6.17 x 10-5M  and 0.64%",
+    "D": "6.71 x 10-5M  and 0.54%"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0093",
+   "type": "mcq",
+   "stem": "The change in the concentration of reactant or product per unit time is known as",
+   "options": {
+    "A": "Rate Law",
+    "B": "Order of a reaction",
+    "C": "Rate of a reaction",
+    "D": "Molecularity of a reaction"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0094",
+   "type": "mcq",
+   "stem": "In a hypothetical reaction   A  \u2192  B, the rate of the reaction is expressed as",
+   "options": {
+    "A": "d[A] = +d[B] dt dt",
+    "B": "\u2212d[A] = \u2212d[B] dt dt",
+    "C": "\u00b1d[A] = +d[B] dt dt",
+    "D": "\u2212d[A] = +d[B] dt dt"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0095",
+   "type": "mcq",
+   "stem": "Rate of a reaction is measured in",
+   "options": {
+    "A": "mol lit\u22121min\u22121",
+    "B": "mol cm\u22121sec\u22123",
+    "C": "mol cm\u22123sec\u22121",
+    "D": "mol cm\u22121hr\u22121"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0096",
+   "type": "mcq",
+   "stem": "The rate of a reaction is directly proportional to the concentration of reactants. This is referred to as",
+   "options": {
+    "A": "Order of a Reaction",
+    "B": "Rate of a Reaction",
+    "C": "Overall order of a Reaction",
+    "D": "Molecularity of a Reaction"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0097",
+   "type": "mcq",
+   "stem": "The correct expression for the rate of the reaction:  A \u2192 Products  is",
+   "options": {
+    "A": "Rate = [A]n",
+    "B": "Rate = [B]n",
+    "C": "Rate = k[A]n",
+    "D": "Rate \u221d k[A]n"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0098",
+   "type": "mcq",
+   "stem": "The correct expression for the rate of the reaction:  2A + B \u2192 Products  is",
+   "options": {
+    "A": "Rate = k[A]2x[B]y",
+    "B": "Rate = [A]x[B]y",
+    "C": "Rate \u221d [A]x[B]y",
+    "D": "Rate \u221d [A]2x[B]y"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0099",
+   "type": "mcq",
+   "stem": "An expression which shows how a reaction is related to concentration is termed",
+   "options": {
+    "A": "Order of reaction",
+    "B": "Molecularity of reaction",
+    "C": "Equilibrium Law",
+    "D": "Rate Equation"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0100",
+   "type": "mcq",
+   "stem": "The powers to which the concentration of each reactant is raised to give a correct dependence of rate on concentration is termed",
+   "options": {
+    "A": "Order of reaction",
+    "B": "Molecularity of reaction",
+    "C": "Equilibrium Law",
+    "D": "Rate Equation"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0101",
+   "type": "mcq",
+   "stem": "For a given reaction whose rate expression is given as: Rate = k[A]m[B]n, the order of reaction is",
+   "options": {
+    "A": "m, n",
+    "B": "m+n",
+    "C": "m-n",
+    "D": "n-m"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0102",
+   "type": "mcq",
+   "stem": "The sum of all exponents of the reactants as contained in the experimentally determined rate law is known as",
+   "options": {
+    "A": "Overall rate law",
+    "B": "Overall molecularity of reaction",
+    "C": "Overall order of reaction",
+    "D": "Overall equilibrium law"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0103",
+   "type": "mcq",
+   "stem": "Order of a given reaction can only be determined",
+   "options": {
+    "A": "Experimentally",
+    "B": "From the Rate Equation",
+    "C": "From the Molecuarity of reaction",
+    "D": "From the chemical reaction"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0104",
+   "type": "mcq",
+   "stem": "The number of molecules/ions of the reactants present in the balanced stoichiometric equation is referred to as",
+   "options": {
+    "A": "Order of reaction",
+    "B": "Molecularity of reaction",
+    "C": "Equilibrium Law",
+    "D": "Rate Equation"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0105",
+   "type": "mcq",
+   "stem": "For a second order reaction A + B \u2192 Product, the rate constant expression is",
+   "options": {
+    "A": "k2 = 2.303t log10 ba((ab\u2212\u2212xx))",
+    "B": "k2 = 2.303t log10 (a\u2212ax)",
+    "C": "k2 = 1t log10 a\u2212xx",
+    "D": "k x 2 = t"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0106",
+   "type": "mcq",
+   "stem": "For a zero order reaction A + B \u2192 Product, the rate constant expression is",
+   "options": {
+    "A": "k0 = 2.303t log10 ba((ab\u2212\u2212xx))",
+    "B": "k0 = 2.303t log10 (a\u2212ax)",
+    "C": "k0 = 1t log10 a\u2212xx",
+    "D": "k x 0 = t"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0107",
+   "type": "mcq",
+   "stem": "For a first order reaction A + B \u2192 Product, the rate constant expression is",
+   "options": {
+    "A": "k0 = 2.303t log10 ba((ab\u2212\u2212xx))",
+    "B": "k0 = 2.303t log10 (a\u2212ax)",
+    "C": "k0 = 1t log10 a\u2212xx",
+    "D": "k x 0 = t"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0108",
+   "type": "mcq",
+   "stem": "The half-life of a first order reaction depends on",
+   "options": {
+    "A": "Initial concentration of the reactions",
+    "B": "Concentration of the reactant left",
+    "C": "Concentration of product",
+    "D": "Rate constant"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0109",
+   "type": "mcq",
+   "stem": "The unit of rate constant, K, in a first order reaction is",
+   "options": {
+    "A": "mollitre\u22121sec\u22121",
+    "B": "sec\u22121",
+    "C": "litremol\u22121sec\u22121",
+    "D": "seclitre\u22121mol\u22121"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0110",
+   "type": "mcq",
+   "stem": "Photolytic reactions take place in the presence of",
+   "options": {
+    "A": "Pressure",
+    "B": "Light",
+    "C": "Catalyst",
+    "D": "Heat"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0111",
+   "type": "mcq",
+   "stem": "The notation A \u2212 B is equivalent to",
+   "options": {
+    "A": "A \u222a Bc",
+    "B": "A \u222a B",
+    "C": "A \u2229 B",
+    "D": "A \u2229 Bc"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0112",
+   "type": "mcq",
+   "stem": "If two sets A and B are subsets of a universal set, then the notation  n(A \u222a B) is equal to",
+   "options": {
+    "A": "n(A) + n(B)",
+    "B": "n(A) + n(C) \u2212 n(A \u222a B)",
+    "C": "n(A) + n(B) + n(A \u222a B)",
+    "D": "n(A) + n(B) \u2212 n(A \u2229 B) In a survey of 60 students, 60 study botany, 50 zoology and 48 biology. If 38 students study botany, zoology and biology, Use the information above to answer questions 8 & 9"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0113",
+   "type": "mcq",
+   "stem": "How many study the Zoology and Botany?",
+   "options": {
+    "A": "12",
+    "B": "10",
+    "C": "0",
+    "D": "5 In a particular group of students during a school\u2019s sports competition, 15 play lawn tennis, 11 swim, 9 play lawn tennis and swim and 3 none of the sport activities"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0114",
+   "type": "mcq",
+   "stem": "Find the roots of the equation: x3 + 5x2 \u2212 2x \u2212 24",
+   "options": {
+    "A": "-4,3,2",
+    "B": "-4,-3,-2",
+    "C": "-4,-3,2",
+    "D": "4,3,-2"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0115",
+   "type": "mcq",
+   "stem": "a, b & c respectively in the equations 2ab = a + b, 5ac = 6c \u2212 2a  &  3bc = 3b + 4c are",
+   "options": {
+    "A": "3 , 1 , \u22121 2 2",
+    "B": "1 , 3 , \u22121 22",
+    "C": "\u2212 1 , \u2212  , \u22121",
+    "D": "1 , , 1 2 2"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0116",
+   "type": "mcq",
+   "stem": "Solve for x in the equation 163x = 1  (32)x\u22121 4",
+   "options": {
+    "A": "1",
+    "B": "2",
+    "C": "-2",
+    "D": "-1 4 5 \u00b1 i \u221a \u2212 71 2 5 \u00b1 i \u221a 71"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0117",
+   "type": "mcq",
+   "stem": "The correct expression for the common difference in an A.P. is",
+   "options": {
+    "A": "T \u2212 Tn",
+    "B": "Tn \u2212 Tn+1",
+    "C": "Tn \u2212 Tn\u22121",
+    "D": "Tn \u2212 Tn+2"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0118",
+   "type": "mcq",
+   "stem": "The union of the set A and B denoted by A U B denoted by A U B, is the set of elements which belong to",
+   "options": {
+    "A": "either A nor B nor both",
+    "B": "either A or B or both",
+    "C": "neither A nor B or both",
+    "D": "neither A or B nor both"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0119",
+   "type": "mcq",
+   "stem": "In the equation 5x4 + 9x3 \u2013 12x2 \u2013 9x + 5 = 0, find the value of x \u2013 1/x",
+   "options": {
+    "A": "-1/5, 2",
+    "B": "1/2, 5",
+    "C": "1/5, -2",
+    "D": "5, 2"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0120",
+   "type": "mcq",
+   "stem": "Find the range of the validity of x in the equation 2xx 1 1",
+   "options": {
+    "A": "x <1 or x > 0",
+    "B": "x < 0 or x < 1",
+    "C": "x < 0 or x < 1",
+    "D": "x > 0 or x > 1"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0121",
+   "type": "mcq",
+   "stem": "Resolve into partial fraction x3 x2 5x 15 2 & give the values of A, B, C respectively x 1 x 2",
+   "options": {
+    "A": "2,3,4",
+    "B": "2,3,0",
+    "C": "2,0,3",
+    "D": "2, -2, 3"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0122",
+   "type": "mcq",
+   "stem": "Expresses 3x2 x 21 in partial fractions and find the value of A + B \u2013 C x x 1",
+   "options": {
+    "A": "-3",
+    "B": "2",
+    "C": "6",
+    "D": "7"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0123",
+   "type": "mcq",
+   "stem": "The sum of the square of three positive numbers in arithmetic progression is 165. If the sum of the number is 21, find the sum of cubes of each of the numbers?",
+   "options": {
+    "A": "4",
+    "B": "1400",
+    "C": "1407",
+    "D": "104"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-uniosun-chm101-bank-0124",
+   "type": "mcq",
+   "stem": "The second term of an AP is four times the first term, the last term is 13 times the first term and the sum of the series is 70. Find the first three terms of the progression",
+   "options": {
+    "A": "2,4,6",
+    "B": "2,8,14",
+    "C": "2,4,8",
+    "D": "8,12,14"
+   },
+   "marks": 1,
+   "answer": "B"
+  }
+ ]
+}

@@ -1,0 +1,2517 @@
+{
+ "body": "jamb",
+ "subject": "economics",
+ "title": "Economics",
+ "unitTitles": [
+  "Scarcity, Choice and Economic Systems",
+  "Demand, Supply and Markets",
+  "Production, Costs and Market Structures",
+  "Population, Labour and Money",
+  "Public Finance, Trade and Nigeria's Economy",
+  "Development, Reform and Data",
+  "Demand and Elasticity in Depth",
+  "Supply, Costs and Firm Decisions",
+  "Market Structures in Depth",
+  "Money and Banking in Depth",
+  "Public Finance in Depth",
+  "National Income in Depth",
+  "International Trade in Depth",
+  "Development Economics",
+  "Agriculture and Industry in Nigeria",
+  "Petroleum and the Nigerian Economy",
+  "Labour Economics",
+  "Financial Institutions and Markets",
+  "Economic Data Skills",
+  "Everyday Economics in Nigeria",
+  "Structured Revision: Set A",
+  "Structured Revision: Set B",
+  "Calculations Workshop",
+  "JAMB Masterclass: Final Lap",
+  "Curves That Score: Diagram Workshop",
+  "Consumer and Producer Theory Extras",
+  "Macroeconomic Policy Workshop",
+  "Business Economics Case Studies",
+  "The Global Economy Workshop",
+  "Economics Masterclass Drills"
+ ],
+ "topics": [
+  {
+   "title": "Economics: scarcity, choice and scale of preference",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "scarcity",
+    "choice",
+    "scale of preference",
+    "opportunity cost",
+    "wants"
+   ]
+  },
+  {
+   "title": "Basic economic problems: what, how and for whom",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "basic economic problems",
+    "allocation",
+    "resources",
+    "production"
+   ]
+  },
+  {
+   "title": "Opportunity cost and production possibility curve",
+   "category": "Theory",
+   "keywords": [
+    "opportunity cost",
+    "production possibility curve",
+    "choice",
+    "resources"
+   ]
+  },
+  {
+   "title": "Economic systems: capitalism, socialism and mixed",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "capitalism",
+    "socialism",
+    "mixed economy",
+    "economic systems"
+   ]
+  },
+  {
+   "title": "Demand: definition, types and determinants",
+   "category": "Theory",
+   "keywords": [
+    "demand",
+    "demand schedule",
+    "determinants",
+    "effective demand"
+   ]
+  },
+  {
+   "title": "The demand curve and changes in demand",
+   "category": "Theory",
+   "keywords": [
+    "demand curve",
+    "change in demand",
+    "extension",
+    "contraction"
+   ]
+  },
+  {
+   "title": "Supply: determinants and the supply curve",
+   "category": "Theory",
+   "keywords": [
+    "supply",
+    "supply curve",
+    "determinants",
+    "supply schedule"
+   ]
+  },
+  {
+   "title": "Elasticity: price, income and cross elasticity",
+   "category": "Theory",
+   "keywords": [
+    "elasticity",
+    "price elasticity",
+    "income elasticity",
+    "cross elasticity"
+   ]
+  },
+  {
+   "title": "Price determination and equilibrium",
+   "category": "Theory",
+   "keywords": [
+    "equilibrium price",
+    "price determination",
+    "surplus",
+    "shortage",
+    "market price"
+   ]
+  },
+  {
+   "title": "Price controls: maximum and minimum prices",
+   "category": "Applications",
+   "keywords": [
+    "price control",
+    "maximum price",
+    "minimum price",
+    "legislation"
+   ]
+  },
+  {
+   "title": "Consumer behaviour and the concept of utility",
+   "category": "Theory",
+   "keywords": [
+    "utility",
+    "marginal utility",
+    "total utility",
+    "diminishing"
+   ]
+  },
+  {
+   "title": "Production: factors and their rewards",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "factors of production",
+    "land",
+    "labour",
+    "capital",
+    "entrepreneur"
+   ]
+  },
+  {
+   "title": "Division of labour and specialisation",
+   "category": "Theory",
+   "keywords": [
+    "division of labour",
+    "specialisation",
+    "productivity"
+   ]
+  },
+  {
+   "title": "Production costs: fixed, variable and total",
+   "category": "Theory",
+   "keywords": [
+    "fixed cost",
+    "variable cost",
+    "total cost",
+    "average cost",
+    "marginal cost"
+   ]
+  },
+  {
+   "title": "Revenue concepts: total, average and marginal",
+   "category": "Theory",
+   "keywords": [
+    "total revenue",
+    "average revenue",
+    "marginal revenue",
+    "revenue"
+   ]
+  },
+  {
+   "title": "Economies and diseconomies of scale",
+   "category": "Theory",
+   "keywords": [
+    "economies of scale",
+    "diseconomies",
+    "scale of production"
+   ]
+  },
+  {
+   "title": "Market structures: perfect competition and monopoly",
+   "category": "Theory",
+   "keywords": [
+    "perfect competition",
+    "monopoly",
+    "market structure",
+    "oligopoly",
+    "duopoly"
+   ]
+  },
+  {
+   "title": "Imperfect competition: monopolistic competition",
+   "category": "Theory",
+   "keywords": [
+    "monopolistic competition",
+    "imperfect market",
+    "product differentiation"
+   ]
+  },
+  {
+   "title": "Business organisations: sole proprietorship",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "sole proprietorship",
+    "one man business",
+    "unlimited liability",
+    "capital"
+   ]
+  },
+  {
+   "title": "Partnerships and limited liability companies",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "partnership",
+    "limited liability",
+    "company",
+    "shareholders"
+   ]
+  },
+  {
+   "title": "Public enterprises, cooperatives and privatisation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "public enterprises",
+    "cooperatives",
+    "privatisation",
+    "commercialisation"
+   ]
+  },
+  {
+   "title": "Population: size, growth and census in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "population",
+    "census",
+    "growth rate",
+    "overpopulation",
+    "migration"
+   ]
+  },
+  {
+   "title": "Theories of population: Malthus and optimum",
+   "category": "Theory",
+   "keywords": [
+    "malthus",
+    "optimum population",
+    "population theory"
+   ]
+  },
+  {
+   "title": "Labour market: wages, mobility and unemployment",
+   "category": "Theory",
+   "keywords": [
+    "labour",
+    "wages",
+    "mobility",
+    "trade unions",
+    "unemployment"
+   ]
+  },
+  {
+   "title": "Unemployment: types and solutions in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "unemployment",
+    "underemployment",
+    "graduates",
+    "solutions"
+   ]
+  },
+  {
+   "title": "Money: functions, qualities and types",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "money",
+    "functions of money",
+    "barter",
+    "legal tender"
+   ]
+  },
+  {
+   "title": "Inflation and deflation: causes and control",
+   "category": "Theory",
+   "keywords": [
+    "inflation",
+    "deflation",
+    "cost push",
+    "demand pull",
+    "control"
+   ]
+  },
+  {
+   "title": "Banking: central bank and commercial banks",
+   "category": "Theory",
+   "keywords": [
+    "central bank",
+    "commercial banks",
+    "credit creation",
+    "functions"
+   ]
+  },
+  {
+   "title": "Monetary policy and the control of money supply",
+   "category": "Applications",
+   "keywords": [
+    "monetary policy",
+    "money supply",
+    "bank rate",
+    "open market operation"
+   ]
+  },
+  {
+   "title": "Non-bank financial institutions and their roles",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "insurance",
+    "stock exchange",
+    "mortgage banks",
+    "development banks"
+   ]
+  },
+  {
+   "title": "The capital market and Nigerian Stock Exchange",
+   "category": "Nigerian Context",
+   "keywords": [
+    "capital market",
+    "stock exchange",
+    "shares",
+    "securities",
+    "brokers"
+   ]
+  },
+  {
+   "title": "Public finance: objectives and government budget",
+   "category": "Theory",
+   "keywords": [
+    "public finance",
+    "budget",
+    "government expenditure",
+    "fiscal policy"
+   ]
+  },
+  {
+   "title": "Taxation: types, principles and incidence",
+   "category": "Theory",
+   "keywords": [
+    "taxation",
+    "direct tax",
+    "indirect tax",
+    "incidence",
+    "vat"
+   ]
+  },
+  {
+   "title": "National income: concepts and measurement",
+   "category": "Theory",
+   "keywords": [
+    "national income",
+    "gdp",
+    "gnp",
+    "per capita income",
+    "measurement"
+   ]
+  },
+  {
+   "title": "Uses and limitations of national income figures",
+   "category": "Theory",
+   "keywords": [
+    "national income",
+    "welfare",
+    "comparison",
+    "limitations"
+   ]
+  },
+  {
+   "title": "Balance of trade and balance of payments",
+   "category": "Theory",
+   "keywords": [
+    "balance of trade",
+    "balance of payments",
+    "deficit",
+    "surplus"
+   ]
+  },
+  {
+   "title": "International trade: basis and gains",
+   "category": "Theory",
+   "keywords": [
+    "international trade",
+    "comparative cost",
+    "absolute advantage",
+    "gains"
+   ]
+  },
+  {
+   "title": "Trade restrictions: tariffs and quotas",
+   "category": "Applications",
+   "keywords": [
+    "tariffs",
+    "quotas",
+    "embargo",
+    "protectionism",
+    "imports"
+   ]
+  },
+  {
+   "title": "Nigeria's major trading partners and exports",
+   "category": "Nigerian Context",
+   "keywords": [
+    "crude oil",
+    "exports",
+    "imports",
+    "trading partners",
+    "opec"
+   ]
+  },
+  {
+   "title": "Agriculture in Nigeria: problems and prospects",
+   "category": "Nigerian Context",
+   "keywords": [
+    "agriculture",
+    "food production",
+    "cash crops",
+    "marketing boards"
+   ]
+  },
+  {
+   "title": "Industrialisation in Nigeria: types and location",
+   "category": "Nigerian Context",
+   "keywords": [
+    "industrialisation",
+    "localisation",
+    "manufacturing",
+    "industries"
+   ]
+  },
+  {
+   "title": "Natural resources and the Nigerian economy",
+   "category": "Nigerian Context",
+   "keywords": [
+    "natural resources",
+    "crude oil",
+    "solid minerals",
+    "gas"
+   ]
+  },
+  {
+   "title": "Petroleum and the oil sector in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "petroleum",
+    "oil sector",
+    "refining",
+    "oil revenue",
+    "niger delta"
+   ]
+  },
+  {
+   "title": "Economic development and growth indicators",
+   "category": "Theory",
+   "keywords": [
+    "development",
+    "growth",
+    "indicators",
+    "underdevelopment"
+   ]
+  },
+  {
+   "title": "Poverty, inequality and income distribution",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "poverty",
+    "inequality",
+    "income distribution",
+    "standard of living"
+   ]
+  },
+  {
+   "title": "Economic planning and development plans in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "economic planning",
+    "development plan",
+    "rolling plan",
+    "objectives"
+   ]
+  },
+  {
+   "title": "ECOWAS, OPEC and international organisations",
+   "category": "Nigerian Context",
+   "keywords": [
+    "ecowas",
+    "opec",
+    "imf",
+    "world bank",
+    "wto"
+   ]
+  },
+  {
+   "title": "Deregulation, subsidy and fuel pricing in Nigeria",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "deregulation",
+    "subsidy",
+    "fuel",
+    "pricing",
+    "reform"
+   ]
+  },
+  {
+   "title": "Cashless policy, e-banking and digital payments",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "cashless policy",
+    "electronic banking",
+    "mobile money",
+    "pos"
+   ]
+  },
+  {
+   "title": "Demand for and supply of foreign exchange",
+   "category": "Applications",
+   "keywords": [
+    "foreign exchange",
+    "exchange rate",
+    "devaluation",
+    "currency"
+   ]
+  },
+  {
+   "title": "Entrepreneurship and small scale businesses",
+   "category": "Applications",
+   "keywords": [
+    "entrepreneurship",
+    "small scale",
+    "sme",
+    "self employment"
+   ]
+  },
+  {
+   "title": "Economic reform programmes: SAP to present",
+   "category": "Nigerian Context",
+   "keywords": [
+    "structural adjustment",
+    "sap",
+    "reforms",
+    "nigeria"
+   ]
+  },
+  {
+   "title": "Simple data analysis in economics",
+   "category": "Methods",
+   "keywords": [
+    "tables",
+    "charts",
+    "mean",
+    "graphs",
+    "percentages"
+   ]
+  },
+  {
+   "title": "Examination drill: economics past questions by topic",
+   "category": "Applications",
+   "keywords": [
+    "past questions",
+    "revision",
+    "examination",
+    "jamb"
+   ]
+  },
+  {
+   "title": "Reading Nigeria's GDP releases",
+   "category": "Nigerian Context",
+   "keywords": [
+    "GDP",
+    "releases"
+   ]
+  },
+  {
+   "title": "Naira exchange rate regimes history",
+   "category": "Nigerian Context",
+   "keywords": [
+    "exchange rate",
+    "regimes"
+   ]
+  },
+  {
+   "title": "Inflation reports decoded",
+   "category": "Methods",
+   "keywords": [
+    "inflation",
+    "reports"
+   ]
+  },
+  {
+   "title": "The budget speech: how to read it",
+   "category": "Nigerian Context",
+   "keywords": [
+    "budget speech"
+   ]
+  },
+  {
+   "title": "CBN monetary policy meetings read",
+   "category": "Nigerian Context",
+   "keywords": [
+    "CBN",
+    "monetary policy"
+   ]
+  },
+  {
+   "title": "Examination drill: data releases past questions",
+   "category": "Applications",
+   "keywords": [
+    "data",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Movement along versus shift of demand",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "demand curve",
+    "shifts"
+   ]
+  },
+  {
+   "title": "Price elasticity calculations and types",
+   "category": "Methods",
+   "keywords": [
+    "price elasticity",
+    "calculations"
+   ]
+  },
+  {
+   "title": "Income elasticity: normal and inferior goods",
+   "category": "Theory",
+   "keywords": [
+    "income elasticity",
+    "goods"
+   ]
+  },
+  {
+   "title": "Cross elasticity and substitutes",
+   "category": "Theory",
+   "keywords": [
+    "cross elasticity",
+    "substitutes"
+   ]
+  },
+  {
+   "title": "Elasticity and total revenue rules",
+   "category": "Methods",
+   "keywords": [
+    "elasticity",
+    "total revenue"
+   ]
+  },
+  {
+   "title": "Determinants of elasticity in markets",
+   "category": "Theory",
+   "keywords": [
+    "determinants",
+    "elasticity"
+   ]
+  },
+  {
+   "title": "Elasticity in pricing decisions",
+   "category": "Applications",
+   "keywords": [
+    "elasticity",
+    "pricing"
+   ]
+  },
+  {
+   "title": "Agricultural demand inelasticity in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "agriculture",
+    "inelasticity"
+   ]
+  },
+  {
+   "title": "Data questions on demand tables",
+   "category": "Methods",
+   "keywords": [
+    "demand tables",
+    "data"
+   ]
+  },
+  {
+   "title": "Examination drill: elasticity past questions",
+   "category": "Applications",
+   "keywords": [
+    "elasticity",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Supply shifts: input prices and technology",
+   "category": "Theory",
+   "keywords": [
+    "supply shifts",
+    "inputs"
+   ]
+  },
+  {
+   "title": "Marginal, average and total cost relations",
+   "category": "Theory",
+   "keywords": [
+    "marginal cost",
+    "average cost"
+   ]
+  },
+  {
+   "title": "The law of diminishing returns shown",
+   "category": "Theory",
+   "keywords": [
+    "diminishing returns",
+    "law"
+   ]
+  },
+  {
+   "title": "Short run versus long run costs",
+   "category": "Theory",
+   "keywords": [
+    "short run",
+    "long run"
+   ]
+  },
+  {
+   "title": "Profit maximisation: MC equals MR",
+   "category": "Theory",
+   "keywords": [
+    "profit maximisation",
+    "MC = MR"
+   ]
+  },
+  {
+   "title": "Break-even and shut-down points",
+   "category": "Methods",
+   "keywords": [
+    "break-even",
+    "shut-down"
+   ]
+  },
+  {
+   "title": "Economies of scale case studies",
+   "category": "Applications",
+   "keywords": [
+    "economies of scale",
+    "cases"
+   ]
+  },
+  {
+   "title": "Producer surplus: an introduction",
+   "category": "Theory",
+   "keywords": [
+    "producer surplus"
+   ]
+  },
+  {
+   "title": "Cost tables and graph readings",
+   "category": "Methods",
+   "keywords": [
+    "cost tables",
+    "graphs"
+   ]
+  },
+  {
+   "title": "Examination drill: costs past questions",
+   "category": "Applications",
+   "keywords": [
+    "costs",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Perfect competition: the benchmark",
+   "category": "Theory",
+   "keywords": [
+    "perfect competition",
+    "benchmark"
+   ]
+  },
+  {
+   "title": "Monopoly: sources and deadweight ideas",
+   "category": "Theory",
+   "keywords": [
+    "monopoly",
+    "deadweight"
+   ]
+  },
+  {
+   "title": "Price discrimination: types and examples",
+   "category": "Theory",
+   "keywords": [
+    "price discrimination",
+    "types"
+   ]
+  },
+  {
+   "title": "Oligopoly and kinked behaviour",
+   "category": "Theory",
+   "keywords": [
+    "oligopoly",
+    "kinked"
+   ]
+  },
+  {
+   "title": "Monopolistic competition: brands everywhere",
+   "category": "Theory",
+   "keywords": [
+    "monopolistic competition",
+    "brands"
+   ]
+  },
+  {
+   "title": "Nigerian examples: cement, telecoms, fuel",
+   "category": "Nigerian Context",
+   "keywords": [
+    "cement",
+    "telecoms"
+   ]
+  },
+  {
+   "title": "Regulation of monopolies in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "regulation",
+    "monopolies"
+   ]
+  },
+  {
+   "title": "Contestable markets and entry barriers",
+   "category": "Theory",
+   "keywords": [
+    "entry barriers",
+    "contestable"
+   ]
+  },
+  {
+   "title": "Comparing structures: a summary grid",
+   "category": "Methods",
+   "keywords": [
+    "structures",
+    "summary grid"
+   ]
+  },
+  {
+   "title": "Examination drill: market structures past questions",
+   "category": "Applications",
+   "keywords": [
+    "market structures",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Qualities and functions of money revisited",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "money",
+    "qualities"
+   ]
+  },
+  {
+   "title": "Demand for money: motives examined",
+   "category": "Theory",
+   "keywords": [
+    "demand for money",
+    "motives"
+   ]
+  },
+  {
+   "title": "Money supply measures: M1 and M2",
+   "category": "Theory",
+   "keywords": [
+    "money supply",
+    "M1",
+    "M2"
+   ]
+  },
+  {
+   "title": "Credit creation: the multiplier shown",
+   "category": "Theory",
+   "keywords": [
+    "credit creation",
+    "multiplier"
+   ]
+  },
+  {
+   "title": "CBN instruments: cash reserve and rates",
+   "category": "Nigerian Context",
+   "keywords": [
+    "CBN",
+    "cash reserve"
+   ]
+  },
+  {
+   "title": "Monetary policy transmission channels",
+   "category": "Theory",
+   "keywords": [
+    "monetary policy",
+    "channels"
+   ]
+  },
+  {
+   "title": "Inflation measurement: CPI basics",
+   "category": "Methods",
+   "keywords": [
+    "inflation",
+    "CPI"
+   ]
+  },
+  {
+   "title": "Inflation types: demand-pull, cost-push",
+   "category": "Theory",
+   "keywords": [
+    "demand-pull",
+    "cost-push"
+   ]
+  },
+  {
+   "title": "Digital naira and fintech disruption",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "e-naira",
+    "fintech"
+   ]
+  },
+  {
+   "title": "Examination drill: money past questions",
+   "category": "Applications",
+   "keywords": [
+    "money",
+    "banking",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Fiscal policy: objectives and tools",
+   "category": "Theory",
+   "keywords": [
+    "fiscal policy",
+    "tools"
+   ]
+  },
+  {
+   "title": "Progressive, regressive and proportional taxes",
+   "category": "Theory",
+   "keywords": [
+    "progressive tax",
+    "regressive tax"
+   ]
+  },
+  {
+   "title": "Tax incidence: who truly pays",
+   "category": "Theory",
+   "keywords": [
+    "tax incidence"
+   ]
+  },
+  {
+   "title": "Nigerian tax authorities and VAT",
+   "category": "Nigerian Context",
+   "keywords": [
+    "FIRS",
+    "VAT"
+   ]
+  },
+  {
+   "title": "Budget types: surplus, deficit, balanced",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "budget",
+    "surplus",
+    "deficit"
+   ]
+  },
+  {
+   "title": "Public debt: domestic and external",
+   "category": "Nigerian Context",
+   "keywords": [
+    "public debt"
+   ]
+  },
+  {
+   "title": "Debt servicing and sustainability ratios",
+   "category": "Methods",
+   "keywords": [
+    "debt servicing",
+    "ratios"
+   ]
+  },
+  {
+   "title": "Government spending priorities",
+   "category": "Nigerian Context",
+   "keywords": [
+    "spending",
+    "priorities"
+   ]
+  },
+  {
+   "title": "Fiscal federalism: allocation formula",
+   "category": "Nigerian Context",
+   "keywords": [
+    "fiscal federalism",
+    "allocation"
+   ]
+  },
+  {
+   "title": "Examination drill: public finance past questions",
+   "category": "Applications",
+   "keywords": [
+    "public finance",
+    "past questions"
+   ]
+  },
+  {
+   "title": "GDP, GNP and NNP precisely defined",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "GDP",
+    "GNP",
+    "NNP"
+   ]
+  },
+  {
+   "title": "Three approaches: output, income, expenditure",
+   "category": "Methods",
+   "keywords": [
+    "output",
+    "income",
+    "expenditure"
+   ]
+  },
+  {
+   "title": "Real versus nominal GDP calculations",
+   "category": "Methods",
+   "keywords": [
+    "real GDP",
+    "nominal GDP"
+   ]
+  },
+  {
+   "title": "Per capita income and living standards",
+   "category": "Methods",
+   "keywords": [
+    "per capita income"
+   ]
+  },
+  {
+   "title": "Circular flow with leakages and injections",
+   "category": "Theory",
+   "keywords": [
+    "circular flow",
+    "leakages"
+   ]
+  },
+  {
+   "title": "The multiplier effect computed",
+   "category": "Methods",
+   "keywords": [
+    "multiplier effect",
+    "computed"
+   ]
+  },
+  {
+   "title": "National income limitations: informal sector",
+   "category": "Nigerian Context",
+   "keywords": [
+    "informal sector"
+   ]
+  },
+  {
+   "title": "GDP rebasing: what it revealed",
+   "category": "Nigerian Context",
+   "keywords": [
+    "GDP rebasing"
+   ]
+  },
+  {
+   "title": "Comparing economies: tables and charts",
+   "category": "Methods",
+   "keywords": [
+    "comparing economies",
+    "charts"
+   ]
+  },
+  {
+   "title": "Examination drill: national income past questions",
+   "category": "Applications",
+   "keywords": [
+    "national income",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Absolute and comparative advantage shown",
+   "category": "Theory",
+   "keywords": [
+    "comparative advantage",
+    "absolute"
+   ]
+  },
+  {
+   "title": "Terms of trade calculations",
+   "category": "Methods",
+   "keywords": [
+    "terms of trade",
+    "calculations"
+   ]
+  },
+  {
+   "title": "Balance of payments: accounts decoded",
+   "category": "Theory",
+   "keywords": [
+    "balance of payments",
+    "accounts"
+   ]
+  },
+  {
+   "title": "Exchange rate systems: fixed and floating",
+   "category": "Theory",
+   "keywords": [
+    "exchange rate",
+    "fixed",
+    "floating"
+   ]
+  },
+  {
+   "title": "Devaluation: arguments and experience",
+   "category": "Nigerian Context",
+   "keywords": [
+    "devaluation",
+    "naira"
+   ]
+  },
+  {
+   "title": "Trade protection: tools and effects",
+   "category": "Theory",
+   "keywords": [
+    "trade protection",
+    "tariffs"
+   ]
+  },
+  {
+   "title": "Nigeria's non-oil exports drive",
+   "category": "Nigerian Context",
+   "keywords": [
+    "non-oil exports"
+   ]
+  },
+  {
+   "title": "Foreign reserves: roles and levels",
+   "category": "Nigerian Context",
+   "keywords": [
+    "foreign reserves"
+   ]
+  },
+  {
+   "title": "Remittances and their macro role",
+   "category": "Nigerian Context",
+   "keywords": [
+    "remittances",
+    "macro"
+   ]
+  },
+  {
+   "title": "Examination drill: trade past questions",
+   "category": "Applications",
+   "keywords": [
+    "trade",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Growth versus development distinguished",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "growth",
+    "development"
+   ]
+  },
+  {
+   "title": "Human development index components",
+   "category": "Theory",
+   "keywords": [
+    "HDI",
+    "components"
+   ]
+  },
+  {
+   "title": "Characteristics of LDCs listed",
+   "category": "Theory",
+   "keywords": [
+    "LDCs",
+    "characteristics"
+   ]
+  },
+  {
+   "title": "Vicious circle of poverty examined",
+   "category": "Theory",
+   "keywords": [
+    "poverty",
+    "vicious circle"
+   ]
+  },
+  {
+   "title": "Development planning: why plans fail",
+   "category": "Nigerian Context",
+   "keywords": [
+    "planning",
+    "failures"
+   ]
+  },
+  {
+   "title": "Vision 20:2010 to Agenda 2050: the record",
+   "category": "Nigerian Context",
+   "keywords": [
+    "vision plans"
+   ]
+  },
+  {
+   "title": "Sustainable development goals in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "SDGs",
+    "Nigeria"
+   ]
+  },
+  {
+   "title": "Infrastructure deficits and growth",
+   "category": "Nigerian Context",
+   "keywords": [
+    "infrastructure",
+    "deficits"
+   ]
+  },
+  {
+   "title": "Education and health as investments",
+   "category": "Theory",
+   "keywords": [
+    "education",
+    "health",
+    "investment"
+   ]
+  },
+  {
+   "title": "Examination drill: development past questions",
+   "category": "Applications",
+   "keywords": [
+    "development",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Agriculture's share: past and present",
+   "category": "Nigerian Context",
+   "keywords": [
+    "agriculture",
+    "share"
+   ]
+  },
+  {
+   "title": "Cash crops: cocoa, palm oil, groundnut history",
+   "category": "Nigerian Context",
+   "keywords": [
+    "cash crops",
+    "cocoa"
+   ]
+  },
+  {
+   "title": "Marketing boards: what they did",
+   "category": "Nigerian Context",
+   "keywords": [
+    "marketing boards"
+   ]
+  },
+  {
+   "title": "Green revolution and farm settlements",
+   "category": "Nigerian Context",
+   "keywords": [
+    "green revolution"
+   ]
+  },
+  {
+   "title": "Anchor borrowers and input subsidies",
+   "category": "Nigerian Context",
+   "keywords": [
+    "anchor borrowers"
+   ]
+  },
+  {
+   "title": "Industrialisation: import substitution reviewed",
+   "category": "Theory",
+   "keywords": [
+    "import substitution"
+   ]
+  },
+  {
+   "title": "Local content policy in oil and gas",
+   "category": "Nigerian Context",
+   "keywords": [
+    "local content",
+    "oil"
+   ]
+  },
+  {
+   "title": "SMES and industrial clusters",
+   "category": "Nigerian Context",
+   "keywords": [
+    "SMEs",
+    "clusters"
+   ]
+  },
+  {
+   "title": "Power supply and industrial costs",
+   "category": "Nigerian Context",
+   "keywords": [
+    "power supply",
+    "costs"
+   ]
+  },
+  {
+   "title": "Examination drill: agriculture past questions",
+   "category": "Applications",
+   "keywords": [
+    "agriculture",
+    "industry",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Oil: discovery to OPEC membership",
+   "category": "Nigerian Context",
+   "keywords": [
+    "oil",
+    "OPEC"
+   ]
+  },
+  {
+   "title": "Joint ventures and PSC arrangements",
+   "category": "Nigerian Context",
+   "keywords": [
+    "joint ventures",
+    "PSC"
+   ]
+  },
+  {
+   "title": "Petroleum profits and resource governance",
+   "category": "Nigerian Context",
+   "keywords": [
+    "petroleum profits"
+   ]
+  },
+  {
+   "title": "NNPC and subsidy sagas",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NNPC",
+    "subsidy"
+   ]
+  },
+  {
+   "title": "Dutch disease: lessons for Nigeria",
+   "category": "Theory",
+   "keywords": [
+    "Dutch disease"
+   ]
+  },
+  {
+   "title": "Gas flaring: costs and policies",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "gas flaring"
+   ]
+  },
+  {
+   "title": "Refineries: why they underperformed",
+   "category": "Nigerian Context",
+   "keywords": [
+    "refineries"
+   ]
+  },
+  {
+   "title": "Dangote refinery: expectations",
+   "category": "Nigerian Context",
+   "keywords": [
+    "Dangote refinery"
+   ]
+  },
+  {
+   "title": "Oil price shocks and budget planning",
+   "category": "Methods",
+   "keywords": [
+    "oil shocks",
+    "budget"
+   ]
+  },
+  {
+   "title": "Examination drill: petroleum past questions",
+   "category": "Applications",
+   "keywords": [
+    "petroleum",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Labour force versus workforce defined",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "labour force",
+    "workforce"
+   ]
+  },
+  {
+   "title": "Unemployment types: frictional to structural",
+   "category": "Theory",
+   "keywords": [
+    "unemployment",
+    "frictional",
+    "structural"
+   ]
+  },
+  {
+   "title": "Underemployment and the informal economy",
+   "category": "Nigerian Context",
+   "keywords": [
+    "underemployment",
+    "informal"
+   ]
+  },
+  {
+   "title": "Wage determination: theory and minimum wage",
+   "category": "Theory",
+   "keywords": [
+    "wage determination",
+    "minimum wage"
+   ]
+  },
+  {
+   "title": "Trade unions and industrial disputes",
+   "category": "Nigerian Context",
+   "keywords": [
+    "trade unions",
+    "disputes"
+   ]
+  },
+  {
+   "title": "Brain drain: the japa phenomenon",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "brain drain",
+    "japa"
+   ]
+  },
+  {
+   "title": "Youth unemployment: causes and cures",
+   "category": "Nigerian Context",
+   "keywords": [
+    "youth unemployment"
+   ]
+  },
+  {
+   "title": "Labour productivity measurements",
+   "category": "Methods",
+   "keywords": [
+    "productivity",
+    "measurement"
+   ]
+  },
+  {
+   "title": "Gig economy and digital work",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "gig economy"
+   ]
+  },
+  {
+   "title": "Examination drill: labour past questions",
+   "category": "Applications",
+   "keywords": [
+    "labour",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Commercial banks: functions and products",
+   "category": "Theory",
+   "keywords": [
+    "commercial banks",
+    "functions"
+   ]
+  },
+  {
+   "title": "Merchant banks and development banks",
+   "category": "Theory",
+   "keywords": [
+    "merchant banks",
+    "development banks"
+   ]
+  },
+  {
+   "title": "Insurance: pooling and premiums",
+   "category": "Theory",
+   "keywords": [
+    "insurance",
+    "premiums"
+   ]
+  },
+  {
+   "title": "The stock exchange: how it works",
+   "category": "Applications",
+   "keywords": [
+    "stock exchange"
+   ]
+  },
+  {
+   "title": "Bonds and the FGN debt market",
+   "category": "Applications",
+   "keywords": [
+    "bonds",
+    "FGN"
+   ]
+  },
+  {
+   "title": "Microfinance banks and inclusion",
+   "category": "Nigerian Context",
+   "keywords": [
+    "microfinance",
+    "inclusion"
+   ]
+  },
+  {
+   "title": "Pension funds and contributory schemes",
+   "category": "Nigerian Context",
+   "keywords": [
+    "pensions",
+    "contributory"
+   ]
+  },
+  {
+   "title": "Capital market regulators: SEC and NGX",
+   "category": "Nigerian Context",
+   "keywords": [
+    "SEC",
+    "NGX"
+   ]
+  },
+  {
+   "title": "Savings culture and mobilisation",
+   "category": "Applications",
+   "keywords": [
+    "savings",
+    "mobilisation"
+   ]
+  },
+  {
+   "title": "Examination drill: financial past questions",
+   "category": "Applications",
+   "keywords": [
+    "financial institutions",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Reading demand and supply schedules",
+   "category": "Methods",
+   "keywords": [
+    "schedules",
+    "reading"
+   ]
+  },
+  {
+   "title": "Constructing and reading cost curves",
+   "category": "Methods",
+   "keywords": [
+    "cost curves",
+    "construction"
+   ]
+  },
+  {
+   "title": "Percentage change and index numbers",
+   "category": "Methods",
+   "keywords": [
+    "percentage change",
+    "index numbers"
+   ]
+  },
+  {
+   "title": "Inflation rate from CPI table",
+   "category": "Methods",
+   "keywords": [
+    "inflation rate",
+    "CPI"
+   ]
+  },
+  {
+   "title": "Unemployment rate calculations",
+   "category": "Methods",
+   "keywords": [
+    "unemployment rate",
+    "calculations"
+   ]
+  },
+  {
+   "title": "Exchange rate conversions in tables",
+   "category": "Methods",
+   "keywords": [
+    "exchange rate",
+    "conversions"
+   ]
+  },
+  {
+   "title": "Simple graphs: choosing the right one",
+   "category": "Methods",
+   "keywords": [
+    "graphs",
+    "choosing"
+   ]
+  },
+  {
+   "title": "Interpreting national income tables",
+   "category": "Methods",
+   "keywords": [
+    "national income",
+    "tables"
+   ]
+  },
+  {
+   "title": "Data-response question technique",
+   "category": "Methods",
+   "keywords": [
+    "data-response",
+    "technique"
+   ]
+  },
+  {
+   "title": "Examination drill: data past questions",
+   "category": "Applications",
+   "keywords": [
+    "data",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Inflation in the market: garri and rice prices",
+   "category": "Nigerian Context",
+   "keywords": [
+    "inflation",
+    "market prices"
+   ]
+  },
+  {
+   "title": "Transport fares and fuel economics",
+   "category": "Nigerian Context",
+   "keywords": [
+    "transport",
+    "fuel"
+   ]
+  },
+  {
+   "title": "POS business economics",
+   "category": "Nigerian Context",
+   "keywords": [
+    "POS business"
+   ]
+  },
+  {
+   "title": "Betting, risk and opportunity cost",
+   "category": "Applications",
+   "keywords": [
+    "betting",
+    "risk"
+   ]
+  },
+  {
+   "title": "Data plans and consumer choice",
+   "category": "Applications",
+   "keywords": [
+    "data plans",
+    "choice"
+   ]
+  },
+  {
+   "title": "Rent markets in Lagos and Abuja",
+   "category": "Nigerian Context",
+   "keywords": [
+    "rent",
+    "Lagos"
+   ]
+  },
+  {
+   "title": "Japa economics: costs and returns",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "japa",
+    "costs"
+   ]
+  },
+  {
+   "title": "Side hustles and diversification",
+   "category": "Applications",
+   "keywords": [
+    "side hustles"
+   ]
+  },
+  {
+   "title": "Budgeting a student allowance",
+   "category": "Applications",
+   "keywords": [
+    "budgeting",
+    "student"
+   ]
+  },
+  {
+   "title": "Examination drill: everyday past questions",
+   "category": "Applications",
+   "keywords": [
+    "everyday economics",
+    "past questions"
+   ]
+  },
+  {
+   "title": "JAMB economics paper structure and strategy",
+   "category": "Methods",
+   "keywords": [
+    "JAMB",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Objective questions on demand and supply",
+   "category": "Applications",
+   "keywords": [
+    "demand",
+    "supply",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on production and costs",
+   "category": "Applications",
+   "keywords": [
+    "production",
+    "costs",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on market structures",
+   "category": "Applications",
+   "keywords": [
+    "market structures",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on money and banking",
+   "category": "Applications",
+   "keywords": [
+    "money",
+    "banking",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on public finance",
+   "category": "Applications",
+   "keywords": [
+    "public finance",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on national income",
+   "category": "Applications",
+   "keywords": [
+    "national income",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on international trade",
+   "category": "Applications",
+   "keywords": [
+    "trade",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on development",
+   "category": "Applications",
+   "keywords": [
+    "development",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set A past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed practice: the 40-question sprint",
+   "category": "Applications",
+   "keywords": [
+    "timed practice",
+    "sprint"
+   ]
+  },
+  {
+   "title": "Review of common wrong options",
+   "category": "Methods",
+   "keywords": [
+    "wrong options",
+    "review"
+   ]
+  },
+  {
+   "title": "Diagram-based question drills",
+   "category": "Methods",
+   "keywords": [
+    "diagram questions",
+    "drills"
+   ]
+  },
+  {
+   "title": "Calculation drills: elasticities and costs",
+   "category": "Methods",
+   "keywords": [
+    "calculations",
+    "elasticities"
+   ]
+  },
+  {
+   "title": "Elimination techniques for objective questions",
+   "category": "Methods",
+   "keywords": [
+    "elimination",
+    "techniques"
+   ]
+  },
+  {
+   "title": "Distinguishing close concepts: GDP items",
+   "category": "Methods",
+   "keywords": [
+    "GDP items",
+    "concepts"
+   ]
+  },
+  {
+   "title": "Misconceptions about inflation corrected",
+   "category": "Methods",
+   "keywords": [
+    "misconceptions",
+    "inflation"
+   ]
+  },
+  {
+   "title": "Errors about banking corrected",
+   "category": "Methods",
+   "keywords": [
+    "banking",
+    "errors"
+   ]
+  },
+  {
+   "title": "Reading long scenario options fast",
+   "category": "Methods",
+   "keywords": [
+    "scenarios",
+    "reading"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set B past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Elasticity multi-step problems",
+   "category": "Methods",
+   "keywords": [
+    "elasticity",
+    "problems"
+   ]
+  },
+  {
+   "title": "Cost and revenue table problems",
+   "category": "Methods",
+   "keywords": [
+    "costs",
+    "revenue"
+   ]
+  },
+  {
+   "title": "Multiplier and circular flow problems",
+   "category": "Methods",
+   "keywords": [
+    "multiplier",
+    "problems"
+   ]
+  },
+  {
+   "title": "National income accounting problems",
+   "category": "Methods",
+   "keywords": [
+    "national income",
+    "problems"
+   ]
+  },
+  {
+   "title": "Unemployment and labour force problems",
+   "category": "Methods",
+   "keywords": [
+    "unemployment",
+    "problems"
+   ]
+  },
+  {
+   "title": "Terms of trade and BOP problems",
+   "category": "Methods",
+   "keywords": [
+    "terms of trade",
+    "BOP"
+   ]
+  },
+  {
+   "title": "Tax incidence numerical problems",
+   "category": "Methods",
+   "keywords": [
+    "tax incidence",
+    "numerical"
+   ]
+  },
+  {
+   "title": "Index number and inflation problems",
+   "category": "Methods",
+   "keywords": [
+    "index numbers",
+    "inflation"
+   ]
+  },
+  {
+   "title": "Graph interpretation challenge set",
+   "category": "Methods",
+   "keywords": [
+    "graphs",
+    "challenge"
+   ]
+  },
+  {
+   "title": "Examination drill: workshop past questions",
+   "category": "Applications",
+   "keywords": [
+    "workshop",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Building the final revision timetable",
+   "category": "Methods",
+   "keywords": [
+    "revision timetable"
+   ]
+  },
+  {
+   "title": "Definitions digest: every key term",
+   "category": "Methods",
+   "keywords": [
+    "definitions digest"
+   ]
+  },
+  {
+   "title": "Formulae and their uses listed",
+   "category": "Methods",
+   "keywords": [
+    "formulae",
+    "uses"
+   ]
+  },
+  {
+   "title": "Diagrams you must be able to draw",
+   "category": "Methods",
+   "keywords": [
+    "diagrams",
+    "draw"
+   ]
+  },
+  {
+   "title": "The most repeated JAMB economics themes",
+   "category": "Methods",
+   "keywords": [
+    "repeated themes",
+    "JAMB"
+   ]
+  },
+  {
+   "title": "Mock examination: 50 questions in 50 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Marking your mock: error analysis",
+   "category": "Methods",
+   "keywords": [
+    "error analysis",
+    "mock"
+   ]
+  },
+  {
+   "title": "Handling case-study style items",
+   "category": "Methods",
+   "keywords": [
+    "case studies",
+    "items"
+   ]
+  },
+  {
+   "title": "Time discipline across four sections",
+   "category": "Methods",
+   "keywords": [
+    "time discipline"
+   ]
+  },
+  {
+   "title": "Exam day strategy and final confidence",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Demand and supply diagrams drawn clean",
+   "category": "Methods",
+   "keywords": [
+    "diagrams",
+    "demand",
+    "supply"
+   ]
+  },
+  {
+   "title": "Shifts drawn: right and left",
+   "category": "Methods",
+   "keywords": [
+    "shifts",
+    "diagrams"
+   ]
+  },
+  {
+   "title": "Elastic ranges marked on curves",
+   "category": "Methods",
+   "keywords": [
+    "elastic ranges"
+   ]
+  },
+  {
+   "title": "Cost curves family drawn once",
+   "category": "Methods",
+   "keywords": [
+    "cost curves"
+   ]
+  },
+  {
+   "title": "Revenue curves for price takers",
+   "category": "Methods",
+   "keywords": [
+    "revenue curves"
+   ]
+  },
+  {
+   "title": "Monopoly diagram: profit marked",
+   "category": "Methods",
+   "keywords": [
+    "monopoly",
+    "diagram"
+   ]
+  },
+  {
+   "title": "Minimum price and maximum price shown",
+   "category": "Methods",
+   "keywords": [
+    "price controls"
+   ]
+  },
+  {
+   "title": "Labelling habits examiners reward",
+   "category": "Methods",
+   "keywords": [
+    "labelling"
+   ]
+  },
+  {
+   "title": "Workshop: redraw 10 diagrams timed",
+   "category": "Applications",
+   "keywords": [
+    "redraw",
+    "timed"
+   ]
+  },
+  {
+   "title": "Examination drill: diagrams past questions",
+   "category": "Applications",
+   "keywords": [
+    "diagrams",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Utility: total and marginal relations",
+   "category": "Theory",
+   "keywords": [
+    "utility",
+    "marginal"
+   ]
+  },
+  {
+   "title": "Consumer equilibrium: equal margins",
+   "category": "Theory",
+   "keywords": [
+    "consumer equilibrium"
+   ]
+  },
+  {
+   "title": "Law of diminishing marginal utility shown",
+   "category": "Theory",
+   "keywords": [
+    "diminishing utility"
+   ]
+  },
+  {
+   "title": "Producer surplus read from curves",
+   "category": "Theory",
+   "keywords": [
+    "producer surplus"
+   ]
+  },
+  {
+   "title": "Consumer surplus: simple readings",
+   "category": "Theory",
+   "keywords": [
+    "consumer surplus"
+   ]
+  },
+  {
+   "title": "Indifference idea: a first look",
+   "category": "Theory",
+   "keywords": [
+    "indifference"
+   ]
+  },
+  {
+   "title": "Rationing and black markets analysed",
+   "category": "Nigerian Context",
+   "keywords": [
+    "rationing",
+    "black market"
+   ]
+  },
+  {
+   "title": "Case: fuel scarcity economics",
+   "category": "Nigerian Context",
+   "keywords": [
+    "fuel scarcity"
+   ]
+  },
+  {
+   "title": "Workshop: utility table problems",
+   "category": "Methods",
+   "keywords": [
+    "utility tables"
+   ]
+  },
+  {
+   "title": "Examination drill: utility past questions",
+   "category": "Applications",
+   "keywords": [
+    "utility",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Goals: growth, jobs, prices, external balance",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "policy goals"
+   ]
+  },
+  {
+   "title": "Fiscal tools: G and T levers",
+   "category": "Theory",
+   "keywords": [
+    "fiscal tools"
+   ]
+  },
+  {
+   "title": "Monetary tools: rate, reserve, OMO",
+   "category": "Theory",
+   "keywords": [
+    "monetary tools",
+    "OMO"
+   ]
+  },
+  {
+   "title": "Crowding out: the debate",
+   "category": "Theory",
+   "keywords": [
+    "crowding out"
+   ]
+  },
+  {
+   "title": "Policy lags and timing pains",
+   "category": "Theory",
+   "keywords": [
+    "policy lags"
+   ]
+  },
+  {
+   "title": "Inflation-unemployment trade-off idea",
+   "category": "Theory",
+   "keywords": [
+    "trade-off"
+   ]
+  },
+  {
+   "title": "Nigeria's responses to shocks",
+   "category": "Nigerian Context",
+   "keywords": [
+    "shocks",
+    "responses"
+   ]
+  },
+  {
+   "title": "Case: COVID-19 policy packages",
+   "category": "Nigerian Context",
+   "keywords": [
+    "COVID-19",
+    "packages"
+   ]
+  },
+  {
+   "title": "Workshop: match policy to problem",
+   "category": "Methods",
+   "keywords": [
+    "policy match"
+   ]
+  },
+  {
+   "title": "Examination drill: macro policy past questions",
+   "category": "Applications",
+   "keywords": [
+    "macro policy",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Case: a telco's pricing strategy",
+   "category": "Nigerian Context",
+   "keywords": [
+    "telco",
+    "pricing"
+   ]
+  },
+  {
+   "title": "Case: cement pricing and competition",
+   "category": "Nigerian Context",
+   "keywords": [
+    "cement",
+    "competition"
+   ]
+  },
+  {
+   "title": "Case: ride-hailing surge economics",
+   "category": "Nigerian Context",
+   "keywords": [
+    "ride-hailing",
+    "surge"
+   ]
+  },
+  {
+   "title": "Case: bakery cost structure built",
+   "category": "Applications",
+   "keywords": [
+    "bakery",
+    "costs"
+   ]
+  },
+  {
+   "title": "Case: supermarket stock decisions",
+   "category": "Applications",
+   "keywords": [
+    "supermarket",
+    "stock"
+   ]
+  },
+  {
+   "title": "Case: farm output and prices",
+   "category": "Applications",
+   "keywords": [
+    "farm",
+    "prices"
+   ]
+  },
+  {
+   "title": "Case: fx scarcity and importers",
+   "category": "Nigerian Context",
+   "keywords": [
+    "FX scarcity",
+    "importers"
+   ]
+  },
+  {
+   "title": "Reading a simple business plan",
+   "category": "Methods",
+   "keywords": [
+    "business plan"
+   ]
+  },
+  {
+   "title": "Workshop: present a case in five lines",
+   "category": "Applications",
+   "keywords": [
+    "present case"
+   ]
+  },
+  {
+   "title": "Examination drill: case studies past questions",
+   "category": "Applications",
+   "keywords": [
+    "case studies",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Globalisation: gains and grievances",
+   "category": "Theory",
+   "keywords": [
+    "globalisation"
+   ]
+  },
+  {
+   "title": "Multinationals and host countries",
+   "category": "Theory",
+   "keywords": [
+    "multinationals"
+   ]
+  },
+  {
+   "title": "Trade blocs mapped: EU, AfCFTA",
+   "category": "Theory",
+   "keywords": [
+    "trade blocs",
+    "AfCFTA"
+   ]
+  },
+  {
+   "title": "Commodity dependence explained",
+   "category": "Theory",
+   "keywords": [
+    "commodity dependence"
+   ]
+  },
+  {
+   "title": "Terms of trade shocks history",
+   "category": "Theory",
+   "keywords": [
+    "terms of trade",
+    "shocks"
+   ]
+  },
+  {
+   "title": "Migration and remittance flows",
+   "category": "Theory",
+   "keywords": [
+    "migration",
+    "remittances"
+   ]
+  },
+  {
+   "title": "Climate economics: carbon pricing idea",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "carbon pricing"
+   ]
+  },
+  {
+   "title": "Debt relief campaigns history",
+   "category": "Theory",
+   "keywords": [
+    "debt relief"
+   ]
+  },
+  {
+   "title": "Workshop: argue both sides once",
+   "category": "Methods",
+   "keywords": [
+    "argue both sides"
+   ]
+  },
+  {
+   "title": "Examination drill: global past questions",
+   "category": "Applications",
+   "keywords": [
+    "global economy",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed drill: demand and supply",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "demand"
+   ]
+  },
+  {
+   "title": "Timed drill: costs and revenue",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "costs"
+   ]
+  },
+  {
+   "title": "Timed drill: money and banking",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "money"
+   ]
+  },
+  {
+   "title": "Timed drill: public finance",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "public finance"
+   ]
+  },
+  {
+   "title": "Timed drill: national income",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "income"
+   ]
+  },
+  {
+   "title": "Timed drill: trade and development",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "trade"
+   ]
+  },
+  {
+   "title": "Mock: 50 questions in 50 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Error analysis of your mock",
+   "category": "Methods",
+   "keywords": [
+    "error analysis"
+   ]
+  },
+  {
+   "title": "Definitions: the last-night sweep",
+   "category": "Methods",
+   "keywords": [
+    "definitions",
+    "sweep"
+   ]
+  },
+  {
+   "title": "Exam day: the calm plan",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "plan"
+   ]
+  }
+ ]
+}

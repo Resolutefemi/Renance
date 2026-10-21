@@ -1,0 +1,2536 @@
+{
+ "body": "jamb",
+ "subject": "computer-studies",
+ "title": "Computer Studies",
+ "unitTitles": [
+  "Computers, Hardware and Data",
+  "Software, Algorithms and Programming",
+  "Applications: Office, Graphics, Databases",
+  "Networks, Internet and Web",
+  "Systems, Files and Security",
+  "Ethics, Society and the Future",
+  "Hardware Deep Dive",
+  "Number Systems Deep Dive",
+  "Logic Gates Deep Dive",
+  "Programming in Depth",
+  "Operating Systems Deep Dive",
+  "Word Processing and Spreadsheets",
+  "Databases in Depth",
+  "Networks Deep Dive",
+  "The Internet Deep Dive",
+  "System Analysis and Development",
+  "Cybersecurity Deep Dive",
+  "Ethics and Digital Citizenship",
+  "ICT and the Nigerian Economy",
+  "Structured Revision: Set A",
+  "Structured Revision: Set B",
+  "Practical Knowledge Workshop",
+  "JAMB Masterclass: Final Lap",
+  "Computer Arithmetic Workshop",
+  "Data Representation and Encoding",
+  "Internet Protocols Workshop",
+  "Productivity Tools Workshop",
+  "Emerging Technologies Watch",
+  "Nigerian ICT Landscape",
+  "Computer Masterclass Drills"
+ ],
+ "topics": [
+  {
+   "title": "Computers: definition and characteristics",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "computer",
+    "characteristics",
+    "speed",
+    "accuracy",
+    "storage"
+   ]
+  },
+  {
+   "title": "History and generations of computers",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "generations",
+    "history",
+    "vacuum tubes",
+    "transistors",
+    "microprocessors"
+   ]
+  },
+  {
+   "title": "Classification of computers by size and type",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "classification",
+    "mainframe",
+    "minicomputer",
+    "microcomputer",
+    "analogue"
+   ]
+  },
+  {
+   "title": "Computer hardware: system unit components",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "hardware",
+    "system unit",
+    "motherboard",
+    "components"
+   ]
+  },
+  {
+   "title": "The CPU: control unit, ALU and registers",
+   "category": "Theory",
+   "keywords": [
+    "cpu",
+    "control unit",
+    "alu",
+    "registers",
+    "fetch"
+   ]
+  },
+  {
+   "title": "Input devices: keyboard, mouse and scanners",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "input devices",
+    "keyboard",
+    "mouse",
+    "scanner",
+    "ocr"
+   ]
+  },
+  {
+   "title": "Output devices: monitors, printers and speakers",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "output devices",
+    "monitor",
+    "printer",
+    "speaker",
+    "plotter"
+   ]
+  },
+  {
+   "title": "Primary memory: RAM, ROM and cache",
+   "category": "Theory",
+   "keywords": [
+    "ram",
+    "rom",
+    "cache",
+    "volatile",
+    "memory"
+   ]
+  },
+  {
+   "title": "Secondary storage: disks, flash and cloud",
+   "category": "Theory",
+   "keywords": [
+    "secondary storage",
+    "hard disk",
+    "flash drive",
+    "optical disk",
+    "cloud"
+   ]
+  },
+  {
+   "title": "Units of data: bits, bytes and words",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "bits",
+    "bytes",
+    "nibble",
+    "word",
+    "kilobyte"
+   ]
+  },
+  {
+   "title": "Number systems: binary, octal and hexadecimal",
+   "category": "Methods",
+   "keywords": [
+    "binary",
+    "octal",
+    "hexadecimal",
+    "number system",
+    "conversion"
+   ]
+  },
+  {
+   "title": "Binary arithmetic: addition and subtraction",
+   "category": "Methods",
+   "keywords": [
+    "binary arithmetic",
+    "addition",
+    "subtraction",
+    "carry"
+   ]
+  },
+  {
+   "title": "Logic gates: AND, OR, NOT and truth tables",
+   "category": "Theory",
+   "keywords": [
+    "logic gates",
+    "and gate",
+    "or gate",
+    "not gate",
+    "truth table"
+   ]
+  },
+  {
+   "title": "Computer software: system and application",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "software",
+    "system software",
+    "application software",
+    "utility"
+   ]
+  },
+  {
+   "title": "Operating systems and their functions",
+   "category": "Theory",
+   "keywords": [
+    "operating system",
+    "windows",
+    "functions",
+    "booting",
+    "interface"
+   ]
+  },
+  {
+   "title": "Human computer interface and GUI",
+   "category": "Theory",
+   "keywords": [
+    "gui",
+    "interface",
+    "icons",
+    "windows",
+    "menus"
+   ]
+  },
+  {
+   "title": "Data and information: differences and processing",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "data",
+    "information",
+    "processing",
+    "raw data",
+    "output"
+   ]
+  },
+  {
+   "title": "Data processing: manual, mechanical, electronic",
+   "category": "Theory",
+   "keywords": [
+    "manual",
+    "mechanical",
+    "electronic",
+    "data processing",
+    "batch"
+   ]
+  },
+  {
+   "title": "Algorithms and problem solving steps",
+   "category": "Methods",
+   "keywords": [
+    "algorithm",
+    "problem solving",
+    "steps",
+    "pseudocode"
+   ]
+  },
+  {
+   "title": "Flowcharts and flowchart symbols",
+   "category": "Methods",
+   "keywords": [
+    "flowchart",
+    "symbols",
+    "decision box",
+    "terminator",
+    "process"
+   ]
+  },
+  {
+   "title": "Programming languages: levels and translators",
+   "category": "Theory",
+   "keywords": [
+    "programming languages",
+    "high level",
+    "low level",
+    "compiler",
+    "interpreter"
+   ]
+  },
+  {
+   "title": "BASIC programming: statements and syntax",
+   "category": "Methods",
+   "keywords": [
+    "basic",
+    "print statement",
+    "input statement",
+    "syntax"
+   ]
+  },
+  {
+   "title": "Program development cycle and testing",
+   "category": "Methods",
+   "keywords": [
+    "program development",
+    "testing",
+    "debugging",
+    "documentation"
+   ]
+  },
+  {
+   "title": "Word processing: features and operations",
+   "category": "Applications",
+   "keywords": [
+    "word processing",
+    "microsoft word",
+    "formatting",
+    "editing",
+    "document"
+   ]
+  },
+  {
+   "title": "Spreadsheets: cells, formulas and functions",
+   "category": "Applications",
+   "keywords": [
+    "spreadsheet",
+    "cells",
+    "formulas",
+    "functions",
+    "microsoft excel"
+   ]
+  },
+  {
+   "title": "Presentation software and slide design",
+   "category": "Applications",
+   "keywords": [
+    "presentation",
+    "powerpoint",
+    "slides",
+    "animation"
+   ]
+  },
+  {
+   "title": "Databases: tables, records and fields",
+   "category": "Applications",
+   "keywords": [
+    "database",
+    "tables",
+    "records",
+    "fields",
+    "ms access"
+   ]
+  },
+  {
+   "title": "Database management systems and queries",
+   "category": "Applications",
+   "keywords": [
+    "dbms",
+    "queries",
+    "data retrieval",
+    "sort",
+    "filter"
+   ]
+  },
+  {
+   "title": "Computer graphics and design software",
+   "category": "Applications",
+   "keywords": [
+    "graphics",
+    "coreldraw",
+    "design",
+    "images",
+    "editing"
+   ]
+  },
+  {
+   "title": "Computer networks: LAN, WAN and topologies",
+   "category": "Theory",
+   "keywords": [
+    "lan",
+    "wan",
+    "topology",
+    "network",
+    "star"
+   ]
+  },
+  {
+   "title": "Network devices: modems, routers and switches",
+   "category": "Theory",
+   "keywords": [
+    "modem",
+    "router",
+    "switch",
+    "hub",
+    "network devices"
+   ]
+  },
+  {
+   "title": "The internet: services and protocols",
+   "category": "Applications",
+   "keywords": [
+    "internet",
+    "email",
+    "protocols",
+    "http",
+    "browsing"
+   ]
+  },
+  {
+   "title": "World wide web, websites and browsers",
+   "category": "Applications",
+   "keywords": [
+    "world wide web",
+    "website",
+    "browser",
+    "url",
+    "hyperlink"
+   ]
+  },
+  {
+   "title": "Email, cloud computing and file transfer",
+   "category": "Applications",
+   "keywords": [
+    "email",
+    "cloud computing",
+    "attachment",
+    "ftp",
+    "google drive"
+   ]
+  },
+  {
+   "title": "Web design with HTML: tags and pages",
+   "category": "Applications",
+   "keywords": [
+    "html",
+    "tags",
+    "web page",
+    "hyperlinks",
+    "elements"
+   ]
+  },
+  {
+   "title": "System analysis and design process",
+   "category": "Methods",
+   "keywords": [
+    "system analysis",
+    "design",
+    "feasibility",
+    "requirements"
+   ]
+  },
+  {
+   "title": "The system development life cycle stages",
+   "category": "Methods",
+   "keywords": [
+    "system development",
+    "life cycle",
+    "stages",
+    "implementation"
+   ]
+  },
+  {
+   "title": "Computer files: organisation and access",
+   "category": "Methods",
+   "keywords": [
+    "computer files",
+    "organisation",
+    "serial",
+    "random",
+    "access methods"
+   ]
+  },
+  {
+   "title": "Data security, backups and recovery",
+   "category": "Applications",
+   "keywords": [
+    "data security",
+    "backup",
+    "recovery",
+    "passwords",
+    "encryption"
+   ]
+  },
+  {
+   "title": "Computer viruses: types and prevention",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "virus",
+    "worm",
+    "antivirus",
+    "prevention",
+    "trojan"
+   ]
+  },
+  {
+   "title": "Computer ethics and responsible use",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "ethics",
+    "netiquette",
+    "responsible use",
+    "piracy"
+   ]
+  },
+  {
+   "title": "Cybercrime, hacking and internet safety",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "cybercrime",
+    "hacking",
+    "phishing",
+    "safety",
+    "fraud"
+   ]
+  },
+  {
+   "title": "ICT and society: impacts on daily life",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "ict",
+    "impact",
+    "society",
+    "e learning",
+    "telemedicine"
+   ]
+  },
+  {
+   "title": "E-learning and educational technology",
+   "category": "Applications",
+   "keywords": [
+    "e learning",
+    "education",
+    "cbt",
+    "virtual classroom"
+   ]
+  },
+  {
+   "title": "E-commerce and online transactions",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "e commerce",
+    "online",
+    "transactions",
+    "payment",
+    "shopping"
+   ]
+  },
+  {
+   "title": "E-government and digital services",
+   "category": "Nigerian Context",
+   "keywords": [
+    "e government",
+    "digital services",
+    "nimc",
+    "bvn",
+    "nigeria"
+   ]
+  },
+  {
+   "title": "ICT infrastructure and digital divide in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "infrastructure",
+    "digital divide",
+    "broadband",
+    "nigeria"
+   ]
+  },
+  {
+   "title": "Maintaining computers: care and troubleshooting",
+   "category": "Applications",
+   "keywords": [
+    "maintenance",
+    "troubleshooting",
+    "cleaning",
+    "dust",
+    "faults"
+   ]
+  },
+  {
+   "title": "Careers and professions in computing",
+   "category": "Applications",
+   "keywords": [
+    "careers",
+    "programmer",
+    "system analyst",
+    "network engineer"
+   ]
+  },
+  {
+   "title": "Artificial intelligence and robotics",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "artificial intelligence",
+    "robotics",
+    "expert systems",
+    "automation"
+   ]
+  },
+  {
+   "title": "Examination drill: computer studies past questions by topic",
+   "category": "Applications",
+   "keywords": [
+    "past questions",
+    "revision",
+    "examination",
+    "jamb"
+   ]
+  },
+  {
+   "title": "NIN and digital identity systems",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NIN",
+    "identity"
+   ]
+  },
+  {
+   "title": "Cyber hygiene habits for students",
+   "category": "Applications",
+   "keywords": [
+    "cyber hygiene"
+   ]
+  },
+  {
+   "title": "Digital collaboration tools compared",
+   "category": "Applications",
+   "keywords": [
+    "collaboration tools"
+   ]
+  },
+  {
+   "title": "Streaming and content creation basics",
+   "category": "Applications",
+   "keywords": [
+    "streaming",
+    "content"
+   ]
+  },
+  {
+   "title": "Cloud services for small firms",
+   "category": "Applications",
+   "keywords": [
+    "cloud",
+    "small firms"
+   ]
+  },
+  {
+   "title": "Digital marketing channels listed",
+   "category": "Applications",
+   "keywords": [
+    "digital marketing"
+   ]
+  },
+  {
+   "title": "Data protection compliance basics",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "data protection"
+   ]
+  },
+  {
+   "title": "Evaluating information online",
+   "category": "Methods",
+   "keywords": [
+    "evaluation",
+    "online"
+   ]
+  },
+  {
+   "title": "Examination drill: digital life past questions",
+   "category": "Applications",
+   "keywords": [
+    "digital life",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Motherboard, buses and ports identified",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "motherboard",
+    "buses",
+    "ports"
+   ]
+  },
+  {
+   "title": "Processor speeds and cores explained",
+   "category": "Theory",
+   "keywords": [
+    "processor",
+    "cores"
+   ]
+  },
+  {
+   "title": "Memory hierarchy: registers to cache",
+   "category": "Theory",
+   "keywords": [
+    "memory hierarchy",
+    "cache"
+   ]
+  },
+  {
+   "title": "Storage media compared with capacities",
+   "category": "Methods",
+   "keywords": [
+    "storage media",
+    "capacities"
+   ]
+  },
+  {
+   "title": "Expansion cards: graphics, sound, network",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "expansion cards"
+   ]
+  },
+  {
+   "title": "Power supply and cooling basics",
+   "category": "Applications",
+   "keywords": [
+    "power supply",
+    "cooling"
+   ]
+  },
+  {
+   "title": "Assembling a simple system unit",
+   "category": "Methods",
+   "keywords": [
+    "assembling",
+    "system unit"
+   ]
+  },
+  {
+   "title": "Troubleshooting hardware faults",
+   "category": "Methods",
+   "keywords": [
+    "troubleshooting",
+    "hardware"
+   ]
+  },
+  {
+   "title": "Printers: impact versus non-impact",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "printers",
+    "impact"
+   ]
+  },
+  {
+   "title": "Examination drill: hardware past questions",
+   "category": "Applications",
+   "keywords": [
+    "hardware",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Binary to decimal conversions drilled",
+   "category": "Methods",
+   "keywords": [
+    "binary",
+    "decimal"
+   ]
+  },
+  {
+   "title": "Decimal to binary conversions drilled",
+   "category": "Methods",
+   "keywords": [
+    "decimal",
+    "binary"
+   ]
+  },
+  {
+   "title": "Octal and hexadecimal conversions",
+   "category": "Methods",
+   "keywords": [
+    "octal",
+    "hexadecimal"
+   ]
+  },
+  {
+   "title": "Binary addition with carries",
+   "category": "Methods",
+   "keywords": [
+    "binary addition",
+    "carries"
+   ]
+  },
+  {
+   "title": "Binary subtraction methods",
+   "category": "Methods",
+   "keywords": [
+    "binary subtraction"
+   ]
+  },
+  {
+   "title": "Two's complement negative numbers",
+   "category": "Theory",
+   "keywords": [
+    "two's complement",
+    "negatives"
+   ]
+  },
+  {
+   "title": "ASCII and character encoding",
+   "category": "Theory",
+   "keywords": [
+    "ASCII",
+    "encoding"
+   ]
+  },
+  {
+   "title": "Data sizes: nibble to terabyte",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "data sizes",
+    "terabyte"
+   ]
+  },
+  {
+   "title": "Parity bits and error checks",
+   "category": "Theory",
+   "keywords": [
+    "parity bits",
+    "errors"
+   ]
+  },
+  {
+   "title": "Examination drill: number systems past questions",
+   "category": "Applications",
+   "keywords": [
+    "number systems",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Basic gates: truth tables mastered",
+   "category": "Methods",
+   "keywords": [
+    "logic gates",
+    "truth tables"
+   ]
+  },
+  {
+   "title": "NAND and NOR as universal gates",
+   "category": "Theory",
+   "keywords": [
+    "NAND",
+    "NOR",
+    "universal"
+   ]
+  },
+  {
+   "title": "Building half adders from gates",
+   "category": "Methods",
+   "keywords": [
+    "half adder",
+    "gates"
+   ]
+  },
+  {
+   "title": "Combinational circuit tracing",
+   "category": "Methods",
+   "keywords": [
+    "combinational circuits",
+    "tracing"
+   ]
+  },
+  {
+   "title": "Boolean expressions from circuits",
+   "category": "Methods",
+   "keywords": [
+    "Boolean",
+    "expressions"
+   ]
+  },
+  {
+   "title": "Simplifying Boolean expressions",
+   "category": "Methods",
+   "keywords": [
+    "Boolean",
+    "simplification"
+   ]
+  },
+  {
+   "title": "Flip-flops: storing a bit",
+   "category": "Theory",
+   "keywords": [
+    "flip-flops",
+    "bit"
+   ]
+  },
+  {
+   "title": "Registers and counters: an intro",
+   "category": "Theory",
+   "keywords": [
+    "registers",
+    "counters"
+   ]
+  },
+  {
+   "title": "Gates inside everyday devices",
+   "category": "Applications",
+   "keywords": [
+    "gates",
+    "devices"
+   ]
+  },
+  {
+   "title": "Examination drill: logic past questions",
+   "category": "Applications",
+   "keywords": [
+    "logic gates",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Flowchart shapes used correctly",
+   "category": "Methods",
+   "keywords": [
+    "flowchart",
+    "shapes"
+   ]
+  },
+  {
+   "title": "Pseudocode conventions practised",
+   "category": "Methods",
+   "keywords": [
+    "pseudocode"
+   ]
+  },
+  {
+   "title": "Variables, constants and data types",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "variables",
+    "data types"
+   ]
+  },
+  {
+   "title": "Sequence, selection and iteration",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "sequence",
+    "selection",
+    "iteration"
+   ]
+  },
+  {
+   "title": "Writing simple BASIC programs",
+   "category": "Methods",
+   "keywords": [
+    "BASIC",
+    "programs"
+   ]
+  },
+  {
+   "title": "Loops: FOR and WHILE compared",
+   "category": "Methods",
+   "keywords": [
+    "loops",
+    "FOR",
+    "WHILE"
+   ]
+  },
+  {
+   "title": "Arrays and simple lists",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "arrays",
+    "lists"
+   ]
+  },
+  {
+   "title": "Tracing programs on paper",
+   "category": "Methods",
+   "keywords": [
+    "tracing",
+    "programs"
+   ]
+  },
+  {
+   "title": "Debugging: finding the bug fast",
+   "category": "Methods",
+   "keywords": [
+    "debugging"
+   ]
+  },
+  {
+   "title": "Examination drill: programming past questions",
+   "category": "Applications",
+   "keywords": [
+    "programming",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Functions of the OS listed precisely",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "OS functions"
+   ]
+  },
+  {
+   "title": "Process management basics",
+   "category": "Theory",
+   "keywords": [
+    "process management"
+   ]
+  },
+  {
+   "title": "Memory management and virtual memory",
+   "category": "Theory",
+   "keywords": [
+    "memory management",
+    "virtual"
+   ]
+  },
+  {
+   "title": "File systems and directories",
+   "category": "Theory",
+   "keywords": [
+    "file systems",
+    "directories"
+   ]
+  },
+  {
+   "title": "CLI versus GUI compared",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "CLI",
+    "GUI"
+   ]
+  },
+  {
+   "title": "DOS commands practised",
+   "category": "Methods",
+   "keywords": [
+    "DOS",
+    "commands"
+   ]
+  },
+  {
+   "title": "Windows, Linux and macOS compared",
+   "category": "Methods",
+   "keywords": [
+    "Windows",
+    "Linux",
+    "macOS"
+   ]
+  },
+  {
+   "title": "Installing and updating software",
+   "category": "Methods",
+   "keywords": [
+    "installing",
+    "updating"
+   ]
+  },
+  {
+   "title": "Device drivers explained",
+   "category": "Theory",
+   "keywords": [
+    "drivers",
+    "devices"
+   ]
+  },
+  {
+   "title": "Examination drill: OS past questions",
+   "category": "Applications",
+   "keywords": [
+    "operating systems",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Document formatting features mastered",
+   "category": "Methods",
+   "keywords": [
+    "formatting",
+    "documents"
+   ]
+  },
+  {
+   "title": "Tables, images and page layout",
+   "category": "Methods",
+   "keywords": [
+    "tables",
+    "page layout"
+   ]
+  },
+  {
+   "title": "Mail merge step by step",
+   "category": "Methods",
+   "keywords": [
+    "mail merge"
+   ]
+  },
+  {
+   "title": "Spreadsheet cells, rows and ranges",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "cells",
+    "ranges"
+   ]
+  },
+  {
+   "title": "Formulas and cell referencing",
+   "category": "Methods",
+   "keywords": [
+    "formulas",
+    "referencing"
+   ]
+  },
+  {
+   "title": "Functions: SUM, AVERAGE, IF, COUNT",
+   "category": "Methods",
+   "keywords": [
+    "SUM",
+    "AVERAGE",
+    "IF"
+   ]
+  },
+  {
+   "title": "Charts from spreadsheet data",
+   "category": "Methods",
+   "keywords": [
+    "charts",
+    "data"
+   ]
+  },
+  {
+   "title": "Sorting and filtering records",
+   "category": "Methods",
+   "keywords": [
+    "sorting",
+    "filtering"
+   ]
+  },
+  {
+   "title": "Practical: build a results sheet",
+   "category": "Applications",
+   "keywords": [
+    "results sheet"
+   ]
+  },
+  {
+   "title": "Examination drill: office apps past questions",
+   "category": "Applications",
+   "keywords": [
+    "office apps",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Tables, records, fields, keys defined",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "tables",
+    "keys"
+   ]
+  },
+  {
+   "title": "Primary and foreign keys",
+   "category": "Theory",
+   "keywords": [
+    "primary key",
+    "foreign key"
+   ]
+  },
+  {
+   "title": "Relationships: one-to-many modelled",
+   "category": "Theory",
+   "keywords": [
+    "relationships",
+    "one-to-many"
+   ]
+  },
+  {
+   "title": "Queries: selecting and filtering",
+   "category": "Methods",
+   "keywords": [
+    "queries",
+    "filtering"
+   ]
+  },
+  {
+   "title": "Forms for data entry",
+   "category": "Methods",
+   "keywords": [
+    "forms",
+    "data entry"
+   ]
+  },
+  {
+   "title": "Reports from databases",
+   "category": "Methods",
+   "keywords": [
+    "reports",
+    "databases"
+   ]
+  },
+  {
+   "title": "Data validation rules",
+   "category": "Applications",
+   "keywords": [
+    "validation",
+    "rules"
+   ]
+  },
+  {
+   "title": "Normalization: first steps",
+   "category": "Theory",
+   "keywords": [
+    "normalization"
+   ]
+  },
+  {
+   "title": "Practical: a school database",
+   "category": "Applications",
+   "keywords": [
+    "school database"
+   ]
+  },
+  {
+   "title": "Examination drill: databases past questions",
+   "category": "Applications",
+   "keywords": [
+    "databases",
+    "past questions"
+   ]
+  },
+  {
+   "title": "LAN, MAN, WAN with examples",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "LAN",
+    "MAN",
+    "WAN"
+   ]
+  },
+  {
+   "title": "Topologies: star, bus, ring, mesh",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "topologies",
+    "star",
+    "mesh"
+   ]
+  },
+  {
+   "title": "Transmission media: cable to wireless",
+   "category": "Theory",
+   "keywords": [
+    "transmission media",
+    "wireless"
+   ]
+  },
+  {
+   "title": "IP addressing basics",
+   "category": "Theory",
+   "keywords": [
+    "IP addressing"
+   ]
+  },
+  {
+   "title": "Switches, routers, access points",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "switches",
+    "routers"
+   ]
+  },
+  {
+   "title": "Client-server versus peer-to-peer",
+   "category": "Theory",
+   "keywords": [
+    "client-server",
+    "peer-to-peer"
+   ]
+  },
+  {
+   "title": "Setting up a small LAN",
+   "category": "Methods",
+   "keywords": [
+    "setting up",
+    "LAN"
+   ]
+  },
+  {
+   "title": "Bandwidth and latency meaning",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "bandwidth",
+    "latency"
+   ]
+  },
+  {
+   "title": "Network security: firewalls and WPA",
+   "category": "Applications",
+   "keywords": [
+    "firewalls",
+    "WPA"
+   ]
+  },
+  {
+   "title": "Examination drill: networks past questions",
+   "category": "Applications",
+   "keywords": [
+    "networks",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Protocols: HTTP, FTP, SMTP, TCP/IP",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "HTTP",
+    "FTP",
+    "TCP/IP"
+   ]
+  },
+  {
+   "title": "Domain names and DNS resolution",
+   "category": "Theory",
+   "keywords": [
+    "domain names",
+    "DNS"
+   ]
+  },
+  {
+   "title": "Browsers and search techniques",
+   "category": "Methods",
+   "keywords": [
+    "browsers",
+    "search"
+   ]
+  },
+  {
+   "title": "Email: composing and etiquette",
+   "category": "Methods",
+   "keywords": [
+    "email",
+    "etiquette"
+   ]
+  },
+  {
+   "title": "Cloud storage and sync",
+   "category": "Applications",
+   "keywords": [
+    "cloud storage"
+   ]
+  },
+  {
+   "title": "Building a simple HTML page",
+   "category": "Methods",
+   "keywords": [
+    "HTML",
+    "page"
+   ]
+  },
+  {
+   "title": "Web hosting basics",
+   "category": "Applications",
+   "keywords": [
+    "web hosting"
+   ]
+  },
+  {
+   "title": "Safe browsing and phishing spotting",
+   "category": "Applications",
+   "keywords": [
+    "phishing",
+    "safety"
+   ]
+  },
+  {
+   "title": "Bandwidth management at home",
+   "category": "Applications",
+   "keywords": [
+    "bandwidth",
+    "home"
+   ]
+  },
+  {
+   "title": "Examination drill: internet past questions",
+   "category": "Applications",
+   "keywords": [
+    "internet",
+    "past questions"
+   ]
+  },
+  {
+   "title": "SDLC stages listed and explained",
+   "category": "Theory",
+   "keywords": [
+    "SDLC",
+    "stages"
+   ]
+  },
+  {
+   "title": "Feasibility studies purpose",
+   "category": "Theory",
+   "keywords": [
+    "feasibility studies"
+   ]
+  },
+  {
+   "title": "Fact-finding: interviews and observation",
+   "category": "Methods",
+   "keywords": [
+    "fact-finding",
+    "interviews"
+   ]
+  },
+  {
+   "title": "Data flow diagrams drawn",
+   "category": "Methods",
+   "keywords": [
+    "DFD",
+    "drawing"
+   ]
+  },
+  {
+   "title": "System design outputs specified",
+   "category": "Methods",
+   "keywords": [
+    "system design",
+    "outputs"
+   ]
+  },
+  {
+   "title": "Testing: unit to acceptance",
+   "category": "Methods",
+   "keywords": [
+    "testing",
+    "acceptance"
+   ]
+  },
+  {
+   "title": "Implementation: changeover methods",
+   "category": "Theory",
+   "keywords": [
+    "changeover",
+    "methods"
+   ]
+  },
+  {
+   "title": "Documentation types: user and technical",
+   "category": "Theory",
+   "keywords": [
+    "documentation"
+   ]
+  },
+  {
+   "title": "Maintenance and evaluation cycles",
+   "category": "Theory",
+   "keywords": [
+    "maintenance",
+    "evaluation"
+   ]
+  },
+  {
+   "title": "Examination drill: SDLC past questions",
+   "category": "Applications",
+   "keywords": [
+    "SDLC",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Malware families: virus to ransomware",
+   "category": "Theory",
+   "keywords": [
+    "malware",
+    "ransomware"
+   ]
+  },
+  {
+   "title": "How antivirus software works",
+   "category": "Applications",
+   "keywords": [
+    "antivirus"
+   ]
+  },
+  {
+   "title": "Firewalls and access control",
+   "category": "Applications",
+   "keywords": [
+    "firewalls",
+    "access"
+   ]
+  },
+  {
+   "title": "Passwords and two-factor authentication",
+   "category": "Applications",
+   "keywords": [
+    "passwords",
+    "2FA"
+   ]
+  },
+  {
+   "title": "Backup strategies: 3-2-1 rule",
+   "category": "Methods",
+   "keywords": [
+    "backups",
+    "3-2-1"
+   ]
+  },
+  {
+   "title": "Social engineering: how scams work",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "social engineering",
+    "scams"
+   ]
+  },
+  {
+   "title": "Data privacy laws in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NDPR",
+    "privacy"
+   ]
+  },
+  {
+   "title": "Safe online banking habits",
+   "category": "Nigerian Context",
+   "keywords": [
+    "online banking",
+    "habits"
+   ]
+  },
+  {
+   "title": "Incident response: what to do first",
+   "category": "Methods",
+   "keywords": [
+    "incident response"
+   ]
+  },
+  {
+   "title": "Examination drill: security past questions",
+   "category": "Applications",
+   "keywords": [
+    "cybersecurity",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Computer ethics: the core principles",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "computer ethics"
+   ]
+  },
+  {
+   "title": "Software piracy and licensing",
+   "category": "Theory",
+   "keywords": [
+    "piracy",
+    "licensing"
+   ]
+  },
+  {
+   "title": "Intellectual property and copyright",
+   "category": "Theory",
+   "keywords": [
+    "copyright",
+    "IP"
+   ]
+  },
+  {
+   "title": "Plagiarism in digital work",
+   "category": "Theory",
+   "keywords": [
+    "plagiarism"
+   ]
+  },
+  {
+   "title": "Cyberbullying: effects and response",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "cyberbullying"
+   ]
+  },
+  {
+   "title": "Digital footprint management",
+   "category": "Applications",
+   "keywords": [
+    "digital footprint"
+   ]
+  },
+  {
+   "title": "Screen time and digital wellness",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "screen time"
+   ]
+  },
+  {
+   "title": "Fake news and verification habits",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "fake news",
+    "verification"
+   ]
+  },
+  {
+   "title": "Responsible AI use by students",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "AI",
+    "responsible use"
+   ]
+  },
+  {
+   "title": "Examination drill: ethics past questions",
+   "category": "Applications",
+   "keywords": [
+    "ethics",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Tech hubs: Yaba and Abuja ecosystems",
+   "category": "Nigerian Context",
+   "keywords": [
+    "tech hubs",
+    "Yaba"
+   ]
+  },
+  {
+   "title": "Fintech unicorns from Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "fintech",
+    "unicorns"
+   ]
+  },
+  {
+   "title": "E-government platforms: NIN, CAC online",
+   "category": "Nigerian Context",
+   "keywords": [
+    "e-government",
+    "NIN"
+   ]
+  },
+  {
+   "title": "Digital skills and employability",
+   "category": "Nigerian Context",
+   "keywords": [
+    "digital skills",
+    "jobs"
+   ]
+  },
+  {
+   "title": "Broadband expansion plans",
+   "category": "Nigerian Context",
+   "keywords": [
+    "broadband"
+   ]
+  },
+  {
+   "title": "Power and ICT infrastructure limits",
+   "category": "Nigerian Context",
+   "keywords": [
+    "power",
+    "infrastructure"
+   ]
+  },
+  {
+   "title": "Startups solving local problems",
+   "category": "Nigerian Context",
+   "keywords": [
+    "startups",
+    "local"
+   ]
+  },
+  {
+   "title": "Outsourcing and remote work",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "outsourcing",
+    "remote"
+   ]
+  },
+  {
+   "title": "The future of work skills",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "future of work"
+   ]
+  },
+  {
+   "title": "Examination drill: ICT economy past questions",
+   "category": "Applications",
+   "keywords": [
+    "ICT economy",
+    "past questions"
+   ]
+  },
+  {
+   "title": "JAMB computer studies paper structure",
+   "category": "Methods",
+   "keywords": [
+    "JAMB",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Objective questions on computer fundamentals",
+   "category": "Applications",
+   "keywords": [
+    "fundamentals",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on hardware",
+   "category": "Applications",
+   "keywords": [
+    "hardware",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on software and OS",
+   "category": "Applications",
+   "keywords": [
+    "software",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on number systems",
+   "category": "Applications",
+   "keywords": [
+    "number systems",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on programming",
+   "category": "Applications",
+   "keywords": [
+    "programming",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on networks and internet",
+   "category": "Applications",
+   "keywords": [
+    "networks",
+    "internet",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on applications packages",
+   "category": "Applications",
+   "keywords": [
+    "packages",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on ICT and society",
+   "category": "Applications",
+   "keywords": [
+    "ICT society",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set A past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed practice: the 40-question sprint",
+   "category": "Applications",
+   "keywords": [
+    "timed practice",
+    "sprint"
+   ]
+  },
+  {
+   "title": "Review of common wrong options",
+   "category": "Methods",
+   "keywords": [
+    "wrong options",
+    "review"
+   ]
+  },
+  {
+   "title": "Conversion drills against the clock",
+   "category": "Methods",
+   "keywords": [
+    "conversions",
+    "drills"
+   ]
+  },
+  {
+   "title": "Truth-table rapid drills",
+   "category": "Methods",
+   "keywords": [
+    "truth tables",
+    "drills"
+   ]
+  },
+  {
+   "title": "Elimination techniques for objective questions",
+   "category": "Methods",
+   "keywords": [
+    "elimination",
+    "techniques"
+   ]
+  },
+  {
+   "title": "Misconceptions about memory corrected",
+   "category": "Methods",
+   "keywords": [
+    "misconceptions",
+    "memory"
+   ]
+  },
+  {
+   "title": "Errors about networks corrected",
+   "category": "Methods",
+   "keywords": [
+    "networks",
+    "errors"
+   ]
+  },
+  {
+   "title": "Acronym power list revised",
+   "category": "Methods",
+   "keywords": [
+    "acronyms",
+    "list"
+   ]
+  },
+  {
+   "title": "Reading scenario items fast",
+   "category": "Methods",
+   "keywords": [
+    "scenarios",
+    "reading"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set B past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Convert: 20 mixed-base problems",
+   "category": "Methods",
+   "keywords": [
+    "convert",
+    "problems"
+   ]
+  },
+  {
+   "title": "Trace: 10 flowchart executions",
+   "category": "Methods",
+   "keywords": [
+    "trace",
+    "flowcharts"
+   ]
+  },
+  {
+   "title": "Write: 5 short BASIC tasks",
+   "category": "Methods",
+   "keywords": [
+    "BASIC",
+    "tasks"
+   ]
+  },
+  {
+   "title": "Design: 3 spreadsheet formulas",
+   "category": "Methods",
+   "keywords": [
+    "spreadsheet",
+    "formulas"
+   ]
+  },
+  {
+   "title": "Query: 5 database selections",
+   "category": "Methods",
+   "keywords": [
+    "database",
+    "queries"
+   ]
+  },
+  {
+   "title": "Draw: network topologies labelled",
+   "category": "Methods",
+   "keywords": [
+    "topologies",
+    "labelled"
+   ]
+  },
+  {
+   "title": "Fix: 10 troubleshooting scenarios",
+   "category": "Methods",
+   "keywords": [
+    "troubleshooting",
+    "scenarios"
+   ]
+  },
+  {
+   "title": "Spot: 10 phishing red flags",
+   "category": "Methods",
+   "keywords": [
+    "phishing",
+    "red flags"
+   ]
+  },
+  {
+   "title": "Plan: a simple LAN for a shop",
+   "category": "Applications",
+   "keywords": [
+    "LAN",
+    "shop"
+   ]
+  },
+  {
+   "title": "Examination drill: workshop past questions",
+   "category": "Applications",
+   "keywords": [
+    "workshop",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Building the final revision timetable",
+   "category": "Methods",
+   "keywords": [
+    "revision timetable"
+   ]
+  },
+  {
+   "title": "Facts digest: capacities, speeds, sizes",
+   "category": "Methods",
+   "keywords": [
+    "facts digest"
+   ]
+  },
+  {
+   "title": "Acronym digest: every exam term",
+   "category": "Methods",
+   "keywords": [
+    "acronym digest"
+   ]
+  },
+  {
+   "title": "The most repeated JAMB computer themes",
+   "category": "Methods",
+   "keywords": [
+    "repeated themes",
+    "JAMB"
+   ]
+  },
+  {
+   "title": "Mock examination: 50 questions in 50 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Marking your mock: error analysis",
+   "category": "Methods",
+   "keywords": [
+    "error analysis",
+    "mock"
+   ]
+  },
+  {
+   "title": "Conversion traps and how to dodge",
+   "category": "Methods",
+   "keywords": [
+    "conversion traps"
+   ]
+  },
+  {
+   "title": "Diagram questions: final polish",
+   "category": "Methods",
+   "keywords": [
+    "diagram questions",
+    "polish"
+   ]
+  },
+  {
+   "title": "Staying calm on technical options",
+   "category": "Methods",
+   "keywords": [
+    "composure",
+    "technical"
+   ]
+  },
+  {
+   "title": "Exam day strategy and final confidence",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Twenty conversions against the clock",
+   "category": "Methods",
+   "keywords": [
+    "conversions",
+    "timed"
+   ]
+  },
+  {
+   "title": "Binary addition: 15 drills",
+   "category": "Methods",
+   "keywords": [
+    "binary addition",
+    "drills"
+   ]
+  },
+  {
+   "title": "Binary subtraction: 15 drills",
+   "category": "Methods",
+   "keywords": [
+    "binary subtraction",
+    "drills"
+   ]
+  },
+  {
+   "title": "Hex to binary fast paths",
+   "category": "Methods",
+   "keywords": [
+    "hex",
+    "binary"
+   ]
+  },
+  {
+   "title": "Overflow and word size effects",
+   "category": "Theory",
+   "keywords": [
+    "overflow",
+    "word size"
+   ]
+  },
+  {
+   "title": "Fractional binary numbers",
+   "category": "Theory",
+   "keywords": [
+    "fractions",
+    "binary"
+   ]
+  },
+  {
+   "title": "BCD encoding basics",
+   "category": "Theory",
+   "keywords": [
+    "BCD"
+   ]
+  },
+  {
+   "title": "Checksums and simple codes",
+   "category": "Theory",
+   "keywords": [
+    "checksums"
+   ]
+  },
+  {
+   "title": "Workshop: mixed arithmetic set",
+   "category": "Applications",
+   "keywords": [
+    "workshop",
+    "arithmetic"
+   ]
+  },
+  {
+   "title": "Examination drill: arithmetic past questions",
+   "category": "Applications",
+   "keywords": [
+    "arithmetic",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Characters: ASCII table walked",
+   "category": "Theory",
+   "keywords": [
+    "ASCII",
+    "table"
+   ]
+  },
+  {
+   "title": "Unicode and emoji encoding",
+   "category": "Theory",
+   "keywords": [
+    "Unicode",
+    "emoji"
+   ]
+  },
+  {
+   "title": "Images: pixels and colour depth",
+   "category": "Theory",
+   "keywords": [
+    "pixels",
+    "colour depth"
+   ]
+  },
+  {
+   "title": "Sound: sampling and file sizes",
+   "category": "Theory",
+   "keywords": [
+    "sampling",
+    "file size"
+   ]
+  },
+  {
+   "title": "Compression: lossless versus lossy",
+   "category": "Theory",
+   "keywords": [
+    "compression",
+    "lossless"
+   ]
+  },
+  {
+   "title": "File formats matched to uses",
+   "category": "Methods",
+   "keywords": [
+    "file formats"
+   ]
+  },
+  {
+   "title": "Fonts and rendering basics",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "fonts",
+    "rendering"
+   ]
+  },
+  {
+   "title": "Encoding errors and mojibake",
+   "category": "Applications",
+   "keywords": [
+    "encoding",
+    "errors"
+   ]
+  },
+  {
+   "title": "Workshop: size estimation drills",
+   "category": "Methods",
+   "keywords": [
+    "size estimation"
+   ]
+  },
+  {
+   "title": "Examination drill: encoding past questions",
+   "category": "Applications",
+   "keywords": [
+    "encoding",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The journey of a web request",
+   "category": "Theory",
+   "keywords": [
+    "web request",
+    "journey"
+   ]
+  },
+  {
+   "title": "IP addresses: IPv4 dotted quads",
+   "category": "Methods",
+   "keywords": [
+    "IPv4",
+    "dotted quad"
+   ]
+  },
+  {
+   "title": "Private versus public addresses",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "private IP",
+    "public IP"
+   ]
+  },
+  {
+   "title": "Ports and common services",
+   "category": "Theory",
+   "keywords": [
+    "ports",
+    "services"
+   ]
+  },
+  {
+   "title": "HTTP verbs and status codes",
+   "category": "Theory",
+   "keywords": [
+    "HTTP",
+    "status codes"
+   ]
+  },
+  {
+   "title": "Cookies and sessions explained",
+   "category": "Theory",
+   "keywords": [
+    "cookies",
+    "sessions"
+   ]
+  },
+  {
+   "title": "VPN: what it does and hides",
+   "category": "Applications",
+   "keywords": [
+    "VPN"
+   ]
+  },
+  {
+   "title": "Tracing routes with simple tools",
+   "category": "Methods",
+   "keywords": [
+    "traceroute"
+   ]
+  },
+  {
+   "title": "Workshop: build a mini site plan",
+   "category": "Applications",
+   "keywords": [
+    "mini site",
+    "plan"
+   ]
+  },
+  {
+   "title": "Examination drill: protocols past questions",
+   "category": "Applications",
+   "keywords": [
+    "protocols",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Keyboard shortcuts that save hours",
+   "category": "Methods",
+   "keywords": [
+    "shortcuts"
+   ]
+  },
+  {
+   "title": "Styles and outlines in documents",
+   "category": "Methods",
+   "keywords": [
+    "styles",
+    "outlines"
+   ]
+  },
+  {
+   "title": "Spreadsheet lookup functions introduced",
+   "category": "Methods",
+   "keywords": [
+    "lookup functions"
+   ]
+  },
+  {
+   "title": "Charts: choosing the honest one",
+   "category": "Methods",
+   "keywords": [
+    "charts",
+    "choosing"
+   ]
+  },
+  {
+   "title": "Slides: structure over decoration",
+   "category": "Methods",
+   "keywords": [
+    "slides",
+    "structure"
+   ]
+  },
+  {
+   "title": "Printing and page setup mastered",
+   "category": "Methods",
+   "keywords": [
+    "printing",
+    "page setup"
+   ]
+  },
+  {
+   "title": "Collaboration: comments and versions",
+   "category": "Applications",
+   "keywords": [
+    "comments",
+    "versions"
+   ]
+  },
+  {
+   "title": "Templates reused wisely",
+   "category": "Applications",
+   "keywords": [
+    "templates"
+   ]
+  },
+  {
+   "title": "Workshop: a school results workbook",
+   "category": "Applications",
+   "keywords": [
+    "results workbook"
+   ]
+  },
+  {
+   "title": "Examination drill: productivity past questions",
+   "category": "Applications",
+   "keywords": [
+    "productivity",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Artificial intelligence: plain meaning",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "artificial intelligence"
+   ]
+  },
+  {
+   "title": "Machine learning examples around you",
+   "category": "Applications",
+   "keywords": [
+    "machine learning"
+   ]
+  },
+  {
+   "title": "Chatbots and large language models",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "chatbots",
+    "LLMs"
+   ]
+  },
+  {
+   "title": "Internet of things at home",
+   "category": "Applications",
+   "keywords": [
+    "IoT",
+    "home"
+   ]
+  },
+  {
+   "title": "Drones: farm and delivery uses",
+   "category": "Applications",
+   "keywords": [
+    "drones"
+   ]
+  },
+  {
+   "title": "3D printing in industry",
+   "category": "Applications",
+   "keywords": [
+    "3D printing"
+   ]
+  },
+  {
+   "title": "Blockchain: beyond the hype",
+   "category": "Theory",
+   "keywords": [
+    "blockchain"
+   ]
+  },
+  {
+   "title": "Virtual and augmented reality",
+   "category": "Applications",
+   "keywords": [
+    "VR",
+    "AR"
+   ]
+  },
+  {
+   "title": "Robotics in Nigerian industry",
+   "category": "Nigerian Context",
+   "keywords": [
+    "robotics",
+    "industry"
+   ]
+  },
+  {
+   "title": "Examination drill: emerging tech past questions",
+   "category": "Applications",
+   "keywords": [
+    "emerging tech",
+    "past questions"
+   ]
+  },
+  {
+   "title": "NCC and telecom regulation",
+   "category": "Nigerian Context",
+   "keywords": [
+    "NCC",
+    "regulation"
+   ]
+  },
+  {
+   "title": "GSM history: 2001 to date",
+   "category": "Nigerian Context",
+   "keywords": [
+    "GSM",
+    "history"
+   ]
+  },
+  {
+   "title": "Data pricing debates",
+   "category": "Nigerian Context",
+   "keywords": [
+    "data pricing"
+   ]
+  },
+  {
+   "title": "Right of way and fibre builds",
+   "category": "Nigerian Context",
+   "keywords": [
+    "fibre",
+    "right of way"
+   ]
+  },
+  {
+   "title": "Tech talent: training pipelines",
+   "category": "Nigerian Context",
+   "keywords": [
+    "talent",
+    "training"
+   ]
+  },
+  {
+   "title": "Startups: fintech, health, edtech",
+   "category": "Nigerian Context",
+   "keywords": [
+    "startups",
+    "edtech"
+   ]
+  },
+  {
+   "title": "Digital inclusion: rural access",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "inclusion",
+    "rural"
+   ]
+  },
+  {
+   "title": "E-waste and recycling in Lagos",
+   "category": "Nigerian Context",
+   "keywords": [
+    "e-waste",
+    "Lagos"
+   ]
+  },
+  {
+   "title": "Careers: from support to security",
+   "category": "Applications",
+   "keywords": [
+    "careers",
+    "security"
+   ]
+  },
+  {
+   "title": "Examination drill: landscape past questions",
+   "category": "Applications",
+   "keywords": [
+    "ICT landscape",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed drill: fundamentals",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "fundamentals"
+   ]
+  },
+  {
+   "title": "Timed drill: hardware",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "hardware"
+   ]
+  },
+  {
+   "title": "Timed drill: number systems",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "numbers"
+   ]
+  },
+  {
+   "title": "Timed drill: software and OS",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "software"
+   ]
+  },
+  {
+   "title": "Timed drill: networks",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "networks"
+   ]
+  },
+  {
+   "title": "Timed drill: ICT and society",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "society"
+   ]
+  },
+  {
+   "title": "Mock: 50 questions in 50 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Error analysis of your mock",
+   "category": "Methods",
+   "keywords": [
+    "error analysis"
+   ]
+  },
+  {
+   "title": "Acronym recall: final sweep",
+   "category": "Methods",
+   "keywords": [
+    "acronyms",
+    "sweep"
+   ]
+  },
+  {
+   "title": "Exam day: the calm plan",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "plan"
+   ]
+  }
+ ]
+}

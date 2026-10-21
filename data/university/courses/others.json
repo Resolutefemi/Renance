@@ -1,0 +1,1457 @@
+{
+ "school": "others",
+ "name": "Other Schools",
+ "short": "OTHERS",
+ "courses": [
+  {
+   "slug": "acc111",
+   "code": "ACC 111",
+   "title": null,
+   "semester": 1,
+   "icon": "calculate",
+   "bank": "uni-others-acc111-bank",
+   "questionCount": 99,
+   "pdf": null
+  },
+  {
+   "slug": "acc208",
+   "code": "ACC 208",
+   "title": null,
+   "semester": 1,
+   "icon": "calculate",
+   "bank": "uni-others-acc208-bank",
+   "questionCount": 66,
+   "pdf": null
+  },
+  {
+   "slug": "acc210",
+   "code": "ACC 210",
+   "title": null,
+   "semester": 1,
+   "icon": "calculate",
+   "bank": "uni-others-acc210-bank",
+   "questionCount": 65,
+   "pdf": null
+  },
+  {
+   "slug": "acc315",
+   "code": "ACC 315",
+   "title": null,
+   "semester": 1,
+   "icon": "calculate",
+   "bank": "uni-others-acc315-bank",
+   "questionCount": 50,
+   "pdf": null
+  },
+  {
+   "slug": "acc316",
+   "code": "ACC 316",
+   "title": null,
+   "semester": 1,
+   "icon": "calculate",
+   "bank": "uni-others-acc316-bank",
+   "questionCount": 59,
+   "pdf": null
+  },
+  {
+   "slug": "acc320",
+   "code": "ACC 320",
+   "title": null,
+   "semester": 1,
+   "icon": "calculate",
+   "bank": "uni-others-acc320-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "acc328",
+   "code": "ACC 328",
+   "title": null,
+   "semester": 1,
+   "icon": "calculate",
+   "bank": "uni-others-acc328-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "age101",
+   "code": "AGE 101",
+   "title": null,
+   "semester": 1,
+   "icon": "agriculture",
+   "bank": "uni-others-age101-bank",
+   "questionCount": 76,
+   "pdf": null
+  },
+  {
+   "slug": "ams101",
+   "code": "AMS 101",
+   "title": null,
+   "semester": 1,
+   "icon": "functions",
+   "bank": "uni-others-ams101-bank",
+   "questionCount": 684,
+   "pdf": null
+  },
+  {
+   "slug": "ams102",
+   "code": "AMS 102",
+   "title": null,
+   "semester": 1,
+   "icon": "functions",
+   "bank": "uni-others-ams102-bank",
+   "questionCount": 160,
+   "pdf": null
+  },
+  {
+   "slug": "ams104",
+   "code": "AMS 104",
+   "title": null,
+   "semester": 1,
+   "icon": "functions",
+   "bank": "uni-others-ams104-bank",
+   "questionCount": 734,
+   "pdf": null
+  },
+  {
+   "slug": "bed112",
+   "code": "BED 112",
+   "title": null,
+   "semester": 1,
+   "icon": "school",
+   "bank": "uni-others-bed112-bank",
+   "questionCount": 86,
+   "pdf": null
+  },
+  {
+   "slug": "bed114",
+   "code": "BED 114",
+   "title": null,
+   "semester": 1,
+   "icon": "school",
+   "bank": "uni-others-bed114-bank",
+   "questionCount": 44,
+   "pdf": null
+  },
+  {
+   "slug": "bed122",
+   "code": "BED 122",
+   "title": null,
+   "semester": 1,
+   "icon": "school",
+   "bank": "uni-others-bed122-bank",
+   "questionCount": 158,
+   "pdf": null
+  },
+  {
+   "slug": "bio101",
+   "code": "BIO 101",
+   "title": null,
+   "semester": 1,
+   "icon": "biotech",
+   "bank": "uni-others-bio101-bank",
+   "questionCount": 2554,
+   "pdf": null
+  },
+  {
+   "slug": "bio102",
+   "code": "BIO 102",
+   "title": null,
+   "semester": 2,
+   "icon": "biotech",
+   "bank": "uni-others-bio102-bank",
+   "questionCount": 1055,
+   "pdf": null
+  },
+  {
+   "slug": "bio104",
+   "code": "BIO 104",
+   "title": null,
+   "semester": 2,
+   "icon": "biotech",
+   "bank": "uni-others-bio104-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "bio107",
+   "code": "BIO 107",
+   "title": null,
+   "semester": 1,
+   "icon": "biotech",
+   "bank": "uni-others-bio107-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "bio111",
+   "code": "BIO 111",
+   "title": null,
+   "semester": 1,
+   "icon": "biotech",
+   "bank": "uni-others-bio111-bank",
+   "questionCount": 508,
+   "pdf": null
+  },
+  {
+   "slug": "bio201",
+   "code": "BIO 201",
+   "title": null,
+   "semester": 1,
+   "icon": "biotech",
+   "bank": "uni-others-bio201-bank",
+   "questionCount": 50,
+   "pdf": null
+  },
+  {
+   "slug": "bit112",
+   "code": "BIT 112",
+   "title": null,
+   "semester": 2,
+   "icon": "menu_book",
+   "bank": "uni-others-bit112-bank",
+   "questionCount": 211,
+   "pdf": null
+  },
+  {
+   "slug": "bit122",
+   "code": "BIT 122",
+   "title": null,
+   "semester": 2,
+   "icon": "menu_book",
+   "bank": "uni-others-bit122-bank",
+   "questionCount": 390,
+   "pdf": null
+  },
+  {
+   "slug": "bme102",
+   "code": "BME 102",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-bme102-bank",
+   "questionCount": 178,
+   "pdf": null
+  },
+  {
+   "slug": "bot102",
+   "code": "BOT 102",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-bot102-bank",
+   "questionCount": 755,
+   "pdf": null
+  },
+  {
+   "slug": "cbt-eng",
+   "code": "CBT ENG",
+   "title": "CBT English Grammar Practice",
+   "semester": 1,
+   "icon": "translate",
+   "bank": "uni-others-cbt-eng-bank",
+   "questionCount": 1383,
+   "pdf": null
+  },
+  {
+   "slug": "che101",
+   "code": "CHE 101",
+   "title": null,
+   "semester": 1,
+   "icon": "science",
+   "bank": "uni-others-che101-bank",
+   "questionCount": 300,
+   "pdf": null
+  },
+  {
+   "slug": "che102",
+   "code": "CHE 102",
+   "title": null,
+   "semester": 2,
+   "icon": "science",
+   "bank": "uni-others-che102-bank",
+   "questionCount": 274,
+   "pdf": null
+  },
+  {
+   "slug": "che103",
+   "code": "CHE 103",
+   "title": null,
+   "semester": 1,
+   "icon": "science",
+   "bank": "uni-others-che103-bank",
+   "questionCount": 206,
+   "pdf": null
+  },
+  {
+   "slug": "che104",
+   "code": "CHE 104",
+   "title": null,
+   "semester": 2,
+   "icon": "science",
+   "bank": "uni-others-che104-bank",
+   "questionCount": 97,
+   "pdf": null
+  },
+  {
+   "slug": "chemistry",
+   "code": "CHEMISTRY",
+   "title": "Chemistry",
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-chemistry-bank",
+   "questionCount": 8,
+   "pdf": null
+  },
+  {
+   "slug": "chm101",
+   "code": "CHM 101",
+   "title": null,
+   "semester": 1,
+   "icon": "science",
+   "bank": "uni-others-chm101-bank",
+   "questionCount": 1446,
+   "pdf": null
+  },
+  {
+   "slug": "chm102",
+   "code": "CHM 102",
+   "title": null,
+   "semester": 1,
+   "icon": "science",
+   "bank": "uni-others-chm102-bank",
+   "questionCount": 2500,
+   "pdf": null
+  },
+  {
+   "slug": "chm108",
+   "code": "CHM 108",
+   "title": null,
+   "semester": 1,
+   "icon": "science",
+   "bank": "uni-others-chm108-bank",
+   "questionCount": 55,
+   "pdf": null
+  },
+  {
+   "slug": "chm111",
+   "code": "CHM 111",
+   "title": null,
+   "semester": 1,
+   "icon": "science",
+   "bank": "uni-others-chm111-bank",
+   "questionCount": 301,
+   "pdf": null
+  },
+  {
+   "slug": "chm201",
+   "code": "CHM 201",
+   "title": null,
+   "semester": 1,
+   "icon": "science",
+   "bank": "uni-others-chm201-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "chm211",
+   "code": "CHM 211",
+   "title": null,
+   "semester": 1,
+   "icon": "science",
+   "bank": "uni-others-chm211-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "chm213",
+   "code": "CHM 213",
+   "title": null,
+   "semester": 1,
+   "icon": "science",
+   "bank": "uni-others-chm213-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "com101",
+   "code": "COM 101",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-com101-bank",
+   "questionCount": 975,
+   "pdf": null
+  },
+  {
+   "slug": "cos101",
+   "code": "COS 101",
+   "title": "Introduction to Computing",
+   "semester": 1,
+   "icon": "computer",
+   "bank": "uni-others-cos101-bank",
+   "questionCount": 1320,
+   "pdf": null
+  },
+  {
+   "slug": "cos102",
+   "code": "COS 102",
+   "title": null,
+   "semester": 2,
+   "icon": "computer",
+   "bank": "uni-others-cos102-bank",
+   "questionCount": 1290,
+   "pdf": null
+  },
+  {
+   "slug": "crs202",
+   "code": "CRS 202",
+   "title": null,
+   "semester": 1,
+   "icon": "church",
+   "bank": "uni-others-crs202-bank",
+   "questionCount": 120,
+   "pdf": null
+  },
+  {
+   "slug": "csc103",
+   "code": "CSC 103",
+   "title": null,
+   "semester": 1,
+   "icon": "computer",
+   "bank": "uni-others-csc103-bank",
+   "questionCount": 50,
+   "pdf": null
+  },
+  {
+   "slug": "csc111",
+   "code": "CSC 111",
+   "title": null,
+   "semester": 1,
+   "icon": "computer",
+   "bank": "uni-others-csc111-bank",
+   "questionCount": 160,
+   "pdf": null
+  },
+  {
+   "slug": "csc113",
+   "code": "CSC 113",
+   "title": null,
+   "semester": 1,
+   "icon": "computer",
+   "bank": "uni-others-csc113-bank",
+   "questionCount": 467,
+   "pdf": null
+  },
+  {
+   "slug": "csc115",
+   "code": "CSC 115",
+   "title": null,
+   "semester": 1,
+   "icon": "computer",
+   "bank": "uni-others-csc115-bank",
+   "questionCount": 246,
+   "pdf": null
+  },
+  {
+   "slug": "csc122",
+   "code": "CSC 122",
+   "title": null,
+   "semester": 1,
+   "icon": "computer",
+   "bank": "uni-others-csc122-bank",
+   "questionCount": 281,
+   "pdf": null
+  },
+  {
+   "slug": "csc124",
+   "code": "CSC 124",
+   "title": null,
+   "semester": 1,
+   "icon": "computer",
+   "bank": "uni-others-csc124-bank",
+   "questionCount": 166,
+   "pdf": null
+  },
+  {
+   "slug": "csm111",
+   "code": "CSM 111",
+   "title": null,
+   "semester": 1,
+   "icon": "security",
+   "bank": "uni-others-csm111-bank",
+   "questionCount": 93,
+   "pdf": null
+  },
+  {
+   "slug": "dts104",
+   "code": "DTS 104",
+   "title": "Introduction to Python Programming",
+   "semester": 2,
+   "icon": "menu_book",
+   "bank": "uni-others-dts104-bank",
+   "questionCount": 100,
+   "pdf": null
+  },
+  {
+   "slug": "eco104",
+   "code": "ECO 104",
+   "title": null,
+   "semester": 1,
+   "icon": "trending_up",
+   "bank": "uni-others-eco104-bank",
+   "questionCount": 100,
+   "pdf": null
+  },
+  {
+   "slug": "edu101",
+   "code": "EDU 101",
+   "title": null,
+   "semester": 1,
+   "icon": "school",
+   "bank": "uni-others-edu101-bank",
+   "questionCount": 332,
+   "pdf": null
+  },
+  {
+   "slug": "edu121",
+   "code": "EDU 121",
+   "title": null,
+   "semester": 1,
+   "icon": "school",
+   "bank": "uni-others-edu121-bank",
+   "questionCount": 453,
+   "pdf": null
+  },
+  {
+   "slug": "edu201",
+   "code": "EDU 201",
+   "title": null,
+   "semester": 1,
+   "icon": "school",
+   "bank": "uni-others-edu201-bank",
+   "questionCount": 211,
+   "pdf": null
+  },
+  {
+   "slug": "edu221",
+   "code": "EDU 221",
+   "title": null,
+   "semester": 1,
+   "icon": "school",
+   "bank": "uni-others-edu221-bank",
+   "questionCount": 147,
+   "pdf": null
+  },
+  {
+   "slug": "edu302",
+   "code": "EDU 302",
+   "title": null,
+   "semester": 1,
+   "icon": "school",
+   "bank": "uni-others-edu302-bank",
+   "questionCount": 110,
+   "pdf": null
+  },
+  {
+   "slug": "eec101",
+   "code": "EEC 101",
+   "title": null,
+   "semester": 1,
+   "icon": "bolt",
+   "bank": "uni-others-eec101-bank",
+   "questionCount": 95,
+   "pdf": null
+  },
+  {
+   "slug": "ehr102",
+   "code": "EHR 102",
+   "title": null,
+   "semester": 1,
+   "icon": "health_and_safety",
+   "bank": "uni-others-ehr102-bank",
+   "questionCount": 200,
+   "pdf": null
+  },
+  {
+   "slug": "els121",
+   "code": "ELS 121",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-els121-bank",
+   "questionCount": 30,
+   "pdf": null
+  },
+  {
+   "slug": "eng102",
+   "code": "ENG 102",
+   "title": null,
+   "semester": 1,
+   "icon": "translate",
+   "bank": "uni-others-eng102-bank",
+   "questionCount": 190,
+   "pdf": null
+  },
+  {
+   "slug": "eng121",
+   "code": "ENG 121",
+   "title": null,
+   "semester": 1,
+   "icon": "translate",
+   "bank": "uni-others-eng121-bank",
+   "questionCount": 150,
+   "pdf": null
+  },
+  {
+   "slug": "eng122",
+   "code": "ENG 122",
+   "title": null,
+   "semester": 1,
+   "icon": "translate",
+   "bank": "uni-others-eng122-bank",
+   "questionCount": 109,
+   "pdf": null
+  },
+  {
+   "slug": "eng231",
+   "code": "ENG 231",
+   "title": null,
+   "semester": 1,
+   "icon": "translate",
+   "bank": "uni-others-eng231-bank",
+   "questionCount": 10,
+   "pdf": null
+  },
+  {
+   "slug": "ent201",
+   "code": "ENT 201",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-ent201-bank",
+   "questionCount": 173,
+   "pdf": null
+  },
+  {
+   "slug": "ent211",
+   "code": "ENT 211",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-ent211-bank",
+   "questionCount": 46,
+   "pdf": null
+  },
+  {
+   "slug": "ent312",
+   "code": "ENT 312",
+   "title": null,
+   "semester": 1,
+   "icon": "lightbulb",
+   "bank": "uni-others-ent312-bank",
+   "questionCount": 140,
+   "pdf": null
+  },
+  {
+   "slug": "ess102",
+   "code": "ESS 102",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-ess102-bank",
+   "questionCount": 150,
+   "pdf": null
+  },
+  {
+   "slug": "ess112",
+   "code": "ESS 112",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-ess112-bank",
+   "questionCount": 77,
+   "pdf": null
+  },
+  {
+   "slug": "fcys102",
+   "code": "FCYS 102",
+   "title": null,
+   "semester": 2,
+   "icon": "menu_book",
+   "bank": "uni-others-fcys102-bank",
+   "questionCount": 10,
+   "pdf": null
+  },
+  {
+   "slug": "fcys104",
+   "code": "FCYS 104",
+   "title": null,
+   "semester": 2,
+   "icon": "menu_book",
+   "bank": "uni-others-fcys104-bank",
+   "questionCount": 10,
+   "pdf": null
+  },
+  {
+   "slug": "fcys106",
+   "code": "FCYS 106",
+   "title": null,
+   "semester": 2,
+   "icon": "menu_book",
+   "bank": "uni-others-fcys106-bank",
+   "questionCount": 10,
+   "pdf": null
+  },
+  {
+   "slug": "fcys110",
+   "code": "FCYS 110",
+   "title": null,
+   "semester": 2,
+   "icon": "menu_book",
+   "bank": "uni-others-fcys110-bank",
+   "questionCount": 10,
+   "pdf": null
+  },
+  {
+   "slug": "fgns102",
+   "code": "FGNS 102",
+   "title": null,
+   "semester": 2,
+   "icon": "menu_book",
+   "bank": "uni-others-fgns102-bank",
+   "questionCount": 133,
+   "pdf": null
+  },
+  {
+   "slug": "fift102",
+   "code": "FIFT 102",
+   "title": null,
+   "semester": 2,
+   "icon": "menu_book",
+   "bank": "uni-others-fift102-bank",
+   "questionCount": 10,
+   "pdf": null
+  },
+  {
+   "slug": "fift104",
+   "code": "FIFT 104",
+   "title": null,
+   "semester": 2,
+   "icon": "menu_book",
+   "bank": "uni-others-fift104-bank",
+   "questionCount": 10,
+   "pdf": null
+  },
+  {
+   "slug": "fift106",
+   "code": "FIFT 106",
+   "title": null,
+   "semester": 2,
+   "icon": "menu_book",
+   "bank": "uni-others-fift106-bank",
+   "questionCount": 10,
+   "pdf": null
+  },
+  {
+   "slug": "financial-sector-and-eco",
+   "code": "FINANCIAL SECTOR AND ECONOMIC DEVELOPMENT",
+   "title": "Financial Sector And Eco",
+   "semester": 1,
+   "icon": "payments",
+   "bank": "uni-others-financial-sector-and-eco-bank",
+   "questionCount": 65,
+   "pdf": null
+  },
+  {
+   "slug": "fmee102",
+   "code": "FMEE 102",
+   "title": null,
+   "semester": 2,
+   "icon": "menu_book",
+   "bank": "uni-others-fmee102-bank",
+   "questionCount": 713,
+   "pdf": null
+  },
+  {
+   "slug": "fms312",
+   "code": "FMS 312",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-fms312-bank",
+   "questionCount": 50,
+   "pdf": null
+  },
+  {
+   "slug": "fre122",
+   "code": "FRE 122",
+   "title": null,
+   "semester": 1,
+   "icon": "translate",
+   "bank": "uni-others-fre122-bank",
+   "questionCount": 257,
+   "pdf": null
+  },
+  {
+   "slug": "fsen102",
+   "code": "FSEN 102",
+   "title": "Assembly Programming (8086)",
+   "semester": 2,
+   "icon": "menu_book",
+   "bank": "uni-others-fsen102-bank",
+   "questionCount": 222,
+   "pdf": null
+  },
+  {
+   "slug": "fsen104",
+   "code": "FSEN 104",
+   "title": null,
+   "semester": 2,
+   "icon": "menu_book",
+   "bank": "uni-others-fsen104-bank",
+   "questionCount": 450,
+   "pdf": null
+  },
+  {
+   "slug": "fsen106",
+   "code": "FSEN 106",
+   "title": "Requirements Engineering",
+   "semester": 2,
+   "icon": "menu_book",
+   "bank": "uni-others-fsen106-bank",
+   "questionCount": 250,
+   "pdf": null
+  },
+  {
+   "slug": "gcp113",
+   "code": "GCP 113",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-gcp113-bank",
+   "questionCount": 57,
+   "pdf": null
+  },
+  {
+   "slug": "general-biology-i",
+   "code": "GENERAL BIOLOGY I",
+   "title": "General Biology I",
+   "semester": 1,
+   "icon": "biotech",
+   "bank": "uni-others-general-biology-i-bank",
+   "questionCount": 20,
+   "pdf": null
+  },
+  {
+   "slug": "get102",
+   "code": "GET 102",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-get102-bank",
+   "questionCount": 305,
+   "pdf": null
+  },
+  {
+   "slug": "gns103",
+   "code": "GNS 103",
+   "title": "Information Literacy",
+   "semester": 1,
+   "icon": "local_library",
+   "bank": "uni-others-gns103-bank",
+   "questionCount": 724,
+   "pdf": null
+  },
+  {
+   "slug": "gns104",
+   "code": "GNS 104",
+   "title": null,
+   "semester": 1,
+   "icon": "local_library",
+   "bank": "uni-others-gns104-bank",
+   "questionCount": 130,
+   "pdf": null
+  },
+  {
+   "slug": "gns106",
+   "code": "GNS 106",
+   "title": null,
+   "semester": 2,
+   "icon": "local_library",
+   "bank": "uni-others-gns106-bank",
+   "questionCount": 160,
+   "pdf": null
+  },
+  {
+   "slug": "gns111",
+   "code": "GNS 111",
+   "title": null,
+   "semester": 1,
+   "icon": "local_library",
+   "bank": "uni-others-gns111-bank",
+   "questionCount": 24,
+   "pdf": null
+  },
+  {
+   "slug": "gns112",
+   "code": "GNS 112",
+   "title": null,
+   "semester": 1,
+   "icon": "local_library",
+   "bank": "uni-others-gns112-bank",
+   "questionCount": 198,
+   "pdf": null
+  },
+  {
+   "slug": "gns113",
+   "code": "GNS 113",
+   "title": null,
+   "semester": 1,
+   "icon": "local_library",
+   "bank": "uni-others-gns113-bank",
+   "questionCount": 243,
+   "pdf": null
+  },
+  {
+   "slug": "gns222",
+   "code": "GNS 222",
+   "title": null,
+   "semester": 1,
+   "icon": "local_library",
+   "bank": "uni-others-gns222-bank",
+   "questionCount": 192,
+   "pdf": null
+  },
+  {
+   "slug": "gst101",
+   "code": "GST 101",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-gst101-bank",
+   "questionCount": 91,
+   "pdf": null
+  },
+  {
+   "slug": "gst102",
+   "code": "GST 102",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-gst102-bank",
+   "questionCount": 235,
+   "pdf": null
+  },
+  {
+   "slug": "gst111",
+   "code": "GST 111",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-gst111-bank",
+   "questionCount": 3000,
+   "pdf": null
+  },
+  {
+   "slug": "gst112",
+   "code": "GST 112",
+   "title": null,
+   "semester": 2,
+   "icon": "menu_book",
+   "bank": "uni-others-gst112-bank",
+   "questionCount": 2263,
+   "pdf": null
+  },
+  {
+   "slug": "gst113",
+   "code": "GST 113",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-gst113-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "gst115",
+   "code": "GST 115",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-gst115-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "gst116",
+   "code": "GST 116",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-gst116-bank",
+   "questionCount": 80,
+   "pdf": null
+  },
+  {
+   "slug": "gst212",
+   "code": "GST 212",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-gst212-bank",
+   "questionCount": 406,
+   "pdf": null
+  },
+  {
+   "slug": "gst312",
+   "code": "GST 312",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-gst312-bank",
+   "questionCount": 81,
+   "pdf": null
+  },
+  {
+   "slug": "ift212",
+   "code": "IFT 212",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-ift212-bank",
+   "questionCount": 70,
+   "pdf": null
+  },
+  {
+   "slug": "ins104",
+   "code": "INS 104",
+   "title": null,
+   "semester": 1,
+   "icon": "account_balance",
+   "bank": "uni-others-ins104-bank",
+   "questionCount": 149,
+   "pdf": null
+  },
+  {
+   "slug": "introductory-to-chemistr",
+   "code": "INTRODUCTORY TO CHEMISTRY 1",
+   "title": "Introductory To Chemistr",
+   "semester": 1,
+   "icon": "experiment",
+   "bank": "uni-others-introductory-to-chemistr-bank",
+   "questionCount": 50,
+   "pdf": null
+  },
+  {
+   "slug": "irp321",
+   "code": "IRP 321",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-irp321-bank",
+   "questionCount": 59,
+   "pdf": null
+  },
+  {
+   "slug": "irp322",
+   "code": "IRP 322",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-irp322-bank",
+   "questionCount": 74,
+   "pdf": null
+  },
+  {
+   "slug": "lit104",
+   "code": "LIT 104",
+   "title": null,
+   "semester": 1,
+   "icon": "auto_stories",
+   "bank": "uni-others-lit104-bank",
+   "questionCount": 155,
+   "pdf": null
+  },
+  {
+   "slug": "lit106",
+   "code": "LIT 106",
+   "title": null,
+   "semester": 1,
+   "icon": "auto_stories",
+   "bank": "uni-others-lit106-bank",
+   "questionCount": 111,
+   "pdf": null
+  },
+  {
+   "slug": "mat110",
+   "code": "MAT 110",
+   "title": null,
+   "semester": 1,
+   "icon": "functions",
+   "bank": "uni-others-mat110-bank",
+   "questionCount": 100,
+   "pdf": null
+  },
+  {
+   "slug": "mat121",
+   "code": "MAT 121",
+   "title": null,
+   "semester": 1,
+   "icon": "functions",
+   "bank": "uni-others-mat121-bank",
+   "questionCount": 70,
+   "pdf": null
+  },
+  {
+   "slug": "mcb403",
+   "code": "MCB 403",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-mcb403-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "mcb407",
+   "code": "MCB 407",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-mcb407-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "mcb409",
+   "code": "MCB 409",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-mcb409-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "mic121",
+   "code": "MIC 121",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-mic121-bank",
+   "questionCount": 892,
+   "pdf": null
+  },
+  {
+   "slug": "mkt106",
+   "code": "MKT 106",
+   "title": null,
+   "semester": 1,
+   "icon": "storefront",
+   "bank": "uni-others-mkt106-bank",
+   "questionCount": 34,
+   "pdf": null
+  },
+  {
+   "slug": "mkt108",
+   "code": "MKT 108",
+   "title": null,
+   "semester": 1,
+   "icon": "storefront",
+   "bank": "uni-others-mkt108-bank",
+   "questionCount": 130,
+   "pdf": null
+  },
+  {
+   "slug": "mkt112",
+   "code": "MKT 112",
+   "title": null,
+   "semester": 1,
+   "icon": "storefront",
+   "bank": "uni-others-mkt112-bank",
+   "questionCount": 120,
+   "pdf": null
+  },
+  {
+   "slug": "mte114",
+   "code": "MTE 114",
+   "title": null,
+   "semester": 1,
+   "icon": "settings",
+   "bank": "uni-others-mte114-bank",
+   "questionCount": 100,
+   "pdf": null
+  },
+  {
+   "slug": "mth101",
+   "code": "MTH 101",
+   "title": null,
+   "semester": 1,
+   "icon": "functions",
+   "bank": "uni-others-mth101-bank",
+   "questionCount": 1277,
+   "pdf": null
+  },
+  {
+   "slug": "mth102",
+   "code": "MTH 102",
+   "title": null,
+   "semester": 2,
+   "icon": "functions",
+   "bank": "uni-others-mth102-bank",
+   "questionCount": 1118,
+   "pdf": null
+  },
+  {
+   "slug": "mth103",
+   "code": "MTH 103",
+   "title": null,
+   "semester": 1,
+   "icon": "functions",
+   "bank": "uni-others-mth103-bank",
+   "questionCount": 133,
+   "pdf": null
+  },
+  {
+   "slug": "mts102",
+   "code": "MTS 102",
+   "title": null,
+   "semester": 2,
+   "icon": "query_stats",
+   "bank": "uni-others-mts102-bank",
+   "questionCount": 121,
+   "pdf": null
+  },
+  {
+   "slug": "pad106",
+   "code": "PAD 106",
+   "title": null,
+   "semester": 1,
+   "icon": "account_balance",
+   "bank": "uni-others-pad106-bank",
+   "questionCount": 150,
+   "pdf": null
+  },
+  {
+   "slug": "phy101",
+   "code": "PHY 101",
+   "title": null,
+   "semester": 1,
+   "icon": "rocket_launch",
+   "bank": "uni-others-phy101-bank",
+   "questionCount": 2065,
+   "pdf": null
+  },
+  {
+   "slug": "phy102",
+   "code": "PHY 102",
+   "title": null,
+   "semester": 2,
+   "icon": "rocket_launch",
+   "bank": "uni-others-phy102-bank",
+   "questionCount": 2732,
+   "pdf": null
+  },
+  {
+   "slug": "phy103",
+   "code": "PHY 103",
+   "title": null,
+   "semester": 1,
+   "icon": "rocket_launch",
+   "bank": "uni-others-phy103-bank",
+   "questionCount": 192,
+   "pdf": null
+  },
+  {
+   "slug": "phy104",
+   "code": "PHY 104",
+   "title": null,
+   "semester": 1,
+   "icon": "rocket_launch",
+   "bank": "uni-others-phy104-bank",
+   "questionCount": 1154,
+   "pdf": null
+  },
+  {
+   "slug": "phy106",
+   "code": "PHY 106",
+   "title": null,
+   "semester": 1,
+   "icon": "rocket_launch",
+   "bank": "uni-others-phy106-bank",
+   "questionCount": 70,
+   "pdf": null
+  },
+  {
+   "slug": "phy111",
+   "code": "PHY 111",
+   "title": null,
+   "semester": 1,
+   "icon": "rocket_launch",
+   "bank": "uni-others-phy111-bank",
+   "questionCount": 198,
+   "pdf": null
+  },
+  {
+   "slug": "phy125",
+   "code": "PHY 125",
+   "title": null,
+   "semester": 1,
+   "icon": "rocket_launch",
+   "bank": "uni-others-phy125-bank",
+   "questionCount": 50,
+   "pdf": null
+  },
+  {
+   "slug": "phy201",
+   "code": "PHY 201",
+   "title": null,
+   "semester": 1,
+   "icon": "rocket_launch",
+   "bank": "uni-others-phy201-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "sen101",
+   "code": "SEN 101",
+   "title": "Web Technologies",
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-sen101-bank",
+   "questionCount": 600,
+   "pdf": null
+  },
+  {
+   "slug": "sta101",
+   "code": "STA 101",
+   "title": null,
+   "semester": 1,
+   "icon": "query_stats",
+   "bank": "uni-others-sta101-bank",
+   "questionCount": 50,
+   "pdf": null
+  },
+  {
+   "slug": "sta111",
+   "code": "STA 111",
+   "title": "Descriptive Statistics I",
+   "semester": 1,
+   "icon": "query_stats",
+   "bank": "uni-others-sta111-bank",
+   "questionCount": 630,
+   "pdf": null
+  },
+  {
+   "slug": "sta112",
+   "code": "STA 112",
+   "title": null,
+   "semester": 1,
+   "icon": "query_stats",
+   "bank": "uni-others-sta112-bank",
+   "questionCount": 111,
+   "pdf": null
+  },
+  {
+   "slug": "sta121",
+   "code": "STA 121",
+   "title": null,
+   "semester": 1,
+   "icon": "query_stats",
+   "bank": "uni-others-sta121-bank",
+   "questionCount": 258,
+   "pdf": null
+  },
+  {
+   "slug": "vos101",
+   "code": "VOS 101",
+   "title": null,
+   "semester": 1,
+   "icon": "translate",
+   "bank": "uni-others-vos101-bank",
+   "questionCount": 65,
+   "pdf": null
+  },
+  {
+   "slug": "vos112",
+   "code": "VOS 112",
+   "title": null,
+   "semester": 1,
+   "icon": "translate",
+   "bank": "uni-others-vos112-bank",
+   "questionCount": 49,
+   "pdf": null
+  },
+  {
+   "slug": "vos114",
+   "code": "VOS 114",
+   "title": null,
+   "semester": 1,
+   "icon": "translate",
+   "bank": "uni-others-vos114-bank",
+   "questionCount": 50,
+   "pdf": null
+  },
+  {
+   "slug": "vos116",
+   "code": "VOS 116",
+   "title": null,
+   "semester": 1,
+   "icon": "translate",
+   "bank": "uni-others-vos116-bank",
+   "questionCount": 96,
+   "pdf": null
+  },
+  {
+   "slug": "vos117",
+   "code": "VOS 117",
+   "title": null,
+   "semester": 1,
+   "icon": "translate",
+   "bank": "uni-others-vos117-bank",
+   "questionCount": 83,
+   "pdf": null
+  },
+  {
+   "slug": "vos118",
+   "code": "VOS 118",
+   "title": null,
+   "semester": 1,
+   "icon": "translate",
+   "bank": "uni-others-vos118-bank",
+   "questionCount": 75,
+   "pdf": null
+  },
+  {
+   "slug": "you202",
+   "code": "YOU 202",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-you202-bank",
+   "questionCount": 10,
+   "pdf": null
+  },
+  {
+   "slug": "zoo101",
+   "code": "ZOO 101",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-zoo101-bank",
+   "questionCount": 2042,
+   "pdf": null
+  },
+  {
+   "slug": "zoo102",
+   "code": "ZOO 102",
+   "title": null,
+   "semester": 1,
+   "icon": "menu_book",
+   "bank": "uni-others-zoo102-bank",
+   "questionCount": 733,
+   "pdf": null
+  }
+ ]
+}

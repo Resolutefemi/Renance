@@ -1,0 +1,123 @@
+{
+ "code": "uni-unical-sta122-bank",
+ "title": "UNICAL STA 122 | Course Question Bank",
+ "version": 1,
+ "questionCount": 16,
+ "totalMarks": 80,
+ "category": "university",
+ "body": "University Modules",
+ "questions": [
+  {
+   "id": "uni-unical-sta122-bank-0001",
+   "type": "theory",
+   "stem": "SPSS stands for\n(a) statistical package for the social sciences (b) standard package for the social sciences (c) A & B (d) none of these",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta122-bank-0002",
+   "type": "theory",
+   "stem": "The data editor in SPSS consists of ________ windows.\n(a) 2(b) 3 (c) 4 (d) 5",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta122-bank-0003",
+   "type": "theory",
+   "stem": "Data can be entered in the\n(a) variable view (b) data view (c) Both A & B (d) none of these",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta122-bank-0004",
+   "type": "theory",
+   "stem": "The variables sex., age and car take\n(a) string (b) numerical (c) Both A & B (d) none of these",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta122-bank-0005",
+   "type": "theory",
+   "stem": "Which of the following command will not help us to view the dimensions of our dataset?\n(a) dim() (b) str() (c)View() (d) None of the above",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta122-bank-0006",
+   "type": "theory",
+   "stem": "MS Excel is a\n(a) data (b) font (c) format (d) variables",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta122-bank-0007",
+   "type": "theory",
+   "stem": "(a) Database Management software (b) Presentation software (c) Workbook software (d) Spreadsheet software",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta122-bank-0008",
+   "type": "theory",
+   "stem": "Which function is used to view the dataset with more, like format in R?",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta122-bank-0009",
+   "type": "theory",
+   "stem": "A file function is used to create the vector with which element?\n(a) Worksheet (b) workbook (c) worksheet (d) spreadsheet data is known as",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta122-bank-0010",
+   "type": "theory",
+   "stem": "(a) Workbook (b) Excel file (c) Pane (d) Spread sheet",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta122-bank-0011",
+   "type": "theory",
+   "stem": "The intersection of a column and a row in MS Excel worksheet is known as\n(a) Row (b) Cell (c) Column (d) Tab",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta122-bank-0012",
+   "type": "theory",
+   "stem": "The number of toilet facilities in 30 buildings were counted. The results are recorded in an R object by the name \"x\". The frequency table of the data \"x\" is > table(x)\n x\n 2 4 6 8 10\n 3 6 10 7 4",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta122-bank-0013",
+   "type": "theory",
+   "stem": "State the steps in R to get the following:\na. The mean (x\u0304) of R\nb. The sample standard deviation of the data?\nc. The median of the data?",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta122-bank-0014",
+   "type": "theory",
+   "stem": "The cells:\n(a) SUM(b). AVG () in MS Excel worksheet represents the total number(s) of entries in the go function is used for? (c) COUNT (d) TOTAL.",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta122-bank-0015",
+   "type": "theory",
+   "stem": "What best describes the following elements in R: str(), print(), mean()?\n(a) Functions (b) Methods (c) Statements (d) Variable.",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta122-bank-0016",
+   "type": "theory",
+   "stem": "A data set has been read in R and stored in a variable \"dataframe.\" Write the code that could produce a summary (mean, mode, median) of the entire dataset in a single line of code?",
+   "marks": 5,
+   "explanation": ""
+  }
+ ]
+}

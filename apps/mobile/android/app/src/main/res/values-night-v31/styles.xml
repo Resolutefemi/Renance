@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android 12+ system splash, dark tier: the same contained 3D
+         keycap on the #0F1216 ground the dark Flutter splash opens
+         with (values-night/splash_ground), so the native frame and the
+         Flutter frame are one continuous dark splash. -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <item name="android:windowSplashScreenBackground">@color/splash_ground</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash_icon_3d</item>
+    </style>
+</resources>

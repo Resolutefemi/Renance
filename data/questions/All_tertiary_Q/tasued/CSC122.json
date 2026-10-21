@@ -1,0 +1,3945 @@
+{
+  "code": "uni-tasued-csc122-bank",
+  "title": "TASUED CSC122 | Course Question Bank",
+  "version": 1,
+  "questionCount": 281,
+  "totalMarks": 281,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-tasued-csc122-bank-0001",
+      "type": "mcq",
+      "stem": "Which material is NOT mentioned as a common material for computer cases?",
+      "options": {
+        "A": "Steel",
+        "B": "Aluminum",
+        "C": "Wood",
+        "D": "Plastic"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document lists plastic, steel, and aluminum, but does not mention wood."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0002",
+      "type": "mcq",
+      "stem": "What happens in a diode if the reverse bias voltage exceeds its limit?",
+      "options": {
+        "A": "The diode turns off",
+        "B": "The diode starts conducting in reverse mode",
+        "C": "The diode creates more resistance",
+        "D": "The diode becomes an insulator"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Exceeding the breakdown voltage limit causes a reverse-biased diode to conduct."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0003",
+      "type": "mcq",
+      "stem": "How many photodiodes are typically in a diode array assembly used for spectrophotometers?",
+      "options": {
+        "A": "10",
+        "B": "100",
+        "C": "1024",
+        "D": "Billions"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A typical diode array used for these applications contains 1024 individual photodiodes."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0004",
+      "type": "mcq",
+      "stem": "Which system for separating and analyzing complex mixtures uses diode array detectors?",
+      "options": {
+        "A": "Photolithography",
+        "B": "Chromatography",
+        "C": "Planarization",
+        "D": "Oxidation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Diode array detectors are a standard component in chromatographic analysis systems."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0005",
+      "type": "mcq",
+      "stem": "What is a PDA detector?",
+      "options": {
+        "A": "Personal Digital Assistant",
+        "B": "Photo Diode Array",
+        "C": "Primary Digital Anode",
+        "D": "Phase Direct Alternator"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "PDA stands for Photo Diode Array, which is used to measure absorbance across a broad spectrum."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0006",
+      "type": "mcq",
+      "stem": "What does HPLC stand for in the context of diode array detectors?",
+      "options": {
+        "A": "High Power Logic Circuit",
+        "B": "High Performance Liquid Chromatography",
+        "C": "Heat Protected Linear Conductor",
+        "D": "Hybrid Phase Level Control"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "HPLC is a common analytical technique that utilizes diode array detectors."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0007",
+      "type": "mcq",
+      "stem": "Which level of integration is currently mostly in the research phase?",
+      "options": {
+        "A": "MSI",
+        "B": "VLSI",
+        "C": "ULSI",
+        "D": "GSI"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Giga Scale Integration (GSI) is described as an emerging class still in the research phase."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0008",
+      "type": "mcq",
+      "stem": "What is 'photoresist' used for during the development stage of photolithography?",
+      "options": {
+        "A": "To polish the chip",
+        "B": "To remove unexposed or exposed parts depending on the type used",
+        "C": "To add boron to the silicon",
+        "D": "To create a metal layer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The development stage removes specific parts of the photoresist to reveal the mask pattern."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0009",
+      "type": "mcq",
+      "stem": "What is another name for the motherboard as mentioned in the text?",
+      "options": {
+        "A": "Frontplane",
+        "B": "Backplane",
+        "C": "Sideplane",
+        "D": "Logic gate"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text lists backplane and main board as alternative names for the motherboard."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0010",
+      "type": "mcq",
+      "stem": "An RJ-45 port is commonly used for what type of connection?",
+      "options": {
+        "A": "Serial",
+        "B": "Parallel",
+        "C": "Network",
+        "D": "Audio"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The RJ-45 port is also known as a network port used to connect a computer to a network."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0011",
+      "type": "mcq",
+      "stem": "What is required before voltage can cause current to flow through a load to perform work?",
+      "options": {
+        "A": "A voltage source",
+        "B": "A complete circuit",
+        "C": "A schematic representation",
+        "D": "A semiconductor material"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A complete circuit is necessary for voltage to drive current through a load to perform work."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0012",
+      "type": "mcq",
+      "stem": "Which of the following is NOT listed as a component of a simple electric circuit?",
+      "options": {
+        "A": "Voltage source",
+        "B": "Load",
+        "C": "Path for the current",
+        "D": "Integrated circuit"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The document specifies that a simple circuit consists of a voltage source, a load, and a path for the current."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0013",
+      "type": "mcq",
+      "stem": "What are the three main concepts in electricity as described in the text?",
+      "options": {
+        "A": "Voltage, current, and resistance",
+        "B": "Anode, cathode, and doping",
+        "C": "SSI, MSI, and LSI",
+        "D": "AC, DC, and Pulsating"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The document identifies voltage, current, and resistance as the three main concepts in electricity."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0014",
+      "type": "mcq",
+      "stem": "According to the water analogy, what is equivalent to the pressure difference created by a pump?",
+      "options": {
+        "A": "Current",
+        "B": "Resistance",
+        "C": "Voltage",
+        "D": "Electron collision"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Voltage or potential difference acts as the driving force equivalent to pressure in a water system."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0015",
+      "type": "mcq",
+      "stem": "Which term is defined as the property of a material that opposes the flow of electrons through it?",
+      "options": {
+        "A": "Voltage",
+        "B": "Current",
+        "C": "Resistance",
+        "D": "Capacitance"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Resistance is the property of a material that opposes the flow of electrons."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0016",
+      "type": "mcq",
+      "stem": "What causes the production of heat in a material when current flows through it?",
+      "options": {
+        "A": "The speed of the pump",
+        "B": "Collision of electrons with atoms and each other",
+        "C": "The opening of a switch",
+        "D": "The absence of a fuse"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Collisions between moving electrons and atoms result in the production of heat."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0017",
+      "type": "mcq",
+      "stem": "What is the unit of measurement for Current (I)?",
+      "options": {
+        "A": "Volt (V)",
+        "B": "Ampere (A)",
+        "C": "Ohm (Ω)",
+        "D": "Watt (W)"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The standard unit for the flow of electrons, known as current, is the Ampere."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0018",
+      "type": "mcq",
+      "stem": "What is the unit of measurement for Resistance (R)?",
+      "options": {
+        "A": "Volt (V)",
+        "B": "Ampere (A)",
+        "C": "Ohm (Ω)",
+        "D": "Farad (F)"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Resistance, the opposition to the flow of electric current, is measured in Ohms."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0019",
+      "type": "mcq",
+      "stem": "According to Ohm's Law, how are current and voltage related at a constant resistance?",
+      "options": {
+        "A": "They are inversely related",
+        "B": "They are linearly proportional",
+        "C": "They are independent of each other",
+        "D": "They are exponentially related"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ohm's Law states that current and voltage are linearly proportional when resistance remains constant."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0020",
+      "type": "mcq",
+      "stem": "What is the mathematical representation of Ohm's Law provided in the text?",
+      "options": {
+        "A": "V = I / R",
+        "B": "I = V / R",
+        "C": "R = V * I",
+        "D": "I = V * R"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text specifies the relationship between current, voltage, and resistance as I = V/R."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0021",
+      "type": "mcq",
+      "stem": "What is the primary purpose of a switch in an electrical circuit?",
+      "options": {
+        "A": "To protect the circuit from high current",
+        "B": "To open or close the circuit to control it",
+        "C": "To increase the voltage",
+        "D": "To store electric charge"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A switch is used to control a circuit by either connecting or breaking the flow of electricity."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0022",
+      "type": "mcq",
+      "stem": "What is the purpose of a fuse in a circuit?",
+      "options": {
+        "A": "To amplify the signal",
+        "B": "To provide a constant voltage source",
+        "C": "To open the circuit for protection when current exceeds the limit",
+        "D": "To change AC to DC"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A fuse acts as a protection device that breaks the circuit if the current becomes too high."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0023",
+      "type": "mcq",
+      "stem": "In which type of current does the flow occur in only one direction?",
+      "options": {
+        "A": "Alternating Current (AC)",
+        "B": "Direct Current (DC)",
+        "C": "Pulsating Current",
+        "D": "Linear Current"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Direct Current is characterized by the flow of current in a single, constant direction."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0024",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a DC voltage source?",
+      "options": {
+        "A": "Socket outlets",
+        "B": "AC generators",
+        "C": "Batteries",
+        "D": "Transformers"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Batteries and photocells are identified in the text as examples of DC voltage sources."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0025",
+      "type": "mcq",
+      "stem": "Which type of current flows in two directions as shown in waveforms?",
+      "options": {
+        "A": "Direct Current (DC)",
+        "B": "Alternating Current (AC)",
+        "C": "Constant Current",
+        "D": "Uni-directional Current"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Alternating Current is defined by the flow of current in two directions."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0026",
+      "type": "mcq",
+      "stem": "What is an electronic circuit's primary function regarding electric current?",
+      "options": {
+        "A": "To generate high voltage",
+        "B": "To direct and control current to perform functions",
+        "C": "To act as a physical load only",
+        "D": "To increase the resistance of the wire"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Electronic circuits are structures designed to direct and control current for tasks like computation or amplification."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0027",
+      "type": "mcq",
+      "stem": "Which of the following are listed as active components in an electronic circuit?",
+      "options": {
+        "A": "Resistors and capacitors",
+        "B": "Wires and traces",
+        "C": "Transistors and diodes",
+        "D": "Switches and grounds"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document classifies transistors and diodes as active components in a circuit."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0028",
+      "type": "mcq",
+      "stem": "Which of the following is NOT one of the 5 main types of electrical circuits mentioned?",
+      "options": {
+        "A": "Short circuit",
+        "B": "Series circuit",
+        "C": "Parallel circuit",
+        "D": "Loop circuit"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The five main types are close, open, short, series, and parallel circuits."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0029",
+      "type": "mcq",
+      "stem": "What is a diode?",
+      "options": {
+        "A": "A device that stores charge",
+        "B": "A semiconductor device that acts as a one-way switch",
+        "C": "A passive component that provides resistance",
+        "D": "A device used to generate AC voltage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A diode is a unilateral semiconductor device that allows current to flow in only one direction."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0030",
+      "type": "mcq",
+      "stem": "Why are diodes also known as rectifiers?",
+      "options": {
+        "A": "Because they amplify signals",
+        "B": "Because they change alternating current into pulsating direct current",
+        "C": "Because they block all current",
+        "D": "Because they protect against short circuits"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Diodes are called rectifiers because they convert AC into pulsating DC."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0031",
+      "type": "mcq",
+      "stem": "What are the two terminals of a diode called?",
+      "options": {
+        "A": "Source and Drain",
+        "B": "Emitter and Collector",
+        "C": "Anode and Cathode",
+        "D": "Positive and Neutral"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The positive lead is the anode and the negative lead is the cathode."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0032",
+      "type": "mcq",
+      "stem": "Which materials are preferred for diode fabrication due to high purity and sensitivity to heat/light?",
+      "options": {
+        "A": "Copper and Aluminum",
+        "B": "Germanium and Silicon",
+        "C": "Gold and Silver",
+        "D": "Iron and Steel"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Germanium and silicon are preferred because they can be made highly pure and their conductivity is easily controlled via doping."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0033",
+      "type": "mcq",
+      "stem": "What is the application of a DC voltage to make a diode operate called?",
+      "options": {
+        "A": "Doping",
+        "B": "Etching",
+        "C": "Biasing",
+        "D": "Rectification"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Biasing is the term used for applying DC voltage to a diode to establish its operating state."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0034",
+      "type": "mcq",
+      "stem": "Under what condition is a diode 'forward-biased'?",
+      "options": {
+        "A": "When it acts as an insulator",
+        "B": "When it blocks current flow",
+        "C": "When it allows current flow",
+        "D": "When negative potential is applied to the anode"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A diode is forward-biased when it permits current to flow through it."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0035",
+      "type": "mcq",
+      "stem": "What happens when a diode is reverse-biased?",
+      "options": {
+        "A": "It acts as a conductor",
+        "B": "It acts as an insulator and does not permit current to flow",
+        "C": "It amplifies the voltage",
+        "D": "It starts pulsating"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Reverse biasing prevents current flow, effectively making the diode act like an insulator."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0036",
+      "type": "mcq",
+      "stem": "What is the 'Cut-in-voltage' of a diode?",
+      "options": {
+        "A": "The voltage at which a diode breaks down",
+        "B": "The forward bias voltage required to switch the diode to the 'ON' condition",
+        "C": "The maximum voltage a diode can handle",
+        "D": "The voltage at which the diode turns off"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cut-in-voltage is the specific forward voltage required for a diode to begin conducting."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0037",
+      "type": "mcq",
+      "stem": "What is breakdown voltage in a diode?",
+      "options": {
+        "A": "The voltage where the diode is cleaned",
+        "B": "The voltage where a diode starts conducting in reverse biased mode",
+        "C": "The voltage where the fuse blows",
+        "D": "The minimum operating voltage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Breakdown voltage is the limit where a reverse-biased diode begins to conduct current."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0038",
+      "type": "mcq",
+      "stem": "What is a diode array?",
+      "options": {
+        "A": "A type of transistor",
+        "B": "An assembly of individual photodiodes in a linear array",
+        "C": "A circuit with only resistors",
+        "D": "A method for cooling chips"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A diode array is a collection of multiple diodes on a single chip or in a single package."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0039",
+      "type": "mcq",
+      "stem": "In what type of package are eight diodes or more typically most efficiently housed?",
+      "options": {
+        "A": "Single inline package",
+        "B": "Dual inline package (DIP)",
+        "C": "Round package",
+        "D": "Metal can package"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document states that the most efficient packaging for eight or more diodes is usually a DIP."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0040",
+      "type": "mcq",
+      "stem": "Which device is used to perform spectroscopic scanning and obtain precise absorbance readings?",
+      "options": {
+        "A": "A logic gate",
+        "B": "A diode array detector",
+        "C": "A microprocessor",
+        "D": "A switch"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Diode array detectors absorb light to perform spectroscopic scans across various wavelengths."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0041",
+      "type": "mcq",
+      "stem": "What is a primary advantage of diode array detection?",
+      "options": {
+        "A": "It increases the size of the circuit",
+        "B": "It allows for the best wavelength(s) to be selected for actual analysis",
+        "C": "It requires higher voltage to operate",
+        "D": "It replaces the need for a power source"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Selecting the optimal wavelength for analysis is a major benefit of using diode array detectors."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0042",
+      "type": "mcq",
+      "stem": "How does absorbance rationing at several wavelengths help in chromatography?",
+      "options": {
+        "A": "It cools the material",
+        "B": "It increases current flow",
+        "C": "It helps decide if a peak represents a single compound or a composite peak",
+        "D": "It charges the battery"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Absorbance rationing is useful for determining peak purity and identifying multi-component peaks."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0043",
+      "type": "mcq",
+      "stem": "What is the result of the computer circuit design process?",
+      "options": {
+        "A": "A finished battery",
+        "B": "Instructions on how to construct the physical electronic circuit",
+        "C": "A mathematical law",
+        "D": "A cooling fan"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The circuit design process results in the specific instructions needed to build a physical circuit."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0044",
+      "type": "mcq",
+      "stem": "Which components in an integrated circuit are classified as passive?",
+      "options": {
+        "A": "Transistors and diodes",
+        "B": "Resistors and capacitors",
+        "C": "Batteries and switches",
+        "D": "Microprocessors and RAM"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Resistors and capacitors are identified as passive components within the electronic circuit."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0045",
+      "type": "mcq",
+      "stem": "Which component acts as an amplifier where an input current produces a larger output current?",
+      "options": {
+        "A": "Resistor",
+        "B": "Capacitor",
+        "C": "Diode",
+        "D": "Transistor"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "A transistor functions as both a switch and an amplifier."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0046",
+      "type": "mcq",
+      "stem": "What is a 'discrete circuit'?",
+      "options": {
+        "A": "A circuit where components are fabricated on a single chip",
+        "B": "A circuit where separately manufactured components are joined by wire or a PCB",
+        "C": "A circuit used only for memory",
+        "D": "A circuit that cannot handle power"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Discrete circuits are formed by connecting individual, separate components."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0047",
+      "type": "mcq",
+      "stem": "What is an Integrated Circuit (IC)?",
+      "options": {
+        "A": "A circuit made of only resistors",
+        "B": "A large circuit housing thousands of batteries",
+        "C": "A miniature electronic circuit fabricated on a single crystal of silicon",
+        "D": "A circuit used to filter water"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "An IC consists of active and passive components fabricated together on a single silicon chip."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0048",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a synonym for an integrated circuit mentioned in the text?",
+      "options": {
+        "A": "Microchip",
+        "B": "Silicon chip",
+        "C": "Discrete chip",
+        "D": "Microcircuit"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Discrete and integrated are opposite terms in circuit architecture; ICs are not called discrete chips."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0049",
+      "type": "mcq",
+      "stem": "Compared to integrated circuits, discrete circuits are generally:",
+      "options": {
+        "A": "Smaller in size",
+        "B": "Bigger in size",
+        "C": "Cheaper",
+        "D": "Able to work on lower voltage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Discrete circuits are larger because they use individually packaged components."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0050",
+      "type": "mcq",
+      "stem": "Which is an advantage of Integrated Circuits?",
+      "options": {
+        "A": "They can handle high power greater than 10W",
+        "B": "Increased reliability due to fewer connections",
+        "C": "They are easy to modify after fabrication",
+        "D": "Individual components can be repaired"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Having fewer external connections increases the overall reliability of an IC."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0051",
+      "type": "mcq",
+      "stem": "What is a disadvantage of an IC?",
+      "options": {
+        "A": "High cost",
+        "B": "Large space requirement",
+        "C": "If any component goes out of order, the whole IC must be replaced",
+        "D": "High power consumption"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Because all components are fabricated together, a failure in one requires replacing the entire chip."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0052",
+      "type": "mcq",
+      "stem": "The technology developed to increase the number of components on a single chip is called:",
+      "options": {
+        "A": "Miniaturization Technology",
+        "B": "Integration Technology",
+        "C": "Biasing Technology",
+        "D": "Fabrication Technology"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Integration technology allows more components to be placed on a single chip to reduce size and improve speed."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0053",
+      "type": "mcq",
+      "stem": "How many gates or transistors are typically involved in SSI (Small Scale Integration)?",
+      "options": {
+        "A": "Fewer than 10",
+        "B": "10 to 100",
+        "C": "Hundreds to thousands",
+        "D": "Millions to billions"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "SSI is defined by the integration of a small number of components, usually fewer than 10 gates."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0054",
+      "type": "mcq",
+      "stem": "Which of the following is an example of an SSI device?",
+      "options": {
+        "A": "Intel 8086",
+        "B": "7400 NAND gate IC",
+        "C": "Intel Core i7",
+        "D": "3-to-8 line decoder"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The 7400 quad 2-input NAND gate is a classic example of Small Scale Integration."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0055",
+      "type": "mcq",
+      "stem": "MSI (Medium Scale Integration) typically involves how many gates or transistors?",
+      "options": {
+        "A": "1 to 10",
+        "B": "10 to 100",
+        "C": "1,000 to 10,000",
+        "D": "1 million to 10 million"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "MSI involves the integration of a medium number of components, typically 10 to 100 gates."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0056",
+      "type": "mcq",
+      "stem": "What is the maximum transmission speed of Gigabit Ethernet?",
+      "options": {
+        "A": "10 Mbps",
+        "B": "100 Mbps",
+        "C": "1000 Mbps",
+        "D": "10000 Mbps"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Gigabit Ethernet can transmit up to 1000 Mbps."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0057",
+      "type": "mcq",
+      "stem": "LSI (Large Scale Integration) involves the integration of how many transistors or gates?",
+      "options": {
+        "A": "Fewer than 10",
+        "B": "10 to 100",
+        "C": "Hundreds to thousands",
+        "D": "Millions to billions"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "LSI is characterized by the integration of hundreds to thousands of components on a single chip."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0058",
+      "type": "mcq",
+      "stem": "Which historic microprocessor is cited as an example of LSI?",
+      "options": {
+        "A": "Intel 8086",
+        "B": "Intel Core i7",
+        "C": "Intel 4004",
+        "D": "74138 decoder"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Intel 4004, containing about 2,300 transistors, is an example of Large Scale Integration."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0059",
+      "type": "mcq",
+      "stem": "VLSI (Very Large Scale Integration) allows for the creation of which of the following?",
+      "options": {
+        "A": "Simple logic gates",
+        "B": "Decoders",
+        "C": "Highly complex ICs like microprocessors",
+        "D": "Only resistors"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "VLSI enables the creation of complex systems like modern microprocessors and SoCs."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0060",
+      "type": "mcq",
+      "stem": "How many transistors are integrated in ULSI (Ultra-Large Scale Integration)?",
+      "options": {
+        "A": "100 to 1,000",
+        "B": "10,000 to 1,000,000",
+        "C": "Millions to billions",
+        "D": "Hundreds of billions"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "ULSI involves the integration of millions to billions of transistors on a single chip."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0061",
+      "type": "mcq",
+      "stem": "The emerging class of integration involving hundreds of billions of transistors is called:",
+      "options": {
+        "A": "VLSI",
+        "B": "ULSI",
+        "C": "GSI",
+        "D": "MSI"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "GSI (Giga Scale Integration) is the class aiming for hundreds of billions of transistors."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0062",
+      "type": "mcq",
+      "stem": "According to the summary table, what is the 'No. of elements' for GSI (Giant Scale Integration)?",
+      "options": {
+        "A": "1,000 - 10,000",
+        "B": "1 Million - 10 Million",
+        "C": "10 Million above",
+        "D": "100 - 1000"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The table lists GSI as having 10 million or more elements, with the text elsewhere clarifying the target of hundreds of billions."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0063",
+      "type": "mcq",
+      "stem": "What is the standard material used for semiconductor wafers in IC fabrication?",
+      "options": {
+        "A": "Copper",
+        "B": "Silicon",
+        "C": "Aluminum",
+        "D": "Boron"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Silicon is ideal for IC fabrication because of its semiconductor properties."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0064",
+      "type": "mcq",
+      "stem": "In IC fabrication, what is the first step in the general process?",
+      "options": {
+        "A": "Oxidation",
+        "B": "Photolithography",
+        "C": "Wafer Preparation",
+        "D": "Packaging"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The process begins with wafer preparation, including material selection and cleaning."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0065",
+      "type": "mcq",
+      "stem": "What is the purpose of growing a layer of silicon dioxide (SiO2) during the oxidation stage?",
+      "options": {
+        "A": "To conduct electricity",
+        "B": "To act as an insulator and protective layer",
+        "C": "To clean the wafer",
+        "D": "To create a pattern for light"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Silicon dioxide acts as an insulator and protects the wafer during various stages of fabrication."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0066",
+      "type": "mcq",
+      "stem": "What is applied to the wafer during photolithography that is light-sensitive?",
+      "options": {
+        "A": "Silicon dioxide",
+        "B": "Dopant",
+        "C": "Photoresist",
+        "D": "Metal trace"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Photoresist is the light-sensitive material used to transfer patterns onto the wafer."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0067",
+      "type": "mcq",
+      "stem": "Which device contains the design of the circuit and is used during the light exposure step?",
+      "options": {
+        "A": "Wafer",
+        "B": "Pump",
+        "C": "Patterned mask",
+        "D": "Photoresist"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The mask contains the circuit design and directs UV light to create that pattern on the photoresist."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0068",
+      "type": "mcq",
+      "stem": "What is the process of removing unwanted materials to reveal patterns on the wafer called?",
+      "options": {
+        "A": "Oxidation",
+        "B": "Etching",
+        "C": "Deposition",
+        "D": "Dicing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Etching removes material from the surface to create the desired circuit patterns."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0069",
+      "type": "mcq",
+      "stem": "What are the two types of etching mentioned?",
+      "options": {
+        "A": "Hot and cold",
+        "B": "Acid and base",
+        "C": "Wet and dry",
+        "D": "Light and dark"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Etching can be performed using chemical solutions (wet) or plasma (dry)."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0070",
+      "type": "mcq",
+      "stem": "What is the goal of 'Doping' in semiconductor fabrication?",
+      "options": {
+        "A": "To clean the wafer of particles",
+        "B": "To change the electrical properties of the silicon by introducing impurities",
+        "C": "To polish the surface",
+        "D": "To protect the circuit from heat"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Doping introduces specific impurities to control the electrical characteristics of silicon regions."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0071",
+      "type": "mcq",
+      "stem": "Which dopant is added to create p-type regions in a silicon wafer?",
+      "options": {
+        "A": "Phosphorus",
+        "B": "Boron",
+        "C": "Aluminum",
+        "D": "Silicon dioxide"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Adding boron creates p-type regions, whereas phosphorus creates n-type regions."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0072",
+      "type": "mcq",
+      "stem": "What technique involves accelerating ions and embedding them into the wafer?",
+      "options": {
+        "A": "Diffusion",
+        "B": "Oxidation",
+        "C": "Ion Implantation",
+        "D": "Metallization"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Ion implantation uses accelerated ions to introduce dopants into the wafer."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0073",
+      "type": "mcq",
+      "stem": "Which deposition technique involves gases reacting at the wafer's surface?",
+      "options": {
+        "A": "Chemical Vapor Deposition (CVD)",
+        "B": "Physical Vapor Deposition (PVD)",
+        "C": "Atomic Layer Deposition (ALD)",
+        "D": "Etching"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "CVD is a process where gases react at the surface to deposit thin films."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0074",
+      "type": "mcq",
+      "stem": "What is 'Metallization' used for in IC fabrication?",
+      "options": {
+        "A": "To create the silicon crystal",
+        "B": "To form interconnections between various components",
+        "C": "To remove the photoresist",
+        "D": "To test for defects"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Metallization involves depositing metal layers to create the necessary electrical connections."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0075",
+      "type": "mcq",
+      "stem": "What are 'vias' in an integrated circuit?",
+      "options": {
+        "A": "Types of transistors",
+        "B": "Polishing chemicals",
+        "C": "Small holes through dielectric layers for electrical connections",
+        "D": "The names of the external pins"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Vias are small metal-filled holes that allow connections between different metal layers."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0076",
+      "type": "mcq",
+      "stem": "What is the purpose of Chemical Mechanical Planarization (CMP)?",
+      "options": {
+        "A": "To add dopants to the wafer",
+        "B": "To ensure the wafer surface is flat and smooth",
+        "C": "To cut the wafer into chips",
+        "D": "To expose the wafer to UV light"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CMP is a polishing process that levels the surface for subsequent fabrication steps."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0077",
+      "type": "mcq",
+      "stem": "When is wafer-level testing performed?",
+      "options": {
+        "A": "Before oxidation",
+        "B": "After dicing",
+        "C": "Before the wafer is diced into individual chips",
+        "D": "After final packaging"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Wafer-level testing checks functionality while the circuits are still part of the complete wafer."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0078",
+      "type": "mcq",
+      "stem": "What is 'dicing' in the context of IC manufacturing?",
+      "options": {
+        "A": "Mixing dopants",
+        "B": "Cutting the wafer into individual chips",
+        "C": "Etching the metal layers",
+        "D": "Testing the final product"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Dicing is the step where the processed wafer is cut into separate integrated circuit chips."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0079",
+      "type": "mcq",
+      "stem": "What do the packages for final IC chips include to connect to external circuit boards?",
+      "options": {
+        "A": "Vias",
+        "B": "Pins or solder balls",
+        "C": "Photoresist",
+        "D": "Germanium"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The package uses pins or solder balls to allow the chip to connect to an external system."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0080",
+      "type": "mcq",
+      "stem": "What happens to defective chips found during final testing?",
+      "options": {
+        "A": "They are repaired",
+        "B": "They are returned to the wafer",
+        "C": "They are discarded",
+        "D": "They are sold at a higher price"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text states that defective chips are discarded, and only functional ones proceed to distribution."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0081",
+      "type": "mcq",
+      "stem": "Which challenge in IC fabrication refers to ensuring a high percentage of produced chips are functional?",
+      "options": {
+        "A": "Miniaturization",
+        "B": "Yield Management",
+        "C": "Cleanliness",
+        "D": "Etching"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Yield management is the critical task of maximizing the proportion of functional chips produced."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0082",
+      "type": "mcq",
+      "stem": "Why is cleanliness essential in IC fabrication?",
+      "options": {
+        "A": "To keep the workers comfortable",
+        "B": "Because tiny particles can ruin a chip during fabrication",
+        "C": "To prevent the machines from rusting",
+        "D": "To improve the color of the chip"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A contamination-free environment is required because even microscopic defects can lead to IC failure."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0083",
+      "type": "mcq",
+      "stem": "Integrated circuits are classified into which three main types?",
+      "options": {
+        "A": "Small, Medium, Large",
+        "B": "SSI, MSI, VLSI",
+        "C": "Analog, Digital, and Mixed",
+        "D": "Wet, Dry, and Plasma"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "ICs are broadly classified based on the nature of the signals they process: analog, digital, or mixed."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0084",
+      "type": "mcq",
+      "stem": "How do Digital Integrated Circuits operate?",
+      "options": {
+        "A": "Over a continuous range of signal",
+        "B": "Only at a few defined levels of signal amplitude",
+        "C": "Without the use of logic gates",
+        "D": "By using only passive components"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Digital ICs operate at specific discrete levels rather than over a continuous range."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0085",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a type of digital IC listed?",
+      "options": {
+        "A": "Programmable ICs",
+        "B": "Memory chips",
+        "C": "Operational amplifiers",
+        "D": "Logic ICs"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Operational amplifiers are classified as analog ICs, not digital ICs."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0086",
+      "type": "mcq",
+      "stem": "What defines an Analog Integrated Circuit?",
+      "options": {
+        "A": "It uses only NAND gates",
+        "B": "It operates over a continuous range of signal",
+        "C": "It is only used for computer memory",
+        "D": "It cannot be made of silicon"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Analog ICs process continuous signals across a range of amplitudes."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0087",
+      "type": "mcq",
+      "stem": "Linear Integrated Circuits (Linear ICs) are a subdivision of which IC category?",
+      "options": {
+        "A": "Digital ICs",
+        "B": "Mixed ICs",
+        "C": "Analog ICs",
+        "D": "Discrete circuits"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Analog ICs are subdivided into linear ICs and Radio Frequency ICs."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0088",
+      "type": "mcq",
+      "stem": "What are Mixed Integrated Circuits?",
+      "options": {
+        "A": "Circuits made of copper and gold",
+        "B": "ICs obtained by combining analog and digital ICs on a single chip",
+        "C": "ICs that use both silicon and germanium",
+        "D": "ICs used for mixing chemicals"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Mixed ICs combine both analog and digital circuit elements on one chip."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0089",
+      "type": "mcq",
+      "stem": "Which devices are common examples of Mixed ICs?",
+      "options": {
+        "A": "Microprocessors",
+        "B": "A/D and D/A converters",
+        "C": "Batteries",
+        "D": "NAND gates"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Analog-to-digital and digital-to-analog converters are classic examples of mixed IC technology."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0090",
+      "type": "mcq",
+      "stem": "What is Monolithic Technology in ICs?",
+      "options": {
+        "A": "Components are manufactured on separate ceramic substrates",
+        "B": "All components and interconnections are manufactured into or on top of a single silicon chip",
+        "C": "It uses only discrete components",
+        "D": "It is used only for large scale generators"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Monolithic ICs integrate all elements and their connections onto a single piece of silicon."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0091",
+      "type": "mcq",
+      "stem": "How are components interconnected in Hybrid Circuits?",
+      "options": {
+        "A": "By growing silicon dioxide",
+        "B": "By means of metallization pattern or wire bonds on a ceramic substrate",
+        "C": "By using light-sensitive photoresist",
+        "D": "They are not interconnected"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hybrid circuits involve attaching separate parts to a substrate and bonding them together."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0092",
+      "type": "mcq",
+      "stem": "What does the abbreviation 'SSI' stand for?",
+      "options": {
+        "A": "Small Scale Integration",
+        "B": "System Silicon Integration",
+        "C": "Simple Signal Interface",
+        "D": "Silicon Source Integration"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "SSI stands for Small Scale Integration, the earliest and simplest level of integration."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0093",
+      "type": "mcq",
+      "stem": "What is an example of an MSI device mentioned in the text?",
+      "options": {
+        "A": "Intel 8086",
+        "B": "74138 (3-to-8 line decoder)",
+        "C": "Intel Core i7",
+        "D": "7400 NAND gate"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The 74138 decoder is listed as an example of Medium Scale Integration."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0094",
+      "type": "mcq",
+      "stem": "How many transistors does the Intel 8086 microprocessor have, according to the document?",
+      "options": {
+        "A": "2,300",
+        "B": "About 29,000",
+        "C": "Over 10 billion",
+        "D": "1 Million"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Intel 8086 is described as a VLSI device containing approximately 29,000 transistors."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0095",
+      "type": "mcq",
+      "stem": "Which integration level includes special purpose registers and 1 million to 10 million elements?",
+      "options": {
+        "A": "VLSI",
+        "B": "ULSI",
+        "C": "GSI",
+        "D": "LSI"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The IC types table identifies ULSI as having 1 million to 10 million elements."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0096",
+      "type": "mcq",
+      "stem": "A circuit that directs and controls electric current to perform data transfer is called an:",
+      "options": {
+        "A": "Analog circuit",
+        "B": "Electronic circuit",
+        "C": "Open circuit",
+        "D": "Short circuit"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Electronic circuits are defined as structures that control current to perform functions like data transfer."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0097",
+      "type": "mcq",
+      "stem": "What is the primary function of a capacitor in a circuit?",
+      "options": {
+        "A": "To provide resistance",
+        "B": "To store electric charge",
+        "C": "To act as a one-way valve",
+        "D": "To amplify voltage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Capacitors are used to store electric charge until it is discharged."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0098",
+      "type": "mcq",
+      "stem": "Which electronic component acts as a one-way valve?",
+      "options": {
+        "A": "Resistor",
+        "B": "Capacitor",
+        "C": "Diode",
+        "D": "Switch"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Diodes are described as acting like one-way valves for electric current."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0099",
+      "type": "mcq",
+      "stem": "Why is a switch considered 'very important' in equipment according to the text?",
+      "options": {
+        "A": "It generates the voltage",
+        "B": "All equipment is useless without a switch to connect and break the flow",
+        "C": "It protects the circuit from heat",
+        "D": "It changes AC to DC"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Switches are essential for controlling the connectivity and operation of electrical equipment."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0100",
+      "type": "mcq",
+      "stem": "In the context of diodes, what is 'polarity' determined by?",
+      "options": {
+        "A": "Resistance and current",
+        "B": "Anode and cathode",
+        "C": "Silicon and germanium",
+        "D": "AC and DC"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Polarity in diodes is defined by the arrangement of the anode and cathode leads."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0101",
+      "type": "mcq",
+      "stem": "Which of the following is a drawback of using ICs mentioned in the text?",
+      "options": {
+        "A": "Low power requirements",
+        "B": "Lack of flexibility to modify parameters",
+        "C": "Extremely small size",
+        "D": "High reliability"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Once an IC is fabricated, its internal operating parameters generally cannot be modified."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0102",
+      "type": "mcq",
+      "stem": "What is the primary function of Atomic Layer Deposition (ALD)?",
+      "options": {
+        "A": "To cut the silicon wafer",
+        "B": "To add materials one atomic layer at a time",
+        "C": "To clean the surface of the chip",
+        "D": "To test for electrical defects"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "ALD is a highly controlled technique for adding materials at the atomic level."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0103",
+      "type": "mcq",
+      "stem": "Which electronic component is NOT considered a part of the 'active' group in an IC?",
+      "options": {
+        "A": "Transistor",
+        "B": "Diode",
+        "C": "Resistor",
+        "D": "All are active"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Resistors are classified as passive components, while transistors and diodes are active."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0104",
+      "type": "mcq",
+      "stem": "The process whereby an input current produces a larger output current is known as:",
+      "options": {
+        "A": "Resistance",
+        "B": "Capacitance",
+        "C": "Amplification",
+        "D": "Biasing"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Amplification is the process where a small input signal results in a larger output signal, performed by transistors."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0105",
+      "type": "mcq",
+      "stem": "Which component is defined as an advanced electronic device that takes raw data as input and processes it into meaningful output?",
+      "options": {
+        "A": "System Unit",
+        "B": "Computer",
+        "C": "Microprocessor",
+        "D": "Motherboard"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document defines a computer as a device that takes raw data and information as input and processes it to give a meaningful result as output."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0106",
+      "type": "mcq",
+      "stem": "Which part of the computer system houses the primary components such as the motherboard and power supply?",
+      "options": {
+        "A": "Monitor",
+        "B": "System unit",
+        "C": "Expansion slot",
+        "D": "Peripheral controller"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The system unit is described as the main computer cabinet housing containing the primary components of the system."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0107",
+      "type": "mcq",
+      "stem": "Which input device is primarily used to introduce characters and commands into the system using a standard typewriter layout?",
+      "options": {
+        "A": "Mouse",
+        "B": "Scanner",
+        "C": "Keyboard",
+        "D": "Joystick"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The keyboard is specifically identified as the most familiar device used to introduce characters and commands."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0108",
+      "type": "mcq",
+      "stem": "How does a user move the cursor on a video monitor when using a mouse?",
+      "options": {
+        "A": "By clicking the right button",
+        "B": "By rolling the mouse along a surface",
+        "C": "By typing coordinates",
+        "D": "By pressing the scroll wheel"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Rolling the mouse along a surface causes the cursor on the display to move in a corresponding manner."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0109",
+      "type": "mcq",
+      "stem": "Which output device is defined as being capable of displaying characters and graphics on a CRT screen?",
+      "options": {
+        "A": "Character printer",
+        "B": "Video monitor",
+        "C": "Plotter",
+        "D": "Speaker"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A video monitor is a visual output device used for displaying characters and graphics and is also a name for a CRT display."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0110",
+      "type": "mcq",
+      "stem": "A printer that applies data to paper one character at a time is known as what?",
+      "options": {
+        "A": "Line printer",
+        "B": "Character printer",
+        "C": "Page printer",
+        "D": "Plotter"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A character printer is defined as any printer that prints one character at a time, such as dot-matrix or ink-jet printers."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0111",
+      "type": "mcq",
+      "stem": "What are the two main groups that hardware components can be categorized into?",
+      "options": {
+        "A": "Input and Output",
+        "B": "Primary and Secondary",
+        "C": "Major and Minor",
+        "D": "Internal and External"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document states that hardware components can be grouped into major components and minor (optional) components."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0112",
+      "type": "mcq",
+      "stem": "Which of the following is classified as an optional (minor) hardware component in the text?",
+      "options": {
+        "A": "Motherboard",
+        "B": "Power supply",
+        "C": "Web camera",
+        "D": "CPU"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The web camera is listed under optional components along with items like modems and scanners."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0113",
+      "type": "mcq",
+      "stem": "What is the basic principle or cycle that summarizes the operation of a computer?",
+      "options": {
+        "A": "Read-Write-Execute",
+        "B": "INPUT-PROCESS-OUTPUT",
+        "C": "Fetch-Decode-Store",
+        "D": "Load-Run-Save"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document explicitly states that the principle of a computer can be summarized as the INPUT-PROCESS-OUTPUT cycle."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0114",
+      "type": "mcq",
+      "stem": "In the Central Processing Unit, what does the acronym ALU stand for?",
+      "options": {
+        "A": "Automated Logic Unit",
+        "B": "Arithmetical Logical Unit",
+        "C": "Advanced Linear Unit",
+        "D": "Algorithm Logic Utility"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "According to the architecture diagram, ALU refers to the Arithmetical Logical Unit."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0115",
+      "type": "mcq",
+      "stem": "Which component acts as a communications highway or electronic path for the flow of data between subsystems?",
+      "options": {
+        "A": "Motherboard",
+        "B": "Bus",
+        "C": "Chipset",
+        "D": "Signal cable"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A bus is defined as an electronic path or communications highway for the flow of data between the CPU, memory, and other components."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0116",
+      "type": "mcq",
+      "stem": "Which type of bus is responsible for carrying information about memory locations and is uni-directional?",
+      "options": {
+        "A": "Data bus",
+        "B": "Control bus",
+        "C": "Address bus",
+        "D": "System bus"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The address bus carries information about memory locations and travels only from the processor to memory."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0117",
+      "type": "mcq",
+      "stem": "What is the primary characteristic of the Data Bus in terms of directionality?",
+      "options": {
+        "A": "Uni-directional",
+        "B": "Bi-directional",
+        "C": "Multi-directional",
+        "D": "Circular"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The data bus is bi-directional because data moves from the processor to memory and vice versa."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0118",
+      "type": "mcq",
+      "stem": "Which bus carries information regarding the state of current access, such as a read or write operation?",
+      "options": {
+        "A": "Address bus",
+        "B": "Control bus",
+        "C": "External bus",
+        "D": "Expansion bus"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The control bus is responsible for carrying information from the processor about the state of current access."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0119",
+      "type": "mcq",
+      "stem": "The components inside a system unit are divided into how many distinct subunits according to the text?",
+      "options": {
+        "A": "Two",
+        "B": "Three",
+        "C": "Four",
+        "D": "Five"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document divides internal system unit components into four subunits: power supply, disk drives, system board, and options adapter."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0120",
+      "type": "mcq",
+      "stem": "What is the function of the switching power supply in a computer?",
+      "options": {
+        "A": "To store data",
+        "B": "To convert AC voltage to DC voltage",
+        "C": "To cool the CPU",
+        "D": "To manage the bus"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The power supply converts AC voltage from an outlet to the DC voltages required by computer circuitry."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0121",
+      "type": "mcq",
+      "stem": "Which component is referred to as the 'main component' of a personal computer containing the major structures?",
+      "options": {
+        "A": "Central Processing Unit",
+        "B": "System board",
+        "C": "Hard disk drive",
+        "D": "RAM"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The system board, or motherboard, is described as the main component that contains the major structures of the computer."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0122",
+      "type": "mcq",
+      "stem": "Which devices are used for mass storage and hold data even when power is removed?",
+      "options": {
+        "A": "RAM modules",
+        "B": "Disk drives",
+        "C": "Adapter cards",
+        "D": "Registers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Disk drives like hard drives and CD-ROMs are mass storage devices that retain data without power."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0123",
+      "type": "mcq",
+      "stem": "What type of cards are used to enhance a basic system with additional functions like video display or networking?",
+      "options": {
+        "A": "Memory cards",
+        "B": "Adapter cards",
+        "C": "Smart cards",
+        "D": "SIM cards"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Adapter cards are interface cards used to enhance the system with functions like modems or LAN connectivity."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0124",
+      "type": "mcq",
+      "stem": "What is the name for the flat ribbon cables that pass control signals and data between system components?",
+      "options": {
+        "A": "Power cables",
+        "B": "Signal cables",
+        "C": "Coaxial cables",
+        "D": "Fiber cables"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Signal cables are typically configured in a flat ribbon format to pass signals and data between components."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0125",
+      "type": "mcq",
+      "stem": "What materials are computer cases typically made of?",
+      "options": {
+        "A": "Wood and Glass",
+        "B": "Plastic, steel, and aluminum",
+        "C": "Copper and Lead",
+        "D": "Rubber and Carbon"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text specifies that computer cases are typically made of plastic, steel, and aluminum."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0126",
+      "type": "mcq",
+      "stem": "What is the term used to describe the size and layout of a computer case?",
+      "options": {
+        "A": "Architecture",
+        "B": "Footprint",
+        "C": "Form factor",
+        "D": "Structure"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The size and layout of a case is specifically called its form factor."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0127",
+      "type": "mcq",
+      "stem": "Which type of cases can be categorized as mini or full-sized?",
+      "options": {
+        "A": "Desktop cases",
+        "B": "Slimline cases",
+        "C": "Tower cases",
+        "D": "Handheld cases"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "According to the document, tower cases may be mini or full-sized."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0128",
+      "type": "mcq",
+      "stem": "How do computer cases help prevent damage from static electricity?",
+      "options": {
+        "A": "By using rubber coatings",
+        "B": "By grounding internal components",
+        "C": "By generating a magnetic field",
+        "D": "By filtering the air"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Internal components are grounded by attachment to the case, which helps prevent static damage."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0129",
+      "type": "mcq",
+      "stem": "What are the external or internal drive locations in a computer case called?",
+      "options": {
+        "A": "Slots",
+        "B": "Bays",
+        "C": "Ports",
+        "D": "Sockets"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The number of drive locations is referred to as the number of bays in a computer case."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0130",
+      "type": "mcq",
+      "stem": "What device can protect a computer from problems caused by significant deviations or fluctuations in power?",
+      "options": {
+        "A": "Step-down transformer",
+        "B": "Uninterruptible power supply (UPS)",
+        "C": "Circuit breaker",
+        "D": "Voltage regulator"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An uninterruptible power supply (UPS) is used to protect computers from power-related problems."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0131",
+      "type": "mcq",
+      "stem": "What is the characteristic of 'keyed' connectors in a computer system?",
+      "options": {
+        "A": "They require a physical key to unlock",
+        "B": "They can be inserted in only one direction",
+        "C": "They are made of gold",
+        "D": "They change color when connected"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Keyed connectors are designed to ensure they are inserted correctly by only allowing one orientation."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0132",
+      "type": "mcq",
+      "stem": "Which specific connector is used to provide power to an optical drive or a hard drive?",
+      "options": {
+        "A": "Berg connector",
+        "B": "Molex connector",
+        "C": "SATA data cable",
+        "D": "P8 connector"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A Molex connector is a keyed connector specifically used for optical or hard drives."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0133",
+      "type": "mcq",
+      "stem": "Which connector is used to connect power to a floppy drive?",
+      "options": {
+        "A": "Molex connector",
+        "B": "Berg connector",
+        "C": "24-pin connector",
+        "D": "Auxiliary connector"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Berg connector is the smaller keyed connector used specifically for floppy drives."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0134",
+      "type": "mcq",
+      "stem": "A modern motherboard power connector typically has how many pins in its slotted design?",
+      "options": {
+        "A": "8 or 12 pins",
+        "B": "20 or 24 pins",
+        "C": "40 or 80 pins",
+        "D": "10 or 15 pins"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Motherboards use 20-pin or 24-pin slotted connectors to receive power from the power supply."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0135",
+      "type": "mcq",
+      "stem": "What was the main danger of using the older P8 and P9 power connectors?",
+      "options": {
+        "A": "They overheated easily",
+        "B": "They were unkeyed and could be installed backwards",
+        "C": "They provided too much voltage",
+        "D": "They were too large for standard boards"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "P8 and P9 were unkeyed, meaning incorrect installation could damage the motherboard or power supply."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0136",
+      "type": "mcq",
+      "stem": "What type of motherboards do laptop computers generally use?",
+      "options": {
+        "A": "Standard ATX boards",
+        "B": "Full-sized desktop boards",
+        "C": "Highly integrated and customized motherboards",
+        "D": "ISA-based boards"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Laptops require miniaturized, highly integrated, and customized motherboards to fit their compact size."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0137",
+      "type": "mcq",
+      "stem": "Which component on the motherboard produces a signal to synchronize all various components?",
+      "options": {
+        "A": "BIOS chip",
+        "B": "Clock generator",
+        "C": "Southbridge",
+        "D": "Voltage regulator"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A clock generator produces the system clock signal used to synchronize various components."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0138",
+      "type": "mcq",
+      "stem": "What are the two distinct components that most chipsets are divided into?",
+      "options": {
+        "A": "Eastbridge and Westbridge",
+        "B": "Primary and Secondary",
+        "C": "Northbridge and Southbridge",
+        "D": "CPU and RAM"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The chipset is typically composed of the Northbridge and Southbridge components."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0139",
+      "type": "mcq",
+      "stem": "Which part of the chipset is primarily responsible for high-speed peripheral communications like video and RAM?",
+      "options": {
+        "A": "Southbridge",
+        "B": "Northbridge",
+        "C": "Super I/O",
+        "D": "Flash ROM"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Northbridge manages high-speed communications, including video (AGP/PCIe) and processor-to-memory links."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0140",
+      "type": "mcq",
+      "stem": "The Front-Side Bus (FSB) is the signal pathway between which two components?",
+      "options": {
+        "A": "CPU and Cache",
+        "B": "CPU and Main memory",
+        "C": "Northbridge and Southbridge",
+        "D": "RAM and Hard drive"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Front-Side Bus is defined as the set of signal pathways between the CPU and main memory."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0141",
+      "type": "mcq",
+      "stem": "What is the name of the pathway between the CPU and Level 2 cache memory?",
+      "options": {
+        "A": "Front-side bus",
+        "B": "Back-side bus",
+        "C": "Internal bus",
+        "D": "Expansion bus"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The back-side bus is the set of signal pathways between the CPU and Level 2 cache memory."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0142",
+      "type": "mcq",
+      "stem": "Which part of the chipset handles slower onboard peripherals like PS/2, USB, and Serial ports?",
+      "options": {
+        "A": "Northbridge",
+        "B": "Southbridge",
+        "C": "Clock generator",
+        "D": "AGP slot"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Southbridge chipset provides support and manages communications for onboard peripherals and expansion buses like PCI."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0143",
+      "type": "mcq",
+      "stem": "Which component is considered the 'brain' of the computer?",
+      "options": {
+        "A": "Motherboard",
+        "B": "Central Processing Unit (CPU)",
+        "C": "Hard Disk",
+        "D": "Power Supply"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text explicitly states that the CPU is considered the brain of the computer."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0144",
+      "type": "mcq",
+      "stem": "What units are used to measure the speed of current CPUs?",
+      "options": {
+        "A": "Kilobytes (KB)",
+        "B": "Megahertz (MHz) or Gigahertz (GHz)",
+        "C": "Bits per second",
+        "D": "Watts"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CPU speed is rated in cycles per second, specifically MHz (millions) or GHz (billions)."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0145",
+      "type": "mcq",
+      "stem": "How much data can a CPU process at one time based on the processor data bus size mentioned in the text?",
+      "options": {
+        "A": "8-bit or 16-bit",
+        "B": "32-bit or 64-bit",
+        "C": "128-bit",
+        "D": "1024-bit"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Current processors are identified as having either a 32-bit or 64-bit processor data bus."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0146",
+      "type": "mcq",
+      "stem": "A CPU with four cores inside a single chip is known as what?",
+      "options": {
+        "A": "Dual Core",
+        "B": "Triple Core",
+        "C": "Quad Core",
+        "D": "Single Core"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A Quad Core CPU has four cores inside a single CPU that can process information simultaneously."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0147",
+      "type": "mcq",
+      "stem": "What is the purpose of a heat sink on a CPU?",
+      "options": {
+        "A": "To increase voltage",
+        "B": "To draw heat away from the CPU core",
+        "C": "To store temporary data",
+        "D": "To speed up the clock"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A heat sink is used to draw heat away from the core of the CPU to keep it cool."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0148",
+      "type": "mcq",
+      "stem": "Which adapter card allows a computer to connect to a network using radio frequencies?",
+      "options": {
+        "A": "NIC",
+        "B": "Wireless NIC",
+        "C": "Modem",
+        "D": "Sound adapter"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Wireless NIC specifically uses radio frequencies to connect a computer to a network."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0149",
+      "type": "mcq",
+      "stem": "Which card provides the ability to watch and record TV signals on a PC?",
+      "options": {
+        "A": "Video adapter",
+        "B": "Capture card",
+        "C": "TV tuner",
+        "D": "RAID adapter"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The TV tuner card provides the ability to watch and record TV signals by connecting a TV source."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0150",
+      "type": "mcq",
+      "stem": "What is the primary function of a RAID adapter?",
+      "options": {
+        "A": "To provide audio capability",
+        "B": "To connect multiple hard drives for redundancy and performance",
+        "C": "To capture video signals",
+        "D": "To connect to the Internet via phone line"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A RAID adapter connects multiple hard drives to provide redundancy and improve performance."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0151",
+      "type": "mcq",
+      "stem": "Which expansion slot was specifically designed for video and is 32-bit?",
+      "options": {
+        "A": "PCI",
+        "B": "ISA",
+        "C": "AGP",
+        "D": "EISA"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The AGP (Advanced Graphics Port) is a 32-bit expansion port designed specifically for video."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0152",
+      "type": "mcq",
+      "stem": "Which serial bus expansion slot was developed to replace AGP?",
+      "options": {
+        "A": "PCI",
+        "B": "PCIe",
+        "C": "MCA",
+        "D": "ISA"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "PCIe (PCI Express) is a serial bus expansion slot designed to replace the AGP slot."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0153",
+      "type": "mcq",
+      "stem": "How many bits of data does a serial port transmit at a time?",
+      "options": {
+        "A": "1 bit",
+        "B": "8 bits",
+        "C": "16 bits",
+        "D": "32 bits"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The text specifies that serial ports transmit one bit of data at a time."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0154",
+      "type": "mcq",
+      "stem": "Which connector type is used for a standard telephone cable connecting a modem?",
+      "options": {
+        "A": "RJ-45",
+        "B": "RJ-11",
+        "C": "DB-9",
+        "D": "DB-25"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A telephone cable for a modem uses an RJ-11 connector."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0155",
+      "type": "mcq",
+      "stem": "What does 'hot-swappable' mean in the context of USB devices?",
+      "options": {
+        "A": "The device gets very hot during use",
+        "B": "Devices can be connected or disconnected while power is on",
+        "C": "The device must be cooled before removal",
+        "D": "The device can only be used with high-speed ports"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hot-swappable means users can connect and disconnect devices without powering down the computer."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0156",
+      "type": "mcq",
+      "stem": "How many bits of data can a parallel port transmit at one time?",
+      "options": {
+        "A": "1 bit",
+        "B": "4 bits",
+        "C": "8 bits",
+        "D": "32 bits"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Parallel ports are noted for being able to transmit 8 bits of data at one time."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0157",
+      "type": "mcq",
+      "stem": "Which port uses a 6-pin mini-DIN female connector to connect a keyboard or mouse?",
+      "options": {
+        "A": "USB",
+        "B": "Serial",
+        "C": "PS/2",
+        "D": "Parallel"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The PS/2 port is a 6-pin mini-DIN female connector used for keyboards and mice."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0158",
+      "type": "mcq",
+      "stem": "Which component of the computer stores and processes data under the control of a set of instructions?",
+      "options": {
+        "A": "Hard Drive",
+        "B": "Computer",
+        "C": "Bus",
+        "D": "Monitor"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "According to the definition, a computer stores and processes data under the control of instructions."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0159",
+      "type": "mcq",
+      "stem": "What specific components are found on the main logic board (motherboard)?",
+      "options": {
+        "A": "Speakers and Mouse",
+        "B": "Disk drives and Monitors",
+        "C": "Switching power supply and Logic circuits",
+        "D": "Printer and Keyboard"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document notes the system board includes the main logic board and interconnects with the power supply."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0160",
+      "type": "mcq",
+      "stem": "What is the function of the specialized control and function keys on a keyboard?",
+      "options": {
+        "A": "To type standard letters",
+        "B": "To provide additional system commands",
+        "C": "To move the mouse cursor",
+        "D": "To power off the monitor"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Specialized control and function keys are added to a standard layout to introduce specialized commands."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0161",
+      "type": "mcq",
+      "stem": "Which component is described as the system's mass storage for holding data for an extended time?",
+      "options": {
+        "A": "RAM",
+        "B": "Disk drives",
+        "C": "Cache",
+        "D": "Registers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Disk drives are defined as mass storage devices that hold data even when power is removed."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0162",
+      "type": "mcq",
+      "stem": "What is the purpose of the 'Case Fan'?",
+      "options": {
+        "A": "To protect against static",
+        "B": "To move air through the case to keep components cool",
+        "C": "To power the motherboard",
+        "D": "To hold the hard drive in place"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Case fans are used to move air through the computer case to provide a cool environment."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0163",
+      "type": "mcq",
+      "stem": "Which form factor is described as being available in 'slimline' or 'full-sized'?",
+      "options": {
+        "A": "Tower",
+        "B": "Desktop",
+        "C": "Laptop",
+        "D": "Server"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document states that desktop cases may be slimline or full-sized."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0164",
+      "type": "mcq",
+      "stem": "Why is it important to have a power supply with a higher wattage than currently needed?",
+      "options": {
+        "A": "To prevent the computer from getting cold",
+        "B": "To allow for additional components to be added later",
+        "C": "To increase the speed of the CPU",
+        "D": "To reduce the electricity bill"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The power supply must provide enough power for current and future additional components."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0165",
+      "type": "mcq",
+      "stem": "What is the function of the 'Southbridge' in relation to memory management?",
+      "options": {
+        "A": "It manages RAM directly",
+        "B": "It manages communication between Northbridge and the rest of the computer",
+        "C": "It handles high-speed video memory",
+        "D": "It creates the system clock"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Northbridge manages Southbridge, but Southbridge handles communications with expansion buses like PCI."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0166",
+      "type": "mcq",
+      "stem": "What does the term BIOS stand for as used in the document?",
+      "options": {
+        "A": "Basic Input Output System",
+        "B": "Binary Integrated Operating Software",
+        "C": "Board Internal Operating System",
+        "D": "Built-in Input Output Socket"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "BIOS refers to the Basic Input Output System firmware stored on non-volatile memory chips."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0167",
+      "type": "mcq",
+      "stem": "What is the primary difference between a Single Core and a Dual Core CPU?",
+      "options": {
+        "A": "Dual core is larger in size",
+        "B": "Dual core has two cores that can process info at the same time",
+        "C": "Single core is more expensive",
+        "D": "Single core uses more power"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A dual core CPU contains two cores inside a single chip that can process information simultaneously."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0168",
+      "type": "mcq",
+      "stem": "Which unit of the CPU is responsible for managing the order of execution and instructions?",
+      "options": {
+        "A": "ALU",
+        "B": "CU",
+        "C": "MU",
+        "D": "Bus"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The CU (Control Unit) is the part of the CPU architecture responsible for controlling operations."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0169",
+      "type": "mcq",
+      "stem": "Which component uses the BIOS chip to perform the system's power-on self-test?",
+      "options": {
+        "A": "Hard Drive",
+        "B": "Motherboard",
+        "C": "Monitor",
+        "D": "Printer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The BIOS chip is a core component of the motherboard used for system firmware and startup."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0170",
+      "type": "mcq",
+      "stem": "Which expansion slot is the oldest and supports only 8-bit data transfer?",
+      "options": {
+        "A": "PCI",
+        "B": "AGP",
+        "C": "ISA",
+        "D": "MCA"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "ISA (Industry Standard Architecture) is identified as an 8-bit expansion slot."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0171",
+      "type": "mcq",
+      "stem": "What is the characteristic of a 'DB-9' connector?",
+      "options": {
+        "A": "It is a parallel port",
+        "B": "It is a serial port male connector",
+        "C": "It is used for power supply",
+        "D": "It is an audio connector"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A serial port can be a DB-9 male connector used to transmit data one bit at a time."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0172",
+      "type": "mcq",
+      "stem": "What does a 'Capture card' do?",
+      "options": {
+        "A": "Provides 3D graphics",
+        "B": "Sends a video signal to a computer for recording",
+        "C": "Connects to a network",
+        "D": "Backs up hard drive data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A capture card sends video signals to a computer so they can be recorded to the hard drive."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0173",
+      "type": "mcq",
+      "stem": "Which component produces heat due to the flow of current?",
+      "options": {
+        "A": "Keyboard",
+        "B": "Electronic components",
+        "C": "Plastic case",
+        "D": "Signal cables"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Heat is caused by the flow of current within electronic components."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0174",
+      "type": "mcq",
+      "stem": "Which type of memory is used to store instructions and data 'nearby' the CPU for quick execution?",
+      "options": {
+        "A": "Hard Disk",
+        "B": "Cache",
+        "C": "Flash ROM",
+        "D": "Floppy Disk"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cache is a special memory where instructions and data are stored nearby for quick CPU processing."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0175",
+      "type": "mcq",
+      "stem": "What determines the type of CPU that can be installed on a motherboard?",
+      "options": {
+        "A": "The case size",
+        "B": "The CPU socket or slot",
+        "C": "The power supply wattage",
+        "D": "The number of USB ports"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The socket or slot on the motherboard is the interface that determines CPU compatibility."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0176",
+      "type": "mcq",
+      "stem": "Which device is used to deliver voice, music, and coded messages?",
+      "options": {
+        "A": "Monitor",
+        "B": "Printer",
+        "C": "Speakers",
+        "D": "Microphone"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Speakers are audio output devices used to deliver voice, music, and messages."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0177",
+      "type": "mcq",
+      "stem": "What is the function of the 'Memory Unit' (MU) or Register in the CPU architecture diagram?",
+      "options": {
+        "A": "To perform math",
+        "B": "To store data temporarily during processing",
+        "C": "To cool the CPU",
+        "D": "To connect to the monitor"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The MU or Register is part of the CPU used for temporary storage of data being processed."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0178",
+      "type": "mcq",
+      "stem": "Which bus type acts as the 'eye, nose and ear' of the processor?",
+      "options": {
+        "A": "Internal Bus",
+        "B": "Expansion Bus",
+        "C": "Address, Data, and Control buses",
+        "D": "Front-side Bus"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document metaphorically describes these three buses as the eye, nose, and ear of the processor."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0179",
+      "type": "mcq",
+      "stem": "What color wires must be lined up together when installing the older P8 and P9 connectors?",
+      "options": {
+        "A": "Red",
+        "B": "Yellow",
+        "C": "Black",
+        "D": "Blue"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Installation of P8 and P9 required that the connectors be lined up with the black wires together in the middle."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0180",
+      "type": "mcq",
+      "stem": "Which component is considered the basis of any PC system arrangement?",
+      "options": {
+        "A": "Monitor",
+        "B": "System unit",
+        "C": "Keyboard",
+        "D": "Mouse"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The system unit is described as the main portion of the microcomputer system and the basis of its arrangement."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0181",
+      "type": "mcq",
+      "stem": "What is the standard interface that connects peripheral devices and was designed to replace serial/parallel connections?",
+      "options": {
+        "A": "FireWire",
+        "B": "USB",
+        "C": "SCSI",
+        "D": "SATA"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "USB was originally designed to replace serial and parallel connections as a standard interface."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0182",
+      "type": "mcq",
+      "stem": "Which port is used to connect a printer and can transmit 8 bits at one time?",
+      "options": {
+        "A": "Serial port",
+        "B": "USB port",
+        "C": "Parallel port",
+        "D": "PS/2 port"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Parallel ports transmit 8 bits at once and are typically used to connect devices like printers."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0183",
+      "type": "mcq",
+      "stem": "Which factor should be considered when choosing a computer case?",
+      "options": {
+        "A": "The color of the mouse",
+        "B": "The size of the motherboard",
+        "C": "The speed of the Internet",
+        "D": "The type of monitor used"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The size of the motherboard is listed as a factor to consider when choosing a case."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0184",
+      "type": "mcq",
+      "stem": "What is the primary role of the Northbridge in a chipset?",
+      "options": {
+        "A": "Managing high-speed peripheral communications",
+        "B": "Powering the hard drive",
+        "C": "Managing the USB ports",
+        "D": "Controlling the cooling fan"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Northbridge subset is responsible for managing high-speed peripherals like video and RAM."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0185",
+      "type": "mcq",
+      "stem": "A Triple Core CPU is actually what type of processor with one core disabled?",
+      "options": {
+        "A": "Dual core",
+        "B": "Quad-core",
+        "C": "Octa-core",
+        "D": "Single core"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A triple core CPU is described as a quad-core processor with one core disabled."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0186",
+      "type": "mcq",
+      "stem": "Which expansion slot is 32-bit and can be used for various purposes including networking or sound?",
+      "options": {
+        "A": "PCI",
+        "B": "ISA",
+        "C": "AGP",
+        "D": "PCIe"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "PCI (Peripheral Component Interconnect) is a 32-bit or 64-bit expansion slot."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0187",
+      "type": "mcq",
+      "stem": "Which part of the chipset established how much memory can be added to a motherboard?",
+      "options": {
+        "A": "Southbridge",
+        "B": "Flash ROM",
+        "C": "The chipset",
+        "D": "CMOS memory"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "One function of the chipset is to establish the maximum amount of memory that can be added to the board."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0188",
+      "type": "mcq",
+      "stem": "What is the specific connector used for connecting a monitor to a computer?",
+      "options": {
+        "A": "Audio port",
+        "B": "Video port",
+        "C": "Parallel port",
+        "D": "Serial port"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A video port connects a monitor cable to a computer."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0189",
+      "type": "mcq",
+      "stem": "Which component is NOT part of the primary memory according to the architecture diagram?",
+      "options": {
+        "A": "RAM",
+        "B": "ROM",
+        "C": "HDD",
+        "D": "Registers"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "HDD (Hard Disk Drive) is classified as secondary memory, not primary memory."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0190",
+      "type": "mcq",
+      "stem": "Which of the following is considered a 'Major' component of a computer system?",
+      "options": {
+        "A": "Modem",
+        "B": "Scanner",
+        "C": "RAM",
+        "D": "Headphone"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "RAM is listed as a major component, while modems and scanners are optional."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0191",
+      "type": "mcq",
+      "stem": "What does the 24-pin slotted power connector consist of?",
+      "options": {
+        "A": "Two rows of 10 pins",
+        "B": "Two rows of 12 pins",
+        "C": "One row of 24 pins",
+        "D": "Four rows of 6 pins"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The 24-pin slotted connector is described as having two rows of 12 pins each."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0192",
+      "type": "mcq",
+      "stem": "Which bus carries the actual data between the CPU and memory?",
+      "options": {
+        "A": "Address bus",
+        "B": "Data bus",
+        "C": "Control bus",
+        "D": "LPC bus"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The data bus is the set of pathways that carries the actual data between the CPU and memory."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0193",
+      "type": "mcq",
+      "stem": "Which expansion slot architecture is 32-bit and mentioned alongside EISA?",
+      "options": {
+        "A": "ISA",
+        "B": "MCA",
+        "C": "PCI",
+        "D": "AGP"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "MCA (Microchannel Architecture) is listed as a 32-bit expansion slot architecture."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0194",
+      "type": "mcq",
+      "stem": "What is the term for a sequence of stored instructions that a CPU executes?",
+      "options": {
+        "A": "Data",
+        "B": "Program",
+        "C": "Output",
+        "D": "Register"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A program is defined as a sequence of stored instructions that the CPU executes."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0195",
+      "type": "mcq",
+      "stem": "Which device converts AC power from a wall outlet into DC power?",
+      "options": {
+        "A": "Motherboard",
+        "B": "Power supply",
+        "C": "UPS",
+        "D": "Battery"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The power supply's primary job is to convert AC power from the wall into DC power for components."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0196",
+      "type": "mcq",
+      "stem": "Which part of the motherboard chipset is also known as the I/O controller hub?",
+      "options": {
+        "A": "Northbridge",
+        "B": "Southbridge",
+        "C": "Super I/O",
+        "D": "Flash ROM"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "According to the chipset diagram, the Southbridge is the I/O controller hub."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0197",
+      "type": "mcq",
+      "stem": "How many pins are in a standard PS/2 port connector?",
+      "options": {
+        "A": "4 pins",
+        "B": "6 pins",
+        "C": "9 pins",
+        "D": "25 pins"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The PS/2 port is a 6-pin mini-DIN female connector."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0198",
+      "type": "mcq",
+      "stem": "Which port was originally designed to replace serial and parallel connections?",
+      "options": {
+        "A": "USB",
+        "B": "FireWire",
+        "C": "Ethernet",
+        "D": "SCSI"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "USB was specifically designed as a standard interface to replace older serial and parallel connections."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0199",
+      "type": "mcq",
+      "stem": "What does an RJ-11 connector look like compared to an RJ-45 connector?",
+      "options": {
+        "A": "It is larger",
+        "B": "It is smaller",
+        "C": "It has more pins",
+        "D": "It is round"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Telephone cables (RJ-11) are smaller than network cables (RJ-45)."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0200",
+      "type": "mcq",
+      "stem": "Which component uses the IEEE 1284 standard?",
+      "options": {
+        "A": "Serial ports",
+        "B": "USB ports",
+        "C": "Parallel ports",
+        "D": "Network ports"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document states that parallel ports use the IEEE 1284 standard."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0201",
+      "type": "mcq",
+      "stem": "According to Ohm's Law, if resistance increases while voltage remains constant, what happens to current?",
+      "options": {
+        "A": "Current increases",
+        "B": "Current decreases",
+        "C": "Current remains the same",
+        "D": "Current becomes zero"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ohm's Law states current equals voltage divided by resistance, so increasing resistance at constant voltage lowers current."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0202",
+      "type": "mcq",
+      "stem": "In a diode, the region where P-type and N-type materials meet is called the:",
+      "options": {
+        "A": "Anode",
+        "B": "Cathode",
+        "C": "Junction",
+        "D": "Depletion layer"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The meeting point of P-type and N-type materials in a diode is specifically called the junction."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0203",
+      "type": "mcq",
+      "stem": "What is the main purpose of a Zener diode?",
+      "options": {
+        "A": "Rectification",
+        "B": "Voltage regulation",
+        "C": "Amplification",
+        "D": "Switching"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Zener diodes are designed to operate in reverse breakdown to maintain a stable output voltage."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0204",
+      "type": "mcq",
+      "stem": "Which of the following is a correct statement about forward bias?",
+      "options": {
+        "A": "Positive terminal of battery connected to N-side",
+        "B": "Positive terminal of battery connected to P-side",
+        "C": "No voltage is applied",
+        "D": "Reverse voltage is applied"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Forward bias occurs when the battery's positive terminal connects to the P-side, reducing the depletion region and allowing current flow."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0205",
+      "type": "mcq",
+      "stem": "The reverse saturation current in a diode is mainly due to:",
+      "options": {
+        "A": "Majority carriers",
+        "B": "Minority carriers",
+        "C": "Free electrons only",
+        "D": "Holes only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Reverse saturation current arises from the small number of minority carriers crossing the junction."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0206",
+      "type": "mcq",
+      "stem": "What does LED stand for?",
+      "options": {
+        "A": "Light Emitting Diode",
+        "B": "Low Energy Device",
+        "C": "Linear Emission Diode",
+        "D": "Light Energy Diode"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "LED is the standard abbreviation for Light Emitting Diode, a diode that emits light when forward biased."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0207",
+      "type": "mcq",
+      "stem": "Photodiode is primarily used for:",
+      "options": {
+        "A": "Voltage regulation",
+        "B": "Light detection",
+        "C": "Power amplification",
+        "D": "Rectification"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Photodiodes convert light into electrical current, making them ideal for detecting light."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0208",
+      "type": "mcq",
+      "stem": "Which scale of integration contains 100 to 1,000 gates?",
+      "options": {
+        "A": "SSI",
+        "B": "MSI",
+        "C": "LSI",
+        "D": "VLSI"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Medium Scale Integration (MSI) typically contains between 100 and 1,000 gates."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0209",
+      "type": "mcq",
+      "stem": "The process of creating a silicon wafer from a single crystal is called:",
+      "options": {
+        "A": "Doping",
+        "B": "Etching",
+        "C": "Czochralski process",
+        "D": "Oxidation"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Czochralski process is the standard method for growing a single silicon crystal used to create wafers."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0210",
+      "type": "mcq",
+      "stem": "What is the main disadvantage of discrete circuits compared to ICs?",
+      "options": {
+        "A": "Lower reliability",
+        "B": "Higher power consumption",
+        "C": "Larger size and higher cost",
+        "D": "Cannot handle high power"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Discrete circuits use individual components connected together, making them bulkier and more expensive than integrated circuits."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0211",
+      "type": "mcq",
+      "stem": "In IC fabrication, the term \"mask\" is used during:",
+      "options": {
+        "A": "Doping",
+        "B": "Photolithography",
+        "C": "Metallization",
+        "D": "Etching"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Masks are used in photolithography to define circuit patterns onto the silicon wafer."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0212",
+      "type": "mcq",
+      "stem": "Which bus is unidirectional?",
+      "options": {
+        "A": "Data bus",
+        "B": "Address bus",
+        "C": "Control bus",
+        "D": "Both B and C"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The address bus carries address information only from the CPU to memory or devices, making it unidirectional."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0213",
+      "type": "mcq",
+      "stem": "The Southbridge chipset is mainly responsible for:",
+      "options": {
+        "A": "High-speed CPU to memory communication",
+        "B": "Communication with slower peripherals",
+        "C": "Graphics processing",
+        "D": "Cache management"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Southbridge handles slower I/O functions such as USB, audio, and storage interfaces."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0214",
+      "type": "mcq",
+      "stem": "What is the function of the control bus?",
+      "options": {
+        "A": "Carry data",
+        "B": "Carry memory addresses",
+        "C": "Carry control signals (read/write)",
+        "D": "Supply power"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The control bus transmits command and timing signals such as read/write instructions between components."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0215",
+      "type": "mcq",
+      "stem": "Cache memory is placed between:",
+      "options": {
+        "A": "CPU and RAM",
+        "B": "RAM and Hard disk",
+        "C": "CPU and Hard disk",
+        "D": "Motherboard and Power supply"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Cache memory sits between the CPU and RAM to speed up data access for the processor."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0216",
+      "type": "mcq",
+      "stem": "Which of the following is a volatile memory?",
+      "options": {
+        "A": "ROM",
+        "B": "RAM",
+        "C": "Flash memory",
+        "D": "Hard disk"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RAM loses its stored data when power is removed, making it volatile."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0217",
+      "type": "mcq",
+      "stem": "The Intel 4004 is historically important because it was the first:",
+      "options": {
+        "A": "Transistor",
+        "B": "Microprocessor",
+        "C": "Integrated circuit",
+        "D": "Diode array"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Intel 4004, released in 1971, is recognized as the first commercially available microprocessor."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0218",
+      "type": "mcq",
+      "stem": "Heat sink + fan combination is used primarily for cooling the:",
+      "options": {
+        "A": "RAM",
+        "B": "CPU",
+        "C": "Hard disk",
+        "D": "Power supply"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The CPU generates significant heat during operation, so heat sinks and fans are used to dissipate it."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0219",
+      "type": "mcq",
+      "stem": "A 4-pin connector on the motherboard is usually used for:",
+      "options": {
+        "A": "SATA power",
+        "B": "CPU fan power",
+        "C": "Molex",
+        "D": "24-pin ATX power"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A 4-pin connector on the motherboard is standard for connecting and controlling the CPU fan."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0220",
+      "type": "mcq",
+      "stem": "Semiconductor memory includes:",
+      "options": {
+        "A": "Hard disk",
+        "B": "RAM and ROM",
+        "C": "Magnetic tape",
+        "D": "DVD"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RAM and ROM are both built using semiconductor technology, classifying them as semiconductor memory."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0221",
+      "type": "mcq",
+      "stem": "Form factor of a motherboard refers to its:",
+      "options": {
+        "A": "Processing speed",
+        "B": "Physical size and layout",
+        "C": "Number of expansion slots",
+        "D": "Memory capacity"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Form factor describes the physical dimensions and layout standard of a motherboard."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0222",
+      "type": "mcq",
+      "stem": "Which component converts AC from the wall outlet to DC for the computer?",
+      "options": {
+        "A": "Motherboard",
+        "B": "Power Supply Unit (PSU)",
+        "C": "Transformer",
+        "D": "Inverter"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The PSU converts incoming AC power from the wall outlet into the DC power needed by computer components."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0223",
+      "type": "mcq",
+      "stem": "Dual-core or multi-core processors mainly improve:",
+      "options": {
+        "A": "Clock speed",
+        "B": "Parallel processing capability",
+        "C": "Cache size",
+        "D": "Address bus width"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Multiple cores allow a processor to execute several tasks simultaneously, improving parallel processing."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0224",
+      "type": "mcq",
+      "stem": "The depletion region in a diode becomes wider in:",
+      "options": {
+        "A": "Forward bias",
+        "B": "Reverse bias",
+        "C": "No bias",
+        "D": "Both A and C"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Reverse bias pulls charge carriers away from the junction, widening the depletion region."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0225",
+      "type": "mcq",
+      "stem": "Which of the following is an active component?",
+      "options": {
+        "A": "Resistor",
+        "B": "Capacitor",
+        "C": "Transistor",
+        "D": "Inductor"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A transistor can amplify or switch signals using an external power source, making it an active component."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0226",
+      "type": "mcq",
+      "stem": "In a closed circuit, current will flow only when:",
+      "options": {
+        "A": "There is a complete path",
+        "B": "Switch is open",
+        "C": "There is high resistance",
+        "D": "Voltage is zero"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Current requires an unbroken, complete path to flow from the source through the circuit and back."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0227",
+      "type": "mcq",
+      "stem": "What is the typical cut-in voltage for a silicon diode?",
+      "options": {
+        "A": "0.3 V",
+        "B": "0.7 V",
+        "C": "1.0 V",
+        "D": "0.1 V"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Silicon diodes typically require about 0.7 V of forward voltage before they begin conducting significantly."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0228",
+      "type": "mcq",
+      "stem": "VLSI stands for:",
+      "options": {
+        "A": "Very Large Scale Integration",
+        "B": "Very Low Scale Integration",
+        "C": "Variable Large Scale Integration",
+        "D": "Virtual Large Scale Integration"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "VLSI is the standard term for chips containing tens of thousands of gates or more on a single chip."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0229",
+      "type": "mcq",
+      "stem": "The main advantage of surface-mount technology in ICs is:",
+      "options": {
+        "A": "Higher power handling",
+        "B": "Smaller size and higher density",
+        "C": "Easier manual repair",
+        "D": "Lower cost for small production"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Surface-mount technology allows components to be mounted directly on the board surface, enabling smaller, denser designs."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0230",
+      "type": "mcq",
+      "stem": "Which memory is used to store BIOS/UEFI?",
+      "options": {
+        "A": "RAM",
+        "B": "Cache",
+        "C": "ROM/Flash",
+        "D": "Hard disk"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "BIOS/UEFI firmware is stored in non-volatile ROM or Flash memory so it persists without power."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0231",
+      "type": "mcq",
+      "stem": "A short circuit occurs when:",
+      "options": {
+        "A": "Current flows through the intended load",
+        "B": "Current takes a low-resistance unintended path",
+        "C": "Voltage becomes zero",
+        "D": "Resistance becomes infinite"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A short circuit happens when current bypasses the intended load through a path of much lower resistance."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0232",
+      "type": "mcq",
+      "stem": "In the water analogy for electricity, resistance corresponds to:",
+      "options": {
+        "A": "The pressure of the pump",
+        "B": "The flow rate of water",
+        "C": "The narrowness or roughness of the pipes",
+        "D": "The amount of water in the tank"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In the water analogy, resistance is represented by how narrow or rough the pipes are, which restricts flow."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0233",
+      "type": "mcq",
+      "stem": "A diode array is particularly useful in:",
+      "options": {
+        "A": "Audio amplifiers",
+        "B": "Applications requiring multiple diodes in one package like spectrophotometers",
+        "C": "High power motor control",
+        "D": "Simple power supplies"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Diode arrays package multiple diodes together, which is useful in precision applications such as spectrophotometers."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0234",
+      "type": "mcq",
+      "stem": "The term \"rectifier\" refers to a circuit that:",
+      "options": {
+        "A": "Increases voltage",
+        "B": "Converts AC to pulsating DC",
+        "C": "Stores electrical energy",
+        "D": "Regulates current"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A rectifier's function is to convert alternating current into pulsating direct current."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0235",
+      "type": "mcq",
+      "stem": "When a diode is forward biased:",
+      "options": {
+        "A": "It offers very high resistance",
+        "B": "It allows current to flow easily",
+        "C": "It blocks all current",
+        "D": "It behaves like an open switch"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Forward biasing reduces the depletion region, allowing current to flow easily through the diode."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0236",
+      "type": "mcq",
+      "stem": "The positive terminal of a diode is known as the:",
+      "options": {
+        "A": "Cathode",
+        "B": "Anode",
+        "C": "Collector",
+        "D": "Emitter"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The anode is the terminal of a diode connected to the P-type material, representing the positive terminal."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0237",
+      "type": "mcq",
+      "stem": "Diodes are made from which of the following materials?",
+      "options": {
+        "A": "Conductors only",
+        "B": "Silicon, Germanium, or Selenium",
+        "C": "Insulators",
+        "D": "Superconductors"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Diodes are commonly manufactured using semiconductor materials such as silicon, germanium, or selenium."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0238",
+      "type": "mcq",
+      "stem": "During the 'ON' state, a practical diode has:",
+      "options": {
+        "A": "Very high forward resistance",
+        "B": "Small forward resistance",
+        "C": "Infinite resistance",
+        "D": "Zero resistance"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A real diode in the ON state has a small but non-zero forward resistance, unlike an ideal diode."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0239",
+      "type": "mcq",
+      "stem": "A diode will conduct in reverse bias when:",
+      "options": {
+        "A": "Forward voltage is applied",
+        "B": "Reverse voltage exceeds breakdown voltage",
+        "C": "No voltage is applied",
+        "D": "Temperature is very low"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A diode conducts in reverse bias only after the applied reverse voltage exceeds its breakdown voltage."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0240",
+      "type": "mcq",
+      "stem": "Transistors and diodes are examples of:",
+      "options": {
+        "A": "Passive components",
+        "B": "Active components",
+        "C": "Resistive components",
+        "D": "Storage components"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Transistors and diodes can control or amplify electrical signals, classifying them as active components."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0241",
+      "type": "mcq",
+      "stem": "Resistors are used to:",
+      "options": {
+        "A": "Store charge",
+        "B": "Provide fixed resistance to current flow",
+        "C": "Allow current in one direction only",
+        "D": "Amplify signals"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Resistors are designed specifically to provide a fixed, known resistance to limit current flow."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0242",
+      "type": "mcq",
+      "stem": "Integrated circuits are also known as:",
+      "options": {
+        "A": "Printed circuits only",
+        "B": "Microchip, microcircuit, or silicon chip",
+        "C": "Discrete circuits",
+        "D": "Breadboard circuits"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Integrated circuits are commonly referred to by alternative names such as microchip, microcircuit, or silicon chip."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0243",
+      "type": "mcq",
+      "stem": "Joining separate components (resistor, capacitor, transistor) using wires or PCB is called:",
+      "options": {
+        "A": "Integrated circuit",
+        "B": "Discrete circuit",
+        "C": "Hybrid circuit",
+        "D": "Monolithic circuit"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A discrete circuit is formed by connecting individual separate components together using wires or a PCB."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0244",
+      "type": "mcq",
+      "stem": "A major advantage of integrated circuits is:",
+      "options": {
+        "A": "Ability to handle very high power",
+        "B": "Small size, low cost, and high reliability",
+        "C": "Easy replacement of individual components",
+        "D": "High flexibility for design changes"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "ICs combine many components onto a single chip, resulting in smaller size, lower cost, and higher reliability."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0245",
+      "type": "mcq",
+      "stem": "A major disadvantage of ICs is:",
+      "options": {
+        "A": "Large size",
+        "B": "If one component fails, the whole IC must be replaced",
+        "C": "High power consumption",
+        "D": "Low reliability"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Since IC components are fused together on one chip, a single failure requires replacing the entire IC."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0246",
+      "type": "mcq",
+      "stem": "Numbers of gates in LSI (Large Scale Integration) are typically between:",
+      "options": {
+        "A": "10 - 100",
+        "B": "100 - 1,000",
+        "C": "1,000 - 10,000",
+        "D": "100,000 and above"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Large Scale Integration typically refers to chips containing between 1,000 and 10,000 gates."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0247",
+      "type": "mcq",
+      "stem": "Numbers of gates in VLSI are generally:",
+      "options": {
+        "A": "1,000 - 10,000",
+        "B": "10,000 - 100,000 or more",
+        "C": "Fewer than 100",
+        "D": "100 - 1,000"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "VLSI chips contain a much higher gate count, generally ranging from 10,000 to 100,000 or more."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0248",
+      "type": "mcq",
+      "stem": "Digital ICs are commonly used in:",
+      "options": {
+        "A": "Operational amplifiers",
+        "B": "Microprocessors and digital signal processors",
+        "C": "Sensors only",
+        "D": "Power management"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Digital ICs process binary signals and are commonly used in devices like microprocessors and DSPs."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0249",
+      "type": "mcq",
+      "stem": "Mixed ICs (or Hybrid ICs) are those that:",
+      "options": {
+        "A": "Combine analog and digital circuits on one chip",
+        "B": "Use only digital logic",
+        "C": "Use only analog components",
+        "D": "Are made of discrete parts"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Mixed or hybrid ICs integrate both analog and digital circuitry within a single chip."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0250",
+      "type": "mcq",
+      "stem": "The system bus in a computer is responsible for:",
+      "options": {
+        "A": "Storing data permanently",
+        "B": "Providing pathway for data, address, and control signals",
+        "C": "Cooling the processor",
+        "D": "Converting power supply voltage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The system bus serves as the pathway connecting data, address, and control signals between components."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0251",
+      "type": "mcq",
+      "stem": "Which bus carries actual data between the CPU and memory?",
+      "options": {
+        "A": "Address bus",
+        "B": "Data bus",
+        "C": "Control bus",
+        "D": "Power bus"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The data bus is specifically responsible for transferring actual data between the CPU and memory."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0252",
+      "type": "mcq",
+      "stem": "The movement of data from processor to memory is called:",
+      "options": {
+        "A": "Read operation",
+        "B": "Write operation",
+        "C": "Fetch operation",
+        "D": "Decode operation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Sending data from the processor to memory for storage is defined as a write operation."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0253",
+      "type": "mcq",
+      "stem": "Computer cases are usually made of:",
+      "options": {
+        "A": "Plastic only",
+        "B": "Steel, aluminium, or plastic",
+        "C": "Glass only",
+        "D": "Wood"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Computer cases are typically constructed from steel, aluminium, or plastic for durability and cost efficiency."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0254",
+      "type": "mcq",
+      "stem": "A Berg connector is typically used to connect:",
+      "options": {
+        "A": "Hard drives",
+        "B": "Floppy drives",
+        "C": "Optical drives",
+        "D": "Motherboard power"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Berg connector is a small power connector historically used to power floppy disk drives."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0255",
+      "type": "mcq",
+      "stem": "Keyed connectors are designed to:",
+      "options": {
+        "A": "Allow insertion in any direction",
+        "B": "Prevent incorrect insertion",
+        "C": "Increase current capacity",
+        "D": "Reduce heat"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Keyed connectors have a shaped notch that ensures they can only be inserted correctly, preventing damage."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0256",
+      "type": "mcq",
+      "stem": "The CPU is often called the:",
+      "options": {
+        "A": "Heart of the computer",
+        "B": "Brain of the computer",
+        "C": "Memory of the computer",
+        "D": "Eye of the computer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The CPU processes instructions and controls operations, earning it the nickname 'brain of the computer'."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0257",
+      "type": "mcq",
+      "stem": "Cache memory has the disadvantage of:",
+      "options": {
+        "A": "Very large capacity",
+        "B": "Limited capacity and higher cost",
+        "C": "Being non-volatile",
+        "D": "Slow access time"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Cache memory is fast but expensive to produce, which limits its capacity compared to main memory."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0258",
+      "type": "mcq",
+      "stem": "Which of the following can cause RAM failure?",
+      "options": {
+        "A": "Proper installation and stable power",
+        "B": "Overheating, improper installation, or sudden power loss",
+        "C": "Low temperature",
+        "D": "Using it in a cool environment"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RAM can fail due to physical stress factors such as overheating, incorrect installation, or abrupt power loss."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0259",
+      "type": "mcq",
+      "stem": "Optical memory is an example of:",
+      "options": {
+        "A": "RAM",
+        "B": "DVD / CD",
+        "C": "Register",
+        "D": "Cache memory"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Optical memory refers to storage media that use lasers to read and write data, such as DVDs and CDs."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0260",
+      "type": "mcq",
+      "stem": "The primary purpose of the form factor is to define:",
+      "options": {
+        "A": "Processor speed",
+        "B": "Physical size and layout of the case and motherboard",
+        "C": "Memory type",
+        "D": "Power consumption"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Form factor standards define the physical dimensions and layout compatibility between the case and motherboard."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0261",
+      "type": "mcq",
+      "stem": "What is a major challenge in IC fabrication as transistors continue to shrink in size?",
+      "options": {
+        "A": "The fabrication process becomes simpler",
+        "B": "The fabrication process becomes more complicated",
+        "C": "Power consumption always decreases automatically",
+        "D": "Fewer masks are required for photolithography"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "As transistors are miniaturized further, achieving precise, defect-free fabrication becomes increasingly difficult and complex."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0262",
+      "type": "mcq",
+      "stem": "What is a key benefit of using a diode array over individually packaged diodes?",
+      "options": {
+        "A": "It eliminates the need for a power source",
+        "B": "It saves assembly time and improves reliability",
+        "C": "It increases the reverse breakdown voltage",
+        "D": "It removes the need for biasing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Packaging multiple diodes together in an array reduces the number of individual connections needed, saving assembly time and improving overall reliability."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0263",
+      "type": "mcq",
+      "stem": "Diodes are typically rated according to all of the following EXCEPT:",
+      "options": {
+        "A": "Type",
+        "B": "Voltage",
+        "C": "Current capacity",
+        "D": "Speed"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Diodes are commonly rated by type, voltage, and current capacity, but speed is not a standard diode rating category."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0264",
+      "type": "mcq",
+      "stem": "Compared to integrated circuits, discrete circuits are generally able to:",
+      "options": {
+        "A": "Work on much lower voltage",
+        "B": "Handle much more power",
+        "C": "Fit into a smaller space",
+        "D": "Be produced at a lower cost"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Because their components are separately packaged rather than fused together, discrete circuits can typically handle higher power levels than integrated circuits."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0265",
+      "type": "mcq",
+      "stem": "Which term describes a scale of integration between LSI and VLSI, sometimes referred to as Super Large Scale Integration (SLSI)?",
+      "options": {
+        "A": "A level with fewer elements than SSI",
+        "B": "A level with roughly 10,000 to 100,000 elements",
+        "C": "A level identical to GSI",
+        "D": "A level used only for discrete circuits"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Super Large Scale Integration (SLSI) refers to chips with element counts in the tens of thousands to hundreds of thousands range, between LSI and VLSI/ULSI."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0266",
+      "type": "mcq",
+      "stem": "Which of the following are examples of Analog Integrated Circuits?",
+      "options": {
+        "A": "Sensors, power management circuits, and operational amplifiers",
+        "B": "Memory chips and programmable ICs",
+        "C": "Logic ICs and clock ICs",
+        "D": "A/D and D/A converters only"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Analog ICs, which process continuous-range signals, include devices such as sensors, power management circuits, and operational amplifiers."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0267",
+      "type": "mcq",
+      "stem": "Which buses in a computer system are considered bi-directional?",
+      "options": {
+        "A": "Address bus and control bus",
+        "B": "Data bus and control bus",
+        "C": "Address bus only",
+        "D": "Data bus only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unlike the address bus, which is uni-directional, both the data bus and control bus carry signals in both directions between the CPU and other components."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0268",
+      "type": "mcq",
+      "stem": "The movement of data from memory to the processor is called a:",
+      "options": {
+        "A": "Write operation",
+        "B": "Read operation",
+        "C": "Fetch cycle only",
+        "D": "Decode operation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "When data moves from memory to the processor, this is defined as a read operation, the opposite of a write operation."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0269",
+      "type": "mcq",
+      "stem": "Can a computer tolerate slight fluctuations in power?",
+      "options": {
+        "A": "Yes, minor fluctuations are generally tolerable",
+        "B": "No, any fluctuation immediately damages the computer",
+        "C": "Only if a UPS is disconnected",
+        "D": "Only when the computer is powered off"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Computers can generally tolerate small power fluctuations, but significant deviations require protection devices such as a UPS."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0270",
+      "type": "mcq",
+      "stem": "The motherboard directly accommodates all of the following EXCEPT:",
+      "options": {
+        "A": "CPU",
+        "B": "RAM",
+        "C": "Floppy disk",
+        "D": "Expansion slots"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A floppy disk is a separate drive connected to the motherboard via cables, not a component mounted directly on the board like the CPU, RAM, or expansion slots."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0271",
+      "type": "mcq",
+      "stem": "Which of the following is an example of magnetic memory?",
+      "options": {
+        "A": "ROM",
+        "B": "Hard disk",
+        "C": "RAM",
+        "D": "DVD-ROM"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A hard disk stores data using magnetic recording, making it an example of magnetic memory, as opposed to semiconductor or optical memory."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0272",
+      "type": "mcq",
+      "stem": "Which of the following can be used to troubleshoot possible RAM failure?",
+      "options": {
+        "A": "Checking the monitor resolution",
+        "B": "Frequent computer hangs, frequent restarts, or a continuous long beep sound",
+        "C": "Checking the CPU clock speed",
+        "D": "Checking the size of the hard disk"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Symptoms like frequent hangs, unexpected restarts, and continuous long beep codes are common indicators used to diagnose RAM failure."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0273",
+      "type": "mcq",
+      "stem": "Why is cooling important in a computer system?",
+      "options": {
+        "A": "It increases the CPU's clock speed permanently",
+        "B": "Heat can damage components and cause the computer to run slower",
+        "C": "It reduces the total power draw of the system",
+        "D": "It prevents the motherboard from being overcharged"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Excess heat can degrade or damage components over time and can cause performance throttling, making cooling essential."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0274",
+      "type": "mcq",
+      "stem": "Which adapter card connects a computer to a network using network cables?",
+      "options": {
+        "A": "Sound adapter",
+        "B": "Network Interface Card (NIC)",
+        "C": "Video adapter",
+        "D": "TV tuner card"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A Network Interface Card (NIC) is the adapter card used to physically connect a computer to a network using cables, distinct from a wireless NIC."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0275",
+      "type": "mcq",
+      "stem": "Which of the following is NOT one of the main types of ICs classified by function (Programmable, Interface, Logic, Clock)?",
+      "options": {
+        "A": "Programmable ICs",
+        "B": "Interface ICs",
+        "C": "Logic ICs",
+        "D": "Clock ICs"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Programmable, Logic, and Clock ICs are recognized functional types of digital ICs, while Interface ICs is not listed among these standard categories."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0276",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a characteristic of a discrete circuit?",
+      "options": {
+        "A": "Can handle much more power",
+        "B": "Bigger in size",
+        "C": "Can work on low voltage",
+        "D": "Costly"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Discrete circuits are typically bigger, costlier, and can handle more power than ICs, but they are not known for operating on low voltage - that trait is more associated with integrated circuits."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0277",
+      "type": "mcq",
+      "stem": "Which of the following is NOT an advantage of an integrated circuit?",
+      "options": {
+        "A": "Low cost",
+        "B": "Lesser weight",
+        "C": "Can produce high power",
+        "D": "Easily programmable"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "ICs are valued for low cost, light weight, and programmability, but they are generally unable to handle or produce high power compared to discrete circuits."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0278",
+      "type": "mcq",
+      "stem": "What is the primary function of photolithography in IC fabrication?",
+      "options": {
+        "A": "To clean the wafer surface from contamination",
+        "B": "To transfer circuit design patterns onto the wafer using UV light and photoresist",
+        "C": "To deposit metal layers for interconnection",
+        "D": "To polish the wafer surface"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Photolithography uses UV light and a photoresist coating to transfer the circuit's design pattern onto the silicon wafer."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0279",
+      "type": "mcq",
+      "stem": "Voltage in an electric circuit is best described as:",
+      "options": {
+        "A": "Opposition to current flow",
+        "B": "Flow of electrons",
+        "C": "Electrical pressure causing electrons to move",
+        "D": "Energy lost as heat"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Voltage acts as the electrical pressure or driving force that pushes electrons through a circuit."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0280",
+      "type": "mcq",
+      "stem": "A circuit in which current flows continuously is called a:",
+      "options": {
+        "A": "Short circuit",
+        "B": "Open circuit",
+        "C": "Closed circuit",
+        "D": "Parallel circuit"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A closed circuit provides an unbroken path that allows current to flow continuously."
+    },
+    {
+      "id": "uni-tasued-csc122-bank-0281",
+      "type": "mcq",
+      "stem": "A circuit can be thought of as a small housing structure for an electronic device.",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "None of the above",
+        "D": "No Idea"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A circuit provides the structured pathway and housing within which an electronic device's components operate."
+    }
+  ]
+}

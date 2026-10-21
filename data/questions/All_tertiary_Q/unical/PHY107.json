@@ -1,0 +1,25 @@
+{
+ "code": "uni-unical-phy107-bank",
+ "title": "UNICAL PHY 107 | Course Question Bank",
+ "version": 1,
+ "questionCount": 2,
+ "totalMarks": 10,
+ "category": "university",
+ "body": "University Modules",
+ "questions": [
+  {
+   "id": "uni-unical-phy107-bank-0001",
+   "type": "theory",
+   "stem": "1/f = (n-1)(1/R_1 + 1/R_2)\n\nIn the process of image formation, the distance from an object to the lens is called the object distance P and the distance of the image from the lens is called the image distance q. The relationship between p, q and f is\n\n1/p + 1/q = 1/f\n\nIf a lens is used to form an image of a very distant object, then the object distance p is very large. For that case, the term 1/p in Equation 2 is negligible compared to the other terms 1/q and 1/f in that equation. Thus, for the case of a very distant object, Equation 2 becomes\n\n1/q = 1/f\n\nIf two lenses with focal lengths f_1 and f_2 are placed in contact, the combination of the two in contact acts as a single lens of effective focal length f related to the individual focal lengths of the two lenses in contact, f_1 and f_2 by\n\n1/f = 1/f_1 + 1/f_2",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-phy107-bank-0002",
+   "type": "theory",
+   "stem": "An experiment was conducted to investigate the properties of converging and diverging lenses, using three lenses, A, B, and C. Below was the experimental procedure taken.\n\nStep 1: One of the three lenses, A, was placed in the lens holder on the optical bench. A screen was mounted toward the same distance from the lens. The object placed was the lens holder in front of the window branch. A laboratory printed on a bench distant object. The distance from the lens to the screen was adjusted until a sharp, real image of the distant object formed on screen. The measured image distance was 19.5 cm. The same procedure was used for lens B and lens C. The measured image distances for lens B and lens C can be obtained from your group/Class C.\n\nStep 2: For each object placed, the lens holder was moved with the object painted on to face the screen. For each value of p, the image distance q from the lens to the screen was located until a sharp real image is formed on the screen. For various values of p, the image distance q were determined. Data Table 1 shows the results obtained. Four values for p = 10, 20, 30, and 40 cm, the respective values of q was determined. Data Table 1 shows the results obtained. Four values for p and image distance p and q.\n\nData Table 1\n| p (cm) | 10.0 | 20.0 | 30.0 | 40.0 |\n|-|-|-|-|-|\n| q (cm) | 13.3 | 8.20 | 7.30 | 6.80 |\n\nSteps 3: Lenses B were then attached to lens A using masking tape and held by the edges of the two lenses parallel. The focal length of the combination f_c was then measured both by the very distant object method and by the object two-lens method. For the time object method, just one value of the object distance p was used in determining the image distance q_f. The results for both methods are as shown in Data Table 2.\n\nData Table 2\n| q(p=\u221e) | p | q | f_m (p=\u221e) | f_m (p & q) |\n|-|-|-|-|-|\n| 9.50 cm | 20.0 cm | 7.00 cm | 9.50 cm | 9.40 cm |",
+   "marks": 5,
+   "explanation": ""
+  }
+ ]
+}

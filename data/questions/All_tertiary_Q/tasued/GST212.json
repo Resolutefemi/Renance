@@ -1,0 +1,4756 @@
+{
+  "code": "uni-tasued-gst212-bank",
+  "title": "TASUED GST212 | Course Question Bank",
+  "version": 1,
+  "questionCount": 326,
+  "totalMarks": 326,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-tasued-gst212-bank-0001",
+      "type": "mcq",
+      "stem": "Symbolic logic mainly uses:",
+      "options": {
+        "A": "Maps",
+        "B": "Symbols and letters",
+        "C": "Pictures",
+        "D": "Graphs only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Symbolic logic employs abstract symbols (such as ∧, ∨, ~, →) and letter variables to represent logical statements and relationships with precision."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0002",
+      "type": "mcq",
+      "stem": "Modus Ponens (P → Q, P, ∴ Q) is classified as which of the following?",
+      "options": {
+        "A": "Valid inference",
+        "B": "Invalid inference",
+        "C": "Contradiction",
+        "D": "Fallacy"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Modus Ponens is a foundational rule of valid deductive inference: given a conditional and its antecedent, the consequent necessarily follows."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0003",
+      "type": "mcq",
+      "stem": "Modus Tollens (P → Q, ¬Q, ∴ ¬P) exemplifies which of the following?",
+      "options": {
+        "A": "Deductive validity",
+        "B": "Invalidity",
+        "C": "Circular argument",
+        "D": "Hasty conclusion"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Modus Tollens is a deductively valid argument form: denying the consequent allows us to deny the antecedent with logical certainty."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0004",
+      "type": "mcq",
+      "stem": "Critical thinking involves:",
+      "options": {
+        "A": "Emotional judgment",
+        "B": "Careful analysis and reasoning",
+        "C": "Guesswork",
+        "D": "Assumptions only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Critical thinking is the disciplined process of actively and skillfully conceptualizing, analyzing, and evaluating information through careful reasoning."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0005",
+      "type": "mcq",
+      "stem": "Creative thinking helps in:",
+      "options": {
+        "A": "Memorization only",
+        "B": "Innovation and problem solving",
+        "C": "Avoiding ideas",
+        "D": "Repetition only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Creative thinking enables individuals to generate new ideas, approach problems from novel angles, and develop innovative solutions beyond conventional methods."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0006",
+      "type": "mcq",
+      "stem": "Philosophy is primarily concerned with:",
+      "options": {
+        "A": "Scientific experimentation",
+        "B": "Reality, truth, and knowledge",
+        "C": "Athletic performance",
+        "D": "Economic production"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Philosophy systematically investigates the nature of existence, valid reasoning, and the foundations of knowledge across all domains of human inquiry."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0007",
+      "type": "mcq",
+      "stem": "The word 'philosophy' is derived from Greek words meaning:",
+      "options": {
+        "A": "Truth and science",
+        "B": "Love of wisdom",
+        "C": "Study of nature",
+        "D": "Art of speaking"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The term combines the Greek 'philos' (love) and 'sophia' (wisdom), making philosophy literally the love or pursuit of wisdom."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0008",
+      "type": "mcq",
+      "stem": "Which of the following is best classified as a philosophical question?",
+      "options": {
+        "A": "What is the boiling point of water?",
+        "B": "What is the nature of justice?",
+        "C": "How fast does light travel?",
+        "D": "What is the population of Nigeria?"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Philosophical questions concern abstract, foundational concepts like justice, truth, and existence that cannot be settled by empirical observation alone."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0009",
+      "type": "mcq",
+      "stem": "Applying philosophical inquiry to education produces:",
+      "options": {
+        "A": "Educational psychology",
+        "B": "Educational philosophy",
+        "C": "Curriculum theory",
+        "D": "Classroom management"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Educational philosophy applies philosophical methods to the goals, values, and meaning of teaching and learning."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0010",
+      "type": "mcq",
+      "stem": "The abbreviation Ph.D stands for:",
+      "options": {
+        "A": "Philosophy Degree",
+        "B": "Doctor of Philosophy",
+        "C": "Post-higher Degree",
+        "D": "Doctor of Physical Science"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ph.D is short for the Latin 'Philosophiae Doctor,' the highest academic degree awarded across disciplines, reflecting philosophy's foundational role in scholarship."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0011",
+      "type": "mcq",
+      "stem": "Philosophy differs from natural science primarily because it:",
+      "options": {
+        "A": "Does not seek truth",
+        "B": "Relies on critical reflection rather than empirical experiment",
+        "C": "Is less intellectually rigorous",
+        "D": "Studies only ancient history"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "While science tests hypotheses through observation and experiment, philosophy uses reasoned argument, conceptual analysis, and critical reflection as its primary tools."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0012",
+      "type": "mcq",
+      "stem": "Which statement most accurately describes the relationship between philosophy and other academic disciplines?",
+      "options": {
+        "A": "Philosophy is irrelevant to other disciplines",
+        "B": "Philosophy underpins the foundational assumptions of virtually every discipline",
+        "C": "Only the humanities depend on philosophy",
+        "D": "Science has fully replaced philosophy"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Philosophy examines the fundamental assumptions, methods, and concepts that every discipline - from science to law to art - relies on but rarely questions."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0013",
+      "type": "mcq",
+      "stem": "Ethics is also referred to as:",
+      "options": {
+        "A": "Epistemology",
+        "B": "Moral Philosophy",
+        "C": "Metaphysics",
+        "D": "Formal Logic"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ethics, or moral philosophy, is the branch that systematically studies concepts of right and wrong, virtue, duty, and the principles governing human conduct."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0014",
+      "type": "mcq",
+      "stem": "Epistemology is also known as:",
+      "options": {
+        "A": "Axiology",
+        "B": "Gnoseology",
+        "C": "Cosmology",
+        "D": "Theology"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Gnoseology is a classical synonym for epistemology - the philosophical study of the nature, sources, scope, and limits of human knowledge."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0015",
+      "type": "mcq",
+      "stem": "Metaphysics is concerned with:",
+      "options": {
+        "A": "The rules of formal grammar",
+        "B": "The fundamental nature of reality and existence",
+        "C": "Chemical and physical reactions",
+        "D": "The organization of society"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Metaphysics explores foundational questions about being, existence, time, space, identity, and the relationship between mind and matter."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0016",
+      "type": "mcq",
+      "stem": "The prefix 'meta' in metaphysics originally signifies:",
+      "options": {
+        "A": "Before",
+        "B": "After",
+        "C": "Inside",
+        "D": "Beyond"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The term 'metaphysics' originated from the title given to Aristotle's works arranged after (meta) his writings on physics (ta physika)."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0017",
+      "type": "mcq",
+      "stem": "Axiology is the philosophical study of:",
+      "options": {
+        "A": "Language and meaning",
+        "B": "Value and worth",
+        "C": "Existence and being",
+        "D": "Knowledge and justified belief"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Axiology investigates the nature, types, and criteria of value, encompassing both ethics (moral values) and aesthetics (artistic and aesthetic values)."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0018",
+      "type": "mcq",
+      "stem": "Logic, as a branch of philosophy, is primarily the study of:",
+      "options": {
+        "A": "Human behavioral patterns",
+        "B": "Correct reasoning and valid inference",
+        "C": "The nature of beauty and sublimity",
+        "D": "Political and social organization"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Logic provides the systematic principles for evaluating arguments and distinguishing valid reasoning from fallacious reasoning."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0019",
+      "type": "mcq",
+      "stem": "The branch of philosophy that asks 'How do we know what we know?' is:",
+      "options": {
+        "A": "Aesthetics",
+        "B": "Metaphysics",
+        "C": "Epistemology",
+        "D": "Ethics"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Epistemology examines the sources, structure, scope, and validity of knowledge, addressing how justified belief and certainty are possible."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0020",
+      "type": "mcq",
+      "stem": "Aesthetics as a philosophical discipline is concerned with:",
+      "options": {
+        "A": "Mathematical proofs and formal systems",
+        "B": "The nature of beauty, art, and aesthetic experience",
+        "C": "Principles of political governance",
+        "D": "The doctrines of organized religion"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Aesthetics investigates questions about beauty, artistic judgment, taste, and the nature and standards of aesthetic experience."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0021",
+      "type": "mcq",
+      "stem": "Political philosophy primarily examines:",
+      "options": {
+        "A": "Party election strategies",
+        "B": "The nature of justice, authority, and the ideal state",
+        "C": "Economic market behavior",
+        "D": "Individual psychological traits"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Political philosophy investigates foundational concepts such as justice, rights, liberty, equality, and the legitimacy of political authority."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0022",
+      "type": "mcq",
+      "stem": "The philosophical school founded by Aristotle was called:",
+      "options": {
+        "A": "The Academy",
+        "B": "The Lyceum",
+        "C": "The Stoa",
+        "D": "The Garden"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Aristotle founded the Lyceum in Athens around 335 BCE, where his followers became known as Peripatetics due to their habit of discussing ideas while walking."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0023",
+      "type": "mcq",
+      "stem": "The dialectical method of philosophical inquiry is most closely associated with:",
+      "options": {
+        "A": "Plato",
+        "B": "Socrates",
+        "C": "Aristotle",
+        "D": "Descartes"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Socratic dialectical method uses systematic questioning and structured dialogue to expose contradictions in beliefs and lead toward deeper truth."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0024",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a recognized philosophical method?",
+      "options": {
+        "A": "Analytical method",
+        "B": "Dialectical method",
+        "C": "Speculative method",
+        "D": "Dogmatization"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Dogmatization - the uncritical acceptance of fixed beliefs as beyond question - contradicts the foundational spirit of philosophical inquiry, which demands open and critical examination."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0025",
+      "type": "mcq",
+      "stem": "The analytical method in philosophy primarily aims to:",
+      "options": {
+        "A": "Accept tradition without critical examination",
+        "B": "Clarify concepts by breaking complex ideas into simpler components",
+        "C": "Appeal to religious or cultural authority",
+        "D": "Reject all prior philosophical knowledge"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Analytical philosophy resolves philosophical problems through precise logical analysis, conceptual clarification, and careful use of language."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0026",
+      "type": "mcq",
+      "stem": "The speculative method in philosophy is characterized by:",
+      "options": {
+        "A": "Conducting controlled laboratory experiments",
+        "B": "Forming broad theoretical systems about reality that extend beyond immediate experience",
+        "C": "Analyzing only the grammar of language",
+        "D": "Accepting the majority consensus without argument"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Speculative philosophy constructs comprehensive theoretical frameworks about the nature of existence, often venturing into areas inaccessible to empirical science."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0027",
+      "type": "mcq",
+      "stem": "Phenomenology as a philosophical method focuses on:",
+      "options": {
+        "A": "Formal mathematical logic",
+        "B": "The structures of first-person conscious experience",
+        "C": "Market-driven political economy",
+        "D": "Prescriptive rules of grammar"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Phenomenology, developed by Edmund Husserl, investigates phenomena precisely as they are experienced and appear to consciousness, bracketing assumptions about the external world."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0028",
+      "type": "mcq",
+      "stem": "A valid argument is one in which:",
+      "options": {
+        "A": "The premises are lengthy and detailed",
+        "B": "The conclusion follows necessarily from the premises",
+        "C": "The conclusion is emotionally compelling",
+        "D": "There are at least three premises"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Validity is a structural property: if the premises are true, the logical form of a valid argument guarantees that the conclusion must also be true."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0029",
+      "type": "mcq",
+      "stem": "The two main classifications of argument in logic are:",
+      "options": {
+        "A": "True and false",
+        "B": "Deductive and inductive",
+        "C": "Short and long",
+        "D": "Formal and informal"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Logic classifies arguments as deductive (where the conclusion follows with certainty from the premises) or inductive (where the conclusion follows with probability)."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0030",
+      "type": "mcq",
+      "stem": "In a standard syllogism, the major premise:",
+      "options": {
+        "A": "States a specific case",
+        "B": "Establishes a general or universal principle",
+        "C": "Is the final concluding statement",
+        "D": "Is always false"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In a syllogism, the major premise provides the broad, general rule that will be applied to a specific case introduced by the minor premise."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0031",
+      "type": "mcq",
+      "stem": "The minor premise in a syllogism:",
+      "options": {
+        "A": "States a general law",
+        "B": "Applies the general principle to a specific instance",
+        "C": "Presents the final conclusion",
+        "D": "Contradicts the major premise"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The minor premise links a specific case or subject to the general category established in the major premise, enabling the conclusion to follow."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0032",
+      "type": "mcq",
+      "stem": "The conclusion of an argument is best described as:",
+      "options": {
+        "A": "The first statement made",
+        "B": "The claim supported and derived from the premises",
+        "C": "An assumption made without evidence",
+        "D": "An emotional appeal to the audience"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The conclusion is the final statement of an argument, the specific claim that the premises are intended to establish or justify."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0033",
+      "type": "mcq",
+      "stem": "Premises in an argument function as:",
+      "options": {
+        "A": "Emotional appeals",
+        "B": "Evidence and logical grounds for the conclusion",
+        "C": "Unsupported guesses",
+        "D": "Personal opinions"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Premises are the factual or logical statements that provide the rational basis upon which the conclusion is built."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0034",
+      "type": "mcq",
+      "stem": "A standard syllogism is composed of:",
+      "options": {
+        "A": "One premise and one conclusion",
+        "B": "A major premise, a minor premise, and a conclusion",
+        "C": "Three premises and no conclusion",
+        "D": "Two conclusions and one premise"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The classical Aristotelian syllogism has exactly three parts: a major premise stating a general rule, a minor premise citing a specific instance, and a conclusion that follows from both."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0035",
+      "type": "mcq",
+      "stem": "Which of the following is a correct example of a syllogism?",
+      "options": {
+        "A": "All men are mortal; therefore Socrates is mortal",
+        "B": "All men are mortal; Socrates is a man; therefore Socrates is mortal",
+        "C": "Socrates is mortal; therefore all men are mortal",
+        "D": "Socrates is a man; therefore all men are mortal"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "This is the classic example of a valid syllogism: a general major premise, a specific minor premise, and a conclusion that necessarily follows."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0036",
+      "type": "mcq",
+      "stem": "A sound argument is one that is:",
+      "options": {
+        "A": "Valid in form only",
+        "B": "Both valid in form and has all true premises",
+        "C": "Persuasive and emotionally appealing",
+        "D": "Long and detailed"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Soundness requires two conditions: the argument must be structurally valid, and every premise must actually be true."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0037",
+      "type": "mcq",
+      "stem": "Inductive reasoning moves from:",
+      "options": {
+        "A": "General principles to specific conclusions",
+        "B": "Specific observations to general conclusions",
+        "C": "Known facts to unknown laws",
+        "D": "False premises to true conclusions"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Inductive reasoning uses particular observations or cases to infer a broader general pattern, rule, or hypothesis."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0038",
+      "type": "mcq",
+      "stem": "Deductive reasoning moves from:",
+      "options": {
+        "A": "Specific cases to general laws",
+        "B": "General principles to specific conclusions",
+        "C": "Unknown premises to known facts",
+        "D": "Random observations to fixed rules"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Deduction applies an established general law or universal truth to derive a certain conclusion about a specific case."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0039",
+      "type": "mcq",
+      "stem": "The conclusion of an inductive argument is best described as:",
+      "options": {
+        "A": "Logically certain",
+        "B": "Probable but not guaranteed",
+        "C": "Always false",
+        "D": "Structurally fixed"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Induction provides evidence that makes a conclusion more likely, but even a strong inductive argument cannot guarantee its conclusion with absolute certainty."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0040",
+      "type": "mcq",
+      "stem": "Given true premises and a valid structure, the conclusion of a deductive argument is:",
+      "options": {
+        "A": "Only probable",
+        "B": "Necessarily certain",
+        "C": "Always open to doubt",
+        "D": "Dependent on emotion"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In a valid deductive argument with true premises (i.e., a sound argument), the conclusion must be true - it cannot be otherwise."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0041",
+      "type": "mcq",
+      "stem": "Inductive reasoning is primarily based on:",
+      "options": {
+        "A": "Predetermined logical rules",
+        "B": "Empirical observations and experience",
+        "C": "Speculative guesswork",
+        "D": "Emotional intuition"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Induction relies on sensory data and accumulated experience gathered from specific instances to form general conclusions."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0042",
+      "type": "mcq",
+      "stem": "Deductive reasoning primarily relies on:",
+      "options": {
+        "A": "Personal experience",
+        "B": "Established general principles and rules",
+        "C": "Emotional conviction",
+        "D": "Majority opinion"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Deductive reasoning starts with accepted universal truths or axioms and derives logically necessary consequences from them."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0043",
+      "type": "mcq",
+      "stem": "The assumption that nature is uniform and past patterns will continue is fundamental to:",
+      "options": {
+        "A": "Deductive reasoning",
+        "B": "Inductive reasoning",
+        "C": "Formal logic",
+        "D": "Axiomatic proof"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Inductive reasoning depends on the principle of the uniformity of nature - the assumption that regularities observed in the past will continue into the future."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0044",
+      "type": "mcq",
+      "stem": "Which of the following is an example of inductive reasoning?",
+      "options": {
+        "A": "All mammals breathe air; whales are mammals; therefore whales breathe air",
+        "B": "The sun has risen every day for billions of years; therefore it will rise tomorrow",
+        "C": "If P then Q; P is true; therefore Q is true",
+        "D": "All bachelors are unmarried; John is a bachelor; therefore John is unmarried"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "This is an inductive inference: past repeated observations are used to project a probable (but not logically certain) future outcome."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0045",
+      "type": "mcq",
+      "stem": "Symbolic logic replaces natural language with:",
+      "options": {
+        "A": "Diagrams and pictures",
+        "B": "Abstract symbols and variables",
+        "C": "Spoken sounds",
+        "D": "Mathematical numbers only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Symbolic logic uses a formal language of abstract variables and operators to analyze logical relationships with greater precision and generality."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0046",
+      "type": "mcq",
+      "stem": "Logical connectives are used to:",
+      "options": {
+        "A": "Separate independent ideas",
+        "B": "Combine simple statements into compound statements",
+        "C": "Introduce emotional appeals",
+        "D": "Define individual terms"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Connectives such as ∧, ∨, ~, →, and ↔ are operators that link atomic propositions to form more complex compound statements."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0047",
+      "type": "mcq",
+      "stem": "The symbol '∧' represents:",
+      "options": {
+        "A": "Or",
+        "B": "And",
+        "C": "Not",
+        "D": "If…then"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The wedge symbol (∧) is the logical operator for conjunction, which is true only when both connected statements are true."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0048",
+      "type": "mcq",
+      "stem": "The symbol '∨' represents:",
+      "options": {
+        "A": "And",
+        "B": "Or",
+        "C": "Not",
+        "D": "If and only if"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The vel symbol (∨) is the logical operator for disjunction, which is true when at least one of the connected statements is true."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0049",
+      "type": "mcq",
+      "stem": "The symbol '~P' means:",
+      "options": {
+        "A": "P and Q",
+        "B": "Not P",
+        "C": "P or Q",
+        "D": "If P then Q"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The tilde (~) is the symbol for logical negation, which reverses the truth value of a proposition."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0050",
+      "type": "mcq",
+      "stem": "The symbol '→' represents:",
+      "options": {
+        "A": "Conjunction",
+        "B": "Disjunction",
+        "C": "Conditional (if…then)",
+        "D": "Negation"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The arrow symbol represents a conditional statement, asserting that if the antecedent (P) is true, then the consequent (Q) must also be true."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0051",
+      "type": "mcq",
+      "stem": "The symbol '↔' represents:",
+      "options": {
+        "A": "If and only if",
+        "B": "Or",
+        "C": "And",
+        "D": "Not"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The double arrow represents a biconditional statement, asserting that two propositions are logically equivalent - both true or both false."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0052",
+      "type": "mcq",
+      "stem": "A simple (atomic) statement is one that:",
+      "options": {
+        "A": "Contains two or more connected ideas",
+        "B": "Expresses exactly one idea with no logical connectives",
+        "C": "Is always false",
+        "D": "Contains a conditional operator"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A simple or atomic statement expresses a single, indivisible proposition and does not contain any logical connectives."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0053",
+      "type": "mcq",
+      "stem": "The Law of Double Negation states that:",
+      "options": {
+        "A": "Two negations produce a contradiction",
+        "B": "Negating a negation returns the original statement",
+        "C": "Negation doubles the meaning",
+        "D": "Two negations produce a new statement"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The law of double negation holds that ~~P is logically equivalent to P - negating a negation cancels out and restores the affirmative."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0054",
+      "type": "mcq",
+      "stem": "The Idempotent Law states that:",
+      "options": {
+        "A": "P ∧ Q = Q ∧ P",
+        "B": "P ∧ P = P",
+        "C": "P ∨ Q = P ∧ Q",
+        "D": "~(P ∧ Q) = ~P ∨ ~Q"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The idempotent law holds that conjoining or disjoining a statement with itself yields the original statement - combining identical elements produces no new information."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0055",
+      "type": "mcq",
+      "stem": "The Commutative Law in logic states that:",
+      "options": {
+        "A": "The order of operands changes the truth value",
+        "B": "The order of operands in conjunction and disjunction does not affect the truth value",
+        "C": "Grouped statements change meaning when regrouped",
+        "D": "Negation distributes across disjunction"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The commutative law holds that P ∧ Q ≡ Q ∧ P and P ∨ Q ≡ Q ∨ P - swapping the order of statements does not change the result."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0056",
+      "type": "mcq",
+      "stem": "The Associative Law in logic permits:",
+      "options": {
+        "A": "Changing the logical connective used",
+        "B": "Regrouping statements without changing the truth value",
+        "C": "Replacing a statement with its negation",
+        "D": "Distributing negation across a conjunction"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The associative law holds that (P ∧ Q) ∧ R ≡ P ∧ (Q ∧ R) - changing the grouping of operands does not alter the overall truth value."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0057",
+      "type": "mcq",
+      "stem": "De Morgan's Law states that the negation of a conjunction equals:",
+      "options": {
+        "A": "The conjunction of the negations",
+        "B": "The disjunction of the negations",
+        "C": "The negation of the disjunction",
+        "D": "The original statement unchanged"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "De Morgan's Law: ~(P ∧ Q) ≡ (~P ∨ ~Q). Negating a conjunction produces a disjunction of the individual negations."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0058",
+      "type": "mcq",
+      "stem": "A proposition is best defined as:",
+      "options": {
+        "A": "A request or command",
+        "B": "A declarative statement that is either true or false",
+        "C": "An exclamation of surprise",
+        "D": "A series of questions"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A proposition is a declarative sentence that has a definite truth value - it is either true or false, never both and never neither."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0059",
+      "type": "mcq",
+      "stem": "In classical logic, the possible truth values of any proposition are:",
+      "options": {
+        "A": "Yes or No",
+        "B": "True or False",
+        "C": "Right or Wrong",
+        "D": "Valid or Invalid"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Classical or bivalent logic holds that every proposition has exactly one of two truth values: truth (T) or falsity (F)."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0060",
+      "type": "mcq",
+      "stem": "Which of the following sentences qualifies as a proposition?",
+      "options": {
+        "A": "Close the window immediately.",
+        "B": "Is it raining outside?",
+        "C": "The Earth orbits the Sun.",
+        "D": "Please sit down."
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Only declarative sentences that assert something - and can be evaluated as true or false - qualify as propositions. Commands and questions do not."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0061",
+      "type": "mcq",
+      "stem": "Why is a command such as 'Close the door' NOT a proposition?",
+      "options": {
+        "A": "It is too short",
+        "B": "It cannot be assigned a truth value",
+        "C": "It is grammatically incorrect",
+        "D": "It contains no subject"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Commands are imperative sentences that direct action rather than assert a fact, so they cannot meaningfully be called true or false."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0062",
+      "type": "mcq",
+      "stem": "The statement '2 + 2 = 4' is best classified as:",
+      "options": {
+        "A": "A false proposition",
+        "B": "A true proposition",
+        "C": "A command",
+        "D": "An exclamation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Mathematical statements are declarative and have definite truth values. '2 + 2 = 4' is a true proposition in standard arithmetic."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0063",
+      "type": "mcq",
+      "stem": "Propositions serve as the foundational building blocks of:",
+      "options": {
+        "A": "Emotional rhetoric",
+        "B": "Logical arguments",
+        "C": "Athletic competition",
+        "D": "Artistic expression"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Propositions are the basic units of logical analysis; arguments are constructed by linking propositions through valid reasoning."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0064",
+      "type": "mcq",
+      "stem": "A compound proposition is formed by:",
+      "options": {
+        "A": "Removing all logical connectives",
+        "B": "Joining two or more simple propositions using logical connectives",
+        "C": "Negating a single proposition",
+        "D": "Repeating the same proposition twice"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Compound propositions are constructed by combining atomic propositions with operators such as ∧, ∨, ~, →, or ↔."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0065",
+      "type": "mcq",
+      "stem": "A truth table systematically displays:",
+      "options": {
+        "A": "The grammatical structure of sentences",
+        "B": "All possible truth value combinations for a logical expression",
+        "C": "The emotional weight of statements",
+        "D": "The historical origins of logical symbols"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A truth table exhaustively lists every possible combination of truth values for the propositional variables in an expression and shows the resulting truth value."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0066",
+      "type": "mcq",
+      "stem": "A truth table for two propositional variables contains:",
+      "options": {
+        "A": "2 rows",
+        "B": "4 rows",
+        "C": "6 rows",
+        "D": "8 rows"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The number of rows is calculated by 2^n, where n is the number of variables. With two variables, 2² = 4 rows are required."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0067",
+      "type": "mcq",
+      "stem": "A truth table for three propositional variables requires:",
+      "options": {
+        "A": "4 rows",
+        "B": "6 rows",
+        "C": "8 rows",
+        "D": "16 rows"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Applying the formula 2^n, three variables yield 2³ = 8 rows to represent all possible truth value combinations."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0068",
+      "type": "mcq",
+      "stem": "The conjunction 'P ∧ Q' is true only when:",
+      "options": {
+        "A": "At least one of P or Q is true",
+        "B": "Both P and Q are true",
+        "C": "Both P and Q are false",
+        "D": "P is true and Q is false"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Conjunction requires all component statements to be true; if even one is false, the entire conjunction is false."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0069",
+      "type": "mcq",
+      "stem": "The disjunction 'P ∨ Q' is false only when:",
+      "options": {
+        "A": "Both P and Q are true",
+        "B": "At least one of P or Q is true",
+        "C": "Both P and Q are false",
+        "D": "P is true and Q is false"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A disjunction is false only when every disjunct is false; if at least one is true, the whole disjunction is true."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0070",
+      "type": "mcq",
+      "stem": "The conditional 'P → Q' is false only when:",
+      "options": {
+        "A": "P is false and Q is true",
+        "B": "P is true and Q is false",
+        "C": "Both P and Q are true",
+        "D": "Both P and Q are false"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A conditional is violated - and thus false - only when the antecedent (P) is true but the consequent (Q) is false. In all other cases it holds true."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0071",
+      "type": "mcq",
+      "stem": "The biconditional 'P ↔ Q' is true when:",
+      "options": {
+        "A": "P and Q have opposite truth values",
+        "B": "P and Q have the same truth value",
+        "C": "P is true only",
+        "D": "Q is false only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A biconditional asserts logical equivalence: it is true when both propositions are true together or both are false together."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0072",
+      "type": "mcq",
+      "stem": "A tautology is a compound statement that is:",
+      "options": {
+        "A": "Always false regardless of truth values",
+        "B": "True for some combinations only",
+        "C": "True for all possible combinations of truth values",
+        "D": "Undefined in classical logic"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A tautology is a logically necessary truth - its truth table shows the value T in every single row, regardless of how variables are assigned."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0073",
+      "type": "mcq",
+      "stem": "A contradiction in logic is a statement that is:",
+      "options": {
+        "A": "True in all cases",
+        "B": "True in some cases",
+        "C": "False in all possible cases",
+        "D": "Neither true nor false"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A contradiction (or self-contradiction) produces the value F in every row of its truth table, making it logically impossible for it to be true."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0074",
+      "type": "mcq",
+      "stem": "A logical fallacy is best defined as:",
+      "options": {
+        "A": "A true but unpopular argument",
+        "B": "A flaw in reasoning that makes an argument invalid or misleading",
+        "C": "A long and complex argument",
+        "D": "An argument based on scientific evidence"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A fallacy is a structural or evidential error in reasoning that undermines the logical validity of an argument, often while appearing superficially persuasive."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0075",
+      "type": "mcq",
+      "stem": "The fallacy of Hasty Generalization occurs when:",
+      "options": {
+        "A": "A conclusion is drawn cautiously from extensive evidence",
+        "B": "A broad conclusion is drawn from too small or unrepresentative a sample",
+        "C": "An argument appeals to popular opinion",
+        "D": "An expert's testimony is cited without credentials"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hasty generalization commits the error of moving to a universal or sweeping conclusion from insufficient or biased evidence."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0076",
+      "type": "mcq",
+      "stem": "The Appeal to Emotion fallacy involves:",
+      "options": {
+        "A": "Using verified empirical data to support a claim",
+        "B": "Substituting emotional manipulation for logical evidence",
+        "C": "Citing authority figures with relevant expertise",
+        "D": "Comparing two structurally similar cases"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Appeal to emotion is a fallacy because feelings - however genuine - are not a substitute for rational evidence or sound argumentation."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0077",
+      "type": "mcq",
+      "stem": "The Bandwagon Fallacy (Ad Populum) assumes that:",
+      "options": {
+        "A": "A claim is true because an expert endorses it",
+        "B": "A claim is true because a large number of people believe or do it",
+        "C": "A past event determines all future events",
+        "D": "Two correlated events are causally related"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The bandwagon fallacy erroneously treats popularity or majority practice as a substitute for logical justification."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0078",
+      "type": "mcq",
+      "stem": "The Appeal to Authority (Ad Verecundiam) fallacy occurs when:",
+      "options": {
+        "A": "A person with genuine, relevant expertise is cited appropriately",
+        "B": "A claim is accepted solely based on someone's status rather than evidence",
+        "C": "An argument appeals to the emotions of the audience",
+        "D": "The conclusion is drawn from too few observations"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "While citing genuine experts is valid, the fallacy occurs when authority or celebrity status is used as a replacement for actual logical evidence."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0079",
+      "type": "mcq",
+      "stem": "The Ad Hominem fallacy consists of:",
+      "options": {
+        "A": "Refuting an argument by providing counter-evidence",
+        "B": "Attacking the character of a person rather than addressing their argument",
+        "C": "Appealing to popular consensus",
+        "D": "Drawing a conclusion from insufficient data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ad hominem redirects attention from the logical content of an argument to irrelevant personal characteristics of the person making it."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0080",
+      "type": "mcq",
+      "stem": "The Law of Identity states that ______",
+      "options": {
+        "A": "A thing is what it is",
+        "B": "Nothing exists",
+        "C": "Every statement is false",
+        "D": "Truth changes",
+        "E": "Knowledge is impossible"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Law of Identity states that every entity is identical to itself: A = A."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0081",
+      "type": "mcq",
+      "stem": "The Straw Man fallacy involves:",
+      "options": {
+        "A": "Accurately representing an opponent's argument and refuting it",
+        "B": "Misrepresenting an opponent's argument to make it easier to attack",
+        "C": "Appealing to the emotions of the audience",
+        "D": "Accepting an argument because of the speaker's authority"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The straw man fallacy distorts or exaggerates an opponent's position, then defeats the distorted version rather than the actual argument."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0082",
+      "type": "mcq",
+      "stem": "The False Dilemma (False Dichotomy) fallacy presents:",
+      "options": {
+        "A": "All genuinely available options fairly",
+        "B": "Only two options as if no others exist, when in fact more do",
+        "C": "An appeal based on tradition and custom",
+        "D": "A conclusion based on a small sample"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "False dilemma artificially limits a situation to two extreme options, ignoring the middle ground or other legitimate alternatives."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0083",
+      "type": "mcq",
+      "stem": "The Post Hoc fallacy incorrectly assumes that:",
+      "options": {
+        "A": "Correlation implies causation simply because one event followed another",
+        "B": "An authority figure's opinion is always correct",
+        "C": "A popular belief is a true belief",
+        "D": "A complex question has only two answers"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Post hoc ergo propter hoc (after this, therefore because of this) falsely concludes that because B followed A, A must have caused B."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0084",
+      "type": "mcq",
+      "stem": "Detecting and avoiding fallacies primarily requires:",
+      "options": {
+        "A": "Emotional sensitivity",
+        "B": "Rote memorization of facts",
+        "C": "Critical thinking and careful logical analysis",
+        "D": "Acceptance of authority"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Identifying fallacies demands careful evaluation of argument structure, evidence quality, and the logical relationship between premises and conclusions."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0085",
+      "type": "mcq",
+      "stem": "Fallacies are considered intellectually problematic because they:",
+      "options": {
+        "A": "Are always obviously false",
+        "B": "Appear persuasive while actually being logically flawed",
+        "C": "Are easy to identify without training",
+        "D": "Only occur in informal conversation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The danger of fallacies lies in their superficial persuasiveness: they can mislead an uncritical audience into accepting invalid conclusions as sound reasoning."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0086",
+      "type": "mcq",
+      "stem": "The word Philosophy is derived from _____ Greek words.",
+      "options": {
+        "A": "One",
+        "B": "Two",
+        "C": "Three",
+        "D": "Four"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The word 'Philosophy' is derived from two Greek words: 'Philos' (love) and 'Sophia' (wisdom)."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0087",
+      "type": "mcq",
+      "stem": "Philosophy literally means ______",
+      "options": {
+        "A": "Knowledge of life",
+        "B": "Love of wisdom",
+        "C": "Study of man",
+        "D": "Love of knowledge",
+        "E": "Search for power"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Philosophy comes from the Greek 'philos' (love) and 'sophia' (wisdom), literally meaning love of wisdom."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0088",
+      "type": "mcq",
+      "stem": "One major characteristic of philosophy is ______",
+      "options": {
+        "A": "Superstition",
+        "B": "Dogmatism",
+        "C": "Critical thinking",
+        "D": "Mythology",
+        "E": "Guesswork"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Philosophy is distinguished by its use of critical thinking - systematically analyzing and evaluating ideas and arguments."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0089",
+      "type": "mcq",
+      "stem": "The philosopher who first used the term 'Philosophy' was ______",
+      "options": {
+        "A": "Pythagoras",
+        "B": "Aristotle",
+        "C": "Plato",
+        "D": "Socrates",
+        "E": "Thales"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Pythagoras is credited as the first to use the term 'philosopher', describing himself as a lover of wisdom rather than a wise man."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0090",
+      "type": "mcq",
+      "stem": "The branch of philosophy concerned with the study of knowledge is ______",
+      "options": {
+        "A": "Ethics",
+        "B": "Epistemology",
+        "C": "Logic",
+        "D": "Metaphysics",
+        "E": "Aesthetics"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Epistemology examines the nature, sources, scope, and limits of human knowledge."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0091",
+      "type": "mcq",
+      "stem": "The branch of philosophy that studies morality is ______",
+      "options": {
+        "A": "Logic",
+        "B": "Ethics",
+        "C": "Metaphysics",
+        "D": "Epistemology",
+        "E": "Cosmology"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ethics (moral philosophy) studies questions of right and wrong, good and evil, and how we ought to live."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0092",
+      "type": "mcq",
+      "stem": "The branch of philosophy that deals with reality and existence is ______",
+      "options": {
+        "A": "Metaphysics",
+        "B": "Ethics",
+        "C": "Logic",
+        "D": "Aesthetics",
+        "E": "Sociology"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Metaphysics investigates the fundamental nature of reality, existence, being, and the universe."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0093",
+      "type": "mcq",
+      "stem": "The branch of philosophy concerned with beauty and art is ______",
+      "options": {
+        "A": "Ethics",
+        "B": "Logic",
+        "C": "Aesthetics",
+        "D": "Epistemology",
+        "E": "Theology"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Aesthetics is the branch of philosophy that explores the nature of beauty, art, and taste."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0094",
+      "type": "mcq",
+      "stem": "The school of thought that emphasizes experience as the source of knowledge is ______",
+      "options": {
+        "A": "Rationalism",
+        "B": "Empiricism",
+        "C": "Idealism",
+        "D": "Existentialism",
+        "E": "Pragmatism"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Empiricism holds that knowledge is primarily derived from sensory experience and observation."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0095",
+      "type": "mcq",
+      "stem": "Rationalists believe that knowledge is acquired mainly through ______",
+      "options": {
+        "A": "Tradition",
+        "B": "Reason",
+        "C": "Observation",
+        "D": "Authority",
+        "E": "Religion"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Rationalism holds that reason, rather than experience, is the primary source of knowledge."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0096",
+      "type": "mcq",
+      "stem": "The school of thought that stresses practical consequences and usefulness is ______",
+      "options": {
+        "A": "Realism",
+        "B": "Naturalism",
+        "C": "Pragmatism",
+        "D": "Idealism",
+        "E": "Skepticism"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Pragmatism evaluates ideas and beliefs based on their practical outcomes and real-world usefulness."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0097",
+      "type": "mcq",
+      "stem": "Existentialism is mainly concerned with ______",
+      "options": {
+        "A": "Nature",
+        "B": "Ideas",
+        "C": "Human existence",
+        "D": "Science",
+        "E": "Religion"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Existentialism focuses on individual human existence, freedom, choice, and the search for meaning."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0098",
+      "type": "mcq",
+      "stem": "Logic is primarily concerned with ______",
+      "options": {
+        "A": "Emotions",
+        "B": "Correct reasoning",
+        "C": "Beliefs",
+        "D": "Traditions",
+        "E": "Customs"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Logic is the study of correct reasoning - the principles and methods used to distinguish valid from invalid arguments."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0099",
+      "type": "mcq",
+      "stem": "The Law of Non-Contradiction states that ______",
+      "options": {
+        "A": "Everything is true",
+        "B": "A statement cannot be true and false at the same time",
+        "C": "Knowledge is impossible",
+        "D": "Reality is relative",
+        "E": "Truth is subjective"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Law of Non-Contradiction holds that a proposition and its negation cannot both be true simultaneously."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0100",
+      "type": "mcq",
+      "stem": "Deductive reasoning moves from ______",
+      "options": {
+        "A": "General to particular",
+        "B": "Particular to general",
+        "C": "Unknown to known",
+        "D": "Effect to cause",
+        "E": "Falsehood to truth"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Deductive reasoning starts from general premises and derives specific conclusions - if the premises are true, the conclusion must be true."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0101",
+      "type": "mcq",
+      "stem": "Inductive reasoning moves from ______",
+      "options": {
+        "A": "General to particular",
+        "B": "Particular to general",
+        "C": "Theory to theory",
+        "D": "Abstract to abstract",
+        "E": "Universal to universal"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Inductive reasoning builds general conclusions from specific observations, though the conclusion remains probable rather than certain."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0102",
+      "type": "mcq",
+      "stem": "A fallacy is ______",
+      "options": {
+        "A": "A valid argument",
+        "B": "An error in reasoning",
+        "C": "A philosophical school",
+        "D": "A branch of logic",
+        "E": "A law of thought"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A fallacy is a flawed pattern of reasoning that renders an argument invalid or misleading."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0103",
+      "type": "mcq",
+      "stem": "'All men are mortal; Socrates is a man; therefore Socrates is mortal' is an example of ______",
+      "options": {
+        "A": "Induction",
+        "B": "Syllogism",
+        "C": "Fallacy",
+        "D": "Analogy",
+        "E": "Hypothesis"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A syllogism is a deductive argument with two premises and a conclusion. This is Aristotle's classic example of a valid syllogism."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0104",
+      "type": "mcq",
+      "stem": "Philosophy as a discipline deals with ______",
+      "options": {
+        "A": "Logic",
+        "B": "Reasoning",
+        "C": "Occultism",
+        "D": "Supernatural Forces",
+        "E": "Immortality"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Philosophy as a discipline is fundamentally concerned with reasoning - the systematic and critical examination of ideas, beliefs, and arguments."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0105",
+      "type": "mcq",
+      "stem": "'Philo' which means love in Greek could be variously conceptualized as ______",
+      "options": {
+        "A": "Quest",
+        "B": "Graver",
+        "C": "Thirst",
+        "D": "Desire/Longiness",
+        "E": "All of the above"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "'Philo' (love) encompasses various expressions of longing including quest, thirst, and desire - all reflecting an intense yearning for wisdom."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0106",
+      "type": "mcq",
+      "stem": "'Sophia' in Philosophy connotes ______",
+      "options": {
+        "A": "Sophistry",
+        "B": "Sophistication",
+        "C": "Love",
+        "D": "Wisdom",
+        "E": "Peace"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "'Sophia' is the Greek word for wisdom, forming the second part of 'Philosophy' - love of wisdom."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0107",
+      "type": "mcq",
+      "stem": "The assertion - 'Man is the measure of all things' was made by which of these philosophers?",
+      "options": {
+        "A": "Socrates",
+        "B": "Plato",
+        "C": "Protagoras",
+        "D": "Anaxagoras",
+        "E": "Thales"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Protagoras, the pre-Socratic sophist, is credited with the famous relativist assertion that 'Man is the measure of all things.'"
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0108",
+      "type": "mcq",
+      "stem": "In which of these disciplines is philosophy not applicable?",
+      "options": {
+        "A": "Accounting & Business Administration",
+        "B": "Medicine & Law",
+        "C": "Banking & Education",
+        "D": "Religion & Politics",
+        "E": "None of the above"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Philosophy is applicable across all disciplines - it underpins critical thinking, ethics, and reasoning in every field of human endeavor."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0109",
+      "type": "mcq",
+      "stem": "Which of these is not a characteristic of Philosophy?",
+      "options": {
+        "A": "Comprehensivity",
+        "B": "Presuppositionless",
+        "C": "Dogmatism",
+        "D": "Criticality",
+        "E": "Rigorisity"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Dogmatism - the uncritical acceptance of fixed beliefs - is the opposite of philosophical inquiry, which demands open, critical examination."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0110",
+      "type": "mcq",
+      "stem": "The following but one cannot be regarded as a philosopher ______",
+      "options": {
+        "A": "Plato",
+        "B": "Aristotle",
+        "C": "Dewey",
+        "D": "Jeremiah",
+        "E": "Russell"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Jeremiah was a Hebrew prophet, not a philosopher in the academic tradition. The others - Plato, Aristotle, Dewey, and Russell - are all renowned philosophers."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0111",
+      "type": "mcq",
+      "stem": "Philosophy can be summed up as the search for ______",
+      "options": {
+        "A": "Ultimate reality",
+        "B": "Gods and angels",
+        "C": "Wealth/luxuries",
+        "D": "Kingdom of God",
+        "E": "Historical events"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "At its core, philosophy is the pursuit of ultimate reality - the fundamental truths about existence, knowledge, and the nature of things."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0112",
+      "type": "mcq",
+      "stem": "Human beings are categorized into three by Cicero. Which do philosophers fall into?",
+      "options": {
+        "A": "One",
+        "B": "Two",
+        "C": "Three",
+        "D": "One and Two",
+        "E": "None of the above"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "According to Cicero, humans fall into three categories: those who seek fame, those who seek wealth, and philosophers - who seek wisdom and truth."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0113",
+      "type": "mcq",
+      "stem": "There is but one agreement among philosophers ______",
+      "options": {
+        "A": "Agreement to always disagree",
+        "B": "Agreement to always agree",
+        "C": "Agreement to always be indifferent",
+        "D": "No agreement, no disagreement",
+        "E": "None of the above"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The one consistent feature among philosophers is their disposition to question and challenge - they agree to always critically disagree and probe every claim."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0114",
+      "type": "mcq",
+      "stem": "Philosophy can be systematic or ______",
+      "options": {
+        "A": "Eclectic",
+        "B": "Unsystematic",
+        "C": "Applied",
+        "D": "Eccentric",
+        "E": "Haphazard"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Philosophy is either systematic (organized into formal branches) or applied (directed toward practical real-world problems)."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0115",
+      "type": "mcq",
+      "stem": "When philosophy is systematic, it is divided into ______ main branches",
+      "options": {
+        "A": "Two",
+        "B": "Four",
+        "C": "Three",
+        "D": "Five",
+        "E": "Six"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Systematic philosophy is traditionally divided into three main branches: Metaphysics, Epistemology, and Ethics (with Logic sometimes added)."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0116",
+      "type": "mcq",
+      "stem": "Which of these cannot be regarded as one of the main branches of philosophy?",
+      "options": {
+        "A": "Metaphysics",
+        "B": "Epistemology",
+        "C": "Ethics",
+        "D": "Theology",
+        "E": "Logic"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Theology, the study of God and religious belief, is a separate discipline. The main branches of philosophy are Metaphysics, Epistemology, Ethics, and Logic."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0117",
+      "type": "mcq",
+      "stem": "The Queen of sciences is referred to as ______",
+      "options": {
+        "A": "Metaphysics",
+        "B": "Biology",
+        "C": "Mathematics",
+        "D": "Physics",
+        "E": "Logic"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Metaphysics is traditionally called the 'Queen of sciences' because it deals with the most fundamental questions about reality and existence."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0118",
+      "type": "mcq",
+      "stem": "Another name for Ethics as a branch of Philosophy is ______",
+      "options": {
+        "A": "Conducts",
+        "B": "Axiology",
+        "C": "Moral Philosophy",
+        "D": "Values",
+        "E": "Ethos"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Ethics is also known as Moral Philosophy - the branch that systematically studies questions of right, wrong, and how one ought to live."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0119",
+      "type": "mcq",
+      "stem": "Another name for Epistemology is ______",
+      "options": {
+        "A": "Gnoseology",
+        "B": "Axiology",
+        "C": "Gerontology",
+        "D": "Eulogy",
+        "E": "Cosmology"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Gnoseology is an alternative term for Epistemology - both refer to the philosophical study of the nature and limits of knowledge."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0120",
+      "type": "mcq",
+      "stem": "Ontology, Psychology, Theology and Cosmology are sub-branches of ______",
+      "options": {
+        "A": "Epistemology",
+        "B": "Axiology",
+        "C": "Metaphysics",
+        "D": "Ethics",
+        "E": "Logic"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "These four disciplines all fall under Metaphysics, as they each investigate fundamental aspects of reality - being, mind, God, and the universe."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0121",
+      "type": "mcq",
+      "stem": "'Meta' in Metaphysics means ______",
+      "options": {
+        "A": "After",
+        "B": "Before",
+        "C": "Metre",
+        "D": "Super",
+        "E": "Invisible"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "'Meta' is Greek for 'after' or 'beyond' - Metaphysics originally referred to the works placed after Aristotle's Physics."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0122",
+      "type": "mcq",
+      "stem": "'Physikos' in Metaphysics means ______",
+      "options": {
+        "A": "Physical things/realities",
+        "B": "Physicians",
+        "C": "Heavens",
+        "D": "Philosophy"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "'Physikos' refers to physical or natural things, so Metaphysics literally means 'beyond the physical' - dealing with realities that transcend the material world."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0123",
+      "type": "mcq",
+      "stem": "The aspect of metaphysics which studies the nature of the supreme being is ______",
+      "options": {
+        "A": "Ontology",
+        "B": "Cosmology",
+        "C": "Theology",
+        "D": "Psychology",
+        "E": "Physiology"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "As a sub-branch of Metaphysics, Theology examines the nature, existence, and attributes of the supreme being or God."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0124",
+      "type": "mcq",
+      "stem": "Philosophy is replete with how many concepts/schools?",
+      "options": {
+        "A": "Five",
+        "B": "Ten",
+        "C": "Fourteen",
+        "D": "Twenty-nine",
+        "E": "Numerous"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Philosophy has developed a vast and still-growing number of schools of thought, too many to reduce to a fixed count."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0125",
+      "type": "mcq",
+      "stem": "The school of thought which holds the notion that ideas are the only true reality is ______",
+      "options": {
+        "A": "Naturalism",
+        "B": "Realism",
+        "C": "Idealism",
+        "D": "Ideaism",
+        "E": "Existentialism"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Idealism holds that reality is fundamentally mental or idea-based - the external world only exists as perceived by the mind."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0126",
+      "type": "mcq",
+      "stem": "Which of these schools consider the question of the possibility and validity of knowledge?",
+      "options": {
+        "A": "Skepticism",
+        "B": "Empiricism",
+        "C": "Rationalism",
+        "D": "Nihilism",
+        "E": "All of the above"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Skepticism, Empiricism, Rationalism, and Nihilism all engage - in different ways - with questions about whether and how knowledge is possible."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0127",
+      "type": "mcq",
+      "stem": "The school of thought which stands antithetical to Realism is ______",
+      "options": {
+        "A": "Solipsism",
+        "B": "Idealism",
+        "C": "Experimentalism",
+        "D": "Dualism",
+        "E": "Atheism"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Idealism is the direct opposite of Realism - where Realism affirms an independent external reality, Idealism holds that reality is mind-dependent."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0128",
+      "type": "mcq",
+      "stem": "A school of thought known for sense experience in the process of knowledge derivation is ______",
+      "options": {
+        "A": "Empiricism",
+        "B": "Rationalism",
+        "C": "Skepticism",
+        "D": "Irrationalism",
+        "E": "Nihilism"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Empiricism is the school that grounds all knowledge in sensory experience and observation of the external world."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0129",
+      "type": "mcq",
+      "stem": "Concepts like instrumentalism, functionalism and experimentalism may be used to describe which of these schools?",
+      "options": {
+        "A": "Montanism",
+        "B": "Pragmatism",
+        "C": "Essentialism",
+        "D": "Empiricism",
+        "E": "Monism"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Pragmatism is broadly described using terms like instrumentalism and experimentalism - all emphasizing that truth is determined by practical outcomes."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0130",
+      "type": "mcq",
+      "stem": "Which of these figures can be attributed to Existentialism?",
+      "options": {
+        "A": "Plato",
+        "B": "Socrates",
+        "C": "Dewey",
+        "D": "Nietzsche",
+        "E": "Andronicus"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Friedrich Nietzsche is a key figure in Existentialism, known for his focus on individual will, meaning, and the rejection of absolute moral systems."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0131",
+      "type": "mcq",
+      "stem": "The opposite of Monism is ______",
+      "options": {
+        "A": "Dualism",
+        "B": "Rationalism",
+        "C": "Theism",
+        "D": "Skepticism"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Monism holds that reality is one unified substance, while Dualism holds that it consists of two distinct substances - making them direct opposites."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0132",
+      "type": "mcq",
+      "stem": "The opposite of Egoism is ______",
+      "options": {
+        "A": "Phenomenalism",
+        "B": "Monism",
+        "C": "Irrationalism",
+        "D": "Altruism",
+        "E": "Fascism"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Egoism holds that self-interest is the foundation of morality, while Altruism holds that concern for others is the primary moral obligation."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0133",
+      "type": "mcq",
+      "stem": "The opposite of Theism is ______",
+      "options": {
+        "A": "Atheism",
+        "B": "Marxism",
+        "C": "Emotivism",
+        "D": "Non-theism",
+        "E": "Relativism"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Theism is the belief in the existence of God or gods; Atheism is the direct opposite - the rejection of that belief."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0134",
+      "type": "mcq",
+      "stem": "Logic can be regarded as both a branch and a ______ of philosophy",
+      "options": {
+        "A": "Father",
+        "B": "Basis",
+        "C": "Tool",
+        "D": "Rudiment",
+        "E": "Fundamental"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Logic is unique in being both a branch of philosophy and a tool - it provides the methods used across all other areas of philosophical inquiry."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0135",
+      "type": "mcq",
+      "stem": "Which of these scholars is fondly regarded as the father of Logic?",
+      "options": {
+        "A": "Socrates",
+        "B": "Plato",
+        "C": "Aristotle",
+        "D": "Russell",
+        "E": "Whitehead"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Aristotle is universally recognized as the father of Logic for his systematic development of syllogistic reasoning in works like the Organon."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0136",
+      "type": "mcq",
+      "stem": "Which of the following is not a version of Logic?",
+      "options": {
+        "A": "Formal",
+        "B": "Informal",
+        "C": "Symbolic",
+        "D": "Quantificational",
+        "E": "Axiological"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Axiology is the study of values and is a branch of philosophy, not a version of Logic. Formal, Informal, Symbolic, and Quantificational are all legitimate forms of Logic."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0137",
+      "type": "mcq",
+      "stem": "In the field of Logic, one of the following names is odd.",
+      "options": {
+        "A": "Aristotle",
+        "B": "Frege",
+        "C": "Whitehead",
+        "D": "Machiavelli",
+        "E": "Russell"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Machiavelli was a political philosopher, not a logician. Aristotle, Frege, Whitehead, and Russell are all major contributors to the field of Logic."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0138",
+      "type": "mcq",
+      "stem": "Another name for Aristotelian Logic is ______",
+      "options": {
+        "A": "Symbolic Logic",
+        "B": "Traditional Logic",
+        "C": "Original Logic",
+        "D": "Formal Logic",
+        "E": "Athenian Logic"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Aristotelian Logic is also called Traditional Logic - the classical system of syllogistic reasoning developed by Aristotle."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0139",
+      "type": "mcq",
+      "stem": "Logic helps us to ______",
+      "options": {
+        "A": "Make predictions with precision",
+        "B": "Identify and eliminate errors in reasoning",
+        "C": "Take rational and cogent decisions",
+        "D": "Clarify and evaluate our language",
+        "E": "All of the above"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Logic serves multiple functions: it sharpens reasoning, eliminates errors, supports rational decision-making, and clarifies language and arguments."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0140",
+      "type": "mcq",
+      "stem": "Which of these areas is Logic considered irrelevant?",
+      "options": {
+        "A": "Metaphysics",
+        "B": "Epistemology",
+        "C": "Ethics",
+        "D": "Aesthetics",
+        "E": "None of the above"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Logic is relevant across all branches of philosophy - from Metaphysics to Aesthetics - as the foundation of sound reasoning in every domain."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0141",
+      "type": "mcq",
+      "stem": "The first principles/axioms which underlie all human thinking processes and assessment are ______",
+      "options": {
+        "A": "Fundamental laws of magnetism",
+        "B": "Laws of thought",
+        "C": "Laws of Karma",
+        "D": "Natural laws",
+        "E": "Mosaic laws"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Laws of Thought - Identity, Non-Contradiction, and Excluded Middle - are the foundational axioms that govern all valid human reasoning."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0142",
+      "type": "mcq",
+      "stem": "The main object of Logic is ______",
+      "options": {
+        "A": "Thinking",
+        "B": "Thinking (practice)",
+        "C": "Practice",
+        "D": "Teaching",
+        "E": "Music"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The primary object of Logic is thinking - specifically, the analysis and evaluation of correct patterns of thought and inference."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0143",
+      "type": "mcq",
+      "stem": "Which of these is not a law of thought?",
+      "options": {
+        "A": "Identity",
+        "B": "Contradiction",
+        "C": "Non-contradiction",
+        "D": "Included Middle",
+        "E": "Excluded Middle"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The three classical laws of thought are Identity, Non-Contradiction, and Excluded Middle. 'Included Middle' is not a recognized law of thought."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0144",
+      "type": "mcq",
+      "stem": "Basic concepts could mean terms that are commonly used in Logic, also known as ______",
+      "options": {
+        "A": "Jargons",
+        "B": "Concepts",
+        "C": "Materials",
+        "D": "Instruments",
+        "E": "Rules"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Basic concepts in Logic refer to the specialized terminology or jargons that are commonly used and must be understood to engage with logical discourse."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0145",
+      "type": "mcq",
+      "stem": "Sentences are groups of words containing both subjects and ______",
+      "options": {
+        "A": "Conclusions",
+        "B": "Inclusion",
+        "C": "Verbs",
+        "D": "Tenses",
+        "E": "Premises"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A sentence is a grammatical unit that must contain both a subject and a verb to express a complete thought."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0146",
+      "type": "mcq",
+      "stem": "A sentence which could either be confirmed or denied is known as a ______",
+      "options": {
+        "A": "Command",
+        "B": "Question",
+        "C": "Confirmed sentence",
+        "D": "Denied sentence",
+        "E": "Statement"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "In Logic, a statement (or proposition) is a sentence that has a truth value - it can be affirmed as true or denied as false."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0147",
+      "type": "mcq",
+      "stem": "Which of these is not a form of sentence?",
+      "options": {
+        "A": "Question",
+        "B": "Command",
+        "C": "Exclamation",
+        "D": "Statement",
+        "E": "Argument"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "An argument is a logical construct made up of multiple statements - it is not itself a form of sentence. Questions, commands, exclamations, and statements are all sentence forms."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0148",
+      "type": "mcq",
+      "stem": "All statements are sentences, but not all sentences are statements.",
+      "options": {
+        "A": "Yes",
+        "B": "No",
+        "C": "Indifferent",
+        "D": "Not really",
+        "E": "None of the above"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Every statement is a sentence, but sentences like questions, commands, and exclamations are not statements because they lack a definite truth value."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0149",
+      "type": "mcq",
+      "stem": "What manner of sentence is 'What a wonderful creature!'?",
+      "options": {
+        "A": "Statement",
+        "B": "Question",
+        "C": "Exclamation",
+        "D": "Command",
+        "E": "Declarative sentence"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "This sentence expresses strong emotion and ends with an exclamation mark - it is an exclamatory sentence, not a statement or question."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0150",
+      "type": "mcq",
+      "stem": "A group of statements consisting of premises and a conclusion is known as ______",
+      "options": {
+        "A": "Proposition",
+        "B": "Sentence",
+        "C": "Argument",
+        "D": "Clause",
+        "E": "Phrase"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In Logic, an argument is a structured set of statements where one or more premises are offered in support of a conclusion."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0151",
+      "type": "mcq",
+      "stem": "The statement that supports the conclusion in an argument is called ______",
+      "options": {
+        "A": "Premise",
+        "B": "Conclusion",
+        "C": "Inference",
+        "D": "Clause",
+        "E": "Judgment"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A premise is the supporting statement in an argument that provides the evidence or reasoning from which the conclusion is drawn."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0152",
+      "type": "mcq",
+      "stem": "The condition for a valid argument is that ______",
+      "options": {
+        "A": "The conclusion must necessarily follow from the premises",
+        "B": "The conclusion must not necessarily follow",
+        "C": "The premises must agree with the conclusion",
+        "D": "The consequent and antecedents are identical",
+        "E": "All of the above"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "An argument is valid when its logical structure guarantees that if the premises are true, the conclusion must also be true."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0153",
+      "type": "mcq",
+      "stem": "Arguments could be ______ and ______",
+      "options": {
+        "A": "Informative and disinformative",
+        "B": "Reasonable and unreasonable",
+        "C": "Antecedent and consequent",
+        "D": "Deductive and inductive",
+        "E": "None of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Arguments are broadly classified into two types: deductive (where the conclusion necessarily follows) and inductive (where the conclusion is probable)."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0154",
+      "type": "mcq",
+      "stem": "A deductive argument is one in which ______",
+      "options": {
+        "A": "The conclusion follows necessarily from the premises",
+        "B": "The conclusion may or may not follow",
+        "C": "The premises are false",
+        "D": "The argument is weak",
+        "E": "None of the above"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "In a deductive argument, the truth of the premises guarantees the truth of the conclusion - the inference is necessarily valid."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0155",
+      "type": "mcq",
+      "stem": "An inductive argument is one in which ______",
+      "options": {
+        "A": "The conclusion follows necessarily",
+        "B": "The conclusion is probable",
+        "C": "The premises are invalid",
+        "D": "The argument is always true",
+        "E": "None of the above"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Inductive arguments yield conclusions that are probable or likely, based on patterns observed in the premises - but not logically guaranteed."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0156",
+      "type": "mcq",
+      "stem": "A valid argument is one in which ______",
+      "options": {
+        "A": "The premises are true",
+        "B": "The conclusion is true",
+        "C": "The conclusion follows necessarily from the premises",
+        "D": "The argument is long",
+        "E": "None of the above"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Validity is a structural property - an argument is valid if its form guarantees that a true conclusion follows from true premises."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0157",
+      "type": "mcq",
+      "stem": "A sound argument is one that is ______",
+      "options": {
+        "A": "Valid with false premises",
+        "B": "Invalid with true premises",
+        "C": "Valid with true premises",
+        "D": "Weak and invalid",
+        "E": "None of the above"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Soundness requires both validity (correct logical form) and truth (all premises are actually true). An unsound argument fails on at least one of these."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0158",
+      "type": "mcq",
+      "stem": "The conclusion of an argument is ______",
+      "options": {
+        "A": "The first statement",
+        "B": "The supporting statement",
+        "C": "The final claim derived from premises",
+        "D": "An assumption",
+        "E": "None of the above"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The conclusion is the statement that the argument is trying to establish - it is what the premises are intended to support or prove."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0159",
+      "type": "mcq",
+      "stem": "A compound statement that contains the symbol '⊃' is known as ______",
+      "options": {
+        "A": "Conditional",
+        "B": "Situational",
+        "C": "Bi-conditional",
+        "D": "Alternation",
+        "E": "Disjunction"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The symbol '⊃' (horseshoe) represents a conditional (if...then) statement in symbolic logic."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0160",
+      "type": "mcq",
+      "stem": "A conditional is only false when the antecedent is true and the consequent is false.",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "True and False",
+        "D": "Probably",
+        "E": "None of the above"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "By the truth table for conditionals, a conditional statement is false only in the case where the antecedent (if-part) is true and the consequent (then-part) is false."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0161",
+      "type": "mcq",
+      "stem": "A compound statement that contains the symbol '∨' is known as a ______",
+      "options": {
+        "A": "Conditional",
+        "B": "Situational",
+        "C": "Bi-Conditional",
+        "D": "Alternation",
+        "E": "Disjunction"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "The symbol '∨' represents a disjunction (or alternation) in symbolic logic - a compound statement asserting that at least one of its components is true."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0162",
+      "type": "mcq",
+      "stem": "A bi-conditional is true if ______",
+      "options": {
+        "A": "The antecedent is true and the consequent is false",
+        "B": "The component propositions have identical value",
+        "C": "The consequent is true and the antecedent false",
+        "D": "All of the above",
+        "E": "None of the above"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A bi-conditional (if and only if) is true when both components are true or both are false - i.e., when they share the same truth value."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0163",
+      "type": "mcq",
+      "stem": "A conditional statement with its consequent affirmed when it is known that the antecedent is false is known as ______",
+      "options": {
+        "A": "Alternation",
+        "B": "Alteration",
+        "C": "Counterfactual",
+        "D": "Factual",
+        "E": "Corresponding conditional"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A counterfactual conditional asserts what would be the case under conditions known to be false - reasoning about hypothetical or contrary-to-fact situations."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0164",
+      "type": "mcq",
+      "stem": "Just as with long truth tables, it is equally possible to use short truth tables to establish the validity of an argument.",
+      "options": {
+        "A": "Probably",
+        "B": "True",
+        "C": "False",
+        "D": "Uncertain",
+        "E": "Absurd"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Short truth tables are a valid and efficient alternative to full truth tables for testing the validity or invalidity of arguments in symbolic logic."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0165",
+      "type": "mcq",
+      "stem": "The use of mathematical notions and symbols in logic is known as ______",
+      "options": {
+        "A": "Quadruple logic",
+        "B": "Symbolic logic",
+        "C": "Geometrical logic",
+        "D": "Symbol logic",
+        "E": "Arithmethematical logic"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Symbolic logic employs mathematical symbols and notation to represent logical relationships, making arguments more precise and easier to analyze."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0166",
+      "type": "mcq",
+      "stem": "The sign '∨' is used in logic to represent an ______",
+      "options": {
+        "A": "Alteration",
+        "B": "Alliteration",
+        "C": "Alternation",
+        "D": "Disjunction",
+        "E": "All of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The wedge symbol '∨' in symbolic logic denotes a disjunction - a compound statement where at least one of the component propositions must be true."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0167",
+      "type": "mcq",
+      "stem": "A conjunction is true ______",
+      "options": {
+        "A": "When the conjuncts are indeterminate",
+        "B": "When the conjuncts are identical",
+        "C": "When the conjuncts are true",
+        "D": "When the conjuncts are conditional",
+        "E": "When the conjuncts are reasonable"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A conjunction (p · q) is true only when both conjuncts are true - if either is false, the entire conjunction is false."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0168",
+      "type": "mcq",
+      "stem": "In conjunction, p · q = q · p",
+      "options": {
+        "A": "Impossible",
+        "B": "True",
+        "C": "Probably",
+        "D": "It depends on the context",
+        "E": "All of the above"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Conjunction is commutative - the order of the conjuncts does not affect the truth value of the compound statement."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0169",
+      "type": "mcq",
+      "stem": "An alternation (in the inclusive sense) is false when ______",
+      "options": {
+        "A": "One proposition is false",
+        "B": "Both propositions are true",
+        "C": "Both propositions are false",
+        "D": "One proposition is true",
+        "E": "None of the above"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "An inclusive disjunction (alternation) is false only when both component propositions are false - it is true whenever at least one is true."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0170",
+      "type": "mcq",
+      "stem": "The rules of inference and replacement are adapted to arguments which are ______ in form",
+      "options": {
+        "A": "Inductive",
+        "B": "Deductive",
+        "C": "Invalid",
+        "D": "Unsound",
+        "E": "Replaceable"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Rules of inference and replacement are tools of deductive logic - they are used to construct valid proofs from deductive argument forms."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0171",
+      "type": "mcq",
+      "stem": "Which of the following is not a rule of inference?",
+      "options": {
+        "A": "De Morgan",
+        "B": "Absorption",
+        "C": "Simplification",
+        "D": "Disjunctive syllogism",
+        "E": "Conjunction"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "De Morgan's law is a rule of replacement (equivalence), not a rule of inference. Rules of inference include Modus Ponens, Simplification, and Disjunctive Syllogism."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0172",
+      "type": "mcq",
+      "stem": "Which of these rules does not fall into the category of replacement?",
+      "options": {
+        "A": "Association",
+        "B": "Transportation",
+        "C": "Tautology",
+        "D": "Exportation",
+        "E": "Addition"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Addition is a rule of inference (allowing us to add a disjunct to a statement), not a rule of replacement. Association, Transportation, Tautology, and Exportation are all rules of replacement."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0173",
+      "type": "mcq",
+      "stem": "The rule of inference which says that given a conditional statement as the first premise, and given a denial of the consequent, is ______",
+      "options": {
+        "A": "Modus Ponens",
+        "B": "Modus Tollens",
+        "C": "Addition",
+        "D": "Constructive Dilemma",
+        "E": "Simplification"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Modus Tollens (denying the consequent) allows us to deny the antecedent when we are given a conditional and the negation of its consequent."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0174",
+      "type": "mcq",
+      "stem": "The rule which allows us to form a disjunction from a statement is known as ______",
+      "options": {
+        "A": "Addition",
+        "B": "Subtraction",
+        "C": "Conjunction",
+        "D": "Simplification",
+        "E": "Exportation"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The rule of Addition states that if a proposition p is true, we can always form the disjunction p ∨ q, introducing any additional proposition."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0175",
+      "type": "mcq",
+      "stem": "That rule which states that from two separate statements we could derive their marriage as a conclusion is called ______",
+      "options": {
+        "A": "Conjunction",
+        "B": "Modus Ponens",
+        "C": "Modus Tollens",
+        "D": "Simplification",
+        "E": "Disjunctive syllogism"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The rule of Conjunction allows us to combine two independently established statements (p and q) into a single conjunctive conclusion (p · q)."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0176",
+      "type": "mcq",
+      "stem": "A rule that allows us to conclude by affirming any conjunct from a conjunction is known as ______",
+      "options": {
+        "A": "Addition",
+        "B": "Simplification",
+        "C": "De Morgan",
+        "D": "Modus Tollens",
+        "E": "Destructive Dilemma"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Simplification states that if a conjunction (p · q) is true, we can conclude either conjunct individually - either p or q."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0177",
+      "type": "mcq",
+      "stem": "'Given a conditional statement, we can infer the consequent given the antecedent' describes ______",
+      "options": {
+        "A": "Modus Tollens",
+        "B": "Commutation",
+        "C": "Modus Ponens",
+        "D": "Distribution",
+        "E": "Destructive Dilemma"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Modus Ponens (affirming the antecedent) allows us to infer the consequent when we are given a conditional and its antecedent is confirmed as true."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0178",
+      "type": "mcq",
+      "stem": "Rules of inference are used to provide formal proof for valid arguments under the method of ______",
+      "options": {
+        "A": "Simple Induction",
+        "B": "Artificial Induction",
+        "C": "Natural Induction",
+        "D": "Natural deduction",
+        "E": "Artificial deduction"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Natural deduction is the proof system in which rules of inference are applied step-by-step to derive conclusions from premises in a formal and systematic way."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0179",
+      "type": "mcq",
+      "stem": "Which of these is not a fallacy?",
+      "options": {
+        "A": "Red herring",
+        "B": "Amphiboly",
+        "C": "Appeal to threat",
+        "D": "Appearance",
+        "E": "Equivocation"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "'Appearance' is not a recognized fallacy. Red herring, Amphiboly, Appeal to threat (Ad Baculum), and Equivocation are all established fallacies in logic."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0180",
+      "type": "mcq",
+      "stem": "The meaning of 'non sequitur' in logic is ______",
+      "options": {
+        "A": "It follows that",
+        "B": "Not reachable",
+        "C": "It does not follow",
+        "D": "It is reachable",
+        "E": "Not permissible"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "'Non sequitur' is Latin for 'it does not follow' - used to describe a conclusion that does not logically follow from its premises."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0181",
+      "type": "mcq",
+      "stem": "Petitio principii means ______",
+      "options": {
+        "A": "Going beyond bounds",
+        "B": "Begging the question",
+        "C": "Denying the antecedent",
+        "D": "Affirming the consequent",
+        "E": "All of the above"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Petitio principii (begging the question) is the fallacy of assuming the conclusion within the premises, making the argument circular."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0182",
+      "type": "mcq",
+      "stem": "An argument may appear plausible yet be fallacious.",
+      "options": {
+        "A": "I am not sure",
+        "B": "Improper",
+        "C": "False",
+        "D": "Uncertain",
+        "E": "True"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "This is precisely what makes fallacies dangerous - they can appear convincing and persuasive while actually containing errors in reasoning."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0183",
+      "type": "mcq",
+      "stem": "The exact opposite of the fallacy of division is known as ______",
+      "options": {
+        "A": "Composition",
+        "B": "Decomposition",
+        "C": "Comprehension",
+        "D": "Decrementalism",
+        "E": "None of the above"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The fallacy of Division assumes what is true of the whole must be true of its parts; Composition is the reverse - assuming what is true of the parts is true of the whole."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0184",
+      "type": "mcq",
+      "stem": "In the fallacy tagged argumentum ad misericordiam, one appeals to ______",
+      "options": {
+        "A": "Argument",
+        "B": "Pity",
+        "C": "Emotion",
+        "D": "Face Value",
+        "E": "Intelligence"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Argumentum ad misericordiam is the appeal to pity - attempting to win an argument by evoking sympathy rather than presenting logical evidence."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0185",
+      "type": "mcq",
+      "stem": "Fallacies could be categorized as ______",
+      "options": {
+        "A": "Articulate and Inarticulate",
+        "B": "Logical and Illogical",
+        "C": "Semi-informal and Semi-formal",
+        "D": "Good or bad",
+        "E": "Informal or formal"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Fallacies are broadly divided into formal fallacies (errors in logical structure) and informal fallacies (errors in content, relevance, or language)."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0186",
+      "type": "mcq",
+      "stem": "Which of these is not a type of fallacy of ambiguity?",
+      "options": {
+        "A": "Amphibious",
+        "B": "Composition",
+        "C": "Equivocation",
+        "D": "Amphiboly",
+        "E": "None of the above"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "'Amphibious' refers to organisms that live on land and water - it is not a fallacy. Amphiboly, Equivocation, and Composition are all recognized fallacies of ambiguity."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0187",
+      "type": "mcq",
+      "stem": "Argumentum ad populum means ______",
+      "options": {
+        "A": "Appeal to propeller",
+        "B": "Appeal to the popular opinion",
+        "C": "Appeal to a popular person",
+        "D": "Appeal to a pop player",
+        "E": "Appeal to a place"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Argumentum ad populum (appeal to the people) is the fallacy of arguing that something is true or right simply because many people believe or do it."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0188",
+      "type": "mcq",
+      "stem": "A type of fallacy in which the arguer derails from the context is known as ______",
+      "options": {
+        "A": "Ignoratio Elenchi",
+        "B": "Red herring",
+        "C": "Argumentum ad Veracundiam",
+        "D": "Tu quoque",
+        "E": "False cause"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Red herring is the fallacy of introducing irrelevant information to distract from the actual issue and derail the argument."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0189",
+      "type": "mcq",
+      "stem": "The type of fallacies that occur when rules like modus ponens or modus tollens are violated is known as ______",
+      "options": {
+        "A": "Formal fallacies",
+        "B": "Informal fallacies"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Formal fallacies arise from violations of the structural rules of valid inference - such as incorrectly applying Modus Ponens or Modus Tollens."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0190",
+      "type": "mcq",
+      "stem": "Philosophy as a discipline deals with __________",
+      "options": {
+        "A": "Occultism",
+        "B": "Reasoning",
+        "C": "Logic",
+        "D": "Immortality",
+        "E": "Supernatural Forces"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Philosophy as a discipline primarily deals with reasoning - the systematic and critical examination of ideas, beliefs, and knowledge."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0191",
+      "type": "mcq",
+      "stem": "'Philo' which means love in Greek could be variously conceptualized as __________",
+      "options": {
+        "A": "Thirst",
+        "B": "Graver",
+        "C": "Quest",
+        "D": "Desire/Longiness",
+        "E": "All of the above"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "'Philo' (love) can be conceptualized as thirst, quest, desire, or longing - all expressing a deep yearning for wisdom."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0192",
+      "type": "mcq",
+      "stem": "'Sophia' in Philosophy connotes __________",
+      "options": {
+        "A": "Love",
+        "B": "Sophistry",
+        "C": "Sophistication",
+        "D": "Wisdom",
+        "E": "Peace"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "'Sophia' is the Greek word for wisdom. Combined with 'philo' (love), it gives us 'philosophy' - love of wisdom."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0193",
+      "type": "mcq",
+      "stem": "Philosophy helps bring about __________",
+      "options": {
+        "A": "Open-mindedness",
+        "B": "Broadening of sensibilities",
+        "C": "Elevation of mankind",
+        "D": "Enlightenment",
+        "E": "All of the above"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Philosophy promotes open-mindedness, broadens sensibilities, elevates mankind intellectually, and fosters enlightenment - all at once."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0194",
+      "type": "mcq",
+      "stem": "Which of these is odd among the philosophical traditions listed?",
+      "options": {
+        "A": "African Philosophy",
+        "B": "Chinese Philosophy",
+        "C": "European Philosophy",
+        "D": "Oriental Philosophy",
+        "E": "Philosophy of Religion"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "All others are geographical/cultural traditions of philosophy. Philosophy of Religion is a thematic/branch classification, making it the odd one out."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0195",
+      "type": "mcq",
+      "stem": "'Man know thyself' was often emphasized by __________",
+      "options": {
+        "A": "Socrates",
+        "B": "Plato",
+        "C": "Aristotle",
+        "D": "Andronicus",
+        "E": "Empedocles"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Socrates famously emphasized self-knowledge with the maxim 'Know thyself,' which was central to his method of philosophical inquiry."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0196",
+      "type": "mcq",
+      "stem": "Plato's prominent disciple was known as __________",
+      "options": {
+        "A": "Socrates",
+        "B": "Aristotle",
+        "C": "Andronicus",
+        "D": "Protagoras",
+        "E": "Pestalozzi"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Aristotle was Plato's most distinguished disciple. He later founded his own school, the Lyceum, and made monumental contributions to philosophy."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0197",
+      "type": "mcq",
+      "stem": "In the hierarchy of worldly phenomena, while botany studies plants and zoology studies animals, philosophy studies __________",
+      "options": {
+        "A": "Material things",
+        "B": "Man",
+        "C": "Immaterial things",
+        "D": "Vegetation",
+        "E": "Everything in the universe"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Unlike other disciplines which focus on specific subjects, philosophy is all-encompassing - it studies everything in the universe, including existence, knowledge, values, and reality."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0198",
+      "type": "mcq",
+      "stem": "While other disciplines presuppose one theme or the other, what does philosophy presuppose?",
+      "options": {
+        "A": "Nothing",
+        "B": "Everything",
+        "C": "God",
+        "D": "Material World",
+        "E": "Life"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Philosophy is presuppositionless - it takes nothing for granted and subjects every assumption, including its own, to critical examination."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0199",
+      "type": "mcq",
+      "stem": "Which of the following can be regarded as an African philosopher?",
+      "options": {
+        "A": "Nkrumah",
+        "B": "Bodunrin",
+        "C": "Nyerere",
+        "D": "Awolowo",
+        "E": "All of the above"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Kwame Nkrumah, Peter Bodunrin, Julius Nyerere, and Obafemi Awolowo are all recognized as African philosophers who contributed to African political and social thought."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0200",
+      "type": "mcq",
+      "stem": "The first ever academic institution founded by Plato in Athens was called __________",
+      "options": {
+        "A": "Academy",
+        "B": "High School",
+        "C": "Oxford",
+        "D": "Cambridge",
+        "E": "TASUED"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Plato founded the Academy in Athens around 387 BC - widely regarded as the first institution of higher learning in the Western world."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0201",
+      "type": "mcq",
+      "stem": "The name of the school founded by Aristotle was __________",
+      "options": {
+        "A": "Academy",
+        "B": "Philosophical School",
+        "C": "Barracks",
+        "D": "Encyclopedia Britannica",
+        "E": "Lyceum"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Aristotle founded the Lyceum in Athens in 335 BC. His followers were called Peripatetics, reportedly because he taught while walking."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0202",
+      "type": "mcq",
+      "stem": "The following but one is not a method applicable in philosophy. Which is the exception?",
+      "options": {
+        "A": "Analytical Method",
+        "B": "Dialectical Method",
+        "C": "Speculative Method",
+        "D": "Method of Deduction",
+        "E": "Dogmatization"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Dogmatization is antithetical to philosophy. Philosophy thrives on open inquiry, whereas dogmatization involves accepting beliefs without question or critical examination."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0203",
+      "type": "mcq",
+      "stem": "The method of Dialectics is traceable to __________",
+      "options": {
+        "A": "Dewey",
+        "B": "Froebel",
+        "C": "Socrates",
+        "D": "Plato",
+        "E": "Azikiwe"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The dialectical method - a process of questioning and dialogue to arrive at truth - is traced to Socrates, and is commonly called the Socratic method."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0204",
+      "type": "mcq",
+      "stem": "The Peripatetic was the name given to those who belonged to a philosophical school founded by __________",
+      "options": {
+        "A": "Montessori",
+        "B": "Froebel",
+        "C": "Plato",
+        "D": "Aristotle",
+        "E": "Dewey"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The Peripatetics were members of Aristotle's Lyceum school. The name is believed to derive from the Greek 'peripatein,' meaning to walk about."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0205",
+      "type": "mcq",
+      "stem": "When philosophical training, dispositions and rigors are applied to issues and policies in education, what becomes the outcome?",
+      "options": {
+        "A": "An educational management",
+        "B": "An educational philosophy",
+        "C": "A philosophy and logic",
+        "D": "Anaesthetics",
+        "E": "A social and political philosophy"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Applying philosophical methods and thinking to educational issues and policies produces an educational philosophy - a systematic framework for understanding education."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0206",
+      "type": "mcq",
+      "stem": "Ph.D is an acronym for __________",
+      "options": {
+        "A": "Philosophy Degree",
+        "B": "Degree in Philosophy",
+        "C": "Doctor of Philosophy",
+        "D": "Philanthropists' Den",
+        "E": "Philadelphia"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Ph.D stands for Doctor of Philosophy - the highest academic degree awarded by universities, reflecting philosophy's foundational role in all scholarly disciplines."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0207",
+      "type": "mcq",
+      "stem": "'Episteme' is a Greek word for __________",
+      "options": {
+        "A": "Knowledge",
+        "B": "Search",
+        "C": "Reality",
+        "D": "Love",
+        "E": "Wisdom"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "'Episteme' is the Greek term for knowledge, and is the root of 'epistemology' - the branch of philosophy that studies the nature, scope, and limits of knowledge."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0208",
+      "type": "mcq",
+      "stem": "Philosophy can be systematic or __________",
+      "options": {
+        "A": "Applied",
+        "B": "Eccentric",
+        "C": "Haphazard",
+        "D": "Eclectic",
+        "E": "Unsystematic"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Philosophy can be systematic (organized into formal branches) or eclectic (drawing from multiple traditions and schools of thought without rigid adherence to one)."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0209",
+      "type": "mcq",
+      "stem": "Another name for Epistemology is __________",
+      "options": {
+        "A": "Gerontology",
+        "B": "Cosmology",
+        "C": "Gnoseology",
+        "D": "Axiology",
+        "E": "Eulogy"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Gnoseology is an alternative term for epistemology - the philosophical study of knowledge, its nature, origin, scope, and validity."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0210",
+      "type": "mcq",
+      "stem": "Distinctions such as Reality and Appearance, Unity and Plurality, Essence and Existence are considered in __________",
+      "options": {
+        "A": "Aesthetics",
+        "B": "Logic",
+        "C": "Epistemology",
+        "D": "Ethics",
+        "E": "Metaphysics"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Metaphysics examines fundamental questions about reality, existence, and being - including distinctions like reality vs. appearance and essence vs. existence."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0211",
+      "type": "mcq",
+      "stem": "The doctrine in epistemology which holds that the source of our knowledge claim is sense experience is __________",
+      "options": {
+        "A": "Egoism",
+        "B": "Rationalism",
+        "C": "Empiricism",
+        "D": "Altruism",
+        "E": "Skepticism"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Empiricism holds that knowledge is derived primarily from sensory experience. Key empiricists include John Locke, George Berkeley, and David Hume."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0212",
+      "type": "mcq",
+      "stem": "Another name for Ethics as a branch of Philosophy is __________",
+      "options": {
+        "A": "Ethos",
+        "B": "Conducts",
+        "C": "Axiology",
+        "D": "Values",
+        "E": "Moral Philosophy"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Ethics is commonly called Moral Philosophy - it is the branch of philosophy concerned with questions of right and wrong, good and evil, and human conduct."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0213",
+      "type": "mcq",
+      "stem": "The claim that the source of knowledge is only through reason is __________",
+      "options": {
+        "A": "Skepticism",
+        "B": "Altruism",
+        "C": "Rationalism",
+        "D": "Empiricism",
+        "E": "Egoism"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Rationalism asserts that reason, not sensory experience, is the primary source of knowledge. Notable rationalists include Descartes, Spinoza, and Leibniz."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0214",
+      "type": "mcq",
+      "stem": "The branch of philosophy which preoccupies itself with arguments and clarity of thought is __________",
+      "options": {
+        "A": "Gnoseology",
+        "B": "Logic",
+        "C": "Metaphysics",
+        "D": "Epistemology",
+        "E": "Ethics"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Logic is the branch of philosophy focused on the principles of valid reasoning, argument structure, and clarity of thought."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0215",
+      "type": "mcq",
+      "stem": "Tabula rasa is a Lockean term which means __________",
+      "options": {
+        "A": "Closed mind",
+        "B": "Empty brain",
+        "C": "Table and eraser",
+        "D": "Loaded rain",
+        "E": "Spilled over brain"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "John Locke's concept of 'tabula rasa' (blank slate) holds that the mind at birth is empty of all knowledge, and all knowledge comes through experience."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0216",
+      "type": "mcq",
+      "stem": "The branch of philosophy that helps in the formulation of rules which helps us in testing if a particular piece of reasoning is coherent and consistent is __________",
+      "options": {
+        "A": "Epistemology",
+        "B": "Logic",
+        "C": "Axiology",
+        "D": "Ethics",
+        "E": "Metaphysics"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Logic provides the formal rules and standards for evaluating whether arguments are coherent, consistent, and valid."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0217",
+      "type": "mcq",
+      "stem": "When philosophy is systematic, it is divided into how many main branches?",
+      "options": {
+        "A": "Five",
+        "B": "Two",
+        "C": "Six",
+        "D": "Three",
+        "E": "Four"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Systematic philosophy is traditionally divided into four main branches: Metaphysics, Epistemology, Logic, and Ethics (Axiology)."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0218",
+      "type": "mcq",
+      "stem": "Meta in Metaphysics means __________",
+      "options": {
+        "A": "After",
+        "B": "Super",
+        "C": "Metre",
+        "D": "Before",
+        "E": "Invisible"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "'Meta' in Greek means 'after' or 'beyond.' Metaphysics literally means 'after physics,' reflecting how Aristotle's metaphysical works were arranged after his physical ones."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0219",
+      "type": "mcq",
+      "stem": "Which aspect of philosophy deals with the etiquettes/conducts of people in society?",
+      "options": {
+        "A": "Metaphysics",
+        "B": "Cosmology",
+        "C": "Ethics",
+        "D": "Logic",
+        "E": "Epistemology"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Ethics (Moral Philosophy) deals with questions of human conduct, moral standards, and the rules governing behavior in society."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0220",
+      "type": "mcq",
+      "stem": "'Logikos' is a Greek word for __________",
+      "options": {
+        "A": "Ontology",
+        "B": "Philosophy",
+        "C": "Reasoned discourse",
+        "D": "Morality",
+        "E": "Knowledge"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "'Logikos' derives from 'logos,' meaning reason or discourse. It forms the root of 'logic' - the study of reasoned and structured thought."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0221",
+      "type": "mcq",
+      "stem": "The aspect of metaphysics which studies the nature of the supreme being is __________",
+      "options": {
+        "A": "Theology",
+        "B": "Physiology",
+        "C": "Ontology",
+        "D": "Psychology",
+        "E": "Cosmology"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Ontology, as a sub-branch of metaphysics, studies the nature of being and existence - including the nature of the supreme being or God."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0222",
+      "type": "mcq",
+      "stem": "Physikos in Metaphysics means __________",
+      "options": {
+        "A": "Physical things/realities",
+        "B": "Philosophy",
+        "C": "Heavens",
+        "D": "Physicians",
+        "E": "Science"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "'Physikos' refers to physical things or natural realities. Metaphysics literally goes 'beyond' (meta) the physical (physikos)."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0223",
+      "type": "mcq",
+      "stem": "The Queen of Sciences is referred to as __________",
+      "options": {
+        "A": "Mathematics",
+        "B": "Metaphysics",
+        "C": "Logic",
+        "D": "Physics",
+        "E": "Biology"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Metaphysics is called the Queen of Sciences because it deals with the most fundamental questions about reality and existence that underlie all other disciplines."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0224",
+      "type": "mcq",
+      "stem": "Which branch concerns itself with the essence, origin, root and beginning of beings/things?",
+      "options": {
+        "A": "Ontology",
+        "B": "Physiology",
+        "C": "Psychology",
+        "D": "Theology",
+        "E": "Cosmology"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Cosmology as a sub-branch of metaphysics studies the origin, structure, and essence of the universe and all beings within it."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0225",
+      "type": "mcq",
+      "stem": "Moral Philosophy is a synonym of __________",
+      "options": {
+        "A": "Ethics",
+        "B": "Gnoseology",
+        "C": "Epistemology",
+        "D": "Gerontology",
+        "E": "Axiology"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Moral Philosophy and Ethics are used interchangeably - both refer to the philosophical study of morality, values, and human conduct."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0226",
+      "type": "mcq",
+      "stem": "Knowledge acquired in a flash or in a state of subconsciousness is obtained through __________",
+      "options": {
+        "A": "Authority",
+        "B": "Reasoning",
+        "C": "Experience",
+        "D": "Intuition",
+        "E": "Revelation"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Intuition refers to immediate, instinctive knowledge acquired without conscious reasoning - often described as a flash of insight or subconscious awareness."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0227",
+      "type": "mcq",
+      "stem": "Ontology, Psychology, Theology and Cosmology are sub-branches of __________",
+      "options": {
+        "A": "Epistemology",
+        "B": "Ethics",
+        "C": "Metaphysics",
+        "D": "Axiology",
+        "E": "Logic"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Ontology, Psychology, Theology, and Cosmology are all sub-branches under Metaphysics - the branch of philosophy that studies the fundamental nature of reality and existence."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0228",
+      "type": "mcq",
+      "stem": "Which of these schools considers the question of the possibility and validity of knowledge?",
+      "options": {
+        "A": "All of the above",
+        "B": "Empiricism",
+        "C": "Nihilism",
+        "D": "Rationalism",
+        "E": "Skepticism"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Empiricism, Rationalism, Nihilism, and Skepticism all engage with questions about whether and how knowledge is possible and valid, each offering a different answer."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0229",
+      "type": "mcq",
+      "stem": "The school of thought which holds the notion that ideas are the only true reality is __________",
+      "options": {
+        "A": "Realism",
+        "B": "Idealism",
+        "C": "Ideasism",
+        "D": "Existentialism",
+        "E": "Naturalism"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Idealism holds that reality is fundamentally mental or immaterial - that ideas, minds, or consciousness constitute the only true reality."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0230",
+      "type": "mcq",
+      "stem": "'Nihil in intellectu quod prius non fuerit in sensu' is a claim made by __________",
+      "options": {
+        "A": "Rationalists",
+        "B": "Nihilists",
+        "C": "Empiricists",
+        "D": "Skeptics",
+        "E": "Intellectuals"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "This Latin phrase - 'Nothing is in the intellect that was not first in the senses' - is the classic empiricist claim, associated with John Locke and later empiricists."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0231",
+      "type": "mcq",
+      "stem": "The opposite of Determinism is __________",
+      "options": {
+        "A": "Marxism",
+        "B": "Egalitarianism",
+        "C": "Communitarianism",
+        "D": "Free-Willism",
+        "E": "Anarchism"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Determinism holds that all events are causally determined. Its opposite is Free-Willism (libertarianism in philosophy), which asserts that humans have genuine freedom of choice."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0232",
+      "type": "mcq",
+      "stem": "Wole Soyinka belongs to which of these schools?",
+      "options": {
+        "A": "Dualist",
+        "B": "Atheism",
+        "C": "Humanism",
+        "D": "Fascism",
+        "E": "Theism"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Wole Soyinka, the Nobel laureate Nigerian author and thinker, is associated with Humanism - a philosophy centered on human values, dignity, and rational inquiry."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0233",
+      "type": "mcq",
+      "stem": "A school of thought known for sense experience in the process of knowledge derivation is __________",
+      "options": {
+        "A": "Skepticism",
+        "B": "Rationalism",
+        "C": "Irrationalism",
+        "D": "Nihilism",
+        "E": "Empiricism"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Empiricism is the epistemological school that holds sensory experience as the foundation and primary source of all knowledge."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0234",
+      "type": "mcq",
+      "stem": "Another name for sexism is __________",
+      "options": {
+        "A": "Chauvinism",
+        "B": "Progressivism",
+        "C": "Feminism",
+        "D": "Conservatism",
+        "E": "Pragmatism"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Chauvinism (specifically male chauvinism) is used synonymously with sexism - the belief in the superiority of one sex over another, typically men over women."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0235",
+      "type": "mcq",
+      "stem": "The opposite of Egoism is __________",
+      "options": {
+        "A": "Monism",
+        "B": "Altruism",
+        "C": "Fascism",
+        "D": "Irrationalism",
+        "E": "Phenomenalism"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Egoism holds that self-interest is the foundation of morality. Altruism is its opposite - the view that concern for others' welfare should be the basis of moral action."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0236",
+      "type": "mcq",
+      "stem": "The father of Utilitarianism is __________",
+      "options": {
+        "A": "Adolf Hitler",
+        "B": "Jeremy Bentham",
+        "C": "Karl Marx",
+        "D": "Utility",
+        "E": "Wole Soyinka"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Jeremy Bentham is regarded as the founder of Utilitarianism - the ethical theory that the right action is the one that produces the greatest happiness for the greatest number."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0237",
+      "type": "mcq",
+      "stem": "The opposite of Theism is __________",
+      "options": {
+        "A": "Non-theism",
+        "B": "Emotivism",
+        "C": "Marxism",
+        "D": "Atheism",
+        "E": "Relativism"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Theism is the belief in the existence of God. Atheism is its direct opposite - the position that God or gods do not exist."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0238",
+      "type": "mcq",
+      "stem": "The school of thought which stands antithetical to Realism is __________",
+      "options": {
+        "A": "Experimentalism",
+        "B": "Dualism",
+        "C": "Solipsism",
+        "D": "Atheism",
+        "E": "Idealism"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Realism holds that the external world exists independently of the mind. Idealism contradicts this by asserting that reality is fundamentally mental or mind-dependent."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0239",
+      "type": "mcq",
+      "stem": "The socio-political theory developed by Karl Marx and Friedrich Engels is known as __________",
+      "options": {
+        "A": "Libertarianism",
+        "B": "Communism",
+        "C": "Communitarianism",
+        "D": "Phenomenalism",
+        "E": "Marxism"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Marxism is the socio-political and economic theory developed by Karl Marx and Friedrich Engels, centered on class struggle, historical materialism, and the critique of capitalism."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0240",
+      "type": "mcq",
+      "stem": "Which of these scholars cannot be regarded as a Rationalist?",
+      "options": {
+        "A": "Descartes",
+        "B": "Locke",
+        "C": "Leibniz",
+        "D": "Plato",
+        "E": "Spinoza"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "John Locke is an empiricist, not a rationalist. Descartes, Leibniz, Spinoza, and Plato are all associated with rationalism - the view that reason is the primary source of knowledge."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0241",
+      "type": "mcq",
+      "stem": "Which of these theories has no direct bearing with the existence and nature of God?",
+      "options": {
+        "A": "Deism",
+        "B": "Atheism",
+        "C": "Capitalism",
+        "D": "Theism",
+        "E": "Naturalism"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Capitalism is an economic theory concerned with markets and private ownership. Unlike Deism, Atheism, Theism, and Naturalism, it has no direct bearing on the existence or nature of God."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0242",
+      "type": "mcq",
+      "stem": "Concepts like Instrumentalism, Functionalism and Experimentalism may be generously used to describe which of these schools?",
+      "options": {
+        "A": "Pragmatism",
+        "B": "Monism",
+        "C": "Essentialism",
+        "D": "Empiricism",
+        "E": "Montanism"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Pragmatism is closely associated with Instrumentalism, Functionalism, and Experimentalism - all emphasizing practical consequences and real-world application as the test of truth."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0243",
+      "type": "mcq",
+      "stem": "The theory that holds that moral judgements are mere expressions of one's emotions, convictions and feelings is called __________",
+      "options": {
+        "A": "Emotionism",
+        "B": "Fatalism",
+        "C": "Pragmatism",
+        "D": "Emotivism",
+        "E": "Idealism"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Emotivism is a meta-ethical theory holding that moral statements do not express objective truths but simply convey the speaker's emotional attitudes or feelings."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0244",
+      "type": "mcq",
+      "stem": "Tai Solarin could properly be regarded as a __________",
+      "options": {
+        "A": "Humanist",
+        "B": "Pluralist",
+        "C": "Theist",
+        "D": "Atheist",
+        "E": "Dualist"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Tai Solarin, the renowned Nigerian educationist and social critic, was a known Humanist who championed reason, human dignity, and secular values over religious dogma."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0245",
+      "type": "mcq",
+      "stem": "Pragma means __________",
+      "options": {
+        "A": "Practical effects",
+        "B": "Concentration",
+        "C": "Practice",
+        "D": "Experiment",
+        "E": "Life after death"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "'Pragma' is the Greek word for practical effects or deed. It is the root of Pragmatism - the philosophical tradition that evaluates ideas by their practical consequences."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0246",
+      "type": "mcq",
+      "stem": "The opposite of Relativism is __________",
+      "options": {
+        "A": "Objectivism",
+        "B": "Hedonism",
+        "C": "Subjectivism",
+        "D": "Humanism",
+        "E": "Fascism"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Relativism holds that truth and morality are relative to individuals or cultures. Objectivism is its opposite - the view that truth and moral values are absolute and independent of perspective."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0247",
+      "type": "mcq",
+      "stem": "Another term for Socialism is __________",
+      "options": {
+        "A": "Communism",
+        "B": "Liberalism",
+        "C": "Anarchism",
+        "D": "Sexism",
+        "E": "Fatalism"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Socialism and Communism are closely related and often used interchangeably, though Communism represents the more radical, classless endpoint envisioned by Marxist theory."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0248",
+      "type": "mcq",
+      "stem": "Which of these is not a school of thought in Philosophy?",
+      "options": {
+        "A": "Phenomenalism",
+        "B": "Perennialism",
+        "C": "Monism",
+        "D": "Fascism",
+        "E": "Montanism"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Montanism was an early Christian prophetic movement, not a philosophical school of thought. All others - Phenomenalism, Perennialism, Monism, and Fascism - are recognized philosophical or ideological traditions."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0249",
+      "type": "mcq",
+      "stem": "The opposite of Progressivism is __________",
+      "options": {
+        "A": "Conservatism",
+        "B": "Instrumentalism",
+        "C": "Experimentalism",
+        "D": "Libertarianism",
+        "E": "Totalitarianism"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Progressivism advocates for social reform and advancement. Conservatism is its ideological opposite - favoring tradition, stability, and resistance to rapid change."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0250",
+      "type": "mcq",
+      "stem": "The opposite of Monism is __________",
+      "options": {
+        "A": "Rationalism",
+        "B": "Theism",
+        "C": "Dualism",
+        "D": "Skepticism",
+        "E": "Empiricism"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Monism holds that reality is composed of one fundamental substance. Dualism is its opposite - holding that reality consists of two distinct substances, typically mind and matter."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0251",
+      "type": "mcq",
+      "stem": "In the field of Logic, one of the following names is odd. Which one?",
+      "options": {
+        "A": "Frege",
+        "B": "Machiavelli",
+        "C": "Whitehead",
+        "D": "Russell",
+        "E": "Aristotle"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Frege, Whitehead, Russell, and Aristotle are all major contributors to the field of Logic. Machiavelli was a political philosopher, not a logician - making him the odd one out."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0252",
+      "type": "mcq",
+      "stem": "The study of Logic is instrumental to the avoidance of __________ in reasoning.",
+      "options": {
+        "A": "Loopholes",
+        "B": "Errors",
+        "C": "All of the above",
+        "D": "Faults",
+        "E": "Mistakes"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Logic helps us avoid all forms of error, faults, loopholes, and mistakes in reasoning by providing systematic rules for valid and sound argumentation."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0253",
+      "type": "mcq",
+      "stem": "The law which states that a proposition must either be true or false is __________",
+      "options": {
+        "A": "Included Middle",
+        "B": "Contradiction",
+        "C": "Excluded Middle",
+        "D": "Identity",
+        "E": "Non-contradiction"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Law of Excluded Middle states that for any proposition, it must be either true or false - there is no middle ground or third option."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0254",
+      "type": "mcq",
+      "stem": "The law of contradiction could also be referred to as the law of __________",
+      "options": {
+        "A": "Non-contradiction",
+        "B": "Nature",
+        "C": "Karma",
+        "D": "Included Middle",
+        "E": "Thought"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Law of Contradiction and the Law of Non-contradiction are the same principle - a proposition cannot be both true and false simultaneously."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0255",
+      "type": "mcq",
+      "stem": "The landmarks of a good argument are coherence and __________",
+      "options": {
+        "A": "Consistency",
+        "B": "Permanence",
+        "C": "Constancy",
+        "D": "Perseverance",
+        "E": "Penitence"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A good argument must be both coherent (logically structured) and consistent (free from internal contradictions). These are the two hallmarks of sound philosophical argumentation."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0256",
+      "type": "mcq",
+      "stem": "Logic can be regarded as both a branch and a __________ of philosophy.",
+      "options": {
+        "A": "Basis",
+        "B": "Rudiment",
+        "C": "Father",
+        "D": "Fundamental",
+        "E": "Tool"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Logic is unique in that it functions both as a formal branch of philosophy and as a practical tool used across all other branches for rigorous and valid reasoning."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0257",
+      "type": "mcq",
+      "stem": "The main object of Logic is __________",
+      "options": {
+        "A": "Thinking",
+        "B": "Teaching",
+        "C": "Faith",
+        "D": "Practice",
+        "E": "Music"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The primary object of Logic is thinking - specifically, the study of correct, valid, and structured forms of thought and argumentation."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0258",
+      "type": "mcq",
+      "stem": "The first principles/axioms which underlie all human thinking processes and discourses are __________",
+      "options": {
+        "A": "Laws of Karma",
+        "B": "Fundamental Laws of Magnetism",
+        "C": "Laws of Thought",
+        "D": "Mosaic Laws",
+        "E": "Natural Laws"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Laws of Thought - Identity, Contradiction, and Excluded Middle - are the foundational axioms that underlie all logical reasoning and human discourse."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0259",
+      "type": "mcq",
+      "stem": "Logic exposes students to the acquisition of __________",
+      "options": {
+        "A": "Knowledge of correct reasoning",
+        "B": "Nature of correct reasoning",
+        "C": "Principles of correct reasoning",
+        "D": "Methods of correct reasoning",
+        "E": "All of the above"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Logic comprehensively equips students with the knowledge, nature, principles, and methods of correct reasoning - all aspects are covered."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0260",
+      "type": "mcq",
+      "stem": "Logic connotes a __________",
+      "options": {
+        "A": "Course",
+        "B": "Mathematical rigor",
+        "C": "Battle",
+        "D": "Reasoned discourse",
+        "E": "An argument"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Derived from the Greek 'logikos,' Logic connotes reasoned discourse - the structured, rational exchange and analysis of ideas and arguments."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0261",
+      "type": "mcq",
+      "stem": "Which of these disciplines does not make use of Logic?",
+      "options": {
+        "A": "History",
+        "B": "Philosophy",
+        "C": "None",
+        "D": "Sociology",
+        "E": "Psychology"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Logic is universally applicable - History, Philosophy, Sociology, Psychology, and all other disciplines make use of logical reasoning in their methods and analysis."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0262",
+      "type": "mcq",
+      "stem": "Another name given to Formal Logic is __________",
+      "options": {
+        "A": "Quantificational Logic",
+        "B": "Symbolic Logic",
+        "C": "Traditional Logic",
+        "D": "Material Logic",
+        "E": "Propositional Logic"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Formal Logic is also known as Symbolic Logic because it uses symbols and formal notation to represent logical forms and evaluate arguments."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0263",
+      "type": "mcq",
+      "stem": "Another name for Aristotelian Logic is __________",
+      "options": {
+        "A": "Formal Logic",
+        "B": "Traditional Logic",
+        "C": "Original Logic",
+        "D": "Symbolic Logic",
+        "E": "Athenian Logic"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Aristotelian Logic is called Traditional Logic because it represents the classical, pre-modern system of logic developed by Aristotle and used for centuries before modern symbolic logic."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0264",
+      "type": "mcq",
+      "stem": "The law which states that a proposition cannot be both true and not true at the same time is __________",
+      "options": {
+        "A": "Contradiction",
+        "B": "Included Middle",
+        "C": "Identity",
+        "D": "Contraposition",
+        "E": "Excluded Middle"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Law of Contradiction states that a proposition and its negation cannot both be true simultaneously - symbolically represented as p·~p."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0265",
+      "type": "mcq",
+      "stem": "The law of thought which states that if a proposition is true, then it is true is __________",
+      "options": {
+        "A": "Contradiction",
+        "B": "Excluded Middle",
+        "C": "Identity",
+        "D": "Included Middle",
+        "E": "Non-contradiction"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Law of Identity states that a thing is what it is - if a proposition is true, it is true. Symbolically: p = p. It is the most basic principle of logical consistency."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0266",
+      "type": "mcq",
+      "stem": "Logic helps us to __________",
+      "options": {
+        "A": "Make predictions with precision",
+        "B": "Identify and eliminate errors in our reasoning",
+        "C": "Take rational and cogent decisions",
+        "D": "Clarify and evaluate our utterances/language",
+        "E": "All of the above"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Logic serves multiple essential functions - it helps us make precise predictions, eliminate reasoning errors, take rational decisions, and clarify our language and arguments."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0267",
+      "type": "mcq",
+      "stem": "Logic is found useful in __________",
+      "options": {
+        "A": "Education",
+        "B": "Business",
+        "C": "Politics",
+        "D": "Law",
+        "E": "All of the above"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "Logic is universally useful - it enhances critical thinking in education, strategic decision-making in business, policy analysis in politics, and argumentation in law."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0268",
+      "type": "mcq",
+      "stem": "A philosopher known for existentialism is:",
+      "options": {
+        "A": "Jean-Paul Sartre",
+        "B": "Aristotle",
+        "C": "Plato",
+        "D": "Bacon"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Jean-Paul Sartre is the most prominent 20th-century existentialist philosopher, known for works like 'Being and Nothingness' and for coining the phrase 'existence precedes essence.'"
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0269",
+      "type": "mcq",
+      "stem": "Which of the following does not fall into the purview of philosophy?",
+      "options": {
+        "A": "The Nature of Reality",
+        "B": "The Nature of Truth",
+        "C": "The Nature of Knowledge",
+        "D": "The Realm of Values",
+        "E": "None of the above"
+      },
+      "marks": 1,
+      "answer": "E",
+      "explanation": "All listed areas - reality, truth, knowledge, and values - fall squarely within philosophy's scope. Philosophy encompasses all of these through Metaphysics, Epistemology, and Axiology."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0270",
+      "type": "mcq",
+      "stem": "One of the following is not an applied aspect of philosophy.",
+      "options": {
+        "A": "Philosophy of Religion",
+        "B": "Philosophy of Law",
+        "C": "None of the above",
+        "D": "Philosophy of Education",
+        "E": "Philosophy of Science"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Philosophy of Religion, Law, Education, and Science are all recognized applied aspects of philosophy. None of the listed options falls outside the applied domain of philosophy."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0271",
+      "type": "mcq",
+      "stem": "Epistemology is a branch of philosophy which studies __________",
+      "options": {
+        "A": "Beings",
+        "B": "Supernatural forces",
+        "C": "God",
+        "D": "Knowledge",
+        "E": "Essence"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Epistemology - derived from the Greek 'episteme' (knowledge) - is the branch of philosophy that studies the nature, origin, scope, and validity of knowledge."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0272",
+      "type": "mcq",
+      "stem": "Which aspect of philosophy deals with the etiquettes and conducts of people in society?",
+      "options": {
+        "A": "Metaphysics",
+        "B": "Cosmology",
+        "C": "Ethics",
+        "D": "Logic",
+        "E": "Epistemology"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Ethics (also called Moral Philosophy) deals with questions of human conduct, moral standards, and the values that govern behavior in society."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0273",
+      "type": "mcq",
+      "stem": "A syllogism contains:",
+      "options": {
+        "A": "Two conclusions",
+        "B": "Three premises",
+        "C": "Two premises and one conclusion",
+        "D": "One premise and two conclusions"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A standard syllogism is composed of exactly two premises (a major and a minor) and one conclusion that follows necessarily from them."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0274",
+      "type": "mcq",
+      "stem": "In a syllogism, the statement that contains the predicate of the conclusion is:",
+      "options": {
+        "A": "Minor premise",
+        "B": "Major premise",
+        "C": "Minor term",
+        "D": "Middle term"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The major premise contains the major term, which becomes the predicate of the conclusion in a standard categorical syllogism."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0275",
+      "type": "mcq",
+      "stem": "Which law states that a thing is identical with itself?",
+      "options": {
+        "A": "Law of excluded middle",
+        "B": "Law of identity",
+        "C": "Law of contradiction",
+        "D": "Law of inference"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Law of Identity asserts that every entity is identical to itself - A is A. It is the most fundamental axiom of classical logic."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0276",
+      "type": "mcq",
+      "stem": "Which of the following is a human value?",
+      "options": {
+        "A": "Dishonesty",
+        "B": "Integrity",
+        "C": "Hatred",
+        "D": "Violence"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Integrity is a core human value encompassing honesty, consistency of moral principles, and adherence to ethical standards in conduct."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0277",
+      "type": "mcq",
+      "stem": "Philosophy and politics are related because philosophy:",
+      "options": {
+        "A": "Influences political ideas",
+        "B": "Stops leadership",
+        "C": "Rejects governance",
+        "D": "Avoids justice"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Political philosophy examines foundational concepts like justice, authority, and governance - directly influencing political ideologies and the design of political systems."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0278",
+      "type": "mcq",
+      "stem": "In an argument, premises are:",
+      "options": {
+        "A": "Final answers",
+        "B": "Supporting statements",
+        "C": "Assumptions only",
+        "D": "Conclusions"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Premises are the foundational statements in an argument that provide evidence and logical support for the conclusion."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0279",
+      "type": "mcq",
+      "stem": "Which of the following is NOT part of a syllogism?",
+      "options": {
+        "A": "Major premise",
+        "B": "Minor premise",
+        "C": "Conclusion",
+        "D": "Hypothesis"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "A syllogism consists of a major premise, a minor premise, and a conclusion. A hypothesis is a separate concept used in scientific and inductive reasoning, not in syllogistic structure."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0280",
+      "type": "mcq",
+      "stem": "The opposite of a valid argument is:",
+      "options": {
+        "A": "Sound argument",
+        "B": "Invalid argument",
+        "C": "Strong argument",
+        "D": "Deduction"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Validity is a binary property in classical logic - an argument is either valid (conclusion necessarily follows from premises) or invalid (it does not)."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0281",
+      "type": "mcq",
+      "stem": "Logic of form focuses on:",
+      "options": {
+        "A": "Emotional expression",
+        "B": "Structure of argument",
+        "C": "Political reasoning",
+        "D": "Human behavior"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Formal logic (logic of form) is concerned with the structural validity of arguments - whether the conclusion follows from the premises based on the argument's form, regardless of content."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0282",
+      "type": "mcq",
+      "stem": "Logic of content focuses on:",
+      "options": {
+        "A": "Meaning and truth of statements",
+        "B": "Symbols only",
+        "C": "Grammar only",
+        "D": "Diagrams only"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Informal or material logic (logic of content) evaluates the actual meaning, relevance, and truth of the statements used in an argument, not just their structural form."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0283",
+      "type": "mcq",
+      "stem": "Which branch of philosophy studies the existence of God?",
+      "options": {
+        "A": "Metaphysics",
+        "B": "Grammar",
+        "C": "Agriculture",
+        "D": "Economics"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Theology, as a sub-branch of Metaphysics, studies the existence and nature of God. Metaphysics is thus the broader branch that encompasses inquiry into the divine."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0284",
+      "type": "mcq",
+      "stem": "Accountability in leadership means:",
+      "options": {
+        "A": "Avoiding responsibility",
+        "B": "Being answerable for actions",
+        "C": "Seeking power only",
+        "D": "Ignoring followers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Accountability requires that leaders are answerable for their decisions and actions - a key ethical principle in governance and organizational leadership."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0285",
+      "type": "mcq",
+      "stem": "Which fallacy appeals to emotion instead of reason?",
+      "options": {
+        "A": "Appeal to pity",
+        "B": "Modus tollens",
+        "C": "Deduction",
+        "D": "Identity law"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Appeal to pity (argumentum ad misericordiam) is an informal fallacy that attempts to win an argument by evoking sympathy rather than presenting logical evidence."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0286",
+      "type": "mcq",
+      "stem": "The middle term in a syllogism appears:",
+      "options": {
+        "A": "Only in conclusion",
+        "B": "In both premises only",
+        "C": "In all statements",
+        "D": "Nowhere"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The middle term is the linking concept that appears in both the major and minor premises but is absent from the conclusion, allowing the inference to be drawn."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0287",
+      "type": "mcq",
+      "stem": "Philosophy and religion both seek:",
+      "options": {
+        "A": "Wealth",
+        "B": "Understanding of existence and truth",
+        "C": "Political power",
+        "D": "Entertainment"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Despite different methods, both philosophy and religion are fundamentally concerned with questions about existence, truth, meaning, and the nature of reality."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0288",
+      "type": "mcq",
+      "stem": "Which method is mostly used in scientific investigations?",
+      "options": {
+        "A": "Induction",
+        "B": "Deduction only",
+        "C": "Guesswork",
+        "D": "Emotion"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Science primarily uses inductive reasoning - drawing general conclusions and laws from specific observations and experimental data."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0289",
+      "type": "mcq",
+      "stem": "The statement 'Some students are intelligent' is:",
+      "options": {
+        "A": "Universal proposition",
+        "B": "Particular proposition",
+        "C": "Contradiction",
+        "D": "Fallacy"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A particular proposition refers to some (not all) members of a category. 'Some students are intelligent' makes a claim about a subset, not all students."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0290",
+      "type": "mcq",
+      "stem": "Philosophy promotes leadership through:",
+      "options": {
+        "A": "Ethical reasoning and accountability",
+        "B": "Violence",
+        "C": "Corruption",
+        "D": "Tribalism"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Philosophy equips leaders with ethical reasoning frameworks and principles of accountability, enabling responsible and just governance."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0291",
+      "type": "mcq",
+      "stem": "The law of identity can be represented as:",
+      "options": {
+        "A": "p ∨ p",
+        "B": "p → p",
+        "C": "p ≡ p",
+        "D": "p ∧ q"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Law of Identity is symbolically expressed as p ≡ p (p is equivalent to p), asserting that every proposition is identical to itself."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0292",
+      "type": "mcq",
+      "stem": "The law of excluded middle is symbolically represented as:",
+      "options": {
+        "A": "p ∧ ¬p",
+        "B": "p ∨ ¬p",
+        "C": "p → q",
+        "D": "¬p → p"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Law of Excluded Middle states that for any proposition p, either p or its negation must be true - symbolized as p ∨ ¬p."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0293",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a concept in logic?",
+      "options": {
+        "A": "Sorite",
+        "B": "Enthymeme",
+        "C": "Syllogism",
+        "D": "Faith"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Sorite, Enthymeme, and Syllogism are all formal logical concepts. Faith belongs to theology and religion, not to the discipline of logic."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0294",
+      "type": "mcq",
+      "stem": "Propositions can either be categorical or:",
+      "options": {
+        "A": "Hypothetical",
+        "B": "Hypercritical",
+        "C": "Hyperthetical",
+        "D": "None"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "In logic, propositions are classified as either categorical (asserting something unconditionally) or hypothetical (asserting something conditionally, using 'if…then' structure)."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0295",
+      "type": "mcq",
+      "stem": "In proper classification, propositions can be:",
+      "options": {
+        "A": "Universal and Affirmative",
+        "B": "Particular and Negative",
+        "C": "Both a and b",
+        "D": "All of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Propositions are classified by quantity (universal or particular) and quality (affirmative or negative), producing four types: universal affirmative (A), universal negative (E), particular affirmative (I), and particular negative (O)."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0296",
+      "type": "mcq",
+      "stem": "When a syllogism is condensed, it becomes:",
+      "options": {
+        "A": "A syllogistic fallacy",
+        "B": "A syllogistic compression",
+        "C": "An enthymeme",
+        "D": "A fallacy"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "An enthymeme is an abbreviated syllogism in which one of the premises or the conclusion is left unstated because it is implied or understood from context."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0297",
+      "type": "mcq",
+      "stem": "When an argument is not invalid, then it is:",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "Valid",
+        "D": "Unsound"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In classical logic, validity is binary - an argument is either valid or invalid. If it is not invalid, it must be valid."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0298",
+      "type": "mcq",
+      "stem": "The most basic components of a syllogism are:",
+      "options": {
+        "A": "Congruents",
+        "B": "Terms",
+        "C": "Premises",
+        "D": "Conclusions"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In Aristotelian logic, terms (the subject and predicate expressions) are the most basic components of a syllogism - they are combined into propositions which form the premises."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0299",
+      "type": "mcq",
+      "stem": "Regarding validity, which of the following correctly describes it?",
+      "options": {
+        "A": "True premises",
+        "B": "False conclusion",
+        "C": "True premises + false conclusion",
+        "D": "None of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Validity is a structural property of argument form - it does not require the premises to be true. A valid argument is one where, IF the premises were true, the conclusion could not be false."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0300",
+      "type": "mcq",
+      "stem": "An inductive argument gives:",
+      "options": {
+        "A": "Certainty",
+        "B": "Additional information",
+        "C": "Absolute truth",
+        "D": "No conclusion"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Inductive arguments go beyond what is strictly contained in the premises, providing probable generalizations and additional information about unobserved cases."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0301",
+      "type": "mcq",
+      "stem": "Consider: 'If God exists, then no human is immortal. God exists. Therefore…'",
+      "options": {
+        "A": "Humans are immortal",
+        "B": "No human is immortal",
+        "C": "God is immortal",
+        "D": "None"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "This is an application of Modus Ponens: given 'If P then Q' and 'P', we conclude 'Q'. Since God exists (P), we conclude no human is immortal (Q)."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0302",
+      "type": "mcq",
+      "stem": "The assumption behind induction is:",
+      "options": {
+        "A": "Future resembles past",
+        "B": "Past resembles future",
+        "C": "Truth is constant",
+        "D": "None"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Inductive reasoning relies on the principle of the uniformity of nature - that the future will resemble the past and observed patterns will continue."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0303",
+      "type": "mcq",
+      "stem": "Hypothetical syllogism is:",
+      "options": {
+        "A": "Deductive reasoning",
+        "B": "Inductive reasoning",
+        "C": "Informal reasoning",
+        "D": "None"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Hypothetical syllogism is a deductive argument form: if P → Q and Q → R, then P → R. The conclusion follows necessarily from the premises."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0304",
+      "type": "mcq",
+      "stem": "Which of the following is a fallacy?",
+      "options": {
+        "A": "Enthymeme",
+        "B": "Argument",
+        "C": "Syllogism",
+        "D": "False cause"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "False cause (post hoc) is an informal fallacy that incorrectly assumes a causal relationship between two events simply because one followed the other."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0305",
+      "type": "mcq",
+      "stem": "A valid argument must have:",
+      "options": {
+        "A": "True conclusion",
+        "B": "True premises",
+        "C": "Logical structure",
+        "D": "False premises"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Validity is purely a matter of logical structure (form). An argument is valid when its form guarantees that a true conclusion follows from true premises, regardless of whether the premises are actually true."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0306",
+      "type": "mcq",
+      "stem": "Deduction guarantees:",
+      "options": {
+        "A": "Possibility",
+        "B": "Probability",
+        "C": "Certainty (if valid)",
+        "D": "Guess"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A valid deductive argument with true premises (a sound argument) guarantees that the conclusion is certainly true - this is the defining feature of deduction."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0307",
+      "type": "mcq",
+      "stem": "Induction leads to:",
+      "options": {
+        "A": "Certainty",
+        "B": "Probability",
+        "C": "Impossibility",
+        "D": "Falsehood"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Inductive conclusions are never logically certain - they are probable based on the available evidence, since new observations could always overturn the generalization."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0308",
+      "type": "mcq",
+      "stem": "In some academic traditions, Logic is referred to as the 'Queen of sciences' because:",
+      "options": {
+        "A": "It underlies the reasoning process of all other disciplines",
+        "B": "It is the oldest branch of philosophy",
+        "C": "It studies the most abstract concepts",
+        "D": "It was developed by Aristotle"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Logic is foundational to all other disciplines - every field relies on correct reasoning, making Logic the universal tool that underlies all scientific and philosophical inquiry."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0309",
+      "type": "mcq",
+      "stem": "Who was the teacher of Plato?",
+      "options": {
+        "A": "Aristotle",
+        "B": "Socrates",
+        "C": "Descartes",
+        "D": "Kant"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Socrates was Plato's teacher and greatest philosophical influence. Plato documented many of Socrates' dialogues and built his philosophical system upon Socratic foundations."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0310",
+      "type": "mcq",
+      "stem": "Who was the student of Plato?",
+      "options": {
+        "A": "Aristotle",
+        "B": "Socrates",
+        "C": "Hume",
+        "D": "Pythagoras"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Aristotle studied at Plato's Academy for about twenty years. He later departed to found his own school, the Lyceum, and developed his own distinct philosophical system."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0311",
+      "type": "mcq",
+      "stem": "The philosopher associated with empiricism is:",
+      "options": {
+        "A": "Plato",
+        "B": "Descartes",
+        "C": "John Locke",
+        "D": "Hegel"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "John Locke is the foremost British empiricist, famous for his concept of tabula rasa and his argument that all knowledge originates from sensory experience."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0312",
+      "type": "mcq",
+      "stem": "Which philosopher is associated with rationalism?",
+      "options": {
+        "A": "David Hume",
+        "B": "John Locke",
+        "C": "René Descartes",
+        "D": "Francis Bacon"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "René Descartes is the father of modern rationalism, famous for 'Cogito, ergo sum' (I think, therefore I am) and his method of systematic doubt to establish certain knowledge through reason."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0313",
+      "type": "mcq",
+      "stem": "'Because nobody has proved it false, it must be true' is an example of:",
+      "options": {
+        "A": "Appeal to Ignorance",
+        "B": "Ad Hominem",
+        "C": "Hasty Generalization",
+        "D": "Circular Reasoning"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Appeal to Ignorance (argumentum ad ignorantiam) falsely concludes that something is true simply because it has not been proven false, or false because it has not been proven true."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0314",
+      "type": "mcq",
+      "stem": "The central concern of existentialism is:",
+      "options": {
+        "A": "Human freedom",
+        "B": "Agriculture",
+        "C": "Politics",
+        "D": "Technology"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Existentialism places human freedom, individual choice, and the quest for authentic meaning at the center of its philosophical inquiry."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0315",
+      "type": "mcq",
+      "stem": "Existentialists believe that:",
+      "options": {
+        "A": "Humans create meaning in their lives",
+        "B": "Meaning is fixed by society",
+        "C": "Knowledge is impossible",
+        "D": "Freedom does not exist"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Existentialism holds that existence precedes essence - human beings are not born with a fixed purpose; they must create their own meaning through choices and actions."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0316",
+      "type": "mcq",
+      "stem": "Which philosopher said 'Existence precedes essence'?",
+      "options": {
+        "A": "Plato",
+        "B": "Aristotle",
+        "C": "Sartre",
+        "D": "Hume"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Jean-Paul Sartre's dictum 'existence precedes essence' is the defining statement of existentialism - humans exist first and then define themselves through their choices."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0317",
+      "type": "mcq",
+      "stem": "The term 'logos' means:",
+      "options": {
+        "A": "Speech, reason, or word",
+        "B": "Beauty",
+        "C": "Morality",
+        "D": "Knowledge"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "'Logos' is the Greek term meaning speech, reason, or word. It is the etymological root of 'logic' and related terms across philosophy and linguistics."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0318",
+      "type": "mcq",
+      "stem": "An argument with true premises and a false conclusion is:",
+      "options": {
+        "A": "Valid",
+        "B": "Invalid",
+        "C": "Sound",
+        "D": "Cogent"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "By definition, a valid argument cannot have true premises and a false conclusion. If such a case occurs, the argument is necessarily invalid."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0319",
+      "type": "mcq",
+      "stem": "Which philosopher wrote Meditations?",
+      "options": {
+        "A": "Descartes",
+        "B": "Plato",
+        "C": "Aristotle",
+        "D": "Kant"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "René Descartes wrote 'Meditations on First Philosophy' (1641), in which he systematically doubted everything to find indubitable foundations for knowledge."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0320",
+      "type": "mcq",
+      "stem": "Philosophy originated in:",
+      "options": {
+        "A": "Greece",
+        "B": "Egypt",
+        "C": "Rome",
+        "D": "India"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Western philosophy is traditionally traced to ancient Greece, beginning with the pre-Socratic thinkers such as Thales of Miletus in the 6th century BCE."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0321",
+      "type": "mcq",
+      "stem": "The branch of metaphysics that studies the universe is:",
+      "options": {
+        "A": "Cosmology",
+        "B": "Ethics",
+        "C": "Logic",
+        "D": "Epistemology"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Cosmology, as a sub-branch of Metaphysics, studies the origin, structure, nature, and dynamics of the universe as a whole."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0322",
+      "type": "mcq",
+      "stem": "Ontology is the study of:",
+      "options": {
+        "A": "Being and existence",
+        "B": "Morality",
+        "C": "Beauty",
+        "D": "Language"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Ontology is the sub-branch of Metaphysics that investigates the fundamental nature of being, existence, and reality - what things exist and what categories of being there are."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0323",
+      "type": "mcq",
+      "stem": "Which of the following is an informal fallacy?",
+      "options": {
+        "A": "Modus Ponens",
+        "B": "Modus Tollens",
+        "C": "Ad Populum",
+        "D": "Hypothetical Syllogism"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Ad Populum (appeal to the people) is an informal fallacy. Modus Ponens, Modus Tollens, and Hypothetical Syllogism are valid deductive inference rules, not fallacies."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0324",
+      "type": "mcq",
+      "stem": "Ad Populum means:",
+      "options": {
+        "A": "Appeal to force",
+        "B": "Appeal to popularity",
+        "C": "Appeal to pity",
+        "D": "Appeal to ignorance"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ad Populum (to the people) is the fallacy of arguing that something is correct because it is popular or widely believed - popularity is not a measure of truth."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0325",
+      "type": "mcq",
+      "stem": "A philosopher who emphasized observation and experimentation was:",
+      "options": {
+        "A": "Francis Bacon",
+        "B": "Plato",
+        "C": "Socrates",
+        "D": "Kant"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Francis Bacon championed empirical observation and the inductive scientific method, arguing that knowledge must be built from systematic observation and experimentation."
+    },
+    {
+      "id": "uni-tasued-gst212-bank-0326",
+      "type": "mcq",
+      "stem": "The law stating that a thing cannot both be and not be at the same time is:",
+      "options": {
+        "A": "Identity",
+        "B": "Non-Contradiction",
+        "C": "Excluded Middle",
+        "D": "Causality"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Law of Non-Contradiction asserts that a proposition and its negation cannot both be true simultaneously - nothing can both exist and not exist in the same respect at the same time."
+    }
+  ]
+}

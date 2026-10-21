@@ -1,0 +1,1369 @@
+{
+ "code": "waec-economics-sun-bank",
+ "title": "WAEC Server | SSCE Bank",
+ "version": 1,
+ "questionCount": 97,
+ "totalMarks": 97,
+ "questions": [
+  {
+   "id": "waec-server-scripts-economics-sun-0000",
+   "type": "mcq",
+   "stem": "What is the study of economics primarily concerned with?",
+   "options": {
+    "A": "Allocation of scarce resources",
+    "B": "Production of goods only",
+    "C": "Distribution of wealth",
+    "D": "Consumption of services"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Economics studies how scarce resources are allocated to meet unlimited human wants."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0001",
+   "type": "mcq",
+   "stem": "Which of the following is a basic economic problem?",
+   "options": {
+    "A": "Unlimited resources",
+    "B": "Scarcity",
+    "C": "Excess production",
+    "D": "Overpopulation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Scarcity, the limited availability of resources relative to wants, is a fundamental economic problem."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0002",
+   "type": "mcq",
+   "stem": "What is the term for the satisfaction derived from consuming a good or service?",
+   "options": {
+    "A": "Profit",
+    "B": "Utility",
+    "C": "Revenue",
+    "D": "Cost"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Utility refers to the satisfaction or benefit derived from consuming a good or service."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0003",
+   "type": "mcq",
+   "stem": "Which type of economy relies primarily on customs and traditions?",
+   "options": {
+    "A": "Market economy",
+    "B": "Traditional economy",
+    "C": "Mixed economy",
+    "D": "Command economy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A traditional economy is guided by customs, traditions, and beliefs."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0004",
+   "type": "mcq",
+   "stem": "What is the term for the quantity of a good consumers are willing to buy at a given price?",
+   "options": {
+    "A": "Supply",
+    "B": "Demand",
+    "C": "Production",
+    "D": "Consumption"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Demand is the quantity of a good or service consumers are willing and able to buy at a specific price."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0005",
+   "type": "mcq",
+   "stem": "Which factor causes a shift in the demand curve?",
+   "options": {
+    "A": "Change in price",
+    "B": "Change in income",
+    "C": "Change in quantity supplied",
+    "D": "Change in production cost"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A change in income shifts the demand curve, while a change in price causes movement along the curve."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0006",
+   "type": "mcq",
+   "stem": "What is the term for the price at which quantity demanded equals quantity supplied?",
+   "options": {
+    "A": "Market price",
+    "B": "Equilibrium price",
+    "C": "Reserve price",
+    "D": "Ceiling price"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The equilibrium price balances the quantity demanded and supplied in a market."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0007",
+   "type": "mcq",
+   "stem": "Which of the following is a determinant of supply?",
+   "options": {
+    "A": "Consumer income",
+    "B": "Production cost",
+    "C": "Consumer preferences",
+    "D": "Population size"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Production cost affects the willingness and ability of producers to supply goods."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0008",
+   "type": "mcq",
+   "stem": "What is the effect of a price ceiling below the equilibrium price?",
+   "options": {
+    "A": "Surplus",
+    "B": "Shortage",
+    "C": "No effect",
+    "D": "Increased supply"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A price ceiling below equilibrium causes a shortage, as demand exceeds supply."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0009",
+   "type": "mcq",
+   "stem": "Which type of market structure has many firms selling identical products?",
+   "options": {
+    "A": "Monopoly",
+    "B": "Oligopoly",
+    "C": "Perfect competition",
+    "D": "Monopolistic competition"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Perfect competition features many firms selling identical products with no control over price."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0010",
+   "type": "mcq",
+   "stem": "What is the term for the total revenue minus total cost of a firm?",
+   "options": {
+    "A": "Loss",
+    "B": "Profit",
+    "C": "Income",
+    "D": "Dividend"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Profit is the difference between total revenue and total cost."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0011",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a monopoly?",
+   "options": {
+    "A": "Many sellers",
+    "B": "Identical products",
+    "C": "Single seller",
+    "D": "Free entry"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "A monopoly has a single seller controlling the market with significant barriers to entry."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0012",
+   "type": "mcq",
+   "stem": "What is the term for the responsiveness of demand to a change in price?",
+   "options": {
+    "A": "Elasticity of supply",
+    "B": "Price elasticity of demand",
+    "C": "Income elasticity",
+    "D": "Cross elasticity"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Price elasticity of demand measures how sensitive demand is to a change in price."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0013",
+   "type": "mcq",
+   "stem": "Which of the following goods has inelastic demand?",
+   "options": {
+    "A": "Luxury cars",
+    "B": "Salt",
+    "C": "Fashion clothing",
+    "D": "Electronics"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Salt has inelastic demand because it is a necessity with few substitutes."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0014",
+   "type": "mcq",
+   "stem": "What is the term for the cost of the next best alternative foregone?",
+   "options": {
+    "A": "Marginal cost",
+    "B": "Opportunity cost",
+    "C": "Fixed cost",
+    "D": "Variable cost"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Opportunity cost is the value of the next best alternative given up when making a choice."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0015",
+   "type": "mcq",
+   "stem": "Which sector of the economy involves manufacturing and processing?",
+   "options": {
+    "A": "Primary sector",
+    "B": "Secondary sector",
+    "C": "Tertiary sector",
+    "D": "Quaternary sector"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The secondary sector involves manufacturing and processing raw materials into finished goods."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0016",
+   "type": "mcq",
+   "stem": "What is the term for the total value of goods and services produced in a country in a year?",
+   "options": {
+    "A": "Net income",
+    "B": "Gross domestic product",
+    "C": "National debt",
+    "D": "Balance of payments"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Gross domestic product (GDP) measures the total value of goods and services produced in a country."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0017",
+   "type": "mcq",
+   "stem": "Which of the following is a measure of economic growth?",
+   "options": {
+    "A": "Inflation rate",
+    "B": "Unemployment rate",
+    "C": "GDP growth rate",
+    "D": "Interest rate"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "GDP growth rate measures the increase in a country’s economic output over time."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0018",
+   "type": "mcq",
+   "stem": "What is the term for a general increase in prices across an economy?",
+   "options": {
+    "A": "Deflation",
+    "B": "Inflation",
+    "C": "Recession",
+    "D": "Depression"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Inflation is a sustained increase in the general price level of goods and services."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0019",
+   "type": "mcq",
+   "stem": "Which policy uses government spending and taxation to influence the economy?",
+   "options": {
+    "A": "Monetary policy",
+    "B": "Fiscal policy",
+    "C": "Trade policy",
+    "D": "Industrial policy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Fiscal policy involves government spending and taxation to manage economic activity."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0020",
+   "type": "mcq",
+   "stem": "What is the term for the rate at which a central bank lends to commercial banks?",
+   "options": {
+    "A": "Inflation rate",
+    "B": "Discount rate",
+    "C": "Exchange rate",
+    "D": "Interest rate"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The discount rate is the interest rate charged by a central bank to commercial banks."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0022",
+   "type": "mcq",
+   "stem": "What is the term for a situation where a country imports more than it exports?",
+   "options": {
+    "A": "Trade surplus",
+    "B": "Trade deficit",
+    "C": "Balance of trade",
+    "D": "Current account surplus"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A trade deficit occurs when imports exceed exports."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0023",
+   "type": "mcq",
+   "stem": "Which of the following is a renewable resource?",
+   "options": {
+    "A": "Coal",
+    "B": "Oil",
+    "C": "Solar energy",
+    "D": "Natural gas"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Solar energy is renewable as it is derived from the sun, an inexhaustible source."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0024",
+   "type": "mcq",
+   "stem": "What is the term for the total income earned by factors of production in a country?",
+   "options": {
+    "A": "Gross domestic product",
+    "B": "National income",
+    "C": "Net profit",
+    "D": "Balance of payments"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "National income is the total income earned by a country’s factors of production."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0025",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a mixed economy?",
+   "options": {
+    "A": "Only private ownership",
+    "B": "Only government control",
+    "C": "Both private and public sectors",
+    "D": "No trade"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "A mixed economy combines private and public sector involvement."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0026",
+   "type": "mcq",
+   "stem": "What is the term for the cost incurred in producing one additional unit of output?",
+   "options": {
+    "A": "Fixed cost",
+    "B": "Variable cost",
+    "C": "Marginal cost",
+    "D": "Total cost"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Marginal cost is the additional cost of producing one more unit of output."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0028",
+   "type": "mcq",
+   "stem": "What is the term for the rate at which one currency is exchanged for another?",
+   "options": {
+    "A": "Interest rate",
+    "B": "Exchange rate",
+    "C": "Inflation rate",
+    "D": "Discount rate"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The exchange rate determines the value of one currency in terms of another."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0029",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of perfect competition?",
+   "options": {
+    "A": "Barriers to entry",
+    "B": "Price makers",
+    "C": "Many buyers and sellers",
+    "D": "Single seller"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Perfect competition has many buyers and sellers with no control over price."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0030",
+   "type": "mcq",
+   "stem": "What is the term for a decrease in the general price level?",
+   "options": {
+    "A": "Inflation",
+    "B": "Deflation",
+    "C": "Recession",
+    "D": "Stagflation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Deflation is a sustained decrease in the general price level."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0032",
+   "type": "mcq",
+   "stem": "What is the term for the difference between exports and imports of goods and services?",
+   "options": {
+    "A": "Balance of payments",
+    "B": "Trade balance",
+    "C": "Current account",
+    "D": "Capital account"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The trade balance is the difference between exports and imports of goods and services."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0033",
+   "type": "mcq",
+   "stem": "Which of the following is a measure of income inequality?",
+   "options": {
+    "A": "GDP per capita",
+    "B": "Gini coefficient",
+    "C": "Inflation rate",
+    "D": "Unemployment rate"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Gini coefficient measures the degree of income inequality in a population."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0034",
+   "type": "mcq",
+   "stem": "What is the term for the total demand for goods and services in an economy?",
+   "options": {
+    "A": "Aggregate demand",
+    "B": "Individual demand",
+    "C": "Market demand",
+    "D": "Supply demand"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Aggregate demand is the total demand for goods and services in an economy."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0035",
+   "type": "mcq",
+   "stem": "Which of the following is a tool of monetary policy?",
+   "options": {
+    "A": "Government spending",
+    "B": "Open market operations",
+    "C": "Taxation",
+    "D": "Subsidies"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Open market operations involve buying or selling government securities to control money supply."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0036",
+   "type": "mcq",
+   "stem": "What is the term for a market structure with few large firms?",
+   "options": {
+    "A": "Monopoly",
+    "B": "Oligopoly",
+    "C": "Perfect competition",
+    "D": "Monopolistic competition"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "An oligopoly has a few large firms dominating the market."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0037",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of elastic supply?",
+   "options": {
+    "A": "Fixed production",
+    "B": "Responsive to price changes",
+    "C": "No substitutes",
+    "D": "High production costs"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Elastic supply is highly responsive to changes in price."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0038",
+   "type": "mcq",
+   "stem": "What is the term for the income earned by capital as a factor of production?",
+   "options": {
+    "A": "Wages",
+    "B": "Rent",
+    "C": "Interest",
+    "D": "Profit"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Interest is the income earned by capital in the production process."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0039",
+   "type": "mcq",
+   "stem": "Which of the following is a non-renewable resource?",
+   "options": {
+    "A": "Wind energy",
+    "B": "Coal",
+    "C": "Solar energy",
+    "D": "Hydropower"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Coal is a non-renewable resource as it is finite and depletes over time."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0040",
+   "type": "mcq",
+   "stem": "What is the term for the cost that does not change with output?",
+   "options": {
+    "A": "Variable cost",
+    "B": "Fixed cost",
+    "C": "Marginal cost",
+    "D": "Total cost"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Fixed costs remain constant regardless of the level of output."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0041",
+   "type": "mcq",
+   "stem": "Which of the following is an indirect tax?",
+   "options": {
+    "A": "Income tax",
+    "B": "Value-added tax",
+    "C": "Property tax",
+    "D": "Corporate tax"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Value-added tax is an indirect tax levied on goods and services."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0042",
+   "type": "mcq",
+   "stem": "What is the term for the value of a country’s currency in terms of another currency?",
+   "options": {
+    "A": "Interest rate",
+    "B": "Exchange rate",
+    "C": "Inflation rate",
+    "D": "Discount rate"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The exchange rate is the value of one currency relative to another."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0043",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of monopolistic competition?",
+   "options": {
+    "A": "Identical products",
+    "B": "Single seller",
+    "C": "Product differentiation",
+    "D": "No barriers to entry"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Monopolistic competition features many firms selling differentiated products."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0044",
+   "type": "mcq",
+   "stem": "What is the term for a period of economic decline lasting more than two quarters?",
+   "options": {
+    "A": "Inflation",
+    "B": "Recession",
+    "C": "Deflation",
+    "D": "Stagflation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A recession is a period of economic decline lasting more than two consecutive quarters."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0045",
+   "type": "mcq",
+   "stem": "Which of the following is a function of the central bank?",
+   "options": {
+    "A": "Lend to individuals",
+    "B": "Issue currency",
+    "C": "Provide financial advice",
+    "D": "Collect taxes"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The central bank is responsible for issuing currency and controlling monetary policy."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0046",
+   "type": "mcq",
+   "stem": "What is the term for the difference between a country’s total receipts and payments?",
+   "options": {
+    "A": "Trade balance",
+    "B": "Balance of payments",
+    "C": "Current account",
+    "D": "Capital account"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The balance of payments records all economic transactions between a country and the rest of the world."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0047",
+   "type": "mcq",
+   "stem": "Which of the following is a measure of economic development?",
+   "options": {
+    "A": "Unemployment rate",
+    "B": "Human development index",
+    "C": "Inflation rate",
+    "D": "Exchange rate"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The human development index measures life expectancy, education, and per capita income."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0048",
+   "type": "mcq",
+   "stem": "What is the term for the total supply of goods and services in an economy?",
+   "options": {
+    "A": "Aggregate supply",
+    "B": "Individual supply",
+    "C": "Market supply",
+    "D": "Demand supply"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Aggregate supply is the total supply of goods and services in an economy."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0049",
+   "type": "mcq",
+   "stem": "Which of the following is a tool of fiscal policy?",
+   "options": {
+    "A": "Open market operations",
+    "B": "Government spending",
+    "C": "Interest rates",
+    "D": "Reserve requirements"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Government spending is a tool of fiscal policy to influence economic activity."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0050",
+   "type": "mcq",
+   "stem": "What is the term for a market structure with one buyer and many sellers?",
+   "options": {
+    "A": "Monopoly",
+    "B": "Monopsony",
+    "C": "Oligopoly",
+    "D": "Perfect competition"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A monopsony has one buyer and many sellers, giving the buyer market power."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0051",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of inelastic demand?",
+   "options": {
+    "A": "Many substitutes",
+    "B": "Low responsiveness to price changes",
+    "C": "Luxury goods",
+    "D": "High responsiveness to price"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Inelastic demand means quantity demanded is less responsive to price changes."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0052",
+   "type": "mcq",
+   "stem": "What is the term for the income earned by labor as a factor of production?",
+   "options": {
+    "A": "Rent",
+    "B": "Wages",
+    "C": "Interest",
+    "D": "Profit"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Wages are the income earned by labor in the production process."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0053",
+   "type": "mcq",
+   "stem": "Which of the following is a renewable resource?",
+   "options": {
+    "A": "Petroleum",
+    "B": "Natural gas",
+    "C": "Wind energy",
+    "D": "Coal"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Wind energy is renewable as it is generated from natural wind processes."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0054",
+   "type": "mcq",
+   "stem": "What is the term for the cost that changes with output?",
+   "options": {
+    "A": "Fixed cost",
+    "B": "Variable cost",
+    "C": "Marginal cost",
+    "D": "Total cost"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Variable costs change with the level of output, such as raw materials."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0055",
+   "type": "mcq",
+   "stem": "Which of the following is a progressive tax?",
+   "options": {
+    "A": "Sales tax",
+    "B": "Income tax",
+    "C": "Value-added tax",
+    "D": "Excise duty"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Income tax is progressive, as the tax rate increases with income."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0056",
+   "type": "mcq",
+   "stem": "What is the term for a tax imposed on imported goods?",
+   "options": {
+    "A": "Income tax",
+    "B": "Tariff",
+    "C": "Value-added tax",
+    "D": "Property tax"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A tariff is a tax imposed on imported goods to protect domestic industries."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0057",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a command economy?",
+   "options": {
+    "A": "Private ownership",
+    "B": "Government control",
+    "C": "Market-driven prices",
+    "D": "No government intervention"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A command economy is characterized by government control of resources and production."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0058",
+   "type": "mcq",
+   "stem": "What is the term for a period of high inflation and high unemployment?",
+   "options": {
+    "A": "Recession",
+    "B": "Stagflation",
+    "C": "Deflation",
+    "D": "Depression"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Stagflation is a situation with high inflation and high unemployment."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0059",
+   "type": "mcq",
+   "stem": "Which of the following is a function of stock exchanges?",
+   "options": {
+    "A": "Issue currency",
+    "B": "Facilitate trading of securities",
+    "C": "Control money supply",
+    "D": "Set fiscal policy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Stock exchanges facilitate the buying and selling of securities like shares."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0060",
+   "type": "mcq",
+   "stem": "What is the term for the excess of exports over imports?",
+   "options": {
+    "A": "Trade deficit",
+    "B": "Trade surplus",
+    "C": "Balance of trade",
+    "D": "Current account deficit"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A trade surplus occurs when exports exceed imports."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0061",
+   "type": "mcq",
+   "stem": "Which of the following is a measure of standard of living?",
+   "options": {
+    "A": "Unemployment rate",
+    "B": "GDP per capita",
+    "C": "Inflation rate",
+    "D": "Exchange rate"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "GDP per capita measures the average economic output per person, indicating standard of living."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0062",
+   "type": "mcq",
+   "stem": "What is the term for the total money supply in an economy?",
+   "options": {
+    "A": "Aggregate demand",
+    "B": "Money supply",
+    "C": "National income",
+    "D": "Fiscal policy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Money supply is the total amount of money available in an economy."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0063",
+   "type": "mcq",
+   "stem": "Which of the following is a tool of monetary policy?",
+   "options": {
+    "A": "Government spending",
+    "B": "Reserve requirements",
+    "C": "Taxation",
+    "D": "Subsidies"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Reserve requirements control the amount of money banks must hold, affecting money supply."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0064",
+   "type": "mcq",
+   "stem": "What is the term for a market structure with many firms selling differentiated products?",
+   "options": {
+    "A": "Monopoly",
+    "B": "Oligopoly",
+    "C": "Monopolistic competition",
+    "D": "Perfect competition"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Monopolistic competition has many firms selling slightly differentiated products."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0065",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of elastic demand?",
+   "options": {
+    "A": "Few substitutes",
+    "B": "High responsiveness to price changes",
+    "C": "Necessity goods",
+    "D": "Low responsiveness to price"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Elastic demand is highly responsive to price changes, often due to many substitutes."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0066",
+   "type": "mcq",
+   "stem": "What is the term for the income earned by land as a factor of production?",
+   "options": {
+    "A": "Wages",
+    "B": "Rent",
+    "C": "Interest",
+    "D": "Profit"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Rent is the income earned by land in the production process."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0067",
+   "type": "mcq",
+   "stem": "Which of the following is a non-renewable resource?",
+   "options": {
+    "A": "Solar energy",
+    "B": "Oil",
+    "C": "Wind energy",
+    "D": "Hydropower"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Oil is a non-renewable resource as it is finite and depletes over time."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0068",
+   "type": "mcq",
+   "stem": "What is the term for the cost of producing a specific quantity of output?",
+   "options": {
+    "A": "Fixed cost",
+    "B": "Variable cost",
+    "C": "Total cost",
+    "D": "Marginal cost"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Total cost is the sum of fixed and variable costs for producing a specific output."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0069",
+   "type": "mcq",
+   "stem": "Which of the following is a regressive tax?",
+   "options": {
+    "A": "Income tax",
+    "B": "Sales tax",
+    "C": "Property tax",
+    "D": "Corporate tax"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Sales tax is regressive as it takes a larger percentage of income from lower earners."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0070",
+   "type": "mcq",
+   "stem": "What is the term for a government payment to reduce production costs?",
+   "options": {
+    "A": "Tariff",
+    "B": "Subsidy",
+    "C": "Tax",
+    "D": "Quota"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A subsidy is a government payment to lower production costs and encourage output."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0071",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a market economy?",
+   "options": {
+    "A": "Government control",
+    "B": "Price determined by supply and demand",
+    "C": "No private ownership",
+    "D": "Central planning"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "In a market economy, prices are determined by supply and demand."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0072",
+   "type": "mcq",
+   "stem": "What is the term for a prolonged period of economic decline?",
+   "options": {
+    "A": "Recession",
+    "B": "Depression",
+    "C": "Stagflation",
+    "D": "Inflation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A depression is a severe and prolonged economic decline."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0073",
+   "type": "mcq",
+   "stem": "Which of the following is a function of insurance companies?",
+   "options": {
+    "A": "Issue currency",
+    "B": "Provide risk coverage",
+    "C": "Control money supply",
+    "D": "Set fiscal policy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Insurance companies provide risk coverage against financial losses."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0074",
+   "type": "mcq",
+   "stem": "What is the term for the total value of a country’s exports minus its imports?",
+   "options": {
+    "A": "Balance of payments",
+    "B": "Trade balance",
+    "C": "Current account",
+    "D": "Capital account"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The trade balance is the difference between a country’s exports and imports."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0075",
+   "type": "mcq",
+   "stem": "Which of the following is a measure of economic welfare?",
+   "options": {
+    "A": "Unemployment rate",
+    "B": "Human development index",
+    "C": "Inflation rate",
+    "D": "Exchange rate"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The human development index measures factors like health, education, and income."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0076",
+   "type": "mcq",
+   "stem": "What is the term for the responsiveness of supply to a change in price?",
+   "options": {
+    "A": "Price elasticity of demand",
+    "B": "Elasticity of supply",
+    "C": "Income elasticity",
+    "D": "Cross elasticity"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Elasticity of supply measures how sensitive supply is to a change in price."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0077",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a public good?",
+   "options": {
+    "A": "Excludable",
+    "B": "Rivalrous",
+    "C": "Non-excludable",
+    "D": "Profit-driven"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Public goods are non-excludable, meaning no one can be prevented from using them."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0078",
+   "type": "mcq",
+   "stem": "What is the term for the income earned by entrepreneurs as a factor of production?",
+   "options": {
+    "A": "Wages",
+    "B": "Rent",
+    "C": "Interest",
+    "D": "Profit"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Profit is the income earned by entrepreneurs for organizing production."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0079",
+   "type": "mcq",
+   "stem": "Which of the following is a renewable resource?",
+   "options": {
+    "A": "Coal",
+    "B": "Natural gas",
+    "C": "Biomass",
+    "D": "Petroleum"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Biomass is renewable as it can be replenished through natural processes."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0080",
+   "type": "mcq",
+   "stem": "What is the term for the additional satisfaction from consuming one more unit of a good?",
+   "options": {
+    "A": "Total utility",
+    "B": "Marginal utility",
+    "C": "Average utility",
+    "D": "Fixed utility"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Marginal utility is the additional satisfaction gained from consuming one more unit."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0081",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a progressive tax system?",
+   "options": {
+    "A": "Flat tax rate",
+    "B": "Higher tax rate for higher incomes",
+    "C": "Equal tax for all",
+    "D": "Tax on goods"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A progressive tax system imposes higher tax rates on higher income levels."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0082",
+   "type": "mcq",
+   "stem": "What is the term for a restriction on the quantity of imported goods?",
+   "options": {
+    "A": "Tariff",
+    "B": "Subsidy",
+    "C": "Quota",
+    "D": "Tax"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "A quota limits the quantity of goods that can be imported."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0083",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a traditional economy?",
+   "options": {
+    "A": "Market-driven prices",
+    "B": "Government planning",
+    "C": "Custom-based production",
+    "D": "High technology"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "A traditional economy relies on customs and traditions to determine production."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0084",
+   "type": "mcq",
+   "stem": "What is the term for a period of low economic activity and high unemployment?",
+   "options": {
+    "A": "Inflation",
+    "B": "Recession",
+    "C": "Deflation",
+    "D": "Stagflation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A recession is characterized by low economic activity and high unemployment."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0085",
+   "type": "mcq",
+   "stem": "Which of the following is a function of development banks?",
+   "options": {
+    "A": "Issue currency",
+    "B": "Provide long-term loans",
+    "C": "Control money supply",
+    "D": "Collect taxes"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Development banks provide long-term loans for economic development projects."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0086",
+   "type": "mcq",
+   "stem": "What is the term for the flow of goods, services, and capital across borders?",
+   "options": {
+    "A": "Balance of payments",
+    "B": "International trade",
+    "C": "Trade balance",
+    "D": "Capital account"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "International trade involves the exchange of goods, services, and capital across borders."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0087",
+   "type": "mcq",
+   "stem": "Which of the following is a measure of population growth?",
+   "options": {
+    "A": "Birth rate minus death rate",
+    "B": "GDP per capita",
+    "C": "Inflation rate",
+    "D": "Unemployment rate"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Population growth is measured by the difference between birth and death rates."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0088",
+   "type": "mcq",
+   "stem": "What is the term for the responsiveness of demand to a change in income?",
+   "options": {
+    "A": "Price elasticity of demand",
+    "B": "Income elasticity of demand",
+    "C": "Elasticity of supply",
+    "D": "Cross elasticity"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Income elasticity of demand measures how demand changes with income."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0089",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a private good?",
+   "options": {
+    "A": "Non-excludable",
+    "B": "Non-rivalrous",
+    "C": "Excludable",
+    "D": "Freely available"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Private goods are excludable, meaning access can be restricted to paying users."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0090",
+   "type": "mcq",
+   "stem": "What is the term for the income earned by entrepreneurship as a factor of production?",
+   "options": {
+    "A": "Wages",
+    "B": "Rent",
+    "C": "Interest",
+    "D": "Profit"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Profit is the income earned by entrepreneurs for organizing production."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0091",
+   "type": "mcq",
+   "stem": "Which of the following is a renewable resource?",
+   "options": {
+    "A": "Coal",
+    "B": "Natural gas",
+    "C": "Solar energy",
+    "D": "Petroleum"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Solar energy is renewable as it is derived from the sun, an inexhaustible source."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0092",
+   "type": "mcq",
+   "stem": "What is the term for the additional cost of producing one more unit of output?",
+   "options": {
+    "A": "Fixed cost",
+    "B": "Variable cost",
+    "C": "Marginal cost",
+    "D": "Total cost"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Marginal cost is the additional cost incurred to produce one more unit of output."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0093",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a regressive tax system?",
+   "options": {
+    "A": "Higher tax rate for higher incomes",
+    "B": "Flat tax rate",
+    "C": "Higher tax burden on lower incomes",
+    "D": "Equal tax for all"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "A regressive tax system imposes a higher burden on lower-income earners."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0094",
+   "type": "mcq",
+   "stem": "What is the term for a government restriction on the quantity of exports?",
+   "options": {
+    "A": "Tariff",
+    "B": "Subsidy",
+    "C": "Export quota",
+    "D": "Tax"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "An export quota limits the quantity of goods that can be exported."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0095",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a mixed economy?",
+   "options": {
+    "A": "Only private ownership",
+    "B": "Only government control",
+    "C": "Both private and public sectors",
+    "D": "No trade"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "A mixed economy combines private and public sector involvement."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0096",
+   "type": "mcq",
+   "stem": "What is the term for a period of high inflation, high unemployment, and low growth?",
+   "options": {
+    "A": "Recession",
+    "B": "Stagflation",
+    "C": "Deflation",
+    "D": "Depression"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Stagflation combines high inflation, high unemployment, and low economic growth."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0097",
+   "type": "mcq",
+   "stem": "Which of the following is a function of cooperative societies?",
+   "options": {
+    "A": "Issue currency",
+    "B": "Provide loans to members",
+    "C": "Control money supply",
+    "D": "Set fiscal policy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Cooperative societies provide loans and financial services to their members."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0098",
+   "type": "mcq",
+   "stem": "What is the term for the total value of all economic transactions between a country and the world?",
+   "options": {
+    "A": "Balance of payments",
+    "B": "Trade balance",
+    "C": "Current account",
+    "D": "Capital account"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The balance of payments records all economic transactions between a country and the rest of the world."
+  },
+  {
+   "id": "waec-server-scripts-economics-sun-0099",
+   "type": "mcq",
+   "stem": "Which of the following is a measure of economic inequality?",
+   "options": {
+    "A": "GDP per capita",
+    "B": "Gini coefficient",
+    "C": "Inflation rate",
+    "D": "Unemployment rate"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Gini coefficient measures the degree of income inequality in a population."
+  }
+ ],
+ "category": "secondary",
+ "body": "WAEC"
+}

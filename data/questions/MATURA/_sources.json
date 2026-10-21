@@ -1,0 +1,98 @@
+{
+ "exam": "Matura",
+ "region": "Poland / Austria / Switzerland",
+ "slug": "MATURA",
+ "question_banks": 0,
+ "github_sources": [
+  {
+   "repo": "MadArk86/EvalU",
+   "url": "https://github.com/MadArk86/EvalU/blob/721e6cd11faeb389a430ef7149d871723352acbd/EvalU/src/lib/questions.ts",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "JoegameZhou/mPanGu-Alpha-53",
+   "url": "https://github.com/JoegameZhou/mPanGu-Alpha-53/blob/20c5f1db3531e754b5667855f7ad9223d0da5b12/mPanGu_alpha_GPU/tokenizer/langs_53/flores101_50_en/en-pl_flores-test.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "do-indeksa/platform",
+   "url": "https://github.com/do-indeksa/platform/blob/94f2863f00dc277c27ed3addf098c1ba701e6c03/docs/research/global-exam-prep-platforms-2026.ru.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "iai-rs/Translator",
+   "url": "https://github.com/iai-rs/Translator/blob/8b13a8b3d46d5a96c49ee5a84b1c7f28a3e5deb1/tokenizer/langs_53/flores101_50_en/en-pl_flores-test.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "JeffDing/MyAscendCode",
+   "url": "https://github.com/JeffDing/MyAscendCode/blob/c809bcaf68bb1cad7b943b9fc83b056639855a09/Mindspore/mPanGu/tokenizer/langs_53/flores101_50_en/en-pl_flores-test.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "PiotrStachowicz/MistrzowieLogiki",
+   "url": "https://github.com/PiotrStachowicz/MistrzowieLogiki/blob/2066c30b28040a72411fa38975a129f0f8f2de4b/src/pages/faq-data.ts",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "niebrtk/planer",
+   "url": "https://github.com/niebrtk/planer/blob/5b3c208450a0e5f654de8e47bb8f3b640fe3cb1a/js/app.js",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "BirgerMoell/qwen35-posttrain",
+   "url": "https://github.com/BirgerMoell/qwen35-posttrain/blob/22370f7dc2d28af79ef0b80ef6b584c2fbe88121/data/exam_mcq/source_registry.json",
+   "stars": 0,
+   "desc": ""
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "Matura exam practice",
+   "url": "https://www.liveworksheets.com",
+   "class": "site"
+  },
+  {
+   "title": "Matury Online: testy i zadania - Apps on Google Play",
+   "url": "https://play.google.com/store/apps/details?id=pl.matury_online.app&referrer=utm_source%3Dmatury-online.pl%26utm_medium%3Dfooter",
+   "class": "site"
+  },
+  {
+   "title": "Speaking Exam Practice Tests (Matura)",
+   "url": "https://www.atenajuszko.com",
+   "class": "site"
+  },
+  {
+   "title": "Matura AR 1-1 | PDF | Gold - Scribd",
+   "url": "https://www.scribd.com/document/992450213/Matura-AR-1-1",
+   "class": "site"
+  },
+  {
+   "title": "(PDF) Matura angielski - Academia.edu",
+   "url": "https://www.academia.edu/30816954/Matura_angielski",
+   "class": "edu"
+  },
+  {
+   "title": "Matura - testy i zadania - Apps on Google Play",
+   "url": "https://play.google.com/store/apps/details?id=info.dlamaturzysty.matura_testy_zadania&hl=en_US",
+   "class": "site"
+  },
+  {
+   "title": "m2023pp Matura1 Basic Key | PDF - Scribd",
+   "url": "https://www.scribd.com/document/717015494/m2023pp-matura1-basic-key",
+   "class": "site"
+  },
+  {
+   "title": "Matura exam practice - Live Worksheets",
+   "url": "https://www.liveworksheets.com/worksheet/en/english-second-language-esl/880165",
+   "class": "site"
+  }
+ ]
+}

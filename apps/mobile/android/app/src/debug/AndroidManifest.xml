@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The INTERNET permission is required for development. Specifically,
+         the Flutter tool needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- DEBUG-ONLY cleartext override (founder directive 2026-10-12,
+         "ultimate security, no openings"): local development talks to a
+         loopback API (flutter run with RENANCE_API_BASE=http://10.0.2.2:3990
+         via dart defines), which needs cleartext. RELEASE builds keep
+         usesCleartextTraffic=false from the main manifest: the production
+         API is HTTPS-only, so a release app that ever degrades to plain
+         HTTP is a red flag worth failing. -->
+    <application android:usesCleartextTraffic="true" />
+</manifest>

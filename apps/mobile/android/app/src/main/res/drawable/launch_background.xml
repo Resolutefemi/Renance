@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cold-start splash, LIGHT tier. The clean 3D R keycap (stock brand
+     green - the favicon's crawler-fallback colour, the same doctrine:
+     the engine paints the live seed once Flutter draws) centred on the
+     white ground the Flutter splash hands off from. Same mark, same
+     optical size -> zero pop between native and Flutter frames. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/white" />
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/launch_keycap" />
+    </item>
+</layer-list>

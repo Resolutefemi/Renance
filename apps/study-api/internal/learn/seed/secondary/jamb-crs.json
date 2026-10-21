@@ -1,0 +1,2557 @@
+{
+ "body": "jamb",
+ "subject": "crs",
+ "title": "Christian Religious Studies",
+ "unitTitles": [
+  "Creation, Fall and the Patriarchs",
+  "Moses, Exodus and the Judges",
+  "Kings, Division and Prophecy",
+  "Exile, Return and the Gospels",
+  "Teachings, Miracles and the Passion",
+  "The Church and the Epistles",
+  "Themes from Genesis in Depth",
+  "Exodus and Covenant",
+  "Leadership Lessons: Joshua to Saul",
+  "David and Solomon",
+  "The Prophets Speak",
+  "The Exile and the Returns",
+  "The Birth and Early Life of Jesus",
+  "The Ministry of Jesus",
+  "Conflict, Crucifixion and Resurrection",
+  "The Early Church in Acts",
+  "Pauline Theology",
+  "Christian Living and Ethics",
+  "Christianity and Nigerian Society",
+  "Bible Study Skills",
+  "Structured Revision: Set A",
+  "Structured Revision: Set B",
+  "Bible Knowledge Workshop",
+  "JAMB Masterclass: Final Lap",
+  "Old Testament Themes Workshop",
+  "Gospel Parables Workshop",
+  "Acts Workshop: Journeys and Councils",
+  "Epistles Doctrine Drills",
+  "Bible Geography and Maps",
+  "CRS Masterclass Drills"
+ ],
+ "topics": [
+  {
+   "title": "The Bible: inspiration, versions and canon",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "bible",
+    "inspiration",
+    "canon",
+    "versions",
+    "scripture"
+   ]
+  },
+  {
+   "title": "The creation accounts in Genesis",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "creation",
+    "genesis",
+    "adam",
+    "eve",
+    "image of god"
+   ]
+  },
+  {
+   "title": "The fall of man and its consequences",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "fall of man",
+    "sin",
+    "eden",
+    "consequences",
+    "temptation"
+   ]
+  },
+  {
+   "title": "Cain and Abel: the first murder",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "cain",
+    "abel",
+    "murder",
+    "jealousy",
+    "punishment"
+   ]
+  },
+  {
+   "title": "The flood and God's covenant with Noah",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "flood",
+    "noah",
+    "covenant",
+    "rainbow",
+    "judgment"
+   ]
+  },
+  {
+   "title": "The tower of Babel and dispersion",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "babel",
+    "languages",
+    "dispersion",
+    "pride"
+   ]
+  },
+  {
+   "title": "God's covenant with Abraham and its signs",
+   "category": "Theory",
+   "keywords": [
+    "abraham",
+    "covenant",
+    "circumcision",
+    "promise",
+    "faith"
+   ]
+  },
+  {
+   "title": "Joseph and his brothers in Egypt",
+   "category": "Theory",
+   "keywords": [
+    "joseph",
+    "brothers",
+    "egypt",
+    "forgiveness",
+    "dreams"
+   ]
+  },
+  {
+   "title": "The call of Moses and the burning bush",
+   "category": "Theory",
+   "keywords": [
+    "moses",
+    "burning bush",
+    "call",
+    "pharaoh",
+    "exodus"
+   ]
+  },
+  {
+   "title": "The plagues of Egypt and the Passover",
+   "category": "Theory",
+   "keywords": [
+    "plagues",
+    "passover",
+    "egypt",
+    "deliverance"
+   ]
+  },
+  {
+   "title": "The exodus journey and crossing the sea",
+   "category": "Theory",
+   "keywords": [
+    "exodus",
+    "red sea",
+    "crossing",
+    "deliverance"
+   ]
+  },
+  {
+   "title": "Mosaic covenant and the Ten Commandments",
+   "category": "Theory",
+   "keywords": [
+    "ten commandments",
+    "sinai",
+    "law",
+    "covenant",
+    "moses"
+   ]
+  },
+  {
+   "title": "Israel in the wilderness: sin and provision",
+   "category": "Theory",
+   "keywords": [
+    "wilderness",
+    "manna",
+    "golden calf",
+    "rebellion",
+    "provision"
+   ]
+  },
+  {
+   "title": "Leadership of Joshua and the judges",
+   "category": "Theory",
+   "keywords": [
+    "joshua",
+    "judges",
+    "leadership",
+    "canaan",
+    "covenant renewal"
+   ]
+  },
+  {
+   "title": "Deborah, Gideon and Samson as deliverers",
+   "category": "Theory",
+   "keywords": [
+    "deborah",
+    "gideon",
+    "samson",
+    "deliverers",
+    "judges"
+   ]
+  },
+  {
+   "title": "Samuel: judge, prophet and kingmaker",
+   "category": "Theory",
+   "keywords": [
+    "samuel",
+    "prophet",
+    "judge",
+    "eli",
+    "call of samuel"
+   ]
+  },
+  {
+   "title": "Israel demands a king and the reign of Saul",
+   "category": "Theory",
+   "keywords": [
+    "saul",
+    "king",
+    "demands",
+    "anointing",
+    "disobedience"
+   ]
+  },
+  {
+   "title": "David as king: achievements and sins",
+   "category": "Theory",
+   "keywords": [
+    "david",
+    "bathsheba",
+    "jerusalem",
+    "ark",
+    "repentance"
+   ]
+  },
+  {
+   "title": "Solomon: wisdom, temple and decline",
+   "category": "Theory",
+   "keywords": [
+    "solomon",
+    "wisdom",
+    "temple",
+    "idolatry",
+    "prosperity"
+   ]
+  },
+  {
+   "title": "Division of the kingdom: Israel and Judah",
+   "category": "Theory",
+   "keywords": [
+    "division",
+    "israel",
+    "judah",
+    "jeroboam",
+    "rehoboam"
+   ]
+  },
+  {
+   "title": "Elijah and the prophets of Baal",
+   "category": "Theory",
+   "keywords": [
+    "elijah",
+    "baal",
+    "carmel",
+    "drought",
+    "prophet"
+   ]
+  },
+  {
+   "title": "The ministry and miracles of Elisha",
+   "category": "Theory",
+   "keywords": [
+    "elisha",
+    "miracles",
+    "naaman",
+    "ministry"
+   ]
+  },
+  {
+   "title": "Amos: prophecy of social justice",
+   "category": "Theory",
+   "keywords": [
+    "amos",
+    "social justice",
+    "judgment",
+    "oppression",
+    "righteousness"
+   ]
+  },
+  {
+   "title": "Hosea: God's love and Israel's unfaithfulness",
+   "category": "Theory",
+   "keywords": [
+    "hosea",
+    "unfaithfulness",
+    "love",
+    "israel",
+    "repentance"
+   ]
+  },
+  {
+   "title": "Isaiah and Jeremiah: called to prophesy",
+   "category": "Theory",
+   "keywords": [
+    "isaiah",
+    "jeremiah",
+    "call",
+    "prophecy",
+    "judah"
+   ]
+  },
+  {
+   "title": "The exile and return from Babylon",
+   "category": "Theory",
+   "keywords": [
+    "exile",
+    "babylon",
+    "return",
+    "restoration",
+    "nehemiah"
+   ]
+  },
+  {
+   "title": "Nehemiah and the rebuilding of Jerusalem",
+   "category": "Theory",
+   "keywords": [
+    "nehemiah",
+    "rebuilding",
+    "jerusalem",
+    "walls",
+    "prayer"
+   ]
+  },
+  {
+   "title": "The birth and childhood of Jesus",
+   "category": "Theory",
+   "keywords": [
+    "birth of jesus",
+    "virgin mary",
+    "bethlehem",
+    "herod",
+    "presentation"
+   ]
+  },
+  {
+   "title": "The baptism and temptation of Jesus",
+   "category": "Theory",
+   "keywords": [
+    "baptism",
+    "temptation",
+    "john the baptist",
+    "wilderness",
+    "holy spirit"
+   ]
+  },
+  {
+   "title": "The call of the first disciples",
+   "category": "Theory",
+   "keywords": [
+    "disciples",
+    "call",
+    "fishermen",
+    "follow me",
+    "apostles"
+   ]
+  },
+  {
+   "title": "Teachings from the Sermon on the Mount",
+   "category": "Theory",
+   "keywords": [
+    "sermon on the mount",
+    "beatitudes",
+    "prayer",
+    "treasures"
+   ]
+  },
+  {
+   "title": "Parables of the kingdom of God",
+   "category": "Theory",
+   "keywords": [
+    "parables",
+    "kingdom of god",
+    "sower",
+    "mustard seed",
+    "prodigal son"
+   ]
+  },
+  {
+   "title": "The miracles of Jesus: healing and power",
+   "category": "Theory",
+   "keywords": [
+    "miracles",
+    "healing",
+    "calming the storm",
+    "feeding five thousand",
+    "faith"
+   ]
+  },
+  {
+   "title": "Conflict with the Pharisees and Sadducees",
+   "category": "Theory",
+   "keywords": [
+    "pharisees",
+    "sadducees",
+    "conflict",
+    "hypocrisy",
+    "sabbath"
+   ]
+  },
+  {
+   "title": "The trial, crucifixion and death of Jesus",
+   "category": "Theory",
+   "keywords": [
+    "trial",
+    "crucifixion",
+    "death",
+    "pilate",
+    "golgotha"
+   ]
+  },
+  {
+   "title": "The resurrection and ascension of Jesus",
+   "category": "Theory",
+   "keywords": [
+    "resurrection",
+    "ascension",
+    "empty tomb",
+    "appearances",
+    "great commission"
+   ]
+  },
+  {
+   "title": "The day of Pentecost and the Holy Spirit",
+   "category": "Theory",
+   "keywords": [
+    "pentecost",
+    "holy spirit",
+    "tongues",
+    "peter",
+    "church"
+   ]
+  },
+  {
+   "title": "Life of the early church in Jerusalem",
+   "category": "Theory",
+   "keywords": [
+    "early church",
+    "fellowship",
+    "communal living",
+    "ananias",
+    "sapphira"
+   ]
+  },
+  {
+   "title": "Persecution of the early believers",
+   "category": "Theory",
+   "keywords": [
+    "persecution",
+    "stephen",
+    "martyrdom",
+    "saul",
+    "scattering"
+   ]
+  },
+  {
+   "title": "The conversion of Saul of Tarsus",
+   "category": "Theory",
+   "keywords": [
+    "conversion of saul",
+    "paul",
+    "damascus road",
+    "barnabas",
+    "gentiles"
+   ]
+  },
+  {
+   "title": "Paul's missionary journeys and churches",
+   "category": "Theory",
+   "keywords": [
+    "missionary journeys",
+    "paul",
+    "barnabas",
+    "churches",
+    "lystra"
+   ]
+  },
+  {
+   "title": "The Jerusalem council and disputes",
+   "category": "Theory",
+   "keywords": [
+    "jerusalem council",
+    "circumcision",
+    "disputes",
+    "gentiles",
+    "decision"
+   ]
+  },
+  {
+   "title": "Paul's teaching on justification by faith",
+   "category": "Theory",
+   "keywords": [
+    "justification",
+    "faith",
+    "romans",
+    "law",
+    "grace"
+   ]
+  },
+  {
+   "title": "Paul on law, grace and Christian freedom",
+   "category": "Theory",
+   "keywords": [
+    "law",
+    "grace",
+    "freedom",
+    "galatians",
+    "works"
+   ]
+  },
+  {
+   "title": "Christian giving and collection for saints",
+   "category": "Theory",
+   "keywords": [
+    "giving",
+    "collection",
+    "corinth",
+    "generosity",
+    "cheerful giver"
+   ]
+  },
+  {
+   "title": "Gifts of the Spirit and Christian service",
+   "category": "Theory",
+   "keywords": [
+    "gifts of the spirit",
+    "service",
+    "unity",
+    "corinthians",
+    "tongues"
+   ]
+  },
+  {
+   "title": "Paul on the resurrection of the dead",
+   "category": "Theory",
+   "keywords": [
+    "resurrection of the dead",
+    "corinthians",
+    "glory",
+    "immortality"
+   ]
+  },
+  {
+   "title": "Christian marriage and family life",
+   "category": "Theory",
+   "keywords": [
+    "marriage",
+    "family",
+    "ephesians",
+    "husband",
+    "wife"
+   ]
+  },
+  {
+   "title": "Christian living: humility and forgiveness",
+   "category": "Theory",
+   "keywords": [
+    "humility",
+    "forgiveness",
+    "philemon",
+    "unity",
+    "love"
+   ]
+  },
+  {
+   "title": "Teachings on prayer, faith and perseverance",
+   "category": "Theory",
+   "keywords": [
+    "prayer",
+    "faith",
+    "perseverance",
+    "james",
+    "persistence"
+   ]
+  },
+  {
+   "title": "Christianity and social justice issues",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "social justice",
+    "corruption",
+    "injustice",
+    "oppression",
+    "society"
+   ]
+  },
+  {
+   "title": "Christianity and nation building in Nigeria",
+   "category": "Nigerian Context",
+   "keywords": [
+    "nigeria",
+    "church",
+    "nation building",
+    "development",
+    "peace"
+   ]
+  },
+  {
+   "title": "Examination drill: crs past questions by topic",
+   "category": "Applications",
+   "keywords": [
+    "past questions",
+    "revision",
+    "examination",
+    "jamb"
+   ]
+  },
+  {
+   "title": "Stewardship of creation",
+   "category": "Applications",
+   "keywords": [
+    "stewardship",
+    "creation"
+   ]
+  },
+  {
+   "title": "Christian response to insecurity",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "insecurity",
+    "response"
+   ]
+  },
+  {
+   "title": "Church and politics: boundaries",
+   "category": "Theory",
+   "keywords": [
+    "church",
+    "politics"
+   ]
+  },
+  {
+   "title": "Youth ministry and mentorship",
+   "category": "Applications",
+   "keywords": [
+    "youth ministry"
+   ]
+  },
+  {
+   "title": "Interfaith dialogue principles",
+   "category": "Theory",
+   "keywords": [
+    "interfaith",
+    "dialogue"
+   ]
+  },
+  {
+   "title": "Christian ethics in business",
+   "category": "Applications",
+   "keywords": [
+    "business ethics"
+   ]
+  },
+  {
+   "title": "Examination drill: church and society past questions",
+   "category": "Applications",
+   "keywords": [
+    "church",
+    "society",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The two creation accounts compared",
+   "category": "Methods",
+   "keywords": [
+    "creation accounts",
+    "comparison"
+   ]
+  },
+  {
+   "title": "The image of God: meaning and implications",
+   "category": "Theory",
+   "keywords": [
+    "image of God",
+    "meaning"
+   ]
+  },
+  {
+   "title": "Marriage institution in Genesis",
+   "category": "Theory",
+   "keywords": [
+    "marriage",
+    "Genesis"
+   ]
+  },
+  {
+   "title": "The serpent, the woman and the seed",
+   "category": "Theory",
+   "keywords": [
+    "serpent",
+    "seed"
+   ]
+  },
+  {
+   "title": "Cain and Abel: envy and worship",
+   "category": "Theory",
+   "keywords": [
+    "Cain",
+    "Abel",
+    "worship"
+   ]
+  },
+  {
+   "title": "Sodom and Gomorrah: judgment and mercy",
+   "category": "Theory",
+   "keywords": [
+    "Sodom",
+    "judgment"
+   ]
+  },
+  {
+   "title": "Jacob and Esau: birthright and blessing",
+   "category": "Theory",
+   "keywords": [
+    "Jacob",
+    "Esau",
+    "birthright"
+   ]
+  },
+  {
+   "title": "Jacob at Bethel and Peniel",
+   "category": "Theory",
+   "keywords": [
+    "Jacob",
+    "Bethel",
+    "Peniel"
+   ]
+  },
+  {
+   "title": "Joseph: providence in suffering",
+   "category": "Theory",
+   "keywords": [
+    "Joseph",
+    "providence"
+   ]
+  },
+  {
+   "title": "Examination drill: Genesis past questions",
+   "category": "Applications",
+   "keywords": [
+    "Genesis",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Moses: preparation in Midian",
+   "category": "Theory",
+   "keywords": [
+    "Moses",
+    "Midian"
+   ]
+  },
+  {
+   "title": "The ten plagues: purpose and pattern",
+   "category": "Theory",
+   "keywords": [
+    "plagues",
+    "pattern"
+   ]
+  },
+  {
+   "title": "The Passover: meaning and typology",
+   "category": "Theory",
+   "keywords": [
+    "Passover",
+    "typology"
+   ]
+  },
+  {
+   "title": "Red Sea crossing and the song of Moses",
+   "category": "Theory",
+   "keywords": [
+    "Red Sea",
+    "song"
+   ]
+  },
+  {
+   "title": "Manna, water and wilderness testing",
+   "category": "Theory",
+   "keywords": [
+    "manna",
+    "wilderness"
+   ]
+  },
+  {
+   "title": "Jethro's advice: organising Israel",
+   "category": "Theory",
+   "keywords": [
+    "Jethro",
+    "organisation"
+   ]
+  },
+  {
+   "title": "The Sinai theophany: thunder and law",
+   "category": "Theory",
+   "keywords": [
+    "Sinai",
+    "theophany"
+   ]
+  },
+  {
+   "title": "The golden calf: sin and intercession",
+   "category": "Theory",
+   "keywords": [
+    "golden calf",
+    "intercession"
+   ]
+  },
+  {
+   "title": "The tabernacle: design and meaning",
+   "category": "Theory",
+   "keywords": [
+    "tabernacle",
+    "design"
+   ]
+  },
+  {
+   "title": "Examination drill: Exodus past questions",
+   "category": "Applications",
+   "keywords": [
+    "Exodus",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Joshua's commission and courage",
+   "category": "Theory",
+   "keywords": [
+    "Joshua",
+    "commission"
+   ]
+  },
+  {
+   "title": "Jericho and Ai: obedience and sin",
+   "category": "Theory",
+   "keywords": [
+    "Jericho",
+    "Ai"
+   ]
+  },
+  {
+   "title": "The judges' cycle: sin, crying, deliverance",
+   "category": "Theory",
+   "keywords": [
+    "judges",
+    "cycle"
+   ]
+  },
+  {
+   "title": "Deborah: a mother in Israel",
+   "category": "Theory",
+   "keywords": [
+    "Deborah",
+    "leader"
+   ]
+  },
+  {
+   "title": "Gideon: from fear to faith",
+   "category": "Theory",
+   "keywords": [
+    "Gideon",
+    "faith"
+   ]
+  },
+  {
+   "title": "Samson: strength and weakness",
+   "category": "Theory",
+   "keywords": [
+    "Samson",
+    "weakness"
+   ]
+  },
+  {
+   "title": "Hannah's prayer and Samuel's birth",
+   "category": "Theory",
+   "keywords": [
+    "Hannah",
+    "Samuel"
+   ]
+  },
+  {
+   "title": "Eli's house judged",
+   "category": "Theory",
+   "keywords": [
+    "Eli",
+    "judgment"
+   ]
+  },
+  {
+   "title": "Israel asks for a king: motives and warnings",
+   "category": "Theory",
+   "keywords": [
+    "king",
+    "warnings"
+   ]
+  },
+  {
+   "title": "Examination drill: judges past questions",
+   "category": "Applications",
+   "keywords": [
+    "judges",
+    "past questions"
+   ]
+  },
+  {
+   "title": "David anointed: the heart God chooses",
+   "category": "Theory",
+   "keywords": [
+    "David",
+    "anointed"
+   ]
+  },
+  {
+   "title": "David and Goliath: faith against fear",
+   "category": "Theory",
+   "keywords": [
+    "Goliath",
+    "faith"
+   ]
+  },
+  {
+   "title": "Saul's jealousy and David's patience",
+   "category": "Theory",
+   "keywords": [
+    "Saul",
+    "jealousy"
+   ]
+  },
+  {
+   "title": "David becomes king: unity of Israel",
+   "category": "Theory",
+   "keywords": [
+    "David",
+    "king"
+   ]
+  },
+  {
+   "title": "The Davidic covenant: 2 Samuel 7",
+   "category": "Theory",
+   "keywords": [
+    "Davidic covenant"
+   ]
+  },
+  {
+   "title": "David and Bathsheba: sin exposed",
+   "category": "Theory",
+   "keywords": [
+    "Bathsheba",
+    "sin"
+   ]
+  },
+  {
+   "title": "Absalom's rebellion and its sorrow",
+   "category": "Theory",
+   "keywords": [
+    "Absalom",
+    "rebellion"
+   ]
+  },
+  {
+   "title": "Solomon's wisdom and the dream at Gibeon",
+   "category": "Theory",
+   "keywords": [
+    "Solomon",
+    "wisdom"
+   ]
+  },
+  {
+   "title": "The temple: glory and dedication",
+   "category": "Theory",
+   "keywords": [
+    "temple",
+    "dedication"
+   ]
+  },
+  {
+   "title": "Examination drill: kings past questions",
+   "category": "Applications",
+   "keywords": [
+    "kings",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Prophet, priest and king: roles compared",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "prophet",
+    "priest",
+    "king"
+   ]
+  },
+  {
+   "title": "Elijah on Carmel: fire from heaven",
+   "category": "Theory",
+   "keywords": [
+    "Elijah",
+    "Carmel"
+   ]
+  },
+  {
+   "title": "Elijah's discouragement and renewal",
+   "category": "Theory",
+   "keywords": [
+    "Elijah",
+    "renewal"
+   ]
+  },
+  {
+   "title": "Naboth's vineyard: justice denied",
+   "category": "Theory",
+   "keywords": [
+    "Naboth",
+    "justice"
+   ]
+  },
+  {
+   "title": "Elisha's double portion and miracles",
+   "category": "Theory",
+   "keywords": [
+    "Elisha",
+    "miracles"
+   ]
+  },
+  {
+   "title": "Jonah: running from mercy's mission",
+   "category": "Theory",
+   "keywords": [
+    "Jonah",
+    "mercy"
+   ]
+  },
+  {
+   "title": "Amos: let justice roll down",
+   "category": "Theory",
+   "keywords": [
+    "Amos",
+    "justice"
+   ]
+  },
+  {
+   "title": "Isaiah's call and the Immanuel sign",
+   "category": "Theory",
+   "keywords": [
+    "Isaiah",
+    "Immanuel"
+   ]
+  },
+  {
+   "title": "Jeremiah: the weeping prophet's courage",
+   "category": "Theory",
+   "keywords": [
+    "Jeremiah",
+    "courage"
+   ]
+  },
+  {
+   "title": "Examination drill: prophets past questions",
+   "category": "Applications",
+   "keywords": [
+    "prophets",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Why Judah fell: covenant breaches",
+   "category": "Theory",
+   "keywords": [
+    "Judah",
+    "covenant"
+   ]
+  },
+  {
+   "title": "Daniel in Babylon: faith in exile",
+   "category": "Theory",
+   "keywords": [
+    "Daniel",
+    "Babylon"
+   ]
+  },
+  {
+   "title": "Daniel's friends and the fiery furnace",
+   "category": "Theory",
+   "keywords": [
+    "fiery furnace"
+   ]
+  },
+  {
+   "title": "Daniel in the lions' den",
+   "category": "Theory",
+   "keywords": [
+    "lions' den",
+    "Daniel"
+   ]
+  },
+  {
+   "title": "Esther: courage for such a time",
+   "category": "Theory",
+   "keywords": [
+    "Esther",
+    "courage"
+   ]
+  },
+  {
+   "title": "Ezra: the scribe's reformation",
+   "category": "Theory",
+   "keywords": [
+    "Ezra",
+    "scribe"
+   ]
+  },
+  {
+   "title": "Nehemiah: the wall and opposition",
+   "category": "Theory",
+   "keywords": [
+    "Nehemiah",
+    "wall"
+   ]
+  },
+  {
+   "title": "Covenant renewal under Ezra and Nehemiah",
+   "category": "Theory",
+   "keywords": [
+    "covenant renewal"
+   ]
+  },
+  {
+   "title": "Lessons of exile for believers today",
+   "category": "Applications",
+   "keywords": [
+    "exile",
+    "lessons"
+   ]
+  },
+  {
+   "title": "Examination drill: exile past questions",
+   "category": "Applications",
+   "keywords": [
+    "exile",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Annunciations to Mary and Joseph",
+   "category": "Theory",
+   "keywords": [
+    "annunciation",
+    "Mary"
+   ]
+  },
+  {
+   "title": "The nativity: Bethlehem narratives",
+   "category": "Theory",
+   "keywords": [
+    "nativity",
+    "Bethlehem"
+   ]
+  },
+  {
+   "title": "Simeon and Anna recognise the child",
+   "category": "Theory",
+   "keywords": [
+    "Simeon",
+    "Anna"
+   ]
+  },
+  {
+   "title": "The flight to Egypt and return",
+   "category": "Theory",
+   "keywords": [
+    "flight",
+    "Egypt"
+   ]
+  },
+  {
+   "title": "The boy Jesus in the temple",
+   "category": "Theory",
+   "keywords": [
+    "temple",
+    "boy Jesus"
+   ]
+  },
+  {
+   "title": "John the Baptist: the forerunner",
+   "category": "Theory",
+   "keywords": [
+    "John the Baptist",
+    "forerunner"
+   ]
+  },
+  {
+   "title": "The baptism of Jesus: heaven opens",
+   "category": "Theory",
+   "keywords": [
+    "baptism",
+    "Jesus"
+   ]
+  },
+  {
+   "title": "The temptation in the wilderness",
+   "category": "Theory",
+   "keywords": [
+    "temptation",
+    "wilderness"
+   ]
+  },
+  {
+   "title": "Genealogies: why they matter",
+   "category": "Methods",
+   "keywords": [
+    "genealogies",
+    "purpose"
+   ]
+  },
+  {
+   "title": "Examination drill: birth narratives past questions",
+   "category": "Applications",
+   "keywords": [
+    "birth",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The twelve: calling and commissioning",
+   "category": "Theory",
+   "keywords": [
+    "the twelve",
+    "calling"
+   ]
+  },
+  {
+   "title": "The Sermon on the Mount: beatitudes",
+   "category": "Theory",
+   "keywords": [
+    "beatitudes",
+    "sermon"
+   ]
+  },
+  {
+   "title": "Salt, light and true righteousness",
+   "category": "Theory",
+   "keywords": [
+    "salt",
+    "light"
+   ]
+  },
+  {
+   "title": "The Lord's prayer: a pattern for prayer",
+   "category": "Theory",
+   "keywords": [
+    "Lord's prayer"
+   ]
+  },
+  {
+   "title": "Parables of the sower and soils",
+   "category": "Theory",
+   "keywords": [
+    "parable",
+    "sower"
+   ]
+  },
+  {
+   "title": "Parables of grace: prodigal son",
+   "category": "Theory",
+   "keywords": [
+    "prodigal son",
+    "grace"
+   ]
+  },
+  {
+   "title": "Parables of stewardship: talents",
+   "category": "Theory",
+   "keywords": [
+    "talents",
+    "stewardship"
+   ]
+  },
+  {
+   "title": "Miracles over nature: calming the storm",
+   "category": "Theory",
+   "keywords": [
+    "miracles",
+    "storm"
+   ]
+  },
+  {
+   "title": "Miracles of healing: faith rewarded",
+   "category": "Theory",
+   "keywords": [
+    "healing",
+    "faith"
+   ]
+  },
+  {
+   "title": "Examination drill: ministry past questions",
+   "category": "Applications",
+   "keywords": [
+    "ministry",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Opposition from religious leaders",
+   "category": "Theory",
+   "keywords": [
+    "opposition",
+    "leaders"
+   ]
+  },
+  {
+   "title": "The transfiguration and its witnesses",
+   "category": "Theory",
+   "keywords": [
+    "transfiguration"
+   ]
+  },
+  {
+   "title": "Peter's confession and Christ's prediction",
+   "category": "Theory",
+   "keywords": [
+    "Peter",
+    "confession"
+   ]
+  },
+  {
+   "title": "The last supper and new covenant",
+   "category": "Theory",
+   "keywords": [
+    "last supper",
+    "covenant"
+   ]
+  },
+  {
+   "title": "Gethsemane: submission to the Father",
+   "category": "Theory",
+   "keywords": [
+    "Gethsemane",
+    "submission"
+   ]
+  },
+  {
+   "title": "Trials before the council and Pilate",
+   "category": "Theory",
+   "keywords": [
+    "trials",
+    "Pilate"
+   ]
+  },
+  {
+   "title": "The seven words from the cross",
+   "category": "Theory",
+   "keywords": [
+    "seven words",
+    "cross"
+   ]
+  },
+  {
+   "title": "The resurrection: witnesses and proofs",
+   "category": "Theory",
+   "keywords": [
+    "resurrection",
+    "proofs"
+   ]
+  },
+  {
+   "title": "The Emmaus walk: scriptures opened",
+   "category": "Theory",
+   "keywords": [
+    "Emmaus",
+    "scriptures"
+   ]
+  },
+  {
+   "title": "Examination drill: passion past questions",
+   "category": "Applications",
+   "keywords": [
+    "passion",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Pentecost: the Spirit poured out",
+   "category": "Theory",
+   "keywords": [
+    "Pentecost",
+    "Spirit"
+   ]
+  },
+  {
+   "title": "Fellowship, sharing and boldness",
+   "category": "Theory",
+   "keywords": [
+    "fellowship",
+    "sharing"
+   ]
+  },
+  {
+   "title": "Ananias and Sapphira: honesty in the church",
+   "category": "Theory",
+   "keywords": [
+    "Ananias",
+    "honesty"
+   ]
+  },
+  {
+   "title": "Stephen's defence and martyrdom",
+   "category": "Theory",
+   "keywords": [
+    "Stephen",
+    "martyrdom"
+   ]
+  },
+  {
+   "title": "Philip and the Ethiopian official",
+   "category": "Theory",
+   "keywords": [
+    "Philip",
+    "Ethiopian"
+   ]
+  },
+  {
+   "title": "Cornelius: the door to the Gentiles",
+   "category": "Theory",
+   "keywords": [
+    "Cornelius",
+    "Gentiles"
+   ]
+  },
+  {
+   "title": "The missionary journeys mapped",
+   "category": "Methods",
+   "keywords": [
+    "missionary journeys",
+    "map"
+   ]
+  },
+  {
+   "title": "The Jerusalem council decision",
+   "category": "Theory",
+   "keywords": [
+    "Jerusalem council",
+    "decision"
+   ]
+  },
+  {
+   "title": "Paul's thorn and sufficiency of grace",
+   "category": "Theory",
+   "keywords": [
+    "thorn",
+    "grace"
+   ]
+  },
+  {
+   "title": "Examination drill: Acts past questions",
+   "category": "Applications",
+   "keywords": [
+    "Acts",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Justification by faith: Romans explained",
+   "category": "Theory",
+   "keywords": [
+    "justification",
+    "faith"
+   ]
+  },
+  {
+   "title": "Law versus grace: the argument",
+   "category": "Theory",
+   "keywords": [
+    "law",
+    "grace"
+   ]
+  },
+  {
+   "title": "Fruit of the Spirit versus works of flesh",
+   "category": "Theory",
+   "keywords": [
+    "fruit of the Spirit"
+   ]
+  },
+  {
+   "title": "The body of Christ: many members",
+   "category": "Theory",
+   "keywords": [
+    "body of Christ"
+   ]
+  },
+  {
+   "title": "Christian giving: the Macedonian example",
+   "category": "Theory",
+   "keywords": [
+    "giving",
+    "Macedonia"
+   ]
+  },
+  {
+   "title": "Marriage and family: Ephesians 5-6",
+   "category": "Theory",
+   "keywords": [
+    "marriage",
+    "Ephesians"
+   ]
+  },
+  {
+   "title": "The armour of God: spiritual warfare",
+   "category": "Theory",
+   "keywords": [
+    "armour of God"
+   ]
+  },
+  {
+   "title": "Resurrection hope: 1 Corinthians 15",
+   "category": "Theory",
+   "keywords": [
+    "resurrection hope"
+   ]
+  },
+  {
+   "title": "Paul's prisons letters: joy in chains",
+   "category": "Theory",
+   "keywords": [
+    "prison letters",
+    "joy"
+   ]
+  },
+  {
+   "title": "Examination drill: Pauline past questions",
+   "category": "Applications",
+   "keywords": [
+    "Pauline",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Forgiveness: seventy times seven",
+   "category": "Theory",
+   "keywords": [
+    "forgiveness",
+    "seventy times seven"
+   ]
+  },
+  {
+   "title": "Honesty, integrity and testimony",
+   "category": "Theory",
+   "keywords": [
+    "honesty",
+    "integrity"
+   ]
+  },
+  {
+   "title": "Sexual purity in a permissive age",
+   "category": "Applications",
+   "keywords": [
+    "purity",
+    "age"
+   ]
+  },
+  {
+   "title": "Work ethics: serving Christ in work",
+   "category": "Applications",
+   "keywords": [
+    "work ethics"
+   ]
+  },
+  {
+   "title": "Wealth: stewardship versus greed",
+   "category": "Applications",
+   "keywords": [
+    "wealth",
+    "stewardship"
+   ]
+  },
+  {
+   "title": "Care for the poor and the stranger",
+   "category": "Applications",
+   "keywords": [
+    "poor",
+    "stranger"
+   ]
+  },
+  {
+   "title": "Prayer, fasting and perseverance",
+   "category": "Theory",
+   "keywords": [
+    "prayer",
+    "fasting"
+   ]
+  },
+  {
+   "title": "Church attendance and fellowship duties",
+   "category": "Applications",
+   "keywords": [
+    "fellowship",
+    "duties"
+   ]
+  },
+  {
+   "title": "Temptation: escape routes promised",
+   "category": "Applications",
+   "keywords": [
+    "temptation",
+    "escape"
+   ]
+  },
+  {
+   "title": "Examination drill: ethics past questions",
+   "category": "Applications",
+   "keywords": [
+    "ethics",
+    "past questions"
+   ]
+  },
+  {
+   "title": "The church and national development",
+   "category": "Nigerian Context",
+   "keywords": [
+    "church",
+    "development"
+   ]
+  },
+  {
+   "title": "Christian response to corruption",
+   "category": "Nigerian Context",
+   "keywords": [
+    "corruption",
+    "response"
+   ]
+  },
+  {
+   "title": "Religious tolerance and peaceful coexistence",
+   "category": "Nigerian Context",
+   "keywords": [
+    "tolerance",
+    "coexistence"
+   ]
+  },
+  {
+   "title": "The church in education and health",
+   "category": "Nigerian Context",
+   "keywords": [
+    "education",
+    "health"
+   ]
+  },
+  {
+   "title": "Secularism and faith in public life",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "secularism",
+    "faith"
+   ]
+  },
+  {
+   "title": "Prosperity gospel examined",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "prosperity gospel"
+   ]
+  },
+  {
+   "title": "Social justice: the prophet's agenda today",
+   "category": "Applications",
+   "keywords": [
+    "social justice",
+    "today"
+   ]
+  },
+  {
+   "title": "Christian youth and digital ethics",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "youth",
+    "digital ethics"
+   ]
+  },
+  {
+   "title": "Environmental care as stewardship",
+   "category": "Contemporary Issues",
+   "keywords": [
+    "environment",
+    "stewardship"
+   ]
+  },
+  {
+   "title": "Examination drill: society past questions",
+   "category": "Applications",
+   "keywords": [
+    "society",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Finding references fast: books and verses",
+   "category": "Methods",
+   "keywords": [
+    "references",
+    "verses"
+   ]
+  },
+  {
+   "title": "Context: historical and literary",
+   "category": "Methods",
+   "keywords": [
+    "context",
+    "historical"
+   ]
+  },
+  {
+   "title": "Comparing gospel accounts",
+   "category": "Methods",
+   "keywords": [
+    "gospel accounts",
+    "comparison"
+   ]
+  },
+  {
+   "title": "Maps of Israel and Paul's journeys",
+   "category": "Methods",
+   "keywords": [
+    "maps",
+    "journeys"
+   ]
+  },
+  {
+   "title": "Timeline: patriarchs to the early church",
+   "category": "Methods",
+   "keywords": [
+    "timeline",
+    "church"
+   ]
+  },
+  {
+   "title": "Quoting verses accurately in answers",
+   "category": "Methods",
+   "keywords": [
+    "quoting verses"
+   ]
+  },
+  {
+   "title": "Paraphrasing Bible stories in answers",
+   "category": "Methods",
+   "keywords": [
+    "paraphrasing",
+    "stories"
+   ]
+  },
+  {
+   "title": "Practising narrative questions",
+   "category": "Applications",
+   "keywords": [
+    "narrative questions"
+   ]
+  },
+  {
+   "title": "Practising doctrine questions",
+   "category": "Applications",
+   "keywords": [
+    "doctrine questions"
+   ]
+  },
+  {
+   "title": "Examination drill: study skills past questions",
+   "category": "Applications",
+   "keywords": [
+    "study skills",
+    "past questions"
+   ]
+  },
+  {
+   "title": "JAMB CRS paper structure and strategy",
+   "category": "Methods",
+   "keywords": [
+    "JAMB",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Objective questions on the Old Testament",
+   "category": "Applications",
+   "keywords": [
+    "Old Testament",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on themes from Genesis to Kings",
+   "category": "Applications",
+   "keywords": [
+    "Genesis",
+    "Kings",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on the prophets",
+   "category": "Applications",
+   "keywords": [
+    "prophets",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on the gospels",
+   "category": "Applications",
+   "keywords": [
+    "gospels",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on Acts",
+   "category": "Applications",
+   "keywords": [
+    "Acts",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on the epistles",
+   "category": "Applications",
+   "keywords": [
+    "epistles",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Objective questions on Christian living",
+   "category": "Applications",
+   "keywords": [
+    "Christian living",
+    "objectives"
+   ]
+  },
+  {
+   "title": "Timeline drills: events in order",
+   "category": "Methods",
+   "keywords": [
+    "timeline",
+    "drills"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set A past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed practice: the 40-question sprint",
+   "category": "Applications",
+   "keywords": [
+    "timed practice",
+    "sprint"
+   ]
+  },
+  {
+   "title": "Review of common wrong options",
+   "category": "Methods",
+   "keywords": [
+    "wrong options",
+    "review"
+   ]
+  },
+  {
+   "title": "Who-said-it-to-whom drills",
+   "category": "Methods",
+   "keywords": [
+    "who said it",
+    "drills"
+   ]
+  },
+  {
+   "title": "Event-ordering drills",
+   "category": "Methods",
+   "keywords": [
+    "event ordering",
+    "drills"
+   ]
+  },
+  {
+   "title": "Scripture-location drills",
+   "category": "Methods",
+   "keywords": [
+    "scripture location",
+    "drills"
+   ]
+  },
+  {
+   "title": "Elimination techniques for objective questions",
+   "category": "Methods",
+   "keywords": [
+    "elimination",
+    "techniques"
+   ]
+  },
+  {
+   "title": "Misconceptions about Paul corrected",
+   "category": "Methods",
+   "keywords": [
+    "misconceptions",
+    "Paul"
+   ]
+  },
+  {
+   "title": "Errors about parables corrected",
+   "category": "Methods",
+   "keywords": [
+    "parables",
+    "errors"
+   ]
+  },
+  {
+   "title": "Reading long narrative options fast",
+   "category": "Methods",
+   "keywords": [
+    "reading",
+    "options"
+   ]
+  },
+  {
+   "title": "Examination drill: mixed set B past questions",
+   "category": "Applications",
+   "keywords": [
+    "mixed",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Characters and their callings matched",
+   "category": "Methods",
+   "keywords": [
+    "characters",
+    "callings"
+   ]
+  },
+  {
+   "title": "Miracles and their lessons matched",
+   "category": "Methods",
+   "keywords": [
+    "miracles",
+    "lessons"
+   ]
+  },
+  {
+   "title": "Parables and their teachings matched",
+   "category": "Methods",
+   "keywords": [
+    "parables",
+    "teachings"
+   ]
+  },
+  {
+   "title": "Covenants: Abraham to the new covenant",
+   "category": "Theory",
+   "keywords": [
+    "covenants",
+    "Abraham"
+   ]
+  },
+  {
+   "title": "Festivals of Israel and their meanings",
+   "category": "Theory",
+   "keywords": [
+    "festivals",
+    "Israel"
+   ]
+  },
+  {
+   "title": "Places and their significance",
+   "category": "Methods",
+   "keywords": [
+    "places",
+    "significance"
+   ]
+  },
+  {
+   "title": "Key verses every candidate should know",
+   "category": "Methods",
+   "keywords": [
+    "key verses"
+   ]
+  },
+  {
+   "title": "Workshop: 60 rapid-recall items",
+   "category": "Applications",
+   "keywords": [
+    "rapid recall"
+   ]
+  },
+  {
+   "title": "Workshop: map-location drills",
+   "category": "Methods",
+   "keywords": [
+    "map drills"
+   ]
+  },
+  {
+   "title": "Examination drill: workshop past questions",
+   "category": "Applications",
+   "keywords": [
+    "workshop",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Building the final revision timetable",
+   "category": "Methods",
+   "keywords": [
+    "revision timetable"
+   ]
+  },
+  {
+   "title": "Bible facts digest: one page to rule them",
+   "category": "Methods",
+   "keywords": [
+    "facts digest"
+   ]
+  },
+  {
+   "title": "The most repeated JAMB CRS themes",
+   "category": "Methods",
+   "keywords": [
+    "repeated themes",
+    "JAMB"
+   ]
+  },
+  {
+   "title": "Mock examination: 50 questions in 50 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Marking your mock: error analysis",
+   "category": "Methods",
+   "keywords": [
+    "error analysis",
+    "mock"
+   ]
+  },
+  {
+   "title": "Guessing wisely on unfamiliar items",
+   "category": "Methods",
+   "keywords": [
+    "guessing",
+    "wisely"
+   ]
+  },
+  {
+   "title": "Handling long narrative options",
+   "category": "Methods",
+   "keywords": [
+    "narrative options"
+   ]
+  },
+  {
+   "title": "Memory hooks for hard passages",
+   "category": "Methods",
+   "keywords": [
+    "memory hooks"
+   ]
+  },
+  {
+   "title": "Staying calm through verse-hunt items",
+   "category": "Methods",
+   "keywords": [
+    "composure",
+    "verse-hunt"
+   ]
+  },
+  {
+   "title": "Exam day strategy and final confidence",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "strategy"
+   ]
+  },
+  {
+   "title": "Covenant as the Bible's spine",
+   "category": "Theory",
+   "keywords": [
+    "covenant",
+    "spine"
+   ]
+  },
+  {
+   "title": "Sacrifice: meaning and types",
+   "category": "Theory",
+   "keywords": [
+    "sacrifice",
+    "types"
+   ]
+  },
+  {
+   "title": "Prophecy: forthtelling and foretelling",
+   "category": "Concepts & Foundations",
+   "keywords": [
+    "prophecy"
+   ]
+  },
+  {
+   "title": "Wisdom literature sampled: Proverbs",
+   "category": "Theory",
+   "keywords": [
+    "wisdom",
+    "Proverbs"
+   ]
+  },
+  {
+   "title": "Psalms: prayer in every mood",
+   "category": "Theory",
+   "keywords": [
+    "Psalms",
+    "prayer"
+   ]
+  },
+  {
+   "title": "Leadership failures catalogued honestly",
+   "category": "Theory",
+   "keywords": [
+    "leadership",
+    "failures"
+   ]
+  },
+  {
+   "title": "God's faithfulness traced across eras",
+   "category": "Theory",
+   "keywords": [
+    "faithfulness"
+   ]
+  },
+  {
+   "title": "Comparing Samuel and Kings accounts",
+   "category": "Methods",
+   "keywords": [
+    "Samuel",
+    "Kings"
+   ]
+  },
+  {
+   "title": "Workshop: 20 rapid OT items",
+   "category": "Applications",
+   "keywords": [
+    "rapid items",
+    "OT"
+   ]
+  },
+  {
+   "title": "Examination drill: OT past questions",
+   "category": "Applications",
+   "keywords": [
+    "Old Testament",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Why Jesus taught in parables",
+   "category": "Theory",
+   "keywords": [
+    "parables",
+    "reason"
+   ]
+  },
+  {
+   "title": "The sower: soils explained",
+   "category": "Theory",
+   "keywords": [
+    "sower",
+    "soils"
+   ]
+  },
+  {
+   "title": "The good Samaritan: neighbour defined",
+   "category": "Theory",
+   "keywords": [
+    "good Samaritan"
+   ]
+  },
+  {
+   "title": "The prodigal son: two brothers",
+   "category": "Theory",
+   "keywords": [
+    "prodigal son"
+   ]
+  },
+  {
+   "title": "The rich fool: possession warnings",
+   "category": "Theory",
+   "keywords": [
+    "rich fool"
+   ]
+  },
+  {
+   "title": "The persistent widow: prayer",
+   "category": "Theory",
+   "keywords": [
+    "persistent widow"
+   ]
+  },
+  {
+   "title": "The talents: stewardship weighed",
+   "category": "Theory",
+   "keywords": [
+    "talents"
+   ]
+  },
+  {
+   "title": "The sheep and the goats: judgement",
+   "category": "Theory",
+   "keywords": [
+    "sheep",
+    "goats"
+   ]
+  },
+  {
+   "title": "Workshop: match parable to lesson",
+   "category": "Methods",
+   "keywords": [
+    "match",
+    "lesson"
+   ]
+  },
+  {
+   "title": "Examination drill: parables past questions",
+   "category": "Applications",
+   "keywords": [
+    "parables",
+    "past questions"
+   ]
+  },
+  {
+   "title": "First journey: Cyprus and Galatia",
+   "category": "Theory",
+   "keywords": [
+    "first journey"
+   ]
+  },
+  {
+   "title": "Second journey: Macedonia call",
+   "category": "Theory",
+   "keywords": [
+    "second journey"
+   ]
+  },
+  {
+   "title": "Third journey: Ephesus years",
+   "category": "Theory",
+   "keywords": [
+    "third journey"
+   ]
+  },
+  {
+   "title": "Jerusalem council: the decision text",
+   "category": "Theory",
+   "keywords": [
+    "Jerusalem council",
+    "text"
+   ]
+  },
+  {
+   "title": "Paul's defence speeches sampled",
+   "category": "Theory",
+   "keywords": [
+    "defence speeches"
+   ]
+  },
+  {
+   "title": "Lydia, Priscilla and Aquila: partners",
+   "category": "Theory",
+   "keywords": [
+    "Lydia",
+    "Priscilla"
+   ]
+  },
+  {
+   "title": "Mission strategy: city to city",
+   "category": "Theory",
+   "keywords": [
+    "mission strategy"
+   ]
+  },
+  {
+   "title": "Maps: trace each journey",
+   "category": "Methods",
+   "keywords": [
+    "maps",
+    "journeys"
+   ]
+  },
+  {
+   "title": "Workshop: 20 rapid Acts items",
+   "category": "Applications",
+   "keywords": [
+    "rapid items",
+    "Acts"
+   ]
+  },
+  {
+   "title": "Examination drill: Acts past questions - set 2",
+   "category": "Applications",
+   "keywords": [
+    "Acts",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Grace: definitions that hold",
+   "category": "Theory",
+   "keywords": [
+    "grace"
+   ]
+  },
+  {
+   "title": "Faith and works reconciled",
+   "category": "Theory",
+   "keywords": [
+    "faith",
+    "works"
+   ]
+  },
+  {
+   "title": "Sin, law and conscience",
+   "category": "Theory",
+   "keywords": [
+    "sin",
+    "law",
+    "conscience"
+   ]
+  },
+  {
+   "title": "The Spirit's fruit and gifts",
+   "category": "Theory",
+   "keywords": [
+    "fruit",
+    "gifts"
+   ]
+  },
+  {
+   "title": "Church order in the pastorals",
+   "category": "Theory",
+   "keywords": [
+    "church order",
+    "pastorals"
+   ]
+  },
+  {
+   "title": "Hope: resurrection texts compared",
+   "category": "Theory",
+   "keywords": [
+    "hope",
+    "resurrection"
+   ]
+  },
+  {
+   "title": "Giving: 2 Corinthians principles",
+   "category": "Theory",
+   "keywords": [
+    "giving",
+    "Corinthians"
+   ]
+  },
+  {
+   "title": "Unity: one body many parts",
+   "category": "Theory",
+   "keywords": [
+    "unity",
+    "body"
+   ]
+  },
+  {
+   "title": "Workshop: doctrine true-false sprint",
+   "category": "Applications",
+   "keywords": [
+    "doctrine",
+    "sprint"
+   ]
+  },
+  {
+   "title": "Examination drill: epistles past questions",
+   "category": "Applications",
+   "keywords": [
+    "epistles",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Israel's regions: Galilee to Judah",
+   "category": "Methods",
+   "keywords": [
+    "regions",
+    "Galilee"
+   ]
+  },
+  {
+   "title": "Jerusalem's layout in Jesus' day",
+   "category": "Methods",
+   "keywords": [
+    "Jerusalem",
+    "layout"
+   ]
+  },
+  {
+   "title": "Paul's Mediterranean mapped",
+   "category": "Methods",
+   "keywords": [
+    "Mediterranean",
+    "Paul"
+   ]
+  },
+  {
+   "title": "Rivers, deserts and travel routes",
+   "category": "Methods",
+   "keywords": [
+    "routes",
+    "rivers"
+   ]
+  },
+  {
+   "title": "Empires: Assyria to Rome",
+   "category": "Theory",
+   "keywords": [
+    "empires",
+    "Assyria",
+    "Rome"
+   ]
+  },
+  {
+   "title": "Cities of Paul's journeys pinned",
+   "category": "Methods",
+   "keywords": [
+    "cities",
+    "journeys"
+   ]
+  },
+  {
+   "title": "Maps in answers: quick sketches",
+   "category": "Methods",
+   "keywords": [
+    "maps",
+    "sketches"
+   ]
+  },
+  {
+   "title": "Workshop: locate 20 places timed",
+   "category": "Applications",
+   "keywords": [
+    "locate",
+    "places"
+   ]
+  },
+  {
+   "title": "Comparing the four gospels' settings",
+   "category": "Methods",
+   "keywords": [
+    "gospels",
+    "settings"
+   ]
+  },
+  {
+   "title": "Examination drill: geography past questions",
+   "category": "Applications",
+   "keywords": [
+    "Bible geography",
+    "past questions"
+   ]
+  },
+  {
+   "title": "Timed drill: Genesis to Joshua",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "Genesis"
+   ]
+  },
+  {
+   "title": "Timed drill: kings and prophets",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "prophets"
+   ]
+  },
+  {
+   "title": "Timed drill: gospels",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "gospels"
+   ]
+  },
+  {
+   "title": "Timed drill: Acts and epistles",
+   "category": "Applications",
+   "keywords": [
+    "drill",
+    "epistles"
+   ]
+  },
+  {
+   "title": "Verse-location sprint: 20 items",
+   "category": "Methods",
+   "keywords": [
+    "verse location"
+   ]
+  },
+  {
+   "title": "Who-am-I character quiz round",
+   "category": "Applications",
+   "keywords": [
+    "character quiz"
+   ]
+  },
+  {
+   "title": "Mock: 50 questions in 50 minutes",
+   "category": "Applications",
+   "keywords": [
+    "mock examination"
+   ]
+  },
+  {
+   "title": "Error analysis of your mock",
+   "category": "Methods",
+   "keywords": [
+    "error analysis"
+   ]
+  },
+  {
+   "title": "Facts: the last-night sheet",
+   "category": "Methods",
+   "keywords": [
+    "facts sheet"
+   ]
+  },
+  {
+   "title": "Exam day: the calm plan",
+   "category": "Methods",
+   "keywords": [
+    "exam day",
+    "plan"
+   ]
+  }
+ ]
+}

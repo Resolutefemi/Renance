@@ -1,0 +1,98 @@
+// Package arena is the multiplayer head-to-head quiz hub (ROADMAP #14),
+// in-process slice: matchmaking queues, live matches and scoring live in
+// this process's memory; only the match OUTCOME reaches the database
+// (best-effort), so a slow DB can never break a live game.
+//
+// Doctrine mirrors the grading engine: pure rules are unit-tested with
+// injected clocks and fake peers, zero network in the tests. The radio
+// transport is WebSocket (gorilla), one hub per process - the Redis /
+// multi-host presence layer is a later slice when scale asks for it.
+package arena
+
+// Inbound is one client → arena message (JSON on the socket).
+type Inbound struct {
+        Type   string `json:"type"`             // "queue" | "cancel" | "answer" | "host" | "join" | "challenge"
+        Body   string `json:"body,omitempty"`   // queue/host/challenge: JAMB | WAEC | NECO | POST-UTME | University Modules | "" = any
+        Index  int    `json:"index,omitempty"`  // answer: 0-based question index
+        Letter string `json:"letter,omitempty"` // answer: chosen option letter
+        Code   string `json:"code,omitempty"`   // join: the private room code
+        Target string `json:"target,omitempty"` // challenge: the invited student's userID
+}
+
+// Outbound is one arena → client message (JSON on the socket).
+type Outbound struct {
+        Type string `json:"type"` // queued | hosted | cancelled | challenge | challenge_sent | matched | question | result | over | error
+
+        // matched / over
+        MatchID   string         `json:"matchId,omitempty"`
+        Winner    string         `json:"winner,omitempty"` // userID; "" = draw/aborted
+        Scores    map[string]int `json:"scores,omitempty"`
+        Opponent  string         `json:"opponent,omitempty"` // username (bot matches: "Renance Bot")
+        Code      string         `json:"code,omitempty"`     // pack both players got; on "hosted" frames: the room code
+        Body      string         `json:"body,omitempty"`
+        Questions int            `json:"questionCount,omitempty"`
+        Seconds   int            `json:"secondsPerQuestion,omitempty"`
+
+        // question - Index MUST serialize even when 0 (the first question),
+        // or clients render "question NaN"; no omitempty here.
+        Index    int    `json:"index"`
+        Deadline int64  `json:"deadline,omitempty"` // unix seconds, answer cutoff
+        Question *QView `json:"question,omitempty"`
+
+        // result
+        Correct string          `json:"correctLetter,omitempty"`
+        Solved  map[string]bool `json:"solved,omitempty"` // userID -> got it right
+
+        // error
+        ErrCode string `json:"errorCode,omitempty"`
+        ErrMsg  string `json:"message,omitempty"`
+}
+
+// QView is the student-safe view of one match question: no answer key,
+// ever - the same rule the bundle route enforces.
+type QView struct {
+        ID      string            `json:"id"`
+        Stem    string            `json:"stem"`
+        Options map[string]string `json:"options,omitempty"`
+        Marks   int               `json:"marks"`
+}
+
+// Inbound message type constants.
+const (
+        InQueue     = "queue"
+        InCancel    = "cancel"
+        InAnswer    = "answer"
+        InHost      = "host"
+        InJoin      = "join"
+        InChallenge = "challenge"
+)
+
+// Outbound message type constants.
+const (
+        OutQueued        = "queued"
+        OutHosted        = "hosted"
+        OutCancelled     = "cancelled"
+        OutChallenge     = "challenge"     // live invite: you are challenged
+        OutChallengeSent = "challenge_sent" // your invite is on its way
+        OutMatched       = "matched"
+        OutQuestion      = "question"
+        OutResult        = "result"
+        OutOver          = "over"
+        OutError         = "error"
+)
+
+// Error codes carried on OutErrCode.
+const (
+        ErrAlreadyQueued   = "already_queued"
+        ErrInMatch         = "in_match"
+        ErrNoPack          = "no_pack_available"
+        ErrUnknownBody     = "unknown_body"
+        ErrUnknownRoom     = "unknown_room"
+        ErrUnknownPlayer   = "unknown_player"
+        ErrAlreadyHost     = "already_hosting"
+        ErrRoomUnavailable = "room_unavailable"
+        ErrLate            = "late_answer"
+        ErrReplaced        = "replaced"
+        ErrShuttingDown    = "shutting_down"
+        ErrBadMessage      = "bad_message"
+)

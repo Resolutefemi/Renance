@@ -1,0 +1,87 @@
+# dependencies / builds
+node_modules/
+dist/
+build/
+out/
+.next/
+.turbo/
+coverage/
+
+# environment, NEVER commit real secrets
+.env
+.env.local
+.env.*.local
+
+# logs & misc
+*.log
+pnpm-debug.log*
+.DS_Store
+.agents/
+__pycache__/
+*.pyc
+
+# flutter / dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+pubspec.lock
+
+# editors
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# study-api (Go)
+apps/study-api/study-api
+apps/study-api/bin/
+
+# Answers now live INSIDE the question banks (founder directive, 2026-09):
+# data/questions/**.json carry `answer`/`explanation` per question and the
+# API harvests them at boot, so there is no separate key folder anymore.
+
+# Build-provenance copies of harvested source banks (with answers) are
+# kept on disk only, the packed student-safe artifacts live in
+# data/questions/. Never commit the raw sources.
+data/src/real/
+data/src/mock/
+
+# Server-only sealed-key output of tools/cbt-build (keys live inside the
+# question banks + the API's in-memory cache; this folder is a build
+# artifact, never tracked).
+data/answer-keys/
+
+# theme-flip golden renders (regenerable via --update-goldens)
+apps/mobile/test/goldens/
+arena-e2e
+
+# TypeScript incremental build cache
+*.tsbuildinfo
+
+# Generated at build time by scripts/web_bundles.py (never commit)
+apps/web/public/bundles/
+apps/web/public/routes-manifest.json
+apps/web/public/school-corpus/
+
+# school-notes scraper cache (never commit raw crawl output)
+data/school-notes/cache/
+
+# notes writer local state
+scripts/.notes-checkpoint.json
+scripts/.notes-failures.json
+scripts/.commit_notes_batch.sh
+package-lock.json
+
+# notes generator scratch
+scripts/.notes-raw-reply.txt
+
+# Heavy harvest intermediates - PDFs live in renance-pdfs repo, sources stay local-only
+data/src/abstechconnect/pdfs/
+data/src/abstechconnect/hpdfs/
+data/src/abstechconnect/download_fails.json
+data/src/abstechconnect/bank_report.json
+data/src/gdrive/*.pdf
+data/renance_pdfs/
+# raw crawl of the founder 2026-10-11 Drive folder (bank sources only)
+data/src/gdrive_new/

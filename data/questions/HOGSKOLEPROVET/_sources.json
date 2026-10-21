@@ -1,0 +1,98 @@
+{
+ "exam": "Högskoleprovet",
+ "region": "Sweden",
+ "slug": "HOGSKOLEPROVET",
+ "question_banks": 2,
+ "github_sources": [
+  {
+   "repo": "OttoStudy11/rork-studieapp-f-r-svenska-studenter",
+   "url": "https://github.com/OttoStudy11/rork-studieapp-f-r-svenska-studenter/blob/bede9742be6ff7590ac41739330fcfebd90e6b8e/expo/constants/hogskoleprovet-questions-extended.ts",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "BirgerMoell/qwen35-posttrain",
+   "url": "https://github.com/BirgerMoell/qwen35-posttrain/blob/22370f7dc2d28af79ef0b80ef6b584c2fbe88121/docs/EU_EXAM_MCQ_DATASET.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "spraakbanken/metadata",
+   "url": "https://github.com/spraakbanken/metadata/blob/5a1621f71b57744b4e30053a58af24624ef3ec5a/yaml/lexicon/swesat-synonyms.yaml",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "nick-allison/Reddit-Community-Interaction-Analysis",
+   "url": "https://github.com/nick-allison/Reddit-Community-Interaction-Analysis/blob/040fd0a22cd6721fb5b6378afc6dfbe54799ab7d/Part5/2017_in_degree_values",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "elitan/hp-ai-benchmark",
+   "url": "https://github.com/elitan/hp-ai-benchmark/blob/ff34f4ecdd4fba0d6fbe054cc7cf2c286c67b2c5/src/main.ts",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "spraakbanken/SuperLim-2",
+   "url": "https://github.com/spraakbanken/SuperLim-2/blob/aa2742338c6dacac3ca87ddc23f0a8535f297abb/swesat-synonyms/swesat-synonyms_documentation-sheet.tsv",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "Xiaoyu-Xing/youtube-algorithmic-bias",
+   "url": "https://github.com/Xiaoyu-Xing/youtube-algorithmic-bias/blob/2643f9ba59fa5ad1757bc645a5a6bcf45061e21b/generated_data/profile_data_for_training/sample_output/extended_RNG/error.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "skvarre/instruction-tuning-swedish",
+   "url": "https://github.com/skvarre/instruction-tuning-swedish/blob/7f0d7219980614a3aab1fe49d25fab58ef00ee96/notebooks/data_clean.ipynb",
+   "stars": 0,
+   "desc": ""
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "Högskoleprovet Quizzes",
+   "url": "https://www.purposegames.com",
+   "class": "site"
+  },
+  {
+   "title": "Högskoleprovet 2.0 - Apps on Google Play",
+   "url": "https://play.google.com/store/apps/details?id=se.teoriappar.hp&hl=en_US",
+   "class": "site"
+  },
+  {
+   "title": "Facit Högskoleprovet 2017-10-21 | PDF",
+   "url": "https://www.scribd.com",
+   "class": "site"
+  },
+  {
+   "title": "Öva på tidigare högskoleprov",
+   "url": "https://www.studera.nu",
+   "class": "site"
+  },
+  {
+   "title": "Ladda ner Alla Gamla Högskoleprov och Facit från 1977",
+   "url": "https://allarätt.nu",
+   "class": "site"
+  },
+  {
+   "title": "Högskoleprovet - Viktor Alm",
+   "url": "https://viktoralm.se",
+   "class": "site"
+  },
+  {
+   "title": "Gamla högskoleprov",
+   "url": "https://hpguiden.se",
+   "class": "site"
+  },
+  {
+   "title": "Träna på gamla högskoleprov | Ladda ner & öva här",
+   "url": "https://www.allakando.se",
+   "class": "site"
+  }
+ ]
+}

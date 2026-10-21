@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: 'Inter'; font-weight: 400; src: url('file:///home/z/my-project/renance/apps/web/public/fonts/inter-latin-400-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Inter'; font-weight: 500; src: url('file:///home/z/my-project/renance/apps/web/public/fonts/inter-latin-500-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Inter'; font-weight: 600; src: url('file:///home/z/my-project/renance/apps/web/public/fonts/inter-latin-600-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Inter'; font-weight: 700; src: url('file:///home/z/my-project/renance/apps/web/public/fonts/inter-latin-700-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Nunito'; font-weight: 800 1000; src: url('file:///home/z/my-project/renance/apps/web/public/fonts/nunito-latin-variable.woff2') format('woff2'); }
+  @font-face { font-family: 'JetBrains Mono'; font-weight: 500; src: url('file:///home/z/my-project/renance/apps/web/public/fonts/jetbrains-mono-latin-500-normal.woff2') format('woff2'); }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    font-family: 'Inter', 'DejaVu Sans', sans-serif;
+    background: #0b1322;
+    color: #fff;
+    position: relative;
+  }
+  /* aurora field - the landing page's brand backdrop */
+  .aurora { position: absolute; inset: 0; overflow: hidden; }
+  .blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .5; }
+  .b1 { width: 640px; height: 640px; right: -180px; top: -240px; background: radial-gradient(circle, rgba(34,197,94,.34), transparent 65%); }
+  .b2 { width: 560px; height: 560px; left: -200px; bottom: -260px; background: radial-gradient(circle, rgba(59,130,246,.30), transparent 65%); }
+  .b3 { width: 420px; height: 420px; left: 34%; top: -200px; background: radial-gradient(circle, rgba(139,92,246,.20), transparent 65%); }
+  .grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .frame { position: relative; height: 100%; padding: 44px 60px 40px; display: flex; flex-direction: column; }
+
+  /* header: keycap + wordmark, site chip */
+  .head { display: flex; align-items: center; justify-content: space-between; }
+  .brand { display: flex; align-items: center; gap: 13px; }
+  .keycap {
+    width: 46px; height: 46px; border-radius: 12px;
+    background: linear-gradient(180deg, #6ede2e 0%, #58cc02 55%, #46a302 100%);
+    box-shadow: 0 4px 0 #3d8b01, inset 0 2px 0 rgba(255,255,255,.34);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .keycap span {
+    font-family: 'Nunito', 'DejaVu Sans', sans-serif; font-weight: 1000;
+    font-size: 27px; color: #fff; transform: translateY(-1px);
+  }
+  .wordmark { font-family: 'Nunito', 'DejaVu Sans', sans-serif; font-weight: 900; font-size: 27px; letter-spacing: -.02em; }
+  .site {
+    font-family: 'JetBrains Mono', monospace; font-size: 14px; letter-spacing: .12em;
+    color: rgba(255,255,255,.62); border: 1px solid rgba(255,255,255,.16);
+    border-radius: 999px; padding: 8px 16px;
+  }
+
+  .eyebrow {
+    margin-top: 30px;
+    font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 500;
+    letter-spacing: .34em; text-transform: uppercase; color: #58cc02;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .eyebrow::before { content: ''; width: 30px; height: 2px; background: #58cc02; border-radius: 2px; }
+
+  h1 {
+    margin-top: 12px;
+    font-size: 41px; line-height: 1.14; font-weight: 700; letter-spacing: -.022em;
+    max-width: 1030px;
+  }
+  h1 em { font-style: normal; color: #58cc02; }
+
+  .desc {
+    margin-top: 20px; max-width: 1064px;
+    font-size: 17.5px; line-height: 1.52; color: rgba(255,255,255,.86);
+  }
+  .desc b { color: #fff; font-weight: 600; }
+  .desc .num { color: #7ee83c; font-weight: 700; }
+  .inst {
+    margin-top: 13px; max-width: 1064px;
+    font-size: 15px; line-height: 1.5; color: rgba(255,255,255,.62);
+  }
+
+  .stats { margin-top: 30px; display: flex; gap: 14px; }
+  .chip {
+    flex: 1; border: 1px solid rgba(255,255,255,.13); border-radius: 14px;
+    background: rgba(255,255,255,.045);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.07);
+    padding: 15px 18px 13px;
+  }
+  .chip .v { font-size: 23px; font-weight: 700; letter-spacing: -.01em; }
+  .chip .v em { font-style: normal; color: #7ee83c; }
+  .chip .k { margin-top: 3px; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.5); }
+
+  .foot {
+    margin-top: auto; display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,.12); padding-top: 18px;
+  }
+  .site-line { font-weight: 700; font-size: 19px; }
+  .platforms { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; letter-spacing: .18em; color: rgba(255,255,255,.55); }
+  .platforms b { color: #58cc02; font-weight: 500; }
+</style>
+</head>
+<body>
+  <div class="aurora"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+  <div class="grid"></div>
+  <div class="frame">
+    <div class="head">
+      <div class="brand">
+        <div class="keycap"><span>R</span></div>
+        <div class="wordmark">Renance</div>
+      </div>
+      <div class="site">renance.app</div>
+    </div>
+
+    <div class="eyebrow">Your Guide to Academic Success</div>
+    <h1>The educational app in Nigeria for <em>JAMB, WAEC, NECO</em> &amp; tertiary success.</h1>
+
+    <p class="desc">
+      Learn exam-ready courses step by step, drill <span class="num">90,000+</span> JAMB, NECO,
+      and WAEC past questions from <b>1978 to 2026</b>, and practice over
+      <span class="num">200,000</span> Post-UTME and tertiary institution course questions with
+      <b>server-graded CBT mocks</b>. Stay engaged and motivated with daily quests, competitive
+      leagues, a live arena, and a community feed that celebrates your wins.
+    </p>
+    <p class="inst">
+      For institutions, Renance provides a comprehensive school portal to seamlessly manage
+      syllabuses, lecture notes, attendance, exam results, and fee payments.
+    </p>
+
+    <div class="stats">
+      <div class="chip"><div class="v"><em>90,000+</em></div><div class="k">JAMB &#183; WAEC &#183; NECO past questions</div></div>
+      <div class="chip"><div class="v"><em>200,000+</em></div><div class="k">Post-UTME &amp; tertiary questions</div></div>
+      <div class="chip"><div class="v">1978&#8211;2026</div><div class="k">years of real papers</div></div>
+      <div class="chip"><div class="v">CBT mocks</div><div class="k">server-graded, exam-hall true</div></div>
+    </div>
+
+    <div class="foot">
+      <div class="site-line">renance.app</div>
+      <div class="platforms"><b>FREE</b> &#183; ANDROID &#183; IOS &#183; WINDOWS &#183; MACOS &#183; WEB</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+ "code": "uni-unical-sta182-bank",
+ "title": "UNICAL STA 182 | Course Question Bank",
+ "version": 1,
+ "questionCount": 5,
+ "totalMarks": 25,
+ "category": "university",
+ "body": "University Modules",
+ "questions": [
+  {
+   "id": "uni-unical-sta182-bank-0001",
+   "type": "theory",
+   "stem": "(a) Differentiate between the following terms\ni. Sampling and Population\nii. Sampling error and non-sampling error\niii. Census and survey\n(b) State and explain two ways in which information can be obtained\n(c) Mention three advantages of sampling over census and explain any two",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta182-bank-0002",
+   "type": "theory",
+   "stem": "(a) Enumerate and explain five steps involved in planning and execution of a sample survey\n(b) Mention four practical problems one can encounter in a survey\n(c) Outline the steps involved in calculating population size\n(d) Determine the ideal survey size for a sampling of 700 people. Use 90% confidence level, a 5% standard deviation and a 3% margin of error.",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta182-bank-0003",
+   "type": "theory",
+   "stem": "(a) Define questionnaire\n(b) Using the question \"Effect of online registration of courses on students' academic performance\" Develop a question which can enable you get students reactions to their academics after the strike respondent.\n(c) If your interest is to get response from your respondent by making them tick on the option there prefer, using the respondent \"In your last weekend break, did you stay... Develop a range of possible questions and ask your own question for your respondent making them to indicate their views. For control they of information to your own needs.",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta182-bank-0004",
+   "type": "theory",
+   "stem": "(a) Define simple random sampling\n(b) List all possible samples of size 2 that can be drawn from the population of 8, 16, 10, 20, 12, and 18 with replacement\n(c) Calculate the means of the samples and construct the distribution of the sample mean\n(d) Suppose a population contains N = 54 units and a sample of n = 9 units is to be drawn. Use systematic sampling to draw the sample.",
+   "marks": 5,
+   "explanation": ""
+  },
+  {
+   "id": "uni-unical-sta182-bank-0005",
+   "type": "theory",
+   "stem": "(a) Define the concept of stratification\n(b) Give two reasons for stratification\n(c) Randomly selected samples gave the following results in a quiz in MTH 182\n\n| X\u2081 | X\u2082 | X\u2083 |\n|-|-|-|\n| 45 | 74 | 56 |\n| 55 | 66 | 73 |\n| 65 | 42 | 72 |\n|    | 58 | 65 |\n\nEstimate the population mean and variance",
+   "marks": 5,
+   "explanation": ""
+  }
+ ]
+}

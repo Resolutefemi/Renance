@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cold-start splash, v21+. ?android:colorBackground resolves white
+     under the light LaunchTheme and black under values-night's dark
+     LaunchTheme, so one drawable serves both tiers - and the keycap
+     below is the same mark/size the Flutter splash opens with. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="?android:colorBackground" />
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/launch_keycap" />
+    </item>
+</layer-list>
