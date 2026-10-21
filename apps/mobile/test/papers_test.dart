@@ -176,7 +176,8 @@ void main() {
       );
       expect(meta.code, 'jamb-mock-english-biology-physics');
       // Quiz name only, the player's subject strip carries the subjects.
-      expect(meta.title, 'UTME Mock');
+      // Founder 2026-10-22: the full mock reads JAMB MOCK everywhere.
+      expect(meta.title, 'JAMB MOCK');
       expect(meta.body, 'JAMB');
       expect(meta.durationMinutes, 120);
       // 60 English + 40 per elective.
@@ -191,7 +192,8 @@ void main() {
         <String>['biology'],
         count: 40,
       );
-      expect(meta.title, 'WASSCE Practice');
+      // Founder 2026-10-22: one subject reads "{board} {subject}".
+      expect(meta.title, 'WAEC Biology');
       expect(meta.body, 'WAEC');
       expect(meta.questionCount, 40);
       expect(meta.durationMinutes, isNull);

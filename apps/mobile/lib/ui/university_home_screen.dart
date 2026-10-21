@@ -18,7 +18,6 @@ import 'home_screen.dart' show LauncherTile, openDailyQuiz, showMoreSheet;
 import 'leaderboard_screen.dart';
 import 'msymbols.dart';
 import 'review_screen.dart';
-import 'search_screen.dart';
 import 'settings_screen.dart';
 import 'shop_screen.dart';
 import 'study_setup_screen.dart';

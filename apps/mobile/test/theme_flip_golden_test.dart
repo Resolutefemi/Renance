@@ -23,9 +23,6 @@ import 'package:renance/controllers.dart';
 import 'package:renance/models.dart';
 import 'package:renance/storage.dart';
 import 'package:renance/ui/ai_generator_screen.dart';
-import 'package:renance/ui/arena_lobby_screen.dart';
-import 'package:renance/ui/arena_match_screen.dart';
-import 'package:renance/arena_client.dart';
 import 'package:renance/ui/auth_screens.dart';
 import 'package:renance/ui/badge_detail_screen.dart';
 import 'package:renance/ui/career_bridge_screen.dart';
@@ -52,7 +49,6 @@ import 'package:renance/ui/study_plan_screen.dart';
 import 'package:renance/ui/splash_screen.dart';
 import 'package:renance/ui/syllabus_screen.dart';
 import 'package:renance/ui/theme.dart';
-import 'package:renance/ui/tutor_screen.dart';
 import 'package:renance/ui/university_home_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -394,27 +390,11 @@ WidgetBuilder screenFor(String name) {
       return (_) => const StudyPlanScreen();
     case 'syllabus':
       return (_) => const SyllabusScreen();
-    case 'tutor':
-      return (_) => const TutorEntryScreen();
     case 'lessons':
       return (_) => const LessonsScreen();
     case 'lesson_reader':
       return (_) =>
           const LessonReaderScreen(slug: 'demo', title: 'Cell Division');
-    case 'arena_lobby':
-      return (_) => const ArenaLobbyScreen();
-    case 'arena_match':
-      // The live duel drives off a socket; the harness wires a bare one
-      // (no connect) and renders the waiting state.
-      final ArenaSocket matchSock = ArenaSocket(onFrame: (_) {});
-      return (_) => ArenaMatchScreen(
-        socket: matchSock,
-        onFrames: (_) {},
-        myId: 'tester',
-        opponent: 'Renance Bot',
-        focus: 'JAMB',
-        onOver: () {},
-      );
     case 'career_bridge':
       return (_) => const CareerBridgeScreen();
     case 'offline_share':
@@ -518,11 +498,8 @@ const List<String> kScreens = <String>[
   'gamification_hub',
   'study_plan',
   'syllabus',
-  'tutor',
   'lessons',
   'lesson_reader',
-  'arena_lobby',
-  'arena_match',
   'career_bridge',
   'offline_share',
   'ai_generator',

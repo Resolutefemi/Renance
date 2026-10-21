@@ -1,7 +1,7 @@
 /// The university catalog's pure data layer: the school map, the
 /// UniCourse model and the manifest parsers. Lives OUT of the UI layer
 /// so non-UI code (the exam-title builder in papers.dart) can resolve
-/// "uni-<school>-<course>-bank" codes without touching widgets.
+/// `uni-<school>-<course>-bank` codes without touching widgets.
 library;
 
 import 'package:shared_preferences/shared_preferences.dart';

@@ -30,7 +30,6 @@ class PremiumScreen extends StatefulWidget {
 
 class _PremiumScreenState extends State<PremiumScreen> {
   PlanCatalog? _catalog;
-  Entitlement? _entitlement;
   String? _error;
   String? _busyPlan;
 
@@ -54,13 +53,8 @@ class _PremiumScreenState extends State<PremiumScreen> {
       setState(() => _error = 'No connection. Reconnect to load the plans.');
       return;
     }
-    try {
-      final Entitlement ent = await api.entitlement();
-      if (!mounted) return;
-      setState(() => _entitlement = ent);
-    } catch (_) {
-      // Signed-out or offline: the plans still show, coins just hide.
-    }
+    // The REN-coin balance read used to live here; the redeem UI it
+    // fed is retired (founder 2026-10-22 - referrals pay diamonds).
   }
 
   Future<void> _subscribe(PremiumPlan plan) async {

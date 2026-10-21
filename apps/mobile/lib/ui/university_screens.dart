@@ -14,11 +14,16 @@ library;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import '../controllers.dart';
 import '../models.dart';
 import '../university_catalog.dart';
+
+// The catalog's pure data layer stays importable from non-UI code
+// (papers.dart resolves school labels for exam titles) while every UI
+// importer of this file keeps seeing UniCourse / the school map / the
+// parsers exactly as before the extraction.
+export '../university_catalog.dart';
 import '../papers.dart';
 import '../storage.dart';
 import 'exam_screen.dart';
