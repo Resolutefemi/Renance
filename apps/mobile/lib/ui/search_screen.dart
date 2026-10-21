@@ -333,8 +333,13 @@ class _SearchBar extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: 'Search packs, lessons, topics',
                 hintStyle: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
-                prefixIcon: MsIcon('search',
-                    size: 24, color: context.textSecondary),
+                // Founder 2026-10-21: glyph centred on the text line,
+                // 10px inside a 36px hit area (the app's bar).
+                prefixIcon: MsFieldIcon('search',
+                    size: 18, color: context.textSecondary,
+                    box: 36, leftInset: 10),
+                prefixIconConstraints:
+                    const BoxConstraints(minWidth: 36, minHeight: 36),
                 filled: true,
                 fillColor: Colors.white,
                 contentPadding: const EdgeInsets.symmetric(vertical: 12),

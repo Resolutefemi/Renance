@@ -15,7 +15,6 @@ import '../learn_controller.dart';
 import '../learn_models.dart' show SocialConnections;
 import '../models.dart';
 import '../storage.dart';
-import 'downloads_screen.dart';
 import 'exam_history_screen.dart';
 import 'focus_sheet.dart';
 import 'gpa_screen.dart';
@@ -24,9 +23,9 @@ import 'performance_screen.dart';
 import 'saved_questions.dart';
 import 'premium_screen.dart';
 import 'settings_screen.dart';
+import 'about_screen.dart';
 import 'learn_bits.dart';
 import 'msymbols.dart';
-import 'shop_panel.dart';
 import 'social_screens.dart';
 import 'tactile.dart';
 import 'theme.dart';
@@ -212,40 +211,16 @@ class ProfileScreen extends StatelessWidget {
         // Tapping a half opens the lists on the management page.
         _FollowStrip(),
         const SizedBox(height: 12),
-        // Invite friends (the web's referral card): the REN loop.
+        // Invite friends (the web's referral card): 100 diamonds per
+        // friend who joins with your code (founder 2026-10-22 - the
+        // old 3-REN-coins loop is retired with the Ren points it fed).
         if (me?.entitlement?.referralCode.isNotEmpty ?? false)
           _InviteCard(code: me!.entitlement!.referralCode),
         if (me?.entitlement?.referralCode.isNotEmpty ?? false)
           const SizedBox(height: 16),
-        // Shop (web /profile#shop): the gem wallet + the item list.
-        Container(
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: context.card,
-            borderRadius: BorderRadius.circular(12),
-            boxShadow: const <BoxShadow>[
-              BoxShadow(
-                  color: Color(0x14141C2D), blurRadius: 3, offset: Offset(0, 1)),
-            ],
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Row(
-                children: <Widget>[
-                  // The web shop header: text-[20px] text-primary-ink -
-                  // the seed-aware green ink, not a flat gray.
-                  MsIcon('storefront', size: 20, color: context.primaryInk),
-                  const SizedBox(width: 8),
-                  Text('Shop', style: RenanceText.sectionTitle),
-                ],
-              ),
-              const SizedBox(height: 14),
-              const ShopPanel(),
-            ],
-          ),
-        ),
-        const SizedBox(height: 16),
+        // The shop left the profile on the founder's 2026-10-22 order:
+        // it is a full page now (ShopScreen), opened from the home
+        // grid's Storefront tile and the header gems chip.
         // Learning focus: switch between JAMB / WAEC / NECO / tertiary.
         _FocusCard(
           chip: student.targetChip,
@@ -306,21 +281,11 @@ class ProfileScreen extends StatelessWidget {
                   builder: (_) => const SavedQuestionsScreen()));
             },
           ),
-          _MenuItem(
-            icon: 'auto_stories',
-            tint: context.ink,
-            label: 'My Packs',
-            onTap: () => onGoTab(1),
-          ),
-          _MenuItem(
-            icon: 'download',
-            tint: context.ink,
-            label: 'Downloads',
-            onTap: () {
-              Navigator.of(context).push(MaterialPageRoute<void>(
-                  builder: (_) => const DownloadsScreen()));
-            },
-          ),
+          // My Packs removed (founder 2026-10-22) - the course library
+          // stays on the Courses tab; the profile menu no longer double-
+          // lists it.
+          // Downloads removed (founder 2026-10-21: the feature is
+          // useless) - the profile menu row is gone with it.
           _MenuItem(
             icon: 'calculate',
             tint: context.ink,
@@ -343,11 +308,16 @@ class ProfileScreen extends StatelessWidget {
                   builder: (_) => const SettingsScreen()));
             },
           ),
+          // My papers removed (founder 2026-10-22) - exam history already
+          // sits in the content group above.
           _MenuItem(
-            icon: 'history_edu',
+            icon: 'info',
             tint: context.textSecondary,
-            label: 'My papers',
-            onTap: () => onGoTab(2),
+            label: 'About Renance',
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute<void>(
+                  builder: (_) => const AboutScreen()));
+            },
           ),
           _MenuItem(
             icon: 'help',
@@ -483,7 +453,7 @@ Future<void> _openIdentityEditor(BuildContext context) async {
                 const SizedBox(height: 4),
                 Text(
                   'Your display name and @handle - the identity every '
-                  'leaderboard, feed and arena seat carries.',
+                  'leaderboard row and feed post carries.',
                   style: RenanceText.caption
                       .copyWith(color: context.textSecondary),
                 ),
@@ -491,17 +461,23 @@ Future<void> _openIdentityEditor(BuildContext context) async {
                 TextField(
                   controller: nameCtrl,
                   textCapitalization: TextCapitalization.words,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     labelText: 'Display name',
-                    prefixIcon: MsIcon('person', size: 20),
+                    prefixIcon: MsFieldIcon('person',
+                        size: 20, color: context.textSecondary),
+                    prefixIconConstraints:
+                        const BoxConstraints(minWidth: 44, minHeight: 44),
                   ),
                 ),
                 const SizedBox(height: 12),
                 TextField(
                   controller: userCtrl,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     labelText: 'Username',
-                    prefixIcon: MsIcon('alternate_email', size: 20),
+                    prefixIcon: MsFieldIcon('alternate_email',
+                        size: 20, color: context.textSecondary),
+                    prefixIconConstraints:
+                        const BoxConstraints(minWidth: 44, minHeight: 44),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -680,7 +656,7 @@ class _InviteCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text('Invite friends, earn REN',
+                Text('Invite friends, earn 100 diamonds',
                     style: TextStyle(
                       fontFamily: 'Nunito',
                       fontSize: 14,
@@ -776,17 +752,14 @@ class _FocusCard extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                decoration: BoxDecoration(
-                  color: context.selectionBlue,
-                  borderRadius: BorderRadius.circular(999),
-                ),
-                child: Text(chip,
-                    style:
-                        RenanceText.labelMono.copyWith(fontSize: 12)),
-              ),
+              // Founder report 2026-10-21 ("that scattered text in the
+              // profile page"): the chip pill is GONE - the web's
+              // collapsed card (app/profile/page.tsx) carries NO pill;
+              // the target name lives only in the caption. The pill was
+              // an unbounded sibling, so at large system font scales it
+              // devoured the row and crushed 'Learning focus' into one
+              // letter per line. Expanded column + fixed siblings can
+              // never stack again.
               const SizedBox(width: 8),
               MsIcon('swap_horiz',
                   size: 24, color: context.outlineLight),

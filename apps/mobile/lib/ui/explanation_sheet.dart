@@ -87,10 +87,23 @@ class ExplanationSheet extends StatefulWidget {
 class _ExplanationSheetState extends State<ExplanationSheet> {
   bool _saving = false;
 
+  /// Local mirror of the saved flag. The parent passes [ExplanationSheet.saved]
+  /// at build time, but a shown modal sheet never re-renders when the parent
+  /// setState()s - so the old code read a STALE widget.saved forever and the
+  /// pill never flipped after a tap (founder 2026-10-21: "make sure the
+  /// saved questions feature is working well"). The store write itself was
+  /// always persisted; only the visual state was stuck. The sheet now flips
+  /// optimistically and the pager's ValueKey(idx) re-seeds a fresh state
+  /// (with the parent's current isSaved) for every question it opens.
+  late bool _saved = widget.saved;
+
   Future<void> _toggleSave() async {
     if (_saving) return;
     _saving = true;
     HapticFeedback.lightImpact();
+    // Optimistic flip - the store's cache mutates synchronously inside
+    // onToggleSave, so mirroring it here keeps the pill honest instantly.
+    if (mounted) setState(() => _saved = !_saved);
     try {
       widget.onToggleSave();
       await Future<void>.delayed(const Duration(milliseconds: 250));
@@ -166,9 +179,9 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
                           MsIcon('bookmark',
-                              size: 16, fill: widget.saved),
+                              size: 16, fill: _saved),
                           const SizedBox(width: 6),
-                          Text(widget.saved ? 'Saved' : 'Save'),
+                          Text(_saved ? 'Saved' : 'Save'),
                         ],
                       ),
                     ),

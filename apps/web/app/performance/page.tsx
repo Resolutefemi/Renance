@@ -85,8 +85,11 @@ export default function PerformancePage() {
     };
   }, []);
 
-  // Per-topic bars: aggregate the topic rows of the 6 most recent
-  // graded papers (the same honest window the app draws from).
+  // Per-SUBJECT bars (founder 2026-10-22: the performance page rates
+  // subjects and courses, "not those antonyms, synonyms and those
+  // shit"): aggregate the subject rows of the 6 most recent graded
+  // papers; questions without a subject tag fall back to the topic,
+  // then General.
   useEffect(() => {
     if (!attempts) return;
     const graded = attempts.filter((a) => a.status === 'graded' && a.score != null).slice(0, 6);
@@ -100,13 +103,13 @@ export default function PerformancePage() {
       const merged = new Map<string, TopicRow>();
       for (const a of graded) {
         try {
-          const r = await api<{ questions: Array<{ topic?: string; correctly: boolean }> }>(
+          const r = await api<{ questions: Array<{ subject?: string; topic?: string; correctly: boolean }> }>(
             `/attempts/${a.attemptId}/review`,
             { noRedirect: true },
           );
           const counts = new Map<string, { c: number; t: number }>();
           for (const q of r.questions) {
-            const key = q.topic?.trim() || 'General';
+            const key = q.subject?.trim() || q.topic?.trim() || 'General';
             const row = counts.get(key) ?? { c: 0, t: 0 };
             row.t += 1;
             if (q.correctly) row.c += 1;
@@ -259,15 +262,15 @@ export default function PerformancePage() {
           ))}
         </div>
 
-        {/* ---- per-topic bars --------------------------------------- */}
-        <h2 className="mt-6 px-1 text-[15px] font-bold text-on-surface">Topic mastery</h2>
+        {/* ---- per-subject bars ------------------------------------- */}
+        <h2 className="mt-6 px-1 text-[15px] font-bold text-on-surface">Subject mastery</h2>
         <p className="mt-1 px-1 text-[12.5px] text-on-surface-variant">
           Aggregated from your six most recent graded papers.
         </p>
         <div className="mt-3 rounded-[14px] bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
           {topicRows === null && <p className="py-2 text-sm text-on-surface-variant">Reading the marked papers…</p>}
           {topicRows?.length === 0 && (
-            <p className="py-2 text-sm text-on-surface-variant">Grade a paper and its topics line up here.</p>
+            <p className="py-2 text-sm text-on-surface-variant">Grade a paper and its subjects line up here.</p>
           )}
           {(topicRows ?? []).map((row) => {
             const pct = row.total > 0 ? Math.round((row.correct * 100) / row.total) : 0;

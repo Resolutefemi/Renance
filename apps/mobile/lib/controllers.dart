@@ -15,7 +15,7 @@ import 'api_client.dart';
 import 'audio_summary.dart';
 import 'device_id.dart';
 import 'models.dart';
-import 'papers.dart' show isComposedPaperCode;
+import 'papers.dart' show friendlyExamTitle, isComposedPaperCode;
 import 'school_offline.dart';
 import 'storage.dart';
 import 'tts.dart';
@@ -913,12 +913,16 @@ class StudentController extends ChangeNotifier {
   /// The most recent paper, for the launcher's recent-activity card.
   AttemptRow? get latestAttempt => attempts.isEmpty ? null : attempts.first;
 
-  /// Title of a pack code from the manifest cache (best effort).
+  /// Title of a pack code from the manifest cache (best effort). The
+  /// fallback is friendlyExamTitle, not the raw slug - composed codes
+  /// (jamb-mock-*, *-custom-*, uni-*-bank picks) never sit in the
+  /// manifest, and the founder wants "JAMB MOCK" / "JAMB Physics" /
+  /// "FUTA COS 101" instead of jamb-mock-english-...~comp=0.
   String titleForCode(String code) {
     for (final exam in _manifestTitles.entries) {
       if (exam.key == code) return exam.value;
     }
-    return code;
+    return friendlyExamTitle(code);
   }
 
   final Map<String, String> _manifestTitles = <String, String>{};
@@ -1157,65 +1161,6 @@ class LessonsController extends ChangeNotifier {
   }
 }
 
-// ---------------------------------------------------------- tutor controller
-
-enum TutorPhase { idle, thinking, ready, error }
-
-/// One Socratic conversation (ROADMAP #9): anchored to a graded attempt
-/// + question, it holds the visible turns and the mode badge from the
-/// last reply ('ai' | 'hint'). Provider outages and rate limits surface
-/// as an error row, the conversation itself is never lost.
-class TutorController extends ChangeNotifier {
-  TutorController({
-    required ApiClient api,
-    required this.attemptId,
-    required this.questionId,
-  }) : _api = api;
-
-  final ApiClient _api;
-  final String attemptId;
-  final String questionId;
-
-  final List<TutorTurn> turns = <TutorTurn>[];
-  TutorPhase phase = TutorPhase.idle;
-  String mode = 'hint';
-  String error = '';
-
-  bool get aiEnabled => mode == 'ai';
-
-  Future<void> send(String content) async {
-    final String text = content.trim();
-    if (text.isEmpty || phase == TutorPhase.thinking) return;
-    turns.add(TutorTurn(role: 'user', content: text));
-    phase = TutorPhase.thinking;
-    error = '';
-    notifyListeners();
-    try {
-      final TutorReply reply = await _api.tutorChat(
-        attemptId: attemptId,
-        questionId: questionId,
-        messages: List<TutorTurn>.of(turns),
-      );
-      turns.add(TutorTurn(role: 'assistant', content: reply.text));
-      mode = reply.mode;
-      phase = TutorPhase.ready;
-    } on ApiException catch (e) {
-      phase = TutorPhase.error;
-      error = e.statusCode == 429
-          ? 'The tutor is cooling down, retry in a few seconds.'
-          : e.message;
-    } on NetworkException {
-      phase = TutorPhase.error;
-      error = 'No connection, the tutor needs the server to coach.';
-    }
-    notifyListeners();
-  }
-}
-
-/// School workspace controller (For Schools): loads the caller's school
-/// memberships, downloads/removes offline school packs (syllabus, scheme
-/// of work, notes) and remembers which school session is active so the
-/// splash can land staff straight in their workspace.
 class SchoolController extends ChangeNotifier {
   SchoolController({
     required ApiClient api,

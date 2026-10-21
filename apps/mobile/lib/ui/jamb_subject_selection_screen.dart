@@ -285,7 +285,14 @@ class _JambSubjectSelectionScreenState
                           onChanged: (String v) => setState(() => _query = v),
                           decoration: InputDecoration(
                             hintText: 'Search subjects',
-                            prefixIcon: const MsIcon('search', size: 20),
+                            // Founder 2026-10-21: glyph centred on the
+                            // text line, 10px inside a 36px hit area
+                            // (the app's bar).
+                            prefixIcon: MsFieldIcon('search',
+                                size: 18, color: context.textSecondary,
+                                box: 36, leftInset: 10),
+                            prefixIconConstraints: const BoxConstraints(
+                                minWidth: 36, minHeight: 36),
                             isDense: true,
                             filled: true,
                             fillColor: context.card,

@@ -17,6 +17,7 @@
 library;
 
 import 'models.dart';
+import 'university_catalog.dart';
 
 /// The subjects a UTME candidate can pick beyond the mandatory Use of
 /// English - mirrors the web's UTME_ELECTIVES, one entry per JAMB bank.
@@ -62,6 +63,59 @@ String subjectName(String slug) {
 
 /// Comma title fragment for a subject list ("English, Biology, Physics").
 String subjectsLabel(Iterable<String> slugs) => slugs.map(subjectName).join(', ');
+
+// ------------------------------------------------------------------ titles
+
+/// The human title for a paper code (founder directive 2026-10-22):
+/// a single-subject custom reads "JAMB Physics" / "WAEC Physics", the
+/// full official mock reads "JAMB MOCK", a university pack reads
+/// "FUTA COS 101" - never the raw jamb-mock-english-...~comp=0 slug.
+String friendlyExamTitle(String code) {
+  final String base = code.split('~').first;
+  // Full official UTME mock: always JAMB MOCK, subjects live in the
+  // player's subject strip, not the title.
+  if (base.startsWith('jamb-mock-')) return 'JAMB MOCK';
+  // Custom practice per board: board + subject names.
+  final RegExpMatch? cm =
+      RegExp(r'^(jamb|waec|neco)-custom-(.+)$').firstMatch(base);
+  if (cm != null) {
+    final String board = switch (cm.group(1)!) {
+      'waec' => 'WAEC',
+      'neco' => 'NECO',
+      _ => 'JAMB',
+    };
+    return '$board ${subjectsLabel(cm.group(2)!.split('-'))}';
+  }
+  // Post-UTME packs: "{School} {Subject}" (uni-<school>-pq-<subj>-bank).
+  final RegExpMatch? pm =
+      RegExp(r'^uni-([a-z0-9-]+)-pq-(.+)-bank$').firstMatch(base);
+  if (pm != null) {
+    return '${universitySchoolLabel(pm.group(1)!)} ${subjectName(pm.group(2)!)}';
+  }
+  // Course banks: "{School} {Course}" (uni-<school>-<course>-bank).
+  if (base.startsWith('uni-') && base.endsWith('-bank')) {
+    final String tail = base.substring(4, base.length - 5);
+    final int dash = tail.indexOf('-');
+    if (dash > 0) {
+      final String school = universitySchoolLabel(tail.substring(0, dash));
+      final String course = tail.substring(dash + 1);
+      final RegExpMatch? m =
+          RegExp(r'^([a-z]{2,})(\d+[a-z]?)$').firstMatch(course);
+      final String label = m != null
+          ? '${m.group(1)!.toUpperCase()} ${m.group(2)!.toUpperCase()}'
+          : course.toUpperCase();
+      return '$school $label';
+    }
+  }
+  // Picks carve a manifest pack - resolve the pack's own title.
+  if (base.startsWith('jamb-pick-')) return friendlyExamTitle(pickBaseOf(code));
+  if (base.startsWith('daily-')) return 'Daily Challenge';
+  // Last resort: humanize the code instead of printing it raw.
+  return base
+      .split('-')
+      .map((String w) => w.isEmpty ? w : '${w[0].toUpperCase()}${w.substring(1)}')
+      .join(' ');
+}
 
 // ------------------------------------------------------------------ years
 
@@ -220,7 +274,8 @@ ExamMeta mockExamMeta(String code, List<String> electives, {int? timerMinutes}) 
   return composedExamMeta(
     code: code,
     // Quiz name only - the in-player subject strip carries the subjects.
-    title: 'UTME Mock',
+    // Founder 2026-10-22: the full mock is JAMB MOCK everywhere.
+    title: 'JAMB MOCK',
     body: 'JAMB',
     questionCount: 60 + 40 * electives.length,
     durationMinutes: timerMinutes ?? 120,
@@ -230,11 +285,20 @@ ExamMeta mockExamMeta(String code, List<String> electives, {int? timerMinutes}) 
 /// Display meta for a custom practice paper (any body).
 ExamMeta customExamMeta(String code, String body, List<String> subjects,
     {required int count, int? timerMinutes}) {
-  final String label = switch (body) {
-    'waec' => 'WASSCE Practice',
-    'neco' => 'NECO Practice',
-    _ => 'Custom Practice',
+  // Founder 2026-10-22: one subject reads "JAMB Physics" / "WAEC
+  // Physics"; multi-subject papers keep the practice label.
+  final String boardLabel = switch (body) {
+    'waec' => 'WAEC',
+    'neco' => 'NECO',
+    _ => 'JAMB',
   };
+  final String label = subjects.length == 1
+      ? '$boardLabel ${subjectName(subjects.first)}'
+      : switch (body) {
+          'waec' => 'WAEC Practice',
+          'neco' => 'NECO Practice',
+          _ => 'JAMB Practice',
+        };
   return composedExamMeta(
     code: code,
     // Quiz name only - the in-player subject strip carries the subjects.

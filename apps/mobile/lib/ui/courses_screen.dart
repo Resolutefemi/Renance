@@ -12,6 +12,7 @@ import 'package:provider/provider.dart';
 
 import '../api_client.dart';
 import '../controllers.dart';
+import '../learn_catalog_secondary.dart';
 import '../learn_controller.dart';
 import '../learn_models.dart';
 import '../models.dart' show Profile;
@@ -46,6 +47,11 @@ class _CoursesScreenState extends State<CoursesScreen> {
 
   List<MyCourse> _myCourses = <MyCourse>[];
   LearnProfile? _wallet;
+  /// The institution kind picked at the desk's step-1 gate - rides into
+  /// the step-2 department gate so the department list loads for the
+  /// RIGHT kind immediately (web parity: chooseInstitution advances
+  /// optimistically and the kind travels with it).
+  String? _pickedKind;
   // The focus signature the last load ran under - the hub sits inside
   // the shell's IndexedStack, so initState runs long before the student
   // profile lands. Without this guard a tertiary student tapping the
@@ -55,14 +61,23 @@ class _CoursesScreenState extends State<CoursesScreen> {
 
   bool get _tertiary => context.read<StudentController>().isTertiaryFocus;
 
-  String get _body =>
-      context.read<StudentController>().me?.profile?.exams.firstOrNull ==
-              'WAEC'
-          ? 'WAEC'
-          : context.read<StudentController>().me?.profile?.exams.firstOrNull ==
-                  'NECO'
-              ? 'NECO'
-              : 'JAMB';
+  String get _body {
+    // The desk body the way the SERVER spells it: lowercase 'jamb' /
+    // 'waec' / 'neco' (web learnBodyFromExams parity). The old getter
+    // returned UPPERCASE 'JAMB' and matched the exam strings exactly -
+    // the server's catalog switch only knows the lowercase bodies, so
+    // every JAMB/WAEC/NECO desk fell into the tertiary default and the
+    // course-selection list served UNIVERSITY modules (founder
+    // 2026-10-21: "the jambdesk courses is not bringing the correct
+    // jamb subjects"). Lowercase match on the exam string too, so
+    // 'WAEC 2026'-style values still resolve.
+    final String first =
+        (context.read<StudentController>().me?.profile?.exams.firstOrNull ?? '')
+            .toLowerCase();
+    if (first.contains('waec')) return 'waec';
+    if (first.contains('neco')) return 'neco';
+    return 'jamb';
+  }
 
   @override
   void initState() {
@@ -109,9 +124,18 @@ class _CoursesScreenState extends State<CoursesScreen> {
         _myCourses = courses;
         _loading = false;
         // Face routing: tertiary desks without an institutionType answer
-        // the gate first; everyone else starts on their course list.
+        // the gate first; tertiary desks WITH a kind but no department
+        // answer the department gate (founder 2026-10-21: "after a user
+        // picks school type, make sure they are asked for their
+        // department" - the old routing jumped straight to the desk,
+        // silently skipping step 2). Everyone else starts on their
+        // course list.
         if (_tertiary) {
-          _face = wallet.institutionType.isEmpty ? _Face.itype : _Face.desk;
+          _face = wallet.institutionType.isEmpty
+              ? _Face.itype
+              : wallet.department.isEmpty
+                  ? _Face.dept
+                  : _Face.desk;
         } else {
           _face = _Face.list;
         }
@@ -154,9 +178,6 @@ class _CoursesScreenState extends State<CoursesScreen> {
       MaterialPageRoute<void>(
         builder: (_) => CoursePathScreen(
           courseId: course.id,
-          onManage: () {
-            setState(() => _face = _tertiary ? _Face.manage : _Face.select);
-          },
           onProgressChanged: () {
             _reloadCourses();
             widget.onNeedsResync?.call();
@@ -210,11 +231,14 @@ class _CoursesScreenState extends State<CoursesScreen> {
         _Face.itype => _ItypeGate(
             key: const ValueKey<String>('itype'),
             wallet: _wallet,
-            onSaved: _load,
-            onChangeKind: () {},
+            onPicked: (String kind) => setState(() {
+                  _pickedKind = kind;
+                  _face = _Face.dept;
+                }),
           ),
         _Face.dept => _DeptGate(
             key: const ValueKey<String>('dept'),
+            kind: _pickedKind ?? _wallet?.institutionType,
             onSaved: _load,
             onChangeKind: () => setState(() => _face = _Face.itype),
           ),
@@ -721,12 +745,55 @@ class _SelectFaceState extends State<_SelectFace> {
   // Optimistic enrolled mirror (the web's ref flip): the full
   // my-courses list first, catalog/shelf flags folded on top.
   Set<String> _enrolledIds = <String>{};
+  // Courses unchecked during THIS face session. POST /learn/my-courses
+  // is a full replace, so removals must survive the server-union step
+  // in _persistEnrolled (founder wipe bug, 2026-10-22).
+  final Set<String> _removedThisSession = <String>{};
 
   @override
   void initState() {
     super.initState();
     _enrolledIds = <String>{for (final MyCourse c in widget.courses) c.id};
     WidgetsBinding.instance.addPostFrameCallback((_) => _load());
+  }
+
+  /// The destructive-replace guard (founder bug 2026-10-22: adding one
+  /// course on this page wiped the whole list AND its progress). The
+  /// payload is rebuilt from the SERVER's own list every save:
+  /// (server - this-session removals) + local additions. A stale or
+  /// empty local seed can therefore never drop a course the student
+  /// still has, and progress hangs off the course rows we keep.
+  Future<void> _persistEnrolled(ApiClient api) async {
+    Set<String> serverIds = <String>{};
+    try {
+      final List<MyCourse> fresh = await api.learnMyCourses();
+      serverIds = <String>{for (final MyCourse c in fresh) c.id};
+    } catch (_) {
+      // Read failed (offline): fall back to the local mirror alone.
+    }
+    final Set<String> payload = <String>{
+      ...serverIds,
+      ..._enrolledIds,
+    }..removeAll(_removedThisSession);
+    await api.learnSetMyCourses(payload.toList());
+  }
+
+  /// Reconcile the seed with the server's own list - the hub's cached
+  /// _myCourses can be empty from a cold start or a failed fetch, and
+  /// seeding this face from that alone is the root of the wipe bug.
+  Future<void> _reconcileWithServer(ApiClient api) async {
+    try {
+      final List<MyCourse> fresh = await api.learnMyCourses();
+      if (!mounted) return;
+      setState(() {
+        _enrolledIds = <String>{
+          ..._enrolledIds,
+          for (final MyCourse c in fresh) c.id,
+        };
+      });
+    } catch (_) {
+      // Best effort - the save-side guard covers the rest.
+    }
   }
 
   @override
@@ -736,6 +803,33 @@ class _SelectFaceState extends State<_SelectFace> {
   }
 
   Future<void> _load() async {
+    // Founder report 2026-10-21 ("the jamb desk courses is not showing
+    // jamb subjects it's showing tertiary institution desk courses"):
+    // the JAMB/WAEC/NECO desks list the HARDCODED secondary subjects
+    // (Chemistry, Physics, Mathematics...) exactly like the web - the
+    // server's /learn/catalog only serves the tertiary desk, so the old
+    // server fetch with body=jamb returned university modules.
+    final String body = widget.body.toLowerCase();
+    if (bodyHasHardcodedShelf(body)) {
+      if (!mounted) return;
+      setState(() {
+        _all = <CatalogItem>[
+          for (final HardCatalogItem s in secondaryCatalog(body))
+            CatalogItem(
+              id: s.id,
+              title: s.title,
+              topicCount: s.n,
+              faculty: 'Senior Secondary',
+              institutionType: _selectBodyLabel(body),
+              body: body,
+              inList: false,
+            ),
+        ];
+        _loading = false;
+      });
+      await _reconcileWithServer(context.read<ApiClient>());
+      return;
+    }
     final ApiClient api = context.read<ApiClient>();
     try {
       final (List<CatalogItem> items, _) = await api.learnCatalog(
@@ -752,6 +846,7 @@ class _SelectFaceState extends State<_SelectFace> {
         };
         _loading = false;
       });
+      await _reconcileWithServer(api);
     } on ApiException catch (e) {
       if (mounted) setState(() { _loading = false; _error = e.message; });
     } on NetworkException catch (e) {
@@ -765,13 +860,15 @@ class _SelectFaceState extends State<_SelectFace> {
     setState(() {
       if (nowIn) {
         _enrolledIds.add(id);
+        _removedThisSession.remove(id);
       } else {
         _enrolledIds.remove(id);
+        _removedThisSession.add(id);
       }
     });
     final ApiClient api = context.read<ApiClient>();
     try {
-      await api.learnSetMyCourses(_enrolledIds.toList());
+      await _persistEnrolled(api);
       widget.onChanged();
     } catch (_) {
       if (!mounted) return;
@@ -790,6 +887,15 @@ class _SelectFaceState extends State<_SelectFace> {
       );
     }
   }
+
+  /// The Select face needs the body's PRINTED label for its search hint
+  /// ('Search JAMB subjects…') while the lowercase payload body rides
+  /// to the server (founder 2026-10-21 body-casing fix).
+  String _selectBodyLabel(String body) => switch (body.toLowerCase()) {
+        'waec' => 'WAEC',
+        'neco' => 'NECO',
+        _ => 'JAMB',
+      };
 
   @override
   Widget build(BuildContext context) {
@@ -815,8 +921,17 @@ class _SelectFaceState extends State<_SelectFace> {
                   controller: _search,
                   onChanged: (_) => setState(() {}),
                   decoration: InputDecoration(
-                    hintText: 'Search ${widget.body} subjects…',
-                    prefixIcon: const MsIcon('search', size: 20),
+                    // The body as it is PRINTED (JAMB/WAEC/NECO) - the
+                    // payload body travels lowercase for the server.
+                    hintText: 'Search ${_selectBodyLabel(widget.body)} subjects…',
+                    // Founder 2026-10-21: the search glyph rides 10px
+                    // inside a 36px hit area, centred on the text line
+                    // (the app's established bar, university_screens).
+                    prefixIcon: MsFieldIcon('search',
+                        size: 18, color: context.textSecondary,
+                        box: 36, leftInset: 10),
+                    prefixIconConstraints:
+                        const BoxConstraints(minWidth: 36, minHeight: 36),
                   ),
                 ),
               ),
@@ -856,13 +971,19 @@ class _SelectFaceState extends State<_SelectFace> {
                         final int index =
                             i - (widget.courses.isEmpty ? 0 : 1);
                         final CatalogItem item = shown[index];
+                        final bool inList = _enrolledIds.contains(item.id);
                         return Padding(
                           padding: const EdgeInsets.only(bottom: 10),
                           child: _CatalogRow(
                             title: item.title,
-                            sub: '${item.topicCount} topics · in your list',
-                            subBold: _enrolledIds.contains(item.id),
-                            checked: _enrolledIds.contains(item.id),
+                            // Founder 2026-10-21: JAMB subjects read 300
+                            // topics (the shelf data), and "in your list"
+                            // only rides the rows actually enrolled -
+                            // unchecked subjects showed it unconditionally.
+                            sub: '${item.topicCount} topics'
+                                '${inList ? ' · in your list' : ''}',
+                            subBold: inList,
+                            checked: inList,
                             onTap: () => _toggleId(item.id),
                           ),
                         );
@@ -954,11 +1075,15 @@ class _CatalogRow extends StatelessWidget {
 // ---------------------------------------------------------- itype gate
 
 class _ItypeGate extends StatelessWidget {
-  const _ItypeGate({super.key, this.wallet, required this.onSaved, required this.onChangeKind});
+  const _ItypeGate({super.key, this.wallet, required this.onPicked});
 
   final LearnProfile? wallet;
-  final VoidCallback onSaved;
-  final VoidCallback onChangeKind;
+
+  /// Fired the moment a kind is tapped - the parent routes to the
+  /// DEPARTMENT gate (step 2 of 2). Founder 2026-10-21: the old flow
+  /// saved the kind and reloaded straight onto the desk, so the
+  /// department question NEVER appeared.
+  final ValueChanged<String> onPicked;
 
   static const List<(String, String, String, String)> _kinds =
       <(String, String, String, String)>[
@@ -984,6 +1109,12 @@ class _ItypeGate extends StatelessWidget {
 
   Future<void> _pick(BuildContext context, String itype) async {
     final ApiClient api = context.read<ApiClient>();
+    // Optimistic advance (web chooseInstitution parity): the department
+    // step opens the moment the tap lands; the kind-only save rides
+    // behind. The department pick re-issues BOTH values in one
+    // idempotent call, so a dropped kind save is repaired by the very
+    // next tap without the student ever knowing.
+    onPicked(itype);
     try {
       await api.learnPatchProfile(
         institutionType: itype,
@@ -991,7 +1122,6 @@ class _ItypeGate extends StatelessWidget {
         setDesk: true,
       );
     } catch (_) {}
-    onSaved();
   }
 
   @override
@@ -1071,7 +1201,19 @@ class _ItypeGate extends StatelessWidget {
 // ----------------------------------------------------------- dept gate
 
 class _DeptGate extends StatefulWidget {
-  const _DeptGate({super.key, required this.onSaved, required this.onChangeKind});
+  const _DeptGate({
+    super.key,
+    this.kind,
+    required this.onSaved,
+    required this.onChangeKind,
+  });
+
+  /// The institution kind picked at step 1 (or the wallet's saved kind
+  /// for students returning mid-flow) - the department list loads for
+  /// THIS kind without a profile round-trip, and the department pick
+  /// saves kind + department together (web chooseDepartment parity:
+  /// the payload guard never lets the pair ride apart).
+  final String? kind;
 
   final VoidCallback onSaved;
   final VoidCallback onChangeKind;
@@ -1084,6 +1226,7 @@ class _DeptGateState extends State<_DeptGate> {
   final TextEditingController _search = TextEditingController();
   bool _loading = true;
   String? _error;
+  String _kind = '';
   List<DeskDepartment> _all = <DeskDepartment>[];
 
   @override
@@ -1100,11 +1243,11 @@ class _DeptGateState extends State<_DeptGate> {
 
   Future<void> _load() async {
     final ApiClient api = context.read<ApiClient>();
-    final LearnProfile wallet;
     try {
-      wallet = await api.learnProfile();
-      final List<DeskDepartment> deps =
-          await api.learnDepartments(wallet.institutionType);
+      // The step-1 kind when it travelled in, otherwise one profile
+      // round-trip for students who landed here straight from a reload.
+      _kind = widget.kind ?? (await api.learnProfile()).institutionType;
+      final List<DeskDepartment> deps = await api.learnDepartments(_kind);
       if (!mounted) return;
       setState(() {
         _all = deps;
@@ -1120,7 +1263,13 @@ class _DeptGateState extends State<_DeptGate> {
   Future<void> _pick(DeskDepartment d) async {
     final ApiClient api = context.read<ApiClient>();
     try {
-      await api.learnPatchProfile(setDesk: true, department: d.id);
+      // Kind + department ride together (the web payload guard): never
+      // let the pair land apart on the learner row.
+      await api.learnPatchProfile(
+        institutionType: _kind.isEmpty ? null : _kind,
+        department: d.id,
+        setDesk: true,
+      );
     } catch (_) {}
     widget.onSaved();
   }
@@ -1165,9 +1314,15 @@ class _DeptGateState extends State<_DeptGate> {
               TextField(
                 controller: _search,
                 onChanged: (_) => setState(() {}),
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   hintText: 'Search departments…',
-                  prefixIcon: MsIcon('search', size: 20),
+                  // Founder 2026-10-21: glyph centred on the text line,
+                  // 10px inside a 36px hit area (the app's bar).
+                  prefixIcon: MsFieldIcon('search',
+                      size: 18, color: context.textSecondary,
+                      box: 36, leftInset: 10),
+                  prefixIconConstraints:
+                      const BoxConstraints(minWidth: 36, minHeight: 36),
                 ),
               ),
               const SizedBox(height: 6),
@@ -1437,6 +1592,9 @@ class _ManageFaceState extends State<_ManageFace> {
   // the payload is always the WHOLE list, so a shelf that loads late
   // can never wipe a picked course again).
   Set<String> _enrolledIds = <String>{};
+  // Courses unchecked during THIS face session - survives the
+  // server-union step in _persistEnrolled (founder wipe bug 2026-10-22).
+  final Set<String> _removedThisSession = <String>{};
   List<DeskCourse> _results = <DeskCourse>[];
   bool _searching = false;
   String _query = '';
@@ -1462,6 +1620,42 @@ class _ManageFaceState extends State<_ManageFace> {
     super.dispose();
   }
 
+  /// The destructive-replace guard (founder bug 2026-10-22): the
+  /// payload is rebuilt from the SERVER's own list every save -
+  /// (server - this-session removals) + local additions - so a stale
+  /// or empty local seed can never drop a course or its progress.
+  Future<void> _persistEnrolled(ApiClient api) async {
+    Set<String> serverIds = <String>{};
+    try {
+      final List<MyCourse> fresh = await api.learnMyCourses();
+      serverIds = <String>{for (final MyCourse c in fresh) c.id};
+    } catch (_) {
+      // Read failed (offline): fall back to the local mirror alone.
+    }
+    final Set<String> payload = <String>{
+      ...serverIds,
+      ..._enrolledIds,
+    }..removeAll(_removedThisSession);
+    await api.learnSetMyCourses(payload.toList());
+  }
+
+  /// Reconcile the seed with the server's own list (belt to the save
+  /// side's braces): a cold-start hub cache must not shrink the set.
+  Future<void> _reconcileWithServer(ApiClient api) async {
+    try {
+      final List<MyCourse> fresh = await api.learnMyCourses();
+      if (!mounted) return;
+      setState(() {
+        _enrolledIds = <String>{
+          ..._enrolledIds,
+          for (final MyCourse c in fresh) c.id,
+        };
+      });
+    } catch (_) {
+      // Best effort - the save-side guard covers the rest.
+    }
+  }
+
   Future<void> _load() async {
     final ApiClient api = context.read<ApiClient>();
     try {
@@ -1478,6 +1672,7 @@ class _ManageFaceState extends State<_ManageFace> {
         };
         _loading = false;
       });
+      await _reconcileWithServer(api);
       _loadOthers(0);
     } on ApiException catch (e) {
       if (mounted) setState(() { _loading = false; _error = e.message; });
@@ -1561,12 +1756,24 @@ class _ManageFaceState extends State<_ManageFace> {
   }
 
   /// Server hits first (they rank across the whole catalogue), then the
-  /// local matches the server missed - deduped by id.
+  /// local matches the server missed - deduped by id - and the whole
+  /// merge re-banded so TITLE/CODE matches always lead (founder
+  /// 2026-10-21: searching "introduction" must open with the
+  /// Introduction-titled courses, never with the alphabetically-earlier
+  /// courses that only carry an "Introduction to…" TOPIC).
   List<DeskCourse> _mergedResults() {
     final List<DeskCourse> local = _localMatches()
         .where((DeskCourse c) => !_results.any((DeskCourse r) => r.id == c.id))
         .toList();
-    return <DeskCourse>[..._results, ...local];
+    final String needle = _query.trim().toLowerCase();
+    final List<DeskCourse> titled = <DeskCourse>[];
+    final List<DeskCourse> rest = <DeskCourse>[];
+    for (final DeskCourse c in <DeskCourse>[..._results, ...local]) {
+      final bool direct = c.title.toLowerCase().contains(needle) ||
+          (c.code.isNotEmpty && c.code.toLowerCase().contains(needle));
+      (direct ? titled : rest).add(c);
+    }
+    return <DeskCourse>[...titled, ...rest];
   }
 
   Future<void> _toggleId(String id) async {
@@ -1574,13 +1781,15 @@ class _ManageFaceState extends State<_ManageFace> {
     setState(() {
       if (nowIn) {
         _enrolledIds.add(id);
+        _removedThisSession.remove(id);
       } else {
         _enrolledIds.remove(id);
+        _removedThisSession.add(id);
       }
     });
     final ApiClient api = context.read<ApiClient>();
     try {
-      await api.learnSetMyCourses(_enrolledIds.toList());
+      await _persistEnrolled(api);
       widget.onChanged();
     } catch (_) {
       if (!mounted) return;
@@ -1641,9 +1850,14 @@ class _ManageFaceState extends State<_ManageFace> {
   Future<void> _saveAiPicks() async {
     if (_aiPicked.isEmpty) return;
     final ApiClient api = context.read<ApiClient>();
-    final Set<String> merged = <String>{..._enrolledIds, ..._aiPicked};
+    setState(() {
+      _enrolledIds = <String>{..._enrolledIds, ..._aiPicked};
+      for (final String id in _aiPicked) {
+        _removedThisSession.remove(id);
+      }
+    });
     try {
-      await api.learnSetMyCourses(merged.toList());
+      await _persistEnrolled(api);
       widget.onChanged();
       widget.onDone();
     } catch (_) {
@@ -1722,9 +1936,15 @@ class _ManageFaceState extends State<_ManageFace> {
               TextField(
                 controller: _search,
                 onChanged: _onSearchChanged,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   hintText: 'Search by code (CSC, MTH…), title or topic',
-                  prefixIcon: MsIcon('search', size: 20),
+                  // Founder 2026-10-21: glyph centred on the text line,
+                  // 10px inside a 36px hit area (the app's bar).
+                  prefixIcon: MsFieldIcon('search',
+                      size: 18, color: context.textSecondary,
+                      box: 36, leftInset: 10),
+                  prefixIconConstraints:
+                      const BoxConstraints(minWidth: 36, minHeight: 36),
                 ),
               ),
               if (_searching)
@@ -2360,12 +2580,10 @@ class CoursePathScreen extends StatefulWidget {
   const CoursePathScreen({
     super.key,
     required this.courseId,
-    required this.onManage,
     required this.onProgressChanged,
   });
 
   final String courseId;
-  final VoidCallback onManage;
   final VoidCallback onProgressChanged;
 
   @override
@@ -2485,10 +2703,6 @@ class _CoursePathScreenState extends State<CoursePathScreen> {
                                   widget.onProgressChanged();
                                 },
                               );
-                            },
-                            onManageCourses: () {
-                              Navigator.of(context).pop();
-                              widget.onManage();
                             },
                           ),
                         ),

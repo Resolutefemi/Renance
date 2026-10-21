@@ -16,20 +16,24 @@ import 'package:provider/provider.dart';
 import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
-import 'arena_lobby_screen.dart';
-import 'downloads_screen.dart';
+import 'ai_generator_screen.dart';
+import 'ai_screen.dart';
+import 'exam_history_screen.dart';
 import 'exam_screen.dart';
-import 'home_screen.dart' show LauncherTile, showMoreSheet;
+import 'gpa_screen.dart';
+import 'home_screen.dart' show LauncherTile, openDailyQuiz, showMoreSheet;
 import 'leaderboard_screen.dart';
-import 'lessons_screen.dart';
 import 'msymbols.dart';
 import 'packs_screen.dart';
+import 'performance_screen.dart';
 import 'renance_logo.dart';
-import 'study_plan_screen.dart';
+import 'saved_questions.dart';
+import 'search_screen.dart';
+import 'settings_screen.dart';
+import 'shop_screen.dart';
 import 'study_setup_screen.dart';
 import 'tactile.dart';
 import 'theme.dart';
-import 'tutor_screen.dart';
 import 'university_screens.dart';
 
 class PostUtmeHomeTab extends StatelessWidget {
@@ -207,7 +211,7 @@ class PostUtmeHomeTab extends StatelessWidget {
           // Question Pack. The old three-tile row dropped the desk's
           // own Past Questions tile and pointed Packs at the course hub.
           Text(
-            'Practice',
+            'Practice & Exams',
             style: RenanceText.sectionTitle.copyWith(
               color: context.textSecondary,
               fontSize: 14,
@@ -241,12 +245,12 @@ class PostUtmeHomeTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  msIcon: 'history',
-                  label: 'Review Due',
-                  badge:
-                      student.dueTopics > 0 ? '${student.dueTopics}' : null,
-                  badgeColor: RenanceColors.emerald,
-                  onTap: () => onGoTab(2),
+                  msIcon: 'history_edu',
+                  label: 'Exam History',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                        builder: (_) => const ExamHistoryScreen()),
+                  ),
                 ),
               ),
               Expanded(
@@ -271,11 +275,12 @@ class PostUtmeHomeTab extends StatelessWidget {
               ),
             ],
           ),
-          // Compete grid - the web's exact four: Arena / Leaderboard /
-          // Study Plan / Notes.
+          // Compete & Earn - the founder's 2026-10-22 pass: Arena is
+          // retired; the daily quiz, the ladder, the gem quests and the
+          // diamond shop fill the row, no blanks.
           const SizedBox(height: 16),
           Text(
-            'Compete',
+            'Compete & Earn',
             style: RenanceText.sectionTitle.copyWith(
               color: context.textSecondary,
               fontSize: 14,
@@ -286,12 +291,10 @@ class PostUtmeHomeTab extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 child: LauncherTile(
-                  msIcon: 'sports_esports',
-                  label: 'Arena',
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (_) => const ArenaLobbyScreen()),
-                  ),
+                  msIcon: 'event_repeat',
+                  iconColor: const Color(0xFFF59E0B),
+                  label: 'Daily Quiz',
+                  onTap: () => openDailyQuiz(context, sync),
                 ),
               ),
               Expanded(
@@ -300,27 +303,78 @@ class PostUtmeHomeTab extends StatelessWidget {
                   label: 'Leaderboard',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                      builder: (_) => const LeaderboardScreen()),
+                        builder: (_) => const LeaderboardScreen()),
                   ),
                 ),
               ),
               Expanded(
                 child: LauncherTile(
-                  msIcon: 'event_note',
-                  label: 'Study Plan',
+                  msIcon: 'checklist',
+                  label: 'Quests',
+                  onTap: () => onGoTab(4),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  msIcon: 'storefront',
+                  label: 'Shop',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                      builder: (_) => const StudyPlanScreen()),
+                        builder: (_) => const ShopScreen()),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          // Study & AI - the same companion row the main desk carries.
+          const SizedBox(height: 16),
+          Text(
+            'Study & AI',
+            style: RenanceText.sectionTitle.copyWith(
+              color: context.textSecondary,
+              fontSize: 14,
+            ),
+          ),
+          const SizedBox(height: 12),
+          Row(
+            children: <Widget>[
+              Expanded(
+                child: LauncherTile(
+                  msIcon: 'smart_toy',
+                  label: 'Renance AI',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                        builder: (_) => const AiScreen()),
                   ),
                 ),
               ),
               Expanded(
                 child: LauncherTile(
-                  msIcon: 'auto_stories',
-                  label: 'Notes',
+                  msIcon: 'auto_awesome',
+                  label: 'AI Generator',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                      builder: (_) => const LessonsScreen()),
+                        builder: (_) => const AiGeneratorScreen()),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  msIcon: 'insights',
+                  label: 'Performance Analysis',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                        builder: (_) => const PerformanceScreen()),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  msIcon: 'bookmark',
+                  label: 'Saved Questions',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                        builder: (_) => const SavedQuestionsScreen()),
                   ),
                 ),
               ),
@@ -364,12 +418,11 @@ class PostUtmeHomeTab extends StatelessWidget {
               onOpen: () => _openExam(context, e),
               onDownload: () => sync.downloadExam(e),
             ),
-          // Tools & Resources - the web's exact four (Notes / Downloads /
-          // Tutor inverse / More muted). The desk was missing this row
-          // entirely.
+          // Tools - search, settings and the More sheet; Notes and the
+          // Tutor are retired (founder 2026-10-22).
           const SizedBox(height: 16),
           Text(
-            'Tools & Resources',
+            'Tools',
             style: RenanceText.sectionTitle.copyWith(
               color: context.textSecondary,
               fontSize: 14,
@@ -380,33 +433,31 @@ class PostUtmeHomeTab extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 child: LauncherTile(
-                  msIcon: 'import_contacts',
-                  label: 'Notes',
+                  msIcon: 'calculate',
+                  label: 'GPA Calculator',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                        builder: (_) => const LessonsScreen()),
+                        builder: (_) => const GpaScreen()),
                   ),
                 ),
               ),
               Expanded(
                 child: LauncherTile(
-                  msIcon: 'download',
-                  label: 'Downloads',
+                  msIcon: 'search',
+                  label: 'Search',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                        builder: (_) => const DownloadsScreen()),
+                        builder: (_) => const SearchScreen()),
                   ),
                 ),
               ),
               Expanded(
                 child: LauncherTile(
-                  msIcon: 'smart_toy',
-                  iconColor: context.onInverseChip,
-                  highlight: true,
-                  label: 'Tutor',
+                  msIcon: 'settings',
+                  label: 'Settings',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                        builder: (_) => const TutorEntryScreen()),
+                        builder: (_) => const SettingsScreen()),
                   ),
                 ),
               ),

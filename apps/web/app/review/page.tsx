@@ -18,7 +18,6 @@ import {
   type ReviewSummary,
 } from '@/lib/review';
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
-import TutorChat from '@/components/tutor-chat';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
@@ -131,6 +130,9 @@ function ReviewInner() {
   // The Myschool explanation sheet rides on the visible list: the
   // pager keeps one sheet open across questions.
   const [sheetIdx, setSheetIdx] = useState<number | null>(null);
+  // Subject sub-navbar (founder 2026-10-22): switch the corrections
+  // you are working through - null shows every subject block.
+  const [subjectTab, setSubjectTab] = useState<string | null>(null);
 
   useEffect(() => {
     if (!attemptId) return;
@@ -199,23 +201,54 @@ function ReviewInner() {
         </Link>
       </div>
 
-      {(wrongCount > 0 || skippedCount > 0) && (
-        <TutorChat attemptId={review.attemptId} questions={review.questions} />
+      {/* Subject sub-navbar (founder 2026-10-22): English | Physics |
+          Mathematics | ... - one tap switches the subject whose
+          corrections you are working through. */}
+      {groups.length > 1 && (
+        <div className="mt-4 flex gap-2 overflow-x-auto pb-1">
+          <button
+            type="button"
+            onClick={() => setSubjectTab(null)}
+            className={`shrink-0 rounded-full px-3.5 py-1.5 text-[12.5px] font-bold transition ${
+              subjectTab === null
+                ? 'bg-primary text-on-primary'
+                : 'border border-outline-variant bg-card text-on-surface'
+            }`}
+          >
+            All
+          </button>
+          {groups.map((g) => (
+            <button
+              key={g.subject || 'paper'}
+              type="button"
+              onClick={() => setSubjectTab(g.subject)}
+              className={`shrink-0 rounded-full px-3.5 py-1.5 text-[12.5px] font-bold transition ${
+                subjectTab === g.subject
+                  ? 'bg-primary text-on-primary'
+                  : 'border border-outline-variant bg-card text-on-surface'
+              }`}
+            >
+              {g.subject || 'Paper'}
+            </button>
+          ))}
+        </div>
       )}
 
       <div className="mt-5 space-y-6">
         {/* SUBJECT BY SUBJECT: every subject block heads with its counts,
             then its own Wrong / Skipped / Answered buckets. A student
             lands straight on a subject's mistakes - no scrolling a
-            180-question wall. */}
-        {groups.map((g) => (
-          <SubjectBlock
-            key={g.subject || 'paper'}
-            group={g}
-            grouped={groups.length > 1}
-            onOpenSheet={setSheetIdx}
-          />
-        ))}
+            180-question wall. The sub-navbar filters to one subject. */}
+        {groups
+          .filter((g) => subjectTab === null || g.subject === subjectTab)
+          .map((g) => (
+            <SubjectBlock
+              key={g.subject || 'paper'}
+              group={g}
+              grouped={groups.length > 1}
+              onOpenSheet={setSheetIdx}
+            />
+          ))}
       </div>
       </div>
 
@@ -259,13 +292,49 @@ function ReviewInner() {
 // prettyPaper turns a raw pack code into the label a student reads:
 // jamb-biology-bank -> "JAMB · Biology", jamb-mock-english-... ->
 // "JAMB UTME Mock", waec-custom-... -> "WAEC Practice".
+// Slug humanizer: "mountain-top" -> "Mountain Top".
+function human(slug: string): string {
+  return slug
+    .split('-')
+    .filter(Boolean)
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
+}
+
 function prettyPaper(code: string): string {
-  const parts = (code || '').split('-');
-  const body = (parts[0] || '').replace(/_/g, ' ').toUpperCase();
-  if (code.startsWith('jamb-mock-')) return 'JAMB UTME Mock';
-  if (parts[1] === 'custom' || parts[1] === 'pick') {
-    return `${body.charAt(0) + body.slice(1).toLowerCase()} Practice`;
+  // Founder 2026-10-22 naming: the full mock reads "JAMB MOCK", a
+  // single-subject custom reads "JAMB Physics" / "WAEC Physics", a
+  // university pack reads "{School} {Course}" - never the raw slug.
+  const base = (code || '').split('~')[0];
+  if (base.startsWith('jamb-mock-')) return 'JAMB MOCK';
+  const custom = /^(jamb|waec|neco)-custom-(.+)$/.exec(base);
+  if (custom) {
+    const board = custom[1] === 'waec' ? 'WAEC' : custom[1] === 'neco' ? 'NECO' : 'JAMB';
+    const subjects = custom[2]
+      .split('-')
+      .map((slug) => (slug === 'english' ? 'Use of English' : slug.charAt(0).toUpperCase() + slug.slice(1)))
+      .join(', ');
+    return `${board} ${subjects}`;
   }
+  const uniPq = /^uni-([a-z0-9-]+)-pq-(.+)-bank$/.exec(base);
+  if (uniPq) {
+    return `${prettySchool(uniPq[1])} ${human(uniPq[2])}`;
+  }
+  if (base.startsWith('uni-') && base.endsWith('-bank')) {
+    const tail = base.slice(4, -5);
+    const dash = tail.indexOf('-');
+    if (dash > 0) {
+      const course = tail.slice(dash + 1);
+      const coded = /^([a-z]{2,})(\d+[a-z]?)$/.exec(course);
+      const label = coded
+        ? `${coded[1].toUpperCase()} ${coded[2].toUpperCase()}`
+        : course.toUpperCase();
+      return `${prettySchool(tail.slice(0, dash))} ${label}`;
+    }
+  }
+  if (base.startsWith('daily-')) return 'Daily Challenge';
+  const parts = base.split('-');
+  const body = (parts[0] || '').replace(/_/g, ' ').toUpperCase();
   const subject = parts
     .slice(1)
     .filter((p) => p !== 'bank' && p !== 'enrich' && p !== 'theory' && p !== 'quizbank')
@@ -273,6 +342,22 @@ function prettyPaper(code: string): string {
     .join(' ');
   const prettyBody = body.charAt(0) + body.slice(1).toLowerCase();
   return subject ? `${prettyBody} · ${subject}` : prettyBody || code;
+}
+
+// "futa" -> "FUTA", "mountain-top" -> "Mountain Top" - the short name
+// the school banks embed in their codes.
+function prettySchool(slug: string): string {
+  const KNOWN: Record<string, string> = {
+    aau: 'AAU', aaua: 'AAUA', abu: 'ABU', abuad: 'ABUAD', achievers: 'ACHIEVERS',
+    babcock: 'BABCOCK', bowen: 'BOWEN', bouesti: 'BOUESTI', bsu: 'BSU', caleb: 'CALEB',
+    covenant: 'COVENANT', delsu: 'DELSU', eksu: 'EKSU', elizade: 'ELIZADE', esut: 'ESUT',
+    futa: 'FUTA', futo: 'FUTO', greenfield: 'GREENFIELD', igbinedion: 'IGBINEDION',
+    jabu: 'JABU', ksu: 'KSU', lasu: 'LASU', lautech: 'LAUTECH', leadcity: 'LEADCITY',
+    noun: 'NOUN', oau: 'OAU', others: 'Other Schools', rsu: 'RSU', tasued: 'TASUED',
+    ui: 'UI', uniben: 'UNIBEN', unical: 'UNICAL', unilag: 'UNILAG', unilorin: 'UNILORIN',
+    uniosun: 'UNIOSUN', uniport: 'UNIPORT', uniabuja: 'UNIABUJA', unn: 'UNN', veritas: 'VERITAS',
+  };
+  return KNOWN[slug] ?? human(slug);
 }
 
 /** Subject slugs embedded in a composed paper code, humanized:

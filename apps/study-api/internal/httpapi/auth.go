@@ -313,9 +313,11 @@ func (s *Server) finishSignup(w http.ResponseWriter, r *http.Request, u *store.U
                 s.failDevice(w, err)
                 return
         }
-        // Referral: the referrer earns 3 REN for this signup.
+        // Referral: the referrer earns 100 diamonds for this signup
+        // (founder directive 2026-10-22 - the reward rides the learn
+        // diamond wallet; the 3-REN-coin loop is retired).
         if referrer, _ := s.store.UserByReferralCode(r.Context(), strings.TrimSpace(req.Referral)); referrer != nil && referrer.ID != u.ID {
-                if err := s.store.CreditReferral(r.Context(), referrer.ID); err != nil {
+                if err := s.learn.CreditReferralGems(r.Context(), referrer.ID, 100); err != nil {
                         s.log.Error("referral credit failed", "err", err)
                 }
                 _ = s.store.SetReferredBy(r.Context(), u.ID, referrer.ID)

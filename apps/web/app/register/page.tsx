@@ -382,7 +382,7 @@ export default function RegisterPage() {
                 className={`${field} pl-4 uppercase`}
               />
               <p className="text-xs text-on-surface-variant">
-                Your friend earns 3 REN coins when you join.
+                Your friend earns 100 diamonds when you join.
               </p>
             </div>
           )}

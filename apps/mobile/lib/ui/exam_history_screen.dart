@@ -223,12 +223,13 @@ class _HistoryRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<String> subjects = subjectsFromCode(attempt.code);
-    final String nameLine = subjects.isNotEmpty
-        ? subjects.join(', ')
-        : (title.isEmpty || title == attempt.code
-            ? _friendlyFallback(attempt.code)
-            : title);
+    // Founder 2026-10-22: the row names the paper the friendly way -
+    // "JAMB MOCK" for the full mock, "JAMB Physics" / "WAEC Physics"
+    // for single-subject customs, "{School} {Course}" for university
+    // packs (the title comes from StudentController.titleForCode).
+    final String nameLine = (title.isEmpty || title == attempt.code)
+        ? _friendlyFallback(attempt.code)
+        : title;
     final bool isJamb = examTypeOf(attempt.code) == 'JAMB';
 
     return InkWell(

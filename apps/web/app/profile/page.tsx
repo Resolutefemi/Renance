@@ -28,7 +28,6 @@ import {
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
-import ShopPanel from '@/components/learn/shop-panel';
 import { LearnProfile, fetchLearnProfile } from '@/lib/learn';
 import { type Connections, fetchConnections } from '@/lib/social';
 import SideNav from '@/components/side-nav';
@@ -464,7 +463,7 @@ export default function ProfilePage() {
                 <span className="material-symbols-outlined text-[20px] text-primary-ink">redeem</span>
               </span>
               <div className="min-w-0 flex-1">
-                <p className="text-[14px] font-bold text-on-surface">Invite friends, earn REN</p>
+                <p className="text-[14px] font-bold text-on-surface">Invite friends, earn 100 diamonds</p>
                 <p className="truncate font-mono text-[12px] font-bold tracking-wider text-on-surface-variant">
                   {me.entitlement.referralCode}
                 </p>
@@ -487,19 +486,6 @@ export default function ProfilePage() {
           {/* The follow strip (founder 2026-10-14 evening pass) lives
               DIRECTLY above the invite card now (founder 2026-10-15) -
               it was moved up to sit on top of "Invite friends". */}
-
-          {/* The SHOP lives here now (founder 2026-10-14 evening pass):
-              "the shop feature should be under profile and the heart read
-              too" - the gem store, the heart readout (REAL data, the ∞
-              symbol is retired) and the Super trial ride inside this
-              section. The old /shop page redirects here. */}
-          <section className="rounded-2xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
-            <div className="mb-3 flex items-center gap-2">
-              <span className="material-symbols-outlined text-[20px] text-primary-ink">storefront</span>
-              <h3 className="text-[15px] font-bold text-on-surface">Shop</h3>
-            </div>
-            <ShopPanel id="shop" />
-          </section>
 
           {/* Learning focus switcher (founder directive) ---------------------- */}
           <section className="overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
@@ -812,17 +798,12 @@ export default function ProfilePage() {
             <MenuLink icon="settings" tint="text-on-surface" label="App Settings" href="/settings" />
           </section>
 
-          {/* Menu group: content ------------------------------------------- */}
-          <section className="flex flex-col overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
-            {/* Founder 2026-10-15: the My Packs icon is pure white in the
-                dark tier (text-on-surface) like its sibling menu icons -
-                the old accent-ink tint vanished on the dark card. */}
-            <MenuLink icon="auto_stories" tint="text-on-surface" label="My Packs" href="/packs" />
-          </section>
-
           {/* Menu group: system -------------------------------------------- */}
+          {/* My Packs / My papers removed (founder 2026-10-22): the pack
+              library lives on the Courses tab, exam papers live in Exam
+              History - the profile menu no longer double-lists them. */}
           <section className="flex flex-col overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
-            <MenuLink icon="history_edu" tint="text-on-surface-variant" label="My papers" href="/review" />
+            <MenuLink icon="info" tint="text-on-surface-variant" label="About Renance" href="/about" />
             <MenuDivider />
             <MenuLink icon="help" tint="text-on-surface-variant" label="Help & Support" href="/faq" />
           </section>

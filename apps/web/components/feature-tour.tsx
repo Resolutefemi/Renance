@@ -52,10 +52,10 @@ const STEPS: Step[] = [
     cta: { label: 'Open Review', href: '/review' },
   },
   {
-    icon: 'swords',
-    title: 'Duel and climb',
-    body: 'Challenge friends to live 1v1 arena duels, take the daily quiz, and climb the leaderboards. Wins earn REN you can redeem for premium.',
-    cta: { label: 'Open Arena', href: '/arena' },
+    icon: 'emoji_events',
+    title: 'Compete and earn',
+    body: 'Take the daily quiz, complete gem quests and climb the leaderboards. Diamonds you earn spend in the Shop.',
+    cta: { label: 'Open Leaderboard', href: '/leaderboard' },
   },
   {
     icon: 'rocket_launch',

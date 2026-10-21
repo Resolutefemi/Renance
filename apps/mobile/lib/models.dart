@@ -1682,27 +1682,6 @@ class LeaderboardData {
   );
 }
 
-/// One live presence in the arena (GET /arena/players row): a student
-/// who is connected and idle right now, with their all-time Ren Points
-/// (a win is worth 1 point) so the lobby ranks the active list.
-class ArenaPlayer {
-  const ArenaPlayer({
-    required this.userId,
-    required this.username,
-    required this.renPoints,
-  });
-
-  final String userId;
-  final String username;
-  final int renPoints;
-
-  factory ArenaPlayer.fromJson(Map<String, dynamic> j) => ArenaPlayer(
-    userId: (j['userId'] ?? '') as String,
-    username: (j['username'] ?? '') as String,
-    renPoints: ((j['renPoints'] ?? 0) as num).toInt(),
-  );
-}
-
 // ============================================================================
 // School platform (For Schools): memberships + the read-only offline pack
 // (syllabus, scheme of work, notes). Defensive parsing like every model

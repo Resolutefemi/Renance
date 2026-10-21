@@ -230,9 +230,12 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
           enableSuggestions: false,
           textInputAction: TextInputAction.done,
           maxLength: 24,
-          decoration: const InputDecoration(
+          decoration: InputDecoration(
             prefixText: '@ ',
-            prefixIcon: MsIcon('alternate_email', size: 20),
+            prefixIcon: MsFieldIcon('alternate_email',
+                size: 20, color: context.textSecondary),
+            prefixIconConstraints:
+                const BoxConstraints(minWidth: 44, minHeight: 44),
             hintText: 'lowercase letters, digits, _',
             counterText: '',
           ),
@@ -403,8 +406,11 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
         const Text('Full name', style: RenanceText.labelMono),
         const SizedBox(height: 6),
         TextField(
-          decoration: const InputDecoration(
-            prefixIcon: MsIcon('person', size: 20),
+          decoration: InputDecoration(
+            prefixIcon: MsFieldIcon('person',
+                size: 20, color: context.textSecondary),
+            prefixIconConstraints:
+                const BoxConstraints(minWidth: 44, minHeight: 44),
             hintText: 'e.g. Ariyo Oluwafemi',
           ),
           onChanged: (String v) => _fullName = v,
@@ -414,8 +420,11 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
         const SizedBox(height: 6),
         DropdownButtonFormField<String>(
           initialValue: _gradeLevel,
-          decoration: const InputDecoration(
-            prefixIcon: MsIcon('stairs', size: 20),
+          decoration: InputDecoration(
+            prefixIcon: MsFieldIcon('stairs',
+                size: 20, color: context.textSecondary),
+            prefixIconConstraints:
+                const BoxConstraints(minWidth: 44, minHeight: 44),
           ),
           items: const <DropdownMenuItem<String>>[
             DropdownMenuItem<String>(value: 'JSS1', child: Text('JSS1')),

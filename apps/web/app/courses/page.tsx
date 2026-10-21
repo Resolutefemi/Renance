@@ -471,7 +471,7 @@ export default function CoursesPage() {
 
         {/* ── Face 3: the path ── */}
         {!loading && face === 'path' && path && (
-          <CoursePathView path={path} onOpenTopic={setTopic} onOpenReview={setReviewUnit} onOpenRevision={setRevisionUnit} onBack={() => { setFace('list'); setPath(null); }} />
+          <CoursePathView path={path} onOpenTopic={setTopic} onOpenReview={setReviewUnit} onOpenRevision={setRevisionUnit} />
         )}
       </main>
 
@@ -1385,13 +1385,12 @@ function unitTheme(unit: number): UnitTheme {
 }
 
 function CoursePathView({
-  path, onOpenTopic, onOpenReview, onOpenRevision, onBack,
+  path, onOpenTopic, onOpenReview, onOpenRevision,
 }: {
   path: CoursePath;
   onOpenTopic: (t: TopicNode) => void;
   onOpenReview: (u: UnitNode) => void;
   onOpenRevision: (u: UnitNode) => void;
-  onBack: () => void;
 }) {
   const [chestToast, setChestToast] = useState('');
   // The founder's gamification pass: opening the unit-1 treasure chest
@@ -1422,8 +1421,11 @@ function CoursePathView({
     }
   };
 
+  // Founder 2026-10-22: the unit banner rides right under the hero
+  // card (the old 20px float read as a dead gap and pushed the path
+  // off the fold).
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-2.5">
       {/* The full-screen chest moment - same celebration a topic quiz pays. */}
       {chestDrop && <ChestOpening drop={chestDrop} onDone={() => setChestDrop(null)} />}
 
@@ -1442,9 +1444,6 @@ function CoursePathView({
           <ProgressBar value={path.completedPercent} tone="gold" />
           <span className="shrink-0 text-[12px] font-black">{path.completedPercent}%</span>
         </div>
-        <button type="button" onClick={onBack} className="mt-3 rounded-xl border-2 border-white/60 bg-white/15 px-3 py-1.5 text-[12px] font-extrabold text-white transition active:translate-y-[2px]">
-          Add / remove courses
-        </button>
       </header>
 
       {path.units.map((u) => {

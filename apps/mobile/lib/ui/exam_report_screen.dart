@@ -37,7 +37,6 @@ import '../models.dart';
 import 'leaderboard_screen.dart';
 import 'msymbols.dart';
 import 'review_screen.dart' show ReviewDetailScreen;
-import 'syllabus_screen.dart';
 import 'tactile.dart';
 import 'theme.dart';
 
@@ -864,8 +863,9 @@ class _Row extends StatelessWidget {
   }
 }
 
-/// "Focus next" - weak topics (accuracy under 60%), tap opens the
-/// syllabus map on this body.
+/// "Focus next" - weak topics (accuracy under 60%) as passive chips.
+/// The syllabus-map tap is gone with the Syllabus Map feature (founder
+/// 2026-10-21: useless) - the chips stay as a read-only signal.
 class _FocusNextChips extends StatelessWidget {
   const _FocusNextChips({required this.weak, required this.body});
 
@@ -874,7 +874,6 @@ class _FocusNextChips extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String slug = body.toLowerCase().replaceAll(' ', '-');
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -887,33 +886,24 @@ class _FocusNextChips extends StatelessWidget {
           runSpacing: 8,
           children: <Widget>[
             for (final TopicRow row in weak.take(4))
-              InkWell(
-                borderRadius: BorderRadius.circular(999),
-                onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute<void>(
-                    builder: (_) => SyllabusScreen(
-                        initialBody: slug.isEmpty ? 'jamb' : slug),
-                  ),
+              Container(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 12, vertical: 7),
+                decoration: BoxDecoration(
+                  color: RenanceColors.amber.withValues(alpha: 0.12),
+                  borderRadius: BorderRadius.circular(999),
+                  border: Border.all(
+                      color: RenanceColors.amber.withValues(alpha: 0.4)),
                 ),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 12, vertical: 7),
-                  decoration: BoxDecoration(
-                    color: RenanceColors.amber.withValues(alpha: 0.12),
-                    borderRadius: BorderRadius.circular(999),
-                    border: Border.all(
-                        color: RenanceColors.amber.withValues(alpha: 0.4)),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      const MsIcon('local_fire_department',
-                          size: 14, color: RenanceColors.amber),
-                      const SizedBox(width: 4),
-                      Text('${row.topic} · ${row.correct}/${row.total}',
-                          style: RenanceText.labelMono.copyWith(fontSize: 12)),
-                    ],
-                  ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const MsIcon('local_fire_department',
+                        size: 14, color: RenanceColors.amber),
+                    const SizedBox(width: 4),
+                    Text('${row.topic} · ${row.correct}/${row.total}',
+                        style: RenanceText.labelMono.copyWith(fontSize: 12)),
+                  ],
                 ),
               ),
           ],

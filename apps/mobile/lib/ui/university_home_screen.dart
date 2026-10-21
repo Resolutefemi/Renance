@@ -12,19 +12,18 @@ import 'package:provider/provider.dart';
 
 import '../controllers.dart';
 import '../storage.dart';
-import 'arena_lobby_screen.dart';
-import 'downloads_screen.dart';
+import 'exam_history_screen.dart';
 import 'gpa_screen.dart';
-import 'home_screen.dart' show LauncherTile, showMoreSheet;
+import 'home_screen.dart' show LauncherTile, openDailyQuiz, showMoreSheet;
 import 'leaderboard_screen.dart';
-import 'lessons_screen.dart';
 import 'msymbols.dart';
 import 'review_screen.dart';
-import 'study_plan_screen.dart';
+import 'search_screen.dart';
+import 'settings_screen.dart';
+import 'shop_screen.dart';
 import 'study_setup_screen.dart';
 import 'tactile.dart';
 import 'theme.dart';
-import 'tutor_screen.dart';
 import 'university_screens.dart';
 
 class UniversityHomeTab extends StatelessWidget {
@@ -167,6 +166,11 @@ class UniversityHomeTab extends StatelessWidget {
             ),
             // web: pt-1.5 - the 6px gap between header and chips.
             const SizedBox(height: 6),
+            // Founder report 2026-10-21 ("it should be like the way it
+            // was before"): back to the ORIGINAL one-row strip - the
+            // wrapped chip cloud stacked 4 tall rows and pushed Study
+            // below the fold. The strip scrolls sideways, exactly as
+            // the web's overflow-x row (courses.slice(0, 10), gap-1.5).
             SizedBox(
               height: 28,
               child: ListView(
@@ -239,11 +243,63 @@ class UniversityHomeTab extends StatelessWidget {
               ),
             ],
           ),
-          // Grow grid - the web's exact four
-          // gap-4 + mt-4 - the web's 32px between the grids.
+          // Compete & Earn - the founder's 2026-10-22 pass: Arena is
+          // retired, the row now carries the daily quiz, the ladder,
+          // the gem quests and the shop that spends the diamonds.
           const SizedBox(height: 32),
           Text(
-            'Grow',
+            'Compete & Earn',
+            style: RenanceText.sectionTitle.copyWith(
+              color: context.textSecondary,
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          const SizedBox(height: 12),
+          Row(
+            children: <Widget>[
+              Expanded(
+                child: LauncherTile(
+                  msIcon: 'event_repeat',
+                  iconColor: const Color(0xFFF59E0B),
+                  label: 'Daily Quiz',
+                  onTap: () => openDailyQuiz(context, sync),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  msIcon: 'leaderboard',
+                  label: 'Leaderboard',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                        builder: (_) => const LeaderboardScreen()),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  msIcon: 'checklist',
+                  label: 'Quests',
+                  onTap: () => onGoTab(4),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  msIcon: 'storefront',
+                  label: 'Shop',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                        builder: (_) => const ShopScreen()),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          // Tools - CGPA, exam history, search, settings and the More
+          // sheet; Notes and Tutor retired (founder 2026-10-22).
+          const SizedBox(height: 32),
+          Text(
+            'Tools',
             style: RenanceText.sectionTitle.copyWith(
               color: context.textSecondary,
               fontSize: 14,
@@ -265,79 +321,21 @@ class UniversityHomeTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  msIcon: 'sports_esports',
-                  label: 'Arena',
+                  msIcon: 'history_edu',
+                  label: 'Exam History',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                        builder: (_) => const ArenaLobbyScreen()),
+                        builder: (_) => const ExamHistoryScreen()),
                   ),
                 ),
               ),
               Expanded(
                 child: LauncherTile(
-                  msIcon: 'leaderboard',
-                  label: 'Leaderboard',
+                  msIcon: 'settings',
+                  label: 'Settings',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                        builder: (_) => const LeaderboardScreen()),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: LauncherTile(
-                  msIcon: 'event_note',
-                  label: 'Study Plan',
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                        builder: (_) => const StudyPlanScreen()),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          // Tools & Resources - shared with the other desks
-          // gap-4 + mt-4 - the web's 32px above the tools grid.
-          const SizedBox(height: 32),
-          Text(
-            'Tools & Resources',
-            style: RenanceText.sectionTitle.copyWith(
-              color: context.textSecondary,
-              fontSize: 14,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-          const SizedBox(height: 12),
-          Row(
-            children: <Widget>[
-              Expanded(
-                child: LauncherTile(
-                  msIcon: 'import_contacts',
-                  label: 'Notes',
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                        builder: (_) => const LessonsScreen()),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: LauncherTile(
-                  msIcon: 'download',
-                  label: 'Downloads',
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                        builder: (_) => const DownloadsScreen()),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: LauncherTile(
-                  msIcon: 'smart_toy',
-                  iconColor: context.onInverseChip,
-                  highlight: true,
-                  label: 'Tutor',
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                        builder: (_) => const TutorEntryScreen()),
+                        builder: (_) => const SettingsScreen()),
                   ),
                 ),
               ),

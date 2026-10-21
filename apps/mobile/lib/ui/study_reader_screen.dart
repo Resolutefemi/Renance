@@ -469,8 +469,13 @@ class _StudyReaderScreenState extends State<StudyReaderScreen> {
               style: RenanceText.bodyBase.copyWith(color: context.ink),
               decoration: InputDecoration(
                 isDense: true,
-                prefixIcon:
-                    MsIcon('search', size: 20, color: context.textSecondary),
+                // Founder 2026-10-21: glyph centred on the text line,
+                // 10px inside a 36px hit area (the app's bar).
+                prefixIcon: MsFieldIcon('search',
+                    size: 18, color: context.textSecondary,
+                    box: 36, leftInset: 10),
+                prefixIconConstraints:
+                    const BoxConstraints(minWidth: 36, minHeight: 36),
                 hintText: 'Search the questions…',
                 hintStyle:
                     RenanceText.bodyBase.copyWith(color: context.textSecondary),

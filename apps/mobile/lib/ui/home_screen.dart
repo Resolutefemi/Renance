@@ -18,15 +18,12 @@ import '../notifications.dart';
 import '../storage.dart';
 import '../api_client.dart';
 import 'ai_generator_screen.dart';
-import 'arena_lobby_screen.dart';
 import 'account_screens.dart';
-import 'career_bridge_screen.dart';
 import 'offline_share_screen.dart';
-import 'patron_portal_screen.dart';
 import 'performance_screen.dart';
 import 'saved_questions.dart';
 import 'gpa_screen.dart';
-import 'downloads_screen.dart';
+import 'shop_screen.dart';
 import 'leaderboard_screen.dart';
 import 'courses_screen.dart';
 import 'league_screen.dart';
@@ -34,20 +31,15 @@ import 'feed_screen.dart';
 import 'quests_screen.dart';
 import 'learn_bits.dart';
 import 'msymbols.dart';
-import 'study_resources_screen.dart';
 import 'study_setup_screen.dart';
-import 'study_plan_screen.dart';
-import 'lessons_screen.dart';
 import 'ai_screen.dart';
 import 'ai_sparkle.dart';
 import 'notifications_screen.dart';
 import 'search_screen.dart';
-import 'tutor_screen.dart';
 import 'exam_screen.dart';
 import 'exam_history_screen.dart';
 import 'exam_mode_setup_screen.dart';
 import 'packs_screen.dart';
-import 'gamification_hub_screen.dart';
 import 'onboarding_sheet.dart';
 import 'feature_tour_sheet.dart';
 import 'daily_subjects_sheet.dart';
@@ -56,7 +48,6 @@ import 'post_utme_screens.dart';
 import 'profile_screen.dart';
 import 'renance_logo.dart';
 import 'review_screen.dart';
-import 'syllabus_screen.dart';
 import 'settings_screen.dart';
 import 'university_home_screen.dart';
 import 'tactile.dart';
@@ -345,7 +336,11 @@ class _HomeScreenState extends State<HomeScreen> {
               onGoTab: _goTab,
             ),
             onBackPressed: _tab == 0 ? null : () => setState(() => _tab = 0),
-            onGems: () => setState(() => _tab = 5),
+            // The gems chip IS the shop door now: one tap opens the full
+            // shop page where diamonds buy streak freezes, hearts, boosts.
+            onGems: () => Navigator.of(context).push<void>(
+              MaterialPageRoute<void>(builder: (_) => const ShopScreen()),
+            ),
             onNotifications: () => Navigator.of(context).push<void>(
               MaterialPageRoute<void>(
                 builder: (_) => NotificationsScreen(
@@ -906,9 +901,23 @@ class HomeNav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double bottomPad = MediaQuery.paddingOf(context).bottom;
-    // The web's safe-area padding: max(0.375rem, env(safe-area-inset-bottom)).
-    final double safePad = bottomPad < 6 ? 6 : bottomPad;
+    // Founder report 2026-10-21: on edge-to-edge phones the Android
+    // gesture/3-button strip drew straight over the tab labels, so pass
+    // IV reserved a hard 48dp floor (max(48, reported inset)). But on
+    // phones whose window does NOT extend behind the system bar the OS
+    // ends the app window ABOVE the strip and reports a 0px bottom
+    // inset - the floor then paints a dead ~48dp white band under the
+    // navbar (founder round-4 screenshot: white gap between the tabs
+    // and the system buttons). The OS is trusted exactly now: reserve
+    // what the window actually reports (the larger of padding and
+    // viewPadding bottoms) and nothing more. Edge-to-edge devices
+    // still clear the strip; windowed devices sit flush - no band on
+    // any device.
+    final double reported = MediaQuery.paddingOf(context).bottom >
+            MediaQuery.viewPaddingOf(context).bottom
+        ? MediaQuery.paddingOf(context).bottom
+        : MediaQuery.viewPaddingOf(context).bottom;
+    final double safePad = reported;
     final bool dark = context.darkChrome;
     // The dark tier's nav-pill (globals.css): a 9% macaw wash with the
     // 1.5px inset macaw ring instead of the light macaw-light face.
@@ -973,6 +982,14 @@ class HomeNav extends StatelessWidget {
                           const SizedBox(height: 2),
                           Text(
                             _labels[i],
+                            // maxLines 1 (founder report 2026-10-21): at
+                            // large font scales "Leagues" wrapped into
+                            // "Leagu / es" and the second line sank into
+                            // the system-bar zone. One clean line, the
+                            // pill grows with the scale instead.
+                            maxLines: 1,
+                            softWrap: false,
+                            overflow: TextOverflow.ellipsis,
                             style: TextStyle(
                               fontFamily: 'Nunito',
                               fontSize: 9.5,
@@ -1100,12 +1117,13 @@ class _LauncherTab extends StatelessWidget {
             const SizedBox(height: 12),
             _FatigueBanner(state: student.fatigue!),
           ],
-          // Launcher grids - 1:1 with the up-to-date web desk: Practice /
-          // Compete / Learn / Tools, the daily drivers on the grid, the
-          // rest in More. -------------------------------------------------
+          // Launcher grids - the founder's 2026-10-22 pass: every row
+          // keeps four live tiles (no blanks), Arena / Review Due / Notes
+          // / Tutor are gone, and each header names what sits under it.
+          // -------------------------------------------------------------
           const SizedBox(height: 8),
           Text(
-            'Practice',
+            'Practice & Exams',
             style: RenanceText.sectionTitle.copyWith(
               color: context.textSecondary,
               fontSize: 14,
@@ -1167,19 +1185,22 @@ class _LauncherTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  msIcon: 'history',
-                  label: 'Review Due',
-                  badge: student.dueTopics > 0 ? '${student.dueTopics}' : null,
-                  badgeColor: RenanceColors.emerald,
-                  onTap: () => onGoTab(2),
+                  msIcon: 'history_edu',
+                  label: 'Exam History',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const ExamHistoryScreen(),
+                    ),
+                  ),
                 ),
               ),
             ],
           ),
-          // Compete ---------------------------------------------------------
+          // Compete & Earn - the quiz and the ladder to rank on, the
+          // quests that pay diamonds, and the shop that spends them.
           const SizedBox(height: 16),
           Text(
-            'Compete',
+            'Compete & Earn',
             style: RenanceText.sectionTitle.copyWith(
               color: context.textSecondary,
               fontSize: 14,
@@ -1188,17 +1209,6 @@ class _LauncherTab extends StatelessWidget {
           const SizedBox(height: 12),
           Row(
             children: <Widget>[
-              Expanded(
-                child: LauncherTile(
-                  msIcon: 'sports_esports',
-                  label: 'Arena',
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (_) => const ArenaLobbyScreen(),
-                    ),
-                  ),
-                ),
-              ),
               Expanded(
                 child: LauncherTile(
                   msIcon: 'event_repeat',
@@ -1220,21 +1230,30 @@ class _LauncherTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  msIcon: 'event_note',
-                  label: 'Study Plan',
+                  msIcon: 'checklist',
+                  label: 'Quests',
+                  onTap: () => onGoTab(4),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  msIcon: 'storefront',
+                  label: 'Shop',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                      builder: (_) => const StudyPlanScreen(),
+                      builder: (_) => const ShopScreen(),
                     ),
                   ),
                 ),
               ),
             ],
           ),
-          // Learn - the web's two tiles --------------------------------
+          // Study & AI - the companion, the generator and the two score
+          // lenses (founder 2026-10-21: performance analysis + saved
+          // questions live on the grid; Notes is gone 2026-10-22).
           const SizedBox(height: 16),
           Text(
-            'Learn',
+            'Study & AI',
             style: RenanceText.sectionTitle.copyWith(
               color: context.textSecondary,
               fontSize: 14,
@@ -1243,17 +1262,6 @@ class _LauncherTab extends StatelessWidget {
           const SizedBox(height: 12),
           Row(
             children: <Widget>[
-              Expanded(
-                child: LauncherTile(
-                  msIcon: 'auto_stories',
-                  label: 'Notes',
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (_) => const LessonsScreen(),
-                    ),
-                  ),
-                ),
-              ),
               Expanded(
                 child: LauncherTile(
                   msIcon: 'smart_toy',
@@ -1265,14 +1273,47 @@ class _LauncherTab extends StatelessWidget {
                   ),
                 ),
               ),
-              const Expanded(child: SizedBox()),
-              const Expanded(child: SizedBox()),
+              Expanded(
+                child: LauncherTile(
+                  msIcon: 'auto_awesome',
+                  label: 'AI Generator',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const AiGeneratorScreen(),
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  msIcon: 'insights',
+                  label: 'Performance Analysis',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const PerformanceScreen(),
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  msIcon: 'bookmark',
+                  label: 'Saved Questions',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const SavedQuestionsScreen(),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
-          // Tools & Resources - the web's three tiles ------------------
+          // Tools - the utilities that don't fit the rows above; the
+          // Tutor is retired (founder 2026-10-22) and Settings now
+          // lives one tap from the desk.
           const SizedBox(height: 16),
           Text(
-            'Tools & Resources',
+            'Tools',
             style: RenanceText.sectionTitle.copyWith(
               color: context.textSecondary,
               fontSize: 14,
@@ -1283,24 +1324,33 @@ class _LauncherTab extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 child: LauncherTile(
-                  msIcon: 'menu_book',
-                  label: 'Syllabus Map',
+                  msIcon: 'calculate',
+                  label: 'GPA Calculator',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                      builder: (_) => const SyllabusScreen(),
+                      builder: (_) => const GpaScreen(),
                     ),
                   ),
                 ),
               ),
               Expanded(
                 child: LauncherTile(
-                  msIcon: 'smart_toy',
-                  iconColor: context.onInverseChip,
-                  highlight: true,
-                  label: 'Tutor',
+                  msIcon: 'search',
+                  label: 'Search',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                      builder: (_) => const TutorEntryScreen(),
+                      builder: (_) => const SearchScreen(),
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  msIcon: 'settings',
+                  label: 'Settings',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const SettingsScreen(),
                     ),
                   ),
                 ),
@@ -1314,7 +1364,6 @@ class _LauncherTab extends StatelessWidget {
                   onTap: () => showMoreSheet(context, onGoTab: onGoTab),
                 ),
               ),
-              const Expanded(child: SizedBox()),
             ],
           ),
           // Recent activity ------------------------------------------------
@@ -1685,20 +1734,28 @@ class LauncherTile extends StatelessWidget {
             ],
           ),
           SizedBox(height: 8),
-          Text(
-            label,
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-            // The web's tile label: text-[10.5px] font-bold,
-            // text-on-surface-variant / text-primary-ink on the AI tile.
-            style: TextStyle(
-              fontFamily: 'Nunito',
-              fontSize: 10.5,
-              height: 1.2,
-              color: highlight
-                  ? Color.lerp(context.primary, Colors.black, 0.28)
-                  : context.textSecondary,
-              fontWeight: FontWeight.w700,
+          // Founder 2026-10-21 ("make the app adapt to devices and be
+          // responsive on all devices"): the label SCALES DOWN to fit
+          // its tile instead of ellipsizing - "Question Pack" and
+          // "Review Due" stay whole on narrow phones and at the big
+          // system font scales, exactly like the web desk.
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              label,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              // The web's tile label: text-[10.5px] font-bold,
+              // text-on-surface-variant / text-primary-ink on the AI tile.
+              style: TextStyle(
+                fontFamily: 'Nunito',
+                fontSize: 10.5,
+                height: 1.2,
+                color: highlight
+                    ? Color.lerp(context.primary, Colors.black, 0.28)
+                    : context.textSecondary,
+                fontWeight: FontWeight.w700,
+              ),
             ),
           ),
         ],
@@ -1994,103 +2051,17 @@ Future<void> showMoreSheet(
                   crossAxisSpacing: 10,
                   childAspectRatio: 3.2,
                   children: <Widget>[
+                    // The founder's 2026-10-22 pass: every feature that
+                    // lives on the home grid (performance analysis, saved
+                    // questions, AI studio, settings, search, exam
+                    // history, AI generator, GPA calculator) left the
+                    // sheet - no doubles. Study Resources is retired.
+                    // What remains is the genuinely occasional stuff.
                     _MoreTile(
-                      msIcon: 'insights',
-                      label: 'Performance Analysis',
+                      msIcon: 'wifi_off',
+                      label: 'Offline Share',
                       onTap: _push(sheetContext, context,
-                          (_) => const PerformanceScreen()),
-                    ),
-                    _MoreTile(
-                      msIcon: 'bookmark',
-                      label: 'Saved Questions',
-                      onTap: _push(sheetContext, context,
-                          (_) => const SavedQuestionsScreen()),
-                    ),
-                    _MoreTile(
-                      msIcon: 'collections_bookmark',
-                      label: 'Study Resources',
-                      onTap: _push(sheetContext, context,
-                          (_) => const StudyResourcesScreen()),
-                    ),
-                    _MoreTile(
-                      msIcon: 'category',
-                      label: 'Subjects',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        onGoTab?.call(1);
-                      },
-                    ),
-                    _MoreTile(
-                      msIcon: 'download',
-                      label: 'Downloads',
-                      onTap: _push(sheetContext, context,
-                          (_) => const DownloadsScreen()),
-                    ),
-                    _MoreTile(
-                      msIcon: 'notifications',
-                      label: 'Notifications',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) => NotificationsScreen(
-                              onGoTab: onGoTab,
-                            ),
-                          ),
-                        );
-                      },
-                    ),
-                    _MoreTile(
-                      msIcon: 'laptop_mac',
-                      label: 'Career Bridge',
-                      onTap: _push(sheetContext, context,
-                          (_) => const CareerBridgeScreen()),
-                    ),
-                    _MoreTile(
-                      msIcon: 'smart_toy',
-                      label: 'Renance AI Studio',
-                      onTap: _push(sheetContext, context,
-                          (_) => const AiScreen()),
-                    ),
-                    _MoreTile(
-                      msIcon: 'volunteer_activism',
-                      label: 'Patron Portal',
-                      onTap: _push(sheetContext, context,
-                          (_) => const PatronPortalScreen()),
-                    ),
-                    _MoreTile(
-                      msIcon: 'menu_book',
-                      label: 'Syllabus Map',
-                      onTap: _push(sheetContext, context,
-                          (_) => const SyllabusScreen()),
-                    ),
-                    _MoreTile(
-                      msIcon: 'event_note',
-                      label: 'Study Plan',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) => StudyPlanScreen(
-                              onGoTab: onGoTab,
-                            ),
-                          ),
-                        );
-                      },
-                    ),
-                    _MoreTile(
-                      msIcon: 'person',
-                      label: 'Profile',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        onGoTab?.call(5);
-                      },
-                    ),
-                    _MoreTile(
-                      msIcon: 'settings',
-                      label: 'Settings',
-                      onTap: _push(sheetContext, context,
-                          (_) => const SettingsScreen()),
+                          (_) => const OfflineShareScreen()),
                     ),
                     _MoreTile(
                       msIcon: 'help',
@@ -2103,50 +2074,6 @@ Future<void> showMoreSheet(
                           applicationLegalese: 'Learn. Practice. Rise.',
                         );
                       },
-                    ),
-                    // Mobile-native extras (no web counterpart) - the same
-                    // 2-column rhythm, full names, zero truncation.
-                    _MoreTile(
-                      msIcon: 'search',
-                      label: 'Search',
-                      onTap: _push(sheetContext, context,
-                          (_) => const SearchScreen()),
-                    ),
-                    _MoreTile(
-                      msIcon: 'history_edu',
-                      label: 'Exam History',
-                      onTap: _push(sheetContext, context,
-                          (_) => const ExamHistoryScreen()),
-                    ),
-                    _MoreTile(
-                      msIcon: 'emoji_events',
-                      label: 'Awards Hub',
-                      onTap: _push(sheetContext, context,
-                          (_) => const GamificationHubScreen()),
-                    ),
-                    _MoreTile(
-                      msIcon: 'wifi_off',
-                      label: 'Offline Share',
-                      onTap: _push(sheetContext, context,
-                          (_) => const OfflineShareScreen()),
-                    ),
-                    _MoreTile(
-                      msIcon: 'auto_awesome',
-                      label: 'AI Generator',
-                      onTap: _push(sheetContext, context,
-                          (_) => const AiGeneratorScreen()),
-                    ),
-                    _MoreTile(
-                      msIcon: 'calculate',
-                      label: 'GPA Calculator',
-                      onTap: _push(sheetContext, context,
-                          (_) => const GpaScreen()),
-                    ),
-                    _MoreTile(
-                      msIcon: 'auto_stories',
-                      label: 'Lessons',
-                      onTap: _push(sheetContext, context,
-                          (_) => const LessonsScreen()),
                     ),
                   ],
                 ),

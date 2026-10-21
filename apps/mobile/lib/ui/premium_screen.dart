@@ -11,7 +11,7 @@ import 'theme.dart';
 /// PremiumScreen: the paywall and the plans desk. Founder pricing on
 /// paper white: the tiers (JAMB annual, 1 week, 1 month, 3 months)
 /// rendered straight from the catalog, the REN coin redemption
-/// table (arena wins pay 1, referrals pay 3), and the WhatsApp line for
+/// table, and the WhatsApp line for
 /// bulk and school negotiation. While the server says subscriptions are
 /// paused the screen becomes an "everything is unlocked" notice - the
 /// plans still render, buy buttons and coin spending step aside.
@@ -84,30 +84,6 @@ class _PremiumScreenState extends State<PremiumScreen> {
     }
   }
 
-  Future<void> _redeem(RenRedemption r) async {
-    final ApiClient api = context.read<ApiClient>();
-    setState(() => _busyPlan = r.code);
-    try {
-      final Entitlement ent = await api.redeemCoins(r.code);
-      if (!mounted) return;
-      setState(() => _entitlement = ent);
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('${r.label} applied from ${r.coins} REN coins. Continue your paper right where you stopped.')),
-      );
-    } on ApiException catch (e) {
-      if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(e.message)),
-      );
-    } on NetworkException {
-      if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('No connection. Reconnect and try again.')),
-      );
-    } finally {
-      if (mounted) setState(() => _busyPlan = null);
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -282,56 +258,18 @@ class _PremiumScreenState extends State<PremiumScreen> {
                       );
                     }),
                     // REN redemption ---------------------------------------
-                    if (catalog.studentBillingEnabled) ...<Widget>[
+                    // REN coins retired (founder 2026-10-22): referrals
+                    // pay 100 diamonds each, arena is gone - the earn
+                    // loop runs on the diamond wallet now.
                     const SizedBox(height: 18),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text('Redeem REN coins', style: RenanceText.bodyMedium),
-                        Text(
-                          _entitlement == null
-                              ? 'sign in to see balance'
-                              : '${_entitlement!.renCoins} REN',
-                          style: RenanceText.labelMono.copyWith(
-                            fontSize: 12, color: context.textSecondary,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 8),
                     Text(
-                      'Win an arena duel (+1 REN), refer a friend (+3 REN). '
-                      'Spend coins on premium days without paying a Naira.',
+                      'Earn diamonds, not points: quests, chests, perfect '
+                      'scores and 100 diamonds for every friend who joins '
+                      'with your referral code.',
                       style: RenanceText.caption.copyWith(
                         fontSize: 12, height: 1.4, color: context.textSecondary,
                       ),
                     ),
-                    const SizedBox(height: 10),
-                    Wrap(
-                      spacing: 8,
-                      runSpacing: 8,
-                      children: <Widget>[
-                        for (final RenRedemption r in catalog.redemptions)
-                          _RedeemChip(
-                            label: r.label,
-                            coins: r.coins,
-                            enabled: (_entitlement?.renCoins ?? 0) >= r.coins && _busyPlan == null,
-                            onTap: () => _redeem(r),
-                          ),
-                      ],
-                    ),
-                    ],
-                    if (!catalog.studentBillingEnabled) ...<Widget>[
-                      const SizedBox(height: 18),
-                      Text(
-                        'Your REN coins are safe and keep stacking - arena wins '
-                        '(+1) and referrals (+3). The day billing returns you '
-                        'can spend them on premium days.',
-                        style: RenanceText.caption.copyWith(
-                          fontSize: 12, height: 1.4, color: context.textSecondary,
-                        ),
-                      ),
-                    ],
                   ],
                 ),
     );
@@ -390,42 +328,3 @@ class _PremiumScreenState extends State<PremiumScreen> {
   }
 }
 
-class _RedeemChip extends StatelessWidget {
-  const _RedeemChip({
-    required this.label,
-    required this.coins,
-    required this.enabled,
-    required this.onTap,
-  });
-
-  final String label;
-  final int coins;
-  final bool enabled;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return TactileButton(
-      onPressed: enabled ? onTap : null,
-      height: 36,
-      radius: RenanceRadius.chip,
-      outline: context.outlineVariant,
-      edge: context.outlineVariant,
-      edgeWidth: 3,
-      fontSize: 12.5,
-      expand: false,
-      padding: const EdgeInsets.symmetric(horizontal: 14),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          Text(label),
-          const SizedBox(width: 6),
-          Text('$coins REN',
-              style: RenanceText.labelMono.copyWith(
-                fontSize: 11, color: context.textSecondary,
-              )),
-        ],
-      ),
-    );
-  }
-}

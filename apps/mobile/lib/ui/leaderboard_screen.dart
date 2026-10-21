@@ -31,7 +31,9 @@ class LeaderboardScreen extends StatefulWidget {
 }
 
 class _LeaderboardScreenState extends State<LeaderboardScreen> {
-  _Board _tab = _Board.arena;
+  // Arena left the ranking page (founder 2026-10-22) - Diamonds opens
+  // the page now, the ladder the referral + quest economy feeds.
+  _Board _tab = _Board.gems;
   bool _loading = true;
   String? _error;
   final Map<_Board, LeaderboardData?> _boards = <_Board, LeaderboardData?>{};
@@ -55,8 +57,6 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
         _gemsBoard ??= await api.leaderboardGems();
       } else if (_boards[_tab] == null) {
         switch (_tab) {
-          case _Board.arena:
-            _boards[_tab] = await api.leaderboardArena();
           case _Board.jamb:
             _boards[_tab] = await api.leaderboardFocus(focus: 'jamb');
           case _Board.waec:
@@ -228,8 +228,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
 /// The ladders the ranking page serves, each with its pill label and
 /// the one-line explanation under the tabs. Schools are not ranked.
 enum _Board {
-  arena('Arena', 'sports_esports',
-      'Head-to-head duels, weekly and all time. A win is a point.'),
+  // Arena removed (founder 2026-10-22: the feature is retired).
   jamb('JAMB', 'school',
       'Your best official UTME aggregate out of 400. The sealed subject ledger decides.'),
   waec('WAEC', 'menu_book',
@@ -513,11 +512,8 @@ class _RankCard extends StatelessWidget {
     // The headline value each ladder ranks on.
     String headline = '';
     String headlineUnit = '';
-    String headlineLabel = 'Renance Points';
+    String headlineLabel = 'Best UTME';
     switch (tab) {
-      case _Board.arena:
-        headline = '${entry.points}';
-        headlineLabel = 'Renance Points';
       case _Board.jamb:
         headline = fmt(entry.bestScore);
         headlineUnit = '/${fmt(entry.scoreOutOf)}';
@@ -542,24 +538,6 @@ class _RankCard extends StatelessWidget {
 
     final List<Widget> chips = <Widget>[];
     switch (tab) {
-      case _Board.arena:
-        chips.addAll(<Widget>[
-          _StatChip(
-            icon: 'emoji_events',
-            label: 'Wins',
-            value: '${entry.wins}',
-          ),
-          _StatChip(
-            icon: 'history_edu',
-            label: 'Matches',
-            value: '${entry.matches}',
-          ),
-          _StatChip(
-            icon: 'check_circle',
-            label: 'Correct',
-            value: '${entry.correct}',
-          ),
-        ]);
       case _Board.jamb:
       case _Board.waec:
       case _Board.neco:

@@ -417,16 +417,21 @@ class _OverallCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Topic split from the fetched reviews: % correct per topic, the
-    // top six topics by question count.
+    // Subject split from the fetched reviews (founder 2026-10-22: the
+    // performance page rates SUBJECTS and courses - "not those
+    // antonyms, synonyms and those shit"): % correct per subject, the
+    // top eight by question count. Papers that carry no subject tag
+    // fall back to the question's topic, then General.
     final Map<String, (int, int)> topics = <String, (int, int)>{};
     for (final AttemptRow a in graded) {
       final AttemptReview? review = reviews[a.attemptId];
       if (review == null) continue;
       for (final ReviewQuestion q in review.questions) {
-        final String topic = q.topic.isEmpty ? 'General' : q.topic;
-        final (int, int) cur = topics[topic] ?? (0, 0);
-        topics[topic] = (
+        final String subject = q.subject.isNotEmpty
+            ? q.subject
+            : (q.topic.isNotEmpty ? q.topic : 'General');
+        final (int, int) cur = topics[subject] ?? (0, 0);
+        topics[subject] = (
           cur.$1 + (q.correctly ? 1 : 0),
           cur.$2 + 1,
         );
@@ -439,7 +444,7 @@ class _OverallCard extends StatelessWidget {
           e.value.$2 == 0 ? 0.0 : e.value.$1 * 100 / e.value.$2,
         ),
     ]..sort((a, b) => b.$2.compareTo(a.$2));
-    final List<(String, double)> topBars = bars.take(6).toList();
+    final List<(String, double)> topBars = bars.take(8).toList();
 
     // The chart series: chronological scores of the window's papers.
     final List<int> series = <int>[
@@ -514,7 +519,7 @@ class _OverallCard extends StatelessWidget {
               )
             else if (topBars.isEmpty)
               Text(
-                'Topic breakdown arrives with the analysed papers.',
+                'Subject breakdown arrives with the analysed papers.',
                 style: RenanceText.caption.copyWith(
                     color: context.textSecondary),
               )

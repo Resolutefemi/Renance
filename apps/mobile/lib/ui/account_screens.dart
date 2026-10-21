@@ -20,7 +20,6 @@ import '../controllers.dart';
 import '../api_client.dart';
 import '../models.dart';
 import '../storage.dart';
-import 'downloads_screen.dart';
 import 'gpa_screen.dart';
 import 'home_screen.dart' show AvatarCircle;
 import 'msymbols.dart';
@@ -357,14 +356,8 @@ class MyAccountScreen extends StatelessWidget {
                             builder: (_) => const SavedQuestionsScreen()),
                       ),
                     ),
-                    _AccountRow(
-                      icon: 'download',
-                      label: 'Downloads',
-                      onTap: () => Navigator.of(context).push(
-                        MaterialPageRoute<void>(
-                            builder: (_) => const DownloadsScreen()),
-                      ),
-                    ),
+                    // Downloads removed (founder 2026-10-21: the feature
+                    // is useless) - the account row is gone with it.
                     _AccountRow(
                       icon: 'calculate',
                       label: 'GPA Calculator',

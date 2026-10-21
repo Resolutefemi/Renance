@@ -94,6 +94,26 @@ func (s *Service) ensureLearner(ctx context.Context, q querier, userID string) e
         return err
 }
 
+// CreditReferralGems pays the referrer's 100 diamonds (learn.learners
+// gems) once per referred signup. Founder directive 2026-10-22: the
+// referral reward rides the diamond wallet now - "every referred friend
+// will earn the referral 100 diamonds" - and the old 3-REN-coins loop
+// is retired with the Ren points it fed.
+func (s *Service) CreditReferralGems(ctx context.Context, userID string, amount int) error {
+        if err := s.ensureLearner(ctx, s.Pool, userID); err != nil {
+                return fmt.Errorf("learn: referral gems learner: %w", err)
+        }
+        tag, err := s.Pool.Exec(ctx,
+                `UPDATE learn.learners SET gems = gems + $2 WHERE user_id=$1`, userID, amount)
+        if err != nil {
+                return fmt.Errorf("learn: referral gems credit: %w", err)
+        }
+        if tag.RowsAffected() == 0 {
+                return fmt.Errorf("learn: referral gems: no learner %s", userID)
+        }
+        return nil
+}
+
 func (s *Service) loadLearner(ctx context.Context, q querier, userID string) (*Learner, error) {
         l := &Learner{UserID: userID}
         var superUntil, boostUntil *time.Time

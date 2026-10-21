@@ -488,11 +488,6 @@ func (s *Store) EnsureReferralCode(ctx context.Context, userID, code string) (st
         return "", fmt.Errorf("store: referral code mint: could not derive a code for %s", userID)
 }
 
-// CreditReferral pays the referrer's 3 REN once per referred signup.
-func (s *Store) CreditReferral(ctx context.Context, referrerUserID string) error {
-        return s.AddCoins(ctx, referrerUserID, 3)
-}
-
 // ------------------------------------------------------------- payments
 
 // Payment is one billing attempt (Paystack or a manual owner grant).

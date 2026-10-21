@@ -93,11 +93,11 @@ const List<_TourStep> _steps = <_TourStep>[
   ),
   _TourStep(
     icon: 'emoji_events',
-    title: 'Duel and climb',
-    body: 'Challenge friends to live 1v1 arena duels, take the daily quiz, and climb the '
-        'leaderboards - Arena, JAMB, WAEC, NECO, streaks and the daily board. '
-        'Wins earn REN you can redeem for premium.',
-    whereToTap: 'Compete row on Home - Arena, Daily Quiz, Leaderboard',
+    title: 'Compete and earn',
+    body: 'Take the daily quiz, complete gem quests and climb the '
+        'leaderboards - JAMB, WAEC, NECO, streaks, diamonds and the daily '
+        'board. Spend the diamonds you earn in the Shop.',
+    whereToTap: 'Compete & Earn row on Home - Daily Quiz, Leaderboard, Shop',
   ),
   _TourStep(
     icon: 'offline_bolt',

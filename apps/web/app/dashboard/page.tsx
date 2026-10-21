@@ -572,19 +572,18 @@ export default function DashboardPage() {
             four lonely bubbles in a row (2026-10-18 desktop pass). */}
         <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
           <section className="mt-2">
-            <h3 className="text-sm text-on-surface-variant">Practice</h3>
+            <h3 className="text-sm text-on-surface-variant">Practice &amp; Exams</h3>
             <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-2">
               <LauncherTile icon="description" label="Exams" hint="Set up your CBT mock" href={setupHref} />
               <LauncherTile icon="inventory_2" label="Question Pack" hint="Every pack, ready offline" href="/packs" />
               <LauncherTile icon="local_library" label="Study" hint="Practice topic by topic" href="/study-past-questions" />
-              <LauncherTile icon="history" label="Review Due" hint="Missed questions, resurfaced" badge={reviewDueCount > 0 ? reviewDueCount : undefined} href="/review" />
+              <LauncherTile icon="history_edu" label="Exam History" hint="Every paper you have sat" href="/review" />
             </div>
           </section>
 
           <section className="mt-4 lg:mt-2">
-            <h3 className="text-sm text-on-surface-variant">Compete</h3>
+            <h3 className="text-sm text-on-surface-variant">Compete &amp; Earn</h3>
             <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-2">
-              <LauncherTile icon="sports_esports" label="Arena" hint="1-v-1 timed battles" href="/arena" />
               <LauncherTile
                 icon="event_repeat"
                 label="Daily Quiz"
@@ -594,34 +593,35 @@ export default function DashboardPage() {
                 onMore={needsCombo ? () => setComboOpen(true) : undefined}
               />
               <LauncherTile icon="leaderboard" label="Leaderboard" hint="Where you rank this week" href="/leaderboard" />
-              {/* Study Plan removed (founder 2026-10-21: useless). */}
+              <LauncherTile icon="checklist" label="Quests" hint="Daily missions, diamond payouts" href="/quests" />
+              <LauncherTile icon="storefront" label="Shop" hint="Spend diamonds, keep the streak" href="/shop" />
             </div>
           </section>
         </div>
 
-        {/* Study Tools: the founder's 2026-10-21 pass fills the two empty
-            slots under the old Learn header with Performance Analysis and
-            Saved Questions - renamed out of 'Learn' because the content is
-            no longer just learning material. */}
+        {/* Study & AI: the companion, the generator and the two score
+            lenses (founder 2026-10-22 pass - Notes is retired, every
+            tile here is a daily driver). */}
         <section className="mt-4">
-          <h3 className="text-sm text-on-surface-variant">Study Tools</h3>
+          <h3 className="text-sm text-on-surface-variant">Study &amp; AI</h3>
           <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-4">
-            <LauncherTile icon="auto_stories" label="Notes" hint="Lesson notes & PDFs" href="/notes" />
             <LauncherTile icon="smart_toy" label="Renance AI" hint="Ask, explain, generate" href="/ai" />
+            <LauncherTile icon="auto_awesome" label="AI Generator" hint="Generate fresh practice" href="/ai-generator" />
             <LauncherTile icon="insights" label="Performance Analysis" hint="Scores, pacing, trends" href="/performance" />
             <LauncherTile icon="bookmark" label="Saved Questions" hint="Your bookmarked questions" href="/saved" />
           </div>
         </section>
 
-        {/* Tools & Resources: the occasional utilities get real names and
-            one-line descriptions instead of bare icon bubbles (2026-10-18
-            desktop pass), with More holding the rest. */}
+        {/* Tools: the utilities that don't fit the rows above; the Tutor
+            is retired (founder 2026-10-22) and Settings lives one tap
+            from the desk. */}
         <section className="mt-4">
-          <h3 className="text-sm text-on-surface-variant">Tools &amp; Resources</h3>
-          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-3">
-            {/* Syllabus Map removed (founder 2026-10-21: useless). */}
-            <LauncherTile icon="smart_toy" label="Tutor" hint="Walk any question with AI" inverse href="/review" />
-            <LauncherTile icon="more_horiz" label="More" hint="Performance, saved questions…" muted onMore={() => setMoreOpen(true)} />
+          <h3 className="text-sm text-on-surface-variant">Tools</h3>
+          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-4">
+            <LauncherTile icon="calculate" label="GPA Calculator" hint="Aggregate & GPA checks" href="/gpa" />
+            <LauncherTile icon="search" label="Search" hint="Find any question" href="/search" />
+            <LauncherTile icon="settings" label="Settings" hint="Tune the app" href="/settings" />
+            <LauncherTile icon="more_horiz" label="More" hint="Offline share, help…" muted onMore={() => setMoreOpen(true)} />
           </div>
         </section>
         </>
@@ -651,7 +651,7 @@ export default function DashboardPage() {
               </span>
             </div>
             <div className="min-w-0 flex-1">
-              <p className="truncate text-[15px] font-semibold text-on-surface">{recent.code}</p>
+              <p className="truncate text-[15px] font-semibold text-on-surface">{prettyRecent(recent.code)}</p>
               <p className="truncate text-[13px] text-on-surface-variant">
                 {recent.status === 'in_progress'
                   ? 'Paused paper, your seat is saved, continue anytime'
@@ -788,21 +788,21 @@ function PostUtmeHome({ onMore }: { onMore: () => void }) {
       {/* Practice grid -------------------------------------------------- */}
       <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
         <section className="mt-2">
-          <h3 className="text-sm text-on-surface-variant">Practice</h3>
+          <h3 className="text-sm text-on-surface-variant">Practice &amp; Exams</h3>
           <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-2">
             <LauncherTile icon="description" label="Past Questions" hint="Your school's banks" href="/post-utme" />
             <LauncherTile icon="local_library" label="Study" hint="Practice topic by topic" href="/study-past-questions?body=post-utme" />
-            <LauncherTile icon="history" label="Review Due" hint="Missed questions, resurfaced" href="/review" />
+            <LauncherTile icon="history_edu" label="Exam History" hint="Every paper you have sat" href="/review" />
             <LauncherTile icon="inventory_2" label="Question Pack" hint="Every pack, ready offline" href="/packs" />
           </div>
         </section>
         <section className="mt-4 lg:mt-2">
-          <h3 className="text-sm text-on-surface-variant">Compete</h3>
+          <h3 className="text-sm text-on-surface-variant">Compete &amp; Earn</h3>
           <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-2">
-            <LauncherTile icon="sports_esports" label="Arena" hint="1-v-1 timed battles" href="/arena" />
             <LauncherTile icon="leaderboard" label="Leaderboard" hint="Where you rank this week" href="/leaderboard" />
-            <LauncherTile icon="auto_stories" label="Notes" hint="Lesson notes & PDFs" href="/notes" />
-            {/* Study Plan removed (founder 2026-10-21: useless). */}
+            <LauncherTile icon="checklist" label="Quests" hint="Daily missions, diamond payouts" href="/quests" />
+            <LauncherTile icon="storefront" label="Shop" hint="Spend diamonds, keep the streak" href="/shop" />
+            <LauncherTile icon="insights" label="Performance Analysis" hint="Scores, pacing, trends" href="/performance" />
           </div>
         </section>
       </div>
@@ -819,14 +819,24 @@ function PostUtmeHome({ onMore }: { onMore: () => void }) {
         </section>
       )}
 
-      {/* Tools & Resources ------------------------------------------------ */}
+      {/* Study & AI + Tools (founder 2026-10-22 pass: Notes and the
+          Tutor are retired; the companion and the utilities carry the
+          desk instead) ---------------------------------------------- */}
       <section className="mt-4">
-        <h3 className="text-sm text-on-surface-variant">Tools &amp; Resources</h3>
+        <h3 className="text-sm text-on-surface-variant">Study &amp; AI</h3>
         <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-4">
-          <LauncherTile icon="import_contacts" label="Notes" hint="Lesson notes & PDFs" href="/notes" />
-          <LauncherTile icon="smart_toy" label="Tutor" hint="Walk any question with AI" inverse href="/review" />
-          <LauncherTile icon="more_horiz" label="More" hint="Performance, saved questions…" muted onMore={onMore} />
-          {/* Downloads removed (founder 2026-10-21: useless). */}
+          <LauncherTile icon="smart_toy" label="Renance AI" hint="Ask, explain, generate" href="/ai" />
+          <LauncherTile icon="auto_awesome" label="AI Generator" hint="Generate fresh practice" href="/ai-generator" />
+          <LauncherTile icon="bookmark" label="Saved Questions" hint="Your bookmarked questions" href="/saved" />
+          <LauncherTile icon="calculate" label="GPA Calculator" hint="Aggregate & GPA checks" href="/gpa" />
+        </div>
+      </section>
+      <section className="mt-4">
+        <h3 className="text-sm text-on-surface-variant">Tools</h3>
+        <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-4">
+          <LauncherTile icon="search" label="Search" hint="Find any question" href="/search" />
+          <LauncherTile icon="settings" label="Settings" hint="Tune the app" href="/settings" />
+          <LauncherTile icon="more_horiz" label="More" hint="Offline share, help…" muted onMore={onMore} />
         </div>
       </section>
     </>
@@ -1019,31 +1029,75 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
           </div>
         </section>
         <section className="mt-4 lg:mt-2">
-          <h3 className="text-sm text-on-surface-variant">Grow</h3>
+          <h3 className="text-sm text-on-surface-variant">Compete &amp; Earn</h3>
           <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-2">
-            <LauncherTile icon="calculate" label="CGPA" hint="Compute your standing" href="/gpa" />
-            <LauncherTile icon="sports_esports" label="Arena" hint="1-v-1 timed battles" href="/arena" />
             {/* Founder directive (2026-10-17): the school desk gets the
                 same Leaderboard entry the JAMB desk has, ranked with
-                diamonds too. */}
+                diamonds too. Arena retired (founder 2026-10-22). */}
             <LauncherTile icon="leaderboard" label="Leaderboard" hint="Where you rank this week" href="/leaderboard" />
-            {/* Study Plan removed (founder 2026-10-21: useless). */}
+            <LauncherTile icon="checklist" label="Quests" hint="Daily missions, diamond payouts" href="/quests" />
+            <LauncherTile icon="storefront" label="Shop" hint="Spend diamonds, keep the streak" href="/shop" />
+            <LauncherTile icon="history_edu" label="Exam History" hint="Every paper you have sat" href="/review" />
           </div>
         </section>
       </div>
 
-      {/* Tools & Resources: shared with the other desks. */}
+      {/* Tools: CGPA, search, settings and More; Notes and the Tutor
+          are retired (founder 2026-10-22). */}
       <section className="mt-4">
-        <h3 className="text-sm text-on-surface-variant">Tools &amp; Resources</h3>
+        <h3 className="text-sm text-on-surface-variant">Tools</h3>
         <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-4">
-          <LauncherTile icon="import_contacts" label="Notes" hint="Lecture notes & materials" href="/notes" />
-          <LauncherTile icon="smart_toy" label="Tutor" hint="Walk any question with AI" inverse href="/review" />
-          <LauncherTile icon="more_horiz" label="More" hint="Performance, saved questions…" muted onMore={onMore} />
-          {/* Downloads removed (founder 2026-10-21: useless). */}
+          <LauncherTile icon="calculate" label="CGPA" hint="Compute your standing" href="/gpa" />
+          <LauncherTile icon="search" label="Search" hint="Find any question" href="/search" />
+          <LauncherTile icon="settings" label="Settings" hint="Tune the app" href="/settings" />
+          <LauncherTile icon="more_horiz" label="More" hint="Offline share, help…" muted onMore={onMore} />
         </div>
       </section>
     </>
   );
+}
+
+// Founder 2026-10-22 naming: the recent-activity card reads the
+// friendly paper name ("JAMB MOCK", "JAMB Physics", "FUTA COS 101"),
+// never the raw slug.
+function prettyRecent(code: string): string {
+  const base = (code || '').split('~')[0];
+  const human = (slug: string): string =>
+    slug
+      .split('-')
+      .filter(Boolean)
+      .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(' ');
+  if (base.startsWith('jamb-mock-')) return 'JAMB MOCK';
+  const custom = /^(jamb|waec|neco)-custom-(.+)$/.exec(base);
+  if (custom) {
+    const board = custom[1] === 'waec' ? 'WAEC' : custom[1] === 'neco' ? 'NECO' : 'JAMB';
+    const subjects = custom[2]
+      .split('-')
+      .map((slug) => (slug === 'english' ? 'Use of English' : slug.charAt(0).toUpperCase() + slug.slice(1)))
+      .join(', ');
+    return `${board} ${subjects}`;
+  }
+  const uniPq = /^uni-([a-z0-9-]+)-pq-(.+)-bank$/.exec(base);
+  if (uniPq) return `${human(uniPq[1]).toUpperCase()} ${human(uniPq[2])}`;
+  if (base.startsWith('uni-') && base.endsWith('-bank')) {
+    const tail = base.slice(4, -5);
+    const dash = tail.indexOf('-');
+    if (dash > 0) {
+      const course = tail.slice(dash + 1);
+      const coded = /^([a-z]{2,})(\d+[a-z]?)$/.exec(course);
+      const label = coded
+        ? `${coded[1].toUpperCase()} ${coded[2].toUpperCase()}`
+        : course.toUpperCase();
+      return `${human(tail.slice(0, dash)).toUpperCase()} ${label}`;
+    }
+  }
+  if (base.startsWith('jamb-pick-')) {
+    const inner = base.slice('jamb-pick-'.length);
+    return prettyRecent(inner);
+  }
+  if (base.startsWith('daily-')) return 'Daily Challenge';
+  return human(base);
 }
 
 function MoreSheet({ onClose }: { onClose: () => void }) {
@@ -1052,13 +1106,11 @@ function MoreSheet({ onClose }: { onClose: () => void }) {
   // Downloads, Notifications, Career Bridge, Patron Portal, Syllabus Map
   // and Study Plan were removed on the founder's 2026-10-21 order ("they
   // are now useless") - the entries are gone app-wide, not just hidden.
+  // Founder 2026-10-22: every tile that lives on the home grids left
+  // the sheet (no doubles), Study Resources is retired - what remains
+  // is the genuinely occasional stuff.
   const items = [
-    { icon: 'insights', label: 'Performance Analysis', href: '/performance' },
-    { icon: 'bookmark', label: 'Saved Questions', href: '/saved' },
-    { icon: 'auto_stories', label: 'Study Resources', href: '/study' },
-    { icon: 'auto_awesome', label: 'Renance AI Studio', href: '/ai' },
-    { icon: 'person', label: 'Profile', href: '/profile' },
-    { icon: 'settings', label: 'Settings', href: '/settings' },
+    { icon: 'wifi_off', label: 'Offline Share', href: '/offline' },
     { icon: 'help', label: 'Help & FAQ', href: '/faq' },
   ] as const;
   return (

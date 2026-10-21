@@ -2,7 +2,7 @@
 
 /**
  * Leaderboards, rebuilt around the focuses students actually chase:
- * the arena board (weekly / all-time), the JAMB ladder ranked on the
+ * the JAMB ladder ranked on the
  * official UTME aggregate out of 400, the WAEC and NECO ladders ranked
  * on best paper percentage, the streak ladder for the students still
  * showing up, and the daily challenge board. Every board returns the
@@ -18,16 +18,6 @@ import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import BlueTick from '@/components/blue-tick';
 import { api } from '@/lib/api';
-
-interface ArenaEntry {
-  rank: number;
-  username: string;
-  wins: number;
-  matches: number;
-  points: number;
-  correct: number;
-  premium?: boolean;
-}
 
 interface FocusEntry {
   rank: number;
@@ -56,10 +46,10 @@ interface DailyEntry {
   premium?: boolean;
 }
 
-type Tab = 'arena' | 'jamb' | 'waec' | 'neco' | 'streak' | 'gems' | 'daily';
+type Tab = 'jamb' | 'waec' | 'neco' | 'streak' | 'gems' | 'daily';
 
 const TABS: Array<{ id: Tab; icon: string; label: string }> = [
-  { id: 'arena', icon: 'sports_esports', label: 'Arena' },
+  // Arena retired (founder 2026-10-22).
   { id: 'jamb', icon: 'school', label: 'JAMB' },
   { id: 'waec', icon: 'menu_book', label: 'WAEC' },
   { id: 'neco', icon: 'history_edu', label: 'NECO' },
@@ -95,13 +85,11 @@ function fmtScore(n: number): string {
 
 export default function LeaderboardClient() {
   const searchParams = useSearchParams();
-  const initialTab = (searchParams.get('tab') as Tab) || 'arena';
+  const initialTab = (searchParams.get('tab') as Tab) || 'gems';
   const [tab, setTab] = useState<Tab>(
-    TABS.some((t) => t.id === initialTab) ? initialTab : 'arena',
+    TABS.some((t) => t.id === initialTab) ? initialTab : 'gems',
   );
-  const [period, setPeriod] = useState<'week' | 'all'>('week');
 
-  const [arena, setArena] = useState<{ entries: ArenaEntry[]; me: ArenaEntry | null } | null>(null);
   const [focus, setFocus] = useState<{ entries: FocusEntry[]; me: FocusEntry | null } | null>(null);
   const [streak, setStreak] = useState<{ entries: StreakEntry[]; me: StreakEntry | null } | null>(null);
   const [gems, setGems] = useState<{ entries: GemsEntry[]; me: GemsEntry | null } | null>(null);
@@ -116,9 +104,7 @@ export default function LeaderboardClient() {
   const load = useCallback(async () => {
     setError(null);
     try {
-      if (tab === 'arena') {
-        setArena(await api(`/leaderboard/arena?period=${period}`));
-      } else if (tab === 'jamb' || tab === 'waec' || tab === 'neco') {
+      if (tab === 'jamb' || tab === 'waec' || tab === 'neco') {
         setFocus(await api(`/leaderboard/focus?focus=${tab}`));
       } else if (tab === 'streak') {
         setStreak(await api('/leaderboard/streak'));
@@ -130,18 +116,16 @@ export default function LeaderboardClient() {
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not load the board');
     }
-  }, [tab, period]);
+  }, [tab]);
 
   useEffect(() => {
     void load();
   }, [load]);
 
   const isFocus = tab === 'jamb' || tab === 'waec' || tab === 'neco';
-  const hasMe = tab === 'arena' || isFocus || tab === 'streak' || tab === 'gems' || tab === 'daily';
+  const hasMe = isFocus || tab === 'streak' || tab === 'gems' || tab === 'daily';
   const me = hasMe
-    ? tab === 'arena'
-      ? arena?.me
-      : isFocus
+    ? isFocus
         ? focus?.me
         : tab === 'streak'
           ? streak?.me
@@ -153,9 +137,7 @@ export default function LeaderboardClient() {
   const emptyHint =
     tab === 'daily'
       ? 'Nobody has played today yet, be the first seat on the board.'
-      : tab === 'arena'
-        ? 'No entries yet, play a match to appear here.'
-        : tab === 'jamb'
+      : tab === 'jamb'
           ? 'No official UTME mock graded yet. Take one and claim the first seat.'
           : tab === 'waec' || tab === 'neco'
             ? 'No graded paper in this focus yet. Be the first on the board.'
@@ -191,27 +173,8 @@ export default function LeaderboardClient() {
           ))}
         </div>
 
-        {/* arena period toggle */}
-        {tab === 'arena' && (
-          <div className="mt-3 flex w-fit rounded-lg bg-surface-container p-1">
-            {(['week', 'all'] as const).map((p) => (
-              <button
-                key={p}
-                type="button"
-                onClick={() => setPeriod(p)}
-                className={`rounded-md px-4 py-1.5 text-[13px] font-medium transition ${
-                  period === p ? 'bg-card text-on-surface shadow-sm' : 'text-on-surface-variant'
-                }`}
-              >
-                {p === 'week' ? 'This week' : 'All time'}
-              </button>
-            ))}
-          </div>
-        )}
-
         {/* the one-line explanation each board deserves */}
         <p className="mt-3 text-[13px] text-on-surface-variant">
-          {tab === 'arena' && 'Head-to-head duels, weekly and all time. A win is a point.'}
           {tab === 'jamb' && 'Your best official UTME aggregate out of 400. The sealed subject ledger decides, no percentages.'}
           {tab === 'waec' && 'Your best WAEC paper, graded on the server against the sealed keys.'}
           {tab === 'neco' && 'Your best NECO paper, graded on the server against the sealed keys.'}
@@ -241,11 +204,6 @@ export default function LeaderboardClient() {
                 rank {me.rank} · {tab}
               </p>
             </div>
-            {tab === 'arena' && me && 'points' in me && (
-              <p className="text-right font-mono text-sm font-bold text-on-surface">
-                {me.points} <span className="text-[11px] font-normal text-on-surface-variant">pts</span>
-              </p>
-            )}
             {isFocus && me && 'bestScore' in me && (
               <p className="text-right font-mono text-sm font-bold text-on-surface">
                 {fmtScore(me.bestScore)}
@@ -267,17 +225,13 @@ export default function LeaderboardClient() {
 
         {/* the board */}
         <section className="mt-4 overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
-          {((tab === 'arena' && !arena) ||
-            (isFocus && !focus) ||
+          {(isFocus && !focus) ||
             (tab === 'streak' && !streak) ||
             (tab === 'gems' && !gems) ||
-            (tab === 'daily' && !daily)) &&
+            (tab === 'daily' && !daily) &&
             !error && (
               <p className="px-4 py-10 text-center text-sm text-on-surface-variant">Loading the board…</p>
             )}
-          {tab === 'arena' && arena && arena.entries.length === 0 && (
-            <p className="px-4 py-10 text-center text-sm text-on-surface-variant">{emptyHint}</p>
-          )}
           {isFocus && focus && focus.entries.length === 0 && (
             <p className="px-4 py-10 text-center text-sm text-on-surface-variant">{emptyHint}</p>
           )}
@@ -291,37 +245,7 @@ export default function LeaderboardClient() {
             <p className="px-4 py-10 text-center text-sm text-on-surface-variant">{emptyHint}</p>
           )}
 
-          {tab === 'arena' &&
-            arena?.entries.map((entry) => {
-              const highlight = me != null && entry.rank === me.rank;
-              return (
-                <Link
-                  href={`/profile/view/?u=${encodeURIComponent(entry.username)}`}
-                  key={`${entry.rank}-${entry.username}`}
-                  title={`${entry.username} on their profile`}
-                  className={`flex items-center gap-3 border-b border-outline-variant/30 px-4 py-3 transition last:border-b-0 hover:bg-surface-container-low ${
-                    highlight ? 'bg-selection-blue/30' : ''
-                  }`}
-                >
-                  <RankPill rank={entry.rank} />
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-ink/10 text-[13px] font-bold text-accent-ink">
-                    {initial(entry.username)}
-                  </span>
-                  <p className="flex min-w-0 flex-1 items-center gap-1.5 text-[15px] font-medium text-on-surface">
-                    <span className="min-w-0 truncate">{entry.username}</span>
-                    {entry.premium && <BlueTick size={15} />}
-                  </p>
-                  <div className="text-right font-mono text-[12px] leading-4 text-on-surface-variant">
-                    <p className="text-sm font-bold text-on-surface">{entry.points} pts</p>
-                    <p>
-                      {entry.wins}W · {entry.matches}m
-                    </p>
-                  </div>
-                </Link>
-              );
-            })}
-
-          {isFocus &&
+                    {isFocus &&
             focus?.entries.map((entry) => {
               const highlight = me != null && entry.rank === me.rank;
               return (

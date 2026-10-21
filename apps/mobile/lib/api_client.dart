@@ -453,17 +453,6 @@ class ApiClient {
     );
   }
 
-  /// The students currently in the arena (GET /arena/players): idle,
-  /// online, each with their Ren Points. The lobby's Active Now list.
-  Future<List<ArenaPlayer>> arenaPlayers() async {
-    final data = await _send('GET', '/arena/players') as Map<dynamic, dynamic>;
-    final List<dynamic> rows = (data['players'] as List<dynamic>?) ?? const [];
-    return <ArenaPlayer>[
-      for (final row in rows)
-        ArenaPlayer.fromJson((row as Map).cast<String, dynamic>()),
-    ];
-  }
-
   /// Today's daily challenge for one exam body (GET /daily/{body}).
   /// Returns the paper code + day; the tile opens it like any exam.
   Future<DailyInfo> daily(String body) async {
@@ -700,16 +689,6 @@ class ApiClient {
     final data = await _send(
       'GET',
       '/daily/${Uri.encodeComponent(body)}/leaderboard',
-    ) as Map<dynamic, dynamic>;
-    return LeaderboardData.fromJson(data.cast<String, dynamic>());
-  }
-
-  /// The arena standings (GET /leaderboard/arena); [period] is
-  /// "week" (default) or "all".
-  Future<LeaderboardData> leaderboardArena({String period = 'week'}) async {
-    final data = await _send(
-      'GET',
-      '/leaderboard/arena?period=$period',
     ) as Map<dynamic, dynamic>;
     return LeaderboardData.fromJson(data.cast<String, dynamic>());
   }

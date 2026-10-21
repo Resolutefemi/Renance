@@ -580,6 +580,9 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
   String _query = '';
   SavedStore? _saved;
   final Map<int, GlobalKey> _cardKeys = <int, GlobalKey>{};
+  // The subject sub-navbar's active tab (founder 2026-10-22): null
+  // shows every subject section; a name filters the reader to one.
+  String? _activeSubject;
 
   @override
   void initState() {
@@ -721,7 +724,21 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
                     child: Builder(
                       builder: (BuildContext context) {
                         final bool dark = context.darkChrome;
-                        final List<ReviewGroup> groups = review.groups;
+                        final List<ReviewGroup> allGroups = review.groups;
+                        // The subject sub-navbar: one pill per subject in
+                        // paper order, "All" in front. Multi-subject
+                        // papers only - a single-subject paper has
+                        // nothing to switch.
+                        final List<String> subjectTabs = <String>[
+                          for (final ReviewGroup g in allGroups) g.subject,
+                        ];
+                        final List<ReviewGroup> groups =
+                            _activeSubject == null
+                                ? allGroups
+                                : allGroups
+                                    .where((ReviewGroup g) =>
+                                        g.subject == _activeSubject)
+                                    .toList(growable: false);
                         _cardKeys.clear();
                         int running = 0; // global card index for the jump strip
 
@@ -795,8 +812,15 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
                                     setState(() => _query = v.trim().toLowerCase()),
                                 decoration: InputDecoration(
                                   hintText: 'Search Question',
-                                  prefixIcon: MsIcon('search',
-                                      size: 20, color: context.outline),
+                                  // Founder 2026-10-21: glyph centred on
+                                  // the text line, 10px inside a 36px
+                                  // hit area (the app's bar).
+                                  prefixIcon: MsFieldIcon('search',
+                                      size: 18, color: context.textSecondary,
+                                      box: 36, leftInset: 10),
+                                  prefixIconConstraints:
+                                      const BoxConstraints(
+                                          minWidth: 36, minHeight: 36),
                                   filled: true,
                                   fillColor: context.card,
                                   enabledBorder: OutlineInputBorder(
@@ -811,7 +835,64 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
                                   ),
                                 ),
                               ),
-                              const SizedBox(height: 18),
+                              const SizedBox(height: 14),
+                              // SUBJECT SUB-NAVBAR (founder 2026-10-22):
+                              // English | Physics | Mathematics | ... -
+                              // switch the corrections you are working
+                              // through without scrolling the whole paper.
+                              if (subjectTabs.length > 1)
+                                SizedBox(
+                                  height: 42,
+                                  child: ListView.separated(
+                                    scrollDirection: Axis.horizontal,
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 2),
+                                    itemCount: subjectTabs.length + 1,
+                                    separatorBuilder: (_, __) =>
+                                        const SizedBox(width: 8),
+                                    itemBuilder: (BuildContext ctx, int i) {
+                                      final bool isAll = i == 0;
+                                      final String name = isAll
+                                          ? 'All'
+                                          : subjectTabs[i - 1];
+                                      final bool active = isAll
+                                          ? _activeSubject == null
+                                          : _activeSubject == name;
+                                      return TactileButton(
+                                        onPressed: () => setState(() =>
+                                            _activeSubject =
+                                                isAll ? null : name),
+                                        height: 36,
+                                        radius: BorderRadius.circular(999),
+                                        fontSize: 12.5,
+                                        expand: false,
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 14),
+                                        face: active
+                                            ? context.primary
+                                            : context.card,
+                                        onFace: active
+                                            ? context.primary
+                                            : context.card,
+                                        edge: active
+                                            ? context.primary
+                                            : context.outlineVariant,
+                                        child: Text(
+                                          name,
+                                          style: TextStyle(
+                                            fontFamily: 'Nunito',
+                                            fontSize: 12.5,
+                                            fontWeight: FontWeight.w700,
+                                            color: active
+                                                ? Colors.white
+                                                : context.ink,
+                                          ),
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                ),
+                              const SizedBox(height: 14),
                               // SUBJECT BY SUBJECT: every subject block
                               // heads with its counts, then its own
                               // Wrong / Skipped / Answered / All buckets.

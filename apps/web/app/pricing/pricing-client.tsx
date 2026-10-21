@@ -25,7 +25,7 @@ const FREE_KEEPS = [
   'XP and arena leaderboards',
   '20 answers on every exam paper',
   'One full CBT for testing when you sign up',
-  'REN coins: +1 per arena win, +3 per referral',
+  'Diamonds: quests, chests, perfect scores, 100 per referral',
 ];
 
 /** Duration tail the price renders with: "₦5,000 / year". */
@@ -207,37 +207,16 @@ export default function PricingClient() {
         </section>
 
         {/* REN economy */}
+        {/* REN coins retired (founder 2026-10-22): the earn loop runs on
+            diamonds - quests, chests, perfect scores and 100 diamonds
+            per referred friend. */}
         <section className="mt-4 rounded-xl bg-card p-5">
-          <div className="flex items-baseline justify-between">
-            <h2 className="text-[15px] font-bold tracking-tight text-on-surface">The REN economy</h2>
-            {entitlement && (
-              <p className="font-mono text-[12px] text-on-surface-variant">
-                balance: {entitlement.renCoins} REN
-              </p>
-            )}
-          </div>
+          <h2 className="text-[15px] font-bold tracking-tight text-on-surface">The diamond economy</h2>
           <p className="mt-1 text-[12.5px] leading-relaxed text-on-surface-variant">
-            Win arena duels, refer friends, spend coins on premium days. A
-            free student can reach premium without paying a Naira.
+            Quests, topic chests, first clears and perfect scores pay diamonds; every friend who
+            joins with your referral code adds 100 more. Spend them in the Shop on streak freezes,
+            heart refills and XP boosts.
           </p>
-          <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
-            {(catalog?.redemptions ?? []).map((r) => (
-              <button
-                key={r.code}
-                onClick={() => !paused && setPaywallOpen(true)}
-                disabled={paused}
-                className="flex items-center justify-between rounded-lg border border-outline-variant/60 px-4 py-3 text-left transition hover:border-primary/60 disabled:opacity-60"
-              >
-                <span className="text-[13px] font-semibold text-on-surface">{r.label}</span>
-                <span className="font-mono text-[12px] text-on-surface-variant">{r.coins} REN</span>
-              </button>
-            ))}
-          </div>
-          {paused && (
-            <p className="mt-2.5 font-mono text-[10.5px] leading-relaxed text-on-surface-variant">
-              Coins are paused from spending while everything is free - they keep stacking, spend them the day billing returns.
-            </p>
-          )}
         </section>
 
         {/* tertiary note */}

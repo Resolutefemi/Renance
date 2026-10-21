@@ -90,8 +90,12 @@ class _ExamScreenState extends State<ExamScreen> {
   @override
   Widget build(BuildContext context) {
     final ExamController c = context.watch<ExamController>();
-    // Study mode: the graded paper lands in the Past Questions reader.
-    if (widget.studyMode && c.phase == ExamPhase.graded) {
+    // EVERY graded paper lands straight in the corrections reader
+    // (founder 2026-10-22: "after exam submission, it's that correction
+    // page for the exam the user just did that should be opened" - the
+    // report detour and the old tutor hop both die here; the reader's
+    // Score chip carries the result the report used to show).
+    if (c.phase == ExamPhase.graded) {
       final String? attemptId = c.attemptId;
       if (attemptId != null) {
         WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -99,7 +103,7 @@ class _ExamScreenState extends State<ExamScreen> {
           Navigator.of(context).pushReplacement(MaterialPageRoute<void>(
             builder: (_) => ReviewDetailScreen(
               attemptId: attemptId,
-              studyTitle: widget.exam.title,
+              studyTitle: widget.studyMode ? widget.exam.title : null,
             ),
           ));
         });
@@ -168,8 +172,8 @@ class _ExamScreenState extends State<ExamScreen> {
             ),
           ),
         ExamPhase.queued => _Queued(),
-        ExamPhase.graded => widget.studyMode && c.attemptId != null
-            ? const SizedBox.shrink() // redirecting to the reader
+        ExamPhase.graded => c.attemptId != null
+            ? const SizedBox.shrink() // redirecting to the corrections reader
             : _Result(controller: c),
         ExamPhase.error => _ErrorView(controller: c),
       },

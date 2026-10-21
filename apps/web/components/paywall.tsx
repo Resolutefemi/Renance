@@ -14,7 +14,6 @@ import { useEffect, useState } from 'react';
 import {
   fetchPlans,
   initializePaystack,
-  redeemWithCoins,
   naira,
   type PlanCatalog,
   type Entitlement,
@@ -32,7 +31,7 @@ interface Props {
   onRedeemed?: (e: Entitlement) => void;
 }
 
-export default function PaywallModal({ open, onClose, context, entitlement, onRedeemed }: Props) {
+export default function PaywallModal({ open, onClose, context, entitlement }: Props) {
   const [catalog, setCatalog] = useState<PlanCatalog | null>(null);
   const [busyPlan, setBusyPlan] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -60,22 +59,6 @@ export default function PaywallModal({ open, onClose, context, entitlement, onRe
       setError(err instanceof Error ? err.message : 'Could not start the payment.');
     }
   };
-
-  const redeem = async (code: string) => {
-    setBusyPlan(code);
-    setError(null);
-    try {
-      const res = await redeemWithCoins(code);
-      setDone(`Premium applied: ${res.entitlement.premiumType}. Your progress is right where you left it.`);
-      onRedeemed?.(res.entitlement);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Redemption failed.');
-    } finally {
-      setBusyPlan(null);
-    }
-  };
-
-  const hasCoins = (entitlement?.renCoins ?? 0) > 0;
 
   return (
     <div
@@ -211,36 +194,18 @@ export default function PaywallModal({ open, onClose, context, entitlement, onRe
 
               {!catalog.paystackEnabled && (
                 <p className="mt-3 rounded-lg bg-surface-container px-4 py-3 font-mono text-[11px] leading-relaxed text-on-surface-variant">
-                  Card checkout is being connected. Meanwhile: redeem REN coins below, or
+                  Card checkout is being connected. Meanwhile:
                   message the founder on WhatsApp {catalog.whatsapp} to subscribe.
                 </p>
               )}
 
-              {/* REN redemption */}
-              <div className="mt-5 rounded-xl border border-dashed border-primary/25 p-4">
-                <div className="flex items-baseline justify-between">
-                  <p className="text-[13px] font-bold">Redeem REN coins</p>
-                  <p className="font-mono text-[11px] text-on-surface-variant">
-                    balance: {entitlement ? `${entitlement.renCoins} REN` : 'sign in to see'}
-                  </p>
-                </div>
-                <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
-                  {catalog.redemptions.map((r) => (
-                    <button
-                      key={r.code}
-                      onClick={() => redeem(r.code)}
-                      disabled={!hasCoins || busyPlan !== null}
-                      className="flex flex-col items-center rounded-lg border border-primary/20 px-3 py-2.5 transition hover:border-primary/60 disabled:opacity-50"
-                    >
-                      <span className="text-[12px] font-semibold">{r.label}</span>
-                      <span className="font-mono text-[11px] text-on-surface-variant">{r.coins} REN</span>
-                    </button>
-                  ))}
-                </div>
-                <p className="mt-2.5 font-mono text-[10.5px] leading-relaxed text-on-surface-variant">
-                  Earn coins: win an arena duel (+1 REN), refer a friend (+3 REN each).
-                </p>
-              </div>
+              {/* REN coins retired (founder 2026-10-22): the earn loop
+                  runs on diamonds - quests, chests, perfect scores and
+                  100 diamonds per referred friend. */}
+              <p className="mt-5 rounded-xl border border-dashed border-primary/25 p-4 font-mono text-[10.5px] leading-relaxed text-on-surface-variant">
+                Earn diamonds, not points: quests, chests, perfect scores and 100 diamonds for
+                every friend who joins with your referral code.
+              </p>
             </>
           )}
         </div>

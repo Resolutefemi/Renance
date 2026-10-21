@@ -50,6 +50,20 @@ const List<(Color, Color)> kUnitThemes = <(Color, Color)>[
 /// extruded ledge included.
 const double kUnitBannerExtent = 68;
 
+/// Founder report 2026-10-21 ("the unit bar is still not okay"): a
+/// phone running a LARGE system font scale renders the 13px name at
+/// ~17px, so the two name lines no longer fit the fixed 68px header and
+/// the second line painted half-swallowed by the banner's bottom edge.
+/// A pinned SliverPersistentHeader can't grow on its own, so the extent
+/// is COMPUTED from the live TextScaler: two scaled name lines + the
+/// py-2.5 padding (20) + the 2px border ring (4) + the bottom margin
+/// (12) + a small breathing tail - never shorter than the 68px base.
+double unitBannerExtentFor(TextScaler scaler) {
+  final double twoLines = scaler.scale(13.0) * 1.2 * 2;
+  final double extent = 12 + 4 + 20 + twoLines + 4;
+  return extent < kUnitBannerExtent ? kUnitBannerExtent : extent.ceilToDouble();
+}
+
 /// The whole PATH ladder for one course - a sliver list so every unit
 /// banner can PIN at the top of the viewport (the web's sticky
 /// sub-navbar) while its ladder scrolls underneath.
@@ -60,23 +74,27 @@ class LearnPathView extends StatelessWidget {
     required this.onOpenTopic,
     required this.onOpenChest,
     required this.onOpenRevision,
-    required this.onManageCourses,
   });
 
   final CoursePathModel path;
   final void Function(TopicNode topic) onOpenTopic;
   final void Function(UnitNode unit) onOpenChest;
   final void Function(UnitNode unit) onOpenRevision;
-  final VoidCallback onManageCourses;
 
   @override
   Widget build(BuildContext context) {
+    // The pinned unit-banner height for THIS device's font scale -
+    // resolved per build (unitBannerExtentFor).
+    final double bannerExtent =
+        unitBannerExtentFor(MediaQuery.textScalerOf(context));
     return CustomScrollView(
       physics: const AlwaysScrollableScrollPhysics(),
       slivers: <Widget>[
         // the gradient course header scrolls away normally
-        SliverToBoxAdapter(child: _CourseBanner(path: path, onManage: onManageCourses)),
-        const SliverToBoxAdapter(child: SizedBox(height: 20)),
+        SliverToBoxAdapter(child: _CourseBanner(path: path)),
+        // The founder's 2026-10-22 pass: the unit banner rides right
+        // under the hero card (was a 20px float that read as a gap).
+        const SliverToBoxAdapter(child: SizedBox(height: 6)),
         for (final UnitNode unit in path.units)
           // THE PINNED UNIT BANNER - the structural sub-navbar. Founder
           // bug report 2026-10-20: bare sibling SliverPersistentHeaders
@@ -94,6 +112,7 @@ class LearnPathView extends StatelessWidget {
                 pinned: true,
                 delegate: _UnitBannerDelegate(
                   unit: unit,
+                  extent: bannerExtent,
                   onChest: () => onOpenChest(unit),
                   onReview: () => onOpenRevision(unit),
                 ),
@@ -118,10 +137,9 @@ class LearnPathView extends StatelessWidget {
 
 /// The gradient course header: body · department, title, gold progress.
 class _CourseBanner extends StatelessWidget {
-  const _CourseBanner({required this.path, required this.onManage});
+  const _CourseBanner({required this.path});
 
   final CoursePathModel path;
-  final VoidCallback onManage;
 
   @override
   Widget build(BuildContext context) {
@@ -204,21 +222,9 @@ class _CourseBanner extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 12),
-          // the web's inset pill: rounded-xl border-2 border-white/60
-          // bg-white/15, press sinks 2px
-          TactileButton(
-            onPressed: onManage,
-            height: 36,
-            radius: BorderRadius.circular(12),
-            fontSize: 12,
-            padding: const EdgeInsets.symmetric(horizontal: 12),
-            expand: false,
-            face: Colors.white.withValues(alpha: 0.15),
-            onFace: Colors.white,
-            edge: Colors.white.withValues(alpha: 0.45),
-            child: const Text('Add / remove courses'),
-          ),
+          // The "Add / remove courses" pill is gone (founder
+          // 2026-10-22): course management lives in the Courses tab,
+          // the map page is a pure learning path.
         ],
       ),
     );
@@ -230,19 +236,24 @@ class _CourseBanner extends StatelessWidget {
 class _UnitBannerDelegate extends SliverPersistentHeaderDelegate {
   _UnitBannerDelegate({
     required this.unit,
+    required this.extent,
     required this.onChest,
     required this.onReview,
   });
 
   final UnitNode unit;
+
+  /// The text-scale-aware header height (unitBannerExtentFor) - fixed
+  /// per delegate instance so pin/scroll math stays stable.
+  final double extent;
   final VoidCallback onChest;
   final VoidCallback onReview;
 
   @override
-  double get minExtent => kUnitBannerExtent;
+  double get minExtent => extent;
 
   @override
-  double get maxExtent => kUnitBannerExtent;
+  double get maxExtent => extent;
 
   @override
   Widget build(
@@ -256,7 +267,7 @@ class _UnitBannerDelegate extends SliverPersistentHeaderDelegate {
 
   @override
   bool shouldRebuild(_UnitBannerDelegate oldDelegate) =>
-      oldDelegate.unit != unit;
+      oldDelegate.unit != unit || oldDelegate.extent != extent;
 }
 
 /// Sticky gradient unit banner: "Unit n · Name" + the chest (unit 1)

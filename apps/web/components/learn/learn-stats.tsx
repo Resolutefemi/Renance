@@ -85,16 +85,16 @@ export function useLearnStats(enabled: boolean) {
 
 /**
  * The top navbar chip: GEMS ONLY (founder 2026-10-14 evening pass -
- * the heart left the top bar for the profile page). Taps through to
- * the profile, where the shop now lives.
+ * the heart left the top bar). Founder 2026-10-22: the shop is a full
+ * page again - the chip opens /shop directly.
  */
 export function LearnStatChips({ stats }: { stats: LearnProfile | null }) {
   const s = stats ?? FALLBACK;
   return (
     <Link
-      href="/profile#shop"
+      href="/shop"
       aria-label={`Gems: ${s.gems}`}
-      title="Gems - open the shop on your profile"
+      title="Gems - open the shop"
       className="flex h-8 min-w-[54px] items-center justify-center gap-1 rounded-full border-2 border-outline-light bg-surface-container px-2 transition active:translate-y-[2px]"
     >
       <GemIcon size={17} />

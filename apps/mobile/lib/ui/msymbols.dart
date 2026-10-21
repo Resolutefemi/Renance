@@ -337,6 +337,55 @@ class MsIcon extends StatelessWidget {
   }
 }
 
+/// An input-decorator-proof field prefix glyph: a fixed [box] hit area
+/// with the glyph CENTERED inside it (plus a leading [leftInset] off
+/// the field wall).
+///
+/// Founder report 2026-10-21 ("the icons inside the boxes is not well
+/// positioned, look at the password icon"): the input decorator centres
+/// the prefix CONSTRAINTS box, but a bare glyph [Text] parks at that
+/// box's TOP-LEFT corner - at the founder's large system font the 20px
+/// glyph rode the 48px box's top-left corner, visibly outside the well
+/// (login email/password, picture 3). Centering the glyph inside a
+/// fixed square keeps every field and search bar centred on the text
+/// line at any text scale, on any device.
+class MsFieldIcon extends StatelessWidget {
+  const MsFieldIcon(
+    this.name, {
+    super.key,
+    this.size = 20,
+    this.color,
+    this.fill = false,
+    this.box = 44,
+    this.leftInset = 12,
+  });
+
+  final String name;
+  final double size;
+  final Color? color;
+  final bool fill;
+
+  /// The fixed square hit area the glyph is centred inside. The input
+  /// decorator can only grow this box, never un-centre the glyph.
+  final double box;
+
+  /// Leading room between the field wall and the glyph.
+  final double leftInset;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox.square(
+      dimension: box,
+      child: Padding(
+        padding: EdgeInsets.only(left: leftInset),
+        child: Center(
+          child: MsIcon(name, size: size, fill: fill, color: color),
+        ),
+      ),
+    );
+  }
+}
+
 /// Renders [name] with the FILL/wght variation axes applied - the icon
 /// twin of MsIcon for RichText contexts.
 class MsIconSpan extends WidgetSpan {
