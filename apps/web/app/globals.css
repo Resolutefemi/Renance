@@ -189,6 +189,11 @@
      live, so a seeded red/blue palette darkens its OWN hue. */
   --color-primary-ink: color-mix(in srgb, var(--color-primary) 72%, #000000);
 
+  /* Chunky 3D button edge (Round 8, Task 4-d): the extruded bottom
+     shadow under every .btn-3d. Derived live from primary like
+     primary-ink, so a seeded palette extrudes its OWN darker edge. */
+  --color-primary-edge: color-mix(in srgb, var(--color-primary) 74%, #000000);
+
   /* Squircle radii, moderated one notch to the supreme.git scale
      (founder: cards read "too big" on the first pass): rounded-xl is
      14px, cards at rounded-2xl land on Supreme's 16px, heroes keep
@@ -2163,3 +2168,123 @@ a.bg-hero-cta .material-symbols-outlined {
   .learn-chest-stage, .learn-chest, .learn-chest-reward,
   .learn-streak-flame { animation: none !important; transition: none !important; }
 }
+
+/* ------------------------------------------------------------------ */
+/* Duolingo-style chunky buttons + inputs (Round 8, Task 4-d)          */
+/* founder: "make the Renance landing page the same as theirs" - the   */
+/* logged-out landing, login and register now wear the big tactile 3D  */
+/* buttons and rounded 2px-border inputs of duolingo.com/log-in.       */
+/* ADDITIVE ONLY: nothing above this block was renamed or removed;     */
+/* every other page keeps its existing classes untouched.              */
+/* ------------------------------------------------------------------ */
+
+/* Primary 3D: brand green face, darker extruded edge (primary-edge),
+   presses down 2px on click exactly like Duolingo's CTA. Works on
+   <button> and <Link> alike. */
+.btn-3d {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 0;
+  border-radius: 16px;
+  padding: 14px 24px;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 4px 0 var(--color-primary-edge);
+  transition: filter 120ms ease, transform 60ms ease, box-shadow 60ms ease;
+}
+.btn-3d:hover:not(:disabled) { filter: brightness(1.03); }
+.btn-3d:active:not(:disabled) { transform: translateY(2px); box-shadow: 0 2px 0 var(--color-primary-edge); }
+.btn-3d:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Secondary 3D: white face, 2px swan outline, light extruded edge -
+   the "I already have an account" / neutral twin of .btn-3d. */
+.btn-3d-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 2px solid var(--color-outline-variant);
+  border-radius: 16px;
+  padding: 12px 24px;
+  background: var(--color-surface-container-lowest);
+  color: var(--color-on-surface);
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 4px 0 var(--color-outline-variant);
+  transition: background 120ms ease, transform 60ms ease, box-shadow 60ms ease;
+}
+.btn-3d-secondary:hover:not(:disabled) { background: var(--color-surface-container-low); }
+.btn-3d-secondary:active:not(:disabled) { transform: translateY(2px); box-shadow: 0 2px 0 var(--color-outline-variant); }
+.btn-3d-secondary:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Duolingo input: white face, 2px swan border, 14px radius. Focus
+   paints the border brand green with a soft green halo. Token-driven,
+   so the dark tier gets its own surfaces for free. */
+.input-duo {
+  width: 100%;
+  height: 3.25rem;
+  border: 2px solid var(--color-outline-variant);
+  border-radius: 14px;
+  background: var(--color-surface-container-lowest);
+  color: var(--color-on-surface);
+  padding: 0 0.875rem;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  outline: none;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+.input-duo::placeholder { color: var(--color-hare); font-weight: 500; }
+.input-duo:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 18%, transparent); }
+.input-duo-icon { padding-left: 2.75rem; }
+.input-duo-eye { padding-right: 3rem; }
+.input-duo-error { border-color: var(--color-error); box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-error) 18%, transparent); }
+
+/* GIS wrapper (login only): GoogleSignIn renders its own "or" divider
+   ABOVE the Google button; column-reverse flips the stack so the card
+   reads [CONTINUE WITH GOOGLE] then [or] then the email form - the
+   Duolingo order - without touching the component's internals. */
+.duo-social { display: flex; flex-direction: column-reverse; align-items: stretch; gap: 0.875rem; }
+.duo-social [role='button'] { border-radius: 14px !important; }
+
+/* Compact the shared AudienceToggle pills inside the auth cards. */
+.duo-audience [role='tab'] { font-weight: 800; padding-top: 0.4rem; padding-bottom: 0.4rem; }
+
+/* Landing "Open the web app" quiet link: OpenAppButton stays mounted
+   under the two chunky CTAs as a small underlined text link so the
+   signed-in "open the app" hop survives the redesign. */
+.landing-open-app {
+  display: inline-block;
+  border: 0;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-on-surface-variant);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+.landing-open-app:hover { color: var(--color-on-surface); }
+.landing-open-app:disabled { opacity: 0.5; cursor: default; }

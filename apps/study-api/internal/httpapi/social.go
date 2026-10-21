@@ -27,17 +27,20 @@ func (s *Server) handleSocialFeed(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]any{"posts": posts})
 }
 
-// POST /social/feed {body} - a freeform post (≤500 chars).
+// POST /social/feed {body, meta?} - a freeform post (≤500 chars);
+// meta is the optional achievement payload ({score, exam, course...})
+// stored with the post for the feed to render.
 func (s *Server) handleSocialPostCreate(w http.ResponseWriter, r *http.Request) {
 	viewer := r.Context().Value(ctxUserID).(string)
 	var body struct {
-		Body string `json:"body"`
+		Body string         `json:"body"`
+		Meta map[string]any `json:"meta,omitempty"`
 	}
 	if err := json.NewDecoder(http.MaxBytesReader(w, r.Body, 4096)).Decode(&body); err != nil {
 		fail(w, http.StatusBadRequest, "bad_json", "invalid request body")
 		return
 	}
-	id, err := social.UserPost(r.Context(), s.store.Pool, viewer, body.Body)
+	id, err := social.UserPost(r.Context(), s.store.Pool, viewer, body.Body, body.Meta)
 	if err != nil {
 		fail(w, http.StatusBadRequest, "social_post", err.Error())
 		return

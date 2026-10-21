@@ -371,6 +371,13 @@ func (s *Service) OthersCourses(ctx context.Context, userID string, offset, limi
         if offset < 0 {
                 offset = 0
         }
+        // A brand-new scholar has no learn.learners row yet - materialize
+        // it (the same lazy init CourseDesk does) so the desk read below
+        // never answers "no rows in result set" - a 500 the borrowed-page
+        // client swallows into an empty list. Founder bug 2026-10-22.
+        if err := s.ensureLearner(ctx, s.Pool, userID); err != nil {
+                return nil, 0, err
+        }
         var itype, dept string
         if err := s.Pool.QueryRow(ctx,
                 `SELECT institution_type, department FROM learn.learners WHERE user_id=$1`, userID).

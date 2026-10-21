@@ -544,6 +544,10 @@ function TertiaryDesk({
   const [others, setOthers] = useState<DeskCourse[] | null>(null);
   const [othersTotal, setOthersTotal] = useState(0);
   const [othersBusy, setOthersBusy] = useState(false);
+  // The borrowed catalogue is a REAL fetch (founder round 8): a swallowed
+  // failure used to render as an honest-looking "empty" section. The
+  // error is kept apart so the section can say what actually happened.
+  const [othersError, setOthersError] = useState(false);
 
   // Live in-list flags: the checkboxes ride the parent's mine list -
   // the server's canonical answer after every toggle - instead of the
@@ -594,8 +598,10 @@ function TertiaryDesk({
       const offset = reset ? 0 : others?.length ?? 0;
       const res = await fetchDeskOthers(offset, 100);
       setOthersTotal(res.total);
+      setOthersError(false); // only a success clears the failure state
       setOthers((prev) => (reset ? res.items : [...(prev ?? []), ...res.items]));
     } catch {
+      setOthersError(true);
       if (reset) setOthers([]);
     } finally {
       setOthersBusy(false);
@@ -1204,7 +1210,22 @@ function TertiaryDesk({
           const row = withLive(c);
           return <DeskRow key={c.id} c={row} onOpen={() => row.inList && onOpen(c.id)} onToggle={() => onToggle(c.id, { title: c.title, topicCount: c.topicCount })} />;
         })}
-        {others !== null && others.length === 0 && (
+        {othersError && (
+          <div className="flex items-center justify-between gap-3 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-5 py-4">
+            <p className="min-w-0 text-[12.5px] font-bold text-on-surface-variant">
+              Couldn&rsquo;t load the borrowed catalogue.
+            </p>
+            <button
+              type="button"
+              disabled={othersBusy}
+              onClick={() => void loadOthers((others ?? []).length === 0)}
+              className="shrink-0 rounded-lg border-2 border-outline-variant bg-card px-3 py-1.5 text-[12px] font-extrabold text-on-surface transition active:translate-y-[1px] disabled:opacity-60"
+            >
+              {othersBusy ? 'Loading…' : 'Tap to retry'}
+            </button>
+          </div>
+        )}
+        {!othersError && others !== null && others.length === 0 && othersTotal === 0 && (
           <p className="rounded-2xl border-2 border-dashed border-outline-variant bg-card px-5 py-6 text-center text-[12.5px] font-bold text-on-surface-variant">
             Nothing beyond the shelves above - your department covers the catalogue.
           </p>

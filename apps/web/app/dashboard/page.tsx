@@ -151,7 +151,6 @@ export default function DashboardPage() {
   const [bootError, setBootError] = useState<string | null>(null);
   const [bootNonce, setBootNonce] = useState(0);
   const [error, setError] = useState<string | null>(null);
-  const [moreOpen, setMoreOpen] = useState(false);
   // Today's daily challenge (JAMB desk): the tile deep-links into the
   // sprint, or into the setup when the API has no challenge for us.
   const [daily, setDaily] = useState<DailyTileInfo | null>(null);
@@ -482,9 +481,9 @@ export default function DashboardPage() {
         )}
 
         {isUniversity ? (
-          <UniversityHome onMore={() => setMoreOpen(true)} profile={me.profile} />
+          <UniversityHome profile={me.profile} />
         ) : isPostUtme ? (
-          <PostUtmeHome onMore={() => setMoreOpen(true)} />
+          <PostUtmeHome />
         ) : (
         <>
         {/* 2026-10-13 tactile pass: the card
@@ -565,8 +564,9 @@ export default function DashboardPage() {
             entry point lives in the Exams tile below, which opens
             /exams/setup (JAMB-only by design). */}
 
-        {/* Launcher grids: the daily drivers live on the desk, the rest in
-            the More sheet. One Stitch pair on phones; from lg the tiles
+        {/* Launcher grids: the daily drivers live on the desk, the rest
+            sits one tap away on the profile menu. One Stitch pair on
+            phones; from lg the tiles
             become full-width horizontal cards - icon left, label + hint
             right - so the desktop canvas fills with density instead of
             four lonely bubbles in a row (2026-10-18 desktop pass). */}
@@ -621,7 +621,7 @@ export default function DashboardPage() {
             <LauncherTile icon="calculate" label="GPA Calculator" hint="Aggregate & GPA checks" href="/gpa" />
             <LauncherTile icon="search" label="Search" hint="Find any question" href="/search" />
             <LauncherTile icon="settings" label="Settings" hint="Tune the app" href="/settings" />
-            <LauncherTile icon="more_horiz" label="More" hint="Offline share, help…" muted onMore={() => setMoreOpen(true)} />
+            <LauncherTile icon="info" label="About Renance" hint="Who we are, what we build" href="/about" />
           </div>
         </section>
         </>
@@ -667,9 +667,9 @@ export default function DashboardPage() {
         {/* Question Pack lives on /packs; the old home pack cards are gone. */}
       </div>
 
-      {/* More sheet: only the less-used tools live here now, everything a
-          student touches daily sits on the home grid (more_features_sheet_light). */}
-      {moreOpen && <MoreSheet onClose={() => setMoreOpen(false)} />}
+      {/* More sheet retired (founder round 8): nothing lives off-grid
+          anymore - FAQ is linked from the profile menu and the landing
+          footer, and About rides the Tools grid above. */}
 
       {/* Founder directive 2026-10-16: the appearance picker greets every
           NEW account and every first web LOGIN (per-account gate). The
@@ -714,15 +714,13 @@ export default function DashboardPage() {
   );
 }
 
-/** Small bottom sheet listing the destinations that live beyond the grid. */
-
 /* ----------------------------------------------------------------- */
 /* Post UTME home: the fourth focus entity. Its own desk, its own      */
 /* school pick (a Post UTME candidate targets one school), the school  */
 /* app's Pick School button in the same spot the School Desk has it.   */
 /* ----------------------------------------------------------------- */
 
-function PostUtmeHome({ onMore }: { onMore: () => void }) {
+function PostUtmeHome() {
   const [schoolSlug, setSchoolSlug] = useState<string | null>(null);
   const [exams, setExams] = useState<ExamMeta[]>([]);
   useEffect(() => {
@@ -836,7 +834,7 @@ function PostUtmeHome({ onMore }: { onMore: () => void }) {
         <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none lg:grid-cols-4">
           <LauncherTile icon="search" label="Search" hint="Find any question" href="/search" />
           <LauncherTile icon="settings" label="Settings" hint="Tune the app" href="/settings" />
-          <LauncherTile icon="more_horiz" label="More" hint="Offline share, help…" muted onMore={onMore} />
+          <LauncherTile icon="info" label="About Renance" hint="Who we are, what we build" href="/about" />
         </div>
       </section>
     </>
@@ -850,7 +848,7 @@ function PostUtmeHome({ onMore }: { onMore: () => void }) {
 /* school-aware: content is wrapped per school, interface is one.      */
 /* ----------------------------------------------------------------- */
 
-function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Profile | null }) {
+function UniversityHome({ profile }: { profile?: Profile | null }) {
   // The student's school: stored pick → profile institution match. No
   // default school: without a pick the desk shows the Pick School button
   // (founder rule: the school is chosen once, here, and only editable
@@ -1042,7 +1040,7 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
         </section>
       </div>
 
-      {/* Tools: CGPA, search, settings and More; Notes and the Tutor
+      {/* Tools: CGPA, search, settings and About; Notes and the Tutor
           are retired (founder 2026-10-22). */}
       <section className="mt-4">
         <h3 className="text-sm text-on-surface-variant">Tools</h3>
@@ -1050,7 +1048,7 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
           <LauncherTile icon="calculate" label="CGPA" hint="Compute your standing" href="/gpa" />
           <LauncherTile icon="search" label="Search" hint="Find any question" href="/search" />
           <LauncherTile icon="settings" label="Settings" hint="Tune the app" href="/settings" />
-          <LauncherTile icon="more_horiz" label="More" hint="Offline share, help…" muted onMore={onMore} />
+          <LauncherTile icon="info" label="About Renance" hint="Who we are, what we build" href="/about" />
         </div>
       </section>
     </>
@@ -1098,59 +1096,6 @@ function prettyRecent(code: string): string {
   }
   if (base.startsWith('daily-')) return 'Daily Challenge';
   return human(base);
-}
-
-function MoreSheet({ onClose }: { onClose: () => void }) {
-  // The rest of the drawer, by design: the daily drivers (Exams, Packs,
-  // Review, Arena, Daily, Leaderboard) live on the home grids. Subjects,
-  // Downloads, Notifications, Career Bridge, Patron Portal, Syllabus Map
-  // and Study Plan were removed on the founder's 2026-10-21 order ("they
-  // are now useless") - the entries are gone app-wide, not just hidden.
-  // Founder 2026-10-22: every tile that lives on the home grids left
-  // the sheet (no doubles), Study Resources is retired - what remains
-  // is the genuinely occasional stuff.
-  const items = [
-    { icon: 'wifi_off', label: 'Offline Share', href: '/offline' },
-    { icon: 'help', label: 'Help & FAQ', href: '/faq' },
-  ] as const;
-  return (
-    <div
-      className="fixed inset-0 z-[60] flex items-end justify-center bg-on-background/60 backdrop-blur-sm sm:items-center"
-      onClick={onClose}
-      role="presentation"
-    >
-      <div
-        className="renance-rise w-full max-w-md rounded-t-2xl bg-surface-container-lowest p-5 shadow-xl sm:rounded-2xl"
-        onClick={(e) => e.stopPropagation()}
-        role="dialog"
-        aria-label="More features"
-      >
-        <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-outline-variant sm:hidden" />
-        <h3 className="mb-1 text-lg font-semibold text-on-surface">More</h3>
-        <p className="mb-3 text-xs text-on-surface-variant">Less-used tools, your daily drivers are on the home grid.</p>
-        <div className="grid grid-cols-2 gap-2">
-          {items.map((it) => (
-            <Link
-              key={it.label}
-              href={it.href}
-              onClick={onClose}
-              className="flex items-center gap-3 rounded-xl border border-outline-variant/50 bg-card p-3 transition hover:border-outline hover:bg-surface-container-low"
-            >
-              <span className="material-symbols-outlined text-[22px] text-on-surface">{it.icon}</span>
-              <span className="text-sm font-medium text-on-surface">{it.label}</span>
-            </Link>
-          ))}
-        </div>
-        <button
-          type="button"
-          onClick={onClose}
-          className="mt-4 h-12 w-full rounded-lg bg-primary text-sm font-semibold text-on-primary transition-transform active:scale-[0.98]"
-        >
-          Close
-        </button>
-      </div>
-    </div>
-  );
 }
 
 function LauncherTile({

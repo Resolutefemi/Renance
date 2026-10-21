@@ -35,6 +35,7 @@ import PaywallModal from '@/components/paywall';
 import { fetchEntitlement, type Entitlement } from '@/lib/billing';
 import { AiExplanationSheet } from '@/components/explanation-sheet';
 import { aiConfigured } from '@/lib/ai';
+import { createPost } from '@/lib/social';
 
 /** Amber shard cluster for the report masthead - the reference art. */
 function ReportShards() {
@@ -183,6 +184,16 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
   const [entitlement, setEntitlement] = useState<Entitlement | null>(null);
   const [gam, setGam] = useState<{ state: { currentStreak: number; totalXp: number } } | null>(null);
   const [allAttempts, setAllAttempts] = useState<AttemptSummary[] | null>(null);
+  // Share to Feed (founder round 8): the result screen can post the
+  // score to the social feed. idle → sharing → shared; an error keeps
+  // the button available and explains itself inline (never an alert).
+  const [shareState, setShareState] = useState<'idle' | 'sharing' | 'shared'>('idle');
+  const [shareError, setShareError] = useState(false);
+  useEffect(() => {
+    if (phase === 'graded') return;
+    setShareState('idle');
+    setShareError(false);
+  }, [phase]);
   // Smart order (ROADMAP #5): begin weak-topic-first by default; the
   // intro toggle flips it back to the pack's natural exam order.
   // Official UTME mocks run in exam mode and skip the smart walk;
@@ -1582,6 +1593,34 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
                 View Corrections
               </div>
             )}
+            {/* Share to Feed (founder round 8): one tap posts the score
+                to the social feed - createPost rides POST /social/feed. */}
+            <div className="flex flex-col items-center gap-1.5">
+              <button
+                type="button"
+                disabled={shareState !== 'idle'}
+                onClick={() => {
+                  if (shareState !== 'idle') return;
+                  setShareState('sharing');
+                  setShareError(false);
+                  createPost(
+                    `Just scored ${result.score}/${isUtmeMock && totalQ ? totalQ : result.total} (${pct}%) on ${paperTitle} on Renance! 🔥`,
+                  )
+                    .then(() => setShareState('shared'))
+                    .catch(() => {
+                      setShareState('idle');
+                      setShareError(true);
+                    });
+                }}
+                className="flex h-[52px] w-full items-center justify-center gap-2 rounded-[12px] bg-transparent text-[15.5px] font-semibold text-on-surface shadow-[inset_0_0_0_1.3px_#111C2D] transition-all active:scale-[0.98] disabled:opacity-70"
+              >
+                <span className="material-symbols-outlined text-[19px]">share</span>
+                {shareState === 'shared' ? 'Shared 🎉' : shareState === 'sharing' ? 'Sharing…' : 'Share to Feed'}
+              </button>
+              {shareError && (
+                <p className="text-[12.5px] font-bold text-error">Could not share right now.</p>
+              )}
+            </div>
             <Link
               href={`/leaderboard?tab=${rankTab}`}
               className="flex h-[52px] w-full items-center justify-center gap-2 rounded-[12px] bg-transparent text-[15.5px] font-semibold text-on-surface shadow-[inset_0_0_0_1.3px_#111C2D] transition-all active:scale-[0.98]"

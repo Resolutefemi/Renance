@@ -14,58 +14,70 @@ import { SITE_URL } from '@/lib/site-url';
 const QA: Array<{ q: string; a: string }> = [
   {
     q: 'What is Renance?',
-    a: 'Renance is the educational app in Nigeria for exam success - built for students: mock CBT exams that are graded server-side, a spaced-repetition review plan built from every paper you take, exam-focused lessons and a Socratic tutor that coaches you through the questions you got wrong. It works on Android, iOS, Windows, macOS and the web.',
+    a: "Renance is Nigeria's exam-prep app: mock CBT exams for JAMB, WAEC, NECO and Post-UTME that are graded server-side, a spaced-repetition review queue built from every paper you take, and full university semester desks where students learn and quiz course by course. It works on Android, iOS, Windows, macOS and the web.",
   },
   {
     q: 'Who builds Renance?',
-    a: 'Renance is built by Resolute Femi (Ariyo Oluwafemi Stephen), a Nigerian software engineer. The platform is designed for students preparing JAMB, WAEC, NECO and tertiary institution module exams across Africa and beyond.',
+    a: 'Renance is built by Resolute Femi (Ariyo Oluwafemi Stephen), a Nigerian software engineer. Read the full story and the team behind the platform at renance.app/about.',
   },
   {
     q: 'Is Renance free?',
-    a: 'Yes. Creating an account takes seconds (username and password only), and practising, reviewing and lessons are free.',
+    a: 'Yes. Creating an account takes seconds, and practising, lessons, reviewing, quests, the leaderboards and the feed are free. Optional paid plans add higher paper limits for heavy exam seasons.',
   },
   {
-    q: 'How does grading work?',
-    a: 'Every question now carries its own answer and worked solution, so your paper is marked the instant you submit, right on your device. When you are signed in, the same attempt is also scored on the server with the same keys, feeding your streaks, XP, badges and spaced-repetition queue.',
+    q: 'What are diamonds and how do I earn them?',
+    a: 'Diamonds are the Renance currency. You earn them from daily and weekly quests, topic chests, first clears, perfect scores, and every friend who joins with your referral code adds 100 more. Spend them in the Shop.',
+  },
+  {
+    q: 'What are Streak Freezes?',
+    a: 'A Streak Freeze auto-saves a missed day so your streak survives a busy day. Each one costs 200 diamonds, you can hold up to 2 at a time, and your freezes show in blue next to your streak. Buy them in the Shop before you need them.',
+  },
+  {
+    q: 'Which exams does Renance cover?',
+    a: 'JAMB UTME past questions and the full JAMB MOCK (the official 4-subject, 60-question-per-subject simulation scored over 400), WAEC/WASSCE, NECO, Post-UTME packs arranged by school, and university semester desks for tertiary students.',
+  },
+  {
+    q: 'How does course selection work?',
+    a: 'Tertiary students pick their institution kind and department, and the desk lines up the national general courses plus everything in their department. Beyond that, the whole catalogue is borrowable: other departments\u2019 courses sit under your shelves, 100 at a time.',
+  },
+  {
+    q: 'How is my performance tracked?',
+    a: 'Every graded paper feeds your subject mastery: the Performance Analysis page aggregates your six most recent marked papers into per-subject score bars, trends and pacing, so you always know which topics to attack next.',
+  },
+  {
+    q: 'What are corrections?',
+    a: 'After every graded paper the review opens your corrections: each subject becomes a pill, and inside you get the options you picked, the correct answers, the worked explanations and an AI explanation on any question you missed.',
+  },
+  {
+    q: 'What is the feed for?',
+    a: 'The feed is where Renance celebrates you: completed units, streaks, scores and league moves post automatically, and you can share your own moments from the result screen or after finishing units. Followers can like, comment and view your profile.',
+  },
+  {
+    q: 'How do quests work?',
+    a: 'Quests are daily and weekly diamond missions: answer a number of questions, finish topics, keep the streak alive. Each completed mission pays diamonds straight into your wallet.',
+  },
+  {
+    q: 'Which leaderboards can I compete on?',
+    a: 'Six boards: JAMB, WAEC, NECO, Streak, Diamonds and the Daily Challenge. Every row is tappable - open any name to view their public profile, streak and courses.',
   },
   {
     q: 'Can I study offline?',
-    a: 'Yes. The whole question library ships with the site itself, and papers you have opened before stay cached on your device, so practice and marking keep working through network drops. Your results are ready and waiting the moment connectivity returns.',
+    a: 'Yes. Question packs download as offline packs, so practice, marking and lessons keep working through network drops. Your results sync the moment connectivity returns.',
   },
   {
-    q: 'What exams does Renance cover?',
-    a: 'JAMB, WAEC, NECO and Post-UTME past questions, plus tertiary institution course modules. See the subjects page for the full coverage list, which grows with every content release.',
-  },
-  {
-    q: 'Can my school use Renance?',
-    a: 'Yes. Register through the For Schools switch on the sign-up page and your portal comes with the full Nigerian curriculum pre-installed: syllabuses with weekly schemes of work, topic notes, attendance with a classroom kiosk, results with positions and private check-PINs, plus teacher accounts with real boundaries.',
-  },
-  {
-    q: 'Does the school portal handle fees, ID cards and timetables?',
-    a: 'It does. Management prices term charges per class or school-wide and records cash, transfer or POS receipts against students. Student ID cards carry a school-unique serial, print as a black and white sheet, and a lost card is revoked not deleted. The weekly timetable is a live grid per class with subjects and break blocks.',
-  },
-  {
-    q: 'Where do exam questions for schools come from?',
-    a: 'The platform ships an original, NERDC-aligned starter bank per subject per term that pours into your school in one tap, and your teachers grow it with their own questions. Published papers draw from that pool ready to print. Nothing is copied from third-party sites.',
-  },
-  {
-    q: 'What is the review queue?',
-    a: 'Every question topic you get wrong is scheduled for spaced repetition using the SM-2 algorithm: it reappears just before you would forget it. Clear the queue daily and retention compounds.',
-  },
-  {
-    q: 'How does the tutor work?',
-    a: 'On any graded paper, tap "Ask the Tutor" on a question. The tutor coaches Socratically: it guides you to the reasoning instead of handing you the answer, using the question, your pick and the official explanation.',
+    q: 'How do I reach support?',
+    a: 'Join our WhatsApp channel for announcements and quick help, or message management directly on +234 916 763 6685. The team reads and replies.',
   },
 ];
 
 export const metadata: Metadata = {
   title: "FAQ - Nigeria's Educational App",
   description:
-    'How Renance works: free server-graded mock exams, spaced repetition, offline study, lessons and the Socratic tutor, for JAMB, WAEC, NECO and tertiary institution students.',
+    'How Renance works: free server-graded mock exams, diamonds, streak freezes, quests, leaderboards, corrections, offline packs and support, for JAMB, WAEC, NECO, Post-UTME and university students.',
   alternates: { canonical: '/faq/' },
   openGraph: {
     title: 'FAQ - how Renance works',
-    description: 'How Renance works: grading, offline study, review queue, tutor and pricing.',
+    description: 'How Renance works: exams covered, diamonds, streak freezes, quests, leaderboards, corrections, the feed and support.',
     url: `${SITE_URL}/faq/`,
     images: [...OG_IMAGES],
   },

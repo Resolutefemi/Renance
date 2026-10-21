@@ -19,20 +19,33 @@ import {
 import { ChestOpening, MilestoneCelebration, StreakCelebration } from '@/components/learn/celebrations';
 import { FlagQuestionModal } from '@/components/learn/voice';
 import {
-  CompleteResult, LearnQuizQ, LessonDoc, PracticeQuestion,
-  fetchLearnProfile, fetchLesson, fetchPractice, fetchReview, fetchRevision, gradePractice, postProgress,
+  CompleteResult, CoursePath, LearnQuizQ, LessonDoc, PracticeQuestion,
+  fetchCoursePath, fetchLearnProfile, fetchLesson, fetchPractice, fetchReview, fetchRevision, gradePractice, postProgress,
 } from '@/lib/learn';
 import { QText } from '@/lib/qtext';
+import { SharePrompt } from '@/components/learn/share-prompt';
 
 type Phase = 'loading' | 'study' | 'quiz' | 'submitting' | 'done' | 'error';
 
-/** The celebration queue: chest → streak → milestone, one at a time. */
-type Celebration = 'chest' | 'streak' | 'milestone';
+/** The celebration queue: chest → streak → milestone → share, one at a time. */
+type Celebration = 'chest' | 'streak' | 'milestone' | 'share';
 
 const LOADING_COPY = [
   'Sharpening the explanation…', 'Picking real past questions…',
   'Drawing the diagrams…', 'Stacking your XP…', 'Almost there…',
 ];
+
+/** Fully-completed units of a course path: every topic the unit
+ *  carries sits at status 'completed' (a unit that is still empty or
+ *  generating never counts). Feed-automation detector (round 8). */
+function countCompletedUnits(path: CoursePath): number {
+  let done = 0;
+  for (const unit of path.units) {
+    const topics = path.topics.filter((t) => t.unit === unit.index);
+    if (topics.length > 0 && topics.every((t) => t.status === 'completed')) done += 1;
+  }
+  return done;
+}
 
 type PlayQ = LearnQuizQ & { userAnswer?: string };
 
@@ -76,6 +89,10 @@ export function LessonOverlay({
   // chest, the streak popup and the achievement card play one after
   // another on the done screen - each gets its full moment.
   const [celebQueue, setCelebQueue] = useState<Celebration[]>([]);
+  // The feed-automation milestone (founder round 8): "N units done in
+  // {course}!" - detected after a lesson completes, shown after the
+  // celebration queue empties, deduped in localStorage.
+  const [shareInfo, setShareInfo] = useState<{ units: number; courseTitle: string } | null>(null);
   const startedRef = useRef(Date.now());
   // The quiet self-reload (founder: "remove retry"): when a lesson
   // fails to load the overlay retries ITSELF a few times before it
@@ -192,6 +209,34 @@ export function LessonOverlay({
     return () => window.removeEventListener('keydown', onKey);
   }, [phase, studyPages.count]);
 
+  // ── Feed automation (founder round 8): when the count of fully-
+  // completed units in this course ticks up and lands on a multiple of
+  // three, offer to post the milestone to the feed. The whole detection
+  // is fenced: a path-fetch hiccup must NEVER touch the lesson
+  // completion that is mid-celebration.
+  const offerUnitShare = useCallback(async () => {
+    try {
+      if (!courseId) return;
+      const path = await fetchCoursePath(courseId);
+      const done = countCompletedUnits(path);
+      const countKey = `renance.unitsDone.${courseId}`;
+      const prev = Number(window.localStorage.getItem(countKey) ?? '0') || 0;
+      if (done <= prev) return;
+      window.localStorage.setItem(countKey, String(done));
+      if (done % 3 !== 0) return;
+      // One prompt per (course, milestone): a re-run of a topic in the
+      // same unit never asks twice for the same count.
+      const dedupKey = `renance.unitShare.${courseId}.${done}`;
+      if (window.localStorage.getItem(dedupKey)) return;
+      window.localStorage.setItem(dedupKey, '1');
+      const title = path.title?.trim() || doc?.course?.trim() || 'your course';
+      setShareInfo({ units: done, courseTitle: title });
+      setCelebQueue((cq) => [...cq, 'share']);
+    } catch {
+      /* silent by design - the celebration flow is sacred */
+    }
+  }, [courseId, doc]);
+
   const finish = useCallback(async (abandoned: boolean) => {
     setPhase('submitting');
     let res: CompleteResult | null = null;
@@ -219,6 +264,9 @@ export function LessonOverlay({
         if (res?.streakUp && (res?.streak ?? 0) > 0) q.push('streak');
         if (res?.milestone) q.push('milestone');
         setCelebQueue(q);
+        // Feed automation rides behind the rewards (lesson runs only):
+        // fire-and-forget detection, wrapped in its own try/catch above.
+        if (!abandoned) void offerUnitShare();
       } else {
         const resolved = questions.filter((qq) => qq.userAnswer === qq.answer).map((qq) => qq.id);
         res = await gradePractice({ correct: correctCount, total, resolvedIds: resolved });
@@ -232,7 +280,7 @@ export function LessonOverlay({
     } finally {
       onCompleted?.(res);
     }
-  }, [mode, topicId, correctCount, total, maxCombo, mistakes, questions, onCompleted]);
+  }, [mode, topicId, correctCount, total, maxCombo, mistakes, questions, onCompleted, offerUnitShare]);
 
   const settle = useCallback((right: boolean, letter: string) => {
     if (right) {
@@ -565,6 +613,13 @@ export function LessonOverlay({
       )}
       {activeCeleb === 'milestone' && result?.milestone && (
         <MilestoneCelebration milestone={result.milestone} onDone={dismissCelebration} />
+      )}
+      {activeCeleb === 'share' && shareInfo && (
+        <SharePrompt
+          units={shareInfo.units}
+          courseTitle={shareInfo.courseTitle}
+          onDone={dismissCelebration}
+        />
       )}
 
       {flagOpen && (

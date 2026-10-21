@@ -163,15 +163,16 @@ export default function LoginPage() {
     // my-auto (not justify-center) keeps the block visually centred while
     // letting the page grow: on small phones the For Schools form is taller
     // than the viewport, and justify-center would clip the unreachable top.
-    <main className="flex min-h-dvh w-full flex-col items-center bg-surface-container px-4">
-      <div className="my-auto flex w-full max-w-sm min-w-0 flex-col items-center">
-        {/* Logo block, mockup: logo, h1, subtitle, centered */}
-        <div className="mb-8 flex min-w-0 flex-col items-center">
-          <div className="mb-4">
-            <RenanceMark size={64} />
-          </div>
-          <h1 className="break-words text-center text-2xl font-semibold tracking-tight text-on-surface">
-            Welcome back
+    // Round 8 (Task 4-d): duolingo.com/log-in restyle - white page, one
+    // centered 24px card, chunky 3D buttons, 2px-border inputs. Handlers,
+    // state, POST bodies and session flow are untouched.
+    <main className="flex min-h-dvh w-full flex-col items-center bg-background px-4">
+      <div className="my-auto flex w-full max-w-md min-w-0 flex-col items-center py-10">
+        {/* Keycap + heading, Duolingo-style centered intro */}
+        <div className="mb-6 flex min-w-0 flex-col items-center">
+          <RenanceMark size={64} />
+          <h1 className="mt-4 break-words text-center text-[32px] font-extrabold leading-tight tracking-tight text-on-surface">
+            Log in
           </h1>
           <p className="mt-1 break-words text-center text-sm text-on-surface-variant">
             Sign in to continue to Renance.
@@ -179,17 +180,27 @@ export default function LoginPage() {
         </div>
 
         {/* Audience switch - students by default, schools for management + teachers */}
-        <div className="mb-5 w-full">
+        <div className="duo-audience mb-5 w-full">
           <AudienceToggle audience={audience} onChange={setAudience} mode="login" />
         </div>
 
-        {/* Card, mockup: surface-container-lowest, rounded-xl, shadow-sm */}
+        {/* Card: white, 24px radius, 2px swan border, extruded edge */}
         <form
           onSubmit={onSubmit}
-          className="flex w-full flex-col gap-4 rounded-xl bg-surface-container-lowest p-6 shadow-sm"
+          className="flex w-full flex-col gap-4 rounded-[24px] border-2 border-outline-variant bg-card p-6 shadow-[0_3px_0_0_var(--color-outline-variant)]"
         >
+          {/* Google sign-in (students), hidden unless the client ID is baked in.
+              The .duo-social wrapper flips GoogleSignIn's internal divider so
+              the card reads [CONTINUE WITH GOOGLE] / [or] / [email form] - the
+              component internals are untouched. */}
+          {audience === 'students' && (
+            <div className="duo-social w-full">
+              <GoogleSignIn onCredential={onGoogleCredential} />
+            </div>
+          )}
+
           <div className="flex flex-col gap-1.5">
-            <label htmlFor="email" className="text-sm text-on-surface-variant">
+            <label htmlFor="email" className="text-[13px] font-bold text-on-surface">
               {audience === 'schools' ? 'School email' : 'Email address'}
             </label>
             <div className="group relative flex items-center">
@@ -202,13 +213,13 @@ export default function LoginPage() {
                 autoComplete="email"
                 required
                 placeholder="you@example.com"
-                className="h-12 w-full rounded-lg bg-surface-container-low pl-11 pr-3 text-sm text-on-surface transition-all placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary"
+                className="input-duo input-duo-icon"
               />
             </div>
           </div>
 
           <div className="flex flex-col gap-1.5">
-            <label htmlFor="password" className="text-sm text-on-surface-variant">
+            <label htmlFor="password" className="text-[13px] font-bold text-on-surface">
               Password
             </label>
             <div className="group relative flex items-center">
@@ -221,7 +232,7 @@ export default function LoginPage() {
                 autoComplete="current-password"
                 required
                 placeholder="••••••••"
-                className="h-12 w-full rounded-lg bg-surface-container-low pl-11 pr-12 text-sm text-on-surface transition-all placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary"
+                className="input-duo input-duo-icon input-duo-eye"
               />
               <button
                 type="button"
@@ -246,17 +257,19 @@ export default function LoginPage() {
           <div className="-mt-1 flex justify-end">
             <Link
               href="/forgot-password"
-              className="text-sm text-on-surface-variant underline-offset-4 hover:text-on-surface hover:underline"
+              className="text-sm font-semibold text-on-surface-variant underline-offset-4 hover:text-on-surface hover:underline"
             >
               Forgot password?
             </Link>
           </div>
 
-          {/* Mockup: black primary button, arrow, press scale */}
+          {/* Chunky 3D submit (Round 8): green face, extruded edge, presses
+              down on click. Labels stay LOG IN / OPEN SCHOOL WORKSPACE via
+              the uppercase transform. */}
           <button
             type="submit"
             disabled={busy}
-            className="mt-1 flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-primary text-on-primary transition-all hover:bg-on-background hover:shadow-md active:scale-[0.98] disabled:opacity-60"
+            className="btn-3d mt-1 w-full"
           >
             {busy ? (
               <>
@@ -265,17 +278,14 @@ export default function LoginPage() {
               </>
             ) : (
               <>
-                {audience === 'schools' ? 'Open School Workspace' : 'Sign In'}
+                {audience === 'schools' ? 'Open School Workspace' : 'Log in'}
                 <ArrowIcon className="h-5 w-5" />
               </>
             )}
           </button>
-
-          {/* Google sign-in (students), hidden unless the client ID is baked in */}
-          {audience === 'students' && <GoogleSignIn onCredential={onGoogleCredential} />}
         </form>
 
-        <p className="mt-10 text-center text-sm text-on-surface-variant">
+        <p className="mt-6 text-center text-sm text-on-surface-variant">
           Don&apos;t have an account?{' '}
           {/* Event-time href so a ?next= return path survives the hop
               without a hydration mismatch on the prerendered page. The
@@ -290,7 +300,7 @@ export default function LoginPage() {
                 }`,
               )
             }
-            className="ml-1 font-medium text-primary underline-offset-4 hover:underline"
+            className="ml-1 font-extrabold text-primary underline-offset-4 hover:underline"
           >
             Sign up
           </button>

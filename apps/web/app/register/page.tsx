@@ -200,7 +200,10 @@ export default function RegisterPage() {
     }
   }
 
-  const field = 'h-12 w-full rounded-lg bg-surface-container pl-11 pr-3 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary';
+  // Round 8 (Task 4-d): Duolingo-style inputs - white face, 2px swan
+  // border, 14px radius, green focus halo. Icon/eye padding variants
+  // keep the existing prefix icons and toggle in place.
+  const field = 'input-duo';
 
   if (verifySent) {
     return (
@@ -221,13 +224,16 @@ export default function RegisterPage() {
     // than the viewport, and justify-center would clip the unreachable top
     // of the card. Everything wraps: break-words guards the headings even
     // when Android font scaling inflates the text past the card edge.
-    <main className="flex min-h-dvh w-full flex-col items-center bg-surface-container px-4 py-10">
-      <div className="renance-rise my-auto flex w-full max-w-sm min-w-0 flex-col rounded-xl bg-surface-container-lowest p-6 shadow-md">
-        {/* Logo block, mockup: logo, headline, sub */}
+    // Round 8 (Task 4-d): duolingo.com/log-in restyle - white page, one
+    // centered 24px card, chunky 3D submit. Fields, consent, POST bodies
+    // and the signup flow are untouched.
+    <main className="flex min-h-dvh w-full flex-col items-center bg-background px-4 py-10">
+      <div className="renance-rise my-auto flex w-full max-w-md min-w-0 flex-col rounded-[24px] border-2 border-outline-variant bg-card p-6 shadow-[0_3px_0_0_var(--color-outline-variant)]">
+        {/* Logo block: keycap, headline, sub */}
         <div className="mb-5 flex min-w-0 flex-col items-center gap-3 text-center">
           <RenanceMark size={64} />
           <div className="min-w-0">
-            <h1 className="break-words text-2xl font-semibold tracking-tight text-on-surface">
+            <h1 className="break-words text-[28px] font-extrabold leading-tight tracking-tight text-on-surface">
               {audience === 'schools' ? 'Register your school' : 'Create your account'}
             </h1>
             <p className="mt-1 break-words text-sm text-on-surface-variant">
@@ -238,7 +244,7 @@ export default function RegisterPage() {
           </div>
         </div>
 
-        <div className="mb-5">
+        <div className="duo-audience mb-5">
           <AudienceToggle audience={audience} onChange={setAudience} mode="register" />
         </div>
 
@@ -246,7 +252,7 @@ export default function RegisterPage() {
           {audience === 'schools' && (
             <>
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="school-name" className="text-sm text-on-surface">
+                <label htmlFor="school-name" className="text-[13px] font-bold text-on-surface">
                   School name
                 </label>
                 <input
@@ -257,18 +263,18 @@ export default function RegisterPage() {
                   required
                   maxLength={120}
                   placeholder="e.g. Living Grace Academy"
-                  className={`${field} pl-4`}
+                  className={field}
                 />
               </div>
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="school-type" className="text-sm text-on-surface">
+                <label htmlFor="school-type" className="text-[13px] font-bold text-on-surface">
                   School type
                 </label>
                 <select
                   id="school-type"
                   value={schoolType}
                   onChange={(e) => setSchoolType(e.target.value)}
-                  className={`${field} pl-4`}
+                  className={field}
                 >
                   <option value="primary">Primary school</option>
                   <option value="secondary">Secondary school</option>
@@ -276,7 +282,7 @@ export default function RegisterPage() {
                 </select>
               </div>
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="full-name" className="text-sm text-on-surface">
+                <label htmlFor="full-name" className="text-[13px] font-bold text-on-surface">
                   Your full name (management)
                 </label>
                 <input
@@ -287,14 +293,14 @@ export default function RegisterPage() {
                   required
                   maxLength={120}
                   placeholder="e.g. Mr Kelvin O."
-                  className={`${field} pl-4`}
+                  className={field}
                 />
               </div>
             </>
           )}
 
           <div className="flex flex-col gap-1.5">
-            <label htmlFor="email" className="text-sm text-on-surface">
+            <label htmlFor="email" className="text-[13px] font-bold text-on-surface">
               {audience === 'schools' ? 'School email' : 'Email address'}
             </label>
             <div className="group relative flex items-center">
@@ -308,13 +314,13 @@ export default function RegisterPage() {
                 required
                 maxLength={254}
                 placeholder="you@example.com"
-                className={field}
+                className={`${field} input-duo-icon`}
               />
             </div>
           </div>
 
           <div className="flex flex-col gap-1.5">
-            <label htmlFor="password" className="text-sm text-on-surface">
+            <label htmlFor="password" className="text-[13px] font-bold text-on-surface">
               Password
             </label>
             <div className="group relative flex items-center">
@@ -328,7 +334,7 @@ export default function RegisterPage() {
                 required
                 minLength={6}
                 placeholder="••••••••"
-                className="h-12 w-full rounded-lg bg-surface-container pl-11 pr-12 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary"
+                className="input-duo input-duo-icon input-duo-eye"
               />
               <button
                 type="button"
@@ -345,7 +351,7 @@ export default function RegisterPage() {
           </div>
 
           <div className="flex flex-col gap-1.5">
-            <label htmlFor="confirm-password" className="text-sm text-on-surface">
+            <label htmlFor="confirm-password" className="text-[13px] font-bold text-on-surface">
               Confirm password
             </label>
             <div className="group relative flex items-center">
@@ -358,9 +364,7 @@ export default function RegisterPage() {
                 autoComplete="new-password"
                 required
                 placeholder="••••••••"
-                className={`h-12 w-full rounded-lg bg-surface-container pl-11 pr-3 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 ${
-                  mismatch ? 'ring-2 ring-error' : 'focus:ring-primary'
-                }`}
+                className={`input-duo input-duo-icon ${mismatch ? 'input-duo-error' : ''}`}
               />
             </div>
             {mismatch && <p className="text-xs text-error">Passwords do not match.</p>}
@@ -369,7 +373,7 @@ export default function RegisterPage() {
           {/* Referral (students): a friend's REN code earns them 3 REN. */}
           {audience === 'students' && (
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="referral" className="text-sm text-on-surface">
+              <label htmlFor="referral" className="text-[13px] font-bold text-on-surface">
                 Referral code <span className="text-on-surface-variant">(optional)</span>
               </label>
               <input
@@ -379,7 +383,7 @@ export default function RegisterPage() {
                 onChange={(e) => setReferral(e.target.value)}
                 maxLength={16}
                 placeholder="REN..."
-                className={`${field} pl-4 uppercase`}
+                className={`${field} uppercase`}
               />
               <p className="text-xs text-on-surface-variant">
                 Your friend earns 100 diamonds when you join.
@@ -420,11 +424,13 @@ export default function RegisterPage() {
             </p>
           )}
 
-          {/* Mockup: black pill button, press scale */}
+          {/* Chunky 3D submit (Round 8): green face, extruded edge, presses
+              down on click. Labels stay CREATE ACCOUNT / CREATE SCHOOL
+              WORKSPACE via the uppercase transform. */}
           <button
             type="submit"
             disabled={busy || mismatch || !accepted}
-            className="mt-1 flex h-12 w-full items-center justify-center gap-2 rounded-full bg-primary text-on-primary transition-all hover:opacity-90 hover:shadow-md active:scale-[0.98] disabled:opacity-60"
+            className="btn-3d mt-1 w-full"
           >
             {busy ? (
               <>
@@ -460,7 +466,7 @@ export default function RegisterPage() {
                 }`,
               )
             }
-            className="font-medium text-primary underline-offset-4 hover:underline"
+            className="font-extrabold text-primary underline-offset-4 hover:underline"
           >
             Log In
           </button>

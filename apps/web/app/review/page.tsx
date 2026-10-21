@@ -9,7 +9,8 @@
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import { api } from '@/lib/api';
+import { api, ApiError } from '@/lib/api';
+import { examHref } from '@/lib/exams';
 import {
   laterLabel,
   queuePreview,
@@ -65,6 +66,13 @@ interface AttemptRow {
   score?: number;
   total?: number;
   submittedAt?: string;
+}
+
+/** Minimal attempt shape for the not-graded-yet branch below. */
+interface AttemptInfo {
+  attemptId: string;
+  code: string;
+  status: string;
 }
 
 type Filter = 'wrong' | 'skipped' | 'answered' | 'all';
@@ -127,6 +135,10 @@ function ReviewInner() {
   const attemptId = useSearchParams().get('attemptId') ?? '';
   const [review, setReview] = useState<ReviewPayload | null>(null);
   const [error, setError] = useState<string | null>(null);
+  // An ungraded attempt 409s `not_graded`: the attempt itself carries
+  // the truth (open paper / still marking / grading error) and the
+  // card below turns the dead end into a way back in (mobile parity).
+  const [pending, setPending] = useState<AttemptInfo | null>(null);
   // The Myschool explanation sheet rides on the visible list: the
   // pager keeps one sheet open across questions.
   const [sheetIdx, setSheetIdx] = useState<number | null>(null);
@@ -139,8 +151,19 @@ function ReviewInner() {
     let alive = true;
     api<ReviewPayload>(`/attempts/${attemptId}/review`)
       .then((r) => alive && setReview(r))
-      .catch((e: unknown) => {
+      .catch(async (e: unknown) => {
         if (!alive) return;
+        if (e instanceof ApiError && (e.code === 'not_graded' || e.status === 409)) {
+          try {
+            const a = await api<AttemptInfo>(`/attempts/${attemptId}`);
+            if (!alive) return;
+            setPending(a);
+            return;
+          } catch {
+            if (!alive) return;
+            // fall through to the generic error below
+          }
+        }
         setError(e instanceof Error ? e.message : 'Could not load review');
       });
     return () => {
@@ -154,6 +177,54 @@ function ReviewInner() {
       <Suspense fallback={<Centered><RenanceMark size={40} state="busy" /></Centered>}>
         <ReviewQueue />
       </Suspense>
+    );
+  }
+
+  // Ungraded attempt: answer with the attempt's actual state instead
+  // of a dead end (in_progress → finish it; grading → wait; error →
+  // honest failure). The graded path below is untouched.
+  if (pending) {
+    if (pending.status === 'in_progress') {
+      return (
+        <Centered>
+          <span className="material-symbols-outlined text-[44px] text-accent-amber">pause_circle</span>
+          <p className="mt-3 text-lg font-bold text-on-surface">This paper is still open</p>
+          <p className="mt-1 max-w-md text-center text-sm text-on-surface-variant">
+            You left this paper unfinished - your seat is saved. Finish it to unlock answers.
+          </p>
+          <Link
+            href={examHref(pending.code, { resume: '1' })}
+            className="mt-5 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-on-primary"
+          >
+            Continue Exam
+          </Link>
+          <Link href="/review" className="mt-3 text-sm text-on-surface-variant transition hover:text-on-surface">
+            Back to review queue
+          </Link>
+        </Centered>
+      );
+    }
+    if (pending.status === 'grading') {
+      return (
+        <Centered>
+          <LogoActivityIndicator state="busy" label="Marking your paper…" />
+          <Link href="/review" className="mt-4 text-sm text-on-surface-variant transition hover:text-on-surface">
+            Back to review queue
+          </Link>
+        </Centered>
+      );
+    }
+    return (
+      <Centered>
+        <p className="max-w-md text-center text-sm text-on-surface-variant">
+          {pending.status === 'error'
+            ? 'Something went wrong while marking this paper. Open it again in a few minutes.'
+            : 'This paper is not graded yet.'}
+        </p>
+        <Link href="/review" className="mt-4 text-sm text-on-surface-variant transition hover:text-on-surface">
+          Back to review queue
+        </Link>
+      </Centered>
     );
   }
 

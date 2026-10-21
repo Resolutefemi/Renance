@@ -118,8 +118,9 @@ func Milestone(ctx context.Context, pool store.Pool, userID, milestone, body str
 		userID, milestone, body, string(raw))
 }
 
-// UserPost writes a freeform post; returns the new post id.
-func UserPost(ctx context.Context, pool store.Pool, userID, body string) (int64, error) {
+// UserPost writes a freeform post (meta: the optional achievement
+// payload {score, exam, course...}); returns the new post id.
+func UserPost(ctx context.Context, pool store.Pool, userID, body string, meta map[string]any) (int64, error) {
 	body = strings.TrimSpace(body)
 	if body == "" {
 		return 0, fmt.Errorf("social: empty post")
@@ -127,10 +128,14 @@ func UserPost(ctx context.Context, pool store.Pool, userID, body string) (int64,
 	if len([]rune(body)) > 500 {
 		body = string([]rune(body)[:500])
 	}
+	raw := []byte(`{}`)
+	if len(meta) > 0 {
+		raw, _ = json.Marshal(meta)
+	}
 	var id int64
 	err := pool.QueryRow(ctx,
-		`INSERT INTO social.posts (user_id, kind, body) VALUES ($1,'user',$2) RETURNING post_id`,
-		userID, body).Scan(&id)
+		`INSERT INTO social.posts (user_id, kind, body, meta) VALUES ($1,'user',$2,$3::jsonb) RETURNING post_id`,
+		userID, body, string(raw)).Scan(&id)
 	return id, err
 }
 
