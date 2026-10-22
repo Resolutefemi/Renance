@@ -7,7 +7,6 @@ import 'package:provider/single_child_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'api_client.dart';
-import 'app_icon.dart';
 import 'config.dart';
 import 'controllers.dart';
 import 'learn_controller.dart';
