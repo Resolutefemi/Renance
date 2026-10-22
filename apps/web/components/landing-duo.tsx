@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, type CSSProperties } from 'react';
+import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import Link from 'next/link';
 import LandingDefaultTheme from '@/components/landing-default-theme';
 import OpenAppButton from '@/components/open-app-button';
@@ -11,9 +11,12 @@ import { STORE_CONFIG } from '@/lib/store-links';
  * The full duolingo.com-style landing, v2 (founder screenshots pass
  * 2026-10-22: "do same to Renance"). Section journey, top to bottom:
  *
- *   1. navbar - THREE states, exactly like the reference: quiet text
- *      CTA at the very top, white + shadow + green 3D "GET THE APP"
- *      once scrolled, and the CTA swaps to "GET STARTED" past the hero
+ *   1. navbar - THREE IntersectionObserver states (no scroll
+ *      listeners): full centered branding at rest, a compressed
+ *      fixed bar during the first scroll, then icon + sticky
+ *      "Get started" CTA once the hero buttons leave the screen.
+ *      One CSS class per state drives opacity, visibility and
+ *      padding transitions
  *   2. hero   - original cartoon cast (Renny the bookworm + floating
  *      pencil/book/star/gem doodles) drifting between the navbar and
  *      the headline, with GET STARTED / I ALREADY HAVE AN ACCOUNT
@@ -407,22 +410,61 @@ function WhatsAppIcon() {
 }
 
 export default function LandingDuo() {
-  /* THREE navbar states, exactly like the reference: 'top' (quiet),
-     'raised' (shadow + green GET THE APP), 'cta' (past the hero, the
-     CTA swaps to GET STARTED). */
+  /* THREE navbar states driven entirely by IntersectionObservers -
+     zero scroll listeners, exactly the sentinel pattern the founder
+     asked for:
+
+       'top'    page-top sentinel visible ............ full centered
+                branding, transparent bar, roomy padding
+       'raised' past the top, hero still on screen ... compressed
+                fixed bar: white shell + hairline shadow, branding
+                hidden, tight padding
+       'cta'    hero has left through the viewport top ... expanded
+                bar: icon revealed beside Subjects + sticky green
+                GET STARTED
+
+     Each state is a single CSS class (.is-top/.is-raised/.is-cta);
+     opacity, visibility and padding interpolate via CSS transitions.
+
+     The HERO SECTION ITSELF is the second sentinel (not a 1px
+     probe): it starts intersecting, so leaving through the viewport
+     top is always a true->false crossing that IO reports - even
+     across programmatic jumps (End key, anchor links, scroll
+     restoration) where a 1px probe would go false->false silently. */
   const [navState, setNavState] = useState<'top' | 'raised' | 'cta'>('top');
+  const topSentinelRef = useRef<HTMLDivElement | null>(null);
+  const heroRef = useRef<HTMLElement | null>(null);
   const [story, setStory] = useState(0);
   const [paused, setPaused] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      const y = window.scrollY;
-      const heroDepth = window.innerHeight * 0.7;
-      setNavState(y < 24 ? 'top' : y < heroDepth ? 'raised' : 'cta');
-    };
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    const top = topSentinelRef.current;
+    const hero = heroRef.current;
+    if (!top || !hero) return;
+
+    let topVisible = true;
+    let heroGone = false;
+    const apply = () => setNavState(topVisible ? 'top' : heroGone ? 'cta' : 'raised');
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.target === top) {
+            topVisible = entry.isIntersecting;
+          } else {
+            /* Hero fully above the viewport top = the hero (and its
+               buttons) have left the screen. While any part of the
+               hero is still visible this stays false. */
+            heroGone = !entry.isIntersecting && entry.boundingClientRect.bottom <= 0;
+          }
+        }
+        apply();
+      },
+      { threshold: 0 },
+    );
+    io.observe(top);
+    io.observe(hero);
+    return () => io.disconnect();
   }, []);
 
   /* Reveal-on-scroll: sections slide up once as they enter. */
@@ -453,41 +495,46 @@ export default function LandingDuo() {
   }, [paused]);
 
   return (
-    <div className="min-h-dvh bg-background">
+    <div className="relative min-h-dvh bg-background">
       <LandingDefaultTheme />
 
+      {/* IntersectionObserver sentinel #1: 1px at document y=0. While
+          it is visible the page is at rest -> 'top'. */}
+      <div ref={topSentinelRef} className="landing-nav-sentinel landing-nav-sentinel-top" aria-hidden />
+
       {/* ============================================================ */}
-      {/* 1. NAVBAR - three states                                       */}
+      {/* 1. NAVBAR - three IO states                                   */}
       {/* ============================================================ */}
-      <header
-        className={`landing-nav sticky top-0 z-40 ${
-          navState === 'top' ? 'bg-transparent' : 'bg-background/95 shadow-[0_2px_0_rgba(0,0,0,0.08)] backdrop-blur'
-        }`}
-      >
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-          <Link href="/" className="flex items-center gap-2" aria-label="Renance home">
-            <RenanceMark size={34} />
-            <span className="text-[22px] font-extrabold lowercase leading-none tracking-tight text-on-surface">
-              renance
-            </span>
-          </Link>
-          <nav className="flex items-center gap-4 sm:gap-6">
-            <Link
-              href="/subjects/"
-              className="hidden text-xs font-extrabold uppercase tracking-widest text-on-surface-variant hover:text-on-surface md:block"
-            >
+      <header className={`landing-nav is-${navState}`}>
+        <div className="landing-nav-shell" aria-hidden />
+        <div className="landing-nav-inner">
+          {/* Left cell: mini icon (state 3 only, absolute so it never
+              shifts layout) + the subjects link. */}
+          <div className="landing-nav-side landing-nav-side-l">
+            <Link href="/" className="landing-nav-mini" aria-label="Renance home">
+              <RenanceMark size={30} />
+            </Link>
+            <Link href="/subjects/" className="landing-nav-ghost landing-nav-subjects">
               Subjects
             </Link>
-            {navState === 'top' ? (
-              <Link href="/register/" className="landing-nav-ghost">
-                Get the app
-              </Link>
-            ) : (
-              <Link href="/register/" className="btn-3d landing-nav-cta">
-                {navState === 'cta' ? 'Get started' : 'Get the app'}
-              </Link>
-            )}
-          </nav>
+          </div>
+
+          {/* Center cell: full centered branding at rest. */}
+          <Link href="/" className="landing-nav-brand" aria-label="Renance home">
+            <RenanceMark size={38} />
+            <span className="landing-nav-word">renance</span>
+          </Link>
+
+          {/* Right cell: quiet text CTA (states 1-2) cross-fading into
+              the sticky green GET STARTED (state 3). */}
+          <div className="landing-nav-side landing-nav-side-r">
+            <Link href="/register/" className="landing-nav-ghost landing-nav-ghost-cta">
+              Get the app
+            </Link>
+            <Link href="/register/" className="btn-3d landing-nav-cta landing-nav-start">
+              Get started
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -495,7 +542,7 @@ export default function LandingDuo() {
         {/* ============================================================ */}
         {/* 2. HERO - cartoon cast up top, CTAs pinned low like Duo        */}
         {/* ============================================================ */}
-        <section className="relative flex min-h-[100svh] flex-col overflow-hidden px-4 text-center sm:px-6">
+        <section ref={heroRef} className="relative flex min-h-[100svh] flex-col overflow-hidden px-4 text-center sm:px-6">
           <h1 className="sr-only">Renance - Your Guide to Academic Success</h1>
 
           {/* The cast: Renny front and centre, doodles drifting around
