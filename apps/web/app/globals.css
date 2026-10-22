@@ -2288,3 +2288,242 @@ a.bg-hero-cta .material-symbols-outlined {
 }
 .landing-open-app:hover { color: var(--color-on-surface); }
 .landing-open-app:disabled { opacity: 0.5; cursor: default; }
+
+/* ============================================================
+   LANDING - the full duolingo.com replica pass (founder
+   directive 2026-10-22: navbar, transitions and animations
+   "exactly the same"). Every rule below is scoped under
+   .landing so the app surfaces stay untouched.
+   ============================================================ */
+
+/* --- Hero: floating subject chips drift like Duo's word bubbles.
+   Each chip carries --rnt-dur / --rnt-delay / --rnt-rot so a dozen
+   chips never move in lockstep. --- */
+@keyframes rnt-drift {
+  0%, 100% { transform: translateY(0) rotate(var(--rnt-rot, 0deg)); }
+  50% { transform: translateY(-11px) rotate(var(--rnt-rot, 0deg)); }
+}
+.landing-chip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  border: 2px solid #e5e5e5;
+  border-radius: 9999px;
+  padding: 0.55rem 0.95rem;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+  animation: rnt-drift var(--rnt-dur, 5s) ease-in-out infinite;
+  animation-delay: var(--rnt-delay, 0s);
+}
+.landing-chip-dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  box-shadow: inset 0 -2.5px 0 rgba(0, 0, 0, 0.16);
+}
+.landing-chip-word { font-weight: 800; font-size: 0.92rem; color: #4b4b4b; white-space: nowrap; }
+
+/* The keycap mascot bobs like Duo. */
+@keyframes rnt-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.landing-mark-bob { animation: rnt-bob 4.2s ease-in-out infinite; }
+
+/* Hero entrance: soft staggered fade-up on first paint. */
+@keyframes rnt-rise {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.landing-rise { opacity: 0; animation: rnt-rise 0.75s cubic-bezier(0.2, 0.7, 0.3, 1) forwards; animation-delay: var(--rise-delay, 0s); }
+
+/* --- Subject marquee: seamless infinite loop (track holds the
+   content twice, slides -50%), pauses on hover exactly like the
+   Duo flags band. --- */
+@keyframes rnt-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.landing-marquee { overflow: hidden; }
+.landing-marquee-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  padding: 0.25rem 0;
+  animation: rnt-marquee var(--marquee-dur, 38s) linear infinite;
+}
+.landing-marquee:hover .landing-marquee-track { animation-play-state: paused; }
+.landing-flag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 108px;
+  padding: 10px 8px 8px;
+  border-radius: 16px;
+  border: 2px solid #e5e5e5;
+  background: #ffffff;
+}
+.landing-flag-tile {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 1.02rem;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15);
+}
+.landing-flag-name { font-size: 0.78rem; font-weight: 800; color: #4b4b4b; white-space: nowrap; }
+
+/* --- Scroll reveal: sections and staggered children slide up the
+   moment they enter the viewport (IntersectionObserver adds .is-in
+   once, Duo-style). --- */
+.landing-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.3, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+.landing-reveal.is-in { opacity: 1; transform: translateY(0); }
+
+/* --- Hero "I ALREADY HAVE AN ACCOUNT": white face, swan border,
+   Duolingo-blue label. --- */
+.btn-3d-blue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e5e5e5;
+  border-radius: 16px;
+  padding: 12px 24px;
+  background: #ffffff;
+  color: #1cb0f6;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 4px 0 #e5e5e5;
+  transition: filter 120ms ease, transform 60ms ease, box-shadow 60ms ease;
+}
+.btn-3d-blue:hover { filter: brightness(0.97); }
+.btn-3d-blue:active { transform: translateY(4px); box-shadow: 0 0 0 #e5e5e5; }
+
+/* --- Phone mockups (pure CSS, no screenshots needed). --- */
+.landing-phone {
+  width: 252px;
+  border-radius: 38px;
+  border: 9px solid #1f2937;
+  background: #f7f7f7;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  flex: none;
+}
+.landing-phone-notch { height: 22px; display: grid; place-items: center; background: #1f2937; }
+.landing-phone-notch::after { content: ''; width: 84px; height: 8px; border-radius: 9999px; background: #3b4655; }
+.landing-phone-row { display: flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 800; color: #4b4b4b; }
+.landing-quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid #e5e5e5;
+  border-bottom-width: 3px;
+  border-radius: 12px;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #3c3c3c;
+  background: #ffffff;
+}
+.landing-quiz-option.is-right { border-color: #a5ed6e; background: #d7ffb8; color: #2f7a00; }
+
+/* --- Stories carousel. --- */
+.landing-carousel-viewport { overflow: hidden; border-radius: 22px; }
+.landing-carousel-track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+.landing-carousel-arrow {
+  width: 46px;
+  height: 46px;
+  border-radius: 9999px;
+  border: 0;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 0 var(--color-primary-edge);
+  transition: filter 120ms ease, transform 60ms ease, box-shadow 60ms ease;
+}
+.landing-carousel-arrow:hover { filter: brightness(1.05); }
+.landing-carousel-arrow:active { transform: translateY(4px); box-shadow: 0 0 0 var(--color-primary-edge); }
+.landing-carousel-arrow:disabled { opacity: 0.45; cursor: default; }
+.landing-carousel-dot { width: 10px; height: 10px; border-radius: 9999px; background: #d8e0e6; transition: background 0.2s ease, width 0.2s ease; }
+.landing-carousel-dot.is-active { background: var(--color-primary); width: 22px; }
+
+/* --- Final CTA band + navy mega footer. --- */
+.landing-cta-band { background: var(--color-primary); }
+.landing-footer { background: #0f2830; color: #b7c9c9; }
+.landing-footer h3 { color: #ffffff; }
+.landing-footer a { transition: color 140ms ease; }
+.landing-footer a:hover { color: #ffffff; }
+.landing-social-chip {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e6f0ee;
+  transition: background 140ms ease;
+}
+.landing-social-chip:hover { background: rgba(255, 255, 255, 0.18); }
+
+/* --- Store badge pill. --- */
+.landing-store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-radius: 14px;
+  background: #10231c;
+  color: #ffffff;
+  padding: 0.65rem 1.1rem;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.28);
+  transition: filter 120ms ease, transform 60ms ease, box-shadow 60ms ease;
+}
+.landing-store-badge:hover { filter: brightness(1.12); }
+.landing-store-badge:active { transform: translateY(4px); box-shadow: 0 0 0 rgba(0, 0, 0, 0.28); }
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-chip, .landing-mark-bob, .landing-marquee-track, .landing-rise { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .landing-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .landing-carousel-track { transition: none !important; }
+}
+
+/* --- Landing navbar: shadow fades in on first scroll; the nav CTA
+   is a one-notch-smaller chunky button. --- */
+.landing-nav { transition: box-shadow 0.25s ease; }
+.landing-nav-scrolled { box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08); }
+.landing-nav-cta { padding: 10px 18px; font-size: 0.8125rem; border-radius: 14px; }
+
+/* --- Hero chip responsive visibility. This stylesheet is unlayered,
+   so plain Tailwind `hidden md:flex` utilities would LOSE to the
+   .landing-chip display rule - the breakpoints get their own rules. --- */
+.landing-chip-md, .landing-chip-lg, .landing-chip-xl { display: none; }
+@media (min-width: 768px) { .landing-chip-md { display: flex; } }
+@media (min-width: 1024px) { .landing-chip-lg { display: flex; } }
+@media (min-width: 1280px) { .landing-chip-xl { display: flex; } }
