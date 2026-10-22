@@ -14,11 +14,11 @@ import { SITE_URL } from '@/lib/site-url';
 const QA: Array<{ q: string; a: string }> = [
   {
     q: 'What is Renance?',
-    a: "Renance is Nigeria's exam-prep app: mock CBT exams for JAMB, WAEC, NECO and Post-UTME that are graded server-side, a spaced-repetition review queue built from every paper you take, and full university semester desks where students learn and quiz course by course. It works on Android, iOS, Windows, macOS and the web.",
+    a: "Renance is Nigeria's exam-prep app: mock CBT exams for JAMB, WAEC, NECO and Post-UTME that are graded server-side, a spaced-repetition review queue built from every paper you take, and full university semester desks where students learn and quiz course by course. It works on Android and on the web at renance.app.",
   },
   {
     q: 'Who builds Renance?',
-    a: 'Renance is built by Resolute Femi (Ariyo Oluwafemi Stephen), a Nigerian software engineer. Read the full story and the team behind the platform at renance.app/about.',
+    a: 'Renance is built by Resolute Femi (Ariyo Oluwafemi Stephen), a Nigerian software engineering undergraduate in 200 level of Software Engineering at the Federal University of Technology, Akure (FUTA). Read the full story at renance.app/about.',
   },
   {
     q: 'Is Renance free?',
@@ -58,7 +58,15 @@ const QA: Array<{ q: string; a: string }> = [
   },
   {
     q: 'Which leaderboards can I compete on?',
-    a: 'Six boards: JAMB, WAEC, NECO, Streak, Diamonds and the Daily Challenge. Every row is tappable - open any name to view their public profile, streak and courses.',
+    a: 'Six boards: JAMB, WAEC, NECO, Streak, Diamonds and the Daily Challenge. Every row is tappable - open any name to view their public profile, streak and courses, and follow them straight from there.',
+  },
+  {
+    q: 'What are leagues?',
+    a: 'Leagues are the weekly XP competition: every student who studies during the week is ranked inside a tier, from Bronze up to the legendary tiers, with a promotion zone at the top and a demotion line at the bottom. The board resets every Monday (Lagos time) - top the promotion zone to climb.',
+  },
+  {
+    q: 'Does Renance remind me to study?',
+    a: 'Yes. Turn on notifications and Renance drops one streak reminder a day - a different voice line each day, spoken aloud on your phone, so the chain never breaks quietly. You can flip reminders off any time in Settings.',
   },
   {
     q: 'Can I study offline?',

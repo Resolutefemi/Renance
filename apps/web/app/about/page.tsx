@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     q: "Who owns Renance?",
-    a: "Renance was founded and is built by Resolute Femi, the software engineering alias of Ariyo Oluwafemi Stephen, a Nigerian software engineer and FUTA graduate. The platform is published at renance.app with companion tools such as the Renance DevTools CLI.",
+    a: "Renance was founded and is built by Resolute Femi, the software engineering alias of Ariyo Oluwafemi Stephen, a Nigerian software engineering undergraduate in 200 level of Software Engineering at the Federal University of Technology, Akure (FUTA). The platform is published at renance.app with companion tools such as the Renance DevTools CLI.",
   },
   {
     q: "Does Renance have past questions for Nigerian tertiary institutions?",
@@ -369,15 +369,16 @@ export default function AboutPage() {
           <div className="rab-wrap">
             <h2 className="rab-h2">Who built Renance</h2>
             <p className="rab-dark-sub">
-              A Nigerian engineer, not a foreign publisher.
+              A Nigerian student-built platform, not a foreign publisher.
             </p>
             <div className="rab-founder">
               <p>
                 Renance is founded and built by{" "}
                 <strong>Resolute Femi</strong>, the software engineering alias
                 of <strong>Ariyo Oluwafemi Stephen</strong>, a Nigerian
-                software engineer and graduate of the Federal University of
-                Technology, Akure (FUTA). He builds in TypeScript, Go, Rust and
+                software engineering undergraduate in 200 level of Software
+                Engineering at the Federal University of Technology, Akure
+                (FUTA). He builds in TypeScript, Go, Rust and
                 Python, and ships developer and education tools for Nigerians,
                 including Renance, the Renance DevTools CLI and FUTA CBT practice
                 platforms.
