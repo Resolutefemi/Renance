@@ -20,6 +20,21 @@ class MainActivity : FlutterActivity() {
         // enabled at every instant, so the app can never vanish from the
         // home screen mid-switch. Best-effort: a failure never throws
         // into Dart.
+        //
+        // CRASH FIX (2026-10-23, "Renance keeps stopping"): the first
+        // cut called setComponentEnabledSetting on EVERY launch, even
+        // when the requested variant was already live. PackageManager
+        // mutations on a launcher component fire the
+        // ACTION_COMPONENT_ENABLED_CHANGED broadcast, which makes
+        // launchers rebuild the package's activity list - and on many
+        // OEM ROMs (Samsung/OneUI, Tecno/HiOS, Infinix/XOS, Xiaomi) the
+        // running process is STOPPED as part of that rebuild,
+        // DONT_KILL_APP notwithstanding. Startup therefore killed the
+        // app it was starting: a guaranteed "keeps stopping" loop. The
+        // fix reads the LIVE component states first and touches NOTHING
+        // unless the variant actually changes - the every-launch call
+        // is now a true no-op, and the PackageManager round-trip only
+        // ever happens when the scholar flips Light/Dark in settings.
         MethodChannel(
             flutterEngine.dartExecutor.binaryMessenger,
             "renance/appIcon"
@@ -31,8 +46,34 @@ class MainActivity : FlutterActivity() {
                         val pm = packageManager
                         val light = ComponentName(this, "$packageName.LauncherLight")
                         val dark = ComponentName(this, "$packageName.LauncherDark")
+                        // Resolve the LIVE states. COMPONENT_ENABLED_STATE_DEFAULT
+                        // falls back to the manifest value: light ON, dark OFF.
+                        fun isEnabled(state: Int, manifestDefault: Boolean): Boolean =
+                            when (state) {
+                                PackageManager.COMPONENT_ENABLED_STATE_ENABLED -> true
+                                PackageManager.COMPONENT_ENABLED_STATE_DISABLED -> false
+                                else -> manifestDefault
+                            }
+                        val lightOn = isEnabled(
+                            pm.getComponentEnabledSetting(light),
+                            manifestDefault = true,
+                        )
+                        val darkOn = isEnabled(
+                            pm.getComponentEnabledSetting(dark),
+                            manifestDefault = false,
+                        )
+                        val liveDark = darkOn && !lightOn
+                        val wantDark = variant == "dark"
+                        // The guard that ends the crash loop: the variant
+                        // already live? Answer immediately, mutate nothing.
+                        if (wantDark == liveDark) {
+                            result.success(true)
+                            return@setMethodCallHandler
+                        }
+                        // A REAL flip: enable-first so one launcher alias is
+                        // always on, then disable the other.
                         val (enableFirst, disableSecond) =
-                            if (variant == "dark") dark to light else light to dark
+                            if (wantDark) dark to light else light to dark
                         pm.setComponentEnabledSetting(
                             enableFirst,
                             PackageManager.COMPONENT_ENABLED_STATE_ENABLED,

@@ -1,3 +1,6 @@
+import 'dart:async';
+import 'dart:ui' show PlatformDispatcher;
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
@@ -25,45 +28,73 @@ import 'ui/welcome_screen.dart' show WelcomeScreen;
 import 'update_gate.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  // Device notifications (founder directive 2026-10-04): ready before
-  // the first frame so download completions and review nudges can drop.
-  await RenanceNotifications.init();
-  final SharedPreferences prefs = await SharedPreferences.getInstance();
-  // Secure local storage (founder directive 2026-10-11): the auth token
-  // boots from the OS-grade encrypted store (Android
-  // EncryptedSharedPreferences / iOS Keychain) before the first frame,
-  // so a saved session is live from the very first route and survives
-  // app closes and device restarts. Only an explicit Sign Out under the
-  // profile ever returns the student to the login page.
-  final SessionStore session = await SessionStore.load(prefs);
-  final ApiClient api = ApiClient(
-    baseUrl: apiBaseUrl,
-    token: () => session.token,
-  );
-  final PackStore store = DbPackStore();
-  final ThemeController theme = ThemeController(prefs: prefs);
-  // Founder directive 2026-10-19 (the pixel-parity overhaul): the app
-  // must open looking EXACTLY like renance.app, which runs the default
-  // brand green. Devices that carry an old Chrome-style seed pick
-  // (e.g. Chrome Blue from earlier testing) read as "the app looks
-  // nothing like the website". This ONE-TIME migration clears the
-  // stored seed so the update lands on the website's default palette;
-  // the Appearance picker stays and a fresh pick re-tints everything.
-  await theme.migrateSeedToWebDefault();
-  // Founder pass IX: the launcher icon matches the saved appearance
-  // from the first launch on (the setMode path covers live changes).
-  await RenanceAppIcon.apply(theme.mode);
+  // RELEASE HARDENING (2026-10-23, the "Renance keeps stopping" pass):
+  // every uncaught Dart error - a startup await gone wrong, a future
+  // nobody awaited, a platform-channel reply - lands here and is LOGGED
+  // instead of tearing the isolate (and with it the whole release app)
+  // down. A student on a founder test build sees the app, never a
+  // Dart-originated crash dialog. Native crash surfaces keep their own
+  // guards (the app-icon switch no-ops unless the variant really
+  // changes; the streak widget provider is fully contained).
+  await runZonedGuarded(() async {
+    FlutterError.onError = (FlutterErrorDetails details) {
+      // Logcat only - paint the error, never kill the app.
+      FlutterError.presentError(details);
+    };
+    PlatformDispatcher.instance.onError = (Object error, StackTrace stack) {
+      // Handled: returning true stops the engine from rethrowing.
+      return true;
+    };
+    WidgetsFlutterBinding.ensureInitialized();
+    // Device notifications (founder directive 2026-10-04): ready before
+    // the first frame so download completions and review nudges can drop.
+    await RenanceNotifications.init();
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    // Secure local storage (founder directive 2026-10-11): the auth token
+    // boots from the OS-grade encrypted store (Android
+    // EncryptedSharedPreferences / iOS Keychain) before the first frame,
+    // so a saved session is live from the very first route and survives
+    // app closes and device restarts. Only an explicit Sign Out under the
+    // profile ever returns the student to the login page.
+    final SessionStore session = await SessionStore.load(prefs);
+    final ApiClient api = ApiClient(
+      baseUrl: apiBaseUrl,
+      token: () => session.token,
+    );
+    final PackStore store = DbPackStore();
+    final ThemeController theme = ThemeController(prefs: prefs);
+    // Founder directive 2026-10-19 (the pixel-parity overhaul): the app
+    // must open looking EXACTLY like renance.app, which runs the default
+    // brand green. Devices that carry an old Chrome-style seed pick
+    // (e.g. Chrome Blue from earlier testing) read as "the app looks
+    // nothing like the website". This ONE-TIME migration clears the
+    // stored seed so the update lands on the website's default palette;
+    // the Appearance picker stays and a fresh pick re-tints everything.
+    await theme.migrateSeedToWebDefault();
+    // Founder pass IX: the launcher icon matches the saved appearance
+    // from the first launch on (the setMode path covers live changes).
+    // Since the 2026-10-23 crash fix the native side no-ops unless the
+    // variant actually changes - startup never mutates PackageManager.
+    await RenanceAppIcon.apply(theme.mode);
 
-  runApp(
-    RenanceApp(
-      api: api,
-      session: session,
-      store: store,
-      theme: theme,
-      prefs: prefs,
-    ),
-  );
+    runApp(
+      RenanceApp(
+        api: api,
+        session: session,
+        store: store,
+        theme: theme,
+        prefs: prefs,
+      ),
+    );
+  }, (Object error, StackTrace stack) {
+    // The zone's last line of defence: swallow so a release build never
+    // dies to an uncaught Dart error (debug still prints the full trace).
+    assert(() {
+      // ignore: avoid_print
+      print('Renance uncaught: $error\n$stack');
+      return true;
+    }());
+  });
 }
 
 class RenanceApp extends StatelessWidget {
