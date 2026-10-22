@@ -8,7 +8,8 @@
  * token, 401 bounce).
  */
 
-import { api } from '@/lib/api';
+import { api, API_BASE } from '@/lib/api';
+import { getToken } from '@/lib/session';
 
 // ─── Types (server contract, internal/social) ─────────────────────────────
 
@@ -18,12 +19,35 @@ export interface SocialAuthor {
   name: string;
   premium: boolean;
   avatar?: string;
+  /** R2 key under the profile-picture/ folder - renders through
+   *  photoUrl() and wins over the avatar key whenever set. */
+  photo?: string;
 }
 
 /** The public URL of one of the 50 baked-in avatars. */
 export function avatarUrl(key?: string): string | null {
   return key ? `/avatars/${key}.svg` : null;
 }
+
+/** The public URL of an uploaded profile photo (the R2
+ *  profile-picture/ folder, founder 2026-10-22). */
+export function photoUrl(key?: string): string | null {
+  return key ? `${API_BASE}/media/profile-picture/${key}` : null;
+}
+
+/** The best face for one person: their photo, else their avatar, else
+ *  null (the caller renders the initial letter). */
+export function faceUrl(person: { avatar?: string; photo?: string }): string | null {
+  return photoUrl(person.photo) ?? avatarUrl(person.avatar);
+}
+
+/** One reaction pill's aggregated state on a post. */
+export interface ReactionState {
+  count: number;
+  mine: boolean;
+}
+
+export type ReactionKind = 'party' | 'clap' | 'angry';
 
 export interface SocialPost {
   id: number;
@@ -42,8 +66,13 @@ export interface SocialPost {
   likes: number;
   comments: number;
   likedByMe: boolean;
+  /** One real liker's name for the "Liked by {name} and others" line. */
+  likedBy?: string;
   mine: boolean;
   createdAtMs: number;
+  /** The CELEBRATE pill row (founder 2026-10-22): {party:{count,mine},
+   *  clap:…, angry:…}. Missing kinds carry zero reactions. */
+  reactions?: Record<string, ReactionState>;
 }
 
 export interface SocialComment {
@@ -68,6 +97,7 @@ export interface PublicProfile {
   name: string;
   premium: boolean;
   avatar?: string;
+  photo?: string;
   level: number;
   xp: number;
   streak: number;
@@ -82,6 +112,10 @@ export interface PublicProfile {
   isSelf: boolean;
   joinedMs: number;
   courses: CoursePulse[] | null;
+  /** The scholar's school + grade level (founder 2026-10-22: the
+   *  profile wears the whole identity, school included). */
+  institution?: string;
+  gradeLevel?: string;
 }
 
 export interface FollowRow {
@@ -90,6 +124,7 @@ export interface FollowRow {
   name: string;
   premium: boolean;
   avatar?: string;
+  photo?: string;
   followsYou: boolean;
   following: boolean;
 }
@@ -139,6 +174,52 @@ export async function fetchConnections(): Promise<Connections> {
   return api('/social/connections');
 }
 
+/** Find scholars by username OR display name (the find-friends box). */
+export async function fetchUserSearch(q: string, limit = 20): Promise<{ users: FollowRow[] }> {
+  return api(`/social/search?q=${encodeURIComponent(q)}&limit=${limit}`);
+}
+
+/** The profile page's Friend suggestions strip (follow-backs first). */
+export async function fetchSuggestions(limit = 10): Promise<{ users: FollowRow[] }> {
+  return api(`/social/suggestions?limit=${limit}`);
+}
+
+/** Toggle one reaction pill; the response carries the post's full
+ *  pill summary so the row repaints from one payload. */
+export async function toggleReaction(
+  id: number,
+  kind: ReactionKind,
+): Promise<{ reactions: Record<string, ReactionState> }> {
+  return api(`/social/posts/${id}/react`, { method: 'POST', body: { kind } });
+}
+
+/** Upload the caller's profile photo to R2 (the profile-picture/
+ *  folder). Multipart, so it rides fetch directly with the Bearer
+ *  token; the response's avatarPhoto key renders through photoUrl(). */
+export async function uploadAvatarPhoto(file: File): Promise<{ avatarPhoto: string }> {
+  const token = getToken();
+  const form = new FormData();
+  form.append('file', file);
+  const res = await fetch(`${API_BASE}/me/avatar/photo`, {
+    method: 'POST',
+    headers: token ? { Authorization: `Bearer ${token}` } : undefined,
+    body: form,
+  });
+  const data = (await res.json().catch(() => ({}))) as {
+    avatarPhoto?: string;
+    message?: string;
+  };
+  if (!res.ok || !data.avatarPhoto) {
+    throw new Error(data.message || 'Could not upload the photo');
+  }
+  return { avatarPhoto: data.avatarPhoto };
+}
+
+/** Clear the uploaded photo (falls back to the avatar key). */
+export async function deleteAvatarPhoto(): Promise<void> {
+  await api('/me/avatar/photo', { method: 'DELETE' });
+}
+
 // ─── Local helpers ────────────────────────────────────────────────────────
 
 /** "2h", "3d", "just now" - the feed's relative clock. */
@@ -164,4 +245,13 @@ export function milestoneVisual(post: SocialPost): { icon: string; tint: string;
   if (meta.score != null && meta.exam) return { icon: 'target', tint: '#1cb0f6', label: `${meta.exam} score` };
   if (meta.matchId) return { icon: 'swords', tint: '#ff4b4b', label: 'Arena' };
   return { icon: 'military_tech', tint: '#10da11', label: 'Milestone' };
+}
+
+/** Humanize a big reaction/like count the way the Duolingo feed does:
+ *  136949 -> "136.9k" under a million, 1.2M above it. */
+export function bigCount(n: number): string {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
+  if (n >= 100_000) return `${Math.round(n / 1000)}k`;
+  if (n >= 10_000) return `${(n / 1000).toFixed(1)}k`;
+  return n.toLocaleString();
 }

@@ -17,11 +17,14 @@ import { useSearchParams } from 'next/navigation';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import BlueTick from '@/components/blue-tick';
+import { PersonAvatar } from '@/components/person-avatar';
 import { api } from '@/lib/api';
 
 interface FocusEntry {
   rank: number;
   username: string;
+  avatar?: string;
+  photo?: string;
   bestScore: number;
   scoreOutOf: number;
   papers: number;
@@ -31,6 +34,8 @@ interface FocusEntry {
 interface StreakEntry {
   rank: number;
   username: string;
+  avatar?: string;
+  photo?: string;
   currentStreak: number;
   bestStreak: number;
   attempts: number;
@@ -40,6 +45,8 @@ interface StreakEntry {
 interface DailyEntry {
   rank: number;
   username: string;
+  avatar?: string;
+  photo?: string;
   score: number;
   total: number;
   durationMs?: number | null;
@@ -66,6 +73,8 @@ interface GemsEntry {
   xp: number;
   streak: number;
   premium?: boolean;
+  avatar?: string;
+  photo?: string;
 }
 
 function medal(rank: number): string {
@@ -258,9 +267,10 @@ export default function LeaderboardClient() {
                   }`}
                 >
                   <RankPill rank={entry.rank} />
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-ink/10 text-[13px] font-bold text-accent-ink">
-                    {initial(entry.username)}
-                  </span>
+                  <PersonAvatar
+                    person={{ avatar: entry.avatar, photo: entry.photo, name: entry.username, username: entry.username }}
+                    size={32}
+                  />
                   <p className="flex min-w-0 flex-1 items-center gap-1.5 text-[15px] font-medium text-on-surface">
                     <span className="min-w-0 truncate">{entry.username}</span>
                     {entry.premium && <BlueTick size={15} />}
@@ -291,9 +301,10 @@ export default function LeaderboardClient() {
                   }`}
                 >
                   <RankPill rank={entry.rank} />
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-ink/10 text-[13px] font-bold text-accent-ink">
-                    {initial(entry.username)}
-                  </span>
+                  <PersonAvatar
+                    person={{ avatar: entry.avatar, photo: entry.photo, name: entry.username, username: entry.username }}
+                    size={32}
+                  />
                   <p className="flex min-w-0 flex-1 items-center gap-1.5 text-[15px] font-medium text-on-surface">
                     <span className="min-w-0 truncate">{entry.username}</span>
                     {entry.premium && <BlueTick size={15} />}
@@ -321,9 +332,10 @@ export default function LeaderboardClient() {
                   }`}
                 >
                   <RankPill rank={entry.rank} />
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-ink/10 text-[13px] font-bold text-accent-ink">
-                    {initial(entry.username)}
-                  </span>
+                  <PersonAvatar
+                    person={{ avatar: entry.avatar, photo: entry.photo, name: entry.username, username: entry.username }}
+                    size={32}
+                  />
                   <p className="flex min-w-0 flex-1 items-center gap-1.5 text-[15px] font-medium text-on-surface">
                     <span className="min-w-0 truncate">{entry.username}</span>
                     {entry.premium && <BlueTick size={15} />}
@@ -348,9 +360,10 @@ export default function LeaderboardClient() {
               const row = (
                 <>
                   <RankPill rank={entry.rank} />
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-ink/10 text-[13px] font-bold text-accent-ink">
-                    {initial(entry.username)}
-                  </span>
+                  <PersonAvatar
+                    person={{ avatar: entry.avatar, photo: entry.photo, name: entry.username, username: entry.username }}
+                    size={32}
+                  />
                   <p className="flex min-w-0 flex-1 items-center gap-1.5 text-[15px] font-medium text-on-surface">
                     <span className="min-w-0 truncate">{entry.username}</span>
                     {entry.premium && <BlueTick size={15} />}

@@ -23,7 +23,7 @@ import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
 import { LogoActivityIndicator } from '@/components/renance-logo';
 import BlueTick from '@/components/blue-tick';
-import { avatarUrl } from '@/lib/social';
+import { PersonAvatar } from '@/components/person-avatar';
 import { LeagueBadge, ProgressBar } from '@/components/learn/bits';
 import { getStoredUser } from '@/lib/session';
 import {
@@ -123,14 +123,7 @@ function PublicProfileView() {
           {/* Header -------------------------------------------------- */}
           <section className="learn-tile flex flex-col items-center gap-3 rounded-2xl border-2 border-outline-variant bg-card px-4 py-6 text-center">
             <div className="relative">
-              <span className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-primary text-[30px] font-black text-on-primary">
-                {avatarUrl(profile.avatar) ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={avatarUrl(profile.avatar)!} alt="" className="h-full w-full object-cover" />
-                ) : (
-                  profile.name.slice(0, 1).toUpperCase()
-                )}
-              </span>
+              <PersonAvatar person={profile} size={80} alt="" />
               <span className="absolute -bottom-1 -right-1 rounded-full border-2 border-card bg-primary px-2 py-0.5 font-mono text-[11px] font-bold text-on-primary">
                 Lvl {profile.level}
               </span>
@@ -140,7 +133,18 @@ function PublicProfileView() {
                 {profile.name}
                 {profile.premium && <BlueTick size={17} />}
               </h2>
-              <p className="text-[14px] font-bold text-on-surface-variant">@{profile.username}</p>
+              <p className="text-[14px] font-bold text-on-surface-variant">
+                @{profile.username}
+                <span className="font-semibold">
+                  {' '}· Joined {new Date(profile.joinedMs).toLocaleDateString(undefined, { month: 'long', year: 'numeric' })}
+                </span>
+              </p>
+              {profile.institution && (
+                <p className="mt-1 flex items-center justify-center gap-1 text-[12.5px] font-bold text-on-surface-variant">
+                  <span className="material-symbols-outlined text-[15px]">account_balance</span>
+                  {profile.institution}
+                </p>
+              )}
             </div>
             <div className="flex items-center gap-2">
               <LeagueBadge name={profile.league} size={34} />
@@ -157,9 +161,6 @@ function PublicProfileView() {
                   follow-back explicitly. */}
               {profile.isFollowing ? 'Following ✓' : profile.followsYou ? 'Follow back' : 'Follow'}
             </button>
-            <p className="text-[11.5px] font-bold text-on-surface-variant">
-              On Renance since {new Date(profile.joinedMs).toLocaleDateString(undefined, { month: 'long', year: 'numeric' })}
-            </p>
           </section>
 
           {/* Stat strip ---------------------------------------------- */}

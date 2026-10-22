@@ -1,11 +1,38 @@
 package httpapi
 
 import (
+        "context"
         "net/http"
         "strings"
 
         "renance.dev/study-api/internal/store"
 )
+
+// faceMap resolves one avatar key + photo key per username with ONE
+// query (founder 2026-10-22: every leaderboard row opens the scholar's
+// profile, so the rows wear their real faces). Never fails the board.
+func (s *Server) faceMap(ctx context.Context, usernames []string) map[string][2]string {
+        out := map[string][2]string{}
+        if len(usernames) == 0 {
+                return out
+        }
+        rows, err := s.store.Pool.Query(ctx, `
+                SELECT u.username, COALESCE(p.avatar,''), COALESCE(p.avatar_photo,'')
+                FROM study.users u
+                LEFT JOIN study.profiles p ON p.user_id = u.id
+                WHERE u.username = ANY($1)`, usernames)
+        if err != nil {
+                return out
+        }
+        defer rows.Close()
+        for rows.Next() {
+                var u, a, ph string
+                if rows.Scan(&u, &a, &ph) == nil {
+                        out[u] = [2]string{a, ph}
+                }
+        }
+        return out
+}
 
 // Leaderboards (ROADMAP #14 slice): public standings over data the
 // product already records - arena outcomes and study XP. Both routes are
@@ -119,6 +146,16 @@ func (s *Server) handleFocusLeaderboard(w http.ResponseWriter, r *http.Request) 
         for i := range entries {
                 entries[i].Rank = i + 1
         }
+        names := make([]string, len(entries))
+        for i := range entries {
+                names[i] = entries[i].Username
+        }
+        faces := s.faceMap(r.Context(), names)
+        for i := range entries {
+                if f, ok := faces[entries[i].Username]; ok {
+                        entries[i].Avatar, entries[i].Photo = f[0], f[1]
+                }
+        }
         writeJSON(w, http.StatusOK, map[string]any{
                 "board":   "focus",
                 "focus":   focus,
@@ -152,6 +189,16 @@ func (s *Server) handleStreakLeaderboard(w http.ResponseWriter, r *http.Request)
         for i := range entries {
                 entries[i].Rank = i + 1
         }
+        names := make([]string, len(entries))
+        for i := range entries {
+                names[i] = entries[i].Username
+        }
+        faces := s.faceMap(r.Context(), names)
+        for i := range entries {
+                if f, ok := faces[entries[i].Username]; ok {
+                        entries[i].Avatar, entries[i].Photo = f[0], f[1]
+                }
+        }
         writeJSON(w, http.StatusOK, map[string]any{
                 "board":   "streak",
                 "period":  "all",
@@ -164,28 +211,38 @@ func (s *Server) handleStreakLeaderboard(w http.ResponseWriter, r *http.Request)
 // 2026-10-17): learners ranked by their gem balance. Same contract as
 // the other boards: top 25 + the caller's own row as "me".
 func (s *Server) handleGemsLeaderboard(w http.ResponseWriter, r *http.Request) {
-	uid := r.Context().Value(ctxUserID).(string)
-	entries, err := s.store.GemsLeaderboard(r.Context(), 25)
-	if err != nil {
-		s.log.Error("gems leaderboard", "err", err)
-		fail(w, http.StatusInternalServerError, "internal", "could not load leaderboard")
-		return
-	}
-	var me *store.GemsBoardEntry
-	if row, found, err := s.store.GemsRank(r.Context(), uid); err != nil {
-		s.log.Error("gems rank", "err", err)
-		fail(w, http.StatusInternalServerError, "internal", "could not load leaderboard")
-		return
-	} else if found {
-		me = &row
-	}
-	for i := range entries {
-		entries[i].Rank = i + 1
-	}
-	writeJSON(w, http.StatusOK, map[string]any{
-		"board":   "gems",
-		"period":  "all",
-		"me":      me,
-		"entries": entries,
-	})
+        uid := r.Context().Value(ctxUserID).(string)
+        entries, err := s.store.GemsLeaderboard(r.Context(), 25)
+        if err != nil {
+                s.log.Error("gems leaderboard", "err", err)
+                fail(w, http.StatusInternalServerError, "internal", "could not load leaderboard")
+                return
+        }
+        var me *store.GemsBoardEntry
+        if row, found, err := s.store.GemsRank(r.Context(), uid); err != nil {
+                s.log.Error("gems rank", "err", err)
+                fail(w, http.StatusInternalServerError, "internal", "could not load leaderboard")
+                return
+        } else if found {
+                me = &row
+        }
+        for i := range entries {
+                entries[i].Rank = i + 1
+        }
+        names := make([]string, len(entries))
+        for i := range entries {
+                names[i] = entries[i].Username
+        }
+        faces := s.faceMap(r.Context(), names)
+        for i := range entries {
+                if f, ok := faces[entries[i].Username]; ok {
+                        entries[i].Avatar, entries[i].Photo = f[0], f[1]
+                }
+        }
+        writeJSON(w, http.StatusOK, map[string]any{
+                "board":   "gems",
+                "period":  "all",
+                "me":      me,
+                "entries": entries,
+        })
 }

@@ -1,14 +1,20 @@
 'use client';
 
 /**
- * Profile, the Stitch profile_light screen, 1:1, plus the founder's
- * learning-focus switcher: students move between JAMB, WAEC, NECO and
- * tertiary institutions without losing papers or XP (exam_target_light).
- * Mobile follows the Stitch column; PC centres a reading column and the
- * sticky PageBar carries the top-LHS back button.
+ * Profile, the founder's 2026-10-22 Duolingo-grade identity pass.
+ *
+ * The page now reads like the Duolingo profile the founder screenshotted,
+ * only better: a gradient banner with the scholar's face (uploaded photo
+ * from Cloudflare R2's profile-picture/ folder, or one of the 50 baked-in
+ * avatars), the @handle + joined date, the Courses/Following/Followers
+ * stat row, the ADD FRIENDS + share row, the "Friend suggestions" strip
+ * (follow-backs first, dismissible, VIEW ALL), the Overview with every
+ * course the scholar is taking and its live progress, the school card,
+ * and the classic XP/Streak/Gems/Accuracy strip + learning-focus
+ * switcher (exam_target_light) + system menus.
  */
 
-import { FormEvent, useEffect, useMemo, useState } from 'react';
+import { FormEvent, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { api, API_BASE } from '@/lib/api';
@@ -28,8 +34,18 @@ import {
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
-import { LearnProfile, fetchLearnProfile } from '@/lib/learn';
-import { type Connections, fetchConnections } from '@/lib/social';
+import { LearnProfile, fetchLearnProfile, MyCourse, fetchMyCourses } from '@/lib/learn';
+import {
+  type Connections,
+  type FollowRow,
+  deleteAvatarPhoto,
+  fetchConnections,
+  fetchPublicProfile,
+  fetchSuggestions,
+  photoUrl,
+  toggleFollow,
+  uploadAvatarPhoto,
+} from '@/lib/social';
 import SideNav from '@/components/side-nav';
 
 interface Profile {
@@ -39,6 +55,7 @@ interface Profile {
   exams: string[];
   targetYear?: number;
   avatar?: string;
+  avatarPhoto?: string;
   completed: boolean;
 }
 
@@ -96,6 +113,12 @@ function xpLabel(xp: number): string {
   return xp >= 1000 ? `${(xp / 1000).toFixed(1)}k` : `${xp}`;
 }
 
+/** The month-year join stamp the Duolingo profile wears. */
+function joinedLabel(ms: number | null): string {
+  if (!ms) return '';
+  return new Date(ms).toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
+}
+
 export default function ProfilePage() {
   const router = useRouter();
   const [me, setMe] = useState<MeResponse | null>(null);
@@ -107,6 +130,15 @@ export default function ProfilePage() {
   // following counts read right on the profile; the lists live on
   // /profile/social with follow-backs.
   const [connections, setConnections] = useState<Connections | null>(null);
+  // Founder 2026-10-22: the Duolingo identity pass. joinedMs comes off
+  // the public profile endpoint; courses + suggestions fill the new
+  // Overview and Friend-suggestions sections.
+  const [joinedMs, setJoinedMs] = useState<number | null>(null);
+  const [myCourses, setMyCourses] = useState<MyCourse[] | null>(null);
+  const [suggestions, setSuggestions] = useState<FollowRow[] | null>(null);
+  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+  const [followBusy, setFollowBusy] = useState<string | null>(null);
+  const [followed, setFollowed] = useState<Set<string>>(new Set());
 
   // Focus switcher state ---------------------------------------------------
   const [editing, setEditing] = useState(false);
@@ -127,14 +159,21 @@ export default function ProfilePage() {
   const [copied, setCopied] = useState(false);
 
   // The identity editor (founder directive 2026-10-17: the pencil sits
-  // where the level badge used to be): username, display name and one
-  // of the 50 Renance avatars, saved through PUT /me/profile.
+  // where the level badge used to be): username, display name, then the
+  // founder's 2026-10-22 upgrade - a PHOTO tab (upload to R2) next to
+  // the AVATAR tab (the 50 baked-in characters).
   const [idOpen, setIdOpen] = useState(false);
   const [idUsername, setIdUsername] = useState('');
   const [idName, setIdName] = useState('');
   const [idAvatar, setIdAvatar] = useState('');
+  const [idTab, setIdTab] = useState<'photo' | 'avatar'>('photo');
   const [idBusy, setIdBusy] = useState(false);
   const [idError, setIdError] = useState<string | null>(null);
+  const [photoBusy, setPhotoBusy] = useState(false);
+  const [photoError, setPhotoError] = useState<string | null>(null);
+  const fileRef = useRef<HTMLInputElement | null>(null);
+  const [preview, setPreview] = useState<string | null>(null);
+  const [pendingFile, setPendingFile] = useState<File | null>(null);
 
   useEffect(() => {
     if (!getToken()) {
@@ -150,6 +189,11 @@ export default function ProfilePage() {
         setExam(first);
         setFocus(focusFromExams(res.profile?.exams));
         setYear(res.profile?.targetYear ?? null);
+        if (res.user.username) {
+          fetchPublicProfile(res.user.username)
+            .then((r) => alive && setJoinedMs(r.profile?.joinedMs ?? null))
+            .catch(() => undefined);
+        }
       })
       .catch(() => {});
     api<{ state: GameState }>('/me/gamification')
@@ -157,8 +201,18 @@ export default function ProfilePage() {
       .catch(() => {});
     fetchLearnProfile().then((p) => alive && setLearn(p)).catch(() => {});
     fetchConnections()
-      .then((c) => alive && setConnections(c))
+      .then((c) => {
+        if (!alive) return;
+        setConnections(c);
+        setFollowed(new Set(c.following.map((f) => f.username)));
+      })
       .catch(() => {});
+    fetchMyCourses()
+      .then((r) => alive && setMyCourses(r.courses))
+      .catch(() => alive && setMyCourses([]));
+    fetchSuggestions(10)
+      .then((r) => alive && setSuggestions(r.users))
+      .catch(() => alive && setSuggestions([]));
     return () => {
       alive = false;
     };
@@ -175,6 +229,55 @@ export default function ProfilePage() {
     const base = profile.exams[0];
     return profile.targetYear ? `${base} ${profile.targetYear}` : base;
   }, [profile]);
+
+  // The face the banner wears: the uploaded photo wins, then the avatar
+  // key, then the initial letter.
+  const faceSrc = profile?.avatarPhoto ? photoUrl(profile.avatarPhoto) : profile?.avatar ? avatarSrc(profile.avatar) : null;
+
+  const shownSuggestions = useMemo(
+    () => (suggestions ?? []).filter((s) => !dismissed.has(s.username)),
+    [suggestions, dismissed],
+  );
+
+  async function followSuggestion(row: FollowRow) {
+    setFollowBusy(row.username);
+    const wasFollowing = followed.has(row.username);
+    setFollowed((prev) => {
+      const next = new Set(prev);
+      if (wasFollowing) next.delete(row.username);
+      else next.add(row.username);
+      return next;
+    });
+    try {
+      const res = await toggleFollow(row.username);
+      setFollowed((prev) => {
+        const next = new Set(prev);
+        if (res.following) next.add(row.username);
+        else next.delete(row.username);
+        return next;
+      });
+      setSuggestions((prev) =>
+        (prev ?? []).map((s) => (s.username === row.username ? { ...s, following: res.following } : s)),
+      );
+      setConnections((prev) =>
+        prev
+          ? {
+              followers: res.following ? [...prev.followers, row] : prev.followers,
+              following: res.following ? [...prev.following, row] : prev.following.filter((f) => f.username !== row.username),
+            }
+          : prev,
+      );
+    } catch {
+      setFollowed((prev) => {
+        const next = new Set(prev);
+        if (wasFollowing) next.add(row.username);
+        else next.delete(row.username);
+        return next;
+      });
+    } finally {
+      setFollowBusy(null);
+    }
+  }
 
   async function saveFocus(e: FormEvent) {
     e.preventDefault();
@@ -215,8 +318,59 @@ export default function ProfilePage() {
     setIdUsername(me?.user.username ?? '');
     setIdName(profile?.fullName ?? '');
     setIdAvatar(profile?.avatar ?? '');
+    setIdTab(profile?.avatarPhoto ? 'photo' : 'photo');
+    setPreview(profile?.avatarPhoto ? photoUrl(profile.avatarPhoto) : null);
+    setPendingFile(null);
+    setPhotoError(null);
     setIdError(null);
     setIdOpen(true);
+  }
+
+  function pickFile(f: File | null) {
+    setPhotoError(null);
+    if (!f) return;
+    if (!/^image\/(png|jpe?g|webp)$/.test(f.type)) {
+      setPhotoError('The photo must be a PNG, JPEG or WebP image.');
+      return;
+    }
+    if (f.size > 5 * 1024 * 1024) {
+      setPhotoError('The photo must be 5MB or smaller.');
+      return;
+    }
+    setPendingFile(f);
+    setPreview(URL.createObjectURL(f));
+  }
+
+  async function uploadPhoto() {
+    if (!pendingFile || photoBusy) return;
+    setPhotoBusy(true);
+    setPhotoError(null);
+    try {
+      const r = await uploadAvatarPhoto(pendingFile);
+      setMe((prev) => (prev ? { ...prev, profile: prev.profile ? { ...prev.profile, avatarPhoto: r.avatarPhoto } : prev.profile } : prev));
+      setPendingFile(null);
+      setPhotoBusy(false);
+      setIdOpen(false);
+    } catch (err) {
+      setPhotoError(err instanceof Error ? err.message : 'Could not upload the photo');
+      setPhotoBusy(false);
+    }
+  }
+
+  async function removePhoto() {
+    if (photoBusy) return;
+    setPhotoBusy(true);
+    setPhotoError(null);
+    try {
+      await deleteAvatarPhoto();
+      setMe((prev) => (prev ? { ...prev, profile: prev.profile ? { ...prev.profile, avatarPhoto: '' } : prev.profile } : prev));
+      setPreview(null);
+      setPendingFile(null);
+      setPhotoBusy(false);
+    } catch (err) {
+      setPhotoError(err instanceof Error ? err.message : 'Could not remove the photo');
+      setPhotoBusy(false);
+    }
   }
 
   async function saveIdentity(e: FormEvent) {
@@ -297,13 +451,8 @@ export default function ProfilePage() {
 
   // The school picker's browsable list (founder directive 2026-10-16,
   // second batch: the FULL directory - 1,100+ Nigerian tertiary
-  // institutions, every university, polytechnic, college of education
-  // and nursing/health college in the registry - is browsable here, not
-  // only the schools with banked desks; a school without content yet
-  // still becomes the student's institution and rides the shared
-  // general pool). Other Schools stays pinned last: the fallback for
-  // a name the student still cannot find. The search box narrows, an
-  // empty query shows the whole shelf so it is ALWAYS browsable.
+  // institutions - is browsable here, not only the schools with banked
+  // desks). Other Schools stays pinned last; the search box narrows.
   const schoolPickResults = useMemo<School[]>(() => {
     const q = schoolQuery.trim().toLowerCase();
     const listed = SCHOOLS.filter((s) => s.slug !== 'others');
@@ -335,6 +484,10 @@ export default function ProfilePage() {
   const schoolEditable = isFounder || !hasSchool;
 
   const name = profile?.fullName || me.user.username || 'Renance scholar';
+  const joined = joinedLabel(joinedMs);
+
+  // Identity photo state for the editor's Photo tab.
+  const editorPhotoSrc = preview ?? (profile?.avatarPhoto ? photoUrl(profile.avatarPhoto) : null);
 
   return (
     <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
@@ -342,150 +495,249 @@ export default function ProfilePage() {
 
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-4 pt-4 sm:px-6">
         <div className="mx-auto w-full max-w-2xl flex flex-col gap-4">
-          {/* Header card: avatar + level badge, name, chip, stat strip */}
-          <section className="flex flex-col gap-4 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
-            <div className="flex items-center gap-4">
-              <div className="relative shrink-0">
-                {profile?.avatar ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={avatarSrc(profile.avatar)}
-                    alt="Your avatar"
-                    className="h-20 w-20 rounded-full border border-outline-light bg-surface-container-high object-cover"
-                  />
-                ) : (
-                  <div className="flex h-20 w-20 items-center justify-center rounded-full border border-outline-light bg-surface-container-high text-2xl font-semibold text-on-surface">
-                    {name.slice(0, 1).toUpperCase()}
-                  </div>
-                )}
-                {/* The pencil (founder directive 2026-10-17: it replaces
-                    the level badge): opens the identity editor - username,
-                    display name and the 50-avatar picker. 2026-10-18:
-                    anchored hard to the avatar's bottom-right edge
-                    (bottom-0 right-0, no negative overhang), one size
-                    step down so it reads as a crisp badge on the
-                    80px circle instead of floating between the avatar
-                    and the username block, and z-10 keeps it above the
-                    image without ever escaping the card. */}
+          {/* ── The Duolingo banner (founder 2026-10-22) ─────────────── */}
+          <section className="overflow-hidden rounded-2xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+            {/* The gradient stage behind the face */}
+            <div className="relative flex flex-col items-center bg-gradient-to-b from-[#CE82FF] via-[#A560F8] to-[#7C3AED] px-4 pb-6 pt-7">
+              {/* settings gear, top-right like Duolingo */}
+              <Link
+                href="/settings"
+                aria-label="App settings"
+                className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full text-white/90 transition hover:bg-white/15"
+              >
+                <span className="material-symbols-outlined text-[22px]">settings</span>
+              </Link>
+              <div className="relative">
+                <div className="flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-white/25 text-[34px] font-black text-white ring-4 ring-white/60">
+                  {faceSrc ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={faceSrc} alt="Your avatar" className="h-full w-full object-cover" />
+                  ) : (
+                    name.slice(0, 1).toUpperCase()
+                  )}
+                </div>
+                {/* The camera pencil: opens the identity editor with the
+                    Photo tab front and centre (founder 2026-10-22). */}
                 <button
                   type="button"
                   onClick={openIdentityEditor}
                   aria-label="Edit your profile"
-                  className="absolute bottom-0 right-0 z-10 flex h-7 w-7 items-center justify-center rounded-full border-2 border-card bg-primary text-on-primary shadow-sm transition active:scale-95"
+                  className="absolute bottom-0 right-0 z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-card bg-primary text-on-primary shadow-sm transition active:scale-95"
                 >
-                  <span className="material-symbols-outlined text-[14px]">edit</span>
+                  <span className="material-symbols-outlined text-[15px]">photo_camera</span>
                 </button>
               </div>
-              <div className="min-w-0 flex-1">
-                <h2 className="truncate text-2xl font-bold tracking-tight text-on-surface">{name}</h2>
-                <div className="mt-1 flex items-center gap-2">
-                  <span className="truncate text-[15px] text-text-secondary">@{me.user.username}</span>
-                  <span className="shrink-0 rounded-full bg-selection-blue px-2 py-0.5 font-mono text-[12px] text-on-surface">
-                    {targetChip}
-                  </span>
-                </div>
-              </div>
             </div>
 
-            {/* Stat strip */}
-            <div className="mt-1 flex items-center justify-between rounded-lg bg-surface-container p-2">
-              <div className="flex flex-1 flex-col items-center">
-                <span className="text-[13px] text-text-secondary">XP</span>
-                {/* Founder 2026-10-15: the XP readout reads primary-ink
-                    (light pastel accent on the fixed dark surface - the
-                    dark accent-ink was invisible on the dark strip) with
-                    tabular figures so the number never jitters. */}
-                <span className="text-2xl font-bold tabular-nums tracking-tight text-primary-ink">
-                  {xpLabel(state?.totalXp ?? 0)}
-                </span>
-              </div>
-              <div className="h-8 w-px bg-outline-light/30" />
-              <div className="flex flex-1 flex-col items-center">
-                <span className="text-[13px] text-text-secondary">Streak</span>
-                <div className="flex items-center gap-1">
-                  <span className="material-symbols-outlined fill-current text-[18px] text-accent-amber">
-                    local_fire_department
-                  </span>
-                  <span className="text-2xl font-bold tracking-tight text-on-surface">
-                    {state?.currentStreak ?? 0}
-                  </span>
+            {/* Identity + stats on the card body */}
+            <div className="flex flex-col items-center gap-1 px-4 pt-3 text-center">
+              <h2 className="text-[22px] font-black tracking-tight text-on-surface">{name}</h2>
+              <p className="text-[13.5px] font-bold text-on-surface-variant">
+                @{me.user.username}
+                {joined ? <span className="font-semibold"> · Joined {joined}</span> : null}
+              </p>
+
+              {/* The Duolingo stat row: courses / following / followers */}
+              <div className="mt-3 flex w-full items-stretch justify-between text-center">
+                <div className="flex flex-1 flex-col items-center">
+                  <p className="flex items-center gap-1 text-[19px] font-black text-on-surface">
+                    <span className="material-symbols-outlined text-[17px] text-primary">menu_book</span>
+                    {myCourses?.length ?? 0}
+                  </p>
+                  <p className="text-[11.5px] font-bold text-on-surface-variant">Courses</p>
                 </div>
+                <div className="my-1 w-px bg-outline-variant/40" />
+                <Link href="/profile/social" className="flex flex-1 flex-col items-center transition hover:opacity-80">
+                  <p className="text-[19px] font-black text-on-surface">{connections?.following.length ?? 0}</p>
+                  <p className="text-[11.5px] font-bold text-on-surface-variant">Following</p>
+                </Link>
+                <div className="my-1 w-px bg-outline-variant/40" />
+                <Link href="/profile/social" className="flex flex-1 flex-col items-center transition hover:opacity-80">
+                  <p className="text-[19px] font-black text-on-surface">{connections?.followers.length ?? 0}</p>
+                  <p className="text-[11.5px] font-bold text-on-surface-variant">Followers</p>
+                </Link>
               </div>
-              <div className="h-8 w-px bg-outline-light/30" />
-              <div className="flex flex-1 flex-col items-center">
-                <span className="text-[13px] text-text-secondary">Gems</span>
-                <div className="flex items-center gap-1">
-                  <span aria-hidden className="inline-block h-3.5 w-3.5 rounded-[3px] bg-macaw shadow-[0_1px_0_0_#1899d6]" />
-                  <span className="text-2xl font-bold tracking-tight text-macaw-dark">
-                    {learn ? learn.gems.toLocaleString() : 0}
-                  </span>
-                </div>
-              </div>
-              <div className="h-8 w-px bg-outline-light/30" />
-              <div className="flex flex-1 flex-col items-center">
-                <span className="text-[13px] text-text-secondary">Accuracy</span>
-                <span className="text-2xl font-bold tracking-tight text-accent-emerald">{accuracy}%</span>
+
+              {/* ADD FRIENDS + share, the Duolingo action row */}
+              <div className="mt-4 flex w-full items-center gap-2">
+                <Link
+                  href="/profile/search"
+                  className="flex flex-1 items-center justify-center gap-2 rounded-xl border-2 border-primary py-2.5 text-[13px] font-extrabold uppercase tracking-wide text-primary transition hover:bg-selection-blue active:translate-y-[1px]"
+                >
+                  <span className="material-symbols-outlined text-[18px]">person_add</span>
+                  Add friends
+                </Link>
+                <button
+                  type="button"
+                  aria-label="Share your profile"
+                  onClick={() => {
+                    const url = typeof window !== 'undefined' ? `${window.location.origin}/profile/view/?u=${encodeURIComponent(me.user.username)}` : '';
+                    const text = `Add me on Renance - @${me.user.username}`;
+                    if (typeof navigator !== 'undefined' && navigator.share) {
+                      void navigator.share({ title: 'Renance', text, url }).catch(() => undefined);
+                    } else {
+                      void navigator.clipboard?.writeText(`${text} ${url}`);
+                      setCopied(true);
+                      window.setTimeout(() => setCopied(false), 1800);
+                    }
+                  }}
+                  className="flex h-11 w-12 shrink-0 items-center justify-center rounded-xl border-2 border-outline-variant text-on-surface-variant transition hover:bg-surface-container active:translate-y-[1px]"
+                >
+                  <span className="material-symbols-outlined text-[20px]">ios_share</span>
+                </button>
               </div>
             </div>
-
           </section>
 
-          {/* The league strip is RETIRED (founder 2026-10-15: "remove the
-              Bronze League card from the profile"). The league standings
-              still live on /league from the sidebar. */}
-
-          {/* The follow strip (founder 2026-10-14 evening pass): followers
-              and following read right on the profile; tapping opens the
-              lists on /profile/social with follow-backs. Founder
-              2026-10-15: it sits DIRECTLY above the invite-friends card. */}
-          <section className="flex items-stretch overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
-            <Link href="/profile/social" className="flex flex-1 items-center justify-center gap-2 py-3.5 transition hover:bg-surface-container-high">
-              <span className="material-symbols-outlined text-[19px] text-primary">group</span>
-              <span className="text-[14px] font-bold text-on-surface">{connections?.followers.length ?? 0}</span>
-              <span className="text-[13px] font-semibold text-text-secondary">Followers</span>
-            </Link>
-            <div className="my-3 w-px bg-outline-light/40" />
-            <Link href="/profile/social" className="flex flex-1 items-center justify-center gap-2 py-3.5 transition hover:bg-surface-container-high">
-              <span className="material-symbols-outlined text-[19px] text-macaw-dark">person_add</span>
-              <span className="text-[14px] font-bold text-on-surface">{connections?.following.length ?? 0}</span>
-              <span className="text-[13px] font-semibold text-text-secondary">Following</span>
-            </Link>
-          </section>
-
-          {/* The big premium subscription card is RETIRED (founder
-              directive 2026-10-14: "remove that big premium subscription
-              card from the profile") - the whole REN wallet gradient
-              with it. The referral invite below keeps the
-              invite-friends-for-points loop alive in a compact card. */}
-          {me.entitlement?.referralCode && (
-            <section className="flex items-center gap-3 rounded-2xl bg-card p-3.5 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/15">
-                <span className="material-symbols-outlined text-[20px] text-primary-ink">redeem</span>
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="text-[14px] font-bold text-on-surface">Invite friends, earn 100 diamonds</p>
-                <p className="truncate font-mono text-[12px] font-bold tracking-wider text-on-surface-variant">
-                  {me.entitlement.referralCode}
-                </p>
+          {/* ── Friend suggestions (founder 2026-10-22) ───────────────── */}
+          {shownSuggestions.length > 0 && (
+            <section className="rounded-2xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+              <div className="mb-3 flex items-baseline justify-between">
+                <h3 className="text-[15px] font-black text-on-surface">Friend suggestions</h3>
+                <Link href="/profile/search" className="text-[12px] font-extrabold uppercase tracking-wide text-primary hover:underline">
+                  View all
+                </Link>
               </div>
-              <button
-                type="button"
-                onClick={() => {
-                  const link = `${window.location.origin}/register/?ref=${me.entitlement!.referralCode}`;
-                  void navigator.clipboard?.writeText(link);
-                  setCopied(true);
-                  window.setTimeout(() => setCopied(false), 1800);
-                }}
-                className="key-btn shrink-0 bg-primary px-3.5 text-[12px] text-on-primary"
-              >
-                {copied ? 'Copied' : 'Copy link'}
-              </button>
+              <div className="-mx-4 flex snap-x gap-3 overflow-x-auto px-4 pb-1">
+                {shownSuggestions.map((s) => (
+                  <div
+                    key={s.username}
+                    className="relative w-[132px] shrink-0 snap-start rounded-xl border-2 border-outline-variant/70 p-3 text-center"
+                  >
+                    <button
+                      type="button"
+                      aria-label={`Dismiss ${s.name}`}
+                      onClick={() => setDismissed((prev) => new Set(prev).add(s.username))}
+                      className="absolute right-1 top-1 flex h-6 w-6 items-center justify-center rounded-full text-on-surface-variant transition hover:bg-surface-container"
+                    >
+                      <span className="material-symbols-outlined text-[15px]">close</span>
+                    </button>
+                    <Link href={`/profile/view/?u=${encodeURIComponent(s.username)}`} className="mt-2 flex justify-center">
+                      <FaceAvatar row={s} size={56} />
+                    </Link>
+                    <p className="mt-2 truncate text-[13px] font-extrabold text-on-surface">{s.name}</p>
+                    {s.followsYou && <p className="text-[11px] font-bold text-on-surface-variant">Follows you</p>}
+                    <button
+                      type="button"
+                      onClick={() => void followSuggestion(s)}
+                      disabled={followBusy === s.username}
+                      className={`mt-2 w-full rounded-lg py-1.5 text-[11.5px] font-extrabold uppercase tracking-wide transition active:translate-y-[1px] disabled:opacity-60 ${
+                        s.following || followed.has(s.username)
+                          ? 'border-2 border-outline-variant text-on-surface-variant'
+                          : 'bg-macaw text-white'
+                      }`}
+                    >
+                      {s.following || followed.has(s.username) ? 'Following' : 'Follow'}
+                    </button>
+                  </div>
+                ))}
+              </div>
             </section>
           )}
 
-          {/* The follow strip (founder 2026-10-14 evening pass) lives
-              DIRECTLY above the invite card now (founder 2026-10-15) -
-              it was moved up to sit on top of "Invite friends". */}
+          {/* ── Overview: the courses on this scholar's desk ──────────── */}
+          <section className="rounded-2xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+            <div className="mb-3 flex items-baseline justify-between">
+              <h3 className="text-[15px] font-black text-on-surface">Overview</h3>
+              <span className="text-[12px] font-bold text-on-surface-variant">
+                {myCourses?.length ?? 0} course{(myCourses?.length ?? 0) === 1 ? '' : 's'}
+              </span>
+            </div>
+            {!myCourses && <p className="py-2 text-[13px] font-bold text-on-surface-variant">Loading your courses…</p>}
+            {myCourses && myCourses.length === 0 && (
+              <div className="rounded-xl border-2 border-dashed border-outline-variant/70 px-4 py-6 text-center">
+                <span className="material-symbols-outlined text-[30px] text-primary">school</span>
+                <p className="mt-1 text-[13.5px] font-extrabold text-on-surface">No courses yet</p>
+                <p className="mt-0.5 text-[12.5px] font-semibold text-on-surface-variant">
+                  Pick your first course and it shows up here with your progress.
+                </p>
+                <Link href="/courses" className="key-btn mt-3 inline-flex bg-primary text-[12.5px] text-on-primary">
+                  Find courses
+                </Link>
+              </div>
+            )}
+            <div className="flex flex-col gap-3">
+              {myCourses?.map((c) => {
+                const pct = c.topicCount > 0 ? Math.round((c.completedTopics * 100) / c.topicCount) : 0;
+                return (
+                  <Link
+                    key={c.id}
+                    href="/learn"
+                    className="group rounded-xl border-2 border-outline-variant/60 p-3 transition hover:border-primary/60 hover:bg-surface-container"
+                  >
+                    <div className="flex items-center gap-3">
+                      <span
+                        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-white ${
+                          c.active ? 'bg-primary' : 'bg-on-surface-variant/70'
+                        }`}
+                      >
+                        <span className="material-symbols-outlined text-[20px]">auto_stories</span>
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        <span className="flex items-center gap-1.5">
+                          <span className="min-w-0 truncate text-[13.5px] font-extrabold text-on-surface">{c.title}</span>
+                          {c.active && (
+                            <span className="shrink-0 rounded-full bg-selection-blue px-1.5 py-0.5 font-mono text-[9.5px] font-black uppercase text-on-surface">
+                              Active
+                            </span>
+                          )}
+                        </span>
+                        <span className="mt-0.5 block truncate text-[11.5px] font-semibold text-on-surface-variant">
+                          {c.completedTopics}/{c.topicCount} topics · {pct}%
+                        </span>
+                      </span>
+                      <span className="material-symbols-outlined shrink-0 text-outline-light transition group-hover:text-primary">
+                        chevron_right
+                      </span>
+                    </div>
+                    <div className="mt-2 h-2.5 w-full overflow-hidden rounded-full bg-surface-container">
+                      <div
+                        className={`h-full rounded-full transition-all ${pct >= 100 ? 'bg-[#FFC800]' : 'bg-primary'}`}
+                        style={{ width: `${Math.max(pct, pct > 0 ? 4 : 0)}%` }}
+                      />
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+
+          {/* ── Stat strip: XP / Streak / Gems / Accuracy ─────────────── */}
+          <section className="flex items-center justify-between rounded-xl bg-card p-2 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+            <div className="flex flex-1 flex-col items-center">
+              <span className="text-[13px] text-text-secondary">XP</span>
+              <span className="text-2xl font-bold tabular-nums tracking-tight text-primary-ink">
+                {xpLabel(state?.totalXp ?? 0)}
+              </span>
+            </div>
+            <div className="h-8 w-px bg-outline-light/30" />
+            <div className="flex flex-1 flex-col items-center">
+              <span className="text-[13px] text-text-secondary">Streak</span>
+              <div className="flex items-center gap-1">
+                <span className="material-symbols-outlined fill-current text-[18px] text-accent-amber">
+                  local_fire_department
+                </span>
+                <span className="text-2xl font-bold tracking-tight text-on-surface">
+                  {state?.currentStreak ?? 0}
+                </span>
+              </div>
+            </div>
+            <div className="h-8 w-px bg-outline-light/30" />
+            <div className="flex flex-1 flex-col items-center">
+              <span className="text-[13px] text-text-secondary">Gems</span>
+              <div className="flex items-center gap-1">
+                <span aria-hidden className="inline-block h-3.5 w-3.5 rounded-[3px] bg-macaw shadow-[0_1px_0_0_#1899d6]" />
+                <span className="text-2xl font-bold tracking-tight text-macaw-dark">
+                  {learn ? learn.gems.toLocaleString() : 0}
+                </span>
+              </div>
+            </div>
+            <div className="h-8 w-px bg-outline-light/30" />
+            <div className="flex flex-1 flex-col items-center">
+              <span className="text-[13px] text-text-secondary">Accuracy</span>
+              <span className="text-2xl font-bold tracking-tight text-accent-emerald">{accuracy}%</span>
+            </div>
+          </section>
 
           {/* Learning focus switcher (founder directive) ---------------------- */}
           <section className="overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
@@ -601,7 +853,9 @@ export default function ProfilePage() {
 
           {/* My school: the ONLY place the picked school can change -------
               and since 2026-10-04 only the founder's account can switch;
-              everyone else gets a locked, read-only card. */}
+              everyone else gets a locked, read-only card. Founder
+              2026-10-22: the school also renders on the new banner-era
+              profile so viewers see it (public profiles show it too). */}
           <section className="overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
             {!schoolEditing || !schoolEditable ? (
               schoolEditable ? (
@@ -655,14 +909,10 @@ export default function ProfilePage() {
                   <h3 className="text-[15px] font-semibold text-on-surface">Which school are you in?</h3>
                 </div>
                 <p className="mb-4 text-[13px] text-text-secondary">
-                  Your school drives the School Desk content. This is the only place it can
-                  be changed after the first pick.
+                  Your school drives the School Desk content and shows on your profile. This is the
+                  only place it can be changed after the first pick.
                 </p>
 
-                {/* Search box (founder bug report 2026-10-11: the old
-                    datalist never listed the schools until you typed the
-                    exact name, and its dropdown was unusable). The list
-                    below is always browsable and scrolls. */}
                 <div className="flex items-center gap-2 rounded-lg border border-outline-variant bg-surface-container px-3.5 py-2.5 transition-colors focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/40">
                   <span className="material-symbols-outlined text-[18px] text-on-surface-variant">search</span>
                   <input
@@ -691,13 +941,6 @@ export default function ProfilePage() {
                   )}
                 </div>
 
-                {/* The browsable, scrollable school list: every live
-                    desk (the same listing as the School Desk gate) plus
-                    Other Schools pinned last. Founder bug 2026-10-16:
-                    the list sits on its OWN opaque, isolated layer -
-                    z-stacked above the summary text and action row, with
-                    a viewport-fraction height bound so it can never
-                    overflow onto the Save buttons. */}
                 <ul className="relative z-10 mt-3 max-h-[45vh] list-none divide-y divide-outline-variant/40 overflow-y-auto overscroll-contain rounded-xl border border-outline-variant/60 bg-card shadow-sm">
                   {schoolPickResults.map((s) => {
                     const isOthers = s.slug === 'others';
@@ -724,10 +967,6 @@ export default function ProfilePage() {
                             </span>
                           </span>
                           <span className="min-w-0 flex-1">
-                            {/* Founder bug 2026-10-16: long university
-                                names wrapped to an early "…" even with
-                                room to spare - the name may now use the
-                                full row width and wrap to two lines. */}
                             <span className="block break-words text-[14px] font-semibold leading-snug text-on-surface">
                               {s.name}
                             </span>
@@ -746,7 +985,6 @@ export default function ProfilePage() {
                   })}
                 </ul>
 
-                {/* The picked value - what Save will write. */}
                 <p className="mt-3 text-[12.5px] text-on-surface-variant">
                   {schoolName.trim() ? (
                     <>
@@ -799,14 +1037,39 @@ export default function ProfilePage() {
           </section>
 
           {/* Menu group: system -------------------------------------------- */}
-          {/* My Packs / My papers removed (founder 2026-10-22): the pack
-              library lives on the Courses tab, exam papers live in Exam
-              History - the profile menu no longer double-lists them. */}
           <section className="flex flex-col overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
             <MenuLink icon="info" tint="text-on-surface-variant" label="About Renance" href="/about" />
             <MenuDivider />
             <MenuLink icon="help" tint="text-on-surface-variant" label="Help & Support" href="/faq" />
           </section>
+
+          {/* The referral invite keeps the invite-friends-for-points loop
+              alive (founder 2026-10-14) in its compact card. */}
+          {me.entitlement?.referralCode && (
+            <section className="flex items-center gap-3 rounded-2xl bg-card p-3.5 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/15">
+                <span className="material-symbols-outlined text-[20px] text-primary-ink">redeem</span>
+              </span>
+              <div className="min-w-0 flex-1">
+                <p className="text-[14px] font-bold text-on-surface">Invite friends, earn 100 diamonds</p>
+                <p className="truncate font-mono text-[12px] font-bold tracking-wider text-on-surface-variant">
+                  {me.entitlement.referralCode}
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  const link = `${window.location.origin}/register/?ref=${me.entitlement!.referralCode}`;
+                  void navigator.clipboard?.writeText(link);
+                  setCopied(true);
+                  window.setTimeout(() => setCopied(false), 1800);
+                }}
+                className="key-btn shrink-0 bg-primary px-3.5 text-[12px] text-on-primary"
+              >
+                {copied ? 'Copied' : 'Copy link'}
+              </button>
+            </section>
+          )}
 
           {/* Sign out ------------------------------------------------------- */}
           <section className="flex flex-col overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
@@ -821,8 +1084,8 @@ export default function ProfilePage() {
               <div className="flex-1 text-[15px] font-semibold text-error">Sign Out</div>
             </button>
             <MenuDivider />
-            {/* Delete account (from the retired avatar popup): asks twice
-                via the server's own confirm flow, then purges everything. */}
+            {/* Delete account: asks twice via the server's own confirm
+                flow, then purges everything. */}
             <a
               href="/delete-account"
               className="group flex w-full items-center gap-4 p-4 text-left transition hover:bg-error-container"
@@ -840,11 +1103,15 @@ export default function ProfilePage() {
         </div>
       </div>
 
-      {/* The identity editor: username, display name, avatar. */}
+      {/* The identity editor: Photo tab (upload to R2) + Avatar tab
+          (the 50 characters) + the name/username fields. Founder
+          2026-10-22: photos live in the bucket's profile-picture/
+          folder; the one-wins rule means picking a photo clears the
+          avatar and picking an avatar clears the photo. */}
       {idOpen && (
         <div
           className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 p-0 sm:items-center sm:p-4"
-          onClick={() => !idBusy && setIdOpen(false)}
+          onClick={() => !idBusy && !photoBusy && setIdOpen(false)}
           role="presentation"
         >
           <form
@@ -852,10 +1119,8 @@ export default function ProfilePage() {
             onClick={(e) => {
               e.stopPropagation();
               // Tap a blank stretch of the sheet and the soft keyboard
-              // steps aside (founder report 2026-10-18: the keyboard
-              // hid the pinned Save bar; dismissing it reveals the
-              // footer instantly). Only bare background taps blur -
-              // taps on inputs, buttons, labels and links pass through.
+              // steps aside. Only bare background taps blur - taps on
+              // inputs, buttons, labels and links pass through.
               const target = e.target as HTMLElement;
               if (!target.closest('input, button, a, label, [role=\'button\']')) {
                 const active = document.activeElement;
@@ -869,7 +1134,7 @@ export default function ProfilePage() {
               <h3 className="text-[15px] font-bold text-on-surface">Edit profile</h3>
               <button
                 type="button"
-                onClick={() => !idBusy && setIdOpen(false)}
+                onClick={() => !idBusy && !photoBusy && setIdOpen(false)}
                 aria-label="Close"
                 className="ml-auto flex h-8 w-8 items-center justify-center rounded-full text-on-surface-variant transition hover:bg-surface-container"
               >
@@ -877,19 +1142,112 @@ export default function ProfilePage() {
               </button>
             </div>
 
-            {/* min-h-0 is the load-bearing fix (founder report
-                2026-10-17: mobile could never reach the Save button):
-                without it the flex child refuses to shrink below its
-                content height, the 50-avatar grid pushes the footer
-                past the 92dvh sheet, and overflow-hidden clips the
-                Save button off forever. 2026-10-18 pass: the text
-                fields now lead and the avatar grid lives in its own
-                capped, independently scrolled region, so the pinned
-                Save bar stays in view with at most a flick through the
-                grid; overscroll-contain stops the inner scroll from
-                chaining to the page behind the sheet. */}
             <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-4">
-              <label className="block">
+              {/* ── Identity image: Photo | Avatar tabs ─────────────── */}
+              <div className="mb-3 flex rounded-xl bg-surface-container p-1">
+                {(['photo', 'avatar'] as const).map((t) => (
+                  <button
+                    key={t}
+                    type="button"
+                    onClick={() => setIdTab(t)}
+                    className={`flex flex-1 items-center justify-center gap-1.5 rounded-lg py-2 text-[12.5px] font-extrabold uppercase tracking-wide transition ${
+                      idTab === t ? 'bg-card text-on-surface shadow-sm' : 'text-on-surface-variant'
+                    }`}
+                  >
+                    <span className="material-symbols-outlined text-[16px]">{t === 'photo' ? 'photo_camera' : 'mood'}</span>
+                    {t === 'photo' ? 'Photo' : 'Avatar'}
+                  </button>
+                ))}
+              </div>
+
+              {idTab === 'photo' ? (
+                <div className="flex flex-col items-center gap-3 rounded-xl border-2 border-dashed border-outline-variant/70 px-4 py-5">
+                  <div className="relative">
+                    <div className="flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-surface-container-high text-[34px] font-black text-on-surface">
+                      {editorPhotoSrc ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={editorPhotoSrc} alt="Your photo" className="h-full w-full object-cover" />
+                      ) : profile?.avatar ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={avatarSrc(profile.avatar)} alt="" className="h-full w-full object-cover" />
+                      ) : (
+                        (idName || name).slice(0, 1).toUpperCase()
+                      )}
+                    </div>
+                  </div>
+                  <input
+                    ref={fileRef}
+                    type="file"
+                    accept="image/png,image/jpeg,image/webp"
+                    className="hidden"
+                    onChange={(e) => pickFile(e.target.files?.[0] ?? null)}
+                  />
+                  <div className="flex gap-2">
+                    <button
+                      type="button"
+                      onClick={() => fileRef.current?.click()}
+                      className="key-btn bg-primary text-[12.5px] text-on-primary"
+                    >
+                      {pendingFile ? 'Choose another' : 'Upload photo'}
+                    </button>
+                    {profile?.avatarPhoto && !pendingFile && (
+                      <button
+                        type="button"
+                        onClick={() => void removePhoto()}
+                        disabled={photoBusy}
+                        className="key-btn border-2 border-outline-variant bg-card text-[12.5px] text-on-surface-variant disabled:opacity-50"
+                      >
+                        Remove
+                      </button>
+                    )}
+                  </div>
+                  {pendingFile && (
+                    <button
+                      type="button"
+                      onClick={() => void uploadPhoto()}
+                      disabled={photoBusy}
+                      className="key-btn w-full bg-macaw text-[12.5px] text-white disabled:opacity-60"
+                    >
+                      {photoBusy ? 'Uploading…' : 'Save photo'}
+                    </button>
+                  )}
+                  {photoError && (
+                    <p className="w-full rounded-lg bg-error-container px-3 py-2 text-center text-[12.5px] font-semibold text-on-error-container">
+                      {photoError}
+                    </p>
+                  )}
+                  <p className="text-center text-[11.5px] font-semibold text-on-surface-variant">
+                    PNG, JPEG or WebP · up to 5MB. Stored on Cloudflare R2 and used everywhere your face shows.
+                  </p>
+                </div>
+              ) : (
+                <div className="grid max-h-56 grid-cols-5 gap-2 overflow-y-auto overscroll-contain pr-1 sm:grid-cols-6">
+                  {AVATARS.map((a) => {
+                    const active = idAvatar === a;
+                    return (
+                      <button
+                        key={a}
+                        type="button"
+                        onClick={() => setIdAvatar(active ? '' : a)}
+                        aria-label={`Choose avatar ${a}`}
+                        className={`relative overflow-hidden rounded-full transition ${
+                          active ? 'ring-2 ring-primary ring-offset-2 ring-offset-card' : 'opacity-90 hover:opacity-100'
+                        }`}
+                      >
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={avatarSrc(a)} alt="" className="aspect-square w-full object-cover" />
+                        {active && (
+                          <span className="absolute bottom-0 right-0 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-on-primary">
+                            <span className="material-symbols-outlined text-[11px] leading-none">check</span>
+                          </span>
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
+
+              <label className="mt-4 block">
                 <span className="mb-1 block font-mono text-xs uppercase tracking-wider text-on-surface-variant">
                   Full name
                 </span>
@@ -929,37 +1287,9 @@ export default function ProfilePage() {
               {idError && (
                 <p className="mt-3 rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">{idError}</p>
               )}
-
-              <p className="mb-2 mt-4 font-mono text-xs uppercase tracking-wider text-on-surface-variant">
-                Pick your avatar
-              </p>
-              <div className="grid max-h-44 grid-cols-5 gap-2 overflow-y-auto overscroll-contain pr-1 sm:grid-cols-6">
-                {AVATARS.map((a) => {
-                  const active = idAvatar === a;
-                  return (
-                    <button
-                      key={a}
-                      type="button"
-                      onClick={() => setIdAvatar(active ? '' : a)}
-                      aria-label={`Choose avatar ${a}`}
-                      className={`relative overflow-hidden rounded-full transition ${
-                        active ? 'ring-2 ring-primary ring-offset-2 ring-offset-card' : 'opacity-90 hover:opacity-100'
-                      }`}
-                    >
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={avatarSrc(a)} alt="" className="aspect-square w-full object-cover" />
-                      {active && (
-                        <span className="absolute bottom-0 right-0 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-on-primary">
-                          <span className="material-symbols-outlined text-[11px] leading-none">check</span>
-                        </span>
-                      )}
-                    </button>
-                  );
-                })}
-              </div>
             </div>
 
-            <div className="flex gap-2 border-t border-outline-variant/40 px-4 pt-3.5 pb-[max(0.875rem,env(safe-area-inset-bottom))]">
+            <div className="flex gap-2 border-t border-outline-variant/40 px-4 pb-[max(0.875rem,env(safe-area-inset-bottom))] pt-3.5">
               <button
                 type="button"
                 onClick={() => setIdOpen(false)}
@@ -984,6 +1314,25 @@ export default function ProfilePage() {
       <SideNav />
       <BottomNav />
     </main>
+  );
+}
+
+/** The suggestion/row face: photo wins, then avatar, then the initial. */
+function FaceAvatar({ row, size = 40 }: { row: { avatar?: string; photo?: string; name?: string; username?: string }; size?: number }) {
+  const src = row.photo ? photoUrl(row.photo) : row.avatar ? avatarSrc(row.avatar) : null;
+  const initial = (row.name || row.username || '?').slice(0, 1).toUpperCase();
+  return (
+    <span
+      className="flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-surface-container-high font-bold text-on-surface"
+      style={{ width: size, height: size, fontSize: Math.max(11, size * 0.38) }}
+    >
+      {src ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={src} alt="" className="h-full w-full object-cover" loading="lazy" />
+      ) : (
+        initial
+      )}
+    </span>
   );
 }
 

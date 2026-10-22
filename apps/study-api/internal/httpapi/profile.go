@@ -137,6 +137,14 @@ func (s *Server) handleUpdateProfile(w http.ResponseWriter, r *http.Request) {
         // Silent background asset sync starts the moment preferences land.
         s.syncer.Kick(uid)
 
+        // Founder 2026-10-22, the one-wins rule: an explicit avatar pick
+        // clears any uploaded photo so the two never fight on clients.
+        if req.Avatar != "" {
+                if err := s.store.SetAvatarPhoto(r.Context(), uid, ""); err != nil {
+                        s.log.Error("avatar photo clear on pick", "err", err)
+                }
+        }
+
         resp := map[string]any{
                 "profile": profile,
                 "sync":    "kicked",

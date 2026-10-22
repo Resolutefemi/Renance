@@ -589,8 +589,34 @@ type Profile struct {
         Subjects    []string  `json:"subjects"`
         TargetYear  *int      `json:"targetYear,omitempty"`
         Avatar      string    `json:"avatar,omitempty"` // 'avatar-17' or '' for the initial-letter avatar
+        // AvatarPhoto is the R2 object key of the uploaded profile photo
+        // (founder 2026-10-22, the profile-picture/ folder), empty unless
+        // the scholar uploaded one. When set it wins over Avatar on every
+        // client; picking an avatar clears it and vice versa.
+        AvatarPhoto string    `json:"avatarPhoto,omitempty"`
         Completed   bool      `json:"completed"`
         UpdatedAt   time.Time `json:"-"`
+}
+
+// SetAvatar writes ONLY the avatar column - the photo column is left
+// exactly as it was, so a full-profile save from any client never
+// silently strips an uploaded photo.
+func (s *Store) SetAvatar(ctx context.Context, userID, key string) error {
+        _, err := s.Pool.Exec(ctx, `UPDATE study.profiles SET avatar = $2, updated_at = now() WHERE user_id = $1`, userID, key)
+        if err != nil {
+                return fmt.Errorf("store: set avatar: %w", err)
+        }
+        return nil
+}
+
+// SetAvatarPhoto writes ONLY the avatar_photo column (the R2 key under
+// the profile-picture/ folder, '' to clear).
+func (s *Store) SetAvatarPhoto(ctx context.Context, userID, key string) error {
+        _, err := s.Pool.Exec(ctx, `UPDATE study.profiles SET avatar_photo = $2, updated_at = now() WHERE user_id = $1`, userID, key)
+        if err != nil {
+                return fmt.Errorf("store: set avatar photo: %w", err)
+        }
+        return nil
 }
 
 func (s *Store) UpsertProfile(ctx context.Context, userID string, p *Profile) (*Profile, error) {
@@ -626,9 +652,9 @@ func (s *Store) UpsertProfile(ctx context.Context, userID string, p *Profile) (*
                     avatar      = EXCLUDED.avatar,
                     completed   = true,
                     updated_at  = now()
-                RETURNING full_name, institution, grade_level, exams, subjects, target_year, avatar, completed, updated_at`,
+                RETURNING full_name, institution, grade_level, exams, subjects, target_year, avatar, avatar_photo, completed, updated_at`,
                 userID, p.FullName, p.Institution, p.GradeLevel, string(examsJSON), string(subjectsJSON), p.TargetYear, p.Avatar,
-        ).Scan(&out.FullName, &out.Institution, &out.GradeLevel, &examsJSON, &subjectsJSON, &out.TargetYear, &out.Avatar, &out.Completed, &out.UpdatedAt)
+        ).Scan(&out.FullName, &out.Institution, &out.GradeLevel, &examsJSON, &subjectsJSON, &out.TargetYear, &out.Avatar, &out.AvatarPhoto, &out.Completed, &out.UpdatedAt)
         if err != nil {
                 return nil, fmt.Errorf("store: upsert profile: %w", err)
         }
@@ -645,9 +671,9 @@ func (s *Store) ProfileByUser(ctx context.Context, userID string) (*Profile, err
         var examsJSON, subjectsJSON []byte
         p := &Profile{}
         err := s.Pool.QueryRow(ctx, `
-                SELECT full_name, institution, grade_level, exams, subjects, target_year, avatar, completed, updated_at
+                SELECT full_name, institution, grade_level, exams, subjects, target_year, avatar, COALESCE(avatar_photo,''), completed, updated_at
                 FROM study.profiles WHERE user_id = $1`, userID,
-        ).Scan(&p.FullName, &p.Institution, &p.GradeLevel, &examsJSON, &subjectsJSON, &p.TargetYear, &p.Avatar, &p.Completed, &p.UpdatedAt)
+        ).Scan(&p.FullName, &p.Institution, &p.GradeLevel, &examsJSON, &subjectsJSON, &p.TargetYear, &p.Avatar, &p.AvatarPhoto, &p.Completed, &p.UpdatedAt)
         if errors.Is(err, pgx.ErrNoRows) {
                 return nil, nil
         }

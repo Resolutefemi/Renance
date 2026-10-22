@@ -126,6 +126,11 @@ type Server struct {
         // league - all keyed to the real account. nil in tests keeps
         // every /learn route on a clean 503.
         learn *learn.Service
+
+        // photos is the profile-picture folder on the SAME R2 bucket as
+        // the lessons (founder 2026-10-22). nil keeps the photo upload
+        // route on a clean 503 and the serve route on "not configured".
+        photos *r2store.Client
 }
 
 // syncerKicker is the narrow interface the handlers need from the syncer.
@@ -199,6 +204,15 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
                         "bucket", blobs.Bucket(), "prefix", blobs.Prefix())
         } else {
                 log.Info("lesson blobs: r2 not configured - the cache database stays the only lesson home")
+        }
+        // Profile photos (founder 2026-10-22): the profile-picture/ folder
+        // on the same bucket. Same credentials, zero extra configuration.
+        if photos := r2store.FromEnvPrefix(log, "profile-picture/"); photos != nil {
+                s.photos = photos
+                log.Info("profile photos: cloudflare r2 attached",
+                        "bucket", photos.Bucket(), "prefix", photos.Prefix())
+        } else {
+                log.Info("profile photos: r2 not configured - photo uploads stay off")
         }
         s.learn.WireExpGuard()
         s.limiter = newRateLimiter(cfg.TutorPerMin, cfg.TutorPerMin)
@@ -348,6 +362,9 @@ func (s *Server) Handler() http.Handler {
         // the follow graph and the public profiles every board opens.
         mux.HandleFunc("GET /social/feed", s.auth(s.handleSocialFeed))
         mux.HandleFunc("POST /social/feed", s.auth(s.handleSocialPostCreate))
+        mux.HandleFunc("GET /social/search", s.auth(s.handleSocialSearch))
+        mux.HandleFunc("GET /social/suggestions", s.auth(s.handleSocialSuggestions))
+        mux.HandleFunc("POST /social/announcements", s.auth(s.handleSocialAnnouncementCreate))
         // Founder directive 2026-10-22: user posts are enabled again -
         // the feed automation needs the student's achievement shares
         // riding post meta ({score, exam, course...}). The 2026-10-14
@@ -356,11 +373,17 @@ func (s *Server) Handler() http.Handler {
         // (user_id, milestone) dedup unchanged.
         mux.HandleFunc("DELETE /social/posts/{id}", s.auth(s.handleSocialPostDelete))
         mux.HandleFunc("POST /social/posts/{id}/like", s.auth(s.handleSocialLike))
+        mux.HandleFunc("POST /social/posts/{id}/react", s.auth(s.handleSocialReact))
         mux.HandleFunc("GET /social/posts/{id}/comments", s.auth(s.handleSocialCommentsGet))
         mux.HandleFunc("POST /social/posts/{id}/comments", s.auth(s.handleSocialCommentAdd))
         mux.HandleFunc("POST /social/users/{username}/follow", s.auth(s.handleSocialFollow))
         mux.HandleFunc("GET /social/users/{username}", s.auth(s.handleSocialPublicProfile))
         mux.HandleFunc("GET /social/connections", s.auth(s.handleSocialConnections))
+        mux.HandleFunc("POST /me/avatar/photo", s.auth(s.handleAvatarPhotoUpload))
+        mux.HandleFunc("DELETE /me/avatar/photo", s.auth(s.handleAvatarPhotoDelete))
+        // The public photo reader - no auth, immutable cache (the key
+        // embeds the upload timestamp; profile photos are not secrets).
+        mux.HandleFunc("GET /media/profile-picture/{key}", s.handleProfilePhotoServe)
         mux.HandleFunc("POST /me/sessions", s.auth(s.handleLogSession))
         mux.HandleFunc("GET /me/cards/progress", s.auth(s.handleCardProgress))
         mux.HandleFunc("POST /me/cards/progress", s.auth(s.handleGradeCards))
