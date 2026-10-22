@@ -12,23 +12,22 @@ import { STORE_CONFIG } from '@/lib/store-links';
  * 2026-10-22: "do same to Renance"). Section journey, top to bottom:
  *
  *   1. navbar - THREE IntersectionObserver states (no scroll
- *      listeners): full centered branding at rest, a compressed
- *      fixed bar during the first scroll, then icon + sticky
- *      "Get started" CTA once the hero buttons leave the screen.
- *      One CSS class per state drives opacity, visibility and
- *      padding transitions
+ *      listeners): centered logo + green wordmark at rest, the same
+ *      brand shrunk + pinned behind a bordered bar during the first
+ *      scroll, then mini logo + sticky "Get started" CTA once the
+ *      hero buttons leave the screen. One CSS class per state drives
+ *      size, padding, border and opacity transitions
  *   2. hero   - original cartoon cast (Renny the bookworm + floating
  *      pencil/book/star/gem doodles) drifting between the navbar and
  *      the headline, with GET STARTED / I ALREADY HAVE AN ACCOUNT
  *      pinned near the bottom of the first viewport
- *   3. subject marquee - seamless infinite loop, pauses on hover
- *   4. "free. fun. effective." slogan + green phone with lesson
+ *   3. "free. fun. effective." slogan + green phone with lesson
  *      progress bar
- *   5. "backed by results" + avatar phone + #1 medallion scene
- *   6. EFFECTIVE / PERSONALIZED / FUN trio
- *   7. stories carousel (arrows, dots, auto-advance)
- *   8. sky download band - App Store COMING SOON + Google Play live
- *   9. green CTA band, navy mega footer
+ *   4. "backed by results" + avatar phone + #1 medallion scene
+ *   5. EFFECTIVE / PERSONALIZED / FUN trio
+ *   6. stories carousel (arrows, dots, auto-advance)
+ *   7. sky download band - App Store COMING SOON + Google Play live
+ *   8. green CTA band, navy mega footer
  *
  * Every character, doodle and sentence is a Renance original drawn in
  * inline SVG; only the interaction patterns mirror the reference. All
@@ -58,27 +57,6 @@ const FLOATERS: Floater[] = [
   { id: 'gem', node: 'gem', className: 'right-[9%] bottom-[20%]', dur: '5.7s', delay: '.3s' },
   { id: 'flame', node: 'flame', className: 'left-[16%] top-[54%] landing-chip-lg', dur: '4.9s', delay: '.7s' },
   { id: 'sparkle', node: 'sparkle', className: 'right-[15%] top-[52%] landing-chip-lg', dur: '5.4s', delay: '.1s' },
-];
-
-type Subject = { name: string; tag: string; color: string };
-
-const SUBJECTS: Subject[] = [
-  { name: 'English', tag: 'EN', color: '#58cc02' },
-  { name: 'Mathematics', tag: 'MT', color: '#1cb0f6' },
-  { name: 'Physics', tag: 'PH', color: '#ce82ff' },
-  { name: 'Chemistry', tag: 'CH', color: '#ff9600' },
-  { name: 'Biology', tag: 'BI', color: '#00cd9c' },
-  { name: 'Economics', tag: 'EC', color: '#ffc800' },
-  { name: 'Government', tag: 'GV', color: '#ff4b4b' },
-  { name: 'Literature', tag: 'LI', color: '#ff86d0' },
-  { name: 'Geography', tag: 'GE', color: '#2bb3a3' },
-  { name: 'Commerce', tag: 'CO', color: '#8549ba' },
-  { name: 'Accounting', tag: 'AC', color: '#4b9b69' },
-  { name: 'Agric Science', tag: 'AG', color: '#8ee000' },
-  { name: 'CRK', tag: 'CR', color: '#f49000' },
-  { name: 'French', tag: 'FR', color: '#3f7df6' },
-  { name: 'Yoruba', tag: 'YO', color: '#a560d8' },
-  { name: 'Further Maths', tag: 'FM', color: '#00a4ad' },
 ];
 
 const FEATURES = [
@@ -414,14 +392,13 @@ export default function LandingDuo() {
      zero scroll listeners, exactly the sentinel pattern the founder
      asked for:
 
-       'top'    page-top sentinel visible ............ full centered
-                branding, transparent bar, roomy padding
-       'raised' past the top, hero still on screen ... compressed
-                fixed bar: white shell + hairline shadow, branding
-                hidden, tight padding
-       'cta'    hero has left through the viewport top ... expanded
-                bar: icon revealed beside Subjects + sticky green
-                GET STARTED
+       'top'    page-top sentinel visible ............ centered logo
+                + green wordmark, transparent bar, roomy padding
+       'raised' past the top, hero still on screen ... the same brand
+                shrunk and pinned: white shell + bottom border, tight
+                padding
+       'cta'    hero has left through the viewport top ... brand
+                hands over to mini logo + sticky green GET STARTED
 
      Each state is a single CSS class (.is-top/.is-raised/.is-cta);
      opacity, visibility and padding interpolate via CSS transitions.
@@ -508,33 +485,22 @@ export default function LandingDuo() {
       <header className={`landing-nav is-${navState}`}>
         <div className="landing-nav-shell" aria-hidden />
         <div className="landing-nav-inner">
-          {/* Left cell: mini icon (state 3 only, absolute so it never
-              shifts layout) + the subjects link. */}
-          <div className="landing-nav-side landing-nav-side-l">
-            <Link href="/" className="landing-nav-mini" aria-label="Renance home">
-              <RenanceMark size={30} />
-            </Link>
-            <Link href="/subjects/" className="landing-nav-ghost landing-nav-subjects">
-              Subjects
-            </Link>
-          </div>
-
-          {/* Center cell: full centered branding at rest. */}
+          {/* The brand IS states 1-2: centered logo + green wordmark,
+              seamlessly shrinking as the bar pins. It hands over to
+              the edge pair in state 3. */}
           <Link href="/" className="landing-nav-brand" aria-label="Renance home">
             <RenanceMark size={38} />
             <span className="landing-nav-word">renance</span>
           </Link>
 
-          {/* Right cell: quiet text CTA (states 1-2) cross-fading into
-              the sticky green GET STARTED (state 3). */}
-          <div className="landing-nav-side landing-nav-side-r">
-            <Link href="/register/" className="landing-nav-ghost landing-nav-ghost-cta">
-              Get the app
-            </Link>
-            <Link href="/register/" className="btn-3d landing-nav-cta landing-nav-start">
-              Get started
-            </Link>
-          </div>
+          {/* State 3 edge pair: mini logo left ... */}
+          <Link href="/" className="landing-nav-mini" aria-label="Renance home">
+            <RenanceMark size={30} />
+          </Link>
+          {/* ... sticky GET STARTED right. */}
+          <Link href="/register/" className="btn-3d landing-nav-cta landing-nav-start">
+            Get started
+          </Link>
         </div>
       </header>
 
@@ -583,27 +549,7 @@ export default function LandingDuo() {
         </section>
 
         {/* ============================================================ */}
-        {/* 3. SUBJECT MARQUEE - seamless infinite loop                    */}
-        {/* ============================================================ */}
-        <section className="landing-marquee w-full pb-16" aria-label="Subjects on Renance">
-          <div className="landing-marquee-track">
-            {[0, 1].map((copy) => (
-              <div key={copy} className="flex gap-4 pr-4" aria-hidden={copy === 1}>
-                {SUBJECTS.map((s) => (
-                  <div key={`${copy}-${s.name}`} className="landing-flag">
-                    <span className="landing-flag-tile" style={{ background: s.color }}>
-                      {s.tag}
-                    </span>
-                    <span className="landing-flag-name">{s.name}</span>
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ============================================================ */}
-        {/* 4. SLOGAN - "free. fun. effective." + green progress phone     */}
+        {/* 3. SLOGAN - "free. fun. effective." + green progress phone     */}
         {/* ============================================================ */}
         <section className="mx-auto w-full max-w-5xl px-4 pb-20 text-center sm:px-6">
           <h2 className="landing-reveal text-[clamp(2.2rem,6vw,4rem)] font-extrabold lowercase leading-tight tracking-tight" style={{ color: 'var(--color-primary)' }}>
@@ -674,7 +620,7 @@ export default function LandingDuo() {
         </section>
 
         {/* ============================================================ */}
-        {/* 5. BACKED BY RESULTS - avatar phone + #1 medallion scene       */}
+        {/* 4. BACKED BY RESULTS - avatar phone + #1 medallion scene       */}
         {/* ============================================================ */}
         <section className="mx-auto w-full max-w-5xl px-4 pb-20 text-center sm:px-6">
           <h2 className="landing-reveal text-[clamp(2rem,5.5vw,3.4rem)] font-extrabold lowercase leading-tight tracking-tight" style={{ color: 'var(--color-primary)' }}>
@@ -721,7 +667,7 @@ export default function LandingDuo() {
         </section>
 
         {/* ============================================================ */}
-        {/* 6. FEATURE TRIO                                                */}
+        {/* 5. FEATURE TRIO                                                */}
         {/* ============================================================ */}
         <section className="mx-auto w-full max-w-6xl px-4 pb-20 sm:px-6">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -747,7 +693,7 @@ export default function LandingDuo() {
         </section>
 
         {/* ============================================================ */}
-        {/* 7. STORIES CAROUSEL                                            */}
+        {/* 6. STORIES CAROUSEL                                            */}
         {/* ============================================================ */}
         <section className="mx-auto w-full max-w-3xl px-4 pb-20 text-center sm:px-6">
           <h2 className="landing-reveal text-[clamp(1.7rem,4vw,2.6rem)] font-extrabold tracking-tight text-on-surface">
@@ -813,7 +759,7 @@ export default function LandingDuo() {
         </section>
 
         {/* ============================================================ */}
-        {/* 8. DOWNLOAD BAND - App Store COMING SOON + Google Play live    */}
+        {/* 7. DOWNLOAD BAND - App Store COMING SOON + Google Play live    */}
         {/* ============================================================ */}
         <section className="landing-band-sky relative w-full overflow-hidden px-4 py-16 text-center sm:px-6">
           {/* floating doodles around the badges */}
@@ -863,7 +809,7 @@ export default function LandingDuo() {
         </section>
 
         {/* ============================================================ */}
-        {/* 9. FINAL CTA BAND                                              */}
+        {/* 8. FINAL CTA BAND                                              */}
         {/* ============================================================ */}
         <section className="landing-cta-band w-full px-4 py-16 text-center sm:px-6">
           <h2 className="landing-reveal mx-auto max-w-2xl text-[clamp(1.8rem,4.5vw,3rem)] font-extrabold leading-tight tracking-tight text-white">
@@ -885,7 +831,7 @@ export default function LandingDuo() {
       </main>
 
       {/* ============================================================ */}
-      {/* 10. MEGA FOOTER                                                */}
+      {/* 9. MEGA FOOTER                                                */}
       {/* ============================================================ */}
       <footer className="landing-footer w-full">
         <div className="mx-auto grid w-full max-w-6xl grid-cols-2 gap-8 px-4 py-14 sm:px-6 md:grid-cols-4">
