@@ -1,7 +1,7 @@
 name: renance
 description: "Renance, the global student study OS. Offline-first mobile shell."
 publish_to: "none"
-version: 2.7.2+32
+version: 2.7.3+33
 
 environment:
   sdk: ">=3.5.0 <4.0.0"

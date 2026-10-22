@@ -1,4 +1,5 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
     <!-- Release APK must reach the study API (debug/profile had this via the
          default Flutter template; the main manifest did not). -->
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -76,6 +77,33 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/streak_widget_info"/>
         </receiver>
+        <!-- BOOT-CRASH FIX, round 2 (2026-10-23) - the REAL root cause of
+             "Renance keeps stopping" on 30/31/32. home_widget pulls
+             androidx.glance:glance-appwidget 1.0.0, which drags in
+             androidx.work 2.7.1 (+ Room 2.2.5). work-runtime's manifest
+             auto-initializes WorkManager through androidx.startup during
+             ContentProvider install - BEFORE Application.onCreate, before
+             MainActivity, before any Dart code. Under R8 full-mode shrinking
+             WorkDatabase_Impl keeps its name but loses its never-statically-
+             called constructor, so Room's reflective
+             getDeclaredConstructor().newInstance() always throws
+             "Failed to create an instance of androidx.work.impl.WorkDatabase"
+             and the process dies on EVERY launch, on EVERY device.
+             Nothing in this app uses WorkManager (home_widget's source never
+             references it, the streak widget is a plain RemoteViews provider,
+             local notifications use AlarmManager), so the auto-initializer
+             is removed from the merged manifest. WorkManager's classes stay
+             in the APK; it simply never boots. See also proguard-rules.pro. -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"
+                tools:node="remove" />
+        </provider>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data
