@@ -45,6 +45,8 @@ class Profile {
     required this.completed,
     this.subjects = const <String>[],
     this.targetYear,
+    this.avatar,
+    this.avatarPhoto,
   });
 
   final String fullName;
@@ -60,6 +62,12 @@ class Profile {
   /// Exam year picked at onboarding (drives the hero countdown).
   final int? targetYear;
 
+  /// The identity art (founder 2026-10-22 identity pass): the picked
+  /// baked-in avatar key ('avatar-01'..'avatar-50') and the uploaded
+  /// R2 photo key. The photo wins over the avatar, web parity.
+  final String? avatar;
+  final String? avatarPhoto;
+
   factory Profile.fromJson(Map<String, dynamic> j) => Profile(
     fullName: (j['fullName'] ?? '') as String,
     institution: (j['institution'] ?? '') as String,
@@ -71,8 +79,16 @@ class Profile {
         .map((e) => e.toString())
         .toList(),
     targetYear: j['targetYear'] as int?,
+    avatar: _cleanKey(j['avatar']),
+    avatarPhoto: _cleanKey(j['avatarPhoto']),
     completed: (j['completed'] ?? false) as bool,
   );
+
+  /// '' / null both mean "no pick" - the API omits or empties the keys.
+  static String? _cleanKey(dynamic v) {
+    if (v is String && v.isNotEmpty) return v;
+    return null;
+  }
 
   /// For the offline /me cache (StudentController.cacheMe).
   Map<String, dynamic> toJson() => <String, dynamic>{
@@ -82,6 +98,8 @@ class Profile {
     'exams': exams,
     'subjects': subjects,
     if (targetYear != null) 'targetYear': targetYear,
+    if (avatar != null) 'avatar': avatar,
+    if (avatarPhoto != null) 'avatarPhoto': avatarPhoto,
     'completed': completed,
   };
 }
@@ -608,12 +626,17 @@ class AttemptView {
     required this.code,
     required this.status,
     this.result,
+    this.startedAt,
   });
 
   final String attemptId;
   final String code;
   final String status; // in_progress | grading | graded | error
   final ExamResult? result;
+
+  /// When the sitting began (null when the row omits it): the
+  /// paused-paper resume flow derives the remaining clock from it.
+  final DateTime? startedAt;
 
   factory AttemptView.fromJson(Map<String, dynamic> j) => AttemptView(
     attemptId: (j['attemptId'] ?? '') as String,
@@ -622,6 +645,9 @@ class AttemptView {
     result: j['result'] == null
         ? null
         : ExamResult.fromJson((j['result'] as Map).cast<String, dynamic>()),
+    startedAt: j['startedAt'] is String
+        ? DateTime.tryParse(j['startedAt'] as String)
+        : null,
   );
 }
 

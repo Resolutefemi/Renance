@@ -4,6 +4,7 @@ import 'package:provider/single_child_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'api_client.dart';
+import 'app_icon.dart';
 import 'config.dart';
 import 'controllers.dart';
 import 'learn_controller.dart';
@@ -20,6 +21,7 @@ import 'ui/school_home_v2.dart'
         SchoolTeachersScreen, SchoolIdCardsScreen, SchoolRouteArgs;
 import 'ui/splash_screen.dart' show SplashScreen;
 import 'ui/theme.dart';
+import 'ui/welcome_screen.dart' show WelcomeScreen;
 import 'update_gate.dart';
 
 Future<void> main() async {
@@ -49,6 +51,9 @@ Future<void> main() async {
   // stored seed so the update lands on the website's default palette;
   // the Appearance picker stays and a fresh pick re-tints everything.
   await theme.migrateSeedToWebDefault();
+  // Founder pass IX: the launcher icon matches the saved appearance
+  // from the first launch on (the setMode path covers live changes).
+  await RenanceAppIcon.apply(theme.mode);
 
   runApp(
     RenanceApp(
@@ -166,6 +171,13 @@ class RenanceApp extends StatelessWidget {
                         : AuthAudience.students;
                 return MaterialPageRoute<void>(
                   builder: (_) => RegisterScreen(initialAudience: audience),
+                );
+              }
+              if (settings.name == '/welcome') {
+                // Founder pass VIII: the Duolingo-style welcome for
+                // logged-out first runs (no route arguments needed).
+                return MaterialPageRoute<void>(
+                  builder: (_) => const WelcomeScreen(),
                 );
               }
               if (settings.name == '/exam') {

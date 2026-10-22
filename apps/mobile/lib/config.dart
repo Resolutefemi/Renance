@@ -33,4 +33,4 @@ const String googleWebClientId = String.fromEnvironment(
 /// pubspec version so the two are bumped together - the old hardcoded
 /// splash string drifted three releases behind (2.5.0 v while the app
 /// shipped 2.6.7).
-const String appVersion = '2.6.18';
+const String appVersion = '2.6.23';

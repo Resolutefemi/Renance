@@ -1,5 +1,7 @@
 package dev.renance.renance
 
+import android.content.ComponentName
+import android.content.pm.PackageManager
 import android.os.Build
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
@@ -9,6 +11,46 @@ class MainActivity : FlutterActivity() {
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+        // App-icon appearance switch (founder pass IX): the launcher icon
+        // adapts to the in-app appearance setting exactly like the web
+        // favicon. Two launcher activity-aliases ship in the manifest -
+        // .LauncherLight (brand green) and .LauncherDark (dark-page
+        // navy); setVariant enables the matching one and disables the
+        // other. Enable-FIRST ordering keeps at least one launcher alias
+        // enabled at every instant, so the app can never vanish from the
+        // home screen mid-switch. Best-effort: a failure never throws
+        // into Dart.
+        MethodChannel(
+            flutterEngine.dartExecutor.binaryMessenger,
+            "renance/appIcon"
+        ).setMethodCallHandler { call, result ->
+            when (call.method) {
+                "setVariant" -> {
+                    try {
+                        val variant = call.argument<String>("variant") ?: "light"
+                        val pm = packageManager
+                        val light = ComponentName(this, "$packageName.LauncherLight")
+                        val dark = ComponentName(this, "$packageName.LauncherDark")
+                        val (enableFirst, disableSecond) =
+                            if (variant == "dark") dark to light else light to dark
+                        pm.setComponentEnabledSetting(
+                            enableFirst,
+                            PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                            PackageManager.DONT_KILL_APP
+                        )
+                        pm.setComponentEnabledSetting(
+                            disableSecond,
+                            PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+                            PackageManager.DONT_KILL_APP
+                        )
+                        result.success(true)
+                    } catch (e: Exception) {
+                        result.success(false)
+                    }
+                }
+                else -> result.notImplemented()
+            }
+        }
         // UpdateGate (founder directive): the anti-share + force-update
         // channel. getInstallSource reports the store package that
         // installed this build ("" when the APK/AAB was shared/sideloaded)

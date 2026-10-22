@@ -14,9 +14,12 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'dart:async' show unawaited;
+
 import '../api_client.dart';
 import '../config.dart';
 import '../device_id.dart';
+import '../notifications.dart';
 import '../models.dart';
 import '../controllers.dart';
 import '../storage.dart';
@@ -571,6 +574,10 @@ Future<bool> _runGoogleSignIn(
   // too, gated by the same one-time flag as the manual flows.
   if (!context.mounted) return true;
   await maybeShowFirstAppearanceSheet(context);
+  // Founder pass IX: the notification permission asks IMMEDIATELY after
+  // sign-in - the daily streak reminder is the product promise.
+  // Fire-and-forget: a slow system dialog never gates the desk.
+  unawaited(RenanceNotifications.ensurePermission());
   if (!context.mounted) return true;
   await Navigator.of(context).pushReplacementNamed('/home');
   return true;
@@ -652,6 +659,8 @@ class _LoginScreenState extends State<LoginScreen> {
       // once - students who signed up during the popup-less releases
       // still get to meet it.
       await maybeShowFirstAppearanceSheet(context);
+      // Founder pass IX: the permission ask rides right after login too.
+      unawaited(RenanceNotifications.ensurePermission());
       if (!mounted) return;
       await Navigator.of(context).pushReplacementNamed('/home');
     } on ApiException catch (e) {
@@ -1020,6 +1029,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
         referral: _referral.text.trim(),
       );
       await session.save(res.token, res.user);
+      // Founder pass IX: signup ends on the verify screen, and the
+      // notification permission asks right here - before the code
+      // surface, so a fresh account is reminder-ready from minute one.
+      unawaited(RenanceNotifications.ensurePermission());
       final SharedPreferences prefs = session.prefs;
       await SchoolController.forgetSchoolSession(prefs);
       if (!mounted) return;

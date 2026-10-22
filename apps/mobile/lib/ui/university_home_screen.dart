@@ -12,9 +12,10 @@ import 'package:provider/provider.dart';
 
 import '../controllers.dart';
 import '../storage.dart';
+import 'about_screen.dart';
 import 'exam_history_screen.dart';
 import 'gpa_screen.dart';
-import 'home_screen.dart' show LauncherTile, openDailyQuiz, showMoreSheet;
+import 'home_screen.dart' show LauncherTile, openDailyQuiz;
 import 'leaderboard_screen.dart';
 import 'msymbols.dart';
 import 'review_screen.dart';
@@ -340,11 +341,12 @@ class UniversityHomeTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  msIcon: 'more_horiz',
-                  iconColor: context.textSecondary,
-                  muted: true,
-                  label: 'More',
-                  onTap: () => showMoreSheet(context, onGoTab: onGoTab),
+                  msIcon: 'info',
+                  label: 'About Renance',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                        builder: (_) => const AboutScreen()),
+                  ),
                 ),
               ),
             ],

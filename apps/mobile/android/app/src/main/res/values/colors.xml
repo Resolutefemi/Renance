@@ -1,5 +1,9 @@
 <resources>
     <color name="ic_launcher_background">#10DA11</color>
+    <!-- Founder pass IX: the DARK launcher variant ground (the dark-page
+         navy the dark splash opens on). Flipped in via the .LauncherDark
+         activity-alias when the in-app appearance setting is Dark. -->
+    <color name="ic_launcher_background_dark">#0F1216</color>
     <!-- Android 12+ system-splash ground: the white the light Flutter
          splash opens on (one continuous splash, no ground pop). -->
     <color name="splash_ground">#FFFFFF</color>

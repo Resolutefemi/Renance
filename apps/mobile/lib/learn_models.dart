@@ -838,6 +838,7 @@ class SocialAuthor {
     required this.name,
     required this.premium,
     this.avatar,
+    this.photo,
   });
 
   final String id;
@@ -846,12 +847,18 @@ class SocialAuthor {
   final bool premium;
   final String? avatar;
 
+  /// The uploaded R2 photo key (founder 2026-10-22 identity pass): set
+  /// whenever the scholar uploaded a profile picture - it wins over
+  /// [avatar] exactly like the web's one-wins rule.
+  final String? photo;
+
   factory SocialAuthor.fromJson(Map<String, dynamic> j) => SocialAuthor(
     id: (j['id'] ?? '') as String,
     username: (j['username'] ?? '') as String,
     name: (j['name'] ?? '') as String,
     premium: (j['premium'] ?? false) as bool,
     avatar: j['avatar'] as String?,
+    photo: j['photo'] as String?,
   );
 }
 
@@ -994,6 +1001,8 @@ class PublicProfile {
     required this.joinedMs,
     required this.courses,
     this.avatar,
+    this.photo,
+    this.institution,
     this.followsYou = false,
   });
 
@@ -1016,6 +1025,13 @@ class PublicProfile {
   final int joinedMs;
   final List<CoursePulse> courses;
 
+  /// The uploaded R2 photo key (founder 2026-10-22): wins over [avatar].
+  final String? photo;
+
+  /// The scholar's school / institution (founder 2026-10-22: the
+  /// profile wears the school like every other identity field).
+  final String? institution;
+
   factory PublicProfile.fromJson(Map<String, dynamic> j) => PublicProfile(
     id: (j['id'] ?? '') as String,
     username: (j['username'] ?? '') as String,
@@ -1034,6 +1050,8 @@ class PublicProfile {
     followsYou: (j['followsYou'] ?? false) as bool,
     isSelf: (j['isSelf'] ?? false) as bool,
     joinedMs: ((j['joinedMs'] ?? 0) as num).toInt(),
+    photo: j['photo'] as String?,
+    institution: j['institution'] as String?,
     courses: ((j['courses'] ?? const <dynamic>[]) as List<dynamic>)
         .map((dynamic e) => CoursePulse.fromJson((e as Map).cast<String, dynamic>()))
         .toList(),
@@ -1050,6 +1068,7 @@ class FollowRow {
     required this.followsYou,
     required this.following,
     this.avatar,
+    this.photo,
   });
 
   final String id;
@@ -1057,6 +1076,9 @@ class FollowRow {
   final String name;
   final bool premium;
   final String? avatar;
+
+  /// The uploaded R2 photo key (founder 2026-10-22 identity pass).
+  final String? photo;
   final bool followsYou;
   final bool following;
 
@@ -1066,6 +1088,7 @@ class FollowRow {
     name: (j['name'] ?? '') as String,
     premium: (j['premium'] ?? false) as bool,
     avatar: j['avatar'] as String?,
+    photo: j['photo'] as String?,
     followsYou: (j['followsYou'] ?? false) as bool,
     following: (j['following'] ?? false) as bool,
   );

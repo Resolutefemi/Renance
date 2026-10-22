@@ -25,6 +25,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../app_icon.dart';
 import 'seed_palette.dart';
 import 'tactile_theme.dart';
 
@@ -682,6 +683,11 @@ class ThemeController extends ChangeNotifier {
       RenanceThemeMode.mixed => 'mixed',
       RenanceThemeMode.light => 'light',
     });
+    // Founder pass IX: the launcher icon follows the appearance setting
+    // exactly like the website favicon repaints in the browser - Dark
+    // flips the home-screen icon to the navy ground, Light/Mixed keep
+    // the brand green. Best-effort inside the helper.
+    await RenanceAppIcon.apply(mode);
     notifyListeners();
   }
 }

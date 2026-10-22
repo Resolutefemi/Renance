@@ -19,7 +19,10 @@ import '../storage.dart';
 import '../api_client.dart';
 import 'ai_generator_screen.dart';
 import 'account_screens.dart';
-import 'offline_share_screen.dart';
+import 'about_screen.dart';
+import 'channel_invite.dart';
+import 'celebrations.dart' show showStreakScreen;
+import 'notification_nag.dart';
 import 'performance_screen.dart';
 import 'saved_questions.dart';
 import 'gpa_screen.dart';
@@ -142,6 +145,18 @@ class _HomeScreenState extends State<HomeScreen> {
     }
     await _maybeNudgeReview(student);
     await _maybeOfferOffline();
+    // Round-8 nag gates (Task 4-b): the notification-permission
+    // onboarding and the WhatsApp channel invite ride after the offline
+    // offer, signed-in students with a profile only. Best-effort both -
+    // a failure here never breaks the bootstrap chain.
+    if (!mounted) return;
+    try {
+      await ensureNotificationOnboarding(context);
+    } catch (_) {}
+    if (!mounted) return;
+    try {
+      await maybeShowChannelInvite(context);
+    } catch (_) {}
   }
 
   /// Review-due device notification (founder directive 2026-10-04):
@@ -250,6 +265,7 @@ class _HomeScreenState extends State<HomeScreen> {
     int? durationOverrideMinutes,
     bool untimed = false,
     bool shuffleQuestions = false,
+    String? resumeAttemptId,
   }) {
     Navigator.of(context).push(
       MaterialPageRoute<void>(
@@ -258,6 +274,7 @@ class _HomeScreenState extends State<HomeScreen> {
           durationOverrideMinutes: durationOverrideMinutes,
           untimed: untimed,
           shuffleQuestions: shuffleQuestions,
+          resumeAttemptId: resumeAttemptId,
         ),
       ),
     );
@@ -660,7 +677,14 @@ class HomeHeader extends StatelessWidget {
                 ),
               ],
               const SizedBox(width: 6),
-              StreakPill(streak: streak),
+              // Founder pass IX: the pill opens the full streak page -
+              // the Duolingo cut with the week row and freeze marks.
+              _Tappable(
+                onTap: streak > 0
+                    ? () => showStreakScreen(context, streak: streak)
+                    : null,
+                child: StreakPill(streak: streak),
+              ),
               // The freeze pill renders only while freezes are held
               // (web rule) - reads the live learn wallet.
               FreezeHeaderPill(
@@ -1036,6 +1060,7 @@ class _LauncherTab extends StatelessWidget {
     int? durationOverrideMinutes,
     bool untimed,
     bool shuffleQuestions,
+    String? resumeAttemptId,
   }) onOpenExam;
   final ValueChanged<int> onGoTab;
   final VoidCallback onOnboarding;
@@ -1084,7 +1109,17 @@ class _LauncherTab extends StatelessWidget {
                   }
                 }
                 if (match != null) {
-                  onOpenExam(context, match);
+                  // A paused paper re-opens its saved seat (founder
+                  // Round 8: 'Continue Exam' must land back IN the
+                  // paper, never in the corrections dead end).
+                  onOpenExam(
+                    context,
+                    match,
+                    resumeAttemptId:
+                        recent.first.status == 'in_progress'
+                            ? recent.first.attemptId
+                            : null,
+                  );
                   return;
                 }
               }
@@ -1357,11 +1392,13 @@ class _LauncherTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  msIcon: 'more_horiz',
-                  iconColor: context.textSecondary,
-                  muted: true,
-                  label: 'More',
-                  onTap: () => showMoreSheet(context, onGoTab: onGoTab),
+                  msIcon: 'info',
+                  label: 'About Renance',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const AboutScreen(),
+                    ),
+                  ),
                 ),
               ),
             ],
@@ -1383,6 +1420,24 @@ class _LauncherTab extends StatelessWidget {
               attempt: recent,
               title: student.titleForCode(recent.code),
               onTap: () {
+                // A paused paper re-opens in the player with its saved
+                // seat (founder Round 8); graded papers keep the
+                // corrections reader. The reader 409s on ungraded
+                // attempts - that dead end is gone.
+                if (recent.status == 'in_progress') {
+                  ExamMeta? match;
+                  for (final ExamMeta e in sync.exams) {
+                    if (e.code == recent.code) {
+                      match = e;
+                      break;
+                    }
+                  }
+                  if (match != null) {
+                    onOpenExam(context, match,
+                        resumeAttemptId: recent.attemptId);
+                    return;
+                  }
+                }
                 Navigator.of(context).push(
                   MaterialPageRoute<void>(
                     builder: (_) =>
@@ -1968,125 +2023,6 @@ class _SyncErrorBanner extends StatelessWidget {
   }
 }
 
-// -------------------------------------------------------------- more sheet
-
-/// The "All Features" bottom sheet, more_features_sheet_light, 1:1.
-///
-/// [onGoTab] routes feed rows back into the shell's tabs when the caller
-/// lives inside the shell (launcher); null keeps notifications self-contained.
-/// Pops the sheet then pushes the route (shared by every More tile).
-VoidCallback _push(
-  BuildContext sheetContext,
-  BuildContext context,
-  WidgetBuilder builder,
-) {
-  return () {
-    Navigator.of(sheetContext).pop();
-    Navigator.of(context).push(MaterialPageRoute<void>(builder: builder));
-  };
-}
-
-Future<void> showMoreSheet(
-  BuildContext context, {
-  void Function(int tab)? onGoTab,
-}) {
-  return showModalBottomSheet<void>(
-    context: context,
-    backgroundColor: Colors.transparent,
-    isScrollControlled: true,
-    builder: (BuildContext sheetContext) => Container(
-      decoration: BoxDecoration(
-        color: context.pageBg,
-        borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
-        boxShadow: <BoxShadow>[
-          BoxShadow(
-            color: Color(0x1F111C2D),
-            blurRadius: 24,
-            offset: Offset(0, -4),
-          ),
-        ],
-      ),
-      child: SafeArea(
-        top: false,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            const SizedBox(height: 8),
-            Container(
-              width: 48,
-              height: 6,
-              decoration: BoxDecoration(
-                color: context.outlineVariant,
-                borderRadius: BorderRadius.circular(999),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  const Text('More', style: RenanceText.sectionTitle),
-                  const SizedBox(height: 2),
-                  Text(
-                    'Less-used tools, your daily drivers are on the home grid.',
-                    style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, fontSize: 13),
-                  ),
-                ],
-              ),
-            ),
-            Flexible(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
-                child: GridView.count(
-                  // The web's More sheet (dashboard/page.tsx MoreSheet):
-                  // `grid grid-cols-2 gap-2` - TWO columns. The founder's
-                  // 2026-10-20 pass: the old 4-column squeeze guillotined
-                  // every row label into 'P...', 'S...', 'D...' ellipses.
-                  // Two columns give each row the full web width, and the
-                  // labels are the web's own untruncated strings.
-                  crossAxisCount: 2,
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
-                  childAspectRatio: 3.2,
-                  children: <Widget>[
-                    // The founder's 2026-10-22 pass: every feature that
-                    // lives on the home grid (performance analysis, saved
-                    // questions, AI studio, settings, search, exam
-                    // history, AI generator, GPA calculator) left the
-                    // sheet - no doubles. Study Resources is retired.
-                    // What remains is the genuinely occasional stuff.
-                    _MoreTile(
-                      msIcon: 'wifi_off',
-                      label: 'Offline Share',
-                      onTap: _push(sheetContext, context,
-                          (_) => const OfflineShareScreen()),
-                    ),
-                    _MoreTile(
-                      msIcon: 'help',
-                      label: 'Help & FAQ',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        showLicensePage(
-                          context: context,
-                          applicationName: 'Renance',
-                          applicationLegalese: 'Learn. Practice. Rise.',
-                        );
-                      },
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    ),
-  );
-}
-
-/// One square feature tile of the More sheet (Soon badge supported).
 /// Gentle take-a-break banner (ROADMAP #6), appears after the student's
 /// recent sittings trip the server's fatigue thresholds.
 class _FatigueBanner extends StatelessWidget {
@@ -2132,67 +2068,6 @@ class _FatigueBanner extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class _MoreTile extends StatelessWidget {
-  const _MoreTile({
-    required this.msIcon,
-    required this.label,
-    required this.onTap,
-  });
-
-  final String? msIcon;
-  final String label;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    // The web's More-sheet row (dashboard/page.tsx): rounded-xl card,
-    // 1px outline-variant/50 border, p-3, the 22px glyph riding LEFT of
-    // a text-sm font-medium label - not the old circle+caption column.
-    final Widget tile = Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: context.card,
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(
-          color: context.outlineVariant.withValues(alpha: 0.5),
-        ),
-      ),
-      child: Row(
-        children: <Widget>[
-          MsIcon(msIcon ?? 'circle', size: 22, color: context.ink),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Text(
-              label,
-              // The web's row label (`text-sm font-medium`) has NO
-              // truncate - long names wrap. Two lines, never an ellipse.
-              maxLines: 2,
-              overflow: TextOverflow.fade,
-              style: TextStyle(
-                fontFamily: 'Nunito',
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
-                height: 1.25,
-                color: context.ink,
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-
-    return Opacity(
-      opacity: 1,
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(12),
-        child: tile,
       ),
     );
   }

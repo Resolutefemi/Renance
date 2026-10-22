@@ -6,7 +6,7 @@ library;
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io' show SocketException;
-import 'dart:math' show Random;
+import 'dart:math' show Random, min;
 
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -400,6 +400,15 @@ class ExamController extends ChangeNotifier {
 
   String? _attemptId;
 
+  /// True while the student is re-entering a paused sitting
+  /// (resumeExisting): begin() then reuses the server attempt instead of
+  /// minting a fresh one, and the intro offers the seat back.
+  bool resuming = false;
+
+  /// The paused attempt's own startedAt (best-effort, may be null): the
+  /// resumed clock is the pack duration minus the time already spent.
+  DateTime? _resumeStartedAt;
+
   int? _durationMs;
   DateTime _startedAt = DateTime.now();
   Timer? _timer;
@@ -473,8 +482,49 @@ class ExamController extends ChangeNotifier {
     nudgeVisible = false;
     nudgeDismissed = false;
     breakSecondsLeft = 0;
+    resuming = false;
+    _resumeStartedAt = null;
     _shownAt = _clock();
     phase = ExamPhase.intro;
+    notifyListeners();
+  }
+
+  /// Re-opens a paper the student left unfinished (founder Round 8: a
+  /// paused exam must lead back into the CBT player, never into the
+  /// corrections dead end). The bundle loads exactly like load(), but
+  /// begin() reuses the server attempt instead of minting a fresh one.
+  /// A best-effort GET on the attempt guards the seat: a paper graded
+  /// (or errored) elsewhere falls back to a fresh attempt, and the
+  /// attempt's startedAt drives the resumed clock.
+  Future<void> resumeExisting(String attemptId, ExamMeta examMeta) async {
+    await load(examMeta);
+    if (phase == ExamPhase.error) return;
+    _attemptId = attemptId;
+    resuming = true;
+    phase = ExamPhase.intro;
+    notifyListeners();
+    try {
+      final AttemptView view = await _api.attempt(attemptId);
+      if (view.status != 'in_progress') {
+        // The paper was graded (or errored) while the student was away:
+        // the seat is gone, start fresh like any normal load.
+        await load(examMeta);
+        return;
+      }
+      _resumeStartedAt = view.startedAt;
+    } on ApiException catch (e) {
+      if (e.statusCode == 404) {
+        // The attempt row vanished server-side - a fresh attempt is the
+        // only honest path.
+        await load(examMeta);
+        return;
+      }
+      // Any other server refusal: keep the seat; submit() surfaces a
+      // readable error if the server still disagrees.
+    } on NetworkException catch (_) {
+      // Offline resume is allowed: the paper plays on-device and the
+      // submission queues exactly like a fresh offline sitting.
+    }
     notifyListeners();
   }
 
@@ -483,6 +533,37 @@ class ExamController extends ChangeNotifier {
     appliedAdaptive = false;
     visited.clear();
     visited.add(bundle!.questions.first.id);
+    // Resumed sitting: the server attempt already exists, so Begin
+    // skips creation and goes straight back to the paper. The clock is
+    // the pack duration minus the time already spent (at least five
+    // minutes survive; an unknown start time keeps the full duration).
+    // The offline fallback below stays fresh-attempts-only - a resumed
+    // attempt never mints an offline id.
+    if (resuming && _attemptId != null && !_attemptId!.startsWith('offline-')) {
+      if (untimed) {
+        secondsRemaining = 0;
+      } else if ((durationOverrideMinutes ?? 0) > 0) {
+        secondsRemaining = durationOverrideMinutes! * 60;
+      } else {
+        secondsRemaining = (bundle!.durationMinutes ?? 30) * 60;
+      }
+      final DateTime? seatStart = _resumeStartedAt;
+      if (!untimed && seatStart != null) {
+        final int spent = _clock().difference(seatStart).inSeconds;
+        if (spent > 0) {
+          final int left = secondsRemaining - spent;
+          secondsRemaining =
+              left < 300 ? min(300, secondsRemaining) : left;
+        }
+      }
+      _startedAt = _clock();
+      _shownAt = _clock();
+      phase = ExamPhase.playing;
+      _timer?.cancel();
+      _timer = Timer.periodic(const Duration(seconds: 1), (_) => tick());
+      notifyListeners();
+      return;
+    }
     try {
       final started = await _api.createAttempt(
         bundle!.code,

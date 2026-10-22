@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The DARK-variant launcher icon (founder pass IX): the same 2D FLAT
+     white R, but the ground flips to the dark-page navy (#0F1216) -
+     the app-icon twin of the website favicon repainting for dark
+     appearance. Enabled at runtime through the .LauncherDark
+     activity-alias when the student's appearance setting is Dark
+     (see lib/app_icon.dart); .LauncherLight keeps the brand green. -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_background_dark"/>
+    <foreground android:drawable="@mipmap/ic_launcher_foreground"/>
+    <monochrome android:drawable="@mipmap/ic_launcher_monochrome"/>
+</adaptive-icon>

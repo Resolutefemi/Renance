@@ -80,12 +80,22 @@ class _SplashScreenState extends State<SplashScreen>
     if (_leaving || !mounted) return;
     _leaving = true;
     final session = context.read<SessionStore>();
-    if (!session.introSeen) session.markIntroSeen();
     final hasToken = (session.token ?? '').isNotEmpty;
     if (!hasToken) {
+      // Founder pass VIII: a logged-out FIRST run meets the
+      // Duolingo-style welcome instead of the bare login form. The old
+      // code burned the introSeen flag right here without anything
+      // ever rendering from it; now the flag gates the welcome and the
+      // welcome's two doors mark it, so returning students keep the
+      // straight-to-login cut.
+      if (!session.introSeen) {
+        Navigator.of(context).pushReplacementNamed('/welcome');
+        return;
+      }
       Navigator.of(context).pushReplacementNamed('/login');
       return;
     }
+    session.markIntroSeen();
     // School staff land straight back in their workspace (syllabus,
     // scheme of work, notes) when the device remembers a school session.
     try {

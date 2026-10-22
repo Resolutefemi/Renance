@@ -19,6 +19,7 @@ import '../controllers.dart';
 import '../models.dart';
 import '../papers.dart';
 import '../qtext.dart';
+import 'achievement_share.dart';
 import 'exam_report_screen.dart';
 import 'fatigue_nudge.dart';
 import 'review_screen.dart' show ReviewDetailScreen;
@@ -38,6 +39,7 @@ class ExamScreen extends StatefulWidget {
     this.shuffleQuestions = false,
     this.studyMode = false,
     this.daily = false,
+    this.resumeAttemptId,
   });
 
   final ExamMeta exam;
@@ -60,6 +62,11 @@ class ExamScreen extends StatefulWidget {
   /// composed paper's plumbing label never leaks into the chrome.
   final bool daily;
 
+  /// A paused sitting's server attempt id (home hero card, recent
+  /// activity card, the reader's continue card): the intro reuses this
+  /// attempt on Begin instead of minting a fresh one.
+  final String? resumeAttemptId;
+
   @override
   State<ExamScreen> createState() => _ExamScreenState();
 }
@@ -70,12 +77,20 @@ class _ExamScreenState extends State<ExamScreen> {
     super.initState();
     Future<void>.microtask(() {
       if (!mounted) return;
-      context.read<ExamController>().load(
-            widget.exam,
-            durationOverrideMinutes: widget.durationOverrideMinutes,
-            untimed: widget.untimed || widget.studyMode,
-            shuffleQuestions: widget.shuffleQuestions,
-          );
+      final ExamController controller = context.read<ExamController>();
+      // A paused paper re-enters through its saved server attempt
+      // (founder Round 8) - everything else loads like a fresh sitting.
+      final String? resumeId = widget.resumeAttemptId;
+      if (resumeId != null) {
+        controller.resumeExisting(resumeId, widget.exam);
+        return;
+      }
+      controller.load(
+        widget.exam,
+        durationOverrideMinutes: widget.durationOverrideMinutes,
+        untimed: widget.untimed || widget.studyMode,
+        shuffleQuestions: widget.shuffleQuestions,
+      );
     });
   }
 
@@ -98,8 +113,32 @@ class _ExamScreenState extends State<ExamScreen> {
     if (c.phase == ExamPhase.graded) {
       final String? attemptId = c.attemptId;
       if (attemptId != null) {
-        WidgetsBinding.instance.addPostFrameCallback((_) {
+        WidgetsBinding.instance.addPostFrameCallback((_) async {
           if (!mounted) return;
+          // Round-8 share hook (founder): one offer to brag on the feed
+          // before the corrections reader opens. Never load-bearing -
+          // a failure or a silent dedup skips straight through to the
+          // navigation below.
+          final ExamResult? result = c.result;
+          final int? pct =
+              result != null && result.total > 0
+                  ? result.score * 100 ~/ result.total
+                  : null;
+          try {
+            await maybeOfferExamShare(
+              context,
+              headline: 'Paper graded!',
+              subtitle: pct == null
+                  ? 'Your ${widget.exam.title} paper has been marked.'
+                  : 'You scored $pct% on ${widget.exam.title}.',
+              postText: pct == null
+                  ? 'Just graded my ${widget.exam.title} paper on Renance! 🔥'
+                  : 'Just scored $pct% on my ${widget.exam.title} paper '
+                      'on Renance! 🔥',
+              dedupKey: 'exam.$attemptId',
+            );
+          } catch (_) {}
+          if (!mounted || !context.mounted) return;
           Navigator.of(context).pushReplacement(MaterialPageRoute<void>(
             builder: (_) => ReviewDetailScreen(
               attemptId: attemptId,
@@ -354,6 +393,38 @@ class _Intro extends StatelessWidget {
           child: ListView(
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
             children: <Widget>[
+              // Resume banner (Round 8): a paper the student left
+              // mid-sitting says so up front - the seat is saved, Begin
+              // drops straight back into it.
+              if (controller.resuming)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 12),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 12, vertical: 10),
+                    decoration: BoxDecoration(
+                      color: RenanceColors.amber.withValues(alpha: 0.14),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      children: <Widget>[
+                        const MsIcon('pause_circle',
+                            size: 16, color: RenanceColors.amber),
+                        const SizedBox(width: 8),
+                        Expanded(
+                          child: Text(
+                            'You left this paper - your seat is saved.',
+                            style: RenanceText.caption.copyWith(
+                              fontSize: 12.5,
+                              fontWeight: FontWeight.w700,
+                              color: context.ink,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               // Simulator banner - the school app's cream banner with
               // the abstract shapes, Renance's ink ground.
               Container(
@@ -556,7 +627,11 @@ class _Intro extends StatelessWidget {
                     const MsIcon('play_arrow', size: 20, fill: true),
                     const SizedBox(width: 8),
                     Text(
-                      studyMode ? 'Start Study' : 'Proceed to Test',
+                      studyMode
+                          ? 'Start Study'
+                          : (controller.resuming
+                              ? 'Resume Exam'
+                              : 'Proceed to Test'),
                       style: const TextStyle(
                           fontSize: 16, fontWeight: FontWeight.w700),
                     ),

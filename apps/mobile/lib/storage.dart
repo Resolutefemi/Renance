@@ -85,6 +85,13 @@ class SessionStore {
   static const _kToken = 'renance.token';
   static const _kUser = 'renance.user';
   static const _kIntroSeen = 'renance.introSeen';
+  // Device-level identity/engagement flags (founder 2026-10-22): NOT
+  // cleared on sign-out - a welcome card plays once per DEVICE, the
+  // channel prompt lives until the scholar joins, and an accepted
+  // notification permission never re-prompts.
+  static const _kWelcomeSeen = 'renance.welcomeSeen';
+  static const _kJoinedChannel = 'renance.joinedChannel';
+  static const _kNotificationsAccepted = 'renance.notificationsAccepted';
 
   /// The in-memory copy of the decrypted token. Kept hot so the sync
   /// getter (ApiClient reads it on every request) never awaits.
@@ -173,6 +180,26 @@ class SessionStore {
   bool get introSeen => _prefs.getBool(_kIntroSeen) ?? false;
 
   Future<void> markIntroSeen() => _prefs.setBool(_kIntroSeen, true);
+
+  /// The post-splash welcome card (founder 2026-10-22): plays once per
+  /// device for people that just downloaded the app.
+  bool get welcomeSeen => _prefs.getBool(_kWelcomeSeen) ?? false;
+
+  Future<void> markWelcomeSeen() => _prefs.setBool(_kWelcomeSeen, true);
+
+  /// The WhatsApp channel: true ONLY when the scholar tapped join -
+  /// until then the prompt comes back on every open (founder rule).
+  bool get joinedChannel => _prefs.getBool(_kJoinedChannel) ?? false;
+
+  Future<void> markJoinedChannel() => _prefs.setBool(_kJoinedChannel, true);
+
+  /// The notification permission loop: once granted, never re-prompted;
+  /// refusers keep getting asked on every open until they accept.
+  bool get notificationsAccepted =>
+      _prefs.getBool(_kNotificationsAccepted) ?? false;
+
+  Future<void> markNotificationsAccepted() =>
+      _prefs.setBool(_kNotificationsAccepted, true);
 }
 
 // ------------------------------------------------------------- submissions

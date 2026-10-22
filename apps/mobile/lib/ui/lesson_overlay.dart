@@ -12,11 +12,13 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../api_client.dart';
 import '../learn_controller.dart';
 import '../learn_models.dart';
 import '../qtext.dart';
+import 'achievement_share.dart';
 import 'celebrations.dart';
 import 'learn_bits.dart';
 import 'msymbols.dart';
@@ -374,6 +376,13 @@ class _LessonOverlayScreenState extends State<_LessonOverlayScreen> {
         forgiven: res.streakForgiven,
         forgivesLeft: res.streakForgivesLeft,
       );
+      // Founder pass IX: the day the streak lands on a milestone
+      // (7/14/21/30/50/100/200/365), the feed-share offer rides right
+      // behind the celebration. Silent no-op on every other day.
+      if (!mounted) return;
+      try {
+        await maybeOfferStreakShare(context, streak: res.streak);
+      } catch (_) {}
     }
     if (res.milestone != null) {
       if (!mounted) return;
@@ -384,6 +393,54 @@ class _LessonOverlayScreenState extends State<_LessonOverlayScreen> {
           Navigator.of(context).popUntil((Route<Object?> r) => r.isFirst);
         },
       );
+    }
+    // Founder pass VIII: the unit-milestone share offer (every 3 fully
+    // completed units of this course). Wrapped tight so it can NEVER
+    // break the lesson close flow.
+    await _maybeOfferUnitShare();
+  }
+
+  /// Counts fully-completed units of the lesson's course and offers the
+  /// feed share whenever the count crosses a multiple of 3. Only lesson
+  /// runs carry a course; the fresh PATH (learn.refresh() above only
+  /// refreshes the wallet) is the source of truth, and the whole block
+  /// is try/caught - a network hiccup or a prefs failure stays silent.
+  Future<void> _maybeOfferUnitShare() async {
+    try {
+      if (widget.mode != LessonMode.lesson) return;
+      final String? courseId = widget.courseId;
+      if (courseId == null || courseId.isEmpty) return;
+      if (!mounted) return;
+      final ApiClient api = context.read<ApiClient>();
+      final CoursePathModel path = await api.learnCoursePath(courseId);
+      // Units are counted exactly like the course ladder renders them
+      // (learn_path_view groups topics by t.unit == unit.index); a unit
+      // with no topics is skipped rather than guessed complete.
+      int done = 0;
+      for (final UnitNode unit in path.units) {
+        final List<TopicNode> topics =
+            path.topics.where((TopicNode t) => t.unit == unit.index).toList();
+        if (topics.isEmpty ||
+            !topics.every((TopicNode t) => t.isCompleted)) {
+          continue;
+        }
+        done += 1;
+      }
+      final SharedPreferences prefs = await SharedPreferences.getInstance();
+      final String key = 'renance.unitsDone.$courseId';
+      final int previous = prefs.getInt(key) ?? 0;
+      if (done <= previous) return;
+      await prefs.setInt(key, done);
+      if (done % 3 != 0) return;
+      if (!mounted) return;
+      await maybeOfferUnitShare(
+        context,
+        courseTitle: path.title,
+        unitCount: done,
+        courseId: courseId,
+      );
+    } catch (_) {
+      // A milestone popup must never break the lesson close flow.
     }
   }
 

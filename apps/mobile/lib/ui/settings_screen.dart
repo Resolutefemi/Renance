@@ -15,7 +15,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../controllers.dart';
 import '../learn_controller.dart';
+import '../notifications.dart';
 import '../storage.dart';
+import '../config.dart' show appVersion;
 import 'msymbols.dart';
 import 'tactile.dart';
 import 'theme.dart';
@@ -208,14 +210,22 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ),
               title: const Text('Study Reminders', style: RenanceText.bodyBase),
               subtitle: Text(
-                _reminders ? 'Daily at 8:00 PM' : 'Off',
+                _reminders ? 'Daily at 7:00 PM' : 'Off',
                 style: RenanceText.caption.copyWith(color: context.textSecondary),
               ),
               value: _reminders,
               activeThumbColor: context.primary,
               onChanged: (bool v) async {
                 final ThemeController theme = context.read<ThemeController>();
-                await theme.prefs.setBool('renance.reminders', v);
+                await theme.prefs.setBool(RenanceNotifications.remindersKey, v);
+                // The switch is now the REAL scheduler switch: ON re-arms
+                // tonight's 7:00 PM streak reminder, OFF drops it - the
+                // old dead prefs key finally drives the zoned schedule.
+                if (v) {
+                  await RenanceNotifications.scheduleDailyStreakReminder();
+                } else {
+                  await RenanceNotifications.cancelDailyStreakReminder();
+                }
                 if (!mounted) return;
                 setState(() => _reminders = v);
               },
@@ -314,7 +324,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ListTile(
               contentPadding: const EdgeInsets.symmetric(horizontal: 16),
               title: const Text('Version', style: RenanceText.bodyBase),
-              trailing: Text('2.5.0',
+              trailing: Text(appVersion,
                   style: RenanceText.labelMono.copyWith(fontSize: 12)),
             ),
           ]),

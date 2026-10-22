@@ -18,10 +18,11 @@ import '../models.dart';
 import '../storage.dart';
 import 'ai_generator_screen.dart';
 import 'ai_screen.dart';
+import 'about_screen.dart';
 import 'exam_history_screen.dart';
 import 'exam_screen.dart';
 import 'gpa_screen.dart';
-import 'home_screen.dart' show LauncherTile, openDailyQuiz, showMoreSheet;
+import 'home_screen.dart' show LauncherTile, openDailyQuiz;
 import 'leaderboard_screen.dart';
 import 'msymbols.dart';
 import 'packs_screen.dart';
@@ -418,7 +419,7 @@ class PostUtmeHomeTab extends StatelessWidget {
               onOpen: () => _openExam(context, e),
               onDownload: () => sync.downloadExam(e),
             ),
-          // Tools - search, settings and the More sheet; Notes and the
+          // Tools - search, settings and the About page; Notes and the
           // Tutor are retired (founder 2026-10-22).
           const SizedBox(height: 16),
           Text(
@@ -463,11 +464,12 @@ class PostUtmeHomeTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
-                  msIcon: 'more_horiz',
-                  iconColor: context.textSecondary,
-                  muted: true,
-                  label: 'More',
-                  onTap: () => showMoreSheet(context, onGoTab: onGoTab),
+                  msIcon: 'info',
+                  label: 'About Renance',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                        builder: (_) => const AboutScreen()),
+                  ),
                 ),
               ),
             ],

@@ -35,6 +35,14 @@ Future<void> testExecutable(FutureOr<void> Function() testMain) async {
     'Inter-Bold.ttf',
   ]);
   await load('JetBrainsMono', <String>['JetBrainsMono-Medium.ttf']);
+  // Founder pass IX goldens: the streak page, the share dialog and the
+  // feed ride Nunito (the app's display face) and MaterialSymbols (the
+  // MsIcon glyphs - flame, check, snowflake, forum). The variable Nunito
+  // carries every weight on its wght axis.
+  await load('Nunito', <String>['Nunito-Variable.ttf']);
+  await load('MaterialSymbolsOutlined', <String>[
+    'MaterialSymbolsOutlined.ttf',
+  ]);
 
   // The Material icon font ships with the SDK; without it every Icons.*
   // glyph paints as an Ahem block in goldens. Resolved from FLUTTER_ROOT

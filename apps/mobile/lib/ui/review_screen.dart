@@ -18,6 +18,7 @@ import 'package:provider/provider.dart';
 
 import '../api_client.dart';
 import '../qtext.dart';
+import 'exam_screen.dart';
 import 'explanation_sheet.dart';
 import 'msymbols.dart';
 import 'saved_questions.dart';
@@ -583,6 +584,10 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
   // The subject sub-navbar's active tab (founder 2026-10-22): null
   // shows every subject section; a name filters the reader to one.
   String? _activeSubject;
+  // Round-8 resume gate: the attempt is still open server-side, so the
+  // reader yields to the continue-exam card instead of the 409 error.
+  bool _inProgress = false;
+  String _attemptCode = '';
 
   @override
   void initState() {
@@ -598,17 +603,71 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
 
   Future<void> _load() async {
     final ApiClient api = context.read<ApiClient>();
+    // Round-8 resume gate (founder): a paper the student left unfinished
+    // must offer its seat back here, never the reader's 409 dead end.
+    // The attempt row is checked first; every other path keeps the old
+    // behaviour byte for byte.
+    try {
+      final AttemptView attempt = await api.attempt(widget.attemptId);
+      if (!mounted) return;
+      if (attempt.status == 'in_progress') {
+        setState(() {
+          _inProgress = true;
+          _attemptCode = attempt.code;
+        });
+        return;
+      }
+    } on Exception catch (_) {
+      // Unreachable row: fall through to the review load, whose error
+      // path is unchanged.
+    }
     try {
       final AttemptReview review = await api.attemptReview(widget.attemptId);
       if (!mounted) return;
       setState(() => _review = review);
     } on ApiException catch (e) {
       if (!mounted) return;
+      // The reader is graded-only (409 not_graded). If the row is
+      // really an open seat, route there; otherwise the plain error
+      // state stands.
+      if ((e.statusCode == 409 || e.code == 'not_graded') &&
+          await _seatIsOpen(api)) {
+        if (!mounted) return;
+        setState(() => _inProgress = true);
+        return;
+      }
       setState(() => _error = e.message);
     } on NetworkException catch (e) {
       if (!mounted) return;
       setState(() => _error = e.message);
     }
+  }
+
+  /// True when the attempt row still reads in_progress (and grabs the
+  /// paper's code for the continue-exam card).
+  Future<bool> _seatIsOpen(ApiClient api) async {
+    try {
+      final AttemptView attempt = await api.attempt(widget.attemptId);
+      if (attempt.status == 'in_progress') {
+        _attemptCode = attempt.code;
+        return true;
+      }
+    } on Exception catch (_) {
+      // Unreachable row: not an open seat we can prove.
+    }
+    return false;
+  }
+
+  /// The paused paper's manifest entry, matched by code exactly the way
+  /// the home hero card does it. Null when the code is not in the sync
+  /// manifest - the continue button hides in that case.
+  ExamMeta? _resolveExam(BuildContext context) {
+    if (_attemptCode.isEmpty) return null;
+    final SyncController sync = context.read<SyncController>();
+    for (final ExamMeta e in sync.exams) {
+      if (e.code == _attemptCode) return e;
+    }
+    return null;
   }
 
   /// Exam body label for the "Exam Type" chip, derived from the code.
@@ -672,7 +731,22 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
       backgroundColor: context.cardLowest,
       body: SafeArea(
         bottom: false,
-        child: review == null
+        child: _inProgress
+            ? Column(
+                children: <Widget>[
+                  _ReaderHeader(
+                    title: 'Past Questions',
+                    onBack: () => Navigator.of(context).pop(),
+                  ),
+                  Expanded(
+                    child: _ContinueSeatCard(
+                      attemptId: widget.attemptId,
+                      exam: _resolveExam(context),
+                    ),
+                  ),
+                ],
+              )
+            : review == null
             ? Column(
                 children: <Widget>[
                   _ReaderHeader(
@@ -975,6 +1049,94 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
         content: Text(
             'Report noted on question ${q.questionId}. Thanks for the '
             'flag, it goes straight to the question team.'),
+      ),
+    );
+  }
+}
+
+/// The paused-paper state of the reader (Round 8): the corrections API
+/// only serves graded papers, so an attempt still in progress lands
+/// here - the seat is saved, one tap returns to the CBT player with the
+/// same attempt id.
+class _ContinueSeatCard extends StatelessWidget {
+  const _ContinueSeatCard({required this.attemptId, required this.exam});
+
+  final String attemptId;
+  final ExamMeta? exam;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(32),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Container(
+              width: 64,
+              height: 64,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: RenanceColors.emerald.withValues(alpha: 0.14),
+                shape: BoxShape.circle,
+              ),
+              child: const MsIcon('pause_circle',
+                  size: 30, color: RenanceColors.emerald),
+            ),
+            const SizedBox(height: 18),
+            Text(
+              'This paper is still open',
+              textAlign: TextAlign.center,
+              style: RenanceText.displayMd.copyWith(fontSize: 21),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'You left this paper unfinished - your seat is saved. '
+              'Jump back in and finish it.',
+              textAlign: TextAlign.center,
+              style: RenanceText.bodySecondary.copyWith(
+                  color: context.textSecondary),
+            ),
+            const SizedBox(height: 24),
+            if (exam != null) ...<Widget>[
+              TactileButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute<void>(
+                    builder: (_) => ExamScreen(
+                      exam: exam!,
+                      resumeAttemptId: attemptId,
+                    ),
+                  ));
+                },
+                face: context.primary,
+                onFace: context.onPrimary,
+                height: 50,
+                radius: BorderRadius.circular(12),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const MsIcon('play_arrow', size: 18, fill: true),
+                    const SizedBox(width: 8),
+                    const Text('Continue Exam'),
+                  ],
+                ),
+              ),
+            ] else ...<Widget>[
+              Text(
+                'We could not match this paper to your exam list - open '
+                'it again from the home desk.',
+                textAlign: TextAlign.center,
+                style: RenanceText.caption.copyWith(
+                    color: context.textSecondary),
+              ),
+              const SizedBox(height: 8),
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: const Text('Go back'),
+              ),
+            ],
+          ],
+        ),
       ),
     );
   }

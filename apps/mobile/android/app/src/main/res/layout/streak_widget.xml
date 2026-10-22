@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Renance streak widget (founder 2026-10-22, the Duolingo
+     home-screen pass): flame, count, label. RemoteViews only, so
+     everything is TextView on a rounded card. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/streak_widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp"
+    android:background="@drawable/streak_widget_bg">
+
+    <TextView
+        android:id="@+id/streak_flame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔥"
+        android:textSize="30sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/streak_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#FF9602"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/streak_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="day streak"
+        android:textColor="#777777"
+        android:textSize="11sp"
+        android:gravity="center"/>
+</LinearLayout>

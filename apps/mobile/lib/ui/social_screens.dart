@@ -11,6 +11,7 @@ import '../api_client.dart';
 import '../learn_models.dart';
 import 'blue_tick.dart';
 import 'courses_screen.dart' show LearnPageBar;
+import 'face.dart';
 import 'learn_bits.dart';
 import 'msymbols.dart';
 import 'renance_logo.dart';
@@ -26,34 +27,29 @@ class SocialAvatar extends StatelessWidget {
     required this.username,
     required this.name,
     this.size = 40,
+    this.avatar,
+    this.photo,
   });
 
   final String username;
   final String name;
   final double size;
 
+  /// The baked-in avatar key + the uploaded R2 photo key (the
+  /// 2026-10-22 identity pass). The photo wins, web parity.
+  final String? avatar;
+  final String? photo;
+
   @override
   Widget build(BuildContext context) {
-    final String seed = username.isNotEmpty ? username : name;
-    final String initial = seed.isNotEmpty ? seed[0].toUpperCase() : '?';
-    return Container(
-      width: size,
-      height: size,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: avatarColorFor(seed),
-      ),
-      child: Center(
-        child: Text(
-          initial,
-          style: TextStyle(
-            fontFamily: 'Nunito',
-            fontSize: size * 0.42,
-            fontWeight: FontWeight.w800,
-            color: Colors.white,
-          ),
-        ),
-      ),
+    return RenanceFace(
+      name: name,
+      username: username,
+      avatar: avatar,
+      photoUrl: (photo == null || photo!.isEmpty)
+          ? null
+          : context.read<ApiClient>().profilePhotoUrl(photo!),
+      size: size,
     );
   }
 }
@@ -178,6 +174,8 @@ class _PublicProfileScreenState extends State<PublicProfileScreen> {
       name: _profile!.name,
       premium: _profile!.premium,
       avatar: _profile!.avatar,
+      photo: _profile!.photo,
+      institution: _profile!.institution,
       level: _profile!.level,
       xp: _profile!.xp,
       streak: _profile!.streak,
@@ -276,28 +274,22 @@ class _PublicProfileScreenState extends State<PublicProfileScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              // the 80px avatar (primary face, ink initial) with the
-              // Lvl badge anchored at its bottom-right edge.
+              // the 80px face (RenanceFace identity pass 2026-10-22:
+              // uploaded photo > baked-in avatar > initial letter) with
+              // the Lvl badge anchored at its bottom-right edge.
               Stack(
                 clipBehavior: Clip.none,
                 children: <Widget>[
-                  Container(
-                    width: 80,
-                    height: 80,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: context.primary,
-                    ),
-                    child: Text(
-                      p.name.isNotEmpty ? p.name[0].toUpperCase() : '?',
-                      style: TextStyle(
-                        fontFamily: 'Nunito',
-                        fontSize: 30,
-                        fontWeight: FontWeight.w900,
-                        color: context.onPrimary,
-                      ),
-                    ),
+                  RenanceFace(
+                    name: p.name,
+                    username: p.username,
+                    avatar: p.avatar,
+                    photoUrl: p.photo == null || p.photo!.isEmpty
+                        ? null
+                        : context
+                            .read<ApiClient>()
+                            .profilePhotoUrl(p.photo!),
+                    size: 80,
                   ),
                   Positioned(
                     bottom: -4,
@@ -356,6 +348,32 @@ class _PublicProfileScreenState extends State<PublicProfileScreen> {
                   color: context.textSecondary,
                 ),
               ),
+              // The school line (founder 2026-10-22: the profile wears
+              // the scholar's institution like every other identity).
+              if (p.institution != null && p.institution!.trim().isNotEmpty) ...<Widget>[
+                const SizedBox(height: 6),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    MsIcon('account_balance',
+                        size: 15, color: context.textSecondary),
+                    const SizedBox(width: 5),
+                    Flexible(
+                      child: Text(
+                        p.institution!,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontFamily: 'Nunito',
+                          fontSize: 13,
+                          fontWeight: FontWeight.w700,
+                          color: context.textSecondary,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
               const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -930,7 +948,11 @@ class _FollowList extends StatelessWidget {
                   onTap: () =>
                       PublicProfileScreen.push(context, row.username),
                   child: SocialAvatar(
-                      username: row.username, name: row.name, size: 44),
+                      username: row.username,
+                      name: row.name,
+                      size: 44,
+                      avatar: row.avatar,
+                      photo: row.photo),
                 ),
                 const SizedBox(width: 12),
                 Expanded(

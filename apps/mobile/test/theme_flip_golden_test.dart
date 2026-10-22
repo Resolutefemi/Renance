@@ -36,7 +36,6 @@ import 'package:renance/ui/jamb_subject_selection_screen.dart';
 import 'package:renance/ui/lessons_screen.dart';
 import 'package:renance/ui/packs_screen.dart';
 import 'package:renance/ui/notifications_screen.dart';
-import 'package:renance/ui/offline_share_screen.dart';
 import 'package:renance/ui/onboarding_sheet.dart';
 import 'package:renance/ui/pack_detail_screen.dart';
 import 'package:renance/ui/patron_portal_screen.dart';
@@ -397,8 +396,6 @@ WidgetBuilder screenFor(String name) {
           const LessonReaderScreen(slug: 'demo', title: 'Cell Division');
     case 'career_bridge':
       return (_) => const CareerBridgeScreen();
-    case 'offline_share':
-      return (_) => const OfflineShareScreen();
     case 'ai_generator':
       return (_) => const AiGeneratorScreen();
     case 'patron_portal':
@@ -501,7 +498,6 @@ const List<String> kScreens = <String>[
   'lessons',
   'lesson_reader',
   'career_bridge',
-  'offline_share',
   'ai_generator',
   'patron_portal',
   'onboarding',

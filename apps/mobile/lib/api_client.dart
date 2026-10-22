@@ -1877,6 +1877,20 @@ class ApiClient {
         .toList();
   }
 
+  /// POST /social/feed - a freeform post (the Go handler decodes the
+  /// single `body` string field and caps it at 500 chars; the client
+  /// truncates first so a long achievement line can never 400).
+  /// Never auto-retries like every other POST.
+  Future<void> socialCreatePost(String body) async {
+    final String text = body.length > 500 ? body.substring(0, 500) : body;
+    await _send(
+      'POST',
+      '/social/feed',
+      body: <String, dynamic>{'body': text},
+      retryOnTimeout: false,
+    );
+  }
+
   /// POST /social/posts/{id}/like - toggle the heart.
   Future<(int, bool)> socialLike(int postId) async {
     final dynamic data = await _send('POST', '/social/posts/$postId/like');
@@ -1935,6 +1949,102 @@ class ApiClient {
     final dynamic data = await _send('GET', '/social/connections');
     return SocialConnections.fromJson((data as Map).cast<String, dynamic>());
   }
+
+  /// GET /social/search?q= - find scholars by username or name
+  /// (founder 2026-10-22: the find-friends box, web parity).
+  Future<List<SocialAuthor>> socialSearch(String query, {int limit = 20}) async {
+    final String q = Uri.encodeQueryComponent(query.trim());
+    final dynamic data =
+        await _send('GET', '/social/search?q=$q&limit=$limit');
+    final Map<String, dynamic> j = (data as Map).cast<String, dynamic>();
+    return ((j['users'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => SocialAuthor.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  /// GET /social/suggestions - the profile page's Friend suggestions
+  /// strip (follow-backs first, then active scholars).
+  Future<List<SocialAuthor>> socialSuggestions({int limit = 12}) async {
+    final dynamic data = await _send('GET', '/social/suggestions?limit=$limit');
+    final Map<String, dynamic> j = (data as Map).cast<String, dynamic>();
+    return ((j['users'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => SocialAuthor.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  /// The absolute URL of an uploaded profile photo (the R2 object is
+  /// served publicly through the API's media reader).
+  String profilePhotoUrl(String key) => '$_base/media/profile-picture/$key';
+
+  /// POST /me/avatar/photo - multipart upload of the picked photo to
+  /// the R2 profile-picture folder (founder 2026-10-22). Returns the
+  /// stored object key; the photo then wins over any avatar pick.
+  Future<String> uploadAvatarPhoto({
+    required List<int> bytes,
+    required String filename,
+  }) async {
+    final http.MultipartRequest req = http.MultipartRequest(
+      'POST',
+      Uri.parse('$_base/me/avatar/photo'),
+    );
+    final String? token = _token?.call();
+    if (token != null && token.isNotEmpty) {
+      req.headers['Authorization'] = 'Bearer $token';
+    }
+    req.files.add(http.MultipartFile.fromBytes(
+      'file',
+      bytes,
+      filename: filename,
+    ));
+    final http.StreamedResponse res =
+        await req.send().timeout(const Duration(seconds: 90));
+    final http.Response body = await http.Response.fromStream(res);
+    if (res.statusCode >= 400) {
+      String code = 'upload_failed';
+      String message = 'Request failed (${res.statusCode})';
+      try {
+        final Map<String, dynamic> errJ =
+            jsonDecode(body.body) as Map<String, dynamic>;
+        final Map<String, dynamic>? err =
+            (errJ['error'] as Map<dynamic, dynamic>?)?.cast<String, dynamic>();
+        if (err != null) {
+          code = (err['code'] ?? code).toString();
+          message = (err['message'] ?? message).toString();
+        }
+      } on FormatException {
+        // keep the defaults
+      }
+      throw ApiException(res.statusCode, code, message);
+    }
+    try {
+      final Map<String, dynamic> j =
+          jsonDecode(body.body) as Map<String, dynamic>;
+      return (j['avatarPhoto'] ?? '') as String;
+    } on FormatException {
+      throw ApiException(502, 'bad_response',
+          'Renance servers returned an unclear answer.');
+    }
+  }
+
+  /// DELETE /me/avatar/photo - clear the uploaded photo; the scholar
+  /// falls back to their avatar pick or the initial letter.
+  Future<void> deleteAvatarPhoto() async {
+    await _send('DELETE', '/me/avatar/photo', retryOnTimeout: false);
+  }
+
+  /// PATCH /learn/profile {avatar} - pick one of the 50 baked-in
+  /// avatars ('avatar-01'..'avatar-50', or '' to fall back to the
+  /// initial letter). The pick clears any uploaded photo server-side
+  /// (the one-wins rule).
+  Future<void> setAvatarKey(String key) async {
+    await _send(
+      'PATCH',
+      '/learn/profile',
+      body: <String, dynamic>{'avatar': key},
+      retryOnTimeout: false,
+    );
+  }
+
 
   /// GET /leaderboard/gems - the diamond board (7th leaderboard).
   Future<GemsLeaderboardData> leaderboardGems() async {

@@ -446,7 +446,13 @@ class _PostCard extends StatelessWidget {
                 onTap: username.isEmpty
                     ? null
                     : () => PublicProfileScreen.push(context, username),
-                child: SocialAvatar(username: username, name: name, size: 40),
+                child: SocialAvatar(
+                    username: username,
+                    name: name,
+                    size: 40,
+                    avatar: post.author?.avatar,
+                    photo: post.author?.photo,
+                  ),
               ),
               const SizedBox(width: 10),
               Expanded(
@@ -610,7 +616,13 @@ class _CommentRow extends StatelessWidget {
           onTap: username.isEmpty
               ? null
               : () => PublicProfileScreen.push(context, username),
-          child: SocialAvatar(username: username, name: name, size: 32),
+          child: SocialAvatar(
+            username: username,
+            name: name,
+            size: 32,
+            avatar: comment.author?.avatar,
+            photo: comment.author?.photo,
+          ),
         ),
         const SizedBox(width: 10),
         Expanded(

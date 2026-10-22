@@ -570,139 +570,146 @@ class _RankCard extends StatelessWidget {
         break;
     }
 
-    return Container(
-      padding: const EdgeInsets.all(14),
-      decoration: BoxDecoration(
-        color: rank <= 3 ? tint.withValues(alpha: 0.34) : context.card,
-        borderRadius: BorderRadius.circular(16),
-        border: you
-            ? Border.all(color: context.ink, width: 1.6)
-            : Border.all(
-                color: context.outlineVariant.withValues(alpha: 0.4)),
-        boxShadow: const <BoxShadow>[
-          BoxShadow(
-            color: Color(0x0F141C2D),
-            blurRadius: 4,
-            offset: Offset(0, 2),
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Row(
-            children: <Widget>[
-              // Medal / rank badge.
-              Container(
-                width: 38,
-                height: 38,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: rank <= 3 ? Colors.white : context.cardLow,
-                  border: rank <= 3
-                      ? null
-                      : Border.all(color: context.outlineVariant),
-                  boxShadow: rank <= 3
-                      ? const <BoxShadow>[
-                          BoxShadow(
-                            color: Color(0x22141C2D),
-                            blurRadius: 4,
-                            offset: Offset(0, 1),
+    return GestureDetector(
+      // Round-8 tap-through (founder): every board's rows open the
+      // student's public profile, exactly like the gems ladder.
+      onTap: entry.username.isEmpty
+          ? null
+          : () => PublicProfileScreen.push(context, entry.username),
+      child: Container(
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: rank <= 3 ? tint.withValues(alpha: 0.34) : context.card,
+          borderRadius: BorderRadius.circular(16),
+          border: you
+              ? Border.all(color: context.ink, width: 1.6)
+              : Border.all(
+                  color: context.outlineVariant.withValues(alpha: 0.4)),
+          boxShadow: const <BoxShadow>[
+            BoxShadow(
+              color: Color(0x0F141C2D),
+              blurRadius: 4,
+              offset: Offset(0, 2),
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                // Medal / rank badge.
+                Container(
+                  width: 38,
+                  height: 38,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: rank <= 3 ? Colors.white : context.cardLow,
+                    border: rank <= 3
+                        ? null
+                        : Border.all(color: context.outlineVariant),
+                    boxShadow: rank <= 3
+                        ? const <BoxShadow>[
+                            BoxShadow(
+                              color: Color(0x22141C2D),
+                              blurRadius: 4,
+                              offset: Offset(0, 1),
+                            ),
+                          ]
+                        : null,
+                  ),
+                  child: rank == 1
+                      ? const MsIcon('emoji_events',
+                          size: 20, fill: true, color: Color(0xFFB7791F))
+                      : Text(
+                          '$rank',
+                          style: RenanceText.bodyMedium.copyWith(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
+                            color: rank <= 3 ? valueColor : context.ink,
                           ),
-                        ]
-                      : null,
+                        ),
                 ),
-                child: rank == 1
-                    ? const MsIcon('emoji_events',
-                        size: 20, fill: true, color: Color(0xFFB7791F))
-                    : Text(
-                        '$rank',
-                        style: RenanceText.bodyMedium.copyWith(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w700,
-                          color: rank <= 3 ? valueColor : context.ink,
+                const SizedBox(width: 10),
+                // Avatar initial.
+                Container(
+                  width: 40,
+                  height: 40,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: you ? context.inverseChip : context.cardLow,
+                  ),
+                  child: you
+                      ? Text(
+                          'R',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 16,
+                            color: context.onInverseChip,
+                          ),
+                        )
+                      : Text(
+                          entry.username.isEmpty
+                              ? 'R'
+                              : entry.username[0].toUpperCase(),
+                          style: RenanceText.bodyMedium.copyWith(
+                            fontSize: 15,
+                            color: context.ink,
+                          ),
+                        ),
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Row(
+                    children: <Widget>[
+                      Flexible(
+                        child: Text(
+                          you ? 'You' : entry.username,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: RenanceText.bodyMedium.copyWith(fontSize: 16),
                         ),
                       ),
-              ),
-              const SizedBox(width: 10),
-              // Avatar initial.
-              Container(
-                width: 40,
-                height: 40,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: you ? context.inverseChip : context.cardLow,
+                      // The premium verified tick, the one blue on the app.
+                      if (entry.premium) ...<Widget>[
+                        const SizedBox(width: 5),
+                        const BlueTickIcon(size: 15),
+                      ],
+                    ],
+                  ),
                 ),
-                child: you
-                    ? Text(
-                        'R',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 16,
-                          color: context.onInverseChip,
-                        ),
-                      )
-                    : Text(
-                        entry.username.isEmpty
-                            ? 'R'
-                            : entry.username[0].toUpperCase(),
-                        style: RenanceText.bodyMedium.copyWith(
-                          fontSize: 15,
-                          color: context.ink,
-                        ),
-                      ),
-              ),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Row(
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
-                    Flexible(
-                      child: Text(
-                        you ? 'You' : entry.username,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: RenanceText.bodyMedium.copyWith(fontSize: 16),
+                    Text(
+                      headlineLabel,
+                      style: RenanceText.caption.copyWith(
+                        fontSize: 12,
+                        color: context.textSecondary,
                       ),
                     ),
-                    // The premium verified tick, the one blue on the app.
-                    if (entry.premium) ...<Widget>[
-                      const SizedBox(width: 5),
-                      const BlueTickIcon(size: 15),
-                    ],
+                    Text(
+                      tab == _Board.streak ? '🔥 $headline' : '$headline$headlineUnit',
+                      style: RenanceText.statNumber.copyWith(
+                        fontSize: 22,
+                        color: valueColor,
+                      ),
+                    ),
                   ],
                 ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: <Widget>[
-                  Text(
-                    headlineLabel,
-                    style: RenanceText.caption.copyWith(
-                      fontSize: 12,
-                      color: context.textSecondary,
-                    ),
-                  ),
-                  Text(
-                    tab == _Board.streak ? '🔥 $headline' : '$headline$headlineUnit',
-                    style: RenanceText.statNumber.copyWith(
-                      fontSize: 22,
-                      color: valueColor,
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          const SizedBox(height: 10),
-          // The honest stat chips under each row.
-          Wrap(
-            spacing: 6,
-            runSpacing: 6,
-            children: chips,
-          ),
-        ],
+              ],
+            ),
+            const SizedBox(height: 10),
+            // The honest stat chips under each row.
+            Wrap(
+              spacing: 6,
+              runSpacing: 6,
+              children: chips,
+            ),
+          ],
+        ),
       ),
     );
   }

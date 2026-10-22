@@ -11,6 +11,7 @@ library;
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
+import 'package:home_widget/home_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'api_client.dart';
@@ -91,11 +92,30 @@ class LearnController extends ChangeNotifier {
       final LearnProfile p = await api.learnProfile();
       _profile = p;
       _persist(p);
+      // The home-screen streak widget rides every wallet refresh
+      // (founder 2026-10-22): the tile shows the flame, the count and
+      // the stocked freezes. Best-effort - never blocks study.
+      await _pushWidget(p);
     } catch (_) {
       // Offline: keep the cached wallet.
     } finally {
       _loading = false;
       notifyListeners();
+    }
+  }
+
+  /// Feeds the StreakWidgetProvider (home_widget). The push always
+  /// succeeds from Dart's side; the launcher repaint is the OS's job.
+  Future<void> _pushWidget(LearnProfile p) async {
+    try {
+      await HomeWidget.saveWidgetData<int>('streak_count', p.streak);
+      await HomeWidget.saveWidgetData<int>('streak_freezes', p.freezeCount);
+      await HomeWidget.updateWidget(
+        name: 'StreakWidgetProvider',
+        androidName: 'StreakWidgetProvider',
+      );
+    } catch (_) {
+      // No widget on the home screen (or an old launcher): a no-op.
     }
   }
 
