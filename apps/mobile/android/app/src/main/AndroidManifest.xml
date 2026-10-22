@@ -24,6 +24,17 @@
         android:fullBackupContent="@xml/backup_rules"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:usesCleartextTraffic="false">
+        <!-- CRASH FIX (2026-10-23, "Renance keeps stopping"): the pass-IX
+             activity-alias launcher pair (.LauncherLight/.LauncherDark) is
+             GONE. MIUI's launcher reacts to PackageManager component-state
+             changes by stopping the app's process (DONT_KILL_APP is a
+             hint it ignores), and repeated startup mutations left the
+             alias launch path broken on the founder's device even after
+             the mutations were guarded. The launcher entry is back where
+             every known-good build (<= 28) had it: directly on
+             .MainActivity, with the standard adaptive icon that MIUI
+             handles through plain resources - no PackageManager
+             round-trips at launch, ever. The deep-link filter stays. -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -42,47 +53,16 @@
               android:resource="@style/NormalTheme"
               />
             <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data android:scheme="renance"/>
             </intent-filter>
         </activity>
-        <!-- Founder pass IX: the launcher icon ADAPTS to the in-app
-             appearance setting, exactly like the website favicon. The
-             MAIN/LAUNCHER intent moves off .MainActivity into two
-             aliases - .LauncherLight (brand green ground, the default)
-             and .LauncherDark (dark-page navy ground). At runtime
-             lib/app_icon.dart enables the matching alias and disables
-             the other through PackageManager.setComponentEnabledSetting
-             (one alias must ALWAYS be enabled, hence enable-first
-             ordering in the Kotlin handler). The deep-link filter above
-             stays on .MainActivity so renance:// keeps working no
-             matter which alias is live. -->
-        <activity-alias
-            android:name=".LauncherLight"
-            android:enabled="true"
-            android:exported="true"
-            android:icon="@mipmap/ic_launcher"
-            android:roundIcon="@mipmap/ic_launcher_round"
-            android:targetActivity=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity-alias>
-        <activity-alias
-            android:name=".LauncherDark"
-            android:enabled="false"
-            android:exported="true"
-            android:icon="@mipmap/ic_launcher_dark"
-            android:roundIcon="@mipmap/ic_launcher_round_dark"
-            android:targetActivity=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity-alias>
         <!-- The home-screen streak widget (founder 2026-10-22, the
              Duolingo widget pass): Dart pushes the count through
              home_widget; this receiver repaints the tile. -->

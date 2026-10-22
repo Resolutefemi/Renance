@@ -1,7 +1,5 @@
 package dev.renance.renance
 
-import android.content.ComponentName
-import android.content.pm.PackageManager
 import android.os.Build
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
@@ -11,83 +9,27 @@ class MainActivity : FlutterActivity() {
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
-        // App-icon appearance switch (founder pass IX): the launcher icon
-        // adapts to the in-app appearance setting exactly like the web
-        // favicon. Two launcher activity-aliases ship in the manifest -
-        // .LauncherLight (brand green) and .LauncherDark (dark-page
-        // navy); setVariant enables the matching one and disables the
-        // other. Enable-FIRST ordering keeps at least one launcher alias
-        // enabled at every instant, so the app can never vanish from the
-        // home screen mid-switch. Best-effort: a failure never throws
-        // into Dart.
-        //
-        // CRASH FIX (2026-10-23, "Renance keeps stopping"): the first
-        // cut called setComponentEnabledSetting on EVERY launch, even
-        // when the requested variant was already live. PackageManager
-        // mutations on a launcher component fire the
-        // ACTION_COMPONENT_ENABLED_CHANGED broadcast, which makes
-        // launchers rebuild the package's activity list - and on many
-        // OEM ROMs (Samsung/OneUI, Tecno/HiOS, Infinix/XOS, Xiaomi) the
-        // running process is STOPPED as part of that rebuild,
-        // DONT_KILL_APP notwithstanding. Startup therefore killed the
-        // app it was starting: a guaranteed "keeps stopping" loop. The
-        // fix reads the LIVE component states first and touches NOTHING
-        // unless the variant actually changes - the every-launch call
-        // is now a true no-op, and the PackageManager round-trip only
-        // ever happens when the scholar flips Light/Dark in settings.
+        // App-icon appearance switch (founder pass IX, RETIRED 2026-10-23):
+        // the alias-based icon switch produced the "Renance keeps
+        // stopping" crash loop on MIUI - the launcher stops the app's
+        // process on PackageManager component-state changes and the
+        // repeated startup mutations left the alias launch path broken.
+        // The manifest no longer declares any activity-alias, so there
+        // is nothing to switch; this handler stays ONLY so an old Dart
+        // caller cannot hit MissingPluginException - it answers
+        // immediately and touches NOTHING. The launcher entry lives
+        // directly on .MainActivity again (the known-good <= 28
+        // configuration) and the standard adaptive icon serves both
+        // appearance tiers through plain resources.
         MethodChannel(
             flutterEngine.dartExecutor.binaryMessenger,
             "renance/appIcon"
         ).setMethodCallHandler { call, result ->
             when (call.method) {
                 "setVariant" -> {
-                    try {
-                        val variant = call.argument<String>("variant") ?: "light"
-                        val pm = packageManager
-                        val light = ComponentName(this, "$packageName.LauncherLight")
-                        val dark = ComponentName(this, "$packageName.LauncherDark")
-                        // Resolve the LIVE states. COMPONENT_ENABLED_STATE_DEFAULT
-                        // falls back to the manifest value: light ON, dark OFF.
-                        fun isEnabled(state: Int, manifestDefault: Boolean): Boolean =
-                            when (state) {
-                                PackageManager.COMPONENT_ENABLED_STATE_ENABLED -> true
-                                PackageManager.COMPONENT_ENABLED_STATE_DISABLED -> false
-                                else -> manifestDefault
-                            }
-                        val lightOn = isEnabled(
-                            pm.getComponentEnabledSetting(light),
-                            manifestDefault = true,
-                        )
-                        val darkOn = isEnabled(
-                            pm.getComponentEnabledSetting(dark),
-                            manifestDefault = false,
-                        )
-                        val liveDark = darkOn && !lightOn
-                        val wantDark = variant == "dark"
-                        // The guard that ends the crash loop: the variant
-                        // already live? Answer immediately, mutate nothing.
-                        if (wantDark == liveDark) {
-                            result.success(true)
-                            return@setMethodCallHandler
-                        }
-                        // A REAL flip: enable-first so one launcher alias is
-                        // always on, then disable the other.
-                        val (enableFirst, disableSecond) =
-                            if (wantDark) dark to light else light to dark
-                        pm.setComponentEnabledSetting(
-                            enableFirst,
-                            PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
-                            PackageManager.DONT_KILL_APP
-                        )
-                        pm.setComponentEnabledSetting(
-                            disableSecond,
-                            PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
-                            PackageManager.DONT_KILL_APP
-                        )
-                        result.success(true)
-                    } catch (e: Exception) {
-                        result.success(false)
-                    }
+                    // Hard no-op:PackageManager mutations on launcher
+                    // components are BANNED from this app's lifecycle.
+                    result.success(true)
                 }
                 else -> result.notImplemented()
             }

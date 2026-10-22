@@ -1,12 +1,9 @@
-/// The launcher-icon appearance switch (founder pass IX): the app icon
-/// adapts to the appearance setting EXACTLY like the website favicon.
-/// Two launcher activity-aliases ship in the AndroidManifest -
-/// .LauncherLight (brand green ground) and .LauncherDark (the dark-page
-/// navy ground) - and this helper flips the live one through the
-/// native 'renance/appIcon' channel. Dark mode -> dark icon; Light and
-/// Mixed keep the light icon (Mixed is a light scaffold by design).
-/// Everything is best-effort: pre-Android, an engine that is not up yet
-/// or a rejected call simply leaves the current icon in place.
+/// The launcher-icon appearance switch (founder pass IX, RETIRED
+/// 2026-10-23 after the "Renance keeps stopping" crash loop): the
+/// alias/PackageManager mechanism is gone from the manifest and the
+/// native side answers without mutating anything. This helper stays so
+/// existing callers (Appearance picker) keep compiling and hitting a
+/// harmless no-op. The standard adaptive icon serves both tiers.
 library;
 
 import 'dart:io';

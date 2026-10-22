@@ -71,11 +71,12 @@ Future<void> main() async {
     // stored seed so the update lands on the website's default palette;
     // the Appearance picker stays and a fresh pick re-tints everything.
     await theme.migrateSeedToWebDefault();
-    // Founder pass IX: the launcher icon matches the saved appearance
-    // from the first launch on (the setMode path covers live changes).
-    // Since the 2026-10-23 crash fix the native side no-ops unless the
-    // variant actually changes - startup never mutates PackageManager.
-    await RenanceAppIcon.apply(theme.mode);
+    // NOTE (2026-10-23 crash fix): the launcher icon no longer adapts
+    // through PackageManager aliases - that mechanism produced the
+    // "Renance keeps stopping" loop on MIUI launchers. Startup touches
+    // NO PackageManager state; the standard adaptive icon serves both
+    // appearance tiers. RenanceAppIcon stays available but the native
+    // side answers without mutating anything.
 
     runApp(
       RenanceApp(
