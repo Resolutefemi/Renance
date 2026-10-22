@@ -8,25 +8,28 @@ import { RenanceMark } from '@/components/renance-logo';
 import { STORE_CONFIG } from '@/lib/store-links';
 
 /**
- * The full duolingo.com-style landing (founder directive 2026-10-22:
- * navbar, transitions and animations "exactly the same"). Structure,
- * per section, top to bottom:
+ * The full duolingo.com-style landing, v2 (founder screenshots pass
+ * 2026-10-22: "do same to Renance"). Section journey, top to bottom:
  *
- *   1. sticky navbar  - wordmark left, GET THE APP right, shadow on scroll
- *   2. hero           - floating subject chips + bobbing keycap mascot,
- *                       stacked GET STARTED / I ALREADY HAVE AN ACCOUNT
- *   3. subject marquee- seamless infinite scroll, pauses on hover
- *   4. headline+phones- giant slogan, trust numbers, two CSS phones,
- *                       store badge
- *   5. feature trio   - EFFECTIVE / PERSONALIZED / FUN
- *   6. stories        - arrow-driven auto-advancing carousel + dots
- *   7. CTA band       - full-bleed brand green
- *   8. mega footer    - navy, four link columns, socials
+ *   1. navbar - THREE states, exactly like the reference: quiet text
+ *      CTA at the very top, white + shadow + green 3D "GET THE APP"
+ *      once scrolled, and the CTA swaps to "GET STARTED" past the hero
+ *   2. hero   - original cartoon cast (Renny the bookworm + floating
+ *      pencil/book/star/gem doodles) drifting between the navbar and
+ *      the headline, with GET STARTED / I ALREADY HAVE AN ACCOUNT
+ *      pinned near the bottom of the first viewport
+ *   3. subject marquee - seamless infinite loop, pauses on hover
+ *   4. "free. fun. effective." slogan + green phone with lesson
+ *      progress bar
+ *   5. "backed by results" + avatar phone + #1 medallion scene
+ *   6. EFFECTIVE / PERSONALIZED / FUN trio
+ *   7. stories carousel (arrows, dots, auto-advance)
+ *   8. sky download band - App Store COMING SOON + Google Play live
+ *   9. green CTA band, navy mega footer
  *
- * All copy and artwork are Renance originals; only the interaction
- * patterns (3D press physics, marquee loop, reveal-on-scroll, carousel)
- * mirror the reference. Everything SSR-renders for SEO; the h1 stays
- * sr-only exactly like the previous pass.
+ * Every character, doodle and sentence is a Renance original drawn in
+ * inline SVG; only the interaction patterns mirror the reference. All
+ * sections SSR-render for SEO (sr-only h1 stays).
  */
 
 const cssVars = (o: Record<string, string>) => o as CSSProperties;
@@ -37,23 +40,21 @@ const WHATSAPP_CHANNEL = 'https://whatsapp.com/channel/0029VbDnzhVKAwEltcgbOZ3K'
 /* Data                                                                */
 /* ------------------------------------------------------------------ */
 
-type Chip = {
-  word: string;
-  tag: string;
-  color: string;
+type Floater = {
+  id: string;
+  node: string; // doodle key
   className: string;
   dur: string;
   delay: string;
-  rot: string;
 };
 
-const HERO_CHIPS: Chip[] = [
-  { word: 'Kinematics!', tag: 'PH', color: '#ce82ff', className: 'left-[4%] top-[17%] landing-chip-md', dur: '5.2s', delay: '0s', rot: '-4deg' },
-  { word: 'Comprehension!', tag: 'EN', color: '#58cc02', className: 'right-[4%] top-[13%] landing-chip-lg', dur: '4.6s', delay: '.4s', rot: '3deg' },
-  { word: 'Algebra!', tag: 'MT', color: '#1cb0f6', className: 'left-[7%] bottom-[26%] landing-chip-lg', dur: '6s', delay: '1.1s', rot: '2deg' },
-  { word: 'Organic Chemistry!', tag: 'CH', color: '#ff9600', className: 'right-[5%] bottom-[31%] landing-chip-md', dur: '5.6s', delay: '.8s', rot: '-3deg' },
-  { word: 'Essay Writing!', tag: 'LI', color: '#ff86d0', className: 'left-[14%] top-[46%] landing-chip-xl', dur: '4.9s', delay: '.2s', rot: '4deg' },
-  { word: 'Demand & Supply!', tag: 'EC', color: '#ffc800', className: 'right-[13%] top-[48%] landing-chip-xl', dur: '5.4s', delay: '.6s', rot: '-2deg' },
+const FLOATERS: Floater[] = [
+  { id: 'pencil', node: 'pencil', className: 'left-[5%] top-[16%]', dur: '5.1s', delay: '0s' },
+  { id: 'book', node: 'book', className: 'right-[6%] top-[12%]', dur: '6.2s', delay: '.5s' },
+  { id: 'star', node: 'star', className: 'left-[10%] bottom-[14%]', dur: '4.6s', delay: '.9s' },
+  { id: 'gem', node: 'gem', className: 'right-[9%] bottom-[20%]', dur: '5.7s', delay: '.3s' },
+  { id: 'flame', node: 'flame', className: 'left-[16%] top-[54%] landing-chip-lg', dur: '4.9s', delay: '.7s' },
+  { id: 'sparkle', node: 'sparkle', className: 'right-[15%] top-[52%] landing-chip-lg', dur: '5.4s', delay: '.1s' },
 ];
 
 type Subject = { name: string; tag: string; color: string };
@@ -172,7 +173,144 @@ const FOOTER_COLUMNS = [
 ] as const;
 
 /* ------------------------------------------------------------------ */
-/* Inline SVG icons (no icon-font dependency on this page)             */
+/* Doodles - the original cartoon cast (inline SVG, zero deps)         */
+/* ------------------------------------------------------------------ */
+
+/** Renny - Renance's own study buddy: a green bookworm in graduation
+    regalia with round glasses. Deliberately NOT an owl. */
+function RennyMascot({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 240 240" className={className} aria-hidden focusable="false">
+      {/* ground shadow */}
+      <ellipse cx="120" cy="224" rx="60" ry="9" fill="#0f2830" opacity="0.08" />
+      {/* feet */}
+      <ellipse cx="96" cy="213" rx="17" ry="9" fill="#46a302" />
+      <ellipse cx="144" cy="213" rx="17" ry="9" fill="#46a302" />
+      {/* waving arms */}
+      <ellipse cx="46" cy="148" rx="23" ry="11" fill="#58cc02" transform="rotate(-26 46 148)" />
+      <ellipse cx="194" cy="148" rx="23" ry="11" fill="#58cc02" transform="rotate(26 194 148)" />
+      {/* body */}
+      <circle cx="120" cy="140" r="76" fill="#58cc02" />
+      <ellipse cx="120" cy="166" rx="46" ry="37" fill="#8ee000" />
+      {/* graduation cap */}
+      <polygon points="120,26 194,56 120,86 46,56" fill="#0f2830" />
+      <path d="M96 76v10c0 7 11 13 24 13s24-6 24-13V76l-24 10z" fill="#123c3c" opacity="0.35" />
+      <path d="M194 58v36" stroke="#ffc800" strokeWidth="5" strokeLinecap="round" />
+      <circle cx="194" cy="101" r="7" fill="#ffc800" />
+      {/* glasses */}
+      <circle cx="97" cy="124" r="22" fill="#ffffff" stroke="#0f2830" strokeWidth="6" />
+      <circle cx="143" cy="124" r="22" fill="#ffffff" stroke="#0f2830" strokeWidth="6" />
+      <path d="M113 120c4-4 10-4 14 0" stroke="#0f2830" strokeWidth="5" fill="none" strokeLinecap="round" />
+      <circle cx="97" cy="126" r="7.5" fill="#1f2937" />
+      <circle cx="100.5" cy="122.5" r="2.6" fill="#ffffff" />
+      <circle cx="143" cy="126" r="7.5" fill="#1f2937" />
+      <circle cx="146.5" cy="122.5" r="2.6" fill="#ffffff" />
+      {/* smile + cheeks */}
+      <path d="M103 160q17 14 34 0" stroke="#0f2830" strokeWidth="6" fill="none" strokeLinecap="round" />
+      <ellipse cx="78" cy="148" rx="9" ry="5.5" fill="#ff9db5" opacity="0.8" />
+      <ellipse cx="162" cy="148" rx="9" ry="5.5" fill="#ff9db5" opacity="0.8" />
+    </svg>
+  );
+}
+
+function PencilDoodle({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden focusable="false">
+      <g transform="rotate(-18 32 32)">
+        <rect x="25" y="6" width="14" height="36" rx="4" fill="#ffc800" />
+        <rect x="25" y="6" width="14" height="8" rx="4" fill="#ff9db5" />
+        <rect x="25" y="14" width="14" height="4" fill="#e6a800" opacity="0.5" />
+        <path d="M25 42h14l-7 14z" fill="#f7c98d" />
+        <path d="M29.5 49l2.5 7 2.5-7z" fill="#0f2830" />
+      </g>
+    </svg>
+  );
+}
+
+function BookDoodle({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden focusable="false">
+      <path
+        d="M32 18c-6-5-14-6-22-4v34c8-2 16-1 22 4 6-5 14-6 22-4V14c-8-2-16-1-22 4z"
+        fill="#ffffff"
+        stroke="#0f2830"
+        strokeWidth="4"
+        strokeLinejoin="round"
+      />
+      <path d="M32 18v34" stroke="#0f2830" strokeWidth="4" strokeLinecap="round" />
+      <path d="M16 26h8M16 34h8M40 26h8M40 34h8" stroke="#7ed4ff" strokeWidth="3.4" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function StarDoodle({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden focusable="false">
+      <path
+        d="M32 5l7.8 16.8 18.4 2.4-13.5 12.7 3.5 18.2L32 46.4 15.8 55.1l3.5-18.2L5.8 24.2l18.4-2.4z"
+        fill="#ffc800"
+        stroke="#e6a800"
+        strokeWidth="3"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function GemDoodle({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden focusable="false">
+      <path d="M20 10h24l13 16-25 30L7 26z" fill="#1cb0f6" stroke="#0f8fd6" strokeWidth="3" strokeLinejoin="round" />
+      <path d="M7 26h50M20 10l12 16 12-16M32 26v30" stroke="#7ed4ff" strokeWidth="3" fill="none" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function SparkleDoodle({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden focusable="false">
+      <path d="M32 4l6.5 21.5L60 32l-21.5 6.5L32 60l-6.5-21.5L4 32l21.5-6.5z" fill="#ce82ff" />
+    </svg>
+  );
+}
+
+function FlameDoodle({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden focusable="false">
+      <path
+        d="M32 6c3 9-7.5 13.5-7.5 24a13.5 13.5 0 0 0 13.5 13.5c6-1.5 10.5-6.6 9-13.5 6 4.8 9 10.8 9 16.5a22.5 22.5 0 0 1-45 0C11 27.5 26.5 21.5 32 6Z"
+        fill="#ff9600"
+        stroke="#e08600"
+        strokeWidth="3"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function Doodle({ node, className }: { node: string; className?: string }) {
+  if (node === 'pencil') return <PencilDoodle className={className} />;
+  if (node === 'book') return <BookDoodle className={className} />;
+  if (node === 'star') return <StarDoodle className={className} />;
+  if (node === 'gem') return <GemDoodle className={className} />;
+  if (node === 'flame') return <FlameDoodle className={className} />;
+  return <SparkleDoodle className={className} />;
+}
+
+/** A simple smiley avatar for the "backed by results" phone screen. */
+function AvatarFace({ bg }: { bg: string }) {
+  return (
+    <svg viewBox="0 0 64 64" className="h-full w-full" aria-hidden focusable="false">
+      <circle cx="32" cy="32" r="30" fill={bg} />
+      <circle cx="23" cy="28" r="4" fill="#1f2937" />
+      <circle cx="41" cy="28" r="4" fill="#1f2937" />
+      <path d="M24 40q8 7 16 0" stroke="#1f2937" strokeWidth="3.5" fill="none" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Small UI glyphs                                                     */
 /* ------------------------------------------------------------------ */
 
 function TrophyIcon() {
@@ -194,7 +332,7 @@ function TargetIcon() {
   );
 }
 
-function FlameIcon() {
+function FlameGlyph() {
   return (
     <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
       <path d="M12 3c1 3-2.5 4.5-2.5 8A4.5 4.5 0 0 0 14 15.5c2-.5 3.5-2.2 3-4.5 2 1.6 3 3.6 3 5.5A7.5 7.5 0 0 1 4.5 16C4.5 10.5 10 8.5 12 3Z" />
@@ -202,10 +340,28 @@ function FlameIcon() {
   );
 }
 
+function FeatureGlyph({ icon }: { icon: 'trophy' | 'target' | 'flame' }) {
+  if (icon === 'trophy') return <TrophyIcon />;
+  if (icon === 'target') return <TargetIcon />;
+  return <FlameGlyph />;
+}
+
 function PlayStoreIcon() {
   return (
     <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden>
       <path d="M4 3.5v17a1 1 0 0 0 1.52.86l13.8-8.5a1 1 0 0 0 0-1.72L5.52 2.64A1 1 0 0 0 4 3.5Z" />
+    </svg>
+  );
+}
+
+function AppleDoodle() {
+  return (
+    <svg viewBox="0 0 64 64" width="24" height="24" aria-hidden focusable="false">
+      <path
+        d="M32 16c6-8 16-8 20-2-8 2-10 8-9 13 7 1 11 8 9 15-2 9-9 16-15 16-3 0-4-2-5-2s-2 2-5 2c-6 0-13-7-15-16-2-7 2-14 9-15 1-5-1-11-9-13 4-6 14-6 20 2z"
+        fill="#ffffff"
+      />
+      <path d="M32 13c0-6 4-9 9-10-1 6-4 9-9 10z" fill="#ffffff" />
     </svg>
   );
 }
@@ -250,25 +406,20 @@ function WhatsAppIcon() {
   );
 }
 
-function FeatureGlyph({ icon }: { icon: 'trophy' | 'target' | 'flame' }) {
-  if (icon === 'trophy') return <TrophyIcon />;
-  if (icon === 'target') return <TargetIcon />;
-  return <FlameIcon />;
-}
-
-/* ------------------------------------------------------------------ */
-/* Component                                                           */
-/* ------------------------------------------------------------------ */
-
 export default function LandingDuo() {
-  const [scrolled, setScrolled] = useState(false);
+  /* THREE navbar states, exactly like the reference: 'top' (quiet),
+     'raised' (shadow + green GET THE APP), 'cta' (past the hero, the
+     CTA swaps to GET STARTED). */
+  const [navState, setNavState] = useState<'top' | 'raised' | 'cta'>('top');
   const [story, setStory] = useState(0);
   const [paused, setPaused] = useState(false);
 
-  /* Navbar shadow appears the moment the page moves, like the
-     reference. */
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => {
+      const y = window.scrollY;
+      const heroDepth = window.innerHeight * 0.7;
+      setNavState(y < 24 ? 'top' : y < heroDepth ? 'raised' : 'cta');
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -306,10 +457,12 @@ export default function LandingDuo() {
       <LandingDefaultTheme />
 
       {/* ============================================================ */}
-      {/* 1. STICKY NAVBAR                                             */}
+      {/* 1. NAVBAR - three states                                       */}
       {/* ============================================================ */}
       <header
-        className={`landing-nav sticky top-0 z-40 bg-background/95 backdrop-blur ${scrolled ? 'landing-nav-scrolled' : ''}`}
+        className={`landing-nav sticky top-0 z-40 ${
+          navState === 'top' ? 'bg-transparent' : 'bg-background/95 shadow-[0_2px_0_rgba(0,0,0,0.08)] backdrop-blur'
+        }`}
       >
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
           <Link href="/" className="flex items-center gap-2" aria-label="Renance home">
@@ -325,55 +478,67 @@ export default function LandingDuo() {
             >
               Subjects
             </Link>
-            <Link href="/register/" className="btn-3d landing-nav-cta">
-              Get the app
-            </Link>
+            {navState === 'top' ? (
+              <Link href="/register/" className="landing-nav-ghost">
+                Get the app
+              </Link>
+            ) : (
+              <Link href="/register/" className="btn-3d landing-nav-cta">
+                {navState === 'cta' ? 'Get started' : 'Get the app'}
+              </Link>
+            )}
           </nav>
         </div>
       </header>
 
       <main>
         {/* ============================================================ */}
-        {/* 2. HERO - floating chips + bobbing mascot + stacked CTAs      */}
+        {/* 2. HERO - cartoon cast up top, CTAs pinned low like Duo        */}
         {/* ============================================================ */}
-        <section className="relative mx-auto flex min-h-[86vh] w-full max-w-6xl flex-col items-center justify-center overflow-hidden px-4 py-16 text-center">
+        <section className="relative flex min-h-[100svh] flex-col overflow-hidden px-4 text-center sm:px-6">
           <h1 className="sr-only">Renance - Your Guide to Academic Success</h1>
 
-          {HERO_CHIPS.map((chip) => (
-            <div
-              key={chip.word}
-              className={`landing-chip ${chip.className}`}
-              style={cssVars({ '--rnt-dur': chip.dur, '--rnt-delay': chip.delay, '--rnt-rot': chip.rot })}
-              aria-hidden
-            >
-              <span className="landing-chip-dot" style={{ background: chip.color }}>
-                {chip.tag}
-              </span>
-              <span className="landing-chip-word">{chip.word}</span>
-            </div>
-          ))}
-
-          <div className="landing-rise" style={cssVars({ '--rise-delay': '0s' })}>
-            <div className="landing-mark-bob">
-              <RenanceMark size={116} />
-            </div>
+          {/* The cast: Renny front and centre, doodles drifting around
+              him - the "animated pictures between the navbar and GET
+              STARTED". */}
+          <div className="relative mx-auto flex w-full max-w-md flex-1 items-center justify-center py-10">
+            <RennyMascot className="landing-rise relative z-10 w-[210px] drop-shadow-[0_20px_22px_rgba(15,40,48,0.16)] sm:w-[240px]" />
+            {FLOATERS.map((f) => (
+              <div
+                key={f.id}
+                className={`landing-floater ${f.className}`}
+                style={cssVars({ '--rnt-dur': f.dur, '--rnt-delay': f.delay })}
+                aria-hidden
+              >
+                <Doodle node={f.node} className="h-12 w-12 sm:h-14 sm:w-14" />
+              </div>
+            ))}
           </div>
 
-          <div className="landing-rise mt-9 flex w-full max-w-xs flex-col gap-3" style={cssVars({ '--rise-delay': '.15s' })}>
-            <Link href="/register/" className="btn-3d w-full">
-              Get started
-            </Link>
-            <Link href="/login/" className="btn-3d-blue w-full">
-              I already have an account
-            </Link>
-            <OpenAppButton className="landing-open-app mt-1" />
+          {/* Headline sits between the cast and the buttons; the whole
+              cluster hugs the bottom of the viewport like the
+              reference. */}
+          <div className="landing-rise mx-auto w-full max-w-xl pb-10" style={cssVars({ '--rise-delay': '.18s' })}>
+            <h2 className="text-[clamp(1.9rem,6vw,3.2rem)] font-extrabold leading-[1.08] tracking-tight text-on-surface">
+              The most fun way to learn, practice, and smash your exams!
+            </h2>
+
+            <div className="mx-auto mt-7 flex w-full max-w-[340px] flex-col gap-3">
+              <Link href="/register/" className="btn-3d w-full">
+                Get started
+              </Link>
+              <Link href="/login/" className="btn-3d-blue w-full">
+                I already have an account
+              </Link>
+              <OpenAppButton className="landing-open-app mt-1" />
+            </div>
           </div>
         </section>
 
         {/* ============================================================ */}
-        {/* 3. SUBJECT MARQUEE - seamless infinite loop                   */}
+        {/* 3. SUBJECT MARQUEE - seamless infinite loop                    */}
         {/* ============================================================ */}
-        <section className="landing-marquee w-full pb-14" aria-label="Subjects on Renance">
+        <section className="landing-marquee w-full pb-16" aria-label="Subjects on Renance">
           <div className="landing-marquee-track">
             {[0, 1].map((copy) => (
               <div key={copy} className="flex gap-4 pr-4" aria-hidden={copy === 1}>
@@ -391,99 +556,125 @@ export default function LandingDuo() {
         </section>
 
         {/* ============================================================ */}
-        {/* 4. HEADLINE + PHONES + STORE BADGE                            */}
+        {/* 4. SLOGAN - "free. fun. effective." + green progress phone     */}
         {/* ============================================================ */}
-        <section className="mx-auto w-full max-w-6xl px-4 pb-20 text-center sm:px-6">
-          <h2
-            className="landing-reveal mx-auto max-w-4xl text-[clamp(2.2rem,6vw,4.2rem)] font-extrabold leading-[1.05] tracking-tight text-on-surface"
-          >
-            The free, fun, and effective way to smash your exams!
+        <section className="mx-auto w-full max-w-5xl px-4 pb-20 text-center sm:px-6">
+          <h2 className="landing-reveal text-[clamp(2.2rem,6vw,4rem)] font-extrabold lowercase leading-tight tracking-tight" style={{ color: 'var(--color-primary)' }}>
+            free. fun. effective.
           </h2>
-          <p
-            className="landing-reveal mx-auto mt-5 flex max-w-2xl flex-wrap items-center justify-center gap-x-2 gap-y-1 text-[15px] font-bold text-on-surface-variant"
-            style={cssVars({ '--reveal-delay': '.1s' })}
-          >
-            <span>288,500+ past questions</span>
-            <span aria-hidden>·</span>
-            <span>10,000+ courses</span>
-            <span aria-hidden>·</span>
-            <span>2,000,000+ topics</span>
-            <span aria-hidden>·</span>
-            <span>100% free</span>
+          <p className="landing-reveal mx-auto mt-4 max-w-2xl text-[15px] font-semibold leading-relaxed text-on-surface-variant sm:text-base" style={cssVars({ '--reveal-delay': '.08s' })}>
+            Learning on Renance is fun, and the results speak for themselves! Quick, bite-sized practice sessions earn you gems, keep your streak alive and unlock new levels - while real past questions turn into real exam scores.
           </p>
 
-          <div className="landing-reveal mt-12 flex flex-wrap items-start justify-center gap-8" style={cssVars({ '--reveal-delay': '.15s' })}>
-            {/* Phone 1 - live quiz */}
-            <div className="landing-phone">
-              <div className="landing-phone-notch" />
+          <div className="landing-reveal mt-10 flex flex-wrap items-center justify-center gap-10" style={cssVars({ '--reveal-delay': '.14s' })}>
+            {/* Green phone with the lesson progress bar */}
+            <div className="landing-phone-green">
               <div className="space-y-2.5 p-3.5 text-left">
-                <div className="landing-phone-row">
-                  <span className="grid h-5 w-5 place-items-center rounded-md" style={{ background: '#ff9600', color: '#fff' }}>
-                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" aria-hidden>
+                <div className="flex items-center gap-1.5 text-[13px] font-extrabold text-[#4b4b4b]">
+                  <span className="grid h-6 w-6 place-items-center rounded-lg text-white" style={{ background: '#ff9600' }}>
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" aria-hidden>
                       <path d="M12 3c1 3-2.5 4.5-2.5 8A4.5 4.5 0 0 0 14 15.5c2-.5 3.5-2.2 3-4.5 2 1.6 3 3.6 3 5.5A7.5 7.5 0 0 1 4.5 16C4.5 10.5 10 8.5 12 3Z" />
                     </svg>
                   </span>
-                  <span>7 day streak</span>
+                  <span>7</span>
                   <span className="ml-auto" style={{ color: '#1cb0f6' }}>1,240 gems</span>
                 </div>
-                <div className="h-2.5 w-full rounded-full bg-black/10">
-                  <div className="h-2.5 w-2/3 rounded-full" style={{ background: '#58cc02' }} />
-                </div>
-                <p className="pt-1 text-[13px] font-extrabold leading-snug text-[#3c3c3c]">
-                  A body at rest remains at rest unless acted upon by an external force. This is Newton&apos;s ______ law.
+                <p className="text-[13px] font-extrabold leading-snug text-[#3c3c3c]">
+                  Physics · Newton&apos;s Laws · Lesson 3 of 5
                 </p>
-                <div className="landing-quiz-option">First</div>
-                <div className="landing-quiz-option is-right">Second</div>
-                <div className="landing-quiz-option">Third</div>
-                <div className="landing-quiz-option">Fourth</div>
-              </div>
-            </div>
-
-            {/* Phone 2 - league */}
-            <div className="landing-phone hidden sm:block">
-              <div className="landing-phone-notch" />
-              <div className="space-y-2.5 p-3.5 text-left">
-                <div className="flex items-center gap-2 pt-1">
-                  <span className="grid h-8 w-8 place-items-center rounded-xl" style={{ background: '#ffc800', color: '#fff' }}>
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                      <path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z" />
+                <div className="h-3.5 w-full rounded-full bg-black/10">
+                  <div className="h-3.5 w-2/3 rounded-full" style={{ background: 'var(--color-primary)' }} />
+                </div>
+                <div className="landing-lesson-row">
+                  <span className="landing-lesson-check" style={{ background: '#58cc02' }}>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                      <path d="M5 13l4 4L19 7" />
                     </svg>
                   </span>
-                  <p className="text-[13px] font-extrabold text-[#3c3c3c]">Diamond League</p>
+                  Inertia and mass - done
                 </div>
-                {[
-                  { n: '1', name: 'A. Okafor', pts: '2,410', c: '#ffc800' },
-                  { n: '2', name: 'T. Bello', pts: '2,180', c: '#c0c8d0' },
-                  { n: '3', name: 'M. Musa', pts: '1,965', c: '#e2985b' },
-                ].map((row) => (
-                  <div key={row.n} className="landing-quiz-option justify-between">
-                    <span className="flex items-center gap-2">
-                      <span className="grid h-6 w-6 place-items-center rounded-lg text-[11px] font-extrabold text-white" style={{ background: row.c }}>
-                        {row.n}
-                      </span>
-                      {row.name}
-                    </span>
-                    <span style={{ color: '#1cb0f6' }}>{row.pts}</span>
-                  </div>
-                ))}
-                <p className="pt-1 text-center text-[11px] font-bold text-[#777]">Top 10 promote every Sunday</p>
+                <div className="landing-lesson-row">
+                  <span className="landing-lesson-check" style={{ background: '#58cc02' }}>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                      <path d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  Action and reaction - done
+                </div>
+                <div className="landing-lesson-row justify-center border-0 pb-1 text-center" style={{ background: 'transparent' }}>
+                  <span className="w-full rounded-xl py-2 text-center text-[13px] font-extrabold uppercase tracking-wide text-white" style={{ background: '#1cb0f6', boxShadow: '0 3px 0 #1899d6' }}>
+                    Continue
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="landing-reveal mt-10" style={cssVars({ '--reveal-delay': '.2s' })}>
-            <a href={STORE_CONFIG.playStoreUrl} target="_blank" rel="noopener" className="landing-store-badge">
-              <PlayStoreIcon />
-              <span className="text-left leading-tight">
-                <span className="block text-[10px] font-bold uppercase tracking-widest opacity-80">Get it on</span>
-                <span className="block text-base font-extrabold">Google Play</span>
-              </span>
-            </a>
+            {/* Trust numbers, carried over from the founder's numbers */}
+            <div className="grid grid-cols-2 gap-x-10 gap-y-4 text-left">
+              {[
+                { n: '288,500+', l: 'past questions' },
+                { n: '5,000+', l: 'courses' },
+                { n: '500,000+', l: 'topics' },
+                { n: '100%', l: 'free forever' },
+              ].map((s) => (
+                <div key={s.l}>
+                  <p className="text-2xl font-extrabold tracking-tight" style={{ color: 'var(--color-primary)' }}>{s.n}</p>
+                  <p className="text-[13px] font-bold text-on-surface-variant">{s.l}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* ============================================================ */}
-        {/* 5. FEATURE TRIO - EFFECTIVE / PERSONALIZED / FUN              */}
+        {/* 5. BACKED BY RESULTS - avatar phone + #1 medallion scene       */}
+        {/* ============================================================ */}
+        <section className="mx-auto w-full max-w-5xl px-4 pb-20 text-center sm:px-6">
+          <h2 className="landing-reveal text-[clamp(2rem,5.5vw,3.4rem)] font-extrabold lowercase leading-tight tracking-tight" style={{ color: 'var(--color-primary)' }}>
+            backed by results
+          </h2>
+          <p className="landing-reveal mx-auto mt-4 max-w-2xl text-[15px] font-semibold leading-relaxed text-on-surface-variant sm:text-base" style={cssVars({ '--reveal-delay': '.08s' })}>
+            Every mock is graded on the server against sealed answer keys, every wrong option is explained in the corrections reader, and spaced repetition keeps old topics fresh. That is how Ds turn into As - and why students keep coming back.
+          </p>
+
+          <div className="landing-reveal mt-10 flex flex-wrap items-end justify-center gap-8" style={cssVars({ '--reveal-delay': '.14s' })}>
+            {/* Phone with four study buddies on screen */}
+            <div className="landing-phone">
+              <div className="landing-phone-notch" />
+              <div className="space-y-2.5 p-3.5 text-left">
+                <p className="text-center text-[12px] font-extrabold uppercase tracking-widest text-[#777]">Your study squad</p>
+                <div className="grid grid-cols-2 gap-2.5">
+                  {['#1cb0f6', '#ce82ff', '#ff9600', '#00cd9c'].map((c) => (
+                    <div key={c} className="grid aspect-square place-items-center rounded-2xl border-2 border-[#e5e5e5] bg-white p-2">
+                      <AvatarFace bg={c} />
+                    </div>
+                  ))}
+                </div>
+                <p className="text-center text-[11px] font-bold text-[#777]">2.1M learners and counting</p>
+              </div>
+            </div>
+
+            {/* #1 medallion + red velvet rope, drawn small and proud */}
+            <div className="flex flex-col items-center gap-3">
+              <span className="grid h-20 w-20 place-items-center rounded-full text-xl font-black text-white" style={{ background: '#ffc800', boxShadow: 'inset 0 -4px 0 rgba(0,0,0,.18), 0 10px 18px rgba(15,40,48,.18)' }}>
+                #1
+              </span>
+              <svg viewBox="0 0 140 64" width="150" height="69" aria-hidden>
+                <rect x="10" y="8" width="9" height="52" rx="4" fill="#ff4b4b" />
+                <rect x="121" y="8" width="9" height="52" rx="4" fill="#ff4b4b" />
+                <circle cx="14.5" cy="8" r="5" fill="#d63a3a" />
+                <circle cx="125.5" cy="8" r="5" fill="#d63a3a" />
+                <path d="M14 20q56 34 112 0" stroke="#ff4b4b" strokeWidth="7" fill="none" strokeLinecap="round" />
+              </svg>
+              <p className="max-w-[190px] text-[13px] font-bold leading-snug text-on-surface-variant">
+                The exam companion Nigerian students keep on their home screen
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================================ */}
+        {/* 6. FEATURE TRIO                                                */}
         {/* ============================================================ */}
         <section className="mx-auto w-full max-w-6xl px-4 pb-20 sm:px-6">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -509,7 +700,7 @@ export default function LandingDuo() {
         </section>
 
         {/* ============================================================ */}
-        {/* 6. STORIES CAROUSEL                                           */}
+        {/* 7. STORIES CAROUSEL                                            */}
         {/* ============================================================ */}
         <section className="mx-auto w-full max-w-3xl px-4 pb-20 text-center sm:px-6">
           <h2 className="landing-reveal text-[clamp(1.7rem,4vw,2.6rem)] font-extrabold tracking-tight text-on-surface">
@@ -575,7 +766,57 @@ export default function LandingDuo() {
         </section>
 
         {/* ============================================================ */}
-        {/* 7. FINAL CTA BAND                                             */}
+        {/* 8. DOWNLOAD BAND - App Store COMING SOON + Google Play live    */}
+        {/* ============================================================ */}
+        <section className="landing-band-sky relative w-full overflow-hidden px-4 py-16 text-center sm:px-6">
+          {/* floating doodles around the badges */}
+          <div className="landing-floater left-[6%] top-[18%] landing-chip-lg" style={cssVars({ '--rnt-dur': '5.2s', '--rnt-delay': '.2s' })} aria-hidden>
+            <BookDoodle className="h-14 w-14" />
+          </div>
+          <div className="landing-floater right-[7%] top-[24%] landing-chip-lg" style={cssVars({ '--rnt-dur': '4.8s', '--rnt-delay': '.6s' })} aria-hidden>
+            <PencilDoodle className="h-12 w-12" />
+          </div>
+          <div className="landing-floater left-[12%] bottom-[14%] landing-chip-lg" style={cssVars({ '--rnt-dur': '5.8s', '--rnt-delay': '.4s' })} aria-hidden>
+            <GemDoodle className="h-11 w-11" />
+          </div>
+          <div className="landing-floater right-[12%] bottom-[16%] landing-chip-lg" style={cssVars({ '--rnt-dur': '5s', '--rnt-delay': '.1s' })} aria-hidden>
+            <StarDoodle className="h-11 w-11" />
+          </div>
+          <div className="landing-floater right-[26%] top-[10%] hidden xl:block" style={cssVars({ '--rnt-dur': '6.4s', '--rnt-delay': '.8s' })} aria-hidden>
+            <RennyMascot className="h-24 w-24" />
+          </div>
+
+          <h2 className="landing-reveal text-[clamp(1.9rem,5vw,3.2rem)] font-extrabold lowercase leading-tight tracking-tight" style={{ color: '#0f2830' }}>
+            learn anytime, anywhere
+          </h2>
+          <p className="landing-reveal mx-auto mt-3 max-w-xl text-[15px] font-bold text-[#33586e]" style={cssVars({ '--reveal-delay': '.08s' })}>
+            Take Renance with you - past questions, streaks and leagues in your pocket. Web is live today, iOS is on the way.
+          </p>
+
+          <div className="landing-reveal mt-9 flex flex-wrap items-center justify-center gap-4" style={cssVars({ '--reveal-delay': '.14s' })}>
+            <span className="landing-badge-wrap" aria-label="App Store - coming soon">
+              <span className="landing-store-badge cursor-not-allowed opacity-95" role="presentation">
+                <AppleDoodle />
+                <span className="text-left leading-tight">
+                  <span className="block text-[10px] font-bold uppercase tracking-widest opacity-80">Download on the</span>
+                  <span className="block text-base font-extrabold">App Store</span>
+                </span>
+              </span>
+              <span className="landing-badge-soon">COMING SOON</span>
+            </span>
+
+            <a href={STORE_CONFIG.playStoreUrl} target="_blank" rel="noopener" className="landing-store-badge">
+              <PlayStoreIcon />
+              <span className="text-left leading-tight">
+                <span className="block text-[10px] font-bold uppercase tracking-widest opacity-80">Get it on</span>
+                <span className="block text-base font-extrabold">Google Play</span>
+              </span>
+            </a>
+          </div>
+        </section>
+
+        {/* ============================================================ */}
+        {/* 9. FINAL CTA BAND                                              */}
         {/* ============================================================ */}
         <section className="landing-cta-band w-full px-4 py-16 text-center sm:px-6">
           <h2 className="landing-reveal mx-auto max-w-2xl text-[clamp(1.8rem,4.5vw,3rem)] font-extrabold leading-tight tracking-tight text-white">
@@ -597,7 +838,7 @@ export default function LandingDuo() {
       </main>
 
       {/* ============================================================ */}
-      {/* 8. MEGA FOOTER                                                */}
+      {/* 10. MEGA FOOTER                                                */}
       {/* ============================================================ */}
       <footer className="landing-footer w-full">
         <div className="mx-auto grid w-full max-w-6xl grid-cols-2 gap-8 px-4 py-14 sm:px-6 md:grid-cols-4">

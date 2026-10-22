@@ -2527,3 +2527,83 @@ a.bg-hero-cta .material-symbols-outlined {
 @media (min-width: 768px) { .landing-chip-md { display: flex; } }
 @media (min-width: 1024px) { .landing-chip-lg { display: flex; } }
 @media (min-width: 1280px) { .landing-chip-xl { display: flex; } }
+
+/* ============================================================
+   LANDING v2 - the three navbar states, the cartoon cast and
+   the slogan / proven / download sections (founder pass
+   2026-10-22, "do same to Renance" screenshots).
+   ============================================================ */
+
+/* Navbar state 1 (top of page): quiet text CTA. States 2/3 reuse
+   .btn-3d.landing-nav-cta and just swap the label. */
+.landing-nav-ghost {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+  padding: 0.5rem 0.75rem;
+  transition: color 140ms ease;
+}
+.landing-nav-ghost:hover { color: var(--color-on-surface); }
+
+/* Cartoon cast: every doodle drifts on its own clock, like the
+   falling characters on the reference hero. */
+.landing-floater {
+  position: absolute;
+  animation: rnt-drift var(--rnt-dur, 5.5s) ease-in-out infinite;
+  animation-delay: var(--rnt-delay, 0s);
+  filter: drop-shadow(0 12px 10px rgba(15, 40, 48, 0.12));
+  pointer-events: none;
+}
+
+/* Slogan section: brand-green phone with the lesson progress bar. */
+.landing-phone-green {
+  width: 258px;
+  border-radius: 42px;
+  border: 12px solid var(--color-primary);
+  background: #ffffff;
+  box-shadow: 0 30px 60px rgba(15, 40, 48, 0.16);
+  overflow: hidden;
+}
+.landing-lesson-row {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  border: 2px solid #e5e5e5;
+  border-radius: 14px;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #3c3c3c;
+  background: #ffffff;
+}
+.landing-lesson-check {
+  width: 26px;
+  height: 26px;
+  border-radius: 9999px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  flex: none;
+}
+
+/* Download band (sky) + store badges. The App Store pill carries a
+   rotated COMING SOON ribbon. */
+.landing-band-sky { background: #e1f2ff; }
+.landing-badge-wrap { position: relative; display: inline-block; }
+.landing-badge-soon {
+  position: absolute;
+  top: -12px;
+  right: -10px;
+  transform: rotate(8deg);
+  background: #ffc800;
+  color: #4a3a00;
+  font-size: 0.625rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  border-radius: 9999px;
+  padding: 4px 9px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+}
