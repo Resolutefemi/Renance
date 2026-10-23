@@ -6825,19 +6825,35 @@ WHERE uc.course_id = m.retired
 
 -- 2. user_courses: repoint the rest (only where this pool's catalog
 --    copy actually holds the canonical course).
+--    POOL GUARD: pools without a catalog copy (user primary, cache)
+--    skip the catalog-joined statements instead of aborting the boot -
+--    their user rows were repointed before the split carried them over.
+DO $$
+BEGIN
+  IF to_regclass('learn.courses') IS NOT NULL THEN
 UPDATE learn.user_courses uc
 SET    course_id = m.keep
 FROM   learn.dedup_course_map m
 WHERE  uc.course_id = m.retired
   AND  EXISTS (SELECT 1 FROM learn.courses c WHERE c.course_id = m.keep);
+  END IF;
+END $$;
 
 -- 3. active_course: repoint (one row per user, no collision possible).
+DO $$
+BEGIN
+  IF to_regclass('learn.courses') IS NOT NULL THEN
 UPDATE learn.active_course ac
 SET    course_id = m.keep
 FROM   learn.dedup_course_map m
 WHERE  ac.course_id = m.retired
   AND  EXISTS (SELECT 1 FROM learn.courses c WHERE c.course_id = m.keep);
+  END IF;
+END $$;
 
+DO $$
+BEGIN
+  IF to_regclass('learn.topics') IS NOT NULL THEN
 -- 4. progress: among every row of a user that lands on the same
 --    canonical topic (already there OR coming from another retired
 --    copy of the same seq), keep only the best attempt - highest
@@ -6884,3 +6900,6 @@ DELETE FROM learn.topic_chests tc
 USING learn.topics t, learn.dedup_course_map m
 WHERE t.course_id = m.retired
   AND tc.topic_id = t.topic_id;
+
+  END IF;
+END $$;

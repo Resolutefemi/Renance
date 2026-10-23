@@ -6806,6 +6806,10 @@ INSERT INTO learn.dedup_course_map (retired, keep) VALUES
 ON CONFLICT (retired) DO NOTHING;
 
 -- 1. re-home the national-suite titles onto the GST-ALL shelf.
+-- POOL GUARD: no-op on pools without the catalog (user primary, cache).
+DO $$
+BEGIN
+  IF to_regclass('learn.courses') IS NOT NULL THEN
 UPDATE learn.courses
 SET    dept_id = 'GST-ALL'
 WHERE  course_id IN (
@@ -6818,11 +6822,18 @@ WHERE  course_id IN (
   'CRS-07449',
   'CRS-00005'
 );
+  END IF;
+END $$;
 
 -- 2. retire the redundant copies (topics / lessons / units cascade).
+DO $$
+BEGIN
+  IF to_regclass('learn.courses') IS NOT NULL THEN
 DELETE FROM learn.courses c
 USING learn.dedup_course_map m
 WHERE c.course_id = m.retired;
+  END IF;
+END $$;
 
 -- 3. drop the working map.
 DROP TABLE IF EXISTS learn.dedup_course_map;
