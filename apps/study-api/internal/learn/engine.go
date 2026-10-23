@@ -1042,6 +1042,18 @@ func (s *Service) generateLessonAgent(ctx context.Context, t *topicCtx) (*Lesson
         }
         doc.Drawings = decorateDrawings(t, nil)
 
+        // Migration guard (founder directive 2026-10-24, "the new packs must
+        // win unconditionally"): while the v2 rollout uploads real packs,
+        // LEARN_AGENT_CACHE=off stops the synth path from writing ANYTHING -
+        // no bucket PUT under the new prefix, no cache-database upsert. The
+        // synth lesson still serves (exactly today's behavior) so no student
+        // sees a gap; it just never lands anywhere again. Once the packs
+        // cover a topic, the bucket tier answers before this path is even
+        // reached, and after the full rollout the synth engine is retired.
+        if os.Getenv("LEARN_AGENT_CACHE") == "off" {
+                return doc, nil
+        }
+
         // Cache best effort under the storage guard: synthesis already
         // produced a valid lesson, so a skipped or failed cache write is a
         // speed detail, never a missing lesson. The gate probes the

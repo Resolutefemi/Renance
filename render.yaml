@@ -295,6 +295,15 @@ services:
         value: "78b8e71ffccaf0bdf12b95a6b108000f"
       - key: R2_SECRET_ACCESS_KEY
         value: "38a5c0c95e93a6adb6bbb41a6c1297242d07c48ad23c0405bb631830083852d2"
+      # v2 rollout (founder directive 2026-10-24, "do this"): reads and
+      # writes move to the v2/ prefix so the uploaded packs win
+      # unconditionally over any legacy lessons/ junk, while
+      # LEARN_AGENT_CACHE=off muzzles the old synth generator from
+      # PUTting pollution into the new prefix during the migration.
+      - key: R2_PREFIX
+        value: "v2/"
+      - key: LEARN_AGENT_CACHE
+        value: "off"
       # Management rescue line (founder directive 2026-10-02): guards the
       # internal endpoints - POST /internal/device/unbind (free a student
       # who lost/changed their phone from the one-account-per-device
