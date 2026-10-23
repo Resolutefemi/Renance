@@ -410,7 +410,7 @@ func (s *Service) catalogQuery(ctx context.Context, userID, base string, args []
         args = append(args, pageSize, offset)
         sql := `
                 SELECT c.course_id, c.title, d.faculty, d.itype, c.body,
-                       (SELECT COUNT(*) FROM learn.topics t WHERE t.course_id = c.course_id)
+                       (SELECT COUNT(*) FROM learn.units t WHERE t.course_id = c.course_id)
                 ` + base + `
                 ORDER BY c.title LIMIT ` + pageSizePh + ` OFFSET ` + offsetPh
         rows, err := s.Pool.Query(ctx, sql, args...)
@@ -518,7 +518,7 @@ func (s *Service) MyCourses(ctx context.Context, userID string) ([]MyCourse, err
         }
         crows, err := s.Pool.Query(ctx, `
                 SELECT c.course_id, c.title, c.body,
-                       (SELECT COUNT(*) FROM learn.topics t WHERE t.course_id = c.course_id)
+                       (SELECT COUNT(*) FROM learn.units t WHERE t.course_id = c.course_id)
                 FROM learn.courses c WHERE c.course_id = ANY($1)`, ids)
         if err != nil {
                 return nil, err
@@ -683,8 +683,8 @@ func (s *Service) CoursePath(ctx context.Context, userID, courseID string) (*Cou
         // progress on the user database): the ordered ladder comes from
         // the content pool, the best scores fill over the topic ids.
         rows, err := s.Pool.Query(ctx, `
-                SELECT t.topic_id, t.title, t.category, t.seq, t.unit
-                FROM learn.topics t
+                SELECT t.unit_id, t.title, t.category, t.seq, t.section
+                FROM learn.units t
                 WHERE t.course_id = $1 ORDER BY t.seq`, courseID)
         if err != nil {
                 return nil, err
@@ -744,10 +744,10 @@ func (s *Service) CoursePath(ctx context.Context, userID, courseID string) (*Cou
         names := []string{"Foundations", "Core Principles", "Applications in Practice", "Advanced Topics", "Mastery & Project"}
         maxUnit := cp.Topics[len(cp.Topics)-1].Unit
         // Real unit captions win when the roadmap carries them
-        // (learn.course_units rows from the secondary refresh and the
+        // (learn.course_sections rows from the secondary refresh and the
         // expansion loop); the cycle names remain the fallback.
         titledUnits := map[int]string{}
-        if tRows, err := s.Pool.Query(ctx, `SELECT unit, title FROM learn.course_units WHERE course_id=$1 AND title <> ''`, courseID); err == nil {
+        if tRows, err := s.Pool.Query(ctx, `SELECT section, title FROM learn.course_sections WHERE course_id=$1 AND title <> ''`, courseID); err == nil {
                 for tRows.Next() {
                         var u int
                         var t string

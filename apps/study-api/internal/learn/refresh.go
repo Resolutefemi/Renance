@@ -5,7 +5,7 @@
 // database, so populated databases are upgraded here: every SEC-JAMB
 // topic row is UPSERTED (existing topic IDs keep their identity, so a
 // student's progress and cached lessons survive; new topics append),
-// unit titles land in learn.course_units so the ladder shows real
+// unit titles land in learn.course_sections so the ladder shows real
 // captions, and a seed_meta version row makes later boots instant.
 package learn
 
@@ -41,7 +41,7 @@ func RefreshSecondary(ctx context.Context, q querier, log *slog.Logger) error {
 		end := min(start+1000, len(topics))
 		b := &strings.Builder{}
 		args := make([]any, 0, (end-start)*8)
-		b.WriteString("INSERT INTO learn.topics (topic_id, course_id, seq, title, category, unit, keywords, figures) VALUES ")
+		b.WriteString("INSERT INTO learn.units (unit_id, course_id, seq, title, category, section, keywords, figures) VALUES ")
 		for i := start; i < end; i++ {
 			if i > start {
 				b.WriteString(",")
@@ -57,11 +57,11 @@ func RefreshSecondary(ctx context.Context, q querier, log *slog.Logger) error {
 			}
 			args = append(args, topics[i].id, topics[i].courseID, topics[i].seq, topics[i].title, topics[i].category, topics[i].unit, kw, fg)
 		}
-		b.WriteString(` ON CONFLICT (topic_id) DO UPDATE SET
+		b.WriteString(` ON CONFLICT (unit_id) DO UPDATE SET
 			seq      = EXCLUDED.seq,
 			title    = EXCLUDED.title,
 			category = EXCLUDED.category,
-			unit     = EXCLUDED.unit,
+			section  = EXCLUDED.section,
 			keywords = EXCLUDED.keywords,
 			figures  = EXCLUDED.figures`)
 		if _, err := q.Exec(ctx, b.String(), args...); err != nil {
@@ -70,8 +70,8 @@ func RefreshSecondary(ctx context.Context, q querier, log *slog.Logger) error {
 	}
 
 	// Unit titles: the ladder reads these captions first.
-	const unitStmt = `INSERT INTO learn.course_units (course_id, unit, title) VALUES ($1,$2,$3)
-		ON CONFLICT (course_id, unit) DO UPDATE SET title = EXCLUDED.title`
+	const unitStmt = `INSERT INTO learn.course_sections (course_id, section, title) VALUES ($1,$2,$3)
+		ON CONFLICT (course_id, section) DO UPDATE SET title = EXCLUDED.title`
 	for courseID, titles := range unitTitles {
 		for u, title := range titles {
 			if strings.TrimSpace(title) == "" {

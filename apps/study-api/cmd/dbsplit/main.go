@@ -125,8 +125,8 @@ func report(ctx context.Context, st *store.Store, label string) {
         counts := []struct{ name, sql string }{
                 {"departments", `SELECT COUNT(*) FROM learn.departments`},
                 {"courses", `SELECT COUNT(*) FROM learn.courses`},
-                {"course_units", `SELECT COUNT(*) FROM learn.course_units`},
-                {"topics", `SELECT COUNT(*) FROM learn.topics`},
+                {"course_sections", `SELECT COUNT(*) FROM learn.course_sections`},
+                {"units", `SELECT COUNT(*) FROM learn.units`},
                 {"lessons", `SELECT COUNT(*) FROM learn.lessons`},
                 {"study.users", `SELECT COUNT(*) FROM study.users`},
                 {"learners", `SELECT COUNT(*) FROM learn.learners`},
@@ -352,7 +352,7 @@ need R2_ACCOUNT_ID, R2_BUCKET, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY.
                 // (cache domain = its own database) and the pre-split
                 // public.user_details the code does not reference.
                 stale := []string{
-                        `learn.departments`, `learn.courses`, `learn.course_units`, `learn.topics`,
+                        `learn.departments`, `learn.courses`, `learn.course_sections`, `learn.units`,
                         `learn.lessons`, `public.user_details`,
                 }
                 for _, t := range stale {

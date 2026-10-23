@@ -4,7 +4,7 @@
 // be cached to Supabase as you generate them").
 //
 // Phase structure: grows every tertiary course to the full 15 unit x
-// 10 topic ladder (learn.course_units + learn.topics), deterministic
+// 10 topic ladder (learn.course_sections + learn.units), deterministic
 // per course via the synth engine - identical to what the API would
 // expand on demand, so the two can never disagree.
 //
@@ -227,7 +227,7 @@ func (r *runner) structureCourse(ctx context.Context, c courseRow) (int, error) 
         cover := map[int]int{}
         maxSeq := 0
         rows, err := r.cpool.Query(ctx,
-                `SELECT unit, COUNT(*), MAX(seq) FROM learn.topics WHERE course_id=$1 GROUP BY unit`, c.id)
+                `SELECT section, COUNT(*), MAX(seq) FROM learn.units WHERE course_id=$1 GROUP BY section`, c.id)
         if err != nil {
                 return 0, err
         }
@@ -272,7 +272,7 @@ func (r *runner) structureCourse(ctx context.Context, c courseRow) (int, error) 
         batch := &pgx.Batch{}
         if len(unitRows) > 0 {
                 var sb strings.Builder
-                sb.WriteString(`INSERT INTO learn.course_units (course_id, unit, title) VALUES `)
+                sb.WriteString(`INSERT INTO learn.course_sections (course_id, section, title) VALUES `)
                 args := make([]any, 0, len(unitRows)*3)
                 for i, u := range unitRows {
                         if i > 0 {
@@ -281,12 +281,12 @@ func (r *runner) structureCourse(ctx context.Context, c courseRow) (int, error) 
                         sb.WriteString(fmt.Sprintf("($%d,$%d,$%d)", i*3+1, i*3+2, i*3+3))
                         args = append(args, c.id, u, unitTitles[i])
                 }
-                sb.WriteString(` ON CONFLICT (course_id, unit) DO NOTHING`)
+                sb.WriteString(` ON CONFLICT (course_id, section) DO NOTHING`)
                 batch.Queue(sb.String(), args...)
         }
         if len(topicRows) > 0 {
                 var sb strings.Builder
-                sb.WriteString(`INSERT INTO learn.topics (topic_id, course_id, seq, title, category, unit, keywords) VALUES `)
+                sb.WriteString(`INSERT INTO learn.units (unit_id, course_id, seq, title, category, section, keywords) VALUES `)
                 args := make([]any, 0, len(topicRows)*6)
                 for i, tr := range topicRows {
                         if i > 0 {
@@ -298,7 +298,7 @@ func (r *runner) structureCourse(ctx context.Context, c courseRow) (int, error) 
                         tid := fmt.Sprintf("%s-EU%02d%02d", c.id, tr.unit, tr.pos)
                         args = append(args, tid, c.id, maxSeq, tr.title, tr.cat, tr.unit)
                 }
-                sb.WriteString(` ON CONFLICT (topic_id) DO NOTHING`)
+                sb.WriteString(` ON CONFLICT (unit_id) DO NOTHING`)
                 batch.Queue(sb.String(), args...)
         }
         if err := r.cpool.SendBatch(ctx, batch).Close(); err != nil {
@@ -429,11 +429,11 @@ func (r *runner) runLessons(ctx context.Context, workers int) {
                         // on another database now - the old NOT EXISTS
                         // join would cross the pools.
                         q := `
-                                SELECT t.topic_id, t.title, t.course_id, c.title, COALESCE(d.name,''), COALESCE(d.faculty,''), t.unit
-                                FROM learn.topics t
+                                SELECT t.unit_id, t.title, t.course_id, c.title, COALESCE(d.name,''), COALESCE(d.faculty,''), t.section
+                                FROM learn.units t
                                 JOIN learn.courses c ON c.course_id = t.course_id
                                 JOIN learn.departments d ON d.dept_id = c.dept_id
-                                WHERE t.unit = $1`
+                                WHERE t.section = $1`
                         args := []any{u}
                         if r.course != "" {
                                 q += ` AND t.course_id LIKE $2`
@@ -571,7 +571,7 @@ func (r *runner) retitleCourse(ctx context.Context, c courseRow) (int, error) {
                 unit      int
         }{}
         rows, err := r.cpool.Query(ctx,
-                `SELECT topic_id, title, unit FROM learn.topics WHERE course_id=$1 AND unit >= 2 ORDER BY unit, seq`, c.id)
+                `SELECT unit_id, title, section FROM learn.units WHERE course_id=$1 AND section >= 2 ORDER BY section, seq`, c.id)
         if err != nil {
                 return 0, err
         }
@@ -587,7 +587,7 @@ func (r *runner) retitleCourse(ctx context.Context, c courseRow) (int, error) {
         }
         rows.Close()
         unitTitles := map[int]string{}
-        urows, err := r.cpool.Query(ctx, `SELECT unit, title FROM learn.course_units WHERE course_id=$1`, c.id)
+        urows, err := r.cpool.Query(ctx, `SELECT section, title FROM learn.course_sections WHERE course_id=$1`, c.id)
         if err == nil {
                 for urows.Next() {
                         var u int
@@ -604,7 +604,7 @@ func (r *runner) retitleCourse(ctx context.Context, c courseRow) (int, error) {
         for u := 2; u <= r.units; u++ {
                 title, tops := synth.UnitPlan(c.id, c.title, c.dept, c.faculty, u)
                 if st, ok := unitTitles[u]; ok && st != title {
-                        batch.Queue(`UPDATE learn.course_units SET title=$2 WHERE course_id=$1 AND unit=$3`, c.id, title, u)
+                        batch.Queue(`UPDATE learn.course_sections SET title=$2 WHERE course_id=$1 AND section=$3`, c.id, title, u)
                         updates++
                 }
                 sl := stored[u]
@@ -613,7 +613,7 @@ func (r *runner) retitleCourse(ctx context.Context, c courseRow) (int, error) {
                                 break
                         }
                         if sl[i].title != tp.Title {
-                                batch.Queue(`UPDATE learn.topics SET title=$2, category=$3 WHERE topic_id=$1`,
+                                batch.Queue(`UPDATE learn.units SET title=$2, category=$3 WHERE unit_id=$1`,
                                         sl[i].id, tp.Title, tp.Category)
                                 updates++
                         }

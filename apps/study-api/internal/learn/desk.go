@@ -209,7 +209,7 @@ func firstYearLevel(itype string) string {
 // fills afterwards through fillDeskInList over the page's course ids.
 const deskCourseSelect = `
         c.course_id, c.code, c.title, d.name,
-        (SELECT COUNT(*) FROM learn.topics t WHERE t.course_id = c.course_id)`
+        (SELECT COUNT(*) FROM learn.units t WHERE t.course_id = c.course_id)`
 
 func scanDeskCourse(rows interface {
         Scan(...any) error
@@ -293,7 +293,7 @@ func (s *Service) CourseDesk(ctx context.Context, userID string) (*DeskShelves, 
                   AND ( c.course_id LIKE 'GST %'
                      OR (c.level = $1 AND c.title ~* $2) )
                 ORDER BY c.title,
-                         (SELECT COUNT(*) FROM learn.topics t WHERE t.course_id = c.course_id) DESC`,
+                         (SELECT COUNT(*) FROM learn.units t WHERE t.course_id = c.course_id) DESC`,
                 firstYearLevel(itype), generalTitleRxSQL)
         if err != nil {
                 return nil, err
@@ -458,7 +458,7 @@ func (s *Service) SearchCourses(ctx context.Context, userID, q string) ([]DeskCo
         frag := arg("%" + q + "%")
         conds := []string{
                 fmt.Sprintf(`c.title ILIKE %s`, frag),
-                fmt.Sprintf(`EXISTS (SELECT 1 FROM learn.topics t WHERE t.course_id = c.course_id
+                fmt.Sprintf(`EXISTS (SELECT 1 FROM learn.units t WHERE t.course_id = c.course_id
                          AND (t.title ILIKE %s OR EXISTS (SELECT 1 FROM unnest(t.keywords) k WHERE k ILIKE %s)))`, frag, frag),
         }
         codes := append([]string{q}, aliasFor(q)...)
@@ -552,7 +552,7 @@ func (s *Service) SearchCourses(ctx context.Context, userID, q string) ([]DeskCo
                 out = out[:40]
         }
         // Topic-level arms, ONLY when the course-level sweep came back
-        // thin: the old single query probed learn.topics with a
+        // thin: the old single query probed learn.units with a
         // correlated EXISTS per course (10.7k probes into 1.6M topic
         // rows) - 11-18s per search, and the AI finder ran it once per
         // pasted line. The CTE below hits the trigram indexes ONCE
@@ -567,7 +567,7 @@ func (s *Service) SearchCourses(ctx context.Context, userID, q string) ([]DeskCo
                 }
                 rows2, err := s.Pool.Query(tctx, `
                         WITH t_hit AS (
-                            SELECT DISTINCT t.course_id FROM learn.topics t
+                            SELECT DISTINCT t.course_id FROM learn.units t
                             WHERE t.title ILIKE $1 OR learn.kw_flat(t.keywords) ILIKE $1
                         )
                         SELECT DISTINCT ON (c.course_id) `+deskCourseSelect+`

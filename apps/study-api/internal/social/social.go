@@ -520,7 +520,7 @@ func LoadPublicProfile(ctx context.Context, pool store.Pool, viewer, username st
                 bases := map[string]pulseBase{}
                 if rows, err := pool.Query(ctx, `
                 SELECT c.course_id, c.title, c.body,
-                       (SELECT COUNT(*) FROM learn.topics t WHERE t.course_id = c.course_id)
+                       (SELECT COUNT(*) FROM learn.units t WHERE t.course_id = c.course_id)
                 FROM learn.courses c WHERE c.course_id = ANY($1)`, courseIDs); err == nil {
                         for rows.Next() {
                                 var id, title, body string
@@ -540,7 +540,7 @@ func LoadPublicProfile(ctx context.Context, pool store.Pool, viewer, username st
                 var links []courseTopics
                 var flat []string
                 if rows, err := pool.Query(ctx, `
-                SELECT t.course_id, t.topic_id FROM learn.topics t
+                SELECT t.course_id, t.unit_id FROM learn.units t
                 WHERE t.course_id = ANY($1) ORDER BY t.seq`, courseIDs); err == nil {
                         for rows.Next() {
                                 var l courseTopics

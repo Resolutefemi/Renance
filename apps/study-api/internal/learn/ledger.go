@@ -101,7 +101,7 @@ func (s *Service) Complete(ctx context.Context, userID string, req CompleteReque
 
         // Topic + course context.
         var courseID string
-        err = s.Pool.QueryRow(ctx, `SELECT course_id FROM learn.topics WHERE topic_id=$1`, req.TopicID).Scan(&courseID)
+        err = s.Pool.QueryRow(ctx, `SELECT course_id FROM learn.units WHERE unit_id=$1`, req.TopicID).Scan(&courseID)
         if err != nil {
                 return nil, fmt.Errorf("learn: unknown topic %s", req.TopicID)
         }
@@ -331,10 +331,10 @@ func (s *Service) Complete(ctx context.Context, userID string, req CompleteReque
         {
                 var total int
                 if err := s.Pool.QueryRow(ctx, `
-                SELECT COUNT(*) FROM learn.topics WHERE course_id=$1`, courseID).Scan(&total); err == nil && total > 0 {
+                SELECT COUNT(*) FROM learn.units WHERE course_id=$1`, courseID).Scan(&total); err == nil && total > 0 {
                         var ids []string
                         if rows, err := s.Pool.Query(ctx, `
-                SELECT topic_id FROM learn.topics WHERE course_id=$1`, courseID); err == nil {
+                SELECT unit_id FROM learn.units WHERE course_id=$1`, courseID); err == nil {
                                 for rows.Next() {
                                         var id string
                                         if rows.Scan(&id) == nil {
@@ -396,11 +396,11 @@ func (s *Service) PrefetchAfterComplete(topicID, courseID string) {
         // the next candidates, cache step for the already-cached filter).
         var seq int
         if err := s.Pool.QueryRow(ctx, `
-                SELECT seq FROM learn.topics WHERE topic_id=$1`, topicID).Scan(&seq); err != nil {
+                SELECT seq FROM learn.units WHERE unit_id=$1`, topicID).Scan(&seq); err != nil {
                 return
         }
         rows, err := s.Pool.Query(ctx, `
-                SELECT topic_id FROM learn.topics
+                SELECT unit_id FROM learn.units
                 WHERE course_id=$1 AND seq > $2
                 ORDER BY seq LIMIT 4`, courseID, seq)
         if err != nil {
@@ -1214,8 +1214,8 @@ func (s *Service) ReviewSet(ctx context.Context, userID, courseID string, unit i
         tqs, terr := func() ([]topicQuiz, error) {
                 var ids []string
                 if rows, err := s.Pool.Query(ctx, `
-                SELECT topic_id FROM learn.topics
-                WHERE course_id=$1 AND unit=$2 ORDER BY seq`, courseID, unit); err == nil {
+                SELECT unit_id FROM learn.units
+                WHERE course_id=$1 AND section=$2 ORDER BY seq`, courseID, unit); err == nil {
                         for rows.Next() {
                                 var id string
                                 if rows.Scan(&id) == nil {
@@ -1305,8 +1305,8 @@ func (s *Service) RevisionSet(ctx context.Context, userID, courseID string, unit
                 unit      int
         }
         rows, err := s.Pool.Query(ctx, `
-                SELECT topic_id, title, unit FROM learn.topics
-                WHERE course_id=$1 AND unit=$2 ORDER BY seq`, courseID, unit)
+                SELECT unit_id, title, section FROM learn.units
+                WHERE course_id=$1 AND section=$2 ORDER BY seq`, courseID, unit)
         if err != nil {
                 return set, nil
         }

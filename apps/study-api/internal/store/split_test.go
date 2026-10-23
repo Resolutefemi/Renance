@@ -33,7 +33,7 @@ func TestClassifySQL(t *testing.T) {
 		{`SELECT 1`, domainUser}, // no tables -> user pool
 		{`SELECT name FROM learn.departments WHERE dept_id = $1`, domainContent},
 		{`SELECT c.title FROM learn.courses c JOIN learn.departments d ON d.dept_id = c.dept_id`, domainContent},
-		{`SELECT COUNT(*) FROM learn.topics WHERE course_id = $1`, domainContent},
+		{`SELECT COUNT(*) FROM learn.units WHERE course_id = $1`, domainContent},
 		{`SELECT notes, quiz FROM learn.lessons WHERE topic_id = $1`, domainCache},
 		{`INSERT INTO learn.lessons (topic_id, title) VALUES ($1, $2) ON CONFLICT (topic_id) DO NOTHING`, domainCache},
 	}
@@ -53,9 +53,9 @@ func TestClassifySQLMixed(t *testing.T) {
 		sql       string
 		wantMixed bool
 	}{
-		{`SELECT t.topic_id FROM learn.topics t JOIN learn.progress pr ON pr.topic_id = t.topic_id`, true},
+		{`SELECT t.unit_id FROM learn.units t JOIN learn.progress pr ON pr.topic_id = t.unit_id`, true},
 		{`SELECT c.title FROM learn.courses c WHERE EXISTS (SELECT 1 FROM learn.user_courses uc WHERE uc.course_id = c.course_id)`, true},
-		{`SELECT l.quiz FROM learn.lessons l JOIN learn.topics t ON t.topic_id = l.topic_id`, true},
+		{`SELECT l.quiz FROM learn.lessons l JOIN learn.units t ON t.unit_id = l.topic_id`, true},
 		{`SELECT topic_id, quiz FROM learn.lessons WHERE topic_id = ANY($1)`, false},
 	}
 	for _, c := range cases {

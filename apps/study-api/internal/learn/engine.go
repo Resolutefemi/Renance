@@ -718,12 +718,12 @@ func (s *Service) loadTopicCtx(ctx context.Context, topicID string) (*topicCtx, 
         t := &topicCtx{ID: topicID}
         err := s.Pool.QueryRow(ctx, `
                 SELECT t.title, t.category, t.seq, t.course_id, c.title, c.body, c.subject,
-                       t.keywords, t.figures, t.unit,
+                       t.keywords, t.figures, t.section,
                        COALESCE(d.name,''), COALESCE(d.faculty,''),
-                       (SELECT COUNT(*) FROM learn.topics tc WHERE tc.course_id = t.course_id)
-                FROM learn.topics t JOIN learn.courses c ON c.course_id = t.course_id
+                       (SELECT COUNT(*) FROM learn.units tc WHERE tc.course_id = t.course_id)
+                FROM learn.units t JOIN learn.courses c ON c.course_id = t.course_id
                 JOIN learn.departments d ON d.dept_id = c.dept_id
-                WHERE t.topic_id = $1`, topicID).
+                WHERE t.unit_id = $1`, topicID).
                 Scan(&t.Title, &t.Category, &t.Seq, &t.CourseID, &t.Course, &t.Body, &t.Subject,
                         &t.Keywords, &t.Figures, &t.Unit, &t.Dept, &t.Faculty, &t.Total)
         if err != nil {
@@ -1550,7 +1550,7 @@ func (s *Service) prefetchNext(t *topicCtx) {
         // the lesson cache on the cache database): the next topics by
         // seq, minus the already-cached ones, warm two.
         rows, err := s.Pool.Query(ctx, `
-                SELECT topic_id FROM learn.topics
+                SELECT unit_id FROM learn.units
                 WHERE course_id=$1 AND seq > $2
                 ORDER BY seq LIMIT 6`, t.CourseID, t.Seq)
         if err != nil {

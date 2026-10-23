@@ -6,7 +6,7 @@
 // The expansion loop grows it one unit at a time: when a student gets
 // close to the end of the generated material, the NEXT unit (10 fresh
 // AI topics) is generated silently in the background and cached to
-// learn.topics + learn.course_units - the student never waits, never
+// learn.units + learn.course_sections - the student never waits, never
 // sees it happen. Generation is single-flight per course, detached
 // from any request, and idempotent (PK conflicts mean "already done").
 package learn
@@ -115,7 +115,7 @@ func (s *Service) loadTreeState(ctx context.Context, courseID string) (*courseTr
                 return nil, err
         }
         rows, err := s.Pool.Query(ctx,
-                `SELECT title, seq, unit FROM learn.topics WHERE course_id=$1 ORDER BY seq`, courseID)
+                `SELECT title, seq, section FROM learn.units WHERE course_id=$1 ORDER BY seq`, courseID)
         if err != nil {
                 return nil, err
         }
@@ -221,9 +221,9 @@ func (s *Service) insertUnitTopics(ctx context.Context, courseID string, st *cou
                 }
                 cat := firstNonEmpty(strings.TrimSpace(tp.Category), "Concept")
                 if _, err := s.Pool.Exec(ctx, `
-                        INSERT INTO learn.topics (topic_id, course_id, seq, title, category, unit, keywords)
+                        INSERT INTO learn.units (unit_id, course_id, seq, title, category, section, keywords)
                         VALUES ($1,$2,$3,$4,$5,$6,$7)
-                        ON CONFLICT (topic_id) DO NOTHING`,
+                        ON CONFLICT (unit_id) DO NOTHING`,
                         tid, courseID, st.MaxSeq+i+1, strings.TrimSpace(tp.Title), cat, unit, kw); err != nil {
                         return inserted, err
                 }
@@ -315,8 +315,8 @@ func (s *Service) ExpandNextUnit(ctx context.Context, courseID string) (bool, er
         }
         // Unit row first: winning it means this call owns the expansion.
         tag, err := s.Pool.Exec(ctx, `
-                INSERT INTO learn.course_units (course_id, unit, title) VALUES ($1,$2,$3)
-                ON CONFLICT (course_id, unit) DO NOTHING`, courseID, next, title)
+                INSERT INTO learn.course_sections (course_id, section, title) VALUES ($1,$2,$3)
+                ON CONFLICT (course_id, section) DO NOTHING`, courseID, next, title)
         if err != nil {
                 return false, err
         }
@@ -356,7 +356,7 @@ func (s *Service) EnsureUnitsAhead(userID, courseID string) {
         currentUnit := 1
         func() {
                 rows, err := s.Pool.Query(ctx, `
-                SELECT topic_id, unit FROM learn.topics
+                SELECT unit_id, section FROM learn.units
                 WHERE course_id = $1 ORDER BY seq`, courseID)
                 if err != nil {
                         return
@@ -388,7 +388,7 @@ func (s *Service) EnsureUnitsAhead(userID, courseID string) {
                 }
         }()
         var maxUnit int
-        if err := s.Pool.QueryRow(ctx, `SELECT COALESCE(MAX(unit),1) FROM learn.topics WHERE course_id=$1`, courseID).Scan(&maxUnit); err != nil {
+        if err := s.Pool.QueryRow(ctx, `SELECT COALESCE(MAX(section),1) FROM learn.units WHERE course_id=$1`, courseID).Scan(&maxUnit); err != nil {
                 return
         }
         var courseBody string
@@ -399,10 +399,10 @@ func (s *Service) EnsureUnitsAhead(userID, courseID string) {
         // refilled before anything else looks at the ladder.
         for u := 1; u <= maxUnit && u <= MaxCourseUnits; u++ {
                 var n int
-                _ = s.Pool.QueryRow(ctx, `SELECT COUNT(*) FROM learn.topics WHERE course_id=$1 AND unit=$2`, courseID, u).Scan(&n)
+                _ = s.Pool.QueryRow(ctx, `SELECT COUNT(*) FROM learn.units WHERE course_id=$1 AND section=$2`, courseID, u).Scan(&n)
                 if n == 0 {
                         var titled int
-                        _ = s.Pool.QueryRow(ctx, `SELECT COUNT(*) FROM learn.course_units WHERE course_id=$1 AND unit=$2`, courseID, u).Scan(&titled)
+                        _ = s.Pool.QueryRow(ctx, `SELECT COUNT(*) FROM learn.course_sections WHERE course_id=$1 AND section=$2`, courseID, u).Scan(&titled)
                         if titled > 0 {
                                 s.refillUnit(ctx, courseID, u)
                         }
@@ -430,7 +430,7 @@ func (s *Service) EnsureUnitsAhead(userID, courseID string) {
                         s.prefetchUnitLessons(ctx, courseID, maxUnit+1)
                 }
                 var nextMax int
-                if err := s.Pool.QueryRow(ctx, `SELECT COALESCE(MAX(unit),1) FROM learn.topics WHERE course_id=$1`, courseID).Scan(&nextMax); err != nil || nextMax == maxUnit {
+                if err := s.Pool.QueryRow(ctx, `SELECT COALESCE(MAX(section),1) FROM learn.units WHERE course_id=$1`, courseID).Scan(&nextMax); err != nil || nextMax == maxUnit {
                         return
                 }
                 maxUnit = nextMax
@@ -445,7 +445,7 @@ func (s *Service) refillUnit(ctx context.Context, courseID string, unit int) {
                 return
         }
         var have int
-        _ = s.Pool.QueryRow(ctx, `SELECT COUNT(*) FROM learn.topics WHERE course_id=$1 AND unit=$2`, courseID, unit).Scan(&have)
+        _ = s.Pool.QueryRow(ctx, `SELECT COUNT(*) FROM learn.units WHERE course_id=$1 AND section=$2`, courseID, unit).Scan(&have)
         if have >= UnitTopics {
                 return
         }
@@ -467,8 +467,8 @@ func (s *Service) prefetchUnitLessons(ctx context.Context, courseID string, unit
         // topics of the unit, drop the already-cached ones, warm the
         // first two of what is left.
         rows, err := s.Pool.Query(ctx, `
-                SELECT topic_id FROM learn.topics
-                WHERE course_id=$1 AND unit=$2
+                SELECT unit_id FROM learn.units
+                WHERE course_id=$1 AND section=$2
                 ORDER BY seq LIMIT 6`, courseID, unit)
         if err != nil {
                 return

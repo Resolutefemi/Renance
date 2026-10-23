@@ -13,8 +13,8 @@
 //      mirror through the existing dual-write Mirror.
 //
 //      CONTENT pool (Supabase): the shared curriculum catalog ONLY -
-//      learn.departments, learn.courses, learn.course_units,
-//      learn.topics. No user rows, no lesson cache.
+//      learn.departments, learn.courses, learn.course_sections,
+//      learn.units. No user rows, no lesson cache.
 //
 //      CACHE pool (InsForge by default): learn.lessons, the speed
 //      cache the deterministic engine fills as students read. The
@@ -62,13 +62,13 @@ const (
 )
 
 // contentTables are the catalog tables that live on the CONTENT pool
-// (Supabase) - founder directive: Supabase holds the courses, topics
+// (Supabase) - founder directive: Supabase holds the courses, sections
 // and units with departments, and nothing else.
 var contentTables = []string{
         "learn.departments",
         "learn.courses",
-        "learn.course_units",
-        "learn.topics",
+        "learn.course_sections",
+        "learn.units",
 }
 
 // cacheTables live on the CACHE pool (InsForge).

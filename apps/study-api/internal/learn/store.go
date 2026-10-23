@@ -53,7 +53,7 @@ func insertCurriculum(ctx context.Context, q querier, depts []seedDept, courses 
 		end := min(start+2000, len(topics))
 		b := &strings.Builder{}
 		args := make([]any, 0, (end-start)*8)
-		b.WriteString("INSERT INTO learn.topics (topic_id, course_id, seq, title, category, unit, keywords, figures) VALUES ")
+		b.WriteString("INSERT INTO learn.units (unit_id, course_id, seq, title, category, section, keywords, figures) VALUES ")
 		for i := start; i < end; i++ {
 			if i > start {
 				b.WriteString(",")
@@ -69,7 +69,7 @@ func insertCurriculum(ctx context.Context, q querier, depts []seedDept, courses 
 			}
 			args = append(args, topics[i].id, topics[i].courseID, topics[i].seq, topics[i].title, topics[i].category, topics[i].unit, kw, fg)
 		}
-		b.WriteString(" ON CONFLICT (topic_id) DO NOTHING")
+		b.WriteString(" ON CONFLICT (unit_id) DO NOTHING")
 		if _, err := q.Exec(ctx, b.String(), args...); err != nil {
 			return fmt.Errorf("learn: seed topics: %w", err)
 		}

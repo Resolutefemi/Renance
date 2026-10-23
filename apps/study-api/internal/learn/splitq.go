@@ -115,7 +115,7 @@ func (s *Service) topicIDsForCourses(ctx context.Context, courseIDs []string) (m
                 return out, nil
         }
         rows, err := s.Pool.Query(ctx, `
-                SELECT t.course_id, t.topic_id FROM learn.topics t
+                SELECT t.course_id, t.unit_id FROM learn.units t
                 WHERE t.course_id = ANY($1) ORDER BY t.seq`, courseIDs)
         if err != nil {
                 return nil, err
