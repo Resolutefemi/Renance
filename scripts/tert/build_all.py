@@ -85,14 +85,14 @@ SEC1_CATEGORY = "Concepts & Foundations"
 
 def build_one(course):
     """Build ladder rows + lesson blobs for one course. Returns
-    (ladder_rows, blob_rows) or None when the pack is not fully generated."""
+    (ladder_rows, blob_rows). LLM lessons are used per unit slot where the
+    gen file exists; otherwise the deterministic v2.5 composer fills the
+    150-250 band from the curated pack material."""
     from tert.spec import subject_phrase, lower_first
     from tert.router import route
     from tert import build_lesson
 
     pk = route(course)
-    if not build_lesson.gen_ready(pk):
-        return None
     pack = load_pack(pk)
     sections = pack["sections"]
     foundations = pack["foundations"]
@@ -107,7 +107,8 @@ def build_one(course):
     for j, u in enumerate(s1_units):
         title = foundations[j % len(foundations)]
         ladder.append([cid, u["uid"], u["seq"], 1, title, SEC1_CATEGORY])
-        notes, kps, summary = build_lesson.build_gen_notes(pk, 1, j + 1, title, S, s2["title"])
+        notes, kps, summary = build_lesson.build_unit_notes(
+            pk, 1, j + 1, u["uid"], title, S, sections[0]["title"], sections[0])
         quiz = build_lesson.build_quiz(u["uid"], s2, [], title, S)
         blobs.append((u["uid"], title, notes, quiz, S, kps, summary))
     # ---- sections 2..15 from generated S lessons
@@ -117,7 +118,8 @@ def build_one(course):
             o = by_uid.get(uid)
             seq = o["seq"] if o else (j + (k - 2) * 10 + 12)
             ladder.append([cid, uid, seq, k, ut, CATS[(k - 2) % len(CATS)]])
-            notes, kps, summary = build_lesson.build_gen_notes(pk, k, j, ut, S, section["title"])
+            notes, kps, summary = build_lesson.build_unit_notes(
+                pk, k, j, uid, ut, S, section["title"], section)
             quiz = build_lesson.build_quiz(uid, section, [], ut, S)
             blobs.append((uid, ut, notes, quiz, S, kps, summary))
     return ladder, blobs
@@ -210,7 +212,7 @@ def main():
             results = p.map(worker, chunks)
     total_l = sum(r[1] for r in results)
     total_b = sum(r[2] for r in results)
-    print("built %d ladder rows, %d lessons in %.1f min (skipped courses with incomplete packs)" % (
+    print("built %d ladder rows, %d lessons in %.1f min" % (
         total_l, total_b, (time.time() - t0) / 60))
 
 

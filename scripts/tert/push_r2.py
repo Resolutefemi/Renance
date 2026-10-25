@@ -43,15 +43,18 @@ def shard_key(shard):
     return "packs/p-%05d.json" % shard
 
 
-def push_shard(shard, path):
+def push_shard(shard, paths):
+    """paths: list of part files (multi-member gzip) for one shard.
+    GET existing pack (Class B free) -> merge -> ONE PUT (Class A)."""
     if stats["shards"] >= CAP:
         return
     import gzip as _gz
-    with _gz.open(path, "rt") as fh:
-        entries = []
-        for line in fh:
-            uid, raw = line.rstrip("\n").split("\t", 1)
-            entries.append((uid, raw.encode("utf-8")))
+    entries = []
+    for path in paths:
+        with _gz.open(path, "rt") as fh:
+            for line in fh:
+                uid, raw = line.rstrip("\n").split("\t", 1)
+                entries.append((uid, raw.encode("utf-8")))
     key = shard_key(shard)
     lessons = {}
     try:
@@ -91,7 +94,11 @@ def push_shard(shard, path):
             stats["bytes"] += len(payload)
         with open(DONE, "a") as f:
             f.write("%d\n" % shard)
-        os.remove(path)
+        for path in paths:
+            try:
+                os.remove(path)
+            except OSError:
+                pass
 
 
 def phase1():
@@ -135,13 +142,23 @@ def main():
     if "--phase1-only" in sys.argv:
         return
 
-    files = sorted(os.listdir(SHARD_DIR))
-    print("shard files to push:", len(files))
+    # group part files by shard number (supports <NNNNN>.gz and <NNNNN>.p<W>.gz)
+    groups = {}
+    for name in sorted(os.listdir(SHARD_DIR)):
+        if not name.endswith(".gz"):
+            continue
+        base = name[:-3].split(".")[0]
+        try:
+            shard = int(base)
+        except ValueError:
+            continue
+        groups.setdefault(shard, []).append(os.path.join(SHARD_DIR, name))
+    print("shard groups to push:", len(groups))
     t0 = time.time()
     with ThreadPoolExecutor(WORKERS) as ex:
         futures = []
-        for i, name in enumerate(files):
-            futures.append(ex.submit(push_shard, int(name[:-3] if name.endswith(".gz") else name), os.path.join(SHARD_DIR, name)))
+        for i, (shard, paths) in enumerate(sorted(groups.items())):
+            futures.append(ex.submit(push_shard, shard, paths))
             if i and i % 4000 == 0:
                 el = (time.time() - t0) / 60
                 print("  queued %d | landed %d PUTs, %.0f MB, %.1f min" % (
