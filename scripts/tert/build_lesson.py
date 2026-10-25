@@ -250,6 +250,14 @@ def build_gen_notes(pack, sec_idx, unit_idx, title, S, sec_title):
     """Return (notes, key_points, summary) with {S}/{t}/{T} filled."""
     lesson = load_gen_lesson(pack, sec_idx, unit_idx)
     mapping = {"t": lower_first(title), "T": title, "S": S, "sec": sec_title.lower()}
+    def _fix_head(h):
+        h = fill(h, mapping).strip()
+        if h.isupper() and len(h) > 3:  # ALL CAPS scaffold headings -> title case
+            from .spec import title_case
+            h = title_case(h.lower())
+        # collapse doubled spaces
+        return " ".join(h.split())
+
     notes = []
     for n in lesson["notes"]:
         body = fill(n["body"], mapping).replace("`", "").strip()
@@ -260,7 +268,7 @@ def build_gen_notes(pack, sec_idx, unit_idx, title, S, sec_title):
             while len(" ".join(sents).split()) > 400 and len(sents) > 10:
                 sents.pop()
             body = " ".join(sents)
-        notes.append({"heading": fill(n["heading"], mapping).strip(), "body": body})
+        notes.append({"heading": _fix_head(n["heading"]), "body": body})
     kps = [fill(k, mapping).strip() for k in lesson.get("key_points", [])]
     summary = fill(lesson.get("summary", ""), mapping).strip()
     if not summary:
