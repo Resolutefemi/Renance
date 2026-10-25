@@ -6,7 +6,7 @@ suppresses length); this module parses it into the lesson dict.
 """
 import re
 
-ESSAY_SYSTEM = """You are a senior curriculum writer for Renance, a Nigerian higher-education learning app. You write rich, thorough teaching material. You always write LONG: every section you write is 4 full paragraphs of 4 to 6 sentences each. You teach with mechanisms, concrete values and worked examples. Plain ASCII only, no double hyphen, no unicode dashes, never mention exams or marks or revision."""
+ESSAY_SYSTEM = """You are a senior curriculum writer for Renance, a Nigerian higher-education learning app. You write rich, thorough teaching material. Every section you write is 3 full paragraphs of 3 to 6 sentences each, about 200 words. You teach with mechanisms, concrete values and worked examples. Plain ASCII only, no double hyphen, no unicode dashes, never mention exams or marks or revision."""
 
 
 def essay_user(task):
@@ -24,10 +24,9 @@ HEADING: a short specific heading (max 8 words)
 PARAGRAPH 1
 PARAGRAPH 2
 PARAGRAPH 3
-PARAGRAPH 4
 ===
 
-Length rule: every section is 4 paragraphs of 4 to 6 sentences, totalling 260 to 330 words. A section under 250 words or over 400 words is a failure. Count your sentences: at least 16 and at most 23 per section.
+Length rule: every section is 3 paragraphs of 3 to 6 sentences, totalling 170 to 240 words. A section under 150 words or over 250 words is a failure. Count your sentences: at least 10 and at most 17 per section. Aim for about 200 words per section.
 
 Cover, in order: what the topic is, the core mechanism, key structures and details, worked example one, worked example two, numbers and measurements, common errors, connections to real practice, a full realistic scenario, and the deep takeaways.
 
@@ -42,7 +41,7 @@ def essay_feedback_user(task, errs, prev_short=None):
     base = essay_user(task)
     msg = "\n\nYour previous attempt was REJECTED for these reasons:\n%s" % "; ".join(errs[:8])
     if prev_short:
-        msg += "\nIn particular these sections were under 250 words: %s. Every section must run 4 full paragraphs of 4 to 6 sentences, 260 to 390 words. Write MORE in each section: add mechanism detail, concrete values and worked steps." % ", ".join(str(i) for i in prev_short)
+        msg += "\nIn particular these sections were under 150 words: %s. Every section must run 3 full paragraphs of 3 to 6 sentences, 170 to 240 words. Write MORE in each section: add mechanism detail, concrete values and worked steps." % ", ".join(str(i) for i in prev_short)
     return base + msg
 
 
@@ -170,13 +169,13 @@ def dedupe_s(body):
 _SENT_SPLIT = re.compile(r"(?<=[.!?])\s+")
 
 
-def trim_to_400(body, maxw=400):
-    """Drop trailing sentences while over the word cap (min 10 sentences kept)."""
+def trim_to_400(body, maxw=250):
+    """Drop trailing sentences while over the word cap (min 9 sentences kept)."""
     words = body.split()
     if len(words) <= maxw:
         return body
     sents = _SENT_SPLIT.split(body)
-    while len(" ".join(sents).split()) > maxw and len(sents) > 10:
+    while len(" ".join(sents).split()) > maxw and len(sents) > 9:
         sents.pop()
     return " ".join(sents)
 

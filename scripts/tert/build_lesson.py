@@ -262,10 +262,10 @@ def build_gen_notes(pack, sec_idx, unit_idx, title, S, sec_title):
     for n in lesson["notes"]:
         body = fill(n["body"], mapping).replace("`", "").strip()
         w = len(body.split())
-        if w > 404:  # {S} fill can add a few words over the cap
+        if w > 250:  # founder band: post-fill hard cap with sentence floor
             import re as _re
             sents = _re.split(r"(?<=[.!?])\s+", body)
-            while len(" ".join(sents).split()) > 400 and len(sents) > 10:
+            while len(" ".join(sents).split()) > 250 and len(sents) > 9:
                 sents.pop()
             body = " ".join(sents)
         notes.append({"heading": _fix_head(n["heading"]), "body": body})

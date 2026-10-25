@@ -3,7 +3,7 @@
 
 Rules:
 - exactly 10 notes (11 tolerated by dropping the last in normalize())
-- body word count 250..400 per note
+- body word count 150..250 per note (founder band, 2026-10-25)
 - headings 2..9 words, unique
 - ASCII only; no "--", no "<", no double quotes, no math-trigger escapes
 - no exam/marks/revision language (word boundaries)
@@ -13,7 +13,7 @@ Rules:
 """
 import re
 
-MINW, MAXW = 250, 400
+MINW, MAXW = 150, 250
 
 BANNED_RE = re.compile(
     r"\b(exams?|examiners?|revision|WAEC|JAMB|(?<!stretch )(?<!skin )(?!skin )(?<!birth )marks)\b|"

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """farm.py — essay-mode lesson generation farm.
 
-Generates one validated 10-note lesson (250 to 400 words per note) for every
-pack unit-topic and foundation topic (3,192 tasks). Essay mode: the model
-writes plain prose sections which we parse, post-process and validate.
+Generates one validated 10-note lesson (150 to 250 words per note, founder
+band 2026-10-25) for every pack unit-topic and foundation topic (3,192 tasks).
+Essay mode: the model writes plain prose sections which we parse,
+post-process and validate.
 
 Resumable: a task is done when its output file exists. Ledger per attempt.
 Workers: 2-3 (API concurrency ceiling ~2-3 streams; 429s back off).
@@ -125,9 +126,9 @@ def _rescueable(lesson):
     bad = 0
     for n in notes:
         w = len(n["body"].split())
-        if not 250 <= w <= 400 and not 200 <= w <= 470:
+        if not 150 <= w <= 250 and not 130 <= w <= 270:
             return False
-        if not 250 <= w <= 400:
+        if not 150 <= w <= 250:
             bad += 1
     return 0 < bad <= 6
 
@@ -138,11 +139,11 @@ def _rescue(task, prev, op, tid):
     for i, n in enumerate(notes, 1):
         payload.append({"index": i, "heading": n["heading"], "words": len(n["body"].split()),
                         "body": n["body"].replace("\n", " ")})
-    user = """You wrote a 10-note lesson on "%s" (%s). Some note bodies fail the length rule (each must be 250 to 400 words). Here is the lesson with word counts:
+    user = """You wrote a 10-note lesson on "%s" (%s). Some note bodies fail the length rule (each must be 150 to 250 words). Here is the lesson with word counts:
 
 %s
 
-Rewrite ONLY the failing note bodies so every note lands between 280 and 380 words: keep every good sentence, expand thin notes with more mechanism, concrete values and worked steps, trim any note over 400 words. Keep headings and any {S} placeholders exactly as they are.
+Rewrite ONLY the failing note bodies so every note lands between 170 and 240 words: keep every good sentence, expand thin notes with more mechanism, concrete values and worked steps, trim any note over 250 words. Keep headings and any {S} placeholders exactly as they are.
 
 Return ONLY a JSON object: {"notes": [{"index": 1, "heading": "unchanged", "body": "full rewritten body"}, ...]} containing EVERY note whose body you changed (unchanged notes can be omitted). ASCII only, no "--", no "<" before a letter, no exam or marks talk.""" % (
         task["unit"], task["discipline"], json.dumps({"notes": payload}, ensure_ascii=False, indent=1))
@@ -199,7 +200,7 @@ def _short_sections(lesson):
     if not lesson:
         return None
     return [i + 1 for i, n in enumerate(lesson.get("notes", []))
-            if len(n["body"].split()) < 250]
+            if len(n["body"].split()) < 150]
 
 
 def _dump(op, content):
@@ -224,7 +225,7 @@ The previous lesson:
 
 %s
 
-Rewrite the COMPLETE lesson as 10 sections in the === format (HEADING line, then 4 paragraphs). Keep the good content, but fix every rejected section: sections under 250 words must be expanded with more mechanism, concrete values and worked steps; sections over 400 words trimmed; any banned characters removed. Every section: 4 paragraphs, 4 to 6 sentences each, 260 to 390 words. Keep {S} in 3 to 6 sections, once per section. All 10 sections required.""" % (
+Rewrite the COMPLETE lesson as 10 sections in the === format (HEADING line, then 3 paragraphs). Keep the good content, but fix every rejected section: sections under 150 words must be expanded with more mechanism, concrete values and worked steps; sections over 250 words trimmed; any banned characters removed. Every section: 3 paragraphs, 3 to 6 sentences each, 170 to 240 words. Keep {S} in 3 to 6 sections, once per section. All 10 sections required.""" % (
         task["unit"], task["discipline"], "; ".join(errs[:10]) if isinstance(errs, str) else "; ".join(errs),
         "\n\n".join(secs))
 
