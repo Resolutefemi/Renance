@@ -22,7 +22,7 @@ BUILD = "/home/z/my-project/content/tertiary/build"
 SHARD_DIR = os.path.join(BUILD, "shards")
 DONE = os.path.join(BUILD, "pack_done.txt")
 CAP = 140000
-WORKERS = 12
+WORKERS = 32
 
 R2_ENDPOINT = "https://ff1e18e32afe87e8e07b3c35595fdd0e.r2.cloudflarestorage.com"
 R2_BUCKET = "renance"
@@ -36,7 +36,9 @@ s3 = boto3.client(
 )
 
 lock = threading.Lock()
-stats = {"shards": 0, "lessons": 0, "bytes": 0, "merged": 0, "fresh": 0, "errs": 0}
+stats = {"shards": 0, "lessons": 0, "bytes": 0, "merged": 0, "fresh": 0, "errs": 0,
+         "t_parts": 0.0, "t_put": 0.0, "t_ledger": 0.0, "t_rm": 0.0, "t_n": 0}
+NO_MERGE = "--no-merge" in sys.argv
 
 
 def shard_key(shard):
@@ -45,35 +47,49 @@ def shard_key(shard):
 
 def push_shard(shard, paths):
     """paths: list of part files (multi-member gzip) for one shard.
-    GET existing pack (Class B free) -> merge -> ONE PUT (Class A)."""
+    --no-merge: direct PUT (rebuild covers every uid 1:1, old entries are
+    fully replaced). Otherwise GET existing pack (Class B) -> merge -> PUT."""
     if stats["shards"] >= CAP:
         return
     import gzip as _gz
+    _t0 = time.time()
     entries = []
     for path in paths:
         with _gz.open(path, "rt") as fh:
             for line in fh:
                 uid, raw = line.rstrip("\n").split("\t", 1)
                 entries.append((uid, raw.encode("utf-8")))
+    _t1 = time.time()
     key = shard_key(shard)
     lessons = {}
-    try:
-        resp = s3.get_object(Bucket=R2_BUCKET, Key=key)
-        existing = json.loads(resp["Body"].read())
-        if isinstance(existing, dict) and isinstance(existing.get("lessons"), dict):
-            lessons = existing["lessons"]
+    if not NO_MERGE:
+        try:
+            resp = s3.get_object(Bucket=R2_BUCKET, Key=key)
+            existing = json.loads(resp["Body"].read())
+            if isinstance(existing, dict) and isinstance(existing.get("lessons"), dict):
+                lessons = existing["lessons"]
+                with lock:
+                    stats["merged"] += 1
+        except s3.exceptions.NoSuchKey:
             with lock:
-                stats["merged"] += 1
-    except s3.exceptions.NoSuchKey:
-        with lock:
-            stats["fresh"] += 1
-    except Exception:
-        with lock:
-            stats["fresh"] += 1
-    for uid, raw in entries:
-        lessons[uid] = json.loads(raw)  # values are objects, matching the Go reader
-    payload = json.dumps({"v": 1, "lessons": lessons}, ensure_ascii=False,
-                         separators=(",", ":")).encode("utf-8")
+                stats["fresh"] += 1
+        except Exception:
+            with lock:
+                stats["fresh"] += 1
+    if NO_MERGE:
+        seen = set()
+        parts = []
+        for uid, raw in entries:
+            if uid in seen:
+                continue
+            seen.add(uid)
+            parts.append('"%s":%s' % (uid, raw.decode("utf-8")))
+        payload = ('{"v":1,"lessons":{' + ",".join(parts) + "}}").encode("utf-8")
+    else:
+        for uid, raw in entries:
+            lessons[uid] = json.loads(raw)  # values are objects, matching the Go reader
+        payload = json.dumps({"v": 1, "lessons": lessons}, ensure_ascii=False,
+                             separators=(",", ":")).encode("utf-8")
     ok = False
     for attempt in range(3):
         try:
@@ -87,18 +103,20 @@ def push_shard(shard, paths):
                     stats["errs"] += 1
                 sys.stderr.write("PUT %s failed: %s\n" % (key, e))
             time.sleep(1.5 * (attempt + 1))
+    _t2 = time.time()
     if ok:
         with lock:
             stats["shards"] += 1
             stats["lessons"] += len(entries)
             stats["bytes"] += len(payload)
+            stats["t_parts"] += _t1 - _t0
+            stats["t_put"] += _t2 - _t1
+            stats["t_n"] += 1
         with open(DONE, "a") as f:
             f.write("%d\n" % shard)
-        for path in paths:
-            try:
-                os.remove(path)
-            except OSError:
-                pass
+        # NOTE: part files are NOT removed here — unlink on this FS costs
+        # ~0.5 s each and was capping push at ~250 shards/min. The whole
+        # shards dir is bulk-cleaned after the push drains.
 
 
 def phase1():
@@ -142,8 +160,26 @@ def main():
     if "--phase1-only" in sys.argv:
         return
 
-    # group part files by shard number (supports <NNNNN>.gz and <NNNNN>.p<W>.gz)
+    def monitor():
+        while True:
+            time.sleep(45)
+            with lock:
+                n = max(stats["t_n"], 1)
+                print("  [mon] landed=%d rate=%.0f/min | avg per shard: parts=%.2fs put=%.2fs ledger=%.3fs rm=%.3fs" % (
+                    stats["shards"], stats["shards"] / ((time.time() - MON_T0) / 60),
+                    stats["t_parts"] / n, stats["t_put"] / n, stats["t_ledger"] / n, stats["t_rm"] / n))
+                sys.stdout.flush()
+    global MON_T0
+    MON_T0 = time.time()
+    threading.Thread(target=monitor, daemon=True).start()
+
+    # group part files by shard number (supports <NNNNN>.gz and <NNNNN>.p<W>.gz);
+    # skip shards already landed (ledger) — their parts stay for bulk cleanup
+    done = set()
+    if os.path.exists(DONE):
+        done = {int(x) for x in open(DONE).read().split() if x.strip()}
     groups = {}
+    skipped_done = 0
     for name in sorted(os.listdir(SHARD_DIR)):
         if not name.endswith(".gz"):
             continue
@@ -152,8 +188,11 @@ def main():
             shard = int(base)
         except ValueError:
             continue
+        if shard in done:
+            skipped_done += 1
+            continue
         groups.setdefault(shard, []).append(os.path.join(SHARD_DIR, name))
-    print("shard groups to push:", len(groups))
+    print("shard groups to push:", len(groups), "(parts of done shards skipped:", skipped_done, ")")
     t0 = time.time()
     with ThreadPoolExecutor(WORKERS) as ex:
         futures = []

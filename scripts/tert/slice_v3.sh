@@ -118,11 +118,30 @@ if [ -f "$BUILD/.v3_swept" ] || [ -f "$BUILD/.v3_force" ]; then
   if [ "$NCONV" -eq 21 ] || { [ -f "$BUILD/.v3_force" ] && [ "$NCONV" -gt 0 ]; }; then
     if [ "$(LEFT)" -gt 120 ] && [ "$(ls "$BUILD/shards" 2>/dev/null | wc -l)" -gt 0 ]; then
       echo "--- R2 push slice $(date -u +%T) ---"
-      timeout "$(LEFT)" python3 "$TERT/push_r2.py"
+      timeout "$(LEFT)" python3 "$TERT/push_r2.py" --no-merge
       echo "push slice rc=$? at $(date -u +%T)"
     fi
-    # ---- stage 6: verify when drained ----
-    if [ "$(ls "$BUILD/shards" 2>/dev/null | wc -l)" -eq 0 ] && [ ! -f "$REPORT" ]; then
+    # ---- stage 6: verify when every shard group has landed ----
+    REMAIN=$(python3 - <<'PYEOF'
+import os
+B = "/home/z/my-project/content/tertiary/build"
+done = set()
+p = os.path.join(B, "pack_done.txt")
+if os.path.exists(p):
+    done = {int(x) for x in open(p).read().split() if x.strip()}
+sd = os.path.join(B, "shards")
+groups = set()
+if os.path.isdir(sd):
+    for name in os.listdir(sd):
+        if name.endswith(".gz"):
+            try:
+                groups.add(int(name.split(".")[0]))
+            except ValueError:
+                pass
+print(len(groups - done))
+PYEOF
+)
+    if [ "$REMAIN" -eq 0 ] && [ ! -f "$REPORT" ]; then
       echo "--- verify $(date -u +%T) ---"
       python3 "$TERT/verify_samples.py"; VR=$?
       echo "verify rc=$VR"

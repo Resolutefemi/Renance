@@ -62,11 +62,12 @@ def convert_file(args):
                 raw = json.dumps(blob, ensure_ascii=False, separators=(",", ":"))
             h = handles.get(shard)
             if h is None:
-                if len(handles) > 150:
+                if len(handles) > 400:
                     close_all()
                 import gzip as _gz
                 token = "%d_%d_%d" % (wid, RUN_ID, cycle[0])
-                h = _gz.open(os.path.join(SHARD_DIR, "%05d.%s.gz" % (shard, token)), "at")
+                h = _gz.open(os.path.join(SHARD_DIR, "%05d.%s.gz" % (shard, token)),
+                             "at", compresslevel=1)
                 handles[shard] = h
             h.write("%s\t%s\n" % (uid, raw))
             n += 1
