@@ -53,6 +53,12 @@ type LessonDoc struct {
         Drawings  []DrawingRef  `json:"drawings"`
         Source    string        `json:"source"`
         Cached    bool          `json:"cached"`
+        // BlobURL is the lesson's PUBLIC Cloudflare R2 url (founder
+        // 2026-10-26, "link the R2 lessons to the courses"): when the
+        // bucket served this doc AND R2_PUBLIC_BASE is configured, the
+        // mobile app and the website prefetch/cache the document straight
+        // from the CDN edge - an open never waits on the API twice.
+        BlobURL string `json:"blobUrl,omitempty"`
         // GenError carries the generation failure reason when a stale doc
         // serves as the fallback - ops forensics without log access (the
         // founder reads the API, not the Render console).
@@ -860,6 +866,17 @@ func (s *Service) cachedLesson(ctx context.Context, t *topicCtx) (*LessonDoc, er
         if s.Blobs != nil {
                 if doc, ok := s.blobLesson(ctx, t.ID); ok {
                         doc.TopicID, doc.CourseID, doc.Course, doc.Cached = t.ID, t.CourseID, t.Course, true
+                        // The public CDN url (founder 2026-10-26): when the
+                        // bucket can also hand out a public read url for
+                        // this topic, stamp it on the doc so both clients
+                        // can prefetch the lesson off the edge.
+                        if p, isProber := s.Blobs.(BlobProber); isProber {
+                                if hits := p.ProbeBlobs(ctx, []string{t.ID}); hits != nil {
+                                        if h, found := hits[t.ID]; found && h.PublicURL != "" {
+                                                doc.BlobURL = h.PublicURL
+                                        }
+                                }
+                        }
                         if healed, changed := sanitizeQuiz(doc.Quiz); changed {
                                 doc.Quiz = healed
                                 s.blobSave(ctx, doc) // heal write-back, best-effort

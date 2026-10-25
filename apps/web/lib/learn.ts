@@ -62,6 +62,10 @@ export interface TopicNode {
   unit: number;
   status: 'completed' | 'current' | 'locked';
   bestScore: number;
+  /** Cloudflare R2 serves this lesson today (founder 2026-10-26,
+   * "link the R2 lessons to the courses") - the ladder marks the node
+   * cloud-ready and prefetches it, so opening it is instant. */
+  blobReady?: boolean;
 }
 
 export interface UnitNode {
@@ -86,6 +90,8 @@ export interface CoursePath {
   completedPercent: number;
   /** The background loop is still growing this course's unit tree. */
   generating?: boolean;
+  /** How many ladder topics the R2 lesson home serves today. */
+  blobReadyCount?: number;
 }
 
 export interface LearnNote {
@@ -124,6 +130,10 @@ export interface LessonDoc {
   drawings: LearnDrawing[];
   source: string;
   cached: boolean;
+  /** The lesson's public Cloudflare R2 url (when the bucket served it
+   * and R2_PUBLIC_BASE is configured). Clients cache the doc locally so
+   * a later open never waits on the API. */
+  blobUrl?: string;
 }
 
 export interface QuestDef {
@@ -429,18 +439,105 @@ export async function fetchLesson(topicId: string, wait = true): Promise<LessonD
   // than holding one request open.
   void wait;
   const deadline = Date.now() + 110_000;
-  for (;;) {
-    const doc = await api<LessonDoc & { status?: string }>(
-      `/learn/topics/${encodeURIComponent(topicId)}/content`,
-    );
-    if (!doc || (doc as { status?: string }).status !== 'generating') {
-      return doc as LessonDoc;
+  try {
+    for (;;) {
+      const doc = await api<LessonDoc & { status?: string }>(
+        `/learn/topics/${encodeURIComponent(topicId)}/content`,
+      );
+      if (!doc || (doc as { status?: string }).status !== 'generating') {
+        cacheLessonDoc(doc as LessonDoc);
+        return doc as LessonDoc;
+      }
+      if (Date.now() > deadline) {
+        // The generator is still writing. Before giving up, a lesson the
+        // bucket already served once replays from the local cache - the
+        // founder's R2-link pass makes cold APIs a non-event.
+        const cached = readCachedLessonDoc(topicId);
+        if (cached) return cached;
+        throw new Error('This lesson is still being written - hang on a moment.');
+      }
+      await new Promise((r) => setTimeout(r, 3000));
     }
-    if (Date.now() > deadline) {
-      throw new Error('This lesson is still being written - hang on a moment.');
-    }
-    await new Promise((r) => setTimeout(r, 3000));
+  } catch (err) {
+    // Network trouble (cold Render instance, dead connection): the
+    // locally cached copy of an already-served lesson still studies.
+    const cached = readCachedLessonDoc(topicId);
+    if (cached) return cached;
+    throw err;
   }
+}
+
+// ─── The local lesson cache (the R2-link client half) ──────────────────
+// Successful lesson docs ride localStorage keyed by topic (the same
+// store the learn wallet uses). A topic the bucket has served once can
+// therefore always open again - instantly, and offline. The index
+// caps the store at ~24 lessons (~1 MB), oldest evicted first.
+const LESSON_CACHE_KEY = 'renance.lessonCache';
+const LESSON_CACHE_CAP = 24;
+
+function readLessonCacheIndex(): string[] {
+  try {
+    const raw = window.localStorage.getItem(LESSON_CACHE_KEY);
+    if (!raw) return [];
+    const parsed: unknown = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed.filter((x): x is string => typeof x === 'string') : [];
+  } catch {
+    return [];
+  }
+}
+
+function writeLessonCacheIndex(ids: string[]): void {
+  try {
+    window.localStorage.setItem(LESSON_CACHE_KEY, JSON.stringify(ids.slice(-LESSON_CACHE_CAP)));
+  } catch {
+    // Quota trouble: the cache is sugar, never a gate.
+  }
+}
+
+function cacheLessonDoc(doc: LessonDoc): void {
+  try {
+    if (!doc || !doc.topicId || !Array.isArray(doc.notes) || doc.notes.length === 0) return;
+    window.localStorage.setItem(`renance.lessonDoc.${doc.topicId}`, JSON.stringify(doc));
+    const ids = readLessonCacheIndex().filter((id) => id !== doc.topicId);
+    ids.push(doc.topicId);
+    while (ids.length > LESSON_CACHE_CAP) {
+      const evict = ids.shift();
+      if (evict) window.localStorage.removeItem(`renance.lessonDoc.${evict}`);
+    }
+    writeLessonCacheIndex(ids);
+  } catch {
+    // Quota trouble: the cache is sugar, never a gate.
+  }
+}
+
+function readCachedLessonDoc(topicId: string): LessonDoc | null {
+  try {
+    const raw = window.localStorage.getItem(`renance.lessonDoc.${topicId}`);
+    if (!raw) return null;
+    const doc = JSON.parse(raw) as LessonDoc;
+    if (!doc || !Array.isArray(doc.notes) || doc.notes.length === 0) return null;
+    return doc;
+  } catch {
+    return null;
+  }
+}
+
+/** Prefetch the ladder's cloud-ready topics (founder 2026-10-26, the
+ * R2-link pass): sequential, silent, bounded at four - by the time the
+ * student taps a node the notes are usually already local. */
+export function prefetchReadyLessons(topics: TopicNode[]): void {
+  const ready = topics
+    .filter((t) => t.blobReady && t.status !== 'completed' && !readCachedLessonDoc(t.id))
+    .slice(0, 4);
+  void (async () => {
+    for (const t of ready) {
+      try {
+        await fetchLesson(t.id);
+      } catch {
+        return; // a cold API - stop quietly, the tap retries anyway
+      }
+    }
+  })();
 }
 
 export async function postProgress(body: {

@@ -60,6 +60,28 @@ import (
         "renance.dev/study-api/internal/tutor"
 )
 
+// blobStore is the composition root's LessonBlobs: the raw r2store
+// client for the read/write surface, plus the coverage prober
+// (learn.BlobProber) that powers the course ladder's blobReady flags
+// and the content response's public blobUrl. The adapter lives here -
+// the one layer that sees both the learn interfaces and the concrete
+// store - so learn stays store-agnostic.
+type blobStore struct {
+        learn.LessonBlobs
+        learn.BlobProber
+}
+
+type blobProber struct{ c *r2store.Client }
+
+func (b blobProber) ProbeBlobs(ctx context.Context, ids []string) map[string]learn.BlobHit {
+        hits := b.c.ProbeBlobs(ctx, ids)
+        out := make(map[string]learn.BlobHit, len(hits))
+        for id, h := range hits {
+                out[id] = learn.BlobHit{Exists: h.Exists, PerTopic: h.PerTopic, PublicURL: h.PublicURL}
+        }
+        return out
+}
+
 type Server struct {
         cfg     *config.Config
         log     *slog.Logger
@@ -199,9 +221,10 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
         // writes (bucket + cache database). Unset keeps the single-home
         // posture; nothing else changes.
         if blobs := r2store.FromEnv(log); blobs != nil {
-                s.learn.Blobs = blobs
+                s.learn.Blobs = blobStore{LessonBlobs: blobs, BlobProber: blobProber{blobs}}
                 log.Info("lesson blobs: cloudflare r2 attached - the bucket is the durable lesson home",
-                        "bucket", blobs.Bucket(), "prefix", blobs.Prefix())
+                        "bucket", blobs.Bucket(), "prefix", blobs.Prefix(),
+                        "publicBase", blobs.PublicBase())
         } else {
                 log.Info("lesson blobs: r2 not configured - the cache database stays the only lesson home")
         }

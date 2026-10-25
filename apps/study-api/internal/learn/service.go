@@ -257,6 +257,101 @@ func mirrorStudyStreak(ctx context.Context, q querier, userID string, streak int
         return err
 }
 
+// mirrorStudyXp folds a learn-economy XP gain into the legacy
+// gamification row (study.streaks.total_xp), best-effort, post-commit.
+// The other half of the founder's 2026-10-26 parity pass ("make sure
+// that xp and streak counts once a user takes a quiz, exams or any
+// lesson"): the profile page, the dashboard and every gamification
+// surface read study.streaks.total_xp, which only the grading engine
+// ever wrote - so a student who finished LESSONS saw the learn wallet
+// grow while the profile XP sat still. Every XP-earning activity
+// (lesson Complete, GradePractice) now adds its gain here; exam
+// grading already writes total_xp directly via ApplyGrade and pays the
+// learn economy back through CreditExamXp (below). Additive by nature
+// (a replayed completion double-pays exactly like the xp_events row it
+// mirrors - the same tolerance the ledger has always had).
+func mirrorStudyXp(ctx context.Context, q querier, userID string, xp int) error {
+        if xp <= 0 {
+                return nil
+        }
+        _, err := q.Exec(ctx, `
+                INSERT INTO study.streaks (user_id, total_xp, updated_at)
+                VALUES ($1, $2, now())
+                ON CONFLICT (user_id) DO UPDATE SET
+                        total_xp   = study.streaks.total_xp + EXCLUDED.total_xp,
+                        updated_at = now()`,
+                userID, xp)
+        return err
+}
+
+// CreditExamXp is the exam-side XP bridge (founder 2026-10-26: "make
+// sure that xp and streak counts once a user takes a quiz, exams or
+// any lesson"). The graded paper already paid the legacy wallet
+// (store.ApplyGrade wrote study.streaks.total_xp and the streak); this
+// bridge pays the SAME rule (XPPerCorrect per correct answer) into the
+// learn economy - the learn.xp_events ledger (which is exactly what
+// the weekly league sums), learn.daily_stats (today's XP goal, quests)
+// and learn.learners.xp (the wallet chips) - so a mock exam counts on
+// every surface a lesson does. Best-effort by the same contract as
+// TouchStreakForQuiz: a hiccup is a log line, never a failed grade.
+func (s *Service) CreditExamXp(ctx context.Context, userID string, correct int) {
+        defer func() {
+                if r := recover(); r != nil && s.Log != nil {
+                        s.Log.Error("learn: exam xp credit panic", "err", r, "user", userID)
+                }
+        }()
+        if s.Pool == nil || userID == "" || correct <= 0 {
+                return
+        }
+        if err := s.ensureLearner(ctx, s.Pool, userID); err != nil {
+                if s.Log != nil {
+                        s.Log.Error("learn: exam xp credit learner", "err", err, "user", userID)
+                }
+                return
+        }
+        xp := correct * XPPerCorrect
+        day := LagosToday()
+        week := weekKey(time.Now())
+        tx, err := s.Pool.Begin(ctx)
+        if err != nil {
+                if s.Log != nil {
+                        s.Log.Error("learn: exam xp credit begin", "err", err, "user", userID)
+                }
+                return
+        }
+        defer tx.Rollback(ctx)
+        if _, err := tx.Exec(ctx, `
+                INSERT INTO learn.xp_events (user_id, amount, kind, week_key, day_key)
+                VALUES ($1,$2,'exam',$3,$4)`, userID, xp, week, day); err != nil {
+                if s.Log != nil {
+                        s.Log.Error("learn: exam xp credit event", "err", err, "user", userID)
+                }
+                return
+        }
+        if _, err := tx.Exec(ctx, `
+                INSERT INTO learn.daily_stats (user_id, day_key, xp, correct)
+                VALUES ($1,$2,$3,$4)
+                ON CONFLICT (user_id, day_key) DO UPDATE SET
+                  xp = learn.daily_stats.xp + $3,
+                  correct = learn.daily_stats.correct + $4`,
+                userID, day, xp, correct); err != nil {
+                if s.Log != nil {
+                        s.Log.Error("learn: exam xp credit daily", "err", err, "user", userID)
+                }
+                return
+        }
+        if _, err := tx.Exec(ctx, `
+                UPDATE learn.learners SET xp = xp + $2 WHERE user_id=$1`, userID, xp); err != nil {
+                if s.Log != nil {
+                        s.Log.Error("learn: exam xp credit learner", "err", err, "user", userID)
+                }
+                return
+        }
+        if err := tx.Commit(ctx); err != nil && s.Log != nil {
+                s.Log.Error("learn: exam xp credit commit", "err", err, "user", userID)
+        }
+}
+
 // ─── Profile (top-bar counters + settings page payload) ───────────────────
 
 type Profile struct {
@@ -639,6 +734,11 @@ type TopicNode struct {
         Unit     int    `json:"unit"`
         Status   string `json:"status"` // completed | current | locked
         Best     int    `json:"bestScore"`
+        // BlobReady (founder 2026-10-26, "link the R2 lessons to the
+        // courses"): the bucket serves this topic's lesson today, so the
+        // mobile app and the website mark the node cloud-ready and
+        // prefetch it - opening it is instant.
+        BlobReady bool `json:"blobReady,omitempty"`
 }
 
 type UnitNode struct {
@@ -665,6 +765,9 @@ type CoursePath struct {
         // loop is adding the next unit of 10 topics). The ladder renders
         // a quiet "being prepared" node instead of a fake locked one.
         Generating bool `json:"generating"`
+        // BlobReadyCount - how many of the ladder's topics the R2 home
+        // serves today (0 when the bucket is off or has none yet).
+        BlobReadyCount int `json:"blobReadyCount,omitempty"`
 }
 
 // CoursePath renders the Supreme LearnPath ladder: completed behind,
@@ -708,6 +811,21 @@ func (s *Service) CoursePath(ctx context.Context, userID, courseID string) (*Cou
         bestByTopic, err := s.progressBestByTopic(ctx, userID, ids)
         if err != nil {
                 return nil, err
+        }
+        // R2 coverage (founder 2026-10-26, "link the R2 lessons to the
+        // courses"): which ladder nodes does the bucket serve right now?
+        // The prober is optional and best-effort - a bucket hiccup just
+        // leaves the flags off, the ladder itself never fails for it.
+        if p, isProber := s.Blobs.(BlobProber); isProber && len(ids) > 0 {
+                hits := p.ProbeBlobs(ctx, ids)
+                ready := 0
+                for i := range order {
+                        if h, found := hits[order[i].ID]; found && h.Exists {
+                                order[i].BlobReady = true
+                                ready++
+                        }
+                }
+                cp.BlobReadyCount = ready
         }
         currentSet := false
         done := 0

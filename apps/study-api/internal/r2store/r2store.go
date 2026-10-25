@@ -56,18 +56,25 @@ const oversizeWarnBytes = 1 << 20
 // FromEnv; FromEnv returns nil when R2 is not configured, and every
 // consumer treats nil as "bucket off".
 type Client struct {
-        endpoint  string // https://<account_id>.r2.cloudflarestorage.com
-        bucket    string
-        accessKey string
-        secretKey string
-        prefix    string // "lessons/" by default; objects ride prefix + topicID + .json
-        http      *http.Client
-        log       *slog.Logger
+        endpoint   string // https://<account_id>.r2.cloudflarestorage.com
+        bucket     string
+        accessKey  string
+        secretKey  string
+        prefix     string // "lessons/" by default; objects ride prefix + topicID + .json
+        publicBase string // optional R2_PUBLIC_BASE - the public r2.dev/custom domain
+        http       *http.Client
+        log        *slog.Logger
 
         // packMemo caches decoded pack shards (see packs.go). Class B is
         // free, so this is latency sugar with a hard forget-all bound.
         packMemo  sync.Map
         packMemoN atomic.Int64
+
+        // probeMemo caches positive ProbeBlobs answers (probe.go, the
+        // course-ladder blobReady flags). Lesson objects are
+        // write-once-per-version content, so a hit stays a hit; misses
+        // are never memoized (r2fill keeps landing new lessons).
+        probeMemo sync.Map
 }
 
 // FromEnv builds the client from the environment, or returns nil when
@@ -81,38 +88,15 @@ type Client struct {
 // Optional:
 //
 //      R2_PREFIX          object key prefix (default "lessons/")
+//      R2_PUBLIC_BASE     the bucket's PUBLIC read base (the r2.dev
+//                         endpoint or a custom domain, e.g.
+//                         "https://pub-<id>.r2.dev" or
+//                         "https://cdn.renance.app"). When set, lesson
+//                         responses carry the object's public URL so the
+//                         mobile app and the website can prefetch/cache
+//                         lessons straight from the CDN edge.
 func FromEnv(log *slog.Logger) *Client {
-        account := strings.TrimSpace(os.Getenv("R2_ACCOUNT_ID"))
-        bucket := strings.TrimSpace(os.Getenv("R2_BUCKET"))
-        access := strings.TrimSpace(os.Getenv("R2_ACCESS_KEY_ID"))
-        secret := strings.TrimSpace(os.Getenv("R2_SECRET_ACCESS_KEY"))
-        if account == "" || bucket == "" || access == "" || secret == "" {
-                return nil
-        }
-        endpoint := strings.TrimSpace(os.Getenv("R2_ENDPOINT"))
-        if endpoint == "" {
-                endpoint = fmt.Sprintf("https://%s.r2.cloudflarestorage.com", account)
-        }
-        endpoint = strings.TrimSuffix(endpoint, "/")
-        prefix := strings.TrimSpace(os.Getenv("R2_PREFIX"))
-        if prefix == "" {
-                prefix = "lessons/"
-        }
-        if !strings.HasSuffix(prefix, "/") {
-                prefix += "/"
-        }
-        if log == nil {
-                log = slog.Default()
-        }
-        return &Client{
-                endpoint:  endpoint,
-                bucket:    bucket,
-                accessKey: access,
-                secretKey: secret,
-                prefix:    prefix,
-                http:      &http.Client{Timeout: 30 * time.Second},
-                log:       log,
-        }
+        return fromEnvPrefix(log, os.Getenv("R2_PREFIX"))
 }
 
 // Prefix reports the object key prefix lesson objects live under.
@@ -123,6 +107,14 @@ func (c *Client) Prefix() string { return c.prefix }
 // profile-picture/ while lessons keep lessons/). One credential set,
 // two logical folders, zero extra configuration.
 func FromEnvPrefix(log *slog.Logger, prefix string) *Client {
+        return fromEnvPrefix(log, prefix)
+}
+
+// fromEnvPrefix is the shared constructor behind FromEnv and
+// FromEnvPrefix: one credential read, one endpoint build, one place
+// where R2_PUBLIC_BASE attaches (2026-10-26, the founder's
+// "link the R2 lessons to the courses" pass).
+func fromEnvPrefix(log *slog.Logger, prefix string) *Client {
         account := strings.TrimSpace(os.Getenv("R2_ACCOUNT_ID"))
         bucket := strings.TrimSpace(os.Getenv("R2_BUCKET"))
         access := strings.TrimSpace(os.Getenv("R2_ACCESS_KEY_ID"))
@@ -142,18 +134,38 @@ func FromEnvPrefix(log *slog.Logger, prefix string) *Client {
         if !strings.HasSuffix(prefix, "/") {
                 prefix += "/"
         }
+        publicBase := strings.TrimSuffix(strings.TrimSpace(os.Getenv("R2_PUBLIC_BASE")), "/")
         if log == nil {
                 log = slog.Default()
         }
         return &Client{
-                endpoint:  endpoint,
-                bucket:    bucket,
-                accessKey: access,
-                secretKey: secret,
-                prefix:    prefix,
-                http:      &http.Client{Timeout: 30 * time.Second},
-                log:       log,
+                endpoint:   endpoint,
+                bucket:     bucket,
+                accessKey:  access,
+                secretKey:  secret,
+                prefix:     prefix,
+                publicBase: publicBase,
+                http:       &http.Client{Timeout: 30 * time.Second},
+                log:        log,
         }
+}
+
+// PublicBase reports the configured public read base ("" = none).
+func (c *Client) PublicBase() string {
+        if c == nil {
+                return ""
+        }
+        return c.publicBase
+}
+
+// PublicURL renders the PUBLIC url of one object key (the key as it
+// rides the bucket, e.g. "v2/FOO.json"). Empty when no public base is
+// configured - callers treat "" as "no CDN fast path".
+func (c *Client) PublicURL(key string) string {
+        if c == nil || c.publicBase == "" || key == "" {
+                return ""
+        }
+        return c.publicBase + "/" + key
 }
 
 // PutObject stores one raw object under the client's prefix with an

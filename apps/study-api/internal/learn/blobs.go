@@ -33,6 +33,25 @@ type LessonBlobs interface {
         Has(ctx context.Context, topicIDs []string) (map[string]bool, error)
 }
 
+// BlobHit is one topic's bucket-coverage answer (the course-ladder
+// "this lesson is live on the CDN" badge and the content response's
+// public url).
+type BlobHit struct {
+        Exists    bool   // the bucket serves this topic today
+        PerTopic  bool   // it rides its own key (a public url is meaningful)
+        PublicURL string // the R2_PUBLIC_BASE url of the per-topic object ("")
+}
+
+// BlobProber is the optional coverage surface a blob store can expose
+// (r2store.Client does): "which of these course topics resolve from
+// the bucket right now?" The course path turns it into per-unit
+// blobReady flags; the lesson content response turns it into blobUrl.
+// Optional - probed via type assertion, so alternate LessonBlobs
+// implementations (tests, future stores) keep working untouched.
+type BlobProber interface {
+        ProbeBlobs(ctx context.Context, topicIDs []string) map[string]BlobHit
+}
+
 // LessonBlob is the stable on-bucket envelope, one object per topic
 // (key: <prefix><topic_id>.json, default prefix "lessons/"). The four
 // content columns ride as raw JSON so the byte shape matches the

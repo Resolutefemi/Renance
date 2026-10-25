@@ -29,7 +29,7 @@
    bump on every rebuild (2026-10-18: v5, 233 names - adds stop, home,
    target, assignment, healing, refresh. v4's collector missed
    multiline icon ternaries, so the quiz bar spelled VISIBILITY). */
-  src: url('../public/fonts/material-symbols-outlined.subset.woff2?v=5') format('woff2');
+  src: url('../public/fonts/material-symbols-outlined.subset.woff2?v=6') format('woff2');
 }
 @font-face {
   font-family: 'Inter';

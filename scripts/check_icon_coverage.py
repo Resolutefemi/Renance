@@ -36,6 +36,11 @@ QUOTED_SNAKE = re.compile(r"[\"']([a-z][a-z_]+)[\"']")
 # Tokens that match the ligature shape but are never icon names.
 IGNORE = {
     "icon", "icons", "the", "and", "for", "with", "none", "fill_current",
+    # landing-duo.tsx types 'flame' as the ID of a hand-drawn SVG
+    # (FlameDoodle/FlameGlyph) - it never rides the icon font, and
+    # Material Symbols has no 'flame' ligature at all (the flame glyph
+    # is 'local_fire_department', which the subset does carry).
+    "flame",
 }
 
 

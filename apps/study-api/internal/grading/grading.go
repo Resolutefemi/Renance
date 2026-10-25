@@ -34,6 +34,15 @@ type StreakToucher interface {
         TouchStreakForQuiz(ctx context.Context, userID string)
 }
 
+// ExamXpCreditor is the learn module's exam-XP bridge (founder
+// 2026-10-26: "make sure that xp and streak counts once a user takes a
+// quiz, exams or any lesson"). Optional: engines wired with a plain
+// StreakToucher keep the streak-only behaviour, learn.Service
+// implements both.
+type ExamXpCreditor interface {
+        CreditExamXp(ctx context.Context, userID string, correct int)
+}
+
 type Job struct {
         AttemptID string
         UserID    string // owner of the attempt - feeds gamification after the grade
@@ -169,6 +178,13 @@ func (e *Engine) grade(ctx context.Context, job Job, worker int) {
                 // paper just became today's streak activity.
                 if e.streaks != nil {
                         e.streaks.TouchStreakForQuiz(ctx, job.UserID)
+                        // The exam-XP bridge (founder 2026-10-26): the
+                        // paper's correct answers also pay the learn
+                        // economy - the wallet, today's goal and the
+                        // weekly league all count the sitting.
+                        if c, ok := e.streaks.(ExamXpCreditor); ok {
+                                c.CreditExamXp(ctx, job.UserID, result.Score)
+                        }
                 }
         }
         // Spaced repetition (ROADMAP #3) is best-effort too: a scheduling

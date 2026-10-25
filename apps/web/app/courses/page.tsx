@@ -56,7 +56,7 @@ import {
   CatalogItem, CoursePath, ChestDrop, MyCourse, TopicNode, UnitNode,
   DeskCourse, DeskDepartment, DeskShelves, AIMatchLine,
   fetchCourseDesk, fetchCoursePath, fetchDepartments, fetchDeskOthers, fetchMyCourses, learnBodyFromExams,
-  learnBodyLabel, aiMatchCourses, saveDesk, searchDeskCourses,
+  learnBodyLabel, aiMatchCourses, saveDesk, searchDeskCourses, prefetchReadyLessons,
   setActiveCourse, setMyCourses, deskSaveError,
 } from '@/lib/learn';
 import { JAMB_CATALOG } from '@/lib/learn-catalog-secondary';
@@ -223,6 +223,10 @@ export default function CoursesPage() {
       setPath(p);
       setFace('path');
       window.scrollTo({ top: 0 });
+      // The R2-link prefetch (founder 2026-10-26): while the student
+      // reads the ladder, the cloud-ready lessons quietly land in the
+      // local cache - a tap on any of them opens instantly.
+      void prefetchReadyLessons(p.topics);
     } catch {
       setNotice('Could not open that course just now - it will open once the connection is back.');
     } finally {
@@ -1579,7 +1583,21 @@ function PathNode({ topic, offset, color, onOpen }: { topic: TopicNode; offset: 
   const done = topic.status === 'completed';
   const current = topic.status === 'current';
   return (
-    <div className={`flex flex-col items-center ${offset}`}>
+    <div className={`relative flex flex-col items-center ${offset}`}>
+      {/* The cloud-ready chip (founder 2026-10-26, "link the R2 lessons
+          to the courses"): a quiet tick that this lesson lives on the
+          R2 bucket and opens instantly from the edge. Inline SVG - the
+          icon-font subset carries no cloud_done glyph. */}
+      {topic.blobReady && !locked && (
+        <span
+          title="Ready on the Renance cloud"
+          className="absolute -top-1 right-[6px] z-10 flex h-[18px] w-[18px] items-center justify-center rounded-full border-2 border-surface-container bg-primary text-white"
+        >
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+            <path d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM10 17l-3.5-3.5 1.41-1.41L10 14.17 15.18 9l1.41 1.41L10 17z" />
+          </svg>
+        </span>
+      )}
       <button
         type="button"
         onClick={() => !locked && onOpen()}

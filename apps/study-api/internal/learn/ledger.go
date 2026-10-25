@@ -317,6 +317,12 @@ func (s *Service) Complete(ctx context.Context, userID string, req CompleteReque
                         s.Log.Error("learn: completion streak mirror", "err", err, "user", userID)
                 }
         }
+        // Legacy-XP mirror (founder 2026-10-26): the lesson's XP also
+        // lands in study.streaks.total_xp, so the profile page and the
+        // dashboard count lesson work exactly the way they count exams.
+        if err := mirrorStudyXp(ctx, s.Pool, userID, res.XPEarned); err != nil && s.Log != nil {
+                s.Log.Error("learn: completion xp mirror", "err", err, "user", userID)
+        }
 
         // Course completion percentage for the done screen. The original
         // read `COALESCE(int(round(100.0 * (done), (total))), 0)` - two
@@ -1192,6 +1198,11 @@ func (s *Service) GradePractice(ctx context.Context, userID string, correct, tot
                 if err := mirrorStudyStreak(ctx, s.Pool, userID, mirrorStreak, mirrorDay); err != nil && s.Log != nil {
                         s.Log.Error("learn: practice streak mirror", "err", err, "user", userID)
                 }
+        }
+        // Legacy-XP mirror (founder 2026-10-26): practice XP counts on the
+        // profile page exactly like exam and lesson XP do.
+        if err := mirrorStudyXp(ctx, s.Pool, userID, xp); err != nil && s.Log != nil {
+                s.Log.Error("learn: practice xp mirror", "err", err, "user", userID)
         }
         res.Hearts = MaxHearts
         _ = heartsFull
