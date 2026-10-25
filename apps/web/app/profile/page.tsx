@@ -683,7 +683,7 @@ export default function ProfilePage() {
                           )}
                         </span>
                         <span className="mt-0.5 block truncate text-[11.5px] font-semibold text-on-surface-variant">
-                          {c.completedTopics}/{c.topicCount} topics · {pct}%
+                          {c.completedTopics}/{c.topicCount} units · {pct}%
                         </span>
                       </span>
                       <span className="material-symbols-outlined shrink-0 text-outline-light transition group-hover:text-primary">

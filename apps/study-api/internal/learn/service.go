@@ -885,7 +885,7 @@ func (s *Service) CoursePath(ctx context.Context, userID, courseID string) (*Cou
                         name = names[(u-1)%len(names)]
                 }
                 role := u
-                un := UnitNode{Index: u, Name: fmt.Sprintf("Unit %d · %s", u, name), From: ts[0].Seq, To: ts[len(ts)-1].Seq}
+                un := UnitNode{Index: u, Name: fmt.Sprintf("Section %d · %s", u, name), From: ts[0].Seq, To: ts[len(ts)-1].Seq}
                 // Chest/review readiness: every topic but the last complete.
                 un.ReviewReady = true
                 for _, t := range ts {

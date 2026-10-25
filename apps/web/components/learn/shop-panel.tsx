@@ -126,7 +126,7 @@ export default function ShopPanel({ id }: { id?: string }) {
               Premium returns with the paid subscription later. */}
 
           <p className="px-1 text-center text-[11.5px] font-bold text-on-surface-variant">
-            Gems come from quests, topic chests, first clears and perfect scores. Unlimited hearts stay on for everyone at launch.
+            Gems come from quests, unit chests, first clears and perfect scores. Unlimited hearts stay on for everyone at launch.
           </p>
         </>
       )}

@@ -441,7 +441,7 @@ export default function CoursesPage() {
                       <span className="min-w-0 flex-1">
                         <span className="block truncate text-[14.5px] font-extrabold text-on-surface">{c.title}</span>
                         <span className="block truncate text-[11.5px] font-bold text-on-surface-variant">
-                          {c.topicCount} topics{inList ? ' · in your list' : ''}
+                          {c.topicCount} unit{c.topicCount === 1 ? '' : 's'}{inList ? ' · in your list' : ''}
                         </span>
                       </span>
                       {/* Founder 2026-10-21: the red cancel ❌ is GONE from
@@ -891,7 +891,7 @@ function TertiaryDesk({
           <div className="mt-3 flex items-center gap-3 rounded-xl bg-white/15 px-3 py-2 text-[12px] font-extrabold">
             <span>{mine.length} course{mine.length === 1 ? '' : 's'}</span>
             <span className="opacity-60">·</span>
-            <span>{doneTopics.toLocaleString()} / {totalTopics.toLocaleString()} topics done</span>
+            <span>{doneTopics.toLocaleString()} / {totalTopics.toLocaleString()} units done</span>
           </div>
         </div>
 
@@ -1007,7 +1007,7 @@ function TertiaryDesk({
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search by code (CSC, MTH…), title or topic"
+            placeholder="Search by code (CSC, MTH…), title or unit"
             aria-label="Search courses"
             className="w-full rounded-xl border-2 border-outline-variant bg-card py-2.5 pl-11 pr-10 text-[13.5px] font-bold text-on-surface outline-none focus:border-primary"
           />
@@ -1151,7 +1151,7 @@ function TertiaryDesk({
         <span className="min-w-0 flex-1">
           <span className="block text-[13.5px] font-black text-on-surface">Can&apos;t find your course?</span>
           <span className="block text-[11.5px] font-bold text-on-surface-variant">
-            Submit the course and its topics - the desk builds the bank for it.
+            Submit the course and its units - the desk builds the bank for it.
           </span>
         </span>
         <span className="material-symbols-outlined shrink-0 text-on-surface-variant">chevron_right</span>
@@ -1308,7 +1308,7 @@ function DeskRow({ c, onOpen, onToggle }: { c: DeskCourse; onOpen: () => void; o
           <span className="truncate text-[14px] font-extrabold text-on-surface">{c.title}</span>
         </span>
         <span className="mt-0.5 block truncate text-[11px] font-bold text-on-surface-variant">
-          {c.department} · {c.topicCount} topic{c.topicCount === 1 ? '' : 's'}
+          {c.department} · {c.topicCount} unit{c.topicCount === 1 ? '' : 's'}
           {c.inList ? ' · in your list' : ''}
         </span>
       </button>
@@ -1349,7 +1349,7 @@ function CourseCard({ c, onOpen, onRemove }: { c: MyCourse; onOpen: () => void; 
         <span className="min-w-0 flex-1">
           <span className="block truncate text-[15px] font-black text-on-surface">{c.title}</span>
           <span className="mt-0.5 block text-[12px] font-bold text-on-surface-variant">
-            {c.completedTopics}/{c.topicCount} topics done
+            {c.completedTopics}/{c.topicCount} units done
           </span>
           <span className="mt-1.5 block">
             <ProgressBar value={c.topicCount ? (c.completedTopics / c.topicCount) * 100 : 0} />
@@ -1528,7 +1528,7 @@ function CoursePathView({
               type="button"
               onClick={() => revisionUnlocked && onOpenRevision(u)}
               disabled={!revisionUnlocked}
-              aria-label={`Unit ${u.index} revision: 50 questions`}
+              aria-label={`Section ${u.index} revision: 50 questions`}
               className={`learn-tile mt-4 w-full rounded-2xl border-2 p-3.5 text-left transition ${revisionUnlocked ? 'active:translate-y-[2px] hover:brightness-[1.03]' : 'opacity-70'}`}
               style={{
                 borderColor: theme.solid,
@@ -1544,12 +1544,12 @@ function CoursePathView({
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block text-[13.5px] font-black" style={{ color: theme.ink }}>
-                    Unit {u.index} Revision
+                    Section {u.index} Revision
                   </span>
                   <span className="block text-[11.5px] font-bold leading-snug text-on-surface-variant">
                     {revisionUnlocked
-                      ? `50 questions from all ${topics.length} topics of this unit`
-                      : 'Finish a topic in this unit to unlock the revision paper'}
+                      ? `50 questions from all ${topics.length} units of this section`
+                      : 'Finish a unit in this section to unlock the revision paper'}
                   </span>
                 </span>
                 <span className="material-symbols-outlined shrink-0 text-[20px]" style={{ color: theme.ink }}>
@@ -1568,9 +1568,9 @@ function CoursePathView({
       {path.generating && (
         <div className="flex flex-col items-center gap-2 rounded-2xl border-2 border-dashed border-outline-variant bg-card px-6 py-7 text-center">
           <span className="material-symbols-outlined animate-pulse text-[26px] text-primary-ink">progress_activity</span>
-          <p className="text-[13px] font-black text-on-surface">Unit {(path.units[path.units.length - 1]?.index ?? 0) + 1} is being prepared</p>
+          <p className="text-[13px] font-black text-on-surface">Section {(path.units[path.units.length - 1]?.index ?? 0) + 1} is being prepared</p>
           <p className="max-w-xs text-[11.5px] font-bold leading-snug text-on-surface-variant">
-            The next 10 topics are quietly being written for this course. Reopen it in a moment and they will be waiting on the ladder.
+            The next 10 units are quietly being written for this course. Reopen it in a moment and they will be waiting on the ladder.
           </p>
         </div>
       )}
@@ -1637,7 +1637,7 @@ function EmptyList({ onChoose }: { onChoose: () => void }) {
       </span>
       <h2 className="text-[17px] font-black text-on-surface">Build your course list</h2>
       <p className="max-w-sm text-[13.5px] font-bold leading-snug text-on-surface-variant">
-        Mark every course you want on your desk - each one becomes a long roadmap of topics, notes with real drawings, and your actual past questions.
+        Mark every course you want on your desk - each one becomes a long roadmap of units, notes with real drawings, and your actual past questions.
       </p>
       <button type="button" onClick={onChoose} className="key-btn mt-1 bg-primary text-on-primary">Choose courses</button>
     </div>

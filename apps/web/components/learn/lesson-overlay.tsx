@@ -454,7 +454,7 @@ export function LessonOverlay({
 
             {studyPages.drawingsPage === studyAt && doc.drawings?.length > 0 && (
               <section className="rounded-2xl border-2 border-outline-variant bg-card p-4 learn-tile">
-                <h3 className="text-[15px] font-black text-on-surface">Real drawings for this topic</h3>
+                <h3 className="text-[15px] font-black text-on-surface">Real drawings for this unit</h3>
                 <div className="mt-2 flex flex-col gap-4">
                   {doc.drawings.map((d) => (
                     <figure key={d.id} className="rounded-xl border-2 border-outline-variant bg-surface p-2">
@@ -577,7 +577,7 @@ export function LessonOverlay({
         {phase === 'done' && (
           <div className="flex h-full flex-col items-center justify-center gap-4 py-16 text-center">
             <span className="material-symbols-outlined text-[56px] text-primary">trophy</span>
-            <h2 className="text-[22px] font-black text-on-surface">{mode === 'lesson' ? 'Topic complete!' : mode === 'review' ? 'Unit review done!' : mode === 'revision' ? 'Unit revision done!' : 'Practice done!'}</h2>
+            <h2 className="text-[22px] font-black text-on-surface">{mode === 'lesson' ? 'Unit complete!' : mode === 'review' ? 'Section review done!' : mode === 'revision' ? 'Section revision done!' : 'Practice done!'}</h2>
             <p className="text-[13.5px] font-bold text-on-surface-variant">
               {correctCount}/{total} correct · {accuracy}% accuracy
             </p>

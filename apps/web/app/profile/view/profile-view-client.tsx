@@ -187,7 +187,7 @@ function PublicProfileView() {
               </div>
             </div>
             <div className="mt-2 flex items-center justify-between rounded-xl bg-surface-container px-3 py-2 text-[12px] font-bold text-on-surface-variant">
-              <span>{profile.topicsDone} topics done</span>
+              <span>{profile.topicsDone} units done</span>
               <span>{profile.perfectCount} perfect runs</span>
             </div>
           </section>

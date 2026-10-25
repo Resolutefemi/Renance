@@ -21,7 +21,7 @@ const FLAG_REASONS = [
   'Question is unclear',
   'Options are broken/duplicated',
   'Image or media missing',
-  'Wrong course/topic',
+  'Wrong course/unit',
 ] as const;
 
 export function FlagQuestionModal({
@@ -185,7 +185,7 @@ export function CourseRequestModal({
           <>
             <h3 className="text-lg font-bold text-on-surface">Course submitted</h3>
             <p className="mt-1 text-sm text-on-surface-variant">
-              The desk has your course and its topics. It lands in the review queue with your name
+              The desk has your course and its units. It lands in the review queue with your name
               on it - watch the app for the update.
             </p>
             <button
@@ -200,7 +200,7 @@ export function CourseRequestModal({
           <>
             <h3 className="text-lg font-bold text-on-surface">Can&apos;t find your course?</h3>
             <p className="mt-0.5 text-[13px] text-on-surface-variant">
-              Tell us the course and some of its topics - we&apos;ll build the question bank.
+              Tell us the course and some of its units - we&apos;ll build the question bank.
             </p>
             <div className="mt-3 flex flex-col gap-2">
               <select
@@ -241,7 +241,7 @@ export function CourseRequestModal({
               <textarea
                 value={topics}
                 onChange={(e) => setTopics(e.target.value)}
-                placeholder="Some topics you expect in this course (one per line)"
+                placeholder="Some units you expect in this course (one per line)"
                 rows={4}
                 className="w-full resize-none rounded-xl border border-outline-variant bg-surface-container-lowest p-3 text-sm text-on-surface outline-none placeholder:text-on-surface-variant/70 focus:border-primary"
               />
