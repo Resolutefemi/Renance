@@ -26,7 +26,7 @@ const QA: Array<{ q: string; a: string }> = [
   },
   {
     q: 'What are diamonds and how do I earn them?',
-    a: 'Diamonds are the Renance currency. You earn them from daily and weekly quests, topic chests, first clears, perfect scores, and every friend who joins with your referral code adds 100 more. Spend them in the Shop.',
+    a: 'Diamonds are the Renance currency. You earn them from daily and weekly quests, unit chests, first clears, perfect scores, and every friend who joins with your referral code adds 100 more. Spend them in the Shop.',
   },
   {
     q: 'What are Streak Freezes?',
@@ -54,7 +54,7 @@ const QA: Array<{ q: string; a: string }> = [
   },
   {
     q: 'How do quests work?',
-    a: 'Quests are daily and weekly diamond missions: answer a number of questions, finish topics, keep the streak alive. Each completed mission pays diamonds straight into your wallet.',
+    a: 'Quests are daily and weekly diamond missions: answer a number of questions, finish units, keep the streak alive. Each completed mission pays diamonds straight into your wallet.',
   },
   {
     q: 'Which leaderboards can I compete on?',

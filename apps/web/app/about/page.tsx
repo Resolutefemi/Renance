@@ -108,7 +108,7 @@ const pillars = [
   {
     no: "05",
     title: "The gamified semester",
-    body: "Tertiary students get a semester desk of over 10,000 courses: every unit opens into long, structured notes and ends with quizzes and a 50-question revision exam. Studying pays: finishing a topic spins open a reward chest (streak freezes, gems or XP boosts), daily streaks climb with Duolingo-style celebrations and freeze cards rescue a missed day, milestones fire at 7, 14, 30, 50 and 100+ days, and every achievement can be shared to the Renance feed or straight to other apps. Students follow each other from leaderboards and cheer each other on.",
+    body: "Tertiary students get a semester desk of over 3,900 courses: every unit opens into long, structured notes and ends with quizzes and a 50-question revision exam. Studying pays: finishing a unit spins open a reward chest (streak freezes, gems or XP boosts), daily streaks climb with Duolingo-style celebrations and freeze cards rescue a missed day, milestones fire at 7, 14, 30, 50 and 100+ days, and every achievement can be shared to the Renance feed or straight to other apps. Students follow each other from leaderboards and cheer each other on.",
     link: { href: "/courses/", label: "Open the semester desk" },
   },
 ];
@@ -311,7 +311,7 @@ export default function AboutPage() {
                 <tr>
                   <th scope="row">Learn system</th>
                   <td>
-                    10,000+ tertiary courses with unit-by-unit long-form notes,
+                    3,900+ tertiary courses with unit-by-unit long-form notes,
                     end-of-unit 50-question revision exams, streaks, gems and
                     reward chests
                   </td>

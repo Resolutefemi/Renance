@@ -70,7 +70,7 @@ const FEATURES = [
     word: 'PERSONALIZED',
     color: '#1cb0f6',
     icon: 'target' as const,
-    body: 'Renance watches how you learn, not just what you answer. Fatigue-aware sessions ease up when your pace collapses, and your course map rebuilds itself around the topics that need the most reps. No two students study the same path, and that is the point.',
+    body: 'Renance watches how you learn, not just what you answer. Fatigue-aware sessions ease up when your pace collapses, and your course map rebuilds itself around the units that need the most reps. No two students study the same path, and that is the point.',
   },
   {
     word: 'FUN',
@@ -606,8 +606,8 @@ export default function LandingDuo() {
             <div className="grid grid-cols-2 gap-x-10 gap-y-4 text-left">
               {[
                 { n: '288,500+', l: 'past questions' },
-                { n: '5,000+', l: 'courses' },
-                { n: '500,000+', l: 'topics' },
+                { n: '3,900+', l: 'courses' },
+                { n: '594,016', l: 'units' },
                 { n: '100%', l: 'free forever' },
               ].map((s) => (
                 <div key={s.l}>

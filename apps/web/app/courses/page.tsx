@@ -984,7 +984,7 @@ function TertiaryDesk({
       </div>
 
       {/* YOUR COURSES - every picked course as a JAMB-style card
-          (progress "0/12 topics done", bar, action arrow). This is the
+          (progress "0/12 units done", bar, action arrow). This is the
           MANAGE mode, so each card carries its remove control - the
           only place a course can be deleted from (the dashboard's
           cards have no X, so accidental taps can never drop a course). */}
@@ -1028,7 +1028,7 @@ function TertiaryDesk({
             {searching && <p className="px-1 text-[12px] font-bold text-on-surface-variant">Searching the whole catalogue…</p>}
             {!searching && mergedResults.length === 0 && (
               <p className="rounded-2xl border-2 border-dashed border-outline-variant bg-card px-5 py-6 text-center text-[12.5px] font-bold text-on-surface-variant">
-                Nothing matches &ldquo;{query}&rdquo;. Try a course code (three letters) or a topic.
+                Nothing matches &ldquo;{query}&rdquo;. Try a course code (three letters) or a unit.
               </p>
             )}
             {mergedResults.map((c) => {
@@ -1327,7 +1327,7 @@ function DeskRow({ c, onOpen, onToggle }: { c: DeskCourse; onOpen: () => void; o
 // ─── The course card (shared, the JAMB-desk style) ─────────────────────
 
 /** The card the founder asked to share across desks (2026-10-15):
- *  book icon, title, "0/12 topics done" progress line and the bar.
+ *  book icon, title, "0/12 units done" progress line and the bar.
  *  A tap opens the course roadmap. The secondary desks and the
  *  tertiary desk's YOUR COURSES section render the same tile.
  *  Optional `onRemove` (founder 2026-10-16) rides as an INLINE flex
