@@ -96,6 +96,20 @@ const AgentSource = "agent-v1"
 // (the founder's "the lesson is not loading" spin, 2026-10-26).
 const CuratedSource = "curated-v3"
 
+// trustedSource reports whether a doc's format stamp is CURRENT. The
+// curated family (curated-v2 donors carried through the 266k lesson
+// rebuild, curated-v3 farm output) all carry the same depth contract
+// - 10 long note parts + a 20-item quiz - so the whole "curated-v"
+// prefix counts as current: a stray curated-v2 entry inside a v3
+// pack must serve, not spin the generator.
+func trustedSource(source string) bool {
+        switch source {
+        case LessonSource, AgentSource, CuratedSource:
+                return true
+        }
+        return strings.HasPrefix(source, "curated-v")
+}
+
 // lessonCacheCapMB is the storage guard for the agent read through
 // cache: past this database size the API STOPS writing new lesson
 // rows (synthesis still serves every topic instantly) so the cache can
@@ -779,7 +793,7 @@ func (s *Service) Lesson(ctx context.Context, topicID string, wait bool) (*Lesso
         if cacheErr != nil {
                 return nil, cacheErr
         }
-        if staleDoc != nil && (staleDoc.Source == LessonSource || staleDoc.Source == AgentSource || staleDoc.Source == CuratedSource) {
+        if staleDoc != nil && trustedSource(staleDoc.Source) {
                 // Cache HIT - and the look-ahead still fires: the next two
                 // topics of this course pre-generate silently in the
                 // background (prefetchNext dedupes via the cache + inflight
