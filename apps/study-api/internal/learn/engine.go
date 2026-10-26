@@ -85,6 +85,17 @@ const LessonSource = "zai-glm-3"
 // content engine itself. Both stamps count as CURRENT format.
 const AgentSource = "agent-v1"
 
+// CuratedSource stamps the offline-curated tertiary archive (the v3
+// farm + validator pipeline, pushed to the R2 pack shards in October
+// 2026): every topic carries 10 long note parts (150-250 words each)
+// and a 20-item quiz pool - the SAME depth the current recipes
+// demand, produced by the build validators rather than the runtime
+// generator. It IS current format: the whole 594,016-unit archive
+// rides this stamp, and rejecting it as "stale" sent every open to
+// on-demand generation while the bucket already held the answer
+// (the founder's "the lesson is not loading" spin, 2026-10-26).
+const CuratedSource = "curated-v3"
+
 // lessonCacheCapMB is the storage guard for the agent read through
 // cache: past this database size the API STOPS writing new lesson
 // rows (synthesis still serves every topic instantly) so the cache can
@@ -768,7 +779,7 @@ func (s *Service) Lesson(ctx context.Context, topicID string, wait bool) (*Lesso
         if cacheErr != nil {
                 return nil, cacheErr
         }
-        if staleDoc != nil && (staleDoc.Source == LessonSource || staleDoc.Source == AgentSource) {
+        if staleDoc != nil && (staleDoc.Source == LessonSource || staleDoc.Source == AgentSource || staleDoc.Source == CuratedSource) {
                 // Cache HIT - and the look-ahead still fires: the next two
                 // topics of this course pre-generate silently in the
                 // background (prefetchNext dedupes via the cache + inflight
