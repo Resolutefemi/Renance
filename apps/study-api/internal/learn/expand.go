@@ -25,7 +25,7 @@ import (
 
 const (
         // MaxCourseUnits is the unit ceiling per course ("up to 15 units").
-        MaxCourseUnits = 15
+        MaxCourseUnits = 14
         // UnitTopics is the number of topics the generator writes per unit.
         UnitTopics = 10
         // expandBudget bounds one background expansion loop.
@@ -43,7 +43,7 @@ Rules:
 
 // unit names cycle exactly like CoursePath's ladder captions, so a
 // generated unit's fallback title always matches what the ladder shows.
-var unitNameCycle = []string{"Foundations", "Core Principles", "Applications in Practice", "Advanced Topics", "Mastery & Project"}
+var unitNameCycle = []string{"Core Principles", "Applications in Practice", "Advanced Topics", "Mastery & Project"}
 
 func unitNamesFor(u int) string {
         return unitNameCycle[(u-1)%len(unitNameCycle)]

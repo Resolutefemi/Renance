@@ -177,7 +177,7 @@ class _LessonOverlayScreenState extends State<_LessonOverlayScreen> {
           // Poll the 202 generating state: 3s beats, up to ~110s.
           final DateTime deadline =
               DateTime.now().add(const Duration(seconds: 110));
-          while (DateTime.now().isBefore(deadline)) {
+          while (raw == null && DateTime.now().isBefore(deadline)) {
             doc = await api.learnLessonContent(widget.topicId!);
             if (doc != null) break;
             await Future<void>.delayed(const Duration(seconds: 3));

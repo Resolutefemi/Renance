@@ -433,7 +433,7 @@ func (c *Client) roundTrip(ctx context.Context, method, contentType string, body
                 return 0, nil, fmt.Errorf("r2store: %s %s: %w", method, path, err)
         }
         defer resp.Body.Close()
-        rbody, err := io.ReadAll(io.LimitReader(resp.Body, 8<<20))
+        rbody, err := io.ReadAll(io.LimitReader(resp.Body, 32<<20))
         if err != nil {
                 return resp.StatusCode, nil, fmt.Errorf("r2store: %s %s: read body: %w", method, path, err)
         }

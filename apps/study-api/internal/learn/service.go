@@ -859,7 +859,7 @@ func (s *Service) CoursePath(ctx context.Context, userID, courseID string) (*Cou
         for _, t := range cp.Topics {
                 byUnit[t.Unit] = append(byUnit[t.Unit], t)
         }
-        names := []string{"Foundations", "Core Principles", "Applications in Practice", "Advanced Topics", "Mastery & Project"}
+        names := []string{"Core Principles", "Applications in Practice", "Advanced Topics", "Mastery & Project"}
         maxUnit := cp.Topics[len(cp.Topics)-1].Unit
         // Real unit captions win when the roadmap carries them
         // (learn.course_sections rows from the secondary refresh and the

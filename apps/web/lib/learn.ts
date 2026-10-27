@@ -428,6 +428,10 @@ export async function fetchCoursePath(courseId: string): Promise<CoursePath> {
 }
 
 export async function fetchLesson(topicId: string, wait = true): Promise<LessonDoc> {
+  const warm = readCachedLessonDoc(topicId);
+  if (warm && Array.isArray(warm.quiz) && warm.quiz.length > 0) {
+    return warm;
+  }
   // Lesson polling (founder report 2026-10-14: "the notes and questions
   // is not loading"): a first-open lesson is generated server-side (AI
   // notes + real past questions), which takes longer than one honest
@@ -473,7 +477,7 @@ export async function fetchLesson(topicId: string, wait = true): Promise<LessonD
 // therefore always open again - instantly, and offline. The index
 // caps the store at ~24 lessons (~1 MB), oldest evicted first.
 const LESSON_CACHE_KEY = 'renance.lessonCache';
-const LESSON_CACHE_CAP = 24;
+const LESSON_CACHE_CAP = 64;
 
 function readLessonCacheIndex(): string[] {
   try {
