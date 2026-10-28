@@ -431,8 +431,8 @@ export function LessonOverlay({
             {studyAt === 0 && (
               <header className="rounded-2xl border-2 border-outline-variant bg-surface-container p-4 learn-tile">
                 <p className="text-[11px] font-black uppercase tracking-wide text-primary-ink">{doc.course}</p>
-                <h2 className="mt-0.5 text-[19px] font-black leading-snug text-on-surface">{doc.title}</h2>
-                {doc.summary && <p className="mt-1.5 text-[13.5px] leading-relaxed text-on-surface-variant">{doc.summary}</p>}
+                <h2 className="mt-0.5 text-[19px] font-black leading-snug text-on-surface"><QText html={doc.title} /></h2>
+                {doc.summary && <div className="mt-1.5 text-[13.5px] leading-relaxed text-on-surface-variant"><QText html={doc.summary} /></div>}
                 <p className="mt-2.5 rounded-xl bg-surface-container-low px-3 py-2 text-[12px] font-bold leading-snug text-on-surface-variant">
                   {Math.max(0, studyPages.count - 1)} more section{studyPages.count - 1 === 1 ? '' : 's'} to read, then {doc.quiz.length} question{doc.quiz.length === 1 ? '' : 's'}. Tap Next to keep going.
                 </p>
@@ -441,7 +441,7 @@ export function LessonOverlay({
 
             {doc.notes.map((n, i) => studyAt === i + 1 && (
               <article key={i} className="rounded-2xl border-2 border-outline-variant bg-card p-4 learn-tile">
-                <h3 className="text-[15px] font-black text-on-surface">{i + 1}. {n.heading}</h3>
+                <h3 className="text-[15px] font-black text-on-surface"><QText html={`${i + 1}. ${n.heading}`} /></h3>
                 {n.image && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={n.image} alt={n.imageAlt ?? ''} className="mt-2 max-h-56 w-full rounded-xl object-cover" />
@@ -472,7 +472,7 @@ export function LessonOverlay({
                 <h3 className="text-[14px] font-black text-primary-ink">Key points</h3>
                 <ul className="mt-1.5 list-disc space-y-1 pl-5">
                   {doc.keyPoints.map((k, i) => (
-                    <li key={i} className="text-[13.5px] font-bold leading-snug text-on-surface">{k}</li>
+                    <li key={i} className="text-[13.5px] font-bold leading-snug text-on-surface"><QText html={k} /></li>
                   ))}
                 </ul>
               </section>

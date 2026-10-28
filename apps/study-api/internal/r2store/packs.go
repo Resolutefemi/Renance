@@ -46,6 +46,9 @@ func CourseIDFromTopic(topicID string) string {
 	if idx := strings.Index(topicID, "-EU"); idx > 0 {
 		return topicID[:idx]
 	}
+	if idx := strings.LastIndex(topicID, "-T"); idx > 0 && strings.HasPrefix(topicID, "SEC-") {
+		return topicID[:idx]
+	}
 	return ""
 }
 

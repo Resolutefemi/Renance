@@ -138,40 +138,151 @@ func (s *Service) blobSave(ctx context.Context, doc *LessonDoc) {
 // both the clean miss and every decode trouble - the caller falls
 // through to the database tier either way.
 func (s *Service) blobLesson(ctx context.Context, topicID string) (*LessonDoc, bool) {
-        if s.Blobs == nil {
-                return nil, false
-        }
-        payload, ok, err := s.Blobs.Get(ctx, topicID)
-        if err != nil {
-                s.logWarn("lesson blob get failed - falling through to the cache database", "topic", topicID, "err", err.Error())
-                return nil, false
-        }
-        if !ok {
-                return nil, false
-        }
-        var blob LessonBlob
-        if json.Unmarshal(payload, &blob) != nil || blob.TopicID == "" {
-                // A torn or foreign object: pretend it is not there.
-                return nil, false
-        }
-        doc := &LessonDoc{Title: blob.Title, Summary: blob.Summary, Source: blob.Source}
-        for _, pair := range []struct {
-                raw json.RawMessage
-                dst any
-        }{
-                {blob.Notes, &doc.Notes},
-                {blob.KeyPoints, &doc.KeyPoints},
-                {blob.Quiz, &doc.Quiz},
-                {blob.Drawings, &doc.Drawings},
-        } {
-                if len(pair.raw) > 0 {
-                        if json.Unmarshal(pair.raw, pair.dst) != nil {
-                                // Column-level tolerance, same as the database scan.
-                                // A bad notes array must not kill a good quiz.
-                        }
-                }
-        }
-        return doc, true
+	if s.Blobs == nil {
+		return nil, false
+	}
+	payload, ok, err := s.Blobs.Get(ctx, topicID)
+	if err != nil {
+		s.logWarn("lesson blob get failed - falling through to the cache database", "topic", topicID, "err", err.Error())
+		return nil, false
+	}
+	if !ok || len(payload) == 0 {
+		return nil, false
+	}
+	var blob struct {
+		TopicID     string          `json:"topic_id"`
+		Title       string          `json:"title"`
+		Topic       string          `json:"topic"`
+		Summary     string          `json:"summary"`
+		ShortSum    string          `json:"s"`
+		Notes       json.RawMessage `json:"notes"`
+		KeyPoints   json.RawMessage `json:"key_points"`
+		ShortKP     json.RawMessage `json:"kp"`
+		Quiz        json.RawMessage `json:"quiz"`
+		Drawings    json.RawMessage `json:"drawings"`
+		Source      string          `json:"source"`
+		GeneratedAt string          `json:"generated_at,omitempty"`
+	}
+	if json.Unmarshal(payload, &blob) != nil {
+		return nil, false
+	}
+	title := blob.Title
+	if title == "" {
+		title = blob.Topic
+	}
+	if blob.TopicID == "" && title == "" {
+		return nil, false
+	}
+	summary := blob.Summary
+	if summary == "" {
+		summary = blob.ShortSum
+	}
+	source := blob.Source
+	if source == "" {
+		source = CuratedSource
+	}
+	doc := &LessonDoc{Title: title, Summary: summary, Source: source}
+	if len(blob.Notes) > 0 {
+		var rawNotes []struct {
+			Heading  string `json:"heading"`
+			Body     string `json:"body"`
+			H        string `json:"h"`
+			B        string `json:"b"`
+			Image    string `json:"image,omitempty"`
+			ImageAlt string `json:"imageAlt,omitempty"`
+		}
+		if json.Unmarshal(blob.Notes, &rawNotes) == nil {
+			doc.Notes = make([]LessonNote, 0, len(rawNotes))
+			for _, rn := range rawNotes {
+				h := rn.Heading
+				if h == "" {
+					h = rn.H
+				}
+				b := rn.Body
+				if b == "" {
+					b = rn.B
+				}
+				if b != "" {
+					doc.Notes = append(doc.Notes, LessonNote{Heading: h, Body: b, Image: rn.Image, ImageAlt: rn.ImageAlt})
+				}
+			}
+		}
+	}
+	kpRaw := blob.KeyPoints
+	if len(kpRaw) == 0 {
+		kpRaw = blob.ShortKP
+	}
+	if len(kpRaw) > 0 {
+		_ = json.Unmarshal(kpRaw, &doc.KeyPoints)
+	}
+	if len(blob.Quiz) > 0 {
+		var rawQuiz []struct {
+			ID          string            `json:"id"`
+			Type        string            `json:"type"`
+			Stem        string            `json:"stem"`
+			Q           string            `json:"q"`
+			Options     map[string]string `json:"options"`
+			O           []string          `json:"o"`
+			Answer      string            `json:"answer"`
+			A           *int              `json:"a"`
+			Explanation string            `json:"explanation"`
+			E           string            `json:"e"`
+			Year        int               `json:"year,omitempty"`
+			FromBank    bool              `json:"fromBank,omitempty"`
+		}
+		if json.Unmarshal(blob.Quiz, &rawQuiz) == nil {
+			letters := []string{"A", "B", "C", "D", "E"}
+			doc.Quiz = make([]LessonQuizQ, 0, len(rawQuiz))
+			for idx, rq := range rawQuiz {
+				stem := rq.Stem
+				if stem == "" {
+					stem = rq.Q
+				}
+				if stem == "" {
+					continue
+				}
+				qtype := rq.Type
+				if qtype == "" {
+					qtype = "mcq"
+				}
+				opts := rq.Options
+				if len(opts) == 0 && len(rq.O) > 0 {
+					opts = make(map[string]string, len(rq.O))
+					for oi, ov := range rq.O {
+						if oi < len(letters) {
+							opts[letters[oi]] = ov
+						}
+					}
+				}
+				ans := rq.Answer
+				if ans == "" && rq.A != nil && *rq.A >= 0 && *rq.A < len(letters) {
+					ans = letters[*rq.A]
+				}
+				exp := rq.Explanation
+				if exp == "" {
+					exp = rq.E
+				}
+				qid := rq.ID
+				if qid == "" {
+					qid = topicID + "-q" + string(rune('1'+idx))
+				}
+				doc.Quiz = append(doc.Quiz, LessonQuizQ{
+					ID:          qid,
+					Type:        qtype,
+					Stem:        stem,
+					Options:     opts,
+					Answer:      ans,
+					Explanation: exp,
+					Year:        rq.Year,
+					FromBank:    rq.FromBank,
+				})
+			}
+		}
+	}
+	if len(blob.Drawings) > 0 {
+		_ = json.Unmarshal(blob.Drawings, &doc.Drawings)
+	}
+	return doc, true
 }
 
 func (s *Service) logWarn(msg string, args ...any) {

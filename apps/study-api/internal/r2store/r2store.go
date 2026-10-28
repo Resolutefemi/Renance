@@ -321,33 +321,17 @@ func (c *Client) Put(ctx context.Context, topicID string, payload []byte) error 
 // one HEAD per id (Class B reads - effectively free) with a small
 // concurrency cap. Missing ids are simply absent from the map.
 func (c *Client) Has(ctx context.Context, topicIDs []string) (map[string]bool, error) {
-        if c == nil {
-                return nil, errors.New("r2store: client not configured")
-        }
-        out := map[string]bool{}
-        const lanes = 4
-        sem := make(chan struct{}, lanes)
-        var mu sync.Mutex
-        var wg sync.WaitGroup
-        for _, id := range topicIDs {
-                if id == "" {
-                        continue
-                }
-                wg.Add(1)
-                go func(id string) {
-                        defer wg.Done()
-                        sem <- struct{}{}
-                        defer func() { <-sem }()
-                        status, _, err := c.roundTrip(ctx, http.MethodHead, "", nil, "", nil, c.lessonKey(id))
-                        if err == nil && status == http.StatusOK {
-                                mu.Lock()
-                                out[id] = true
-                                mu.Unlock()
-                        }
-                }(id)
-        }
-        wg.Wait()
-        return out, nil
+	if c == nil {
+		return nil, errors.New("r2store: client not configured")
+	}
+	hits := c.ProbeBlobs(ctx, topicIDs)
+	out := make(map[string]bool, len(hits))
+	for id, h := range hits {
+		if h.Exists {
+			out[id] = true
+		}
+	}
+	return out, nil
 }
 
 // ListLessons enumerates every lesson object under the prefix as

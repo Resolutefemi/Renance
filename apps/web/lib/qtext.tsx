@@ -92,7 +92,7 @@ const SYMBOLS: Record<string, string> = {
   ldots: '\u2026', cdots: '\u22ef', dots: '\u2026', quad: '\u2003',
   qquad: '\u2003\u2003', langle: '\u27e8', rangle: '\u27e9',
   inftyy: '\u221e', ell: '\u2113', Re: '\u211c', Im: '\u2111',
-  aleph: '\u2135', hbar: '\u210f', elll: '\u2113',
+  aleph: '\u2135', hbar: '\u210f', elll: '\u2113', implies: '\u21d2', iff: '\u21d4', setminus: '\u2216', subseteq: '\u2286', supseteq: '\u2287', rightleftharpoons: '\u21cc', varnothing: '\u2205',
 };
 
 /** Group a LaTeX body into a balanced {…} group starting at index i (which
@@ -152,7 +152,14 @@ export function latexToText(src: string): string {
         i = i1;
         continue;
       }
-      if (cmd === 'text' || cmd === 'mathrm' || cmd === 'mbox' || cmd === 'operatorname') {
+      if (cmd === 'mathbb') {
+        const [body, i1] = latexGroup(src, i);
+        const bbMap: Record<string, string> = { N: '\u2115', Z: '\u2124', Q: '\u211a', R: '\u211d', C: '\u2102', W: '\ud835\udd4e' };
+        out += bbMap[body.trim()] ?? body;
+        i = i1;
+        continue;
+      }
+      if (cmd === 'mathcal' || cmd === 'text' || cmd === 'mathrm' || cmd === 'mbox' || cmd === 'operatorname') {
         const [body, i1] = latexGroup(src, i);
         out += body;
         i = i1;
@@ -244,7 +251,7 @@ function MathSpan({ tex, display, approx }: { tex: string; display: boolean; app
     katexReady().then((ok) => {
       if (!alive || !ok || !ref.current || !window.katex) return;
       try {
-        window.katex.render(tex, ref.current, {
+        window.katex.render(tex.replace(/\u2212/g, '-'), ref.current, {
           throwOnError: false,
           displayMode: display,
           strict: false,
@@ -347,12 +354,668 @@ export function splitMathSegments(input: string): MathSeg[] {
         continue;
       }
     }
-    // $ … $ (maths-looking bodies only - prose dollar amounts stay prose)
-    if (ch === '$') {
-      const end = input.indexOf('$', i + 1);
+    // $ … $ (all inline math spans; multi-word currency phrases like "$5 and $7" stay prose)
+    if (ch === '
+    // bare \begin{env} … \end{env} (KaTeX needs the whole environment)
+    if (ch === '\\' && input.startsWith('\\begin{', i)) {
+      const m = /^\\begin\{([a-zA-Z*]+)\}/.exec(input.slice(i));
+      if (m && MATH_ENVS.has(m[1])) {
+        const endToken = `\\end{${m[1]}}`;
+        const end = input.indexOf(endToken, i + m[0].length);
+        if (end >= 0) {
+          flush();
+          segs.push({
+            kind: 'math',
+            body: input.slice(i, end + endToken.length),
+            display: true,
+          });
+          i = end + endToken.length;
+          continue;
+        }
+      }
+    }
+    text += ch;
+    i += 1;
+  }
+  flush();
+  return segs;
+}
+
+/* ------------------------------------------------------------------ */
+/* Bare caret/underscore maths (founder directive 2026-10-15: "make   */
+/* sure the mathematical equations or stuff are written well - x² not  */
+/* x^2"): lesson bodies and question stems occasionally carry plain-  */
+/* text maths OUTSIDE any $...$ span. This conservative pass folds    */
+/* the same unicode super/subscripts latexToText produces onto the    */
+/* TEXT runs. Snake_case identifiers are left alone: the body after   */
+/* `_` must be digits, or a single letter that ends a word -          */
+/* `word_bank` and `AI_MODEL` never match, `H_2O`, `x_1` and `a_n` do. */
+/* ------------------------------------------------------------------ */
+
+const SUPER_MAP: Record<string, string> = {
+  '0': '\u2070', '1': '\u00b9', '2': '\u00b2', '3': '\u00b3', '4': '\u2074',
+  '5': '\u2075', '6': '\u2076', '7': '\u2077', '8': '\u2078', '9': '\u2079',
+  '+': '\u207a', '-': '\u207b', '\u2212': '\u207b', '=': '\u207c', '(': '\u207d', ')': '\u207e',
+  n: '\u207f', i: '\u2071',
+};
+const SUB_MAP: Record<string, string> = {
+  '0': '\u2080', '1': '\u2081', '2': '\u2082', '3': '\u2083', '4': '\u2084',
+  '5': '\u2085', '6': '\u2086', '7': '\u2087', '8': '\u2088', '9': '\u2089',
+  '+': '\u208a', '-': '\u208b', '\u2212': '\u208b', '=': '\u208c', '(': '\u208d', ')': '\u208e',
+  n: '\u2099', m: '\u2098', x: '\u2093', e: '\u2091', o: '\u2092',
+  a: '\u2090', i: '\u1d62', r: '\u1d63', u: '\u1d64', v: '\u1d65',
+};
+
+function mappable(body: string, map: Record<string, string>): string | null {
+  if (!body) return null;
+  let out = '';
+  for (const ch of body) {
+    const mapped = map[ch];
+    if (mapped === undefined) return null;
+    out += mapped;
+  }
+  return out;
+}
+
+/** Fold bare `x^2` / `H_2O` notation into unicode super/subscripts. */
+export function plainMathToUnicode(text: string): string {
+  if (!text || (!text.includes('^') && !text.includes('_'))) return text;
+  let out = text.replace(
+    /\^\(([^)\n]{1,12})\)|\^\{([^}\n]{1,12})\}|\^([0-9+\-]{1,6})|\^([a-zA-Z](?![a-zA-Z]))/g,
+    (whole: string, paren?: string, brace?: string, digits?: string, single?: string) => {
+      const mapped = mappable((paren ?? brace ?? digits ?? single) as string, SUPER_MAP);
+      return mapped ?? whole;
+    },
+  );
+  out = out.replace(
+    /_\(([^)\n]{1,12})\)|_\{([^}\n]{1,12})\}|_([0-9]{1,6})|_([a-zA-Z](?![a-zA-Z]))/g,
+    (whole: string, paren?: string, brace?: string, digits?: string, single?: string) => {
+      const mapped = mappable((paren ?? brace ?? digits ?? single) as string, SUB_MAP);
+      return mapped ?? whole;
+    },
+  );
+  return out;
+}
+
+function pushText(ctx: Ctx, raw: string) {
+  const text = decodeEntities(normalizeLatexEscapes(raw));
+  for (const seg of splitMathSegments(text)) {
+    if (seg.kind === 'math') {
+      const approx = latexToText(seg.body);
+      ctx.nodes.push(
+        <MathSpan key={ctx.key++} tex={seg.body} display={seg.display} approx={approx} />,
+      );
+    } else if (seg.body) {
+      ctx.nodes.push(plainMathToUnicode(seg.body));
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* safe HTML                                                           */
+/* ------------------------------------------------------------------ */
+
+interface Tok {
+  kind: 'text' | 'open' | 'close';
+  tag: string;
+  attrs?: Record<string, string>;
+}
+
+function tokenize(html: string): Tok[] {
+  const toks: Tok[] = [];
+  const re = /<\/?([a-zA-Z][a-zA-Z0-9]*)((?:\s+[a-zA-Z-]+(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+))?)*)\s*\/?>|([^<]+)/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(html)) !== null) {
+    if (m[3] !== undefined) {
+      toks.push({ kind: 'text', tag: '', attrs: undefined });
+      (toks[toks.length - 1] as unknown as { text: string }).text = m[3];
+      continue;
+    }
+    const tag = m[1].toLowerCase();
+    const closing = m[0][1] === '/';
+    const attrs: Record<string, string> = {};
+    if (m[2]) {
+      const are = /([a-zA-Z-]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+)))?/g;
+      let am: RegExpExecArray | null;
+      while ((am = are.exec(m[2])) !== null) {
+        attrs[am[1].toLowerCase()] = am[2] ?? am[3] ?? am[4] ?? '';
+      }
+    }
+    toks.push({ kind: closing ? 'close' : 'open', tag, attrs });
+  }
+  return toks;
+}
+
+const VOID_TAGS = new Set(['br', 'img', 'hr', 'input', 'meta', 'link']);
+const DROP_TAGS = new Set(['script', 'style', 'iframe', 'object', 'embed', 'form', 'head', 'title', 'svg', 'video', 'audio', 'source']);
+const KEEP_TAGS = new Set([
+  'p', 'br', 'b', 'strong', 'i', 'em', 'u', 'ins', 's', 'del', 'sub', 'sup',
+  'span', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+  'table', 'thead', 'tbody', 'tfoot', 'tr', 'td', 'th',
+  'ul', 'ol', 'li', 'blockquote', 'pre', 'code', 'figure', 'figcaption', 'a', 'img', 'hr', 'font', 'center',
+]);
+
+interface Ctx {
+  nodes: ReactNode[];
+  key: number;
+}
+
+function styleFor(tag: string): CSSProperties | undefined {
+  switch (tag) {
+    case 'h1': return { fontSize: '1.25em', fontWeight: 700, margin: '0.4em 0' };
+    case 'h2': return { fontSize: '1.15em', fontWeight: 700, margin: '0.4em 0' };
+    case 'h3': case 'h4': case 'h5': case 'h6':
+      return { fontSize: '1.05em', fontWeight: 600, margin: '0.35em 0' };
+    case 'p': case 'div': case 'center': case 'figure': case 'figcaption':
+      return { margin: '0.35em 0', textAlign: tag === 'center' ? 'center' : undefined };
+    case 'blockquote':
+      return { borderLeft: '3px solid currentColor', opacity: 0.85, paddingLeft: '0.7em', margin: '0.4em 0' };
+    case 'pre':
+      return { fontFamily: 'ui-monospace, monospace', whiteSpace: 'pre-wrap', background: 'rgba(0,0,0,0.04)', borderRadius: 6, padding: '0.5em 0.7em', margin: '0.4em 0' };
+    case 'table':
+      return { borderCollapse: 'collapse', margin: '0.5em 0', width: 'auto', maxWidth: '100%', display: 'block', overflowX: 'auto' };
+    case 'td': case 'th':
+      return { border: '1px solid rgba(127,127,127,0.45)', padding: '2px 8px', minWidth: '1.5em' };
+    case 'th':
+      return { fontWeight: 700, textAlign: 'center' };
+    case 'li':
+      return { marginLeft: '1.2em', display: 'list-item' };
+    case 'ul': return { listStyle: 'disc', paddingLeft: '0.5em', margin: '0.35em 0' };
+    case 'ol': return { listStyle: 'decimal', paddingLeft: '0.5em', margin: '0.35em 0' };
+    case 'ins': return { textDecoration: 'underline' };
+    default: return undefined;
+  }
+}
+
+function renderAttrs(tag: string, attrs: Record<string, string> | undefined, key: number): { extra: Record<string, unknown> | null; img?: { src: string; alt: string } } {
+  if (tag === 'img' && attrs) {
+    let src = attrs.src ?? '';
+    // allow only embedded question images or the myschool archive origin
+    if (/^\/qimages\//.test(src)) src = apiImg(src);
+    else if (/^https:\/\/myschool\.ng\//i.test(src)) src = src;
+    else src = '';
+    return { extra: null, img: { src, alt: attrs.alt ? decodeEntities(attrs.alt) : 'question diagram' } };
+  }
+  if (tag === 'a' && attrs) {
+    const href = attrs.href ?? '';
+    if (/^https?:\/\//i.test(href)) {
+      return { extra: { href, target: '_blank', rel: 'noreferrer noopener' }, img: undefined };
+    }
+  }
+  return { extra: null, img: undefined };
+}
+
+function renderNode(tok: Tok, rest: Tok[], ctx: Ctx): number {
+  const tag = tok.tag;
+  const key = ctx.key++;
+  const { extra, img } = renderAttrs(tag, tok.attrs, key);
+
+  if (tag === 'br') { ctx.nodes.push(<br key={key} />); return 0; }
+  if (tag === 'hr') { ctx.nodes.push(<hr key={key} className="my-2 border-outline-variant/60" />); return 0; }
+  if (tag === 'img') {
+    if (img && img.src) {
+      ctx.nodes.push(
+        <span key={key} className="my-2 block text-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={img.src} alt={img.alt} loading="lazy" className="mx-auto max-h-72 max-w-full rounded-lg border border-outline-variant/40 bg-card object-contain" />
+        </span>,
+      );
+    }
+    return 0;
+  }
+
+  // gather children until the matching close tag
+  let i = 0;
+  const childCtx: Ctx = { nodes: [], key: ctx.key };
+  for (; i < rest.length; i++) {
+    const t = rest[i];
+    if (t.kind === 'close' && t.tag === tag) { i++; break; }
+    if (t.kind === 'text') {
+      pushText(childCtx, (t as unknown as { text: string }).text);
+      continue;
+    }
+    if (t.kind === 'open') {
+      if (VOID_TAGS.has(t.tag)) {
+        const consumed = renderNode(t, [], childCtx);
+        void consumed;
+        continue;
+      }
+      if (DROP_TAGS.has(t.tag)) {
+        // skip the element and its content entirely
+        let depth = 1;
+        i++;
+        for (; i < rest.length && depth > 0; i++) {
+          const d = rest[i];
+          if (d.kind === 'open' && d.tag === t.tag) depth++;
+          else if (d.kind === 'close' && d.tag === t.tag) depth--;
+        }
+        i--;
+        continue;
+      }
+      if (!KEEP_TAGS.has(t.tag)) {
+        // unknown tag: unwrap (render children only)
+        i += renderNode({ ...t, tag: 'span-unwrap' }, rest.slice(i + 1), childCtx) + 1;
+        continue;
+      }
+      i += renderNode(t, rest.slice(i + 1), childCtx) + 1;
+      continue;
+    }
+  }
+  ctx.key = childCtx.key;
+
+  const children = childCtx.nodes;
+  if (tag === 'span-unwrap') {
+    ctx.nodes.push(...children);
+    return i - 1 < 0 ? 0 : i - 1;
+  }
+  const style = styleFor(tag);
+  const common = { style, ...extra } as Record<string, unknown>;
+  delete common.key;
+  switch (tag) {
+    case 'b': case 'strong': ctx.nodes.push(<strong key={key} {...common} className="font-semibold">{children}</strong>); break;
+    case 'i': case 'em': ctx.nodes.push(<em key={key} {...common}>{children}</em>); break;
+    case 'u': case 'ins': ctx.nodes.push(<u key={key} {...common}>{children}</u>); break;
+    case 's': case 'del': ctx.nodes.push(<s key={key} {...common}>{children}</s>); break;
+    case 'sub': ctx.nodes.push(<sub key={key} {...common}>{children}</sub>); break;
+    case 'sup': ctx.nodes.push(<sup key={key} {...common}>{children}</sup>); break;
+    case 'code': ctx.nodes.push(<code key={key} {...common} className="rounded bg-surface-container-low px-1 py-0.5 font-mono text-[0.9em]">{children}</code>); break;
+    case 'td': ctx.nodes.push(<td key={key} {...common} colSpan={tok.attrs?.colSpan ? Number(tok.attrs.colSpan) : tok.attrs?.colspan ? Number(tok.attrs.colspan) : undefined}>{children}</td>); break;
+    case 'th': ctx.nodes.push(<th key={key} {...common} colSpan={tok.attrs?.colSpan ? Number(tok.attrs.colSpan) : tok.attrs?.colspan ? Number(tok.attrs.colspan) : undefined}>{children}</th>); break;
+    case 'tr': ctx.nodes.push(<tr key={key} {...common}>{children}</tr>); break;
+    case 'table': ctx.nodes.push(<table key={key} {...common}><tbody>{children}</tbody></table>); break;
+    case 'thead': case 'tbody': case 'tfoot': ctx.nodes.push(<tbody key={key} {...common}>{children}</tbody>); break;
+    case 'ul': ctx.nodes.push(<ul key={key} {...common}>{children}</ul>); break;
+    case 'ol': ctx.nodes.push(<ol key={key} {...common}>{children}</ol>); break;
+    case 'li': ctx.nodes.push(<li key={key} {...common}>{children}</li>); break;
+    case 'a': ctx.nodes.push(<a key={key} {...common} className="text-primary underline underline-offset-2">{children}</a>); break;
+    case 'font': case 'span': ctx.nodes.push(<span key={key} {...common}>{children}</span>); break;
+    default: ctx.nodes.push(<div key={key} {...common}>{children}</div>);
+  }
+  return i - 1 < 0 ? 0 : i - 1;
+}
+
+/** Render a question stem / option / explanation into React nodes. */
+export function renderQText(html: string): ReactNode[] {
+  if (!html) return [];
+  const ctx: Ctx = { nodes: [], key: 0 };
+  // HTML5 tokenizer rule: a '<' that is not followed by a letter, '/'
+  // or '!' is literal text (keep maths inequalities like "2x < 5").
+  const withBold = html.replace(/<(?![a-zA-Z/!])/g, '&lt;').replace(/\*\*([^\n*]+?)\*\*/g, '<strong>$1</strong>');
+  const toks = tokenize(withBold);
+  for (let i = 0; i < toks.length; i++) {
+    const t = toks[i];
+    if (t.kind === 'text') {
+      pushText(ctx, (t as unknown as { text: string }).text);
+      continue;
+    }
+    if (t.kind === 'open') {
+      if (VOID_TAGS.has(t.tag) || t.tag === 'img') {
+        renderNode(t, [], ctx);
+        continue;
+      }
+      if (DROP_TAGS.has(t.tag)) {
+        let depth = 1;
+        i++;
+        for (; i < toks.length && depth > 0; i++) {
+          const d = toks[i];
+          if (d.kind === 'open' && d.tag === t.tag) depth++;
+          else if (d.kind === 'close' && d.tag === t.tag) depth--;
+        }
+        i--;
+        continue;
+      }
+      if (!KEEP_TAGS.has(t.tag)) {
+        i += renderNode({ ...t, tag: 'span-unwrap' }, toks.slice(i + 1), ctx) + 1;
+        continue;
+      }
+      i += renderNode(t, toks.slice(i + 1), ctx) + 1;
+      continue;
+    }
+  }
+  return ctx.nodes;
+}
+
+/** Block renderer: question text (stem, options, explanations, passages).
+ *  Plain-text content keeps its author line breaks (whitespace-pre-line);
+ *  HTML content manages its own breaks through tags. */
+export function QText({ html, className }: { html: string; className?: string }) {
+  const wrap = /<[a-zA-Z/]/.test(html) ? '' : ' whitespace-pre-line';
+  return <div className={`${className ?? ''}${wrap}`}>{renderQText(html)}</div>;
+}
+) {
+      const end = input.indexOf('
+    // bare \begin{env} … \end{env} (KaTeX needs the whole environment)
+    if (ch === '\\' && input.startsWith('\\begin{', i)) {
+      const m = /^\\begin\{([a-zA-Z*]+)\}/.exec(input.slice(i));
+      if (m && MATH_ENVS.has(m[1])) {
+        const endToken = `\\end{${m[1]}}`;
+        const end = input.indexOf(endToken, i + m[0].length);
+        if (end >= 0) {
+          flush();
+          segs.push({
+            kind: 'math',
+            body: input.slice(i, end + endToken.length),
+            display: true,
+          });
+          i = end + endToken.length;
+          continue;
+        }
+      }
+    }
+    text += ch;
+    i += 1;
+  }
+  flush();
+  return segs;
+}
+
+/* ------------------------------------------------------------------ */
+/* Bare caret/underscore maths (founder directive 2026-10-15: "make   */
+/* sure the mathematical equations or stuff are written well - x² not  */
+/* x^2"): lesson bodies and question stems occasionally carry plain-  */
+/* text maths OUTSIDE any $...$ span. This conservative pass folds    */
+/* the same unicode super/subscripts latexToText produces onto the    */
+/* TEXT runs. Snake_case identifiers are left alone: the body after   */
+/* `_` must be digits, or a single letter that ends a word -          */
+/* `word_bank` and `AI_MODEL` never match, `H_2O`, `x_1` and `a_n` do. */
+/* ------------------------------------------------------------------ */
+
+const SUPER_MAP: Record<string, string> = {
+  '0': '\u2070', '1': '\u00b9', '2': '\u00b2', '3': '\u00b3', '4': '\u2074',
+  '5': '\u2075', '6': '\u2076', '7': '\u2077', '8': '\u2078', '9': '\u2079',
+  '+': '\u207a', '-': '\u207b', '=': '\u207c', '(': '\u207d', ')': '\u207e',
+  n: '\u207f', i: '\u2071',
+};
+const SUB_MAP: Record<string, string> = {
+  '0': '\u2080', '1': '\u2081', '2': '\u2082', '3': '\u2083', '4': '\u2084',
+  '5': '\u2085', '6': '\u2086', '7': '\u2087', '8': '\u2088', '9': '\u2089',
+  '+': '\u208a', '-': '\u208b', '=': '\u208c', '(': '\u208d', ')': '\u208e',
+  n: '\u2099', m: '\u2098', x: '\u2093', e: '\u2091', o: '\u2092',
+  a: '\u2090', i: '\u1d62', r: '\u1d63', u: '\u1d64', v: '\u1d65',
+};
+
+function mappable(body: string, map: Record<string, string>): string | null {
+  if (!body) return null;
+  let out = '';
+  for (const ch of body) {
+    const mapped = map[ch];
+    if (mapped === undefined) return null;
+    out += mapped;
+  }
+  return out;
+}
+
+/** Fold bare `x^2` / `H_2O` notation into unicode super/subscripts. */
+export function plainMathToUnicode(text: string): string {
+  if (!text || (!text.includes('^') && !text.includes('_'))) return text;
+  let out = text.replace(
+    /\^\(([^)\n]{1,12})\)|\^\{([^}\n]{1,12})\}|\^([0-9+\-]{1,6})|\^([a-zA-Z](?![a-zA-Z]))/g,
+    (whole: string, paren?: string, brace?: string, digits?: string, single?: string) => {
+      const mapped = mappable((paren ?? brace ?? digits ?? single) as string, SUPER_MAP);
+      return mapped ?? whole;
+    },
+  );
+  out = out.replace(
+    /_\(([^)\n]{1,12})\)|_\{([^}\n]{1,12})\}|_([0-9]{1,6})|_([a-zA-Z](?![a-zA-Z]))/g,
+    (whole: string, paren?: string, brace?: string, digits?: string, single?: string) => {
+      const mapped = mappable((paren ?? brace ?? digits ?? single) as string, SUB_MAP);
+      return mapped ?? whole;
+    },
+  );
+  return out;
+}
+
+function pushText(ctx: Ctx, raw: string) {
+  const text = decodeEntities(normalizeLatexEscapes(raw));
+  for (const seg of splitMathSegments(text)) {
+    if (seg.kind === 'math') {
+      const approx = latexToText(seg.body);
+      ctx.nodes.push(
+        <MathSpan key={ctx.key++} tex={seg.body} display={seg.display} approx={approx} />,
+      );
+    } else if (seg.body) {
+      ctx.nodes.push(plainMathToUnicode(seg.body));
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* safe HTML                                                           */
+/* ------------------------------------------------------------------ */
+
+interface Tok {
+  kind: 'text' | 'open' | 'close';
+  tag: string;
+  attrs?: Record<string, string>;
+}
+
+function tokenize(html: string): Tok[] {
+  const toks: Tok[] = [];
+  const re = /<\/?([a-zA-Z][a-zA-Z0-9]*)((?:\s+[a-zA-Z-]+(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+))?)*)\s*\/?>|([^<]+)/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(html)) !== null) {
+    if (m[3] !== undefined) {
+      toks.push({ kind: 'text', tag: '', attrs: undefined });
+      (toks[toks.length - 1] as unknown as { text: string }).text = m[3];
+      continue;
+    }
+    const tag = m[1].toLowerCase();
+    const closing = m[0][1] === '/';
+    const attrs: Record<string, string> = {};
+    if (m[2]) {
+      const are = /([a-zA-Z-]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+)))?/g;
+      let am: RegExpExecArray | null;
+      while ((am = are.exec(m[2])) !== null) {
+        attrs[am[1].toLowerCase()] = am[2] ?? am[3] ?? am[4] ?? '';
+      }
+    }
+    toks.push({ kind: closing ? 'close' : 'open', tag, attrs });
+  }
+  return toks;
+}
+
+const VOID_TAGS = new Set(['br', 'img', 'hr', 'input', 'meta', 'link']);
+const DROP_TAGS = new Set(['script', 'style', 'iframe', 'object', 'embed', 'form', 'head', 'title', 'svg', 'video', 'audio', 'source']);
+const KEEP_TAGS = new Set([
+  'p', 'br', 'b', 'strong', 'i', 'em', 'u', 'ins', 's', 'del', 'sub', 'sup',
+  'span', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+  'table', 'thead', 'tbody', 'tfoot', 'tr', 'td', 'th',
+  'ul', 'ol', 'li', 'blockquote', 'pre', 'code', 'figure', 'figcaption', 'a', 'img', 'hr', 'font', 'center',
+]);
+
+interface Ctx {
+  nodes: ReactNode[];
+  key: number;
+}
+
+function styleFor(tag: string): CSSProperties | undefined {
+  switch (tag) {
+    case 'h1': return { fontSize: '1.25em', fontWeight: 700, margin: '0.4em 0' };
+    case 'h2': return { fontSize: '1.15em', fontWeight: 700, margin: '0.4em 0' };
+    case 'h3': case 'h4': case 'h5': case 'h6':
+      return { fontSize: '1.05em', fontWeight: 600, margin: '0.35em 0' };
+    case 'p': case 'div': case 'center': case 'figure': case 'figcaption':
+      return { margin: '0.35em 0', textAlign: tag === 'center' ? 'center' : undefined };
+    case 'blockquote':
+      return { borderLeft: '3px solid currentColor', opacity: 0.85, paddingLeft: '0.7em', margin: '0.4em 0' };
+    case 'pre':
+      return { fontFamily: 'ui-monospace, monospace', whiteSpace: 'pre-wrap', background: 'rgba(0,0,0,0.04)', borderRadius: 6, padding: '0.5em 0.7em', margin: '0.4em 0' };
+    case 'table':
+      return { borderCollapse: 'collapse', margin: '0.5em 0', width: 'auto', maxWidth: '100%', display: 'block', overflowX: 'auto' };
+    case 'td': case 'th':
+      return { border: '1px solid rgba(127,127,127,0.45)', padding: '2px 8px', minWidth: '1.5em' };
+    case 'th':
+      return { fontWeight: 700, textAlign: 'center' };
+    case 'li':
+      return { marginLeft: '1.2em', display: 'list-item' };
+    case 'ul': return { listStyle: 'disc', paddingLeft: '0.5em', margin: '0.35em 0' };
+    case 'ol': return { listStyle: 'decimal', paddingLeft: '0.5em', margin: '0.35em 0' };
+    case 'ins': return { textDecoration: 'underline' };
+    default: return undefined;
+  }
+}
+
+function renderAttrs(tag: string, attrs: Record<string, string> | undefined, key: number): { extra: Record<string, unknown> | null; img?: { src: string; alt: string } } {
+  if (tag === 'img' && attrs) {
+    let src = attrs.src ?? '';
+    // allow only embedded question images or the myschool archive origin
+    if (/^\/qimages\//.test(src)) src = apiImg(src);
+    else if (/^https:\/\/myschool\.ng\//i.test(src)) src = src;
+    else src = '';
+    return { extra: null, img: { src, alt: attrs.alt ? decodeEntities(attrs.alt) : 'question diagram' } };
+  }
+  if (tag === 'a' && attrs) {
+    const href = attrs.href ?? '';
+    if (/^https?:\/\//i.test(href)) {
+      return { extra: { href, target: '_blank', rel: 'noreferrer noopener' }, img: undefined };
+    }
+  }
+  return { extra: null, img: undefined };
+}
+
+function renderNode(tok: Tok, rest: Tok[], ctx: Ctx): number {
+  const tag = tok.tag;
+  const key = ctx.key++;
+  const { extra, img } = renderAttrs(tag, tok.attrs, key);
+
+  if (tag === 'br') { ctx.nodes.push(<br key={key} />); return 0; }
+  if (tag === 'hr') { ctx.nodes.push(<hr key={key} className="my-2 border-outline-variant/60" />); return 0; }
+  if (tag === 'img') {
+    if (img && img.src) {
+      ctx.nodes.push(
+        <span key={key} className="my-2 block text-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={img.src} alt={img.alt} loading="lazy" className="mx-auto max-h-72 max-w-full rounded-lg border border-outline-variant/40 bg-card object-contain" />
+        </span>,
+      );
+    }
+    return 0;
+  }
+
+  // gather children until the matching close tag
+  let i = 0;
+  const childCtx: Ctx = { nodes: [], key: ctx.key };
+  for (; i < rest.length; i++) {
+    const t = rest[i];
+    if (t.kind === 'close' && t.tag === tag) { i++; break; }
+    if (t.kind === 'text') {
+      pushText(childCtx, (t as unknown as { text: string }).text);
+      continue;
+    }
+    if (t.kind === 'open') {
+      if (VOID_TAGS.has(t.tag)) {
+        const consumed = renderNode(t, [], childCtx);
+        void consumed;
+        continue;
+      }
+      if (DROP_TAGS.has(t.tag)) {
+        // skip the element and its content entirely
+        let depth = 1;
+        i++;
+        for (; i < rest.length && depth > 0; i++) {
+          const d = rest[i];
+          if (d.kind === 'open' && d.tag === t.tag) depth++;
+          else if (d.kind === 'close' && d.tag === t.tag) depth--;
+        }
+        i--;
+        continue;
+      }
+      if (!KEEP_TAGS.has(t.tag)) {
+        // unknown tag: unwrap (render children only)
+        i += renderNode({ ...t, tag: 'span-unwrap' }, rest.slice(i + 1), childCtx) + 1;
+        continue;
+      }
+      i += renderNode(t, rest.slice(i + 1), childCtx) + 1;
+      continue;
+    }
+  }
+  ctx.key = childCtx.key;
+
+  const children = childCtx.nodes;
+  if (tag === 'span-unwrap') {
+    ctx.nodes.push(...children);
+    return i - 1 < 0 ? 0 : i - 1;
+  }
+  const style = styleFor(tag);
+  const common = { style, ...extra } as Record<string, unknown>;
+  delete common.key;
+  switch (tag) {
+    case 'b': case 'strong': ctx.nodes.push(<strong key={key} {...common} className="font-semibold">{children}</strong>); break;
+    case 'i': case 'em': ctx.nodes.push(<em key={key} {...common}>{children}</em>); break;
+    case 'u': case 'ins': ctx.nodes.push(<u key={key} {...common}>{children}</u>); break;
+    case 's': case 'del': ctx.nodes.push(<s key={key} {...common}>{children}</s>); break;
+    case 'sub': ctx.nodes.push(<sub key={key} {...common}>{children}</sub>); break;
+    case 'sup': ctx.nodes.push(<sup key={key} {...common}>{children}</sup>); break;
+    case 'code': ctx.nodes.push(<code key={key} {...common} className="rounded bg-surface-container-low px-1 py-0.5 font-mono text-[0.9em]">{children}</code>); break;
+    case 'td': ctx.nodes.push(<td key={key} {...common} colSpan={tok.attrs?.colSpan ? Number(tok.attrs.colSpan) : tok.attrs?.colspan ? Number(tok.attrs.colspan) : undefined}>{children}</td>); break;
+    case 'th': ctx.nodes.push(<th key={key} {...common} colSpan={tok.attrs?.colSpan ? Number(tok.attrs.colSpan) : tok.attrs?.colspan ? Number(tok.attrs.colspan) : undefined}>{children}</th>); break;
+    case 'tr': ctx.nodes.push(<tr key={key} {...common}>{children}</tr>); break;
+    case 'table': ctx.nodes.push(<table key={key} {...common}><tbody>{children}</tbody></table>); break;
+    case 'thead': case 'tbody': case 'tfoot': ctx.nodes.push(<tbody key={key} {...common}>{children}</tbody>); break;
+    case 'ul': ctx.nodes.push(<ul key={key} {...common}>{children}</ul>); break;
+    case 'ol': ctx.nodes.push(<ol key={key} {...common}>{children}</ol>); break;
+    case 'li': ctx.nodes.push(<li key={key} {...common}>{children}</li>); break;
+    case 'a': ctx.nodes.push(<a key={key} {...common} className="text-primary underline underline-offset-2">{children}</a>); break;
+    case 'font': case 'span': ctx.nodes.push(<span key={key} {...common}>{children}</span>); break;
+    default: ctx.nodes.push(<div key={key} {...common}>{children}</div>);
+  }
+  return i - 1 < 0 ? 0 : i - 1;
+}
+
+/** Render a question stem / option / explanation into React nodes. */
+export function renderQText(html: string): ReactNode[] {
+  if (!html) return [];
+  const ctx: Ctx = { nodes: [], key: 0 };
+  // HTML5 tokenizer rule: a '<' that is not followed by a letter, '/'
+  // or '!' is literal text (keep maths inequalities like "2x < 5").
+  const withBold = html.replace(/<(?![a-zA-Z/!])/g, '&lt;').replace(/\*\*([^\n*]+?)\*\*/g, '<strong>$1</strong>');
+  const toks = tokenize(withBold);
+  for (let i = 0; i < toks.length; i++) {
+    const t = toks[i];
+    if (t.kind === 'text') {
+      pushText(ctx, (t as unknown as { text: string }).text);
+      continue;
+    }
+    if (t.kind === 'open') {
+      if (VOID_TAGS.has(t.tag) || t.tag === 'img') {
+        renderNode(t, [], ctx);
+        continue;
+      }
+      if (DROP_TAGS.has(t.tag)) {
+        let depth = 1;
+        i++;
+        for (; i < toks.length && depth > 0; i++) {
+          const d = toks[i];
+          if (d.kind === 'open' && d.tag === t.tag) depth++;
+          else if (d.kind === 'close' && d.tag === t.tag) depth--;
+        }
+        i--;
+        continue;
+      }
+      if (!KEEP_TAGS.has(t.tag)) {
+        i += renderNode({ ...t, tag: 'span-unwrap' }, toks.slice(i + 1), ctx) + 1;
+        continue;
+      }
+      i += renderNode(t, toks.slice(i + 1), ctx) + 1;
+      continue;
+    }
+  }
+  return ctx.nodes;
+}
+
+/** Block renderer: question text (stem, options, explanations, passages).
+ *  Plain-text content keeps its author line breaks (whitespace-pre-line);
+ *  HTML content manages its own breaks through tags. */
+export function QText({ html, className }: { html: string; className?: string }) {
+  const wrap = /<[a-zA-Z/]/.test(html) ? '' : ' whitespace-pre-line';
+  return <div className={`${className ?? ''}${wrap}`}>{renderQText(html)}</div>;
+}
+, i + 1);
       if (end > i + 1) {
         const body = input.slice(i + 1, end);
-        if (/\\[a-zA-Z]+|\^|_|=/.test(body)) {
+        const trimmed = body.trim();
+        const isCurrencyProse = /^\d+(?:\.\d+)?\s+[a-zA-Z]/.test(trimmed);
+        if (trimmed.length > 0 && !body.includes('\n') && !isCurrencyProse) {
           flush();
           segs.push({ kind: 'math', body, display: false });
           i = end + 1;
