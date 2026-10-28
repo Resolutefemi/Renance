@@ -70,6 +70,10 @@ type Client struct {
         packMemo  sync.Map
         packMemoN atomic.Int64
 
+        courseMemo     sync.Map
+        courseMemoN    atomic.Int64
+        courseMissMemo sync.Map
+
         // probeMemo caches positive ProbeBlobs answers (probe.go, the
         // course-ladder blobReady flags). Lesson objects are
         // write-once-per-version content, so a hit stays a hit; misses
@@ -262,6 +266,13 @@ func sanitizeKey(topicID string) string {
 func (c *Client) Get(ctx context.Context, topicID string) (payload []byte, ok bool, err error) {
         if c == nil {
                 return nil, false, errors.New("r2store: client not configured")
+        }
+        if cid := CourseIDFromTopic(topicID); cid != "" {
+                if lessons, packed := c.coursePackLessons(ctx, cid); packed {
+                        if raw, found := lessons[topicID]; found && len(raw) > 0 {
+                                return raw, true, nil
+                        }
+                }
         }
         status, body, err := c.roundTrip(ctx, http.MethodGet, "", nil, "", nil, c.lessonKey(topicID))
         if err != nil {
