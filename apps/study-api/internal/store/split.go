@@ -830,10 +830,10 @@ const (
 // reap-user-stale: 112 accounts carried off Supabase exactly once,
 // the pre-split catalog husks dropped), so the first boot here simply
 // connects, skips the backfill on the sealed public.split_backfill
-// marker and starts serving. A real USER_DATABASE_URL env value
-// always wins - this default only fills an EMPTY env. Private repo,
-// same practice as the baked DSNs in render.yaml.
-const bakedUserDSN = "postgresql://neondb_owner:npg_siaeB4m7IMUZ@ep-snowy-base-axf83q3b-pooler.c-4.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+// marker and starts serving. Set USER_DATABASE_URL in the environment (Render dashboard).
+// The DSN that used to be baked here was exposed when the repo went
+// public and has been removed; it must be rotated.
+const bakedUserDSN = ""
 
 // bakedUserFallbackDSN is the user-chain failover - the Neon CU
 // callback plan (founder 2026-10-16: Neon had already burned 84% of
@@ -849,7 +849,7 @@ const bakedUserDSN = "postgresql://neondb_owner:npg_siaeB4m7IMUZ@ep-snowy-base-a
 // accounts would 404). When Neon resets next cycle it wins the chain
 // again automatically (first live DSN boots); run dbsplit adopt-mirror
 // once to carry any rows created during the outage back to Neon.
-const bakedUserFallbackDSN = "postgresql://postgres:8261cb984054ff872330f6b73200eb99@dbeqj4dx.us-east.database.insforge.app:5432/insforge?sslmode=require"
+const bakedUserFallbackDSN = ""
 
 // bakedCacheDSN is the CACHE_DATABASE_URL default (founder directive
 // 2026-10-16: "don't use insforge #2 for lesson cache only use #1").
@@ -863,7 +863,7 @@ const bakedUserFallbackDSN = "postgresql://postgres:8261cb984054ff872330f6b73200
 // stays safely inside the 500 MB tier with write headroom.
 // A real CACHE_DATABASE_URL env value always wins - this default only
 // fills an EMPTY env.
-const bakedCacheDSN = "postgresql://postgres:8261cb984054ff872330f6b73200eb99@dbeqj4dx.us-east.database.insforge.app:5432/insforge?sslmode=require"
+const bakedCacheDSN = ""
 
 // bakedDSNsDisabled reports whether the baked production DSNs must
 // stay out of every chain. CI is the reason this exists: the E2E job

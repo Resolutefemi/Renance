@@ -22,8 +22,10 @@ WORKERS = 8
 
 R2_ENDPOINT = "https://ff1e18e32afe87e8e07b3c35595fdd0e.r2.cloudflarestorage.com"
 R2_BUCKET = "renance"
-R2_AK = "78b8e71ffccaf0bdf12b95a6b108000f"
-R2_SK = "38a5c0c95e93a6adb6bbb41a6c1297242d07c48ad23c0405bb631830083852d2"
+R2_AK = os.environ.get("R2_ACCESS_KEY_ID", "")
+R2_SK = os.environ.get("R2_SECRET_ACCESS_KEY", "")
+if not R2_AK or not R2_SK:
+    raise SystemExit("set R2_ACCESS_KEY_ID and R2_SECRET_ACCESS_KEY in the environment (committed keys were exposed; rotate them)")
 
 s3 = boto3.client(
     "s3", endpoint_url=R2_ENDPOINT, aws_access_key_id=R2_AK,

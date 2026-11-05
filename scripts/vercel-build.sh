@@ -37,10 +37,10 @@ export NEXT_PUBLIC_BASE_PATH NEXT_PUBLIC_API_BASE NEXT_PUBLIC_GOOGLE_CLIENT_ID N
 # render.yaml" - i.e. no manual dashboard step anywhere): the master
 # key defaults HERE too, identical to the value in render.yaml. A
 # dashboard-set BUNDLE_MASTER_KEY (if one is ever added) still wins,
-# same as the NEXT_PUBLIC_* defaults above. Repo is PRIVATE, so the
-# committed value is acceptable; rotate both copies together if the
-# repo ever goes public.
-: "${BUNDLE_MASTER_KEY:=7e2a1eab3e5fc660fc77fcbc3f0ad4cec8566c27d44c92f58561712c44d29713}"
+# same as the NEXT_PUBLIC_* defaults above. The repo is public: no key lives here any more.
+# Set BUNDLE_MASTER_KEY in the Vercel dashboard; the old committed
+# value was exposed and must be rotated.
+: "${BUNDLE_MASTER_KEY:?BUNDLE_MASTER_KEY is not set - add it in the Vercel dashboard (same rotated value as the Render API env)}"
 : "${BUNDLE_KEY_ID:=k1}"
 export BUNDLE_MASTER_KEY BUNDLE_KEY_ID
 python3 scripts/web_bundles.py

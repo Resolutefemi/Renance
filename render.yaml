@@ -1,24 +1,13 @@
 # Render Blueprint, one-click deploy of the Renance study API (free plan).
 #
 # Render.com -> New + -> Blueprint -> pick Resolutefemi/Renance -> Apply.
-# DATABASE_URL ships FILLED IN (founder directive 2026-10-16: "point
-# DATABASE_URL at the Supabase pooler DSN - the full cache serves
-# immediately"): the primary is now the Supabase SESSION-mode pooler DSN,
-# the database that already carries the full 15-unit x 10-topic ladder
-# for every one of the 10,725 courses (1.6M+ topics, 149k units) plus
-# every account mirrored from Neon by the dual-write mirror. Everything
-# else is filled in, JWT_SECRET is generated for you and
-# GOOGLE_CLIENT_ID ships with both public OAuth client IDs (web +
-# Android), so Google sign-in works on the first boot.
-#
-# Prefer the dashboard instead? Render.com -> renance-api -> Environment
-# -> DATABASE_URL -> paste the Supabase pooler DSN below -> Save Changes
-# (the service redeploys itself; the same value is baked here so a
-# blueprint sync applies it either way).
-#
-# VERIFIED 2026-09-07: the live service at https://renance-api.onrender.com
-# answers /healthz {"db":"ok"} and the full student-flow E2E
-# (scripts/api-e2e.sh) passes against it end to end.
+# NO SECRET VALUES LIVE IN THIS FILE (2026-11 scrub: the repo is public).
+# Every sensitive variable below is `sync: false` (set it in the Render
+# dashboard; an existing service keeps its dashboard values across
+# blueprint syncs) or `generateValue: true` (JWT_SECRET). Set the DSNs
+# and API keys on the service itself: Render -> renance-api -> Environment.
+# The values that used to be baked here were exposed publicly and MUST
+# be rotated (database passwords, BUNDLE_MASTER_KEY, mail/R2/AI keys).
 #
 # Free plan note: the service sleeps after ~15 min idle; the first request
 # wakes it in ~30-50s. Upgrade any time for always-on.
@@ -93,9 +82,9 @@ services:
       # DATABASE_URL stays the legacy/fallback DSN (Supabase): a
       # failover handle for the user chain and the content failover.
       - key: DATABASE_URL
-        value: "postgresql://postgres.zfxrmcwdnmmxjawmsiyp:Stephen2474life%23@aws-1-eu-west-3.pooler.supabase.com:5432/postgres?sslmode=require"
+        sync: false
       - key: USER_DATABASE_URL
-        value: "postgresql://neondb_owner:npg_siaeB4m7IMUZ@ep-snowy-base-axf83q3b-pooler.c-4.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+        sync: false
       # NEON CU CALLBACK PLAN (founder 2026-10-16, Neon at 84% of the
       # monthly compute): the user chain now fails over to InsForge #1
       # (the live dual-write mirror) BEFORE the legacy Supabase handle -
@@ -106,7 +95,7 @@ services:
       # Dashboard knob that helps most: Neon -> your project -> Compute
       # -> Suspend timeout -> 60 seconds (scale to zero between lulls).
       - key: CONTENT_DATABASE_URL
-        value: "postgresql://postgres.zfxrmcwdnmmxjawmsiyp:Stephen2474life%23@aws-1-eu-west-3.pooler.supabase.com:5432/postgres?sslmode=require"
+        sync: false
       # Lesson cache cap for the CACHE database (InsForge #1, the 500 MB
       # free tier that also carries the user mirror): the guard pauses
       # new lesson writes past this size (it probes the whole DATABASE
@@ -149,9 +138,9 @@ services:
       #     the second InsForge, 6zctb6jv, was retired from cache duty
       #     - it is the 500 MB free tier and the cache had outgrown it).
       - key: SUPABASE_DATABASE_URL
-        value: "postgresql://postgres.zfxrmcwdnmmxjawmsiyp:Stephen2474life%23@aws-1-eu-west-3.pooler.supabase.com:5432/postgres?sslmode=require"
+        sync: false
       - key: INSFORGE_DATABASE_URL
-        value: "postgresql://postgres:8261cb984054ff872330f6b73200eb99@dbeqj4dx.us-east.database.insforge.app:5432/insforge?sslmode=require"
+        sync: false
       # CACHE_DATABASE_URL above carries the SAME dbeqj4dx DSN: since
       # the 2026-10-16 move the cache lives with the mirror on InsForge
       # #1. Keepalives + synthgen top-ups target it via the
@@ -160,7 +149,7 @@ services:
       # (6zctb6jv, InsForge #2) now holds no Renance tables - keep it
       # as a cold spare or delete the project.
       - key: CACHE_DATABASE_URL
-        value: "postgresql://postgres:8261cb984054ff872330f6b73200eb99@dbeqj4dx.us-east.database.insforge.app:5432/insforge?sslmode=require"
+        sync: false
       # Explicit ordered chain (comma-separated) overrides the two
       # named vars above when set.
       - key: FALLBACK_DATABASE_URLS
@@ -199,7 +188,7 @@ services:
       - key: AI_PROVIDER
         value: zai
       - key: AI_API_KEY
-        value: 897f47393b1b4f598902823edc36d44f.jW3eE0ZrCCYVt7m0
+        sync: false
       - key: AI_BASE_URL
         value: https://api.z.ai/api/paas/v4
       - key: AI_MODEL
@@ -231,7 +220,7 @@ services:
       # retries and no polling - deliberately gentle API usage on the
       # Brevo account per the founder's instruction.
       - key: BREVO_API_KEY
-        value: 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
+        sync: false
       # Brevo SMTP relay (the last-resort hop, replacing the old Resend
       # SMTP relay per founder directive 2026-10-05): host and port are
       # exactly what the Brevo account's relay section reports
@@ -243,9 +232,9 @@ services:
       - key: SMTP_PORT
         value: "587"
       - key: SMTP_USER
-        value: bc473e001@smtp-brevo.com
+        sync: false
       - key: SMTP_PASS
-        value: xsmtpsib-12e99edbfb7d6e8a90f3e0c97abcad4f43eb3eb47b9941f931ec0f70741b4e2f-v4K62EtC4hr2Pgyd
+        sync: false
       # Bare address only: the Go relay wraps it as "Renance <...>"
       # and uses it bare for the envelope; the Brevo API hop also
       # reads this as its sender email. verify@renance.app is the
@@ -260,7 +249,7 @@ services:
       # tier: 3,000 mails/month (100/day). Watch delivery at
       # https://resend.com/emails.
       - key: RESEND_API_KEY
-        value: re_LMM1duMH_HHc3mNaxvNHtkjzrmKBadCaB
+        sync: false
       - key: RESEND_FROM
         value: "Renance <verify@renance.app>"
       # Paystack: paste the secret key and card payments switch on.
@@ -290,11 +279,11 @@ services:
       - key: R2_BUCKET
         value: "renance"
       - key: R2_ACCOUNT_ID
-        value: "ff1e18e32afe87e8e07b3c35595fdd0e"
+        sync: false
       - key: R2_ACCESS_KEY_ID
-        value: "78b8e71ffccaf0bdf12b95a6b108000f"
+        sync: false
       - key: R2_SECRET_ACCESS_KEY
-        value: "38a5c0c95e93a6adb6bbb41a6c1297242d07c48ad23c0405bb631830083852d2"
+        sync: false
       # v2 rollout (founder directive 2026-10-24, "do this"): reads and
       # writes move to the v2/ prefix so the uploaded packs win
       # unconditionally over any legacy lessons/ junk, while
@@ -389,7 +378,7 @@ services:
       # the key immediately (openssl rand -hex 32 + new kid) and move the
       # value back to sync:false.
       - key: BUNDLE_MASTER_KEY
-        value: "7e2a1eab3e5fc660fc77fcbc3f0ad4cec8566c27d44c92f58561712c44d29713"
+        sync: false
       - key: BUNDLE_KEY_ID
         value: "k1"
       # Quotas: 12 anonymous key fetches/IP/hour (PoW path), 18-bit
