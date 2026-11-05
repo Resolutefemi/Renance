@@ -1,0 +1,7 @@
+# data/manifest.json fingerprints are sha256 of the exact file bytes the
+# Linux deploy reads. CRLF conversion on Windows checkouts silently
+# changes those bytes (and the Go API refuses to boot on mismatch), so
+# data files and scripts always check out with LF endings.
+data/** text eol=lf
+*.sh text eol=lf
+*.py text eol=lf
