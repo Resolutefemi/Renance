@@ -82,6 +82,26 @@ func TestGeminiIsGone(t *testing.T) {
 // account binds and no login is refused until the founder flips it to
 // true on Render. Flipping accepts the usual spellings; garbage keeps
 // the feature safely off.
+// Bundle shield defaults (founder directive 2026-11-05): anonymous
+// bundle-key delivery ships OFF - every key fetch needs a signed-in,
+// watermark-traceable account. Explicit opt-in still works. The
+// per-account extraction budgets carry sane non-zero defaults.
+func TestBundleAnonKeyShipsOff(t *testing.T) {
+	c := loadFor(t, nil)
+	if c.BundleAnonKey {
+		t.Errorf("BUNDLE_ANON_KEY must default to false - anonymous keys off")
+	}
+	c = loadFor(t, map[string]string{"BUNDLE_ANON_KEY": "true"})
+	if !c.BundleAnonKey {
+		t.Errorf("BUNDLE_ANON_KEY=true must re-enable the anonymous path")
+	}
+	c = loadFor(t, nil)
+	if c.BundleUserPerHour <= 0 || c.BundleUserDistinctPerDay <= 0 {
+		t.Errorf("extraction budgets must default non-zero, got %d/%d",
+			c.BundleUserPerHour, c.BundleUserDistinctPerDay)
+	}
+}
+
 func TestDeviceLockShipsLocked(t *testing.T) {
         c := loadFor(t, nil)
         if c.DeviceLock {

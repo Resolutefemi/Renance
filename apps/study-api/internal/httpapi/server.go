@@ -121,6 +121,7 @@ type Server struct {
         // anonymous key-fetch cap per IP per hour; bundleBurstIP = bundle
         // route burst rate; bundleAnonGlobal = global anonymous budget.
         ledger           *userLedger
+        extract          *extractionLedger
         pows             *powLedger
         bundleKeyIP      *rateLimiter
         bundleBurstIP    *rateLimiter
@@ -262,6 +263,13 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
                 cfg.BundlePowBits = 18
         }
         s.ledger = &userLedger{}
+        if cfg.BundleUserPerHour <= 0 {
+                cfg.BundleUserPerHour = 20
+        }
+        if cfg.BundleUserDistinctPerDay <= 0 {
+                cfg.BundleUserDistinctPerDay = 40
+        }
+        s.extract = &extractionLedger{}
         s.pows = &powLedger{}
         s.bundleKeyIP = newRateLimiter(cfg.BundleIPPerHour, cfg.BundleIPPerHour)
         s.bundleBurstIP = newRateLimiter(30, 30)

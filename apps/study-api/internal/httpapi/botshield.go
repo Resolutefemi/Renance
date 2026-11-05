@@ -69,6 +69,7 @@ import (
         "path/filepath"
         "regexp"
         "runtime"
+        "sort"
         "strings"
         "sync"
         "time"
@@ -278,6 +279,57 @@ func (l *userLedger) strike(uid string) int {
                 e.blockedTill = time.Now().Add(24 * time.Hour)
         }
         return e.strikes
+}
+
+// ------------------------------------------------------- extraction
+//
+// extractionLedger is the bulk-extraction budget (founder directive
+// 2026-11-05): per account it caps bundle/key fetches per hour and
+// DISTINCT banks unlocked per UTC day. In-memory like the strike
+// ledger (single Render instance; a restart resets budgets, which
+// only ever favours the student). Corpus keys are exempt - curriculum
+// browsing loads many small files legitimately.
+type extractionLedger struct {
+        mu      sync.Mutex
+        entries map[string]*extractEntry
+}
+
+type extractEntry struct {
+        hourStart time.Time
+        hourCount int
+        day       string
+        distinct  map[string]struct{}
+}
+
+func (l *extractionLedger) allow(uid, code string, perHour, distinctPerDay int, now time.Time) bool {
+        if uid == "" || perHour <= 0 || distinctPerDay <= 0 {
+                return true
+        }
+        l.mu.Lock()
+        defer l.mu.Unlock()
+        if l.entries == nil {
+                l.entries = map[string]*extractEntry{}
+        }
+        e, ok := l.entries[uid]
+        if !ok {
+                e = &extractEntry{distinct: map[string]struct{}{}}
+                l.entries[uid] = e
+        }
+        if now.Sub(e.hourStart) >= time.Hour {
+                e.hourStart, e.hourCount = now, 0
+        }
+        if day := now.UTC().Format("2006-01-02"); e.day != day {
+                e.day, e.distinct = day, map[string]struct{}{}
+        }
+        if e.hourCount >= perHour {
+                return false
+        }
+        if _, seen := e.distinct[code]; !seen && len(e.distinct) >= distinctPerDay {
+                return false
+        }
+        e.hourCount++
+        e.distinct[code] = struct{}{}
+        return true
 }
 
 func (l *userLedger) blocked(uid string) bool {
@@ -510,6 +562,14 @@ func (s *Server) handleBundleKey(w http.ResponseWriter, r *http.Request) {
                         fail(w, http.StatusTooManyRequests, "slow_down", "too many requests")
                         return
                 }
+                // Bulk-extraction budget (banks + PDF vault; corpus exempt).
+                if !(isStatic && isCorpusPath(staticPath)) {
+                        if !s.extract.allow(uid, code, s.cfg.BundleUserPerHour, s.cfg.BundleUserDistinctPerDay, time.Now()) {
+                                s.shieldLog(r, "extraction", "key budget user="+uid+" code="+code)
+                                fail(w, http.StatusTooManyRequests, "extraction_limit", "you have opened a lot of question banks in a short time - take a break and continue shortly")
+                                return
+                        }
+                }
                 // Honeypot lockout is the only other signed-in wall.
                 if s.ledger.blocked(uid) {
                         s.shieldLog(r, "blocked", "user="+uid+" bundle key while locked")
@@ -625,6 +685,11 @@ func (s *Server) shieldBundle(next http.HandlerFunc) http.HandlerFunc {
                                 fail(w, http.StatusForbidden, "access_suspended", "unusual download activity detected on this account")
                                 return
                         }
+                        if !s.extract.allow(uid, code, s.cfg.BundleUserPerHour, s.cfg.BundleUserDistinctPerDay, time.Now()) {
+                                s.shieldLog(r, "extraction", "bundle budget user="+uid+" code="+code)
+                                fail(w, http.StatusTooManyRequests, "extraction_limit", "you have opened a lot of question banks in a short time - take a break and continue shortly")
+                                return
+                        }
                         // No daily quota here either (founder directive
                         // 2026-10-11). The per-IP burst wall above stays.
                         // Layer 7: the served copy is watermarked inside handleBundle
@@ -650,6 +715,7 @@ func (s *Server) watermarkBundle(b *cbtdata.Bundle, uid string) *cbtdata.Bundle 
         qs := make([]cbtdata.Question, len(b.Questions))
         copy(qs, b.Questions)
         for i := range qs {
+                qs[i].Options, qs[i].Answer = fingerprintOptions(qs[i], uid, secret)
                 if len(qs[i].Stem) >= 24 {
                         qs[i].Stem = watermarkStem(qs[i].Stem, uid, qs[i].ID, secret)
                 }
@@ -712,6 +778,59 @@ func watermarkStem(stem, uid, qid string, secret []byte) string {
         }
         cut := 12 + idx + 1
         return stem[:cut] + sb.String() + stem[cut:]
+}
+
+// fingerprintOptions deterministically permutes one question's
+// options for one account and remaps the answer letter to the same
+// answer text. Unlike the zero-width stem mark, the permutation
+// survives plain-text copying, screenshots re-typed by an AI agent,
+// and dataset re-publication: the pattern of orderings across many
+// questions identifies the serving account (testable against any
+// candidate account with the server secret, never guessable without
+// it). Questions whose answer letter is not an option key keep their
+// original order - a shuffle must never corrupt grading.
+func fingerprintOptions(q cbtdata.Question, uid string, secret []byte) (map[string]string, string) {
+        if len(q.Options) < 2 || uid == "" || len(secret) == 0 {
+                return q.Options, q.Answer
+        }
+        keys := make([]string, 0, len(q.Options))
+        for k := range q.Options {
+                keys = append(keys, k)
+        }
+        sort.Strings(keys)
+        answerIdx := -1
+        for i, k := range keys {
+                if k == q.Answer {
+                        answerIdx = i
+                }
+        }
+        if answerIdx < 0 {
+                out := make(map[string]string, len(q.Options))
+                for k, v := range q.Options {
+                        out[k] = v
+                }
+                return out, q.Answer
+        }
+        mac := hmac.New(sha256.New, secret)
+        mac.Write([]byte("renance-opt/v1|" + uid + "|" + q.ID))
+        seed := mac.Sum(nil)
+        perm := make([]int, len(keys))
+        for i := range perm {
+                perm[i] = i
+        }
+        for i := len(perm) - 1; i > 0; i-- {
+                j := int(seed[i%len(seed)]) % (i + 1)
+                perm[i], perm[j] = perm[j], perm[i]
+        }
+        out := make(map[string]string, len(keys))
+        answer := q.Answer
+        for pos, src := range perm {
+                out[keys[pos]] = q.Options[keys[src]]
+                if src == answerIdx {
+                        answer = keys[pos]
+                }
+        }
+        return out, answer
 }
 
 // ---------------------------------------------------------------- util

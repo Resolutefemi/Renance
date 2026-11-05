@@ -102,6 +102,15 @@ type Config struct {
         BundleMasterKey []byte
         BundleKeyID     string
         BundleAnonKey   bool
+        // Per-account bulk-extraction budgets (founder directive
+        // 2026-11-05, superseding the 2026-10-11 no-caps posture):
+        // BundleUserPerHour caps bundle + bank-key fetches per account
+        // per hour; BundleUserDistinctPerDay caps how many DISTINCT
+        // banks/PDFs one account may unlock per UTC day. Human study
+        // never reaches either; walking the whole catalogue takes
+        // weeks per account and trips the shield log before that.
+        BundleUserPerHour        int
+        BundleUserDistinctPerDay int
         // Anonymous key fetches per IP per hour (proof-of-work path).
         BundleIPPerHour int
         // Proof-of-work difficulty in bits for the anonymous key path
@@ -180,7 +189,9 @@ func Load() (*Config, error) {
 
                 BundleMasterKey:     envHex("BUNDLE_MASTER_KEY"),
                 BundleKeyID:         envStr("BUNDLE_KEY_ID", "k1"),
-                BundleAnonKey:       envBool("BUNDLE_ANON_KEY", true),
+                BundleAnonKey:       envBool("BUNDLE_ANON_KEY", false),
+                BundleUserPerHour:        envInt("BUNDLE_USER_PER_HOUR", 20),
+                BundleUserDistinctPerDay: envInt("BUNDLE_USER_DISTINCT_PER_DAY", 40),
                 BundleIPPerHour:      envInt("BUNDLE_IP_PER_HOUR", 12),
                 BundlePowBits:       envInt("BUNDLE_POW_BITS", 18),
                 BundleKeyUserPerMin: envInt("BUNDLE_KEY_USER_PER_MIN", 90),

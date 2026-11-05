@@ -92,7 +92,8 @@ func TestBundleServesAnswerMaterialForStaticBanks(t *testing.T) {
         var served struct {
                 Questions []struct {
                         ID          string `json:"id"`
-                        Answer      string `json:"answer"`
+                        Answer      string            `json:"answer"`
+                        Options     map[string]string `json:"options"`
                         Explanation string `json:"explanation"`
                 } `json:"questions"`
         }
@@ -102,10 +103,13 @@ func TestBundleServesAnswerMaterialForStaticBanks(t *testing.T) {
         if len(served.Questions) != 2 {
                 t.Fatalf("want 2 questions, got %d", len(served.Questions))
         }
-        if served.Questions[0].Answer != "B" || served.Questions[0].Explanation == "" {
+        // Served copies carry the per-account option fingerprint
+        // (botshield.go), so the answer LETTER may move - the invariant
+        // is that it still points at the same answer TEXT.
+        if served.Questions[0].Options[served.Questions[0].Answer] != "4" || served.Questions[0].Explanation == "" {
                 t.Fatalf("static bank must ship answer + explanation, got %+v", served.Questions[0])
         }
-        if served.Questions[1].Answer != "B" {
+        if served.Questions[1].Options[served.Questions[1].Answer] != "Abuja" {
                 t.Fatalf("second question answer missing: %+v", served.Questions[1])
         }
 

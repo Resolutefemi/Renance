@@ -420,8 +420,18 @@ services:
       - key: BUNDLE_CORPUS_POW_BITS
         value: "14"
       # BUNDLE_ANON_KEY=false removes the anonymous key path entirely
-      # (practice requires sign-in). Default stays true so the
-      # signed-out practice UX keeps working while PoW + IP caps hold
-      # the line. Flip to "false" any time for maximum lockdown.
+      # (practice requires sign-in). Set false by founder directive
+      # 2026-11-05: every key fetch must belong to a signed-in,
+      # watermark-traceable account. Set true only to restore the
+      # signed-out practice UX (PoW + IP caps then hold the line).
       - key: BUNDLE_ANON_KEY
-        value: "true"
+        value: "false"
+      # Bulk-extraction budgets (founder directive 2026-11-05,
+      # superseding the 2026-10-11 no-caps posture): per account,
+      # bundle + bank/PDF key fetches per hour, and DISTINCT banks/PDFs
+      # unlocked per UTC day. Human study never reaches these; walking
+      # the full catalogue takes weeks per account.
+      - key: BUNDLE_USER_PER_HOUR
+        value: "20"
+      - key: BUNDLE_USER_DISTINCT_PER_DAY
+        value: "40"

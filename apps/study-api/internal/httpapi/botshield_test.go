@@ -137,7 +137,7 @@ func TestBundleKeyAnonymousProofOfWork(t *testing.T) {
         }
 }
 
-func TestBundleKeyNoDailyLimit(t *testing.T) {
+func TestBundleKeyNormalStudyUncapped(t *testing.T) {
         s, h, tok, uid := shieldServer(t)
         // Founder directive 2026-10-11 ("remove the daily bank limit
         // features completely"): a signed-in student can pull the key
