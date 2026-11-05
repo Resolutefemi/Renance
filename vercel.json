@@ -19,6 +19,10 @@
       "destination": "https://renance-api.onrender.com/app-version"
     },
     {
+      "source": "/api/:path*/",
+      "destination": "https://renance-api.onrender.com/:path*"
+    },
+    {
       "source": "/api/:path*",
       "destination": "https://renance-api.onrender.com/:path*"
     }
