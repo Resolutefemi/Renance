@@ -24,7 +24,7 @@ ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 cd "$ROOT"
 
 : "${NEXT_PUBLIC_BASE_PATH:=}"
-: "${NEXT_PUBLIC_API_BASE:=https://renance-api.onrender.com}"
+: "${NEXT_PUBLIC_API_BASE:=/api}"
 : "${NEXT_PUBLIC_GOOGLE_CLIENT_ID:=850087098854-pni8gohld0isi8v8nhhnlcl5fuvi77q4.apps.googleusercontent.com}"
 : "${NEXT_PUBLIC_SITE_URL:=https://renance.app}"
 export NEXT_PUBLIC_BASE_PATH NEXT_PUBLIC_API_BASE NEXT_PUBLIC_GOOGLE_CLIENT_ID NEXT_PUBLIC_SITE_URL

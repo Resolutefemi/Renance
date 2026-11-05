@@ -129,7 +129,7 @@ const FOOTER_COLUMNS = [
       { href: '/lessons/', label: 'Lessons library' },
       { href: '/guides/', label: 'Exam guides' },
       { href: '/educational-app-in-nigeria/', label: 'Educational app guide' },
-      { href: 'https://renance-api.onrender.com/healthz', label: 'Service status' },
+      { href: '/api/healthz', label: 'Service status' },
     ],
   },
   {

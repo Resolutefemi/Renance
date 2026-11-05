@@ -85,7 +85,9 @@ export type ArenaOutbound =
 
 /** http(s):// → ws(s):// for the socket endpoint. */
 export function arenaWsUrl(token: string): string {
-  const url = API_BASE.replace(/^http/, 'ws');
+  const url = API_BASE.startsWith('/')
+    ? `${window.location.protocol === 'https:' ? 'wss' : 'ws'}://${window.location.host}${API_BASE}`
+    : API_BASE.replace(/^http/, 'ws');
   return `${url}/arena/ws?token=${encodeURIComponent(token)}`;
 }
 

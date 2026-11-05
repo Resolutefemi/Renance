@@ -2,6 +2,9 @@
 
 import { clearSession, getToken } from './session';
 
+// Production API base is the same-origin /api proxy (vercel.json
+// rewrites /api/* to the Render service server-side): the upstream
+// host never appears in page source, bundles, CSP, or DevTools.
 // The API base must be baked at build time (NEXT_PUBLIC_API_BASE). When a
 // production build ships without it, fall back to the live Render service
 // instead of localhost: a static export that asks the visitor's own machine
@@ -10,7 +13,7 @@ import { clearSession, getToken } from './session';
 export const API_BASE =
   process.env.NEXT_PUBLIC_API_BASE ??
   (process.env.NODE_ENV === 'production'
-    ? 'https://renance-api.onrender.com'
+    ? '/api'
     : 'http://localhost:3990');
 
 // GitHub Pages serves the app under /<repo>/, raw redirects must respect it.
