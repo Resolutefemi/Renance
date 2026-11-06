@@ -16,7 +16,8 @@ import (
         "github.com/jackc/pgx/v5"
         "github.com/jackc/pgx/v5/pgconn"
 
-        "renance.dev/study-api/internal/store"
+        "renance.dev/study-api/internal/orch"
+	"renance.dev/study-api/internal/store"
 )
 
 type Service struct {
@@ -37,6 +38,11 @@ type Service struct {
         Blobs           LessonBlobs
         Log             *slog.Logger
         Engine          *Engine
+        // Orch is the six-key GLM orchestrator (internal/orch,
+        // founder architecture 2026-11-07). nil keeps tertiary
+        // units on the deterministic agent engine - the
+        // orchestrator is strictly additive.
+        Orch            *orch.Orchestrator
         UnlimitedHearts bool
         // expGuard single-flights per-course unit expansion (expand.go):
         // two students opening the same growing course never double-generate.

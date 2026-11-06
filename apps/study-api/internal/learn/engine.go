@@ -20,7 +20,8 @@ import (
 
         "renance.dev/study-api/internal/cbtdata"
         "renance.dev/study-api/internal/learn/synth"
-        "renance.dev/study-api/internal/tutor"
+        "renance.dev/study-api/internal/orch"
+	"renance.dev/study-api/internal/tutor"
 )
 
 type LessonNote struct {
@@ -50,6 +51,11 @@ type LessonDoc struct {
         Notes     []LessonNote  `json:"notes"`
         KeyPoints []string      `json:"keyPoints"`
         Quiz      []LessonQuizQ `json:"quiz"`
+        // TheoryQuestions rides the six-key orchestrator's Level 200+
+        // contract (founder architecture, 2026-11-07): 5 multi-step
+        // analytical prompts, each with its marking guide and model answer.
+        // Level 100 units ship none (the spec is 20 objectives, 0 theory).
+        TheoryQuestions []LessonTheoryQ `json:"theoryQuestions,omitempty"`
         Drawings  []DrawingRef  `json:"drawings"`
         Source    string        `json:"source"`
         Cached    bool          `json:"cached"`
@@ -63,6 +69,17 @@ type LessonDoc struct {
         // serves as the fallback - ops forensics without log access (the
         // founder reads the API, not the Render console).
         GenError string `json:"genError,omitempty"`
+}
+
+// LessonTheoryQ is one theory question of a 200L+ unit assessment:
+// a multi-step analytical prompt with its marking guide (key points)
+// and a full model answer - the R2 archive's theory shape.
+type LessonTheoryQ struct {
+        ID            string `json:"id"`
+        QuestionNumber int   `json:"question_number"`
+        Question      string `json:"question"`
+        KeyPoints     string `json:"key_points"` // the marking guide, semicolon-separated
+        Answer        string `json:"answer"`    // the model answer
 }
 
 // LessonSource is the lesson FORMAT stamp: the generation recipe it
@@ -96,6 +113,12 @@ const AgentSource = "agent-v1"
 // (the founder's "the lesson is not loading" spin, 2026-10-26).
 const CuratedSource = "curated-v3"
 
+// OrchSource stamps the lessons written by the six-key GLM
+// orchestrator (internal/orch, founder architecture 2026-11-07):
+// 5 parallel note keys + the assessment key, 5 long parts, 20-question
+// quiz, level-dependent theory questions. It is CURRENT format.
+const OrchSource = "glm-6key-1"
+
 // trustedSource reports whether a doc's format stamp is CURRENT. The
 // curated family (curated-v2 donors carried through the 266k lesson
 // rebuild, curated-v3 farm output) all carry the same depth contract
@@ -104,7 +127,7 @@ const CuratedSource = "curated-v3"
 // pack must serve, not spin the generator.
 func trustedSource(source string) bool {
         switch source {
-        case LessonSource, AgentSource, CuratedSource:
+        case LessonSource, AgentSource, CuratedSource, OrchSource:
                 return true
         }
         return strings.HasPrefix(source, "curated-v")
@@ -740,6 +763,7 @@ type topicCtx struct {
         Subject  string
         Dept     string
         Faculty  string
+        Level    string
         Keywords []string
         Figures  []string
         Total    int
@@ -749,14 +773,14 @@ func (s *Service) loadTopicCtx(ctx context.Context, topicID string) (*topicCtx, 
         t := &topicCtx{ID: topicID}
         err := s.Pool.QueryRow(ctx, `
                 SELECT t.title, t.category, t.seq, t.course_id, c.title, c.body, c.subject,
-                       t.keywords, t.figures, t.section,
+                       t.keywords, t.figures, t.section, c.level,
                        COALESCE(d.name,''), COALESCE(d.faculty,''),
                        (SELECT COUNT(*) FROM learn.units tc WHERE tc.course_id = t.course_id)
                 FROM learn.units t JOIN learn.courses c ON c.course_id = t.course_id
                 JOIN learn.departments d ON d.dept_id = c.dept_id
                 WHERE t.unit_id = $1`, topicID).
                 Scan(&t.Title, &t.Category, &t.Seq, &t.CourseID, &t.Course, &t.Body, &t.Subject,
-                        &t.Keywords, &t.Figures, &t.Unit, &t.Dept, &t.Faculty, &t.Total)
+                        &t.Keywords, &t.Figures, &t.Unit, &t.Level, &t.Dept, &t.Faculty, &t.Total)
         if err != nil {
                 return nil, err
         }
@@ -915,11 +939,12 @@ func (s *Service) cachedLesson(ctx context.Context, t *topicCtx) (*LessonDoc, er
         }
         // Tier 2 - the cache database (the historic home, also the index).
         row := s.Pool.QueryRow(ctx, `
-                SELECT title, summary, notes, key_points, quiz, drawings, source
+                SELECT title, summary, notes, key_points, quiz, drawings, source,
+                       COALESCE(theory_questions, '[]'::jsonb)
                 FROM learn.lessons WHERE topic_id=$1`, t.ID)
         var doc LessonDoc
-        var notesRaw, kpRaw, quizRaw, drawRaw []byte
-        err := row.Scan(&doc.Title, &doc.Summary, &notesRaw, &kpRaw, &quizRaw, &drawRaw, &doc.Source)
+        var notesRaw, kpRaw, quizRaw, drawRaw, theoryRaw []byte
+        err := row.Scan(&doc.Title, &doc.Summary, &notesRaw, &kpRaw, &quizRaw, &drawRaw, &doc.Source, &theoryRaw)
         if err != nil {
                 return nil, nil // cache miss (incl. not-found) → generate
         }
@@ -951,6 +976,9 @@ func (s *Service) cachedLesson(ctx context.Context, t *topicCtx) (*LessonDoc, er
         if err := json.Unmarshal(drawRaw, &doc.Drawings); err != nil {
                 doc.Drawings = nil
         }
+        if len(theoryRaw) > 0 {
+                _ = json.Unmarshal(theoryRaw, &doc.TheoryQuestions)
+        }
         doc.TopicID, doc.CourseID, doc.Course, doc.Cached = t.ID, t.CourseID, t.Course, true
         doc.Drawings = decorateDrawings(t, doc.Drawings)
         _, _ = s.Pool.Exec(ctx, `UPDATE learn.lessons SET hit_count = hit_count + 1 WHERE topic_id=$1`, t.ID)
@@ -965,6 +993,24 @@ func (s *Service) generateLesson(ctx context.Context, t *topicCtx) (*LessonDoc, 
         // costs nothing, and every topic in the tree gets the full deep
         // lesson: 10 long reading sections and 20 quiz items.
         if t.Body == "tertiary" {
+                // The SIX-KEY ORCHESTRATOR first (founder architecture,
+                // 2026-11-07): five GLM keys write the note parts in
+                // parallel, the assessment key writes the 20-question
+                // unit exam on the combined note. Not configured, or the
+                // keys are down (unfunded, rate-limited past the budget)?
+                // The deterministic agent engine still serves instantly
+                // - a student never waits on a dead key set.
+                if s.Orch != nil {
+                        s.Engine.sem <- struct{}{}
+                        doc, err := s.generateLessonOrchestrated(ctx, t)
+                        <-s.Engine.sem
+                        if err == nil {
+                                return doc, nil
+                        }
+                        if s.Engine.Log != nil {
+                                s.Engine.Log.Error("learn: orchestrator failed - falling back to the agent engine", "topic", t.ID, "err", err)
+                        }
+                }
                 return s.generateLessonAgent(ctx, t)
         }
         // Secondary desks (jamb / waec / neco / post utme) keep the AI +
@@ -1050,6 +1096,82 @@ func (s *Service) generateLesson(ctx context.Context, t *topicCtx) (*LessonDoc, 
                 return nil, err
         }
         return doc, nil
+}
+
+// generateLessonOrchestrated runs the six-key GLM pipeline for one
+// tertiary unit (founder architecture, 2026-11-07) and persists the
+// compiled doc under the OrchSource stamp. On any failure it answers
+// an error and the caller falls back to the deterministic agent engine.
+func (s *Service) generateLessonOrchestrated(ctx context.Context, t *topicCtx) (*LessonDoc, error) {
+        req := orch.Request{
+                TopicID:      t.ID,
+                CourseID:     t.CourseID,
+                Course:       t.Course,
+                UnitTitle:    t.Title,
+                SectionTitle: s.sectionTitleOf(ctx, t),
+                Dept:         t.Dept,
+                Faculty:      t.Faculty,
+                Seq:          t.Seq,
+                Total:        t.Total,
+                Level:        orch.ParseLevel(t.Level),
+                Calc:         orch.IsCalcCourse(t.Course, t.Dept, t.Title),
+                Keywords:     t.Keywords,
+        }
+        unit, err := s.Orch.Generate(ctx, req)
+        if err != nil {
+                return nil, err
+        }
+        doc := &LessonDoc{
+                TopicID: t.ID, CourseID: t.CourseID, Course: t.Course,
+                Title:   firstNonEmpty(unit.Title, t.Title),
+                Summary: unit.Summary,
+                Source:  OrchSource,
+        }
+        for _, n := range unit.Notes {
+                doc.Notes = append(doc.Notes, LessonNote{Heading: n.Heading, Body: n.Body})
+        }
+        doc.KeyPoints = unit.KeyPoints
+        for i, q := range unit.Quiz {
+                doc.Quiz = append(doc.Quiz, LessonQuizQ{
+                        ID:          fmt.Sprintf("%s-q%02d", t.ID, i+1),
+                        Type:        q.Type,
+                        Stem:        q.Stem,
+                        Options:     q.Options,
+                        Answer:      q.Answer,
+                        Explanation: q.Explanation,
+                })
+        }
+        for i, tq := range unit.Theory {
+                doc.TheoryQuestions = append(doc.TheoryQuestions, LessonTheoryQ{
+                        ID:             fmt.Sprintf("%s-t%02d", t.ID, i+1),
+                        QuestionNumber: i + 1,
+                        Question:       tq.Question,
+                        KeyPoints:      tq.KeyPoints,
+                        Answer:         tq.Answer,
+                })
+        }
+        // Serve-time safety net: the same sanitizer every other path
+        // runs, so a malformed item can never ship.
+        if healed, changed := sanitizeQuiz(doc.Quiz); changed {
+                doc.Quiz = healed
+        }
+        doc.Drawings = decorateDrawings(t, nil)
+        if err := s.persistLesson(ctx, doc); err != nil {
+                return nil, err
+        }
+        return doc, nil
+}
+
+// sectionTitleOf loads the unit's section title for the orchestration
+// prompts (cheap single row read; empty on any trouble).
+func (s *Service) sectionTitleOf(ctx context.Context, t *topicCtx) string {
+        var title string
+        err := s.Pool.QueryRow(ctx,
+                `SELECT title FROM learn.course_sections WHERE course_id=$1 AND section=$2`, t.CourseID, t.Unit).Scan(&title)
+        if err != nil {
+                return ""
+        }
+        return title
 }
 
 // generateLessonAgent builds the full deep lesson for a tertiary topic
@@ -1588,12 +1710,13 @@ func (s *Service) persistLesson(ctx context.Context, doc *LessonDoc) error {
         kp, _ := json.Marshal(doc.KeyPoints)
         quiz, _ := json.Marshal(doc.Quiz)
         draw, _ := json.Marshal(doc.Drawings)
+        theory, _ := json.Marshal(doc.TheoryQuestions)
         _, err := s.Pool.Exec(ctx, `
-                INSERT INTO learn.lessons (topic_id, title, summary, notes, key_points, quiz, drawings, source)
-                VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+                INSERT INTO learn.lessons (topic_id, title, summary, notes, key_points, quiz, drawings, theory_questions, source)
+                VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
                 ON CONFLICT (topic_id) DO UPDATE SET title=$2, summary=$3, notes=$4, key_points=$5,
-                  quiz=$6, drawings=$7, source=$8, generated_at=now()`,
-                doc.TopicID, doc.Title, doc.Summary, string(notes), string(kp), string(quiz), string(draw), doc.Source)
+                  quiz=$6, drawings=$7, theory_questions=$8, source=$9, generated_at=now()`,
+                doc.TopicID, doc.Title, doc.Summary, string(notes), string(kp), string(quiz), string(draw), string(theory), doc.Source)
         return err
 }
 

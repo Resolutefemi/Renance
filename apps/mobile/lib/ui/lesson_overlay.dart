@@ -234,10 +234,11 @@ class _LessonOverlayScreenState extends State<_LessonOverlayScreen> {
   // ----------------------------------------------------------- study
 
   int get _studyPageCount {
-    // intro + notes + drawings? + keypoints
+    // intro + notes + drawings? + keypoints + theory? (200L+ units)
     final LessonDoc d = _doc!;
     int n = 1 + d.notes.length + 1;
     if (d.drawings.isNotEmpty) n += 1;
+    if (d.theoryQuestions.isNotEmpty) n += 1;
     return n;
   }
 
@@ -876,6 +877,60 @@ class _StudyView extends StatelessWidget {
       );
     }
     cursor += doc.drawings.isNotEmpty ? 1 : 0;
+    // Theory questions page (200L+ units, the six-key orchestrator
+    // assessment half; Level 100 units ship none) - like the web card:
+    // attempt in writing first, then open the marking guide.
+    if (doc.theoryQuestions.isNotEmpty && page == cursor) {
+      return Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: context.card,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: context.outlineVariant, width: 2),
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+              color: context.outlineVariant.withValues(alpha: 0.55),
+              offset: const Offset(0, 4),
+              blurRadius: 0,
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            const Text(
+              'Theory questions',
+              style: TextStyle(
+                fontFamily: 'Nunito',
+                fontSize: 15,
+                fontWeight: FontWeight.w900,
+              ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              'Attempt each one in writing first, then open its marking guide — that is how the exam marks it.',
+              style: RenanceText.bodyBase.copyWith(
+                height: 1.5,
+                fontSize: 12,
+                fontWeight: FontWeight.w700,
+                color: context.textSecondary,
+              ),
+            ),
+            const SizedBox(height: 12),
+            for (int i = 0; i < doc.theoryQuestions.length; i++)
+              Padding(
+                padding: const EdgeInsets.only(bottom: 12),
+                child: _TheoryItem(
+                  theory: doc.theoryQuestions[i],
+                  fallbackNumber: i + 1,
+                ),
+              ),
+          ],
+        ),
+      );
+    }
+    cursor += doc.theoryQuestions.isNotEmpty ? 1 : 0;
     // Key points page (last) - the web's primary-wash card with the
     // heading inside.
     return Container(
@@ -1009,6 +1064,146 @@ class _DrawingFigure extends StatelessWidget {
 }
 
 // --------------------------------------------------------------- quiz
+
+/// One theory question with its collapsible marking guide and model
+/// answer (the 200L+ assessment half, six-key orchestrator 2026-11-07).
+/// The student attempts in writing FIRST - the guide opens on tap, the
+/// same way the exam's marking scheme works.
+class _TheoryItem extends StatefulWidget {
+  const _TheoryItem({required this.theory, required this.fallbackNumber});
+
+  final LessonTheoryQ theory;
+  final int fallbackNumber;
+
+  @override
+  State<_TheoryItem> createState() => _TheoryItemState();
+}
+
+class _TheoryItemState extends State<_TheoryItem> {
+  bool _open = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final LessonTheoryQ t = widget.theory;
+    final int number = t.questionNumber > 0 ? t.questionNumber : widget.fallbackNumber;
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: context.surfaceContainer,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: context.outlineVariant, width: 2),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          QuestionText(
+            '$number. ${t.question}',
+            style: RenanceText.bodyBase.copyWith(
+              height: 1.5,
+              fontSize: 13.5,
+              fontWeight: FontWeight.w800,
+            ),
+          ),
+          const SizedBox(height: 8),
+          InkWell(
+            borderRadius: BorderRadius.circular(10),
+            onTap: () => setState(() => _open = !_open),
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              decoration: BoxDecoration(
+                color: context.primary.withValues(alpha: 0.10),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Text(
+                      _open ? 'Hide the marking guide' : 'Marking guide & model answer',
+                      style: TextStyle(
+                        fontFamily: 'Nunito',
+                        fontSize: 12,
+                        fontWeight: FontWeight.w900,
+                        color: context.primaryInk,
+                      ),
+                    ),
+                  ),
+                  MsIcon(
+                    _open ? 'expand_less' : 'expand_more',
+                    size: 18,
+                    color: context.primaryInk,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          if (_open) ...<Widget>[
+            const SizedBox(height: 8),
+            if (t.keyPoints.isNotEmpty)
+              ...<Widget>[
+                Text(
+                  'MARKING GUIDE',
+                  style: RenanceText.labelMono.copyWith(
+                    fontSize: 10,
+                    fontWeight: FontWeight.w900,
+                    letterSpacing: 0.6,
+                    color: context.textSecondary,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                for (final String point in t.keyPoints.split(';'))
+                  if (point.trim().isNotEmpty)
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 4),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.only(top: 2),
+                            child: MsIcon(
+                              'check_circle',
+                              size: 14,
+                              color: context.primary,
+                              fill: true,
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: Text(
+                              point.trim(),
+                              style: RenanceText.bodyBase.copyWith(
+                                height: 1.45,
+                                fontSize: 12.5,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                const SizedBox(height: 6),
+              ],
+            if (t.answer.isNotEmpty) ...<Widget>[
+              Text(
+                'MODEL ANSWER',
+                style: RenanceText.labelMono.copyWith(
+                  fontSize: 10,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: 0.6,
+                  color: context.textSecondary,
+                ),
+              ),
+              const SizedBox(height: 4),
+              QuestionText(
+                t.answer,
+                style: RenanceText.bodyBase.copyWith(height: 1.55, fontSize: 12.5),
+              ),
+            ],
+          ],
+        ],
+      ),
+    );
+  }
+}
 
 /// The stored answer rides in TWO shapes across the banks: the option
 /// LETTER ("B") or the option TEXT ("execution") - and cached papers

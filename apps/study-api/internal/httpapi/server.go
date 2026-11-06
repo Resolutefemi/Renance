@@ -54,6 +54,7 @@ import (
         "renance.dev/study-api/internal/grading"
         "renance.dev/study-api/internal/jwtx"
         "renance.dev/study-api/internal/learn"
+        "renance.dev/study-api/internal/orch"
         "renance.dev/study-api/internal/r2store"
         "renance.dev/study-api/internal/schoolcorpus"
         "renance.dev/study-api/internal/store"
@@ -214,6 +215,7 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
                 CachePool:       learnCachePool,
                 Log:             log,
                 Engine:          learn.NewEngine(aiProvider, lib),
+                Orch:            orch.FromEnv(log),
                 UnlimitedHearts: cfg.LearnUnlimitedHearts,
         }
         // Lesson blobs (founder 2026-10-17, "how do we move to cloudflare

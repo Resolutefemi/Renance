@@ -193,6 +193,29 @@ services:
         value: https://api.z.ai/api/paas/v4
       - key: AI_MODEL
         value: glm-4.5-flash
+      # ── The six-key GLM orchestrator (founder architecture, 2026-11-07)
+      # Keys 1-5 write the five lecture-note parts of a unit in parallel;
+      # Key 6 writes the 20-question unit assessment from the combined
+      # note. All six run GLM 4.5. Paste the key values in the Render
+      # dashboard (sync: false keeps them out of the repo). Without all
+      # six the orchestrator stays off and the deterministic agent engine
+      # keeps serving tertiary units - it is strictly additive.
+      - key: ORCH_KEY_1
+        sync: false
+      - key: ORCH_KEY_2
+        sync: false
+      - key: ORCH_KEY_3
+        sync: false
+      - key: ORCH_KEY_4
+        sync: false
+      - key: ORCH_KEY_5
+        sync: false
+      - key: ORCH_KEY_6
+        sync: false
+      - key: ORCH_BASE_URL
+        value: https://open.bigmodel.cn/api/paas/v4
+      - key: ORCH_MODEL
+        value: glm-4.5
       # AI chat doctrine (founder directive 2026-10-12: "remove the
       # fallback feature completely - the AI answers directly like a
       # normal AI"): the canned "I cannot give you a full answer this

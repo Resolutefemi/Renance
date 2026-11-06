@@ -183,17 +183,22 @@ export function LessonOverlay({
 
   // ── Study pagination layout: intro page, then one note per page, then
   // the drawings page (when the topic carries curated figures), then the
-  // key-points page. Derived from the loaded doc only.
+  // key-points page, then the theory-questions page (200L+ units, the
+  // six-key orchestrator's assessment half). Derived from the loaded doc only.
   const studyPages = useMemo(() => {
-    if (!doc) return { count: 1, notesEnd: 1, drawingsPage: -1, keysPage: -1 };
+    if (!doc) return { count: 1, notesEnd: 1, drawingsPage: -1, keysPage: -1, theoryPage: -1 };
     const hasDrawings = (doc.drawings?.length ?? 0) > 0;
     const hasKeys = (doc.keyPoints?.length ?? 0) > 0;
+    const hasTheory = (doc.theoryQuestions?.length ?? 0) > 0;
     const notesEnd = 1 + doc.notes.length;
+    const keysPage = hasKeys ? notesEnd + (hasDrawings ? 1 : 0) : -1;
+    const afterKeys = keysPage >= 0 ? keysPage + 1 : notesEnd + (hasDrawings ? 1 : 0);
     return {
-      count: notesEnd + (hasDrawings ? 1 : 0) + (hasKeys ? 1 : 0),
+      count: afterKeys + (hasTheory ? 1 : 0),
       notesEnd,
       drawingsPage: hasDrawings ? notesEnd : -1,
-      keysPage: hasKeys ? notesEnd + (hasDrawings ? 1 : 0) : -1,
+      keysPage,
+      theoryPage: hasTheory ? afterKeys : -1,
     };
   }, [doc]);
   const studyAt = Math.min(studyStep, studyPages.count - 1);
@@ -475,6 +480,39 @@ export function LessonOverlay({
                     <li key={i} className="text-[13.5px] font-bold leading-snug text-on-surface"><QText html={k} /></li>
                   ))}
                 </ul>
+              </section>
+            )}
+
+            {studyPages.theoryPage === studyAt && (doc.theoryQuestions?.length ?? 0) > 0 && (
+              <section className="rounded-2xl border-2 border-outline-variant bg-card p-4 learn-tile">
+                <h3 className="text-[15px] font-black text-on-surface">Theory questions</h3>
+                <p className="mt-1 text-[12px] font-bold leading-snug text-on-surface-variant">
+                  Attempt each one in writing first, then open its marking guide — that is how the exam marks it.
+                </p>
+                <div className="mt-3 flex flex-col gap-3">
+                  {doc.theoryQuestions!.map((tq, i) => (
+                    <article key={tq.id || i} className="rounded-xl border-2 border-outline-variant bg-surface p-3">
+                      <h4 className="text-[13.5px] font-black leading-snug text-on-surface">
+                        {tq.questionNumber || i + 1}. <QText html={tq.question} />
+                      </h4>
+                      <details className="group mt-2">
+                        <summary className="cursor-pointer select-none rounded-lg bg-surface-container px-3 py-1.5 text-[12px] font-black text-primary-ink">
+                          Marking guide &amp; model answer
+                        </summary>
+                        {tq.keyPoints && (
+                          <ul className="mt-2 list-disc space-y-1 pl-5">
+                            {tq.keyPoints.split(';').map((p, pi) => p.trim() && (
+                              <li key={pi} className="text-[12.5px] leading-snug text-on-surface-variant">{p.trim()}</li>
+                            ))}
+                          </ul>
+                        )}
+                        {tq.answer && (
+                          <p className="mt-2 whitespace-pre-line text-[12.5px] leading-relaxed text-on-surface"><QText html={tq.answer} /></p>
+                        )}
+                      </details>
+                    </article>
+                  ))}
+                </div>
               </section>
             )}
           </div>

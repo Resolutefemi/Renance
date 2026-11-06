@@ -444,6 +444,33 @@ class LearnDrawing {
   );
 }
 
+/// One theory question of a 200L+ unit assessment (six-key
+/// orchestrator, founder architecture 2026-11-07): a multi-step
+/// analytical prompt with its marking guide and model answer.
+class LessonTheoryQ {
+  const LessonTheoryQ({
+    required this.id,
+    required this.questionNumber,
+    required this.question,
+    required this.keyPoints,
+    required this.answer,
+  });
+
+  final String id;
+  final int questionNumber;
+  final String question;
+  final String keyPoints; // the marking guide, semicolon-separated
+  final String answer; // the model answer
+
+  factory LessonTheoryQ.fromJson(Map<String, dynamic> j) => LessonTheoryQ(
+    id: (j['id'] ?? '') as String,
+    questionNumber: ((j['question_number'] ?? 0) as num).toInt(),
+    question: (j['question'] ?? '') as String,
+    keyPoints: (j['key_points'] ?? '') as String,
+    answer: (j['answer'] ?? '') as String,
+  );
+}
+
 /// GET /learn/topics/{id}/content - the full lesson document.
 class LessonDoc {
   const LessonDoc({
@@ -456,6 +483,7 @@ class LessonDoc {
     required this.keyPoints,
     required this.quiz,
     required this.drawings,
+    this.theoryQuestions = const <LessonTheoryQ>[],
     required this.source,
     required this.cached,
   });
@@ -469,6 +497,10 @@ class LessonDoc {
   final List<String> keyPoints;
   final List<LessonQuizQ> quiz;
   final List<LearnDrawing> drawings;
+
+  /// 5 theory questions on Level 200+ units; Level 100 units ship none.
+  final List<LessonTheoryQ> theoryQuestions;
+
   final String source;
   final bool cached;
 
@@ -489,6 +521,9 @@ class LessonDoc {
         .toList(),
     drawings: ((j['drawings'] ?? const <dynamic>[]) as List<dynamic>)
         .map((dynamic e) => LearnDrawing.fromJson((e as Map).cast<String, dynamic>()))
+        .toList(),
+    theoryQuestions: ((j['theoryQuestions'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => LessonTheoryQ.fromJson((e as Map).cast<String, dynamic>()))
         .toList(),
     source: (j['source'] ?? '') as String,
     cached: (j['cached'] ?? false) as bool,

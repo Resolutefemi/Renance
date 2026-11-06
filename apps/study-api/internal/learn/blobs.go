@@ -60,15 +60,16 @@ type BlobProber interface {
 // NOT stored: hit_count (a database-only serving statistic) and the
 // CourseID/Course/Cached serve-time decorations (rebuilt per request).
 type LessonBlob struct {
-        TopicID     string          `json:"topic_id"`
-        Title       string          `json:"title"`
-        Summary     string          `json:"summary"`
-        Notes       json.RawMessage `json:"notes"`
-        KeyPoints   json.RawMessage `json:"key_points"`
-        Quiz        json.RawMessage `json:"quiz"`
-        Drawings    json.RawMessage `json:"drawings"`
-        Source      string          `json:"source"`
-        GeneratedAt string          `json:"generated_at,omitempty"`
+        TopicID         string          `json:"topic_id"`
+        Title           string          `json:"title"`
+        Summary         string          `json:"summary"`
+        Notes           json.RawMessage `json:"notes"`
+        KeyPoints       json.RawMessage `json:"key_points"`
+        Quiz            json.RawMessage `json:"quiz"`
+        TheoryQuestions json.RawMessage `json:"theory_questions,omitempty"`
+        Drawings        json.RawMessage `json:"drawings"`
+        Source          string          `json:"source"`
+        GeneratedAt     string          `json:"generated_at,omitempty"`
 }
 
 // blobSave marshals a lesson doc into the envelope and PUTs it.
@@ -93,11 +94,12 @@ func (s *Service) blobSave(ctx context.Context, doc *LessonDoc) {
         kp, _ := json.Marshal(doc.KeyPoints)
         quiz, _ := json.Marshal(doc.Quiz)
         draw, _ := json.Marshal(doc.Drawings)
+        theory, _ := json.Marshal(doc.TheoryQuestions)
         // Content hash over the already marshalled columns plus the
         // short header fields. generated_at is deliberately outside:
         // the stamp churns on every call and would defeat the guard.
         sum := sha256.New()
-        for _, part := range [][]byte{notes, kp, quiz, draw} {
+        for _, part := range [][]byte{notes, kp, quiz, draw, theory} {
                 sum.Write(part)
                 sum.Write([]byte{0})
         }
@@ -115,15 +117,16 @@ func (s *Service) blobSave(ctx context.Context, doc *LessonDoc) {
                 return
         }
         payload, err := json.Marshal(LessonBlob{
-                TopicID:     doc.TopicID,
-                Title:       doc.Title,
-                Summary:     doc.Summary,
-                Notes:       notes,
-                KeyPoints:   kp,
-                Quiz:        quiz,
-                Drawings:    draw,
-                Source:      doc.Source,
-                GeneratedAt: time.Now().UTC().Format(time.RFC3339),
+                TopicID:         doc.TopicID,
+                Title:           doc.Title,
+                Summary:         doc.Summary,
+                Notes:           notes,
+                KeyPoints:       kp,
+                Quiz:            quiz,
+                TheoryQuestions: theory,
+                Drawings:        draw,
+                Source:          doc.Source,
+                GeneratedAt:     time.Now().UTC().Format(time.RFC3339),
         })
         if err != nil {
                 s.logWarn("lesson blob marshal failed", "topic", doc.TopicID, "err", err.Error())
@@ -159,6 +162,7 @@ func (s *Service) blobLesson(ctx context.Context, topicID string) (*LessonDoc, b
 		KeyPoints   json.RawMessage `json:"key_points"`
 		ShortKP     json.RawMessage `json:"kp"`
 		Quiz        json.RawMessage `json:"quiz"`
+		Theory      json.RawMessage `json:"theory_questions"`
 		Drawings    json.RawMessage `json:"drawings"`
 		Source      string          `json:"source"`
 		GeneratedAt string          `json:"generated_at,omitempty"`
@@ -278,6 +282,9 @@ func (s *Service) blobLesson(ctx context.Context, topicID string) (*LessonDoc, b
 				})
 			}
 		}
+	}
+	if len(blob.Theory) > 0 {
+		_ = json.Unmarshal(blob.Theory, &doc.TheoryQuestions)
 	}
 	if len(blob.Drawings) > 0 {
 		_ = json.Unmarshal(blob.Drawings, &doc.Drawings)

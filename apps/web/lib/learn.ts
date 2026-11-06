@@ -118,6 +118,17 @@ export interface LearnDrawing {
   svg: string;
 }
 
+/** One theory question of a 200L+ unit assessment (six-key
+ * orchestrator, founder architecture 2026-11-07): a multi-step
+ * analytical prompt with its marking guide and model answer. */
+export interface LearnTheoryQ {
+  id: string;
+  questionNumber: number;
+  question: string;
+  keyPoints: string;
+  answer: string;
+}
+
 export interface LessonDoc {
   topicId: string;
   courseId: string;
@@ -127,6 +138,8 @@ export interface LessonDoc {
   notes: LearnNote[];
   keyPoints: string[];
   quiz: LearnQuizQ[];
+  /** 5 theory questions on Level 200+ units; Level 100 units ship none. */
+  theoryQuestions?: LearnTheoryQ[];
   drawings: LearnDrawing[];
   source: string;
   cached: boolean;
