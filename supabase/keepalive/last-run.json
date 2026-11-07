@@ -1,5 +1,5 @@
 {
-  "ran_at": "2026-10-15T08:49:41.550Z",
+  "ran_at": "2026-11-07T10:29:52.417Z",
   "results": [
     {
       "provider": "supabase",
@@ -14,10 +14,16 @@
       "note": "HTTP 200"
     },
     {
-      "provider": "insforge",
+      "provider": "insforge-cache",
       "via": "postgres-wire",
-      "ok": true,
-      "note": "PostgreSQL 15.18"
+      "ok": false,
+      "note": "Connection terminated unexpectedly"
+    },
+    {
+      "provider": "insforge-mirror",
+      "via": "postgres-wire",
+      "ok": false,
+      "note": "Connection terminated unexpectedly"
     }
   ]
 }
